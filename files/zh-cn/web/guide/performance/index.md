@@ -18,5 +18,5 @@ slug: Web/Guide/Performance
 
 ## 参见
 
-- _web.dev_ 上的[快速加载时间](https://web.dev/fast/)
+- _web.dev_ 上的[快速加载时间](https://web.dev/explore/fast)
 - [Web 性能](/zh-CN/docs/Web/Performance)

@@ -18,7 +18,7 @@ _부모객체인 _{{domxref("HTMLElement")}} 로*부터 프로퍼티를 상속�
 - {{domxref("HTMLCanvasElement.width")}}
   - : 는 {{HTMLElement("canvas")}} 요소에서 HTML 속성인 [`width`](/ko/docs/Web/HTML/Element/canvas#width)를 반영하는 양의 정수이며, CSS의 픽셀값으로 해석되어집니다. 속성값이 주어지지 않거나, 음수와 같이 올바르지 않은 값이 주어진 경우에는 기본 값인 300이 사용됩니다.
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}
-  - : 는 페이지가 프린트 되는 경우 호출되는 함수입니다. 사용자는 해당 객체에 특정 자바스크립트 함수를 등록함으로써, 만약 프린터가 사용되는 경우 `<canvas>`를 더욱 고해상도로 다시 그리게 할 수 있습니다. 기본적으로 null 값을 갖습니다. [다음의 블로그 글을 참조하세요.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
+  - : 는 페이지가 프린트 되는 경우 호출되는 함수입니다. 사용자는 해당 객체에 특정 JavaScript 함수를 등록함으로써, 만약 프린터가 사용되는 경우 `<canvas>`를 더욱 고해상도로 다시 그리게 할 수 있습니다. 기본적으로 null 값을 갖습니다. [다음의 블로그 글을 참조하세요.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 
 ## 메서드
 

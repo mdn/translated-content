@@ -343,9 +343,7 @@ Changes between blends mode are not interpolated. Any change occurs immediately.
 
 ## Specifications
 
-| Specification                                                         | Status                     | Comment             |
-| --------------------------------------------------------------------- | -------------------------- | ------------------- |
-| {{ SpecName('Compositing', '#ltblendmodegt', '&lt;blend-mode&gt;') }} | {{ Spec2('Compositing') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser Compatibility
 

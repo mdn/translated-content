@@ -39,9 +39,7 @@ _`iarc_rating_id`_ - это строка, представляющая [Межд
 
 ## Specification
 
-| Specification                                                                                | Status                       | Comment             | Feedback                                                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#iarc_rating_id-member', 'iarc_rating_id')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
 ## Browser compatibility
 

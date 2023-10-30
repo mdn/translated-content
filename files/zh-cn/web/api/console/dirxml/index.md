@@ -22,6 +22,6 @@ console.dirxml(object);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

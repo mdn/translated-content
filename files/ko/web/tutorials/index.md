@@ -79,7 +79,7 @@ slug: Web/Tutorials
             >
           </dt>
           <dd>
-            포괄적인 HTML요소에 대한 참조 및 파이어폭스와 다른 부라우저를
+            포괄적인 HTML요소에 대한 참조 및 Firefox와 다른 부라우저를
             지원하는 방법을 알려줍니다.
           </dd>
           <dt>
@@ -87,7 +87,7 @@ slug: Web/Tutorials
             (CodeAvengers.com)
           </dt>
           <dd>
-            Code Avengers는 HTML, CSS 및 자바스크립트를 사용하여 Code Wep
+            Code Avengers는 HTML, CSS 및 JavaScript를 사용하여 Code Wep
             에플리케이션 및 게임을 배우는 재미있고 효과적인 방법입니다.
           </dd>
         </dl>
@@ -179,7 +179,7 @@ slug: Web/Tutorials
             >(WebPlatform.org)
           </dt>
           <dd>
-            프로그래밍의 기본 중의 기본. 자바스크립트를 사용하고 더 많은 것을 할
+            프로그래밍의 기본 중의 기본. JavaScript를 사용하고 더 많은 것을 할
             수 있는 모범사례와 무엇을 할 수 있는지 소개하는 기사.
           </dd>
           <dt>
@@ -202,7 +202,7 @@ slug: Web/Tutorials
             (CodeAvengers.com)
           </dt>
           <dd>
-            Code Avengers는 HTML, CSS 및 자바스크립트를 사용하여 Code Wep
+            Code Avengers는 HTML, CSS 및 JavaScript를 사용하여 Code Wep
             에플리케이션 및 게임을 배우는 재미있고 효과적인 방법입니다.
           </dd>
         </dl>
@@ -258,7 +258,7 @@ slug: Web/Tutorials
             >
             (John Resig)
           </dt>
-          <dd>John Resig의 고급 자바스크립트 가이드.</dd>
+          <dd>John Resig의 고급 JavaScript 가이드.</dd>
           <dt>
             <a
               href="http://www.elated.com/articles/javascript-dom-intro/"
@@ -402,7 +402,7 @@ slug: Web/Tutorials
             (CodeAvengers.com)
           </dt>
           <dd>
-            Code Avengers는 HTML, CSS 및 자바스크립트를 사용하여 Code Wep
+            Code Avengers는 HTML, CSS 및 JavaScript를 사용하여 Code Wep
             에플리케이션 및 게임을 배우는 재미있고 효과적인 방법입니다.
           </dd>
         </dl>

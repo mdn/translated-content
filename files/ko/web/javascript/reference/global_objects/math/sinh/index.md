@@ -28,7 +28,7 @@ Math.sinh(x);
 
 ## 설명
 
-`sinh()` 는 `Math` 의 정적 함수이기 때문에, 자바스크립트 어디든 `Math.sinh()` 를 사용할 수 있습니다, 따라서 `Math` 오브젝트를 생성해서는 안됩니다. (`Math` 는 constructor(생성자) 가 아닙니다.).
+`sinh()` 는 `Math` 의 정적 함수이기 때문에, JavaScript 어디든 `Math.sinh()` 를 사용할 수 있습니다, 따라서 `Math` 오브젝트를 생성해서는 안됩니다. (`Math` 는 constructor(생성자) 가 아닙니다.).
 
 ## 예제
 

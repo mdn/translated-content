@@ -62,7 +62,7 @@ CSS 그리드 레이아웃은 웹페이지를 위한 이차원 레이아웃 시�
 }
 ```
 
-가변상자와 달리 항목이 즉시 다르게 보이지는 않습니다. `display: grid`를 선언하면 한 열 그리드가 생성되므로 일반 흐름에서와 마찬가지로 항목이 다른 항목 아래에 계속 표시됩니다.
+플렉스박스와 달리 항목이 즉시 다르게 보이지는 않습니다. `display: grid`를 선언하면 한 열 그리드가 생성되므로 일반 흐름에서와 마찬가지로 항목이 다른 항목 아래에 계속 표시됩니다.
 
 그리드처럼 보이는 것을 보려면 그리드에 열을 추가해야 합니다. 200픽셀 열 3개를 추가해 보겠습니다. 길이 단위나 백분율을 사용하여 이러한 열 트랙을 만들 수 있습니다.
 
@@ -688,7 +688,7 @@ aside {
 
 {{ EmbedLiveSample('Grid frameworks in CSS Grid', '100%', 600) }}
 
-[파이어폭스 그리드 검사기](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하여 당신의 디자인 상의 그리드 라인을 겹쳐놓으면 12개로 구성된 열 그리드가 작동하는 방법을 볼 수 있습니다.
+[Firefox 그리드 검사기](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하여 당신의 디자인 상의 그리드 라인을 겹쳐놓으면 12개로 구성된 열 그리드가 작동하는 방법을 볼 수 있습니다.
 
 ![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 

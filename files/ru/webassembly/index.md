@@ -64,9 +64,7 @@ WebAssembly разработан для дополнения JavaScript – ис
 
 ## Спецификация
 
-| Specification                  | Status                      | Comment                                         |
-| ------------------------------ | --------------------------- | ----------------------------------------------- |
-| {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Initial draft definition of the JavaScript API. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

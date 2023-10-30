@@ -350,10 +350,7 @@ console.log(foo); // "bar"
 
 ## Especificações
 
-| Espeficiação                                                                         | Situação             | Comentário         |
-| ------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

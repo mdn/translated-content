@@ -125,10 +125,7 @@ Para um simples Browser Polyfill, veja [Javascript - Object.keys Browser Compati
 
 ## Especificações
 
-| Especificação                                             | Status              | Comentário                                           |
-| --------------------------------------------------------- | ------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}    | {{Spec2('ES5.1')}}  | Definição inicial. Implementado em JavaScript 1.8.5. |
-| {{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ES2015')}} |                                                      |
+{{Specifications}}
 
 ## Browser compatibilidade
 

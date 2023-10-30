@@ -446,5 +446,5 @@ btn.addEventListener("click", testPromise);
 - [`core-js` 中 `Promise` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
 - [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ 规范](https://promisesaplus.com/)
-- [JavaScript Promises：简介](https://web.dev/promises/)
+- [JavaScript Promise：简介](https://web.dev/articles/promises)
 - [Domenic Denicola：回调、Promise 和协程——JavaScript 中的异步编程模式](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)

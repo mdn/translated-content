@@ -5,142 +5,109 @@ slug: Web/API/Page_Visibility_API
 
 {{DefaultAPISidebar("Page Visibility API")}}
 
-使用选项卡式浏览，任何给定网页都有可能在后台，因此对用户不可见。页面可见性 API 提供了你可以观察的事件，以便了解文档何时可见或隐藏，以及查看页面当前可见性状态的功能。
+页面可见性 API 提供了一些事件，你可以通过查看这些事件来了解文档何时变为可见或隐藏，还提供了一些功能来查看页面的当前可见性状态。
 
-> **备注：** 页面可见性 API 对于节省资源和提高性能特别有用，它使页面在文档不可见时避免执行不必要的任务。
+通过让页面在文档不可见时避免执行不必要的任务，这对于节省资源和提高性能特别有用。
 
-当用户最小化窗口或切换到另一个选项卡时，API 会发送[`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event)事件，让监听者知道页面状态已更改。你可以检测事件并执行某些操作或行为不同。例如，如果你的网络应用正在播放视频，则可以在用户将标签放入背景时暂停视频，并在用户返回标签时恢复播放。用户不会在视频中丢失位置，视频的音轨不会干扰新前景选项卡中的音频，并且用户在此期间不会错过任何视频。
+## 概念与用途
 
-{{HTMLElement("iframe")}}的可见性状态与父文档相同。使用 CSS 属性（例如{{cssxref("display", "display: none;")}}）隐藏`<iframe>`不会触发可见性事件或更改框架中包含的文档的状态。
+当用户最小化窗口或切换到另一个标签页时，API 会发送 {{domxref("document.visibilitychange_event", "visibilitychange")}} 事件，让监听者知道页面的状态已发生变化。你可以检测到该事件并执行某些操作或采取不同的行为。例如，如果你的 web 应用正在播放视频，当用户将标签页放到后台时，它可以暂停视频，当用户返回标签页时，它又可以恢复播放。用户不会失去在视频中的位置，视频的配乐也不会干扰新的前台标签页中的音频，用户在此期间也不会错过任何视频。
+
+{{HTMLElement("iframe")}} 的可见性状态与父文档相同。使用 CSS 属性（如 {{cssxref("display", "display: none;")}}）隐藏 `<iframe>` 不会触发可见性事件，也不会改变框架内文档的状态。
 
 ### 使用情景
 
-一些例子：
+让我们来看看页面可见性 API 的几个使用案例。
 
 - 网站有图片轮播效果，只有在用户观看轮播的时候，才会自动展示下一张幻灯片。
 - 显示信息仪表盘的应用程序不希望在页面不可见时轮询服务器进行更新。
-- 页面想要检测是否正在渲染，以便可以准确的计算网页浏览量
-- 当设备进入待机模式时，网站想要关闭设备声音（用户按下电源键关闭屏幕）
+- 页面想要检测何时正在预渲染，以便可以准确的计算页面浏览量。
+- 当设备进入待机模式（用户按下电源键关闭屏幕）时，网站想要关闭设备声音。
 
-开发者在过去使用不完善的代理来检测页面的可见性。比如，通过监听 [`blur`](/zh-CN/docs/Web/API/Element/blur_event) 和 [`focus`](/zh-CN/docs/Web/API/Element/focus_event) 事件来了解页面是否处于活动状态，但是它并没有告诉你页面是对用户隐藏的。页面可见性 API 解决了这个问题。
+开发人员在过去使用不完善的代理来检测这一点。例如，通过观察 window 上的 {{domxref("Window/blur_event", "blur")}} 和 {{domxref("Window/focus_event", "focus")}} 事件，可以帮助你了解页面何时不是活动页面，但这并不能告诉你，页面实际上已被用户隐藏。页面可见性 API 可解决这一问题。
 
-> **备注：** 虽然{{domxref("GlobalEventHandlers.onblur", "onblur")}}和{{domxref("GlobalEventHandlers.onfocus", "onfocus")}}会告诉你用户是否切换窗口，但不一定意味着它是隐藏的。当用户切换选项卡或最小化包含选项卡的浏览器窗口时，页面才会隐藏。
+> **备注：** 虽然 {{domxref("Window.blur_event", "onblur")}} 和 {{domxref("Window.focus_event", "onfocus")}} 会告诉你用户是否切换了窗口，但这并不一定意味着它被隐藏了。只有当用户切换标签页或最小化包含标签页的浏览器窗口时，页面才会被隐藏。
 
 ### 制定有助于后台页面性能的策略
 
 在页面可见性 API 之外，用户代理会采取许多策略来减轻后台或隐藏选项卡对性能的影响。这些可能包括：
 
-- 大多数浏览器不会调用被隐藏的标签页或{{ HTMLElement("iframe") }}框架当中{{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}定义的回调函数，这会提升性能并且延长电池的使用寿命。
-- 在后台标签页或不活跃的标签页中 {{domxref("setTimeout()")}} 等定时器会受到一定的限制以提升性能。参见[实际延时比设定值更久的原因](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)。
-- Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
+- 大多数浏览器会停止向后台标签页或隐藏的 {{ HTMLElement("iframe") }} 发送 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 回调，以提高性能和电池寿命。
+- 在后台或不活动标签页中，{{domxref("setTimeout()")}} 等计时器会被节流，以帮助提高性能。详情请参阅[延迟时间超过指定时间的原因](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)。
+- 浏览器实施基于预算的后台超时节流。现代浏览器的操作方式大同小异，具体细节如下：
 
-  - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.
-  - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)). In Chrome, this value is 10 seconds.
-  - Timer tasks are only permitted when the budget is non-negative.
-  - Once a timer's code has finished running, the duration of time it took to execute is subtracted from its window's timeout budget.
-  - The budget regenerates at a rate of 10 ms per second, in both Firefox and Chrome.
+  - 在 Firefox 中，后台标签页中的每个窗口都有自己的时间预算（以毫秒为单位），最大值和最小值分别为 +50 毫秒和 -150 毫秒。Chrome 浏览器与之非常相似，只是预算以秒为单位。
+  - 窗口在 30 秒后会受到节流，节流延迟规则与为窗口定时器指定的规则相同（请再次参阅[延迟时间超过指定时间的原因](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)）。在 Chrome 浏览器中，该值为 10 秒。
+  - 只有当预算为非负数时，才允许执行定时器任务。
+  - 定时器代码一旦运行完毕，其执行时间就会从窗口的超时预算中扣除。
+  - 在 Firefox 和 Chrome 浏览器中，预算以每秒 10 毫秒的速度重新生成。
 
-Some processes are exempt from this throttling behavior. In these cases, you can use the Page Visibility API to reduce the tabs' performance impact while they're hidden.
+某些进程不受这种节流行为的影响。在这种情况下，可以使用页面可见性 API 来减少标签页隐藏时对性能的影响。
 
-- Tabs which are playing audio are considered foreground and aren't throttled.
-- Tabs running code that's using real-time network connections ([WebSockets](/zh-CN/docs/Web/API/WebSockets_API) and [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
-- [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
+- 正在播放音频的标签页被视为前台进程，不会被节流。
+- 运行使用实时网络连接（[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)）的代码的标签页不会被节流，以避免关闭这些连接时超时和意外关闭。
+- 为了避免超时，[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 进程也没有节流。
+
+## 对其他接口的扩展
+
+### 实例属性
+
+页面可见性 API 为 {{domxref("Document")}} 接口添加了以下属性：
+
+- {{domxref("Document.hidden")}} {{deprecated_inline}} {{ReadOnlyInline}}
+  - : 如果页面处于隐藏状态，则返回 `true`，否则返回 `false`。
+- {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
+
+  - : 说明文档当前可见性状态的字符串。可能的值有：
+
+    - `visible`
+      - : 页面内容至少部分可见。在实践中，这意味着页面是非最小化窗口的前景选项卡。
+    - `hidden`
+      - : 页面内容对用户不可见，原因可能是文档标签页在后台或属于最小化窗口的一部分，也可能是设备屏幕关闭。
+
+### 事件
+
+页面可见性 API 为 {{domxref("Document")}} 接口添加了以下事件：
+
+- {{domxref("Document.visibilitychange_event", "visibilitychange")}}
+  - : 当标签页的内容变为可见或被隐藏时触发。
 
 ## 示例
 
-看一个 [在线的例子](http://daniemon.com/tech/webapps/page-visibility/)（带声音的视频）
+### 在页面隐藏时暂停音频
 
-在此例中，当你切换到另一个标签时视频会暂停，当你返回到当前标签时视频会再次播放，代码如下：
+该示例会在用户切换到不同标签页时暂停音频，并在用户切换回标签页时播放音频。
 
-```js
-// 设置隐藏属性和改变可见属性的事件的名称
-var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") {
-  // Opera 12.10 and Firefox 18 and later support
-  hidden = "hidden";
-  visibilityChange = "visibilitychange";
-} else if (typeof document.msHidden !== "undefined") {
-  hidden = "msHidden";
-  visibilityChange = "msvisibilitychange";
-} else if (typeof document.webkitHidden !== "undefined") {
-  hidden = "webkitHidden";
-  visibilityChange = "webkitvisibilitychange";
-}
+#### HTML
 
-var videoElement = document.getElementById("videoElement");
-
-// 如果页面是隐藏状态，则暂停视频
-// 如果页面是展示状态，则播放视频
-function handleVisibilityChange() {
-  if (document[hidden]) {
-    videoElement.pause();
-  } else {
-    videoElement.play();
-  }
-}
-
-// 如果浏览器不支持 addEventListener 或 Page Visibility API 给出警告
-if (
-  typeof document.addEventListener === "undefined" ||
-  typeof document[hidden] === "undefined"
-) {
-  console.log(
-    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
-  );
-} else {
-  // 处理页面可见属性的改变
-  document.addEventListener(visibilityChange, handleVisibilityChange, false);
-
-  // 当视频暂停，设置 title
-  // This shows the paused
-  videoElement.addEventListener(
-    "pause",
-    function () {
-      document.title = "Paused";
-    },
-    false,
-  );
-
-  // 当视频播放，设置 title
-  videoElement.addEventListener(
-    "play",
-    function () {
-      document.title = "Playing";
-    },
-    false,
-  );
-}
+```html
+<audio
+  controls
+  src="https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3"></audio>
 ```
 
-## 属性
-
-- {{domxref("Document.hidden")}} {{ReadOnlyInline}}
-  - : 如果页面处于被认为是对用户隐藏状态时返回 true，否则返回 false。
-- {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
-
-  - : 是一个用来展示文档当前的可见性的{{domxref("DOMString")}} 。该属性的值为以下值之一：
-
-    - `visible` : 页面内容至少是部分可见。在实际中，这意味着页面是非最小化窗口的前景选项卡。
-    - `hidden` : 页面内容对用户不可见。在实际中，这意味着文档可以是一个后台标签，或是最小化窗口的一部分，或是在操作系统锁屏激活的状态下。
-    - `prerender` : 页面内容正在被预渲染且对用户是不可见的 (被 document.hidden 当做隐藏). 文档可能初始状态为 prerender，但绝不会从其他值转为该值。
-    - 注释：有的浏览器不支持此功能`unloaded` : 页面正在从内存中卸载。
-    - 注释：有的浏览器不支持此功能
-
-- {{domxref("Document.onvisibilitychange")}}
-  - : {{domxref("EventListener")}} 提供在[`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件被触发时要调用的代码。
+#### JavaScript
 
 ```js
-//startSimulation 和 pauseSimulation 在其他地方定义
-function handleVisibilityChange() {
+const audio = document.querySelector("audio");
+
+// 处理页面可见性变化：
+// - 如果页面隐藏，暂停音频
+// - 如果页面显示，播放音频
+document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
-    pauseSimulation();
+    audio.pause();
   } else {
-    startSimulation();
+    audio.play();
   }
-}
-
-document.addEventListener("visibilitychange", handleVisibilityChange, false);
+});
 ```
+
+#### 结果
+
+{{EmbedLiveSample("在页面隐藏时暂停音频", "", 100)}}
+
+试着播放音频，然后切换到不同的标签页，然后再返回。
 
 ## 规范
 
@@ -148,11 +115,4 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## 浏览器兼容性
 
-### `Document.visibilityState`
-
 {{Compat}}
-
-## 参考
-
-- Description of the [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) on the IEBlog.
-- Description of the [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html) by Google

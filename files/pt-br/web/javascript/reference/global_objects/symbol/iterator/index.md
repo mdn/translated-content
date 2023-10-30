@@ -75,9 +75,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 ## Especificações
 
-| Especificação                                                      |
-| ------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.iterator', 'Symbol.iterator')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

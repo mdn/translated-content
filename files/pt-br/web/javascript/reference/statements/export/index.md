@@ -200,10 +200,7 @@ console.log(cube(3)); // 27
 
 ## Especificações
 
-| Especificação                                      | Estado               | Comentário          |
-| -------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-exports', 'Exports')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade
 
