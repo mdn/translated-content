@@ -120,11 +120,7 @@ TypeError: 1 is not an object // ES5 code
 
 ## Especificações
 
-| Especificações                                                 | Status               | Comentários                                          |
-| -------------------------------------------------------------- | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}        | {{Spec2('ES5.1')}}   | Definição inicial. Implementado em JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

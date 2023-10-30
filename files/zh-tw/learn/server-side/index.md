@@ -19,7 +19,7 @@ slug: Learn/Server-side
 
 首先你要知道「web 是怎麼作動的」。我們建議先看看這些文章：
 
-- [何謂網路伺服器？](/zh-TW/docs/Learn/Common_questions/What_is_a_web_server)
+- [何謂網路伺服器？](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
 - [建立網站需要什麼軟體？](/zh-TW/docs/Learn/Common_questions/What_software_do_I_need)
 - [如何把檔案傳到伺服器？](/zh-TW/docs/Learn/Common_questions/Upload_files_to_a_web_server)
 

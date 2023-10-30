@@ -5,46 +5,45 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 
 {{JSRef}}
 
-**`toLocaleLowerCase()`**方法根据任何指定区域语言环境设置的大小写映射，返回调用字符串被转换为小写的格式。
+{{jsxref("String")}} 的 **`toLocaleLowerCase()`** 方法会根据特定区域设置的大小写映射规则，将字符串转换为小写形式并返回。
+
+{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
 
 ## 语法
 
-```plain
-str.toLocaleLowerCase()
-str.toLocaleLowerCase(locale)
-str.toLocaleLowerCase([locale, locale, ...])
+```js-nolint
+toLocaleLowerCase()
+toLocaleLowerCase(locales)
 ```
 
 ### 参数
 
-- `locale` {{optional_inline}}
-  - : 参数 `locale` 指明要转换成小写格式的特定语言区域。如果以一个数组 {{jsxref("Array")}} 形式给出多个 locales, 最合适的地区将被选出来应用（参见[best available locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale)）。默认的 locale 是主机环境的当前区域 (locale) 设置。
+- `locales` {{optional_inline}}
+
+  - : 一个带有 BCP 47 语言标签的字符串，或者是这种字符串的数组。指示要根据特定区域设置的大小写映射规则进行转换的区域设置。有关 `locales` 参数的一般形式和解释，请参阅 [`Intl` 主页上的参数描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_参数)。
+
+    与使用 `locales` 参数的其他方法不同，`toLocaleLowerCase()` 不允许进行区域设置匹配。因此，在检查 `locales` 参数的有效性之后，`toLocaleLowerCase()` 始终使用列表中的第一个区域设置（如果列表为空，则使用默认区域设置），即使该区域设置在实现中不受支持。
 
 ### 返回值
 
-根据任何特定于语言环境的案例映射规则将被调用字串转换成小写格式的一个新字符串。
-
-### Exceptions
-
-- A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") is thrown if a `locale` argument isn't a valid language tag.
-- A {{jsxref("TypeError")}} ("invalid element in locales argument") is thrown if an array element isn't of type string.
+一个新的字符串，表示调用字符串根据特定区域设置的大小写映射规则转换得到的小写形式。
 
 ## 描述
 
-`toLocaleLowerCase()` 方法返回根据任意区域语言大小写映射集而转换成小写格式的字符串。`toLocaleLowerCase()` 并不会影响字符串原本的值。在大多数情况下，该方法和调用 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}的结果相同，但是在某些区域环境中，比如土耳其语，它的大小写映射并不遵循在 Unicode 中的默认的大小写映射，因此会有一个不同的结果。
+`toLocaleLowerCase()` 方法返回根据特定区域设置的大小写映射规则将字符串转换为小写形式的值。`toLocaleLowerCase()` 不会影响字符串本身的值。在大多数情况下，这将产生与 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 相同的结果，但对于某些区域设置（例如土耳其语），它们的大小写映射与 Unicode 的默认映射不同，可能会得到不同的结果。
 
 ## 示例
 
-### 使用 `toLocaleLowerCase()`
+### 使用 toLocaleLowerCase()
 
-```plain
-'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
+```js
+"ALPHABET".toLocaleLowerCase(); // 'alphabet'
 
-'\u0130'.toLocaleLowerCase('tr') === 'i';    // true
-'\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
+"\u0130".toLocaleLowerCase("tr") === "i"; // true
+"\u0130".toLocaleLowerCase("en-US") === "i"; // false
 
-let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
-'\u0130'.toLocaleLowerCase(locales) === 'i'; // true
+const locales = ["tr", "TR", "tr-TR", "tr-u-co-search", "tr-x-turkish"];
+"\u0130".toLocaleLowerCase(locales) === "i"; // true
 ```
 
 ## 规范
@@ -55,7 +54,7 @@ let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
 
 {{Compat}}
 
-## 参阅
+## 参见
 
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}
 - {{jsxref("String.prototype.toLowerCase()")}}

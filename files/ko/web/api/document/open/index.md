@@ -42,7 +42,7 @@ document.close();
 
 `document.open()` 메소드는 페이지를 불러온 후 {{domxref("document.write()")}} 메소드 호출 시 자동으로 호출된다.
 
-Firefox 및 Internet Explorer 에서는 기존까지 모든 요소 뿐 만 아니라 자바스크립트 변수까지 제거했었다. 하지만 현재 그런 경우는 없다.document non-spec'ed parameters to document.open
+Firefox 및 Internet Explorer 에서는 기존까지 모든 요소 뿐 만 아니라 JavaScript 변수까지 제거했었다. 하지만 현재 그런 경우는 없다.document non-spec'ed parameters to document.open
 
 ## document.open()의 인자 3개
 

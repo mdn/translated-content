@@ -2,7 +2,7 @@
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 l10n:
- sourceCommit: cda36825f2a7e12f0ebff9d9f257dae8a1171dbd
+  sourceCommit: cda36825f2a7e12f0ebff9d9f257dae8a1171dbd
 ---
 
 {{JSRef}}

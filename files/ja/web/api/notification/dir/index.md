@@ -28,13 +28,13 @@ l10n:
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  dir: 'rtl'
-}
+  body: "Do you like my body?",
+  dir: "rtl",
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("Test notification", options);
 
-console.log(n.dir) // should return 'rtl'
+console.log(n.dir); // should return 'rtl'
 ```
 
 ## 仕様書

@@ -14,9 +14,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('connect', (event) => { })
+addEventListener("connect", (event) => {});
 
-onconnect = (event) => { }
+onconnect = (event) => {};
 ```
 
 ## イベント型
@@ -37,7 +37,7 @@ _以下に挙げるプロパティに加え、親インターフェイス {{domx
 USB デバイスが接続された時、UI を更新したいかもしれません。
 
 ```js
-navigator.usb.addEventListener('connect', (event) => {
+navigator.usb.addEventListener("connect", (event) => {
   // event.device を UI に追加する
 });
 ```

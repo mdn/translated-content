@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言的核心知识，对<a
           href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
@@ -792,7 +792,7 @@ driver.quit();
 
    修改 `.jar` 文件名为你获取的文件名称。
 
-4. 服务会运行在 [`http://localhost:4444/wd/hub`](http://localhost:4444/wd/hub)，你可以去试试看是什么效果。
+4. 服务会运行在 `http://localhost:4444/wd/hub`，你可以去试试看是什么效果。
 
 现在服务器运行起来了，让我们在 selenium 服务器上来创建一个 demo 测试。
 

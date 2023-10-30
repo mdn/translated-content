@@ -41,12 +41,12 @@ ES2015 からは{{jsxref("Functions/Arrow_functions", "アロー関数", "", 1)}
 JavaScript の関数式は、{{jsxref("Statements/function", "関数宣言", "#Function_declaration_hoisting", 1)}}と違って巻き上げられません。定義前に関数式を使用することはできません。
 
 ```js
-console.log(notHoisted) // undefined
+console.log(notHoisted); // undefined
 // 変数名は巻き上げが行われますが、定義は行われません。そのため undefined になります。
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log('bar');
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -56,29 +56,29 @@ var notHoisted = function() {
 
 ```js
 let math = {
-  'factit': function factorial(n) {
-    console.log(n)
+  factit: function factorial(n) {
+    console.log(n);
     if (n <= 1) {
       return 1;
     }
     return n * factorial(n - 1);
-  }
+  },
 };
 
-math.factit(3) //3;2;1;
+math.factit(3); //3;2;1;
 ```
 
 関数式が代入された変数は `name` プロパティを持ちます。別の変数に代入しても name は変わりません。関数名が省略された場合、(暗黙的な名前が) 変数名になります。関数名が存在したら、それが関数名になります (明示的な名前)。これは{{jsxref("Functions/Arrow_functions", "アロー関数", "", 1)}}にもあてはまります (アロー関数は名前がないので変数名を暗黙的な名前として与えます)。
 
 ```js
-var foo = function() {}
-foo.name // "foo"
+var foo = function () {};
+foo.name; // "foo"
 
-var foo2 = foo
-foo2.name // "foo"
+var foo2 = foo;
+foo2.name; // "foo"
 
-var bar = function baz() {}
-bar.name // "baz"
+var bar = function baz() {};
+bar.name; // "baz"
 
 console.log(foo === foo2); // true
 console.log(typeof baz); // undefined
@@ -92,8 +92,8 @@ console.log(bar === baz); // false (errors because baz == undefined)
 次の例では、無名関数を定義してそれを `x` に割り当てます。 関数は引数の 2 乗を返します。
 
 ```js
-var x = function(y) {
-   return y * y;
+var x = function (y) {
+  return y * y;
 };
 ```
 
@@ -102,9 +102,9 @@ var x = function(y) {
 {{Glossary("Callback_function", "コールバック")}}としてより頻繁に使われます。
 
 ```js
-button.addEventListener('click', function(event) {
-    console.log('button is clicked!')
-})
+button.addEventListener("click", function (event) {
+  console.log("button is clicked!");
+});
 ```
 
 ### 即時実行関数式 (IIFE) の使用
@@ -112,15 +112,15 @@ button.addEventListener('click', function(event) {
 無名の関数が生成され、呼び出されます。
 
 ```js
-(function() {
-    console.log('Code runs!')
+(function () {
+  console.log("Code runs!");
 })();
 
 // または
 
-!function() {
-  console.log('Code runs!')
-}();
+!(function () {
+  console.log("Code runs!");
+})();
 ```
 
 ## 仕様書

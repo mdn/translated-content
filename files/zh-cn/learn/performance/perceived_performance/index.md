@@ -12,7 +12,7 @@ slug: Learn/Performance/Perceived_performance
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基础计算机知识，<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -66,7 +66,7 @@ Displaying content, or at least some part of the page with an indication that co
 
 不要加载初始页面未使用或看不到的图像或脚本，而在页面可用后延时加载，或在需要使用时按需加载。在初始页面加载之后加载其他资源可提高感知性能。在初始请求中加载基本数据，并仅根据需要逐步加载功能部件和数据，有助于改善低带宽和低规格硬件的体验。
 
-此外，您应该优化需加载的资源。图片和视频应以最佳格式、压缩后的大小和正确尺寸进行投放。
+此外，你应该优化需加载的资源。图片和视频应以最佳格式、压缩后的大小和正确尺寸进行投放。
 
 ### 防止内容跳转和其他重排
 
@@ -86,7 +86,7 @@ Make things like type-ahead a progressive enhancement: use css to display input 
 
 ### 使任务启动器显得更具交互性
 
-在按下按键而不是等待按键弹起时发出请求，可以使感知的内容加载减少 200 毫秒。在 KEYUP 后添加一个有趣但不显眼的 200 毫秒动画，甚至可以再降低 200 毫秒的加载感知。您并没有节省 400 毫秒的时间，但是用户直到真正等待内容时，才感觉到他们在等待内容。
+在按下按键而不是等待按键弹起时发出请求，可以使感知的内容加载减少 200 毫秒。在 KEYUP 后添加一个有趣但不显眼的 200 毫秒动画，甚至可以再降低 200 毫秒的加载感知。你并没有节省 400 毫秒的时间，但是用户直到真正等待内容时，才感觉到他们在等待内容。
 
 ## 总结
 

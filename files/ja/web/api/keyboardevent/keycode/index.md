@@ -18,25 +18,29 @@ l10n:
 ## 例
 
 ```js
-window.addEventListener("keydown", (event) => {
-  if (event.defaultPrevented) {
-    return; // 既定のアクションがキャンセルされている場合は何もしないようにします。
-  }
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // 既定のアクションがキャンセルされている場合は何もしないようにします。
+    }
 
-  let handled = false;
-  if (event.key !== undefined) {
-    // KeyboardEvent.key でイベントを処理し、handled を true に設定します。
-    handled = true;
-  } else if (event.keyCode !== undefined) {
-    // KeyboardEvent.keyCode でイベントを処理し、handled を true に設定します。
-    handled = true;
-  }
+    let handled = false;
+    if (event.key !== undefined) {
+      // KeyboardEvent.key でイベントを処理し、handled を true に設定します。
+      handled = true;
+    } else if (event.keyCode !== undefined) {
+      // KeyboardEvent.keyCode でイベントを処理し、handled を true に設定します。
+      handled = true;
+    }
 
-  if (handled) {
-    // イベントが処理された場合、"ダブルアクション" を抑制する
-    event.preventDefault();
-  }
-}, true);
+    if (handled) {
+      // イベントが処理された場合、"ダブルアクション" を抑制する
+      event.preventDefault();
+    }
+  },
+  true,
+);
 ```
 
 ## 仕様書
@@ -3272,4 +3276,4 @@ Windows では、仮想キーコードのいくつかの値は、 OEM の特定�
 
 Gecko 21 （および 15 より古いバージョン）では、OEM 固有のキー値は Windows 上でのみ keyCode 属性で利用可能です。そのため、通常のウェブアプリケーションでは使用できません。それらはイントラネットのアプリケーション、または同様の状況においてのみ使用されます。
 
-詳しくは MSDN の "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10))" を参照してください。
+詳しくは MSDN の "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" を参照してください。

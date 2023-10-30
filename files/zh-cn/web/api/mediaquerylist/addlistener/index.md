@@ -18,7 +18,7 @@ MediaQueryList.addListener(func)
 ### 参数
 
 - func
-  - : 表示您要在媒体查询状态更改时运行的回调函数的函数或函数引用。在原始实现中，回调是一个非标准的{{DOMxRef("MediaQueryListListener")}}对象。在新的实现中，使用标准事件机制，回调是标准函数，事件对象是{{DOMxRef("MediaQueryListEvent")}}，它继承自{{DOMxRef("Event")}}。
+  - : 表示你要在媒体查询状态更改时运行的回调函数的函数或函数引用。在原始实现中，回调是一个非标准的{{DOMxRef("MediaQueryListListener")}}对象。在新的实现中，使用标准事件机制，回调是标准函数，事件对象是{{DOMxRef("MediaQueryListEvent")}}，它继承自{{DOMxRef("Event")}}。
 
 ### 返回值
 

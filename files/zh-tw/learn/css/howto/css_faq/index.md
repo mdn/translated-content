@@ -184,7 +184,7 @@ div { color: black; }
 <div id="orange" class="green" style="color: red;">是紅的！</div>
 ```
 
-如果樣式規則的選取符分成好幾段，計算方式就更為複雜一些。需要瞭解完整資訊者，請參考 [CSS 2.1 規格書的 6.4.3 一節](http://www.w3.org/TR/CSS21/cascade.html#specificity)。
+如果樣式規則的選取符分成好幾段，計算方式就更為複雜一些。需要瞭解完整資訊者，請參考 [CSS 2.1 規格書的 6.4.3 一節](https://www.w3.org/TR/CSS21/cascade.html#specificity)。
 
 #### -moz-\* 特性是什麼玩意？
 

@@ -205,7 +205,7 @@ Headers
 
 Tools
 
-- [Performance in Firefox Developer Tools](/zh-TW/docs/Tools/Performance)
+- [Performance in Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
 - Flame charts
 - The Network panel
 - Waterfall charts

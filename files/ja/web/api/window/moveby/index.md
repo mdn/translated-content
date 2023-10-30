@@ -13,7 +13,7 @@ slug: Web/API/Window/moveBy
 ## 構文
 
 ```js
-moveBy(deltaX, deltaY)
+moveBy(deltaX, deltaY);
 ```
 
 ### 引数

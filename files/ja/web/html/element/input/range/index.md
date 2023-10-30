@@ -130,12 +130,12 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 ##### JavaScript
 
 ```js
-const value = document.querySelector("#value")
-const input = document.querySelector("#pi_input")
-value.textContent = input.value
+const value = document.querySelector("#value");
+const input = document.querySelector("#pi_input");
+value.textContent = input.value;
 input.addEventListener("input", (event) => {
-  value.textContent = event.target.value
-})
+  value.textContent = event.target.value;
+});
 ```
 
 ##### 結果
@@ -183,6 +183,8 @@ input.addEventListener("input", (event) => {
 <p>
   <label for="temp2">Temperature for room 2:</label>
   <input type="range" id="temp2" name="temp2" list="values" />
+</p>
+
 <p>
   <label for="temp3">Temperature for room 3:</label>
   <input type="range" id="temp3" name="temp3" list="values" />

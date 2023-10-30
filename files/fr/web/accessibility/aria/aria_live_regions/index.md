@@ -75,7 +75,7 @@ Un site de chat voudrait afficher la liste des utilisateurs actuellement connect
 </ul>
 ```
 
-#### Détails des propriétés « live » d’ARIA
+#### Détails des propriétés « live » d'ARIA
 
 - L'attribut `aria-live="polite"` indique au lecteur d'écran qu'il doit attendre que l'utilisateur soit inactif avant de lui présenter une mise à jour. C'est la valeur la plus communément utilisée, car interrompre l'utilisateur avec la valeur `assertive` briserait son flux de lecture.
 - L'attribut `aria-atomic` n'est pas défini (`false` par défaut), ainsi seuls les utilisateurs ajoutés ou supprimés devraient être lus et non l'intégralité de la liste, à chaque mise à jour.

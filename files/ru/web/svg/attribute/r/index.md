@@ -66,9 +66,4 @@ svg {
 
 ## Спецификации
 
-| Specification                                                                | Status              | Comment                                              |
-| ---------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------- |
-| {{SpecName("SVG2", "geometry.html#R", "r")}}                                 | {{Spec2("SVG2")}}   | Definition as a geometry property                    |
-| {{SpecName("SVG2", "pservers.html#RadialGradientElementRAttribute", "r")}}   | {{Spec2("SVG2")}}   | Definition for SVG2 paint servers `<radialGradient>` |
-| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementRAttribute", "r")}} | {{Spec2("SVG1.1")}} | Initial definition for `<radialGradient>`            |
-| {{SpecName("SVG1.1", "shapes.html#CircleElementRAttribute", "r")}}           | {{Spec2("SVG1.1")}} | Initial definition for `<circle>`                    |
+{{Specifications}}

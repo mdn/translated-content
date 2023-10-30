@@ -16,15 +16,15 @@ Array.of(7); // [7]
 Array(7); // array of 7 empty slots
 
 Array.of(1, 2, 3); // [1, 2, 3]
-Array(1, 2, 3);    // [1, 2, 3]
+Array(1, 2, 3); // [1, 2, 3]
 ```
 
 ## 構文
 
 ```js
-Array.of(element0)
-Array.of(element0, element1)
-Array.of(element0, element1, /* … ,*/ elementN)
+Array.of(element0);
+Array.of(element0, element1);
+Array.of(element0, element1, /* … ,*/ elementN);
 ```
 
 ### 引数
@@ -41,8 +41,8 @@ Array.of(element0, element1, /* … ,*/ elementN)
 ### Array.of の使用
 
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 

@@ -120,15 +120,7 @@ Ao formatar um grande número de datas, é melhor criar um objeto {{jsxref("Glob
 
 ## Especificações
 
-| Specification                                                                                               | Status                    | Comment                                            |
-| ----------------------------------------------------------------------------------------------------------- | ------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}          | Definição inicial. Implementada no JavaScript 1.0. |
-| {{SpecName('ES5.1', 'sec-15.9.5.6', 'Date.prototype.toLocaleDateString')}}                                  | {{Spec2('ES5.1')}}        |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.tolocaledatestring', 'Date.prototype.toLocaleDateString')}}          | {{Spec2('ES6')}}          |                                                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocaledatestring', 'Date.prototype.toLocaleDateString')}}      | {{Spec2('ESDraft')}}      |                                                    |
-| {{SpecName('ES Int 1.0', '#sec-13.3.2', 'Date.prototype.toLocaleDateString')}}                              | {{Spec2('ES Int 1.0')}}   | Define os argumentos `locales` e `options`.        |
-| {{SpecName('ES Int 2.0', '#sec-13.3.2', 'Date.prototype.toLocaleDateString')}}                              | {{Spec2('ES Int 2.0')}}   |                                                    |
-| {{SpecName('ES Int Draft', '#sec-Date.prototype.toLocaleDateString', 'Date.prototype.toLocaleDateString')}} | {{Spec2('ES Int Draft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

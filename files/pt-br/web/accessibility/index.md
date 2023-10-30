@@ -38,9 +38,9 @@ A [área de aprendizado de acessibilidade](/pt-BR/docs/Learn/Accessibility) da M
   - : Uma coleção de artigos para aprender como usar ARIA e tornar seus documentos HTML mais acessíveis.
 - [Acessibilidade em dispositivos móveis](/pt-BR/docs/Web/Accessibility/Mobile_accessibility_checklist)
   - : Esse documento fornece uma breve lista das necessidades da acessibilidade para desenvolvedores de aplicativos móveis.
-- [Acessibilidade cognitiva (en-US)](/en-US/docs/Web/Accessibility/Cognitive_accessibility)
+- [Acessibilidade cognitiva](/pt-BR/docs/Web/Accessibility/Cognitive_accessibility)
   - : Este artigo explica como assegurar que o conteúdo web que você está criando é acessível para pessoas com limitações cognitivas.
-- [Acessibilidade para distúrbios convulsivos (en-US)](/en-US/docs/Web/Accessibility/Seizure_disorders)
+- [Acessibilidade para distúrbios convulsivos](/pt-BR/docs/Web/Accessibility/Seizure_disorders)
   - : Alguns tipos de conteúdo visual na web podem induzir convulsões ou ataques epiléticos em pessoas com certos distúrbios cerebrais. Este artigo o auxilia a entender os tipos de conteúdo que podem ser problemáticos e a encontrar ferramentas e estratégias que ajudam a evitá-los.
 
 ## Ferramentas para desenvolvedores web

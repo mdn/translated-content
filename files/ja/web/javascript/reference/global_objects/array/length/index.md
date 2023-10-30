@@ -16,7 +16,7 @@ l10n:
 `length` プロパティの値は正の符号を持つ整数で、2 の 32 乗 (2^32) 未満の値です。
 
 ```js
-const listA = [1,2,3];
+const listA = [1, 2, 3];
 const listB = new Array(6);
 
 console.log(listA.length);
@@ -28,7 +28,7 @@ console.log(listB.length);
 listB.length = 4294967296; //2 の 32 乗 = 4294967296
 // RangeError: Invalid array length
 
-const listC = new Array(-100) // 負の符号
+const listC = new Array(-100); // 負の符号
 // RangeError: Invalid array length
 ```
 

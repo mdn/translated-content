@@ -29,7 +29,7 @@ slug: Web/CSS/CSS_Houdini
 
 ```css
 @property --background-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: blue;
 }

@@ -19,9 +19,9 @@ slug: Web/API/Response/url
 なお、 `fetch()` ブロックの先頭で、レスポンスの `url` 値をコンソールにログ出力していることに注意してください。
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.url); // returns https://mdn.github.io/dom-examples/fetch/fetch-response/flowers.jpg

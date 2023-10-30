@@ -3,6 +3,8 @@ title: 应该如何使用 Github Pages?
 slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 [GitHub](https://github.com/)是一个“公共编码”网站。它允许你上传代码存储库并存储在 [Git](http://git-scm.com/) 版本控制系统上。然后，你可以在代码项目上进行协作，默认情况下系统是开源的，这意味着世界上任何人都可以找到你的 GitHub 代码，使用它，从中学习，并改进它。同样的，对于其他人的代码你也可以这么做！本文提供了一个基本的指南，即使用 Github 的 gh-pages 功能发布内容。
 
 ## 发布内容

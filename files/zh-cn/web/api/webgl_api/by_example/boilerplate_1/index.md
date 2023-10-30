@@ -13,7 +13,7 @@ slug: Web/API/WebGL_API/By_example/Boilerplate_1
 
 特别是，在 HTML 的{{HTMLElement("p")}}元素包含一些描述性的文本页面也可以是错误消息；一个{{HTMLElement("canvas")}} 元素;和一个可选的{{HTMLElement("button")}}。CSS 规则包含`body`, `canvas`, 和`button`。任何额外的冗余的 CSS 和 HTML 将不会显示在页面的具体的例子。
 
-在以下示例中，我们将使用一个 JavaScript 函数功能，`getRenderingContext()` ，来初始化{{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}}。现在，您应该能够了解什么功能。基本上，它得到了 WebGL 从画布元素，渲染上下文初始化绘图缓冲区，清除它黑色，并返回初始化上下文。在错误的情况下，它会显示一个错误消息，并返回 {{jsxref("null")}}。
+在以下示例中，我们将使用一个 JavaScript 函数功能，`getRenderingContext()` ，来初始化{{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}}。现在，你应该能够了解什么功能。基本上，它得到了 WebGL 从画布元素，渲染上下文初始化绘图缓冲区，清除它黑色，并返回初始化上下文。在错误的情况下，它会显示一个错误消息，并返回 {{jsxref("null")}}。
 
 最后，所有 JavaScript 代码将运行在一个直接的函数，这是一种常见的 JavaScript 技术 (see {{Glossary("Function")}})。函数声明和调用也将被隐藏。
 

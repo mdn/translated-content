@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/useProgram
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.useProgram()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définit le {{domxref("WebGLProgram")}} spécifié comme faisant partie de l'état de rendu en cours.
+La méthode **`WebGLRenderingContext.useProgram()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définit le {{domxref("WebGLProgram")}} spécifié comme faisant partie de l'état de rendu en cours.
 
 ## Syntaxe
 

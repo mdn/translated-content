@@ -32,7 +32,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* 上辺 | 垂直線 | 下辺 */
-border-color: red rgb(240,30,50,.7) green;
+border-color: red rgb(240, 30, 50, 0.7) green;
 
 /* 上辺 | 右辺 | 下辺 | 左辺 */
 border-color: red yellow green blue;
@@ -73,7 +73,8 @@ border-color: unset;
 ```html
 <div id="justone">
   <p><code>border-color: red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -81,7 +82,8 @@ border-color: unset;
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -89,7 +91,8 @@ border-color: unset;
 </div>
 <div id="topvertbott">
   <p><code>border-color: red cyan gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -97,7 +100,8 @@ border-color: unset;
 </div>
 <div id="trbl">
   <p><code>border-color: red cyan black gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>

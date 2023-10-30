@@ -49,6 +49,7 @@ align-items: unset;
     - フレックスアイテムについては、このキーワードは `stretch` として動作します。
     - グリッドアイテムについては、このキーワードは `stretch` の一つと似た動作をしますが、ボックスにアスペクト比や内部寸法がある場合は `start` のように動作します。
     - このプロパティはブロックレベルボックスや、表のセルには適用されません。
+
 - `flex-start`
   - : フレックスアイテムの cross-start 側マージンの端は、ラインの cross-start の端に寄せられます。
 - `flex-end`
@@ -86,7 +87,7 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-items: center; /* ライブサンプルで変更可能 */
   background-color: #8c8c8c;
@@ -206,15 +207,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```

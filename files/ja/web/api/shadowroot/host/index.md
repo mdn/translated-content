@@ -10,7 +10,7 @@ slug: Web/API/ShadowRoot/host
 ## 構文
 
 ```js
-const someElement = shadowRoot.host
+const someElement = shadowRoot.host;
 ```
 
 ### 値

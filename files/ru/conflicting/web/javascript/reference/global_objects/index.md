@@ -1,10 +1,6 @@
 ---
 title: uneval()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/uneval
 original_slug: Web/JavaScript/Reference/Global_Objects/uneval
 ---
 

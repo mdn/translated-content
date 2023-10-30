@@ -35,7 +35,7 @@ slug: Web/API/Window/orientationchange_event
 `orientationchange` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
 
 ```js
-window.addEventListener("orientationchange", function() {
+window.addEventListener("orientationchange", function () {
   console.log("端末の向きが " + screen.orientation.angle + "になりました。");
 });
 ```
@@ -43,7 +43,7 @@ window.addEventListener("orientationchange", function() {
 または、 {{domxref("Window/onorientationchange", "onorientationchange")}} イベントハンドラープロパティを使用します。
 
 ```js
-window.onorientationchange = function() {
+window.onorientationchange = function () {
   console.log("端末の向きが " + screen.orientation.angle + "になりました。");
 };
 ```

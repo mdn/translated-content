@@ -17,15 +17,15 @@ slug: Web/API/Window/toolbar
 
 ```html
 <html>
-<head>
-  <title>様々な DOM テスト</title>
-  <script>
-    var visible = window.toolbar.visible;
-  </script>
-</head>
-<body>
-  <p>様々な DOM テスト</p>
-</body>
+  <head>
+    <title>様々な DOM テスト</title>
+    <script>
+      var visible = window.toolbar.visible;
+    </script>
+  </head>
+  <body>
+    <p>様々な DOM テスト</p>
+  </body>
 </html>
 ```
 

@@ -7,12 +7,12 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 
 现在是时候深入了解 Vue，并创建我们自己的自定义组件了--我们将从创建一个组件来表示待办事项列表中的每个项目开始。在这一过程中，我们将学习一些重要的概念，例如在其他组件中调用组件，通过道具向它们传递数据，以及保存数据状态。
 
-> **备注：** 如果你需要根据我们的版本检查您的代码，你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/>。
+> **备注：** 如果你需要根据我们的版本检查你的代码，你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/>。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉<a href="/zh-CN/docs/learn/HTML">HTML</a>、<a
@@ -86,7 +86,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
    import ToDoItem from "./components/ToDoItem.vue";
    ```
 
-3. 在你的组件对象里面，添加 `components` 属性，然后在它里面添加您的 ToDoItem 组件进行注册。
+3. 在你的组件对象里面，添加 `components` 属性，然后在它里面添加你的 ToDoItem 组件进行注册。
 
 你的`<script>`内容现在应该是这样的：
 
@@ -129,14 +129,14 @@ export default {
 
 我们的 `ToDoItem` 组件仍然不太可用，因为我们只能在页面上包含它一次（ID 必须唯一），而且我们没有办法设置 label 标签的文本。这一切都不是动态的。
 
-我们需要的是一些组件状态。这可以通过在组件中添加 props 来实现。您可以认为 props 与函数中的输入类似。prop 的值给予了组件影响其显示的初始状态。
+我们需要的是一些组件状态。这可以通过在组件中添加 props 来实现。你可以认为 props 与函数中的输入类似。prop 的值给予了组件影响其显示的初始状态。
 
 ### 注册 props
 
 在 Vue 中，注册 props 的方式有两种：
 
 - 第一种方式是，以字符串数组的方式列出 props，数组中的每个实体对应一个 prop 名称。
-- 第二种方法是将 props 定义为一个对象，每个 key 对应于 prop 名称。将 props 列为对象允许您指定默认值，将 props 标记为 required，执行基本的对象类型 (特别是 JavaScript 基本类型) ，并执行简单的 prop 校验。
+- 第二种方法是将 props 定义为一个对象，每个 key 对应于 prop 名称。将 props 列为对象允许你指定默认值，将 props 标记为 required，执行基本的对象类型 (特别是 JavaScript 基本类型) ，并执行简单的 prop 校验。
 
 > **备注：** 注意：prop 验证只能在 development 模式下进行，所以你不能在生产环境中严格依赖它。此外，prop 验证函数在组件实例创建之前被调用，因此它们不能访问组件状态 (或其他 props)。
 
@@ -187,7 +187,7 @@ export default {
 </template>
 ```
 
-回到网页浏览器中，您将会看到 todo item 与之前相同，但是没有 label。转到浏览器的开发者工具，您会在控制台中看到这样的警告：
+回到网页浏览器中，你将会看到 todo item 与之前相同，但是没有 label。转到浏览器的开发者工具，你会在控制台中看到这样的警告：
 
 ```
 [Vue warn]: Missing required prop: "label"
@@ -207,13 +207,13 @@ found in
 <to-do-item label="My ToDo Item"></to-do-item>
 ```
 
-现在您会在页面上看到 label 了，并且 console 里不会再出现警告提示。
+现在你会在页面上看到 label 了，并且 console 里不会再出现警告提示。
 
 这就是一个简单的 props。接下来我们将讨论 Vue 如何持久化数据状态
 
 ## Vue 的数据对象
 
-如果您改变 传递到在您的 App 组件中访问的 `<to-do-item></to-do-item>` 的 `label` prop 值，您应该会看到该值被更新。这很 ok。我们现在有了一个 checkbox，一个可更新的 label 标签。然而，我们目前没有对 "done" prop 做任何事情——我们可以在 UI 中选中 checkbox，但在应用程序中，我们没有实际记录 todo item 是否已完成。
+如果你改变 传递到在你的 App 组件中访问的 `<to-do-item></to-do-item>` 的 `label` prop 值，你应该会看到该值被更新。这很 ok。我们现在有了一个 checkbox，一个可更新的 label 标签。然而，我们目前没有对 "done" prop 做任何事情——我们可以在 UI 中选中 checkbox，但在应用程序中，我们没有实际记录 todo item 是否已完成。
 
 为了实现它，我们将组件的 `done` prop 与 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 标签的 `checked` 属性作绑定。这样就可以记录复选框是否被选中。但是，props 是一种单向数据绑定，组件永远不该改变自己的 props 的值，这点很重要。坚守这点的原因有很多。其一是，组件修改 props 会造成程序调试困难。如果一个值被传递进多个子组件，将很难定位这个值是在哪里被修改的。此外，修改 props 会造成组件重新渲染。所以，一个组件里突变的 props 会触发组件重新渲染，这可能会反过来再次触发 props 突变。
 
@@ -229,9 +229,9 @@ data() {
 
 你将注意到 `data` 属性是一个函数。这是为了在运行时保持组件的每个实例的数据值是唯一的——为每个组件实例单独调用函数。如果将数据声明为仅一个对象，则该组件的所有实例将共享相同的值。这是 Vue 注册组件方式的副作用，也是你不想要的。
 
-您可以使用 `this` 从内部数据访问组件的 props 和其他属性，如所你料。我们很快就会看到一个示例。
+你可以使用 `this` 从内部数据访问组件的 props 和其他属性，如所你料。我们很快就会看到一个示例。
 
-> **备注：** 由于 `this` 在箭头函数中的工作方式（绑定到父级的上下文），如果使用箭头函数，您将无法从内部 `data` 访问任何必要的属性。因此，不要对 `data` 属性使用箭头函数。
+> **备注：** 由于 `this` 在箭头函数中的工作方式（绑定到父级的上下文），如果使用箭头函数，你将无法从内部 `data` 访问任何必要的属性。因此，不要对 `data` 属性使用箭头函数。
 
 因此，让我们向 `ToDoItem` 组件添加一个 `data` 属性。这将返回一个包含单个属性的对象，即我们将调用 `isDone`，其值为 `this.done`。
 
@@ -269,7 +269,7 @@ v-bind:attribute="expression"
 <input type="checkbox" id="todo-item" :checked="isDone" />
 ```
 
-你可以自由使用任何您想要的模式。不过，最好保持一致。由于速记语法更常用，因此本教程将坚持该模式。
+你可以自由使用任何你想要的模式。不过，最好保持一致。由于速记语法更常用，因此本教程将坚持该模式。
 
 所以让我们这样做。立即更新你的 `<input>` 元素，将 `checked="false"` 替换为 `:checked="isDone"`。
 
@@ -342,7 +342,7 @@ export default {
 
 ## 总结
 
-这将对本文有所帮助。此时，我们有一个工作良好的 `ToDoItem` 组件，可以传递一个标签来显示，将存储其检查状态，并在每次调用时使用唯一的 id 呈现。您可以通过在 `App.vue` 中临时添加更多 `<to-do-item></to-do-item>` 去调用，然后使用浏览器的 DevTools 检查其呈现的输出，从而检查唯一 `id` 是否正常工作。
+这将对本文有所帮助。此时，我们有一个工作良好的 `ToDoItem` 组件，可以传递一个标签来显示，将存储其检查状态，并在每次调用时使用唯一的 id 呈现。你可以通过在 `App.vue` 中临时添加更多 `<to-do-item></to-do-item>` 去调用，然后使用浏览器的 DevTools 检查其呈现的输出，从而检查唯一 `id` 是否正常工作。
 
 现在，我们已准备好将多个 `ToDoItem` 组件添加到我们的应用中。在下一篇文章中，我们将介绍如何将一组待办事项数据添加到 `App.vue` 组件中，然后使用 `v-for` 指令在 `ToDoItem` 组件中循环显示这些数据。
 

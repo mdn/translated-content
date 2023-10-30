@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -28,11 +28,11 @@ onerror = (event) => { };
 以下のコードでは {{domxref("SharedWorker") }} コンストラクターを使用して {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} オブジェクトを作成し、結果オブジェクトに `onerror` ハンドラーを設定しています。
 
 ```js
-const mySharedWorker = new SharedWorker('shared-worker.js');
+const mySharedWorker = new SharedWorker("shared-worker.js");
 
 mySharedWorker.onerror = (event) => {
-  console.error('ワーカーでエラーが発生しました。');
-}
+  console.error("ワーカーでエラーが発生しました。");
+};
 ```
 
 ## 仕様書

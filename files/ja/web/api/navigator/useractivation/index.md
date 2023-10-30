@@ -1,13 +1,14 @@
 ---
-title: Navigator.userActivation
+title: "Navigator: userActivation プロパティ"
+short-title: userActivation
 slug: Web/API/Navigator/userActivation
 l10n:
-  sourceCommit: 165b70e57270af4ba85526d92cce74d51d12c39d
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
-{{domxref("Navigator")}} インターフェイスの読み取り専用プロパティ **`userActivation`** は、現在のウインドウのユーザーによる有効化の状態についての情報を持つ {{domxref("UserActivation")}} オブジェクトを返します。
+**`userActivation`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、現在のウインドウのユーザーによる有効化の状態についての情報を持つ {{domxref("UserActivation")}} オブジェクトを返します。
 
 ## 値
 

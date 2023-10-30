@@ -1,10 +1,6 @@
 ---
 title: Переход к строгому режиму
 slug: conflicting/Web/JavaScript/Reference/Strict_mode
-tags:
-  - Advanced
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 original_slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
 

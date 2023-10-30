@@ -56,15 +56,15 @@ if (navigator.mediaDevices.getUserMedia) {
 
   const onSuccess = (stream) => {
     const options = {
-      audioBitsPerSecond : 128000,
-      videoBitsPerSecond : 2500000,
-      mimeType : 'video/mp4'
-    }
+      audioBitsPerSecond: 128000,
+      videoBitsPerSecond: 2500000,
+      mimeType: "video/mp4",
+    };
     const mediaRecorder = new MediaRecorder(stream, options);
     m = mediaRecorder;
 
     // …
-  }
+  };
 }
 ```
 

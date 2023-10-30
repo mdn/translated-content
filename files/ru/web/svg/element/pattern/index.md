@@ -99,10 +99,7 @@ svg {
 
 ## Характеристики
 
-| Характеристики                                                      | Статус              | Коммент            |
-| ------------------------------------------------------------------- | ------------------- | ------------------ |
-| {{SpecName('SVG2', 'pservers.html#Patterns', '&lt;pattern&gt;')}}   | {{Spec2('SVG2')}}   |                    |
-| {{SpecName('SVG1.1', 'pservers.html#Patterns', '&lt;pattern&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Совместимость браузера
 

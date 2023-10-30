@@ -61,16 +61,19 @@ register(scriptURL, options)
 次の例では、`scope`（を省略した場合）の既定値を使用しています。 この場合、サービスワーカーは `example.com/index.html` とその下のページ（`example.com/product/description.html` など）を制御します。
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // 既定のスコープを使用して、
   // サイトのルートでホストされるサービスワーカーを登録します。
-  navigator.serviceWorker.register('/sw.js').then((registration) => {
-    console.log('サービスワーカー登録成功:', registration);
-  }, /*catch*/ (error) => {
-    console.error(`サービスワーカー登録失敗: ${error}`);
-  });
+  navigator.serviceWorker.register("/sw.js").then(
+    (registration) => {
+      console.log("サービスワーカー登録成功:", registration);
+    },
+    /*catch*/ (error) => {
+      console.error(`サービスワーカー登録失敗: ${error}`);
+    },
+  );
 } else {
-  console.error('サービスワーカーに対応していません。');
+  console.error("サービスワーカーに対応していません。");
 }
 ```
 
@@ -79,15 +82,18 @@ if ('serviceWorker' in navigator) {
 あるいは、このコードが `example.com/product/description.html` のページに含まれている場合、`'./'` のスコープは、サービスワーカーが `example.com/product` の下のリソースにのみ適用されることを意味します。
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // スコープを手動で宣言
-  navigator.serviceWorker.register('/sw.js', {scope: './'}).then((registration) => {
-    console.log('サービスワーカー登録成功:', registration);
-  }, /*catch*/ (error) => {
-    console.error(`サービスワーカー登録失敗: ${error}`);
-  });
+  navigator.serviceWorker.register("/sw.js", { scope: "./" }).then(
+    (registration) => {
+      console.log("サービスワーカー登録成功:", registration);
+    },
+    /*catch*/ (error) => {
+      console.error(`サービスワーカー登録失敗: ${error}`);
+    },
+  );
 } else {
-  console.error('サービスワーカーをサポートしていません。');
+  console.error("サービスワーカーをサポートしていません。");
 }
 ```
 
@@ -96,15 +102,18 @@ _scope_ の意味と使用方法について、しばしば混乱があります
 以下のコードは、サイトのルートにある `example.com/index.html` に記載した場合、 `example.com/product` 以下のリソースにのみ適用されます。
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // スコープを手動で宣言
-  navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then((registration) => {
-    console.log('サービスワーカー登録成功:', registration);
-  }, /*catch*/ (error) => {
-    console.error(`サービスワーカー登録失敗: ${error}`);
-  });
+  navigator.serviceWorker.register("/sw.js", { scope: "/product/" }).then(
+    (registration) => {
+      console.log("サービスワーカー登録成功:", registration);
+    },
+    /*catch*/ (error) => {
+      console.error(`サービスワーカー登録失敗: ${error}`);
+    },
+  );
 } else {
-  console.error('サービスワーカーをサポートしていません。');
+  console.error("サービスワーカーをサポートしていません。");
 }
 ```
 

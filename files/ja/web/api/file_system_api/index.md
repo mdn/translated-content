@@ -1,7 +1,6 @@
 ---
 title: File System Access API
 slug: Web/API/File_System_API
-original_slug: Web/API/File_System_Access_API
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}

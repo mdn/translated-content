@@ -17,19 +17,33 @@ l10n:
 
 ```js
 // アロー関数
-findIndex((element) => { /* … */ } )
-findIndex((element, index) => { /* … */ } )
-findIndex((element, index, array) => { /* … */ } )
+findIndex((element) => {
+  /* … */
+});
+findIndex((element, index) => {
+  /* … */
+});
+findIndex((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-findIndex(callbackFn)
-findIndex(callbackFn, thisArg)
+findIndex(callbackFn);
+findIndex(callbackFn, thisArg);
 
 // インラインコールバック関数
-findIndex(function(element) { /* … */ })
-findIndex(function(element, index) { /* … */ })
-findIndex(function(element, index, array){ /* … */ })
-findIndex(function(element, index, array) { /* … */ }, thisArg)
+findIndex(function (element) {
+  /* … */
+});
+findIndex(function (element, index) {
+  /* … */
+});
+findIndex(function (element, index, array) {
+  /* … */
+});
+findIndex(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数

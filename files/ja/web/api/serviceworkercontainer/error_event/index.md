@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -28,7 +28,7 @@ onerror = (event) => { };
 ```js
 navigator.serviceWorker.onerror = (errorevent) => {
   console.error(`受信したエラーメッセージ: ${errorevent.message}`);
-}
+};
 ```
 
 ## ブラウザーの互換性

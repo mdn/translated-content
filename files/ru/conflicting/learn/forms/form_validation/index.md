@@ -1,11 +1,6 @@
 ---
 title: Constraint validation API
 slug: conflicting/Learn/Forms/Form_validation
-tags:
-  - API
-  - Валидация ограничений
-  - Landing
-  - Reference
 original_slug: Web/API/Constraint_validation
 ---
 

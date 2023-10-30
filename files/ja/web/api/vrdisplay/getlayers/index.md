@@ -12,7 +12,7 @@ slug: Web/API/VRDisplay/getLayers
 ## 構文
 
 ```js
-getLayers()
+getLayers();
 ```
 
 ### 引数

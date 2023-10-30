@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-`detune` は {{ domxref("OscillatorNode") }} インターフェイスのプロパティで、 [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} であり、発振器の離調を[セント](https://ja.wikipedia.org/wiki/セント_(音楽))で表します。
+`detune` は {{ domxref("OscillatorNode") }} インターフェイスのプロパティで、 [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} であり、発振器の離調を[セント](<https://ja.wikipedia.org/wiki/セント_(音楽)>)で表します。
 
 > **Note:** 返される `AudioParam` は読み取り専用ですが、それが表す値は読み取り専用ではありません。
 
@@ -26,7 +26,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.detune.setValueAtTime(100, audioCtx.currentTime); // value in cents
 oscillator.start();

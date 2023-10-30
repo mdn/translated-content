@@ -10,7 +10,7 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row"><p>预备知识：</p></th>
+      <th scope="row"><p>前提：</p></th>
       <td>
         <p>
           HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"

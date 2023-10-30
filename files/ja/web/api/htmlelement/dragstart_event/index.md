@@ -80,12 +80,12 @@ body {
 
 ```js
 const source = document.getElementById("draggable");
-source.addEventListener("dragstart", event => {
+source.addEventListener("dragstart", (event) => {
   // 半透明にする
   event.target.classList.add("dragging");
 });
 
-source.addEventListener("dragend", event => {
+source.addEventListener("dragend", (event) => {
   // 透明度を解除
   event.target.classList.remove("dragging");
 });

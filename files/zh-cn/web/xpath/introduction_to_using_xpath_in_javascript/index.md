@@ -65,7 +65,7 @@ var nsResolver = xpEvaluator.createNSResolver(
 
 然后传递 `document.evaluate`，将 `nsResolver` 变量作为 `namespaceResolver` 参数。
 
-注意：XPath 定义不带前缀的 QNames，以仅匹配 null 命名空间中的元素。XPath 没有办法选择应用于常规元素引用的默认命名空间（例如，`p[@id='_myid']` 对应于 `xmlns='http://www.w3.org/1999/xhtml'`）。要匹配非命名空间中的默认元素，您必须使用如 `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_id']`（[这种方法](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Using_XPath_functions_to_reference_elements_with_a_default_namespace)适用于命名空间未知的动态 XPath），或者使用前缀名测试，并创建一个命名空间解析器将前缀映射到命名空间。如果你想采取后一种方法，阅读更多关于[如何创建一个用户定义的命名空间解析器](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Implementing_a_User_Defined_Namespace_Resolver)。
+注意：XPath 定义不带前缀的 QNames，以仅匹配 null 命名空间中的元素。XPath 没有办法选择应用于常规元素引用的默认命名空间（例如，`p[@id='_myid']` 对应于 `xmlns='http://www.w3.org/1999/xhtml'`）。要匹配非命名空间中的默认元素，你必须使用如 `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_id']`（[这种方法](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Using_XPath_functions_to_reference_elements_with_a_default_namespace)适用于命名空间未知的动态 XPath），或者使用前缀名测试，并创建一个命名空间解析器将前缀映射到命名空间。如果你想采取后一种方法，阅读更多关于[如何创建一个用户定义的命名空间解析器](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Implementing_a_User_Defined_Namespace_Resolver)。
 
 ### 注意
 
@@ -375,7 +375,7 @@ document.evaluate(
 
 `doc.evaluate('//entry', doc, nsResolver, XPathResult.ANY_TYPE, null)` 将返回一个空集，其中 `nsResolver` 是 `createNSResolver` 返回的解析器。传递一个 `null` 解析器再好不过了。
 
-一种可能的解决方法是创建一个自定义解析器，返回正确的默认命名空间（本例中为 Atom 命名空间）。请注意，您仍然必须在 XPath 表达式中使用一些命名空间前缀，以便解析器函数能够将其更改为所需的命名空间。例如：
+一种可能的解决方法是创建一个自定义解析器，返回正确的默认命名空间（本例中为 Atom 命名空间）。请注意，你仍然必须在 XPath 表达式中使用一些命名空间前缀，以便解析器函数能够将其更改为所需的命名空间。例如：
 
 ```js
 function resolver() {

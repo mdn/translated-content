@@ -19,8 +19,8 @@ slug: Web/API/Range/startOffset
 
 ```js
 const range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 const startRangeOffset = range.startOffset;
 ```
 

@@ -16,8 +16,8 @@ slug: Web/API/IDBTransaction
 ```js
 var trans1 = db.transaction("foo", "readwrite");
 var trans2 = db.transaction("foo", "readwrite");
-var objectStore2 = trans2.objectStore("foo")
-var objectStore1 = trans1.objectStore("foo")
+var objectStore2 = trans2.objectStore("foo");
+var objectStore1 = trans1.objectStore("foo");
 objectStore2.put("2", "key");
 objectStore1.put("1", "key");
 ```
@@ -85,16 +85,17 @@ Firefox 40 以降、IndexedDB のトランザクションはパフォーマン�
 
 トランザクションはこれらの 3 種類のモードのうち 1 個を持つことができます。
 
-| 定数                 | 値                           | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| -------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`READ_ONLY`]()      | `"readonly"`(Chrome では 0)      | データの読み取りができますが、変更はできません。                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| [`READ_WRITE`]()     | `"readwrite"` (Chrome では 1)     | 変更対象のデータストア内のデータの読み書きができます。                                                                                                                                                                                                                                                                                                                                                                                              |
+| 定数                 | 値                                | 説明                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`READ_ONLY`]()      | `"readonly"`(Chrome では 0)       | データの読み取りができますが、変更はできません。                                                                                                                                                                                                                                                                                                                                                                                |
+| [`READ_WRITE`]()     | `"readwrite"` (Chrome では 1)     | 変更対象のデータストア内のデータの読み書きができます。                                                                                                                                                                                                                                                                                                                                                                          |
 | [`VERSION_CHANGE`]() | `"versionchange"` (Chrome では 2) | オブジェクトストアやインデックスの作成や削除を含む任意の操作を行えます。このモードは、{{domxref("IDBDatabase")}} オブジェクトの [`setVersion()`](/ja/docs/Web/API/IDBDatabase#setVersion) メソッドにより開始されたトランザクションでバージョン番号を更新する用です。このモードのトランザクションは、他のトランザクションと並行で実行することはできません。このモードのトランザクションは、"upgrade transactions" と呼ばれます。 |
 
 これらの定数は現在非推奨ですが、後方互換性を維持するために必要に応じてこれらの定数を使用することができます。(Chrome では、[バージョン 21 で変更がありました](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)) これらのオブジェクトが利用できなくなっている場合に備え、以下のような保守的なコードを書くべきです。
 
 ```js
-var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
+var myIDBTransaction = window.IDBTransaction ||
+  window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
 ```
 
 ## 例
@@ -105,8 +106,8 @@ var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || {
 // 我々のデータベースを開きましょう
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>データベースを初期化しました。</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>データベースを初期化しました。</li>";
 
   // データベースを開いた結果を変数 db に保存します｡
   // これは後でたくさん使います｡
@@ -118,19 +119,30 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // IDB に挿入する新しいオブジェクトを作成します
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  var newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // 読み書きのトランザクションを開き、データの追加の準備をします
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // トランザクションを開くことに成功したら報告します
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>トランザクション完了 : データベースの変更が完了しました。</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML +=
+      "<li>トランザクション完了 : データベースの変更が完了しました。</li>";
   };
 
-
-  transaction.onerror = function(event) {
-  note.innerHTML += '<li>トランザクションはエラーのため開けませんでした。重複するアイテムは許されません。</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>トランザクションはエラーのため開けませんでした。重複するアイテムは許されません。</li>";
   };
 
   // トランザクション上でオブジェクトストアを生成します
@@ -139,12 +151,12 @@ function addData() {
   // オブジェクトストアに newItem オブジェクトを加えます
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // 要求の成功を報告します (これは DB に項目が正常に保存されたという
     // ことではありません。これの確認には、transaction.oncomplete が必要です)
-    note.innerHTML += '<li>要求に成功しました。</li>';
+    note.innerHTML += "<li>要求に成功しました。</li>";
   };
-};
+}
 ```
 
 ## 仕様書

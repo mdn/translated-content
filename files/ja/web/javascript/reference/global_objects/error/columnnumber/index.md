@@ -12,9 +12,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 ### columnNumber の使用
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
-console.log(e.columnNumber) // 0
+console.log(e.columnNumber); // 0
 ```
 
 ## 仕様書

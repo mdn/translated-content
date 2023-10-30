@@ -17,8 +17,8 @@ quotes: none;
 quotes: auto;
 
 /* <string> 値 */
-quotes: "«" "»";           /* open-quote および close-quote をフランス語の引用符に設定 */
-quotes: "«" "»" "‹" "›";   /* 2 レベルの引用符を設定 */
+quotes: "«" "»"; /* open-quote および close-quote をフランス語の引用符に設定 */
+quotes: "«" "»" "‹" "›"; /* 2 レベルの引用符を設定 */
 
 /* グローバル値 */
 quotes: inherit;
@@ -81,19 +81,26 @@ q::after {
 ```html
 <div lang="ja">
   <q>これが日本語の引用符です。</q>
-<div>
-<hr>
-<div lang="ru">
-  <q>Это русская цитата</q>
-<div>
-<hr>
-<div lang="de">
-  <q>Dies ist ein deutsches Zitat</q>
-<div>
-<hr>
-<div lang="en">
-  <q>This is an English quote.</q>
-<div>
+  <div>
+    <hr />
+    <div lang="ru">
+      <q>Это русская цитата</q>
+      <div>
+        <hr />
+        <div lang="de">
+          <q>Dies ist ein deutsches Zitat</q>
+          <div>
+            <hr />
+            <div lang="en">
+              <q>This is an English quote.</q>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 #### CSS

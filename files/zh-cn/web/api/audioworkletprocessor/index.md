@@ -9,7 +9,7 @@ slug: Web/API/AudioWorkletProcessor
 
 ## 构造函数
 
-> **备注：** `AudioWorkletProcessor` 及其子类不能通过用户提供的的代码直接实例化。它们只能随着与之相联系{{domxref("AudioWorkletNode")}}s 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此您可以执行自定义的初始化过程——详细信息请参见构造函数页面。
+> **备注：** `AudioWorkletProcessor` 及其子类不能通过用户提供的的代码直接实例化。它们只能随着与之相联系{{domxref("AudioWorkletNode")}}s 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此你可以执行自定义的初始化过程——详细信息请参见构造函数页面。
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : 创建一个 `AudioWorkletProcessor` 对象的新实例。
@@ -21,7 +21,7 @@ slug: Web/API/AudioWorkletProcessor
 
 ## 方法
 
-_`AudioWorkletProcessor` 接口没有定义任何自己的方法。但是，您必须提供一个 {{domxref("AudioWorkletProcessor.process", "process()")}} 方法，用以处理音频流。_
+_`AudioWorkletProcessor` 接口没有定义任何自己的方法。但是，你必须提供一个 {{domxref("AudioWorkletProcessor.process", "process()")}} 方法，用以处理音频流。_
 
 ## 事件
 
@@ -31,7 +31,7 @@ _`AudioWorkletProcessor` 接口不响应任何事件。_
 
 ### Deriving classes
 
-要自定义音频处理代码，你必须从`AudioWorkletProcessor` 接口派生一个类。这个派生类必须具有在该接口中不曾定义的{{domxref("AudioWorkletProcessor.process", "process")}} 方法。该方法将被每个含有 128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxref("AudioParam")}}s (如果它们刚被定义了) 的计算值作为参数。您可以使用输入和 音频参数值去填充输出数组，这是默认的用于使输出静音。
+要自定义音频处理代码，你必须从`AudioWorkletProcessor` 接口派生一个类。这个派生类必须具有在该接口中不曾定义的{{domxref("AudioWorkletProcessor.process", "process")}} 方法。该方法将被每个含有 128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxref("AudioParam")}}s (如果它们刚被定义了) 的计算值作为参数。你可以使用输入和 音频参数值去填充输出数组，这是默认的用于使输出静音。
 
 Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a _static getter_ on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the `AudioWorkletNode`.
 

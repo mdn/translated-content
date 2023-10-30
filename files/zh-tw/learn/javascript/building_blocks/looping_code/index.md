@@ -872,6 +872,6 @@ If there is anything you didn't understand, feel free to read through the articl
 - [for statement reference](/zh-TW/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/zh-TW/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/zh-TW/docs/Web/JavaScript/Reference/Statements/do...while) references
 - [break](/zh-TW/docs/Web/JavaScript/Reference/Statements/break) and [continue](/zh-TW/docs/Web/JavaScript/Reference/Statements/continue) references
-- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
+- [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

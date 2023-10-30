@@ -89,5 +89,5 @@ document
 
 - {{domxref("Document/fullscreenerror_event", "fullscreenerror")}}
 - {{domxref("Element")}}：{{domxref("Element/fullscreenchange_event", "fullscreenchange")}} 事件
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
-- [Fullscreen API 指南](/ja/docs/Web/API/Fullscreen_API/Guide)
+- [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)
+- [Fullscreen API 指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)

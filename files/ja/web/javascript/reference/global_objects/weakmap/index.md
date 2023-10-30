@@ -48,14 +48,14 @@ map API は、4 つの API メソッドから共有される 2 つの配列 (1 �
 
 ```js
 const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 const o1 = {},
-      o2 = function() {},
-      o3 = window;
+  o2 = function () {},
+  o3 = window;
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
+wm1.set(o2, "azerty");
 wm2.set(o1, o2); // 値は（オブジェクトまたは関数を含む）何であってもかまいません
 wm2.set(o3, undefined);
 wm2.set(wm1, wm2); // キーも値もどんなオブジェクトでもかまいません。 WeakMap であってもよいのです！

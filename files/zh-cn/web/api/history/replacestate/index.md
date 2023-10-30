@@ -18,7 +18,7 @@ history.replaceState(stateObj, title[, url]);
 - stateObj
   - : 状态对象是一个 JavaScript 对象，它与传递给 `replaceState` 方法的历史记录实体相关联。
 - title
-  - : [大部分浏览器忽略这个参数](https://github.com/whatwg/html/issues/2174), 将来可能有用。在此处传递空字符串应该可以防止将来对方法的更改。或者，您可以为该状态传递简短标题
+  - : [大部分浏览器忽略这个参数](https://github.com/whatwg/html/issues/2174), 将来可能有用。在此处传递空字符串应该可以防止将来对方法的更改。或者，你可以为该状态传递简短标题。
 - url {{optional_inline}}
   - : 历史记录实体的 URL. 新的 URL 跟当前的 URL 必须是同源; 否则 replaceState 抛出一个异常。
 

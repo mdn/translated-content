@@ -17,8 +17,6 @@ slug: MDN/At_ten
 
 [Узнать большеabout contributing](/ru/docs/MDN_at_ten/Contributing_to_MDN)
 
-{{TenthCampaignQuote}}
-
 ## Содержание
 
 1. [10-летие MDN](/ru/docs/MDN_at_ten/)

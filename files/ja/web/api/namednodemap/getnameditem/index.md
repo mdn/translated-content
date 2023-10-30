@@ -38,11 +38,12 @@ getNamedItem(name);
 const pre = document.getElementsByTagName("pre")[0];
 const attrMap = pre.attributes;
 
-let result = `The 'test' attribute contains ${attrMap.getNamedItem("test").value}\n`;
+let result = `The 'test' attribute contains ${
+  attrMap.getNamedItem("test").value
+}\n`;
 if (attrMap["boum"]) {
   result += "And 'boum' has been found.";
-}
-else {
+} else {
   result += "And 'boum' has not been found.";
 }
 

@@ -54,7 +54,7 @@ if (navigator.mediaDevices.getUserMedia) {
       {
         audio: true,
         video: false,
-      }
+      },
     )
     .then((stream) => {
       const options = {
@@ -68,7 +68,9 @@ if (navigator.mediaDevices.getUserMedia) {
       console.error(`以下の gUM エラーが発生しました: ${err}`);
     });
 } else {
-  console.log("このブラウザーでは新しい getUserMedia がサポートされていません！");
+  console.log(
+    "このブラウザーでは新しい getUserMedia がサポートされていません！",
+  );
 }
 ```
 

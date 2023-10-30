@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ## Описание
 
-Объекты "Set" - это коллекция значений. Значение в `Set` **может встречаться только один раз**; оно уникально в коллекции. Вы можете перебирать элементы набора в порядке вставки. Порядок _вставки_ соответствует порядку, в котором каждый элемент был успешно вставлен в коллекцию методом [`add()`](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/add) (то есть, когда был вызван `add()`, в наборе ещё не было такого элемента).
+Объекты "Set" - это коллекция значений. Значение в `Set` **может встречаться только один раз**; оно уникально в коллекции. Вы можете перебирать элементы набора в порядке вставки. Порядок _вставки_ соответствует порядку, в котором каждый элемент был успешно вставлен в коллекцию методом [`add()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/add) (то есть, когда был вызван `add()`, в наборе ещё не было такого элемента).
 
 Спецификация требует реализации наборов, "которые в среднем обеспечивают время доступа, сублинейное количеству элементов в коллекции". Следовательно, он может быть представлен внутренне в виде хэш-таблицы (с поиском O(1)), дерева поиска (с поиском O(log(N))) или любой другой структуры данных, при условии, что сложность выше, чем O(N).
 
@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ### Производительность
 
-Метод [`has`](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/has) проверяет наличие значения в `Set` используя алгоритм, который в среднем работает быстрее поэлементного перебора добавленных ранее элементов. В частности этот алгоритм работает быстрее чем метод [`Array.prototype.includes`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes на массиве, который хранит столько же элементов сколько сравниваемый объект `Set`.
+Метод [`has`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/has) проверяет наличие значения в `Set` используя алгоритм, который в среднем работает быстрее поэлементного перебора добавленных ранее элементов. В частности этот алгоритм работает быстрее чем метод [`Array.prototype.includes`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes на массиве, который хранит столько же элементов сколько сравниваемый объект `Set`.
 
 ## Конструктор
 
@@ -34,7 +34,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 ## Свойства экземпляра
 
 - `Set.prototype[@@toStringTag]`
-  - : Начальное значение [`@@toStringTag`](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) свойства - строка `"Set"`. Это значение используется в {{jsxref("Object.prototype.toString()")}}.
+  - : Начальное значение [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) свойства - строка `"Set"`. Это значение используется в {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Set.prototype.size")}}
   - : Возвращает количество значений в объекте `Set`.
 
@@ -271,6 +271,6 @@ console.assert(set.size === array.length);
 ## Смотрите также
 
 - [Полифил `Set` в `core-js`](https://github.com/zloirock/core-js#set)
-- [map](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- [map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

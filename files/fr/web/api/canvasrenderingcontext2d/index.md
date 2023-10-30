@@ -21,7 +21,7 @@ ctx.fillStyle = "rgb(200,0,0)"; // définit la couleur de remplissage du rectang
 ctx.fillRect(10, 10, 55, 50); // dessine le rectangle à la position 10, 10 d'une largeur de 55 et d'une hauteur de 50
 ```
 
-Voir les propriétés et les méthodes dans la barre latérale et plus bas. Le [tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial) a davantage d'informations, d'exemples et de ressources également.
+Voir les propriétés et les méthodes dans la barre latérale et plus bas. Le [tutoriel canvas](/fr/docs/Web/API/Canvas_API/Tutorial) a davantage d'informations, d'exemples et de ressources également.
 
 ## Dessin de rectangles
 

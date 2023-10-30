@@ -11,7 +11,6 @@ slug: Web/CSS/:paused
 
 ```css
 :paused {
-
 }
 ```
 

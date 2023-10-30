@@ -31,12 +31,12 @@ var observer = new MutationObserver(callback);
 ```js
 function callback(mutationList, observer) {
   mutationList.forEach((mutation) => {
-    switch(mutation.type) {
-      case 'childList':
+    switch (mutation.type) {
+      case "childList":
         /* ツリーに１つ以上の子が追加されたか、ツリーから削除された。
            mutation.addedNodes と mutation.removedNodes を参照。 */
         break;
-      case 'attributes':
+      case "attributes":
         /* Mutation.target の要素の属性値が変更された。
            属性名は mutation.attributeName にあり、
            以前の値は mutation.oldValue にある。 */
@@ -59,8 +59,8 @@ var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
   attributes: true,
-  subtree: true // 省略するか、false に設定すると、親ノードへの変更のみを監視する。
-}
+  subtree: true, // 省略するか、false に設定すると、親ノードへの変更のみを監視する。
+};
 
 var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

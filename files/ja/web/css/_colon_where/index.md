@@ -1,28 +1,15 @@
 ---
 title: ":where()"
 slug: Web/CSS/:where
+l10n:
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
 {{CSSRef}}
 
 **`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。
 
-```css
-/* ヘッダー、メイン、フッターの何れかの中にある段落に
-   カーソルをかざしたときに選択 */
-:where(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-/* 上記のものは下記のものと同等です。 */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
 
 `:where()` と {{CSSxRef(":is", ":is()")}} の違いは、 `:where()` は[詳細度](/ja/docs/Web/CSS/Specificity)が常に 0 であるのに対して、 `:is()` は引数内で最も詳細度の高いセレクターの詳細度を取ります。
 
@@ -34,15 +21,16 @@ CSS では、セレクターリストを使用する場合、いずれかのセ�
 
 ```css
 :where(:valid, :unsupported) {
-  ...
+  /* … */
 }
 ```
 
 は `:unsupported` の部分に対応していないブラウザーでも `:valid` の部分が有効となり正しく解釈されます。一方で
 
 ```css
-:valid, :unsupported {
-  ...
+:valid,
+:unsupported {
+  /* … */
 }
 ```
 
@@ -60,30 +48,52 @@ CSS では、セレクターリストを使用する場合、いずれかのセ�
 <article>
   <h2>:is() でスタイル付けしたリンク</h2>
   <section class="is-styling">
-    <p>こちらがメインコンテンツです。これは<a href="https://mozilla.org">リンクを含んでいます</a>。
+    <p>
+      こちらがメインコンテンツです。これは<a href="https://mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </section>
 
   <aside class="is-styling">
-    <p>こちらが脇コンテンツです。これも<a href="https://developer.mozilla.org">リンクを含んでいます</a>。
+    <p>
+      こちらが脇コンテンツです。これも<a href="https://developer.mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </aside>
 
   <footer class="is-styling">
-    <p>こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a>を含んでいます。
+    <p>
+      こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a
+      >を含んでいます。
+    </p>
   </footer>
 </article>
 
 <article>
   <h2>:where() でスタイル付けしたリンク</h2>
   <section class="where-styling">
-    <p>こちらがメインコンテンツです。これは<a href="https://mozilla.org">リンクを含んでいます</a>.
+    <p>
+      こちらがメインコンテンツです。これは<a href="https://mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </section>
 
   <aside class="where-styling">
-    <p>こちらが脇コンテンツです。これは<a href="https://developer.mozilla.org">リンクを含んでいます</a>.
+    <p>
+      こちらが脇コンテンツです。これも<a href="https://developer.mozilla.org"
+        >リンクを含んでいます</a
+      >。
+    </p>
   </aside>
 
   <footer class="where-styling">
-    <p>こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a>を含んでいます。
+    <p>
+      こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a
+      >を含んでいます。
+    </p>
   </footer>
 </article>
 ```
@@ -125,8 +135,10 @@ footer a {
 
 ## 構文
 
-```
-:where( <complex-selector-list> )
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
 ```
 
 ## 仕様書
@@ -141,4 +153,4 @@ footer a {
 
 - {{CSSxRef(":is", ":is()")}}
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
-- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

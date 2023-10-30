@@ -31,12 +31,7 @@ console.log(x.toString()); // retorna 'Hello world'
 
 ## Especificações
 
-| Especificação                                                                          | Estado               | Comentário                                         |
-| -------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                    | {{Spec2('ES3')}}     | Definição inicial. Implementado no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.5.4.2', 'String.prototype.toString')}}                    | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.tostring', 'String.prototype.toString')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

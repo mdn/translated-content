@@ -472,14 +472,6 @@ if (window.fetch) {
 }
 ```
 
-## 명세서
-
-{{Specifications}}
-
-## 브라우저 호환성
-
-{{Compat}}
-
 ## 같이 보기
 
 - [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API)

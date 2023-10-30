@@ -11,7 +11,7 @@ slug: Web/API/XMLHttpRequest
 
 尽管名称如此，`XMLHttpRequest` 可以用于获取任何类型的数据，而不仅仅是 XML。它甚至支持 [HTTP](/zh-CN/docs/Web/HTTP) 以外的协议（包括 file:// 和 FTP），尽管可能受到更多出于安全等原因的限制。
 
-如果您的通信流程需要从服务器端接收事件或消息数据，请考虑通过 {{domxref("EventSource")}} 接口使用[服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events)。对于全双工的通信，[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 可能是更好的选择。
+如果你的通信流程需要从服务器端接收事件或消息数据，请考虑通过 {{domxref("EventSource")}} 接口使用[服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events)。对于全双工的通信，[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 可能是更好的选择。
 
 ## 构造函数
 
@@ -129,4 +129,4 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
   - [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 
-- [XMLHttpRequest2 中的新技巧（2011）](https://web.dev/xhr2/)
+- [XMLHttpRequest2 中的新技巧（2011）](https://web.dev/articles/xhr2)

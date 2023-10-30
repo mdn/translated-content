@@ -27,7 +27,7 @@ Element.replaceChildren(...nodesOrDOMStrings) // 返回 undefined
 
 ### 清空一个节点
 
-`replaceChildren()` 为清空一个节点的后代提供了非常方便的机制，您只需在父节点不指定任何实参调用该方法即可。
+`replaceChildren()` 为清空一个节点的后代提供了非常方便的机制，你只需在父节点不指定任何实参调用该方法即可。
 
 ```js
 myNode.replaceChildren();
@@ -35,7 +35,7 @@ myNode.replaceChildren();
 
 ### 在父节点之间转移节点
 
-`replaceChildren()` 允许您更轻松地在父节点之间转移节点，而无需依赖冗余的循环代码。例如，有一个简单的应用程序让您选择您派对上的食物。它的 HTML 可能如下：
+`replaceChildren()` 允许你更轻松地在父节点之间转移节点，而无需依赖冗余的循环代码。例如，有一个简单的应用程序让你选择你派对上的食物。它的 HTML 可能如下：
 
 ```html
 <h2>派对食物列表</h2>

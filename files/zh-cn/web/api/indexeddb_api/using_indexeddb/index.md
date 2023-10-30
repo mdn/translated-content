@@ -603,7 +603,7 @@ IndexedDB 使用同源原则，这意味着它把存储绑定到了创建它的�
 
 实际上，这里没有办法可以确保 IndexedDB 事务可以执行完毕，即使是浏览器正常关闭的情况。参见 [Firefox bug 870645](https://bugzil.la/870645)。作为一个正常关闭通知的变通方案，如果此时有事务在数据库卸载时还没有完成，你可以跟踪你的事务并添加一个 `beforeunload` 事件来提醒用户。
 
-至少通过添加中断提醒和 {{domxref("IDBDatabse.onclose")}}，你可以得知它何时关闭了。
+至少通过添加中断提醒和 {{domxref("IDBDatabase.close_event", "IDBDatabase.onclose")}}，你可以得知它何时关闭了。
 
 ## 本地化的排序
 
@@ -641,7 +641,7 @@ Mozilla 已经在 Firefox 43+ 中实现了对 IndexedDB 数据进行本地化排
 
 ### 教程和指南
 
-- [将 IndexedDB 中的数据绑定到 UI 元素（2012）](https://web.dev/indexeddb-uidatabinding/)
+- [将 IndexedDB 中的数据绑定到 UI 元素（2012）](https://web.dev/articles/indexeddb-uidatabinding)
 - [IndexedDB——浏览器中的存储](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 ### 函数库

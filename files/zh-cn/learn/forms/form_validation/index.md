@@ -5,12 +5,12 @@ slug: Learn/Forms/Form_validation
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
 
-表单校验帮助我们确保用户以正确格式填写表单数据，确保提交的数据能使我们的应用程序正常工作。本文将告诉您需要了解的有关表单校验的内容。
+表单校验帮助我们确保用户以正确格式填写表单数据，确保提交的数据能使我们的应用程序正常工作。本文将告诉你需要了解的有关表单校验的内容。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         计算机基础能力，对 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
           href="/zh-CN/docs/Learn/CSS"
@@ -47,7 +47,7 @@ slug: Learn/Forms/Form_validation
 - **我们希望保护我们的用户** ——强制用户输入安全的密码，有利于保护他们的账户信息。
 - **我们希望保护我们自己** —— 恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见[网站安全](/zh-CN/docs/learn/Server-side/First_steps/Website_security)）。
 
-> **警告：** 永远不要相信从客户端传递到服务器的数据。即使您的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。
+> **警告：** 永远不要相信从客户端传递到服务器的数据。即使你的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。
 
 ### 不同类型的表单数据校验
 
@@ -189,7 +189,7 @@ input:valid {
 
 这个例子中，该 {{HTMLElement("input")}} 元素接受两个值中的一个：字符串 "banana" 或者字符串"cherry".
 
-在这个基础上，尝试把`pattern` 属性内部的表达式改变成上面的几个例子，然后看看这些表达式如何影响您可以输入的值以使输入值有效。尝试写一些你自己设计的，看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义。
+在这个基础上，尝试把`pattern` 属性内部的表达式改变成上面的几个例子，然后看看这些表达式如何影响你可以输入的值以使输入值有效。尝试写一些你自己设计的，看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义。
 
 > **备注：** 一些 {{HTMLElement("input")}} 元素类型不需要[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
 
@@ -222,7 +222,7 @@ input:valid {
 ```
 
 - 这里我们看到 `text` 条目的属性`minlength` 和 `maxlength` 都为 6 — 这 banana 和 cherry 的长度都为 6. 输入少于这个长度的字符显示无效，大多浏览器不能输入超过该限制的长度的字符。
-- 我们同时也能让 `number` 条目数值限制在 `min` 为 1 和 一个 `max` 为 10 中 — 输入超出范围则显示无效，并且您将无法使用递增/递减箭头将该值改变到此范围之外。
+- 我们同时也能让 `number` 条目数值限制在 `min` 为 1 和 一个 `max` 为 10 中 — 输入超出范围则显示无效，并且你将无法使用递增/递减箭头将该值改变到此范围之外。
 
 ```css hidden
 input:invalid {
@@ -449,7 +449,7 @@ email.addEventListener("input", function (event) {
   </tbody>
 </table>
 
-对于旧版浏览器，可以使用 [polyfill（例如 Hyperform](https://hyperform.js.org/)），来弥补其对约束校验 API 支持的不足。既然你已经使用 JavaScript，在您的网站或 Web 应用程序的设计和实现中使用 polyfill 并不是累赘。
+对于旧版浏览器，可以使用 [polyfill（例如 Hyperform](https://hyperform.js.org/)），来弥补其对约束校验 API 支持的不足。既然你已经使用 JavaScript，在你的网站或 Web 应用程序的设计和实现中使用 polyfill 并不是累赘。
 
 #### 使用约束校验 API 的例子
 
@@ -468,7 +468,7 @@ email.addEventListener("input", function (event) {
 </form>
 ```
 
-这个简单的表单使用 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，您仍然可以自己做，并相应地设置表单的样式。
+这个简单的表单使用 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，你仍然可以自己做，并相应地设置表单的样式。
 
 [`aria-live`](/zh-CN/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
 
@@ -579,21 +579,21 @@ form.addEventListener(
 
 {{EmbedLiveSample("使用约束校验_API_的例子", "100%", 130)}}
 
-约束校验 API 为您提供了一个强大的工具来处理表单校验，让您可以对用户界面进行远超过仅仅使用 HTML 和 CSS 所能得到的控制。
+约束校验 API 为你提供了一个强大的工具来处理表单校验，让你可以对用户界面进行远超过仅仅使用 HTML 和 CSS 所能得到的控制。
 
 ### 不使用内建 API 时的表单校验
 
-有时，例如使用旧版浏览器或[自定义小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)，您将无法（或不希望）使用约束校验 API。在这种情况下，您仍然可以使用 JavaScript 来校验您的表单。校验表单比起真实数据校验更像是一个用户界面问题。
+有时，例如使用旧版浏览器或[自定义小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)，你将无法（或不希望）使用约束校验 API。在这种情况下，你仍然可以使用 JavaScript 来校验你的表单。校验表单比起真实数据校验更像是一个用户界面问题。
 
-要校验表单，您必须问自己几个问题：
+要校验表单，你必须问自己几个问题：
 
 - 我应该进行什么样的校验？
   - : 你需要确定如何校验你的数据：字符串操作，类型转换，正则表达式等。这取决于你。只要记住，表单数据一般都是文本，并总是以字符串形式提供给脚本。
 - 如果表单校验失败，我该怎么办？
-  - : 这显然是一个 UI 问题。您必须决定表单的行为方式：表单是否发送数据？是否突出显示错误的字段？是否显示错误消息？
+  - : 这显然是一个 UI 问题。你必须决定表单的行为方式：表单是否发送数据？是否突出显示错误的字段？是否显示错误消息？
 - 如何帮助用户纠正无效数据？
 
-  - : 为了减少用户的挫折感，提供尽可能多的有用的信息是非常重要的，以便引导他们纠正他们的输入。您应该提供前期建议，以便他们知道预期的输入是什么以及明确的错误消息。如果您想深入了解表单校验用户界面要求，那么您应该阅读一些有用的文章：
+  - : 为了减少用户的挫折感，提供尽可能多的有用的信息是非常重要的，以便引导他们纠正他们的输入。你应该提供前期建议，以便他们知道预期的输入是什么以及明确的错误消息。如果你想深入了解表单校验用户界面要求，那么你应该阅读一些有用的文章：
 
     - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
     - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
@@ -785,12 +785,12 @@ addEvent(form, "submit", function () {
 
 执行这样的校验需要采取一些预防措施：
 
-- 它要求公开 API 和一些数据；您需要确保它不是敏感数据。
+- 它要求公开 API 和一些数据；你需要确保它不是敏感数据。
 - 网络滞后需要执行异步校验。这需要一些用户界面的工作，以确保如果校验没有适当的执行，用户不会被阻止。
 
 ## 结论
 
-表单校验并不需要复杂的 JavaScript，但它需要对用户的仔细考虑。一定要记住帮助您的用户更正他提供的数据。为此，请务必：
+表单校验并不需要复杂的 JavaScript，但它需要对用户的仔细考虑。一定要记住帮助你的用户更正他提供的数据。为此，请务必：
 
 - 显示明确的错误消息。
 - 放宽输入格式限制。

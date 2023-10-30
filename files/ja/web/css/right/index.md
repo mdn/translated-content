@@ -86,7 +86,7 @@ right: unset;
 #relative {
   width: 100px;
   height: 100px;
-  background-color: #FFC7E4;
+  background-color: #ffc7e4;
   position: relative;
   top: 20px;
   left: 20px;
@@ -95,7 +95,7 @@ right: unset;
 #absolute {
   width: 100px;
   height: 100px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
   position: absolute;
   bottom: 10px;
   right: 20px;
@@ -113,9 +113,10 @@ right: unset;
 #### HTML
 
 ```html
-<div id="parent">Parent
-    <div id="noWidth">No width</div>
-    <div id="width">width: 100px</div>
+<div id="parent">
+  Parent
+  <div id="noWidth">No width</div>
+  <div id="width">width: 100px</div>
 </div>
 ```
 
@@ -123,18 +124,18 @@ right: unset;
 
 ```css
 div {
-  outline: 1px solid #CCCCCC;
+  outline: 1px solid #cccccc;
 }
 #parent {
   width: 200px;
   height: 200px;
-  background-color: #FFC7E4;
+  background-color: #ffc7e4;
   position: relative;
 }
 /* declare both a left and a right */
 #width,
 #noWidth {
-  background-color: #C2FFD7;
+  background-color: #c2ffd7;
   position: absolute;
   left: 0;
   right: 0;

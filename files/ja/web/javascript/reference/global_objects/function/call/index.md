@@ -58,16 +58,16 @@ function Product(name, price) {
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 
 function Toy(name, price) {
   Product.call(this, name, price);
-  this.category = 'toy';
+  this.category = "toy";
 }
 
-const cheese = new Food('feta', 5);
-const fun = new Toy('robot', 40);
+const cheese = new Food("feta", 5);
+const fun = new Toy("robot", 40);
 ```
 
 ### call メソッドを使用した無名関数の呼び出し
@@ -80,16 +80,15 @@ const fun = new Toy('robot', 40);
 
 ```js
 const animals = [
-  { species: 'Lion', name: 'King' },
-  { species: 'Whale', name: 'Fail' }
+  { species: "Lion", name: "King" },
+  { species: "Whale", name: "Fail" },
 ];
 
 for (let i = 0; i < animals.length; i++) {
-  (function(i) {
-    this.print = function() {
-      console.log('#' + i + ' ' + this.species
-                  + ': ' + this.name);
-    }
+  (function (i) {
+    this.print = function () {
+      console.log("#" + i + " " + this.species + ": " + this.name);
+    };
     this.print();
   }).call(animals[i], i);
 }
@@ -101,15 +100,20 @@ for (let i = 0; i < animals.length; i++) {
 
 ```js
 function greet() {
-  const reply = [this.animal, 'typically sleep between', this.sleepDuration].join(' ');
+  const reply = [
+    this.animal,
+    "typically sleep between",
+    this.sleepDuration,
+  ].join(" ");
   console.log(reply);
 }
 
 const obj = {
-  animal: 'cats', sleepDuration: '12 and 16 hours'
+  animal: "cats",
+  sleepDuration: "12 and 16 hours",
 };
 
-greet.call(obj);  // cats typically sleep between 12 and 16 hours
+greet.call(obj); // cats typically sleep between 12 and 16 hours
 ```
 
 ### `call` を使用した最初の引数を指定しない関数の呼び出し
@@ -117,24 +121,24 @@ greet.call(obj);  // cats typically sleep between 12 and 16 hours
 下記の例では、 `display` 関数を、最初の引数を渡さずに呼び出しています。最初の引数が渡されないと、 `this` の値はグローバルオブジェクトに結び付けられます。
 
 ```js
-var sData = 'Wisen';
+var sData = "Wisen";
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log("sData value is %s ", this.sData);
 }
 
-display.call();  // sData value is Wisen
+display.call(); // sData value is Wisen
 ```
 
 > **メモ:** 厳格モードでは `this` の値は `undefined` になります。以下を参照してください。
 
 ```js
-'use strict';
+"use strict";
 
-var sData = 'Wisen';
+var sData = "Wisen";
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log("sData value is %s ", this.sData);
 }
 
 display.call(); // undefined の 'sData' のプロパティは読めない

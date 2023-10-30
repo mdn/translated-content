@@ -147,10 +147,7 @@ obj2.method2(); // retorna "method 1"
 
 ## Especificações
 
-| Specification                                          | Status               | Comment            |
-| ------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-super-keyword', 'super')}}     | {{Spec2('ES6')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-super-keyword', 'super')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -2,7 +2,7 @@
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 l10n:
- sourceCommit: be500eeadf5eba4722689ce9b150c506e8a9c7fa
+  sourceCommit: be500eeadf5eba4722689ce9b150c506e8a9c7fa
 ---
 
 {{JSRef}}

@@ -75,7 +75,7 @@ var matches = container.querySelectorAll("li[data-active='1']");
 
 一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。如果数组为空（即，其`length`属性为 0），则找不到匹配项。
 
-否则，您只需使用标准数组方法来访问列表的内容。您可以使用任何常见的循环语句，例如：
+否则，你只需使用标准数组方法来访问列表的内容。你可以使用任何常见的循环语句，例如：
 
 ```js
 var highlightedItems = userList.querySelectorAll(".highlighted");

@@ -159,7 +159,7 @@ slug: Web/HTML/Element/link
 
   - : 此属性的值显示了 [`href`](/zh-CN/docs/Web/HTML/Element/link#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[Link type value](/zh-CN/docs/Web/HTML/Link_types)类似于[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)的可能值。
 
-    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
+    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，你应该使用具有相反链接类型值的[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
 
 ## 示例
 
@@ -185,7 +185,7 @@ slug: Web/HTML/Element/link
 
 ### 提供用于不同用法上下文的图标
 
-您可以在同一页面上包含指向多个不同图标的链接，浏览器将使用`rel`和`sizes` 值作为提示来选择最适合其特定上下文的图标。
+你可以在同一页面上包含指向多个不同图标的链接，浏览器将使用`rel`和`sizes` 值作为提示来选择最适合其特定上下文的图标。
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
@@ -208,7 +208,7 @@ slug: Web/HTML/Element/link
 
 ### 通过媒体查询有条件地加载资源
 
-您可以在`media`属性中提供媒体类型或查询; 然后，只有在媒体条件为 true 时，才会加载此资源。例如：
+你可以在`media`属性中提供媒体类型或查询; 然后，只有在媒体条件为 true 时，才会加载此资源。例如：
 
 ```html
 <link href="print.css" rel="stylesheet" media="print" />

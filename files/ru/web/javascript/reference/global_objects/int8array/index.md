@@ -146,11 +146,7 @@ var int8 = new Int8Array(iterable);
 
 ## Specifications
 
-| Specification                                                   | Status                   | Comment                                                                                                                       |
-| --------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}}  | {{Spec2('ES2015')}}      | Initial definition in an ECMA standard. Specified that `new` is required.                                                     |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Int8Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
+{{Specifications}}
 
 ## Browser compatibility
 

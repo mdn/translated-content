@@ -206,7 +206,7 @@ self.onmessage = function (oEvent) {
 
 ### 将同步 XHR 用例调整到 Beacon API
 
-在某些情况下，XMLHttpRequest 的同步使用是不可替代的，就像在 [window.onunload](/zh-CN/docs/Web/API/Window/onunload)和[window.onbeforeunload](/zh-CN/docs/Web/API/Window/onbeforeunload) 事件期间一样。您应该考虑使用带有 `Keepalive` 标志的 `fetch` API。当 `keepalive` 的 `fetch` 不可用时，可以考虑使用 [navigator.sendBeacon](/zh-CN/docs/Web/API/Navigator/sendBeacon) API 可以支持这些用例，通常在提供良好 UX 的同时。
+在某些情况下，XMLHttpRequest 的同步使用是不可替代的，就像在 [window.onunload](/zh-CN/docs/Web/API/Window/onunload)和[window.onbeforeunload](/zh-CN/docs/Web/API/Window/onbeforeunload) 事件期间一样。你应该考虑使用带有 `Keepalive` 标志的 `fetch` API。当 `keepalive` 的 `fetch` 不可用时，可以考虑使用 [navigator.sendBeacon](/zh-CN/docs/Web/API/Navigator/sendBeacon) API 可以支持这些用例，通常在提供良好 UX 的同时。
 
 以下示例（来自 [sendBeacon](/zh-CN/docs/Web/API/Navigator/sendBeacon) 文档）显示了一个理论分析代码，该代码尝试通过在卸载处理程序中使用同步 XMLHttpRequest 将数据提交给服务器。这导致页面的卸载被延迟。
 

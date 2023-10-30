@@ -32,17 +32,22 @@ var ctx = canvas.getContext("2d");
 
 // rectで新しいパスを作成する
 var p1 = new Path2D();
-p1.rect(0,0,100,100);
+p1.rect(0, 0, 100, 100);
 
 // rectで別のパスを作成する
 var p2 = new Path2D();
-p2.rect(0,0,100,100);
+p2.rect(0, 0, 100, 100);
 
 // 右に縦300ポイント移動する変換マトリックスを作成する
-var m = document.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGMatrix();
-m.a = 1; m.b = 0;
-m.c = 0; m.d = 1;
-m.e = 300; m.f = 0;
+var m = document
+  .createElementNS("http://www.w3.org/2000/svg", "svg")
+  .createSVGMatrix();
+m.a = 1;
+m.b = 0;
+m.c = 0;
+m.d = 1;
+m.e = 300;
+m.f = 0;
 
 // 2番目のパスを最初のパスに追加する
 p1.addPath(p2, m);

@@ -1,6 +1,8 @@
 ---
 title: DOM を使用したウェブと XML の開発の例
 slug: Web/API/Document_Object_Model/Examples
+l10n:
+  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -18,16 +20,16 @@ slug: Web/API/Document_Object_Model/Examples
     <title>width/height example</title>
     <script>
       function init() {
-        var arrImages = new Array(3);
+        const arrImages = new Array(3);
 
         arrImages[0] = document.getElementById("image1");
         arrImages[1] = document.getElementById("image2");
         arrImages[2] = document.getElementById("image3");
 
-        var objOutput = document.getElementById("output");
-        var strHtml = "<ul>";
+        const objOutput = document.getElementById("output");
+        let strHtml = "<ul>";
 
-        for (var i = 0; i < arrImages.length; i++) {
+        for (let i = 0; i < arrImages.length; i++) {
           strHtml +=
             "<li>image" +
             (i + 1) +
@@ -128,7 +130,7 @@ slug: Web/API/Document_Object_Model/Examples
 
     <script>
       function changeText() {
-        var p = document.getElementById("pid");
+        const p = document.getElementById("pid");
 
         p.style.color = "blue";
         p.style.fontSize = "18pt";
@@ -152,11 +154,11 @@ slug: Web/API/Document_Object_Model/Examples
 {{domxref("document")}} オブジェクト上の {{domxref("document.styleSheets", "styleSheets")}} プロパティは、その文書に読み込まれたスタイルシートの一覧を返します。このページの例に示されているように、stylesheet、style、{{domxref("CSSRule")}} オブジェクトを利用して、これらのスタイルシートとその規則に個別にアクセスが可能です。そしてこの例では、すべてのスタイル規則のセレクターがコンソールへ表示されます。
 
 ```js
-var ss = document.styleSheets;
+const ss = document.styleSheets;
 
-for (var i = 0; i < ss.length; i++) {
-  for (var j = 0; j < ss[i].cssRules.length; j++) {
-    dump(ss[i].cssRules[j].selectorText + "\n");
+for (let i = 0; i < ss.length; i++) {
+  for (let j = 0; j < ss[i].cssRules.length; j++) {
+    dump(`${ss[i].cssRules[j].selectorText}\n`);
   }
 }
 ```
@@ -168,7 +170,7 @@ body {
   background-color: darkblue;
 }
 p {
-  font-face: Arial;
+  font-family: Arial;
   font-size: 10pt;
   margin-left: 0.125in;
 }
@@ -179,7 +181,7 @@ p {
 
 このスクリプトは以下の項目を表示します。
 
-```
+```plain
 BODY
 P
 #LUMPY
@@ -189,7 +191,7 @@ P
 
 この例は DOM でイベントが発生したときの対処方法を、ごく単純化して紹介します。下記の HTML 文書の BODY が読み込まれる時、イベントリスナーが TABLE の第 1 行を使って登録されます。イベントリスナーは関数 stopEvent を実行することでイベントを処理します。この関数は、table の一番下のセルの値を変更します。
 
-しかし、stopEvent はまたイベントオブジェクトのメソッド {{domxref("event.stopPropagation")}} を呼び出します。このメソッドはイベントが発生してこれ以上 DOM に入り込むのを防止します。テーブル自体は、クリックされた時、メッセージを表示する必要のある {{domxref("GlobalEventHandlers.onclick","onclick")}} イベントハンドラーを備えています。しかし stopEvent メソッドは伝播を停止していますので、テーブル内のデータが更新された後では、イベントは効率的に終了し、これを確認するための警告ダイアログが表示されます。
+しかし、stopEvent はまたイベントオブジェクトのメソッド {{domxref("event.stopPropagation")}} を呼び出します。このメソッドはイベントが発生してこれ以上 DOM に入り込むのを防止します。テーブル自体は、クリックされた時、メッセージを表示する必要のある {{domxref("Element/click_event","onclick")}} イベントハンドラーを備えています。しかし stopEvent メソッドは伝播を停止していますので、テーブル内のデータが更新された後では、イベントは効率的に終了し、これを確認するための警告ダイアログが表示されます。
 
 ```html
 <!doctype html>
@@ -207,17 +209,17 @@ P
     </style>
 
     <script>
-      function stopEvent(ev) {
-        c2 = document.getElementById("c2");
-        c2.innerHTML = "hello";
+      function stopEvent(event) {
+        const c2 = document.getElementById("c2");
+        c2.textContent = "hello";
 
         // this ought to keep t-daddy from getting the click.
-        ev.stopPropagation();
+        event.stopPropagation();
         alert("event propagation halted.");
       }
 
       function load() {
-        elem = document.getElementById("tbl1");
+        const elem = document.getElementById("tbl1");
         elem.addEventListener("click", stopEvent, false);
       }
     </script>
@@ -250,23 +252,23 @@ P
 
     <script>
       function cStyles() {
-        var RefDiv = document.getElementById("d1");
-        var txtHeight = document.getElementById("t1");
-        var h_style = document.defaultView
+        const RefDiv = document.getElementById("d1");
+        const txtHeight = document.getElementById("t1");
+        const h_style = document.defaultView
           .getComputedStyle(RefDiv, null)
           .getPropertyValue("height");
 
         txtHeight.value = h_style;
 
-        var txtWidth = document.getElementById("t2");
-        var w_style = document.defaultView
+        const txtWidth = document.getElementById("t2");
+        const w_style = document.defaultView
           .getComputedStyle(RefDiv, null)
           .getPropertyValue("width");
 
         txtWidth.value = w_style;
 
-        var txtBackgroundColor = document.getElementById("t3");
-        var b_style = document.defaultView
+        const txtBackgroundColor = document.getElementById("t3");
+        const b_style = document.defaultView
           .getComputedStyle(RefDiv, null)
           .getPropertyValue("background-color");
 
@@ -303,7 +305,7 @@ P
 
 ## 例 7: イベントオブジェクトのプロパティの表示
 
-この例では、DOM メソッドを使って、 {{domxref("GlobalEventHandlers.onload")}} [イベント](/ja/docs/Web/API/Event)オブジェクトのプロパティとそれらの値をすべて表として表示しています。また、オブジェクトのプロパティを反復し、それらの値を取得するために、for...in ループを使った役に立つテクニックをお見せします。
+この例では、DOM メソッドを使って、 {{domxref("Window.load_event")}} [イベント](/ja/docs/Web/API/Event)オブジェクトのプロパティとそれらの値をすべて表として表示しています。また、オブジェクトのプロパティを反復し、それらの値を取得するために、for...in ループを使った役に立つテクニックをお見せします。
 
 イベントオブジェクトのプロパティはブラウザーによって大きく異なります。 [WHATWG DOM Standard](https://dom.spec.whatwg.org) に標準のプロパティが載っていますが、多くのブラウザーはこれらを大幅に拡張しています。
 
@@ -338,38 +340,38 @@ P
     <script>
       function showEventProperties(e) {
         function addCell(row, text) {
-          var cell = row.insertCell(-1);
+          const cell = row.insertCell(-1);
           cell.appendChild(document.createTextNode(text));
         }
 
-        var e = e || window.event;
-        document.getElementById("eventType").innerHTML = e.type;
+        const event = e || window.event;
+        document.getElementById("eventType").innerHTML = event.type;
 
-        var table = document.createElement("table");
-        var thead = table.createTHead();
-        var row = thead.insertRow(-1);
-        var labelList = ["#", "Property", "Value"];
-        var len = labelList.length;
+        const table = document.createElement("table");
+        const thead = table.createTHead();
+        let row = thead.insertRow(-1);
+        const labelList = ["#", "Property", "Value"];
+        const len = labelList.length;
 
-        for (var i = 0; i < len; i++) {
+        for (let i = 0; i < len; i++) {
           addCell(row, labelList[i]);
         }
 
-        var tbody = document.createElement("tbody");
+        const tbody = document.createElement("tbody");
         table.appendChild(tbody);
 
-        for (var p in e) {
+        for (const p in event) {
           row = tbody.insertRow(-1);
           row.className = row.rowIndex % 2 ? "odd" : "even";
           addCell(row, row.rowIndex);
           addCell(row, p);
-          addCell(row, e[p]);
+          addCell(row, event[p]);
         }
 
         document.body.appendChild(table);
       }
 
-      window.onload = function (event) {
+      window.onload = (event) => {
         showEventProperties(event);
       };
     </script>
@@ -396,11 +398,12 @@ DOM の {{domxref("HTMLTableElement")}} インタフェースで、テーブル�
 </table>
 
 <script>
-  var table = document.getElementById("table0");
-  var row = table.insertRow(-1);
-  var cell, text;
+  const table = document.getElementById("table0");
+  const row = table.insertRow(-1);
+  let cell;
+  let text;
 
-  for (var i = 0; i < 2; i++) {
+  for (let i = 0; i < 2; i++) {
     cell = row.insertCell(-1);
     text = "Row " + row.rowIndex + " Cell " + i;
     cell.appendChild(document.createTextNode(text));

@@ -30,17 +30,17 @@ RangeError: Invalid count value (Chrome)
 ### 無効なケース
 
 ```js example-bad
-'abc'.repeat(Infinity); // RangeError
-'a'.repeat(2**28);      // RangeError
+"abc".repeat(Infinity); // RangeError
+"a".repeat(2 ** 28); // RangeError
 ```
 
 ### 有効な場合
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count は整数に変換されます)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count は整数に変換されます)
 ```
 
 ## 関連情報

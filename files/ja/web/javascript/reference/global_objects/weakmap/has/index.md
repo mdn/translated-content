@@ -31,10 +31,10 @@ ws.has(key);
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // true を返す
-wm.has('baz');  // false を返す
+wm.has("baz"); // false を返す
 ```
 
 ## 仕様書

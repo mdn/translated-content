@@ -33,21 +33,25 @@ slug: Web/API/Window/pagehide_event
 この例では、イベントハンドラーが `pagehide` イベントを監視するために確立され、ページが再利用できるように保存されようとするときに特殊な扱いを行います。
 
 ```js
-window.addEventListener("pagehide", event => {
-  if (event.persisted) {
-    /* このページは破棄されないので、後で再利用することができます */
-  }
-}, false);
+window.addEventListener(
+  "pagehide",
+  (event) => {
+    if (event.persisted) {
+      /* このページは破棄されないので、後で再利用することができます */
+    }
+  },
+  false,
+);
 ```
 
 これは {{domxref("Window.onpagehide", "onpagehide")}} イベントハンドラープロパティを {{domxref("Window")}} 上で利用することで書くこともできます。
 
 ```js
-window.onpagehide = event => {
+window.onpagehide = (event) => {
   if (event.persisted) {
     /* このページは破棄されないので、後で再利用することができます */
   }
-}
+};
 ```
 
 ## 仕様書

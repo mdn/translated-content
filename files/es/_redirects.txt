@@ -1233,8 +1233,8 @@
 /es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /es/docs/MDN/Contribute/Markdown_in_MDN	/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /es/docs/MDN/Contribute/Procesos	/es/docs/MDN/Contribute/Processes
-/es/docs/MDN/Contribute/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
-/es/docs/MDN/Contribute/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
+/es/docs/MDN/Contribute/Structures	/es/docs/MDN/Writing_guidelines/Page_structures
+/es/docs/MDN/Contribute/Structures/Ejemplos_ejecutables	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /es/docs/MDN/Contribute/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Contribute/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Contribute/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
@@ -1248,10 +1248,10 @@
 /es/docs/MDN/Guidelines/Writing_style_guide	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Kuma	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN/Kuma/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
-/es/docs/MDN/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
+/es/docs/MDN/Structures	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
-/es/docs/MDN/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
-/es/docs/MDN/Structures/Live_samples	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
+/es/docs/MDN/Structures/Ejemplos_ejecutables	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
+/es/docs/MDN/Structures/Live_samples	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /es/docs/MDN/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Structures/Macros/Commonly-used_macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Structures/Macros/Other	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
@@ -1610,7 +1610,8 @@
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
 /es/docs/Web/API/CanvasImageSource	/es/docs/web/api/canvasrenderingcontext2d
 /es/docs/Web/API/Canvas_API/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
-/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
+/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /es/docs/Web/API/Console/tabla	/es/docs/Web/API/console/table
 /es/docs/Web/API/Constraint_validation/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/Coordinates	/es/docs/Web/API/GeolocationCoordinates
@@ -1719,7 +1720,7 @@
 /es/docs/Web/API/Web_Speech_API/Uso_de_la_Web_Speech_API	/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API
 /es/docs/Web/API/Window.clearTimeout	/es/docs/Web/API/clearTimeout
 /es/docs/Web/API/Window.navigator	/es/docs/Web/API/Window/navigator
-/es/docs/Web/API/Window.onbeforeunload	/es/docs/conflicting/Web/API/Window/beforeunload_event
+/es/docs/Web/API/Window.onbeforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/Window/applicationCache	/es/docs/orphaned/Web/API/Window/applicationCache
 /es/docs/Web/API/Window/crypto	/es/docs/Web/API/crypto_property
@@ -1727,9 +1728,9 @@
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
 /es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/atob
-/es/docs/Web/API/WindowEventHandlers	/es/docs/orphaned/Web/API/WindowEventHandlers
-/es/docs/Web/API/WindowEventHandlers/onbeforeunload	/es/docs/conflicting/Web/API/Window/beforeunload_event
-/es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/conflicting/Web/API/Window/hashchange_event
+/es/docs/Web/API/WindowEventHandlers	/es/docs/Web/API/Window#eventos
+/es/docs/Web/API/WindowEventHandlers/onbeforeunload	/es/docs/Web/API/Window/beforeunload_event
+/es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
 /es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/caches
@@ -1804,6 +1805,7 @@
 /es/docs/Web/CSS/:not()	/es/docs/Web/CSS/:not
 /es/docs/Web/CSS/@media/altura	/es/docs/Web/CSS/@media/height
 /es/docs/Web/CSS/@media/resolución	/es/docs/Web/CSS/@media/resolution
+/es/docs/Web/CSS/Adjacent_sibling_combinator	/es/docs/Web/CSS/Next-sibling_combinator
 /es/docs/Web/CSS/CSS_Animations/Detectar_soporte_de_animación_CSS	/es/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /es/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/es/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS	/es/docs/Web/CSS/CSS_animations/Using_CSS_animations
@@ -1860,6 +1862,7 @@
 /es/docs/Web/CSS/Descendant_selectors	/es/docs/Web/CSS/Descendant_combinator
 /es/docs/Web/CSS/Elemento_reemplazo	/es/docs/Web/CSS/Replaced_element
 /es/docs/Web/CSS/Especificidad	/es/docs/Web/CSS/Specificity
+/es/docs/Web/CSS/General_sibling_combinator	/es/docs/Web/CSS/Subsequent-sibling_combinator
 /es/docs/Web/CSS/Gradiente	/es/docs/Web/CSS/gradient
 /es/docs/Web/CSS/Herramientas	/es/docs/conflicting/Web/CSS
 /es/docs/Web/CSS/Introducción/Content	/es/docs/Learn/CSS/Howto/Generated_content
@@ -1876,8 +1879,8 @@
 /es/docs/Web/CSS/Selectores_CSS	/es/docs/Web/CSS/CSS_selectors
 /es/docs/Web/CSS/Selectores_CSS/Usando_la_pseudo-clase_:target_en_selectores	/es/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /es/docs/Web/CSS/Selectores_atributo	/es/docs/Web/CSS/Attribute_selectors
-/es/docs/Web/CSS/Selectores_hermanos_adyacentes	/es/docs/Web/CSS/Adjacent_sibling_combinator
-/es/docs/Web/CSS/Selectores_hermanos_generales	/es/docs/Web/CSS/General_sibling_combinator
+/es/docs/Web/CSS/Selectores_hermanos_adyacentes	/es/docs/Web/CSS/Next-sibling_combinator
+/es/docs/Web/CSS/Selectores_hermanos_generales	/es/docs/Web/CSS/Subsequent-sibling_combinator
 /es/docs/Web/CSS/Sintaxis_definición_de_valor	/es/docs/Web/CSS/Value_definition_syntax
 /es/docs/Web/CSS/Texto_CSS	/es/docs/Web/CSS/CSS_text
 /es/docs/Web/CSS/Tools	/es/docs/conflicting/Web/CSS
@@ -2733,7 +2736,7 @@
 /es/docs/Web/MathML/Elemento/math	/es/docs/Web/MathML/Element/math
 /es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Optimizing_startup_performance
 /es/docs/Web/Progressive_web_apps/App_structure	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-/es/docs/Web/Progressive_web_apps/Developer_guide	/es/docs/orphaned/Web/Progressive_web_apps/Developer_guide
+/es/docs/Web/Progressive_web_apps/Developer_guide	/es/docs/Web/Progressive_web_apps/Guides
 /es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Guides/Installing
 /es/docs/Web/Progressive_web_apps/Developer_guide/Installing	/es/docs/Web/Progressive_web_apps/Guides/Installing
 /es/docs/Web/Progressive_web_apps/Installable_PWAs	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
@@ -2936,9 +2939,13 @@
 /es/docs/XSLT:when	/es/docs/Web/XSLT/Element/when
 /es/docs/XSLT:with-param	/es/docs/Web/XSLT/Element/with-param
 /es/docs/Zoom_a_página_completa	/es/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
+/es/docs/conflicting/MDN/Writing_guidelines/Page_structures	/es/docs/MDN/Writing_guidelines/Page_structures
+/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /es/docs/conflicting/Web/API/CanvasRenderingContext2D	/es/docs/web/api/canvasrenderingcontext2d
 /es/docs/conflicting/Web/API/CustomElementRegistry/define	/es/docs/Web/API/CustomElementRegistry/define
 /es/docs/conflicting/Web/API/Geolocation/getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
+/es/docs/conflicting/Web/API/Window/beforeunload_event	/es/docs/Web/API/Window/beforeunload_event
+/es/docs/conflicting/Web/API/Window/hashchange_event	/es/docs/Web/API/Window/hashchange_event
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /es/docs/conflicting/Web/CSS/outline	/es/docs/Web/CSS/outline
 /es/docs/conflicting/Web/HTML/Element/audio	/es/docs/Web/HTML/Element/audio
@@ -2961,8 +2968,10 @@
 /es/docs/orphaned/Web/API/NavigatorOnLine	/es/docs/Web/API/Navigator
 /es/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events	/es/docs/Web/API/Navigator/onLine
 /es/docs/orphaned/Web/API/NavigatorOnLine/onLine	/es/docs/Web/API/Navigator/onLine
+/es/docs/orphaned/Web/API/WindowEventHandlers	/es/docs/Web/API/Window#eventos
 /es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-label
 /es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-required
+/es/docs/orphaned/Web/Progressive_web_apps/Developer_guide	/es/docs/Web/Progressive_web_apps/Guides
 /es/docs/orphaned/Web/XPath/Axes/ancestor	/es/docs/web/xpath/axes#ancestor
 /es/docs/orphaned/Web/XPath/Axes/ancestor-or-self	/es/docs/web/xpath/axes#ancestor-or-self
 /es/docs/orphaned/Web/XPath/Axes/attribute	/es/docs/web/xpath/axes#attribute

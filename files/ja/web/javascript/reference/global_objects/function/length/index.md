@@ -28,14 +28,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 etc. */
 
-console.log((function(...args) {}).length);
+console.log(function (...args) {}.length);
 // 0, rest parameter は数に含まれない
 
-console.log((function(a, b = 1, c) {}).length);
+console.log(function (a, b = 1, c) {}.length);
 // 1, 既定値を持つ引数が最初に登場する前までの
 // 引数だけが数に含まれる
 ```

@@ -13,7 +13,7 @@ JavaScript 相較於 [HTML](/zh-TW/docs/Learn/HTML) 和 [CSS](/zh-TW/docs/Learn/
 
 - [入門認識 Web](/zh-TW/docs/Learn/Getting_started_with_the_web)
 - [HTML 簡介](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)
-- [CSS 簡介](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)
+- [CSS 簡介](/zh-TW/docs/Learn/CSS/First_steps)
 
 若你之前有其他程式語言的撰寫經驗，也許會有幫助。
 

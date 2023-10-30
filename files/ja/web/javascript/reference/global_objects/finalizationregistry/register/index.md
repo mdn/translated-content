@@ -43,7 +43,7 @@ registry.register(target, "some value", target);
 次の例は `target` で参照される対象オブジェクトを他のオブジェクトを保持値として登録し、登録解除トークンを渡していません (すなわち `target` は登録解除できません)。
 
 ```js
-registry.register(target, {"useful": "info about target"});
+registry.register(target, { useful: "info about target" });
 ```
 
 ## 仕様書

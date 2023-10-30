@@ -44,5 +44,5 @@
       }
     }
   },
-  "attribute-order": ["title", "short-title", "slug", "l10n"]
+  "attribute-order": ["title", "short-title", "slug", "original_slug", "l10n"]
 }

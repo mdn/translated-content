@@ -130,7 +130,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 
 ## 브라우저 호환성
 
-{{Compat}}
+브라우저에서 제공하는 메서드가 아니라 클라이언트 코드로 작성해야 하는 콜백 메서드입니다.
 
 ## 같이 보기
 

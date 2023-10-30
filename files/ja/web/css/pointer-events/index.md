@@ -16,13 +16,13 @@ slug: Web/CSS/pointer-events
 pointer-events: auto;
 pointer-events: none;
 pointer-events: visiblePainted; /* SVG のみ */
-pointer-events: visibleFill;    /* SVG のみ */
-pointer-events: visibleStroke;  /* SVG のみ */
-pointer-events: visible;        /* SVG のみ */
-pointer-events: painted;        /* SVG のみ */
-pointer-events: fill;           /* SVG のみ */
-pointer-events: stroke;         /* SVG のみ */
-pointer-events: all;            /* SVG のみ */
+pointer-events: visibleFill; /* SVG のみ */
+pointer-events: visibleStroke; /* SVG のみ */
+pointer-events: visible; /* SVG のみ */
+pointer-events: painted; /* SVG のみ */
+pointer-events: fill; /* SVG のみ */
+pointer-events: stroke; /* SVG のみ */
+pointer-events: all; /* SVG のみ */
 
 /* グローバル値 */
 pointer-events: inherit;
@@ -106,7 +106,8 @@ img {
 #### CSS
 
 ```css
-a[href="http://example.com"] {
+a[href="http://example.com"]
+{
   pointer-events: none;
 }
 ```

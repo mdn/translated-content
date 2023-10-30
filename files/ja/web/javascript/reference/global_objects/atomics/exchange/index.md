@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 ## 構文
 
 ```js
-Atomics.exchange(typedArray, index, value)
+Atomics.exchange(typedArray, index, value);
 ```
 
 ### 引数

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@
 
 **`[@@iterator]()`** メソッドは、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)の一部で、`Intl.Segmenter` オブジェクトのエントリーを反復処理できる新しいイテレーターオブジェクトを返します。各エントリーは、オブジェクトとして返されます。
 
-{{EmbedInteractiveExample("pages/js/intl-segments-prototype-@@iterator.html")}}
+{{EmbedInteractiveExample("pages/js/segments-prototype-@@iterator.html")}}
 
 ## 構文
 

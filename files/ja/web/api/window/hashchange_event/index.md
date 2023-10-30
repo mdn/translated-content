@@ -35,16 +35,20 @@ slug: Web/API/Window/hashchange_event
 `hashchange` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドの中で使用することができます。
 
 ```js
-window.addEventListener('hashchange', function() {
-  console.log('The hash has changed!')
-}, false);
+window.addEventListener(
+  "hashchange",
+  function () {
+    console.log("The hash has changed!");
+  },
+  false,
+);
 ```
 
 または `onhashchange` イベントハンドラープロパティを使用して、
 
 ```js
 function locationHashChanged() {
-  if (location.hash === '#cool-feature') {
+  if (location.hash === "#cool-feature") {
     console.log("You're visiting a cool feature!");
   }
 }

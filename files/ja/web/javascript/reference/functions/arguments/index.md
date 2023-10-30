@@ -20,15 +20,15 @@ slug: Web/JavaScript/Reference/Functions/arguments
 たとえば、もし関数に 3 つの引数が渡されたなら、次のようにその引数を参照できます。
 
 ```js
-arguments[0] // 1 番目の引数
-arguments[1] // 2 番目の引数
-arguments[2] // 3 番目の引数
+arguments[0]; // 1 番目の引数
+arguments[1]; // 2 番目の引数
+arguments[2]; // 3 番目の引数
 ```
 
 引数を設定したり再代入したりすることもできます。
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 `arguments` オブジェクトは {{jsxref("Array")}} ではありません。似ていますが、 `Array` のプロパティは {{jsxref("Array.length", "length")}} 以外ありません。たとえば、 {{jsxref("Array.pop", "pop()")}} メソッドはありません。
@@ -53,8 +53,8 @@ let args = [...arguments];
 
 ```js
 function longestString() {
-  var longest = '';
-  for (var i=0; i < arguments.length; i++) {
+  var longest = "";
+  for (var i = 0; i < arguments.length; i++) {
     if (arguments[i].length > longest.length) {
       longest = arguments[i];
     }
@@ -105,13 +105,13 @@ function myConcat(separator) {
 
 ```js
 // "red, orange, blue" を返します
-myConcat(', ', 'red', 'orange', 'blue');
+myConcat(", ", "red", "orange", "blue");
 
 // "elephant; giraffe; lion; cheetah" を返します
-myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // "sage. basil. oregano. pepper. parsley" を返します
-myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
 ### HTML のリストを作る関数の定義
@@ -120,10 +120,10 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 ```js
 function list(type) {
-  var html = '<' + type + 'l><li>';
+  var html = "<" + type + "l><li>";
   var args = Array.prototype.slice.call(arguments, 1);
-  html += args.join('<li>');
-  html += '</' + type + 'l>'; // end list
+  html += args.join("<li>");
+  html += "</" + type + "l>"; // end list
   return html;
 }
 ```
@@ -131,7 +131,7 @@ function list(type) {
 この関数には任意の数の引数を渡すことができ、それぞれの引数を指定された型のリストに項目として追加します。例を示します。
 
 ```js
-let listHTML = list('u', 'One', 'Two', 'Three');
+let listHTML = list("u", "One", "Two", "Three");
 
 /* listHTML の内容:
 "<ul><li>One<li>Two<li>Three</ul>"

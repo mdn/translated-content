@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_st
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
@@ -24,14 +24,14 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_st
         </p>
         <p>
           React 使用称为 JSX（JavaScript 和 XML）的 HTML-in-JavaScript
-          语法。熟悉 HTML 和 JavaScript 可以帮助您学习
+          语法。熟悉 HTML 和 JavaScript 可以帮助你学习
           JSX，并更好地确定应用程序中的错误是与 JavaScript 还是与 React
           的更特定领域相关。
         </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>要设置本地 React 开发环境，创建一个启动应用程序，并了解其工作原理</td>
     </tr>
   </tbody>
@@ -43,7 +43,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_st
 
 为了构建 Web 应用，开发人员将 React 与 [ReactDOM 结合使用](https://reactjs.org/docs/react-dom.html)。React 和 ReactDOM 通常被与其他真正的 Web 开发框架相提并论，并用于解决相同的问题。当我们将 React 称为“框架”时，就是在进行口语化的理解。
 
-React 的主要目标是最大程度地减少开发人员构建 UI 时发生的错误。它通过使用组件——描述部分用户界面的、自包含的逻辑代码段——来实现此目的。这些组件可以组合在一起以创建完整的 UI，React 将许多渲染工作进行抽象化，使您可以专注于 UI 设计 (译者注：显而易见，此设计不等于视觉稿的设计)。
+React 的主要目标是最大程度地减少开发人员构建 UI 时发生的错误。它通过使用组件——描述部分用户界面的、自包含的逻辑代码段——来实现此目的。这些组件可以组合在一起以创建完整的 UI，React 将许多渲染工作进行抽象化，使你可以专注于 UI 设计 (译者注：显而易见，此设计不等于视觉稿的设计)。
 
 ## 用例
 
@@ -75,7 +75,7 @@ const header = (
 );
 ```
 
-> **备注：** 上一个代码段中的括号并非 JSX 的一部分，它对您的应用程序没有任何影响，括号只是用来向您（和您的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
+> **备注：** 上一个代码段中的括号并非 JSX 的一部分，它对你的应用程序没有任何影响，括号只是用来向你（和你的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
 >
 > ```js
 > const header = (
@@ -97,27 +97,27 @@ const header = React.createElement(
 );
 ```
 
-*可以*跳过编译步骤，并使用 [`React.createElement()`](https://reactjs.org/docs/react-api.html#createelement) 自己编写 UI。但是，这样做会失去 JSX 的声明性优势，并且代码变得更难以阅读。编译是开发过程中的一个额外步骤，但是 React 社区中的许多开发人员都认为 JSX 的可读性值得。另外，流行的工具使 JSX-to-JavaScript 编译成为其设置过程的一部分。除非您愿意，否则不必自己配置编译。
+*可以*跳过编译步骤，并使用 [`React.createElement()`](https://reactjs.org/docs/react-api.html#createelement) 自己编写 UI。但是，这样做会失去 JSX 的声明性优势，并且代码变得更难以阅读。编译是开发过程中的一个额外步骤，但是 React 社区中的许多开发人员都认为 JSX 的可读性值得。另外，流行的工具使 JSX-to-JavaScript 编译成为其设置过程的一部分。除非你愿意，否则不必自己配置编译。
 
-由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使您能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解您的代码库。
+由于 JSX 是 HTML 和 JavaScript 的结合，因此一些开发人员认为它很直观。其他人则说它的混合特性使它变得混乱。但是，一旦熟悉了它，它将使你能够更快，更直观地构建用户界面，并使其他人一眼就能更好地理解你的代码库。
 
 要阅读有关 JSX 的更多信息，请查看 React 团队的 [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html) 文章。
 
-## 设置您的第一个 React 应用
+## 设置你的第一个 React 应用
 
-有很多使用 React 的方法，但是我们将使用命令行界面（CLI）工具 create-react-app，如前所述，该方法通过安装一些软件包并创建一些软件包来加快开发 React 应用程序的过程。文件供您处理上述工具。
+有很多使用 React 的方法，但是我们将使用命令行界面（CLI）工具 create-react-app，如前所述，该方法通过安装一些软件包并创建一些软件包来加快开发 React 应用程序的过程。文件供你处理上述工具。
 
-通过将一些 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素复制到 HTML 文件中，可以在[没有 create-react-app 的情况下将 React 添加到网站](https://reactjs.org/docs/add-react-to-a-website.html)，但是 create-react-app CLI 是 React 应用程序的常见起点。使用它可以让您花费更多的时间来构建应用，而花更少的时间进行设置。
+通过将一些 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素复制到 HTML 文件中，可以在[没有 create-react-app 的情况下将 React 添加到网站](https://reactjs.org/docs/add-react-to-a-website.html)，但是 create-react-app CLI 是 React 应用程序的常见起点。使用它可以让你花费更多的时间来构建应用，而花更少的时间进行设置。
 
 ### 要求
 
-为了使用 create-react-app，您需要安装 [Node.js](https://nodejs.org/en/)。建议您使用长期支持（LTS）版本。Node 包括 npm（Node 程序包管理器）和 npx（Node 程序包运行器）
+为了使用 create-react-app，你需要安装 [Node.js](https://nodejs.org/en/)。建议你使用长期支持（LTS）版本。Node 包括 npm（Node 程序包管理器）和 npx（Node 程序包运行器）
 
-您也可以使用 Yarn 软件包管理器作为替代方案，但是我们假设在这套教程中使用 npm。有关 npm 和 yarn 的更多信息，请参见[程序包管理基础](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
+你也可以使用 Yarn 软件包管理器作为替代方案，但是我们假设在这套教程中使用 npm。有关 npm 和 yarn 的更多信息，请参见[程序包管理基础](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
 
-如果您使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或**[适用于 Linux 的 Windows 子系统](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
+如果你使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或**[适用于 Linux 的 Windows 子系统](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
 
-还请记住，React 和 ReactDOM 生成的应用程序只能在相当现代的一组浏览器上运行 —— 通过某些 polyfill 可以使用 IE9+。在阅读这些教程时，建议您使用 Firefox，Safari 或 Chrome 等现代浏览器。
+还请记住，React 和 ReactDOM 生成的应用程序只能在相当现代的一组浏览器上运行 —— 通过某些 polyfill 可以使用 IE9+。在阅读这些教程时，建议你使用 Firefox，Safari 或 Chrome 等现代浏览器。
 
 另外，有关更多信息，请参见以下内容：
 
@@ -125,7 +125,7 @@ const header = React.createElement(
 - ["Introducing npx" on the npm blog](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
 - [The create-react-app documentation](https://create-react-app.dev/)
 
-### 初始化您的应用
+### 初始化你的应用
 
 `create-react-app` ，该命令接受一个参数：即你想给自己的应用所起的名字。`create-react-app` 将为此应用创建一个同名的文件夹，并在其中创建所需文件。在你打算放置你的应用程序的文件夹下打开你的命令终端，并键入命令：
 
@@ -244,7 +244,7 @@ import "./App.css";
 
 ### `App` 组件
 
-在 import 所需资源之后，我们定义了一个名为 App 的函数，尽管大部分 JavaScript 社区推崇使用驼峰式命名法，如：“helloWorld”。但 React 组件使用帕斯卡命名法，如“HelloWorld”，来帮助用户辨认一个 JSX 元素是 React 组件而非普通的 HTML 标签。如果您将函数名“App”改为“app”，您的浏览器会显示错误。
+在 import 所需资源之后，我们定义了一个名为 App 的函数，尽管大部分 JavaScript 社区推崇使用驼峰式命名法，如：“helloWorld”。但 React 组件使用帕斯卡命名法，如“HelloWorld”，来帮助用户辨认一个 JSX 元素是 React 组件而非普通的 HTML 标签。如果你将函数名“App”改为“app”，你的浏览器会显示错误。
 
 让我们进一步看下 App 方法。
 
@@ -325,9 +325,9 @@ serviceWorker.unregister();
 
 > **备注：** 在 JSX 中，React 组件和 HTML 元素必须有关闭斜杠（`/`），如 `<App />`，如果我们写 `<App>` 或者 `<img>` 将会报错。
 
-[Service workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers) 能让我们的 App 离线运行，但它不在本篇文章的范围中，您可以删除第 5 行和第 9 到 12 行。
+[Service workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers) 能让我们的 App 离线运行，但它不在本篇文章的范围中，你可以删除第 5 行和第 9 到 12 行。
 
-您最终的 `index.js` 文件应该如下所示：
+你最终的 `index.js` 文件应该如下所示：
 
 ```js
 import React from "react";
@@ -352,7 +352,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 可以看到，`<img />` 标签的 `src` 属性值是在大括号中的——`{logo}`。这是 JSX 识别变量的方式。React 将会识别 `{logo}`，知道你在我们 app 第二行引入的 logo，然后 React 会读取这个文件它并渲染。
 
-让我们试着设置一个我们自己的变量，在 `App` return 之前，添加 `const subject = 'React';`。您的代码现在应该如下所示：
+让我们试着设置一个我们自己的变量，在 `App` return 之前，添加 `const subject = 'React';`。你的代码现在应该如下所示：
 
 ```js
 function App() {
@@ -392,7 +392,7 @@ function App() {
 
 **prop** 是任何传入 React 组件的数据。Props 写在组件中，并且像 HTML 属性一样写成 `prop="value"`。让我们打开 `index.js` 并且为我们的 `<App/>` 添加第一个 prop。
 
-为 `<App/>` 组件添加一个叫 `subject` 并有着 `Clarice` 值的 prop。当完成之后，您的代码应如下所示：
+为 `<App/>` 组件添加一个叫 `subject` 并有着 `Clarice` 值的 prop。当完成之后，你的代码应如下所示：
 
 ```js
 ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
@@ -409,7 +409,7 @@ function App() {
 }
 ```
 
-改变 `App` 的函数签名，让它接收 `props` 作为一个参数。就像其他参数一样，您可以把 `props` 放在 `console.log()` 中，让其在浏览器打印出来。把它放在您的 `subject` 之后，以及 `return` 之前，您的代码应如下所示：
+改变 `App` 的函数签名，让它接收 `props` 作为一个参数。就像其他参数一样，你可以把 `props` 放在 `console.log()` 中，让其在浏览器打印出来。把它放在你的 `subject` 之后，以及 `return` 之前，你的代码应如下所示：
 
 ```js
 function App(props) {
@@ -421,7 +421,7 @@ function App(props) {
 }
 ```
 
-保存您的文件并检查您浏览器中的 JavaScript Console，您将会发现如下所示的语句：
+保存你的文件并检查你浏览器中的 JavaScript Console，你将会发现如下所示的语句：
 
 ```js
 Object { subject: "Clarice" }
@@ -429,7 +429,7 @@ Object { subject: "Clarice" }
 
 对象的 `subject` 属性与我们放入 `App` 函数签名的 prop 相对应，并且 `Clarice` 字符串与它的值相对应，在 React 中的组件 props 总是用这种方式传入 object 中。
 
-现在 `subject` 是我们的 props 之一了，让我们在 `App.js` 中使用它。用 `props.subject` 替代原本的 `React` 字符串，如果你想的话，也可以删除 `console.log()`，您的代码将如下所示：
+现在 `subject` 是我们的 props 之一了，让我们在 `App.js` 中使用它。用 `props.subject` 替代原本的 `React` 字符串，如果你想的话，也可以删除 `console.log()`，你的代码将如下所示：
 
 ```js
 function App(props) {
@@ -440,7 +440,7 @@ function App(props) {
 }
 ```
 
-当您保存之后，app 应该会输出 "Hello, Clarice!"。如果您回到 `index.js`，并且修改 `subject` 的值并保存，您输出的字也会随之改变。
+当你保存之后，app 应该会输出 "Hello, Clarice!"。如果你回到 `index.js`，并且修改 `subject` 的值并保存，你输出的字也会随之改变。
 
 ## 总结
 
@@ -450,7 +450,7 @@ function App(props) {
 
 - 组件可以 import 它们需要的模块，并且在文件底部将自身 export，以让其他组件使用。
 - 组件是用 `PascalCase` 也就是帕斯卡命名法命名的。
-- 通过把变量放在大括号中，您可以读取 JSX 的变量，如`{so}`
+- 通过把变量放在大括号中，你可以读取 JSX 的变量，如`{so}`
 - 一些 JSX 属性与 HTML 属性不相同，这样就不会与 JavaScript 的保留字相冲突，比如说，在 HTML 中的 `class` 会在 JSX 中转译为 `className`。注意这些属性都是驼峰式命名的。
 - Props 就像属性一样写在组件里，并且传入组件。
 

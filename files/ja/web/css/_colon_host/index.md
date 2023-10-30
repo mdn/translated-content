@@ -5,7 +5,7 @@ slug: Web/CSS/:host
 
 {{ CSSRef }}
 
-**`:host`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、その CSS を含む[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウホストを選択します。 — 言い換えれば、シャドウ DOM の中からカスタム要素を選択できるようにします。
+**`:host`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、その CSS を含む[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のシャドウホストを選択します。 — 言い換えれば、シャドウ DOM の中からカスタム要素を選択できるようにします。
 
 > **メモ:** これはシャドウ DOM の外で使われたときには効果がありません。
 
@@ -68,6 +68,6 @@ style.textContent =
 
 ## 関連情報
 
-- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
 - {{cssxref(":host()")}}
 - {{cssxref(":host-context()")}}

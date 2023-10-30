@@ -21,11 +21,11 @@ let host = addr.host;
 let path = addr.pathname;
 ```
 
-上面的代码片段为您正在阅读的文章创建一个`URL`对象，然后获取 {{domxref("URL.host", "host")}} 和 {{domxref("URL.pathname", "pathname")}} 属性。在本例中，这些字符串的值分别是`developer.mozilla.org` 和`/zh-CN/docs/Web/API/URL_API`。
+上面的代码片段为你正在阅读的文章创建一个`URL`对象，然后获取 {{domxref("URL.host", "host")}} 和 {{domxref("URL.pathname", "pathname")}} 属性。在本例中，这些字符串的值分别是`developer.mozilla.org` 和`/zh-CN/docs/Web/API/URL_API`。
 
 ### 修改 URL
 
-`URL`对象的大部分属性都是可设置的；您可以向它们写入新值来更改对象所表示的 URL。例如，要创建一个 URL 对象并设置它的用户名：
+`URL`对象的大部分属性都是可设置的；你可以向它们写入新值来更改对象所表示的 URL。例如，要创建一个 URL 对象并设置它的用户名：
 
 ```js
 let myUsername = "someguy";
@@ -37,7 +37,7 @@ addr.username = myUsername;
 
 ### 查询
 
-{{domxref("URL.search", "search")}} 属性在 URL 上包含 URL 的查询字符串部分。例如，如果 URL 是`https://mysite.com/login?user=someguy&page=news`，那么`search` 属性的值是`?user=someguy&page=news`。您还可以使用 {{domxref("URLSearchParams")}} 对象的 {{domxref("URLSearchParams.get", "get()")}} 查找单个参数的值：
+{{domxref("URL.search", "search")}} 属性在 URL 上包含 URL 的查询字符串部分。例如，如果 URL 是`https://mysite.com/login?user=someguy&page=news`，那么`search` 属性的值是`?user=someguy&page=news`。你还可以使用 {{domxref("URLSearchParams")}} 对象的 {{domxref("URLSearchParams.get", "get()")}} 查找单个参数的值：
 
 ```
 let addr = new URL("https://mysite.com/login?user=someguy&page=news");

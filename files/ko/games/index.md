@@ -19,7 +19,7 @@ l10n:
 
 ## 네이티브 언어로 개발된 게임을 웹으로 포팅하기
 
-만약 네이티브 개발자이고(예를 들어 C++로 게임을 만들 수 있는 경우) 게임을 웹에 복사하는 것에 흥미가 있다면 [Emscripten](https://emscripten.org/index.html)에 대해 배워보세요. 이것은 LLVM을 자바스크립트로 변환하는 컴파일러로 LLVM 바이트코드(예를 들어, Clang을 사용해 C/C++ 혹은 다른 언어에서 생성된 코드)를 웹에서 실행 가능한 형태인 [asm.js](/ko/docs/Games/Tools/asm.js)로 컴파일합니다.
+만약 네이티브 개발자이고(예를 들어 C++로 게임을 만들 수 있는 경우) 게임을 웹에 복사하는 것에 흥미가 있다면 [Emscripten](https://emscripten.org/index.html)에 대해 배워보세요. 이것은 LLVM을 JavaScript로 변환하는 컴파일러로 LLVM 바이트코드(예를 들어, Clang을 사용해 C/C++ 혹은 다른 언어에서 생성된 코드)를 웹에서 실행 가능한 형태인 [asm.js](/ko/docs/Games/Tools/asm.js)로 컴파일합니다.
 
 시작하고 싶다면, 아래 링크를 참조해보세요.
 
@@ -50,7 +50,7 @@ l10n:
 - [HTML5 Gamedev Starter](https://html5devstarter.enclavegames.com/)
   - : 새로운 게임 개발자들을 위한 웹 주변의 다양하고 유용한 자료들에 대한 링크의 큐레이터 목록인 스타터입니다.
 - [js13kGames](https://js13kgames.com/)
-  - : 개발자들의 13 킬로바이트짜리 자바스크립트 코딩 공모전입니다. 제출된 게임들은 GitHub에 읽을 수 있는 형태로 올라옵니다.
+  - : 개발자들의 13 킬로바이트짜리 JavaScript 코딩 공모전입니다. 제출된 게임들은 GitHub에 읽을 수 있는 형태로 올라옵니다.
 - [Mozilla Hacks Blog](https://hacks.mozilla.org/category/games/)
   - : Mozilla Hack 블로그의 게임 카테고리는 게임 개발과 관련된 흥미로운 기사들이 올라와 있습니다.
 - [Games section on wiki.mozilla.org](https://wiki.mozilla.org/Platform/Games)

@@ -68,7 +68,7 @@ console.log(item2); // 'みかん'
 const colors = ["red", "green", "blue"];
 
 // length プロパティの使用
-const lengthWay = colors[colors.length-2];
+const lengthWay = colors[colors.length - 2];
 console.log(lengthWay); // 'green'
 
 // slice() メソッドを使用。配列を返すことに注意。

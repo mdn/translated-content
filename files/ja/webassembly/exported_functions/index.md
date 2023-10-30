@@ -1,7 +1,7 @@
 ---
 title: エクスポートされた WebAssembly 関数
 slug: WebAssembly/Exported_functions
-i10n:
+l10n:
   sourceCommit: 0cfdd279edb09f70fbeb52c67ecc2876da5ce32d
 ---
 

@@ -81,11 +81,7 @@ try {
 
 ## Especificações
 
-| Specification                                                                               | Status             | Comment            |
-| ------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} | {{Spec2('ES6')}}   |                    |
-| {{SpecName('ES5.1', '#sec-15.11.6.5', 'TypeError')}}                                        | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES3', '#sec-15.11.6.5', 'TypeError')}}                                          | {{Spec2('ES3')}}   | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

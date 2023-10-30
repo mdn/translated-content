@@ -60,10 +60,14 @@ text-indent: unset;
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 #### CSS
@@ -83,54 +87,62 @@ p {
 
 段落の字下げがある場合の一般的な組版では、最初の段落の字下げを省略します。_The Chicago Manual of Style_ によると、「中間見出しに続くテキストの最初の行は、完全に左端から始めてもよいし、通常の段落の字下げで字下げしてもよい」とされています。
 
-最初の段落とそれ以降の段落を別扱いにするには、次の例のように[隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator)を使います。
+最初の段落とそれ以降の段落を別扱いにするには、次の例のように[次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)を使います。
 
 #### HTML
 
 ```html
 <h2>Lorem ipsum</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
-venenatis quam. Vivamus euismod eleifend metus vitae pharetra. In vel tempor metus.
-Donec dapibus feugiat euismod. Vivamus interdum tellus dolor. Vivamus blandit eros
-et imperdiet auctor. Mauris sapien nunc, condimentum a efficitur non, elementum ac
-sapien. Cras consequat turpis non augue ullamcorper, sit amet porttitor dui
-interdum.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
+  venenatis quam. Vivamus euismod eleifend metus vitae pharetra. In vel tempor
+  metus. Donec dapibus feugiat euismod. Vivamus interdum tellus dolor. Vivamus
+  blandit eros et imperdiet auctor. Mauris sapien nunc, condimentum a efficitur
+  non, elementum ac sapien. Cras consequat turpis non augue ullamcorper, sit
+  amet porttitor dui interdum.
+</p>
 
-<p>Sed laoreet luctus erat at rutrum. Proin velit metus, luctus in sapien in,
-tincidunt mattis ex. Praesent venenatis orci at sagittis eleifend. Nulla facilisi.
-In feugiat vehicula magna iaculis vehicula. Nulla suscipit tempor odio a semper.
-Donec vitae dapibus ipsum. Donec libero purus, convallis eu efficitur id, pulvinar
-elementum diam. Maecenas mollis blandit placerat. Ut gravida pellentesque nunc, in
-eleifend ante convallis sit amet.</p>
+<p>
+  Sed laoreet luctus erat at rutrum. Proin velit metus, luctus in sapien in,
+  tincidunt mattis ex. Praesent venenatis orci at sagittis eleifend. Nulla
+  facilisi. In feugiat vehicula magna iaculis vehicula. Nulla suscipit tempor
+  odio a semper. Donec vitae dapibus ipsum. Donec libero purus, convallis eu
+  efficitur id, pulvinar elementum diam. Maecenas mollis blandit placerat. Ut
+  gravida pellentesque nunc, in eleifend ante convallis sit amet.
+</p>
 
 <h2>Donec ullamcorper elit nisl</h2>
 
-<p>Donec ullamcorper elit nisl, sagittis bibendum massa gravida in. Fusce
-tempor in ante gravida iaculis. Integer posuere tempor metus. Vestibulum lacinia,
-nunc et dictum viverra, urna massa aliquam tellus, id mollis sem velit vestibulum
-nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-ac turpis egestas. Donec vulputate leo ut iaculis ultrices. Cras egestas rhoncus
-lorem. Nunc blandit tempus lectus, rutrum hendrerit orci eleifend id. Ut at quam
-velit.</p>
+<p>
+  Donec ullamcorper elit nisl, sagittis bibendum massa gravida in. Fusce tempor
+  in ante gravida iaculis. Integer posuere tempor metus. Vestibulum lacinia,
+  nunc et dictum viverra, urna massa aliquam tellus, id mollis sem velit
+  vestibulum nulla. Pellentesque habitant morbi tristique senectus et netus et
+  malesuada fames ac turpis egestas. Donec vulputate leo ut iaculis ultrices.
+  Cras egestas rhoncus lorem. Nunc blandit tempus lectus, rutrum hendrerit orci
+  eleifend id. Ut at quam velit.
+</p>
 
-<p>Aenean rutrum tempor ligula, at luctus ligula auctor vestibulum. Sed
-sollicitudin velit in leo fringilla sollicitudin. Proin eu gravida arcu. Nam
-iaculis malesuada massa, eget aliquet turpis sagittis sed. Sed mollis tellus ac
-dui ullamcorper, nec lobortis diam pellentesque. Quisque dapibus accumsan libero,
-sed euismod ipsum ullamcorper sed.</p>
+<p>
+  Aenean rutrum tempor ligula, at luctus ligula auctor vestibulum. Sed
+  sollicitudin velit in leo fringilla sollicitudin. Proin eu gravida arcu. Nam
+  iaculis malesuada massa, eget aliquet turpis sagittis sed. Sed mollis tellus
+  ac dui ullamcorper, nec lobortis diam pellentesque. Quisque dapibus accumsan
+  libero, sed euismod ipsum ullamcorper sed.
+</p>
 ```
 
 #### CSS
 
 ```css
 p {
-    text-align: justify;
-    margin: 1em 0 0 0;
+  text-align: justify;
+  margin: 1em 0 0 0;
 }
 p + p {
-    text-indent: 2em;
-    margin: 0;
+  text-indent: 2em;
+  margin: 0;
 }
 ```
 
@@ -143,10 +155,14 @@ p + p {
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 #### CSS

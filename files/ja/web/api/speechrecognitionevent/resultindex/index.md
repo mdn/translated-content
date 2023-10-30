@@ -23,7 +23,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.resultIndex); // returns 0 if there is only one result
-}
+};
 ```
 
 ## 仕様書

@@ -10,7 +10,7 @@ slug: Web/API/Window/scrollByLines
 ## 構文
 
 ```js
-window.scrollByLines(lines)
+window.scrollByLines(lines);
 ```
 
 ### 引数

@@ -87,7 +87,7 @@ ctx.closePath();
 
 ctx.fillStyle 属性的值看起来和之前不大一样。这是因为它与 CSS 一样，颜色可以指定为十六进制值也可以指定为 rgba() 函数，或者任何其他可用的颜色值函数。
 
-当然我们也可以不使用 ctx.fill() 函数来填充图形和颜色，用 ctx.stroke() 函数来绘制定义图形的路径。试着将这段代码添加到您的 JavaScript:
+当然我们也可以不使用 ctx.fill() 函数来填充图形和颜色，用 ctx.stroke() 函数来绘制定义图形的路径。试着将这段代码添加到你的 JavaScript:
 
 ```js
 ctx.beginPath();

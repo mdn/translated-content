@@ -35,19 +35,19 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
       // Add 'active' class if observation target is inside viewport
-      entry.target.classList.add('active');
+      entry.target.classList.add("active");
     } else {
       // Remove 'active' class otherwise
-      entry.target.classList.remove('active');
+      entry.target.classList.remove("active");
     }
-  })
-})
+  });
+});
 
 // 何を監視するかを宣言し、そのプロパティを監視する
-const boxElList = document.querySelectorAll('.box');
+const boxElList = document.querySelectorAll(".box");
 boxElList.forEach((el) => {
   io.observe(el);
-})
+});
 ```
 
 ## 仕様書

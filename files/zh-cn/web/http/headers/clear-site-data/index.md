@@ -54,7 +54,7 @@ Clear-Site-Data: "*"
 
 ### 登出
 
-如果用户退出您的网站或服务，您可能希望删除本地存储的数据。您可以通过在 `https://example.com/logout` 的响应头增加 Clear-Site-Data，以达到目的：
+如果用户退出你的网站或服务，你可能希望删除本地存储的数据。你可以通过在 `https://example.com/logout` 的响应头增加 Clear-Site-Data，以达到目的：
 
 ```plain
 Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"

@@ -3,13 +3,15 @@ title: 什么是浏览器开发者工具？
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 ---
 
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+
 每一个现代网络浏览器都包含一套强大的开发工具套件。这些工具可以检查当前加载的 HTML、CSS 和 JavaScript，显示每个资源页面的请求以及载入所花费的时间。本文阐述了如何利用浏览器的开发工具的基本功能。
 
 > **备注：** 在你运行下面的例子之前，打开我们在[Web 开发入门](/zh-CN/docs/Learn/Getting_started_with_the_web)系列文章中建立的[初学者示例网站](http://mdn.github.io/beginner-html-site-scripted/)。你应该按照下面的步骤打开。
 
 ## 如何在浏览器中打开开发者工具
 
-开发者工具内置在您的浏览器的子窗口之中，大概像这样：
+开发者工具内置在你的浏览器的子窗口之中，大概像这样：
 
 ![](devtools_63_inspector.png)
 
@@ -33,7 +35,7 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 检查器（Inspector）：DOM 浏览器和 CSS 编辑器
 
-开发者工具在打开时默认为检查器页面，如下图所示。这个工具可以让你看到你的网页的 HTML 运行时的样子，以及哪些 CSS 规则被应用到了页面上元素。它还允许您立即修改 HTML 和 CSS 并在浏览器中实时观察修改的结果。
+开发者工具在打开时默认为检查器页面，如下图所示。这个工具可以让你看到你的网页的 HTML 运行时的样子，以及哪些 CSS 规则被应用到了页面上元素。它还允许你立即修改 HTML 和 CSS 并在浏览器中实时观察修改的结果。
 
 ![](inspector_highlighted.png)
 
@@ -50,7 +52,7 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 ![](dom_inspector.png)
 
 - **删除节点**（或删除元素）：删除当前元素**。**
-- **编辑 HTML**（或添加属性/编辑文本）：让您更改 HTML 和看到在变化的结果。对于调试和测试非常有用。
+- **编辑 HTML**（或添加属性/编辑文本）：让你更改 HTML 和看到在变化的结果。对于调试和测试非常有用。
 - **:hover/:active/:focus**（悬停/激活/聚焦）：强制切换元素状态以查看显示外观。
 - **复制/复制为 HTML**：复制当前选定的 HTML。
 - 一些浏览器也有复制 CSS 路径和复制 XPath，允许你选择复制当前的 HTML 元素 CSS 选择器或 XPath 表达式。
@@ -66,21 +68,21 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 - 应用于当前元素的规则以相关度排序。越特定的规则显示的越靠前。
 - 点击每个声明旁边的复选框，看看如果删除声明会发生什么。
 - 点击每个简写属性旁边的小箭头显示属性的普通等效项。
-- 单击属性名称或值以显示一个文本框，您可以在其中键入新值以获取样式更改的实时预览。
+- 单击属性名称或值以显示一个文本框，你可以在其中键入新值以获取样式更改的实时预览。
 - 每个规则旁边是规则定义的文件名和行号。单击该规则将使开发工具跳转到自己的视图中显示，通常可以编辑和保存。
-- 您还可以单击任何规则的关闭大括号，以在新行上显示一个文本框，您可以在其中为页面写入一个全新的声明。
+- 你还可以单击任何规则的关闭大括号，以在新行上显示一个文本框，你可以在其中为页面写入一个全新的声明。
 
-您会注意到 CSS 查看器顶部的一些可点击的选项卡：
+你会注意到 CSS 查看器顶部的一些可点击的选项卡：
 
 - _计算：显示当前所选元素的计算样式（浏览器应用的最终归一化值）。_
-- _盒子模型：这可以直观地表示当前元素的框模型，所以您可以一目了然地看到应用了什么填充，边框和边距，以及它的内容有多大。_
+- _盒子模型：这可以直观地表示当前元素的框模型，所以你可以一目了然地看到应用了什么填充，边框和边距，以及它的内容有多大。_
 - 字体：在 Firefox 中，“字体”选项卡显示应用于当前元素的字体。
 
 ### 了解更多
 
 了解更多 Inspector 在不同的浏览器中的细节：
 
-- [Firefox Page inspector](/zh-CN/docs/Tools/Page_Inspector)
+- [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
 - [IE DOM Explorer](http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
 - [Chrome DOM inspector](https://developer.chrome.com/devtools/docs/dom-and-styles) (Opera 的 inspector 和它一样)
 - [Safari DOM inspector and style explorer](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
@@ -133,14 +135,14 @@ Safari：开打开发者工具，然后选择 "Debugger" 标签。
 
 了解不同浏览器中的 JavaScript 调试器：
 
-- [Firefox JavaScript Debugger](/zh-CN/docs/Tools/Debugger)
+- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
 - [Microsoft Edge Debugger](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/debugger)
 - [Chrome Debugger](https://developers.google.com/web/tools/chrome-devtools/javascript/)
 - [Safari Debugger](https://developer.apple.com/safari/tools/)
 
 ## JavaScript 控制台
 
-JavaScript 控制台是一个非常有用的工具，用于调试没有按预期运行的 JavaScript。它允许您针对浏览器当前加载的页面运行 JavaScript 行，并报告浏览器尝试执行代码时遇到的错误。要在任何浏览器中访问控制台，只需按控制台按钮。 （在 Internet Explorer 中，按 Ctrl + 2.）这将给你一个如下所示的窗口：
+JavaScript 控制台是一个非常有用的工具，用于调试没有按预期运行的 JavaScript。它允许你针对浏览器当前加载的页面运行 JavaScript 行，并报告浏览器尝试执行代码时遇到的错误。要在任何浏览器中访问控制台，只需按控制台按钮。 （在 Internet Explorer 中，按 Ctrl + 2.）这将给你一个如下所示的窗口：
 
 ![](console_only.png)
 
@@ -187,13 +189,13 @@ myBanana.setAttribute(
 document.querySelector("h1").appendChild(my_Image);
 ```
 
-您将开始看到浏览器返回的错误类型。通常这些错误是相当神秘的，但是应该很简单的把这些问题解决出来！
+你将开始看到浏览器返回的错误类型。通常这些错误是相当神秘的，但是应该很简单的把这些问题解决出来！
 
 ### 了解更多
 
 了解更多 JavaScript 控制台在不同浏览器中的细节：
 
-- [Firefox Web Console](/zh-CN/docs/Tools/Web_Console)
+- [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
 - [IE JavaScript console](http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
 - [Chrome JavaScript Console](https://developer.chrome.com/devtools/docs/console) (Opera 与它相同)
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
@@ -201,4 +203,4 @@ document.querySelector("h1").appendChild(my_Image);
 ## 参见
 
 - [Debugging HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
+- [Debugging CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)

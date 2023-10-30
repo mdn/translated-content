@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Objects/Object_prototypes
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript 基础（参见
         <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a>和<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"

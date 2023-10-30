@@ -1,9 +1,12 @@
 ---
-title: Navigator.webdriver
+title: "Navigator: webdriver プロパティ"
+short-title: webdriver
 slug: Web/API/Navigator/webdriver
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{SeeCompatTable}}{{APIRef("WebDriver")}}
+{{APIRef("WebDriver")}}
 
 **`webdriver`** は {{domxref("navigator")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが自動制御されているかどうかを示します。
 
@@ -16,12 +19,6 @@ slug: Web/API/Navigator/webdriver
 - Firefox
   - : 設定の `marionette.enabled` または `--marionette` フラグが渡されたとき。
 
-## 構文
-
-```
-var isAutomated = navigator.webdriver
-```
-
 ### 値
 
 A {{JSxRef("Boolean")}}
@@ -32,4 +29,4 @@ A {{JSxRef("Boolean")}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Navigator.webdriver")}}
+{{Compat}}

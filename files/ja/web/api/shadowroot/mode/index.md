@@ -12,7 +12,7 @@ slug: Web/API/ShadowRoot/mode
 ## 構文
 
 ```js
-var mode = shadowRoot.mode
+var mode = shadowRoot.mode;
 ```
 
 ### 値

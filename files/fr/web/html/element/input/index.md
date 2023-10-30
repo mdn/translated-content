@@ -313,7 +313,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
   - : Un attribut booléen qui, s'il est présent, indique que le contrôle devrait automatiquement recevoir le focus lorsque le chargement de la page est terminé (ou lorsque l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) qui contient ce contrôle a été affiché).
 
-    > **Note :** Un élément avec l'attribut `autofocus` pourra recevoir le focus avant le déclenchement de l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Window/DOMContentLoaded_event).
+    > **Note :** Un élément avec l'attribut `autofocus` pourra recevoir le focus avant le déclenchement de l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event).
 
     Il ne peut pas y avoir plus d'un élément du document avec l'attribut `autofocus`. Si l'attribut est placé sur plus d'un élément, c'est le premier qui reçoit le focus.
 

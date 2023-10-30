@@ -10,7 +10,7 @@ slug: Web/API/CustomElementRegistry
 ## メソッド
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : 新しい[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)を定義します。
+  - : 新しい[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を定義します。
 - {{domxref("CustomElementRegistry.get()")}}
   - : 名前付きカスタム要素のコンストラクターを返します。カスタム要素が定義されていない場合は {{jsxref("undefined")}} を返します。
 - {{domxref("CustomElementRegistry.upgrade()")}}

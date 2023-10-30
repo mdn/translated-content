@@ -12,7 +12,7 @@ slug: Web/API/Performance/toJSON
 ## 構文
 
 ```js
-myPerf = performance.toJSON()
+myPerf = performance.toJSON();
 ```
 
 ### 引数

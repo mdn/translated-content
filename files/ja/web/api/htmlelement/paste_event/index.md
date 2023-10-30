@@ -38,7 +38,9 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ```html
 <h3>このテキストエリアで実行してみる</h3>
-<textarea id="editor" rows="3">このフィールドにテキストをコピー＆ペーストしてみてください。</textarea>
+<textarea id="editor" rows="3">
+このフィールドにテキストをコピー＆ペーストしてみてください。
+</textarea>
 
 <h3>ログ:</h3>
 <p id="log"></p>

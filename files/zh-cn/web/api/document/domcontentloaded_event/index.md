@@ -1,36 +1,32 @@
 ---
-title: "Document: DOMContentLoaded 事件"
+title: Document：DOMContentLoaded 事件
+short-title: DOMContentLoaded
 slug: Web/API/Document/DOMContentLoaded_event
 ---
 
 {{APIRef}}
 
-当纯 HTML 被完全加载以及解析时，**`DOMContentLoaded`** 事件会被触发，而不必等待样式表，图片或者子框架完成加载。
+当 HTML 文档完全解析，且所有延迟脚本（[`<script defer src="…">`](/zh-CN/docs/Web/HTML/Element/script#defer) 和 [`<script type="module">`](/zh-CN/docs/Web/HTML/Element/script#module)）下载和执行完毕后，会触发 **`DOMContentLoaded`** 事件。它不会等待图片、子框架和异步脚本等其他内容完成加载。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">冒泡阶段</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">可撤销性</th>
-      <td>Yes (尽管它被指定为一个简单事件时是不可撤销的)</td>
-    </tr>
-    <tr>
-      <th scope="row">接口</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">事件句柄属性</th>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
+`DOMContentLoaded` 不会等待样式表加载，但延迟脚本*会*等待样式表，而且 `DOMContentLoaded` 事件排在延迟脚本之后。此外，非延迟或异步的脚本（如 `<script>`）将等待已解析的样式表加载。
 
-一个易混用但不同的事件是，[`load`](/zh-CN/docs/Web/API/Window/load_event),这个事件仅仅应该在探测到整个页面完全加载完成时被使用。一个常见的错误就是在该使用`DOMContentLoaded`的地方使用了`load` 。
+另一个事件——{{domxref("Window/load_event", "load")}}——只能用于检测完全加载的页面。有一个常见的错误就是在 `DOMContentLoaded` 事件更合适时使用了 `load` 事件。
 
-JavaScript 的同步模式会导致 DOM 解析暂停。如果你想在用户请求页面时，首先尽可能先解析 DOM，此时你可以使用[JavaScript 异步模式](/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)，并且[优化样式表的加载](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery)。在通常模式的加载过程中，样式表的加载会与 DOM 解析并行，从而迟缓主要 HTML 文档的加载。
+这个事件不可取消。
+
+## 语法
+
+在类似于 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("DOMContentLoaded", (event) => {});
+
+onDOMContentLoaded = (event) => {};
+```
+
+## 事件类型
+
+通用 {{domxref("Event")}}。
 
 ## 示例
 
@@ -38,7 +34,7 @@ JavaScript 的同步模式会导致 DOM 解析暂停。如果你想在用户请�
 
 ```js
 document.addEventListener("DOMContentLoaded", (event) => {
-  console.log("DOM fully loaded and parsed"); // 译者注："DOM 完全加载以及解析"
+  console.log("DOM 完全加载和解析");
 });
 ```
 
@@ -47,51 +43,59 @@ document.addEventListener("DOMContentLoaded", (event) => {
 ```html
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM fully loaded and parsed");
+    console.log("DOM 完全加载和解析");
   });
 
-  for (let i = 0; i < 1000000000; i++) {} // 这段同步脚本将会延迟 DOM 解析，
+  for (let i = 0; i < 1_000_000_000; i++);
+  // 这段同步脚本将会延迟 DOM 解析，
   // 所以 DOMContentLoaded 事件将会延迟执行。
 </script>
 ```
 
 ### 检查加载是否已经完成
 
-在你的脚本有机会运行前，`DOMContentLoaded`可能就已经被触发。所以你在决定添加一个事件监听器前最好先检查一下。
+在你的脚本有机会运行前，`DOMContentLoaded` 可能就已经被触发。所以你在决定添加一个事件监听器前最好先检查一下。
 
 ```js
 function doSomething() {
-  console.info("DOM loaded");
+  console.info("DOM 加载了");
 }
 
 if (document.readyState === "loading") {
   // 此时加载尚未完成
   document.addEventListener("DOMContentLoaded", doSomething);
 } else {
-  // 此时`DOMContentLoaded` 已经被触发
+  // `DOMContentLoaded` 已经被触发
   doSomething();
 }
 ```
 
-### 实例
+> **备注：** 这里不存在竞争条件——文档不可能在 `if` 检查和 `addEventListener()` 调用之间被加载。JavaScript 采用的是运行到完成语义，这意味着如果文档在事件循环的某个特定时间点正在加载，那么在下一个循环之前它是不可能被加载的，而在下一个循环中，`doSomething` 处理程序已经附加并将被触发。
+
+### 运行实例
 
 #### HTML
 
 ```html
 <div class="controls">
-  <button id="reload" type="button">Reload</button>
+  <button id="reload" type="button">重新加载</button>
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+  <label for="eventLog">事件日志：</label>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {
@@ -119,7 +123,7 @@ button {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const log = document.querySelector(".event-log-contents");
@@ -127,27 +131,27 @@ const reload = document.querySelector("#reload");
 
 reload.addEventListener("click", () => {
   log.textContent = "";
-  window.setTimeout(() => {
+  setTimeout(() => {
     window.location.reload(true);
   }, 200);
 });
 
 window.addEventListener("load", (event) => {
-  log.textContent = log.textContent + "load\n";
+  log.textContent += "load\n";
 });
 
 document.addEventListener("readystatechange", (event) => {
-  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+  log.textContent += `readystate: ${document.readyState}\n`;
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent = log.textContent + `DOMContentLoaded\n`;
+  log.textContent += "DOMContentLoaded\n";
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('实例', '100%', '160px') }}
+{{ EmbedLiveSample('运行实例', '100%', '160px') }}
 
 ## 规范
 
@@ -159,4 +163,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 ## 参见
 
-- 有关事件：[`load`](/zh-CN/docs/Web/API/Window/load_event)、[`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event)、[`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)、[`unload`](/zh-CN/docs/Web/API/Window/unload_event)
+- 相关事件：{{domxref("Window/load_event", "load")}}、{{domxref("Document/readystatechange_event", "readystatechange")}}、{{domxref("Window/beforeunload_event", "beforeunload")}}、{{domxref("Window/unload_event", "unload")}}

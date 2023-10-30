@@ -262,7 +262,7 @@ ul {
 
 ### start
 
-{{htmlattrxref("start","ol")}} 속성을 사용하면 1이 아닌 숫자부터 카운트하는 목록을 시작할 수 있습니다. 예시는 다음과 같습니다.
+[`start`](/ko/docs/Web/HTML/Element/ol#start) 속성을 사용하면 1이 아닌 숫자부터 카운트하는 목록을 시작할 수 있습니다. 예시는 다음과 같습니다.
 
 ```html
 <ol start="4">
@@ -281,7 +281,7 @@ ul {
 
 ### reversed
 
-{{htmlattrxref("reversed","ol")}} 속성은 목록을 위로 카운트하는 대신 카운트 다운을 시작합니다. 예시는 다음과 같습니다.
+[`reversed`](/ko/docs/Web/HTML/Element/ol#reversed) 속성은 목록을 위로 카운트하는 대신 카운트 다운을 시작합니다. 예시는 다음과 같습니다.
 
 ```html
 <ol start="4" reversed>
@@ -302,7 +302,7 @@ ul {
 
 ### value
 
-{{htmlattrxref("value","ol")}} 속성을 사용하면 목록 항목을 특정 숫자 값으로 설정할 수 있습니다. 예시는 다음과 같습니다.
+[`value`](/ko/docs/Web/HTML/Element/ol#value) 속성을 사용하면 목록 항목을 특정 숫자 값으로 설정할 수 있습니다. 예시는 다음과 같습니다.
 
 ```html
 <ol>

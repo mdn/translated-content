@@ -12,7 +12,7 @@ l10n:
 ## 構文
 
 ```js
-Array[Symbol.species]
+Array[Symbol.species];
 ```
 
 ### 返値
@@ -72,7 +72,9 @@ Array[Symbol.species]; // [Function: Array]
 ```js
 class MyArray extends Array {
   // MyArray species を親である ArrayBuffer コンストラクタにオーバーライド。
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 

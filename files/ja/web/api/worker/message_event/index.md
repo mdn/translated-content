@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## イベント型
@@ -49,8 +49,8 @@ _このインターフェイスには、親である {{domxref("Event")}} から
 ```js
 const worker = new Worker("static/scripts/worker.js");
 
-worker.addEventListener('message', (event) => {
-    console.log(`Received message from worker: ${event.data}`)
+worker.addEventListener("message", (event) => {
+  console.log(`Received message from worker: ${event.data}`);
 });
 ```
 
@@ -60,7 +60,7 @@ worker.addEventListener('message', (event) => {
 const worker = new Worker("static/scripts/worker.js");
 
 worker.onmessage = (event) => {
-    console.log(`Received message from worker: ${event.data}`)
+  console.log(`Received message from worker: ${event.data}`);
 };
 ```
 
@@ -69,7 +69,7 @@ worker.onmessage = (event) => {
 ```js
 // static/scripts/worker.js
 
-self.postMessage('I\'m alive!');
+self.postMessage("I'm alive!");
 ```
 
 ## 仕様書

@@ -365,7 +365,7 @@ El primer error es no encadenar las acciones adecuadamente. Esto sucede cuando c
 
 El segundo error es el anidamiento innecesario, que da lugar al primer error. La anidación también limita el alcance de los manejadores de errores internos, que - si no son deseados - pueden llevar a errores no detectados. Una variante de esto es el [constructor anti-patrón de promesas](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it), el cuál combina el anidamiento con el uso redundante del constructor de promesa para envolver el código que ya usa promesas.
 
-El tercer error es olvidar cerrar las cadenas con catch.Las cadenas de promesas no terminadas conducen a errores no capturados en la mayoría de los navegadores.
+El tercer error es olvidar cerrar las cadenas con catch. Las cadenas de promesas no terminadas conducen a errores no capturados en la mayoría de los navegadores.
 
 Una buena regla es devolver o terminar siempre las cadenas de promesas, y tan pronto como obtenga una nueva promesa, devolverla de inmediato, para aplanar las cosas:
 

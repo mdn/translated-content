@@ -47,8 +47,8 @@ void ctx.rect(x, y, width, height);
 矩形の角は (10, 20) の位置です。幅は 150 で高さは 100 です。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.rect(10, 20, 150, 100);
 ctx.fill();
 ```

@@ -44,7 +44,7 @@ let addr = new URL("https://mysite.com/login?user=someguy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
-} catch(err) {
+} catch (err) {
   showErrorMessage(err);
 }
 ```
@@ -84,7 +84,7 @@ function fillTableWithParameters(tbl) {
     cell.innerText = val;
     row.appendChild(cell);
     tbl.appendChild(row);
-  };
+  }
 }
 ```
 

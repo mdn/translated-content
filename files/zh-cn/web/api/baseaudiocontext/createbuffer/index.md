@@ -108,6 +108,6 @@ button.onclick = function () {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [使用网络音频接口（英文）](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

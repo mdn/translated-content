@@ -17,7 +17,7 @@ l10n:
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // ミリ秒単位の時間
 

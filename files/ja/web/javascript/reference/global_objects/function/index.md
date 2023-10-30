@@ -49,22 +49,22 @@ JavaScript の関数は、実際にはすべて `Function` オブジェクトで
 var x = 10;
 
 function createFunction1() {
-    var x = 20;
-    return new Function('return x;'); // この |x| はグローバルの |x| を表す
+  var x = 20;
+  return new Function("return x;"); // この |x| はグローバルの |x| を表す
 }
 
 function createFunction2() {
-    var x = 20;
-    function f() {
-        return x; // この |x| は上記のローカルの |x| を表す
-    }
-    return f;
+  var x = 20;
+  function f() {
+    return x; // この |x| は上記のローカルの |x| を表す
+  }
+  return f;
 }
 
 var f1 = createFunction1();
-console.log(f1());          // 10
+console.log(f1()); // 10
 var f2 = createFunction2();
-console.log(f2());          // 20
+console.log(f2()); // 20
 ```
 
 このコードはウェブブラウザーでは動作しますが、 Node.js では `f1()` で `ReferenceError` が発生します。 `x` が見つからないためです。これは Node の最上位のスコープがグローバルスコープではなく、 `x` はモジュールのローカルになるからです。

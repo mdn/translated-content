@@ -10,7 +10,7 @@ slug: Learn/Forms/Basic_native_form_controls
 <table>
  <tbody>
   <tr>
-   <th scope="row">预备知识：</th>
+   <th scope="row">前提：</th>
    <td>计算机基础知识和对于 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 的基本理解</a>。</td>
   </tr>
   <tr>
@@ -27,13 +27,13 @@ slug: Learn/Forms/Basic_native_form_controls
 - 常见的输入（input）类型元素：{{HTMLelement('input/button', 'button')}}、{{HTMLelement('input/checkbox', 'checkbox')}}、{{HTMLelement('input/file', 'file')}}、{{HTMLelement('input/hidden', 'hidden')}}、{{HTMLelement('input/image', 'image')}}、{{HTMLelement('input/password', 'password')}}、{{HTMLelement('input/radio', 'radio')}}、{{HTMLelement('input/reset', 'reset')}}、{{HTMLelement('input/submit', 'submit')}} 和 {{HTMLelement('input/text', 'text')}}。
 - 所有表单部件共有的一些属性。
 
-> **备注：** 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果您想要更准确的细节，您应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input)参考。
+> **备注：** 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果你想要更准确的细节，你应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input)参考。
 
 ## 文本输入框
 
 文本{{htmlelement("input", "输入")}}框是最基本的表单小部件。这是一种非常方便的方式，可以让用户输入任何类型的数据。我们已经看到过几个简单的例子。
 
-> **备注：** HTML 表单文本字段是简单的纯文本输入控件。这意味着您不能将它们用作富文本编辑（粗体、斜体等）。你遇到的所有富文本编辑器都是使用 HTML、CSS 和 JavaScript 所创建的自定义小部件。
+> **备注：** HTML 表单文本字段是简单的纯文本输入控件。这意味着你不能将它们用作富文本编辑（粗体、斜体等）。你遇到的所有富文本编辑器都是使用 HTML、CSS 和 JavaScript 所创建的自定义小部件。
 
 所有文本框都有一些通用规范：
 
@@ -56,7 +56,7 @@ slug: Learn/Forms/Basic_native_form_controls
 <input type="text" id="comment" name="comment" value="I'm a text field" />
 ```
 
-单行文本框只有一个真正的约束：如果您输入带有换行符的文本，浏览器会在发送数据之前删除这些换行符。
+单行文本框只有一个真正的约束：如果你输入带有换行符的文本，浏览器会在发送数据之前删除这些换行符。
 
 _以下截图现实了 macOS 上的 Firefox 71 和 Safair 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的文本输入框。_
 
@@ -86,7 +86,7 @@ _以下截图现实了 macOS 上的 Firefox 71 和 Safair 以及 Windows 10 上�
 <input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
 ```
 
-如果您创建了这样一个元素，就需要设置它的 `name` 和 `value` 属性。元素的值可以通过 JavaScript 动态设置。`hidden` input 类型不应有关联的标签（`label` 元素）。
+如果你创建了这样一个元素，就需要设置它的 `name` 和 `value` 属性。元素的值可以通过 JavaScript 动态设置。`hidden` input 类型不应有关联的标签（`label` 元素）。
 
 HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/search", "search")}}、{{HTMLElement("input/url", "url")}} 和 {{HTMLElement("input/tel", "tel")}}。这些内容将在下一篇文章 [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)中介绍。
 
@@ -98,7 +98,7 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 
 > **备注：** 你可以在 Github 上看到 [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
 
-为了获得最大的可用性和无障碍（无障碍），建议您在 {{htmlelement("fieldset")}} 中包围每个相关项目的列表，并使用 {{htmlelement("legend")}} 提供对列表的全面描述。每个单独的 {{htmlelement("label")}}/{{htmlelement("input")}} 元素都应该包含在它自己的列表项中（或者类似的）。正如在下方示例中显示的。
+为了获得最大的可用性和无障碍（无障碍），建议你在 {{htmlelement("fieldset")}} 中包围每个相关项目的列表，并使用 {{htmlelement("legend")}} 提供对列表的全面描述。每个单独的 {{htmlelement("label")}}/{{htmlelement("input")}} 元素都应该包含在它自己的列表项中（或者类似的）。正如在下方示例中显示的。
 
 ### 复选框
 
@@ -220,7 +220,7 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 �
 <input type="button" value="This is an anonymous button" />
 ```
 
-不管您使用的是 {{HTMLElement("button")}} 元素还是 {{HTMLElement("input")}} 元素，按钮的行为都是一样的。然而，有一些显著的不同之处：从示例中可以看到，{{HTMLElement("button")}} 元素允许您在它们的标签中使用 HTML 内容，这些内容被插入到 `<button>` 开始和结束的标签之间。另一方面，{{HTMLElement("input")}} 元素是空元素；它显示的内容需要插入到 `value` 属性中，因此只接受纯文本内容。
+不管你使用的是 {{HTMLElement("button")}} 元素还是 {{HTMLElement("input")}} 元素，按钮的行为都是一样的。然而，有一些显著的不同之处：从示例中可以看到，{{HTMLElement("button")}} 元素允许你在它们的标签中使用 HTML 内容，这些内容被插入到 `<button>` 开始和结束的标签之间。另一方面，{{HTMLElement("input")}} 元素是空元素；它显示的内容需要插入到 `value` 属性中，因此只接受纯文本内容。
 
 以下的截图展示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 上的 Chrome 79 和 Edge 18 中默认、聚焦、禁用的 input 按钮。
 
@@ -243,7 +243,7 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 �
 - X 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串“.x”。
 - Y 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串“.y”。
 
-例如，当您点击这个小部件图像坐标为 (123,456) 的位置时，它将会通过 `get` 方法提交。你可以看到类似的 URL：
+例如，当你点击这个小部件图像坐标为 (123,456) 的位置时，它将会通过 `get` 方法提交。你可以看到类似的 URL：
 
 ```
 http://foo.com?pos.x=123&pos.y=456
@@ -255,7 +255,7 @@ http://foo.com?pos.x=123&pos.y=456
 
 HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)的文章中详细描述了这个特定的操作。文件选择器小部件是用户如何选择一个或多个文件来发送的。
 
-要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Element/Input/file)，您可以使用 {{HTMLElement("input")}} 元素，将它的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `file`。被接受的文件类型可以使用 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性来约束。此外，如果您想让用户选择多个文件，那么可以通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性来实现。
+要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Element/Input/file)，你可以使用 {{HTMLElement("input")}} 元素，将它的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `file`。被接受的文件类型可以使用 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性来约束。此外，如果你想让用户选择多个文件，那么可以通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性来实现。
 
 #### 示例
 
@@ -289,7 +289,7 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
   <tr>
    <td><code><a href="/zh-CN/docs/Web/HTML/Global_attributes/autofocus">autofocus</a></code></td>
    <td>false</td>
-   <td>这个布尔属性允许您指定当页面加载时元素应该自动具有输入焦点，除非用户覆盖它，例如通过键入不同的控件。文档中只有一个与表单相关的元素可以指定这个属性。</td>
+   <td>这个布尔属性允许你指定当页面加载时元素应该自动具有输入焦点，除非用户覆盖它，例如通过键入不同的控件。文档中只有一个与表单相关的元素可以指定这个属性。</td>
   </tr>
   <tr>
    <td><code><a href="/zh-CN/docs/Web/HTML/Attributes/disabled">disabled</a></code></td>
@@ -302,7 +302,7 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
    <td><code><a href="/zh-CN/docs/Web/HTML/Element/form">form</a></code></td>
    <td></td>
    <td>
-    小部件与之相关联的表单元素。属性值必需是同个文档中的 {{HTMLElement("form")}} 元素的 <code>id</code> 属性。理论上，它允许您在 {{HTMLElement("form")}} 元素之外设置一个表单小部件。
+    小部件与之相关联的表单元素。属性值必需是同个文档中的 {{HTMLElement("form")}} 元素的 <code>id</code> 属性。理论上，它允许你在 {{HTMLElement("form")}} 元素之外设置一个表单小部件。
    </td>
   </tr>
   <tr>

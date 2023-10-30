@@ -121,11 +121,7 @@ showOffsetPos("content");
 
 ## Especificações
 
-| Especificação                                              | Status             | Comentário         |
-| ---------------------------------------------------------- | ------------------ | ------------------ |
-| ECMAScript 1st Edition.                                    | Padrão             | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-12.6.3', 'for statement')}}      | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-for-statement', 'for statement')}} | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

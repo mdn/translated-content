@@ -20,12 +20,14 @@ l10n:
 ```html
 <p>
   <label>
-    <input id="check-box" name="b" value="1" type="checkbox" disabled /> このボックスをチェックしてください。
+    <input id="check-box" name="b" value="1" type="checkbox" disabled />
+    このボックスをチェックしてください。
   </label>
 </p>
 <p>
   <label>
-    <input id="toggle-box" name="b" value="2" type="checkbox" /> 他のボックスを有効にします。
+    <input id="toggle-box" name="b" value="2" type="checkbox" />
+    他のボックスを有効にします。
   </label>
 </p>
 ```
@@ -41,7 +43,7 @@ toggleBox.addEventListener(
   (event) => {
     checkBox.disabled = !event.target.checked;
   },
-  false
+  false,
 );
 ```
 
