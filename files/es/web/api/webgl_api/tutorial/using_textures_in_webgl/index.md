@@ -179,7 +179,7 @@ En este punto, el cubo giratorio debe estar listo.
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[Ver el código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample6) | [Abrir esta demo en una nueva pestaña](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+[Ver el código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample6) | [Abrir esta demo en una nueva pestaña](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## Texturas entre dominios
 

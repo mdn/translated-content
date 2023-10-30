@@ -59,7 +59,7 @@ function main() {
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[檢視完整程式碼](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample1) | [開啟新頁面來檢視結果](http://mdn.github.io/webgl-examples/tutorial/sample1/)
+[檢視完整程式碼](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample1) | [開啟新頁面來檢視結果](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## 亦可參考
 

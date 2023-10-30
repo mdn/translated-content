@@ -268,7 +268,7 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[Посмотреть код примера полностью](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample6) | [Открыть демо в новом окне](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+[Посмотреть код примера полностью](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample6) | [Открыть демо в новом окне](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## Кросс-доменные текстуры
 
