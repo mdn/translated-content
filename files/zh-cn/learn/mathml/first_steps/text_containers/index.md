@@ -195,7 +195,7 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 {{ EmbedLiveSample('阻止 <mi> 自动斜体化', 700, 50) }}
 
-> **备注：**尽管可以应用此转换，但通常你只需直接使用所需的[数学字母数字符号](https://zh.wikipedia.org/wiki/数学字母数字符号)即可。
+> **备注：** 尽管可以应用此转换，但通常你只需直接使用所需的[数学字母数字符号](https://zh.wikipedia.org/wiki/数学字母数字符号)即可。
 
 ## \<mo> 的运算符属性
 
