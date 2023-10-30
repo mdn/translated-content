@@ -186,11 +186,7 @@ body {
 
 ## Specifications
 
-| Specification                                                           | Status                  | Comment               |
-| ----------------------------------------------------------------------- | ----------------------- | --------------------- |
-| {{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}          | {{Spec2('CSS3 Fonts')}} | No significant change |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}} | {{Spec2('CSS2.1')}}     | No significant change |
-| {{SpecName('CSS1', '#font-family', 'font-familiy')}}                    | {{Spec2('CSS1')}}       | Initial definition    |
+{{Specifications}}
 
 ## Browser compatibility
 

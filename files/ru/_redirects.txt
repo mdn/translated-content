@@ -579,7 +579,8 @@
 /ru/docs/Web/CSS/@viewport/viewport-fit	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/@viewport/width	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/@viewport/zoom	/ru/docs/Web/CSS
-/ru/docs/Web/CSS/Adjacent_sibling_selectors	/ru/docs/Web/CSS/Adjacent_sibling_combinator
+/ru/docs/Web/CSS/Adjacent_sibling_combinator	/ru/docs/Web/CSS/Next-sibling_combinator
+/ru/docs/Web/CSS/Adjacent_sibling_selectors	/ru/docs/Web/CSS/Next-sibling_combinator
 /ru/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/ru/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy	/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -618,7 +619,8 @@
 /ru/docs/Web/CSS/Child_selectors	/ru/docs/Web/CSS/Child_combinator
 /ru/docs/Web/CSS/Common_CSS_Questions	/ru/docs/Learn/CSS/Howto/CSS_FAQ
 /ru/docs/Web/CSS/Descendant_selectors	/ru/docs/Web/CSS/Descendant_combinator
-/ru/docs/Web/CSS/General_sibling_selectors	/ru/docs/Web/CSS/General_sibling_combinator
+/ru/docs/Web/CSS/General_sibling_combinator	/ru/docs/Web/CSS/Subsequent-sibling_combinator
+/ru/docs/Web/CSS/General_sibling_selectors	/ru/docs/Web/CSS/Subsequent-sibling_combinator
 /ru/docs/Web/CSS/Media_Queries	/ru/docs/Web/CSS/CSS_media_queries
 /ru/docs/Web/CSS/Media_Queries/Testing_media_queries	/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ru/docs/Web/CSS/Media_Queries/Using_media_queries	/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries

@@ -11,7 +11,7 @@ Unicode 是一种{{Glossary("Character set","字符集")}}标准，用于对来�
 
 网络上最常见的 Unicode 字符编码是{{Glossary("UTF-8")}}。还存在一些其他编码，如 UTF-16 或过时的 UCS-2，但推荐使用 UTF-8。
 
-## 了解更多
+## 参见
 
 - [Unicode](https://zh.wikipedia.org/wiki/Unicode) on Wikipedia
 - [The Unicode Standard: A Technical Introduction](https://www.unicode.org/standard/principles.html)

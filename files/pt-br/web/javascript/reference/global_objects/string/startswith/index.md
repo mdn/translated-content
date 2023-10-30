@@ -62,9 +62,7 @@ Um polyfill mais robusto (totalmente conforme com a especificação ES2015), mas
 
 ## Especificações
 
-| Especificação                                                                              |
-| ------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

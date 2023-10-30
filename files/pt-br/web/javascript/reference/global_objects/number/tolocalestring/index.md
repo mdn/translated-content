@@ -126,15 +126,7 @@ Quando formatar uma grande quantidade de números, é melhor criar um objeto {{j
 
 ## Especificações
 
-| Especificação                                                                                           | Status                    | Comentário                                         |
-| ------------------------------------------------------------------------------------------------------- | ------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}          | Definição inicial. Implementado no JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}                               | {{Spec2('ES5.1')}}        |                                                    |
-| {{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}          | {{Spec2('ES6')}}          |                                                    |
-| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}      | {{Spec2('ESDraft')}}      |                                                    |
-| {{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                            | {{Spec2('ES Int 1.0')}}   |                                                    |
-| {{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                            | {{Spec2('ES Int 2.0')}}   |                                                    |
-| {{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -94,9 +94,7 @@ TypeError: replaceAll must be called with a global RegExp
 
 ## Specifications
 
-| Specification                                                                              |
-| ------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

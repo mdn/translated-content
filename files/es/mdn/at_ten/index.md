@@ -17,8 +17,6 @@ Por diez años, la comunidad MDN ha estado documentando la Web abierta. Desde la
 
 [Aprende más sobre contribuyendo](/es/docs/MDN_at_ten/Contributing_to_MDN)
 
-{{TenthCampaignQuote}}
-
 ## Subnav
 
 1. [MDN en 10](/es/docs/MDN_at_ten/)

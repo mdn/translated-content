@@ -54,9 +54,7 @@ else launchRocket();
 
 ## Especificações
 
-| Especificações                                                     |
-| ------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}} |
+{{Specifications}}
 
 ## Browsers compatíveis
 

@@ -47,7 +47,7 @@ Array.from(arrayLike, mapFn, thisArg)
 
 `Array.from()`은 희소 배열을 생성하지 않습니다. `arrayLike` 객체에 일부 인덱스 속성이 누락된 경우, 새 배열에서 해당 속성은 `undefined`가 됩니다.
 
-`Array.from()`에는 생성되는 배열의 각 요소에 대해 함수를 실행할 수 있는 {{jsxref("Array/map", "map()")}}과 비슷한 선택적 매개변수 `mapFn`이 있습니다. 좀 더 명확하게 설명하자면, `Array.from(obj, mapFn, thisArg)`는 중간 배열을 생성하지 않는다는 점과 배열이 아직 생성 중이기 때문에 전체 배열 없어 두 개의 인수(`element`, `index`)만 받는다는 점을 제외하면 `Array.from(obj).map(mapFn, thisArg)`과 동일한 결과를 가져옵니다.
+`Array.from()`에는 생성되는 배열의 각 요소에 대해 함수를 실행할 수 있는 {{jsxref("Array/map", "map()")}}과 비슷한 선택적 매개변수 `mapFn`이 있습니다. 좀 더 명확하게 설명하자면, `Array.from(obj, mapFn, thisArg)`는 중간 배열을 생성하지 않는다는 점과 배열이 아직 생성 중이기 때문에 전체 배열 없이 두 개의 인수(`element`, `index`)만 받는다는 점을 제외하면 `Array.from(obj).map(mapFn, thisArg)`과 동일한 결과를 가져옵니다.
 
 > **참고:** 이 동작은 [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)에서 더 중요한데, 중간 배열에는 적절한 형식에 맞게 잘린 값이 있어야 하기 때문입니다. `Array.from()`은 {{jsxref("TypedArray.from()")}}과 동일한 동작을 하도록 구현되었습니다.
 

@@ -5,14 +5,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 
 {{JSRef}}
 
-**`delete()`** 方法从 `Set` 对象中删除指定的值（如果该值在 `Set` 中）。
+{{jsxref("Set")}} 实例的 **`delete()`** 方法从该集合中删除指定值，如果该值在集合中。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 
 ## 语法
 
 ```js-nolint
-delete(value)
+setInstance.delete(value)
 ```
 
 ### 参数
@@ -40,7 +40,7 @@ console.log(mySet.has("foo")); // 返回 false，"foo" 已经成功删除
 
 ### 从 Set 中删除对象
 
-因为对象是通过引用比较的，所以如果没有对原始对象的引用，就必须通过检查单个属性来删除它们。
+因为对象是通过引用比较的，所以如果没有对原始对象的引用，就必须通过检查各个属性来删除它们。
 
 ```js
 const setObj = new Set(); // 创建一个新 set

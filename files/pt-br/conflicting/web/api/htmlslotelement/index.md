@@ -25,9 +25,7 @@ _Esta interface herda os méthodos de {{domxref("HTMLElement")}}._
 
 ## Specificações
 
-| Specificações                                                                    | Status                           | Commentários |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |              |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -600,10 +600,7 @@ clipPathSelect.addEventListener("change", function (evt) {
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                 | Комментарий                                        |
-| -------------------------------------------------------------------- | ---------------------- | -------------------------------------------------- |
-| {{SpecName("CSS Masks", "#the-clip-path", 'clip-path')}}             | {{Spec2('CSS Masks')}} | Extends its application to HTML elements.          |
-| {{SpecName('SVG1.1', 'masking.html#ClipPathProperty', 'clip-path')}} | {{Spec2('SVG1.1')}}    | Initial definition (applies to SVG elements only). |
+{{Specifications}}
 
 ## Совместимость
 

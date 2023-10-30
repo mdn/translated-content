@@ -54,13 +54,7 @@ input:disabled {
 
 ## Specifications
 
-| Specification                                                  | Status                      | Comment                                                     |
-| -------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-enabled', ':enabled')}}   | {{Spec2('HTML WHATWG')}}    | No change.                                                  |
-| {{SpecName('HTML5 W3C', '#selector-enabled', ':enabled')}}     | {{Spec2('HTML5 W3C')}}      | Defines the semantics for HTML and forms.                   |
-| {{SpecName('CSS4 Selectors', '#enableddisabled', ':enabled')}} | {{Spec2('CSS4 Selectors')}} | No change.                                                  |
-| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':enabled')}}   | {{Spec2('CSS3 Basic UI')}}  | Links to Selectors Level 3.                                 |
-| {{SpecName('CSS3 Selectors', '#enableddisabled', ':enabled')}} | {{Spec2('CSS3 Selectors')}} | Defines the pseudo-class, but not the associated semantics. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

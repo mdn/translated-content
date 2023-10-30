@@ -138,11 +138,7 @@ str3.match(null); // retorna ["null"]
 
 ## Especificações
 
-| Especificações                                                               | Estado             | Comentário                                        |
-| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition.                                                      | Standard           | Definição inicial. Implementado no JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}            | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

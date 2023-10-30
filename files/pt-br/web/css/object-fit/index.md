@@ -127,10 +127,7 @@ img {
 
 ## Specifications
 
-| Specification                                                | Status                   | Comment                                               |
-| ------------------------------------------------------------ | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} | The `from-image` and `flip` keywords have been added. |
-| {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Initial specification                                 |
+{{Specifications}}
 
 ## Browser compatibility
 

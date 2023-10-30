@@ -37,7 +37,7 @@ console.warn(msg [, subst1, ..., substN]);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Opera Dragonfly 文档：控制台](http://www.opera.com/dragonfly/documentation/console/)
 - [MSDN：使用 F12 工具控制台来查看错误和状态](http://msdn.microsoft.com/library/gg589530)

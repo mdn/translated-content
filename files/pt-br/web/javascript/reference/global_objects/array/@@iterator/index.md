@@ -40,10 +40,7 @@ console.log(eArr.next().value); // p
 
 ## Especificações
 
-| Especificação                                                                               | Status               | Comentário         |
-| ------------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}     | {{Spec2('ES6')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

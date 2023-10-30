@@ -21,8 +21,6 @@ l10n:
 
 [参加についての詳細はこちら](/ja/docs/MDN/Contribute)
 
-{{TenthCampaignQuote}}
-
 ## 関連情報
 
 - [MDN のあゆみ](/ja/docs/MDN/At_ten/History_of_MDN)

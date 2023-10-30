@@ -49,7 +49,7 @@ HTML 应该编写为表示将要填充的数据，而不是基于其默认的演
 
 ## 语义化元素
 
-这是一些语义化的元（[source](https://www.w3schools.com/html/html5_semantic_elements.asp)）。
+这是一些语义化的元素（[source](https://www.w3schools.com/html/html5_semantic_elements.asp)）。
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -65,28 +65,11 @@ HTML 应该编写为表示将要填充的数据，而不是基于其默认的演
 - {{htmlelement("summary")}}
 - {{htmlelement("time")}}
 
-## 了解更多
+## 参见
 
-- [HTML element reference](/zh-CN/docs/Web/HTML/Element#Inline_text_semantics) on MDN
-- [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Element/Heading_Elements#Problems_solved_by_HTML5) on MDN
-- [HTML5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) on w3schools
-- [The meaning of semantics in computer science](https://zh.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
-- [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
+- [HTML element reference](/zh-CN/docs/Web/HTML/Element#inline_text_semantics) on MDN
+- [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Element/Heading_Elements#usage_notes) on MDN
+- [The meaning of semantics in computer science](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
+- [Glossary](/zh-CN/docs/Glossary)
 
   - {{Glossary("SEO")}}
-
-- Some of semantic elements in HTML
-
-  - {{htmlelement("article")}}
-  - {{htmlelement("aside")}}
-  - {{htmlelement("details")}}
-  - {{htmlelement("figcaption")}}
-  - {{htmlelement("figure")}}
-  - {{htmlelement("footer")}}
-  - {{htmlelement("header")}}
-  - {{htmlelement("main")}}
-  - {{htmlelement("mark")}}
-  - {{htmlelement("nav")}}
-  - {{htmlelement("section")}}
-  - {{htmlelement("summary")}}
-  - {{htmlelement("time")}}

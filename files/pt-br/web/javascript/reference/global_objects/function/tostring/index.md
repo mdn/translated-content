@@ -116,12 +116,7 @@ Object.getOwnPropertyDescriptor({
 
 ## Especificações
 
-| Especificação                                                                                                                     | Status               | Comentário                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                               | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.1.                        |
-| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}                                            | {{Spec2('ES6')}}     | Mais requisitos específicos foram incluídos para representação de string. |
-| [`Function.prototype.toString` revisions proposal](https://tc39.github.io/Function-prototype-toString-revision/#sec-introduction) | Rascunho             | Padroniza a função de string navida e fins de linha.                      |
-| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}                                        | {{Spec2('ESDraft')}} |                                                                           |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

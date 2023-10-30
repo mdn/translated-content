@@ -196,7 +196,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

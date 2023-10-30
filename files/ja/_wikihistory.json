@@ -992,10 +992,6 @@
     "modified": "2019-03-18T21:42:25.531Z",
     "contributors": ["Uemmra3", "takeru0430"]
   },
-  "Glossary/I18N": {
-    "modified": "2019-03-18T21:35:48.856Z",
-    "contributors": ["hamasaki", "kadokura"]
-  },
   "Glossary/IANA": {
     "modified": "2019-03-18T21:15:23.095Z",
     "contributors": ["Wind1808"]
@@ -1084,9 +1080,9 @@
     "modified": "2019-03-23T22:38:23.483Z",
     "contributors": ["Potappo", "lv7777", "w-volte"]
   },
-  "Glossary/Internationalization_and_localization": {
-    "modified": "2020-05-24T08:29:22.994Z",
-    "contributors": ["dskmori", "Potappo", "dukesan"]
+  "Glossary/Internationalization": {
+    "modified": "2019-03-18T21:35:48.856Z",
+    "contributors": ["hamasaki", "kadokura"]
   },
   "Glossary/Internet": {
     "modified": "2019-03-23T22:38:33.920Z",
@@ -6303,10 +6299,6 @@
     "modified": "2019-03-23T22:48:20.415Z",
     "contributors": ["yyss", "micahcarroll"]
   },
-  "Web/API/Canvas_API/Tutorial/Compositing/Example": {
-    "modified": "2019-03-23T22:48:21.822Z",
-    "contributors": ["dskmori"]
-  },
   "Web/API/Canvas_API/Tutorial/Drawing_shapes": {
     "modified": "2020-03-20T02:47:38.680Z",
     "contributors": ["hamasaki", "horitaku1124", "yyss", "ethertank"]
@@ -8549,10 +8541,6 @@
   "Web/API/File/name": {
     "modified": "2020-10-15T21:21:38.016Z",
     "contributors": ["mfuji09", "silverskyvicto", "fscholz", "ethertank"]
-  },
-  "Web/API/File/type": {
-    "modified": "2020-10-15T22:11:44.472Z",
-    "contributors": ["silverskyvicto", "mfuji09"]
   },
   "Web/API/File/webkitRelativePath": {
     "modified": "2020-10-15T22:11:44.308Z",
@@ -30222,6 +30210,10 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
+  "conflicting/Glossary/Internationalization": {
+    "modified": "2020-05-24T08:29:22.994Z",
+    "contributors": ["dskmori", "Potappo", "dukesan"]
+  },
   "conflicting/Glossary/Scroll_container": {
     "modified": "2019-03-18T20:53:07.981Z",
     "contributors": ["mfuji09"]
@@ -30349,6 +30341,10 @@
   "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": ["chrisdavidmills", "dvincent"]
+  },
+  "conflicting/Web/API/Blob/type": {
+    "modified": "2020-10-15T22:11:44.472Z",
+    "contributors": ["silverskyvicto", "mfuji09"]
   },
   "conflicting/Web/API/Document": {
     "modified": "2020-10-15T22:12:31.952Z",

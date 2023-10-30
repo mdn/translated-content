@@ -34,11 +34,7 @@ Implementado no JavaScript 1.8.5 (Firefox 4), e compatível com a 5ª versão do
 
 ## Especificações
 
-| Especificação                                                                    | Status             | Comentários                                        |
-| -------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                              | {{Spec2('ES1')}}   | Definição inicial. Implementado no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.2', 'Array.prototype.toString')}}               | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.tostring', 'Array.prototype.toString')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Browsers compatíveis
 

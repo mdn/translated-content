@@ -56,7 +56,7 @@ TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が ob
 
 テキストの長い区間に渡って `font-style` の値を `italic` に設定すると、失読症のような認知問題を抱える人にとって読むのが難しくなる可能性があります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 公式定義

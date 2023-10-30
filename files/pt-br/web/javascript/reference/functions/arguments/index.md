@@ -199,11 +199,7 @@ func(); // undefined
 
 ## Especificações
 
-| Especificações                                                                   | Status             | Comentário                                        |
-| -------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| {{SpecName('ES1')}}                                                              | {{Spec2('ES1')}}   | Definição inicial. Implementado em JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                           | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

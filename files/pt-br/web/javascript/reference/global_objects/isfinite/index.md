@@ -41,11 +41,7 @@ isFinite("0"); // true, teria sido false com o
 
 ## Especificações
 
-| Especificação                                           | Status             | Comentário         |
-| ------------------------------------------------------- | ------------------ | ------------------ |
-| {{SpecName('ES3')}}                                     | {{Spec2('ES3')}}   | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}      | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Browser compatibilidade
 

@@ -126,11 +126,7 @@ console.log(count);
 
 ## Especificações
 
-| Especificação                                                                    | Situação           | Comentário         |
-| -------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| {{SpecName('ES1')}}                                                              | {{Spec2('ES1')}}   | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}               | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

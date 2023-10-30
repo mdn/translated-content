@@ -85,7 +85,7 @@ l10n:
 
 ![The various handlers that the navigation timing API can handle including Navigation timing API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnectionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
 
-현재 페이지의 성능 관련 정보에 대한 접근을 제공하는 [Performance API](/ko/docs/Web/API/Performance_API)는 [Performance Timeline API](/ko/docs/Web/API/Performance_Timeline), [Navigation Timing API](/ko/docs/Web/API/Performance_API/Navigation_timing), [User Timing API](/ko/docs/Web/API/Performance_API/User_timing) 그리고 [Resource Timing API](/ko/docs/Web/API/Performance_API/Resource_timing)를 포함합니다. 이러한 인터페이스들은 자바스크립트 작업들을 완료하는 데 걸리는 시간을 정확하게 측정하게 해줍니다.
+현재 페이지의 성능 관련 정보에 대한 접근을 제공하는 [Performance API](/ko/docs/Web/API/Performance_API)는 [Performance Timeline API](/ko/docs/Web/API/Performance_Timeline), [Navigation Timing API](/ko/docs/Web/API/Performance_API/Navigation_timing), [User Timing API](/ko/docs/Web/API/Performance_API/User_timing) 그리고 [Resource Timing API](/ko/docs/Web/API/Performance_API/Resource_timing)를 포함합니다. 이러한 인터페이스들은 JavaScript 작업들을 완료하는 데 걸리는 시간을 정확하게 측정하게 해줍니다.
 
 [PerformanceEntry](/ko/docs/Web/API/PerformanceEntry) 객체는 '성능 타임라인'의 일부입니다.
 '성능 항목'은 애플리케이션의 명시적 지점에서 성능 {{domxref("PerformanceMark","mark")}} 또는 {{domxref("PerformanceMeasure","measure")}} (예를 들어 {{domxref("Performance.mark","mark()")}} 메서드를 호출하여)를 생성하여 직접적으로 만들 수 있습니다. 성능 항목들은 또한 이미지 같은 리소스를 불러오는 간접적인 방법으로도 생성할 수 있습니다.
