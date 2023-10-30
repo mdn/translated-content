@@ -251,7 +251,7 @@ document.addEventListener("click", (e) => {
 > - {{WebExtAPIRef("tabs.update")}}
 > - {{WebExtAPIRef("tabs.reload")}}
 
-### 示例
+### 教程示例
 
 除了更新标签页的 URL 之外，[tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) 示例使用了所有这些功能。这些 API 的使用方式类似，因此我们将查看其中一个更复杂的实现，即“将活动标签页移至窗口列表开头”选项。
 
@@ -367,7 +367,7 @@ browser.tabs.move([tab.id], { index });
 - **缩放模式**：自动（因此浏览器会管理缩放级别的设置）。
 - **缩放更改的范围**：`"per-origin"`，这意味着当你再次访问网站时，网站会采用上次访问时设置的缩放级别。
 
-### 示例
+### 教程示例
 
 [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) 示例包括三个缩放功能演示：放大、缩小和重置缩放。下面是该功能的实际操作：
 
@@ -421,7 +421,7 @@ browser.tabs.move([tab.id], { index });
 
 例如，如果你想突出显示某些页面元素或更改页面的默认布局，这将非常有用。
 
-### 示例
+### 教程示例
 
 [apply-css](https://github.com/mdn/webextensions-examples/tree/main/apply-css) 示例使用这些功能为活动标签页中的网页添加红色边框。下面是该功能的实际效果：
 
