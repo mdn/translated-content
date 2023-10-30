@@ -7,6 +7,8 @@ slug: Web/API/History/replaceState
 
 **`History.replaceState()`** 메서드는 현재 history를 수정해 메소드의 매개 변수에 전달 된 `stateObj`, `title`, `URL`로 대체합니다. 이 방법은 특히 일부 유저의 동작에 대한 응답으로 history 객체의 상태나 현재 history의 URL을 업데이트하려는 경우에 유용합니다.
 
+이 메서드는 {{glossary("asynchronous", "비동기")}}로 동작합니다. 네비게이션이 언제 완료되었는지 결정하기 위해 {{domxref("Window/popstate_event", "popstate")}} 이벤트에 대한 수신기를 추가합니다. 이때 `state` 매개변수를 사용할 수 있습니다.
+
 ## 구문
 
 ```js

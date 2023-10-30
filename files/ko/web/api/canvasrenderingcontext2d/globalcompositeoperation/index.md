@@ -1,13 +1,14 @@
 ---
 title: 도형 합성 예제
-slug: Web/API/Canvas_API/Tutorial/Compositing/Example
+slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
+original_slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
 
 이 샘플 프로그램에서는 여러 가지 [도형 합성 방법](/ko/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation)을 보여줍니다. 출력은 다음과 같습니다:
 
-{{ EmbedLiveSample('도형_합성_예제', '100%', '7250', '', 'Web/HTML/Canvas/Tutorial/Compositing/Example') }}
+{{ EmbedLiveSample('도형_합성_예제', '100%', '7250', '') }}
 
 ## 도형 합성 예제
 
