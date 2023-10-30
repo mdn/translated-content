@@ -62,16 +62,16 @@ En esencia, los bloques se tratan finalmente como ámbitos en ES6, pero sólo si
 Considera el siguiente ejemplo:
 
 ```js
-function makeFunc() {
-  const name = "Mozilla";
-  function displayName() {
+function creaFunc() {
+  const nombre = "Mozilla";
+  function muestraNombre() {
     console.log(name);
   }
   return displayName;
 }
 
-const myFunc = makeFunc();
-myFunc();
+const miFunc = makeFunc();
+miFunc();
 ```
 
 Si se ejecuta este código tendrá exactamente el mismo efecto que el ejemplo anterior: se mostrará el texto "Mozilla" en un cuadro de alerta de Javascript. Lo que lo hace diferente (e interesante) es que la función externa nos ha devuelto la función interna `muestraNombre()` antes de ejecutarla.
