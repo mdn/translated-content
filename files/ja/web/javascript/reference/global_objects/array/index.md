@@ -151,8 +151,8 @@ console.log(fruits.length); // 2
 
 | 変更メソッド                                   | 変更しない代替メソッド                                   |
 | ---------------------------------------------- | -------------------------------------------------------- |
-| {{jsxref("Array/copyWithin", "copyWithin()")}} | 代替メソッドなし                                |
-| {{jsxref("Array/fill", "fill()")}}             | 代替メソッドなし                                |
+| {{jsxref("Array/copyWithin", "copyWithin()")}} | 代替メソッドなし                                         |
+| {{jsxref("Array/fill", "fill()")}}             | 代替メソッドなし                                         |
 | {{jsxref("Array/pop", "pop()")}}               | {{jsxref("Array/slice", "slice(0, -1)")}}                |
 | {{jsxref("Array/push", "push(v1, v2)")}}       | {{jsxref("Array/concat", "concat([v1, v2])")}}           |
 | {{jsxref("Array/reverse", "reverse()")}}       | {{jsxref("Array/toReversed", "toReversed()")}}           |
