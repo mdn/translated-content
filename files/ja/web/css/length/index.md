@@ -49,7 +49,7 @@ browser-compat: css.types.length
 - `ex`
   - : その要素の {{Cssxref("font")}} における [x-height](https://en.wikipedia.org/wiki/X-height) です。 'x' の文字を持つフォントでは一般的に、フォントにおける小文字の高さに相当します。多くのフォントでは `1ex ≈ 0.5em` です。
 - `ic`
-   - : 描画に使用されるフォントにおける「水」 (CJK water ideograph, U+6C34) の文字の {{Glossary("advance measure")}} と同じです。
+  - : 描画に使用されるフォントにおける「水」 (CJK water ideograph, U+6C34) の文字の {{Glossary("advance measure")}} と同じです。
 - `lh` {{experimental_inline}}
   - : 使用されている要素の {{Cssxref("line-height")}} プロパティの計算値と同じで、絶対的な長さに変換されます。
 - `rem`
