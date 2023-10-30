@@ -19,14 +19,14 @@ l10n:
 
 最后，我们来看看应用程序接口提供的一些其他杂项功能。
 
-> **备注：** 其他地方也介绍了一些 Tabs API 功能。这些方法可用于使用脚本操作标签内容（{{WebExtAPIRef("tabs.connect")}}、{{WebExtAPIRef("tabs.sendMessage")}} 和 {{WebExtAPIRef("tabs.executeScript")}}）。如需了解有关这些方法的更多信息，请参阅概念文章[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和操作指南[修改网页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)。
+> **备注：** 其他地方也介绍了一些 Tabs API 特性。这些方法可用于使用脚本操作标签页的内容（{{WebExtAPIRef("tabs.connect")}}、{{WebExtAPIRef("tabs.sendMessage")}} 和 {{WebExtAPIRef("tabs.executeScript")}}）。如需了解有关这些方法的更多信息，请参阅概念文章[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和操作指南[修改网页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)。
 
 ## 权限和 Tabs API
 
 对于大多数 Tabs API 函数，你不需要任何权限; 但是，有一些例外：
 
 - 需要 `"tabs"` 权限才能访问 Tab 对象的 `Tab.url`、`Tab.title` 和 `Tab.favIconUrl` 属性。在 Firefox 中，你还需要 `"tabs"` 来按 URL 执行[查询](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。
-- {{WebExtAPIRef("tabs.executeScript()")}} 或 {{WebExtAPIRef("tabs.insertCSS()")}} 需要[主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
+- {{WebExtAPIRef("tabs.executeScript()")}} 或 {{WebExtAPIRef("tabs.insertCSS()")}} 需要[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
 
 以下是你可以在扩展程序的 manifest.json 文件中请求 `"tabs"` 权限的方法：
 
@@ -37,7 +37,7 @@ l10n:
 ],
 ```
 
-此请求允许你在用户访问的所有网站上使用所有 Tabs API 功能。在不需要主机权限的情况下，这里还有一种请求使用 {{WebExtAPIRef("tabs.executeScript()")}} 或 {{WebExtAPIRef("tabs.insertCSS()")}} 的权限的替代方法，即 [`"activeTab"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限) 形式。该权限提供的权限与带有 `<all_urls>` 的 `"tabs"` 相同，但有两个限制：
+此请求允许你在用户访问的所有网站上使用所有 Tabs API 特性。在不需要主机权限的情况下，这里还有一种请求使用 {{WebExtAPIRef("tabs.executeScript()")}} 或 {{WebExtAPIRef("tabs.insertCSS()")}} 的权限的替代方法，即 [`"activeTab"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限) 形式。该权限提供的权限与带有 `<all_urls>` 的 `"tabs"` 相同，但有两个限制：
 
 - 用户必须通过浏览器或页面操作、上下文菜单或快捷键与扩展进行交互。
 - 它只授予活动标签页内的权限。
@@ -197,7 +197,7 @@ for (const tab of tabs) {
 
 #### 使用活动标签页
 
-另一个相关的示例功能是“警报活动标签页”信息选项，它可将活动标签页的所有 {{WebExtAPIRef("tabs.Tab")}} 对象属性转入警报中：
+另一个相关的示例功能是“警报活动标签页”信息选项，它可将活动标签页的所有 {{WebExtAPIRef("tabs.Tab")}} 对象属性输出到警报中：
 
 ```js
 else if (e.target.id === "tabs-alertinfo") {
@@ -376,12 +376,12 @@ browser.tabs.move([tab.id], { index });
 让我们看看缩放功能是如何实现的。
 
 - manifest.json
-  - 缩放功能：缩放功能都不需要权限，因此 [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) 文件中没有需要突出显示的功能。
+  - : 缩放功能都不需要权限，因此 [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) 文件中没有需要突出显示的功能。
 - tabs.html
-  - tabs.html：我们已经讨论过 [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) 是如何定义该扩展的选项的，在提供缩放选项方面没有做任何新的或独特的工作。
+  - : 我们已经讨论过 [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) 是如何定义该扩展的选项的，在提供缩放选项方面没有做任何新的或独特的工作。
 - tabs.js
 
-  - ：[`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) 首先定义了缩放代码中使用的几个常量：
+  - : [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) 首先定义了缩放代码中使用的几个常量：
 
     ```js
     const ZOOM_INCREMENT = 0.2；
@@ -433,7 +433,7 @@ browser.tabs.move([tab.id], { index });
 
   - : [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/main/apply-css/manifest.json) 请求使用 CSS 功能所需的权限。你需要
 
-    - `"tabs"` 权限和[主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#主机权限)；或者
+    - `"tabs"` 权限和[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)；或者
     - `"activeTab"` 权限。
 
     后者最有用，因为它允许扩展在通过扩展的浏览器或页面操作、上下文菜单或快捷方式运行时，在活动标签页中使用 {{WebExtAPIRef("tabs.insertCSS()")}} 和 {{WebExtAPIRef("tabs.removeCSS()")}} 。
@@ -562,7 +562,7 @@ browser.tabs.move([tab.id], { index });
 
 ## 进一步学习
 
-如果你想了解有关标签 API 的更多信息，请查阅
+如果你想了解有关 Tabs API 的更多信息，请查阅
 
 - [Tabs API 参考](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
 - [扩展示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)（很多示例使用了 Tabs API）
