@@ -178,9 +178,9 @@ GL は 32 個のテクスチャレジスタを提供し、その 1 つ目が `gl
 
 以上でテクスチャが貼り付けられた、回転するキューブが完成します。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510)}}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510)}}
 
-[コードを確認する](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [新しいページでデモを開く](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample6) | [新しいページでデモを開く](http://mdn.github.io/webgl-examples/tutorial/sample6/)
 
 ## クロスドメインのテクスチャ
 

@@ -121,9 +121,9 @@ This is a pretty simple example showing how to manipulate video frames using a c
 
 [WebGL](/ru/docs/Web/WebGL) is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Примечание:** You can find the [source code of this demo on GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) ([see it live](https://mdn.github.io/webgl-examples/tutorial/sample8/) also).
+> **Примечание:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample8) ([see it live](https://mdn.github.io/webgl-examples/tutorial/sample8/) also).
 
 ### Скорость воспроизведения
 

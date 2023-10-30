@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 Cet article va vous donner une introduction aux bases de l'utilisation de WebGL. Il est supposé que vous avez déjà une compréhension des mathématiques impliquées dans les graphismes 3D, et cet article ne prétend pas vous enseigner les concepts des graphismes 3D par eux-mêmes.
 
-Les exemples de code de ce tutoriel peuvent aussi être trouvés dans le [webgl-examples GitHub repository](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial).
+Les exemples de code de ce tutoriel peuvent aussi être trouvés dans le [webgl-examples GitHub repository](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial).
 
 ## Préparation au rendu 3D
 
@@ -57,9 +57,9 @@ Si le contexte est initialisé avec succès, la variable `gl` sera notre référ
 
 A ce stade, votre code est suffisant pour que le contexte WebGL puisse s'initialiser avec succès, et vous devriez vous retrouver avec une grande boîte noire et vide, prête à - et attendant de - recevoir du contenu.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample1/)
+[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## Voir aussi
 

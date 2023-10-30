@@ -266,9 +266,9 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 
 Сейчас вращающийся куб должен иметь текстуру на гранях.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[Посмотреть код примера полностью](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [Открыть демо в новом окне](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+[Посмотреть код примера полностью](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample6) | [Открыть демо в новом окне](http://mdn.github.io/webgl-examples/tutorial/sample6/)
 
 ## Кросс-доменные текстуры
 

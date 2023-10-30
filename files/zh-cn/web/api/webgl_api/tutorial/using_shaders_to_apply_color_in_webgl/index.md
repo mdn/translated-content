@@ -162,6 +162,6 @@ setColorAttribute(gl, buffers, programInfo);
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
 
-[查看完整代码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample3) | [在新页面中打开示例](http://mdn.github.io/webgl-examples/tutorial/sample3/)
+[查看完整代码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample3) | [在新页面中打开示例](http://mdn.github.io/webgl-examples/tutorial/sample3/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}

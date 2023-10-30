@@ -260,9 +260,9 @@ El primer paso es limpiar el canvas de nuestro color de fondo; establecemos la p
 
 Entonces establecemos la posición del cuadrado plano al cargar la posición de identidad y alejando la cámara en 6 unidades. Déspues de eso, enlazamos el buffer del vértice del cuadrado al atributo que el shader estaba usando para `aVertexPosition` y le decimos a WebGL como jalar los datos fuera de este. Finalmente dibujamos el objeto al llamar el método {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}}.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[Ver código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Abrir esta demostración en una nueva página](http://mdn.github.io/webgl-examples/tutorial/sample2/)
+[Ver código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample2) | [Abrir esta demostración en una nueva página](http://mdn.github.io/webgl-examples/tutorial/sample2/)
 
 ## Utilidades para operaciones de Matrices
 

@@ -188,7 +188,7 @@ Une fois que cela est fait, nous créons un tableau JavaScript contenant la posi
 
 Une fois que les shaders sont définis, que les emplacements sont retrouvés, et que les positions des sommets du carré 2D sont stockées dans le tampon, nous pouvons faire effectivement le rendu de la scène. Puisque nous n'animons rien dans cet exemple, notre fonction `drawScene()` est très simple. Elle utilise quelques routines utilitaires que nous décrirons sous peu.
 
-> **Note :** Vous pourriez obtenir une erreur JavaScript indiquant _"mat4 n'est pas défini"_. Cela signifie qu'il existe une dépendance à **glmatrix**. Vous pouvez inclure [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js) pour résoudre ce problème, comme suggéré [ici](https://github.com/mdn/webgl-examples/issues/20).
+> **Note :** Vous pourriez obtenir une erreur JavaScript indiquant _"mat4 n'est pas défini"_. Cela signifie qu'il existe une dépendance à **glmatrix**. Vous pouvez inclure [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js) pour résoudre ce problème, comme suggéré [ici](https://github.com/mdn/dom-examples/tree/main/webgl-examples/issues/20).
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -281,9 +281,9 @@ La première étape consiste à effacer le canevas avec notre arrière plan ; en
 
 Ensuite, nous établissons la position du carré 2D en chargeant la position de l'origine et en nous déplaçant de 6 unités à partir de la caméra. Après cela, nous lions le tampon des sommets du carré à l'attribut que le shader utilise comme `aVertexPosition` et nous indiquons à WebGL comment en extraire les données. Enfin, nous dessinons l'objet en appelant la méthode {{domxref ("WebGLRenderingContext.drawArrays()", "drawArrays()")}}.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample2/)
+[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample2) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample2/)
 
 ## Opérations utilitaires matricielles
 
