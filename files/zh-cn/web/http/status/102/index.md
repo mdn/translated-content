@@ -23,10 +23,6 @@ l10n:
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{HTTPHeader("Expect")}}
