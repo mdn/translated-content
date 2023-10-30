@@ -255,7 +255,7 @@ Chrome et Edge fournissent également des erreurs et des avertissements, les ges
 
 Notre application ne dispose pas de gestionnaires de protocole et nous n'aborderons pas ce sujet dans ce tutoriel. S'il y en avait eu d'inclus, ils auraient été listés dans la section correspondante. Cette section étant vide, les outils de développement fournissent des liens pour des informations à ce sujet.
 
-![Les quatre icônes incluses dans le manifeste, avec l'arrière-plan retiré car l'option « Affichez (sic) uniquement la zone de sécurité minimale pour les icônes masquables » est cochée.](manifest_icons.png)
+![Les quatre icônes incluses dans le manifeste, avec l'arrière-plan retiré car l'option « Affichez (sic) uniquement la zone de sécurité minimale pour les icônes masquables » est cochée.](manifest_icons.png)
 
 Le panneau relatif au manifeste inclut également des informations sur les zones sûres des icônes masquables et un lien vers [un billet de blog (en anglais) sur ce sujet](https://web.dev/articles/maskable-icon). Pour créer des icônes, vous pouvez utiliser l'outil [imageGenerator (en anglais)](https://www.pwabuilder.com/imageGenerator) qui crée plus de 100 images carrées en PNG pour Android, Apple, et Windows, ainsi qu'un fichier JSON contenant l'ensemble des chemins des images avec leur taille. Celles-ci pourront ne pas toutes vous servir, mais cet outil vous permettra de voir la diversité des configurations utilisées pour servir une PWA.
 
