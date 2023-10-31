@@ -93,7 +93,7 @@ mvTranslate([squareXOffset, squareYOffset, squareZOffset]);
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample4/index.html', 670, 510)}}
 
-[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample4) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample4/)
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample4) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample4/)
 
 ## さらに行列を操作する
 

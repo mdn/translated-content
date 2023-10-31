@@ -121,7 +121,7 @@ processor.doLoad();
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **メモ:** [このデモのソースコードは GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/webgl-examples/tutorial/sample8/)も)。
+> **メモ:** [このデモのソースコードは GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)も)。
 
 ### 再生速度
 

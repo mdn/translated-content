@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 Cet article va vous donner une introduction aux bases de l'utilisation de WebGL. Il est supposé que vous avez déjà une compréhension des mathématiques impliquées dans les graphismes 3D, et cet article ne prétend pas vous enseigner les concepts des graphismes 3D par eux-mêmes.
 
-Les exemples de code de ce tutoriel peuvent aussi être trouvés dans le [webgl-examples GitHub repository](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial).
+Les exemples de code de ce tutoriel peuvent aussi être trouvés dans le [webgl-examples GitHub repository](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial).
 
 ## Préparation au rendu 3D
 

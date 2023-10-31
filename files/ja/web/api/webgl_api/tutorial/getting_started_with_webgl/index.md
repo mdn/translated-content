@@ -11,7 +11,7 @@ WebGL のプログラムは JavaScript で記述する制御コードと、コ�
 
 この記事では、 WebGL の基礎を紹介します。ここでは、三次元グラフィックスに関する数学的な知識を理解していることを前提とします。よって、 OpenGL そのものの説明は行いません。
 
-このチュートリアルで使用するコード例は、[GitHub の webgl-examples リポジトリー](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial)で確認できます。
+このチュートリアルで使用するコード例は、[GitHub の webgl-examples リポジトリー](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial)で確認できます。
 
 この一連の記事が WebGL 自体を紹介していることに注意してください。ただし [THREE.js](https://threejs.org/) など、 WebGL の機能をカプセル化する多くのフレームワークが利用でき、三次元アプリケーションとゲームを簡単に構築することが可能です。
 
@@ -65,7 +65,7 @@ window.onload = main;
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample1) | [新しいページでデモを開く](https://mdn.github.io/webgl-examples/tutorial/sample1/)
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## 関連情報
 

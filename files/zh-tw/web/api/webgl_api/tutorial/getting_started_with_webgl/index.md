@@ -9,7 +9,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 這篇文章將會向您介紹 WebGL 的基礎。這篇文章假設您已經對於三維圖學涉及的數學有所了解，並且它將不會被佯裝為三維圖學的教材。在我們的學習區域內有初學者指南讓你完成編程任務：[Learn WebGL for 2D and 3D graphics](/zh-TW/docs/Learn/WebGL).
 
-在此教學文件中的程式碼範例都能在 [webgl-examples GitHub repository](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial) 之中找到。
+在此教學文件中的程式碼範例都能在 [webgl-examples GitHub repository](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial) 之中找到。
 
 ## 準備三維渲染
 
@@ -59,7 +59,7 @@ function main() {
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[檢視完整程式碼](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tree/gh-pages/tutorial/sample1) | [開啟新頁面來檢視結果](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
+[檢視完整程式碼](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [開啟新頁面來檢視結果](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## 亦可參考
 
