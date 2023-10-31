@@ -15,9 +15,9 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 WeakMap 的键必须是可被垃圾回收的。大多数{{Glossary("Primitive", "原始数据类型")}}可以任意地被创建，且没有生命周期，因此不能作为键。对象和[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)都可以作为键，因为它们是可被垃圾回收的。
 
-### Why WeakMap ？
+### WeakMap 的意义
 
-在 JavaScript 里，map API *可以*通过使其四个 API 方法共用两个数组（一个存放键，一个存放值）来实现。给这种 map 设置值时会同时将键和值添加到这两个数组的末尾。从而使得键和值的索引在两个数组中相对应。当从该 map 取值的时候，需要遍历所有的键，然后使用索引从存储值的数组中检索出相应的值。
+在 JavaScript 里，map API *可以*通过使其四个 API 方法共用两个数组（一个存放键，一个存放值）来实现。给这种映射设置值时会同时将键和值添加到这两个数组的末尾。从而使得键和值的索引在两个数组中相对应。当从该映射取值的时候，需要遍历所有的键，然后使用索引从存储值的数组中检索出相应的值。
 
 但这样的实现会有两个很大的缺点：
 
@@ -27,7 +27,7 @@ WeakMap 的键必须是可被垃圾回收的。大多数{{Glossary("Primitive", 
 相较之下，`WeakMap` 的键对象会强引用其值，直到该键对象被垃圾回收，但从那时起，它会变为弱引用。因此，`WeakMap`：
 
 - 不会阻止垃圾回收，直到垃圾回收器移除了键对象的引用
-- 允许垃圾回收任何值，只要它们的键对象没有其他的引用存在于 `WeakMap` 以外
+- 任何值都可以被垃圾回收，只要它们的键对象没有被 `WeakMap` 以外的地方引用
 
 ## 构造函数
 
@@ -77,7 +77,7 @@ wm2.get(o2); // undefined，设置的值就是 undefined
 wm2.get(o3); // undefined，wm2 中没有 o3 这个键
 
 wm1.has(o2); // true
-wm2.has(o2); // true (即使值是 undefined)
+wm2.has(o2); // true（即使值是 undefined）
 wm2.has(o3); // false
 
 wm3.set(o1, 37);
@@ -192,7 +192,7 @@ thing.showPrivate();
 
 ### 关联元数据
 
-{{jsxref("WeakMap")}} 可用于将元数据与对象关联，而不影响对象的生命周期。这与私有成员示例非常相似，因为私有成员也是以外部的形式模拟的元数据，不参与[原型继承](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
+`WeakMap` 可用于将元数据与对象关联，而不影响对象的生命周期。这与私有成员示例非常相似，因为私有成员也是以外部的形式模拟的元数据，不参与[原型继承](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 
 这个用例可以扩展到已经创建的对象上。例如，在网页上，我们可能希望将额外的数据与 DOM 元素相关联，而 DOM 元素可能在之后访问这些数据。一种常见的做法是将数据附加为属性：
 
@@ -264,7 +264,7 @@ function handleObjectValues(obj) {
 
 - [`core-js` 中 `WeakMap` 的 polyfill](https://github.com/zloirock/core-js#weakmap)
 - [带键的集合](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_对象)
-- [使用 ECMAScript 6 WeakMap 隐藏实现细节](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)，作者：尼克·菲茨杰拉德(2014)
+- [使用 ECMAScript 6 WeakMap 隐藏实现细节](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)，作者：尼克·菲茨杰拉德（2014）
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}
