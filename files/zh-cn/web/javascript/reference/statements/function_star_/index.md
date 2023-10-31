@@ -193,6 +193,6 @@ arr = [...gen]; // ["a", "b", "c", "d", "e"]
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Generator")}}
 - GitHub 上的 [Regenerator](https://github.com/facebook/regenerator)
-- [Promises and Generators: control flow utopia](https://youtu.be/qbKWsbJ76-s) presentation by Forbes Lindesay at JSConf (2013)
-- [Task.js](https://github.com/mozilla/task.js) on GitHub
-- [You Don't Know JS: Async & Performance, Ch.4: Generators](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md) by Kyle Simpson
+- [Promise 和生成器：控制流的乌托邦](https://youtu.be/qbKWsbJ76-s)——Forbes Lindesay 在 JSConf 上的演讲（2013）
+- GitHub 上的 [Task.js](https://github.com/mozilla/task.js)
+- [你不知道的 JS：异步和性能，第 4 章：生成器](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md)——Kyle Simpson

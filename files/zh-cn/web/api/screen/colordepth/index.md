@@ -11,7 +11,7 @@ slug: Web/API/Screen/colorDepth
 
 ```js
 // 检测屏幕的颜色深度
-if ( window.screen.colorDepth < 8) {
+if (window.screen.colorDepth < 8) {
   // 使用低色彩版本页面
 } else {
   // 使用常规的彩色版页面

@@ -105,4 +105,4 @@ button.addEventListener("click", function (event) {
 - {{jsxref("Functions/Arrow_functions", "箭头函数", "", 1)}}
 - {{jsxref("Functions", "函数", "", 1)}}
 - {{jsxref("Function")}}
-- {{jsxref("Statements/function", "function 语句")}}
+- {{jsxref("Statements/function", "function 语句", "", 1)}}

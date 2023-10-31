@@ -123,4 +123,4 @@ MY_ARRAY = ["B"];
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
-- [JavaScript 指南的常量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#常量)
+- [JavaScript 指南中的常量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#常量)

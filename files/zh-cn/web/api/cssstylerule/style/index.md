@@ -13,7 +13,7 @@ slug: Web/API/CSSStyleRule/style
 styleObj = cssRule.style
 ```
 
-## 例子
+## 示例
 
 ```js
 function stilo() {
