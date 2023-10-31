@@ -180,7 +180,7 @@ arr = [...gen]; // ["a", "b", "c", "d", "e"]
 
 ## 参见
 
-- [函数](/en-US/docs/Web/JavaScript/Guide/Functions)指南
+- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
 - [迭代器与生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)指南
 - [Function](/zh-CN/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("GeneratorFunction")}}
