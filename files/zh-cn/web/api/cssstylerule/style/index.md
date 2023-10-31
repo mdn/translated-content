@@ -26,7 +26,6 @@ function stilo() {
 
 declaration block 是样式规则中花括号内的部分（选择器就在花括号的外部）
 
-
 ## 规范
 
 {{Specifications}}
