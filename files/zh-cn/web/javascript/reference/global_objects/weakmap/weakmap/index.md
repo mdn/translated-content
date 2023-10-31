@@ -45,7 +45,7 @@ wm2.get(o3); // undefined，因为设置的值就是 undefined
 
 wm1.has(o2); // true
 wm2.has(o2); // false
-wm2.has(o3); // true（即使值本身是 ‘undefined’）
+wm2.has(o3); // true（即使值是 undefined）
 
 wm3.set(o1, 37);
 wm3.get(o1); // 37
