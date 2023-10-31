@@ -150,9 +150,9 @@ $.ajax({
 
 如果你想知道不使用 FormData 对象的情况下，通过[AJAX](/zh-CN/docs/AJAX)序列化和提交表单 [请点击这里](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)。
 
-## 相关链接
+## 参见
 
-- [Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
-- [Typed Arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)

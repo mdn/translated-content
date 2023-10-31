@@ -134,11 +134,12 @@ function calc_sales(units_a, units_b, units_c) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
+- [Function](/zh-CN/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}}
+- [`function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
