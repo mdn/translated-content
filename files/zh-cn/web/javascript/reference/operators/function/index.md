@@ -100,11 +100,9 @@ button.addEventListener("click", function (event) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Functions/Arrow_functions", "箭头函数", "", 1)}}
+- {{jsxref("Functions", "函数", "", 1)}}
 - {{jsxref("Function")}}
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}}
+- {{jsxref("Statements/function", "function 语句")}}

@@ -124,8 +124,8 @@ if ((x = y)) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/block", "block")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/conditional_operator", "条件运算符")}}
+- [条件（三元）运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

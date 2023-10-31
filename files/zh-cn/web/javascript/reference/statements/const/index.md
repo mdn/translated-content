@@ -119,8 +119,8 @@ MY_ARRAY = ["B"];
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
-- [Constants in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Constants)
+- [JavaScript 指南的常量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#常量)
