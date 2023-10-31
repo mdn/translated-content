@@ -73,9 +73,7 @@ formData = new FormData(myForm);
 
 在 Gecko 7.0 之前，如果你将{{domxref("Blob")}}作为数据添加到 form 对象中，文件名就是空的，这可能导致服务器在 HTTP 头的 Content-Disposition 中设置的文件名为空而引起错误。从 Gecko 7.0 开始，将会使用"blob"作为 Blob 数据的文件名。
 
-## 相关链接
+## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

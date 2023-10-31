@@ -3,17 +3,9 @@ title: Screen.pixelDepth
 slug: Web/API/Screen/pixelDepth
 ---
 
-{{APIRef("CSSOM View")}}
-
-## 概述
+{{APIRef("CSSOM")}}
 
 返回屏幕的位深度/色彩深度（bit depth）。根据 CSSOM( CSS 对象模型 ) 视图，为兼容起见，该值总为 24。
-
-## 语法
-
-```plain
-depth = window.screen.pixelDepth
-```
 
 ## 示例
 
@@ -30,6 +22,10 @@ if (window.screen.pixelDepth > 8) {
 
 {{Specifications}}
 
-## 相关链接
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
 
 - {{domxref("Screen.colorDepth")}}
