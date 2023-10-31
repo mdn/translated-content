@@ -34,7 +34,7 @@ l10n:
 <input placeholder="原始占位符" />
 ```
 
-我们可以使用 {{domxref("HTMLInputElement.placeholder")}} 检查属性与 {{{domxref("HTMLInputElement.placeholder")}} 之间的反射性：
+我们可以使用 {{domxref("HTMLInputElement.placeholder")}} 检查属性与 {{domxref("HTMLInputElement.placeholder")}} 之间的反射性：
 
 ```js
 const input = document.querySelector("input");
