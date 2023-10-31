@@ -121,7 +121,7 @@ class ClearableWeakMap {
 
 ### 模拟私有成员
 
-开发者可以使用 {{jsxref("WeakMap")}} 关联对象与私有数据，从而获得以下好处：
+开发者可以使用 `WeakMap` 关联对象与私有数据，从而获得以下好处：
 
 - 与 {{jsxref("Map")}} 相比，WeakMap 不持有键对象的强引用，因此元数据与对象本身共享同样的生命周期，避免内存泄漏。
 - 与使用不可枚举对象和/或 {{jsxref("Symbol")}} 属性相比，WeakMap 位于对象外部，没有办法通过像 {{jsxref("Object.getOwnPropertySymbols")}}等的反射方法来检索元数据。
