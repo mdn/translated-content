@@ -158,9 +158,9 @@ slug: Web/Media/Formats/Image_types
 
 ### APNG（动态可移植网络图形）
 
-APNG is a file format first introduced by Mozilla which extends the [PNG](#png_portable_network_graphics) standard to add support for animated images. Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of [color depths](https://zh.wikipedia.org/wiki/color_depth), whereas animated GIF supports only 8-bit [indexed color](https://zh.wikipedia.org/wiki/indexed_color).
+APNG 是 Mozilla 首次推出的一种文件格式，它扩展了 [PNG](#png_便携式网络图形) 标准，增加了对动画图像的支持。在概念上，APNG 与已经使用了几十年的动画 GIF 格式相似，但 APNG 的功能更强，它支持多种[颜色深度](https://zh.wikipedia.org/wiki/色彩深度)，而动画 GIF 只支持 8 位[索引颜色](https://zh.wikipedia.org/wiki/索引顏色)。
 
-APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity [throbbers](https://zh.wikipedia.org/wiki/throbber), and other animated sequences. For example, APNG is [one of the formats supported when creating animated stickers](https://developer.apple.com/stickers/) for Apple's iMessage application (and the Messages application on iOS). They're also commonly used for the animated portions of web browsers' user interfaces.
+APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指示器、活动[加载器](https://en.wikipedia.org/wiki/throbber)和其他动画序列。例如，APNG 是苹果 iMessage 应用程序（和 iOS 上的“信息”应用程序）[创建动画贴纸时支持的格式之一](https://developer.apple.com/stickers/)。它们也常用于 web 浏览器用户界面的动画部分。
 
 <table class="standard-table">
   <tbody>
@@ -182,7 +182,7 @@ APNG is ideal for basic animations that do not need to synchronize to other acti
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
-      <td>Chrome 59, Edge 12, Firefox 3, Opera 46, Safari 8</td>
+      <td>Chrome 59、Edge 12、Firefox 3、Opera 46、Safari 8</td>
     </tr>
     <tr>
       <th scope="row">最高分辨率</th>
@@ -195,57 +195,46 @@ APNG is ideal for basic animations that do not need to synchronize to other acti
           <thead>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
-              <td>1, 2, 4, 8, and 16</td>
+              <th scope="row">灰度</th>
+              <td>1、2、4、8 和 16</td>
               <td>
-                Each pixel consists of a single <em>D</em>-bit value indicating
-                the brightness of the greyscale pixel.
+                每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
-              <td>8 and 16</td>
+              <th scope="row">真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by three <em>D</em>-bit values
-                indicating the level of the red, green, and blue color
-                components.
+                每个像素由三个 <em>D</em> 位值表示，分别代表红、绿、蓝三色的色阶。
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
-              <td>1, 2, 4, and 8</td>
+              <th scope="row">索引颜色</th>
+              <td>1、2、4 和 8</td>
               <td>
-                Each pixel is a <em>D</em>-bit value indicating an index into a
-                color palette which is contained within a
-                <code
+                每个像素都是一个 <em>D</em> 位值，表示调色板的索引，调色板包含在 APNG 文件的 <code
                   ><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code
-                >
-                chunk in the APNG file; the colors in the palette all use an
-                8-bit depth.
+                > 块中；调色板中的颜色都使用 8 位深度。
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有透明度的灰度值</th>
               <td>8 and 16</td>
               <td>
-                Each pixel is represented by two <em>D</em>-bit values: the
-                intensity of the greyscale pixel and an alpha sample, indicating
-                how opaque the pixel is.
+                每个像素由两个 <em>D</em> 位值表示：灰度像素的强度和表示像素不透明程度的 alpha 样本。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td>8 and 16</td>
               <td>
-                Each pixel is comprised of four <em>D</em>-pixel color
-                components: red, green, blue, and the alpha sample indicating
-                how opaque the pixel is.
+                每个像素由四个 <em>D</em> 像素颜色成分组成：红色、绿色、蓝色和表示像素不透明程度的 alpha 样本。
               </td>
             </tr>
           </tbody>
@@ -254,17 +243,12 @@ APNG is ideal for basic animations that do not need to synchronize to other acti
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless</td>
+      <td>无损</td>
     </tr>
     <tr>
       <th scope="row">授权</th>
       <td>
-        Free and open under the
-        <a href="http://creativecommons.org/licenses/by-sa/3.0/"
-          >Creative Commons Attribution-ShareAlike license</a
-        >
-        (<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)
-        version 3.0 or later.
+        根据<a href="http://creativecommons.org/licenses/by-sa/3.0/">创作共用署名-相同方式共享许可</a>（<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>）3.0 或更高版本免费开放。
       </td>
     </tr>
   </tbody>
@@ -301,15 +285,15 @@ As support is not yet comprehensive (and has little historical depth) you should
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td><code>image/avif</code></td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.avif</code></td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td>
         <p>
           <a href="https://aomediacodec.github.io/av1-avif/"
@@ -319,7 +303,7 @@ As support is not yet comprehensive (and has little historical depth) you should
       </td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>
         Chrome 85, Opera 71, Firefox 93, and Safari 16.1.
         <ul>
@@ -337,11 +321,11 @@ As support is not yet comprehensive (and has little historical depth) you should
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>2,147,483,647×2,147,483,647 pixels</td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         <p>
           Color mode support information is provided in the
@@ -362,11 +346,11 @@ As support is not yet comprehensive (and has little historical depth) you should
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>Lossy and lossless.</td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>
         Royalty free. Licensing information is available at http://aomedia.org/license/ .
       </td>
@@ -393,34 +377,34 @@ Theoretically, several compression algorithms are supported, and the image data 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td><code>image/bmp</code></td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.bmp</code></td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td>
         No specification; however, Microsoft provides general documentation of the format at
         <a href="https://docs.microsoft.com/windows/desktop/gdi/bitmap-storage">docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage</a>
       </td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>
         All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>
         Either 32,767×32,767 or 2,147,483,647×2,147,483,647 pixels, depending on the format version
       </td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         <table class="standard-table">
           <thead>
@@ -432,33 +416,33 @@ Theoretically, several compression algorithms are supported, and the image data 
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td>1</td>
               <td>
                 Each bit represents a single pixel, which can be either black or white.
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is represented by three values representing the red, green, and blue color components; each is <em>D</em> bits.
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td>2, 4, and 8</td>
               <td>
                 Each pixel is represented by a value which is one 2, 4, or 8 bits, serving as an index into the color table.
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
               <td>BMP has no distinct grayscale format.</td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is represented by four values representing the red,
@@ -470,13 +454,13 @@ Theoretically, several compression algorithms are supported, and the image data 
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>
         Several compression methods are supported, including lossy or lossless algorithms
       </td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>
         Covered by the <a href="https://docs.microsoft.com/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a>;
         while Microsoft holds patents against BMP, they have published a promise not to assert its patent rights as long as specific conditions are met.
@@ -512,31 +496,31 @@ Typically, modern content should use [PNG](#png_portable_network_graphics) for l
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td><code>image/gif</code></td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.gif</code></td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td>
         <a href="https://www.w3.org/Graphics/GIF/spec-gif87.txt">GIF87a specification</a><br /><a href="https://www.w3.org/Graphics/GIF/spec-gif89a.txt">GIF89a specification</a>
       </td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>
         All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>65,536×65,536 pixels</td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         <table class="standard-table">
           <thead>
@@ -548,29 +532,29 @@ Typically, modern content should use [PNG](#png_portable_network_graphics) for l
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td><em>n/a</em></td>
               <td>GIF does not include a dedicated greyscale format.</td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td><em>n/a</em></td>
               <td>GIF does not support true color pixels.</td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td>8</td>
               <td>
                 Each color in a GIF palette is defined as 8 bits each of red, green, and blue (24 total bits per pixel).
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
               <td>GIF does not provide a dedicated greyscale format.</td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td><em>n/a</em></td>
               <td>GIF does not support true color pixels.</td>
             </tr>
@@ -579,11 +563,11 @@ Typically, modern content should use [PNG](#png_portable_network_graphics) for l
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>Lossless (LZW)</td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>
         While the GIF format itself is open, the LZW compression algorithm was covered by patents until the early 2000s.
         As of July 7, 2004, all relevant patents have expired and the GIF format may be used freely
@@ -608,32 +592,32 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td>
         <code>image/vnd.microsoft.icon</code> (official),
         <code>image/x-icon</code> (used by Microsoft)
       </td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.ico</code></td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td></td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>
         All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>256×256 pixels</td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         <table class="standard-table">
           <caption>
@@ -646,33 +630,33 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
               <th scope="col">Description</th>
             </tr>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td>1</td>
               <td>
                 Each bit represents a single pixel, which can be either black or white.
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is represented by three values representing the red, green, and blue color components; each is <em>D</em> bits.
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td>2, 4, and 8</td>
               <td>
                 Each pixel is represented by a value which is one 2, 4, or 8 bits, serving as an index into the color table.
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
               <td>BMP has no distinct grayscale format.</td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is represented by four values representing the red, green, blue, and alpha color components; each is <em>D</em> bits.
@@ -691,21 +675,21 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
               <th scope="col">Description</th>
             </tr>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td>1, 2, 4, 8, and 16</td>
               <td>
                 Each pixel consists of a single <em>D</em>-bit value indicating the brightness of the greyscale pixel.
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is represented by three <em>D</em>-bit values indicating the level of the red, green, and blue color components.
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td>1, 2, 4, and 8</td>
               <td>
                 Each pixel is a <em>D</em>-bit value indicating an index into a color palette which is contained within a
@@ -714,7 +698,7 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is represented by two <em>D</em>-bit values: the
@@ -722,7 +706,7 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
               </td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is comprised of four <em>D</em>-pixel color
@@ -734,14 +718,14 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>
         BMP-format icons nearly always use lossless compression, but lossy methods are available.
         PNG icons are always compressed losslessly.
       </td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>—</td>
     </tr>
   </tbody>
@@ -758,32 +742,32 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td><code>image/jpeg</code></td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td>
         <code>.jpg</code>, <code>.jpeg</code>, <code>.jpe</code>,
         <code>.jif</code>, <code>.jfif</code>
       </td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td><a href="https://jpeg.org/jpeg/">jpeg.org/jpeg/</a></td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>
         All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>65,535×65,535 pixels</td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         <table class="standard-table">
           <thead>
@@ -795,29 +779,29 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td><em>n/a</em></td>
               <td>True greyscale can be supported using the single luma channel (Y).</td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td>8</td>
               <td>
                 Each pixel is described by the red, blue, and green color components, each of which is 8 bits.
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td><em>n/a</em></td>
               <td>JPEG does not offer an indexed color mode.</td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
               <td>JPEG does not support an alpha channel.</td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td><em>n/a</em></td>
               <td>JPEG does not support an alpha channel.</td>
             </tr>
@@ -826,13 +810,13 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>
         Lossy; based on the <a href="https://en.wikipedia.org/wiki/Discrete_cosine_transform">discrete cosine transform</a>
       </td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>As of October 27, 2006, all United States patents have expired.</td>
     </tr>
   </tbody>
@@ -849,19 +833,19 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td><code>image/png</code></td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.png</code></td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td><a href="https://www.w3.org/TR/PNG">w3.org/TR/PNG</a></td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>
         <table class="standard-table">
           <thead>
@@ -926,11 +910,11 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>2,147,483,647×2,147,483,647 pixels</td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         <table class="standard-table">
           <thead>
@@ -942,14 +926,14 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td>1, 2, 4, 8, and 16</td>
               <td>
                 Each pixel consists of a single <em>D</em>-bit value indicating the brightness of the greyscale pixel.
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is represented by three <em>D</em>-bit values
@@ -958,7 +942,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
             </tr>
             <tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td>1, 2, 4, and 8</td>
               <td>
                 Each pixel is a <em>D</em>-bit value indicating an index into a color palette which is contained within a
@@ -967,7 +951,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is represented by two <em>D</em>-bit values: the
@@ -975,7 +959,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
               </td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td>8 and 16</td>
               <td>
                 Each pixel is comprised of four <em>D</em>-pixel color components: red, green, blue, and the alpha sample indicating how opaque the pixel is.
@@ -986,11 +970,11 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>Lossless, optionally indexed color like GIF</td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>
         ©2003 <a href="https://www.w3.org/">W3C</a> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
@@ -1029,19 +1013,19 @@ It's not generally useful for strictly bitmap or photographic images, although i
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td><code>image/svg+xml</code></td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.svg</code></td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td><a href="https://www.w3.org/TR/SVG2">w3.org/TR/SVG2</a></td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>
         <table class="standard-table">
           <thead>
@@ -1081,18 +1065,18 @@ It's not generally useful for strictly bitmap or photographic images, although i
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>Unlimited</td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         Colors in SVG are specified using
         <a href="/en-US/docs/Web/CSS/color_value">CSS color syntax</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>
         SVG source may be compressed during transit using
         <a href="/en-US/docs/Web/HTTP/Compression">HTTP compression</a>
@@ -1100,7 +1084,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
       </td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>
         ©2018 <a href="https://www.w3.org/">W3C</a> (<a
           href="http://www.lcs.mit.edu/"
@@ -1154,32 +1138,32 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td><code>image/tiff</code></td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.tif</code>, <code>.tiff</code></td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td>
         <a href="https://www.adobe.com/devnet-apps/photoshop/fileformatashtml"
           >https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577413_pgfId-1035272</a>
       </td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>
         No browsers integrate support for TIFF; its value is as a download format
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>4,294,967,295×4,294,967,295 pixels (theoretical)</td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         <table class="standard-table">
           <tbody>
@@ -1197,21 +1181,21 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td>4 and 8</td>
               <td>
                 Each pixel consists of a single <em>D</em>-bit value indicating the brightness of the greyscale pixel.
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td>8</td>
               <td>
                 All true color RGB images are stored using 8-bits each of red, green, and blue.
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td>4 and 8</td>
               <td>
                 Each pixel is an index into a <code>ColorMap</code> record,
@@ -1221,7 +1205,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td>4 and 8</td>
               <td>
                 Alpha information is added by specifying that there are more
@@ -1231,7 +1215,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
               </td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td>8</td>
               <td>
                 Alpha information is added by specifying that there are more
@@ -1245,13 +1229,13 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>
         Most TIFF files are uncompressed, but lossless PackBits and LZW compression are supported, as is lossy JPEG compression.
       </td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>
         No license required (aside from any associated with libraries you might use); all known patents have expired.
       </td>
@@ -1275,15 +1259,15 @@ Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td><code>image/webp</code></td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.webp</code></td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td>
         <p>
           <a href="https://developers.google.com/speed/webp/docs/riff_container">RIFF Container Specification</a><br />{{RFC(6386, "VP8 Data Format and Decoding Guide")}}
@@ -1292,7 +1276,7 @@ Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image
       </td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>
         <table class="standard-table">
           <tbody>
@@ -1338,22 +1322,22 @@ Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>16,383×16,383 pixels</td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         Lossy WebP stores the image in 8-bit Y'CbCr 4:2:0 (YUV420) format.
         Lossless WebP uses 8-bit ARGB color, with each component taking 8 bits for a total of 32 bits per pixel.
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>Lossless (Huffman, LZ77, or color cache codes) or lossy (VP8).</td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>No license required; source code is openly available.</td>
     </tr>
   </tbody>
@@ -1383,27 +1367,27 @@ static unsigned char square8_bits[] = {
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">MIME type</th>
+      <th scope="row">MIME 类型</th>
       <td><code>image/xbm</code>, <code>image-xbitmap</code></td>
     </tr>
     <tr>
-      <th scope="row">File extension(s)</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.xbm</code></td>
     </tr>
     <tr>
-      <th scope="row">Specification</th>
+      <th scope="row">规范</th>
       <td>None</td>
     </tr>
     <tr>
-      <th scope="row">Browser compatibility</th>
+      <th scope="row">浏览器兼容性</th>
       <td>Firefox 1–3.5, Internet Explorer 1–5</td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</th>
+      <th scope="row">最大尺寸</th>
       <td>Unlimited</td>
     </tr>
     <tr>
-      <th scope="row">Supported color modes</th>
+      <th scope="row">支持的颜色模式</th>
       <td>
         <table class="standard-table">
           <thead>
@@ -1415,27 +1399,27 @@ static unsigned char square8_bits[] = {
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td>1</td>
               <td>Each byte contains eight 1-bit pixels.</td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td><em>n/a</em></td>
               <td><em>n/a</em></td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td><em>n/a</em></td>
               <td><em>n/a</em></td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
               <td><em>n/a</em></td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td><em>n/a</em></td>
               <td><em>n/a</em></td>
             </tr>
@@ -1444,11 +1428,11 @@ static unsigned char square8_bits[] = {
       </td>
     </tr>
     <tr>
-      <th scope="row">Compression</th>
+      <th scope="row">压缩</th>
       <td>Lossless</td>
     </tr>
     <tr>
-      <th scope="row">Licensing</th>
+      <th scope="row">授权</th>
       <td>Open source</td>
     </tr>
   </tbody>
