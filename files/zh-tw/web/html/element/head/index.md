@@ -1,21 +1,18 @@
 ---
-title: "<head>"
+title: <head>
 slug: Web/HTML/Element/head
 ---
 
 {{HTMLSidebar}}
 
 
-
 [HTML](/zh-TW/docs/Web/HTML) 中的 **`<head>`** 元素包含有關文件的機器可讀信息（後設資料），例如 [title](/zh-TW/docs/Web/HTML/Element/title)、[scripts](/zh-TW/docs/Web/HTML/Element/script)、[style sheets](/zh-TW/docs/Web/HTML/Element/style)。
-
 
 > **備註：**`<head>` 主要保存用於機器處理的訊息，而不是人類可讀的訊息。對於人類可見的訊息，例如頂級標題和列出的作者，請參見 {{HTMLElement("header")}} 元素。
 
 ## 屬性
 
 這個元件屬性含有[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
-
 
 ## 範例
 
@@ -46,7 +43,7 @@ slug: Web/HTML/Element/head
       <th scope="row">允許內容</th>
       <td>
         <p>
-          如果文件是一個 {{HTMLElement("iframe")}} 
+          如果文件是一個 {{HTMLElement("iframe")}}
           <a href="/zh-TW/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a> 文件，或者如果標題信息來自於更高級的協議（像是 HTML 電子郵件的主題行），則應包含零個或多個元素的後設資料內容。
         </p>
         <p>
@@ -58,7 +55,7 @@ slug: Web/HTML/Element/head
       <th scope="row">標籤省略</th>
       <td>
         如果
-        <code>&#x3C;head></code> 元素內的第一個內容是一個元素，則開起標籤可以省略。<br />如果跟在 
+        <code>&#x3C;head></code> 元素內的第一個內容是一個元素，則開起標籤可以省略。<br />如果跟在
         <code>&#x3C;head></code> 元素後面的第一個內容不是空格字符或註釋，則關閉標籤可以省略。
       </td>
     </tr>
@@ -75,6 +72,7 @@ slug: Web/HTML/Element/head
       <th scope="row">DOM 介面</th>
       <td>{{domxref("HTMLHeadElement")}}</td>
     </tr>
+
   </tbody>
 </table>
 
