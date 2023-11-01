@@ -33,7 +33,6 @@ l10n:
 | {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                      | 8                 | 64 ビット長、2 の補数方式の符号付き整数値                                                              | `bigint`              | `int64_t (signed long long)`                                         |
 | {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                                    | 8                 | 64 ビット長、符号なし整数値                                                                            | `bigint`              | `uint64_t (unsigned long long)`                                      |
 
-
 ### サイズ変更可能なバッファー表示時の動作について
 
 [サイズ変更可能なバッファー](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#arraybuffer_のサイズ変更)のビューとして `TypedArray` を作成した場合、`TypedArray` が長さを追跡するよう構築されているかどうかにより、基盤のバッファーをサイズ変更した際に `TypedArray` のサイズに様々な影響を与えます。
