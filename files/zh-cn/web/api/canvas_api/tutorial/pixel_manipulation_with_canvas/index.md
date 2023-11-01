@@ -364,10 +364,10 @@ function draw(img) {
 
 当你从画布中生成了一个数据链接，例如，你可以将它用于任何{{HTMLElement("image")}}元素，或者将它放在一个有 download 属性的超链接里用于保存到本地。
 
-你也可以从画布中创建一个{{domxref("Blob")}}对像。
+你也可以从画布中创建一个{{domxref("Blob")}}对象。
 
 - {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
-  - : 这个创建了一个在画布中的代表图片的 `Blob` 对像。
+  - : 这个创建了一个在画布中的代表图片的 `Blob` 对象。
 
 ## 参见
 
