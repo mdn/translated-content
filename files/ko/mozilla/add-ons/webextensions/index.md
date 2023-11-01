@@ -15,7 +15,7 @@ Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정�
 - [첫번째 확장기능](/en-US/Add-ons/WebExtensions/Your_first_WebExtension)
 - [두번째 확장기능](/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
 - [확장기능의 구조](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [파이어폭스 개발 로드맵](/ko/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
+- [Firefox 개발 로드맵](/ko/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
 - [확장기능의 예시](/en-US/Add-ons/WebExtensions/Examples)
 - [그 다음은?](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next_)
 
@@ -67,10 +67,10 @@ Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정�
 
 ## 다른 브라우저에서 옮겨오기
 
-- [파이어폭스의 특성](/ko/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators)
+- [Firefox의 특성](/ko/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators)
 - [구글 크롬의 확장기능 가져오기](/en-US/Add-ons/WebExtensions/Porting_from_Google_Chrome)
-- [오래된 파이어폭스 확장기능 변환하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on)
-- [안드로이드용 파이어폭스로 개발하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android)
+- [오래된 Firefox 확장기능 변환하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on)
+- [안드로이드용 Firefox로 개발하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android)
 - [썬더볼트로 개발하기](/ko/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android)
 - [섭입된 확장기능](/ko/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions)
 - [Add-on SDK와의 비교](/ko/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK)
@@ -79,7 +79,7 @@ Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정�
 - [안드로이드와 PC의 차이점](/ko/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android)
 - [API 구현의 차이점](/ko/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android)
 
-## 파이어폭스 생애주기
+## Firefox 생애주기
 
 - [사용자 경험](/ko/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)
 - [설치](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)

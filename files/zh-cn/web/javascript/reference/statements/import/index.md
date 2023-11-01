@@ -227,12 +227,13 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{JSxRef("Statements/export", "export")}}
-- [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta)
-- Limin Zhu, Brian Terlson and Microsoft Edge Team: [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
-- Hacks blog post by Jason Orendorff: [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
-- Hacks blog post by Lin Clark: [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
-- Axel Rauschmayer's book: ["Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
-- The Modern JavaScript Tutorial(javascript.info): [Export and Import](https://javascript.info/import-export)
+- {{jsxref("Statements/export", "export")}}
+- [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)
+- [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta)
+- [预览 ES6 模块以及 ES2015、ES2016 和更多内容](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)，载于 blogs.windows.com (2016)
+- [ES6 深入浅出：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)，载于 hacks.mozilla.org (2015)
+- [深入挖掘 ES 模块](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)，载于 hacks.mozilla.org (2018)
+- [探索 JS，第 16 章：模块](https://exploringjs.com/es6/ch_modules.html)，由 Dr. Axel Rauschmayer 撰写
+- [Export 和 Import](https://javascript.info/import-export)，载于 javascript.info

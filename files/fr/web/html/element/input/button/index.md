@@ -13,7 +13,7 @@ Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comm
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un t'el élément contient une chaîne de caractères qui est utilisée comme étiquette pour le bouton (autrement dit, comme texte affiché sur le bouton).
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un tel élément contient une chaîne de caractères qui est utilisée comme étiquette pour le bouton (autrement dit, comme texte affiché sur le bouton).
 
 ### Exemple 1
 
@@ -111,7 +111,7 @@ Pour désactiver un bouton, il suffit d'ajouter l'attribut universel [`disabled`
 <input type="button" value="Je suis désactivé" disabled />
 ```
 
-Il est possible d'activer ou de désactiver des boutons lors de de l'utilisation de la page en modifiant l'attribut `disabled` de l'élément dans le DOM. Dans l'exemple qui suit, le bouton est initialement activé et si on appuie dessus : il devient désactivé (c'est ce que fait la ligne de code `btn.disabled = true`). La fonction {{domxref("WindowTimers.setTimeout","setTimeout()")}} est ensuite utilisée afin de réinitialiser le bouton après deux secondes.
+Il est possible d'activer ou de désactiver des boutons lors de l'utilisation de la page en modifiant l'attribut `disabled` de l'élément dans le DOM. Dans l'exemple qui suit, le bouton est initialement activé et si on appuie dessus : il devient désactivé (c'est ce que fait la ligne de code `btn.disabled = true`). La fonction {{domxref("WindowTimers.setTimeout","setTimeout()")}} est ensuite utilisée afin de réinitialiser le bouton après deux secondes.
 
 #### Exemple 1
 

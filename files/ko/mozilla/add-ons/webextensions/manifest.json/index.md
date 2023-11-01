@@ -17,7 +17,7 @@ manifest.json에 지원되는 키들은 아래와 같습니다.
 
 "\_locales" 경로가 있다면, `"default_locale"` 은 반드시 있어야 하며, `"_locales"` 경로가 없다면, `"default_locale"` 은 없어야 합니다.`
 
-`"applications"는 구글 크롬에서는 지원되지 않고, 파이어폭스 48 이전 버젼에는 의무적으로 있어야 합니다.`
+`"applications"는 구글 크롬에서는 지원되지 않고, Firefox 48 이전 버젼에는 의무적으로 있어야 합니다.`
 
 간단한 manifest.json 구문은 다음과 같습니다:
 

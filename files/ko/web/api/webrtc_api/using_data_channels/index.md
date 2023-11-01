@@ -68,7 +68,7 @@ WebRTC 데이터채널은 아웃바운드 데이터에 대해 버퍼링을 제�
 
 만약 당신이 사이즈 제한 크기가 궁금하지 않다거나 대용량 메세지를 보내거나 받는 것이 필요하지 않다면 이 이야기는 복잡한 이야기가 될 수 있습니다. Even when user agents share the same underlying library for handling Stream Control Transmission Protocol (SCTP) data, there can still be variations due to how the library is used. 예를들어 Firefox와 구글 크롬은 SCTP를 구현하기 위해 [`usrsctp`](https://github.com/sctplab/usrsctp) 라이브러리를 사용합니다. 이때 그 두 브라우저가 어떻게 라이브러리에 요청하고 이벤트에 반응하는지에 따라 `RTCDataChannel` 을 이용한 데이터 전송이 실패하는 경우가 있습니다.
 
-두 유저가 파이어폭스에 있는 데이터채널을 사용하여 통실할 때 메세지 사이즈의 제한은 파이어폭스와 크롬을 각각 사용할 때보다 큽니다. 왜냐하면 파이어폭스의 구현 방법은 현재 다중 SCTP메세지를 전송하는 기술을 deprecated하여 놓았습니다. 하지만 크롬은 여전히 가능합니다. 크롬은 완성 될것이라 확신하는 메시지 시리즈를 보는 대신 RTCDataChannel을 다중 메시지로서 수신하는 것으로 대채할 것입니다.
+두 유저가 Firefox에 있는 데이터채널을 사용하여 통실할 때 메세지 사이즈의 제한은 Firefox와 크롬을 각각 사용할 때보다 큽니다. 왜냐하면 Firefox의 구현 방법은 현재 다중 SCTP메세지를 전송하는 기술을 deprecated하여 놓았습니다. 하지만 크롬은 여전히 가능합니다. 크롬은 완성 될것이라 확신하는 메시지 시리즈를 보는 대신 RTCDataChannel을 다중 메시지로서 수신하는 것으로 대채할 것입니다.
 
 메세지가 16kiB 작다면 별다른 무리 없이 보낼 수 있을 것 입니다. 대부분의 메이저 user agents도 동일하게 다룹니다.
 

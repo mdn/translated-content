@@ -522,6 +522,7 @@
 /zh-CN/docs/Glossary/Empty_element	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/Grid_Rows	/zh-CN/docs/Glossary/Grid_Row
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
+/zh-CN/docs/Glossary/I18N	/zh-CN/docs/Glossary/Internationalization
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
 /zh-CN/docs/Glossary/Symbol	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol
@@ -1482,6 +1483,7 @@
 /zh-CN/docs/Web/API/File/fileName	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/File/size	/zh-CN/docs/Web/API/Blob/size
+/zh-CN/docs/Web/API/File/type	/zh-CN/docs/Web/API/Blob/type
 /zh-CN/docs/Web/API/FileException	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
 /zh-CN/docs/Web/API/FileReader/onabort	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/FileReader/onload	/zh-CN/docs/Web/API/FileReader/load_event
