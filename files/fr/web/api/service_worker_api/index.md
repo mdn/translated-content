@@ -15,7 +15,7 @@ Un <i lang="en">service worker</i> est un [<i lang="en">worker</i>](/fr/docs/Web
 
 Un <i lang="en">service worker</i> s'exécute dans le contexte d'un <i lang="en">worker</i> et n'a donc pas accès au DOM. Il s'exécute dans un <i lang="en">thread</i> différent du <i lang="en">thread</i> JavaScript principal et n'est donc pas bloquant. Il est conçu pour fonctionner de façon complètement asynchrone. Aussi, les API synchrones comme [XHR](/fr/docs/Web/API/XMLHttpRequest) et [<i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API) ne peuvent pas être utilisées dans le code d'un <i lang="en">service worker</i>.
 
-Pour des raisons de sécurité, les <i lang="en">service workers</i> ne fonctionnent qu'avec le protocole HTTPS. En effet, les connexions HTTP sont susceptibles d'être victimes d'injection de code par [attaque du monstre du milieu](/fr/docs/Glossary/MitM) et l'accès à ces API aggraverait ces attaques.
+Pour des raisons de sécurité, les <i lang="en">service workers</i> ne fonctionnent qu'avec le protocole HTTPS. En effet, les connexions HTTP sont susceptibles d'être victimes d'injection de code par [attaque de l'homme du milieu](/fr/docs/Glossary/MitM) et l'accès à ces API aggraverait ces attaques.
 
 > **Note :** Sur Firefox, les <i lang="en">service workers</i> ne fonctionnent pas en navigation privée.
 
