@@ -70,8 +70,6 @@ slug: Web/HTML/Element/head
       <th scope="row">DOM 介面</th>
       <td>{{domxref("HTMLHeadElement")}}</td>
     </tr>
-
-
   </tbody>
 </table>
 
