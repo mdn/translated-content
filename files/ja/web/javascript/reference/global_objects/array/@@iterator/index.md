@@ -112,7 +112,7 @@ logIterable(123);
 ## 関連情報
 
 - [`Array.prototype[@@iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/ja/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
