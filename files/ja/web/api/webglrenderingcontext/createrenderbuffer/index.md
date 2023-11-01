@@ -26,7 +26,7 @@ createRenderbuffer()
 
 ## 例
 
-### レンダリングバッファを作成する
+### レンダリングバッファーを作成する
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -34,15 +34,15 @@ const gl = canvas.getContext("webgl");
 const renderBuffer = gl.createRenderbuffer();
 ```
 
-## 仕様策定状況
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
