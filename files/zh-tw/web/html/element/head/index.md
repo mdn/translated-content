@@ -63,7 +63,6 @@ slug: Web/HTML/Element/head
       <th scope="row">允許父元素</th>
       <td>作為 {{HTMLElement("html")}} 元素的第一個子元素。</td>
     </tr>
-
     <tr>
       <th scope="row">允許的 ARIA roles</th>
       <td>No <code>role</code> permitted</td>
