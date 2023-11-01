@@ -26,7 +26,7 @@ createFramebuffer()
 
 ## 例
 
-### フレームバッファを作成する
+### フレームバッファーを作成する
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -34,15 +34,15 @@ const gl = canvas.getContext("webgl");
 const framebuffer = gl.createFramebuffer();
 ```
 
-## 仕様策定状況
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
