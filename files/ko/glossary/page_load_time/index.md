@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**페이지 로드 시간(Page load time)** 은 페이지를 로드하는 데 걸리는 시간으로, [탐색 시작](/ko/docs/Web/API/PerformanceTiming/navigationStart)부터 [로드 이벤트 시작](/en-US/docs/Web/API/PerformanceTiming/loadEventStart)까지 측정됩니다.
+**페이지 로드 시간(Page load time)** 은 페이지를 로드하는 데 걸리는 시간으로, [탐색 시작](/ko/docs/Web/API/PerformanceTiming/navigationStart)부터 [로드 이벤트 시작](/ko/docs/Web/API/PerformanceTiming/loadEventStart)까지 측정됩니다.
 
 ```js
 let time = performance.timing;

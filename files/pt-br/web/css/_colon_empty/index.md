@@ -68,10 +68,7 @@ The text that provides the interactive control's accessible name can be hidden u
 
 ## Specifications
 
-| Specification                                               | Status                        | Comment            |
-| ----------------------------------------------------------- | ----------------------------- | ------------------ |
-| {{ SpecName('CSS4 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS4 Selectors') }} | No change          |
-| {{ SpecName('CSS3 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS3 Selectors') }} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

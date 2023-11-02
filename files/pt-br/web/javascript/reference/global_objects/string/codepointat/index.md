@@ -115,9 +115,7 @@ for (let codePoint of "\ud83d\udc0e\ud83d\udc71\u2764") {
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

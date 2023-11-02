@@ -33,13 +33,6 @@ for(var i=0; i<4; i++) {
 }
 ```
 
-## 了解更多
-
-### 通用知识
+## 参见
 
 - 维基百科上的布尔值 [Boolean](https://zh.wikipedia.org/wiki/Boolean_data_type)
-
-### 技术参考文档
-
-- 标准全局对象：{{jsxref("Boolean")}}
-- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)

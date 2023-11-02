@@ -44,12 +44,7 @@ console.log(str.search(reDot)); // retorna -1 pois não conseguiu encontrar o po
 
 ## Especificações
 
-| Specificação                                                                       | Status               | Comentário(s)                                      |
-| ---------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                | {{Spec2('ES3')}}     | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}                 | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

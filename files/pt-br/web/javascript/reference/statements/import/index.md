@@ -194,14 +194,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## Especificações
 
-| Especificação                                                                                          | Estado               | Comentário         |
-| ------------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| ["function-like" dynamic `import()` proposal](https://github.com/tc39/proposal-dynamic-import/#import) | Stage 3              |                    |
-| {{SpecName("ESDraft", "#sec-imports", "Imports")}}                                                     | {{Spec2("ESDraft")}} |                    |
-| {{SpecName("ES2018", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2018")}}  |                    |
-| {{SpecName("ES2017", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2017")}}  |                    |
-| {{SpecName("ES2016", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2016")}}  |                    |
-| {{SpecName("ES2015", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2015")}}  | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

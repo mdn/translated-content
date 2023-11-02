@@ -73,9 +73,7 @@ subclass.prototype = Object.create(superclass.prototype, {
 
 ## Especificações
 
-| Especificações                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

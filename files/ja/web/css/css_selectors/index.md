@@ -61,13 +61,13 @@ slug: Web/CSS/CSS_selectors
     **構文:** `A > B`
     **例:** `ul > li` は {{HTMLElement("ul")}} 要素の内側に直接ネストされた {{HTMLElement("li")}} 要素をすべて選択します。
 
-- [一般兄弟結合子](/ja/docs/Web/CSS/General_sibling_combinator)
+- [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)
 
   - : `~` 結合子は兄弟を選択します。つまり、第2の要素が第1の要素の後にあり（ただし直後でなくても構わない）、両者が同じ親を持つ場合です。
     **構文:** `A ~ B`
     **例:** `p ~ span` は {{HTMLElement("p")}} 要素の後にある {{HTMLElement("span")}} 要素をすべて選択します。
 
-- [隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator)
+- [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)
 
   - : `+` 結合子は隣接する兄弟を選択します。つまり、第2の要素が第1の要素の直後にあり、両者が同じ親を持つ場合です。
     **構文:** `A + B`

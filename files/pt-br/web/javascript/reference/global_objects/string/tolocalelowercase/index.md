@@ -51,10 +51,7 @@ let locales = ["tr", "TR", "tr-TR", "tr-u-co-search", "tr-x-turkish"];
 
 ## Especificações
 
-| Especificação                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}      |
-| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

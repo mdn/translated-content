@@ -51,9 +51,7 @@ console.log(objectSymbols[0]); // retorno esperado Symbol(a)
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

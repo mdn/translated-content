@@ -368,10 +368,7 @@ console.log(docCookies.my_cookie1);
 
 ## Especificações
 
-| Especificações                                         | Status               | Comentário         |
-| ------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-proxy-objects', 'Proxy')}}  | {{Spec2('ES2015')}}  | Definição Inicial. |
-| {{SpecName('ESDraft', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ESDraft')}} | ?                  |
+{{Specifications}}
 
 ## Navegadores Compatíveis
 

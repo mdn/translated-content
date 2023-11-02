@@ -201,11 +201,7 @@ A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta
 
 ## Especificações
 
-| Specification                                                                                | Status               | Comment                                                                                                                                                                                                                            |
-| -------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-array-initializer')}}                                             | {{Spec2('ES2015')}}  | Defined in several sections of the specification: [Array Initializer](http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer), [Argument Lists](http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists) |
-| {{SpecName('ESDraft', '#sec-array-initializer')}}                                            | {{Spec2('ESDraft')}} | No changes.                                                                                                                                                                                                                        |
-| [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) | Draft                | Stage 3 draft.                                                                                                                                                                                                                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
