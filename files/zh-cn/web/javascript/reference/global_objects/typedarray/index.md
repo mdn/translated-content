@@ -346,7 +346,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## 参见
 
 - [`core-js` 中类型化数组的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [TextDecoder](/zh-CN/docs/Web/API/TextDecoder)——从数字数据中解码字符串的助手
