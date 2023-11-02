@@ -64,7 +64,7 @@ slug: Web/HTML/Element/head
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
-      <td>不允許<code>角色</code></td>
+      <td>沒有允許的 <code>role</code></td>
     </tr>
     <tr>
       <th scope="row">DOM 介面</th>
