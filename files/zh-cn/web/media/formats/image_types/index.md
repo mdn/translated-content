@@ -186,7 +186,7 @@ APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指
     </tr>
     <tr>
       <th scope="row">最高分辨率</th>
-      <td>2,147,483,647×2,147,483,647 pixels</td>
+      <td>2,147,483,647×2,147,483,647 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -350,19 +350,15 @@ Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，�
 
 ### BMP（位图文件）
 
-The **BMP** (**Bitmap image**) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.
+**BMP**（**位图图像**）文件类型在 Windows 计算机上最为常见，一般只用于 web 应用程序和内容中的特殊情况。
 
-> **警告：** You should typically avoid using BMP files for website content.
-> The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image types.
-> More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.
+> **警告：** 网站内容通常应避免使用 BMP 文件。最常见的 BMP 文件格式将数据表示为未压缩的光栅图像，与 png 或 jpg 图像类型相比，文件大小较大。目前有更高效的 BMP 格式，但并未广泛使用，web 浏览器也很少支持。
 
-BMP theoretically supports a variety of internal data representations.
-The simplest, and most commonly used, form of BMP file is an uncompressed raster image, with each pixel occupying 3 bytes representing its red, green, and blue components, and each row padded with `0x00` bytes to a multiple of 4 bytes wide.
+BMP 理论上支持多种内部数据表示。最简单也是最常用的 BMP 文件形式是一种未压缩的光栅图像，每个像素占 3 个字节，分别代表其红、绿、蓝三部分，每行用 `0x00` 字节填充，宽度为 4 字节的倍数。
 
-While other data representations are defined in the specification, they are not widely used and often completely unimplemented.
-These features include: support for different bit depths, indexed color, alpha channels, and different pixel orders (by default, BMP is written from bottom-left corner toward the right and top, rather than from the top-left corner toward the right and bottom).
+虽然规范中定义了其他数据表示方式，但它们并没有被广泛使用，通常完全没有实现。这些功能包括：支持不同的位深度、索引颜色、alpha 通道和不同的像素顺序（默认情况下，BMP 从左下角向右上角写入，而不是从左上角向右下角写入）。
 
-Theoretically, several compression algorithms are supported, and the image data can also be stored in [JPEG](#jpeg_联合图像专家小组图像) or [PNG](#png_便携式网络图形) format within the BMP file.
+从理论上讲，BMP 文件支持多种压缩算法，图像数据也可以使用 [JPEG](#jpeg_联合图像专家小组图像) 或 [PNG](#png_便携式网络图形) 格式存储。
 
 <table class="standard-table">
   <tbody>
@@ -377,20 +373,19 @@ Theoretically, several compression algorithms are supported, and the image data 
     <tr>
       <th scope="row">规范</th>
       <td>
-        No specification; however, Microsoft provides general documentation of the format at
-        <a href="https://docs.microsoft.com/windows/desktop/gdi/bitmap-storage">docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage</a>
+        没有规范；不过，微软在 <a href="https://learn.microsoft.com/zh-cn/windows/win32/gdi/bitmap-storage">learn.microsoft.com/zh-cn/windows/win32/gdi/bitmap-storage</a> 提供了格式的通用文档。
       </td>
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+        Chrome、Edge、Firefox、Internet Explorer、Opera 和 Safari 的所有版本。
       </td>
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
       <td>
-        Either 32,767×32,767 or 2,147,483,647×2,147,483,647 pixels, depending on the format version
+        32,767×32,767 像素或 2,147,483,647×2,147,483,647 像素，取决于格式版本
       </td>
     </tr>
     <tr>
@@ -399,9 +394,9 @@ Theoretically, several compression algorithms are supported, and the image data 
         <table class="standard-table">
           <thead>
             <tr>
-              <th scope="row">Color mode</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
-              <th scope="col">Description</th>
+              <th scope="row">颜色模式</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
+              <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
@@ -409,34 +404,33 @@ Theoretically, several compression algorithms are supported, and the image data 
               <th scope="row">灰度</th>
               <td>1</td>
               <td>
-                Each bit represents a single pixel, which can be either black or white.
+                每个比特代表一个像素，可以是黑色或白色。
               </td>
             </tr>
             <tr>
               <th scope="row">真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by three values representing the red, green, and blue color components; each is <em>D</em> bits.
+                每个像素由三个值表示，分别代表红色、绿色和蓝色，每个值为 <em>D</em> 位。
               </td>
             </tr>
             <tr>
               <th scope="row">索引颜色</th>
-              <td>2, 4, and 8</td>
+              <td>2、4 和 8</td>
               <td>
-                Each pixel is represented by a value which is one 2, 4, or 8 bits, serving as an index into the color table.
+                每个像素由一个 2、4 或 8 位的值表示，作为色彩表的索引。
               </td>
             </tr>
             <tr>
               <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>BMP has no distinct grayscale format.</td>
+              <td>BMP 没有明显的灰度格式。</td>
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
               <td>8 and 16</td>
               <td>
-                Each pixel is represented by four values representing the red,
-                green, blue, and alpha color components; each is <em>D</em> bits.
+                每个像素由四个值表示，分别代表红、绿、蓝和 alpha 颜色成分；每个值为 <em>D</em> 位。
               </td>
             </tr>
           </tbody>
@@ -446,15 +440,13 @@ Theoretically, several compression algorithms are supported, and the image data 
     <tr>
       <th scope="row">压缩</th>
       <td>
-        Several compression methods are supported, including lossy or lossless algorithms
+        支持多种压缩方法，包括有损或无损算法
       </td>
     </tr>
     <tr>
       <th scope="row">授权</th>
       <td>
-        Covered by the <a href="https://docs.microsoft.com/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a>;
-        while Microsoft holds patents against BMP, they have published a promise not to assert its patent rights as long as specific conditions are met.
-        This is not the same as a license, however. BMP is included under the Windows Metafile Format (<code>.wmf</code>).
+        由 <a href="https://docs.microsoft.com/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a> 记载，虽然微软拥有针对 BMP 的专利，但他们已公布了一项承诺，只要满足特定条件，他们就不会主张其专利权。但这并不等同于许可。BMP 包含在 Windows 元文件格式（<code>.wmf</code>）中。
       </td>
     </tr>
   </tbody>
@@ -515,9 +507,9 @@ Typically, modern content should use [PNG](#png_便携式网络图形) for lossl
         <table class="standard-table">
           <thead>
             <tr>
-              <th scope="row">Color mode</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
-              <th scope="col">Description</th>
+              <th scope="row">颜色模式</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
+              <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
@@ -615,9 +607,9 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
           </caption>
           <tbody>
             <tr>
-              <th scope="row">Color mode</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
-              <th scope="col">Description</th>
+              <th scope="row">颜色模式</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
+              <th scope="col">描述</th>
             </tr>
             <tr>
               <th scope="row">灰度</th>
@@ -660,9 +652,9 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
           </caption>
           <tbody>
             <tr>
-              <th scope="row">Color mode</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
-              <th scope="col">Description</th>
+              <th scope="row">颜色模式</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
+              <th scope="col">描述</th>
             </tr>
             <tr>
               <th scope="row">灰度</th>
@@ -762,9 +754,9 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
         <table class="standard-table">
           <thead>
             <tr>
-              <th scope="row">Color mode</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
-              <th scope="col">Description</th>
+              <th scope="row">颜色模式</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
+              <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
@@ -909,9 +901,9 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
         <table class="standard-table">
           <thead>
             <tr>
-              <th scope="row">Color mode</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
-              <th scope="col">Description</th>
+              <th scope="row">颜色模式</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
+              <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
@@ -1158,9 +1150,9 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
         <table class="standard-table">
           <tbody>
             <tr>
-              <th scope="row">Color mode</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
-              <th scope="col">Description</th>
+              <th scope="row">颜色模式</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
+              <th scope="col">描述</th>
             </tr>
             <tr>
               <th scope="row">Bilevel</th>
@@ -1382,9 +1374,9 @@ static unsigned char square8_bits[] = {
         <table class="standard-table">
           <thead>
             <tr>
-              <th scope="row">Color mode</th>
-              <th scope="col">Bits per component</th>
-              <th scope="col">Description</th>
+              <th scope="row">颜色模式</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
+              <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
