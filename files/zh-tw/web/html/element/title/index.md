@@ -6,6 +6,7 @@ slug: Web/HTML/Element/title
 {{HTMLSidebar}}
 
 [HTML](/zh-TW/docs/Web/HTML) **`<title>`** 元素定義了顯示在瀏覽器標題欄或頁面標籤上的文件標題。它僅包含文本，元素內的標籤會被忽略。
+
 ```html
 <title>Grandma's Heavy Metal Festival Journal</title>
 ```
@@ -71,6 +72,7 @@ The `<title>` element is always used within a page's {{HTMLElement("head")}} blo
 - 搜索引擎通常會顯示頁面標題的前55-60個字符。超出這個範圍的文本可能會被截斷，因此盡量不要使用超過這個長度的標題。如果必須使用較長的標題，請確保重要的部分位於前面，並且不要讓關鍵內容出現在可能被截斷的部分。
 - 不要使用「關鍵詞堆疊」。如果標題只是一個詞語列表，算法通常會導致網頁在搜索結果中的排名下降。
 - 盡量確保標題在網站內是獨一無二的。重複或幾乎重複的標題可能導致不準確的搜索結果。
+
 ## 範例
 
 ```html
@@ -84,6 +86,7 @@ The `<title>` element is always used within a page's {{HTMLElement("head")}} blo
 提供準確且簡潔的標題來描述網頁的用途非常重要。
 
 對於輔助技術使用者來說，一種常見的導航技巧是閱讀網頁標題，然後推測網頁包含的內容。這是因為進入網頁以確定其內容可能是一個耗時且可能令人困惑的過程。網站的每個頁面標題都應該是獨一無二的，最好首先顯示頁面的主要目的，然後是網站的名稱。遵循這種模式將有助於確保螢幕閱讀器首先宣佈網頁的主要目的。這比讓使用者在訪問同一個網站的每個頁面時先聽到網站名稱然後才是獨特的頁面標題，提供了更好的使用體驗。
+
 ### 範例
 
 ```html
@@ -98,7 +101,7 @@ The `<title>` element is always used within a page's {{HTMLElement("head")}} blo
 </title>
 ```
 
-> **備註：** 目前，動態更新頁面標題不會被螢幕閱讀器自動宣佈。如果要更新頁面標題以反映頁面狀態的重大變化，則可能需要使用 [ARIA Live Regions](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)。 
+> **備註：** 目前，動態更新頁面標題不會被螢幕閱讀器自動宣佈。如果要更新頁面標題以反映頁面狀態的重大變化，則可能需要使用 [ARIA Live Regions](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)。
 
 
 
