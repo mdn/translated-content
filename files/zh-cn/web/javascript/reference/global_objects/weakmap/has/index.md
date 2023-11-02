@@ -22,7 +22,6 @@ has(key)
 
 ### 返回值
 
-Returns `true` if an element with the specified key exists in the `WeakMap` object; otherwise `false`. Always returns `false` if `key` is not an object or a [non-registered symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 如果指定键的元素存在于 `WeakMap` 对象中，则返回 `true`；否则返回 `false`。如果 `key` 不是对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，则始终返回 `false`。
 
 ## 示例

@@ -32,8 +32,8 @@ get(key)
 const wm = new WeakMap();
 wm.set(window, "foo");
 
-wm.get(window); // 返回 "foo".
-wm.get("baz"); // 返回 undefined.
+wm.get(window); // 返回 "foo"。
+wm.get("baz"); // 返回 undefined。
 ```
 
 ## 规范
