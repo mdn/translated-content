@@ -20,14 +20,14 @@ slug: Web/HTML/Element/title
       </th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
-          >後設資料內</a
+          >後設資料內容</a
         >。
       </td>
     </tr>
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        文字不包含元素間空格{{glossary("whitespace")}}。
+        不包含元素間{{glossary("whitespace")}}的文字。
       </td>
     </tr>
     <tr>
