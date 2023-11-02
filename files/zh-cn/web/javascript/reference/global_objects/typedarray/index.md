@@ -37,22 +37,22 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 
 - 无符号整数数组（`Uint8Array`、`Uint16Array`、`Uint32Array` 和 `BigUint64Array`）直接以二进制形式存储数字。
 - 有符号整数数组（`Int8Array`、`Int16Array`、`Int32Array` 和 `BigInt64Array`）使用[二进制补码](https://zh.wikipedia.org/zh-cn/二補數)存储数字。
-- 浮点数组（`Float32Array` 和 `Float64Array`）使用[IEEE 754](https://zh.wikipedia.org/zh-cn/IEEE_754)浮点格式存储数字。[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_编码) 参考文档中有关于确切格式的更多信息。JavaScript 数字默认使用双精度浮点格式，这与 `Float64Array` 相同。`Float32Array` 使用 23（而不是 52）位用于尾数，以及 8（而不是 11）位用于指数。请注意，规范要求所有的 {{jsxref("NaN")}} 值使用相同的位编码，但确切的位模式取决于实现。
-- `Uint8ClampedArray` 是一种特殊情况。它像 `Uint8Array` 一样以二进制形式存储数字，但是当你存储超出范围的数字时，它会将数字*夹挤*到 0 到 255 的范围内，而不是截断最高有效位。
+- 浮点数组（`Float32Array` 和 `Float64Array`）使用 [IEEE 754](https://zh.wikipedia.org/zh-cn/IEEE_754)浮点格式存储数字。[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_编码) 参考文档中有关于确切格式的更多信息。JavaScript 数字默认使用双精度浮点格式，这与 `Float64Array` 相同。`Float32Array` 将 23（而不是 52）位用于尾数，以及 8（而不是 11）位用于指数。请注意，规范要求所有的 {{jsxref("NaN")}} 值使用相同的位编码，但确切的位模式取决于实现。
+- `Uint8ClampedArray` 是一种特殊情况。它像 `Uint8Array` 一样以二进制形式存储数字，但是当你存储超出范围的数字时，它会将数字*钳制*（clamp）到 0 到 255 的范围内，而不是截断最高有效位。
 
 除了 `Int8Array`、`Unit8Array` 和 `Uint8ClampedArray` 以外的其他类型数组都将每个元素存储为多个字节。这些字节可以按照从最高有效位到最低有效位（大端序）或从最低有效位到最高有效位（小端序）的顺序进行排序。请参阅[字节序](/zh-CN/docs/Glossary/Endianness)以了解更多。类型化数组始终使用平台的本机字节顺序。如果要在缓冲区中写入和读取时指定字节顺序，应该使用 {{jsxref("DataView")}}。
 
 当向这些类型化数组写入时，超出可表示范围的值将被标准化。
 
 - 所有整数数组（`Uint8ClampedArray` 除外）都使用[固定宽度数值转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#固定宽度数值转换)，首先截断数字的小数部分，然后取最低位。
-- `Uint8ClampedArray` 首先将数字夹挤到 0 到 255 的范围内（大于 255 的值变为 255，小于 0 的值变为 0），然后使用银行家舍入法将结果*四舍五入*（而非向下取整）到最近的整数，也就是说，如果数字恰好在两个整数之间，它将四舍五入到最近的偶数。例如，`0.5` 变为 `0`，`1.5` 变为 `2`，`2.5` 变为 `2`。
+- `Uint8ClampedArray` 首先将数字钳制到 0 到 255 的范围内（大于 255 的值变为 255，小于 0 的值变为 0），然后使用银行家舍入法将结果*四舍五入*（而非向下取整）到最近的整数，也就是说，如果数字恰好在两个整数之间，它将四舍五入到最近的偶数。例如，`0.5` 变为 `0`，`1.5` 变为 `2`，`2.5` 变为 `2`。
 - `Float32Array` 使用“银行家舍入法”将 64 位浮点数转换为 32 位。这与 {{jsxref("Math.fround()")}} 提供的算法相同。
 
 ### 底层为可变大小缓冲时的行为
 
-当一个 `TypedArray` 被创建为一个[可变大小缓冲](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#调整_ArrayBuffer_的大小)的视图时，改变底层缓冲的大小会对 `TypedArray` 的大小产生不同的影响，这取决于 `TypedArray` 是否是长度跟踪的。
+当一个 `TypedArray` 被创建为一个[可变大小缓冲](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#调整_arraybuffer_的大小)的视图时，改变底层缓冲的大小会对 `TypedArray` 的大小产生不同的影响，这取决于 `TypedArray` 是否是长度跟踪的。
 
-如果一个类型化数组是通过省略或传递 `undefined` 给第三个参数来创建的，那么它将成为*长度跟踪*的，并且将自动调整大小以适应底层 `buffer` 的大小：
+如果一个类型化数组是通过省略或传递 `undefined` 给第三个参数来创建的，那么它将*跟踪长度*，并且将自动调整大小以适应底层 `buffer` 的大小：
 
 ```js
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });

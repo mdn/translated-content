@@ -7,17 +7,17 @@ slug: Web/JavaScript/Guide/Typed_arrays
 
 JavaScript 类型化数组是一种类似数组的对象，并提供了一种用于在内存缓冲中访问原始二进制数据的机制。
 
-引入类型化数组并非是为了取代 JavaScript 中数组的任何一种功能。相反，它为开发者提供了一个操作二进制数据的接口。这在操作与平台相关的特性时会很有用，例如：音频视频编辑和访问 [WebSockets](/zh-CN/docs/Web/API/WebSockets_API) 原始数据等。JavaScript 类型化数组中的每一个元素都是以某种格式表示的原始二进制值，JavaScript 支持从 8 位整数到 64 位浮点数的多种二进制格式。
+引入类型化数组并非是为了取代 JavaScript 中数组的任何一种功能。相反，它为开发者提供了一个操作二进制数据的接口。这在操作与平台相关的特性时会很有用，例如：音频视频编辑和访问 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 原始数据等。JavaScript 类型化数组中的每一个元素都是以某种格式表示的原始二进制值，JavaScript 支持从 8 位整数到 64 位浮点数的多种二进制格式。
 
 类型化数组拥有许多与数组相同的方法，语义也相似。但是，类型化数组并不是普通数组，因为在类型化数组上调用 {{jsxref("Array.isArray()")}} 会返回 `false`。此外，并不是所有可用于普通数组的方法都能被类型化数组所支持（如 push 和 pop）。
 
-为了最大程度的灵活性和效率，JavaScript 将类型化数组的实现拆分为*缓冲*和*视图*两部分。缓冲是一种表示了数据块的对象，它没有格式可言，也没有提供访问其内容的机制。为了访问缓冲中的内存，你需要使用[视图](#views)。视图提供了*上下文*——即数据类型、起始偏移量和元素数量。
+为了最大程度的灵活性和效率，JavaScript 将类型化数组的实现拆分为*缓冲*和*视图*两部分。缓冲是一种表示了数据块的对象，它没有格式可言，也没有提供访问其内容的机制。为了访问缓冲中的内存，你需要使用[视图](#视图)。视图提供了*上下文*——即数据类型、起始偏移量和元素数量。
 
 ![同一缓冲上的不同类型化数组。每种类型化数组的元素数量与元素宽度都不同。](typed_arrays.png)
 
 ## 缓冲
 
-有两种类型的缓冲：{{jsxref("ArrayBuffer")}} 和 {{jsxref("SharedArrayBuffer")}}。它们都是内存块的低级表示。他们名字中都含有“array”，但是它们与数组并没有太多关系——你不能直接读写它们。相反，缓冲是通用的对象，它们只包含原始数据。为了访问缓冲所表示的内存，你需要使用视图。
+有两种类型的缓冲：{{jsxref("ArrayBuffer")}} 和 {{jsxref("SharedArrayBuffer")}}。它们都是内存块的低级表示。它们名字中都含有“array”，但是它们与数组并没有太多关系——你不能直接读写它们。相反，缓冲是通用的对象，它们只包含原始数据。为了访问缓冲所表示的内存，你需要使用视图。
 
 缓冲支持以下操作：
 
@@ -45,7 +45,7 @@ JavaScript 类型化数组是一种类似数组的对象，并提供了一种用
 
 ### 类型化数组视图
 
-类型化数组视图有自描述的名称，并且提供了所有常见数值类型的视图，如 `Int8`、`Uint32` 和`Float64` 等等。还有一种特殊的类型化数组视图，{{jsxref("Uint8ClampedArray")}}，它会将值夹挤到 `0` 到 `255` 之间，这在 [Canvas 数据处理](/zh-CN/docs/Web/API/ImageData)等场景中很有用。
+类型化数组视图有自描述的名称，并且提供了所有常见数值类型的视图，如 `Int8`、`Uint32` 和 `Float64` 等等。还有一种特殊的类型化数组视图，{{jsxref("Uint8ClampedArray")}}，它会将值钳制（clamp）到 `0` 到 `255` 之间，这在 [Canvas 数据处理](/zh-CN/docs/Web/API/ImageData)等场景中很有用。
 
 | 类型                            | 值范围                                         | 字节数 | 描述                                                  | 对应的 Web IDL 类型   | 等效的 C 类型                   |
 | ------------------------------- | ---------------------------------------------- | ------ | ----------------------------------------------------- | --------------------- | ------------------------------- |
@@ -90,7 +90,7 @@ console.log(uint8[NaN]); // undefined
 uint8[true] = 0;
 console.log(uint8[true]); // 0
 
-Object.freeze(uint8); // TypeError: 无法冻结非空缓冲的视图
+Object.freeze(uint8); // TypeError：无法冻结非空缓冲的视图
 ```
 
 ### DataView
@@ -138,7 +138,7 @@ console.log(toBinary(20, { type: "Int8", radix: 2 })); // 00010100
 
 ### 使用视图和缓冲
 
-首先，我们需要一个缓冲，这里我们创建一个 16 字节固定长度的缓冲：
+首先，我们需要创建一个 16 字节固定长度的缓冲：
 
 ```js
 const buffer = new ArrayBuffer(16);
@@ -178,7 +178,7 @@ for (let i = 0; i < int32View.length; i++) {
 const int16View = new Int16Array(buffer);
 
 for (let i = 0; i < int16View.length; i++) {
-  console.log(`索引 ${i}: ${int16View[i]}`);
+  console.log(`索引 ${i}：${int16View[i]}`);
 }
 ```
 
@@ -257,14 +257,14 @@ struct someStruct {
 ```js
 const buffer = new ArrayBuffer(24);
 
-// ... 将数据读入缓冲 ...
+// …将数据读入缓冲…
 
 const idView = new Uint32Array(buffer, 0, 1);
 const usernameView = new Uint8Array(buffer, 4, 16);
 const amountDueView = new Float32Array(buffer, 20, 1);
 ```
 
-这样一来，你就得到了一个类似的数据结构，例如，`amountDueView[0]` 对应了 C 的`amountDue` 字段。
+这样一来，你就得到了一个类似的数据结构，例如，`amountDueView[0]` 对应了 C 的 `amountDue` 字段。
 
 > **备注**：C 语言结构体的[数据对齐](https://zh.wikipedia.org/wiki/数据结构对齐)与平台相关。因此需要防范和考虑不同平台字节填充对齐的差异。
 
