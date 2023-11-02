@@ -55,9 +55,9 @@ console.log([1, 2, 3, 4, 5].copyWithin(2));
 
 `copyWithin()` は[変更を行うメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。 `this` の長さは変更しませんが、 `this` の内容を変更し、必要に応じて新しいプロパティを作成します。
 
-`copyWithin()` メソッドは空のスロットを保持します。コピー元の範囲が[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)であった場合、空のスロットに対応するインデックスは[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)され、空のスロットになります。
+`copyWithin()` メソッドは空のスロットを保持します。コピー元の範囲が[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)であった場合、空のスロットに対応するインデックスは[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)され、空のスロットになります。
 
-`copyWithin()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)です。このメソッドは `this` の値に `length` プロパティと整数のキーを持ったプロパティがあることだけを求めます。文字列も配列風オブジェクトですが、文字列は不変なので、このメソッドを適用するのは適していません。
+`copyWithin()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` の値に `length` プロパティと整数のキーを持ったプロパティがあることだけを求めます。文字列も配列風オブジェクトですが、文字列は不変なので、このメソッドを適用するのは適していません。
 
 ## 例
 
