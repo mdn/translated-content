@@ -36,7 +36,7 @@ slug: Web/Media/Formats/Image_types
     </tr>
     <tr>
       <th scope="row"><a href="#AVIF_图像">AVIF</a></th>
-      <th scope="row">AV1图像档案格式</th>
+      <th scope="row">AV1 图像档案格式</th>
       <td><code>image/avif</code></td>
       <td><code>.avif</code></td>
       <td>
@@ -256,31 +256,26 @@ APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指
 
 ### AVIF 图像
 
-AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes _AV1 bitstreams in the High Efficiency Image File Format (HEIF) container._
+AV1 图像文件格式（AVIF）是一种功能强大、开源、免版税的文件格式，它在高效图像文件格式（HEIF）容器中对 AV1 比特流进行编码。
 
-> **Note:** AVIF has potential to become the "next big thing" for sharing images in web content.
-> It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
+> **备注：** AVIF 有可能成为在 web 内容中共享图像的“下一件大事”。它具有最先进的功能和性能，却没有阻碍同类替代产品发展的复杂许可和专利使用费的束缚。
 
-AV1 is a coding format that was originally designed for video transmission over the Internet.
-The format benefits from the significant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering.
-However it also has disadvantages for some cases, as video and image encoding have some different requirements.
+AV1 是一种编码格式，最初设计用于在互联网上传输视频。该格式得益于近年来视频编码技术的长足进步，并有可能受益于对硬件渲染的相关支持。不过，在某些情况下它也有缺点，因为视频和图像编码有一些不同的要求。
 
-The format offers:
+该格式可以提供：
 
-- Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g. lossy AVIF images are around 50% smaller than JPEG images).
-- Generally, AVIF has better compression than WebP — median 50% vs. 30% compression for the same JPG set (source: [AVIF WebP Comparison](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
-- Lossless compression.
-- Animation/multi-image storage (similar to animated GIFs, but with much better compression)
-- Alpha channel support (i.e. for transparency).
-- _High Dynamic Range_ (HDR): support for storing images that can represent bigger contrasts between the lightest and darkest parts of the image.
-- Wide Color Gamut: Support for images that can contain a larger range of colors.
+- 与 JPG 和 PNG 相比，在视觉上相似的压缩水平下，有损压缩效果极佳（例如，有损 AVIF 图像比 JPEG 图像小 50%）。
+- 一般来说，AVIF 比 WebP 有更好的压缩效果。对于相同的 JPG 图像集，中值压缩率为 50%，而 WebP 为 30%（资料来源：[AVIF 与 WebP 的对比](https://www.ctrl.blog/entry/webp-avif-comparison.html)（CTRL博客））。
+- 无损压缩。
+- 动画/多图像存储（类似于 GIF 动画，但压缩效果更好）
+- 支持 Alpha 通道（即透明）。
+- *高动态范围（HDR）*：支持存储图像，使图像最亮和最暗部分之间的对比度更大。
+- 宽色域：支持包含更大色彩范围的图像。
 
-AVIF does not support progressive rendering, so files must be fully downloaded before they can be displayed.
-This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
-For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
+AVIF 不支持渐进式渲染，因此文件必须完全下载后才能显示。这通常对真实世界的用户体验影响不大，因为 AVIF 文件比同等的 JPEG 或 PNG 文件小得多，因此下载和显示的速度也快得多。文件大小越大，影响就越大，因此应考虑使用支持渐进式渲染的格式。
 
-AVIF is supported in Chrome, Opera, Safari and Firefox (Firefox supports still images but not animations), but not on Edge or IE.
-As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp_image), [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
+Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，但不支持动画），但 Edge 和 IE 不支持。
+由于支持尚不全面（而且没有什么历史深度），应使用 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)（或其他方法）提供 [WebP](#webp_图像)、[JPEG](#jpeg_联合图像专家小组图像) 或 [PNG](#png_便携式网络图形) 格式的后备。
 
 <table class="standard-table">
   <tbody>
@@ -297,7 +292,7 @@ As support is not yet comprehensive (and has little historical depth) you should
       <td>
         <p>
           <a href="https://aomediacodec.github.io/av1-avif/"
-            >AV1 Image File Format (AVIF)</a
+            >AV1 图像文件格式（AVIF）</a
           >
         </p>
       </td>
@@ -305,54 +300,49 @@ As support is not yet comprehensive (and has little historical depth) you should
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        Chrome 85, Opera 71, Firefox 93, and Safari 16.1.
+        Chrome 85、Opera 71、Firefox 93 和 Safari 16.1
         <ul>
           <li>
-            Firefox 93 supports still images, with colorspace support for both full and limited range colors, image transforms for mirroring and rotation.
-            The preference <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness">image.avif.compliance_strictness</a>
-            can be used to adjust the compliance strictness with the specification.
-            Animated images are not supported.
+            Firefox 93 支持静态图像，色彩空间支持全色和有限范围色彩，图像变换支持镜像和旋转。偏好设置 <a href="/zh-CN/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness">image.avif.compliance_strictness</a> 可用于调整符合规范的严格程度。不支持动态图像。
           </li>
           <li>
-            Firefox 77 to 92 require the preference
-            <code>image.avif.enable</code> set <code>true</code>. Earlier versions provide only basic support.
+            Firefox 77~92 版本需要将首选项 <code>image.avif.enable</code> 设置为 <code>true</code>。更早期版本仅提供基本支持。
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
-      <td>2,147,483,647×2,147,483,647 pixels</td>
+      <td>2,147,483,647×2,147,483,647 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
       <td>
         <p>
-          Color mode support information is provided in the
-          <a href="https://aomediacodec.github.io/av1-spec/av1-spec.pdf">AV1 Bitstream &#x26; Decoding Process Specification</a>, section 6.4.2 : Color config semantics.
+          <a href="https://aomediacodec.github.io/av1-spec/av1-spec.pdf">AV1 比特流 &#x26; 解码过程规范</a>，第 6.4.2 节中提供了色彩模式支持信息：颜色配置语义。
         </p>
-        <p>A non-exhaustive summary is:</p>
+        <p>不完全的摘要：</p>
         <ul>
-          <li>Color modes: YUV444, YUV422, YUV420</li>
-          <li>Greyscale support: YUV400</li>
-          <li>Bits: 8/10/12-bit</li>
-          <li>Alpha support</li>
-          <li>ICC profile support</li>
+          <li>颜色模式：YUV444、YUV422、YUV420</li>
+          <li>灰度支持：YUV400</li>
+          <li>位数：8/10/12-bit</li>
+          <li>透明度支持</li>
+          <li>ICC 配置项支持</li>
           <li>
-            NCLX support: sRGB, linear sRGB, linear Rec2020, PQ Rec2020, HLG Rec2020, PQ P3, HLG P3, etc.
+            NCLX 支持：sRGB、linear sRGB、linear Rec2020、PQ Rec2020、HLG Rec2020、PQ P3、HLG P3 等
           </li>
-          <li>Tiling support</li>
+          <li>Tiling 支持</li>
         </ul>
       </td>
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossy and lossless.</td>
+      <td>有损压缩和无损压缩</td>
     </tr>
     <tr>
       <th scope="row">授权</th>
       <td>
-        Royalty free. Licensing information is available at http://aomedia.org/license/ .
+        免版税。有关许可信息，请访问 http://aomedia.org/license/ 。
       </td>
     </tr>
   </tbody>
@@ -372,7 +362,7 @@ The simplest, and most commonly used, form of BMP file is an uncompressed raster
 While other data representations are defined in the specification, they are not widely used and often completely unimplemented.
 These features include: support for different bit depths, indexed color, alpha channels, and different pixel orders (by default, BMP is written from bottom-left corner toward the right and top, rather than from the top-left corner toward the right and bottom).
 
-Theoretically, several compression algorithms are supported, and the image data can also be stored in [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format within the BMP file.
+Theoretically, several compression algorithms are supported, and the image data can also be stored in [JPEG](#jpeg_联合图像专家小组图像) or [PNG](#png_便携式网络图形) format within the BMP file.
 
 <table class="standard-table">
   <tbody>
@@ -491,7 +481,7 @@ Another popular feature of GIF is support for [interlacing](<https://en.wikipedi
 This is particularly useful when network connections are slow.
 
 GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering.
-Typically, modern content should use [PNG](#png_portable_network_graphics) for lossless _and_ indexed still images, and should consider using [APNG](#apng_animated_portable_network_graphics) for lossless animation sequences.
+Typically, modern content should use [PNG](#png_便携式网络图形) for lossless _and_ indexed still images, and should consider using [APNG](#apng_animated_portable_network_graphics) for lossless animation sequences.
 
 <table class="standard-table">
   <tbody>
@@ -583,10 +573,10 @@ However, early versions of Internet Explorer introduced the ability for a websit
 
 An ICO file can contain multiple icons, and begins with a directory listing details about each.
 Following the directory comes the data for the icons.
-Each icon's data can be either a [BMP](#bmp_bitmap_file) image without the file header, or a complete [PNG](#png_portable_network_graphics) image (including the file header).
+Each icon's data can be either a [BMP](#bmp_位图文件) image without the file header, or a complete [PNG](#png_便携式网络图形) image (including the file header).
 If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
 
-> **Warning:** ICO files _should not_ be used in web content.
+> **警告：** ICO files _should not_ be used in web content.
 > Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/en-US/docs/Web/HTML/Element/link#providing_icons_for_different_usage_contexts).
 
 <table class="standard-table">
@@ -1254,7 +1244,7 @@ Lossless WebP holds the `ANIM` chunk, which describes the animation, and the `AN
 Looping is supported.
 
 WebP now has broad support in the latest versions of major web browsers, although it does not have deep historical support.
-Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format, such as with [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture).
+Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PNG](#png_便携式网络图形) format, such as with [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture).
 
 <table class="standard-table">
   <tbody>
@@ -1444,7 +1434,7 @@ static unsigned char square8_bits[] = {
 
 ### 照片
 
-Photographs typically fare well with lossy compression (depending on the encoder's configuration). This makes [JPEG](#jpeg_joint_photographic_experts_group_image) and [WebP](#webp_image) good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression. To maximize quality and minimize download time, consider providing both [using a fallback](#提供后备图像) with WebP as the first choice and JPEG as the second. Otherwise, JPEG is the safe choice for compatibility.
+Photographs typically fare well with lossy compression (depending on the encoder's configuration). This makes [JPEG](#jpeg_联合图像专家小组图像) and [WebP](#webp_图像) good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression. To maximize quality and minimize download time, consider providing both [using a fallback](#提供后备图像) with WebP as the first choice and JPEG as the second. Otherwise, JPEG is the safe choice for compatibility.
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
@@ -1465,7 +1455,7 @@ Photographs typically fare well with lossy compression (depending on the encoder
 
 For smaller images such as icons, use a lossless format to avoid loss of detail in a size-constrained image. While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a [fallback](#提供后备图像). If your image contains fewer than 256 colors, GIF is an option, although PNG often compresses even smaller with its indexed compression option (PNG-8).
 
-If the icon can be represented using vector graphics, consider [SVG](#svg_scalable_vector_graphics), since it scales across various resolutions and sizes, so it's perfect for responsive design. Although SVG support is good, it may be worth offering a PNG fallback for older browsers.
+If the icon can be represented using vector graphics, consider [SVG](#svg_可缩放矢量图形), since it scales across various resolutions and sizes, so it's perfect for responsive design. Although SVG support is good, it may be worth offering a PNG fallback for older browsers.
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
