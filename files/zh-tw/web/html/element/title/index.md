@@ -5,7 +5,7 @@ slug: Web/HTML/Element/title
 
 {{HTMLSidebar}}
 
-[HTML](/en-US/docs/Web/HTML) **`<title>`** 元素定義了顯示在瀏覽器標題欄或頁面標籤上的文件標題。它僅包含文本，元素內的標籤會被忽略。
+[HTML](/zh-TW/docs/Web/HTML) **`<title>`** 元素定義了顯示在瀏覽器標題欄或頁面標籤上的文件標題。它僅包含文本，元素內的標籤會被忽略。
 ```html
 <title>Grandma's Heavy Metal Festival Journal</title>
 ```
@@ -14,12 +14,12 @@ slug: Web/HTML/Element/title
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#metadata_content"
           >後設資料內容</a
         >。
       </td>
@@ -98,11 +98,11 @@ The `<title>` element is always used within a page's {{HTMLElement("head")}} blo
 </title>
 ```
 
-> **備註：** 目前，動態更新頁面標題不會被螢幕閱讀器自動宣佈。如果要更新頁面標題以反映頁面狀態的重大變化，則可能需要使用 [ARIA Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)。 
+> **備註：** 目前，動態更新頁面標題不會被螢幕閱讀器自動宣佈。如果要更新頁面標題以反映頁面狀態的重大變化，則可能需要使用 [ARIA Live Regions](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)。 
 
 
 
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN Understanding WCAG, Guideline 2.4 explanations](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 
 ## 規範
@@ -115,4 +115,4 @@ The `<title>` element is always used within a page's {{HTMLElement("head")}} blo
 
 ## 參見
 
-- SVG [`<title>`](/en-US/docs/Web/SVG/Element/title) 元素
+- SVG [`<title>`](/zh-TW/docs/Web/SVG/Element/title) 元素
