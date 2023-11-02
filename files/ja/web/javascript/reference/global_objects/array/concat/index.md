@@ -40,7 +40,7 @@ concat(value1, value2, /* …, */ valueN)
 
 `concat()` メソッドは、元の配列のいずれかが[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)であった場合には空のスロットを維持します。
 
-`cconcat()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)です。 `this` 値は他の引数と同じように扱われます（ただし、先にオブジェクトに変換されます）。つまり、素のオブジェクトは直接結果の配列に追加され、 `@isConcatSpreadable` を持つ配列風オブジェクトは結果の配列に展開されます。
+`concat()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。 `this` 値は他の引数と同じように扱われます（ただし、先にオブジェクトに変換されます）。つまり、素のオブジェクトは直接結果の配列に追加され、 `@isConcatSpreadable` を持つ配列風オブジェクトは結果の配列に展開されます。
 
 ## 例
 
