@@ -402,7 +402,7 @@ p {
 [Значения свойств CSS](/ru/docs/Learn/CSS/Building_blocks/Values_and_units) мы
 рассматривали единицы измерения длины и размера. Размер шрифта (определяется
 свойством {{cssxref("font-size")}}) может принимать значения в большинстве этих
-единиц (и не только, например в [процентах](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)),
+единиц (и не только, например в [процентах](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)),
 чаще всего используются следующие единицы:
 
 - `px` (пиксели): высота в пикселях. Это абсолютная единица измерения —
