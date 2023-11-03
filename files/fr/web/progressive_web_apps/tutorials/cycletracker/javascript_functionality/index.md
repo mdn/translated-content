@@ -37,7 +37,7 @@ Pour les saisies ultérieures, il faut&nbsp;:
 Les personnes ayant déjà utilisé l'application auront des données existantes dans le stockage local. Lorsqu'elles reviennent sur la page web en utilisant le même navigateur depuis le même appareil, il faut&nbsp;:
 
 1. Récupérer les données enregistrées dans le stockage local
-2. Créer un titre a "`<h2>Cycles antérieurs</h2>`"
+2. Créer un titre "`<h2>Cycles antérieurs</h2>`"
 3. Créer une liste non-ordonnée avec un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)
 4. Remplir l'élément `<ul>` avec un élément [`<li>`](/fr/docs/Web/HTML/Element/li) pour chaque cycle menstruel enregistré dans le stockage local.
 
