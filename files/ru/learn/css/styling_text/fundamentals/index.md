@@ -105,7 +105,7 @@ l10n:
 как линия подчёркивания и зачёркивания, определяемая свойством
 {{cssxref("text-decoration")}}).
 
-`color` принимает любое [значение цвета CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors),
+`color` принимает любое [значение цвета CSS](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#colors),
 например:
 
 ```css
