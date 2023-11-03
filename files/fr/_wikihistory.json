@@ -27457,13 +27457,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Glossary/Internationalization": {
-    "modified": "2020-10-09T08:51:46.428Z",
-    "contributors": ["Voulto"]
-  },
-  "conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation": {
-    "modified": "2020-11-13T03:38:18.691Z",
-    "contributors": ["SphinxKnight", "a-mt"]
   }
 }
