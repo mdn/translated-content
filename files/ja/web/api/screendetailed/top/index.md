@@ -1,6 +1,7 @@
 ---
 title: Screen.top
-slug: Web/API/Screen/top
+slug: Web/API/ScreenDetailed/top
+original_slug: Web/API/Screen/top
 ---
 
 {{APIRef("CSSOM")}}{{deprecated_header}}{{Non-standard_Header}}

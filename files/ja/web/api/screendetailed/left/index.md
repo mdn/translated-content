@@ -1,6 +1,7 @@
 ---
 title: Screen.left
-slug: Web/API/Screen/left
+slug: Web/API/ScreenDetailed/left
+original_slug: Web/API/Screen/left
 ---
 
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
