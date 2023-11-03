@@ -966,6 +966,6 @@ window.addEventListener("load", drawOutput);
 ## Заключение
 
 Мы надеемся, что вам понравилось играть с текстом в этой статье! Следующая
-статья даст вам все необходимые знания о [стилизации HTML-списков](/en-US/docs/Learn/CSS/Styling_text/Styling_lists).
+статья даст вам все необходимые знания о [стилизации HTML-списков](/ru/docs/Learn/CSS/Styling_text/Styling_lists).
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
