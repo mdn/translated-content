@@ -44,6 +44,7 @@ El proceso de renderizado incluye lo siguiente :
 
 - Lo primero que hay que tener en cuenta es el orden de representación de los elementos. La regla globalmente válida para los archivos SVG es que los elementos posteriores se renderizan encima de los anteriores. Cuanto más abajo esté un elemento, más visible será.
 - En la web, los archivos SVG pueden mostrarse directamente en el navegador o incrustarse en archivos HTML mediante varios métodos:
+
   - Si el HTML es XHTML y se entrega como tipo application/xhtml+xml, el SVG puede incrustarse directamente en la fuente XML.
   - El SVG también puede incrustarse directamente en HTML.
   - Se puede utilizar con el elemento [`<img>`](es/docs/Web/HTML/Element/img)
