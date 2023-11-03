@@ -58,6 +58,7 @@ El proceso de renderizado incluye lo siguiente :
     ```html
     <iframe src="image.svg"></iframe>
     ```
+
   - Por último, SVG puede crearse dinámicamente con JavaScript e inyectarse en el DOM de HTML.
  
 
