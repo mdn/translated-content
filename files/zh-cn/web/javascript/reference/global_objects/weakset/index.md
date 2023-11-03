@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 
 ## 描述
 
-WeakSet 中的值一定是可被垃圾回收的值。大多数 {{Glossary("Primitive", "原始数据类型")}} 可以被任意地创建，并且没有生命周期，所以它们不能被存储。对象和[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)可以被存储，因为它们是可被垃圾回收的值。
+WeakSet 中的值一定是可被垃圾回收的值。大多数{{Glossary("Primitive", "原始数据类型")}}可以被任意地创建，并且没有生命周期，所以它们不能被存储。对象和[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)可以被存储，因为它们是可被垃圾回收的值。
 
 它和 {{jsxref("Set")}} 对象的主要区别有：
 
@@ -68,7 +68,7 @@ execRecursively((obj) => console.log(obj), foo);
 - {{jsxref("Object/constructor", "WeakSet.prototype.constructor")}}
   - : 创建了该实例对象的构造函数。对于 `WeakSet` 实例，初始值是 {{jsxref("WeakSet/WeakSet", "WeakSet")}} 构造函数。
 - `WeakSet.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakSet"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakSet"`。该属性被 {{jsxref("Object.prototype.toString()")}} 所使用。
 
 ## 实例方法
 
@@ -99,7 +99,7 @@ ws.has(foo); // false，foo 对象已经被删除了
 ws.has(bar); // true，bar 依然存在
 ```
 
-注意，`foo !== bar`。尽管它们是相似的对象，\*但是它们不是**同一个对象\***。因此，它们都可以被加入到集合中。
+注意，`foo !== bar`。尽管它们是相似的对象，_但是它们不是**同一个对象**_。因此，它们都可以被加入到集合中。
 
 ## 规范
 
