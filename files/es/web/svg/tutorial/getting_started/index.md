@@ -60,7 +60,6 @@ El proceso de renderizado incluye lo siguiente :
     ```
 
   - Por último, SVG puede crearse dinámicamente con JavaScript e inyectarse en el DOM de HTML.
- 
 
 - El manejo de tamaños y unidades en SVG va a ser explicado [en la próxima página](/en/SVG/Tutorial/Positions).
 
