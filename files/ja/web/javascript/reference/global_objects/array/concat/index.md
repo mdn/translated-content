@@ -38,7 +38,7 @@ concat(value1, value2, /* …, */ valueN)
 
 `concat()` は[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods)です。 `this` や引数として与えられた配列を変更せず、代わりに元の配列の要素と同じ要素を含む[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返します。
 
-`concat()` メソッドは、元の配列のいずれかが[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)であった場合には空のスロットを維持します。
+`concat()` メソッドは、元の配列のいずれかが[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)であった場合には空のスロットを維持します。
 
 `concat()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。 `this` 値は他の引数と同じように扱われます（ただし、先にオブジェクトに変換されます）。つまり、素のオブジェクトは直接結果の配列に追加され、 `@isConcatSpreadable` を持つ配列風オブジェクトは結果の配列に展開されます。
 
