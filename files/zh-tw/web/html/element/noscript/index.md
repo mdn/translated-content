@@ -1,0 +1,105 @@
+---
+title: <noscript>
+slug: Web/HTML/Element/noscript
+---
+
+{{HTMLSidebar}}
+
+[HTML](/en-US/docs/Web/HTML) **`<noscript>`** 元素定義了一個 HTML 區塊，如果網頁上的腳本類型不支援或瀏覽器當前已關閉腳本，則將插入該區塊。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >內容類型</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
+          >後設資料內容</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >流內容</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >段落型內容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許內容</th>
+      <td>
+        當腳本被禁用時，並且該元素是
+        {{HTMLElement("head")}} 元素的子元素時：可以包括零個或多個
+        {{HTMLElement("link")}} 元素、零個或多個
+        {{HTMLElement("style")}} 元素，以及零個或多個
+        {{HTMLElement("meta")}} 元素，它們的順序可以是任意的。<br />當腳本被禁用時，並且該元素不是
+        {{HTMLElement("head")}} 元素的後代時：可以包括任何
+        <a
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
+          >透明內容</a
+        >，但不得包含<code>&#x3C;noscript></code>元素在其後代中。<br />否則：可以包括流內容或短語內容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">標籤省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">允許的父元素</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, if there are no ancestor <code>&#x3C;noscript></code> element, or in
+        a {{HTMLElement("head")}} element (but only for an HTML
+        document), here again if there are no ancestor
+        <code>&#x3C;noscript></code> element.
+        如果不存在祖元素 <code>&#x3C;noscript></code>，或者在 {{HTMLElement("head")}} 元素中（但僅適用於HTML文件），同樣如果不存在 <code>&#x3C;noscript></code> 祖元素，則接受任何<a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >段落型內容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的 ARIA 角色</th>
+      <td>沒有允許的 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 介面</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
+## 屬性
+
+這個元素屬性含有[全域屬性](/en-US/docs/Web/HTML/Global_attributes)。
+
+## 範例
+
+```html
+<noscript>
+  <!-- anchor linking to external file -->
+  <a href="https://www.mozilla.org/">External Link</a>
+</noscript>
+<p>Rocks!</p>
+```
+
+### 腳本成功執行的結果
+
+Rocks!
+
+### 腳本執行失敗的成果
+
+[External Link](https://www.mozilla.org/)
+
+Rocks!
+
+## 規範
+
+{{Specifications}}
+
+## 瀏覽器相容性
+
+{{Compat}}
