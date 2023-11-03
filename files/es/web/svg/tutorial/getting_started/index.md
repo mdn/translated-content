@@ -65,7 +65,7 @@ El proceso de renderizado incluye lo siguiente :
 
 ### Tipos de archivos SVG
 
-Los archivos SVG son de dos tipos. 
+Los archivos SVG son de dos tipos.
 
 1. Los archivos SVG normales, que son simples archivos de texto que contienen marcas SVG y tienen como extensión recomendada ".svg" (todo en minúsculas).
 
