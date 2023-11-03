@@ -684,7 +684,7 @@ p {
 ### Высота строки
 
 Свойство {{cssxref("line-height")}} определяет высоту каждой строки текста и
-может принимать большинство [единиц измерения CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size),
+может принимать большинство [единиц измерения CSS](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size),
 но также может принимать
 просто число без единицы измерения, в таком случае высота строки — произведение
 {{cssxref("font-size")}} и числа в `line-height` (этот вариант считается лучшим).
