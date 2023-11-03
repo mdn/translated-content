@@ -556,9 +556,9 @@ text-shadow: 4px 4px 5px red;
    горизонтальное смещение, но двигает тень вверх/вниз. Обязательно должно быть
    указано.
 3. Радиус размытия — чем больше значение, тем больше размытие тени. По умолчанию
-   0 (отключено). Принимает большинство [единиц измерения CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
-4. Цвет тени, принимает любой [цвет CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#colors),
-   цвет по умолчанию — [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), то есть цвет из свойства
+   0 (отключено). Принимает большинство [единиц измерения CSS](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
+4. Цвет тени, принимает любой [цвет CSS](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#colors),
+   цвет по умолчанию — [`currentcolor`](/ru/docs/Web/CSS/color_value#currentcolor_keyword), то есть цвет из свойства
    [`color`](/ru/docs/Web/CSS/color).
 
 
