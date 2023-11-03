@@ -1,34 +1,27 @@
 ---
-title: I18N
+title: Internationalisation
 slug: Glossary/Internationalization
-original_slug: Glossary/I18N
+l10n:
+  sourceCommit: 050c1825df97d836d7b91c0719386dcb5b5dded2
 ---
 
 {{GlossarySidebar}}
 
-i18n (issu de "internationalisation", un mot de 20 lettres) est l'ensemble des bonnes pratiques pour permettre à des produits ou des services d'être lisiblement adaptés à toute culture visée.
+L'**internationalisation** (aussi abrégée en "i18n") est l'ensemble des bonnes pratiques permettant à des produits ou des services d'être adaptés pour différents publics, d'une langue, d'une culture ou d'une région différente.
 
-> L'**internationalisation** est la conception et le développement d'un produit, d'une application ou d'un contenu de document qui **permet** une localisation facile pour les publics ciblés de culture, région et langue différentes. (Définition du {{Glossary("W3C")}})
+La [localisation](/fr/docs/Glossary/Localization) est le processus complémentaire pour adapter un système à un public donné.
 
-Parmi d'autres choses, i18n nécessite le support de plusieurs…
+L'internationalisation permet entre autres l'adaptation des différences relatives aux&nbsp;:
 
-- jeux de caractères (en général via [Unicode](http://searchcio-midmarket.techtarget.com/definition/Unicode))
-- unités de mesure (monnaie, °C/°F, km/miles, etc.)
-- formats de dates et heures
-- dispositions de clavier
-- directions de texte
+- Systèmes d'écriture
+- Unités de mesure (monnaie, °C/°F, km/miles, etc.)
+- Formats de dates et heures
+- Dispositions de clavier
 
-## Pour en savoir plus
+Le travail du [consortium Unicode](https://home.unicode.org/) fait partie intégrante de l'internationalisation. Unicode prend en charge les variations entre les systèmes d'écriture du monde entier, et aussi les variations culturelles notamment liées aux devises et formats des dates et heures.
 
-### Culture générale
+## Voir aussi
 
-- [Internationalisation](<https://fr.wikipedia.org/wiki/Internationalisation_(informatique)>) sur Wikipédia
-
-### Référence technique
-
-- [i18n sur W3C](http://www.w3.org/International/questions/qa-i18n.en#Internationalization)
-- [i18n sur gala-global.org](http://www.gala-global.org/what-internationalization)
-
-### Apprendre sur ce sujet
-
-- [Ressources i18n sur i18nguy.com](http://www.i18nguy.com/)
+- [La localisation sur le glossaire MDN](/fr/docs/Glossary/Localization)
+- [Le site du consortium Unicode](https://home.unicode.org/)
+- [L'API JavaScript pour l'internationalisation](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
