@@ -30,10 +30,10 @@ On peut configurer notre lecteur vidéo et l'élément `<canvas>` comme ceci:
   height="270"
   crossorigin="anonymous">
   <source
-    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
   <source
-    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
     type="video/mp4" />
 </video>
 
@@ -127,7 +127,7 @@ HTML:
 <video
   id="my-video"
   controls
-  src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
+  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
 ```
 
 JavaScript:
@@ -142,10 +142,10 @@ myVideo.playbackRate = 2;
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270">
   <source
-    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
   <source
-    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
     type="video/mp4" />
 </video>
 <div class="playable-buttons">
