@@ -5,8 +5,7 @@ l10n:
   sourceCommit: 9a272d3d84d344df6beb8ccfd5fe78131bb01f2e
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists",
-"Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 В данной статье мы начнём путь к овладению стилизацией текста при помощи
 {{glossary("CSS")}}. Мы подробно изучим основы стилизации текста и шрифта, такие
@@ -534,8 +533,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Стиль_и_жирность_шрифта_трансформации_и_декорации',
-'100%', 260) }}
+{{ EmbedLiveSample('Стиль_и_жирность_шрифта_трансформации_и_декорации', '100%', 260) }}
 
 ### Тени для текста
 
