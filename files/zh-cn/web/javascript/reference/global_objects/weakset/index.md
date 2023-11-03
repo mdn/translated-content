@@ -25,7 +25,7 @@ WeakSet 中的值一定是可被垃圾回收的值。大多数{{Glossary("Primit
 为此，`WeakSet` 非常适合处理这种情况：
 
 ```js
-// 对 传入的 subject 对象 内部存储的所有内容执行回调
+// 对传入的 subject 对象内部存储的所有内容执行回调
 function execRecursively(fn, subject, _refs = new WeakSet()) {
   // 避免无限递归
   if (_refs.has(subject)) {
