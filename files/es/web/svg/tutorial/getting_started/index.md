@@ -47,7 +47,7 @@ El proceso de renderizado incluye lo siguiente :
 
   - Si el HTML es XHTML y se entrega como tipo application/xhtml+xml, el SVG puede incrustarse directamente en la fuente XML.
   - El SVG también puede incrustarse directamente en HTML.
-  - Se puede utilizar con el elemento [`<img>`](es/docs/Web/HTML/Element/img)
+  - Se puede utilizar con el elemento [`<img>`](/es/docs/Web/HTML/Element/img)
   - Se puede hacer referencia al archivo SVG con un elemento `object`:
     ```html
     <object data="image.svg" type="image/svg+xml" />
