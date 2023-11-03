@@ -20,4 +20,5 @@ Qu'il s'agisse du courrier postal ou des communications électroniques, il est d
 ## Voir aussi
 
 - [La page OWASP sur les attaques du monstre du milieu (en anglais)](https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack)
+- Le site PortSwigger&nbsp;: [les dernières actualités concernant les attaques du monstre du milieu (en anglais)](https://portswigger.net/daily-swig/mitm)
 - [La page Wikipédia correspondante](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu)
