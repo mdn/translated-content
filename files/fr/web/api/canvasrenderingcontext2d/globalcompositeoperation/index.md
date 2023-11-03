@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.globalCompositeOperation
+title: "CanvasRenderingContext2D : propriété globalCompositeOperation"
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 l10n:
   sourceCommit: 050c1825df97d836d7b91c0719386dcb5b5dded2
