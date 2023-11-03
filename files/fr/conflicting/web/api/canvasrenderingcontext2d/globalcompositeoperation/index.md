@@ -1,8 +1,7 @@
 ---
 title: Exemple de composition
-slug: Web/API/Canvas_API/Tutorial/Compositing/Example
-l10n:
-  sourceCommit: 3c67eed7b0d2c91198ec95bcc9b1a570f6c0f585
+slug: conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation
+original_slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

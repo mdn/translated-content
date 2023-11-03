@@ -1,6 +1,7 @@
 ---
 title: Internationalisation
-slug: Glossary/Internationalization_and_localization
+slug: conflicting/Glossary/Internationalization
+original_slug: Glossary/Internationalization_and_localization
 ---
 
 {{GlossarySidebar}}

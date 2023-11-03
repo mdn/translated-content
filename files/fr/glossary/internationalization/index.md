@@ -1,6 +1,7 @@
 ---
 title: I18N
-slug: Glossary/I18N
+slug: Glossary/Internationalization
+original_slug: Glossary/I18N
 ---
 
 {{GlossarySidebar}}

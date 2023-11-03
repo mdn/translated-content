@@ -1433,7 +1433,7 @@
 /fr/docs/Glossaire/Hyperlien	/fr/docs/Glossary/Hyperlink
 /fr/docs/Glossaire/Hypertexte	/fr/docs/Glossary/Hypertext
 /fr/docs/Glossaire/Héritage	/fr/docs/Glossary/Inheritance
-/fr/docs/Glossaire/I18N	/fr/docs/Glossary/I18N
+/fr/docs/Glossaire/I18N	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossaire/IANA	/fr/docs/Glossary/IANA
 /fr/docs/Glossaire/ICANN	/fr/docs/Glossary/ICANN
 /fr/docs/Glossaire/ICE	/fr/docs/Glossary/ICE
@@ -1459,7 +1459,7 @@
 /fr/docs/Glossaire/Input_method_editor	/fr/docs/Glossary/Input_method_editor
 /fr/docs/Glossaire/Instance	/fr/docs/Glossary/Instance
 /fr/docs/Glossaire/Intergiciel	/fr/docs/Glossary/Middleware
-/fr/docs/Glossaire/Internationalisation_et_localisation	/fr/docs/Glossary/Internationalization_and_localization
+/fr/docs/Glossaire/Internationalisation_et_localisation	/fr/docs/conflicting/Glossary/Internationalization
 /fr/docs/Glossaire/Internet	/fr/docs/Glossary/Internet
 /fr/docs/Glossaire/JSON	/fr/docs/Glossary/JSON
 /fr/docs/Glossaire/Jank	/fr/docs/Glossary/Jank
@@ -1730,7 +1730,9 @@
 /fr/docs/Glossary/Descriptor_(CSS)	/fr/docs/Glossary/CSS_Descriptor
 /fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
 /fr/docs/Glossary/Grid_Rows	/fr/docs/Glossary/Grid_Row
+/fr/docs/Glossary/I18N	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossary/Index	/fr/docs/Glossary
+/fr/docs/Glossary/Internationalization_and_localization	/fr/docs/conflicting/Glossary/Internationalization
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
@@ -3580,7 +3582,7 @@
 /fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs	/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /fr/docs/Tutoriel_canvas/Animations_basiques	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /fr/docs/Tutoriel_canvas/Composition	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing
-/fr/docs/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/fr/docs/Tutoriel_canvas/Composition/Example	/fr/docs/conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/Tutoriel_canvas/Formes_géométriques	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /fr/docs/Tutoriel_canvas/Optimizing_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
@@ -3631,12 +3633,13 @@
 /fr/docs/Web/API/ByteString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/API/CSSMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
+/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/fr/docs/conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Advanced_animations	/fr/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs	/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Animations_basiques	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Composition	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing
-/fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Composition/Example	/fr/docs/conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Dessin_de_texte_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Optimizing_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas

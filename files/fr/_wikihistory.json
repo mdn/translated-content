@@ -1018,10 +1018,6 @@
     "modified": "2019-03-23T22:42:03.435Z",
     "contributors": ["loella16", "Porkepix", "xdelatour"]
   },
-  "Glossary/I18N": {
-    "modified": "2019-03-23T22:41:26.912Z",
-    "contributors": ["Goofy", "xdelatour"]
-  },
   "Glossary/IANA": {
     "modified": "2019-03-23T22:42:02.685Z",
     "contributors": ["loella16", "xdelatour"]
@@ -1118,9 +1114,9 @@
     "modified": "2019-03-23T22:41:11.990Z",
     "contributors": ["xdelatour"]
   },
-  "Glossary/Internationalization_and_localization": {
-    "modified": "2020-10-09T08:51:46.428Z",
-    "contributors": ["Voulto"]
+  "Glossary/Internationalization": {
+    "modified": "2019-03-23T22:41:26.912Z",
+    "contributors": ["Goofy", "xdelatour"]
   },
   "Glossary/Internet": {
     "modified": "2019-03-23T22:53:44.936Z",
@@ -7358,10 +7354,6 @@
   "Web/API/Canvas_API/Tutorial/Compositing": {
     "modified": "2020-11-13T03:38:19.786Z",
     "contributors": ["SphinxKnight", "a-mt", "Syberam"]
-  },
-  "Web/API/Canvas_API/Tutorial/Compositing/Example": {
-    "modified": "2020-11-13T03:38:18.691Z",
-    "contributors": ["SphinxKnight", "a-mt"]
   },
   "Web/API/Canvas_API/Tutorial/Drawing_shapes": {
     "modified": "2020-11-13T03:38:18.692Z",
@@ -27465,5 +27457,13 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/Glossary/Internationalization": {
+    "modified": "2020-10-09T08:51:46.428Z",
+    "contributors": ["Voulto"]
+  },
+  "conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation": {
+    "modified": "2020-11-13T03:38:18.691Z",
+    "contributors": ["SphinxKnight", "a-mt"]
   }
 }
