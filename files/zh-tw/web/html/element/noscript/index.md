@@ -49,13 +49,6 @@ slug: Web/HTML/Element/noscript
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        Any element that accepts
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, if there are no ancestor <code>&#x3C;noscript></code> element, or in
-        a {{HTMLElement("head")}} element (but only for an HTML
-        document), here again if there are no ancestor
-        <code>&#x3C;noscript></code> element.
         如果不存在祖元素 <code>&#x3C;noscript></code>，或者在 {{HTMLElement("head")}} 元素中（但僅適用於HTML文件），同樣如果不存在 <code>&#x3C;noscript></code> 祖元素，則接受任何<a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
           >段落型內容</a
         >的元素。
