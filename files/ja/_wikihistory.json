@@ -992,10 +992,6 @@
     "modified": "2019-03-18T21:42:25.531Z",
     "contributors": ["Uemmra3", "takeru0430"]
   },
-  "Glossary/I18N": {
-    "modified": "2019-03-18T21:35:48.856Z",
-    "contributors": ["hamasaki", "kadokura"]
-  },
   "Glossary/IANA": {
     "modified": "2019-03-18T21:15:23.095Z",
     "contributors": ["Wind1808"]
@@ -1084,9 +1080,9 @@
     "modified": "2019-03-23T22:38:23.483Z",
     "contributors": ["Potappo", "lv7777", "w-volte"]
   },
-  "Glossary/Internationalization_and_localization": {
-    "modified": "2020-05-24T08:29:22.994Z",
-    "contributors": ["dskmori", "Potappo", "dukesan"]
+  "Glossary/Internationalization": {
+    "modified": "2019-03-18T21:35:48.856Z",
+    "contributors": ["hamasaki", "kadokura"]
   },
   "Glossary/Internet": {
     "modified": "2019-03-23T22:38:33.920Z",
@@ -8546,10 +8542,6 @@
     "modified": "2020-10-15T21:21:38.016Z",
     "contributors": ["mfuji09", "silverskyvicto", "fscholz", "ethertank"]
   },
-  "Web/API/File/type": {
-    "modified": "2020-10-15T22:11:44.472Z",
-    "contributors": ["silverskyvicto", "mfuji09"]
-  },
   "Web/API/File/webkitRelativePath": {
     "modified": "2020-10-15T22:11:44.308Z",
     "contributors": ["silverskyvicto"]
@@ -12142,27 +12134,6 @@
     "modified": "2020-10-15T21:16:25.668Z",
     "contributors": ["mfuji09", "fscholz", "soumya", "ethertank", "Potappo"]
   },
-  "Web/API/Screen/availLeft": {
-    "modified": "2020-10-15T21:16:27.232Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "Web/API/Screen/availTop": {
-    "modified": "2020-10-15T21:16:28.901Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "basemnassar11",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "Web/API/Screen/availWidth": {
     "modified": "2019-03-23T23:50:19.480Z",
     "contributors": ["fscholz", "jsx", "ethertank", "Potappo"]
@@ -12174,10 +12145,6 @@
   "Web/API/Screen/height": {
     "modified": "2020-10-15T21:16:36.031Z",
     "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank", "Potappo"]
-  },
-  "Web/API/Screen/left": {
-    "modified": "2020-10-15T21:16:25.501Z",
-    "contributors": ["mfuji09", "fscholz", "jsx", "ethertank", "Potappo"]
   },
   "Web/API/Screen/lockOrientation": {
     "modified": "2020-10-15T21:52:16.220Z",
@@ -12209,7 +12176,40 @@
       "Potappo"
     ]
   },
-  "Web/API/Screen/top": {
+  "Web/API/Screen/unlockOrientation": {
+    "modified": "2020-10-15T21:52:16.003Z",
+    "contributors": ["mfuji09", "shuuji3"]
+  },
+  "Web/API/Screen/width": {
+    "modified": "2020-10-15T21:16:26.560Z",
+    "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank", "Potappo"]
+  },
+  "Web/API/ScreenDetailed/availLeft": {
+    "modified": "2020-10-15T21:16:27.232Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "Web/API/ScreenDetailed/availTop": {
+    "modified": "2020-10-15T21:16:28.901Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "basemnassar11",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "Web/API/ScreenDetailed/left": {
+    "modified": "2020-10-15T21:16:25.501Z",
+    "contributors": ["mfuji09", "fscholz", "jsx", "ethertank", "Potappo"]
+  },
+  "Web/API/ScreenDetailed/top": {
     "modified": "2020-10-15T21:16:26.905Z",
     "contributors": [
       "mfuji09",
@@ -12218,14 +12218,6 @@
       "ethertank",
       "Potappo"
     ]
-  },
-  "Web/API/Screen/unlockOrientation": {
-    "modified": "2020-10-15T21:52:16.003Z",
-    "contributors": ["mfuji09", "shuuji3"]
-  },
-  "Web/API/Screen/width": {
-    "modified": "2020-10-15T21:16:26.560Z",
-    "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank", "Potappo"]
   },
   "Web/API/ScriptProcessorNode": {
     "modified": "2019-03-23T22:35:37.748Z",

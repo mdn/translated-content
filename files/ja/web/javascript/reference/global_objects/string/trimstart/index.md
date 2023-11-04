@@ -37,7 +37,7 @@ String.prototype.trimLeft.name === "trimStart";
 
 ### trimStart() の使用
 
-次の例は `str` の末尾から空白を取り除きますが、先頭からは取り除きません。
+次の例は `str` の先頭から空白を取り除きますが、末尾からは取り除きません。
 
 ```js-nolint
 let str = "   foo  ";

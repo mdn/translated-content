@@ -53,9 +53,7 @@ formData.getAll("username"); // Returns ["Chris", "Bob"]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [使用 XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [使用 FormData 对象](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

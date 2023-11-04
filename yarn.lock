@@ -140,10 +140,10 @@ character-entities@^2.0.0:
   resolved "https://registry.yarnpkg.com/character-entities/-/character-entities-2.0.2.tgz#2d09c2e72cd9523076ccb21157dff66ad43fcc22"
   integrity sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ==
 
-cld@^2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/cld/-/cld-2.9.0.tgz#8a4cec2541ac54fa45cf3aa3f13e561fed913fe7"
-  integrity sha512-eYK2WvupoNCCHnDjWiuEcpysqTsqQ8mZpAvFA6aFIQOBz0W77Ak+yRvvcf/Cvx3afcb86CMUBZ4W7b8IoKRuOg==
+cld@^2.9.1:
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/cld/-/cld-2.9.1.tgz#0c6685672d9f4612dfeb75eabfdd17bf282a87a6"
+  integrity sha512-GfNd5TM2He+pCsEhJWBgnLAoB0pnn6jCoYom7pzv04wpF2d54C0nasHZ8BW59KijwnVRmEBcI+imRnVbj5fVjw==
   dependencies:
     glob "7"
     node-addon-api "*"
