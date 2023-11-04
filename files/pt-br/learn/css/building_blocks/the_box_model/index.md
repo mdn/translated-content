@@ -43,7 +43,7 @@ In CSS we broadly have two types of boxes — **block boxes** and **inline boxes
 
 If a box is defined as a block, it will behave in the following ways:
 
-- The box will break onto a new line.
+- The box will break into a new line.
 - The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.
 - The {{cssxref("width")}} and {{cssxref("height")}} properties are respected.
 - Padding, margin and border will cause other elements to be pushed away from the box
