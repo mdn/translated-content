@@ -225,14 +225,14 @@ APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指
             </tr>
             <tr>
               <th scope="row">带有透明度的灰度值</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
                 每个像素由两个 <em>D</em> 位值表示：灰度像素的强度和表示像素不透明程度的 alpha 样本。
               </td>
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
                 每个像素由四个 <em>D</em> 像素颜色成分组成：红色、绿色、蓝色和表示像素不透明程度的 alpha 样本。
               </td>
@@ -428,7 +428,7 @@ BMP 理论上支持多种内部数据表示。最简单也是最常用的 BMP �
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
                 每个像素由四个值表示，分别代表红、绿、蓝和 alpha 颜色成分；每个值为 <em>D</em> 位。
               </td>
@@ -454,26 +454,19 @@ BMP 理论上支持多种内部数据表示。最简单也是最常用的 BMP �
 
 ### GIF（图像互换格式）
 
-In 1987, the CompuServe online service provider introduced the **[GIF](https://en.wikipedia.org/wiki/GIF)** (**Graphics Interchange Format**) image file format to provide a compressed graphics format that all members of their service would be able to use.
-GIF uses the [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/Lempel-Ziv-Welch) (LZW) algorithm to losslessly compress 8-bit indexed color graphics.
-GIF was one of the first two graphics formats supported by {{Glossary("HTML")}}, along with [XBM](#xbm_x_window_system_bitmap_file).
+1987 年，CompuServe 在线服务提供商推出了 **[GIF](https://zh.wikipedia.org/wiki/GIF)**（**图像互换格式**）图像文件格式，为其服务的所有成员提供一种可使用的压缩图形格式。GIF 使用 [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/LZW)（LZW）算法对 8 位索引彩色图形进行无损压缩。GIF 和 [XBM](#xbm_X_Window_系统位图文件) 是 {{Glossary("HTML")}} 最早支持的两种图形格式之一。
 
-Each pixel in a GIF is represented by a single 8-bit value serving as an index into a palette of 24-bit colors (8 bits each of red, green, and blue). The length of a color table is always a power of 2 (that is, each palette has 2, 4, 8, 16, 32, 64, or 256 entries).
-To simulate more than 255 or 256 colors, [dithering](https://en.wikipedia.org/wiki/Dithering) is generally used.
-It is [technically possible](https://gif.ski/) to tile multiple image blocks, each with its own color palette, to create truecolor images, but in practice this is rarely done.
+GIF 中的每个像素都由一个 8 位值表示，作为 24 位颜色（红、绿、蓝各 8 位）调色板的索引。颜色表的长度总是 2 的幂次（即每个调色板有 2、4、8、16、32、64 或 256 个条目）。要模拟 255 或 256 色以上的颜色，一般使用[抖动](https://zh.wikipedia.org/wiki/抖動_(數位訊號處理))。[技术上可以](https://gif.ski/)对多个图像块进行平铺，每个图像块都有自己的调色板，以创建真彩色图像，但在实践中很少这样做。
 
-Pixels are opaque, unless a specific color index is designated as transparent, in which case pixels colored that value are entirely transparent.
+像素是不透明的，除非特定的颜色指数被指定为透明，在这种情况下，染上该值的像素是完全透明的。
 
-GIF supports simple animation, in which following an initial full-size frame, a series of images reflecting the parts of the image that change with each frame are provided.
+GIF 支持简单的动画，即在最初的全尺寸帧之后，提供一系列反映每帧图像变化部分的图像。
 
-GIF has been extremely popular for decades, due to its simplicity and compatibility.
-Its animation support caused a resurgence in its popularity in the social media era, when animated GIFs began to be widely used for short "videos", memes, and other simple animation sequences.
+几十年来，GIF 因其简洁性和兼容性而广受欢迎。在社交媒体时代，GIF 动画开始被广泛用于制作短“视频”、备忘录和其他简单的动画序列。
 
-Another popular feature of GIF is support for [interlacing](<https://en.wikipedia.org/wiki/Interlacing_(bitmaps)>), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
-This is particularly useful when network connections are slow.
+GIF 的另一个流行特性是支持[隔行扫描](<https://en.wikipedia.org/wiki/Interlacing_(bitmaps)>)，即像素行的存储顺序会被打乱，因此部分接收的文件可以较低的质量显示。这在网络连接速度较慢时尤其有用。
 
-GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering.
-Typically, modern content should use [PNG](#png_便携式网络图形) for lossless _and_ indexed still images, and should consider using [APNG](#apng_animated_portable_network_graphics) for lossless animation sequences.
+GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF 可能会导致不理想的抖动。通常情况下，现代内容应使用 [PNG](#png_ 便携式网络图形)制作无损*和*索引静态图像，并应考虑使用 [APNG](#apng_动态可移植网络图形) 制作无损动画序列。
 
 <table class="standard-table">
   <tbody>
@@ -488,13 +481,13 @@ Typically, modern content should use [PNG](#png_便携式网络图形) for lossl
     <tr>
       <th scope="row">规范</th>
       <td>
-        <a href="https://www.w3.org/Graphics/GIF/spec-gif87.txt">GIF87a specification</a><br /><a href="https://www.w3.org/Graphics/GIF/spec-gif89a.txt">GIF89a specification</a>
+        <a href="https://www.w3.org/Graphics/GIF/spec-gif87.txt">GIF87a 规范</a><br /><a href="https://www.w3.org/Graphics/GIF/spec-gif89a.txt">GIF89a 规范</a>
       </td>
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+        Chrome、Edge、Firefox、Internet Explorer、Opera 和 Safari 浏览器的所有版本
       </td>
     </tr>
     <tr>
@@ -516,29 +509,29 @@ Typically, modern content should use [PNG](#png_便携式网络图形) for lossl
             <tr>
               <th scope="row">灰度</th>
               <td><em>n/a</em></td>
-              <td>GIF does not include a dedicated greyscale format.</td>
+              <td>GIF 不包括专用的灰度格式。</td>
             </tr>
             <tr>
               <th scope="row">真彩色</th>
               <td><em>n/a</em></td>
-              <td>GIF does not support true color pixels.</td>
+              <td>GIF 不支持真彩色像素。</td>
             </tr>
             <tr>
               <th scope="row">索引颜色</th>
               <td>8</td>
               <td>
-                Each color in a GIF palette is defined as 8 bits each of red, green, and blue (24 total bits per pixel).
+                GIF 调色板中的每种颜色定义为红、绿、蓝各 8 位（每个像素共 24 位）。
               </td>
             </tr>
             <tr>
               <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>GIF does not provide a dedicated greyscale format.</td>
+              <td>GIF 不提供专用的灰度格式。</td>
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>GIF does not support true color pixels.</td>
+              <td>GIF 不支持真彩色像素。</td>
             </tr>
           </tbody>
         </table>
@@ -551,8 +544,7 @@ Typically, modern content should use [PNG](#png_便携式网络图形) for lossl
     <tr>
       <th scope="row">授权</th>
       <td>
-        While the GIF format itself is open, the LZW compression algorithm was covered by patents until the early 2000s.
-        As of July 7, 2004, all relevant patents have expired and the GIF format may be used freely
+        虽然 GIF 格式本身是开放的，但 LZW 压缩算法在本世纪初之前一直受专利保护。截至 2004 年 7 月 7 日，所有相关专利都已过期，GIF 格式可以自由使用。
       </td>
     </tr>
   </tbody>
@@ -560,24 +552,18 @@ Typically, modern content should use [PNG](#png_便携式网络图形) for lossl
 
 ### ICO（Microsoft Windows 图标）
 
-The ICO (Microsoft Windows icon) file format was designed by Microsoft for desktop icons of Windows systems.
-However, early versions of Internet Explorer introduced the ability for a website to provide an ICO file named `favicon.ico` in a website's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
+ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌面图标而设计的。不过，早期版本的 Internet Explorer 允许网站在其根目录中提供名为 `favicon.ico` 的 ICO 文件，以指定一个 **[favicon](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#在你的站点增加自定义图标)**——一个显示在收藏夹菜单和其他对网站图标有用的地方的图标。
 
-An ICO file can contain multiple icons, and begins with a directory listing details about each.
-Following the directory comes the data for the icons.
-Each icon's data can be either a [BMP](#bmp_位图文件) image without the file header, or a complete [PNG](#png_便携式网络图形) image (including the file header).
-If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
+一个 ICO 文件可以包含多个图标，文件开头有一个目录，列出每个图标的详细信息。目录之后是图标的数据。每个图标的数据既可以是不带文件头的 [BMP](#bmp_ 位图文件) 图像，也可以是完整的 [PNG](#png_ 便携式网络图形) 图像（包括文件头）。如果使用 ICO 文件，则应使用 BMP 格式，因为直到 Windows Vista 才添加了对 ICO 文件内的 PNG 的支持，而且这种支持可能并不完善。
 
-> **警告：** ICO files _should not_ be used in web content.
-> Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/en-US/docs/Web/HTML/Element/link#providing_icons_for_different_usage_contexts).
+> **警告：** ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标)所述，它们在收藏夹中的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
 
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">MIME 类型</th>
       <td>
-        <code>image/vnd.microsoft.icon</code> (official),
-        <code>image/x-icon</code> (used by Microsoft)
+        <code>image/vnd.microsoft.icon</code>（官方格式），<code>image/x-icon</code>（由 Microsoft 使用）
       </td>
     </tr>
     <tr>
@@ -591,7 +577,7 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+        Chrome、Edge、Firefox、Internet Explorer、Opera 和 Safari 浏览器的所有版本
       </td>
     </tr>
     <tr>
@@ -603,7 +589,7 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
       <td>
         <table class="standard-table">
           <caption>
-            Icons in BMP format
+            BMP 格式的图标
           </caption>
           <tbody>
             <tr>
@@ -615,40 +601,40 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
               <th scope="row">灰度</th>
               <td>1</td>
               <td>
-                Each bit represents a single pixel, which can be either black or white.
+                每个比特代表一个像素，可以是黑色或白色。
               </td>
             </tr>
             <tr>
               <th scope="row">真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by three values representing the red, green, and blue color components; each is <em>D</em> bits.
+                每个像素由三个值表示，分别代表红色、绿色和蓝色，每个值为 <em>D</em> 位。
               </td>
             </tr>
             <tr>
               <th scope="row">索引颜色</th>
-              <td>2, 4, and 8</td>
+              <td>2、4 和 8</td>
               <td>
-                Each pixel is represented by a value which is one 2, 4, or 8 bits, serving as an index into the color table.
+                每个像素由一个 2、4 或 8 位的值表示，作为色彩表的索引。
               </td>
             </tr>
             <tr>
               <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>BMP has no distinct grayscale format.</td>
+              <td>BMP 没有明显的灰度格式。</td>
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by four values representing the red, green, blue, and alpha color components; each is <em>D</em> bits.
+                BMP 没有明显的灰度格式。每个像素由四个值表示，分别代表红、绿、蓝和 Alpha 颜色分量；每个值为 <em>D</em> 位。
               </td>
             </tr>
           </tbody>
         </table>
         <table class="standard-table">
           <caption>
-            Icons in PNG format
+            PNG 格式的图标
           </caption>
           <tbody>
             <tr>
@@ -660,39 +646,35 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
               <th scope="row">灰度</th>
               <td>1, 2, 4, 8, and 16</td>
               <td>
-                Each pixel consists of a single <em>D</em>-bit value indicating the brightness of the greyscale pixel.
+                每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
             </tr>
             <tr>
               <th scope="row">真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by three <em>D</em>-bit values indicating the level of the red, green, and blue color components.
+                每个像素由三个<em>D</em>位值表示，分别代表红、绿、蓝三色的色阶。
               </td>
             </tr>
             <tr>
               <th scope="row">索引颜色</th>
-              <td>1, 2, 4, and 8</td>
+              <td>1、2、4 和 8</td>
               <td>
-                Each pixel is a <em>D</em>-bit value indicating an index into a color palette which is contained within a
-                <code><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code>
-                chunk in the APNG file; the colors in the palette all use an 8-bit depth.
+                每个像素都是一个 <em>D</em> 位值，表示调色板的索引，调色板包含在 APNG 文件的 <code><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code> 块中；调色板中的颜色都使用 8 位深度。
               </td>
             </tr>
             <tr>
               <th scope="row">带有灰度的真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by two <em>D</em>-bit values: the
-                intensity of the greyscale pixel and an alpha sample, indicating how opaque the pixel is.
+                每个像素由两个 <em>D</em> 位值表示：灰度像素的强度和表示像素不透明程度的 Alpha 样本。
               </td>
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
-                Each pixel is comprised of four <em>D</em>-pixel color
-                components: red, green, blue, and the alpha sample indicating how opaque the pixel is.
+                每个像素由四个 <em>D</em> 像素颜色成分组成：红色、绿色、蓝色和表示像素不透明程度的 alpha 样本。
               </td>
             </tr>
           </tbody>
@@ -702,8 +684,7 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
     <tr>
       <th scope="row">压缩</th>
       <td>
-        BMP-format icons nearly always use lossless compression, but lossy methods are available.
-        PNG icons are always compressed losslessly.
+        BMP 格式的图标几乎总是使用无损压缩，但也有有损压缩方法。PNG 图标始终使用无损压缩。
       </td>
     </tr>
     <tr>
@@ -741,7 +722,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+        Chrome、Edge、Firefox、Internet Explorer、Opera 和 Safari 浏览器的所有版本
       </td>
     </tr>
     <tr>
@@ -769,7 +750,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
               <th scope="row">真彩色</th>
               <td>8</td>
               <td>
-                Each pixel is described by the red, blue, and green color components, each of which is 8 bits.
+                每个像素由红、蓝、绿三种颜色分量描述，每种颜色分量为 8 位。
               </td>
             </tr>
             <tr>
@@ -843,49 +824,49 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Basic support</th>
+              <th scope="row">基本支持</th>
               <td>1</td>
               <td>12</td>
               <td>1</td>
               <td>5</td>
-              <td>3.5.1 (Presto)<br />15 (Blink)</td>
+              <td>3.5.1（Presto）<br />15（Blink）</td>
               <td>1</td>
             </tr>
             <tr>
-              <th scope="row">Alpha channel</th>
+              <th scope="row">Alpha 通道</th>
               <td>1</td>
               <td>12</td>
               <td>1</td>
               <td>5</td>
-              <td>6 (Presto)<br />All (Blink)</td>
+              <td>6（Presto）<br />所有（Blink）</td>
               <td>1</td>
             </tr>
             <tr>
-              <th scope="row">Gamma correction</th>
-              <td>no</td>
-              <td>yes</td>
+              <th scope="row">伽玛校正</th>
+              <td>否</td>
+              <td>是</td>
               <td>1</td>
               <td>8</td>
               <td>1</td>
-              <td>broken</td>
+              <td>损坏的</td>
             </tr>
             <tr>
-              <th scope="row">Color correction</th>
-              <td>no</td>
-              <td>yes</td>
+              <th scope="row">颜色校正</th>
+              <td>否</td>
+              <td>是</td>
               <td>3</td>
               <td>9</td>
-              <td>no</td>
-              <td>no</td>
+              <td>否</td>
+              <td>否</td>
             </tr>
             <tr>
-              <th scope="row">Interlacing</th>
-              <td>no</td>
+              <th scope="row">插帧</th>
+              <td>否</td>
               <td>?</td>
               <td>1</td>
-              <td>broken</td>
+              <td>损坏的</td>
               <td>3.5.1</td>
-              <td>no</td>
+              <td>否</td>
             </tr>
           </tbody>
         </table>
@@ -911,12 +892,12 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
               <th scope="row">灰度</th>
               <td>1, 2, 4, 8, and 16</td>
               <td>
-                Each pixel consists of a single <em>D</em>-bit value indicating the brightness of the greyscale pixel.
+                每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
             </tr>
             <tr>
               <th scope="row">真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
                 Each pixel is represented by three <em>D</em>-bit values
                 indicating the level of the red, green, and blue color components.
@@ -934,7 +915,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
             </tr>
             <tr>
               <th scope="row">带有灰度的真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
                 Each pixel is represented by two <em>D</em>-bit values: the
                 intensity of the greyscale pixel and an alpha sample, indicating how opaque the pixel is.
@@ -942,7 +923,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
-              <td>8 and 16</td>
+              <td>8 和 16</td>
               <td>
                 Each pixel is comprised of four <em>D</em>-pixel color components: red, green, blue, and the alpha sample indicating how opaque the pixel is.
               </td>
@@ -1028,7 +1009,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
               <td>12</td>
               <td>3</td>
               <td>9</td>
-              <td>10 (Presto)<br />15 (Blink)</td>
+              <td>10（Presto）<br />15（Blink）</td>
               <td>3.2</td>
             </tr>
             <tr>
@@ -1039,7 +1020,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
               <td>12</td>
               <td>4</td>
               <td>9</td>
-              <td>10 (Presto)<br />15 (Blink)</td>
+              <td>10（Presto）<br />15（Blink）</td>
               <td>9</td>
             </tr>
           </tbody>
@@ -1048,7 +1029,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
-      <td>Unlimited</td>
+      <td>无限制</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -1166,7 +1147,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
               <th scope="row">灰度</th>
               <td>4 and 8</td>
               <td>
-                Each pixel consists of a single <em>D</em>-bit value indicating the brightness of the greyscale pixel.
+                每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
             </tr>
             <tr>
@@ -1277,7 +1258,7 @@ Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PN
               <td>18</td>
               <td>65</td>
               <td>no</td>
-              <td>11.10 (Presto)<br />15 (Blink)</td>
+              <td>11.10（Presto）<br />15（Blink）</td>
               <td>14</td>
             </tr>
             <tr>
@@ -1286,7 +1267,7 @@ Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PN
               <td>18</td>
               <td>65</td>
               <td>no</td>
-              <td>12.10 (Presto)<br />15 (Blink)</td>
+              <td>12.10（Presto）<br />15（Blink）</td>
               <td>14</td>
             </tr>
             <tr>
@@ -1350,7 +1331,7 @@ static unsigned char square8_bits[] = {
   <tbody>
     <tr>
       <th scope="row">MIME 类型</th>
-      <td><code>image/xbm</code>, <code>image-xbitmap</code></td>
+      <td><code>image/xbm</code>、<code>image-xbitmap</code></td>
     </tr>
     <tr>
       <th scope="row">文件扩展名</th>
@@ -1358,15 +1339,15 @@ static unsigned char square8_bits[] = {
     </tr>
     <tr>
       <th scope="row">规范</th>
-      <td>None</td>
+      <td>无</td>
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
-      <td>Firefox 1–3.5, Internet Explorer 1–5</td>
+      <td>Firefox 1–3.5、Internet Explorer 1–5</td>
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
-      <td>Unlimited</td>
+      <td>无限制</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
