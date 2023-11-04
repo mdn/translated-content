@@ -2,7 +2,7 @@
 title: Firefox 118 for developers
 slug: Mozilla/Firefox/Releases/118
 l10n:
-  sourceCommit: c75b7911b520a770c081003cf0e3baaf7034adaf
+  sourceCommit: 7ac593ab3dc07119665f7988539f869d810a499e
 ---
 
 {{FirefoxSidebar}}
@@ -50,7 +50,6 @@ l10n:
 - {{domxref("RTCRtpTransceiver.currentDirection")}} および {{domxref("RTCRtpTransceiver.direction")}} プロパティで、トランシーバーが停止したかを示す値 `"stopped"` をサポートしました。これは、非推奨の {{domxref("RTCRtpTransceiver.stopped")}} プロパティに代わって使用するべきです ([Firefox bug 1568296](https://bugzil.la/1568296))。
 - {{domxref("RTCPeerConnection.getTransceivers()")}} が返す配列で、停止したトランシーバーを除外するようになりました。同様に {{domxref("RTCPeerConnection.getReceivers()")}} および {{domxref("RTCPeerConnection.getSenders()")}} が、停止したトランシーバーに関連づけられたレシーバーおよびセンダーを除外します ([Firefox bug 1568296](https://bugzil.la/1568296))。
 - [`TextMetrics.emHeightDescent`](/ja/docs/Web/API/TextMetrics/emHeightDescent) および [`TextMetrics.emHeightAscent`](/ja/docs/Web/API/TextMetrics/emHeightAscent) プロパティをサポートしました (Firefox bug [1841692](https://bugzil.la/1841692))。
-- [`CSSStyleRule`](/ja/docs/Web/API/CSSStyleRule) が、[`CSSRule`](/ja/docs/Web/API/CSSRule) から直接継承するのではなく [`CSSGroupingRule`](/ja/docs/Web/API/CSSGroupingRule) から継承するようになりました。その結果 [`cssRules`](/ja/docs/Web/API/CSSGroupingRule/cssRules) プロパティと、[`deleteRule()`](/ja/docs/Web/API/CSSGroupingRule/cssRules) および [`insertRule()`](/ja/docs/Web/API/CSSGroupingRule/insertRule) メソッドを追加実装します (Firefox bug [1846251](https://bugzil.la/1846251))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
