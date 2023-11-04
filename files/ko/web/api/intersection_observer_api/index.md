@@ -1,11 +1,13 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
+l10n:
+  sourceCommit: 6f0b1e294dc3aa8d6423df8aae059081a3464676
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
 
-Intersection Observer API는 상위 요소 또는 최상위 문서의 {{Glossary("viewport")}} 와 대상 요소 사이의 변화를 비동기적으로 관찰할 수 있는 수단을 제공합니다.
+Intersection Observer API는 상위 요소 또는 최상위 문서의 {{Glossary("viewport")}}와 대상 요소 사이의 변화를 비동기적으로 관찰할 수 있는 수단을 제공합니다.
 
 역사적으로, 요소의 가시성 또는 관련된 두 요소 사이의 상대적 가시성을 감지하는 것은 해결책을 신뢰할 수 없고 브라우저와 사용자가 접근하는 사이트를 느리게 만드는 어려운 작업이었습니다. Web이 성숙해짐에 따라, 이러한 종류의 정보의 요구가 늘어났습니다. 교차 정보는 다음과 같은 많은 이유로 필요합니다.
 
@@ -14,7 +16,7 @@ Intersection Observer API는 상위 요소 또는 최상위 문서의 {{Glossary
 - 광고 수익 산정을 위해 광고 가시성을 보고합니다.
 - 사용자가 결과를 볼 수 있을지 여부에 따라 작업 또는 애니메이션 프로세스를 수행할지 여부를 결정합니다.
 
-과거에 교차 감지 구현은 영향을 받는 모든 요소에 대해 필요한 정보를 축적하기 위해 이벤트 처리기와 {{domxref("Element.getBoundingClientRect()")}} 와 같은 메서드를 호출하는 루프를 포함하였습니다. 모든 코드가 메인 스레드에서 실행되기 때문에, 이 중 하나라도 성능 문제를 일으킬 수 있습니다. 이러한 테스트와 함께 사이트가 로드 될 때, 완전히 못생겨질 수 있었습니다.
+과거에 교차 감지 구현은 영향을 받는 모든 요소에 대해 필요한 정보를 축적하기 위해 이벤트 처리기와 {{domxref("Element.getBoundingClientRect()")}}와 같은 메서드를 호출하는 루프를 포함하였습니다. 모든 코드가 메인 스레드에서 실행되기 때문에, 이 중 하나라도 성능 문제를 일으킬 수 있습니다. 이러한 테스트와 함께 사이트가 로드 될 때, 완전히 못생겨질 수 있었습니다.
 
 무한 스크롤을 사용하는 웹 페이지를 생각해봅시다. 주기적으로 페이지에 배치되는 광고를 관리하기 위해 공급업체가 제공하는 라이브러리를 사용하고, 여기저기에 애니메이션 그래픽이 있으며, 공지 박스 같은 것들을 그리는 사용자 정의 라이브러리도 사용합니다. 이 각각에는 해당 교차 감지 루틴이 있고 모두 메인 스레드에서 실행됩니다. 웹 사이트 제작자는 그들이 사용하는 두 가지 라이브러리에 들어있는 내부 작업에 대해서 조금만 알기 때문에 이러한 일이 일어나는 지도 깨닫지 못할 것입니다. 유저가 페이지를 스크롤 할 때, 이러한 교차 감지 루틴은 스크롤 처리 코드가 실행되는 동안 지속적으로 발생하여 사용자가 브라우저, 웹사이트, 컴퓨터에 불만을 느끼게 합니다.
 
@@ -29,7 +31,7 @@ Intersection Observer API는 다음과 같은 상황이 발생했을 때 호출�
 - **대상** 요소는 기기의 뷰포트 또는 특정 요소와 교차합니다. 특정 요소는 Intersection Observer API의 목적에 따라 **루트 요소** 또는 **루트**라고 불립니다.
 - observer가 최초로 대상 요소를 관찰하라고 요청 받은 시점 입니다.
 
-일반적으로, 대상 요소와 가장 가까운 스크롤 가능한 상위 요소나 타겟요소가 스크롤 가능한 요소의 하위 요소가 아닌 경우, 장치 뷰포트와 관련된 교차 변화를 관찰하고 싶어합니다. 장치 뷰포트와 관련된 교차를 관찰하기 위해서는 `root` 옵션에 `null` 을 지정해야 합니다. 교차 관찰자 옵션에 대한 더 자세한 설명을 위해서 계속 읽어야 합니다.
+일반적으로, 대상 요소와 가장 가까운 스크롤 가능한 상위 요소나 타겟요소가 스크롤 가능한 요소의 하위 요소가 아닌 경우, 장치 뷰포트와 관련된 교차 변화를 관찰하고 싶어합니다. 장치 뷰포트와 관련된 교차를 관찰하기 위해서는 `root` 옵션에 `null`을 지정해야 합니다. 교차 관찰자 옵션에 대한 더 자세한 설명을 위해서 계속 읽어야 합니다.
 
 뷰포트를 루트로 사용하던지 다른 요소들을 루트로 사용하던지, API는 같은 방식으로 동작하여 대상 요소의 가시성이 변화하여 요청한 양만큼 루트와 교차할 때마다 사용자가 제공한 콜백함수를 실행합니다.
 
@@ -75,7 +77,7 @@ observer.observe(target);
 // 대상을 관찰자에 할당할 때까지 기다립니다. (타겟이 현재 보이지 않더라도)
 ```
 
-언제든지 타겟 요소가 `IntersectionObserver` 에 지정된 역치 값을 만족시키면, 콜백은 호출됩니다. 콜백은 {{domxref("IntersectionObserverEntry")}} 객체와 관찰자 목록을 받습니다.
+언제든지 타겟 요소가 `IntersectionObserver`에 지정된 역치 값을 만족시키면, 콜백은 호출됩니다. 콜백은 {{domxref("IntersectionObserverEntry")}} 객체와 관찰자 목록을 받습니다.
 
 ```js
 let callback = (entries, observer) => {
@@ -95,7 +97,7 @@ let callback = (entries, observer) => {
 
 콜백이 수신한 엔트리 목록은 교차 상태의 변화를 보고한 각 대상에 대한 하나의 엔트리를 포함합니다. 엔트리가 현재 루트와 교차하는 요소를 나타내는지 보기 위해 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 속성 값을 확인합니다.
 
-콜백이 메인스레드에서 실행되는 것을 유의해야 합니다. 가능한 한 최대한 빨리 동작해야 합니다. 만약 시간 소비가 필요한 일이 마무리 되어야 한다면, {{domxref("Window.requestIdleCallback()")}} 을 사용하세요.
+콜백이 메인스레드에서 실행되는 것을 유의해야 합니다. 가능한 한 최대한 빨리 동작해야 합니다. 만약 시간 소비가 필요한 일이 마무리 되어야 한다면, {{domxref("Window.requestIdleCallback()")}}을 사용하세요.
 
 또한, `root` 옵션을 지정했다면, 대상은 반드시 루트 요소의 하위 요소이어야만 한다는 점을 명심해야 합니다.
 
@@ -107,7 +109,7 @@ Intersection Observer API가 고려하는 모든 영역은 직사각형입니다
 
 #### 교차 루트와 루트 여백
 
-컨테이너와 요소의 교차를 따라가기 전에, 우리는 컨테이너가 무엇인지를 알아야 합니다. 컨테이너는 **교차 루트** 또는 **루트 요소** 입니다. 관찰 대상 요소의 상위 요소인 document의 특정 요소이거나 컨테이너로 문서 뷰포트를 사용하기 위한 `null` 이 될 수 있습니다.
+컨테이너와 요소의 교차를 따라가기 전에, 우리는 컨테이너가 무엇인지를 알아야 합니다. 컨테이너는 **교차 루트** 또는 **루트 요소** 입니다. 관찰 대상 요소의 상위 요소인 document의 특정 요소이거나 컨테이너로 문서 뷰포트를 사용하기 위한 `null`이 될 수 있습니다.
 
 **루트 교차 직사각형**은 대상 요소를 확인하기 위한 직사각형입니다. 이 직사각형은 다음과 같이 결정됩니다.
 
@@ -115,7 +117,7 @@ Intersection Observer API가 고려하는 모든 영역은 직사각형입니다
 - 만약 교차 루트에 overflow clip이 있다면, 루트 교차 직사각형은 루트 요소의 컨텐츠 역역입니다.
 - 위 두 가지 경우가 아니라면, root 교차 직사각형은 교차 루트 경계 클라이언트 직사각형입니다.({{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}}를 호출하여 반환된)
 
-루트 교차 직사각형은 {{domxref("IntersectionObserver")}}를 생성할 때, **root margin** , `rootMargin`을 설정함으로 인해 조정될 수 있습니다. `rootMargin` 값은 최종 교차 루트 경계 (콜백이 실행될 때 {{domxref("IntersectionObserverEntry.rootBounds")}} 에 공개된)를 생성하기 위해 교차 루트 경계 박스의 각 측면을 더해 오프셋을 정의합니다.
+루트 교차 직사각형은 {{domxref("IntersectionObserver")}}를 생성할 때, **root margin** , `rootMargin`을 설정함으로 인해 조정될 수 있습니다. `rootMargin` 값은 최종 교차 루트 경계 (콜백이 실행될 때 {{domxref("IntersectionObserverEntry.rootBounds")}}에 공개된)를 생성하기 위해 교차 루트 경계 박스의 각 측면을 더해 오프셋을 정의합니다.
 
 #### Thresholds
 
@@ -127,7 +129,7 @@ Intersection Observer API가 고려하는 모든 영역은 직사각형입니다
 
 엔트리의 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 속성을 관찰함으로써 대상이 현재 루트를 교차하는 것을 볼 수 있습니다. 만약 해당 값이 `true` 라면, 대상은 최소한 부분적으로 루트 요소나 문서와 교차하고 있습니다. 이를 통해 엔트리는 교차하는 요소에서 더 이상 교차하지 않는 요소로의 전환을 나타내거나 교차하지 않음에서 교차하는 전환으로 나타낼 수 있습니다.
 
-교차가 정확이 두 개 사이의 경계 또는 {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} 가 0인 영역을 따르는 경우에 발생하는 무조건 교차하는 직사각형이 존재할 수 있다는 것을 주목해야 합니다. 경계선을 공유하는 대상과 루트의 상태는 교차 상태로의 전환이 충분하지 않다고 여겨질 수 있습니다.
+교차가 정확이 두 개 사이의 경계 또는 {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}}가 0인 영역을 따르는 경우에 발생하는 무조건 교차하는 직사각형이 존재할 수 있다는 것을 주목해야 합니다. 경계선을 공유하는 대상과 루트의 상태는 교차 상태로의 전환이 충분하지 않다고 여겨질 수 있습니다.
 
 어떻게 역치 값이 동작하는 지를 느껴보기 위해서, 아래 상자를 스크롤 해봅시다. 그 안의 각 색칠된 상자는 네 모서리의 보이는 영역의 백분율을 보여주고, 따라서 컨테이너를 스크롤할 때 시간이 지남에 따라 이 비율이 변화하는 것을 볼 수 있습니다. 각 상자는 다른 역치 값을 가지고 있습니다.
 
@@ -305,11 +307,11 @@ startup();
 
 브라우저는 다음과 같이 최종 교차 직사각형을 계산합니다. 교차가 일어날 때를 더 정확히 이해하기 위해서 아래 순서를 이해하는 것은 도움이 됩니다.
 
-1. 대상 요소의 경계 직사각형 (즉, 요소를 구성하는 모든 컴포넌트의 경계 상자를 완전히 둘러싸는 제일 작은 직사각형)은 타겟의 {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} 로부터 얻습니다. 이건 아마 가장 큰 교차 직사각형입니다. 아래 남은 순서에서 교차 되지 않는 어떤 부분도 제거합니다.
+1. 대상 요소의 경계 직사각형 (즉, 요소를 구성하는 모든 컴포넌트의 경계 상자를 완전히 둘러싸는 제일 작은 직사각형)은 타겟의 {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}}로부터 얻습니다. 이건 아마 가장 큰 교차 직사각형입니다. 아래 남은 순서에서 교차 되지 않는 어떤 부분도 제거합니다.
 2. 대상의 직계 상위 블록에서 시작하여 밖으로 뻗어 나가면서, 포함된 블록의 잘라낸 조각이 있는 경우 교차 직사각형에 적용됩니다. 블록의 잘라낸 조각은 두 개 블록의 교차와 {{cssxref("overflow")}} 속성에 의해 특정된 잘라내기 모드가 있다면 이를 기반으로 결정됩니다. `overflow` 를 `visible` 이 아닌 것에 설정하면 clipping이 발생할 수 있습니다.
-3. 포함된 요소 중 하나가 중첩된 브라우징 컨텍스트({{HTMLElement("iframe")}} 에 들어있는 문서와 같은)의 루트라면, 교차 사각형은 포함된 컨텍스트의 뷰포트에 고정되고, 컨테이너를 따라 컨테이너의 포함된 블록과 위쪽으로의 반복이 계속됩니다. `<iframe>` 의 최상단 요소에 도달하면, 교차 사각형은 프레임의 뷰포트의 고정되고, 그 프레임의 부모 요소는 교차 루트를 따라 반복된 다음 블록이 됩니다.
+3. 포함된 요소 중 하나가 중첩된 브라우징 컨텍스트({{HTMLElement("iframe")}}에 들어있는 문서와 같은)의 루트라면, 교차 사각형은 포함된 컨텍스트의 뷰포트에 고정되고, 컨테이너를 따라 컨테이너의 포함된 블록과 위쪽으로의 반복이 계속됩니다. `<iframe>` 의 최상단 요소에 도달하면, 교차 사각형은 프레임의 뷰포트의 고정되고, 그 프레임의 부모 요소는 교차 루트를 따라 반복된 다음 블록이 됩니다.
 4. 위쪽으로의 반복이 교차 루트에 도달하면, 결과 사각형이 교차 루트의 교차 공간에 매핑됩니다.
-5. 결과 사각형은 [root intersection rectangle](#root-intersection-rectangle) 과 교차하여 업데이트 됩니다.
+5. 결과 사각형은 [root intersection rectangle](#root-intersection-rectangle)과 교차하여 업데이트 됩니다.
 6. 최종적으로 이 사각형이 대상 {{domxref("document")}} 의 교차 공간에 매핑됩니다.
 
 ### 교차 변화 콜백
@@ -339,11 +341,11 @@ const intersectionCallback = (entries) => {
 - {{domxref("IntersectionObserver")}}
   - : Intersection Observer API의 주요 인터페이스. 같은 교차 설정으로 개수 상관 없이 대상 요소를 관찰할 수 있는 관찰자 생성과 관리를 위해 메서드를 제공합니다. 각 관찰자는 하나 또는 그 이상의 대상 요소와 공유된 상위 요소 또는 최상단 {{domxref("Document")}} {{Glossary('viewport')}} 사이의 교차 속에서 비동기적으로 변화를 감지할 수 있습니다. 상위 요소 또는 뷰포트는 **root** 로 불립니다.
 - {{domxref("IntersectionObserverEntry")}}
-  - : 대상 요소와 전환하는 특정 순간의 루트 컨테이너 사이의 교차를 말합니다. 이러한 종류의 객체는 `IntersectionObserver` 콜백의 입력 또는 {{domxref("IntersectionObserver.takeRecords()")}} 를 호출하는 오직 두 가지 방법으로만 얻을 수 있습니다.
+  - : 대상 요소와 전환하는 특정 순간의 루트 컨테이너 사이의 교차를 말합니다. 이러한 종류의 객체는 `IntersectionObserver` 콜백의 입력 또는 {{domxref("IntersectionObserver.takeRecords()")}}를 호출하는 오직 두 가지 방법으로만 얻을 수 있습니다.
 
 ## 간단한 예제
 
-이 간단한 예제는 대상 요소가 어느 정도 가시화 되는지에 따라 색상과 투명도가 변화합니다. [Intersection Observer API를 통한 타이밍 요소 가시성](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility) , 일련의 요소(예: 광고)가 사용자에게 표시되는 시간을 측정하고, 통계를 기록하거나 요소를 업데이트 하여 정보에 반응하는 방법을 보여주는 더 광범위한 예제를 찾을 수 있습니다.
+이 간단한 예제는 대상 요소가 어느 정도 가시화 되는지에 따라 색상과 투명도가 변화합니다. [Intersection Observer API를 통한 타이밍 요소 가시성](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), 일련의 요소(예: 광고)가 사용자에게 표시되는 시간을 측정하고, 통계를 기록하거나 요소를 업데이트 하여 정보에 반응하는 방법을 보여주는 더 광범위한 예제를 찾을 수 있습니다.
 
 ### HTML
 
@@ -357,7 +359,7 @@ const intersectionCallback = (entries) => {
 
 ### CSS
 
-CSS는 이 예제에서 그다지 중요하지 않습니다. 요소를 배치하고 {{cssxref("background-color")}} 와 {{cssxref("border")}} 속성이 [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) 에 참여할 수 있도록 설정하여, 요소가 더 많이 혹은 더 적게 보이지 않을 떄 요소의 변화에 영향을 주기 위해 사용됩니다.
+CSS는 이 예제에서 그다지 중요하지 않습니다. 요소를 배치하고 {{cssxref("background-color")}}와 {{cssxref("border")}} 속성이 [CSS transitions](/ko/docs/Web/CSS/CSS_transitions)에 참여할 수 있도록 설정하여, 요소가 더 많이 혹은 더 적게 보이지 않을 때 요소의 변화에 영향을 주기 위해 사용됩니다.
 
 ```css
 #box {
@@ -428,11 +430,11 @@ window.addEventListener(
 - `decreasingColor`
   - : 비슷하게, 가시성 비율이 감소할 때 적용할 색상을 정의한 문자열입니다.
 
-{{domxref("Window/load_event", "load")}} 이벤트를 수신을 시작하기 위해 {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} 를 호출합니다. 페이지 로딩이 끝나고 나면, {{domxref("Document.querySelector", "querySelector()")}} 를 사용하여 `"box"` ID를 가진 요소에 대한 참조를 얻고, 곧 교차 관찰자 구축 및 설치를 처리하기 위해 생성할 `createObserver()` 메서드를 호출합니다.
+{{domxref("Window/load_event", "load")}} 이벤트를 수신을 시작하기 위해 {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}를 호출합니다. 페이지 로딩이 끝나고 나면, {{domxref("Document.querySelector", "querySelector()")}}를 사용하여 `"box"` ID를 가진 요소에 대한 참조를 얻고, 곧 교차 관찰자 구축 및 설치를 처리하기 위해 생성할 `createObserver()` 메서드를 호출합니다.
 
 #### 교차 관찰자 생성
 
-`createObserver()` 메서드는 페이지 로드가 완료되었을 때 호출되어 실제로 새로운 {{domxref("IntersectionObserver")}} 를 생성하고 대상 요소를 관찰하는 프로세스를 시작합니다.
+`createObserver()` 메서드는 페이지 로드가 완료되었을 때 호출되어 실제로 새로운 {{domxref("IntersectionObserver")}}를 생성하고 대상 요소를 관찰하는 프로세스를 시작합니다.
 
 ```js
 function createObserver() {
@@ -449,13 +451,13 @@ function createObserver() {
 }
 ```
 
-이는 관찰자에 대한 설정을 포함하는 `options` 객체를 설정하는 것으로부터 시작합니다. 문서의 뷰포트를 기준으로 대상 요소의 가시성 변화를 관찰하려고 하므로 `root` 는 `null` 입니다. 여백은 필요 없기 때문에 여백 오프셋인 `rootMargin` 을 "0px"로 지정합니다. 이는 관찰자가 대상 요소의 경계와 뷰포트 사이의 어떤 더해진 (혹은 빠진) 공간 없이 교차 변화를 관찰하는 것을 야기합니다.
+이는 관찰자에 대한 설정을 포함하는 `options` 객체를 설정하는 것으로부터 시작합니다. 문서의 뷰포트를 기준으로 대상 요소의 가시성 변화를 관찰하려고 하므로 `root`는 `null` 입니다. 여백은 필요 없기 때문에 여백 오프셋인 `rootMargin`을 "0px"로 지정합니다. 이는 관찰자가 대상 요소의 경계와 뷰포트 사이의 어떤 더해진 (혹은 빠진) 공간 없이 교차 변화를 관찰하는 것을 야기합니다.
 
 가시성 비율 임계값 목록인 `threshold` 는 `buildThresholdList()` 함수를 통해 만들어집니다. 임계값 목록은 이 예시에서 수가 많고 그 수를 조정할 수 있으므로 계획적으로 만들어집니다.
 
-`options` 가 준비되면, {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 생성자를 호출하고, 교차 지점이 임계값 중 하나를 교차할 때 호출될 함수인 `handleIntersect()` 와 옵션의 집합을 지정하여 새로운 관찰자를 생성합니다. 그리고 반환된 관찰자에 {{domxref("IntersectionObserver.observe", "observe()")}} 를 호출하여 원하는 대상 요소에 전달합니다.
+`options`가 준비되면, {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 생성자를 호출하고, 교차 지점이 임계값 중 하나를 교차할 때 호출될 함수인 `handleIntersect()`와 옵션의 집합을 지정하여 새로운 관찰자를 생성합니다. 그리고 반환된 관찰자에 {{domxref("IntersectionObserver.observe", "observe()")}}를 호출하여 원하는 대상 요소에 전달합니다.
 
-원한다면 각 요소에 대해 `observer.observe()` 를 호출하여 뷰포트에 대한 가시성 교차 변화를 여러 요소에서 모니터링할 수 있도록 선택할 수 있습니다.
+원한다면 각 요소에 대해 `observer.observe()`를 호출하여 뷰포트에 대한 가시성 교차 변화를 여러 요소에서 모니터링할 수 있도록 선택할 수 있습니다.
 
 #### Building the array of threshold ratios
 
@@ -476,7 +478,7 @@ function buildThresholdList() {
 }
 ```
 
-이렇게 하면 1과 `numSteps` 사이의 각 숫자 `i` 에 대해 `i/numSteps` 값을 `thresholds` 집합에 넣음으로써 0.0에서 1.0 사이의 비율인 각 임계값의 집합을 만듭니다. 또한 그 값을 포함하기 위해서 0을 넣습니다. 그 결과, `numSteps` (20) 의 기본값을 고려했을 때 임계값 집합은 다음과 같습니다.
+이렇게 하면 1과 `numSteps` 사이의 각 숫자 `i`에 대해 `i/numSteps` 값을 `thresholds` 집합에 넣음으로써 0.0에서 1.0 사이의 비율인 각 임계값의 집합을 만듭니다. 또한 그 값을 포함하기 위해서 0을 넣습니다. 그 결과, `numSteps`(20)의 기본값을 고려했을 때 임계값 집합은 다음과 같습니다.
 
 <table class="standard-table">
     <thead>
@@ -559,7 +561,7 @@ function buildThresholdList() {
 
 #### 교차 변화 처리
 
-대상 요소(이 예제에서 ID가 `"box"` 인 요소)가 공개되거나 가려져서 가시성 비율이 임계값 집합 중 하나를 교차하는 것을 브라우저가 감지할 때, 처리 함수인 `handleIntersect()` 를 호출합니다.
+대상 요소(이 예제에서 ID가 `"box"`인 요소)가 공개되거나 가려져서 가시성 비율이 임계값 집합 중 하나를 교차하는 것을 브라우저가 감지할 때, 처리 함수인 `handleIntersect()`를 호출합니다.
 
 ```js
 function handleIntersect(entries, observer) {
@@ -581,7 +583,7 @@ function handleIntersect(entries, observer) {
 }
 ```
 
-`entries` 목록에 있는 각 {{domxref("IntersectionObserverEntry")}} 에 대해 엔트리의 {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} 가 올라가고 있는지 확인합니다. 만약 올라가고 있다면, 대상의 {{cssxref("background-color")}} 을 `increasingColor` (기억하세요. 색상은 `"rgba(40, 40, 190, ratio)"` 입니다.) 의 문자열에 세팅하고, "ratio" 라는 단어를 엔트리의 `intersectionRatio` 로 대체합니다. 그 결과 색상만 변화하는 게 아니라, 대상 요소의 투명도도 변화합니다. 가시성 비율이 감소하면, 배경 색상의 알파 값은 같이 감소하므로 요소가 더 투명해집니다.
+`entries` 목록에 있는 각 {{domxref("IntersectionObserverEntry")}}에 대해 엔트리의 {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}}가 올라가고 있는지 확인합니다. 만약 올라가고 있다면, 대상의 {{cssxref("background-color")}}을 `increasingColor`(기억하세요. 색상은 `"rgba(40, 40, 190, ratio)"` 입니다.)의 문자열에 세팅하고, "ratio"라는 단어를 엔트리의 `intersectionRatio`로 대체합니다. 그 결과 색상만 변화하는 게 아니라, 대상 요소의 투명도도 변화합니다. 가시성 비율이 감소하면, 배경 색상의 알파 값은 같이 감소하므로 요소가 더 투명해집니다.
 
 비슷하게, 만약 `intersectionRatio` 가 감소하면, `decreasingColor` 문자열을 사용하고 대상 요소의 `background-color` 를 설정하기 전에 "ratio"라는 단어를 `intersectionRatio` 로 대체합니다.
 
@@ -593,7 +595,7 @@ function handleIntersect(entries, observer) {
 
 {{EmbedLiveSample('A_simple_example', 400, 400)}}
 
-더 광범위한 예제는 다음 링크에 있습니다. [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility).
+더 광범위한 예제는 다음 링크에 있습니다. [Timing element visibility with the Intersection Observer API](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility).
 
 ## Specifications
 
@@ -606,5 +608,5 @@ function handleIntersect(entries, observer) {
 ## See also
 
 - [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver)
-- [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
+- [Timing element visibility with the Intersection Observer API](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
 - {{domxref("IntersectionObserver")}} and {{domxref("IntersectionObserverEntry")}}
