@@ -310,7 +310,7 @@ startup();
 2. 대상의 직계 상위 블록에서 시작하여 밖으로 뻗어 나가면서, 포함된 블록의 잘라낸 조각이 있는 경우 교차 직사각형에 적용됩니다. 블록의 잘라낸 조각은 두 개 블록의 교차와 {{cssxref("overflow")}} 속성에 의해 특정된 잘라내기 모드가 있다면 이를 기반으로 결정됩니다. `overflow` 를 `visible` 이 아닌 것에 설정하면 clipping이 발생할 수 있습니다.
 3. 포함된 요소 중 하나가 중첩된 브라우징 컨텍스트({{HTMLElement("iframe")}}에 들어있는 문서와 같은)의 루트라면, 교차 사각형은 포함된 컨텍스트의 뷰포트에 고정되고, 컨테이너를 따라 컨테이너의 포함된 블록과 위쪽으로의 반복이 계속됩니다. `<iframe>` 의 최상단 요소에 도달하면, 교차 사각형은 프레임의 뷰포트의 고정되고, 그 프레임의 부모 요소는 교차 루트를 따라 반복된 다음 블록이 됩니다.
 4. 위쪽으로의 반복이 교차 루트에 도달하면, 결과 사각형이 교차 루트의 교차 공간에 매핑됩니다.
-5. 결과 사각형은 [root intersection rectangle](#root-intersection-rectangle)과 교차하여 업데이트 됩니다.
+5. 결과 사각형은 [root intersection rectangle](#root-intersection-rectangle)과 교차하여 갱신 됩니다.
 6. 최종적으로 이 사각형이 대상 {{domxref("document")}} 의 교차 공간에 매핑됩니다.
 
 ### 교차 변화 콜백
@@ -344,7 +344,7 @@ const intersectionCallback = (entries) => {
 
 ## 간단한 예제
 
-이 간단한 예제는 대상 요소가 어느 정도 가시화 되는지에 따라 색상과 투명도가 변화합니다. [Intersection Observer API를 통한 타이밍 요소 가시성](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), 일련의 요소(예: 광고)가 사용자에게 표시되는 시간을 측정하고, 통계를 기록하거나 요소를 업데이트 하여 정보에 반응하는 방법을 보여주는 더 광범위한 예제를 찾을 수 있습니다.
+이 간단한 예제는 대상 요소가 어느 정도 가시화 되는지에 따라 색상과 투명도가 변화합니다. [Intersection Observer API를 통한 타이밍 요소 가시성](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), 일련의 요소(예: 광고)가 사용자에게 표시되는 시간을 측정하고, 통계를 기록하거나 요소를 갱신하여 정보에 반응하는 방법을 보여주는 더 광범위한 예제를 찾을 수 있습니다.
 
 ### HTML
 
