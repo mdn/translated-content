@@ -113,7 +113,7 @@ Intersection Observer API가 고려하는 모든 영역은 직사각형입니다
 **루트 교차 직사각형**은 대상 요소를 확인하기 위한 직사각형입니다. 이 직사각형은 다음과 같이 결정됩니다.
 
 - 만약 교차 루트가 절대적인 루트라면(즉, 최상단 {{domxref("Document")}}), 루트 교차 직사각형은 뷰포트 직사각형입니다.
-- 만약 교차 루트에 overflow clip이 있다면, 루트 교차 직사각형은 루트 요소의 컨텐츠 역역입니다.
+- 교차 루트에 overflow clip이 있는 경우, 루트 교차 직사각형은 루트 요소의 컨텐츠 영역입니다.
 - 위 두 가지 경우가 아니라면, root 교차 직사각형은 교차 루트 경계 클라이언트 직사각형입니다.({{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}}를 호출하여 반환된)
 
 루트 교차 직사각형은 {{domxref("IntersectionObserver")}}를 생성할 때, **root margin** , `rootMargin`을 설정함으로 인해 조정될 수 있습니다. `rootMargin` 값은 최종 교차 루트 경계 (콜백이 실행될 때 {{domxref("IntersectionObserverEntry.rootBounds")}}에 공개된)를 생성하기 위해 교차 루트 경계 박스의 각 측면을 더해 오프셋을 정의합니다.
