@@ -55,7 +55,7 @@ threshold가 1.0이라는 의미는 `root` 옵션으로 지정된 요소 내에�
 
 #### 교차 관찰자 옵션
 
-{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 생성자에 전달된 `options` 객체는 observer의 콜백이 호출될 때 상황을 제어할 수 있게 해줍니다. 다음과 같은
+{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 생성자에 전달되는 `options` 객체는 observer의 콜백이 언제 호출되는지를 제어할 수 있게 해줍니다. 이 객체는 다음과 같은 필드를 가지고 있습니다.
 
 - `root`
   - : 대상 가시성을 체크하기 위한 뷰포트로 사용되는 요소. 반드시 타겟의 상위 요소이어야 합니다. 만약 뷰포트를 지정하지 않거나 `null` 이면 브라우저 뷰포트가 기본으로 설정됩니다.
