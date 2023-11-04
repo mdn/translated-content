@@ -19,7 +19,7 @@ new WeakSet(iterable)
 ### 参数
 
 - `iterable` {{optional_inline}}
-  - : 如果传入了一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)，这个对象的所有元素都会被添加到新的 `WeakSet` 对象中。空值会被视为未定义。
+  - : 如果传入了一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)，这个对象的所有元素都会被添加到新的 `WeakSet` 对象中。`null` 会被视为 `undefined`。
 
 ## 示例
 
