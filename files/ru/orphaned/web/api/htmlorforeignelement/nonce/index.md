@@ -22,9 +22,7 @@ HTMLElement.nonce = nonce
 
 ## Specifications
 
-| Specification                                                    | Status                           | Comment                     |
-| ---------------------------------------------------------------- | -------------------------------- | --------------------------- |
-| {{SpecName('HTML WHATWG','#attr-nonce','nonce')}} | {{Spec2('HTML WHATWG')}} | Первоначальное определение. |
+{{Specifications}}
 
 ## Browser Compatibility
 

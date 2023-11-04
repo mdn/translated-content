@@ -469,8 +469,7 @@ bird.sayBye();  // Bye from Ferrari
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
-- [Gentle explanation of 'this' keyword in JavaScript](http://rainsoft.io/gentle-explanation-of-this-in-javascript/)
-- Getting the global context: {{jsxref("globalThis")}}
+- {{jsxref("globalThis")}}

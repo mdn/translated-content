@@ -118,7 +118,7 @@ xhrButtonAbort.addEventListener("click", () => {
 });
 ```
 
-#### Result
+#### 结果
 
 {{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
@@ -130,7 +130,7 @@ xhrButtonAbort.addEventListener("click", () => {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [Monitoring progress](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}、{{domxref("XMLHttpRequest/load_event", "load")}}、{{domxref("XMLHttpRequest/loadend_event", "loadend")}}、{{domxref("XMLHttpRequest/error_event", "error")}}、{{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [监测进度](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#监测进度)

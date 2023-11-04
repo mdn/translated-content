@@ -22,14 +22,14 @@ for (let step = 0; step < 5; step++) {
 
 JavaScript で提供されるループ文は以下のとおりです :
 
-- [for 文](#for_statement)
-- [do...while 文](#do...while_statement)
-- [while 文](#while_statement)
-- [label 文](#label_statement)
-- [break 文](#break_statement)
-- [continue 文](#continue_statement)
-- [for...in 文](#for...in_statement)
-- [for...of 文](#for...of_statement)
+- [for 文](#for_文)
+- [do...while 文](#do...while_文)
+- [while 文](#while_文)
+- [ラベルつき 文](#ラベルつき文)
+- [break 文](#break_文)
+- [continue 文](#continue_文)
+- [for...in 文](#for...in_文)
+- [for...of 文](#for...of_文)
 
 ## `for` 文
 
