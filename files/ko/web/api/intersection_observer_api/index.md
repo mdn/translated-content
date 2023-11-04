@@ -40,7 +40,6 @@ Intersection Observer API는 다음과 같은 상황이 발생했을 때 호출�
 ### 교차 관찰자 생성하기
 
 intersection observer는 생성자를 호출하고, threshold가 한 방향 혹은 다른 방향으로 교차할 때마다 실행하기 위한 callback 함수를 전달하여 생성합니다.
-Create the intersection observer by calling its constructor and passing it a callback function to be run whenever a threshold is crossed in one direction or the other:
 
 ```js
 let options = {
