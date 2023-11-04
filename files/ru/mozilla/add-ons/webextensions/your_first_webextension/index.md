@@ -51,17 +51,17 @@ cd borderify
 }
 ```
 
-- Первые три ключа: [`manifest_version`](/ru/Add-ons/WebExtensions/manifest.json/manifest_version), `name и version`, являются обязательными и содержат основные метаданные о дополнении.
-- [`description`](/ru/Add-ons/WebExtensions/manifest.json/description) не обязателен, но рекомендуется: это описание отображается в Менеджере Дополнений.
-- [`icons`](/ru/Add-ons/WebExtensions/manifest.json/icons) не обязателен, но рекомендуется: позволяет указать значок для дополнения, который будет виден в Менеджере Дополнений.
-- [`applications`](/ru/Add-ons/WebExtensions/manifest.json/applications) является обязательным для Firefox, и определяет ID дополнения. Он так же может использоваться для указания минимальной и максимальной версии Firefox, поддерживаемой расширением.
+- Первые три ключа: [`manifest_version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), `name и version`, являются обязательными и содержат основные метаданные о дополнении.
+- [`description`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) не обязателен, но рекомендуется: это описание отображается в Менеджере Дополнений.
+- [`icons`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) не обязателен, но рекомендуется: позволяет указать значок для дополнения, который будет виден в Менеджере Дополнений.
+- [`applications`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) является обязательным для Firefox, и определяет ID дополнения. Он так же может использоваться для указания минимальной и максимальной версии Firefox, поддерживаемой расширением.
 
-Самый интересный ключ здесь - это [`content_scripts`](/en-US/Add-ons/WebExtensions/manifest.json/content_scripts), который говорит Firefox загружать скрипт на Web страницах, чей URL совпадает с заданным шаблоном. В нашем случае, мы просим Firefox загрузить скрипт с названием "borderify.js" на всех HTTP или HTTPS страницах, полученных с "mozilla.org" или любого из его поддоменов.
+Самый интересный ключ здесь - это [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), который говорит Firefox загружать скрипт на Web страницах, чей URL совпадает с заданным шаблоном. В нашем случае, мы просим Firefox загрузить скрипт с названием "borderify.js" на всех HTTP или HTTPS страницах, полученных с "mozilla.org" или любого из его поддоменов.
 
-- [Узнать больше content scripts.](/ru/Add-ons/WebExtensions/Content_scripts)
-- [Узнать больше о match patterns](/ru/Add-ons/WebExtensions/Match_patterns).
+- [Узнать больше content scripts.](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [Узнать больше о match patterns](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
-> **Предупреждение:** [В некоторых случаях вам нужно указать ID для вашего дополнения](/ru/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID). Если вам нужно указать ID дополнения включите ключ [`applications`](/ru/Add-ons/WebExtensions/manifest.json/applications) в `manifest.json` и установите его свойство `gecko.id`:
+> **Предупреждение:** [В некоторых случаях вам нужно указать ID для вашего дополнения](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id). Если вам нужно указать ID дополнения включите ключ [`applications`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) в `manifest.json` и установите его свойство `gecko.id`:
 >
 > ```json
 > "applications": {
@@ -75,7 +75,7 @@ cd borderify
 
 Дополнение должно иметь иконку (значок). Эта иконка будет показана в списке дополнений в Менеджере Дополнений. Наш файл manifest.json сообщает, что иконка будет находиться в файле "icons/border-48.png".
 
-Создайте директорию (папку) "icons" внутри директории "borderify" . Сохраните в ней иконку под именем "border-48.png". Вы можете использовать [иконку из нашего примера](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png), которая взята из набора иконок Google Material Design, и используется по лицензии [Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/).
+Создайте директорию (папку) "icons" внутри директории "borderify" . Сохраните в ней иконку под именем "border-48.png". Вы можете использовать [иконку из нашего примера](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png), которая взята из набора иконок Google Material Design, и используется по лицензии [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/).
 
 Вы можете использовать собственную иконку. Её размер должен быть 48x48 пикселей. Вы можете также использовать иконку размером 96x96 пикселей для отображения на мониторах высокого разрешения. В этом случае вам необходимо указать её в качестве свойства "96" объекта "`icons"` в файле manifest.json:
 
@@ -88,7 +88,7 @@ cd borderify
 
 Также вы можете создать иконку в формате SVG и она будет корректно масштабироваться.
 
-- [Узнать больше о ключе icons](/ru/Add-ons/WebExtensions/manifest.json/icons)
+- [Узнать больше о ключе icons](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
 
 ### borderify.js
 
@@ -100,7 +100,7 @@ document.body.style.border = "5px solid red";
 
 Этот скрипт будет встраиваться в страницу, которая совпадает с шаблоном, указанном в ключе `content_scripts` файла manifest.json. Этот скрипт имеет прямой доступ ко всему документу, как если бы он был загружен самой страницей.
 
-- [Узнать больше о content scripts](/ru/Add-ons/WebExtensions/Content_scripts)
+- [Узнать больше о content scripts](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 
 ## Пробуем
 
@@ -128,7 +128,7 @@ borderify/
 
 {{EmbedYouTube("WpUL3-qmenE")}}
 
-Также, вы можете запускать WebExtension из командной строки, используя [web-ext](/ru/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext).
+Также, вы можете запускать WebExtension из командной строки, используя [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/).
 
 ### Тестирование
 
@@ -142,7 +142,7 @@ borderify/
 
 > **Примечание:** Обратите внимание, что после изменения файла manifest.json, вы должны вручную перезагрузить своё дополнение. В настоящий момент это значит, что вам нужно перезагрузить Firefox, а затем снова загрузить своё дополнение на странице "about:debugging". Мы работаем над улучшением этого процесса.
 
-- [Узнать больше о временной установке дополнений](/ru/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk)
+- [Узнать больше о временной установке дополнений](/ru/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation#loading_from_disk)
 
 ## Упаковка и публикация
 
@@ -162,13 +162,13 @@ zip -r ../borderify.xpi *
 
 {{EmbedYouTube("HgtBYDWtH4w")}}
 
-- [Узнать больше об упаковке и инсталляции](/ru/Add-ons/WebExtensions/Packaging_and_installation)
+- [Узнать больше об упаковке и инсталляции](/ru/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation)
 - [Узнать больше о подписи и распространении](/ru/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)
 
 ## Что дальше?
 
 Теперь, когда вы имеете представление о разработке дополнений для Firefox, вы можете:
 
-- [Прочитать больше об анатомии WebExtensions](/ru/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [Создать более сложное WebExtensions](/ru/Add-ons/WebExtensions/Your_second_WebExtension)
-- [Прочитать больше об API JavaScript, доступном для WebExtensions](/ru/Add-ons/WebExtensions/API)
+- [Прочитать больше об анатомии WebExtensions](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [Создать более сложное WebExtensions](/ru/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
+- [Прочитать больше об API JavaScript, доступном для WebExtensions](/ru/docs/Mozilla/Add-ons/WebExtensions/API)
