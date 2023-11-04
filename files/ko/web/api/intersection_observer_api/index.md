@@ -76,7 +76,7 @@ observer.observe(target);
 // 대상을 관찰자에 할당할 때까지 기다립니다. (타겟이 현재 보이지 않더라도)
 ```
 
-언제든지 타겟 요소가 `IntersectionObserver`에 지정된 역치 값을 만족시키면, 콜백은 호출됩니다. 콜백은 {{domxref("IntersectionObserverEntry")}} 객체와 관찰자 목록을 받습니다.
+언제든지 타겟 요소가 `IntersectionObserver`에 지정된 임계값을 만족시키면, 콜백은 호출됩니다. 콜백은 {{domxref("IntersectionObserverEntry")}} 객체와 관찰자 목록을 받습니다.
 
 ```js
 let callback = (entries, observer) => {
@@ -120,22 +120,22 @@ Intersection Observer API가 고려하는 모든 영역은 직사각형입니다
 
 #### Thresholds
 
-매번 대상 요소가 얼마나 보이는지의 극미한 변화마다 보고하는 것보다 Intersection Observer API는 **thresholds** 를 사용합니다. 관찰자를 생성할 때, 하나 또는 하나 이상의 보이는 대상 요소의 백분율을 나타내는 숫자 값을 제공할 수 있습니다. 그런 다음, API는 이러한 역치 값을 넘어가는 가시성 변경 사항만 보고합니다.
+매번 대상 요소가 얼마나 보이는지의 극미한 변화마다 보고하는 것보다 Intersection Observer API는 **thresholds** 를 사용합니다. 관찰자를 생성할 때, 하나 또는 하나 이상의 보이는 대상 요소의 백분율을 나타내는 숫자 값을 제공할 수 있습니다. 그런 다음, API는 이러한 임계값을 넘어가는 가시성 변경 사항만 보고합니다.
 
-예를 들어, 대상의 가시성이 각 25% 지점보다 크거나 작을 때마다 보고를 받고 싶다면, 관찰자를 생성할 때 \[0, 0.25, 0.5, 0.75, 1]로 이루어진 역치 값 목록을 지정해야 합니다.
+예를 들어, 대상의 가시성이 각 25% 지점보다 크거나 작을 때마다 보고를 받고 싶다면, 관찰자를 생성할 때 \[0, 0.25, 0.5, 0.75, 1]로 이루어진 임계값 목록을 지정해야 합니다.
 
-콜백이 호출될 때, 어느 방향에서든 노출된 양이 역치 값 중 하나를 초과하는 루트 변화를 교차하는 정도가 관찰된 각 대상에 대한 `IntersectionObserverEntry` 객체 목록을 받습니다.
+콜백이 호출될 때, 어느 방향에서든 노출된 양이 임계값 중 하나를 초과하는 루트 변화를 교차하는 정도가 관찰된 각 대상에 대한 `IntersectionObserverEntry` 객체 목록을 받습니다.
 
 엔트리의 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 속성을 관찰함으로써 대상이 현재 루트를 교차하는 것을 볼 수 있습니다. 만약 해당 값이 `true` 라면, 대상은 최소한 부분적으로 루트 요소나 문서와 교차하고 있습니다. 이를 통해 엔트리는 교차하는 요소에서 더 이상 교차하지 않는 요소로의 전환을 나타내거나 교차하지 않음에서 교차하는 전환으로 나타낼 수 있습니다.
 
 교차가 정확이 두 개 사이의 경계 또는 {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}}가 0인 영역을 따르는 경우에 발생하는 무조건 교차하는 직사각형이 존재할 수 있다는 것을 주목해야 합니다. 경계선을 공유하는 대상과 루트의 상태는 교차 상태로의 전환이 충분하지 않다고 여겨질 수 있습니다.
 
-어떻게 역치 값이 동작하는 지를 느껴보기 위해서, 아래 상자를 스크롤 해봅시다. 그 안의 각 색칠된 상자는 네 모서리의 보이는 영역의 백분율을 보여주고, 따라서 컨테이너를 스크롤할 때 시간이 지남에 따라 이 비율이 변화하는 것을 볼 수 있습니다. 각 상자는 다른 역치 값을 가지고 있습니다.
+어떻게 임계값이 동작하는 지를 느껴보기 위해서, 아래 상자를 스크롤 해봅시다. 그 안의 각 색칠된 상자는 네 모서리의 보이는 영역의 백분율을 보여주고, 따라서 컨테이너를 스크롤할 때 시간이 지남에 따라 이 비율이 변화하는 것을 볼 수 있습니다. 각 상자는 다른 임계값을 가지고 있습니다.
 
-- 첫번째 상자는 각 가시성 백분율에 대한 역치 값을 가지고 있습니다. 즉, {{domxref("IntersectionObserver.thresholds")}} 목록은 `[0.00, 0.01, 0.02, /*…,*/ 0.99, 1.00]` 입니다.
-- 두번째 상자는 50% 지점에 하나의 역치 값을 가지고 있습니다.
-- 세번째 상자는 가시성의 10% 마다 역치 값을 가지고 있습니다. (0%, 10%, 20%, 등.).
-- 마지막 상자는 각 25% 마다 역치 값을 가지고 있습니다.
+- 첫번째 상자는 각 가시성 백분율에 대한 임계값을 가지고 있습니다. 즉, {{domxref("IntersectionObserver.thresholds")}} 목록은 `[0.00, 0.01, 0.02, /*…,*/ 0.99, 1.00]` 입니다.
+- 두번째 상자는 50% 지점에 하나의 임계값을 가지고 있습니다.
+- 세번째 상자는 가시성의 10% 마다 임계값을 가지고 있습니다. (0%, 10%, 20%, 등.).
+- 마지막 상자는 각 25% 마다 임계값을 가지고 있습니다.
 
 ```html hidden
 <template id="boxTemplate">
@@ -315,11 +315,11 @@ startup();
 
 ### 교차 변화 콜백
 
-루트 요소 내에 보이는 대상 요소의 양이 역치 값 가시성을 지날 때, {{domxref("IntersectionObserver")}} 객체의 콜백이 실행됩니다. 콜백은 모든 교차된 각 역치 값 중 하나씩, {{domxref("IntersectionObserverEntry")}} 객체들의 배열과 `IntersectionObserver` 객체 자체에 대한 참조를 입력으로 받습니다.
+루트 요소 내에 보이는 대상 요소의 양이 임계값 가시성을 지날 때, {{domxref("IntersectionObserver")}} 객체의 콜백이 실행됩니다. 콜백은 모든 교차된 각 임계값 중 하나씩, {{domxref("IntersectionObserverEntry")}} 객체들의 배열과 `IntersectionObserver` 객체 자체에 대한 참조를 입력으로 받습니다.
 
-목록에 있는 각 엔트리는 교차된 하나의 역치 값을 의미하는 {{domxref("IntersectionObserverEntry")}} 객체이고, 각 엔트리가 주어진 요소와 루트 요소가 얼마나 교차하는 지, 요소가 교차하고 있는지에 대한 여부, 그리고 전환이 발생한 위치를 설명합니다.
+목록에 있는 각 엔트리는 교차된 하나의 임계값을 의미하는 {{domxref("IntersectionObserverEntry")}} 객체이고, 각 엔트리가 주어진 요소와 루트 요소가 얼마나 교차하는 지, 요소가 교차하고 있는지에 대한 여부, 그리고 전환이 발생한 위치를 설명합니다.
 
-아래 예시에 나오는 코드 스니펫은 요소가 교차하지 않을 떄부터 루트를 최소 75% 이상 교차할 때 얼마나 전환하는 지를 세는 카운터를 유지하는 콜백을 보여줍니다. 역치 값이 0.0 (기본)인 콜백은 [approximately](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 불리언 값의 전환될 때 호출됩니다. 따라서 스니펫은 먼저 전환이 긍정적인지 확인하고, {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} 가 75%를 넘을 때 카운터가 증가합니다.
+아래 예시에 나오는 코드 스니펫은 요소가 교차하지 않을 떄부터 루트를 최소 75% 이상 교차할 때 얼마나 전환하는 지를 세는 카운터를 유지하는 콜백을 보여줍니다. 임계값이 0.0 (기본)인 콜백은 [approximately](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 불리언 값의 전환될 때 호출됩니다. 따라서 스니펫은 먼저 전환이 긍정적인지 확인하고, {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} 가 75%를 넘을 때 카운터가 증가합니다.
 
 ```js
 const intersectionCallback = (entries) => {
@@ -390,11 +390,11 @@ CSS는 이 예제에서 그다지 중요하지 않습니다. 요소를 배치하
 }
 ```
 
-### JavaScript
+### 자바스크립트
 
 마지막으로, Intersection Observer API를 사용하여 작업을 수행하는 JavaScript 코드를 살펴봅시다.
 
-#### Setting up
+#### 준비
 
 첫째, 변수를 준비하고 observer를 설치해야 합니다.
 
@@ -421,9 +421,9 @@ window.addEventListener(
 여기서 설정한 상수와 변수는 다음과 같습니다.
 
 - `numSteps`
-  - : 가시성 비율인 0.0과 1.0 사이에서 몇 개의 역치 값을 가질 지를 나타내는 상수입니다.
+  - : 가시성 비율인 0.0과 1.0 사이에서 몇 개의 임계값을 가질 지를 나타내는 상수입니다.
 - `prevRatio`
-  - : 이 변수는 역치 값이 마지막으로 초과된 가시성 비율을 기록하는 데 사용됩니다. 이를 통해 대상 요소가 더 많이 혹은 더 적게 보이는 지를 알 수 있습니다.
+  - : 이 변수는 임계값이 마지막으로 초과된 가시성 비율을 기록하는 데 사용됩니다. 이를 통해 대상 요소가 더 많이 혹은 더 적게 보이는 지를 알 수 있습니다.
 - `increasingColor`
   - : 가시성 비율이 증가할 때 대상 요소에 적용할 색깔을 정의하는 문자열입니다. 문자열에서 "ratio"라는 단어는 대상의 현재 가시성 비율로 대체될 것이고, 요소는 색상만 변화하는 것이 아니라 덜 모호해지면서 점차 더 불투명해집니다.
 - `decreasingColor`
@@ -458,7 +458,7 @@ function createObserver() {
 
 원한다면 각 요소에 대해 `observer.observe()`를 호출하여 뷰포트에 대한 가시성 교차 변화를 여러 요소에서 모니터링할 수 있도록 선택할 수 있습니다.
 
-#### Building the array of threshold ratios
+#### 임계값 비율의 집합 구축
 
 임계값 집합을 만드는 `buildThresholdList()` 함수는 다음과 같습니다.
 
@@ -588,7 +588,7 @@ function handleIntersect(entries, observer) {
 
 결국, 가시성 비율이 증가하는지 감소하는지를 따라가기 위해서 `prevRatio` 변수에 있는 현재 비율을 기억해야 합니다.
 
-### Result
+### 결과
 
 아래는 결과 컨텐츠입니다. 페이지를 위아래로 스크롤하고 움짐임에 따라 박스 모양이 얼마나 변화하는지 알아보세요.
 
@@ -596,15 +596,15 @@ function handleIntersect(entries, observer) {
 
 더 광범위한 예제는 다음 링크에 있습니다. [Timing element visibility with the Intersection Observer API](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver)
 - [Timing element visibility with the Intersection Observer API](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
