@@ -104,7 +104,7 @@ let callback = (entries, observer) => {
 
 Intersection Observer API가 고려하는 모든 영역은 직사각형입니다. 불규칙한 모양의 요소는 모든 요소를 둘러싸는 부분들을 가장 작은 직사각형이 차지하는 것으로 여겨집니다. 비슷하게, 요소의 보이는 부분이 직사각형이 아니면, 요소의 교차하는 직사각형이 요소의 보이는 모든 부분을 포함하는 가장 작은 직사각형으로 간주됩니다.
 
-{{domxref("IntersectionObserverEntry")}}에서 제공하는 다양한 속성이 교차를 어떻게 설명하는 지를 조금 이해하는 것이 유용합니다.
+{{domxref("IntersectionObserverEntry")}}에서 제공하는 다양한 속성이 교차를 어떻게 설명하는지를 조금 이해하는 것이 유용합니다.
 
 #### 교차 루트와 루트 여백
 
