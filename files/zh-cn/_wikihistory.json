@@ -9598,10 +9598,6 @@
     "modified": "2019-03-23T23:33:54.227Z",
     "contributors": ["teoli", "ziyunfei"]
   },
-  "Web/API/File/type": {
-    "modified": "2019-03-23T22:09:04.649Z",
-    "contributors": ["wizardforcel"]
-  },
   "Web/API/File/webkitRelativePath": {
     "modified": "2019-07-25T23:57:11.934Z",
     "contributors": ["dotnetcms_org", "wizardforcel"]
@@ -13180,14 +13176,6 @@
     "modified": "2019-03-23T23:10:33.122Z",
     "contributors": ["teoli", "AlexChao"]
   },
-  "Web/API/Screen/availLeft": {
-    "modified": "2019-03-23T23:10:32.405Z",
-    "contributors": ["teoli", "khalid32", "AlexChao"]
-  },
-  "Web/API/Screen/availTop": {
-    "modified": "2019-03-23T23:10:26.366Z",
-    "contributors": ["teoli", "khalid32", "AlexChao"]
-  },
   "Web/API/Screen/availWidth": {
     "modified": "2019-03-23T23:10:30.530Z",
     "contributors": ["teoli", "AlexChao"]
@@ -13215,6 +13203,14 @@
   "Web/API/Screen/width": {
     "modified": "2019-03-23T23:10:29.689Z",
     "contributors": ["teoli", "AlexChao"]
+  },
+  "Web/API/ScreenDetailed/availLeft": {
+    "modified": "2019-03-23T23:10:32.405Z",
+    "contributors": ["teoli", "khalid32", "AlexChao"]
+  },
+  "Web/API/ScreenDetailed/availTop": {
+    "modified": "2019-03-23T23:10:26.366Z",
+    "contributors": ["teoli", "khalid32", "AlexChao"]
   },
   "Web/API/Screen_Capture_API": {
     "modified": "2020-10-15T22:30:44.340Z",
