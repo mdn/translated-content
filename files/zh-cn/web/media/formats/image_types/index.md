@@ -546,7 +546,7 @@ Typically, modern content should use [PNG](#png_便携式网络图形) for lossl
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless (LZW)</td>
+      <td>无损 (LZW)</td>
     </tr>
     <tr>
       <th scope="row">授权</th>
@@ -953,7 +953,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless, optionally indexed color like GIF</td>
+      <td>无损, optionally indexed color like GIF</td>
     </tr>
     <tr>
       <th scope="row">授权</th>
@@ -1281,7 +1281,7 @@ Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PN
               <td>14</td>
             </tr>
             <tr>
-              <th scope="row">Lossless WebP</th>
+              <th scope="row">无损 WebP</th>
               <td>23<br />25 on Android</td>
               <td>18</td>
               <td>65</td>
@@ -1316,11 +1316,11 @@ Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PN
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless (Huffman, LZ77, or color cache codes) or lossy (VP8).</td>
+      <td>无损（Huffman、LZ77 或 color cache codes）或有损（VP8）</td>
     </tr>
     <tr>
       <th scope="row">授权</th>
-      <td>No license required; source code is openly available.</td>
+      <td>无需许可证；源代码可公开获取。</td>
     </tr>
   </tbody>
 </table>
@@ -1411,11 +1411,11 @@ static unsigned char square8_bits[] = {
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless</td>
+      <td>无损</td>
     </tr>
     <tr>
       <th scope="row">授权</th>
-      <td>Open source</td>
+      <td>开源</td>
     </tr>
   </tbody>
 </table>
@@ -1426,7 +1426,7 @@ static unsigned char square8_bits[] = {
 
 ### 照片
 
-Photographs typically fare well with lossy compression (depending on the encoder's configuration). This makes [JPEG](#jpeg_联合图像专家小组图像) and [WebP](#webp_图像) good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression. To maximize quality and minimize download time, consider providing both [using a fallback](#提供后备图像) with WebP as the first choice and JPEG as the second. Otherwise, JPEG is the safe choice for compatibility.
+有损压缩（取决于编码器的配置）通常能很好地压缩照片。这使得 [JPEG](#jpeg_联合图像专家小组图像) 和 [WebP](#webp_图像) 成为照片的不错选择，JPEG 的兼容性更好，但 WebP 的压缩效果可能更好。为了最大限度地提高质量和减少下载时间，可以考虑同时提供这两种格式的[后备图像](#提供后备图像)，WebP 是首选，JPEG 是次选。否则，为了兼容性，JPEG 是安全的选择。
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
@@ -1445,9 +1445,9 @@ Photographs typically fare well with lossy compression (depending on the encoder
 
 ### 图标
 
-For smaller images such as icons, use a lossless format to avoid loss of detail in a size-constrained image. While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a [fallback](#提供后备图像). If your image contains fewer than 256 colors, GIF is an option, although PNG often compresses even smaller with its indexed compression option (PNG-8).
+对于图标等较小的图像，应使用无损格式，以避免在大小受限的图像中丢失细节。虽然无损 WebP 是实现这一目的的理想选择，但其支持尚未普及，因此 PNG 是更好的选择，除非你提供[后备选项](#提供后备图像)。如果图像包含的颜色少于 256 种，GIF 也是一种选择，不过 PNG 通过其索引压缩选项（PNG-8）通常可以压缩得更小。
 
-If the icon can be represented using vector graphics, consider [SVG](#svg_可缩放矢量图形), since it scales across various resolutions and sizes, so it's perfect for responsive design. Although SVG support is good, it may be worth offering a PNG fallback for older browsers.
+如果图标可以用矢量图形表示，可以考虑使用 [SVG](#svg_可缩放矢量图形)，因为它可以在各种分辨率和尺寸下缩放，非常适合响应式设计。虽然 SVG 支持良好，但仍值得为旧版浏览器提供 PNG 后备功能。
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
@@ -1464,9 +1464,9 @@ If the icon can be represented using vector graphics, consider [SVG](#svg_可缩
 
 ### 截图
 
-Unless you're willing to compromise on quality, you should use a lossless format for screenshots. This is particularly important if there's any text in your screenshot, as text easily becomes fuzzy and unclear under lossy compression.
+除非你愿意在质量上妥协，否则应该使用无损格式截图。如果截图中有文字，这一点尤为重要，因为在有损压缩的情况下，文字很容易变得模糊不清。
 
-PNG is probably your best bet, but lossless WebP is arguably going to be better compressed.
+PNG 可能是最好的选择，但无损 WebP 的压缩效果可能更好。
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
@@ -1485,7 +1485,7 @@ PNG is probably your best bet, but lossless WebP is arguably going to be better 
 
 ### 示意图、绘图和图表
 
-For any image that can be represented using vector graphics, SVG is the best choice. Otherwise, you should use a lossless format like PNG. If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the compression level to avoid causing text or other shapes to become fuzzy or unclear.
+对于任何可以使用矢量图形表示的图像，SVG 都是最佳选择。否则，应使用 PNG 等无损格式。如果选择有损格式（如 JPEG 或有损 WebP），请仔细权衡压缩级别，以避免导致文本或其他图形变得模糊或不清晰。
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
@@ -1502,9 +1502,9 @@ For any image that can be represented using vector graphics, SVG is the best cho
 
 ## 提供后备图像
 
-While the standard HTML {{HTMLElement("img")}} element doesn't support compatibility fallbacks for images, the {{HTMLElement("picture")}} element does. `<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/zh-CN/docs/Web/CSS/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
+虽然标准 HTML {{HTMLElement("img")}} 元素不支持图片的兼容性回退，但 {{HTMLElement("picture")}} 元素支持。`<picture>` 被用作多个 {{HTMLElement("source")}} 元素的包装器，每个元素都指定了不同格式或不同[媒体条件](/zh-CN/docs/Web/CSS/@media)下的图像版本，以及一个 `<img>` 元素，该元素定义了图像的显示位置以及默认或“最兼容”版本的回退。
 
-For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a PNG or GIF of the diagram, you would do something like this:
+例如，如果要显示一个最好使用 SVG 显示的图表，但希望提供一个 PNG 或 GIF 图表的后备选项，可以这样做：
 
 ```html
 <picture>
@@ -1518,7 +1518,7 @@ For example, if you're displaying a diagram best displayed with SVG, but wish to
 </picture>
 ```
 
-You can specify as many `<source>`s as you wish, though typically 2 or 3 is all you need.
+你可以指定任意数量的 `<source>`，但通常 2 或 3 个就足够了。
 
 ## 参见
 
