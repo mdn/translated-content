@@ -559,7 +559,6 @@ text-shadow: 4px 4px 5px red;
    цвет по умолчанию — [`currentcolor`](/ru/docs/Web/CSS/color_value#currentcolor_keyword), то есть цвет из свойства
    [`color`](/ru/docs/Web/CSS/color).
 
-
 #### Несколько теней
 
 Можно добавить несколько теней через запятую:
@@ -884,7 +883,6 @@ font:
   Arial,
   sans-serif;
 ```
-
 
 ## Активное обучение: играем со стилями текста
 
