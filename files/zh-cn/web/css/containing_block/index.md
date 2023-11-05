@@ -45,7 +45,7 @@ slug: Web/CSS/Containing_block
 
 ## 根据包含块计算百分值
 
-如上所述，当某些属性被赋予一个百分比值时，它的计算值取决于这个元素的包含块。以这种方式工作的属性包括盒模型属性和偏移属性：
+如上所述，当某些属性被赋予一个百分比值时，它的计算值取决于这个元素的包含块。以这种方式工作的属性包括**盒模型属性**和**偏移属性**：
 
 1. {{cssxref("height")}}、{{cssxref("top")}} 及 {{cssxref("bottom")}} 属性根据包含块的 `height` 计算百分比值。
 2. {{cssxref("width")}}、{{cssxref("left")}}、{{cssxref("right")}}、{{cssxref("padding")}} 和 {{cssxref("margin")}} 属性根据包含块的 `width` 计算百分比值。
