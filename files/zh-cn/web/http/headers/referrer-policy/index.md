@@ -31,7 +31,7 @@ Referrer-Policy: unsafe-url
 - `no-referrer`
   - : 整个 {{HTTPHeader("Referer")}} 首部会被移除。访问来源信息不随着请求一起发送。
 - `no-referrer-when-downgrade`
-  - : 在同等安全级别或安全级别提升的情况下（HTTP→HTTP、HTTP→HTTPS、HTTPS→HTTPS），在 {{HTTPHeader("Referer")}} 中发送 {{glossary("origin", "来源")}}、路径和查询字符串。而在目标的安全级别下降的情况下（HTTPS→HTTP、HTTPS→file）则不发送 {{HTTPHeader("Referer")}} 标头。
+  - : 在同等安全级别或安全级别提升的情况下（HTTP→HTTP、HTTP→HTTPS、HTTPS→HTTPS），在 {{HTTPHeader("Referer")}} 中发送{{glossary("origin", "来源")}}、路径和查询字符串。而在目标的安全级别下降的情况下（HTTPS→HTTP、HTTPS→file）则不发送 {{HTTPHeader("Referer")}} 标头。
 - `origin`
   - : 在任何情况下，仅发送文件的源作为引用地址。例如 `https://example.com/page.html` 会将 `https://example.com/ 作为引用地址`。
 - `origin-when-cross-origin`
