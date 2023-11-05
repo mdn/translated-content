@@ -2,32 +2,26 @@
 title: フェッチ API の使用
 slug: Web/API/Fetch_API/Using_Fetch
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: aae16b81e18d13dd006d418983558578563e9746
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
 
 [フェッチ API](/ja/docs/Web/API/Fetch_API) は、リクエストやレスポンスといった[プロトコル](/ja/docs/Glossary/Protocol)を操作する要素にアクセスするための JavaScript インターフェイスです。グローバルの {{domxref("fetch()")}} メソッドも提供しており、簡単で論理的な方法で、非同期にネットワーク越しでリソースを取得することができます。
 
-従来、このような機能は {{domxref("XMLHttpRequest")}} を使用して実現されてきました。フェッチはそれのより良い代替となるもので、{{domxref("Service_Worker_API", "サービスワーカー", "", 1)}}のような他の技術から簡単に利用することができます。フェッチは [CORS](/ja/docs/Web/HTTP/CORS) や HTTP への拡張のような HTTP に関連する概念をまとめて定義する場所でもあります。
+コールバックベースの API である {{domxref("XMLHttpRequest")}} とは異なり、Fetch は Promise ベースであり、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API) で簡単に使用できる優れた代替手段を提供します。Fetch は、[CORS](/ja/docs/Web/HTTP/CORS) やその他の HTTP 拡張機能などの高度な HTTP 概念も統合します。
 
-`fetch` の仕様は、 `jQuery.ajax()` とは特に以下の点で異なっています。
-
-- `fetch()` から返されるプロミスは、レスポンスが HTTP 404 や 500 を返す **HTTP エラーステータスの場合でも拒否されません**。サーバーがヘッダーで応答すると、プロミスは直ちに正常に解決します（レスポンスが 200-299 の範囲にない場合は、レスポンスの {{domxref("Response/ok", "ok")}} プロパティが false に設定されます）。拒否されるのは、ネットワーク障害があった場合や、何かがリクエストの完了を妨げた場合のみです。
-- [`credentials`](/ja/docs/Web/API/fetch#credentials) オプションを `include` に設定しない限り、`fetch()` は次のように動作します。
-  - オリジン間リクエストではクッキーを送信しません。
-  - オリジン間のレスポンスでは、送り返されたクッキーを設定しません。
-  - 2018 年 8 月現在、既定の資格情報ポリシーは same-origin に変更されています。 Firefox もバージョン 61.0b13 で変更されました）。
-
-基本的なフェッチリクエストは、本当に簡単に設定できます。以下のコードを見てください。
+基本的なフェッチリクエストは、以下のコードを見てください。
 
 ```js
-fetch("http://example.com/movies.json")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+async function logMovies() {
+  const response = await fetch("http://example.com/movies.json");
+  const movies = await response.json();
+  console.log(movies);
+}
 ```
 
-これはネットワーク越しに JSON ファイルを取得してコンソールに出力するスクリプトです。 `fetch()` の最も簡単な使い方は 1 つの引数 — fetch で取得したいリソースへのパス — のみをとり、 {{domxref("Response")}} オブジェクトで解決するプロミスを返します。
+これはネットワーク越しに JSON ファイルを取得してパースし、コンソールにデータを出力するスクリプトです。 `fetch()` の最も簡単な使い方は 1 つの引数 — fetch で取得したいリソースへのパス — のみをとり、 {{domxref("Response")}} オブジェクトで解決するプロミスを返します。
 
 {{domxref("Response")}} は、実際の JSON レスポンス本体を直接持っているのではなく、 HTTP レスポンス全体を表現するものです。 {{domxref("Response")}} オブジェクトから JSON の本体の内容を抽出するには、 {{domxref("Response.json()", "json()")}} メソッドを使用します。これはレスポンス本体のテキストを JSON として解釈した結果で解決する第 2 のプロミスを返します。
 
@@ -73,6 +67,33 @@ postData("https://example.com/answer", { answer: 42 }).then((data) => {
 - `Content-Language`
 - `Content-Type` のうち、値が `application/x-www-form-urlencoded`, `multipart/form-data`, `text/plain` のいずれかのもの
 
+## Aborting a fetch
+
+未完了の `fetch()` 操作を中止するには、{{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイスを使用します。
+
+```js
+const controller = new AbortController();
+const signal = controller.signal;
+const url = "video.mp4";
+
+const downloadBtn = document.querySelector("#download");
+const abortBtn = document.querySelector("#abort");
+
+downloadBtn.addEventListener("click", async () => {
+  try {
+    const response = await fetch(url, { signal });
+    console.log("Download complete", response);
+  } catch (error) {
+    console.error(`Download error: ${error.message}`);
+  }
+});
+
+abortBtn.addEventListener("click", () => {
+  controller.abort();
+  console.log("Download aborted");
+});
+```
+
 ## 資格情報つきのリクエストの送信
 
 ブラウザーに資格情報のついたリクエストを送るようにするには、同一オリジンの場合もオリジン間の呼び出しの場合も、 `credentials: 'include'` を `init` オブジェクトに追加して `fetch()` メソッドに渡してください。
@@ -85,7 +106,7 @@ fetch("https://example.com", {
 
 > **メモ:** `Access-Control-Allow-Origin` は `credentials: 'include'` を含むリクエストでは、ワイルドカードを使用することを禁止しています。このような場合、正確なオリジンを提供する必要があります。 CORS unblocker 拡張機能を使用している場合でも、リクエストは失敗します。
 
-> **メモ:** この設定に関係なく、ブラウザーはプリフライトリクエストで資格情報を送信しないようにしてください。詳細については、 [CORS > 資格情報を含むリクエスト](/ja/docs/Web/HTTP/CORS#資格情報を含むリクエスト)を参照してください。
+> **メモ:** この設定に関係なく、ブラウザーはプリフライトリクエストで資格情報を送信しないようにしてください。詳細については、 [CORS 資格情報を含むリクエスト](/ja/docs/Web/HTTP/CORS#資格情報を含むリクエスト)を参照してください。
 
 リクエスト URL が呼び出しスクリプトと同一オリジンの場合だけ資格情報を送りたい場合、 `credentials: 'same-origin'` を追加します。
 
@@ -110,22 +131,25 @@ fetch("https://example.com", {
 {{domxref("fetch()")}} を使って JSON エンコードしたデータを POST します。
 
 ```js
-const data = { username: "example" };
+async function postJSON(data) {
+  try {
+    const response = await fetch("https://example.com/profile", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-fetch("https://example.com/profile", {
-  method: "POST", // or 'PUT'
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(data),
-})
-  .then((response) => response.json())
-  .then((data) => {
-    console.log("Success:", data);
-  })
-  .catch((error) => {
+    const result = await response.json();
+    console.log("Success:", result);
+  } catch (error) {
     console.error("Error:", error);
-  });
+  }
+}
+
+const data = { username: "example" };
+postJSON(data);
 ```
 
 ## ファイルのアップロード
@@ -133,23 +157,26 @@ fetch("https://example.com/profile", {
 ファイルは HTML の `<input type="file" />` input 要素と、{{domxref("FormData.FormData","FormData()")}} と {{domxref("fetch()")}} を使ってアップロードできます。
 
 ```js
+async function upload(formData) {
+  try {
+    const response = await fetch("https://example.com/profile/avatar", {
+      method: "PUT",
+      body: formData,
+    });
+    const result = await response.json();
+    console.log("Success:", result);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
 const formData = new FormData();
 const fileField = document.querySelector('input[type="file"]');
 
 formData.append("username", "abc123");
 formData.append("avatar", fileField.files[0]);
 
-fetch("https://example.com/profile/avatar", {
-  method: "PUT",
-  body: formData,
-})
-  .then((response) => response.json())
-  .then((result) => {
-    console.log("Success:", result);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+upload(formData);
 ```
 
 ## 複数のファイルのアップロード
@@ -157,27 +184,29 @@ fetch("https://example.com/profile/avatar", {
 ファイルのアップロードは、 HTML の `<input type="file" multiple />` 入力要素と {{domxref("FormData.FormData","FormData()")}} と {{domxref("fetch()")}} を使用して行うことができます。
 
 ```js
-const formData = new FormData();
-const photos = document.querySelector('input[type="file"][multiple]');
-
-formData.append("title", "My Vegas Vacation");
-let i = 0;
-for (const photo of photos.files) {
-  formData.append(`photos_${i}`, photo);
-  i++;
+async function uploadMultiple(formData) {
+  try {
+    const response = await fetch("https://example.com/posts", {
+      method: "POST",
+      body: formData,
+    });
+    const result = await response.json();
+    console.log("Success:", result);
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
-fetch("https://example.com/posts", {
-  method: "POST",
-  body: formData,
-})
-  .then((response) => response.json())
-  .then((result) => {
-    console.log("Success:", result);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+const photos = document.querySelector('input[type="file"][multiple]');
+const formData = new FormData();
+
+formData.append("title", "My Vegas Vacation");
+
+for (const [i, photo] of Array.from(photos.files).entries()) {
+  formData.append(`photos_${i}`, photo);
+}
+
+uploadMultiple(formData);
 ```
 
 ### テキストファイルの 1 行ずつの処理
@@ -192,22 +221,22 @@ async function* makeTextFileLineIterator(fileURL) {
   let { value: chunk, done: readerDone } = await reader.read();
   chunk = chunk ? utf8Decoder.decode(chunk) : "";
 
-  const re = /\n|\r|\r\n/gm;
+  const newline = /\r?\n/gm;
   let startIndex = 0;
   let result;
 
   while (true) {
-    let result = re.exec(chunk);
+    const result = newline.exec(chunk);
     if (!result) {
       if (readerDone) break;
-      let remainder = chunk.substr(startIndex);
+      const remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
       chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
-      startIndex = re.lastIndex = 0;
+      startIndex = newline.lastIndex = 0;
       continue;
     }
     yield chunk.substring(startIndex, result.index);
-    startIndex = re.lastIndex;
+    startIndex = newline.lastIndex;
   }
 
   if (startIndex < chunk.length) {
@@ -230,19 +259,18 @@ run();
 {{domxref("fetch()")}} のプロミスは、ネットワークエラーに遭遇したりサーバー側の CORS の設定（通常はアクセス権の問題など）が間違っていたりすると、 {{jsxref("TypeError")}} で拒否されます。例えば、 404 はネットワークエラーにはなりません。 `fetch()` が成功したかどうかを正確に判定するには、プロミスが解決された後で、 {{domxref("Response.ok")}} プロパティが true になっているかを確認してください。次のようなコードになるでしょう。
 
 ```js
-fetch("flowers.jpg")
-  .then((response) => {
+async function fetchImage() {
+  try {
+    const response = await fetch("flowers.jpg");
     if (!response.ok) {
       throw new Error("Network response was not OK");
     }
-    return response.blob();
-  })
-  .then((myBlob) => {
+    const myBlob = await response.blob();
     myImage.src = URL.createObjectURL(myBlob);
-  })
-  .catch((error) => {
+  } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
-  });
+  }
+}
 ```
 
 ## 独自のリクエストオブジェクトの提供
@@ -250,6 +278,19 @@ fetch("flowers.jpg")
 `fetch()` の呼び出しに、リクエストしたいリソースへのパスを渡す代わりに、{{domxref("Request.Request","Request()")}} コンストラクターを使用して Request オブジェクトを作成し、 `fetch()` メソッドの引数として渡すこともできます。
 
 ```js
+async function fetchImage(request) {
+  try {
+    const response = await fetch(request);
+    if (!response.ok) {
+      throw new Error("Network response was not OK");
+    }
+    const myBlob = await response.blob();
+    myImage.src = URL.createObjectURL(myBlob);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
 const myHeaders = new Headers();
 
 const myRequest = new Request("flowers.jpg", {
@@ -259,11 +300,7 @@ const myRequest = new Request("flowers.jpg", {
   cache: "default",
 });
 
-fetch(myRequest)
-  .then((response) => response.blob())
-  .then((myBlob) => {
-    myImage.src = URL.createObjectURL(myBlob);
-  });
+fetchImage(myRequest);
 ```
 
 `Request()` は、 `fetch()` メソッドとまったく同じ引数を受け入れます。既存のリクエストオブジェクトを渡して、コピーを作成することもできます。
@@ -331,18 +368,19 @@ try {
 ヘッダーの良い使用方法としては、以下のように、処理を行う前に、コンテンツタイプが正しいかどうか判定する等の使い方があります。
 
 ```js
-fetch(myRequest)
-  .then((response) => {
+async function fetchJSON(request) {
+  try {
+    const response = await fetch(request);
     const contentType = response.headers.get("content-type");
     if (!contentType || !contentType.includes("application/json")) {
       throw new TypeError("Oops, we haven't got JSON!");
     }
-    return response.json();
-  })
-  .then((data) => {
-    /* process your data further */
-  })
-  .catch((error) => console.error(error));
+    const jsonData = await response.json();
+    // process your data further
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
 ```
 
 ### ガード
@@ -386,7 +424,7 @@ addEventListener("fetch", (event) => {
 
 {{domxref("Response.Response","Response()")}} コンストラクターは、オプションとして 2 つの引数をとることができます。レスポンス本体と初期化オブジェクトです。 ({{domxref("Request.Request","Request()")}} が受け取れるものと似ています。)
 
-> **メモ:** 静的メソッド {{domxref("Response.error","error()")}} は単純にエラーレスポンスを返します。同様に {{domxref("Response.redirect","redirect()")}} メソッドも 指定した URL にリダイレクトするレスポンスを返します。これらはサービスワーカーにのみ関連しています。
+> **メモ:** 静的メソッド {{domxref("Response/error_static","error()")}} は単純にエラーレスポンスを返します。同様に {{domxref("Response/redirect_static","redirect()")}} メソッドも 指定した URL にリダイレクトするレスポンスを返します。これらはサービスワーカーにのみ関連しています。
 
 ## 本体
 
@@ -435,13 +473,15 @@ if (window.fetch) {
 }
 ```
 
-## 仕様書
+## `jQuery.ajax()` との差異
 
-{{Specifications}}
+`fetch` の仕様は、 `jQuery.ajax()` とは特に以下の点で異なっています。
 
-## ブラウザーの互換性
-
-{{Compat}}
+- `fetch()` から返されるプロミスは、レスポンスが HTTP 404 や 500 を返す HTTP エラーステータスの場合でも拒否されません。サーバーがヘッダーで応答すると、プロミスは直ちに正常に解決します（レスポンスが 200-299 の範囲にない場合は、レスポンスの {{domxref("Response/ok", "ok")}} プロパティが `false` に設定されます）。拒否されるのは、ネットワーク障害があった場合や、何かがリクエストの完了を妨げた場合のみです。
+- [`credentials`](/ja/docs/Web/API/fetch#credentials) オプションを `include` に設定しない限り、`fetch()` は次のように動作します。
+  - オリジン間リクエストではクッキーを送信しません。
+  - オリジン間のレスポンスでは、送り返されたクッキーを設定しません。
+  - 2018 年 8 月現在、既定の資格情報ポリシーは same-origin に変更されています。
 
 ## 関連情報
 
