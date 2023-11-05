@@ -27,7 +27,7 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 
 一旦创建，迭代器对象可以通过重复调用 `next()` 显式地迭代。迭代一个迭代器被称为消耗了这个迭代器，因为它通常只能执行一次：在产生终值后，对 `next()` 的额外调用应该继续返回 `{done：true}`。
 
-Javascript 中最常见的迭代器是 Array 迭代器，它按顺序返回关联数组中的每个值。
+Javascript 中最常见的迭代器是数组迭代器，它按顺序返回关联数组中的每个值。
 
 虽然很容易想象所有迭代器都可以表示为数组，但事实并非如此。数组必须完整分配，而迭代器则是按需分配。因此，迭代器可以表示无限大小的序列，例如 0 和 {{jsxref("Infinity")}} 之间的整数范围。
 
@@ -68,15 +68,15 @@ while (!result.done) {
 console.log(`已迭代序列的大小：${result.value}`); // 5
 ```
 
-> **备注**：[反射性](https://zh.wikipedia.org/wiki/反射式编程)地知道特定对象是否是迭代器是不可能的。如果你需要这样做，请使用[可迭代对象](#可迭代对象).
+> **备注：** [反射性](https://zh.wikipedia.org/wiki/反射式编程)地知道特定对象是否是迭代器是不可能的。如果你需要这样做，请使用[可迭代对象](#可迭代对象)。
 
 ## 生成器函数
 
 虽然自定义迭代器是一个有用的工具，但由于需要显式地维护其内部状态，因此创建时要格外谨慎。**生成器函数**（Generator 函数）提供了一个强大的替代选择：它允许你定义一个非连续执行的函数作为迭代算法。生成器函数使用 {{jsxref("Statements/function*","function*")}} 语法编写。
 
-最初调用时，生成器函数不执行任何代码，而是返回一种称为 **Generator** 的特殊迭代器。通过调用 `next()` 方法消耗该生成器时，Generator 函数将执行，直至遇到 `yield` 关键字。
+最初调用时，生成器函数不执行任何代码，而是返回一种称为**生成器**的特殊迭代器。通过调用 `next()` 方法消耗该生成器时，生成器函数将执行，直至遇到 `yield` 关键字。
 
-可以根据需要多次调用该函数，并且每次都返回一个新的 Generator，但每个 Generator 只能迭代一次。
+可以根据需要多次调用该函数，并且每次都返回一个新的生成器，但每个生成器只能迭代一次。
 
 我们现在可以调整上面的例子了。此代码的行为并没有改变，但更容易编写和阅读。
 
@@ -161,7 +161,7 @@ for (let value of myIterable) {
 
 ### 用于可迭代对象的语法
 
-一些语句和表达式专用于可迭代对象，例如 {{jsxref("Statements/for...of", "for...of")}} 循环，{{jsxref("Operators/Spread_syntax", "展开语法")}}，{{jsxref("Operators/yield*", "yield*")}} 和 {{jsxref("Operators/Destructuring_assignment", "解构赋值")}}。
+一些语句和表达式专用于可迭代对象，例如 {{jsxref("Statements/for...of", "for...of")}} 循环、{{jsxref("Operators/Spread_syntax", "展开语法", "", 1)}}、{{jsxref("Operators/yield*", "yield*")}} 和{{jsxref("Operators/Destructuring_assignment", "解构赋值", "", 1)}}。
 
 ```js
 for (let value of ["a", "b", "c"]) {
@@ -189,7 +189,7 @@ a; // "a"
 
 {{jsxref("Global_Objects/Generator/next", "next()")}} 方法也接受一个参数用于修改生成器内部状态。传递给 `next()` 的参数值会被 `yield` 接收。
 
-> **备注**：传给*第一个* `next()` 的值会被忽略。
+> **备注：** 传给*第一个* `next()` 的值会被忽略。
 
 下面的是斐波那契数列生成器，它使用了 `next(x)` 来重启序列：
 
@@ -225,6 +225,6 @@ console.log(sequence.next().value); // 2
 
 如果该异常没有在生成器内部被捕获，则它将通过 `throw()` 的调用向上传播，对 `next()` 的后续调用将导致 `done` 属性为 `true`。
 
-生成器的 {{jsxref("Global_Objects/Generator/return", "return()")}} 方法可返回给定的值并终结这个生成器。
+生成器的 {{jsxref("Generator/return", "return()")}} 方法可返回给定的值并终结这个生成器。
 
 {{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
