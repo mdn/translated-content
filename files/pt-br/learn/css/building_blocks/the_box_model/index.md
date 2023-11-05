@@ -37,29 +37,31 @@ Tudo em CSS tem um quadro em torno de si, e entender estes quadros é chave para
   </tbody>
 </table>
 
-## Block and inline boxes
+## Caixas Block e Inline
 
-In CSS we broadly have two types of boxes — **block boxes** and **inline boxes**. These characteristics refer to how the box behaves in terms of page flow, and in relation to other boxes on the page:
+No CSS, temos dois tipos, **caixas box** e **caixas inline**, O tipo de caixa influencia diretameente em como as mesmas irao interagir com o fluxo da pagina(page flow) e com as outras caixas da pagina:
 
-If a box is defined as a block, it will behave in the following ways:
+Se for uma caixa definida como block, ela tera os seguintes comportamentos:
 
-- The box will break onto a new line.
-- The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.
-- The {{cssxref("width")}} and {{cssxref("height")}} properties are respected.
-- Padding, margin and border will cause other elements to be pushed away from the box
+- A caixa ira qubrar em uma nova linha.
+- A caixa ira se extender para na direção horizontal(inline) para preeencher todo o espaco disponivel no container. Na maioria dos casos isso significa que essa caixa sera tao larga quanto seu recipiente.
+- As propriedades {{cssxref("width")}} e {{cssxref("height")}} serão respeitadas.
+- {{cssxref("padding")}}, {{cssxref("margin")}} e {{cssxref("border")}} farão com que outros elementos sejam empurrados para fora da caixa.
 
-Unless we decide to change the display type to inline, elements such as headings (e.g. `<h1>`) and `<p>` all use `block` as their outer display type by default.
+A menos que decidamos alterar o tipo de exibição para `inlined`, alguns elementos como os cabeçalhos (ex: `<h1>`) e `<p>` são  caixas do tipo `block` por padrão.
 
 If a box has an outer display type of `inline`, then:
+Se a caixa for do tipo `inline`, ela seguira os segintes comportamentos:
 
-- The box will not break onto a new line.
-- The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.
-- Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
-- Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+- Ela não quebrará em uma nova linha.
+- A propriedade {{cssxref("width")}} e {{cssxref("height")}} não serão aplicadas.
+- Padding vertical, margens e bordas serão aplicados, mas não  farão com que outras caixas embutidades se afastem.
+- Padding horizontal, margens e bordas serão aplicadas ee farão com qe outras caixas embutidades se afastem da caixa.
+<!-- Sera? ao reprudizir isso n consegui chegar nesse resultado -->
 
-The `<a>` element, used for links, `<span>`, `<em>` and `<strong>` are all examples of elements that will display inline by default.
+O elemento `<a>` usado em links, `<span>`, `<em>` ee `<strong>` são exemplos de elementos que sao `inline` por padrão.
 
-The type of box applied to an element is defined by {{cssxref("display")}} property values such as `block` and `inline`, and relates to the **outer** value of `display`.
+O tipo de caixa aplicada em um elemento é definida pela propriedade {{cssxref("display")}} como `block` ou `inline` e esta relacionada ao valor **outer** do `display`.
 
 ## Além disto: Tipos de exibição ( display ) internos e externos
 
