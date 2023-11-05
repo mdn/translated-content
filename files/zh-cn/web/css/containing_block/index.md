@@ -16,7 +16,7 @@ slug: Web/CSS/Containing_block
 
 ![Diagram of the box model](box-model.png)
 
-许多开发者认为一个元素的包含块就是他的父元素的内容区。但事实并非如此。接下来让我们来看看，确定元素包含块的因素都有哪些。
+许多开发者认为一个元素的包含块就是他的父元素的内容区，但这不一定正确。接下来让我们来看看，确定元素包含块的因素都有哪些。
 
 ## 包含块的影响
 
@@ -36,10 +36,10 @@ slug: Web/CSS/Containing_block
    1. {{cssxref("transform")}} 或 {{cssxref("perspective")}} 的值不是 `none`
    2. {{cssxref("will-change")}} 的值是 `transform` 或 `perspective`
    3. {{cssxref("filter")}} 的值不是 `none` 或 `will-change` 的值是 `filter`（只在 Firefox 下生效）。
-   4. {{cssxref("contain")}} 的值是 `paint`（例如：`contain: paint;`）
+   4. {{cssxref("contain")}} 的值是 `layout`, `paint`, `strict` 或 `content`（例如：`contain: paint;`）
    5. {{cssxref("backdrop-filter")}} 的值不是 `none`（例如：`backdrop-filter: blur(10px);`）
 
-> **备注：** 根元素 (\<html>) 所在的包含块是一个被称为**初始包含块**的矩形。他的尺寸是视口 viewport (for continuous media) 或分页媒体 page media (for paged media).
+> **备注：** 根元素 (\<html>) 所在的包含块是一个被称为**初始包含块**的矩形。他的尺寸是视口 viewport (对于 continuous media) 或分页媒体 page area (对于 paged media).
 
 ## 根据包含块计算百分值
 
