@@ -933,7 +933,7 @@ PNG 受广泛支持，所有主要浏览器都完全支持其特性。Internet E
       <th scope="row">授权</th>
       <td>
         ©2003 <a href="https://www.w3.org/">W3C</a>（<a href="http://www.lcs.mit.edu/">MIT</a>、<a href="http://www.ercim.org/">ERCIM</a>、<a href="https://www.keio.ac.jp/">Keio</a>)，保留所有权利。W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">责任</a>、<a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">商标</a>、<a href="https://www.w3.org/Consortium/Legal/copyright-documents">文档使用</a>和<a href="https://www.w3.org/Consortium/Legal/copyright-software">软件授权</a> 适用。没有已知的专利使用费。
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">责任</a>、<a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">商标</a>、<a href="https://www.w3.org/Consortium/Legal/copyright-documents">文档使用</a>和<a href="https://www.w3.org/Consortium/Legal/copyright-software">软件授权</a>适用。没有已知的专利使用费。
       </td>
     </tr>
   </tbody>
@@ -941,12 +941,9 @@ PNG 受广泛支持，所有主要浏览器都完全支持其特性。Internet E
 
 ### SVG（可缩放矢量图形）
 
-SVG is an [XML](/en-US/docs/Glossary/XML)-based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
-SVG files are ideal for diagrams, icons, and other images which can be accurately drawn at any size.
-As such, SVG is popular for user interface elements in modern Web design.
+SVG 是一种基于 [XML](/zh-CN/docs/Glossary/XML) 的[矢量图形](https://en.wikipedia.org/wiki/Vector_graphics)格式，它将图像的内容指定为一系列绘图命令，这些命令可以创建形状、线条、应用颜色、滤镜等。SVG 文件非常适合用于图表、图标和其他可精确绘制任何尺寸的图像。因此，SVG 在现代网页设计的用户界面元素中很受欢迎。
 
-SVG files are text files containing source code that, when interpreted, draws the desired image.
-For instance, this example defines an drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
+SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像。例如，此示例定义了一个初始大小为 100 x 100 单位的绘图区域，其中包含一条斜穿方框的线：
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -954,13 +951,12 @@ For instance, this example defines an drawing area with initial size 100 by 100 
 </svg>
 ```
 
-SVG can be used in web content in two ways:
+在网页内容中使用 SVG 有两种方式：
 
-1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Element) to draw the image.
-2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
+1. 你可以直接在 HTML 中写入 {{SVGElement("svg")}} 元素，包含 [SVG 元素](/zh-CN/docs/Web/SVG/Element)来绘制图像。
+2. 你可以在任何可以使用其他图像类型的地方显示 SVG 图像，包括使用 {{HTMLElement("img")}} 和 {{HTMLElement("picture")}} 元素、{{cssxref("background-image")}} CSS 属性等。
 
-SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.
-It's not generally useful for strictly bitmap or photographic images, although it is possible to include bitmap images within an SVG.
+对于可以使用一系列绘图命令来表示的图像来说，SVG 是一个理想的选择，尤其是当图像的渲染尺寸未知或可能变化时，因为 SVG 可以平滑地缩放到所需的尺寸。对于严格意义上的位图或照片图像，SVG 通常并不适用，尽管可以在 SVG 中包含位图图像。
 
 <table class="standard-table">
   <tbody>
@@ -982,7 +978,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
         <table class="standard-table">
           <thead>
             <tr>
-              <th scope="row">Feature</th>
+              <th scope="row">特性</th>
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
@@ -993,7 +989,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
           </thead>
           <tbody>
             <tr>
-              <th scope="row">SVG support</th>
+              <th scope="row">SVG 支持</th>
               <td>4</td>
               <td>12</td>
               <td>3</td>
@@ -1003,7 +999,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
             </tr>
             <tr>
               <th scope="row">
-                SVG as image ({{HTMLElement("img")}}, etc.)
+                SVG 作为图像（{{HTMLElement("img")}} 等）
               </th>
               <td>28</td>
               <td>12</td>
@@ -1023,33 +1019,23 @@ It's not generally useful for strictly bitmap or photographic images, although i
     <tr>
       <th scope="row">支持的颜色模式</th>
       <td>
-        Colors in SVG are specified using
-        <a href="/en-US/docs/Web/CSS/color_value">CSS color syntax</a>.
+        SVG 中的颜色是使用 <a href="/zh-CN/docs/Web/CSS/color_value">CSS 颜色语法</a>指定的。
       </td>
     </tr>
     <tr>
       <th scope="row">压缩</th>
       <td>
-        SVG source may be compressed during transit using
-        <a href="/en-US/docs/Web/HTTP/Compression">HTTP compression</a>
-        techniques, or on disk as an <code>.svgz</code> file.
+        SVG 源可以在传输过程中使用 <a href="/zh-CN/docs/Web/HTTP/Compression">HTTP 压缩技术</a>进行压缩，也可以在磁盘上以 <code>.svgz</code> 文件的形式进行压缩。
       </td>
     </tr>
     <tr>
       <th scope="row">授权</th>
       <td>
-        ©2018 <a href="https://www.w3.org/">W3C</a> (<a
+        ©2018 <a href="https://www.w3.org/">W3C</a>（<a
           href="http://www.lcs.mit.edu/"
           >MIT</a
-        >, <a href="http://www.ercim.org/">ERCIM</a>,
-        <a href="https://www.keio.ac.jp/">Keio</a>,
-        <a href="https://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
-        <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-        and
-        <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a>
-        rules apply. No known royalty-bearing patents.
+        >、<a href="http://www.ercim.org/">ERCIM</a>、<a href="https://www.keio.ac.jp/">Keio</a>、<a href="https://ev.buaa.edu.cn/">Beihang</a>），保留所有权利。W3C
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">责任</a>、<a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">商标</a>、<a href="https://www.w3.org/Consortium/Legal/copyright-documents">文档使用</a>和<a href="https://www.w3.org/Consortium/Legal/copyright-software">软件授权</a>适用。没有已知的专利使用费。
       </td>
     </tr>
   </tbody>
@@ -1197,16 +1183,11 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
 
 ### WebP 图像
 
-WebP supports lossy compression via predictive coding based on the VP8 video codec, and lossless compression that uses substitutions for repeating data.
-Lossy WebP images are on average 25–35% smaller than JPEG images of visually similar compression levels.
-Lossless WebP images are typically 26% smaller than the same images in PNG format.
+WebP 支持通过基于 VP8 视频编解码器的预测编码进行有损压缩，以及通过替换重复数据进行无损压缩。有损 WebP 图像比视觉上压缩级别相似的 JPEG 图像平均小 25-35%。无损 WebP 图像通常比 PNG 格式的相同图像小 26%。
 
-WebP also supports animation: in a lossy WebP file, the image data is represented by a VP8 bitstream, which may contain multiple frames.
-Lossless WebP holds the `ANIM` chunk, which describes the animation, and the `ANMF` chunk, which represents a frame of an animation sequence.
-Looping is supported.
+WebP 还支持动画：在有损 WebP 文件中，图像数据由 VP8 比特流表示，其中可能包含多个帧。无损 WebP 包含描述动画的 `ANIM` 块和表示动画序列一帧的 `ANMF` 块。支持循环播放。
 
-WebP now has broad support in the latest versions of major web browsers, although it does not have deep historical support.
-Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PNG](#png_便携式网络图形) format, such as with [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture).
+WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但还没有深入的历史支持。需要提供 [JPEG](#jpeg_联合图像专家小组图像) 或 [PNG](#png_便携式网络图形) 格式的后备，例如 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)。
 
 <table class="standard-table">
   <tbody>
@@ -1222,8 +1203,7 @@ Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PN
       <th scope="row">规范</th>
       <td>
         <p>
-          <a href="https://developers.google.com/speed/webp/docs/riff_container">RIFF Container Specification</a><br />{{RFC(6386, "VP8 Data Format and Decoding Guide")}}
-          (lossy encoding)<br /><a href="https://developers.google.com/speed/webp/docs/webp_lossless_bitstream_specification">WebP Lossless Bitstream Specification</a>
+          <a href="https://developers.google.com/speed/webp/docs/riff_container">RIFF 容器规范</a><br />{{RFC(6386, "VP8 Data Format and Decoding Guide")}}（有损压缩）<br /><a href="https://developers.google.com/speed/webp/docs/webp_lossless_bitstream_specification">WebP 无损比特流规范</a>
         </p>
       </td>
     </tr>
@@ -1233,7 +1213,7 @@ Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PN
         <table class="standard-table">
           <tbody>
             <tr>
-              <th scope="row">Feature</th>
+              <th scope="row">特性</th>
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
@@ -1242,7 +1222,7 @@ Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PN
               <th scope="col">Safari</th>
             </tr>
             <tr>
-              <th scope="row">Lossy WebP support</th>
+              <th scope="row">有损 WebP 支持</th>
               <td>17</td>
               <td>18</td>
               <td>65</td>
@@ -1252,36 +1232,35 @@ Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PN
             </tr>
             <tr>
               <th scope="row">无损 WebP</th>
-              <td>23<br />25 on Android</td>
+              <td>Android 23<br />25</td>
               <td>18</td>
               <td>65</td>
-              <td>no</td>
+              <td>否</td>
               <td>12.10（Presto）<br />15（Blink）</td>
               <td>14</td>
             </tr>
             <tr>
-              <th scope="row">Animation</th>
+              <th scope="row">动画/th>
               <td>32</td>
               <td>18</td>
               <td>65</td>
-              <td>no</td>
-              <td>19 (Blink)</td>
+              <td>否</td>
+              <td>19（Blink）</td>
               <td>14</td>
             </tr>
           </tbody>
         </table>
-        <p>WebP can also be used for <em>exporting</em> images from a Canvas from Firefox 96 and Chrome 50 (see <a href="/en-US/docs/Web/API/HTMLCanvasElement/toBlob#browser_compatibility"><code>HTMLCanvasElement.toBlob()</code></a> for more detailed support version information).</p>
+        <p>WebP 还可用于从 Firefox 96 和 Chrome 50 的画布中<em>导出</em>图像。（参见 <a href="/zh-CN/docs/Web/API/HTMLCanvasElement/toBlob#浏览器兼容性"><code>HTMLCanvasElement.toBlob()</code></a> 以获取更详细的支持情况）</p>
       </td>
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
-      <td>16,383×16,383 pixels</td>
+      <td>16,383×16,383 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
       <td>
-        Lossy WebP stores the image in 8-bit Y'CbCr 4:2:0 (YUV420) format.
-        Lossless WebP uses 8-bit ARGB color, with each component taking 8 bits for a total of 32 bits per pixel.
+        有损 WebP 以 8 位 Y'CbCr 4:2:0 (YUV420) 格式存储图像。无损 WebP 使用 8 位 ARGB 颜色，每个分量 8 位，每个像素共 32 位。
       </td>
     </tr>
     <tr>
@@ -1295,7 +1274,7 @@ Provide a fallback in either [JPEG](#jpeg_联合图像专家小组图像) or [PN
   </tbody>
 </table>
 
-> **备注：** Despite having [announced support](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.
+> **备注：** 尽管 Apple [宣布在 Safari 14 中支持 WebP](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)，但在 Safari 版本 16.0 之前，`.webp` 图像无法在早于 Big Sur 版本的 macOS 桌面版本上正常显示，而 iOS 14 上的 Safari *却能*正常显示 `.webp` 图像。
 
 ### XBM（X Window 系统位图文件）
 
