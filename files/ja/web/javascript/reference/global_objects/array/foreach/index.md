@@ -49,7 +49,7 @@ forEach(callbackFn, thisArg)
 
 > **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
-`された()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
+`forEach()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
 例外を発生する以外の方法で、 `forEach()` ループを止めたり脱出したりする方法はありません。そのような動作を行う場合、 `forEach()` メソッドは適切な方法ではありません。
 
