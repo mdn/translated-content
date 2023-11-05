@@ -39,9 +39,9 @@ slug: Web/CSS/Containing_block
    4. {{cssxref("contain")}} 的值是 `layout`, `paint`, `strict` 或 `content`（例如：`contain: paint;`）
    5. {{cssxref("backdrop-filter")}} 的值不是 `none`（例如：`backdrop-filter: blur(10px);`）
 
-> **备注：** 根元素 (\<html>) 所在的包含块是一个被称为**初始包含块**的矩形。它的尺寸是视口 viewport (对于 continuous media) 或分页媒体 page area (对于 paged media).
+> **备注：** 根元素（{{HTMLElement("html")}}）所在的包含块是一个被称为**初始包含块**的矩形。它具有视口（对于连续媒体）或页面区域（对于分页媒体）的尺寸。
 
-> **备注：** 在形成包含块时，`perspective` 和 `filter` 属性存在浏览器之间的不一致性。
+> **备注：** `perspective` 和 `filter` 属性对形成包含块的作用存在浏览器之间的不一致性。
 
 ## 根据包含块计算百分值
 
