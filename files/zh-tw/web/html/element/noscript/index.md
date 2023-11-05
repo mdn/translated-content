@@ -39,7 +39,7 @@ slug: Web/HTML/Element/noscript
         <a
           href="/zh-TW/docs/Web/HTML/Content_categories#transparent_content_model"
           >透明內容</a
-        >，但不得包含<code>&#x3C;noscript></code>元素在其後代中。<br />否則：可以包括流內容或短語內容。
+        >，但不得包含 <code>&#x3C;noscript></code> 元素在其後代中。<br />否則：可以包括流內容或段落型內
       </td>
     </tr>
     <tr>
@@ -49,9 +49,17 @@ slug: Web/HTML/Element/noscript
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        如果不存在祖元素 <code>&#x3C;noscript></code>，或者在 {{HTMLElement("head")}} 元素中（但僅適用於HTML文件），同樣如果不存在 <code>&#x3C;noscript></code> 祖元素，則接受任何<a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
+        如果不存在祖元素 <code>&#x3C;noscript></code>，或者在 {{HTMLElement("head")}} 元素中（但僅適用於 HTML 文件），同樣如果不存在 <code>&#x3C;noscript></code> 祖元素，則接受任何<a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
           >段落型內容</a
         >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隱含的 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >沒有對應的角色</a
+        >
       </td>
     </tr>
     <tr>
