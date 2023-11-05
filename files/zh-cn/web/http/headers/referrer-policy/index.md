@@ -33,7 +33,7 @@ Referrer-Policy: unsafe-url
 - `no-referrer-when-downgrade`
   - : 在同等安全级别或安全级别提升的情况下（HTTP→HTTP、HTTP→HTTPS、HTTPS→HTTPS），在 {{HTTPHeader("Referer")}} 中发送{{glossary("origin", "来源")}}、路径和查询字符串。而在目标的安全级别下降的情况下（HTTPS→HTTP、HTTPS→file）则不发送 {{HTTPHeader("Referer")}} 标头。
 - `origin`
-  - : 在任何情况下，仅发送文件的源作为引用地址。例如 `https://example.com/page.html` 会将 `https://example.com/ 作为引用地址`。
+  - : 仅在 {{HTTPHeader("Referer")}} 标头中发送{{glossary("origin", "来源")}}。例如 `https://example.com/page.html` 文档会将 `https://example.com/` 作为引用地址。
 - `origin-when-cross-origin`
   - : 对于同源的请求，会发送完整的 URL 作为引用地址，但是对于非同源请求仅发送文件的源。
 - `same-origin`
