@@ -466,7 +466,7 @@ GIF 支持简单的动画，即在最初的全尺寸帧之后，提供一系列�
 
 GIF 的另一个流行特性是支持[隔行扫描](<https://en.wikipedia.org/wiki/Interlacing_(bitmaps)>)，即像素行的存储顺序会被打乱，因此部分接收的文件可以较低的质量显示。这在网络连接速度较慢时尤其有用。
 
-GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF 可能会导致不理想的抖动。通常情况下，现代内容应使用 [PNG](#png_ 便携式网络图形)制作无损*和*索引静态图像，并应考虑使用 [APNG](#apng_动态可移植网络图形) 制作无损动画序列。
+GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF 可能会导致不理想的抖动。通常情况下，现代内容应使用 [PNG](#png_便携式网络图形) 制作无损*和*索引静态图像，并应考虑使用 [APNG](#apng_动态可移植网络图形) 制作无损动画序列。
 
 <table class="standard-table">
   <tbody>
@@ -554,7 +554,7 @@ GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF
 
 ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌面图标而设计的。不过，早期版本的 Internet Explorer 允许网站在其根目录中提供名为 `favicon.ico` 的 ICO 文件，以指定一个 **[favicon](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#在你的站点增加自定义图标)**——一个显示在收藏夹菜单和其他对网站图标有用的地方的图标。
 
-一个 ICO 文件可以包含多个图标，文件开头有一个目录，列出每个图标的详细信息。目录之后是图标的数据。每个图标的数据既可以是不带文件头的 [BMP](#bmp_ 位图文件) 图像，也可以是完整的 [PNG](#png_ 便携式网络图形) 图像（包括文件头）。如果使用 ICO 文件，则应使用 BMP 格式，因为直到 Windows Vista 才添加了对 ICO 文件内的 PNG 的支持，而且这种支持可能并不完善。
+一个 ICO 文件可以包含多个图标，文件开头有一个目录，列出每个图标的详细信息。目录之后是图标的数据。每个图标的数据既可以是不带文件头的 [BMP](#bmp_位图文件) 图像，也可以是完整的 [PNG](#png_便携式网络图形) 图像（包括文件头）。如果使用 ICO 文件，则应使用 BMP 格式，因为直到 Windows Vista 才添加了对 ICO 文件内的 PNG 的支持，而且这种支持可能并不完善。
 
 > **警告：** ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标)所述，它们在收藏夹中的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
 
@@ -644,7 +644,7 @@ ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌�
             </tr>
             <tr>
               <th scope="row">灰度</th>
-              <td>1, 2, 4, 8, and 16</td>
+              <td>1、2、4、8 和 16</td>
               <td>
                 每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
@@ -696,11 +696,9 @@ ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌�
 
 ### JPEG（联合图像专家小组图像）
 
-The {{Glossary("JPEG")}} (typically pronounced "**jay-peg**") image format is currently the most widely used lossy compression format for still images.
-It's particularly useful for photographs; applying lossy compression to content requiring sharpness, like diagrams or charts, can produce unsatisfactory results.
+{{Glossary("JPEG")}}（通常发音为“**jay-peg**”）图像格式是目前最广泛使用的静态图像有损压缩格式。它尤其适用于照片；将有损压缩应用于需要清晰度的内容，如图表，可能会产生令人不满意的效果。
 
-JPEG is actually a data format for compressed photos, rather than a file type.
-The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes the format of the files we think of as "JPEG" images.
+JPEG 实际上是一种压缩照片的数据格式，而不是一种文件类型。JFIF（**J**PEG **F**ile **I**nterchange **F**format）规范描述了我们认为的“JPEG”图像的文件格式。
 
 <table class="standard-table">
   <tbody>
@@ -711,8 +709,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
     <tr>
       <th scope="row">文件扩展名</th>
       <td>
-        <code>.jpg</code>, <code>.jpeg</code>, <code>.jpe</code>,
-        <code>.jif</code>, <code>.jfif</code>
+        <code>.jpg</code>、<code>.jpeg</code>、<code>.jpe</code>、<code>.jif</code>、<code>.jfif</code>
       </td>
     </tr>
     <tr>
@@ -727,7 +724,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
-      <td>65,535×65,535 pixels</td>
+      <td>65,535×65,535 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -744,7 +741,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
             <tr>
               <th scope="row">灰度</th>
               <td><em>n/a</em></td>
-              <td>True greyscale can be supported using the single luma channel (Y).</td>
+              <td>使用单 Luma 通道（Y）可支持真正的灰度。</td>
             </tr>
             <tr>
               <th scope="row">真彩色</th>
@@ -756,17 +753,17 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
             <tr>
               <th scope="row">索引颜色</th>
               <td><em>n/a</em></td>
-              <td>JPEG does not offer an indexed color mode.</td>
+              <td>JPEG 不提供索引颜色模式。</td>
             </tr>
             <tr>
               <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>JPEG does not support an alpha channel.</td>
+              <td>JPEG 不支持透明度通道。</td>
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>JPEG does not support an alpha channel.</td>
+              <td>JPEG 不支持透明度通道。</td>
             </tr>
           </tbody>
         </table>
@@ -775,23 +772,21 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
     <tr>
       <th scope="row">压缩</th>
       <td>
-        Lossy; based on the <a href="https://en.wikipedia.org/wiki/Discrete_cosine_transform">discrete cosine transform</a>
+        有损；基于<a href="https://en.wikipedia.org/wiki/Discrete_cosine_transform">离散余弦变换</a>
       </td>
     </tr>
     <tr>
       <th scope="row">授权</th>
-      <td>As of October 27, 2006, all United States patents have expired.</td>
+      <td>截至 2006 年 10 月 27 日，所有美国专利均已过期。</td>
     </tr>
   </tbody>
 </table>
 
 ### PNG（便携式网络图形）
 
-The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless compression, while supporting higher color depths than [GIF](#gif_graphics_interchange_format) and being more efficient, as well as featuring full alpha transparency support.
+{{Glossary("PNG")}}（读作“**ping**”）图像格式使用无损压缩，同时支持比 [GIF](#gif_图像互换格式) 更高的颜色深度，效率更高，并具有完全支持 alpha 透明度的特点。
 
-PNG is widely supported, with all major browsers offering full support for its features.
-Internet Explorer, which introduced PNG support in versions 4–5, did not fully support it until IE 9, and had many infamous bugs for many of the intervening years, including in the once-omnipresent Internet Explorer 6.
-This slowed PNG adoption, but it is now commonly used, especially when precise reproduction of the source image is needed.
+PNG 受广泛支持，所有主要浏览器都完全支持其特性。Internet Explorer 在第 4-5 版中引入了对 PNG 的支持，但直到 IE 9 才完全支持该特性，并且在其间的许多年里出现了许多臭名昭著的错误，包括在曾经风靡一时的 Internet Explorer 6 中。这减缓了 PNG 的应用，但现在它已被普遍使用，尤其是在需要精确复制源图像时。
 
 <table class="standard-table">
   <tbody>
@@ -813,7 +808,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
         <table class="standard-table">
           <thead>
             <tr>
-              <th scope="row">Feature</th>
+              <th scope="row">特性</th>
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
@@ -874,7 +869,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
-      <td>2,147,483,647×2,147,483,647 pixels</td>
+      <td>2,147,483,647×2,147,483,647 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -890,7 +885,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
           <tbody>
             <tr>
               <th scope="row">灰度</th>
-              <td>1, 2, 4, 8, and 16</td>
+              <td>1、2、4、8 和 16</td>
               <td>
                 每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
@@ -899,33 +894,31 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
               <th scope="row">真彩色</th>
               <td>8 和 16</td>
               <td>
-                Each pixel is represented by three <em>D</em>-bit values
-                indicating the level of the red, green, and blue color components.
+                每个像素由三个<em>D</em>位值表示，分别代表红、绿、蓝三色的色阶。
               </td>
             </tr>
             <tr>
             <tr>
               <th scope="row">索引颜色</th>
-              <td>1, 2, 4, and 8</td>
+              <td>1、2、4 和 8</td>
               <td>
-                Each pixel is a <em>D</em>-bit value indicating an index into a color palette which is contained within a
-                <code><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code>
-                chunk in the APNG file; the colors in the palette all use an 8-bit depth.
+                每个像素都是一个 <em>D</em> 位值，表示调色板的索引，调色板包含在 APNG 文件的 <code
+                  ><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code
+                > 块中；调色板中的颜色都使用 8 位深度。
               </td>
             </tr>
             <tr>
               <th scope="row">带有灰度的真彩色</th>
               <td>8 和 16</td>
               <td>
-                Each pixel is represented by two <em>D</em>-bit values: the
-                intensity of the greyscale pixel and an alpha sample, indicating how opaque the pixel is.
+                每个像素由两个 <em>D</em> 位值表示：灰度像素的强度和表示像素不透明程度的 Alpha 样本。
               </td>
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
               <td>8 和 16</td>
               <td>
-                Each pixel is comprised of four <em>D</em>-pixel color components: red, green, blue, and the alpha sample indicating how opaque the pixel is.
+                每个像素由四个 <em>D</em> 像素颜色成分组成：红色、绿色、蓝色和表示像素不透明程度的 alpha 样本。
               </td>
             </tr>
           </tbody>
@@ -934,17 +927,13 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>无损, optionally indexed color like GIF</td>
+      <td>无损，可选择索引颜色，如 GIF</td>
     </tr>
     <tr>
       <th scope="row">授权</th>
       <td>
-        ©2003 <a href="https://www.w3.org/">W3C</a> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>,
-        <a href="https://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-        and
-        <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. No known royalty-bearing patents.
+        ©2003 <a href="https://www.w3.org/">W3C</a>（<a href="http://www.lcs.mit.edu/">MIT</a>、<a href="http://www.ercim.org/">ERCIM</a>、<a href="https://www.keio.ac.jp/">Keio</a>)，保留所有权利。W3C
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">责任</a>、<a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">商标</a>、<a href="https://www.w3.org/Consortium/Legal/copyright-documents">文档使用</a>和<a href="https://www.w3.org/Consortium/Legal/copyright-software">软件授权</a> 适用。没有已知的专利使用费。
       </td>
     </tr>
   </tbody>
