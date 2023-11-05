@@ -47,8 +47,8 @@ slug: Web/CSS/Containing_block
 
 如上所述，当某些属性被赋予一个百分比值时，它的计算值取决于这个元素的包含块。以这种方式工作的属性包括盒模型属性和偏移属性：
 
-1. {{cssxref("height")}} {{cssxref("top")}} 及 {{cssxref("bottom")}} 属性根据包含块的 `height` 计算百分比值。
-2. {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} 属性根据包含块的 `width` 计算百分比值。
+1. {{cssxref("height")}}、{{cssxref("top")}} 及 {{cssxref("bottom")}} 属性根据包含块的 `height` 计算百分比值。
+2. {{cssxref("width")}}、{{cssxref("left")}}、{{cssxref("right")}}、{{cssxref("padding")}} 和 {{cssxref("margin")}} 属性根据包含块的 `width` 计算百分比值。
 
 > **备注:** 一个**块容器** （比如 inline-block、block 或 list-item 元素）要么只包含参与内联格式化上下文的内联级别盒子，要么只包含参与块格式化上下文的块级别盒子。只有包含块级或内联级别盒子的元素才是块容器。
 
