@@ -21,6 +21,7 @@ filter(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
+
   - : 配列のそれぞれの要素に対して実行する関数です。この関数は、配列の要素を保持する場合は[真値](/ja/docs/Glossary/Truthy)、保持しない場合は[偽値](/ja/docs/Glossary/Falsy)を返します。この関数は以下の引数で呼び出されます。
     - `element`
       - : 配列内で処理中の現在の要素です。
