@@ -1438,11 +1438,7 @@ PNG 可能是最好的选择，但无损 WebP 的压缩效果可能更好。
 <picture>
   <source srcset="diagram.svg" type="image/svg+xml" />
   <source srcset="diagram.png" type="image/png" />
-  <img
-    src="diagram.gif"
-    width="620"
-    height="540"
-    alt="数据通道示意图" />
+  <img src="diagram.gif" width="620" height="540" alt="数据通道示意图" />
 </picture>
 ```
 
