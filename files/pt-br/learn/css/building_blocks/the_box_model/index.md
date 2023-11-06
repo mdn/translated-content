@@ -56,8 +56,7 @@ Se a caixa for do tipo `inline`, ela seguira os segintes comportamentos:
 - Ela não quebrará em uma nova linha.
 - As propriedades {{cssxref("width")}} e {{cssxref("height")}} não serão aplicadas.
 - Padding vertical, margens e bordas serão aplicados, mas não farão com que outras caixas embutidades se afastem.
-- Padding horizontal, margens e bordas serão aplicadas ee farão com qe outras caixas embutidades se afastem da caixa.
-<!-- Sera? ao reprudizir isso n consegui chegar nesse resultado -->
+- Padding horizontal, margens e bordas serão aplicadas e farão com que outras caixas embutidades se afastem da caixa.
 
 O elemento `<a>` usado em links, `<span>`, `<em>` ee `<strong>` são exemplos de elementos que sao `inline` por padrão.
 
