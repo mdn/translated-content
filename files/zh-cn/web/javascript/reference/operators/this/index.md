@@ -122,7 +122,7 @@ function logThis() {
   console.log(this);
 }
 
-[1, 2, 3].forEach(logThis); // undefined, undefined, undefined
+[1, 2, 3].forEach(logThis); // undefined、undefined、undefined
 ```
 
 一些 API 允许你为回调函数的调用设置一个 `this` 值。例如，所有的迭代数组方法和相关的方法，如{{jsxref("Set.prototype.forEach()")}}，都接受一个可选的 `thisArg` 参数。
