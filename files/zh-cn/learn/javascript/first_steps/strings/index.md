@@ -227,7 +227,7 @@ console.log(bigmouth);
 ```js
 const name = "Front ";
 const number = 242;
-console.log(name + number);
+console.log(name + number); // "Front 242"
 ```
 
 你可能会认为这会返回一个错误，但它可以正常工作。数字应该如何显示为字符串是相当明确的，所以浏览器会自动将数字转换为字符串，并将两个字符串连接起来。
