@@ -132,7 +132,7 @@ function logThis() {
 // { name: 'obj' }, { name: 'obj' }, { name: 'obj' }
 ```
 
-偶尔，回调函数会以一个非 `undefined` 的 `this` 值被调用。例如，{{jsxref("JSON.parse()")}}的 `reviver` 参数和{{jsxref("JSON.stringify()")}}的 `replacer` 参数都会把 `this` 设置为正在被解析/序列化的属性所属的对象。
+偶尔，回调函数会以一个非 `undefined` 的 `this` 值被调用。例如，{{jsxref("JSON.parse()")}} 的 `reviver` 参数和 {{jsxref("JSON.stringify()")}} 的 `replacer` 参数都会把 `this` 设置为正在被解析/序列化的属性所属的对象。
 
 #### 箭头函数
 
