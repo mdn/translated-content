@@ -2,7 +2,7 @@
 title: 文本处理——JavaScript 中的字符串
 slug: Learn/JavaScript/First_steps/Strings
 l10n:
-  sourceCommit: f3b6afa6ec60508dceeec4fd299ec4ba3995c0c2
+  sourceCommit: 3e77d220b829f7477da24af0fa4acf1a54f5dbc9
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
