@@ -110,7 +110,7 @@ console.log(typeof (1).getThis()); // "object"
 console.log(getThis() === globalThis); // true
 ```
 
-在典型的函数调用中，`this` 是通过函数的前缀（点之前的部分）隐式传递的，就像一个参数。你也可以使用{{jsxref("Function.prototype.call()")}}，{{jsxref("Function.prototype.apply()")}}，或{{jsxref("Reflect.apply()")}}方法显式设置 `this` 的值。使用{{jsxref("Function.prototype.bind()")}}，你可以创建一个新的函数，无论函数如何被调用，其 `this` 的值都不会改变。当使用这些方法时，如果函数是在非严格模式下，上述 `this` 替换规则仍然适用。
+在典型的函数调用中，`this` 是通过函数的前缀（点之前的部分）隐式传递的，就像一个参数。你也可以使用 {{jsxref("Function.prototype.call()")}}、{{jsxref("Function.prototype.apply()")}} 或 {{jsxref("Reflect.apply()")}} 方法显式设置 `this` 的值。使用 {{jsxref("Function.prototype.bind()")}}，你可以创建一个新的函数，无论函数如何被调用，其 `this` 的值都不会改变。当使用这些方法时，如果函数是在非严格模式下，上述 `this` 替换规则仍然适用。
 
 #### 回调函数
 
