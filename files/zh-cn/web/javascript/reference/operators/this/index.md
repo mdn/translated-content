@@ -88,7 +88,7 @@ Number.prototype.getThisStrict = getThisStrict;
 console.log(typeof (1).getThisStrict()); // "number"
 ```
 
-如果函数在没有被任何东西访问的情况下被调用，`this` 将是 `undefined` - 但只有在函数处于严格模式下会如此。
+如果函数在没有被任何东西访问的情况下被调用，`this` 将是 `undefined`——但只有在函数处于严格模式下会如此。
 
 ```js
 console.log(typeof getThisStrict()); // "undefined"
