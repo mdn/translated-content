@@ -240,7 +240,7 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 ### 全局上下文
 
-在全局执行上下文中（在任何函数或类之外；可能在全局范围内定义的[块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)或[箭头函数](#箭头函数)内部），`this` 值取决于脚本运行的执行上下文。像[回调](#回调函数)一样，`this` 值由运行时环境（调用者）确定。
+在全局执行上下文中（在任何函数或类之外；可能在全局范围内定义的[块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)或[箭头函数](#箭头函数)内部），`this` 值取决于脚本运行的执行上下文。像[回调](#回调)一样，`this` 值由运行时环境（调用者）确定。
 
 在脚本的顶层，无论是否在严格模式下，`this` 会指向{{jsxref("globalThis")}}。这通常与全局对象相同 —— 例如，如果源代码放在 HTML 的 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素内并作为脚本执行，`this === window`。
 
