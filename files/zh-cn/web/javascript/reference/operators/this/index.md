@@ -48,7 +48,7 @@ console.log(obj2.getThis()); // { name: 'obj2', getThis: [Function: getThis] }
 
 注意，虽然函数是相同的，但是根据其调用的方式，`this` 的值是不同的。这与函数参数的工作方式类似。
 
-`this` 的值不是拥有此函数作为自己属性的那个对象，而是用于调用此函数的对象。你可以通过调用对象在[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的方法来证明这一点。
+`this` 的值不是拥有此函数作为自己属性的对象，而是用于调用此函数的对象。你可以通过调用对象在[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的方法来证明这一点。
 
 ```js
 const obj3 = {
