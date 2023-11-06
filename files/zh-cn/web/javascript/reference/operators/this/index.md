@@ -59,7 +59,7 @@ const obj3 = {
 console.log(obj3.getThis()); // { name: 'obj3' }
 ```
 
-`this` 的值总是根据函数如何被调用而改变，即使函数是在创建对象时定义的：
+`this` 的值总是根据调用函数的方式而改变，即使函数是在创建对象时定义的：
 
 ```js
 const obj4 = {
