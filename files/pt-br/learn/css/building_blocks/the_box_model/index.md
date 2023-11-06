@@ -60,7 +60,7 @@ Se a caixa for do tipo `inline`, ela seguira os segintes comportamentos:
 
 O elemento `<a>` usado em links, `<span>`, `<em>` e `<strong>` são exemplos de elementos que sao `inline` por padrão.
 
-O tipo de caixa aplicada em um elemento é definida pela propriedade {{cssxref("display")}} como `block` ou `inline` e esta relacionada ao valor **outer** do `display`.
+O tipo de caixa aplicada em um elemento é definida pela propriedade {{cssxref("display")}} como `block` ou `inline` e está relacionada ao valor **outer** do `display`.
 
 ## Além disto: Tipos de exibição ( display ) internos e externos
 
