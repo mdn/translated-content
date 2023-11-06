@@ -186,7 +186,7 @@ console.log(o.a); // 38
 
 #### super
 
-当一个函数以 `super.method()` 的形式被调用时，`method` 函数内的 `this` 与 `super.method()` 调用周围的 `this` 值相同，通常不等于 `super` 所指向的对象。这是因为 `super.method` 不是像上面的对象成员访问——它是一种特殊的语法，有不同的绑定规则。有关示例，请参见[`super`参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super)。
+当一个函数以 `super.method()` 的形式被调用时，`method` 函数内的 `this` 与 `super.method()` 调用周围的 `this` 值相同，通常不等于 `super` 所指向的对象。这是因为 `super.method` 不是像上面的对象成员访问——它是一种特殊的语法，有不同的绑定规则。有关示例，请参见 [`super` 参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/super#通过_super_调用方法)。
 
 ### 类上下文
 
