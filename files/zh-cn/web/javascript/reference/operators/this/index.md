@@ -114,7 +114,7 @@ console.log(getThis() === globalThis); // true
 
 #### 回调函数
 
-当一个函数作为回调函数传递时，`this` 的值取决于如何调用回调，这由API的实现者决定。回调函数通常以 `undefined` 作为 `this` 的值被调用（直接调用，而不附加到任何对象上），这意味着如果函数是在非严格模式，`this` 的值会是全局对象（{{jsxref("globalThis")}}）。这在[迭代数组方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)，[`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)构造函数等都是适用的。
+当一个函数作为回调函数传递时，`this` 的值取决于如何调用回调，这由 API 的实现者决定。回调函数通常以 `undefined` 作为 `this` 的值被调用（直接调用，而不附加到任何对象上），这意味着如果函数是在非严格模式，`this` 的值会是全局对象（{{jsxref("globalThis")}}）。这在[迭代数组方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)，[`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)构造函数等都是适用的。
 
 ```js
 function logThis() {
@@ -242,7 +242,7 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 在全局执行上下文中（在任何函数或类之外；可能在全局范围内定义的[块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)或[箭头函数](#箭头函数)内部），`this` 值取决于脚本运行的执行上下文。像[回调](#回调函数)一样，`this` 值由运行时环境（调用者）确定。
 
-在脚本的顶层，无论是否在严格模式下，`this` 会指向{{jsxref("globalThis")}}。这通常与全局对象相同 —— 例如，如果源代码放在HTML的 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素内并作为脚本执行，`this === window`。
+在脚本的顶层，无论是否在严格模式下，`this` 会指向{{jsxref("globalThis")}}。这通常与全局对象相同 —— 例如，如果源代码放在 HTML 的 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素内并作为脚本执行，`this === window`。
 
 > **注意：** `globalThis` 通常与全局对象的概念相同（即向 `globalThis` 添加属性会使它们成为全局变量）—— 这对于浏览器和 Node 是这样的 —— 但 hosts 可以为 `globalThis` 提供与全局对象无关的不同值。
 
@@ -255,7 +255,7 @@ console.log(window.b); // "MDN"
 console.log(b); // "MDN"
 ```
 
-如果源代码作为[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)加载（对于HTML，这意味着在 `<script>` 标签中添加 `type="module"`），在顶层，`this` 总是 `undefined`。
+如果源代码作为[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)加载（对于 HTML，这意味着在 `<script>` 标签中添加 `type="module"`），在顶层，`this` 总是 `undefined`。
 
 如果源代码使用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 执行，`this` 与[direct eval](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval)的闭合上下文相同，或者与 indirect eval 的 `globalThis`（就像它在单独的全局脚本中运行一样）相同。
 
@@ -265,11 +265,11 @@ function test() {
   console.log(eval("this") === this);
   // Indirect eval，非严格模式
   console.log(eval?.("this") === globalThis);
-  // 间接eval，严格模式
+  // Indirect eval，严格模式
   console.log(eval?.("'use strict'; this") === globalThis);
 }
 
-test.call({ name: "obj" }); // 输出 3个 "true"
+test.call({ name: "obj" }); // 输出 3 个 "true"
 ```
 
 请注意，某些源代码虽然看起来像全局范围，但在执行时实际上被包装在一个函数中。例如，Node.js CommonJS 模块被包装在一个函数中，并且 `this` 值设置为 `module.exports`。[事件处理器属性](#内联事件处理器中的_this)执行时，`this` 设置为它们附加到的元素。
