@@ -54,7 +54,7 @@ If a box has an outer display type of `inline`, then:
 Se a caixa for do tipo `inline`, ela seguira os segintes comportamentos:
 
 - Ela não quebrará em uma nova linha.
-- A propriedade {{cssxref("width")}} e {{cssxref("height")}} não serão aplicadas.
+- As propriedades {{cssxref("width")}} e {{cssxref("height")}} não serão aplicadas.
 - Padding vertical, margens e bordas serão aplicados, mas não farão com que outras caixas embutidades se afastem.
 - Padding horizontal, margens e bordas serão aplicadas ee farão com qe outras caixas embutidades se afastem da caixa.
 <!-- Sera? ao reprudizir isso n consegui chegar nesse resultado -->
