@@ -78,4 +78,4 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 - {{jsxref("Array.prototype.values()")}}
 - [`Array.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
 - {{jsxref("TypedArray.prototype.keys()")}}
-- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
