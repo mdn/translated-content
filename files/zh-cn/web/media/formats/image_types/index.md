@@ -692,7 +692,7 @@ ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌�
       <td>—</td>
     </tr>
   </tbody>
-</table>            
+</table>
 
 ### JPEG（联合图像专家小组图像）
 
