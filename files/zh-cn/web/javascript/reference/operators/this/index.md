@@ -211,7 +211,7 @@ console.log(C.staticField === C); // true
 
 #### 派生类构造函数
 
-与基类构造函数不同，派生构造函数没有初始的 `this` 绑定。调用{{jsxref("Operators/super", "super()")}}在构造函数中创建一个 `this` 绑定，基本上和求值以下代码的效果类似，其中 `Base` 是基类：
+与基类构造函数不同，派生构造函数没有初始的 `this` 绑定。调用 {{jsxref("Operators/super", "super()")}} 在构造函数中创建一个 `this` 绑定，基本上和求值以下代码的效果类似，其中 `Base` 是基类：
 
 ```js-nolint
 this = new Base();
