@@ -94,7 +94,7 @@ console.log(typeof (1).getThisStrict()); // "number"
 console.log(typeof getThisStrict()); // "undefined"
 ```
 
-在非严格模式下，一个特殊的过程称为[`this`替换](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution)确保 `this` 的值总是一个对象。这意味着：
+在非严格模式下，一个特殊的过程称为 [`this` 替换](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#非_this_替换)确保 `this` 的值总是一个对象。这意味着：
 
 - 如果一个函数被调用时 `this` 被设置为 `undefined` 或 `null`，`this` 会被替换为{{jsxref("globalThis")}}。
 - 如果函数被调用时 `this `被设置为一个原始值，`this` 会被替换为原始值的包装对象。
