@@ -493,7 +493,7 @@ bird.sayBye = car.sayBye;
 bird.sayBye(); // Bye from Ferrari
 ```
 
-> **注意：** 类总是在严格模式下。如果一个方法试图访问 `this` 上的属性，使用未定义的 `this` 值调用该方法将会抛出错误。
+> **备注：** 类总是在严格模式下。如果一个方法试图访问 `this` 上的属性，使用未定义的 `this` 值调用该方法将会抛出错误。
 >
 > ```js example-bad
 > const carSayHi = car.sayHi;
