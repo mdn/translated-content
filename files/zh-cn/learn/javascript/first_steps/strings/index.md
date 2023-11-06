@@ -82,9 +82,9 @@ console.log(backtick);
 const badQuotes = '不允许这样写！";
 ```
 
-使用单引号声明的字符串和使用双引号声明的字符串是相同的，你可以根据个人偏好来使用。但推荐选择一种样式并在代码中保持一致
+使用单引号声明的字符串和使用双引号声明的字符串是相同的，你可以根据个人偏好来使用。但推荐选择一种样式并在代码中保持一致。
 
-使用反引号声明的字符串是一种特殊字符串，被称为[_模板字面量_](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)。在大多数情况下，木板字面量与普通字符串类似，但它具有一些特殊的属性：
+使用反引号声明的字符串是一种特殊字符串，被称为[_模板字面量_](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)。在大多数情况下，模板字面量与普通字符串类似，但它具有一些特殊的属性：
 
 - 你可以在其中[嵌入 JavaScript](#嵌入_javascript)
 - 你可以声明[多行](#多行字符串)的模板字面量
@@ -145,7 +145,7 @@ const name = "克里斯";
 console.log(greeting + "，" + name); // "你好，克里斯"
 ```
 
-但是，模板字面量通常更更具可读性：
+但是，模板字面量通常更具可读性：
 
 ```js
 const greeting = "你好";
@@ -256,6 +256,6 @@ console.log(name + number); // "Front 242"
 
 ## 结论
 
-这就是 JavaScript 中所涉及的字符串的基础只是。在下一篇文章中，我们将在此基础上，研究 JavaScript 中字符串的一些内置方法，以及如何使用它们来操作我们的字符串，使之成为我们想要的形式。
+这就是 JavaScript 中所涉及的字符串的基础知识。在下一篇文章中，我们将在此基础上，研究 JavaScript 中字符串的一些内置方法，以及如何使用它们来操作我们的字符串，使之成为我们想要的形式。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
