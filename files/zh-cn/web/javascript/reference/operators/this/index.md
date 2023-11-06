@@ -83,7 +83,7 @@ function getThisStrict() {
   return this;
 }
 
-// 仅用于演示 - 你不应该改变内置的原型对象
+// 仅用于演示——你不应该改变内置的原型对象
 Number.prototype.getThisStrict = getThisStrict;
 console.log(typeof (1).getThisStrict()); // "number"
 ```
