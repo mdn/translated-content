@@ -48,7 +48,7 @@ Se for uma caixa definida como block, ela tera os seguintes comportamentos:
 - As propriedades {{cssxref("width")}} e {{cssxref("height")}} serão respeitadas.
 - {{cssxref("padding")}}, {{cssxref("margin")}} e {{cssxref("border")}} farão com que outros elementos sejam empurrados para fora da caixa.
 
-A menos que decidamos alterar o tipo de exibição para `inlined`, alguns elementos como os cabeçalhos (ex: `<h1>`) e `<p>` são caixas do tipo `block` por padrão.
+A menos que decidamos alterar o tipo de exibição para `inline`, alguns elementos como os cabeçalhos (ex: `<h1>`) e `<p>` são caixas do tipo `block` por padrão.
 
 If a box has an outer display type of `inline`, then:
 Se a caixa for do tipo `inline`, ela seguira os segintes comportamentos:
