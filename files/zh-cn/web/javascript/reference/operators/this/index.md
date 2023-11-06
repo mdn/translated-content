@@ -148,7 +148,7 @@ console.log(foo() === globalObject); // true
 
 箭头函数在其周围的作用域上创建一个 `this` 值的[闭包](/zh-CN/docs/Web/JavaScript/Closures)，这意味着箭头函数的行为就像它们是“自动绑定”的——无论如何调用，`this` 都绑定到函数创建时的值（在上面的例子中，是全局对象）。在其他函数内部创建的箭头函数也是如此：它们的 `this` 值保持为闭合词法上下文的 `this`。[参见下面的例子](#箭头函数中的_this)。
 
-此外，当使用 `call()`，`bind()`，或 `apply()` 调用箭头函数时，`thisArg` 参数会被忽略。不过，你仍然可以使用这些方法传递其他参数。
+此外，当使用 `call()`、`bind()` 或 `apply()` 调用箭头函数时，`thisArg` 参数会被忽略。不过，你仍然可以使用这些方法传递其他参数。
 
 ```js
 const obj = { name: "obj" };
