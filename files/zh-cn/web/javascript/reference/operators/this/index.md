@@ -163,7 +163,7 @@ console.log(boundFoo() === globalObject); // true
 
 #### 构造函数
 
-当一个函数被用作构造函数（使用{{jsxref("Operators/new", "new")}}关键字），无论构造函数是在哪个对象上被访问的，其 `this` 都会被绑定到正在构造的新对象上。除非构造函数返回另一个非原始值，不然 `this` 的值会成为 `new` 表达式的值。
+当一个函数被用作构造函数（使用 {{jsxref("Operators/new", "new")}} 关键字）时，无论构造函数是在哪个对象上被访问的，其 `this` 都会被绑定到正在构造的新对象上。除非构造函数返回另一个非原始值，不然 `this` 的值会成为 `new` 表达式的值。
 
 ```js
 function C() {
