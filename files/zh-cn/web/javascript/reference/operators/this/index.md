@@ -500,7 +500,7 @@ bird.sayBye(); // Bye from Ferrari
 > carSayHi(); // TypeError because the 'sayHi' method tries to access 'this.name', but 'this' is undefined in strict mode.
 > ```
 
-然而，请注意，自动绑定的方法遭受的问题与[使用箭头函数作为类属性](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#cannot_be_used_as_methods)相同：类的每个实例都会有其方法的自己的副本，这会增加内存使用。只在绝对必要的地方使用它。你也可以模仿 [`Intl.NumberFormat.prototype.format()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format#using_format_with_map) 的实现：定义属性作为一个 getter，当访问时返回一个绑定函数并保存它，这样函数只创建一次，并且只会在必要时创建。
+然而，请注意，自动绑定的方法遭受的问题与[使用箭头函数作为类属性](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#不能用作方法)相同：类的每个实例都会有其方法的自己的副本，这会增加内存使用。只在绝对必要的地方使用它。你也可以模仿 [`Intl.NumberFormat.prototype.format()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format#将_format_与_map_一起使用) 的实现：定义属性作为一个 getter，当访问时返回一个绑定函数并保存它，这样函数只创建一次，并且只会在必要时创建。
 
 ### with 语句中的 this
 
