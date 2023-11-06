@@ -45,7 +45,7 @@ console.log("returned: " + g.arguments);
 
 ## Especificações
 
-Not part of any standard.
+Não faz parte de nenhuma especificação.
 
 ## Compatibilidade com navegadores
 
