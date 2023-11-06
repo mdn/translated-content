@@ -75,7 +75,7 @@ obj5.getThis = obj4.getThis;
 console.log(obj5.getThis()); // { name: 'obj5', getThis: [Function: getThis] }
 ```
 
-如果方法被访问的值是一个原始值，`this` 也将是一个原始值 - 但只有当函数处于严格模式下会如此。
+如果方法被访问的值是一个原始值，`this` 也将是一个原始值——但只有当函数处于严格模式下会如此。
 
 ```js
 function getThisStrict() {
