@@ -1260,14 +1260,11 @@ WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但
 
 ### XBM（X Window 系统位图文件）
 
-XBM (X Bitmap) files were the first to be supported on the Web, but are no longer used and should be avoided, as their format has potential security concerns.
-Modern browsers have not supported XBM files in many years, but when dealing with older content, you may find some still around.
+XBM（X 位图）文件是网络上最早支持的文件，但现在已不再使用，应避免使用，因为其格式存在潜在的安全隐患。现代浏览器多年来一直不支持 XBM 文件，但在处理旧内容时，你可能会发现其中一些仍然存在。
 
-XBM uses a snippet of C code to represent the contents of the image as an array of bytes.
-Each image consists of 2 to 4 `#define` directives, providing the width and height of the bitmap (and optionally the hotspot, if the image is designed as a cursor), followed by an array of `unsigned char`, where each value contains 8 1-bit monochrome pixels.
+XBM 使用一段 C 代码将图像内容表示为一个字节数组。每个图像由 2 到 4 个 `#define` 指令组成，提供位图的宽度和高度（如果图像设计为光标，还可选择热点），后面是一个 `unsigned char` 数组，其中每个值包含 8 个 1 位单色像素。
 
-The image must be a multiple of 8 pixels wide.
-For example, the following code represents an XBM image which is 8 pixels by 8 pixels, with those pixels in a black-and-white checkerboard pattern:
+图像宽度必须是 8 像素的倍数。例如，以下代码表示一幅 8 像素乘 8 像素的 XBM 图像，这些像素呈黑白棋盘图案：
 
 ```cpp
 #define square8_width 8
@@ -1314,7 +1311,7 @@ static unsigned char square8_bits[] = {
             <tr>
               <th scope="row">灰度</th>
               <td>1</td>
-              <td>Each byte contains eight 1-bit pixels.</td>
+              <td>每个字节包含 8 个 1 位像素。</td>
             </tr>
             <tr>
               <th scope="row">真彩色</th>
