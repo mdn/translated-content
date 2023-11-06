@@ -941,7 +941,7 @@ PNG 受广泛支持，所有主要浏览器都完全支持其特性。Internet E
 
 ### SVG（可缩放矢量图形）
 
-SVG 是一种基于 [XML](/zh-CN/docs/Glossary/XML) 的[矢量图形](https://en.wikipedia.org/wiki/Vector_graphics)格式，它将图像的内容指定为一系列绘图命令，这些命令可以创建形状、线条、应用颜色、滤镜等。SVG 文件非常适合用于图表、图标和其他可精确绘制任何尺寸的图像。因此，SVG 在现代网页设计的用户界面元素中很受欢迎。
+SVG 是一种基于 [XML](/zh-CN/docs/Glossary/XML) 的[矢量图形](https://zh.wikipedia.org/wiki/矢量图形)格式，它将图像的内容指定为一系列绘图命令，这些命令可以创建形状、线条、应用颜色、滤镜等。SVG 文件非常适合用于图表、图标和其他可精确绘制任何尺寸的图像。因此，SVG 在现代网页设计的用户界面元素中很受欢迎。
 
 SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像。例如，此示例定义了一个初始大小为 100 x 100 单位的绘图区域，其中包含一条斜穿方框的线：
 
@@ -1043,35 +1043,27 @@ SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像�
 
 ### TIFF（标签图像文件格式）
 
-[TIFF](https://en.wikipedia.org/wiki/TIFF) is a raster graphics file format which was created to store scanned photos, although it can be any kind of image.
-It is a somewhat "heavy" format, in that TIFF files have a tendency to be larger than images in other formats.
-This is because of the metadata often included, as well as the fact that most TIFF images are either uncompressed or use compression algorithms that still leave fairly large files after compression.
+[TIFF](https://zh.wikipedia.org/wiki/TIFF) 是一种光栅图形文件格式，用于存储扫描照片，但也可以是任何类型的图像。这是一种有点“重”的格式，因为 TIFF 文件往往比其他格式的图像要大。这是因为通常包含元数据，而且大多数 TIFF 图像要么未经压缩，要么使用压缩算法，压缩后的文件仍然相当大。
 
-TIFF supports a variety of compression methods, but the most commonly used are the CCITT Group 4 (and, for older fax systems, Group 3) compression systems used for by fax software, as well as LZW and lossy JPEG compression.
+TIFF 支持多种压缩方法，但最常用的是传真软件使用的 CCITT 第 4 组（对于较早的传真系统，则为第 3 组）压缩系统，以及 LZW 和有损 JPEG 压缩。
 
-Every value in a TIFF file is specified using its **tag** (indicating what kind of information it is, such as the width of the image) and its **type** (indicating the format the data is stored in), followed by the length of the array of values to assign to that tag (all properties are stored in arrays, even for single values).
-This allows different data types to be used for the same properties.
-For example, the width of an image, `ImageWidth`, is stored using tag `0x0100`, and is a one-entry array.
-By specifying type 3 (`SHORT`), the value of `ImageWidth` is stored as a 16-bit value:
+TIFF 文件中的每个值都使用其**标签**（表示信息的类型，如图像的宽度）和**类型**（表示数据的存储格式）来指定，然后是要分配给该标签的数组值的长度（所有属性都存储在数组中，即使是单个值）。这样，相同的属性就可以使用不同的数据类型。例如，图像的宽度 `ImageWidth` 使用标签 `0x0100` 存储，是一个单项数组。通过指定类型 3（`SHORT`），`ImageWidth` 的值将存储为 16 位值：
 
-| Tag                     | Type               | Size                   | Value                 |
-| ----------------------- | ------------------ | ---------------------- | --------------------- |
-| `0x0100` (`ImageWidth`) | `0x0003` (`SHORT`) | `0x00000001` (1 entry) | `0x0280` (640 pixels) |
+| 标签                     | 类型                | 大小                     | 值                   |
+| ------------------------ | ------------------- | ------------------------ | -------------------- |
+| `0x0100`（`ImageWidth`） | `0x0003`（`SHORT`） | `0x00000001`（1 个条目） | `0x0280`（640 像素） |
 
-Specifying type 4 (`LONG`) stores the width as a 32-bit value:
+指定类型 4（`LONG`）可将宽度存储为 32 位值：
 
-| Tag                     | Type              | Size                   | Value                     |
-| ----------------------- | ----------------- | ---------------------- | ------------------------- |
-| `0x0100` (`ImageWidth`) | `0x0004` (`LONG`) | `0x00000001` (1 entry) | `0x00000280` (640 pixels) |
+| 标签                     | 类型               | 大小                     | 值                       |
+| ------------------------ | ------------------ | ------------------------ | ------------------------ |
+| `0x0100`（`ImageWidth`） | `0x0004`（`LONG`） | `0x00000001`（1 个条目） | `0x00000280`（640 像素） |
 
-A single TIFF file can contain multiple images; this may be used to represent multi-page documents, for example (such as a multi-page scanned document, or a received fax).
-However, software reading TIFF files is only required to support the first image.
+单个 TIFF 文件可包含多个图像；例如，可用于表示多页文件（如多页扫描文件或收到的传真）。不过，读取 TIFF 文件的软件只需支持第一个图像。
 
-TIFF supports a variety of color spaces, not just RGB.
-These include CMYK, YCbCr, and others, making TIFF a good choice for storing images intended for print, film, or television media.
+TIFF 不仅支持 RGB，还支持多种色彩空间。这些空间包括 CMYK、YCbCr 等，这使得 TIFF 成为存储用于印刷、电影或电视媒体的图像的良好选择。
 
-Long ago, some browsers supported TIFF images in web content; today, however, you need to use special libraries or browser add-ons to do so.
-As such, TIFF files are not useful within the context of web content, _but_ it's common to provide downloadable TIFF files when distributing photos and other artwork intended for precision editing or printing.
+很久以前，一些浏览器支持在网页内容中使用 TIFF 图像；但如今，你需要使用特殊的库或浏览器插件才能做到这一点。因此，TIFF 文件在网页内容中并不实用，但在分发照片和其他用于精确编辑或打印的艺术品时，提供可下载的 TIFF 文件是很常见的。
 
 <table class="standard-table">
   <tbody>
@@ -1081,7 +1073,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
     </tr>
     <tr>
       <th scope="row">文件扩展名</th>
-      <td><code>.tif</code>, <code>.tiff</code></td>
+      <td><code>.tif</code>、<code>.tiff</code></td>
     </tr>
     <tr>
       <th scope="row">规范</th>
@@ -1093,12 +1085,12 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        No browsers integrate support for TIFF; its value is as a download format
+        没有浏览器集成对 TIFF 的支持；其价值在于作为一种下载格式
       </td>
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
-      <td>4,294,967,295×4,294,967,295 pixels (theoretical)</td>
+      <td>4,294,967,295×4,294,967,295 像素（理论值）</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -1114,13 +1106,12 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
               <th scope="row">Bilevel</th>
               <td>1</td>
               <td>
-                A bilevel TIFF stores 8 bits in each byte, one bit per pixel.
-                The <code>PhotometricInterpretation</code> field specifies which of 0 and 1 are black and which is white.
+                双字节 TIFF 每个字节存储 8 位，每个像素一位。<code>PhotometricInterpretation</code> 字段指定 0 和 1 中哪个是黑色，哪个是白色。
               </td>
             </tr>
             <tr>
               <th scope="row">灰度</th>
-              <td>4 and 8</td>
+              <td>4 和 8</td>
               <td>
                 每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
@@ -1129,37 +1120,28 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
               <th scope="row">真彩色</th>
               <td>8</td>
               <td>
-                All true color RGB images are stored using 8-bits each of red, green, and blue.
+                所有真彩色 RGB 图像都使用红、绿、蓝各 8 位来存储。
               </td>
             </tr>
             <tr>
               <th scope="row">索引颜色</th>
-              <td>4 and 8</td>
+              <td>4 和 8</td>
               <td>
-                Each pixel is an index into a <code>ColorMap</code> record,
-                which defines the colors used in the image. The color map lists
-                all of the red values, then all of the green values, then all of
-                the blue values (rather than <code>rgb, rgb, rgb…</code>).
+                每个像素都是 <code>ColorMap</code> 记录的索引，该记录定义了图像中使用的颜色。颜色地图列出了所有红色值，然后是所有绿色值，最后是所有蓝色值（而不是 <code>rgb, rgb, rgb…</code>）。
               </td>
             </tr>
             <tr>
               <th scope="row">带有灰度的真彩色</th>
-              <td>4 and 8</td>
+              <td>4 和 8</td>
               <td>
-                Alpha information is added by specifying that there are more
-                than 3 samples per pixel in the <code>SamplesPerPixel</code> field, and indicating the type of
-                alpha (1 for an associated, pre-multiplied alpha component, and
-                2 for unassociated alpha (a separate matte); however, alpha channels are rarely used in TIFF files and may be unsupported by the user's software.
+                通过在 <code>SamplesPerPixel</code> 字段中指定每个像素有 3 个以上的采样点，并指明 Alpha 类型（1 表示关联的、预乘的 Alpha 分量，2 表示非关联的 Alpha（单独的哑光）），可以添加 Alpha 信息；但是，TIFF 文件中很少使用 Alpha 通道，用户的软件可能也不支持。
               </td>
             </tr>
             <tr>
               <th scope="row">带有透明度的真彩色</th>
               <td>8</td>
               <td>
-                Alpha information is added by specifying that there are more
-                than 3 samples per pixel in the <code>SamplesPerPixel</code> field, and indicating the type of
-                alpha (1 for an associated, pre-multiplied alpha component, and
-                2 for unassociated alpha (a separate matte); however, alpha channels are rarely used in TIFF files and may be unsupported by the user's software.
+                通过在 <code>SamplesPerPixel</code> 字段中指定每个像素有 3 个以上的采样点，并指明 Alpha 类型（1 表示关联的、预乘的 Alpha 分量，2 表示非关联的 Alpha（单独的哑光）），可以添加 Alpha 信息；但是，TIFF 文件中很少使用 Alpha 通道，用户的软件可能也不支持。
               </td>
             </tr>
           </tbody>
@@ -1169,13 +1151,13 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
     <tr>
       <th scope="row">压缩</th>
       <td>
-        Most TIFF files are uncompressed, but lossless PackBits and LZW compression are supported, as is lossy JPEG compression.
+        大多数 TIFF 文件未经压缩，但支持无损 PackBits 和 LZW 压缩，以及有损 JPEG 压缩。
       </td>
     </tr>
     <tr>
       <th scope="row">授权</th>
       <td>
-        No license required (aside from any associated with libraries you might use); all known patents have expired.
+        无需许可证（除了与你可能使用的库相关的许可证）；所有已知专利均已过期。
       </td>
     </tr>
   </tbody>
