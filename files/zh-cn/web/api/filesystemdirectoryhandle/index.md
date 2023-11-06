@@ -30,14 +30,14 @@ _从父接口 {{DOMxRef("FileSystemHandle")}} 继承方法。_
 - {{domxref('FileSystemDirectoryHandle.resolve()')}}
   - : 返回一个 {{jsxref('Promise')}} 对象，兑现一个包含从父目录前往指定子条目中间的目录的名称的{{jsxref('Array', '数组', '', 'nocode')}}。数组的最后一项是子条目的名称。
 
-[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)方法：
+[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)方法：
 
 - {{domxref('FileSystemDirectoryHandle.entries()')}}
-  - : 返回一个新的迭代给定对象自身可枚举属性`[键, 值]`对的*异步迭代器*。
+  - : 返回一个新的迭代 `FileSystemDirectoryHandle` 对象内每个条目的键值对的异步迭代器。
 - {{domxref('FileSystemDirectoryHandle.keys()')}}
-  - : 返回一个新的迭代 `FileSystemDirectoryHandle` 对象内每个项的键的*异步迭代器*。
+  - : 返回一个新的迭代 `FileSystemDirectoryHandle` 对象内每个条目的键的异步迭代器。
 - {{domxref('FileSystemDirectoryHandle.values()')}}
-  - : 返回一个新的迭代 `FileSystemDirectoryHandle` 对象内每个索引的值的*异步迭代器*。
+  - : 返回一个新的迭代 `FileSystemDirectoryHandle` 对象内每个条目的句柄的异步迭代器。
 - [`FileSystemDirectoryHandle[@@asyncIterator]()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries)
   - : 默认情况下返回 `entries` 函数。
 

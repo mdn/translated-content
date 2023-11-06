@@ -5,7 +5,7 @@ slug: Web/API/FileSystemDirectoryHandle/entries
 
 {{securecontext_header}}{{APIRef("File System API")}}
 
-{{domxref("FileSystemDirectoryHandle")}} 接口的 **`entries()`** 方法返回一个异步迭代器，用于迭代给定对象自身可枚举属性`[键, 值]`对，迭代顺序与 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环的迭代顺序一致（不同之处在于 for-in 循环还会枚举原型链中的属性）。
+{{domxref("FileSystemDirectoryHandle")}} 接口的 **`entries()`** 方法返回一个异步迭代器，用于迭代调用此方法的 `FileSystemDirectoryHandle` 中的条目的键值对。键值对是一个 `[键, 值]` 形式的数组。
 
 ## 语法
 
@@ -19,9 +19,11 @@ entries()
 
 ### 返回值
 
-迭代给定的 `FileSystemDirectoryHandle` 对象自身可枚举属性`[键, 值]`对的异步迭代器。
+一个新的包含 `FileSystemDirectoryHandle` 中每个条目的键值对的异步迭代器。
 
 ## 示例
+
+使用 `for await...of` 循环能够简化迭代过程。
 
 ```js
 const dirHandle = await window.showDirectoryPicker();

@@ -5,7 +5,7 @@ slug: Web/API/FileSystemDirectoryHandle/keys
 
 {{securecontext_header}}{{APIRef("File System API")}}
 
-{{domxref("FileSystemDirectoryHandle")}} 接口的 **`keys()`** 方法返回一个异步迭代器，用于迭代 `FileSystemDirectoryHandle` 内每个项的键。
+{{domxref("FileSystemDirectoryHandle")}} 接口的 **`keys()`** 方法返回一个异步迭代器，用于迭代调用此方法的 `FileSystemDirectoryHandle` 中的条目的键。
 
 ## 语法
 
@@ -19,9 +19,11 @@ FileSystemDirectoryHandle.keys()
 
 ### 返回值
 
-一个新的 `FileSystemDirectoryIterator`。
+一个新的包含 `FileSystemDirectoryHandle` 中每个条目的键的异步迭代器。
 
 ## 示例
+
+使用 `for await...of` 循环能够简化迭代过程。
 
 ```js
 const dirHandle = await window.showDirectoryPicker();
