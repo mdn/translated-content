@@ -104,7 +104,7 @@ function getThis() {
   return this;
 }
 
-// 仅用于演示 - 你不应该修改内置的原型对象
+// 仅用于演示——你不应该修改内置的原型对象
 Number.prototype.getThis = getThis;
 console.log(typeof (1).getThis()); // "object"
 console.log(getThis() === globalThis); // true
