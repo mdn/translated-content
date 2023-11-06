@@ -91,9 +91,9 @@ mvTranslate([squareXOffset, squareYOffset, squareZOffset]);
 
 以上で、正方形が回転するとともにズームイン・ズームアウトしながら、環境内を近づいたり遠ざかったりするようランダムに動き回ります。これはスクリーンセーバーのようです。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample4/index.html', 670, 510)}}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample4/index.html', 670, 510)}}
 
-[コードを確認する](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample4) | [新しいページでデモを開く](http://mdn.github.io/webgl-examples/tutorial/sample4/)
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample4) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample4/)
 
 ## さらに行列を操作する
 
