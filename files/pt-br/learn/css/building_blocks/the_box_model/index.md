@@ -50,7 +50,6 @@ Se for uma caixa definida como block, ela tera os seguintes comportamentos:
 
 A menos que decidamos alterar o tipo de exibição para `inline`, alguns elementos como os cabeçalhos (ex: `<h1>`) e `<p>` são caixas do tipo `block` por padrão.
 
-If a box has an outer display type of `inline`, then:
 Se a caixa for do tipo `inline`, ela seguira os segintes comportamentos:
 
 - Ela não quebrará em uma nova linha.
