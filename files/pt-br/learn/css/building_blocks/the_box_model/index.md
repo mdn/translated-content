@@ -58,7 +58,7 @@ Se a caixa for do tipo `inline`, ela seguira os segintes comportamentos:
 - Padding vertical, margens e bordas serão aplicados, mas não farão com que outras caixas embutidades se afastem.
 - Padding horizontal, margens e bordas serão aplicadas e farão com que outras caixas embutidades se afastem da caixa.
 
-O elemento `<a>` usado em links, `<span>`, `<em>` ee `<strong>` são exemplos de elementos que sao `inline` por padrão.
+O elemento `<a>` usado em links, `<span>`, `<em>` e `<strong>` são exemplos de elementos que sao `inline` por padrão.
 
 O tipo de caixa aplicada em um elemento é definida pela propriedade {{cssxref("display")}} como `block` ou `inline` e esta relacionada ao valor **outer** do `display`.
 
