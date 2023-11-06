@@ -265,7 +265,7 @@ AV1 是一种编码格式，最初设计用于在互联网上传输视频。该�
 该格式可以提供：
 
 - 与 JPG 和 PNG 相比，在视觉上相似的压缩水平下，有损压缩效果极佳（例如，有损 AVIF 图像比 JPEG 图像小 50%）。
-- 一般来说，AVIF 比 WebP 有更好的压缩效果。对于相同的 JPG 图像集，中值压缩率为 50%，而 WebP 为 30%（资料来源：[AVIF 与 WebP 的对比](https://www.ctrl.blog/entry/webp-avif-comparison.html)（CTRL博客））。
+- 一般来说，AVIF 比 WebP 有更好的压缩效果。对于相同的 JPG 图像集，中值压缩率为 50%，而 WebP 为 30%（资料来源：[AVIF 与 WebP 的对比](https://www.ctrl.blog/entry/webp-avif-comparison.html)（CTRL 博客））。
 - 无损压缩。
 - 动画/多图像存储（类似于 GIF 动画，但压缩效果更好）
 - 支持 Alpha 通道（即透明）。
@@ -1290,7 +1290,7 @@ static unsigned char square8_bits[] = {
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
-      <td>Firefox 1–3.5、Internet Explorer 1–5</td>
+      <td>Firefox 1–3.5 和 Internet Explorer 1–5</td>
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
