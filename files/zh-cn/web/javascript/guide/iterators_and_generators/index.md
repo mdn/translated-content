@@ -161,7 +161,7 @@ for (let value of myIterable) {
 
 ### 用于可迭代对象的语法
 
-一些语句和表达式专用于可迭代对象，例如 {{jsxref("Statements/for...of", "for...of")}} 循环、{{jsxref("Operators/Spread_syntax", "展开语法", "", 1)}}、{{jsxref("Operators/yield*", "yield*")}} 和{{jsxref("Operators/Destructuring_assignment", "解构赋值", "", 1)}}。
+一些语句和表达式专用于可迭代对象，例如 {{jsxref("Statements/for...of", "for...of")}} 循环、{{jsxref("Operators/Spread_syntax", "展开语法", "", 1)}}、{{jsxref("Operators/yield*", "yield*")}} 和{{jsxref("Operators/Destructuring_assignment", "解构", "", 1)}}语法。
 
 ```js
 for (let value of ["a", "b", "c"]) {
