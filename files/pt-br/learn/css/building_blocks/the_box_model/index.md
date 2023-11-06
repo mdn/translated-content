@@ -43,8 +43,8 @@ No CSS, temos dois tipos, **caixas box** e **caixas inline**, O tipo de caixa in
 
 Se for uma caixa definida como block, ela tera os seguintes comportamentos:
 
-- A caixa ira qubrar em uma nova linha.
-- A caixa ira se extender para na direção horizontal(inline) para preeencher todo o espaco disponivel no container. Na maioria dos casos isso significa que essa caixa sera tao larga quanto seu recipiente.
+- A caixa irá quebrar em uma nova linha.
+- A caixa irá se estender na direção horizontal (inline) para preeencher todo o espaço disponível no container. Na maioria dos casos isso significa que essa caixa será tão larga quanto seu recipiente.
 - As propriedades {{cssxref("width")}} e {{cssxref("height")}} serão respeitadas.
 - {{cssxref("padding")}}, {{cssxref("margin")}} e {{cssxref("border")}} farão com que outros elementos sejam empurrados para fora da caixa.
 
