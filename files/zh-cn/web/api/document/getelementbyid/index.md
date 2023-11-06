@@ -109,7 +109,7 @@ var el = document.getElementById("testqq"); // el 是个 null
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [document](/zh-CN/docs/DOM/document) 包含其他用于在文档中查找元素的方法
 - [document.querySelector()](/zh-CN/docs/Web/API/document.querySelector) 类似'div.myclass'的元素的选择

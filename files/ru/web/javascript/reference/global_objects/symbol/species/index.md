@@ -33,10 +33,7 @@ console.log(mapped instanceof Array); // true
 
 ## Спецификации
 
-| Спецификация                                                     | Статус               | Комментарий              |
-| ---------------------------------------------------------------- | -------------------- | ------------------------ |
-| {{SpecName('ES6', '#sec-symbol.species', 'Symbol.species')}}     | {{Spec2('ES6')}}     | Изначальное определение. |
-| {{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}} | {{Spec2('ESDraft')}} |                          |
+{{Specifications}}
 
 ## Поддержка браузерами
 

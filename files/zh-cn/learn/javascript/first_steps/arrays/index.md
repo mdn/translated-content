@@ -501,7 +501,7 @@ window.addEventListener("load", updateCode);
 
 唯一需要做的就是通过这个模块的评估，这将测试你对之前的文章的理解。
 
-## 相关链接
+## 参见
 
 - [Indexed collections](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections) — 数组及其表兄弟类型阵列的高级指导。
 - {{jsxref("Array")}} — Array 对象引用页面 - 有关此页面中讨论功能的详细参考指南等。

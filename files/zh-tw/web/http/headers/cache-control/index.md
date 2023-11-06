@@ -86,7 +86,7 @@ Cache-Control: stale-if-error=<秒數>
 - `min-fresh=<秒數>`
   - : 表示客戶端想要有效時間*至少*在指定秒數以上的回應。
 - `stale-while-revalidate=<秒數>` {{Experimental_Inline}}
-  - : 表示客戶端可以接受過期回應，但同時在背景檢查最新版本。*秒數*用來控制客戶端最多能接受過期多久。何時過期取決於 `max-age` 的值。想了解更多細節請到 "[Keeping things fresh with `stale-while-revalidate`](https://web.dev/stale-while-revalidate)" 。
+  - : 表示客戶端可以接受過期回應，但同時在背景檢查最新版本。*秒數*用來控制客戶端最多能接受過期多久。何時過期取決於 `max-age` 的值。想了解更多細節請到[Google 如何透過過時的重新驗證方式改善廣告成效](https://web.dev/case-studies/ads-case-study-stale-while-revalidate)。
 - `stale-if-error=<秒數>` {{Experimental_Inline}}
   - : 表示客戶端會執行驗證，若驗證錯誤了就直接使用過期回應。*秒數*用來控制客戶端最多能接受過期多久。
 

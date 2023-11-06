@@ -120,9 +120,7 @@ array[1];
 
 ## Especificações
 
-| Specification                                                                          |
-| -------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

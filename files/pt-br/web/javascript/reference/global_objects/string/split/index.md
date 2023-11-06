@@ -188,12 +188,7 @@ O script exibirá o texto a seguir:
 
 ## Especificações
 
-| Especificação                                                                    | Status               | Comentário                                         |
-| -------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                              | {{Spec2('ES3')}}     | Definição inicial. Implementado no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.5.4.14', 'String.prototype.split')}}                | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.split', 'String.prototype.split')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

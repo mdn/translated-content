@@ -63,8 +63,9 @@ XHR 请求默认是异步的；它们仅通过在调用 {{DOMxRef("XMLHttpReques
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-- {{DOMxRef("XMLHttpRequest.response", "response")}}, {{DOMxRef("XMLHttpRequest.responseText", "responseText")}} 和 {{DOMxRef("XMLHttpRequest.responseXML", "responseXML")}}
+- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- 响应数据：{{domxref("XMLHttpRequest.response", "response")}}、
+  {{domxref("XMLHttpRequest.responseText", "responseText")}} 和 {{domxref("XMLHttpRequest.responseXML", "responseXML")}}

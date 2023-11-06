@@ -17,11 +17,11 @@ O elemento de saída (\<output>) é um elemento no qual um site ou aplicativo po
 
 Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR/HTML/Global_attributes).
 
-- {{ htmlattrdef("for") }}
+- `for`
   - : Uma lista de IDs de outros elementos, indicando que estes elementos contribuiram com valores de entrada (input) para o cálculo (ou outros afetados).
-- {{ htmlattrdef("form") }}
+- `form`
   - : O elemento form ao qual este elemento está associado (seu "proprietário do formulário"). O valor do atributo deve ser um ID de um elemento form no mesmo documento. Se este atributo não está especificado, o elemento output deve ser descendente de um elemento form. Este atributo permite que você coloque elementos output em qualquer lugar em um documento, não apenas como descendentes de seus elementos form.
-- {{ htmlattrdef("name") }}
+- `name`
   - : O nome do elemento.
 
 ## Interface DOM

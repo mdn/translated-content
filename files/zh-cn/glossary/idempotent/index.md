@@ -36,13 +36,8 @@ DELETE /idX/delete HTTP/1.1   -> Returns 404 as it just got deleted
 DELETE /idX/delete HTTP/1.1   -> Returns 404
 ```
 
-## 了解更多
-
-### 基本知识
+## 参见
 
 - 在 HTTP 协议中[幂等](https://tools.ietf.org/html/rfc7231#section-4.2.2)的定义。
-
-### 技术知识
-
-- 常见的幂等方法： {{HTTPMethod("GET")}} ， {{HTTPMethod("HEAD")}} , {{HTTPMethod("PUT")}} ， {{HTTPMethod("DELETE")}} ， {{HTTPMethod("OPTIONS")}}
-- 常见的非幂等方法： {{HTTPMethod("POST")}}
+- 常见的幂等方法：{{HTTPMethod("GET")}}、{{HTTPMethod("HEAD")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("DELETE")}}、{{HTTPMethod("OPTIONS")}}、{{HTTPMethod("TRACE")}}
+- 常见的非幂等方法：{{HTTPMethod("POST")}}、{{HTTPMethod("PATCH")}}、{{HTTPMethod("CONNECT")}}

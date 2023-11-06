@@ -11,7 +11,7 @@ slug: Glossary/Flex
 
 此外，`<flex>` 可以作为[弹性长度](/zh-CN/docs/Web/CSS/flex_value)被引用在 CSS Grid（栅格）布局中。
 
-## 了解更多
+## 参见
 
 ### 属性参考
 

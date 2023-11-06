@@ -238,11 +238,7 @@ O código gera um array de 3 objetos como desejado sem usar uma função de loop
 
 ## Especificações
 
-| Especificação                                                                    | Status             | Comentário                                        |
-| -------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition.                                                          | Standard           | Defnição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.11', 'String.prototype.replace')}}              | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-string.prototype.replace', 'String.prototype.replace')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

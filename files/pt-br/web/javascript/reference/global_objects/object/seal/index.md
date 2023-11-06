@@ -89,11 +89,7 @@ Object.seal(1);
 
 ## Especificações
 
-| Especificação                                              | Status               | Comentário                                           |
-| ---------------------------------------------------------- | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}      | {{Spec2('ES5.1')}}   | Definição inicial. Implementado no Javascript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

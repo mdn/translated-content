@@ -442,7 +442,7 @@
 /fr/docs/CSS/Sélecteurs_d'attribut	/fr/docs/Web/CSS/Attribute_selectors
 /fr/docs/CSS/Sélecteurs_de_classe	/fr/docs/Web/CSS/Class_selectors
 /fr/docs/CSS/Sélecteurs_de_type	/fr/docs/Web/CSS/Type_selectors
-/fr/docs/CSS/Sélecteurs_de_voisins_généraux	/fr/docs/Web/CSS/General_sibling_combinator
+/fr/docs/CSS/Sélecteurs_de_voisins_généraux	/fr/docs/Web/CSS/Subsequent-sibling_combinator
 /fr/docs/CSS/Sélecteurs_descendant	/fr/docs/Web/CSS/Descendant_combinator
 /fr/docs/CSS/Sélecteurs_enfant	/fr/docs/Web/CSS/Child_combinator
 /fr/docs/CSS/Sélecteurs_universels	/fr/docs/Web/CSS/Universal_selectors
@@ -1433,7 +1433,7 @@
 /fr/docs/Glossaire/Hyperlien	/fr/docs/Glossary/Hyperlink
 /fr/docs/Glossaire/Hypertexte	/fr/docs/Glossary/Hypertext
 /fr/docs/Glossaire/Héritage	/fr/docs/Glossary/Inheritance
-/fr/docs/Glossaire/I18N	/fr/docs/Glossary/I18N
+/fr/docs/Glossaire/I18N	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossaire/IANA	/fr/docs/Glossary/IANA
 /fr/docs/Glossaire/ICANN	/fr/docs/Glossary/ICANN
 /fr/docs/Glossaire/ICE	/fr/docs/Glossary/ICE
@@ -1459,7 +1459,7 @@
 /fr/docs/Glossaire/Input_method_editor	/fr/docs/Glossary/Input_method_editor
 /fr/docs/Glossaire/Instance	/fr/docs/Glossary/Instance
 /fr/docs/Glossaire/Intergiciel	/fr/docs/Glossary/Middleware
-/fr/docs/Glossaire/Internationalisation_et_localisation	/fr/docs/Glossary/Internationalization_and_localization
+/fr/docs/Glossaire/Internationalisation_et_localisation	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossaire/Internet	/fr/docs/Glossary/Internet
 /fr/docs/Glossaire/JSON	/fr/docs/Glossary/JSON
 /fr/docs/Glossaire/Jank	/fr/docs/Glossary/Jank
@@ -1730,7 +1730,9 @@
 /fr/docs/Glossary/Descriptor_(CSS)	/fr/docs/Glossary/CSS_Descriptor
 /fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
 /fr/docs/Glossary/Grid_Rows	/fr/docs/Glossary/Grid_Row
+/fr/docs/Glossary/I18N	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossary/Index	/fr/docs/Glossary
+/fr/docs/Glossary/Internationalization_and_localization	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
@@ -3580,7 +3582,7 @@
 /fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs	/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /fr/docs/Tutoriel_canvas/Animations_basiques	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /fr/docs/Tutoriel_canvas/Composition	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing
-/fr/docs/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/fr/docs/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/Tutoriel_canvas/Formes_géométriques	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /fr/docs/Tutoriel_canvas/Optimizing_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
@@ -3631,12 +3633,13 @@
 /fr/docs/Web/API/ByteString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/API/CSSMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
+/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Advanced_animations	/fr/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs	/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Animations_basiques	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Composition	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing
-/fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Dessin_de_texte_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Optimizing_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
@@ -4247,7 +4250,8 @@
 /fr/docs/Web/CSS/@viewport/width	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/@viewport/zoom	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/A_Propos_Du_Bloc_Conteneur	/fr/docs/Web/CSS/Containing_block
-/fr/docs/Web/CSS/Adjacent_sibling_selectors	/fr/docs/Web/CSS/Adjacent_sibling_combinator
+/fr/docs/Web/CSS/Adjacent_sibling_combinator	/fr/docs/Web/CSS/Next-sibling_combinator
+/fr/docs/Web/CSS/Adjacent_sibling_selectors	/fr/docs/Web/CSS/Next-sibling_combinator
 /fr/docs/Web/CSS/Affichage_CSS	/fr/docs/Web/CSS/CSS_display
 /fr/docs/Web/CSS/Alias	/fr/docs/Web/CSS/cursor
 /fr/docs/Web/CSS/Animations_CSS	/fr/docs/Web/CSS/CSS_animations
@@ -4396,7 +4400,7 @@
 /fr/docs/Web/CSS/Colonnes_CSS/Utiliser_une_disposition_multi-colonnes	/fr/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /fr/docs/Web/CSS/Colonnes_CSS3	/fr/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /fr/docs/Web/CSS/Combinateur_colonne	/fr/docs/Web/CSS/Column_combinator
-/fr/docs/Web/CSS/Combinateur_de_voisin_direct	/fr/docs/Web/CSS/Adjacent_sibling_combinator
+/fr/docs/Web/CSS/Combinateur_de_voisin_direct	/fr/docs/Web/CSS/Next-sibling_combinator
 /fr/docs/Web/CSS/Compartimentation_CSS	/fr/docs/Web/CSS/CSS_containment
 /fr/docs/Web/CSS/Compositing_and_Blending	/fr/docs/Web/CSS/CSS_compositing_and_blending
 /fr/docs/Web/CSS/Comprendre_z-index	/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
@@ -4443,6 +4447,7 @@
 /fr/docs/Web/CSS/Filters_Effects	/fr/docs/Web/CSS/CSS_filter_effects
 /fr/docs/Web/CSS/Fonds_multiples	/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /fr/docs/Web/CSS/Fusion_des_marges	/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
+/fr/docs/Web/CSS/General_sibling_combinator	/fr/docs/Web/CSS/Subsequent-sibling_combinator
 /fr/docs/Web/CSS/Héritage	/fr/docs/Web/CSS/Inheritance
 /fr/docs/Web/CSS/Implémentation_des_Brouillons_CSS	/fr/docs/Web/CSS/Mozilla_Extensions
 /fr/docs/Web/CSS/Jeux_de_caractères_CSS	/fr/docs/Web/CSS/CSS_charsets
@@ -4499,7 +4504,7 @@
 /fr/docs/Web/CSS/Spécificité	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 /fr/docs/Web/CSS/Syntaxe	/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs	/fr/docs/Web/CSS/Value_definition_syntax
-/fr/docs/Web/CSS/Sélecteur_de_voisin_direct	/fr/docs/Web/CSS/Adjacent_sibling_combinator
+/fr/docs/Web/CSS/Sélecteur_de_voisin_direct	/fr/docs/Web/CSS/Next-sibling_combinator
 /fr/docs/Web/CSS/Sélecteurs_CSS	/fr/docs/Web/CSS/CSS_selectors
 /fr/docs/Web/CSS/Sélecteurs_CSS/Comparison_with_XPath	/fr/docs/Web/XPath/Comparison_with_CSS_selectors
 /fr/docs/Web/CSS/Sélecteurs_CSS/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
@@ -4507,7 +4512,7 @@
 /fr/docs/Web/CSS/Sélecteurs_d_attribut	/fr/docs/Web/CSS/Attribute_selectors
 /fr/docs/Web/CSS/Sélecteurs_de_classe	/fr/docs/Web/CSS/Class_selectors
 /fr/docs/Web/CSS/Sélecteurs_de_type	/fr/docs/Web/CSS/Type_selectors
-/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux	/fr/docs/Web/CSS/General_sibling_combinator
+/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux	/fr/docs/Web/CSS/Subsequent-sibling_combinator
 /fr/docs/Web/CSS/Sélecteurs_descendant	/fr/docs/Web/CSS/Descendant_combinator
 /fr/docs/Web/CSS/Sélecteurs_enfant	/fr/docs/Web/CSS/Child_combinator
 /fr/docs/Web/CSS/Sélecteurs_universels	/fr/docs/Web/CSS/Universal_selectors
@@ -6367,6 +6372,7 @@
 /fr/docs/conflicting/Glossary/DOM	/fr/docs/Glossary/DOM
 /fr/docs/conflicting/Glossary/Doctype	/fr/docs/Glossary/Doctype
 /fr/docs/conflicting/Glossary/Firefox_OS	/fr/docs/Glossary/Firefox_OS
+/fr/docs/conflicting/Glossary/Internationalization	/fr/docs/Glossary/Internationalization
 /fr/docs/conflicting/Glossary/Object_reference	/fr/docs/Glossary/Object_reference
 /fr/docs/conflicting/Glossary/TCP	/fr/docs/Glossary/TCP
 /fr/docs/conflicting/Learn	/fr/docs/Learn
@@ -6440,6 +6446,7 @@
 /fr/docs/conflicting/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /fr/docs/conflicting/Web/API	/fr/docs/Web/API
 /fr/docs/conflicting/Web/API/Blob	/fr/docs/Web/API/Blob
+/fr/docs/conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/conflicting/Web/API/DOMMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/conflicting/Web/API/Document	/fr/docs/Web/API/Document

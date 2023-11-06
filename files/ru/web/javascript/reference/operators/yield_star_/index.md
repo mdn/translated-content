@@ -133,10 +133,7 @@ console.log(result); // "foo"
 
 ## Спецификации
 
-| Specification                         | Status               | Comment             |
-| ------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#', 'Yield')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Поддержка браузерами
 

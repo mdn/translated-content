@@ -3,6 +3,8 @@ title: "Glossaire MDN : définitions des termes du Web"
 slug: Glossary
 ---
 
+{{GlossarySidebar}}
+
 Les technologies Web font l'objet d'un important jargon et utilisent des abréviation utilisées dans la documentation et le code. Ce glossaire fournit une définition des mots et abréviations qui vous seront nécessaires pour pouvoir comprendre et utiliser le Web.
 
 Vous pouvez parcourir les termes du glossaire en utilisant la barre latérale.

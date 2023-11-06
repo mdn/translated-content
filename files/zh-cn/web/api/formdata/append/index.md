@@ -67,9 +67,7 @@ formData.append("userpic[]", myFileInput2.files[0], "chris2.jpg");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

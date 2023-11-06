@@ -53,12 +53,7 @@ var math = {
 
 ## Especificações
 
-| Especificação                                                                | Status               | Comentários                                        |
-| ---------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                      | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES3', '#sec-13', 'Function definition')}}                        | {{Spec2('ES3')}}     | Initial definition. Implemented in JavaScript 1.5. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

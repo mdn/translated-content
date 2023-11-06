@@ -35,9 +35,7 @@ console.log(worldString.fixed()); // "<tt>Olá, mundo</tt>"
 
 ## Especificações
 
-| Specification                                                                    |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.fixed', 'String.prototype.fixed')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

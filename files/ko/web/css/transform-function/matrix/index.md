@@ -13,7 +13,7 @@ slug: Web/CSS/transform-function/matrix
 
 `matrix()` 함수는 6개의 값을 지정합니다. 상수 값은 묵시적이며, 매개변수(parameter)로 전달하지 않습니다. 다른 매개 변수는 column-major 순서로 설명됩니다.
 
-> **참고:** **주의:** 파이어폭스 16까지, Gecko(엔진) `tx`, `ty` 에{{cssxref("&lt;length&gt;")}} 값을 허용했습니다.
+> **참고:** **주의:** Firefox 16까지, Gecko(엔진) `tx`, `ty` 에{{cssxref("&lt;length&gt;")}} 값을 허용했습니다.
 
 ```
 matrix(a, b, c, d, tx, ty)
