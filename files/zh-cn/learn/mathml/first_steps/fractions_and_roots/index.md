@@ -116,7 +116,7 @@ slug: Learn/MathML/First_steps/Fractions_and_roots
       一个将 mroot 作为第一个子元素，将 msqrt 作为第二个子元素的 mfrac。
     </li>
     <li>
-      <input type="checkbox" data-highlight="mroot2" data-comment="5 的第六七分之一根。">
+      <input type="checkbox" data-highlight="mroot2" data-comment="5 的七分之六次方根。">
       一个将 mn 作为第一个子元素，将 mfrac 作为第二个子元素的 mroot。
     </li>
     <li>
@@ -133,7 +133,7 @@ slug: Learn/MathML/First_steps/Fractions_and_roots
     </li>
     <li>
       <input type="checkbox" data-comment="“8 减 9”的平方根。" data-highlight="msqrt2">
-      一个具有以下子元素列表的 msqrt：mn，mo，mn。
+      一个具有以下子元素列表的 msqrt：mn、mo、mn。
     </li>
     <li>
       <input type="checkbox" data-comment="2 的平方根除以 4 的立方根。" data-highlight="mfrac1">
@@ -141,7 +141,7 @@ slug: Learn/MathML/First_steps/Fractions_and_roots
     </li>
     <li>
       <input type="checkbox" data-comment="mfrac 必须恰好有两个子元素！">
-      一个具有以下子元素列表的 mfrac：msqrt，mn，msqrt。
+      一个具有以下子元素列表的 mfrac：msqrt、mn、msqrt。
     </li>
     <li>
       <input type="checkbox" data-comment="mroot 必须恰好有两个子元素！">
