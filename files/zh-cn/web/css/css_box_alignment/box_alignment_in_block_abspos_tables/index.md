@@ -1,9 +1,10 @@
 ---
-title: 盒子布局方式：块布局、绝对定位和表格布局
+title: 块状、绝对定位和表格布局中的盒子对齐
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
+page-type: 指导
 ---
 
-[Box对齐规格书](/en-US/docs/Web/CSS/CSS_box_alignment) 详细介绍了对齐在各种布局方法中的工作原理。在本页,我们研究 box 对齐在块布局上下文中的工作方式,包括浮动、定位和表格元素。由于本页旨在详细介绍专门与块布局和 box 对齐相关的内容,它应与主要的 [Box 对齐](/en-US/docs/Web/CSS/CSS_box_alignment) 页面一起阅读,该页面详细介绍了 box 对齐在各种布局方法中的共同特点。
+[Box对齐规格书](/zh-CN/docs/Web/CSS/CSS_box_alignment) 详细介绍了对齐在各种布局方法中的工作原理。在本页,我们研究 box 对齐在块布局上下文中的工作方式,包括浮动、定位和表格元素。由于本页旨在详细介绍专门与块布局和 box 对齐相关的内容,它应与主要的 [Box 对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment) 页面一起阅读,该页面详细介绍了 box 对齐在各种布局方法中的共同特点。
 
 > **注意:**在撰写本文时(2018 年 5 月),块布局中实际上还不支持 box 对齐属性。本文详细介绍了这些属性在规范中如何期望被实现的情况,以求完整性,并可能会随着规范和浏览器实现的发展而改变。
 
@@ -30,7 +31,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 
 ## 在这些布局方法中进行对齐的现状
 
-由于我们当前没有浏览器支持块布局中的 box 对齐,您对齐的选择是使用现有的对齐方法,或者使容器内的单个项目成为弹性项目,以利用flexbox中的对齐属性如规范中指定的那样。
+由于我们当前没有浏览器支持块布局中的 box 对齐,你对齐的选择是使用现有的对齐方法,或者使容器内的单个项目成为弹性项目,以利用flexbox中的对齐属性如规范中指定的那样。
 
 块水平对齐在 flexbox 之前通常通过对块设置自动边距来实现。{{cssxref("margin")}}值为`auto` 会吸收该维度中所有的可用空间,因此通过为块设置左右自动边距可以将其 centered:
 
@@ -42,9 +43,9 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 }
 ```
 
-在表格布局中,您可以使用{{cssxref("vertical-align")}}属性对单元格中的内容在该单元格内进行对齐。
+在表格布局中,你可以使用{{cssxref("vertical-align")}}属性对单元格中的内容在该单元格内进行对齐。
 
-对于许多使用场景,将块容器转换为弹性项目将给您 looking for 的对齐能力。在下面的示例中,含有单个项目的容器已转换为弹性容器,以便能够使用对齐属性。
+对于许多使用场景,将块容器转换为弹性项目将给你 looking for 的对齐能力。在下面的示例中,含有单个项目的容器已转换为弹性容器,以便能够使用对齐属性。
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
 
@@ -59,8 +60,8 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 
 ### 词汇条目
 
-- [Alignment subject](/en-US/docs/Glossary/Alignment_Subject)
-- [Alignment container](/en-US/docs/Glossary/Alignment_Container)
-- [Fallback alignment](/en-US/docs/Glossary/Fallback_Alignment)
+- [Alignment subject](/zh-CN/docs/Glossary/Alignment_Subject)
+- [Alignment container](/zh-CN/docs/Glossary/Alignment_Container)
+- [Fallback alignment](/zh-CN/docs/Glossary/Fallback_Alignment)
 
 {{CSSRef}}
