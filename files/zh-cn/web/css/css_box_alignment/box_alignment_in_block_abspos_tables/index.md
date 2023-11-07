@@ -1,7 +1,6 @@
 ---
 title: 块状、绝对定位和表格布局中的盒子对齐
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
-page-type: 指导
 ---
 
 [Box对齐规格书](/zh-CN/docs/Web/CSS/CSS_box_alignment) 详细介绍了对齐在各种布局方法中的工作原理。在本页,我们研究 box 对齐在块布局上下文中的工作方式,包括浮动、定位和表格元素。由于本页旨在详细介绍专门与块布局和 box 对齐相关的内容,它应与主要的 [Box 对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment) 页面一起阅读,该页面详细介绍了 box 对齐在各种布局方法中的共同特点。
