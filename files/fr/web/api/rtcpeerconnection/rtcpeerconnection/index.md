@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer
-slug: Web/API/RTCIceServer
+slug: Web/API/RTCPeerConnection/RTCPeerConnection
+original_slug: Web/API/RTCIceServer
 ---
 
 {{APIRef("WebRTC")}}
