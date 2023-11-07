@@ -194,7 +194,7 @@ document.getElementById("doIt").onclick = function () {
 
 [web-push](https://www.npmjs.com/package/web-push) 模块被用来配置 VAPID 密钥，如果没有的话，还可以生成一个。
 
-```plain
+```js
 const webPush = require('web-push');
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
@@ -213,7 +213,7 @@ webPush.setVapidDetails(
 
 接着，一个模块定义并导出了所有应用需要处理的路由：获取 VAPID 公钥、注册、发送通知等等。你可以看到来自 `index.js` 的 `payload`, `delay` 和`ttl` 变量在这里被用到了。
 
-```plain
+```js
 module.exports = function(app, route) {
   app.get(route + 'vapidPublicKey', function(req, res) {
     res.send(process.env.VAPID_PUBLIC_KEY);
@@ -249,7 +249,7 @@ module.exports = function(app, route) {
 
 最后我们要看的文件是 Service Worker。
 
-```plain
+```js
 self.addEventListener('push', function(event) {
     const payload = event.data ? event.data.text() : 'no payload';
     event.waitUntil(
