@@ -14,7 +14,6 @@ page-type: 指导
 
 {{cssxref("align-content")}} 属性适用于块轴,以对容器中的内容进行对齐。如果请求了一个内容分布方法如 `space-between`、`space-around` 或 `space-evenly`,那么将使用后备对齐,因为内容被视为一个[对齐主体](/zh-CN/docs/Glossary/Alignment_Subject)。
 
-
 ## justify-self
 
 {{cssxref("justify-self")}} 属性用于在内联轴上对包含块中的项目进行对齐。
