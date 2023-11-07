@@ -1,8 +1,6 @@
 ---
 title: Identifying resources on the Web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-page-type: guide
-spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
 
 {{HTTPSidebar}}
@@ -50,18 +48,18 @@ urn:ietf:rfc:7230
 - ![Protocol](mdn-url-protocol@x2.png)
   - `http://` 是個協議，它指示瀏覽器應該使用哪種協議。通常情況下，這是 HTTP 協議或其安全版本 HTTPS。網頁需要使用這兩者之一，但瀏覽器也知道如何處理其他協議，比如 `mailto:`（用於打開郵件客戶端）或 `ftp:`（用於處理文件傳輸），所以如果你看到這些協議，也不要感到驚訝。一些常見的方案包括：
 
-| 方案      | 描述                                                          |
-| ----------- | -------------------------------------------------------------------- |
-| data        | [Data URLs](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)           |
+| 方案        | 描述                                                         |
+| ----------- | ------------------------------------------------------------ |
+| data        | [Data URLs](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)   |
 | file        | 特定主機的文件名                                             |
-| ftp         | {{Glossary("FTP","File Transfer Protocol")}}                         |
-| http/https  | [超文本傳輸協議（安全）](/zh-TW/docs/Glossary/HTTP)   |
-| javascript  | URL 中嵌入的 JavaScript 代碼                                         |
-| mailto      | 電子郵件地址                                              |
-| ssh         | 安全外殼                                                         |
-| tel         | 電話                                                            |
-| urn         | 統一資源名稱                                               |
-| view-source | 資源的源代碼                                          |
+| ftp         | {{Glossary("FTP","File Transfer Protocol")}}                 |
+| http/https  | [超文本傳輸協議（安全）](/zh-TW/docs/Glossary/HTTP)          |
+| javascript  | URL 中嵌入的 JavaScript 代碼                                 |
+| mailto      | 電子郵件地址                                                 |
+| ssh         | 安全外殼                                                     |
+| tel         | 電話                                                         |
+| urn         | 統一資源名稱                                                 |
+| view-source | 資源的源代碼                                                 |
 | ws/wss      | [WebSocket 連接（安全）](/zh-TW/docs/Web/API/WebSockets_API) |
 
 ### 授權
@@ -88,7 +86,7 @@ urn:ietf:rfc:7230
 
 - ![Anchor](mdn-url-anchor@x2.png)
   - `#SomewhereInTheDocument` 是對資源本身的另一部分的錨點。錨點代表資源內的一種 「書籤」，它告訴瀏覽器顯示位於該 「書籤」 位置的內容。例如，在 HTML 文件中，瀏覽器將滾動到定義錨點的位置；在視頻或音頻文件中，瀏覽器將嘗試跳轉到錨點代表的時間。值得注意的是， # 後面的部分，也稱為片段標識符，不會隨請求一起發送到服務器。
-  - 
+
 ## 使用筆記
 
 在 {{Glossary("HTML")}} 內容中使用 URLs 時，通常只應該使用其中一些 URL 方案。當引用子資源（即作為較大文檔的一部分加載的文件）時，應僅使用 HTTP 和 HTTPS 方案。出於安全原因，越來越多的瀏覽器已經停用了使用 FTP 來加載子資源的支援。
