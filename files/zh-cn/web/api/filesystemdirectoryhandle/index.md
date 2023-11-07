@@ -22,13 +22,13 @@ _从父接口 {{DOMxRef("FileSystemHandle")}} 继承方法。_
 常规方法：
 
 - {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}}
-  - : 返回一个 {{jsxref('Promise')}}，兑现一个调用此方法的目录句柄内指定名称的子目录的 {{domxref('FileSystemDirectoryHandle')}}。
+  - : 返回一个 {{jsxref('Promise')}}，会兑现一个调用此方法的目录句柄内指定名称的子目录的 {{domxref('FileSystemDirectoryHandle')}}。
 - {{domxref('FileSystemDirectoryHandle.getFileHandle()')}}
-  - : 返回一个 {{jsxref('Promise')}}，兑现一个调用此方法的目录句柄内指定名称的文件的 {{domxref('FileSystemFileHandle')}}。
+  - : 返回一个 {{jsxref('Promise')}}，会兑现一个调用此方法的目录句柄内指定名称的文件的 `FileSystemFileHandle`。
 - {{domxref('FileSystemDirectoryHandle.removeEntry()')}}
   - : 如果目录句柄包含一个名为指定名称的文件或目录，则尝试异步将其移除。
 - {{domxref('FileSystemDirectoryHandle.resolve()')}}
-  - : 返回一个 {{jsxref('Promise')}} 对象，兑现一个包含从父目录前往指定子条目中间的目录的名称的{{jsxref('Array', '数组', '', 'nocode')}}。数组的最后一项是子条目的名称。
+  - : 返回一个 {{jsxref('Promise')}} 对象，会兑现一个包含从父目录前往指定子条目中间的目录的名称的{{jsxref('Array', '数组', '', 'nocode')}}。数组的最后一项是子条目的名称。
 
 [异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)方法：
 

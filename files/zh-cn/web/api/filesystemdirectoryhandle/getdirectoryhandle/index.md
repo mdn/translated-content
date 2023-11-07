@@ -27,12 +27,12 @@ getDirectoryHandle(name, options)
 
 ### 返回值
 
-一个 {{jsxref('Promise')}} 对象，兑现一个 {{domxref('FileSystemDirectoryHandle')}}。
+一个 {{jsxref('Promise')}} 对象，会兑现一个 {{domxref('FileSystemDirectoryHandle')}}。
 
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果 {{domxref('PermissionStatus')}} 不为 'granted' 则抛出此异常。
+  - : 如果 {{domxref('PermissionStatus')}} 不为“granted”则抛出此异常。
 - `TypeMismatchError` {{domxref("DOMException")}}
   - : 如果将返回的条目是个文件而不是目录时会抛出此异常。
 - `NotFoundError` {{domxref("DOMException")}}

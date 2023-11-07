@@ -5,7 +5,7 @@ slug: Web/API/FileSystemDirectoryHandle/resolve
 
 {{securecontext_header}}{{APIRef("File System API")}}
 
-{{domxref("FileSystemDirectoryHandle")}} 接口的 **`resolve()`** 方法返回一个 {{jsxref('Promise')}} 对象，兑现一个包含从父目录前往指定子条目中间的目录的名称的{{jsxref('Array', '数组', '', 'nocode')}}。数组的最后一项是子条目的名称。
+{{domxref("FileSystemDirectoryHandle")}} 接口的 **`resolve()`** 方法返回一个 {{jsxref('Promise')}} 对象，会兑现一个包含从父目录前往指定子条目中间的目录的名称的{{jsxref('Array', '数组', '', 'nocode')}}。数组的最后一项是子条目的名称。
 
 ## 语法
 
@@ -20,7 +20,7 @@ resolve(possibleDescendant)
 
 ### 返回值
 
-一个 {{jsxref('Promise')}} 对象，兑现一个包含字符串的{{jsxref('Array', '数组', '', 'nocode')}}，或者当参数 `possibleDescendant` 不是此 {{domxref('FileSystemDirectoryHandle')}} 的后代时，兑现 `null`。
+一个 {{jsxref('Promise')}} 对象，会兑现一个包含字符串的{{jsxref('Array', '数组', '', 'nocode')}}，或者当参数 `possibleDescendant` 不是此 {{domxref('FileSystemDirectoryHandle')}} 的后代时，兑现 `null`。
 
 ### 异常
 

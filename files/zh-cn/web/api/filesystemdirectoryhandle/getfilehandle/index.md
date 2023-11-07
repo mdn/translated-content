@@ -27,12 +27,12 @@ getFileHandle(name, options)
 
 ### 返回值
 
-一个 {{jsxref('Promise')}} 对象，兑现一个 {{domxref('FileSystemFileHandle')}}。
+一个 {{jsxref('Promise')}} 对象，会兑现一个 {{domxref('FileSystemFileHandle')}}。
 
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果 {{domxref('PermissionStatus')}} 不为 'granted' 则抛出此异常。
+  - : 如果 {{domxref('PermissionStatus')}} 不为“granted”则抛出此异常。
 - {{jsxref("TypeError")}}
   - : 如果指定的名称不是一个合法的字符串或者包含会干扰本地文件系统的字符则抛出此异常。
 - `TypeMismatchError` {{domxref("DOMException")}}

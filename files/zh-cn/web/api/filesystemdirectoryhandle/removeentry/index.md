@@ -34,7 +34,7 @@ removeEntry(name, options)
 - {{jsxref("TypeError")}}
   - : 如果 `name` 不是一个合法的字符串或者包含不允许出现在文件系统中的字符时，抛出此异常。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果 {{domxref('PermissionStatus')}} 不为 'granted' 则抛出此异常。
+  - : 如果 {{domxref('PermissionStatus')}} 不为“granted”则抛出此异常。
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : 如果 `recursive` 被设为 `false`，而对应的条目又有子条目时，抛出此异常。
 - `NotFoundError` {{domxref("DOMException")}}
