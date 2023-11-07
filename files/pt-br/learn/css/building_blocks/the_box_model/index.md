@@ -67,13 +67,13 @@ Nesse ponto, é melhor também explicar os tipos de exibição interna ( **inner
 
 Caixas possuem também um tipo de display _inner_, que determina como elementos dentro da caixa são posicionados. Por default, os elementos dentro de uma caixa são posicionados em um fluxo normal ( **[normal flow](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow)** ), significando que eles se comportam como qualquer outro bloco e elementos inline (como explicado acima).
 
-We can, however, change the inner display type by using `display` values like `flex`. If we set `display: flex;` on an element, the outer display type is `block`, but the inner display type is changed to `flex`. Any direct children of this box will become flex items and will be laid out according to the rules set out in the [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox) spec, which you'll learn about later on.
+Podemos, no entando, altrar o tipo de exibição(display) interna usando valores `display` como `flex`. Se definirmos `display: flex;` em um elemento, o tipo dee exibição externo será `block`, mas o tipo de exibição interna será alterada para `flex`. Todos os filhos diretos desta caixa se tornarão itens flexíveis e serão dispostos de acordo com as regras estabelecidas na especificação [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox), que você aprenderá mais tarde.
 
-> **Nota:** To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide to [Block and Inline Layout](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow).
+> **Nota:** Para ler mais sobre valores de exibição(display) ee como caixas funcionam nos layouts `block` e `inline`, dê uma olhada no guia MDN sobre [Block e Inline Layout](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 
-When you move on to learn about CSS Layout in more detail, you will encounter `flex`, and various other inner values that your boxes can have, for example [`grid`](/pt-BR/docs/Learn/CSS/CSS_layout/Grids).
+Quando aprender sobre CSS Layout você encontrará `flex` e vários outros valores internos que suas caixas podem ter, como por exemplo [`grid`](/pt-BR/docs/Learn/CSS/CSS_layout/Grids).
 
-Block and inline layout, however, is the default way that things on the web behave — as we said above, it is sometimes referred to as _normal flow_, because without any other instruction, our boxes lay out as block or inline boxes.
+O layout Block e inline, no entanto, é a forma padrão de como as coisas na web se comportam. Como dissemos acima, às vezes é chamado de _normal flow_, porque sem qualquer outra instrução, nossas caixas são dispostas como blocks ou inlines.
 
 ## Examples of different display types
 
