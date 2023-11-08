@@ -431,7 +431,7 @@ Names are unordered relative to each other, but if a particular name has multipl
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.itemprop")}}
+{{Compat}}
 
 ## See also
 

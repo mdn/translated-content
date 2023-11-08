@@ -280,7 +280,7 @@ A page action with an icon, a title, and a popup. The popup will be shown when t
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.page_action")}}
+{{Compat}}
 
 ## 関連情報
 

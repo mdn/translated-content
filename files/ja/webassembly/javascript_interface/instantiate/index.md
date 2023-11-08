@@ -125,7 +125,7 @@ onmessage = function (e) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WebAssembly.instantiate")}}
+{{Compat}}
 
 ## 関連情報
 

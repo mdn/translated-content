@@ -176,7 +176,7 @@ console.log(bar.foo2()); // 2
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions.method_definitions")}}
+{{Compat}}
 
 ## Veja também
 

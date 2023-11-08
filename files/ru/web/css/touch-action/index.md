@@ -92,7 +92,7 @@ html {
 
 ## Поддержка браузерами
 
-{{compat("css.properties.touch-action")}}
+{{Compat}}
 
 ## Смотрите также
 

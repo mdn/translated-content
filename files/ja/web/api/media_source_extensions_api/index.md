@@ -65,7 +65,7 @@ DASH の 2 つの最も一般的な使用例では、コンテンツを「オン
 
 ### MediaSource インターフェイス
 
-{{Compat("api.MediaSource", 0)}}
+{{Compat}}
 
 ## 関連情報
 

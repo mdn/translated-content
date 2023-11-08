@@ -58,7 +58,7 @@ Math.expm1(1); // 1.718281828459045
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.expm1")}}
+{{Compat}}
 
 ## See also
 

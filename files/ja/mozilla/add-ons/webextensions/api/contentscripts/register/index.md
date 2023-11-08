@@ -57,7 +57,7 @@ var registering = browser.contentScripts.register(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.contentScripts.register", 10)}}
+{{Compat}}
 
 ## 例
 

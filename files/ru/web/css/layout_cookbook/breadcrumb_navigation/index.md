@@ -38,7 +38,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Смотреть также
 

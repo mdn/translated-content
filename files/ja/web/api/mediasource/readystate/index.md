@@ -59,7 +59,7 @@ function sourceOpen(_) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.readyState")}}
+{{Compat}}
 
 ## 関連情報
 

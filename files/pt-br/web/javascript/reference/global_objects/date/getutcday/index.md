@@ -38,7 +38,7 @@ var diaDaSemana = hoje.getUTCDay();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCDay")}}
+{{Compat}}
 
 ## Veja também
 

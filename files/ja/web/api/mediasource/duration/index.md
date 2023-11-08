@@ -57,7 +57,7 @@ function sourceOpen (_) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.duration")}}
+{{Compat}}
 
 ## 関連情報
 

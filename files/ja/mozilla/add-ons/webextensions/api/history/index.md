@@ -58,7 +58,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.history")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -35,7 +35,7 @@ getLog2e(); // 1.4426950408889634
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.LOG2E")}}
+{{Compat}}
 
 ## 関連情報
 

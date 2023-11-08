@@ -344,4 +344,4 @@ Manifests should be served using the `application/manifest+json` MIME type. Howe
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.manifest")}}
+{{Compat}}

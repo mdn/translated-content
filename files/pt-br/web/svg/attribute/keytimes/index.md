@@ -84,4 +84,4 @@ If the duration of the animation is indefinite, any `keyTimes` specification wil
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.animate.keyTimes")}}
+{{Compat}}

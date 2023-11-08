@@ -42,7 +42,7 @@ Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` cont
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.querySelectorAll")}}
+{{Compat}}
 
 ## Especificação
 

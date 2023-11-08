@@ -1302,7 +1302,7 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.types.color")}}
+{{Compat}}
 
 ## Ver também
 

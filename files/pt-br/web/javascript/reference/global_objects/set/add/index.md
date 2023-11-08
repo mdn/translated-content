@@ -42,7 +42,7 @@ console.log(mySet);
 
 ## Compatilidade de Navegadores (Browser)
 
-{{Compat("javascript.builtins.Set.add")}}
+{{Compat}}
 
 ## Notas específicas para Firefox
 

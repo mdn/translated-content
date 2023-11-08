@@ -31,7 +31,7 @@ console.log(window.navigator.appCodeName);
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.appCodeName")}}
+{{Compat}}
 
 ## Смотрите также
 

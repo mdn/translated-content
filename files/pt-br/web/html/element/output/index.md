@@ -39,7 +39,7 @@ O elemento implementa a interface [HTMLOutputElement](/pt-BR/DOM/HTMLOutputEleme
 
 ## Compatibilidade
 
-{{Compat("html.elements.output")}}
+{{Compat}}
 
 ## Veja também
 

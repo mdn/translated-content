@@ -208,4 +208,4 @@ element {
 
 ## Совместимость с браузерами
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}

@@ -27,7 +27,7 @@ HyperText Transfer Protocol (HTTP) **`416 Range Not Satisfiable`** エラーレ�
 
 以下に表示される情報は、MDN の Github (<https://github.com/mdn/browser-compat-data>) からのものです。
 
-{{Compat("http.status.416")}}
+{{Compat}}
 
 ## 関連情報
 

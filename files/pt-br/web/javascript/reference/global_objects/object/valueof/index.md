@@ -77,7 +77,7 @@ myObj + 3; // 7
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.valueOf")}}
+{{Compat}}
 
 ## Veja também
 
