@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 
 ## justify-self
 
-{{cssxref("justify-self")}} 属性用于在内联轴上对包含块中的项目进行对齐。
+{{cssxref("justify-self")}} 属性用于在行向轴上对包含块中的项目进行对齐。
 
 此属性不适用于浮动元素或表格单元格。
 
