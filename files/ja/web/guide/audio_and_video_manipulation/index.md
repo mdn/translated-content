@@ -119,9 +119,9 @@ processor.doLoad();
 
 [WebGL](/ja/docs/Web/WebGL) はキャンバスを使用してハードウェアアクセラレーションによる三次元や二次元の描画を行う強力な API です。 {{htmlelement("video")}} 要素と組み合わせることで、動画をテクチャとして利用できます。つまり三次元空間上に動画を配置し、再生できます。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **メモ:** [このデモのソースコードは GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/webgl-examples/tutorial/sample8/)も)。
+> **メモ:** [このデモのソースコードは GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)も)。
 
 ### 再生速度
 
