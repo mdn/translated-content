@@ -25,7 +25,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 
 ### 使用绝对定位的元素
 
-对齐容器是带有 top、left、bottom 和 right 偏移值的定位块。正常关键字解析为 `stretch`,除非定位项目是一个替换元素,在这种情况下它解析为 `start`。
+对齐容器是带有 top、left、bottom 和 right 偏移值的定位块。正常关键字解析为 `stretch`，除非定位项目是一个替换元素，在这种情况下它解析为 `start`。
 
 ## 在这些布局方法中进行对齐的现状
 
