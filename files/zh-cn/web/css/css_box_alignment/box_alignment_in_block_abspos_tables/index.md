@@ -56,7 +56,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 - {{cssxref("justify-self")}}
 - {{cssxref("align-self")}}
 
-### 词汇条目
+### 术语条目
 
 - [Alignment subject](https://developer.mozilla.org/en-US/docs/Glossary/Alignment_Subject)
 - [Alignment container](https://developer.mozilla.org/en-US/docs/Glossary/Alignment_Subject)
