@@ -1,5 +1,5 @@
 ---
-title: Анатомия Расширения
+title: Внутреннее устройство расширения
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 
@@ -75,7 +75,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 Фоновые скрипты запускаются в пространстве специальной страницы, называемой фоновой. Это даёт им доступ к глобальному [`window`](/ru/docs/Web/API/Window) объекту, а так же ко всем его DOM APIs.
 
-#### WebExtension APIs
+#### WebExtension API
 
 Фоновые скрипты могут использовать любые [API расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/API), если расширение имеет необходимые [разрешения](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
@@ -101,11 +101,11 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 Для каждого из этих компонентов вы создаёте HTML файл и помещаете специальную информацию в [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json). HTML файл может в себя включать CSS и JavaScript файлы, как и любая web-страница.
 
-Всё это типы [веб-страниц расширения](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), и, в отличие от нормальных веб-страниц, ваш JavaScript может использовать все привелегии WebExtension APIs, как и ваши фоновые скрипты. Они даже могут получить доступ к переменным в фоновой странице, используя {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
+Всё это типы [веб-страниц расширения](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), и, в отличие от нормальных веб-страниц, ваш JavaScript может использовать все привелегии WebExtension API, как и ваши фоновые скрипты. Они даже могут получить доступ к переменным в фоновой странице, используя {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
 ## Веб-страницы расширения
 
-Вы также можете включить HTML документы в ваше расширение, даже если они не будут включены в какой-либо существующий компонент пользовательского интерфейса. В отличие от документов, которые вы можете предоставить для боковых панелей, всплывающих окон или страниц настроек, эти документы не содержатся в manifest.json. Однако, они также имеют такой же доступ к WebExtension APIs, как и фоновые скрипты.
+Вы также можете включить HTML документы в ваше расширение, даже если они не будут включены в какой-либо существующий компонент пользовательского интерфейса. В отличие от документов, которые вы можете предоставить для боковых панелей, всплывающих окон или страниц настроек, эти документы не содержатся в manifest.json. Однако, они также имеют такой же доступ к WebExtension API, как и фоновые скрипты.
 
 Вы можете загрузить такую страницу, используя {{WebExtAPIRef("windows.create()")}} или {{WebExtAPIRef("tabs.create()")}}.
 
@@ -123,7 +123,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 - Осуществлять XHR запросы.
 - Использовать часть [API расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/API).
-- Обмениваться сообщениями с их фоновыми скриптами и таким образом иметь доступ ко всему WebExtension APIs.
+- Обмениваться сообщениями с их фоновыми скриптами и таким образом иметь доступ ко всему WebExtension API.
 
 Встраиваемые скрипты не могут напрямую взаимодействовать с обычными скриптами на странице, но они могут обмениваться сообщениями с помощью стандартного [`window.postMessage()`](/ru/docs/Web/API/Window/postMessage) API.
 

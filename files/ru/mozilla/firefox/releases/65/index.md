@@ -230,7 +230,7 @@ _Без изменений._
 
 ### Прочее
 
-- Версия для Android теперь поддерживает свойства `headerURL`/`theme_frame` для [тем Webextension](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) ({{bug(1429488)}}).
+- Версия для Android теперь поддерживает свойства `headerURL`/`theme_frame` для [тем расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) ({{bug(1429488)}}).
 
 ## Предыдущие версии
 

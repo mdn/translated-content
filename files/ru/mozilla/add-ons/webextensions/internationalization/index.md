@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 {{AddonSidebar}}
 
-API [WebExtensions](/ru/docs/Mozilla/Add-ons/WebExtensions) предоставляет полезный модуль для интернационализации расширений — [i18n](/ru/docs/Mozilla/Add-ons/WebExtensions/API/i18n). В этой статье мы рассмотрим его особенности и пример его работы. Система для расширений, построенных с помощью API WebExtension, i18n похожа на библиотеки JavaScript для i18n, такие как [i18n.js](http://i18njs.com/).
+[WebExtensions](/ru/docs/Mozilla/Add-ons/WebExtensions) API предоставляет полезный модуль для интернационализации расширений — [i18n](/ru/docs/Mozilla/Add-ons/WebExtensions/API/i18n). В этой статье мы рассмотрим его особенности и пример его работы. Система для расширений, построенных с помощью WebExtension API, i18n похожа на библиотеки JavaScript для i18n, такие как [i18n.js](http://i18njs.com/).
 
 > **Примечание:** Расширение, используемое в этой статье в качестве примера, — [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) — доступно на GitHub. Читая последующие секции этой статьи, вы можете исследовать его исходный код.
 

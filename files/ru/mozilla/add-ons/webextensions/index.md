@@ -5,17 +5,18 @@ slug: Mozilla/Add-ons/WebExtensions
 
 {{AddonSidebar}}
 
-WebExtensions - это кросс-браузерная система разработки дополнений (для браузеров). В значительной степени эта система совместима с [API-расширений](https://developer.chrome.com/extensions), поддерживаемых Google Chrome и Opera. Расширения, написанные для этих браузеров, в большинстве случаев будут работать с Firefox или [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [лишь с минимальными изменениями](/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome). Эти API также полностью совместимы с [мультипоточным Firefox](/ru/Firefox/Multiprocess_Firefox).
+[WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions) — кросс-браузерной системы разработки дополнений браузера.
+В значительной степени эта система совместима с [API-расширений](https://developer.chrome.com/extensions), поддерживаемых Google Chrome и Opera. Расширения, написанные для этих браузеров, в большинстве случаев будут работать с Firefox или [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [лишь с минимальными изменениями](/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome). Эти API также полностью совместимы с [мультипоточным Firefox](/ru/Firefox/Multiprocess_Firefox).
 
 Также мы намерены расширять API для поддержки нужд разработчиков дополнений, поэтому, если у вас есть идеи, то мы их с удовольствием выслушаем. Вы можете связаться с нами через [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) или [#webextensions](irc://irc.mozilla.org/webextensions) на [IRC](https://wiki.mozilla.org/IRC).
 
 ### Приступая к работе
 
-- [Что такое WebExtensions?](/ru/Add-ons/WebExtensions/What_are_WebExtensions)
-- [Первое WebExtension](/ru/Add-ons/WebExtensions/Your_first_WebExtension)
-- [Второе WebExtension](/ru/Add-ons/WebExtensions/Your_second_WebExtension)
-- [Анатомия WebExtension](/ru/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [Примеры WebExtensions](/ru/Add-ons/WebExtensions/Examples)
+- [Что такое расширения?](/ru/Add-ons/WebExtensions/What_are_WebExtensions)
+- [Ваше первое расширение](/ru/Add-ons/WebExtensions/Your_first_WebExtension)
+- [Ваше второе расширение](/ru/Add-ons/WebExtensions/Your_second_WebExtension)
+- [Внутреннее устройство расширения](/ru/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [Примеры расширений](/ru/Add-ons/WebExtensions/Examples)
 
 ### How to
 
@@ -56,7 +57,6 @@ WebExtensions - это кросс-браузерная система разра
 
 - [Портирование расширения из Google Chrome](/ru/Add-ons/WebExtensions/Porting_from_Google_Chrome)
 - [Портирование старых дополнений Firefox](/ru/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on)
-- [Embedded WebExtensions](/ru/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions)
 - [Сравнение с Add-on SDK](/ru/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK)
 - [Сравнение с XUL/XPCOM-расширениями](/ru/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions)
 - [Несовместимость с Chrome](/ru/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
@@ -67,8 +67,8 @@ WebExtensions - это кросс-браузерная система разра
 - [Отладка](/ru/Add-ons/WebExtensions/Debugging)
 - [Начало работы с инструментом Web-ext](/ru/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
 - [Справочник команд Web-ext](/ru/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference)
-- [WebExtensions и Add-on ID](/ru/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)
-- [Публикация вашего дополнения WebExtension](/ru/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)
+- [Расширения и Add-on ID](/ru/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)
+- [Публикация вашего расширения](/ru/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)
 
 ### Справочники
 
