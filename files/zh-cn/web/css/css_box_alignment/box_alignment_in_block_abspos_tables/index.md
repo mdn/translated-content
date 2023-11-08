@@ -1,5 +1,5 @@
 ---
-title: 块状、绝对定位和表格布局中的盒子对齐
+title: 区块、绝对定位和表格布局中的盒子对齐
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 ---
 
