@@ -67,7 +67,7 @@ postData("https://example.com/answer", { answer: 42 }).then((data) => {
 - `Content-Language`
 - `Content-Type` のうち、値が `application/x-www-form-urlencoded`, `multipart/form-data`, `text/plain` のいずれかのもの
 
-## Aborting a fetch
+## fetch の中止
 
 未完了の `fetch()` 操作を中止するには、{{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイスを使用します。
 
