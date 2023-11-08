@@ -56,7 +56,9 @@ document.getElementById("example").innerHTML = result;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/for", "for")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}

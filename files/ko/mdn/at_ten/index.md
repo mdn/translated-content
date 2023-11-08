@@ -17,8 +17,6 @@ slug: MDN/At_ten
 
 [더 알아보기 about contributing](/ko/docs/MDN/Contribute)
 
-{{TenthCampaignQuote}}
-
 ## 추가정보
 
 - [MDN의 역사](/ko/docs/MDN/At_ten/History_of_MDN)
