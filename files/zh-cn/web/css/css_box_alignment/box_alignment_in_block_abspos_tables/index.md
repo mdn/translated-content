@@ -58,8 +58,8 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 
 ### 术语条目
 
-- [Alignment subject](https://developer.mozilla.org/en-US/docs/Glossary/Alignment_Subject)
-- [Alignment container](https://developer.mozilla.org/en-US/docs/Glossary/Alignment_Subject)
-- [Fallback alignment](https://developer.mozilla.org/en-US/docs/Glossary/Fallback_Alignment)
+- [对齐主体](/zh-CN/docs/Glossary/Alignment_Subject)
+- [对齐容器](/zh-CN/docs/Glossary/Alignment_Subject)
+- [后备对齐](/zh-CN/docs/Glossary/Fallback_Alignment)
 
 {{CSSRef}}
