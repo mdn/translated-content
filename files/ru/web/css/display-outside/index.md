@@ -46,17 +46,17 @@ span {
 
 ### `Result`
 
-`{{EmbedLiveSample("Пример", 300, 60)}}`
+{{EmbedLiveSample("Пример", 300, 60)}}
 
 ## Совместимость с браузерами
 
 ### `Support of run-in`
 
-`{{Compat("css.properties.display.display-outside", 10)}}`
+{{Compat}}
 
 ## `Смотрите также`
 
-- `{{CSSxRef("display")}}`
-- `{{CSSxRef("&lt;display-inside&gt;")}}`
+- {{CSSxRef("display")}}
+- {{CSSxRef("&lt;display-inside&gt;")}}
 - [`Block and Inline layout in Normal Flow`](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 - [`Formatting Contexts explained`](/ru/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
