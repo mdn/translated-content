@@ -112,7 +112,7 @@ Quando se formata um grande número de datas, é aconselhável criar um objeto {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toLocaleTimeString")}}
+{{Compat}}
 
 ## Veja também
 

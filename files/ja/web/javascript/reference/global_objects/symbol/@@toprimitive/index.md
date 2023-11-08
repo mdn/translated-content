@@ -38,7 +38,7 @@ sym === sym[Symbol.toPrimitive](); // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.@@toPrimitive")}}
+{{Compat}}
 
 ## 関連情報
 

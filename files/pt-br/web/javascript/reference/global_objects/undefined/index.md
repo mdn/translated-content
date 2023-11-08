@@ -110,4 +110,4 @@ if (y === void 0) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.undefined")}}
+{{Compat}}

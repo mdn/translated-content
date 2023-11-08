@@ -87,4 +87,4 @@ Você pode usar a pseudo-classe `:hover` para construir uma galeria de imagem, e
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.hover")}}
+{{Compat}}

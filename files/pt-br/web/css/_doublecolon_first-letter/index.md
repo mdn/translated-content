@@ -60,7 +60,7 @@ p::first-letter {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## Veja também
 

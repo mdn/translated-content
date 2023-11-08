@@ -109,7 +109,7 @@ apresentacao.call(i); // Douglas Crockford é um excelente Desenvolvedor Javascr
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.call")}}
+{{Compat}}
 
 ## Veja também
 

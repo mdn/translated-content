@@ -63,4 +63,4 @@ Um, dois ou três valores, dada em ordem arbitrária:
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.outline")}}
+{{Compat}}

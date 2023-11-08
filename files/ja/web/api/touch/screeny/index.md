@@ -30,4 +30,4 @@ var y = touchItem.screenY;
 
 ## ブラウザー実装状況
 
-{{Compat("api.Touch.screenY")}}
+{{Compat}}

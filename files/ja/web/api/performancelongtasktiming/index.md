@@ -20,4 +20,4 @@ slug: Web/API/PerformanceLongTaskTiming
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceLongTaskTiming")}}
+{{Compat}}

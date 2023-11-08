@@ -86,7 +86,7 @@ svg {
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.animateMotion")}}
+{{Compat}}
 
 ## 関連情報
 

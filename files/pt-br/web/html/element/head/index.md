@@ -89,7 +89,7 @@ Especificações
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## See also
 

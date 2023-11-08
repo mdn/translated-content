@@ -62,11 +62,11 @@ slug: Web/API/Push_API
 
 ### `PushEvent`
 
-{{Compat("api.PushEvent")}}
+{{Compat}}
 
 ### `PushMessageData`
 
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## Смотрите также
 

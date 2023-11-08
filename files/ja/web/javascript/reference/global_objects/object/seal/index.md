@@ -105,7 +105,7 @@ Object.seal(1);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.seal")}}
+{{Compat}}
 
 ## 関連情報
 

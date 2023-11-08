@@ -84,7 +84,7 @@ p.underover {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.text-decoration")}}
+{{Compat}}
 
 ## Veja também
 

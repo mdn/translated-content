@@ -127,7 +127,7 @@ SVG テキストは HTML テキストのようにスタイリングできます�
 
 ## ブラウザー互換性
 
-{{Compat("svg.elements.text")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -51,7 +51,7 @@ Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations) para exemplos.
 
 ## Compatibilidade com os browsers
 
-{{Compat("css.properties.animation-delay")}}
+{{Compat}}
 
 ## Veja também
 

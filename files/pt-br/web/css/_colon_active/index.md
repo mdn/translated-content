@@ -51,7 +51,7 @@ a:active {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.active")}}
+{{Compat}}
 
 ## Veja também
 

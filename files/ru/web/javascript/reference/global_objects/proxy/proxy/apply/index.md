@@ -75,7 +75,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.builtins.Proxy.handler.apply")}}
+{{Compat}}
 
 ## Смотрите также
 

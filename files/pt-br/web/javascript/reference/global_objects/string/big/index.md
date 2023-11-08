@@ -50,7 +50,7 @@ document.getElementById("#oIdDoElemento").style.fontSize = "2em";
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.big")}}
+{{Compat}}
 
 ## Veja também
 

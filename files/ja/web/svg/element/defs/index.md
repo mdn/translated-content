@@ -56,4 +56,4 @@ _スペシフィック属性はありません_
 
 ## ブラウザ互換性
 
-{{Compat("svg.elements.defs")}}
+{{Compat}}

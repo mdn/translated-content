@@ -496,7 +496,7 @@ Examples of this usage can be [found above](#Preflighted_requests).
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### Notas de compatibilidade
 

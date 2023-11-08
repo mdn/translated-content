@@ -63,7 +63,7 @@ if (!String.prototype.endsWith)
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.endsWith")}}
+{{Compat}}
 
 ## Veja também
 

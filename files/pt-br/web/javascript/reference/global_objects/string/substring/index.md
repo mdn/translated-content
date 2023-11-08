@@ -157,7 +157,7 @@ O código acima serve como um exemplo para operações com substring. Se você p
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.substring")}}
+{{Compat}}
 
 ## Veja também
 

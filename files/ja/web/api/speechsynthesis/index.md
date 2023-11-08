@@ -104,7 +104,7 @@ inputForm.onsubmit = function (event) {
 
 ## ブラウザーの実装状況
 
-{{Compat("api.SpeechSynthesis")}}
+{{Compat}}
 
 ## 関連項目
 

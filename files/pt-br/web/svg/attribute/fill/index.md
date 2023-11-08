@@ -228,6 +228,6 @@ Para {{SVGElement('tspan')}}, `fill` é o atributo de apresentação utilizado p
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.attributes.presentation.fill")}}
+{{Compat}}
 
 > **Nota:** Nota: Para obter informações do uso do `context-fill` (e do `context-stroke`) de documentos HTML, consulte a documentação da propriedade não-padrão {{cssxref("-moz-context-properties")}} .

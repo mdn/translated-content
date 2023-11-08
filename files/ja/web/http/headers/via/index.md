@@ -55,7 +55,7 @@ Via: 1.0 fred, 1.1 p.example.net
 
 ## ブラウザーの互換
 
-{{Compat("http.headers.Via")}}
+{{Compat}}
 
 ## 関連情報
 

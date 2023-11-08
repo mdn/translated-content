@@ -204,7 +204,7 @@ console.log(cube(3)); // 27
 
 ## Compatibilidade
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Veja também
 

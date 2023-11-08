@@ -68,7 +68,7 @@ console.log(Object.values("foo")); // ['f', 'o', 'o']
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.values")}}
+{{Compat}}
 
 ## Ver também
 

@@ -49,7 +49,7 @@ Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; re
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Link")}}
+{{Compat}}
 
 ## Veja também
 

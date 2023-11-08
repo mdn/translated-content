@@ -49,7 +49,7 @@ X-Content-Type-Options: nosniff
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.X-Content-Type-Options")}}
+{{Compat}}
 
 ## Veja também
 

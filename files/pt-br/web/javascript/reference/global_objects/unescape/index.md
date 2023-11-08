@@ -45,7 +45,7 @@ unescape("%u0107"); // "ć"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.unescape")}}
+{{Compat}}
 
 ## Veja também
 

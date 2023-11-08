@@ -42,7 +42,7 @@ console.log(hours); // 23
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getHours")}}
+{{Compat}}
 
 ## Veja também
 
