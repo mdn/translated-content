@@ -58,4 +58,4 @@ if (mutations) {
 
 ## ブラウザ互換性
 
-{{Compat("api.MutationObserver.takeRecords")}}
+{{Compat}}

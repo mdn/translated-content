@@ -77,7 +77,7 @@ Note that the server is not obligated to use any compression method. Compression
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Encoding")}}
+{{Compat}}
 
 ## Veja também
 

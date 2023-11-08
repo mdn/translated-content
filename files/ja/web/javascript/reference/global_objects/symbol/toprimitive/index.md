@@ -51,7 +51,7 @@ console.log(obj2 + ""); // "true"    -- hint は "default"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.toPrimitive")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -35,7 +35,7 @@ xrReferenceSpace = refSpace.getOffsetReferenceSpace(
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.orientation")}}
+{{Compat}}
 
 ## 関連情報
 

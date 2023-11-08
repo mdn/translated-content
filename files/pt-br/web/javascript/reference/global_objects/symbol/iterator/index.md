@@ -79,7 +79,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.iterator")}}
+{{Compat}}
 
 ## Veja também
 

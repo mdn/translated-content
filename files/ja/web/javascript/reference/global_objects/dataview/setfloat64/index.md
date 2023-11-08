@@ -50,7 +50,7 @@ dataview.getFloat64(0); // 3
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.setFloat64")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -36,7 +36,7 @@ console.log(new MyArray() instanceof MySubArray); // false
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.hasInstance")}}
+{{Compat}}
 
 ## Veja também
 

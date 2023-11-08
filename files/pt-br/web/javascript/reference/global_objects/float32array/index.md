@@ -150,7 +150,7 @@ var float32 = new Float32Array(iterable);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Float32Array")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

@@ -42,7 +42,7 @@ console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toTimeString")}}
+{{Compat}}
 
 ## Veja também
 

@@ -125,7 +125,7 @@ showOffsetPos("content");
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.for")}}
+{{Compat}}
 
 ## Veja também
 

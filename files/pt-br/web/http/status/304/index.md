@@ -25,7 +25,7 @@ A resposta equivalente {{HTTPStatus("200")}} `OK` teria incluso os cabeçalhos {
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.304")}}
+{{Compat}}
 
 ## Notas de Compatibilidade
 

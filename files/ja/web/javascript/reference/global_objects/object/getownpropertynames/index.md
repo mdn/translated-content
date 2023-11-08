@@ -130,7 +130,7 @@ console.log(nonenum_only);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.getOwnPropertyNames")}}
+{{Compat}}
 
 ## 関連情報
 

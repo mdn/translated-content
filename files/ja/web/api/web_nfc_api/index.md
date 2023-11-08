@@ -26,4 +26,4 @@ slug: Web/API/Web_NFC_API
 
 ## ブラウザーの互換性
 
-{{Compat("api.NDEFReader")}}
+{{Compat}}

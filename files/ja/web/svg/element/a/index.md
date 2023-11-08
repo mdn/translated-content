@@ -118,4 +118,4 @@ svg|a:active {
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.a")}}
+{{Compat}}

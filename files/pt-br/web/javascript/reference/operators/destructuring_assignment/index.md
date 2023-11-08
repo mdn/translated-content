@@ -354,7 +354,7 @@ console.log(foo); // "bar"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.destructuring")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 

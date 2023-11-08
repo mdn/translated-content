@@ -22,7 +22,7 @@ browser.browserAction.disable(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction.disable")}}
+{{Compat}}
 
 ## 例
 

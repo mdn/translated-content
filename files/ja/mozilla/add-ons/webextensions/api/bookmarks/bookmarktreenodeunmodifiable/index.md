@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeUnmodifiable")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

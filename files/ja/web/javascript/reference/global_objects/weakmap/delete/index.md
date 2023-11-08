@@ -43,7 +43,7 @@ wm.has(window); // false を返す。 window はもう WeakMap に存在しな�
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap.delete")}}
+{{Compat}}
 
 ## 関連情報
 

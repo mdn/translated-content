@@ -114,7 +114,7 @@ if ((x = y)) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.if_else")}}
+{{Compat}}
 
 ## Veja também
 

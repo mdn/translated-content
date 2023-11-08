@@ -172,7 +172,7 @@ console.log(typeof y); // indefinido já que y é uma variável local da funçã
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.var")}}
+{{Compat}}
 
 ## Veja também
 

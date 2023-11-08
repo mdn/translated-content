@@ -84,7 +84,7 @@ String.raw(
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.raw")}}
+{{Compat}}
 
 ## Veja também
 

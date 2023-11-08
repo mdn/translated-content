@@ -17,7 +17,7 @@ slug: Web/API/Window/event
 
 ## ブラウザー実装状況
 
-{{Compat("api.Window.event")}}
+{{Compat}}
 
 ## 関連情報
 

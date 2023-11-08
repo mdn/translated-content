@@ -43,4 +43,4 @@ Este elemento implementa a interface do [`SVGMarkerElement`](/pt-BR/DOM/SVGMarke
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.marker")}}
+{{Compat}}

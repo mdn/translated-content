@@ -40,4 +40,4 @@ span#identificado {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.id")}}
+{{Compat}}
