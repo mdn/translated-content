@@ -151,7 +151,7 @@ myNamespace.round(1234.5678, -1); // 1230
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.round")}}
+{{Compat}}
 
 ## Veja também
 

@@ -61,7 +61,7 @@ var dataUniversal = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.UTC")}}
+{{Compat}}
 
 ## Veja Também
 

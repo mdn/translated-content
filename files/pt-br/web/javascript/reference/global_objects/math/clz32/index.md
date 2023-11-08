@@ -162,7 +162,7 @@ if (!Math.clz32)
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.clz32")}}
+{{Compat}}
 
 ## Veja também
 

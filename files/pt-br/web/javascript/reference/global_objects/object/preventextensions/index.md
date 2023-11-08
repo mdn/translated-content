@@ -91,7 +91,7 @@ Object.preventExtensions(1);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.preventExtensions")}}
+{{Compat}}
 
 ## Veja também
 

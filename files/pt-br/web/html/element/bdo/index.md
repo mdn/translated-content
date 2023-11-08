@@ -96,4 +96,4 @@ A especificação HTML 4 não especificam eventos para este elemento; eles foram
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.bdo")}}
+{{Compat}}

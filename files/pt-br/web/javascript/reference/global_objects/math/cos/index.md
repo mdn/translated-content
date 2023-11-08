@@ -48,7 +48,7 @@ Math.cos(2 * Math.PI); // 1
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.cos")}}
+{{Compat}}
 
 ## Veja também
 

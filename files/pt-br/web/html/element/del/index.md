@@ -38,7 +38,7 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.del")}}
+{{Compat}}
 
 ## See also
 

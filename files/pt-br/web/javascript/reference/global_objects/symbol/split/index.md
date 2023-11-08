@@ -33,7 +33,7 @@ console.log("Another one bites the dust".split(new ReverseSplit()));
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.split")}}
+{{Compat}}
 
 ## Veja também
 

@@ -30,7 +30,7 @@ let removingItem = browser.storage.<storageType>.remove(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageArea.remove")}}
+{{Compat}}
 
 ## 例
 

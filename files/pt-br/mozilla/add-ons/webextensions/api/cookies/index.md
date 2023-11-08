@@ -93,7 +93,7 @@ Quando o isolamento de primeira parte está desabilitado, o parâmetro `firstPar
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.cookies")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

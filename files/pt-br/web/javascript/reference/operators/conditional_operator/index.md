@@ -95,7 +95,7 @@ location.assign(url); // "stop.html"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.conditional")}}
+{{Compat}}
 
 ## Veja também
 

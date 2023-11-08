@@ -50,7 +50,7 @@ Para valores menores que -1 ou maiores que than 1, `Math.acos()` o método retor
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.acos")}}
+{{Compat}}
 
 ## Veja também
 

@@ -37,15 +37,15 @@ slug: Web/CSS/CSS_colors
 
 ### `color` プロパティ
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
 ### `color-adjust` プロパティ
 
-{{Compat("css.properties.color-adjust")}}
+{{Compat}}
 
 ### `opacity` プロパティ
 
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## 関連情報
 

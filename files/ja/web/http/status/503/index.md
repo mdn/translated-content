@@ -29,7 +29,7 @@ HyperText Transfer Protocol (HTTP) の **`503 Service Unavailable`** サーバ�
 
 以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.503")}}
+{{Compat}}
 
 ## 関連情報
 

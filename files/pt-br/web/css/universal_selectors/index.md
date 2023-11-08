@@ -76,4 +76,4 @@ O asterisco é opcional para seletores simples. Por exemplo, `*.atencao` e `.ate
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.universal")}}
+{{Compat}}

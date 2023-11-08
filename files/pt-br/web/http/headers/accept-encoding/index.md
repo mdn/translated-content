@@ -80,7 +80,7 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Accept-Encoding")}}
+{{Compat}}
 
 ## Veja também
 

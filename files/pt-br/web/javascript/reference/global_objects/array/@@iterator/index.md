@@ -44,7 +44,7 @@ console.log(eArr.next().value); // p
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.@@iterator")}}
+{{Compat}}
 
 ## Veja também
 

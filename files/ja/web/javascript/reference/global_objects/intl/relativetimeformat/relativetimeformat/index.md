@@ -86,7 +86,7 @@ rtf.format(1, "day");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat")}}
+{{Compat}}
 
 ## 関連情報
 

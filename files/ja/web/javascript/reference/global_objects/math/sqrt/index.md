@@ -52,7 +52,7 @@ Math.sqrt(-0); // -0
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.sqrt")}}
+{{Compat}}
 
 ## 関連情報
 

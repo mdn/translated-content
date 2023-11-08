@@ -67,8 +67,8 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 #### grid-template-areas
 
-{{Compat("css.properties.grid-template-areas")}}
+{{Compat}}
 
 #### float
 
-{{Compat("css.properties.float")}}
+{{Compat}}

@@ -42,7 +42,7 @@ var myVar = x.valueOf(); // atribui -424713600000 to myVar
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.valueOf")}}
+{{Compat}}
 
 ## Veja também
 

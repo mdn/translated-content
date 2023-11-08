@@ -37,4 +37,4 @@ O recurso `display-mode` é especificado como um valor de uma palavra chave esco
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.at-rules.media.display-mode")}}
+{{Compat}}

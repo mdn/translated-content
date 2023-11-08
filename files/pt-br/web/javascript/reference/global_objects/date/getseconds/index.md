@@ -43,7 +43,7 @@ console.log(seconds); // 30
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getSeconds")}}
+{{Compat}}
 
 ## Veja também
 

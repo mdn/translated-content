@@ -54,7 +54,7 @@ span {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## Veja também
 
