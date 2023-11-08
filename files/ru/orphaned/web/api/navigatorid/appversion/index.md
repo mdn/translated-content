@@ -37,4 +37,4 @@ alert("Your browser version is reported as " + navigator.appVersion);
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.appVersion")}}
+{{Compat}}

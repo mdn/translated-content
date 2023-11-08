@@ -32,4 +32,4 @@ _このインタフェースは、親から、すなわち_ _{{domxref("SVGGeome
 
 ## ブラウザー実装状況
 
-{{Compat("api.SVGRect")}}
+{{Compat}}

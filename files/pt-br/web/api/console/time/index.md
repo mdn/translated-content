@@ -30,7 +30,7 @@ console.time(label);
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.time")}}
+{{Compat}}
 
 ## Veja também
 

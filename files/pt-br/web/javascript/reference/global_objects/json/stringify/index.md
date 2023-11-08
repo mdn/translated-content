@@ -179,7 +179,7 @@ console.log(seçãoRestaurada);
 
 ## Compatibilidade em navegadores
 
-{{Compat("javascript.builtins.JSON.stringify")}}
+{{Compat}}
 
 ## Veja também
 

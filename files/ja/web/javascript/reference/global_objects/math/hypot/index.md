@@ -105,7 +105,7 @@ if (!Math.hypot)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.hypot")}}
+{{Compat}}
 
 ## 関連情報
 

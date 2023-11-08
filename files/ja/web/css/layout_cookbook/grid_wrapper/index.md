@@ -68,7 +68,7 @@ slug: Web/CSS/Layout_cookbook/Grid_wrapper
 
 #### grid-template-columns
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## 関連情報
 

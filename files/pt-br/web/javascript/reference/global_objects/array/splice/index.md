@@ -83,7 +83,7 @@ removed = myFish.splice(3, Number.MAX_VALUE);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.splice")}}
+{{Compat}}
 
 ## Veja Também
 

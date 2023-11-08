@@ -52,7 +52,7 @@ A tecla de atalho para acessar este elemento a partir do teclado.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.label")}}
+{{Compat}}
 
 ## See also
 

@@ -205,7 +205,7 @@ A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.spread")}}
+{{Compat}}
 
 ## Veja também
 

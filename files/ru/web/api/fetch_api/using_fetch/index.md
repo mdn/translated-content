@@ -400,6 +400,6 @@ if (self.fetch) {
 
 СпецификацииSpecification Status Comment [Fetch](https://fetch.spec.whatwg.org/) Живой стандарт Initial definitionСовместимость браузера
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 Смотрите такжеServiceWorker APIHTTP access control (CORS)HTTPFetch polyfillFetch examples on Github`

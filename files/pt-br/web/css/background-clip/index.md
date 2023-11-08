@@ -163,7 +163,7 @@ p {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.background-clip")}}
+{{Compat}}
 
 ## Veja também
 

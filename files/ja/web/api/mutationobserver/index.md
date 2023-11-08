@@ -64,7 +64,7 @@ observer.disconnect();
 
 ## ブラウザーの互換性
 
-{{Compat("api.MutationObserver")}}
+{{Compat}}
 
 ## 関連情報
 

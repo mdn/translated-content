@@ -89,4 +89,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.browser_specific_settings")}}
+{{Compat}}

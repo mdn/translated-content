@@ -52,7 +52,7 @@ span {
 
 ### `Support of run-in`
 
-`{{Compat("css.properties.display.display-outside", 10)}}`
+`{{Compat}}`
 
 ## `Смотрите также`
 

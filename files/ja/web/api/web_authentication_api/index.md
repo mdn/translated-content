@@ -201,32 +201,32 @@ navigator.credentials
 
 ### Credential
 
-{{Compat("api.Credential")}}
+{{Compat}}
 
 ### CredentialsContainer
 
-{{Compat("api.CredentialsContainer")}}
+{{Compat}}
 
 ### PublicKeyCredential
 
-{{Compat("api.PublicKeyCredential")}}
+{{Compat}}
 
 ### AuthenticatorResponse
 
-{{Compat("api.AuthenticatorResponse")}}
+{{Compat}}
 
 ### AuthenticatorAttestationResponse
 
-{{Compat("api.AuthenticatorAttestationResponse")}}
+{{Compat}}
 
 ### AuthenticatorAssertionResponse
 
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}
 
 ### PublicKeyCredentialCreationOptions
 
-{{Compat("api.PublicKeyCredentialCreationOptions")}}
+{{Compat}}
 
 ### PublicKeyCredentialRequestOptions
 
-{{Compat("api.PublicKeyCredentialRequestOptions")}}
+{{Compat}}

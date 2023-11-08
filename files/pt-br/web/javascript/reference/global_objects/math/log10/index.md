@@ -62,7 +62,7 @@ Math.log10 =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.log10")}}
+{{Compat}}
 
 ## Veja também
 

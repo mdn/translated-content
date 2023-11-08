@@ -41,4 +41,4 @@ if (buf.length == 1) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.TimeRanges.length")}}
+{{Compat}}

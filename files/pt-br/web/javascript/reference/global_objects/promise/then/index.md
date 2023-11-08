@@ -95,7 +95,7 @@ p2.then(function (value) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.then")}}
+{{Compat}}
 
 ## Veja também
 

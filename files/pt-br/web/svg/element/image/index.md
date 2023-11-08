@@ -73,4 +73,4 @@ Basic rendering of a PNG image in SVG:
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.image")}}
+{{Compat}}

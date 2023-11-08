@@ -461,7 +461,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.a")}}
+{{Compat}}
 
 ## See also
 

@@ -28,7 +28,7 @@ _Интерфейс_ _`NavigatorLanguage`_ _ничего не реализовы
 
 ## Доступность в браузерах
 
-{{Compat("api.NavigatorLanguage")}}
+{{Compat}}
 
 ## Смотрите также
 

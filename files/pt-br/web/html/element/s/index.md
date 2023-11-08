@@ -114,7 +114,7 @@ Algumas pessoas que usam leitores de tela que desativam deliberadamente o anúnc
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.s")}}
+{{Compat}}
 
 ## Veja mais
 

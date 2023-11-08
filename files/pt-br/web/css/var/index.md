@@ -63,7 +63,7 @@ body {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.custom-property.var")}}
+{{Compat}}
 
 ## Veja também
 

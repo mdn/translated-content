@@ -54,7 +54,7 @@ e é parte do ECMAScript 2015 (sua proposta é a modularização dos globais). P
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.parseInt")}}
+{{Compat}}
 
 ## Veja também
 
