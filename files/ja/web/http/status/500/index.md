@@ -25,7 +25,7 @@ HyperText Transfer Protocol (HTTP) の **`500 Internal Server Error`** サーバ
 
 以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.500")}}
+{{Compat}}
 
 ## 関連情報
 

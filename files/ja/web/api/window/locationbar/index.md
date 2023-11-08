@@ -40,7 +40,7 @@ objRef = window.locationbar;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.locationbar")}}
+{{Compat}}
 
 ## 関連情報
 

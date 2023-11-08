@@ -171,7 +171,7 @@ try {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.throw")}}
+{{Compat}}
 
 ## Veja também
 

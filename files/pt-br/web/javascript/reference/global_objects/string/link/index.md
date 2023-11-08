@@ -48,7 +48,7 @@ console.log("Clique para retornar à" + hotText.link(URL));
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.link")}}
+{{Compat}}
 
 ## Veja também
 

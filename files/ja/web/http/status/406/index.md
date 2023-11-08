@@ -34,7 +34,7 @@ HyperText Transfer Protocol (HTTP) の **`406 Not Acceptable`** クライアン�
 
 以下の情報は MDN の Github (<https://github.com/mdn/browser-compat-data>) から取得したものです。
 
-{{Compat("http.status.406")}}
+{{Compat}}
 
 ## 関連情報
 

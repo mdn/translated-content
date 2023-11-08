@@ -165,7 +165,7 @@ console.log(newInstance.name); //Polygon
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.classes.constructor")}}
+{{Compat}}
 
 ## 関連情報
 

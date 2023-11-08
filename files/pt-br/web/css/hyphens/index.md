@@ -102,7 +102,7 @@ p.auto {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.hyphens")}}
+{{Compat}}
 
 ## Veja também
 

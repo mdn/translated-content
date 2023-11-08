@@ -119,7 +119,7 @@ Para o Firefox, veja também o código do módulo XPCOMUtils.jsm, que define a f
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## Veja também
 

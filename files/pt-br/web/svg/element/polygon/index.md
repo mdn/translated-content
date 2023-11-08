@@ -38,7 +38,7 @@ Este elemento implementa a interface do [`SVGPolygonElement`](/pt-BR/DOM/SVGPoly
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.polygon")}}
+{{Compat}}
 
 ## Relacionado
 

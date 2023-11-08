@@ -99,4 +99,4 @@ svg {
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.svg")}}
+{{Compat}}

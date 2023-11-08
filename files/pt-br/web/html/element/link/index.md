@@ -144,7 +144,7 @@ Você pode determinar quando um stylesheet foi carregado observando um `load` ev
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.link")}}
+{{Compat}}
 
 ## Veja também
 

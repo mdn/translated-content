@@ -183,7 +183,7 @@ Array.from({ length: 5 }, (v, k) => k);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.from")}}
+{{Compat}}
 
 ## Veja também
 

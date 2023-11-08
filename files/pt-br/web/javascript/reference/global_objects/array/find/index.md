@@ -138,7 +138,7 @@ if (!Array.prototype.find) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## Veja também
 

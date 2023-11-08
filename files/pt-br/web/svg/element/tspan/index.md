@@ -89,4 +89,4 @@ svg {
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.tspan")}}
+{{Compat}}

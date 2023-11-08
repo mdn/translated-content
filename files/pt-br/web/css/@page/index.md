@@ -35,4 +35,4 @@ Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/CSS/Pseudo-clas
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.at-rules.page")}}
+{{Compat}}

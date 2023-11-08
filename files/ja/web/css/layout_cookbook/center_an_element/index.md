@@ -33,11 +33,11 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 #### align-items
 
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 #### justify-content
 
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## MDN の関連資料
 

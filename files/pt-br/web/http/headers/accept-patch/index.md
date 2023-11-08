@@ -58,7 +58,7 @@ Accept-Patch: application/merge-patch+json
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Accept-Patch")}}
+{{Compat}}
 
 ## Veja também
 

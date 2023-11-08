@@ -133,7 +133,7 @@ p.withRedBoxes {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.float")}}
+{{Compat}}
 
 ## Veja também
 

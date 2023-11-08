@@ -55,7 +55,7 @@ Obama é presidente dos EUA
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.abbr")}}
+{{Compat}}
 
 ## Veja também
 

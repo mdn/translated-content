@@ -91,7 +91,7 @@ You can use this, for example, to test whether an argument to a function is arit
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.isNaN")}}
+{{Compat}}
 
 ## Veja também
 

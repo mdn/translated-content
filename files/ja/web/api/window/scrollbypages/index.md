@@ -33,7 +33,7 @@ DOM Level 0 です。仕様書にはありません。
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollByPages")}}
+{{Compat}}
 
 ## 関連情報
 

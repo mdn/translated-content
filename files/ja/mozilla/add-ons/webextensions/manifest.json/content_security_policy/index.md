@@ -128,4 +128,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.content_security_policy")}}
+{{Compat}}

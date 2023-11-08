@@ -34,7 +34,7 @@ var milliseconds = today.getMilliseconds();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getMilliseconds")}}
+{{Compat}}
 
 ## Veja também
 

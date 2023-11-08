@@ -192,7 +192,7 @@ O script exibirá o texto a seguir:
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.split")}}
+{{Compat}}
 
 ## Veja também
 

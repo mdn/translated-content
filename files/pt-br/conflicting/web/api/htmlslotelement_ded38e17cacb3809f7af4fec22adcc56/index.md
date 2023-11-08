@@ -26,7 +26,7 @@ myContentObject.select = "h1 .error";
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLContentElement.select")}}
+{{Compat}}
 
 ## Veja também
 

@@ -198,7 +198,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ## Veja também
 

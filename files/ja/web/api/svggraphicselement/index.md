@@ -35,4 +35,4 @@ _このインターフェイスは親である {{domxref("SVGElement")}} から�
 
 ## ブラウザーの互換性
 
-{{Compat("api.SVGGraphicsElement")}}
+{{Compat}}
