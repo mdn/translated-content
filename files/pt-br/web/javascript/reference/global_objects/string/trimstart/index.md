@@ -93,7 +93,7 @@ console.log(str); // retorna 'foo  '
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.trimStart")}}
+{{Compat}}
 
 ## Veja também
 

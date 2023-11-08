@@ -28,7 +28,7 @@ alert(window.navigator.taintEnabled());
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.taintEnabled")}}
+{{Compat}}
 
 ## Смотрите также
 

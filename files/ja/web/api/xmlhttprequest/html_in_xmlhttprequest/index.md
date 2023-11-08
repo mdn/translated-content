@@ -163,7 +163,7 @@ oReq.send(null);
 
 ### `XMLHttpRequest` インターフェイス
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## 関連情報
 

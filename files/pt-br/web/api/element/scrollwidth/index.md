@@ -86,7 +86,7 @@ _xScrollWidth_ é a largura do conteúdo do _elemento_ em pixels.
 
 ## Referências
 
-{{Compat("api.Element.scrollWidth")}}
+{{Compat}}
 
 ## Veja também
 

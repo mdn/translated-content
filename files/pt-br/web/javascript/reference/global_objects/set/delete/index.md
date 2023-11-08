@@ -42,7 +42,7 @@ mySet.has("foo"); // Retorna false. O elemento "foo" não está mais presente.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Set.delete")}}
+{{Compat}}
 
 ## Veja também
 

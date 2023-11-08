@@ -50,7 +50,7 @@ Accept-Ranges: bytes
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Accept-Ranges")}}
+{{Compat}}
 
 ## Veja também
 

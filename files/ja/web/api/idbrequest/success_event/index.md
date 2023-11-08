@@ -94,7 +94,7 @@ openRequest.onsuccess = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBRequest.success_event")}}
+{{Compat}}
 
 ## 関連情報
 

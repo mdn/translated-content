@@ -73,7 +73,7 @@ navigator.credentials
 
 ## ブラウザーの互換性
 
-{{Compat("api.PublicKeyCredential.getClientExtensionResults")}}
+{{Compat}}
 
 ## 関連情報
 

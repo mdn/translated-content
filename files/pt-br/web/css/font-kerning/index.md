@@ -51,7 +51,7 @@ p {
 
 ## Browser Compatibility
 
-{{Compat("css.properties.font-kerning")}}
+{{Compat}}
 
 ## Kerning Demo
 

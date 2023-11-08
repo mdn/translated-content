@@ -65,4 +65,4 @@ slug: Web/CSS/CSS_display
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.display", 10)}}
+{{Compat}}

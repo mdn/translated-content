@@ -171,7 +171,7 @@ Creating functions with the `Function` constructor is one of the ways to dynamic
 
 ## Compatibilidade
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## See also
 

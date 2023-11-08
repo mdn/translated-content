@@ -3960,6 +3960,7 @@
 /fr/docs/Web/API/PositionOptions/enableHighAccuracy	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/Web/API/PositionOptions/maximumAge	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/Web/API/PositionOptions/timeout	/fr/docs/Web/API/Geolocation/getCurrentPosition
+/fr/docs/Web/API/RTCIceServer	/fr/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /fr/docs/Web/API/RandomSource.getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/RandomSource/getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/Référence_du_DOM_Gecko	/fr/docs/Web/API/Document_Object_Model

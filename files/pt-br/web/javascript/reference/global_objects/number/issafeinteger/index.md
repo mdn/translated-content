@@ -68,7 +68,7 @@ Number.isSafeInteger =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.isSafeInteger")}}
+{{Compat}}
 
 ## Veja também
 

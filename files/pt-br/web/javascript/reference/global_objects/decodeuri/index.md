@@ -61,7 +61,7 @@ try {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.decodeURI")}}
+{{Compat}}
 
 ## Ver também
 

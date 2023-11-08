@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.alarms.Alarm")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

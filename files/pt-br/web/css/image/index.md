@@ -70,7 +70,7 @@ element(#fakeid)  /* Um elemento ID deve ser um ID existente na página. */
 
 ## Compatibilidade do navegador
 
-{{Compat("css.types.image")}}
+{{Compat}}
 
 ## Veja também
 

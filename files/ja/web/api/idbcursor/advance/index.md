@@ -70,7 +70,7 @@ function advanceResult() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBCursor.advance")}}
+{{Compat}}
 
 ## 関連情報
 

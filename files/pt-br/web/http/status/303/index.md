@@ -23,7 +23,7 @@ O código de resposta de status de redirecionamento do HyperText Transfer Protoc
 
 A informação mostrada abaixo foi retirada do Github da MDN (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.303")}}
+{{Compat}}
 
 ## Veja também
 

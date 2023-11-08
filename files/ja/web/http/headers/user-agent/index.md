@@ -130,7 +130,7 @@ Googlebot/2.1 (+http://www.google.com/bot.html)
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.User-Agent")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -45,7 +45,7 @@ console.log(worldString.strike()); // <strike>Olá, mundo</strike>
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.blink")}}
+{{Compat}}
 
 ## Veja também
 

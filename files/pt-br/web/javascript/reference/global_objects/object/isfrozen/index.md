@@ -140,7 +140,7 @@ Object.isFrozen(1);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.isFrozen")}}
+{{Compat}}
 
 ## Veja também
 

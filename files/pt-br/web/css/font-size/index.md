@@ -210,4 +210,4 @@ span {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

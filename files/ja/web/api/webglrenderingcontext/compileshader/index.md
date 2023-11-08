@@ -32,7 +32,7 @@ gl.compileShader(shader);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.compileShader")}}
+{{Compat}}
 
 ## 関連項目
 
