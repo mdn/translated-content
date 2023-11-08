@@ -21,7 +21,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 
 ## align-self
 
-{{cssxref("align-self")}} 属性不适用于块级框(包括浮动),因为块轴上有多个项目。它也不适用于表格单元格。
+{{cssxref("align-self")}} 属性不适用于块级框（包括浮动），因为块轴上有多个项目。它也不适用于表格单元格。
 
 ### 使用绝对定位的元素
 
