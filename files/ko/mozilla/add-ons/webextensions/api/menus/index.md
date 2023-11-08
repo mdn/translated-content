@@ -152,7 +152,7 @@ browser.menus.create(
 
 ## 브라우저 호환성
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

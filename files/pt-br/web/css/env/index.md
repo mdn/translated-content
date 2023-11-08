@@ -107,7 +107,7 @@ A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas 
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.custom-property.env")}}
+{{Compat}}
 
 ## Veja também
 

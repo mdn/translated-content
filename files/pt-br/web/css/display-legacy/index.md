@@ -76,19 +76,19 @@ Na nova sintaxe, o contêiner flex inline seria criado usando dois valores, inli
 
 ### Suporte de`inline-block`
 
-{{Compat("css.properties.display.inline-block", 10)}}
+{{Compat}}
 
 ### Suporte de`inline-table`
 
-{{Compat("css.properties.display.inline-table", 10)}}
+{{Compat}}
 
 ### Suporte de`inline-flex`
 
-{{Compat("css.properties.display.inline-flex", 10)}}
+{{Compat}}
 
 ### Suporte de`inline-grid`
 
-{{Compat("css.properties.display.inline-grid", 10)}}
+{{Compat}}
 
 ## Veja também
 

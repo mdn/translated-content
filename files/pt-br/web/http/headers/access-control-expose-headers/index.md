@@ -78,7 +78,7 @@ Access-Control-Expose-Headers: *, Authorization
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Expose-Headers")}}
+{{Compat}}
 
 ## Veja também
 

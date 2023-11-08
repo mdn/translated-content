@@ -22,4 +22,4 @@ O atributo `autocapitalize` nunca ativa a autocapitalização para um elemento {
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.autocapitalize")}}
+{{Compat}}

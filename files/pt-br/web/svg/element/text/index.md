@@ -96,7 +96,7 @@ svg {
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.text")}}
+{{Compat}}
 
 ## Related
 

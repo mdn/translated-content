@@ -38,7 +38,7 @@ Este elemento inclue apenas [atributos Globais](/pt-BR/docs/HTML/Global_attribut
 
 ## Compatibilidade
 
-{{Compat("html.elements.mark")}}
+{{Compat}}
 
 ## Veja Também
 

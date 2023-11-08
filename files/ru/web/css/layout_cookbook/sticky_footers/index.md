@@ -42,19 +42,19 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 #### grid-template-rows
 
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 #### flex-direction
 
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 #### flex-grow
 
-{{Compat("css.properties.flex-grow")}}
+{{Compat}}
 
 #### flex-shrink
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Resources on MDN
 

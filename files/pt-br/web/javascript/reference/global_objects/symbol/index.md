@@ -177,7 +177,7 @@ obj[Object(sym)]; // still 1
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol")}}
+{{Compat}}
 
 ## Veja também
 

@@ -73,7 +73,7 @@ Não faz parte de nenhuma especificação atualmente. Uma explicação das ideia
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Large-Allocation")}}
+{{Compat}}
 
 ## Veja também
 

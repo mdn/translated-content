@@ -31,7 +31,7 @@ _このインターフェイスは、{{domxref("RandomSource")}} 上に定義さ
 
 ## ブラウザーの実装状況
 
-{{Compat("api.Crypto")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -238,7 +238,7 @@ Se você escolher utilizar esta implementação parcial, **você não deve confi
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.bind")}}
+{{Compat}}
 
 ## Veja também
 

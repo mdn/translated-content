@@ -41,7 +41,7 @@ gainNode.connect(audioCtx.destination);
 
 ## ブラウザ互換性
 
-{{Compat("api.AudioDestinationNode.maxChannelCount")}}
+{{Compat}}
 
 ## 参考
 

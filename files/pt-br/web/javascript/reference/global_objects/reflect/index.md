@@ -84,7 +84,7 @@ Reflect.set(duck, "eyes", "black");
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect")}}
+{{Compat}}
 
 ## Veja também
 

@@ -92,7 +92,7 @@ for (var prop in obj) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.for_in")}}
+{{Compat}}
 
 ## Compatibilidade: Initializer expressions
 

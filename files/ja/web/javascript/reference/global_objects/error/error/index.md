@@ -42,7 +42,7 @@ const y = new Error('"new" キーワードによって生成されました。')
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Error.Error")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -47,7 +47,7 @@ theBigDay.setUTCMonth(11);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setUTCMonth")}}
+{{Compat}}
 
 ## Veja também
 

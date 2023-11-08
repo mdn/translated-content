@@ -112,7 +112,7 @@ Math.ceil10(-59, 1); // -50
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.floor")}}
+{{Compat}}
 
 ## Veja também
 

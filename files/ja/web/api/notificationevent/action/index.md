@@ -38,4 +38,4 @@ self.addEventListener(
 
 ## ブラウザーの互換性
 
-{{Compat("api.NotificationEvent.action")}}
+{{Compat}}

@@ -78,4 +78,4 @@ Observe que isso é o mesmo que [`seletor de atributo`](/pt-BR/docs/Web/CSS/Attr
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.class")}}
+{{Compat}}

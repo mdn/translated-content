@@ -89,7 +89,7 @@ O atributo `type` lhe permite especificar um tipo MIME para o(s) recurso(s) forn
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## Veja também
 

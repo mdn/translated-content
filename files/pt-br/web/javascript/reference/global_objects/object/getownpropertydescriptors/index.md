@@ -77,7 +77,7 @@ subclass.prototype = Object.create(superclass.prototype, {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}
+{{Compat}}
 
 ## Veja também
 

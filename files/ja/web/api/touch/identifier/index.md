@@ -44,4 +44,4 @@ someElement.addEventListener(
 
 ## ブラウザーの互換性
 
-{{Compat("api.Touch.identifier")}}
+{{Compat}}

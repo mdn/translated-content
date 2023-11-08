@@ -112,7 +112,7 @@ answer(1337); // 56154
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.return")}}
+{{Compat}}
 
 ## Veja também
 

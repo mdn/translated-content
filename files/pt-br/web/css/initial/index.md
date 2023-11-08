@@ -43,7 +43,7 @@ em {
 
 ## Compatibilidade de navegadores
 
-{{Compat("css.types.global_keywords.initial")}}
+{{Compat}}
 
 ## Veja também
 

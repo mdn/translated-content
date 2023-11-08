@@ -48,7 +48,7 @@ console.log(str.search(reDot)); // retorna -1 pois não conseguiu encontrar o po
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.search")}}
+{{Compat}}
 
 ## Notas específicas para a engine Gecko
 

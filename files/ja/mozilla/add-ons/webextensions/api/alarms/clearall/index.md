@@ -26,7 +26,7 @@ browser.alarms.clearAll(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.alarms.clearAll")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
