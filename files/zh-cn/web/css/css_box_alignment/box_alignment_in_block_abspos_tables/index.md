@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 
 {{cssxref("justify-content")}} 属性不适用于块容器或表格单元格。
 
-{{cssxref("align-content")}} 属性适用于块轴,以对容器中的内容进行对齐。如果请求了一个内容分布方法如 `space-between`、`space-around` 或 `space-evenly`,那么将使用后备对齐,因为内容被视为一个[对齐主体](/zh-CN/docs/Glossary/Alignment_Subject)。
+{{cssxref("align-content")}} 属性适用于块向轴，以对容器中的内容进行对齐。如果请求了一个内容分布方法如 `space-between`、`space-around` 或 `space-evenly`，那么将使用后备对齐，因为内容被视为一个[对齐主体](/zh-CN/docs/Glossary/Alignment_Subject)。
 
 ## justify-self
 
