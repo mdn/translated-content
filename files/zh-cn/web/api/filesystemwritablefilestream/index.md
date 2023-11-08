@@ -20,7 +20,7 @@ _继承父接口 {{DOMxRef("WritableStream")}} 的方法。_
 - {{domxref('FileSystemWritableFileStream.write()')}}
   - : 向调用此方法的文件写入内容，写入到文件当前指针偏移处。
 - {{domxref('FileSystemWritableFileStream.seek()')}}
-  - :更新文件当前指针偏移到指定位置（以字节为单位）。
+  - : 更新文件当前指针偏移到指定位置（以字节为单位）。
 - {{domxref('FileSystemWritableFileStream.truncate()')}}
   - : 将与流相关联的文件调整为指定的字节大小。
 
