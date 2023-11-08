@@ -257,15 +257,15 @@ console.log(b); // "MDN"
 
 如果源代码作为[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)加载（对于 HTML，这意味着在 `<script>` 标签中添加 `type="module"`），在顶层，`this` 总是 `undefined`。
 
-如果源代码使用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 执行，`this` 与[direct eval](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval)的闭合上下文相同，或者与 indirect eval 的 `globalThis`（就像它在单独的全局脚本中运行一样）相同。
+如果源代码使用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 执行，`this` 与[直接调用 eval](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#直接和间接调用_eval) 的闭合上下文相同，或者与间接调用 eval 的 `globalThis`（就像它在单独的全局脚本中运行一样）相同。
 
 ```js
 function test() {
-  // Direct eval
+  // 直接调用 eval
   console.log(eval("this") === this);
-  // Indirect eval，非严格模式
+  // 间接调用 eval，非严格模式
   console.log(eval?.("this") === globalThis);
-  // Indirect eval，严格模式
+  // 间接调用 eval，严格模式
   console.log(eval?.("'use strict'; this") === globalThis);
 }
 
