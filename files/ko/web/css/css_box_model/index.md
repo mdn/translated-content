@@ -74,7 +74,7 @@ CSS에서 박스는 콘텐츠 영역을 포함하며, 이는 텍스트, 이미�
 - [여백 상쇄 정복](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
   - : 어떤 경우, 두 개의 인접한 바깥 여백은 하나로 상쇄됩니다. 이 글은 상쇄가 언제 어떻게 일어나고 이를 어떻게 제어하는지 설명합니다.
 - [시각적 서식 모델](/ko/docs/Web/Guide/CSS/Visual_formatting_model)
-  - : 시각적 서식 모델을 설명합니다.
+  - : 시각적 서식 모델을 설명합니다. 
 
 ## 명세
 
