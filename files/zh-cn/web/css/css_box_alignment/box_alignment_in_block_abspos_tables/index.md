@@ -41,7 +41,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 }
 ```
 
-在表格布局中,你可以使用{{cssxref("vertical-align")}}属性对单元格中的内容在该单元格内进行对齐。
+在表格布局中，你可以使用 {{cssxref("vertical-align")}} 属性对单元格中的内容在该单元格内进行对齐。
 
 对于许多使用场景,将块容器转换为弹性项目将给你 looking for 的对齐能力。在下面的示例中,含有单个项目的容器已转换为弹性容器,以便能够使用对齐属性。
 
