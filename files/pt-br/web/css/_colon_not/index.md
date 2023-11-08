@@ -50,4 +50,4 @@ Se obtém resultados como este:
 
 ## Compatibilidade em Navegadores
 
-{{Compat("css.selectors.not")}}
+{{Compat}}

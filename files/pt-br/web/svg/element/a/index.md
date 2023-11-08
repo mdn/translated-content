@@ -121,4 +121,4 @@ svg|a:active {
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.a")}}
+{{Compat}}

@@ -44,4 +44,4 @@ Early-Data: 1
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Early-Data")}}
+{{Compat}}

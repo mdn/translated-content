@@ -168,7 +168,7 @@ if (!Array.prototype.forEach) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## Specifications
 

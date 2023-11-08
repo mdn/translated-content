@@ -53,4 +53,4 @@ Este elemento implementa a interface do [`SVGGElement`](/pt-BR/docs/DOM/SVGGElem
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

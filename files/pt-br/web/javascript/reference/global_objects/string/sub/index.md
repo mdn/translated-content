@@ -47,7 +47,7 @@ console.log("This is what a " + subText.sub() + " looks like.");
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.sub")}}
+{{Compat}}
 
 ## Veja também
 

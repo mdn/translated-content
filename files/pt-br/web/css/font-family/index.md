@@ -190,4 +190,4 @@ body {
 
 ## Browser compatibility
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}

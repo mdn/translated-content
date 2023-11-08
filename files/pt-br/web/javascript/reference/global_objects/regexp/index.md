@@ -792,7 +792,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // prints 'xxx'
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp")}}
+{{Compat}}
 
 ## Veja também
 

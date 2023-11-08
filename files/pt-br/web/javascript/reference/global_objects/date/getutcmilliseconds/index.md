@@ -34,7 +34,7 @@ var milissegundos = today.getUTCMilliseconds();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCMilliseconds")}}
+{{Compat}}
 
 ## Veja também
 

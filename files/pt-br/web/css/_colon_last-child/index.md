@@ -43,7 +43,7 @@ li:last-child {
 
 ## Compatibilidade de navegadores
 
-{{Compat("css.selectors.last-child")}}
+{{Compat}}
 
 ## Veja também
 

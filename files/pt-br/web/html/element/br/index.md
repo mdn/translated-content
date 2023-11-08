@@ -91,7 +91,7 @@ USA
 
 ## Compatibilidade com o browser
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## Veja também
 

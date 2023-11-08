@@ -29,7 +29,7 @@ slug: orphaned/Web/API/NavigatorPlugins
 
 ## Доступность в браузерах
 
-{{Compat("api.NavigatorPlugins")}}
+{{Compat}}
 
 ## Смотрите также
 

@@ -66,7 +66,7 @@ svg {
 
 ## ブラウザ実装状況
 
-{{Compat("svg.elements.path")}}
+{{Compat}}
 
 ## 関連情報
 

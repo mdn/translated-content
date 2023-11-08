@@ -43,7 +43,7 @@ theBigDay.setMilliseconds(100);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setMilliseconds")}}
+{{Compat}}
 
 ## Veja também
 

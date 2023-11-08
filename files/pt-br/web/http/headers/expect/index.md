@@ -66,7 +66,7 @@ O servidor checa os cabeçalhos da requisição e responde com uma resposta {{HT
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Expect")}}
+{{Compat}}
 
 ## Veja também
 

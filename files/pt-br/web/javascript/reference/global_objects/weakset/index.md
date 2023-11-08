@@ -69,7 +69,7 @@ ws.has(window); // false, window foi removido
 
 ## Compatilidade de Browser
 
-{{Compat("javascript.builtins.WeakSet")}}
+{{Compat}}
 
 ## Veja também
 

@@ -157,7 +157,7 @@ if (!Array.prototype.indexOf) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.indexOf")}}
+{{Compat}}
 
 ## Veja também
 

@@ -104,7 +104,7 @@ Já o código abaixo vai funcionar:
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.replaceAll")}}
+{{Compat}}
 
 ## Veja também
 

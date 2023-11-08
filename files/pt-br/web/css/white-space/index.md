@@ -64,7 +64,7 @@ code {
 
 ## Compatibilidade de Navegadores
 
-{{Compat("css.properties.white-space")}}
+{{Compat}}
 
 \[1] Internet Explorer 5.5+ suporta {{Cssxref("word-wrap")}}`: break-word;`
 O código a seguir permite quebras de linhas dentro de elementos pre:

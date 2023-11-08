@@ -80,7 +80,7 @@ console.log(object2);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.fromEntries")}}
+{{Compat}}
 
 ## 関連情報
 

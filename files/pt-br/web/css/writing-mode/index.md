@@ -177,7 +177,7 @@ Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte 
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.writing-mode")}}
+{{Compat}}
 
 ## See also
 

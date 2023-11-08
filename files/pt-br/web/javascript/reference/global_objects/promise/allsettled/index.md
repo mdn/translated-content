@@ -38,7 +38,7 @@ Para cada objeto no array retornado, existe uma string `status`. Se o status for
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.allSettled")}}
+{{Compat}}
 
 ## Veja também
 

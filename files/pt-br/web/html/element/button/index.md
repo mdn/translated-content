@@ -96,7 +96,7 @@ Note que esse botão possui CSS aplicado.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.button")}}
+{{Compat}}
 
 ## Notas
 

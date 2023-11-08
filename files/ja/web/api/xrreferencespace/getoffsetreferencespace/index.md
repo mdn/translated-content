@@ -125,4 +125,4 @@ function applyMouseMovement(refSpace) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRReferenceSpace.getOffsetReferenceSpace")}}
+{{Compat}}

@@ -26,4 +26,4 @@ HTMLElement.nonce = nonce
 
 ## Browser Compatibility
 
-{{Compat("api.HTMLElement.nonce")}}
+{{Compat}}

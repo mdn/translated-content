@@ -43,7 +43,7 @@ Por favor veja {{jsxref("parseFloat", "parseFloat()")}} para mais detalhes e exe
 
 ## Compatibilidade dos Navegadores
 
-{{Compat("javascript.builtins.Number.parseFloat")}}
+{{Compat}}
 
 ## Veja também
 

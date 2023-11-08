@@ -107,7 +107,7 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes")}}
+{{Compat}}
 
 ## Veja também
 

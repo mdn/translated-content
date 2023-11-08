@@ -114,7 +114,7 @@ Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## 関連情報
 

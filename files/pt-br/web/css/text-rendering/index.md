@@ -72,4 +72,4 @@ A opção optimizeSpeed não tem efeito na versão 2.0 do Gecko, devido ao códi
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.text-rendering")}}
+{{Compat}}
