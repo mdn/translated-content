@@ -196,7 +196,7 @@ console.log(o.a); // 38
 
 静态方法不是 `this` 的属性。它们是类本身的属性。因此，它们通常在类上访问，`this` 是类（或子类）的值。静态初始化块也是在 `this` 设置为当前类的情况下进行求值的。
 
-字段初始化器也在类的上下文中进行求值。实例字段是在 `this` 设置为正在构造的实例的情况下进行求值的。静态字段是在 `this` 设置为当前类的情况下进行求值的。这就是为什么字段初始化器中的箭头函数[对于实例字段绑定到实例，对于静态字段绑定到类](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#cannot_be_used_as_methods)。
+字段初始化器也在类的上下文中执行。实例字段是在 `this` 被设置为正在构造的实例的情况下被初始化的。静态字段是在 `this` 被设置为当前类的情况下被初始化的。这就是为什么字段初始化器中的箭头函数[对于实例字段绑定到实例，对于静态字段绑定到类](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#不能用作方法)。
 
 ```js
 class C {
