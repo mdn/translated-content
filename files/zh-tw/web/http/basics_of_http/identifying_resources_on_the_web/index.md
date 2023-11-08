@@ -5,7 +5,7 @@ slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 
 {{HTTPSidebar}}
 
-HTTP 請求的目標被稱為 「資源」，其性質並未進一步定義；它可以是一個文件、一張照片或其他任何東西。每個資源都由統一資源標識符（{{Glossary("URI")}}）識別，該 URI 在整個 HTTP 中用於識別資源。
+HTTP 請求的目標被稱為「資源」，其性質並未進一步定義；它可以是一個文件、一張照片或其他任何東西。每個資源都由統一資源標識符（{{Glossary("URI")}}）識別，該 URI 在整個 HTTP 中用於識別資源。
 
 ## URL 和 URN
 
@@ -19,7 +19,7 @@ https://developer.mozilla.org/zh-TW/docs/Learn/
 https://developer.mozilla.org/zh-TW/search?q=URL
 ```
 
-可以將任何一個 URLs 輸入到瀏覽器的地址欄中，以告訴它加載相關的網頁（資源）。
+可以將任何一個 URL 輸入到瀏覽器的地址欄中，以告訴它加載相關的網頁（資源）。
 
 URL 由不同的部分組成，一些是必需的，而其他是可選的。一個更複雜的例子可能如下所示：
 
@@ -53,19 +53,19 @@ urn:ietf:rfc:7230
 | data        | [Data URL](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)    |
 | file        | 特定主機的文件名                                             |
 | ftp         | {{Glossary("FTP","文件傳輸協定")}}                           |
-| http/https  | [超文本傳輸協議（安全）](/zh-TW/docs/Glossary/HTTP)          |
-| javascript  | URL 中嵌入的 JavaScript 代碼                                 |
+| http/https  | [超文字傳輸協定（安全）](/zh-TW/docs/Glossary/HTTP)          |
+| javascript  | URL 中嵌入的 JavaScript 程式碼                               |
 | mailto      | 電子郵件地址                                                 |
 | ssh         | 安全外殼                                                     |
 | tel         | 電話                                                         |
 | urn         | 統一資源名稱                                                 |
-| view-source | 資源的源代碼                                                 |
+| view-source | 資源的源程式碼                                               |
 | ws/wss      | [WebSocket 連接（安全）](/zh-TW/docs/Web/API/WebSockets_API) |
 
 ### 權威
 
 - ![域名](mdn-url-domain@x2.png)
-  - `www.example.com` 是管理命名空間的域名或授權方部分，它指示正在請求的 Web 服務器。或者，也可以直接使用 IP 地址，但由於不太方便，因此在 Web 上很少使用。
+  - `www.example.com` 是域名或管理命名空間的權威，它指示正在請求的 Web 服務器。或者，也可以直接使用 IP 位址，但由於不太方便，因此在 Web 上很少使用。
 
 ### 通訊埠
 
@@ -89,7 +89,7 @@ urn:ietf:rfc:7230
 
 ## 使用筆記
 
-在 {{Glossary("HTML")}} 內容中使用 URLs 時，通常只應該使用其中一些 URL 方案。當引用子資源（即作為較大文檔的一部分加載的文件）時，應僅使用 HTTP 和 HTTPS 方案。出於安全原因，越來越多的瀏覽器已經停用了使用 FTP 來加載子資源的支援。
+在 {{Glossary("HTML")}} 內容中使用 URL 時，通常只應該使用其中一些 URL 方案。當引用子資源（即作為較大文檔的一部分加載的文件）時，應僅使用 HTTP 和 HTTPS 方案。出於安全原因，越來越多的瀏覽器已經停用了使用 FTP 來加載子資源的支援。
 
 FTP 在頂層（例如直接輸入到瀏覽器的 URL 欄中，或作為鏈接的目標）仍然可以接受，但一些瀏覽器可能將 FTP 內容的加載委派給另一個應用程序。
 
