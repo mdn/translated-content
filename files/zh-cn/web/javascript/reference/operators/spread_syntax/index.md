@@ -223,6 +223,8 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)（Rest Parameters 也使用' `...` '）
+- [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)
+- [剩余属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#剩余属性)
+- {{jsxref("Function.prototype.apply()")}}

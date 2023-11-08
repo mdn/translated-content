@@ -251,6 +251,6 @@ switch (action) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
+- {{jsxref("Statements/if...else", "if...else")}}
