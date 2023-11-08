@@ -44,14 +44,15 @@ urn:ietf:rfc:7230
 ## 統一資源識別符的語法
 
 ### 方案或協定
+
 - ![協定](mdn-url-protocol@x2.png)
   - `http://` 是個協定（protocol），它指示瀏覽器應該使用哪種協定。通常情況下，這是 HTTP 協議或其安全版本 HTTPS。網頁需要使用這兩者之一，但瀏覽器也知道如何處理其他協定，比如 `mailto:`（用於打開郵件客戶端）或 `ftp:`（用於處理文件傳輸），所以如果你看到這些協定，也不要感到驚訝。一些常見的方案（scheme）包括：
 
 | 方案        | 描述                                                         |
 | ----------- | ------------------------------------------------------------ |
-| data        | [Data URL](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)   |
+| data        | [Data URL](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)    |
 | file        | 特定主機的文件名                                             |
-| ftp         | {{Glossary("FTP","文件傳輸協定")}}                 |
+| ftp         | {{Glossary("FTP","文件傳輸協定")}}                           |
 | http/https  | [超文本傳輸協議（安全）](/zh-TW/docs/Glossary/HTTP)          |
 | javascript  | URL 中嵌入的 JavaScript 代碼                                 |
 | mailto      | 電子郵件地址                                                 |
@@ -77,10 +78,12 @@ urn:ietf:rfc:7230
   - `/path/to/myfile.html` 是 Web 服務器上資源的路徑。在 Web 早期，這樣的路徑代表了 Web 服務器上的實際文件位置。如今，它主要是由 Web 服務器抽象的處理，並且沒有實際的物理存在。
 
 ### 查詢
+
 - ![參數](mdn-url-parameters@x2.png)
   - `?key1=value1&key2=value2` 是提供給 Web 服務器的額外參數。這些參數是一個由 `&` 符號分隔的鍵/值對列表。Web 服務器可以使用這些參數在將資源返回給用戶之前執行額外的操作。每個 Web 服務器都有自己的參數處理規則，了解特定 Web 服務器如何處理參數的唯一可靠方法是請教 Web 服務器的所有者。
 
 ### 片段
+
 - ![錨點](mdn-url-anchor@x2.png)
   - `#SomewhereInTheDocument` 是對資源本身的另一部分的錨點。錨點代表資源內的一種「書籤」，它告訴瀏覽器顯示位於該「書籤」位置的內容。例如，在 HTML 文件中，瀏覽器將滾動到定義錨點的位置；在視頻或音頻文件中，瀏覽器將嘗試跳轉到錨點代表的時間。值得注意的是，# 後面的部分，也稱為片段標識符，不會隨請求一起發送到服務器。
 
