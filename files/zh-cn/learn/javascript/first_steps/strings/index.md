@@ -76,7 +76,7 @@ console.log(double);
 console.log(backtick);
 ```
 
-字符串的开头和皆为必须使用相同的字符，否则会出现错误：
+字符串的开头和结尾必须使用相同的字符，否则会出现错误：
 
 ```js-nolint example-bad
 const badQuotes = '不允许这样写！";
