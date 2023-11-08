@@ -47,7 +47,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
 
-## 引用
+## 参考
 
 ### CSS 属性
 
