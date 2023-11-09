@@ -1,8 +1,7 @@
 ---
 title: Utiliser XMLHttpRequest
-slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-l10n:
-  sourceCommit: c3a0924949863b43957b4ba2ad5e64558165672d
+slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+original_slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
