@@ -44,7 +44,7 @@ WebAssembly 是一種有別於 JavaScript 的語言，但它并不是一種替�
 
 - 隨著 WebAssembly 出現在瀏覽器，我們稍早提及的虛擬機現在要加載並運行兩種程式碼—— Javascript 與 WebAssembly。
 
-按照需求，兩種不同形態的語言要可以彼此互相呼叫。[WebAssembly JavaScript API](/en-US/docs/WebAssembly/JavaScript_interface) 用 JavaScript 函式打包了輸出的 WebAssembly 程式碼，讓他可以被正常的呼叫。且 WebAssembly 可以被載入與同步的呼叫 JavaScript 函式。事實上，一個基本的 WebAssembly 單元被稱之爲模組，然後 WebAssembly 模組和 ES 模組在很多情況下是對稱的。
+按照需求，兩種不同形態的語言要可以彼此互相呼叫。[WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/JavaScript_interface) 用 JavaScript 函式打包了輸出的 WebAssembly 程式碼，讓他可以被正常的呼叫。且 WebAssembly 可以被載入與同步的呼叫 JavaScript 函式。事實上，一個基本的 WebAssembly 單元被稱之爲模組，然後 WebAssembly 模組和 ES 模組在很多情況下是對稱的。
 
 ### WebAssembly 關鍵觀念
 
