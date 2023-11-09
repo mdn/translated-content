@@ -31,7 +31,7 @@ WebAssembly 是在 [W3C WebAssembly Community Group](https://www.w3.org/communit
 Web 平臺可以被想成兩個部分：
 
 - 一個虛擬機（Virtual Machine，VM），運行著 Web 應用的程式碼，例如 JavaScript 程式碼，它可以大幅增强你的應用程式。
-- 一組 [Web APIs](/en-US/docs/Web/API) 讓 Web 可以呼叫來控制瀏覽器或設備的功能（[DOM](/en-US/docs/Web/API/Document_Object_Model)、[CSSOM](/en-US/docs/Web/API/CSS_Object_Model)、[WebGL](/en-US/docs/Web/API/WebGL_API)、[IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) 等）。
+- 一組 [Web APIs](/zh-TW/docs/Web/API) 讓 Web 可以呼叫來控制瀏覽器或設備的功能（[DOM](/zh-TW/docs/Web/API/Document_Object_Model)、[CSSOM](/zh-TW/docs/Web/API/CSS_Object_Model)、[WebGL](/zh-TW/docs/Web/API/WebGL_API)、[IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API), [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API) 等）。
 
 歷史上，那台虛擬機曾只被允許執行 JavaScript，這對我們而言已經可以良好運作并且能解決現在我們在 Web 上會遇到的大多數問題，但當使用 JavaScript 來進行高計算應用，例如 3D 游戲、物理引擎、電腦視覺、圖像編輯以及許多其他要求要在原生效能環境運行之領域應用，我們就會遇到效能問題。（參見 [WebAssembly use cases](https://webassembly.org/docs/use-cases/) 以獲得更多想法。）
 
