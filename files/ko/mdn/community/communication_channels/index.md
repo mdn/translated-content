@@ -21,7 +21,7 @@ MDN Web Docs 커뮤니티 Discord 공개 서버는 스태프와 커뮤니티 구
 
 불분명한 것을 질문하고, 확인받고, 어떻게 참여할 수 있는지 알아보세요. 관심사나 전문분야에 따라 채널을 골라 참여할 수도 있습니다.
 
-[여기서](https://discord.gg/apa6Rn7uEj) MDN Web Docs Discord 서버에 참여하세요.
+[여기서](/discord) MDN Web Docs Discord 서버에 참여하세요.
 
 ### Matrix 채팅방
 
