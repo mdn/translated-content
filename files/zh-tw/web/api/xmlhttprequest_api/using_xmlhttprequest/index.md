@@ -1,6 +1,7 @@
 ---
 title: 使用 XMLHttpRequest
-slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
+slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+original_slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 
 要送出一個 HTTP 請求，需要建立一個 {{domxref("XMLHttpRequest")}} 物件、開啟一個 URL，並發起一個請求。在交易（transaction）完成後，`XMLHttpRequest` 物件將會包含如回應內容（response body）及 [HTTP 狀態](/docs/Web/HTTP/Status)等等請求結果中的有用資訊。本頁概述了一些常見的、甚至略為難理解的 `XMLHttpRequest` 物件使用案例。
