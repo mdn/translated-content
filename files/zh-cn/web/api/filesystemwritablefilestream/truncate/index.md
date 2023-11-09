@@ -7,7 +7,7 @@ slug: Web/API/FileSystemWritableFileStream/truncate
 
 {{domxref("FileSystemWritableFileStream")}} 接口的 **`truncate()`** 方法用于将与流相关联的文件调整为指定字节大小。
 
-如果指定的大小大于文件当前的大小，文件会被用空字节补充。
+如果指定的大小大于文件当前的大小，文件会被用 `0x00` 字节补充。
 
 调用 `truncate()` 方法同时也会更新文件的指针。如果偏移小于大小，指针会保留原位。如果偏移大于大小，偏移会被设为相应的大小。这是为了确保随后的写入操作不会发生错误。
 
