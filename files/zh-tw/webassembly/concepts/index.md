@@ -104,7 +104,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 被生成的 HTML 文件會加載 JavaScript 膠水文件並將標準輸出寫入到一個 {{htmlelement("textarea")}}。如果應用程式是 OpenGL，那他也會包含一個 {{htmlelement("canvas")}} 元素來顯示畫面。修改 Emscripten 來修改輸出並將他改造成一個你需要的 Web 應用程式是很簡單的一件事。
 
-你可以找到完整的 Emscripten 文檔在 [emscripten.org](https://emscripten.org)，以及一個完整的指南來實作工具鏈以及編譯你自己的 C、C++ 應用程式成 Wasm，參見 [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_Wasm)。
+你可以找到完整的 Emscripten 文檔在 [emscripten.org](https://emscripten.org)，以及一個完整的指南來實作工具鏈以及編譯你自己的 C、C++ 應用程式成 Wasm，參見 [Compiling from C/C++ to WebAssembly](/zh-TW/docs/WebAssembly/C_to_Wasm)。
 
 ### 直接撰寫 WebAssembly
 
