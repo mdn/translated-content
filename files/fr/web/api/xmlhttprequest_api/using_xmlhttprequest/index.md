@@ -1,11 +1,11 @@
 ---
 title: Utiliser XMLHttpRequest
-slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
+slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 l10n:
-  sourceCommit: c3a0924949863b43957b4ba2ad5e64558165672d
+  sourceCommit: 2024a508694208f0316c484fb41e2c5823deae88
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 Dans ce guide, nous verrons comment utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) afin d'envoyer des requêtes [HTTP](/fr/docs/Web/HTTP) pour échanger des données entre le site web et un serveur.
 
@@ -173,72 +173,6 @@ function loadEnd(e) {
 
 Il n'y a pas de certitude possible quant à l'information reçue par l'évènement `loadend` pour déterminer la condition de l'arrêt. Toutefois, cet évènement permet de gérer les tâches nécessaires à la fin des transferts.
 
-## Soumettre des formulaires et envoyer des fichiers
-
-On peut utiliser `XMLHttpRequest` afin d'envoyer des formulaires de deux façons&nbsp;:
-
-- De façon autonome, sans autre API
-- Avec l'API [`FormData`](/fr/docs/Web/API/FormData)
-
-Utiliser l'API `FormData` sera souvent la solution la plus efficace, à l'inconvénient près que les données récupérées ne peuvent pas être transformées en chaînes de caractères avec [`JSON.stringify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify). L'utilisation d'XHR seul est plus compliquée, mais également plus flexible et plus puissante.
-
-### Utiliser uniquement `XMLHttpRequest`
-
-Lorsqu'on soumet des formulaires sans utiliser `FormData`, on pourra ne pas utiliser d'autres API dans la plupart des cas. Le seul contre-exemple porte sur le téléversement de fichiers, où il faudra utiliser l'API [`FileReader`](/fr/docs/Web/API/FileReader).
-
-#### Une rapide introduction aux méthodes d'envoi
-
-On peut soumettre un formulaire HTML ([`<form>`](/fr/docs/Web/HTML/Element/Form)) de quatre façons&nbsp;:
-
-- En utilisant la méthode `POST` et avec l'attribut `enctype` qui vaut `application/x-www-form-urlencoded` (le comportement par défaut)
-- En utilisant la méthode `POST` et avec l'attribut `enctype` qui vaut `text/plain`
-- En utilisant la méthode `POST` et avec l'attribut `enctype` qui vaut `multipart/form-data`
-- En utilisant la méthode `GET` (auquel cas, l'attribut `enctype` sera ignoré).
-
-Prenons comme un exemple un formulaire avec deux champs, intitulés `toto` et `machin`. Si on utilise la méthode `POST`, le serveur recevra une chaîne de caractères semblable aux trois qui suivent selon le type d'encodage utilisé&nbsp;:
-
-- Méthode&nbsp;: `POST`&nbsp;; Type d'encodage&nbsp;: `application/x-www-form-urlencoded` (default)&nbsp;:
-
-  ```plain
-  Content-Type: application/x-www-form-urlencoded
-
-  toto=truc&machin=La+premiere+ligne.%0D%0ALa+seconde+ligne.%0D%0A
-  ```
-
-- Méthode&nbsp;: `POST`&nbsp;; Type d'encodage&nbsp;: `text/plain`&nbsp;:
-
-  ```plain
-  Content-Type: text/plain
-
-  toto=truc
-  machin=La premiere ligne.
-  La seconde ligne.
-  ```
-
-- Méthode&nbsp;: `POST`&nbsp;; Type d'encodage&nbsp;: [`multipart/form-data`](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)&nbsp;:
-
-  ```plain
-  Content-Type: multipart/form-data; boundary=---------------------------314911788813839
-
-  -----------------------------314911788813839
-  Content-Disposition: form-data; name="toto"
-
-  truc
-  -----------------------------314911788813839
-  Content-Disposition: form-data; name="machin"
-
-  La premiere ligne.
-  La seconde ligne.
-
-  -----------------------------314911788813839--
-  ```
-
-En revanche, en utilisant la méthode `GET`, ce sera une chaîne de caractères comme celle-ci qui sera ajoutée à l'URL&nbsp;:
-
-```plain
-?toto=truc&machin=La%20premiere%20ligne.%0ALa%20seconde%20ligne.
-```
-
 ## Obtenir la date de dernière modification
 
 ```js
@@ -342,7 +276,6 @@ Si votre requête XHR se termine avec `status=0` et `statusText=null`, cela sign
 
 ## Voir aussi
 
-- [Introduction à AJAX](/fr/docs/Web/Guide/AJAX/Getting_Started)
 - [Utiliser l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API/Using_Fetch)
 - [Prise en charge de HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
 - [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/CORS)
