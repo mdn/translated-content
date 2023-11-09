@@ -1,7 +1,6 @@
 ---
 title: WebAssembly 的觀念
 slug: WebAssembly/Concepts
-page-type: guide
 ---
 
 {{WebAssemblySidebar}}
