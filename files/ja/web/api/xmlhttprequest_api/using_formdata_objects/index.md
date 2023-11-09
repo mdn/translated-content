@@ -1,8 +1,7 @@
 ---
 title: FormData オブジェクトの使用
-slug: Web/API/FormData/Using_FormData_Objects
-l10n:
-  sourceCommit: c88a329069328522a5c20c054f9dbced9967dbd4
+slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
+original_slug: Web/API/FormData/Using_FormData_Objects
 ---
 
 {{APIRef("XMLHttpRequest")}}

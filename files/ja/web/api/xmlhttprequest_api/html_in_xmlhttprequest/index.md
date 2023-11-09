@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest における HTML の扱い
-slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
+slug: Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
+original_slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
