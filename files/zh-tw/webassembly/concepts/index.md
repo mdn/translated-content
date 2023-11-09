@@ -69,6 +69,7 @@ JavaScript API 提供開發者一個創造模組、Memory、Table 與 Instance �
 前面我們談論了一些很原始的方法把 WebAssembly 加入 Web 平臺：一個二進制格式的程式碼，與加載和運行二進制程式碼的 API。現在我們來談論實務上該如何去做。
 
 WebAssembly 生態還處於萌芽階段，毫無疑問越來越多的工具會陸續推出。現在有四種主要的切入點：
+
 - 使用 [Emscripten](https://emscripten.org/) 來移植 C、C++ 程式碼。
 - 直接從組合語言階段來撰寫或生成 WebAssembly 程式碼。
 - 撰寫 Rust 應用程式并且選擇 WebAssembly 作爲輸出目標。
