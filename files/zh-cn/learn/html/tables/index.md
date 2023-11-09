@@ -17,9 +17,9 @@ slug: Learn/HTML/Tables
 
 ## 预备知识
 
-在你开始本模块之前，你应该已经掌握了关于 HTML 的基础知识，就是之前在[HTML 简介](/zh-CN/docs/learn/HTML/Introduction_to_HTML)中所述内容。如果你还没有看过那个模块（或者类似的），先去看看，然后再回来吧！
+在你开始本模块之前，你应该已经掌握了关于 HTML 的基础知识，就是之前在 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)中所述内容。如果你还没有看过那个模块（或者类似的），先去看看，然后再回来吧！
 
-> **备注：** 如果你正在一台你不能创建文件的设备上作业，那么你需要在在线编程工具上运行（大多数）代码示例，如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 等。
+> **备注：** 如果你正在一台你不能创建文件的设备上作业，那么你需要在在线编程工具上运行（大多数）代码示例，如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 等。
 
 ## 指南
 
