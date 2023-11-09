@@ -1,6 +1,6 @@
 ---
 title: 发送和接收二进制数据
-slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
+slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
 ---
 
 ## 使用 JavaScript 类型数组接受二进制数据
@@ -111,7 +111,7 @@ xhr.send(myArray);
 
 ## 提交表单和上传文件
 
-请阅读[此文](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)
+请阅读[此文](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)
 
 ## Firefox 私有方法
 

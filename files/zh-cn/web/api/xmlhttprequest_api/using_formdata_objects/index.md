@@ -1,6 +1,6 @@
 ---
 title: FormData 对象的使用
-slug: Web/API/FormData/Using_FormData_Objects
+slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
 ---
 
 FormData 对象用以将数据编译成键值对，以便用[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)来发送数据。其主要用于发送表单数据，但亦可用于发送带键数据 (keyed data)，而独立于表单使用。如果表单`enctype`属性设为 multipart/form-data，则会使用表单的{{domxref("HTMLFormElement.submit","submit()")}}方法来发送数据，从而，发送数据具有同样形式。
@@ -148,11 +148,11 @@ $.ajax({
 
 ## 不使用 FormData 对象，通过 AJAX 提交表单和上传文件
 
-如果你想知道不使用 FormData 对象的情况下，通过[AJAX](/zh-CN/docs/AJAX)序列化和提交表单 [请点击这里](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)。
+如果你想知道不使用 FormData 对象的情况下，如何序列化并通过 [AJAX](/zh-CN/docs/AJAX) 提交表单，[请点击这里](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)。
 
 ## 参见
 
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
 - [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)

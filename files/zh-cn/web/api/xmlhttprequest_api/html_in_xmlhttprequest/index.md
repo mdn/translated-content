@@ -1,13 +1,13 @@
 ---
 title: XMLHttpRequest 中的 HTML
-slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
+slug: Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
 
 W3C {{domxref("XMLHttpRequest")}} 规范为 {{domxref("XMLHttpRequest")}} 添加 [HTML](/zh-CN/docs/Web/HTML) 解析功能，此前它仅支持 {{Glossary("XML")}} 解析。该功能允许 Web 应用程序使用 `XMLHttpRequest` 获得已解析的 {{Glossary("DOM")}} 形式的 HTML 资源。
 
-要了解如何使用 `XMLHttpRequest`，请参阅[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
+要了解如何使用 `XMLHttpRequest`，请参阅[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)。
 
 ## 局限性
 
@@ -128,4 +128,4 @@ function detectHtmlInXhr(callback) {
 ## 参见
 
 - {{domxref("XMLHttpRequest")}}
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

@@ -1,6 +1,6 @@
 ---
 title: 使用 XMLHttpRequest
-slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
+slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -22,7 +22,7 @@ oReq.send();
 
 ## 请求类型
 
-通过 `XMLHttpRequest` 生成的请求可以有两种方式来获取数据，异步模式或同步模式。请求的类型是由这个 `XMLHttpRequest` 对象的 [open()](/zh-CN/docs/Web/API/XMLHttpRequest/open) 方法的第三个参数`async`的值决定的。如果该参数的值为 `false`，则该 `XMLHttpRequest`请求以同步模式进行，否则该过程将以异步模式完成。这两种类型请求的详细讨论和指南可以在[同步和异步请求](/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)页找到。
+通过 `XMLHttpRequest` 生成的请求可以有两种方式来获取数据，异步模式或同步模式。请求的类型是由这个 `XMLHttpRequest` 对象的 [open()](/zh-CN/docs/Web/API/XMLHttpRequest/open) 方法的第三个参数`async`的值决定的。如果该参数的值为 `false`，则该 `XMLHttpRequest`请求以同步模式进行，否则该过程将以异步模式完成。这两种类型请求的详细讨论和指南可以在[同步和异步请求](/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests)页找到。
 
 > **备注：** 由于对用户体验的负面影响，从 Gecko 30.0 版本开始，在主线程上的同步请求已经被弃用。
 
@@ -41,9 +41,9 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 3. 使用 [XMLSerializer](/zh-CN/docs/XMLSerializer) 把 DOM 树序列化成字符串或文件。
 4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
 
-> **备注：** 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
+> **备注：** 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
 
-> **备注：** `XMLHttpRequest` 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) 这篇文章了解相关用法。
+> **备注：** `XMLHttpRequest` 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 这篇文章了解相关用法。
 
 ### 解析和操作包含 HTML 文档的 responseText 属性
 
@@ -81,7 +81,7 @@ oReq.responseType = "arraybuffer";
 oReq.send();
 ```
 
-更多示例请参考 [发送和接收二进制数据](/zh-CN/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)。
+更多示例请参考 [发送和接收二进制数据](/zh-CN/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data)。
 
 ## 监测进度
 
@@ -272,7 +272,7 @@ foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
 |*|
 |*|  :: AJAX Form Submit Framework ::
 |*|
-|*|  https://developer.mozilla.org/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+|*|  https://developer.mozilla.org/zh-CN/docs/DOM/XMLHttpRequest_API/Using_XMLHttpRequest
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
 |*|  https://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -614,7 +614,7 @@ AJAXSubmit(myForm);
 
 ### 使用 FormData 对象
 
-{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 `XMLHttpRequest` 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 `submit()` 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data". FormData 对象可以被结合 `XMLHttpRequest` 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequests，请转到 [Using FormData Objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects) 页面。为了说教的目的，这里有一个早期的[例子](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#A_little_vanilla_framework)，被转译成了使用** `FormData` API** 的形式。注意以下代码片段：
+{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 `XMLHttpRequest` 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 `submit()` 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data"。FormData 对象可以被结合 `XMLHttpRequest` 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequest，请转到[使用 FormData 对象](/zh-CN/docs/DOM/XMLHttpRequest/XMLHttpRequest_API/Using_FormData_Objects)页面。为了说教的目的，这里有一个早期的[示例](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#一个小框架)，被转译成了使用 **`FormData` API** 的形式。注意以下代码片段：
 
 ```html
 <!doctype html>
@@ -904,7 +904,7 @@ oReq.send(null);
 
 ## 参见
 
-- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 - [HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
