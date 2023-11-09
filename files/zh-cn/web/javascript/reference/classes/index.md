@@ -413,7 +413,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 - {{jsxref("Statements/class", "类声明", "", "true")}}
 - {{jsxref("Operators/class", "类表达式", "", "true")}}
 - {{jsxref("Classes/Public_class_fields", "公有类字段", "", "true")}}
-- {{jsxref("Classes/Private_properties", "私有类字段", "", "true")}}
+- {{jsxref("Classes/Private_properties", "私有属性", "", "true")}}
 - {{jsxref("Operators/super", "super")}}
 - [Blog post: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
 - [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)
