@@ -1,8 +1,7 @@
 ---
 title: XMLHttpRequest の使用
-slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-l10n:
-  sourceCommit: a03b4b0e9aaac7409ff1ce974ab1bf2f40c81e03
+slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+original_slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}

@@ -1,8 +1,7 @@
 ---
 title: 同期と非同期のリクエスト
-slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
-l10n:
-  sourceCommit: 1f90ed7ba965030b921f831afda3362d14780a42
+slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
+original_slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
 
 {{domxref('XMLHttpRequest')}} は同期と非同期通信の両方に対応しています。しかし、一般的には性能上の理由により、同期リクエストより非同期リクエストを選択すべきです。
