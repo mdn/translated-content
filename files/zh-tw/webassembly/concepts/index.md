@@ -48,7 +48,7 @@ WebAssembly 是一種有別於 JavaScript 的語言，但它并不是一種替�
 
 ### WebAssembly 關鍵觀念
 
-要理解 WebAssembly 是如何在瀏覽器運作的，有很多重要觀念需要理解。所有觀念都可以一對一的對應到 [WebAssembly JavaScript API](/en-US/docs/WebAssembly/JavaScript_interface)。
+要理解 WebAssembly 是如何在瀏覽器運作的，有很多重要觀念需要理解。所有觀念都可以一對一的對應到 [WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/JavaScript_interface)。
 
 **模組（Module）**：代表一個已經被瀏覽器編譯成可執行機器碼的 WebAssembly 二進制檔案。模組是無狀態的，因此可以像 `Blob` 一樣，透過 `postMessage()` 方法明確地在視窗和工作線程間共享。一個模組就像 ES 模組一樣宣告輸入和輸出。
 
