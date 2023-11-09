@@ -40,7 +40,7 @@ reduce(callbackFn, initialValue)
       - : `reduce()` が呼び出された配列です。
 - `initialValue` {{optional_inline}}
   - : コールバックが最初に呼び出された時に `accumulator` が初期化される値です。
-    initialValue` が指定された場合、`callbackFn` は配列の最初の値を `currentValue` として実行を開始します。
+    `initialValue` が指定された場合、`callbackFn` は配列の最初の値を `currentValue` として実行を開始します。
     もし `initialValue` が指定されなかった場合、`accumulator` は配列の最初の値に初期化され、`callbackFn` は配列の 2 つ目の値を `currentValue` として実行を開始します。この場合、配列が空であれば（`accumulator`として返す最初の値がなければ）エラーが発生します。
 
 ### 返値
