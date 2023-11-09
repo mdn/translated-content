@@ -148,7 +148,7 @@ const regex2 = new RegExp("ab+c", "g");
 
 - `\$`、`\(`、`\)`、`\*`、`\+`、`\.`、`\/`、`\?`、`\[`、`\\`、`\]`、`\^`、`\{`、`\|`、`\}`：在任何地方都有效
 - `\-`：仅在[字符类](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)中有效
-- `\!`、`\#`、`\%`、`\&`、`\,`、`\:`、`\;`、`\<`、`\=`、`\>`、`\@`、`` \` ``、`\~`：仅在 [v-模式字符类]中有效(/zh-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_模式字符类)
+- `\!`、`\#`、`\%`、`\&`、`\,`、`\:`、`\;`、`\<`、`\=`、`\>`、`\@`、`` \` ``、`\~`：仅在 [v-模式字符类](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_模式字符类)中有效
 
 其他 {{Glossary("ASCII")}} 字符，即空格字符、`"`、`'`、`_` 和上述未提及的任何字母字符，都不是有效的转义序列。在 [Unicode 非感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_模式)下，不属于上述转义序列的转义序列成为*一致转义序列*（identity escapes）：它们代表反斜杠后的字符。例如，`\a` 表示字符 `a`。这种行为限制了在不引起向后兼容性问题的情况下引入新转义序列的能力，因此在 Unicode 感知模式下是禁止的。
 
