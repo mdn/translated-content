@@ -1,7 +1,6 @@
 ---
 title: MathML 标记
 slug: Learn/MathML/First_steps/Scripts
-page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
