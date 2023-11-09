@@ -55,7 +55,7 @@ Math.atan2(±Infinity, -Infinity); // ±3*PI/4.
 Math.atan2(±Infinity, +Infinity); // ±PI/4.
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

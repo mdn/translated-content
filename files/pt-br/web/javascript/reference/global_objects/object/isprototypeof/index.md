@@ -77,7 +77,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-## Specificações
+## Especificações
 
 {{Specifications}}
 

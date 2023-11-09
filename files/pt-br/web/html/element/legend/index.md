@@ -21,7 +21,7 @@ Esse elemento apenas inclui os [atributos globais](/pt-BR/docs/HTML/Global_attri
 
 Veja {{HTMLElement("form")}} para exemplos sobre `<legend>`.
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

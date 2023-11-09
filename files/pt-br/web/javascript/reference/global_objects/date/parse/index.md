@@ -131,7 +131,7 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 
 Returns `14400000` no matter the local time zone as a time zone GMT (UTC) is provided.
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

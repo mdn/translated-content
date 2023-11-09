@@ -30,7 +30,7 @@ Uma {{jsxref("Promise")}} **pendente** que vai ser **preenchida assíncronamente
 
 Para cada objeto no array retornado, existe uma string `status`. Se o status for `fulfilled`, então o campo `value` estará presente. Se o status for `rejected`, então o campo `reason` estará presente. O valor (value) ou o motivo da falha (reason) refletem o valor com que cada promessa foi completada (ou rejeitada).
 
-## Especificaçṍes
+## Especificações
 
 {{Specifications}}
 

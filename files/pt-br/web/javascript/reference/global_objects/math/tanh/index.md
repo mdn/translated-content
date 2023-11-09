@@ -54,7 +54,7 @@ Math.tanh =
   };
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

@@ -66,7 +66,7 @@ var myObj = new MyNumberType(4);
 myObj + 3; // 7
 ```
 
-## Espeficações
+## Especificações
 
 {{Specifications}}
 

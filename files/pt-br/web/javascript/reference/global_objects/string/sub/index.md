@@ -38,7 +38,7 @@ console.log("This is what a " + subText.sub() + " looks like.");
 // This is what a <sub>subscript</sub> looks like.
 ```
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

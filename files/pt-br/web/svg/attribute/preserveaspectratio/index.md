@@ -487,6 +487,6 @@ For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling
 | Default value | `xMidYMid` `meet`            |
 | Animatable    | Yes                          |
 
-## Specification
+## Especificações
 
 {{Specifications}}

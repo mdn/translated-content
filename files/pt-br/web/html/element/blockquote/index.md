@@ -39,7 +39,7 @@ O código HTML acima vai resultar em:
 
 > Esta é uma citação tirada da Mozilla Developer Center.
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

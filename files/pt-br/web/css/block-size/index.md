@@ -68,7 +68,7 @@ A propriedade `block-size` leva os mesmos valores que as propriedades {{cssxref(
 
 {{EmbedLiveSample("Example")}}
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

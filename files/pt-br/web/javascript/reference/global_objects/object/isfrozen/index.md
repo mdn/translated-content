@@ -130,7 +130,7 @@ Object.isFrozen(1);
 // true                          (ES2015 code)
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

@@ -162,7 +162,7 @@ console.log(x, z); // 3 5
 console.log(typeof y); // indefinido já que y é uma variável local da função a
 ```
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

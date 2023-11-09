@@ -170,7 +170,7 @@ if (!Array.prototype.forEach) {
 
 {{Compat("javascript.builtins.Array.forEach")}}
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

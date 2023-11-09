@@ -34,7 +34,7 @@ unescape("%E4%F6%FC"); // "äöü"
 unescape("%u0107"); // "ć"
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

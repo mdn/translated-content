@@ -55,7 +55,7 @@ console.log(myString.length);
 // retorna 10
 ```
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

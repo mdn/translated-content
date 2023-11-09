@@ -80,7 +80,7 @@ for (var prop in obj) {
 // "obj.color = red"
 ```
 
-## Specificações
+## Especificações
 
 {{Specifications}}
 

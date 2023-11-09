@@ -64,7 +64,7 @@ Basic rendering of a PNG image in SVG:
 
 {{EmbedLiveSample("Example", 250, 260)}}
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

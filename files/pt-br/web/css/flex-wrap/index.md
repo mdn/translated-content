@@ -120,7 +120,7 @@ Os seguintes valores são aceitos :
 
 {{ EmbedLiveSample('Setting_flex_container_wrap_values', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

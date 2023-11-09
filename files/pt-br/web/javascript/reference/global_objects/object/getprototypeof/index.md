@@ -37,7 +37,7 @@ Object.getPrototypeOf("foo");
 // String.prototype                  (código ES6)
 ```
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

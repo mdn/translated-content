@@ -211,7 +211,7 @@ An assignment operator assigns a value to its left operand based on the value of
 - {{non-standard_inline}} {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}}
   - : The expression closure syntax is a shorthand for writing simple function.
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

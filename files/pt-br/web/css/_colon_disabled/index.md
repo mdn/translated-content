@@ -81,7 +81,7 @@ function toggleBilling() {
 
 {{EmbedLiveSample('Example', 300, 250)}}
 
-## Expecificações
+## Especificações
 
 {{Specifications}}
 

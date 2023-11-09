@@ -160,7 +160,7 @@ try {
 }
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

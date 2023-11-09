@@ -175,7 +175,7 @@ Array.from({ length: 5 }, (v, k) => k);
 // [0, 1, 2, 3, 4]
 ```
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

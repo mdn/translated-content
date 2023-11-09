@@ -55,7 +55,7 @@ The `options` argument must be an object with properties that vary between const
 
 One property is supported by all language sensitive constructors and functions: The `localeMatcher` property, whose value must be a string `"lookup"` or `"best fit"` and which selects one of the locale matching algorithms described above.
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

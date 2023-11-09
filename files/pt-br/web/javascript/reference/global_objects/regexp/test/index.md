@@ -55,7 +55,7 @@ function testinput(re, str) {
 }
 ```
 
-## Specificações
+## Especificações
 
 {{Specifications}}
 

@@ -84,7 +84,7 @@ h.onchange = h.oninput = function () {
 
 {{ EmbedLiveSample('_Exemplo', '300px', '400px') }}
 
-## Specificações
+## Especificações
 
 {{Specifications}}
 

@@ -224,7 +224,7 @@ I am a readonly textarea</textarea
   </tbody>
 </table>
 
-## Especificacões
+## Especificações
 
 {{Specifications}}
 

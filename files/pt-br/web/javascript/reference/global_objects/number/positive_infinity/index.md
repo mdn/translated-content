@@ -43,7 +43,7 @@ if (bigNumber == Number.POSITIVE_INFINITY) {
 }
 ```
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

@@ -75,7 +75,7 @@ If the {{SVGAttr("calcMode")}} attribute is set to `paced`, the `keyTimes` attri
 
 If the duration of the animation is indefinite, any `keyTimes` specification will be ignored.
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

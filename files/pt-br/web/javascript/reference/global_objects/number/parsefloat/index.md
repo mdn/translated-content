@@ -35,7 +35,7 @@ Number.parseFloat === parseFloat; // true
 
 Por favor veja {{jsxref("parseFloat", "parseFloat()")}} para mais detalhes e exemplos.
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

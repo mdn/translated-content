@@ -78,7 +78,7 @@ _xScrollWidth_ é a largura do conteúdo do _elemento_ em pixels.
 </html>
 ```
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

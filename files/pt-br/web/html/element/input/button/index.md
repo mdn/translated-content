@@ -331,7 +331,7 @@ draw();
 
 {{EmbedLiveSample("Examples", '100%', 600)}}
 
-## Específicações
+## Especificações
 
 {{Specifications}}
 

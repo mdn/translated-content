@@ -72,7 +72,7 @@ svg {
 
 {{svginfo}}
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

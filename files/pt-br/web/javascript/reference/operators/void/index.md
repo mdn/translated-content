@@ -52,7 +52,7 @@ Quando o navegador segue uma URI `javascript`, ele avalia o código na URI e ent
 
 Note que no entanto o pseudo protocolo `javascript:` tem seu uso desencorajado perante outras alternativas como _unobtrusive event handlers_.
 
-## Specificações
+## Especificações
 
 {{Specifications}}
 

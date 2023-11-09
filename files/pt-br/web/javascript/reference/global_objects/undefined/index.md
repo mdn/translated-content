@@ -100,7 +100,7 @@ if (y === void 0) {
 }
 ```
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

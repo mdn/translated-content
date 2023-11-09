@@ -97,7 +97,7 @@ obj.foo = "baz"; // run the setter
 console.log(obj.baz); // "baz"
 ```
 
-## Expecificações
+## Especificações
 
 {{Specifications}}
 

@@ -114,7 +114,7 @@ A `media` element cannot have more than one `track` with the same `kind`, `srcla
 </video>
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

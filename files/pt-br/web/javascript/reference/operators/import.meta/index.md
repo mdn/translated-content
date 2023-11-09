@@ -68,7 +68,7 @@ Note que enquanto o Node.js vai passar nos parâmetros query (ou na cerquilha) c
 
 Nesse arquivo específico, o argumento passado pode ser complementar para ser usado na ampla aplicação `location.href` (com strings query ou cerquilha adicionada depois do caminho de arquivo HTML) (ou por Node.js, através do `process.argv`).
 
-## Especifícações
+## Especificações
 
 {{Specifications}}
 

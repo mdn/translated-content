@@ -83,7 +83,7 @@ There is a more usage oriented way to think of `isNaN()`: If `isNaN(x)` returns 
 
 You can use this, for example, to test whether an argument to a function is arithmetically processable (usable "like" a number), or if it's not and you have to provide a default value or something else. This way you can have a function that makes use of the full versatility JavaScript provides by implicitly converting values depending on context.
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

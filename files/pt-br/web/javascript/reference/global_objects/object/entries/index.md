@@ -83,7 +83,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 Para incluir suporte ao `Object.entries` em ambientes mais antigos, você pode achar um Polyfill nos repositórios: [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) e [es-shims/Object.entries](https://github.com/es-shims/Object.entries).
 
-## Especificaçōes
+## Especificações
 
 {{Specifications}}
 

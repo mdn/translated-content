@@ -43,7 +43,7 @@ Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}
 
 Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations) para exemplos.
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

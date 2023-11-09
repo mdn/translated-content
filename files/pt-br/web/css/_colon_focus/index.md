@@ -38,7 +38,7 @@ elemento:focus { ... }
 
 {{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/:focus') }}
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

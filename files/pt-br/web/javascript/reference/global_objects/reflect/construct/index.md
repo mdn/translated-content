@@ -112,7 +112,7 @@ d instanceof Date; // true
 d.getFullYear(); // 1776
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

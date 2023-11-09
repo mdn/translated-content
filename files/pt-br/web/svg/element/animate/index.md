@@ -69,7 +69,7 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 - [MDN Understanding WCAG, Guideline 2.2 explanations](/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
 - [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

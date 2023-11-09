@@ -15,7 +15,7 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) CSS `:only-of-type` repres
 :only-of-type { propriedades}
 ```
 
-## Especifcações
+## Especificações
 
 {{Specifications}}
 

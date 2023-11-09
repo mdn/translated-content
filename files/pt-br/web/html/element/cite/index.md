@@ -77,7 +77,7 @@ A saída do HTML acima:
 
 Mais informações podem ser encontradas em \[ISO-0000].
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 

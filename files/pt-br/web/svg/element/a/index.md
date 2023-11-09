@@ -112,7 +112,7 @@ svg|a:active {
 
 {{svginfo}}
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 

@@ -32,7 +32,7 @@ var seconds = Xmas95.getSeconds();
 console.log(seconds); // 30
 ```
 
-## Espeficicações
+## Especificações
 
 {{Specifications}}
 

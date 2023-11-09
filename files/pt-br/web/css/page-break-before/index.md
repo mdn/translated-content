@@ -75,7 +75,7 @@ div.note {
 }
 ```
 
-## Specification
+## Especificações
 
 {{Specifications}}
 

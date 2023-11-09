@@ -168,7 +168,7 @@ Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte 
 
 ![](writing-mode-actual-result.png)
 
-## Especificação
+## Especificações
 
 {{Specifications}}
 
