@@ -50,11 +50,9 @@ Math.expm1(0); // 0
 Math.expm1(1); // 1.718281828459045
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

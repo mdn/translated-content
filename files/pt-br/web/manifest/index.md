@@ -336,12 +336,6 @@ In Chrome 47 and later, a splash screen is displayed for a web application launc
 
 Manifests should be served using the `application/manifest+json` MIME type. However, it is optional to do so.
 
-## Especificação
-
-| Especificação            | Status                | Comentário         |
-| ------------------------ | --------------------- | ------------------ |
-| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Definição inicial. |
-
 ## Compatibilidade com navegadores
 
 {{Compat}}
