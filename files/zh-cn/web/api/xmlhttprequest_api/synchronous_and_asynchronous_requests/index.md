@@ -1,7 +1,6 @@
 ---
 title: 同步和异步请求
 slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
-original_slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
 
 `XMLHttpRequest` 支持同步和异步通信。但是，一般来说，出于性能原因，异步请求应优先于同步请求。
@@ -12,7 +11,7 @@ original_slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 
 如果你使用`XMLHttpRequest`发送异步请求，那么当请求的响应数据完全收到之时，会执行一个指定的回调函数，而在执行异步请求的同时，浏览器会正常地执行其他事务的处理。
 
-### 例子：在控制台输出页面源文件
+### 示例：在控制台输出页面源文件
 
 这个例子演示了如何进行一个简单的异步请求。
 
@@ -40,7 +39,7 @@ xhr.send(null);
 
 第 15 行实际上启动了请求。只要请求的状态发生变化，就会调用回调程序。
 
-### 例子：创建一个标准的方法来读取外部文件
+### 示例：创建一个标准的方法来读取外部文件
 
 在一些需求情况下，必须读取多个外部文件。这是一个标准的函数。该函数使用 `XMLHttpRequest` 对象进行异步请求。而且可以为每个文件读取完成后指定不同的回调函数。
 
@@ -88,7 +87,7 @@ loadFile("message.txt", showMessage, "New message!\n\n");
 
 第 16 行实际启动请求。
 
-### 例子：使用超时
+### 示例：使用超时
 
 你可以使用一个超时设置，来避免你的代码为了等候读取请求的返回数据长时间执行。超时毫秒数可以通过为 `XMLHttpRequest` 对象的 `timeout` 属性赋值来指定：
 
@@ -138,7 +137,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 同步 XHR 不允许所有新的 XHR 功能（如 `timeout` 或 `abort`）。这样做会调用 `InvalidAccessError`。
 
-### 例子：HTTP 同步请求
+### 示例：HTTP 同步请求
 
 这个例子演示了如何进行一个简单的同步请求。
 
@@ -157,7 +156,7 @@ if (request.status === 200) {
 
 第四行为请求结束之后，检查请求状态码。如果状态码为 200，表示该请求成功，请求到的页面源文件会输出到控制台上。
 
-### 例子：在 `Worker` 中使用 HTTP 同步请求
+### 示例：在 `Worker` 中使用 HTTP 同步请求
 
 在 [`Worker`](/zh-CN/DOM/Worker) 中使用 `XMLHttpRequest` 时，同步请求比异步请求更适合。
 
@@ -237,6 +236,6 @@ function logData() {
 ## 参见
 
 - [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)
-- [Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [AJAX](/zh-CN/docs/AJAX)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [AJAX](/zh-CN/docs/Web/Guide/AJAX)
 - [`navigator.sendBeacon`](/zh-CN/docs/Web/API/Navigator/sendBeacon)
