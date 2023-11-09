@@ -9,11 +9,11 @@ l10n:
 
 **正则表达式**（简称 _regex_）允许开发人员根据模式匹配字符串、提取子匹配信息，或简单地测试字符串是否符合该模式。正则表达式在许多编程语言中都有使用，JavaScript 的语法受 [Perl](https://www.perl.org/) 的启发。
 
-我们建议你阅读[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)，以全面了解可用的 regex 语法及其工作原理。
+我们建议你阅读[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)，以全面了解可用的正则表达式语法及其工作原理。
 
 ## 描述
 
-[正则表达式](https://zh.wikipedia.org/wiki/正则表达式)是形式语言理论中的一个重要概念。正则表达式是一种描述可能是无限的字符串集合（称为*语言*）的方法。正则表达式的核心需要具备以下特征：
+[_正则表达式_](https://zh.wikipedia.org/wiki/正则表达式)是形式语言理论中的一个重要概念。正则表达式是一种描述可能是无限的字符串集合（称为*语言*）的方法。正则表达式的核心需要具备以下特征：
 
 - 可在语言中使用的一系列*字符*，称为*字母表*。
 - _连接_：`ab` 表示“字符 `a` 后跟字符 `b`”。
@@ -38,7 +38,7 @@ const regex1 = /ab+c/g;
 const regex2 = new RegExp("ab+c", "g");
 ```
 
-它们在运行时没有区别，但可能会对性能、静态分析性和编写转义字符时的人机工程学问题产生影响。有关详细信息，请参阅 [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#字面量和构造函数) 参考资料。
+它们在运行时没有区别，但可能会对性能、静态分析性和编写转义字符时的人体工程学问题产生影响。有关详细信息，请参阅 [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#字面量和构造函数) 参考资料。
 
 ### 正则表达式标志
 
@@ -55,7 +55,7 @@ const regex2 = new RegExp("ab+c", "g");
 | `v`  | 升级 `u` 模式，提供更多 Unicode 码特性。                   | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
 | `y`  | 执行“粘性（sticky）”搜索，从目标字符串的当前位置开始匹配。 | {{jsxref("RegExp/sticky", "sticky")}}           |
 
-下面各节按语法性质列出了所有可用的 regex 语法。
+下面各节按语法性质列出了所有可用的正则表达式语法。
 
 ### 断言
 
@@ -101,7 +101,7 @@ const regex2 = new RegExp("ab+c", "g");
 
 这些特征本身不指定任何模式，但用于组成模式。
 
-- [析取符（逻辑或）：`|`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
+- [析取（逻辑或）：`|`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
   - : 匹配由 `|` 字符分隔的一组备选字符中的任意一个。
 - [量词：`*`、`+`、`?`、`{n}`、`{n,}`、`{n,m}`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
   - : 匹配原子序列一定次数。
@@ -150,7 +150,7 @@ const regex2 = new RegExp("ab+c", "g");
 - `\-`：仅在[字符类](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)中有效
 - `\!`、`\#`、`\%`、`\&`、`\,`、`\:`、`\;`、`\<`、`\=`、`\>`、`\@`、`` \` ``、`\~`：仅在 [v-模式字符类](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_模式字符类)中有效
 
-其他 {{Glossary("ASCII")}} 字符，即空格字符、`"`、`'`、`_` 和上述未提及的任何字母字符，都不是有效的转义序列。在 [Unicode 非感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_模式)下，不属于上述转义序列的转义序列成为*一致转义序列*（identity escapes）：它们代表反斜杠后的字符。例如，`\a` 表示字符 `a`。这种行为限制了在不引起向后兼容性问题的情况下引入新转义序列的能力，因此在 Unicode 感知模式下是禁止的。
+其他 {{Glossary("ASCII")}} 字符，即空格字符、`"`、`'`、`_` 和上述未提及的任何字母字符，都不是有效的转义序列。在 [Unicode 非感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_模式)下，不属于上述转义序列的转义序列称为*一致转义序列*（identity escape）：它们代表反斜杠后的字符。例如，`\a` 表示字符 `a`。这种行为限制了在不引起向后兼容性问题的情况下引入新转义序列的能力，因此在 Unicode 感知模式下是禁止的。
 
 ## 规范
 
