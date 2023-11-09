@@ -43,17 +43,6 @@ console.log(p.a, p.b); // 1, 42
 - 不变式
   - : 实现自定义操作时保持不变的语义称为*不变式*。如果你破坏了处理器的不变式，则会引发 {{jsxref("TypeError")}} 异常。
 
-以及一些有关属性的术语：
-
-| 术语                                                             | 描述                                                 |
-| ---------------------------------------------------------------- | ---------------------------------------------------- |
-| {{jsxref("Object.defineProperty", "可扩展性", "", 0)}}           | 是否可以添加新的属性。                               |
-| {{jsxref("Object.defineProperty", "可配置性", "", 0)}}           | 是否可以删除或修改属性。                             |
-| {{jsxref("Object.defineProperty", "可写性", "", 0)}}             | 是否可以修改属性的值。                               |
-| {{jsxref("Object.defineProperty", "数据属性", "", 0)}}           | 具有可写或不可写值的属性。                           |
-| {{jsxref("Object.defineProperty", "访问器属性", "", 0)}}         | 具有 getter/setter 函数对的属性。                    |
-| {{jsxref("Object.getOwnPropertyDescriptor", "自有属性", "", 0)}} | 直接在对象上定义的属性，而不是从原型链上继承的属性。 |
-
 ## 处理器和陷阱
 
 以下表格中总结了 `Proxy` 对象可用的陷阱。详细的解释和例子请看{{jsxref("Proxy/Proxy", "参考页", "", 1)}}。
@@ -369,7 +358,7 @@ console.log(p.a, p.b); // 1, 42
         <code>new proxy(...args)</code
         ><br />{{jsxref("Reflect.construct()")}}
       </td>
-      <td>返回值必须是一个<code>Object</code>.</td>
+      <td>返回值必须是一个 <code>Object</code>。</td>
     </tr>
   </tbody>
 </table>
@@ -394,9 +383,9 @@ console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();
 
-console.log(proxy.foo); // TypeError：无法在一个已撤销的代理上执行 `get`
-proxy.foo = 1; // TypeError：无法在一个已撤销的代理上执行 `set`
-delete proxy.foo; // TypeError：无法在一个已撤销的代理上执行 `deleteProperty`
+console.log(proxy.foo); // TypeError: Cannot perform 'get' on a proxy that has been revoked
+proxy.foo = 1; // TypeError: Cannot perform 'set' on a proxy that has been revoked
+delete proxy.foo; // TypeError: Cannot perform 'deleteProperty' on a proxy that has been revoked
 console.log(typeof proxy); // "object", `typeof` 不会触发任何陷阱
 ```
 
