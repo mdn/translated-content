@@ -116,7 +116,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 ### 撰寫 Rust 指定目標 WebAssembly
 
-也有可能可以撰寫 Rust 的程式碼然後編譯成 WebAssembly，感謝 Rust Assembly 的工作團隊不懈的努力，你可以開始安裝必要工具鏈，編譯一個範例 Rust 程式成 WebAssembly 的 npm 包，然後在範例 Web 應用中使用它，參見 [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Rust_to_Wasm)。
+也有可能可以撰寫 Rust 的程式碼然後編譯成 WebAssembly，感謝 Rust Assembly 的工作團隊不懈的努力，你可以開始安裝必要工具鏈，編譯一個範例 Rust 程式成 WebAssembly 的 npm 包，然後在範例 Web 應用中使用它，參見 [Compiling from Rust to WebAssembly](/zh-TW/docs/WebAssembly/Rust_to_Wasm)。
 
 ### 使用 AssemblyScript
 
