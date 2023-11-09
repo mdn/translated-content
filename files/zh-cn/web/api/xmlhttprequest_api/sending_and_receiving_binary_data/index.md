@@ -1,6 +1,7 @@
 ---
 title: 发送和接收二进制数据
-slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
+slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
+original_slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
 
 ## 使用 JavaScript 类型数组接受二进制数据

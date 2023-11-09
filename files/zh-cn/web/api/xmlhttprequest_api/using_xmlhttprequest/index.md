@@ -1,6 +1,7 @@
 ---
 title: 使用 XMLHttpRequest
-slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
+slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+original_slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}

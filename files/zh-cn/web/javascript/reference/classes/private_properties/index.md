@@ -1,6 +1,7 @@
 ---
 title: 类私有域
-slug: Web/JavaScript/Reference/Classes/Private_class_fields
+slug: Web/JavaScript/Reference/Classes/Private_properties
+original_slug: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
 
 {{JsSidebar("Classes")}}

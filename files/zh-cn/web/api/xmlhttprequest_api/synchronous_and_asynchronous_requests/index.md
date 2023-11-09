@@ -1,6 +1,7 @@
 ---
 title: 同步和异步请求
-slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
+slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
+original_slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
 
 `XMLHttpRequest` 支持同步和异步通信。但是，一般来说，出于性能原因，异步请求应优先于同步请求。

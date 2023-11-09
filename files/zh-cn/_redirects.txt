@@ -300,10 +300,10 @@
 /zh-CN/docs/DOM/XMLDocument	/zh-CN/docs/Web/API/XMLDocument
 /zh-CN/docs/DOM/XMLHttpRequest	/zh-CN/docs/Web/API/XMLHttpRequest
 /zh-CN/docs/DOM/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
-/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects	/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
-/zh-CN/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data	/zh-CN/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
-/zh-CN/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
-/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest	/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
+/zh-CN/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data	/zh-CN/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
+/zh-CN/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
+/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /zh-CN/docs/DOM/console.dir	/zh-CN/docs/Web/API/console/dir
 /zh-CN/docs/DOM/console.group	/zh-CN/docs/Web/API/console/group
 /zh-CN/docs/DOM/console.groupCollapsed	/zh-CN/docs/Web/API/console/groupCollapsed
@@ -1490,6 +1490,7 @@
 /zh-CN/docs/Web/API/FileReader/中止事件(abort)	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/File_Handle_API	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
 /zh-CN/docs/Web/API/File_System_Access_API	/zh-CN/docs/Web/API/File_System_API
+/zh-CN/docs/Web/API/FormData/Using_FormData_Objects	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /zh-CN/docs/Web/API/FormData/删除	/zh-CN/docs/Web/API/FormData/delete
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide
 /zh-CN/docs/Web/API/Geolocation/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
@@ -1903,7 +1904,11 @@
 /zh-CN/docs/Web/API/XMLDocument/async	/zh-CN/docs/Web/API/XMLDocument
 /zh-CN/docs/Web/API/XMLDocument/load	/zh-CN/docs/Web/API/XMLDocument
 /zh-CN/docs/Web/API/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
-/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest	/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
+/zh-CN/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data	/zh-CN/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
+/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
+/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /zh-CN/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-CN/docs/Web/API/XMLHttpRequest/readystatechange_event
 /zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onabort	/zh-CN/docs/Web/API/XMLHttpRequest/abort_event
 /zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onerror	/zh-CN/docs/Web/API/XMLHttpRequest/error_event
@@ -2307,7 +2312,7 @@
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
 /zh-CN/docs/Web/Guide/Performance/Using_web_workers	/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers
-/zh-CN/docs/Web/Guide/Using_FormData_Objects	/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
+/zh-CN/docs/Web/Guide/Using_FormData_Objects	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /zh-CN/docs/Web/HTML/Applying_color	/zh-CN/docs/Web/CSS/CSS_colors/Applying_color
 /zh-CN/docs/Web/HTML/Attributes/自动完成属性	/zh-CN/docs/Web/HTML/Attributes/autocomplete
 /zh-CN/docs/Web/HTML/Block-level_elements	/zh-CN/docs/Glossary/Block-level_content
@@ -2440,6 +2445,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/Web/JavaScript/Reference/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/Web/JavaScript/Reference/Classes/Class_elements	/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties
 /zh-CN/docs/Web/JavaScript/Reference/Comments	/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /zh-CN/docs/Web/JavaScript/Reference/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
 /zh-CN/docs/Web/JavaScript/Reference/Date/getDate	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate
