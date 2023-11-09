@@ -98,7 +98,7 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.bufferData")}}
+{{Compat}}
 
 ## 関連項目
 

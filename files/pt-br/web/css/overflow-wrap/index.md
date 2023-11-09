@@ -53,7 +53,7 @@ FStrPrivFinÄndG (Gesetz zur Änderung des Fernstraßenbauprivatfinanzierungsges
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.overflow-wrap")}}
+{{Compat}}
 
 ## Veja também
 

@@ -137,7 +137,7 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.operators.property_accessors")}}
+{{Compat}}
 
 ## 関連情報
 

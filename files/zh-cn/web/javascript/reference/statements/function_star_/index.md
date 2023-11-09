@@ -178,20 +178,21 @@ arr = [...gen]; // ["a", "b", "c", "d", "e"]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}} object
-- [迭代器协议](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
+- [迭代器与生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)指南
+- [Function](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("GeneratorFunction")}}
+- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
+- [迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function declaration")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
-- 其他网络资源：
-
-  - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
-  - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)
-  - [Task.js](http://taskjs.org/)
+- {{jsxref("Generator")}}
+- GitHub 上的 [Regenerator](https://github.com/facebook/regenerator)
+- [Promise 和生成器：控制流的乌托邦](https://youtu.be/qbKWsbJ76-s)——Forbes Lindesay 在 JSConf 上的演讲（2013）
+- GitHub 上的 [Task.js](https://github.com/mozilla/task.js)
+- [你不知道的 JS：异步和性能，第 4 章：生成器](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md)——Kyle Simpson

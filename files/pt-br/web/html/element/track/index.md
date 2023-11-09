@@ -120,7 +120,7 @@ A `media` element cannot have more than one `track` with the same `kind`, `srcla
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.track")}}
+{{Compat}}
 
 ## See also
 

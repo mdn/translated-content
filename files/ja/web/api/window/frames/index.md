@@ -34,4 +34,4 @@ for (var i = 0; i < frames.length; i++) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.frames")}}
+{{Compat}}

@@ -45,7 +45,7 @@ O código HTML acima vai resultar em:
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.blockquote")}}
+{{Compat}}
 
 ## Veja também
 

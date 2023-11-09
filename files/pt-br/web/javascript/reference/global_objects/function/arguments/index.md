@@ -49,7 +49,7 @@ Não faz parte de nenhuma especificação.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.arguments")}}
+{{Compat}}
 
 ## Veja também
 

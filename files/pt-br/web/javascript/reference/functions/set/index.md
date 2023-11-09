@@ -103,7 +103,7 @@ console.log(obj.baz); // "baz"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions.set")}}
+{{Compat}}
 
 ## SpiderMonkey-specific notes
 

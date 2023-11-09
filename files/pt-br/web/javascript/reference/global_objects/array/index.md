@@ -437,7 +437,7 @@ Saída:
 
 ## Compatibilidade com os navegadores
 
-{{Compat("javascript.builtins.Array")}}
+{{Compat}}
 
 ## Ver também
 

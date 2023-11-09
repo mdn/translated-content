@@ -134,7 +134,7 @@ text-shadow: unset;
 
 ## Compatibilidade do navegador
 
-{{Compat("css.properties.text-shadow")}}
+{{Compat}}
 
 ## Veja também
 

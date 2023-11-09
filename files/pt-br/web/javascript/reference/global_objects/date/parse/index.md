@@ -137,7 +137,7 @@ Returns `14400000` no matter the local time zone as a time zone GMT (UTC) is pro
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.parse")}}
+{{Compat}}
 
 ## See also
 

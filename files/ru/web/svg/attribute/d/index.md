@@ -527,8 +527,4 @@ svg {
 
 ## Specification
 
-| Specification                                                    | Status              | Comment                                                |
-| ---------------------------------------------------------------- | ------------------- | ------------------------------------------------------ |
-| {{SpecName("SVG2", "paths.html#DProperty", "d")}}                | {{Spec2("SVG2")}}   | Definition for `<path>`                                |
-| {{SpecName("SVG1.1", "fonts.html#GlyphElementDAttribute", "d")}} | {{Spec2("SVG1.1")}} | Initial definition for `<glyph>` and `<missing-glyph>` |
-| {{SpecName("SVG1.1", "paths.html#DAttribute", "d")}}             | {{Spec2("SVG1.1")}} | Initial definition for `<path>`                        |
+{{Specifications}}

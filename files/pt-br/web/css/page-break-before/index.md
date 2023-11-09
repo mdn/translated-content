@@ -81,7 +81,7 @@ div.note {
 
 ## Browser compatibility
 
-{{Compat("css.properties.page-break-before")}}
+{{Compat}}
 
 ## See also
 

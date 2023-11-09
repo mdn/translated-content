@@ -41,7 +41,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Navegadores Compatíveis
 
-{{Compat("html.elements.base")}}
+{{Compat}}
 
 ## Notas
 

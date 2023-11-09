@@ -58,7 +58,7 @@ Note que no entanto o pseudo protocolo `javascript:` tem seu uso desencorajado p
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.void")}}
+{{Compat}}
 
 ## Veja também
 

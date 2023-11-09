@@ -85,7 +85,7 @@ Moderno, HTML5-compatível browsers automaticamente constrói um elemento `<head
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## See also
 

@@ -44,7 +44,7 @@ slug: Web/CSS/display-listitem
 
 ### `list-item` の対応
 
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}
 
 ## 関連情報
 

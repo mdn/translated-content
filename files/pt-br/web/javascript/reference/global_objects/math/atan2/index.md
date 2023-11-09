@@ -61,7 +61,7 @@ Math.atan2(±Infinity, +Infinity); // ±PI/4.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.atan2")}}
+{{Compat}}
 
 ## Veja também
 

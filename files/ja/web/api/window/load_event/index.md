@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.load_event")}}
+{{Compat}}
 
 ## 関連情報
 

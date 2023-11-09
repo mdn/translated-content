@@ -35,4 +35,4 @@ CSS (Cascading Style Sheets) 는 콘텐츠의 글꼴, 색상, 크기 및 간격�
 ## 참고 항목
 
 - [중급자 웹 활용 능력 1: CSS 소개](https://teach.mozilla.org/activities/intermediate-web-lit/)
-  - _: CSS 소개_ 모듈에서 이야기 한 많은 기술을 탐구하고 테스트하는 훌륭한 모질라 기초 과정입니다. 웹 페이지, CSS 선택자, 속성 및 값의 HTML 요소 스타일 지정에 대해 학습합니다.
+  - _: CSS 소개_ 모듈에서 이야기 한 많은 기술을 탐구하고 테스트하는 훌륭한 Mozilla 기초 과정입니다. 웹 페이지, CSS 선택자, 속성 및 값의 HTML 요소 스타일 지정에 대해 학습합니다.

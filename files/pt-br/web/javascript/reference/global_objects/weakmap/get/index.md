@@ -42,7 +42,7 @@ wm.get("baz"); // Retorna undefined.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.get")}}
+{{Compat}}
 
 ## Ver também
 

@@ -69,7 +69,7 @@ if (!String.prototype.includes) {
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.includes")}}
+{{Compat}}
 
 ## String.prototype.contains
 

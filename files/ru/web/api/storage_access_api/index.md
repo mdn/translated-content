@@ -72,9 +72,9 @@ API на стадии обсуждения — стандартизация не
 
 ## Поддержка браузерами
 
-{{Compat("api.Document.hasStorageAccess")}}
+{{Compat}}
 
-{{Compat("api.Document.requestStorageAccess")}}
+{{Compat}}
 
 ## Смотрите также
 

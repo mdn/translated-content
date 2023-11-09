@@ -83,7 +83,7 @@ Mais informações podem ser encontradas em \[ISO-0000].
 
 ## Navegadores compatíveis
 
-{{Compat("html.elements.cite")}}
+{{Compat}}
 
 ## Veja também
 

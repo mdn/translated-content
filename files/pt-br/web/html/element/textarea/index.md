@@ -230,7 +230,7 @@ I am a readonly textarea</textarea
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.textarea")}}
+{{Compat}}
 
 ## Veja também
 

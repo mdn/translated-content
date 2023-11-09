@@ -43,7 +43,7 @@ Object.getPrototypeOf("foo");
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.getPrototypeOf")}}
+{{Compat}}
 
 ## Notas específicas para o Opera
 

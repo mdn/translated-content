@@ -90,4 +90,4 @@ h.onchange = h.oninput = function () {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.at-rules.media.aspect-ratio")}}
+{{Compat}}

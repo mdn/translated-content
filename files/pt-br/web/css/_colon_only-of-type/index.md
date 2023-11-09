@@ -21,7 +21,7 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) CSS `:only-of-type` repres
 
 ## Navegadores compatíveis
 
-{{Compat("css.selectors.only-of-type")}}
+{{Compat}}
 
 ## Ver também
 

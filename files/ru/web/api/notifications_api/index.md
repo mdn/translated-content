@@ -47,7 +47,7 @@ Notifications API позволяют web-страницам контролиро
 
 ## Поддержка браузерами
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Firefox OS разрешения
 

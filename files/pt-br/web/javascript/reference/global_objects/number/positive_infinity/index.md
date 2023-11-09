@@ -49,7 +49,7 @@ if (bigNumber == Number.POSITIVE_INFINITY) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.POSITIVE_INFINITY")}}
+{{Compat}}
 
 ## Ver também
 

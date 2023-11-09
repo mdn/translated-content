@@ -329,7 +329,7 @@ elem.removeEventListener("mousemove", handleMouseMove);
 
 ## 参见
 
-- [优化长任务](https://web.dev/optimize-long-tasks/)（web.dev，2022 年）
+- [优化长任务](https://web.dev/articles/optimize-long-tasks)（web.dev，2022 年）
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 
 {{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}

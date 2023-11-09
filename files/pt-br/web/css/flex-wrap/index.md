@@ -126,7 +126,7 @@ Os seguintes valores são aceitos :
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.flex-wrap")}}
+{{Compat}}
 
 ## Veja também
 

@@ -44,4 +44,4 @@ elemento:focus { ... }
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.focus")}}
+{{Compat}}

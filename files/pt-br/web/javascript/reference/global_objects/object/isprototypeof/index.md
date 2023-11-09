@@ -83,7 +83,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.isPrototypeOf")}}
+{{Compat}}
 
 ## Veja também
 

@@ -61,7 +61,7 @@ function testinput(re, str) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp.test")}}
+{{Compat}}
 
 ## Gecko-specific notes
 

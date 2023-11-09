@@ -54,7 +54,7 @@ window.onafterprint = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.afterprint_event")}}
+{{Compat}}
 
 ## 関連情報
 

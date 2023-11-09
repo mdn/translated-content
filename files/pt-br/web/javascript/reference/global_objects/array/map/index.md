@@ -236,7 +236,7 @@ if (!Array.prototype.map) {
 
 ## Compatibilidade com os browsers
 
-{{Compat("javascript.builtins.Array.map")}}
+{{Compat}}
 
 ## Veja também
 

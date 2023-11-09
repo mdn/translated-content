@@ -23,7 +23,7 @@ slug: Web/API/HTMLUnknownElement
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLUnknownElement")}}
+{{Compat}}
 
 ## 関連情報
 

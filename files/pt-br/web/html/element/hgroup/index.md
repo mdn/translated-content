@@ -115,7 +115,7 @@ Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido p
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## See also
 

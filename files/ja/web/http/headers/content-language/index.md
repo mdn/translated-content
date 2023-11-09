@@ -91,7 +91,7 @@ Content-Language: de, en
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Content-Language")}}
+{{Compat}}
 
 ## 関連情報
 

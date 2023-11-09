@@ -70,7 +70,7 @@ Somente um pequeno subconjunto de propriedades CSS pode ser usado com o`::first-
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.first-line")}}
+{{Compat}}
 
 ## Veja também
 

@@ -26,7 +26,7 @@ a:link {
 
 ## Compatibilidade do navegador
 
-{{Compat("css.selectors.link")}}
+{{Compat}}
 
 ## Veja também
 

@@ -60,7 +60,7 @@ Este elemento implementa a interface do [`SVGTRefElement`](/pt-BR/DOM/SVGTRefEle
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.tref")}}
+{{Compat}}
 
 ## Veja também
 

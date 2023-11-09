@@ -46,4 +46,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.developer")}}
+{{Compat}}

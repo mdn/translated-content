@@ -78,7 +78,7 @@ svg {
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.rect")}}
+{{Compat}}
 
 ## See also
 

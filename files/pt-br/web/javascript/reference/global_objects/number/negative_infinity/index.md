@@ -49,7 +49,7 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.NEGATIVE_INFINITY")}}
+{{Compat}}
 
 ## Veja também
 

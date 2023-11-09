@@ -235,7 +235,7 @@ for (let i of iterable) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.for_of")}}
+{{Compat}}
 
 ## Consulte também
 

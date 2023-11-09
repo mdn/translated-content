@@ -75,4 +75,4 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.animate")}}
+{{Compat}}

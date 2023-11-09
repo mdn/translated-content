@@ -51,7 +51,7 @@ Para valores menores que -1 ou maiores que 1, `Math.asin()` retorna {{jsxref("Na
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.asin")}}
+{{Compat}}
 
 ## Veja também
 

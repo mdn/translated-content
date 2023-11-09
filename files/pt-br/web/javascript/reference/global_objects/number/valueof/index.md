@@ -42,7 +42,7 @@ console.log(typeof num); // number
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.valueOf")}}
+{{Compat}}
 
 ## See also
 

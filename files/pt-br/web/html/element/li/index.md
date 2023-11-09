@@ -75,7 +75,7 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## Veja também
 

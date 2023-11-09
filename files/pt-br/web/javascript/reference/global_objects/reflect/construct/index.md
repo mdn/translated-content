@@ -118,7 +118,7 @@ d.getFullYear(); // 1776
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect.construct")}}
+{{Compat}}
 
 ## See also
 

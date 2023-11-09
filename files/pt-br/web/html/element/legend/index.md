@@ -27,7 +27,7 @@ Veja {{HTMLElement("form")}} para exemplos sobre `<legend>`.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.legend")}}
+{{Compat}}
 
 ## Veja Também
 

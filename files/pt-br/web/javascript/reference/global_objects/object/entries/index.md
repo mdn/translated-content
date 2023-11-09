@@ -89,7 +89,7 @@ Para incluir suporte ao `Object.entries` em ambientes mais antigos, você pode a
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.entries")}}
+{{Compat}}
 
 ## Veja também
 

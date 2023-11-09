@@ -107,7 +107,7 @@ WebVR API расширяет следующие API, добавляя переч
 
 ## Совместимость с браузерами
 
-{{Compat("api.Navigator.getVRDisplays")}}
+{{Compat}}
 
 ## Смотрите также
 

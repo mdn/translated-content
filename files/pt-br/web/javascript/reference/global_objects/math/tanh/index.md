@@ -60,7 +60,7 @@ Math.tanh =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.tanh")}}
+{{Compat}}
 
 ## See also
 

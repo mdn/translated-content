@@ -231,7 +231,7 @@ Dependendo do conjunto escolhido, o tipo de metadata pode ser uma das seguintes:
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.meta")}}
+{{Compat}}
 
 ## See also
 
