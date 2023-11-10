@@ -56,4 +56,4 @@ xrSession.requestReferenceSpace("local-floor").then((refSpace) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.XRRigidTransform")}}
+{{Compat}}

@@ -124,7 +124,7 @@ array[1];
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.matchAll")}}
+{{Compat}}
 
 ## Veja também
 

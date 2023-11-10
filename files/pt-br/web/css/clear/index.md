@@ -211,7 +211,7 @@ p {
 
 ## Compatibilidade dos browsers
 
-{{Compat("css.properties.clear")}}
+{{Compat}}
 
 ## Veja também
 

@@ -66,7 +66,7 @@ Reflect.apply("".charAt, "ponies", [3]);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.apply")}}
+{{Compat}}
 
 ## 関連情報
 

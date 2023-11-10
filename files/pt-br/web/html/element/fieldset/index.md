@@ -375,7 +375,7 @@ O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.fieldset")}}
+{{Compat}}
 
 ## Erros
 

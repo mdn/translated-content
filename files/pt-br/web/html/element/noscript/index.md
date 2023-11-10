@@ -47,4 +47,4 @@ Rocks!
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.noscript")}}
+{{Compat}}

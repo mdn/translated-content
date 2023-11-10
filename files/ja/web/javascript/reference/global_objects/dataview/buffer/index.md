@@ -29,7 +29,7 @@ dataview.buffer; // ArrayBuffer { byteLength: 8 }
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.buffer")}}
+{{Compat}}
 
 ## 関連情報
 

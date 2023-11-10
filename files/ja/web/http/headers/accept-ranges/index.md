@@ -54,7 +54,7 @@ Accept-Ranges: bytes
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Accept-Ranges")}}
+{{Compat}}
 
 ## 関連情報
 

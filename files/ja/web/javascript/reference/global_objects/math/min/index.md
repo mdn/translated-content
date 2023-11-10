@@ -70,7 +70,7 @@ var x = Math.min(f(foo), boundary);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.min")}}
+{{Compat}}
 
 ## 関連情報
 

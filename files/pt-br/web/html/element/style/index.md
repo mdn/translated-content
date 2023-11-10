@@ -73,7 +73,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.style")}}
+{{Compat}}
 
 ## Veja também
 

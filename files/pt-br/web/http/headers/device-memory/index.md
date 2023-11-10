@@ -51,7 +51,7 @@ Device-Memory: 1
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Device-Memory")}}
+{{Compat}}
 
 ## Veja também
 

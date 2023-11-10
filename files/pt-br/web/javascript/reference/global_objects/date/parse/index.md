@@ -131,17 +131,13 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 
 Returns `14400000` no matter the local time zone as a time zone GMT (UTC) is provided.
 
-## Specifications
+## Especificações
 
-| Specification                                        | Status             | Comment                                            |
-| ---------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                              | Standard           | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.4.2', 'Date.parse')}} | {{Spec2('ES5.1')}} | ISO 8601 format added.                             |
-| {{SpecName('ES6', '#sec-date.parse', 'Date.parse')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.parse")}}
+{{Compat}}
 
 ## See also
 

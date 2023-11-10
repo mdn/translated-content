@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.extensionTypes.ImageDetails")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

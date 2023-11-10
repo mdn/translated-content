@@ -100,4 +100,4 @@ browser.runtime.getURL("images/my-image.png");
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.web_accessible_resources")}}
+{{Compat}}

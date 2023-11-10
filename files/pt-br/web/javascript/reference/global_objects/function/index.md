@@ -163,15 +163,11 @@ Creating functions with the `Function` constructor is one of the ways to dynamic
 
 ## Especificação
 
-| Especificação                                            | Status             | Comentário                                         |
-| -------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                  | Standard           | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.3', 'Function')}}           | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-function-objects', 'Function')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## See also
 

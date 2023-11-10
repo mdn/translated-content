@@ -104,7 +104,7 @@ o.propertyIsEnumerable("firstMethod"); // returns false
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
+{{Compat}}
 
 ## Veja também
 

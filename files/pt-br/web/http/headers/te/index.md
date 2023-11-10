@@ -57,7 +57,7 @@ TE: trailers, deflate;q=0.5
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.TE")}}
+{{Compat}}
 
 ## Veja também
 

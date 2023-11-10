@@ -71,7 +71,7 @@ p:nth-of-type(1) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.nth-of-type")}}
+{{Compat}}
 
 ## Veja também
 

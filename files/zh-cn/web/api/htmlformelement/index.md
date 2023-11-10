@@ -217,7 +217,7 @@ The following example shows how to submit a form in a [popup window](/zh-CN/docs
 
 ### Submitting forms and uploading files using `XMLHttpRequest`
 
-If you want to know how to serialize and submit a form using the [`XMLHttpRequest`](/zh-CN/docs/DOM/XMLHttpRequest) API, please read [this paragraph](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
+If you want to know how to serialize and submit a form using the [`XMLHttpRequest`](/zh-CN/docs/DOM/XMLHttpRequest) API, please read [this paragraph](/zh-CN/docs/DOM/XMLHttpRequest_API/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
 
 ## Specifications
 

@@ -106,7 +106,7 @@ console.log(result); // "foo"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.yield_star")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 

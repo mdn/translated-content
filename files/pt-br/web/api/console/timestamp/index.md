@@ -30,7 +30,7 @@ console.timeStamp(rotulo);
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.timeStamp")}}
+{{Compat}}
 
 ## Veja também
 
