@@ -24,7 +24,7 @@ WebAssembly 是在 [W3C WebAssembly Community Group](https://www.w3.org/communit
 - 具備安全性。WebAssembly 是被規範跑在一個安全的沙盒執行換進。像是其他的 Web 程式碼，他會被强制要求遵守瀏覽器的同源政策與權限政策。
 - 不會破壞 Web 既有架構。WebAssembly 是設計來與其他 Web 技術良好共存的，并且支援以前。
 
-> **筆記:** WebAssembly 也有除去 Web 與 JavaScript 的用途（參見 [Non-web embeddings](https://webassembly.org/docs/non-web/)）.
+> **備註：** WebAssembly 也有除去 Web 與 JavaScript 的用途（參見 [Non-web embedding](https://webassembly.org/docs/non-web/)）。
 
 ## WebAssembly 如何融入既有 Web 平臺？
 
