@@ -113,7 +113,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 與實體的組合語言有一樣的潮流，WebAssembly 二進制格式具有文本表達式，兩者具備一對一的對應關係。你可以親手撰寫或生成這個格式并且可以藉由多種工具轉換成二進制格式，參見 [WebAssembly text-to-binary tools](https://webassembly.org/getting-started/advanced-tools/)。
 
-來看一篇簡單的文章來説明你要如何 [將 WebAssembly 文本格式轉換成 Wasm](/zh-TW/docs/WebAssembly/Text_format_to_Wasm)。
+來看一篇簡單的文章來説明你要如何[將 WebAssembly 文本格式轉換成 Wasm](/zh-TW/docs/WebAssembly/Text_format_to_Wasm)。
 
 ### 撰寫 Rust 指定目標 WebAssembly
 
