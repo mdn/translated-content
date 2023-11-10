@@ -14,10 +14,6 @@ on:
   pull_request_target:
     branches:
       - main
-    paths:
-      - .nvmrc
-      - ".github/workflows/pr-test.yml"
-      - "files/**"
 
 jobs:
   tests:
