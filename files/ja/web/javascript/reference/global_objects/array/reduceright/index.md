@@ -23,6 +23,7 @@ reduceRight(callbackFn, initialValue)
 ### 引数
 
 - `callbackFn`
+
   - : 配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出す際の `accumulator` 引数の値になります。最後の呼び出しでは、返値は `reduceRight()` の返値となります。この関数は以下の引数で呼び出されます。
     - `accumulator`
       - : 前回の `callbackFn` の呼び出し結果の値です。初回の呼び出しでは `initialValue` が指定されていた場合はその値、そうでない場合はこの配列の末尾の要素の値です。
