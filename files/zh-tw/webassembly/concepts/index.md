@@ -33,7 +33,7 @@ Web 平臺可以被想成兩個部分：
 - 一個虛擬機（Virtual Machine，VM），運行著 Web 應用的程式碼，例如 JavaScript 程式碼，它可以大幅增强你的應用程式。
 - 一組 [Web API](/zh-TW/docs/Web/API) 讓 Web 可以呼叫來控制瀏覽器或設備的功能（[DOM](/zh-TW/docs/Web/API/Document_Object_Model)、[CSSOM](/zh-TW/docs/Web/API/CSS_Object_Model)、[WebGL](/zh-TW/docs/Web/API/WebGL_API)、[IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)、[Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API) 等）。
 
-歷史上，那台虛擬機曾只被允許執行 JavaScript，這對我們而言已經可以良好運作并且能解決現在我們在 Web 上會遇到的大多數問題，但當使用 JavaScript 來進行高計算應用，例如 3D 游戲、物理引擎、電腦視覺、圖像編輯以及許多其他要求要在原生效能環境運行之領域應用，我們就會遇到效能問題。（參見 [WebAssembly use cases](https://webassembly.org/docs/use-cases/) 以獲得更多想法。）
+歷史上，那台虛擬機曾只被允許執行 JavaScript，這對我們而言已經可以良好運作并且能解決現在我們在 Web 上會遇到的大多數問題，但當使用 JavaScript 來進行高計算應用，例如 3D 游戲、物理引擎、電腦視覺、圖像編輯以及許多其他要求要在原生效能環境運行之領域應用，我們就會遇到效能問題。（參見 [WebAssembly 使用場景](https://webassembly.org/docs/use-cases/) 以獲得更多想法。）
 
 除此之外，下載、解析、編譯巨大的 JavaScript 應用程式的成本可能會被禁止。移動裝置或是一些資源受限的平臺可能會進一步的放大這個效能瓶頸的後果。
 
@@ -99,7 +99,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 > **備註：** 未來有計劃[讓 WebAssembly 直接呼叫 WebAPI](https://github.com/WebAssembly/gc/blob/master/README.md)。
 
-這個 JavaScript 膠水程式碼可能并不像你想像的那麽簡單。Emscripten 首先需要去實作熱門的 C、C++ 函式庫像是 [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer)、[OpenGL](https://en.wikipedia.org/wiki/OpenGL)、[OpenAL](https://en.wikipedia.org/wiki/OpenAL)，以及一部分的 [POSIX](https://en.wikipedia.org/wiki/POSIX)。這些函式庫被以 Web API 的形式實作，且因此每個都需要一些 JavaScript 膠水程式碼來連接 WebAssembly 與底層的 Web API。
+這個 JavaScript 膠水程式碼可能并不像你想像的那麽簡單。Emscripten 首先需要去實作熱門的 C、C++ 函式庫像是 [SDL](https://zh.wikipedia.org/zh-tw/SDL)、[OpenGL](https://zh.wikipedia.org/wiki/OpenGL)、[OpenAL](https://zh.wikipedia.org/wiki/OpenAL)，以及一部分的 [POSIX](https://zh.wikipedia.org/wiki/POSIX)。這些函式庫被以 Web API 的形式實作，且因此每個都需要一些 JavaScript 膠水程式碼來連接 WebAssembly 與底層的 Web API。
 
 所以膠水程式碼的一部分就是在分別用 C、C++ 實作這些函式庫的功能，同時也包含了去呼叫之前提及的來獲取、加載并執行的 WebAssembly JavaScript API 的邏輯。
 
