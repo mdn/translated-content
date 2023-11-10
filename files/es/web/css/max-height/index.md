@@ -13,7 +13,7 @@ La propiedad `max-height` se utiliza para definir la altura máxima de un elemen
 - Se aplica a : elementos de bloque o remplazados
 - {{ Cssxref("inheritance", "Valor heredado") }}: no
 - Porcentajes: se refiere a la altura del bloque contenedor.
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}:
 
 ### Sintaxis

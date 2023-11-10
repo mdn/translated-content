@@ -13,7 +13,7 @@ La propiedad `border-bottom` permite de definir de una vez todas las propiedades
 - Se aplica a : todos los elementos
 - {{ Cssxref("inheritance", "Valor heredado") }}: no
 - Porcentajes: N/A
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: ver propiedades individuales
 
 ### Sintaxis

@@ -13,7 +13,7 @@ La propiedad `border-bottom-color` define el color del borde inferior de un elem
 - Se aplica a: todos los elementos
 - {{ Cssxref("inheritance", "Valor heredado") }}: non
 - Porcentajes: N/A
-- Medio : {{ Xref_cssvisual() }}
+- Medio : {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: como se especifique o si proviene de la propiedad {{ Cssxref("color") }}, será el valor {{ Cssxref("color") }}.
 
 ### Sintaxis
