@@ -79,11 +79,10 @@ He aquí un ejemplo de envío de formularios, como sería entregado a un program
 - [Sample form with DSA KEYGEN element but no PQG Parameters](https://bugzilla.mozilla.org/attachment.cgi?id=380751)
 - [Sample form with EC KEYGEN element](https://bugzilla.mozilla.org/attachment.cgi?id=380752)
 
-## Compatibilidad del navegador
+### Especificaciones
 
-| Navegador         | Versión más baja |
-| ----------------- | ---------------- |
-| Internet Explorer | ---              |
-| Firefox (Gecko)   | 1.0 (1.0)        |
-| Opera             | 3.0              |
-| Safari (WebKit)   | 1.2 (125)        |
+{{Specifications}}
+
+### Compatibilidad de navegadores
+
+{{Compat}}

@@ -3,8 +3,6 @@ title: border-bottom-width
 slug: Web/CSS/border-bottom-width
 ---
 
-<< [Volver](/es/Guía_de_referencia_de_CSS)
-
 ### Resumen
 
 `border-bottom-width` define el ancho del borde inferior de una caja.
@@ -55,25 +53,14 @@ element {
 }
 ```
 
-### Especificacions
+### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#border-width)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/box.html#border-width-properties)
-- [CSS 3](http://www.w3.org/TR/css3-background/#border-width)
+{{Specifications}}
 
-### Compatibilidades
+### Compatibilidad de navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer |                |
-| Firefox           |                |
-| Netscape          |                |
-| Opera             |                |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("border-bottom") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-bottom-width") }}
-
-Categorías
-
-Interwiki Languages

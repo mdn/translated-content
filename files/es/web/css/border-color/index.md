@@ -57,18 +57,11 @@ Para poder ver el/los bordes también hay que definir {{ Cssxref("border-width",
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#border-color)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/box.html#border-color-properties)
-- [CSS 3](http://www.w3.org/TR/css3-background/#the-border-color)
+{{Specifications}}
 
-### Compatibilidad
+### Compatibilidad de navegadores
 
-| Navegadores       | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 4              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Extensiones Mozilla
 

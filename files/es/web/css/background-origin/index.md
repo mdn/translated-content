@@ -54,15 +54,13 @@ div{
 - La propiedad background-origin es ignorada si la propiedad background-attachment tiene un valor de fixed.
 - Si el valor de esta propiedad no es establecido en la propiedad abreviada (shorthand) [background](/es/CSS/background) que es aplicada a el elemento despues de la propiedad background-origin, el valor de esta propiedad sera restablecido a su valor inicial por la propiedad abreviada background.
 
-## Compatibilidad de navegadores
+### Especificaciones
 
-| Feature        | Chrome | Firefox (Gecko) | Internet Explorer | Opera | Safari    |
-| -------------- | ------ | --------------- | ----------------- | ----- | --------- |
-| Soporte básico | 1.0    | 4.0 (2.0)       | 9.0               | 10.5  | 3.0 (522) |
+{{Specifications}}
 
-## Especificaciones
+### Compatibilidad de navegadores
 
-- [Css fondos y bordes modulo nivel 3](http://dev.w3.org/csswg/css3-background/#the-background-origin)(candidato a recomendación]
+{{Compat}}
 
 ## Relacionado
 

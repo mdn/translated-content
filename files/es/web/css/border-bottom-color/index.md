@@ -3,8 +3,6 @@ title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 ---
 
-<< [Volver](/es/Guía_de_referencia_de_CSS)
-
 ### Resumen
 
 La propiedad `border-bottom-color` define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave `transparent`.
@@ -60,22 +58,12 @@ element {
 
 ### Especificaciones
 
-- [CSS 2.1 (en)](http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-color)
-- [CSS 3 (en)](http://www.w3.org/TR/css3-background/#border-bottom)
+{{Specifications}}
 
-### Compatibilidades
+### Compatibilidad de navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("border-bottom") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-bottom-width") }}
-
-Categorías
-
-Interwiki Languages
