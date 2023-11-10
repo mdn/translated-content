@@ -97,7 +97,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 2. Emscripten 將 clang+LLVM 編譯出來的結果轉換成 Wasm 二進制。
 3. 僅憑它自己，WebAssembly 沒有辦法直接訪問 DOM，它僅能呼叫 JavaScript，傳入整數和浮點數的原始資料形態。因此，要訪問任何的 Web API，它必須去呼叫 JavaScript，這會產生一個 Web API 呼叫。Emscripten 因此創造一個 HTML 文檔與 JavaScript 膠水程式碼來達成這件事。
 
-> **筆記:** 未來有計劃[讓 WebAssembly 直接呼叫 WebAPI](https://github.com/WebAssembly/gc/blob/master/README.md)。
+> **備註：** 未來有計劃[讓 WebAssembly 直接呼叫 WebAPI](https://github.com/WebAssembly/gc/blob/master/README.md)。
 
 這個 JavaScript 膠水程式碼可能并不像你想像的那麽簡單。Emscripten 首先需要去實作熱門的 C、C++ 函式庫像是 [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer)、[OpenGL](https://en.wikipedia.org/wiki/OpenGL)、[OpenAL](https://en.wikipedia.org/wiki/OpenAL)，以及一部分的 [POSIX](https://en.wikipedia.org/wiki/POSIX)。這些函式庫被以 Web API 的形式實作，且因此每個都需要一些 JavaScript 膠水程式碼來連接 WebAssembly 與底層的 Web API。
 
