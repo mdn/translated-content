@@ -62,7 +62,7 @@ JavaScript API 提供開發者一個創造模組、Memory、Table 與 Instance �
 
 因爲 JavaScript 有 WebAssembly 是如何被下載、編譯、執行的完全控制權，因此 JavaScript 開發者應該去思考說 WebAssembly 是否就只是一個 JavaScript 的特色，使之能有效率的生成高效能函式。
 
-在未來，WebAssembly 模組會[能像是 ES modules 一樣被引入](https://github.com/WebAssembly/proposals/issues/12)。（使用 `<script type='module'>`），這意味著 JavaScript 有能力去獲得、編譯並引入一個 WebAssembly 就好像是 ES 模組一樣。
+在未來，WebAssembly 模組會[能像是 ES 模組一樣被引入](https://github.com/WebAssembly/proposals/issues/12)。（使用 `<script type='module'>`），這意味著 JavaScript 有能力去獲得、編譯並引入一個 WebAssembly 就好像是 ES 模組一樣。
 
 ## 我該如何在我的應用程式中使用 WebAssembly？
 
