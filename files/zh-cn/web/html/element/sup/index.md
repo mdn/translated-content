@@ -5,7 +5,7 @@ slug: Web/HTML/Element/sup
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<sup>` 元素**定义仅出于排版目的而显示为上标的行内文本。上标通常在高出基线的位置以较小的文本呈现。
+[HTML](/zh-CN/docs/Web/HTML) **`<sup>` 元素**定义仅出于排版目的而显示为上标的行内文本。上标通常以较小的文本在高出基线的位置呈现。
 
 {{EmbedInteractiveExample("pages/tabbed/sup.html", "tabbed-shorter")}}
 
@@ -21,7 +21,7 @@ slug: Web/HTML/Element/sup
 
 适当的 `<sup>` 用例包括（但不限于）：
 
-- 显示指数，例如“x<sup>3</sup>”。对于这种情况，尤其是在更复杂的情况下，考虑使用 [MathML](/zh-CN/docs/Web/MathML)。请参阅下面的 [示例](#示例)中的[指数](#指数)。
+- 显示指数，例如“x<sup>3</sup>”。对于这种情况，尤其是在更复杂的情况下，考虑使用 [MathML](/zh-CN/docs/Web/MathML)。请参阅下面的[示例](#示例)中的[指数](#指数)。
 - 显示[上标字母](https://en.wikipedia.org/wiki/Superior_letter)，在某些语言中用于呈现某些缩写词。例如，在法语中，单词“mademoiselle”可以缩写为“M<sup>lle</sup>”；这是可接受的用例。请参阅示例[上标字母](#上标字母)。
 - 表示序数，例如用“4<sup>th</sup>”来代替“fourth”。请参阅示例[序数](#序数)。
 
