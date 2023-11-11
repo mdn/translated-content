@@ -15,6 +15,7 @@ l10n:
 
 - {{jsxref("Int16Array/Int16Array", "Int16Array()")}}
   - : 创建一个新的 `Int16Array` 对象。
+
 ## 静态属性
 
 _从父对象 {{jsxref("TypedArray")}} 继承静态属性。_
