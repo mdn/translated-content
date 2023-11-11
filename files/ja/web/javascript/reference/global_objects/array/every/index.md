@@ -29,7 +29,7 @@ every(callbackFn, thisArg)
     - `array`
       - : `every()` が実行されている配列です。
 - `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行するときに `this` として使用される値です。[反復可能メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復可能メソッド)を参照してください。
+  - : `callbackFn` を実行するときに `this` として使用される値です。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
@@ -37,7 +37,7 @@ every(callbackFn, thisArg)
 
 ## 解説
 
-`every()` メソッドは[反復可能メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)です。配列のそれぞれの要素に対して、指定された `callbackFn` 関数が[偽値](/ja/docs/Glossary/Falsy)を返すまで一度ずつ呼び出します。 そのような要素が見つかった場合、 `every()` は直ちに `false` を返し、配列の反復処理を中止します。そうでない場合、 `callbackFn` がすべての要素に対して[真値](/ja/docs/Glossary/Truthy)を返すと、 `every()` は `true` を返します。
+`every()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。配列のそれぞれの要素に対して、指定された `callbackFn` 関数が[偽値](/ja/docs/Glossary/Falsy)を返すまで一度ずつ呼び出します。 そのような要素が見つかった場合、 `every()` は直ちに `false` を返し、配列の反復処理を中止します。そうでない場合、 `callbackFn` がすべての要素に対して[真値](/ja/docs/Glossary/Truthy)を返すと、 `every()` は `true` を返します。
 
 `every` は数学における「∀ （すべての / for all）」記号と同様のふるまいをします。特に、空の配列に対しては `true` を返します。（[空集合](https://ja.wikipedia.org/wiki/空集合#性質)のすべての要素が与えられた任意の条件を満たすことは[空虚に真](https://en.wikipedia.org/wiki/Vacuous_truth)です。）
 
