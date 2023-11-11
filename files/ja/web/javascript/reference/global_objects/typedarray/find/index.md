@@ -2,53 +2,34 @@
 title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`find()`** メソッドは、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。ここで _TypedArray_ は[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)のうちの一つです。
-
-{{jsxref("TypedArray.findIndex", "findIndex()")}} メソッドも参照してください。こちらはそのメソッドは値のかわりに型付き配列で見つかった要素の**添字**を返します。
+**`find()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.find()")}} と同じです。
 
 {{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
 
 ## 構文
 
 ```js-nolint
-// アロー関数
-find((element) => { /* ... */ } )
-find((element, index) => { /* ... */ } )
-find((element, index, array) => { /* ... */ } )
-
-// コールバック関数
 find(callbackFn)
 find(callbackFn, thisArg)
-
-// インラインコールバック関数
-find(function(element) { /* ... */ })
-find(function(element, index) { /* ... */ })
-find(function(element, index, array){ /* ... */ })
-find(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### 引数
 
 - `callbackFn`
-
-  - : 型付き配列の要素に対するテストに使用する関数です。
-
-    この関数は以下の引数で呼び出されます。
-
+  - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返す必要があります。この関数は以下の引数で呼び出されます。
     - `element`
-      - : 型付き配列内で現在処理されている要素。
+      - : 現在処理されている型付き配列の要素です。
     - `index`
-      - : 型付き配列内で現在処理されている要素の位置。
+      - : 現在処理されている型付き配列の要素の添字です。
     - `array`
-      - : `find()` が呼び出された配列。
-
+      - : `find()` が実行されている型付き配列です。
 - `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行するときに `this` として使用するオブジェクト。
+  - : `callbackFn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
@@ -56,21 +37,13 @@ find(function(element, index, array) { /* ... */ }, thisArg)
 
 ## 解説
 
-`find()` メソッドは `callbackFn` 関数が true 値を返す要素を見つけるまで、型付き配列内に存在している各要素に対して一度ずつ `callbackFn` 関数を実行します。そのような要素が見つかったら、 `find()` はすぐに要素の値を返します。さもなければ、 `find()` は {{jsxref("undefined")}} を返します。 `callbackFn` は型付き配列の値を割り当てた位置に対してのみ呼び出されます。つまり、削除されたり、値が割り当てられて位置に対しては呼び出されません。
-
-`callbackFn` は、要素の値、要素の添字、走査中の型付き配列の 3 つの引数とともに呼び出されます。
-
-`thisArg` 引数が `find()` に与えられた場合、 `callbackFn` の各呼び出しで `this` として使用されます。与えられなかった場合は、 {{jsxref("undefined")}}が使用されます。
-
-`find()` は呼び出されている型付き配列を変更しません。
-
-`find()` によって処理される要素の範囲は、最初に `callbackFn` が呼び出される前に設定されます。 `find()` の呼び出しが始まったあとで型付き配列に追加された要素は、 `callbackFn` メソッドによって処理されません。存在していて、処理されていない型付き配列の要素が `callbackFn` によって変更された場合、処理している `callbackFn` 関数に渡される値は、 `find()` が要素の位置を処理する直前の値です。削除された要素は処理されません。
+詳細については、 {{jsxref("Array.prototype.find()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
 ### 型付き配列内の素数を探す
 
-次の例では、型付き配列内で素数である要素を探します (または、素数がない場合は {{jsxref("undefined")}} を返します)。
+次の例では、型付き配列内で素数である要素を探します（または、素数がない場合は {{jsxref("undefined")}} を返します）。
 
 ```js
 function isPrime(element, index, array) {
@@ -98,5 +71,13 @@ console.log(uint8.find(isPrime)); // 5
 ## 関連情報
 
 - [`TypedArray.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("TypedArray.prototype.filter()")}}
 - {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("Array.prototype.find()")}}
