@@ -2,10 +2,6 @@
 title: "Document: all 속성"
 short-title: all
 slug: Web/API/Document/all
-page-type: web-api-instance-property
-status:
-  - deprecated
-browser-compat: api.Document.all
 ---
 
 {{APIRef("DOM")}}{{Deprecated_Header}}
