@@ -2,69 +2,43 @@
 title: TypedArray.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`map()`** メソッドは、与えられた関数を型付き配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。このメソッドは、{{jsxref("Array.prototype.map()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)の一つです。
+**`map()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、与えられた関数を呼び出された型付き配列のすべての要素に対して呼び出し、その結果からなる新しい型付き配列を生成します。このメソッドは、 {{jsxref("Array.prototype.map()")}} と同じアルゴリズムです。
 
 {{EmbedInteractiveExample("pages/js/typedarray-map.html", "shorter")}}
 
 ## 構文
 
 ```js-nolint
-// アロー関数
-map((currentValue) => { /* ... */ } )
-map((currentValue, index) => { /* ... */ } )
-map((currentValue, index, array) => { /* ... */ } )
-
-// コールバック関数
 map(callbackFn)
 map(callbackFn, thisArg)
-
-// インラインコールバック関数
-map(function(currentValue) { /* ... */ })
-map(function(currentValue, index) { /* ... */ })
-map(function(currentValue, index, array){ /* ... */ })
-map(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ### 引数
 
 - `callbackFn`
-
-  - : 新しい型付き配列の要素を生み出すコールバック関数です。
-
-    この関数は、以下の引数で呼び出されます。
-
-    - `currentValue`
-      - : 現在処理中の要素の値です。
+  - : 型付き配列のそれぞれの要素に対して実行する関数。その返値は、新しい型付き配列の単一の要素として追加されます。この関数は以下の引数で呼び出されます。
+    - `element`
+      - : 型付き配列で現在処理されている要素です。
     - `index`
-      - : 現在処理中の要素の型付き配列内における添字です。
+      - : 現在処理中の要素の型付き配列内におけるインデックスです。
     - `array`
-      - : `map()` が実行されている型付き配列です。
+      - : `map()` が呼び出されてた型付き配列です。
 
 - `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行するときに `this` として使う値です。
+  - : `callbackFn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
-新しい型付き配列です。
+各要素がコールバック関数の結果である新しい型付き配列です。
 
 ## 解説
 
-`map()` は、与えられたコールバック関数 (`callbackFn`) を型付き配列の各要素に対して、順番通りに一度ずつ呼び出し、その結果から新しい配列を生成します。
-
-`callbackFn` は型付き配列のインデックスのうち、値が割り当てられているものにのみ呼び出しす。 `undefined` であるインデックス、すなわち削除されたか値が割り当てられたことがないインデックスには呼び出しません。
-
-`callbackFn` は、要素の値、要素の添字、走査中の型付き配列オブジェクトという 3 つの引数をともなって呼び出されます。
-
-`thisArg` 引数が `map()` に与えられた場合は、それが `callbackFn` の呼び出し時に渡され、 `this` として使用されます。そうでない場合は、 {{jsxref("undefined")}} が `this` の値として使用されます。 `callbackFn` から最終的に見える `this` の値は、[関数における通常の `this` を決定するルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に従って決まります。
-
-`map()` は呼び出された型付き配列を変化させません（ただし、 `callbackFn` が呼び出されたあ愛は、変更する可能性はあります）。
-
-`map()` によって処理される要素の範囲は、 `callbackFn` が最初に呼び出される前に設定されます。 `map()` の呼び出しが開始された後に追加された要素に対しては、 `callbackFn` は実行されません。既存の配列要素が変更されたり、削除された場合、 `callbackFn` に渡される値は `map()` がそれらを訪れた時点での値になり、削除された要素を訪問することはありません。
+詳細については、 {{jsxref("Array.prototype.map()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
@@ -101,5 +75,9 @@ const doubles = numbers.map((num) => num * 2);
 ## 関連情報
 
 - [`TypedArray.prototype.map` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- {{jsxref("TypedArray.prototype.filter()")}}
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.forEach()")}}
+- {{jsxref("TypedArray.from()")}}
 - {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Map")}}
