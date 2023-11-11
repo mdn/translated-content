@@ -2,66 +2,52 @@
 title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
 {{JSRef}}
 
-**`reduce()`** メソッドは、アキュームレーターと型付き配列のそれぞれの値に対して (左から右へ) 関数を適用していき、単一の値にまとめます。このメソッドは、{{jsxref("Array.prototype.reduce()")}}と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)の一つです。
+**`reduce()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のそれぞれの要素に対して、ユーザーが提供した「縮小」コールバック関数を呼び出します。その際、直前の要素における計算結果の返値を渡します。型付き配列のすべての要素に対して縮小関数を実行した結果が単一の値が最終結果になります。このメソッドは、{{jsxref("Array.prototype.reduce()")}}と同じアルゴリズムです。
 
 {{EmbedInteractiveExample("pages/js/typedarray-reduce.html")}}
 
 ## 構文
 
 ```js-nolint
-// アロー関数
-reduce((accumulator, currentValue) => { /* ... */ } )
-reduce((accumulator, currentValue, index) => { /* ... */ } )
-reduce((accumulator, currentValue, index, array) => { /* ... */ } )
-reduce((accumulator, currentValue, index, array) => { /* ... */ }, initialValue)
-
-// コールバック関数
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
-
-// インラインコールバック関数
-reduce(function(accumulator, currentValue) { /* ... */ })
-reduce(function(accumulator, currentValue, index) { /* ... */ })
-reduce(function(accumulator, currentValue, index, array){ /* ... */ })
-reduce(function(accumulator, currentValue, index, array) { /* ... */ }, initialValue)
 ```
 
 ### 引数
 
 - `callbackFn`
 
-  - : 型付き配列内の各値に対して実行する関数です。
-
-    この関数は以下の引数で呼び出されます。
-
+  - : 型付き配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出す際の `accumulator` 引数の値になります。最後の呼び出しでは、返値は `reduce()` の返値となります。この関数は以下の引数で呼び出されます。
     - `accumulator`
-      - : 前回のコールバック関数の呼び出しで返された値。または、提供された場合は `initialValue`（下記参照）。
+      - : 前回 `callbackFn` を呼び出した結果の値。最初の呼び出しでは、後で `initialValue` を指定した場合はその値になり、指定されなかった場合は `array[0]` になります。
     - `currentValue`
-      - : 現在処理されている型付き配列の要素。
-    - `index`
-      - : 現在処理されている型付き配列要素の添字。
+      - : 現在の要素の値。最初の呼び出しでは、 `initialValue` を指定した場合は `array[0]` となり、指定しなかった場合は `array[1]` となります。
+    - `currentIndex`
+      - : 型付き配列の `currentValue` を入力するインデックスの位置。最初の呼び出しで `initialValue` を指定した場合は `0`、そうでない場合は `1` となります。
     - `array`
       - : `reduce()` が呼び出された型付き配列。
-
-- `initialValue`
-  - : 任意。 `callbackFn` 関数の最初の呼び出しの最初の引数として使用するオブジェクト。
+- `initialValue` {{optional_inline}}
+  - : コールバックが最初に呼び出された時に `accumulator` が初期化される値です。
+    `initialValue` が指定された場合、`callbackFn` は配列の最初の値を `currentValue` として実行を開始します。
+    もし `initialValue` が指定されなかった場合、`accumulator` は配列の最初の値に初期化され、`callbackFn` は配列の 2 つ目の値を `currentValue` として実行を開始します。この場合、配列が空であれば（`accumulator`として返す最初の値がなければ）エラーが発生します。
 
 ### 返値
 
-畳み込みによって得られた 1 つの値です。
+型付き配列全体にわたって「縮小」コールバック関数を実行した結果の値です。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : 型付き配列に要素がなく、かつ `initialValue` が提供されなかった場合に発生します。
 
 ## 解説
 
-`reduce` メソッドは、型付き配列に存在するそれぞれの要素に対して（型付き配列の中の穴は除く）`callbackFn` 関数を一度ずつ実行します。この関数は、初期値（または直前の `callbackFn` 呼び出し）、現在の要素の値、現在の添字、反復処理中の型付き配列の 4 つの引数を受け取ります。
-
-最初にコールバック関数が呼び出されたときは、 `accumulator` と `currentValue` は、二つの値を一つにまとめます。 `reduce` の呼び出し時に `initialValue` が与えられた場合、 `accumulator` は `initialValue` に等しくなり、 `currentValue` は、型付き配列の最初の値と等しくなります。 `initialValue` が与えられなかった場合、 `accumulator` は、型付き配列の最初の値と等しくなり、 `currentValue` は 2 番目の値と等しくなります。
-
-型付き配列が空で、 `initialValue` が与えられなかった場合、 {{jsxref("TypeError")}} が発生します。型付き配列が (位置に関係なく) 一つの要素しか持たず、 `initialValue` が与えられなかった場合、もしくは、 `initialValue` が与えられたが型付き配列が空の場合、 `callbackFn` 関数の呼び出しなしで、単独の値が返されることになります。
+詳細については、 {{jsxref("Array.prototype.reduce()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
@@ -83,5 +69,10 @@ const total = new Uint8Array([0, 1, 2, 3]).reduce((a, b) => a + b);
 ## 関連情報
 
 - [`TypedArray.prototype.reduce` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.map()")}}
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}
