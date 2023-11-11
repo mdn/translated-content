@@ -99,13 +99,11 @@ for (var i = 0 in obj) {
 
 像其他引擎 V8(Chrome)，Chakra (IE/Edge)，JSC (WebKit/Safari) 正在研究去除这种不标准的行为。
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/for...of", "for...of")}} 一个类似的迭代属性值的语句
-- {{jsxref("Statements/for_each...in", "for each in")}} 一个类似的但是迭代的是对象的属性的值而不是其属性名字的语句（过时的）
 - {{jsxref("Statements/for", "for")}}
-- 迭代器和构造器（uses the `for...in` syntax）
 - [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

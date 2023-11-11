@@ -10,7 +10,7 @@ slug: Learn/Forms/Other_form_controls
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         计算机基础知识和对于
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"

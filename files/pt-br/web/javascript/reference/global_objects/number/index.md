@@ -124,15 +124,11 @@ Number("100a"); // NaN
 
 ## Especificações
 
-| Especificação                                              | Situação           | Comentário                                                                                           |
-| ---------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------- |
-| Primeiro edição ECMAScript. Implementado em JavaScript 1.1 | Padrão             | definição inicial.                                                                                   |
-| {{SpecName('ES5.1', '#sec-15.7', 'Number')}}               | {{Spec2('ES5.1')}} |                                                                                                      |
-| {{SpecName('ES6', '#sec-number-objects', 'Number')}}       | {{Spec2('ES6')}}   | Novos métodos e propriedades adicionadas (EPSILON, isFinite, isInteger, isNaN, parseFloat, parseInt) |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number")}}
+{{Compat}}
 
 ## Veja também
 

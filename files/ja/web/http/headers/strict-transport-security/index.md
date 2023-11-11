@@ -90,7 +90,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Strict-Transport-Security")}}
+{{Compat}}
 
 ## 関連情報
 

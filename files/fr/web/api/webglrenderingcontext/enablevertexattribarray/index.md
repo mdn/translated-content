@@ -37,7 +37,7 @@ Pour vérifier d'éventuelles erreurs après l'appel à `enableVertexAttribArray
 
 ## Exemple
 
-Ce code — un extrait de l'exemple complet [Un exemple d'animation 2D WebGL de base](/fr-FR/docs/Web/API/WebGL_API/Basic_2D_animation_example) — montre l'utilisation de `enableVertexArray()` pour activer l'attribut qui sera utilisé par la couche WebGL pour passer des sommets individuels depuis le tampon des sommets à la fonction shader de sommet.
+Ce code — un extrait de l'exemple complet [Un exemple d'animation 2D WebGL de base](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example) — montre l'utilisation de `enableVertexArray()` pour activer l'attribut qui sera utilisé par la couche WebGL pour passer des sommets individuels depuis le tampon des sommets à la fonction shader de sommet.
 
 ```js
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
@@ -57,7 +57,7 @@ gl.vertexAttribPointer(
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```
 
-> **Note :** Cet extrait de code provient de [la fonction animateScene()](/fr-FR/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene) dans "Un exemple d'animation WebGL 2D de base". Voir cet article pour l'exemple complet et pour voir l'animation résultante en action.
+> **Note :** Cet extrait de code provient de [la fonction animateScene()](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) dans "Un exemple d'animation WebGL 2D de base". Voir cet article pour l'exemple complet et pour voir l'animation résultante en action.
 
 Ce code définit le tampon des sommets qui sera utilisé pour dessiner les triangles de la forme en appelant {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Ensuite, l'indice de l'attribut de position des sommets est obtenu à partir du programme shader en appelant {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
 
@@ -77,7 +77,7 @@ Avec l'association définie entre le tampon des sommets de notre forme et l'attr
 
 ## Voir aussi
 
-- [Données en WebGL](/fr-FR/docs/Web/API/WebGL_API/Data)
-- [Ajout de contenu 2D à un contexte WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
-- [Un exemple d'animation WebGL 2D de base](/fr-FR/docs/Web/API/WebGL_API/Basic_2D_animation_example)
+- [Données en WebGL](/fr/docs/Web/API/WebGL_API/Data)
+- [Ajout de contenu 2D à un contexte WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
+- [Un exemple d'animation WebGL 2D de base](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example)
 - {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}

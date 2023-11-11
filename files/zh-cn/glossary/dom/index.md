@@ -11,13 +11,8 @@ DOM 是万维网上使用最为广泛的 API 之一，因为它允许运行在�
 
 DOM 并不是天生就被规范好了的，它是浏览器开始实现{{Glossary("JavaScript")}}时才出现的。这个传统的 DOM 有时会被称为 DOM 0。现在，WHATWG 维护 DOM 现存标准。
 
-## 了解更多
-
-### 一般的知识
+## 参见
 
 - [The Document Object Model](https://zh.wikipedia.org/wiki/Document_Object_Model) 在维基百科上的解释
-
-### 技术信息
-
 - [MDN DOM 文档](/zh-CN/docs/Web/API/Document_Object_Model)
 - [W3C 上的多种 DOM 规范](https://www.w3.org/DOM/DOMTR)

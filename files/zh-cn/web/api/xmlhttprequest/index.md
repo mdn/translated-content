@@ -66,7 +66,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 
 作为 `XMLHttpRequest` 实例的属性之一，所有浏览器都支持 `onreadystatechange`。
 
-后来，许多浏览器实现了一些额外的事件（`onload`、`onerror`、`onprogress` 等）。详见[Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
+后来，许多浏览器实现了一些额外的事件（`onload`、`onerror`、`onprogress` 等）。详见[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)。
 
 更多现代浏览器，包括 Firefox，除了可以设置 `on*` 属性外，也提供标准的监听器 {{domxref("EventTarget.addEventListener", "addEventListener()")}} API 来监听`XMLHttpRequest` 事件。
 
@@ -125,8 +125,8 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - MDN 教程中的 `XMLHttpRequest`：
 
   - [Ajax](/zh-CN/docs/Web/Guide/AJAX)
-  - [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+  - [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+  - [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 
-- [XMLHttpRequest2 中的新技巧（2011）](https://web.dev/xhr2/)
+- [XMLHttpRequest2 中的新技巧（2011）](https://web.dev/articles/xhr2)

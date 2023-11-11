@@ -23,6 +23,5 @@ Firefox 3 對 DOM 做了一些改善，改善重點之一就是加強對於「�
 
 ### 延伸閱讀
 
-- [Firefox 3 開發人員須知](/zh_tw/docs/Firefox_3_for_developers)
-- [Firefox 3 對 CSS 的改善](/zh_tw/docs/Firefox_3_CSS_Improvement)
-- [DOM](/zh-TW/docs/DOM)
+- [Firefox 3 開發人員須知](/zh-TW/docs/Mozilla/Firefox/Releases/3)
+- [DOM](/zh-TW/docs/Web/API/Document_Object_Model)

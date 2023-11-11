@@ -84,7 +84,7 @@ Content-Language: de, en
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Language")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,7 +1,12 @@
 ---
-title: Navigator.clipboard
+title: "Navigator: clipboard プロパティ"
+short-title: clipboard
 slug: Web/API/Navigator/clipboard
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
+
+{{APIRef("Clipboard API")}}
 
 [クリップボード API](/ja/docs/Web/API/Clipboard_API) は **{{domxref("Navigator")}}** インターフェイスに読み取り専用の **`clipboard`** プロパティを追加し、これはクリップボードの内容を読み書きするために使用する {{domxref("Clipboard")}} オブジェクトを返します。
 
@@ -36,5 +41,3 @@ navigator.clipboard
 ## ブラウザーの互換性
 
 {{Compat}}
-
-{{APIRef("Clipboard API")}}

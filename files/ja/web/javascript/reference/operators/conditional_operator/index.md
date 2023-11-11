@@ -88,4 +88,4 @@ function example(…) {
 - [Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - [オプション連鎖](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)

@@ -294,7 +294,7 @@ Para testar várias interfaces numa única página - por exemplo, um conjunto de
 
 Figura 0.1 Página de Teste DOM
 
-![Image:DOM_Ref_Introduction_to_the_DOM.gif](/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
+![Image:DOM_Ref_Introduction_to_the_DOM.gif](dom_ref_introduction_to_the_dom.gif)
 
 Nesse exemplo, os menus drop-down atualizam dinamicamente os aspectos acessáveis pelo DOM na página web como o fundo (`bgColor`), a cor dos hiperlinks (`aLink`), e a cor do texto (`text`). Porém, ao desenhar suas páginas de teste, testar as interfaces conforme for lendo sobre elas é uma parte importante para aprender a usar o DOM de forma efetiva.
 

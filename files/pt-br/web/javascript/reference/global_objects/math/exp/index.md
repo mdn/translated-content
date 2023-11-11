@@ -36,15 +36,11 @@ Math.exp(1); // 2.718281828459045
 
 ## Especificações
 
-| Especificação                                                    | Status             | Comentário         |
-| ---------------------------------------------------------------- | ------------------ | ------------------ |
-| 1ª Edição ECMAScript 1st Edition. Implementado em JavaScript 1.0 | Padrão             | Definição Inicial. |
-| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}}               | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}                 | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.exp")}}
+{{Compat}}
 
 ## Veja também
 

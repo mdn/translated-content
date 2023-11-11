@@ -449,10 +449,7 @@ input:valid + span:after {
 
 ## Specifications
 
-| Specification                                                                              | Status                   | Comment            |
-| ------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#tel-state-(type=tel)', '&lt;input type="tel"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
-| {{SpecName('HTML5.1', 'sec-forms.html#tel-state-typetel', '&lt;input type="tel"&gt;')}}    | {{Spec2('HTML5.1')}}     | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

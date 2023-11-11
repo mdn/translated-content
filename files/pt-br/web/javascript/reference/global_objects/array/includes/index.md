@@ -92,7 +92,7 @@ Proposta ES7: <https://github.com/domenic/Array.prototype.contains/blob/master/s
 
 ## Compatibilidade
 
-{{Compat("javascript.builtins.Array.includes")}}
+{{Compat}}
 
 ## Veja Também
 

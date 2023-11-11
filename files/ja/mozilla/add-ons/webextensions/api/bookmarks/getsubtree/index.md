@@ -31,7 +31,7 @@ browser.bookmarks.getSubTree(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.getSubTree")}}
+{{Compat}}
 
 ## 例
 

@@ -27,13 +27,11 @@ console.log(window.navigator.appCodeName);
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                           | Комментарий             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-appcodename', 'NavigatorID.appCodeName')}} | {{Spec2('HTML WHATWG')}} | Изначальное определение |
+{{Specifications}}
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.appCodeName")}}
+{{Compat}}
 
 ## Смотрите также
 

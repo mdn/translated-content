@@ -63,13 +63,11 @@ Math.trunc =
 
 ## Especificações
 
-| Especificação                                        | Status           | Comentário         |
-| ---------------------------------------------------- | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-math.trunc', 'Math.trunc')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.Math.trunc")}}
+{{Compat}}
 
 ## Veja também
 

@@ -63,7 +63,7 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-ただし、1つだけ奇妙な場合があります。プロミスは決して [thenable] (/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) に履行されることはないので、もし `my-module.js` モジュールが `then()` という関数をエクスポートすると、その関数はダイナミックインポートのプロミスが履行されると自動的に呼ばれることになります。
+ただし、1つだけ奇妙な場合があります。プロミスは決して [thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) に履行されることはないので、もし `my-module.js` モジュールが `then()` という関数をエクスポートすると、その関数はダイナミックインポートのプロミスが履行されると自動的に呼ばれることになります。
 
 ```js
 // my-module.js

@@ -51,7 +51,7 @@ slug: Web/API/Element/dblclick_event
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event)
 - [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event)

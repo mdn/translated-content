@@ -1,94 +1,138 @@
 ---
-title: <col>
+title: "<col>: элемент столбца таблицы"
 slug: Web/HTML/Element/col
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
-**HTML-элемент** **`<col>`** определяет столбец в таблице и используется для определения общей семантики на всех ячейках. Обычно он находится в элементе {{HTMLElement("colgroup")}}.
 
-Этот элемент позволяет стилизировать столбцы с использованием CSS, но только несколько атрибутов будут иметь эффект на столбец ([смотри спецификацию CSS 2.1](https://www.w3.org/TR/CSS21/tables.html#columns)).
+Элемент **`<col>`** [HTML](/ru/docs/Web/HTML) определяет столбец в таблице и используется для определения общей семантики для всех общих ячеек. Обычно он находится внутри элемента {{HTMLElement("colgroup")}}.
 
-| [Категория контента](/ru/docs/HTML/Content_categories) | Нет                                                                                                                                                                                                                                    |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                  | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                                                               |
-| Пропуск тегов                                          | Начальный тег обязательный, но, поскольку это элемент без контента, использование концевого тега запрещено.                                                                                                                            |
-| Допустимые родители                                    | Только {{HTMLElement("colgroup")}}, хотя он может быть определён неявно, т. к. его стартовый тег не является обязательным. Тег {{HTMLElement("colgroup")}} обязан не иметь атрибута [`span`](/ru/docs/Web/HTML/Element/colgroup#span). |
-| Допустимые ARIA-роли                                   | нет                                                                                                                                                                                                                                    |
-| DOM-интерфейс                                          | {{domxref("HTMLTableColElement")}}                                                                                                                                                                                                     |
+{{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
+
+`<col>` позволяет стилизовать столбцы с помощью CSS, но не все свойства будут влиять на столбец ([смотри спецификацию CSS 2.1](https://www.w3.org/TR/CSS21/tables.html#columns) для получения списка).
 
 ## Атрибуты
 
-Этот элемент включает [общие атрибуты](/ru/docs/Web/HTML/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecated_inline}},
+- `span`
+  - : Этот атрибут содержит целое положительное число, указывающее количество последовательных столбцов, которые заполняет элемент `<col>`. Если он отсутствует, то его значение по умолчанию равно "1".
 
-  - : Этот перечисляемый атрибут указывает, как будет обрабатываться горизонтальное выравнивание контента каждой ячейки столбца. Возможные значения:
+### Устаревшие атрибуты
 
-    - `left`, выравнивает контент к левой стороне ячейки
-    - `center`, центрирует контент ячейки
-    - `right`, выравнивает контент к правой стороне ячейки
-    - `justify`, вставляет пробелы в текстовый контент так, чтобы контент был выравнен по ширине
-    - `char`, выравнивает текстовый контент по специальному символу с минимальным смещением, определяемым атрибутами [`char`](/ru/docs/Web/HTML/Element/col#char) и [`charoff`](/ru/docs/Web/HTML/Element/col#charoff) {{unimplemented_inline(2212)}}.Если этот атрибут не установлен, его значение будет переопределено от [`align`](/ru/docs/Web/HTML/Element/colgroup#align) элемента {{HTMLElement("colgroup")}}, к которому этот элемент принадлежит. Если его также нет, предполагается значение `left`.
+Следующие атрибуты устарели и не должны использоваться. Они задокументированы ниже для справки при обновлении существующего кода и исключительно для исторического интереса.
 
-      > **Примечание:**Не используйте этот атрибут, поскольку он устарел (не поддерживается) в последнем стандарте.
-      > To achieve the same effect as the `left`, `center`, `right` or `justify` values:
-      >
-      > - Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
-      > - If the table doesn't use a [`colspan`](/ru/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
-      > - If the table does use a [`colspan`](/ru/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
-      > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/ru/docs/Web/HTML/Element/col#char) as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+- `align` {{deprecated_inline}}
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
-  - | : Этот атрибут определяет цвет фона каждой ячейки столбца. Это один из 6-и значных кодов в шестнадцатеричной системе счисления, определённый как [sRGB](https://www.w3.org/Graphics/Color/sRGB) с префиксом '#'. Можно использовать одну из шестнадцати предопределённых строк: |                       | `black` = "#000000" |                      | `green` = "#008000"                                                                                                                                                                                                                                                                                                                                                                                    |
-    | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    |                                                                                                                                                                                                                                                                                 | `silver` = "#C0C0C0"  |                     | `lime` = "#00FF00"   |
-    |                                                                                                                                                                                                                                                                                 | `gray` = "#808080"    |                     | `olive` = "#808000"  |
-    |                                                                                                                                                                                                                                                                                 | `white` = "#FFFFFF"   |                     | `yellow` = "#FFFF00" |
-    |                                                                                                                                                                                                                                                                                 | `maroon` = "#800000"  |                     | `navy` = "#000080"   |
-    |                                                                                                                                                                                                                                                                                 | `red` = "#FF0000"     |                     | `blue` = "#0000FF"   |
-    |                                                                                                                                                                                                                                                                                 | `purple` = "#800080"  |                     | `teal` = "#008080"   |
-    |                                                                                                                                                                                                                                                                                 | `fuchsia` = "#FF00FF" |                     | `aqua` = "#00FFFF"   | > **Примечание:** Не используй этот атрибут, поскольку он нестандартный и реализован только в некоторых версиях Microsoft Internet Explorer: элемент {{HTMLElement("col")}} должно быть стилизован с использованием [CSS](/ru/docs/CSS). Для получения подобного эффекта, используй свойство [CSS](/ru/docs/CSS) {{cssxref("background-color")}}, для соответствующих элементов {{HTMLElement("td")}}. |
-- {{htmlattrdef("char")}} {{deprecated_inline}},
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/ru/docs/Web/HTML/Element/col#align) is not set to `char`, this attribute is ignored.
-    > **Примечание:** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/ru/docs/Web/HTML/Element/col#char), in CSS3, you can use the character set using the [`char`](/ru/docs/Web/HTML/Element/col#char) attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
-- {{htmlattrdef("charoff")}} {{deprecated_inline}},
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
-    > **Примечание:**Do not use this attribute as it is obsolete (and not supported) in the latest standard.
-- {{htmlattrdef("span")}}
-  - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
-- {{htmlattrdef("valign")}} {{deprecated_inline}},
+  - : Этот атрибут [enumerated](/ru/docs/Glossary/Enumerated) указывает, как будет обрабатываться выравнивание содержимого ячейки каждого столбца по горизонтали. Возможными значениями являются:
 
-  - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - and `top`, which will put the text as close to the top of the cell as it is possible.
-      > **Примечание:** Do not use this attribute as it is obsolete (and not supported) in the latest standard:
-      >
-      > - Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
-      > - If the table doesn't use a [`colspan`](/ru/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-child(an+b)` CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
-      > - If the table does use a [`colspan`](/ru/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    - `left`, выравнивание содержимого по левому краю ячейки
+    - `center`, выравнивание содержимого по центру ячейки
+    - `right`, выравнивание содержимого по правому краю ячейки
+    - `justify`, добавляет пробелы в текстовое содержимое так, чтобы содержимое было выровнено по ширине ячейки
 
-- {{htmlattrdef("width")}}
-  - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.
+    If this attribute is not set, its value is inherited from the [`align`](/ru/docs/Web/HTML/Element/colgroup#align) of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
 
-## Пример
+    > **Примечание:** Чтобы достичь того же эффекта, что и значения `left`, `center`, `right` или `justify`, не пытайтесь установить свойство {{cssxref("text-align")}} для селектора, задающего элемент `<col>`. Поскольку элементы {{HTMLElement("td")}} не являются потомками элемента `<col>`, они не унаследуют его.
+    >
+    > Если таблица не использует атрибут [`colspan`](/ru/docs/Web/HTML/Element/td#colspan), используйте CSS-селектор `td:n-й дочерний элемент(an+b)`. Установите `a` равным нулю, а `b` - положению столбца в таблице, например `td:nth-child(2) { text-align: right; }`, чтобы выровнять второй столбец по правому краю.
+    >
+    > Если таблица использует атрибут [`colspan`](/ru/docs/Web/HTML/Element/td#colspan), эффект может быть достигнут путем объединения соответствующих селекторов атрибутов CSS, таких как `[colspan=n]`, хотя это и не тривиально.
+
+- `bgcolor` {{Deprecated_inline}}
+
+  - : Задний фон таблицы. Это [6-значный шестнадцатеричный RGB-код](/ru/docs/Web/CSS/hex-color) с префиксом "#`. Также можно использовать одно из предопределенных [цветовых ключевых слов](/ru/docs/Web/CSS/color_value#named_colors).
+
+  Чтобы добиться аналогичного эффекта, используйте свойство CSS {{cssref("background-color")}}.
+
+- `char` {{deprecated_inline}}
+  - : Этот атрибут используется для установки символа, по которому будут выравниваться ячейки в столбце. Типичные значения для этого включают точку (.) при попытке выровнять числа или денежные значения. Если для [`align`](/ru/docs/Web/HTML/Element/col#align) не задано значение `char`, этот атрибут игнорируется.
+- `charoff` {{deprecated_inline}}
+  - : Этот атрибут используется для указания количества символов для смещения данных столбца по сравнению с символами выравнивания, указанными атрибутом `char`.
+- `valign` {{deprecated_inline}}
+
+  - : Этот атрибут определяет выравнивание текста по вертикали в каждой ячейке столбца. Возможными значениями для этого атрибута являются:
+
+    - `baseline`, располагает текст как можно ближе к нижней части ячейки, но выровняет его по [базовой линии](https://en.wikipedia.org/wiki/Baseline_%28typography%29) символов вместо их нижней части. Если все символы имеют одинаковый размер, это имеет тот же эффект, что и `нижний`.
+    - `bottom`, помещает текст как можно ближе к нижней части ячейки, насколько это возможно;
+    - `middle`, помещает текст по центру ячейки
+    - и `top`, помещает текст как можно ближе к верхней части ячейки, насколько это возможно;
+
+    > **Примечание:** Не пытайтесь установить свойство {{cssxref("выравнивание по вертикали")}} для селектора, дающего элемент `<col>`. Поскольку элементы {{HTMLElement("td")}} не являются потомками элемента `<col>`, они не унаследуют его.
+    >
+    > Если таблица не использует атрибут [`colspan`](/ru/docs/Web/HTML/Element/td#colspan), используйте CSS-селектор `td:nth-child(an+b)`, где 'a' - общее количество столбцов в таблице, а 'b' - порядковый номер положение столбца в таблице. Только после этого выбора можно использовать свойство `выравнивание по вертикали`.
+    >
+    > Если таблица действительно использует атрибут [`colspan`](/ru/docs/Web/HTML/Element/td#colspan), эффект может быть достигнут путем объединения соответствующих селекторов атрибутов CSS, таких как `[colspan=n]`, хотя это и не тривиально.
+
+- `width` {{deprecated_inline}}
+  - : Этот атрибут определяет ширину по умолчанию для каждого столбца в текущей группе столбцов. В дополнение к стандартным значениям в пикселях и процентах, этот атрибут может принимать специальную форму `0*`, что означает, что ширина каждого столбца в группе должна быть минимальной шириной, необходимой для размещения содержимого столбца. Также можно использовать относительную ширину, такую как "5\*".
+
+## Примеры
 
 Please see the {{HTMLElement("table")}} page for examples on `<col>`.
+
+## Техническое резюме
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ru/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None; it is a {{Glossary("void element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>It must have start tag, but must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        {{HTMLElement("colgroup")}} only, though it can be implicitly
+        defined as its start tag is not mandatory. The
+        {{HTMLElement("colgroup")}} must not have a
+        <a href="/ru/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTableColElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Спецификации
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Браузерная совместимость
 
 {{Compat}}
 
 ## Смотрите также
 
-- Other table-related HTML elements: {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
-- CSS properties and pseudo-classes that may be specially useful to style the `<col>` element:
+- Свойства CSS и псевдоклассы, которые могут быть особенно полезны для оформления элемента `<col>`:
 
-  - the {{cssxref("width")}} property to control the width of the column;
-  - the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
-  - the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.
+  - свойство {{cssxref("width")}} позволяет контролировать ширину колонок;
+  - псевдо-селектор {{cssxref(":nth-child")}} чтобы задать стили определенным ячейкам;
+  - свойство {{cssxref("text-align")}} для выравнивания текста внутри ячейки.

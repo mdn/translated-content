@@ -15,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("mouseout", (event) => {});
+addEventListener("mouseover", (event) => {});
 
-onmouseout = (event) => {};
+onmouseover = (event) => {};
 ```
 
 ## イベント型

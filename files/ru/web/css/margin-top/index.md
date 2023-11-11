@@ -62,12 +62,7 @@ margin-top: unset;
 
 ## Спецификации
 
-| Specification                                                      | Status                        | Comment                                               |
-| ------------------------------------------------------------------ | ----------------------------- | ----------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}              | {{Spec2('CSS3 Box')}}         | Никаких существенных изменений                        |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}}  | {{Spec2('CSS3 Transitions')}} | Определяет `margin-top` как анимационный.             |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}           | Устраняет его влияние на строковые (inline) элементы. |
-| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                  | {{Spec2('CSS1')}}             | Начальное определение                                 |
+{{Specifications}}
 
 {{cssinfo}}
 

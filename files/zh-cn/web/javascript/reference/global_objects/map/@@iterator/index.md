@@ -5,41 +5,34 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 
 {{JSRef}}
 
-**`@@iterator`** 属性的初始值与 {{jsxref("Map.prototype.entries()", "entries")}} 属性的初始值是同一个函数对象。
+{{jsxref("Map")}} 实例的 **`[@@iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许 `Map` 对象被大多数语法所接受，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个 [map 迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，此对象会以插入顺序生成 map 的键值对。
+
+该属性的初始值与 {{jsxref("Map.prototype.entries")}} 属性的初始值是同一个函数对象。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
 
 ## 语法
 
-```plain
-myMap[Symbol.iterator]
+```js-nolint
+map[Symbol.iterator]()
 ```
+
+### 参数
+
+无。
 
 ### 返回值
 
-map 的 **iterator** 函数默认就是 {{jsxref("Map.prototype.entries()", "entries()")}} 函数。
+与 {{jsxref("Map.prototype.entries()")}} 返回值相同：一个新的[迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它会以插入顺序生成 map 的键值对。
 
 ## 示例
 
-### 使用 `[@@iterator]()`
+### 使用 for...of 循环进行迭代
+
+请注意，通常你不需要直接调用此方法。`@@iterator` 方法的存在使得 `Map` 对象[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，而像 `for...of` 循环这样的迭代语法会自动调用此方法以获取用于循环的迭代器。
 
 ```js
-var myMap = new Map();
-myMap.set("0", "foo");
-myMap.set(1, "bar");
-myMap.set({}, "baz");
-
-var mapIter = myMap[Symbol.iterator]();
-//返回的其实是个 generator
-console.log(mapIter.next().value); // ["0", "foo"]
-console.log(mapIter.next().value); // [1, "bar"]
-console.log(mapIter.next().value); // [Object, "baz"]
-```
-
-### 在 `for..of` 中使用 `[@@iterator]()`
-
-```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set("0", "foo");
 myMap.set(1, "bar");
 myMap.set({}, "baz");
@@ -51,13 +44,29 @@ for (const entry of myMap) {
 // [1, "bar"]
 // [{}, "baz"]
 
-for (var v of myMap) {
-  console.log(v);
+for (const [key, value] of myMap) {
+  console.log(`${key}: ${value}`);
 }
-
 // 0: foo
 // 1: bar
 // [Object]: baz
+```
+
+### 手动控制迭代器
+
+你仍然可以手动调用返回的迭代器对象的 `next()` 方法来获得最大程度的控制权。
+
+```js
+const myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
+
+const mapIter = myMap[Symbol.iterator]();
+
+console.log(mapIter.next().value); // ["0", "foo"]
+console.log(mapIter.next().value); // [1, "bar"]
+console.log(mapIter.next().value); // [Object, "baz"]
 ```
 
 ## 规范
@@ -70,6 +79,9 @@ for (var v of myMap) {
 
 ## 参见
 
+- {{jsxref("Map")}}
 - {{jsxref("Map.prototype.entries()")}}
 - {{jsxref("Map.prototype.keys()")}}
 - {{jsxref("Map.prototype.values()")}}
+- {{jsxref("Symbol.iterator")}}
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

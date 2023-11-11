@@ -33,10 +33,8 @@ console.log(navigator.platform);
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                           | Комментарий       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-platform', 'NavigatorID.platform')}} | {{Spec2('HTML WHATWG')}} | Текущее описание. |
+{{Specifications}}
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.platform")}}
+{{Compat}}

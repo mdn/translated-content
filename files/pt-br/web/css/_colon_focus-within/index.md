@@ -63,13 +63,11 @@ input {
 
 ## Especificações
 
-| Especificação                                                               | Status                      | Comentário          |
-| --------------------------------------------------------------------------- | --------------------------- | ------------------- |
-| {{SpecName("CSS4 Selectors", "#the-focus-within-pseudo", ":focus-within")}} | {{Spec2("CSS4 Selectors")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.focus-within")}}
+{{Compat}}
 
 ## Veja também
 

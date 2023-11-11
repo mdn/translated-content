@@ -3,6 +3,8 @@ title: Préchargement
 slug: Glossary/Prefetch
 ---
 
+{{GlossarySidebar}}
+
 ### Qu'est ce que le préchargement de liens&nbsp;?
 
 Le préchargement de liens est un mécanisme du navigateur qui utilise le temps disponible du navigateur pour télécharger ou _précharger_ les documents que les utilisateurs pourraient visiter juste après. Une page web fournit un ensemble de cibles à précharger au navigateur. Une fois que le navigateur a fini de charger la page, il commence, de façon transparente, à précharger les documents spécifiés et les emmagasine dans son cache. Quand l'utilisateur visite un de ces documents préchargés, il peut être ressorti rapidement du cache du navigateur.

@@ -1,9 +1,12 @@
 ---
 title: "NDEFReader: reading イベント"
+short-title: reading
 slug: Web/API/NDEFReader/reading_event
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 `reading` は {{DOMxRef("NDEFReader")}} インターフェイスのイベントで、タグがリーダーの磁気誘導範囲に入り、互換性のある NFC 機器（例えば NDEF に対応している NFC タグ）からの読み取りが可能になるたびに発行されます。
 

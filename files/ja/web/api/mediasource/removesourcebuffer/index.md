@@ -44,7 +44,7 @@ mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.removeSourceBuffer")}}
+{{Compat}}
 
 ## 関連情報
 

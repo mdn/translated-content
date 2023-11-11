@@ -67,14 +67,11 @@ p:nth-of-type(1) {
 
 ## Especificações
 
-| Especificação                                                         | Sitação                     | Comentário                                                       |
-| --------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS4 Selectors')}} | Não é necessário que os elementos correspondentes tenham um pai. |
-| {{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.nth-of-type")}}
+{{Compat}}
 
 ## Veja também
 

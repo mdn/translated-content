@@ -14,7 +14,7 @@ slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript
         基础（参见<a
@@ -166,7 +166,7 @@ class Student extends Person {
 }
 ```
 
-在这个类的声明中，`#year` 是一个[私有数据属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)。我们可以构造一个 `Student` 对象，然后在内部使用 `#year`，但如果在类的外部尝试访问 `#year`，浏览器将会抛出错误：
+在这个类的声明中，`#year` 是一个[私有数据属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。我们可以构造一个 `Student` 对象，然后在内部使用 `#year`，但如果在类的外部尝试访问 `#year`，浏览器将会抛出错误：
 
 ```js
 const summers = new Student("Summers", 2);

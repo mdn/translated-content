@@ -42,11 +42,11 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 
 ## Especificações
 
-_Esse método é não-padrão e não é parte de qualquer especificação, no entanto ele esteve presente nos primeiros rascunhos de {{SpecName("CSS3 Animations")}}._
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat()}}
+{{Compat}}
 
 ## See also
 

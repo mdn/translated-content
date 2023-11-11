@@ -79,15 +79,13 @@ O CSS do exemplo a seguir pode ser editado para permitir que você mude os valor
 
 ## Especificações
 
-| Especificação                                                                                                                            | Status                  | Comentário         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------------ |
-| {{SpecName('CSS4 Fonts', '#low-level-font-variation-settings-control-the-font-variation-settings-property', 'font-variation-settings')}} | {{Spec2('CSS4 Fonts')}} | Initial definition |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.font-variation-settings")}}
+{{Compat}}
 
 ## Veja também
 

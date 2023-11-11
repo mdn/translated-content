@@ -31,6 +31,6 @@ evtSource.onopen = function () {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("EventSource")}}

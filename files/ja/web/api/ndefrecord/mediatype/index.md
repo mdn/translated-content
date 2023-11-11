@@ -1,21 +1,24 @@
 ---
-title: NDEFRecord.mediaType
+title: "NDEFRecord: mediaType プロパティ"
+short-title: mediaType
 slug: Web/API/NDEFRecord/mediaType
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 **`mediaType`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードの {{Glossary("MIME type", "MIME タイプ")}}を返します。この値は `recordType` が `"mime"` と等しくない場合は `null` になります。
 
 ## 構文
 
-```js
-NDEFRecord.mediaType;
+```js-nolint
+NDEFRecord.mediaType
 ```
 
 ### 値
 
-{{DOMxRef("USVString")}} で、このレコードのペイロードの {{Glossary("MIME type", "MIME タイプ")}}が入ります。
+文字列で、このレコードのペイロードの {{Glossary("MIME type", "MIME タイプ")}}が入ります。
 
 ## 例
 

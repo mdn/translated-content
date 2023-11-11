@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         完成前面所有的指南主题，包括
         <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms"
@@ -475,7 +475,7 @@ heroku ps   #Display dyno status
 
 本教程介绍在生产环境中，如何配置 Express 应用。是 Express 系列教程的最后一个。我们希望你觉得这些教程有用。你可以在[Github 上取得完整的源码](https://github.com/mdn/express-locallibrary-tutorial)。
 
-## 相关链接
+## 参见
 
 - [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) (Express docs)
 - [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)

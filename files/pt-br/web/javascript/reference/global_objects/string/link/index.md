@@ -44,13 +44,11 @@ console.log("Clique para retornar à" + hotText.link(URL));
 
 ## Especificações
 
-| Specification                                                                  |
-| ------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.link', 'String.prototype.link')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.link")}}
+{{Compat}}
 
 ## Veja também
 

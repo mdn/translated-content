@@ -29,4 +29,4 @@ Este elemento implementa a interface do [`SVGMetadataElement`](/pt-BR/DOM/SVGMet
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.metadata")}}
+{{Compat}}

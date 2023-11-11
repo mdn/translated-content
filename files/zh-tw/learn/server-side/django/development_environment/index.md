@@ -46,7 +46,7 @@ Django 如何在安裝和配置方面非常靈活。Django 可以：
 
 每個選項都需要略微不同的配置和設置。以下小節解釋了你的一些選擇。對於本文的其餘部分，我們將介紹 Django 在少見的操作系統上的設置，考量該模塊的其餘部分。
 
-> **備註：** 其他可能的安裝選項在官方 Django 文檔中介紹。[相應文件點擊這裡](/zh-CN/docs/learn/Server-side/Django/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83#furtherreading)。
+> **備註：** 其他可能的安裝選項在官方 Django 文檔中介紹。[相應文件點擊這裡](#參見)。
 
 #### 支持哪些操作系統?
 
@@ -388,7 +388,7 @@ Quit the server with CONTROL-C.
 
 在測試部分，您還簡要了解了，我們如何使用`django-admin startproject`，創建一個新的 Django 網站，並使用開發 Web 服務器（`python3 manage.py runserver`）在瀏覽器中運行它。在下一篇文章中，我們將擴展此過程，構建一個簡單、但完整的 Web 應用程序。
 
-## 參閱
+## 參見
 
 - [Quick Install Guide](https://docs.djangoproject.com/en/2.0/intro/install/) (Django docs)
 - [How to install Django — Complete guide](https://docs.djangoproject.com/en/2.0/topics/install/) (Django docs) - includes information on how to remove Django

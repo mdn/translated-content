@@ -57,10 +57,7 @@ svg {
 
 ## Спецификации
 
-| Specification                                                                  | Status                        | Comment            |
-| ------------------------------------------------------------------------------ | ----------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#AttributeNameAttribute", "attributeName")}}   | {{Spec2("SVG Animations 2")}} | No change          |
-| {{SpecName("SVG1.1", "animate.html#AttributeNameAttribute", "attributeName")}} | {{Spec2("SVG1.1")}}           | Initial definition |
+{{Specifications}}
 
 ## Смотрите также
 

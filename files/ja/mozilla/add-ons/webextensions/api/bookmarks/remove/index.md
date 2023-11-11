@@ -27,7 +27,7 @@ browser.bookmarks.remove(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.remove")}}
+{{Compat}}
 
 ## 使用例
 

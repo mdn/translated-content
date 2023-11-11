@@ -1,51 +1,61 @@
 ---
-title: ByteLengthQueuingStrategy.size()
+title: "ByteLengthQueuingStrategy: size() メソッド"
+short-title: size()
 slug: Web/API/ByteLengthQueuingStrategy/size
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-{{domxref("ByteLengthQueuingStrategy")}} インターフェイスの **`size()`** メソッドは、所与のチャンクの `byteLength` プロパティを返します。
+**`size()`** は {{domxref("ByteLengthQueuingStrategy")}} インターフェイスのメソッドで、指定されたチャンクの `byteLength` プロパティを返します。
 
 ## 構文
 
+```js-nolint
+size(chunk)
 ```
-var size = byteLengthQueuingStrategy.size(chunk);
-```
 
-### パラメーター
+### 引数
 
-- chunk
-  - : ストリームを通過するデータのチャンク。
+- `chunk`
+  - : ストリームを通して渡されるデータのチャンク。
 
-### 戻り値
+### 返値
 
-所与のチャンクのバイト長を表す整数。
+指定されたチャンクのバイト長を表す整数です。
 
 ## 例
 
 ```js
 const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    ...
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    ...
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
-var size = queueingStrategy.size(chunk);
+const size = queueingStrategy.size(chunk);
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ByteLengthQueuingStrategy.size")}}
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} コンストラクター

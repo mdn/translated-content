@@ -30,9 +30,9 @@ WebAssembly는 JavaScript와 함께 보완되고 실행되도록 설계되었습
 - [Loading and running WebAssembly code](/ko/docs/WebAssembly/Loading_and_running)
   - : Wasm 모듈을 사용한 후에는 [WebAssembly JavaScript](/ko/docs/WebAssembly/JavAscript_interface) API를 [Fetch](/ko/docs/Web/API/Fetch_API) 또는 [XHR](/ko/docs/Web/API/XMLHtpRequest) API와 결합하는 방법에 대해 설명합니다.
 - [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)
-  - : wasm 모듈을 브라우저로 불러왔으면, 사용해야겠지요? 본 글에서는 웹어셈블리 자바스크립트 API를 이용하여 웹어셈블리를 어떻게 사용하는지를 설명합니다.
+  - : wasm 모듈을 브라우저로 불러왔으면, 사용해야겠지요? 본 글에서는 웹어셈블리 JavaScript API를 이용하여 웹어셈블리를 어떻게 사용하는지를 설명합니다.
 - [Exported WebAssembly functions](/ko/docs/WebAssembly/Exported_functions)
-  - : 익스포트 된 웹어셈블리 함수는 자바스크립트에서의 웹어셈블리 함수의 반영이며, 자바스크립트에서 웹어셈블리 코드를 호출할 수 있도록 해줍니다. 본 글에서는 익스포트 된 웹어셈블리 함수가 무엇인지에 대해 설명합니다.
+  - : 익스포트 된 웹어셈블리 함수는 JavaScript에서의 웹어셈블리 함수의 반영이며, JavaScript에서 웹어셈블리 코드를 호출할 수 있도록 해줍니다. 본 글에서는 익스포트 된 웹어셈블리 함수가 무엇인지에 대해 설명합니다.
 - [Understanding WebAssembly text format](/ko/docs/WebAssembly/Understanding_the_text_format)
   - : 본 글에서는 웹어셈블리의 텍스트 포맷에 대해 설명합니다. 텍스트 포맷은 브라우저에서 개발자 도구를 이용하여 디버깅 할 때 보여지는 wasm 모듈의 저수준(Low-level) 문자형 표현입니다.
 - [Converting WebAssembly text format to wasm](/ko/docs/WebAssembly/Text_format_to_wasm)
@@ -49,7 +49,7 @@ WebAssembly는 JavaScript와 함께 보완되고 실행되도록 설계되었습
 - [`WebAssembly.Module()`](/ko/docs/WebAssembly/JavaScript_interface/Module)
   - : `WebAssembly.Module` 개체에는 브라우저에서 이미 컴파일한 상태의 stateless WebAssembly 코드가 포함되어 있으며 효율적으로 [Worker와 효율적으로 공유](/ko/docs/Web/API/Worker/postMessage)하고 여러 번 인스턴스화 할 수 있습니다.
 - [`WebAssembly.Instance()`](/ko/docs/WebAssembly/JavaScript_interface/Instance)
-  - : `WebAssembly.Instance` 객체는 상태를 가지며, 실행가능한 `Module`의 인스턴스입니다. `Instance` 객체는 웹어셈블리 코드를 자바스크립트에서 부를 수 있도록 [익스포트된 모든 웹어셈블리 함수](/ko/docs/WebAssembly/Exported_functions)를 포함하고있습니다.
+  - : `WebAssembly.Instance` 객체는 상태를 가지며, 실행가능한 `Module`의 인스턴스입니다. `Instance` 객체는 웹어셈블리 코드를 JavaScript에서 부를 수 있도록 [익스포트된 모든 웹어셈블리 함수](/ko/docs/WebAssembly/Exported_functions)를 포함하고있습니다.
 - [`WebAssembly.compile()`](/ko/docs/WebAssembly/JavaScript_interface/compile)
   - : `WebAssembly.compile()` 함수는 WebAssembly 이진 코드를 `WebAssembly.Module`개체로 컴파일 합니다.
 - [`WebAssembly.compileStreaming()`](/ko/docs/WebAssembly/JavaScript_interface/compileStreaming)

@@ -48,14 +48,11 @@ numbers.sort(compareNumbers);
 
 ## Especificações
 
-| Especificações                                                                           | Status               | Comentários        |
-| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.TypedArray.sort")}}
+{{Compat}}
 
 ## Ver também
 

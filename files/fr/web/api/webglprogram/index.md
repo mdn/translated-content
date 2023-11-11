@@ -5,7 +5,7 @@ slug: Web/API/WebGLProgram
 
 {{APIRef("WebGL")}}
 
-Le **WebGLProgram** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et il est une combinaison de deux {{domxref ("WebGLShader")}} compilés constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ces dernier sont ensuite liés dans un programme utilisable.
+Le **WebGLProgram** fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et il est une combinaison de deux {{domxref ("WebGLShader")}} compilés constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ces dernier sont ensuite liés dans un programme utilisable.
 
 ```js
 var programme = gl.createProgram();

@@ -29,13 +29,11 @@ console.log("Another one bites the dust".split(new ReverseSplit()));
 
 ## Especificações
 
-| Especificação                                                |
-| ------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.split")}}
+{{Compat}}
 
 ## Veja também
 

@@ -102,7 +102,7 @@ flatDeep(arr, Infinity);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.flat")}}
+{{Compat}}
 
 ## Veja Também
 

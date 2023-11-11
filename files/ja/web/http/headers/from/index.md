@@ -49,7 +49,7 @@ From: webmaster@example.org
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.From")}}
+{{Compat}}
 
 ## 関連情報
 

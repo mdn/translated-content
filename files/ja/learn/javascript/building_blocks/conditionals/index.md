@@ -357,7 +357,7 @@ function setWeather() {
 
 ## 三項演算子
 
-例題に進む前に、ちょっとした構文をご紹介しましょう。[三項演算子 (もしくは条件演算子)](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) は条件式を判定し、その結果に応じて 2 つの値または式のうち、どちらか一方を返します。これはある状況においてはとても便利です。単純に `true`/`false` で判定可能な 2 つの選択肢のうちより片方を選ぶという場合には、`if...else` ブロックを書くよりも多くのコードを節約できます。この擬似コードは以下のようなものになります。
+例題に進む前に、ちょっとした構文をご紹介しましょう。[三項演算子 (もしくは条件演算子)](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator) は条件式を判定し、その結果に応じて 2 つの値または式のうち、どちらか一方を返します。これはある状況においてはとても便利です。単純に `true`/`false` で判定可能な 2 つの選択肢のうちより片方を選ぶという場合には、`if...else` ブロックを書くよりも多くのコードを節約できます。この擬似コードは以下のようなものになります。
 
 ```
 ( 条件式 ) ? こちらのコードを実行する : 代わりにこちらのコードを実行する
@@ -791,6 +791,6 @@ textarea.onkeyup = function () {
 - [比較演算子](/ja/Learn/JavaScript/First_steps/Math#Comparison_operators)
 - [条件式についての詳細](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
 - [if...else リファレンス](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
-- [条件 (三項) 演算子リファレンス](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [条件 (三項) 演算子リファレンス](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}

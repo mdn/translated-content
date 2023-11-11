@@ -9,8 +9,6 @@ slug: Glossary/Viewport
 
 视口当前可见的部分叫做**可视视口**（visual viewport）。可视视口可能会比**布局视口**（layout viewport）更小，因为当用户缩小浏览器缩放比例时，布局视口不变，而可视视口变小了。
 
-## 了解更多
-
-### 常规知识
+## 参见
 
 - [Viewport](https://zh.wikipedia.org/wiki/Viewport) 维基百科

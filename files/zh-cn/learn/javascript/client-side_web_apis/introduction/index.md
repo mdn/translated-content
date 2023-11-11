@@ -7,10 +7,10 @@ slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 
 首先，我们将从一个高层次看看 API - 它们是什么；他们如何工作；如何在代码中使用它们，以及它们是如何组织的。我们也将看看不同主要类别的 API 以及它们的用途。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
-      <th scope="row">预备知识</th>
+      <th scope="row">前提：</th>
       <td>
         基本计算机知识，对于 HTML 和 CSS 的基本理解（见<a
           href="/zh-CN/docs/Learn/JavaScript/First_steps"
@@ -22,7 +22,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Introduction
       </td>
     </tr>
     <tr>
-      <th scope="row">目标</th>
+      <th scope="row">目标：</th>
       <td>熟悉 API，他们可以做什么，以及如何在代码中使用它们。</td>
     </tr>
   </tbody>

@@ -66,7 +66,7 @@ var querying = browser.tabs.query(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.query", 10)}}
+{{Compat}}
 
 ## 例
 

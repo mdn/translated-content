@@ -10,7 +10,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         阅读
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"

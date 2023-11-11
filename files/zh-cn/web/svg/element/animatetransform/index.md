@@ -60,6 +60,6 @@ slug: Web/SVG/Element/animateTransform
 - {{ SVGAttr("to") }}
 - {{ SVGAttr("type") }}
 
-## DOM Interface
+## DOM 接口
 
-该元素实现了[`SVGAnimateTransformElement`](/zh-CN/docs/DOM/SVGAnimateTransformElement)接口。
+该元素实现了 [`SVGAnimateTransformElement`](/zh-CN/docs/DOM/SVGAnimateTransformElement) 接口。

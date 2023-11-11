@@ -13,14 +13,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 
 ```js-nolint
 unshift()
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, /* …, */ elementN)
 ```
 
 ### 参数
 
-- `elementN`
+- `element1`、…、`elementN`
   - : 添加到 `arr` 开头的元素。
 
 ### 返回值

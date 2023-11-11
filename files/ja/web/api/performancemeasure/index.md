@@ -36,7 +36,7 @@ slug: Web/API/PerformanceMeasure
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceMeasure")}}
+{{Compat}}
 
 ## あわせて参照
 
