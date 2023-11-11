@@ -13,7 +13,7 @@ WebAssembly 是一種新形態的程式碼，它可以被執行在現代瀏覽�
 
 這在 Web 平臺上具備很重大的意義——它提供了一種方式來在近原生的速度下執行多種語言撰寫的程式碼，這是以前的使用者端運行的程式是無法達成的。
 
-更甚，你甚至不必知道如何創建 WebAssembly 就可以享受它的優勢。WebAssembly 模組可以被引入到一個 Web 或 Node.js 應用程式，提供 WebAssembly 的函式供 JavaScript 使用。JavaScript 框架仍然可以在使用 WebAssembly 所提供的巨大效能優勢以及新功能的情況下為 Web 開發者良好運作。
+更甚，你甚至不必知道如何創建 WebAssembly 就可以享受它的優勢。WebAssembly 模組可以被引入到一個 Web 或 Node.js 應用程式，提供 WebAssembly 的函式供 JavaScript 使用。JavaScript 框架仍然可以在使用 WebAssembly 所提供的巨大效能優勢以及新特性的情況下為 Web 開發者良好運作。
 
 ## WebAssembly 的目標
 
