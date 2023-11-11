@@ -44,7 +44,7 @@ reduceRight(callbackFn, initialValue)
 
 `callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
 
-他の[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)とは異なり、 `reduceRight()` は `thisArg` 引数を受け入れません。 `callbackFn` は常に `undefined` を `this` として呼び出され、 `callbackFn` が厳格モードでない場合は `globalThis` に置き換えられます。
+他の[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)とは異なり、 `reduceRight()` は `thisArg` 引数を受け入れません。 `callbackFn` は常に `undefined` を `this` として呼び出され、 `callbackFn` が厳格モードでない場合は `globalThis` に置き換えられます。
 
 `reduceRight()` メソッドは呼び出し元の配列を変更しませんが、 `callbackFn` に指定された関数は変更することがあります。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
 

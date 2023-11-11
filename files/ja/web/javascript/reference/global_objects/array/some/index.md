@@ -30,7 +30,7 @@ some(callbackFn, thisArg)
       - : `some()` が呼び出された配列です。
 
 - `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行する際に `this` として使用される値。[反復可能メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復可能メソッド)を参照してください。
+  - : `callbackFn` を実行する際に `this` として使用される値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
@@ -38,7 +38,7 @@ some(callbackFn, thisArg)
 
 ## 解説
 
-`some()` メソッドは[反復可能メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復可能メソッド)です。指定された `callbackFn` 関数を配列の各要素に対して一度ずつ、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返すまで呼び出します。該当する要素が見つかった場合は、 `some()` は直ちに `true` を返し、配列の反復処理を中止します。一方、 `callbackFn` がすべての要素に対して[偽値](/ja/docs/Glossary/Falsy)を返した場合、 `some()` は `false` を返します。
+`some()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された `callbackFn` 関数を配列の各要素に対して一度ずつ、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返すまで呼び出します。該当する要素が見つかった場合は、 `some()` は直ちに `true` を返し、配列の反復処理を中止します。一方、 `callbackFn` がすべての要素に対して[偽値](/ja/docs/Glossary/Falsy)を返した場合、 `some()` は `false` を返します。
 
 `some()` は数学の量化子 "there exists" のような働きをします。特に、空配列の場合、どのような条件でも `false` を返します。
 

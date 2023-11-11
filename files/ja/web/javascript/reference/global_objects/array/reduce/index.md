@@ -58,7 +58,7 @@ reduce(callbackFn, initialValue)
 
 `callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
 
-他の[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)とは異なり、 `reduce()` は `thisArg` 引数を受け入れません。 `callbackFn` は常に `undefined` を `this` として呼び出され、 `callbackFn` が厳格モードでない場合は `globalThis` に置き換えられます。
+他の[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)とは異なり、 `reduce()` は `thisArg` 引数を受け入れません。 `callbackFn` は常に `undefined` を `this` として呼び出され、 `callbackFn` が厳格モードでない場合は `globalThis` に置き換えられます。
 
 `reduce()` は[関数型プログラミング](https://ja.wikipedia.org/wiki/関数型プログラミング)の中心的な概念です。ここでは、どの値も変異させることができないので、配列のすべての値を積算するには、反復処理のたびに新しい積算値を返さなければなりません。この約束事は JavaScript の `reduce()` にも当てはまります。[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や他の可能な限りコピーする方法を使用して、既存のものを変更せずに、アキュームレーターとして新しい配列やオブジェクトを作成すべきなのです。もし、アキュームレーターをコピーする代わりに変化させることにした場合、コールバックで変更したオブジェクトを返すことを忘れないでください、さもなければ、次の反復処理で undefined を受け取ることになります。
 
