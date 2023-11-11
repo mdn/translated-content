@@ -87,9 +87,9 @@ WebAssembly 生態還處於萌芽階段，毫無疑問越來越多的工具會�
 
 有很優良的資源提供給那些想開始，但對 Emscripten 不熟悉的人。
 
-Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，加上一些必要的 JavaScript 的膠水程式碼來加載並執行 Wasm 模組，以及加入一個 HTML 文檔來輸出結果。
+Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，加上一些必要的 JavaScript 的膠水程式碼來加載並執行 Wasm 模組，以及加入一個 HTML 文件來輸出結果。
 
-![流程圖: Emscripten 編譯 C/C++ 原始碼成一個 Wasm 模組，以及一個 HTML 文檔和 JavaScript 膠水程式碼](emscripten-diagram.png)
+![流程圖：Emscripten 編譯 C/C++ 原始碼成一個 Wasm 模組，以及一個 HTML 文件和 JavaScript 膠水程式碼](emscripten-diagram.png)
 
 簡而言之，運作流程如下：
 
