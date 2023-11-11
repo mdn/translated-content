@@ -48,7 +48,7 @@ browser.bookmarks.search(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.search")}}
+{{Compat}}
 
 ## 使用例
 

@@ -130,7 +130,7 @@ console.log(count);
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.indexOf")}}
+{{Compat}}
 
 ## Veja também
 

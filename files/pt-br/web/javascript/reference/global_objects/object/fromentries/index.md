@@ -80,7 +80,7 @@ console.log(object2);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.fromEntries")}}
+{{Compat}}
 
 ## Veja Também
 

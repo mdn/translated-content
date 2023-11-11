@@ -59,7 +59,7 @@ Em adição tendo o cabeçalho `Server-Timing` de métricas aparecendo nas ferra
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Server-Timing")}}
+{{Compat}}
 
 ## Veja também
 

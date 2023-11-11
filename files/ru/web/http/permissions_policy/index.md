@@ -106,7 +106,7 @@ The features include:
 
 ## Browser compatibility
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat}}
 
 ## See also
 

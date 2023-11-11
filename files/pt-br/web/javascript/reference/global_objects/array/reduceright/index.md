@@ -164,7 +164,7 @@ if ("function" !== typeof Array.prototype.reduceRight) {
 
 ## Compatibilidade com os navegadores
 
-{{Compat("javascript.builtins.Array.reduceRight")}}
+{{Compat}}
 
 ## Ver também
 

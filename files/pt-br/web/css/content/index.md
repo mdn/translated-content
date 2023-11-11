@@ -243,7 +243,7 @@ li {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.content")}}
+{{Compat}}
 
 ## Veja também
 

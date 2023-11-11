@@ -1433,7 +1433,7 @@
 /fr/docs/Glossaire/Hyperlien	/fr/docs/Glossary/Hyperlink
 /fr/docs/Glossaire/Hypertexte	/fr/docs/Glossary/Hypertext
 /fr/docs/Glossaire/Héritage	/fr/docs/Glossary/Inheritance
-/fr/docs/Glossaire/I18N	/fr/docs/Glossary/I18N
+/fr/docs/Glossaire/I18N	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossaire/IANA	/fr/docs/Glossary/IANA
 /fr/docs/Glossaire/ICANN	/fr/docs/Glossary/ICANN
 /fr/docs/Glossaire/ICE	/fr/docs/Glossary/ICE
@@ -1459,7 +1459,7 @@
 /fr/docs/Glossaire/Input_method_editor	/fr/docs/Glossary/Input_method_editor
 /fr/docs/Glossaire/Instance	/fr/docs/Glossary/Instance
 /fr/docs/Glossaire/Intergiciel	/fr/docs/Glossary/Middleware
-/fr/docs/Glossaire/Internationalisation_et_localisation	/fr/docs/Glossary/Internationalization_and_localization
+/fr/docs/Glossaire/Internationalisation_et_localisation	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossaire/Internet	/fr/docs/Glossary/Internet
 /fr/docs/Glossaire/JSON	/fr/docs/Glossary/JSON
 /fr/docs/Glossaire/Jank	/fr/docs/Glossary/Jank
@@ -1730,7 +1730,9 @@
 /fr/docs/Glossary/Descriptor_(CSS)	/fr/docs/Glossary/CSS_Descriptor
 /fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
 /fr/docs/Glossary/Grid_Rows	/fr/docs/Glossary/Grid_Row
+/fr/docs/Glossary/I18N	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossary/Index	/fr/docs/Glossary
+/fr/docs/Glossary/Internationalization_and_localization	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
@@ -3580,7 +3582,7 @@
 /fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs	/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /fr/docs/Tutoriel_canvas/Animations_basiques	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /fr/docs/Tutoriel_canvas/Composition	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing
-/fr/docs/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/fr/docs/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/Tutoriel_canvas/Formes_géométriques	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /fr/docs/Tutoriel_canvas/Optimizing_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
@@ -3631,12 +3633,13 @@
 /fr/docs/Web/API/ByteString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/API/CSSMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
+/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Advanced_animations	/fr/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs	/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Animations_basiques	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Composition	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing
-/fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Composition/Example	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Dessin_de_texte_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Optimizing_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
@@ -3842,7 +3845,8 @@
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileRequest/lockedFile	/fr/docs/Web/API/IndexedDB_API
-/fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
+/fr/docs/Web/API/FormData/Using_FormData_Objects	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
+/fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /fr/docs/Web/API/GlobalEventHandlers/onabort	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/API/GlobalEventHandlers/onauxclick	/fr/docs/Web/API/Element/auxclick_event
 /fr/docs/Web/API/GlobalEventHandlers/onblur	/fr/docs/Web/API/Window/blur_event
@@ -3957,6 +3961,7 @@
 /fr/docs/Web/API/PositionOptions/enableHighAccuracy	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/Web/API/PositionOptions/maximumAge	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/Web/API/PositionOptions/timeout	/fr/docs/Web/API/Geolocation/getCurrentPosition
+/fr/docs/Web/API/RTCIceServer	/fr/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /fr/docs/Web/API/RandomSource.getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/RandomSource/getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/Référence_du_DOM_Gecko	/fr/docs/Web/API/Document_Object_Model
@@ -4095,7 +4100,8 @@
 /fr/docs/Web/API/WorkerGlobalScope/ononline	/fr/docs/Web/API/WorkerGlobalScope/online_event
 /fr/docs/Web/API/XMLDocument/async	/fr/docs/Web/API/XMLDocument
 /fr/docs/Web/API/XMLDocument/load	/fr/docs/Web/API/XMLDocument
-/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
 /fr/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/Web/API/console.log	/fr/docs/Web/API/console/log
@@ -4756,7 +4762,7 @@
 /fr/docs/Web/Guide/HTML/Liens_email	/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 /fr/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
-/fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/Web/API/FormData/Using_FormData_Objects
+/fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/CSS/CSS_colors/Applying_color
 /fr/docs/Web/HTML/Applying_color	/fr/docs/Web/CSS/CSS_colors/Applying_color
 /fr/docs/Web/HTML/Attributs	/fr/docs/Web/HTML/Attributes
@@ -4966,6 +4972,7 @@
 /fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/About	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/Classes/Class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+/fr/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Private_properties
 /fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/Web/JavaScript/Reference/Erreurs	/fr/docs/Web/JavaScript/Reference/Errors
@@ -6176,7 +6183,7 @@
 /fr/docs/XHTML	/fr/docs/Glossary/XHTML
 /fr/docs/XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest
 /fr/docs/XMLHttpRequest/FormData	/fr/docs/Web/API/FormData
-/fr/docs/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/fr/docs/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /fr/docs/XMLSerializer	/fr/docs/Web/API/XMLSerializer
 /fr/docs/XPath	/fr/docs/Web/XPath
 /fr/docs/XPath/Axes	/fr/docs/Web/XPath/Axes
@@ -6369,6 +6376,7 @@
 /fr/docs/conflicting/Glossary/DOM	/fr/docs/Glossary/DOM
 /fr/docs/conflicting/Glossary/Doctype	/fr/docs/Glossary/Doctype
 /fr/docs/conflicting/Glossary/Firefox_OS	/fr/docs/Glossary/Firefox_OS
+/fr/docs/conflicting/Glossary/Internationalization	/fr/docs/Glossary/Internationalization
 /fr/docs/conflicting/Glossary/Object_reference	/fr/docs/Glossary/Object_reference
 /fr/docs/conflicting/Glossary/TCP	/fr/docs/Glossary/TCP
 /fr/docs/conflicting/Learn	/fr/docs/Learn
@@ -6442,6 +6450,7 @@
 /fr/docs/conflicting/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /fr/docs/conflicting/Web/API	/fr/docs/Web/API
 /fr/docs/conflicting/Web/API/Blob	/fr/docs/Web/API/Blob
+/fr/docs/conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/conflicting/Web/API/DOMMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/conflicting/Web/API/Document	/fr/docs/Web/API/Document
@@ -6467,7 +6476,7 @@
 /fr/docs/conflicting/Web/API/Element/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/conflicting/Web/API/EventTarget/addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/conflicting/Web/API/File_and_Directory_Entries_API	/fr/docs/Web/API/File_and_Directory_Entries_API
-/fr/docs/conflicting/Web/API/FormData/Using_FormData_Objects	/fr/docs/Web/API/FormData/Using_FormData_Objects
+/fr/docs/conflicting/Web/API/FormData/Using_FormData_Objects	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266	/fr/docs/Web/API/Geolocation/getCurrentPosition

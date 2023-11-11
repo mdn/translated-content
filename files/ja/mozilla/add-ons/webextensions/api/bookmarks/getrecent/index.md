@@ -29,7 +29,7 @@ browser.bookmarks.getRecent(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.getRecent")}}
+{{Compat}}
 
 ## 使用例
 

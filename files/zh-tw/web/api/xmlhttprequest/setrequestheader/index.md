@@ -42,5 +42,5 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ## 參見
 
-- [Using XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

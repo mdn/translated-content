@@ -32,7 +32,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

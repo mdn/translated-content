@@ -82,7 +82,7 @@ with (Math) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.with")}}
+{{Compat}}
 
 ## Veja também
 

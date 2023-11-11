@@ -154,7 +154,7 @@ if (!window.JSON) {
 
 ## Navegador compatível
 
-{{Compat("javascript.builtins.JSON")}}
+{{Compat}}
 
 ## Veja também
 

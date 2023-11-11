@@ -82,7 +82,7 @@ function encodeRFC5987ValueChars(str) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.encodeURIComponent")}}
+{{Compat}}
 
 ## Veja também
 

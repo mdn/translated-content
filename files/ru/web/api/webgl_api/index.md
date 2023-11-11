@@ -220,11 +220,11 @@ WebGL (Web Graphics Library) - программная библиотека дл�
 
 ### WebGL 1
 
-{{Compat("api.WebGLRenderingContext", 0)}}
+{{Compat}}
 
 ### WebGL 2
 
-{{Compat("api.WebGL2RenderingContext", 0)}}
+{{Compat}}
 
 ### Замечания по Gecko
 

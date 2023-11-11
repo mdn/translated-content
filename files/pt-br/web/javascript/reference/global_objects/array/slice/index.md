@@ -198,7 +198,7 @@ Embora os objetos de host (como objetos DOM) não sejam obrigados pela especific
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.slice")}}
+{{Compat}}
 
 ## Veja também
 

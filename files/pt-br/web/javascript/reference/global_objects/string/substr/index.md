@@ -91,7 +91,7 @@ if ("ab".substr(-1) != "b") {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.substr")}}
+{{Compat}}
 
 ## Veja também
 

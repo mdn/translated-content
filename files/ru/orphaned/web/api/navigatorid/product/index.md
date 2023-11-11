@@ -46,7 +46,7 @@ function prod() {
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.product")}}
+{{Compat}}
 
 ## Смотрите также
 

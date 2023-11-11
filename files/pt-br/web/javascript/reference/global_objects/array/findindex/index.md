@@ -101,7 +101,7 @@ if (!Array.prototype.findIndex) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.findIndex")}}Veja também
+{{Compat}}Veja também
 
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.indexOf()")}}

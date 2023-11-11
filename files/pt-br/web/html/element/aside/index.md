@@ -35,7 +35,7 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/HTML/Global_attri
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.aside")}}
+{{Compat}}
 
 ## Veja também
 

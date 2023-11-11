@@ -34,7 +34,7 @@ Para adicionar atributos **data-\*** , mesmo os elementos HTML mais comuns podem
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## See also
 

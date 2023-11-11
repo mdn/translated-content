@@ -70,7 +70,7 @@ fetch(url, {
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Credentials")}}
+{{Compat}}
 
 ## Veja também
 

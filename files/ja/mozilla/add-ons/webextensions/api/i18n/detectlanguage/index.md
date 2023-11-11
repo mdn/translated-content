@@ -39,7 +39,7 @@ var detectingLanguages = browser.i18n.detectLanguage(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.detectLanguage")}}
+{{Compat}}
 
 ## 例
 

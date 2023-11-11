@@ -30,7 +30,7 @@ Veja {{cssxref(":invalid")}} para um exemplo.
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.valid")}}
+{{Compat}}
 
 ## Veja também
 

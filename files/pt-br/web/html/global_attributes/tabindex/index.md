@@ -28,7 +28,7 @@ Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}},
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.tabindex")}}
+{{Compat}}
 
 ## Veja também
 

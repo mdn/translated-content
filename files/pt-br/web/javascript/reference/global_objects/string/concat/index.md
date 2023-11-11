@@ -51,7 +51,7 @@ console.log(hello.concat("Kevin", " tenha um bom dia."));
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.concat")}}
+{{Compat}}
 
 ## Veja também
 

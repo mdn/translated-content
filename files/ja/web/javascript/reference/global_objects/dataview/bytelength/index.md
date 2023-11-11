@@ -35,7 +35,7 @@ dataview3.byteLength; // 6 (due to the offset of the constructed DataView)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.byteLength")}}
+{{Compat}}
 
 ## 関連情報
 

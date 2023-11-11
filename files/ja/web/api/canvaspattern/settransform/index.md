@@ -109,7 +109,7 @@ window.addEventListener("load", drawCanvas);
 
 ## ブラウザ実装状況
 
-{{Compat("api.CanvasPattern.setTransform")}}
+{{Compat}}
 
 ## 関連項目
 

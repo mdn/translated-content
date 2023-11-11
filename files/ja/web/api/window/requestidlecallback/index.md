@@ -41,7 +41,7 @@ var handle = window.requestIdleCallback(callback[, options])
 
 ## ブラウザ互換性
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## 関連情報
 

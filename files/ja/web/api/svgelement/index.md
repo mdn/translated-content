@@ -57,7 +57,7 @@ Listen to these events using [`addEventListener()`](/ja/docs/Web/API/EventTarget
 
 ## ブラウザ互換性
 
-{{Compat("api.SVGElement")}}
+{{Compat}}
 
 ## 参照
 
