@@ -25,7 +25,7 @@ findIndex(callbackFn, thisArg)
     - `element`
       - : 現在処理されている型付き配列の要素です。
     - `index`
-      - : 現在処理されている型付き配列の要素の添字です。
+      - : 現在処理されている型付き配列の要素のインデックスです。
     - `array`
       - : `findIndex()` が実行されている型付き配列です。
 - `thisArg` {{optional_inline}}
