@@ -42,7 +42,7 @@ Como qualquer outro elemento HTML, este também tem [global attributes](/pt-BR/H
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
 ## Veja também
 

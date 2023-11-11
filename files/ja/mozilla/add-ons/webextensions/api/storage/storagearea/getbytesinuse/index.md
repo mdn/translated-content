@@ -30,7 +30,7 @@ var gettingSpace = browser.storage.<storageType>.getBytesInUse(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageArea.getBytesInUse")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

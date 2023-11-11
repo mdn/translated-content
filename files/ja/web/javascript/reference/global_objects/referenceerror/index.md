@@ -67,7 +67,7 @@ try {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.ReferenceError")}}
+{{Compat}}
 
 ## 関連情報
 

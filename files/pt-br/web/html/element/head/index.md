@@ -79,17 +79,13 @@ Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attri
 
 Moderno, HTML5-compatível browsers automaticamente constrói um elemento `<head>` se as tags forem omitidas na marcação. [Este comportamento não pode ser garantido por browsers antigos.](http://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/)
 
-Especificações
+## Especificações
 
-| Especificação                                                                        | Estado                   | Comentário                              |
-| ------------------------------------------------------------------------------------ | ------------------------ | --------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}       | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o último shapshot |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}} | {{Spec2('HTML5 W3C')}}   | Perfil Obsoleto                         |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}               | {{Spec2('HTML4.01')}}    |                                         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## See also
 

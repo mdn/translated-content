@@ -28,7 +28,7 @@ WebGLShader gl.createShader(type);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.createShader")}}
+{{Compat}}
 
 ## 関連項目
 

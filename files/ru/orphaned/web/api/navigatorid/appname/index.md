@@ -32,7 +32,7 @@ alert(window.navigator.appName);
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.appName")}}
+{{Compat}}
 
 ## Смотрите также
 

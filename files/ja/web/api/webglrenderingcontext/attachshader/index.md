@@ -45,7 +45,7 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.attachShader")}}
+{{Compat}}
 
 ## 関連項目
 

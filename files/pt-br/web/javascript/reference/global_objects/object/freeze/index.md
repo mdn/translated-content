@@ -124,7 +124,7 @@ TypeError: 1 is not an object // ES5 code
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.freeze")}}
+{{Compat}}
 
 ## Ver também
 

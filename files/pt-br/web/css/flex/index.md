@@ -230,7 +230,7 @@ flex.addEventListener("click", function () {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## See also
 

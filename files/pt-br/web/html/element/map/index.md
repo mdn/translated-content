@@ -35,7 +35,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.map")}}
+{{Compat}}
 
 ## Veja também
 

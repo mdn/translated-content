@@ -51,7 +51,7 @@ Os métodos `wait()` e `wake()` são modelados no Linux futexes ("fast user-spac
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Atomics")}}
+{{Compat}}
 
 ## Observações de compatibilidade
 

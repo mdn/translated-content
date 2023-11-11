@@ -59,4 +59,4 @@ This is a string which may take any of the following values:
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.incognito")}}
+{{Compat}}

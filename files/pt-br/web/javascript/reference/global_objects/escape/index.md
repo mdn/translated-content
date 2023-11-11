@@ -39,7 +39,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.escape")}}
+{{Compat}}
 
 ## Veja Também
 

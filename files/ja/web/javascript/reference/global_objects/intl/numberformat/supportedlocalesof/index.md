@@ -53,7 +53,7 @@ console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(", "));
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat.supportedLocalesOf")}}
+{{Compat}}
 
 ## 関連情報
 

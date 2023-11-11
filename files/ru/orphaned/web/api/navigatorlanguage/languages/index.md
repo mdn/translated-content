@@ -32,7 +32,7 @@ navigator.languages  //["en-US", "zh-CN", "ja-JP"]
 
 ## Совместимость с браузерами
 
-{{Compat("api.NavigatorLanguage.languages")}}
+{{Compat}}
 
 ## Смотрите также
 

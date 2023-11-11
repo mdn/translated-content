@@ -67,7 +67,7 @@ function sourceOpen(_) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.isTypeSupported")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -40,7 +40,7 @@ console.log("alfabeto".toUpperCase()); // 'ALFABETO'
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.toUpperCase")}}
+{{Compat}}
 
 ## Veja também
 

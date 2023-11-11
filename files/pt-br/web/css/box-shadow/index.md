@@ -133,7 +133,7 @@ Each shadow in the list (treating `none` as a 0-length list) is interpolated via
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.box-shadow")}}
+{{Compat}}
 
 ## See also
 

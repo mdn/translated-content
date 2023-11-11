@@ -63,4 +63,4 @@ The time to first-contentful-paint was 2787.460 milliseconds.
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformancePaintTiming")}}
+{{Compat}}

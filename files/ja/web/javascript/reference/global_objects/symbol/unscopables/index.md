@@ -62,7 +62,7 @@ with (obj) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.unscopables")}}
+{{Compat}}
 
 ## 関連情報
 

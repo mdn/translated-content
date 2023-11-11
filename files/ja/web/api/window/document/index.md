@@ -19,4 +19,4 @@ console.log(window.document.title);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.document")}}
+{{Compat}}

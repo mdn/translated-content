@@ -199,7 +199,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 
 ## ブラウザーの互換性
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## 関連情報
 

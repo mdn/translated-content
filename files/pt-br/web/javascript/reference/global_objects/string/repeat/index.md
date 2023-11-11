@@ -263,7 +263,7 @@ console.log(
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.repeat")}}
+{{Compat}}
 
 ## Veja também
 

@@ -36,4 +36,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.name")}}
+{{Compat}}

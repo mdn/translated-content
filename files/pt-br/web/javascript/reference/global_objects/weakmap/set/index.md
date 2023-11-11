@@ -47,7 +47,7 @@ wm.set(obj, "baz");
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.set")}}
+{{Compat}}
 
 ## Notas específicas ao Firefox
 

@@ -128,16 +128,13 @@ text-shadow: unset;
 
 {{EmbedLiveSample('Example3', '689px', '90px')}}
 
-**Especificações**
+## Especificações
 
-| Especificação                                                         | Status                              | Comentário                                                                                                                                                                                                                                                                                                                                                                              |
-| --------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow') }}  | {{ Spec2('CSS3 Transitions') }}     | Lists `text-shadow` as animatable.                                                                                                                                                                                                                                                                                                                                                      |
-| {{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow') }} | {{ Spec2('CSS3 Text Decoration') }} | The CSS property `text-shadow` was [improperly defined in CSS2](https://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) and dropped in CSS2 (Level 1). The _CSS Text Module Level 3_ spec improved and precised the syntax. Later it was moved to new working draft _[CSS Text Decoration Module Level 3](https://www.w3.org/TR/2012/WD-css-text-decor-3-20121113/)_. |
+{{Specifications}}
 
 ## Compatibilidade do navegador
 
-{{Compat("css.properties.text-shadow")}}
+{{Compat}}
 
 ## Veja também
 

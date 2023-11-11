@@ -95,7 +95,7 @@ function fixedEncodeURI(str) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.encodeURI")}}
+{{Compat}}
 
 ## Veja também
 

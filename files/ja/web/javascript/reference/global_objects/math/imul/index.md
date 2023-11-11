@@ -88,7 +88,7 @@ if (!Math.imul)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.imul")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -68,7 +68,7 @@ svg {
 
 ## ブラウザーの互換性
 
-{{Compat("svg.attributes.presentation.marker-mid")}}
+{{Compat}}
 
 ## 関連情報
 

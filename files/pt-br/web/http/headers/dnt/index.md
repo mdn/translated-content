@@ -50,7 +50,7 @@ navigator.doNotTrack; // "0" or "1"
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.DNT")}}
+{{Compat}}
 
 ## Veja também
 
