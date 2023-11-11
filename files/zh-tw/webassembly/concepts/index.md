@@ -95,7 +95,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 1. Emscripten 首先將 C/C++ 程式碼輸入給 clang+LLVM，一個成熟的開源 C、C++ 編譯工具鏈。舉個常出現的例子，它被封裝成 OSX 中的 XCode 的一部分。
 2. Emscripten 將 clang+LLVM 編譯出來的結果轉換成 Wasm 二進制。
-3. 僅憑它自己，WebAssembly 沒有辦法直接訪問 DOM，它僅能呼叫 JavaScript，傳入整數和浮點數的原始資料形態。因此，要訪問任何的 Web API，它必須去呼叫 JavaScript，這會產生一個 Web API 呼叫。Emscripten 因此創造一個 HTML 文檔與 JavaScript 膠水程式碼來達成這件事。
+3. 僅憑它自己，WebAssembly 沒有辦法直接訪問 DOM，它僅能呼叫 JavaScript，傳入整數和浮點數的原始資料形態。因此，要訪問任何的 Web API，它必須去呼叫 JavaScript，這會產生一個 Web API 呼叫。Emscripten 因此創造一個 HTML 文件與 JavaScript 膠水程式碼來達成這件事。
 
 > **備註：** 未來有計劃[讓 WebAssembly 直接呼叫 WebAPI](https://github.com/WebAssembly/gc/blob/master/README.md)。
 
