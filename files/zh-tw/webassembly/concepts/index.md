@@ -132,4 +132,4 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/)
 - [Loading and running WebAssembly code](/zh-TW/docs/WebAssembly/Loading_and_running)——一探究竟如何將 WebAssembly Code 載入 Web
-- [Using the WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/Using_the_JavaScript_API)——搞清楚如何使用其他 WebAssembly JavaScript API 的 features
+- [Using the WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/Using_the_JavaScript_API)——搞清楚如何使用其他 WebAssembly JavaScript API 的特性
