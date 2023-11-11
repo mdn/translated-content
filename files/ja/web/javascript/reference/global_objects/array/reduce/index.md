@@ -54,7 +54,7 @@ reduce(callbackFn, initialValue)
 
 ## 解説
 
-`reduce()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。「縮小」コールバック関数を配列に含まれる各要素に対して昇順に一度ずつ呼び出し、その結果を単一の値に積算します。毎回、 `callbackFn` の返値は次回の `callbackFn` の呼び出しで `accumulator`おつぃて渡されます。最終的な `accumulator` の値（配列の最終反復処理において `callbackFn` から返される値）が `reduce()` の返値となります。
+`reduce()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。「縮小」コールバック関数を配列に含まれる各要素に対して昇順に一度ずつ呼び出し、その結果を単一の値に積算します。毎回、 `callbackFn` の返値は次回の `callbackFn` の呼び出しで `accumulator` として渡されます。最終的な `accumulator` の値（配列の最終反復処理において `callbackFn` から返される値）が `reduce()` の返値となります。
 
 `callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
 
@@ -76,7 +76,7 @@ reduce(callbackFn, initialValue)
 
 配列が（位置に関わらず） 1 つの要素しか持たず、 `initialValue` が指定されなかった場合、または `initialValue` が指定されていても配列が空だった場合、 `callbackFn` は*実行されずに*要素が返却されます。
 
-`initialValue` が提供され、配列が空でない場合、 reduce メソッドは常に 0 の位置コールバック関数を呼び出し始めます。
+`initialValue` が提供され、配列が空でない場合、 reduce メソッドは常に 0 の位置からコールバック関数を呼び出し始めます。
 
 `initialValue` が提供されなかった場合、 reduce メソッドは、次の例に示すように、長さが 1 より大きい配列、長さが 1 の配列、長さが 0 の配列に対して異なる動作をします。
 
