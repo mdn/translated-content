@@ -24,11 +24,11 @@ Credential Management API를 사용하면 웹사이트에서 비밀번호, 공�
 ## 인터페이스
 
 - {{domxref("Credential")}}
-  - : 신뢰 결정 전에 엔터티에 대한 정보를 제공합니다.
+  - : 신뢰 결정 전에 개체에 대한 정보를 제공합니다.
 - {{domxref("CredentialsContainer")}}
   - : 자격증명을 요청하고 성공적인 로그인 또는 로그아웃과 같은 흥미로운 이벤트가 발생할 때 사용자 에이전트에 알릴 수 있는 메서드를 노출합니다. 이 인터페이스는 `navigator.credentials`에서 접근할 수 있습니다.
 - {{domxref("FederatedCredential")}}
-  - : 웹사이트가 사용자를 올바르게 인증하기 위해 신뢰하는 엔터티인 페더레이션 ID 공급자로부터 자격 증명에 대한 정보를 제공하며, 이를 위한 API를 제공합니다. [OpenID Connect](https://openid.net/developers/specs/)는 이러한 프레임워크의 한 예입니다.
+  - : 웹사이트가 사용자를 올바르게 인증하기 위해 신뢰하는 개체인 페더레이션 ID 공급자로부터 자격 증명에 대한 정보를 제공하며, 이를 위한 API를 제공합니다. [OpenID Connect](https://openid.net/developers/specs/)는 이러한 프레임워크의 한 예입니다.
 - {{domxref("PasswordCredential")}}
   - : 사용자 이름/비밀번호 쌍에 대한 정보를 제공합니다.
 - {{domxref("PublicKeyCredential")}}
