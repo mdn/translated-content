@@ -25,7 +25,7 @@ findLastIndex(callbackFn, thisArg)
     - `element`
       - : 現在処理されている型付き配列の要素です。
     - `index`
-      - : 現在処理されている型付き配列の要素の添字です。
+      - : 現在処理されている型付き配列の要素のインデックスです。
     - `array`
       - : `findLastIndex()` が実行されている型付き配列です。
 - `thisArg` {{optional_inline}}
@@ -42,7 +42,7 @@ findLastIndex(callbackFn, thisArg)
 
 ## 例
 
-### 型付き配列から素数の添字を探す
+### 型付き配列から素数のインデックスを探す
 
 以下の例では、配列の中で素数である最後の要素のインデックスを探します。素数がない場合は `-1` を返します。
 
