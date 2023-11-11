@@ -121,7 +121,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 ### 使用 AssemblyScript
 
-對於那些想使用 WebAssembly 卻沒有學習 C、C++ 語言細節需求的 Web 開發者，想留在一個如 TypeScript 一般熟悉的舒適圈，AssemblyScript 會是你最棒的選擇。AssemblyScript 編譯嚴格型別的 TypeScript 成 WebAssembly，允許 Web 開發者繼續使用他們所熟悉的 TypeScript 兼容的工具，如 Prettier、ESLint、VS Code IntelliSense 等。你可以看這篇文檔 <https://www.assemblyscript.org/>。
+對於那些想使用 WebAssembly 卻沒有學習 C、C++ 語言細節需求的 Web 開發者，想留在一個如 TypeScript 一般熟悉的舒適圈，AssemblyScript 會是你最棒的選擇。AssemblyScript 編譯嚴格型別的 TypeScript 成 WebAssembly，允許 Web 開發者繼續使用他們所熟悉的 TypeScript 兼容的工具，如 Prettier、ESLint、VS Code IntelliSense 等。你可以看文件 <https://www.assemblyscript.org/>。
 
 ## 總結
 
