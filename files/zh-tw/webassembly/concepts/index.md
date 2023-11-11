@@ -5,7 +5,7 @@ slug: WebAssembly/Concepts
 
 {{WebAssemblySidebar}}
 
-這篇文章解釋了這些概念背後 WebAssembly 是如何運作的，以及 WebAssembly 的目標、它能解決的問題和它是如何在瀏覽器引擎中運作的。
+這篇文章解釋了這些概念背後 WebAssembly 是如何運作的，以及 WebAssembly 的目標、它能解決的問題和它是如何在瀏覽器 JavaScript 引擎中運作的。
 
 ## WebAssembly 是什麽
 
