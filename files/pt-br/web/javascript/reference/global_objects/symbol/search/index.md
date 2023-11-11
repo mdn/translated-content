@@ -35,7 +35,7 @@ console.log("foobar".search(new caseInsensitiveSearch("BaR")));
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.search")}}
+{{Compat}}
 
 ## Veja também
 

@@ -43,7 +43,7 @@ Access-Control-Request-Method: POST
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Request-Method")}}
+{{Compat}}
 
 ## Veja também
 

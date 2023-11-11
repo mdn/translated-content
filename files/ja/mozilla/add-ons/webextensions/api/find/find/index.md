@@ -105,7 +105,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.find.find", 10)}}
+{{Compat}}
 
 ## Examples
 

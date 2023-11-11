@@ -62,7 +62,7 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.yield")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 

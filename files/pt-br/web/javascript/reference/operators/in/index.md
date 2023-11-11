@@ -97,7 +97,7 @@ O operador `in` retorna `true` para propriedades que estão na cadeida de protó
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.in")}}
+{{Compat}}
 
 ## Ver também
 

@@ -20,7 +20,7 @@ privacy API を使うには、"privacy" [API パーミッション](/ja/Add-ons/
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.privacy", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -47,7 +47,7 @@ console.log(meuPeixePop); // 'esturjao'
 
 ## Compatibilidade nos Navegadores
 
-{{Compat("javascript.builtins.Array.pop")}}
+{{Compat}}
 
 ## Veja também
 

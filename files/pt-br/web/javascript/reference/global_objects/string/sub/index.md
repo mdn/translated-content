@@ -38,16 +38,13 @@ console.log("This is what a " + subText.sub() + " looks like.");
 // This is what a <sub>subscript</sub> looks like.
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                | Status               | Comentário                                         |
-| ---------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.sub', 'String.prototype.sub')}}     | {{Spec2('ES6')}}     | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ESDraft', '#sec-string.prototype.sub', 'String.prototype.sub')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.sub")}}
+{{Compat}}
 
 ## Veja também
 

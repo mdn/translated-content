@@ -31,7 +31,7 @@ Este elemento implementa a interface [`SVGDescElement`](/pt-BR/DOM/SVGDescElemen
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.desc")}}
+{{Compat}}
 
 ## Veja também
 

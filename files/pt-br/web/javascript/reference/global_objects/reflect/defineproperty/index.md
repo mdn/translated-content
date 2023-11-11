@@ -68,7 +68,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect.defineProperty")}}
+{{Compat}}
 
 ## Veja também
 

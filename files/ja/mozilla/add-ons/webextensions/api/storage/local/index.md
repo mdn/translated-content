@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 ## ブラウザ互換状況
 
-{{Compat("webextensions.api.storage.local")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

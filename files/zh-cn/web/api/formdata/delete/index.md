@@ -49,6 +49,6 @@ formData.delete("username");
 ## 参见
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [使用 FormData 对象](/zh-CN/docs/DOM/XMLHttpRequest/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

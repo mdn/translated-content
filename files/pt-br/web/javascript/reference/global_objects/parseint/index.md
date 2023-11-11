@@ -137,7 +137,7 @@ console.log(filterInt("1.61803398875")); // NaN
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.parseInt")}}
+{{Compat}}
 
 ## Veja também
 

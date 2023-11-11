@@ -89,7 +89,7 @@ request.onupgradeneeded = function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBDatabase.createObjectStore")}}
+{{Compat}}
 
 ## 関連項目
 

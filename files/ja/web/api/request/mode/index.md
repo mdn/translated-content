@@ -49,7 +49,7 @@ const myMode = myRequest.mode; // returns "cors" by default
 
 ## ブラウザーの互換性
 
-{{Compat("api.Request.mode")}}
+{{Compat}}
 
 ## 関連情報
 

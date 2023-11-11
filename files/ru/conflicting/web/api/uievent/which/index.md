@@ -31,7 +31,7 @@ var buttonPressed = instanceOfMouseEvent.which
 
 ## Совместимость с браузерами
 
-{{Compat("api.MouseEvent.which")}}
+{{Compat}}
 
 ## Смотрите также
 

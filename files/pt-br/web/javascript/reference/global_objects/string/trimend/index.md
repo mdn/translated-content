@@ -54,7 +54,7 @@ console.log(str); // retorna '   foo'
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.trimEnd")}}
+{{Compat}}
 
 ## Veja também
 

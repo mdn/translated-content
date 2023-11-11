@@ -35,7 +35,7 @@ getRoot2(); // 1.4142135623730951
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.SQRT2")}}
+{{Compat}}
 
 ## Veja também
 

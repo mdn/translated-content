@@ -64,4 +64,4 @@ addEventListener("fetch", (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.NavigationPreloadManager")}}
+{{Compat}}

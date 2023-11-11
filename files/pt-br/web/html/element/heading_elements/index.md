@@ -82,7 +82,7 @@ Em HTML 5, use o elemento {{HTMLElement("section")}} para definir o outline de u
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## Veja também
 

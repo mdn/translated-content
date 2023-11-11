@@ -100,7 +100,7 @@ Chrome のバージョン 56 以降 (デスクトップ版, Android 版 Chrome, 
 
 ## ブラウザーの互換性
 
-{{Compat("api.TouchEvent")}}
+{{Compat}}
 
 ## 関連情報
 

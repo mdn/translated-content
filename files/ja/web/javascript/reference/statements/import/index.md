@@ -217,7 +217,7 @@ setTimeout(() => {
 
 ## ブラウザー実装状況
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ## 関連情報
 

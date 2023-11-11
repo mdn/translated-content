@@ -80,4 +80,4 @@ offset: url(arc.svg) 30deg / 50px 100px;
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.offset")}}
+{{Compat}}

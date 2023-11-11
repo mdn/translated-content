@@ -35,11 +35,11 @@ slug: Web/CSS/Layout_cookbook/List_group_with_badges
 
 #### justify-content
 
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 #### align-items
 
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 ## 関連情報
 

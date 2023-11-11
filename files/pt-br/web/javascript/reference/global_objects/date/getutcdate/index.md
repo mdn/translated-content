@@ -34,7 +34,7 @@ var day = today.getUTCDate();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCDate")}}
+{{Compat}}
 
 ## Veja também
 

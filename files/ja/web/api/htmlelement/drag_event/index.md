@@ -136,7 +136,7 @@ target.addEventListener("drop", (event) => {
 
 #### 結果
 
-{{EmbedLiveSample('Drag and drop example')}}
+{{EmbedLiveSample('ドラッグ＆ドロップの例')}}
 
 ## 仕様書
 

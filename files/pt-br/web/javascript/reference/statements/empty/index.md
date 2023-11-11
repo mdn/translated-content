@@ -58,7 +58,7 @@ else launchRocket();
 
 ## Browsers compatíveis
 
-{{Compat("javascript.statements.empty")}}
+{{Compat}}
 
 ## Veja também
 
