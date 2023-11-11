@@ -127,7 +127,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 這篇文章解釋了 WebAssembly 究竟爲何物、它爲何有用，它如何融入 Web，以及你能如何使用它。
 
-## 也看看這些文章
+## 參見
 
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/)
