@@ -1,6 +1,8 @@
 ---
 title: <sup>：上标元素
 slug: Web/HTML/Element/sup
+l10n:
+  sourceCommit: 77a67438592286ded44a82bfe6b8a64e8cdf44a9
 ---
 
 {{HTMLSidebar}}
