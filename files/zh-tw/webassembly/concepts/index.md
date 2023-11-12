@@ -56,7 +56,7 @@ WebAssembly 是一種有別於 JavaScript 的語言，但它并不是一種替�
 **表（Table）**：一個可調整大小的參照型態陣列（例如，對函數的參照），這些參照不能以原始位元組的形式儲存在記憶體中（出於安全和可移植性的原因）。
 - **實例**（Instance）：一個模組與其運行時使用的所有狀態的組合，包括記憶體、表和一組輸入值。一個實例就像一個已經加載到特定全域環境並具有特定輸入集的 ES 模組。
 
-JavaScript API 提供開發者一個創造模組、Memory、Table 與 Instance 的方式。給定一個 WebAssembly 應用程式，JavaScript 程式碼可以同步地正常調用它公開出來的函式。任意的 JavaScript 函式也都可以被 WebAssembly 同步調用，藉由以引入傳遞到 WebAssembly Instance 的那些 JavaScript 函式。
+JavaScript API 提供開發者一個創造模組、記憶體、表與實例的方式。給定一個 WebAssembly 應用程式，JavaScript 程式碼可以同步地正常調用它公開出來的函式。任意的 JavaScript 函式也都可以被 WebAssembly 同步調用，藉由以引入傳遞到 WebAssembly Instance 的那些 JavaScript 函式。
 
 因爲 JavaScript 有 WebAssembly 是如何被下載、編譯、執行的完全控制權，因此 JavaScript 開發者應該去思考說 WebAssembly 是否就只是一個 JavaScript 的特色，使之能有效率的生成高效能函式。
 
