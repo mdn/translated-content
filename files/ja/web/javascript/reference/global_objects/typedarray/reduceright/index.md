@@ -31,6 +31,7 @@ reduceRight(callbackFn, initialValue)
       - : 型付き配列の `currentValue` を入力するインデックスの位置。最初の呼び出しで `initialValue` を指定した場合は `array.length - 1`、そうでない場合は `array.length - 2` となります。
     - `array`
       - : `reduceRight()` が呼び出された型付き配列。
+
 - `initialValue` {{optional_inline}}
   - : `callbackFn` を最初に呼び出す際の `accumulator` として使用される値。初期値が与えられなかった場合は、型付き配列の最後の要素が使用され、その値はスキップされます。初期値のない空の型付き配列に対して `reduceRight()` を呼び出すと `TypeError` が発生します。
 
