@@ -97,7 +97,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 > **備註：** 未來有計劃[讓 WebAssembly 直接呼叫 WebAPI](https://github.com/WebAssembly/gc/blob/master/README.md)。
 
-這個 JavaScript 膠水程式碼可能并不像你想像的那麽簡單。Emscripten 首先需要去實作熱門的 C、C++ 函式庫像是 [SDL](https://zh.wikipedia.org/zh-tw/SDL)、[OpenGL](https://zh.wikipedia.org/wiki/OpenGL)、[OpenAL](https://zh.wikipedia.org/wiki/OpenAL)，以及一部分的 [POSIX](https://zh.wikipedia.org/wiki/POSIX)。這些函式庫被以 Web API 的形式實作，且因此每個都需要一些 JavaScript 膠水程式碼來連接 WebAssembly 與底層的 Web API。
+這個 JavaScript 膠水程式碼可能并不像你想像的那麽簡單。Emscripten 首先需要去實作熱門的 C、C++ 函式庫像是 [SDL](https://zh.wikipedia.org/wiki/SDL)、[OpenGL](https://zh.wikipedia.org/wiki/OpenGL)、[OpenAL](https://zh.wikipedia.org/wiki/OpenAL)，以及一部分的 [POSIX](https://zh.wikipedia.org/wiki/POSIX)。這些函式庫被以 Web API 的形式實作，且因此每個都需要一些 JavaScript 膠水程式碼來連接 WebAssembly 與底層的 Web API。
 
 所以膠水程式碼的一部分就是在分別用 C、C++ 實作這些函式庫的功能，同時也包含了去呼叫之前提及的來獲取、加載并執行的 WebAssembly JavaScript API 的邏輯。
 
