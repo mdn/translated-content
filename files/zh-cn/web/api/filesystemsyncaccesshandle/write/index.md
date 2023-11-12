@@ -7,7 +7,7 @@ slug: Web/API/FileSystemSyncAccessHandle/write
 
 {{domxref("FileSystemSyncAccessHandle")}} 接口的 **`write()`** 方法用于将指定缓冲区中的内容写入到与句柄相关联的文件，可选择在给定的偏移处开始写入。
 
-[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)中的文件对末端用户来说不可见，因而 {{domxref("FileSystemSyncAccessHandle")}} 中的方法不受与运行在用户可见文件系统中的文件上的方法相同的安全性检查。因此，使用 {{domxref('FileSystemSyncAccessHandle.write()')}} 进行写入的性能要更为优秀。这使得它适用于重要的、大规模的文件更新，例如对 [SQLite](https://www.sqlite.org/wasm) 数据库进行更改。
+[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)中的文件对末端用户来说不可见，因而 {{domxref("FileSystemSyncAccessHandle")}} 中的方法不受与运行在用户可见文件系统中的文件上的方法相同的安全性检查。因此，使用 `FileSystemSyncAccessHandle.write()` 进行写入的性能要更为优秀。这使得它适用于重要的、大规模的文件更新，例如对 [SQLite](https://www.sqlite.org/wasm) 数据库进行更改。
 
 ## 语法
 

@@ -5,9 +5,9 @@ slug: Web/API/FileSystemSyncAccessHandle
 
 {{securecontext_header}}{{APIRef("File System API")}}
 
-{{domxref("File System API", "文件系统", "", "nocode")}} 的 **`FileSystemSyncAccessHandle`** 接口用于表示一个指向某个文件系统条目的同步句柄。
+{{domxref("File System API", "文件系统 API", "", "nocode")}} 的 **`FileSystemSyncAccessHandle`** 接口用于表示一个指向某个文件系统条目的同步句柄。
 
-这个类只在专用于处理对末端用户不可见的[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件的 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中可以访问（这样它的方法就不会阻塞主线程的执行）。
+这个类只在用于处理对终端用户不可见的[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件的专用 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中可以访问（这样它的方法就不会阻塞主线程的执行）。
 
 因此，它的方法不受与运行在用户可见文件系统中的文件上的方法相同的安全性检查，从而具有更优秀的性能。这使得这些方法适用于重要的、大规模的文件更新，例如对 [SQLite](https://www.sqlite.org/wasm) 数据库进行更改。
 
