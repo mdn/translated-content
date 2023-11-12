@@ -30,23 +30,23 @@ btn.addEventListener("click", () => {
 
 接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建一个新通知。这个函数必须传递一个标题参数，并且可以选择传递一个选项对象来指定选项，例如文本方向、正文、要显示的图标、要播放的通知声音等等。
 
-此外， **Notifications API** 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 指定了多个添加，以允许 service workers 发送通知。
+此外， **Notifications API** 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 指定了多个添加，以允许 Service Worker 发送通知。
 
-> **备注：** 想了解怎么在你的应用里使用通知接口，请阅读 [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
+> **备注：** 想了解怎么在你的应用里使用通知接口，请阅读 [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
 
 ## 接口
 
 - {{domxref("Notification")}}
   - : 定义的通知对象。
 
-### 附加参数（Service worker additions）
+### 附加参数
 
 - {{domxref("ServiceWorkerRegistration")}}
   - : 该对象包含 {{domxref("ServiceWorkerRegistration.showNotification()")}} 和 {{domxref("ServiceWorkerRegistration.getNotifications()")}} 方法，用于控制通知的显示。
 - {{domxref("ServiceWorkerGlobalScope")}}
   - : 该对象包含 {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} 事件处理函数，用于通知被点击的时候触发绑定的事件处理函数。
 - {{domxref("NotificationEvent")}}
-  - : 该对象是功能明确的事件对象，表示一个被触发的通知事件，继承自{{domxref("ExtendableEvent")}}。
+  - : 该对象是功能明确的事件对象，表示一个被触发的通知事件，继承自 {{domxref("ExtendableEvent")}}。
 
 ## 规范
 
