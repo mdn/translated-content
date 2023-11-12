@@ -500,6 +500,7 @@
 /ko/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ko/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ko/docs/Web/API/WebRTC_API/adapter.js	/ko/docs/Web/API/WebRTC_API#상호_운용성
+/ko/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext	/ko/docs/conflicting/Web/API/Web_Audio_API
 /ko/docs/Web/API/Window/DOMContentLoaded_event	/ko/docs/Web/API/Document/DOMContentLoaded_event
 /ko/docs/Web/API/Window/crypto	/ko/docs/Web/API/crypto_property
 /ko/docs/Web/API/WindowEventHandlers/onhashchange	/ko/docs/Web/API/Window/hashchange_event
@@ -701,6 +702,7 @@
 /ko/docs/Web/JavaScript/Reference/About	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
+/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Private_properties
 /ko/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ko/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ko/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ko/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
 /ko/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ko/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
