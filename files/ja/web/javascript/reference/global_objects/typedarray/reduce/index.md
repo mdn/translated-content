@@ -31,6 +31,7 @@ reduce(callbackFn, initialValue)
       - : 型付き配列の `currentValue` を入力するインデックスの位置。最初の呼び出しで `initialValue` を指定した場合は `0`、そうでない場合は `1` となります。
     - `array`
       - : `reduce()` が呼び出された型付き配列。
+
 - `initialValue` {{optional_inline}}
   - : コールバックが最初に呼び出された時に `accumulator` が初期化される値です。
     `initialValue` が指定された場合、`callbackFn` は配列の最初の値を `currentValue` として実行を開始します。
