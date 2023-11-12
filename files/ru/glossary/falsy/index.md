@@ -3,6 +3,8 @@ title: Ложноподобное значение
 slug: Glossary/Falsy
 ---
 
+{{GlossarySidebar}}
+
 **Ложноподобное** (**falsy**) значение — значение, которое становится `false` в {{Glossary("Boolean", "булевом")}} контексте.
 
 {{Glossary("JavaScript")}} использует {{Glossary("Type_Conversion", "преобразование типов")}}, чтобы привести значение к булевому типу, там, где это требуется (например, в {{Glossary("Conditional", "условных конструкциях")}} и {{Glossary("Loop", "циклах")}}.
