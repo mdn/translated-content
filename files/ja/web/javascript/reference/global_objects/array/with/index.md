@@ -2,7 +2,7 @@
 title: Array.prototype.with()
 slug: Web/JavaScript/Reference/Global_Objects/Array/with
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: d78e56f238d41d5f1e050ed7b04179d2b657d573
 ---
 
 {{JSRef}}
@@ -35,11 +35,13 @@ arrayInstance.with(index, value)
 
 ## 解説
 
-with()` メソッドは、配列の指定された位置の値を変更し、指定されたインデックスの要素を指定された値で置き換えた新しい配列を返します。元の配列は変更しません。これにより、配列メソッドを連鎖させながら操作を行うことができます。
+`with()` メソッドは、配列の指定された位置の値を変更し、指定されたインデックスの要素を指定された値で置き換えた新しい配列を返します。元の配列は変更しません。これにより、配列メソッドを連鎖させながら操作を行うことができます。
 
-`with()` メソッドは決して[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)を生成しません。疎配列の場合、空のスロットは新しい配列の `undefined` に置き換わります。
+`with()` と {{jsxref("Array/at", "at()")}} を組み合わせることで、負のインデックスを用いた配列の書き込みと読み込み（それぞれ）ができます。
 
-`with()` メソッドは[汎用](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。 `this` の値が `length` プロパティを持っており、整数のキーのプロパティがあることのみを期待します。
+`with()` メソッドは決して[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を生成しません。疎配列の場合、空のスロットは新しい配列の `undefined` に置き換わります。
+
+`with()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
@@ -100,4 +102,5 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.at()")}}
 - {{jsxref("TypedArray.prototype.with()")}}

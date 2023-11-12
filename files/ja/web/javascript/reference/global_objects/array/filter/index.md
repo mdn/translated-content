@@ -31,7 +31,7 @@ filter(callbackFn, thisArg)
       - : `filter()` が呼び出された配列です。
 
 - `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行する際に `this` として使用される値。[反復可能メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復可能メソッド)を参照してください。
+  - : `callbackFn` を実行する際に `this` として使用される値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
@@ -39,7 +39,7 @@ filter(callbackFn, thisArg)
 
 ## 解説
 
-`filter()` メソッドは[反復可能メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復可能メソッド)です。指定された `callbackFn` 関数を配列の各要素に対して一度ずつ呼び出し、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返したすべての要素からなる新しい配列を生成します。 `callbackFn` は値が代入されている配列の添字に対してのみ呼び出されます。
+`filter()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された `callbackFn` 関数を配列の各要素に対して一度ずつ呼び出し、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返したすべての要素からなる新しい配列を生成します。 `callbackFn` は値が代入されている配列の添字に対してのみ呼び出されます。
 
 `callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
 
