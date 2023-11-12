@@ -22,7 +22,7 @@ audioObj = new Audio(url);
 
 新创建的 {{domxref("HTMLAudioElement")}} 对象，被设置为播放指定 `url`的音频文件。新对象的 {{domxref("HTMLMediaElement.preload", "preload")}} 属性被设置为 `auto` 且它的 `src` 属性被设置为具体的 URL 或 `null` （当没有提供 URL 时）。如果提供了 URL，浏览器在返回新对象之前开始异步加载媒体资源。
 
-## 使用备注
+## 使用说明
 
 你也可以使用其他元素创建方法，例如 {{domxref("document")}} 对象的 {{domxref("Document.createElement", "createElement()")}} 方法，去构建一个新的 {{domxref("HTMLAudioElement")}}.
 
@@ -37,7 +37,7 @@ audioObj = new Audio(url);
 基于事件的方法是最优的：
 
 ```js
-myAudioElement.addEventListener("canplaythrough", event => {
+myAudioElement.addEventListener("canplaythrough", (event) => {
   /* 音频可以播放；如果权限允许则播放 */
   myAudioElement.play();
 });

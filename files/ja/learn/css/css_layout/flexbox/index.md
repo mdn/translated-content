@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) は、アイテムを行または列に並べるための 1 次元のレイアウト方法です。アイテムがたわんで（伸びて）追加の空間を埋めたり、縮んで小さい空間にに収まったりします。この記事では、すべての基本事項について説明します。
+[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) は、アイテムを行または列に並べるための 1 次元のレイアウト方法です。アイテムがたわんで（伸びて）追加の空間を埋めたり、縮んで小さい空間に収まったりします。この記事では、すべての基本事項について説明します。
 
 <table>
   <tbody>
@@ -340,7 +340,7 @@ button {
 
 [クロスブラウザーのテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)のモジュールでは、ブラウザー間の対応の問題を解決するための戦略について説明します。
 
-## スキルをテストしましょう!
+## スキルテスト
 
 この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — [Test your skills: Flexbox: フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox_skills) を見てください。
 
@@ -354,18 +354,3 @@ button {
 - [Flexbox Froggy](https://flexboxfroggy.com/) — フレックスボックスの基本を学び、理解を深めるための教育ゲームです。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

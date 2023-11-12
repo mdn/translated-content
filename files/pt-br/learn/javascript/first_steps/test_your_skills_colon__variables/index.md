@@ -1,7 +1,6 @@
 ---
-title: 'Teste suas habilidades: variáveis'
+title: "Teste suas habilidades: variáveis"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
-original_slug: Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis
 ---
 
 {{learnsidebar}}
@@ -57,7 +56,7 @@ Se você gostaria que seu trabalho fosse avaliado, ou está travado e quer pedir
 1. Coloque seu trabalho em um editor compartilhável on-line, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/). Você pode escrever o código você mesmo ou usar os arquivos de ponto de partida vinculados nas seções acima.
 2. Escreva um post pedindo avaliação e/ou ajuda na categoria [MDN Discourse forum Learning](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
 
-    - Um título descritivo como "Avaliação desejada para o teste de habilidade Variáveis 1".
-    - Detalhes do que você já tentou e o que gostaria que fizéssemos. Por exemplo, se você está travado e precisa de ajuda ou deseja uma avaliação.
-    - Um link para o exemplo que você deseja que seja avaliado ou precisa de ajuda, em um editor compartilhável online (conforme mencionado na etapa 1 acima). Esta é uma boa prática para entrar - é muito difícil ajudar alguém com um problema de codificação se você não conseguir ver o código.
-    - Um link para a página real de tarefas ou avaliações, para que possamos encontrar a pergunta com a qual você deseja ajuda.
+   - Um título descritivo como "Avaliação desejada para o teste de habilidade Variáveis 1".
+   - Detalhes do que você já tentou e o que gostaria que fizéssemos. Por exemplo, se você está travado e precisa de ajuda ou deseja uma avaliação.
+   - Um link para o exemplo que você deseja que seja avaliado ou precisa de ajuda, em um editor compartilhável online (conforme mencionado na etapa 1 acima). Esta é uma boa prática para entrar - é muito difícil ajudar alguém com um problema de codificação se você não conseguir ver o código.
+   - Um link para a página real de tarefas ou avaliações, para que possamos encontrar a pergunta com a qual você deseja ajuda.

@@ -1,14 +1,6 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
-tags:
-  - API
-  - Interface
-  - Reference
-  - Shared
-  - SharedWorker
-  - Worker
-translation_of: Web/API/SharedWorker
 ---
 
 {{APIRef("Web Workers API")}}
@@ -56,35 +48,35 @@ myWorker.port.start();
 Lorsque le port est démarré, les deux scripts envoient des messages au worker et gèrent les messages qu'il renvoie en utilisant respectivement `port.postMessage()` et `port.onmessage` :
 
 ```js
-first.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message envoyé au worker');
-  }
+first.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message envoyé au worker");
+};
 
-  second.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message envoyé au worker');
-  }
+second.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message envoyé au worker");
+};
 
-  myWorker.port.onmessage = function(e) {
-    result1.textContent = e.data;
-    console.log('Message reçu du worker');
-  }
+myWorker.port.onmessage = function (e) {
+  result1.textContent = e.data;
+  console.log("Message reçu du worker");
+};
 ```
 
 Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété `ports` de l'événement [`connect`](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event) — nous utilisons alors la méthode {{domxref("MessagePort")}} `start()` pour démarrer le port, et le gestionnaire `onmessage` pour s'occuper des messages en provenance des threads principaux.
 
 ```js
-onconnect = function(e) {
-    var port = e.ports[0];
+onconnect = function (e) {
+  var port = e.ports[0];
 
-    port.onmessage = function(e) {
-      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-      port.postMessage(workerResult);
-    }
+  port.onmessage = function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
+    port.postMessage(workerResult);
+  };
 
-    port.start();
-}
+  port.start();
+};
 ```
 
 ## Spécifications

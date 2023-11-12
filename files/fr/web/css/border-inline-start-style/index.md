@@ -1,12 +1,6 @@
 ---
 title: border-inline-start-style
 slug: Web/CSS/border-inline-start-style
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-inline-start-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

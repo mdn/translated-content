@@ -1,9 +1,8 @@
 ---
 title: Переменные - место хранения необходимой информации
 slug: Learn/JavaScript/First_steps/Variables
-translation_of: Learn/JavaScript/First_steps/Variables
-original_slug: Learn/JavaScript/Первые_шаги/Variables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Что_пошло_не_так", "Learn/JavaScript/Первые_шаги/Math", "Learn/JavaScript/Первые_шаги")}}
 
 После прочтения последних двух статей вы знаете, что такое JavaScript, что он может сделать для вас, как использовать его вместе с другими веб-технологиями и какими он обладает функциями высокого уровня. В этой статье мы перейдём к реальным основам, рассмотрим, как работать с большинством базовых блоков JavaScript — Переменными.
@@ -27,12 +26,12 @@ original_slug: Learn/JavaScript/Первые_шаги/Variables
 ```
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.onclick = function() {
-  let name = prompt('Как вас зовут?');
-  alert('Привет ' + name + ', рады видеть вас!');
-}
+button.onclick = function () {
+  let name = prompt("Как вас зовут?");
+  alert("Привет " + name + ", рады видеть вас!");
+};
 ```
 
 {{ EmbedLiveSample('What_is_a_variable', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
@@ -81,10 +80,10 @@ var myAge;
 Здесь мы создаём две переменные myName и myAge. Попробуйте ввести эти строки сейчас в консоли вашего веб-браузера или в консоли ниже (можно открыть эту консоль в отдельной вкладке или в новом окне). После этого попробуйте создать переменную (или две) с вашими именами.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -92,7 +91,7 @@ var myAge;
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -126,64 +125,59 @@ var myAge;
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      if(document.querySelectorAll('div').length > 1) {
+      if (document.querySelectorAll("div").length > 1) {
         inputForm.focus();
       }
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -212,7 +206,7 @@ scoobyDoo;
 Как только переменная объявлена, ей можно присвоить значение. Для этого пишется имя переменной, затем следует знак равенства (`=`), а за ним значение, которое вы хотите присвоить. Например:
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 myAge = 37;
 ```
 
@@ -226,7 +220,7 @@ myAge;
 Вы можете объявить переменную и задать ей значение одновременно:
 
 ```js
-var myName = 'Chris';
+var myName = "Chris";
 ```
 
 Скорее всего, так вы будете писать большую часть времени, так как запись и выполнения кода с одно строки происходит быстрее, чем выполнение двух действий на двух отдельных строках.
@@ -238,7 +232,7 @@ var myName = 'Chris';
 Когда переменной присваивается значение, вы можете изменить (обновить) это значение, просто указав другое значение. Попробуйте ввести следующие строки в консоль:
 
 ```js
-myName = 'Bob';
+myName = "Bob";
 myAge = 40;
 ```
 
@@ -308,7 +302,7 @@ var myAge = 17;
 Строки - это фрагменты текста. Когда вы даёте переменной значение строки, вам нужно обернуть её в одиночные или двойные кавычки, в противном случае JavaScript попытается проиндексировать её как другое имя переменной.
 
 ```js
-var dolphinGoodbye = 'So long and thanks for all the fish';
+var dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
 ### Логические (Booleans)
@@ -332,8 +326,8 @@ var test = 6 < 3;
 Массив - это один объект, который содержит несколько значений, заключённых в квадратные скобки и разделённых запятыми. Попробуйте ввести следующие строки в консоль:
 
 ```js
-var myNameArray = ['Chris', 'Bob', 'Jim'];
-var myNumberArray = [10,15,40];
+var myNameArray = ["Chris", "Bob", "Jim"];
+var myNumberArray = [10, 15, 40];
 ```
 
 Как только эти массивы определены, можно получить доступ к каждому значению по их местоположению в массиве. Наберите следующие строки:
@@ -354,13 +348,13 @@ myNumberArray[2]; // should return 40
 Попробуйте ввести следующую строку в консоль:
 
 ```js
-var dog = { name : 'Spot', breed : 'Dalmatian' };
+var dog = { name: "Spot", breed: "Dalmatian" };
 ```
 
 Чтобы получить информацию, хранящуюся в объекте, вы можете использовать следующий синтаксис:
 
 ```js
-dog.name
+dog.name;
 ```
 
 Мы больше не будем рассматривать объекты в данном курсе - вы можете больше узнать о них в будущем модуле.
@@ -372,16 +366,16 @@ JavaScript - это «динамически типизируемый язык»
 Например, если вы объявите переменную и присвоите ей значение, заключённое в кавычки, браузер будет обрабатывать переменную как строку:
 
 ```js
-var myString = 'Привет';
+var myString = "Привет";
 ```
 
 Он всё равно будет строкой, даже если он содержит числа, поэтому будьте осторожны:
 
 ```js
-var myNumber = '500'; // упс, это все ещё строка (string)
-typeof(myNumber);
+var myNumber = "500"; // упс, это все ещё строка (string)
+typeof myNumber;
 myNumber = 500; // так-то лучше, теперь это число (number)
-typeof(myNumber);
+typeof myNumber;
 ```
 
 Попробуйте ввести четыре строки выше в консоль одну за другой и посмотреть результаты. Вы заметите, что мы используем специальную функцию `typeof()` - она возвращает тип данных переменной, которую вы передаёте в неё. В первый раз, когда она вызывается, она должа возвращать строку, так как переменная `myNumber` содержит строку `'500'`. Посмотрите, что она вернёт во второй раз, когда вы её вызовите.

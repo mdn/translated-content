@@ -15,8 +15,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 
 ```js
 var removingBookmark = browser.bookmarks.remove(
-  id                 // 字符串
-)
+  id, // 字符串
+);
 ```
 
 ### 参数

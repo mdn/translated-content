@@ -16,8 +16,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 ```js
 var downloading = browser.downloads.download(
-  options                   // object
-)
+  options, // object
+);
 ```
 
 ### パラメータ
@@ -53,7 +53,7 @@ var downloading = browser.downloads.download(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.downloads.download")}}
+{{Compat}}
 
 ## 例
 
@@ -71,9 +71,9 @@ function onFailed(error) {
 var downloadUrl = "https://example.org/image.png";
 
 var downloading = browser.downloads.download({
-  url : downloadUrl,
-  filename : 'my-image-again.png',
-  conflictAction : 'uniquify'
+  url: downloadUrl,
+  filename: "my-image-again.png",
+  conflictAction: "uniquify",
 });
 
 downloading.then(onStartedDownload, onFailed);

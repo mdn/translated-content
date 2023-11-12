@@ -13,7 +13,7 @@ slug: Web/API/Document/releaseCapture
 ## 構文
 
 ```js
-releaseCapture()
+releaseCapture();
 ```
 
 ### 引数

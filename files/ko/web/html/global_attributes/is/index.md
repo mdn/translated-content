@@ -40,7 +40,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.is")}}
+{{Compat}}
 
 ## 같이 보기
 

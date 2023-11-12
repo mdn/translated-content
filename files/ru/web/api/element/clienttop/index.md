@@ -1,7 +1,6 @@
 ---
 title: Element.clientTop
 slug: Web/API/Element/clientTop
-translation_of: Web/API/Element/clientTop
 ---
 
 {{ APIRef("DOM") }}

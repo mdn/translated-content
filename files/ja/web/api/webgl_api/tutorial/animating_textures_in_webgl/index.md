@@ -89,8 +89,14 @@ function initTextures() {
 function updateTexture() {
   gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA,
-        gl.UNSIGNED_BYTE, videoElement);
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    0,
+    gl.RGBA,
+    gl.RGBA,
+    gl.UNSIGNED_BYTE,
+    videoElement,
+  );
 }
 ```
 
@@ -100,12 +106,12 @@ function updateTexture() {
 
 以上で完了です!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510)}}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[コードを確認する](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [新しいページでデモを開く](http://mdn.github.io/webgl-examples/tutorial/sample8/)
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
 
 ## 関連情報
 
-- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Using_HTML5_audio_and_video)
+- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

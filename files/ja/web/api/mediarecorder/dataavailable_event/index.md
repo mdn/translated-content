@@ -1,7 +1,6 @@
 ---
 title: "MediaRecorder: dataavailable イベント"
 slug: Web/API/MediaRecorder/dataavailable_event
-original_slug: Web/API/MediaRecorder/ondataavailable
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
@@ -19,7 +18,7 @@ l10n:
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用sるうか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
 addEventListener("dataavailable", (event) => {});
@@ -39,17 +38,17 @@ const chunks = [];
 mediaRecorder.onstop = (e) => {
   console.log("MediaRecorder.stop() 呼び出し後に利用可能なデータ。");
 
-  const audio = document.createElement('audio');
+  const audio = document.createElement("audio");
   audio.controls = true;
-  const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
   const audioURL = window.URL.createObjectURL(blob);
   audio.src = audioURL;
   console.log("レコーダー停止");
-}
+};
 
 mediaRecorder.ondataavailable = (e) => {
   chunks.push(e.data);
-}
+};
 ```
 
 ## 仕様書

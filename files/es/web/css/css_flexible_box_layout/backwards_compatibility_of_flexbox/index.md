@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad con versiones anteriores de Flexbox
-slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 ---
 
 {{CSSRef}}

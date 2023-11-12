@@ -1,12 +1,12 @@
 ---
 title: map
 slug: Web/HTML/Element/map
-original_slug: Web/HTML/Elemento/map
 ---
 
 ### Definición
 
 - descripción de uno o dos párrafos
+
   - : **Sus etiquetas son**: \<map> y \</map> (ambas obligatorias).
 
     **Crea una caja**: [En bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).

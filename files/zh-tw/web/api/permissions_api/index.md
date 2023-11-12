@@ -1,7 +1,6 @@
 ---
 title: 權限 (Permissions)
 slug: Web/API/Permissions_API
-original_slug: WebAPI/Permissions
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
@@ -40,16 +39,24 @@ apps.onsuccess = function () {
 
   // Let's check the permission of each app
   apps.result.forEach(function (app) {
-    var request, appName = app.manifest.name;
+    var request,
+      appName = app.manifest.name;
 
     for (request in app.manifest.permission) {
       // Let's get the current permission for each permission request by the application
       var p = permission.get(request, app.manifestUrl, app.origine, false);
 
-      console.log(appName + ' asked for "' + request + '" permission, which is "' + p + '"')
+      console.log(
+        appName +
+          ' asked for "' +
+          request +
+          '" permission, which is "' +
+          p +
+          '"',
+      );
     }
   });
-}
+};
 ```
 
 ### 設定權限

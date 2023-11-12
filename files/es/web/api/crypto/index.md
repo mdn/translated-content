@@ -27,9 +27,9 @@ _Esta interfaz implementa las propiedades definidas en {{domxref("RandomSource")
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Crypto")}}
+{{Compat}}
 
 ## Ver también
 

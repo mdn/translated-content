@@ -50,10 +50,22 @@ table-layout: unset;
 
 ```html
 <table>
-  <tr><td>Ed</td><td>Wood</td></tr>
-  <tr><td>Albert</td><td>Schweitzer</td></tr>
-  <tr><td>Jane</td><td>Fonda</td></tr>
-  <tr><td>William</td><td>Shakespeare</td></tr>
+  <tr>
+    <td>Ed</td>
+    <td>Wood</td>
+  </tr>
+  <tr>
+    <td>Albert</td>
+    <td>Schweitzer</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Fonda</td>
+  </tr>
+  <tr>
+    <td>William</td>
+    <td>Shakespeare</td>
+  </tr>
 </table>
 ```
 

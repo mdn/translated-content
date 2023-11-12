@@ -19,20 +19,18 @@ npm install moment
 
 ## 創建虛擬屬性
 
-1. 打開 **./models/bookinstance.js**.
-2. 在此頁面最上方，引入 _moment_.
+1. 打開 **./models/bookinstance.js**。
+2. 在此頁面最上方，引入 _moment_。
 
-    ```js
-    var moment = require('moment');
-    ```
+   ```js
+   var moment = require("moment");
+   ```
 
-在 url 屬性後面，加入虛擬屬性 `due_back_formatted` 。
+在 url 屬性後面，加入虛擬屬性 `due_back_formatted`。
 
 ```js
-BookInstanceSchema
-.virtual('due_back_formatted')
-.get(function () {
-  return moment(this.due_back).format('MMMM Do, YYYY');
+BookInstanceSchema.virtual("due_back_formatted").get(function () {
+  return moment(this.due_back).format("MMMM Do, YYYY");
 });
 ```
 

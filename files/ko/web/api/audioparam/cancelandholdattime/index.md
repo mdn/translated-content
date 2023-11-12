@@ -10,7 +10,7 @@ slug: Web/API/AudioParam/cancelAndHoldAtTime
 ## 구문
 
 ```js
-var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime)
+var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime);
 ```
 
 ### 매개변수

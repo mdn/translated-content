@@ -106,10 +106,7 @@ user-select: unset;
 
 ## Compatibilidad con navegadores
 
-La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, visite
-<https://github.com/mdn/browser-compat-data> y envíenos una solicitud.
-
-{{Compat("css.properties.user-select")}}
+{{Compat}}
 
 ## Véase también
 

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 ## 구문
 
 ```js
-    Math.exp(x)
+Math.exp(x);
 ```
 
 ### 매개변수
@@ -34,18 +34,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 
 ```js
 Math.exp(-1); // 0.36787944117144233
-Math.exp(0);  // 1
-Math.exp(1);  // 2.718281828459045
+Math.exp(0); // 1
+Math.exp(1); // 2.718281828459045
 ```
 
-## 설명
+## 명세서
 
-| 설명                                                                 | 상태                         | 비고                                      |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | 최초의 정의. JavaScript 1.0.에서 첫 시행. |
-| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}} | {{Spec2('ES5.1')}}     |                                           |
-| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}     | {{Spec2('ES6')}}         |                                           |
-| {{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}} | {{Spec2('ESDraft')}} |                                           |
+{{Specifications}}
 
 ## 브라우저 호환성
 

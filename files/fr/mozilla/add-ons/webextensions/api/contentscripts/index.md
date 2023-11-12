@@ -1,14 +1,6 @@
 ---
 title: contentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - WebExtensions
-  - contentScripts
-translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 ---
 
 {{AddonSidebar}}
@@ -33,8 +25,8 @@ Il n'y a pas de permission de l'API `contentScripts`, mais une extension doit di
 - {{WebExtAPIRef("contentScripts.register()")}}
   - : Enregistre les scripts de contenu donnés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contentScripts", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

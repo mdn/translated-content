@@ -1,10 +1,9 @@
 ---
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
-original_slug: Web/CSS/filter-function/grayscale()
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 **`grayscale()`** : 对图片进行灰度转换，它是 {{cssxref("&lt;filter-function&gt;")}} 的子属性。
 

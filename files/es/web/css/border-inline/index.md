@@ -67,9 +67,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-inline")}}
+{{Compat}}
 
 ## Mira también
 

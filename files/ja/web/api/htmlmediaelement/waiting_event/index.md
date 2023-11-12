@@ -1,40 +1,29 @@
 ---
-title: 'HTMLMediaElement: waiting イベント'
+title: "HTMLMediaElement: waiting イベント"
 slug: Web/API/HTMLMediaElement/waiting_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
-`waiting` イベントは、一時的にデータが欠落しているために再生が停止したときに発生します。
+`waiting` イベントは、一時的にデータが欠落したために再生が停止したときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
-      <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onwaiting")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("waiting", (event) => {});
+
+onwaiting = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -43,20 +32,20 @@ slug: Web/API/HTMLMediaElement/waiting_event
 `addEventListener()` を使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('waiting', (event) => {
-  console.log('Video is waiting for more data.');
+video.addEventListener("waiting", (event) => {
+  console.log("Video is waiting for more data.");
 });
 ```
 
 `onwaiting` イベントハンドラープロパティを使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onwaiting = (event) => {
-  console.log('Video is waiting for more data.');
+  console.log("Video is waiting for more data.");
 };
 ```
 

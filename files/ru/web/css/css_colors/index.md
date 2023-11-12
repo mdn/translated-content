@@ -1,14 +1,8 @@
 ---
 title: CSS Colors
-slug: Web/CSS/CSS_Colors
-tags:
-  - CSS
-  - Цвета
-  - Цвета в CSS
-translation_of: Web/CSS/CSS_Color
-translation_of_original: Web/CSS/CSS_Colors
-original_slug: Web/CSS/CSS_Color
+slug: Web/CSS/CSS_colors
 ---
+
 {{CSSRef}}
 
 **CSS Colors** - модуль в CSS, который работает с цветами, типами цветов и прозрачностью.
@@ -30,26 +24,21 @@ _Нет._
 
 ## Спецификации
 
-| Specification                                    | Status                           | Comment            |
-| ------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Colors')}}             | {{Spec2('CSS4 Colors')}} |                    |
-| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                    |
-| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Initial definition |
+{{Specifications}}
 
 ## Поддержка браузерами
 
 ### `color` property
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
 ### `color-adjust` property
 
-{{Compat("css.properties.color-adjust")}}
+{{Compat}}
 
 ### `opacity` property
 
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Смотрите также
 

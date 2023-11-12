@@ -30,13 +30,13 @@ baz += false; // 2
 ```
 
 ```js
-let foo = 'foo';
+let foo = "foo";
 
 // String + Boolean -> 拼接
 foo += false; // "foofalse"
 
 // String + String -> 拼接
-foo += 'bar'; // "foofalsebar"
+foo += "bar"; // "foofalsebar"
 ```
 
 ```js
@@ -46,7 +46,7 @@ let bar = 5;
 bar += 2; // 7
 
 // Number + String -> 拼接
-bar += 'foo'; // "7foo"
+bar += "foo"; // "7foo"
 ```
 
 ## 规范
@@ -59,5 +59,5 @@ bar += 'foo'; // "7foo"
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
 - [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)

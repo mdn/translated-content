@@ -38,6 +38,6 @@ a |= 2; // 7
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
 - [按位或运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
 - [逻辑或赋值（`||=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

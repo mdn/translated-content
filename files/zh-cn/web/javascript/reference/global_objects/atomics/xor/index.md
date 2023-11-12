@@ -53,7 +53,7 @@ Atomics.xor(typedArray, index, value)
 4  0100
 ```
 
-## 例子
+## 示例
 
 ```js
 const sab = new SharedArrayBuffer(1024);
@@ -61,7 +61,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.xor(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0);  // 4
+Atomics.load(ta, 0); // 4
 ```
 
 ## 规范

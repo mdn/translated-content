@@ -49,17 +49,17 @@ where TypedArray is one of:
 ## 예제
 
 ```js
-Uint8Array.of(1);            // Uint8Array [ 1 ]
-Int8Array.of('1', '2', '3'); // Int8Array [ 1, 2, 3 ]
-Float32Array.of(1, 2, 3);    // Float32Array [ 1, 2, 3 ]
-Int16Array.of(undefined);    // IntArray [ 0 ]
+Uint8Array.of(1); // Uint8Array [ 1 ]
+Int8Array.of("1", "2", "3"); // Int8Array [ 1, 2, 3 ]
+Float32Array.of(1, 2, 3); // Float32Array [ 1, 2, 3 ]
+Int16Array.of(undefined); // IntArray [ 0 ]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

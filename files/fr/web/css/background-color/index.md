@@ -1,11 +1,6 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/background-color
 ---
 
 {{CSSRef}}
@@ -20,22 +15,21 @@ La propriété **`background-color`** permet de définir la couleur utilisée po
 /* Valeurs avec un mot-clé */
 background-color: red;
 
-
 /* Valeur hexadécimale */
-background-color: #bbff00;    /* Complètement opaque */
-background-color: #bf0;       /* Complètement opaque - notation raccourcie */
-background-color: #11ffee00;  /* Complètement transparent */
-background-color: #1fe0;      /* Complètement transparent - notation raccourcie */
-background-color: #11ffeeff;  /* Complètement opaque */
-background-color: #1fef;      /* Complètement opaque - notation raccourcie */
+background-color: #bbff00; /* Complètement opaque */
+background-color: #bf0; /* Complètement opaque - notation raccourcie */
+background-color: #11ffee00; /* Complètement transparent */
+background-color: #1fe0; /* Complètement transparent - notation raccourcie */
+background-color: #11ffeeff; /* Complètement opaque */
+background-color: #1fef; /* Complètement opaque - notation raccourcie */
 
 /* Valeur RGB */
 background-color: rgb(255, 255, 128);
 
 /* Valeur RGBA : une valeur RGB avec un canal alpha */
-background-color: rgba(117, 190, 218, 0.0); /* 0.0 - transparent */
+background-color: rgba(117, 190, 218, 0); /* 0.0 - transparent */
 background-color: rgba(117, 190, 218, 0.5); /* 0.5 - semi-transparent */
-background-color: rgba(117, 190, 218, 1.0); /* 1.0 - opaque */
+background-color: rgba(117, 190, 218, 1); /* 1.0 - opaque */
 
 /* Valeur HSLA */
 background-color: hsla(50, 33%, 25%, 0.75);
@@ -76,30 +70,24 @@ La propriété `background-color` se définit grâce à une valeur de type `<col
 }
 
 .exemple_deux {
-  background-color: rgb(153,102,153);
-  color: rgb(255,255,204);
+  background-color: rgb(153, 102, 153);
+  color: rgb(255, 255, 204);
 }
 
 .exemple_trois {
   background-color: #777799;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
 ### HTML
 
 ```html
-<div class="exemple_un">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemple_un">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exemple_deux">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemple_deux">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exemple_trois">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemple_trois">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### Résultat

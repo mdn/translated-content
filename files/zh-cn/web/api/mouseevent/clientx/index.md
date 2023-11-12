@@ -21,16 +21,20 @@ var x = instanceOfMouseEvent.clientX
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>clientX/clientY example</title>
 
     <script>
-      function showCoords(evt){
+      function showCoords(evt) {
         alert(
-          "clientX value: " + evt.clientX + "\n" +
-          "clientY value: " + evt.clientY + "\n"
+          "clientX value: " +
+            evt.clientX +
+            "\n" +
+            "clientY value: " +
+            evt.clientY +
+            "\n",
         );
       }
     </script>
@@ -51,6 +55,6 @@ var x = instanceOfMouseEvent.clientX
 
 ## 相关
 
-- `{{ domxref("MouseEvent") }}`
-- `{{domxref("event.clientY","clientY")}}`
-- `{{domxref("event.screenX","screenX")}} / {{domxref("event.screenY","screenY")}}`
+- {{ domxref("MouseEvent") }}
+- {{domxref("event.clientY","clientY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}

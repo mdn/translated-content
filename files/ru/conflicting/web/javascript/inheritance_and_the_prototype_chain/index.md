@@ -1,7 +1,6 @@
 ---
 title: Подробнее об объектной модели
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 
@@ -613,7 +612,7 @@ function instanceOf(object, constructor) {
 }
 ```
 
-> **Примечание:** **Замечание:** Реализация выше особым образом обрабатывает тип "xml". Это сделано для того, чтобы обойти особенность представления XML объектов в последних версиях JavaScript. Смотрите описание ошибки {{ bug(634150) }} если вам интересны детали.
+> **Примечание:** Реализация выше особым образом обрабатывает тип "xml". Это сделано для того, чтобы обойти особенность представления XML объектов в последних версиях JavaScript. Смотрите описание ошибки {{ bug(634150) }} если вам интересны детали.
 
 Следующие вызовы функции instanceOf, заданной выше, вернут истинные значения:
 

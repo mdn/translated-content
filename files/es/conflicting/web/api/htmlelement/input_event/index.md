@@ -24,14 +24,6 @@ window.addEventListener('input', function (e) {
 <input placeholder="Tipee aquí y vea la consola.">
 ```
 
-## Especificaciones
-
-[HTML - APIs de elementos de entrada comunes (`input`)](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#event-input-input)
-
-## Compatibilidad con navegadores
-
-{{Compat("api.GlobalEventHandlers.oninput")}}
-
 ## Vea también
 
 - [Un laberinto de navegadores HTML5, soporte para oninput](http://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/)

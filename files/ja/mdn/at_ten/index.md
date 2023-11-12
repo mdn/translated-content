@@ -1,10 +1,11 @@
 ---
 title: MDN は 10 周年を迎えました
 slug: MDN/At_ten
-original_slug: MDN_at_ten
-i10n:
-  sourceCommit: 0160aac0e623dacdce4019205f32f7b3d3e58019
+l10n:
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
+
+{{MDNSidebar}}
 
 ウェブのドキュメントを作り続けて 10 周年
 
@@ -19,8 +20,6 @@ i10n:
 10 年にわたり、MDN のコミュニティはオープンウェブに関するドキュメントを作成し、更新し続けてきました。 90,000 を超えるドキュメントが Mozillian たちによって作成され、翻訳されています。そんなコミュニティのメンバーに参加しませんか？何か大きなことをしなくても大丈夫。新しい Web API に関する記事を 1 から書くことも、単純なタイプミスの修正も、どちらも等しく重要な貢献です。
 
 [参加についての詳細はこちら](/ja/docs/MDN/Contribute)
-
-{{TenthCampaignQuote}}
 
 ## 関連情報
 

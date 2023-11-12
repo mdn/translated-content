@@ -1,11 +1,6 @@
 ---
 title: Метод
 slug: Glossary/Method
-tags:
-  - JavaScript
-  - Глоссарий
-translation_of: Glossary/Method
-original_slug: Глоссарий/Method
 ---
 
 **Метод** это {{glossary("function","функция")}}, являющаяся {{glossary("property","свойством")}} {{glossary("object","объекта")}}. Существует два типа методов: _Методы Экземпляра_ которые являются встроенными задачами, выполняемыми экземпляром объекта, или _{{Glossary("static method", "Статические Методы")}}_ которые являются задачами, вызываемыми непосредственно в конструкторе объекта.
@@ -16,7 +11,6 @@ original_slug: Глоссарий/Method
 
 ### Узнайте об этом
 
-- {{InterWiki("wikipedia","Метод_(программирование)")}} в Wikipedia
 - [Определение методов в JavaScript](/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов) (сравнение традиционного синтаксиса и нового короткого)
 
 ### Техническая информация

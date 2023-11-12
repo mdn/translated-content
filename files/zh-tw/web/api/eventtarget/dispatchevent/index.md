@@ -35,7 +35,7 @@ cancelled = !target.dispatchEvent(event)
 
 ## 注意
 
-`dispatchEvent` 是「建立 → 初始化 → 觸發」的最後一步驟。這些步驟是用來觸發事件，讓事件完成。事件有多種建立方式，例如用 {{domxref("​document.createEvent")}} 並用 [initEvent](/zh-TW/docs/DOM/event.initEvent) 或其他特殊 methods ，像是 [initMouseEvent](/zh-TW/docs/DOM/event.initMouseEvent) 或 [initUIEvent](/zh-TW/docs/DOM/event.initUIEvent) 來初始化。
+`dispatchEvent` 是「建立 → 初始化 → 觸發」的最後一步驟。這些步驟是用來觸發事件，讓事件完成。事件有多種建立方式，例如用 {{domxref("document.createEvent")}} 並用 [initEvent](/zh-TW/docs/DOM/event.initEvent) 或其他特殊 methods ，像是 [initMouseEvent](/zh-TW/docs/DOM/event.initMouseEvent) 或 [initUIEvent](/zh-TW/docs/DOM/event.initUIEvent) 來初始化。
 
 詳請可參考《{{domxref("Event")}}》。
 

@@ -17,7 +17,7 @@ var rectCollection = object.getClientRects();
 
 El valor devuelto es una colección de objetos rectangulares {{domxref("DOMRect")}}, uno para cada cuadro borde CSS asociado al elemento. Cada objeto {{domxref("DOMRect")}} contiene las propiedades de sólo lectura: `left`, `top`, `right` y `bottom`, que describen la caja, en pixeles, con el valor top-left relativo al valor top-left del _viewport._ En el caso de tablas con subtítulos, el subtítulo es incluido aún cuado esté fuera del cuadro borde de la tabla. En caso de ser ejecutado en algún elemento SVG que no sea el `<svg>` externo, el "viewport" al cual los rectángulos de resultado serán relativos será el "viewport" que establece el `<svg>` externo (y serán transformados por las trasnformaciones del `<svg>` externo, si estas existen).
 
-{{ fx_minversion_note(3.5, "Firefox 3.5 ha agregado las propiedades <code>width</code> y <code>height</code> al objeto TextRectangle.") }}
+> **Nota:** Firefox 3.5 ha agregado las propiedades `width` y `height` al objeto `TextRectangle`.
 
 La cantidad de desplazamiento que ha tenido el área del viewport (o cualquier otro elemento desplazable) se tiene en cuenta al calcular los rectángulos.
 
@@ -46,4 +46,4 @@ var numLines = rects.length;
 
 ## Referencias
 
-- [MSDN's getClientRects definition](http://msdn2.microsoft.com/en-us/library/ms536435.aspx)
+- [MSDN's getClientRects definition](https://msdn2.microsoft.com/en-us/library/ms536435.aspx)

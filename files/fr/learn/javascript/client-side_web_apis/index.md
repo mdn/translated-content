@@ -1,22 +1,6 @@
 ---
 title: API web utilisées côté client
 slug: Learn/JavaScript/Client-side_web_APIs
-tags:
-  - API
-  - API Web
-  - Apprendre
-  - Articles
-  - Codage
-  - DOM
-  - Débutant
-  - Graphismes
-  - JavaScript
-  - Localisation
-  - Media
-  - Module
-  - données
-translation_of: Learn/JavaScript/Client-side_web_APIs
-original_slug: Apprendre/JavaScript/Client-side_web_APIs
 ---
 
 {{LearnSidebar}}

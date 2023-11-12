@@ -1,10 +1,6 @@
 ---
 title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/letter-spacing
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

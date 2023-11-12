@@ -24,7 +24,7 @@ let currentState = history.state;
 console.log(`History.state before pushState: ${history.state}`);
 
 // 现在 push 一些数据到栈里
-history.replaceState({name: 'Example'}, "pushState example", 'page3.html');
+history.replaceState({ name: "Example" }, "pushState example", "page3.html");
 
 // 现在 state 已经有值了
 console.log(`History.state after pushState: ${history.state}`);

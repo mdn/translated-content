@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ## 구문
 
 ```js
-    Number.isSafeInteger(testValue)
+Number.isSafeInteger(testValue);
 ```
 
 ### 매개변수
@@ -36,22 +36,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ## 예시
 
 ```js
-Number.isSafeInteger(3);                    // true
-Number.isSafeInteger(Math.pow(2, 53));      // false
-Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
-Number.isSafeInteger(NaN);                  // false
-Number.isSafeInteger(Infinity);             // false
-Number.isSafeInteger('3');                  // false
-Number.isSafeInteger(3.1);                  // false
-Number.isSafeInteger(3.0);                  // true
+Number.isSafeInteger(3); // true
+Number.isSafeInteger(Math.pow(2, 53)); // false
+Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+Number.isSafeInteger(NaN); // false
+Number.isSafeInteger(Infinity); // false
+Number.isSafeInteger("3"); // false
+Number.isSafeInteger(3.1); // false
+Number.isSafeInteger(3.0); // true
 ```
 
 ## 폴리필
 
 ```js
-Number.isSafeInteger = Number.isSafeInteger || function (value) {
-   return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
-};
+Number.isSafeInteger =
+  Number.isSafeInteger ||
+  function (value) {
+    return (
+      Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER
+    );
+  };
 ```
 
 ## 명세

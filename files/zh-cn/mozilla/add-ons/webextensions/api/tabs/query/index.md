@@ -1,18 +1,17 @@
 ---
 title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 ---
 
-\[阿登侧边栏（）]
+{{AddonSidebar()}}
 
-获取具有指定属性的所有选项卡，如果未指定任何属性，则获取所有选项卡。
+获取具有指定属性的所有标签页，如果未指定任何属性，则获取所有标签页。
 
-这是返回 的异步函数。[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
-```js
+```js-nolint
 let querying = browser.tabs.query(queryObj)
 ```
 
@@ -20,132 +19,128 @@ let querying = browser.tabs.query(queryObj)
 
 - `queryObj`
 
-  - : `object`.函数将仅获取其属性与此处包含的属性匹配的选项卡。`query()`
+  - : `object`。`query()` 函数将仅获取其属性与此处包含的属性相匹配的标签页。
 
-    请参阅 \WebExtAPIRef（"选项卡"）。Tab"）=文档以了解有关这些属性的详细信息。
+    请参阅 {{WebExtAPIRef("tabs.Tab")}} 文档以了解有关这些属性的详细信息。
 
     - `active` {{optional_inline}}
-      - : `boolean`.选项卡是否在窗口中处于活动状态。
+      - : `boolean`。标签页是否在窗口中处于活动状态。
     - `audible` {{optional_inline}}
-      - : `boolean`.标签是否可听见。
+      - : `boolean`。标签页是否在播放声音。
     - `autoDiscardable` {{optional_inline}}
-      - : `boolean`.当资源不足时，浏览器是否可以自动丢弃选项卡。
+      - : `boolean`。浏览器是否可以自动丢弃该标签页。默认值为 `true`。若设置为 `false`，则浏览器将不会自动丢弃该标签页。但是，标签页仍可使用 {{WebExtAPIRef("tabs.discard")}} 来丢弃。
     - `cookieStoreId` {{optional_inline}}
-      - : `string`.使用此仅返回其 Cookie 存储 ID 为 的选项卡。此选项仅在加载项具有权限时[才可用](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。`cookieStoreId` `cookies`
+      - : `string` 或 `string` 数组。使用它来返回 `tab.cookieStoreId` 与指定的任何 `cookieStoreId` 字符串相匹配的标签页。此选项仅在附加组件具有 `"cookies"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时才可用。
     - `currentWindow` {{optional_inline}}
-      - : `boolean`.选项卡是否在当前窗口中。
+      - : `boolean`。标签页是否在当前窗口中。
     - `discarded` {{optional_inline}}
-      - : `boolean`.是否丢弃选项卡。丢弃的选项卡是其内容已从内存中卸载，但仍在选项卡条中可见的选项卡。下次激活时，其内容将重新加载。
+      - : `boolean`。标签页是否被丢弃。丢弃的标签页是指其内容已从内存中卸载，但仍在标签条中可见的标签页。其内容将下次激活时重新加载。
     - `hidden` {{optional_inline}}
-      - : `boolean`.选项卡是否隐藏。
+      - : `boolean`。标签页是否被隐藏。
     - `highlighted` {{optional_inline}}
-      - : `boolean`.选项卡是否突出显示。
+      - : `boolean`。标签页是否突出显示。
     - `index` {{optional_inline}}
-      - : `integer`.选项卡在其窗口中的位置。
+      - : `integer`。标签页在其窗口中的位置。
     - `muted` {{optional_inline}}
-      - : `boolean`.选项卡是否为静音。
+      - : `boolean`。标签页是否静音。
     - `lastFocusedWindow` {{optional_inline}}
-      - : `boolean`.选项卡是否在上一个焦点窗口中。
+      - : `boolean`。标签页是否在最近聚焦的（last focused）窗口中。
     - `pinned` {{optional_inline}}
-      - : `boolean`.选项卡是否固定。
+      - : `boolean`。标签页是否固定。
     - `status` {{optional_inline}}
-      - : {WebExtAPIRef（'选项卡。TabStatus '）=。选项卡是否已完成加载。
+      - : {{WebExtAPIRef('tabs.TabStatus')}}。标签页是否已完成加载。
     - `title` {{optional_inline}}
-      - : `string`.将页面标题与图案匹配。
+      - : `string`。将页面标题与模式进行匹配。需要“tabs”权限或匹配标签的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
     - `url` {{optional_inline}}
-      - : `string`或。将选项卡与一个或多个匹配[模式匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)。请注意，片段标识符不匹配。`array of string`
-    - `windowId`{{optional_inline}}
-      - : `integer`. The of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.`id`
-    - `windowType`{{optional_inline}}
-      - : {{WebExtAPIRef('tabs.WindowType')}}. The type of window the tabs are in.
+      - : `string` 或 `string` 数组。将标签页与一个或多个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)进行匹配。请注意，不会匹配片段标识符。需要“tabs”权限或匹配标签的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
+    - `windowId` {{optional_inline}}
+      - : `integer`。父窗口的 ID，或 {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}}（用于当前窗口）。
+    - `windowType` {{optional_inline}}
+      - : {{WebExtAPIRef('tabs.WindowType')}}。标签页所在窗口的类型。
 
-### Return value
+### 返回值
 
-A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of `{{WebExtAPIRef('tabs.Tab')}}` objects, containing information about each matching tab.
+一个将兑现为包含 {{WebExtAPIRef('tabs.Tab')}} 对象（其中包含有关每个匹配的标签页的信息）的数组的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 对象。
 
-If any error occurs, the promise will be rejected with an error message.
+如果发生任何错误，promise 将以一条错误消息被拒绝。
 
-## Examples
+## 示例
 
-Get all tabs:
+获取所有标签页：
 
 ```js
 function logTabs(tabs) {
-  for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
+  for (const tab of tabs) {
+    // tab.url 需要 `tabs` 权限或匹配的主机（host）权限。
     console.log(tab.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`错误：${error}`);
 }
 
-let querying = browser.tabs.query({});
-querying.then(logTabs, onError);
+browser.tabs.query({}).then(logTabs, onError);
 ```
 
-Get all tabs in the current window:
+获取当前窗口中的所有标签页：
 
 ```js
 function logTabs(tabs) {
   for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
+    // tab.url 需要 `tabs` 权限或匹配的主机权限。
     console.log(tab.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`错误：${error}`);
 }
 
-let querying = browser.tabs.query({currentWindow: true});
-querying.then(logTabs, onError);
+browser.tabs.query({ currentWindow: true }).then(logTabs, onError);
 ```
 
-Get the active tab in the current window:
+获取当前窗口中的活动标签页：
 
 ```js
 function logTabs(tabs) {
-  // tabs[0].url requires the `tabs` permission
+  // tabs[0].url 需要 `tabs` 权限或匹配的主机权限。
   console.log(tabs[0].url);
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`错误：${error}`);
 }
 
-let querying = browser.tabs.query({currentWindow: true, active: true});
-querying.then(logTabs, onError);
+browser.tabs
+  .query({ currentWindow: true, active: true })
+  .then(logTabs, onError);
 ```
 
-Get tabs for all HTTP and HTTPS URLs under or any of its subdomains: `"mozilla.org"`
+获取 `"mozilla.org"` 及其任何子域下所有 HTTP 和 HTTPS URL 的标签页：
 
 ```js
 function logTabs(tabs) {
-  for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
+  for (const tab of tabs) {
+    // tab.url 需要 `tabs` 权限或匹配的主机权限。
     console.log(tab.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`错误：${error}`);
 }
 
-let querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
-querying.then(logTabs, onError);
+browser.tabs.query({ url: "*://*.mozilla.org/*" }).then(logTabs, onError);
 ```
 
 {{WebExtExamples}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **备注：** 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-query) API。本文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

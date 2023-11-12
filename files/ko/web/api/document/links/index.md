@@ -10,14 +10,14 @@ slug: Web/API/Document/links
 ## Syntax
 
 ```js
-nodeList = document.links
+nodeList = document.links;
 ```
 
 ## Example
 
 ```js
 var links = document.links;
-for(var i = 0; i < links.length; i++) {
+for (var i = 0; i < links.length; i++) {
   var linkHref = document.createTextNode(links[i].href);
   var lineBreak = document.createElement("br");
   document.body.appendChild(linkHref);
@@ -25,13 +25,10 @@ for(var i = 0; i < links.length; i++) {
 }
 ```
 
-## Specifications
+## 명세서
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-document-links', 'Document.links')}} | {{ Spec2('HTML WHATWG') }} |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-7068919", "document.links")}}     | {{Spec2("DOM2 HTML")}}         | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

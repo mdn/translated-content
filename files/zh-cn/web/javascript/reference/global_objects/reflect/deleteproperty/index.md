@@ -49,7 +49,7 @@ arr; // [1, 2, 3, , 5]
 Reflect.deleteProperty({}, "foo"); // true
 
 // 如果属性不可配置，返回 false
-Reflect.deleteProperty(Object.freeze({foo: 1}), "foo"); // false
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## 规范

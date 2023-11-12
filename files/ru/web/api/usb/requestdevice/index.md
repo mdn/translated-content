@@ -1,15 +1,6 @@
 ---
 title: USB.requestDevice()
 slug: Web/API/USB/requestDevice
-tags:
-  - API
-  - USB
-  - WebUSB
-  - WebUSB API
-  - getDevices()
-  - Определение
-  - метод
-translation_of: Web/API/USB/requestDevice
 ---
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
@@ -47,16 +38,17 @@ USB.requestDevice([filters])
 
 ```js
 const filters = [
-        {vendorId: 0x1209, productId: 0xa800},
-        {vendorId: 0x1209, productId: 0xa850}
-      ];
-navigator.usb.requestDevice({filters: filters})
-.then(usbDevice => {
-  console.log("Product name: " + usbDevice.productName);
-})
-.catch(e => {
-  console.log("There is no device. " + e);
-});
+  { vendorId: 0x1209, productId: 0xa800 },
+  { vendorId: 0x1209, productId: 0xa850 },
+];
+navigator.usb
+  .requestDevice({ filters: filters })
+  .then((usbDevice) => {
+    console.log("Product name: " + usbDevice.productName);
+  })
+  .catch((e) => {
+    console.log("There is no device. " + e);
+  });
 ```
 
 ## Спецификации

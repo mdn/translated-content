@@ -1,23 +1,15 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - Object
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
-original_slug: Web/JavaScript/Reference/Objets_globaux/JSON
 ---
 
 {{JSRef}}
 
-L’objet **`JSON`** contient des méthodes pour interpréter du [JSON](https://json.org/) (JavaScript Object Notation) (voir également la page du glossaire {{glossary("JSON")}}) et convertir des valeurs en JSON. Il ne peut être appelé ou construit, et, en dehors de ses deux méthodes, n’a pas de fonctionnalité propre.
+L'objet **`JSON`** contient des méthodes pour interpréter du [JSON](https://json.org/) (JavaScript Object Notation) (voir également la page du glossaire {{glossary("JSON")}}) et convertir des valeurs en JSON. Il ne peut être appelé ou construit, et, en dehors de ses deux méthodes, n'a pas de fonctionnalité propre.
 
 ## Différences entres JavaScript et JSON
 
-JSON est une syntaxe pour sérialiser des objets, tableaux, nombres, chaînes de caractères, booléens et valeurs _null_. Elle est basée sur la syntaxe de JavaScript mais en est distincte : du code JavaScript n’est pas nécessairement du JSON, et du JSON n’est pas nécessairement du JavaScript.
+JSON est une syntaxe pour sérialiser des objets, tableaux, nombres, chaînes de caractères, booléens et valeurs _null_. Elle est basée sur la syntaxe de JavaScript mais en est distincte : du code JavaScript n'est pas nécessairement du JSON, et du JSON n'est pas nécessairement du JavaScript.
 
 - Pour les objets et les tableaux
 
@@ -25,7 +17,7 @@ JSON est une syntaxe pour sérialiser des objets, tableaux, nombres, chaînes de
 
 - Pour les nombres
 
-  - Les zéros non significatifs sont interdits ; un point décimal doit être suivi d’au moins un chiffre (plus exactement : `JSON.stringify()` ignorera les zéros mais `JSON.parse()` déclenchera une exception `SyntaxError`).
+  - Les zéros non significatifs sont interdits ; un point décimal doit être suivi d'au moins un chiffre (plus exactement : `JSON.stringify()` ignorera les zéros mais `JSON.parse()` déclenchera une exception `SyntaxError`).
 
 - Pour le texte : **tout texte JSON est une expression JavaScript** (pour les moteurs qui implémentent [cette proposition](https://github.com/tc39/proposal-json-superset)).
 
@@ -91,7 +83,7 @@ TableauJSON = [ ]
               ou ÉlémentsTableau , JSON
 ```
 
-Des espaces blancs insignifiants peuvent être présents n’importe où sauf dans un `JSONNumber` (les nombres ne doivent pas contenir d’espaces blancs) ou dans un `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). Les caractères tabulation ([U+0009](https://unicode-table.com/en/0009/)), retour chariot ([U+000D](https://unicode-table.com/en/000D/)), saut de ligne ([U+000A](https://unicode-table.com/en/000A/)), and espace ([U+0020](https://unicode-table.com/en/0020/)) sont les seuls caractères blancs valides.
+Des espaces blancs insignifiants peuvent être présents n'importe où sauf dans un `JSONNumber` (les nombres ne doivent pas contenir d'espaces blancs) ou dans un `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). Les caractères tabulation ([U+0009](https://unicode-table.com/en/0009/)), retour chariot ([U+000D](https://unicode-table.com/en/000D/)), saut de ligne ([U+000A](https://unicode-table.com/en/000A/)), and espace ([U+0020](https://unicode-table.com/en/0020/)) sont les seuls caractères blancs valides.
 
 ## Méthodes
 

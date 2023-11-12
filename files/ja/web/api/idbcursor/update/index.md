@@ -53,32 +53,32 @@ update(value)
 
 ```js
 function updateResult() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readwrite');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readwrite");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      if (cursor.value.albumTitle === 'A farewell to kings') {
+      if (cursor.value.albumTitle === "A farewell to kings") {
         const updateData = cursor.value;
 
         updateData.year = 2050;
         const request = cursor.update(updateData);
         request.onsuccess = () => {
-          console.log('アルバムの年の改善？');
+          console.log("アルバムの年の改善？");
         };
-      };
+      }
 
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.continue();
     } else {
-      console.log('エントリーを表示しました。');
+      console.log("エントリーを表示しました。");
     }
   };
-};
+}
 ```
 
 ## 仕様書

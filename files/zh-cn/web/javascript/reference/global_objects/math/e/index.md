@@ -19,16 +19,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/E
 
 ## 示例
 
-### 例子：使用 `Math.E`
+### 示例：使用 `Math.E`
 
 下面的函数返回 e：
 
 ```js
 function getNapier() {
-   return Math.E
+  return Math.E;
 }
 
-getNapier() // 2.718281828459045
+getNapier(); // 2.718281828459045
 ```
 
 ## 规范

@@ -1,9 +1,6 @@
 ---
 title: Решённое значение
 slug: Web/CSS/resolved_value
-tags:
-  - CSS
-translation_of: Web/CSS/resolved_value
 ---
 
 {{cssref}}
@@ -12,9 +9,7 @@ translation_of: Web/CSS/resolved_value
 
 ## Спецификации
 
-| Спецификация                                                                     | Статус                   | Комментарий             |
-| -------------------------------------------------------------------------------- | ------------------------ | ----------------------- |
-| {{SpecName("CSSOM", "#resolved-values", "resolved value")}} | {{Spec2("CSSOM")}} | Изначальное определение |
+{{Specifications}}
 
 ## Смотрите также
 

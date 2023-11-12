@@ -14,9 +14,9 @@ l10n:
 ## 構文
 
 ```js
-toLocaleString()
-toLocaleString(locales)
-toLocaleString(locales, options)
+toLocaleString();
+toLocaleString(locales);
+toLocaleString(locales, options);
 ```
 
 ### 引数
@@ -47,8 +47,8 @@ toLocaleString(locales, options)
 `prices` 配列内の文字列と数値の通貨を常に表示します。
 
 ```js
-const prices = ['￥7', 500, 8123, 12];
-prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
+const prices = ["￥7", 500, 8123, 12];
+prices.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 
 // "￥7,￥500,￥8,123,￥12"
 ```

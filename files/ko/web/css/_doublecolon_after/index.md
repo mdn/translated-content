@@ -1,5 +1,5 @@
 ---
-title: '::after (:after)'
+title: "::after (:after)"
 slug: Web/CSS/::after
 ---
 
@@ -68,14 +68,14 @@ a::after {
 
 ```css
 .ribbon {
- background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
- content: "멋진 주황색 상자입니다.";
- background-color: #FFBA10;
- border-color: black;
- border-style: dotted;
+  content: "멋진 주황색 상자입니다.";
+  background-color: #ffba10;
+  border-color: black;
+  border-style: dotted;
 }
 ```
 
@@ -92,9 +92,12 @@ a::after {
 #### HTML
 
 ```html
-<p>이 예제는
-  <span tabindex="0" data-descr="단어와 문장 부호의 집합">텍스트</span>와 함께 약간의
-  <span tabindex="0" data-descr="호버 시 보여지는 작은 팝업">툴팁</span>을 포함합니다.
+<p>
+  이 예제는
+  <span tabindex="0" data-descr="단어와 문장 부호의 집합">텍스트</span>와 함께
+  약간의
+  <span tabindex="0" data-descr="호버 시 보여지는 작은 팝업">툴팁</span>을
+  포함합니다.
 </p>
 ```
 
@@ -104,7 +107,7 @@ a::after {
 span[data-descr] {
   position: relative;
   text-decoration: underline;
-  color: #00F;
+  color: #00f;
   cursor: help;
 }
 

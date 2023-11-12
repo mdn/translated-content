@@ -2,7 +2,7 @@
 title: WorkerGlobalScope.location
 slug: Web/API/WorkerGlobalScope/location
 l10n:
-  sourceCommit: 0fe2d3ee23b1b23be971d42c7c56729bd23a3f83
+  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
 {{APIRef("Web Workers API")}}
@@ -39,7 +39,7 @@ WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", host
 
 この location オブジェクトを使用して、通常の {{domxref("Location")}} オブジェクトと同様、文書の場所に関するより詳細な情報を得ることができます。
 
-> **メモ:** Firefox では、共有/サービスワーカー内で `console.log` を使用する際にバグがあり（{{Bug("1058644")}} を参照）、おかしな結果を返すことがありますが、これはすぐに修正されるはずです。
+> **メモ:** Firefox では、共有/サービスワーカー内で `console.log` を使用する際にバグがあり（[Firefox バグ 1058644](https://bugzil.la/1058644) を参照）、おかしな結果を返すことがありますが、これはすぐに修正されるはずです。
 
 ## 仕様書
 

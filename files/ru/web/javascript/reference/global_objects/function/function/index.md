@@ -1,13 +1,8 @@
 ---
 title: Конструктор Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-tags:
-  - Конструктор
-  - Function
-  - JavaScript
-  - Справочник
-browser-compat: javascript.builtins.Function.Function
 ---
+
 {{JSRef}}
 
 **Конструктор `Function`** создаёт новый **объект** `Function`. Вызов конструктора напрямую позволяет создавать функции программным путём, однако такой способ представляет угрозу для безопасности, а также несёт разные (хотя не такие значительные) проблемы с производительностью при использовании с {{jsxref("Global_Objects/eval")}}. Однако в отличие от eval, конструктор `Function` создаёт функции, выполняемые только в глобальной области видимости.
@@ -51,7 +46,7 @@ new Function(arg1, ... , argN, functionBody)
 // Пример может быть запущен непосредственно в вашей консоли JavaScript
 
 // Создаём функцию, принимающую два аргумента, и возвращающую их сумму
-const adder = new Function('a', 'b', 'return a + b');
+const adder = new Function("a", "b", "return a + b");
 
 // Вызываем функцию
 adder(2, 6);

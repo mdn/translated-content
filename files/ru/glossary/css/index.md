@@ -1,12 +1,6 @@
 ---
 title: CSS
 slug: Glossary/CSS
-tags:
-  - CSS
-  - Glossary
-  - Дизайн
-translation_of: Glossary/CSS
-original_slug: Глоссарий/CSS
 ---
 
 **CSS** (Cascading Style Sheets, или каскадные таблицы стилей) - это декларативный язык, который отвечает за то, как страницы выглядят в {{glossary("browser","веб браузере")}}. CSS стили содержат свойства и их значения, которые и определяют, как будет выглядеть сайт.
@@ -33,7 +27,6 @@ p {
 ### Базовые знания
 
 - [Изучение CSS](/ru/docs/Learn/CSS)
-- {{interwiki("wikipedia", "CSS")}} в Википедии
 
 ### Техническая документация
 

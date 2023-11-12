@@ -25,10 +25,10 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 let title = browser.i18n.getMessage("notificationTitle");
 let content = browser.i18n.getMessage("notificationContent", message.url);
 browser.notifications.create({
-  "type": "basic",
-  "iconUrl": browser.extension.getURL("icons/link-48.png"),
-  "title": title,
-  "message": content
+  type: "basic",
+  iconUrl: browser.extension.getURL("icons/link-48.png"),
+  title: title,
+  message: content,
 });
 ```
 

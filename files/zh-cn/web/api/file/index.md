@@ -32,7 +32,7 @@ slug: Web/API/File
   - : 返回文件的大小。
 - {{domxref("File.webkitRelativePath")}} {{readonlyinline}} {{non-standard_inline}}
   - : 返回 {{domxref("File")}} 相关的 path 或 URL。
-- {{domxref("File.type")}} {{readonlyinline}}
+- {{domxref("Blob.type")}} {{readonlyinline}}
   - : 返回文件的 [多用途互联网邮件扩展类型（MIME Type）](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 
 ## 方法
@@ -60,7 +60,7 @@ _`File` 接口没有定义任何方法，但是它从 {{domxref("Blob")}} 接口
   new File( Array parts, String filename, BlobPropertyBag properties);
   ```
 
-- 下列非标准属性及方法在 Gecko 7 中就被移除了：{{domxref("File.fileName")}}、{{domxref("File.fileSize")}}、{{domxref("File.getAsBinary()")}}、{{domxref("File.getAsDataURL()")}}、{{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}})。应当使用 {{domxref("File.name")}}、{{domxref("Blob.size")}}，和 {{domxref("FileReader")}} 的方法来代替。
+- 下列非标准属性及方法在 Gecko 7 中就被移除了：{{domxref("File.fileName")}}、{{domxref("File.fileSize")}}、{{domxref("File.getAsBinary()")}}、{{domxref("File.getAsDataURL()")}}、{{domxref("File.getAsText()","File.getAsText(string encoding)")}} ([Firefox bug 661876](https://bugzil.la/661876))。应当使用 {{domxref("File.name")}}、{{domxref("Blob.size")}}，和 {{domxref("FileReader")}} 的方法来代替。
 
 ## 参见
 

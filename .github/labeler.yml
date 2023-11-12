@@ -1,7 +1,11 @@
-# For more ideas, see https://github.com/actions/labeler#common-examples
-
 system:
+  - package.json
+  - yarn.lock
   - .github/**/*
+  - .husky/**/*
+  - .vscode/**/*
+  - .*
+  - front-matter-config.json
 
 l10n-de:
   - files/de/**/*
@@ -17,6 +21,7 @@ l10n-fr:
 
 l10n-ja:
   - files/ja/**/*
+  - docs/ja/**/*
   - /.github/ISSUE_TEMPLATE/page-report-ja.yml
 
 l10n-ko:

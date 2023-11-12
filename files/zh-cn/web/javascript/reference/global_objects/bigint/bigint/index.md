@@ -20,7 +20,7 @@ BigInt(value);
 
 > **备注：** `BigInt()` 不与 {{JSxRef("Operators/new", "new")}} 运算符一起使用。
 
-## 例子
+## 示例
 
 ```js
 BigInt(123);

@@ -1,15 +1,9 @@
 ---
 title: Port
 slug: Glossary/Port
-tags:
-  - Glossaire
-  - Intro
-  - Réseaux d'ordinateurs
-  - Sécurité
-  - ports
-translation_of: Glossary/Port
-original_slug: Glossaire/Port
 ---
+
+{{GlossarySidebar}}
 
 Un **port** est le point d'entrée de communication de tout ordinateur connecté à un réseau avec une {{Glossary("IP address","adresse IP")}}. Les ports sont désignés par des nombres et, en dessous de 1024, chaque port est associé par défaut à un {{Glossary("protocol","protocole")}} spécifique.
 
@@ -17,4 +11,4 @@ Par exemple, le port par défaut pour le protocole {{Glossary("HTTP")}} est 80 e
 
 ## Voir aussi
 
-- [Port](https://fr.wikipedia.org/wiki/Port_(logiciel)) sur Wikipédia
+- [Port](<https://fr.wikipedia.org/wiki/Port_(logiciel)>) sur Wikipédia

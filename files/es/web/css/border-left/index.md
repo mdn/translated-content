@@ -30,7 +30,7 @@ border-left: [border-width || border-style || border-color | inherit] ;
 
 ```css
 element {
-    border-left: 1px solid #000;
+  border-left: 1px solid #000;
 }
 ```
 
@@ -42,6 +42,6 @@ Si las reglas no especifican un color de borde, el borde tendrá la propiedad {{
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-left")}}
+{{Compat}}

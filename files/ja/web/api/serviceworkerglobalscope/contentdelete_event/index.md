@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: contentdelete イベント'
+title: "ServiceWorkerGlobalScope: contentdelete イベント"
 slug: Web/API/ServiceWorkerGlobalScope/contentdelete_event
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('contentdelete', (event) => { });
+addEventListener("contentdelete", (event) => {});
 
-oncontentdelete = (event) => { };
+oncontentdelete = (event) => {};
 ```
 
 ## イベント型
@@ -39,12 +39,15 @@ _以下に挙げたプロパティに加えて、このインターフェイス�
 以下の例では、`contentdelete` イベントハンドラーを使用して、削除されたインデックス項目に関連するキャッシュされたコンテンツを削除しています。
 
 ```js
-self.addEventListener('contentdelete', (event) => {
-  const deletion = caches.open('cache-name')
-    .then((cache) => Promise.all([
-      cache.delete(`/icon/${event.id}`),
-      cache.delete(`/content/${event.id}`),
-    ]));
+self.addEventListener("contentdelete", (event) => {
+  const deletion = caches
+    .open("cache-name")
+    .then((cache) =>
+      Promise.all([
+        cache.delete(`/icon/${event.id}`),
+        cache.delete(`/content/${event.id}`),
+      ]),
+    );
   event.waitUntil(deletion);
 });
 ```

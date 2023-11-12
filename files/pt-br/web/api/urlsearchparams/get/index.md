@@ -40,10 +40,8 @@ let address = params.get("address"); // null
 
 ## Especificações
 
-| Especificação                                                                | Status               | Comment            |
-| ---------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('URL', '#dom-urlsearchparams-get', "get()")}} | {{Spec2('URL')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.URLSearchParams.get")}}
+{{Compat}}

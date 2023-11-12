@@ -1,10 +1,6 @@
 ---
 title: Регулярные выражения
 slug: Glossary/Regular_expression
-tags:
-  - регулярные выражения
-translation_of: Glossary/Regular_expression
-original_slug: Глоссарий/Regular_expression
 ---
 
 **Регулярные выражения** (_regex_) - это правила, определяющие, какие последовательности символов появляются в поиске.
@@ -15,7 +11,6 @@ original_slug: Глоссарий/Regular_expression
 
 ### Общие
 
-- {{Interwiki("wikipedia", "Регулярные выражения")}} на Википедии
 - [Интерактивный учебник](http://regexone.com/)
 - [Визуализированное Регулярное Выражение](http://regexper.com/)
 

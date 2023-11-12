@@ -1,12 +1,6 @@
 ---
 title: Types MIME
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Content-Type
-  - Guide
-  - HTTP
-  - Types MIME
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 
 {{HTTPSidebar}}

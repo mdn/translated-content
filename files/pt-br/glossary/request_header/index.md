@@ -1,7 +1,6 @@
 ---
 title: Cabeçalho de Requisição
 slug: Glossary/Request_header
-original_slug: Glossario/Request_header
 ---
 
 Um **cabeçalho de requisição** é um {{glossary("header", "cabeçalho HTTP")}} que pode ser utilizado em uma requisição HTTP, e não é relacionado ao conteúdo da mensagem. Cabeçalhos de requisição, como {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language", "Accept-*")}}, ou ainda {{HTTPHeader("If-Modified-Since", "If-*")}} permitem realizar requisições condicionais; outros como {{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}} ou {{HTTPHeader("Referer")}} deixa o contexto mais preciso para que o servidor possa adaptar melhor a resposta.

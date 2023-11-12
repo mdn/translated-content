@@ -1,13 +1,9 @@
 ---
 title: Композиция и обрезка
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - канвас
-translation_of: Web/API/Canvas_API/Tutorial/Compositing
-original_slug: Web/API/Canvas_API/Tutorial/Композиции
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 Во всех наших [предыдущих примерах](/ru/docs/Web/API/Canvas_API/Tutorial/Transformations), фигуры всегда были нарисованы одна поверх другой. Это более чем достаточно для большинства ситуаций, но это ограничивает порядок, в котором построены композиционные формы. Однако, мы можем изменить это поведение, установив свойство `globalCompositeOperation`. Кроме того, свойства `clip` позволяет скрыть нежелательные части формы.
 
@@ -20,7 +16,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 
 См. [примеры компоновки](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) кода из следующих примеров.
 
-{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
+{{ EmbedLiveSample("Compositing_example", "100%", 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example" )}}
 
 ## Обрезка контуров
 
@@ -43,7 +39,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
 
@@ -54,8 +50,8 @@ function draw() {
 
   // draw background
   var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, '#232256');
-  lingrad.addColorStop(1, '#143778');
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
 
   ctx.fillStyle = lingrad;
   ctx.fillRect(-75, -75, 150, 150);
@@ -63,13 +59,14 @@ function draw() {
   // draw stars
   for (var j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = '#fff';
-    ctx.translate(75 - Math.floor(Math.random() * 150),
-                  75 - Math.floor(Math.random() * 150));
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
     drawStar(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();
   }
-
 }
 
 function drawStar(ctx, r) {

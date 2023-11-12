@@ -1,6 +1,8 @@
 ---
-title: location.ancestorOrigins
+title: "location: ancestorOrigins プロパティ"
 slug: Web/API/Location/ancestorOrigins
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Location")}}
@@ -9,11 +11,9 @@ slug: Web/API/Location/ancestorOrigins
 
 文書のスクリプトで `location.ancestorOrigins` を使用すると、例えば、文書がフレーム化されることを予期していないサイトによってフレーム化されている場合、いつでもそれを判断することができます。また、どのサイトやサイトのリストでフレーム化されているかによって、文書の動作を変えるために使用することもできます。
 
-## 構文
+## 値
 
-```js
-const ancestors = location.ancestorOrigins;
-```
+{{domxref("DOMStringList")}} です。
 
 ## 仕様書
 

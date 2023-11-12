@@ -1,7 +1,6 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
-translation_of: Web/API/Web_Speech_API
 ---
 
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
@@ -70,11 +69,11 @@ Web Speech API позволяет веб приложениям управлят
 
 ### `SpeechRecognition`
 
-{{Compat("api.SpeechRecognition", 0)}}
+{{Compat}}
 
 ### `SpeechSynthesis`
 
-{{Compat("api.SpeechSynthesis", 0)}}
+{{Compat}}
 
 ## Firefox OS permissions
 

@@ -1,11 +1,6 @@
 ---
-title: ':placeholder-shown'
+title: ":placeholder-shown"
 slug: Web/CSS/:placeholder-shown
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:placeholder-shown
 ---
 
 {{CSSRef}}
@@ -54,7 +49,7 @@ input {
 #### HTML
 
 ```html
-<input placeholder="Saisir quelque chose ici">
+<input placeholder="Saisir quelque chose ici" />
 ```
 
 #### Résultat
@@ -68,7 +63,8 @@ Sur certains écrans plus étroits (tels que ceux des smartphones), la largeur d
 #### HTML
 
 ```html
-<input placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !">
+<input
+  placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !" />
 ```
 
 #### CSS
@@ -98,7 +94,7 @@ input:placeholder-shown {
 #### HTML
 
 ```html
-<input placeholder="Saisir quelque chose ici">
+<input placeholder="Saisir quelque chose ici" />
 ```
 
 #### CSS
@@ -134,17 +130,23 @@ input:placeholder-shown {
 <form id="test">
   <p>
     <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name"/>
+    <input id="name" placeholder="Student Name" />
   </p>
   <p>
     <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch"/>
+    <input id="branch" placeholder="Student Branch" />
   </p>
   <p>
     <label for="sid">Enter Student ID:</label>
-    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+    <input
+      type="number"
+      pattern="[0-9]{8}"
+      title="8 digit ID"
+      id="sid"
+      class="studentid"
+      placeholder="8 digit id" />
   </p>
-  <input type="submit"/>
+  <input type="submit" />
 </form>
 ```
 
@@ -166,7 +168,7 @@ input.studentid:-moz-placeholder {
 
 ```css
 input {
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   color: black;
 }
 

@@ -1,8 +1,9 @@
 ---
 title: Taille intrinsèque
 slug: Glossary/Intrinsic_Size
-translation_of: Glossary/Intrinsic_Size
 ---
+
+{{GlossarySidebar}}
 
 En CSS, la _taille intrinsèque_ d'un élément est la taille qu'il aurait en fonction de son contenu, si aucun facteur externe ne lui était appliqué. Par exemple, les éléments en ligne sont dimensionnés de manière intrinsèque : la `largeur`, la `hauteur`, la marge et le remplissage vertical n'ont aucun impact, contrairement à la marge et au remplissage horizontal.
 
@@ -12,4 +13,4 @@ Le dimensionnement intrinsèque prend en compte la taille `min-content` et `max-
 
 La taille de `max-content` est l'inverse — dans le cas du texte, le texte s'afficherait aussi large que possible, sans enveloppement souple, même si un débordement était provoqué. La valeur du mot clé `max-content` expose ce comportement.
 
-Pour les images, la taille intrinsèque a la même signification — c'est la taille avec laquelle une image serait affichée si aucun CSS n'était appliqué pour modifier le rendu. Par défaut, les images sont supposées avoir une densité de "1x" pixels (1 pixel de périphérique = 1 pixel CSS) et donc la taille intrinsèque est simplement la hauteur et la largeur du pixel. La taille et la résolution intrinsèques de l'image peuvent être explicitement spécifiées dans les données {{Glossary("EXIF")}}. La densité de pixels intrinsèque peut également être définie pour les images à l'aide de l'attribut {{htmlattrxref("srcset", "img")}} (notez que si les deux mécanismes sont utilisés, la valeur `srcset` est appliquée "par-dessus" la valeur EXIF).
+Pour les images, la taille intrinsèque a la même signification — c'est la taille avec laquelle une image serait affichée si aucun CSS n'était appliqué pour modifier le rendu. Par défaut, les images sont supposées avoir une densité de "1x" pixels (1 pixel de périphérique = 1 pixel CSS) et donc la taille intrinsèque est simplement la hauteur et la largeur du pixel. La taille et la résolution intrinsèques de l'image peuvent être explicitement spécifiées dans les données {{Glossary("EXIF")}}. La densité de pixels intrinsèque peut également être définie pour les images à l'aide de l'attribut [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) (notez que si les deux mécanismes sont utilisés, la valeur `srcset` est appliquée "par-dessus" la valeur EXIF).

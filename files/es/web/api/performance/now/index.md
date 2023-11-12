@@ -37,7 +37,7 @@ También a diferencia de `Date.now()`, los valores devueltos por `Performance.no
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Performance.now")}}
+{{Compat}}
 
 ## Vea también
 

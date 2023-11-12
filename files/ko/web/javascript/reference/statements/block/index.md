@@ -2,6 +2,7 @@
 title: block
 slug: Web/JavaScript/Reference/Statements/block
 ---
+
 {{jsSidebar("Statements")}}
 
 **블록문**(또는 다른 언어에서는 복합문)은 0개 이상의 구문을 묶을 때 사용합니다.
@@ -16,7 +17,7 @@ slug: Web/JavaScript/Reference/Statements/block
 
 ```js
 {
-  StatementList
+  StatementList;
 }
 ```
 
@@ -24,7 +25,7 @@ slug: Web/JavaScript/Reference/Statements/block
 
 ```js
 LabelIdentifier: {
-  StatementList
+  StatementList;
 }
 ```
 

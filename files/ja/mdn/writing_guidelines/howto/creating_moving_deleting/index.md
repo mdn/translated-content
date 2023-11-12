@@ -1,7 +1,6 @@
 ---
 title: ページを作成および編集する方法
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
 
 {{MDNSidebar}}

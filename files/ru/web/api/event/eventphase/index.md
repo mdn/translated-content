@@ -1,14 +1,6 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - Property
-  - Reference
-translation_of: Web/API/Event/eventPhase
 ---
 
 {{ ApiRef("DOM") }}

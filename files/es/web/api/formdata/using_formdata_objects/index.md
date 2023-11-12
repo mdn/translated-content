@@ -1,7 +1,6 @@
 ---
 title: Usando Objetos FormData
 slug: Web/API/FormData/Using_FormData_Objects
-original_slug: Web/Guide/Usando_Objetos_FormData
 ---
 
 Los objetos `FormData` le permiten compilar un conjunto de pares clave/valor para enviar mediante `XMLHttpRequest`. Están destinados principalmente para el envío de los datos del formulario, pero se pueden utilizar de forma independiente con el fin de transmitir los datos tecleados. Los datos transmitidos estarán en el mismo formato que usa el método `submit()` del formulario para enviar los datos si el tipo de codificación del formulario se establece en "multipart/form-data".
@@ -21,7 +20,7 @@ formData.append("userfile", fileInputElement.files[0]);
 
 // JavaScript file-like object...
 var content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
-var blob = new Blob([content], { type: "text/xml"});
+var blob = new Blob([content], { type: "text/xml" });
 
 formData.append("webmasterfile", blob);
 
@@ -69,7 +68,15 @@ También puede enviar archivos usando `FormData`. Simplemente incluye un element
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
   <label>Your email address:</label>
-  <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32" maxlength="64" /><br />
+  <input
+    type="email"
+    autocomplete="on"
+    autofocus
+    name="userid"
+    placeholder="email"
+    required
+    size="32"
+    maxlength="64" /><br />
   <label>Custom file label:</label>
   <input type="text" name="filelabel" size="12" maxlength="32" /><br />
   <label>File to stash:</label>
@@ -83,27 +90,30 @@ Luego puede enviarlo usando código como el siguiente:
 
 ```js
 var form = document.forms.namedItem("fileinfo");
-form.addEventListener('submit', function(ev) {
+form.addEventListener(
+  "submit",
+  function (ev) {
+    var oOutput = document.getElementById("output"),
+      oData = new FormData(document.forms.namedItem("fileinfo"));
 
-  var
-    oOutput = document.getElementById("output"),
-    oData = new FormData(document.forms.namedItem("fileinfo"));
+    oData.append("CustomField", "This is some extra data");
 
-  oData.append("CustomField", "This is some extra data");
+    var oReq = new XMLHttpRequest();
+    oReq.open("POST", "stash.php", true);
+    oReq.onload = function (oEvent) {
+      if (oReq.status == 200) {
+        oOutput.innerHTML = "Uploaded!";
+      } else {
+        oOutput.innerHTML =
+          "Error " + oReq.status + " occurred uploading your file.<br />";
+      }
+    };
 
-  var oReq = new XMLHttpRequest();
-  oReq.open("POST", "stash.php", true);
-  oReq.onload = function(oEvent) {
-    if (oReq.status == 200) {
-      oOutput.innerHTML = "Uploaded!";
-    } else {
-      oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
-    }
-  };
-
-  oReq.send(oData);
-  ev.preventDefault();
-}, false);
+    oReq.send(oData);
+    ev.preventDefault();
+  },
+  false,
+);
 ```
 
 > **Nota:** el método especificado en el formulario será usado por encima del método utilizado en en la llamada a open().
@@ -125,8 +135,8 @@ $.ajax({
   url: "stash.php",
   type: "POST",
   data: fd,
-  processData: false,  // tell jQuery not to process the data
-  contentType: false   // tell jQuery not to set contentType
+  processData: false, // tell jQuery not to process the data
+  contentType: false, // tell jQuery not to set contentType
 });
 ```
 

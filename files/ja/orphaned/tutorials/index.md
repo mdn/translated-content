@@ -1,7 +1,6 @@
 ---
 title: チュートリアル
 slug: orphaned/Tutorials
-original_slug: Tutorials
 ---
 
 SDK を使用したアドオンの開発方法を実践的に説明したページの一覧です。

@@ -13,8 +13,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
 
 ```js
 var getting = browser.tabs.get(
-  tabId              // integer
-)
+  tabId, // integer
+);
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ browser.tabs.onActivated.addListener(logListener);
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.get")}}
+{{Compat}}
 
 > **メモ:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-get) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 

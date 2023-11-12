@@ -40,7 +40,7 @@ mask-mode: unset;
 
     如果它是类型{{cssxref("&lt;image&gt;")}}，掩码层图像的 alpha 值应用作掩码值。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -59,8 +59,7 @@ mask-mode: unset;
 ```
 
 ```html hidden
-<div id="masked">
-</div>
+<div id="masked"></div>
 <select id="maskMode">
   <option value="alpha">alpha</option>
   <option value="luminance">luminance</option>
@@ -77,7 +76,7 @@ maskMode.addEventListener("change", function (evt) {
 
 ### 结果
 
-{{EmbedLiveSample("Example", 240, 240)}}
+{{EmbedLiveSample("示例", 240, 240)}}
 
 ## 规范
 

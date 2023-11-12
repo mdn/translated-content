@@ -1,7 +1,6 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
-original_slug: Web/CSS/clamp()
 ---
 
 {{CSSRef}}
@@ -24,7 +23,7 @@ original_slug: Web/CSS/clamp()
 
 当首选值比最大值要大时，则使用最大值。
 
-这个表达式可以是数学函数 (参看 {{CSSxRef("calc")}} )、字面量或其它计算为有效的参数类型 (如{{CSSxRef("&lt;length&gt;")}}) 表达式，如 {{CSSxRef("attr", "attr()")}}，或嵌套的 {{CSSxRef("min")}} 和 {{CSSxRef("max")}} 。作为数学表达式，你可以使用加减乘除运算而无需使用 `calc()` 函数。你也可以用括号来确定计算顺序。
+这个表达式可以是数学函数 (参看 {{CSSxRef("calc")}} )、字面量或其他计算为有效的参数类型 (如{{CSSxRef("&lt;length&gt;")}}) 表达式，如 {{CSSxRef("attr", "attr()")}}，或嵌套的 {{CSSxRef("min")}} 和 {{CSSxRef("max")}} 。作为数学表达式，你可以使用加减乘除运算而无需使用 `calc()` 函数。你也可以用括号来确定计算顺序。
 
 表达式中的每一个值都可以用不同的单位。
 
@@ -43,7 +42,7 @@ original_slug: Web/CSS/clamp()
 
 ### min, max, and clamp comparison
 
-这个示例中，我们用 `min()、`[`max()`](/zh-CN/docs/Web/CSS/max) 和 `clamp()` 实现一个简单的响应式效果。
+这个示例中，我们用 `min()`、[`max()`](/zh-CN/docs/Web/CSS/max) 和 `clamp()` 实现一个简单的响应式效果。
 
 [`<body>`](/zh-CN/docs/Web/HTML/Element/body) 元素的 [`width`](/zh-CN/docs/Web/CSS/width) 设置为 `min(1000px, calc(70% + 100px))`。其含义是宽度设置为 `1000px`，当 `calc(70% + 100px)` 比 `1000px` 小时，宽度为 `calc(70% + 100px)` 。 `min()` 允许你设置一个上限值。
 
@@ -57,9 +56,28 @@ original_slug: Web/CSS/clamp()
 
 ```html
 <h1>Simple responsive test</h1>
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci, eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat eu convallis. Phasellus eu velit ut magna dapibus elementum cursus at ligula. Ut tempus varius nibh, nec auctor sapien iaculis sit amet. Fusce iaculis, libero quis elementum viverra, nulla ante accumsan lectus, sit amet convallis lacus ipsum vel est. Curabitur et urna non est consectetur pulvinar vel id risus. Ut vestibulum, sem in semper aliquet, felis arcu euismod sapien, ac imperdiet massa nisl quis sem. Vestibulum ac elementum felis, in tempor velit. Pellentesque purus ex, mattis at ornare quis, porta condimentum mi. Donec vestibulum ligula vel nulla blandit, quis euismod nulla vestibulum. Suspendisse potenti. Nunc neque mauris, tempor sed facilisis at, ultrices eget nulla. Pellentesque convallis ante nec augue porttitor, id tempus ante luctus.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci,
+  eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat
+  eu convallis. Phasellus eu velit ut magna dapibus elementum cursus at ligula.
+  Ut tempus varius nibh, nec auctor sapien iaculis sit amet. Fusce iaculis,
+  libero quis elementum viverra, nulla ante accumsan lectus, sit amet convallis
+  lacus ipsum vel est. Curabitur et urna non est consectetur pulvinar vel id
+  risus. Ut vestibulum, sem in semper aliquet, felis arcu euismod sapien, ac
+  imperdiet massa nisl quis sem. Vestibulum ac elementum felis, in tempor velit.
+  Pellentesque purus ex, mattis at ornare quis, porta condimentum mi. Donec
+  vestibulum ligula vel nulla blandit, quis euismod nulla vestibulum.
+  Suspendisse potenti. Nunc neque mauris, tempor sed facilisis at, ultrices eget
+  nulla. Pellentesque convallis ante nec augue porttitor, id tempus ante luctus.
+</p>
 
-<p>Integer rutrum sollicitudin tellus, quis cursus nulla scelerisque nec. Nunc eu facilisis lorem. Maecenas faucibus sapien eleifend, semper tellus at, pharetra quam. Cras feugiat vulputate tortor at rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non felis quis sem lobortis sodales vel id libero. Phasellus sit amet placerat lorem. </p>
+<p>
+  Integer rutrum sollicitudin tellus, quis cursus nulla scelerisque nec. Nunc eu
+  facilisis lorem. Maecenas faucibus sapien eleifend, semper tellus at, pharetra
+  quam. Cras feugiat vulputate tortor at rhoncus. Class aptent taciti sociosqu
+  ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non felis
+  quis sem lobortis sodales vel id libero. Phasellus sit amet placerat lorem.
+</p>
 ```
 
 #### CSS

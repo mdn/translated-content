@@ -1,5 +1,5 @@
 ---
-title: '<bdo>: 양방향 텍스트 재정의 요소'
+title: "<bdo>: 양방향 텍스트 재정의 요소"
 slug: Web/HTML/Element/bdo
 ---
 
@@ -70,7 +70,7 @@ slug: Web/HTML/Element/bdo
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("dir")}}
+- `dir`
 
   - : 요소 콘텐츠의 텍스트 쓰기 방향. 가능한 값은 다음과 같습니다.
 
@@ -95,4 +95,4 @@ slug: Web/HTML/Element/bdo
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.bdo")}}
+{{Compat}}

@@ -21,16 +21,16 @@ event = new Event(typeArg, eventInit);
 
   - : 一個 `EventInit` object，包含以下欄位
 
-    | 參數           | 可選 | 默認值  | 類型                           | 說明                              |
-    | -------------- | ---- | ------- | ------------------------------ | --------------------------------- |
-    | `"bubbles"`    | ●    | `false` | `{{jsxref("Boolean")}}` | 表示該事件是否懸浮（bubble up）。 |
-    | `"cancelable"` | ●    | `false` | {{jsxref("Boolean")}}   | 表示該事件是否已取消（canale）。  |
+    | 參數           | 可選 | 默認值  | 類型                  | 說明                              |
+    | -------------- | ---- | ------- | --------------------- | --------------------------------- |
+    | `"bubbles"`    | ●    | `false` | {{jsxref("Boolean")}} | 表示該事件是否懸浮（bubble up）。 |
+    | `"cancelable"` | ●    | `false` | {{jsxref("Boolean")}} | 表示該事件是否已取消（canale）。  |
 
 ## 範例
 
 ```js
-// 建立一個 bubbles up 、並未被取消的事件 “look” 。
-var ev = new Event("look", {"bubbles":true, "cancelable":false});
+// 建立一個 bubbles up 、並未被取消的事件 「look」 。
+var ev = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(ev);
 ```
 

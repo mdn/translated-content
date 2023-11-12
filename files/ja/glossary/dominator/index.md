@@ -16,4 +16,4 @@ slug: Glossary/Dominator
 ### 技術リファレンス
 
 - [ドミネーター](/ja/docs/Tools/Memory/Dominators)
-- [ガベージコレクション](/ja/docs/Web/JavaScript/Memory_Management#garbage_collection)
+- [ガベージコレクション](/ja/docs/Web/JavaScript/Memory_Management#ガベージコレクション)

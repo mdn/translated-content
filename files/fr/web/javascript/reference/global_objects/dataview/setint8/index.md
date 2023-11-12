@@ -1,15 +1,6 @@
 ---
 title: DataView.prototype.setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setInt8
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La méthode **`setInt8()`** permet d'enregister un entier signé sur 8 bits à l
 ## Syntaxe
 
 ```js
-dataview.setInt8(positionOctet, valeur)
+dataview.setInt8(positionOctet, valeur);
 ```
 
 ### Paramètres

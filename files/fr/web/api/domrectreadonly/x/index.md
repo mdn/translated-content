@@ -1,15 +1,6 @@
 ---
 title: DOMRectReadOnly.x
 slug: Web/API/DOMRectReadOnly/x
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Propriétés
-  - Rectangle
-  - x
-translation_of: Web/API/DOMRectReadOnly/x
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

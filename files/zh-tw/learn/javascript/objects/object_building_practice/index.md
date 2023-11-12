@@ -49,12 +49,12 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 指令碼第一部分就像：
 
 ```js
-var canvas = document.querySelector('canvas');
+var canvas = document.querySelector("canvas");
 
-var ctx = canvas.getContext('2d');
+var ctx = canvas.getContext("2d");
 
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight;
+var width = (canvas.width = window.innerWidth);
+var height = (canvas.height = window.innerHeight);
 ```
 
 此指令碼將為 `<canvas>` 元素提供參照，接著於其上呼叫 [`getContext()`](/zh-TW/docs/Web/API/HTMLCanvasElement/getContext) 函式，藉以提供能開始繪圖的內文 (Context)。所產生的變數 (`ctx`) 也就是物件，將直接呈現 canvas 的繪圖區域，讓我們繪製 2D 圖像。
@@ -67,7 +67,7 @@ var height = canvas.height = window.innerHeight;
 
 ```js
 function random(min, max) {
-  var num = Math.floor(Math.random()*(max-min)) + min;
+  var num = Math.floor(Math.random() * (max - min)) + min;
   return num;
 }
 ```
@@ -80,12 +80,13 @@ function random(min, max) {
 
 ```js
 function Ball() {
-  this.x = random(0,width);
-  this.y = random(0,height);
-  this.velX = random(-7,7);
-  this.velY = random(-7,7);
-  this.color = 'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')';
-  this.size = random(10,20);
+  this.x = random(0, width);
+  this.y = random(0, height);
+  this.velX = random(-7, 7);
+  this.velY = random(-7, 7);
+  this.color =
+    "rgb(" + random(0, 255) + "," + random(0, 255) + "," + random(0, 255) + ")";
+  this.size = random(10, 20);
 }
 ```
 
@@ -103,12 +104,12 @@ function Ball() {
 先將下列 `draw()` 函式加到 `Ball()` 的 `prototype` 之中：
 
 ```js
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
-}
+};
 ```
 
 透過此函式，再呼叫我們之前定義在 2D canvas 內文(ctx)中的物件成員，就能讓球體自己在螢幕上畫出自己。此內文就像是白紙一樣，接著就用筆在紙上畫出點東西：
@@ -129,18 +130,18 @@ Ball.prototype.draw = function() {
 2. 開啟瀏覽器的 JavaScript 主控台，並在主控台開啟時重新整理網頁，讓 canvas 尺寸變更為左側較小型的可視區域。
 3. 鍵入下列程式碼以建立新的球體實例：
 
-    ```js
-    var testBall = new Ball();
-    ```
+   ```js
+   var testBall = new Ball();
+   ```
 
 4. 再呼叫其成員：
 
-    ```js
-    testBall.x
-    testBall.size
-    testBall.color
-    testBall.draw()
-    ```
+   ```js
+   testBall.x;
+   testBall.size;
+   testBall.color;
+   testBall.draw();
+   ```
 
 5. 輸入最後一行之後，應該就能看到 canvas 上出現自己產生的球體。
 
@@ -149,26 +150,26 @@ Ball.prototype.draw = function() {
 現在可以繪製彩球了。但在讓球彈跳之前，我們必須先更新幾個函式。將下列程式碼加到 JavaScript 檔案底端，把 `update()` 函式加到 `Ball()` 的 `prototype` 之中：
 
 ```js
-Ball.prototype.update = function() {
-  if((this.x + this.size) >= width) {
-    this.velX = -(this.velX);
+Ball.prototype.update = function () {
+  if (this.x + this.size >= width) {
+    this.velX = -this.velX;
   }
 
-  if((this.x - this.size) <= 0) {
-    this.velX = -(this.velX);
+  if (this.x - this.size <= 0) {
+    this.velX = -this.velX;
   }
 
-  if((this.y + this.size) >= height) {
-    this.velY = -(this.velY);
+  if (this.y + this.size >= height) {
+    this.velY = -this.velY;
   }
 
-  if((this.y - this.size) <= 0) {
-    this.velY = -(this.velY);
+  if (this.y - this.size <= 0) {
+    this.velY = -this.velY;
   }
 
   this.x += this.velX;
   this.y += this.velY;
-}
+};
 ```
 
 函式的前 4 個部分負責檢查球體是否碰到 canvas 邊緣。如果球體抵達邊緣，我們就反轉相對加速度的方向，讓球反方向行進。以球體向上 (正向 `velX`) 時為例，接著就會改變水平速度，球體也就反向運動。
@@ -192,45 +193,45 @@ Ball.prototype.update = function() {
 
 1. 首先要弄個地方儲存所有的彩球。將下方陣列加到現有程式碼底部即可：
 
-    ```js
-    var balls = [];
-    ```
+   ```js
+   var balls = [];
+   ```
 
-    所有可提供動畫效果的程式，一般都會採用動畫迴圈，可用以更新程式中的資訊，並接著在動畫的各個畫格上繪製產生的結果。這也是大部分遊戲或類似程式的基礎。
+   所有可提供動畫效果的程式，一般都會採用動畫迴圈，可用以更新程式中的資訊，並接著在動畫的各個畫格上繪製產生的結果。這也是大部分遊戲或類似程式的基礎。
 
 2. 再將下列程式碼加到現有程式碼底部：
 
-    ```js
-    function loop() {
-      ctx.fillStyle = 'rgba(0,0,0,0.25)';
-      ctx.fillRect(0,0,width,height);
+   ```js
+   function loop() {
+     ctx.fillStyle = "rgba(0,0,0,0.25)";
+     ctx.fillRect(0, 0, width, height);
 
-      while(balls.length < 25) {
-        var ball = new Ball();
-        balls.push(ball);
-      }
+     while (balls.length < 25) {
+       var ball = new Ball();
+       balls.push(ball);
+     }
 
-      for(i = 0; i < balls.length; i++) {
-        balls[i].draw();
-        balls[i].update();
-      }
+     for (i = 0; i < balls.length; i++) {
+       balls[i].draw();
+       balls[i].update();
+     }
 
-      requestAnimationFrame(loop);
-    }
-    ```
+     requestAnimationFrame(loop);
+   }
+   ```
 
-    我們的 `loop()` 函式可進行：
+   我們的 `loop()` 函式可進行：
 
-    - 設定 canvas 填滿色彩或是半透明的黑色。接著透過 `fillRect()` (共 4 個參數提供起始座標，以及繪製矩形的高度與寬度)，跨 canvas 的寬度與高度繪製整個矩型的色彩。如此可在繪製下一個畫格之前，先覆蓋前一個已存在的畫格；否則會看到許多隻長長的蛇爬來爬去。填充顏色已設定為半透明狀態：`rgba(0,0,0,0.25)` 可讓先前的畫格微微發亮，製造出球體移動時的小尾巴效果。如果將 0.25 更改為 1，就會完全消除尾巴。你可自己測試不同的數值，找出自己喜歡的效果。
-    - 可對 `Ball()` 建立新的實作，接著將之 `push()` 到球體陣列的最後，且彩球數量必須少於 25 個。所以整個畫面最多顯示 25 個球。你可嘗試變更 `balls.length < 25` 中的數值，畫面中的彩球數量也會隨著變化。依你所用電腦＼瀏覽器處理效能的不同，若繪製上千個彩球就會拖慢整個動畫的速度。
-    - 迴圈將巡過 `balls` 陣列中的所有彩球，並執行各個彩球的 `draw()` 與 `update()` 函式，以於畫面中逐一繪製，接著對下個畫格的位置與速度執行必要更新。
-    - 再以 `requestAnimationFrame()` 函式執行過此函式 — 當此函式持續執行並傳送相同的函式名稱時，就會每秒執行此函式達特定次數，以產生流暢的動畫。接著重複執行此作業，也就是函式每次執行時均會呼叫自身 1 次，進而循環執行。
+   - 設定 canvas 填滿色彩或是半透明的黑色。接著透過 `fillRect()` (共 4 個參數提供起始座標，以及繪製矩形的高度與寬度)，跨 canvas 的寬度與高度繪製整個矩型的色彩。如此可在繪製下一個畫格之前，先覆蓋前一個已存在的畫格；否則會看到許多隻長長的蛇爬來爬去。填充顏色已設定為半透明狀態：`rgba(0,0,0,0.25)` 可讓先前的畫格微微發亮，製造出球體移動時的小尾巴效果。如果將 0.25 更改為 1，就會完全消除尾巴。你可自己測試不同的數值，找出自己喜歡的效果。
+   - 可對 `Ball()` 建立新的實作，接著將之 `push()` 到球體陣列的最後，且彩球數量必須少於 25 個。所以整個畫面最多顯示 25 個球。你可嘗試變更 `balls.length < 25` 中的數值，畫面中的彩球數量也會隨著變化。依你所用電腦＼瀏覽器處理效能的不同，若繪製上千個彩球就會拖慢整個動畫的速度。
+   - 迴圈將巡過 `balls` 陣列中的所有彩球，並執行各個彩球的 `draw()` 與 `update()` 函式，以於畫面中逐一繪製，接著對下個畫格的位置與速度執行必要更新。
+   - 再以 `requestAnimationFrame()` 函式執行過此函式 — 當此函式持續執行並傳送相同的函式名稱時，就會每秒執行此函式達特定次數，以產生流暢的動畫。接著重複執行此作業，也就是函式每次執行時均會呼叫自身 1 次，進而循環執行。
 
 3. 最後將下列程式碼加入最底端，呼叫函式 1 次讓動畫開始運作。
 
-    ```js
-    loop();
-    ```
+   ```js
+   loop();
+   ```
 
 基本就是這樣了。試著儲存並重新整理檔案，讓你的彩球開始跳動吧！
 
@@ -240,34 +241,48 @@ Ball.prototype.update = function() {
 
 1. 首先將下列函式定義加進你自己定義 `update()` 函式中 (例如 `Ball.prototype.update` 區塊)：
 
-    ```js
-    Ball.prototype.collisionDetect = function() {
-      for(j = 0; j < balls.length; j++) {
-        if( (!(this.x === balls[j].x && this.y === balls[j].y && this.velX === balls[j].velX && this.velY === balls[j].velY)) ) {
-          var dx = this.x - balls[j].x;
-          var dy = this.y - balls[j].y;
-          var distance = Math.sqrt(dx * dx + dy * dy);
+   ```js
+   Ball.prototype.collisionDetect = function () {
+     for (j = 0; j < balls.length; j++) {
+       if (
+         !(
+           this.x === balls[j].x &&
+           this.y === balls[j].y &&
+           this.velX === balls[j].velX &&
+           this.velY === balls[j].velY
+         )
+       ) {
+         var dx = this.x - balls[j].x;
+         var dy = this.y - balls[j].y;
+         var distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < this.size + balls[j].size) {
-            balls[j].color = this.color = 'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')';
-          }
-        }
-      }
-    }
-    ```
+         if (distance < this.size + balls[j].size) {
+           balls[j].color = this.color =
+             "rgb(" +
+             random(0, 255) +
+             "," +
+             random(0, 255) +
+             "," +
+             random(0, 255) +
+             ")";
+         }
+       }
+     }
+   };
+   ```
 
-    這函式有點複雜，所以現在不瞭解如何運作的也別擔心。解釋如下：
+   這函式有點複雜，所以現在不瞭解如何運作的也別擔心。解釋如下：
 
-    - 對每個彩球來說，我們必須檢查是否碰撞到其他球。所以要設定另一個 `for` 迴圈以循環檢視 `balls[]` 陣列中的所有彩球。
-    - 在我們的 for 迴圈中，我們立刻使用 `if` 陳述式檢查「現正透過迴圈循環檢查中」的彩球，是否即為我們目前檢查中的同一彩球。我們不需要檢查彩球是否碰撞到自己！為了達到此效果，我們檢查彩球目前的 `x`/`y` 座標與速度，是否等同於迴圈檢查的彩球。接著透過「`!`」否定檢查，所以在 if 陳述式中的程式碼，只有在彩球相異時才會執行。
-    - 接著使用一般演算法檢查 2 個球體之間的碰撞。我們基本上會檢查任 2 個球體的範圍是否重疊。另將透過〈[2D 碰撞偵測](/zh-TW/docs/Games/Techniques/2D_collision_detection)〉一文進一步解釋。
-    - 如果偵測到碰撞，則隨即執行內部 `if` 陳述式的程式碼。在本範例中，我們剛設定了 2 個球體的 `color` 屬性為新的隨機色彩。但當然可以更複雜點，像是讓彩球更逼真的互相反彈，但這實作起來就更複雜了。對這類的物理模擬，開發者就必須使用如 [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/)、[matter.js](http://brm.io/matter-js/)、[Phaser](http://phaser.io/) 等的遊戲＼物理函式庫。
+   - 對每個彩球來說，我們必須檢查是否碰撞到其他球。所以要設定另一個 `for` 迴圈以循環檢視 `balls[]` 陣列中的所有彩球。
+   - 在我們的 for 迴圈中，我們立刻使用 `if` 陳述式檢查「現正透過迴圈循環檢查中」的彩球，是否即為我們目前檢查中的同一彩球。我們不需要檢查彩球是否碰撞到自己！為了達到此效果，我們檢查彩球目前的 `x`/`y` 座標與速度，是否等同於迴圈檢查的彩球。接著透過「`!`」否定檢查，所以在 if 陳述式中的程式碼，只有在彩球相異時才會執行。
+   - 接著使用一般演算法檢查 2 個球體之間的碰撞。我們基本上會檢查任 2 個球體的範圍是否重疊。另將透過〈[2D 碰撞偵測](/zh-TW/docs/Games/Techniques/2D_collision_detection)〉一文進一步解釋。
+   - 如果偵測到碰撞，則隨即執行內部 `if` 陳述式的程式碼。在本範例中，我們剛設定了 2 個球體的 `color` 屬性為新的隨機色彩。但當然可以更複雜點，像是讓彩球更逼真的互相反彈，但這實作起來就更複雜了。對這類的物理模擬，開發者就必須使用如 [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/)、[matter.js](http://brm.io/matter-js/)、[Phaser](http://phaser.io/) 等的遊戲＼物理函式庫。
 
 2. 你也可以在動畫的每一畫格中呼叫此一函式。在 `balls[i].update();` 這一行下方新增下列程式碼即可：
 
-    ```js
-    balls[i].collisionDetect();
-    ```
+   ```js
+   balls[i].collisionDetect();
+   ```
 
 3. 儲存並重新整理之後，就能看到球體在碰撞時變更其色彩了！
 

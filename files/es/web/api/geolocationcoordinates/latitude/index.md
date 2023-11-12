@@ -10,16 +10,16 @@ slug: Web/API/GeolocationCoordinates/latitude
 ## Sintaxis
 
 ```js
-lat = coordinates.latitude
+lat = coordinates.latitude;
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GeolocationCoordinates.latitude")}}
+{{Compat}}
 
 ## Mirar también
 

@@ -39,7 +39,7 @@ htmlImageElement.loading = eagerOrLazy;
 
 当一个加载被 `loading` 属性设为 `lazy` 的图片最后加载时，浏览器会根据{{HTMLElement("img")}} 元素的尺寸和图片自身大小重排文档，更新被图片影响的元素的位置。
 
-为了防止重排发生，你需要使用 {{htmlattrxref("width", "img")}} 和 {{htmlattrxref("height", "img")}} 属性明确设置图片大小。通过这样建立固有长宽比，你防止了元素的移位。取决于实际的加载时间和重排，移位造成的最小的影响可能只是使用户困惑和不适，最坏的影响则是导致用户点错目标。
+为了防止重排发生，你需要使用 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 属性明确设置图片大小。通过这样建立固有长宽比，你防止了元素的移位。取决于实际的加载时间和重排，移位造成的最小的影响可能只是使用户困惑和不适，最坏的影响则是导致用户点错目标。
 
 ## 示例
 

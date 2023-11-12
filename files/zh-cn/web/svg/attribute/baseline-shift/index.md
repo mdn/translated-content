@@ -3,19 +3,19 @@ title: baseline-shift
 slug: Web/SVG/Attribute/baseline-shift
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-属性`baseline-shift`允许相对于父文本内容元素的`dominant-baseline`重定位`dominant-baseline`。该切换对象必须是一个下标或上标。
+属性 `baseline-shift` 允许相对于父文本内容元素的 `dominant-baseline` 重定位 `dominant-baseline`。该切换对象必须是一个下标或上标。
 
 作为一个外观属性，它还可以直接作为 CSS 样式表内部的属性使用。请看{{ cssxref("baseline-shift","CSS baseline-shift") }}以了解更多信息。
 
 ## 用法
 
-| 类别     | 外观属性                                                                                                   |
-| -------- | ---------------------------------------------------------------------------------------------------------- |
+| 类别     | 外观属性                                                                                                        |
+| -------- | --------------------------------------------------------------------------------------------------------------- |
 | 值       | **auto** \| baseline \| super \| sub \| \<percentage> \| [\<length>](/zh-CN/SVG/Content_type#Length) \| inherit |
-| 可变性   | Yes                                                                                                        |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty)                        |
+| 可变性   | Yes                                                                                                             |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty)                             |
 
 - baseline
   - : 没有基线切换，`dominant-baseline`依然在原来的位置。
@@ -32,11 +32,10 @@ slug: Web/SVG/Attribute/baseline-shift
 
 ## 元素
 
-`下列这些元素可以使用 baseline-shift`属性。
+下列这些元素可以使用 `baseline-shift` 属性。
 
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("tref") }}
-- {{ SVGElement("altGlyph") }}
 - {{ SVGElement("textPath") }}
 
 ## 规范

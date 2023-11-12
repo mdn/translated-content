@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/message
 
 ## 示例
 
-### 例子：抛出一个自定义错误
+### 示例：抛出一个自定义错误
 
 ```js
 var e = new Error("Could not parse input"); // e.message is "Could not parse input"

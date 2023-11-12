@@ -1,7 +1,6 @@
 ---
 title: 为 Firefox 3 升级扩展
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-original_slug: Updating_extensions_for_Firefox_3
 ---
 
 {{FirefoxSidebar}}

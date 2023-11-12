@@ -33,9 +33,9 @@ El objeto local implementa los métodos definidos en el{{WebExtAPIRef("storage.S
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Elimina todos los elementos del área de almacenamiento.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("webextensions.api.storage.local")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

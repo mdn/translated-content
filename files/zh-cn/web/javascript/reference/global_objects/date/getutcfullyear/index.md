@@ -23,9 +23,9 @@ dateObj.getUTCFullYear()
 
 `getUTCFullYear()` 返回一个绝对数值，符合 Year-2000 标准，例如 1995。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCFullYear()` 方法
+### 示例：使用 `getUTCFullYear()` 方法
 
 下面的例子是把当前年份的四位数值复制给变量 `year`。
 

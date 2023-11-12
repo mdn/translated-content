@@ -1,15 +1,15 @@
 ---
-title: 'CSP: form-action'
+title: "CSP: form-action"
 slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 l10n:
-  sourceCommit: 8e1f45b8c0a3671f6e3de43c0764ad610aa345dd
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** ディレクティブは、指定のコンテキストからフォームの送信先として使用される URL を制限します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`form-action`** ディレクティブは、指定のコンテキストからフォームの送信先として使用される URL を制限します。
 
-> **警告:** `form-action` がフォーム送信後のリダイレクトをブロックするかどうかは [議論の最中](https://github.com/w3c/webappsec-csp/issues/8) であり、この点に関する実装はブラウザーによって異なります。 (例えば、 Firefox 57 はリダイレクトをブロックしませんが、 Chrome 63 はリダイレクトをブロックします。)
+> **警告:** `form-action` がフォーム送信後のリダイレクトをブロックするかどうかは [議論の最中](https://github.com/w3c/webappsec-csp/issues/8) であり、この点に関する実装はブラウザーによって異なります（例えば、 Firefox 57 はリダイレクトをブロックしませんが、 Chrome 63 はリダイレクトをブロックします。）
 
 <table class="properties">
   <tbody>
@@ -19,7 +19,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** デ�
     </tr>
     <tr>
       <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Navigation directive")}}</td>
+      <td>{{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}</td>
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} による代替</th>
@@ -39,16 +39,16 @@ Content-Security-Policy: form-action <source> <source>;
 
 ### ソース
 
-`<source>` には、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)にあるいずれかの値を取ることができます。
+`<source>` には、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "fetch directives")}} (と [number of other directives](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)) で使用できます。
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と[数々の他のディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#関連ディレクティブ)）で使用できます。
 
 ## 例
 
 ### Meta タグの設定
 
 ```html
- <meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
+<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
 ```
 
 ### Apache の設定
@@ -65,7 +65,7 @@ Content-Security-Policy: form-action <source> <source>;
 add_header Content-Security-Policy "form-action 'none';"
 ```
 
-### 違反例
+### 違反している場合
 
 インラインの JavaScript で action を設定した {{HTMLElement("form")}} 要素 は CSP 違反となります。
 
@@ -78,9 +78,6 @@ add_header Content-Security-Policy "form-action 'none';"
 </form>
 
 <!--
-// Error: Refused to send form data because it violates the following
-// Content Security Policy directive: "form-action 'none'".
-
 // エラー: 以下に違反したので、フォームデータの送信は拒否されました。
 // Content Security Policy ディレクティブ: "form-action 'none'"
 -->

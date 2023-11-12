@@ -1,7 +1,6 @@
 ---
 title: Common (exsl)
 slug: Web/EXSLT/exsl
-translation_of: Web/EXSLT/exsl
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
@@ -12,4 +11,4 @@ Le paquet EXSLT <i lang="en">Common</i> fournit des fonctionnalités de base qui
 
 ## Compatibilité des navigateurs
 
-{{Compat("xslt.exslt.exsl")}}
+{{Compat}}

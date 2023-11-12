@@ -1,5 +1,5 @@
 ---
-title: 'MediaRecorder: error イベント'
+title: "MediaRecorder: error イベント"
 slug: Web/API/MediaRecorder/error_event
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用sるうか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('event', (event) => { });
+addEventListener("event", (event) => {});
 
-onevent = (event) => { };
+onevent = (event) => {};
 ```
 
 ## イベント型
@@ -48,7 +48,7 @@ _親インターフェイスである {{domxref("Event")}} からプロパティ
   - : 収録中のストリームのトラック数が変更されました。メディアの記録中にトラックを追加したり削除したりすることはできません。
 - `UnknownError`
   - : セキュリティに関連しない、他に分類できないエラーが発生しました。
-収録が停止し、`MediaRecorder` の {{domxref("MediaRecorder.state", "state")}} は `inactive` となり、最後に残りの受信データで {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントが `MediaRecorder` に送られ、最後に {{domxref("MediaRecorder/stop_event", "stop")}} イベントが送出されました。
+    収録が停止し、`MediaRecorder` の {{domxref("MediaRecorder.state", "state")}} は `inactive` となり、最後に残りの受信データで {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントが `MediaRecorder` に送られ、最後に {{domxref("MediaRecorder/stop_event", "stop")}} イベントが送出されました。
 
 これらのエラーは `MediaRecorder` メソッドを呼び出すことによって直接的に発生することもあれば、録画中に発生する問題によって間接的に発生することもあります。
 
@@ -58,12 +58,12 @@ _親インターフェイスである {{domxref("Event")}} からプロパティ
 
 ```js
 async function record() {
-    const stream = await navigator.mediaDevices.getUserMedia({audio: true});
-    const recorder = new MediaRecorder(stream);
-    recorder.addEventListener('error', (event) => {
-        console.error(`error recording stream: ${event.error.name}`)
-    });
-    recorder.start();
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  const recorder = new MediaRecorder(stream);
+  recorder.addEventListener("error", (event) => {
+    console.error(`error recording stream: ${event.error.name}`);
+  });
+  recorder.start();
 }
 
 record();
@@ -73,12 +73,12 @@ record();
 
 ```js
 async function record() {
-    const stream = await navigator.mediaDevices.getUserMedia({audio: true});
-    const recorder = new MediaRecorder(stream);
-    recorder.onerror = (event) => {
-        console.error(`error recording stream: ${event.error.name}`)
-    };
-    recorder.start();
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  const recorder = new MediaRecorder(stream);
+  recorder.onerror = (event) => {
+    console.error(`error recording stream: ${event.error.name}`);
+  };
+  recorder.start();
 }
 
 record();
@@ -94,4 +94,4 @@ record();
 
 ## 関連情報
 
-- [Media​Stream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

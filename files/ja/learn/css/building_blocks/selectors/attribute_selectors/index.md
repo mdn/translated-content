@@ -75,24 +75,3 @@ HTML の学習で学んだように、要素はマークアップについてさ
 これで属性セレクターが完了しました。次の記事に進んで、[pseudo-class and pseudo-element selectors](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)について読むことができます。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
-
-## このモジュール内の文書
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [要素のはみ出し (オーバーフロー)](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

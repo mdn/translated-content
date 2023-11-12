@@ -1,5 +1,5 @@
 ---
-title: Express Web Framework (Node.js/JavaScript)
+title: Express Web 框架（Node.js/JavaScript）
 slug: Learn/Server-side/Express_Nodejs
 ---
 
@@ -18,13 +18,13 @@ Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，�
 ## 指南
 
 - [Express/Node 介绍](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-  - : 在这篇文章中，我们回答了“什么是 Node？”和“什么是 Express？”并为您概述了 Express web 框架的特殊之处。我们将介绍主要功能，并向您展示 Express 应用程序的一些主要构建模块（尽管此时您还没有可用于测试它的开发环境）。
+  - : 在这篇文章中，我们回答了“什么是 Node？”和“什么是 Express？”并为你概述了 Express web 框架的特殊之处。我们将介绍主要功能，并向你展示 Express 应用程序的一些主要构建模块（尽管此时你还没有可用于测试它的开发环境）。
 - [搭建 Node(Express) 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-  - : 介绍了 Express 的所用之处后，我们将向您展示如何在不同操作系统下建立并验证 Node/Express 开发环境。无论您使用任何操作系统，这篇文章都可以完全指导如何开始构建 Express 应用。
+  - : 介绍了 Express 的所用之处后，我们将向你展示如何在不同操作系统下建立并验证 Node/Express 开发环境。无论你使用任何操作系统，这篇文章都可以完全指导如何开始构建 Express 应用。
 - [Express 教程——第一部分：本地图书馆](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
   - : 该实用教程系列中的第一篇文章，介绍了即将学习的内容，并概述了在后续文章中不断迭代的“本地图书馆”例子。
 - [Express 教程——第二部分：建立网站的骨架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-  - : 这篇文章将介绍如何建立一个网站项目的“骨架”，然后您可以继续添加自己的路由、模板/视图和数据库。
+  - : 这篇文章将介绍如何建立一个网站项目的“骨架”，然后你可以继续添加自己的路由、模板/视图和数据库。
 - [Express 教程——第三部分：使用数据库（Mongoose）](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
   - : 这篇文章简单介绍了在 Node/Express 中如何使用数据库。本文中我们将会使用 Mongoose 为该项目（本地图书馆）提供数据访问，同时解释了如何定义对象模式、模型和基础和验证。本文也简单介绍了访问模型数据的一些主流方式。
 - [Express 教程——第四部分：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
@@ -36,19 +36,14 @@ Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，�
 - [Express 教程——第七部分：如何部署到生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)
   - : 现在你已经创建了一个很棒的本地图书馆网站，你可以把本地环境迁移到公共网络服务器上，别人也可以使用网站。本章提供了如何找服务器，部署网站到生产环境的概览。
 
-## 另见
+## 添加更多教程
 
-- [在 PWS/Cloud Foundry 安装 LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry)
-  - : 本文提供了如何在[Pivotal Web Services PaaS](http://run.pivotal.io) 云上安装 LocalLibrary 的实际演示 - 这是 Heroku 的全功能，开源替代品，Heroku 是本教程第 7 部分中使用的 PaaS 云服务，如上所列。如果您正在寻找 Heroku（或其他 PaaS 云服务）的替代方案，或者只是想尝试不同的东西，PWS / Cloud Foundry 绝对值得一试。
+上面列出了所有现有的教程，如果你有兴趣，可以进一步扩展教程，一些其他有趣的主题包括：
 
-## 其它教程
-
-本教程到此结束，如果你想要更进一步，以下包含更多有趣的主题：
-
-- 使用 sessions
-- 使用者授权
-- 使用者许可
-- 测试 Express 网页应用
-- Express 网页应用的安全
+- 使用 session
+- 用户认证
+- 用户授权与许可
+- 测试 Express web 应用
+- Express web 应用的安全
 
 当然，如果做一个评估任务会更好！

@@ -27,7 +27,6 @@ var frames = window.frames; // 或 // var frames = window.parent.frames;
 for (var i = 0; i < frames.length; i++) {
   // 在这对 frames 的一个 frame 做点什么
   frames[i].document.body.style.background = "red";
-
 }
 ```
 

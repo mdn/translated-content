@@ -1,8 +1,6 @@
 ---
 title: NavigatorID.appName
 slug: orphaned/Web/API/NavigatorID/appName
-translation_of: Web/API/NavigatorID/appName
-original_slug: Web/API/NavigatorID/appName
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
@@ -34,7 +32,7 @@ alert(window.navigator.appName);
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.appName")}}
+{{Compat}}
 
 ## Смотрите также
 

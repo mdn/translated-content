@@ -1,13 +1,6 @@
 ---
 title: Event.returnValue
 slug: Web/API/Event/returnValue
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - action
-  - évènements
-translation_of: Web/API/Event/returnValue
 ---
 
 {{APIRef("DOM Events")}}{{Non-standard_header}}{{ Deprecated_header() }}
@@ -29,4 +22,4 @@ Bien qu'elle ait été inclue [dans l'ancien brouillon de travail de W3C DOM niv
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.returnValue")}}
+{{Compat}}

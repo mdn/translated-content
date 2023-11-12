@@ -25,7 +25,7 @@ slug: Web/API/InputEvent
 
 ## 方法
 
-除继承自 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 接口的方法外，没有其它自身方法。
+除继承自 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 接口的方法外，没有其他自身方法。
 
 ## 规范
 

@@ -1,5 +1,5 @@
 ---
-title: '502'
+title: "502"
 slug: conflicting/Web/HTTP/Status/502
 original_slug: Glossary/502
 ---

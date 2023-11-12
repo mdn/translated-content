@@ -1,7 +1,6 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-translation_of: Web/CSS/max-width
 ---
 
 {{CSSRef}}
@@ -89,9 +88,7 @@ max-width: unset;
 
 ```html
 <div id="parent">
-    <div id="child">
-        Child Text
-    </div>
+  <div id="child">Child Text</div>
 </div>
 ```
 
@@ -101,7 +98,7 @@ max-width: unset;
   width: 300px;
 }
 
-#child  {
+#child {
   background: gold;
   width: 100%;
   max-width: -moz-fit-content;

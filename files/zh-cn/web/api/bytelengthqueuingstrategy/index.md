@@ -12,11 +12,12 @@ slug: Web/API/ByteLengthQueuingStrategy
 - {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}
   - : 创建一个新的 `ByteLengthQueuingStrategy` 对象实例。
 
-## 属性
+## 实例属性
 
-无。
+- {{domxref("ByteLengthQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
+  - : 在应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压)之前，内部队列可以包含的字节总数。
 
-## 方法
+## 实例方法
 
 - {{domxref("ByteLengthQueuingStrategy.size()")}}
   - : 返回给定分块的 `byteLength` 属性。
@@ -26,17 +27,20 @@ slug: Web/API/ByteLengthQueuingStrategy
 ```js
 const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    // …
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    // …
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queueingStrategy);
+  queueingStrategy,
+);
 
 const size = queueingStrategy.size(chunk);
 ```
@@ -48,3 +52,9 @@ const size = queueingStrategy.size(chunk);
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("Streams API", "Stream API", "", 1)}}
+- [内置队列和队列策略](/zh-CN/docs/Web/API/Streams_API/Concepts#内置队列和队列策略)
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} 构造函数

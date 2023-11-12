@@ -14,9 +14,9 @@ slug: Web/HTTP/Methods/CONNECT
 | 請求具有 Body                                        | 否  |
 | ---------------------------------------------------- | --- |
 | 成功回覆具有 Body                                    | 是  |
-| {{Glossary("Safe")}}                         | 否  |
-| {{Glossary("Idempotent")}}                 | 否  |
-| {{Glossary("Cacheable")}}                     | 否  |
+| {{Glossary("Safe")}}                                 | 否  |
+| {{Glossary("Idempotent")}}                           | 否  |
+| {{Glossary("Cacheable")}}                            | 否  |
 | 可用於 [HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms) | 否  |
 
 ## 語法

@@ -53,11 +53,12 @@ transition: all 4s ease;
 使用例:
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.oRequestAnimationFrame ||
-                            window.msRequestAnimationFrame;
+var requestAnimationFrame =
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.oRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
 ```
 
 ## 理解を深める

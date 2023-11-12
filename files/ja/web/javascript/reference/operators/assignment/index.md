@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Assignment
 ## 構文
 
 ```js
-x = y
+x = y;
 ```
 
 ## 例
@@ -39,4 +39,4 @@ x = y = z // x, y そして z はすべて 25
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)

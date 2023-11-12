@@ -1,7 +1,6 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
-translation_of: Web/API/Event/timeStamp
 ---
 
 {{APIRef("DOM")}}
@@ -28,8 +27,8 @@ In newer implementations, the value is a {{domxref("DOMHighResTimeStamp")}} accu
 
 ```html
 <p>
-  Focus this iframe and press any key to get the
-  current timestamp for the keypress event.
+  Focus this iframe and press any key to get the current timestamp for the
+  keypress event.
 </p>
 <p>timeStamp: <span id="time">-</span></p>
 ```
@@ -61,7 +60,6 @@ event.timeStamp;
 // 1519211811670
 // ...
 
-
 // reduced time precision with `privacy.resistFingerprinting` enabled
 event.timeStamp;
 // 1519129853500
@@ -74,11 +72,7 @@ In Firefox, you can also enabled `privacy.resistFingerprinting`, the precision w
 
 ## Specifications
 
-| Specification                                                                                    | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-event-timestamp", "Event.timeStamp")}}     | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-event-timestamp", "Event.timeStamp")}}             | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM2 Events", "#Events-Event-timeStamp", "Event.timeStamp")}} | {{Spec2("DOM2 Events")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

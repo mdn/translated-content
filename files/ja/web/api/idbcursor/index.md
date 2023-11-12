@@ -43,7 +43,7 @@ slug: Web/API/IDBCursor
 
 {{ deprecated_header(13) }}
 
-> **警告:** これらの定数は利用できません。Gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。({{ bug(891944) }})
+> **警告:** これらの定数は利用できません。Gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。([Firefox バグ 891944](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` : カーソルは重複を含む全てのレコードを提示します。キーの範囲の下限から開始し、上方向に動きます。(キーの順番に単調増加します)
 - `NEXTUNIQUE` : `"nextunique"` : カーソルは重複を除いた全てのレコードを提示します。同じキーを持つ複数のレコードが存在する場合、走査の順で最初のレコードのみを取得できます。キーの範囲の下限から開始し、上方向に動きます。
@@ -56,19 +56,19 @@ slug: Web/API/IDBCursor
 
 ```js
 function displayData() {
-  var transaction = db.transaction(['rushAlbumList'], "readonly");
-  var objectStore = transaction.objectStore('rushAlbumList');
+  var transaction = db.transaction(["rushAlbumList"], "readonly");
+  var objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML = cursor.value.albumTitle + ", " + cursor.value.year;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('全エントリーを表示しました。');
+      console.log("全エントリーを表示しました。");
     }
   };
 }
@@ -80,7 +80,7 @@ function displayData() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBCursor")}}
+{{Compat}}
 
 ## 関連情報
 

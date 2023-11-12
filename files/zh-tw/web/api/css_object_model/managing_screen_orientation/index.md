@@ -26,7 +26,12 @@ slug: Web/API/CSS_Object_Model/Managing_screen_orientation
   <li>C</li>
 </ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
+  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
+  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
+  interdum tristique dapibus. Nullam quis malesuada est.
+</p>
 ```
 
 CSS 將根據方向的 Media Query，處理畫面方向的特殊樣式：
@@ -34,8 +39,9 @@ CSS 將根據方向的 Media Query，處理畫面方向的特殊樣式：
 ```css
 /* First let's define some common styles */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -47,17 +53,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -67,7 +73,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -98,15 +104,15 @@ li {
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
 
 結果如下所示（若無法顯示，可至本文右上角切換回英文原文觀看）：
 
-| Portrait                                                                                             | Landscape                                                                                            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Portrait                                              | Landscape                                             |
+| ----------------------------------------------------- | ----------------------------------------------------- |
 | {{ EmbedLiveSample('根據方向而調整配置', 180, 350) }} | {{ EmbedLiveSample('根據方向而調整配置', 350, 180) }} |
 
 > **備註：** 方向 Media Query 其實是以瀏覽器視窗 (或 iframe) 的方向為準，而非裝置本身的方向。
@@ -136,7 +142,7 @@ screen.addEventListener("orientationchange", function () {
 {{domxref("Screen.lockOrientation()")}} 將接受一組字串或系列字串，以定義畫面鎖定的方向。有效字串為：「`portrait-primary`」、「`portrait-secondary`」、「`landscape-primary`」、「`landscape-secondary`」、「`portrait`」、「`landscape`」。另可參閱 {{domxref("Screen.lockOrientation")}} 進一步了解這些有效值。
 
 ```js
-screen.lockOrientation('landscape');
+screen.lockOrientation("landscape");
 ```
 
 > **備註：** 畫面鎖定功能將依 Web Apps 而有所不同。如果 App A 鎖定為 `landscape`；App B 鎖定為 `portrait，則此兩款 Apps 均將維持自己的方向。所以不論如何切換` A 與 B，均不會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。但若必須改變方向以滿足畫面鎖定的需求，則鎖定方向時就會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。

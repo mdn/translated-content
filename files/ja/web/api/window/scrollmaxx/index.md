@@ -10,7 +10,7 @@ slug: Web/API/Window/scrollMaxX
 ## 構文
 
 ```js
-xMax = window.scrollMaxX
+xMax = window.scrollMaxX;
 ```
 
 - `xMax` はピクセル数です。
@@ -34,4 +34,4 @@ window.scrollTo(maxX, 0);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollMaxX")}}
+{{Compat}}

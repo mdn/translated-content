@@ -1,12 +1,9 @@
 ---
 title: Polymorphisme
 slug: Glossary/Polymorphism
-tags:
-  - Encodage
-  - Glossaire
-translation_of: Glossary/Polymorphism
-original_slug: Glossaire/Polymorphisme
 ---
+
+{{GlossarySidebar}}
 
 Le polymorphisme est la présentation d'une unique interface pour plusieurs types de données.
 

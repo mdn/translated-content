@@ -1,17 +1,6 @@
 ---
 title: SVG et CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
-tags:
-  - CSS
-  - CSS:Getting_Started
-  - Example
-  - Guide
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - Web
-translation_of: Web/SVG/Tutorial/SVG_and_CSS
-original_slug: CSS/Premiers_pas/Graphiques_SVG
 ---
 
 Cette page illustre l'application de CSS sur des documents [SVG](/fr/docs/Web/SVG), le langage spécialisé dans la création d'éléments graphiques vectoriels.
@@ -25,215 +14,229 @@ Nous allons voir par la suite un exemple que vous pourrez copier pour l'exécute
 Créez un nouveau document SVG en tant que fichier texte brut, `doc.svg`. Copiez et collez le contenu qui suit, en vous assurant de faire défiler le texte pour obtenir l'intégralité de l'exemple :
 
 ```html
-<svg width="600px" height="600px" viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="600px"
+  height="600px"
+  viewBox="-300 -300 600 600"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Démonstration SVG</title>
+  <desc>Démarrer avec CSS et SVG</desc>
 
-<title>Démonstration SVG</title>
-<desc>Démarrer avec CSS et SVG</desc>
-
-<defs>
-  <radialGradient id="fade" cx="0" cy="0" r="200"
+  <defs>
+    <radialGradient
+      id="fade"
+      cx="0"
+      cy="0"
+      r="200"
       gradientUnits="userSpaceOnUse">
-    <stop id="fade-stop-1" offset="33%"/>
-    <stop id="fade-stop-2" offset="95%"/>
-  </radialGradient>
-</defs>
+      <stop id="fade-stop-1" offset="33%" />
+      <stop id="fade-stop-2" offset="95%" />
+    </radialGradient>
+  </defs>
 
-<text id="heading" x="-280" y="-270">Démonstration SVG</text>
-<text id="caption" x="-280" y="-250">Déplacez le pointeur de
- votre souris sur la fleur.</text>
+  <text id="heading" x="-280" y="-270">Démonstration SVG</text>
+  <text id="caption" x="-280" y="-250">
+    Déplacez le pointeur de votre souris sur la fleur.
+  </text>
 
-<g id="flower">
-  <circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/>
+  <g id="flower">
+    <circle
+      id="overlay"
+      cx="0"
+      cy="0"
+      r="200"
+      stroke="none"
+      fill="url(#fade)" />
 
-  <g id="outer-petals">
-    <g class="quadrant">
-      <g class="segment">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+    <g id="outer-petals">
+      <g class="quadrant">
+        <g class="segment">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(18)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(36)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(54)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(72)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
       </g>
-      <g class="segment" transform="rotate(18)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(90)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(108)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(126)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(144)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(162)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
       </g>
-      <g class="segment" transform="rotate(36)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(180)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(198)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(216)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(234)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(252)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
       </g>
-      <g class="segment" transform="rotate(54)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(72)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(270)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(288)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(306)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(324)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(342)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
       </g>
     </g>
 
-    <g class="quadrant">
-      <g class="segment" transform="rotate(90)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+    <g id="inner-petals" transform="rotate(9) scale(0.33)">
+      <g class="quadrant">
+        <g class="segment">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(18)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(36)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(54)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(72)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
       </g>
-      <g class="segment" transform="rotate(108)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(126)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(144)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(162)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-    </g>
 
-    <g class="quadrant">
-      <g class="segment" transform="rotate(180)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+      <g class="quadrant">
+        <g class="segment" transform="rotate(90)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(108)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(126)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(144)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(162)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
       </g>
-      <g class="segment" transform="rotate(198)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(216)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(234)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(252)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-    </g>
 
-    <g class="quadrant">
-      <g class="segment" transform="rotate(270)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+      <g class="quadrant">
+        <g class="segment" transform="rotate(180)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(198)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(216)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(234)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(252)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
       </g>
-      <g class="segment" transform="rotate(288)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(306)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(324)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(342)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+
+      <g class="quadrant">
+        <g class="segment" transform="rotate(270)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(288)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(306)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(324)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g class="segment" transform="rotate(342)">
+          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        </g>
       </g>
     </g>
   </g>
-
-  <g id="inner-petals" transform="rotate(9) scale(0.33)">
-    <g class="quadrant">
-      <g class="segment">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(18)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(36)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(54)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(72)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-    </g>
-
-    <g class="quadrant">
-      <g class="segment" transform="rotate(90)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(108)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(126)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(144)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(162)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-    </g>
-
-    <g class="quadrant">
-      <g class="segment" transform="rotate(180)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(198)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(216)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(234)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(252)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-    </g>
-
-    <g class="quadrant">
-      <g class="segment" transform="rotate(270)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(288)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(306)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(324)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-      <g class="segment" transform="rotate(342)">
-        <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-        <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
-      </g>
-    </g>
-  </g>
-</g>
 </svg>
 ```
 
@@ -294,7 +297,7 @@ svg {
 
 /* extérieurs de pétales */
 #outer-petals {
-  opacity: .75;
+  opacity: 0.75;
   --segment-fill-fill: azure;
   --segment-fill-stroke: lightsteelblue;
   --segment-fill-stroke-width: 1;
@@ -392,47 +395,62 @@ La structure SVG présentée ci-dessus pourrait être écrite de manière beauco
 Voici comment se présente la structure du document SVG désormais.
 
 ```html
-<svg width="600px" height="600px" viewBox="-300 -300 600 600"
-    xmlns="http://www.w3.org/2000/svg">
-
+<svg
+  width="600px"
+  height="600px"
+  viewBox="-300 -300 600 600"
+  xmlns="http://www.w3.org/2000/svg">
   <title>Démonstration SVG</title>
   <desc>Démarrer avec CSS et SVG</desc>
 
   <defs>
     <g id="segment" class="segment">
-      <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/>
-      <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/>
+      <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
+      <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
     </g>
     <g id="quadrant">
-      <use xlink:href="#segment"/>
-      <use xlink:href="#segment" transform="rotate(18)"/>
-      <use xlink:href="#segment" transform="rotate(36)"/>
-      <use xlink:href="#segment" transform="rotate(54)"/>
-      <use xlink:href="#segment" transform="rotate(72)"/>
+      <use xlink:href="#segment" />
+      <use xlink:href="#segment" transform="rotate(18)" />
+      <use xlink:href="#segment" transform="rotate(36)" />
+      <use xlink:href="#segment" transform="rotate(54)" />
+      <use xlink:href="#segment" transform="rotate(72)" />
     </g>
     <g id="petals">
-      <use xlink:href="#quadrant"/>
-      <use xlink:href="#quadrant" transform="rotate(90)"/>
-      <use xlink:href="#quadrant" transform="rotate(180)"/>
-      <use xlink:href="#quadrant" transform="rotate(270)"/>
+      <use xlink:href="#quadrant" />
+      <use xlink:href="#quadrant" transform="rotate(90)" />
+      <use xlink:href="#quadrant" transform="rotate(180)" />
+      <use xlink:href="#quadrant" transform="rotate(270)" />
     </g>
-    <radialGradient id="fade" cx="0" cy="0" r="200"
-        gradientUnits="userSpaceOnUse">
-      <stop id="fade-stop-1" offset="33%"/>
-      <stop id="fade-stop-2" offset="95%"/>
+    <radialGradient
+      id="fade"
+      cx="0"
+      cy="0"
+      r="200"
+      gradientUnits="userSpaceOnUse">
+      <stop id="fade-stop-1" offset="33%" />
+      <stop id="fade-stop-2" offset="95%" />
     </radialGradient>
   </defs>
 
   <text id="heading" x="-280" y="-270">Démonstration SVG</text>
-  <text id="caption" x="-280" y="-250">Déplacez le pointeur de votre souris sur la fleur.</text>
+  <text id="caption" x="-280" y="-250">
+    Déplacez le pointeur de votre souris sur la fleur.
+  </text>
 
   <g id="flower">
-    <circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/>
-    <use id="outer-petals" xlink:href="#petals"/>
-    <use id="inner-petals" xlink:href="#petals"
-      transform="rotate(9) scale(0.33)"/>
+    <circle
+      id="overlay"
+      cx="0"
+      cy="0"
+      r="200"
+      stroke="none"
+      fill="url(#fade)" />
+    <use id="outer-petals" xlink:href="#petals" />
+    <use
+      id="inner-petals"
+      xlink:href="#petals"
+      transform="rotate(9) scale(0.33)" />
   </g>
-
 </svg>
 ```
 

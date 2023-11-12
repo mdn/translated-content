@@ -13,9 +13,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 
 ```js
 browser.bookmarks.removeTree(
-  id,      // 文字列
-  callback // 関数（省略可）
-)
+  id, // 文字列
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
@@ -27,7 +27,7 @@ browser.bookmarks.removeTree(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.removeTree")}}
+{{Compat}}
 
 ## 使用例
 

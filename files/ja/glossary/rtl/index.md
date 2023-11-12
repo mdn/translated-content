@@ -1,6 +1,6 @@
 ---
 title: RTL (右書き)
-slug: Glossary/rtl
+slug: Glossary/RTL
 ---
 
 **RTL** (**Right To Left**, 右書き) は、テキストが右から左へ書かれることを示す {{Glossary("locale")}} プロパティです。例えば、`he` ロケール (ヘブライ語) は右書きを定義します。アラビア語 (`ar`) も右書きで書かれる有名な言語です。

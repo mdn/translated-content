@@ -34,7 +34,7 @@ dateObj.setUTCMinutes(minutesValue[, secondsValue[, msValue]])
 
 如果你传入的参数值在上文所述范围之外的话，**`setUTCMinutes()`**方法会尝试修改日期对象中的其他信息，比如说你为 **`secondsValue`** 这个参数传入了 100（译者注：规定范围是 \[0, 59]），那么第一个参数（**`minutesValue`**）就会被加 1，而秒数则变成了 40。
 
-## 例子
+## 示例
 
 ### 使用 `setUTCMinutes()`
 

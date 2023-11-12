@@ -379,7 +379,7 @@ function addData(e) {
   // Informa sobre el éxito de la transacción completada, cuando todo esté hecho
   transaction.oncomplete = function () {
     console.log(
-      "Transacción completada: modificación de la base de datos finalizada."
+      "Transacción completada: modificación de la base de datos finalizada.",
     );
 
     // actualiza la visualización de datos para mostrar el elemento recién agregado, ejecutando displayData() nuevamente.
@@ -558,7 +558,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
            displayVideo(
              request.result.mp4,
              request.result.webm,
-             request.result.name
+             request.result.name,
            );
          } else {
            // Recuperar los videos de la red
@@ -569,7 +569,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
    }
    ```
 
-3. El siguiente fragmento se tomó del interior de `fetchVideoFromNetwork()` — aquí obtenemos las versiones MP4 y WebM del video usando dos peticiones {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}}. Luego usamos el método {{domxref("blob()", "Body.blob()")}} para extraer el cuerpo de cada respuesta como un blob, dándonos una representación de objeto de los videos que se pueden almacenar y mostrar más adelante.
+3. El siguiente fragmento se tomó del interior de `fetchVideoFromNetwork()` — aquí obtenemos las versiones MP4 y WebM del video usando dos peticiones {{domxref("fetch()", "fetch()")}}. Luego usamos el método {{domxref("blob()", "Body.blob()")}} para extraer el cuerpo de cada respuesta como un blob, dándonos una representación de objeto de los videos que se pueden almacenar y mostrar más adelante.
 
    Sin embargo, tenemos un problema aquí: estas dos solicitudes son asíncronas, pero solo queremos intentar mostrar o almacenar el video cuando ambas promesas se hayan cumplido. Afortunadamente, hay un método incorporado que maneja este problema: {{jsxref("Promise.all()")}}. Este toma un argumento, referencias a todas las promesas individuales que deseas verificar para su cumplimiento colocadas en un arreglo, y en sí mismo se basa en promesas.
 
@@ -577,10 +577,10 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
 
    ```js
    let mp4Blob = fetch("videos/" + video.name + ".mp4").then((response) =>
-     response.blob()
+     response.blob(),
    );
    let webmBlob = fetch("videos/" + video.name + ".webm").then((response) =>
-     response.blob()
+     response.blob(),
    );
 
    // Ejecuta el siguiente código solo cuando se hayan cumplido ambas promesas
@@ -668,7 +668,7 @@ Lo primero que hay que tener en cuenta es que hay un fragmento adicional de cód
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register(
-      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js"
+      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js",
     )
     .then(function () {
       console.log("Servicio Worker Registrado");
@@ -698,7 +698,7 @@ self.addEventListener("install", function (e) {
         "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js",
         "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css",
       ]);
-    })
+    }),
   );
 });
 ```
@@ -715,7 +715,7 @@ Dentro del controlador, primero registramos la URL del activo solicitado. Luego 
 
 Dentro de este bloque usamos {{domxref("CacheStorage.match()")}} para verificar si una solicitud coincidente (es decir, coincide con la URL) se puede encontrar en cualquier caché. Esta promesa se cumple con la respuesta coincidente si se encuentra una coincidencia, o `undefined` si no lo es.
 
-Si se encuentra una coincidencia, simplemente la devolvemos como la respuesta personalizada. De lo contrario, [fetch()](/es/docs/Web/API/WindowOrWorkerGlobalScope/fetch) la respuesta de la red y la devolvemos en su lugar.
+Si se encuentra una coincidencia, simplemente la devolvemos como la respuesta personalizada. De lo contrario, [fetch()](/es/docs/Web/API/fetch) la respuesta de la red y la devolvemos en su lugar.
 
 ```js
 self.addEventListener("fetch", function (e) {
@@ -723,7 +723,7 @@ self.addEventListener("fetch", function (e) {
   e.respondWith(
     caches.match(e.request).then(function (response) {
       return response || fetch(e.request);
-    })
+    }),
   );
 });
 ```
@@ -752,13 +752,3 @@ Eso es todo por ahora. Esperamos que hayas encontrado útil nuestro resumen de l
 - [API del servicio worker](/es/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## En este módulo
-
-- [Introducción a las APIs web](/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulación de documentos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Obtener datos del servidor](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [API de terceros](/es/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Dibujar gráficos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [APIs de video y audio](/es/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Almacenamiento de lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

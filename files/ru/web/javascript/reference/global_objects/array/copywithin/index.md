@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-tags:
-  - Array
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
 
 {{JSRef("Global_Objects", "Array")}}
@@ -54,7 +44,7 @@ arr.copyWithin(target, start[, end = this.length])
 [1, 2, 3, 4, 5].copyWithin(0, -2, -1);
 // [4, 2, 3, 4, 5]
 
-[].copyWithin.call({length: 5, 3: 1}, 0, 3);
+[].copyWithin.call({ length: 5, 3: 1 }, 0, 3);
 // {0: 1, 3: 1, length: 5}
 
 // Типизированные массивы ES6 являются подклассами Array
@@ -72,10 +62,10 @@ i32a.copyWithin(0, 2);
 
 ```js
 if (!Array.prototype.copyWithin) {
-  Array.prototype.copyWithin = function(target, start/*, end*/) {
+  Array.prototype.copyWithin = function (target, start /*, end*/) {
     // Шаги 1-2.
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     var O = Object(this);
@@ -86,24 +76,27 @@ if (!Array.prototype.copyWithin) {
     // Шаги 6-8.
     var relativeTarget = target >> 0;
 
-    var to = relativeTarget < 0 ?
-      Math.max(len + relativeTarget, 0) :
-      Math.min(relativeTarget, len);
+    var to =
+      relativeTarget < 0
+        ? Math.max(len + relativeTarget, 0)
+        : Math.min(relativeTarget, len);
 
     // Шаги 9-11.
     var relativeStart = start >> 0;
 
-    var from = relativeStart < 0 ?
-      Math.max(len + relativeStart, 0) :
-      Math.min(relativeStart, len);
+    var from =
+      relativeStart < 0
+        ? Math.max(len + relativeStart, 0)
+        : Math.min(relativeStart, len);
 
     // Шаги 12-14.
     var end = arguments[2];
     var relativeEnd = end === undefined ? len : end >> 0;
 
-    var final = relativeEnd < 0 ?
-      Math.max(len + relativeEnd, 0) :
-      Math.min(relativeEnd, len);
+    var final =
+      relativeEnd < 0
+        ? Math.max(len + relativeEnd, 0)
+        : Math.min(relativeEnd, len);
 
     // Шаг 15.
     var count = Math.min(final - from, len - to);
@@ -111,7 +104,7 @@ if (!Array.prototype.copyWithin) {
     // Шаги 16-17.
     var direction = 1;
 
-    if (from < to && to < (from + count)) {
+    if (from < to && to < from + count) {
       direction = -1;
       from += count - 1;
       to += count - 1;

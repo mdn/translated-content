@@ -5,14 +5,30 @@ slug: Web/HTTP/Status/301
 
 {{HTTPSidebar}}
 
-HTTP **`301 301 Moved Permanently`** 说明请求的资源已经被移动到了由 {{HTTPHeader("Location")}} 头部指定的 url 上，是固定的不会再改变。搜索引擎会根据该响应修正。
+HTTP **`301 Moved Permanently`** 说明请求的资源已经被移动到了由 {{HTTPHeader("Location")}} 头部指定的 url 上，是固定的不会再改变。搜索引擎会根据该响应修正。
 
-尽管标准要求浏览器在收到该响应并进行重定向时不应该修改 http method 和 body，但是有一些浏览器可能会有问题。所以最好是在应对{{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法时使用 301，其他情况使用{{HTTPStatus("308")}} 来替代 301。
+> **备注：** 尽管[规范](/zh-CN/docs/Web/HTTP/Status/301#规范)要求浏览器在收到该响应并进行重定向时不应该修改 http method 和 body，但并非所有的用户代理都符合此要求。所以最好将 301 状态码用作 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法的响应，而对于 {{HTTPMethod("POST")}} 则改用 {{HTTPStatus("308", "308 Permanent Redirect")}}，因为此状态码会禁止更改请求方法。
 
 ## 状态
 
-```plain
+```http
 301 Moved Permanently
+```
+
+## 示例
+
+### 客户端请求
+
+```http
+GET /index.php HTTP/1.1
+Host: www.example.org
+```
+
+### 服务端响应
+
+```http
+HTTP/1.1 301 Moved Permanently
+Location: http://www.example.org/index.asp
 ```
 
 ## 规范
@@ -23,7 +39,7 @@ HTTP **`301 301 Moved Permanently`** 说明请求的资源已经被移动到了�
 
 {{Compat}}
 
-## 更多信息可见
+## 参见
 
-- {{HTTPStatus("308")}} 永久重定向
-- {{HTTPStatus("302")}} 找到，暂时性转移
+- {{HTTPStatus("308")}}，当使用的请求方法永远不会更改时，等价于此状态代码。
+- {{HTTPStatus("302")}}，临时重定向

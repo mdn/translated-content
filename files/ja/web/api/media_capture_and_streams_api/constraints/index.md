@@ -1,7 +1,6 @@
 ---
 title: 能力と制約と設定
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
-original_slug: Web/API/Media_Streams_API/Constraints
 l10n:
   sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
 ---
@@ -109,7 +108,7 @@ if (
 
 {{domxref("MediaStreamTrack.getCapabilities()")}} を呼び出して、対応しているすべての能力と、そのそれぞれが現在のプラットフォームとユーザーエージェントで受け入れられる値または値の範囲のリストを取得できます。 この関数は、ブラウザーが対応している各制約可能なプロパティと、それらのプロパティのそれぞれが対応している値または値の範囲をリストする {{domxref("MediaTrackCapabilities")}} オブジェクトを返します。
 
-> **メモ:** `getCapabilities()` は、まだすべての主要なブラウザーで実装されていません。 とりあえず、あなたは必要なものを手に入れようとする必要があり、もしそれができなければ、その時点で何をすべきかを決定します。 例えば、 {{bug(1179084)}} を参照してください。
+> **メモ:** `getCapabilities()` は、まだすべての主要なブラウザーで実装されていません。 とりあえず、あなたは必要なものを手に入れようとする必要があり、もしそれができなければ、その時点で何をすべきかを決定します。 例えば、 [Firefox バグ 1179084](https://bugzil.la/1179084) を参照してください。
 
 ## 制約の適用
 
@@ -187,7 +186,11 @@ function whichCamera(track) {
 
 ```html hidden
 <p>
-  メディアの制約を試してください！ 左側の編集ボックスで映像トラックと音声トラックの制約セットを編集し、[制約の適用] ボタンをクリックして試してください。 ブラウザーが選択して使用している実際の設定は、右側のボックスに表示されます。 そのすべての下に、動画自体が表示されます。
+  メディアの制約を試してください！
+  左側の編集ボックスで映像トラックと音声トラックの制約セットを編集し、[制約の適用]
+  ボタンをクリックして試してください。
+  ブラウザーが選択して使用している実際の設定は、右側のボックスに表示されます。
+  そのすべての下に、動画自体が表示されます。
 </p>
 <p>[開始] ボタンをクリックして開始します。</p>
 
@@ -227,7 +230,10 @@ function whichCamera(track) {
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -344,7 +350,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;
 
 ### 設定の表示の更新
 
-各制約セットエディターの右側には、トラックの構成可能なプロパティの現在の構成を表示するために使用する 2 番目のテキストボックスがあります。 この表示を関数 `getCurrentSettings()` で更新します。 この関数は、音声トラックと映像トラックの現在の設定を取得し、 {{htmlattrxref("value", "textarea")}} を設定することで対応するコードをトラックの設定表示ボックスに挿入します。
+各制約セットエディターの右側には、トラックの構成可能なプロパティの現在の構成を表示するために使用する 2 番目のテキストボックスがあります。 この表示を関数 `getCurrentSettings()` で更新します。 この関数は、音声トラックと映像トラックの現在の設定を取得し、 [`value`](/ja/docs/Web/HTML/Element/textarea#value) を設定することで対応するコードをトラックの設定表示ボックスに挿入します。
 
 ```js
 function getCurrentSettings() {
@@ -433,7 +439,7 @@ document.getElementById("startButton").addEventListener(
   () => {
     startVideo();
   },
-  false
+  false,
 );
 ```
 
@@ -476,7 +482,7 @@ document.getElementById("applyButton").addEventListener(
       }
     }
   },
-  false
+  false,
 );
 ```
 
@@ -554,7 +560,7 @@ function log(msg) {
 
 function handleError(reason) {
   log(
-    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`
+    `Error <code>${reason.name}</code> in constraint <code>${reason.constraint}</code>: ${reason.message}`,
   );
 }
 ```

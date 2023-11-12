@@ -1,7 +1,6 @@
 ---
 title: Capturar fotografías con la cámara web
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
 
 ## Introducción y demostración
@@ -16,7 +15,7 @@ Lo primero que necesitas para acceder a la cámara web utilizando WebRTC es un e
 <video id="video"></video>
 <button id="startbutton">Take photo</button>
 <canvas id="canvas"></canvas>
-<img src="http://placekitten.com/g/320/261" id="photo" alt="photo">
+<img src="http://placekitten.com/g/320/261" id="photo" alt="photo" />
 ```
 
 ## El script completo
@@ -24,27 +23,27 @@ Lo primero que necesitas para acceder a la cámara web utilizando WebRTC es un e
 Aquí se muestra completamente el código JavaScript. Más abajo, explicaremos gradualmente cada sección con más detalle.
 
 ```js
-(function() {
-
+(function () {
   var streaming = false,
-      video        = document.querySelector('#video'),
-      canvas       = document.querySelector('#canvas'),
-      photo        = document.querySelector('#photo'),
-      startbutton  = document.querySelector('#startbutton'),
-      width = 320,
-      height = 0;
+    video = document.querySelector("#video"),
+    canvas = document.querySelector("#canvas"),
+    photo = document.querySelector("#photo"),
+    startbutton = document.querySelector("#startbutton"),
+    width = 320,
+    height = 0;
 
-  navigator.getMedia = ( navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia ||
-                         navigator.msGetUserMedia);
+  navigator.getMedia =
+    navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia ||
+    navigator.msGetUserMedia;
 
   navigator.getMedia(
     {
       video: true,
-      audio: false
+      audio: false,
     },
-    function(stream) {
+    function (stream) {
       if (navigator.mozGetUserMedia) {
         video.mozSrcObject = stream;
       } else {
@@ -53,35 +52,42 @@ Aquí se muestra completamente el código JavaScript. Más abajo, explicaremos g
       }
       video.play();
     },
-    function(err) {
+    function (err) {
       console.log("An error occured! " + err);
-    }
+    },
   );
 
-  video.addEventListener('canplay', function(ev){
-    if (!streaming) {
-      height = video.videoHeight / (video.videoWidth/width);
-      video.setAttribute('width', width);
-      video.setAttribute('height', height);
-      canvas.setAttribute('width', width);
-      canvas.setAttribute('height', height);
-      streaming = true;
-    }
-  }, false);
+  video.addEventListener(
+    "canplay",
+    function (ev) {
+      if (!streaming) {
+        height = video.videoHeight / (video.videoWidth / width);
+        video.setAttribute("width", width);
+        video.setAttribute("height", height);
+        canvas.setAttribute("width", width);
+        canvas.setAttribute("height", height);
+        streaming = true;
+      }
+    },
+    false,
+  );
 
   function takepicture() {
     canvas.width = width;
     canvas.height = height;
-    canvas.getContext('2d').drawImage(video, 0, 0, width, height);
-    var data = canvas.toDataURL('image/png');
-    photo.setAttribute('src', data);
+    canvas.getContext("2d").drawImage(video, 0, 0, width, height);
+    var data = canvas.toDataURL("image/png");
+    photo.setAttribute("src", data);
   }
 
-  startbutton.addEventListener('click', function(ev){
+  startbutton.addEventListener(
+    "click",
+    function (ev) {
       takepicture();
-    ev.preventDefault();
-  }, false);
-
+      ev.preventDefault();
+    },
+    false,
+  );
 })();
 ```
 
@@ -112,33 +118,34 @@ Empezamos por encerrar el script entero en una función anónima para evitar las
 Ahora necesitamos obtener el video desde la cámara web. Actualmente esto está predeterminado para los diferentes navegadores, así que necesitamos comprobar cuál es compatible:
 
 ```js
-  navigator.getMedia = ( navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia ||
-                         navigator.msGetUserMedia);
+navigator.getMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia ||
+  navigator.msGetUserMedia;
 ```
 
 Le solicitamos al navegador que nos dé un video sin audio y obtenemos una secuencia (stream) en la función de retrollamada:
 
 ```js
-  navigator.getMedia(
-    {
-      video: true,
-      audio: false
-    },
-    function(stream) {
-      if (navigator.mozGetUserMedia) {
-        video.mozSrcObject = stream;
-      } else {
-        var vendorURL = window.URL || window.webkitURL;
-        video.src = vendorURL.createObjectURL(stream);
-      }
-      video.play();
-    },
-    function(err) {
-      console.log("An error occured! " + err);
+navigator.getMedia(
+  {
+    video: true,
+    audio: false,
+  },
+  function (stream) {
+    if (navigator.mozGetUserMedia) {
+      video.mozSrcObject = stream;
+    } else {
+      var vendorURL = window.URL || window.webkitURL;
+      video.src = vendorURL.createObjectURL(stream);
     }
-  );
+    video.play();
+  },
+  function (err) {
+    console.log("An error occured! " + err);
+  },
+);
 ```
 
 En estos momentos Firefox Nightly necesita que tu configures la propiedad de `mozSrcObject` del elemento del video con el fin de reproducirlo; para otros navegadores, configura el atributo `src`. Mientras que Firefox puede utilizar la secuencia de video directamente, Webkit y Opera necesitan crear un objeto URL desde ella. Todo esto será estandarizado en un futuro cercano.
@@ -148,16 +155,20 @@ En estos momentos Firefox Nightly necesita que tu configures la propiedad de `mo
 Luego necesitamos configurar el tamaño del video a las dimensiones deseadas.
 
 ```js
-  video.addEventListener('canplay', function(ev){
+video.addEventListener(
+  "canplay",
+  function (ev) {
     if (!streaming) {
-      height = video.videoHeight / (video.videoWidth/width);
-      video.setAttribute('width', width);
-      video.setAttribute('height', height);
-      canvas.setAttribute('width', width);
-      canvas.setAttribute('height', height);
+      height = video.videoHeight / (video.videoWidth / width);
+      video.setAttribute("width", width);
+      video.setAttribute("height", height);
+      canvas.setAttribute("width", width);
+      canvas.setAttribute("height", height);
       streaming = true;
     }
-  }, false);
+  },
+  false,
+);
 ```
 
 Nos subscribimos al evento `canplay` del video y leemos sus dimensiones utilizando `videoHeight` y `videoWidth`. Estas no están disponible realmente hasta que el evento sea iniciado. Establecemos `streaming` a verdadero (true) para que compruebe esto solo una vez, mientras que el evento `canplay` siga en actividad.
@@ -169,10 +180,14 @@ Esto es todo lo que se necesita para que inicie el video.
 Ahora necesitamos capturar una imagen utilizando un lienzo (canvas). Asignamos un manejador de eventos al botón de inicio para llamar a la función de `takepicture`.
 
 ```js
-  startbutton.addEventListener('click', function(ev){
-      takepicture();
+startbutton.addEventListener(
+  "click",
+  function (ev) {
+    takepicture();
     ev.preventDefault();
-  }, false);
+  },
+  false,
+);
 ```
 
 En esta función, reestablecemos el tamaño del lienzo (canvas) a las dimensiones del video, el cual lo sustituye y tenemos un marco del video, el cual se copia al canvas. Luego necesitamos convertir los datos del canvas en datos tipo URL con un encabezado PNG, y establecer el src de la fotografía a este mismo url.

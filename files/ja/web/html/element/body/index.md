@@ -1,6 +1,8 @@
 ---
-title: '<body>: 文書の本文要素'
+title: "<body>: 文書本体要素"
 slug: Web/HTML/Element/body
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -11,7 +13,7 @@ slug: Web/HTML/Element/body
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -24,7 +26,7 @@ slug: Web/HTML/Element/body
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -76,75 +78,83 @@ slug: Web/HTML/Element/body
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("alink")}} {{deprecated_inline}}
+- `alink` {{deprecated_inline}}
   - : ハイパーリンクの選択時の文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref("color")}} プロパティを {{cssxref(":active")}} 擬似クラスで使用してください。**
-- {{htmlattrdef("background")}} {{deprecated_inline}}
+- `background` {{deprecated_inline}}
   - : 背景画像の URI です。**この属性を使用しないでください。代わりに CSS の {{cssxref("background")}} プロパティを使用してください。**
-- {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
+- `bgcolor` {{deprecated_inline}}
   - : 文書の背景色です。**この属性を使用しないでください。代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。**
-- {{htmlattrdef("bottommargin")}} {{deprecated_inline}}
+- `bottommargin` {{deprecated_inline}}
   - : body の下マージンです。**この属性を使用しないでください。代わりに CSS の {{cssxref("margin-bottom")}} プロパティを使用してください。**
-- {{htmlattrdef("leftmargin")}} {{deprecated_inline}}
+- `leftmargin` {{deprecated_inline}}
   - : body の左マージンです。**この属性を使用しないでください。代わりに CSS の {{cssxref("margin-left")}} プロパティを使用してください。**
-- {{htmlattrdef("link")}} {{deprecated_inline}}
+- `link` {{deprecated_inline}}
   - : 未訪問のハイパーリンクの文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref("color")}} プロパティを {{cssxref(":link")}} 擬似クラスで使用してください。**
-- {{htmlattrdef("onafterprint")}}
+- `onafterprint`
   - : ユーザーによる印刷データ作成直後に呼び出す関数
-- {{htmlattrdef("onbeforeprint")}}
+- `onbeforeprint`
   - : ユーザーによるブラウザーへの印刷指示直後に呼び出す関数
-- {{htmlattrdef("onbeforeunload")}}
+- `onbeforeunload`
   - : 文書のアンロードの直前に呼び出す関数
-- {{htmlattrdef("onblur")}}
+- `onblur`
   - : 文書からフォーカスが外されたときに呼び出す関数
-- {{htmlattrdef("onerror")}}
+- `onerror`
   - : 文書を正常にロードできなかった際に呼び出す関数
-- {{htmlattrdef("onfocus")}}
+- `onfocus`
   - : 文書にフォーカスが当たった際に呼び出す関数
-- {{htmlattrdef("onhashchange")}}
+- `onhashchange`
   - : 文書の現在のアドレスのフラグメント識別子 (ハッシュ文字 `'#'` から始まる部分) が変更された際に呼び出す関数
-- {{htmlattrdef("onlanguagechange")}}
+- `onlanguagechange`
   - : 言語が変更された際に呼び出す関数
-- {{htmlattrdef("onload")}}
+- `onload`
   - : 文書の読み込み完了時に呼び出す関数
-- {{htmlattrdef("onmessage")}}
+- `onmessage`
   - : 文書が API からメッセージを受信した際に呼び出す関数
-- {{htmlattrdef("onoffline")}}
+- `onoffline`
   - : ネットワークとの交信が不能になった際に呼び出す関数
-- {{htmlattrdef("ononline")}}
+- `ononline`
   - : ネットワークとの交信が発生あるいは回復した際に呼び出す関数
-- {{htmlattrdef("onpopstate")}}
+- `onpopstate`
   - : ユーザーによるセッション履歴のナビゲート時に呼び出す関数
-- {{htmlattrdef("onredo")}}
+- `onredo`
   - : ユーザーがトランザクション履歴を元に戻した際に呼び出す関数
-- {{htmlattrdef("onresize")}}
+- `onresize`
   - : 文書を表示するウィンドウがリサイズされた際に呼び出す関数
-- {{htmlattrdef("onstorage")}}
+- `onstorage`
   - : ストレージ領域が変化した際に呼び出す関数
-- {{htmlattrdef("onundo")}}
+- `onundo`
   - : ユーザーがトランザクション履歴をさかのぼることによって後方へ移動した際に呼び出す関数
-- {{htmlattrdef("onunload")}}
+- `onunload`
   - : 文書からの離脱時に呼び出す関数
-- {{htmlattrdef("rightmargin")}} {{deprecated_inline}}
+- `rightmargin` {{deprecated_inline}}
   - : body の右マージンです。**この属性を使用しないでください。代わりに CSS の {{cssxref("margin-right")}} プロパティを使用してください。**
-- {{htmlattrdef("text")}} {{deprecated_inline}}
+- `text` {{deprecated_inline}}
   - : 基本文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref("color")}} プロパティを使用してください。**
-- {{htmlattrdef("topmargin")}} {{deprecated_inline}}
+- `topmargin` {{deprecated_inline}}
   - : body の上マージンです。**この属性を使用しないでください。代わりに CSS の {{cssxref("margin-top")}} プロパティを使用してください。**
-- {{htmlattrdef("vlink")}} {{deprecated_inline}}
+- `vlink` {{deprecated_inline}}
   - : 訪問済みのハイパーリンクの文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref(":visited")}} 擬似クラスで {{cssxref("color")}} プロパティを使用してください。**
 
 ## 例
 
 ```html
-<html>
+<html lang="en">
   <head>
     <title>Document title</title>
   </head>
   <body>
-    <p>This is a paragraph</p>
+    <p>
+      The <code>&lt;body&gt;</code> HTML element represents the content of an
+      HTML document. There can be only one <code>&lt;body&gt;</code> element in
+      a document.
+    </p>
   </body>
 </html>
 ```
+
+### 結果
+
+{{EmbedLiveSample('Example')}}
 
 ## 仕様書
 

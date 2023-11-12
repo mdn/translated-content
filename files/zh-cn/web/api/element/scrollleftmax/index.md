@@ -17,7 +17,7 @@ var pxl = elt.scrollLeftMax;
 
 _这个属性还没纳入规范。_
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

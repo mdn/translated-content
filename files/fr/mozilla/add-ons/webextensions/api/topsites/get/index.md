@@ -1,17 +1,6 @@
 ---
 title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
-  - topSites
-translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/get
 ---
 
 {{AddonSidebar()}}
@@ -33,7 +22,7 @@ Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](/fr/Add-
 ## Syntaxe
 
 ```js
-var gettingTopSites = browser.topSites.get()
+var gettingTopSites = browser.topSites.get();
 ```
 
 ### Paramètres
@@ -61,9 +50,9 @@ var gettingTopSites = browser.topSites.get()
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Ceci sera réalisé avec un tableau d'objets {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.topSites.get")}}
+{{Compat}}
 
 ## Exemples
 
@@ -99,7 +88,7 @@ function onError(error) {
 
 var gettingTopSites = browser.topSites.get({
   includeBlocked: true,
-  onePerDomain: false
+  onePerDomain: false,
 });
 
 gettingTopSites.then(logTopSites, onError);

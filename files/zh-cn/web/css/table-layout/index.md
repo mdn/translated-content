@@ -5,85 +5,92 @@ slug: Web/CSS/table-layout
 
 {{CSSRef}}
 
-**table-layout** CSS 属性定义了用于布局表格*单元格*，*行*和*列*的算法。
+**table-layout** CSS 属性定义了用于布局{{htmlelement("table", "表格")}}的单元格、行和列的算法。
 
-```plain
-/* Keyword values */
-table-layout: auto;
-table-layout: fixed;
-
-/* Global values */
-table-layout: inherit;
-table-layout: initial;
-table-layout: unset;
-```
-
-{{cssinfo}}
+{{EmbedInteractiveExample("pages/css/table-layout.html")}}
 
 ## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 table-layout: auto;
 table-layout: fixed;
 
-/* Global values */
+/* 全局值 */
 table-layout: inherit;
 table-layout: initial;
+table-layout: revert;
+table-layout: revert-layer;
 table-layout: unset;
 ```
 
-### 值
+### 取值
 
-- {{Cssxref("auto")}}
-  - : 大多数浏览器采用自动表格布局算法对表格布局。表格及单元格的宽度取决于其包含的内容。
+- `auto`
+  - : 默认情况下，大多数浏览器使用自动表格布局算法。表格及其单元格的宽度会根据内容自动调整大小。
 - `fixed`
 
-  - : 表格和列的宽度通过表格的宽度来设置，某一列的宽度仅由该列首行的单元格决定。在当前列中，该单元格所在行之后的行并不会影响整个列宽。
+  - : 表格和列的宽度是由 `table` 和 `col` 元素的宽度或第一行单元格的宽度来设置的。后续行中的单元格不会影响列的宽度。
 
-    使用“fixed”布局方式时，整个表格可以在其首行被下载后就被解析和渲染。这样对于“automatic”自动布局方式来说可以加速渲染，但是其后的单元格内容并不会自适应当前列宽。任何一个包含溢出内容的单元格可以使用 {{Cssxref("overflow")}} 属性控制是否允许内容溢出。
+    在“fixed”布局方法下，一旦下载并分析了第一行表格，整个表格就可以被渲染出来。这可以加快渲染时间，相比于“automatic”布局方法，但是后续单元格内容可能不适合提供的列宽。单元格使用 {{Cssxref("overflow")}} 属性来确定是否要剪裁任何溢出的内容，但仅当表格具有已知宽度时才会生效；否则，它们不会溢出到单元格之外。
 
-### 正式语法
+## 形式语法
+
+{{csssyntax}}
+
+## 形式定义
 
 {{csssyntax}}
 
 ## 示例
 
-本示例使用了 fixed 的表格布局，结合{{cssxref("width")}}属性来限制表格的宽。{{cssxref("text-overflow")}} 属性用于文字过长时显示省略号。
+### 具有 text-overflow 的固定宽度表格
 
-如果表格的布局是 auto，即使指定了表格的 width，表格仍然会自适应内容自动撑开。
+这个例子使用了固定的表格布局，结合 {{cssxref("width")}} 属性，限制了表格的宽度。{{cssxref("text-overflow")}} 属性被用来在单词太长无法容纳时应用省略号。如果表格布局是 `auto`，表格将会根据其内容自动扩展大小，而不考虑指定的 `width`。
 
-### HTML
+#### HTML
 
 ```html
 <table>
- <tr><td>Ed</td><td>Wood</td></tr>
- <tr><td>Albert</td><td>Schweitzer</td></tr>
- <tr><td>Jane</td><td>Fonda</td></tr>
- <tr><td>William</td><td>Shakespeare</td></tr>
+  <tr>
+    <td>Ed</td>
+    <td>Wood</td>
+  </tr>
+  <tr>
+    <td>Albert</td>
+    <td>Schweitzer</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Fonda</td>
+  </tr>
+  <tr>
+    <td>William</td>
+    <td>Shakespeare</td>
+  </tr>
 </table>
 ```
 
-### CSS
+#### CSS
 
 ```css
 table {
- table-layout: fixed;
- width: 120px;
- border: 1px solid red;
+  table-layout: fixed;
+  width: 120px;
+  border: 1px solid red;
 }
 
 td {
- border: 1px solid blue;
- overflow: hidden;
- white-space: nowrap;
- text-overflow: ellipsis;
+  border: 1px solid blue;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample('示例')}}
+{{EmbedLiveSample('具有 text-overflow 的固定宽度表格')}}
 
 ## 规范
 
@@ -92,3 +99,7 @@ td {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [`<table>`](/zh-CN/docs/Web/HTML/Element/table)

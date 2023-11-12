@@ -1,11 +1,6 @@
 ---
 title: Mode de mise en page
 slug: Web/CSS/Layout_mode
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/Layout_mode
-original_slug: Web/CSS/Mode_de_mise_en_page
 ---
 
 {{CSSRef}}

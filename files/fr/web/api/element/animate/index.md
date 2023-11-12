@@ -1,8 +1,6 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
-translation_of: Web/API/Element/animate
-browser-compat: api.Element.animate
 ---
 
 {{APIRef('Web Animations')}}
@@ -37,15 +35,18 @@ Renvoie un objet [`Animation`](/fr/docs/Web/API/Animation).
 Dans la démonstration [Dans le terrier du lapin (avec l'API <i lang="en">Web Animation</i>)](https://codepen.io/SphinxKnight/pen/NWwQbJz), on utilise la méthode `animate()` pour créer et immédiatement jouer une animation sur l'élément `#tunnel` afin que celui-ci défile vers le haut de façon infinie (voir les bords). Voyez ici les objets passés comme étapes et les options de temporisation.
 
 ```js
-document.getElementById("tunnel").animate([
-  // étapes/keyframes
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
-], {
-  // temporisation
-  duration: 1000,
-  iterations: Infinity
-});
+document.getElementById("tunnel").animate(
+  [
+    // étapes/keyframes
+    { transform: "translateY(0px)" },
+    { transform: "translateY(-300px)" },
+  ],
+  {
+    // temporisation
+    duration: 1000,
+    iterations: Infinity,
+  },
+);
 ```
 
 ### Étapes initiales ou finales implicites
@@ -53,9 +54,7 @@ document.getElementById("tunnel").animate([
 Pour les navigateurs récents, il est possible d'indiquer uniquement un état de début ou de fin pour une animation (c'est-à-dire une seule étape), c'est le navigateur qui déduira, si possible, l'autre étape (de début ou de fin donc). Prenons comme exemple [cette animation simple](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html), l'objet pour l'étape ressemble à&nbsp;:
 
 ```js
-let rotate360 = [
-  { transform: 'rotate(360deg)' }
-];
+let rotate360 = [{ transform: "rotate(360deg)" }];
 ```
 
 On a uniquement indiqué l'état final de l'animation, l'état initial est implicite.

@@ -335,7 +335,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
         null se o canal não foi criado ainda. No caso de um pedido de múltiplas
         partes, isto é o canal inicial, não as diferentes partes do pedido de
         várias partes.
-        <strong>Requer privilégios elevados para o acesso.​​</strong>
+        <strong>Requer privilégios elevados para o acesso.</strong>
       </td>
     </tr>
     <tr id="mozAnon">
@@ -381,7 +381,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
     </tr>
     <tr id="mozResponseArrayBuffer">
       <td>
-        <code>mozResponseArrayBuffer</code> {{ obsolete_inline("6") }}
+        <code>mozResponseArrayBuffer</code>
         {{ReadOnlyInline()}}
       </td>
       <td>
@@ -396,7 +396,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
       </td>
     </tr>
     <tr id="multipart">
-      <td><code>multipart</code> {{ obsolete_inline("22") }}</td>
+      <td><code>multipart</code></td>
       <td><code>boolean</code></td>
       <td>
         <p>
@@ -485,7 +485,7 @@ Retorna a string contendo o texto do cabeçalho especificado, ou null se quer a 
 
 ### open()
 
-Inicializa um pedido. Este método é para ser usado a partir do código JavaScript; para inicializar um pedido do código nativo, use [`openRequest()`](</en/nsIXMLHttpRequest#openRequest()> "/en/XMLHttpRequest#openRequest()") em seu lugar.​
+Inicializa um pedido. Este método é para ser usado a partir do código JavaScript; para inicializar um pedido do código nativo, use [`openRequest()`](</en/nsIXMLHttpRequest#openRequest()> "/en/XMLHttpRequest#openRequest()") em seu lugar.
 
 > **Nota:** Chamar esse método uma solicitação já está ativo (aquele para o qual open() ou openRequest() já foi chamado) é o equivalente de chamar abort().
 
@@ -622,7 +622,8 @@ Desde sendAsBinary() é um recurso experimental, aqui está uma polyfill para na
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
   XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
+    var nBytes = sData.length,
+      ui8Data = new Uint8Array(nBytes);
     for (var nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
@@ -647,11 +648,15 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
-avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/DOM/element.addEventListener) APIs Além de definir on\* propriedades para uma função de manipulador.
+avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/DOM/element.addEventListener) APIs Além de definir on propriedades para uma função de manipulador.
 
-## Compatibilidade do navegador
+## Especificações
 
-{{Compat("api.XMLHttpRequest")}}
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

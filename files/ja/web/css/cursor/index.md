@@ -20,8 +20,12 @@ cursor: auto;
 cursor: url(hand.cur), pointer;
 
 /* URL と座標とキーワードによる代替 */
-cursor: url(cursor1.png) 4 12, auto;
-cursor: url(cursor2.png) 2 2, pointer;
+cursor:
+  url(cursor1.png) 4 12,
+  auto;
+cursor:
+  url(cursor2.png) 2 2,
+  pointer;
 
 /* グローバル値 */
 cursor: inherit;
@@ -30,20 +34,23 @@ cursor: revert;
 cursor: unset;
 ```
 
- `cursor` プロパティはゼロ個以上の `<url>` をカンマで区切ったものと、それに続く必須のキーワード値によって指定します。それぞれの `<url>` は画像ファイルを指します。ブラウザーは最初に指定された画像を読み込もうとし、ない場合は次に代替されて、いずれも画像が読み込めないとき (または指定がなかったとき) は、キーワード値に代替されます。
+`cursor` プロパティはゼロ個以上の `<url>` をカンマで区切ったものと、それに続く必須のキーワード値によって指定します。それぞれの `<url>` は画像ファイルを指します。ブラウザーは最初に指定された画像を読み込もうとし、ない場合は次に代替されて、いずれも画像が読み込めないとき (または指定がなかったとき) は、キーワード値に代替されます。
 
 それぞれの `<url>` には空白で区切った 2 つの数値を続けることができ、`<x><y>` 座標を表します。これは画像の左上隅からの相対位置で、カーソルのホットスポットを設定します。
 
 例えば、これは `<url>` 値を使用して 2 つの画像を指定し、`<x><y>` 座標を 2 つ目に設定し、どちらの画像も読み込めなかったときは `progress` キーワードで代替されるように指定しています。
 
 ```css
-cursor: url(one.svg), url(two.svg) 5 5, progress;
+cursor:
+  url(one.svg),
+  url(two.svg) 5 5,
+  progress;
 ```
 
 ### 値
 
 - `<url>`
- `url(…)` の形式か、またはカンマ区切りのリスト `url(…), url(…), …` で画像の URL を指定します。複数の {{cssxref("url()")}} の指定は、前候補の画像形式がサポートされていなかった場合は代替として機能します。リストの最後には、キーワード値の何れかを一つ以上指定*しなければなりません*。詳細は [cursor プロパティにおける URL 値の使用](/ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)を参照して下さい。
+  `url(…)` の形式か、またはカンマ区切りのリスト `url(…), url(…), …` で画像の URL を指定します。複数の {{cssxref("url()")}} の指定は、前候補の画像形式がサポートされていなかった場合は代替として機能します。リストの最後には、キーワード値の何れかを一つ以上指定*しなければなりません*。詳細は [cursor プロパティにおける URL 値の使用](/ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)を参照して下さい。
 - `<x>` `<y>` {{experimental_inline}}
   - : 任意で x 座標と y 座標を指定します。2 つの 32 未満の非負数で、単位なしです。
 - キーワード値
@@ -160,7 +167,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
             />
           </td>
           <td>
-            現在の位置にアイテムがドロップできないことを示します。<br />{{bug("275173")}}: Windows および Mac OS X では、<code>no-drop</code> は <code>not-allowed</code> と同じです。
+            現在の位置にアイテムがドロップできないことを示します。<br />[Firefox バグ 275173](https://bugzil.la/275173): Windows および Mac OS X では、<code>no-drop</code> は <code>not-allowed</code> と同じです。
           </td>
         </tr>
         <tr style="cursor: not-allowed">
@@ -185,7 +192,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>all-scroll</code></td>
           <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
           <td>
-            何かが任意の方向にスクロール (パン) 可能であることを示します。<br />{{bug("275174")}}: Windows では、 <code>all-scroll</code> は <code>move</code> 同じです。
+            何かが任意の方向にスクロール (パン) 可能であることを示します。<br />[Firefox バグ 275174](https://bugzil.la/275174): Windows では、 <code>all-scroll</code> は <code>move</code> 同じです。
           </td>
         </tr>
         <tr style="cursor: col-resize">

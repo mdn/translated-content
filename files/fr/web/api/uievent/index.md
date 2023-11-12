@@ -1,15 +1,6 @@
 ---
 title: UIEvent
 slug: Web/API/UIEvent
-tags:
-  - API
-  - DOM
-  - Event
-  - Evènement
-  - Interface
-  - Reference
-  - UIEvent
-translation_of: Web/API/UIEvent
 ---
 
 {{APIRef("DOM Events")}}

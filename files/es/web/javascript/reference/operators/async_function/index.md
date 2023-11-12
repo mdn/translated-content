@@ -1,7 +1,6 @@
 ---
 title: Expresión de función asíncrona
 slug: Web/JavaScript/Reference/Operators/async_function
-original_slug: Web/JavaScript/Referencia/Operadores/async_function
 ---
 
 {{jsSidebar("Operators")}}
@@ -39,31 +38,31 @@ Una expresión `async function` es muy similar, y casi tiene la misma sintaxis q
 
 ```js
 function resuelve2SegundosDespues(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
-};
+}
 
-
-const agregar= async function(x) { // Expresión de una función asíncrona asignada a una variable
+const agregar = async function (x) {
+  // Expresión de una función asíncrona asignada a una variable
   let a = await resuelve2SegundosDespues(20);
   let b = await resuelve2SegundosDespues(30);
   return x + a + b;
 };
 
-agregar(10).then(v => {
-  console.log(v);  // imprime 60 después de 4 segundos.
+agregar(10).then((v) => {
+  console.log(v); // imprime 60 después de 4 segundos.
 });
 
-
-(async function(x) { // expresión de una función asíncrona utilizada como una IIFE
+(async function (x) {
+  // expresión de una función asíncrona utilizada como una IIFE
   let p_a = resuelve2SegundosDespues(20);
   let p_b = resuelve2SegundosDespues(30);
-  return x + await p_a + await p_b;
-})(10).then(v => {
-  console.log(v);  // imprime 60 después de 2 segundos.
+  return x + (await p_a) + (await p_b);
+})(10).then((v) => {
+  console.log(v); // imprime 60 después de 2 segundos.
 });
 ```
 

@@ -1,16 +1,6 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Propriété
-  - Reference
-translation_of: Web/API/Document/domain
 ---
 
 {{ApiRef}}
@@ -20,7 +10,8 @@ Retourne/définit la partie domaine de l'origine du document courant, telle qu'u
 ## Syntaxe
 
 ```js
-var chaineDomaine = document.domain; document.domain = chaine;
+var chaineDomaine = document.domain;
+document.domain = chaine;
 ```
 
 ## Exemple
@@ -30,12 +21,11 @@ var chaineDomaine = document.domain; document.domain = chaine;
 // ce script ferme la fenêtre
 var mauvaisDomaine = "www.example.xxx";
 
-if (document.domain == mauvaisDomaine )
-   window.close(); // juste un exemple - window.close() n'a parfois aucun effet.
+if (document.domain == mauvaisDomaine) window.close(); // juste un exemple - window.close() n'a parfois aucun effet.
 ```
 
 ```js
-// Pour l'URI https://developer.mozilla.org/en-US/docs/Web, ce qui
+// Pour l'URI https://developer.mozilla.org/fr/docs/Web, ce qui
 // suit définit le domaine comme étant la chaîne "developer.mozilla.org"
 var domaine = document.domain;
 ```

@@ -1,7 +1,6 @@
 ---
-title: 'Escrevendo um servidor WebSocket em C #'
+title: "Escrevendo um servidor WebSocket em C #"
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
-original_slug: WebSockets/Writing_WebSocket_server
 ---
 
 ## Introdução
@@ -36,8 +35,8 @@ Métodos:
 
 Veja como usar o que aprendemos:
 
-```cpp
-​using System.Net.Sockets;
+```cs
+using System.Net.Sockets;
 using System.Net;
 using System;
 

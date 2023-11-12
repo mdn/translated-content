@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/values
 ## Syntax
 
 ```js
-Object.values(obj)
+Object.values(obj);
 ```
 
 ### Parameters
@@ -31,35 +31,44 @@ Object.values(obj)
 ## Examples
 
 ```js
-var obj = { foo: 'bar', baz: 42 };
+var obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // 유사 배열 (숫자를 속성으로 사용하는 객체)
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.values(obj)); // ['a', 'b', 'c']
 
 // 유사 배열의 경의 속성으로 사용한 숫자의 크기 순으로 정렬되어 반환됩니다.
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.values(an_obj)); // ['b', 'c', 'a']
 
 // getFoo는 열거 가능한 속성이 아니라서 배열에 포함되지 않습니다.
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
-my_obj.foo = 'bar';
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
+my_obj.foo = "bar";
 console.log(Object.values(my_obj)); // ['bar']
 
 // 객체가 아닌 경우에는 객체로 강제로 변환되어 적용됩니다.
-console.log(Object.values('foo')); // ['f', 'o', 'o']
+console.log(Object.values("foo")); // ['f', 'o', 'o']
 ```
 
 ## Polyfill
 
 `Object.values` 메소드는 구형 브라우저에서 지원하지 않습니다. 구형 브라우저와의 호환성을 고려하기 위해 폴리필을 찾아 볼 수 있습니다. [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 혹은 [es-shims/Object.values](https://github.com/es-shims/Object.values) 를 참조해보세요.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

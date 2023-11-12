@@ -2,6 +2,7 @@
 title: Objetos Globais
 slug: Web/JavaScript/Reference/Global_Objects
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumo

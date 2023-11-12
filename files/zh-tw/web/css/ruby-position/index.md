@@ -58,7 +58,7 @@ HTML 會因為 `ruby-position` 的值不同，而作出不同的渲染：
 
 ```css
 ruby {
-    ruby-position:over;
+  ruby-position: over;
 }
 ```
 
@@ -77,7 +77,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position:under;
+  ruby-position: under;
 }
 ```
 

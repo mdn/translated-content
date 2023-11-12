@@ -1,11 +1,13 @@
 ---
-title: HTMLAreaElement.referrerPolicy
+title: "HTMLAreaElement: referrerPolicy プロパティ"
 slug: Web/API/HTMLAreaElement/referrerPolicy
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef}}
 
-**`HTMLAreaElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("area")}} 要素の HTML {{htmlattrxref("referrerpolicy","area")}} 属性を反映します。
+**`HTMLAreaElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("area")}} 要素の HTML [`referrerpolicy`](/ja/docs/Web/HTML/Element/area#referrerpolicy) 属性を反映します。
 
 ## 値
 
@@ -38,12 +40,12 @@ slug: Web/API/HTMLAreaElement/referrerPolicy
 ```
 
 ```js
-var elt = document.createElement("area");
+const elt = document.createElement("area");
 elt.href = "/img2.png";
 elt.shape = "rect";
 elt.referrerPolicy = "no-referrer";
 elt.coords = "0,0,100,100";
-var map = document.getElementById("myMap");
+const map = document.getElementById("myMap");
 
 map.appendChild(elt);
 // クリックしても、領域のリンクはリファラーヘッダーを送信しません。

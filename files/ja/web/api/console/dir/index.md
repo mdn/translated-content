@@ -18,7 +18,7 @@ l10n:
 ## 構文
 
 ```js
-dir(object)
+dir(object);
 ```
 
 ### 引数
@@ -40,5 +40,5 @@ dir(object)
 
 ## 関連情報
 
-- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
 - [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)

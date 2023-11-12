@@ -2,6 +2,7 @@
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
 ---
+
 « [SVG Attribute reference home](/en/SVG/Attribute)
 
 `viewBox` 속성은 특수한 container element 에 fit 하기 위한 주어진 graphics stretch 의 set 을 명시한다.

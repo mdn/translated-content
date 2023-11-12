@@ -1,7 +1,6 @@
 ---
 title: Document.applets
 slug: Web/API/Document/applets
-translation_of: Web/API/Document/applets
 ---
 
 {{ ApiRef() }}
@@ -11,7 +10,7 @@ translation_of: Web/API/Document/applets
 ### Syntaxe
 
 ```js
-nodeList = document.applets
+nodeList = document.applets;
 ```
 
 ### Exemple

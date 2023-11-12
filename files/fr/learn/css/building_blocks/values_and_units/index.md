@@ -1,8 +1,6 @@
 ---
 title: Valeurs et unités CSS
 slug: Learn/CSS/Building_blocks/Values_and_units
-translation_of: Learn/CSS/Building_blocks/Values_and_units
-original_slug: Apprendre/CSS/Building_blocks/Values_and_units
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
@@ -20,10 +18,10 @@ Chaque propriété utilisée en CSS possède un type de valeur qui définit l'en
           >suite logicielle de base installée</a
         >, compétences élémentaires pour
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >travailler avec des fichiers</a
         >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction à HTML</a
         >), et une idée de
         <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
@@ -54,7 +52,7 @@ Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisan
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
@@ -181,7 +179,7 @@ Dans la plupart des exemples de cette section d'apprentissage ou à d'autres end
 
 ### Valeurs RGB hexadécimales
 
-Les autres valeurs de couleur que vous rencontrerez assez souvent sont celles représentées avec des codes hexadécimaux. Chaque valeur hexadécimale se compose d'un croisillon (#) suivi de six chiffres hexadécimaux dont chacun peut prendre une valeur parmi 16 : de 0 à f (la lettre utilisée pour représentée 15) (les chiffres hexadécimaux sont&nbsp;: `0123456789abcdef`). Dans ces six chiffres, chaque paire de chiffre représente la valeur pour l'un des canaux de couleurs (rouge, vert et bleu) et permet d'indiquer l'une des 256 valeurs disponibles.
+Les autres valeurs de couleur que vous rencontrerez assez souvent sont celles représentées avec des codes hexadécimaux. Chaque valeur hexadécimale se compose d'un croisillon (#) suivi de six chiffres hexadécimaux dont chacun peut prendre une valeur parmi 16 : de 0 à f (la lettre utilisée pour représenter 15) (les chiffres hexadécimaux sont&nbsp;: `0123456789abcdef`). Dans ces six chiffres, chaque paire de chiffre représente la valeur pour l'un des canaux de couleurs (rouge, vert et bleu) et permet d'indiquer l'une des 256 valeurs disponibles.
 
 Ces valeurs sont un peu plus complexes et moins faciles à comprendre, mais elles permettent d'exprimer beaucoup plus de couleurs que les mots-clés. Vous pouvez utiliser les valeurs hexadécimales pour représenter n'importe quelle couleur dans votre palette.
 
@@ -257,7 +255,7 @@ Dans les différents exemples qui précèdent, on a vu des endroits où les mots
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
 
-## Functions
+## Fonctions
 
 Les dernières valeurs que nous verrons ici sont les fonctions. En programmation, une fonction est une section de code réutilisable qui peut être exécutée plusieurs fois afin de réaliser une tâche de façon répétitive avec le minimum effort de la part du développeur ou de l'ordinateur. Les fonctions sont généralement associées à des langages comme JavaScript, Python ou C++ mais elles existent en CSS également pour être utilisées comme valeurs de propriétés. En fait, nous avons déjà vu des fonctions dans la section à propos des couleurs&nbsp;: `rgb()`, `hsl()`, etc. La valeur utilisée pour récupérer une image à partir d'un fichier, `url()` est également une fonction.
 
@@ -280,24 +278,3 @@ La notion cruciale à garder en mémoire est que chaque propriété possède une
 Par exemple, comprendre le type [`<image>`](/fr/docs/Web/CSS/image) vous permettra de comprendre comment créer un dégradé de couleur. C'est utile mais ce n'est pas forcément évident de prime abord.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Gestion de différentes directions de texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Débordements de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Définir la taille des éléments en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, médias et éléments de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mise en page de tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Débogage de CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser votre CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

@@ -1,7 +1,6 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-original_slug: Web/CSS/transform-function/rotate()
 ---
 
 {{CSSRef}}
@@ -108,7 +107,7 @@ p {
   background-color: teal;
 }
 
-.transformed{
+.transformed {
   /* idéntico a rotateZ(45deg); */
   transform: rotate(45deg);
   background-color: blue;

@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 引数
@@ -39,7 +39,7 @@ resolvedOptions()
 ### 基本的な使い方
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es", {granularity: "sentence"});
+const spanishSegmenter = new Intl.Segmenter("es", { granularity: "sentence" });
 const options = spanishSegmenter.resolvedOptions();
 console.log(options.locale); // "es"
 console.log(options.granularity); // "sentence"

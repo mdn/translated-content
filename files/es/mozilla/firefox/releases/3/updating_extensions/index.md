@@ -1,7 +1,6 @@
 ---
 title: Actualizar extensiones para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-original_slug: Actualizar_extensiones_para_Firefox_3
 ---
 
 {{FirefoxSidebar}}
@@ -97,7 +96,7 @@ Las siguientes interfaces han sido eliminadas en Gecko 1.9, el motor de renderiz
 - `nsIDOMScrollListener`
 - `nsIDOMMutationListener`
 - `nsIDOMPageTransitionListener`
-- `nsICloseAllWindows` (Lee el {{ Bug(386200) }})
+- `nsICloseAllWindows` (Lee el [Error 386200 en Firefox](https://bugzil.la/386200))
 
 ### Paso 4: Comprueba los cambios importantes en el chrome
 

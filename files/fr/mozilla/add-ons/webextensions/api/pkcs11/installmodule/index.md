@@ -1,16 +1,6 @@
 ---
 title: pkcs11.installModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - installModule
-  - pkcs11
-translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
 ---
 
 {{AddonSidebar()}}
@@ -23,9 +13,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var installing = browser.pkcs11.installModule(
-  name,              // string
-  flags              // integer
-)
+  name, // string
+  flags, // integer
+);
 ```
 
 ### Paramètres
@@ -41,9 +31,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pkcs11.installModule", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -60,14 +50,12 @@ function onGotSlots(slots) {
     if (slot.token) {
       console.log(`Contains token: ${slot.token.name}`);
     } else {
-      console.log('Is empty');
+      console.log("Is empty");
     }
   }
 }
 
-browser.pkcs11.installModule("my_module")
-.then(onInstalled)
-.then(onGotSlots);
+browser.pkcs11.installModule("my_module").then(onInstalled).then(onGotSlots);
 ```
 
 {{WebExtExamples}}

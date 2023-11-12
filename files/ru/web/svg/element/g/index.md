@@ -1,12 +1,8 @@
 ---
 title: <g>
 slug: Web/SVG/Element/g
-tags:
-  - NeedsUpdate
-  - SVG
-translation_of: Web/SVG/Element/g
-original_slug: Web/SVG/Элемент/g
 ---
+
 {{SVGRef}}
 
 Элемент g используется для группировки других SVG элементов. Любые преобразования применяемые к g элементу наследуются его дочерними элементами. Также g используется для группировки различных элементов, чтобы позднее можно было сослаться на них с помощью {{SVGElement("use")}}.
@@ -18,14 +14,13 @@ original_slug: Web/SVG/Элемент/g
 ## Пример
 
 ```html
-<svg viewBox="0 0 95 50"
-     xmlns="http://www.w3.org/2000/svg">
-   <g stroke="green" fill="white" stroke-width="5">
-     <circle cx="25" cy="25" r="15"/>
-     <circle cx="40" cy="25" r="15"/>
-     <circle cx="55" cy="25" r="15"/>
-     <circle cx="70" cy="25" r="15"/>
-   </g>
+<svg viewBox="0 0 95 50" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="green" fill="white" stroke-width="5">
+    <circle cx="25" cy="25" r="15" />
+    <circle cx="40" cy="25" r="15" />
+    <circle cx="55" cy="25" r="15" />
+    <circle cx="70" cy="25" r="15" />
+  </g>
 </svg>
 ```
 
@@ -50,7 +45,7 @@ _Нет специфичных атрибутов._
 
 ## Интерфейс DOM
 
-Этот элемент реализует [`SVGGElement`](/en-US/docs/DOM/SVGGElement) интерес.
+Этот элемент реализует [`SVGGElement`](/ru/docs/DOM/SVGGElement) интерес.
 
 ## Спецификации
 
@@ -60,7 +55,7 @@ _Нет специфичных атрибутов._
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{SVGElement("use")}}
 - {{SVGElement("defs")}}

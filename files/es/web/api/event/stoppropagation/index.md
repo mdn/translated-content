@@ -27,6 +27,6 @@ Ver las [Especificaciones del DOM](http://www.w3.org/TR/DOM-Level-2-Events/event
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Event.stopPropagation")}}
+{{Compat}}

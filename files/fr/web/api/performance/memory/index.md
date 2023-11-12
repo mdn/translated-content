@@ -1,21 +1,16 @@
 ---
 title: performance.memory
 slug: Web/API/Performance/memory
-tags:
-  - API
-  - Reference
-  - Performance web
-translation_of: Web/API/Performance/memory
 ---
 
 {{APIRef}}
 
-{{Non-standardGeneric('header')}}
+{{Non-standard_Header}}
 
 ## Syntaxe
 
 ```js
-  timingInfo = performance.memory
+timingInfo = performance.memory;
 ```
 
 ## Attributs
@@ -33,7 +28,7 @@ Aucune
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.memory")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,8 @@
 ---
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
-tags:
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -39,8 +31,8 @@ Math.asinh(x)
 ### Пример: использование метода `Math.asinh()`
 
 ```js
-Math.asinh(1);  // 0.881373587019543
-Math.asinh(0);  // 0
+Math.asinh(1); // 0.881373587019543
+Math.asinh(0); // 0
 ```
 
 ## Полифил
@@ -48,13 +40,15 @@ Math.asinh(0);  // 0
 Мы имеем <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arsinh} (x) = \ln \left(x + \sqrt{x^{2} + 1} \right)</annotation></semantics></math>, так что этот метод может эмулироваться следующим образом:
 
 ```js
-Math.asinh = Math.asinh || function(x) {
-  if (x === -Infinity) {
-    return x;
-  } else {
-    return Math.log(x + Math.sqrt(x * x + 1));
-  }
-};
+Math.asinh =
+  Math.asinh ||
+  function (x) {
+    if (x === -Infinity) {
+      return x;
+    } else {
+      return Math.log(x + Math.sqrt(x * x + 1));
+    }
+  };
 ```
 
 ## Спецификации

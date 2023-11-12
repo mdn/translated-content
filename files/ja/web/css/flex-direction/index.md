@@ -9,7 +9,7 @@ slug: Web/CSS/flex-direction
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 {{HTMLAttrxRef("dir")}} 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
+なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
 
 ## 構文
 
@@ -48,11 +48,11 @@ flex-direction: unset;
 
 ## アクセシビリティの考慮
 
-`flex-direction` プロパティを `row-reverse` または `column-reverse` の値で使うと、視覚上の表示と DOM の順序が一致しなくなります。これは、画面リーダーなどの支援技術を使っている視覚障害者に不利な影響を及ぼします。視覚的な (CSS の) 順序が重要である場合は、画面リーダーの利用者は正しい読み上げ順序でアクセスすることができなくなります。
+`flex-direction` プロパティを `row-reverse` または `column-reverse` の値で使うと、視覚上の表示と DOM の順序が一致しなくなります。これは、スクリーンリーダーなどの支援技術を使っている視覚障害者に不利な影響を及ぼします。視覚的な (CSS の) 順序が重要である場合は、スクリーンリーダーの利用者は正しい読み上げ順序でアクセスすることができなくなります。
 
 - [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
 - [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
 ## 公式定義

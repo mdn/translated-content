@@ -1,15 +1,6 @@
 ---
 title: FormData.delete()
 slug: Web/API/FormData/delete
-tags:
-  - API
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - delete
-translation_of: Web/API/FormData/delete
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -44,7 +35,7 @@ var formData = new FormData(myForm);
 Vous pouvez supprimer les clés et leurs valeurs en utilisant `delete()`:
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
 ## Spécifications

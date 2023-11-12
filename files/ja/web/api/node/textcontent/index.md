@@ -1,6 +1,8 @@
 ---
-title: Node.textContent
+title: "Node: textContent プロパティ"
 slug: Web/API/Node/textContent
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -11,9 +13,9 @@ slug: Web/API/Node/textContent
 
 ## 値
 
-文字列または {{jsxref("null")}} です。値は場面によります。
+文字列または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。値は場面によります。
 
-- ノードが {{domxref("document")}} または {{glossary("doctype")}} である場合、`textContent` は {{jsxref("null")}} を返します。
+- ノードが {{domxref("document")}} または {{glossary("doctype")}} である場合、`textContent` は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
 
   > **メモ:** 文書全体の*すべての*テキストと [CDATA データ](/ja/docs/Web/API/CDATASection)を取得するには、`document.documentElement.textContent` を使用する方法があります。
 
@@ -29,9 +31,7 @@ slug: Web/API/Node/textContent
 - `textContent` は、{{HTMLElement("script")}} と {{HTMLElement("style")}} 要素を含む、*すべて*の要素の中身を取得します。一方、`innerText` は「人間が読める」要素のみを示します。
 - `textContent` はノード内のすべての要素を返します。一方、`innerText` はスタイルを反映し、「非表示」の要素のテキストは返しません。
 
-  - もっと言えば、`innerText` は CSS のスタイルを考慮するので、`innerText` の値を読み取ると最新の計算されたスタイルを保証するために{{glossary("Reflow", "再フロー")}}を起動します。(再フローは計算が重いので、可能であれば避けるべきです。)
-
-- `textContent` も `innerText` も変更時に子ノードを削除しますが、`innerText` を Internet Explorer (バージョン 11 まで) で変更すると、要素から子ノードを削除するだけでなく、子孫のテキストノードを*完全に破棄します*。この破棄されたノードを他の要素または同じ要素にもう一度挿入することは不可能です。
+  - もっと言えば、`innerText` は CSS のスタイルを考慮するので、`innerText` の値を読み取ると最新の計算されたスタイルを保証するために{{glossary("reflow", "再フロー")}}を起動します。（再フローは計算が重いので、可能であれば避けるべきです。）
 
 ### innerHTML との違い
 
@@ -41,23 +41,23 @@ slug: Web/API/Node/textContent
 
 ## 例
 
-以下のような HTML の断片があります。
+最初は HTML の断片です。
 
 ```html
 <div id="divA">This is <span>some</span> text!</div>
 ```
 
-... `textContent` を使用して、要素のテキストの内容を取得することができます。
+`textContent` を使用して、要素のテキストの内容を取得することができます。
 
 ```js
-let text = document.getElementById('divA').textContent;
+let text = document.getElementById("divA").textContent;
 // 変数 text の値は 'This is some text!' となります。
 ```
 
-... また、要素のテキストを設定します。
+また、要素のテキストを設定するには、次のようにします。
 
 ```js
-document.getElementById('divA').textContent = 'This text is different!';
+document.getElementById("divA").textContent = "This text is different!";
 // divA の HTML は次のようになります。
 // <div id="divA">This text is different!</div>
 ```
@@ -74,4 +74,4 @@ document.getElementById('divA').textContent = 'This text is different!';
 
 - {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.innerHTML")}}
-- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (ブログ投稿)
+- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/)（ブログ投稿）

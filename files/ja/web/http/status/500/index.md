@@ -17,15 +17,15 @@ HyperText Transfer Protocol (HTTP) の **`500 Internal Server Error`** サーバ
 
 ## 仕様書
 
-| 仕様書                                                                   | 題名                                                          |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| 仕様書                                                 | 題名                                                          |
+| ------------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "500 Internal Server Error" , "6.6.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## ブラウザーの互換性
 
 以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.500")}}
+{{Compat}}
 
 ## 関連情報
 

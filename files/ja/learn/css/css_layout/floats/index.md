@@ -32,11 +32,31 @@ slug: Learn/CSS/CSS_layout/Floats
 
 <div class="box">Float</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet.
+</p>
 
-<p>Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+  orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
+  ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
+  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+  ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et
+  a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 次の CSS を HTML に適用します（{{htmlelement("style")}} 要素を使用するか、{{htmlelement("link")}} を使用して別の `.css` ファイルを作成するか、選択します）。
@@ -46,14 +66,17 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
   width: 150px;
   height: 100px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -67,7 +90,7 @@ body {
   width: 150px;
   height: 100px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -79,11 +102,31 @@ body {
 
 <div class="box">Float</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate.
+</p>
 
-<p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -91,7 +134,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -100,14 +146,14 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
 
 {{ EmbedLiveSample('Float_1', '100%', 500) }}
 
-フロートがどのように機能するかを考えてみましょう。 `float` が設定されている要素（この場合は {{htmlelement("div")}} 要素）は、文書の通常のレイアウトフローから除かれ、その親コン ​​ テナ（この場合は {{htmlelement("body")}}）の左側に固定されます。 通常のレイアウトフローで浮動要素の下側に来るコンテンツは、それを包み込み、浮動要素の最上部まで、その右側のスペースを埋めます。 そこで、それは止まるでしょう。
+フロートがどのように機能するかを考えてみましょう。 `float` が設定されている要素（この場合は {{htmlelement("div")}} 要素）は、文書の通常のレイアウトフローから除かれ、その親コンテナ（この場合は {{htmlelement("body")}}）の左側に固定されます。 通常のレイアウトフローで浮動要素の下側に来るコンテンツは、それを包み込み、浮動要素の最上部まで、その右側のスペースを埋めます。 そこで、それは止まるでしょう。
 
 コンテンツを右に浮かべるとまったく同じ効果が得られますが、逆になります。 つまり、浮動要素は右に固定され、コンテンツはその左側を包み込みます。 `float` の値を `right` に変更し、最後のルールセットで {{cssxref("margin-right")}} を {{cssxref("margin-left")}} に置き換えて、結果がどうなるかを確認してください。
 
@@ -117,7 +163,7 @@ body {
 
 ```css
 .special {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -130,11 +176,31 @@ body {
 
 <div class="box">Float</div>
 
-<p class="special">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+<p class="special">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate.
+</p>
 
-<p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -142,7 +208,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -151,12 +220,12 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 
 .special {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -183,12 +252,31 @@ body {
 
 <div class="box">Float</div>
 
-<p class="special">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+<p class="special">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate.
+</p>
 
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -196,7 +284,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
@@ -205,12 +296,12 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 
 .special {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -236,7 +327,10 @@ body {
 <div class="wrapper">
   <div class="box">Float</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
 ```
 
@@ -244,7 +338,7 @@ CSS で、`.wrapper` クラスに次の規則を追加してからページを�
 
 ```css
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -254,7 +348,7 @@ CSS で、`.wrapper` クラスに次の規則を追加してからページを�
 
 ```css
 .cleared {
-    clear: left;
+  clear: left;
 }
 ```
 
@@ -265,12 +359,32 @@ CSS で、`.wrapper` クラスに次の規則を追加してからページを�
 <div class="wrapper">
   <div class="box">Float</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
 
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -278,11 +392,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -293,7 +410,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -323,11 +440,31 @@ body {
 <div class="wrapper">
   <div class="box">Float</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -335,11 +472,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -350,7 +490,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 
@@ -371,7 +511,7 @@ body {
 
 ```css
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   overflow: auto;
@@ -383,11 +523,31 @@ body {
 <div class="wrapper">
   <div class="box">Float</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -395,11 +555,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   overflow: auto;
@@ -411,7 +574,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -426,7 +589,7 @@ body {
 
 ```css
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   display: flow-root;
@@ -438,11 +601,31 @@ body {
 <div class="wrapper">
   <div class="box">Float</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -450,11 +633,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   display: flow-root;
@@ -466,34 +652,19 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
 
 {{ EmbedLiveSample('Float_7', '100%', 600) }}
 
-## スキルをテストしましょう!
+## スキルテスト
 
-この記事の最後に到達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — [Test your skills: Floats](/ja/docs/Learn/CSS/CSS_layout/Floats_skills) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Floats](/ja/docs/Learn/CSS/CSS_layout/Floats_skills) を見てください。
 
 ## まとめ
 
 あなたは今、現代のウェブ開発でフロートについて知っておくべきことがすべてわかっています。 過去のレイアウト方法の使用方法については、[過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)に関する記事を参照してください。 古いプロジェクトで作業している場合に便利です。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

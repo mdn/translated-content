@@ -61,12 +61,12 @@ Log:
 
 ```js
 function startup() {
-  const el = document.getElementById('canvas');
-  el.addEventListener('touchstart', handleStart);
-  el.addEventListener('touchend', handleEnd);
-  el.addEventListener('touchcancel', handleCancel);
-  el.addEventListener('touchmove', handleMove);
-  log('Initialized.');
+  const el = document.getElementById("canvas");
+  el.addEventListener("touchstart", handleStart);
+  el.addEventListener("touchend", handleEnd);
+  el.addEventListener("touchcancel", handleCancel);
+  el.addEventListener("touchmove", handleMove);
+  log("Initialized.");
 }
 
 document.addEventListener("DOMContentLoaded", startup);
@@ -85,9 +85,9 @@ const ongoingTouches = [];
 ```js
 function handleStart(evt) {
   evt.preventDefault();
-  log('touchstart.');
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  log("touchstart.");
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -96,7 +96,7 @@ function handleStart(evt) {
     const color = colorForTouch(touches[i]);
     log(`color of touch with id ${touches[i].identifier} = ${color}`);
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
   }
@@ -114,8 +114,8 @@ function handleStart(evt) {
 ```js
 function handleMove(evt) {
   evt.preventDefault();
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -125,7 +125,9 @@ function handleMove(evt) {
     if (idx >= 0) {
       log(`continuing touch ${idx}`);
       ctx.beginPath();
-      log(`ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`);
+      log(
+        `ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`,
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       log(`ctx.lineTo( ${touches[i].pageX}, ${touches[i].pageY} );`);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
@@ -133,9 +135,9 @@ function handleMove(evt) {
       ctx.strokeStyle = color;
       ctx.stroke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
+      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
     } else {
-      log('can\'t figure out which touch to continue');
+      log("can't figure out which touch to continue");
     }
   }
 }
@@ -155,8 +157,8 @@ function handleMove(evt) {
 function handleEnd(evt) {
   evt.preventDefault();
   log("touchend");
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -169,10 +171,10 @@ function handleEnd(evt) {
       ctx.beginPath();
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
-      ongoingTouches.splice(idx, 1);  // remove it; we're done
+      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // and a square at the end
+      ongoingTouches.splice(idx, 1); // remove it; we're done
     } else {
-      log('can\'t figure out which touch to end');
+      log("can't figure out which touch to end");
     }
   }
 }
@@ -187,12 +189,12 @@ function handleEnd(evt) {
 ```js
 function handleCancel(evt) {
   evt.preventDefault();
-  log('touchcancel.');
+  log("touchcancel.");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
     let idx = ongoingTouchIndexById(touches[i].identifier);
-    ongoingTouches.splice(idx, 1);  // remove it; we're done
+    ongoingTouches.splice(idx, 1); // remove it; we're done
   }
 }
 ```
@@ -245,7 +247,7 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 
@@ -253,7 +255,7 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  const container = document.getElementById('log');
+  const container = document.getElementById("log");
   container.textContent = `${msg} \n${container.textContent}`;
 }
 ```
@@ -281,7 +283,10 @@ function log(msg) {
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type === "touchend" && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type === "touchend" && evt.touches.length > 0)
+  )
     return;
 
   const newEvt = document.createEvent("MouseEvents");
@@ -303,9 +308,23 @@ function onTouch(evt) {
       break;
   }
 
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shiftKey,
+    evt.metaKey,
+    0,
+    null,
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```

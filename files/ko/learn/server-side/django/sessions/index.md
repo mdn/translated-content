@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 7: Sessions framework'
+title: "Django Tutorial Part 7: Sessions framework"
 slug: Learn/Server-side/Django/Sessions
 ---
 
@@ -13,7 +13,7 @@ slug: Learn/Server-side/Django/Sessions
       <th scope="row">Prerequisites:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Generic_views"
+        <a href="/ko/docs/Learn/Server-side/Django/Generic_views"
           >Django Tutorial Part 6: Generic list and detail views</a
         >
       </td>
@@ -138,7 +138,7 @@ def index(request):
 
 메인 HTML template(**/locallibrary/catalog/templates/index.html**) "Dynamic content" 섹션 밑 부분에 context 변수가 보일 수 있도록 밑에 보이는 굵은 선으로 표시된 코드를 추가해주세요:
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
@@ -149,7 +149,10 @@ def index(request):
   <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>
+  You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{%
+  else %} times{% endif %}.
+</p>
 ```
 
 바뀐 것을 저장해주시고 테스트 서버를 재시작해주세요. 페이지를 새로고침할 때 마다, 숫자가 업데이트되는 것을 보실 수 있을겁니다.
@@ -165,21 +168,3 @@ def index(request):
 - [How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -1,7 +1,6 @@
 ---
 title: Proxy server
 slug: Glossary/Proxy_server
-original_slug: Glossario/Proxy_server
 ---
 
 Um **servidor proxy** é um computador ou programa intermediário usado ao navegar em conexões de internet diferentes. Eles facilitam o acesso ao conteúdo na rede mundial de computadores. Um proxy intercepta pedidos e exibe respostas; pode encaminhar os pedidos, ou não (por exemplo no caso de uma cache), e pode modificá-los (por exemplo alterando cabeçalhos, no limite entre duas redes)

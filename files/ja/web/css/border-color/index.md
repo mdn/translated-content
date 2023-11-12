@@ -11,7 +11,7 @@ slug: Web/CSS/border-color
 
 各辺を個々に設定する場合は、 {{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、 {{CSSxRef("border-bottom-color")}}、 {{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、 {{CSSxRef("border-block-end-color")}}、 {{CSSxRef("border-inline-start-color")}}、 {{CSSxRef("border-inline-end-color")}} を使用します。
 
-境界線の色についての詳細な情報は、 {{SectionOnPage("/ja/docs/Web/HTML/Applying_color", "Borders")}} にあります。
+境界線の色についての詳細な情報は、 [CSS colors](/ja/docs/Web/CSS/CSS_Colors/Applying_color#%E5%A2%83%E7%95%8C%E7%B7%9A_2) にあります。
 
 ## 構成要素のプロパティ
 
@@ -32,7 +32,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* 上辺 | 垂直線 | 下辺 */
-border-color: red rgb(240,30,50,.7) green;
+border-color: red rgb(240, 30, 50, 0.7) green;
 
 /* 上辺 | 右辺 | 下辺 | 左辺 */
 border-color: red yellow green blue;
@@ -73,7 +73,8 @@ border-color: unset;
 ```html
 <div id="justone">
   <p><code>border-color: red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -81,7 +82,8 @@ border-color: unset;
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -89,7 +91,8 @@ border-color: unset;
 </div>
 <div id="topvertbott">
   <p><code>border-color: red cyan gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -97,7 +100,8 @@ border-color: unset;
 </div>
 <div id="trbl">
   <p><code>border-color: red cyan black gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>

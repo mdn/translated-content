@@ -1,17 +1,6 @@
 ---
 title: Insérer en toute sécurité du contenu externe dans une page
 slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-tags:
-  - Add-ons
-  - Comment
-  - Débutant
-  - Extensions
-  - How-to
-  - Sécurité
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-original_slug: >-
-  Mozilla/Add-ons/WebExtensions/inserer_en_toute_securite_du_contenu_externe_dans_une_page
 ---
 
 {{AddonSidebar}}
@@ -46,9 +35,13 @@ Cependant, attention, vous pouvez utiliser des méthodes natives qui ne sont pas
 
 ```js example-bad
 var data = JSON.parse(responseText);
-addonElement.innerHTML = "<div class='" + data.className + "'>" +
-                         "Your favorite color is now " + data.color +
-                         "</div>";
+addonElement.innerHTML =
+  "<div class='" +
+  data.className +
+  "'>" +
+  "Your favorite color is now " +
+  data.color +
+  "</div>";
 ```
 
 Ici, le contenu de `data.className` ou de `data.color` peut contenir du HTML qui peut fermer le tag plus tôt, insérer du contenu HTML arbitraire, puis ouvrir une autre balise.
@@ -90,7 +83,7 @@ var cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;
 ```
 
-Vous pouvez utiliser n'importe quelle méthode pour ajouter le HTML aseptisé à votre DOM, par exemple la fonction `.html()` de jQuery’s. Souvenez-vous cependant que le drapeau `SAFE_FOR_JQUERY` doit être utilisé dans ce cas :
+Vous pouvez utiliser n'importe quelle méthode pour ajouter le HTML aseptisé à votre DOM, par exemple la fonction `.html()` de jQuery's. Souvenez-vous cependant que le drapeau `SAFE_FOR_JQUERY` doit être utilisé dans ce cas :
 
 ```js
 var elem = $("<div/>");

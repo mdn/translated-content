@@ -1,18 +1,17 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-translation_of: Web/API/MutationObserver
 ---
 
 {{APIRef("DOM")}}
 
-`MutationObserver` fournit un moyen d’intercepter les changements dans le [DOM](/fr/docs/DOM). Il a été conçu pour remplacer les [Mutation Events](/fr/docs/DOM/Mutation_events) définis dans la spécification DOM3 Events.
+`MutationObserver` fournit un moyen d'intercepter les changements dans le [DOM](/fr/docs/DOM). Il a été conçu pour remplacer les [Mutation Events](/fr/docs/DOM/Mutation_events) définis dans la spécification DOM3 Events.
 
 ## Constructeur
 
 ### `MutationObserver()`
 
-Le constructeur permettant d’instancier un nouvel observateur de mutations DOM.
+Le constructeur permettant d'instancier un nouvel observateur de mutations DOM.
 
 ```
 new MutationObserver( function callback );
@@ -21,9 +20,9 @@ new MutationObserver( function callback );
 #### Paramètres
 
 - `callback`
-  - : Une fonction qui sera appelée à chaque mutation du DOM. L’observateur appellera cette fonction avec deux arguments. Le premier est un tableau d’objets de type {{domxref("MutationRecord")}}&nbsp;; le second est l’instance de `MutationObserver`.
+  - : Une fonction qui sera appelée à chaque mutation du DOM. L'observateur appellera cette fonction avec deux arguments. Le premier est un tableau d'objets de type {{domxref("MutationRecord")}}&nbsp;; le second est l'instance de `MutationObserver`.
 
-## Méthodes d’instance
+## Méthodes d'instance
 
 <table class="standard-table">
   <tbody>
@@ -54,7 +53,7 @@ new MutationObserver( function callback );
 
 ### `observe()`
 
-Inscrit l’instance du `MutationObserver` afin d’être notifié des mutations DOM du nœud sélectionné.
+Inscrit l'instance du `MutationObserver` afin d'être notifié des mutations DOM du nœud sélectionné.
 
 ```
 void observe( {{domxref("Node")}} target, MutationObserverInit options );
@@ -67,11 +66,11 @@ void observe( {{domxref("Node")}} target, MutationObserverInit options );
 - `options`
   - : Un objet du type [`MutationObserverInit`](#MutationObserverInit). Il spécifie quelles mutations DOM sont à rapporter.
 
-> **Note :** ajouter un observateur sur un élément revient à utiliser `addEventListener`. Si vous observez un élément plusieurs fois, cela n’a pas d’impact, dans le sens où, si vous observez un élément deux fois, la callback ne sera pas appelée deux fois, et vous n’aurez pas besoin d’appeler `disconnect()` deux fois. En d’autres termes, une fois qu’un élément est observé, l’observer à nouveau avec la même instance n’a pas d’effet. Cependant, si la callback est différente, un nouvel observateur sera ajouté.
+> **Note :** ajouter un observateur sur un élément revient à utiliser `addEventListener`. Si vous observez un élément plusieurs fois, cela n'a pas d'impact, dans le sens où, si vous observez un élément deux fois, la callback ne sera pas appelée deux fois, et vous n'aurez pas besoin d'appeler `disconnect()` deux fois. En d'autres termes, une fois qu'un élément est observé, l'observer à nouveau avec la même instance n'a pas d'effet. Cependant, si la callback est différente, un nouvel observateur sera ajouté.
 
 ### `disconnect()`
 
-L’instance `MutationObserver` cesse de recevoir les notifications de mutations DOM. Jusqu’à ce que la méthode [`observe()`](<#observe()>) soit appelée à nouveau, les callbacks de l’observateur ne seront pas invoquées.
+L'instance `MutationObserver` cesse de recevoir les notifications de mutations DOM. Jusqu'à ce que la méthode [`observe()`](<#observe()>) soit appelée à nouveau, les callbacks de l'observateur ne seront pas invoquées.
 
 ```
 void disconnect();
@@ -94,7 +93,7 @@ Array takeRecords();
 
 `MutationObserverInit` est un objet pouvant avoir les propriétés suivantes&nbsp;:
 
-> **Note :** Au moins une propriété parmi `childList`, `attributes` ou `characterData` doit être initialisée à `true`, sinon l’erreur <i lang="en">"An invalid or illegal string was specified</i>" sera émise.
+> **Note :** Au moins une propriété parmi `childList`, `attributes` ou `characterData` doit être initialisée à `true`, sinon l'erreur <i lang="en">"An invalid or illegal string was specified</i>" sera émise.
 
 <table class="standard-table">
   <tbody>
@@ -105,14 +104,14 @@ Array takeRecords();
     <tr>
       <td><code>childList</code></td>
       <td>
-        <code>true</code> si l’ajout ou la suppression des éléments enfants du
+        <code>true</code> si l'ajout ou la suppression des éléments enfants du
         nœud visé (incluant les nœuds de texte) sont à observer.
       </td>
     </tr>
     <tr>
       <td><code>attributes</code></td>
       <td>
-        <code>true</code> si les mutations d’attributs du nœud visé sont à
+        <code>true</code> si les mutations d'attributs du nœud visé sont à
         observer.
       </td>
     </tr>
@@ -146,34 +145,33 @@ Array takeRecords();
     <tr>
       <td><code>attributeFilter</code></td>
       <td>
-        Spécifiez un tableau de noms d’attributs locaux (sans namespace) si vous
-        souhaitez n’observer les mutations que sur une partie des attributs.
+        Spécifiez un tableau de noms d'attributs locaux (sans namespace) si vous
+        souhaitez n'observer les mutations que sur une partie des attributs.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Exemple d’utilisation
+## Exemple d'utilisation
 
-L’exemple suivant est extrait de ce [blog](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
+L'exemple suivant est extrait de ce [blog](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
 
 ```js
 // Selectionne le noeud dont les mutations seront observées
-var targetNode = document.getElementById('some-id');
+var targetNode = document.getElementById("some-id");
 
 // Options de l'observateur (quelles sont les mutations à observer)
 var config = { attributes: true, childList: true };
 
 // Fonction callback à éxécuter quand une mutation est observée
-var callback = function(mutationsList) {
-    for(var mutation of mutationsList) {
-        if (mutation.type == 'childList') {
-            console.log('Un noeud enfant a été ajouté ou supprimé.');
-        }
-        else if (mutation.type == 'attributes') {
-            console.log("L'attribut '" + mutation.attributeName + "' a été modifié.");
-        }
+var callback = function (mutationsList) {
+  for (var mutation of mutationsList) {
+    if (mutation.type == "childList") {
+      console.log("Un noeud enfant a été ajouté ou supprimé.");
+    } else if (mutation.type == "attributes") {
+      console.log("L'attribut '" + mutation.attributeName + "' a été modifié.");
     }
+  }
 };
 
 // Créé une instance de l'observateur lié à la fonction de callback

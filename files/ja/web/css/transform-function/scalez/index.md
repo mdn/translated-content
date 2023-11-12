@@ -1,7 +1,6 @@
 ---
 title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
-original_slug: Web/CSS/transform-function/scaleZ()
 ---
 
 {{CSSRef}}
@@ -130,8 +129,8 @@ div {
 
 ## 関連情報
 
-- [`scaleX()`](/ja/docs/Web/CSS/transform-function/scaleX())
-- [`scaleY()`](/ja/docs/Web/CSS/transform-function/scaleY())
+- [`scaleX()`](</ja/docs/Web/CSS/transform-function/scaleX()>)
+- [`scaleY()`](</ja/docs/Web/CSS/transform-function/scaleY()>)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}

@@ -27,8 +27,7 @@ Este ejemplo crea una pequeño checkbox para los usuarios con punteros primarios
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Mírame!</label>
+<input id="test" type="checkbox" /> <label for="test">Mírame!</label>
 ```
 
 ### CSS
@@ -73,9 +72,9 @@ input[type="checkbox"]:checked {
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.pointer")}}
+{{Compat}}
 
 ## Ver también
 

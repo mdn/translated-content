@@ -1,6 +1,6 @@
 ---
 title: Console.time()
-slug: Web/API/Console/time
+slug: Web/API/console/time
 ---
 
 {{ APIRef("Console API") }}{{Non-standard_header}}
@@ -30,7 +30,7 @@ console.time(label);
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.time")}}
+{{Compat}}
 
 ## Veja também
 

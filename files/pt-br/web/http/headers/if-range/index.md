@@ -60,13 +60,13 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Especificações
 
-| Especificação                                | Título                                                 |
-| -------------------------------------------- | ------------------------------------------------------ |
+| Especificação                      | Título                                                 |
+| ---------------------------------- | ------------------------------------------------------ |
 | {{RFC("7233", "If-Range", "3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.If-Range")}}
+{{Compat}}
 
 ## Veja também
 

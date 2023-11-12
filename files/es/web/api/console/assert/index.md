@@ -37,9 +37,9 @@ Para más detalles ver [Salida de texto a la consola](/es/docs/Web/API/console#O
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.assert")}}
+{{Compat}}
 
 ## Ver también
 

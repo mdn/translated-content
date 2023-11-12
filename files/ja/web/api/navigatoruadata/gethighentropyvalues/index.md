@@ -78,11 +78,13 @@ getHighEntropyValues(hints)
 プロミスが解決すると、この情報がコンソールに表示されます。
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platformVersion",
-  "fullVersionList"])
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platformVersion",
+    "fullVersionList",
+  ])
   .then((values) => console.log(values));
 ```
 

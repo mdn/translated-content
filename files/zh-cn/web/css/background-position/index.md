@@ -28,7 +28,9 @@ background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
 /* Multiple images */
-background-position: 0 0, center;
+background-position:
+  0 0,
+  center;
 
 /* Edge offsets values */
 background-position: bottom 10px right 20px;
@@ -111,7 +113,7 @@ background-position: unset;
 - \-200px (将图片相对容器左移 200px，这意味着图片右部分的 100px 内容将出现在容器中)
 - \-250px (将图片相对容器左移 250px，这意味着图片的右边界对齐容器的中线)
 
-值得一提的是，如果您的 `background-size` 等于给定轴的容器大小，那么该轴的 _百分比_ 位置将不起作用，因为“容器图像差异”将为零。您将需要使用绝对值进行偏移。
+值得一提的是，如果你的 `background-size` 等于给定轴的容器大小，那么该轴的 _百分比_ 位置将不起作用，因为“容器图像差异”将为零。你将需要使用绝对值进行偏移。
 
 ## 形式定义
 
@@ -158,7 +160,9 @@ div {
 /* 多背景图片：每个图片依次和相应的 `background-position` 匹配 */
 .examplethree {
   background-image: url("startransparent.gif"), url("catfront.png");
-  background-position: 0px 0px, right 3em bottom 2em;
+  background-position:
+    0px 0px,
+    right 3em bottom 2em;
 }
 ```
 
@@ -178,5 +182,5 @@ div {
 
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- [Using multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - {{cssxref("transform-origin")}}

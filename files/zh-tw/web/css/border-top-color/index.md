@@ -5,7 +5,7 @@ slug: Web/CSS/border-top-color
 
 {{CSSRef}}
 
-**`border-top-color`** 是一種CSS屬性，用來設定元件上側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性{{cssxref("border-color")}}或{{cssxref("border-top")}}設定該屬性值。
+**`border-top-color`** 是一種 CSS 屬性，用來設定元件上側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性 {{cssxref("border-color")}} 或 {{cssxref("border-top")}} 設定該屬性值。
 
 {{EmbedInteractiveExample("pages/css/border-top-color.html")}}
 
@@ -51,9 +51,10 @@ border-top-color: unset;
 
 ```html
 <div class="mybox">
-  <p>這是一個帶有框線的方框。
-     請注意某側框線顏色已設為
-     <span class="redtext">紅色</span>。</p>
+  <p>
+    這是一個帶有框線的方框。 請注意某側框線顏色已設為
+    <span class="redtext">紅色</span>。
+  </p>
 </div>
 ```
 

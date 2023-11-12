@@ -219,8 +219,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Element/select_event", "select")}}
   - : Fired when some text has been selected.
     Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
-- {{DOMxRef("Element/show_event", "show")}}
-  - : Fired when a [contextmenu](/zh-CN/docs/Mozilla_event_reference/contextmenu) event was fired on/bubbled to an element that has a [contextmenu](/zh-CN/DOM/element.contextmenu) attribute. {{deprecated_inline}}
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{DOMxRef("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
@@ -262,22 +260,22 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ### Fullscreen events
 
-- `{{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}`
+- {{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}
   - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
     Also available via the {{DOMxRef("Element.onfullscreenchange", "onfullscreenchange")}} property.
-- `{{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}`
+- {{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
     Also available via the {{DOMxRef("Element.onfullscreenerror", "onfullscreenerror")}} property.
 
 ### 键盘事件
 
-- `{{DOMxRef("Element/keydown_event", "keydown")}}`
+- {{DOMxRef("Element/keydown_event", "keydown")}}
   - : Fired when a key is pressed.
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
-- `{{DOMxRef("Element/keypress_event", "keypress")}}`
+- {{DOMxRef("Element/keypress_event", "keypress")}}
   - : Fired when a key that produces a character value is pressed down. {{deprecated_inline}}
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
-- `{{DOMxRef("Element/keyup_event", "keyup")}}`
+- {{DOMxRef("Element/keyup_event", "keyup")}}
   - : Fired when a key is released.
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeyup", "onkeyup")}} property.
 

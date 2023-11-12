@@ -27,7 +27,7 @@ slug: Web/HTML/Element/aside
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
-   <td>{{ARIARole("feed")}}, {{ARIARole("note")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}, {{ARIARole("search")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/note_role"><code>note</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -49,14 +49,11 @@ slug: Web/HTML/Element/aside
 ```html
 <article>
   <p>
-    迪斯尼电影<cite>海的女儿</cite>（<cite>The Little Mermaid</cite>）于 1989 年首次登上银幕。
+    迪斯尼电影<cite>海的女儿</cite>（<cite>The Little Mermaid</cite>）于 1989
+    年首次登上银幕。
   </p>
-  <aside>
-    在首次发行期间，该片便收获了 8700 万美元的票房。
-  </aside>
-  <p>
-    更多有关该电影的信息…
-  </p>
+  <aside>在首次发行期间，该片便收获了 8700 万美元的票房。</aside>
+  <p>更多有关该电影的信息…</p>
 </article>
 ```
 

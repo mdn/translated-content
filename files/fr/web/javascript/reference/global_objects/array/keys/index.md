@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/keys
 ---
 
 {{JSRef}}
@@ -22,7 +12,7 @@ La méthode **`keys()`** renvoie un nouvel objet **`Array Iterator`** qui contie
 ## Syntaxe
 
 ```js
-arr.keys()
+arr.keys();
 ```
 
 ### Valeur de retour
@@ -34,7 +24,7 @@ Un nouvel objet itérateur pour {{jsxref("Array")}}.
 ### Utilisation simple
 
 ```js
-var arr = ["a","b","c"];
+var arr = ["a", "b", "c"];
 var itérateur = arr.keys();
 
 console.log(itérateur.next()); // { value: 0, done: false }
@@ -50,7 +40,7 @@ var arr = ["a", , "c"];
 var clésCreuses = Object.keys(arr);
 var clésDenses = [...arr.keys()];
 console.log(clésCreuses); // ["0", "2"]
-console.log(clésDenses);  // [0, 1, 2]
+console.log(clésDenses); // [0, 1, 2]
 ```
 
 ## Spécifications

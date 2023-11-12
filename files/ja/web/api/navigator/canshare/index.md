@@ -65,20 +65,20 @@ HTML は、テストの結果を表示するための段落を作成するだけ
 
 ```js
 let shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org',
-}
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+};
 
-const resultPara = document.querySelector('.result');
+const resultPara = document.querySelector(".result");
 
 if (!navigator.canShare) {
-  resultPara.textContent = 'navigator.canShare() not supported.';
-}
-else if (navigator.canShare(shareData)) {
-  resultPara.textContent = 'navigator.canShare() supported. We can use navigator.share() to send the data.';
+  resultPara.textContent = "navigator.canShare() not supported.";
+} else if (navigator.canShare(shareData)) {
+  resultPara.textContent =
+    "navigator.canShare() supported. We can use navigator.share() to send the data.";
 } else {
-  resultPara.textContent = 'Specified data cannot be shared.';
+  resultPara.textContent = "Specified data cannot be shared.";
 }
 ```
 
@@ -97,15 +97,15 @@ else if (navigator.canShare(shareData)) {
 
 ```js
 // 対応していない可能性のある機能
-let testShare = { someNewProperty: 'Data to share' }
+let testShare = { someNewProperty: "Data to share" };
 
 // 新しいキーを使用する複合データ
 const shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org',
-  someNewProperty: 'Data to share'
-}
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+  someNewProperty: "Data to share",
+};
 
 // 共有する前に、キーが有効で対応していることをテストします。
 if (navigator.canShare(testShare)) {

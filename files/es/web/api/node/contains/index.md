@@ -19,7 +19,7 @@ Esta función verifica si un un elemento esté en el cuerpo de la página. Como 
 
 ```js
 function isInPage(node) {
-  return (node === document.body) ? false : document.body.contains(node);
+  return node === document.body ? false : document.body.contains(node);
 }
 ```
 
@@ -27,9 +27,9 @@ function isInPage(node) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.contains")}}
+{{Compat}}
 
 ## Ver también
 

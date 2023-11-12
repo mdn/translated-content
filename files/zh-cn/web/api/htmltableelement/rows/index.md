@@ -20,7 +20,7 @@ HTMLCollectionObject = table.rows
 ```js
 myrows = mytable.rows;
 firstRow = mytable.rows[0];
-lastRow = mytable.rows[mytable.rows.length-1];
+lastRow = mytable.rows[mytable.rows.length - 1];
 ```
 
 ## Specification

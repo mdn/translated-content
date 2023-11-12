@@ -1,6 +1,6 @@
 ---
 title: Animaciones CSS tips y trucos
-slug: Web/CSS/CSS_Animations/Tips
+slug: Web/CSS/CSS_animations/Tips
 ---
 
 {{cssref}}Las Animaciones con CSS hacen posible crear cosas increíbles con los elementos que forman parte de tus documentos y apps . Sin embargo, hay cosas que deseas hacer que no son evidentes, o soluciones inteligentes que quizás no encuentres de inmediato. Este artículo es una colección de tips y trucos que hemos encontrado que podrían hacer más fácil el trabajo, incluido cómo volver a ejecutar una animación detenida.
@@ -16,8 +16,7 @@ Aquí te mostramos una forma de hacerlo que sentimos es lo suficientemente estab
 Primero, definamos el HTML para un {{HTMLElement("div")}} que deseamos animar y un botón que ejecurara (o repetira) la animación.
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton">Click me to run the animation</div>
 ```
@@ -38,14 +37,21 @@ Ahora definiremos la animación en si usando CSS. Algún CSS que no es important
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {
@@ -70,8 +76,8 @@ Ahora veremos el JavaScript que jace el trabajo. La escencia de la técnica esta
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  window.requestAnimationFrame(function (time) {
+    window.requestAnimationFrame(function (time) {
       document.querySelector(".box").className = "box changing";
     });
   });
@@ -134,15 +140,15 @@ El siguiente demo muestra como puedes lograr las técnicas JavaScript mencionand
 ```
 
 ```js
-let watchme = document.getElementById('watchme')
+let watchme = document.getElementById("watchme");
 
-watchme.className = 'slidein'
+watchme.className = "slidein";
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
-}
-watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
-)
+  watchme.className = "slidein stopped";
+};
+watchme.addEventListener("click", () =>
+  watchme.addEventListener("animationiteration", listener, false),
+);
 ```
 
 Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>

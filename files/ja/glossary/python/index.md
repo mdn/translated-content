@@ -11,16 +11,16 @@ Python は OSI に承認されたオープンソースライセンスのもと�
 
 1. Learn more
 
-    1. Wikipedia の [Python](https://ja.wikipedia.org/wiki/Python)
-    2. [Official Python docs tutorials](https://docs.python.org/3/tutorial/index.html)
-    3. [Tutorialspoint Python tutorial](http://www.tutorialspoint.com/python/index.htm)
-    4. [AlphaCodingSkills Python Tutorial](https://www.alphacodingskills.com/python/python-tutorial.php)
-    5. MDN の [Django Web Framework (Python)](/ja/docs/Learn/Server-side/Django)
+   1. Wikipedia の [Python](https://ja.wikipedia.org/wiki/Python)
+   2. [Official Python docs tutorials](https://docs.python.org/3/tutorial/index.html)
+   3. [Tutorialspoint Python tutorial](http://www.tutorialspoint.com/python/index.htm)
+   4. [AlphaCodingSkills Python Tutorial](https://www.alphacodingskills.com/python/python-tutorial.php)
+   5. MDN の [Django Web Framework (Python)](/ja/docs/Learn/Server-side/Django)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Java")}}
-    2. {{Glossary("JavaScript")}}
-    3. {{Glossary("PHP")}}
-    4. {{Glossary("Python")}}
-    5. {{Glossary("Ruby")}}
+   1. {{Glossary("Java")}}
+   2. {{Glossary("JavaScript")}}
+   3. {{Glossary("PHP")}}
+   4. {{Glossary("Python")}}
+   5. {{Glossary("Ruby")}}

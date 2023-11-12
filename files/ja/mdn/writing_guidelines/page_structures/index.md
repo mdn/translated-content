@@ -1,7 +1,6 @@
 ---
 title: 文書の構造
 slug: MDN/Writing_guidelines/Page_structures
-original_slug: MDN/Structures
 l10n:
   sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
 ---

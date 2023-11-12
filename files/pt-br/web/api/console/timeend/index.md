@@ -1,6 +1,6 @@
 ---
 title: Console.timeEnd()
-slug: Web/API/Console/timeEnd
+slug: Web/API/console/timeEnd
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -28,7 +28,7 @@ Não é parte de qualquer especificação.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.timeEnd")}}
+{{Compat}}
 
 ## Veja também
 

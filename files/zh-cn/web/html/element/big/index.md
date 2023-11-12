@@ -43,7 +43,7 @@ This is the first sentence. This whole sentence is in bigger letters.
 
 > **备注：** 直到 Gecko 1.9.2, Firefox 为该元素实现了{{domxref('HTMLSpanElement')}}接口。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

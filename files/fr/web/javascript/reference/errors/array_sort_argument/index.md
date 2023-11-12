@@ -1,12 +1,6 @@
 ---
-title: 'TypeError: invalid Array.prototype.sort argument'
+title: "TypeError: invalid Array.prototype.sort argument"
 slug: Web/JavaScript/Reference/Errors/Array_sort_argument
-tags:
-  - Erreurs
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Errors/Array_sort_argument
-original_slug: Web/JavaScript/Reference/Erreurs/Array_sort_argument
 ---
 
 {{jsSidebar("Errors")}}
@@ -31,19 +25,19 @@ L'argument passé à {{jsxref("Array.prototype.sort()")}} devrait être {{jsxref
 ### Cas invalides
 
 ```js example-bad
-[1, 3, 2].sort(5);  // TypeError
+[1, 3, 2].sort(5); // TypeError
 
-var cmp = { asc: (x, y) => x >= y, dsc : (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key] || 'asc');  // TypeError
+var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
+[1, 3, 2].sort(cmp[this.key] || "asc"); // TypeError
 ```
 
 ### Cas valides
 
 ```js example-good
-[1, 3, 2].sort();   // [1, 2, 3]
+[1, 3, 2].sort(); // [1, 2, 3]
 
-var cmp = { asc: (x, y) => x >= y, dsc : (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key || 'asc']); // [1, 2, 3]
+var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
+[1, 3, 2].sort(cmp[this.key || "asc"]); // [1, 2, 3]
 ```
 
 ## Voir aussi

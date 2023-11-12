@@ -1,7 +1,6 @@
 ---
 title: Internet
 slug: Glossary/Internet
-original_slug: Glossario/Internet
 ---
 
 A Internet é a rede mundial de redes que utiliza o conjunto de protocolos da Internet (também chamado {{glossary("TCP")}}/{{glossary("IPv6","IP")}} dos seus dois mais importantes {{glossary("protocol","protocolos")}}).

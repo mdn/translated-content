@@ -1,16 +1,6 @@
 ---
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
-tags:
-  - AJAX
-  - API
-  - XMLHttpRequest
-  - Отправка
-  - Свойство
-  - Справка
-  - Только для чтения
-  - загрузка
-translation_of: Web/API/XMLHttpRequest/responseXML
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -40,13 +30,13 @@ var data = XMLHttpRequest.responseXML;
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 // Значение responseType, если указано, должно быть пустой строкой или "document"
-xhr.responseType = 'document';
+xhr.responseType = "document";
 
 // overrideMimeType() может быть использован, чтобы заставить ответ обрабатываться как XML
-xhr.overrideMimeType('text/xml');
+xhr.overrideMimeType("text/xml");
 
 xhr.onload = function () {
   if (xhr.readyState === xhr.DONE) {

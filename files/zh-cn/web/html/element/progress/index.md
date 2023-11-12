@@ -13,34 +13,66 @@ slug: Web/HTML/Element/progress
 
 ## 使用上下文
 
-```plain
-使用策略                流文本 (Flow content), 短文本 (phrasing content)
-Content categories     可标记内容，可触摸内容
-
-有效内容                Phrasing content, 其中在它的后代中不能包含
-Permitted content      <progress>元素。
-
-标签省略                不可以，{{no_tag_omission}}
-Tag omission
-
-有效的父元素             任何可以包裹短文本 (phrasing content) 的元素。
-
-隐式元素                {{ARIARole("progressbar")}}
-ARIA role
-
-有效的辅助元素            无
-ARIA roles
-
-DOM 接口                {{domxref("HTMLProgressElement")}}
-```
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >、可关联标签内容、<a href="/zh-CN/docs/Web/HTML/Content_categories#可感知内容"
+          >可感知内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+          >可感知内容</a
+        >，但其后代元素不能有 <code>&#x3C;progress></code> 元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+          >可感知内容</a
+        >的任何元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐式 ARIA 角色</th>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的角色（<code>role</code>）</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLProgressElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 属性
 
 和其他的 HTML 元素一样，该元素具有[全局属性](/zh-CN/HTML/Global_attributes).
 
-- {{ htmlattrdef("max") }}
+- `max`
   - : 该属性描述了这个`progress`元素所表示的任务一共需要完成多少工作。
-- {{ htmlattrdef("value") }}
+- `value`
   - : 该属性用来指定该进度条已完成的工作量。如果没有`value 属性`,则该进度条的进度为"不确定",也就是说，进度条不会显示任何进度，你无法估计当前的工作会在何时完成 (比如在下载一个未知大小的文件时，下载对话框中的进度条就是这样的).
 
 > **备注：** 你可以使用{{ cssxref("orient") }}属性来指定该进度条的显示方向是横向 (默认) 还是纵向.CSS 伪类{{ cssxref(":indeterminate") }}可以用来匹配那些不确定的进度条。

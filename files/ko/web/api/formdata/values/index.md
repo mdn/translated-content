@@ -24,12 +24,12 @@ formData.values();
 ```js
 // Create a test FormData object
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the values
 for (var value of formData.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 
@@ -40,11 +40,11 @@ value1
 value2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,7 +1,6 @@
 ---
 title: Symbol.search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
@@ -28,7 +27,7 @@ class caseInsensitiveSearch {
   }
 }
 
-console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
+console.log("foobar".search(new caseInsensitiveSearch("BaR")));
 // resultado esperado: 3
 ```
 

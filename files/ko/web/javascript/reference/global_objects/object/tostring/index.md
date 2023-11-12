@@ -12,7 +12,7 @@ The **`toString()`** 은 문자열을 반환하는 object의 대표적인 방법
 ## 구문
 
 ```js
-obj.toString()
+obj.toString();
 ```
 
 ## Description
@@ -24,7 +24,7 @@ var o = new Object();
 o.toString(); // returns [object Object]
 ```
 
-> **참고:** 자바스크립트 1.8.5부터 {{jsxref("null")}}의 `toString()`을 호출하는 경우 `[object Null]`을 반환하며, {{jsxref("undefined")}}는 `[object Undefined]`를 반환합니다. 이는 ECMAScript 제 5판과 후속 정오표에 정의되어 있습니다. See [toString으로 객체 클래스 검사](#tostring으로_객체_클래스_검사).
+> **참고:** JavaScript 1.8.5부터 {{jsxref("null")}}의 `toString()`을 호출하는 경우 `[object Null]`을 반환하며, {{jsxref("undefined")}}는 `[object Undefined]`를 반환합니다. 이는 ECMAScript 제 5판과 후속 정오표에 정의되어 있습니다. See [toString으로 객체 클래스 검사](#tostring으로_객체_클래스_검사).
 
 ## 매개변수
 
@@ -34,16 +34,16 @@ o.toString(); // returns [object Object]
 
 ```js
 let baseTenInt = 10;
-  console.log(baseTenInt.toString(2));
-  // "1010"이 출력됩니다
+console.log(baseTenInt.toString(2));
+// "1010"이 출력됩니다
 ```
 
 big integers도 이와 같습니다
 
 ```js
 let bigNum = BigInt(20);
-  console.log(bigNum.toString(2));
-  // "10100"이 출력됩니다
+console.log(bigNum.toString(2));
+// "10100"이 출력됩니다
 ```
 
 몇 가지 일반적인 기수들은 아래와 같습니다
@@ -69,7 +69,7 @@ function Dog(name, breed, color, sex) {
   this.sex = sex;
 }
 
-theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+theDog = new Dog("Gabby", "Lab", "chocolate", "female");
 ```
 
 커스텀 객체의 `toString()` 메서드를 호출하는 경우 {{jsxref("Object")}}로부터 상속받은 기본 값을 반환하게 됩니다:
@@ -82,15 +82,23 @@ theDog.toString(); // returns [object Object]
 
 ```js
 Dog.prototype.toString = function dogToString() {
-  var ret = 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
+  var ret =
+    "Dog " +
+    this.name +
+    " is a " +
+    this.sex +
+    " " +
+    this.color +
+    " " +
+    this.breed;
   return ret;
-}
+};
 ```
 
-앞선 코드를 사용하면 문자열 컨텍스트에서 `theDog`가 사용될 때마다 자바스크립트는 자동으로 `dogToString()` 함수를 호출하여 다음 문자열을 반환합니다:
+앞선 코드를 사용하면 문자열 컨텍스트에서 `theDog`가 사용될 때마다 JavaScript는 자동으로 `dogToString()` 함수를 호출하여 다음 문자열을 반환합니다:
 
 ```js
-"Dog Gabby is a female chocolate Lab"
+"Dog Gabby is a female chocolate Lab";
 ```
 
 ### `toString()`으로 객체 클래스 검사
@@ -100,16 +108,16 @@ Dog.prototype.toString = function dogToString() {
 ```js
 var toString = Object.prototype.toString;
 
-toString.call(new Date);    // [object Date]
-toString.call(new String);  // [object String]
-toString.call(Math);        // [object Math]
+toString.call(new Date()); // [object Date]
+toString.call(new String()); // [object String]
+toString.call(Math); // [object Math]
 
 // Since JavaScript 1.8.5
-toString.call(undefined);   // [object Undefined]
-toString.call(null);        // [object Null]
+toString.call(undefined); // [object Undefined]
+toString.call(null); // [object Null]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -16,17 +16,17 @@ WebXR-兼容性设备包括沉浸式 3D 运动和定位跟踪耳机，通过框�
 
 在最基本的层面上，通过计算应用于场景的透视图，以从每个用户的视角呈现场景，从而在 3D 中呈现场景，考虑到眼睛之间的常规距离，然后渲染场景两次，每只眼睛一次。然后将生成的图像 (场景在一个帧上呈现两次，每只眼睛一半) 显示给用户。
 
-由于 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 用于将 3D 世界渲染到 WebXR 会话中，因此您首先应该熟悉 WebGL 的一般用法以及 3D 图形的基本知识。您很可能不会直接使用 WebGL API，而是利用在 WebGL 之上构建的框架或库之一来使其使用更加方便。其中最流行的是[three.js](https://threejs.org/)。
+由于 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 用于将 3D 世界渲染到 WebXR 会话中，因此你首先应该熟悉 WebGL 的一般用法以及 3D 图形的基本知识。你很可能不会直接使用 WebGL API，而是利用在 WebGL 之上构建的框架或库之一来使其使用更加方便。其中最流行的是[three.js](https://threejs.org/)。
 
-使用库而不是直接使用 WebGL API 的一个特殊好处是，库取向于实现虚拟相机函数性的接口。OpenGL（WebGL 的扩展）不直接提供照相机视图，使用库模拟一个的话可以使您的工作变得非常非常容易，特别是在构建允许在虚拟世界中自由移动的代码时。
+使用库而不是直接使用 WebGL API 的一个特殊好处是，库取向于实现虚拟相机函数性的接口。OpenGL（WebGL 的扩展）不直接提供照相机视图，使用库模拟一个的话可以使你的工作变得非常非常容易，特别是在构建允许在虚拟世界中自由移动的代码时。
 
 ## 重要的健康和安全提示
 
-因为本质上来说，创建虚拟 3D 世界的整个过程是一个技巧，它利用了我们对眼睛如何收集光以及大脑如何解释所收集的数据的理解，因此务必要牢记，软件设计师开发人员有责任比平时更加 ​​ 小心，以确保结果正确。
+因为本质上来说，创建虚拟 3D 世界的整个过程是一个技巧，它利用了我们对眼睛如何收集光以及大脑如何解释所收集的数据的理解，因此务必要牢记，软件设计师开发人员有责任比平时更加 小心，以确保结果正确。
 
-缺陷，未对准或变形会混淆眼睛和大脑，导致眼睛疼痛或头痛乃至眩晕，头晕或潜在的严重恶心。考虑到 VR 护目镜的全部特性，需要特别注意，开发者对可能引起癫痫发作的任何事物都要保持警惕；如果它引起困扰，则用户可能无法快速将视线从您呈现的图像上移开。
+缺陷，未对准或变形会混淆眼睛和大脑，导致眼睛疼痛或头痛乃至眩晕，头晕或潜在的严重恶心。考虑到 VR 护目镜的全部特性，需要特别注意，开发者对可能引起癫痫发作的任何事物都要保持警惕；如果它引起困扰，则用户可能无法快速将视线从你呈现的图像上移开。
 
-如果您有任何可能对任何用户构成风险的内容，则应提供警告消息。有备无患！
+如果你有任何可能对任何用户构成风险的内容，则应提供警告消息。有备无患！
 
 ## WebXR 设备 API 的概念和用法
 
@@ -46,23 +46,23 @@ WebXR-兼容性设备包括沉浸式 3D 运动和定位跟踪耳机，通过框�
 
 使用 WebXR 的大多数应用程序将遵循类似的总体设计模式：
 
-1. 检查用户的设备和浏览器是否都能够呈现您想要提供的 XR 体验。
+1. 检查用户的设备和浏览器是否都能够呈现你想要提供的 XR 体验。
 
-    1. 确保 WebXR API 可用；如果 {{domxref("navigator.xr")}} 未定义，则可以判断用户的浏览器和/或设备不支持 WebXR。如果不支持，请禁用用于激活 XR 功能的任何用户界面，并中止任何进入 XR 模式的尝试。
-    2. 调用 {{DOMxRef("XR.isSessionSupported","navigator.xr.isSessionSupported()")}}, 指定要提供的 WebXR 体验模式：`inline`, `immersive-vr`, 或 `immersive-ar`, 以确定您希望提供的会话类型是否可用。
-    3. 如果要使用的会话类型可用，请向用户提供适当的界面以允许他们激活它。
+   1. 确保 WebXR API 可用；如果 {{domxref("navigator.xr")}} 未定义，则可以判断用户的浏览器和/或设备不支持 WebXR。如果不支持，请禁用用于激活 XR 功能的任何用户界面，并中止任何进入 XR 模式的尝试。
+   2. 调用 {{DOMxRef("XR.isSessionSupported","navigator.xr.isSessionSupported()")}}, 指定要提供的 WebXR 体验模式：`inline`, `immersive-vr`, 或 `immersive-ar`, 以确定你希望提供的会话类型是否可用。
+   3. 如果要使用的会话类型可用，请向用户提供适当的界面以允许他们激活它。
 
 2. 当用户通过上述的界面开启了 WebXR 功能后，通过调用 {{DOMxRef("XR.requestSession","navigator.xr.requestSession()")}}，也是指定使用的模式为以下三种之一： `inline`, `immersive-vr`, 或 `immersive-ar`后，可以将一个 {{DOMxRef("XRSession")}} 设定在期望的模式下。
 3. 当 `requestSession()` 返回的 promise 被 resolve 后，使用新的 {{domxref("XRSession")}} 在整个 WebXR 体验期间运行帧循环。
 
-    1. 调用 {{domxref("XRSession")}} 的 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 方法，以调度 XR 设备的首帧渲染。
-    2. 每一个 `requestAnimationFrame()` 的回调都需要使用 WebGL 渲染已提供信息的 3D 世界中的物体。
-    3. 持续在回调中调用 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 保证每一帧都成功地按顺序渲染。
+   1. 调用 {{domxref("XRSession")}} 的 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 方法，以调度 XR 设备的首帧渲染。
+   2. 每一个 `requestAnimationFrame()` 的回调都需要使用 WebGL 渲染已提供信息的 3D 世界中的物体。
+   3. 持续在回调中调用 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 保证每一帧都成功地按顺序渲染。
 
 4. 当需要结束 XR 会话的时候；或者用户主动退出 XR 模式。
 
-    1. 通过调用 {{DOMxRef("XRSession.end", "XRSession.end()")}} 可手动结束 XR 会话。
-    2. 无论通过何种方式（开发者、用户或者浏览器）终止会话，{{domxref("XRSession")}} 的 {{domxref("XRSession.end_event", "end")}} 事件都会接收到通知。
+   1. 通过调用 {{DOMxRef("XRSession.end", "XRSession.end()")}} 可手动结束 XR 会话。
+   2. 无论通过何种方式（开发者、用户或者浏览器）终止会话，{{domxref("XRSession")}} 的 {{domxref("XRSession.end_event", "end")}} 事件都会接收到通知。
 
 ### 获取许可与安全性
 

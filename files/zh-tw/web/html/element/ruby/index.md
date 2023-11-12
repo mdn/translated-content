@@ -12,9 +12,9 @@ slug: Web/HTML/Element/ruby
 | [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [流內容](/zh-TW/docs/Web/HTML/Content_categories#Flow_content)、[段落型內容](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content)、捫及內容 |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 允許內容                                            | [段落型內容](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content)                                                                           |
-| 標籤省略                                            | {{no_tag_omission}}                                                                                                                         |
+| 標籤省略                                            | {{no_tag_omission}}                                                                                                                              |
 | 允許父元素                                          | Any element that accepts [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content)                                                |
-| DOM 介面                                            | {{domxref("HTMLElement")}}                                                                                                             |
+| DOM 介面                                            | {{domxref("HTMLElement")}}                                                                                                                       |
 
 ## 屬性
 
@@ -26,17 +26,14 @@ slug: Web/HTML/Element/ruby
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
 ### 範例二：詞
 
 ```html
-<ruby>
-  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
-</ruby>
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
 ```
 
 ## 規範

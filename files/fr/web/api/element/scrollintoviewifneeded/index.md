@@ -1,12 +1,6 @@
 ---
 title: Element.scrollIntoViewIfNeeded()
 slug: Web/API/Element/scrollIntoViewIfNeeded
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/scrollIntoViewIfNeeded
 ---
 
 {{APIRef("DOM")}}{{Non-standard_header}}
@@ -36,7 +30,7 @@ Ne fait partie d'aucune spécification. C'est une méthode propriétaire propre 
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.scrollIntoViewIfNeeded")}}
+{{Compat}}
 
 ## Voir aussi
 

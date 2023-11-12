@@ -1,11 +1,6 @@
 ---
-title: 'Warning: unreachable code after return statement'
+title: "Warning: unreachable code after return statement"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
-tags:
-  - JavaScript
-  - Warning
-translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
-original_slug: Web/JavaScript/Reference/Erreurs/Stmt_after_return
 ---
 
 {{jsSidebar("Errors")}}
@@ -46,13 +41,13 @@ Les avertissements ne seront pas affichés pour les `return` sans point-virgule 
 function f() {
   var x = 3;
   x += 4;
-  return x;   // return permet de finir la fonction sur le champ
-  x -= 3;     // Cette ligne ne sera jamais lue donc exécutée
+  return x; // return permet de finir la fonction sur le champ
+  x -= 3; // Cette ligne ne sera jamais lue donc exécutée
 }
 
 function f() {
-  return     // Cette instruction est traitée `return;`
-    3 + 4;   // La fonction termine et cette ligne n'est jamais traitée
+  return; // Cette instruction est traitée `return;`
+  3 + 4; // La fonction termine et cette ligne n'est jamais traitée
 }
 ```
 
@@ -63,13 +58,13 @@ function f() {
   var x = 3;
   x += 4;
   x -= 3;
-  return x;  // OK : return est après
-             // toutes les autres instructions
+  return x; // OK : return est après
+  // toutes les autres instructions
 }
 
 function f() {
-  return 3 + 4  // OK : un return sans point-virgule
-                // avec une expression sur la même ligne
+  return 3 + 4; // OK : un return sans point-virgule
+  // avec une expression sur la même ligne
 }
 ```
 

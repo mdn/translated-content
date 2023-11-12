@@ -9,40 +9,40 @@ slug: Web/HTML/Element/hr
 
 | [內容類型](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#流內容（Flow_content）).                |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Permitted content                               | 否。這是個 {{Glossary("empty element")}}.                                 |
+| Permitted content                               | 否。這是個 {{Glossary("empty element")}}.                                            |
 | 標籤省略                                        | 一定要有起始標籤、同時絕不能有結束標籤                                               |
 | Permitted parent elements                       | 任何允許[流內容](/zh-TW/docs/HTML/Content_categories#流內容（Flow_content）)的元素。 |
-| DOM interface                                   | {{domxref("HTMLHRElement")}}                                                 |
+| DOM interface                                   | {{domxref("HTMLHRElement")}}                                                         |
 
 ## 屬性
 
 這個元素支持[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : 設罝頁面上標線的對齊方式。如果沒有指定，預設值是：`left。`
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : 用色彩名或 16 進位值設罝標線的顏色。
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : 設置這個標線沒有陰影。
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : 設置標線的高度，單位是 px。.
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : 設置標線的長度，單位是 px；或者也可以用頁面寛度的百分比 (%)表示。
 
 ## 範例
 
 ```html
-<p>This is the first paragraph of text.
-This is the first paragraph of text.
-This is the first paragraph of text.
-This is the first paragraph of text.
+<p>
+  This is the first paragraph of text. This is the first paragraph of text. This
+  is the first paragraph of text. This is the first paragraph of text.
+</p>
 
-<hr>
+<hr />
 
-<p>This is second paragraph of text.
-This is second paragraph of text.
-This is second paragraph of text.
-This is second paragraph of text.
+<p>
+  This is second paragraph of text. This is second paragraph of text. This is
+  second paragraph of text. This is second paragraph of text.
+</p>
 ```
 
 上面的 HTML 會輸出：

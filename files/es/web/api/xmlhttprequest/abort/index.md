@@ -25,9 +25,9 @@ Vacío.
 
 ```js
 var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
-xhr.open(method,url,true);
+  method = "GET",
+  url = "https://developer.mozilla.org/";
+xhr.open(method, url, true);
 
 xhr.send();
 
@@ -40,7 +40,7 @@ xhr.abort();
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.abort")}}
+{{Compat}}
 
 ## Ver también
 

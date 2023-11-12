@@ -1,6 +1,8 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -35,11 +37,11 @@ slug: Web/HTML/Global_attributes/itemref
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -58,10 +60,9 @@ slug: Web/HTML/Global_attributes/itemref
 ## 関連情報
 
 - [他のグローバル属性](/ja/docs/Web/HTML/Global_attributes)
-- マイクロデータに関連する他のグローバル属性
+- マイクロデータに関連する他のグローバル属性:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/ja/docs/Web/HTML/Global_attributes/itemid)
+  - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop)
+  - [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype)

@@ -3,40 +3,43 @@ title: align-items
 slug: Web/CSS/align-items
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
-CSS align-items 属性将所有直接子节点上的 align-self 值设置为一个组。align-self 属性设置项目在其包含块中在交叉轴方向上的对齐方式。
+[CSS](/zh-CN/docs/Web/CSS) **`align-items`** 属性设置了所有直接子元素的 {{cssxref("align-self")}} 值作为一个组。在 Flexbox 中，它控制子元素在{{glossary("Cross Axis", "交叉轴")}}上的对齐。在 Grid 布局中，它控制了子元素在其{{glossary("Grid Areas", "网格区域")}}内的块向轴上的对齐。
+
+下面的交互示例演示了使用网格布局的 `align-items` 的一些值。
 
 {{EmbedInteractiveExample("pages/css/align-items.html")}}
-
-目前，Flexbox 和 CSS 网格布局支持此属性。在 Flexbox 中，它控制十字轴上项目的对齐方式，在网格布局中，它控制块轴上项目的对齐方式。
 
 ## 语法
 
 ```css
-/* Basic keywords */
+/* 基本关键字 */
 align-items: normal;
 align-items: stretch;
 
-/* Positional alignment */
-align-items: center; /* Pack items around the center */
-align-items: start; /* Pack items from the start */
-align-items: end; /* Pack items from the end */
-align-items: flex-start; /* Pack flex items from the start */
-align-items: flex-end; /* Pack flex items from the end */
+/* 定位对齐 */
+/* align-items 不能设置为 left 和 right */
+align-items: center;
+align-items: start;
+align-items: end;
+align-items: flex-start;
+align-items: flex-end;
 align-items: self-start;
 align-items: self-end;
 
-/* Baseline alignment */
+/* 基线对齐 */
 align-items: baseline;
 align-items: first baseline;
-align-items: last baseline; /* Overflow alignment (for positional alignment only) */
+align-items: last baseline; /* 溢出对齐（仅用于位置对齐） */
 align-items: safe center;
 align-items: unsafe center;
 
-/* Global values */
+/* 全局值 */
 align-items: inherit;
 align-items: initial;
+align-items: revert;
+align-items: revert-layer;
 align-items: unset;
 ```
 
@@ -46,40 +49,40 @@ align-items: unset;
 
   - : 这个关键字的效果取决于我们处在什么布局模式中：
 
-    - 在绝对定位的布局中，对于被替代的绝对定位盒子，这个效果和`start?`的效果的一样；对于其他所有绝对定位的盒子，这个效果和`stretch`的效果一样。
-    - 在绝对定位布局的静态位置上，效果和`stretch`一样。
-    - 对于那些弹性项目而言，效果和`stretch`一样。
-    - 对于那些网格项目而言，效果和`stretch`一样，除了有部分比例或者一个固定大小的盒子的效果像`start`。
+    - 在绝对定位的布局中，对于*被替代*的绝对定位盒子，行为与 `start` 类似；对于*其他所有*绝对定位的盒子，行为与 `stretch` 类似。
+    - 在绝对定位布局的静态位置上，行为与 `stretch` 类似。
+    - 对于那些 flex 元素而言，行为与 `stretch` 类似。
+    - 对于那些 grid 元素而言，行为与 `stretch` 类似，但对于具有长宽比或固有尺寸的盒子，其行为与 `start` 类似。
     - 这个属性不适用于块级盒子和表格。
 
 - `flex-start`
-  - : 元素向侧轴起点对齐。
+  - : 只在 flex 布局中使用，将元素与 flex 容器的主轴起点或交叉轴起点对齐。
 - `flex-end`
-  - : 元素向侧轴终点对齐。
-- `start`
-  - : The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.
-- `end`
-  - : The item is packed flush to each other toward the end edge of the alignment container in the appropriate axis.
+  - : 只在 flex 布局中使用，将元素与 flex 容器的主轴末端或交叉轴末端对齐。
 - `center`
-  - : 元素在侧轴居中。如果元素在侧轴上的高度高于其容器，那么在两个方向上溢出距离相同。
-- `left`
-  - : The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
-- `right`
-  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+  - : flex 元素的外边距框在交叉轴上居中对齐。如果元素的交叉轴尺寸大于 flex 容器，它将在两个方向上等距溢出。
+- `start`
+  - : 将元素与容器的主轴起点或交叉轴起点对齐。
+- `end`
+  - : 将元素与容器的主轴末端或交叉轴末端对齐。
 - `self-start`
-  - : The items is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.
+  - : 将元素与容器的主轴起点或交叉轴起点对齐，轴起点的方向对应于元素的起始方向。
 - `self-end`
-  - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
+  - : 将元素与容器的主轴末端或交叉轴末端对齐，轴末端的方向对应于元素的结尾方向。
 - `baseline`、`first baseline`、`last baseline`
-  - : 所有元素向基线对齐。侧轴起点到元素基线距离最大的元素将会于侧轴起点对齐以确定基线。
+  - : 所有 flex 元素都对齐，以使它们的 [flex 容器基线](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) 对齐。距离其交叉轴起点和基线之间最远的元素与行的交叉轴起点对齐。
 - `stretch`
-  - : 弹性项包含外边距的交叉轴尺寸被拉升至行高
+  - : 如果（多个）元素的组合大小小于容器的大小，其中自动调整大小的元素将等量增大，以填满容器，同时这些元素仍然保持其宽高比例的约束。
 - `safe`
-  - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
+  - : 与其它对齐值一起使用。如果所选对齐值导致元素溢出容器，则将元素按 `start` 方式对齐。
 - `unsafe`
-  - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
+  - : 与其它对齐值一起使用。不管元素和容器的相对尺寸以及是否会发生溢出，都会采用给定的对齐值。
 
-### 语法格式
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
@@ -89,9 +92,9 @@ align-items: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
-  align-items: center; /* Can be changed in the live sample */
+  align-items: center; /* 可以在运行实例中更改 */
   background-color: #8c8c8c;
 }
 
@@ -188,8 +191,6 @@ select {
     <option value="end">end</option>
     <option value="self-start">self-start</option>
     <option value="self-end">self-end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
 
     <option value="first baseline">first baseline</option>
     <option value="last baseline">last baseline</option>
@@ -209,33 +210,35 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+const values = document.getElementById("values");
+const display = document.getElementById("display");
+const container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", (evt) => {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", (evt) => {
   container.className = evt.target.value;
 });
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples", "260px", "290px")}}
+{{EmbedLiveSample("示例", "260px", "290px")}}
 
 ## 规范
 
 {{Specifications}}
 
-{{cssinfo}}
-
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [使用 CSS 弹性框](/zh-CN/docs/CSS/Using_CSS_flexible_boxes)
+- CSS Flexbox 指南：_[flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox 指南：_[对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid 指南：_[网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment)
+- {{cssxref("align-self")}} 属性

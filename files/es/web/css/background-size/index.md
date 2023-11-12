@@ -67,18 +67,19 @@ Si especifíca un degradado como fondo y tiene especificado un background-size p
 
 ```css
 .bar {
-       width: 50px; height: 100px;
-       background-image: gradient(...);
+  width: 50px;
+  height: 100px;
+  background-image: gradient(...);
 
-       /* NO RECOMENDADO */
-       background-size: 25px;
-       background-size: 50%;
-       background-size: auto 50px;
-       background-size: auto 50%;
+  /* NO RECOMENDADO */
+  background-size: 25px;
+  background-size: 50%;
+  background-size: auto 50px;
+  background-size: auto 50%;
 
-       /* OKAY */
-       background-size: 25px 50px;
-       background-size: 50% 50%;
+  /* OKAY */
+  background-size: 25px 50px;
+  background-size: 50% 50%;
 }
 ```
 
@@ -88,9 +89,9 @@ Tenga en cuenta que particularmente no es recomendado usar una dimensión de pí
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-size")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,11 +1,6 @@
 ---
 title: height
 slug: Web/CSS/height
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/height
 ---
 
 {{CSSRef}}

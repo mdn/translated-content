@@ -1,6 +1,6 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
-slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
+slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 ---
 
 {{jsSidebar("Errors")}}
@@ -49,7 +49,7 @@ function sum(a=1, b=2) {
 
 ```js example-good
 "use strict";
-function sum(a=1, b=2) {
+function sum(a = 1, b = 2) {
   return a + b;
 }
 ```
@@ -69,7 +69,7 @@ var sum = function sum([a, b]) {
 这可以转换为以下表达式：
 
 ```js example-good
-var sum = (function() {
+var sum = (function () {
   "use strict";
   return function sum([a, b]) {
     return a + b;
@@ -100,7 +100,7 @@ var callback = (() => {
 })();
 ```
 
-## 也可以看看
+## 参见
 
 - {{jsxref("Strict_mode", "Strict mode", "", 1)}}
 - {{jsxref("Statements/function", "函数语句", "", 1)}}

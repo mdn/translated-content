@@ -19,7 +19,7 @@ O valor de retorno é o objeto [DOMRect](/pt-BR/docs/XPCOM_Interface_Reference/n
 
 O valor retornado é um objeto `DOMRect`, que contém as propriedades apenas-leitura `left`, `top`, `right` e `bottom` que descrevem o border-box em pixels. `top` e `left` são relativos às propriedades top-left do _viewport_.
 
-> **Nota:** {{Gecko("1.9.1")}} adiciona as propriedades `width` e `height` ao objeto `DOMRect`.
+> **Nota:** Gecko 1.9.1 adiciona as propriedades `width` e `height` ao objeto `DOMRect`.
 
 Border-boxes vazias são completamente ignoradas. Se todos os border-boxes do elemento são vazias, então é retornado o retângulo com width e height como zero, e no lugar de `top` e `left` determina-se o top-left do border-box relacionado ao primeiro box CSS (determinado pela ordem do conteúdo) em relaçāo ao elemento.
 
@@ -29,11 +29,17 @@ Scripts que requerem uma alta compatibilidade cross-browser podem usar `window.p
 
 ```js
 // Para o scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.ScrollLeft == 'number' ? t : document.body).ScrollLeft
-// Para o scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop
+(((t = document.documentElement) || (t = document.body.parentNode)) &&
+typeof t.ScrollLeft == "number"
+  ? t
+  : document.body
+).ScrollLeft(
+  // Para o scrollY
+  ((t = document.documentElement) || (t = document.body.parentNode)) &&
+    typeof t.ScrollTop == "number"
+    ? t
+    : document.body,
+).ScrollTop;
 ```
 
 ## Exemplo
@@ -43,21 +49,13 @@ Scripts que requerem uma alta compatibilidade cross-browser podem usar `window.p
 var rect = obj.getBoundingClientRect();
 ```
 
-## Especificaçōes
+## Especificações
 
-| Especificação                                                                                                                        | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}} | {{Spec2("CSSOM View")}} | Definiçāo Inicial |
+{{Specifications}}
 
-### Notas
+## Compatibilidade com navegadores
 
-`getBoundingClientRect()` foi primeiramente introduzida no modelo de objeto MS IE DHTML.
-
-O valor de retorno de `getBoundingClientRect()` é [frozen](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
-
-## Compatibilidade
-
-{{Compat("api.Element.getBoundingClientRect")}}
+{{Compat}}
 
 ## Veja também
 

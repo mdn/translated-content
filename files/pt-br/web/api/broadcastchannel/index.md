@@ -39,13 +39,11 @@ _Essa interface também herda métodos de seu pai, {{domxref("EventTarget")}}._
 
 ## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', "comms.html#broadcastchannel", "BroadcastChannel")}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.BroadcastChannel")}}
+{{Compat}}
 
 ## Veja também
 

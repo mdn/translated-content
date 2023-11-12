@@ -1,14 +1,6 @@
 ---
 title: PerformanceNavigationTiming.unloadEventEnd
 slug: Web/API/PerformanceNavigationTiming/unloadEventEnd
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
-translation_of: Web/API/PerformanceNavigationTiming/unloadEventEnd
 ---
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
@@ -38,13 +30,18 @@ function print_nav_timing_data() {
     console.log("= Entrée de navigation : entry[" + i + "]");
     let p = perfEntries[i];
     // propriétés du DOM
-    console.log("Contenu du DOM chargé = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
+    console.log(
+      "Contenu du DOM chargé = " +
+        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+    );
     console.log("Contenu du DOM complet = " + p.domComplete);
     console.log("Contenu du DOM interactif = " + p.interactive);
 
     // temps de chargement et de déchargement des documents
     console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart));
+    console.log(
+      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    );
 
     // autres propriétés
     console.log("type = " + p.type);

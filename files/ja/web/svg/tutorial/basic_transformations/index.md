@@ -13,10 +13,10 @@ l10n:
 
 ```html
 <svg width="30" height="10">
-    <g fill="red">
-        <rect x="0" y="0" width="10" height="10" />
-        <rect x="20" y="0" width="10" height="10" />
-    </g>
+  <g fill="red">
+    <rect x="0" y="0" width="10" height="10" />
+    <rect x="20" y="0" width="10" height="10" />
+  </g>
 </svg>
 ```
 
@@ -30,7 +30,7 @@ l10n:
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
+  <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
 </svg>
 ```
 
@@ -38,7 +38,7 @@ l10n:
 
 {{ EmbedLiveSample('Translation', '', '100') }}
 
-2 番目の値が与えられない場合は、*0* であるとみなします。
+2 番目の値が与えられない場合は、_0_ であるとみなします。
 
 ## 回転
 
@@ -46,7 +46,7 @@ l10n:
 
 ```html
 <svg width="31" height="31">
-    <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
+  <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
 </svg>
 ```
 
@@ -60,7 +60,12 @@ l10n:
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40) rotate(45)" />
+  <rect
+    x="0"
+    y="0"
+    width="10"
+    height="10"
+    transform="translate(30,40) rotate(45)" />
 </svg>
 ```
 
@@ -72,13 +77,13 @@ l10n:
 
 ## 拡大縮小
 
-`scale()` は、要素のサイズを変更します。これは 2 つの数値を受け取って、拡大または縮小の比率として用います。*0.5 は 50% への縮小を表します。2 番目の数値を省略した場合は、1 番目の値と同じであるとみなします。*
+`scale()` は、要素のサイズを変更します。これは 2 つの数値を受け取って、拡大または縮小の比率として用います。_0.5 は 50% への縮小を表します。2 番目の数値を省略した場合は、1 番目の値と同じであるとみなします。_
 
 ## `matrix()` を用いた複雑な座標変換
 
 以上の座標変換はすべて、 2x3 の変換行列で表現することができます。複数の変換を組み合わせるには、結果として得られる行列を `matrix(a, b, c, d, e, f)` 変換で直接設定します。この変換は、以前の座標系から新しい座標系への座標の割り当てを，次のようにして行います。
 
-<math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x_{\mathrm{prevCoordSys}} = a x_{\mathrm{newCoordSys}} + c y_{\mathrm{newCoordSys}} + e \\ y_{\mathrm{prevCoordSys}} = b x_{\mathrm{newCoordSys}} + d y_{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics></math>
+<math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x\_{\mathrm{prevCoordSys}} = a x\_{\mathrm{newCoordSys}} + c y\_{\mathrm{newCoordSys}} + e \\ y\_{\mathrm{prevCoordSys}} = b x\_{\mathrm{newCoordSys}} + d y\_{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics></math>
 
 [SVG の transform のドキュメントにおける具体例](/ja/docs/Web/SVG/Attribute/transform#general_transformation)を参照してください。このプロパティに関する詳細情報は、[SVG 勧告](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined)で得ることができます。
 
@@ -88,9 +93,9 @@ l10n:
 
 ```html
 <svg width="100" height="100">
-    <g transform="scale(2)">
-        <rect width="50" height="50" />
-    </g>
+  <g transform="scale(2)">
+    <rect width="50" height="50" />
+  </g>
 </svg>
 ```
 

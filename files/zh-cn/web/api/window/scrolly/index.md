@@ -22,7 +22,7 @@ var y = window.scrollY;
 ```js
 // 保证刚好滚动到第二页
 if (window.scrollY) {
-  window.scroll(0, 0);  // 重置滚动位置为文档的左上角
+  window.scroll(0, 0); // 重置滚动位置为文档的左上角
 }
 
 window.scrollByPages(1);
@@ -42,10 +42,18 @@ window.pageYOffset == window.scrollY; // 总是返回 true
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollLeft
+  : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollTop
+  : document.body.scrollTop;
 ```
 
 ## 规范

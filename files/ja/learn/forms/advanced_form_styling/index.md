@@ -3,7 +3,6 @@ title: フォームへの高度なスタイル設定
 slug: Learn/Forms/Advanced_form_styling
 l10n:
   sourceCommit: 05324ee8658ea78ab284a736511581effbaf784b
-original_slug: Learn/Forms/Learn/Forms/Advanced_form_styling
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
@@ -59,26 +58,26 @@ original_slug: Learn/Forms/Learn/Forms/Advanced_form_styling
 <form>
   <p>
     <label for="search">search: </label>
-    <input id="search" name="search" type="search">
+    <input id="search" name="search" type="search" />
   </p>
   <p>
     <label for="text">text: </label>
-    <input id="text" name="text" type="text">
+    <input id="text" name="text" type="text" />
   </p>
   <p>
     <label for="date">date: </label>
-    <input id="date" name="date" type="datetime-local">
+    <input id="date" name="date" type="datetime-local" />
   </p>
   <p>
     <label for="radio">radio: </label>
-    <input id="radio" name="radio" type="radio">
+    <input id="radio" name="radio" type="radio" />
   </p>
   <p>
     <label for="checkbox">checkbox: </label>
-    <input id="checkbox" name="checkbox" type="checkbox">
+    <input id="checkbox" name="checkbox" type="checkbox" />
   </p>
-  <p><input type="submit" value="submit"></p>
-  <p><input type="button" value="button"></p>
+  <p><input type="submit" value="submit" /></p>
+  <p><input type="button" value="button" /></p>
 </form>
 ```
 
@@ -104,7 +103,7 @@ input {
 
 ```css
 input[type="search"] {
-    appearance: none;
+  appearance: none;
 }
 ```
 
@@ -125,19 +124,23 @@ input[type="search"] {
 例えば、シンプルなテストケースを考えてみます。
 
 ```html
-<label><span><input type="checkbox" name="q5" value="true"></span> True</label>
-<label><span><input type="checkbox" name="q5" value="false"></span> False</label>
+<label
+  ><span><input type="checkbox" name="q5" value="true" /></span> True</label
+>
+<label
+  ><span><input type="checkbox" name="q5" value="false" /></span> False</label
+>
 ```
 
 ```css
 span {
-    display: inline-block;
-    background: red;
+  display: inline-block;
+  background: red;
 }
 
 input[type="checkbox"] {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 ```
 
@@ -163,19 +166,19 @@ input[type="checkbox"] {
 
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="cherry">
+        <input type="checkbox" name="fruit" value="cherry" />
         I like cherry
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="banana" disabled>
+        <input type="checkbox" name="fruit" value="banana" disabled />
         I can't like banana
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="strawberry">
+        <input type="checkbox" name="fruit" value="strawberry" />
         I like strawberry
       </label>
     </p>
@@ -260,7 +263,7 @@ input[type="checkbox"]:disabled {
 
 ```css
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
   max-width: 400px;
 }
@@ -285,7 +288,12 @@ select {
   position: absolute;
 }
 
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -296,7 +304,10 @@ button, label, input, select, progress, meter {
   height: 30px;
 }
 
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -320,7 +331,12 @@ button {
 前の記事で述べたように、すべてのコントロールとそのラベルにグローバルな正規化 CSS を適用して、同じサイズになるようにし、親フォントを採用するなどの工夫をしています。
 
 ```css
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -335,7 +351,10 @@ button, label, input, select, progress, meter {
 コントロールに統一した影と角丸も与えて、意味のあるようにします。
 
 ```css
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -487,9 +506,9 @@ label[for="file"]:active {
 
 スタイル設定を制御したい場合は、この機能のカスタムソリューションを作ったり、[progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#例) のようなサードパーティのソリューションを使ったりした方が簡単です。
 
-## スキルをテストしましょう!
+## スキルテスト
 
-この記事の最後に到達しましたが、重要な情報を覚えていますか？次に進む前に、この情報を保持しているか検証するテストがあります — [Test your skills: Advanced styling](/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling) を見てください。心に留めておくこととして、この評価シリーズでの質問は、[次の記事](/ja/docs/Learn/Forms/UI_pseudo-classes)の知識も前提していてるので、試す前にその記事に取り組むとよいかもしれません。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Advanced styling](/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling) を見てください。心に留めておくこととして、この評価シリーズでの質問は、[次の記事](/ja/docs/Learn/Forms/UI_pseudo-classes)の知識も前提していてるので、試す前にその記事に取り組むとよいかもしれません。
 
 ## まとめ
 
@@ -498,22 +517,3 @@ HTML フォームで CSS を使用するのはまだ困難ですが、しばし�
 このガイドの次の記事では、現代のブラウザーでさまざまな状態のフォームをスタイル設定できるさまざまな [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)を見ていきます。
 
 {{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
-
-## このモジュール
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [ウェブフォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [ウェブフォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### 高度なトピック
-
-- [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

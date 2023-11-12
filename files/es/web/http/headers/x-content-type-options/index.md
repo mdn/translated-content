@@ -13,9 +13,9 @@ Los evaluadores de seguridad del sitio suelen esperar que este encabezado aparez
 
 > **Nota:** `nosniff` solo se aplican a los tipos "`script`" y "`style`". Además la aplicación de `nosniff` a las imágenes resulto ser [incompatible con los sitios web existentes](https://github.com/whatwg/fetch/issues/395).
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Sintaxis
 
@@ -34,9 +34,9 @@ X-Content-Type-Options: nosniff
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.X-Content-Type-Options")}}
+{{Compat}}
 
 ## Vea también
 

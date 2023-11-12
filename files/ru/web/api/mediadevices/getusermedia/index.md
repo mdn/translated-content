@@ -1,15 +1,15 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 Метод {{domxref("MediaDevices")}}**`.getUserMedia()`**, при выполнении, вызывает всплывающий диалог, запрашивающий разрешение пользователя на использование медиа устройства (камера, микрофон). Результат возвращает промис, содержащий поток, который состоит из треков (дорожек), содержащих требуемые медиа типы. Этот поток может включать, к примеру, видеотрек, созданный либо аппаратным средством, либо виртуальным видеоисточником, такими как камера, устройство видеозаписи, сервис обмена изображениями и т.д); аудиотрек, созданный физическим или виртуальным аудиоисточником, к примеру, микрофоном, аналого-цифровым преобразователем звуков и возможно иные типы треков.
 
 Он возвращает {{jsxref("Promise")}} , который, в случае согласия пользователя, разрешается {{domxref("MediaStream")}} объектом. Если пользователь отказывает в разрешении, или медиа устройство не доступно, тогда промис отменяется с объектами типа `NotAllowedError` или `NotFoundError` соответственно.
 
-> **Примечание:** **Примечание :** Возможно, что промис ни разрешиться, ни отмениться, в случае, когда пользователь не сделает выбор и запрос проигнорирует.
+> **Примечание:** Возможно, что промис ни разрешиться, ни отмениться, в случае, когда пользователь не сделает выбор и запрос проигнорирует.
 
 Обычно, разработчик получает доступ к единственному экземпляру объекта {{domxref("MediaDevices")}} , используя {{domxref("navigator.mediaDevices.getUserMedia()")}} метод, возвращающий поток:
 
@@ -20,7 +20,7 @@ async function getMedia(constraints) {
   try {
     stream = await navigator.mediaDevices.getUserMedia(constraints);
     /* используем поток */
-  } catch(err) {
+  } catch (err) {
     /* обработка ошибки */
   }
 }
@@ -29,16 +29,17 @@ async function getMedia(constraints) {
 Тот же результат, но используя тип промиса :
 
 ```js
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  /* используем поток */
-})
-.catch(function(err) {
-  /* обработка ошибки */
-});
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (stream) {
+    /* используем поток */
+  })
+  .catch(function (err) {
+    /* обработка ошибки */
+  });
 ```
 
-> **Примечание:** **Примечание :** Если документ загружен не безопасно, значение `navigator.mediaDevices` будет `undefined`, и нельзя будет использовать метод `getUserMedia()`. Смотри [Security](#security) для дополнительной информации о дальнейших вопросах безопасности, связанной с использованием метода `getUserMedia()`.
+> **Примечание:** Если документ загружен не безопасно, значение `navigator.mediaDevices` будет `undefined`, и нельзя будет использовать метод `getUserMedia()`. Смотри [Security](#security) для дополнительной информации о дальнейших вопросах безопасности, связанной с использованием метода `getUserMedia()`.
 
 ## Синтаксис
 
@@ -73,7 +74,7 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 
     Браузер попытается выполнить условие, но может вернуть видеотрек другого разрешения, если установленные требования невозможно удовлетворить (камера не обладает возможностью такого разрешения), или пользователь переопределяет условие.
 
-    Для минимального, максимального и точного определения значения можно использовать ключевые слова `min`, `max`, или `exac`. Следующий пример запрашивает минимальное разрешение камеры 1280x720:
+    Для минимального, максимального и точного определения значения можно использовать ключевые слова `min`, `max`, или `exact`. Следующий пример запрашивает минимальное разрешение камеры 1280x720:
 
     ```js
     {
@@ -128,13 +129,23 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
     Следующее строковое свойство - `deviceId` (идентификатор устройства). Его значение может быть получено из метода {{domxref("mediaDevices.enumerateDevices()")}}, возвращающего список, имеющихся на машине устройств, с их идентификаторами, и может быть использовано для запроса определённого устройства по идентификатору этого устройства:
 
     ```js
-    { video: { deviceId: идентификаторНужнойКамеры } }
+    {
+      video: {
+        deviceId: идентификаторНужнойКамеры;
+      }
+    }
     ```
 
     Код выше вернёт запрашиваемую камеру или другую камеру, если требуемая камера недоступна. Для получения доступа к потоку только определённой камеры, без альтернативы, используется свойство `exact` (точно) :
 
     ```js
-    { video: { deviceId: { exact: идентификаторНужнойКамеры } } }
+    {
+      video: {
+        deviceId: {
+          exact: идентификаторНужнойКамеры;
+        }
+      }
+    }
     ```
 
 ### Возвращаемое значение
@@ -193,11 +204,11 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 
 Существуют несколько способов управлением безопасностью и контролем в {{Glossary("user agent")}}. Для этого можно использовать метод `getUserMedia()` , который возвращает объекты ошибок, относящиеся к безопасности.
 
-> **Примечание:** **Примечание :** Модель безопасности для метода `getUserMedia()` находиться в процессе разработки. Первоначально спроектированный механизм безопасности находиться в процессе замещения Feature Policy, поэтому различные браузеры имеют разный уровень поддержки безопасности, используют различные механизмы. Вам необходимо осторожно тестировать свой код на различных устройствах и браузерах, чтобы удостовериться в его уверенной работоспособности.
+> **Примечание:** Модель безопасности для метода `getUserMedia()` находиться в процессе разработки. Первоначально спроектированный механизм безопасности находиться в процессе замещения Feature Policy, поэтому различные браузеры имеют разный уровень поддержки безопасности, используют различные механизмы. Вам необходимо осторожно тестировать свой код на различных устройствах и браузерах, чтобы удостовериться в его уверенной работоспособности.
 
 #### Feature Policy (Функциональная политика)
 
-Функция управление безопасностью ([Feature Policy](/ru/docs/Web/HTTP/Feature_Policy)) протокола {{Glossary("HTTP")}} находиться в процессе введения в браузеры, с поддержкой, доступной в различной степени во многих браузерах (но не всегда включённой в настройках по умолчанию, как в Firefox). Метод `getUserMedia()` - один из методов, требующий использования функциональной политики и вашему коду нужно быть готовым к работе с ним. К примеру, чтобы метод был доступен в документах не высокого уровня, разработчику нужно использовать либо атрибут {{htmlattrxref("allow", "iframe")}} на элементе {{HTMLElement("iframe")}} , который использует `getUserMedia()`, либо {{HTTPHeader("Feature-Policy")}} заголовок для страниц , передающихся с сервера, которые используют `getUserMedia()`.
+Функция управление безопасностью ([Feature Policy](/ru/docs/Web/HTTP/Feature_Policy)) протокола {{Glossary("HTTP")}} находиться в процессе введения в браузеры, с поддержкой, доступной в различной степени во многих браузерах (но не всегда включённой в настройках по умолчанию, как в Firefox). Метод `getUserMedia()` - один из методов, требующий использования функциональной политики и вашему коду нужно быть готовым к работе с ним. К примеру, чтобы метод был доступен в документах не высокого уровня, разработчику нужно использовать либо атрибут [`allow`](/ru/docs/Web/HTML/Element/iframe#allow) на элементе {{HTMLElement("iframe")}} , который использует `getUserMedia()`, либо {{HTTPHeader("Feature-Policy")}} заголовок для страниц , передающихся с сервера, которые используют `getUserMedia()`.
 
 Два разрешения, которые обращаются к `getUserMedia()` - `camera` и `microphone`.
 
@@ -230,9 +241,9 @@ Feature-Policy: microphone 'self' https://developer.mozilla.org
 
 Существуют несколько небезопасных способа загрузить документ, который может попытаться вызвать метод `getUserMedia()`. Ниже представлены примеры ситуаций, в которых `getUserMedia()` не разрешается вызывать:
 
-- Документ, загруженный в песочницу {{HTMLElement("iframe")}} элемента не может вызвать `getUserMedia()`, до тех пор пока, на элементе `<iframe>` находиться атрибут {{htmlattrxref("sandbox", "iframe")}}, установленный в значение `allow-same-origin`.
+- Документ, загруженный в песочницу {{HTMLElement("iframe")}} элемента не может вызвать `getUserMedia()`, до тех пор пока, на элементе `<iframe>` находиться атрибут [`sandbox`](/ru/docs/Web/HTML/Element/iframe#sandbox), установленный в значение `allow-same-origin`.
 - Документ, загруженный по протоколам `data://` или `blob://` в URL-адресе, не имеющий источника (такими являются типы URL-ов, введённые пользователями в строке адреса браузера) не может вызвать `getUserMedia()`. Подобные типы URL-ов, загружаемые из JavaScript-кода, наследуют разрешения скрипта.
-- Иные ситуации, документы которых не имеют источника, к примеру элемент, содержащий атрибут {{htmlattrxref("srcdoc", "iframe")}}, использующийся для указания содержимого фрейма.
+- Иные ситуации, документы которых не имеют источника, к примеру элемент, содержащий атрибут [`srcdoc`](/ru/docs/Web/HTML/Element/iframe#srcdoc), использующийся для указания содержимого фрейма.
 
 ## Примеры
 
@@ -244,15 +255,18 @@ Feature-Policy: microphone 'self' https://developer.mozilla.org
 // Выбирает разрешение камеры близкое к 1280x720.
 var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) {
-  var video = document.querySelector('video');
-  video.srcObject = mediaStream;
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (mediaStream) {
+    var video = document.querySelector("video");
+    video.srcObject = mediaStream;
+    video.onloadedmetadata = function (e) {
+      video.play();
+    };
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
+  }); // always check for errors at the end.
 ```
 
 ### Использование новых API в старых браузерах
@@ -273,44 +287,47 @@ if (navigator.mediaDevices === undefined) {
 //getUserMedia , если оно отсутствует.
 
 if (navigator.mediaDevices.getUserMedia === undefined) {
-  navigator.mediaDevices.getUserMedia = function(constraints) {
-
+  navigator.mediaDevices.getUserMedia = function (constraints) {
     // Сначала, если доступно, получим устаревшее getUserMedia
 
-  var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+    var getUserMedia =
+      navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-   //Некоторые браузеры не реализуют его, тогда вернём отменённый промис
-   // с ошибкой для поддержания последовательности интерфейса
+    //Некоторые браузеры не реализуют его, тогда вернём отменённый промис
+    // с ошибкой для поддержания последовательности интерфейса
 
     if (!getUserMedia) {
-      return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+      return Promise.reject(
+        new Error("getUserMedia is not implemented in this browser"),
+      );
     }
 
     // Иначе, обернём промисом устаревший navigator.getUserMedia
 
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       getUserMedia.call(navigator, constraints, resolve, reject);
     });
-  }
+  };
 }
 
-navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-.then(function(stream) {
-  var video = document.querySelector('video');
-  // Устаревшие браузеры могут не иметь свойство srcObject
-  if ("srcObject" in video) {
-    video.srcObject = stream;
-  } else {
-    // Не используем в новых браузерах
-    video.src = window.URL.createObjectURL(stream);
-  }
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: true })
+  .then(function (stream) {
+    var video = document.querySelector("video");
+    // Устаревшие браузеры могут не иметь свойство srcObject
+    if ("srcObject" in video) {
+      video.srcObject = stream;
+    } else {
+      // Не используем в новых браузерах
+      video.src = window.URL.createObjectURL(stream);
+    }
+    video.onloadedmetadata = function (e) {
+      video.play();
+    };
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
+  });
 ```
 
 ### Частота кадров
@@ -327,9 +344,11 @@ var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 
 ```js
 var front = false;
-document.getElementById('flip-button').onclick = function() { front = !front; };
+document.getElementById("flip-button").onclick = function () {
+  front = !front;
+};
 
-var constraints = { video: { facingMode: (front? "user" : "environment") } };
+var constraints = { video: { facingMode: front ? "user" : "environment" } };
 ```
 
 ## Спецификации

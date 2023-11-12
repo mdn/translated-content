@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: unterminated string literal'
+title: "SyntaxError: unterminated string literal"
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
 
@@ -42,17 +42,19 @@ var longString = 'This is a very long string which needs
 代わりに、[+ 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition) かバックスラッシュ、[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals) を使用します。`+` 演算子の場合、次のようになります。
 
 ```js example-good
-var longString = 'This is a very long string which needs ' +
-                 'to wrap across multiple lines because ' +
-                 'otherwise my code is unreadable.';
+var longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 または、文字列が次のように続くことを示すために、各行の終わりにバックスラッシュ文字（"\\"）を使用することもできます。バックスラッシュの後に、 (改行を除いて) スペースや文字、インデントを入れないようにしてください。そうしないと動作しません。バックスラッシュの場合、次のようになります。
 
 ```js example-good
-var longString = 'This is a very long string which needs \
+var longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable.';
+otherwise my code is unreadable.";
 ```
 
 ECMAScript 2015 環境でサポートされている[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)を使っても改行可能です。

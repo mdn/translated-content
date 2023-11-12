@@ -1,6 +1,6 @@
 ---
 title: CSSOM View
-slug: Web/CSS/CSSOM_View
+slug: Web/CSS/CSSOM_view
 ---
 
 {{CSSRef}}
@@ -26,4 +26,4 @@ slug: Web/CSS/CSSOM_View
 
 ### `scroll-behavior` プロパティ
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

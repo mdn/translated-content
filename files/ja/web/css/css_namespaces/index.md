@@ -1,6 +1,6 @@
 ---
 title: CSS 名前空間
-slug: Web/CSS/CSS_Namespaces
+slug: Web/CSS/CSS_namespaces
 ---
 
 {{CSSRef}}
@@ -21,4 +21,4 @@ slug: Web/CSS/CSS_Namespaces
 
 ### `@namespace` ルール
 
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

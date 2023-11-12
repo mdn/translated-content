@@ -1,6 +1,6 @@
 ---
 title: Console.log()
-slug: Web/API/Console/log
+slug: Web/API/console/log
 ---
 
 {{APIRef("Console API")}}Muestra un mensaje en la consola web (o del intérprete JavaScript).
@@ -31,24 +31,7 @@ Vea "[Mostrando texto en la consola](/es/docs/DOM/console#Outputting_text_to_the
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.console.log")}}
-
-## Diferencia con console.dir()
-
-Te preguntarás cual es la diferencia entre console.dir() y console.log().
-
-Una diferencia útil en Chrome es cuando envías elementos DOM a la consola.
-
-![](http://i.imgur.com/DozDcYR.png)
-
-Importante:
-
-- `console.log` muestra el elemento en un árbol HTML
-- `console.dir` muestra el elemento en un árbol JSON
-
-Específicamente, `console.log` brinda un tratamiento especial a los elementos del DOM, mientras que console.dir no. Esto es útil a menudo cuando intentas ver la representación completa del objeto JavaScript del DOM.
-
-Hay mas información en la [referencia de la API Console de Chrome](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject) acerca de esto y otras funciones.
+{{Compat}}
 
 ## Ver también
 

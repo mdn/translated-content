@@ -3,9 +3,9 @@ title: style
 slug: Web/SVG/Attribute/style
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-**`style`** 属性指定了指定其元素的样式信息。它的功能与 HTML 中的[style](/zh-CN/docs/Web/HTML/Global_attributes/style)属性相同。
+**`style`** 属性指定了指定其元素的样式信息。它的功能与 HTML 中的 [style](/zh-CN/docs/Web/HTML/Global_attributes/style) 属性相同。
 
 ## 使用环境
 
@@ -23,8 +23,12 @@ slug: Web/SVG/Attribute/style
 
 ```html
 <svg version="1.1" viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-  <rect height="300" width="600" x="200" y="100"
-     style="fill: red; stroke: blue; stroke-width: 3"/>
+  <rect
+    height="300"
+    width="600"
+    x="200"
+    y="100"
+    style="fill: red; stroke: blue; stroke-width: 3" />
 </svg>
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: ブロック、絶対配置、表レイアウトのブロック配置
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 ---
 
 [ボックス配置仕様書](/ja/docs/Web/CSS/CSS_Box_Alignment)は、様々なレイアウト方式でどのように配置が動作するかを詳説しています。このページでは、ボックス配置は浮動、位置指定、表要素を含むボックスレイアウトのレイアウトでどのように動作するかを明らかにします。このページはブロックレイアウトとボックス配置に固有のことを詳説するため、様々なレイアウト方式に共通のボックス配置の共通機能について説明している、中心となる[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)ページを併せて読んでください。

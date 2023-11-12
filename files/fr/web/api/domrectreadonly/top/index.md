@@ -1,14 +1,6 @@
 ---
 title: DOMRectReadOnly.top
 slug: Web/API/DOMRectReadOnly/top
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Haut
-  - Propriétés
-  - Rectangle
-translation_of: Web/API/DOMRectReadOnly/top
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

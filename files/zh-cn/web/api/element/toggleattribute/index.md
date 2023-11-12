@@ -36,8 +36,7 @@ Element.toggleAttribute(name [, force]);
 ### HTML
 
 ```html
-<input value="text">
-<button>toggleAttribute("readonly")</button>
+<input value="text" /> <button>toggleAttribute("readonly")</button>
 ```
 
 ### JavaScript
@@ -46,7 +45,7 @@ Element.toggleAttribute(name [, force]);
 var button = document.querySelector("button");
 var input = document.querySelector("input");
 
-button.addEventListener("click", function(){
+button.addEventListener("click", function () {
   input.toggleAttribute("readonly");
 });
 ```
@@ -63,8 +62,8 @@ button.addEventListener("click", function(){
 
 ```js
 if (!Element.prototype.toggleAttribute) {
-  Element.prototype.toggleAttribute = function(name, force) {
-    if(force !== void 0) force = !!force
+  Element.prototype.toggleAttribute = function (name, force) {
+    if (force !== void 0) force = !!force;
 
     if (this.getAttribute(name) !== null) {
       if (force) return true;

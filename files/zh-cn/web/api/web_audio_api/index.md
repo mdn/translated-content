@@ -13,7 +13,7 @@ Web Audio API 使用户可以在**音频上下文**（AudioContext）中进行�
 
 音频节点通过它们的输入输出相互连接，形成一个链或者一个简单的网。一般来说，这个链或网起始于一个或多个音频源。音频源可以提供一个片段一个片段的音频采样数据（以数组的方式），一般，一秒钟的音频数据可以被切分成几万个这样的片段。这些片段可以是经过一些数学运算得到（比如{{domxref("OscillatorNode")}}），也可以是音频或视频的文件读出来的（比如{{domxref("AudioBufferSourceNode")}}和{{domxref("MediaElementAudioSourceNode")}}），又或者是音频流（{{domxref("MediaStreamAudioSourceNode")}}）。其实，音频文件本身就是声音的采样数据，这些采样数据可以来自麦克风，也可以来自电子乐器，然后混合成一个单一的复杂的波形。
 
-这些节点的输出可以连接到其它节点的输入上，然后新节点可以对接收到的采样数据再进行其它的处理，再形成一个结果流。一个最常见的操作是通过把输入的采样数据放大来达到扩音器的作用（缩小就是一个弱音器）（参见{{domxref("GainNode")}}）。声音处理完成之后，可以连接到一个目的地（{{domxref("AudioContext.destination")}}），这个目的地负责把声音数据传输给扬声器或者耳机。注意，只有当用户期望听到声音时，才需要进行最后一个这个连接。
+这些节点的输出可以连接到其他节点的输入上，然后新节点可以对接收到的采样数据再进行其他的处理，再形成一个结果流。一个最常见的操作是通过把输入的采样数据放大来达到扩音器的作用（缩小就是一个弱音器）（参见{{domxref("GainNode")}}）。声音处理完成之后，可以连接到一个目的地（{{domxref("AudioContext.destination")}}），这个目的地负责把声音数据传输给扬声器或者耳机。注意，只有当用户期望听到声音时，才需要进行最后一个这个连接。
 
 一个简单而典型的 web audio 流程如下：
 
@@ -40,7 +40,7 @@ Web Audio API 共有一系列接口和相关的事件，我们已经把它们分
 Web Audio API 中与生成音频图相关的定义与通用容器。
 
 - {{domxref("AudioContext")}}
-  - : **`AudioContext`** 接口代表由音频模块构成的音频处理图。音频上下文控制其所包含节点的创建和音频处理、解码。使用其它接口前你必需创建一个`音频上下文`，一切操作都在这个环境里进行。
+  - : **`AudioContext`** 接口代表由音频模块构成的音频处理图。音频上下文控制其所包含节点的创建和音频处理、解码。使用其他接口前你必需创建一个`音频上下文`，一切操作都在这个环境里进行。
 - {{domxref("AudioNode")}}
   - : **`音频节点`** 接口是一个音频处理模块，例如音频源（{{HTMLElement("audio")}}或{{HTMLElement("video")}}），音频输出、中间处理模块（例如：滤波器 {{domxref("BiquadFilterNode")}} 或者音量控制器 {{domxref("GainNode")}}）。
 - {{domxref("AudioParam")}}
@@ -95,7 +95,7 @@ Web Audio API 使用的音频源接口。
 
 ### 数据分析和可视化
 
-如果你想从音频里提取时间、频率或者其它数据，你需要 AnalyserNode。
+如果你想从音频里提取时间、频率或者其他数据，你需要 AnalyserNode。
 
 - {{domxref("AnalyserNode")}}
   - : **`AnalyserNode`** 表示一个可以提供实时频率分析与时域分析的切点，这些分析数据可以用做数据分析和可视化。
@@ -144,7 +144,7 @@ Web Audio API 使用的音频源接口。
 
 ### 音频工作者
 
-在了解这一部分内容之前，你可以先了解一个新的 WebWorker 方面的内容。音频工作者提供了一种可以在一个[WebWorker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)上下文中直接进行音频处理的方式。现在已经定义了一些这部分功能的新接口，接口定义是在 2014 年的 8 月 29 日文档中。到目前为止，还没有浏览器已经对这些接口进行了实现。当这些接口被实现后，{{domxref("ScriptProcessorNode")}}和[前文](/zh-CN/docs/Web/API/Web_Audio_API#Audio_processing_via_JavaScript)中提到的其它接口都会被替代。
+在了解这一部分内容之前，你可以先了解一个新的 WebWorker 方面的内容。音频工作者提供了一种可以在一个[WebWorker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)上下文中直接进行音频处理的方式。现在已经定义了一些这部分功能的新接口，接口定义是在 2014 年的 8 月 29 日文档中。到目前为止，还没有浏览器已经对这些接口进行了实现。当这些接口被实现后，{{domxref("ScriptProcessorNode")}}和[前文](/zh-CN/docs/Web/API/Web_Audio_API#Audio_processing_via_JavaScript)中提到的其他接口都会被替代。
 
 - {{domxref("AudioWorkerNode")}}
   - : AudioWorkerNode 也是{{domxref("AudioNode")}}类型，但是它用于与工作者线程合作来直接完成音频的生成，处理或分析等操作。
@@ -174,7 +174,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // defi
 
 var voiceSelect = document.getElementById("voice"); // select box for selecting voice effect options
 var visualSelect = document.getElementById("visual"); // select box for selecting audio visualization options
-var mute = document.querySelector('.mute'); // mute button
+var mute = document.querySelector(".mute"); // mute button
 var drawVisual; // requestAnimationFrame
 
 var analyser = audioCtx.createAnalyser();
@@ -182,28 +182,29 @@ var distortion = audioCtx.createWaveShaper();
 var gainNode = audioCtx.createGain();
 var biquadFilter = audioCtx.createBiquadFilter();
 
-function makeDistortionCurve(amount) { // function to make curve shape for distortion/wave shaper node to use
-  var k = typeof amount === 'number' ? amount : 50,
+function makeDistortionCurve(amount) {
+  // function to make curve shape for distortion/wave shaper node to use
+  var k = typeof amount === "number" ? amount : 50,
     n_samples = 44100,
     curve = new Float32Array(n_samples),
     deg = Math.PI / 180,
     i = 0,
     x;
-  for ( ; i < n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  for (; i < n_samples; ++i) {
+    x = (i * 2) / n_samples - 1;
+    curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
   }
   return curve;
-};
+}
 
-navigator.getUserMedia (
+navigator.getUserMedia(
   // constraints - only audio needed for this app
   {
-    audio: true
+    audio: true,
   },
 
   // Success callback
-  function(stream) {
+  function (stream) {
     source = audioCtx.createMediaStreamSource(stream);
     source.connect(analyser);
     analyser.connect(distortion);
@@ -213,13 +214,12 @@ navigator.getUserMedia (
 
     visualize(stream);
     voiceChange();
-
   },
 
   // Error callback
-  function(err) {
-    console.log('The following gUM error occured: ' + err);
-  }
+  function (err) {
+    console.log("The following gUM error occured: " + err);
+  },
 );
 
 function visualize(stream) {
@@ -229,7 +229,7 @@ function visualize(stream) {
   var visualSetting = visualSelect.value;
   console.log(visualSetting);
 
-  if(visualSetting == "sinewave") {
+  if (visualSetting == "sinewave") {
     analyser.fftSize = 2048;
     var bufferLength = analyser.frequencyBinCount; // half the FFT value
     var dataArray = new Uint8Array(bufferLength); // create an array to store the data
@@ -237,28 +237,26 @@ function visualize(stream) {
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
     function draw() {
-
       drawVisual = requestAnimationFrame(draw);
 
       analyser.getByteTimeDomainData(dataArray); // get waveform data and put it into the array created above
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)'; // draw wave with canvas
+      canvasCtx.fillStyle = "rgb(200, 200, 200)"; // draw wave with canvas
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
       canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
       canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
+      var sliceWidth = (WIDTH * 1.0) / bufferLength;
       var x = 0;
 
-      for(var i = 0; i < bufferLength; i++) {
-
+      for (var i = 0; i < bufferLength; i++) {
         var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        var y = (v * HEIGHT) / 2;
 
-        if(i === 0) {
+        if (i === 0) {
           canvasCtx.moveTo(x, y);
         } else {
           canvasCtx.lineTo(x, y);
@@ -267,54 +265,52 @@ function visualize(stream) {
         x += sliceWidth;
       }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
+      canvasCtx.lineTo(canvas.width, canvas.height / 2);
       canvasCtx.stroke();
-    };
+    }
 
     draw();
-
-  } else if(visualSetting == "off") {
+  } else if (visualSetting == "off") {
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
     canvasCtx.fillStyle = "red";
     canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
   }
-
 }
 
 function voiceChange() {
-  distortion.curve = new Float32Array;
+  distortion.curve = new Float32Array();
   biquadFilter.gain.value = 0; // reset the effects each time the voiceChange function is run
 
   var voiceSetting = voiceSelect.value;
   console.log(voiceSetting);
 
-  if(voiceSetting == "distortion") {
+  if (voiceSetting == "distortion") {
     distortion.curve = makeDistortionCurve(400); // apply distortion to sound using waveshaper node
-  } else if(voiceSetting == "biquad") {
+  } else if (voiceSetting == "biquad") {
     biquadFilter.type = "lowshelf";
     biquadFilter.frequency.value = 1000;
     biquadFilter.gain.value = 25; // apply lowshelf filter to sounds using biquad
-  } else if(voiceSetting == "off") {
+  } else if (voiceSetting == "off") {
     console.log("Voice settings turned off"); // do nothing, as off option was chosen
   }
-
 }
 
 // event listeners to change visualize and voice settings
 
-visualSelect.onchange = function() {
+visualSelect.onchange = function () {
   window.cancelAnimationFrame(drawVisual);
   visualize(stream);
-}
+};
 
-voiceSelect.onchange = function() {
+voiceSelect.onchange = function () {
   voiceChange();
-}
+};
 
 mute.onclick = voiceMute;
 
-function voiceMute() { // toggle to mute and unmute sound
-  if(mute.id == "") {
+function voiceMute() {
+  // toggle to mute and unmute sound
+  if (mute.id == "") {
     gainNode.gain.value = 0; // gain set to 0 to mute sound
     mute.id = "activated";
     mute.innerHTML = "Unmute";

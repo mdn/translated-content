@@ -1,13 +1,6 @@
 ---
 title: <animate>
 slug: Web/SVG/Element/animate
-tags:
-  - NeedsUpdate
-  - SVG
-  - SVG Animation
-  - svg анимация
-translation_of: Web/SVG/Element/animate
-original_slug: Web/SVG/Элемент/animate
 ---
 
 {{SVGRef}}
@@ -47,7 +40,7 @@ original_slug: Web/SVG/Элемент/animate
 
 ## DOM интерфейс
 
-Элемент реализует [`SVGAnimateElement`](/en-US/docs/Web/DOM/SVGAnimateElement) интерфейс .
+Элемент реализует [`SVGAnimateElement`](/ru/docs/Web/DOM/SVGAnimateElement) интерфейс .
 
 ## Спецификации
 

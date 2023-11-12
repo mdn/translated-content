@@ -1,7 +1,6 @@
 ---
 title: Router (ルーター)
-slug: Glossary/routers
-original_slug: Glossary/ルーター
+slug: Glossary/Routers
 ---
 
 ウェブでは**ルーター**には 3 つの定義があります。

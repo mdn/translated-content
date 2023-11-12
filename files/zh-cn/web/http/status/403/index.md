@@ -17,7 +17,7 @@ slug: Web/HTTP/Status/403
 
 ## 响应示例
 
-```plain
+```http
 HTTP/1.1 403 Forbidden
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```
@@ -30,7 +30,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPStatus("401")}}
-- [403 forbidden error](https://www.exai.com/blog/403-forbidden)
+- [http 状态码定义](https://httpwg.org/specs/rfc9110.html#status.403)

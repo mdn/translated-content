@@ -5,58 +5,58 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### Before you start
+        ### Antes de comenzar
 
-        **Want to change this page yourself?** This content is open source!
-        ↩ Go back and use the _Edit on GitHub_ link on the page.
+        **¿Quiere cambiar esta página usted mismo?** ¡Este contenido es de código abierto!
+        ↩ Regrese a la página y use el enlace _Editar en GitHub_.
 
-        **Is your issue about the browser compatibility table?**
-        ↩ Go back and use the _Report problems with this compatibility data on GitHub_ link on the page.
+        **¿El problema es acerca de la tabla de compatibilidad con los navegadores?**
+        ↩ Regrese a la página y use el enlace _Reportar problemas con los datos de compatibilidad en GitHub_.
 
-        **Need help with a browser?**
-        🙋 To get help with [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), or another browser, check the browser's support site.
+        **¿Necesita ayuda con su navegador?**
+        🙋 Para obtener ayuda con [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), o algún otro navegador, visite la página de soporte del navegador.
 
         ---
   - type: input
     id: mdn-url
     attributes:
       label: MDN URL
-      description: Set automatically. Do not modify.
+      description: Se establece automáticamente. No modificar.
     validations:
       required: true
   - type: input
     id: section
     attributes:
-      label: What specific section or headline is this issue about?
+      label: ¿De qué sección específica o titular trata este problema?
   - type: textarea
     id: problem
     attributes:
-      label: What information was incorrect, unhelpful, or incomplete?
+      label: ¿Qué información es incorrecta, inútil o incompleta?
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: What did you expect to see?
+      label: ¿Qué esperaba ver?
     validations:
       required: true
   - type: textarea
     id: references
     attributes:
-      label: Do you have any supporting links, references, or citations?
-      description: Link to information that helps us confirm your issue.
+      label: ¿Tiene algún enlace de apoyo, referencias o citas?
+      description: Enlace a información que nos ayude a confirmar el problema.
   - type: textarea
     id: more-info
     attributes:
-      label: Do you have anything more you want to share?
-      description: For example, steps to reproduce a bug, screenshots, screen recordings, or sample code
+      label: ¿Tiene algo más que quiera compartir?
+      description: Por ejemplo, pasos para reproducir el error, capturas, grabaciones de pantalla, o algún código de ejemplo.
   - type: markdown
     attributes:
       value: |
         ---
-        You're finished! The following fields are prefilled. Please click **Submit new issue**.
+        ¡Haz terminado! Los siguientes campos están prellenados. Por favor haga clic en **Submit new issue**.
   - type: textarea
     id: metadata
     attributes:
       label: MDN metadata
-      description: Set automatically. Do not modify.
+      description: Se establece automáticamente. No modificar.

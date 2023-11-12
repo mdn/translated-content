@@ -1,7 +1,6 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/reject
 ---
 
 {{JSRef}}
@@ -34,20 +33,23 @@ La función estática `Promise.reject` retorna un objecto {{jsxref("Promise")}} 
 ### Usando el método estático Promise.reject()
 
 ```js
-Promise.reject(new Error('fail')).then(function() {
-  // no entra en esta función
-}, function(error) {
-  console.log(error); // Stacktrace
-});
+Promise.reject(new Error("fail")).then(
+  function () {
+    // no entra en esta función
+  },
+  function (error) {
+    console.log(error); // Stacktrace
+  },
+);
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Promise.reject")}}
+{{Compat}}
 
 ## Ver también
 

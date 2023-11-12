@@ -1,17 +1,13 @@
 ---
-title: CSSKeyframesRule.cssRules
+title: "CSSKeyframesRule: cssRules プロパティ"
 slug: Web/API/CSSKeyframesRule/cssRules
+l10n:
+  sourceCommit: 4da6c30730190b55e9b405711fedf6cdc755972d
 ---
 
 {{APIRef("CSSOM") }}
 
-**`cssRules`** は {{domxref("CSSKeyframeRule")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CSSRuleList")}} で keyframes {{cssxref("at-rule", "アットルール")}}のルールを返します。
-
-## 構文
-
-```js
-var cssRules = CSSKeyframesRule.cssRules;
-```
+**`cssRules`** は {{domxref("CSSKeyframeRule")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CSSRuleList")}} で keyframes [アットルール](/ja/docs/Web/CSS/At-rule)のルールを返します。
 
 ### 値
 

@@ -9,8 +9,10 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 
 ## 用法
 
-```plain
-typedarray.subarray([begin [,end]])
+```js-nolint
+subarray()
+subarray(begin)
+subarray(begin, end)
 ```
 
 ### 参数
@@ -39,13 +41,13 @@ typedarray.subarray([begin [,end]])
 ```js
 var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+uint8.set([1, 2, 3]);
 
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 
-var sub = uint8.subarray(0,4);
+var sub = uint8.subarray(0, 4);
 
-console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
+console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
 ```
 
 ## Specifications

@@ -1,9 +1,8 @@
 ---
 title: Понимание JavaScript-фреймворков для фронтенда
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-original_slug: Learn/Tools_and_testing/Фронтенд_JavaScript_фреймворки
 ---
+
 {{LearnSidebar}}
 JavaScript-фреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированныеинструменты для создания масштабируемых и интерактивных веб-приложений. Многиесовременные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
 
@@ -32,7 +31,7 @@ Your code will be richer and more professional as a result, and you'll be able t
 - [1. Introduction to client-side frameworks](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
   - : We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
 - [2. Framework main features](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-  - : Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of “the big 4” frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
+  - : Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of "the big 4" frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
 
 ## React tutorials
 
@@ -43,9 +42,9 @@ Your code will be richer and more professional as a result, and you'll be able t
 - [1. Getting started with React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - : In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app, learning a bit about how React works in the process.
 - [2. Beginning our React todo list](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - : Let's say that we’ve been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
+  - : Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
 - [3. Componentizing our React app](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - : At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn’t have any hard rules for what is and isn’t a component – that’s up to you! In this article we will show you a sensible way to break our app up into components.
+  - : At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn't have any hard rules for what is and isn't a component – that's up to you! In this article we will show you a sensible way to break our app up into components.
 - [4. React interactivity: Events and state](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - : With our component plan worked out, it's now time to start updating our app from a completely static UI to one that actually allows us to interact and change things. In this article we'll do this, digging into events and state along the way.
 - [5. React interactivity: Editing, filtering, conditional rendering](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)

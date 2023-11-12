@@ -3,7 +3,7 @@ title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
 
-{{JSRef}}**`Math.random()`** 函数返回一个浮点数，伪随机数在范围从**0 到**小于**1**，也就是说，从 0（包括 0）往上，但是不包括 1（排除 1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。
+{{JSRef}}**`Math.random()`** 函数返回一个浮点数，伪随机数在范围从**0 到**小于**1**，也就是说，从 0（包括 0）往上，但是不包括 1（排除 1），然后你可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。
 
 {{EmbedInteractiveExample("pages/js/math-random.html")}}
 

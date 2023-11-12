@@ -94,10 +94,10 @@ MPEG-DASH をサポートしないブラウザのためのフォールバック�
 
 ```html
 <video>
-  <source src="my.mpd" type="application/dash+xml">
+  <source src="my.mpd" type="application/dash+xml" />
   <!-- fallback -->
-  <source src="my.mp4" type="video/mp4">
-  <source src="my.webm" type="video/webm">
+  <source src="my.mp4" type="video/mp4" />
+  <source src="my.webm" type="video/webm" />
 </video>
 ```
 
@@ -192,10 +192,10 @@ MPEG-DASH をサポートしないブラウザのためのフォールバック�
 
 ```html
 <video>
-  <source src="my.mpd" type="application/dash+xml">
+  <source src="my.mpd" type="application/dash+xml" />
   <!-- fallback -->
-  <source src="my.mp4" type="video/mp4">
-  <source src="my.webm" type="video/webm">
+  <source src="my.mp4" type="video/mp4" />
+  <source src="my.webm" type="video/webm" />
 </video>
 ```
 

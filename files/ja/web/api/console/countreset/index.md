@@ -14,8 +14,8 @@ l10n:
 ## 構文
 
 ```js
-countReset()
-countReset(label)
+countReset();
+countReset(label);
 ```
 
 ### 引数

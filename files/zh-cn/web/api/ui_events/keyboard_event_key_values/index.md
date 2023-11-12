@@ -91,7 +91,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
     <tr>
       <td><code>"AltGraph"</code> [5]</td>
       <td>
-        <kbd>AltGr</kbd>或<kbd>AltGraph</kbd>（Alternate Graphics）键。 启用 ISO
+        <kbd>AltGr</kbd>或<kbd>AltGraph</kbd>（Alternate Graphics）键。启用 ISO
         Level 3 移位修改器（其中<kbd>Shift</kbd>是 2 级修改器）。
       </td>
       <td></td>
@@ -115,7 +115,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
     </tr>
     <tr>
       <td><code>"CapsLock"</code></td>
-      <td>大写锁定键。 打开和关闭大写字符锁以进行后续输入。</td>
+      <td>大写锁定键。打开和关闭大写字符锁以进行后续输入。</td>
       <td><code>VK_CAPITAL</code> (0x14)</td>
       <td><code>kVK_CapsLock</code> (0x39)</td>
       <td>
@@ -194,7 +194,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
     <tr>
       <td><code>"Meta"</code> [1]</td>
       <td>
-        <kbd>Meta</kbd>键。 允许发出特殊命令输入。
+        <kbd>Meta</kbd>键。允许发出特殊命令输入。
         这是<kbd>Windows</kbd>徽标键，或<kbd>Mac</kbd>键盘上的<kbd>Command</kbd>或⌘键。
       </td>
       <td><code>VK_LWIN</code> (0x5B)<br /><code>VK_RWIN</code> (0x5C)</td>
@@ -303,7 +303,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
   </thead>
 </table>
 
-\[1] In Internet Explorer 9, as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, and `GDK_KEY_Hyper_R (0xFFEE)` on Linux.
+\[1] In Internet Explorer 9, as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per [Firefox bug 1232918](https://bugzil.la/1232918). Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, and `GDK_KEY_Hyper_R (0xFFEE)` on Linux.
 
 \[2] Internet Explorer 9 reports `"Scroll"` instead of `"ScrollLock"` for the <kbd>Scroll Lock</kbd> key.
 
@@ -311,7 +311,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
 
 \[4] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
 
-\[5] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug {{bug(900750)}} and [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) for further details.
+\[5] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug [Firefox bug 900750](https://bugzil.la/900750) and [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) for further details.
 
 ## Whitespace keys
 

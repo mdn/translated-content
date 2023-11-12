@@ -1,8 +1,9 @@
 ---
-title: CacheStorage.match()
+title: "CacheStorage: match() メソッド"
+short-title: match()
 slug: Web/API/CacheStorage/match
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Service Workers API")}}
@@ -77,7 +78,7 @@ self.addEventListener("fetch", (event) => {
           })
           .catch(() => caches.match("/gallery/myLittleVader.jpg"));
       }
-    })
+    }),
   );
 });
 ```

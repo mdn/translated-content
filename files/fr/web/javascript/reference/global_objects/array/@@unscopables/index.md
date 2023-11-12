@@ -1,14 +1,6 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@unscopables
 ---
 
 {{JSRef}}
@@ -18,7 +10,7 @@ La propriété symbol **`@@unscopable`** contient les noms des propriétés qui 
 ## Syntaxe
 
 ```js
-arr[Symbol.unscopables]
+arr[Symbol.unscopables];
 ```
 
 ## Description
@@ -36,7 +28,7 @@ Le code qui suit fonctionne bien pour ES5 et les versions antérieures. En revan
 ```js
 var keys = [];
 
-with(Array.prototype) {
+with (Array.prototype) {
   keys.push("something");
 }
 

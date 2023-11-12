@@ -1,11 +1,6 @@
 ---
 title: <rect>
 slug: Web/SVG/Element/rect
-tags:
-  - SVG
-  - SVG Element
-  - SVG Reference
-translation_of: Web/SVG/Element/rect
 ---
 
 {{SVGRef}}
@@ -19,7 +14,11 @@ L'élément `rect` est un élément de Formes basiques, utilisé pour dessiner d
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -60,9 +59,9 @@ html,body,svg { height:100% }
 
 Cet élément implémente l'interface [`SVGRectElement`](/fr/DOM/SVGRectElement) .
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("svg.elements.rect")}}
+{{Compat}}
 
 ## Voir aussi
 

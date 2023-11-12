@@ -1,10 +1,6 @@
 ---
 title: Создание контента для редактирования
 slug: conflicting/Web/HTML/Global_attributes/contenteditable
-tags:
-  - HTML5
-  - contenteditable
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Editable_content
 ---
 
@@ -12,7 +8,7 @@ original_slug: Web/Guide/HTML/Editable_content
 
 ## Как это работает?
 
-Все, что вам нужно сделать, это установить атрибут {{htmlattrxref("contenteditable")}} почти на любой элемент HTML, чтобы сделать его доступным для редактирования.
+Все, что вам нужно сделать, это установить атрибут [`contenteditable`](/ru/docs/Web/HTML/Global_attributes#contenteditable) почти на любой элемент HTML, чтобы сделать его доступным для редактирования.
 
 Вот простой пример, который создаёт элемент {{HTMLElement("div")}}, содержимое которого пользователь может редактировать.
 
@@ -242,6 +238,6 @@ function printDoc() {
 ## Смотрите также
 
 - {{domxref("HTMLElement.contentEditable")}}
-- {{htmlattrxref("contenteditable")}} глобальный атрибут
+- [`contenteditable`](/ru/docs/Web/HTML/Global_attributes#contenteditable) глобальный атрибут
 - [Midas](/ru/docs/Mozilla/Projects/Midas) (компонент сценария для текстового редактора)
 - {{cssxref("caret-color")}}, позволяющий установить цвет вставляемого текста

@@ -19,9 +19,9 @@ var str = channel.name;
 
 ```js
 // 连接到指定频道
-var bc = new BroadcastChannel('test_channel');
+var bc = new BroadcastChannel("test_channel");
 
-// 其它操作 (如：postMessage, …)
+// 其他操作 (如：postMessage, …)
 
 // 在控制台打印频道名称
 console.log(bc.name); // "test_channel"

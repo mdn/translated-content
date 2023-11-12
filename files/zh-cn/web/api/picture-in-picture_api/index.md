@@ -5,7 +5,7 @@ slug: Web/API/Picture-in-Picture_API
 
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
-**画中画 API** 允许网站总是在其它窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。
+**画中画 API** 允许网站总是在其他窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。
 
 ## 接口
 
@@ -28,12 +28,10 @@ slug: Web/API/Picture-in-Picture_API
 
 ## 属性
 
-*画中画 API 添加了* {{DOMxRef("HTMLVideoElement")}}、{{DOMxRef("Document")}} 和 {{DOMxRef("ShadowRoot")}} 接口的属性，这些属性用于决定浮动的视频窗口是否是受支持和可用的、当前画中画模式是否处于激活状态并且哪个视频是浮动的。
+_画中画 API 添加了_ {{DOMxRef("HTMLVideoElement")}}、{{DOMxRef("Document")}} 和 {{DOMxRef("ShadowRoot")}} 接口的属性，这些属性用于决定浮动的视频窗口是否是受支持和可用的、当前画中画模式是否处于激活状态并且哪个视频是浮动的。
 
 ### HTMLVideoElement 接口的属性
 
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
-  - : 当用户切换标签页和（或）应用程序时，`autoPictureInPicture` 属性将自动进入或离开视频元素的画中画模式。
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
   - : `disablePictureInPicture` 属性将指示用户代理是否应该向用户建议画中画的功能。
 
@@ -81,7 +79,7 @@ _画中画 API 定义了三个事件，它们可以用来检测画中画模式�
 ```js
 function togglePictureInPicture() {
   if (document.pictureInPictureElement) {
-      document.exitPictureInPicture();
+    document.exitPictureInPicture();
   } else {
     if (document.pictureInPictureEnabled) {
       video.requestPictureInPicture();
@@ -107,7 +105,6 @@ function togglePictureInPicture() {
 ## 参见
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

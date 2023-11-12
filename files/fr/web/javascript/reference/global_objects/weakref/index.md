@@ -1,8 +1,6 @@
 ---
 title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
-browser-compat: javascript.builtins.WeakRef
 ---
 
 {{JSRef}}
@@ -31,7 +29,7 @@ Une utilisation correcte de `WeakRef` nécessite une réflexion suffisante et il
 
 Voici quelques sujets spécifiques inclus dans [le document explicatif de la proposition correspondante](https://github.com/tc39/proposal-weakrefs/blob/master/reference.md)&nbsp;:
 
-> [Les ramasses-miettes](https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)) sont compliqués. Si une application ou une bibliothèque dépend d'un ramasse-miettes nettoyant un registre FinalizationRegistry ou appelant un finaliseur de façon précise et prédictible, qu'elle se prépare à être déçue&nbsp;: le nettoyage pourra avoir lieu bien plus tard que prévu voire pas du tout. Ce comportement grandement variable est dû&nbsp;:
+> [Les ramasses-miettes](<https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)>) sont compliqués. Si une application ou une bibliothèque dépend d'un ramasse-miettes nettoyant un registre FinalizationRegistry ou appelant un finaliseur de façon précise et prédictible, qu'elle se prépare à être déçue&nbsp;: le nettoyage pourra avoir lieu bien plus tard que prévu voire pas du tout. Ce comportement grandement variable est dû&nbsp;:
 >
 > - Au fait qu'un objet peut être récupéré par le ramasse-miettes bien plus tôt qu'un autre, même s'il devient inaccessible au même temps, par exemple en raison du ramassage générationnel.
 > - À l'action du ramasse-miettes qui peut être divisée dans le temps en utilisant des techniques incrémentales et concurrentes.

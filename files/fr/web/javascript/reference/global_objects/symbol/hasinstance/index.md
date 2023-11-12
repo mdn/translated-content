@@ -1,14 +1,6 @@
 ---
 title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/hasInstance
 ---
 
 {{JSRef}}

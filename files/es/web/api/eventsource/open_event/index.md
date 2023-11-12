@@ -1,7 +1,6 @@
 ---
 title: EventSource.onopen
 slug: Web/API/EventSource/open_event
-original_slug: Web/API/EventSource/onopen
 ---
 
 {{APIRef('WebSockets API')}}
@@ -17,7 +16,7 @@ eventSource.onopen = function
 ## Ejemplos
 
 ```js
-evtSource.onopen = function() {
+evtSource.onopen = function () {
   console.log("Connection to server opened.");
 };
 ```

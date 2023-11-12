@@ -1,13 +1,6 @@
 ---
-title: 'Window: languagechange event'
+title: "Window: languagechange event"
 slug: Web/API/Window/languagechange_event
-tags:
-  - Evènement
-  - Expérimentale
-  - HTML DOM
-  - Reference
-  - Window
-translation_of: Web/API/Window/languagechange_event
 ---
 
 {{APIRef}}
@@ -42,16 +35,16 @@ L'événement **`languagechange`** est déclenché sur l'objet d'étendue global
 Vous pouvez utiliser l'événement `languagechange` dans une méthode {{domxref("EventTarget/addEventListener", "addEventListener")}} :
 
 ```js
-window.addEventListener('languagechange', function() {
-  console.log('languagechange event detected!');
+window.addEventListener("languagechange", function () {
+  console.log("languagechange event detected!");
 });
 ```
 
 Ou utilisez la propriété du gestionnaire d'événements [`onlanguagechange`](/fr/docs/Web/API/WindowEventHandlers/onlanguagechange) :
 
 ```js
-window.onlanguagechange = function(event) {
-  console.log('languagechange event detected!');
+window.onlanguagechange = function (event) {
+  console.log("languagechange event detected!");
 };
 ```
 

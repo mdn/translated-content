@@ -89,7 +89,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 - {{WebExtAPIRef("tabs.setZoomSettings()")}}
   - : 为一个制定标签设置缩放选项。
 - {{WebExtAPIRef("tabs.update()")}}
-  - : 导航一个标签到新的地址，或是修改其它的属性。
+  - : 导航一个标签到新的地址，或是修改其他的属性。
 
 ## Events
 

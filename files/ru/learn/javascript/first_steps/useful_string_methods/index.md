@@ -1,21 +1,8 @@
 ---
 title: Полезные методы для строк
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - length
-  - lower
-  - replace
-  - split
-  - upper
-  - Обучение
-  - Регистр
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
-original_slug: Learn/JavaScript/Первые_шаги/Useful_string_methods
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}
@@ -71,49 +58,49 @@ browserType[0];
 
 1. Иногда вам может понадобиться выяснить, присутствует ли меньшая строка внутри большей (обычно мы говорим, что внутри строки есть подстрока). Это можно сделать с помощью метода {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, который принимает одну {{glossary ("parameter")}} - подстроку, которую вы хотите найти. Введите:
 
-    ```
-    browserType.indexOf('zilla');
-    ```
+   ```
+   browserType.indexOf('zilla');
+   ```
 
-    Это даёт нам результат 2, потому что подстрока «zilla» начинается в позиции 2 ("m" — 0, "o" — 1, "z" — 2) внутри «mozilla». Такой код можно использовать для фильтрации строк. Например, если есть список веб-адресов и вы хотите распечатать только те, которые содержат «mozilla».
+   Это даёт нам результат 2, потому что подстрока «zilla» начинается в позиции 2 ("m" — 0, "o" — 1, "z" — 2) внутри «mozilla». Такой код можно использовать для фильтрации строк. Например, если есть список веб-адресов и вы хотите распечатать только те, которые содержат «mozilla».
 
 2. Это можно сделать по-другому, что, возможно, ещё более эффективно. Введите следующее:
 
-    ```
-    browserType.indexOf('vanilla');
-    ```
+   ```
+   browserType.indexOf('vanilla');
+   ```
 
-    Это должно дать вам результат -1. Такое значение возвращается, когда подстрока, в данном случае «vanilla», не найдена в основной строке.
+   Это должно дать вам результат -1. Такое значение возвращается, когда подстрока, в данном случае «vanilla», не найдена в основной строке.
 
-    Вы можете использовать это, чтобы найти все экземпляры строк, которые не содержат подстроку «mozilla» (для обратного эффекта, используйте оператор отрицания):
+   Вы можете использовать это, чтобы найти все экземпляры строк, которые не содержат подстроку «mozilla» (для обратного эффекта, используйте оператор отрицания):
 
-    ```
-    if(browserType.indexOf('mozilla') === -1) {
-      // сделать что-то, если 'mozilla'
-      // не является частью этой строки
-    }
+   ```
+   if(browserType.indexOf('mozilla') === -1) {
+     // сделать что-то, если 'mozilla'
+     // не является частью этой строки
+   }
 
-    if(browserType.indexOf('mozilla') !== -1) {
-      // сделать что-то, если 'mozilla'
-      // является частью этой строки
-    }
-    ```
+   if(browserType.indexOf('mozilla') !== -1) {
+     // сделать что-то, если 'mozilla'
+     // является частью этой строки
+   }
+   ```
 
 3. Когда вы знаете, где подстрока начинается внутри строки, и вы знаете, на каком символе вы хотите её завершить, можно использовать {{jsxref ("String.prototype.slice ()", "slice ()")}} для извлечения. Попробуйте следующее:
 
-    ```
-    browserType.slice(0,3);
-    ```
+   ```
+   browserType.slice(0,3);
+   ```
 
-    Это возвращает «moz». Первым параметром является позиция символа, с которого начинается извлечение, а второй параметр — позиция последнего символа, перед которым нужно отсечь строку*.* Таким образом, срез происходит с первой позиции, вплоть до последней позиции, но не включая её *(*помним, что _счёт идёт с 0, а не с 1)_. Также можно сказать, что второй параметр равен длине возвращаемой строки.
+   Это возвращает «moz». Первым параметром является позиция символа, с которого начинается извлечение, а второй параметр — позиция последнего символа, перед которым нужно отсечь строку*.* Таким образом, срез происходит с первой позиции, вплоть до последней позиции, но не включая её *(*помним, что _счёт идёт с 0, а не с 1)_. Также можно сказать, что второй параметр равен длине возвращаемой строки.
 
 4. Кроме того, если вы знаете, что хотите извлечь все остальные символы в строке после определённого символа, вам не нужно включать второй параметр. Достаточно включить только положение символа, с которого вы хотите начать извлечение оставшихся символов в строке. Введите:
 
-    ```
-    browserType.slice(2);
-    ```
+   ```
+   browserType.slice(2);
+   ```
 
-    Этот код возвращает «zilla» — это потому, что позиция символа 2 — это буква z, и поскольку вы не указали второй параметр, возвращаемая подстрока состояла из всех остальных символов в строке.
+   Этот код возвращает «zilla» — это потому, что позиция символа 2 — это буква z, и поскольку вы не указали второй параметр, возвращаемая подстрока состояла из всех остальных символов в строке.
 
 > **Примечание:** второй параметр `slice()` не обязателен: если вы его не включите в код, обрезание закончится на конце оригинальной строки. Есть и другие варианты; изучите страницу {{jsxref ("String.prototype.slice ()", "slice ()")}}, чтобы узнать, что ещё вы можете узнать.
 
@@ -159,15 +146,13 @@ browserType.replace('moz','van');
 <h2>Результат</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 var list = document.querySelector('.output ul');
@@ -192,8 +177,8 @@ for (var i = 0; i < greetings.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -220,9 +205,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -230,38 +215,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'С днём рождения!\',\n \'С Рождеством, любовь моя\',\n \'Счастливого Рождества всей твоей семье\',\n \'Ты — та, кто нужен мне на Рождество\',\n \'Поправляйся скорее\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Рождеств\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar greetings = ['С днём рождения!',\n 'С Рождеством, любовь моя',\n 'Счастливого Рождества всей твоей семье',\n 'Ты — та, кто нужен мне на Рождество',\n 'Поправляйся скорее'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf('Рождеств') !== -1) {\n var result = input;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -273,8 +259,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -285,10 +274,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -315,15 +304,13 @@ textarea.onkeyup = function(){
 <h2>Результат</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 var list = document.querySelector('.output ul');
@@ -341,8 +328,8 @@ for(var i = 0; i < cities.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -369,9 +356,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -379,38 +366,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'лонДон\', \'МанЧЕСТёр\', \'БиРминГЕМ\', \'лиВЕРпуЛЬ\'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar cities = ['лонДон', 'МанЧЕСТёр', 'БиРминГЕМ', 'лиВЕРпуЛЬ'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -422,8 +410,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -434,10 +425,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -475,15 +466,13 @@ MAN: Manchester Piccadilly
 <h2>Результат</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 var list = document.querySelector('.output ul');
@@ -506,8 +495,8 @@ for (var i = 0; i < stations.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -534,9 +523,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -544,38 +533,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n \'GNF576746573fhdg4737dh4;Greenfield\',\n \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n \'SYB4f65hf75f736463;Stalybridge\',\n \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar stations = ['MAN675847583748sjt567654;Manchester Piccadilly',\n 'GNF576746573fhdg4737dh4;Greenfield',\n 'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',\n 'SYB4f65hf75f736463;Stalybridge',\n 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(';');\n var name = input.slice(semiC + 1);\n var result = code + ': ' + name;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -587,8 +577,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -599,10 +592,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

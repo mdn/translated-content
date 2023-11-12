@@ -1,24 +1,26 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`Number.parseFloat()`** メソッドは、引数を解釈して浮動小数点値を返します。引数の数値が解釈できない場合は、 {{jsxref("NaN")}} を返します。
+**`Number.parseFloat()`** は静的メソッドで、引数を解釈して浮動小数点値を返します。引数の数値が解釈できない場合は、 {{jsxref("NaN")}} を返します。
 
 {{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
 
 ## 構文
 
-```js
+```js-nolint
 Number.parseFloat(string)
 ```
 
 ### 引数
 
 - `string`
-  - : 解釈する値。この引数が文字列でない場合、抽象操作 [`ToString`](https://tc39.es/ecma262/#sec-tostring) を用いて文字列に変換されます。この引数では先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
+  - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)。先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
 
 ### 返値
 
@@ -36,7 +38,7 @@ Number.parseFloat(string)
 Number.parseFloat === parseFloat; // true
 ```
 
-このメソッドも ECMAScript 2015 の一部です。 (この目的は、グローバルのモジュール化にあります。)
+この目的は、グローバルのモジュール化にあります。
 
 さらなる詳細と例は {{jsxref("parseFloat", "parseFloat()")}} を参照してください。
 
@@ -50,6 +52,6 @@ Number.parseFloat === parseFloat; // true
 
 ## 関連情報
 
-- `Number.isSafeInteger` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-number) で利用できます
+- [`Number.parseFloat` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number")}}: このメソッドが所属するオブジェクト
 - グローバルの {{jsxref("parseFloat", "parseFloat()")}} メソッド

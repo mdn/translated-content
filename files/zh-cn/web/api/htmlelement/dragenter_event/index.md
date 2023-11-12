@@ -14,9 +14,9 @@ slug: Web/API/HTMLElement/dragenter_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener('dragenter', (event) => {});
+addEventListener("dragenter", (event) => {});
 
-ondragenter = (event) => { };
+ondragenter = (event) => {};
 ```
 
 ## 事件类型
@@ -27,7 +27,7 @@ ondragenter = (event) => { };
 
 ## 事件属性
 
-*除了以下的属性，来自父接口 {{domxref("Event")}} 的属性也是可用的。*
+_除了以下的属性，来自父接口 {{domxref("Event")}} 的属性也是可用的。_
 
 - {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
   - : 在拖放交互期间转移的数据。
@@ -110,7 +110,7 @@ target.addEventListener("dragleave", (event) => {
 
 ## 参见
 
-- 其它拖放事件：
+- 其他拖放事件：
 
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
@@ -119,7 +119,7 @@ target.addEventListener("dragleave", (event) => {
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
 
-- 其它目标中的该事件：
+- 其他目标中的该事件：
 
   - {{domxref("Window")}}：{{domxref("Window/dragenter_event", "dragenter")}} 事件
   - {{domxref("Document")}}：{{domxref("Document/dragenter_event", "dragenter")}} 事件

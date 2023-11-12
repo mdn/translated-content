@@ -1,6 +1,6 @@
 ---
 title: CSS アニメーション
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
 
 {{CSSRef}}
@@ -42,7 +42,7 @@ slug: Web/CSS/CSS_Animations
 
 ### `animation` プロパティ
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## 関連情報
 

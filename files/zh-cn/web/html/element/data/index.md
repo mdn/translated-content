@@ -38,7 +38,7 @@ slug: Web/HTML/Element/data
 
 该元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("value")}}
+- `value`
   - : 该属性指定元素内容所对应的数据，或者说“机器可读的翻译”。
 
 ## 示例
@@ -48,9 +48,9 @@ slug: Web/HTML/Element/data
 ```html
 <p>新产品</p>
 <ul>
- <li><data value="398">迷你番茄酱</data></li>
- <li><data value="399">巨无霸番茄酱</data></li>
- <li><data value="400">超级巨无霸番茄酱</data></li>
+  <li><data value="398">迷你番茄酱</data></li>
+  <li><data value="399">巨无霸番茄酱</data></li>
+  <li><data value="400">超级巨无霸番茄酱</data></li>
 </ul>
 ```
 

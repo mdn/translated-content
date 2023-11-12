@@ -1,8 +1,8 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-translation_of: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{securecontext_header}}{{ APIRef("Geolocation API") }}Метод **`Geolocation.getCurrentPosition()`** используется для получения текущего местоположения устройства.
 
 ## Синтаксис
@@ -32,21 +32,21 @@ navigator.geolocation.getCurrentPosition(success[, error[, options]])
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 function success(pos) {
   var crd = pos.coords;
 
-  console.log('Ваше текущее местоположение:');
+  console.log("Ваше текущее местоположение:");
   console.log(`Широта: ${crd.latitude}`);
   console.log(`Долгота: ${crd.longitude}`);
   console.log(`Плюс-минус ${crd.accuracy} метров.`);
-};
+}
 
 function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
-};
+}
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 ```

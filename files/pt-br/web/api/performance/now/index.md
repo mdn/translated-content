@@ -33,14 +33,11 @@ Also unlike `Date.now()`, the values returned by `Performance.now()` always incr
 
 ## Especificações
 
-| Specification                                                                                                | Status                                       | Comment                                       |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------- |
-| {{SpecName('Highres Time Level 2', '#dom-performance-now', 'performance.now()')}} | {{Spec2('Highres Time Level 2')}} | Stricter definitions of interfaces and types. |
-| {{SpecName('Highres Time', '#dom-performance-now', 'performance.now()')}}             | {{Spec2('Highres Time')}}             | Initial definition                            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Performance.now")}}
+{{Compat}}
 
 ## Veja também
 

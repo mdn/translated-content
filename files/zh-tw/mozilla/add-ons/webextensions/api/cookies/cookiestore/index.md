@@ -28,7 +28,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 ```js
 function logStores(cookieStores) {
-  for(store of cookieStores) {
+  for (store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }

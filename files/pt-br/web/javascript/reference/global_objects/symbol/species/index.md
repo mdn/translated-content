@@ -24,24 +24,24 @@ Você pode querer que retorne objetos {{jsxref("Array")}} em sua class derivada 
 ```js
 class MyArray extends Array {
   // Substitui espécies para a Array pai construtora
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-let a = new MyArray(1,2,3);
-let mapped = a.map(x => x * x);
+let a = new MyArray(1, 2, 3);
+let mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Especificações
 
-| Especificação                                                                        |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.species")}}
+{{Compat}}
 
 ## Veja também
 

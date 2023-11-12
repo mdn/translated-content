@@ -1,12 +1,6 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/background-image
 ---
 
 {{CSSRef}}
@@ -19,7 +13,7 @@ translation_of: Web/CSS/background-image
 
 Если указанное изображение не может быть нарисовано (например, когда файл, определённый указанным URI, не может быть загружен), браузеры обрабатывают его так, как если бы оно было значением `none`.
 
-> **Примечание:** **Обратите внимание:** Даже, если изображение непрозрачно и цвет не будет показан при нормальных обстоятельствах, веб-разработчику следует всегда указывать атрибут {{cssxref("background-color")}}. Если изображение не может быть загружено —например, в случае отказа сетевого подключения — у элемента будет отображён цветной фон.
+> **Примечание:** Даже, если изображение непрозрачно и цвет не будет показан при нормальных обстоятельствах, веб-разработчику следует всегда указывать атрибут {{cssxref("background-color")}}. Если изображение не может быть загружено —например, в случае отказа сетевого подключения — у элемента будет отображён цветной фон.
 
 {{cssinfo}}
 
@@ -53,24 +47,21 @@ background-image: inherit;
 
 ```html
 <div>
-    <p class="catsandstars">
-        This paragraph is full of cats<br />and stars.
-    </p>
-    <p>This paragraph is not.</p>
-    <p class="catsandstars">
-        Here are more cats for you.<br />Look at them!
-    </p>
-    <p>And no more.</p>
+  <p class="catsandstars">This paragraph is full of cats<br />and stars.</p>
+  <p>This paragraph is not.</p>
+  <p class="catsandstars">Here are more cats for you.<br />Look at them!</p>
+  <p>And no more.</p>
 </div>
 ```
 
 #### CSS содержимое
 
 ```css
-pre, p {
-    font-size: 1.5em;
-    color: #FE7F88;
-    background-color: transparent;
+pre,
+p {
+  font-size: 1.5em;
+  color: #fe7f88;
+  background-color: transparent;
 }
 
 div {
@@ -82,8 +73,7 @@ p {
 }
 
 .catsandstars {
-  background-image:  url("startransparent.gif"),
-                     url("catfront.png");
+  background-image: url("startransparent.gif"), url("catfront.png");
   background-color: transparent;
 }
 ```

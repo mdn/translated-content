@@ -1,8 +1,9 @@
 ---
-title: HTMLFormElement.enctype
+title: "HTMLFormElement: enctype プロパティ"
+short-title: enctype
 slug: Web/API/HTMLFormElement/enctype
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,7 +14,7 @@ l10n:
 - `multipart/form-data`: {{HTMLElement("input")}} 要素にファイルデータをアップロードできるようにする型。
 - `text/plain`: 形式があいまいで、人間が読み取り可能なコンテンツであり、コンピューターで確実に解釈できるとは限りません。
 
-この値は {{htmlattrxref("formenctype", "button")}} 属性を {{HTMLElement("button")}} または {{HTMLElement("input")}} 要素に指定することで上書きすることができます。
+この値は [`formenctype`](/ja/docs/Web/HTML/Element/button#formenctype) 属性を {{HTMLElement("button")}} または {{HTMLElement("input")}} 要素に指定することで上書きすることができます。
 
 ## 値
 
@@ -22,7 +23,7 @@ l10n:
 ## 例
 
 ```js
-form.enctype = 'application/x-www-form-urlencoded';
+form.enctype = "application/x-www-form-urlencoded";
 ```
 
 ## 仕様書

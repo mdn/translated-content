@@ -54,7 +54,7 @@ Django は次のようなソフトウェアを書くのに役立ちます。
 - スケーラブル
   - : Django はコンポーネントベースの「[シェアードナッシング](https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%A7%E3%82%A2%E3%83%BC%E3%83%89%E3%83%BB%E3%83%8A%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)」アーキテクチャを採用しています（アーキテクチャの各部分は他と独立しており、必要に応じて置き換え、変更できます）。異なる部分を明確に分離しているため、キャッシュサーバー、データベースサーバー、アプリケーションサーバーの各ハードウェアをそれぞれ追加することによって、トラフィックの増加に合わせてスケールできるようになっています。いくつかの最も忙しいサイトは、ニーズを満たすために Django を適切にスケールさせています（Instagram や Disqus など）
 - メンテナンス可能
-  - : Django のコードは、保守可能で再利用可能になるような設計原則、デザインパターンを使って書かれています。特に、Do not Repeat Yourself (DRY) 原則によって不要な複製がなく、コード量を削減します。Django は、関連する機能を再利用可能な「アプリケーション」にグループ化し、低いレベルでは関連するコードをモジュールにグループ化します（[モデルビューコントローラー (MVC)](/en-US/docs/Glossary/MVC) パターンに沿っています）。
+  - : Django のコードは、保守可能で再利用可能になるような設計原則、デザインパターンを使って書かれています。特に、Do not Repeat Yourself (DRY) 原則によって不要な複製がなく、コード量を削減します。Django は、関連する機能を再利用可能な「アプリケーション」にグループ化し、低いレベルでは関連するコードをモジュールにグループ化します（[モデルビューコントローラー (MVC)](/ja/docs/Glossary/MVC) パターンに沿っています）。
 - ポータブル
   - : Django のコードは多くのプラットフォームで動作する Python で書かれています。これはプラットフォームに縛られないことを意味します。アプリケーションは多くの種類の Linux、Windows、macOS で実行することができます。さらに、 Django は多くのウェブホスティングプロバイダーが広く対応しており、しばしば Django のサイトをホスティングするための特定のインフラとドキュメントが提供されています。
 
@@ -244,21 +244,3 @@ def index(request):
 上記では実際の Django コードをいくつか見ましたが、クライアントサイドのコードとは異なり、実行するための開発環境をセットアップする必要があります。それが次のステップです。
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
-
-## このモジュール内
-
-- **Django の紹介**
-- [Django 開発環境の設定](/ja/docs/Learn/Server-side/Django/development_environment)
-- [Django チュートリアル: 地域図書館ウェブサイト](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django チュートリアル Part 2: ウェブサイトの骨組み作成](/ja/docs/Learn/Server-side/Django/skeleton_website)
-- [Django チュートリアル Part 3: モデルの使用](/ja/docs/Learn/Server-side/Django/Models)
-- [Django チュートリアル Part 4: Django 管理サイト](/ja/docs/Learn/Server-side/Django/Admin_site)
-- [Django チュートリアル Part 5: ホームページの作成](/ja/docs/Learn/Server-side/Django/Home_page)
-- [Django チュートリアル Part 6: 汎用の一覧表示と詳細表示](/ja/docs/Learn/Server-side/Django/Generic_views)
-- [Django チュートリアル Part 7: セッションフレームワーク](/ja/docs/Learn/Server-side/Django/Sessions)
-- [Django チュートリアル Part 8: ユーザー認証と権限](/ja/docs/Learn/Server-side/Django/Authentication)
-- [Django チュートリアル Part 9: フォームの操作](/ja/docs/Learn/Server-side/Django/Forms)
-- [Django チュートリアル Part 10: Django ウェブアプリケーションのテスト](/ja/docs/Learn/Server-side/Django/Testing)
-- [Django チュートリアル Part 11: Django を本番環境にデプロイする](/ja/docs/Learn/Server-side/Django/Deployment)
-- [Django ウェブアプリケーションセキュリティ](/ja/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django ミニブログ](/ja/docs/Learn/Server-side/Django/django_assessment_blog)

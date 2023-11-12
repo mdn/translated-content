@@ -37,7 +37,7 @@ onprogress = (event) => { }
 bgFetch.addEventListener("progress", () => {
   if (!bgFetch.downloadTotal) return;
   const percent = Math.round(
-    (bgFetch.downloaded / bgFetch.downloadTotal) * 100
+    (bgFetch.downloaded / bgFetch.downloadTotal) * 100,
   );
   console.log(`ダウンロードの進捗： ${percent}%`);
 });

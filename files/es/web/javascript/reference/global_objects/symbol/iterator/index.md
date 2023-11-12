@@ -1,7 +1,6 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 l10n:
   sourceCommit: 552892d8fc6707c47ae879aef32e6ac3023166ee
 ---
@@ -35,20 +34,20 @@ Véase también [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Ite
 Podemos hacer nuestros propios iterables así:
 
 ```js
-const myIterable = {}
+const myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
 O los iterables pueden ser definidos directamente dentro de una clase u objeto usando una [propiedad computada](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names):
 
 ```js
 class Foo {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
     yield 3;
@@ -56,13 +55,13 @@ class Foo {
 }
 
 const someObj = {
-  *[Symbol.iterator] () {
-    yield 'a';
-    yield 'b';
-  }
-}
+  *[Symbol.iterator]() {
+    yield "a";
+    yield "b";
+  },
+};
 
-console.log(...new Foo); // 1, 2, 3
+console.log(...new Foo()); // 1, 2, 3
 console.log(...someObj); // 'a', 'b'
 ```
 

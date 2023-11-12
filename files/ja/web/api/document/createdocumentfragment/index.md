@@ -36,22 +36,20 @@ let fragment = new DocumentFragment();
 ### HTML
 
 ```html
-<ul id="ul">
-</ul>
+<ul id="ul"></ul>
 ```
 
 ### JavaScript
 
 ```js
-var element  = document.getElementById('ul'); // ul が存在することを仮定
+var element = document.getElementById("ul"); // ul が存在することを仮定
 var fragment = document.createDocumentFragment();
-var browsers = ['Firefox', 'Chrome', 'Opera',
-    'Safari', 'Internet Explorer'];
+var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
 
-browsers.forEach(function(browser) {
-    var li = document.createElement('li');
-    li.textContent = browser;
-    fragment.appendChild(li);
+browsers.forEach(function (browser) {
+  var li = document.createElement("li");
+  li.textContent = browser;
+  fragment.appendChild(li);
 });
 
 element.appendChild(fragment);

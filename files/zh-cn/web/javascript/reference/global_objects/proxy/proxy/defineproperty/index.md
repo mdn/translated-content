@@ -1,7 +1,6 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/defineProperty
 ---
 
 {{JSRef}}
@@ -12,8 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/definePrope
 
 ```js
 var p = new Proxy(target, {
-  defineProperty: function(target, property, descriptor) {
-  }
+  defineProperty: function (target, property, descriptor) {},
 });
 ```
 
@@ -59,15 +57,18 @@ var p = new Proxy(target, {
 以下代码演示如何拦截对目标对象的 {{jsxref("Object.defineProperty()")}} 操作。
 
 ```js
-var p = new Proxy({}, {
-  defineProperty: function(target, prop, descriptor) {
-    console.log('called: ' + prop);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    defineProperty: function (target, prop, descriptor) {
+      console.log("called: " + prop);
+      return true;
+    },
+  },
+);
 
 var desc = { configurable: true, enumerable: true, value: 10 };
-Object.defineProperty(p, 'a', desc); // "called: a"
+Object.defineProperty(p, "a", desc); // "called: a"
 ```
 
 当调用 {{jsxref("Object.defineProperty()")}} 或者 {{jsxref("Reflect.defineProperty()")}}，传递给 `defineProperty` 的 `descriptor` 有一个限制 - 只有以下属性才有用，非标准的属性将会被无视：
@@ -80,17 +81,20 @@ Object.defineProperty(p, 'a', desc); // "called: a"
 - `set`
 
 ```js
-var p = new Proxy({}, {
-  defineProperty(target, prop, descriptor) {
-    console.log(descriptor);
-    return Reflect.defineProperty(target, prop, descriptor);
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    defineProperty(target, prop, descriptor) {
+      console.log(descriptor);
+      return Reflect.defineProperty(target, prop, descriptor);
+    },
+  },
+);
 
-Object.defineProperty(p, 'name', {
-  value: 'proxy',
-  type: 'custom'
-});  // { value: 'proxy' }
+Object.defineProperty(p, "name", {
+  value: "proxy",
+  type: "custom",
+}); // { value: 'proxy' }
 ```
 
 ## 规范

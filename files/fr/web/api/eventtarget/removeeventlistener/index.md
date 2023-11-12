@@ -1,16 +1,6 @@
 ---
 title: element.removeEventListener
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - API
-  - Cible
-  - DOM
-  - Evènement
-  - Méthode
-  - Reference
-  - Suppression
-  - Écouteurs
-translation_of: Web/API/EventTarget/removeEventListener
 ---
 
 {{APIRef("DOM Events")}}
@@ -62,7 +52,7 @@ element.addEventListener("mousedown", handleMouseDown, true);
 Maintenant, voyons chacun des deux appels de `removeEventListener()` :
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, false);     // Fails
+element.removeEventListener("mousedown", handleMouseDown, false); // Fails
 element.removeEventListener("mousedown", handleMouseDown, true);
 ```
 
@@ -79,12 +69,12 @@ Ici, nous spécifions un objet `options` dans lequel `passive` est défini à `t
 Maintenant, regardez chacun de ces appels successifs à `removeEventListener()`. N'importe lequel d'entre eux dans lequel `capture` ou `useCapture` est `true` (_vrai_) échoue ; tous les autres réussissent. Seul le paramètre de `capture` est important pour `removeEventListener()`.
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Réussit
-element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // Réussit
-element.removeEventListener("mousedown", handleMouseDown, { capture: true });     // Échoue
-element.removeEventListener("mousedown", handleMouseDown, { passive: false });    // Réussit
-element.removeEventListener("mousedown", handleMouseDown, false);                 // Réussit
-element.removeEventListener("mousedown", handleMouseDown, true);                  // Échoue
+element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // Réussit
+element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // Réussit
+element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // Échoue
+element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // Réussit
+element.removeEventListener("mousedown", handleMouseDown, false); // Réussit
+element.removeEventListener("mousedown", handleMouseDown, true); // Échoue
 ```
 
 Il est à noter que certaines versions du navigateur ont été incohérentes à ce sujet, et sauf si vous avez des raisons spécifiques, il est probablement sage d'utiliser les mêmes valeurs que pour l'appel à `addEventListener()` lors de l'appel de `removeEventListener()`.
@@ -100,35 +90,29 @@ L'appel de `removeEventListener()` avec des paramètres n'identifiant aucun {{do
 Cet exemple montre comment ajouter un écouteur d'évènements basé sur `click` et supprimer un écouteur d'évènements basé sur `mouseover`.
 
 ```js
-var body = document.querySelector('body'),
-    clickTarget = document.getElementById('click-target'),
-    mouseOverTarget = document.getElementById('mouse-over-target'),
-    toggle = false;
+var body = document.querySelector("body"),
+  clickTarget = document.getElementById("click-target"),
+  mouseOverTarget = document.getElementById("mouse-over-target"),
+  toggle = false;
 
 function makeBackgroundYellow() {
-    'use strict';
+  "use strict";
 
-    if (toggle) {
-        body.style.backgroundColor = 'white';
-    } else {
-        body.style.backgroundColor = 'yellow';
-    }
+  if (toggle) {
+    body.style.backgroundColor = "white";
+  } else {
+    body.style.backgroundColor = "yellow";
+  }
 
-    toggle = !toggle;
+  toggle = !toggle;
 }
 
-clickTarget.addEventListener('click',
-    makeBackgroundYellow,
-    false
-);
+clickTarget.addEventListener("click", makeBackgroundYellow, false);
 
-mouseOverTarget.addEventListener('mouseover', function () {
-    'use strict';
+mouseOverTarget.addEventListener("mouseover", function () {
+  "use strict";
 
-    clickTarget.removeEventListener('click',
-        makeBackgroundYellow,
-        false
-    );
+  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
 });
 ```
 
@@ -148,19 +132,37 @@ mouseOverTarget.addEventListener('mouseover', function () {
 if (!Element.prototype.addEventListener) {
   var oListeners = {};
   function runListeners(oEvent) {
-    if (!oEvent) { oEvent = window.event; }
-    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
+    if (!oEvent) {
+      oEvent = window.event;
+    }
+    for (
+      var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type];
+      iElId < oEvtListeners.aEls.length;
+      iElId++
+    ) {
       if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) {
+          oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent);
+        }
         break;
       }
     }
   }
-  Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
+  Element.prototype.addEventListener = function (
+    sEventType,
+    fListener /*, useCapture (will be ignored!) */,
+  ) {
     if (oListeners.hasOwnProperty(sEventType)) {
       var oEvtListeners = oListeners[sEventType];
-      for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
-        if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
+      for (
+        var nElIdx = -1, iElId = 0;
+        iElId < oEvtListeners.aEls.length;
+        iElId++
+      ) {
+        if (oEvtListeners.aEls[iElId] === this) {
+          nElIdx = iElId;
+          break;
+        }
       }
       if (nElIdx === -1) {
         oEvtListeners.aEls.push(this);
@@ -173,24 +175,46 @@ if (!Element.prototype.addEventListener) {
           this["on" + sEventType] = runListeners;
         }
         for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
-          if (aElListeners[iLstId] === fListener) { return; }
+          if (aElListeners[iLstId] === fListener) {
+            return;
+          }
         }
         aElListeners.push(fListener);
       }
     } else {
-      oListeners[sEventType] = { aEls: [this], aEvts: [ [fListener] ] };
+      oListeners[sEventType] = { aEls: [this], aEvts: [[fListener]] };
       this["on" + sEventType] = runListeners;
     }
   };
-  Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
-    if (!oListeners.hasOwnProperty(sEventType)) { return; }
-    var oEvtListeners = oListeners[sEventType];
-    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
-      if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
+  Element.prototype.removeEventListener = function (
+    sEventType,
+    fListener /*, useCapture (will be ignored!) */,
+  ) {
+    if (!oListeners.hasOwnProperty(sEventType)) {
+      return;
     }
-    if (nElIdx === -1) { return; }
-    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
-      if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
+    var oEvtListeners = oListeners[sEventType];
+    for (
+      var nElIdx = -1, iElId = 0;
+      iElId < oEvtListeners.aEls.length;
+      iElId++
+    ) {
+      if (oEvtListeners.aEls[iElId] === this) {
+        nElIdx = iElId;
+        break;
+      }
+    }
+    if (nElIdx === -1) {
+      return;
+    }
+    for (
+      var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx];
+      iLstId < aElListeners.length;
+      iLstId++
+    ) {
+      if (aElListeners[iLstId] === fListener) {
+        aElListeners.splice(iLstId, 1);
+      }
     }
   };
 }

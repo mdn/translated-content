@@ -1,9 +1,8 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
-original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 Заголовок ответа **`Access-Control-Allow-Origin`** показывает, может ли ответ сервера быть доступен коду, отправляющему запрос с данного источника {{glossary("origin")}}.
@@ -39,7 +38,7 @@ Access-Control-Allow-Origin: null
 
   - : Определяет в качестве источника "null".
 
-    > **Примечание:** **Замечание:** [Не используйте](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null) `null`: "Может показаться, что вернуть `Access-Control-Allow-Origin: "null"` безопасно, но сериализация Источника любого ресурса, использующего неиерархическую схему (такие как `data:` или `file:`), и изолированные документы, определяются как "null". Многие пользовательские агенты предоставляют таким документам доступ к ответу с заголовком `Access-Control-Allow-Origin: "null"`, и любой источник может создать враждебный документ с Источником "null". Поэтому использования заголовка ACAO со значением "null" следует избегать."
+    > **Примечание:** [Не используйте](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null) `null`: "Может показаться, что вернуть `Access-Control-Allow-Origin: "null"` безопасно, но сериализация Источника любого ресурса, использующего неиерархическую схему (такие как `data:` или `file:`), и изолированные документы, определяются как "null". Многие пользовательские агенты предоставляют таким документам доступ к ответу с заголовком `Access-Control-Allow-Origin: "null"`, и любой источник может создать враждебный документ с Источником "null". Поэтому использования заголовка ACAO со значением "null" следует избегать."
 
 ## Примеры
 
@@ -68,9 +67,7 @@ Vary: Origin
 
 ## Спецификации
 
-| Спецификации                                                                                                         | Статус                   | Комментарий            |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Начальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

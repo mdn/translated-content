@@ -58,15 +58,15 @@ _このインターフェイスは、親である {{domxref("EventTarget")}} か
 この基本的な例では、 `EventSource` を生成してサーバーからイベントを受け取ります。 `sse.php` という名前のページがイベントを生成する責任を負います。
 
 ```js
-const evtSource = new EventSource('sse.php');
-const eventList = document.querySelector('ul');
+const evtSource = new EventSource("sse.php");
+const eventList = document.querySelector("ul");
 
 evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
   newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 受信されたそれぞれのイベントは、 `EventSource` オブジェクトの `onmessage` イベントハンドラーを実行させます。ここでは、新しい {{HTMLElement("li")}} 要素を生成してその中にメッセージのデータを書き込み、この要素を文書の中にある既存のリスト要素に追加します。
@@ -76,7 +76,7 @@ evtSource.onmessage = (e) => {
 名前付きのイベントを待ち受けするには、送信されるイベントの種類ごとにリスナーが必要になります。
 
 ```js
-const sse = new EventSource('/api/v1/sse');
+const sse = new EventSource("/api/v1/sse");
 
 /*
  * これは以下のようなイベントのみを待ち受けします。
@@ -86,16 +86,16 @@ const sse = new EventSource('/api/v1/sse');
  * id: someid
  */
 sse.addEventListener("notice", (e) => {
-  console.log(e.data)
-})
+  console.log(e.data);
+});
 
 /*
  * 同様に、これは `event: update` というフィールドを持つ
  * イベントを待ち受けます。
  */
 sse.addEventListener("update", (e) => {
-  console.log(e.data)
-})
+  console.log(e.data);
+});
 
 /*
  * "message" というイベントは特別なケースで、
@@ -104,7 +104,7 @@ sse.addEventListener("update", (e) => {
  * 他のイベント型では発生しません。
  */
 sse.addEventListener("message", (e) => {
-  console.log(e.data)
+  console.log(e.data);
 });
 ```
 

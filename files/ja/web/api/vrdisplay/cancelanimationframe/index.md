@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
-original_slug: Web/API/VRDevice/cancelAnimationFrame
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -13,7 +12,7 @@ original_slug: Web/API/VRDevice/cancelAnimationFrame
 ## 構文
 
 ```js
-cancelAnimationFrame(handle)
+cancelAnimationFrame(handle);
 ```
 
 ### 引数

@@ -3,6 +3,8 @@ title: AJAX
 slug: Glossary/AJAX
 ---
 
+{{GlossarySidebar}}
+
 Le {{Glossary("JavaScript")}} et {{Glossary("XML")}} asynchrone (AJAX) est une pratique de programmation qui consiste à construire des pages web plus complexes et plus dynamiques en utilisant une technologie connue sous le nom de {{Glossary("XHR_(XMLHttpRequest)", "XMLHttpRequest")}}.
 
 AJAX vous permet de mettre à jour simplement des parties du {{Glossary("DOM")}} d'une page web {{Glossary("HTML")}} au lieu de devoir recharger la page entière. AJAX vous permet également de travailler de manière asynchrone, c'est-à-dire que votre code continue à s'exécuter pendant que la partie de votre page web essaie de se recharger (par opposition à la méthode synchrone qui bloque l'exécution de votre code jusqu'à ce que la partie de votre page web ait fini de se recharger).
@@ -11,7 +13,7 @@ Avec les sites web interactifs et les standards modernes du web, AJAX est progre
 
 ## Voir aussi
 
-- [AJAX](https://fr.wikipedia.org/wiki/Ajax_(informatique)) sur Wikipédia
+- [AJAX](<https://fr.wikipedia.org/wiki/Ajax_(informatique)>) sur Wikipédia
 - [AJAX](/fr/docs/Web/Guide/AJAX)
 - [AJAX - Premiers pas](/fr/docs/Web/Guide/AJAX/Premiers_pas)
 - [Glossaire du MND](/fr/docs/Glossaire):

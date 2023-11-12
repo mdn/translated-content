@@ -1,16 +1,6 @@
 ---
 title: Performance Web
 slug: Learn/Performance
-tags:
-  - Apprendre
-  - CSS
-  - HTML
-  - HTTP
-  - JavaScript
-  - Performance
-  - Performance Web
-  - TopicStub
-translation_of: Learn/Performance
 ---
 
 {{LearnSidebar}}

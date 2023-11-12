@@ -25,7 +25,7 @@ _Mesmos métodos de {{domxref("EventTarget")}}._
 - {{ domxref("MediaDevices.enumerateDevices()") }}
   - : Obtém um array de informações sobre a entrada de midia e dispositivos de saída disponíveis no sistema.
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-  - : Retorna um objeto consoante com {{domxref("MediaTrackSupportedConstraints")}} indicando quais propriedades restritivas são suportadas na interface {{domxref("MediaStreamTrack")}}. Veja {{SectionOnPage("/pt-BR/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} para aprender mais sobre restrições e como usá-las.
+  - : Retorna um objeto consoante com {{domxref("MediaTrackSupportedConstraints")}} indicando quais propriedades restritivas são suportadas na interface {{domxref("MediaStreamTrack")}}. Veja [Capacidades e restrições](/pt-BR/docs/Web/API/Media_Streams_API#capabilities_and_constraints) para aprender mais sobre restrições e como usá-las.
 - {{ domxref("MediaDevices.getUserMedia()") }}
   - : Após a permissão do usuário (pedida através de um prompt), liga a câmera, microfone e/ou a tramissão de tela no sistema e fornece uma {{domxref("MediaStream")}} contendo uma faixa de vídeo e/ou áudio com a entrada.
 - {{ domxref("EventTarget.removeEventListener()") }}
@@ -34,42 +34,50 @@ _Mesmos métodos de {{domxref("EventTarget")}}._
 ## Exemplo
 
 ```js
-'use strict';
+"use strict";
 
 // Coloca as variáveis no escopo global para torná-las disponível para o Console do navegador.
-var video = document.querySelector('video');
-var constraints = window.constraints = {
+var video = document.querySelector("video");
+var constraints = (window.constraints = {
   audio: false,
-  video: true
-};
-var errorElement = document.querySelector('#errorMsg');
-
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  var videoTracks = stream.getVideoTracks();
-  console.log('Got stream with constraints:', constraints);
-  console.log('Using video device: ' + videoTracks[0].label);
-  stream.onremovetrack = function() {
-    console.log('Stream ended');
-  };
-  window.stream = stream; // torna as variáveis disponíveis para o Console do navegador
-  video.srcObject = stream;
-})
-.catch(function(error) {
-  if (error.name === 'ConstraintNotSatisfiedError') {
-    errorMsg('A resolução ' + constraints.video.width.exact + 'x' +
-        constraints.video.width.exact + ' px não é suportada pelo seu dispositivo.');
-  } else if (error.name === 'PermissionDeniedError') {
-    errorMsg('As permissões para usar sua câmera e microfone não foram fornecidas. ' +
-      'Você precisa permitir o acesso da página aos seus dispositivos para ' +
-      'que a demo funcione.');
-  }
-  errorMsg('getUserMedia error: ' + error.name, error);
+  video: true,
 });
+var errorElement = document.querySelector("#errorMsg");
+
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (stream) {
+    var videoTracks = stream.getVideoTracks();
+    console.log("Got stream with constraints:", constraints);
+    console.log("Using video device: " + videoTracks[0].label);
+    stream.onremovetrack = function () {
+      console.log("Stream ended");
+    };
+    window.stream = stream; // torna as variáveis disponíveis para o Console do navegador
+    video.srcObject = stream;
+  })
+  .catch(function (error) {
+    if (error.name === "ConstraintNotSatisfiedError") {
+      errorMsg(
+        "A resolução " +
+          constraints.video.width.exact +
+          "x" +
+          constraints.video.width.exact +
+          " px não é suportada pelo seu dispositivo.",
+      );
+    } else if (error.name === "PermissionDeniedError") {
+      errorMsg(
+        "As permissões para usar sua câmera e microfone não foram fornecidas. " +
+          "Você precisa permitir o acesso da página aos seus dispositivos para " +
+          "que a demo funcione.",
+      );
+    }
+    errorMsg("getUserMedia error: " + error.name, error);
+  });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '<p>' + msg + '</p>';
-  if (typeof error !== 'undefined') {
+  errorElement.innerHTML += "<p>" + msg + "</p>";
+  if (typeof error !== "undefined") {
     console.error(error);
   }
 }
@@ -77,13 +85,11 @@ function errorMsg(msg, error) {
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário        |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | Definição inicial |
+{{Specifications}}
 
-## Compatibilidade
+## Compatibilidade com navegadores
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## Veja também
 

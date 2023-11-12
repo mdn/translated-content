@@ -3,7 +3,9 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 ---
 
-[CSS](/zh-CN/docs/CSS) [媒体查询特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
+{{CSSRef}}
+
+[CSS](/zh-CN/docs/CSS) [媒体查询特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#Media_features) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
 
 ## 语法
 
@@ -54,7 +56,10 @@ slug: Web/CSS/@media/prefers-reduced-motion
 .animation {
   background-color: rebeccapurple;
   color: #fff;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
   width: 200px;
   padding: 1em;
   border-radius: 1em;
@@ -74,22 +79,22 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 @keyframes vibrate {
   0% {
-            transform: translate(0);
+    transform: translate(0);
   }
   20% {
-            transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
   40% {
-            transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
   }
   60% {
-            transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
   }
   80% {
-            transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
   }
   100% {
-            transform: translate(0);
+    transform: translate(0);
   }
 }
 ```
@@ -110,4 +115,4 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 - [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/CSS/@media/")}}

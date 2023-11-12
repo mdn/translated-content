@@ -115,7 +115,7 @@ The introduction of new input mechanisms results in increased application comple
 
 The pointer event model can simplify an application's input processing since a pointer represents input from any input device. Additionally, the pointer event types are very similar to mouse event types (for example, `pointerdown` `pointerup`) thus code to handle pointer events closely matches mouse handling code.
 
-The implementation status of pointer events in browsers is [relatively low](http://caniuse.com/#search=pointer) with IE11 and Edge having complete implementations. Firefox's implementation has been withdrawn because of {{bug("1166347")}}.
+The implementation status of pointer events in browsers is [relatively low](http://caniuse.com/#search=pointer) with IE11 and Edge having complete implementations. Firefox's implementation has been withdrawn because of [Firefox bug 1166347](https://bugzil.la/1166347).
 
 ## Examples and demos
 

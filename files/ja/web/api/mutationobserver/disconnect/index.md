@@ -35,8 +35,8 @@ mutationObserver.disconnect()
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
@@ -52,4 +52,4 @@ observer.disconnect();
 
 ## ブラウザ互換性
 
-{{Compat("api.MutationObserver.disconnect")}}
+{{Compat}}

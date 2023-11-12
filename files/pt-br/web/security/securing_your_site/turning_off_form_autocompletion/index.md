@@ -20,9 +20,7 @@ autocomplete="off"
 O site pode fazer isso para um formulário inteiro ou para elementos input especificos do formulário:
 
 ```html
-<form method="post" action="/form"  autocomplete="off">
-[...]
-</form>
+<form method="post" action="/form" autocomplete="off">[...]</form>
 ```
 
 ```html
@@ -30,7 +28,7 @@ O site pode fazer isso para um formulário inteiro ou para elementos input espec
   [...]
   <div>
     <label for="cc">Credit card:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off">
+    <input type="text" id="cc" name="cc" autocomplete="off" />
   </div>
 </form>
 ```

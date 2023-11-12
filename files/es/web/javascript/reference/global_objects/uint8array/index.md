@@ -1,7 +1,6 @@
 ---
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Uint8Array
 ---
 
 {{JSRef}}
@@ -122,7 +121,7 @@ console.log(uint8.length); // 2
 console.log(uint8.BYTES_PER_ELEMENT); // 1
 
 // Desde un array
-var arr = new Uint8Array([21,31]);
+var arr = new Uint8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Desde otro TypedArray
@@ -139,23 +138,9 @@ var z = new Uint8Array(buffer, 1, 4);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Uint8Array")}}
-
-## Notas de compatibilidad
-
-A partir de ECMAScript 2015 (ES6), los constructors de `Uint8Array` requiren ser construidos con un operador {{jsxref("Operators/new", "new")}}. Llamar a un contructor de `Uint8Array` como una función sin `new`, lanzará un {{jsxref("TypeError")}} de ahora en adelante.
-
-```js example-bad
-var dv = Uint8Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Uint8Array([1, 2, 3]);
-```
+{{Compat}}
 
 ## Véase también
 

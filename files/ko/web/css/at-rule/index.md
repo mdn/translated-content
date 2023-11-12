@@ -1,5 +1,5 @@
 ---
-title: '@-규칙'
+title: "@-규칙"
 slug: Web/CSS/At-rule
 ---
 
@@ -9,7 +9,7 @@ slug: Web/CSS/At-rule
 
 ```css
 /* General structure */
-@IDENTIFIER (RULE);
+@identifier (RULE);
 
 /* Example: tells browser to use UTF-8 character set */
 @charset "utf-8";
@@ -28,7 +28,6 @@ slug: Web/CSS/At-rule
   - {{cssxref("@page")}} — 문서를 출력할 때 적용되는 레이아웃 변화의 양상(aspect)을 설명.
   - {{cssxref("@font-face")}} — 다운로드되는 외부 글꼴의 양상을 설명.
   - {{cssxref("@keyframes")}} — CSS 애니메이션 sequence 내 중간 단계의 양상을 설명.
-  - {{cssxref("@viewport")}} {{experimental_inline}} — 작은 화면 장치를 위한 viewport의 양상을 설명. _(현재 Working Draft 단계임)_
   - {{cssxref("@counter-style")}} — 미리 정의된 스타일 집합의 일부가 아닌 특정 카운터 스타일을 정의. _(Candidate Recommendation 단계이지만, 작성 중인 현재 Gecko에서만 구현됨)_
   - {{cssxref("@font-feature-values")}} (`@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` 및 `@character-variant`와 함께)
     — OpenType에서 다르게 활성화된 기능에 대해 {{cssxref("font-variant-alternates")}}에서 일반 이름을 정의. _(Candidate Recommendation 단계이지만, 작성 중인 현재 Gekko에서만 구현됨)_

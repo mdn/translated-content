@@ -42,9 +42,9 @@ _La interfaz `PerformanceNavigation` no hereda ninguna propiedad._
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.PerformanceNavigation")}}
+{{Compat}}
 
 ## Ver también
 

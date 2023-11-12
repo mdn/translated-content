@@ -9,7 +9,7 @@ slug: Web/API/ReadableStream/getReader
 
 ## 语法
 
-```js
+```js-nolint
 getReader()
 getReader(mode)
 ```
@@ -17,9 +17,9 @@ getReader(mode)
 ### 参数
 
 - `mode` {{optional_inline}}
-  - : 具有 `mode` 参数的对象，值为 {{domxref("DOMString")}} 类型 ,用来指定要创建的阅读器的类型。其值可以是：
+  - : 具有 `mode` 参数的对象，值为 {{domxref("DOMString")}} 类型，用来指定要创建的 reader 的类型。其值可以是：
     - `"byob"`，结果为 {{domxref("ReadableStreamBYOBReader")}} 类型，可读取可读字节流。
-    - `undefined`（或不指定——缺省值），返回 {{domxref("ReadableStreamDefaultReader")}}，可以从流中返回单个块。
+    - `undefined`（或不指定——缺省值），返回 {{domxref("ReadableStreamDefaultReader")}}，可以从流中返回单个分块。
 
 ### 返回值
 
@@ -28,13 +28,13 @@ getReader(mode)
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : 提供的 mode 值 既不是 `"byob"` 也不是 `undefined`。
+  - : 提供的 mode 值既不是 `"byob"` 也不是 `undefined`。
 - {{jsxref("TypeError")}}
-  - : 尝试创建阅读器的流不是 {{domxref("ReadableStream")}} 类型。
+  - : 尝试创建 reader 的流不是 {{domxref("ReadableStream")}} 类型。
 
 ## 示例
 
-下面是个简单的例子，在读取 `ReadableStream` 前，使用 `getReader()` 创建一个 {{domxref("ReadableStreamDefaultReader")}}。（查看全部代码：[Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。按顺序读取每个块，并传递给 UI，当整个流被读取完毕后，从递归方法中退出，并在 UI 的另一部分输出整个流。
+下面是个简单的例子，在读取 `ReadableStream` 前，使用 `getReader()` 创建一个 {{domxref("ReadableStreamDefaultReader")}}。（查看全部代码：[Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。按顺序读取每个分块，并传递给 UI，当整个流被读取完毕后，从递归方法中退出，并在 UI 的另一部分输出整个流。
 
 ```js
 function fetchStream() {
@@ -56,8 +56,12 @@ function fetchStream() {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
 
     result += chunk;
@@ -75,3 +79,11 @@ function fetchStream() {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- {{domxref("ReadableStreamDefaultReader")}}
+- {{domxref("ReadableStreamBYOBReader")}}
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- [使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)

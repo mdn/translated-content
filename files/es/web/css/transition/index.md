@@ -27,7 +27,9 @@ transition: margin-left 4s 1s;
 transition: margin-left 4s ease-in-out 1s;
 
 /* Aplicar a 2 propiedades */
-transition: margin-left 4s, color 1s;
+transition:
+  margin-left 4s,
+  color 1s;
 
 /* Aplicar a todas las propiedades que cambien */
 transition: all 0.5s ease-out;
@@ -49,9 +51,9 @@ Hay muchos ejemplos de transiciones CSS en el artículo principal [CSS transitio
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## Véase también
 

@@ -1,12 +1,6 @@
 ---
 title: <ul>
 slug: Web/HTML/Element/ul
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ul
 ---
 
 {{HTMLSidebar}}
@@ -21,13 +15,13 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
 ### Attributs dépréciés ou obsolètes
 
-- {{htmlattrdef("compact")}}{{Deprecated_inline}}
+- `compact`{{Deprecated_inline}}
 
   - : Cet attribut booléen fournit une indication pour afficher la liste en mode compact. L'interprétation de cet attribut est laissée à la discrétion de l'agent utilisateur et ne fonctionne pas pour tous les navigateurs.
 
     > **Attention :** Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété {{cssxref("line-height")}} avec la valeur `80%` pour l'élément `<ul>`.
 
-- {{htmlattrdef("type")}}{{Deprecated_inline}}
+- `type`{{Deprecated_inline}}
 
   - : Cet attribut permet de définir le style de puce utilisé pour la liste. Les valeurs définies au sein des spécifications pour HTML3.2 et HTML 4.0/4.01 sont :
 
@@ -70,21 +64,24 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 ```html
 <ul>
   <li>1 artichaut</li>
-  <li>Les trucs pour le gateau
-  <!-- On voit que </li> n'est pas là -->
+  <li>
+    Les trucs pour le gateau
+    <!-- On voit que </li> n'est pas là -->
     <ul>
       <li>3 oeufs</li>
-      <li>La génoise
-      <!-- Là on ouvre une autre liste -->
+      <li>
+        La génoise
+        <!-- Là on ouvre une autre liste -->
         <ul>
           <li>100g de sucre</li>
           <li>1 oeuf</li>
           <li>150g de farine</li>
         </ul>
-      </li> <!-- On ferme la liste la plus imbriquée -->
+      </li>
+      <!-- On ferme la liste la plus imbriquée -->
       <li>200g de chocolat</li>
     </ul>
-  <!-- On ferme la liste imbriquée avec </li> -->
+    <!-- On ferme la liste imbriquée avec </li> -->
   </li>
   <li>De l'essuie-tout</li>
 </ul>
@@ -101,7 +98,8 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 ```html
 <ul>
   <li>Lire un livre</li>
-  <li>Préparer une soupe
+  <li>
+    Préparer une soupe
     <ol>
       <li>Couper les légumes</li>
       <li>Mettre dans l'eau et cuire</li>
@@ -165,11 +163,11 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
-        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
-        {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}},
-        {{ARIARole("tablist")}}, {{ARIARole("toolbar")}},
-        {{ARIARole("tree")}}, {{ARIARole("presentation")}}
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
       </td>
     </tr>
     <tr>
@@ -194,5 +192,5 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
   - La propriété {{cssxref("list-style")}} qui permet de choisir la façon dont l'indicateur ordinal est affiché,
   - [Les compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS), qui permettent de gérer des listes imbriquées complexes,
-  - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut {{htmlattrxref("compact", "ul")}} désormais déprécié,
+  - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut [`compact`](/fr/docs/Web/HTML/Element/ul#compact) désormais déprécié,
   - La propriété {{cssxref("margin")}} peut être utilisée pour contrôler l'indentation de la liste.

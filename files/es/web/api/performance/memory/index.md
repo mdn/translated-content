@@ -27,9 +27,9 @@ timingInfo = performance.memory
 
 Ninguna.
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance.memory")}}
+{{Compat}}
 
 ## Ver también
 

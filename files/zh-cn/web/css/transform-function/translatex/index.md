@@ -1,7 +1,6 @@
 ---
 title: translateX()
 slug: Web/CSS/transform-function/translateX
-original_slug: Web/CSS/transform-function/translateX()
 ---
 
 {{CSSRef}}
@@ -181,7 +180,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", 250, 250)}}
+{{EmbedLiveSample("示例", 250, 250)}}
 
 ## 规范
 
@@ -191,7 +190,7 @@ div {
 
 {{Compat}}
 
-## 参阅
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

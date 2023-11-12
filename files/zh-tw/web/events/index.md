@@ -105,7 +105,7 @@ This article offers a list of events that can be sent; some are standard events 
       <td>
         <p>
           Events related to
-          <a href="/zh-TW/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>.
+          <a href="/zh-TW/docs/Web/CSS/CSS_transitions">CSS Transitions</a>.
         </p>
         <p>
           Provides notification events when CSS transitions start, stop, are
@@ -1308,7 +1308,6 @@ This article offers a list of events that can be sent; some are standard events 
   - [cut 事件](/zh-TW/docs/Web/API/Window/cut_event)
   - [devicemotion 事件](/zh-TW/docs/Web/API/Window.devicemotion_event)
   - [deviceorientation 事件](/zh-TW/docs/Web/API/Window.deviceorientation_event)
-  - [DOMContentLoaded 事件](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event)
   - [error 事件](/zh-TW/docs/Web/API/Window/error_event)
   - [focus 事件](/zh-TW/docs/Web/API/Window/focus_event)
   - [gamepadconnected 事件](/zh-TW/docs/Web/API/Window/gamepadconnected_event)

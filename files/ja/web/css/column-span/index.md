@@ -54,13 +54,25 @@ column-span: unset;
 <article>
   <h2>Header spanning all of the columns</h2>
   <p>
-     The h2 should span all the columns. The rest
-     of the text should be distributed among the columns.
+    The h2 should span all the columns. The rest of the text should be
+    distributed among the columns.
   </p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
-  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
 </article>
 ```
 

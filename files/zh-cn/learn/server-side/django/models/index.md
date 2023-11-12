@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 3: 使用模型'
+title: "Django Tutorial Part 3: 使用模型"
 slug: Learn/Server-side/Django/Models
 ---
 
@@ -92,7 +92,7 @@ In the below sections we'll explore each of the features inside the model in det
 
 一个模型可以有任意数量的域，或任意的类型——每个用一行呈现我们想存储进数据库的数据。让我们看一下以下的例子吧 o(≧v≦)o：
 
-```js
+```python
 my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")
 ```
 

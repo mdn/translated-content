@@ -1,13 +1,6 @@
 ---
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
-tags:
-  - Experimental
-  - Méthode
-  - Reference
-  - WebRTC
-  - setConfiguration
-translation_of: Web/API/RTCPeerConnection/setConfiguration
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
@@ -48,22 +41,27 @@ RTCPeerConnection.setConfiguration(configuration);
 Dans cet exemple, on a déjà determiné qu'un redémarrage ICE est nécessaire et que la négociation ICE doit se faire sur un nouveau serveur.
 
 ```js
-var restartConfig = { iceServers: [{
-                          urls: "turn:asia.myturnserver.net",
-                          username: "allie@oopcode.com",
-                          credential: "topsecretpassword"
-                      }]
+var restartConfig = {
+  iceServers: [
+    {
+      urls: "turn:asia.myturnserver.net",
+      username: "allie@oopcode.com",
+      credential: "topsecretpassword",
+    },
+  ],
 };
 
 myPeerConnection.setConfiguration(restartConfig);
 
-myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
-  return myPeerConnection.setLocalDescription(offer);
-})
-.then(function() {
-  // send the offer to the other peer using the signaling server
-})
-.catch(reportError);
+myPeerConnection
+  .createOffer({ iceRestart: true })
+  .then(function (offer) {
+    return myPeerConnection.setLocalDescription(offer);
+  })
+  .then(function () {
+    // send the offer to the other peer using the signaling server
+  })
+  .catch(reportError);
 ```
 
 Pour commencer, on crée une {{domxref("RTCConfiguration")}}, `restartConfig`, en indiquant le nouveau serveur ICE et les informations de connexion associées. Cet objet est alors passé à `setConfiguration()`. La négociation ICE est redémarrée via {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}} pour laquelle on indique `true` pour l'option `iceRestart`. Ensuite, on gère le processus habituel en définissant la description locale de l'offre et en envoyant cette offre à l'autre pair.

@@ -24,12 +24,12 @@ Retorna um {{jsxref("Iteration_protocols","iterator")}}.
 ```js
 // Criação de um objeto teste de FormData
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Exibição dos valores chave/valor
-for(var pair of formData.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+for (var pair of formData.entries()) {
+  console.log(pair[0] + ", " + pair[1]);
 }
 ```
 
@@ -42,13 +42,11 @@ key2, value2
 
 ## Especificações
 
-| Especificação                                                                                                | Status                               | Comentário         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('XMLHttpRequest','#dom-formdata','entries() (as iterator&lt;&gt;)')}} | {{Spec2('XMLHttpRequest')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.entries")}}
+{{Compat}}
 
 ## Veja também
 

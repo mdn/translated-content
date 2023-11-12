@@ -1,18 +1,20 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
+l10n:
+  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
 ---
 
 {{JSRef}}
 
-**`Promise.reject()`** メソッドは、引数で与えられた理由で拒否された `Promise` オブジェクトを返します。
+**`Promise.reject()`** は静的メソッドで、引数で与えられた理由で拒否された `Promise` オブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/promise-reject.html")}}
 
 ## 構文
 
-```js
-Promise.reject(reason);
+```js-nolint
+Promise.reject(reason)
 ```
 
 ### 引数
@@ -28,16 +30,55 @@ Promise.reject(reason);
 
 静的な `Promise.reject` 関数は拒否された `Promise` を返します。デバッグのために捕捉するエラーを選別したい場合は、 `reason` を `instanceof` {{jsxref("Error")}} にかけると良いでしょう。
 
+`Promise.reject()` は汎用的であり、サブクラス化に対応しています。つまり、 `Promise` のサブクラスで呼び出すことができ、その結果はサブクラスの種類のプロミスになります。これを行うには、サブクラスのコンストラクターは [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) コンストラクターと同じ呼び出し定義を実装する必要があります。これは、 `resolve` と `reject` コールバックを引数として呼び出すことができる単一の `executor` 関数を引数に取ります。 `Promise.reject()` は、本質的に `new Promise((resolve, reject) => reject(reason))` の短縮形です。
+
+{{jsxref("Promise.resolve()")}} とは異なり、 `Promise.reject()` は `reason` がすでに `Promise` であっても、常に新しい `Promise` オブジェクトで `reason` をラップします。
+
 ## 例
 
 ### 静的な Promise.reject() メソッドの使用
 
 ```js
-Promise.reject(new Error('fail')).then(function() {
-  // 呼び出されない
-}, function(error) {
-  console.error(error); // Stacktrace
+Promise.reject(new Error("fail")).then(
+  () => {
+    // not called
+  },
+  (error) => {
+    console.error(error); // Stacktrace
+  },
+);
+```
+
+### プロミスの拒否
+
+{{jsxref("Promise.resolve")}} とは異なり、 `Promise.reject` メソッドは既存の `Promise` インスタンスを再利用することはありません。常に `reason` を包んだ新しい `Promise` インスタンスを返します。
+
+```js
+const p = Promise.resolve(1);
+const rejected = Promise.reject(p);
+console.log(rejected === p); // false
+rejected.catch((v) => {
+  console.log(v === p); // true
 });
+```
+
+### Promise 以外のコンストラクターに対する reject() の呼び出し
+
+`Promise.reject()` は汎用的なメソッドです。これは `Promise()` コンストラクターと同じ呼び出し定義を実装した任意のコンストラクターで呼び出すことができます。例えば、 `console.log` を `reject` として渡すコンストラクターで呼び出すことができます。
+
+```js
+class NotPromise {
+  constructor(executor) {
+    // The "resolve" and "reject" functions behave nothing like the
+    // native promise's, but Promise.reject() calls them in the same way.
+    executor(
+      (value) => console.log("Resolved", value),
+      (reason) => console.log("Rejected", reason),
+    );
+  }
+}
+
+Promise.reject.call(NotPromise, "foo"); // Logs "Rejected foo"
 ```
 
 ## 仕様書

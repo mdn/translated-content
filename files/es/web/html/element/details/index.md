@@ -1,7 +1,6 @@
 ---
 title: <details>
 slug: Web/HTML/Element/details
-original_slug: Web/HTML/Elemento/details
 ---
 
 {{ SeeCompatTable() }}
@@ -59,7 +58,7 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales) .
 
-- {{htmlattrdef("open")}}
+- `open`
   - : Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue . Por default el valor es `false` y por lo tanto los detalles estarán ocultos.
 
 ## Ejemplo
@@ -75,15 +74,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 {{EmbedLiveSample("Example")}}
 
-> **Nota:** Si el el ejemplo de arriba no funciona , ver [Compatibilidad con navegadores](#compatibilidad_con_navegadores) para determinar si el navegador soporta esta característica .
-
 ## Especificaciones
 
 {{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("html.elements.details")}}
+{{Compat}}
 
 ## Ver también
 

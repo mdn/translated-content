@@ -1,7 +1,6 @@
 ---
 title: Validación de formularios de datos
 slug: Learn/Forms/Form_validation
-original_slug: Learn/HTML/Forms/Validacion_formulario_datos
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -32,7 +31,7 @@ Antes de enviar datos al servidor, es importante asegurarse de que se completan 
 
 La validación en el lado del cliente es una verificación inicial y una característica importante para garantizar una buena experiencia de usuario; mediante la detección de datos no válidos en el lado del cliente, el usuario puede corregirlos de inmediato. Si el servidor lo recibe y, a continuación, lo rechaza; se produce un retraso considerable en la comunicación entre el servidor y el cliente que insta al usuario a corregir sus datos.
 
-Sin embargo, ¡la validación en el lado del cliente _no debe considerarse_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario _en el lado del servidor_, **así como también** en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor. Lee [Seguridad en los sitios web](/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web) para ver qué _podría_ suceder. Cómo implementar la validación en el lado del servidor está fuera del alcance de este módulo, pero debes tenerlo en cuenta.
+Sin embargo, ¡la validación en el lado del cliente _no debe considerarse_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario _en el lado del servidor_, **así como también** en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor. Lee [Seguridad en los sitios web](/es/docs/Learn/Server-side/First_steps/Website_security) para ver qué _podría_ suceder. Cómo implementar la validación en el lado del servidor está fuera del alcance de este módulo, pero debes tenerlo en cuenta.
 
 ## ¿Qué es la validación de formularios?
 
@@ -51,7 +50,7 @@ Queremos que completar formularios web sea lo más fácil posible. Entonces, ¿p
 
 - **Queremos obtener los datos correctos en el formato correcto.** Nuestras aplicaciones no funcionarán correctamente si los datos de nuestros usuarios se almacenan en el formato incorrecto, son incorrectos o se omiten por completo.
 - **Queremos proteger los datos de nuestros usuarios**. Obligar a nuestros usuarios a introducir contraseñas seguras facilita proteger la información de su cuenta.
-- **Queremos protegernos a nosotros mismo**. Hay muchas formas en que los usuarios maliciosos puedan usar mal los formularios desprotegidos y dañar la aplicación (consulta [Seguridad del sitio web](/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web)).
+- **Queremos protegernos a nosotros mismo**. Hay muchas formas en que los usuarios maliciosos puedan usar mal los formularios desprotegidos y dañar la aplicación (consulta [Seguridad del sitio web](/es/docs/Learn/Server-side/First_steps/Website_security)).
 
 > **Advertencia:** No confíes nunca en los datos que se pasan al servidor desde el cliente. Incluso si tu formulario se valida correctamente y evita la introducción de datos con formato incorrecto en el lado del cliente, un usuario malintencionado puede alterar la petición de red.
 
@@ -70,7 +69,7 @@ Una de las características más importantes de los [controles de formulario de 
 - [`minlength`](/es/docs/Web/HTML/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength): Especifican la longitud mínima y máxima de los datos de texto (cadenas).
 - [`min`](/es/docs/Web/HTML/Attributes/min) y [`max`](/es/docs/Web/HTML/Attributes/max): Especifican los valores mínimo y máximo de los tipos de entrada numéricos.
 - `type`: Especifica si los datos deben ser un número, una dirección de correo electrónico o algún otro tipo de preajuste específico.
-- [`pattern`](/es/docs/Web/HTML/Attributes/pattern): Especifica una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_Expressions) que define un patrón que los datos que se introduzcan deben seguir.
+- [`pattern`](/es/docs/Web/HTML/Attributes/pattern): Especifica una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) que define un patrón que los datos que se introduzcan deben seguir.
 
 Si los datos que se introducen en un campo de formulario siguen todas las reglas que especifican los atributos anteriores, se consideran válidos. Si no, se consideran no válidos.
 
@@ -97,7 +96,7 @@ Vamos a empezar con un ejemplo sencillo: una entrada que te permite elegir si pr
 ```html
 <form>
   <label for="choose">¿Prefieres un plátano o una cereza?</label>
-  <input id="choose" name="i_like">
+  <input id="choose" name="i_like" />
   <button>Enviar</button>
 </form>
 ```
@@ -125,7 +124,7 @@ Añade un atributo `required` a tu entrada, como se muestra a continuación.
 ```html
 <form>
   <label for="choose">¿Prefieres un plátano o una cereza? (requerido) </label>
-  <input id="choose" name="i_like" required>
+  <input id="choose" name="i_like" required />
   <button>Enviar</button>
 </form>
 ```
@@ -160,7 +159,7 @@ La presencia del atributo `required` en cualquier elemento que admite este atrib
 
 ### Validación de una expresión regular
 
-Otra característica útil de validación es el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), que espera una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_Expressions) como valor. Una expresión regular (_regex_) es un patrón que se puede usar para establecer combinaciones de caracteres en cadenas de texto, por lo que las expresiones regulares son ideales para la validación de formularios y sirven para una gran variedad de otros usos en JavaScript.
+Otra característica útil de validación es el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), que espera una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) como valor. Una expresión regular (_regex_) es un patrón que se puede usar para establecer combinaciones de caracteres en cadenas de texto, por lo que las expresiones regulares son ideales para la validación de formularios y sirven para una gran variedad de otros usos en JavaScript.
 
 Las expresiones regulares son bastante complejas y no vamos a exponerlas exhaustivamente en este artículo. A continuación hay algunos ejemplos para que te hagas una idea de cómo funcionan.
 
@@ -171,14 +170,14 @@ Las expresiones regulares son bastante complejas y no vamos a exponerlas exhaust
 - `a|b`: coincide con un carácter que es `a` o `b`.
 - `abc|xyz`: coincide exactamente con `abc` o `xyz` (pero no con `abcxyz` `a` o `y`, y así sucesivamente).
 
-Hay muchas más posibilidades que no exponemos aquí. Para obtener una lista completa y muchos ejemplos, consulta nuestro documento de [expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions).
+Hay muchas más posibilidades que no exponemos aquí. Para obtener una lista completa y muchos ejemplos, consulta nuestro documento de [expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
 
 Implementemos un ejemplo. Actualiza tu HTML para añadir un atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) como este:
 
 ```html
 <form>
   <label for="choose">¿Prefieres un plátano o una cereza?</label>
-  <input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza ">
+  <input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza " />
   <button>Enviar</button>
 </form>
 ```
@@ -189,7 +188,7 @@ input:invalid {
 }
 
 input:valid {
-border: 2px solid black;
+  border: 2px solid black;
 }
 ```
 
@@ -227,11 +226,17 @@ Ahora elimina el contenido del elemento `<body>` y reemplázalo con lo siguiente
 <form>
   <div>
     <label for="choose">¿Prefieres un plátano o una cereza?</label>
-    <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
+    <input
+      type="text"
+      id="choose"
+      name="i_like"
+      required
+      minlength="6"
+      maxlength="6" />
   </div>
   <div>
     <label for="number">¿Cuántos te gustaría comer?</label>
-    <input type="number" id="number" name="amount" value="1" min="1" max="10">
+    <input type="number" id="number" name="amount" value="1" min="1" max="10" />
   </div>
   <div>
     <button>Enviar</button>
@@ -248,11 +253,11 @@ input:invalid {
 }
 
 input:valid {
-border: 2px solid black;
+  border: 2px solid black;
 }
 
 div {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 ```
 
@@ -334,7 +339,7 @@ input[type="email"],
 input[type="number"],
 textarea,
 fieldset {
-  width : 100%;
+  width: 100%;
   border: 1px solid #333;
   box-sizing: border-box;
 }
@@ -376,14 +381,14 @@ La API de validación de restricciones hace que las propiedades siguientes esté
 - `validationMessage`: Devuelve un mensaje localizado que describe las restricciones de validación que el control no satisface (si corresponde). Si el control no es candidato para la validación de restricciones (`willValidate` es `false`) o el valor del elemento satisface sus restricciones (es válido), esto devolverá una cadena vacía.
 - `validity`: Devuelve un objeto `ValidityState` que contiene varias propiedades que describen el estado de validez del elemento. Puedes encontrar todos los detalles de todas las propiedades disponibles en la página de referencia {{domxref("ValidityState")}}; a continuación se enumeran algunos de los más comunes:
 
-  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: Devuelve `true` si el valor no coincide con el {{htmlattrxref("pattern", "input")}} especificado, y `false` si coincide. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - {{domxref("ValidityState.tooLong", "tooLong")}}: Devuelve `true` si el valor es mayor que la longitud máxima especificada por el atributo {{htmlattrxref("maxlength", "input")}}, o `false` si es menor o igual al máximo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - {{domxref("ValidityState.tooShort", "tooShort")}}: Devuelve `true` si el valor es menor que la longitud mínima especificada por el atributo {{htmlattrxref("minlength", "input")}}, o `false` si es mayor o igual al mínmo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: Devuelve `true` si el valor es mayor que el máximo especificado por el atributo {{htmlattrxref("max", "input")}}, o `false` si es menor o igual que el máximo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
-  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: Devuelve `true` si el valor es menor que el mínimo especificado por el atributo {{htmlattrxref("min", "input")}}, o `false` si es mayor o igual que el mínimo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
-  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: Devuelve `true` si el valor no está en la sintaxis requerida (cuando {{htmlattrxref("type", "input")}} es `email` o `url`), o `false` si la sintaxis es correcta. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: Devuelve `true` si el valor no coincide con el [`pattern`](/es/docs/Web/HTML/Element/input#pattern) especificado, y `false` si coincide. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - {{domxref("ValidityState.tooLong", "tooLong")}}: Devuelve `true` si el valor es mayor que la longitud máxima especificada por el atributo [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength), o `false` si es menor o igual al máximo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - {{domxref("ValidityState.tooShort", "tooShort")}}: Devuelve `true` si el valor es menor que la longitud mínima especificada por el atributo [`minlength`](/es/docs/Web/HTML/Element/input#minlength), o `false` si es mayor o igual al mínmo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: Devuelve `true` si el valor es mayor que el máximo especificado por el atributo [`max`](/es/docs/Web/HTML/Element/input#max), o `false` si es menor o igual que el máximo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
+  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: Devuelve `true` si el valor es menor que el mínimo especificado por el atributo [`min`](/es/docs/Web/HTML/Element/input#min), o `false` si es mayor o igual que el mínimo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
+  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: Devuelve `true` si el valor no está en la sintaxis requerida (cuando [`type`](/es/docs/Web/HTML/Element/input#type) es `email` o `url`), o `false` si la sintaxis es correcta. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
   - `valid`: Devuelve `true` si el elemento cumple con todas sus restricciones de validación y por lo tanto se considera válido, o `false` si falla alguna restricción. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":valid")}} de CSS; o con la pseudoclase {{cssxref(":invalid")}} de CSS de lo contrario.
-  - `valueMissing`: Devuelve `true` si el elemento tiene un atributo {{htmlattrxref("required", "input")}} pero no tiene valor, o `false` de lo contrario. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - `valueMissing`: Devuelve `true` si el elemento tiene un atributo [`required`](/es/docs/Web/HTML/Element/input#required) pero no tiene valor, o `false` de lo contrario. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
 
 - `willValidate`: Devuelve `true` si el elemento se valida cuando se envía el formulario; `false` de lo contrario.
 
@@ -401,7 +406,7 @@ Estos mensajes automatizados tienen dos inconvenientes:
 - No hay una forma estándar de cambiar su aspecto con CSS.
 - Dependen de la configuración regional del navegador, lo que significa que puedes tener una página en un idioma pero un mensaje de error en otro idioma, como se ve en la siguiente captura de pantalla de Firefox.
 
-![Ejemplo de un mensaje de error en francés en una página de Firefox en inglés](/files/4329/error-firefox-win7.png)
+![Ejemplo de un mensaje de error en francés en una página de Firefox en inglés](error-firefox-win7.png)
 
 La personalización de estos mensajes de error es uno de los casos de uso más comunes de la [API de validación de restricciones](/es/docs/Web/API/Constraint_validation). Veamos un ejemplo simple de cómo hacer esto.
 
@@ -422,7 +427,9 @@ const email = document.getElementById("mail");
 
 email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
-    email.setCustomValidity("¡Se esperaba una dirección de correo electrónico!");
+    email.setCustomValidity(
+      "¡Se esperaba una dirección de correo electrónico!",
+    );
   } else {
     email.setCustomValidity("");
   }
@@ -437,7 +444,7 @@ Si la propiedad `validity.typeMismatch` devuelve `false`, llamamos al método `s
 
 Puedes probarlo a continuación:
 
-{{EmbedGHLiveSample("/en-US/learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
+{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
 
 > **Nota:** Puede encontrar este ejemplo vivo en GitHub como [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (véase también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html)).
 
@@ -452,7 +459,7 @@ En primer lugar, el código HTML. Una vez más, siéntete libre de construir est
   <p>
     <label for="mail">
       <span>Por favor, introduzca una dirección de correo electrónico: </span>
-      <input type="email" id="mail" name="mail" required minlength="8">
+      <input type="email" id="mail" name="mail" required minlength="8" />
       <span class="error" aria-live="polite"></span>
     </label>
   </p>
@@ -462,7 +469,7 @@ En primer lugar, el código HTML. Una vez más, siéntete libre de construir est
 
 Este sencillo formulario usa el atributo [`novalidate`](/es/docs/Web/HTML/Attributes/novalidate) para desactivar la validación automática del navegador; esto permite que nuestra secuencia de comandos tome control sobre la validación. Sin embargo, esto no deshabilita la compatibilidad para la API de validación de restricciones ni la aplicación de pseudoclases de CSS como {{cssxref(":valid")}}, etc. Eso significa que, aunque el navegador no verifica automáticamente la validez del formulario antes de enviar los datos, puedes hacerlo tú mismo y diseñar el formulario en consecuencia.
 
-Nuestra entrada para validar es [`<input type="email">`](/es/docs/Web/HTML/Elemento/input/email), que es obligatoria y tiene una longitud mínima (`minlength`) de 8 caracteres. Vamos a verificar esto con nuestro propio código para que muestre un mensaje de error personalizado para cada elemento.
+Nuestra entrada para validar es [`<input type="email">`](/es/docs/Web/HTML/Element/input/email), que es obligatoria y tiene una longitud mínima (`minlength`) de 8 caracteres. Vamos a verificar esto con nuestro propio código para que muestre un mensaje de error personalizado para cada elemento.
 
 Nuestro objetivo es mostrar los mensajes de error dentro de un elemento `<span>`. El atributo [`aria-live`](/es/docs/Accessibility/ARIA/ARIA_Live_Regions) se establece en ese `<span>` para asegurar que todo el mundo podrá ver nuestro mensaje de error personalizado, incluidos los usuarios de lectores de pantalla.
 
@@ -475,14 +482,14 @@ body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 p * {
   display: block;
 }
 
-input[type=email]{
+input[type="email"] {
   -webkit-appearance: none;
   appearance: none;
 
@@ -497,9 +504,9 @@ input[type=email]{
 }
 
 /* Este es nuestro diseño para los campos no válidos */
-input:invalid{
+input:invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus:invalid {
@@ -508,7 +515,7 @@ input:focus:invalid {
 
 /* Este es el diseño para nuestros mensajes de error */
 .error {
-  width : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -529,30 +536,30 @@ Vamos a ver el JavaScript que implementa la validación de error personalizada.
 ```js
 // Hay muchas formas de elegir un nodo DOM; aquí obtenemos el formulario y, a continuación, el campo de entrada
 // del correo electrónico, así como el elemento span en el que colocaremos el mensaje de error.
-const form  = document.getElementsByTagName('form')[0];
+const form = document.getElementsByTagName("form")[0];
 
-const email = document.getElementById('mail');
-const emailError = document.querySelector('#mail + span.error');
+const email = document.getElementById("mail");
+const emailError = document.querySelector("#mail + span.error");
 
-email.addEventListener('input', function (event) {
+email.addEventListener("input", function (event) {
   // Cada vez que el usuario escribe algo, verificamos si
   // los campos del formulario son válidos.
 
   if (email.validity.valid) {
     // En caso de que haya un mensaje de error visible, si el campo
     // es válido, eliminamos el mensaje de error.
-    emailError.innerHTML = ''; // Restablece el contenido del mensaje
-    emailError.className = 'error'; // Restablece el estado visual del mensaje
+    emailError.innerHTML = ""; // Restablece el contenido del mensaje
+    emailError.className = "error"; // Restablece el estado visual del mensaje
   } else {
     // Si todavía hay un error, muestra el error exacto
     showError();
   }
 });
 
-form.addEventListener('submit', function (event) {
+form.addEventListener("submit", function (event) {
   // si el campo de correo electrónico es válido, dejamos que el formulario se envíe
 
-  if(!email.validity.valid) {
+  if (!email.validity.valid) {
     // Si no es así, mostramos un mensaje de error apropiado
     showError();
     // Luego evitamos que se envíe el formulario cancelando el evento
@@ -561,22 +568,25 @@ form.addEventListener('submit', function (event) {
 });
 
 function showError() {
-  if(email.validity.valueMissing) {
+  if (email.validity.valueMissing) {
     // Si el campo está vacío
     // muestra el mensaje de error siguiente.
-    emailError.textContent = 'Debe introducir una dirección de correo electrónico.';
-  } else if(email.validity.typeMismatch) {
+    emailError.textContent =
+      "Debe introducir una dirección de correo electrónico.";
+  } else if (email.validity.typeMismatch) {
     // Si el campo no contiene una dirección de correo electrónico
     // muestra el mensaje de error siguiente.
-    emailError.textContent = 'El valor introducido debe ser una dirección de correo electrónico.';
-  } else if(email.validity.tooShort) {
+    emailError.textContent =
+      "El valor introducido debe ser una dirección de correo electrónico.";
+  } else if (email.validity.tooShort) {
     // Si los datos son demasiado cortos
     // muestra el mensaje de error siguiente.
-    emailError.textContent = 'El correo electrónico debe tener al menos ${ email.minLength } caracteres; ha introducido ${ email.value.length }.';
+    emailError.textContent =
+      "El correo electrónico debe tener al menos ${ email.minLength } caracteres; ha introducido ${ email.value.length }.";
   }
 
   // Establece el estilo apropiado
-  emailError.className = 'error activo';
+  emailError.className = "error activo";
 }
 ```
 
@@ -588,7 +598,7 @@ Los comentarios explican las cosas bastante bien, pero de una manera muy breve:
 
 Este es el resultado:
 
-{{EmbedGHLiveSample("/en-US/learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
+{{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
 
 > **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html)).
 
@@ -598,7 +608,7 @@ La API de validación de restricciones te proporciona una herramienta poderosa p
 
 ### Validar formularios sin una API incorporada
 
-En algunos casos, como la compatibilidad heredada del navegador o los [controles personalizados](/es/docs/Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados), no podrás o no querrás usar la API de validación de restricciones. Todavía puedes usar JavaScript para validar tu formulario, pero vas a tener que escribirlo.
+En algunos casos, como la compatibilidad heredada del navegador o los [controles personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls), no podrás o no querrás usar la API de validación de restricciones. Todavía puedes usar JavaScript para validar tu formulario, pero vas a tener que escribirlo.
 
 Antes de validar el formulario, hazte estas preguntas:
 
@@ -610,10 +620,10 @@ Antes de validar el formulario, hazte estas preguntas:
 
   - : Para reducir la frustración del usuario, es muy importante proporcionar tanta información útil como sea posible para guiarlo a fin de que corrija sus entradas de datos. Debes ofrecer sugerencias por adelantado para que sepan lo que se espera de ellos, así como mensajes de error claros. Si deseas profundizar en los requisitos de interfaz de usuario para la validación de formularios, aquí hay algunos artículos útiles que debes leer:
 
-    - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/) \[Validación de campo de formulario: El enfoque de solo errores]
-    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/) \[Validación de formularios web: Buenas prácticas y tutoriales]
-    - Six Revision: [Best Practices for Hints and Validation in Web Forms](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/) \[Buenas prácticas para sugerencias y validación de formularios web]
-    - A List Apart: [Inline Validation in Web Forms](http://www.alistapart.com/articles/inline-validation-in-web-forms/) \[Validación en línea de formularios web]
+    - SmashingMagazine: [Validación de campo de formulario: El enfoque de solo errores](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
+    - SmashingMagazine: [Validación de formularios web: Buenas prácticas y tutoriales](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
+    - Six Revision: [Buenas prácticas para sugerencias y validación de formularios web](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
+    - A List Apart: [Validación en línea de formularios web](https://www.alistapart.com/articles/inline-validation-in-web-forms/)
 
 #### Un ejemplo que no usa la API de validación de restricciones
 
@@ -625,9 +635,9 @@ El HTML es casi el mismo; solo hemos eliminado las funciones de validación de H
 <form>
   <p>
     <label for="mail">
-        <span>Por favor, introduzca una dirección de correo electrónico: </span>
-        <input type="text" class="mail" id="mail" name="mail">
-        <span class="error" aria-live="polite"></span>
+      <span>Por favor, introduzca una dirección de correo electrónico: </span>
+      <input type="text" class="mail" id="mail" name="mail" />
+      <span class="error" aria-live="polite"></span>
     </label>
   </p>
   <!-- Algunos navegadores con compatibilidad heredada deben tener el atributo «type»
@@ -643,7 +653,7 @@ body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 form {
@@ -668,9 +678,9 @@ input.mail {
 }
 
 /* Este es nuestro diseño para los campos no válidos */
-input.invalid{
+input.invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus.invalid {
@@ -679,7 +689,7 @@ input:focus.invalid {
 
 /* Este es el diseño para nuestros mensajes de error */
 .error {
-  width : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -698,8 +708,8 @@ Los grandes cambios están en el código JavaScript, que necesita hacer mucho m�
 
 ```js
 // Hay menos formas de elegir un nodo DOM con navegadores antiguos
-const form  = document.getElementsByTagName('form')[0];
-const email = document.getElementById('mail');
+const form = document.getElementsByTagName("form")[0];
+const email = document.getElementById("mail");
 
 // Lo siguiente es un truco para llegar al siguiente nodo de elementos hermanos en el DOM
 // Esto es peligroso porque puedes construir fácilmente un bucle infinito.
@@ -708,25 +718,26 @@ let error = email;
 while ((error = error.nextSibling).nodeType != 1);
 
 // según la especificación HTML5
-const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const emailRegExp =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 // Muchos navegadores antiguos no son compatibles con el método addEventListener.
 // Aquí hay una manera simple de manejar esto; está lejos de ser la única.
 function addEvent(element, event, callback) {
-  let previousEventCallBack = element["on"+event];
-  element["on"+event] = function (e) {
+  let previousEventCallBack = element["on" + event];
+  element["on" + event] = function (e) {
     const output = callback(e);
 
     // Una devolución de llamada que devuelve «false» detiene la cadena de devolución de llamada
     // e interrumpe la ejecución de la devolución de llamada del evento.
     if (output === false) return false;
 
-    if (typeof previousEventCallBack === 'function') {
+    if (typeof previousEventCallBack === "function") {
       output = previousEventCallBack(e);
-      if(output === false) return false;
+      if (output === false) return false;
     }
-  }
-};
+  };
+}
 
 // Ahora podemos reconstruir nuestra restricción de validación
 // Debido a que no confiamos en la pseudoclase de CSS, tenemos que
@@ -757,7 +768,7 @@ addEvent(form, "submit", function () {
 
   if (!test) {
     email.className = "invalid";
-    error.innerHTML = "I expect an e-mail, darling!";
+    error.innerHTML = "Espero un correo electrónico, querido!";
     error.className = "error active";
 
     // Algunos navegadores antiguos no son compatibles con el método event.preventDefault ()
@@ -774,9 +785,7 @@ El resultado es el siguiente:
 
 {{EmbedLiveSample("Validar_formularios_sin_una_API_incorporada", "100%", 130)}}
 
-Como puedes ver, no es tan difícil construir un sistema de validación por tu cuenta. La parte difícil es hacer que sea lo suficientemente genérico para que se pueda usar en diferentes plataformas y en cualquier forma. Hay muchas bibliotecas de archivos disponibles para realizar la validación de formularios, como por ejemplo [Validate.js](http://rickharrison.github.com/validate.js/)
-
-.
+Como puedes ver, no es tan difícil construir un sistema de validación por tu cuenta. La parte difícil es hacer que sea lo suficientemente genérico para que se pueda usar en diferentes plataformas y en cualquier forma. Hay muchas bibliotecas de archivos disponibles para realizar la validación de formularios, como por ejemplo [Validate.js](http://rickharrison.github.com/validate.js/).
 
 ## Prueba tus habilidades!
 
@@ -793,19 +802,6 @@ La validación de formularios en el lado del cliente a veces requiere JavaScript
 Una vez que hayas verificado que el formulario se ha completado correctamente, puedes proceder a enviarlo. Vamos a exponer el [envío de los datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data) en el próximo artículo.
 
 {{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
-
-## En este módulo
-
-- [Tu primer formulario](/es/docs/Learn/Forms/Your_first_form)
-- [Cómo estructurar un formulario web](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Los controles de formulario básicos originales](/es/docs/Learn/Forms/Basic_native_form_controls)
-- [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types)
-- [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls)
-- [Aplicar estilo a formularios web](/es/docs/Learn/Forms/Styling_web_forms)
-- [Aplicación de estilo a formularios avanzada](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudoclases UI](/es/docs/Learn/Forms/UI_pseudo-classes)
-- [Validación de formularios en el lado del cliente](/es/docs/Learn/Forms/Form_validation)
-- [Enviar los datos de un formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Temas avanzados
 

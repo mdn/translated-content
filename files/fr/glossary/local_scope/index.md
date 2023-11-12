@@ -1,12 +1,9 @@
 ---
 title: Portée locale
 slug: Glossary/Local_scope
-tags:
-  - Encodage
-  - Glossaire
-translation_of: Glossary/Local_scope
-original_slug: Glossaire/Portée_locale
 ---
+
+{{GlossarySidebar}}
 
 La portée locale est une caractéristique des {{glossary("Variable","variables")}} qui les rend locales (c'est-à-dire, le nom de la variable est lié à sa {{glossary("Value","valeur")}} seulement à l'intérieur d'une portée qui n'est pas la {{glossary("Global scope","portée globale")}}).
 
@@ -14,4 +11,4 @@ La portée locale est une caractéristique des {{glossary("Variable","variables"
 
 ### General knowledge
 
-- [Portée](https://fr.wikipedia.org/wiki/Port%C3%A9e_(informatique)) sur Wikipédia
+- [Portée](<https://fr.wikipedia.org/wiki/Portée_(informatique)>) sur Wikipédia

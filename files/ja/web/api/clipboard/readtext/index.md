@@ -12,7 +12,7 @@ slug: Web/API/Clipboard/readText
 ## 構文
 
 ```js
-readText()
+readText();
 ```
 
 ### 引数
@@ -30,8 +30,9 @@ readText()
 この使用例は、クリップボードからテキストの内容を取得し、ある要素の内容にその取得されたテキストを設定します。
 
 ```js
-navigator.clipboard.readText().then(
-  (clipText) => document.getElementById("outbox").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
 ```
 
 ## 仕様書

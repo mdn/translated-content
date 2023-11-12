@@ -27,8 +27,8 @@ GLboolean gl.isProgram(program);
 ### 检查一个 program 是否有效
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var program = gl.createProgram();
 
 // ...

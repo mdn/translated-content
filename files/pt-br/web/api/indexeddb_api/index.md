@@ -44,7 +44,7 @@ Uma versão anterior da especificação também define estas interfaces agora re
 
 - {{domxref("IDBVersionChangeRequest")}}
   - : Representa uma requisição para alterar a versão do banco de dados. O modo de alterar a versão do banco de dados mudou então (chamando IDBFactory.open sem também chamar IDBDatabase.setVersion) e a interface IDBOpenDBRequest agora tem a funcionalidade do removido IDBVersionChangeRequest.
-- {{domxref("IDBDatabaseException")}} {{ obsolete_inline() }}
+- {{domxref("IDBDatabaseException")}}
   - : Representa condições de erro que podem ser encontradas enquanto performando operações no banco de dados.
 
 > **Nota:** há também a [versão síncrona da API](/pt-BR/docs/IndexedDB/Syncronous_API). A versão síncrona não tem implementação em qualquer navegador. É feita para ser utilizada com [WebWorkers](/pt-BR/docs/DOM/Using_web_workers).

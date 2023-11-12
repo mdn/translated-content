@@ -3,7 +3,7 @@ title: word-spacing
 slug: Web/CSS/word-spacing
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`word-spacing`** 设置标签、单词之间的空格长度。
 
@@ -11,9 +11,9 @@ slug: Web/CSS/word-spacing
 
 ## 语法
 
-```html
-word-spacing: normal;    /* Keyword value */
-word-spacing: 3px;       /* <length> values */
+```css
+word-spacing: normal; /* Keyword value */
+word-spacing: 3px; /* <length> values */
 word-spacing: 0.3em;
 
 word-spacing: inherit;

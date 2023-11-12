@@ -1,6 +1,6 @@
 ---
 title: CSS スクロールスナップ
-slug: Web/CSS/CSS_Scroll_Snap
+slug: Web/CSS/CSS_scroll_snap
 ---
 
 {{CSSRef}}

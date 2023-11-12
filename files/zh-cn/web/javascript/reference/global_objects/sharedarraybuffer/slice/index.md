@@ -28,13 +28,13 @@ sab.slice(begin, end)
 
 一个包含被提取出的元素的新 {{jsxref("SharedArrayBuffer")}} 。
 
-## 例子
+## 示例
 
 ```js
 var sab = new SharedArrayBuffer(1024);
-sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 

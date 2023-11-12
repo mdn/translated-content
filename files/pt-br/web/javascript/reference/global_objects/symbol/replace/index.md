@@ -21,23 +21,21 @@ class CustomReplacer {
     this.value = value;
   }
   [Symbol.replace](string) {
-    return string.replace(this.value, '#!@?');
+    return string.replace(this.value, "#!@?");
   }
 }
 
-console.log('football'.replace(new CustomReplacer('foo')));
+console.log("football".replace(new CustomReplacer("foo")));
 // resultado esperado: "#!@?tball"
 ```
 
 ## Especificações
 
-| Especificação                                                                        |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.replace")}}
+{{Compat}}
 
 ## Veja também
 

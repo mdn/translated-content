@@ -1,12 +1,6 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
 
 {{JSRef("Global_Objects", "Number")}}
@@ -44,17 +38,17 @@ numObj.toPrecision([precision])
 ```js
 var numObj = 5.123456;
 
-console.log(numObj.toPrecision());    // выведет '5.123456'
-console.log(numObj.toPrecision(5));   // выведет '5.1235'
-console.log(numObj.toPrecision(2));   // выведет '5.1'
-console.log(numObj.toPrecision(1));   // выведет '5'
+console.log(numObj.toPrecision()); // выведет '5.123456'
+console.log(numObj.toPrecision(5)); // выведет '5.1235'
+console.log(numObj.toPrecision(2)); // выведет '5.1'
+console.log(numObj.toPrecision(1)); // выведет '5'
 
 numObj = 0.000123;
 
-console.log(numObj.toPrecision());    // выведет '0.000123'
-console.log(numObj.toPrecision(5));   // выведет '0.00012300'
-console.log(numObj.toPrecision(2));   // выведет '0.00012'
-console.log(numObj.toPrecision(1));   // выведет '0.0001'
+console.log(numObj.toPrecision()); // выведет '0.000123'
+console.log(numObj.toPrecision(5)); // выведет '0.00012300'
+console.log(numObj.toPrecision(2)); // выведет '0.00012'
+console.log(numObj.toPrecision(1)); // выведет '0.0001'
 
 // Обратите внимание, что если заданного количества разрядов
 // недостаточно для точного отображения целой части числа,

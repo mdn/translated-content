@@ -1,5 +1,5 @@
 ---
-title: '장고 튜토리얼 강좌 2 : 뼈대 사이트 만들기'
+title: "장고 튜토리얼 강좌 2 : 뼈대 사이트 만들기"
 slug: Learn/Server-side/Django/skeleton_website
 ---
 
@@ -12,12 +12,12 @@ slug: Learn/Server-side/Django/skeleton_website
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/ko/docs/Learn/Server-side/Django/development_environment"
           >장고 개발 환경을 설치하세요. (Set up a Django development
           environment.)</a
         >
         <a
-          href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website"
           >장고 튜토리얼</a
         >을 복습하세요.
       </td>
@@ -41,7 +41,7 @@ slug: Learn/Server-side/Django/skeleton_website
 1. 프로젝트 폴더, 기본적인 파일 템플릿과 프로젝트 관리 스크립트(**manage.py**)를 만들기 위해서 `django-admin`을 사용합니다.
 2. 하나 또는 그 이상의 애플리케이션을 만들기 위해서 **manage.py**를 사용합니다.
 
-    > **참고:** 하나의 웹사이트는 하나 또는 그 이상의 섹션으로 구성될 수 있습니다. (예를 들어 main site, blog, wiki, downloads area 등). 장고는 필요할 때에 다른 프로젝트에서 재사용이 가능할 수 있게 , 이 요소들을 분리된 어플리케이션으로 개발하는 것을 추천합니다.
+   > **참고:** 하나의 웹사이트는 하나 또는 그 이상의 섹션으로 구성될 수 있습니다. (예를 들어 main site, blog, wiki, downloads area 등). 장고는 필요할 때에 다른 프로젝트에서 재사용이 가능할 수 있게 , 이 요소들을 분리된 어플리케이션으로 개발하는 것을 추천합니다.
 
 3. 프로젝트에 포함시키기 위해 새 어플리케이션들을 등록(register)합니다.
 4. 각 어플리케이션에 대해 url/mapper를 연결(hook up)합니다.
@@ -369,21 +369,3 @@ python3 manage.py runserver
 - [Applications](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Django Docs). 어플리케이션의 구성(configuring)에 관한 정보를 갖고 있습니다.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
-
-## 이 모듈 안에서
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

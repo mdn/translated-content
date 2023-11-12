@@ -15,15 +15,15 @@ O código de resposta de erro de cliente HTTP **`412 Precondition Failed`** indi
 
 ## Especificações
 
-| Especificação                                                        | Título                                                       |
-| -------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Especificação                                      | Título                                                       |
+| -------------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "412 Precondition Failed" , "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Compatibilidade com navegadores
 
 A informação abaixo foi retirada do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.412")}}
+{{Compat}}
 
 ## Veja também
 

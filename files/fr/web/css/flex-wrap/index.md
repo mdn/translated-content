@@ -1,7 +1,6 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-translation_of: Web/CSS/flex-wrap
 ---
 
 {{CSSRef}}
@@ -50,21 +49,21 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 ### HTML
 
 ```html
-<h4>Un exemple de flex-wrap:wrap </h4>
+<h4>Un exemple de flex-wrap:wrap</h4>
 <div class="contenu">
   <div class="rouge">1</div>
   <div class="vert">2</div>
   <div class="bleu">3</div>
 </div>
 
-<h4>Un exemple de flex-wrap:nowrap </h4>
+<h4>Un exemple de flex-wrap:nowrap</h4>
 <div class="contenu1">
   <div class="rouge">1</div>
   <div class="vert">2</div>
   <div class="bleu">3</div>
 </div>
 
-<h4>Un exemple de flex-wrap:wrap-reverse </h4>
+<h4>Un exemple de flex-wrap:wrap-reverse</h4>
 <div class="contenu2">
   <div class="rouge">1</div>
   <div class="vert">2</div>

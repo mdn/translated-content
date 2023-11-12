@@ -1,7 +1,6 @@
 ---
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
-translation_of: Web/API/Document/createDocumentFragment
 ---
 
 {{ApiRef("DOM")}}
@@ -25,31 +24,24 @@ var fragment = document.createDocumentFragment();
 ## Example
 
 ```js
-var element  = document.getElementById('ul'); // assuming ul exists
+var element = document.getElementById("ul"); // assuming ul exists
 var fragment = document.createDocumentFragment();
-var browsers = ['Firefox', 'Chrome', 'Opera',
-    'Safari', 'Internet Explorer'];
+var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
 
-browsers.forEach(function(browser) {
-    var li = document.createElement('li');
-    li.textContent = browser;
-    fragment.appendChild(li);
+browsers.forEach(function (browser) {
+  var li = document.createElement("li");
+  li.textContent = browser;
+  fragment.appendChild(li);
 });
 
 element.appendChild(fragment);
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                            | Status                           | Comment                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}} | {{Spec2('DOM WHATWG')}} | No change                                                                                |
-| {{SpecName('DOM4', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}}         | {{Spec2('DOM4')}}         | Clarifies that the node document of the created document fragment is the context object. |
-| {{SpecName('DOM3 Core', 'core.html#ID-35CB04B5', 'Document.createDocumentFragment()')}}                     | {{Spec2('DOM3 Core')}}     | No change                                                                                |
-| {{SpecName('DOM2 Core', 'core.html#ID-35CB04B5', 'Document.createDocumentFragment()')}}                     | {{Spec2('DOM2 Core')}}     | No change                                                                                |
-| {{SpecName('DOM1', 'level-one-core.html#ID-35CB04B5', 'Document.createDocumentFragment()')}}             | {{Spec2('DOM1')}}         | Initial definition                                                                       |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

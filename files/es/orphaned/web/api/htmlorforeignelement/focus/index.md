@@ -102,17 +102,9 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 {{ EmbedLiveSample('Focus_prevent_scroll') }}
 
-## Especificaciones
-
-{{Specifications}}
-
 ## Notas
 
 Si se llama a `HTMLElement.focus()` desde un gestor de eventos "mousedown" (ratón presionado), se debe también llamar al método `event.preventDefault()` para evitar que el foco abandone `HTMLElement`**.**
-
-## Compatibilidad en navegadores
-
-{{Compat("api.HTMLElement.focus")}}
 
 ## Ver también
 

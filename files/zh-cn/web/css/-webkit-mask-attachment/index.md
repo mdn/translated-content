@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-attachment'
+title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
 ---
 
@@ -42,7 +42,7 @@ slug: Web/CSS/-webkit-mask-attachment
 
 ```css
 body {
-  -webkit-mask-image: url('images/mask.png');
+  -webkit-mask-image: url("images/mask.png");
   -webkit-mask-attachment: fixed;
 }
 ```

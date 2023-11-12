@@ -51,7 +51,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 this.x = 9;
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX(); // 81
@@ -72,33 +74,32 @@ boundGetX(); // 81
 `bind()`의 다음으로 간단한 사용법은 미리 지정된 초기 인수가 있는 함수를 만드는 겁니다. 지정될 초기 인수가 있다면 제공된 `this` 값을 따르고, 바인딩 된 함수에 전달되어 바인딩 된 함수가 호출될 때마다 대상 함수의 인수 앞에 삽입됩니다.
 
 ```js
-    function list() {
-      return Array.prototype.slice.call(arguments);
-    }
+function list() {
+  return Array.prototype.slice.call(arguments);
+}
 
-    var list1 = list(1, 2, 3); // [1, 2, 3]
+var list1 = list(1, 2, 3); // [1, 2, 3]
 
-    // 선행될 인수를 설정하여 함수를 생성합니다.
-    var leadingThirtysevenList = list.bind(null, 37);
+// 선행될 인수를 설정하여 함수를 생성합니다.
+var leadingThirtysevenList = list.bind(null, 37);
 
-    var list2 = leadingThirtysevenList();  // [37]
+var list2 = leadingThirtysevenList(); // [37]
 
-    var list3 = leadingThirtysevenList(1, 2, 3);  // [37, 1, 2, 3]
+var list3 = leadingThirtysevenList(1, 2, 3); // [37, 1, 2, 3]
 
+function addArguments(arg1, arg2) {
+  return arg1 + arg2;
+}
 
-    function addArguments(arg1, arg2) {
-        return arg1 + arg2
-    }
+var result1 = addArguments(1, 2); // 3
 
-    var result1 = addArguments(1, 2); // 3
+// 첫 번째 인수를 지정하여 함수를 생성합니다.
+var addThirtySeven = addArguments.bind(null, 37);
 
-    // 첫 번째 인수를 지정하여 함수를 생성합니다.
-    var addThirtySeven = addArguments.bind(null, 37);
+var result2 = addThirtySeven(5); // 37 + 5 = 42
 
-    var result2 = addThirtySeven(5); // 37 + 5 = 42
-
-    // 두 번째 인수는 무시됩니다.
-    var result3 = addThirtySeven(5, 10); // 37 + 5 = 42
+// 두 번째 인수는 무시됩니다.
+var result3 = addThirtySeven(5, 10); // 37 + 5 = 42
 ```
 
 ### `setTimeout`과 함께 사용
@@ -111,13 +112,12 @@ function LateBloomer() {
 }
 
 // 1초 지체 후 bloom 선언
-LateBloomer.prototype.bloom = function() {
+LateBloomer.prototype.bloom = function () {
   window.setTimeout(this.declare.bind(this), 1000);
 };
 
-LateBloomer.prototype.declare = function() {
-  console.log('I am a beautiful flower with ' +
-    this.petalCount + ' petals!');
+LateBloomer.prototype.declare = function () {
+  console.log("I am a beautiful flower with " + this.petalCount + " petals!");
 };
 
 var flower = new LateBloomer();
@@ -137,8 +137,8 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
-  return this.x + ',' + this.y;
+Point.prototype.toString = function () {
+  return this.x + "," + this.y;
 };
 
 var p = new Point(1, 2);
@@ -148,11 +148,10 @@ p.toString(); // '1,2'
 
 // 원 bind와는 잘 작동:
 
-var YAxisPoint = Point.bind(null, 0/*x*/);
-
+var YAxisPoint = Point.bind(null, 0 /*x*/);
 
 var emptyObj = {};
-var YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+var YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
 var axisPoint = new YAxisPoint(5);
 axisPoint.toString(); // '0,5'
@@ -172,7 +171,7 @@ new Point(17, 42) instanceof YAxisPoint; // true
 // (보통 이를 원하지 않더라도)
 YAxisPoint(13);
 
-emptyObj.x + ',' + emptyObj.y;
+emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
@@ -210,22 +209,24 @@ slice(arguments);
 
 ```js
 if (!Function.prototype.bind) {
-  Function.prototype.bind = function(oThis) {
-    if (typeof this !== 'function') {
+  Function.prototype.bind = function (oThis) {
+    if (typeof this !== "function") {
       // ECMAScript 5 내부 IsCallable 함수와
       // 가능한 가장 가까운 것
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+      throw new TypeError(
+        "Function.prototype.bind - what is trying to be bound is not callable",
+      );
     }
 
-    var aArgs   = Array.prototype.slice.call(arguments, 1),
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          return fToBind.apply(this instanceof fNOP
-                 ? this
-                 : oThis,
-                 aArgs.concat(Array.prototype.slice.call(arguments)));
-        };
+    var aArgs = Array.prototype.slice.call(arguments, 1),
+      fToBind = this,
+      fNOP = function () {},
+      fBound = function () {
+        return fToBind.apply(
+          this instanceof fNOP ? this : oThis,
+          aArgs.concat(Array.prototype.slice.call(arguments)),
+        );
+      };
 
     if (this.prototype) {
       // Function.prototype은 prototype 속성이 없음
@@ -247,7 +248,7 @@ if (!Function.prototype.bind) {
 
 이 부분 구현을 쓰기로 고른 경우, **동작이 ECMA-262 제5판을 벗어난 경우에 의존하지 않아야 합니다!** 그러나 주의 약간(과 아마도 특정 요구에 맞추기 위한 추가 수정)으로, 이 부분 구현은 `bind()`가 스펙에 따라 널리 구현될 때까지 적당한 다리가 될 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

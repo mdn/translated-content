@@ -1,7 +1,6 @@
 ---
 title: Document.createRange()
 slug: Web/API/Document/createRange
-translation_of: Web/API/Document/createRange
 ---
 
 {{APIRef("DOM")}}

@@ -1,9 +1,8 @@
 ---
 title: Кодирование и декодирование в формате Base64
 slug: Glossary/Base64
-translation_of: Glossary/Base64
-original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 ---
+
 **Base64** - это группа схожих [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) схем, которые представляют двоичные данные в ASCII-формате методом перевода в radix-64 представление. Термин _Base64_ происходит от a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 
 Кодирование Base64 широко используется в случаях, когда требуется перекодировать двоичные данные для передачи по каналу приспособленному для передачи текстовых данных. Это делается с целью защиты двоичных данных от любых возможных повреждений при передаче. Base64 широко используется во многих приложениях, включая электронную почту ([MIME](https://en.wikipedia.org/wiki/MIME)), и при сохранении больших объёмов данных в [XML](/ru/docs/XML).
@@ -48,7 +47,7 @@ original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 
 - [`ArrayBuffer`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBuffer)
 - [Typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
-- [`ArrayBufferView`](/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView)
+- [`ArrayBufferView`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBufferView)
 - [`Uint8Array`](/ru/docs/Web/JavaScript/Typed_arrays/Uint8Array)
 - [`StringView` – a C-like representation of strings based on typed arrays](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
 - [`DOMString`](/ru/docs/Web/API/DOMString)
@@ -68,31 +67,40 @@ Here are the two possible methods.
 
 ```js
 function b64EncodeUnicode(str) {
-    // first we use encodeURIComponent to get percent-encoded UTF-8,
-    // then we convert the percent encodings into raw bytes which
-    // can be fed into btoa.
-    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
-        function toSolidBytes(match, p1) {
-            return String.fromCharCode('0x' + p1);
-    }));
+  // first we use encodeURIComponent to get percent-encoded UTF-8,
+  // then we convert the percent encodings into raw bytes which
+  // can be fed into btoa.
+  return btoa(
+    encodeURIComponent(str).replace(
+      /%([0-9A-F]{2})/g,
+      function toSolidBytes(match, p1) {
+        return String.fromCharCode("0x" + p1);
+      },
+    ),
+  );
 }
 
-b64EncodeUnicode('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
-b64EncodeUnicode('\n'); // "Cg=="
+b64EncodeUnicode("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
+b64EncodeUnicode("\n"); // "Cg=="
 ```
 
 To decode the Base64-encoded value back into a String:
 
 ```js
 function b64DecodeUnicode(str) {
-    // Going backwards: from bytestream, to percent-encoding, to original string.
-    return decodeURIComponent(atob(str).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
+  // Going backwards: from bytestream, to percent-encoding, to original string.
+  return decodeURIComponent(
+    atob(str)
+      .split("")
+      .map(function (c) {
+        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+      })
+      .join(""),
+  );
 }
 
-b64DecodeUnicode('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
-b64DecodeUnicode('Cg=='); // "\n"
+b64DecodeUnicode("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
+b64DecodeUnicode("Cg=="); // "\n"
 ```
 
 [Unibabel](https://github.com/coolaj86/unibabel-js) implements common conversions using this strategy.
@@ -106,13 +114,13 @@ When a native `TextEncoder` implementation is not available, the most light-weig
 The following function implements such a strategy. It assumes base64-js imported as `<script type="text/javascript" src="base64js.min.js"/>`. Note that TextEncoderLite only works with UTF-8.
 
 ```js
-function Base64Encode(str, encoding = 'utf-8') {
-    var bytes = new (TextEncoder || TextEncoderLite)(encoding).encode(str);
-    return base64js.fromByteArray(bytes);
+function Base64Encode(str, encoding = "utf-8") {
+  var bytes = new (TextEncoder || TextEncoderLite)(encoding).encode(str);
+  return base64js.fromByteArray(bytes);
 }
 
-function Base64Decode(str, encoding = 'utf-8') {
-    var bytes = base64js.toByteArray(str);
-    return new (TextDecoder || TextDecoderLite)(encoding).decode(bytes);
+function Base64Decode(str, encoding = "utf-8") {
+  var bytes = base64js.toByteArray(str);
+  return new (TextDecoder || TextDecoderLite)(encoding).decode(bytes);
 }
 ```

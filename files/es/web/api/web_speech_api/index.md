@@ -1,81 +1,86 @@
 ---
-title: Web Speech API
+title: API Web de Voz
 slug: Web/API/Web_Speech_API
+l10n:
+  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
 ---
 
-{{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
+{{DefaultAPISidebar("Web Speech API")}}
 
-The Web Speech API enables you to incorporate voice data into web apps. The Web Speech API has two parts: SpeechSynthesis (Text-to-Speech), and SpeechRecognition (Asynchronous Speech Recognition.)
+La **API Web de Voz** (Web Speech API) te permite incorporar datos de voz en aplicaciones web.
+La API Web de Voz tiene dos partes: `SpeechSynthesis` (Texto a voz) y `SpeechRecognition` (Reconocimiento de voz asíncrono).
 
-## Web Speech Concepts and Usage
+## Conceptos y uso de la API Web de Voz
 
-The Web Speech API makes web apps able to handle voice data. There are two components to this API:
+La API Web de Voz permite que las aplicaciones web manejen datos de voz.
+Hay dos componentes en esta API:
 
-- Speech recognition is accessed via the {{domxref("SpeechRecognition")}} interface, which provides the ability to recognize voice context from an audio input (normally via the device's default speech recognition service) and respond appropriately. Generally you'll use the interface's constructor to create a new {{domxref("SpeechRecognition")}} object, which has a number of event handlers available for detecting when speech is input through the device's microphone. The {{domxref("SpeechGrammar")}} interface represents a container for a particular set of grammar that your app should recognise. Grammar is defined using [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.)
-- Speech synthesis is accessed via the {{domxref("SpeechSynthesis")}} interface, a text-to-speech component that allows programs to read out their text content (normally via the device's default speech synthesiser.) Different voice types are represented by {{domxref("SpeechSynthesisVoice")}} objects, and different parts of text that you want to be spoken are represented by {{domxref("SpeechSynthesisUtterance")}} objects. You can get these spoken by passing them to the {{domxref("SpeechSynthesis.speak()")}} method.
+- Se accede al reconocimiento de voz a través de la interfaz {{domxref("SpeechRecognition")}}, que brinda la capacidad de reconocer el contexto de voz desde una entrada de audio (normalmente a través del servicio de reconocimiento de voz predeterminado del dispositivo) y responder adecuadamente.
+  Por lo general, usará el constructor de la interfaz para crear un nuevo objeto {{domxref("SpeechRecognition")}}, que tiene varios controladores de eventos disponibles para detectar cuándo se ingresa voz a través del micrófono del dispositivo. La interfaz {{domxref("SpeechGrammar")}} representa un contenedor para un conjunto particular de gramática que tu aplicación debería reconocer.
+  La gramática se define mediante [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**).
+- Se accede a la síntesis de voz a través de la interfaz {{domxref("SpeechSynthesis")}}, un componente de texto a voz que permite que los programas lean su contenido de texto (normalmente a través del sintetizador de voz predeterminado del dispositivo). Los diferentes tipos de voz se representan mediante Los objetos {{domxref("SpeechSynthesisVoice")}} y las diferentes partes del texto que desea que se hablen se representan mediante objetos {{domxref("SpeechSynthesisUtterance")}}.
+  Puedes hacer que se hablen pasándolos al método {{domxref("SpeechSynthesis.speak()")}}.
 
-For more details on using these features, see [Using the Web Speech API](/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
+Para obtener más detalles sobre el uso de estas funciones, consulte [Uso de la API Web de Voz](/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
 
-## Web Speech API Interfaces
+## Interfaces de la API Web de Voz
 
-### Speech recognition
+### Reconocimiento de voz
 
 - {{domxref("SpeechRecognition")}}
-  - : The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
+  - : La interfaz del controlador para el servicio de reconocimiento; esto también maneja el {{domxref("SpeechRecognitionEvent")}} enviado desde el servicio de reconocimiento.
 - {{domxref("SpeechRecognitionAlternative")}}
-  - : Represents a single word that has been recognised by the speech recognition service.
-- {{domxref("SpeechRecognitionError")}}
-  - : Represents error messages from the recognition service.
+  - : Representa una sola palabra que ha sido reconocida por el servicio de reconocimiento de voz.
+- {{domxref("SpeechRecognitionErrorEvent")}}
+  - : Representa mensajes de error del servicio de reconocimiento.
 - {{domxref("SpeechRecognitionEvent")}}
-  - : The event object for the [`result`](/es/docs/Web/Reference/Events/result) and [`nomatch`](/es/docs/Web/Reference/Events/nomatch) events, and contains all the data associated with an interim or final speech recognition result.
+  - : El objeto de evento para los eventos {{domxref("SpeechRecognition.result_event", "result")}} y {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} y contiene todos los datos asociados con un evento intermedio o resultado final del reconocimiento de voz.
 - {{domxref("SpeechGrammar")}}
-  - : The words or patterns of words that we want the recognition service to recognize.
+  - : Las palabras o patrones de palabras que queremos que reconozca el servicio de reconocimiento.
 - {{domxref("SpeechGrammarList")}}
-  - : Represents a list of {{domxref("SpeechGrammar")}} objects.
+  - : Representa una lista de objetos {{domxref("SpeechGrammar")}}.
 - {{domxref("SpeechRecognitionResult")}}
-  - : Represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.
+  - : Representa una única coincidencia de reconocimiento, que puede contener varios objetos {{domxref("SpeechRecognitionAlternative")}}.
 - {{domxref("SpeechRecognitionResultList")}}
-  - : Represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.
+  - : Representa una lista de objetos {{domxref("SpeechRecognitionResult")}}, o uno solo si los resultados se capturan en el modo {{domxref("SpeechRecognition.continuous","continuous")}}.
 
-### Speech synthesis
+### Síntesis de voz
 
 - {{domxref("SpeechSynthesis")}}
-  - : The controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.
+  - : La interfaz del controlador para el servicio de voz; esto se puede usar para recuperar información sobre las voces de síntesis disponibles en el dispositivo, iniciar y pausar el habla y otros comandos además.
 - {{domxref("SpeechSynthesisErrorEvent")}}
-  - : Contains information about any errors that occur while processing {{domxref("SpeechSynthesisUtterance")}} objects in the speech service.
+  - : Contiene información sobre los errores que se producen al procesar objetos {{domxref("SpeechSynthesisUtterance")}} en el servicio de voz.
 - {{domxref("SpeechSynthesisEvent")}}
-  - : Contains information about the current state of {{domxref("SpeechSynthesisUtterance")}} objects that have been processed in the speech service.
+  - : Contiene información sobre el estado actual de los objetos {{domxref("SpeechSynthesisUtterance")}} que se han procesado en el servicio de voz.
 - {{domxref("SpeechSynthesisUtterance")}}
-  - : Represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
-
-<!---->
-
+  - : Representa una solicitud de voz.
+    Contiene el contenido que debe leer el servicio de voz e información sobre cómo leerlo (por ejemplo, idioma, tono y volumen).
 - {{domxref("SpeechSynthesisVoice")}}
-  - : Represents a voice that the system supports. Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
+  - : Representa una voz que admite el sistema.
+    Cada `SpeechSynthesisVoice` tiene su propio servicio de voz relativo que incluye información sobre el idioma, el nombre y la URI.
 - {{domxref("Window.speechSynthesis")}}
-  - : Specced out as part of a `[NoInterfaceObject]` interface called `SpeechSynthesisGetter`, and Implemented by the `Window` object, the `speechSynthesis` property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.
+  - : Especificada como parte de una interfaz `[NoInterfaceObject]` llamada `SpeechSynthesisGetter` e implementada por el objeto `Window`, la propiedad `speechSynthesis` brinda acceso al controlador {{domxref("SpeechSynthesis")}} y, por lo tanto, al punto de entrada a la funcionalidad de síntesis de voz.
 
-## Examples
+## Errores
 
-The [Web Speech API repo](https://github.com/mdn/dom-examples/tree/main/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
+Para obtener información sobre los errores arrojados por la API Web de Voz (por ejemplo, `"language-not-supported"` y `"language-unavailable"`), consulte la siguiente documentación:
+
+- [Propiedad `error` del objeto `SpeechRecognitionErrorEvent`](/es/docs/Web/API/SpeechRecognitionErrorEvent/error)
+- [Propiedad `error` del objeto `SpeechSynthesisErrorEvent`](/es/docs/Web/API/SpeechSynthesisErrorEvent/error)
+
+## Ejemplos
+
+Los [ejemplos de la API Web de Voz](https://github.com/mdn/dom-examples/tree/main/web-speech-api) en GitHub contienen demostraciones para ilustrar el reconocimiento y la síntesis de voz.
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-### `SpeechRecognition`
+{{Compat}}
 
-{{Compat("api.SpeechRecognition", 0)}}
+## Véase también
 
-### `SpeechSynthesis`
-
-{{Compat("api.SpeechSynthesis", 0)}}
-
-## See also
-
-- [Using the Web Speech API](/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
-- [SitePoint article](http://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
-- [HTML5Rocks article](http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API)
-- [Demo](http://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]
+- [Uso de la API Web de Voz](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
+- [Artículo HTML5Rocks](https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api/)

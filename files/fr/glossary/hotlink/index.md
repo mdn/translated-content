@@ -1,12 +1,9 @@
 ---
 title: Hotlink
 slug: Glossary/Hotlink
-tags:
-  - Glossaire
-  - Mécanismes web
-translation_of: Glossary/Hotlink
-original_slug: Glossaire/Hotlink
 ---
+
+{{GlossarySidebar}}
 
 Un **hotlink** (appelé aussi **inline link** (_lien en ligne_)) est un objet (typiquement une image) directement lié à un autre sur un autre site. Par exemple, une image hébergée sur site1.com est montrée directement sur site2.com.
 

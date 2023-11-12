@@ -1,8 +1,6 @@
 ---
 title: NavigatorPlugins
 slug: orphaned/Web/API/NavigatorPlugins
-translation_of: Web/API/NavigatorPlugins
-original_slug: Web/API/NavigatorPlugins
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
@@ -27,13 +25,11 @@ original_slug: Web/API/NavigatorPlugins
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                           | Комментарий           |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName('HTML WHATWG', '#navigatorplugins', 'NavigatorPlugins')}} | {{Spec2('HTML WHATWG')}} | Начальное определение |
+{{Specifications}}
 
 ## Доступность в браузерах
 
-{{Compat("api.NavigatorPlugins")}}
+{{Compat}}
 
 ## Смотрите также
 

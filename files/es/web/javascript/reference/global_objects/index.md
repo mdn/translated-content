@@ -1,7 +1,6 @@
 ---
 title: Objetos globales
 slug: Web/JavaScript/Reference/Global_Objects
-original_slug: Web/JavaScript/Referencia/Objetos_globales
 ---
 
 {{jsSidebar("Objects")}}

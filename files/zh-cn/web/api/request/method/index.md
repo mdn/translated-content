@@ -22,7 +22,7 @@ A {{domxref("ByteString")}} indicating the method of the request.
 In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the method of the request in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myMethod = myRequest.method; // GET
 ```
 

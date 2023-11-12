@@ -11,7 +11,7 @@ l10n:
 
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} が `ExtendableEvent` ハンドラーの外で呼び出された場合、ブラウザーは `InvalidStateError` 例外を発生させます。 また、複数の呼び出しが積み重なり、その結果のプロミスが[存続期間延長プロミス](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises)のリストに追加されることにも注意してください。
 
-> **メモ:** 上記の段落で説明した振る舞いは、Firefox 43 で修正されました（{{bug(1180274)}} を参照）。
+> **メモ:** 上記の段落で説明した振る舞いは、Firefox 43 で修正されました（[Firefox バグ 1180274](https://bugzil.la/1180274) を参照）。
 
 このインターフェイスは、 {{domxref("Event")}} インターフェイスを継承しています。
 
@@ -46,28 +46,38 @@ _親である {{domxref("Event")}} からメソッドを継承しています。
 ```js
 const CACHE_VERSION = 1;
 const CURRENT_CACHES = {
-  prefetch: `prefetch-cache-v${CACHE_VERSION}`
+  prefetch: `prefetch-cache-v${CACHE_VERSION}`,
 };
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   const urlsToPrefetch = [
-    './static/pre_fetched.txt',
-    './static/pre_fetched.html',
-    'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
+    "./static/pre_fetched.txt",
+    "./static/pre_fetched.html",
+    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
   ];
 
-  console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
+  console.log(
+    "Handling install event. Resources to pre-fetch:",
+    urlsToPrefetch,
+  );
 
   event.waitUntil(
-    caches.open(CURRENT_CACHES['prefetch']).then((cache) => {
-      return cache.addAll(urlsToPrefetch.map((urlToPrefetch) => {
-        return new Request(urlToPrefetch, {mode: 'no-cors'});
-      })).then(() => {
-        console.log('すべてのリソースをフェッチし、キャッシュしました。');
-      });
-    }).catch((error) => {
-      console.error('プリフェッチに失敗:', error);
-    })
+    caches
+      .open(CURRENT_CACHES["prefetch"])
+      .then((cache) => {
+        return cache
+          .addAll(
+            urlsToPrefetch.map((urlToPrefetch) => {
+              return new Request(urlToPrefetch, { mode: "no-cors" });
+            }),
+          )
+          .then(() => {
+            console.log("すべてのリソースをフェッチし、キャッシュしました。");
+          });
+      })
+      .catch((error) => {
+        console.error("プリフェッチに失敗:", error);
+      }),
   );
 });
 ```

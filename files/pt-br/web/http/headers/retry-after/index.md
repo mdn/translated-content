@@ -50,13 +50,13 @@ Retry-After: 120
 
 ## Especificações
 
-| Especificação                                        | Título                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                           | Título                                                        |
+| --------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Retry-After", "7.1.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Retry-After")}}
+{{Compat}}
 
 ## Veja também
 

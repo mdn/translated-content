@@ -1,7 +1,6 @@
 ---
 title: status ロールの使用
 slug: Web/Accessibility/ARIA/Roles/status_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 ---
 
 ### 説明

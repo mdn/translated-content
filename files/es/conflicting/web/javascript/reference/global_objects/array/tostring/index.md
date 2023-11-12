@@ -47,14 +47,6 @@ alpha.toSource();
 //devuelve ['a', 'b', 'c']
 ```
 
-## Especificaciones
-
-No hace parte de ningún estándar. Implementado en JavaScript 1.3.
-
-## Compatibilidad con navegadores
-
-{{Compat("javascript.builtins.Array.toSource")}}
-
 ## Ver también
 
 - {{jsxref("Object.prototype.toSource()")}}

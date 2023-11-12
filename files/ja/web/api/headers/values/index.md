@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`Headers.values()`** メソッドは、このオブジェクトに含まれるすべての値を読み取ることができる{{jsxref("Iteration_protocols", '反復子', '', 1)}}を返します。値は文字列です。
+**`Headers.values()`** メソッドは、このオブジェクトに含まれるすべての値を読み取ることができる{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。値は文字列です。
 
 > **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
@@ -23,19 +23,19 @@ values()
 
 ### 返値
 
-{{jsxref("Iteration_protocols", '反復子', '', 1)}}を返します。
+{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。
 
 ## 例
 
 ```js
 // Create a test Headers object
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // Display the values
 for (const value of myHeaders.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 

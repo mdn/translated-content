@@ -1,7 +1,6 @@
 ---
 title: Intl.DisplayNames.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf
-browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf
 ---
 
 {{JSRef}}
@@ -11,8 +10,8 @@ La méthode **`Intl.DisplayNames.supportedLocalesOf()`** renvoie un tableau dont
 ## Syntaxe
 
 ```js
-Intl.DisplayNames.supportedLocalesOf(locales)
-Intl.DisplayNames.supportedLocalesOf(locales, options)
+Intl.DisplayNames.supportedLocalesOf(locales);
+Intl.DisplayNames.supportedLocalesOf(locales, options);
 ```
 
 ### Paramètres
@@ -37,9 +36,9 @@ Un tableau de chaînes de caractères qui est un sous-ensemble des balises de la
 Soit un environnement d'exécution qui prend en charge l'indonésien et l'allemand pour les noms d'affichage mais pas le balinais, `supportedLocalesOf` renverra les balises indonésiennes et germaniques inchangées bien que la collation `pinyin` n'est ni pertinente pour les noms d'affichage ou même utilisée pour l'indonésien et qu'un dialecte germanique pour l'indonésien sera peu probablement pris en charge. On notera que c'est l'algorithme "`lookup`" qui est utilisé ici ("`best fit`" pourrait décider que l'indonésien est une correspondance acceptable pour du balinais vu que les locuteurs balinais comprennent l'indonésien et inclure la balise de langue balinaise également).
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.DisplayNames.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.DisplayNames.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

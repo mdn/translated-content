@@ -12,7 +12,7 @@ slug: Web/API/Navigator/geolocation
 ## 语法
 
 ```js
-geo = navigator.geolocation
+geo = navigator.geolocation;
 ```
 
 ## 规范
@@ -23,6 +23,6 @@ geo = navigator.geolocation
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [使用地理位置定位](/zh-CN/docs/WebAPI/Using_geolocation)

@@ -1,14 +1,8 @@
 ---
-title: '<link>: Элемент - ссылка на внешний ресурс'
+title: "<link>: Элемент - ссылка на внешний ресурс"
 slug: Web/HTML/Element/link
-tags:
-  - Ссылки
-  - загрузка
-  - метаданные
-  - предзагрузка
-translation_of: Web/HTML/Element/link
-original_slug: Web/HTML/Element/ссылка
 ---
+
 {{HTMLSidebar}}
 
 **Элемент HTML - Ссылка на Внешний Ресурс (`<link>`)** определяет отношения между текущим документом и внешним ресурсом. Этот элемент чаще всего используется для ссылки на {{Glossary("CSS", "stylesheets")}}, а также для создания иконок сайта (как для иконок в стиле "favicon", так и для иконок домашних экранов и приложений мобильных устройств) среди прочего.
@@ -18,7 +12,7 @@ original_slug: Web/HTML/Element/ссылка
 Чтобы подключить таблицу стилей, вы должны включить элемент `<link>` внутри вашего {{HTMLElement("head")}} следующим образом:
 
 ```html
-<link href="main.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet" />
 ```
 
 В этом простом примере указывается путь к таблице стилей внутри атрибута `href` и атрибут `rel` со значением `stylesheet`. `rel` означает "отношения (relationship)", и, вероятно, является одной из ключевых особенностей элемента `<link>` — значение сообщает как указанный элемент связан с содержащим его документом. Как вы увидите в нашем справочнике [типы ссылок](/ru/docs/Web/HTML/Link_types), есть много различных видов отношений.
@@ -26,14 +20,17 @@ original_slug: Web/HTML/Element/ссылка
 Существует ряд других распространённых типов, с которыми вы столкнётесь. Например, ссылка на сайт иконок:
 
 ```html
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico" />
 ```
 
 Есть ряд других значений `rel` для иконок, в основном, используемых для обозначения специальных типов иконок для использования на различных мобильных платформах, например:
 
 ```html
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-      href="apple-icon-114.png" type="image/png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="apple-icon-114.png"
+  type="image/png" />
 ```
 
 Атрибут `sizes` определяет размер иконки, когда `type` содержит тип MIME связанного ресурса. Они предоставляют советы, позволяющие браузеру выбрать наиболее подходящую иконку.
@@ -41,15 +38,22 @@ original_slug: Web/HTML/Element/ссылка
 Вы можете, также, указать медиа тип или запрос внутри атрибута `media`; этот ресурс будет загружен только в том случае, если media состояние равно true. Например:
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link
+  href="mobile.css"
+  rel="stylesheet"
+  media="screen and (max-width: 600px)" />
 ```
 
 В элемент `<link>` также были добавлены некоторые новые интересные возможности производительности и безопасности, к примеру:
 
 ```html
-<link rel="preload" href="myFont.woff2" as="font"
-      type="font/woff2" crossorigin="anonymous">
+<link
+  rel="preload"
+  href="myFont.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous" />
 ```
 
 Значение `rel` - `preload` указывает, что браузер должен предварительно загрузить этот ресурс (смотрите [Предварительная загрузка контента при помощи rel="preload"](/ru/docs/Web/HTML/Preloading_content) для более подробной информации), атрибут `as` указывает на определённый класс загружаемого контента. Атрибут `crossorigin` указывает должен ли ресурс загружаться с помощью запроса {{Glossary("CORS")}}.
@@ -77,16 +81,17 @@ original_slug: Web/HTML/Element/ссылка
 - {{HTMLAttrDef("href")}}
   - : Этот атрибут определяет {{glossary("URL")}}, связываемого ресурса. URL может быть абсолютным или относительным.
 - {{HTMLAttrDef("hreflang")}}
-  - : Этот атрибут определяет язык, связываемого ресурса. Он является консультативным. Допустимые значения определяются [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt). Используйте этот атрибут только если присутствуют атрибуты {{HTMLAttrxRef("href", "a")}}.
+  - : Этот атрибут определяет язык, связываемого ресурса. Он является консультативным. Допустимые значения определяются [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt). Используйте этот атрибут только если присутствуют атрибуты [`href`](/ru/docs/Web/HTML/Element/a#href).
 - {{HTMLAttrDef("importance")}} {{Experimental_Inline}}
   - : Указывает на относительную важность ресурса. Приоритетные подсказки передаются используя значения:**`auto`**: указывает на **отсутствие предпочтений**. Браузер может использовать собственную эвристику для определения приоритетов ресурсов.**`high`**: указывает браузеру, что ресурс находится в **высоком** приоритете.**`low`**: указывает браузеру, что ресурс находится в **низком** приоритете.
     > **Примечание:**Атрибут `importance` можно использовать только для элементов `<link>` с атрибутами `rel="preload"` или `rel="prefetch"`.
 - {{HTMLAttrDef("integrity")}} {{Experimental_Inline}}
   - : Содержит встроенные метаданные — криптографический хеш-код ресурса(файла) в кодировке base64, который вы сообщаете браузеру для загрузки. Браузер может использовать его для проверки, что загруженный ресурс был получен без неожиданных манипуляций. Смотрите [Subresource Integrity](/ru/docs/Web/Security/Subresource_Integrity).
 - {{HTMLAttrDef("media")}}
+
   - : Этот атрибут указывает медиа, который применяет связываемый ресурс. Его значение должно быть типом медиа или [медиавыражением](/ru/docs/Web/CSS/Media_queries). Этот атрибут, в основном, полезен при связывании с внешними таблицами стилей — он позволяет пользовательскому агенту выбрать наиболее подходящее устройство для запуска.
 
-    > **Примечание:** **Примечания:**
+    > **Примечание:**
     >
     > - В HTML 4, это может быть только простой, разделённый пробелами, список литералов, описывающих медиа, т.е. [media типы и группы](/ru/docs/Web/CSS/@media), которые определены и допустимы в качестве значений для этого атрибута, такие как `print`, `screen`, `aural`, `braille`. HTML5 распространил это на любые [медиавыражения](/ru/docs/Web/CSS/Media_queries), которые являются расширенным набором допустимых значений HTML 4.
     > - Браузеры, не поддерживающие [медиавыражения](/ru/docs/Web/CSS/Media_queries), могут не распознать соответствующую ссылку; не забудьте установить резервные ссылки, ограниченные набором медиавыражений, определённым в HTML 4.
@@ -101,10 +106,10 @@ original_slug: Web/HTML/Element/ссылка
 - {{HTMLAttrDef("rel")}}
   - : Этот атрибут определяет отношения связываемого документа и текущего документа. Атрибут должен быть разделённым пробелами списком [значений типов ссылки](/ru/docs/Web/HTML/Link_types).
 - {{HTMLAttrDef("sizes")}}
-  - : Этот атрибут определяет размеры иконки для визуальных медиа, содержащихся в ресурсе. Он должен быть представлен только, если {{HTMLAttrxRef("rel", "link")}} содержит значение `icon` или нестандартный тип, например `apple-touch-icon` Apple. Может иметь следующие значения:
+  - : Этот атрибут определяет размеры иконки для визуальных медиа, содержащихся в ресурсе. Он должен быть представлен только, если [`rel`](/ru/docs/Web/HTML/Element/link#rel) содержит значение `icon` или нестандартный тип, например `apple-touch-icon` Apple. Может иметь следующие значения:
     - `any`, означает, что иконка может быть масштабируема до любого размера, например в векторном формате `image/svg+xml`.
     - пробелоразделенный список размеров, каждый в формате `<width in pixels>x<height in pixels>` или `<width in pixels>X<height in pixels>`. Каждый из этих размеров должен содержаться в ресурсе.
-      > **Примечание:**Большинство форматов иконок могут хранить только одну иконку, поэтому чаще всего {{HTMLAttrxRef("sizes")}} содержит только одну запись. MS's ICO формат, как и Apple's ICNS. ICO более распространены; вы должны использовать их.
+      > **Примечание:**Большинство форматов иконок могут хранить только одну иконку, поэтому чаще всего [`sizes`](/ru/docs/Web/HTML/Global_attributes#sizes) содержит только одну запись. MS's ICO формат, как и Apple's ICNS. ICO более распространены; вы должны использовать их.
 - {{HTMLAttrDef("title")}}
   - : Атрибут `title` имеет особое значение для элемента `<link>`. При использовании `<link rel="stylesheet">` он определяет [предпочтительную или альтернативную таблицу стилей](/ru/docs/Web/CSS/Alternative_style_sheets). Неверное использование может стать [причиной игнорирования таблицы стилей](/ru/docs/Correctly_Using_Titles_With_External_Stylesheets).
 - {{HTMLAttrDef("type")}}
@@ -124,13 +129,13 @@ original_slug: Web/HTML/Element/ссылка
 
 ### Устаревшие атрибуты
 
-- {{HTMLAttrDef("charset")}} {{Obsolete_Inline}}
+- {{HTMLAttrDef("charset")}}
   - : Этот атрибут определяет кодировку символов связываемого ресурса. Значение представляет собой список наборов символов, разделённый пробелами и/или запятыми, как определено в {{rfc(2045)}}. Значение по умолчанию `iso-8859-1`.
-    > **Примечание:** **Примечание по использованию:** Для получения эффекта использования данного устаревшего атрибута, используйте HTTP-заголовок {{HTTPHeader("Content-Type")}} на связываемый ресурс.
-- {{HTMLAttrDef("rev")}} {{Obsolete_Inline}}
-  - : Значение этого атрибута показывает отношение текущего документа к связываемому документу, как определено атрибутом {{HTMLAttrxRef("href", "link")}}. Этот атрибут, таким образом, определяет обратную связь по сравнению со значением атрибута `rel`. [Значения типов ссылки](/ru/docs/Web/HTML/Link_types) для атрибута аналогичны возможным значениям для {{HTMLAttrxRef("rel", "link")}}.
+    > **Примечание:** Для получения эффекта использования данного устаревшего атрибута, используйте HTTP-заголовок {{HTTPHeader("Content-Type")}} на связываемый ресурс.
+- {{HTMLAttrDef("rev")}}
+  - : Значение этого атрибута показывает отношение текущего документа к связываемому документу, как определено атрибутом [`href`](/ru/docs/Web/HTML/Element/link#href). Этот атрибут, таким образом, определяет обратную связь по сравнению со значением атрибута `rel`. [Значения типов ссылки](/ru/docs/Web/HTML/Link_types) для атрибута аналогичны возможным значениям для [`rel`](/ru/docs/Web/HTML/Element/link#rel).
     > **Примечание:** Этот атрибут считается устаревшим жизненным стандартом WHATWG HTML (который является каноничной спецификацией MDN). Однако, стоит отметить, что `rev` _не_ считается устаревшим в спецификации W3C. Стоит сказать, учитывая неопределённость, полагаться на `rev` не стоит.
-    > **Примечание:** Взамен, вы должны использовать атрибут {{HTMLAttrxRef("rel", "link")}} с противоположным [значением типов ссылки](/ru/docs/Web/HTML/Link_types). Например, чтобы установить обратную ссылку для `made`, укажите `author`.Также, этот атрибут не означает "ревизия" и не должен использоваться с номером версии, даже если многие сайты используют его в этих целях.
+    > **Примечание:** Взамен, вы должны использовать атрибут [`rel`](/ru/docs/Web/HTML/Element/link#rel) с противоположным [значением типов ссылки](/ru/docs/Web/HTML/Link_types). Например, чтобы установить обратную ссылку для `made`, укажите `author`.Также, этот атрибут не означает "ревизия" и не должен использоваться с номером версии, даже если многие сайты используют его в этих целях.
 
 ## Стилизация с CSS
 
@@ -143,7 +148,7 @@ original_slug: Web/HTML/Element/ссылка
 Включение таблицы стилей на страницы имеет следующий синтаксис:
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### Предоставление альтернативных таблиц стилей
@@ -153,9 +158,9 @@ original_slug: Web/HTML/Element/ссылка
 Пользователь может выбрать, какую таблицу стилей использовать, выбрав её в меню Вид > Стиль страницы. Это позволяет пользователям видеть мультиверсию страницы.
 
 ```html
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 ### Предоставление иконок для различных контекстов использования
@@ -164,15 +169,21 @@ original_slug: Web/HTML/Element/ссылка
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png">
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- basic favicon -->
-<link rel="icon" href="favicon32.png">
+<link rel="icon" href="favicon32.png" />
 ```
 
 ### Условная загрузка ресурсов с медиавыражениями
@@ -180,10 +191,16 @@ original_slug: Web/HTML/Element/ссылка
 Вы можете предоставить тип медиа или запрос внутри атрибута `media`; этот ресурс будет загружен только в том случае, если условия медиа равно true. Например:
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="all">
-<link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)">
-<link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link href="mobile.css" rel="stylesheet" media="all" />
+<link
+  href="desktop.css"
+  rel="stylesheet"
+  media="screen and (min-width: 600px)" />
+<link
+  href="highres.css"
+  rel="stylesheet"
+  media="screen and (min-resolution: 300dpi)" />
 ```
 
 ### События загрузки таблицы стилей
@@ -192,18 +209,18 @@ original_slug: Web/HTML/Element/ссылка
 
 ```html
 <script>
-var myStylesheet = document.querySelector('#my-stylesheet');
+  var myStylesheet = document.querySelector("#my-stylesheet");
 
-myStylesheet.onload = function() {
-  // Do something interesting; the sheet has been loaded
-}
+  myStylesheet.onload = function () {
+    // Do something interesting; the sheet has been loaded
+  };
 
-myStylesheet.onerror = function() {
-  console.log("An error occurred loading the stylesheet!");
-}
+  myStylesheet.onerror = function () {
+    console.log("An error occurred loading the stylesheet!");
+  };
 </script>
 
-<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet">
+<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
 ```
 
 > **Примечание:** Событие `load` запускается после загрузки и анализа таблицы стилей и всего импортируемого содержимого, непосредственно перед тем, как стили будут применены к содержимому.
@@ -216,11 +233,11 @@ myStylesheet.onerror = function() {
 
 | [Каталоги контента](/ru/docs/Web/HTML/Content_categories) | Контент метаданных. Если есть [itemprop](/ru/docs/Web/HTML/Global_attributes/itemprop): [потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content) и [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content). |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                       | Нет, это {{Glossary("empty element")}}.                                                                                                                                                                                          |
-| Tag omission                                              | Так как это пустой элемент, присутствовать должен начальный тэг, конечный - отсутствует.                                                                                                                                                    |
-| Разрешённые родители                                      | Любой элемент, принимающий элементы метаданных. Если есть [itemprop](/ru/docs/Web/HTML/Global_attributes/itemprop): любой элемент, принимающий [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                   |
-| Разрешённые ARIA роли                                     | Нет                                                                                                                                                                                                                                         |
-| DOM интерфейс                                             | {{DOMxRef("HTMLLinkElement")}}                                                                                                                                                                                                    |
+| Допустимое содержимое                                     | Нет, это {{Glossary("empty element")}}.                                                                                                                                                                                                     |
+| Пропуск тегов                                             | Так как это пустой элемент, присутствовать должен начальный тэг, конечный - отсутствует.                                                                                                                                                    |
+| Допустимые родители                                       | Любой элемент, принимающий элементы метаданных. Если есть [itemprop](/ru/docs/Web/HTML/Global_attributes/itemprop): любой элемент, принимающий [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                   |
+| Допустимые ARIA-роли                                      | Нет                                                                                                                                                                                                                                         |
+| DOM-интерфейс                                             | {{DOMxRef("HTMLLinkElement")}}                                                                                                                                                                                                              |
 
 ## Спецификации
 

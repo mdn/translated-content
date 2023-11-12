@@ -1,5 +1,5 @@
 ---
-title: 'Document: lostpointercapture イベント'
+title: "Document: lostpointercapture イベント"
 slug: Web/API/Document/lostpointercapture_event
 ---
 
@@ -35,13 +35,13 @@ slug: Web/API/Document/lostpointercapture_event
 この例は `lostpointercapture` イベントを待ち受けし、 `pointerdown` でその要素のためにポインターをキャプチャします。後でユーザーがポインターを解放したとき、 `lostpointercapture` イベントが発生します。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-document.addEventListener('lostpointercapture', () => {
-  console.log('I\'ve been released!')
+document.addEventListener("lostpointercapture", () => {
+  console.log("I've been released!");
 });
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
@@ -49,13 +49,13 @@ para.addEventListener('pointerdown', (event) => {
 同じ例ですが、 `onlostpointercapture` イベントハンドラーを使用して行います。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 document.onlostpointercapture = () => {
-  console.log('I\'ve been released!')
+  console.log("I've been released!");
 };
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```

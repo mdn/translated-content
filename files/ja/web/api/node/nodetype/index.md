@@ -1,11 +1,13 @@
 ---
-title: Node.nodeType
+title: "Node: nodeType プロパティ"
 slug: Web/API/Node/nodeType
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
 
-**`nodeType`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、整数値でこのノードがなんであるかを識別します。これは様々なノードの種類、例えば {{domxref("Element", "elements")}}, {{domxref("Text", "text")}}, {{domxref("Comment", "comments")}} を見分けます。
+**`nodeType`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、整数値でこのノードが何であるかを識別します。これは様々なノードの種類、例えば {{domxref("Element", "elements")}}、{{domxref("Text", "text")}}、{{domxref("Comment", "comments")}} を見分けます。
 
 ## 値
 

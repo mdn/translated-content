@@ -2,6 +2,7 @@
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 주어진 네임스페이스에 속하는 태그명을 갖는 엘리먼트의 목록을 반환합니다. 루트 노드를 포함해 전체 다큐먼트를 대상으로 탐색합니다.
@@ -9,7 +10,7 @@ slug: Web/API/Document/getElementsByTagNameNS
 ## 구문
 
 ```js
-elements = document.getElementsByTagNameNS(namespace, name)
+elements = document.getElementsByTagNameNS(namespace, name);
 ```
 
 - _elements_ 는 트리에 나타난 순서로 발견된 살아있는 {{DOMxRef("NodeList")}} 입니다(하지만 아래를 확인하세요).
@@ -30,74 +31,76 @@ elements = document.getElementsByTagNameNS(namespace, name)
 
 ```html
 <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>getElementsByTagNameNS example</title>
 
-<head>
-<title>getElementsByTagNameNS example</title>
+    <script type="text/javascript">
+      function getAllParaElems() {
+        var allParas = document.getElementsByTagNameNS(
+          "http://www.w3.org/1999/xhtml",
+          "p",
+        );
 
-<script type="text/javascript">
+        var num = allParas.length;
 
-function getAllParaElems()
-{
-  var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+        alert("There are " + num + " &lt;p&gt; elements in this document");
+      }
 
-  var num = allParas.length;
+      function div1ParaElems() {
+        var div1 = document.getElementById("div1");
+        var div1Paras = div1.getElementsByTagNameNS(
+          "http://www.w3.org/1999/xhtml",
+          "p",
+        );
 
-  alert("There are " + num + " &lt;p&gt; elements in this document");
-}
+        var num = div1Paras.length;
 
+        alert("There are " + num + " &lt;p&gt; elements in div1 element");
+      }
 
-function div1ParaElems()
-{
-  var div1 = document.getElementById("div1")
-  var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+      function div2ParaElems() {
+        var div2 = document.getElementById("div2");
+        var div2Paras = div2.getElementsByTagNameNS(
+          "http://www.w3.org/1999/xhtml",
+          "p",
+        );
 
-  var num = div1Paras.length;
+        var num = div2Paras.length;
 
-  alert("There are " + num + " &lt;p&gt; elements in div1 element");
-}
+        alert("There are " + num + " &lt;p&gt; elements in div2 element");
+      }
+    </script>
+  </head>
 
+  <body style="border: solid green 3px">
+    <p>Some outer text</p>
+    <p>Some outer text</p>
 
-function div2ParaElems()
-{
-  var div2 = document.getElementById("div2")
-  var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+    <div id="div1" style="border: solid blue 3px">
+      <p>Some div1 text</p>
+      <p>Some div1 text</p>
+      <p>Some div1 text</p>
 
-  var num = div2Paras.length;
-
-  alert("There are " + num + " &lt;p&gt; elements in div2 element");
-}
-
-</script>
-</head>
-
-<body style="border: solid green 3px">
-<p>Some outer text</p>
-<p>Some outer text</p>
-
-  <div id="div1" style="border: solid blue 3px">
-    <p>Some div1 text</p>
-    <p>Some div1 text</p>
-    <p>Some div1 text</p>
-
-    <div id="div2" style="border: solid red 3px">
-    <p>Some div2 text</p>
-    <p>Some div2 text</p>
+      <div id="div2" style="border: solid red 3px">
+        <p>Some div2 text</p>
+        <p>Some div2 text</p>
+      </div>
     </div>
-  </div>
 
-<p>Some outer text</p>
-<p>Some outer text</p>
+    <p>Some outer text</p>
+    <p>Some outer text</p>
 
-<button onclick="getAllParaElems();">
- show all p elements in document</button><br />
+    <button onclick="getAllParaElems();">show all p elements in document</button
+    ><br />
 
-<button onclick="div1ParaElems();">
- show all p elements in div1 element</button><br />
+    <button onclick="div1ParaElems();">
+      show all p elements in div1 element</button
+    ><br />
 
-<button onclick="div2ParaElems();">
- show all p elements in div2 element</button>
-
-</body>
+    <button onclick="div2ParaElems();">
+      show all p elements in div2 element
+    </button>
+  </body>
 </html>
 ```
 
@@ -106,21 +109,27 @@ function div2ParaElems()
 원하는 브라우저가 XPath 를 지원하지 않는다면, 원하는 로컬명과 네임스페이스를 갖는 모든 태그를 찾기 위한 다른 접근법(모든 자식을 거쳐 DOM 을 횡단, 모든 @xmlns 인스턴스 식별 등)이 필요하지만, XPath 가 훨씬 빠릅니다(Explorer 에 적용하려면, 아래의 함수에서 XPath 대신 [이 래퍼 클래스같은](http://www.davidflanagan.com/javascript5/display.php?n=21-10&f=21/10.js) XPath 래퍼를 호출할 수 있습니다(Explorer 는 다른 API 로 XPath 를 지원합니다).)
 
 ```js
-function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
- if (!doc) {
-  doc = document;
- }
- if (!context) {
-  context = doc;
- }
+function getElementsByTagNameNSWrapper(ns, elName, doc, context) {
+  if (!doc) {
+    doc = document;
+  }
+  if (!context) {
+    context = doc;
+  }
 
- var result = doc.evaluate('//*[local-name()="'+elName+'" and namespace-uri() = "'+ns+'"]', context, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+  var result = doc.evaluate(
+    '//*[local-name()="' + elName + '" and namespace-uri() = "' + ns + '"]',
+    context,
+    null,
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+    null,
+  );
 
-        var a = [];
-        for(var i = 0; i < result.snapshotLength; i++) {
-            a[i] = result.snapshotItem(i);
-        }
-        return a;
+  var a = [];
+  for (var i = 0; i < result.snapshotLength; i++) {
+    a[i] = result.snapshotItem(i);
+  }
+  return a;
 }
 ```
 

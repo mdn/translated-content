@@ -71,12 +71,13 @@ slug: Web/API/FileReader
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [如何在 web 应用程序中使用文件](/zh-CN/Using_files_from_web_applications)
+- [如何在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("Blob")}}
+- {{domxref("FileReaderSync")}}

@@ -51,7 +51,7 @@ The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide 
 
 ### Serve X-Content-Duration headers
 
-> **备注：** As of [Firefox 41](/zh-CN/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See {{Bug(1160695)}} for more details.
+> **备注：** As of [Firefox 41](/zh-CN/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Firefox bug 1160695](https://bugzil.la/1160695) for more details.
 
 The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
 

@@ -16,7 +16,10 @@ var dX = event.deltaX;
 ## 例子
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaX: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaX);
 ```

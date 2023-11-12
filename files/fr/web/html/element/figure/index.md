@@ -1,16 +1,6 @@
 ---
-title: '<figure> : l''élément de figure avec légende facultative'
+title: "<figure> : l'élément de figure avec légende facultative"
 slug: Web/HTML/Element/figure
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Information
-  - Presentation
-  - Reference
-  - figure
-translation_of: Web/HTML/Element/figure
-browser-compat: html.elements.figure
 ---
 
 {{HTMLSidebar}}
@@ -86,21 +76,19 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 ```html
 <!-- Une simple image -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="Le logo de MDN.">
+  <img src="favicon-192x192.png" alt="Le logo de MDN." />
 </figure>
 
 <!-- Une image avec une légende -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="Le logo de MDN.">
+  <img src="favicon-192x192.png" alt="Le logo de MDN." />
   <figcaption>Logo MDN</figcaption>
 </figure>
 ```
 
-{{EmbedLiveSample("Images", "100%", 400)}}
+#### Résultat
+
+{{EmbedLiveSample("", "100%", 480)}}
 
 ### Extrait de code
 
@@ -122,7 +110,9 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 </figure>
 ```
 
-{{EmbedLiveSample("Extrait_de_code", "100%", 250)}}
+#### Résultat
+
+{{EmbedLiveSample("", "100%", 250)}}
 
 ### Citation
 
@@ -131,32 +121,36 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
   <figcaption>
     <cite>Edsger Dijkstra : </cite>
   </figcaption>
-  <p>« Si le débogage correspond au retrait de bogues,
-    alors la programmation correspond à l'ajout de bogues. »
+  <p>
+    « Si le débogage correspond au retrait de bogues, alors la programmation
+    correspond à l'ajout de bogues. »
   </p>
 </figure>
 ```
 
-{{EmbedLiveSample("Citation","", 150)}}
+#### Résultat
+
+{{EmbedLiveSample("","", 150)}}
 
 ### Poème
 
 ```html
 <figure>
   <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear,
-      Or like a fairy trip upon the green,
-    Or, like a nymph, with long dishevell'd hair,
-      Dance on the sands, and yet no footing seen:
-    Love is a spirit all compact of fire,
-      Not gross to sink, but light, and will aspire.
+    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
+    green, Or, like a nymph, with long dishevell'd hair, Dance on the sands, and
+    yet no footing seen: Love is a spirit all compact of fire, Not gross to
+    sink, but light, and will aspire.
   </p>
-  <figcaption><cite>Venus and Adonis</cite>.
-    By: William Shakespeare</figcaption>
+  <figcaption>
+    <cite>Venus and Adonis</cite>. By: William Shakespeare
+  </figcaption>
 </figure>
 ```
 
-{{EmbedLiveSample("Poème", "100%", 260)}}
+#### Résultat
+
+{{EmbedLiveSample("", "100%", 300)}}
 
 ## Spécifications
 

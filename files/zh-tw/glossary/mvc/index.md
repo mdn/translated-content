@@ -3,6 +3,8 @@ title: MVC
 slug: Glossary/MVC
 ---
 
+{{GlossarySidebar}}
+
 **模型 ─ 視圖 ─ 控制器**（Model-View-Controller, MVC）是個軟體設計模式。它強調把軟體的行事邏輯與排版顯示分離（也就是關注點分離，Separation of concerns），如此一來開發者們就可以輕鬆分派工作、以及維護專案。有些設計模式也基於 MVC，像是 MVVM(Model-View-ViewModel)、MTP(Model-View-Presenter)、and MVW(Model-View-Whatever) 等等。
 
 MVC 在定義方面有爭議，但通常會包含：
@@ -19,4 +21,4 @@ MVC 在定義方面有爭議，但通常會包含：
 
 ### 學習 MVC
 
-- MDN 的 [MVC 架構](/zh-TW/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)
+- MDN 的 [MVC 架構](/zh-TW/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)

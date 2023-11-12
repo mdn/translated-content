@@ -1,8 +1,6 @@
 ---
 title: Introducción al modelo de caja básico de CSS
-slug: Web/CSS/CSS_Box_Model/introduction_to_the_CSS_box_model
-l10n:
-  sourceCommit: 71c4bc0b6329ec40ddbefd8d3124547e91cfa612
+slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 ---
 
 {{CSSRef}}
@@ -38,10 +36,6 @@ El **área de margen** o **margin area**, delimitada por el límite de margen (M
 El tamaño del área de margen está determinado por las propiedades {{cssxref("margin-top")}} , {{cssxref("margin-right")}} , {{cssxref("margin-bottom")}} , {{cssxref("margin-left")}} y la propiedad resumida {{cssxref("margin")}} . Cuando se produce un [colapso de margen](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), el área de margen no está claramente definida ya que los márgenes se comparten entre cajas.
 
 Por último, tenga en cuenta que para los elementos en línea no modificados, la cantidad de espacio ocupado (la contribución a la altura de la línea) está determinada por la propiedad {{cssxref("line-height")}} , aunque los bordes y el relleno sigan apareciendo alrededor del contenido.
-
-## Especificaciones
-
-{{Specifications}}
 
 ## Véase también
 

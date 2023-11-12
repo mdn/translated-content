@@ -1,29 +1,19 @@
 ---
 title: <datalist>
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML формы
-  - HTML5
-  - Reference
-  - Web
-  - Веб
-  - Элемент
-translation_of: Web/HTML/Element/datalist
 ---
 
-**HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом {{htmlattrxref("list", "input")}}.
+**HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом [`list`](/ru/docs/Web/HTML/Element/input#list).
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
 | [Категория контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                           | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                              |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                            |
-| Разрешённые родители                                             | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
-| Разрешённые ARIA-роли                                            | Нет                                                                                                                                                                 |
-| DOM-интерфейс                                                    | {{domxref("HTMLDataListElement")}}                                                                                                                        |
+| Допустимое содержимое                                            | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                                     |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                 |
+| Допустимые родители                                              | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
+| Допустимые ARIA-роли                                             | Нет                                                                                                                                                                 |
+| DOM-интерфейс                                                    | {{domxref("HTMLDataListElement")}}                                                                                                                                  |
 
 ## Атрибуты
 
@@ -35,12 +25,12 @@ translation_of: Web/HTML/Element/datalist
 <label for="myBrowser">Choose a browser from this list:</label>
 <input list="browsers" id="myBrowser" name="myBrowser" />
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
 ```
 
@@ -62,7 +52,7 @@ translation_of: Web/HTML/Element/datalist
 
 ## Смотрите также
 
-- Элемент {{HTMLElement("input")}} , в особенности его атрибут {{htmlattrxref("list", "input")}};
+- Элемент {{HTMLElement("input")}} , в особенности его атрибут [`list`](/ru/docs/Web/HTML/Element/input#list);
 - Элемент {{HTMLElement("option")}}.
 
 {{HTMLSidebar}}

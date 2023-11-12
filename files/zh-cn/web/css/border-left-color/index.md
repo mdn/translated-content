@@ -33,11 +33,11 @@ border-left-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 左边框的颜色。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### 一个带边框的简单 div
 
@@ -45,9 +45,10 @@ border-left-color: unset;
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 
@@ -55,28 +56,28 @@ border-left-color: unset;
 
 ```css
 .mybox {
-    border: solid 0.3em gold;
-    border-left-color: red;
-    width: auto;
+  border: solid 0.3em gold;
+  border-left-color: red;
+  width: auto;
 }
 .redtext {
-    color: red;
+  color: red;
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('一个带边框的简单 div')}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, and {{Cssxref("border-color")}}.
 - The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-top-color")}}.

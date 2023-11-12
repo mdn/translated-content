@@ -1,14 +1,6 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Number
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isNaN
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`Number.isNaN()`** permet de déterminer si la valeur passée en a
 ## Syntaxe
 
 ```js
-Number.isNaN(valeurÀTester)
+Number.isNaN(valeurÀTester);
 ```
 
 ### Paramètres
@@ -66,9 +58,11 @@ Number.isNaN("blabla"); // ex : cette valeur aurait rendu true avec la méthode 
 La fonction suivant fonctionne car `NaN` est la seule valeur JavaScript qui n'est pas égale à elle-même.
 
 ```js
-Number.isNaN = Number.isNaN || function(value) {
+Number.isNaN =
+  Number.isNaN ||
+  function (value) {
     return typeof value === "number" && isNaN(value);
-}
+  };
 ```
 
 ## Spécifications

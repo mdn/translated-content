@@ -1,11 +1,6 @@
 ---
 title: color-gamut
 slug: Web/CSS/@media/color-gamut
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/color-gamut
 ---
 
 {{CSSRef}}

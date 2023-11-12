@@ -61,9 +61,13 @@ min-height: unset;
 ### Setting min-height
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## 规范
@@ -76,5 +80,5 @@ form { min-height: 0; }
 
 ## 相关链接
 
-- [The box model](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [The box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("height")}}, {{cssxref("max-height")}}

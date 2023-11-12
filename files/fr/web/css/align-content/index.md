@@ -1,11 +1,6 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/align-content
 ---
 
 {{CSSRef}}
@@ -23,11 +18,11 @@ Cette propriété n'aura aucun effet sur les boîtes flexibles disposées sur un
 ```css
 /* Alignement le long de l'axe */
 /* Note : align-content ne prend pas en charge les valeurs left et right */
-align-content: center;     /* Les éléments sont groupés au centre */
-align-content: start;      /* Les éléments sont groupés au début  */
-align-content: end;        /* Les éléments sont groupés à la fin */
+align-content: center; /* Les éléments sont groupés au centre */
+align-content: start; /* Les éléments sont groupés au début  */
+align-content: end; /* Les éléments sont groupés à la fin */
 align-content: flex-start; /* Les éléments flexibles sont groupés au début */
-align-content: flex-end;   /* Les éléments flexibles sont groupés à la fin */
+align-content: flex-end; /* Les éléments flexibles sont groupés à la fin */
 
 /* Alignement normal */
 align-content: normal;
@@ -42,12 +37,12 @@ align-content: space-between; /* L'espace est réparti entre
                                  les éléments, le premier est
                                  accolé au bord et le dernier
                                  également. */
-align-content: space-around;  /* L'espace est réparti entre les
+align-content: space-around; /* L'espace est réparti entre les
                                  éléments avec un demi-espace
                                  au début et à la fin */
-align-content: space-evenly;  /* L'espace est réparti entre les
+align-content: space-evenly; /* L'espace est réparti entre les
                                  éléments et autour */
-align-content: stretch;       /* Les éléments dimensionnés avec
+align-content: stretch; /* Les éléments dimensionnés avec
                                  auto sont étirés également
                                  afin de remplir le conteneur*/
 
@@ -106,7 +101,7 @@ align-content: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Cette valeur peut être changée dans la démonstration */
   background-color: #8c8c8c;
@@ -225,15 +220,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignContent = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```

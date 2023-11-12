@@ -1,7 +1,6 @@
 ---
 title: copy
 slug: Web/XSLT/Element/copy
-original_slug: Web/XSLT/copy
 ---
 
 {{XsltRef}}

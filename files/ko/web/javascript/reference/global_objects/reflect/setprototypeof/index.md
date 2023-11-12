@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 ## 구문
 
 ```js
-Reflect.setPrototypeOf(target, prototype)
+Reflect.setPrototypeOf(target, prototype);
 ```
 
 ### 매개변수

@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 6: Generic list and detail views'
+title: "Django Tutorial Part 6: Generic list and detail views"
 slug: Learn/Server-side/Django/Generic_views
 ---
 
@@ -12,7 +12,7 @@ slug: Learn/Server-side/Django/Generic_views
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/Home_page"
+        <a href="/ko/docs/Learn/Server-side/Django/Home_page"
           >Django Tutorial Part 5: Creating our home page</a
         >를 포함한 모든 이전 튜토리얼을 완료하세요.
       </td>
@@ -126,7 +126,7 @@ class BookListView(generic.ListView):
 
 제네릭 뷰의 템플릿은 다른 템플릿과 비슷합니다 (물론 템플릿에 전달되는 컨텍스트나 정보는 다를지도 모르지만요). 다른 index 템플릿처럼, 우리는 첫번째 줄에 base 템플릿을 넣어 확장한 다음, `content`라는 이름의 블록으로 교체합니다.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -151,7 +151,7 @@ class BookListView(generic.ListView):
 
 [`if`](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#if), `else` 그리고 `endif` 라는 템플릿 태그들은 `book_list` 이 정의되었는지, 그리고 존재하는지 체크합니다. 만약 `book_list`가 없다면, 책이 존재하지 않는다는 `else` 절의 텍스트 문구가 표시될 것입니다. 만약 `book_list`가 존재한다면, 도서 목록의 갯수만큼 반복만큼 반복해서 실행합니다.
 
-```html
+```django
 {% if book_list %}
   <!-- code here to list the books -->
 {% else %}
@@ -165,9 +165,9 @@ class BookListView(generic.ListView):
 
 [for](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#for) 와 `endfor` 라는 템플릿 태그들은 아래와 같이 도서 목록을 살펴보는 루프를 위해 사용합니다. 각각의 반복은 `book` 템플릿 변수에 현재 리스트 아이템에 대한 정보를 채웁니다.
 
-```html
+```django
 {% for book in book_list %}
-  <li> <!-- code here get information from each book item --> </li>
+  <li><!-- code here get information from each book item --></li>
 {% endfor %}
 ```
 
@@ -261,10 +261,10 @@ _Regular expressions_ 은 정말로 파워풀한 매핑 툴 입니다. 하지만
 
 몇 가지 실제 패턴 예제를 보도록 합시다:
 
-| Pattern                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **r'^book/(?P\<pk>\d+)$'**      | 이것은 우리가 URL mapper에서 사용한 Regular Expression입니다. 이 표현식은 먼저 문자열이 `book/` 으로 시작하는지 검사하고 (**^book/**), 그 다음에 한 개이상의 숫자가 오는지 (`\d+`), 그리고 문자열이 끝나기 전에 숫자가 아닌 문자가 들어 있지는 않는 지 검사합니다.또한 이 표현식은 모든 숫자들을 변환하고 **(?P\<pk>\d+)** 변환된 값을 view 에 'pk'라는 이름의 parameter로 넘깁니다. **변환된 값은 항상 String type으로 넘어갑니다**!예를 들어, 이 표현식은 `book/1234` 을 매칭합니다. 그리고 변수 `pk='1234'` 를 view에 넘깁니다. |
-| **r'^book/(\d+)$'**            | 이 표현식은 위의 표현식과 동일한 URL들을 매칭합니다. 변환된 정보는 명명되지 않은 argument로 view에 전달됩니다.                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Pattern                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **r'^book/(?P\<pk>\d+)$'**      | 이것은 우리가 URL mapper에서 사용한 Regular Expression입니다. 이 표현식은 먼저 문자열이 `book/` 으로 시작하는지 검사하고 (**^book/**), 그 다음에 한 개이상의 숫자가 오는지 (`\d+`), 그리고 문자열이 끝나기 전에 숫자가 아닌 문자가 들어 있지는 않는 지 검사합니다.또한 이 표현식은 모든 숫자들을 변환하고 **(?P\<pk>\d+)** 변환된 값을 view 에 'pk'라는 이름의 parameter로 넘깁니다. **변환된 값은 항상 String type으로 넘어갑니다**!예를 들어, 이 표현식은 `book/1234` 을 매칭합니다. 그리고 변수 `pk='1234'` 를 view에 넘깁니다.         |
+| **r'^book/(\d+)$'**             | 이 표현식은 위의 표현식과 동일한 URL들을 매칭합니다. 변환된 정보는 명명되지 않은 argument로 view에 전달됩니다.                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **r'^book/(?P\<stub>[-\w]+)$'** | 이 표현식은 문자열 처음 부분에 `book/` 으로 시작하는지 검사하고 (**^book/**), 그리고 한 개 또는 그 이상의 '-' 나 word character가 오고 (**\[-\w]+**), 그렇게 끝내는지를 매칭합니다. 이 표현식 또한 매칭된 부분을 변환하고 view 에 'stub' 라는 이름의 parameter로 전달합니다.This is a fairly typical pattern for a "stub". Stubs are URL-friendly word-based primary keys for data. You might use a stub if you wanted your book URL to be more informative. For example `/catalog/book/the-secret-garden` rather than `/catalog/book/33`. |
 
 당신은 다양한 패턴들을 한번의 매칭을 통해 변환시킬 수 있습니다. 그러므로 다양한 정보들을 URL안에 인코딩할 수 있습니다.
@@ -327,7 +327,7 @@ def book_detail_view(request, primary_key):
 
 **/locallibrary/catalog/templates/catalog/book_detail.html** 파일을 만들고, 아래 텍스트를 복사 붙여넣기 하세요. 위에서 설명한대로, 이 파알명은 제네릭 클래스 기반 상세 뷰의 디폴트 파일명입니다. (`catalog` 애플리케이션의 `Book` 모델을 위한 상세 뷰)
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -502,13 +502,16 @@ next/previous 링크와 함께 보이는 밑에 pagination 링크는 당신이 �
 
 URL mappers에 필요한 코드들과 view들은 ,사실상, 우리가 위에서 만들었던 `Book` 목록과 세부 사항 view들과 동일해야 합니다. template들은 다르겠지만, 비슷한 동작을 가지고 있을 겁니다.
 
-> **참고:** :
+> **참고:**
 >
 > - 작가 목록 페이지를 위한 URL mapper를 만들고나면, **All authors** base template에 있는 **All authors** 링크 또한 업데이트 해야될 필요를 느끼게 될 겁니다. 우리가 **All books** 링크 업데이트 때 했던, [수행 과정](#Update_the_base_template)을 따라해주세요.
 > - 작가 세부 사항 페이지에 대한 URL mapper를 만들고나면, 당신은 [book detail view template](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) 또한 업데이트 해야 합니다. 그래야 작가 링크가 당신이 새로 만든 작가 세부 사항 페이지를 가리키거든요. (비어 있는 URL로 있기 보다는 말이죠). 굵게 되어 있는 부분을 template 내의 태그에 넣어주세요.
 >
->   ```html
->   <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
+>   ```django
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 모두 마치면, 당신의 페이즈들은 아마 밑의 스크린샷과 비슷하게 보일 겁니다.
@@ -534,21 +537,3 @@ URL mappers에 필요한 코드들과 view들은 ,사실상, 우리가 위에서
 - [Pagination](https://docs.djangoproject.com/en/2.0/topics/pagination/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

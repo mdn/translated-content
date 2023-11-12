@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
+
 {{JSRef}}
 
 Метод **`slice()`** возвращает новый массив, содержащий копию части исходного массива.
@@ -63,7 +56,7 @@ arr.slice([begin[, end]])
 
 ```js
 // Пример: наши хорошие друзья цитрусовые среди фруктов
-var fruits = ['Банан', 'Апельсин', 'Лимон', 'Яблоко', 'Манго'];
+var fruits = ["Банан", "Апельсин", "Лимон", "Яблоко", "Манго"];
 var citrus = fruits.slice(1, 3);
 
 // citrus содержит ['Апельсин', 'Лимон']
@@ -75,24 +68,28 @@ var citrus = fruits.slice(1, 3);
 
 ```js
 // Используя slice, создаём newCar из myCar.
-var myHonda = { color: 'красный', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
-var myCar = [myHonda, 2, 'в хорошем состоянии', 'приобретена в 1997'];
+var myHonda = {
+  color: "красный",
+  wheels: 4,
+  engine: { cylinders: 4, size: 2.2 },
+};
+var myCar = [myHonda, 2, "в хорошем состоянии", "приобретена в 1997"];
 var newCar = myCar.slice(0, 2);
 
 // Отображаем значения myCar, newCar и цвет myHonda
 //  по ссылкам из обоих массивов.
-console.log('myCar = ' + myCar.toSource());
-console.log('newCar = ' + newCar.toSource());
-console.log('myCar[0].color = ' + myCar[0].color);
-console.log('newCar[0].color = ' + newCar[0].color);
+console.log("myCar = " + myCar.toSource());
+console.log("newCar = " + newCar.toSource());
+console.log("myCar[0].color = " + myCar[0].color);
+console.log("newCar[0].color = " + newCar[0].color);
 
 // Изменяем цвет myHonda.
-myHonda.color = 'багровый';
-console.log('Новый цвет моей Honda - ' + myHonda.color);
+myHonda.color = "багровый";
+console.log("Новый цвет моей Honda - " + myHonda.color);
 
 // Отображаем цвет myHonda по ссылкам из обоих массивов.
-console.log('myCar[0].color = ' + myCar[0].color);
-console.log('newCar[0].color = ' + newCar[0].color);
+console.log("myCar[0].color = " + myCar[0].color);
+console.log("newCar[0].color = " + newCar[0].color);
 ```
 
 Этот скрипт выведет:
@@ -148,36 +145,39 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
  * вызове на других объектах DOM.
  */
 (function () {
-  'use strict';
+  "use strict";
   var _slice = Array.prototype.slice;
 
   try {
     // Не может использоваться с элементами DOM в IE < 9
     _slice.call(document.documentElement);
-  } catch (e) { // В IE < 9 кидается исключение
+  } catch (e) {
+    // В IE < 9 кидается исключение
     // Функция будет работать для истинных массивов, массивоподобных объектов,
     // NamedNodeMap (атрибуты, сущности, примечания),
     // NodeList (например, getElementsByTagName), HTMLCollection (например, childNodes)
     // и не будет падать на других объектах DOM (как это происходит на элементах DOM в IE < 9)
-    Array.prototype.slice = function(begin, end) {
+    Array.prototype.slice = function (begin, end) {
       // IE < 9 будет недоволен аргументом end, равным undefined
-      end = (typeof end !== 'undefined') ? end : this.length;
+      end = typeof end !== "undefined" ? end : this.length;
 
       // Для родных объектов Array мы используем родную функцию slice
-      if (Object.prototype.toString.call(this) === '[object Array]') {
+      if (Object.prototype.toString.call(this) === "[object Array]") {
         return _slice.call(this, begin, end);
       }
 
       // Массивоподобные объекты мы обрабатываем самостоятельно
-      var i, cloned = [],
-          size, len = this.length;
+      var i,
+        cloned = [],
+        size,
+        len = this.length;
 
       // Обрабатываем отрицательное значение begin
       var start = begin || 0;
-      start = (start >= 0) ? start: len + start;
+      start = start >= 0 ? start : len + start;
 
       // Обрабатываем отрицательное значение end
-      var upTo = (end) ? end : len;
+      var upTo = end ? end : len;
       if (end < 0) {
         upTo = len + end;
       }
@@ -201,7 +201,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
       return cloned;
     };
   }
-}());
+})();
 ```
 
 ## Спецификации

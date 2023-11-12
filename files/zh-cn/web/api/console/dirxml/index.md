@@ -1,6 +1,6 @@
 ---
 title: Console.dirxml()
-slug: Web/API/Console/dirxml
+slug: Web/API/console/dirxml
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -22,6 +22,6 @@ console.dirxml(object);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

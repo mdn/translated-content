@@ -1,13 +1,6 @@
 ---
 title: Error.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
-tags:
-  - Error
-  - JavaScript
-  - Method
-  - Non-standard
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
 ---
 
@@ -33,7 +26,7 @@ e.toSource()
 
 здесь атрибуты относятся к соответствующим свойствам экземпляра ошибки.
 
-> **Примечание:** **Обратите внимание:** имейте в виду, что свойства, используемые методом `toSource` при создании строки, изменяемы и могут неточно отражать функцию, с помощью которой создан экземпляр ошибки, или имя файла, или номер строки, где возникла ошибка.
+> **Примечание:** имейте в виду, что свойства, используемые методом `toSource` при создании строки, изменяемы и могут неточно отражать функцию, с помощью которой создан экземпляр ошибки, или имя файла, или номер строки, где возникла ошибка.
 
 ## Спецификации
 

@@ -1,7 +1,6 @@
 ---
 title: Botones
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
-original_slug: Games/Tutorials/2D_breakout_game_Phaser/Botones
 ---
 
 {{GamesSidebar}}
@@ -26,7 +25,7 @@ var startButton;
 Podemos cargar el botón de spritesheet de la misma manera que cargamos la animación del movimiento de la pelota. Añade lo siguiente al botón de la función `preload()`:
 
 ```js
-game.load.spritesheet('button', 'img/button.png', 120, 40);
+game.load.spritesheet("button", "img/button.png", 120, 40);
 ```
 
 El marco de un solo botón mide 120 pixels de ancho y 40 pixels de alto.
@@ -38,7 +37,16 @@ También se debe tomar el botón de spritesheet de [Github](https://github.com/e
 Para añadir el botón al juego usaremos el método `add.button`. Añade las siguientes lineas del botón a la función `create()`:
 
 ```js
-startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
+startButton = game.add.button(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "button",
+  startGame,
+  this,
+  1,
+  0,
+  2,
+);
 startButton.anchor.set(0.5);
 ```
 
@@ -56,9 +64,9 @@ Ahora necesitamos definir la función `startGame()` referenciada en el siguiente
 
 ```js
 function startGame() {
-    startButton.destroy();
-    ball.body.velocity.set(150, -150);
-    playing = true;
+  startButton.destroy();
+  ball.body.velocity.set(150, -150);
+  playing = true;
 }
 ```
 
@@ -72,11 +80,11 @@ Funciona como se esperaba, pero aún podemos mover la paleta cuando el juego aú
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle, ballHitPaddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    if(playing) {
-        paddle.x = game.input.x || game.world.width*0.5;
-    }
+  game.physics.arcade.collide(ball, paddle, ballHitPaddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  if (playing) {
+    paddle.x = game.input.x || game.world.width * 0.5;
+  }
 }
 ```
 

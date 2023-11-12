@@ -19,7 +19,7 @@ event.dataTransfer.setData("text/plain", "This is text to drag")
 
 拖动文本框中的文字和页面选中部分的文字是自动完成的，所以你不需要手动处理这些拖动。
 
-如果应用和拖动目标不支持其它类型，推荐你使用 `text/plain` 类型的数据进行填充，否则将没有默认的替代文字。建议总是在最后添加原始文字类型的数据做为备选项（译者 plter 注：如果拖动开始时没有设置数据，则在有些浏览器中后续拖动相关事件可能不会触发）。
+如果应用和拖动目标不支持其他类型，推荐你使用 `text/plain` 类型的数据进行填充，否则将没有默认的替代文字。建议总是在最后添加原始文字类型的数据做为备选项（译者 plter 注：如果拖动开始时没有设置数据，则在有些浏览器中后续拖动相关事件可能不会触发）。
 
 注：在旧代码中，可能会使用 `text/unicode` 或者 `Text` 类型，这两个与 `text/plain` 是一样的，并且应该被替换用于存储和提取数据。
 
@@ -66,7 +66,7 @@ Example
 
 ## 拖动 HTML 和 XML
 
-HTML content may use the `text/html` type. The data for this type should be the serialized HTML to drag. For instance, it would be suitable to set the data value for this type to the value of the `{{domxref("Element.innerHTML","innerHTML")}}` property of an element.
+HTML content may use the `text/html` type. The data for this type should be the serialized HTML to drag. For instance, it would be suitable to set the data value for this type to the value of the {{domxref("Element.innerHTML","innerHTML")}} property of an element.
 
 XML content may use the `text/xml` type, but you should ensure that the data value is well-formed XML.
 
@@ -119,7 +119,7 @@ Note that the latest spec now dictates that {{domxref("DataTransfer.types")}} sh
 As a result, the [contains](/zh-CN/docs/Web/API/Node/contains) method no longer works on the property; the [includes](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 
 ```js
-if ([...event.dataTransfer.types].includes('text/html')) {
+if ([...event.dataTransfer.types].includes("text/html")) {
   // Do something
 }
 ```
@@ -167,52 +167,79 @@ There are cases in which you may want to add a file to an existing drag event se
 
 currentEvent.dataTransfer.setData("text/x-moz-url", URL);
 currentEvent.dataTransfer.setData("application/x-moz-file-promise-url", URL);
-currentEvent.dataTransfer.setData("application/x-moz-file-promise-dest-filename", leafName);
-currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
-                  new dataProvider(success,error),
-                  0, Components.interfaces.nsISupports);
+currentEvent.dataTransfer.setData(
+  "application/x-moz-file-promise-dest-filename",
+  leafName,
+);
+currentEvent.dataTransfer.mozSetDataAt(
+  "application/x-moz-file-promise",
+  new dataProvider(success, error),
+  0,
+  Components.interfaces.nsISupports,
+);
 
-function dataProvider(){}
+function dataProvider() {}
 
 dataProvider.prototype = {
-  QueryInterface : function(iid) {
-    if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
-                  || iid.equals(Components.interfaces.nsISupports))
+  QueryInterface: function (iid) {
+    if (
+      iid.equals(Components.interfaces.nsIFlavorDataProvider) ||
+      iid.equals(Components.interfaces.nsISupports)
+    )
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
-  getFlavorData : function(aTransferable, aFlavor, aData, aDataLen) {
-    if (aFlavor == 'application/x-moz-file-promise') {
+  getFlavorData: function (aTransferable, aFlavor, aData, aDataLen) {
+    if (aFlavor == "application/x-moz-file-promise") {
+      var urlPrimitive = {};
+      var dataSize = {};
 
-       var urlPrimitive = {};
-       var dataSize = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-url",
+        urlPrimitive,
+        dataSize,
+      );
+      var url = urlPrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString,
+      ).data;
+      console.log("URL file orignal is = " + url);
 
-       aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
-       var url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log("URL file orignal is = " + url);
+      var namePrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dest-filename",
+        namePrimitive,
+        dataSize,
+      );
+      var name = namePrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString,
+      ).data;
 
-       var namePrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dest-filename', namePrimitive, dataSize);
-       var name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+      console.log("target filename is = " + name);
 
-       console.log("target filename is = " + name);
+      var dirPrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dir",
+        dirPrimitive,
+        dataSize,
+      );
+      var dir = dirPrimitive.value.QueryInterface(
+        Components.interfaces.nsILocalFile,
+      );
 
-       var dirPrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dir', dirPrimitive, dataSize);
-       var dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
+      console.log("target folder is = " + dir.path);
 
-       console.log("target folder is = " + dir.path);
+      var file = Cc["@mozilla.org/file/local;1"].createInstance(
+        Components.interfaces.nsILocalFile,
+      );
+      file.initWithPath(dir.path);
+      file.appendRelativePath(name);
 
-       var file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
-       file.initWithPath(dir.path);
-       file.appendRelativePath(name);
+      console.log("output final path is =" + file.path);
 
-       console.log("output final path is =" + file.path);
-
-       // now you can write or copy the file yourself...
+      // now you can write or copy the file yourself...
     }
-  }
-}
+  },
+};
 ```
 
 ## 参见

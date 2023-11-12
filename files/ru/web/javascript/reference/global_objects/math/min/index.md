@@ -1,12 +1,6 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -41,7 +35,8 @@ Math.min([value1[, value2[, ...]]])
 В этом примере ищется минимум из `x` и `y` и присваивается переменной `z`:
 
 ```js
-var x = 10, y = -20;
+var x = 10,
+  y = -20;
 var z = Math.min(x, y);
 ```
 

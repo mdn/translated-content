@@ -34,7 +34,7 @@ En este artículo vas a iniciar tu viaje hacia el dominio la aplicación de esti
 
 Como ya habrás experimentado en tu trabajo con el HTML y el CSS, el texto incluido en un elemento se dispone dentro de la caja de contenido del elemento. Esta empieza en la parte superior izquierda del área de contenido (o en la esquina superior derecha, en el caso del contenido de los lenguajes RTL, o right-to-left, que se escriben de derecha a izquierda) y fluye hacia el final de la línea. Una vez que llega al final, baja a la línea siguiente y sigue, y luego continúa a la línea siguiente, hasta que todo el contenido se ha ubicado en la caja. El contenido de texto se comporta efectivamente como una serie de elementos en línea, distribuidos en líneas adyacentes entre sí, y sin crear saltos de línea hasta que se llega al final de la línea, a menos que se fuerce un salto de línea manual con el elemento {{htmlelement("br")}}.
 
-> **Nota:** Si el párrafo anterior te parece confuso, no te preocupes: vuelve atrás y revisa el artículo sobre el [modelo de caja](/es/docs/Learn/CSS/Building_blocks/El_modelo_de_caja) antes de continuar.
+> **Nota:** Si el párrafo anterior te parece confuso, no te preocupes: vuelve atrás y revisa el artículo sobre el [modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model) antes de continuar.
 
 Las propiedades CSS que se usan para aplicar estilo al texto pueden clasificarse generalmente en dos categorías, que veremos por separado en este artículo:
 
@@ -48,25 +48,27 @@ Las propiedades CSS que se usan para aplicar estilo al texto pueden clasificarse
 Veamos las propiedades que permiten definir el estilo del tipo de letra. En este ejemplo aplicaremos algunas propiedades CSS diferentes al mismo ejemplo HTML, que presentamos a continuación:
 
 ```html
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Bueno, lo recuerdo como si fuera hace una comida...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora. Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
+</p>
 ```
 
-Puedes ver el [ejemplo completo en Github](http://mdn.github.io/learning-area/css/styling-text/fundamentals/) (consulta también [el código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html).)
+Puedes ver el [ejemplo completo en Github](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) (consulta también [el código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)).
 
 ### Color
 
 La propiedad {{cssxref("color")}} establece el color del contenido de los elementos seleccionados (que normalmente es texto, pero también puede incluir un par cosas más, como un subrayado o una línea superpuesta al texto con la propiedad {{cssxref("text-decoration")}} ).
 
-La propiedad `color` puede admitir cualquier [unidad de color CSS](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS), por ejemplo:
+La propiedad `color` puede admitir cualquier [unidad de color CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units), por ejemplo:
 
 ```css
 p {
@@ -77,16 +79,18 @@ p {
 Esto mostrará el contenido de los párrafos en color rojo, en lugar del negro que es el estándar por defecto del navegador:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Bueno, lo recuerdo como si fuera hace una comida...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora. Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
+</p>
 ```
 
 {{ EmbedLiveSample('Color', '100%', 220) }}
@@ -109,7 +113,7 @@ Solo hay un cierto número de tipos de letra que están disponibles en todos los
 
 La mayor parte del tiempo, como desarrolladores web deseamos tener un control específico mayor sobre los tipos de letra con que se va a mostrar para mostrar nuestro contenido de texto. El problema está en encontrar una manera de saber de qué tipo de letra dispone el ordenador que se utiliza para acceder a nuestras páginas. No hay manera de saber esto en todos los casos, pero al menos contamos con que los tipos de letra seguros para la web están disponibles en casi todos los sistemas operativos más utilizados (las distribuciones Linux más comunes, Windows, Mac, Android, e iOS).
 
-La lista de los tipos de letra seguros para la web cambia al ir evolucionando los sistemas operativos, pero es correcto considerar los tipos de letra siguientes como seguros para la web, al menos por ahora (muchos de ellos se han popularizado gracias a la iniciativa _[Core fonts for the web](https://es.wikipedia.org/wiki/Core_fonts_for_the_Web)_ de Microsoft, de finales de la década de 1990 y principios de la del 2000):
+La lista de los tipos de letra seguros para la web cambia al ir evolucionando los sistemas operativos, pero es correcto considerar los tipos de letra siguientes como seguros para la web, al menos por ahora (muchos de ellos se han popularizado gracias a la iniciativa _[Fuentes principales para la web](https://es.wikipedia.org/wiki/Core_fonts_for_the_Web)_ de Microsoft, de finales de la década de 1990 y principios de la del 2000):
 
 | Nombre          | Tipo de letra genérico | Observaciones                                                                                                                                                                                                                                          |
 | --------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -122,7 +126,7 @@ La lista de los tipos de letra seguros para la web cambia al ir evolucionando lo
 
 > **Nota:** Entre otros recursos, el sitio [cssfontstack.com](http://www.cssfontstack.com/) mantiene una lista de tipos de letra seguros disponibles en los sistemas operativos para Windows y Mac, que puede ayudarte en la toma de decisiones acerca de lo que consideras seguro para tus propósitos.
 
-> **Nota:** Hay una manera de descargar un tipo de letra personalizado junto con la página web, que te permite personalizar el uso de los tipos de letra de la manera que desees: **web fonts**. Esto es un poco más complejo, y lo vamos a exponer más adelante en un [artículo independiente](/es/docs/Learn/CSS/Styling_text/Fuentes_web) del módulo.
+> **Nota:** Hay una manera de descargar un tipo de letra personalizado junto con la página web, que te permite personalizar el uso de los tipos de letra de la manera que desees: **web fonts**. Esto es un poco más complejo, y lo vamos a exponer más adelante en un [artículo independiente](/es/docs/Learn/CSS/Styling_text/Web_fonts) del módulo.
 
 #### Fuentes predeterminadas
 
@@ -198,23 +202,25 @@ p {
 Esto nos da el resultado siguiente:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Bueno, lo recuerdo como si fuera hace una comida...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora. Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
+</p>
 ```
 
 {{ EmbedLiveSample('Un_ejemplo_con_font-family', '100%', 220) }}
 
 ### Tamaño de la letra
 
-En el artículo sobre [Unidades y valores de CSS](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de nuestro módulo anterior, revisamos las unidades de longitud y tamaño. El tamaño del tipo de letra (establecido con la propiedad {{cssxref("font-size")}}) puede tomar valores medidos en la mayoría de estas unidades (y en otras, como [porcentajes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS#Porcentajes)). Sin embargo, las unidades más comunes que vas a usar para ajustar el tamaño del texto son:
+En el artículo sobre [Unidades y valores de CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units) de nuestro módulo anterior, revisamos las unidades de longitud y tamaño. El tamaño del tipo de letra (establecido con la propiedad {{cssxref("font-size")}}) puede tomar valores medidos en la mayoría de estas unidades (y en otras, como [porcentajes](/es/docs/Learn/CSS/Building_blocks/Values_and_units#porcentajes)). Sin embargo, las unidades más comunes que vas a usar para ajustar el tamaño del texto son:
 
 - Unidades `px` (píxeles): El número de píxeles de altura que deseas que tenga el texto. Esta es una unidad absoluta, da como resultado el mismo valor calculado final para el tipo de letra en la página en casi cualquier situación.
 - Unidades `em`: 1em equivale al tamaño de tipo de letra que se haya establecido en el elemento padre del elemento activo al que aplicamos estilo (más específicamente, el ancho de una letra M mayúscula contenida dentro del elemento padre). Este puede ser complejo de resolver si hay muchos elementos anidados con diferentes tamaños de tipo de letra establecidos, pero es factible, como verás a continuación. Pero, ¿para qué molestarse en ello? Porque resulta bastante natural una vez que te acostumbras a ello, y puedes usar unidades `em` para establecer el tamaño de todo, no solo del texto. Puedes tener un sitio web completo dimensionado con unidades `em`, lo que facilita su mantenimiento.
@@ -226,8 +232,10 @@ Las cosas se vuelven más complicadas cuando se empieza a alterar el tamaño del
 
 ```html
 <!-- El tamaño de letra base del documento es 16px -->
-<article> <!-- Si mi tamaño de letra es 1.5em -->
-  <p>Mi párrafo</p> <!-- ¿Cómo calculo el tamaño del tipo de letra para que de 20px? -->
+<article>
+  <!-- Si mi tamaño de letra es 1.5em -->
+  <p>Mi párrafo</p>
+  <!-- ¿Cómo calculo el tamaño del tipo de letra para que de 20px? -->
 </article>
 ```
 
@@ -240,16 +248,18 @@ Al dimensionar el texto, en general es una buena idea establecer el tamaño bás
 Nuestro nuevo resultado es:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Bueno, lo recuerdo como si fuera hace una comida...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora. Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
+</p>
 ```
 
 ```css
@@ -306,16 +316,18 @@ El CSS proporciona cuatro propiedades comunes para alterar el efecto visual / é
 Añadamos un par de estas propiedades a nuestro ejemplo. Nuestro nuevo resultado quedaría como este:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Bueno, lo recuerdo como si fuera hace una comida...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora. Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
+</p>
 ```
 
 ```css
@@ -351,10 +363,10 @@ text-shadow: 1px 1px 1px red;
 
 Las cuatro propiedades son las siguientes:
 
-1. El desplazamiento horizontal de la sombra desde el texto original; admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone CSS, pero lo más habitual es usar `px`. Es un valor obligatorio.
+1. El desplazamiento horizontal de la sombra desde el texto original; admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Values_and_units) de que dispone CSS, pero lo más habitual es usar `px`. Es un valor obligatorio.
 2. El desplazamiento vertical de la sombra desde el texto original; se comporta básicamente igual que el desplazamiento horizontal, excepto porque mueve la sombra arriba/abajo, y no hacia derecha/izquierda. Es un valor obligatorio.
-3. El radio de desenfoque; cuanto más alto es este valor, mayor es la dispersión de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS) de que dispone el CSS.
-4. El color de base de la sombra, que admite cualquier [unidad de color de que dispone CSS](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS). Si no se incluye este valor, el valor predeterminado es `negro`.
+3. El radio de desenfoque; cuanto más alto es este valor, mayor es la dispersión de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Values_and_units) de que dispone el CSS.
+4. El color de base de la sombra, que admite cualquier [unidad de color de que dispone CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units). Si no se incluye este valor, el valor predeterminado es `negro`.
 
 > **Nota:** Los valores con desplazamiento positivo mueven la sombra hacia la derecha o hacia abajo, mientras que los valores con desplazamiento negativo, por ejemplo `-1px -1px`, mueven la sombrea hacia la izquierda o hacia arriba.
 
@@ -363,25 +375,28 @@ Las cuatro propiedades son las siguientes:
 Puedes aplicar diversas sombras al mismo texto incluyendo múltiples valores de sombra separados por comas, por ejemplo:
 
 ```css
-text-shadow: -1px -1px 1px #aaa,
-             0px 4px 1px rgba(0,0,0,0.5),
-             4px 4px 5px rgba(0,0,0,0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+text-shadow:
+  -1px -1px 1px #aaa,
+  0px 4px 1px rgba(0, 0, 0, 0.5),
+  4px 4px 5px rgba(0, 0, 0, 0.7),
+  0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
-Si aplicamos esto al elemento {{htmlelement("h1")}} de nuestro ejemplo _Tommy The Cat_, obtenemos esto:
+Si aplicamos esto al elemento {{htmlelement("h1")}} de nuestro ejemplo _Tommy el gato_, obtenemos esto:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Bueno, lo recuerdo como si fuera hace una comida...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora. Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
+</p>
 ```
 
 ```css hidden
@@ -392,10 +407,11 @@ html {
 h1 {
   font-size: 26px;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
 h1 + p {
@@ -411,7 +427,7 @@ p {
 
 {{ EmbedLiveSample('Sombras_múltiples', '100%', 220) }}
 
-> **Nota:** Puedes ver más ejemplos interesantes del uso de `text-shadow` en el artículo de _Sitepoint_ [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/).
+> **Nota:** Puedes ver más ejemplos interesantes del uso de `text-shadow` en el artículo de _Sitepoint_ [Dominando la sombra de texto con CSS](https://www.sitepoint.com/moonlighting-css-text-shadow/).
 
 ## Diseño del texto
 
@@ -429,16 +445,18 @@ La propiedad {{cssxref("text-align")}} se usa para controlar la forma en que el 
 Si aplicamos `text-align: center;` al elemento {{htmlelement("h1")}} de nuestro ejemplo, obtendremos esto:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
-<p>Well I remember as though it were a meal ago...</p>
+<p>Bueno, lo recuerdo como si fuera hace una comida...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora. Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
+</p>
 ```
 
 ```css hidden
@@ -449,10 +467,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -471,7 +490,7 @@ p {
 
 ### Interlineado
 
-La propiedad {{cssxref("line-height")}} establece la altura entre cada línea de texto; esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS), pero también puede tomar un valor sin unidades, que actúa como un multiplicador y generalmente se considera la mejor opción porque se multiplica la propiedad {{cssxref("font-size")}} para obtener la altura de la línea (`line-height`). El texto del cuerpo (`body`) generalmente se ve mejor y es más fácil de leer si hay más separación entre las líneas; la altura recomendada de la línea es entre 1.5-2 (a doble espacio). Por lo tanto, para configurar nuestras líneas de texto a 1.5 veces la altura de la fuente, deberías usar esto:
+La propiedad {{cssxref("line-height")}} establece la altura entre cada línea de texto; esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Values_and_units), pero también puede tomar un valor sin unidades, que actúa como un multiplicador y generalmente se considera la mejor opción porque se multiplica la propiedad {{cssxref("font-size")}} para obtener la altura de la línea (`line-height`). El texto del cuerpo (`body`) generalmente se ve mejor y es más fácil de leer si hay más separación entre las líneas; la altura recomendada de la línea es entre 1.5-2 (a doble espacio). Por lo tanto, para configurar nuestras líneas de texto a 1.5 veces la altura de la fuente, deberías usar esto:
 
 ```css
 line-height: 1.5;
@@ -480,16 +499,18 @@ line-height: 1.5;
 Aplicando esto a los elementos {{htmlelement("p")}} en nuestro ejemplo nos daría este resultado:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Bueno, lo recuerdo como si fuera hace una comida...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora. Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
+</p>
 ```
 
 ```css hidden
@@ -500,10 +521,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -523,7 +545,7 @@ p {
 
 ### Espacio entre letras y espacio entre palabras
 
-Las propiedades {{cssxref("letter-spacing")}} y {{cssxref("word-spacing")}} te permiten establecer el espacio entre las letras y entre las palabras del texto. No los usarás a menudo, pero podría ser útil para obtener una apariencia determinada o para mejorar la legibilidad de un tipo de letra particularmente denso. Estas propiedades admiten la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS).
+Las propiedades {{cssxref("letter-spacing")}} y {{cssxref("word-spacing")}} te permiten establecer el espacio entre las letras y entre las palabras del texto. No los usarás a menudo, pero podría ser útil para obtener una apariencia determinada o para mejorar la legibilidad de un tipo de letra particularmente denso. Estas propiedades admiten la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Values_and_units).
 
 Así, como ejemplo, podemos aplicar a la primera línea de los elementos {{htmlelement("p")}} de nuestro ejemplo lo siguiente:
 
@@ -537,16 +559,18 @@ p::first-line {
 y obtendremos:
 
 ```html hidden
-<h1>Tommy the cat</h1>
+<h1>Tommy el gato</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>Bueno, lo recuerdo como si fuera hace una comida...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera
+  gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón
+  de esta impresionante máquina merodeadora. Verdaderamente una maravilla de la
+  naturaleza, este depredador urbano: el gato Tommy tenía muchas historias que
+  contar. Pero era una rara ocasión como ésta en la que lo hacía.
+</p>
 ```
 
 ```css hidden
@@ -557,10 +581,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -628,7 +653,10 @@ Se debe colocar una barra inclinada (_slash_) entre las propiedades {{cssxref("f
 Un ejemplo completo se vería así:
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## Aprendizaje activo: Jugar a aplicar estilos
@@ -638,20 +666,37 @@ En esta sección de aprendizaje activo no proponemos ningún ejercicio específi
 Si te equivocas, puedes volver a empezar con el botón _Reinicio_.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Some sample text for your delight</p></textarea>
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+  <h2>Entrada HTML</h2>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+  <p>Un texto de muestra para tu deleite.</p></textarea
+  >
 
-  <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">p {
+  <h2>Entrada CSS</h2>
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+p {
 
-  }</textarea>
+  }</textarea
+  >
 
-  <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <h2>Resultado</h2>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -664,8 +709,8 @@ let htmlCode = htmlInput.value;
 let cssCode = cssInput.value;
 const output = document.querySelector(".output");
 
-const styleElem = document.createElement('style');
-const headElem = document.querySelector('head');
+const styleElem = document.createElement("style");
+const headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -673,7 +718,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
@@ -691,11 +736,3 @@ window.addEventListener("load", drawOutput);
 Esperamos que hayas disfrutado jugando con el texto en este artículo. El próximo artículo te enseñará todo lo que necesitas saber sobre la aplicación de estilos de lista en HTML.
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## En este módulo
-
-- [Aplicar estilo al texto base y tipos de letra](/es/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Aplicación de estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Aplicación de estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
-- [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Escribir una página de inicio para la comunidad escolar](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -19,13 +19,13 @@ O método de requisição e o corpo não será alterado, onde talvez o status {{
 
 ## Specifications
 
-| Specification                                                    | Title                                                                |
-| ---------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Specification                                   | Title                                                                |
+| ----------------------------------------------- | -------------------------------------------------------------------- |
 | {{RFC("7538", "308 Permanent Redirect" , "3")}} | The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect) |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.308")}}
+{{Compat}}
 
 ## Veja também
 

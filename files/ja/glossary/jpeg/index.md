@@ -1,6 +1,6 @@
 ---
 title: JPEG
-slug: Glossary/jpeg
+slug: Glossary/JPEG
 ---
 
 **JPEG** (_Joint Photographic Experts Group_) とは、一般的に使われている、デジタル画像用の非可逆圧縮の方法です。

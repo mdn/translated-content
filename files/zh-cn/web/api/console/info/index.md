@@ -1,6 +1,6 @@
 ---
 title: Console.info()
-slug: Web/API/Console/info
+slug: Web/API/console/info
 ---
 
 {{APIRef("Console API")}}
@@ -31,7 +31,7 @@ console.info(msg [, subst1, ..., substN]);
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

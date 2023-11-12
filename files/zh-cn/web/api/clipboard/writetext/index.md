@@ -29,11 +29,14 @@ var promise = navigator.clipboard.writeText(newClipText)
 此示例将剪贴板的内容设置为字符串“\<empty clipboard>”。
 
 ```js
-navigator.clipboard.writeText("<empty clipboard>").then(function() {
-  /* clipboard successfully set */
-}, function() {
-  /* clipboard write failed */
-});
+navigator.clipboard.writeText("<empty clipboard>").then(
+  function () {
+    /* clipboard successfully set */
+  },
+  function () {
+    /* clipboard write failed */
+  },
+);
 ```
 
 ## 规范

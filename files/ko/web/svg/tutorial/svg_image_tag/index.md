@@ -2,6 +2,7 @@
 title: SVG 이미지 요소
 slug: Web/SVG/Tutorial/SVG_Image_Tag
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
 
 SVG {{ SVGElement("image") }} 요소는 비트맵 이미지를 SVG 객체와 함께 표시할 수 있도록 해 준다.

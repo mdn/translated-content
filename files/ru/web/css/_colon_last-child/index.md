@@ -1,7 +1,6 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
-translation_of: Web/CSS/:last-child
 ---
 
 {{CSSRef}}

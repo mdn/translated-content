@@ -79,7 +79,7 @@ l10n:
         <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} イベントが無名の境界通過以外の理由で再ターゲットされた場合、再ターゲットが発生する前にターゲットに設定されます。例えば、マウスイベントがテキストノードの上で発生した場合、その親ノードに再ターゲットされます（{{ Bug("185889") }}）。その場合、 <code>.target</code> は親ノードを表示し、<code>.explicitOriginalTarget</code> はテキストノードを表示します。
+        {{ Non-standard_inline() }} イベントが無名の境界通過以外の理由で再ターゲットされた場合、再ターゲットが発生する前にターゲットに設定されます。例えば、マウスイベントがテキストノードの上で発生した場合、その親ノードに再ターゲットされます（[Firefox バグ 185889](https://bugzil.la/185889)）。その場合、 <code>.target</code> は親ノードを表示し、<code>.explicitOriginalTarget</code> はテキストノードを表示します。
         <code>.originalTarget</code> とは異なり、<code>.explicitOriginalTarget</code> には無名コンテンツが含まれることはありません。
       </td>
     </tr>
@@ -117,7 +117,7 @@ l10n:
 ### 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -208,10 +208,10 @@ l10n:
 
 `mouseover` イベントの `relatedTarget` プロパティは、マウスが以前乗っていたノードを保持します。 `mouseout` イベントでは、マウスが移動した先のノードが保持されます。
 
-| イベント種別  | [event.target](/ja/docs/Web/API/Event/target)  | [event.relatedTarget](/ja/docs/Web/API/MouseEvent/relatedTarget) |
-| ----------- | ------------------------------------------------- | ------------------------------------------------------------------- |
-| `mouseover` | ポインティングデバイスが入った EventTarget | ポインティングデバイスが出た EventTarget                    |
-| `mouseout`  | ポインティングデバイスが出た EventTarget  | ポインティングデバイスが入った EventTarget                   |
+| イベント種別 | [event.target](/ja/docs/Web/API/Event/target) | [event.relatedTarget](/ja/docs/Web/API/MouseEvent/relatedTarget) |
+| ------------ | --------------------------------------------- | ---------------------------------------------------------------- |
+| `mouseover`  | ポインティングデバイスが入った EventTarget    | ポインティングデバイスが出た EventTarget                         |
+| `mouseout`   | ポインティングデバイスが出た EventTarget      | ポインティングデバイスが入った EventTarget                       |
 
 #### 例
 

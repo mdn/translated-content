@@ -26,7 +26,6 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
@@ -37,7 +36,6 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
       "js": ["page-eater.js"]
     }
   ]
-
 }
 ```
 
@@ -52,7 +50,7 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+var header = document.createElement("h1");
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
@@ -71,20 +69,15 @@ document.body.appendChild(header);
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
 
-  "permissions": [
-    "activeTab",
-    "contextMenus"
-  ],
+  "permissions": ["activeTab", "contextMenus"],
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -98,13 +91,13 @@ document.body.appendChild(header);
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
   }
 });
@@ -182,24 +175,24 @@ modify-page/
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
 function messageTab(tabs) {
   browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the add-on!"
+    replacement: "Message from the add-on!",
   });
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
 
     var querying = browser.tabs.query({
       active: true,
-      currentWindow: true
+      currentWindow: true,
     });
     querying.then(messageTab);
   }
@@ -214,7 +207,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 function eatPage(request, sender, sendResponse) {
   document.body.textContent = "";
 
-  var header = document.createElement('h1');
+  var header = document.createElement("h1");
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }
@@ -240,12 +233,11 @@ browser.runtime.onMessage.addListener(eatPage);
 - [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - 使用`content_scripts`的例子：
 
-  - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
-  - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
-  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
-  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
+  - [borderify](https://github.com/mdn/webextensions-examples/tree/main/borderify)
+  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
+  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/main/page-to-extension-messaging)
 
 - 使用`tabs.executeScript()`的例子：
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [context-menu-demo](https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo)
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
+  - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types)

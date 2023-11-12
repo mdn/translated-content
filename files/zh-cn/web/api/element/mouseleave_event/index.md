@@ -14,9 +14,9 @@ slug: Web/API/Element/mouseleave_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('mouseleave', (event) => {});
+addEventListener("mouseleave", (event) => {});
 
-onmouseleave = (event) => { };
+onmouseleave = (event) => {};
 ```
 
 ## 事件类型
@@ -67,10 +67,8 @@ _此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继
   - : 鼠标指针在全局（屏幕）坐标系中的 Y 坐标。
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : 在鼠标事件触发时，如果 <kbd>shift</kbd> 键被按下，则返回 `true`。
-- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : 在产生这个事件时，施加到触控或平板设备的压力量；该值介于 `0.0`（最小压力）和 `1.0`（最大压力）之间。你应该使用 {{domxref("PointerEvent")}} 并查询其 {{domxref("PointerEvent.pressure", "pressure")}} 属性，来代替这个已启用（且非标准）的属性。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : 产生该事件的设备类型（`MOZ_SOURCE_*` 常量之一）。例如，你可以确定鼠标事件是由实际的鼠标还是由触摸事件生成的（这可能会影响你解析与事件关联的坐标时的准确度）。
+  - : 产生该事件的设备类型（`MOZ_SOURCE_*` 常量之一）。例如，你可以确定鼠标事件是由实际的鼠标还是由触摸事件生成的（这可能会影响你判断与事件关联的坐标时的准确度）。
 - {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
   - : 点击时施加的压力量。
 - {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
@@ -110,7 +108,7 @@ _此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继
 
 #### CSS
 
-为 `<div>` 添加样式，以使其更加明显。
+向 `<div>` 添加一些样式，使其更加可视化。
 
 ```css
 #mouseTarget {
@@ -125,17 +123,17 @@ _此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继
 ```js
 let enterEventCount = 0;
 let leaveEventCount = 0;
-const mouseTarget = document.getElementById('mouseTarget');
-const unorderedList = document.getElementById('unorderedList');
+const mouseTarget = document.getElementById("mouseTarget");
+const unorderedList = document.getElementById("unorderedList");
 
-mouseTarget.addEventListener('mouseenter', (e) => {
-  mouseTarget.style.border = '5px dotted orange';
+mouseTarget.addEventListener("mouseenter", (e) => {
+  mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
   addListItem(`这是 mouseenter 事件 ${enterEventCount}.`);
 });
 
-mouseTarget.addEventListener('mouseleave', (e) => {
-  mouseTarget.style.border = '1px solid #333';
+mouseTarget.addEventListener("mouseleave", (e) => {
+  mouseTarget.style.border = "1px solid #333";
   leaveEventCount++;
   addListItem(`这是 mouseleave 事件 ${leaveEventCount}.`);
 });

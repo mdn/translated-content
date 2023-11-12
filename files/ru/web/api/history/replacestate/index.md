@@ -1,8 +1,8 @@
 ---
 title: History.replaceState()
 slug: Web/API/History/replaceState
-translation_of: Web/API/History/replaceState
 ---
+
 {{APIRef("History API")}}
 
 Метод **`History.replaceState()`** изменяет текущую запись в истории, заменяя её на значения `stateObj`, `title` и `URL`, передаваемые в параметрах метода. Данный метод особенно полезен, когда вы хотите обновить объект состояния или URL текущей записи в истории в ответ на какое-то действие пользователя.

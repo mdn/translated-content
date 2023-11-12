@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getFullYear
 ---
 
 {{JSRef}}
@@ -43,7 +42,7 @@ var year = today.getFullYear();
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getFullYear")}}
+{{Compat}}
 
 ## Ver también
 

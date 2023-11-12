@@ -1,10 +1,6 @@
 ---
 title: The Web Open Font Format (WOFF)
 slug: Web/Guide/WOFF
-tags:
-  - Шрифты
-  - шрифт
-translation_of: Web/Guide/WOFF
 ---
 
 **WOFF**(**Web Open Font Format**) — формат шрифтов, разработанный Mozilla совместно с Type Supply, LettError, и др. По сути — это сжатая версия формата [`sfnt`](https://ru.wikipedia.org/wiki/Sfnt), используемого шрифтами TrueType, OpenType, и Open Font Format, но с возможностью добавления мета-данных и приватных структур данных (private-use data structures). Например, в формате предусмотрены поля для ввода информации о лицензии.
@@ -27,10 +23,7 @@ You can use the {{cssxref("@font-face")}} CSS property to use WOFF fonts for tex
 
 ## Спецификации
 
-| Specification                            | Status                       | Comment                   |
-| ---------------------------------------- | ---------------------------- | ------------------------- |
-| {{SpecName('WOFF2.0', '', '')}} | {{Spec2('WOFF2.0')}} | New compression algorithm |
-| {{SpecName('WOFF1.0', '', '')}} | {{Spec2('WOFF1.0')}} | Initial specification.    |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

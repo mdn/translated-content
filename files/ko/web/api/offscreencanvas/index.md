@@ -22,9 +22,11 @@ slug: Web/API/OffscreenCanvas
 ## 메소드
 
 - {{domxref("OffscreenCanvas.getContext()")}}
+
   - : 렌더링된 캔버스 컨텍스트 객체를 반환합니다.
 
 - {{domxref("OffscreenCanvas.convertToBlob()")}}
+
   - : 캔버스에 들어있는 이미지에 대한 {{domxref("Blob")}} 객체를 생성합니다.
 
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
@@ -41,8 +43,7 @@ slug: Web/API/OffscreenCanvas
 아래에 두 개의 {{HTMLElement("canvas")}} 요소가 있습니다.
 
 ```html
-<canvas id="one"></canvas>
-<canvas id="two"></canvas>
+<canvas id="one"></canvas> <canvas id="two"></canvas>
 ```
 
 다음의 코드는 위에서 설명한 것처럼 `OffscreenCanvas`를 이용해 렌더링합니다.
@@ -52,7 +53,7 @@ var one = document.getElementById("one").getContext("bitmaprenderer");
 var two = document.getElementById("two").getContext("bitmaprenderer");
 
 var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext('webgl');
+var gl = offscreen.getContext("webgl");
 
 // ... gl 컨텍스트를 이용해 첫 번째 캔버스에 무언가를 그립니다 ...
 
@@ -78,13 +79,13 @@ var htmlCanvas = document.getElementById("canvas");
 var offscreen = htmlCanvas.transferControlToOffscreen();
 
 var worker = new Worker("offscreencanvas.js");
-worker.postMessage({canvas: offscreen}, [offscreen]);
+worker.postMessage({ canvas: offscreen }, [offscreen]);
 ```
 
 offscreencanvas.js (worker 코드):
 
 ```js
-onmessage = function(evt) {
+onmessage = function (evt) {
   var canvas = evt.data.canvas;
   var gl = canvas.getContext("webgl");
 
@@ -95,7 +96,7 @@ onmessage = function(evt) {
 worker 내에서 requestAnimationFrame 또한 사용할 수 있습니다.
 
 ```js
-onmessage = function(evt) {
+onmessage = function (evt) {
   const canvas = evt.data.canvas;
   const gl = canvas.getContext("webgl");
 

@@ -1,20 +1,6 @@
 ---
-title: '<a> : l''élément d''ancre'
+title: "<a> : l'élément d'ancre"
 slug: Web/HTML/Element/a
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Interactive content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Inline element
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/a
-browser-compat: html.elements.a
 ---
 
 {{HTMLSidebar}}
@@ -219,9 +205,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com">
-  Mozilla
-</a>
+<a href="https://www.mozilla.com"> Mozilla </a>
 ```
 
 #### Résultat
@@ -239,24 +223,29 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 ```
 
 ```css hidden
-a { display: block; margin-bottom: 0.5em }
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Créer_des_liens_vers_des_URL_relatives", "100%", 120)}}
+{{EmbedLiveSample("")}}
 
 ### Créer un lien vers un élément de la même page
 
 ```html
 <!-- <a> élément liens vers la section ci-dessous -->
-<p><a href="#section_further_down">
-  Passez à la rubrique ci-dessous
-</a></p>
+<p><a href="#section_further_down"> Passez à la rubrique ci-dessous </a></p>
 
 <!-- Rubrique à relier -->
 <h2 id="section_further_down">Section plus bas</h2>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('')}}
 
 > **Note :** Vous pouvez utiliser `href="#top"` ou le fragment vide (`href="#"`) pour créer un lien vers le haut de la page actuelle, [comme défini dans la spécification HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
@@ -268,6 +257,10 @@ Pour créer des liens qui s'ouvrent dans le programme de messagerie de l'utilisa
 <a href="mailto:nowhere@mozilla.org">Envoyer un courriel nulle part</a>
 ```
 
+#### Résultat
+
+{{EmbedLiveSample('')}}
+
 Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'un corps de message, voir [Liens de courrier électronique](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links) ou [RFC 6068](https://tools.ietf.org/html/rfc6068).
 
 ### Créer un lien avec les numéros de téléphone
@@ -276,6 +269,10 @@ Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'u
 <a href="tel:+49.157.0156">+49 157 0156</a>
 <a href="tel:+1(555)5309">(555) 5309</a>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('')}}
 
 `tel:` le comportement du lien varie en fonction des capacités du périphérique :
 
@@ -286,7 +283,7 @@ Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'u
 
 Voir [RFC 3966](https://tools.ietf.org/html/rfc3966) pour la syntaxe, les fonctionnalités supplémentaires et d'autres détails sur le schéma URL `tel:`.
 
-### Utilisation de l'attribut de téléchargement pour enregistrer un \<canvas> au format PNG.
+### Utilisation de l'attribut de téléchargement pour enregistrer un \<canvas> au format PNG
 
 Pour enregistrer le contenu d'un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sous forme d'image, vous pouvez créer un lien avec un attribut `download` et les données du canvas sous forme d'une URL `data:` :
 
@@ -324,28 +321,31 @@ a {
 ##### JavaScript
 
 ```js
-var canvas = document.querySelector('canvas'),
-    c = canvas.getContext('2d');
-c.fillStyle = 'hotpink';
+var canvas = document.querySelector("canvas"),
+  c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
 
 function draw(x, y) {
   if (isDrawing) {
     c.beginPath();
-    c.arc(x, y, 10, 0, Math.PI*2);
+    c.arc(x, y, 10, 0, Math.PI * 2);
     c.closePath();
     c.fill();
   }
 }
 
-canvas.addEventListener('mousemove', event =>
-  draw(event.offsetX, event.offsetY)
+canvas.addEventListener("mousemove", (event) =>
+  draw(event.offsetX, event.offsetY),
 );
-canvas.addEventListener('mousedown', () => isDrawing = true);
-canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
 
-document.querySelector('a').addEventListener('click', event =>
-  event.target.href = canvas.toDataURL()
-);
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL()),
+  );
 ```
 
 ##### Résultat
@@ -369,20 +369,24 @@ L'utilisation de `target="_blank"` sans [`rel="noreferrer"`](/fr/docs/Web/HTML/L
 Une erreur tristement courante consiste à ne relier que les mots « cliquez ici » ou « ici » :
 
 ```html example-bad
-<p>
-  En savoir plus sur nos produits <a href="/products">ici</a>.
-</p>
+<p>En savoir plus sur nos produits <a href="/products">ici</a>.</p>
 ```
+
+##### Résultat
+
+{{EmbedLiveSample('')}}
 
 #### Texte de lien fort
 
 Heureusement, il s'agit d'une solution facile, et elle est en fait plus courte que la version inaccessible !
 
 ```html example-good
-<p>
-  En savoir plus <a href="/products">à propos de nos produits</a>.
-</p>
+<p>En savoir plus <a href="/products">à propos de nos produits</a>.</p>
 ```
+
+##### Résultat
+
+{{EmbedLiveSample('')}}
 
 Les logiciels d'assistance disposent de raccourcis permettant de lister tous les liens d'une page. Cependant, un texte de lien fort profite à tous les utilisateurs − le raccourci « liste de tous les liens » imite la façon dont les utilisateurs voyants parcourent rapidement les pages.
 
@@ -421,12 +425,12 @@ Si une icône est utilisée en lieu et place du texte pour indiquer ce comportem
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
   Wikipédia
-  <img alt="(s'ouvre dans un nouvel onglet)" src="newtab.svg">
+  <img alt="(s'ouvre dans un nouvel onglet)" src="newtab.svg" />
 </a>
 
 <a href="2017-annual-report.ppt">
   Rapport annuel 2017 (PowerPoint)
-  <img alt="(fichier PowerPoint)" src="ppt-icon.svg">
+  <img alt="(fichier PowerPoint)" src="ppt-icon.svg" />
 </a>
 ```
 
@@ -443,12 +447,15 @@ Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est
 <body>
   <a href="#content">Skip to main content</a>
 
-  <header>
-    …
-  </header>
+  <header>…</header>
 
-  <main id="content"> <!-- Le lien "skip" renvoie vers ici -->
+  <main id="content"><!-- Le lien "skip" renvoie vers ici --></main>
+</body>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('')}}
 
 Ce lien permet alors de passer plus facilement le contenu qui se répète sur l'ensemble des pages (l'en-tête et la barre de navigation par exemple).
 
@@ -456,7 +463,7 @@ Les _skip links_ sont particulièrement utiles pour les personnes qui naviguent 
 
 - _[WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)_ (en anglais)
 - [Comment utiliser les _skip links_ - _The A11Y Project_ (en anglais)](https://a11yproject.com/posts/2013-05-11-skip-nav-links/)
-- [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [_Understanding Success Criterion 2.4.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### Dimensionnement et proximité

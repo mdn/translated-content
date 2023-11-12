@@ -1,10 +1,11 @@
 ---
 title: Gamut
 slug: Glossary/Gamut
-translation_of: Glossary/Gamut
 l10n:
   sourceCommit: 841204421a73fe3062521c274632649e8d460bdf
 ---
+
+{{GlossarySidebar}}
 
 Un **gamut** ou encore appelé une **gamme de couleurs** est un sous-ensemble de couleurs, représentant généralement les couleurs qu'un écran ou qu'un périphérique d'impression peut afficher.
 

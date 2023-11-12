@@ -14,7 +14,7 @@ The **`autocapitalize`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 
 
 在物理键盘上输入时，`autocapitalize` 属性不会影响行为。相反，它会影响其他输入机制的行为，比如移动设备的虚拟键盘和语音输入。这种机制的行为是，它们经常通过自动地将第一个句子的字母大写来帮助用户。`autocapitalize` 属性使作者能够覆盖每个元素的行为。
 
-`autocapitalize` 属性永远不会为带有 {{htmlattrxref("type", "input")}} 属性，其值为 `url`, `email` 或 `password`的 {{HTMLElement("input")}} 元素启用自动大写。
+`autocapitalize` 属性永远不会为带有 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性，其值为 `url`、`email` 或 `password` 的 {{HTMLElement("input")}} 元素启用自动大写。
 
 ## 规范
 

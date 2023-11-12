@@ -1,7 +1,6 @@
 ---
-title: 'MediaStream: addtrack イベント'
+title: "MediaStream: addtrack イベント"
 slug: Web/API/MediaStream/addtrack_event
-original_slug: Web/API/MediaStream/onaddtrack
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -15,9 +14,9 @@ original_slug: Web/API/MediaStream/onaddtrack
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('addtrack', event => { });
+addEventListener("addtrack", (event) => {});
 
-onaddtrack = event => { };
+onaddtrack = (event) => {};
 ```
 
 ## イベント型
@@ -40,7 +39,7 @@ _親インターフェイスである {{domxref("Event")}} から継承したプ
 ```js
 let stream = new MediaStream();
 
-stream.addEventListener('addtrack', (event) => {
+stream.addEventListener("addtrack", (event) => {
   console.log(`New ${event.track.kind} track added`);
 });
 ```

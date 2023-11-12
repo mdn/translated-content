@@ -5,54 +5,46 @@ slug: Web/CSS/aspect-ratio
 
 {{CSSRef}}
 
-**`aspect-ratio`** [CSS](/zh-CN/docs/CSS) 属性为 box 容器规定了一个**期待的纵横比**，这个纵横比可以用来计算自动尺寸以及为其他布局函数服务。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`aspect-ratio`** 为盒子规定了**首选纵横比**，这个纵横比可以用于计算 auto 尺寸以及其他布局函数。
+
+{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
 
 ```css
 aspect-ratio: 1 / 1;
+aspect-ratio: 1;
 
 /* 全局值 */
 aspect-ratio: inherit;
 aspect-ratio: initial;
+aspect-ratio: revert;
+aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-### 数值
+### 取值
 
-- {{cssxref("&lt;auto&gt;")}}
-  - : 具有固有宽高比的替换元素将使用该宽高比，否则该内容框没有首选的宽高比。涉及固有宽高比的尺寸计算始终与内容框尺寸一起使用。
+- `auto`
+  - : 具有固有纵横比的[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)将使用此纵横比，否则盒子无首选纵横比。涉及固有纵横比的尺寸计算始终使用内容盒的尺寸。
 - {{cssxref("&lt;ratio&gt;")}}
-  - : 内容框首选的宽高比是通过 `width` / `height` 定义的。当为内容框定义 `box-sizing` 之后，尺寸的计算就可以通过指定宽高比来实现。
+  - : 盒子的首选纵横比为指定的 `width` / `height` 比率。如果省略 `height` 和前面的斜杠字符，则 `height` 默认为 `1`。涉及首选纵横比的尺寸计算使用由 `box-sizing` 所指定的盒子的尺寸。
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### 纵横比数值例子
+### aspect-ratio 的取值示例
 
 ```css
 aspect-ratio: 1 / 1;
 aspect-ratio: 16 / 9;
+aspect-ratio: 0.5;
 ```
-
-## 将宽度和高度关联到宽高比
-
-浏览器内部已经为替换的元素和其他接受 `width` 和 `height` 的元素添加了 `aspect-ratio`。这些可以在浏览器的 UA 样式表中看到。
-
-在 Firefox 中，内部样式表看起来如下：
-
-```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
-  aspect-ratio: attr(width) / attr(height);
-}
-```
-
-您可以在 [为图片设置宽高仍然重要 gain](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/) 一文中了解更多与这个功能有关的内容。
 
 ## 规范
 
@@ -62,7 +54,8 @@ img, input[type="image"], video, embed, iframe, marquee, object, table {
 
 {{Compat}}
 
-## 相关阅读
+## 参见
 
-- [关联媒体容器元素的宽度与高度到它的宽高比上](/zh-CN/docs/Web/Media/images/aspect_ratio_mapping)
-- [为 CSS 设计一个宽高比单元](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
+- [图像的 aspect-ratio：防止卡顿](/zh-CN/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
+- [为 CSS 设计纵横比单位](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
+- [设置图像的高度和宽度再次变得重要起来](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)

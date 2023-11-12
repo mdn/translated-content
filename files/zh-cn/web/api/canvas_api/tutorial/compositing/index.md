@@ -14,10 +14,6 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : 这个属性设定了在画新图形时采用的遮盖策略，其值是一个标识 12 种遮盖方式的字符串。
 
-查看下面[Compositing 示例](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example)的代码。
-
-{{EmbedLiveSample("合成示例", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
-
 ## 裁切路径
 
 ![](canvas_clipping_path.png)裁切路径和普通的 canvas 图形差不多，不同的是它的作用是遮罩，用来隐藏不需要的部分。如右图所示。红边五角星就是裁切路径，所有在路径以外的部分都不会在 canvas 上绘制出来。
@@ -39,44 +35,45 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.fillRect(0,0,150,150);
-  ctx.translate(75,75);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.fillRect(0, 0, 150, 150);
+  ctx.translate(75, 75);
 
   // Create a circular clipping path
   ctx.beginPath();
-  ctx.arc(0,0,60,0,Math.PI*2,true);
+  ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
   ctx.clip();
 
   // draw background
-  var lingrad = ctx.createLinearGradient(0,-75,0,75);
-  lingrad.addColorStop(0, '#232256');
-  lingrad.addColorStop(1, '#143778');
+  var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
 
   ctx.fillStyle = lingrad;
-  ctx.fillRect(-75,-75,150,150);
+  ctx.fillRect(-75, -75, 150, 150);
 
   // draw stars
-  for (var j=1;j<50;j++){
+  for (var j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = '#fff';
-    ctx.translate(75-Math.floor(Math.random()*150),
-                  75-Math.floor(Math.random()*150));
-    drawStar(ctx,Math.floor(Math.random()*4)+2);
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
+    drawStar(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();
   }
-
 }
-function drawStar(ctx,r){
+function drawStar(ctx, r) {
   ctx.save();
-  ctx.beginPath()
-  ctx.moveTo(r,0);
-  for (var i=0;i<9;i++){
-    ctx.rotate(Math.PI/5);
-    if(i%2 == 0) {
-      ctx.lineTo((r/0.525731)*0.200811,0);
+  ctx.beginPath();
+  ctx.moveTo(r, 0);
+  for (var i = 0; i < 9; i++) {
+    ctx.rotate(Math.PI / 5);
+    if (i % 2 == 0) {
+      ctx.lineTo((r / 0.525731) * 0.200811, 0);
     } else {
-      ctx.lineTo(r,0);
+      ctx.lineTo(r, 0);
     }
   }
   ctx.closePath();

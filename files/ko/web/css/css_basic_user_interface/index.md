@@ -1,7 +1,8 @@
 ---
 title: CSS Basic User Interface
-slug: Web/CSS/CSS_Basic_User_Interface
+slug: Web/CSS/CSS_basic_user_interface
 ---
+
 {{CSSRef}}
 
 **CSS Basic User Interface**는 사용자 인터페이스와 연관된 렌더링 및 기능의 동작 방식을 정의하는 CSS 모듈입니다.

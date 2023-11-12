@@ -1,5 +1,5 @@
 ---
-title: '@supports'
+title: "@supports"
 slug: Web/CSS/@supports
 ---
 
@@ -34,7 +34,8 @@ JavaScript에서, `@supports`는 CSS 객체 모델 인터페이스 {{DOMxRef("CS
 가장 기본적인 지원 조건은 단순한 선언(속성 이름과 그 값)입니다. 선언은 괄호로 묶여야 합니다. 다음 예제는 브라우저가 {{cssxref("transform-origin")}} 속성의 값으로 `5% 5%`가 유효하다고 여길 때 통과합니다.
 
 ```css
-@supports (transform-origin: 5% 5%) {}
+@supports (transform-origin: 5% 5%) {
+}
 ```
 
 ### 함수 구문
@@ -46,7 +47,8 @@ JavaScript에서, `@supports`는 CSS 객체 모델 인터페이스 {{DOMxRef("CS
 브라우저가 주어진 선택자를 지원하는지 판별합니다. 다음 예제는 브라우저가 [자식 결합자](/ko/docs/Web/CSS/Child_combinator)를 지원할 때 통과합니다.
 
 ```css
-@supports selector(A > B) {}
+@supports selector(A > B) {
+}
 ```
 
 ### `not` 연산자
@@ -54,14 +56,17 @@ JavaScript에서, `@supports`는 CSS 객체 모델 인터페이스 {{DOMxRef("CS
 `not` 연산자를 어떤 표현식 앞에 붙이면 그 반대 결과를 낳는 새로운 표현식을 생성합니다. 다음 예제는 브라우저가 {{cssxref("transform-origin")}} 속성의 값으로 `10em 10em 10em`이 **유효하지 않다**고 여길 때 통과합니다.
 
 ```css
-@supports not (transform-origin: 10em 10em 10em) {}
+@supports not (transform-origin: 10em 10em 10em) {
+}
 ```
 
 다른 연산자와 마찬가지로, 선언의 복잡도와 관계 없이 `not` 연산자를 적용할 수 있습니다. 다음 두 예시는 모두 유효한 구문입니다.
 
 ```css
-@supports not (not (transform-origin: 2px)) {}
-@supports (display: grid) and (not (display: inline-grid)) {}
+@supports not (not (transform-origin: 2px)) {
+}
+@supports (display: grid) and (not (display: inline-grid)) {
+}
 ```
 
 > **참고:** 최상위 `not` 연산자는 괄호로 감싸지 않아도 괜찮습니다. `and`, `or` 등 다른 연산자와 함께 사용할 때는 괄호가 필요합니다.
@@ -71,14 +76,17 @@ JavaScript에서, `@supports`는 CSS 객체 모델 인터페이스 {{DOMxRef("CS
 `and` 연산자는 두 표현식의 논리곱으로부터 새로운 표현식을 생성합니다. 새로운 표현식은 두 구성 표현식이 **모두 참일 때만** 참을 반환합니다. 다음 예제는 두 개의 구성 표현식이 동시에 참이어야만 통과합니다.
 
 ```css
-@supports (display: table-cell) and (display: list-item) {}
+@supports (display: table-cell) and (display: list-item) {
+}
 ```
 
 다수의 논리곱은 괄호 없이 병치할 수 있습니다. 다음 두 예시는 모두 유효한 구문입니다.
 
 ```css
-@supports (display: table-cell) and (display: list-item) and (display:run-in) {}
-@supports (display: table-cell) and ((display: list-item) and (display:run-in)) {}
+@supports (display: table-cell) and (display: list-item) and (display: run-in) {
+}
+@supports (display: table-cell) and ((display: list-item) and (display: run-in)) {
+}
 ```
 
 ### `or` 연산자
@@ -86,17 +94,26 @@ JavaScript에서, `@supports`는 CSS 객체 모델 인터페이스 {{DOMxRef("CS
 `or` 연산자는 두 표현식의 논리합으로부터 새로운 표현식을 생성합니다. 새로운 표현식은 두 구성 표현식 중 **어느 한 쪽이라도 참이면** 참을 반환합니다. 다음 예제는 두 개의 구성 표현식 중 하나라도 참이면 통과합니다.
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) {
+}
 ```
 
 다수의 논리합은 괄호 없이 병치할 수 있습니다. 다음 두 예시는 모두 유효한 구문입니다.
 
 ```css
 @supports (transform-style: preserve) or (-moz-transform-style: preserve) or
-          (-o-transform-style: preserve) or (-webkit-transform-style: preserve) {}
+  (-o-transform-style: preserve) or (-webkit-transform-style: preserve) {
+}
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or
-          ((-o-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@supports (transform-style: preserve-3d) or
+  (
+    (-moz-transform-style: preserve-3d) or
+      (
+        (-o-transform-style: preserve-3d) or
+          (-webkit-transform-style: preserve-3d)
+      )
+  ) {
+}
 ```
 
 > **참고:** `and`와 `or` 연산자를 같이 사용할 때는 괄호를 사용해 연산자 적용 순서를 정의해야 합니다. 그렇지 않으면 조건이 유효하지 않으므로 @-규칙 전체를 무시합니다.

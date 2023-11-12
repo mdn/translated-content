@@ -1,8 +1,6 @@
 ---
 title: First interactive
 slug: Glossary/First_interactive
-translation_of: Glossary/First_interactive
-original_slug: Глоссарий/First_interactive
 ---
 
 **Первая интерактивность** (англ. First Interactive), также известная как [first CPU idle](/ru/docs/Glossary/First_CPU_idle) - нестандартная метрика веб-производительности, которая показывает, через какое время страница является "минимально" интерактивной, или когда основной поток достаточно свободен, чтобы обработать пользовательский ввод.

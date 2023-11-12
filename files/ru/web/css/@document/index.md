@@ -1,14 +1,15 @@
 ---
-title: '@document'
+title: "@document"
 slug: Web/CSS/@document
-translation_of: Web/CSS/@document
 ---
+
 {{SeeCompatTable}}
 
 **`@document`** [CSS](/ru/docs/Web/CSS) [at-rule](/ru/docs/Web/CSS/At-rule) ограничивает правила стиля, содержащиеся в нем, на основе URL-адреса документа. Он разработан в основном для пользовательских таблиц стилей, хотя он также может использоваться в авторских таблицах стилей.
 
 ```css
-@document url("https://www.example.com/") {
+@document url("https://www.example.com/")
+{
   h1 {
     color: green;
   }
@@ -63,7 +64,7 @@ translation_of: Web/CSS/@document
 
 ## Specifications
 
-[Initially](http://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in {{SpecName('CSS3 Conditional')}}, `@document` has been [postponed](http://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4.
+[Initially](http://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in [CSS Conditional Rules Module Level 3](https://drafts.csswg.org/css-conditional-3/), `@document` has been [postponed](http://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4.
 
 ## Browser compatibility
 

@@ -13,7 +13,7 @@ l10n:
 `console` オブジェクトには任意のグローバルオブジェクトからアクセスできます。閲覧スコープの {{domxref("Window")}} や、特定の種類のワーカーを表す {{domxref("WorkerGlobalScope")}} の console プロパティを通してアクセスできます。これは {{domxref("Window.console")}} として公開されていますが、単に `console` として参照できます。
 
 ```js
-console.log("Failed to open the specified link")
+console.log("Failed to open the specified link");
 ```
 
 このページでは、 `console` オブジェクトで使用できる[メソッド](#メソッド)やいくらかの[使用例](#使用例)を提供します。
@@ -126,8 +126,8 @@ My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
 これらは引数リストの書式化文字列の後にある引数を引用します。例えば次のようになります。
 
 ```js
-for (let i=0; i<5; i++) {
-  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+for (let i = 0; i < 5; i++) {
+  console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
 }
 ```
 
@@ -146,7 +146,10 @@ Hello, Bob. You've called me 5 times.
 `%c` ディレクティブを使用すると、コンソールの出力に CSS スタイルを適用することができます。
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+);
 ```
 
 ディレクティブの前のテキストは影響を受けませんが、ディレクティブの後ろのテキストは引数の CSS 宣言を使用して装飾されます。
@@ -156,7 +159,12 @@ console.log("This is %cMy stylish message", "color: yellow; font-style: italic; 
 `%c` は複数回使用することができます。
 
 ```js
-console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "Additional unformatted message");
+console.log(
+  "Multiple styles: %cred %corange",
+  "color: red",
+  "color: orange",
+  "Additional unformatted message",
+);
 ```
 
 `%c` で利用できるプロパティは次の通りです。 (少なくとも、 Firefox では — 他のブラウザーでは異なる可能性があります)。

@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
-translation_of: Web/API/MouseEvent/ctrlKey
 ---
 
 {{APIRef("DOM Events")}}

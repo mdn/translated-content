@@ -1,7 +1,6 @@
 ---
 title: 428 Precondition Required
 slug: Web/HTTP/Status/428
-translation_of: Web/HTTP/Status/428
 ---
 
 {{HTTPSidebar}}
@@ -20,9 +19,11 @@ Lorsqu'un en-tête de précondition **ne correspond pas** à l'état du serveur,
 
 ## Spécifications
 
-| Spécification                                                        | Titre                        |
-| -------------------------------------------------------------------- | ---------------------------- |
-| [RFC 6585, section 3: 428 Precondition Required](https://datatracker.ietf.org/doc/html/rfc6585#section-3) | Additional HTTP Status Codes |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

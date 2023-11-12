@@ -1,7 +1,6 @@
 ---
 title: Firefox 2 para desarrolladores
 slug: Mozilla/Firefox/Releases/2
-original_slug: Firefox_2_para_desarrolladores
 ---
 
 {{FirefoxSidebar}}
@@ -10,7 +9,7 @@ original_slug: Firefox_2_para_desarrolladores
 
 Firefox 2 aporta gran cantidad de funcionalidades nuevas, este artículo proporciona enlaces que describen estas nuevas capacidades.
 
-### Para desarrolladores de sitios y aplicaciones web.
+### Para desarrolladores de sitios y aplicaciones web
 
 - [MicroResúmenes (en)](https://wiki.mozilla.org/Microsummaries)
   - : Son breves recopilaciones actualizables de la información más importante en una página Web. Pueden ser proporcionados por los desarrolladores del sitio o por terceros. Cuando se añade a marcadores una página con esta funcionalidad, los usuarios pueden escoger que se muestre este microresúmen en vez del típico título estático.

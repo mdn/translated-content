@@ -38,7 +38,7 @@ slug: Web/HTML/Element/br
 
 此元素的属性包括[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("clear")}} {{Deprecated_Inline}}
+- `clear` {{Deprecated_Inline}}
   - : 指定换行后下一行文本开始位置。
 
 ## 注意
@@ -48,10 +48,10 @@ slug: Web/HTML/Element/br
 ## 示例
 
 ```html
-Mozilla Foundation<br>
-1981 Landings Drive<br>
-Building K<br>
-Mountain View, CA 94043-0801<br>
+Mozilla Foundation<br />
+1981 Landings Drive<br />
+Building K<br />
+Mountain View, CA 94043-0801<br />
 USA
 ```
 

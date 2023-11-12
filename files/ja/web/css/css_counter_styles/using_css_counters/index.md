@@ -1,7 +1,6 @@
 ---
 title: CSS カウンターの使用
-slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 ---
 
 {{CSSRef}}
@@ -53,8 +52,8 @@ h3::before {
 
 ```css
 h3::before {
-  counter-increment: section;                 /* カウンター section の値を 1 つずつ増加 */
-  content: "Section " counter(section) ": ";  /* カウンターの値を既定のスタイル（10 進数）で表示 */
+  counter-increment: section; /* カウンター section の値を 1 つずつ増加 */
+  content: "Section " counter(section) ": "; /* カウンターの値を既定のスタイル（10 進数）で表示 */
 }
 ```
 
@@ -65,7 +64,7 @@ h3::before {
 1 One
   1 Nested one
   2 Nested two
-2 Two 
+2 Two
   1 Nested one
   2 Nested two
   3 Nested three
@@ -79,7 +78,7 @@ h3::before {
 1 One
   1.1 Nested one
   2.1 Nested two
-2 Two 
+2 Two
   1.1 Nested one
   2.1 Nested two
   3.1 Nested three
@@ -107,7 +106,7 @@ h3::before {
 例えば、 `section` という名前の逆行カウンターを初期値で作成するには、次のような構文を使用します。
 
 ```css
-counter-reset: reversed(section); 
+counter-reset: reversed(section);
 ```
 
 もちろん、初期値は自由に指定することができます。
@@ -137,12 +136,12 @@ counter-reset: reversed(section);
 
 ```css
 body {
-  counter-reset: section;                      /* 'section' という名前のカウンターを設定し、 0 で初期化する */
+  counter-reset: section; /* 'section' という名前のカウンターを設定し、 0 で初期化する */
 }
 
 h3::before {
-  counter-increment: section;                  /* section カウンターの値に 1 を加算 */
-  content: "第 " counter(section) " 章: ";     /* '第 ' という語、 section カウンターの値、
+  counter-increment: section; /* section カウンターの値に 1 を加算 */
+  content: "第 " counter(section) " 章: "; /* '第 ' という語、 section カウンターの値、
                                                    ' 章' という語、コロンをそれぞれの
                                                    h3 の内容の前に表示 */
 }
@@ -171,12 +170,14 @@ h3::before {
 
 ```css
 body {
-  counter-reset: reversed(section);           /* 'section' という名前のカウンターを設定し、初期値を 0 とする */
+  counter-reset: reversed(
+    section
+  ); /* 'section' という名前のカウンターを設定し、初期値を 0 とする */
 }
 
 h3::before {
-  counter-increment: section -1;              /* section カウンターの値から 1 を減算 */
-  content: "第 " counter(section) " 章: ";     /* '第 ' という語、 section カウンターの値、
+  counter-increment: section -1; /* section カウンターの値から 1 を減算 */
+  content: "第 " counter(section) " 章: "; /* '第 ' という語、 section カウンターの値、
                                                    ' 章' という語、コロンをそれぞれの
                                                    h3 の内容の前に表示 */
 }
@@ -238,16 +239,16 @@ CSS カウンターはアウトラインのリストを作成するのには特�
 
 ```css
 ol {
-  counter-reset: section;                /* それぞれの ol 要素に、 section
+  counter-reset: section; /* それぞれの ol 要素に、 section
                                             カウンターの新しいインスタンスを
                                             生成 */
   list-style-type: none;
 }
 
 li::before {
-  counter-increment: section;            /* section カウンターのこのインスタンス
+  counter-increment: section; /* section カウンターのこのインスタンス
                                             のみを加算 */
-  content: counters(section, ".") " ";   /* section カウンターのすべての
+  content: counters(section, ".") " "; /* section カウンターのすべての
                                             インスタンスの値を、ピリオドで区切って
                                             結合 */
 }
@@ -255,7 +256,7 @@ li::before {
 
 #### HTML
 
-```html
+```html-nolint
 <ol>
   <li>項目</li>          <!-- 1     -->
   <li>項目               <!-- 2     -->

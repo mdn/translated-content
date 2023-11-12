@@ -28,10 +28,7 @@ slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest",
-    "<all_urls>"
-  ],
+  "permissions": ["webRequest", "<all_urls>"],
 
   "background": {
     "scripts": ["background.js"]
@@ -46,10 +43,9 @@ function logURL(requestDetails) {
   console.log(`Loading: ${requestDetails.url}`);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
 这里我们在请求开始之前用 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} 调用 `logURL()`函数。`logURL()` 函数 抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。[参数](/zh-CN/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` 表示拦截发往所有 URL 的 HTTP 请求。
@@ -64,7 +60,6 @@ browser.webRequest.onBeforeRequest.addListener(
 
 ```json
 {
-
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -79,7 +74,6 @@ browser.webRequest.onBeforeRequest.addListener(
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -89,7 +83,8 @@ browser.webRequest.onBeforeRequest.addListener(
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-const targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+const targetUrl =
+  "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
@@ -97,14 +92,14 @@ function redirect(requestDetails) {
     return;
   }
   return {
-    redirectUrl: targetUrl
+    redirectUrl: targetUrl,
   };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -114,7 +109,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 刚才我们忽略了 `blocking` 选项。要修改请求 就要用到 `blocking` 选项，该选项让侦听器函数阻塞住发往网络请求，浏览器将会等待侦听器返回才会继续处理。阅读{{WebExtAPIRef("webRequest.onBeforeRequest")}}以了解更多有关 `blocking` 的细节。
 
-测试时打开 MDN 上的一个包含诸多图片的页面（如[这个列出了用户接口组件的页面](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface)），重新加载[这个扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)，然后重新加载这个页面。你会看到类似这样的内容：
+测试时打开 MDN 上的一个包含诸多图片的页面（如[这个列出了用户接口组件的页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface)），重新加载[这个扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)，然后重新加载这个页面。你会看到类似这样的内容：
 
 ![Images on a page replaced with a frog image](beastify_by_redirect.png)
 
@@ -129,7 +124,8 @@ browser.webRequest.onBeforeRequest.addListener(
 ```js
 let targetPage = "http://useragentstring.com/*";
 
-let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+let ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
   e.requestHeaders.forEach((header) => {
@@ -137,13 +133,13 @@ function rewriteUserAgentHeader(e) {
       header.value = ua;
     }
   });
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 

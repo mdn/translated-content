@@ -1,7 +1,6 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
 
 {{JSRef}}
@@ -67,19 +66,22 @@ const p = new Proxy(target, {
 以下代码演示如何捕获属性的设置操作。
 
 ```js
-var p = new Proxy({}, {
-  set: function(target, prop, value, receiver) {
-    target[prop] = value;
-    console.log('property set: ' + prop + ' = ' + value);
-    return true;
-  }
-})
+var p = new Proxy(
+  {},
+  {
+    set: function (target, prop, value, receiver) {
+      target[prop] = value;
+      console.log("property set: " + prop + " = " + value);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p);  // false
+console.log("a" in p); // false
 
-p.a = 10;               // "property set: a = 10"
-console.log('a' in p);  // true
-console.log(p.a);       // 10
+p.a = 10; // "property set: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
 ```
 
 ## 规范

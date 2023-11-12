@@ -9,7 +9,7 @@ slug: Web/CSS/column-gap
 
 {{EmbedInteractiveExample("pages/css/column-gap.html")}}
 
-`column-gap` 一开始是 [Multi-column 布局](/zh-CN/docs/Web/CSS/CSS_Columns) 下的特有属性，后来在其他布局中也使用这个属性。如 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)中的表述，该属性已经可以在 Multi-column（多列布局）、Flexible Box（弹性盒子）以及 Grid layouts（网格布局）中使用。
+`column-gap` 一开始是 [Multi-column 布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout)下的特有属性，后来在其他布局中也使用这个属性。如 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment)中的表述，该属性已经可以在 Multi-column（多列布局）、Flexible Box（弹性盒子）以及 Grid layout（网格布局）中使用。
 
 ## 语法
 
@@ -124,9 +124,8 @@ column-gap: unset;
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column
-  gap created with the CSS `column-gap` property.
-  Don't you think that's fun and exciting? I sure do!
+  This is some multi-column text with a 40px column gap created with the CSS
+  `column-gap` property. Don't you think that's fun and exciting? I sure do!
 </p>
 ```
 
@@ -145,7 +144,7 @@ column-gap: unset;
 
 ## 规范
 
-{{Specifications("css.properties.column-gap.grid_context")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
@@ -154,5 +153,5 @@ column-gap: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("row-gap")}}、{{cssxref("gap")}}
-- 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#网格间距)_
-- Multi-column 布局指南：_[Styling Columns](/zh-CN/docs/Web/CSS/CSS_Columns/Styling_Columns)_
+- 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#网格间距)_
+- Multi-column 布局指南：_[Styling Columns](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_

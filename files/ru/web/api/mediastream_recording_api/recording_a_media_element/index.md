@@ -1,7 +1,6 @@
 ---
 title: Запись медиа элемента
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
-translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}
@@ -11,42 +10,37 @@ translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 ## HTML содержимое
 
 ```html hidden
-<p>Click the "Start" button to begin video recording for a few seconds. You can stop
-   the video by clicking the creatively-named "Stop" button. The "Download"
-   button will download the received data (although it's in a raw, unwrapped form
-   that isn't very useful).
+<p>
+  Click the "Start" button to begin video recording for a few seconds. You can
+  stop the video by clicking the creatively-named "Stop" button. The "Download"
+  button will download the received data (although it's in a raw, unwrapped form
+  that isn't very useful).
 </p>
-<br>
+<br />
 ```
 
 Рассмотрим ключевые моменты кода HTML. Это только небольшой отрывок, относящийся к информационной части приложения.
 
 ```html
 <div class="left">
-  <div id="startButton" class="button">
-    Start
-  </div>
+  <div id="startButton" class="button">Start</div>
   <h2>Preview</h2>
   <video id="preview" width="160" height="120" autoplay muted></video>
 </div>
 ```
 
-Основной интерфейс представляется в двух колонках. В левой находиться кнопка старта и элемент {{HTMLElement("video")}} , который отображает предварительный просмотр видео. Это видео, воспроизводится камерой устройства. Заметьте, что используется атрибут {{htmlattrxref("autoplay", "video")}}, что бы поток начал воспроизводиться немедленно, снимаясь прямо с камеры. Атрибут {{htmlattrxref("muted", "video")}} гарантирует отключение звука с микрофона, для предотвращения цикличного эхо эффекта.
+Основной интерфейс представляется в двух колонках. В левой находиться кнопка старта и элемент {{HTMLElement("video")}} , который отображает предварительный просмотр видео. Это видео, воспроизводится камерой устройства. Заметьте, что используется атрибут [`autoplay`](/ru/docs/Web/HTML/Element/video#autoplay), что бы поток начал воспроизводиться немедленно, снимаясь прямо с камеры. Атрибут [`muted`](/ru/docs/Web/HTML/Element/video#muted) гарантирует отключение звука с микрофона, для предотвращения цикличного эхо эффекта.
 
 ```html
 <div class="right">
-  <div id="stopButton" class="button">
-    Stop
-  </div>
+  <div id="stopButton" class="button">Stop</div>
   <h2>Recording</h2>
   <video id="recording" width="160" height="120" controls></video>
-  <a id="downloadButton" class="button">
-    Download
-  </a>
+  <a id="downloadButton" class="button"> Download </a>
 </div>
 ```
 
-Справа мы видим кнопку остановки и элемент `<video>,` который будет использоваться для воспроизведения записанного видео. Обратите внимание, что на панели воспроизведения не установлен режим автозапуска (поэтому воспроизведение не начинается сразу после поступления мультимедиа), а также установлен атрибут {{htmlattrxref ("controls", "video")}}, что говорит о необходимости показывать пользовательские элементы управления для воспроизведения, паузы и т. д.
+Справа мы видим кнопку остановки и элемент `<video>,` который будет использоваться для воспроизведения записанного видео. Обратите внимание, что на панели воспроизведения не установлен режим автозапуска (поэтому воспроизведение не начинается сразу после поступления мультимедиа), а также установлен атрибут [`controls`](/ru/docs/Web/HTML/Element/video#controls), что говорит о необходимости показывать пользовательские элементы управления для воспроизведения, паузы и т. д.
 
 Под элементом воспроизведения находится кнопка для загрузки записанного видео.
 
@@ -58,7 +52,10 @@ translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -139,7 +136,7 @@ function log(msg) {
 
 ```js
 function wait(delayInMS) {
-  return new Promise(resolve => setTimeout(resolve, delayInMS));
+  return new Promise((resolve) => setTimeout(resolve, delayInMS));
 }
 ```
 
@@ -154,24 +151,20 @@ function startRecording(stream, lengthInMS) {
   let recorder = new MediaRecorder(stream);
   let data = [];
 
-  recorder.ondataavailable = event => data.push(event.data);
+  recorder.ondataavailable = (event) => data.push(event.data);
   recorder.start();
-  log(recorder.state + " for " + (lengthInMS/1000) + " seconds...");
+  log(recorder.state + " for " + lengthInMS / 1000 + " seconds...");
 
   let stopped = new Promise((resolve, reject) => {
     recorder.onstop = resolve;
-    recorder.onerror = event => reject(event.name);
+    recorder.onerror = (event) => reject(event.name);
   });
 
   let recorded = wait(lengthInMS).then(
-    () => recorder.state == "recording" && recorder.stop()
+    () => recorder.state == "recording" && recorder.stop(),
   );
 
-  return Promise.all([
-    stopped,
-    recorded
-  ])
-  .then(() => data);
+  return Promise.all([stopped, recorded]).then(() => data);
 }
 ```
 
@@ -198,7 +191,7 @@ The `stop()` function simply stops the input media:
 
 ```js
 function stop(stream) {
-  stream.getTracks().forEach(track => track.stop());
+  stream.getTracks().forEach((track) => track.stop());
 }
 ```
 
@@ -209,27 +202,40 @@ This works by calling {{domxref("MediaStream.getTracks()")}}, using {{jsxref("Ar
 Now let's look at the most intricate piece of code in this example: our event handler for clicks on the start button:
 
 ```js
-startButton.addEventListener("click", function() {
-  navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: true
-  }).then(stream => {
-    preview.srcObject = stream;
-    downloadButton.href = stream;
-    preview.captureStream = preview.captureStream || preview.mozCaptureStream;
-    return new Promise(resolve => preview.onplaying = resolve);
-  }).then(() => startRecording(preview.captureStream(), recordingTimeMS))
-  .then (recordedChunks => {
-    let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
-    recording.src = URL.createObjectURL(recordedBlob);
-    downloadButton.href = recording.src;
-    downloadButton.download = "RecordedVideo.webm";
+startButton.addEventListener(
+  "click",
+  function () {
+    navigator.mediaDevices
+      .getUserMedia({
+        video: true,
+        audio: true,
+      })
+      .then((stream) => {
+        preview.srcObject = stream;
+        downloadButton.href = stream;
+        preview.captureStream =
+          preview.captureStream || preview.mozCaptureStream;
+        return new Promise((resolve) => (preview.onplaying = resolve));
+      })
+      .then(() => startRecording(preview.captureStream(), recordingTimeMS))
+      .then((recordedChunks) => {
+        let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
+        recording.src = URL.createObjectURL(recordedBlob);
+        downloadButton.href = recording.src;
+        downloadButton.download = "RecordedVideo.webm";
 
-    log("Successfully recorded " + recordedBlob.size + " bytes of " +
-        recordedBlob.type + " media.");
-  })
-  .catch(log);
-}, false);
+        log(
+          "Successfully recorded " +
+            recordedBlob.size +
+            " bytes of " +
+            recordedBlob.type +
+            " media.",
+        );
+      })
+      .catch(log);
+  },
+  false,
+);
 ```
 
 When a {{event("click")}} event occurs, here's what happens:
@@ -242,9 +248,9 @@ When a {{event("click")}} event occurs, here's what happens:
   - : When the preview video begins to play, we know there's media to record, so we respond by calling the [`startRecording()`](#starting_media_recording) function we created earlier, passing in the preview video stream (as the source media to be recorded) and `recordingTimeMS` as the number of milliseconds of media to record. As mentioned before, `startRecording()` returns a {{jsxref("Promise")}} whose resolution handler is called (receiving as input an array of {{domxref("Blob")}} objects containing the chunks of recorded media data) once recording has completed.
 - Lines 11-15
 
-  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL()")}} is used to create an URL that references the blob; this is then made the value of the recorded video playback element's {{htmlattrxref("src", "video")}} attribute (so that you can play the video from the blob) as well as the target of the download button's link.
+  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL()")}} is used to create an URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/ru/docs/Web/HTML/Element/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
 
-    Then the download button's {{htmlattrxref("download", "a")}} attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
+    Then the download button's [`download`](/ru/docs/Web/HTML/Element/a#download) attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
 
 - Lines 17-18
   - : The size and type of the recorded media are output to the log area below the two videos and the download button.
@@ -256,9 +262,13 @@ When a {{event("click")}} event occurs, here's what happens:
 The last bit of code adds a handler for the {{event("click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-stopButton.addEventListener("click", function() {
-  stop(preview.srcObject);
-}, false);
+stopButton.addEventListener(
+  "click",
+  function () {
+    stop(preview.srcObject);
+  },
+  false,
+);
 ```
 
 This simply calls the [`stop()`](#stopping_the_input_stream) function we covered earlier.

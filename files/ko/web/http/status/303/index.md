@@ -28,4 +28,4 @@ HTTP(HyperText Transfer Protocol) **`303 See Other`** 리디렉션 상태 응답
 
 - {{HTTPStatus("302", "302 Found")}}, a temporary redirect
 - {{HTTPStatus("307", "307 Temporary Redirect")}}, 사용된 메서드가 절대 변경되지 않는 이
-상태 코드와 동일합니다.
+  상태 코드와 동일합니다.

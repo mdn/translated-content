@@ -1,5 +1,5 @@
 ---
-title: '<section>: 일반 구획 요소'
+title: "<section>: 일반 구획 요소"
 slug: Web/HTML/Element/section
 ---
 
@@ -8,8 +8,6 @@ slug: Web/HTML/Element/section
 **HTML `<section>` 요소**는 HTML 문서의 독립적인 구획을 나타내며, 더 적합한 의미를 가진 요소가 없을 때 사용합니다. 보통 `<section>`은 제목을 포함하지만, 항상 그런 것은 아닙니다.
 
 {{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 > **참고:** 요소의 콘텐츠를 외부와 구분하여 단독으로 묶는 것이 나아보인다면 {{htmlelement("article")}} 요소가 더 좋은 선택일 수 있습니다.
 
@@ -52,15 +50,15 @@ slug: Web/HTML/Element/section
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
-        {{ARIARole("application")}}, {{ARIARole("banner")}},
-        {{ARIARole("complementary")}},
-        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
-        {{ARIARole("document")}}, {{ARIARole("feed")}},
-        {{ARIARole("log")}}, {{ARIARole("main")}},
-        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
-        {{ARIARole("search")}}, {{ARIARole("status")}},
-        {{ARIARole("tabpanel")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/alert_role'><code>alert</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/alertdialog_role'><code>alertdialog</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/application_role'><code>application</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/banner_role'><code>banner</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/complementary_role'><code>complementary</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/contentinfo_role'><code>contentinfo</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/dialog_role'><code>dialog</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/document_role'><code>document</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/feed_role'><code>feed</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/log_role'><code>log</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/main_role'><code>main</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/marquee_role'><code>marquee</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/navigation_role'><code>navigation</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/search_role'><code>search</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/status_role'><code>status</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tabpanel_role'><code>tabpanel</code></a>
       </td>
     </tr>
     <tr>
@@ -106,7 +104,7 @@ slug: Web/HTML/Element/section
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.section")}}
+{{Compat}}
 
 ## 같이 보기
 

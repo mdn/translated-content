@@ -19,7 +19,7 @@ slug: Web/CSS/length
 
 #### 相对长度单位
 
-相对长度代表着以其它距离为单位的一种尺寸。这个单位可以是指定字符的大小，[行高](/zh-CN/docs/Web/CSS/line-height)，或者是 {{glossary("viewport")}} 的大小。
+相对长度代表着以其他距离为单位的一种尺寸。这个单位可以是指定字符的大小，[行高](/zh-CN/docs/Web/CSS/line-height)，或者是 {{glossary("viewport")}} 的大小。
 
 ##### 字体相对长度
 
@@ -45,7 +45,7 @@ slug: Web/CSS/length
 - `rlh` {{experimental_inline}}
   - : 等于根元素行高 {{Cssxref("line-height")}} 的计算值。当用于设置根元素的行高 {{Cssxref("line-height")}} 或是字体大小 {{Cssxref("font-size")}} 时，该 rlh 指的是根元素行高 {{Cssxref("line-height")}} 或字体大小 {{Cssxref("font-size")}} 的初始值。
 
-##### 视口 (Viewport) 比例的长度
+##### 视口比例的长度
 
 视口百分比长度定义相对于 {{glossary("viewport")}} 的大小的 `<length>` 值，即文档的可见部分。视口长度在 {{cssxref("@page")}} 声明块中无效。
 
@@ -54,9 +54,9 @@ slug: Web/CSS/length
 - `vw`
   - : 视口的初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)的宽度的 1%。
 - `vi` {{experimental_inline}}
-  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[行内轴](/zh-CN/docs/Web/CSS/CSS_Logical_Properties#inline-dimension)方向上。
+  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[行内轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#行向尺度)方向上。
 - `vb` {{experimental_inline}}
-  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[区块轴](/zh-CN/docs/Web/CSS/CSS_Logical_Properties#block-dimension)方向上。
+  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[区块轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#块向尺度)方向上。
 - `vmin`
   - : 视口高度 `vw` 和宽度 `vh` 两者之间的最小值。
 - `vmax`
@@ -110,14 +110,11 @@ slug: Web/CSS/length
 <div class="outer">
   <div class="input-container">
     <label>Enter width:</label>
-    <input type="text" id="length">
+    <input type="text" id="length" />
   </div>
-  <div class="inner">
-
-  </div>
+  <div class="inner"></div>
 </div>
-<div class="results">
-</div>
+<div class="results"></div>
 ```
 
 #### CSS
@@ -139,15 +136,17 @@ html {
 .inner {
   height: 50px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255,255,255,0.5),
-              inset -3px -3px 5px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 3px 3px 5px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .result {
   height: 20px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255,255,255,0.5),
-              inset -3px -3px 5px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 3px 3px 5px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
   background-color: orange;
   display: flex;
   align-items: center;
@@ -179,27 +178,27 @@ label {
 #### JavaScript
 
 ```js
-const inputDiv = document.querySelector('.inner');
-const inputElem = document.querySelector('input');
-const resultsDiv = document.querySelector('.results');
+const inputDiv = document.querySelector(".inner");
+const inputElem = document.querySelector("input");
+const resultsDiv = document.querySelector(".results");
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   inputDiv.style.width = inputElem.value;
 
-  const result = document.createElement('div');
-  result.className = 'result';
+  const result = document.createElement("div");
+  result.className = "result";
   result.style.width = inputElem.value;
   result.innerHTML = `<code>width: ${inputElem.value}</code>`;
   resultsDiv.appendChild(result);
 
-  inputElem.value = '';
+  inputElem.value = "";
   inputElem.focus();
-})
+});
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample('Length_unit_comparison','100%', 700)}}
+{{EmbedLiveSample('长度单位的比较','100%', 700)}}
 
 ## 规范
 
@@ -213,4 +212,4 @@ inputElem.addEventListener('change', () => {
 
 - [CSS 属性值与单位教程](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
 - [CSS 属性值与单位参考](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [框盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model)
+- [框盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)

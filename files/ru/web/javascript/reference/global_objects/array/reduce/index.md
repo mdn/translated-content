@@ -1,17 +1,6 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
 
 {{JSRef}}
@@ -87,7 +76,7 @@ reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, 
 Предположим, что `reduce()` используется следующим образом:
 
 ```js
-[0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index, array) {
+[0, 1, 2, 3, 4].reduce(function (previousValue, currentValue, index, array) {
   return previousValue + currentValue;
 });
 ```
@@ -106,7 +95,7 @@ reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, 
 Если же вы зададите начальное значение `initialValue`, результат будет выглядеть так:
 
 ```js
-[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, index, array) {
+[0, 1, 2, 3, 4].reduce(function (accumulator, currentValue, index, array) {
   return accumulator + currentValue;
 }, 10);
 ```

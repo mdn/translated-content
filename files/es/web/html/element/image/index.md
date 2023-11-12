@@ -1,7 +1,6 @@
 ---
 title: <image>
 slug: Web/HTML/Element/image
-original_slug: Web/HTML/Elemento/image
 ---
 
 {{non-standard_header}}

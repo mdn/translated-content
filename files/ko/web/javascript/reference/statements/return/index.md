@@ -2,6 +2,7 @@
 title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
+
 {{jsSidebar("Statements")}}
 
 **`return` 명령문**은 함수 실행을 종료하고, 주어진 값을 함수 호출 지점으로 반환합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Statements/return
 ## 구문
 
 ```js
-    return [[expression]];
+return [[expression]];
 ```
 
 - `expression`
@@ -23,7 +24,7 @@ slug: Web/JavaScript/Reference/Statements/return
 
 ```js
 function square(x) {
-   return x * x;
+  return x * x;
 }
 var demo = square(3);
 // demo는 9
@@ -43,9 +44,9 @@ return x + y / 3;
 
 ### 자동 세미콜론 삽입
 
-`return` 명령문은 [자동 세미콜론 삽입(ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)의 영향을 받습니다. `return` 키워드와 표현식 사이에는 줄바꿈 문자가 올 수 없습니다.
+`return` 명령문은 [자동 세미콜론 삽입(ASI)](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)의 영향을 받습니다. `return` 키워드와 표현식 사이에는 줄바꿈 문자가 올 수 없습니다.
 
-```js
+```js-nolint example-bad
 return
 a + b;
 ```
@@ -59,14 +60,10 @@ a + b;
 
 콘솔이 "unreachable code after return statement" 경고를 출력할 것입니다.
 
-<div class="note">Gecko 40 {{geckoRelease(40)}}부터, <code>return</code> 이후에 위치하여 도달할 수 없는 코드를 발견하면 콘솔에 경고를 출력합니다.</div>
-
 문제를 해결하려면 괄호를 사용해 ASI를 방지해야 합니다.
 
-```js
-return (
-  a + b
-);
+```js example-good
+return a + b;
 ```
 
 ## 예제
@@ -77,14 +74,15 @@ return (
 
 ```js
 function counter() {
-  for (var count = 1; ; count++) {  // 무한 반복
+  for (var count = 1; ; count++) {
+    // 무한 반복
     console.log(count + "A"); // 5까지
-      if (count === 5) {
-        return;
-      }
-      console.log(count + "B");  // 4까지
+    if (count === 5) {
+      return;
     }
-  console.log(count + "C");  // 절대 나타나지 않음
+    console.log(count + "B"); // 4까지
+  }
+  console.log(count + "C"); // 절대 나타나지 않음
 }
 
 counter();
@@ -107,7 +105,9 @@ counter();
 
 ```js
 function magic(x) {
-  return function calc(x) { return x * 42 };
+  return function calc(x) {
+    return x * 42;
+  };
 }
 
 var answer = magic();

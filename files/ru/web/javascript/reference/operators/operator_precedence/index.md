@@ -1,13 +1,8 @@
 ---
 title: Приоритет операторов
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - JavaScript
-  - Операторы
-  - подробности об операторах
-  - приоритет операторов
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 **Приоритет операторов** определяет порядок, в котором операторы выполняются. Операторы с более высоким приоритетом выполняются первыми.
@@ -33,10 +28,10 @@ a = b = 5;
 ## Примеры
 
 ```js
-3 > 2 && 2 > 1
+3 > 2 && 2 > 1;
 // вернёт true
 
-3 > 2 > 1
+3 > 2 > 1;
 // вернёт false, потому что 3 > 2 возвращает true, в свою очередь true > 1 вернёт false
 // Добавление скобок значительно повышает читаемость выражения: (3 > 2) > 1
 ```
@@ -436,7 +431,7 @@ a = b = 5;
     <tr>
       <td>
         <a
-          href="ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
+          href="/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
           >Оператор нулевого слияния (??)</a
         >
       </td>

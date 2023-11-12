@@ -1,7 +1,6 @@
 ---
 title: Operador
 slug: Glossary/Operator
-original_slug: Glossario/Operador
 ---
 
 **Sintaxe** reservada que consiste em pontuação ou caracteres alfanuméricos que executam a funcionalidade incorporada. Por exemplo, em JavaScript, o operador de adição ("+") soma números juntos e concatena strings, enquanto o operador "não" ("!") nega uma expressão — por exemplo, fazendo uma declaração `verdadeira` retornar `falso`.
@@ -10,7 +9,7 @@ original_slug: Glossario/Operador
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Operadores (programação de computadores)")}} na Wikipedia (em inglês)
+- [Operadores (programação de computadores)](<https://en.wikipedia.org/wiki/Operator_(computer_programming)>) na Wikipedia (em inglês)
 
 ### Referência técnica
 

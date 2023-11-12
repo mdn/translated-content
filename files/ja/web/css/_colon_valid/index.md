@@ -1,11 +1,11 @@
 ---
-title: ':valid'
+title: ":valid"
 slug: Web/CSS/:valid
 ---
 
 {{CSSRef}}
 
-**`:valid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、内容物の[検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に成功した {{htmlelement("input")}} 要素 やその他の {{HTMLElement("form")}} 要素を表します。これにより、有効な入力欄に、データの形式が適切であることをユーザーが確認しやすくなる外観を簡単に適用できるようになります。
+**`:valid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、内容物の[検証](/ja/docs/Web/HTML/Constraint_validation)に成功した {{htmlelement("input")}} 要素 やその他の {{HTMLElement("form")}} 要素を表します。これにより、有効な入力欄に、データの形式が適切であることをユーザーが確認しやすくなる外観を簡単に適用できるようになります。
 
 ```css
 /* 有効な <input> をすべて選択 */
@@ -31,7 +31,7 @@ input:valid {
 ```html
 <div>
   <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -54,12 +54,12 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 
 input:valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
@@ -78,7 +78,7 @@ input:valid + span::before {
 
 緑色は入力が有効であることを示すためによく使われます。色盲の人によっては、それ以外の色によらない識別方法を伴わないと、入力状態が判別できないことがあります。通常、文字列やアイコンを使用して説明します。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ## 仕様書

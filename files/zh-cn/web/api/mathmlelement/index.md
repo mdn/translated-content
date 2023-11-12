@@ -30,7 +30,7 @@ _This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAn
 ### JavaScript
 
 ```js
-document.querySelector('msqrt').constructor.name; // MathMLElement
+document.querySelector("msqrt").constructor.name; // MathMLElement
 ```
 
 ## 规范

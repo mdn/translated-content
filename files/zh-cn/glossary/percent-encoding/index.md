@@ -1,7 +1,9 @@
 ---
 title: Percent-encoding
-slug: Glossary/percent-encoding
+slug: Glossary/Percent-encoding
 ---
+
+{{GlossarySidebar}}
 
 **百分比编码** 是一种拥有 8 位字符编码的编码机制，这些编码在{{Glossary("URL")}}的上下文中具有特定的含义。它有时被称为 URL 编码。编码由英文字母替换组成：“%”后跟替换字符的 ASCII 的十六进制表示。
 
@@ -14,12 +16,7 @@ slug: Glossary/percent-encoding
 
 根据上下文，空白符 `' '` 将会转换为 `'+'` （必须在 HTTP 的 POST 方法中使定义 `application/x-www-form-urlencoded` 传输方式），或者将会转换为 `'%20'` 的 URL。
 
-## 学习更多
-
-### 基本知识
+## 参见
 
 - 维基百科中 [percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding) 的相关定义。
-
-### 技术规范
-
 - {{RFC(3986)}}, 第 2.1 节，其中定义了这种编码方式。

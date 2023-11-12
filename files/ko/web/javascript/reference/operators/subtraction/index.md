@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Subtraction
 ## 구문
 
 ```js
-x - y
+x - y;
 ```
 
 ## 예제
@@ -20,14 +20,14 @@ x - y
 ### 뺄셈
 
 ```js
-5 - 3  // 2
-3 - 5  // -2
+5 - 3; // 2
+3 - 5; // -2
 ```
 
 ### 숫자가 아닌 경우
 
 ```js
-'foo' - 3 // NaN
+"foo" - 3; // NaN
 ```
 
 ## 명세

@@ -1,5 +1,5 @@
 ---
-title: Progressive web apps (プログレッシブウェブアプリ)
+title: "Progressive web apps\_(プログレッシブウェブアプリ)"
 slug: Glossary/Progressive_web_apps
 ---
 

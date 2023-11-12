@@ -7,7 +7,7 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 張りつくフッターのパターンは、コンテンツがビューポートの高さより短い場合に、ページのフッターがビューポートの下部に「張りつく」パターンです。 このレシピでこれを作成するためのいくつかのテクニックを見ていきます。
 
-![ボックスの底に押し込まれた張りつくフッター](https://mdn.mozillademos.org/files/16184/cookbook-footer.png)
+![ボックスの底に押し込まれた張りつくフッター](cookbook-footer.png)
 
 ## 要件
 
@@ -44,19 +44,19 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 #### grid-template-rows
 
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 #### flex-direction
 
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 #### flex-grow
 
-{{Compat("css.properties.flex-grow")}}
+{{Compat}}
 
 #### flex-shrink
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## MDN の関連資料
 

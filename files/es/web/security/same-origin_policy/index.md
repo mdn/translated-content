@@ -1,7 +1,6 @@
 ---
 title: Política Same-origin
 slug: Web/Security/Same-origin_policy
-original_slug: Web/Security/Same-origin_politica
 ---
 
 La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un recurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente maliciosos.
@@ -93,24 +92,24 @@ Especificación: <http://www.whatwg.org/specs/web-apps/current-work/multipage/br
 
 Los siguientes accesos de origen-cruzado a las propiedades de `Window` están permitidos:
 
-| Métodos                                      |
-| -------------------------------------------- |
-| {{domxref("window.blur")}}         |
-| {{domxref("window.close")}}         |
-| {{domxref("window.focus")}}         |
+| Métodos                           |
+| --------------------------------- |
+| {{domxref("window.blur")}}        |
+| {{domxref("window.close")}}       |
+| {{domxref("window.focus")}}       |
 | {{domxref("window.postMessage")}} |
 
-| Atributos                                |               |
-| ---------------------------------------- | ------------- |
-| {{domxref("window.closed")}}     | Solo lectura. |
-| {{domxref("window.frames")}}     | Solo lectura. |
-| {{domxref("window.length")}}     | Read only.    |
+| Atributos                      |               |
+| ------------------------------ | ------------- |
+| {{domxref("window.closed")}}   | Solo lectura. |
+| {{domxref("window.frames")}}   | Solo lectura. |
+| {{domxref("window.length")}}   | Read only.    |
 | {{domxref("window.location")}} | Solo lectura. |
-| {{domxref("window.opener")}}     | Solo lectura. |
-| {{domxref("window.parent")}}     | Solo lectura. |
+| {{domxref("window.opener")}}   | Solo lectura. |
+| {{domxref("window.parent")}}   | Solo lectura. |
 | {{domxref("window.self")}}     | Solo lectura. |
-| {{domxref("window.top")}}         | Solo lectura. |
-| {{domxref("window.window")}}     | Solo lectura. |
+| {{domxref("window.top")}}      | Solo lectura. |
+| {{domxref("window.window")}}   | Solo lectura. |
 
 Algunos navegadores permiten el acceso a más propiedades de las que permite la especificación.
 
@@ -120,12 +119,12 @@ Especificación: <http://www.whatwg.org/specs/web-apps/current-work/multipage/br
 
 Los siguientes accesos de origen cruzado a las propiedades de `Location` están permitidos:
 
-| Métodos                                  |
-| ---------------------------------------- |
+| Métodos                         |
+| ------------------------------- |
 | {{domxref("location.replace")}} |
 
-| Atributos                            |                 |
-| ------------------------------------ | --------------- |
+| Atributos                    |                 |
+| ---------------------------- | --------------- |
 | {{domxref("URLUtils.href")}} | Solo escritura. |
 
 Algunos navegadores permiten el acceso a más propiedades de las que permite la especificación.
@@ -146,4 +145,4 @@ Las cookies usan una definición separada de orígenes. Una página puede asigna
 
 - Autor(es): Jesse Ruderman
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/es/docs/Web/Security")}}

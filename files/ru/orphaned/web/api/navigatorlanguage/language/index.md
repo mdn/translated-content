@@ -1,8 +1,6 @@
 ---
 title: NavigatorLanguage.language
 slug: orphaned/Web/API/NavigatorLanguage/language
-translation_of: Web/API/NavigatorLanguage/language
-original_slug: Web/API/NavigatorLanguage/language
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -33,7 +31,7 @@ if ( window.navigator.language.slice(0, 2) !== "en" ) {
 
 ## Доступность в браузерах
 
-{{Compat("api.NavigatorLanguage.language")}}
+{{Compat}}
 
 ## Смотрите также
 

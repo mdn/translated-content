@@ -5,7 +5,7 @@ slug: Web/API/FontFace
 
 {{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 
-**`FontFace`** 接口表示一个可用的字体。它允许您控制字体的源文件，作为外部资源的 URL 或缓冲区; 它还允许您控制字体的加载时间和字体当前的状态。
+**`FontFace`** 接口表示一个可用的字体。它允许你控制字体的源文件，作为外部资源的 URL 或缓冲区; 它还允许你控制字体的加载时间和字体当前的状态。
 
 ## Constructor
 

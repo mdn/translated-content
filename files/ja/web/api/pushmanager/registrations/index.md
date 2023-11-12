@@ -1,21 +1,30 @@
 ---
-title: PushManager.registrations()
+title: "PushManager: registrations() メソッド"
+short-title: registrations()
 slug: Web/API/PushManager/registrations
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{deprecated_header}}{{ApiRef("Push API")}}
 
 **`registrations`** メソッドは、プッシュ通知の端点登録の存在に関してシステムに問い合わせするために使用します。
 
+> **メモ:** このメソッドは {{domxref("PushManager.getSubscription()")}} メソッドに置き換えられました。
+
 ## 構文
 
 ```js-nolint
-var request = navigator.push.registrations();
+registrations()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
-{{domxref("DOMRequest")}} オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
+`DOMRequest` オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
 
 メソッドの呼び出しが成功した場合、リクエストの `result` は [PushRegistration](#pushregistration) オブジェクトの配列になります。
 
@@ -31,33 +40,34 @@ var request = navigator.push.registrations();
 ## 例
 
 ```js
-var req = navigator.push.registrations();
+const req = navigator.push.registrations();
 
-req.onsuccess = function(e) {
+req.onsuccess = (e) => {
   if (req.result.length > 0) {
-    for (var i = 0, l = req.result.length; i < l; i++) {
-      console.log("Existing registration", req.result[i].pushEndpoint, req.result[i].version);
-    }
+    req.result.forEach((result) => {
+      console.log(
+        `Existing registration ${result.pushEndpoint} ${result.version}`,
+      );
+    });
     // Reuse existing endpoints.
   } else {
     // Register for a new endpoint.
-    var register = navigator.push.register();
-    register.onsuccess = function(e) {
-      console.log("Registered new endpoint", register.result);
-    }
+    const register = navigator.push.register();
+    register.onsuccess = (e) => {
+      console.log(`Registered new endpoint: ${register.result}`);
+    };
   }
-}
+};
 ```
 
 ## 仕様書
 
-{{Specifications}}
+この機能はもうどの仕様にも属していません。標準化の予定はなくなりました。
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushManager.registrations")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{domxref("PushManager")}}
-- {{domxref("DOMRequest")}}

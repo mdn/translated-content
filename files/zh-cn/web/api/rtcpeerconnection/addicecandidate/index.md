@@ -61,11 +61,13 @@ When an error occurs while attempting to add the ICE candidate, the {{jsxref("Pr
 
 let candidate = new RTCIceCandidate(receivedSDP);
 
-pc.addIceCandidate(candidate).then(_=>{
-  // Do stuff when the candidate is successfully passed to the ICE agent
-}).catch(e=>{
-  console.log("Error: Failure during addIceCandidate()");
-});
+pc.addIceCandidate(candidate)
+  .then((_) => {
+    // Do stuff when the candidate is successfully passed to the ICE agent
+  })
+  .catch((e) => {
+    console.log("Error: Failure during addIceCandidate()");
+  });
 ```
 
 ## Specifications

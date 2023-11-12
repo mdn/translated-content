@@ -31,8 +31,8 @@ numberFormat.format(number)
 使用 `format` 格式化一个单一的货币值，以俄罗斯为例：
 
 ```js
-var options = { style: 'currency', currency: 'RUB' };
-var numberFormat = new Intl.NumberFormat('ru-RU', options);
+var options = { style: "currency", currency: "RUB" };
+var numberFormat = new Intl.NumberFormat("ru-RU", options);
 console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."
 ```
@@ -43,9 +43,9 @@ console.log(numberFormat.format(654321.987));
 
 ```js
 var a = [123456.789, 987654.321, 456789.123];
-var numberFormat = new Intl.NumberFormat('es-ES');
+var numberFormat = new Intl.NumberFormat("es-ES");
 var formatted = a.map(numberFormat.format);
-console.log(formatted.join('; '));
+console.log(formatted.join("; "));
 // → "123.456,789; 987.654,321; 456.789,123"
 ```
 

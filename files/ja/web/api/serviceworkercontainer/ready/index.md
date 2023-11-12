@@ -16,16 +16,15 @@ l10n:
 ## 例
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.ready
-  .then((registration) => {
-    console.log('サービスワーカーがアクティブ:', registration.active);
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.ready.then((registration) => {
+    console.log("サービスワーカーがアクティブ:", registration.active);
 
     // この時点で、registration.pushManager.subscribe() などの
     // アクティブなサービスワーカーを必要とするメソッドを呼び出すことができます
   });
 } else {
-  console.error('サービスワーカーをサポートしていません。');
+  console.error("サービスワーカーをサポートしていません。");
 }
 ```
 

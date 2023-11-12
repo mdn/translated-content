@@ -1,7 +1,6 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-original_slug: Web/HTML/Atributos_Globales/hidden
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -18,9 +17,9 @@ Los elementos ocultos no deben de ser vinculados desde elementos no ocultos y el
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## Ver también
 

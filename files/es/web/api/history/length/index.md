@@ -17,9 +17,9 @@ const length = history.length
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.History.length")}}
+{{Compat}}
 
 ## Mira también
 

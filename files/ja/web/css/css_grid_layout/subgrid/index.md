@@ -1,6 +1,6 @@
 ---
 title: サブグリッド
-slug: Web/CSS/CSS_Grid_Layout/Subgrid
+slug: Web/CSS/CSS_grid_layout/Subgrid
 ---
 
 {{CSSRef}}
@@ -89,7 +89,7 @@ subgrid 値は、通常の入れ子のグリッドとほとんど同じ方法で
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.grid-template-columns.subgrid")}}
+{{Compat}}
 
 ## 関連情報
 

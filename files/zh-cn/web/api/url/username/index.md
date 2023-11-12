@@ -23,7 +23,9 @@ object.username = string;
 ## 例子
 
 ```js
-var url = new URL("https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username");
+var url = new URL(
+  "https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/Web/API/URL/username",
+);
 var user = url.username; // 返回：“anonymous”
 ```
 

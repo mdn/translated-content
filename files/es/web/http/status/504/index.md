@@ -15,15 +15,11 @@ El código de respuesta de error del servidor de HTTP **`504 Gateway Timeout`** 
 
 ## Especificaciones
 
-| Especificación                                                   | Título                                                        |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "504 Gateway Timeout" , "6.6.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-La información que se muestra a continuación fue extraída de la de cuenta de Github de MDN (<https://github.com/mdn/browser-compat-data>).
-
-{{Compat("http.status.504")}}
+{{Compat}}
 
 ## Vea también
 

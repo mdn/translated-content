@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
-original_slug: Web/API/AudioContext/createPeriodicWave
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -11,8 +10,8 @@ original_slug: Web/API/AudioContext/createPeriodicWave
 ## 構文
 
 ```js
-createPeriodicWave(real, imag)
-createPeriodicWave(real, imag, constraints)
+createPeriodicWave(real, imag);
+createPeriodicWave(real, imag, constraints);
 ```
 
 ### 引数
@@ -51,7 +50,7 @@ imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-var wave = ac.createPeriodicWave(real, imag, {disableNormalization: true});
+var wave = ac.createPeriodicWave(real, imag, { disableNormalization: true });
 
 osc.setPeriodicWave(wave);
 
@@ -97,7 +96,7 @@ osc.stop(2);
 <mrow><mn>3</mn>
 <mi>i</mi>
 </mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} ,
-\left(f+gi\right)e^{3i}   </annotation>
+\left(f+gi\right)e^{3i} </annotation>
 </semantics></math>など）、正でも負でも構いません。このような係数を手動で得る簡単な方法は（ベストではありませんが）、グラフ計算機を使うことです。
 
 ## 仕様書

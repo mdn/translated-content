@@ -1,8 +1,8 @@
 ---
 title: AudioNode.channelCount
 slug: Web/API/AudioNode/channelCount
-translation_of: Web/API/AudioNode/channelCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `channelCount` свойство интерфейса {{ domxref("AudioNode") }} представляющее собой целое число использующееся для определения того, сколько каналов участвуют для [up-mixing and down-mixing](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) соединений для любого входа узла.

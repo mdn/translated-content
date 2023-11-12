@@ -1,12 +1,6 @@
 ---
 title: Modèle de mise en forme visuelle
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - CSS
-  - Intermédiaire
-  - NeedsUpdate
-translation_of: Web/CSS/Visual_formatting_model
-original_slug: Web/CSS/Modèle_de_mise_en_forme_visuelle
 ---
 
 {{CSSRef}}
@@ -53,14 +47,14 @@ Si on prend le code HTML suivant, mis en forme avec les règles par défaut (`di
 
 ```html
 <div>
-   Some inline text
-   <p>followed by a paragraph</p>
-   followed by more inline text.
+  Some inline text
+  <p>followed by a paragraph</p>
+  followed by more inline text.
 </div>
 ```
 
 On aura deux boîtes de bloc anonymes qui seront créées : une pour le texte avant le paragraphe et une pour le texte après. On aura alors la structure suivante :
-  ![anonymous_block-level_boxes.png](anonymous_block-level_boxes.png)
+![anonymous_block-level_boxes.png](anonymous_block-level_boxes.png)
 
 À la différence de la boîte des éléments {{HTMLElement("p")}}, les développeurs ne peuvent pas contrôler la mise en forme des boîtes anonymes. Les propriétés qui héritent des éléments parents récupèreront la valeur obtenue pour l'élément {{HTMLElement("div")}} et les autres propriétés auront la valeur `initial`.
 
@@ -94,26 +88,25 @@ Les boîtes en lignes atomiques ne peuvent pas être divisées en plusieurs lign
 <style>
   span {
     /* La valeur par défaut */
-    display:inline;
+    display: inline;
   }
 </style>
 <div style="width:20em;">
-   Le texte dans le span <span>peut être divisé
-   en plusieurs lignes</span> dans une boîte en
-   ligne.
+  Le texte dans le span <span>peut être divisé en plusieurs lignes</span> dans
+  une boîte en ligne.
 </div>
 ```
 
 ```html
 <style>
   span {
-    display:inline-block;
+    display: inline-block;
   }
 </style>
 <div style="width:20em;">
-   Le texte dans le span <span>ne peut pas être
-   divisé en plusieurs lignes car</span> il est
-   dans une boîte de type inline-block.
+  Le texte dans le span
+  <span>ne peut pas être divisé en plusieurs lignes car</span> il est dans une
+  boîte de type inline-block.
 </div>
 ```
 

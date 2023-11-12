@@ -1,7 +1,6 @@
 ---
 title: Window.crypto
 slug: Web/API/crypto_property
-original_slug: Web/API/Window/crypto
 ---
 
 {{APIRef}}
@@ -18,9 +17,9 @@ var cryptoObj = window.crypto || window.msCrypto; // para IE 11
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.crypto")}}
+{{Compat}}
 
 ## Ver También
 

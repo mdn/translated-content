@@ -1,7 +1,6 @@
 ---
 title: Tornando mais fácil a programação assíncrona com async e await
 slug: conflicting/Learn/JavaScript/Asynchronous/Promises
-original_slug: Learn/JavaScript/Asynchronous/Async_await
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
@@ -342,7 +341,7 @@ async function makeResult(items) {
 
 Como resultado, seu código pode ser retardado por um número significativo de promises aguardadas acontecendo uma após a outra. Cada `await` vai esperar que o anterior termine, ao passo que, na verdade, o que você pode querer é que as promises comecem a ser processadas simultaneamente, como fariam se não estivéssemos usando async/await.
 
-Vejamos esses dois exemplos — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) e [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Ambos começam com uma função promise personalizada que simula um processo assíncrono com uma chamada [`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout):
+Vejamos esses dois exemplos — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) e [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Ambos começam com uma função promise personalizada que simula um processo assíncrono com uma chamada [`setTimeout()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout):
 
 ```js
 function timeoutPromise(interval) {

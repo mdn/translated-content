@@ -1,10 +1,6 @@
 ---
 title: Адресная строка
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
-tags:
-  - Web-расширение
-  - Расширение
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 ---
 
 {{AddonSidebar()}}
@@ -28,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 ```js
 browser.omnibox.setDefaultSuggestion({
   description: `Искать в кодовой базе firefox
-    (пример: "hello world" | "path:omnibox.js onInputChanged")`
+    (пример: "hello world" | "path:omnibox.js onInputChanged")`,
 });
 ```
 
@@ -36,14 +32,12 @@ browser.omnibox.setDefaultSuggestion({
 
 ```js
 browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
-  let headers = new Headers({"Accept": "application/json"});
-  let init = {method: 'GET', headers};
+  let headers = new Headers({ Accept: "application/json" });
+  let init = { method: "GET", headers };
   let url = buildSearchURL(text);
   let request = new Request(url, init);
 
-  fetch(request)
-    .then(createSuggestionsFromResponse)
-    .then(addSuggestions);
+  fetch(request).then(createSuggestionsFromResponse).then(addSuggestions);
 });
 ```
 
@@ -60,13 +54,13 @@ browser.omnibox.onInputEntered.addListener((text, disposition) => {
   }
   switch (disposition) {
     case "currentTab":
-      browser.tabs.update({url});
+      browser.tabs.update({ url });
       break;
     case "newForegroundTab":
-      browser.tabs.create({url});
+      browser.tabs.create({ url });
       break;
     case "newBackgroundTab":
-      browser.tabs.create({url, active: false});
+      browser.tabs.create({ url, active: false });
       break;
   }
 });

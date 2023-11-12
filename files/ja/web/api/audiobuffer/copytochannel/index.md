@@ -26,11 +26,11 @@ copyToChannel(source, channelNumber, startInChannel);
 
 ```js
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var anotherArray = new Float32Array;
+var anotherArray = new Float32Array();
 // myArrayBuffer の 2 番目のチャンネルからコピーする
-myArrayBuffer.copyFromChannel(anotherArray,1,0);
+myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
 // anotherArray から、 myArrayBuffer の 1 番目のチャンネルにコピーする。これで 2 つのチャンネルのデータは同じになる
-myArrayBuffer.copyToChannel (anotherArray,0,0);
+myArrayBuffer.copyToChannel(anotherArray, 0, 0);
 ```
 
 ## 仕様書

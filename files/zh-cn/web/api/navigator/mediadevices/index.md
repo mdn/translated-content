@@ -13,13 +13,13 @@ var mediaDevices = navigator.mediaDevices;
 
 ### 返回值
 
-{{domxref("MediaDevices")}} 是一个单例对象。通常，您只需直接使用此对象的成员，例如通过调用{{domxref("navigator.mediaDevices.getUserMedia()")}}。
+{{domxref("MediaDevices")}} 是一个单例对象。通常，你只需直接使用此对象的成员，例如通过调用{{domxref("navigator.mediaDevices.getUserMedia()")}}。
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

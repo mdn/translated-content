@@ -40,9 +40,9 @@ Ver ejemplos [CSS animations](/es/docs/CSS/Using_CSS_animations).
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-iteration-count")}}
+{{Compat}}
 
 ## Ver también
 

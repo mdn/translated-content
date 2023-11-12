@@ -32,7 +32,7 @@ TypeError: "x" is not a function
 
   - {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}}
 
-## 例子
+## 示例
 
 ### 函数的名称错误
 
@@ -56,7 +56,7 @@ var x = document.getElementById("foo");
 ```js example-bad
 var obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function(num) {
+obj.map(function (num) {
   return num * 2;
 });
 
@@ -68,7 +68,7 @@ obj.map(function(num) {
 ```js example-good
 var numbers = [1, 4, 9];
 
-numbers.map(function(num) {
+numbers.map(function (num) {
   return num * 2;
 });
 
@@ -77,21 +77,20 @@ numbers.map(function(num) {
 
 ### 函数与已有属性重名
 
-当您在创建类时，可能会存在某个属性和某个方法的名称相同，当您在调用该函数时，编译器会认为该函数不存在。
+当你在创建类时，可能会存在某个属性和某个方法的名称相同，当你在调用该函数时，编译器会认为该函数不存在。
 
 ```js example-bad
 var Dog = function () {
- this.age = 11;
- this.color = "black";
- this.name = "Ralph";
- return this;
-}
+  this.age = 11;
+  this.color = "black";
+  this.name = "Ralph";
+  return this;
+};
 
-Dog.prototype.name = function(name) {
- this.name = name;
- return this;
-}
-
+Dog.prototype.name = function (name) {
+  this.name = name;
+  return this;
+};
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
@@ -101,17 +100,16 @@ myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
 
 ```js example-good
 var Dog = function () {
- this.age = 11;
- this.color = "black";
- this.dogName = "Ralph"; //Using this.dogName instead of .name
- return this;
-}
+  this.age = 11;
+  this.color = "black";
+  this.dogName = "Ralph"; //Using this.dogName instead of .name
+  return this;
+};
 
-Dog.prototype.name = function(name) {
- this.dogName = name;
- return this;
-}
-
+Dog.prototype.name = function (name) {
+  this.dogName = name;
+  return this;
+};
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
@@ -119,21 +117,21 @@ myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 
 ### 使用括号进行乘法运算
 
-在数学中，您可以将 2 × (3 + 5) 写为 2\*(3 + 5) 或者省略为 2(3 + 5).
+在数学中，你可以将 2 × (3 + 5) 写为 2\*(3 + 5) 或者省略为 2(3 + 5).
 
 使用后者时将会抛出错误：
 
 ```js example-bad
 const sixteen = 2(3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
+alert("2 x (3 + 5) is " + String(sixteen));
 //Uncaught TypeError: 2 is not a function
 ```
 
-您可以添加乘法运算符 `*` 来改正代码：
+你可以添加乘法运算符 `*` 来改正代码：
 
 ```js example-good
 const sixteen = 2 * (3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
+alert("2 x (3 + 5) is " + String(sixteen));
 //2 x (3 + 5) is 16
 ```
 

@@ -14,9 +14,9 @@ slug: Web/API/HTMLElement/dragleave_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('dragleave', (event) => {});
+addEventListener("dragleave", (event) => {});
 
-ondragleave = (event) => { };
+ondragleave = (event) => {};
 ```
 
 ## 事件类型
@@ -46,9 +46,7 @@ _除了下面列出的属性外，还可以使用父接口 {{domxref("Event")}} 
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    这个 div 可以拖动
-  </div>
+  <div id="draggable" draggable="true">这个 div 可以拖动</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```
@@ -112,7 +110,7 @@ target.addEventListener("dragleave", (event) => {
 
 ## 参见
 
-- 其它拖放事件：
+- 其他拖放事件：
 
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
@@ -121,7 +119,7 @@ target.addEventListener("dragleave", (event) => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
 
-- 其它目标上的此事件：
+- 其他目标上的此事件：
 
   - {{domxref("Window")}}：{{domxref("Window/dragleave_event", "dragleave")}} 事件
   - {{domxref("Document")}}：{{domxref("Document/dragleave_event", "dragleave")}} 事件

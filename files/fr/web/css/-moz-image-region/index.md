@@ -1,12 +1,6 @@
 ---
-title: '-moz-image-region'
+title: "-moz-image-region"
 slug: Web/CSS/-moz-image-region
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Référence(2)
-translation_of: Web/CSS/-moz-image-region
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -65,7 +59,7 @@ Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-image-region")}}
+{{Compat}}
 
 ## Voir aussi
 

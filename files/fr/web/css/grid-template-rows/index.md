@@ -1,11 +1,6 @@
 ---
 title: grid-template-rows
 slug: Web/CSS/grid-template-rows
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-template-rows
 ---
 
 {{CSSRef}}
@@ -31,14 +26,16 @@ grid-template-rows: repeat(3, 200px);
 
 /* Valeurs <auto-track-list> */
 grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-grid-template-rows: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-rows: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-rows: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
-
+grid-template-rows:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-rows:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-rows:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* Valeurs globales */
 grid-template-rows: inherit;

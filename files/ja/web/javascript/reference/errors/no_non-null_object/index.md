@@ -31,17 +31,17 @@ TypeError: Invalid value used in weak set (Chrome)
 {{jsxref("Object.create()")}} メソッドや {{jsxref("Object.defineProperty()")}} メソッド、{{jsxref("Object.defineProperties()")}} メソッドを使用するとき、省略可能な記述子の引数として、プロパティ記述子オブジェクトが想定されます。 (ただの数値など) オブジェクト以外のものを提供すると、エラーが発生します。
 
 ```js example-bad
-Object.defineProperty({}, 'key', 1);
+Object.defineProperty({}, "key", 1);
 // TypeError: 1 is not a non-null object
 
-Object.defineProperty({}, 'key', null);
+Object.defineProperty({}, "key", null);
 // TypeError: null is not a non-null object
 ```
 
 有効なプロパティ記述子はこのようになります。
 
 ```js example-good
-Object.defineProperty({}, 'key', { value: 'foo', writable: false });
+Object.defineProperty({}, "key", { value: "foo", writable: false });
 ```
 
 ## `WeakMap` および `WeakSet` オブジェクトにはオブジェクトキーが必要
@@ -50,14 +50,14 @@ Object.defineProperty({}, 'key', { value: 'foo', writable: false });
 
 ```js example-bad
 var ws = new WeakSet();
-ws.add('foo');
+ws.add("foo");
 // TypeError: "foo" is not a non-null object
 ```
 
 代わりにオブジェクトを使用してください。
 
 ```js example-good
-ws.add({foo: 'bar'});
+ws.add({ foo: "bar" });
 ws.add(window);
 ```
 

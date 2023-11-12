@@ -72,16 +72,18 @@ queueMicrotask(() => {
 マイクロタスクが実行順序が常に一貫していることを保証するために使われる 1 つの状況は、プロミスが `if...else` 文（または他の条件文）の 1 つの節で使われ、他の節では使われないときです。次のようなコードを考えてみてください。
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -118,18 +120,20 @@ Data fetched
 この 2 つの節のバランスをとるために、 `if` 節でマイクロタスクを使用することで、これらの操作の一貫した順序を保証することができます。
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     queueMicrotask(() => {
       this.data = this.cache[url];
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -145,7 +149,7 @@ customElement.prototype.getData = url => {
 ```js
 const messageQueue = [];
 
-let sendMessage = message => {
+let sendMessage = (message) => {
   messageQueue.push(message);
 
   if (messageQueue.length === 1) {
@@ -175,15 +179,14 @@ let sendMessage = message => {
 この単純な例では、マイクロタスクをキューに入れるすることで、この最上位スクリプトの本体が実行され終わった後に、マイクロタスクのコールバックが実行されることがわかります。
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += s + "<br>");
 ```
 
 次のコードでは、マイクロタスクの実行をスケジュールするために {{domxref("queueMicrotask()")}} を呼び出しています。この呼び出しは、画面にテキストを出力するカスタム関数である `log()` への呼び出しで括られています。
@@ -191,7 +194,7 @@ let log = s => logElem.innerHTML += s + "<br>";
 ```js
 log("Before enqueueing the microtask");
 queueMicrotask(() => {
-  log("The microtask has run.")
+  log("The microtask has run.");
 });
 log("After enqueueing the microtask");
 ```
@@ -205,15 +208,14 @@ log("After enqueueing the microtask");
 この例では、タイムアウトは 0 ミリ秒後に（または「できるだけ早く」）発生するようにスケジュールされています。これは、新しいタスクをスケジューリングするとき（例えば `setTimeout()`）とマイクロタスクを使うときの「できるだけ早く」が何を意味するかの違いを示しています。
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += s + "<br>");
 ```
 
 次のコードでは、マイクロタスクの実行をスケジュールするために {{domxref("queueMicrotask()")}} を呼び出しています。この呼び出しは、画面にテキストを出力するカスタム関数である `log()` への呼び出しで括られています。
@@ -242,15 +244,14 @@ log("Main program exiting");
 この例では、いくつかの作業を行う関数を追加することで、前の例を少し拡張しています。この関数は `queueMicrotask()` を使ってマイクロタスクのスケジューリングを行っています。この例で重要なことは、マイクロタスクは関数が終了するときに処理されるのではなく、メインプログラムが終了するときに処理されるということです。
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += s + "<br>");
 ```
 
 メインプログラムのコードは以下の通りです。ここで `doWork()` 関数は `queueMicrotask()` を呼び出しますが、それでもマイクロタスクはプログラム全体が終了するまで起動しません。なぜなら、タスクが終了して実行スタック上に何もなくなったときがそうだからです。
@@ -265,7 +266,7 @@ let doWork = () => {
 
   queueMicrotask(urgentCallback);
 
-  for (let i=2; i<=10; i++) {
+  for (let i = 2; i <= 10; i++) {
     result *= i;
   }
   return result;

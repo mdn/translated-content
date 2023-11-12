@@ -1,6 +1,9 @@
 ---
-title: WebSocket.extensions
+title: "WebSocket: extensions プロパティ"
+short-title: extensions
 slug: Web/API/WebSocket/extensions
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -9,7 +12,7 @@ slug: Web/API/WebSocket/extensions
 
 ## 値
 
-{{domxref("DOMString")}} です。
+文字列です。
 
 ## 仕様書
 

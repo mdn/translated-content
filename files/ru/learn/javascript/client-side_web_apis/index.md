@@ -1,23 +1,6 @@
 ---
 title: Клиентский веб API
 slug: Learn/JavaScript/Client-side_web_APIs
-tags:
-  - API
-  - Articles
-  - Beginner
-  - CodingScripting
-  - DOM
-  - Graphics
-  - JavaScript
-  - Landing
-  - Learn
-  - Media
-  - Module
-  - NeedsTranslation
-  - TopicStub
-  - WebAPI
-  - data
-translation_of: Learn/JavaScript/Client-side_web_APIs
 ---
 
 {{LearnSidebar}}

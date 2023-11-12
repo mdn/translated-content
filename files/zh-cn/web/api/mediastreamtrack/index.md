@@ -20,7 +20,7 @@ slug: Web/API/MediaStreamTrack
 - {{domxref("MediaStreamTrack.label")}} {{readonlyInline}}
   - : 返回一个{{domxref("DOMString")}}类型。内容为一个用户代理指定的标签，来标识该轨道的来源，比如“internal microphone”。该字符串可以为空，并且在没有源与这个轨道连接的情况下会一直为空。当该轨道从它的源上分离时，这个值也不会改变。
 - {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
-  - : 返回一个布尔类型的值，为 true 时表示轨道是静音，其它为 false。
+  - : 返回一个布尔类型的值，为 true 时表示轨道是静音，其他为 false。
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
   - : 返回一个布尔类型的值，为 true 时表示该轨道是只读的，比如视频文件源或一个被设置为不能修改的摄像头源，或则为 false。
 - {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}

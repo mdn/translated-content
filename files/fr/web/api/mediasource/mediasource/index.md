@@ -1,7 +1,6 @@
 ---
 title: MediaSource.MediaSource()
 slug: Web/API/MediaSource/MediaSource
-translation_of: Web/API/MediaSource/MediaSource
 ---
 
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
@@ -42,9 +41,9 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 ...
 ```
 
-## Compatibilitée des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.MediaSource.MediaSource")}}
+{{Compat}}
 
 ## Voir aussi
 

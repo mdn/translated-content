@@ -1,27 +1,30 @@
 ---
-title: Element.getClientRects()
+title: "Element: getClientRects() メソッド"
+short-title: getClientRects()
 slug: Web/API/Element/getClientRects
+l10n:
+  sourceCommit: 88ecc11b7d151365a93dad4536a350a832b14d20
 ---
 
 {{APIRef("DOM")}}
 
-**`getClientRects()`** は {{domxref("Element")}} インターフェイスのメソッドで、クライアントにあるそれぞれの [CSS 境界ボックス](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)の境界線を示す {{DOMxRef("DOMRect")}} オブジェクトのコレクションを返します。
+**`getClientRects()`** は {{domxref("Element")}} インターフェイスのメソッドで、クライアントにあるそれぞれの [CSS 境界ボックス](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の境界線を示す {{DOMxRef("DOMRect")}} オブジェクトのコレクションを返します。
 
-多くの要素はそれぞれ 1 つの境界ボックスしか持ちませんが、複数行の[インライン要素](/ja/docs/Web/HTML/Inline_elements) （例えば複数行にまたがる {{HTMLElement("span")}} 要素、既定の場合）には行ごとに囲む境界ボックスがあります。
+多くの要素には、境界ボックスが 1 つずつしかありませんが、複数行の[インラインレベル要素](/ja/docs/Glossary/Inline-level_content) （例えば複数行にまたがる {{HTMLElement("span")}} 要素、既定の場合）には、行ごとに囲む境界ボックスがあります。
 
 ## 構文
 
-```js
-let rectCollection = object.getClientRects();
+```js-nolint
+getClientRects()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
-返される値は {{DOMxRef("DOMRect")}} オブジェクトのコレクションで、要素に関連付けられた CSS の境界ボックスごとに 1 つずつ用意されます。それぞれの {{DOMxRef("DOMRect")}} オブジェクトには読み取り専用の `left`, `top`, `right`, `bottom` の各プロパティがあり、ビューポートの左上からの境界ボックスの座標をピクセル数で表します。キャプションを持つ表の場合、キャプションがテーブルの境界ボックスの外側にあっても含まれます。外部の `<svg>` 以外の SVG 要素に対して呼び出された場合、結果として得られる矩形の相対的な「ビューポート」は、その要素の外部の `<svg>` が確立したビューポートになります（明確にするために、矩形は外部の `<svg>` の `viewBox` 変形によっても変換されます）。
-
-本来、Microsoft はこのメソッドがテキストの各行に対して `TextRectangle` オブジェクトを返すようにしていました。しかし、 CSSOM の作業草案では、各境界ボックスに対して {{DOMxRef("DOMRect")}} を返すように指定しています。インライン要素では、この 2 つの定義は同じです。しかし、ブロック要素の場合、Mozilla は単一の矩形のみを返します。
-
-{{Fx_MinVersion_Note(3.5, "Firefox 3.5 で <code>width</code> と <code>height</code> の各プロパティが <code>TextRectangle</code> オブジェクトに追加されました。")}}
+返される値は {{DOMxRef("DOMRect")}} オブジェクトのコレクションで、要素に関連付けられた CSS の境界ボックスごとに 1 つずつ用意されます。それぞれの {{DOMxRef("DOMRect")}} オブジェクトは、ビューポートの左上からの境界ボックスの座標をピクセル単位で表します。キャプションを持つ表の場合、キャプションは表の境界ボックスの外側にあっても含まれます。外部の `<svg>` 以外の SVG 要素に対して呼び出された場合、結果として得られる矩形の相対的な「ビューポート」は、その要素の外部の `<svg>` が確立したビューポートになります（明確にするために、矩形は外部の `<svg>` の `viewBox` 変形によっても変換されます）。
 
 矩形を計算する際には、ビューポート領域（またはその他のスクロール可能な要素）のスクロール量が考慮されます。
 
@@ -43,9 +46,11 @@ CSS ボックスで境界ボックスが空であっても矩形が返されま�
 
 ```html
 <h3>A paragraph with a span inside</h3>
-<p>Both the span and the paragraph have a border set. The
-  client rects are in red. Note that the p has only one border
-  box, while the span has multiple border boxes.</p>
+<p>
+  Both the span and the paragraph have a border set. The client rects are in
+  red. Note that the p has only one border box, while the span has multiple
+  border boxes.
+</p>
 
 <div>
   <strong>Original</strong>
@@ -64,7 +69,9 @@ CSS ボックスで境界ボックスが空であっても矩形が返されま�
 <div>
   <strong>span's rect</strong>
   <p>
-    <span class="withClientRectsOverlay">Paragraph that spans multiple lines</span>
+    <span class="withClientRectsOverlay"
+      >Paragraph that spans multiple lines</span
+    >
   </p>
 </div>
 ```
@@ -73,22 +80,24 @@ CSS ボックスで境界ボックスが空であっても矩形が返されま�
 
 ```html
 <h3>A list</h3>
-<p>Note that the border box doesn't include the number, so
-  neither do the client rects.</p>
+<p>
+  Note that the border box doesn't include the number, so neither do the client
+  rects.
+</p>
 
 <div>
   <strong>Original</strong>
   <ol>
-   - Item 1</li>
-   - Item 2</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
   </ol>
 </div>
 
 <div>
   <strong>ol's rect</strong>
   <ol class="withClientRectsOverlay">
-   - Item 1</li>
-   - Item 2</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
   </ol>
 </div>
 
@@ -105,18 +114,26 @@ CSS ボックスで境界ボックスが空であっても矩形が返されま�
 
 ```html
 <h3>A table with a caption</h3>
-<p>Although the table's border box doesn't include the
-  caption, the client rects do include the caption.</p>
+<p>
+  Although the table's border box doesn't include the caption, the client rects
+  do include the caption.
+</p>
 
 <div>
   <strong>Original</strong>
   <table>
-    <caption>caption</caption>
+    <caption>
+      caption
+    </caption>
     <thead>
-      <tr><th>thead</th></tr>
+      <tr>
+        <th>thead</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>tbody</td></tr>
+      <tr>
+        <td>tbody</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -124,12 +141,18 @@ CSS ボックスで境界ボックスが空であっても矩形が返されま�
 <div>
   <strong>table's rect</strong>
   <table class="withClientRectsOverlay">
-    <caption>caption</caption>
+    <caption>
+      caption
+    </caption>
     <thead>
-      <tr><th>thead</th></tr>
+      <tr>
+        <th>thead</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>tbody</td></tr>
+      <tr>
+        <td>tbody</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -147,10 +170,15 @@ div {
   display: inline-block;
   width: 150px;
 }
-div p, ol, table {
+div p,
+ol,
+table {
   border: 1px solid blue;
 }
-span, li, th, td {
+span,
+li,
+th,
+td {
   border: 1px solid green;
 }
 ```
@@ -164,30 +192,31 @@ function addClientRectsOverlay(elt) {
   /* Absolutely position a div over each client rect so that its border width
      is the same as the rectangle's width.
      Note: the overlays will be out of place if the user resizes or zooms. */
-  var rects = elt.getClientRects();
-  for (var i = 0; i != rects.length; i++) {
-    var rect = rects[i];
-    var tableRectDiv = document.createElement('div');
-    tableRectDiv.style.position = 'absolute';
-    tableRectDiv.style.border = '1px solid red';
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
-    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
-    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
-    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
+  const rects = elt.getClientRects();
+  for (const rect of rects) {
+    const tableRectDiv = document.createElement("div");
+    tableRectDiv.style.position = "absolute";
+    tableRectDiv.style.border = "1px solid red";
+    const scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollLeft =
+      document.documentElement.scrollLeft || document.body.scrollLeft;
+    tableRectDiv.style.margin = tableRectDiv.style.padding = "0";
+    tableRectDiv.style.top = `${rect.top + scrollTop}px`;
+    tableRectDiv.style.left = `${rect.left + scrollLeft}px`;
     // We want rect.width to be the border width, so content width is 2px less.
-    tableRectDiv.style.width = (rect.width - 2) + 'px';
-    tableRectDiv.style.height = (rect.height - 2) + 'px';
+    tableRectDiv.style.width = `${rect.width - 2}px`;
+    tableRectDiv.style.height = `${rect.height - 2}px`;
     document.body.appendChild(tableRectDiv);
   }
 }
 
-(function() {
+(() => {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
-  var elt = document.getElementsByClassName('withClientRectsOverlay');
-  for (var i = 0; i < elt.length; i++) {
-    addClientRectsOverlay(elt[i]);
+  const elts = document.getElementsByClassName("withClientRectsOverlay");
+  for (const elt of elts) {
+    addClientRectsOverlay(elt);
   }
 })();
 ```

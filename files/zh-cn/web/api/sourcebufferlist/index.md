@@ -35,7 +35,7 @@ _从它的父接口 {{domxref("EventTarget")}} 继承方法。_
 
 ```js
 // Video is an already playing video using a MediaSource srcObject
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 const mediaSource = video.srcObject;
 const sourceBufferList = mediaSource.activeSourceBuffers;
 for (const sourceBuffer of sourceBufferList) {

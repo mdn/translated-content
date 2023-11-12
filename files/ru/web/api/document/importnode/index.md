@@ -1,7 +1,6 @@
 ---
 title: Document.importNode()
 slug: Web/API/Document/importNode
-translation_of: Web/API/Document/importNode
 ---
 
 {{APIRef("DOM")}}
@@ -31,7 +30,7 @@ var node = document.importNode(externalNode, deep);
 
 > **Примечание:** In the DOM4 specification, _deep_ was an optional argument with a default value of `true`.
 >
-> This default has changed in the latest spec — the new default value is **`false`**. Though it's still an optional argument, you should always provide the `deep` argument for backward _and_ forward compatibility. With Gecko 28.0 {{geckoRelease(28)}}, the console warns developers not to omit the argument. Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted instead of a deep clone.
+> This default has changed in the latest spec — the new default value is **`false`**. Though it's still an optional argument, you should always provide the `deep` argument for backward _and_ forward compatibility. With Gecko 28.0, the console warns developers not to omit the argument. Starting with Gecko 29.0), a shallow clone is defaulted instead of a deep clone.
 
 ## Example
 
@@ -50,10 +49,7 @@ Firefox doesn't currently enforce this rule (it did for a while during the devel
 
 ## Specifications
 
-| Specification                                                                                                        | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-document-importnode", "document.importNode()")}}             | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM2 Core", "core.html#Core-Document-importNode", "document.importNode()")}} | {{Spec2("DOM2 Core")}}     | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

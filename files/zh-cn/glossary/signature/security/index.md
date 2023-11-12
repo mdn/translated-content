@@ -3,6 +3,8 @@ title: 签名（安全）
 slug: Glossary/Signature/Security
 ---
 
+{{GlossarySidebar}}
+
 **签名**或*数字签名*是 {{glossary("protocol","协议")}}，表明消息是真实的。
 
 从给定消息的{{glossary("hash")}}，**签名过程**首先使用实体的私有{{glossary("key")}}生成链接到签名实体的数字签名。
@@ -14,13 +16,7 @@ slug: Glossary/Signature/Security
 
 如果私钥被泄密或收件人被欺骗地给出错误的公钥，系统就会失败。
 
-## 了解更多
-
-### 基础知识
+## 参见
 
 - [Digital signature](https://zh.wikipedia.org/wiki/Digital_signature) on Wikipedia
 - See {{glossary("digest")}}, {{glossary("encryption")}}
-
-### 技术参考
-
-- [信息安全基础 ​​​​​​​](/zh-CN/docs/Web/Security/Information_Security_Basics)

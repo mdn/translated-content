@@ -16,7 +16,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
   - 普通文本的对比率为 4.5:1（小于 18 磅或黑体 14 磅）
   - 大文本对比率为 3:1（大于等于 18 磅或黑体 14 磅）【译者注：字体单位为 point、PT】
 
-- 颜色传递的信息，**必须**也通过其它方式标明（例如，链接文本中的下划线）
+- 颜色传递的信息，**必须**也通过其他方式标明（例如，链接文本中的下划线）
 
 > **备注：** Jon Snook 开发的 [颜色对比度检查器 - Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) 可以轻松检查前景和背景的对比度。同样，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) 这个工具能做类似的检查，并且会推荐你考虑使用类似的更好的对比度
 
@@ -49,7 +49,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 ## 状态处理
 
-- 标准控件，如单选按钮和复选是通过操作系统处理的，而其它自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
+- 标准控件，如单选按钮和复选是通过操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
 
 ## General Guidelines 常规指南
 
@@ -58,9 +58,9 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
   ```html
   <h1>Top level heading</h1>
-    <h2>Secondary heading</h2>
-    <h2>Another secondary heading</h2>
-      <h3>Low level heading</h3>
+  <h2>Secondary heading</h2>
+  <h2>Another secondary heading</h2>
+  <h3>Low level heading</h3>
   ```
 
 - 应使用 [ARIA Landmark Roles](http://www.w3.org/TR/wai-aria/roles#landmark_roles_header) 描述应用或文档的结构，如 `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.

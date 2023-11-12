@@ -76,13 +76,13 @@ Network\r\n
 
 ## Especificações
 
-| Especificação                                                | Título                                                             |
-| ------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Especificação                                 | Título                                                             |
+| --------------------------------------------- | ------------------------------------------------------------------ |
 | {{RFC("7230", "Transfer-Encoding", "3.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Transfer-Encoding")}}
+{{Compat}}
 
 ## Veja também
 

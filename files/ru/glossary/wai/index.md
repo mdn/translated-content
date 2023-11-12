@@ -1,8 +1,6 @@
 ---
 title: WAI
 slug: Glossary/WAI
-translation_of: Glossary/WAI
-original_slug: Глоссарий/WAI
 ---
 
 _WAI_ или _Web Accessibility Initiative_ (англ. Инициатива доступности веб-сайтов) — это попытка Консорциума World Wide Web (W3C) улучшить доступность для людей с различными проблемами, которым могут понадобиться нестандартные {{glossary ("browser", "браузер")}} или устройства.
@@ -12,4 +10,3 @@ _WAI_ или _Web Accessibility Initiative_ (англ. Инициатива до
 ### Базовые знания
 
 - [Сайт WAI](http://www.w3.org/WAI/)
-- {{Interwiki("wikipedia", "Web Accessibility Initiative")}} on Wikipedia

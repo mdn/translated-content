@@ -57,16 +57,16 @@ slug: Web/API/WebSocket
 
 ```js
 // WebSocket 연결 생성
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // 연결이 열리면
-socket.addEventListener('open', function (event) {
-    socket.send('Hello Server!');
+socket.addEventListener("open", function (event) {
+  socket.send("Hello Server!");
 });
 
 // 메시지 수신
-socket.addEventListener('message', function (event) {
-    console.log('Message from server ', event.data);
+socket.addEventListener("message", function (event) {
+  console.log("Message from server ", event.data);
 });
 ```
 

@@ -1,11 +1,13 @@
 ---
-title: Node.isConnected
+title: "Node: isConnected プロパティ"
 slug: Web/API/Node/isConnected
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
 
-**`isConnected`** は {{domxref("Node")}} インターフェイスの読み出し専用のプロパティで、ノードがコンテキストオブジェクト、例えば、通常の DOM の場合は {{domxref("Document")}} オブジェクト、シャドウ DOM の場合は {{domxref("ShadowRoot")}} に（直接的または間接的に）接続されているかどうかを示す論理値を返します。
+**`isConnected`** は {{domxref("Node")}} インターフェイスの読み出し専用のプロパティで、ノードが {{domxref("Document")}} オブジェクトに（直接的または間接的に）接続されているかどうかを示す論理値を返します。
 
 ## 値
 
@@ -18,7 +20,7 @@ slug: Web/API/Node/isConnected
 標準 DOM の例です。
 
 ```js
-let test = document.createElement('p');
+let test = document.createElement("p");
 console.log(test.isConnected); // Returns false
 document.body.appendChild(test);
 console.log(test.isConnected); // Returns true
@@ -30,10 +32,10 @@ console.log(test.isConnected); // Returns true
 
 ```js
 // シャドウルートを生成
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 
 // いくらかの CSS を作成してシャドウ DOM に適用
-const style = document.createElement('style');
+const style = document.createElement("style");
 console.log(style.isConnected); // returns false
 
 style.textContent = `

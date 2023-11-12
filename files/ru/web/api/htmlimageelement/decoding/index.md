@@ -1,7 +1,6 @@
 ---
 title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
-translation_of: Web/API/HTMLImageElement/decoding
 ---
 
 {{APIRef}}
@@ -27,8 +26,8 @@ imgElem.decoding = refStr;
 
 ```js
 var img = new Image();
-img.decoding = 'sync';
-img.src = 'img/logo.png';
+img.decoding = "sync";
+img.src = "img/logo.png";
 ```
 
 ## Спецификации

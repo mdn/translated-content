@@ -72,7 +72,7 @@ place-self: unset;
   - : このフレックスアイテムのマージンボックスが、行の交差軸方向の中央に配置されます。アイテムの交差軸方向の寸法がフレックスコンテナーよりも大きい場合は、両方向に均等にはみ出します。
 - `baseline`, `first baseline`. `last baseline`
   - : first-baseline 配置または last-baseline 配置への関与を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。
- `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
+    `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
 - `stretch`
   - : アイテムの交差軸方向の寸法の合計値が、配置コンテナーの寸法よりも小さく、アイテムの寸法が `auto` であった場合、アイテムの寸法は {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) で課された制約を尊重しつつ、均等の寸法 (比例的ではない) に拡大されるので、 `auto` が指定されたアイテムすべての寸法の合計は、ちょうど配置コンテナーの交差軸方向を埋めるようになります。
 
@@ -139,7 +139,8 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }

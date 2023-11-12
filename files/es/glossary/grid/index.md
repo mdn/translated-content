@@ -14,20 +14,22 @@ En el siguiente ejemplo, he creado una _grilla explícita_ de tres columnas y do
 ## Ejemplo
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-border: 2px solid #f76707;
-border-radius: 5px;
-background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-border: 2px solid #ffa94d;
-border-radius: 5px;
-background-color: #ffd8a8;
-padding: 1em;
-color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -41,14 +43,14 @@ color: #d9480f;
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 

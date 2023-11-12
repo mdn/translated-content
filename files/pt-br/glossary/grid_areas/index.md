@@ -1,7 +1,6 @@
 ---
 title: Grid Areas
 slug: Glossary/Grid_Areas
-original_slug: Glossario/Grid_Areas
 ---
 
 Um **grid area** é um ou mais {{glossary("grid cell", "grid cells")}} que compõem uma área retangular do grid. As Grid Areas quando se coloca um item usando [line-based placement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) (posicionamento baseado em colunas e linha)ou quando define áreas usando [named grid areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)(substituindo o nome).
@@ -13,27 +12,29 @@ Um **grid area** é um ou mais {{glossary("grid cell", "grid cells")}} que comp�
 No exemplo abaixo temos um grid contêiner com dois items de grid, nomeamos esses com a propriedade {{cssxref("grid-area")}} e em seguida colocamos eles no grid usando {{cssxref("grid-template-areas")}}. Isso cria duas áreas de grid, uma cobrindo 4 áreas do grid e a outra duas áreas do grid.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 100px;
   grid-template-areas:
     "a a b"
@@ -49,8 +50,8 @@ No exemplo abaixo temos um grid contêiner com dois items de grid, nomeamos esse
 
 ```html
 <div class="wrapper">
-   <div class="item1">Item</div>
-   <div class="item2">Item</div>
+  <div class="item1">Item</div>
+  <div class="item2">Item</div>
 </div>
 ```
 

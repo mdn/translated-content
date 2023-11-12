@@ -16,7 +16,7 @@ slug: Web/HTML/Element/head
 
 该元素包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("profile")}} {{Deprecated_Inline}}
+- `profile` {{Deprecated_Inline}}
   - : 一个由空格分隔的 URL 列表，这些 URL 包含着有关页面的配置信息。
 
 ## 示例

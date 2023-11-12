@@ -17,13 +17,11 @@ El código de respuesta de error del servidor de HTTP **`502 Bad Gateway`** indi
 
 ## Especificaciones
 
-| Especificación                                               | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "502 Bad Gateway" , "6.6.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.status.502")}}
+{{Compat}}
 
 ## Vea también
 

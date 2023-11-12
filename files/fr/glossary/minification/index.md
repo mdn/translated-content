@@ -1,9 +1,9 @@
 ---
 title: minification
-slug: Glossary/minification
-translation_of: Glossary/minification
-original_slug: Glossaire/minification
+slug: Glossary/Minification
 ---
+
+{{GlossarySidebar}}
 
 La **minification** est le processus de suppression des données inutiles ou redondantes sans affecter la manière dont une ressource est traitée par le navigateur. La minification peut inclure la suppression des commentaires de code, des espaces blancs et du code inutilisé, ainsi que le raccourcissement des noms de variables et de fonctions. La minification est utilisée pour améliorer les performances web en réduisant la taille du fichier. Il s'agit généralement d'une étape automatisée qui se produit au moment de l'assemblage des scripts et des feuilles de styles.
 

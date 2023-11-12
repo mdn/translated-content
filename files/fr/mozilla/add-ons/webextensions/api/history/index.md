@@ -1,16 +1,6 @@
 ---
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ---
 
 {{AddonSidebar}}
@@ -68,9 +58,9 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons
 - {{WebExtAPIRef("history.onVisitRemoved")}}
   - : Lancé lorsqu'une URL est complètement supprimée de l'historique du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

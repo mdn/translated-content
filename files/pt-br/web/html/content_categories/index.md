@@ -1,7 +1,6 @@
 ---
 title: Categorias de conteúdo
 slug: Web/HTML/Content_categories
-original_slug: Web/Guide/HTML/Content_categories
 ---
 
 Cada elemento HTML deve permanecer, por regras, definindo que tipo de conteúdo ele pode ter. Essas regras estão agrupadas em modelos de conteúdo para muitos elementos. Cada elemento HTML pertence a nenhum, um, ou múltiplos modelos de conteúdo, cada regra de definição que o conteúdo do elemento deve seguir em um documento HTML.
@@ -12,7 +11,7 @@ Há três tipos de categorias de conteúdo:
 - Categorias de conteúdo relacionado, as quais decrevem regras comuns de conteúdo para elementos relacioados;
 - Categorias de conteúdo específico, as quais descrevem categorias raras compartilhadas somente por poucos elementos, às vezes apenas em um contexto específico.
 
-[![Content_categories_venn.png](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png)
+[![Content_categories_venn.png](content_categories_venn.png)](content_categories_venn.png)
 
 ## Principais categorias de conteúdo
 
@@ -29,9 +28,9 @@ Elementos pertencentes a categoria de conteúdo de fluxo tipicamente contém tex
 Alguns outros elementos pertencem a essa categoria, mas somente se uma condição específica é realizada:
 
 - {{HTMLElement("area")}}, se for um descendente de um elemento {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#attr-itemprop)** estiver presente
-- {{HTMLElement("meta")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#attr-itemprop)** estiver presente
-- {{HTMLElement("style")}}, se o atributo {{htmlattrxref("scoped","style")}} estiver presente
+- {{HTMLElement("link")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#itemprop)** estiver presente
+- {{HTMLElement("meta")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#itemprop)** estiver presente
+- {{HTMLElement("style")}}, se o atributo [`scoped`](/pt-BR/docs/Web/HTML/Element/style#scoped) estiver presente
 
 ### Conteúdo de seccionamento
 
@@ -61,9 +60,9 @@ Alguns outros elementos pertencem a essa categoria, mas somente se uma condiçã
 - {{HTMLElement("area")}}, se for um descendente de um elemento {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, se contém somente conteúdo fraseado
 - {{HTMLElement("ins")}}, se contém somente conteúdo fraseado
-- {{HTMLElement("link")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#attr-itemprop) estiver presente
+- {{HTMLElement("link")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#itemprop) estiver presente
 - {{HTMLElement("map")}}, se contém somente conteúdo fraseado
-- {{HTMLElement("meta")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#attr-itemprop) estiver presente
+- {{HTMLElement("meta")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#itemprop) estiver presente
 
 ### Conteúdo embutido
 
@@ -73,12 +72,12 @@ O conteúdo embutido importa outro recurso ou insere conteúdo de uma outra ling
 
 O conteúdo interativo inclui elementos que são especificamente desenvolvidos para a interação do usuário. Os elementos que pertencem a essa categoria incluem: {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, e {{HTMLElement("textarea")}}. Alguns elementos pertencem a essa categoria somente sob condições específicas:
 
-- {{HTMLElement("audio")}}, se o atributo {{htmlattrxref("controls", "audio")}} estiver presente
-- {{HTMLElement("img")}}, se o atributo {{htmlattrxref("usemap", "img")}} estiver presente
-- {{HTMLElement("input")}}, se o atributo {{htmlattrxref("type", "input")}} não estiver no modo escondido
-- {{HTMLElement("menu")}}, se o atributo {{htmlattrxref("type", "menu")}} estiver no modo barra de ferramentas
-- {{HTMLElement("object")}}, se o atributo {{htmlattrxref("usemap", "object")}} estiver presente
-- {{HTMLElement("video")}}, se o atributo {{htmlattrxref("controls", "video")}} estiver presente
+- {{HTMLElement("audio")}}, se o atributo [`controls`](/pt-BR/docs/Web/HTML/Element/audio#controls) estiver presente
+- {{HTMLElement("img")}}, se o atributo [`usemap`](/pt-BR/docs/Web/HTML/Element/img#usemap) estiver presente
+- {{HTMLElement("input")}}, se o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) não estiver no modo escondido
+- {{HTMLElement("menu")}}, se o atributo [`type`](/pt-BR/docs/Web/HTML/Element/menu#type) estiver no modo barra de ferramentas
+- {{HTMLElement("object")}}, se o atributo [`usemap`](/pt-BR/docs/Web/HTML/Element/object#usemap) estiver presente
+- {{HTMLElement("video")}}, se o atributo [`controls`](/pt-BR/docs/Web/HTML/Element/video#controls) estiver presente
 
 ### Conteúdo associado ao **form**
 

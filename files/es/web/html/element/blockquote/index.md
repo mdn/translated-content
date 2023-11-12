@@ -1,12 +1,12 @@
 ---
 title: blockquote
 slug: Web/HTML/Element/blockquote
-original_slug: Web/HTML/Elemento/blockquote
 ---
 
 ### Definición
 
 - **blockquote** -_cita en bloque_ . Crea citas en bloque, marca las citas a otros autores o documentos.
+
   - : **Sus etiquetas son**: `<blockquote>` y `</blockquote>` (ambas obligatorias).
 
     **Está definido como**: Elemento [en bloque](/es/HTML/Elemento/Tipos_de_elementos#enbloque).

@@ -1,7 +1,6 @@
 ---
 title: AudioBuffer.getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
-translation_of: Web/API/AudioBuffer/getChannelData
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -11,7 +10,11 @@ La méthode `getChannelData()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/A
 ## Syntaxe
 
 ```js
-var tableauDonnees = contexteAudio.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+var tableauDonnees = contexteAudio.createBuffer(
+  nombreCanaux,
+  nombreFrames,
+  contexteAudio.sampleRate,
+);
 var tampon = tableauDonnees.getChannelData(canal);
 ```
 
@@ -25,9 +28,9 @@ Dans l'exemple suivant crée un buffer de 2 secondes, le remplit avec du bruit b
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var bouton = document.querySelector('button');
-var preformate = document.querySelector('pre');
-var monScript = document.querySelector('script');
+var bouton = document.querySelector("button");
+var preformate = document.querySelector("pre");
+var monScript = document.querySelector("script");
 
 preformate.innerHTML = monScript.innerHTML;
 
@@ -37,9 +40,13 @@ var nombreCanaux = 2;
 // au taux d'échantillonage du contexte audio
 var nombreFrames = contexteAudio.sampleRate * 2.0;
 
-var tableauDonnees = contexteAudio.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+var tableauDonnees = contexteAudio.createBuffer(
+  nombreCanaux,
+  nombreFrames,
+  contexteAudio.sampleRate,
+);
 
-bouton.onclick = function() {
+bouton.onclick = function () {
   // remplit la mémoire tampon avec du bruit blanc
   // valeurs aléatoires entre -1.0 et 1.0
   for (var canal = 0; canal < nombreCanaux; canal++) {
@@ -65,7 +72,7 @@ bouton.onclick = function() {
 
   // lance la lecture du so
   source.start();
-}
+};
 ```
 
 ## Paramètres

@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 
 ## 语法
 
-```js
-dateObj.getDate()
+```js-nolint
+getDate()
 ```
 
 ## 参数
@@ -23,9 +23,9 @@ dateObj.getDate()
 
 `getDate()` 返回一个 1 到 31 的整数值。
 
-## 例子
+## 示例
 
-### 例子：使用 `getDate()` 方法
+### 示例：使用 `getDate()` 方法
 
 下面第二条语句将值 25 赋给 day 变量，该值基于日期对象 `Xmax95`的值。
 

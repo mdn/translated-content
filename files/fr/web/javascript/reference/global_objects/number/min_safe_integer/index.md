@@ -1,14 +1,6 @@
 ---
 title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MIN_SAFE_INTEGER
 ---
 
 {{JSRef}}
@@ -28,8 +20,9 @@ La constante `MIN_SAFE_INTEGER` vaut `-9007199254740991`. Cette valeur provient 
 ## Exemples
 
 ```js
-Number.MIN_SAFE_INTEGER // -9007199254740991
--Math.pow(2, 53) -1     // -9007199254740991
+Number.MIN_SAFE_INTEGER - // -9007199254740991
+  Math.pow(2, 53) -
+  1; // -9007199254740991
 ```
 
 ## Spécifications

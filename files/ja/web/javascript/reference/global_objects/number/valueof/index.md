@@ -1,6 +1,8 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
@@ -11,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 
 ## 構文
 
-```js
+```js-nolint
 valueOf()
 ```
 
@@ -28,12 +30,12 @@ valueOf()
 ### valueOf の使用
 
 ```js
-let numObj = new Number(10)
-console.log(typeof numObj)  // object
+const numObj = new Number(10);
+console.log(typeof numObj); // object
 
-let num = numObj.valueOf()
-console.log(num)            // 10
-console.log(typeof num)     // number
+const num = numObj.valueOf();
+console.log(num); // 10
+console.log(typeof num); // number
 ```
 
 ## 仕様書
@@ -46,4 +48,4 @@ console.log(typeof num)     // number
 
 ## 関連情報
 
-- {{jsxref("Number.prototype.toSource()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

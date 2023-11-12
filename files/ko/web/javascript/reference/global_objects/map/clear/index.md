@@ -1,6 +1,8 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
@@ -25,16 +27,16 @@ clear()
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'baz');
-myMap.set(1, 'foo');
+myMap.set("bar", "baz");
+myMap.set(1, "foo");
 
-console.log(myMap.size);  // 2
-console.log(myMap.has('bar')); // true
+console.log(myMap.size); // 2
+console.log(myMap.has("bar")); // true
 
 myMap.clear();
 
-console.log(myMap.size);  // 0
-console.log(myMap.has('bar')); // false
+console.log(myMap.size); // 0
+console.log(myMap.has("bar")); // false
 ```
 
 ## 명세서

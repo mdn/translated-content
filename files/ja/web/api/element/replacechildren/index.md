@@ -1,22 +1,31 @@
 ---
-title: Element.replaceChildren()
+title: "Element: replaceChildren() メソッド"
+short-title: replaceChildren()
 slug: Web/API/Element/replaceChildren
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.replaceChildren()`** メソッドは、 {{domxref("Node")}} の既存の子ノードを、指定された新しい一連の子で置き換えます。 {{domxref("DOMString")}} または {{domxref("Node")}} オブジェクトを指定することができます。
+**`Element.replaceChildren()`** メソッドは、 {{domxref("Node")}} の既存の子ノードを、指定された新しい一連の子で置き換えます。文字列または {{domxref("Node")}} オブジェクトを指定することができます。
 
 ## 構文
 
-```js
-replaceChildren(...nodesOrDOMStrings)
+```js-nolint
+replaceChildren(param1)
+replaceChildren(param1, param2)
+replaceChildren(param1, param2, /* … ,*/ paramN)
 ```
 
 ### 引数
 
-- `nodesOrDOMStrings`
-  - : 一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトで、この `Element` の既存の子を置き換えるものです。置き換えるオブジェクトが指定されなかった場合は、 `Element` の子ノードは空になります。
+- `param1`, …, `paramN`
+  - : 一連の {{domxref("Node")}} オブジェクトまたは文字列で、この `Element` の既存の子を置き換えるものです。置き換えるオブジェクトが指定されなかった場合は、 `Element` の子ノードは空になります。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
@@ -73,9 +82,7 @@ myNode.replaceChildren();
   <div>
     <label for="yes">Yes please!</label>
 
-    <select id="yes" multiple size="10">
-
-    </select>
+    <select id="yes" multiple size="10"></select>
   </div>
 </main>
 ```
@@ -91,7 +98,8 @@ div {
   margin-right: 20px;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -111,20 +119,23 @@ select {
 このイベントハンドラーは、転送したい選択済みのオプションを 1 つの定数に、転送先のリスト内の既存のオプションを別の定数にまとめます。そして、オプションを転送するリストに対して `replaceChildren()` を呼び出し、スプレッド演算子を用いて両方の定数に含まれるすべてのオプションを渡します。
 
 ```js
-const noSelect = document.getElementById('no');
-const yesSelect = document.getElementById('yes');
-const noBtn = document.getElementById('to-no');
-const yesBtn = document.getElementById('to-yes');
+const noSelect = document.getElementById("no");
+const yesSelect = document.getElementById("yes");
+const noBtn = document.getElementById("to-no");
+const yesBtn = document.getElementById("to-yes");
 
-yesBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#no option:checked');
-  const existingYesOptions = document.querySelectorAll('#yes option');
+yesBtn.addEventListener("click", () => {
+  const selectedTransferOptions =
+    document.querySelectorAll("#no option:checked");
+  const existingYesOptions = document.querySelectorAll("#yes option");
   yesSelect.replaceChildren(...selectedTransferOptions, ...existingYesOptions);
 });
 
-noBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#yes option:checked');
-  const existingNoOptions = document.querySelectorAll('#no option');
+noBtn.addEventListener("click", () => {
+  const selectedTransferOptions = document.querySelectorAll(
+    "#yes option:checked",
+  );
+  const existingNoOptions = document.querySelectorAll("#no option");
   noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);
 });
 ```

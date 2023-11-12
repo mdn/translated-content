@@ -1,7 +1,8 @@
 ---
-title: '@page'
+title: "@page"
 slug: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
 **`@page`** CSS @규칙은 문서를 인쇄할 때 일부 CSS 속성을 수정하는 데 쓰입니다. `@page`로 모든 CSS 속성을 바꿀 수는 없습니다. 문서의 margin, orphan, widow(앞단에서 넘어온 짤막한 행) 및 page break만 바꿀 수 있습니다. 다른 CSS 속성을 바꾸려는 시도는 무시됩니다.

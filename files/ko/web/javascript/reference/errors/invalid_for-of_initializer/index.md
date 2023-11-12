@@ -1,7 +1,5 @@
 ---
-title: >-
-  SyntaxError: a declaration in the head of a for-of loop can't have an
-  initializer
+title: "SyntaxError: a declaration in the head of a for-of loop can't have an initializer"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
 
@@ -21,7 +19,7 @@ slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 
 ## 무엇이 잘못되었을까?
 
-[for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 반복문의 식이 초기화 구문을 포함한 것이 문제입니다. 즉, |`for (var i = 0 of iterable)`| 구문을 통해 변수가 정의되고 값이 할당된 것을 말합니다. 이 구문은 for-of 반복문에서 허용되지 않습니다. 이 경우 초기화를 할 수 있는 for 반복문이 필요합니다.
+[for...of](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 반복문의 식이 초기화 구문을 포함한 것이 문제입니다. 즉, |`for (var i = 0 of iterable)`| 구문을 통해 변수가 정의되고 값이 할당된 것을 말합니다. 이 구문은 for-of 반복문에서 허용되지 않습니다. 이 경우 초기화를 할 수 있는 for 반복문이 필요합니다.
 
 ## 예제
 
@@ -56,6 +54,6 @@ for (let value of iterable) {
 
 ## 같이 보기
 
-- [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) – 엄격(Strict) 모드에서는 마찬가지로 초기화를 허용하지 않습니다. ([SyntaxError: for-in loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) – 초기화를 허용합니다.
+- [`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) – 엄격(Strict) 모드에서는 마찬가지로 초기화를 허용하지 않습니다. ([SyntaxError: for-in loop head declarations may not have initializers](/ko/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
+- [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) – 초기화를 허용합니다.

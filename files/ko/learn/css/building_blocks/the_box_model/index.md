@@ -1,7 +1,6 @@
 ---
-title: 상자 모델
+title: 박스 모델
 slug: Learn/CSS/Building_blocks/The_box_model
-original_slug: Learn/CSS/Building_blocks/상자_모델
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
@@ -20,11 +19,11 @@ CSS에 포함되는 모든 요소의 외장은 박스이며, 이 박스를 이�
         <a
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업에 대한 기본 지식</a
-        >, HTML 기본기 (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        >, HTML 기본기 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML</a
         >
         학습), CSS 작동 방식에 대한 개념 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 단계</a
         >
         학습.) 등에 대한 기본 지식
@@ -67,11 +66,11 @@ CSS에는 크게 두 가지 박스(**블록 박스**와 **인라인 박스**) �
 
 이 시점에 우리는 **내부** 및 **외부** 디스플레이 유형에 대해 설명하는 게 좋겠습니다. 위에서 언급했듯이 CSS의 박스는 _외부_ 디스플레이 유형을 가지며, 이는 박스가 블록인지 인라인인지를 자세히 설명합니다.
 
-그러나 박스에는 _내부_ 디스플레이 유형도 있으며 당 박스 내부의 요소가 배치되는 방법을 나타냅니다. 기본적으로 박스 내부의 요소는 **[일반 대열](/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)**로 배치되며, 이는 (위에서 설명한 바와 같이) 여타 블록 및 인라인 요소와 마찬가지로 작동한다는 것을 의미합니다.
+그러나 박스에는 _내부_ 디스플레이 유형도 있으며 당 박스 내부의 요소가 배치되는 방법을 나타냅니다. 기본적으로 박스 내부의 요소는 [**일반 대열**](/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)로 배치되며, 이는 (위에서 설명한 바와 같이) 여타 블록 및 인라인 요소와 마찬가지로 작동한다는 것을 의미합니다.
 
-그러나 여러분은 `flex`과 같은 `display` 값을 사용하여 내부 디스플레이 유형을 변경할 수 있습니다. 어떤 요소에 우리가 `display: flex;`를 설정하면 외부 디스플레이 유형은 블록이지만 내부 디스플레이 유형은 `flex`으로 변경됩니다. 이 박스의 직계 자식은 가변 항목이 되고, 나중에 익히게 될 [가변박스](/ko/docs/Learn/CSS/CSS_layout/Flexbox) 규격에 명시된 규칙에 따라 배치됩니다.
+그러나 여러분은 `flex`과 같은 `display` 값을 사용하여 내부 디스플레이 유형을 변경할 수 있습니다. 어떤 요소에 우리가 `display: flex;`를 설정하면 외부 디스플레이 유형은 블록이지만 내부 디스플레이 유형은 `flex`으로 변경됩니다. 이 박스의 직계 자식은 플렉스 항목이 되고, 나중에 익히게 될 [플렉스박스](/ko/docs/Learn/CSS/CSS_layout/Flexbox) 규격에 명시된 규칙에 따라 배치됩니다.
 
-> **참고:** 디스플레이 속성 값 및 박스가 블록 및 인라인 레이아웃에서 작동하는 방법에 대해 자세히 보려면 [블록 및 인라인 레이아웃](/ko/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)에 대한 모질라 개발자 네트워크 가이드를 참조하십시오.
+> **참고:** 디스플레이 속성 값 및 박스가 블록 및 인라인 레이아웃에서 작동하는 방법에 대해 자세히 보려면 [블록 및 인라인 레이아웃](/ko/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)에 대한 Mozilla 개발자 네트워크 가이드를 참조하십시오.
 
 CSS 레이아웃에 대해 자세한 내용을 배우려면 다음번에는 예로 `flex`나 [`grid`](/ko/docs/Learn/CSS/CSS_layout/Grids)같은 박스가 취할 수 있는 그 밖의 다양한 내부 속성 값을 마주치게 될 겁니다.
 
@@ -81,7 +80,7 @@ CSS 레이아웃에 대해 자세한 내용을 배우려면 다음번에는 예�
 
 계속해서 몇 가지 예를 살펴보겠습니다. 아래에 우리는 세 개의 서로 다른 HTML 요소가 있으며, 모두 외부 디스플레이 유형이 `block`입니다. 첫 번째 단락은 CSS에 테두리가 추가된 단락입니다. 브라우저는 이걸 블록 박스로 렌더링하므로 단락은 새 줄에서 시작되며 확보된 너비 전체까지 확장할 겁니다.
 
-두 번째는 `display: flex` 사용해 배치된 목록입니다. 이 예제는 컨테이너 내부의 항목에 대해 가변 레이아웃을 수립하지만, 목록 자체는 블록 박스이며 단락과 같이 전체 컨테이너 너비로 확장되어 새 줄로 행갈이를 합니다.
+두 번째는 `display: flex` 사용해 배치된 목록입니다. 이 예제는 컨테이너 내부의 항목에 대해 플렉스 레이아웃을 수립하지만, 목록 자체는 블록 박스이며 단락과 같이 전체 컨테이너 너비로 확장되어 새 줄로 행갈이를 합니다.
 
 바로 아래에 우리는 블록 수준 단락을 하나 갖고 있으며 그 안에 두 개의 `<span>` 요소가 있습니다. 이들 요소는 보통 `inline`이겠지만, 그 중 하나에 블록 클래스에 있습니다. 우리가 그걸 미리 `display: block`로 설정했으니까요.
 
@@ -89,21 +88,21 @@ CSS 레이아웃에 대해 자세한 내용을 배우려면 다음번에는 예�
 
 우리는 다음 예제에서 `inline` 요소가 어떻게 동작하는지 볼 수 있습니다. 첫 번째 단락에서 `<span>`는 기본값으로 인라인으므로 새 줄 행갈이를 강제하지 않습니다.
 
-`display: inline-flex`로 설정된 `<ul>` 요소도 갖고 있는데, 이는 몇 가지 가변 항목 주변에 인라인 박스를 생성합니다.
+`display: inline-flex`로 설정된 `<ul>` 요소도 갖고 있는데, 이는 몇 가지 플렉스 항목 주변에 인라인 박스를 생성합니다.
 
-마지막으로 `display: inline`으로 설정된 두 단락이 있습니다. 인라인 가변 컨테이너와 단락은 모두 하나의 라인에서 하나로 진행하지 블록 수준 요소처럼 표시하기 위해 새 줄로 행갈이를 하지 않습니다.
+마지막으로 `display: inline`으로 설정된 두 단락이 있습니다. 인라인 플렉스 컨테이너와 단락은 모두 하나의 라인에서 하나로 진행하지 블록 수준 요소처럼 표시하기 위해 새 줄로 행갈이를 하지 않습니다.
 
 **예제에서 여러분은 `display: inline` 부분을 `display: block`으로, 또는 `display: inline-flex`를 `display: flex`로 디스플레이 모드 사이를 전환할 수 있습니다.**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1000)}}
 
-나중에 해당 단원에서 가변 레이아웃과 같은 것들을 접하게 될 것입니다. 당장 기억해야 할 핵심은 `display` 속성 값을 변경하면 박스의 외부 디스플레이 유형이 블록인지 인라인인지를 변경하여, 레이아웃 속 다른 요소 주위에 자신을 표시하는 방법이 달라진다는 것입니다.
+나중에 해당 단원에서 플렉스 레이아웃과 같은 것들을 접하게 될 것입니다. 당장 기억해야 할 핵심은 `display` 속성 값을 변경하면 박스의 외부 디스플레이 유형이 블록인지 인라인인지를 변경하여, 레이아웃 속 다른 요소 주위에 자신을 표시하는 방법이 달라진다는 것입니다.
 
 나머지 수업에서는 외부 디스플레이 유형에 집중할 것이다.
 
-## CSS Box Model이란 무엇인가?
+## CSS 박스 모델이란 무엇인가?
 
-전체 CSS box model은 블록 박스에 적용되며, 인라인 박스는 박스 모델에 정의된 일부 동작만 사용합니다. 이 모델은 당신이 페이지에서 볼 수 있는 박스를 생성하기 위해 박스의 서로 다른 부분인 여백, 테두리, 패딩 및 콘텐츠등이 어떻게 함께 작동할 것인지를 정의합니다. 몇 가지 복잡성을 추가하기 위해 표준 및 대체 박스 모델이 있습니다.
+전체 CSS 박스 모델은 블록 박스에 적용되며, 인라인 박스는 박스 모델에 정의된 일부 동작만 사용합니다. 이 모델은 당신이 페이지에서 볼 수 있는 박스를 생성하기 위해 박스의 서로 다른 부분인 여백, 테두리, 패딩 및 콘텐츠등이 어떻게 함께 작동할 것인지를 정의합니다. 몇 가지 복잡성을 추가하기 위해 표준 및 대체 박스 모델이 있습니다.
 
 ### Box의 구성
 
@@ -118,9 +117,9 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 ![박스 모델](box-model.png)
 
-### 표준 CSS box model
+### 표준 CSS 박스 모델
 
-표준 box model에서 box에서 `width`와 `height`를 부여하면 *content box*의 너비와 높이가 정의됩니다. 그런 다음 패딩과 테두리는 박스의 너비와 높이에 추가되여 박스가 점유하는 전체 크기가 정해집니다. 그 내용이 아래 이미지에서 제시되었습니다.
+표준 박스 모델에서 box에서 `width`와 `height`를 부여하면 *content box*의 너비와 높이가 정의됩니다. 그런 다음 패딩과 테두리는 박스의 너비와 높이에 추가되여 박스가 점유하는 전체 크기가 정해집니다. 그 내용이 아래 이미지에서 제시되었습니다.
 
 우리는 박스의 `width`와 `height`, `margin`과 `border` 및 `padding` CSS 값이 다음과 같이 지정되어 있다고 간주합니다:
 
@@ -140,7 +139,7 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 > **참고:** 여백은 박스의 실제 크기에 포함되지 않습니다. 물론 여백은 박스가 페이지에서 차지하는 총 공간에 영향을 미치지만, 박스의 외부 공간에만 영향을 미칩니다. 박스의 영역은 테두리에서 멈추게 됩니다. 여백으로 확장되지 않습니다.
 
-### 대체 CSS box model
+### 대체 CSS 박스 모델
 
 박스의 실제 크기를 얻기 위해 테두리와 패딩을 추가하는 것이 다소 불편하다고 생각할 수 있습니다. 당신 말이 옳을 것입니다! 이러한 이유로 CSS는 표준 박스 모델 이후 머지않아 대체 박스 모델이 도입되었습니다. 이 모델을 사용한다면 너비는 페이지에서 표시되는 박스 너비이므로 콘텐츠 영역 너비는 너비에서 패딩 및 테두리 너비를 뺀 너비입니다. 위에서 사용된 것과 동일한 CSS를 아래 결과에 대입하면(폭 = 350px, 높이 = 150px)가 됩니다.
 
@@ -160,7 +159,9 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```
@@ -179,7 +180,7 @@ html {
 
 ### 브라우저 개발자도구를 사용해 박스 모델 보기
 
-[브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하면 박스 모델을 훨씬 쉽게 이해할 수 있습니다. 파이어폭스의 개발자 도구에서 요소를 검사하면 요소의 크기와 여백, 패딩 및 테두리를 볼 수 있습니다. 이 방법으로 요소를 검사하면 실제로 그것이 당신이 생각하는 크기인지를 알아낼 수 있어 좋은 방법입니다.
+[브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하면 박스 모델을 훨씬 쉽게 이해할 수 있습니다. Firefox의 개발자 도구에서 요소를 검사하면 요소의 크기와 여백, 패딩 및 테두리를 볼 수 있습니다. 이 방법으로 요소를 검사하면 실제로 그것이 당신이 생각하는 크기인지를 알아낼 수 있어 좋은 방법입니다.
 
 ![FireFox의 DevTools를 이용한 박스 모델 검사](box-model-devtools.png)
 
@@ -252,7 +253,7 @@ html {
 - {{cssxref("border-left-style")}}
 - {{cssxref("border-left-color")}}
 
-**아래 예제에서 테두리를 생성하기 위해 다양한 약칭과 정식 명칭을 사용했습니다. 그것들의 작동 방식을 파악하기 위해 서로 다른 속성을 마음대로 부려보십시요. 테두리 속성에 대한 모질라 개발자 네트워크 페이지 페이지는 당신이 선택할 수 있는 다양한 테두리 스타일에 대한 정보를 제공합니다.**
+**아래 예제에서 테두리를 생성하기 위해 다양한 약칭과 정식 명칭을 사용했습니다. 그것들의 작동 방식을 파악하기 위해 서로 다른 속성을 마음대로 부려보십시요. 테두리 속성에 대한 Mozilla 개발자 네트워크 페이지 페이지는 당신이 선택할 수 있는 다양한 테두리 스타일에 대한 정보를 제공합니다.**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 1000)}}
 
@@ -298,7 +299,7 @@ html {
 
 여러분이 `padding`를 추가해 링크에 적중 영역을 확대하길 원하는 경우 이것이 유용할 수 있습니다. `<a>`는 `<span>`처럼 인라인 요소입니다. 여러분은 해당 요소에 `display: inline-block`을 사용해 패딩을 설정할 수 있으므로 사용자가 링크를 클릭할 수 있습니다.
 
-탐색 (메뉴)모음에서 꽤 자주 사용되는 것을 볼겁니다. 아래 탐색 모음은 가변박스를 사용해 행으로 표시되었으며, `<a>`를 마우스로 가리킬 때 `background-color`를 변경할 수 있도록 `<a>` 요소에 패딩 추기했습니다. 패딩은 `<ul>` 요소의 테두리와 겹치는 것처럼 보입니다. 그렇게 된 까닭은 `<a>`가 인라인 요소이기 때문입니다.
+탐색 (메뉴)모음에서 꽤 자주 사용되는 것을 볼겁니다. 아래 탐색 모음은 플렉스박스를 사용해 행으로 표시되었으며, `<a>`를 마우스로 가리킬 때 `background-color`를 변경할 수 있도록 `<a>` 요소에 패딩 추기했습니다. 패딩은 `<ul>` 요소의 테두리와 겹치는 것처럼 보입니다. 그렇게 된 까닭은 `<a>`가 인라인 요소이기 때문입니다.
 
 **`.links-list a` 선택기에 딸린 규칙에 `display: inline-block`를 추가하면, 다른 요소에 의한 패딩이 존중되므로 여러분은 이(겹치는) 문제가 해결되는 것을 보게될 것입니다.**
 
@@ -311,24 +312,3 @@ html {
 다음 단원에서는 [배경과 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)를 사용하여 평범한 보이는 박스를 더욱 흥미롭게 보이려면 어떤 방법이 있는지 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## 이번 단위에는
-
-1. [계단식 나열과 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택기](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [유형과 클레스, 아이디 선택기 selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [딸린 속성 선택기](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [의사 클래스와 의사 요소](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [조합기](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/%EC%83%81%EC%9E%90_%EB%AA%A8%EB%8D%B8)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [서로 다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [대열이탈 콘텐츠](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [속성값과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 항목 크기 설정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지와 미디아, 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [테이블 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 체계화](/ko/docs/Learn/CSS/Building_blocks/Organizing)

@@ -37,7 +37,9 @@ DOMString dataTransfer.getData(format);
 
 ```html
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <span id="drag" draggable="true" ondragstart="drag(event)">drag me to the other box</span>
+  <span id="drag" draggable="true" ondragstart="drag(event)"
+    >drag me to the other box</span
+  >
 </div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 ```
@@ -45,11 +47,12 @@ DOMString dataTransfer.getData(format);
 ### CSS
 
 ```css
-#div1, #div2 {
-    width:100px;
-    height:50px;
-    padding:10px;
-    border:1px solid #aaaaaa;
+#div1,
+#div2 {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
 }
 ```
 
@@ -57,20 +60,20 @@ DOMString dataTransfer.getData(format);
 
 ```js
 function allowDrop(allowdropevent) {
-    allowdropevent.target.style.color = 'blue';
-    allowdropevent.preventDefault();
+  allowdropevent.target.style.color = "blue";
+  allowdropevent.preventDefault();
 }
 
 function drag(dragevent) {
-    dragevent.dataTransfer.setData("text", dragevent.target.id);
-    dragevent.target.style.color = 'green';
+  dragevent.dataTransfer.setData("text", dragevent.target.id);
+  dragevent.target.style.color = "green";
 }
 
 function drop(dropevent) {
-    dropevent.preventDefault();
-    var data = dropevent.dataTransfer.getData("text");
-    dropevent.target.appendChild(document.getElementById(data));
-    document.getElementById("drag").style.color = 'black';
+  dropevent.preventDefault();
+  var data = dropevent.dataTransfer.getData("text");
+  dropevent.target.appendChild(document.getElementById(data));
+  document.getElementById("drag").style.color = "black";
 }
 ```
 

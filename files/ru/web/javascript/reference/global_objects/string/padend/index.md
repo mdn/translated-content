@@ -1,13 +1,6 @@
 ---
 title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
 
 {{JSRef}}{{SeeCompatTable}}
@@ -34,9 +27,9 @@ str.padEnd(targetLength [, padString])
 ## Примеры
 
 ```js
-'abc'.padEnd(10);         // "abc       "
-'abc'.padEnd(10, "foo");  // "abcfoofoof"
-'abc'.padEnd(6,"123456"); // "abc123"
+"abc".padEnd(10); // "abc       "
+"abc".padEnd(10, "foo"); // "abcfoofoof"
+"abc".padEnd(6, "123456"); // "abc123"
 ```
 
 ## Характеристики

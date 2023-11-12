@@ -1,5 +1,5 @@
 ---
-title: 'Element: DOMActivate event'
+title: "Element: DOMActivate event"
 slug: Web/API/Element/DOMActivate_event
 ---
 

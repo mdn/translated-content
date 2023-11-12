@@ -1,6 +1,8 @@
 ---
-title: Node.nextSibling
+title: "Node: nextSibling プロパティ"
 slug: Web/API/Node/nextSibling
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -25,23 +27,23 @@ slug: Web/API/Node/nextSibling
 ```html
 <div id="div-1">こちらは div-1 です。</div>
 <div id="div-2">こちらは div-2 です。</div>
-<br/>
+<br />
 <output><em>計算結果がありません。</em></output>
 ```
 
 ```js
-let el = document.getElementById('div-1').nextSibling,
-i = 1;
+let el = document.getElementById("div-1").nextSibling;
+let i = 1;
 
 let result = "div-1 の兄弟要素:<br/>";
 
 while (el) {
-  result += i + '. ' + el.nodeName+"<br/>";
+  result += `${i}. ${el.nodeName}<br/>`;
   el = el.nextSibling;
   i++;
 }
 
-const output = document.getElementsByTagName("output")[0];
+const output = document.querySelector("output");
 output.innerHTML = result;
 ```
 

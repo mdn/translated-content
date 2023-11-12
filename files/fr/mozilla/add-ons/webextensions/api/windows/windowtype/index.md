@@ -1,17 +1,6 @@
 ---
 title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - WindowType
-  - Windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 ---
 
 {{AddonSidebar()}}
@@ -27,9 +16,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"panel"`
 - `"devtools"`
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.WindowType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -266,7 +266,7 @@ Firefox などの Mozilla アプリケーションは、いくつもの特別な
 
 ### {{CSSxRef("border-color")}}
 
-- `-moz-use-text-color` {{deprecated_inline}} ({{bug(1306214)}} で削除)、代わりに {{CSSxRef("color_value#currentColor_keyword","currentcolor")}} を使用してください。
+- `-moz-use-text-color` {{deprecated_inline}} ([Firefox バグ 1306214](https://bugzil.la/1306214) で削除)、代わりに {{CSSxRef("color_value#currentColor_keyword","currentcolor")}} を使用してください。
 
 ### {{CSSxRef("border-style")}} と {{CSSxRef("outline-style")}}
 
@@ -532,7 +532,7 @@ Firefox などの Mozilla アプリケーションは、いくつもの特別な
 
 ## その他
 
-- {{CSSxRef("-moz-alt-content")}} (see {{Bug(11011)}})
+- {{CSSxRef("-moz-alt-content")}} (see [Firefox バグ 11011](https://bugzil.la/11011))
 
 ## 関連情報
 

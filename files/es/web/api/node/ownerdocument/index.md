@@ -31,6 +31,6 @@ var html = d.documentElement;
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.ownerDocument")}}
+{{Compat}}

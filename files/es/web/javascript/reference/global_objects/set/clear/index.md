@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/clear
 ---
 
 {{JSRef}}
@@ -27,22 +26,22 @@ var mySet = new Set();
 mySet.add(1);
 mySet.add("foo");
 
-mySet.size;       // 2
+mySet.size; // 2
 mySet.has("foo"); // true
 
 mySet.clear();
 
-mySet.size;       // 0
-mySet.has("bar")  // false
+mySet.size; // 0
+mySet.has("bar"); // false
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.clear")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,6 +1,9 @@
 ---
-title: Element.id
+title: "Element: id プロパティ"
+short-title: id
 slug: Web/API/Element/id
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{ ApiRef("DOM") }}
@@ -13,17 +16,9 @@ slug: Web/API/Element/id
 
 > **メモ:** 識別子は大文字小文字の区別がありますが、大文字小文字の区別だけで見分ける ID を作ることは避けてください。
 
-## 構文
+## 値
 
-```js
-var idStr = element.id; // id を取得
-```
-
-```js
-element.id = 'newid'; // id を設定
-```
-
-- `idStr` はこの要素の識別子です。
+文字列です。
 
 ## 仕様書
 

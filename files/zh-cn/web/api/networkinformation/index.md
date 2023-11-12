@@ -5,7 +5,7 @@ slug: Web/API/NetworkInformation
 
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-**`NetworkInformation`** 提供有关设备正在使用的连接与网络进行通信的信息，并提供了在连接类型更改时通知脚本的事件。`NetworkInformation` 接口不能被是实例化，而是通过 {{domxref("Navigator")}} 的 `connection` 属性进行访问。
+**`NetworkInformation`** 提供有关设备正在使用的连接与网络进行通信的信息，并提供了在连接类型更改时通知脚本的事件。`NetworkInformation` 接口是不能被实例化的，而是通过 {{domxref("Navigator")}} 的 `connection` 属性进行访问。
 
 {{AvailableInWorkers}}
 

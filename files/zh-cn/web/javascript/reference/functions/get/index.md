@@ -44,12 +44,12 @@ slug: Web/JavaScript/Reference/Functions/get
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length == 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test".
 ```
 
@@ -68,20 +68,26 @@ delete obj.latest;
 要随时将 getter 添加到现有对象，使用 {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 }
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
+console.log(o.b); // Runs the getter, which yields a + 1 (which is 1)
 ```
 
 ### 使用计算出的属性名
 
 ```js
-var expr = 'foo';
+var expr = "foo";
 
 var obj = {
-  get [expr]() { return 'bar'; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -89,7 +95,7 @@ console.log(obj.foo); // "bar"
 
 ### 智能 / 自我复写/ 懒加载 getters
 
-Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。getter 延迟计算值的成本，直到需要此值，如果不需要，您就不用支付成本。
+Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。getter 延迟计算值的成本，直到需要此值，如果不需要，你就不用支付成本。
 
 一种额外的优化技术是用**智能 (或称[记忆化](https://en.wikipedia.org/wiki/Memoization))getters** 延迟属性值的计算并将其缓存以备以后访问。该值是在第一次调用 getter 时计算的，然后被缓存，因此后续访问返回缓存值而不重新计算它。这在以下情况下很有用：
 
@@ -108,7 +114,7 @@ get notifier() {
 },
 ```
 
-对于 Firefox 代码，另请参阅定义[`defineLazyGetter()`](<https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>) 函数的`XPCOMUtils.jsm`代码模块。
+对于 Firefox 代码，另请参阅定义[`defineLazyGetter()`](<https://developer.mozilla.org/zh-CN/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>) 函数的`XPCOMUtils.jsm`代码模块。
 
 ### `get` vs. `defineProperty`
 
@@ -119,7 +125,7 @@ get notifier() {
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
@@ -127,13 +133,11 @@ const obj = new Example();
 console.log(obj.hello);
 // "world"
 
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
 
 console.log(
-  Object.getOwnPropertyDescriptor(
-    Object.getPrototypeOf(obj), 'hello'
-  )
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
 );
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```
@@ -153,4 +157,4 @@ console.log(
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- 在 Javascript 指南中 [定义 Getters 和 Setters](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- 在 Javascript 指南中 [定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter)

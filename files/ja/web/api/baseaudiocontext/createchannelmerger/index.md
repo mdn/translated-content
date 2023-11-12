@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createChannelMerger()
 slug: Web/API/BaseAudioContext/createChannelMerger
-original_slug: Web/API/AudioContext/createChannelMerger
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -13,7 +12,7 @@ original_slug: Web/API/AudioContext/createChannelMerger
 ## 構文
 
 ```js
-createChannelMerger(numberOfInputs)
+createChannelMerger(numberOfInputs);
 ```
 
 ### 引数
@@ -31,29 +30,29 @@ createChannelMerger(numberOfInputs)
 
 ```js
 var ac = new AudioContext();
-ac.decodeAudioData(someStereoBuffer, function(data) {
- var source = ac.createBufferSource();
- source.buffer = data;
- var splitter = ac.createChannelSplitter(2);
- source.connect(splitter);
- var merger = ac.createChannelMerger(2);
+ac.decodeAudioData(someStereoBuffer, function (data) {
+  var source = ac.createBufferSource();
+  source.buffer = data;
+  var splitter = ac.createChannelSplitter(2);
+  source.connect(splitter);
+  var merger = ac.createChannelMerger(2);
 
- // 左チャンネルのボリュームのみ小さくする
- var gainNode = ac.createGain();
- gainNode.gain.setValueAtTime(0.5, ac.currentTime);
- splitter.connect(gainNode, 0);
+  // 左チャンネルのボリュームのみ小さくする
+  var gainNode = ac.createGain();
+  gainNode.gain.setValueAtTime(0.5, ac.currentTime);
+  splitter.connect(gainNode, 0);
 
- // スプリッターをマージャーの 2 番目の入力に接続すると、チャンネルが効果的に交換され、
- // ステレオイメージが反転します。
- gainNode.connect(merger, 0, 1);
- splitter.connect(merger, 1, 0);
+  // スプリッターをマージャーの 2 番目の入力に接続すると、チャンネルが効果的に交換され、
+  // ステレオイメージが反転します。
+  gainNode.connect(merger, 0, 1);
+  splitter.connect(merger, 1, 0);
 
- var dest = ac.createMediaStreamDestination();
+  var dest = ac.createMediaStreamDestination();
 
- // ChannelMergerNode を使っているので、ステレオの MediaStream が
- // できました。これでウェブオーディオグラフを WebRTC や MediaRecorder などに
- // パイプするのに使えます。
- merger.connect(dest);
+  // ChannelMergerNode を使っているので、ステレオの MediaStream が
+  // できました。これでウェブオーディオグラフを WebRTC や MediaRecorder などに
+  // パイプするのに使えます。
+  merger.connect(dest);
 });
 ```
 

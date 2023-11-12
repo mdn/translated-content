@@ -1,5 +1,5 @@
 ---
-title: 'Advertencia: codigo inaccesible despues de sentencia de retorno'
+title: "Warning: unreachable code after return statement"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
 
@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Errors/Stmt_after_return
 ## Mensaje
 
 ```
-Advertencia: código inaccesible después de sentencia de retorno (Firefox)
+Warning: unreachable code after return statement (Firefox)
 ```
 
 ## Tipo de error
@@ -41,13 +41,13 @@ Advertencias no seran mostradas por retornos sin punto y coma si la sentencia lo
 function f() {
   var x = 3;
   x += 4;
-  return x;   // return sale de la funcion inmediatamente
-  x -= 3;     // esta linea nunca se ejecutara ; es inalcanzable
+  return x; // return sale de la funcion inmediatamente
+  x -= 3; // esta linea nunca se ejecutara ; es inalcanzable
 }
 
 function f() {
-  return     // es tratado como `return;`
-    3 + 4;   //la funcion regresa, y esta linea nunca es alcanzada
+  return; // es tratado como `return;`
+  3 + 4; //la funcion regresa, y esta linea nunca es alcanzada
 }
 ```
 
@@ -58,11 +58,11 @@ function f() {
   var x = 3;
   x += 4;
   x -= 3;
-  return x;  // OK: regreso despues de todas las otras declaraciones
+  return x; // OK: regreso despues de todas las otras declaraciones
 }
 
 function f() {
-  return 3 + 4  // OK: sin punto y coma regresa la expresion en la misma linea
+  return 3 + 4; // OK: sin punto y coma regresa la expresion en la misma linea
 }
 ```
 

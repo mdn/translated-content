@@ -1,6 +1,6 @@
 ---
 title: CSS テキスト
-slug: Web/CSS/CSS_Text
+slug: Web/CSS/CSS_text
 ---
 
 {{CSSRef}}

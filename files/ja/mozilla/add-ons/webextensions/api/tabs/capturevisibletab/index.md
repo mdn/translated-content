@@ -13,9 +13,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 
 ```js
 var capturing = browser.tabs.captureVisibleTab(
-  windowId,               // optional integer
-  options                 // optional extensionTypes.ImageDetails
-)
+  windowId, // optional integer
+  options, // optional extensionTypes.ImageDetails
+);
 ```
 
 ### 引数
@@ -42,7 +42,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var capturing = browser.tabs.captureVisibleTab();
   capturing.then(onCaptured, onError);
 });
@@ -52,7 +52,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.captureVisibleTab")}}
+{{Compat}}
 
 > **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-captureVisibleTab) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 

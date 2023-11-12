@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/lineNumber
 ---
 
 No es una norma
@@ -15,18 +14,18 @@ La propiedad **lineNumber** contiene el número de linea en el archivo que arroj
 ### Utilizando `lineNumber`
 
 ```js
-var e = new Error('No fue posible analizar el dato introducido');
+var e = new Error("No fue posible analizar el dato introducido");
 throw e;
-console.log(e.lineNumber) // 2
+console.log(e.lineNumber); // 2
 ```
 
 ### Ejemplo alternativo utilizando el evento '`error'`
 
 ```js
-window.addEventListener('error', function(e) {
+window.addEventListener("error", function (e) {
   console.log(e.lineno); // 5
 });
-var e = new Error('No fue posible analizar el dato introducido');
+var e = new Error("No fue posible analizar el dato introducido");
 throw e;
 ```
 
@@ -50,7 +49,7 @@ Tabla de compatibilidad
 | -------------- | ------------- | ------------------- | --------------------- | ------------- | ------------- | ------------- |
 | Soporte básico | No compatible | No compatible       | Compatible            | No compatible | No compatible | No compatible |
 
-## Vea también:
+## Vea también
 
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
 - {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}

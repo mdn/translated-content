@@ -5,13 +5,13 @@ slug: Web/API/ReadableStream/pipeThrough
 
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStream")}} 接口的 **`pipeThrough()`** 方法提供了一种链式的方式，将当前流通过转换流或者其它任何一对可写/可读的流进行管道传输。
+{{domxref("ReadableStream")}} 接口的 **`pipeThrough()`** 方法提供了一种链式的方式，将当前流通过转换流或者其他任何一对可写/可读的流进行管道传输。
 
 传输一个流通常在管道传输的时间内锁定这个流，以阻止其他 reader 锁定它。
 
 ## 语法
 
-```js
+```js-nolint
 pipeThrough(transformStream)
 pipeThrough(transformStream, options)
 ```
@@ -19,6 +19,7 @@ pipeThrough(transformStream, options)
 ### 参数
 
 - `transformStream`
+
   - : 由一对可读流和可写流组成的 {{domxref("TransformStream")}}（或者结构为 `{writable, readable}` 的对象），它们共同工作以对数据进行转换。`writable` 流写入的数据在某些状态下可以被 `readable` 流读取。例如，向 {{domxref("TextDecoder")}} 写入字节并从中读取字符串，而视频解码器则是写入编码的字节数据，并从中读取解压后的视频帧。
 
 - `options` {{optional_inline}}
@@ -51,13 +52,13 @@ pipeThrough(transformStream, options)
 
 ```js
 // 通过 fetch 获取原始图像
-fetch('png-logo.png')
-// 将响应的 body 作为 ReadableStream
-.then(response => response.body)
-.then(rs => logReadableStream('Fetch Response Stream', rs))
-// 从原始图像创造一个 PNG 的灰度图像
-.then(body => body.pipeThrough(new PNGTransformStream()))
-.then(rs => logReadableStream('PNG Chunk Stream', rs))
+fetch("png-logo.png")
+  // 将响应的 body 作为 ReadableStream
+  .then((response) => response.body)
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
+  // 从原始图像创造一个 PNG 的灰度图像
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 ## 规范
@@ -67,3 +68,8 @@ fetch('png-logo.png')
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- [链式管道传输](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams#链式管道传输)

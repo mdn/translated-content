@@ -1,6 +1,9 @@
 ---
-title: HTMLTableElement.tBodies
+title: "HTMLTableElement: tBodies プロパティ"
+short-title: tBodies
 slug: Web/API/HTMLTableElement/tBodies
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -21,11 +24,9 @@ slug: Web/API/HTMLTableElement/tBodies
 
 上記の HTML から生成される HTML DOM には、 HTML ソースにタグが含まれていなくても、 {{HTMLElement("tbody")}} 要素が存在しています。
 
-## 構文
+## 値
 
-```js
-HTMLCollectionObject = table.tBodies
-```
+生きた {{domxref("HTMLCollection")}} です。
 
 ## 例
 

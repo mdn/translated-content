@@ -61,19 +61,19 @@ Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a
 
 Este elemento inclue os [Atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("clear")}} {{Deprecated_Inline}}
+- `clear` {{Deprecated_Inline}}
 
   - : Indica onde começar a próxima linha depois da quebra.
 
-    > **Nota:** Este atributo está obsoleto em {{HTMLVersionInline(5)}} e **Não deve ser usado por autores**. Use a propriedade CSS {{CSSxref('clear')}} em vez disso.
+    > **Nota:** Este atributo está obsoleto em HTML 5 e **Não deve ser usado por autores**. Use a propriedade CSS {{CSSxref('clear')}} em vez disso.
 
 ## Exemplo
 
 ```html
-Mozilla Foundation<br>
-1981 Landings Drive<br>
-Building K<br>
-Mountain View, CA 94043-0801<br>
+Mozilla Foundation<br />
+1981 Landings Drive<br />
+Building K<br />
+Mountain View, CA 94043-0801<br />
 USA
 ```
 
@@ -87,15 +87,11 @@ USA
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.2.1', '&lt;br&gt;')}}                     | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com o browser
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## Veja também
 

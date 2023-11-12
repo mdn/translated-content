@@ -1,7 +1,8 @@
 ---
-title: 'HTMLElement: cut イベント'
+title: "HTMLElement: cut イベント"
 slug: Web/API/HTMLElement/cut_event
-original_slug: Web/API/HTMLElement/oncut
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -10,12 +11,12 @@ original_slug: Web/API/HTMLElement/oncut
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener('cut', event => { });
+addEventListener("cut", (event) => {});
 
-oncut = event => { };
+oncut = (event) => {};
 ```
 
 ## イベント型
@@ -28,7 +29,7 @@ oncut = event => { };
 
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
   - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
 
 ## 例
@@ -39,7 +40,9 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ```html
 <h3>このテキストエリアで実行しましょう。</h3>
-<textarea id="editor" rows="3">このフィールド内のテキストをコピーしたり切り取りしたりしてみましょう。</textarea>
+<textarea id="editor" rows="3">
+このフィールド内でテキストのコピーや切り取りをしてみましょう。
+</textarea>
 
 <h3>ログ:</h3>
 <p id="log"></p>
@@ -49,16 +52,16 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ```js
 function logCopy(event) {
-  log.innerText = 'Copied!\n' + log.innerText;
+  log.innerText = `Copied!\n${log.innerText}`;
 }
 
 function preventCut(event) {
   event.preventDefault();
-  log.innerText = 'Cut blocked!\n' + log.innerText;
+  log.innerText = `Cut blocked!\n${log.innerText}`;
 }
 
-const editor = document.getElementById('editor');
-const log = document.getElementById('log');
+const editor = document.getElementById("editor");
+const log = document.getElementById("log");
 
 editor.oncopy = logCopy;
 editor.oncut = preventCut;

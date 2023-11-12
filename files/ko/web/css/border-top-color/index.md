@@ -45,9 +45,10 @@ border-top-color: unset;
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 
@@ -57,7 +58,7 @@ border-top-color: unset;
 .mybox {
   border: solid 0.3em gold;
   border-top-color: red;
-    width: auto;
+  width: auto;
 }
 
 .redtext {

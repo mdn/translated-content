@@ -31,11 +31,11 @@ ctx.shadowColor = color;
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Shadow
-ctx.shadowColor = 'red';
+ctx.shadowColor = "red";
 ctx.shadowOffsetX = 10;
 ctx.shadowOffsetY = 10;
 

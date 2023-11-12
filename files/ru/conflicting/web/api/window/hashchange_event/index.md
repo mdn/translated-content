@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers.onhashchange
 slug: conflicting/Web/API/Window/hashchange_event
-translation_of: Web/API/WindowEventHandlers/onhashchange
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
 
@@ -59,11 +58,7 @@ The dispatched `hashchange` event has the following fields:
 
 ## Specifications
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     |         |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     |         |
+{{Specifications}}
 
 ## Поддержка браузерами
 

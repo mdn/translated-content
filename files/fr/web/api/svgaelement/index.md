@@ -1,13 +1,6 @@
 ---
 title: SVGAElement
 slug: Web/API/SVGAElement
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
-  - WebAPI
-translation_of: Web/API/SVGAElement
 ---
 
 ## SVG a DOM interface
@@ -58,8 +51,8 @@ L'interface `SVGAElement` fournit un accès aux propriétés des éléments [`<a
 
 ## Propriétés
 
-| Nom     | Type                                         | Description                                                                                           |
-| ------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Nom     | Type                               | Description                                                                              |
+| ------- | ---------------------------------- | ---------------------------------------------------------------------------------------- |
 | `cible` | {{ domxref("SVGAnimatedString") }} | Correspond à attribuer {{ SVGAttr("cible") }} sur l'élément {{ SVGElement("a") }} donné. |
 
 ## Methodes

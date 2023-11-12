@@ -21,7 +21,7 @@ A {{domxref("Boolean")}}. `true` 表示被静音， `false` 表示未被静音�
 ## Example
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.muted); // false
 ```
 

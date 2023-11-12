@@ -3,6 +3,8 @@ title: CORS
 slug: Glossary/CORS
 ---
 
+{{GlossarySidebar}}
+
 **CORS**（Cross-Origin Resource Sharing，跨源资源共享）是一个系统，它由一系列传输的 {{Glossary("Header", "HTTP 标头")}}组成，这些 HTTP 标头决定浏览器是否阻止前端 JavaScript 代码获取跨源请求的响应。
 
 [同源安全策略](/zh-CN/docs/Web/Security/Same-origin_policy)默认阻止“跨源”获取资源。但是 CORS 给了 web 服务器这样的权限，即服务器可以选择，允许跨源请求访问到它们的资源。
@@ -30,6 +32,6 @@ slug: Glossary/CORS
 
 ## 参见
 
-- 在 MDN 的[跨源资源共享（CORS）](/en-US/docs/Web/HTTP/CORS)
+- 在 MDN 的[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - 维基百科上的[跨源资源共享](https://zh.wikipedia.org/wiki/跨來源資源共享)
 - [Fetch 规范](https://fetch.spec.whatwg.org)

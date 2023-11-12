@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 
 ## 語法
 
-```plain
+```js-nolint
 isNaN(value)
 ```
 
@@ -45,43 +45,43 @@ isNaN(value)
 一個 `isNaN` 的 polyfill 可以理解為（這個 polyfill 利用了 `NaN` 自身永不等於自身這一特性）：
 
 ```js
-var isNaN = function(value) {
-    var n = Number(value);
-    return n !== n;
+var isNaN = function (value) {
+  var n = Number(value);
+  return n !== n;
 };
 ```
 
 ## 範例
 
 ```js
-isNaN(NaN);       // true
+isNaN(NaN); // true
 isNaN(undefined); // true
-isNaN({});        // true
+isNaN({}); // true
 
-isNaN(true);      // false
-isNaN(null);      // false
-isNaN(37);        // false
+isNaN(true); // false
+isNaN(null); // false
+isNaN(37); // false
 
 // 字串
-isNaN("37");      // false: "37" 轉換成數字的 37 後就不是 NaN 了
-isNaN("37.37");   // false: "37.37" 轉換成數字的 37.37 後就不是 NaN 了
-isNaN("123ABC");  // true:  parseInt("123ABC") 是 123 但 Number("123ABC") 是 NaN
-isNaN("");        // false: 空字串轉換成數字的 0 後就不是 NaN 了
-isNaN(" ");       // false: 有空白的字串轉換成數字的 0 後就不是 NaN 了
+isNaN("37"); // false: "37" 轉換成數字的 37 後就不是 NaN 了
+isNaN("37.37"); // false: "37.37" 轉換成數字的 37.37 後就不是 NaN 了
+isNaN("123ABC"); // true:  parseInt("123ABC") 是 123 但 Number("123ABC") 是 NaN
+isNaN(""); // false: 空字串轉換成數字的 0 後就不是 NaN 了
+isNaN(" "); // false: 有空白的字串轉換成數字的 0 後就不是 NaN 了
 
 // 日期
-isNaN(new Date());                // false
-isNaN(new Date().toString());     // true
+isNaN(new Date()); // false
+isNaN(new Date().toString()); // true
 
 // 這個偵測的錯誤是不能完全信賴 isNaN 的理由
-isNaN("blabla")   // true: "blabla" 被轉換為數字，將其解析為數字失敗後回傳了 NaN
+isNaN("blabla"); // true: "blabla" 被轉換為數字，將其解析為數字失敗後回傳了 NaN
 ```
 
 ### 實用的特殊狀況行為
 
 當然，你能以更用途導向的方法去思考 `isNaN()`：如果 `isNaN()` 回傳 `false`，那麼把 `x` 用在任何算術表達式都不會回傳 `NaN`。相反地，如果回傳 `true`，那麼把 `x` 用在任何算術表達式都會是 `NaN`。這在 JavaScript 的意義是 `isNaN(x) == true` 等於 `x - 0` 回傳 `NaN`（儘管在 JavaScript 裡面 `x - 0 == NaN` 永遠回傳 false，你因而無法測試）── 事實上，`isNaN(x)`、`isNaN(x - 0)`、`isNaN(Number(x))`、`Number.isNaN(x - 0)`、`Number.isNaN(Number(x))` 在 JavaScript 裡面，都會回傳一樣的東西。而 `isNaN(x)` 是所有表達式裡面最短的一種。
 
-比方說，你可以用這個式子，去測試函式的參數能不能透過算術處理（也就是能「像」數字一樣被利用）、否則就提供預設值之類的。你可以透過上下文的根據以隱式數值轉換(implicitly converting values)，以使用 JavaScript 提供的全部功能。
+比方說，你可以用這個式子，去測試函式的參數能不能透過算術處理（也就是能「像」數字一樣被利用）、否則就提供預設值之類的。你可以透過上下文的根據以隱式數值轉換（implicitly converting value），以使用 JavaScript 提供的全部功能。
 
 ## 範例
 
@@ -89,56 +89,56 @@ isNaN("blabla")   // true: "blabla" 被轉換為數字，將其解析為數字�
 function increment(x) {
   if (isNaN(x)) x = 0;
   return x + 1;
-};
+}
 
 // 與 Number.isNaN() 一樣：
 function increment(x) {
   if (Number.isNaN(Number(x))) x = 0;
   return x + 1;
-};
+}
 
 // 以下範例的函式參數 x，isNaN(x) 都會回傳 false，
 // 儘管 x 不是數字，依舊能用在算術表達式。
-increment("");            // 1: "" 被轉換成 0
-increment(new String());  // 1: 空字串的新字串物件被轉換成 0
-increment([]);            // 1: [] 被轉換成 0
-increment(new Array());   // 1: 空陣列的新陣列物件被轉換成 0
-increment("0");           // 1: "0" 被轉換成 0
-increment("1");           // 2: "1" 被轉換成 1
-increment("0.1");         // 1.1: "0.1" 被轉換成 0.1
-increment("Infinity");    // Infinity: "Infinity" 被轉換成 Infinity
-increment(null);          // 1: null 被轉換成 0
-increment(false);         // 1: false 被轉換成 0
-increment(true);          // 2: true 被轉換成 1
-increment(new Date());    // 回傳以毫秒為單位加 1，當今的日期/時間
+increment(""); // 1: "" 被轉換成 0
+increment(new String()); // 1: 空字串的新字串物件被轉換成 0
+increment([]); // 1: [] 被轉換成 0
+increment(new Array()); // 1: 空陣列的新陣列物件被轉換成 0
+increment("0"); // 1: "0" 被轉換成 0
+increment("1"); // 2: "1" 被轉換成 1
+increment("0.1"); // 1.1: "0.1" 被轉換成 0.1
+increment("Infinity"); // Infinity: "Infinity" 被轉換成 Infinity
+increment(null); // 1: null 被轉換成 0
+increment(false); // 1: false 被轉換成 0
+increment(true); // 2: true 被轉換成 1
+increment(new Date()); // 回傳以毫秒為單位加 1，當今的日期/時間
 
 // 以下範例的函式參數 x，isNaN(x) 都會回傳 false，而 x 的確是數字。
-increment(-1);            // 0
-increment(-0.1);          // 0.9
-increment(0);             // 1
-increment(1);             // 2
-increment(2);             // 3
+increment(-1); // 0
+increment(-0.1); // 0.9
+increment(0); // 1
+increment(1); // 2
+increment(2); // 3
 // …等等…
-increment(Infinity);      // Infinity
+increment(Infinity); // Infinity
 
 // 以下範例的函式參數 x，isNaN(x) 都會回傳 true，x 也的確不是數字。
 // 使得函式會被 0 取代，並回傳 1
-increment(String);            // 1
-increment(Array);             // 1
-increment("blabla");          // 1
-increment("-blabla");         // 1
-increment(0/0);               // 1
-increment("0/0");             // 1
-increment(Infinity/Infinity); // 1
-increment(NaN);               // 1
-increment(undefined);         // 1
-increment();                  // 1
+increment(String); // 1
+increment(Array); // 1
+increment("blabla"); // 1
+increment("-blabla"); // 1
+increment(0 / 0); // 1
+increment("0/0"); // 1
+increment(Infinity / Infinity); // 1
+increment(NaN); // 1
+increment(undefined); // 1
+increment(); // 1
 
 // isNaN(x) 與 isNaN(Number(x)) 永遠一樣，不過這裡的 x 是強制存在的！
-isNaN(x) == isNaN(Number(x)) // 針對所有 x 的值都是 true，x == undefined 也不例外，
-                             // 因為 isNaN(undefined) == true 且 Number(undefined) 回傳 NaN，
-                             // 不過……
-isNaN() == isNaN(Number())   // false，因為 isNaN() == true 且 Number() == 0
+isNaN(x) == isNaN(Number(x)); // 針對所有 x 的值都是 true，x == undefined 也不例外，
+// 因為 isNaN(undefined) == true 且 Number(undefined) 回傳 NaN，
+// 不過……
+isNaN() == isNaN(Number()); // false，因為 isNaN() == true 且 Number() == 0
 ```
 
 ## 規範

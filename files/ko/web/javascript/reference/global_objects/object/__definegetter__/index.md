@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ## 문법
 
 ```js
-    obj.__defineGetter__(prop, func)
+obj.__defineGetter__(prop, func);
 ```
 
 ### 인자
@@ -39,31 +39,36 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 // Non-standard and deprecated way
 
 var o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__("gimmeFive", function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
-
 
 // Standard-compliant ways
 
 // Using the get operator
-var o = { get gimmeFive() { return 5; } };
+var o = {
+  get gimmeFive() {
+    return 5;
+  },
+};
 console.log(o.gimmeFive); // 5
 
 // Using Object.defineProperty
 var o = {};
-Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+Object.defineProperty(o, "gimmeFive", {
+  get: function () {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
@@ -76,4 +81,4 @@ console.log(o.gimmeFive); // 5
 - [`Object.prototype.__lookupSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - [JS Guide: Defining Getters and Setters](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
-- {{bug(647423)}}
+- [Firefox bug 647423](https://bugzil.la/647423)

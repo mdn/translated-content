@@ -1,9 +1,11 @@
 ---
-title: 'CSP: prefetch-src'
+title: "CSP: prefetch-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`prefetch-src`** ディレクティブは、事前読み込みまたは事前描画することができる有効なリソースを指定します。
 
@@ -20,7 +22,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`prefetc
     <tr>
       <th scope="row">{{CSP("default-src")}} による代替</th>
       <td>
-        あり。このディレクティブがない場合、ユーザーエージェントは `default-src` ディレクティブを探します。
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。
       </td>
     </tr>
   </tbody>
@@ -54,8 +56,8 @@ Content-Security-Policy: prefetch-src https://example.com/
 次のコードで読み込もうとすると、指定された URL が `prefetch-src` のソース一覧にないので、ネットワークエラーになります。
 
 ```html
-    <link rel="prefetch" src="https://example.org/"></link>
-    <link rel="prerender" src="https://example.org/"></link>
+<link rel="prefetch" href="https://example.org/" />
+<link rel="prerender" href="https://example.org/" />
 ```
 
 ## 仕様書

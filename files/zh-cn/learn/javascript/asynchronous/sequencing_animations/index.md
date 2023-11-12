@@ -57,15 +57,15 @@ slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 
 ```js
 const aliceTumbling = [
-  { transform: 'rotate(0) scale(1)' },
-  { transform: 'rotate(360deg) scale(0)' }
+  { transform: "rotate(0) scale(1)" },
+  { transform: "rotate(360deg) scale(0)" },
 ];
 
 const aliceTiming = {
   duration: 2000,
   iterations: 1,
-  fill: 'forwards'
-}
+  fill: "forwards",
+};
 
 const alice1 = document.querySelector("#alice1");
 const alice2 = document.querySelector("#alice2");
@@ -99,17 +99,9 @@ alice1.animate(aliceTumbling, aliceTiming);
 1. 将作品放入在线共享编辑器中，如 [CodePen](https://codepen.io/)，[jsFiddle](https://jsfiddle.net/)，或者 [Glitch](https://glitch.com/)。
 2. 在 [MDN 论坛学习分类](https://discourse.mozilla.org/c/mdn/learn/250)中写一篇文章寻求评估和/或帮助。你的文章应该包括：
 
-    - 一个描述性的标题，如“请帮助评估测序动画”。
-    - 详细说明你已经尝试过的方法，以及你希望我们做的事情，例如：你遇到困难需要帮助，或者你完成了作品，需要评估。
-    - 一个指向你的作品的链接（托管在在线共享编辑器中，如步骤 1 所述），这是一个很好的实践ーー如果你看不到他们的代码，就很难帮助有编码问题的人。
-    - 指向实际任务或评估页面的链接，这样我们就可以找到你需要帮助的问题。
+   - 一个描述性的标题，如“请帮助评估测序动画”。
+   - 详细说明你已经尝试过的方法，以及你希望我们做的事情，例如：你遇到困难需要帮助，或者你完成了作品，需要评估。
+   - 一个指向你的作品的链接（托管在在线共享编辑器中，如步骤 1 所述），这是一个很好的实践ーー如果你看不到他们的代码，就很难帮助有编码问题的人。
+   - 指向实际任务或评估页面的链接，这样我们就可以找到你需要帮助的问题。
 
 {{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## 在本模块中
-
-- [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [如何使用 Promise](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
-- [应用一个基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Worker 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- **测验：序列动画**

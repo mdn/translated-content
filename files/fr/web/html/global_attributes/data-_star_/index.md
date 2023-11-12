@@ -1,13 +1,6 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/data-*
-original_slug: Web/HTML/Attributs_universels/data-*
 ---
 
 {{HTMLSidebar("Global_attributes")}}

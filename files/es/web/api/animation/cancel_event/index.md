@@ -1,7 +1,6 @@
 ---
 title: Animation.oncancel
 slug: Web/API/Animation/cancel_event
-original_slug: Web/API/Animation/oncancel
 ---
 
 {{ APIRef("Web Animations") }}

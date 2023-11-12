@@ -1,11 +1,6 @@
 ---
 title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
-original_slug: Web/JavaScript/Reference/Objets_globaux/decodeURIComponent
 ---
 
 {{jsSidebar("Objects")}}
@@ -17,7 +12,7 @@ La fonction **`decodeURIComponent()`** permet de décoder un composant d'un Unif
 ## Syntaxe
 
 ```js
-decodeURIComponent(encodedURI)
+decodeURIComponent(encodedURI);
 ```
 
 ### Paramètres

@@ -13,8 +13,8 @@ slug: Web/API/Headers/append
 
 ## 语法
 
-```js
-myHeaders.append(name,value);
+```js-nolint
+append(name, value)
 ```
 
 ### 参数
@@ -39,16 +39,16 @@ var myHeaders = new Headers(); // Currently empty
 可以通过 append() 方法添加 header:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 如果指定 header 不存在，`append()`将会添加这个 header 并赋值 . 如果指定 header 已存在并允许有多个值，`append()`将会把指定值添加到值队列的末尾。
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.getAll('Accept-Encoding'); // Returns [ "deflate", "gzip" ]
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.getAll("Accept-Encoding"); // Returns [ "deflate", "gzip" ]
 ```
 
 要使用新值覆盖旧值，请使用{{domxref("Headers.set")}}。

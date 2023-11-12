@@ -1,7 +1,6 @@
 ---
 title: 執筆ガイドライン
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
 ---
 
 {{MDNSidebar}}

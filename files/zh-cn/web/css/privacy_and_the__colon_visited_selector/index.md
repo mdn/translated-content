@@ -3,11 +3,11 @@ title: 隐私与:visited 选择器
 slug: Web/CSS/Privacy_and_the_:visited_selector
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 在大概 2010 年时，[CSS](/zh-CN/docs/Web/CSS) 选择器 {{ cssxref(":visited") }} 被网站用来检测用户的浏览记录，并找出用户都访问过哪些网站。这些可以通过 {{domxref("window.getComputedStyle")}} 和其他技术实现。这个过程可以很迅速的执行，不仅能够判断用户是否曾经访问过这个页面，还能借此猜测出大量的用户身份信息。
 
-为了解决这个问题，{{ Gecko("2") }} 实现了一项隐私方面的更新，限制网站可以从访问过的链接中获得的信息。其他的浏览器也已经做了相同的改变。
+为了解决这个问题，Gecko 2 实现了一项隐私方面的更新，限制网站可以从访问过的链接中获得的信息。其他的浏览器也已经做了相同的改变。
 
 ## 善意的谎言
 
@@ -33,16 +33,16 @@ slug: Web/CSS/Privacy_and_the_:visited_selector
 
 ```css
 :link {
-   outline: 1px dotted blue;
-   background-color: white;
-   /* background-color 的默认值为 'transparent'。
+  outline: 1px dotted blue;
+  background-color: white;
+  /* background-color 的默认值为 'transparent'。
       你必须指定一个不同值，否则无法应用对 :visited 的修改 */
 }
 
 :visited {
-   outline-color: orange;     /* 已访问链接的轮廓为橘色 */
-   color: yellow;             /* 已访问链接的文本为黄色 */
-   background-color: green;   /* 已访问链接的背景为绿色 */
+  outline-color: orange; /* 已访问链接的轮廓为橘色 */
+  color: yellow; /* 已访问链接的文本为黄色 */
+  background-color: green; /* 已访问链接的背景为绿色 */
 }
 ```
 

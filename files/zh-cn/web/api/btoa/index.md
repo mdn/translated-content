@@ -11,7 +11,7 @@ slug: Web/API/btoa
 
 ## 语法
 
-```js
+```js-nolint
 btoa(stringToEncode)
 ```
 
@@ -32,13 +32,13 @@ btoa(stringToEncode)
 ## 示例
 
 ```js
-const encodedData = btoa('Hello, world'); // 编码字符串
+const encodedData = btoa("Hello, world"); // 编码字符串
 const decodedData = atob(encodedData); // 解码字符串
 ```
 
 ## Unicode 字符串
 
-`btoa()` 函数将一个 JavaScript 字符串作为其参数。而 JavaScript 字符串使用 UTF-16 字符编码表示：在这种编码中，字符串使用一串 16 比特（2 字节）的单元来表示。每一个 ASCII 字符会被填充到每个单元的第一个字节中，而很多其它的字符则不然。
+`btoa()` 函数将一个 JavaScript 字符串作为其参数。而 JavaScript 字符串使用 UTF-16 字符编码表示：在这种编码中，字符串使用一串 16 比特（2 字节）的单元来表示。每一个 ASCII 字符会被填充到每个单元的第一个字节中，而很多其他的字符则不然。
 
 根据设计，Base64 仅将二进制数据作为其输入。而在 JavaScript 字符串中，这意味着每个字符只能使用一个字节表示。所以，如果你将一个字符串传递给 `btoa()`，而其中包含了需要使用超过一个字节才能表示的字符，你就会得到一个错误，因为这个字符串不能被看作是二进制数据：
 
@@ -46,10 +46,10 @@ const decodedData = atob(encodedData); // 解码字符串
 const ok = "a";
 console.log(ok.codePointAt(0).toString(16)); //   61：占用 < 1 byte
 
-const notOK = "✓"
+const notOK = "✓";
 console.log(notOK.codePointAt(0).toString(16)); // 2713：占用 > 1 byte
 
-console.log(btoa(ok));    // YQ==
+console.log(btoa(ok)); // YQ==
 console.log(btoa(notOK)); // error
 ```
 
@@ -64,7 +64,7 @@ function toBinary(string) {
     codeUnits[i] = string.charCodeAt(i);
   }
   const charCodes = new Uint8Array(codeUnits.buffer);
-  let result = '';
+  let result = "";
   for (let i = 0; i < charCodes.byteLength; i++) {
     result += String.fromCharCode(charCodes[i]);
   }
@@ -76,7 +76,7 @@ const myString = "☸☹☺☻☼☾☿";
 
 const converted = toBinary(myString);
 const encoded = btoa(converted);
-console.log(encoded);                 // OCY5JjomOyY8Jj4mPyY=
+console.log(encoded); // OCY5JjomOyY8Jj4mPyY=
 ```
 
 如果你按上述的方法进行了编码，你当然需要一种方法来进行解码：
@@ -88,7 +88,7 @@ function fromBinary(binary) {
     bytes[i] = binary.charCodeAt(i);
   }
   const charCodes = new Uint16Array(bytes.buffer);
-  let result = '';
+  let result = "";
   for (let i = 0; i < charCodes.length; i++) {
     result += String.fromCharCode(charCodes[i]);
   }
@@ -97,7 +97,7 @@ function fromBinary(binary) {
 
 const decoded = atob(encoded);
 const original = fromBinary(decoded);
-console.log(original);                // ☸☹☺☻☼☾☿
+console.log(original); // ☸☹☺☻☼☾☿
 ```
 
 参见 {{Glossary("Base64")}} 术语的 [Solution #1 – escaping the string before encoding it](/zh-CN/docs/Glossary/Base64#solution_1_–_javascripts_utf-16__base64) 示例中的 `utf8_to_b64` 和 `b64_to_utf8` 函数。

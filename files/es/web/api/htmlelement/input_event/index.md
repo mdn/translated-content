@@ -49,17 +49,17 @@ Este ejemplo registra el valor siempre que se cambia el valor del elemento {{Htm
 ### HTML
 
 ```html
-<input placeholder="Ingrese algún texto" name="nombre"/>
+<input placeholder="Ingrese algún texto" name="nombre" />
 <p id="valores"></p>
 ```
 
 ### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('valores');
+const input = document.querySelector("input");
+const log = document.getElementById("valores");
 
-input.addEventListener('input', updateValue);
+input.addEventListener("input", updateValue);
 
 function updateValue(e) {
   log.textContent = e.srcElement.value;

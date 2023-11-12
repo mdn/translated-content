@@ -1,9 +1,6 @@
 ---
 title: Information contained in a WebIDL file
-slug: >-
-  MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
-original_slug: >-
-  MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 ---
 
 {{MDNSidebar}}
@@ -20,7 +17,7 @@ WebIDL 可以在多个位置找到：
 - 三个浏览器引擎使用（修改）WebIDL 作为其工具链的一部分：Gecko，Chromium / Blink 和 WebCore / WebKit。Edge 在内部使用它，但遗憾的是它们不公开（它会帮助我们很多）。
 
   - 对于 Gecko，所有 WebIDL 文件都分组在一个目录中：<https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>
-  - 他们的延伸是`.webidl`。`*.idl`Gecko 源代码树中还有其他 文件，但它们不是 WebIDL，因此您可以忽略它们。旧版本的 Gecko 有一些 WebIDL 分散在某些地方，甚至可能使用 Mozilla 的 IDL 而不是 WebIDL 来描述一些 Web 界面，但这在任何最近的 Gecko 代码中都不会成为问题。
+  - 他们的延伸是`.webidl`。`*.idl`Gecko 源代码树中还有其他 文件，但它们不是 WebIDL，因此你可以忽略它们。旧版本的 Gecko 有一些 WebIDL 分散在某些地方，甚至可能使用 Mozilla 的 IDL 而不是 WebIDL 来描述一些 Web 界面，但这在任何最近的 Gecko 代码中都不会成为问题。
   - 对于 Chromium，它们分散在源代码中，所以你需要多花点功夫：例如<http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl>
   - 同样，WebCore 正如预期的那样，因为 Chromium 是从它分叉出来的，例如<https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl>
 
@@ -415,7 +412,7 @@ The iterator will iterate over values of type _valueType_, with keys of type _ke
 - `entries()` that returns an {{jsxref('iterator')}} on the indexes (of type _keyType_). E.g. {{domxref('FormData.entries()')}}
 - `values()` that returns an {{jsxref('iterator')}} on the values. E.g. {{domxref('FormData.values()')}}
 - `keys()` that returns an {{jsxref('iterator')}} on the keys. E.g. {{domxref('FormData.keys()')}}
-- Once {{bug(1216751)}} lands, `forEach()`.
+- Once [Firefox bug 1216751](https://bugzil.la/1216751) lands, `forEach()`.
 
 Such an iterator allows to use the syntax `for (var p in object)` as a shorthand of `for (var p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 

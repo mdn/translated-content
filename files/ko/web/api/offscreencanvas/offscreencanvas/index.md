@@ -26,14 +26,12 @@ new OffscreenCanvas(width, height);
 
 ```js
 let offscreen = new OffscreenCanvas(256, 256);
-let gl = offscreen.getContext('webgl');
+let gl = offscreen.getContext("webgl");
 ```
 
-## 상세
+## 명세서
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "#dom-offscreencanvas", "OffscreenCanvas()")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

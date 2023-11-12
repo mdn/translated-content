@@ -30,10 +30,10 @@ _无。_
 
 ## 例子
 
-如果您在一个名为 foo.js 的单独脚本中编写了一些您想在 worker.js 中使用的功能，则可以使用以下行导入它：
+如果你在一个名为 foo.js 的单独脚本中编写了一些你想在 worker.js 中使用的功能，则可以使用以下行导入它：
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 ```
 
 `importScripts()` 和 `self.importScripts()` 实际上是等效的 — 都表示从工作者的内部范围内调用的 `importScripts()`。
@@ -46,7 +46,7 @@ importScripts('foo.js');
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{domxref("WorkerGlobalScope")}}
 - [Using Web workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

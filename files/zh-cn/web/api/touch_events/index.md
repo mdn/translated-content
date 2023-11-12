@@ -39,8 +39,9 @@ slug: Web/API/Touch_events
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   你的浏览器不支持 canvas 元素。
 </canvas>
-<br>
-日志：<pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+日志：
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### 设置事件处理器
@@ -53,8 +54,8 @@ window.onload = function startup() {
   el.addEventListener("touchstart", handleStart, false);
   el.addEventListener("touchend", handleEnd, false);
   el.addEventListener("touchmove", handleMove, false);
-  log("初始化成功。")
-}
+  log("初始化成功。");
+};
 ```
 
 该函数为 {{ HTMLElement("canvas") }} 元素设置了所有相关的事件监听器，使事件在触发时能够得到处理。
@@ -113,7 +114,13 @@ function handleMove(evt) {
     if (idx >= 0) {
       log("继续第 " + idx + "个触摸。");
       ctx.beginPath();
-      log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+      log(
+        "ctx.moveTo(" +
+          ongoingTouches[idx].pageX +
+          ", " +
+          ongoingTouches[idx].pageY +
+          ");",
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
@@ -146,7 +153,7 @@ function handleEnd(evt) {
   log("触摸结束。");
   const el = document.getElementsByTagName("canvas")[0];
   const ctx = el.getContext("2d");
-   touches = evt.changedTouches;
+  touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
     const color = colorForTouch(touches[i]);
@@ -191,7 +198,7 @@ function handleCancel(evt) {
 
 ### 便捷函数
 
-本例中使用了几个便捷函数，有必要简单了解一下，对理解其它代码很有帮助。
+本例中使用了几个便捷函数，有必要简单了解一下，对理解其他代码很有帮助。
 
 #### 为每个触摸点选择一个颜色
 
@@ -224,7 +231,7 @@ function copyTouch(touch) {
   return {
     identifier: touch.identifier,
     pageX: touch.pageX,
-    pageY: touch.pageY
+    pageY: touch.pageY,
   };
 }
 ```
@@ -242,7 +249,7 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1;    // 未找到
+  return -1; // 未找到
 }
 ```
 
@@ -261,7 +268,7 @@ function log(msg) {
 
 ## 附加信息
 
-本节提供了在 web 应用中处理触摸事件的其它信息。
+本节提供了在 web 应用中处理触摸事件的其他信息。
 
 ### 处理点击
 
@@ -270,7 +277,10 @@ function log(msg) {
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type == "touchend" && evt.touches.length > 0)
+  )
     return;
 
   const newEvt = document.createEvent("MouseEvents");
@@ -292,9 +302,23 @@ function onTouch(evt) {
       break;
   }
 
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shiftKey,
+    evt.metaKey,
+    0,
+    null,
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```

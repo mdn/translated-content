@@ -1,7 +1,6 @@
 ---
 title: Python
 slug: Glossary/Python
-original_slug: Glossario/Python
 ---
 
 **Python** é uma linguagem de programação de alto nível e de uso geral. Ele usa uma abordagem multi-paradigma, o que significa que ele suporta procedural, orientação a objetos, e algumas construções de programação funcional.
@@ -10,5 +9,5 @@ Ele foi criado por Guido van Rossum como sucessor de outra linguagem (chamado AB
 
 ## Saiba Mais
 
-- {{interwiki('wikipedia','Python (programming language)','Python')}} na Wikipedia
+- [Python](https://pt.wikipedia.org/wiki/Python) na Wikipedia
 - [Um tutorial python](http://www.tutorialspoint.com/python/index.htm)

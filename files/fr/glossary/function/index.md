@@ -1,95 +1,102 @@
 ---
 title: Fonction
 slug: Glossary/Function
-tags:
-  - Encodage
-  - Fonctions
-  - Glossaire
-  - IIFE
-  - Introduction
-  - JavaScript
-translation_of: Glossary/Function
-original_slug: Glossaire/Fonction
+l10n:
+  sourceCommit: 7fd56d044d3469659bbe5c04b004e87b13dee352
 ---
 
-Une **fonction** est une portion de code qui peut être appelée par d'autres codes ou par elle-même ou par une {{Glossary("Variable","variable")}} qui se réfère à la fonction. Lorsqu'une fonction est appelée, des {{Glossary("Argument","arguments")}} lui sont généralement donnés en entrée. La fonction peut également retourner une valeur de sortie. En {{glossary("JavaScript")}}, une fonction est aussi un {{glossary("Object","objet")}}.
+{{GlossarySidebar}}
 
-Un nom de fonction est un {{Glossary("identifier","identifiant")}} déclaré dans le cadre d'une déclaration de fonction ou de l'expression d'une fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte la {{Glossary("Scope","portée")}} du nom de fonction.
+Une **fonction** est une portion de code qui peut être appelée par d'autres codes ou par elle-même ou par une [variable](/fr/docs/Glossary/Variable) qui se réfère à la fonction. Lorsqu'une fonction est appelée, des [arguments](/fr/docs/Glossary/Argument) lui sont généralement donnés en entrée. La fonction peut également retourner une valeur de sortie. En [JavaScript](/fr/docs/Glossary/JavaScript), une fonction est aussi un [objet](/fr/docs/Glossary/Object).
+
+Un nom de fonction est un [identifiant](/fr/docs/Glossary/Identifier) déclaré dans le cadre d'une déclaration de fonction ou d'une expression de fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte [la portée](/fr/docs/Glossary/Scope) du nom de fonction.
 
 ### Différents types de fonctions
 
-Une **fonction anonyme** est une fonction sans nom de fonction :
+Une **fonction anonyme** est une fonction sans nom de fonction. Seules les expressions de fonction peuvent être anonymes. Les déclarations de fonctions doivent avoir un nom&nbsp;:
 
 ```js
-function () {};
-// ou en utilisant la notation de flèche de ECMAScript 2015
+// Fonction anonyme créée comme expression de fonction
+(function () {});
+
+// Fonction anonyme créée comme fonction fléchée
 () => {};
 ```
 
-Une **fonction nommée** est une fonction avec un nom de fonction :
+Les termes qui suivent ne sont pas utilisés dans la spécification du langage ECMAScript, il s'agit d'un jargon souvent utilisé pour faire référence aux différents types de fonction.
+
+Une **fonction nommée** est une fonction avec un nom de fonction&nbsp;:
 
 ```js
-function foo() {};
-// ou en utilisant la notation de flèche de ECMAScript 2015
-const foo = () => {};
+// Déclaration de fonction
+function toto() {}
+
+// Expression de fonction nommée
+(function truc() {});
+
+// Fonction fléchée nommée
+const machin = () => {};
 ```
 
-Une **fonction imbriquée (ou fonction interne)** est une fonction à l'intérieur d'une autre fonction (_`square`_ dans l'exemple suivant). Une **fonction externe** est une fonction qui contient une fonction (_`addSquares`_ dans l'exemple suivant) :
+Une **fonction imbriquée (ou fonction interne)** est une fonction à l'intérieur d'une autre fonction (`carre` dans l'exemple suivant). Une **fonction englobante** est une fonction qui contient une fonction (`ajouteCarres` dans l'exemple suivant)&nbsp;:
 
 ```js
-function addSquares(a,b) {
-   function square(x) {
-      return x * x;
-   }
-   return square(a) + square(b);
-};
-//En utilisant la notation de flèche de ECMAScript 2015
-const addSquares = (a,b) => {
-   const square = x => x*x;
-   return square(a) + square(b);
-};
-```
+function ajouteCarres(a, b) {
+  function carre(x) {
+    return x * x;
+  }
+  return carre(a) + carre(b);
+}
 
-Une **fonction récursive** est une fonction qui fait appel à elle-même. Voir {{Glossary("Recursion","récursion")}}.
-
-```js
-function loop(x) {
-   if (x >= 10)
-      return;
-   loop(x + 1);
-};
-//En utilisant la notation de flèche de ECMAScript 2015
-const loop = x => {
-   if (x >= 10)
-      return;
-   loop(x + 1);
+// Fonction fléchée
+const ajouteCarres2 = (a, b) => {
+  const carre = (x) => x * x;
+  return carre(a) + carre(b);
 };
 ```
 
-Une **expression de fonction invoquée immédiatement** (IIFE) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur. La façon d'identifier une IIFE est de localiser les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.
+Une **fonction récursive** est une fonction qui fait appel à elle-même. Voir [la page du glossaire sur la récursion](/fr/docs/Glossary/Recursion).
 
 ```js
-// Erreur (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
-/*
-function foo() {
-    console.log('Hello Foo');
-}();
-*/
+function boucle(x) {
+  if (x >= 10) return;
+  boucle(x + 1);
+}
 
-(function foo() {
-    console.log("Hello Foo");
-}());
+// Fonction fléchée
+const boucle2 = (x) => {
+  if (x >= 10) return;
+  boucle2(x + 1);
+};
+```
 
-(function food() {
-    console.log("Hello Food");
+Une **expression de fonction invoquée immédiatement** ([IIFE](/fr/docs/Glossary/IIFE) pour <i lang="en">Immediately Invoked Function Expressions</i> en anglais) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur. Pour identifier une IIFE, on cherchera les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.
+
+Les expressions de fonction, nommées ou anonymes, peuvent être appelées immédiatement.
+
+```js
+(function toto() {
+  console.log("Coucou Toto");
 })();
+
+(function toutou() {
+  console.log("Coucou Toutou");
+})();
+
+(() => console.log("Bonjour le monde"))();
 ```
 
-Si vous souhaitez en savoir plus sur les IIFE, consultez la page suivante sur Wikipédia : [Expression de la fonction immédiatement invoquée](https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_imm%C3%A9diatement_invoqu%C3%A9es)
+Les fonctions créées avec des déclarations ne peuvent pas être appelées immédiatement ainsi. Les IIFE doivent être des _expressions_ de fonction.
+
+```js example-bad
+function toto() {
+  console.log("Coucou toto");
+}();
+```
+
+Voir [la page du glossaire sur les IIFE](/fr/docs/Glossary/IIFE) pour en savoir plus.
 
 ## Voir aussi
 
-### Informations Techniques
-
-- [Les Fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions) en JavaScript sur MDN
-- [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)
+- [Les fonctions JavaScript](/fr/docs/Web/JavaScript/Guide/Functions)
+- [Les fonctions fléchées JavaScript](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

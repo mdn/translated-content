@@ -76,7 +76,11 @@ hanging-punctuation: unset;
 #### HTML
 
 ```html
-<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”</p>
+<p>
+  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
+  nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor
+  massa, sit amet vulputate nulla pharetra ut.”
+</p>
 ```
 
 #### CSS
@@ -84,7 +88,7 @@ hanging-punctuation: unset;
 ```css
 p {
   hanging-punctuation: first last;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 ```
 

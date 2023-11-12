@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 ## 構文
 
 ```js
-bigIntObj.valueOf()
+bigIntObj.valueOf();
 ```
 
 ### 返値

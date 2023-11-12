@@ -2,10 +2,11 @@
 title: 履歴 API の操作
 slug: Web/API/History_API/Working_with_the_History_API
 l10n:
-  sourceCommit: ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
+  sourceCommit: 55de68017f98094f45addb3ebaa0f7f52024f60b
 ---
 
 {{DefaultAPISidebar("History API")}}
+
 {{DOMxRef("History.pushState", "pushState()")}} および {{DOMxRef("History.replaceState", "replaceState()")}} メソッドは、それぞれ履歴項目を追加したり変更したりします。これらのメソッドは {{domxref("Window/popstate_event", "popstate")}} イベントと一緒に動作します。
 
 ## 履歴項目の追加と修正
@@ -17,11 +18,11 @@ l10n:
 以下の JavaScript が `https://mozilla.org/foo.html` で実行されると想定してください。
 
 ```js
-let stateObj = {
-    foo: "bar",
-}
+const stateObj = {
+  foo: "bar",
+};
 
-history.pushState(stateObj, "page 2", "bar.html")
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
 これにより URL バーには `https://mozilla.org/bar.html` と表示されますが、ブラウザーは `bar.html` を読み込むことはなくまたその存在をチェックすることはありません。
@@ -68,8 +69,10 @@ history.pushState(stateObj, "page 2", "bar.html")
 `https://mozilla.org/foo.html` で次の JavaScript を実行したとします。
 
 ```js
-let stateObj = { foo: "bar" }
-history.pushState(stateObj, "page 2", "bar.html")
+const stateObj = {
+  foo: "bar",
+};
+history.pushState(stateObj, "page 2", "bar.html");
 ```
 
 上記2行の説明は、上記の _[pushState() メソッドの例](#pushstate_の例)_ の部分で得ることができます。
@@ -77,7 +80,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 次に、`https://mozilla.org/bar.html` で次の JavaScript を実行したとします。
 
 ```js
-history.replaceState(stateObj, "page 3", "bar2.html")
+history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
 これによって URL バーには `https://mozilla.org/bar2.html` が表示されますが、ブラウザーは `bar2.html` の読み込みを行わず、`bar2.html` が存在するかどうかもチェックしません。
@@ -97,11 +100,11 @@ history.replaceState(stateObj, "page 3", "bar2.html")
 このように {{DOMxRef("History.state","history.state")}} プロパティを用いることで、 `popstate` イベントを待つことなく現在の履歴項目の状態を読み取ることができます。
 
 ```js
-let currentState = history.state
+const currentState = history.state;
 ```
 
 ## 関連情報
 
 - [履歴 API](/ja/docs/Web/API/History_API)
-- [Ajax ナビゲーションの例](/ja/docs/Web/API/History_API/Example)
-- {{ domxref("window.history") }}
+- [履歴ナビゲーションの例](/ja/docs/Web/API/History_API/Example)
+- {{domxref("window.history", "history")}} グローバルオブジェクト

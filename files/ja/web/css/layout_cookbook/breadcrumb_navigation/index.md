@@ -45,7 +45,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ### フレックスボックス
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## 関連情報
 

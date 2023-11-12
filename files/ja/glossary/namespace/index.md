@@ -1,7 +1,6 @@
 ---
 title: Namespace (名前空間)
 slug: Glossary/Namespace
-original_slug: Namespace
 ---
 
 名前空間はプログラム内でコンテキストを識別する、論理的なグループの名前です。同じコンテキスト内かつ同じスコープの範囲内では、識別子は実態を一意に指定しなくてはなりません。

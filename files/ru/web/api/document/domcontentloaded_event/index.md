@@ -1,9 +1,6 @@
 ---
-title: 'Document: DOMContentLoaded event'
+title: "Document: DOMContentLoaded event"
 slug: Web/API/Document/DOMContentLoaded_event
-tags:
-  - Событие
-translation_of: Web/API/Document/DOMContentLoaded_event
 ---
 
 {{APIRef}}
@@ -33,7 +30,7 @@ translation_of: Web/API/Document/DOMContentLoaded_event
   </tbody>
 </table>
 
-Разные события,[`load`](/en-US/docs/Web/API/Window/load_event), должны быть использованы только для обнаружения полностью загруженной страницы. Это распространённая ошибка в использовании `load`, там где `DOMContentLoaded` было бы более уместным.
+Разные события,[`load`](/ru/docs/Web/API/Window/load_event), должны быть использованы только для обнаружения полностью загруженной страницы. Это распространённая ошибка в использовании `load`, там где `DOMContentLoaded` было бы более уместным.
 
 Синхронный JavaScript останавливает разбор DOM. Если вы хотите что бы DOM был разобран как можно быстрее после того как пользователь запросит страницу, вы должны сделать ваш [JavaScript асинхронным](/ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) and [оптимизировать загрузку таблиц стилей](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Если загружать как обычно, таблицы стилей тормозят разбор DOM так как они загружаются параллельно, "крадя" трафик у основного HTML документа.
 
@@ -42,8 +39,8 @@ translation_of: Web/API/Document/DOMContentLoaded_event
 ### Основное применение
 
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM полностью загружен и разобран');
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM полностью загружен и разобран");
 });
 ```
 
@@ -51,13 +48,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM полностью загружен и разобран');
+  document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOM полностью загружен и разобран");
   });
 
-for( let i = 0; i < 1000000000; i++)
-{} // Этот синхронный скрипт откладывает разбор DOM,
-   // так что событие DOMContentLoaded будет запущено позже.
+  for (let i = 0; i < 1000000000; i++) {} // Этот синхронный скрипт откладывает разбор DOM,
+  // так что событие DOMContentLoaded будет запущено позже.
 </script>
 ```
 
@@ -67,12 +63,14 @@ for( let i = 0; i < 1000000000; i++)
 
 ```js
 function doSomething() {
-  console.info('DOM загружен');
+  console.info("DOM загружен");
 }
 
-if (document.readyState === 'loading') {  // Загрузка ещё не закончилась
-  document.addEventListener('DOMContentLoaded', doSomething);
-} else {  // `DOMContentLoaded` Уже сработал
+if (document.readyState === "loading") {
+  // Загрузка ещё не закончилась
+  document.addEventListener("DOMContentLoaded", doSomething);
+} else {
+  // `DOMContentLoaded` Уже сработал
   doSomething();
 }
 ```
@@ -113,7 +111,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -125,26 +124,26 @@ label, button {
 #### JS
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   window.setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent = log.textContent + "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
 ```
 
@@ -156,11 +155,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- События связанные с: [`load`](/en-US/docs/Web/API/Window/load_event), [`readystatechange`](/en-US/docs/Web/API/Document/readystatechange_event), [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event), [`unload`](/en-US/docs/Web/API/Window/unload_event)
-- Это событие [`Window`](/en-US/docs/Web/API/Window) нацеленное на: [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+- События связанные с: [`load`](/ru/docs/Web/API/Window/load_event), [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event), [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event), [`unload`](/ru/docs/Web/API/Window/unload_event)
+- Это событие [`Window`](/ru/docs/Web/API/Window) нацеленное на: [`DOMContentLoaded`](/ru/docs/Web/API/Window/DOMContentLoaded_event)

@@ -1,14 +1,6 @@
 ---
 title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
-tags:
-  - BigInt
-  - Experimental
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/asUintN
 ---
 
 {{JSRef}}
@@ -51,13 +43,11 @@ BigInt.asUintN(64, max + 1n);
 
 ## Spécifications
 
-| Spécification                                                                         | État                    |
-| ------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour BigInt](https://tc39.github.io/proposal-bigint/#sec-bigint.asuintn) | Proposition de niveau 3 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.asUintN")}}
+{{Compat}}
 
 ## Voir aussi
 

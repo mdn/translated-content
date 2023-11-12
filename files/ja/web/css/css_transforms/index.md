@@ -1,6 +1,6 @@
 ---
 title: CSS 座標変換
-slug: Web/CSS/CSS_Transforms
+slug: Web/CSS/CSS_transforms
 ---
 
 {{CSSRef}}

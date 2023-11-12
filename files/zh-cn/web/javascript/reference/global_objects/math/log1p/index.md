@@ -31,12 +31,12 @@ Math.log1p(x)
 **示例**
 
 ```js
-Math.log1p(Math.E-1)  // 1
-Math.log1p(0)         // 0
-Math.log1p("0")       // 0
-Math.log1p(-1)        // -Infinity
-Math.log1p(-2)        // NaN
-Math.log1p("foo")     // NaN
+Math.log1p(Math.E - 1); // 1
+Math.log1p(0); // 0
+Math.log1p("0"); // 0
+Math.log1p(-1); // -Infinity
+Math.log1p(-2); // NaN
+Math.log1p("foo"); // NaN
 ```
 
 ## 规范

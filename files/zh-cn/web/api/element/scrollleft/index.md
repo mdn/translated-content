@@ -62,10 +62,10 @@ element.scrollLeft = 10;
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
 button.onclick = function () {
-  document.getElementById('container').scrollLeft += 20;
+  document.getElementById("container").scrollLeft += 20;
 };
 ```
 
@@ -77,7 +77,7 @@ button.onclick = function () {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

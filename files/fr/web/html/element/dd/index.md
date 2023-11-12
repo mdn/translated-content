@@ -1,19 +1,6 @@
 ---
-title: '<dd> : l''élément de détail d''une description'
+title: "<dd> : l'élément de détail d'une description"
 slug: Web/HTML/Element/dd
-tags:
-  - Definition
-  - Description Details
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
-  - dd
-  - details
-translation_of: Web/HTML/Element/dd
-browser-compat: html.elements.dd
 ---
 
 {{HTMLSidebar}}

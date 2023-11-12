@@ -3,6 +3,8 @@ title: Signature (functions)（函数签名）
 slug: Glossary/Signature/Function
 ---
 
+{{GlossarySidebar}}
+
 一个**函数签名 (**或*类型*签名，或*方法*签名**)** 定义了 {{Glossary("Function", "函数")}} 或 {{Glossary("Method", "方法")}} 的输入与输出。
 
 一个签名可以包括：
@@ -16,10 +18,10 @@ slug: Glossary/Signature/Function
 
 ### JavaScript 中的签名
 
-{{Glossary("JavaScript")}} 是一种*松散类型* 或 *动态*语言。这意味着您不必提前声明变量的类型。处理程序时，将自动确定类型。JavaScript 中的签名仍然可以为您提供有关该方法的一些信息：
+{{Glossary("JavaScript")}} 是一种*松散类型* 或 *动态*语言。这意味着你不必提前声明变量的类型。处理程序时，将自动确定类型。JavaScript 中的签名仍然可以为你提供有关该方法的一些信息：
 
 ```js
-MyObject.prototype.myFunction(value)
+MyObject.prototype.myFunction(value);
 ```
 
 - 该方法是安装在一个名为 `MyObject` 的 {{Glossary("object", "对象")}}上。
@@ -41,8 +43,6 @@ public static void main(String[] args)
 - 该方法的名称为 `main`。
 - 该方法接受一个类型为 String Array 的参数。它的名是 `args`。
 
-## 了解更多
-
-### `基本知识`
+## 参见
 
 - [Java 内部类型签名](https://zh.wikipedia.org/wiki/Type_signature#Java) 在维基百科上

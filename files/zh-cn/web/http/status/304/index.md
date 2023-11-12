@@ -21,7 +21,7 @@ HTTP **`304 Not Modified`** 说明无需再次传输请求的内容，也就是�
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

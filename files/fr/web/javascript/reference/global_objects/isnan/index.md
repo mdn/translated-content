@@ -1,12 +1,6 @@
 ---
 title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-tags:
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
-original_slug: Web/JavaScript/Reference/Objets_globaux/isNaN
 ---
 
 {{jsSidebar("Objects")}}
@@ -18,7 +12,7 @@ La fonction **`isNaN()`** permet de déterminer si une valeur est {{jsxref("NaN"
 ## Syntaxe
 
 ```js
-isNaN(valeurÀTester)
+isNaN(valeurÀTester);
 ```
 
 ### Paramètres
@@ -49,7 +43,7 @@ Depuis les premières spécifications pour `isNaN()`, son comportement sur les a
 La version ECMAScript ES2015 ajoute la méthode {{jsxref("Number.isNaN()")}}. `Number.isNaN(x)` permettra de tester de façon plus fiable si `x` vaut `NaN` ou non. Si on ne dispose pas de cette méthode, on peut également utiliser l'expression `(x != x)` afin de tester de façon plus certaine si `x` vaut `NaN` ou non (en effet le résultat de cette expression n'aura pas les faux positifs de `isNaN`). Sous cet angle, `isNaN()` peut être vu comme :
 
 ```js
-var isNaN = function(valeur) {
+var isNaN = function (valeur) {
   return Number.isNaN(Number(valeur));
 };
 ```
@@ -57,7 +51,7 @@ var isNaN = function(valeur) {
 Ou encore, en utilisant le fait que `NaN` est la seule valeur différente d'elle-même :
 
 ```js
-var isNaN = function(valeur) {
+var isNaN = function (valeur) {
   var n = Number(valeur);
   return n !== n;
 };
@@ -71,7 +65,7 @@ On peut par exemple construire une fonction dont on souhaite qu'elle incrémente
 
 ```js
 function incrément(x) {
-  if (isNaN(x)){
+  if (isNaN(x)) {
     x = 0;
   }
   return x + 1;
@@ -83,38 +77,38 @@ function incrémentCourt(x) {
   isNaN(x) ? 1 : x + 1;
 }
 
-incrément("blabla");  // 1
-incrément(1);         // 2
-incrément(NaN);       // 1
+incrément("blabla"); // 1
+incrément(1); // 2
+incrément(NaN); // 1
 ```
 
 ## Exemples
 
 ```js
-isNaN(NaN);       // true
+isNaN(NaN); // true
 isNaN(undefined); // true
-isNaN({});        // true
+isNaN({}); // true
 
-isNaN(true);      // false
-isNaN(null);      // false
-isNaN(37);        // false
+isNaN(true); // false
+isNaN(null); // false
+isNaN(37); // false
 
 // strings
-isNaN("37");      // false : "37" est converti vers le nombre 37 qui n'est pas NaN
-isNaN("37.37");   // false : "37.37" est converti vers le nombre 37.37 qui n'est pas NaN
-isNaN("37,25");   // true  : la virgule n'est pas considérée comme un séparateur décimal
-isNaN("123ABC");  // true  : "123ABC" converti en 123 par parseInt mais en NaN par Number
-isNaN("");        // false : la chaîne vide est convertie en 0 qui n'est pas NaN
-isNaN(" ");       // false : une chaîne de blancs est convertie en 0 qui n'est pas NaN
+isNaN("37"); // false : "37" est converti vers le nombre 37 qui n'est pas NaN
+isNaN("37.37"); // false : "37.37" est converti vers le nombre 37.37 qui n'est pas NaN
+isNaN("37,25"); // true  : la virgule n'est pas considérée comme un séparateur décimal
+isNaN("123ABC"); // true  : "123ABC" converti en 123 par parseInt mais en NaN par Number
+isNaN(""); // false : la chaîne vide est convertie en 0 qui n'est pas NaN
+isNaN(" "); // false : une chaîne de blancs est convertie en 0 qui n'est pas NaN
 
 // dates
-isNaN(new Date());                // false
-isNaN(new Date().toString());     // true
+isNaN(new Date()); // false
+isNaN(new Date().toString()); // true
 
 // Voici le résultat « faux-positif » qui fait que isNaN n'est pas entièrement fiable
-isNaN("blabla")   // true : "blabla" est converti en un nombre
-                  // Si on souhaite convertir cette valeur en nombre, cela échoue
-                  // et on obtient NaN
+isNaN("blabla"); // true : "blabla" est converti en un nombre
+// Si on souhaite convertir cette valeur en nombre, cela échoue
+// et on obtient NaN
 ```
 
 ## Spécifications

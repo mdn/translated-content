@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/X-XSS-Protection
 
 HTTP **`X-XSS-Protection`** 响应头是 Internet Explorer，Chrome 和 Safari 的一个特性，当检测到跨站脚本攻击 ({{Glossary("XSS")}}) 时，浏览器将停止加载页面。若网站设置了良好的 {{HTTPHeader("Content-Security-Policy")}} 来禁用内联 JavaScript (`'unsafe-inline'`)，现代浏览器不太需要这些保护，但其仍然可以为尚不支持 {{Glossary("CSP")}} 的旧版浏览器的用户提供保护。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

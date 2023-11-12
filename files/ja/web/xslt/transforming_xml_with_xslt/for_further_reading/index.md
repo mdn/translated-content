@@ -1,9 +1,11 @@
 ---
-title: XSLT - さらなる読書のために
+title: さらなる読みもの
 slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
+l10n:
+  sourceCommit: e14e4830bcd43de164623aaf787fbd695be31d91
 ---
 
-[« Transforming XML with XSLT](/ja/docs/Transforming_XML_with_XSLT)
+[« Transforming XML with XSLT](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
 ## 印刷物
 
@@ -18,7 +20,7 @@ slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 
     - Michael Kay は W3C XSL ワーキンググループのメンバーであり、オープンソース XSLT プロセッサである Saxon の開発者です。彼はまた、このテーマに関する第 2 版に達した唯一の本の著者でもあります。これは XSLT ストーリーのすべての可能なベースを網羅している非常に大きな本です。うまくレイアウトされています。
 
-[http://www.amazon.com/XSLT-Programme.../dp/0764543814](http://www.amazon.com/XSLT-Programmers-Reference-Programmer/dp/0764543814)
+<https://www.amazon.com/XSLT-Programmers-Reference-Programmer/dp/0764543814>
 
 - **XSLT**
 
@@ -29,7 +31,7 @@ slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 
     - Doug Tidwell は IBM の上級開発者であり、一般に XML 技術の著名なエバンジェリストです。彼は IBM の幅広い XML 開発者サイトで、XML のさまざまな側面に関するいくつかの記事とチュートリアルの著者です。この本はマイケル・ケイのものよりもいくぶん包括的ではありませんが、基礎をうまくカバーし、興味深い例を提供しています。
 
-<http://www.amazon.com/Xslt-Doug-Tidwell/dp/0596000537>
+<https://www.amazon.com/Xslt-Doug-Tidwell/dp/0596000537>
 
 - **Learning XML, Second Edition**
 
@@ -40,86 +42,37 @@ slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 
     - タイトルが示すように、これは一般的に XML の概要です。第 6 章は特に XSLT に専念しています。
 
-<http://www.amazon.com/gp/product/0596004206>
+<https://www.amazon.com/gp/product/0596004206>
 
 ## デジタル
 
-### Web サイト
+### ウェブサイト
 
 - **World Wide Web Consortium**
 
-  - **W3C ホームページ**: <http://www.w3.org/>
-  - **メインの XSL ページ**: <http://www.w3.org/Style/XSL/>
-  - **The version 1.0 Recommendation for XSLT**: <http://www.w3.org/TR/xslt>
-  - **Archive of public style (CSS and XSLT) discussions**: <http://lists.w3.org/Archives/Public/www-style/>
-  - **The version 1.0 Recommendation for XPath**: <http://www.w3.org/TR/xpath>
+  - **W3C ホームページ**: <https://www.w3.org>
+  - **メインの XSL ページ**: <https://www.w3.org/Style/XSL/>
+  - **XSLT specifications overview**: <https://www.w3.org/TR/xslt/>
+  - **Archive of public style (CSS and XSLT) discussions**: [https://lists.w3.org/Archives/Public/www-style/](https://lists.w3.org/Archives/Public/www-style/)
+  - **XPath specifications overview**: <https://www.w3.org/TR/xpath/>
 
     - World Wide Web Consortium は、多くがデファクトスタンダードとなる多くのウェブベースの技術のための勧告を公表する機関です。
 
 ### 記事
 
-- **Hands-on XSL**
-
-  - **著者**: Don R. Day
-  - **場所**: [http://www-106.ibm.com/developerwork...-hands-on-xsl/](http://www-106.ibm.com/developerworks/library/x-hands-on-xsl/)
-
-<!---->
-
-- **Understanding XSLT**
-
-  - **著者**: Jay Greenspan
-  - **場所**: [http://hotwired.lycos.com/webmonkey/...l?tw=authoring](http://hotwired.lycos.com/webmonkey/98/43/index2a.html?tw=authoring)
-
-<!---->
-
-- **What is XSLT?**
-
-  - **著者**: G. Ken Holman
-  - **場所**: <http://www.xml.com/pub/a/2000/08/holman/index.html>
+- [Hands-on XSL](https://www.ibm.com/developerworks/library/x-hands-on-xsl/) (Don R. Day)
+- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) (G. Ken Holman)
 
 ### チュートリアル/例
 
-- **Zvon**
-
-  - **XSL Programmers**: <http://www.zvon.org/o_html/group_xsl.html>
-
-<!---->
-
-- **Jeni's XSLT Pages**
-
-  - **Index**: <http://www.jenitennison.com/xslt/>
-
-<!---->
-
-- **XMLPitstop.com**
-
-  - **StyleSheet Center**: <http://www.xmlpitstop.com/Default.asp?DataType=SSC>
-
-<!---->
-
-- **XSL チュートリアル**
-
-  - **Index**: <http://www.nwalsh.com/docs/tutorials/xsl/>
+- [Jeni's XSLT Pages](https://www.jenitennison.com/xslt/)
+- [XMLPitstop.com](https://web.archive.org/web/20211209064736/https://www.xmlpitstop.com/default_datatype_SSC.html)
+- [XSL Tutorial](https://nwalsh.com/docs/tutorials/xsl/)
 
 ### その他
 
-- **Cover Pages**
-
-  - **Extensible Stylesheet Language (XSL)**: <http://www.oasis-open.org/cover/xsl.html>
-
-<!---->
-
+- [Extensible Stylesheet Language (XSL)](http://xml.coverpages.org/xsl.html)
 - **XSL-List**
 
-  - **購読**: <http://www.mulberrytech.com/xsl/xsl-list/>
-  - **アーカイブ**: <http://www.biglist.com/lists/xsl-list/archives/>
-
-    - XSL-List は [Mulberry Technologies](http://mulberrytech.com/) が主催する非常にアクティブな一般的なメーリングリストです
-
-<!---->
-
-- **mozilla.dev.tech.xslt**
-
-  - **Google Groups**: <http://groups.google.com/group/mozilla.dev.tech.xslt>
-
-    - これは Netscape 固有の XSLT の問題を説明するニュースグループです。
+  - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
+  - **Archives**: <https://www.biglist.com/lists/xsl-list/archives/>

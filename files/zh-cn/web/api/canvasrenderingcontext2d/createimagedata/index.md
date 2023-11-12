@@ -60,7 +60,7 @@ console.log(ctx.createImageData(100, 100));
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

@@ -9,6 +9,6 @@ slug: Web/CSS/@media/color
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.color")}}
+{{Compat}}

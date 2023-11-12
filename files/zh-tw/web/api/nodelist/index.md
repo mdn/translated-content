@@ -12,10 +12,10 @@ slug: Web/API/NodeList
 在某些情況下，`NodeList` 為*動態集合（live collection）*，意思是 DOM 的改變會反映於集合。例如，{{domxref("Node.childNodes")}} 便是即時更新（live）的：
 
 ```js
-var parent = document.getElementById('parent');
+var parent = document.getElementById("parent");
 var child_nodes = parent.childNodes;
 console.log(child_nodes.length); // let's assume "2"
-parent.appendChild(document.createElement('div'));
+parent.appendChild(document.createElement("div"));
 console.log(child_nodes.length); // should output "3"
 ```
 
@@ -47,7 +47,7 @@ It's possible to loop over the items in a `NodeList` using:
 
 ```js
 for (var i = 0; i < myNodeList.length; ++i) {
-  var item = myNodeList[i];  // Calling myNodeList.item(i) isn't necessary in JavaScript
+  var item = myNodeList[i]; // Calling myNodeList.item(i) isn't necessary in JavaScript
 }
 ```
 
@@ -56,7 +56,7 @@ Don't be tempted to use [`for...in`](/zh-TW/docs/JavaScript/Reference/Statements
 [`for...of`](/zh-TW/docs/JavaScript/Reference/Statements/for...of) loops will loop over `NodeList` objects correctly:
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 for (var item of list) {
   item.checked = true;
 }
@@ -67,7 +67,7 @@ Recent browsers also support iterator methods, {{domxref("NodeList.forEach()", "
 There is also an Internet Explorer compatible way to use {{jsxref("Array.forEach()", "Array.prototype.forEach")}} for iteration.
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 Array.prototype.forEach.call(list, function (item) {
   item.checked = true;
 });
@@ -80,20 +80,20 @@ You can also add prototypes to nodelist:
 ```js
 var elements = document.querySelectorAll(".suggestions");
 
-NodeList.prototype.addEventListener = function(event, func) {
-    this.forEach(function(content, item) {
-       content.addEventListener(event, func);
-    });
-}
+NodeList.prototype.addEventListener = function (event, func) {
+  this.forEach(function (content, item) {
+    content.addEventListener(event, func);
+  });
+};
 
 function log() {
-    console.log(this, " was clicked");
+  console.log(this, " was clicked");
 }
 
 elements.addEventListener("click", log);
 //or
-elements.addEventListener("click", function() {
-    console.log(this, "  awas clicked");
+elements.addEventListener("click", function () {
+  console.log(this, "  awas clicked");
 });
 // output from both will be element was clicked the element would be HTML Element
 ```

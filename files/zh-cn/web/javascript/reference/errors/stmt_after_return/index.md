@@ -1,5 +1,5 @@
 ---
-title: 'Warning: unreachable code after return statement'
+title: "Warning: unreachable code after return statement"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
 
@@ -43,13 +43,13 @@ Warning: unreachable code after return statement (Firefox)
 function f() {
   let x = 3;
   x += 4;
-  return x;   // return 语句立即退出当前方法
-  x -= 3;     // 因而该语句从不会执行，即该语句为不可达语句
+  return x; // return 语句立即退出当前方法
+  x -= 3; // 因而该语句从不会执行，即该语句为不可达语句
 }
 
 function f() {
-  return     // 这条语句被视作 `return;`
-    3 + 4;   // 因而此处该函数已经返回，该语句永不会执行
+  return; // 这条语句被视作 `return;`
+  3 + 4; // 因而此处该函数已经返回，该语句永不会执行
 }
 ```
 
@@ -60,11 +60,11 @@ function f() {
   let x = 3;
   x += 4;
   x -= 3;
-  return x;  // OK: 执行完成所有语句之后返回
+  return x; // OK: 执行完成所有语句之后返回
 }
 
 function f() {
-  return 3 + 4  // OK: 省略分号的 return 语句与执行的表达式在同一行
+  return 3 + 4; // OK: 省略分号的 return 语句与执行的表达式在同一行
 }
 ```
 

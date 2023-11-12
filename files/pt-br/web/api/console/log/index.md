@@ -1,6 +1,6 @@
 ---
 title: Console.log()
-slug: Web/API/Console/log
+slug: Web/API/console/log
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -33,7 +33,7 @@ Não faz parte de nenhuma especificação.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.log")}}
+{{Compat}}
 
 ## Ver também
 

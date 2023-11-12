@@ -1,12 +1,6 @@
 ---
 title: for
 slug: Web/JavaScript/Reference/Statements/for
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/for
-original_slug: Web/JavaScript/Reference/Instructions/for
 ---
 
 {{jsSidebar("Statements")}}
@@ -18,8 +12,7 @@ L'instruction **`for`** crée une boucle composée de trois expressions optionne
 ## Syntaxe
 
 ```js
-for ([initialisation]; [condition]; [expression-finale])
-  instruction
+for ([initialisation]; [condition]; [expression_finale]) instruction;
 ```
 
 ### Paramètres
@@ -41,8 +34,8 @@ L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initi
 
 ```js
 for (var i = 0; i < 9; i++) {
-   n += i;
-   myfunc(n);
+  n += i;
+  myfunc(n);
 }
 ```
 
@@ -55,18 +48,18 @@ Par exemple, le bloc pour l'initialisation peut ne pas être utilisé :
 ```js
 var i = 0;
 for (; i < 9; i++) {
-    console.log(i);
-    // d'autres instructions
+  console.log(i);
+  // d'autres instructions
 }
 ```
 
 De même que pour le bloc d'initialisation, l'expression de condition est optionnelle. Attention, si l'expression de condition n'est pas utilisée, il faut s'assurer d'interrompre la boucle et de ne pas créer une boucle infinie.
 
 ```js
-for (var i = 0;; i++) {
-   console.log(i);
-   if (i > 3) break;
-   // d'autres instructions
+for (var i = 0; ; i++) {
+  console.log(i);
+  if (i > 3) break;
+  // d'autres instructions
 }
 ```
 
@@ -87,12 +80,27 @@ for (;;) {
 L'instruction `for` qui suit calcule le décalage d'un nœud et le fait dans la section qui correspond à l'expression finale. Il n'y a donc aucun intérêt à ajouter une instruction ou un bloc d'instruction dans la boucle pour faire ce calcul.
 
 ```js
-function showOffsetPos (sId) {
-  var nLeft = 0, nTop = 0;
+function showOffsetPos(sId) {
+  var nLeft = 0,
+    nTop = 0;
 
-  for (var oItNode = document.getElementById(sId); oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);
+  for (
+    var oItNode = document.getElementById(sId);
+    oItNode;
+    nLeft += oItNode.offsetLeft,
+      nTop += oItNode.offsetTop,
+      oItNode = oItNode.offsetParent
+  );
 
-  console.log("Décalage de position : \"" + sId + "\" element:\n left: " + nLeft + "px;\n top: " + nTop + "px;");
+  console.log(
+    'Décalage de position : "' +
+      sId +
+      '" element:\n left: ' +
+      nLeft +
+      "px;\n top: " +
+      nTop +
+      "px;",
+  );
 }
 ```
 

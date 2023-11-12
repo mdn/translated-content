@@ -1,22 +1,6 @@
 ---
 title: Идентификация ресурсов в Вебе
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - HTTP
-  - URI
-  - URL
-  - Веб
-  - Порт
-  - Путь
-  - Ресурсы
-  - Синтаксис
-  - Синтаксис URL
-  - Схема
-  - Фрагмент
-  - домен
-  - запрос
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web_RU
 ---
 
 {{HTTPSidebar}}
@@ -113,7 +97,7 @@ FTP до сих пор доступен на верхнем уровне (т.е.
 ## Примеры
 
 ```
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/ru/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt
@@ -123,8 +107,8 @@ mailto:help@supercyberhelpdesk.info
 
 ## Спецификации
 
-| Спецификация                                                             | Название                                                                    |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| Спецификация                                           | Название                                                                    |
+| ------------------------------------------------------ | --------------------------------------------------------------------------- |
 | {{RFC("7230", "Uniform Resource Identifiers", "2.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Синтаксис и маршрутизация сообщений |
 
 ## Читайте также

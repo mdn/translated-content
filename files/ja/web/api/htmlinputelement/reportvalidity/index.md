@@ -1,6 +1,8 @@
 ---
-title: HTMLInputElement.reportValidity()
+title: "HTMLInputElement: reportValidity() メソッド"
 slug: Web/API/HTMLInputElement/reportValidity
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,9 +11,13 @@ slug: Web/API/HTMLInputElement/reportValidity
 
 ## 構文
 
-```js
-element.reportValidity();
+```js-nolint
+reportValidity()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -27,6 +33,6 @@ element.reportValidity();
 
 ## 関連情報
 
+- [checkValidity](/ja/docs/Web/API/HTMLInputElement/checkValidity)
 - [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
-- [制約検証 API](/ja/docs/Web/API/Constraint_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)

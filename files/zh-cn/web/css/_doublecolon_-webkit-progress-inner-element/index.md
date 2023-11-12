@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-progress-inner-element'
+title: "::-webkit-progress-inner-element"
 slug: Web/CSS/::-webkit-progress-inner-element
 ---
 
@@ -9,12 +9,12 @@ slug: Web/CSS/::-webkit-progress-inner-element
 
 > **备注：** 为了使 `::-webkit-progress-value` 生效， `<progress>` 元素的{{cssxref("-webkit-appearance")}} 需要设置为 `none` 。
 
-## 例子
+## 示例
 
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### CSS
@@ -29,9 +29,9 @@ progress {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", 200, 50)}}
+{{EmbedLiveSample("示例", 200, 50)}}
 
 应用了上述样式的进度条如下：
 

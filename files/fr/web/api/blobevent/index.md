@@ -1,18 +1,6 @@
 ---
 title: BlobEvent
 slug: Web/API/BlobEvent
-tags:
-  - API
-  - Audio
-  - Blob
-  - Interface
-  - Media
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Reference
-  - Video
-  - events
-translation_of: Web/API/BlobEvent
 ---
 
 {{APIRef ("Media Capture and Streams")}}
@@ -35,7 +23,7 @@ _Hérite des propriétés de son parent, {{domxref("Event")}}_.
 
 ## Méthodes
 
-*Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent [`Event`](/fr/docs/Web/API/Event).*
+_Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent [`Event`](/fr/docs/Web/API/Event)._
 
 ## Spécifications
 

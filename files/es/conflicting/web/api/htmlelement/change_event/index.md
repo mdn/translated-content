@@ -22,11 +22,3 @@ var handlerFunction = element.onchange;
 Mir el la págna [Manejadores de eventos DOM](/es/docs/Web/Guide/Events/Event_handlers) para más información sobre cómo trabajar con los manejadore `on`.
 
 Mira la documentación para el evento [`change`](/es/docs/Web/Reference/Events/change).
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad de navegadores
-
-{{Compat("api.GlobalEventHandlers.onchange")}}

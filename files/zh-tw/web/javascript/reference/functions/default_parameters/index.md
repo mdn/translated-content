@@ -23,13 +23,13 @@ function [name]([param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]) {
 
 ```js
 function multiply(a, b) {
-  b = (typeof b !== 'undefined') ?  b : 1;
+  b = typeof b !== "undefined" ? b : 1;
   return a * b;
 }
 
 multiply(5, 2); // 10
 multiply(5, 1); // 5
-multiply(5);    // 5
+multiply(5); // 5
 ```
 
 有了 ES2015 的預設參數，再也不用於函式進行檢查了，現在只要簡單的在函式的起始處為 b 指定 1 的值：
@@ -41,7 +41,7 @@ function multiply(a, b = 1) {
 
 multiply(5, 2); // 10
 multiply(5, 1); // 5
-multiply(5);    // 5
+multiply(5); // 5
 ```
 
 ## 範例
@@ -51,13 +51,13 @@ multiply(5);    // 5
 這邊第二段函式呼叫中，僅管第二個傳入參數在呼叫時明確地指定為 undefined（雖不是 null），其顏色參數的值是預設值（rosybrown）。
 
 ```js
-function setBackgroundColor(element, color = 'rosybrown') {
+function setBackgroundColor(element, color = "rosybrown") {
   element.style.backgroundColor = color;
 }
 
-setBackgroundColor(someDiv);            // color set to 'rosybrown'
+setBackgroundColor(someDiv); // color set to 'rosybrown'
 setBackgroundColor(someDiv, undefined); // color set to 'rosybrown' too
-setBackgroundColor(someDiv, 'blue');    // color set to 'blue'
+setBackgroundColor(someDiv, "blue"); // color set to 'blue'
 ```
 
 ### 呼叫時賦予值
@@ -78,14 +78,14 @@ append(2); //[2], 而非 [1, 2]
 
 ```js
 function callSomething(thing = something()) {
- return thing;
+  return thing;
 }
 
 function something() {
-  return 'sth';
+  return "sth";
 }
 
-callSomething();  //sth
+callSomething(); //sth
 ```
 
 ### 預設的參數中，先設定的可提供之後設定的使用
@@ -93,31 +93,45 @@ callSomething();  //sth
 先前有碰到的參數，後來的即可使用。
 
 ```js
-function singularAutoPlural(singular, plural = singular + '們',
-                            rallyingCry = plural + '，進攻啊!!!') {
+function singularAutoPlural(
+  singular,
+  plural = singular + "們",
+  rallyingCry = plural + "，進攻啊!!!",
+) {
   return [singular, plural, rallyingCry];
 }
 
 //["壁虎","壁虎們", "壁虎，進攻啊!!!"]
-singularAutoPlural('壁虎');
+singularAutoPlural("壁虎");
 
 //["狐狸","火紅的狐狸們", "火紅的狐狸們，進攻啊!!!"]
-singularAutoPlural('狐狸', '火紅的狐狸們');
+singularAutoPlural("狐狸", "火紅的狐狸們");
 
 //["鹿兒", "鹿兒們", "鹿兒們 ... 有所好轉"]
-singularAutoPlural('鹿兒', '鹿兒們', '鹿兒們平心靜氣的 \
-   向政府請願，希望事情有所好轉。');
+singularAutoPlural(
+  "鹿兒",
+  "鹿兒們",
+  "鹿兒們平心靜氣的 \
+   向政府請願，希望事情有所好轉。",
+);
 ```
 
 This functionality is approximated in a straight forward fashion and demonstrates how many edge cases are handled.
 
 ```js
 function go() {
-  return ':P';
+  return ":P";
 }
 
-function withDefaults(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
+function withDefaults(
+  a,
+  b = 5,
+  c = b,
+  d = go(),
+  e = this,
+  f = arguments,
+  g = this.value,
+) {
   return [a, b, c, d, e, f, g];
 }
 
@@ -142,28 +156,29 @@ function withoutDefaults(a, b, c, d, e, f, g) {
   return [a, b, c, d, e, f, g];
 }
 
-withDefaults.call({value: '=^_^='});
+withDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 
-
-withoutDefaults.call({value: '=^_^='});
+withoutDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 ```
 
 ### 函式內再定義函式
 
-Introduced in Gecko 33. Functions declared in the function body cannot be referred inside default parameters and throw a {{jsxref("ReferenceError")}} (currently a {{jsxref("TypeError")}} in SpiderMonkey, see {{bug(1022967)}}). Default parameters are always executed first, function declarations inside the function body evaluate afterwards.
+Introduced in Gecko 33. Functions declared in the function body cannot be referred inside default parameters and throw a {{jsxref("ReferenceError")}} (currently a {{jsxref("TypeError")}} in SpiderMonkey, see [Firefox bug 1022967](https://bugzil.la/1022967)). Default parameters are always executed first, function declarations inside the function body evaluate afterwards.
 
 ```js
 // 行不通的！ 最後會丟出 ReferenceError。
 function f(a = go()) {
-  function go() { return ':P'; }
+  function go() {
+    return ":P";
+  }
 }
 ```
 
 ### Parameters without defaults after default parameters
 
-Prior to Gecko 26, the following code resulted in a {{jsxref("SyntaxError")}}. This has been fixed in {{bug(777060)}} and works as expected in later versions. Parameters are still set left-to-right, overwriting default parameters even if there are later parameters without defaults.
+Prior to Gecko 26, the following code resulted in a {{jsxref("SyntaxError")}}. This has been fixed in [Firefox bug 777060](https://bugzil.la/777060) and works as expected in later versions. Parameters are still set left-to-right, overwriting default parameters even if there are later parameters without defaults.
 
 ```js
 function f(x = 1, y) {
@@ -179,14 +194,14 @@ f(2); // [2, undefined]
 You can use default value assignment with the [destructuring assignment](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) notation:
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
   return x + y + z;
 }
 
 f(); // 6
 ```
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
@@ -194,6 +209,6 @@ f(); // 6
 
 {{Compat}}
 
-## 要不要也看看
+## 參見
 
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)

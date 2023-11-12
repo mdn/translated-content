@@ -1,7 +1,6 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-original_slug: Web/JavaScript/Referencia/Operadores/new.target
 ---
 
 {{JSSidebar("Operators")}}
@@ -28,8 +27,8 @@ En llamadas a funciones normales (en contraposición a llamadas a constructores)
 
 ```js
 function Foo() {
-  if (!new.target) throw 'Foo() debe ser llamado con new';
-  console.log('Foo instanciado con new');
+  if (!new.target) throw "Foo() debe ser llamado con new";
+  console.log("Foo instanciado con new");
 }
 
 Foo(); // Lanza "Foo() debe ser llamado con new"
@@ -47,7 +46,11 @@ class A {
   }
 }
 
-class B extends A { constructor() { super(); } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
 var a = new A(); // escribe en el log "A"
 var b = new B(); // escribe en el log "B"
@@ -57,9 +60,9 @@ var b = new B(); // escribe en el log "B"
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.new_target")}}
+{{Compat}}
 
 ## Ver también
 

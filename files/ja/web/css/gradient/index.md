@@ -21,7 +21,7 @@ CSS グラデーションは[自身の寸法を持ちません](/ja/docs/Web/CSS
 
 #### 放射グラデーション
 
-放射グラデーション (radical gradient) は、色が中心点 (origin) から連続的に変化します。 {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} 関数で生成されます。
+放射グラデーション (radial gradient) は、色が中心点 (origin) から連続的に変化します。 {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} 関数で生成されます。
 
 #### 反復グラデーション
 
@@ -54,8 +54,16 @@ div {
 
 ```css
 .linear-gradient {
-  background: linear-gradient(to right,
-      red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
 ```
 
@@ -90,7 +98,7 @@ div {
 
 ```html hidden
 <div class="linear-repeat">Repeating linear gradient</div>
-<br>
+<br />
 <div class="radial-repeat">Repeating radial gradient</div>
 ```
 
@@ -103,12 +111,22 @@ div {
 
 ```css
 .linear-repeat {
-  background: repeating-linear-gradient(to top left,
-      lightpink, lightpink 5px, white 5px, white 10px);
+  background: repeating-linear-gradient(
+    to top left,
+    lightpink,
+    lightpink 5px,
+    white 5px,
+    white 10px
+  );
 }
 
 .radial-repeat {
-  background: repeating-radial-gradient(powderblue, powderblue 8px, white 8px, white 16px);
+  background: repeating-radial-gradient(
+    powderblue,
+    powderblue 8px,
+    white 8px,
+    white 16px
+  );
 }
 ```
 

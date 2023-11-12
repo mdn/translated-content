@@ -1,7 +1,6 @@
 ---
 title: Écriture de serveurs WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
 
 Un serveur WebSocket est une application TCP qui écoute sur n'importe quel port d'un serveur et suit un protocole spécifique, c'est aussi simple que cela. La création de son propre serveur TCP est quelque chose qui a tendance à effrayer alors qu'il n'est pas forcément très complexe de créer un serveur WebScoket sur la plateforme de votre choix.
@@ -12,7 +11,7 @@ Avant de débuter, vous **devez** connaître précisément le fonctionnement du 
 
 > **Note :** Lire la dernière spécification officielle sur les WebSockets [RFC 6455](http://datatracker.ietf.org/doc/rfc6455/?include_text=1). Les sections 1 et 4-7 sont particulièrement intéressantes pour ce qui nous occupe. La section 10 évoque la sécurité et doit être connue et mise en oeuvre avant d'exposer votre serveur au-delà du réseau local / lors de la mise en production.
 
-Un serveur WebSocket est compris ici en "bas niveau" (_c'est-à-dire plus proche du langage machine que du langage humain_. Les WebSockets sont souvent séparés et spécialisés vis-à-vis de leurs homologues serveurs (pour des questions de montées en charge ou d'autres raisons), donc vous devez souvent utiliser un [proxy inverse](https://fr.wikipedia.org/wiki/Proxy_inverse) (_c'est-à-dire de l'extérieur vers l'intérieur du réseau local, comme pour un serveur HTTP classique_) pour détecter les "poignées de mains" spécifiques au WebSocket, qui précédent l'échange et permettent d'aiguiller les clients vers le bon logiciel. Dans ce cas, vous ne devez pas ajouter à votre serveur des *cookies* et d'autres méthodes d'authentification.
+Un serveur WebSocket est compris ici en "bas niveau" (_c'est-à-dire plus proche du langage machine que du langage humain_. Les WebSockets sont souvent séparés et spécialisés vis-à-vis de leurs homologues serveurs (pour des questions de montées en charge ou d'autres raisons), donc vous devez souvent utiliser un [proxy inverse](https://fr.wikipedia.org/wiki/Proxy_inverse) (_c'est-à-dire de l'extérieur vers l'intérieur du réseau local, comme pour un serveur HTTP classique_) pour détecter les "poignées de mains" spécifiques au WebSocket, qui précédent l'échange et permettent d'aiguiller les clients vers le bon logiciel. Dans ce cas, vous ne devez pas ajouter à votre serveur des _cookies_ et d'autres méthodes d'authentification.
 
 ## La "poignée de mains" du WebSocket
 
@@ -20,7 +19,7 @@ En tout premier lieu, le serveur doit écouter les connexions sockets entrantes 
 
 > **Attention :** Si le serveur peut écouter n'importe quel port, mais que vous décidez de ne pas utiliser un port standard (80 ou 443 pour SSL), cela peut créer en avant des problèmes avec les parefeux et/ou les proxys. De plus, gardez en mémoire que certains navigateur Web (notablement Firefox 8+), n'autorisent pas les connexions WebSocket non-SSL sur une page SSL.
 
-La *poignée de mains* est la partie "Web" dans les WebSockets : c'est le pont entre le protocole HTTP et le WebSocket. Durant cette poignée, les détails (les paramètres) de la connexion sont négociés et l'une des parties peut interromptre la transaction avant la fin si l'un des termes ne lui est pas autorisé / ne lui est pas possible. Le serveur doit donc être attentif à comprendre parfaitement les demandes et attentes du client, sans quoi des procédures de sécurité seront déclenchées.
+La _poignée de mains_ est la partie "Web" dans les WebSockets : c'est le pont entre le protocole HTTP et le WebSocket. Durant cette poignée, les détails (les paramètres) de la connexion sont négociés et l'une des parties peut interromptre la transaction avant la fin si l'un des termes ne lui est pas autorisé / ne lui est pas possible. Le serveur doit donc être attentif à comprendre parfaitement les demandes et attentes du client, sans quoi des procédures de sécurité seront déclenchées.
 
 ### La requête de _poignée de mains_ côté client
 
@@ -35,9 +34,9 @@ Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
 ```
 
-Le client peut solliciter des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. En outre, des en-têtes communs tel que _User-Agent_, _Referer_, *Cookie* ou des en-têtes d'authentification peuvent être envoyés par la même requête : leur usage est laissé libre car ils ne se rapportent pas directement au WebSocket et au processus de poignée de main. A ce titre il semble préférable de les ignorer : d'ailleurs dans de nombreuses configurations communes, un proxy inverse les aura finalement déjà traitées.
+Le client peut solliciter des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. En outre, des en-têtes communs tel que _User-Agent_, _Referer_, _Cookie_ ou des en-têtes d'authentification peuvent être envoyés par la même requête : leur usage est laissé libre car ils ne se rapportent pas directement au WebSocket et au processus de poignée de main. A ce titre il semble préférable de les ignorer : d'ailleurs dans de nombreuses configurations communes, un proxy inverse les aura finalement déjà traitées.
 
-Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse "[400 Bad Request](/fr/docs/HTTP/Response_codes#400)" (_erreur 400 : la requête est incorrecte_) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (_en somme, tout dépend du comportement du client_). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête _Sec-WebSocket-Version_ correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (_voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction_). Maintenant, nous allons passer à l'entête attendu : *Sec-WebSocket-Key*.
+Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse "[400 Bad Request](/fr/docs/HTTP/Response_codes#400)" (_erreur 400 : la requête est incorrecte_) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (_en somme, tout dépend du comportement du client_). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête _Sec-WebSocket-Version_ correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (_voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction_). Maintenant, nous allons passer à l'entête attendu : _Sec-WebSocket-Key_.
 
 > **Note :** Un grand nombre de navigateurs enverront un [`Entête d'origine`](/fr/docs/HTTP/Access_control_CORS#Origin). Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse [403 Forbidden](/fr/docs/HTTP/Response_codes#403) si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci.
 
@@ -47,7 +46,7 @@ Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur
 
 ### La réponse du serveur lors de la poignée de mains
 
-Lorsqu'il reçoit la requête du client, le serveur doit envoyer une réponse correctement formée dans un format non-standard HTTP et qui ressemble au code ci-dessous. Gardez à l'esprit que chaque entête se termine par un saut de ligne : *\r\n*&nbsp;; un saut de ligne doublé lors de l'envoi du dernier entête pour séparer du reste du corps (même si celui-ci est vide).
+Lorsqu'il reçoit la requête du client, le serveur doit envoyer une réponse correctement formée dans un format non-standard HTTP et qui ressemble au code ci-dessous. Gardez à l'esprit que chaque entête se termine par un saut de ligne : _\r\n_&nbsp;; un saut de ligne doublé lors de l'envoi du dernier entête pour séparer du reste du corps (même si celui-ci est vide).
 
 ```
 HTTP/1.1 101 Switching Protocols
@@ -56,7 +55,7 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-En sus, le serveur peut décider de proposer des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. L'entête Sec-WebSocket-Accept nous intéresse ici : le serveur doit la former depuis l'entête Sec-WebSocket-Key envoyée précédemment par le client. Pour l'obtenir, vous devez concaténater (_rassembler_) la valeur de *Sec-WebSocket-Key* et "_258EAFA5-E914-47DA-95CA-C5AB0DC85B11_" (valeur fixée par défaut : c'est une "[magic string](https://en.wikipedia.org/wiki/Magic_string)") puis procéder au hash par la méthode [SHA-1](https://en.wikipedia.org/wiki/SHA-1) du résultat et retourner le format au format [base64](https://en.wikipedia.org/wiki/Base64).
+En sus, le serveur peut décider de proposer des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. L'entête Sec-WebSocket-Accept nous intéresse ici : le serveur doit la former depuis l'entête Sec-WebSocket-Key envoyée précédemment par le client. Pour l'obtenir, vous devez concaténater (_rassembler_) la valeur de _Sec-WebSocket-Key_ et "_258EAFA5-E914-47DA-95CA-C5AB0DC85B11_" (valeur fixée par défaut : c'est une "[magic string](https://en.wikipedia.org/wiki/Magic_string)") puis procéder au hash par la méthode [SHA-1](https://en.wikipedia.org/wiki/SHA-1) du résultat et retourner le format au format [base64](https://en.wikipedia.org/wiki/Base64).
 
 > **Note :** Ce processus qui peut paraître inutilement complexe, permet de certifier que le serveur et le client sont bien sur une base WebSocket et non une requête HTTP (qui serait alors mal interprétée).
 
@@ -120,13 +119,13 @@ Le bit FIN indique si c'est le dernier message de la série \[_NDT : pour la con
 Pour (pouvoir) lire les _données utiles_, vous devez savoir quand arrêter la lecture dans le flux des trames entrantes vers le serveur. C'est pourquoi il est important de connaître la taille des _données utiles_. Et malheureusement ce n'est pas toujours simple. Voici quelques étapes essentielles à connaître :
 
 1. (_étape 1_) Lire tout d'abord les bits 9 à 15 (inclu) et les interprêter comme un entier non-signé. S'il équivaut à 125 ou moins, alors il correspond à la taille totale de la charge utile.
-    S'il vaut à 126, allez à l'étape 2 ou sinon, s'il vaut 127, allez à l'étape 3.
+   S'il vaut à 126, allez à l'étape 2 ou sinon, s'il vaut 127, allez à l'étape 3.
 2. (_étape 2_) Lire les 16 bits supplémentaires et les interprêter comme précédent (entier non-signé). Vous avez alors la taille des données utiles.
 3. (_étape 3_) Lire les 64 bits supplémentaires et les interprêter comme précédent (entier non-signé). Vous avez alors la taille des données utiles. Attention, le bit le plus significatif doit rester à 0.
 
 ### Lire et démasquer les données
 
-Si le bit MASK a été fixé (et il devrait l'être, pour les messages client-serveur), vous devez lire les 4 prochains octets (32 bits) : ils sont la clé de masquage. Une fois la longueur de charge utile connue et la clé de masquage décodée, vous pouvez poursuivre la lecture des autres bits comme étant les données utiles masquées. Par convention pour le reste du paragraphe, appelons-les _données encodées_, et la clé *masque*. Pour décoder les données, bouclez les octets du texte reçu en XOR avec l'octet du (_i modulo 4_) ième octet du *masque*. En voici le pseudo-code (_JavaScript valide_) :
+Si le bit MASK a été fixé (et il devrait l'être, pour les messages client-serveur), vous devez lire les 4 prochains octets (32 bits) : ils sont la clé de masquage. Une fois la longueur de charge utile connue et la clé de masquage décodée, vous pouvez poursuivre la lecture des autres bits comme étant les données utiles masquées. Par convention pour le reste du paragraphe, appelons-les _données encodées_, et la clé _masque_. Pour décoder les données, bouclez les octets du texte reçu en XOR avec l'octet du (_i modulo 4_) ième octet du _masque_. En voici le pseudo-code (_JavaScript valide_) :
 
 ```js
 var DECODED = "";

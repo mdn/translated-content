@@ -1,7 +1,6 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-translation_of: Web/CSS/text-shadow
 ---
 
 {{CSSRef}}
@@ -66,14 +65,15 @@ Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseud
 
 ```css
 .red-text-shadow {
-   text-shadow: red 0 -2px;
+  text-shadow: red 0 -2px;
 }
 ```
 
 ```html
-<p class="red-text-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="red-text-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Ombre_simple', '660px', '90px')}}
@@ -82,16 +82,22 @@ Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseud
 
 ```css
 .white-text-with-blue-shadow {
-   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-   color: white;
-   font: 1.5em Georgia, serif;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  color: white;
+  font:
+    1.5em Georgia,
+    serif;
 }
 ```
 
 ```html
-<p class="white-text-with-blue-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsaquae ab illo inventore.</p>
+<p class="white-text-with-blue-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsaquae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Ombres_multiples', '660px', '170px')}}

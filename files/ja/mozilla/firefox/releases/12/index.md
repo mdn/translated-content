@@ -41,8 +41,8 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 
 ### SVG
 
-- {{ domxref("SVGTests") }} DOM API に対応しました。({{ bug("607854") }})
-- {{ domxref("SVGStringList") }} DOM インタフェースが非標準の `length` プロパティに対応しました。({{ bug("711958") }})
+- {{ domxref("SVGTests") }} DOM API に対応しました。([Firefox バグ 607854](https://bugzil.la/607854))
+- {{ domxref("SVGStringList") }} DOM インタフェースが非標準の `length` プロパティに対応しました。([Firefox バグ 711958](https://bugzil.la/711958))
 
 ### MathML
 

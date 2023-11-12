@@ -3,6 +3,8 @@ title: Canvas
 slug: Glossary/Canvas
 ---
 
+{{GlossarySidebar}}
+
 一個 {{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ 元素提供一個空的圖區使特定的 {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} 可以在上面繪圖(像是 Canvas 2D 或 {{Glossary("WebGL")}}).
 
 ## 了解更多
@@ -13,11 +15,11 @@ slug: Glossary/Canvas
 
 ### 學習資源
 
-- [The Canvas tutorial on MDN](/zh-TW/docs/Web/Guide/HTML/Canvas_tutorial)
+- [The Canvas tutorial on MDN](/zh-TW/docs/Web/API/Canvas_API/Tutorial)
 
 ### 技術參考
 
 - The HTML {{HTMLElement("canvas")}} element on MDN
-- [The Canvas general documentation on MDN](/zh-TW/docs/HTML/Canvas)
+- [The Canvas general documentation on MDN](/zh-TW/docs/Web/API/Canvas_API)
 - {{domxref("CanvasRenderingContext2D")}}: The canvas 2D drawing API
 - [The Canvas 2D API specification](https://www.w3.org/TR/2dcontext/)

@@ -1,13 +1,6 @@
 ---
 title: CSS Animations
-slug: Web/CSS/CSS_Animations
-tags:
-  - CSS
-  - CSS Animations
-  - Experimental
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -42,13 +35,11 @@ translation_of: Web/CSS/CSS_Animations
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations') }} | {{ Spec2('CSS3 Animations') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## See also
 

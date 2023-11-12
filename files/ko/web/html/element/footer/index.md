@@ -9,8 +9,6 @@ slug: Web/HTML/Element/footer
 
 {{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
-The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) and send us a pull request.
-
 <table class="properties">
   <tbody>
     <tr>
@@ -56,7 +54,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -79,8 +77,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ```html
 <footer>
-  Some copyright info or perhaps some author
-  info for an &lt;article&gt;?
+  Some copyright info or perhaps some author info for an &lt;article&gt;?
 </footer>
 ```
 
@@ -96,7 +93,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.footer")}}
+{{Compat}}
 
 ## 같이 보기
 

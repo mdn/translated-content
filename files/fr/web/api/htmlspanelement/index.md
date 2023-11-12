@@ -1,10 +1,6 @@
 ---
 title: HTMLSpanElement
 slug: Web/API/HTMLSpanElement
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLSpanElement
 ---
 
 {{ ApiRef() }}

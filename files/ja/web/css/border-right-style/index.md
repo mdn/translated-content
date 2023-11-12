@@ -76,23 +76,44 @@ border-right-style: unset;
 /* 表の外見を定義 */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 
 /* border-right-style の例のクラス */
-.b1 {border-right-style: none;}
-.b2 {border-right-style: hidden;}
-.b3 {border-right-style: dotted;}
-.b4 {border-right-style: dashed;}
-.b5 {border-right-style: solid;}
-.b6 {border-right-style: double;}
-.b7 {border-right-style: groove;}
-.b8 {border-right-style: ridge;}
-.b9 {border-right-style: inset;}
-.b10 {border-right-style: outset;}
+.b1 {
+  border-right-style: none;
+}
+.b2 {
+  border-right-style: hidden;
+}
+.b3 {
+  border-right-style: dotted;
+}
+.b4 {
+  border-right-style: dashed;
+}
+.b5 {
+  border-right-style: solid;
+}
+.b6 {
+  border-right-style: double;
+}
+.b7 {
+  border-right-style: groove;
+}
+.b8 {
+  border-right-style: ridge;
+}
+.b9 {
+  border-right-style: inset;
+}
+.b10 {
+  border-right-style: outset;
+}
 ```
 
 #### 結果

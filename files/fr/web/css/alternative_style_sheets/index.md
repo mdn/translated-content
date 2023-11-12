@@ -1,12 +1,6 @@
 ---
 title: Feuilles de style alternatives
 slug: Web/CSS/Alternative_style_sheets
-tags:
-  - CSS
-  - NeedsCompatTable
-  - Reference
-translation_of: Web/CSS/Alternative_style_sheets
-original_slug: Web/CSS/Feuilles_de_style_alternatives
 ---
 
 {{CSSRef}}
@@ -20,11 +14,19 @@ Firefox permet à l'utilisateur de sélectionner le style de la page en utilisan
 Pour indiquer des feuilles de style alternatives, on utilisera un élément {{HTMLElement("link")}} avec les attributs `rel="stylesheet alternate"` et `title="..."`. Ainsi :
 
 ```html
-<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="reset.css" rel="stylesheet" type="text/css" />
 
-<link href="default.css" rel="stylesheet" type="text/css" title="Style par défaut">
-<link href="joli.css" rel="alternate stylesheet" type="text/css" title="Joli">
-<link href="basique.css" rel="alternate stylesheet" type="text/css" title="Basique">
+<link
+  href="default.css"
+  rel="stylesheet"
+  type="text/css"
+  title="Style par défaut" />
+<link href="joli.css" rel="alternate stylesheet" type="text/css" title="Joli" />
+<link
+  href="basique.css"
+  rel="alternate stylesheet"
+  type="text/css"
+  title="Basique" />
 ```
 
 Dans cet exemple, les styles « Style par défaut », « Joli » et « Basique » seront listés dans le menu « Style de la page ». C'est le style par défaut (il n'y a pas de composante `alternate` pour l'attribut `rel`) qui sera sélectionné. Lorsque l'utilisateur choisit un autre style, la page est alors immédiatement affichée avec cette feuille de style.

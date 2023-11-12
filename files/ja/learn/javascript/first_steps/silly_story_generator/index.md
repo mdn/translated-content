@@ -49,18 +49,18 @@ HTML および CSS と少しのテキストと JavaScript 関数があります�
 1. 先ほどのテキストファイル内の "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" という見出しの直後にあるコードをコピーして `main.js` の先頭に貼り付けます。これで "Enter custom name" テキストフィールド (`customName`) 、"Generate random story" ボタン (`randomize`) 、HTML の body の下のほうにある {{htmlelement("p")}} 要素 (`story`) への参照を保持することができます。さらに `randomValueFromArray()` という、引数として配列を取りその配列からランダムに 1 つの項目を戻り値として返す関数が使えるようになります。
 2. 次にテキストファイルの 2 番目のセクションを見てみましょう。"2. RAW TEXT STRINGS" という見出しのところです。このプログラムの入力となる文字列が書かれています。`main.js` の内部で使用できるように、これらの文字列を変数に保持してください。
 
-    1. 先頭の長い長い文字列を `storyText` という変数に格納します。
-    2. 3 つセットになっている最初の文字列の組を `insertX` という配列に格納します。
-    3. 2 組目の文字列を `insertY` という配列に格納します。
-    4. 3 組目の文字列を `insertZ` という配列に格納します。
+   1. 先頭の長い長い文字列を `storyText` という変数に格納します。
+   2. 3 つセットになっている最初の文字列の組を `insertX` という配列に格納します。
+   3. 2 組目の文字列を `insertY` という配列に格納します。
+   4. 3 組目の文字列を `insertZ` という配列に格納します。
 
 イベントハンドラーと未完成の関数の配置:
 
 1. テキストファイルに戻ります。
 2. "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" という見出しの直後にあるコードをコピーして `main.js` ファイルの最後に貼り付けます。これで、
 
-    - `randomize` 変数へのクリックイベントリスナーが追加され、その変数に紐づくボタンが押された場合に `result()` 関数が実行されるようになります。
-    - 部分的に実装されている `result()` 関数の定義が追加されます。この課題の中で、この関数の残りを実装し、正しく動作するようにします。
+   - `randomize` 変数へのクリックイベントリスナーが追加され、その変数に紐づくボタンが押された場合に `result()` 関数が実行されるようになります。
+   - 部分的に実装されている `result()` 関数の定義が追加されます。この課題の中で、この関数の残りを実装し、正しく動作するようにします。
 
 `result()` 関数の作成
 
@@ -70,10 +70,10 @@ HTML および CSS と少しのテキストと JavaScript 関数があります�
 4. 最初の `if` ブロックで、`newStory` の文字列内で見つかる 'Bob' という文字列を `name` 変数の値で置換するため、別の文字列置換のメソッド呼び出し追加します。このブロック内では、「もし ( if ) `customName` テキストフィールドに何かが入力されていれば、Bob をその文字列で置き換える」ということを言っています。
 5. 次の `if` ブロックの中では、`uk` のラジオボタンが選択されているかどうかを調べています。もし選択されているのなら、重さと温度の単位をポンド・華氏から、ストーン・摂氏に変換したいと思います。そのために必要なことは...
 
-    1. ポンドからストーンへ変換する公式、および、華氏から摂氏へ変換する公式を調べます。
-    2. `weight` 変数が宣言されている行内の、300 を ポンドからストーンに変換した値で置き換えます。そして `' stone'` (ストーン) を `Math.round()` の結果に対して、その後ろに結合します。
-    3. `temperature` 変数が宣言されている行内の、94 を華氏から摂氏に変換した値で置き換えます。こちらには `' centigrade'` (摂氏～度) という文字を `Math.round()` の結果に対して、後ろに結合します。
-    4. 上記 2 つの変数の宣言の直後に、さらにもう 2 つ文字列を置換するコードを書いて、'94 farenheit' を `temperature` 変数の内容に、'300 pounds' を `weight` 変数の内容にそれぞれ置換します。
+   1. ポンドからストーンへ変換する公式、および、華氏から摂氏へ変換する公式を調べます。
+   2. `weight` 変数が宣言されている行内の、300 を ポンドからストーンに変換した値で置き換えます。そして `' stone'` (ストーン) を `Math.round()` の結果に対して、その後ろに結合します。
+   3. `temperature` 変数が宣言されている行内の、94 を華氏から摂氏に変換した値で置き換えます。こちらには `' centigrade'` (摂氏～度) という文字を `Math.round()` の結果に対して、後ろに結合します。
+   4. 上記 2 つの変数の宣言の直後に、さらにもう 2 つ文字列を置換するコードを書いて、'94 farenheit' を `temperature` 変数の内容に、'300 pounds' を `weight` 変数の内容にそれぞれ置換します。
 
 6. 最後に、関数の下から 2 行目にある、`story` 変数の `textContent` プロパティ(段落を参照している) を、`newStory` 変数の内容で置き換えます。
 
@@ -83,7 +83,7 @@ HTML および CSS と少しのテキストと JavaScript 関数があります�
 - もし、JavaScript が HTML に適切に適用されているかどうかを知りたければ、JavaScript ファイルから一時的に全てのコードを削除して、確実に何かが起きるようなコードを追加して、JavaScript ファイルを保存して HTML ファイルを更新してみましょう。次の例は {{htmlelement("html")}} 要素の背景色を赤くするコードです。JavaScript が適切に HTML に適用されていれば、ブラウザーのウィンドウが真っ赤になることでしょう。
 
   ```js
-  document.querySelector('html').style.backgroundColor = 'red';
+  document.querySelector("html").style.backgroundColor = "red";
   ```
 
 - [Math.round()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/round) は JavaScript の組み込みメソッドで、計算結果を整数値に四捨五入します。
@@ -94,15 +94,3 @@ HTML および CSS と少しのテキストと JavaScript 関数があります�
 もし特定の組織の元でこのコースを受けているのなら、先生やメンターに出来たものを見せて、評価をお願いしてみましょう。もし自分だけでやっているのなら、[この評価試験のスレッド](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686)や、[Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルに評価をお願いしてみましょう。まずはやってみましょう。カンニングしても得られるものはないですよ！
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## このモジュール内の文書
-
-- [JavaScript って何?](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript への最初のダイブ](/ja/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [何が間違っている? JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [必要な情報を保存する — 変数](/ja/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript での数学入門 — 数値と演算子について](/ja/docs/Learn/JavaScript/First_steps/Math)
-- [テキストを扱う — JavaScript での文字列](/ja/docs/Learn/JavaScript/First_steps/Strings)
-- [便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)
-- [評価: バカ話ジェネレーター](/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator)

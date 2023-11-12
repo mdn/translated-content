@@ -1,14 +1,15 @@
 ---
 title: do...while 語法
 slug: Web/JavaScript/Reference/Statements/do...while
-original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/do...while_語法
 ---
+
+{{jsSidebar("Statements")}}
 
 `do...while` 語法會反覆執行直到指定條件的求值結果為 false 為止。`do...while` 語法如下︰
 
-```js
+```js-nolint
 do
-   statement
+  statement
 while (condition);
 ```
 
@@ -20,9 +21,7 @@ while (condition);
 
 ```js
 do {
-   i += 1;
-   document.write(i);
+  i += 1;
+  document.write(i);
 } while (i < 5);
 ```
-
-{{ PreviousNext("Core_JavaScript_1.5_教學:循環語法:for_語法", "Core_JavaScript_1.5_教學:循環語法:while_語法") }}

@@ -1,9 +1,6 @@
 ---
 title: element.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLElement/offsetLeft
 ---
 
 {{ ApiRef() }}
@@ -17,7 +14,7 @@ de l'élément courant est décalé vers la gauche au sein du nœud [`offsetPare
 ### Syntaxe
 
 ```js
-left =element.offsetLeft;
+left = element.offsetLeft;
 ```
 
 `left` est un entier représentant le décalage vers la gauche en pixels.
@@ -46,15 +43,17 @@ Comme noté plus haut, cet exemple montre une «&nbsp;longue&nbsp;» phrase qui 
 Note&nbsp;: il s'agit d'une image de l'exemple, pas d'un rendu direct dans le navigateur. En effet, il n'est pas possible d'intégrer des scripts dans la page du wiki.
 
 ```html
-<div style="width: 300px; border-color:blue;
+<div
+  style="width: 300px; border-color:blue;
   border-style:solid; border-width:1;">
   <span>Short span. </span>
   <span id="long">Long span that wraps withing this div.</span>
 </div>
 
-<div id="box" style="position: absolute; border-color: red;
-  border-width: 1; border-style: solid; z-index: 10">
-</div>
+<div
+  id="box"
+  style="position: absolute; border-color: red;
+  border-width: 1; border-style: solid; z-index: 10"></div>
 
 <script>
   var box = document.getElementById("box");

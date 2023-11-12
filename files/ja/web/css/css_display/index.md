@@ -1,6 +1,6 @@
 ---
 title: CSS 表示方法
-slug: Web/CSS/CSS_Display
+slug: Web/CSS/CSS_display
 ---
 
 {{CSSRef}}
@@ -65,4 +65,4 @@ slug: Web/CSS/CSS_Display
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.display", 10)}}
+{{Compat}}

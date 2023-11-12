@@ -18,7 +18,7 @@ HTMLFormElement.reset()
 ## Ejemplo
 
 ```js
-document.getElementById('myform').reset();
+document.getElementById("myform").reset();
 ```
 
 ## Especificaciones
@@ -27,7 +27,7 @@ document.getElementById('myform').reset();
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLFormElement.reset")}}
+{{Compat}}
 
 ## Vea también
 

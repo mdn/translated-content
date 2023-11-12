@@ -1,12 +1,13 @@
 ---
-title: 'リンク種別: preload'
+title: rel=preload
 slug: Web/HTML/Attributes/rel/preload
-original_slug: Web/HTML/Link_types/preload
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
 
-`preload` は {{htmlelement("link")}} 要素の {{htmlattrxref("rel", "link")}} 属性の値で、その HTML の {{htmlelement("head")}} の中で読み取りリクエストを宣言し、ページのライフサイクルの早期の、ブラウザーの主なレンダリング機構が起動する前に読み取りを始めたい、すぐに必要なリソースを指定することができます。これにより、そのリソースがより早く利用でき、ページのレンダリングがブロックされにくくなり、性能が向上します。名前には _load_ という言葉が含まれていますが、これはスクリプトを読み込んで実行するのではなく、ダウンロードとキャッシュをより高い優先度で行うようにスケジュールするだけです。
+`preload` は {{htmlelement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性の値で、その HTML の {{htmlelement("head")}} の中で読み取りリクエストを宣言し、ページのライフサイクルの早期の、ブラウザーの主なレンダリング機構が起動する前に読み取りを始めたい、すぐに必要なリソースを指定することができます。これにより、そのリソースがより早く利用でき、ページのレンダリングがブロックされにくくなり、性能が向上します。名前には _load_ という言葉が含まれていますが、これはスクリプトを読み込んで実行するのではなく、ダウンロードとキャッシュをより高い優先度で行うようにスケジュールするだけです。
 
 ## 基本概念
 
@@ -18,8 +19,8 @@ original_slug: Web/HTML/Link_types/preload
 
 しかしここで、 `rel` の値に `preload` を使用すると、 `<link>` 要素は利用したいあらゆるリソースの先読み指示になります。以下のものも指定する必要があります。
 
-- リソースのパスを {{htmlattrxref("href", "link")}} 属性へ
-- リソースの種類を {{htmlattrxref("as", "link")}} 属性へ
+- リソースのパスを [`href`](/ja/docs/Web/HTML/Element/link#href) 属性へ
+- リソースの種類を [`as`](/ja/docs/Web/HTML/Element/link#as) 属性へ
 
 簡単な例を示すと、次のようになります ([JS と CSS の例のソース](https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css)および[ライブ](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/))。
 
@@ -72,17 +73,15 @@ original_slug: Web/HTML/Link_types/preload
 - `worker`: JavaScript ウェブワーカーまたは共有ワーカー。
 - `video`: 通常は {{htmlelement("video")}} で使用される動画ファイル。
 
-> **メモ:** `video` の先読み機能は Preload 仕様書に含まれていますが、現在ブラウザーでは実装されていません。
-
 > **メモ:** `font` および `fetch` の先読みには、 `crossorigin` 属性を設定する必要があります。下記の [CORS を使用したフェッチ](#cors_を使用したフェッチ)を参照してください。
 
 > **メモ:** 使用されると予想されるこれらの値やウェブ機能について、もっと詳細は Preload の仕様書にあります。 — [link element extensions](https://w3c.github.io/preload/#link-element-extensions) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
 
 ## MIME タイプを含める
 
-`<link>` 要素は {{htmlattrxref("type", "link")}} 要素を受け付け、要素が指す先のリソースの MIME タイプを指定することができます。これは特にリソースの先読み時に便利です。 — ブラウザーは `type` 属性の値を使用して対応しているリソースであるかどうかを確認し、その場合だけダウンロードを開始し、そうでない場合は開始しないようにすることができます。
+`<link>` 要素は [`type`](/ja/docs/Web/HTML/Element/link#type) 要素を受け付け、要素が指す先のリソースの MIME タイプを指定することができます。これは特にリソースの先読み時に便利です。 — ブラウザーは `type` 属性の値を使用して対応しているリソースであるかどうかを確認し、その場合だけダウンロードを開始し、そうでない場合は開始しないようにすることができます。
 
-この例を動画のデモで見ることができます（[ソースコード全体](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video)と[デモ版](https://mdn.github.io/html-examples/link-rel-preload/video/)もご覧ください。）。コードスニペットは下記の通りです。このコードは、どのブラウザーでも実際に先読み処理を発生させるわけではありませんが（動画の先読み処理はまだどのブラウザーでも対応していないため）、一般的な先読み処理の背後にある中核的な動作を示しています。
+この例を動画のデモで見ることができます（[ソースコード全体](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video)と[デモ版](https://mdn.github.io/html-examples/link-rel-preload/video/)もご覧ください。）。コードスニペットは下記の通りです。
 
 ```html
 <head>
@@ -113,7 +112,7 @@ original_slug: Web/HTML/Link_types/preload
 
 ## CORS を使用したフェッチ
 
-[CORS](/ja/docs/Web/HTTP/CORS) を有効にして取得したリソースを先読みする場合 ([`fetch()`](/ja/docs/Web/API/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の {{htmlattrxref("crossorigin","link")}} 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
+[CORS](/ja/docs/Web/HTTP/CORS) を有効にして取得したリソースを先読みする場合 ([`fetch()`](/ja/docs/Web/API/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の [`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
 
 上記のように、これが当てはまる興味深いケースの 1 つが、フォントファイルです。さまざまな理由により、これらは匿名モードの CORS を使用してフェッチする必要があります（[Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)参照）。
 
@@ -148,7 +147,7 @@ original_slug: Web/HTML/Link_types/preload
 
 ## media を含める
 
-`<link>` 要素の優れた機能のひとつが、 {{htmlattrxref("media", "link")}} 属性を受け入れることができることです。この属性は、[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)や本格的な[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)を受け付けることができるので、レスポンシブな先読みを行うことができます。
+`<link>` 要素の優れた機能のひとつが、 [`media`](/ja/docs/Web/HTML/Element/link#media) 属性を受け入れることができることです。この属性は、[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)や本格的な[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)を受け付けることができるので、レスポンシブな先読みを行うことができます。
 
 例を見てみましょう (GitHub 上の[ソースコード](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media)、[デモ](https://mdn.github.io/html-examples/link-rel-preload/media/))。
 

@@ -1,15 +1,6 @@
 ---
 title: search.get()
 slug: Mozilla/Add-ons/WebExtensions/API/search/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Search
-  - WebExtensions
-  - get
-translation_of: Mozilla/Add-ons/WebExtensions/API/search/get
 ---
 
 {{AddonSidebar()}}
@@ -23,7 +14,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingEngines = browser.search.get()
+var gettingEngines = browser.search.get();
 ```
 
 ### Paramètres
@@ -43,9 +34,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 - `favIconUrl`{{optional_inline}}
   - : `string`. L'icône du moteur de recherche, comme une donnée : URL.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.search.search", 10)}}
+{{Compat}}
 
 ## Exemples
 

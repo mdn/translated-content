@@ -22,16 +22,16 @@ regexp[Symbol.matchAll](str)
 
 ### 返回值
 
-一个[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)。
+一个[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)。
 
 ## 描述
 
 本方法在{{jsxref("String.prototype.matchAll()")}}中被内部调用。例如，以下两个示例返回相同的结果。
 
 ```js
-'abc'.matchAll(/a/);
+"abc".matchAll(/a/);
 
-/a/[Symbol.matchAll]('abc');
+/a/[Symbol.matchAll]("abc");
 ```
 
 本方法用于自定义`RegExp`子类中的匹配行为。
@@ -44,16 +44,16 @@ regexp[Symbol.matchAll](str)
 
 ```js
 var re = /[0-9]+/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var result = re[Symbol.matchAll](str);
 
-console.log(Array.from(result, x => x[0]));
+console.log(Array.from(result, (x) => x[0]));
 // ["2016", "01", "02"]
 ```
 
-### 在子类中使用`@@matchAll`
+### 在子类中使用 `@@matchAll`
 
-{{jsxref("RegExp")}}的子类可以重写`[@@matchAll]()`方法来修改默认行为。例如，返回一个{{jsxref("Array")}}而不是[iterator](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators):
+{{jsxref("RegExp")}} 的子类可以重写 `[@@matchAll]()` 方法来修改默认行为。例如，返回一个{{jsxref("Array", "数组", "", 1)}}而不是[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)：
 
 ```js
 class MyRegExp extends RegExp {
@@ -67,8 +67,8 @@ class MyRegExp extends RegExp {
   }
 }
 
-var re = new MyRegExp('([0-9]+)-([0-9]+)-([0-9]+)', 'g');
-var str = '2016-01-02|2019-03-07';
+var re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)", "g");
+var str = "2016-01-02|2019-03-07";
 var result = str.matchAll(re);
 console.log(result[0]); // [ "2016-01-02", "2016", "01", "02" ]
 console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]

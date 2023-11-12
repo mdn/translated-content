@@ -5,16 +5,16 @@ slug: Web/API/Element/animationend_event
 
 {{APIRef}}
 
-**`animationend`**（**动画结束**）事件在 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)完成时触发。如果在动画完成前中止了动画，例如将元素从 DOM 中移除，或将动画从元素上移除，`animationend` 事件不会触发。
+**`animationend`**（**动画结束**）事件在 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)完成时触发。如果在动画完成前中止了动画，例如将元素从 DOM 中移除，或将动画从元素上移除，`animationend` 事件不会触发。
 
 ## 语法
 
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('animationend', (event) => {});
+addEventListener("animationend", (event) => {});
 
-onanimationend = (event) => { };
+onanimationend = (event) => {};
 ```
 
 ## 事件类型
@@ -39,20 +39,20 @@ _也从其父接口 {{domxref("Event")}} 继承属性_。
 该实例获取一个正在绘制动画的元素，并监听 `animationend` 事件。
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
-animated.addEventListener('animationend', () => {
-  console.log('Animation ended');
+animated.addEventListener("animationend", () => {
+  console.log("Animation ended");
 });
 ```
 
 同上，但使用 `onanimationend` 事件处理器属性：
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
 animated.onanimationend = () => {
-  console.log('Animation ended');
+  console.log("Animation ended");
 };
 ```
 
@@ -107,35 +107,39 @@ animated.onanimationend = () => {
 #### JavaScript
 
 ```js
-const animation = document.querySelector('p.animation');
-const animationEventLog = document.querySelector('.animation-example>.event-log');
-const applyAnimation = document.querySelector('.animation-example>button.activate');
+const animation = document.querySelector("p.animation");
+const animationEventLog = document.querySelector(
+  ".animation-example>.event-log",
+);
+const applyAnimation = document.querySelector(
+  ".animation-example>button.activate",
+);
 let iterationCount = 0;
 
-animation.addEventListener('animationstart', () => {
+animation.addEventListener("animationstart", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'动画开始' `;
 });
 
-animation.addEventListener('animationiteration', () => {
+animation.addEventListener("animationiteration", () => {
   iterationCount++;
   animationEventLog.textContent = `${animationEventLog.textContent}'动画迭代轮次：${iterationCount}' `;
 });
 
-animation.addEventListener('animationend', () => {
+animation.addEventListener("animationend", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'动画结束'`;
-  animation.classList.remove('active');
+  animation.classList.remove("active");
   applyAnimation.textContent = "激活动画";
 });
 
-animation.addEventListener('animationcancel', () => {
+animation.addEventListener("animationcancel", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'动画已被取消'`;
 });
 
-applyAnimation.addEventListener('click', () => {
-  animation.classList.toggle('active');
-  animationEventLog.textContent = '';
+applyAnimation.addEventListener("click", () => {
+  animation.classList.toggle("active");
+  animationEventLog.textContent = "";
   iterationCount = 0;
-  const active = animation.classList.contains('active');
+  const active = animation.classList.contains("active");
   applyAnimation.textContent = active ? "取消动画" : "激活动画";
 });
 ```
@@ -154,8 +158,8 @@ applyAnimation.addEventListener('click', () => {
 
 ## 参见
 
-- [CSS 动画](/en-US/docs/Web/CSS/CSS_Animations)
-- [使用 CSS 动画](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - 相关事件：{{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
 - 以 {{domxref("Document")}} 为目标的此事件：{{domxref("Document/animationend_event", "animationend")}}

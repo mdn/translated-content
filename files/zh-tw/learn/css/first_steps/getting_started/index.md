@@ -41,28 +41,30 @@ slug: Learn/CSS/First_steps/Getting_started
 ```html
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Getting started with CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>I am a level one heading</h1>
 
-    <p>This is a paragraph of text. In the text is a <span>span element</span>
-and also a <a href="http://example.com">link</a>.</p>
+    <p>
+      This is a paragraph of text. In the text is a
+      <span>span element</span> and also a
+      <a href="http://example.com">link</a>.
+    </p>
 
-    <p>This is the second paragraph. It contains an <em>emphasized</em> element.</p>
+    <p>
+      This is the second paragraph. It contains an <em>emphasized</em> element.
+    </p>
 
     <ul>
-        <li>Item one</li>
-        <li>Item two</li>
-        <li>Item <em>three</em></li>
+      <li>Item one</li>
+      <li>Item two</li>
+      <li>Item <em>three</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -77,7 +79,7 @@ and also a <a href="http://example.com">link</a>.</p>
 為了連結 `styles.css` 到 `index.html` 中，在 HTML 文件的 {{htmlelement("head")}} 中，加入下面這行：
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 {{htmlelement("link")}} 元素使用 `rel` 屬性告訴瀏覽器我們有一個樣式表，接著 `href` 屬性指向到這個樣式表的位置。您可以在 `styles.css` 裡加入規則，來測試它是否能夠運作。使用程式碼編輯器，在您的 CSS 檔案中加入下面這段規則：
@@ -105,8 +107,9 @@ p {
 藉由逗號的分隔，您可以一次設定多個選擇器。如果我想要讓所有段落與清單項目都變綠色，我的規則會長得像：
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -250,10 +253,14 @@ a:hover {
 
 ```css
 /* selects any <span> that is inside a <p>, which is inside an <article>  */
-article p span { ... }
+article p span {
+  ...;
+}
 
 /* selects any <p> that comes directly after a <ul>, which comes directly after an <h1>  */
-h1 + ul + p { ... }
+h1 + ul + p {
+  ...;
+}
 ```
 
 您也可以使用不同種類的選擇器和連結器，試著把下面的規則加到您的 CSS 中：
@@ -279,11 +286,3 @@ body h1 + p .special {
 在下一個課程中，我們將看看 CSS 的結構是如何。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## 在這個單元中
-
-1. [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [開始使用 CSS](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 的結構](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 的運作方式](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [使用您的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

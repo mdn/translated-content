@@ -26,10 +26,10 @@ Canvas API 主要聚焦于 2D 图形。而同样使用`<canvas>`元素的 [WebGL
 由 {{domxref("CanvasRenderingContext2D")}} 接口完成实际的绘制。{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 属性让长方形变成绿色。{{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} 方法将它的左上角放在 (10, 10)，把它的大小设置成宽 150 高 100。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 150, 100);
 ```
 
@@ -89,12 +89,12 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 
 ## 标准
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
 Mozilla 程序从 Gecko 1.8 ([Firefox 1.5](/zh-CN/docs/Firefox_1.5_for_developers)) 开始支持 `<canvas>`。它首先是由 Apple 引入的，用于 OS X Dashboard 和 Safari。Internet Explorer 从 IE9 开始支持`<canvas>` ，更旧版本的 IE 中，页面可以通过引入 Google 的 [Explorer Canvas](https://github.com/arv/explorercanvas) 项目中的脚本来获得`<canvas>`支持。Google Chrome 和 Opera 9+ 也支持 `<canvas>`。
 
-## 其它相关
+## 其他相关
 
 - [WebGL](/zh-CN/docs/Web/WebGL)

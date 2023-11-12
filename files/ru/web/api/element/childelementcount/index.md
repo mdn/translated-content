@@ -1,15 +1,8 @@
 ---
 title: Node.childElementCount
 slug: Web/API/Element/childElementCount
-tags:
-  - API
-  - DOM
-  - ParentNode
-  - Property
-  - Reference
-translation_of: Web/API/ParentNode/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 Свойство **`Node.childElementCount`** предназначено только для чтения и возвращает число дочерних **элементов** узла.
@@ -30,7 +23,7 @@ var elCount = Node.childElementCount;
 ```js
 var foo = document.getElementById("foo");
 if (foo.childElementCount > 0) {
-    // здесь нужный код..
+  // здесь нужный код..
 }
 ```
 

@@ -1,11 +1,6 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/overflow-anchor
 ---
 
 {{CSSRef}}

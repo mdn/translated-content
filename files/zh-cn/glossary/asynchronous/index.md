@@ -1,8 +1,9 @@
 ---
 title: 异步
 slug: Glossary/Asynchronous
-original_slug: Glossary/异步
 ---
+
+{{GlossarySidebar}}
 
 **异步**指两个或两个以上的对象或事件**不**同时存在或发生（或多个相关事物的发生无需等待其前一事物的完成）。在计算机技术中，"异步"一词被用于两大语境。
 
@@ -20,9 +21,7 @@ original_slug: Glossary/异步
 
     还有许多用来实现异步软件的编程技术。查看文章[Asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)来了解它们吧。
 
-## 了解更多
-
-### 技术参考
+## 参见
 
 - [Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) (Learning Area) 从服务器获取数据
 - {{glossary("Synchronous")}} 同步

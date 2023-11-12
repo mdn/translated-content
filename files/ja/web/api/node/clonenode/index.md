@@ -1,6 +1,8 @@
 ---
-title: Node.cloneNode()
+title: "Node: cloneNode() メソッド"
 slug: Web/API/Node/cloneNode
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -20,9 +22,9 @@ slug: Web/API/Node/cloneNode
 
 ## 構文
 
-```js
-cloneNode();
-cloneNode(deep);
+```js-nolint
+cloneNode()
+cloneNode(deep)
 ```
 
 ### 引数
@@ -34,7 +36,7 @@ cloneNode(deep);
     `false` の場合、このノードのみが複製されます。
     サブツリーは、そのノードに含まれているテキストも含め、複製されません。
 
-    なお、 `deep` は {{HTMLElement("img")}} や {{HTMLElement("input")}} のような空要素には効果がありません。
+    なお、 `deep` は {{HTMLElement("img")}} や {{HTMLElement("input")}} のような{{glossary("void element", "空要素")}}には効果がありません。
 
 ### 返値
 
@@ -44,8 +46,8 @@ cloneNode(deep);
 ## 例
 
 ```js
-let p = document.getElementById("para1")
-let p_prime = p.cloneNode(true)
+let p = document.getElementById("para1");
+let p_prime = p.cloneNode(true);
 ```
 
 ## 仕様書

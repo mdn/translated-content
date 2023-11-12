@@ -3,7 +3,7 @@ title: inset
 slug: Web/CSS/inset
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`inset`** define el bloque lógico y las compensaciones de inicio y finalización en línea de un elemento, que se asignan a las compensaciones físicas en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref ("top")}} y {{cssxref ("bottom")}}, o {{cssxref ("right")}} y {{cssxref ("left")}} dependiendo de las propiedades en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.
 
@@ -70,9 +70,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.inset")}}
+{{Compat}}
 
 ## Mira también
 

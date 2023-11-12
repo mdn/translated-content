@@ -35,14 +35,14 @@ var formData = new FormData(myForm);
 `delete()`를 사용하여 키와 값을 삭제할 수 있습니다:
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

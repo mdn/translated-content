@@ -1,17 +1,6 @@
 ---
 title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - lastError
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
 
 {{AddonSidebar()}}Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
@@ -28,7 +17,7 @@ Si vous applez une fonction asynchrone qui veut définir `lastError`, vous devez
 ## Syntaxe
 
 ```js
-var myError = browser.runtime.lastError;  // null or Error object
+var myError = browser.runtime.lastError; // null or Error object
 ```
 
 ### Valeur
@@ -48,10 +37,7 @@ function logCookie(c) {
   }
 }
 
-browser.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 La même chose, mais en utilisant une promesse de gérer le résultat de `setCookie()`:
@@ -65,18 +51,16 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 
 setCookie.then(logCookie, logError);
 ```
 
 > **Note :** `runtime.lastError` est un alias pour {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.lastError")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

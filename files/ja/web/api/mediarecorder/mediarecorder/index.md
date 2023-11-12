@@ -27,7 +27,7 @@ new MediaRecorder(stream, options)
   - : 以下のプロパティを含むことができる辞書オブジェクト。
 
     - `mimeType`
-      - : 生成されるメディアの形式を指定する MIME タイプです。コンテナー形式を指定することもできますし（ブラウザーは音声と映像のために好ましいコーデックを選択します）、 [`codecs`引数](/en-US/docs/Web/Media/Formats/codecs_parameter)や `profiles` 引数を使って、どのコーデックを使い、どう設定するのかという詳細情報を提供することもできます。
+      - : 生成されるメディアの形式を指定する MIME タイプです。コンテナー形式を指定することもできますし（ブラウザーは音声と映像のために好ましいコーデックを選択します）、 [`codecs`引数](/ja/docs/Web/Media/Formats/codecs_parameter)や `profiles` 引数を使って、どのコーデックを使い、どう設定するのかという詳細情報を提供することもできます。
         アプリケーションは `mimeType` が {{Glossary("user agent") }} で対応しているかどうかを事前に調べることができます。そのためには {{domxref("MediaRecorder.isTypeSupported()")}} を呼び出す必要があります。
     - `audioBitsPerSecond`
       - : メディアの音声コンポーネントに選択したビットレート。
@@ -56,15 +56,15 @@ if (navigator.mediaDevices.getUserMedia) {
 
   const onSuccess = (stream) => {
     const options = {
-      audioBitsPerSecond : 128000,
-      videoBitsPerSecond : 2500000,
-      mimeType : 'video/mp4'
-    }
+      audioBitsPerSecond: 128000,
+      videoBitsPerSecond: 2500000,
+      mimeType: "video/mp4",
+    };
     const mediaRecorder = new MediaRecorder(stream, options);
     m = mediaRecorder;
 
     // …
-  }
+  };
 }
 ```
 
@@ -78,7 +78,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## 関連情報
 
-- [Media​Stream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [ウェブディクタフォン](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[Github のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。（英語）
 - [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
 - {{domxref("MediaDevices.getUserMedia")}}

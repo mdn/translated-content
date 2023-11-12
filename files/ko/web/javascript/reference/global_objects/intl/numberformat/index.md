@@ -53,24 +53,24 @@ console.log(new Intl.NumberFormat().format(number));
 var number = 123456.789;
 
 // 독일은 소수점 구분자로 쉼표를 사용하고 천 단위 구분자로 마침표를 사용
-console.log(new Intl.NumberFormat('de-DE').format(number));
+console.log(new Intl.NumberFormat("de-DE").format(number));
 // → 123.456,789
 
 // 대부분의 아랍어 사용 국가에서는 실제 아라비아 숫자를 사용
-console.log(new Intl.NumberFormat('ar-EG').format(number));
+console.log(new Intl.NumberFormat("ar-EG").format(number));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // 인도는 천, 라크(십만), 크로르(천만) 단위에 구분자 사용
-console.log(new Intl.NumberFormat('en-IN').format(number));
+console.log(new Intl.NumberFormat("en-IN").format(number));
 // → 1,23,456.789
 
 // nu 확장 키로 기수법 지정 (아래 예시는 중국식 숫자 표기)
-console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
+console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(number));
 // → 一二三,四五六.七八九
 
 // 발리어와 같이 지원되지 않을 수도 있는 언어를 지정할 때는
 // 다음과 같이 대체 언어를 지정할 수 있음. 아래의 경우 대체 언어는 인도어
-console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
+console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
 // → 123.456,789
 ```
 
@@ -82,15 +82,27 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 var number = 123456.789;
 
 // 통화 서식
-console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
 // → 123.456,79 €
 
 // 한국 원화는 보조 통화 단위를 사용하지 않음
-console.log(new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW' }).format(number));
+console.log(
+  new Intl.NumberFormat("ko-KR", { style: "currency", currency: "KRW" }).format(
+    number,
+  ),
+);
 // → ₩123,457
 
 // 유효숫자를 세 개로 제한
-console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
 // → 1,23,000
 ```
 

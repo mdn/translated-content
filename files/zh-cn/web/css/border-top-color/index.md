@@ -33,7 +33,7 @@ border-top-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 上边框的颜色。
 
-### 规范语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -45,9 +45,10 @@ border-top-color: unset;
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 
@@ -67,9 +68,9 @@ border-top-color: unset;
 
 #### 结果
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('一个简单的带边框容器')}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -79,7 +80,7 @@ border-top-color: unset;
 
 {{Compat}}
 
-## See also
+## 参见
 
 - The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, and {{Cssxref("border-color")}}.
 - The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-left-color")}}.

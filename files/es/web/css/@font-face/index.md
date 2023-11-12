@@ -1,5 +1,5 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 ---
 
@@ -7,7 +7,7 @@ slug: Web/CSS/@font-face
 
 ## Resumen
 
-`@font-face` permite al autor especificar fuentes online para visualizar en sus páginas web. Al permitir a los autores proporcionar sus propias fuentes,` @font-face `elimina la necesidad de depender del numero limitado de fuentes de usuarios instaladas en sus computadoras.
+`@font-face` permite al autor especificar fuentes online para visualizar en sus páginas web. Al permitir a los autores proporcionar sus propias fuentes, `@font-face` elimina la necesidad de depender del numero limitado de fuentes de usuarios instaladas en sus computadoras.
 
 ## Sintaxis
 
@@ -42,7 +42,7 @@ Puede especificar una fuente por nombre en la computadora local del usuario util
 
 Este ejemplo simplemente especifica una fuente que puede ser descargada para utilizar, aplicando la fuente a todo el cuerpo del documento.
 
-[Muestra en vivo](/@api/deki/files/2935/=webfont-sample.html)
+[Muestra en vivo](webfont-sample.html)
 
 ```
 <html>

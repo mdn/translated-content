@@ -1,12 +1,6 @@
 ---
-title: '-webkit-animation'
+title: "-webkit-animation"
 slug: Web/CSS/@media/-webkit-animation
-tags:
-  - CSS
-  - Caractéristique média
-  - Non-standard
-  - Reference
-translation_of: Web/CSS/@media/-webkit-animation
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -27,7 +21,7 @@ Cette caractéristique média est une caractéristique média propriétaire lié
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.-webkit-animation")}}
+{{Compat}}
 
 ## Voir aussi
 

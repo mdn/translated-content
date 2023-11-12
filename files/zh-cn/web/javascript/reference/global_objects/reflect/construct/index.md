@@ -45,11 +45,11 @@ var obj = Reflect.construct(Foo, args);
 
 ```js
 function OneClass() {
-    this.name = 'one';
+  this.name = "one";
 }
 
 function OtherClass() {
-    this.name = 'other';
+  this.name = "other";
 }
 
 // 创建一个对象：
@@ -77,12 +77,12 @@ console.log(obj2 instanceof OtherClass); // true
 
 ```js
 function OneClass() {
-    console.log('OneClass');
-    console.log(new.target);
+  console.log("OneClass");
+  console.log(new.target);
 }
 function OtherClass() {
-    console.log('OtherClass');
-    console.log(new.target);
+  console.log("OtherClass");
+  console.log(new.target);
 }
 
 var obj1 = Reflect.construct(OneClass, args);
@@ -102,7 +102,7 @@ OneClass.apply(obj3, args);
 //     undefined
 ```
 
-## **举例**
+## 示例
 
 ### 使用 `Reflect.construct()`
 
@@ -120,7 +120,7 @@ d.getFullYear(); // 1776
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)

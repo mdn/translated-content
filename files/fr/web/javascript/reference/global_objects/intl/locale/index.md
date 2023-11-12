@@ -1,14 +1,6 @@
 ---
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
-tags:
-  - Constructeur
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale
 ---
 
 {{JSRef}}{{SeeCompatTable}}
@@ -43,13 +35,11 @@ L'objet `Intl.Locale` possède les propriétés et méthodes suivantes.
 
 ## Spécifications
 
-| Spécification                                                                                 | État                    | Commentaires |
-| --------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#locale-objects) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale")}}
+{{Compat}}
 
 ## Voir aussi
 

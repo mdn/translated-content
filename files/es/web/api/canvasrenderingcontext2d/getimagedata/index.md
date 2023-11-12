@@ -50,8 +50,8 @@ Esto es sólo un simple fragmento de código que utiliza el método getImageData
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 
@@ -65,7 +65,7 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.getImageData")}}
+{{Compat}}
 
 ## Véase también
 

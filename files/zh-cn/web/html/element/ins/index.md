@@ -21,9 +21,9 @@ slug: Web/HTML/Element/ins
 
 该元素支持所有 [全局特性](/zh-CN/docs/HTML/Global_attributes)，除此以外还支持下列属性：
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : cite 属性的值指向一个文档的 URL，该文档解释了文本被插入或修改的原因。（目前该属性还没有被主流浏览器支持）
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : 该特性指示的此修改发生的时间和日期，并且该特性的值必须是[一个有效的日期或者时间字符串](http://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time)。如果该值不能被解析为日期或者时间，则该元素不具有相关联的时间标记。
 
 ## 示例

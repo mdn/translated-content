@@ -1,7 +1,6 @@
 ---
 title: WebRTC Introduction
 slug: Web/API/WebRTC_API/Session_lifetime
-original_slug: WebRTC/Introduction
 ---
 
 > **Nota:** WebRTC te permite establecer una comunicación par-a-par en una aplicación del navegador.

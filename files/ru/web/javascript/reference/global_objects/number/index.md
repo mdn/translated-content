@@ -1,12 +1,8 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 Объект **`Number`** является объектом-обёрткой, позволяющей вам работать с числовыми значениями. Объект `Number` создаётся через конструктор `Number()`.
@@ -54,8 +50,6 @@ b instanceof Number; // is false
 - {{jsxref("Number.prototype")}}
   - : Позволяет добавлять свойства к объекту `Number`.
 
-{{jsOverrides("Function", "properties", "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "protoype")}}
-
 ## Методы
 
 - {{jsxref("Number.isNaN()")}} {{experimental_inline}}
@@ -66,14 +60,12 @@ b instanceof Number; // is false
   - : Определяет, является ли тип переданного значения «числом», а само число — целым значением.
 - {{jsxref("Number.isSafeInteger()")}} {{experimental_inline}}
   - : Определяет, является ли переданное значение безопасным целым числом (числом в диапазоне от `-(253 - 1)` до `253 - 1`).
-- ~~{{jsxref("Number.toInteger()")}} {{obsolete_inline}}~~
+- ~~{{jsxref("Number.toInteger()")}}~~
   - : ~~Использовался для вычисления переданного значения и преобразования его в целое число (или бесконечность {{jsxref("Global_Objects/Infinity", "Infinity")}}), но был удалён.~~
 - {{jsxref("Number.parseFloat()")}} {{experimental_inline}}
   - : Представляет собой тот же самый метод, что и метод {{jsxref("Global_Objects/parseFloat", "parseFloat")}} глобального объекта.
 - {{jsxref("Number.parseInt()")}} {{experimental_inline}}
   - : Представляет собой тот же самый метод, что и метод {{jsxref("Global_Objects/parseInt", "parseInt")}} глобального объекта.
-
-{{jsOverrides("Function", "methods", "isNaN")}}
 
 ## Экземпляры объекта `Number`
 
@@ -113,7 +105,7 @@ var smallestInt = -9007199254740992;
 В следующем примере объект {{jsxref("Global_Objects/Date", "Date")}} преобразуется в числовое значение с использование объекта `Number` в качестве функции:
 
 ```js
-var d = new Date('December 17, 1995 03:24:00');
+var d = new Date("December 17, 1995 03:24:00");
 console.log(Number(d));
 ```
 
@@ -122,13 +114,13 @@ console.log(Number(d));
 ### Пример: преобразование строк с числами в числа
 
 ```js
-Number('123')     // 123
-Number('')        // 0
-Number('0x11')    // 17
-Number('0b11')    // 3
-Number('0o11')    // 9
-Number('foo')     // NaN
-Number('100a')    // NaN
+Number("123"); // 123
+Number(""); // 0
+Number("0x11"); // 17
+Number("0b11"); // 3
+Number("0o11"); // 9
+Number("foo"); // NaN
+Number("100a"); // NaN
 ```
 
 ## Спецификации

@@ -26,7 +26,9 @@ location.assign(url);
 
 ```js
 // 跳转到 Location.reload() 这篇文章
-document.location.assign('https://developer.mozilla.org/zh-CN/docs/Web/API/Location/reload');
+document.location.assign(
+  "https://developer.mozilla.org/zh-CN/docs/Web/API/Location/reload",
+);
 ```
 
 ## 规范

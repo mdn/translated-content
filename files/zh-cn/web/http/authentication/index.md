@@ -5,7 +5,7 @@ slug: Web/HTTP/Authentication
 
 {{HTTPSidebar}}
 
-HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通用的 HTTP 认证框架，并且展示了如何通过 HTTP “Basic”模式限制对你服务器的访问。
+HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通用的 HTTP 认证框架，并且展示了如何通过 HTTP 的“Basic”模式限制对你服务器的访问。
 
 ## 通用的 HTTP 认证框架
 
@@ -33,17 +33,17 @@ HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通
 
 如果（代理）服务器接受的有效凭据**不足以**访问给定的资源，服务器将响应 {{HTTPStatus("403")}} `Forbidden` 状态码。与 {{HTTPStatus("401")}} `Unauthorized` 或 {{HTTPStatus("407")}} `Proxy Authentication Required` 不同的是，该用户无法进行身份验证并且浏览器不会提出新的的尝试。
 
-在所有情况下，服务器更可能赶回 {{HTTPStatus("404")}} `Not Found` 状态码，以向没有足够权限或者未正确身份验证的用户隐藏页面的存在。
+在所有情况下，服务器更可能返回 {{HTTPStatus("404")}} `Not Found` 状态码，以向没有足够权限或者未正确身份验证的用户隐藏页面的存在。
 
 ### 跨源图片认证
 
-一个被浏览器最近修复了的潜在的安全漏洞是跨站点图片的认证。从 [Firefox 59](/zh-CN/Firefox/Releases/59) 起，浏览器在从不同源的加载图片资源到当前的文档时，将不会再触发 HTTP 认证对话框（{{bug(1423146)}}），如果攻击者可以将任意图片嵌入到第三方页面中，禁止触发 HTTP 认证对话框可避免用户的身份凭据被窃取。
+一个被浏览器最近修复了的潜在的安全漏洞是跨站点图片的认证。从 [Firefox 59](/zh-CN/Firefox/Releases/59) 起，浏览器在从不同源的加载图片资源到当前的文档时，将不会再触发 HTTP 认证对话框（[Firefox bug 1423146](https://bugzil.la/1423146)），如果攻击者可以将任意图片嵌入到第三方页面中，禁止触发 HTTP 认证对话框可避免用户的身份凭据被窃取。
 
 ### HTTP 认证的字符编码
 
 浏览器使用 `utf-8` 编码用户名和密码。
 
-Firefox 曾使用 `ISO-8859-1`，但为与其它浏览器保持一致改为 `utf-8`，也为了避免 {{bug(1419658)}} 中所描述的潜在问题。
+Firefox 曾使用 `ISO-8859-1`，但为与其他浏览器保持一致改为 `utf-8`，也为了避免 [Firefox bug 1419658](https://bugzil.la/1419658) 中所描述的潜在问题。
 
 ### WWW-Authenticate 与 Proxy-Authenticate 标头
 
@@ -80,7 +80,7 @@ IANA 维护了[一系列的验证方案](http://www.iana.org/assignments/http-au
 - **Bearer**
   - : 参见 {{rfc(6750)}}，bearer 令牌通过 OAuth 2.0 保护资源。
 - **Digest**
-  - : 参见 {{rfc(7616)}}，Firefox 93 及更高版本支持 SHA-256 算法。以前的版本仅支持MD5散列（不建议）。
+  - : 参见 {{rfc(7616)}}，Firefox 93 及更高版本支持 SHA-256 算法。以前的版本仅支持 MD5 散列（不建议）。
 - **HOBA**
   - : 参见 {{rfc(7486)}}，阶段三，**H**TTP **O**rigin-**B**ound 认证，基于数字签名。
 - **Mutual**
@@ -100,7 +100,7 @@ IANA 维护了[一系列的验证方案](http://www.iana.org/assignments/http-au
 
 ## Basic 验证方案
 
-“Basic” HTTP 验证方案是在 {{rfc(7617)}} 中规定的，在该方案中，使用用户的 ID/密码作为凭据信息，并且使用 base64 算法进行编码。
+“Basic”HTTP 验证方案是在 {{rfc(7617)}} 中规定的，在该方案中，使用用户的 ID/密码作为凭据信息，并且使用 base64 算法进行编码。
 
 ### Basic 验证方案的安全性
 

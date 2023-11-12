@@ -3,19 +3,22 @@ title: 元编程
 slug: Web/JavaScript/Guide/Meta_programming
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}
 
-从 ECMAScript 2015 开始，JavaScript 获得了 {{jsxref("Proxy")}} 和 {{jsxref("Reflect")}} 对象的支持，允许你拦截并定义基本语言操作的自定义行为（例如，属性查找，赋值，枚举，函数调用等）。借助这两个对象，你可以在 JavaScript 元级别进行编程。
+{{jsxref("Proxy")}} 和 {{jsxref("Reflect")}} 对象允许你拦截并自定义基本语言操作（例如属性查找、赋值、枚举和函数调用等）。借助这两个对象，你可以在 JavaScript 进行元级别的编程。
 
 ## 代理
 
-在 ECMAScript 6 中引入的 {{jsxref("Proxy")}} 对象可以拦截某些操作并实现自定义行为。例如获取一个对象上的属性：
+{{jsxref("Proxy")}} 对象可以拦截某些操作并实现自定义行为。
+
+例如获取一个对象上的属性：
 
 ```js
 let handler = {
-  get: function(target, name){
+  get(target, name) {
     return name in target ? target[name] : 42;
-}};
+  },
+};
 
 let p = new Proxy({}, handler);
 p.a = 1;
@@ -23,39 +26,39 @@ p.a = 1;
 console.log(p.a, p.b); // 1, 42
 ```
 
-`Proxy` 对象定义了一个目标（这里是一个空对象）和一个实现了 `get` 陷阱的 handler 对象。这里，代理的对象在获取未定义的属性时不会返回 `undefined`，而是返回 42。
+`Proxy` 对象定义了一个 `target`（这里是一个空对象）和一个实现了 `get` *陷阱*的 `handler` 对象。这里，代理的对象在获取未定义的属性时不会返回 `undefined`，而是返回 `42`。
 
 更多例子参见 {{jsxref("Proxy")}} 页面。
 
 ### 术语
 
-在讨论代理的功能时会用到以下术语。
+在讨论代理的功能时会用到以下术语：
 
-- {{jsxref("Global_Objects/Proxy/handler","handler")}}
-  - : 包含陷阱的占位符对象。
-- traps
-  - : 提供属性访问的方法。这类似于操作系统中陷阱的概念。
-- target
-  - : 代理虚拟化的对象。它通常用作代理的存储后端。根据目标验证关于对象不可扩展性或不可配置属性的不变量（保持不变的语义）。
-- invariants
-  - : 实现自定义操作时保持不变的语义称为不变量。如果你违反处理程序的不变量，则会抛出一个 {{jsxref("TypeError")}}。
+- {{jsxref("Proxy/Proxy", "handler")}}
+  - : 包含陷阱的占位符对象（下译作“处理器”）。
+- 陷阱
+  - : 提供属性访问的方法（这类似于操作系统中*陷阱*的概念）。
+- `target`
+  - : 代理所虚拟化的对象（下译作“目标”）。它通常用作代理的存储后端。JavaScript 会验证与不可扩展性或不可配置属性相关的不变式。
+- 不变式
+  - : 实现自定义操作时保持不变的语义称为*不变式*。如果你破坏了处理器的不变式，则会引发 {{jsxref("TypeError")}} 异常。
 
-## 句柄和陷阱
+## 处理器和陷阱
 
-以下表格中总结了 `Proxy` 对象可用的陷阱。详细的解释和例子请看[参考页](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)。
+以下表格中总结了 `Proxy` 对象可用的陷阱。详细的解释和例子请看{{jsxref("Proxy/Proxy", "参考页", "", 1)}}。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th>Handler / trap</th>
-      <th>Interceptions</th>
-      <th>Invariants</th>
+      <th>处理器 / 陷阱</th>
+      <th>拦截的操作</th>
+      <th>不变式</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
+        {{jsxref("Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
       </td>
       <td>
         {{jsxref("Object.getPrototypeOf()")}}<br />{{jsxref("Reflect.getPrototypeOf()")}}<br />{{jsxref("Object/proto", "__proto__")}}<br />{{jsxref("Object.prototype.isPrototypeOf()")}}<br />{{jsxref("Operators/instanceof", "instanceof")}}
@@ -63,58 +66,59 @@ console.log(p.a, p.b); // 1, 42
       <td>
         <ul>
           <li>
-            <code>getPrototypeOf</code>方法一定返回一个对象或<code>null</code>.
+            <code>getPrototypeOf</code> 方法必须返回一个对象或 <code>null</code>。
           </li>
           <li>
-            如果 <code>target</code> 不可扩展，<code
-              >Object.getPrototypeOf(proxy)</code
+            如果 <code><var>target</var></code> 不可扩展，<code
+            >Object.getPrototypeOf(<var>proxy</var>)</code
             >
-            必须返回和 <code>Object.getPrototypeOf(target)</code>一样的值。
+            必须返回和 <code>Object.getPrototypeOf(<var>target</var>)</code>
+            一样的值。
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
+        {{jsxref("Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
       </td>
       <td>
         {{jsxref("Object.setPrototypeOf()")}}<br />{{jsxref("Reflect.setPrototypeOf()")}}
       </td>
       <td>
-        如果 <code>target</code> 不可扩展，<code>prototype</code>
-        参数必须与<code>Object.getPrototypeOf(target)</code>的值相同。
+        如果 <code><var>target</var></code> 不可扩展，参数 <code>prototype</code>
+        必须与 <code>Object.getPrototypeOf(<var>target</var>)</code> 的值相同。
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}
+        {{jsxref("Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
       </td>
       <td>
         {{jsxref("Object.isExtensible()")}}<br />{{jsxref("Reflect.isExtensible()")}}
       </td>
       <td>
-        <code>Object.isExtensible(proxy)</code>
-        必须返回和<code>Object.isExtensible(target)</code>一样的值。
+        <code>Object.isExtensible(<var>proxy</var>)</code> 必须返回和
+        <code>Object.isExtensible(<var>target</var>)</code> 一样的值。
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
+        {{jsxref("Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
       </td>
       <td>
         {{jsxref("Object.preventExtensions()")}}<br />{{jsxref("Reflect.preventExtensions()")}}
       </td>
       <td>
-        如果<code>Object.isExtensible(proxy)</code> 值为
-        <code>false，Object.preventExtensions(proxy)</code> 只返回<code
-          >true。</code
-        >
+        如果 <code>Object.isExtensible(<var>proxy</var>)</code>
+        值为 <code>false</code>，那么
+        <code>Object.preventExtensions(<var>proxy</var>)</code> 只可能返回
+        <code>true</code>。
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+        {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
       </td>
       <td>
         {{jsxref("Object.getOwnPropertyDescriptor()")}}<br />{{jsxref("Reflect.getOwnPropertyDescriptor()")}}
@@ -122,40 +126,39 @@ console.log(p.a, p.b); // 1, 42
       <td>
         <ul>
           <li>
-            <code>getOwnPropertyDescripton</code>
-            只能返回对象或者<code>undefined</code>.
+            <code>getOwnPropertyDescriptor</code> 必须返回对象或者
+            <code>undefined</code>。
           </li>
           <li>
-            A property cannot be reported as non-existent, if it exists as a
-            non-configurable own property of the target object.
+            如果存在一个对应于 <code><var>target</var></code>
+            的属性是不可配置的自有属性，那么该属性不能被报告为不存在的。
           </li>
           <li>
-            A property cannot be reported as non-existent, if it exists as an
-            own property of the target object and the target object is not
-            extensible.
+            如果存在一个对应于 <code><var>target</var></code>
+            的属性是自有属性，且该
+            <code><var>target</var></code> 不可扩展，那么该属性不能被报告为不存在的。
           </li>
           <li>
-            A property cannot be reported as existent, if it does not exists as
-            an own property of the target object and the target object is not
-            extensible.
+            如果并不存在一个对应于 <code><var>target</var></code>
+            的属性是自有属性，且该
+            <code><var>target</var></code> 不可扩展，那么该属性不能被报告为存在的。
           </li>
           <li>
-            A property cannot be reported as non-configurable, if it does not
-            exists as an own property of the target object or if it exists as a
-            configurable own property of the target object.
+            如果并不存在一个对应于 <code><var>target</var></code>
+            的属性是自有属性，或存在一个对应于 <code><var>target</var></code>
+            的属性是可配置的自有属性，那么它不能被报告为不可配置的。
           </li>
           <li>
-            The result of
-            <code>Object.getOwnPropertyDescriptor(target)</code> can be applied
-            to the target object using <code>Object.defineProperty</code> and
-            will not throw an exception.
+            <code>Object.getOwnPropertyDescriptor(<var>target</var>)</code>
+            的结果可以通过 <code>Object.defineProperty</code> 应用到
+            <code><var>target</var></code> 上，且不会抛出异常。
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}
+        {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
       </td>
       <td>
         {{jsxref("Object.defineProperty()")}}<br />{{jsxref("Reflect.defineProperty()")}}
@@ -163,212 +166,236 @@ console.log(p.a, p.b); // 1, 42
       <td>
         <ul>
           <li>
-            A property cannot be added, if the target object is not extensible.
+            如果 <code><var>target</var></code> 不可扩展，那么就不能添加属性。
           </li>
           <li>
-            A property cannot be added as or modified to be non-configurable, if
-            it does not exists as a non-configurable own property of the target
-            object.
+            如果并不存在一个对应于 <code><var>target</var></code>
+            的属性是不可配置的自有属性，那么就不能添加（或修改）该属性为不可配置的。
           </li>
           <li>
-            A property may not be non-configurable, if a corresponding
-            configurable property of the target object exists.
+            如果存在一个对应于 <code><var>target</var></code>
+            的属性是可配置的，那么这个属性未必是不可配置的。
           </li>
           <li>
-            If a property has a corresponding target object property then
-            <code>Object.defineProperty(target, prop, descriptor)</code> will
-            not throw an exception.
+            如果存在一个对应于 <code><var>target</var></code> 的属性，那么
+            <code
+              >Object.defineProperty(<var>target</var>, <var>prop</var>,
+              <var>descriptor</var>)</code
+            >
+            将不会抛出异常。
           </li>
           <li>
-            In strict mode, a <code>false</code> return value from the
-            <code>defineProperty</code> handler will throw a
-            {{jsxref("TypeError")}} exception.
+            在严格模式下，如果 <code>defineProperty</code> 处理器返回
+            <code>false</code>，则会抛出 {{jsxref("TypeError")}} 异常。
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}
+        {{jsxref("Proxy/Proxy/has", "handler.has()")}}
       </td>
       <td>
-        Property query: <code>foo in proxy</code><br />Inherited property query:
-        <code>foo in Object.create(proxy)</code
-        ><br />{{jsxref("Reflect.has()")}}
+        <dl>
+          <dt>属性查询</dt>
+          <dd><code>foo in proxy</code></dd>
+          <dt>继承属性查询</dt>
+          <dd>
+            <code>foo in Object.create(<var>proxy</var>)</code
+            ><br />{{jsxref("Reflect.has()")}}
+          </dd>
+        </dl>
       </td>
       <td>
         <ul>
           <li>
-            A property cannot be reported as non-existent, if it exists as a
-            non-configurable own property of the target object.
+            如果存在一个对应于 <code><var>target</var></code>
+            的属性是不可配置的自有属性，那么该属性不能被报告为不存在的。
           </li>
           <li>
-            A property cannot be reported as non-existent, if it exists as an
-            own property of the target object and the target object is not
-            extensible.
+            如果存在一个对应于 <code><var>target</var></code>
+            的属性是自有属性，且 <code><var>target</var></code>
+            不可扩展，那么该属性不能被报告为不存在的。
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
+        {{jsxref("Proxy/Proxy/get", "handler.get()")}}
       </td>
       <td>
-        <!-- markdownlint-disable MD011 -->
-        Property access: <code>proxy[foo]</code>and <code>proxy.bar</code
-        ><br />Inherited property access: <code>Object.create(proxy)[foo]</code
-        ><br />{{jsxref("Reflect.get()")}}
+        <dl>
+          <dt>属性访问</dt>
+          <dd>
+            <code><var>proxy</var>[foo]</code><br /><code
+              ><var>proxy</var>.bar</code
+            >
+          </dd>
+          <dt>继承属性访问</dt>
+          <dd>
+            <!-- markdownlint-disable MD011 -->
+            <code>Object.create(<var>proxy</var>)[foo]</code
+            ><br />{{jsxref("Reflect.get()")}}
+          </dd>
+        </dl>
       </td>
       <td>
         <ul>
           <li>
-            The value reported for a property must be the same as the value of
-            the corresponding target object property if the target object
-            property is a non-writable, non-configurable data property.
+            如果对应于 <code><var>target</var></code>
+            的属性是不可写且不可配置的数据属性，那么该属性值必须与其相同。
           </li>
           <li>
-            The value reported for a property must be undefined if the
-            corresponding target object property is non-configurable accessor
-            property that has undefined as its [[Get]] attribute.
+            如果对应于 <code><var>target</var></code>
+            的属性是不可配置的访问器属性，且其 <code>[[Get]]</code>
+            属性为 <code>undefined</code>，那么该属性值必须为
+            <code>undefined</code>。
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}
+        {{jsxref("Proxy/Proxy/set", "handler.set()")}}
       </td>
       <td>
-        Property assignment: <code>proxy[foo] = bar</code> and
-        <code>proxy.foo = bar</code><br />Inherited property assignment:
-        <code>Object.create(proxy)[foo] = bar</code
-        ><br />{{jsxref("Reflect.set()")}}
+        <dl>
+          <dt>属性赋值</dt>
+          <dd>
+            <code><var>proxy</var>[foo] = bar</code><br /><code
+              ><var>proxy</var>.foo = bar</code
+            >
+          </dd>
+          <dt>继承属性赋值</dt>
+          <dd>
+            <code>Object.create(<var>proxy</var>)[foo] = bar</code
+            ><br />{{jsxref("Reflect.set()")}}
+          </dd>
+            <!-- markdownlint-enable MD011 -->
+        </dl>
       </td>
       <td>
         <ul>
           <li>
-            Cannot change the value of a property to be different from the value
-            of the corresponding target object property if the corresponding
-            target object property is a non-writable, non-configurable data
-            property.
+            如果对应于 <code><var>target</var></code>
+            的属性是不可写且不可配置的数据属性，那么就不能修改该属性的值使其不同于
+            <code><var>target</var></code> 上对应属性的值。
           </li>
           <li>
-            Cannot set the value of a property if the corresponding target
-            object property is a non-configurable accessor property that has
-            <code>undefined</code> as its [[Set]] attribute.
+            如果对应于 <code><var>target</var></code>
+            的属性是不可配置的访问器属性，且其 <code>[[Set]]</code>
+            属性为 <code>undefined</code>，那么就不能设置该属性的值。
           </li>
           <li>
-            In strict mode, a <code>false</code> return value from the
-            <code>set</code> handler will throw a
-            {{jsxref("TypeError")}} exception.
+            在严格模式下，如果 <code>set</code> 处理器返回
+            <code>false</code>，则会抛出 {{jsxref("TypeError")}} 异常。
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
+        {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
       </td>
       <td>
-        Property deletion: <code>delete proxy[foo]</code> and
-        <code>delete proxy.foo</code
-        ><br />{{jsxref("Reflect.deleteProperty()")}}
+        <dl>
+          <dt>属性删除</dt>
+          <dd>
+            <code>delete <var>proxy</var>[foo]</code><br /><code
+              >delete <var>proxy</var>.foo</code
+            ><br />{{jsxref("Reflect.deleteProperty()")}}
+          </dd>
+        </dl>
       </td>
       <td>
-        A property cannot be deleted, if it exists as a non-configurable own
-        property of the target object.
+        如果存在一个对应于 <code><var>target</var></code>
+        的属性是不可配置的自有属性，那么该属性不能被删除。
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/enumerate", "handler.enumerate()")}}
-      </td>
-      <td>
-        Property enumeration / for...in:
-        <code>for (var name in proxy) {...}</code
-        ><br />{{jsxref("Reflect.enumerate()")}}
-      </td>
-      <td>The <code>enumerate</code> method must return an object.</td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}
+        {{jsxref("Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
       </td>
       <td>
         {{jsxref("Object.getOwnPropertyNames()")}}<br />{{jsxref("Object.getOwnPropertySymbols()")}}<br />{{jsxref("Object.keys()")}}<br />{{jsxref("Reflect.ownKeys()")}}
       </td>
       <td>
         <ul>
-          <li>The result of <code>ownKeys</code> is a List.</li>
+          <li><code>ownKeys</code> 的返回值是一个数组。</li>
           <li>
-            The Type of each result List element is either
-            {{jsxref("String")}} or {{jsxref("Symbol")}}.
+            返回值中的每个元素类型为
+            {{jsxref("String")}} 或 {{jsxref("Symbol")}}。
           </li>
           <li>
-            The result List must contain the keys of all non-configurable own
-            properties of the target object.
+            返回值中必须包含 <code><var>target</var></code>
+            的所有不可配置自有属性的键名。
           </li>
           <li>
-            If the target object is not extensible, then the result List must
-            contain all the keys of the own properties of the target object and
-            no other values.
+            如果 <code><var>target</var></code> 不可扩展，那么返回值中必须有且仅有
+            <code><var>target</var></code> 的所有自有属性的键名。
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}
+        {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
       </td>
       <td>
         <code>proxy(..args)</code
-        ><br />{{jsxref("Function.prototype.apply()")}} and
-        {{jsxref("Function.prototype.call()")}}<br />{{jsxref("Reflect.apply()")}}
+        ><br />{{jsxref("Function.prototype.apply()")}}<br />{{jsxref("Function.prototype.call()")}}<br />{{jsxref("Reflect.apply()")}}
       </td>
       <td>
-        There are no invariants for the <code>handler.apply</code> method.
+        不存在关于 <code><var>handler</var>.apply</code> 方法的不变式。
       </td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}
+        {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
       </td>
       <td>
         <code>new proxy(...args)</code
         ><br />{{jsxref("Reflect.construct()")}}
       </td>
-      <td>结果一定是一个<code>Object</code>。</td>
+      <td>返回值必须是一个 <code>Object</code>。</td>
     </tr>
   </tbody>
 </table>
 
-## 撤销 `Proxy`
+## 可撤销的 `Proxy`
 
-{{jsxref("Proxy.revocable()")}} 方法被用来创建可撤销的 `Proxy` 对象。这意味着 proxy 可以通过 `revoke` 函数来撤销，并且关闭代理。此后，代理上的任意的操作都会导致{{jsxref("TypeError")}}。
+可以用 {{jsxref("Proxy.revocable()")}} 方法来创建可撤销的 `Proxy` 对象。这意味着可以通过 `revoke` 函数来撤销并关闭一个代理。
+
+此后，对代理进行的任意的操作都会导致 {{jsxref("TypeError")}}。
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return "[[" + name + "]]";
-  }
-});
-var proxy = revocable.proxy;
+const revocable = Proxy.revocable(
+  {},
+  {
+    get(target, name) {
+      return `[[${name}]]`;
+    },
+  },
+);
+const proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();
 
-console.log(proxy.foo); // TypeError is thrown
-proxy.foo = 1           // TypeError again
-delete proxy.foo;       // still TypeError
-typeof proxy            // "object", typeof doesn't trigger any trap
+console.log(proxy.foo); // TypeError: Cannot perform 'get' on a proxy that has been revoked
+proxy.foo = 1; // TypeError: Cannot perform 'set' on a proxy that has been revoked
+delete proxy.foo; // TypeError: Cannot perform 'deleteProperty' on a proxy that has been revoked
+console.log(typeof proxy); // "object", `typeof` 不会触发任何陷阱
 ```
 
 ## 反射
 
-{{jsxref("Reflect")}} 是一个内置对象，它提供了可拦截 JavaScript 操作的方法。该方法和{{jsxref("Global_Objects/Proxy/handler","代理句柄")}}类似，但 `Reflect` 方法并不是一个函数对象。
+{{jsxref("Reflect")}} 是一个内置对象，它为可拦截的 JavaScript 操作提供了方法。这些方法与{{jsxref("Proxy/Proxy", "代理处理器所提供的方法", "", 1)}}类似。
 
-`Reflect` 有助于将默认操作从处理程序转发到目标。
+`Reflect` 并不是一个函数对象。
+
+`Reflect` 将默认操作从处理器转发到 `target`。
 
 以 {{jsxref("Reflect.has()")}} 为例，你可以将 [`in` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)作为函数：
 
@@ -378,13 +405,13 @@ Reflect.has(Object, "assign"); // true
 
 ### 更好的 `apply` 函数
 
-在 ES5 中，我们通常使用 {{jsxref("Function.prototype.apply()")}} 方法调用一个具有给定 `this` 值和 `arguments` 数组（或[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)）的函数。
+在不借助 `Reflect` 的情况下，我们通常使用 {{jsxref("Function.prototype.apply()")}} 方法调用一个具有给定 `this` 值和 `arguments` 数组（或[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)）的函数。
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);
 ```
 
-使用 {{jsxref("Reflect.apply")}}，这变得不那么冗长和容易理解：
+借助 {{jsxref("Reflect.apply")}}，这些操作将变得更加简洁：
 
 ```js
 Reflect.apply(Math.floor, undefined, [1.75]);
@@ -393,16 +420,16 @@ Reflect.apply(Math.floor, undefined, [1.75]);
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
 // "hello"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index;
+Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 // 4
 
-Reflect.apply(''.charAt, 'ponies', [3]);
+Reflect.apply("".charAt, "ponies", [3]);
 // "i"
 ```
 
 ### 检查属性定义是否成功
 
-使用 {{jsxref("Object.defineProperty")}}，如果成功返回一个对象，否则抛出一个 {{jsxref("TypeError")}}，你将使用 {{jsxref("Statements/try...catch","try...catch")}} 块来捕获定义属性时发生的任何错误。因为 {{jsxref("Reflect.defineProperty")}} 返回一个布尔值表示的成功状态，你可以在这里使用 {{jsxref("Statements/if...else","if...else")}} 块：
+使用 {{jsxref("Object.defineProperty")}}，如果成功则返回一个对象，否则抛出一个 {{jsxref("TypeError")}}，你可使用 {{jsxref("Statements/try...catch", "try...catch")}} 块来捕获定义属性时发生的任何错误。因为 {{jsxref("Reflect.defineProperty")}} 返回一个布尔值表示的成功状态，你可以在这里使用 {{jsxref("Statements/if...else", "if...else")}} 块：
 
 ```js
 if (Reflect.defineProperty(target, property, attributes)) {
@@ -412,4 +439,4 @@ if (Reflect.defineProperty(target, property, attributes)) {
 }
 ```
 
-{{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}

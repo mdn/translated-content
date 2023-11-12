@@ -1,16 +1,6 @@
 ---
 title: Animation
 slug: Web/API/Animation
-tags:
-  - API
-  - Animations
-  - Experimental
-  - Interface
-  - Reference
-  - Web Animations
-  - waapi
-  - web animation api
-translation_of: Web/API/Animation
 ---
 
 {{ APIRef("Web Animations API") }}{{SeeCompatTable}}

@@ -1,109 +1,98 @@
 ---
-title: Acerca de MDN
+title: Guías de escritura
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
+l10n:
+  sourceCommit: dab1b3e38e8b58b64991218c682f41b236032a36
 ---
 
 {{MDNSidebar}}
 
-MDN Web Docs es una plataforma de aprendizaje para las tecnologías Web y el software con el que funciona la Web, incluyendo:
+MDN Web Docs es un proyecto de código abierto. Las secciones que se describen a continuación describen nuestras pautas para lo _qué_ documentamos y _cómo_ lo hacemos en MDN Web Docs. Para conocer _cómo contribuir_ consulta nuestras [guías de contribución](/es/docs/MDN/Community).
 
-- Estándares Web como [CSS](/es/docs/CSS), [HTML](/es/docs/HTML), y [JavaScript](/es/docs/JavaScript)
-- [Desarrollo de aplicaciones para Web Abierta](/es/docs/Apps)
-- [Desarrollo de complementos para Firefox](/es/docs/Add-ons)
+- [Lo que escribimos](/es/docs/MDN/Writing_guidelines/What_we_write)
 
-## Nuestra Misión
+  - : Esta sección cubre lo que incluimos en MDN Web Docs y lo que no, así como una serie de otras políticas, como cuándo escribimos sobre nuevas tecnologías, el proceso de sugerencia de contenido y si aceptamos enlaces externos. Este es un buen lugar para comenzar si está considerando escribir o actualizar contenido para nosotros. Esta sección también incluye:
 
-La misión de MDN es simple: Proporcionar a los desarrolladores la información que necesitan para construir fácilmente proyectos en la [Web abierta](/es/docs/Web/Demos_of_open_web_technologies). Si se trata de una tecnología expuesta en la Web Abierta, queremos documentarla.
+    - [Criterios de inclusión](/es/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
 
-Además, proporcionamos documentación sobre los [productos de Mozilla](/es/docs/Mozilla) y cómo [crear y contribuir a los proyectos de Mozilla](/es/docs/Participar_en_el_proyecto_Mozilla). También nos ocupamos del [B2G OS](/es/docs/Mozilla/B2G_OS) (antes Firefox OS).
+      - : Proporciona criterios detallados para que el contenido se incluya en MDN Web Docs, el proceso de solicitud para agregar nueva documentación en MDN Web Docs y las expectativas y pautas para la parte que solicita.
 
-Si no está seguro si un tema en particular debe ser ofrecido en MDN, lea: [¿Pertenece esto a MDN?](/es/docs/MDN/Contribute/Guidelines/Does_this_belong_on_MDN)
+- [Nuestra guía de estilo de escritura](/es/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-## Cómo puede ayudar
+  - : La guía de estilo de escritura cubre el idioma y el estilo que usamos para escribir en MDN Web Docs. También cubre cómo [formatear ejemplos de código](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
-¡No necesitas ser capaz de codificar —o escribir bien— para poder colaborar en MDN!. Tenemos un montón de maneras con las que puede ayudar, desde revisar artículos para asegurarse de que tengan sentido, o contribuir con texto, hasta agregar código de ejemplo. De hecho, hay tantas maneras de ayudar que tenemos una [Página de inicio](/es/docs/MDN/Comenzando) que le ayuda a elegir tareas que hacer, en función de sus intereses. ¡Y cuánto tiempo tiene disponible!.
+- [Cómo escribir para MDN Web Docs](/es/docs/MDN/Writing_guidelines/Howto)
 
-También puede ayudar [promocionando MDN](/es/docs/MDN/Promociona) en su propio blog o sitio web.
+  - : Esta sección cubre toda la información para crear y editar páginas, incluidos ciertos procesos y técnicas a los que nos adherimos. Esta sección proporciona información sobre cómo comenzar, una descripción general de cómo se estructuran las páginas y dónde encontrar instrucciones sobre tareas específicas. Esta sección incluye temas como:
 
-## La Comunidad MDN
+    - [Cómo investigar una tecnología](/es/docs/MDN/Writing_guidelines/Howto/Research_technology)
 
-¡Somos una comunidad global! Contamos con colaboradores increíbles de todo el mundo, en múltiples idiomas. Si desea aprender más sobre nosotros, o si necesita cualquier tipo de ayuda con MDN. ¡Tómese la libertad de consultar nuestra [foro de discusión](https://discourse.mozilla-community.org/c/mdn) o el [Canal IRC](irc://irc.mozilla.org#mdn)!
+      - : Esta sección proporciona algunos consejos útiles para investigar una tecnología que está documentando.
 
-## Uneté a la comunidad MDN
+    - [Cómo crear, mover y eliminar páginas](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
 
-Escoge tu método preferido para unirte al tema:
+      - : Esta sección explica cómo creamos, movemos o eliminamos una página en MDN Web Docs. También explica cómo redirigimos una página al mover o eliminar la página.
 
-- [Lista de e-mail](https://lists.mozilla.org/listinfo/dev-mdc)
-- [Twitter](https://twitter.com/MozDevNet)
-- [Grupo Google](http://groups.google.com/group/mozilla.dev.mdc)
-- [RSS feed](http://groups.google.com/group/mozilla.dev.mdc/feeds)
+    - [Cómo usar markdown](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
 
-- **IRC:** [#mdn](irc://irc.mozilla.org/mdn) ([Aprender más](https://wiki.mozilla.org/IRC))
-- **Reuniones:** [Todos los miércoles en IRC](https://wiki.mozilla.org/MDN/Community_meetings)
-- **Eventos:** [Eventos comunidad MDN](https://www.google.com/calendar/embed?src=mozilla.com_2d35383434313235392d323530%40resource.calendar.google.com&ctz=America/Chicago)
+      - : El formato _markdown_ que usamos se deriva de [la versión _markdown_ de GitHub (GFM, por sus siglas en inglés)](https://github.github.com/gfm/). Esta sección es una guía de la versión _markdown_ que usamos en MDN Web Docs, incluidos los formatos para componentes específicos en la página, como notas y listas de definiciones.
 
-Consulta el foro de documentación para desarrolladores:
+    - [Añadiendo imágenes y medios](/es/docs/MDN/Writing_guidelines/Howto/Images_media)
 
-- Únete a la conversación de IRC en el canal [#mdn](irc://irc.mozilla.org/mdn)
-- Únete a nuestras [reuniones](https://wiki.mozilla.org/MDN/Community_meetings/) de la comunidad publican
+      - : En esta sección se describen los requisitos para incluir contenido multimedia en las páginas, como imágenes.
 
-## Derechos de autor y Licencias
+    - [Cómo documentar una propiedad CSS](/es/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property)
 
-Los **documentos wiki MDN** se han preparado con las contribuciones de muchos autores, tanto dentro como fuera de la Fundación Mozilla. A menos que se indique lo contrario, los contenidos están disponibles bajo los términos de la [Licencia Creative Commons: Attribution-Sharealike](http://creativecommons.org/licenses/by-sa/2.5/) v2.5 o cualquier versión posterior. Por favor atribúyalos a los "Colaboradores Mozilla" e incluya un hipervínculo (en línea) o URL (en formato impreso) a la Wiki específica para el contenido referenciado.
+      - : Este artículo explica cómo escribir una página de propiedades CSS, incluido el diseño y el contenido.
 
-> [Acerca de MDN](/es/docs/MDN/About) realizado por [Colaboradores Mozilla](/es/docs/MDN/About$history) se distribuye bajo licencia [CC-BY-SA 2.5](http://creativecommons.org/licenses/by-sa/2.5/).
+    - [Cómo documentar una referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference)
 
-Tenga en cuenta que el ejemplo, "Colaboradores de Mozilla" enlaza con el historial de la página citada. Vea [Las mejores prácticas para la atribución](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) si desea una explicación más detallada.
+      - : Esta sección explica cómo abordar la documentación de una API web.
 
-> **Nota:** Vea [el contenido de MDN en WebPlatform.org](/es/docs/MDN_content_on_WebPlatform.org) para información acerca de como reutilizar y atribuir contenido MDN en ese sitio.
+    - [Cómo documentar una cabecera HTTP](/es/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header)
 
-Los códigos de ejemplo agregados a esta Wiki antes del 20 de Agosto de 2010 están disponibles bajo la [Licencia MIT](http://www.opensource.org/licenses/mit-license.php); utilice la siguiente información de atribución: "© \<fecha de la última revisión de la Wiki> \<nombre de la persona que lo colocó en la Wiki>".
+      - : Este artículo explica cómo crear una nueva página de referencia para una cabecera HTTP.
 
-Los códigos de ejemplo agregados durante o después del 20 de Agosto de 2010 quedan bajo [dominio público](http://wiki.creativecommons.org/Public_domain). Puedes utilizar el siguiente aviso si es necesario: "Cualquier derecho de autor se dedica al dominio público. <http://creativecommons.org/publicdomain/zero/1.0/> "
+    - [Cómo agregar una entrada al glosario](/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)
 
-Si deseas contribuir al wiki, debes hacer que tu documentación esté disponible bajo la licencia de Attribution-ShareAlike (u ocasionalmente una licencia alternativa ya especificada por la página que estás editando), y los ejemplos de código disponibles bajo licencia [Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/) (Dedicada al dominio público). Añadir contenido a este wiki significa que aceptas que tus contribuciones estén disponibles bajo esas licencias.
+      - : Este artículo explica cómo agregar y vincular entradas en el glosario de MDN Web Docs. También proporciona pautas sobre el diseño y el contenido de las entradas del glosario.
 
-Algunos contenidos antiguos se pusieron a disposición bajo una licencia distinta de las licencias mencionadas anteriormente. Estos se indican en la parte inferior de cada página a través de un [Bloque de Licencia Alternativo](/Archive/Meta_docs/Examples/Alternate_License_Block).
+- [Tipos de página en MDN Web Docs](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types)
 
-> **Advertencia:** No se pueden crear nuevas páginas utilizando licencias alternativas.
+  - : Cada página de MDN Web Docs tiene un tipo de página específico, ya sea una página de referencia de CSS o una página de guía de JavaScript. Esta sección enumera los diferentes tipos de página y proporciona plantillas para cada tipo. Es una buena idea examinarlos para comprender qué tipo de página está escribiendo.
 
-**Los derechos de autor sobre el material publicado permanecen con el autor a menos que este los asigne a otra persona.**
+- [Estructuras de página en MDN Web Docs](/es/docs/MDN/Writing_guidelines/Page_structures)
 
-Si tienes alguna pregunta o inquietud sobre algo expuesto aquí, por favor contacta con [Eric Shepherd](mailto:eshepherd@mozilla.com).
+  - : Esta sección cubre las diversas estructuras de página que usamos para proporcionar una presentación coherente de la información en MDN Web Docs. Esto incluye:
 
--------------
+    - [Secciones de sintaxis](/es/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections)
 
-Los derechos sobre las marcas comerciales, logotipos, marcas al servicio de la Fundación Mozilla, así como la apariencia de este sitio Web, no se encuentran bajo la licencia Creative Commons, están exentos. Se reconoce que son obras de autoría (como logotipos y diseños gráficos), y no están incluidos en el trabajo que se autoriza bajo esos términos. Si utilizas el texto de los documentos, y deseas también usar cualquiera de estos derechos, o si tienes cualquier otra pregunta sobre el cumplimiento de nuestros términos de licencia para esta colección, contacta con la Fundación Mozilla por este medio: [licensing@mozilla.org](mailto:licensing@mozilla.org).
+      - : La sección de sintaxis de una página de referencia en MDN Web Docs contiene un cuadro de sintaxis que define la sintaxis exacta de una característica. Este artículo explica cómo escribir cuadros de sintaxis para artículos de referencia.
 
-### Descarga de contenido
+    - [Ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
 
-Puede descargar un [espejo tarball completo de MDN](/media/developer.mozilla.org.tar.gz). (2.5 GB a partir de 2016-11-30).
+      - : Hay muchas maneras diferentes de incluir ejemplos de código en las páginas. Esta sección los describe y proporciona pautas de sintaxis para los diferentes lenguajes.
 
-#### Páginas únicas
+    - [Banners y avisos](/es/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
 
-Puede recuperar el contenido de una página única en MDN agregando [parámetros de documento](/es/docs/MDN/Contribute/Tools/Document_parameters#Document_parameters) a la URL para especificar el formato que desea.
+      - : A veces, un artículo necesita que se le agregue un aviso especial. Esto podría suceder si la página cubre tecnología obsoleta u otro material que no debería usarse en el código de producción. Este artículo cubre los casos más comunes y cómo manejarlos.
 
-#### Herremientas de terceros
+    - [Tablas de especificaciones](/es/docs/MDN/Writing_guidelines/Page_structures/Specification_tables)
 
-Puede ver el contenido de MDN a través de herramientas de terceros como [Dash](https://kapeli.com/dash) (para Mac OS) y [Zeal](https://zealdocs.org/) (para Linux y Windows).
+      - : Cada página de referencia en MDN Web Docs debe proporcionar información sobre la especificación o especificaciones en las que se definió esa API o tecnología. Este artículo muestra el aspecto de estas tablas y explica cómo agregarlas.
 
-[Kapeli](https://kapeli.com/) también publica [documentos offline de MDN](https://kapeli.com/mdn_offline) que cubren HTML, CSS, JavaScript, SVG y XSLT.
+    - [Tablas de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)
 
-### Vincular a MDN
+      - : MDN Web Docs tiene un formato estándar para tablas de compatibilidad para nuestra documentación web abierta. Este artículo explica cómo agregar y mantener la base de datos que se utiliza para generar las tablas de compatibilidad y cómo integrar las tablas en los artículos.
 
-Consulte este artículo para obtener orientación sobre cómo [vincular a MDN](/es/docs/MDN/About/Linking_to_MDN) para obtener las mejores prácticas al enlazar.
+    - [Macros](/es/docs/MDN/Writing_guidelines/Page_structures/Macros)
 
-## Informar de problemas en MDN
+      - : Las macros son accesos directos que se utilizan en las páginas para generar contenido, como los menús laterales. Esta sección enumera las macros que usamos y lo que hacen.
 
-Consulte [Cómo informar de un problema en MDN](/es/docs/MDN/Contribute/Howto/Report_a_problem).
+- [Atribuciones e información sobre licencias de derechos de autor](/es/docs/MDN/Writing_guidelines/Attrib_copyright_license)
 
-## Historia de MDN
+  - : Describe nuestra política sobre el uso de contenido de MDN Web Docs en otros lugares de la web, cómo obtener permiso para volver a publicar contenido en MDN y sugerencias para vincular contenido de MDN.
 
-El proyecto para el Centro de Desarrollo Mozilla (a.k.a. MDC, a.k.a. _Devmo_) comenzó a principios de 2005, cuando la [Fundación Mozilla](http://www.mozillafoundation.org) obtuvo una licencia de AOL para utilizar el contenido original Netscape [DevEdge](/Project:en/DevEdge). El contenido DevEdge fue revisado en busca de material todavía útil, que luego fue migrado por voluntarios en este Wiki para que fuera más fácil de actualizar y mantener.
+- [Cómo etiquetar una tecnología](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
 
-Desde entonces, el proyecto ha seguido creciendo y ahora forma un nexo central para toda la documentación de desarrollo relacionada con el proyecto Mozilla y las tecnologías de Web Abierta. En 2010, el nombre fue cambiado a Mozilla Developer Network. En 2011 se agregó [Demostraciones de Tecnologías de Web Abierta](/es/docs/Web/Demos_of_open_web_technologies) para que los desarrolladores Web puedan compartir y mostrar su código y páginas de [aprendizaje](/es/docs/Learn) para proporcionar enlaces a los tutoriales. (El nombre de MDC viene de "MDN Doc Center" de la sección de documentación). Se espera que con el tiempo la Red de Desarrolladores de Mozilla se convierta en un recurso que los diseñadores Web, desarrolladores de aplicaciones, de extensiones y escritores visiten de forma regular.
-
-## Acerca de Mozilla
-
-Si deseas aprender más acerca de quiénes somos, cómo ser parte de Mozilla, o simplemente, dónde encontrarnos, estás en el lugar correcto. Para saber lo que nos mueve y nos hace diferentes, por favor visita nuestra página de [misión](/es/mission/).
+  - : Esta sección cubre nuestras definiciones de los términos obsoleto, en desuso y experimental y proporciona pautas sobre cómo etiquetar una tecnología con ellos y cuándo eliminamos contenido de MDN Web Docs.

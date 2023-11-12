@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Permissions API")}}
 
- `Permissions` は[権限 API](/ja/docs/Web/API/Permissions_API) のインターフェイスで、権限の照会や取り消しのためのメソッドなど、中心となる権限 API の機能を提供します。
+`Permissions` は[権限 API](/ja/docs/Web/API/Permissions_API) のインターフェイスで、権限の照会や取り消しのためのメソッドなど、中心となる権限 API の機能を提供します。
 
 ## メソッド
 
@@ -23,10 +23,10 @@ l10n:
 ## 例
 
 ```js
-navigator.permissions.query({ name:' geolocation' }).then((result) => {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: " geolocation" }).then((result) => {
+  if (result.state === "granted") {
     showLocalNewsWithGeolocation();
-  } else if (result.state === 'prompt') {
+  } else if (result.state === "prompt") {
     showButtonToEnableLocalNews();
   }
   // 権限が拒否された場合は何もしないでください。

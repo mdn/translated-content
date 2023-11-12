@@ -1,8 +1,6 @@
 ---
-title: 'CSP : style-src'
+title: "CSP : style-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/style-src
-browser-compat: http.headers.csp.Content-Security-Policy.style-src
 ---
 
 {{HTTPSidebar}}
@@ -56,10 +54,15 @@ Content-Security-Policy: style-src https://example.com/
 Ces feuilles de style seront bloquées et ne se chargeront pas&nbsp;:
 
 ```html
-<link href="https://not-example.com/styles/main.css" rel="stylesheet" type="text/css" />
+<link
+  href="https://not-example.com/styles/main.css"
+  rel="stylesheet"
+  type="text/css" />
 
 <style>
-#inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 
 <style>
@@ -82,14 +85,14 @@ Les attributs de style seront aussi bloqués&nbsp;:
 De même que les styles ajoutés par JavaScript en définissant l'attribut `style` directement, ou en définissant la propriété [`cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)&nbsp;:
 
 ```js
-document.querySelector('div').setAttribute('style', 'display:none;');
-document.querySelector('div').style.cssText = 'display:none;';
+document.querySelector("div").setAttribute("style", "display:none;");
+document.querySelector("div").style.cssText = "display:none;";
 ```
 
 Toutefois, les propriétés de styles qui sont définies directement dans l'attribut [`style`](/fr/docs/Web/API/HTMLElement/style) ne seront pas bloquées, permettant aux utilisatrices et utilisateurs de manipuler sainement les styles avec JavaScript&nbsp;:
 
 ```js
-document.querySelector('div').style.display = 'none';
+document.querySelector("div").style.display = "none";
 ```
 
 Ce genre de manipulations peut être bloqué en désactivant JavaScript au moyen de la directive CSP [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
@@ -108,7 +111,9 @@ Cette directive CSP autorisera toutes les feuilles de styles embarquées avec l'
 
 ```html
 <style>
-  #inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 
 <div style="display:none">Toto</div>
@@ -124,7 +129,9 @@ Vous devrez alors définir ce nonce sur l'élément [`<style>`](/fr/docs/Web/HTM
 
 ```html
 <style nonce="2726c7f26c">
-  #inline-style { background: red; }
+  #inline-style {
+    background: red;
+  }
 </style>
 ```
 
@@ -143,7 +150,11 @@ Content-Security-Policy: style-src 'sha256-a330698cbe9dc4ef1fb12e2ee9fc06d5d1430
 Lors de la génération de l'empreinte, il ne faut pas inclure les balises et il faut tenir compte de la casse et des caractères blancs (espaces, retours à la ligne, etc.).
 
 ```html
-<style>#inline-style { background: red; }</style>
+<style>
+  #inline-style {
+    background: red;
+  }
+</style>
 ```
 
 ### Expressions de style non fiables

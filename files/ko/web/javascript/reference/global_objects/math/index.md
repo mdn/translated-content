@@ -2,6 +2,7 @@
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
 ---
+
 {{JSRef}}
 
 **`Math`** 는 수학적인 상수와 함수를 위한 속성과 메서드를 가진 내장 객체입니다. 함수 객체가 아닙니다.

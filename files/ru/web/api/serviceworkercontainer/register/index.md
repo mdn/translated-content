@@ -1,8 +1,8 @@
 ---
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
-translation_of: Web/API/ServiceWorkerContainer/register
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 **`register()`** метод {{domxref("ServiceWorkerContainer")}} интерфейса который создаёт и обновляет [`ServiceWorkerRegistration`](/ru/docs/Web/API/ServiceWorkerRegistration) для указанного `URL` js скрипта.
@@ -37,33 +37,39 @@ ServiceWorkerContainer.register(scriptURL, options)
 Следующий пример использует дефолтный scope (не указывая его прямо). Service worker в этом случае будет контролировать `example.com/index.html` и страницы, расположенные "глубже", например `example.com/product/description.html`.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Регистрация service worker-а, расположенного в корне сайта
   // за счёт использования дефолтного scope (не указывая его)
-  navigator.serviceWorker.register('/sw.js').then(function(registration) {
-    console.log('Service worker зарегистрирован:', registration);
-  }).catch(function(error) {
-    console.log('Ошибка при регистрации service worker-а:', error);
-  });
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then(function (registration) {
+      console.log("Service worker зарегистрирован:", registration);
+    })
+    .catch(function (error) {
+      console.log("Ошибка при регистрации service worker-а:", error);
+    });
 } else {
   // Текущий браузер не поддерживает service worker-ы.
-  console.log('Текущий браузер не поддерживает service worker-ы');
+  console.log("Текущий браузер не поддерживает service worker-ы");
 }
 ```
 
 Следующий пример, если он размещён на странице корня сайта, будет применён ровно к тем же страницам, что и пример выше. Помните, scope, если он указан, использует path страницы в качестве своей базы. Это значит, что, если следующий пример будет использоваться на странице `example.com/product/description.html`, то scope `./` будет означать, что service worker работает только со страницами внутри `example.com/product`. Если необходимо зарегистрировать service worker на `example.com/product/description.html`, и вы хотите, чтобы он обслуживал и корень, `example.com`, то scope лучше не указывать совсем, как в примере выше.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Регистрация service worker-а, расположенного в корне сайта
   // с указанием более строгого scope
-  navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
-    console.log('Service worker зарегистрирован:', registration);
-  }).catch(function(error) {
-    console.log('Ошибка при регистрации service worker-а:', error);
-  });
+  navigator.serviceWorker
+    .register("/sw.js", { scope: "./" })
+    .then(function (registration) {
+      console.log("Service worker зарегистрирован:", registration);
+    })
+    .catch(function (error) {
+      console.log("Ошибка при регистрации service worker-а:", error);
+    });
 } else {
-  console.log('Текущий браузер не поддерживает service worker-ы.');
+  console.log("Текущий браузер не поддерживает service worker-ы.");
 }
 ```
 

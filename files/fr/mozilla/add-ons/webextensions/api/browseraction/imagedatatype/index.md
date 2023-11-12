@@ -1,17 +1,6 @@
 ---
 title: browserAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDataType
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - browserAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
 ---
 
 {{AddonSidebar()}}
@@ -22,9 +11,9 @@ Données en pixels pour une image. Doit être un objet [`ImageData`](/fr/docs/We
 
 Un objet [`ImageData`](/fr/docs/Web/API/ImageData).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.ImageDataType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

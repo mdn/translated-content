@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-progress-bar'
+title: "::-webkit-progress-bar"
 slug: Web/CSS/::-webkit-progress-bar
 ---
 
@@ -11,13 +11,9 @@ slug: Web/CSS/::-webkit-progress-bar
 
 > **备注：** 为了能让`::-webkit-progress-value`起作用，需要添加 CSS {{cssxref("-webkit-appearance")}} 至 `<progress>` 元素。
 
-## 规范
+## 示例
 
-没有规范。这是一个 WebKit/Blink 独有的规范。
-
-## 例子
-
-### CSS content
+### CSS
 
 ```css
 progress {
@@ -25,23 +21,27 @@ progress {
 }
 
 ::-webkit-progress-bar {
-   background-color: orange;
+  background-color: orange;
 }
 ```
 
-### HTML content
+### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
-### Output
+### 结果
 
-{{EmbedLiveSample("Example", 200, 50)}}
+{{EmbedLiveSample("示例", 200, 50)}}
 
 应用了上述样式的进度条样式如下：
 
 ![](progress-bar.png)
+
+## 规范
+
+没有规范。这是一个 WebKit/Blink 独有的规范。
 
 ## 浏览器兼容性
 

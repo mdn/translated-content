@@ -1,17 +1,6 @@
 ---
 title: extension.isAllowedFileSchemeAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - isAllowedFileSchemeAccess
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
 ---
 
 {{AddonSidebar()}}Renvoie `true` si l'extension peut accéder au schéma "file://", sinon `false`.
@@ -21,7 +10,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var isAllowed = browser.extension.isAllowedFileSchemeAccess()
+var isAllowed = browser.extension.isAllowedFileSchemeAccess();
 ```
 
 ### Paramètres
@@ -34,9 +23,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Firefox retournera toujours `false`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.isAllowedFileSchemeAccess")}}
+{{Compat}}
 
 ## Exemples
 

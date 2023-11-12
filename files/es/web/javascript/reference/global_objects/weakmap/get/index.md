@@ -1,7 +1,6 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/get
 ---
 
 {{JSRef}}
@@ -31,10 +30,10 @@ El elemento asociado con la llave específica en el objeto WeakMap. Si la llave 
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.get(window); // Devuelve "foo".
-wm.get('baz');  // Devuelve undefined.
+wm.get("baz"); // Devuelve undefined.
 ```
 
 ## Especificaciones
@@ -43,7 +42,7 @@ wm.get('baz');  // Devuelve undefined.
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WeakMap.get")}}
+{{Compat}}
 
 ## Vea también
 

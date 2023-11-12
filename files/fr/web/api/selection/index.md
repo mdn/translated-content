@@ -1,7 +1,6 @@
 ---
 title: selection
 slug: Web/API/Selection
-translation_of: Web/API/Selection
 ---
 
 {{ ApiRef() }}
@@ -82,7 +81,7 @@ Autres mots clés utilisés dans cette section.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Selection")}}
+{{Compat}}
 
 ### Voir aussi
 

@@ -1,15 +1,6 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-tags:
-  - HTTP
-  - Headers
-  - Reference
-  - Длина контента
-  - Заголовок
-  - запрос
-translation_of: Web/HTTP/Headers/Content-Length
-original_slug: Web/HTTP/Заголовки/Content-Length
 ---
 
 {{HTTPSidebar}}

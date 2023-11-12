@@ -1,20 +1,17 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/min-width
+l10n:
+  sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
 ---
 
 {{CSSRef}}
 
-La propriété **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("width")}} de devenir inférieure à la valeur spécifiée par `min-width` (autrement dit, `min-width` est une borne inférieure pour `width`).
+La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/used_value) de la propriété [`width`](/fr/docs/Web/CSS/width) de devenir inférieure à la valeur spécifiée par `min-width`.
 
 {{EmbedInteractiveExample("pages/css/min-width.html")}}
 
-La valeur de `min-width` surcharge les valeurs de {{cssxref("max-width")}} et de {{cssxref("width")}} si elle est supérieure à l'une de ces propriétés.
+La largeur de l'élément sera la valeur de la propriété `min-width` si celle-ci est supérieure à [`max-width`](/fr/docs/Web/CSS/max-width) ou à [`width`](/fr/docs/Web/CSS/width).
 
 ## Syntaxe
 
@@ -30,49 +27,49 @@ min-width: 10%;
 /* Valeurs avec un mot-clé */
 min-width: max-content;
 min-width: min-content;
-min-width: fit-content;
-min-width: fill-available;
+min-width: fit-content(20em);
 
 /* Valeurs globales */
 min-width: inherit;
 min-width: initial;
+min-width: revert;
+min-width: revert-layer;
 min-width: unset;
 ```
 
 ### Valeurs
 
-- `<length>`
-  - : La largeur minimale. Voir {{cssxref("&lt;length&gt;")}} pour les unités qu'on peut utiliser. Une largeur négative rendra la déclaration invalide.
-- `<percentage>`
-  - : La largeur minimale, exprimée comme un fraction de la largeur du bloc englobant. Voir la page {{cssxref("&lt;percentage&gt;")}} sur les valeurs possibles avec ce type. Les valeurs négatives rendront la déclaration invalide.
+- [`<length>`](/fr/docs/Web/CSS/length)
+  - : La largeur minimale sous la forme d'une valeur absolue. Une largeur négative rendra la déclaration invalide.
+- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+  - : La largeur minimale, exprimée comme une fraction de la largeur du bloc englobant. Les valeurs négatives rendront la déclaration invalide.
 - `auto`
-  - : Définit une taille automatique minimale. Sauf si elle est définie par la disposition courante, la résolution de cette valeur sera 0. A des fins de rétro-compatibilité, la valeur résolue de ce mot-clé sera 0 pour l'ensemble des disposition CSS2 : bloc, en ligne, bloc-en ligne, disposition en tableau..
-- `max-content` {{experimental_inline}}
-  - : La largeur intrinsèque préférée.
-- `min-content` {{experimental_inline}}
-  - : La largeur intrinsèque minimale.
-- `fill-available`{{experimental_inline}}
-  - : La largeur du bloc englobant moins la marge horizontale, la bordure et le remplissage (_padding_). Certains navigateurs implémentent cette valeur avec un ancien nom : `available`.
-- `fit-content` {{experimental_inline}}
-  - : La largeur calculée par `min(max-content, max(min-content, fill-available))`.
+  - : Le navigateur calculera et sélectionnera une valeur de `min-width` pour l'élément ciblé.
+- `max-content`
+  - : La valeur intrinsèque préférée pour `min-width`.
+- `min-content`
+  - : La valeur intrinsèque minimale pour `min-width`.
+- `fit-content(<length-percentage>)`
+  - : Utilise la formule `fit-content` avec le maximum d'espace disponible remplacé par l'argument indiqué, c'est-à-dire `min(max-content, max(min-content, argument))`. Voir [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage) pour le type de valeur qui peut être utilisée en argument.
 
 ## Définition formelle
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## Syntaxe formelle
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Exemples
 
 ### HTML
 
 ```html
-<div> Lorem ipsum tralala sit amet, consectetur adipisicing
+<div>
+  Lorem ipsum tralala sit amet, consectetur adipisicing
   <p>
-     Ut enim ad minim veniam, quis nostrud exercitation
-     ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat.
   </p>
 </div>
 ```
@@ -81,19 +78,19 @@ min-width: unset;
 
 ```css
 div {
-  width: 250px;
+  width: 200px;
   border: solid 1px red;
 }
 
 p {
-  max-width: 60%;
+  min-width: 250px;
   border: solid 1px blue;
 }
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("","",200)}}
 
 ## Spécifications
 
@@ -105,8 +102,8 @@ p {
 
 ## Voir aussi
 
-- {{cssxref("width")}}
-- {{cssxref("max-width")}}
-- {{cssxref("min-height")}}
-- {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)
+- [`width`](/fr/docs/Web/CSS/width)
+- [`max-width`](/fr/docs/Web/CSS/max-width)
+- [`min-height`](/fr/docs/Web/CSS/min-height)
+- [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
+- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)

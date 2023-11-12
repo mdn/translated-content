@@ -28,4 +28,4 @@ processUserInput(greeting);
 
 ## 関連情報
 
-- Wikipedia の[コールバック](https://ja.wikipedia.org/wiki/コールバック_(情報工学))
+- Wikipedia の[コールバック](<https://ja.wikipedia.org/wiki/コールバック_(情報工学)>)

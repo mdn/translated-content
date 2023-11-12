@@ -27,11 +27,13 @@ Este exemplo observa as alterações na conexão do usuário.
 let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log(`Tipo de conexão alterado de ${type} para ${navigator.connection.effectiveType}`);
+  console.log(
+    `Tipo de conexão alterado de ${type} para ${navigator.connection.effectiveType}`,
+  );
   type = navigator.connection.effectiveType;
 }
 
-navigator.connection.addEventListener('change', updateConnectionStatus);
+navigator.connection.addEventListener("change", updateConnectionStatus);
 ```
 
 ### Pré-carregue grandes recursos
@@ -42,7 +44,7 @@ O objeto de conexão é útil para decidir se deve pré-carregar recursos que co
 let preloadVideo = true;
 const connection = navigator.connection;
 if (connection) {
-  if (connection.effectiveType === 'slow-2g') {
+  if (connection.effectiveType === "slow-2g") {
     preloadVideo = false;
   }
 }

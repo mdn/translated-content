@@ -1,7 +1,6 @@
 ---
 title: BigInt
 slug: Glossary/BigInt
-original_slug: Glossario/BigInt
 ---
 
 No {{Glossary("JavaScript")}}, **BigInt** é um tipo de dado numérico que representa inteiros no formato de precisão arbritrária. Em outras linguagens de programação existem tipos numéricos diferentes, como por exemplo: Integers, Floats, Doubles ou Bignums.
@@ -10,7 +9,7 @@ No {{Glossary("JavaScript")}}, **BigInt** é um tipo de dado numérico que repre
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "Data type#Numeric_types", "Numeric types")}} no Wikipedia
+- [Numeric types](https://pt.wikipedia.org/wiki/Tipo_de_dado) no Wikipedia
 
 ### Technical reference
 

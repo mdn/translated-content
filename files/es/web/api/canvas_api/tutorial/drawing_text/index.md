@@ -1,7 +1,6 @@
 ---
 title: Dibujar texto usando canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-original_slug: Dibujar_texto_usando_canvas
 ---
 
 El elemento [`<canvas>`](/es/HTML/Canvas) permite dibujar texto en él a través de una API experimental de Mozilla.
@@ -22,7 +21,7 @@ void mozTextAlongPath(in DOMString textToDraw, in boolean stroke);
 - Estas extensiones de texto no están aún estandarizadas por WHATWG.
 - No necesitas un contexto especial para usarlas; el contexto 2D funciona bien.
 - Todos los dibujos se realizan usando la transformación actual.
-- Revisa el {{ Bug(339553) }} si quieres leer más sobre las implementaciones específicas.
+- Revisa el [Error 339553 en Firefox](https://bugzil.la/339553) si quieres leer más sobre las implementaciones específicas.
 
 ### Demostraciones
 

@@ -5,35 +5,30 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 {{JSRef}}
 
-**`toUpperCase()`** 方法将调用该方法的字符串转为大写形式并返回（如果调用该方法的值不是字符串类型会被强制转换）。
+{{jsxref("String")}} 的 **`toUpperCase()`** 方法将该字符串转换为大写形式。
 
 {{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}
 
 ## 语法
 
-```plain
-str.toUpperCase()
+```js-nolint
+toUpperCase()
 ```
 
 ### 返回值
 
 一个新的字符串，表示转换为大写的调用字符串。
 
-### 错误处理
-
-- {{jsxref("TypeError(类型错误)")}}
-  - : 在 {{jsxref("null")}} 或 {{jsxref("undefined")}}类型上调用，例如：`String.prototype.toUpperCase.call(undefined)`.
-
 ## 描述
 
-`toUpperCase()` 返回转为大写形式的字符串。此方法不会影响原字符串本身的值，因为 JavaScript 中字符串的值是不可改变的。
+`toUpperCase()` 方法返回将字符串转换为大写形式后的值。由于 JavaScript 中的字符串是不可变的，因此此方法不会影响字符串本身的值。
 
 ## 示例
 
 ### 基本用法
 
 ```js
-console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+console.log("alphabet".toUpperCase()); // 'ALPHABET'
 ```
 
 ### 将非字符串类型的 `this` （上下文）转为字符串
@@ -43,8 +38,8 @@ console.log('alphabet'.toUpperCase()); // 'ALPHABET'
 ```js
 const a = String.prototype.toUpperCase.call({
   toString: function toString() {
-    return 'abcdef';
-  }
+    return "abcdef";
+  },
 });
 
 const b = String.prototype.toUpperCase.call(true);

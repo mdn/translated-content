@@ -1,8 +1,9 @@
 ---
 title: 幂等
 slug: Glossary/Idempotent
-original_slug: Glossary/幂等
 ---
+
+{{GlossarySidebar}}
 
 一个 HTTP 方法是**幂等**的，指的是同样的请求被执行一次与连续执行多次的效果是一样的，服务器的状态也是一样的。换句话说就是，幂等方法不应该具有副作用（统计用途除外）。在正确实现的条件下， {{HTTPMethod("GET")}} ， {{HTTPMethod("HEAD")}} ， {{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 等方法都是**幂等**的，而 {{HTTPMethod("POST")}} 方法不是。所有的 {{glossary("safe")}} 方法也都是幂等的。
 
@@ -35,13 +36,8 @@ DELETE /idX/delete HTTP/1.1   -> Returns 404 as it just got deleted
 DELETE /idX/delete HTTP/1.1   -> Returns 404
 ```
 
-## 了解更多
-
-### 基本知识
+## 参见
 
 - 在 HTTP 协议中[幂等](https://tools.ietf.org/html/rfc7231#section-4.2.2)的定义。
-
-### 技术知识
-
-- 常见的幂等方法： {{HTTPMethod("GET")}} ， {{HTTPMethod("HEAD")}} , {{HTTPMethod("PUT")}} ， {{HTTPMethod("DELETE")}} ， {{HTTPMethod("OPTIONS")}}
-- 常见的非幂等方法： {{HTTPMethod("POST")}}
+- 常见的幂等方法：{{HTTPMethod("GET")}}、{{HTTPMethod("HEAD")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("DELETE")}}、{{HTTPMethod("OPTIONS")}}、{{HTTPMethod("TRACE")}}
+- 常见的非幂等方法：{{HTTPMethod("POST")}}、{{HTTPMethod("PATCH")}}、{{HTTPMethod("CONNECT")}}

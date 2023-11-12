@@ -2,6 +2,7 @@
 title: CSS 객체 모델 (CSSOM)
 slug: Web/API/CSS_Object_Model
 ---
+
 {{DefaultAPISidebar('CSSOM')}}
 
 **CSS Object Model**은 JavaScript에서 CSS를 조작할 수 있는 API 집합입니다. HTML 대신 CSS가 대상인 DOM이라고 생각할 수 있으며, 사용자가 CSS 스타일을 동적으로 읽고 수정할 수 있는 방법입니다.

@@ -1,11 +1,6 @@
 ---
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
-tags:
-  - API
-  - DOM
-  - Propriété
-translation_of: Web/API/HTMLElement/outerText
 ---
 
 {{APIRef("DOM")}}
@@ -28,7 +23,7 @@ Microsoft en a publié [une description sur MSDN](<https://msdn.microsoft.com/en
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLElement.outerText")}}
+{{Compat}}
 
 ## Voir aussi
 

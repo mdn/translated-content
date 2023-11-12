@@ -60,7 +60,7 @@ Referrer-Policy: unsafe-url
 ## Ejemplos
 
 | Directiva                             | Documento                               | Navegación a                          | Referente                               |
-| ------------------------------------- | --------------------------------------  | ------------------------------------  | --------------------------------------  |
+| ------------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------------- |
 | **`no-referrer`**                     | <https://ejemplo.com/pagina.html>       | cualquier dominio o ruta de acceso    | ningún referente                        |
 | **`no-referrer-when-downgrade`**      | <https://ejemplo.com/pagina.html>       | <https://ejemplo.com/otrapagina.html> | <https://ejemplo.com/pagina.html>       |
 | **`no-referrer-when-downgrade`**      | <https://ejemplo.com/pagina.html>       | <https://mozilla.org>                 | <https://ejemplo.com/pagina.html>       |
@@ -81,25 +81,11 @@ Referrer-Policy: unsafe-url
 
 ## Especificaciones
 
-| Especificación                                                                                     | Estado                   |
-| -------------------------------------------------------------------------------------------------- | ------------------------ |
-| [Directiva de referentes](https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-header) | Anteproyecto de editores |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Referrer-Policy")}}
-
-> **Nota:** **Notas**:
->
-> - A partir de la versión 53 en adelante, Gecko incluye una preferencia de `about:config` para permitir a los usuarios definir su directiva `Referrer-Policy` predeterminada: `network.http.referer.userControlPolicy`.
-> - A partir de la versión 59 (consulte el informe n.º [587523](https://bugzilla.mozilla.org/show_bug.cgi?id=587523)), esta preferencia ha cambiado de nombre: ahora son `network.http.referer.defaultPolicy` y `network.http.referer.defaultPolicy.pbmode`.
->
-> Los valores posibles son:
->
-> - 0: `no-referrer`
-> - 1: `same-origin`
-> - 2: `strict-origin-when-cross-origin`
-> - 3: `no-referrer-when-downgrade` (la predeterminada)
+{{Compat}}
 
 ## Véase también
 

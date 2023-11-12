@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
-translation_of: Web/API/HTMLElement/offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Свойство **`HTMLElement.offsetWidth`** возвращает ширину элемента. Как правило, `offsetWidth` — это значение, включающее горизонтальный отступ элемента, ширину вертикального скроллбара (если он есть) и CSS ширину.
@@ -21,15 +21,9 @@ var offsetWidth = element.offsetWidth;
 
 ![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetwidth', 'offsetWidth')}} | {{Spec2('CSSOM View')}} |         |
-
-### Примечание
-
-`offsetWidth` — свойство объектной модели DHTML, которое впервые было представлено в браузере MSIE. Его иногда называют физической/графической шириной или шириной блока элемента.
+{{Specifications}}
 
 ## Совместимость с браузерами
 

@@ -1,7 +1,6 @@
 ---
 title: Les variables CSS
 slug: Web/CSS/Using_CSS_custom_properties
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 
 {{CSSRef}}
@@ -43,7 +42,7 @@ Les propriétés personnalisées ont actuellement deux formes :
 - les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle `var()`&nbsp;: `var(--example-variable)` retourne la valeur de `--example-variable`.
 - les propriétés personnalisées, qui sont des propriétés spéciales notées `--*` où `*` représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : `--example-variable: 20px;` est une déclaration en CSS, utilisant la propriété personnalisée `--*` pour initialiser la valeur de la variable CSS `--example-variable` à `20px`.
 
-> **Note :** Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ({{bug(985838)}})
+> **Note :** Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ([bug Firefox 985838](https://bugzil.la/985838))
 
 Les propriétés personnalisées sont similaires aux propriétés ordinaires. Elles sont sujettes à la cascade et héritent leur valeur de leur parent si elles ne sont pas redéfinies.
 
@@ -93,10 +92,10 @@ Appliquons-le à ce code HTML :
 
 ```html
 <div>
-    <div class="un">Toto</div>
-    <div class="deux">Texte <span class="cinq">- encore du texte</span></div>
-    <input class="trois">
-    <textarea class="quatre">Lorem Ipsum</textarea>
+  <div class="un">Toto</div>
+  <div class="deux">Texte <span class="cinq">- encore du texte</span></div>
+  <input class="trois" />
+  <textarea class="quatre">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -150,10 +149,10 @@ Remarquez la répétition dans le CSS. La couleur d'arrière-plan est définie �
 
 ```html hidden
 <div>
-    <div class="un">Toto</div>
-    <div class="deux">Text <span class="cinq">- more text</span></div>
-    <input class="trois">
-    <textarea class="quatre">Lorem Ipsum</textarea>
+  <div class="un">Toto</div>
+  <div class="deux">Text <span class="cinq">- more text</span></div>
+  <input class="trois" />
+  <textarea class="quatre">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -166,10 +165,8 @@ Il y a un héritage des propriétés personnalisées. Cela signifie que si une p
 ```html
 <div class="un">
   <div class="deux">
-    <div class="trois">
-    </div>
-    <div class="quatre">
-    </div>
+    <div class="trois"></div>
+    <div class="quatre"></div>
   </div>
 </div>
 ```
@@ -243,9 +240,15 @@ Lorsque le navigateur analyse une substitution `var()` invalide, c'est la valeur
 ### CSS
 
 ```css
-:root { --text-color: 16px; }
-p { color: blue; }
-p { color: var(--text-color); }
+:root {
+  --text-color: 16px;
+}
+p {
+  color: blue;
+}
+p {
+  color: var(--text-color);
+}
 ```
 
 Comme on pourrait s'y attendre, la valeur applique la substitution avec `--text-color` à la place de `var(--text-color)` mais `16px` n'est pas une valeur valide pour {{cssxref("color")}}. Après la substitution, la déclaration n'a plus aucun sens. Le navigateur résoud ce problème en deux étapes :
@@ -278,9 +281,9 @@ element.style.setProperty("--ma-variable", varJS + 4);
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
-> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification (cf. {{bug(985838)}})
+> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification (cf. [bug Firefox 985838](https://bugzil.la/985838))
 
 ## Voir aussi
 

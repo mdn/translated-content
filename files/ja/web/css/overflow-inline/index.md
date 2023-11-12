@@ -54,28 +54,26 @@ overflow-inline: unset;
 
 ```html
 <ul>
-  <li><code>overflow-inline:hidden</code> — ボックスの外側のテキストを隠す
-    <div id="div1">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:hidden</code> — ボックスの外側のテキストを隠す
+    <div id="div1">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:scroll</code> — 常にスクロールバーを表示
-    <div id="div2">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:scroll</code> — 常にスクロールバーを表示
+    <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:visible</code> — 必要に応じてテキストをボックスの外に表示
-    <div id="div3">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:visible</code> —
+    必要に応じてテキストをボックスの外に表示
+    <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:auto</code> — 多くのブラウザーでは  <code>scroll</code> と同じ
-    <div id="div4">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:auto</code> — 多くのブラウザーでは
+    <code>scroll</code> と同じ
+    <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 </ul>
 ```
@@ -83,16 +81,27 @@ overflow-inline: unset;
 #### CSS
 
 ```css
-#div1, #div2, #div3, #div4 {
+#div1,
+#div2,
+#div3,
+#div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   margin-bottom: 12px;
 }
 
-#div1 { overflow-inline: hidden;}
-#div2 { overflow-inline: scroll;}
-#div3 { overflow-inline: visible;}
-#div4 { overflow-inline: auto;}
+#div1 {
+  overflow-inline: hidden;
+}
+#div2 {
+  overflow-inline: scroll;
+}
+#div3 {
+  overflow-inline: visible;
+}
+#div4 {
+  overflow-inline: auto;
+}
 ```
 
 #### 結果

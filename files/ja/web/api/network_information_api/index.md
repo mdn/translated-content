@@ -29,11 +29,13 @@ API は単一の {{domxref("NetworkInformation")}} オブジェクトで構成�
 let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log(`接続の種類が ${type} から ${navigator.connection.effectiveType} に変化`);
+  console.log(
+    `接続の種類が ${type} から ${navigator.connection.effectiveType} に変化`,
+  );
   type = navigator.connection.effectiveType;
 }
 
-navigator.connection.addEventListener('change', updateConnectionStatus);
+navigator.connection.addEventListener("change", updateConnectionStatus);
 ```
 
 ### 大きなリソースを事前読み込み
@@ -44,7 +46,7 @@ navigator.connection.addEventListener('change', updateConnectionStatus);
 let preloadVideo = true;
 const connection = navigator.connection;
 if (connection) {
-  if (connection.effectiveType === 'slow-2g') {
+  if (connection.effectiveType === "slow-2g") {
     preloadVideo = false;
   }
 }

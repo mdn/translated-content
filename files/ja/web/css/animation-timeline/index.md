@@ -22,7 +22,10 @@ animation-timeline: sliding-vertically;
 
 /* 複数のアニメーション */
 animation-timeline: test1, animation4;
-animation-timeline: none, -moz-specific, sliding;
+animation-timeline:
+  none,
+  -moz-specific,
+  sliding;
 
 /* グローバル値 */
 animation-timeline: initial;
@@ -71,7 +74,8 @@ animation-timeline: unset;
 
 #square {
   background-color: deeppink;
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   margin-top: 100px;
   animation-name: rotateAnimation;
   animation-duration: 3s;
@@ -80,9 +84,9 @@ animation-timeline: unset;
 }
 
 @scroll-timeline squareTimeline {
-  source: selector('#container');
+  source: selector("#container");
   orientation: "vertical";
-  scroll-offsets:  0px, 300px;
+  scroll-offsets: 0px, 300px;
 }
 
 @keyframes rotateAnimation {

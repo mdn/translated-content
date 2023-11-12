@@ -46,7 +46,7 @@ Para más información (en inglés):
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## Consulte también
 

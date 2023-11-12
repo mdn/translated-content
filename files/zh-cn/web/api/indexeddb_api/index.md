@@ -13,11 +13,11 @@ IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据
 
 ## 关键概念和用法
 
-IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。然而，不像 RDBMS 使用固定列表，IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许您存储和检索用**键**索引的对象；可以存储[结构化克隆算法](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)支持的任何对象。您只需要指定数据库模式，打开与数据库的连接，然后检索和更新一系列**事务**。
+IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。然而，不像 RDBMS 使用固定列表，IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许你存储和检索用**键**索引的对象；可以存储[结构化克隆算法](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)支持的任何对象。你只需要指定数据库模式，打开与数据库的连接，然后检索和更新一系列**事务**。
 
 - 阅读更多关于 [IndexedDB 背后的概念](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB)。
 - 从[使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB) 指南的第一准则中学习异步使用 IndexedDB。
-- 同时使用 IndexedDB 储存离线数据和 Service Workers 储存离线资源，其简述请查看 [Service Workers 制作离线 PWA](/zh-CN/docs/Web/Progressive_web_apps/Offline_Service_workers)。
+- 同时使用 IndexedDB 储存离线数据和 Service Workers 储存离线资源，其简述请查看 [Service Workers 制作离线 PWA](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)。
 
 > **备注：** 正如大多数的 web 储存解决方案一样，IndexedDB 也遵守[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。因此当你在某个域名下操作储存数据的时候，你不能操作其他域名下的数据。
 
@@ -72,7 +72,7 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。�
 
 ### 过时的接口
 
-规范的早期版本还定义了这些现在已删除的接口。这些文档便于您需要更新以前编写的代码：
+规范的早期版本还定义了这些现在已删除的接口。这些文档便于你需要更新以前编写的代码：
 
 - {{domxref("IDBVersionChangeRequest")}} {{Deprecated_Inline}}
   - : 表示更改数据库版本的请求。改变数据库版本的方法已经改变了（通过调用{{domxref("IDBFactory.open")}} 而非{{domxref("IDBDatabase.setVersion")}}），接口{{domxref("IDBOpenDBRequest")}} 现在拥有{{domxref("IDBVersionChangeRequest")}}。
@@ -82,7 +82,7 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。�
 ## 示例
 
 - [eLibri:](https://marco-c.github.io/eLibri/) 由 IndexedDB Mozilla DevDerby 的获奖者 Marco Castelluccio 编写的一个功能强大的图书馆和电子书阅读器应用。
-- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/)): 参考文档中示例的应用程序。
+- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): 参考文档中示例的应用程序。
 - [Storing images and files in IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 
 ## 规范

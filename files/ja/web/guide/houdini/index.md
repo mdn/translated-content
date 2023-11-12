@@ -1,7 +1,6 @@
 ---
 title: CSS Houdini
 slug: Web/Guide/Houdini
-original_slug: Web/Houdini
 ---
 
 Houdini は、CSS エンジンの一部を公開する低レベル API のセットであり、開発者はブラウザーのレンダリングエンジンのスタイリングおよびレイアウトプロセスにフックすることで CSS を拡張できます。 Houdini は、開発者が [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)（CSSOM）に直接アクセスできるようにする API のグループです。 開発者は、ブラウザーが CSS として解析できるコードを記述できるため、ブラウザーにネイティブに実装されるのを待たずに新しい CSS 機能を作成できます。
@@ -15,9 +14,7 @@ Houdini の CSS Typed OM は、型とメソッドを備えた CSS オブジェ�
 CSS Houdini の機能の 1 つはワークレット（[Worklet](/ja/docs/Web/API/Worklet)）です。 ワークレットを使用すると、モジュール方式の CSS を作成できます。 構成可能なコンポーネントをインポートするには、次の JavaScript の 1 行が必要です。 プリプロセッサー、ポストプロセッサー、JavaScript フレームワークは必要ありません。
 
 ```js
-<script>
-  CSS.paintWorklet.addModule('csscomponent.js');
-</script>
+<script>CSS.paintWorklet.addModule('csscomponent.js');</script>
 ```
 
 この追加されたモジュールには、完全に構成可能なワークレットを登録する [`registerPaint()`](/ja/docs/Web/API/PaintWorklet/registerPaint) 関数が含まれています。
@@ -26,9 +23,9 @@ CSS の `paint()` 関数のパラメーターには、オプションのパラ�
 
 ```css
 li {
-    background-image: paint(myComponent, stroke, 10px);
-    --highlights: blue;
-    --lowlights: green;
+  background-image: paint(myComponent, stroke, 10px);
+  --highlights: blue;
+  --lowlights: green;
 }
 ```
 

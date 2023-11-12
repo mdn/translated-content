@@ -1,25 +1,14 @@
 ---
 title: <input type="radio">
-slug: Web/HTML/Element/Input/radio
-tags:
-  - HTML
-  - Input
-  - Reference
-  - form
-  - radio button
-  - Варианты
-  - Группа радиокнопок
-  - Радиокнопка
-  - Справка
-  - Ссылки
-translation_of: Web/HTML/Element/input/radio
+slug: Web/HTML/Element/input/radio
 ---
+
 {{HTMLSidebar}}
 
 Атрибут **type** тега `<input>` со значением **`radio`** обычно используется для создания группы радиокнопок (переключателей), описывающих набор взаимосвязанных параметров. Одновременно пользователь может выбрать лишь одну радиокнопку из предложенных. Радиокнопки обычно отображаются как небольшие кружки, которые заполняются или подсвечиваются при наведении.
 
 ```html
-<input type="radio" id="radioButton">
+<input type="radio" id="radioButton" />
 ```
 
 {{ EmbedLiveSample('Basic_example', 600, 30) }}
@@ -33,11 +22,11 @@ translation_of: Web/HTML/Element/input/radio
 > **Примечание:** [Чекбоксы](/ru/docs/Web/HTML/Element/input/checkbox) похожи на радиокнопки, но с одним важным отличием: радиокнопки предназначены для выбора одного значения из предложенных, в то время как чекбоксы позволяют "включать" и "выключать" значения. Если существует несколько элементов управления, то с помощью радиокнопок пользователь сможет выбрать лишь один из них, а чекбоксы позволят выбрать несколько значений одновременно.
 
 | **[Value](#value)**        | {{domxref("Строка DOM")}} отображающая значение радиокнопки |
-| -------------------------- | -------------------------------------------------------------------------- |
-| **События**                | {{event("change")}} и {{event("input")}}                        |
-| **Универсальные атрибуты** | {{htmlattrxref("checked", "input")}}                           |
-| **Атрибуты IDL**           | `checked` и `value`                                                        |
-| **Методы**                 | {{domxref("HTMLInputElement.select", "select()")}}       |
+| -------------------------- | ----------------------------------------------------------- |
+| **События**                | {{event("change")}} и {{event("input")}}                    |
+| **Универсальные атрибуты** | [`checked`](/ru/docs/Web/HTML/Element/input#checked)        |
+| **Атрибуты IDL**           | `checked` и `value`                                         |
+| **Методы**                 | {{domxref("HTMLInputElement.select", "select()")}}          |
 
 ## Атрибут value
 
@@ -45,7 +34,7 @@ translation_of: Web/HTML/Element/input/radio
 
 ### Создание группы радиокнопок
 
-Группа радиокнопок определяется путём присвоения каждой радиокнопке в данной группе одного и того же значения атрибута ({{htmlattrxref("name", "input")}}). Выбор любой радиокнопки в этой группе автоматически отменяет выбор другой радиокнопки в той же группе.
+Группа радиокнопок определяется путём присвоения каждой радиокнопке в данной группе одного и того же значения атрибута ([`name`](/ru/docs/Web/HTML/Element/input#name)). Выбор любой радиокнопки в этой группе автоматически отменяет выбор другой радиокнопки в той же группе.
 
 Вы можете создать любое количество групп радиокнопок, если каждой из этих групп будет присвоено своё уникальное значение атрибута `name`.
 
@@ -57,16 +46,13 @@ HTML будет выглядеть следующим образом:
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -75,7 +61,7 @@ HTML будет выглядеть следующим образом:
 </form>
 ```
 
-Здесь вы видите три радиокнопки, каждая из которых имеет атрибут `name` со значением `"contact"` и уникальный атрибут `value`, который однозначно идентифицирует эту радиокнопку в данной группе. Каждой радиокнопке присвоен уникальный {{domxref("Element.id", "id")}}, связанный с тегом {{HTMLElement("label")}} через атрибут {{htmlattrxref("for", "label")}} для установления связи между конкретной меткой и конкретной радиокнопкой.
+Здесь вы видите три радиокнопки, каждая из которых имеет атрибут `name` со значением `"contact"` и уникальный атрибут `value`, который однозначно идентифицирует эту радиокнопку в данной группе. Каждой радиокнопке присвоен уникальный {{domxref("Element.id", "id")}}, связанный с тегом {{HTMLElement("label")}} через атрибут [`for`](/ru/docs/Web/HTML/Element/label#for) для установления связи между конкретной меткой и конкретной радиокнопкой.
 
 Вы можете опробовать этот код здесь:
 
@@ -97,22 +83,18 @@ HTML будет выглядеть следующим образом:
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-           name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
-    <input type="radio" id="contactChoice2"
-           name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
-    <input type="radio" id="contactChoice3"
-           name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
     <button type="submit">Submit</button>
   </div>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 Затем добавим немного [JavaScript](/ru/docs/Web/JavaScript). Установим обработчик события {{event("submit")}}, которая будет отправляться при клике пользователя на кнопку "Отправить":
@@ -121,15 +103,19 @@ HTML будет выглядеть следующим образом:
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
-  for (const entry of data) {
-    output = entry[0] + "=" + entry[1] + "\r";
-  };
-  log.innerText = output;
-  event.preventDefault();
-}, false);
+form.addEventListener(
+  "submit",
+  function (event) {
+    var data = new FormData(form);
+    var output = "";
+    for (const entry of data) {
+      output = entry[0] + "=" + entry[1] + "\r";
+    }
+    log.innerText = output;
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 Опробуйте этот пример и убедитесь, что для группы радиокнопок `"contact"` будет только один результат.
@@ -148,16 +134,18 @@ form.addEventListener("submit", function(event) {
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
+    <input
+      type="radio"
+      id="contactChoice1"
+      name="contact"
+      value="email"
+      checked />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -191,16 +179,18 @@ HTML будет выглядеть следующим образом:
   <fieldset>
     <legend>Please select your preferred contact method:</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">Phone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">Mail</label>
     </div>
     <div>

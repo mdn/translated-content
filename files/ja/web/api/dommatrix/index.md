@@ -1,7 +1,6 @@
 ---
 title: CSSMatrix
 slug: Web/API/DOMMatrix
-original_slug: Web/API/CSSMatrix
 ---
 
 {{APIRef("CSSOM")}}{{Non-standard_header}}
@@ -14,7 +13,7 @@ original_slug: Web/API/CSSMatrix
 
 ## ブラウザー互換性
 
-{{Compat("api.DOMMatrix")}}
+{{Compat}}
 
 ## 関連情報
 

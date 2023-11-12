@@ -22,15 +22,19 @@ var event = document.createEvent(type);
 
 ```js
 // 创建事件
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // 定义事件名为'build'.
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 // 监听事件
-elem.addEventListener('build', function (e) {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "build",
+  function (e) {
+    // e.target matches elem
+  },
+  false,
+);
 
 // 触发对象可以是任何元素或其他事件目标
 elem.dispatchEvent(event);
@@ -217,7 +221,7 @@ _To-do: 添加事件名称到下表中。_
       <td>Progress Events</td>
       <td><code>"ProgressEvent"</code></td>
       <td>
-        {{domxref("ProgressEvent.initProgressEvent()")}}{{deprecated_inline("22.0")}}{{non-standard_inline()}}
+        {{domxref("ProgressEvent.initProgressEvent()")}}{{deprecated_inline}}{{non-standard_inline()}}
       </td>
     </tr>
     <tr>
@@ -227,7 +231,7 @@ _To-do: 添加事件名称到下表中。_
         <code>"WebKitAnimationEvent"</code> for WebKit/Blink-based browsers)
       </td>
       <td>
-        {{domxref("AnimationEvent.initAnimationEvent()")}}{{deprecated_inline("23.0")}}{{non-standard_inline()}}
+        {{domxref("AnimationEvent.initAnimationEvent()")}}{{deprecated_inline}}{{non-standard_inline()}}
       </td>
     </tr>
     <tr>
@@ -237,7 +241,7 @@ _To-do: 添加事件名称到下表中。_
         <code>"WebKitTransitionEvent"</code> for WebKit/Blink-based browsers)
       </td>
       <td>
-        {{domxref("TransitionEvent.initTransitionEvent()")}}{{deprecated_inline("23.0")}}{{non-standard_inline()}}
+        {{domxref("TransitionEvent.initTransitionEvent()")}}{{deprecated_inline}}{{non-standard_inline()}}
       </td>
     </tr>
   </tbody>

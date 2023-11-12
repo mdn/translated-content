@@ -16,7 +16,9 @@ slug: Web/SVG/Attribute/marker-end
 ## 示例
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -24,16 +26,23 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="triangle" viewBox="0 0 10 10"
-          refX="1" refY="5"
-          markerUnits="strokeWidth"
-          markerWidth="10" markerHeight="10"
-          orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f00"/>
+    <marker
+      id="triangle"
+      viewBox="0 0 10 10"
+      refX="1"
+      refY="5"
+      markerUnits="strokeWidth"
+      markerWidth="10"
+      markerHeight="10"
+      orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f00" />
     </marker>
   </defs>
-  <polyline fill="none" stroke="black"
-      points="20,100 40,60 70,80 100,20" marker-end="url(#triangle)"/>
+  <polyline
+    fill="none"
+    stroke="black"
+    points="20,100 40,60 70,80 100,20"
+    marker-end="url(#triangle)" />
 </svg>
 ```
 

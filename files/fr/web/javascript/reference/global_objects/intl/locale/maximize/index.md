@@ -1,14 +1,6 @@
 ---
 title: Intl.Locale.prototype.maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/maximize
 ---
 
 {{JSRef}}
@@ -20,12 +12,12 @@ La méthode **`Intl.Locale.prototype.maximize()`** permet d'obtenir les valeurs 
 ## Syntaxe
 
 ```js
-locale.maximize()
+locale.maximize();
 ```
 
 ### Valeur de retour
 
-Une instance {{jsxref("Locale", "Locale")}} dont la propriété `baseName` renvoie le résultat de l'algorithme de [vraisemblance des composantes](https://www.unicode.org/reports/tr35/#Likely_Subtags) lancé sur `{{jsxref("Locale/baseName", "locale.baseName")}}`.
+Une instance {{jsxref("Locale", "Locale")}} dont la propriété `baseName` renvoie le résultat de l'algorithme de [vraisemblance des composantes](https://www.unicode.org/reports/tr35/#Likely_Subtags) lancé sur {{jsxref("Locale/baseName", "locale.baseName")}}.
 
 ## Description
 
@@ -34,7 +26,7 @@ Il est parfois utile d'identifier les composantes les plus probables d'une local
 ## Exemples
 
 ```js
-let maLocale = new Intl.Locale("fr", {hourCycle: "h24", calendar: "gregory"});
+let maLocale = new Intl.Locale("fr", { hourCycle: "h24", calendar: "gregory" });
 console.log(maLocale.baseName); // Affiche "fr"
 console.log(maLocale.toString()); // Affiche "fr-u-ca-gregory-hc-h24"
 let maLocMaximized = maLocale.maximize();
@@ -45,18 +37,16 @@ console.log(maLocMaximized.baseName);
 
 // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24".
 // On notera que les extensions (après "-u") restent inchangées.
-console.log(myLocMaximized.toString()); 
+console.log(myLocMaximized.toString());
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.maximize()`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.maximize) |      |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.maximize")}}
+{{Compat}}
 
 ## Voir aussi
 

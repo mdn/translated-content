@@ -1,15 +1,6 @@
 ---
 title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
-tags:
-  - API
-  - BaseAudioContext
-  - Méthode
-  - Reference
-  - Web Audio
-  - Web Audio API
-  - createBiquadFilter
-translation_of: Web/API/BaseAudioContext/createBiquadFilter
 ---
 
 {{ APIRef("Web Audio API") }}

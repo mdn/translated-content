@@ -1,6 +1,6 @@
 ---
 title: undefined
-slug: Glossary/undefined
+slug: Glossary/Undefined
 ---
 
 Un valor **{{Glossary("primitivo")}}** automáticamente asignado a las **variables** que solo han sido declarados o a los **{{Glossary("Argument","argumentos")}}** formales para los cuales no existe argumentos reales.

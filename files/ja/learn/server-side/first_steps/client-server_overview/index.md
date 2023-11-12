@@ -97,7 +97,7 @@ HTTP リクエストもボディを持つことができますが、この場合
 
 メッセージの最後に **body** があります。これにはリクエストによって返された実際の HTML が含まれています。
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -110,8 +110,6 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-
-
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
@@ -132,7 +130,7 @@ HTTP `POST` は、サーバに保存する情報を含むフォームを送信�
 
 以下のテキストは、ユーザがこのサイトに新しいプロファイルの詳細を送信したときに行われる HTTP リクエストを示しています。最初の行はこのリクエストを `POST` として識別しますが、リクエストのフォーマットは前述の `GET` リクエストの例とほぼ同じです。
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -158,7 +156,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 リクエストからのレスポンスは以下のとおりです。ステータスコード "`302 Found`" は、投稿が成功したこと、および `Location` フィールドで指定されたページを読み込むために 2 番目の HTTP リクエストを発行する必要があることをブラウザーに通知します。その他の点では、この情報は GET リクエストへのレスポンスに関する情報と似ています。
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
@@ -287,10 +285,3 @@ def junior(request):
 次のモジュールでは、最初のサイトに最適な Web フレームワークを選択する手助けをします。
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## このモジュールの記事一覧
-
-- [サーバサイドの概要](/ja/docs/Learn/Server-side/First_steps/Introduction)
-- [クライアント - サーバの概要](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [サーバーサイドウェブフレームワーク](/ja/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Web サイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)

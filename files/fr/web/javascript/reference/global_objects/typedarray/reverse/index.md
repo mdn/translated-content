@@ -1,16 +1,6 @@
 ---
 title: TypedArray.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reverse
 ---
 
 {{JSRef}}

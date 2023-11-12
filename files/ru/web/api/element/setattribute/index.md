@@ -1,8 +1,8 @@
 ---
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
-translation_of: Web/API/Element/setAttribute
 ---
+
 {{APIRef("DOM")}}Добавляет новый атрибут или изменяет значение существующего атрибута у выбранного элемента.
 
 ## Синтаксис
@@ -16,7 +16,7 @@ element.setAttribute(name, value);
 
 ## Пример
 
-В следующем примере, `setAttribute()` используется, чтобы установить атрибут {{htmlattrxref("disabled")}} кнопки {{htmlelement("button")}}, делая её отключённой.
+В следующем примере, `setAttribute()` используется, чтобы установить атрибут [`disabled`](/ru/docs/Web/HTML/Global_attributes#disabled) кнопки {{htmlelement("button")}}, делая её отключённой.
 
 ```html
 <button>Hello World</button>
@@ -28,7 +28,7 @@ var b = document.querySelector("button");
 b.setAttribute("disabled", "disabled");
 ```
 
-{{ EmbedLiveSample('Пример', '300', '50', '', 'Web/API/Element/setAttribute') }}
+{{ EmbedLiveSample('Пример', '100%', '50') }}
 
 ## Примечания
 
@@ -44,7 +44,10 @@ b.setAttribute("disabled", "disabled");
 
 {{DOMAttributeMethods}}
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 2 Core: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) (представлено в [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute))
-- [HTML5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

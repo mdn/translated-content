@@ -1,7 +1,6 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Status/506
-translation_of: Web/HTTP/Status/506
 ---
 
 {{HTTPSidebar}}
@@ -18,6 +17,8 @@ Le statut **`Variant Also Negotiates`** indique une erreur de configuration inte
 
 ## Spécifications
 
-| Spécification                                                            | Titre                                   |
-| ------------------------------------------------------------------------ | --------------------------------------- |
-| [RFC 2295, section 8.1: 506 Variant Also Negotiates](https://datatracker.ietf.org/doc/html/rfc2295#section-8.1) | Transparent Content Negotiation in HTTP |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

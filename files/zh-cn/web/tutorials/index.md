@@ -27,7 +27,7 @@ slug: Web/Tutorials
 ### 高级课程
 
 - [编写出能够快速加载 HTML 页面的小贴士](/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
-  - : 优化网页，以减少您的 Web 服务器上的负载和网络连接和为游客提供一个响应迅速的网站。
+  - : 优化网页，以减少你的 Web 服务器上的负载和网络连接和为游客提供一个响应迅速的网站。
 - [HTML5 入门](http://www.html5rocks.com/tutorials/)_（HTML5 Rocks）_
   - : 通过指南来指导使用 HTML5 特征来写代码。
 - [HTML5 语法](http://www.alistapart.com/articles/semanticsinhtml5/) _(分开的列表)_
@@ -54,7 +54,7 @@ slug: Web/Tutorials
 
 ### 中级课程
 
-- [JavaScript 再深入](/zh-CN/docs/Web/JavaScript/Language_Overview)
+- [JavaScript 再深入](/zh-CN/docs/Web/JavaScript/Language_overview)
   - : 针对于中等水平的开发者的关于 Javascript 编程语言的一个回顾。
 - [Eloquent JavaScript](http://eloquentjavascript.net/contents.html)
   - : 一本中级和高级 JavaScript 使用方法的全面指南。（译者注：简体中文版《JavaScript 编程精解》已由机械工业出版社华章公司出版发行）
@@ -85,7 +85,7 @@ slug: Web/Tutorials
 ### 初级课程
 
 - [CSS 入门](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
-  - : 这个教程向您介绍层叠样式表（CSS），通过具体的实例引导你熟悉基本的 CSS 功能，你可以试着在自己电脑上练习这些实例。
+  - : 这个教程向你介绍层叠样式表（CSS），通过具体的实例引导你熟悉基本的 CSS 功能，你可以试着在自己电脑上练习这些实例。
 - [CSS 类选择器](http://en.wikiversity.org/wiki/Web_Design/CSS_Classes) (来自维基大学)
   - : 在 CSS 里类是什么？
 - [外部 CSS](http://en.wikiversity.org/wiki/Web_Design/External_CSS) (来自维基大学)
@@ -114,9 +114,9 @@ slug: Web/Tutorials
 
 ### 高级课程
 
-- [应用 CSS 转换](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [应用 CSS 转换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : 使用 CSS 旋转、倾斜、缩放和变换。
-- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : CSS 过渡是 CSS3 草案规范的一部分，提供了渐变动画来改变 CSS 属性，而不是突变生效。
 - [应用网页字体快速指南 - 使用 @font-face](http://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)
   - : 来自 CSS3 的 @font-face 功能，允许你以可访问的，可操作的，易扩展的方式使用 web 上的自定义字体。

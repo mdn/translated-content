@@ -57,11 +57,11 @@ div.menu-bar li:hover > ul {
 
 ## 选择器
 
-以下是一些[选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)的列表，它们允许根据 DOM 内元素的各种特征对样式进行条件限制。
+以下是一些[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)的列表，它们允许根据 DOM 内元素的各种特征对样式进行条件限制。
 
 ### 基本选择器
 
-[基本选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
+[基本选择器](/zh-CN/docs/Web/CSS/CSS_selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
 
 - [通配选择器](/zh-CN/docs/Web/CSS/Universal_selectors) `*`
 - [元素选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`（元素名称）
@@ -78,9 +78,9 @@ div.menu-bar li:hover > ul {
 
 组合选择器是在两个或多个简单选择器之间建立关系的选择器，例如“`A` 是 `B` 的子代”或“`A` 与 `B` 相邻”，它们构成了比较复杂的选择器。
 
-- [相邻兄弟选择器](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+- [接续兄弟选择器](/zh-CN/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - : 指定 `A` 和 `B` 选择的元素具有相同的父元素，并且 `B` 选择的元素在水平方向上紧随 `A` 选择的元素。
-- [普通兄弟选择器](/zh-CN/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [后续兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : 指定由 `A` 和 `B` 选择的元素共享相同的父元素，并指定 `A` 选择的元素在 `B` 选择的元素之前（但不一定紧接在 `B` 之前）。
 - [子选择器](/zh-CN/docs/Web/CSS/Child_combinator) `A > B`
   - : 指定 `B` 选择的元素是 `A` 选择的元素的直接子元素。
@@ -108,7 +108,7 @@ div.menu-bar li:hover > ul {
 - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
 - [层叠](/zh-CN/docs/Web/CSS/Cascade)
 - [注释](/zh-CN/docs/Web/CSS/Comments)
-- [解释器](</zh-CN/docs/Glossary/Descriptor_(CSS)>)
+- [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)
 - [继承](/zh-CN/docs/Web/CSS/inheritance)
 - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
 - [优先级](/zh-CN/docs/Web/CSS/Specificity)
@@ -128,12 +128,12 @@ div.menu-bar li:hover > ul {
 ### 布局
 
 - [块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
-- [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [包含块](/zh-CN/docs/Web/CSS/Containing_block)
 - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
-- [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
-- [层叠上下文](/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context)
+- [层叠上下文](/zh-CN/docs/Web/Guide/CSS/Understanding_z-index/Stacking_context)
 - [视觉格式化模型](/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

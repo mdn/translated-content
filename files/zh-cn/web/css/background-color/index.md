@@ -52,17 +52,11 @@ background-color: unset;
 ### HTML
 
 ```html
-<div class="exampleone">
- Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exampletwo">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="examplethree">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### CSS
@@ -74,19 +68,19 @@ background-color: unset;
 }
 
 .exampletwo {
-  background-color: rgb(153,102,153);
-  color: rgb(255,255,204);
+  background-color: rgb(153, 102, 153);
+  color: rgb(255, 255, 204);
 }
 
 .examplethree {
   background-color: #777799;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples","200","150")}}
+{{EmbedLiveSample("示例","200","150")}}
 
 ## 规范
 
@@ -96,6 +90,6 @@ background-color: unset;
 
 {{Compat}}
 
-## 查看更多
+## 参见
 
 - [Multiple backgrounds](/zh-CN/CSS/Multiple_backgrounds)

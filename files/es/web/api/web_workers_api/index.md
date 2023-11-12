@@ -24,7 +24,7 @@ Ademas de los workers dedicados, hay otro tipo de workers:
 - Chrome Workers es un worker solo de Firefox puedes utilizar si estás desarrollando complementos se puede tener acceso a [js-ctypes](/en/js-ctypes) en el worker. Mira {{domxref("ChromeWorker")}} para mas detalles.
 - [Audio Workers](/es/docs/Web/API/Web_Audio_API#Audio_Workers) nos dan la capacidad de procesar audio directamente dentro del contexto del worker.
 
-> **Nota:** Según el [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), los errores del worker no deberían bubujear (mira {{bug(1188141)}}. Esto está implementado en Firefox 42.
+> **Nota:** Según el [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), los errores del worker no deberían bubujear (mira [Error 1188141 en Firefox](https://bugzil.la/1188141). Esto está implementado en Firefox 42.
 
 ## Web Worker interfaces
 

@@ -28,11 +28,12 @@ getDevices()
 以下の例では、ペア設定済みのデバイスの製品名とシリアル番号をコンソールに出力します。デバイスのペア設定については、{{DOMxRef("USB.requestDevice","USB.requestDevice()")}} を参照してください。
 
 ```js
-navigator.usb.getDevices()
-.then((devices) => {
+navigator.usb.getDevices().then((devices) => {
   console.log(`デバイス数: ${devices.length}`);
   devices.forEach((device) => {
-    console.log(`製品名: ${device.productName} シリアル番号 ${device.serialNumber}`);
+    console.log(
+      `製品名: ${device.productName} シリアル番号 ${device.serialNumber}`,
+    );
   });
 });
 ```

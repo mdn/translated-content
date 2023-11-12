@@ -5,12 +5,12 @@ slug: Web/API/StylePropertyMapReadOnly/values
 
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-**`StylePropertyMapReadOnly.values()`** メソッドは、 `StylePropertyMapReadOnly` オブジェクトのそれぞれのインデックスに対応する値を含む新しい*配列反復子*を返します。
+**`StylePropertyMapReadOnly.values()`** メソッドは、 `StylePropertyMapReadOnly` オブジェクトのそれぞれのインデックスに対応する値を含む新しい*配列イテレーター*を返します。
 
 ## 構文
 
 ```js
-StylePropertyMapReadOnly.values()
+StylePropertyMapReadOnly.values();
 ```
 
 ### 引数
@@ -27,7 +27,7 @@ StylePropertyMapReadOnly.values()
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // すべての計算済みスタイルを `computedStyleMap` で受け取る
 const allComputedStyles = buttonEl.computedStyleMap();

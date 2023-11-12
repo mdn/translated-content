@@ -24,12 +24,12 @@ headers.values();
 ```js
 // Create a test Headers object
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // Display the values
 for (var value of myHeaders.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
-original_slug: Web/CSS/transform-function/rotateZ()
 ---
 
 {{CSSRef}}
@@ -110,11 +109,11 @@ div {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

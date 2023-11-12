@@ -1,19 +1,21 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
+l10n:
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 `XMLHttpRequest` (XHR) オブジェクトは、サーバーと対話するために使用されます。ページ全体を更新する必要なしに、データを受け取ることができます。これでユーザーの作業を中断させることなく、ウェブページの一部を更新することができます。
 
-`XMLHttpRequest` は {{Glossary("AJAX")}} プログラミングで頻繁に使用されます。
+`XMLHttpRequest` は [AJAX](/ja/docs/Web/Guide/AJAX) プログラミングで頻繁に使用されます。
 
 {{InheritanceDiagram}}
 
 `XMLHttpRequest` という名前ではあるものの、 XML だけでなく、あらゆる種類のデータを受け取るために使用することができます。
 
-通信においてサーバーからのイベントデータやメッセージデータの受信を含む必要があるのであれば、 [Server-sent event](/ja/docs/Web/API/Server-sent_events) の {{domxref("EventSource")}} インターフェイスを使用することも検討してください。全二重の通信では、 [WebSocket](/ja/docs/Web/API/WebSockets_API) の方が良いかもしれません。
+通信においてサーバーからのイベントデータやメッセージデータの受信を含む必要があるのであれば、[サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)の {{domxref("EventSource")}} インターフェイスを使用することも検討してください。全二重の通信では、 [WebSocket](/ja/docs/Web/API/WebSockets_API) の方が良いかもしれません。
 
 {{AvailableInWorkers("notservice")}}
 
@@ -22,61 +24,49 @@ slug: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}
   - : XMLHttpRequest を初期化するコンストラクターです。これは、他のメソッドを呼び出す前に呼び出さなければなりません。
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} および {{domxref("EventTarget")}} のプロパティを継承しています。_
 
-- {{domxref("XMLHttpRequest.onreadystatechange")}}
-  - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers) で、 `readyState` 属性が変化する度に呼び出されます。
-- {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
-  - : `unsigned short` でリクエストの状態を返します。
-- {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
-  - : {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}}, JavaScript オブジェクト, {{domxref("DOMString")}} の何れか（{{domxref("XMLHttpRequest.responseType")}} の値による）で、リクエストのエンティティ本文を返します。
-- {{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}
-  - : {{domxref("DOMString")}} でリクエストに対するレスポンスをテキスト形式で返すか、リクエストが失敗した場合や、まだ送信されていない場合は `null` を返します。
+- {{domxref("XMLHttpRequest.readyState")}} {{ReadOnlyInline}}
+  - : リクエストの状態を表す数値を返します。
+- {{domxref("XMLHttpRequest.response")}} {{ReadOnlyInline}}
+  - : {{jsxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}、JavaScript オブジェクト、文字列の何れか（{{domxref("XMLHttpRequest.responseType")}} の値による）で、リクエストのエンティティ本体を返します。
+- {{domxref("XMLHttpRequest.responseText")}} {{ReadOnlyInline}}
+  - : 文字列で、リクエストに対するレスポンスをテキスト形式で返すか、リクエストが失敗した場合や、まだ送信されていない場合は `null` を返します。
 - {{domxref("XMLHttpRequest.responseType")}}
-  - : 列挙型の値で、レスポンス型を定義します。
-- {{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}
+  - : レスポンスの種類を示します。
+- {{domxref("XMLHttpRequest.responseURL")}} {{ReadOnlyInline}}
   - : レスポンスのシリアライズされた URL、または URL が null であれば空文字列を返します。
-- {{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}
-  - : {{domxref("Document")}} でリクエストに対するレスポンスが入ったを返すか、またはリクエストが成功しなかった場合、まだ送信されていない場合、 XML または HTML として解釈できなかった場合は `null` を返します。
-- {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
-  - : `unsigned short` でリクエストに対するレスポンスのステータスを返します。
-- {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
+- {{domxref("XMLHttpRequest.responseXML")}} {{ReadOnlyInline}}
+  - : {{domxref("Document")}} でリクエストに対するレスポンスが入ったを返すか、またはリクエストが成功しなかった場合、まだ送信されていない場合、 XML または HTML として解釈できなかった場合は `null` を返します。[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。
+- {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
+  - : リクエストの [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)を返します。
+- {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
 
-  - : {{domxref("DOMString")}} で HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、("`200 OK`" のような) レスポンスメッセージの完全な文が含まれています。
+  - : 文字列で、HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、（"`OK`" のような）レスポンスメッセージの完全な文が含まれています。
 
-    > **メモ:** HTTP/2 仕様書 ([8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [レスポンス擬似ヘッダーフィールド](https://http2.github.io/http2-spec/#HttpResponse)) によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
+    > **メモ:** HTTP/2 仕様書 {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}} によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
 
 - {{domxref("XMLHttpRequest.timeout")}}
-  - : `unsigned long` 型で、リクエストを自動的に終了できるようになるまでの時間をミリ秒単位で表します。
-- {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、リクエストがタイムアウトするたびに呼び出されます。
-- {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
+  - : リクエストを自動的に終了するまでの時間をミリ秒単位で表します。
+- {{domxref("XMLHttpRequest.upload")}} {{ReadOnlyInline}}
   - : {{domxref("XMLHttpRequestUpload")}} で、アップロードプロセスを表します。
 - {{domxref("XMLHttpRequest.withCredentials")}}
-  - : 論理値で、サイト間の `Access-Control` リクエストでクッキーや認証ヘッダーなどの資格情報を使用するかどうかを示します。
+  - : サイト間の `Access-Control` リクエストでクッキーや認証ヘッダーなどの資格情報を使用する場合は `true` を返します。そうでなければ `false` を返します。
 
 ### 標準外のプロパティ
 
-- {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.channel")}} {{ReadOnlyInline}}
   - : リクエストの実行の際にオブジェクトによって使われるチャンネルです。
-- {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozAnon")}} {{ReadOnlyInline}}
   - : 論理値です。 true の場合、リクエストを Cookie や認証ヘッダーを伴わずに送信します。
-- {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}}
   - : 論理値です。 true の場合、リクエストで同一オリジンポリシーは適用されません。
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : 論理値です。このオブジェクトがバックグラウンドサービスのリクエストを表しているかどうかを示します。
 
-### イベントハンドラー
-
-`onreadystatechange` は `XMLHttpRequest` のインスタンスのプロパティとして、すべてのブラウザーが対応しています。
-
-それ以来、数多くの追加のイベントハンドラーが様々なブラウザーに実装されてきています (`onload`, `onerror`, `onprogress`, など)。 [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)を参照してください。
-
-Firefox を含め、より新しいブラウザーでは、 `XMLHttpRequest` のイベントを `on*` プロパティをハンドラー関数に設定する方法に加えて、標準の {{domxref("EventTarget.addEventListener", "addEventListener()")}} API で待ち受けすることにも対応しています。
-
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("XMLHttpRequest.abort()")}}
   - : リクエストがすでに送信されている場合、リクエストを中止します。
@@ -91,31 +81,34 @@ Firefox を含め、より新しいブラウザーでは、 `XMLHttpRequest` の
 - {{domxref("XMLHttpRequest.send()")}}
   - : リクエストを送信します。このリクエストが非同期（既定）の場合、このメソッドはリクエストが送るとすぐに返ります。
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
-  - : HTTP リクエストヘッダーの値を設定します。 `setRequestHeader()` は [`open()`](#open) の後、および `send()` の前に呼び出さなくてはいけません。
+  - : HTTP リクエストヘッダーの値を設定します。 `setRequestHeader()` は {{domxref("XMLHttpRequest.open", "open()")}} の後、および {{domxref("XMLHttpRequest.send", "send()")}} の前に呼び出さなくてはいけません。
 
 ## イベント
 
 - {{domxref("XMLHttpRequest/abort_event", "abort")}}
   - : 例えばプログラムが {{domxref("XMLHttpRequest.abort()")}} を呼び出した時など、リクエストが中断されたときに発生します。
-    {{domxref("XMLHttpRequestEventTarget/onabort", "onabort")}} プロパティを通して利用することもできます。
+    `onabort` イベントハンドラープロパティを通して利用することもできます。
 - {{domxref("XMLHttpRequest/error_event", "error")}}
   - : リクエストでエラーが発生したときに発生します。
-    {{domxref("XMLHttpRequestEventTarget/onerror", "onerror")}} プロパティを通して利用することもできます。
+    `onerror` イベントハンドラープロパティを通して利用することもできます。
 - {{domxref("XMLHttpRequest/load_event", "load")}}
-  - : {{domxref("XMLHttpRequest")}} のトランザクションが成功裏に完了したときに発生します。
-    {{domxref("XMLHttpRequestEventTarget/onload", "onload")}} プロパティを通して利用することもできます。
+  - : `XMLHttpRequest` のトランザクションが成功裏に完了したときに発生します。
+    `onload` イベントハンドラープロパティを通して利用することもできます。
 - {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
-  - : リクエストが完了したときに、成功した場合 ({{domxref("XMLHttpRequest/load_event", "load")}} の後)、成功しなかった場合 ({{domxref("XMLHttpRequest/abort_event", "abort")}} または {{domxref("XMLHttpRequest/error_event", "error")}} の後) のどちらでも発生します。
-    {{domxref("XMLHttpRequestEventTarget/onloadend", "onloadend")}} プロパティを通して利用することもできます。
+  - : リクエストが完了したときに、成功した場合（{{domxref("XMLHttpRequest/load_event", "load")}} の後）、成功しなかった場合（{{domxref("XMLHttpRequest/abort_event", "abort")}} または {{domxref("XMLHttpRequest/error_event", "error")}} の後）のどちらでも発生します。
+    `onloadend` イベントハンドラープロパティを通して利用することもできます。
 - {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
   - : リクエストがデータを読み込み始めたときに発生します。
-    {{domxref("XMLHttpRequestEventTarget/onloadstart", "onloadstart")}} プロパティを通して利用することもできます。
+    `onloadstart` イベントハンドラープロパティを通して利用することもできます。
 - {{domxref("XMLHttpRequest/progress_event", "progress")}}
   - : リクエストがもっとデータを受信した際に定期的に発生します。
-    {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}} プロパティを通して利用することもできます。
+    `onprogress` イベントハンドラープロパティを通して利用することもできます。
+- {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
+  - : {{domxref("XMLHttpRequest.readyState", "readyState")}} プロパティが変化するたびに発生します。
+    `onreadystatechange` イベントハンドラープロパティを通して利用することもできます。
 - {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
   - : プリセット時間が過ぎたために進行が終了したときに発生します。
-    {{domxref("XMLHttpRequestEventTarget/ontimeout", "ontimeout")}} プロパティを通して利用することもできます。
+    `ontimeout` イベントハンドラープロパティを通して利用することもできます。
 
 ## 仕様書
 
@@ -135,5 +128,4 @@ Firefox を含め、より新しいブラウザーでは、 `XMLHttpRequest` の
   - [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - [Fetch API](/ja/docs/Web/API/Fetch_API)
 
-- [HTML5 Rocks — New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
-- Feature-Policy のディレクティブ {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}
+- [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/xhr2/)

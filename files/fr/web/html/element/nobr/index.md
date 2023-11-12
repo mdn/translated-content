@@ -1,13 +1,6 @@
 ---
-title: '<nobr> : l''élément de non-rupture de texte (obsolète)'
+title: "<nobr> : l'élément de non-rupture de texte (obsolète)"
 slug: Web/HTML/Element/nobr
-tags:
-  - Element
-  - HTML
-  - Non-standard
-  - Obsolete
-  - Web
-translation_of: Web/HTML/Element/nobr
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}{{non-standard_header}}

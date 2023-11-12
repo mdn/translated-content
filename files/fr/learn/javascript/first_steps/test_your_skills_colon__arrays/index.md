@@ -1,14 +1,6 @@
 ---
-title: 'Testez vos compétences : les tableaux'
+title: "Testez vos compétences : les tableaux"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
-tags:
-  - Arrays
-  - Beginner
-  - JavaScript
-  - Learn
-  - test your skills
-translation_of: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
-original_slug: Learn/JavaScript/First_steps/Testes_vos_competence:_Tableaux
 ---
 
 {{learnsidebar}}
@@ -54,7 +46,7 @@ Dans ce dernier exercice, vous disposez d'un tableau de départ et vous devrez e
 1. Retirer le dernier élément du tableau.
 2. Ajouter deux nouveaux noms à la fin du tableau.
 3. Parcourir chaque élément du tableau et ajouter son indice, entre parenthèses, après le nom (par exemple `Ryu (0)`). Note : ceci n'est pas indiqué dans l'article sur les tableaux, il vous faudra rechercher comment faire.
-4. Enfin, fusionner les éléments du tableau dans une chaîne de caractères intitulée `myString` en utilisant "` - `" comme séparateur.
+4. Enfin, fusionner les éléments du tableau dans une chaîne de caractères intitulée `myString` en utilisant "`-`" comme séparateur.
 
 Essayez de mettre à jour le code qui suit pour parvenir à la solution :
 
@@ -71,7 +63,7 @@ Si vous souhaitez faire évaluer votre travail ou si vous êtes bloqué·e et qu
 1. Enregistrez votre travail dans un éditeur en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour le partager. Vous pouvez écrire le code vous-même ou utiliser les fichiers téléchargeables indiqués comme point de départ.
 2. Rédigez un message pour la demande d'aide ou d'évaluation sur [la catégorie _Learning_ du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre billet devrait inclure :
 
-    - Un titre descriptif comme « Évaluation demandée pour le test Tableaux JavaScript ».
-    - Des détails sur ce que vous avez déjà tenté et sur quels aspects vous avez besoin d'aide si vous bloquez.
-    - Un lien vers l'exemple que vous voulez évaluer ou sur lequel vous avez besoin d'aide. Ce lien doit pointer vers un éditeur en ligne (voir l'étape 1). Il s'agit ici d'une bonne pratique pour commencer : il est souvent difficile d'aider quelqu'un si on ne peut pas voir le code.
-    - Un lien vers la page MDN pour la tâche ou l'évaluation afin que nous puissions trouver la question sur laquelle vous avez besoin d'aide.
+   - Un titre descriptif comme « Évaluation demandée pour le test Tableaux JavaScript ».
+   - Des détails sur ce que vous avez déjà tenté et sur quels aspects vous avez besoin d'aide si vous bloquez.
+   - Un lien vers l'exemple que vous voulez évaluer ou sur lequel vous avez besoin d'aide. Ce lien doit pointer vers un éditeur en ligne (voir l'étape 1). Il s'agit ici d'une bonne pratique pour commencer : il est souvent difficile d'aider quelqu'un si on ne peut pas voir le code.
+   - Un lien vers la page MDN pour la tâche ou l'évaluation afin que nous puissions trouver la question sur laquelle vous avez besoin d'aide.

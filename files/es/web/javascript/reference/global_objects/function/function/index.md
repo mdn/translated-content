@@ -1,7 +1,6 @@
 ---
 title: Function() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/Función
 ---
 
 {{JSRef("Objetos_globales", "Function")}}
@@ -43,7 +42,7 @@ El siguiente código crea un objeto `Function` que toma dos argumentos.
 // El ejemplo se puede ejecutar directamente en tu consola JavaScript
 
 // Crea una función que toma dos argumentos y devuelve la suma de esos argumentos
-const adder = new Function('a', 'b', 'return a + b');
+const adder = new Function("a", "b", "return a + b");
 
 // Llama a la función
 adder(2, 6);
@@ -56,9 +55,9 @@ Los argumentos "`a`" y "`b`" son nombres de argumentos formales que se utilizan 
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.Function")}}
+{{Compat}}
 
 ## Ve también
 

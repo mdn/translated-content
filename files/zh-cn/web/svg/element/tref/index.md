@@ -56,7 +56,7 @@ slug: Web/SVG/Element/tref
 
 ## DOM 接口
 
-该元素实现了[`SVGTRefElement`](/zh-CN/DOM/SVGTRefElement)接口。
+该元素实现了 [`SVGTRefElement`](/zh-CN/DOM/SVGTRefElement) 接口。
 
 ## 浏览器兼容性
 

@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/toString
 ---
 
 {{JSRef("Objetos_globales", "Object")}}
@@ -32,29 +31,29 @@ Puede crear una función que sea llamada en lugar del método predeterminado `to
 El siguiente código define el tipo de objeto `Perro` y crea `elPerro`, un objeto de tipo `Perro`:
 
 ```js
-function Perro(nombre,criadero,color,sexo) {
-   this.nombre=nombre;
-   this.criadero=criadero;
-   this.color=color;
-   this.sexo=sexo;
+function Perro(nombre, criadero, color, sexo) {
+  this.nombre = nombre;
+  this.criadero = criadero;
+  this.color = color;
+  this.sexo = sexo;
 }
 
-elPerro = new Perro("Gabby","Laboratorio","chocolate","femenino")
+elPerro = new Perro("Gabby", "Laboratorio", "chocolate", "femenino");
 ```
 
 Si llama al método `toString` en el objeto personalizado, devuelve el valor predeterminado heredado de `Object`:
 
 ```js
-elPerro.toString() //devuelve [object Object]
+elPerro.toString(); //devuelve [object Object]
 ```
 
 El siguiente código crea y asigna `perroToString` para sobreescribir el método predeterminado `toString`. Esta función genera una cadena que contiene nombre, criadero, color, y sexo del objeto, en la forma "`propiedad = valor;`".
 
 ```js
 Perro.prototype.toString = function perroToString() {
-  var retorno = "Perro " + this.nombre + " es " + this.sexo + " " + this.color + " " + this.criadero;
+  var retorno = `Perro ${this.nombre} es ${this.sexo} ${this.color} ${this.criadero}`;
   return retorno;
-}
+};
 ```
 
 Con el código precedente en su lugar, cualquier vez que se use `elPerro` en un contexto de una cadena, JavaScript automáticamente llamará a la función `perroToString`, la cuál devuelve la siguiente cadena:

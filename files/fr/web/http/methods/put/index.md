@@ -1,13 +1,6 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - HTTP
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/PUT
-original_slug: Web/HTTP/Méthode/PUT
-browser-compat: http.methods.PUT
 ---
 
 {{HTTPSidebar}}

@@ -28,9 +28,9 @@ UTC 1970 年 1 月 1 日 00:00:00 与更新日期之间的毫秒数（实际上�
 
 使用 `setTime` 方法用来把一个日期时间赋值给另一个 `Date` 对象。
 
-## 例子
+## 示例
 
-### 例子：使用`setTime`
+### 示例：使用`setTime`
 
 ```plain
 theBigDay = new Date("July 1, 1999");

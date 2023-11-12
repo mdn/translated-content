@@ -35,14 +35,6 @@ El método `toSource` devuelve los siguientes valores:
 
 Éste método es usado de forma interna por JavaScript y no explicitamente desde el código. Puedes usar `toSource` mientras depuras para examinar el contenido de un objeto.
 
-## Especificaciones
-
-No está reflejado en ningún estándar. Implementaso en JavaScript 1.3.
-
-## Browser compatibility
-
-{{Compat("javascript.builtins.Function.toSource")}}
-
 ## Ver también
 
 - {{jsxref("Object.prototype.toSource()")}}

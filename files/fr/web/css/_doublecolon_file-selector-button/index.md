@@ -1,13 +1,6 @@
 ---
-title: '::-webkit-file-upload-button'
+title: "::-webkit-file-upload-button"
 slug: Web/CSS/::file-selector-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::file-selector-button
-original_slug: Web/CSS/::-webkit-file-upload-button
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -27,13 +20,14 @@ selecteur::-webkit-file-upload-button
 ### CSS
 
 ```css
-input, label {
+input,
+label {
   display: block;
 }
 
-input[type=file]::-webkit-file-upload-button {
+input[type="file"]::-webkit-file-upload-button {
   border: 1px solid grey;
-  background: #FFFAAA;
+  background: #fffaaa;
 }
 ```
 
@@ -41,8 +35,8 @@ input[type=file]::-webkit-file-upload-button {
 
 ```html
 <form>
-  <label for="fileUpload">Uploader un fichier</label><br>
-  <input type="file" id="fileUpload">
+  <label for="fileUpload">Uploader un fichier</label><br />
+  <input type="file" id="fileUpload" />
 </form>
 ```
 

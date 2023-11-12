@@ -58,7 +58,7 @@ console.log(container.firstChild.nodeName); // mostra "P"
 Se o elemento não tiver um nó pai, ou seja se o nó é a raiz do documento, tentar alterar sua propriedade outerHTML irá lançar um [`DOMException`](/pt-BR/DOM/DOMException) com o código de erro `NO_MODIFICATION_ALLOWED_ERR`. Por exemplo:
 
 ```js
-document.documentElement.outerHTML = "test";  // Irá lançar uma DOMException
+document.documentElement.outerHTML = "test"; // Irá lançar uma DOMException
 ```
 
 inclusive, quando o elemento for substituído na estrutura do documento, a variável a qual a propriedade `outerHTML` foi atribuída ainda irá conter uma referência para o elemento original.
@@ -70,15 +70,13 @@ p.outerHTML = "<div>Esta div substituiu o parágrafo.</div>";
 console.log(p.nodeName); // ainda contém "P";
 ```
 
-## Especificação
+## Especificações
 
-| Specification                                                                        | Status                               | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}} | {{ Spec2('DOM Parsing') }} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.outerHTML")}}
+{{Compat}}
 
 ## Veja também
 

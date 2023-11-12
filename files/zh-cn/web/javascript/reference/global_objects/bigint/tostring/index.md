@@ -39,16 +39,16 @@ bigIntObj.toString([radix])
 
 如果 `bigIntObj` 为负，则保留符号。即使基数是 2，情况也是如此；返回的字符串是 `bigIntObj` 的正二进制表示，前面是一个 `-` 符号，而不是 `bigIntObj` 的两个补码。
 
-## 例子
+## 示例
 
 ### Using `toString`
 
 ```js
-17n.toString();      // '17'
-66n.toString(2);     // '1000010'
-254n.toString(16);   // 'fe'
--10n.toString(2);    // -1010'
--0xffn.toString(2);  // '-11111111'
+17n.toString(); // '17'
+66n.toString(2); // '1000010'
+254n.toString(16); // 'fe'
+-10n.toString(2); // -1010'
+-0xffn.toString(2); // '-11111111'
 ```
 
 ### Negative-zero `BigInt`
@@ -56,7 +56,7 @@ bigIntObj.toString([radix])
 没有负零 `BigInt`，因为整数中没有负零。`-0.0` 是一个 IEEE 浮点概念，只出现在 JavaScript {{jsxref("Number")}} 类型中。
 
 ```js
-(-0n).toString();      // '0'
+(-0n).toString(); // '0'
 BigInt(-0).toString(); // '0'
 ```
 

@@ -12,7 +12,7 @@ l10n:
 ## 構文
 
 ```js
-dirxml(object)
+dirxml(object);
 ```
 
 ### 引数

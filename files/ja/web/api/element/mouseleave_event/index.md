@@ -1,52 +1,100 @@
 ---
-title: 'Element: mouseleave イベント'
+title: "Element: mouseleave イベント"
+short-title: mouseleave
 slug: Web/API/Element/mouseleave_event
+l10n:
+  sourceCommit: 757f33efcbdf2de4995920e41ab7dd20f0a9192b
 ---
 
 {{APIRef}}
 
-**`mouseleave`** イベントは、ポインティングデバイス (ふつうはマウス) のカーソルが要素 ({{domxref("Element")}}) の外に移動したときに発行されます。
+**`mouseleave`** イベントは、ポインティングデバイス（ふつうはマウス）のカーソルが要素 ({{domxref("Element")}}) の外に移動したときに発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onmouseleave", "onmouseleave")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+`mouseleave` と {{domxref("Element/mouseout_event", "mouseout")}} はよく似ていますが、 `mouseleave` はバブリングしないのに対して `mouseout` はバブリングするという点が異なります。すなわち `mouseleave` はポインターがその要素*および*すべての子孫を出たときに発行されるのに対し、 `mouseout` はポインターがその要素*または*その要素の子孫のうちの一つを出たときに（ポインターがまだその要素内にあったとしても）発行されます。
 
-`mouseleave` と {{domxref("Element/mouseout_event", "mouseout")}} はよく似ていますが、 `mouseleave` はバブリングしないのに対して `mouseout` はバブリングするという点が異なります。すなわち `mouseleave` はポインターがその要素*および*すべての子孫を出たときに発行されるのに対し、 `mouseout` はポインターがその要素*または*その要素の子孫のうちの一つを出たときに (ポインターがまだその要素内にあったとしても) 発行されます。
+## 構文
 
-#### `mouseleave` イベントの動作
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-![](mouseleave.png)
+```js
+addEventListener("mouseleave", (event) => {});
+
+onmouseleave = (event) => {};
+```
+
+## イベント型
+
+{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("MouseEvent")}}
+
+## イベントプロパティ
+
+_親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したプロパティもあります_。
+
+- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに <kbd>alt</kbd> キーが押されていた場合は `true` を返します。
+- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに押されていたボタンの番号です（もしあれば）。
+- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに押されていたボタンです（もしあれば）。
+- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
+  - : マウスポインターのローカル座標（DOM コンテンツ）における X 座標です。
+- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
+  - : マウスポインターのローカル座標（DOM コンテンツ）における Y 座標です。
+- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに <kbd>control</kbd> キーが押されていた場合は `true` を返します。
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : このイベントの現在のレイヤーにおける相対の水平座標を返します。
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : このイベントの現在のレイヤーにおける相対の垂直座標を返します。
+- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに <kbd>meta</kbd> キーが押されていた場合は `true` を返します。
+- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
+  - : 前回の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的なマウスポインターの X 座標です。
+- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
+  - : 前回の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的なマウスポインターの Y 座標です。
+- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
+  - : 対象ノードのパディング辺からの相対的なマウスポインターの X 座標です。
+- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
+  - : 対象ノードのパディング辺からの相対的なマウスポインターの Y 座標です。
+- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
+  - : 文書全体からの相対的なマウスポインターの X 座標です。
+- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
+  - : 文書全体からの相対的なマウスポインターの Y 座標です。
+- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
+  - : もしあれば、イベントの副ターゲットです。
+- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
+  - : グローバル（画面）座標におけるマウスポインターの X 座標です。
+- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
+  - : グローバル（画面）座標におけるマウスポインターの Y 座標です。
+- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
+  - : このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていた場合は `true` を返します。
+- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : イベントを発生させた機器の種類（`MOZ_SOURCE_*` 定数のいずれか）。
+    これにより、例えばマウスイベントが実際のマウスによって生成されたのか、タッチイベントによって生成されたのかを判断することができます（これはイベントに関連付けられた座標を解釈する精度に影響するかもしれません）。
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : クリックしたときに適用された圧力です。
+- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
+  - : {{domxref("MouseEvent.clientX")}} の別名です。
+- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
+  - : {{domxref("MouseEvent.clientY")}} の別名です。
+
+### `mouseleave` イベントの動作
+
+![mouseleave の動作の図](mouseleave.png)
 
 階層内のそれぞれの要素からポインターが出たとき、 `mouseleave` イベントが一つずつそれぞれの要素に送られます。ここで、ポインターが 4 つの要素の階層にあるテキストから div が表す領域の外に出ると、4 つのイベントが 4 つの要素に送られます。
 
-#### `mouseout` イベントの動作
+### `mouseout` イベントの動作
 
-![](mouseout.png)
+![mouseout の動作の図](mouseout.png)
 
 単一の `mouseout` イベントが DOM ツリーの最も深い要素に送信され、ハンドラーによって取り消されるかルートに達するまで、上にバブリングしていきます。
 
 ## 例
 
-[`mouseout`](/ja/docs/Web/API/Element/mouseout_event#examples) のドキュメントには、 `mouseout` と `mouseleave` との違いを説明する例があります。
+[`mouseout`](/ja/docs/Web/API/Element/mouseout_event#例) のドキュメントには、 `mouseout` と `mouseleave` との違いを説明する例があります。
 
 ### mouseleave
 
@@ -55,10 +103,10 @@ slug: Web/API/Element/mouseleave_event
 #### HTML
 
 ```html
-<div id='mouseTarget'>
- <ul id="unorderedList">
- - No events yet!
- </ul>
+<div id="mouseTarget">
+  <ul id="unorderedList">
+    <li>No events yet!</li>
+  </ul>
 </div>
 ```
 
@@ -69,37 +117,37 @@ slug: Web/API/Element/mouseleave_event
 ```css
 #mouseTarget {
   box-sizing: border-box;
-  width:15rem;
-  border:1px solid #333;
+  width: 15rem;
+  border: 1px solid #333;
 }
 ```
 
 #### JavaScript
 
 ```js
-var enterEventCount = 0;
-var leaveEventCount = 0;
-const mouseTarget = document.getElementById('mouseTarget');
-const unorderedList = document.getElementById('unorderedList');
+let enterEventCount = 0;
+let leaveEventCount = 0;
+const mouseTarget = document.getElementById("mouseTarget");
+const unorderedList = document.getElementById("unorderedList");
 
-mouseTarget.addEventListener('mouseenter', e => {
-  mouseTarget.style.border = '5px dotted orange';
+mouseTarget.addEventListener("mouseenter", (e) => {
+  mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
-  addListItem('This is mouseenter event ' + enterEventCount + '.');
+  addListItem(`This is mouseenter event ${enterEventCount}.`);
 });
 
-mouseTarget.addEventListener('mouseleave', e => {
-  mouseTarget.style.border = '1px solid #333';
+mouseTarget.addEventListener("mouseleave", (e) => {
+  mouseTarget.style.border = "1px solid #333";
   leaveEventCount++;
-  addListItem('This is mouseleave event ' + leaveEventCount + '.');
+  addListItem(`This is mouseleave event ${leaveEventCount}.`);
 });
 
 function addListItem(text) {
   // 与えられたテキストで新しいテキストノードを生成する
-  var newTextNode = document.createTextNode(text);
+  const newTextNode = document.createTextNode(text);
 
   // 新しい li 要素を生成
-  var newListItem = document.createElement("li");
+  const newListItem = document.createElement("li");
 
   // テキストノードを li 要素に追加
   newListItem.appendChild(newTextNode);

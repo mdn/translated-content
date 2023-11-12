@@ -21,8 +21,8 @@ slug: Web/API/WebGLBuffer
 ### 创建一个缓冲区
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var buffer = gl.createBuffer();
 ```
 
@@ -34,7 +34,7 @@ var buffer = gl.createBuffer();
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindBuffer()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}

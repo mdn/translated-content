@@ -36,9 +36,9 @@ dateObj.setMonth(monthValue)
 
 如果有一个指定的参数超出了合理范围，`setMonth` 会相应地更新日期对象中的日期信息。例如，为 `monthValue` 指定 15，则年份会加 1，月份将会使用 3。
 
-## 例子
+## 示例
 
-### 例子：使用 `setMonth` 方法
+### 示例：使用 `setMonth` 方法
 
 ```js
 var theBigDay = new Date();

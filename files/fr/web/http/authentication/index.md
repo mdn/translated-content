@@ -1,7 +1,6 @@
 ---
 title: Authentification HTTP
 slug: Web/HTTP/Authentication
-translation_of: Web/HTTP/Authentication
 ---
 
 {{HTTPSidebar}}
@@ -44,7 +43,7 @@ Les en-têtes de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Aut
 
 La syntaxe pour ces en-têtes est la suivante :
 
-```html
+```http
 WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
@@ -55,7 +54,7 @@ Ici, `<type>` est le schéma d'authentification (« Basic » est le plus courant
 
 Les en-têtes de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization) et [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization) contiennent les identifiants pour authentifier un client avec un serveur (de procuration). Ici, le type est encore une fois nécessaire, suivi par les identifiants, qui peuvent être encodés voire encryptés selon le schéma d'authentification utilisé.
 
-```html
+```http
 Authorization: <type> <credentials>
 Proxy-Authorization: <type> <credentials>
 ```

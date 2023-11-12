@@ -1,12 +1,6 @@
 ---
 title: box-flex
 slug: Web/CSS/box-flex
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/box-flex
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -99,7 +93,7 @@ Cette propriété n'est pas une propriété standard. [Une ancienne version de l
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-flex")}}
+{{Compat}}
 
 ## Voir aussi
 

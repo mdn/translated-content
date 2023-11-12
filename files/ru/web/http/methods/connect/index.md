@@ -1,7 +1,6 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-translation_of: Web/HTTP/Methods/CONNECT
 ---
 
 {{HTTPSidebar}}
@@ -38,7 +37,7 @@ translation_of: Web/HTTP/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">
-        Допускается в <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML формах</a>
+        Допускается в <a href="/ru/docs/Web/Guide/HTML/Forms">HTML формах</a>
       </th>
       <td>Нет</td>
     </tr>
@@ -55,7 +54,7 @@ CONNECT www.example.com:443 HTTP/1.1
 
 Некоторые прокси сервера могут запросить авторизацию для создания туннеля. Смотрите также {{HTTPHeader("Proxy-Authorization")}}.
 
-```html
+```http
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=

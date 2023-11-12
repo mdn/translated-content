@@ -2,7 +2,7 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 l10n:
-  sourceCommit: d954e1df58f18f15181bfe33ac64dfad9627f485
+  sourceCommit: 51a663ab797d3766a77e40af6565e43ae7af3d07
 ---
 
 {{APIRef("HTML DOM")}}
@@ -20,29 +20,31 @@ _親である {{DOMxRef("Element")}} からプロパティを継承していま�
 - {{DOMxRef("HTMLElement.accessKeyLabel")}} {{ReadOnlyInline}}
   - : 要素に割り当てられたアクセスキーを含む文字列を返します。
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("StylePropertyMap")}} で、その要素の {{htmlattrxref("style")}} 属性の宣言を表します。
+  - : {{DOMxRef("StylePropertyMap")}} で、その要素の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性の宣言を表します。
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : 文字列で、 `true` の場合は要素が編集可能、`false` の場合は編集不可であることを表します。
 - {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
   - : 論理値で、要素のコンテンツが編集可能か否かを示します。
-- {{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 要素に割り当てたコンテキストメニューを表す {{DOMxRef("HTMLMenuElement")}} です。`null` になる可能性があります。
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
   - : {{DOMxRef("DOMStringMap")}} で、スクリプトが読み書きできる要素の[カスタムデータ属性](/ja/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) を表します。
 - {{DOMxRef("HTMLElement.dir")}}
   - : 文字列で、要素の書字方向を表す `dir` グローバル属性を反映します。利用可能な値は、`"ltr"` および `"rtl"`、`"auto"` です。
 - {{DOMxRef("HTMLElement.draggable")}}
   - : 論理値で、要素がドラッグ可能かどうかを示します。
-- {{DOMxRef("HTMLElement.enterkeyhint")}}
+- {{DOMxRef("HTMLElement.enterKeyHint")}}
   - : 文字列で、仮想キーボードの Enter キーに表示するアクションラベル（またはアイコン）を定義します。
 - {{DOMxRef("HTMLElement.hidden")}}
-  - : 論理値で、要素が非表示であるかどうかを表します。
+  - : 文字列または論理値で、この要素の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性の値を反映します。
 - {{DOMxRef("HTMLElement.inert")}}
   - : 論理値で、ユーザー操作イベント、ページ内テキスト検索（「ページ内を検索」）、テキストの選択において、ユーザーエージェントが指定したノードがないかのように動作するかどうかを示します。
 - {{DOMxRef("HTMLElement.innerText")}}
   - : このノードやその子孫において、表示されるテキストの内容を表します。
     ゲッターとしては、カーソルで要素の内容を選択しクリップボードにコピーした際のテキストに近いものを取得することができます。
     セッターとしては、この要素の子要素を指定された値で置き換え、すべての改行を {{HTMLElement("br")}} 要素に変換します。
+- {{DOMxRef("HTMLElement.inputMode")}}
+  - : 文字列で、この要素の [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性の値を反映します。
+- {{domxref("HTMLElement.popover")}} {{Experimental_Inline}}
+  - : JavaScript から要素のポップオーバー状態を取得・設定し（`"auto"`または`"manual"`）、機能検出のために使用することもできます。グローバル HTML 属性 [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) の値を反映します。
 - {{DOMxRef("HTMLElement.lang")}}
   - : 文字列で、要素の属性およびテキスト、要素のコンテンツの言語を表します。
 - {{DOMxRef("HTMLElement.noModule")}}
@@ -68,7 +70,7 @@ _親である {{DOMxRef("Element")}} からプロパティを継承していま�
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : 論理値で、[スペルチェック](/ja/docs/Web/HTML/Global_attributes/spellcheck) を制御します。これはすべての HTML 要素に提供されていますが、すべての要素に効果があるとは限りません。
 - {{DOMxRef("HTMLElement.style")}}
-  - : {{DOMxRef("CSSStyleDeclaration")}} で、この要素の {{htmlattrxref("style")}} 属性の宣言を表します。
+  - : {{DOMxRef("CSSStyleDeclaration")}} で、この要素の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性の宣言を表します。
 - {{DOMxRef("HTMLElement.tabIndex")}}
   - : `long` 値で、タブ順内の要素の位置を表します。
 - {{DOMxRef("HTMLElement.title")}}
@@ -88,6 +90,12 @@ _親である {{DOMxRef("Element")}} からメソッドを継承しています�
   - : 要素にマウスクリックイベントを送信します。
 - {{DOMxRef("HTMLElement.focus()")}}
   - : 要素に現在のキーボードフォーカスを当てます。
+- {{DOMxRef("HTMLElement.hidePopover()")}} {{Experimental_Inline}}
+  - : ポップオーバー要素を{{glossary("top layer", "最上位レイヤー")}}から取り除き、`display: none` でスタイル設定することで、ポップオーバー要素を非表示にします。
+- {{DOMxRef("HTMLElement.showPopover()")}} {{Experimental_Inline}}
+  - : ポップオーバー要素を{{glossary("top layer", "最上位レイヤー")}}に追加し、`display: none;` スタイル設定を削除することで、ポップオーバー要素を表示します。
+- {{DOMxRef("HTMLElement.togglePopover()")}} {{Experimental_Inline}}
+  - : ポップオーバー要素を非表示状態と表示状態を切り替えます。
 
 ## イベント
 
@@ -101,6 +109,10 @@ _親である {{DOMxRef("Element")}} からメソッドを継承しています�
   - : ユーザーがブラウザーのユーザーインターフェイスを通じて貼り付け操作を開始したときに発生します。
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
   - : 制約の検証で、要素が制約を満たさなかった場合に発行されます。
+- {{DOMxRef("HTMLElement.beforetoggle", "beforetoggle")}}
+  - : 要素がポップオーバーの場合、非表示になる前、または表示される前に発行されます。
+- {{DOMxRef("HTMLElement.toggle", "toggle")}}
+  - : 要素がポップオーバーの場合、非表示になった後、または表示された後に発行されます。
 
 ### アニメーションイベント
 

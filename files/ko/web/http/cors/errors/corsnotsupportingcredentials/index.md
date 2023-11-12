@@ -1,7 +1,5 @@
 ---
-title: >-
-  Reason: Credential is not supported if the CORS header
-  'Access-Control-Allow-Origin' is '*'
+title: "Reason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '*'"
 slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
 
@@ -20,13 +18,13 @@ slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 클라이언트 측에서 이 문제를 해결하려면 CORS 요청을 발행할 때 자격 증명 플래그의 값이 `false`인지 확인하십시오.
 
 - {{domxref("XMLHttpRequest")}}를 사용하여 이슈가 발생하는 경우 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}}를 `true`로 설정하지 않았는지 확인하십시오.
-- [Server-sent events](/en-US/docs/Web/API/Server-sent_events)를 사용하는 경우 {{domxref("EventSource.withCredentials")}}가 (기본값) `false`인지 확인하십시오.
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)를 사용하는 경우 {{domxref("Request.credentials")}}가 `"omit"`인지 확인하십시오.
+- [Server-sent events](/ko/docs/Web/API/Server-sent_events)를 사용하는 경우 {{domxref("EventSource.withCredentials")}}가 (기본값) `false`인지 확인하십시오.
+- [Fetch API](/ko/docs/Web/API/Fetch_API)를 사용하는 경우 {{domxref("Request.credentials")}}가 `"omit"`인지 확인하십시오.
 
 대신 서버의 동작을 조정해야 하는 경우 클라이언트가 로드되는 원본에 대한 액세스 권한을 부여하도록 `Access-Control-Allow-Origin`값을 변경해야 합니다.
 
 ## 같이 보기
 
-- [CORS 에러](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS 소개](/en-US/docs/Web/HTTP/CORS)
+- [CORS 소개](/ko/docs/Web/HTTP/CORS)

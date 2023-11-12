@@ -1,11 +1,6 @@
 ---
 title: offset-anchor
 slug: Web/CSS/offset-anchor
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/offset-anchor
 ---
 
 {{cssref}}{{seecompattable}}
@@ -84,14 +79,21 @@ On peut voir que la première valeur, `auto`, déplace l'élément sur son centr
 
 ```css
 div {
-  offset-path: path('M 0,20 L 200,20');
+  offset-path: path("M 0,20 L 200,20");
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;
 }
 
 section {
-  background-image: linear-gradient(to bottom, transparent, transparent 49%, #000 50%, #000 51%, transparent 52%);
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 49%,
+    #000 50%,
+    #000 51%,
+    transparent 52%
+  );
   border: 1px solid #ccc;
   margin-bottom: 10px;
 }

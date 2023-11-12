@@ -33,7 +33,7 @@ slug: Web/SVG/Element/feTurbulence
 
 ## DOM 接口
 
-该元素实现了[`SVGFETurbulenceElement`](/zh-CN/DOM/SVGFETurbulenceElement)接口。
+该元素实现了 [`SVGFETurbulenceElement`](/zh-CN/DOM/SVGFETurbulenceElement) 接口。
 
 ## 参见
 

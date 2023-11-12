@@ -18,27 +18,35 @@ slug: Web/SVG/Tutorial/Gradients
 ```html
 <svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
-      <linearGradient id="Gradient1">
-        <stop class="stop1" offset="0%"/>
-        <stop class="stop2" offset="50%"/>
-        <stop class="stop3" offset="100%"/>
-      </linearGradient>
-      <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="50%" stop-color="black" stop-opacity="0"/>
-        <stop offset="100%" stop-color="blue"/>
-      </linearGradient>
-      <style type="text/css"><![CDATA[
-        #rect1 { fill: url(#Gradient1); }
-        .stop1 { stop-color: red; }
-        .stop2 { stop-color: black; stop-opacity: 0; }
-        .stop3 { stop-color: blue; }
-      ]]></style>
+    <linearGradient id="Gradient1">
+      <stop class="stop1" offset="0%" />
+      <stop class="stop2" offset="50%" />
+      <stop class="stop3" offset="100%" />
+    </linearGradient>
+    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="50%" stop-color="black" stop-opacity="0" />
+      <stop offset="100%" stop-color="blue" />
+    </linearGradient>
+    <style type="text/css">
+      <![CDATA[
+              #rect1 { fill: url(#Gradient1); }
+              .stop1 { stop-color: red; }
+              .stop2 { stop-color: black; stop-opacity: 0; }
+              .stop3 { stop-color: blue; }
+            ]]>
+    </style>
   </defs>
 
-  <rect id="rect1" x="10" y="10" rx="15" ry="15" width="100" height="100"/>
-  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#Gradient2)"/>
-
+  <rect id="rect1" x="10" y="10" rx="15" ry="15" width="100" height="100" />
+  <rect
+    x="10"
+    y="120"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#Gradient2)" />
 </svg>
 ```
 
@@ -55,20 +63,25 @@ slug: Web/SVG/Tutorial/Gradients
 `<linearGradient>` 要素は、他にもいくつかの属性を持ち、グラデーションの大きさや外観を指定します。グラデーションの方向は、 `x1`, `x2`, `y1`, `y2` という属性で指定された 2 つの点によって制御されます。これらの属性は、グラデーションが移動する線を定義します。グラデーションのデフォルトは水平方向ですが、これらを変更することで回転させることができます。上の例の Gradient2 は、垂直方向のグラデーションを作成するように設計されています。
 
 ```html
-<linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+<linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"></linearGradient>
 ```
 
 > **メモ:** グラデーションに `xlink:href` 属性を用いることもできます。これを使用すると、あるグラデーションの属性や経由点を別のグラデーションに含めることができます。上記の例では、 Gradient2 のすべての経由点を再作成する必要はありません。
 >
 > ```html
 > <linearGradient id="Gradient1">
-> <stop id="stop1" offset="0%"/>
-> <stop id="stop2" offset="50%"/>
-> <stop id="stop3" offset="100%"/>
+>   <stop id="stop1" offset="0%" />
+>   <stop id="stop2" offset="50%" />
+>   <stop id="stop3" offset="100%" />
 > </linearGradient>
-> <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
->     xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
->
+> <linearGradient
+>   id="Gradient2"
+>   x1="0"
+>   x2="0"
+>   y1="0"
+>   y2="1"
+>   xmlns:xlink="http://www.w3.org/1999/xlink"
+>   xlink:href="#Gradient1" />
 > ```
 >
 > ここでは xlink 名前空間を、通常は文書の先頭にて定義するものですが、このノードで直接定義しました。詳細は[画像について説明する際](/ja/docs/Web/SVG/Tutorial/Other_content_in_SVG)に述べます。
@@ -83,19 +96,32 @@ slug: Web/SVG/Tutorial/Gradients
 <?xml version="1.0" standalone="no"?>
 <svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
-      <radialGradient id="RadialGradient1">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
-      <radialGradient id="RadialGradient2" cx="0.25" cy="0.25" r="0.25">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
+    <radialGradient id="RadialGradient1">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
+    <radialGradient id="RadialGradient2" cx="0.25" cy="0.25" r="0.25">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
   </defs>
 
-  <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#RadialGradient1)"/>
-  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#RadialGradient2)"/>
-
+  <rect
+    x="10"
+    y="10"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#RadialGradient1)" />
+  <rect
+    x="10"
+    y="120"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#RadialGradient2)" />
 </svg>
 ```
 
@@ -110,25 +136,40 @@ slug: Web/SVG/Tutorial/Gradients
 ```html
 <?xml version="1.0" standalone="no"?>
 
-<svg width="120" height="120" version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
-      <radialGradient id="Gradient"
-            cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
+    <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
   </defs>
 
-  <rect x="10" y="10" rx="15" ry="15" width="100" height="100"
-        fill="url(#Gradient)" stroke="black" stroke-width="2"/>
+  <rect
+    x="10"
+    y="10"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#Gradient)"
+    stroke="black"
+    stroke-width="2" />
 
-  <circle cx="60" cy="60" r="50" fill="transparent" stroke="white" stroke-width="2"/>
-  <circle cx="35" cy="35" r="2" fill="white" stroke="white"/>
-  <circle cx="60" cy="60" r="2" fill="white" stroke="white"/>
-  <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">(fx,fy)</text>
-  <text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt">(cx,cy)</text>
-
+  <circle
+    cx="60"
+    cy="60"
+    r="50"
+    fill="transparent"
+    stroke="white"
+    stroke-width="2" />
+  <circle cx="35" cy="35" r="2" fill="white" stroke="white" />
+  <circle cx="60" cy="60" r="2" fill="white" stroke="white" />
+  <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">
+    (fx,fy)
+  </text>
+  <text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt">
+    (cx,cy)
+  </text>
 </svg>
 ```
 
@@ -145,34 +186,75 @@ slug: Web/SVG/Tutorial/Gradients
 
 <svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
-      <radialGradient id="GradientPad"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="pad">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
-      <radialGradient id="GradientRepeat"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="repeat">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
-      <radialGradient id="GradientReflect"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="reflect">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
+    <radialGradient
+      id="GradientPad"
+      cx="0.5"
+      cy="0.5"
+      r="0.4"
+      fx="0.75"
+      fy="0.75"
+      spreadMethod="pad">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
+    <radialGradient
+      id="GradientRepeat"
+      cx="0.5"
+      cy="0.5"
+      r="0.4"
+      fx="0.75"
+      fy="0.75"
+      spreadMethod="repeat">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
+    <radialGradient
+      id="GradientReflect"
+      cx="0.5"
+      cy="0.5"
+      r="0.4"
+      fx="0.75"
+      fy="0.75"
+      spreadMethod="reflect">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
   </defs>
 
-  <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#GradientPad)"/>
-  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientRepeat)"/>
-  <rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientReflect)"/>
+  <rect
+    x="10"
+    y="10"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#GradientPad)" />
+  <rect
+    x="10"
+    y="120"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#GradientRepeat)" />
+  <rect
+    x="120"
+    y="120"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#GradientReflect)" />
 
-  <text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt">Pad</text>
-  <text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt">Repeat</text>
-  <text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt">Reflect</text>
-
+  <text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt">
+    Pad
+  </text>
+  <text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt">
+    Repeat
+  </text>
+  <text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt">
+    Reflect
+  </text>
 </svg>
 ```
 
@@ -181,7 +263,14 @@ slug: Web/SVG/Tutorial/Gradients
 余談ですがどちらのグラデーションも、グラデーションのサイズや方向を示すときに用いる単位系を定義する `gradientUnits` 属性を持ちます。この属性は `userSpaceOnUse` または `objectBoundingBox` という値を用いることができます。`objectBoundingBox` は既定値であり、これまで見てきたものです。この値はグラデーションをオブジェクトのサイズに調整するものであるため座標を 0 から 1 の間の値で指定する必要があり、その値は自動的に対象のオブジェクトの大きさに合わせて調整されます。`userSpaceOnUse` は絶対的な単位をとります。従ってオブジェクトがどこにあるかを知る必要があり、またグラデーションを同じ場所に置かなければなりません。前出の radialGradient は以下のように書き換えることができます:
 
 ```html
-<radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse">
+<radialGradient
+  id="Gradient"
+  cx="60"
+  cy="60"
+  r="50"
+  fx="35"
+  fy="35"
+  gradientUnits="userSpaceOnUse"></radialGradient>
 ```
 
 `gradientTransform` 属性を用いてグラデーションを変換させることもできますが、まだ[変換の紹介](/ja/docs/Web/SVG/Tutorial/Basic_Transformations)を行っていないため、後で説明します。

@@ -18,9 +18,9 @@ DOMImpObj = document.implementation;
 ```js
 var modName = "HTML";
 var modVer = "2.0";
-var conformTest = document.implementation.hasFeature( modName, modVer );
+var conformTest = document.implementation.hasFeature(modName, modVer);
 
-alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
+alert("DOM " + modName + " " + modVer + " supported?: " + conformTest);
 
 // alerts with: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
 ```
@@ -36,10 +36,6 @@ W3C의 DOM Level 1 권고안에는 DOM 모듈을 브라우저에서 지원하는
 - [DOM Level 2 Core: implementation](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-102161490)
 - [DOM Level 3 Core: implementation](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-102161490)
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Gecko 19.0 {{geckoRelease("19.0")}}부터 {{domxref("DOMImplementation.hasFeature","hasFeature")}} 메소드는 항상 true를 반환합니다.

@@ -1,14 +1,6 @@
 ---
 title: Types CSS
 slug: Web/CSS/CSS_Types
-tags:
-  - Aperçu
-  - CSS
-  - CSS Data Type
-  - Reference
-  - Type
-translation_of: Web/CSS/CSS_Types
-original_slug: Web/CSS/Types_CSS
 ---
 
 {{CSSRef}}

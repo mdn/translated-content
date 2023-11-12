@@ -1,8 +1,6 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
-translation_of: Web/HTML/Element/header
-browser-compat: html.elements.header
 ---
 
 {{HTMLSidebar}}
@@ -88,9 +86,13 @@ Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Globa
 ```html
 <header>
   <h1>Titre principal</h1>
-  <img src="mdn-logo-sm.png" alt="Logo de MDN">
+  <img src="mdn-logo-sm.png" alt="Logo de MDN" />
 </header>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('','100%', '430')}}
 
 ### En-tête d'un article
 
@@ -98,12 +100,21 @@ Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Globa
 <article>
   <header>
     <h2>La planète Terre</h2>
-    <p>Publié le mercredi <time datetime="2017-10-04">4 octobre 2017</time> par Jeanne Smith</p>
+    <p>
+      Publié le mercredi <time datetime="2017-10-04">4 octobre 2017</time> par
+      Jeanne Smith
+    </p>
   </header>
   <p>Nous vivons sur une planète bleue et verte</p>
-  <p><a href="https://example.com/the-planet-earth/">Poursuivre la lecture…</a></p>
+  <p>
+    <a href="https://example.com/the-planet-earth/">Poursuivre la lecture…</a>
+  </p>
 </article>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('','100%','270')}}
 
 ## Accessibilité
 

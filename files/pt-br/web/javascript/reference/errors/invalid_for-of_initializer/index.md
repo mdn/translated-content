@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: uma declaração na cabeça de um laço for-of não pode ter um inicializador'
+title: "SyntaxError: uma declaração na cabeça de um laço for-of não pode ter um inicializador"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
 

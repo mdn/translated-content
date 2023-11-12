@@ -3,7 +3,7 @@ title: flex-flow
 slug: Web/CSS/flex-flow
 ---
 
-{{ CSSRef("CSS Flexible Boxes") }}
+{{CSSRef("CSS Flexible Boxes")}}
 
 ## 概述
 

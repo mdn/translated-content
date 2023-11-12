@@ -12,7 +12,8 @@ Network Information API 將提供系統連線的相關資訊，如使用者裝�
 此範例將觀察使用者連線的變化。舉例來說，當使用者從高價位連線轉用低價位連線時，就會降低頻寬需求以避免連線費用暴增，並採用類似 Apps 受到警示的方法。
 
 ```js
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection =
+  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 
 function updateConnectionStatus() {
   alert("Connection bandwidth: " + connection.bandwidth + " MB/s");

@@ -1,11 +1,6 @@
 ---
-title: ':root'
+title: ":root"
 slug: Web/CSS/:root
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:root
 ---
 
 {{CSSRef}}

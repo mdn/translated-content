@@ -11,8 +11,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 
 ```js
 browser.browserAction.disable(
-  tabId // optional integer
-)
+  tabId, // optional integer
+);
 ```
 
 ### パラメータ
@@ -22,7 +22,7 @@ browser.browserAction.disable(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction.disable")}}
+{{Compat}}
 
 ## 例
 

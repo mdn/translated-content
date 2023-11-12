@@ -5,7 +5,7 @@ slug: Web/API/HTMLImageElement/referrerPolicy
 
 {{APIRef}}{{SeeCompatTable}}
 
-**`HTMLImageElement.referrerPolicy`** 反映了 {{HTMLElement("img")}} 元素的 HTML 属性 {{htmlattrxref("referrerpolicy","img")}} 的定义，这个属性定义了{{HTMLElement("img")}} 元素在获取资源时的引用方式。
+**`HTMLImageElement.referrerPolicy`** 反映了 {{HTMLElement("img")}} 元素的 HTML 属性 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/img#referrerpolicy) 的定义，这个属性定义了{{HTMLElement("img")}} 元素在获取资源时的引用方式。
 
 ## 语法
 
@@ -24,10 +24,10 @@ imgElt.referrerPolicy = refStr;
 
 ```js
 var img = new Image();
-img.src = 'img/logo.png';
-img.referrerPolicy = 'origin';
+img.src = "img/logo.png";
+img.referrerPolicy = "origin";
 
-var div = document.getElementById('divAround');
+var div = document.getElementById("divAround");
 div.appendChild(img); // Fetch the image using the origin as the referrer
 ```
 

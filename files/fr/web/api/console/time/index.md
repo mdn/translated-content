@@ -1,15 +1,6 @@
 ---
 title: console.time
-slug: Web/API/Console/time
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthode
-  - Web
-  - console
-  - débogage
-translation_of: Web/API/Console/time
+slug: Web/API/console/time
 ---
 
 {{APIRef("Console API")}}

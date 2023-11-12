@@ -21,19 +21,26 @@ slug: Web/API/ResizeObserverEntry/target
 このように、変更するたびに {{cssxref("border-radius")}} の値を更新できるように、観測された要素への参照を取得するために、各エントリーの `target` プロパティ - `entry.target.style.borderRadius` を使用します。
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize) {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize.inlineSize/10) +
-                                                      (entry.contentBoxSize.blockSize/10)) + 'px';
+    if (entry.contentBoxSize) {
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentBoxSize.inlineSize / 10 +
+            entry.contentBoxSize.blockSize / 10,
+        ) + "px";
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentRect.width / 10 + entry.contentRect.height / 10,
+        ) + "px";
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## 仕様書

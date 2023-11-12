@@ -65,12 +65,12 @@ flex-grow: unset;
 
 .box {
   flex-grow: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box1 {
   flex-grow: 2;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 ```
 
@@ -78,13 +78,13 @@ flex-grow: unset;
 
 {{EmbedLiveSample('Example', '700px', '300px', '', 'Web/CSS/flex-grow')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

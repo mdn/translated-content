@@ -18,6 +18,7 @@ encrypt(algorithm, key, data)
 ### 参数
 
 - `algorithm`
+
   - : 一个对象，用于指定使用的[算法](支持的算法)，以及需要的任何额外的参数：
 
     - 使用 [RSA-OAEP](#rsa-oaep)，则传入 {{domxref("RsaOaepParams")}} 对象。
@@ -49,7 +50,7 @@ Web Crypto API 提供了支持 `encrypt()` 和 `decrypt()` 操作的四种算法
 
 其中的 RSA-OAEP 算法是一种{{Glossary("public-key cryptography", "公钥加密系统")}}。
 
-其它三种算法则都是{{Glossary("Symmetric-key cryptography", "对称加密算法")}}，并且它们都是基于同一种基础加密，即 AES（Advanced Encryption Standard）。它们不同之处在于{{Glossary("Block cipher mode of operation", "模式")}}。Web Crypto API 支持以下三种 AES 模式：
+其他三种算法则都是{{Glossary("Symmetric-key cryptography", "对称加密算法")}}，并且它们都是基于同一种基础加密，即 AES（Advanced Encryption Standard）。它们不同之处在于{{Glossary("Block cipher mode of operation", "模式")}}。Web Crypto API 支持以下三种 AES 模式：
 
 - CTR（Counter Mode，计数器模式）
 - CBC (Cipher Block Chaining，密码块链接)
@@ -65,7 +66,7 @@ RSA-OAEP 公钥加密系统，规范定于 [RFC 3447](https://datatracker.ietf.o
 
 使用计数器模式的 AES 算法，规范定于 [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final)。
 
-AES 是一种分组加密算法，这意味这它将消息分成多个模块，然后逐块进行加密。在计数器模式下，每加密一个消息块，就会混入一个额外的数据块。这个额外的模块被称为“计数器模块”（counter block）。
+AES 是一种分组加密算法，这意味着它将消息分成多个模块，然后逐块进行加密。在计数器模式下，每加密一个消息块，就会混入一个额外的数据块。这个额外的模块被称为“计数器模块”（counter block）。
 
 给定的计数器模块绝不能与同一个密钥一起使用超过一次：
 
@@ -114,7 +115,7 @@ function encryptMessage(publicKey) {
       name: "RSA-OAEP",
     },
     publicKey,
-    encoded
+    encoded,
   );
 }
 ```
@@ -142,7 +143,7 @@ function encryptMessage(key) {
       length: 64,
     },
     key,
-    encoded
+    encoded,
   );
 }
 ```
@@ -159,7 +160,7 @@ const key_encoded = await crypto.subtle.importKey(
   key.buffer,
   "AES-CTR",
   false,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 const encrypted_content = await window.crypto.subtle.encrypt(
   {
@@ -168,7 +169,7 @@ const encrypted_content = await window.crypto.subtle.encrypt(
     length: 128,
   },
   key_encoded,
-  data
+  data,
 );
 
 // Uint8Array
@@ -197,7 +198,7 @@ function encryptMessage(key) {
       iv: iv,
     },
     key,
-    encoded
+    encoded,
   );
 }
 ```
@@ -221,7 +222,7 @@ function encryptMessage(key) {
   return window.crypto.subtle.encrypt(
     { name: "AES-GCM", iv: iv },
     key,
-    encoded
+    encoded,
   );
 }
 ```

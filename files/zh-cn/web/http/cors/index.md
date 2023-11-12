@@ -5,7 +5,7 @@ slug: Web/HTTP/CORS
 
 {{HTTPSidebar}}
 
-**跨源资源共享**（{{Glossary("CORS")}}，或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其它{{glossary("origin","源")}}（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
+**跨源资源共享**（{{Glossary("CORS")}}，或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其他{{glossary("origin","源")}}（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
 
 跨源 HTTP 请求的一个例子：运行在 `https://domain-a.com` 的 JavaScript 代码使用 {{domxref("XMLHttpRequest")}} 来发起一个到 `https://domain-b.com/data.json` 的请求。
 
@@ -23,7 +23,7 @@ CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源�
 - Web 字体（CSS 中通过 `@font-face` 使用跨源字体资源），[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
 - [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 将图片或视频画面绘制到 canvas。
-- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)。
+- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)。
 
 本文概述了跨源资源共享机制及其所涉及的 HTTP 标头。
 
@@ -61,8 +61,6 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
   - {{HTTPHeader("Content-Type")}}（需要注意额外的限制）
   - {{HTTPHeader("Range")}}（只允许[简单的范围标头值](https://fetch.spec.whatwg.org/#simple-range-header-value) 如 `bytes=256-` 或 `bytes=127-255`）
 
-> **备注：** Firefox 还没有将 `Range` 实现为安全的请求标头。参见 [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981)。
-
 - {{HTTPHeader("Content-Type")}} 标头所指定的{{Glossary("MIME type","媒体类型")}}的值仅限于下列三者之一：
 
   - `text/plain`
@@ -78,15 +76,15 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
 > - [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)
 >
-> 其它浏览器并不支持这些额外的限制，因为它们不属于规范的一部分。
+> 其他浏览器并不支持这些额外的限制，因为它们不属于规范的一部分。
 
 比如说，假如站点 `https://foo.example` 的网页应用想要访问 `https://bar.other` 的资源。`foo.example` 的网页中可能包含类似于下面的 JavaScript 代码：
 
 ```js
 const xhr = new XMLHttpRequest();
-const url = 'https://bar.other/resources/public-data/';
+const url = "https://bar.other/resources/public-data/";
 
-xhr.open('GET', url);
+xhr.open("GET", url);
 xhr.onreadystatechange = someHandler;
 xhr.send();
 ```
@@ -147,11 +145,11 @@ Access-Control-Allow-Origin: https://foo.example
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://bar.other/resources/post-here/');
-xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
-xhr.setRequestHeader('Content-Type', 'application/xml');
+xhr.open("POST", "https://bar.other/resources/post-here/");
+xhr.setRequestHeader("X-PINGOTHER", "pingpong");
+xhr.setRequestHeader("Content-Type", "application/xml");
 xhr.onreadystatechange = handler;
-xhr.send('<person><name>Arun</name></person>');
+xhr.send("<person><name>Arun</name></person>");
 ```
 
 上面的代码使用 `POST` 请求发送一个 XML 请求体，该请求包含了一个非标准的 HTTP `X-PINGOTHER` 请求标头。这样的请求标头并不是 HTTP/1.1 的一部分，但通常对于 web 应用很有用处。另外，该请求的 `Content-Type` 为 `application/xml`，且使用了自定义的请求标头，所以该请求需要首先发起“预检请求”。
@@ -331,7 +329,7 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 > **备注：** 一些企业认证服务要求在预检请求时发送 TLS 客户端证书，这违反了 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 的规范。
 >
-> Firefox 87 允许通过在设置中设定 `network.cors_preflight.allow_client_cert` 为 `true`（{{bug(1511151)}}）来允许这种不规范的行为。基于 chromium 的浏览器目前总是在 CORS 预检请求中发送 TLS 客户端证书（[Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)）。
+> Firefox 87 允许通过在设置中设定 `network.cors_preflight.allow_client_cert` 为 `true`（[Firefox bug 1511151](https://bugzil.la/1511151)）来允许这种不规范的行为。基于 chromium 的浏览器目前总是在 CORS 预检请求中发送 TLS 客户端证书（[Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)）。
 
 #### 附带身份凭证的请求与通配符
 
@@ -355,7 +353,7 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 请求中的 cookie（第 10 行）也可能在正常的第三方 cookie 策略下被阻止。因此，强制执行的 cookie 策略可能会使本节描述的内容无效（阻止你发出任何携带凭据的请求）。
 
-Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性控制。
+Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 属性控制。
 
 ## HTTP 响应标头字段
 

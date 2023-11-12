@@ -1,89 +1,77 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
-tags:
-  - API
-  - Appareils
-  - Audio
-  - Conference
-  - Interface
-  - Media
-  - Partage
-  - Reference
-  - Video
-  - WebRTC
-translation_of: Web/API/MediaDevices
+l10n:
+  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-L'interface **`MediaDevices`** permet d'accéder aux périphériques d'entrée multimédia connectés tels que les caméras et les microphones, ainsi que le partage d'écran. Essentiellement, il vous permet d'accéder à n'importe quelle source matérielle de données multimédias.
+L'interface **`MediaDevices`** permet d'accéder aux périphériques média d'entrée tels que les caméras, micros, mais aussi le partage d'écran. Autrement dit, elle fournit un accès à toute source matérielle de données média.
 
-## Propriétés
+{{InheritanceDiagram}}
 
-_Hérite des propriétés de son interface parente, {{domxref("EventTarget")}}._
+## Propriétés des instances
+
+_Hérite des propriétés de son interface parente, [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+
+## Méthodes des instances
+
+_Hérite des méthodes de son interface parente, [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+
+- [`enumerateDevices()`](/fr/docs/Web/API/MediaDevices/enumerateDevices)
+  - : Fournit un tableau d'informations sur les appareils média (en entrée et en sortie) disponibles sur le système.
+- [`getSupportedConstraints()`](/fr/docs/Web/API/MediaDevices/getSupportedConstraints)
+  - : Renvoie un objet dont le format respecte [`MediaTrackSupportedConstraints`](/fr/docs/Web/API/MediaTrackSupportedConstraints) et qui indique les propriétés contraintes qui sont prises en charge par l'interface [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack). Voir [l'API <i lang="en">Media Streams</i>](/fr/docs/Web/API/Media_Capture_and_Streams_API/Constraints) pour en savoir plus à propos des contraintes et leur utilisation.
+- [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia)
+  - : Demande à la personne de sélectionner un affichage ou une portion d'un affichage (par exemple une fenêtre) pour le/la capturer comme [`MediaStream`](/fr/docs/Web/API/MediaStream) à des fins de partage ou d'enregistrement. Cette méthode renvoie une promesse qui se résout en `MediaStream`.
+- [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)
+  - : Après avoir demandé la permission à la personne, active la caméra ou le micro du système et fournit un flux [`MediaStream`](/fr/docs/Web/API/MediaStream) contenant une piste vidéo et/ou audio correspondante.
+- [`selectedAudioOutput()`](/fr/docs/Web/API/MediaDevices/selectAudioOutput) {{Experimental_Inline}}
+  - : Demande à la personne de sélectionner un appareil de sortie audio en particulier.
 
 ## Évènements
 
-- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
-  - : Déclenché lorsqu'un périphérique d'entrée ou de sortie multimédia est connecté ou retiré de l'ordinateur de l'utilisateur.
-    Egalement disponible via la propriété {{domxref("MediaDevices/ondevicechange", "ondevicechange")}}.
-
-## Méthodes
-
-_Hérite des méthodes de son interface parente, {{domxref("EventTarget")}}._
-
-- {{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}
-  - : Obtient un tableau d'informations sur les périphériques d'entrée et de sortie multimédia disponibles sur le système.
-- {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
-  - : Renvoie un objet conforme à {{domxref("MediaTrackSupportedConstraints")}} indiquant quelles propriétés de contrainte sont prises en charge sur l'interface {{domxref("MediaStreamTrack")}}. Consultez {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} pour en savoir plus sur les contraintes et comment les utiliser.
-- {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
-  - : Invite l'utilisateur à sélectionner un affichage ou une partie d'un affichage (comme une fenêtre) à capturer en tant que {{domxref("MediaStream")}} à des fins de partage ou d'enregistrement. Renvoie une promesse qui se résout en un `MediaStream`.
-- {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}
-  - : Avec l'autorisation de l'utilisateur via une invite, allume une caméra et / ou un microphone sur le système et fournit un {{domxref("MediaStream")}} contenant une piste vidéo et / ou une piste audio avec l'entrée.
+- [`devicechange`](/fr/docs/Web/API/MediaDevices/devicechange_event)
+  - : Déclenché lorsqu'un média d'entrée ou de sortie de l'appareil est connecté ou débranché de l'ordinateur de la personne.
 
 ## Exemple
 
 ```js
-'use strict';
-
-// Placez les variables dans la portée globale pour les rendre disponibles à la console du navigateur.
-var video = document.querySelector('video');
-var constraints = window.constraints = {
+// On place ces variables dans la portée globale afin d'y avoir
+// accès dans la console du navigateur.
+const video = document.querySelector("video");
+const constraints = {
   audio: false,
-  video: true
+  video: true,
 };
-var errorElement = document.querySelector('#errorMsg');
 
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  var videoTracks = stream.getVideoTracks();
-  console.log('Got stream with constraints:', constraints);
-  console.log('Using video device: ' + videoTracks[0].label);
-  stream.onremovetrack = function() {
-    console.log('Stream ended');
-  };
-  window.stream = stream; // rendre la variable disponible dans la console du navigateur
-  video.srcObject = stream;
-})
-.catch(function(error) {
-  if (error.name === 'ConstraintNotSatisfiedError') {
-    errorMsg('The resolution ' + constraints.video.width.exact + 'x' +
-        constraints.video.height.exact + ' px is not supported by your device.');
-  } else if (error.name === 'PermissionDeniedError') {
-    errorMsg('Permissions have not been granted to use your camera and ' +
-      'microphone, you need to allow the page access to your devices in ' +
-      'order for the demo to work.');
-  }
-  errorMsg('getUserMedia error: ' + error.name, error);
-});
-
-function errorMsg(msg, error) {
-  errorElement.innerHTML += '<p>' + msg + '</p>';
-  if (typeof error !== 'undefined') {
-    console.error(error);
-  }
-}
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then((stream) => {
+    const videoTracks = stream.getVideoTracks();
+    console.log("Flux obtenu avec des contraintes :", constraints);
+    console.log(`Utilisation de l'appareil vidéo : ${videoTracks[0].label}`);
+    stream.onremovetrack = () => {
+      console.log("Flux terminé");
+    };
+    video.srcObject = stream;
+  })
+  .catch((error) => {
+    if (error.name === "ConstraintNotSatisfiedError") {
+      console.error(
+        `La résolution ${constraints.video.width.exact}x${constraints.video.height.exact} px n'est pas prise en charge par votre appareil.`,
+      );
+    } else if (error.name === "PermissionDeniedError") {
+      console.error(
+        "Les permissions nécessaires pour utiliser votre caméra ou votre micro " +
+          "n'ont pas été fournies. Vous devez autoriser l'accès à vos appareils " +
+          "depuis cette page afin que la démonstration fonctionne.",
+      );
+    } else {
+      console.error(`Erreur getUserMedia : ${error.name}`, error);
+    }
+  });
 ```
 
 ## Spécifications
@@ -96,9 +84,7 @@ function errorMsg(msg, error) {
 
 ## Voir aussi
 
-- [Media Capture et Streams API](/fr/docs/Web/API/Media_Streams_API): l'API dont cette interface fait partie.
-- [API de capture d'écran](/fr/docs/Web/API/Screen_Capture_API): L'API définissant la méthode {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.
-- [WebRTC API](/fr/docs/Web/API/WebRTC_API)
-- {{domxref("Navigator.mediaDevices")}}: Renvoie une référence à un objet `MediaDevices` qui peut être utilisé pour accéder aux périphériques.
-- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) Capture et lecture vidéo HTML5 à l'aide de `MediaDevices` et de l'API d'enregistrement MediaStream ([source sur GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): Application Web de laboratoire de langage vidéo HTML5 video utilisant `MediaDevices` et l'API d'enregistrement MediaStream pour l'enregistrement vidéo ([source sur GitHub](https://github.com/chrisjohndigital/OpenLang))
+- [L'API de capture et des flux multimédia](/fr/docs/Web/API/Media_Capture_and_Streams_API)&nbsp;: l'API à laquelle appartient cette interface.
+- [L'API de capture d'écran](/fr/docs/Web/API/Screen_Capture_API)&nbsp;: l'API qui définit la méthode [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia).
+- [L'API WebRTC](/fr/docs/Web/API/WebRTC_API)
+- [`Navigator.mediaDevices`](/fr/docs/Web/API/Navigator/mediaDevices) qui fournit une référence à un objet `MediaDevices` permettant d'accéder aux appareils.

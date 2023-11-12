@@ -1,16 +1,6 @@
 ---
 title: Intl.ListFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/format
 ---
 
 {{JSRef}}
@@ -40,13 +30,11 @@ Une chaîne de caractères représentant les éléments de la liste et mise en f
 
 ## Spécifications
 
-| Spécification                                                                                                                                 | État                    | Commentaires |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.ListFormat.prototype.format`](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.prototype.format) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.format")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,11 +1,11 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
 ---
 
 {{CSSRef}}
 
-**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の{{htmlattrxref("placeholder","input","プレイスホルダー文字列",1)}}を表します。
+**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダー文字列](/ja/docs/Web/HTML/Element/input#placeholder)を表します。
 
 ```css
 ::placeholder {
@@ -35,7 +35,7 @@ slug: Web/CSS/::placeholder
 色のコントラスト比は、プレイスホルダー文字列と入力欄の背景色の値とを比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/intro/wcag) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、太字ならば 18.66px 以上、または 24px 以上と定義されています。
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 #### 使用性
@@ -49,7 +49,11 @@ slug: Web/CSS/::placeholder
 ```html
 <label for="user-email">Your email address</label>
 <span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -62,7 +66,7 @@ slug: Web/CSS/::placeholder
 
 ### ラベル
 
-プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 {{htmlattrxref("for", "label")}} および {{htmlattrxref("id")}} 属性の組み合わせを使用して入力欄とプログラム的に関連付けが行われていないラベルがないと、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
+プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 [`for`](/ja/docs/Web/HTML/Element/label#for) および [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性の組み合わせを使用して入力欄とプログラム的に関連付けが行われていないラベルがないと、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
 
 - [MDN 基本的なフォームのヒント](/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -76,7 +80,7 @@ slug: Web/CSS/::placeholder
 #### HTML
 
 ```html
-<input placeholder="こちらに入力...">
+<input placeholder="こちらに入力..." />
 ```
 
 #### CSS
@@ -100,8 +104,8 @@ Firefox など一部のブラウザーでは、プレースホルダーの既定
 #### HTML
 
 ```html
-<input placeholder="既定の透明度...">
-<input placeholder="完全に不透明..." class="force-opaque">
+<input placeholder="既定の透明度..." />
+<input placeholder="完全に不透明..." class="force-opaque" />
 ```
 
 #### CSS

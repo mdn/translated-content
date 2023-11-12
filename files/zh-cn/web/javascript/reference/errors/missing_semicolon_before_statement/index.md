@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ; before statement'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
 
@@ -23,7 +23,7 @@ SyntaxError: Expected ';' (Edge)
 
 某个地方丢失了一个 (`;`)。 [JavaScript 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)必须以分号结束。有一些是由 [自动分号插入 (ASI)](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) 的使用所影响到的，但在这种情况下，你需要提供一个分号，以便于 JavaScript 可以将源代码解析正确。然而，通常情况下，这个错误只是另一个错误一个导致的，如不正确转义字符串，使用 var 的错误。你也可能有太多的括号的地方。当出现此错误时，仔细检查语法。
 
-## 例子
+## 示例
 
 转义字符串
 
@@ -36,7 +36,7 @@ var foo = 'Tom's bar';
 
 你可以用双引号，或者用\转义：
 
-```js example-good
+```js-nolint example-good
 var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
 ```
@@ -76,9 +76,9 @@ def print(info){
 因此，建议使用`function`而不是`def`：
 
 ```js example-good
-function print(info){
+function print(info) {
   console.log(info);
-};
+}
 ```
 
 ## 参考

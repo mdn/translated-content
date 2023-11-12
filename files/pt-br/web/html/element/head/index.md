@@ -22,7 +22,7 @@ O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre 
       <td>
         <p>Se o elemento é um {{HTMLElement("iframe")}}</p>
         <p>
-          {{htmlattrxref("srcdoc", "iframe")}}, ou se a informação
+          <a href="/pt-BR/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>, ou se a informação
           do título está sendo avaliada desde um nivel alto do protocolo, zero
           ou mais elementos de conteúdo de metadados.
         </p>
@@ -62,7 +62,7 @@ O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre 
 
 Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("profile")}} {{obsolete_inline}}
+- `profile`
   - : A URIs de um ou mais perfis de metadados , separado por espaço em branco.
 
 ## Exemplo
@@ -79,17 +79,13 @@ Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attri
 
 Moderno, HTML5-compatível browsers automaticamente constrói um elemento `<head>` se as tags forem omitidas na marcação. [Este comportamento não pode ser garantido por browsers antigos.](http://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/)
 
-Especificações
+## Especificações
 
-| Especificação                                                                                                    | Estado                           | Comentário                              |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}         | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde o último shapshot |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}} | {{Spec2('HTML5 W3C')}}     | Perfil Obsoleto                         |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## See also
 

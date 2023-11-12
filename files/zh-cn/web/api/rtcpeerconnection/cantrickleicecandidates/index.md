@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 **ICE trickling**是在初始发送或回应已经发送给其他设备之后继续发送候选的过程。
 
-仅在调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}之后才设置此属性。理想情况下，您的信令协议提供了一种检测滴流支持的方法，因此您无需依赖此属性。WebRTC 浏览器将始终支持 trickle ICE。如果不支持滴流，或者您无法辨别，则可以检查此属性的伪值，然后等待{{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}}的值更改在创建和发送之前“完成”。这样，发送信息包含所有候选。
+仅在调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}之后才设置此属性。理想情况下，你的信令协议提供了一种检测滴流支持的方法，因此你无需依赖此属性。WebRTC 浏览器将始终支持 trickle ICE。如果不支持滴流，或者你无法辨别，则可以检查此属性的伪值，然后等待{{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}}的值更改在创建和发送之前“完成”。这样，发送信息包含所有候选。
 
 ## 语法
 

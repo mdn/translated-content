@@ -1,9 +1,6 @@
 ---
 title: Éléments
 slug: Web/XSLT/Element
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element
 ---
 
 {{ XsltRef() }} Ce document traite de deux types d'éléments&nbsp;: les éléments de haut niveau, et les instructions. Un élément de haut niveau doit toujours apparaître en tant qu'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`. Une instruction, de son côté, est associée à un modèle. Une feuille de style peut comporter plusieurs modèles. Un troisième type d'élément, que nous n'aborderons pas ici, est le «&nbsp;Literal Result Element (LRE)&nbsp;». Un LRE appartient également à un modèle. Le terme regroupe tout ce qui n'est pas une instruction et qui doit être recopié tel-quel dans le document de sortie, par exemple, un élément `<hr>` dans feuille de style de conversion HTML.
@@ -17,13 +14,13 @@ A ce propos, tous les attributs d'un LRE et certains attributs d'un nombre limit
 L'expression a évaluer est placée entre accolades&nbsp;:
 
 ```html
-<img src="{$image-dir}/mygraphic.jpg"/>
+<img src="{$image-dir}/mygraphic.jpg" />
 ```
 
 Ce qui donnera&nbsp;:
 
 ```html
-<img src="/images/mygraphic.jpg"/>
+<img src="/images/mygraphic.jpg" />
 ```
 
 Les définitions des éléments ci-dessous incluent une description, la syntaxe, une liste des attributs requis ou optionnels, une description du type et de la position, les sources dans la recommandation du W3C et le niveau de support actuel dans Gecko.

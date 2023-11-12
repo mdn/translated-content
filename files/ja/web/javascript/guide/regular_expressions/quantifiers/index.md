@@ -1,6 +1,6 @@
 ---
 title: 数量詞
-slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 l10n:
   sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---
@@ -146,8 +146,8 @@ const loooongWord = /\b\w{13,}\b/g;
 const sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"]
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "have", "to", "learn", "table" ]
+console.table(sentence.match(loooongWord)); // ["multiplication"]
 ```
 
 ### 省略可能な文字

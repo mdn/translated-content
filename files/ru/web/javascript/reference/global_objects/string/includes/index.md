@@ -1,14 +1,8 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-tags:
-  - JavaScript
-  - Prototype
-  - Reference
-  - String
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
+
 {{JSRef}}
 
 Метод **`includes()`** проверяет, содержит ли строка заданную подстроку, и возвращает, соответственно `true` или `false`.
@@ -39,7 +33,7 @@ str.includes(searchString[, position])
 Метод `includes()` является регистрозависимым. Например, следующее выражение вернёт `false`:
 
 ```js
-'Синий кит'.includes('синий'); // вернёт false
+"Синий кит".includes("синий"); // вернёт false
 ```
 
 ## Примеры
@@ -47,13 +41,13 @@ str.includes(searchString[, position])
 ### Использование `includes()`
 
 ```js
-var str = 'Быть или не быть вот в чём вопрос.';
+var str = "Быть или не быть вот в чём вопрос.";
 
-console.log(str.includes('Быть'));       // true
-console.log(str.includes('вопрос'));    // true
-console.log(str.includes('несуществующий')); // false
-console.log(str.includes('Быть', 1));    // false
-console.log(str.includes('БЫТЬ'));       // false
+console.log(str.includes("Быть")); // true
+console.log(str.includes("вопрос")); // true
+console.log(str.includes("несуществующий")); // false
+console.log(str.includes("Быть", 1)); // false
+console.log(str.includes("БЫТЬ")); // false
 ```
 
 ## Полифил
@@ -62,9 +56,9 @@ console.log(str.includes('БЫТЬ'));       // false
 
 ```js
 if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
-    if (typeof start !== 'number') {
+  String.prototype.includes = function (search, start) {
+    "use strict";
+    if (typeof start !== "number") {
       start = 0;
     }
 

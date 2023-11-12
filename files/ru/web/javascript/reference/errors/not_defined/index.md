@@ -1,7 +1,6 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
 
 {{jsSidebar("Errors")}}
@@ -42,9 +41,9 @@ foo.substring(1); // "ar"
 Переменная должна быть доступна в текущем контексте исполнения. Переменные, определённые внутри [функции](/ru/docs/Web/JavaScript/Reference/Functions) не могут быть доступны из любой точки за пределами функции, так как переменная определена только в области видимости самой функции.
 
 ```js example-bad
-function numbers () {
+function numbers() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
   return num1 + num2;
 }
 
@@ -55,9 +54,9 @@ console.log(num1); // ReferenceError num1 is not defined.
 
 ```js example-good
 var num1 = 2,
-    num2 = 3;
+  num2 = 3;
 
-function numbers () {
+function numbers() {
   return num1 + num2;
 }
 

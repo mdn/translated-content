@@ -32,11 +32,11 @@ var request = ObjectStore.openCursor(query, direction);
 
 此方法可能引起以下类型之一的 {{domxref("DOMException")}} ：
 
-| 异常                       | 描述                                                                                      |
-| -------------------------- | ----------------------------------------------------------------------------------------- |
+| 异常                       | 描述                                                                  |
+| -------------------------- | --------------------------------------------------------------------- |
 | `InvalidStateError`        | 此 {{domxref("IDBObjectStore")}} 或{{domxref("IDBIndex")}} 已被删除。 |
-| `TransactionInactiveError` | 此 {{domxref("IDBObjectStore")}} 的事务处于非活动状态。                        |
-| `DataError`                | 指定的键或键范围无效。                                                                    |
+| `TransactionInactiveError` | 此 {{domxref("IDBObjectStore")}} 的事务处于非活动状态。               |
+| `DataError`                | 指定的键或键范围无效。                                                |
 
 ## 例子
 
@@ -46,9 +46,9 @@ var request = ObjectStore.openCursor(query, direction);
 var transaction = db.transaction("name", "readonly");
 var objectStore = transaction.objectStore("name");
 var request = objectStore.openCursor();
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   var cursor = event.target.result;
-  if(cursor) {
+  if (cursor) {
     // cursor.value 包含正在被遍历的当前记录
     // 这里你可以对 result 做些什么
     cursor.continue();
@@ -66,7 +66,7 @@ request.onsuccess = function(event) {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Starting transactions: {{domxref("IDBDatabase")}}
@@ -74,4 +74,4 @@ request.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

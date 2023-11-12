@@ -1,12 +1,6 @@
 ---
 title: XPathExpression
 slug: Web/API/XPathExpression
-tags:
-  - API
-  - DOM
-  - Document
-  - XPath
-translation_of: Web/API/XPathExpression
 ---
 
 {{APIRef}}

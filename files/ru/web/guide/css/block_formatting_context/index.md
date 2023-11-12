@@ -1,13 +1,8 @@
 ---
 title: Блочный контекст форматирования
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - CSS
-  - CSS Basic Concepts
-  - Для начинающих
-  - Основы
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef() }}
 
 ## Описание
@@ -63,24 +58,24 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 
 ```html hidden
 <div class="box">
-    <div class="float">I am a floated box!</div>
-    <p>I am content inside the container.</p>
+  <div class="float">I am a floated box!</div>
+  <p>I am content inside the container.</p>
 </div>
 ```
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -108,7 +103,8 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 #### CSS
 
 ```css
-.blue, .red-inner {
+.blue,
+.red-inner {
   height: 50px;
   margin: 10px 0;
 }

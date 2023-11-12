@@ -1,8 +1,8 @@
 ---
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
-translation_of: Web/API/HTMLUnknownElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Интерфейс **`HTMLUnknownElement`** предоставляет недопустимый HTML-элемент и происходит от интерфейса {{domxref("HTMLElement")}}, но без каких либо дополнительных свойств и методов.

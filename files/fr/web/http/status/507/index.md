@@ -1,7 +1,6 @@
 ---
 title: 507 Insufficient Storage
 slug: Web/HTTP/Status/507
-translation_of: Web/HTTP/Status/507
 ---
 
 {{HTTPSidebar}}
@@ -18,6 +17,8 @@ Il indique que la méthode ne peut pas être traitée car le serveur ne peut pas
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                    |
-| -------------------------------------------------------------------- | ---------------------------------------- |
-| [RFC 4918, section 11.5: 507 Insufficient Storage](https://datatracker.ietf.org/doc/html/rfc4918#section-11.5) | Web Distributed Authoring and Versioning |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

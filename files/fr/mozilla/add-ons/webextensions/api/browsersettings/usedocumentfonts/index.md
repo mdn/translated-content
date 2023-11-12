@@ -1,16 +1,6 @@
 ---
 title: browserSettings.useDocumentFonts
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - useDocumentFonts
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts
 ---
 
 {{AddonSidebar()}}
@@ -24,9 +14,9 @@ Sa valeur sous-jacente est un booléen :
 - `true`: utilise les polices spécifiées par la page Web. C'est la valeur par défaut.
 - `false`: utilise les polices du système.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.useDocumentFonts")}}
+{{Compat}}
 
 ## Exemples
 
@@ -37,8 +27,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.useDocumentFonts.set({value: false}).
-  then(logResult);
+browser.browserSettings.useDocumentFonts.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

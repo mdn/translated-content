@@ -16,7 +16,7 @@ slug: Learn/Performance/Web_Performance_Basics
 - Use a CDN for resources which can reduce load times significantly.
 - Compress your resources using [gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli), and [Zopfli](https://github.com/google/zopfli).
 - Image optimization (use CSS animation, or SVG if possible).
-- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g render full page for bot traffic); for example, by using the {{htmlattrxref("loading", "img")}} attribute on the {{HTMLElement("img")}} element
+- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g render full page for bot traffic); for example, by using the [`loading`](/ja/docs/Web/HTML/Element/img#loading) attribute on the {{HTMLElement("img")}} element
 - It is also crucial to realize what is really important to your users. It might not be absolute timing, but [user perception](/ja/docs/Learn/Performance/perceived_performance).
 
 ## Quick Wins
@@ -28,15 +28,19 @@ Web performance is all about user experience and perceived performance. As we le
 To load CSS asynchronously one can simpy set the media type to print and then change to all once loaded. The following snippet includes an onload attribute, requiring Javascript, so it is important to include a noscript tag with a traditional fallback.
 
 ```html
-<link rel="stylesheet" href="/path/to/my.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/path/to/my.css"></noscript>
+<link
+  rel="stylesheet"
+  href="/path/to/my.css"
+  media="print"
+  onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="/path/to/my.css" /></noscript>
 ```
 
 The downside with this approach is the flash of unstyled text (FOUT.) The simplist way to address this is by inlining CSS that is required for any content that is rendered above the fold, or what you see in the browser viewport before scrolling. These styles will improve perceived performance as the CSS does not require a file request.
 
 ```html
 <style type="text/css">
-// Insert your CSS here
+  // Insert your CSS here
 </style>
 ```
 
@@ -73,6 +77,6 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize in
 - Download everything
 - Use uncompressed media files
 
-## See also:
+## See also
 
 - <https://github.com/filamentgroup/loadCSS>

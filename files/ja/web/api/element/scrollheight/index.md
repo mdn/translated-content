@@ -1,25 +1,22 @@
 ---
-title: Element.scrollHeight
+title: "Element: scrollHeight プロパティ"
+short-title: scrollHeight
 slug: Web/API/Element/scrollHeight
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.scrollHeight`** は読み取り専用のプロパティで、あふれて画面上に表示されない部分を含めた、要素の中身の高さの寸法です。
+**`Element.scrollHeight`** は読み取り専用のプロパティで、あふれて画面上に表示されない部分を含めた、要素の内容の高さの寸法です。
 
-![](scrollheight.png)
+![ユーザーのビューポートは、padding-top, border-top, border-bottom, padding-bottom とラベル付けされた 4 つの領域を持つ要素です。スクロールの高さは、コンテナーの padding-top から padding bottom の終わりまでで、ビューポートの上端と下端をはるかに超えています。](scrollheight.png)
 
 `scrollHeight` の値は、垂直スクロールバーを使用せずにすべてのコンテンツをビューポート内に収めるために要素に必要な最小の高さに等しくなります。高さは {{domxref("Element.clientHeight", "clientHeight")}} と同じ方法で測定されます。要素のパディングは含みますが、境界線、マージン、 (もしあれば) 水平スクロールバーは含みません。これには {{cssxref("::before")}} または {{cssxref("::after")}} のような擬似要素の高さを含むことがあります。要素の内容が垂直スクロールバーを表示することなく収まる場合、その `scrollHeight` は {{domxref("Element.clientHeight", "clientHeight")}} と等しくなります。
 
 > **メモ:** このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("Element.getBoundingClientRect()") }} を使用してください。
 
-## 構文
-
-```js
-elemScrollHeight = element.scrollHeight;
-```
-
-### 値
+## 値
 
 整数値で、要素の scrollHeight ピクセル値に対応します。
 
@@ -30,13 +27,13 @@ elemScrollHeight = element.scrollHeight;
 `scrollTop` は丸められない数値で、 `scrollHeight` と `clientHeight` は丸められます。したがって、スクロール領域が下までスクロールされているかどうかを判断する唯一の方法は、スクロール量が何らかの閾値 (この例では `1`) に十分に近いかどうかを確認することです。
 
 ```js
-Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1;
 ```
 
 次の例は動作しません。 `scrollTop` が小数を含む可能性があるからです。
 
 ```js
-element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
+element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight;
 ```
 
 ### 要素がスクロール可能かどうかを判定
@@ -44,15 +41,15 @@ element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 コンテナーは、スクロールしないがあふれる子要素を持つ場合、次の条件式はコンテナーがスクロールできるかどうかを判定します。
 
 ```js
-window.getComputedStyle(element).overflowY === 'visible'
-window.getComputedStyle(element).overflowY !== 'hidden'
+window.getComputedStyle(element).overflowY === "visible";
+window.getComputedStyle(element).overflowY !== "hidden";
 ```
 
 ## 例
 
 ### ユーザーがテキストを読んだかどうかをチェック
 
-{{domxref("GlobalEventHandlers/onscroll", "onscroll")}} イベントに関連付けることで、この等価性はユーザーがテキストを読んだかどうかを判断するのに役立ちます ({{domxref("element.scrollTop")}} および {{domxref("element.clientHeight")}} プロパティも参照してください）。
+{{domxref("Element.scroll_event", "scroll")}} イベントに関連付けることで、この等価性はユーザーがテキストを読んだかどうかを判断するのに役立ちます ({{domxref("element.scrollTop")}} および {{domxref("element.clientHeight")}} プロパティも参照してください）。
 
 以下のデモにあるチェックボックスは無効になっており、テキストエリアの内容が最後までスクロールするまでチェックして同意を表すことができなくなっています。
 
@@ -61,7 +58,8 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 ```html
 <form name="registration">
   <p>
-    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+    <textarea id="rules">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -73,7 +71,7 @@ dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam c
 luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem
 sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue
 turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum.
-Fusce in arcu arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
+Fusce in arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
 ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse
 platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat
 consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et
@@ -102,14 +100,14 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   border-radius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7FDF55 solid;
+  border: 2px #7fdf55 solid;
 }
 
 #rules {
   width: 600px;
   height: 130px;
   padding: 5px;
-  border: #2A9F00 solid 2px;
+  border: #2a9f00 solid 2px;
   border-radius: 5px;
 }
 ```
@@ -117,17 +115,22 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 #### JavaScript
 
 ```js
-function checkReading () {
+function checkReading() {
   if (checkReading.read) {
     return;
   }
-  checkReading.read = this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+  checkReading.read =
+    this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
+  document.registration.accept.disabled = document.getElementById(
+    "nextstep",
+  ).disabled = !checkReading.read;
+  checkReading.noticeBox.textContent = checkReading.read
+    ? "Thank you."
+    : "Please, scroll and read the following text.";
 }
 
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
+onload = () => {
+  const oToBeRead = document.getElementById("rules");
   checkReading.noticeBox = document.createElement("span");
   document.registration.accept.checked = false;
   checkReading.noticeBox.id = "notice";
@@ -135,7 +138,7 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}
+};
 ```
 
 ### 結果
@@ -152,9 +155,6 @@ onload = function () {
 
 ## 関連情報
 
-- [MSDN:
-  Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
-  9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
 - [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

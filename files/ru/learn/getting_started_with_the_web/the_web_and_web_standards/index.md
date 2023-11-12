@@ -1,12 +1,8 @@
 ---
 title: Всемирная сеть (веб) и веб-стандарты
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-tags:
-  - Веб-стандарты
-  - Изучение
-translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
-original_slug: Learn/Getting_started_with_the_web/Веб_и_веб_стандарты
 ---
+
 {{learnsidebar}}
 
 Статья содержит общую информацию о всемирной сети (the Web) — откуда она взялась, что такое веб-стандарты, как они связанны, почему "веб разработчик" отличный карьерный выбор и чему полезному можно научиться изучая этот курс.
@@ -35,13 +31,13 @@ original_slug: Learn/Getting_started_with_the_web/Веб_и_веб_станда�
 
 Веб-стандарты создаются организациями стандартов — институтами, которые приглашают группы людей из различных компаний для согласования того, как технологии должны применяться наиболее эффективным образом в рассматриваемых случаях. Самая известная организация веб-стандартов - W3C. Существуют и другие: [WHATWG](https://whatwg.org/) (ответственны за модернизацию языка html), [ECMA](https://www.ecma-international.org/) (выпускают стандарты языка ECMAScript, на котором построен JavaScript), [Khronos](https://www.khronos.org/) (создают технологии для 3D графики, например WebGL).
 
-### "Open" standards
+### "Открытые" стандарты
 
-One of the key aspects of web standards, which TimBL and the W3C agreed on from the start, is that the web (and web technologies) should be free to both contribute and use, and not encumbered by patents/licensing. Therefore anyone can write the code to build a website for free, and anyone can contribute to the standards creation process, where the specs are written.
+Один из ключевых аспектов веб-стандартов, который TimBL и W3C согласовали с самого начала, заключается в том, что сеть (и веб-технологии) должны быть свободны как для внесения вклада, так и для использования, и не должны быть обременены патентами/лицензированием. Таким образом, любой может бесплатно написать код для создания своего веб-сайта, и любой может внести свой вклад в процесс создания стандартов, в которых прописываются спецификации.
 
-Because web technologies are created openly, in collaboration between many different companies, it means that no one company gets to control them, which is a really good thing. You wouldn't want a single company suddenly deciding to put the entire web behind a paywall, or releasing a new version of HTML that everyone has to buy to continue making web sites, or worse still, just deciding they aren't interested any more and just turning it off.
+Поскольку веб-технологии создаются открыто, в сотрудничестве множества различных компаний, это означает, что ни одна компания не может их контролировать, и это действительно хорошо. Вряд ли бы вам понравилось, если бы какая-то одна компания внезапно решила поставить всю сеть под платный доступ или выпустила новую версию HTML, которую каждый должен купить, чтобы продолжать создавать веб-сайты, или, что еще хуже, в какой-то момент решила, что она больше не заинтересована в технологии HTML и просто отключила бы её.
 
-This allows the web to remain a freely-available public resource.
+Это позволяет интернету оставаться свободно доступным общественным ресурсом.
 
 ### Не разорви сеть
 
@@ -92,7 +88,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
   <p>This is a paragraph of text.</p>
 
-  <img src="cat.jpg" alt="A picture of my cat">
+  <img src="cat.jpg" alt="A picture of my cat" />
   ```
 
   If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
@@ -100,7 +96,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 - Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML, for example setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
 
   ```css
-  p  {
+  p {
     color: red;
   }
   ```
@@ -110,8 +106,8 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 - **JavaScript** is the programming language we use to add interactivity to web sites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript will store a reference to our paragraph in memory and change the text inside it:
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'We changed the text!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "We changed the text!";
   ```
 
   In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality

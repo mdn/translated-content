@@ -15,7 +15,7 @@ flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이�
         HTML의 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 입문서</a
         >)와 CSS 작동 방식에 대한 개념(<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 입문서</a
         >를 공부하세요.)
       </td>
@@ -320,7 +320,7 @@ article:nth-of-type(3) {
 
 ```css
 article:nth-of-type(3) div:first-child {
-  flex:1 100px;
+  flex: 1 100px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -341,7 +341,7 @@ button {
 
 ## 크로스 브라우저 호환성
 
-flexbox 지원은 파이어폭스, 크롬, 오페라, 마이크로소프트 에지 및 인터넷 익스플로러 11, 안드로이드 및 iOS 최신 버전 등 대부분의 신형 브라우저에서 사용할 수 있습니다. 그러나 flexbox를 지원하지 않는 (또는 지원하지만, 실제로 구식 버전의 flexbox를 지원하는) 구형 브라우저 사용자가 여전히 존재한다는 것을 알아야 합니다.
+flexbox 지원은 Firefox, 크롬, 오페라, 마이크로소프트 에지 및 인터넷 익스플로러 11, 안드로이드 및 iOS 최신 버전 등 대부분의 신형 브라우저에서 사용할 수 있습니다. 그러나 flexbox를 지원하지 않는 (또는 지원하지만, 실제로 구식 버전의 flexbox를 지원하는) 구형 브라우저 사용자가 여전히 존재한다는 것을 알아야 합니다.
 
 여러분이 단지 기술을 익히고 실험할 뿐이라면 호환성 문제는 그다지 중요하지 않습니다; 그러나 만약 여러분이 실제 웹사이트에서 flexbox의 사용을 고려하고 있다면, 여러분은 (구형 브라우저에서) 테스트를 수행해야 하고, 최대한 다양한 브라우저 사용자들이 수용할만한 사이트 방문 경험을 보장할 필요가 있습니다.
 
@@ -354,18 +354,3 @@ flexbox는 몇몇 CSS 기능보다 다소 까다롭습니다. 예를 들어 브�
 이로써 flexbox의 기본 안내서를 마감합니다. 재미있는 경험이었기 바라며, 당신이 학습 진도를 더해 갈수록 flexbox를 자유자제로 다룰 수 있게 될 겁니다. 다음으로 CSS 레이아웃의 또 다른 중요한 측면인 CSS grid를 살펴볼 것입니다.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [flexbox](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [grid](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

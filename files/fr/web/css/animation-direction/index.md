@@ -1,11 +1,6 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/animation-direction
 ---
 
 {{CSSRef}}
@@ -91,9 +86,9 @@ p {
 
 ```html
 <p class="aller">
-  La Chenille et Alice se considérèrent un instant en silence.
-  Enfin la Chenille sortit le houka de sa bouche, et lui adressa
-  la parole d’une voix endormie et traînante.
+  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
+  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
+  traînante.
 </p>
 
 <p class="retour">

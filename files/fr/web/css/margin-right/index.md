@@ -1,11 +1,6 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/margin-right
 ---
 
 {{CSSRef}}
@@ -21,9 +16,9 @@ Les marges des côtés droit et gauche de deux boîtes adjacentes peuvent fusion
 ```css
 /* Valeur de longueur */
 /* Type <length>      */
-margin-right: 20px;        /* Une longueur absolue */
-margin-right: 1em;         /* Une longueur relative à la taille du texte */
-margin-right: 5%;          /* Une marge relative à la largeur
+margin-right: 20px; /* Une longueur absolue */
+margin-right: 1em; /* Une longueur relative à la taille du texte */
+margin-right: 5%; /* Une marge relative à la largeur
                            du bloc englobant */
 
 /* Valeur avec un mot-clé */
@@ -160,20 +155,19 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 ### HTML
 
 ```html
-<p>Un grand rosier se trouvait à l’entrée du jardin ;
-   les roses qu’il portait étaient blanches, mais
-   trois jardiniers étaient en train de les peindre
-   en rouge.
+<p>
+  Un grand rosier se trouvait à l’entrée du jardin ; les roses qu’il portait
+  étaient blanches, mais trois jardiniers étaient en train de les peindre en
+  rouge.
 </p>
-<p class=exemple>
-  Alice s’avança pour les regarder, et, au moment où
-  elle approchait, elle en entendit un qui disait&nbsp;:
-  «&nbsp;Fais donc attention, Cinq, et ne m’éclabousse pas
-  ainsi avec ta peinture.&nbsp;»
+<p class="exemple">
+  Alice s’avança pour les regarder, et, au moment où elle approchait, elle en
+  entendit un qui disait&nbsp;: «&nbsp;Fais donc attention, Cinq, et ne
+  m’éclabousse pas ainsi avec ta peinture.&nbsp;»
 </p>
 <p>
-  «&nbsp;Ce n’est pas de ma faute,&nbsp;» dit Cinq d’un ton
-  bourru, «&nbsp;c’est Sept qui m’a poussé le coude.&nbsp;»
+  «&nbsp;Ce n’est pas de ma faute,&nbsp;» dit Cinq d’un ton bourru, «&nbsp;c’est
+  Sept qui m’a poussé le coude.&nbsp;»
 </p>
 ```
 

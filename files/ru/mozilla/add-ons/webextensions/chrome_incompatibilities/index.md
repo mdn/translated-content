@@ -1,8 +1,8 @@
 ---
 title: Chrome incompatibilities
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
 {{AddonSidebar}}
 
 Веб расширения разработаны с поддержкой совместимости с расширениями Chrome и Оперы на сколько это возможно. Расширения, написанные для этих браузеров, должны работать в Firefox с минимальными изменениями.
@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 
 ## manifest.json функция
 
-### Полностью поддерживаемые ключи:
+### Полностью поддерживаемые ключи
 
 - [`applications`](/en-US/Add-ons/WebExtensions/manifest.json/applications)
 - [`browser_action`](/en-US/Add-ons/WebExtensions/manifest.json/browser_action)
@@ -28,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 - [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version)
 - [`web_accessible_resources`](/en-US/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
-### Частично поддерживаемые ключи:
+### Частично поддерживаемые ключи
 
 #### background
 
@@ -193,7 +193,7 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### tabs
 
 - Firefox treats `highlighted` and `active` as the same, since Firefox has no concept of selecting multiple tabs.
-- In Firefox, you need the `tabs` [permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) if you want to include `url` in the `queryInfo` parameter to [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query).
+- In Firefox, you need the `tabs` [permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) if you want to include `url` in the `queryInfo` parameter to [`tabs.query()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query).
 - In Firefox, relative URLs passed into `tabs.executeScript()` or `tabs.insertCSS()` are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the add-on's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the add-on's root, like this:
 
   ```html

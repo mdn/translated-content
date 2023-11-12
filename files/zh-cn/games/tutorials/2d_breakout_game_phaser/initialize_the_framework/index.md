@@ -16,24 +16,31 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成的{{htmlelement("canvas")}} 元素上。拿起你最爱的编辑器，挑一个好目录，创建一个 HTML 文档，存成 index.html，然后写下下面的代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Phaser Workshop - lesson 01: Initialize the framework</title>
-    <style>* { padding: 0; margin: 0; }</style>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
     <script src="js/phaser.min.js"></script>
-</head>
-<body>
-<script>
-    var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
-      preload: preload, create: create, update: update
-    });
-    function preload() {}
-    function create() {}
-    function update() {}
-</script>
-</body>
+  </head>
+  <body>
+    <script>
+      var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
+        preload: preload,
+        create: create,
+        update: update,
+      });
+      function preload() {}
+      function create() {}
+      function update() {}
+    </script>
+  </body>
 </html>
 ```
 
@@ -48,7 +55,7 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 
 ## 捋一捋我们干了些啥
 
-这个时候我们在 {{htmlelement("header")}} 里定义了 {{htmlelement("charset")}} ，{{htmlelement("title")}} 和一些基础的 css 来重置默认的 margin 和 padding. 我们也用 {{htmlelement("script")}} 标签向页面引入了 Phaser 源码。{{htmlelement("body ")}} 里也有一个 {{htmlelement("script")}} 标签，我们将在里面写 JavaScript 代码来渲染和控制游戏。
+这个时候我们在 {{htmlelement("header")}} 里定义了 `charset`、{{htmlelement("title")}} 和一些基础的 css 来重置默认的 margin 和 padding。我们也用 {{htmlelement("script")}} 标签向页面引入了 Phaser 源码。{{htmlelement("body ")}} 里也有一个 {{htmlelement("script")}} 标签，我们将在里面写 JavaScript 代码来渲染和控制游戏。
 
 {{htmlelement("canvas")}} 元素是由框架自动生成的。我们是通过 `Phaser.Game` 创建一个对象并赋给了 game 变量来完成初始化的。参数的含义是：
 

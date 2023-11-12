@@ -15,12 +15,12 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 如果想要完全掌控你發佈的網站，那你可能需要花錢買：
 
-- 主機：跟主機租借商（hosting company）的[網路伺服器](/zh-TW/docs/Learn/Common_questions/What_is_a_web_server)（web server）租一個放置檔案的空間。你把你建置的網頁檔案放到這個空間中，然後想要連結到網頁的人就能透過網頁伺服器連結到你的網站。
-- [網域名稱](/zh-TW/Learn/Understanding_domain_names)(domain name)：人們可以透過這個獨特的網址來尋找你的網站，像是 `http://www.mozilla.org` 或 `http://www.bbc.co.uk`。你需要向**網域名稱註冊商(domain registrar)**租借網域名稱。
+- 主機：跟主機租借商（hosting company）的[網路伺服器](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)（web server）租一個放置檔案的空間。你把你建置的網頁檔案放到這個空間中，然後想要連結到網頁的人就能透過網頁伺服器連結到你的網站。
+- [網域名稱](/zh-TW/docs/Learn/Understanding_domain_names)(domain name)：人們可以透過這個獨特的網址來尋找你的網站，像是 `http://www.mozilla.org` 或 `http://www.bbc.co.uk`。你需要向**網域名稱註冊商**（domain registrar）租借網域名稱。
 
 許多專業的網站是用這個方法發佈的。
 
-除此之外，你還會需要一個 {{Glossary("FTP", "File Transfer Protocol (FTP)")}} 程式（點選[How much does it cost: software](/zh-TW/Learn/How_much_does_it_cost#Software) 來取得更多資訊），這樣才能真正的把你建置的網頁檔案傳達給伺服器。FTP 程式很廣泛，但一般來說，你可以用你公司提供的資訊，像是使用者名稱、密碼以及 host name 來登入你的網頁伺服器，它就會以兩個視窗的形式分別顯示你電腦裡的檔案和你網頁伺服器上的檔案，然後你就可以移動你的檔案。
+除此之外，你還會需要一個 {{Glossary("FTP", "File Transfer Protocol (FTP)")}} 程式（點選 [How much does it cost: software](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#software) 來取得更多資訊），這樣才能真正的把你建置的網頁檔案傳達給伺服器。FTP 程式很廣泛，但一般來說，你可以用你公司提供的資訊，像是使用者名稱、密碼以及 host name 來登入你的網頁伺服器，它就會以兩個視窗的形式分別顯示你電腦裡的檔案和你網頁伺服器上的檔案，然後你就可以移動你的檔案。
 
 ![](ftp.jpg)
 
@@ -59,35 +59,24 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 1. 首先註冊 [GitHub](https://github.com/) 並驗證電子郵件。
 2. 接著針對要上傳的檔案[建立一個 repository](https://github.com/new)。
-3. 在頁面的 _Repository name_ 標籤輸入 _username_.github.io，_username_ 是指你的用戶名。例如我們的好朋友 bobsmith 就會輸入 _bobsmith.github.io_.
-    另外，請勾選 _Initialize this repository with a README_ 後點選 _Create repository_。![](github-create-repo.png)
+3. 在頁面的 _Repository name_ 標籤輸入 _username_.github.io，_username_ 是指你的用戶名。例如我們的好朋友 bobsmith 就會輸入 _bobsmith.github.io_。
+   另外，請勾選 _Initialize this repository with a README_ 後點選 _Create repository_。![](github-create-repo.png)
 4. 之後，把網站內容拖曳到 repository 目錄，並勾選 _Commit changes_。
 
-    > **備註：** 請確定目錄內有 _index.html_ 檔案。
+   > **備註：** 請確定目錄內有 _index.html_ 檔案。
 
 5. 現在讓瀏覽器連到 _username_.github.io 來看看你的網站。例如你的用戶名字是 _chrisdavidmills_，就連到 [chrisdavidmills.github.io](http://chrisdavidmills.github.io/)。
 
-    > **備註：** 讓網站上線需要一點時間。如果網站沒有馬上運行，稍等一段時間後再試一次。
+   > **備註：** 讓網站上線需要一點時間。如果網站沒有馬上運行，稍等一段時間後再試一次。
 
 想多理解的話，請參考 [GitHub Pages Help](https://help.github.com/categories/github-pages-basics/).
 
 ## 參閱
 
-- [何謂網路伺服器](/zh-TW/docs/Learn/Common_questions/What_is_a_web_server)
-- [Understanding domain names](/zh-TW/Learn/Understanding_domain_names)
-- [How much does it cost to do something on the web?](/zh-TW/Learn/How_much_does_it_cost)
+- [何謂網路伺服器](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [Understanding domain names](/zh-TW/docs/Learn/Understanding_domain_names)
+- [How much does it cost to do something on the web?](/zh-TW/docs/Learn/How_much_does_it_cost)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.
 - [Cheap or Free Static Website Hosting](http://alignedleft.com/resources/cheap-web-hosting) by Scott Murray has some useful ideas on available services.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## 在本模組內
-
-- [安裝基本軟體](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [你的網站看起來會是什麼樣子？](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [與各式各樣檔案打交道](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基礎](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基本](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基礎](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [網路的運作方式](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

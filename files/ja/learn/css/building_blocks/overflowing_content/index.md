@@ -5,7 +5,7 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
-このレッスンでは、CSS のもう 1 つの重要な概念である **オーバーフロー（overflow）を見ていきます。オーバーフローは、ボックス内にコンテンツが収まりきらないときに発生します。このガイドでは、その詳細とそれらについてどのように対処するかを学びます。
+このレッスンでは、CSS のもう 1 つの重要な概念である オーバーフロー（overflow）を見ていきます。オーバーフローは、ボックス内にコンテンツが収まりきらないときに発生します。このガイドでは、その詳細とそれらについてどのように対処するかを学びます。
 
 | 前提条件: | 基本的なコンピューターリテラシー、[基本的なソフトウェアがインストールされている](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)こと、[ファイルの扱い](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)）および CSS に関するアイデア（[CSS の第一歩](/ja/docs/Learn/CSS/First_steps)）に関する基本的な知識を得ている。 |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,24 +88,3 @@ CSS には **ブロック整形コンテキスト** (BFC = Block Formatting Cont
 この短いレッスンではオーバーフローの概念を紹介しました。CSS はオーバーフローしたコンテンツが見えなくなることによる、データ損失の回避を試みることを理解しました。潜在的なオーバーフローを管理できること、また、問題のあるオーバーフローを引き起こしてしまわないかを確認する必要があることもわかりました。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
-
-## このモジュール
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)
