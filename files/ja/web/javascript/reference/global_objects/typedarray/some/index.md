@@ -29,6 +29,7 @@ some(callbackFn, thisArg)
       - : 現在処理されている型付き配列の要素のインデックスです。
     - `array`
       - : `some()` が実行されている型付き配列です。
+
 - `thisArg` {{optional_inline}}
   - : `callbackFn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
