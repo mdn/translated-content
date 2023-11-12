@@ -5,7 +5,7 @@ slug: Web/CSS/::after
 
 {{CSSRef}}
 
-En CSS, **`::after`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le dernier enfant de l'élément sélectionné. Il est souvent utilisé pour ajouter du contenu cosmétique à un élément, en utilisant la propriété CSS {{cssxref("content")}}. Par défaut, ce contenu est de type « [en ligne](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_types_de_boîte) ».
+En CSS, **`::after`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le dernier enfant de l'élément sélectionné. Il est souvent utilisé pour ajouter du contenu esthétique à un élément, en utilisant la propriété CSS {{cssxref("content")}}. Par défaut, ce contenu est de type « [en ligne](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_types_de_boîte) » {{cssxref("inline")}}.
 
 ```css
 /* Ajoute une flèche après les liens */
