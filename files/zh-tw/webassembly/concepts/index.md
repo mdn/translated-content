@@ -42,7 +42,7 @@ WebAssembly 是一種有別於 JavaScript 的語言，但它并不是一種替�
 - JavaScript 是一種高階語言，靈活且足夠强大，能撰寫 Web 應用程式。他有很多郵件，可以動態型別，不需要編譯步驟，而且有著巨大的生態提供許多强大的框架、函式庫與其他工具。
 - WebAssembly 是一種低階語言，如組合語言一般，有著緊凑的二進制格式，有著近原生的執行效能且提供讓許多低階記憶體管理模型的語言來編譯得到目標檔，使之可以運行在 Web 上。（注意到 WebAssembly 有 [高階目標（high-level goal）](https://webassembly.org/docs/high-level-goals/)，來支援具備記憶體回收模型之語言。）
 
-- 隨著 WebAssembly 出現在瀏覽器，我們稍早提及的虛擬機現在要加載並運行兩種程式碼—— Javascript 與 WebAssembly。
+隨著 WebAssembly 出現在瀏覽器，我們稍早提及的虛擬機現在要加載並運行兩種程式碼——Javascript 與 WebAssembly。
 
 按照需求，兩種不同形態的語言要可以彼此互相呼叫。[WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/JavaScript_interface) 用 JavaScript 函式打包了輸出的 WebAssembly 程式碼，讓他可以被正常的呼叫。且 WebAssembly 可以被載入與同步的呼叫 JavaScript 函式。事實上，一個基本的 WebAssembly 單元被稱之爲模組，然後 WebAssembly 模組和 ES 模組在很多情況下是對稱的。
 
