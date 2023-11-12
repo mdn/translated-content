@@ -9,7 +9,7 @@ slug: Web/API/Notifications_API
 
 ## 概念和用法
 
-在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要授予当前源的权限以显示系统通知，这通常在应用或站点初始化时，使用{{domxref("Notification.requestPermission()")}} 方法来完成。这应该响应用户交互来完成，例如单击按钮，例如：
+在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要授予当前源的权限以显示系统通知，这通常在应用或站点初始化时，使用 {{domxref("Notification.requestPermission()")}} 方法来完成。这应该响应用户交互来完成，例如单击按钮，例如：
 
 ```js
 btn.addEventListener("click", () => {
@@ -44,7 +44,7 @@ btn.addEventListener("click", () => {
 - {{domxref("ServiceWorkerRegistration")}}
   - : 该对象包含 {{domxref("ServiceWorkerRegistration.showNotification()")}} 和 {{domxref("ServiceWorkerRegistration.getNotifications()")}} 方法，用于控制通知的显示。
 - {{domxref("ServiceWorkerGlobalScope")}}
-  - : 该对象包含 {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} 事件处理函数，用于通知被点击的时候触发绑定的事件处理函数。
+  - : 该对象包含 {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} 事件处理函数，用于通知被点击的时候触发绑定的事件处理函数。
 - {{domxref("NotificationEvent")}}
   - : 该对象是功能明确的事件对象，表示一个被触发的通知事件，继承自 {{domxref("ExtendableEvent")}}。
 
