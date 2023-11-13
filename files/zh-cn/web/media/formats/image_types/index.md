@@ -341,7 +341,7 @@ Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，�
     <tr>
       <th scope="row">授权</th>
       <td>
-        免版税。有关许可信息，请访问 http://aomedia.org/license/ 。
+        免版税。有关许可信息，请访问<a href="https://aomedia.org/license/">版权页面</a>。
       </td>
     </tr>
   </tbody>
