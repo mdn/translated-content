@@ -52,7 +52,7 @@ slug: Web/Media/Formats/Image_types
       <td><code>image/gif</code></td>
       <td><code>.gif</code></td>
       <td>
-        是简单图像<em>和</em>动画的不错选择。无损和有索引的静态图像首选 PNG，动画序列可考虑 WebP、AVIF 或 APNG。<br />
+        是简单图像和动画的不错选择。无损<em>和</em>有索引的静态图像首选 PNG，动画序列可考虑 WebP、AVIF 或 APNG。<br />
         <strong>以下浏览器支持</strong>：Chrome、Edge、Firefox、IE、Opera、Safari。
       </td>
     </tr>
