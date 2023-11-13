@@ -11,6 +11,8 @@ The **`fill-rule`** этот атрибут представления, форм
 
 Как атрибут представления, он может быть применён к следующим восьми элементам:: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -40,7 +42,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample('Пример', '100%', 200)}}
 
 ## Примечания по использованию
 
