@@ -5,7 +5,7 @@ slug: Web/Media/Formats/Image_types
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
-在本指南中，我们将介绍 web 浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助你为你的网站选择最合适的图像格式。
+在本指南中，我们将介绍 web 浏览器普遍支持的图像文件类型，并提供一些关于它们的信息与见解，帮助你为你的网站选择最合适的图像格式。
 
 ## 常见图像文件类型
 
@@ -41,7 +41,7 @@ slug: Web/Media/Formats/Image_types
       <td><code>.avif</code></td>
       <td>
         <p>
-          由于其性能高，且无需版税，是图像和动画图像的理想选择。与 PNG 或 JPEG 相比，它的压缩效果更好，支持更高的色深、动画帧、透明度等。请注意，在使用 AVIF 时，应将回退功能加入到浏览器支持更好的格式中（也就是说，要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> 元素）。<br />
+          由于其性能高，且无需版税，是图像和动画图像的理想选择。与 PNG 或 JPEG 相比，它的压缩效果更好，支持更高的色深、动画帧、透明度等。请注意，在使用 AVIF 时，应包含浏览器支持更好的回退格式（也就是说，要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> 元素）。<br />
           <strong>以下浏览器支持</strong>：Chrome、Firefox（只支持静态图，动态图尚未实现）、Opera、Safari。
         </p>
       </td>
@@ -258,7 +258,7 @@ APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指
 
 AV1 图像文件格式（AVIF）是一种功能强大、开源、免版税的文件格式，它在高效图像文件格式（HEIF）容器中对 AV1 比特流进行编码。
 
-> **备注：** AVIF 有可能成为在 web 内容中共享图像的“下一件大事”。它具有最先进的功能和性能，却没有阻碍同类替代产品发展的复杂许可和专利使用费的束缚。
+> **备注：** AVIF 有可能成为在 web 内容中共享图像的“下一件大事”。它具有最先进的特性和性能，却没有阻碍同类替代产品发展的复杂许可和专利使用费的束缚。
 
 AV1 是一种编码格式，最初设计用于在互联网上传输视频。该格式得益于近年来视频编码技术的长足进步，并有可能受益于对硬件渲染的相关支持。不过，在某些情况下它也有缺点，因为视频和图像编码有一些不同的要求。
 
@@ -274,8 +274,7 @@ AV1 是一种编码格式，最初设计用于在互联网上传输视频。该�
 
 AVIF 不支持渐进式渲染，因此文件必须完全下载后才能显示。这通常对真实世界的用户体验影响不大，因为 AVIF 文件比同等的 JPEG 或 PNG 文件小得多，因此下载和显示的速度也快得多。文件大小越大，影响就越大，因此应考虑使用支持渐进式渲染的格式。
 
-Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，但不支持动画），但 Edge 和 IE 不支持。
-由于支持尚不全面（而且没有什么历史深度），应使用 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)（或其他方法）提供 [WebP](#webp_图像)、[JPEG](#jpeg_联合图像专家小组图像) 或 [PNG](#png_便携式网络图形) 格式的后备。
+Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，但不支持动画），但 Edge 和 IE 不支持。由于支持尚不全面（而且没有什么历史深度），应使用 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)（或其他方法）提供 [WebP](#webp_图像)、[JPEG](#jpeg_联合图像专家小组图像) 或 [PNG](#png_便携式网络图形) 格式的回退。
 
 <table class="standard-table">
   <tbody>
@@ -303,7 +302,7 @@ Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，�
         Chrome 85、Opera 71、Firefox 93 和 Safari 16.1
         <ul>
           <li>
-            Firefox 93 支持静态图像，色彩空间支持全色和有限范围色彩，图像变换支持镜像和旋转。偏好设置 <a href="/zh-CN/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness">image.avif.compliance_strictness</a> 可用于调整符合规范的严格程度。不支持动态图像。
+            Firefox 93 支持静态图像，色彩空间支持全色和有限范围色彩，图像变换支持镜像和旋转。偏好设置 <a href="/zh-CN/docs/Mozilla/Firefox/Experimental_features#avif_严格合规性">image.avif.compliance_strictness</a> 可用于调整符合规范的严格程度。不支持动态图像。
           </li>
           <li>
             Firefox 77~92 版本需要将首选项 <code>image.avif.enable</code> 设置为 <code>true</code>。更早期版本仅提供基本支持。
