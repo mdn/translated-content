@@ -20,12 +20,6 @@ Algumas operações são restritas para conteúdos de mesma origem, e essa restr
 | `http://example.com` `http://www.example.com` `http://myapp.example.com` | Hosts diferentes    |
 | `http://example.com` `http://example.com:8080`                           | Portas diferentes   |
 
-## Especificações
-
-| Especificação                                    | Status                   | Comentário |
-| ------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', '#origin', 'origin')}} | {{Spec2('HTML WHATWG')}} |            |
-
 ## Aprenda mais
 
 Veja [Same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy) para mais informações.

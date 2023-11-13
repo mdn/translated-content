@@ -113,7 +113,7 @@ btn.addEventListener("click", () => {
 
 {{domxref("FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。
 
-该对象的使用详见[使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)，下面是两个示例：
+该对象的使用详见[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)，下面是两个示例：
 
 #### 使用一个独立的 FormData 对象
 

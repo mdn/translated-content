@@ -3,6 +3,8 @@ title: Flexbox
 slug: Glossary/Flexbox
 ---
 
+{{GlossarySidebar}}
+
 Flexbox es como se llama comúnmente a [Módulo de diseño de caja flexible CSS](https://www.w3.org/TR/css-flexbox-1/), un modelo de diseño para mostrar elementos en una sola dimensión, como una fila o como una columna.
 
 En la especificación, flexbox se describe como un modelo de diseño para la interfaz de usuario. La característica clave de Flexbox es el hecho de que los elementos en un diseño flexible pueden crecer y reducirse. El espacio se puede asignar a los mismos elementos, o distribuidos entre o alrededor de los elementos.
