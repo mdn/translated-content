@@ -24,7 +24,7 @@ slug: Web/Media/Formats/Image_types
   <tbody>
     <tr>
       <th scope="row">
-        <a href="#APNG_动态可移植网络图形">APNG</a>
+        <a href="#apng_动态可移植网络图形">APNG</a>
       </th>
       <th scope="row">动态可移植网络图形</th>
       <td><code>image/apng</code></td>
@@ -35,7 +35,7 @@ slug: Web/Media/Formats/Image_types
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#AVIF_图像">AVIF</a></th>
+      <th scope="row"><a href="#avif_图像">AVIF</a></th>
       <th scope="row">AV1 图像档案格式</th>
       <td><code>image/avif</code></td>
       <td><code>.avif</code></td>
@@ -47,7 +47,7 @@ slug: Web/Media/Formats/Image_types
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#GIF_图像互换格式">GIF</a></th>
+      <th scope="row"><a href="#gif_图像互换格式">GIF</a></th>
       <th scope="row">图像互换格式</th>
       <td><code>image/gif</code></td>
       <td><code>.gif</code></td>
@@ -58,7 +58,7 @@ slug: Web/Media/Formats/Image_types
     </tr>
     <tr>
       <th scope="row">
-        <a href="#JPEG_联合图像专家小组图像">JPEG</a>
+        <a href="#jpeg_联合图像专家小组图像">JPEG</a>
       </th>
       <th scope="row">联合图像专家小组图像</th>
       <td><code>image/jpeg</code></td>
@@ -73,7 +73,7 @@ slug: Web/Media/Formats/Image_types
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#PNG_便携式网络图形">PNG</a></th>
+      <th scope="row"><a href="#png_便携式网络图形">PNG</a></th>
       <th scope="row">便携式网络图形</th>
       <td><code>image/png</code></td>
       <td><code>.png</code></td>
@@ -85,7 +85,7 @@ slug: Web/Media/Formats/Image_types
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#SVG_可缩放矢量图形">SVG</a></th>
+      <th scope="row"><a href="#svg_可缩放矢量图形">SVG</a></th>
       <th scope="row">可缩放矢量图形</th>
       <td><code>image/svg+xml</code></td>
       <td><code>.svg</code></td>
@@ -95,7 +95,7 @@ slug: Web/Media/Formats/Image_types
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#WebP_图像">WebP</a></th>
+      <th scope="row"><a href="#webp_图像">WebP</a></th>
       <th scope="row">Web 图像格式</th>
       <td><code>image/webp</code></td>
       <td><code>.webp</code></td>
@@ -123,21 +123,21 @@ slug: Web/Media/Formats/Image_types
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a href="#BMP_位图文件">BMP</a></th>
+      <th scope="row"><a href="#bmp_位图文件">BMP</a></th>
       <th scope="row">位图文件</th>
       <td><code>image/bmp</code></td>
       <td><code>.bmp</code></td>
       <td>Chrome、Edge、Firefox、IE、Opera、Safari</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#ICO_Microsoft_Windows_图标">ICO</a></th>
+      <th scope="row"><a href="#ico_Microsoft_Windows_图标">ICO</a></th>
       <th scope="row">Microsoft 图标</th>
       <td><code>image/x-icon</code></td>
       <td><code>.ico</code>、<code>.cur</code></td>
       <td>Chrome、Edge、Firefox、IE、Opera、Safari</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#TIFF_标签图像文件格式">TIFF</a></th>
+      <th scope="row"><a href="#tiff_标签图像文件格式">TIFF</a></th>
       <th scope="row">标签图像文件格式</th>
       <td><code>image/tiff</code></td>
       <td><code>.tif</code>、<code>.tiff</code></td>
