@@ -12,7 +12,7 @@ WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此
 不过，Chrome 浏览器（以及基于 Chromium 的浏览器）、Firefox 浏览器和 Safari 浏览器之间存在很大差异。特别是：
 
 - 不同浏览器对 WebExtension API 的支持各不相同。详情请参阅[浏览器对 JavaScript API 的支持](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)。
-- 不同浏览器对 `manifest.json` 键的支持有所不同。请参阅 [`manifest.json``](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) 页面上的[“浏览器兼容性”部分](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)了解更多详情。
+- 不同浏览器对 `manifest.json` 键的支持有所不同。请参阅 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json#浏览器兼容性) 页面上的[“浏览器兼容性”部分](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)了解更多详情。
 - 扩展 API 命名空间：
 
   - **在 Firefox 和 Safari 中**：扩展 API 在 `browser` 命名空间下访问。为了与 Chrome 浏览器兼容，还支持 `chrome` 命名空间。
