@@ -49,7 +49,7 @@ svg {
 
 ### Глобальные Атрибуты
 
-- [Основные атрибуты](/docs/Web/SVG/Attribute/Core)
+- [Основные атрибуты](/ru/docs/Web/SVG/Attribute/Core)
   - : Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Атрибуты стиля](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
