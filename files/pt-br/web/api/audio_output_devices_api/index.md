@@ -1,15 +1,6 @@
 ---
 title: API de Dispositivos de Saída de Áudio
 slug: Web/API/Audio_Output_Devices_API
-page-type: web-api-overview
-status:
-  - experimental
-browser-compat:
-  - api.MediaDevices.selectAudioOutput
-  - api.HTMLMediaElement.setSinkId
-  - api.HTMLMediaElement.sinkId
-  - http.headers.Permissions-Policy.speaker-selection
-spec-urls: https://w3c.github.io/mediacapture-output/#dom-mediadevices-selectaudiooutput
 ---
 
 {{DefaultAPISidebar("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
