@@ -11,6 +11,8 @@ slug: Web/SVG/Attribute/d
 
 Три элемента используют этот атрибут: {{SVGElement("path")}}, {{SVGElement("glyph")}}, и {{SVGElement("missing-glyph")}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -32,7 +34,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## path
 
