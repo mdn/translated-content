@@ -7,6 +7,8 @@ slug: Web/SVG/Element/foreignObject
 Элемент **`<foreignObject>`** [SVG](/ru/docs/Web/SVG) позволяет включать другое пространство имён XML.
 В контексте браузера это, скорее всего, XHTML / HTML.
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -47,7 +49,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 150, '100%')}}
+{{EmbedLiveSample("Пример", 150, '100%')}}
 
 ## Атрибуты
 
