@@ -251,7 +251,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 某些扩展 API 允许扩展从扩展的一部分向另一部分发送数据，例如 {{WebExtAPIRef("runtime.sendMessage()")}}、{{WebExtAPIRef("tabs. sendMessage()")}}、{{WebExtAPIRef("runtime.onMessage")}}、{{WebExtAPIRef("runtime.port")}} 的 `postMessage()` 方法和 {{WebExtAPIRef("tabs.executeScript()")}}。
 
 - **在 Firefox 中**：使用 [结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
-- **在 Chrome 中**：使用 [JSON 序列化算法](/zh-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#描述)。将来可能会切换到结构化克隆（[issue 248548](https://crbug.com/248548)）。
+- **在 Chrome 中**：使用 [JSON 序列化算法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#描述)。将来可能会切换到结构化克隆（[issue 248548](https://crbug.com/248548)）。
 
 结构化克隆算法比 JSON 序列化算法支持更多类型。一个明显的例外是具有 `toJSON` 方法的（DOM）对象。DOM 对象默认情况下不可克隆，也不可进行 JSON 序列化，但使用 `toJSON()` 方法，这些对象可以进行 JSON 序列化（但仍不能使用结构化克隆算法进行克隆）。不可结构化克隆的 JSON 序列化对象示例包括 {{domxref("URL")}} 和 {{domxref("PerformanceEntry")}} 的实例。
 
