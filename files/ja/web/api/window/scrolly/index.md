@@ -66,7 +66,7 @@ var y = supportPageOffset
 
 ## ブラウザーの対応
 
-{{Compat("api.Window.scrollY")}}
+{{Compat}}
 
 ## 関連情報
 

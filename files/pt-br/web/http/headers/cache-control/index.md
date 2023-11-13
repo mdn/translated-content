@@ -142,7 +142,7 @@ Cache-Control: public, max-age=31536000
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Cache-Control")}}
+{{Compat}}
 
 ## Veja também
 

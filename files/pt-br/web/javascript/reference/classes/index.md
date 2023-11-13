@@ -348,7 +348,7 @@ console.log(humano.falar());
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Rodando com Scratchpad
 

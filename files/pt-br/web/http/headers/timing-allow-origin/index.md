@@ -54,7 +54,7 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Timing-Allow-Origin")}}
+{{Compat}}
 
 ## Veja também
 

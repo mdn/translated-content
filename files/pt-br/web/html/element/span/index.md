@@ -40,7 +40,7 @@ Some text
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.span")}}
+{{Compat}}
 
 ## Veja também
 

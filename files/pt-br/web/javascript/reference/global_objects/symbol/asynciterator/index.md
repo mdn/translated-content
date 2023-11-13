@@ -51,7 +51,7 @@ Não há atualmente objetos Javascript built-in que tenha a chave `[Symbol.async
 
 ## Compatibilidade com navegadores
 
-{{compat("javascript.builtins.Symbol.asyncIterator")}}
+{{Compat}}
 
 ## Vejá também
 

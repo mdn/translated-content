@@ -52,7 +52,7 @@ for (var v of str) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.@@iterator")}}
+{{Compat}}
 
 ## Veja também
 

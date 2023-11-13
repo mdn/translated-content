@@ -50,5 +50,5 @@ formData.has("username"); // Returns true
 
 ## 参见
 
-- [使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

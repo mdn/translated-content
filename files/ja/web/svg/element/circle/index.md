@@ -54,7 +54,7 @@ slug: Web/SVG/Element/circle
 
 ## ブラウザ実装状況
 
-{{Compat("svg.elements.circle")}}
+{{Compat}}
 
 ## 関連情報
 

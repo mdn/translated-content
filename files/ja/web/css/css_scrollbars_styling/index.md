@@ -58,11 +58,11 @@ slug: Web/CSS/CSS_scrollbars_styling
 
 ### scrollbar-width
 
-{{Compat("css.properties.scrollbar-width")}}
+{{Compat}}
 
 ### scrollbar-color
 
-{{Compat("css.properties.scrollbar-color")}}
+{{Compat}}
 
 ## 関連情報
 

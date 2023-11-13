@@ -58,11 +58,11 @@ let imageCapture = new ImageCapture(track);
 
 ### `ImageCapture`
 
-{{Compat("api.ImageCapture")}}
+{{Compat}}
 
 ### `PhotoCapabilities`
 
-{{Compat("api.PhotoCapabilities")}}
+{{Compat}}
 
 ## 関連情報
 

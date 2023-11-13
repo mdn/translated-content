@@ -60,7 +60,7 @@ console.log((-0xff).toString(2)); // displays '-11111111'
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.toString")}}
+{{Compat}}
 
 ## Veja também
 

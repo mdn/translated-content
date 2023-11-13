@@ -41,7 +41,7 @@ Se o formulário também possui campos [opcionais](/pt-BR/docs/Web/CSS/:optional
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.required")}}
+{{Compat}}
 
 ## Veja também
 

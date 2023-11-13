@@ -66,4 +66,4 @@ SVG 内における PNG 画像の基本的な描画:
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.image")}}
+{{Compat}}

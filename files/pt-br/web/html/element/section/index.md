@@ -124,7 +124,7 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.section")}}
+{{Compat}}
 
 ## Veja também
 

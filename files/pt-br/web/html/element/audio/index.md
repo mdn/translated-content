@@ -84,7 +84,7 @@ Reproduz o arquivo de áudio anexado a esse artigo.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.audio")}}
+{{Compat}}
 
 ## Veja também
 

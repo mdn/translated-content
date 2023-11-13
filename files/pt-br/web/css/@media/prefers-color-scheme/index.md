@@ -87,7 +87,7 @@ Os elementos abaixo têm um tema de cores inicial. Eles podem ser mais temático
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.at-rules.media.prefers-color-scheme")}}
+{{Compat}}
 
 ## Veja também
 

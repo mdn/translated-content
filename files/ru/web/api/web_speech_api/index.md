@@ -69,11 +69,11 @@ Web Speech API позволяет веб приложениям управлят
 
 ### `SpeechRecognition`
 
-{{Compat("api.SpeechRecognition", 0)}}
+{{Compat}}
 
 ### `SpeechSynthesis`
 
-{{Compat("api.SpeechSynthesis", 0)}}
+{{Compat}}
 
 ## Firefox OS permissions
 

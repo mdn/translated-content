@@ -49,7 +49,7 @@ slug: orphaned/Web/API/WindowOrWorkerGlobalScope
 
 ## Browser compatibility
 
-{{Compat("api.WindowOrWorkerGlobalScope")}}
+{{Compat}}
 
 ## See also
 

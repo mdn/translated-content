@@ -56,7 +56,7 @@ regex2.test(".\nfoo"); // true - índice 2 é o início da linha
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp.sticky")}}
+{{Compat}}
 
 ## Veja também
 

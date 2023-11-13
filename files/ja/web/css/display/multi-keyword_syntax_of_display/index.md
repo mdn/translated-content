@@ -106,7 +106,7 @@ h1 {
 
 上で示したように、今すぐ 2 値版を使うメリットはあまりありません。もし使ったとしても、そのページは Firefox でしか動かないでしょう 他のブラウザーはまだ 2 値版を実装していません。そのため、 `display: block flex` は Firefox でのみフレックスレイアウトを実現し 、Chrome では無効なものとして無視されます。 2 値構文に対する現在の対応状況は、互換性データで確認することができます。
 
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
+{{Compat}}
 
 - Chromium bug: <https://bugs.chromium.org/p/chromium/issues/detail?id=804600>
 

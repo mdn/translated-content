@@ -63,7 +63,7 @@ Vary: Origin
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## Veja também
 

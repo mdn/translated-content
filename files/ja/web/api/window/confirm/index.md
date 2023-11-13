@@ -36,7 +36,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 は以下のようになります。
 
-![Firefox の confirm](firefoxcomfirmdialog_zpsf00ec381.png)
+![Firefox の confirm](firefox_confirm_dialog.png)
 
 ## 注記
 

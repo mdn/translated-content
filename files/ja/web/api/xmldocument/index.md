@@ -29,7 +29,7 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します_
 
 ## ブラウザー実装状況
 
-{{Compat("api.XMLDocument")}}
+{{Compat}}
 
 ## 関連項目
 

@@ -62,7 +62,7 @@ with (obj) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.unscopables")}}
+{{Compat}}
 
 ## Veja também
 

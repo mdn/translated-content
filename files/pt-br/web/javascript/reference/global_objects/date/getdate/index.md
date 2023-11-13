@@ -42,7 +42,7 @@ console.log(day); // 25
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getDate")}}
+{{Compat}}
 
 ## Veja também
 

@@ -139,7 +139,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Set-Cookie")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 
