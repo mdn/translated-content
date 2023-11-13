@@ -1648,6 +1648,7 @@
 /es/docs/Web/API/File/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Web/API/File/fileName	/es/docs/web/api/file/name
 /es/docs/Web/API/FileReader/onload	/es/docs/Web/API/FileReader/load_event
+/es/docs/Web/API/FormData/Using_FormData_Objects	/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /es/docs/Web/API/Geolocalización	/es/docs/Web/API/Geolocation
 /es/docs/Web/API/Geolocation.clearWatch	/es/docs/Web/API/Geolocation/clearWatch
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
@@ -1748,6 +1749,7 @@
 /es/docs/Web/API/WindowTimers/setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/XMLDocument/async	/es/docs/Web/API/XMLDocument
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
+/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /es/docs/Web/API/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented
 /es/docs/Web/API/event.which	/es/docs/Web/API/UIEvent/which
@@ -1968,7 +1970,7 @@
 /es/docs/Web/Guide/HTML/categorias_de_contenido	/es/docs/Web/HTML/Content_categories
 /es/docs/Web/Guide/Movil	/es/docs/Web/Guide/Mobile
 /es/docs/Web/Guide/Performance/Usando_web_workers	/es/docs/Web/API/Web_Workers_API/Using_web_workers
-/es/docs/Web/Guide/Usando_Objetos_FormData	/es/docs/Web/API/FormData/Using_FormData_Objects
+/es/docs/Web/Guide/Usando_Objetos_FormData	/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /es/docs/Web/HTML/Atributos	/es/docs/Web/HTML/Attributes
 /es/docs/Web/HTML/Atributos/accept	/es/docs/Web/HTML/Attributes/accept
 /es/docs/Web/HTML/Atributos/min	/es/docs/Web/HTML/Attributes/min
@@ -2288,6 +2290,7 @@
 /es/docs/Web/JavaScript/Language_Resources	/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /es/docs/Web/JavaScript/Primeros_Pasos	/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /es/docs/Web/JavaScript/Reference/About	/es/docs/conflicting/Web/JavaScript/Reference
+/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_properties
 /es/docs/Web/JavaScript/Reference/Errors/Bad_octal	/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal
 /es/docs/Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion	/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 /es/docs/Web/JavaScript/Reference/Errors/Indicador_regexp_no-val	/es/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag
@@ -2314,7 +2317,7 @@
 /es/docs/Web/JavaScript/Referencia/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Classes	/es/docs/Web/JavaScript/Reference/Classes
 /es/docs/Web/JavaScript/Referencia/Classes/Class_fields	/es/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/es/docs/Web/JavaScript/Referencia/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields
+/es/docs/Web/JavaScript/Referencia/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_properties
 /es/docs/Web/JavaScript/Referencia/Classes/constructor	/es/docs/Web/JavaScript/Reference/Classes/constructor
 /es/docs/Web/JavaScript/Referencia/Classes/extends	/es/docs/Web/JavaScript/Reference/Classes/extends
 /es/docs/Web/JavaScript/Referencia/Classes/static	/es/docs/Web/JavaScript/Reference/Classes/static
@@ -2850,7 +2853,7 @@
 /es/docs/XHTML	/es/docs/Glossary/XHTML
 /es/docs/XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest
 /es/docs/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
-/es/docs/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/es/docs/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /es/docs/XMLHttpRequest/abort	/es/docs/Web/API/XMLHttpRequest/abort
 /es/docs/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
 /es/docs/XPath	/es/docs/Web/XPath
