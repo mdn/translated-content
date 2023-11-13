@@ -82,7 +82,7 @@ svg {
 
 ### Глобальные атрибуты
 
-- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+- [Core Attributes](/ru/docs/Web/SVG/Attribute/Core)
   - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
