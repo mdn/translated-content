@@ -41,7 +41,7 @@ Establece el idioma del documento usando el atributo [`lang`](/es/docs/Web/HTML/
 
 Esto es bueno para la accesibilidad y los motores de búsqueda, ayuda a localizar contenido y recuerda a las personas que deben utilizar las mejores prácticas.
 
-### Conjunto de caracteres del documento.
+### Conjunto de caracteres del documento
 
 También debes definir el conjunto de caracteres de esta manera:
 
