@@ -24,7 +24,7 @@ slug: Web/Media/Formats/Image_types
   <tbody>
     <tr>
       <th scope="row">
-        <a href="#apng_动态可移植网络图形">APNG</a>
+        <a href="#apng（动态可移植网络图形）">APNG</a>
       </th>
       <th scope="row">动态可移植网络图形</th>
       <td><code>image/apng</code></td>
@@ -47,7 +47,7 @@ slug: Web/Media/Formats/Image_types
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#gif_图像互换格式">GIF</a></th>
+      <th scope="row"><a href="#gif（图像互换格式）">GIF</a></th>
       <th scope="row">图像互换格式</th>
       <td><code>image/gif</code></td>
       <td><code>.gif</code></td>
@@ -58,7 +58,7 @@ slug: Web/Media/Formats/Image_types
     </tr>
     <tr>
       <th scope="row">
-        <a href="#jpeg_联合图像专家小组图像">JPEG</a>
+        <a href="#jpeg（联合图像专家小组图像）">JPEG</a>
       </th>
       <th scope="row">联合图像专家小组图像</th>
       <td><code>image/jpeg</code></td>
@@ -73,7 +73,7 @@ slug: Web/Media/Formats/Image_types
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#png_便携式网络图形">PNG</a></th>
+      <th scope="row"><a href="#png（便携式网络图形）">PNG</a></th>
       <th scope="row">便携式网络图形</th>
       <td><code>image/png</code></td>
       <td><code>.png</code></td>
@@ -85,7 +85,7 @@ slug: Web/Media/Formats/Image_types
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#svg_可缩放矢量图形">SVG</a></th>
+      <th scope="row"><a href="#svg（可缩放矢量图形）">SVG</a></th>
       <th scope="row">可缩放矢量图形</th>
       <td><code>image/svg+xml</code></td>
       <td><code>.svg</code></td>
@@ -123,21 +123,21 @@ slug: Web/Media/Formats/Image_types
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a href="#bmp_位图文件">BMP</a></th>
+      <th scope="row"><a href="#bmp（位图文件）">BMP</a></th>
       <th scope="row">位图文件</th>
       <td><code>image/bmp</code></td>
       <td><code>.bmp</code></td>
       <td>Chrome、Edge、Firefox、IE、Opera、Safari</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#ico_Microsoft_Windows_图标">ICO</a></th>
+      <th scope="row"><a href="#ico（Microsoft_Windows_图标）">ICO</a></th>
       <th scope="row">Microsoft 图标</th>
       <td><code>image/x-icon</code></td>
       <td><code>.ico</code>、<code>.cur</code></td>
       <td>Chrome、Edge、Firefox、IE、Opera、Safari</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#tiff_标签图像文件格式">TIFF</a></th>
+      <th scope="row"><a href="#tiff（标签图像文件格式）">TIFF</a></th>
       <th scope="row">标签图像文件格式</th>
       <td><code>image/tiff</code></td>
       <td><code>.tif</code>、<code>.tiff</code></td>
@@ -158,7 +158,7 @@ slug: Web/Media/Formats/Image_types
 
 ### APNG（动态可移植网络图形）
 
-APNG 是 Mozilla 首次推出的一种文件格式，它扩展了 [PNG](#png_便携式网络图形) 标准，增加了对动画图像的支持。在概念上，APNG 与已经使用了几十年的动画 GIF 格式相似，但 APNG 的功能更强，它支持多种[颜色深度](https://zh.wikipedia.org/wiki/色彩深度)，而动画 GIF 只支持 8 位[索引颜色](https://zh.wikipedia.org/wiki/索引顏色)。
+APNG 是 Mozilla 首次推出的一种文件格式，它扩展了 [PNG](#png（便携式网络图形）) 标准，增加了对动画图像的支持。在概念上，APNG 与已经使用了几十年的动画 GIF 格式相似，但 APNG 的功能更强，它支持多种[颜色深度](https://zh.wikipedia.org/wiki/色彩深度)，而动画 GIF 只支持 8 位[索引颜色](https://zh.wikipedia.org/wiki/索引顏色)。
 
 APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指示器、活动[加载器](https://en.wikipedia.org/wiki/throbber)和其他动画序列。例如，APNG 是苹果 iMessage 应用程序（和 iOS 上的“信息”应用程序）[创建动画贴纸时支持的格式之一](https://developer.apple.com/stickers/)。它们也常用于 web 浏览器用户界面的动画部分。
 
@@ -274,7 +274,7 @@ AV1 是一种编码格式，最初设计用于在互联网上传输视频。该�
 
 AVIF 不支持渐进式渲染，因此文件必须完全下载后才能显示。这通常对真实世界的用户体验影响不大，因为 AVIF 文件比同等的 JPEG 或 PNG 文件小得多，因此下载和显示的速度也快得多。文件大小越大，影响就越大，因此应考虑使用支持渐进式渲染的格式。
 
-Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，但不支持动画），但 Edge 和 IE 不支持。由于支持尚不全面（而且没有什么历史深度），应使用 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)（或其他方法）提供 [WebP](#webp_图像)、[JPEG](#jpeg_联合图像专家小组图像) 或 [PNG](#png_便携式网络图形) 格式的回退。
+Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，但不支持动画），但 Edge 和 IE 不支持。由于支持尚不全面（而且没有什么历史深度），应使用 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)（或其他方法）提供 [WebP](#webp_图像)、[JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的回退。
 
 <table class="standard-table">
   <tbody>
@@ -357,7 +357,7 @@ BMP 理论上支持多种内部数据表示。最简单也是最常用的 BMP �
 
 虽然规范中定义了其他数据表示方式，但它们并没有被广泛使用，通常完全没有实现。这些功能包括：支持不同的位深度、索引颜色、alpha 通道和不同的像素顺序（默认情况下，BMP 从左下角向右上角写入，而不是从左上角向右下角写入）。
 
-从理论上讲，BMP 文件支持多种压缩算法，图像数据也可以使用 [JPEG](#jpeg_联合图像专家小组图像) 或 [PNG](#png_便携式网络图形) 格式存储。
+从理论上讲，BMP 文件支持多种压缩算法，图像数据也可以使用 [JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式存储。
 
 <table class="standard-table">
   <tbody>
@@ -465,7 +465,7 @@ GIF 支持简单的动画，即在最初的全尺寸帧之后，提供一系列�
 
 GIF 的另一个流行特性是支持[隔行扫描](<https://en.wikipedia.org/wiki/Interlacing_(bitmaps)>)，即像素行的存储顺序会被打乱，因此部分接收的文件可以较低的质量显示。这在网络连接速度较慢时尤其有用。
 
-GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF 可能会导致不理想的抖动。通常情况下，现代内容应使用 [PNG](#png_便携式网络图形) 制作无损*和*索引静态图像，并应考虑使用 [APNG](#apng_动态可移植网络图形) 制作无损动画序列。
+GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF 可能会导致不理想的抖动。通常情况下，现代内容应使用 [PNG](#png（便携式网络图形）) 制作无损*和*索引静态图像，并应考虑使用 [APNG](#apng（动态可移植网络图形）) 制作无损动画序列。
 
 <table class="standard-table">
   <tbody>
@@ -553,7 +553,7 @@ GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF
 
 ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌面图标而设计的。不过，早期版本的 Internet Explorer 允许网站在其根目录中提供名为 `favicon.ico` 的 ICO 文件，以指定一个 **[favicon](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#在你的站点增加自定义图标)**——一个显示在收藏夹菜单和其他对网站图标有用的地方的图标。
 
-一个 ICO 文件可以包含多个图标，文件开头有一个目录，列出每个图标的详细信息。目录之后是图标的数据。每个图标的数据既可以是不带文件头的 [BMP](#bmp_位图文件) 图像，也可以是完整的 [PNG](#png_便携式网络图形) 图像（包括文件头）。如果使用 ICO 文件，则应使用 BMP 格式，因为直到 Windows Vista 才添加了对 ICO 文件内的 PNG 的支持，而且这种支持可能并不完善。
+一个 ICO 文件可以包含多个图标，文件开头有一个目录，列出每个图标的详细信息。目录之后是图标的数据。每个图标的数据既可以是不带文件头的 [BMP](#bmp（位图文件）) 图像，也可以是完整的 [PNG](#png（便携式网络图形）) 图像（包括文件头）。如果使用 ICO 文件，则应使用 BMP 格式，因为直到 Windows Vista 才添加了对 ICO 文件内的 PNG 的支持，而且这种支持可能并不完善。
 
 > **警告：** ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标)所述，它们在收藏夹中的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
 
@@ -783,7 +783,7 @@ JPEG 实际上是一种压缩照片的数据格式，而不是一种文件类型
 
 ### PNG（便携式网络图形）
 
-{{Glossary("PNG")}}（读作“**ping**”）图像格式使用无损压缩，同时支持比 [GIF](#gif_图像互换格式) 更高的颜色深度，效率更高，并具有完全支持 alpha 透明度的特点。
+{{Glossary("PNG")}}（读作“**ping**”）图像格式使用无损压缩，同时支持比 [GIF](#gif（图像互换格式）) 更高的颜色深度，效率更高，并具有完全支持 alpha 透明度的特点。
 
 PNG 受广泛支持，所有主要浏览器都完全支持其特性。Internet Explorer 在第 4-5 版中引入了对 PNG 的支持，但直到 IE 9 才完全支持该特性，并且在其间的许多年里出现了许多臭名昭著的错误，包括在曾经风靡一时的 Internet Explorer 6 中。这减缓了 PNG 的应用，但现在它已被普遍使用，尤其是在需要精确复制源图像时。
 
@@ -938,7 +938,7 @@ PNG 受广泛支持，所有主要浏览器都完全支持其特性。Internet E
   </tbody>
 </table>
 
-### SVG（可缩放矢量图形）
+### svg（可缩放矢量图形）
 
 SVG 是一种基于 [XML](/zh-CN/docs/Glossary/XML) 的[矢量图形](https://zh.wikipedia.org/wiki/矢量图形)格式，它将图像的内容指定为一系列绘图命令，这些命令可以创建形状、线条、应用颜色、滤镜等。SVG 文件非常适合用于图表、图标和其他可精确绘制任何尺寸的图像。因此，SVG 在现代网页设计的用户界面元素中很受欢迎。
 
@@ -1168,7 +1168,7 @@ WebP 支持通过基于 VP8 视频编解码器的预测编码进行有损压缩�
 
 WebP 还支持动画：在有损 WebP 文件中，图像数据由 VP8 比特流表示，其中可能包含多个帧。无损 WebP 包含描述动画的 `ANIM` 块和表示动画序列一帧的 `ANMF` 块。支持循环播放。
 
-WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但还没有深入的历史支持。需要提供 [JPEG](#jpeg_联合图像专家小组图像) 或 [PNG](#png_便携式网络图形) 格式的后备，例如 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)。
+WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但还没有深入的历史支持。需要提供 [JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的后备，例如 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)。
 
 <table class="standard-table">
   <tbody>
@@ -1353,7 +1353,7 @@ static unsigned char square8_bits[] = {
 
 ### 照片
 
-有损压缩（取决于编码器的配置）通常能很好地压缩照片。这使得 [JPEG](#jpeg_联合图像专家小组图像) 和 [WebP](#webp_图像) 成为照片的不错选择，JPEG 的兼容性更好，但 WebP 的压缩效果可能更好。为了最大限度地提高质量和减少下载时间，可以考虑同时提供这两种格式的[后备图像](#提供后备图像)，WebP 是首选，JPEG 是次选。否则，为了兼容性，JPEG 是安全的选择。
+有损压缩（取决于编码器的配置）通常能很好地压缩照片。这使得 [JPEG](#jpeg（联合图像专家小组图像）) 和 [WebP](#webp_图像) 成为照片的不错选择，JPEG 的兼容性更好，但 WebP 的压缩效果可能更好。为了最大限度地提高质量和减少下载时间，可以考虑同时提供这两种格式的[后备图像](#提供后备图像)，WebP 是首选，JPEG 是次选。否则，为了兼容性，JPEG 是安全的选择。
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
@@ -1374,7 +1374,7 @@ static unsigned char square8_bits[] = {
 
 对于图标等较小的图像，应使用无损格式，以避免在大小受限的图像中丢失细节。虽然无损 WebP 是实现这一目的的理想选择，但其支持尚未普及，因此 PNG 是更好的选择，除非你提供[后备选项](#提供后备图像)。如果图像包含的颜色少于 256 种，GIF 也是一种选择，不过 PNG 通过其索引压缩选项（PNG-8）通常可以压缩得更小。
 
-如果图标可以用矢量图形表示，可以考虑使用 [SVG](#svg_可缩放矢量图形)，因为它可以在各种分辨率和尺寸下缩放，非常适合响应式设计。虽然 SVG 支持良好，但仍值得为旧版浏览器提供 PNG 后备功能。
+如果图标可以用矢量图形表示，可以考虑使用 [SVG](#svg（可缩放矢量图形）)，因为它可以在各种分辨率和尺寸下缩放，非常适合响应式设计。虽然 SVG 支持良好，但仍值得为旧版浏览器提供 PNG 后备功能。
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
@@ -1421,8 +1421,8 @@ PNG 可能是最好的选择，但无损 WebP 的压缩效果可能更好。
       <th scope="col">后备方案</th>
     </tr>
     <tr>
-      <td><a href="#svg_可缩放矢量图形">SVG</a></td>
-      <td><a href="#png_便携式网络图形">PNG</a></td>
+      <td><a href="#svg（可缩放矢量图形）">SVG</a></td>
+      <td><a href="#png（便携式网络图形）">PNG</a></td>
     </tr>
   </thead>
 </table>
