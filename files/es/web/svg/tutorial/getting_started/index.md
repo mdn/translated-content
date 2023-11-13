@@ -36,8 +36,8 @@ El proceso de renderizado incluye lo siguiente :
    - Antes de SVG 2, para identificar la versión del SVG para otros tipos de validación se debían utilizar siempre los atributos `version` y `baseProfile` en su lugar. Los atributos `version` y `baseProfile` están obsoletos en SVG 2.
    - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course).
 
-2. El fondo esta puesto en rojo dibujando un rectangulo [`<rect/>`](/en/SVG/Element/rect) que cubre el area de la imagen.
-3. Un círculo verde [`<circle/>`](/en/SVG/Element/circle) con un radio de 80px se dibuja encima del centro del rectángulo rojo (el centro del círculo es desplazado 150px a la derecha, y 100px hacia abajo desde la esquina superior izquierda).
+2. El fondo esta puesto en rojo dibujando un rectangulo `<rect/>` que cubre el area de la imagen.
+3. Un círculo verde `<circle/>` con un radio de 80px se dibuja encima del centro del rectángulo rojo (el centro del círculo es desplazado 150px a la derecha, y 100px hacia abajo desde la esquina superior izquierda).
 4. El texto "SVG" esta dibujado. El interior de cada letra esta relleno con blanco.El texto se coloca mediante el establecimiento de un ancla en donde queremos que el punto medio sea: en este caso, el punto medio debe corresponder al centro del circulo verde. Los ajustes finos se pueden hacer con el tamaño de la fuente y la posición vertical para garantizar que el resultado final sea estéticamente agradable.
 
 ### Propiedades básicas de los archivos SVG
@@ -62,7 +62,7 @@ El proceso de renderizado incluye lo siguiente :
 
   - Por último, SVG puede crearse dinámicamente con JavaScript e inyectarse en el DOM de HTML.
 
-- El manejo de tamaños y unidades en SVG va a ser explicado [en la próxima página](/en/SVG/Tutorial/Positions).
+- El manejo de tamaños y unidades en SVG va a ser explicado en la próxima página
 
 ### Tipos de archivos SVG
 
