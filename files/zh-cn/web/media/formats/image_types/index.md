@@ -491,7 +491,7 @@ GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
-      <td>65,536×65,536 pixels</td>
+      <td>65,536×65,536 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -555,7 +555,7 @@ ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌�
 
 一个 ICO 文件可以包含多个图标，文件开头有一个目录，列出每个图标的详细信息。目录之后是图标的数据。每个图标的数据既可以是不带文件头的 [BMP](#bmp（位图文件）) 图像，也可以是完整的 [PNG](#png（便携式网络图形）) 图像（包括文件头）。如果使用 ICO 文件，则应使用 BMP 格式，因为直到 Windows Vista 才添加了对 ICO 文件内的 PNG 的支持，而且这种支持可能并不完善。
 
-> **警告：** ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标)所述，它们在收藏夹中的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
+> **警告：** ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标)所述，它们作为网站图标的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
 
 <table class="standard-table">
   <tbody>
@@ -581,7 +581,7 @@ ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌�
     </tr>
     <tr>
       <th scope="row">最大尺寸</th>
-      <td>256×256 pixels</td>
+      <td>256×256 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
