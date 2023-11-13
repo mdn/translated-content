@@ -253,7 +253,7 @@ td {
 
 ## Смотрите также
 
-- [Typical use cases of Flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#center_item)
+- [Typical use cases of Flexbox, section "Center item"](/ru/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know (CSS)](http://christopheraue.net/2014/03/05/vertical-align/)
