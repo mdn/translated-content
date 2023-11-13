@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/stroke-dashoffset
 
 > **Примечание:** **Прежняя редакция:** « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 > Этот атрибут определяет смещение обводки относительно начального положения.
-> При использовании [\<percentage>](/ru/SVG/Content_type#Percentage), значение будет вычисляться от текущего viewport.
+> При использовании [\<percentage>](/ru/docs/SVG/Content_type#percentage), значение будет вычисляться от текущего viewport.
 > Значение может быть отрицательным.
 
 {{SVGRef}}
@@ -81,10 +81,10 @@ svg {
 
 | Категория         | Атрибут оформления                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------------------- |
-| Значение          | [\<percentage>](/en/SVG/Content_type#Percentage) \| [\<length>](/en/SVG/Content_type#Length) \| inherit |
+| Значение          | [\<percentage>](/en-US/docs/Web/SVG#percentage) \| [\<length>](/en-US/docs/Web/SVG#length) \| inherit |
 | Исходное значение | 0                                                                                                       |
 | Анимируемый       | Да                                                                                                      |
-| Спецификация      | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)              |
+| Спецификация      | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)              |
 
 ## Пример
 
@@ -190,5 +190,5 @@ svg {
 
 Следующие элементы могут использовать атрибут `stroke-dashoffset`
 
-- [Элементы форм](/ru/SVG/Element#Shape)
-- [Текстовые элементы](/ru/SVG/Element#TextContent)
+- [Элементы форм](/ru/docs/SVG/Element#shape)
+- [Текстовые элементы](/ru/docs/SVG/Element#textcontent)
