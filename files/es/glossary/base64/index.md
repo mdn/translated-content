@@ -3,6 +3,8 @@ title: Base64 codificando y decodificando
 slug: Glossary/Base64
 ---
 
+{{GlossarySidebar}}
+
 **Base64** es un grupo de esquemas de [codificación de binario a texto](https://es.wikipedia.org/wiki/Codificaci%C3%B3n_de_binario_a_texto) que representa los datos binarios mediante una cadena ASCII, traduciéndolos en una representación radix-64. El término _Base64_ se origina de un [sistema de codificación de transmisión de contenido MIME](https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions#Content-Transfer-Encoding) específico.
 
 Los esquemas de codificación Base64 son comúnmente usados cuando se necesita codificar datos binarios para que sean almacenados y transferidos sobre un medio diseñado para tratar con datos textuales. Esto es para asegurar que los datos se mantienen intactos y sin modificaciones durante la transmisión. Base64 es comúnmente usado en muchas aplicaciones, incluyendo la escritura de emails vía [MIME](https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions) y el almacenamiento de datos complejos en [XML](/es/docs/XML).
