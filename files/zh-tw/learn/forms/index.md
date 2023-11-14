@@ -23,7 +23,7 @@ slug: Learn/Forms
 7. [如何創建自定義表單控件](/zh-TW/docs/HTML/Forms/How_to_build_custom_form_widgets)
 8. [通過 JavaScript 發送形式](/zh-TW/docs/HTML/Forms/Sending_forms_through_JavaScript)
 
-   1. [使用 FORMDATA 對象](/zh-TW/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+   1. [使用 FORMDATA 對象](/zh-TW/docs/DOM/XMLHttpRequest/XMLHttpRequest_API/Using_FormData_Objects)
 
 9. [在傳統的瀏覽器的 HTML 表單](/zh-TW/docs/HTML/Forms/HTML_forms_in_legacy_browsers)
 

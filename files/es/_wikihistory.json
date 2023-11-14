@@ -4251,10 +4251,6 @@
       "marco_mucino"
     ]
   },
-  "Web/API/FormData/Using_FormData_Objects": {
-    "modified": "2019-03-23T23:19:26.530Z",
-    "contributors": ["ramingar", "Siro_Diaz", "wilo"]
-  },
   "Web/API/Fullscreen_API": {
     "modified": "2019-03-23T22:19:43.566Z",
     "contributors": ["wbamberg", "israel-munoz"]
@@ -5646,22 +5642,6 @@
       "Jorolo"
     ]
   },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2020-03-17T04:09:47.273Z",
-    "contributors": [
-      "jccuevas",
-      "camsa",
-      "david_ru",
-      "cesaruve",
-      "Sheppy",
-      "Sebastianz",
-      "iiegor",
-      "javierdp",
-      "bardackx",
-      "teoli",
-      "inma_610"
-    ]
-  },
   "Web/API/XMLHttpRequest/abort": {
     "modified": "2019-03-23T22:12:16.683Z",
     "contributors": ["Sheppy", "todomagichere"]
@@ -5677,6 +5657,26 @@
   "Web/API/XMLHttpRequest/timeout": {
     "modified": "2020-10-15T22:26:49.508Z",
     "contributors": ["mmednik"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_FormData_Objects": {
+    "modified": "2019-03-23T23:19:26.530Z",
+    "contributors": ["ramingar", "Siro_Diaz", "wilo"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2020-03-17T04:09:47.273Z",
+    "contributors": [
+      "jccuevas",
+      "camsa",
+      "david_ru",
+      "cesaruve",
+      "Sheppy",
+      "Sebastianz",
+      "iiegor",
+      "javierdp",
+      "bardackx",
+      "teoli",
+      "inma_610"
+    ]
   },
   "Web/API/atob": {
     "modified": "2019-03-23T23:03:12.715Z",
@@ -10575,7 +10575,7 @@
       "GoToLoop"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_class_fields": {
+  "Web/JavaScript/Reference/Classes/Private_properties": {
     "modified": "2020-10-15T22:33:54.045Z",
     "contributors": ["aronvx"]
   },

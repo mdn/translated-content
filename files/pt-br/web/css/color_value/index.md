@@ -66,7 +66,7 @@ Existem algumas restrições a serem consideradas ao usar palavras-chave:
   </thead>
   <tbody>
     <tr style="position: relative">
-      <td rowspan="16">{{SpecName("CSS1")}}</td>
+      <td rowspan="16"><a href="https://www.w3.org/TR/CSS1/">CSS Level 1</a></td>
       <td style="background: #000"></td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
@@ -163,14 +163,14 @@ Existem algumas restrições a serem consideradas ao usar palavras-chave:
       <td style="background: aqua"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
+      <td><a href="https://www.w3.org/TR/CSS2/">CSS Level 2 (Revision 1)</a></td>
       <td style="background: #ffa500"></td>
       <td style="text-align: center"><code>orange</code></td>
       <td><code>#ffa500</code></td>
       <td style="background: orange"></td>
     </tr>
     <tr>
-      <td rowspan="129">{{SpecName("CSS3 Colors")}}</td>
+      <td rowspan="129"><a href="https://drafts.csswg.org/css-color-3/">CSS Color Module Level 3</a></td>
       <td style="background: #f0f8ff"></td>
       <td style="text-align: center"><code>aliceblue</code></td>
       <td><code>#f0f8ff</code></td>
@@ -945,7 +945,7 @@ Existem algumas restrições a serem consideradas ao usar palavras-chave:
       <td style="background: yellowgreen"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
+      <td><a href="https://drafts.csswg.org/css-color/">CSS Color Module Level 4</a></td>
       <td style="background: #639"></td>
       <td style="text-align: center"><code>rebeccapurple</code></td>
       <td><code>#663399</code></td>
@@ -1293,12 +1293,7 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
 ## Specificações
 
-| Specificação                                                            | Estado                   | Comentário                                                                                                                                                                                                                                                                                                                            |
-| ----------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}             | {{Spec2('CSS4 Colors')}} | Added `rebeccapurple`, four- (`#RGBA`) and eight-digit (`#RRGGBBAA`) hexadecimal notations, `rgba()` and `hsla()` as aliases of `rgb()` and `hsl()` (both with identical parameter syntax), space-separated function parameters rather than commas, percentages for alpha values, and angles for the hue component in `hsl()` colors. |
-| {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}             | {{Spec2('CSS3 Colors')}} | Deprecated system-colors; added SVG colors; added `rgba()`, `hsl()`, `hsla()` functional notation.                                                                                                                                                                                                                                    |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}} | {{Spec2('CSS2.1')}}      | Added the `orange` color and the system-colors.                                                                                                                                                                                                                                                                                       |
-| {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}                   | {{Spec2('CSS1')}}        | Initial definition.                                                                                                                                                                                                                                                                                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

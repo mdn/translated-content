@@ -5,7 +5,7 @@ slug: Web/API/History_API/Example
 
 这是一个仅由三个页面组成的 AJAX 网站示例 (_first_page.php_, _second_page.php_ and _third_page.php_). 要查看其如何工作的，请创建以下文件 (或 git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
 
-> **备注：** 为了在该机制中很好地整合{{HTMLElement("form")}}元素 , 请看一下这段 [Submitting forms and uploading files](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)。
+> **备注：** 为了在该机制中很好地整合 {{HTMLElement("form")}} 元素 , 请看一下这段[提交表单和上传文件](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)。
 
 **first_page.php**:
 

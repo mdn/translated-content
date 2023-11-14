@@ -90,12 +90,9 @@ svg {
 
 {{svginfo}}
 
-## Specifications
+## Especificações
 
-| Specification                                                    | Status              | Comment            |
-| ---------------------------------------------------------------- | ------------------- | ------------------ |
-| {{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}}   | {{Spec2('SVG2')}}   |                    |
-| {{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
