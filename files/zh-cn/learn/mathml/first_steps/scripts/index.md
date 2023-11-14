@@ -253,7 +253,7 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 ## 其他运算符属性
 
-我们之前已经了解了 `<mo>` 元素的一些[属性](/zh-CN/docs/Learn/MathML/First_steps/Text_containers#mo_的运算符属性)，包括在垂直方向上的拉伸和间距。现在有了脚本元素，我们可以扩展该列表。我们将通过修改我们的[上一个示例](#主动学习_识别标记元素)来实现这一点。
+我们之前已经了解了 `<mo>` 元素的一些[属性](/zh-CN/docs/Learn/MathML/First_steps/Text_containers#mo_的运算符属性)，包括在垂直方向上的拉伸和间距。现在有了标记元素，我们可以扩展该列表。我们将通过修改我们的[上一个示例](#主动学习_识别标记元素)来实现这一点。
 
 ### 在水平方向上的拉伸
 
