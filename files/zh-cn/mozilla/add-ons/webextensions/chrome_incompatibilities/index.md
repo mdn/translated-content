@@ -80,7 +80,7 @@ WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此
 
 > **备注：** `browser` 命名空间由 Firefox 和 Safari 支持。在 [Chrome bug 798169](https://crbug.com/798169) 解决之前，Chrome 浏览器不提供 `browser` 命名空间。
 
-如果你在编写 WebExtension 时确实要用到 `browser` 和 promise，我们也开发了 polyfill 来保证扩展可以在 Chrome 里运行：<https://github.com/mozilla/webextension-polyfill>.
+如果你在编写 WebExtension 时确实要用到 `browser` 和 promise，我们也开发了 polyfill 来保证扩展可以在 Chrome 里运行：<https://github.com/mozilla/webextension-polyfill>。
 
 ### 部分支持的 API
 
@@ -145,11 +145,11 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
   - 如果扩展希望将公共（如 HTTPS）URL 重定向到[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)，扩展的 `manifest.json` 文件必须包含 [`web_accessible_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 键，其中包含扩展页面的 URL。
 
-    - > **备注：** 任何网站都可以链接或重定向到该 URL，扩展应将任何输入（例如 POST 数据）视为来自不可信任的来源，就像普通网页一样。
+    > **备注：** 任何网站都可以链接或重定向到该 URL，扩展应将任何输入（例如 POST 数据）视为来自不可信任的来源，就像普通网页一样。
 
   - 某些 `browser.webRequest.*` API 允许异步返回解析为 `webRequest.BlockingResponse` 的 Promise。
 
-- **在 Chrome 中**：只有 `webRequest.onAuthRequired` 通过提供 `'asyncBlocking'`，通过回调而非 Promise 支持异步 `webRequest.BlockingResponse`。
+- **在 Chrome 中**：只有在提供 `'asyncBlocking'` 选项的情况下，`webRequest.onAuthRequired` 才（通过回调而非 Promise）支持异步的 `webRequest.BlockingResponse`。
 
 #### Windows API
 
@@ -159,7 +159,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
 #### DeclarativeContent API
 
-- **在 Firefox 中**：Chrome 浏览器的 [declarativeContent](https://developer.chrome.com/docs/extensions/reference/declarativeContent/) API [未实现](https://bugzil.la/1435864)。此外，Firefox [将不支持](https://bugzil.la/1323433#c16) `declarativeContent.RequestContentScript` API（该 API 很少使用，在 Chrome 浏览器的稳定版本中也不可用）。
+- **在 Firefox 中**：Chrome 浏览器的 [declarativeContent](https://developer.chrome.com/docs/extensions/reference/declarativeContent/) API [未被实现](https://bugzil.la/1435864)。此外，Firefox [将不支持](https://bugzil.la/1323433#c16) `declarativeContent.RequestContentScript` API（该 API 很少使用，在 Chrome 浏览器的稳定版本中也不可用）。
 
 ### 其他不兼容情况
 
@@ -250,7 +250,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
 某些扩展 API 允许扩展从扩展的一部分向另一部分发送数据，例如 {{WebExtAPIRef("runtime.sendMessage()")}}、{{WebExtAPIRef("tabs.sendMessage()")}}、{{WebExtAPIRef("runtime.onMessage")}}、{{WebExtAPIRef("runtime.port")}} 的 `postMessage()` 方法和 {{WebExtAPIRef("tabs.executeScript()")}}。
 
-- **在 Firefox 中**：使用 [结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
+- **在 Firefox 中**：使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
 - **在 Chrome 中**：使用 [JSON 序列化算法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#描述)。将来可能会切换到结构化克隆（[issue 248548](https://crbug.com/248548)）。
 
 结构化克隆算法比 JSON 序列化算法支持更多类型。一个明显的例外是具有 `toJSON` 方法的（DOM）对象。DOM 对象默认情况下不可克隆，也不可进行 JSON 序列化，但使用 `toJSON()` 方法，这些对象可以进行 JSON 序列化（但仍不能使用结构化克隆算法进行克隆）。不可结构化克隆的 JSON 序列化对象示例包括 {{domxref("URL")}} 和 {{domxref("PerformanceEntry")}} 的实例。
