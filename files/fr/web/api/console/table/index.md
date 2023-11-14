@@ -1,134 +1,166 @@
 ---
-title: Console.table
+title: "console : méthode table()"
 slug: Web/API/console/table
+l10n:
+  sourceCommit: 59adb56b83da91ee1744b723f2f7a37195c2ec82
 ---
 
 {{APIRef("Console API")}}
 
-Affiche des données tabulaires sous la forme d'un tableau.
+La méthode **`console.table()`** permet d'afficher des données tabulaires sous la forme d'un tableau.
 
-Cette fonction prend un argument obligatoire `data`, qui doit être un tableau (Array) ou un objet, et un argument facultatif `columns`.
+Cette fonction prend un argument obligatoire, `data`, qui doit être un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) ou un objet, et un argument facultatif `columns`.
 
-Il affiche `data` sous la forme d'un tableau. Chaque élément dans le tableau fourni (Array) sera affiché comme une ligne dans le tableau. (ou les propriétés énumérables s'il s'agit d'un objet)
+La fonction affiche `data` sous la forme d'un tableau. Chaque élément du tableau fourni (ou chaque propriété énumérable dans le cas d'un objet) sera affiché comme une ligne dans le tableau dans la console.
 
-La première colonne dans le tableau sera intitulé `(index)`. Si `data` est un tableau (Array), alors les valeurs de cette colonne seront les index du tableau (Array). Si `data` est un objet, alors ses valeurs seront les noms des propriétés.À noter (dans Firefox) : `console.table` est limité à l'affichage de 1000 lignes (la première ligne est l'index étiqueté)
+La première colonne dans le tableau sera intitulée `(index)`. Si `data` est un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)), alors les valeurs de cette colonne seront les indices du tableau JavaScript. Si `data` est un objet, ce seront les noms des propriétés qui seront affichés dans cette colonne `(index)`.
+
+> **Note :** Dans Firefox, `console.table()` limite l'affichage aux 1000 premières lignes.
 
 {{AvailableInWorkers}}
 
 ### Collections de données primitives
 
-`data` peut contenir un tableau ou un objet.
+L'argument `data` peut être un tableau ou un objet.
 
 ```js
 // un tableau de chaînes de caractères
 
-console.table(["apples", "oranges", "bananas"]);
+console.table(["pommes", "oranges", "bananes"]);
 ```
 
-![](console-table-array.png)
+| (index) | Valeurs   |
+| ------- | --------- |
+| 0       | 'pommes'  |
+| 1       | 'oranges' |
+| 2       | 'bananes' |
 
 ```js
 // un objet dont les propriétés sont des chaînes de caractères
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+function Personne(prenom, nomFamille) {
+  this.prenom = prenom;
+  this.nomFamille = nomFamille;
 }
 
-var me = new Person("John", "Smith");
+const moi = new Personne("Jean", "Biche");
 
-console.table(me);
+console.table(moi);
 ```
 
-![](console-table-simple-object.png)
+| (index)    | Valeurs |
+| ---------- | ------- |
+| prenom     | 'Jean'  |
+| nomFamille | 'Biche' |
 
-### Collections de données composées
+### Collections de données composites
 
-Si les éléments d'un tableau, ou les propriétés d'un objet, sont eux-mêmes des tableaux ou des objets, alors ces éléments ou propriétés sont énumérés dans chaque ligne, un élément par colonne :
+Si les éléments d'un tableau ou les propriétés d'un objet sont eux-mêmes des tableaux ou des objets, alors ces éléments ou propriétés sont énumérés dans chaque ligne, avec un élément par colonne&nbsp;:
 
 ```js
 // un tableau de tableaux
 
-var people = [
-  ["John", "Smith"],
-  ["Jane", "Doe"],
-  ["Emily", "Jones"],
+const personnes = [
+  ["Tyrone", "Dupont"],
+  ["Janet", "Martin"],
+  ["Maria", "Cruz"],
 ];
-console.table(people);
+console.table(personnes);
 ```
 
-![Un tableau qui affiche un tableau de tableaux](console-table-array-of-array.png)
+| (index) | 0        | 1        |
+| ------- | -------- | -------- |
+| 0       | 'Tyrone' | 'Dupont' |
+| 1       | 'Janet'  | 'Martin' |
+| 2       | 'Maria'  | 'Cruz'   |
 
 ```js
 // un tableau d'objets
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+function Personne(prenom, nomFamille) {
+  this.prenom = prenom;
+  this.nomFamille = nomFamille;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+const tyrone = new Personne("Tyrone", "Dupont");
+const janet = new Personne("Janet", "Martin");
+const maria = new Personne("Maria", "Cruz");
 
-console.table([john, jane, emily]);
+console.table([tyrone, janet, maria]);
 ```
 
 Notez que si le tableau contient des objets, alors les colonnes seront nommées avec les noms des propriétés.
 
-![Un tableau qui affiche un tableau d'objets](console-table-array-of-objects.png)
+| (index) | prenom   | nomFamille |
+| ------- | -------- | ---------- |
+| 0       | 'Tyrone' | 'Dupont'   |
+| 1       | 'Janet'  | 'Martin'   |
+| 2       | 'Maria'  | 'Cruz'     |
 
 ```js
 // un objet contenant des propriétés qui sont des objets
 
-var family = {};
+const famille = {};
 
-family.mother = new Person("Jane", "Smith");
-family.father = new Person("John", "Smith");
-family.daughter = new Person("Emily", "Smith");
+famille.mere = new Personne("Janet", "Dupont");
+famille.pere = new Personne("Tyrone", "Dupont");
+famille.fille = new Personne("Maria", "Dupont");
 
-console.table(family);
+console.table(famille);
 ```
 
-![Un tableau affichant des objets composés d'objets](console-table-object-of-objects.png)
+| (index) | prenom   | nomFamille |
+| ------- | -------- | ---------- |
+| fille   | 'Maria'  | 'Dupont'   |
+| pere    | 'Tyrone' | 'Dupont'   |
+| mere    | 'Janet'  | 'Dupont'   |
 
 ### Restreindre les colonnes affichées
 
-Par défaut, `console.table()` liste tous les éléments pour chaque ligne. Vous pouvez utiliser le paramètre facultatif `columns` pour sélectionner un sous-ensemble de colonnes à afficher :
+Par défaut, `console.table()` liste tous les éléments pour chaque ligne. Vous pouvez utiliser le paramètre facultatif `columns` pour sélectionner un sous-ensemble de colonnes à afficher&nbsp;:
 
 ```js
-// un tableau d'objets, affichant seulement firstName
+// un tableau d'objets, affichant seulement prenom
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+function Personne(prenom, nomFamille) {
+  this.prenom = prenom;
+  this.nomFamille = nomFamille;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+const tyrone = new Personne("Tyrone", "Dupont");
+const janet = new Personne("Janet", "Martin");
+const maria = new Personne("Maria", "Cruz");
 
-console.table([john, jane, emily], ["firstName"]);
+console.table([tyrone, janet, maria], ["prenom"]);
 ```
 
-![Un tableau affichant un tableau d'objets dont la sortie est filtrée](console-table-array-of-objects-firstname-only.png)
+| (index) | prenom   |
+| ------- | -------- |
+| 0       | 'Tyrone' |
+| 1       | 'Janet'  |
+| 2       | 'Maria'  |
 
-### Ordonner les colonnes
+### Trier les colonnes
 
-Vous pouvez ordonner les colonnes en cliquant sur l'intitulé de la colonne.
+Vous pouvez trier les colonnes en cliquant sur l'intitulé de la colonne.
 
 ## Syntaxe
 
-```js
-console.table(data [, columns]);
+```js-nolint
+table(data)
+table(data, columns)
 ```
 
 ### Paramètres
 
 - `data`
-  - : La donnée à afficher. Doit être un tableau ou un objet.
+  - : Les données à afficher. Doit être un tableau ou un objet.
 - `columns`
   - : Un tableau contenant les noms des colonnes à inclure dans la sortie.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Spécifications
 
