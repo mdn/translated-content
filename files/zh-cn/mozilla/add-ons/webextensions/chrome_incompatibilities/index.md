@@ -82,11 +82,11 @@ WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此
 
 如果你在编写 WebExtension 时确实要用到 `browser` 和 promise，我们也开发了 polyfill 来保证扩展可以在 Chrome 里运行：<https://github.com/mozilla/webextension-polyfill>.
 
-### 部分受支持的 API
+### 部分支持的 API
 
 页面 [JavaScript API 的浏览器支持情况](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 包含了介绍受 Firefox 任意程度支持的 API 的兼容性表格。若对 API 的支持存在须要注意的事项，并标有星号“\*”，且在 API 的参考页面会介绍注意事项。
 
-这些表格由 [在 GitHub 上以 JSON 文件存储的兼容性数据](https://github.com/mdn/browser-compat-data)生成。
+这些表格由[在 GitHub 上以 JSON 文件存储的兼容性数据](https://github.com/mdn/browser-compat-data)生成。
 
 本节其余部分将介绍在构建跨浏览器扩展时可能需要考虑的主要兼容性问题。此外，请记得查看浏览器兼容性表，因为其中可能包含更多兼容性信息。
 
