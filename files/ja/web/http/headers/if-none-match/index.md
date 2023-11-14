@@ -68,7 +68,7 @@ If-None-Match: *
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.If-None-Match")}}
+{{Compat}}
 
 ## 関連情報
 

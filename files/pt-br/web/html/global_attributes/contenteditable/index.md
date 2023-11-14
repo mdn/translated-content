@@ -28,7 +28,7 @@ Você pode definir a cor usada para desenhar a inserção de texto {{Glossary("c
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.contenteditable")}}
+{{Compat}}
 
 ## Veja também
 

@@ -42,7 +42,7 @@ console.log(myArray); // ['three', 'two', 'one']
 
 ## Compatibilidade com navegador
 
-{{Compat("javascript.builtins.Array.reverse")}}
+{{Compat}}
 
 ## Veja também
 

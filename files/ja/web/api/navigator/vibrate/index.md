@@ -35,7 +35,7 @@ window.navigator.vibrate([
 
 ## ブラウザーの互換性
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## 関連情報
 

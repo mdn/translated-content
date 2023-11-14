@@ -58,4 +58,4 @@ svg {
 
 ## ブラウザ実装状況
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

@@ -55,5 +55,5 @@ formData.get("username"); // Returns "Chris"
 
 ## 参见
 
-- [使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

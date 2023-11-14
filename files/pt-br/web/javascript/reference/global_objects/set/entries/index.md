@@ -36,7 +36,7 @@ console.log(setIter.next().value); // ["baz", "baz"]
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Set.entries")}}
+{{Compat}}
 
 ## Veja também
 

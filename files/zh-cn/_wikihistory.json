@@ -9784,20 +9784,6 @@
     "modified": "2019-09-24T07:19:19.213Z",
     "contributors": ["kameii", "sintrb"]
   },
-  "Web/API/FormData/Using_FormData_Objects": {
-    "modified": "2020-06-22T06:10:24.580Z",
-    "contributors": [
-      "mountainsky13189",
-      "YogurtQ",
-      "Bayes",
-      "wuchunxu",
-      "weilong",
-      "banli17",
-      "tyw2015",
-      "TYPE-O56",
-      "ziv.zjc"
-    ]
-  },
   "Web/API/FormData/append": {
     "modified": "2019-09-24T07:14:27.802Z",
     "contributors": ["hayond", "stevobm", "wth"]
@@ -15867,58 +15853,6 @@
       "Kook pudding"
     ]
   },
-  "Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest": {
-    "modified": "2019-03-23T22:09:30.230Z",
-    "contributors": ["wbamberg", "XiaoyaoChen"]
-  },
-  "Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data": {
-    "modified": "2020-08-05T21:51:20.534Z",
-    "contributors": [
-      "Ende93",
-      "knightyun",
-      "StudentMain",
-      "qyue",
-      "soraly",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests": {
-    "modified": "2019-03-18T21:11:50.541Z",
-    "contributors": [
-      "Reveur",
-      "zhangchen",
-      "Lby876176278",
-      "xgqfrms-GitHub",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2020-10-15T21:19:05.341Z",
-    "contributors": [
-      "Aierklk",
-      "coder-git",
-      "knightyun",
-      "RainSlide",
-      "mynull",
-      "ZengYu",
-      "zhuruipeng",
-      "hongxu.Wei",
-      "banli17",
-      "ZZES_REN",
-      "makaria",
-      "hogaFarming",
-      "learnslagFeng",
-      "peterwang1996",
-      "Harvesty",
-      "Hawkeyes_Wind",
-      "lncwwn",
-      "FredWe",
-      "mengzyou",
-      "movever1",
-      "ziyunfei",
-      "ethertank"
-    ]
-  },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2020-05-20T05:15:18.208Z",
     "contributors": ["RainSlide", "roberthow"]
@@ -16077,6 +16011,72 @@
   "Web/API/XMLHttpRequestEventTarget": {
     "modified": "2020-10-15T21:34:13.586Z",
     "contributors": ["RainSlide", "rubyisapm"]
+  },
+  "Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest": {
+    "modified": "2019-03-23T22:09:30.230Z",
+    "contributors": ["wbamberg", "XiaoyaoChen"]
+  },
+  "Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data": {
+    "modified": "2020-08-05T21:51:20.534Z",
+    "contributors": [
+      "Ende93",
+      "knightyun",
+      "StudentMain",
+      "qyue",
+      "soraly",
+      "ziyunfei"
+    ]
+  },
+  "Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests": {
+    "modified": "2019-03-18T21:11:50.541Z",
+    "contributors": [
+      "Reveur",
+      "zhangchen",
+      "Lby876176278",
+      "xgqfrms-GitHub",
+      "ziyunfei"
+    ]
+  },
+  "Web/API/XMLHttpRequest_API/Using_FormData_Objects": {
+    "modified": "2020-06-22T06:10:24.580Z",
+    "contributors": [
+      "mountainsky13189",
+      "YogurtQ",
+      "Bayes",
+      "wuchunxu",
+      "weilong",
+      "banli17",
+      "tyw2015",
+      "TYPE-O56",
+      "ziv.zjc"
+    ]
+  },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2020-10-15T21:19:05.341Z",
+    "contributors": [
+      "Aierklk",
+      "coder-git",
+      "knightyun",
+      "RainSlide",
+      "mynull",
+      "ZengYu",
+      "zhuruipeng",
+      "hongxu.Wei",
+      "banli17",
+      "ZZES_REN",
+      "makaria",
+      "hogaFarming",
+      "learnslagFeng",
+      "peterwang1996",
+      "Harvesty",
+      "Hawkeyes_Wind",
+      "lncwwn",
+      "FredWe",
+      "mengzyou",
+      "movever1",
+      "ziyunfei",
+      "ethertank"
+    ]
   },
   "Web/API/XMLSerializer": {
     "modified": "2020-10-15T21:14:45.671Z",
@@ -25083,7 +25083,7 @@
       "bumaociyuan"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_class_fields": {
+  "Web/JavaScript/Reference/Classes/Private_properties": {
     "modified": "2020-10-15T22:30:12.129Z",
     "contributors": ["zhuangyin", "symant233", "wizard-intraining"]
   },

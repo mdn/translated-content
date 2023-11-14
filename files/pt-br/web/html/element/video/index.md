@@ -117,7 +117,7 @@ Esse elemento implementa a interface [`HTMLVideoElement`](/pt-BR/DOM/HTMLVideoEl
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.video")}}
+{{Compat}}
 
 ## Veja também
 

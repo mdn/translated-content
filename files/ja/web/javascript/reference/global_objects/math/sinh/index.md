@@ -68,7 +68,7 @@ Math.sinh(1); // 1.1752011936438014
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.sinh")}}
+{{Compat}}
 
 ## 関連情報
 

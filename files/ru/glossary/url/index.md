@@ -3,6 +3,8 @@ title: URL (Единый указатель ресурса)
 slug: Glossary/URL
 ---
 
+{{GlossarySidebar}}
+
 _Единый указатель ресурса (Uniform Resource Locator,_ **URL**) — строка, однозначно определяющая, где в интернете находится ресурс.
 
 В контексте {{Glossary("HTTP")}}, URL называют "адрес" (web address)" или "ссылку" (link). В браузере URL отображается в адресной строке , например, `https://developer.mozilla.org`.

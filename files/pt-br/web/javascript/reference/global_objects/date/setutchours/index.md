@@ -51,7 +51,7 @@ theBigDay.setUTCHours(8);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setUTCHours")}}
+{{Compat}}
 
 ## Veja também
 

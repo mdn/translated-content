@@ -76,29 +76,29 @@ slug: Web/CSS/display-inside
 
 ### 複数のキーワードの対応
 
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
+{{Compat}}
 
 - Chromium のバグ: <https://bugs.chromium.org/p/chromium/issues/detail?id=804600>
 
 ### flow-root の対応
 
-{{Compat("css.properties.display.flow-root", 10)}}
+{{Compat}}
 
 ### table の対応
 
-{{Compat("css.properties.display.table_values", 10)}}
+{{Compat}}
 
 ### grid の対応
 
-{{Compat("css.properties.display.grid", 10)}}
+{{Compat}}
 
 ### flex の対応
 
-{{Compat("css.properties.display.flex", 10)}}
+{{Compat}}
 
 ### ruby の対応
 
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## 関連情報
 

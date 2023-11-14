@@ -26,4 +26,4 @@ CSS Font Loading API は動的にフォントリソースをロードするイ�
 
 ### FontFace interface
 
-{{Compat("api.FontFace")}}
+{{Compat}}

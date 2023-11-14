@@ -37,7 +37,7 @@ objRef = window.menubar;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.menubar")}}
+{{Compat}}
 
 ## 関連情報
 

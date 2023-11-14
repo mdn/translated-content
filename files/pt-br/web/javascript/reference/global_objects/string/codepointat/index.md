@@ -119,7 +119,7 @@ for (let codePoint of "\ud83d\udc0e\ud83d\udc71\u2764") {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.codePointAt")}}
+{{Compat}}
 
 ## Veja também
 

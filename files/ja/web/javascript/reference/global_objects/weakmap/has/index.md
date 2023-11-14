@@ -43,7 +43,7 @@ wm.has("baz"); // false を返す
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap.has")}}
+{{Compat}}
 
 ## 関連情報
 

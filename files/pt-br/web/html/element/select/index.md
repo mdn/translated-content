@@ -65,7 +65,7 @@ A seguir um exemplo de como simular uma lista de seleção com opções editáve
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.select")}}
+{{Compat}}
 
 ## Veja também
 

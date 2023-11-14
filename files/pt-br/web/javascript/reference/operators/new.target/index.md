@@ -78,7 +78,7 @@ A partir do exemplo acima das classes C e D, mostra que new\.target aponta para 
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.new_target")}}
+{{Compat}}
 
 ## Veja também
 

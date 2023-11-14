@@ -89,7 +89,7 @@ wm1.has(o1); // false
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap")}}
+{{Compat}}
 
 ## Veja também
 

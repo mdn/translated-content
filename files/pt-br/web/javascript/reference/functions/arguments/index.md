@@ -203,7 +203,7 @@ func(); // undefined
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions.arguments")}}
+{{Compat}}
 
 ## Veja também
 

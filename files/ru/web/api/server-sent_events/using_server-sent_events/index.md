@@ -187,4 +187,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ### `EventSource`
 
-{{Compat("api.EventSource")}}
+{{Compat}}

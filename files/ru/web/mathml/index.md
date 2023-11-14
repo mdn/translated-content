@@ -41,4 +41,4 @@ slug: Web/MathML
 
 ## Совместимость браузеров
 
-{{Compat("mathml.elements.math", 0)}}
+{{Compat}}
