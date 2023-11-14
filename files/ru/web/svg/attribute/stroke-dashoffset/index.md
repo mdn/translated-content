@@ -81,12 +81,12 @@ svg {
 
 ## Usage context
 
-| Категория         | Атрибут оформления                                                                                    |
-| ----------------- | ----------------------------------------------------------------------------------------------------- |
-| Значение          | [\<percentage>](/en-US/docs/Web/SVG#percentage) \| [\<length>](/en-US/docs/Web/SVG#length) \| inherit |
-| Исходное значение | 0                                                                                                     |
-| Анимируемый       | Да                                                                                                    |
-| Спецификация      | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)           |
+| Категория         | Атрибут оформления                                                                              |
+| ----------------- | ----------------------------------------------------------------------------------------------- |
+| Значение          | [\<percentage>](/ru/docs/Web/SVG#percentage) \| [\<length>](/ru/docs/Web/SVG#length) \| inherit |
+| Исходное значение | 0                                                                                               |
+| Анимируемый       | Да                                                                                              |
+| Спецификация      | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)     |
 
 ## Элементы
 
