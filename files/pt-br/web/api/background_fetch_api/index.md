@@ -15,7 +15,7 @@ A {{domxref("Background Synchronization API")}} fornece uma maneira para os serv
 
 A Background Fetch API resolve esse problema. Ela cria uma maneira do desenvolverdor web pedir ao browser que o mesmo faça chamadas em background, por exemplo quando o usuário clica em um botão para fazer o download de um arquivo de vídeo. O browser irá fazer o download de uma maneira visível ao usuário, mostrando o progresso do download e expondo ao usuário uma maneira de cancelar o mesmo. Quando o download termina, o browser irá abrir o service worker e nesse momento a aplicação pode fazer algo com o resultado se necessário.
 
-A Background Fetch API irá ablitar com que a chamada aconteça mesmo se o usuário inicie o processo estando desconectado. Uma vez que o usuário se conecta novamente o download irá iniciar. Se o usuário volta a ficar desconectado, o processo irá pausar até que a conexão volte.
+A Background Fetch API permitirá que a chamada aconteça mesmo se o usuário inicie o processo estando desconectado. Uma vez que o usuário se conecta novamente o download irá iniciar. Se o usuário volta a ficar desconectado, o processo irá pausar até que a conexão volte.
 
 ## Interfaces
 
