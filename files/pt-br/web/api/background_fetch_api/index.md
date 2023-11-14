@@ -79,7 +79,7 @@ Você pode ver uma aplicação demo que implementa a Background fetch [aqui](htt
 
 {{Compat}}
 
-## Vej tambem
+## Veja tambem
 
 - [Introdução a Background Fetch](https://developer.chrome.com/blog/background-fetch/)
 - [Background Fetch - HTTP 203](https://www.youtube.com/watch?v=cElAoxhQz6w)
