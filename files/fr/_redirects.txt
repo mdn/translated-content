@@ -3845,7 +3845,8 @@
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileRequest/lockedFile	/fr/docs/Web/API/IndexedDB_API
-/fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
+/fr/docs/Web/API/FormData/Using_FormData_Objects	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
+/fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /fr/docs/Web/API/GlobalEventHandlers/onabort	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/API/GlobalEventHandlers/onauxclick	/fr/docs/Web/API/Element/auxclick_event
 /fr/docs/Web/API/GlobalEventHandlers/onblur	/fr/docs/Web/API/Window/blur_event
@@ -4099,7 +4100,8 @@
 /fr/docs/Web/API/WorkerGlobalScope/ononline	/fr/docs/Web/API/WorkerGlobalScope/online_event
 /fr/docs/Web/API/XMLDocument/async	/fr/docs/Web/API/XMLDocument
 /fr/docs/Web/API/XMLDocument/load	/fr/docs/Web/API/XMLDocument
-/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
 /fr/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/Web/API/console.log	/fr/docs/Web/API/console/log
@@ -4760,7 +4762,7 @@
 /fr/docs/Web/Guide/HTML/Liens_email	/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 /fr/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
-/fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/Web/API/FormData/Using_FormData_Objects
+/fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/CSS/CSS_colors/Applying_color
 /fr/docs/Web/HTML/Applying_color	/fr/docs/Web/CSS/CSS_colors/Applying_color
 /fr/docs/Web/HTML/Attributs	/fr/docs/Web/HTML/Attributes
@@ -4970,6 +4972,7 @@
 /fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/About	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/Classes/Class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+/fr/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Private_properties
 /fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/Web/JavaScript/Reference/Erreurs	/fr/docs/Web/JavaScript/Reference/Errors
@@ -6180,7 +6183,7 @@
 /fr/docs/XHTML	/fr/docs/Glossary/XHTML
 /fr/docs/XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest
 /fr/docs/XMLHttpRequest/FormData	/fr/docs/Web/API/FormData
-/fr/docs/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/fr/docs/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /fr/docs/XMLSerializer	/fr/docs/Web/API/XMLSerializer
 /fr/docs/XPath	/fr/docs/Web/XPath
 /fr/docs/XPath/Axes	/fr/docs/Web/XPath/Axes
@@ -6473,7 +6476,7 @@
 /fr/docs/conflicting/Web/API/Element/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/conflicting/Web/API/EventTarget/addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/conflicting/Web/API/File_and_Directory_Entries_API	/fr/docs/Web/API/File_and_Directory_Entries_API
-/fr/docs/conflicting/Web/API/FormData/Using_FormData_Objects	/fr/docs/Web/API/FormData/Using_FormData_Objects
+/fr/docs/conflicting/Web/API/FormData/Using_FormData_Objects	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266	/fr/docs/Web/API/Geolocation/getCurrentPosition

@@ -35,11 +35,9 @@ Number.parseFloat === parseFloat; // true
 
 Por favor veja {{jsxref("parseFloat", "parseFloat()")}} para mais detalhes e exemplos.
 
-## Especificação
+## Especificações
 
-| Especificação                                                      | Situação         | Comentários        |
-| ------------------------------------------------------------------ | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-number.parsefloat', 'Number.parseFloat')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade dos Navegadores
 

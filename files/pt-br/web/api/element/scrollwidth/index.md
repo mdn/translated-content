@@ -78,11 +78,9 @@ _xScrollWidth_ é a largura do conteúdo do _elemento_ em pixels.
 </html>
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                 | Status                  | Comentário        |
-| ----------------------------------------------------------------------------- | ----------------------- | ----------------- |
-| {{SpecName("CSSOM View", "#dom-element-scrollwidth", "Element.scrollWidth")}} | {{Spec2("CSSOM View")}} | Definição inicial |
+{{Specifications}}
 
 ## Referências
 
