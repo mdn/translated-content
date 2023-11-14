@@ -571,4 +571,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

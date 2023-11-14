@@ -266,7 +266,7 @@ myVariable = '韩梅梅';
 ```js
 let iceCream = "chocolate";
 if (iceCream === "chocolate") {
-  alert("我最喜欢巧克力冰激淋了。");
+  alert("我最喜欢巧克力冰淇淋了。");
 } else {
   alert("但是巧克力才是我的最爱呀……");
 }
