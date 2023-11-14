@@ -9,7 +9,7 @@ l10n:
 
 En JavaScript, un **booléen** est une [valeur primitive](/fr/docs/Glossary/Primitive) qui peut être `true` ou `false`.
 
-Un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) est une [enveloppe (<i lang="en">wrapper</i>)](/fr/docs/Glossary/wrapper) objet pour les valeurs booléennes primitives.
+Un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) est une [enveloppe (<i lang="en">wrapper</i>)](/fr/docs/Glossary/Wrapper) pour les valeurs booléennes primitives.
 
 ## Voir aussi
 
