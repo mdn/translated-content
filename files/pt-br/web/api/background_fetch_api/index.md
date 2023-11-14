@@ -32,7 +32,7 @@ A Background Fetch API permitirá que a chamada aconteça mesmo se o usuário in
 
 ## Exemplos
 
-Antes de usar Background Fetch, verifique o suporte dos browser.
+Antes de usar Background Fetch, verifique o suporte do navegador.
 
 ```js
 if (!("BackgroundFetchManager" in self)) {
