@@ -16,9 +16,9 @@ slug: Web/HTML/Element/input/file
 | **IDL атрибуты**            | `files` and `value`                                                                                                                                                |
 | **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}                                                                                                                 |
 
-## Value
+## Значение
 
-Атрибут [`value`](/ru/docs/Web/HTML/Element/input#value) элемента input содержит {{domxref("DOMString")}}, который представляет путь к выбранным файлам. Если пользователь выбрал несколько файлов, `value` представляет первый файл из списка. Остальные файлы можно определить используя {{domxref("HTMLInputElement.files")}} свойство элемента input.
+Атрибут [`value`](/ru/docs/Web/HTML/Element/input#value) элемента `input` содержит строку, представляющую путь к выбранному файлу или файлам. Если пользователь выбрал несколько файлов, `value` представляет первый файл из списка. Остальные файлы можно определить используя [свойство `HTMLInputElement.files` элемента `input`](/ru/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
 
 > **Примечание:** Значение [всегда представляет собой имя файла, начинающееся с `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly) и не является настоящим расположением файла. Это сделано для того, чтобы вредоносное ПО не могло получить информацию о файловой структуре пользователя.
 
