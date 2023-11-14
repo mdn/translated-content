@@ -81,15 +81,9 @@ function toggleBilling() {
 
 {{EmbedLiveSample('Example', 300, 250)}}
 
-## Expecificações
+## Especificações
 
-| Specification                                                   | Status                      | Comment                                                     |
-| --------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-disabled', ':disabled')}}  | {{Spec2('HTML WHATWG')}}    | No change.                                                  |
-| {{SpecName('HTML5 W3C', '#selector-disabled', ':disabled')}}    | {{Spec2('HTML5 W3C')}}      | Defines the semantics of HTML and forms.                    |
-| {{SpecName('CSS4 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS4 Selectors')}} | No change.                                                  |
-| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':disabled')}}   | {{Spec2('CSS3 Basic UI')}}  | Links to Selectors Level 3.                                 |
-| {{SpecName('CSS3 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS3 Selectors')}} | Defines the pseudo-class, but not the associated semantics. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

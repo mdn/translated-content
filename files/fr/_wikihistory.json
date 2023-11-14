@@ -9630,10 +9630,6 @@
     "modified": "2020-10-15T22:10:44.093Z",
     "contributors": ["tristantheb", "SphinxKnight", "Pandazaur", "ThreadElric"]
   },
-  "Web/API/FormData/Using_FormData_Objects": {
-    "modified": "2019-03-23T22:14:27.375Z",
-    "contributors": ["Wintersunshine-Do"]
-  },
   "Web/API/FormData/append": {
     "modified": "2020-10-15T22:10:52.044Z",
     "contributors": ["tristantheb", "ThreadElric", "cyppan"]
@@ -13261,17 +13257,6 @@
       "Anonymous"
     ]
   },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2019-03-23T23:16:32.724Z",
-    "contributors": [
-      "sylv1",
-      "JNa0",
-      "lessonsharing",
-      "Deleplace",
-      "teoli",
-      "riderodd"
-    ]
-  },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2019-11-25T21:11:58.899Z",
     "contributors": ["Lyokolux"]
@@ -13327,6 +13312,21 @@
   "Web/API/XMLHttpRequestEventTarget": {
     "modified": "2020-10-15T22:31:14.301Z",
     "contributors": ["Voulto", "devweb157"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_FormData_Objects": {
+    "modified": "2019-03-23T22:14:27.375Z",
+    "contributors": ["Wintersunshine-Do"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2019-03-23T23:16:32.724Z",
+    "contributors": [
+      "sylv1",
+      "JNa0",
+      "lessonsharing",
+      "Deleplace",
+      "teoli",
+      "riderodd"
+    ]
   },
   "Web/API/XMLSerializer": {
     "modified": "2019-03-23T23:46:38.004Z",
@@ -22035,7 +22035,7 @@
       "Yukulele."
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_class_fields": {
+  "Web/JavaScript/Reference/Classes/Private_properties": {
     "modified": "2020-10-15T22:33:35.342Z",
     "contributors": ["NemoNobobyPersonne", "N0wan", "yohannlog"]
   },

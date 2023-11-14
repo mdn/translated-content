@@ -157,7 +157,7 @@ if (httpRequest.status === 200) {
 - 请求已通过然后（`onreadystatechange`）传给 `alertContents()` 执行。
 - `alertContents()` 检查返回的响应是否 OK，然后 `alert()` 文件 `test.html` 的内容。
 
-> **备注：** 如果不设置响应头 `Cache-Control: no-cache` 浏览器将会把响应缓存下来而且再也无法重新提交请求，这会使得调试过程异常艰难。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数（详情见[绕过缓存](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#绕过缓存)）。
+> **备注：** 如果不设置响应头 `Cache-Control: no-cache` 浏览器将会把响应缓存下来而且再也无法重新提交请求，这会使得调试过程异常艰难。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数（详情见[绕过缓存](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#绕过缓存)）。
 
 > **备注：** 如果变量 `httpRequest` 在全局范围内使用，它会在 `makeRequest()` 函数中被相互覆盖，从而导致资源竞争。为了避免这个情况，请在包含 AJAX 函数的[闭包](/zh-CN/docs/Web/JavaScript/Closures)中声明 `httpRequest` 变量。
 
@@ -346,15 +346,15 @@ TIME: 312.15
 
 ## 参见
 
-- [使用 XMLHttpRequest API](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest API](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
   - : {{domxref("XMLHttpRequest")}} API 是 Ajax 的核心。本文将解释如何使用一些 Ajax 技术，比如：
-    - [分析和操纵服务器响应](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#处理响应)
-    - [监控请求过程](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#监控请求过程)
-    - [提交表单或者上传二进制文件](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#提交表单和上传文件)，使用*纯* Ajax 或者 {{domxref("FormData")}} 对象
+    - [分析和操纵服务器响应](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#处理响应)
+    - [监控请求过程](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#监控请求过程)
+    - [提交表单或者上传二进制文件](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)，使用*纯* Ajax 或者 {{domxref("FormData")}} 对象
     - 在 [Web worker](/zh-CN/docs/Web/API/Worker) 中使用 Ajax
 - [_纯 Ajax_ 导航示例](/zh-CN/docs/Web/API/History_API/Example)
   - : 本文提供了一个仅由三个页面组成的*纯 Ajax* 网站的（最小）工作示例。
-- [发送和接收二进制数据](/zh-CN/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
+- [发送和接收二进制数据](/zh-CN/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data)
   - : `XMLHttpRequest` 对象的 `responseType` 属性可以被设置来改变服务器的预期响应类型。可能的值是空字符串（默认）、`arraybuffer`、`blob`、`document`、`json` 和 `text`。`response` 属性将根据 `responseType` 包含，作为一个 `ArrayBuffer`、`Blob`、`Document`、`JSON` 或字符串的实体主体。这篇文章将展示一些 Ajax I/O 技术。
 - [XML](/zh-CN/docs/Glossary/XML)
   - : **可扩展标记语言**（Extensible Markup Language，XML）是 W3C 推荐的一种专用于创建专用标记语言的通用标记语言。它是 SGML 的简化子集，能够描述许多不同类型的数据。其主要目的是促进在不同的系统，尤其是通过互联网连接的系统间的数据共享。
@@ -364,7 +364,7 @@ TIME: 312.15
   - : XPath 代表 **X**ML **Path** Language，它使用非 XML 语法，提供了一种灵活的方式来寻址（指向）[XML](/zh-CN/docs/Web/XML) 文档的不同部分。除此之外，它还可以用于测试文档中的寻址节点，以确定它们是否匹配模式。
 - {{domxref("FileReader")}} API
   - : `FileReader` API 允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓存）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。文件对象可以从用户选择文件后的 {{HTMLElement("input")}} 元素的 {{domxref("FileList")}} 对象中获取，也可以从拖放操作的 {{domxref("DataTransfer")}} 对象获取。
-- [XMLHttpRequest 对 HTML 的支持](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [XMLHttpRequest 对 HTML 的支持](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - : W3C [XMLHttpRequest](https://xhr.spec.whatwg.org/) 规范向 {{domxref("XMLHttpRequest")}} 添加了 HTML 解析支持，XMLHttpRequest 原本只支持 XML 解析。此功能允许 Web 应用程序使用 `XMLHttpRequest` 获取 HTML 资源作为解析的 DOM。
 - [XMLHttpRequest 规范](https://xhr.spec.whatwg.org/)
   - : WHATWG 动态标准
