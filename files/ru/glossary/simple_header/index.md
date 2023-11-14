@@ -3,6 +3,8 @@ title: Простой заголовок
 slug: Glossary/Simple_header
 ---
 
+{{GlossarySidebar}}
+
 _Простой заголовок (или заголовок запроса с поддержкой безопасности CORS_) - это один из следующих [HTTP заголовков](/ru/docs/Web/HTTP/Заголовки):
 
 - {{HTTPHeader("Accept")}},
