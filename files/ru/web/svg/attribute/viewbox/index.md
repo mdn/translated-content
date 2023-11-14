@@ -125,4 +125,4 @@ svg:not(:root) {
 
 ## Смотрите также
 
-- [SVG Getting Started: Positions](/en-US/docs/Web/SVG/Tutorial/Positions)
+- [SVG Getting Started: Positions](/ru/docs/Web/SVG/Tutorial/Positions)
