@@ -15,9 +15,9 @@ slug: Learn/MathML/First_steps/Scripts
         基本的计算机操作能力，<a
         href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
         >安装基本软件</a
-        >，处理文件<a
-         href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">的基本知识</a
-         >，以及 HTML 基础知识（可以学习<a
+        >，<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        >处理文件</a>的基本知识，以及
+      HTML 基础知识（可以学习 <a
         href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
         >。）
       </td>
@@ -69,7 +69,7 @@ slug: Learn/MathML/First_steps/Scripts
 
 以下是在你的浏览器中呈现上述示例的结果。
 
-{{ EmbedLiveSample('msub_msup_msubsup 的子树', 700, 200, "", "") }}
+{{EmbedLiveSample('msub_msup_msubsup 的子树', 700, 200)}}
 
 可以看出：
 
