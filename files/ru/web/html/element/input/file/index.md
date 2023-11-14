@@ -46,7 +46,7 @@ div {
 
 This produces the following output:
 
-{{EmbedLiveSample('A_basic_example', 650, 60)}}
+{{EmbedLiveSample('A_basic_example', 650, 90)}}
 
 > **Примечание:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
@@ -114,7 +114,7 @@ div {
 
 This produces a similar-looking output to the previous example:
 
-{{EmbedLiveSample('Limiting_accepted_file_types', 650, 60)}}
+{{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
 > **Примечание:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
@@ -328,12 +328,46 @@ The example looks like this; have a play:
 
 ## Техническое резюме
 
-| **[Value](#value)**         | {{domxref("DOMString")}} представляет собой путь до выбранного файла.                                                                                              |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Действия**                | {{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}                                                                |
-| **Поддерживаемые атрибуты** | [`accept`](/ru/docs/Web/HTML/Element/input#accept), [`multiple`](/ru/docs/Web/HTML/Element/input#multiple), [`required`](/ru/docs/Web/HTML/Element/input#required) |
-| **IDL атрибуты**            | `files` and `value`                                                                                                                                                |
-| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}                                                                                                                 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#значение">Значение</a></strong></td>
+      <td>Строка, содержащая путь к файлу</td>
+    </tr>
+    <tr>
+      <td><strong>События</strong></td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Поддерживаемые общие атрибуты</strong></td>
+      <td><a href="/ru/docs/Web/HTML/Element/input#attr-required"><code>required</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Дополнительные атрибуты</strong></td>
+      <td>
+        <a href="/ru/docs/Web/HTML/Element/input#attr-accept"><code>accept</code></a>,
+        <a href="/ru/docs/Web/HTML/Attributes/capture"><code>capture</code></a>,
+        <a href="/ru/docs/Web/HTML/Element/input##attr-multiple"><code>multiple</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL-атрибуты</strong></td>
+      <td><code>files</code> и <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM-интерфейс</strong></td>
+      <td>{{domxref("HTMLInputElement")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Методы</strong></td>
+      <td>{{domxref("HTMLInputElement.select", "select()")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Неявная ARIA-роль</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>нет соответствующей роли</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
