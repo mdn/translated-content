@@ -43,7 +43,7 @@ if (!("BackgroundFetchManager" in self)) {
 Para usar a Background Fetch é necessário que um service worker esteja registrado. Então podemos chamar
 `backgroundFetch.fetch()` para executar o fetch. Essa chamada retorna uma promise que resolve com uma {{domxref("BackgroundFetchRegistration")}}.
 
-A background fetch pode baixar varios arquivos. No nosso exemplo buscamos um MP3 e um JPEG. Isso permite que um pacote de arquivos possa que o usuário vê como um item (por exemplo, um podcast e uma arte) sejam baixados juntos.
+A background fetch pode baixar vários arquivos. No nosso exemplo buscamos um MP3 e um JPEG. Isso permite que um pacote de arquivos que o usuário vê como um item (por exemplo, um podcast e uma arte) sejam baixados juntos.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
