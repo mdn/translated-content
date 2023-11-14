@@ -7,11 +7,7 @@ slug: Web/HTML/Element/input/file
 
 {{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn/Forms), или обработаны JavaScript и [File API](/ru/docs/Web/API/File_API/Using_files_from_web_applications).
 
-```html
-<input name="myFile" type="file" />
-```
-
-{{EmbedLiveSample('file-example', 650, 40)}}
+{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
 | **[Value](#value)**         | {{domxref("DOMString")}} представляет собой путь до выбранного файла.                                                                                              |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
