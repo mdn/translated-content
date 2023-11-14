@@ -9,13 +9,6 @@ slug: Web/HTML/Element/input/file
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
-| **[Value](#value)**         | {{domxref("DOMString")}} представляет собой путь до выбранного файла.                                                                                              |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Действия**                | {{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}                                                                |
-| **Поддерживаемые атрибуты** | [`accept`](/ru/docs/Web/HTML/Element/input#accept), [`multiple`](/ru/docs/Web/HTML/Element/input#multiple), [`required`](/ru/docs/Web/HTML/Element/input#required) |
-| **IDL атрибуты**            | `files` and `value`                                                                                                                                                |
-| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}                                                                                                                 |
-
 ## Значение
 
 Атрибут [`value`](/ru/docs/Web/HTML/Element/input#value) элемента `input` содержит строку, представляющую путь к выбранному файлу или файлам. Если пользователь выбрал несколько файлов, `value` представляет первый файл из списка. Остальные файлы можно определить используя [свойство `HTMLInputElement.files` элемента `input`](/ru/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
@@ -332,6 +325,15 @@ function returnFileSize(number) {
 The example looks like this; have a play:
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
+
+## Техническое резюме
+
+| **[Value](#value)**         | {{domxref("DOMString")}} представляет собой путь до выбранного файла.                                                                                              |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Действия**                | {{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}                                                                |
+| **Поддерживаемые атрибуты** | [`accept`](/ru/docs/Web/HTML/Element/input#accept), [`multiple`](/ru/docs/Web/HTML/Element/input#multiple), [`required`](/ru/docs/Web/HTML/Element/input#required) |
+| **IDL атрибуты**            | `files` and `value`                                                                                                                                                |
+| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}                                                                                                                 |
 
 ## Specifications
 
