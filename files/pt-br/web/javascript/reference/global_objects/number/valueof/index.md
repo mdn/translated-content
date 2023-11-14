@@ -36,14 +36,9 @@ console.log(num); // 10
 console.log(typeof num); // number
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                                        | Status               | Comment                                            |
-| ------------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                  | {{Spec2('ES1')}}     | Definição inicial. Implementada no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.4.4', 'Number.prototype.valueOf')}}                   | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

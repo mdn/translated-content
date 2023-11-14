@@ -178,15 +178,15 @@ class Rectangle {
 
 通過宣告這些在類別以外不可見的東西，你可以確保類別的使用者不會倚賴類別的內部結構，畢竟一個類別的內部結構可能會隨著版本的更新而有所變化。
 
-> **注意：**私有欄位只能在建立類別時事先宣告。
+> **備註：** 私有欄位只能在建立類別時事先宣告。
 
 私有欄位不像普通欄位一樣，可以在類別宣告完後才建立。
 
-想知道更多資訊，可參閱 {{jsxref("Classes/Private_class_fields", "private class features", "", "true")}}。
+想知道更多資訊，可參閱 {{jsxref("Classes/Private_properties", "private class features", "", "true")}}。
 
 ### 裝箱、原型方法及靜態方法
 
-當一個靜態方法或原形方法被呼叫，但沒有一個物件的值與 this 綁定時，被呼叫的函數中 this 關鍵字會是**`undefined`。**在此情況下，自動裝箱(autoboxing)不會發生**。?**即使我們在非嚴格模式中寫程式，此行為仍然會存在，這是因為所有的函式、定義方法、建構子、getters 和 setters 都是在嚴格模式中執行。因此，若我們沒有定義 this 的值，this 會是**`undefined`**`。`
+當一個靜態方法或原形方法被呼叫，但沒有一個物件的值與 this 綁定時，被呼叫的函數中 this 關鍵字會是 **`undefined`**。在此情況下，自動裝箱（autoboxing）不會發生。即使我們在非嚴格模式中寫程式，此行為仍然會存在，這是因為所有的函式、定義方法、建構子、getter 和 setter 都是在嚴格模式中執行。因此，若我們沒有定義 this 的值，this 會是 **`undefined`**。
 
 ```js
 class Animal {

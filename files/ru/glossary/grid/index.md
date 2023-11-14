@@ -3,6 +3,8 @@ title: Grid
 slug: Glossary/Grid
 ---
 
+{{GlossarySidebar}}
+
 _CSS Гриды (они же сетки или CSS Grid)_ устанавливаются с помощью значения `grid` в свойстве `display`; вы можете определить колонки и строки в сетке с помощью свойств {{cssxref("grid-template-columns")}} и {{cssxref("grid-template-rows")}} соответственно.
 
 Сетка, которую вы создаёте, используя эти свойства, является явной сеткой.

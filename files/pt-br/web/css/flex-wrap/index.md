@@ -120,11 +120,9 @@ Os seguintes valores são aceitos :
 
 {{ EmbedLiveSample('Setting_flex_container_wrap_values', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
 
-## Especificação
+## Especificações
 
-| Especificação                                                      | Status                      | Comentário |
-| ------------------------------------------------------------------ | --------------------------- | ---------- |
-| {{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }} | {{ Spec2('CSS3 Flexbox') }} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
