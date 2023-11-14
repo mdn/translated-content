@@ -5,7 +5,7 @@ slug: Web/API/Background_Fetch_API
 
 {{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}
 
-A **Background Fetch API** fornece um método para gerenciar downloads que podem demandar um tempo significativo como filmes, arquivos audios ou mesmo software.
+A **Background Fetch API** fornece um método para gerenciar downloads que podem demandar um tempo significativo como filmes, arquivos de áudio e software.
 
 ## Conceitos e uso
 
