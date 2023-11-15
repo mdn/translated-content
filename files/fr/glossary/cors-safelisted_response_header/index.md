@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-Un _en-tête de réponse sûr pour le CORS_ est un [en-tête HTTP](/fr/docs/Web/HTTP/Headers) d'une réponse [CORS](/fr/docs/Web/HTTP/CORS) dont on considère qu'il est sûr et peut être exposé aux scripts côté client. Seuls les en-têtes de réponse sûrs sont disponibles pour les page web.
+Un _en-tête de réponse sûr pour le CORS_ est un [en-tête HTTP](/fr/docs/Web/HTTP/Headers) d'une réponse [CORS](/fr/docs/Web/HTTP/CORS) dont on considère qu'il est sûr et peut être exposé aux scripts côté client. Seuls les en-têtes de réponse sûrs sont disponibles pour les pages web.
 
 Par défaut, la liste des en-têtes de réponse sûrs contient&nbsp;:
 
@@ -36,7 +36,7 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 ## Voir aussi
 
 - [HTTP](/fr/docs/Web/HTTP)
-- [HTTP headers](/fr/docs/Web/HTTP/Headers)
+- [En-têtes HTTP](/fr/docs/Web/HTTP/Headers)
 - [`Access-Control-Expose-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
 - Entrées du [glossaire](/fr/docs/Glossary)
   - [CORS](/fr/docs/Glossary/CORS)

@@ -19,7 +19,7 @@ console.log(maChaine); // ñ
 console.log(maChaine.length); // 2
 ```
 
-De plus, 16 bits ne suffisent pas à exprimer tous les points de code définis par Unicode . De nombreux points de code Unicode sont encodés à l'aide d'une paire de deux codets UTF-16 (parfois appelés demi-codets ou <i lang="en">surrogate pair</i> en anglais)&nbsp;:
+De plus, 16 bits ne suffisent pas à exprimer tous les points de code définis par Unicode. De nombreux points de code Unicode sont encodés à l'aide d'une paire de deux codets UTF-16 (parfois appelés demi-codets ou <i lang="en">surrogate pair</i> en anglais)&nbsp;:
 
 ```js
 const visage = "🥵";
@@ -35,5 +35,5 @@ console.log(visage.codePointAt(0)); // 129397 soit 0x1F975 en hexadécimal
 
 ## Voir aussi
 
-- [Gestion des caractères UTF-16, points de code Unicode et groupes de graphèmes](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)
+- [Gestion des caractères UTF-16, points de code Unicode et groupes de graphèmes](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_Unicode_et_groupes_de_graphèmes)
 - [La FAQ sur l'encodage Unicode (en anglais)](https://www.unicode.org/faq/utf_bom.html)

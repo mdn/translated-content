@@ -26,7 +26,7 @@ Les en-têtes sûr pour le CORS doivent également respecter ces critères&nbsp;
 - Les valeurs pour [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language) et [`Content-Language`](/fr/docs/Web/HTTP/Headers/Content-Language) ne peuvent contenir que les caractères `0-9`, `A-Z`, `a-z`, espace ou `*,-.;=`.
 - [`Accept`](/fr/docs/Web/HTTP/Headers/Accept) et [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) ne peuvent pas contenir un octet d'en-tête non-sûr&nbsp;: `0x00-0x1F` (exception faite de `0x09 (HT)` qui est autorisé), `"():<>?@[\]{}`, et `0x7F (DEL)`.
 - [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) doit être un type MIME qui (lorsqu'on ignore les paramètres) vaut `application/x-www-form-urlencoded`, ou `multipart/form-data`, ou `text/plain`.
-- La valeur de [`Range`](/fr/docs/Web/HTTP/Headers/Range) doit être un seul intervalle d'octets osur la forme `bytes=[0-9]+-[0-9]*`. Voir la documentation de [`Range`](/fr/docs/Web/HTTP/Headers/Range) pour plus de détails.
+- La valeur de [`Range`](/fr/docs/Web/HTTP/Headers/Range) doit être un seul intervalle d'octets sous la forme `bytes=[0-9]+-[0-9]*`. Voir la documentation de [`Range`](/fr/docs/Web/HTTP/Headers/Range) pour plus de détails.
 - Pour n'importe quel en-tête, la longueur de la valeur ne peut excéder 128.
 
 ## Voir aussi
