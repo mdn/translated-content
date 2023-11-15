@@ -1,11 +1,11 @@
 ---
-title: MathML 标记
+title: MathML 附加符号
 slug: Learn/MathML/First_steps/Scripts
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
 
-我们继续回顾基本数学符号，并重点介绍如何使用标记构建 MathML 元素。
+我们继续回顾基本数学符号，并重点介绍如何使用附加符号构建 MathML 元素。
 
 <table>
   <tbody>
@@ -80,11 +80,11 @@ slug: Learn/MathML/First_steps/Scripts
 
 > **备注：** MathML 元素 `<msub>` 和 `<msup>` 与 HTML 元素 [`<sub>`](/zh-CN/docs/Web/HTML/Element/sub) 和 [`<sup>`](/zh-CN/docs/Web/HTML/Element/sup) 不同。它们允许开发者将任意的 MathML 子树作为上下标，而不仅仅是文本。
 
-## 底标和顶标
+## 正下标和正上标
 
-`<munder>`、`<mover>` 和 `<munderover>` 元素与之前介绍的元素非常相似，只是它们用于附加底标（underscript）和顶标（overscirpt）。我们不会提供详细信息，而是让你自己通过以下练习来了解它们的定义。
+`<munder>`、`<mover>` 和 `<munderover>` 元素与之前介绍的元素非常相似，只是它们用于附加正下标（underscript）和正上标（overscirpt）。我们不会提供详细信息，而是让你自己通过以下练习来了解它们的定义。
 
-### 主动学习：识别底标和顶标
+### 主动学习：识别正下标和正上标
 
 在下面的示例中，试着猜测神秘元素的名称（用问号表示），然后点击按钮来显示答案：
 
@@ -141,16 +141,16 @@ document.getElementById("showSolution").addEventListener("click", () => {
 
 {{ EmbedLiveSample('munder_mover_munderover 的子树', 700, 400, "", "") }}
 
-### 主动学习：识别标记元素
+### 主动学习：识别附加符号元素
 
-以下的 MathML 公式包含了更复杂的表达式，嵌套了分数、根号和标记元素。尝试猜测使用了 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>`、`<munderover>` 的元素。每次当你点击这样的元素时，它会被突出显示，并显示确认信息。最后，阅读 MathML 源代码以验证是否与你的预期相符。
+以下的 MathML 公式包含了更复杂的表达式，嵌套了分数、根号和附加符号元素。尝试猜测使用了 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>`、`<munderover>` 的元素。每次当你点击这样的元素时，它会被突出显示，并显示确认信息。最后，阅读 MathML 源代码以验证是否与你的预期相符。
 
 ```html hidden
 <!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>带有标记元素的页面</title>
+    <title>带有附加符号元素的页面</title>
     <link
       rel="stylesheet"
       href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
@@ -249,11 +249,11 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample('主动学习：识别标记元素', 700, 400, "", "") }}
+{{ EmbedLiveSample('主动学习：识别附加符号元素', 700, 400, "", "") }}
 
 ## 其他运算符属性
 
-我们之前已经了解了 `<mo>` 元素的一些[属性](/zh-CN/docs/Learn/MathML/First_steps/Text_containers#mo_的运算符属性)，包括在垂直方向上的拉伸和间距。现在有了标记元素，我们可以扩展该列表。我们将通过修改我们的[上一个示例](#主动学习_识别标记元素)来实现这一点。
+我们之前已经了解了 `<mo>` 元素的一些[属性](/zh-CN/docs/Learn/MathML/First_steps/Text_containers#mo_的运算符属性)，包括在垂直方向上的拉伸和间距。现在有了附加符号元素，我们可以扩展该列表。我们将通过修改我们的[上一个示例](#主动学习_识别附加符号元素)来实现这一点。
 
 ### 在水平方向上的拉伸
 
@@ -359,7 +359,7 @@ math {
 
 可以看出底部括号“⎵”和右箭头“→”在水平方向上会延伸以覆盖被替代值的宽度。回想一下，[一些竖直运算符可以伸展](/zh-CN/docs/Learn/MathML/First_steps/Text_containers#active_learning_stretchy_operators)，以覆盖 `<mrow>` 中非伸展兄弟节点的高度。类似地，一些水平运算符可以伸展以覆盖 `<munder>`、`<mover>` 或 `<munderover>` 元素中非伸展兄弟节点的宽度。
 
-> **备注：** 伸展适用于 `<munder>`、`<mover>` 或 `<munderover>` 元素的任何子元素，不仅仅是底标或顶标。
+> **备注：** 伸展适用于 `<munder>`、`<mover>` 或 `<munderover>` 元素的任何子元素，不仅仅是正下标或正上标。
 
 ### 大型运算符和极限
 
@@ -463,16 +463,16 @@ math {
 
 {{ EmbedLiveSample('大型运算符和极限', 700, 200, "", "") }}
 
-不出所料，公式不再居中，渲染方式发生变动，导致高度最小化。注意求和符号，可以看到求和符号变小了，并且 `<munderover>` 元素的标记现在以下标和上标的方式附加在其上！这是由于“∑”运算符的两个属性：
+不出所料，公式不再居中，渲染方式发生变动，导致高度最小化。注意求和符号，可以看到求和符号变小了，并且 `<munderover>` 元素的附加符号现在以下标和上标的方式附加在其上！这是由于“∑”运算符的两个属性：
 
 - _largeop_：如果 `<math>` 标签具有 `display="block"` 属性，则使用更大的字形绘制运算符。
-- _movablelimits_：如果 `<math>` 标签没有 `display="block"` 属性，则将附加在运算符上的底标和顶标分别渲染为下标和上标。
+- _movablelimits_：如果 `<math>` 标签没有 `display="block"` 属性，则将附加在运算符上的正下标和正上标分别渲染为下标和上标。
 
-> **备注：** _largeop_ 属性实际上与标记无关，尽管具有此属性的运算符通常会有标记。_movablelimits_ 属性也适用于 `<munder>` 和 `<mover>` 元素。
+> **备注：** _largeop_ 属性实际上与附加符号无关，尽管具有此属性的运算符通常会有附加符号。_movablelimits_ 属性也适用于 `<munder>` 和 `<mover>` 元素。
 
 ## 总结
 
-在本文中，我们完成了对引入下标、上标、底标和顶标的基本布局元素 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>` 以及 `<munderover>` 的介绍。在介绍这些元素的过程中，我们顺便介绍了 `<mo>` 元素的新属性。在下一篇文章中，我们将继续关注[表格布局](/zh-CN/docs/Learn/MathML/First_steps/Tables)。
+在本文中，我们完成了对引入下标、上标、正下标和正上标的基本布局元素 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>` 以及 `<munderover>` 的介绍。在介绍这些元素的过程中，我们顺便介绍了 `<mo>` 元素的新属性。在下一篇文章中，我们将继续关注[表格布局](/zh-CN/docs/Learn/MathML/First_steps/Tables)。
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
 
