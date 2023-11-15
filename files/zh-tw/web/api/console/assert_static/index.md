@@ -1,6 +1,6 @@
 ---
 title: Console.assert()
-slug: Web/API/console/assert
+slug: Web/API/console/assert_static
 ---
 
 {{APIRef("Console API")}}
@@ -13,9 +13,14 @@ slug: Web/API/console/assert
 
 ## 語法
 
-```plain
-console.assert(assertion, obj1 [, obj2, ..., objN]);
-console.assert(assertion, msg [, subst1, ..., substN]); // c-like message formatting
+```js-nolint
+assert(assertion, obj1)
+assert(assertion, obj1, obj2)
+assert(assertion, obj1, obj2, /* …, */ objN)
+
+assert(assertion, msg)
+assert(assertion, msg, subst1)
+assert(assertion, msg, subst1, /* …, */ substN)
 ```
 
 ### 參數
