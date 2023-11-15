@@ -1,21 +1,21 @@
 ---
-title: console.trace
+title: console：trace() 静态方法
 slug: Web/API/console/trace_static
-original_slug: Web/API/console/trace
 ---
 
 {{APIRef("Console API")}}
 
-{{domxref("console")}} 的 **`trace()` 方法**向 [Web 控制台](/zh-CN/Tools/Web_Console) 输出一个堆栈跟踪。
+{{domxref("console")}} 的 **`trace()`** 方法向 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)输出一个堆栈跟踪。
 
 {{AvailableInWorkers}}
 
-在页面{{ domxref("console") }}文档中查看[堆栈跟踪](/zh-CN/docs/Web/API/console#堆栈跟踪)的详细介绍和示例。
+在页面 {{domxref("console")}} 文档中查看[堆栈跟踪](/zh-CN/docs/Web/API/console#堆栈跟踪)的详细介绍和示例。
 
 ## 语法
 
-```plain
-console.trace( [...any, ...data ]);
+```js-nolint
+trace()
+trace(object1, /* …, */ objectN)
 ```
 
 ### 参数
@@ -52,6 +52,6 @@ foo
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
