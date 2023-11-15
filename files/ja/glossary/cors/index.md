@@ -40,5 +40,3 @@ slug: Glossary/CORS
 ### 技術リファレンス
 
 - [Fetch specification](https://fetch.spec.whatwg.org)
-
-{{QuickLinksWithSubpages("/ja/docs/Glossary")}}

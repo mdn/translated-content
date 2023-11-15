@@ -18,5 +18,3 @@ Node.js は、クロスプラットフォームの {{Glossary("JavaScript")}} �
 
 - [API 文書](https://nodejs.org/api/)
 - [チュートリアル](https://nodejs.org/ja/docs/guides/)
-
-{{QuickLinksWithSubpages("/ja/docs/Glossary")}}
