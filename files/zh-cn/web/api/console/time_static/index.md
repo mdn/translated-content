@@ -1,10 +1,9 @@
 ---
-title: console.time
+title: console：time() 静态方法
 slug: Web/API/console/time_static
-original_slug: Web/API/console/time
 ---
 
-{{ ApiRef() }}
+{{APIRef("Console API")}}
 
 你可以启动一个计时器来跟踪某一个操作的占用时长。每一个计时器必须拥有唯一的名字，页面中最多能同时运行 10,000 个计时器。当以此计时器名字为参数调用 {{ domxref("console.timeEnd()") }} 时，浏览器将以毫秒为单位，输出对应计时器所经过的时间。
 
@@ -14,14 +13,15 @@ original_slug: Web/API/console/time
 
 ## 语法
 
-```plain
-console.time(timerName);
+```js-nolint
+time()
+time(label)
 ```
 
 ## 参数
 
-- `timerName`
-  - : 新计时器的名字。用来标记这个计时器，作为参数调用 {{ domxref("console.timeEnd()") }}可以停止计时并将经过的时间在终端中打印出来。
+- `label`
+  - : 新计时器的名字。用来标记这个计时器，作为参数调用 {{domxref("console.timeEnd()")}} 可以停止计时并将经过的时间在终端中打印出来。
 
 ## 规范
 

@@ -1,7 +1,6 @@
 ---
-title: Console.debug()
+title: console：debug() 静态方法
 slug: Web/API/console/debug_static
-original_slug: Web/API/console/debug
 ---
 
 {{APIRef("Console API")}}

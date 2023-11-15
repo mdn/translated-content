@@ -1,7 +1,6 @@
 ---
-title: Console.timeEnd()
+title: console：timeEnd() 静态方法
 slug: Web/API/console/timeend_static
-original_slug: Web/API/console/timeEnd
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -18,8 +17,9 @@ original_slug: Web/API/console/timeEnd
 
 ## 语法
 
-```js
-console.timeEnd(label);
+```js-nolint
+timeEnd()
+timeEnd(label)
 ```
 
 ### 参数
@@ -27,7 +27,7 @@ console.timeEnd(label);
 - `label`
   - : 需要停止的计时器名字。一旦停止，计时器所经过的时间会被自动输出到控制台。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 

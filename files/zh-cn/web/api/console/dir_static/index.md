@@ -1,7 +1,6 @@
 ---
-title: console.dir
+title: console：dir() 静态方法
 slug: Web/API/console/dir_static
-original_slug: Web/API/console/dir
 ---
 
 {{APIRef("Console API")}}
@@ -27,7 +26,7 @@ dir(object);
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ## 规范
 

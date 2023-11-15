@@ -1,7 +1,6 @@
 ---
-title: console：count() 方法
+title: console：count() 静态方法
 slug: Web/API/console/count_static
-original_slug: Web/API/console/count
 ---
 
 {{APIRef("Console API")}}
@@ -24,7 +23,7 @@ count(label)
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 

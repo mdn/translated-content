@@ -1,7 +1,6 @@
 ---
-title: Console.profile()
+title: console：profile() 静态方法
 slug: Web/API/console/profile_static
-original_slug: Web/API/console/profile
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -14,13 +13,13 @@ original_slug: Web/API/console/profile
 
 {{AvailableInWorkers}}
 
-## Syntax
+## 语法
 
-```plain
-console.profile(profileName);
+```js-nolint
+profile(profileName)
 ```
 
-## Parameters
+## 参数
 
 - `profileName`
   - : 描述信息的名字。可选。

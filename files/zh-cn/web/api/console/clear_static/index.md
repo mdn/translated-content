@@ -1,7 +1,6 @@
 ---
-title: clear()
+title: console：clear() 静态方法
 slug: Web/API/console/clear_static
-original_slug: Web/API/console/clear
 ---
 
 {{APIRef("Console API")}}
@@ -20,7 +19,7 @@ clear();
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ## 规范
 

@@ -1,7 +1,6 @@
 ---
-title: Console.dirxml()
+title: console：dirxml() 静态方法
 slug: Web/API/console/dirxml_static
-original_slug: Web/API/console/dirxml
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

@@ -1,7 +1,6 @@
 ---
-title: console.groupCollapsed()
+title: console：groupCollapsed() 静态方法
 slug: Web/API/console/groupcollapsed_static
-original_slug: Web/API/console/groupCollapsed
 ---
 
 {{APIRef("Console API")}}

@@ -1,7 +1,6 @@
 ---
-title: Console.countReset()
+title: console：countReset() 静态方法
 slug: Web/API/console/countreset_static
-original_slug: Web/API/console/countReset
 ---
 
 {{APIRef("Console API")}}
@@ -16,8 +15,9 @@ original_slug: Web/API/console/countReset
 
 ## 语法
 
-```
-console.countReset([label]);
+```js-nolint
+countReset()
+countReset(label)
 ```
 
 ### 参数
@@ -42,7 +42,7 @@ default: 0
 
 ### 异常情况
 
-若传入一个不存在的 `label`, `countReset` 返回下面的警告信息：
+若传入一个不存在的 `label`，`countReset` 返回下面的警告信息：
 
 ```
 Counter "counter-name" doesn’t exist.
@@ -120,10 +120,10 @@ console.count("alice");
 
 调用 countReset("bod") 只是重置了 "bob" 的计数器值 而 "alice" 的计数器值没有改变。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

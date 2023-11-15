@@ -1,5 +1,5 @@
 ---
-title: Console.error()
+title: console：error() 静态方法
 slug: Web/API/console/error_static
 original_slug: Web/API/console/error
 ---

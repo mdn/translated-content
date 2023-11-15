@@ -1,7 +1,6 @@
 ---
-title: Console.assert()
+title: console：assert() 静态方法
 slug: Web/API/console/assert_static
-original_slug: Web/API/console/assert
 ---
 
 {{APIRef("Console API")}}
@@ -10,7 +9,7 @@ original_slug: Web/API/console/assert
 
 {{AvailableInWorkers}}
 
-`console.assert()`方法在 Node.js 中的实现和浏览器中可用的`console.assert()`方法实现是不同的。在浏览器中当`console.assert()`方法接受到一个值为假断言的时候，会向控制台输出传入的内容，但是并不会中断代码的执行，而在 Node.js v10.0.0 之前，一个值为假的断言也将会导致一个`AssertionError`被抛出，使得代码执行被打断。v10.0.0 修复了此差异，所以现在`console.assert()`在 Node 和浏览器中执行行为相同。
+`console.assert()` 方法在 Node.js 中的实现和浏览器中可用的 `console.assert()` 方法实现是不同的。在浏览器中当 `console.assert()` 方法接受到一个值为假断言的时候，会向控制台输出传入的内容，但是并不会中断代码的执行，而在 Node.js v10.0.0 之前，一个值为假的断言也将会导致一个 `AssertionError` 被抛出，使得代码执行被打断。v10.0.0 修复了此差异，所以现在 `console.assert()` 在 Node 和浏览器中执行行为相同。
 
 ## 语法
 
@@ -58,7 +57,7 @@ console.log("the word is %s try number %d", "foo", 123);
 // 输出：the word is foo try number 123
 ```
 
-`但是 console.assert` 在不同浏览器中可能获得不同的效果：
+但是 `console.assert` 在不同浏览器中可能获得不同的效果：
 
 ```js
 console.assert(false, "the word is %s", "foo");
@@ -70,7 +69,7 @@ console.assert(false, "the word is %s", "foo");
 // Assertion failed: the word is %s foo
 ```
 
-有关详细信息，请参阅 {{Domxref("console")}} 文档中的 [输出文本到控制台](/zh-CN/docs/Web/API/Console#%E8%BE%93%E5%87%BA%E6%96%87%E6%9C%AC%E5%88%B0%E6%8E%A7%E5%88%B6%E5%8F%B0)。
+有关详细信息，请参阅 {{Domxref("console")}} 文档中的 [输出文本到控制台](/zh-CN/docs/Web/API/console#输出文本到控制台)。
 
 ## 规范
 

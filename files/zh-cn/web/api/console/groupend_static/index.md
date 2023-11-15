@@ -1,7 +1,6 @@
 ---
-title: Console.groupEnd()
+title: console：groupEnd() 静态方法
 slug: Web/API/console/groupend_static
-original_slug: Web/API/console/groupEnd
 ---
 
 {{APIRef("Console API")}}
@@ -12,15 +11,15 @@ original_slug: Web/API/console/groupEnd
 
 ## 语法
 
-```plain
-console.groupEnd();
+```js-nolint
+groupEnd()
 ```
 
 ## 参数
 
-None.
+无。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -28,6 +27,6 @@ None.
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

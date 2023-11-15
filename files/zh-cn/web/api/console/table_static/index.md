@@ -1,7 +1,6 @@
 ---
-title: Console.table()
+title: console：table() 静态方法
 slug: Web/API/console/table_static
-original_slug: Web/API/console/table
 ---
 
 {{APIRef("Console API")}}

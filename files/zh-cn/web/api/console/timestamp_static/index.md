@@ -1,7 +1,6 @@
 ---
-title: Console.timeStamp()
+title: console：timeStamp() 静态方法
 slug: Web/API/console/timestamp_static
-original_slug: Web/API/console/timeStamp
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -12,23 +11,23 @@ original_slug: Web/API/console/timeStamp
 
 {{AvailableInWorkers}}
 
-## Syntax
+## 语法
 
-```plain
-console.timeStamp(label);
+```js-nolint
+timeStamp(label)
 ```
 
-## Parameters
+## 参数
 
 - `label`
   - : Label for the timestamp. Optional.
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{domxref("Console.time()")}}
-- {{domxref("Console.timeEnd()")}}
+- {{domxref("console.time()")}}
+- {{domxref("console.timeEnd()")}}
 - [Adding timestamps to the Waterfall](/zh-CN/docs/Tools/Performance/Waterfall#Timestamp_markers)

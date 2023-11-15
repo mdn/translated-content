@@ -1,7 +1,6 @@
 ---
-title: Console.info()
+title: console：info() 静态方法
 slug: Web/API/console/info_static
-original_slug: Web/API/console/info
 ---
 
 {{APIRef("Console API")}}
@@ -12,9 +11,11 @@ original_slug: Web/API/console/info
 
 ## 语法
 
-```
-console.info(obj1 [, obj2, ..., objN]);
-console.info(msg [, subst1, ..., substN]);
+```js-nolint
+info(obj1)
+info(obj1, /* …, */ objN)
+info(msg)
+info(msg, subst1, /* …, */ substN)
 ```
 
 ## 参数

@@ -1,7 +1,6 @@
 ---
-title: Console.timeLog()
+title: console：timeLog() 静态方法
 slug: Web/API/console/timelog_static
-original_slug: Web/API/console/timeLog
 ---
 
 {{APIRef("Console API")}}
@@ -14,8 +13,11 @@ original_slug: Web/API/console/timeLog
 
 ## 语法
 
-```plain
-console.timeLog(label);
+```js-nolint
+timeLog()
+timeLog(label)
+timeLog(label, val1)
+timeLog(label, val1, /* …, */ valN)
 ```
 
 ### 参数
@@ -75,6 +77,6 @@ console.timeEnd("answer time");
 
 {{Compat}}
 
-## 相关文档
+## 参见
 
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

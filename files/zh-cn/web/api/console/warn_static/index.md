@@ -1,7 +1,6 @@
 ---
-title: Console.warn()
+title: console：warn() 静态方法
 slug: Web/API/console/warn_static
-original_slug: Web/API/console/warn
 ---
 
 {{APIRef("Console API")}}
@@ -14,9 +13,11 @@ original_slug: Web/API/console/warn
 
 ## 语法
 
-```plain
-console.warn(obj1 [, obj2, ..., objN]);
-console.warn(msg [, subst1, ..., substN]);
+```js-nolint
+warn(obj1)
+warn(obj1, /* …, */ objN)
+warn(msg)
+warn(msg, subst1, /* …, */ substN)
 ```
 
 ## 参数
@@ -28,7 +29,7 @@ console.warn(msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : 零个或多个 Javascript 对象 依次替换 msg 中的替代字符串，你可以在替代字符串中指定对象的输出格式。
 
-查看 [向控制台输出文本](/zh-CN/docs/Web/API/Console) 来了解更多 {{domxref("console")}} 的用法。
+查看[向控制台输出文本](/zh-CN/docs/Web/API/console)来了解更多 {{domxref("console")}} 的用法。
 
 ## 规范
 
