@@ -16159,7 +16159,7 @@
       "jiereal"
     ]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2020-10-15T21:49:40.751Z",
     "contributors": [
       "zhangchen",
@@ -16169,51 +16169,51 @@
       "ZhangKaiqiang"
     ]
   },
-  "Web/API/console/clear": {
+  "Web/API/console/clear_static": {
     "modified": "2020-01-12T03:19:48.000Z",
     "contributors": ["853419196", "ZhangKaiqiang"]
   },
-  "Web/API/console/count": {
+  "Web/API/console/count_static": {
     "modified": "2019-08-15T04:00:38.089Z",
     "contributors": ["teemoooo", "gaowhen"]
   },
-  "Web/API/console/countReset": {
+  "Web/API/console/countreset_static": {
     "modified": "2020-10-15T22:08:08.444Z",
     "contributors": ["Paapaapa", "807573515"]
   },
-  "Web/API/console/debug": {
+  "Web/API/console/debug_static": {
     "modified": "2020-10-15T22:15:26.417Z",
     "contributors": ["hefang"]
   },
-  "Web/API/console/dir": {
+  "Web/API/console/dir_static": {
     "modified": "2019-10-08T07:08:14.257Z",
     "contributors": ["SphinxKnight", "teoli", "AshfaqHossain", "ziyunfei"]
   },
-  "Web/API/console/dirxml": {
+  "Web/API/console/dirxml_static": {
     "modified": "2019-03-23T22:11:46.371Z",
     "contributors": ["zzw918"]
   },
-  "Web/API/console/error": {
+  "Web/API/console/error_static": {
     "modified": "2019-08-15T04:02:05.738Z",
     "contributors": ["pluwen", "kameii"]
   },
-  "Web/API/console/group": {
+  "Web/API/console/group_static": {
     "modified": "2019-03-24T00:18:26.661Z",
     "contributors": ["teoli", "khalid32", "ziyunfei"]
   },
-  "Web/API/console/groupCollapsed": {
+  "Web/API/console/groupcollapsed_static": {
     "modified": "2019-03-24T00:18:28.377Z",
     "contributors": ["teoli", "khalid32", "ziyunfei"]
   },
-  "Web/API/console/groupEnd": {
+  "Web/API/console/groupend_static": {
     "modified": "2019-03-18T21:46:40.075Z",
     "contributors": ["hhxxhg", "luohe"]
   },
-  "Web/API/console/info": {
+  "Web/API/console/info_static": {
     "modified": "2020-02-02T00:13:13.877Z",
     "contributors": ["Headog", "tsingwong", "Jaanai-Ewain", "yogoshary"]
   },
-  "Web/API/console/log": {
+  "Web/API/console/log_static": {
     "modified": "2020-07-27T04:01:25.975Z",
     "contributors": [
       "alan10332000",
@@ -16228,19 +16228,19 @@
       "ziyunfei"
     ]
   },
-  "Web/API/console/profile": {
+  "Web/API/console/profile_static": {
     "modified": "2019-03-18T21:41:07.871Z",
     "contributors": ["clwm01"]
   },
-  "Web/API/console/profileEnd": {
+  "Web/API/console/profileend_static": {
     "modified": "2020-10-15T22:04:42.916Z",
     "contributors": ["JQ_Chan"]
   },
-  "Web/API/console/table": {
+  "Web/API/console/table_static": {
     "modified": "2020-10-15T21:54:27.285Z",
     "contributors": ["RainSlide", "dondevi", "eeeeeeeason", "zzw918"]
   },
-  "Web/API/console/time": {
+  "Web/API/console/time_static": {
     "modified": "2020-10-15T21:27:17.192Z",
     "contributors": [
       "zhangchen",
@@ -16251,23 +16251,23 @@
       "freemen"
     ]
   },
-  "Web/API/console/timeEnd": {
+  "Web/API/console/timeend_static": {
     "modified": "2020-10-15T21:50:04.648Z",
     "contributors": ["luisleee", "hhxxhg", "Dcfm", "regiondavid"]
   },
-  "Web/API/console/timeLog": {
+  "Web/API/console/timelog_static": {
     "modified": "2020-10-15T22:16:19.657Z",
     "contributors": ["lifankohome", "Reaper622"]
   },
-  "Web/API/console/timeStamp": {
+  "Web/API/console/timestamp_static": {
     "modified": "2019-03-23T22:08:57.552Z",
     "contributors": ["tsingwong", "ershing"]
   },
-  "Web/API/console/trace": {
+  "Web/API/console/trace_static": {
     "modified": "2020-10-15T21:04:54.511Z",
     "contributors": ["zhangchen", "airt", "teoli", "jsx", "ziyunfei"]
   },
-  "Web/API/console/warn": {
+  "Web/API/console/warn_static": {
     "modified": "2019-03-23T22:12:15.122Z",
     "contributors": ["pluwen", "choukin"]
   },
