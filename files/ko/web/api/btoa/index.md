@@ -66,6 +66,6 @@ console.log(btoa(notOK)); // error
 ## 같이 보기
 
 - [`core-js`](https://github.com/zloirock/core-js)에서 사용 가능한 [`btoa`의 폴리필](https://github.com/zloirock/core-js#base64-utility-methods)
-- [`data` URLs](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URL들](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - {{domxref("atob","atob()")}}
 - {{Glossary("Base64")}}
