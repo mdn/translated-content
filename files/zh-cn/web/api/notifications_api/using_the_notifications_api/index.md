@@ -1,34 +1,31 @@
 ---
-title: 使用 Web Notifications
+title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 ---
 
-{{APIRef("Web Notifications")}}
+{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在你自己的应用程序中使用此 API 的基础知识。
+[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知；这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在你自己的应用程序中使用此 API 的基础知识。
 
-{{AvailableInWorkers}}
+通常，系统通知是指操作系统的标准通知机制，例如，思考典型的桌面系统或移动设备如何发布通知。
 
-通常，系统通知是指操作系统的标准通知机制，例如思考典型的桌面系统或移动设备如何发布通知。
+![桌面通知：通过 mdn.github.io 列出待办事项 嘿！你的任务“去购物”现已过期](desktop-notification.png)
 
-![](android-notification.png)
+系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 编写得足够通用，足以与大多数系统通知系统兼容。
 
-![](mac-notification.png)
+## 示例
 
-系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 被编写为通用的，足以与大多数系统通知系统兼容。
+Web 通知最明显的用例之一是基于 Web 的邮件或 IRC 应用程序，即使用户正在使用另一个应用程序执行其他操作，它也需要在收到新消息时通知用户。现在存在许多这样的例子，例如 [Slack](https://slack.com/)。
 
-Web Notifications API 使页面可以发出通知，通知将被显示在页面之外的系统层面上（通常使用操作系统的标准通知机制，但是在不同的平台和浏览器上的表现会有差异）。这个功能使 web 应用可以向用户发送信息，即使应用处于空闲状态。最明显的用例之一是一个网页版电子邮件应用程序，每当用户收到了一封新的电子邮件都需要通知用户，即使用户正在使用另一个应用程序。
-
-要显示一条通知，你需要先请求适当的权限，然后你可以实例化一个 {{domxref("Notification")}} 实例：
-
-```js
-Notification.requestPermission(function (status) {
-  console.log(status); // 仅当值为 "granted" 时显示通知
-  var n = new Notification("title", { body: "notification body" }); // 显示通知
-});
-```
+我们编写了一个现实世界的示例——一个待办事项列表应用程序——来让你更多地了解如何使用网络通知。它使用 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 在本地存储数据，并在任务到期时使用系统通知通知用户。[下载待办事项列表代码](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)，或[查看实时运行的应用程序](https://mdn.github.io/dom-examples/to-do-notifications/)。
 
 ## 请求权限
+
+在应用程序可以发送通知之前，用户必须授予应用程序这样做的权利。当 API 尝试与网页之外的内容进行交互时，这是一个常见的要求——至少一次，用户需要专门授予该应用程序显示通知的权限，从而让用户控制允许哪些应用程序/站点显示通知。
+
+由于过去滥用推送通知，网络浏览器和开发人员已开始实施策略来帮助缓解此问题。你应该仅请求同意显示通知以响应用户手势（例如：单击按钮）。这不仅是最佳实践（你不应该向用户发送他们不同意的通知），而且未来的浏览器将明确禁止未响应用户手势而触发的通知权限请求。例如，Firefox 从版本 72 开始就已经这样做了，Safari 也已经这样做了一段时间了。
+
+此外，在 Chrome 和 Firefox 中，除非网站是安全上下文（即 HTTPS），否则你根本无法请求通知，并且你不能再允许从跨域 {{htmlelement("iframe")}} 请求通知权限。
 
 在应用可以发送通知之前，用户必须授予应用有权这么做。这是一个常见的要求，当一个 API 至少一次试图与 web 页外部进行交互时，用户不得不专门授予该应用程序有权限提出通知，从而让用户控制允许哪些应用程序或网站显示通知。
 
@@ -37,225 +34,193 @@ Notification.requestPermission(function (status) {
 你可以通过检查只读属性 {{domxref("Notification.permission")}} 的值来查看你是否已经有权限。该属性的值将会是下列三个之一：
 
 - `default`
-  - : 用户还未被询问是否授权，所以通知不会被显示。参看 [获得权限](#获得权限) 以了解如何请求显示通知的权限。
+  - : 用户还未被询问是否授权，所以通知不会被显示。
 - `granted`
   - : 表示之前已经询问过用户，并且用户已经授予了显示通知的权限。
 - `denied`
-  - : 用户已经明确的拒绝了显示通知的权限。
-
-> **备注：** Safari 和 Chrome (在 32 版本之前) 还没有实现 `permission` 属性。
+  - : 用户已经明确地拒绝了显示通知的权限。
 
 ### 获得权限
 
-如果权限尚未被授予，那么应用不得不通过 {{domxref("Notification.requestPermission()")}} 方法让用户进行选择。这个方法接受一个回调函数，一旦用户回应了显示通知的请求，将会调用这个函数。
-
-通常你应在你的应用首次初始化的时候请求显示通知的权限：
+如果尚未授予显示通知的权限，则应用程序需要使用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} 方法向用户请求此权限。在最简单的形式中，我们只包含以下内容：
 
 ```js
-window.addEventListener("load", function () {
-  Notification.requestPermission(function (status) {
-    // 这将使我们能在 Chrome/Safari 中使用 Notification.permission
-    if (Notification.permission !== status) {
-      Notification.permission = status;
-    }
-  });
+Notification.requestPermission().then((result) => {
+  console.log(result);
 });
 ```
 
-> **备注：** Chrome 不允许你在 `load` 事件处理中调用 {{domxref("Notification.requestPermission()")}}（参见 [issue 274284](https://code.google.com/p/chromium/issues/detail?id=274284)）。
+这使用了该方法的基于承诺的版本。如果你想支持旧版本，你可能必须使用旧的回调版本，如下所示：
 
-### Notification API 的清单权限
-
-请注意 Notification API 不是 {{Glossary("privileged")}} 或 {{Glossary("certified")}}，因此当你在一个开放 web 应用中使用它时，你仍需要在你的 `manifest.webapp` 文件中包含以下项目：
-
+```js
+Notification.requestPermission((result) => {
+  console.log(result);
+});
 ```
-"permissions": {
-  "desktop-notification": {
-    "description": "Needed for creating system notifications."
+
+回调版本可以选择接受一个回调函数，一旦用户响应了显示权限的请求，就会调用该回调函数。
+
+> **备注：** 目前无法可靠地对 `Notification.requestPermission` 是否支持基于 Promise 的版本进行功能测试。如果你需要支持较旧的浏览器，只需使用基于回调的版本——尽管它已被弃用，但它仍然可以在新浏览器中使用。有关更多信息，请参阅[浏览器兼容性表](/zh-CN/docs/Web/API/Notification/requestPermission_static#browser_compatibility)。
+
+### 示例
+
+在我们的待办事项列表演示中，我们包含一个“启用通知”按钮，按下该按钮时，会请求应用程序的通知权限。
+
+```html
+<button id="enable">Enable notifications</button>
+```
+
+单击此按钮将调用 `askNotificationPermission()` 函数：
+
+```js
+function askNotificationPermission() {
+  // 实际询问权限的函数
+  function handlePermission(permission) {
+    // 根据用户的回答将按钮设置为显示或隐藏
+    notificationBtn.style.display =
+      Notification.permission === "granted" ? "none" : "block";
+  }
+
+  // 让我们检查一下浏览器是否支持通知
+  if (!("Notification" in window)) {
+    console.log("此浏览器不支持通知。");
+  } else {
+    Notification.requestPermission().then((permission) => {
+      handlePermission(permission);
+    });
   }
 }
 ```
 
-> **备注：** 当安装应用程序时，你不需要通过上面的代码显式的请求权限，但你仍然需要在触发通知之前取得权限项。
+首先查看第二个主要块，你会发现我们首先检查是否支持通知。如果是的话，我们然后运行检查以查看是否支持基于 Promise 的 `Notification.requestPermission()` 版本。如果是，我们运行基于 Promise 的版本（除 Safari 外均受支持），如果不是，我们运行基于回调的旧版本（Safari 受支持）。
+
+为了避免重复代码，我们在 `handlePermission()` 函数中存储了一些内部代码，这是该代码段中的第一个主要块。在这里，我们明确设置了 `Notification.permission` 值（某些旧版本的 Chrome 无法自动执行此操作），并根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
+
+> **备注：** 在版本 37 之前，Chrome 不允许你在 `load` 事件处理程序中调用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}（请参阅 [issue 274284](https://crbug .com/274284））。
 
 ## 创建通知
 
 创建通知很简单，只需要用 {{domxref("Notification")}} 构造方法。这个构造函数需要一个用来显示在通知内的标题以及一些用来增强通知的选项，例如 {{domxref("Notification.icon","icon")}} 或文本 {{domxref("Notification.body","body")}}。
 
-一旦通知被创建出来，它会立即被显示出来。为了跟踪通知当前的状态，在 {{domxref("Notification")}} 实例层面上会有 4 个事件被触发：
+例如，在待办事项列表示例中，我们使用以下代码片段在需要时创建通知（在 `createNotification()` 函数中找到）：
 
-- {{domxref("Notification.show_event","show")}}
-  - : 当通知被显示给用户时触发。
-- {{domxref("Notification.click_event","click")}}
+```js
+const img = "/to-do-notifications/img/icon-128.png";
+const text = `嘿！您的任务“${title}”现已过期。`;
+const notification = new Notification("待办列表", { body: text, icon: img });
+```
+
+## 关闭通知
+
+使用 {{domxref("Notification.close","close()")}} 删除不再与用户相关的通知（例如，对于消息应用程序，用户已经阅读了网页上的通知） ，或者以下歌曲已在音乐应用程序中播放以通知歌曲更改）。大多数现代浏览器会在一段时间（大约四秒）后自动关闭通知，但这不是你通常应该关心的事情，因为它取决于用户和用户代理。删除通知也可能发生在操作系统级别，用户应该对此保持控制。旧版本的 Chrome 不会自动删除通知，因此你可以在 {{domxref("setTimeout()")}} 之后执行此操作，以免从其他浏览器的通知托盘中删除通知。
+
+```js
+const n = new Notification("我的歌");
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    // 该选项卡已变得可见，因此可以清楚地看到现已过时的通知。
+    n.close();
+  }
+});
+```
+
+> **备注：** 此 API 不应仅用于在固定延迟后（在现代浏览器上）从屏幕上删除通知，因为此方法还会从任何通知托盘中删除通知，从而阻止用户在最初显示通知后与其进行交互。
+
+> **备注：** 当你收到“关闭”事件时，无法保证是用户关闭了通知。这符合规范，其中规定：“当底层通知平台或用户关闭通知时，必须运行其关闭步骤。”
+
+## 通知事件
+
+{{domxref("Notification")}} 实例上会触发四个事件：
+
+- `click`
   - : 当用户点击通知时触发。
-- {{domxref("Notification.close_event","close")}}
-  - : 当通知被关闭时触发。
-- {{domxref("Notification.error_event","error")}}
-  - : 当通知发生错误的时候触发。这通常是因为通知由于某些原因而无法显示。
+- `close`
+  - : 在通知关闭后触发。
+- `error`
+  - : 如果通知出现问题则触发；这通常是因为由于某种原因无法显示通知。
+- `show`
+  - : 当向用户显示通知时触发。
 
-这些事件可以通过事件处理跟踪 {{domxref("Notification.onshow","onshow")}}、{{domxref("Notification.onclick","onclick")}}、{{domxref("Notification.onclose","onclose")}} 和 {{domxref("Notification.onerror","onerror")}}。因为 {{domxref("Notification")}} 同样继承自 {{domxref("EventTarget")}}，因此可以对它调用 {{domxref("EventTarget.addEventListener","addEventListener()")}} 方法。
+可以使用 {{domxref("Notification.click_event","onclick")}}、{{domxref("Notification.close_event","onclose")}}、{{domxref("Notification.error_event","onerror")}} 和 {{domxref("Notification.show_event","onshow")}} 处理程序跟踪这些事件。因为 {{domxref("Notification")}} 也继承自 {{domxref("EventTarget")}}，所以可以使用 {{domxref("EventTarget.addEventListener","addEventListener()")}} 方法。
 
-> **备注：** Firefox 和 Safari 会在一定时间后自动关闭通知（大约 4 秒）。这也会发生在操作系统层面。
->
-> 当然你也可以通过代码做到，调用 {{domxref("Notification.close()")}} 方法，就像下面的代码一样：
->
-> ```js
-> var n = new Notification("Hi!");
-> n.onshow = function () {
->   setTimeout(n.close.bind(n), 5000);
-> };
-> ```
->
-> 当你接收到一个“close”事件时，并不能保证这个通知是被用户关闭的。这是符合规范的，其中指出：“当一个通知被关闭时，通知的关闭动作都必须执行，不论是底层通知平台导致，还是用户导致。”
+## 替换现有通知
 
-### 简单的示例
+用户通常不希望在短时间内收到大量通知——例如，如果消息应用程序通知用户每条传入消息，而这些消息发送量很大，该怎么办？为了避免向用户发送太多通知，可以修改待处理通知队列，用新通知替换单个或多个待处理通知。
 
-假定有如下的 HTML:
+为此，可以向任何新通知添加标签。如果通知已具有相同标签且尚未显示，则新通知将替换先前的通知。如果已显示具有相同标签的通知，则关闭上一个通知并显示新的通知。
+
+### 标签示例
+
+假设有以下基本 HTML：
 
 ```html
 <button>Notify me!</button>
 ```
 
-它可能通过这样的方式处理通知：
+可以通过这种方式处理多个通知：
 
 ```js
-window.addEventListener("load", function () {
-  // 首先，让我们检查我们是否有权限发出通知
-  // 如果没有，我们就请求获得权限
-  if (window.Notification && Notification.permission !== "granted") {
-    Notification.requestPermission(function (status) {
-      if (Notification.permission !== status) {
-        Notification.permission = status;
-      }
-    });
+window.addEventListener("load", () => {
+  const button = document.querySelector("button");
+
+  if (window.self !== window.top) {
+    // Ensure that if our document is in a frame, we get the user
+    // to first open it in its own tab or window. Otherwise, it
+    // won't be able to request permission to send notifications.
+    button.textContent = "View live result of the example code above";
+    button.addEventListener("click", () => window.open(location.href));
+    return;
   }
 
-  var button = document.getElementsByTagName("button")[0];
-
-  button.addEventListener("click", function () {
-    // 如果用户同意就创建一个通知
-    if (window.Notification && Notification.permission === "granted") {
-      var n = new Notification("Hi!");
-    }
-
-    // 如果用户没有选择是否显示通知
-    // 注：因为在 Chrome 中我们无法确定 permission 属性是否有值，因此
-    // 检查该属性的值是否是 "default" 是不安全的。
-    else if (window.Notification && Notification.permission !== "denied") {
-      Notification.requestPermission(function (status) {
-        if (Notification.permission !== status) {
-          Notification.permission = status;
+  button.addEventListener("click", () => {
+    if (Notification?.permission === "granted") {
+      // If the user agreed to get notified
+      // Let's try to send ten notifications
+      let i = 0;
+      // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
+      const interval = setInterval(() => {
+        // Thanks to the tag, we should only see the "Hi! 9" notification
+        const n = new Notification(`Hi! ${i}`, { tag: "soManyNotification" });
+        if (i === 9) {
+          clearInterval(interval);
         }
-
-        // 如果用户同意了
+        i++;
+      }, 200);
+    } else if (Notification && Notification.permission !== "denied") {
+      // If the user hasn't told if they want to be notified or not
+      // Note: because of Chrome, we are not sure the permission property
+      // is set, therefore it's unsafe to check for the "default" value.
+      Notification.requestPermission().then((status) => {
+        // If the user said okay
         if (status === "granted") {
-          var n = new Notification("Hi!");
-        }
-
-        // 否则，我们可以让步的使用常规模态的 alert
-        else {
-          alert("Hi!");
-        }
-      });
-    }
-
-    // 如果用户拒绝接受通知
-    else {
-      // 我们可以让步的使用常规模态的 alert
-      alert("Hi!");
-    }
-  });
-});
-```
-
-这是实际的结果：
-
-{{ EmbedLiveSample('简单的示例', '100%', 30) }}
-
-## 处理重复的通知
-
-某些情况下对于用户来说，显示大量通知是件令人痛苦的事情。比如，如果一个即时通信应用向用户提示每一条传入的消息。为了避免数以百计的不必要通知铺满用户的桌面，可能需要接管一个挂起消息的队列。
-
-因此，需要为新建的通知添加一个标记。如果有一条通知也具有一个相同的标记，并且还没有被显示，那么这条新通知将会替换上一条通知。如果有一条通知具有一个相同的标记，并且已经显示出来了，那么上一条通知将会被关闭，新通知将会被显示出来。
-
-### 使用标记的例子
-
-假定有如下 HTML:
-
-```html
-<button>Notify me!</button>
-```
-
-它有可能通过这种方式处理的多个通知：
-
-```js
-window.addEventListener("load", function () {
-  // 首先，我们检查是否具有权限显示通知
-  // 如果没有，我们就申请权限
-  if (window.Notification && Notification.permission !== "granted") {
-    Notification.requestPermission(function (status) {
-      if (Notification.permission !== status) {
-        Notification.permission = status;
-      }
-    });
-  }
-
-  var button = document.getElementsByTagName("button")[0];
-
-  button.addEventListener("click", function () {
-    // 如果用户同意接收通知，我们就尝试发送 10 条通知
-    if (window.Notification && Notification.permission === "granted") {
-      for (var i = 0; i < 10; i++) {
-        // 感谢标记，我们应该只看到内容为 "Hi! 9" 的通知
-        var n = new Notification("Hi! " + i, { tag: "soManyNotification" });
-      }
-    }
-
-    // 如果用户没有选择是否同意显示通知
-    // 注：由于在 Chrome 中不能确定 permission 属性是否有值，因此检查
-    // 该属性值是否为 "default" 是不安全的。
-    else if (window.Notification && Notification.permission !== "denied") {
-      Notification.requestPermission(function (status) {
-        if (Notification.permission !== status) {
-          Notification.permission = status;
-        }
-
-        // 如果用户同意
-        if (status === "granted") {
-          for (var i = 0; i < 10; i++) {
+          let i = 0;
+          // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
+          const interval = setInterval(() => {
             // Thanks to the tag, we should only see the "Hi! 9" notification
-            var n = new Notification("Hi! " + i, { tag: "soManyNotification" });
-          }
-        }
-
-        // 否则改用 alert
-        else {
+            const n = new Notification(`Hi! ${i}`, {
+              tag: "soManyNotification",
+            });
+            if (i === 9) {
+              clearInterval(interval);
+            }
+            i++;
+          }, 200);
+        } else {
+          // Otherwise, we can fallback to a regular modal alert
           alert("Hi!");
         }
       });
-    }
-
-    // 如果用户拒绝
-    else {
-      // 改用 alert
+    } else {
+      // If the user refuses to get notified, we can fallback to a regular modal alert
       alert("Hi!");
     }
   });
 });
 ```
 
-实际效果如下：
+### 结果
 
-{{ EmbedLiveSample('使用标记的例子', '100%', 30) }}
-
-## 接收点击应用通知的通知
-
-当用户点击一个由应用产生的通知时，视情况而定，你将会有两种方式被告知点击事件发生了：
-
-1. 如果你的程序没有被关闭或转入后台，那么在你会收到一个点击事件。
-2. 其他情况下会收到一条系统消息。
-
-参考 [这个代码片段](https://github.com/mozilla/buddyup/commit/829cba7afa576052cf601c3e286b8d1981f93f45#diff-3) 作为例子，展示了如何处理。
+{{ EmbedLiveSample('Tag_example', '100%', 30) }}
 
 ## 规范
 
@@ -265,6 +230,6 @@ window.addEventListener("load", function () {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{ domxref("Notification") }}
