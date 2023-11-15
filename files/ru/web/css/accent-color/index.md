@@ -79,7 +79,7 @@ input.custom {
 
 #### Результат
 
-{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}
+{{EmbedLiveSample("Установка_пользовательского_акцентного_цвета", 500, 200)}}
 
 ## Спецификации
 
