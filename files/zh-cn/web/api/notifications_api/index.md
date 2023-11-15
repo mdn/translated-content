@@ -9,12 +9,12 @@ slug: Web/API/Notifications_API
 
 ## 概念和用法
 
-在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要授予当前源的权限以显示系统通知，这通常在应用或站点初始化时，使用 {{domxref("Notification.requestPermission()")}} 方法来完成。这应该响应用户交互来完成，例如单击按钮，例如：
+在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要为当前来源授予权限以显示系统通知，这通常在应用或站点初始化时，使用 {{domxref("Notification.requestPermission()")}} 方法来完成。这应该通过响应用户交互来完成，例如单击按钮，例如：
 
 ```js
 btn.addEventListener("click", () => {
   let promise = Notification.requestPermission();
-  // 等待许可
+  // 等待授权
 });
 ```
 
@@ -26,20 +26,20 @@ btn.addEventListener("click", () => {
 
 从这里，用户可以选择允许来自此来源的通知或阻止来自此来源的通知。一旦做出选择，该设置通常将持续用于当前会话。
 
-> **备注：** 从 Firefox 44 开始，通知（Notifications）和推送（[Push](/zh-CN/docs/Web/API/Push_API)）的权限已合并。如果为通知授予权限，推送也将启用。
+> **备注：** 从 Firefox 44 开始，通知（Notification）和推送（[Push](/zh-CN/docs/Web/API/Push_API)）的权限已合并。如果为通知授予权限，推送也将启用。
 
 接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建一个新通知。这个函数必须传递一个标题参数，并且可以选择传递一个选项对象来指定选项，例如文本方向、正文、要显示的图标、要播放的通知声音等等。
 
-此外， **Notifications API** 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 指定了多个添加，以允许 Service Worker 发送通知。
+此外， Notifications API 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 指定了多个添加，以允许 Service Worker 发送通知。
 
-> **备注：** 想了解怎么在你的应用里使用通知接口，请阅读 [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
+> **备注：** 想了解怎么在你的应用里使用通知接口，请阅读[使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
 
-## 接口
+## Notifications 接口
 
 - {{domxref("Notification")}}
   - : 定义的通知对象。
 
-### 附加参数
+### Service worker 附加内容
 
 - {{domxref("ServiceWorkerRegistration")}}
   - : 该对象包含 {{domxref("ServiceWorkerRegistration.showNotification()")}} 和 {{domxref("ServiceWorkerRegistration.getNotifications()")}} 方法，用于控制通知的显示。
