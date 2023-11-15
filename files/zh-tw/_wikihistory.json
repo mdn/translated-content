@@ -2400,7 +2400,7 @@
     "modified": "2020-10-15T22:03:31.329Z",
     "contributors": ["Syihoy", "porfirion"]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2020-10-15T22:03:27.482Z",
     "contributors": ["lin826", "iigmir"]
   },
