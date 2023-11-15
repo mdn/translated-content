@@ -3,6 +3,8 @@ title: String
 slug: Glossary/String
 ---
 
+{{GlossarySidebar}}
+
 Em qualquer linguagem de programação, uma string é uma sequência de {{Glossary("character","caracteres")}} usados para representar texto
 
 Em {{Glossary("JavaScript")}}, uma String é um dos {{Glossary("Primitive", "valores primitivos")}} e o objeto {{jsxref("String")}} é um {{Glossary("wrapper")}} em cima do tipo primitivo string.
