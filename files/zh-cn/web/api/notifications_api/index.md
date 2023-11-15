@@ -30,7 +30,7 @@ btn.addEventListener("click", () => {
 
 接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建一个新通知。这个函数必须传递一个标题参数，并且可以选择传递一个选项对象来指定选项，例如文本方向、正文、要显示的图标、要播放的通知声音等等。
 
-此外， Notifications API 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 指定了多个添加，以允许 Service Worker 发送通知。
+此外，Notifications API 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 指定了多个添加，以允许 Service Worker 发送通知。
 
 > **备注：** 想了解怎么在你的应用里使用通知接口，请阅读[使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
 
