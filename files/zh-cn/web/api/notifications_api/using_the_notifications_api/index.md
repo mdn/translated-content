@@ -154,7 +154,7 @@ document.addEventListener("visibilitychange", () => {
 假设有以下基本 HTML：
 
 ```html
-<button>Notify me!</button>
+<button>提醒我！</button>
 ```
 
 可以通过这种方式处理多个通知：
@@ -164,9 +164,7 @@ window.addEventListener("load", () => {
   const button = document.querySelector("button");
 
   if (window.self !== window.top) {
-    // Ensure that if our document is in a frame, we get the user
-    // to first open it in its own tab or window. Otherwise, it
-    // won't be able to request permission to send notifications.
+    // 确保如果我们的文档位于框架中，我们会让用户首先在自己的选项卡或窗口中打开它。否则，它将无法请求发送通知的权限
     button.textContent = "View live result of the example code above";
     button.addEventListener("click", () => window.open(location.href));
     return;
@@ -174,12 +172,11 @@ window.addEventListener("load", () => {
 
   button.addEventListener("click", () => {
     if (Notification?.permission === "granted") {
-      // If the user agreed to get notified
-      // Let's try to send ten notifications
+      // 如果用户同意收到通知让我们尝试发送十个通知
       let i = 0;
-      // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
+      // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
       const interval = setInterval(() => {
-        // Thanks to the tag, we should only see the "Hi! 9" notification
+        // 由于 tag 参数，我们应该只能看到“Hi！9”通知
         const n = new Notification(`Hi! ${i}`, { tag: "soManyNotification" });
         if (i === 9) {
           clearInterval(interval);
@@ -187,16 +184,14 @@ window.addEventListener("load", () => {
         i++;
       }, 200);
     } else if (Notification && Notification.permission !== "denied") {
-      // If the user hasn't told if they want to be notified or not
-      // Note: because of Chrome, we are not sure the permission property
-      // is set, therefore it's unsafe to check for the "default" value.
+      // 如果用户没有告诉他们是否想要收到通知（注意：由于 Chrome，我们不确定是否设置了权限属性），因此检查“默认”值是不安全的。
       Notification.requestPermission().then((status) => {
-        // If the user said okay
+        // 如果用户同意
         if (status === "granted") {
           let i = 0;
-          // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
+          // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
           const interval = setInterval(() => {
-            // Thanks to the tag, we should only see the "Hi! 9" notification
+            // 由于 tag 参数，我们应该只能看到“Hi！9”通知
             const n = new Notification(`Hi! ${i}`, {
               tag: "soManyNotification",
             });
@@ -206,12 +201,12 @@ window.addEventListener("load", () => {
             i++;
           }, 200);
         } else {
-          // Otherwise, we can fallback to a regular modal alert
+          // 否则，我们可以回退到常规模式提醒
           alert("Hi!");
         }
       });
     } else {
-      // If the user refuses to get notified, we can fallback to a regular modal alert
+      // 如果用户拒绝收到通知，我们可以退回到常规模式提醒
       alert("Hi!");
     }
   });
