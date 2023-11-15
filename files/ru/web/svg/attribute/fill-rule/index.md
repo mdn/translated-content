@@ -47,7 +47,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## Примечания по использованию
 
