@@ -13,7 +13,7 @@ La propiedad `min-width` se usa para determinar la anchura mínima de un element
 - Aplicable a: elementos de tipo bloque.
 - {{ Xref_cssinherited() }}: no
 - Porcentajes: se refieren a la anchura del bloque contenedor.
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}:
 
 ### Sintaxis

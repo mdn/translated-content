@@ -15,7 +15,7 @@ En el modelo de separación, cada celda adyacente tiene su propio borde (la dist
 
 - {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("separate", "separado") }}
 - {{ Cssxref("inheritance", "Valor heredado") }}: Yes
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}:
 
 ### Sintaxis

@@ -15,7 +15,7 @@ Para los elementos con una posición absoluta (aquellos que tienen la propiedad 
 - Se aplica a: [positioned elements](/es/CSS/position)
 - {{ Xref_cssinherited() }}: no
 - Porcentajes: se refiere al ancho del bloque contenedor.
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}: valor absoluto, porcentaje ó auto.
 
 ### Sintaxis

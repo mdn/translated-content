@@ -19,7 +19,7 @@ Cuando se define tanto la propiedad `top` como {{cssxref("bottom")}} para un ele
 - Aplicable a: [Posicionar Elementos](/es/CSS/position)
 - {{ Xref_cssinherited() }}: no
 - Porcentajes: se refieren a la altura del bloque contenedor.
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}: valor absoluto, porcentaje ó auto.
 
 ### Sintaxis

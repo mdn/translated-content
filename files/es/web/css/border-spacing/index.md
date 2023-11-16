@@ -12,7 +12,7 @@ La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica
 - {{ Cssxref("initial", "Valor inicial") }}: 0
 - Se aplica a: tablas y elementos con la propiedad `inline-table`
 - {{ Cssxref("inheritance", "Valor heredado") }}: sí
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: dos largos absolutos.
 
 ### Sintaxis

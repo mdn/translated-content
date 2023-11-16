@@ -13,7 +13,7 @@ slug: Web/CSS/border-bottom-width
 - Se aplica a : todos los elementos
 - {{ Cssxref("inheritance", "Valor heredado") }}: no
 - Porcentajes: N/A
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: largo absoluto o '0' si el estilo es `none` o `hidden`.
 
 ### Sintaxis
