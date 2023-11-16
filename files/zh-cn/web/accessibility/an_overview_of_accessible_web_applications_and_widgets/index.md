@@ -1,6 +1,8 @@
 ---
 title: 无障碍 Web 应用和微件概述
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+l10n:
+  sourceCommit: acad5b9afc0a9e20144d49fd3fbb7f4fa92c9192
 ---
 
 <section id="Quick_links">
@@ -42,7 +44,7 @@ _示例 2：标签页微件的视觉样式。用户可能能够通过视觉识�
 
 ## ARIA
 
-**ARIA** 使开发者能够通过为标记添加特殊属性来更详细地描述微件。ARIA 旨在填补标准 HTML 标签与动态 Web 应用程序中的桌面央视控件之间的空白，它提供了角色和状态来描述大多数熟悉的 UI 微件的行为。
+**ARIA**（无障碍富互联网应用）使开发者能够通过为标记添加特殊属性来更详细地描述微件。ARIA 旨在填补标准 HTML 标签与动态 Web 应用程序中的桌面样式控件之间的空白，它提供了角色和状态来描述大多数熟悉的 UI 微件的行为。
 
 > **警告：** 其中的许多是在浏览器不完全支持现代 HTML 特性时添加的。**开发者应该始终优先使用正确的语义化 HTML 元素而不是使用 ARIA**。
 
@@ -81,7 +83,7 @@ _示例 3：添加了 ARIA 属性的标签页微件的标记。_
 </div>
 ```
 
-ARIA 被所有主流浏览器和许多辅助技术[广泛支持](https://caniuse.com/#feat=wai-aria)。
+ARIA 被所有主流浏览器和许多辅助技术所[广泛支持](https://caniuse.com/#feat=wai-aria)。
 
 ### 表现变化
 
