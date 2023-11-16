@@ -20,7 +20,7 @@ slug: Web/API/Notification
 
 这些属性只能用于 `Notification` 对象自身。
 
-- {{domxref("Notification.permission")}} {{ReadOnlyInline}}
+- {{domxref("Notification.permission_static", "Notification.permission")}} {{ReadOnlyInline}}
 
   - : 一个字符串，表示当前显示通知的权限。可能的值是：
 
@@ -70,7 +70,7 @@ slug: Web/API/Notification
 
 这些属性只能用于 `Notification` 对象自身。
 
-- {{domxref("Notification.requestPermission()")}}
+- {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}
   - : 请求用户允许显示通知。
 
 ## 实例方法
@@ -96,25 +96,24 @@ slug: Web/API/Notification
 假定有如下 HTML：
 
 ```html
-<button onclick="notifyMe()">Notify me!</button>
+<button onclick="notifyMe()">提醒我！</button>
 ```
 
-可能按以下方式发送通知——在这里，我们提供了一个相当冗长且完整的代码，如果你想要首先检查通知是否受支持，然后检查用户是否已授予当前来源发送通知的权限，然后根据需要请求权限，最后发送一个通知。
+可以按如下方式发送通知——在这里，我们提供了一个相当详细且完整的代码，如果你想要首先检查通知是否受支持，然后检查用户是否已授予当前来源发送通知的权限，然后根据需要请求权限，最后发送一个通知。
 
 ```js
 function notifyMe() {
   if (!("Notification" in window)) {
-    // Check if the browser supports notifications
+    // 检查浏览器是否支持通知
     alert("This browser does not support desktop notification");
   } else if (Notification.permission === "granted") {
-    // Check whether notification permissions have already been granted;
-    // if so, create a notification
+    // 检查是否已授予通知权限；如果是的话，创建一个通知
     const notification = new Notification("Hi there!");
     // …
   } else if (Notification.permission !== "denied") {
-    // We need to ask the user for permission
+    // 我们需要征求用户的许可
     Notification.requestPermission().then((permission) => {
-      // If the user accepts, let's create a notification
+      // 如果用户接受，我们就创建一个通知
       if (permission === "granted") {
         const notification = new Notification("Hi there!");
         // …
@@ -122,14 +121,13 @@ function notifyMe() {
     });
   }
 
-  // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them anymore.
+  // 最后，如果用户拒绝了通知，并且您想尊重他们，则无需再打扰他们
 }
 ```
 
 在这里，我们不再展示一个在线实例，因为 Chrome 和 Firefox 不再允许从跨域的 {{htmlelement("iframe")}} 请求通知权限，其他浏览器会陆续跟进。要查看实际示例，请查看我们的[待办事项示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（参见[在线运行的应用程序](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
-> **备注：** 在上面的示例中，我们生成了响应用户手势的的通知（点击按钮）。这是最佳实践——你不应该向用户发送它们不同意的通知——而且未来浏览器将明确的禁止未响应用户手势发出的通知。例如，Firefox 已经从版本 72 开始就这么做了。
+> **备注：** 在上面的示例中，我们生成了响应用户手势的的通知（点击按钮）。这不仅仅是最佳实践——你不应该向用户发送它们不同意的通知——而且未来浏览器将明确的禁止未响应用户手势发出的通知。例如，Firefox 已经从版本 72 开始就这么做了。
 
 ## 规范
 
