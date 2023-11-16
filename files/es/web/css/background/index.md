@@ -96,7 +96,7 @@ Tomando una declaración válida, la propiedad `background` inicia las propiedad
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -83,7 +83,7 @@ Para los elementos posicionados de forma absoluta, la propiedad `bottom` no tien
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

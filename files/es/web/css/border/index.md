@@ -56,7 +56,7 @@ Mientras que las propiedades {{ Cssxref("border-width") }}, {{ Cssxref("border-s
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

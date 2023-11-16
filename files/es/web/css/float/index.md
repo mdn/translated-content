@@ -146,7 +146,7 @@ A veces querrás forzar un item a moverse por debajo de elementos flotantes. Por
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

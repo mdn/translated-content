@@ -50,7 +50,7 @@ CSS 2 especifica que el valor inicial para esta propiedad es `collapse`, pero CS
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -43,7 +43,7 @@ El espaciado de borde también se utiliza en los bordes exteriores de las tablas
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

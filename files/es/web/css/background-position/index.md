@@ -91,7 +91,7 @@ Si solo se especifica un valor, se entenderá que es la posición horizontal con
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

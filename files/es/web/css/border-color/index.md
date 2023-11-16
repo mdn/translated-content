@@ -59,7 +59,7 @@ Para poder ver el/los bordes también hay que definir {{ Cssxref("border-width",
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

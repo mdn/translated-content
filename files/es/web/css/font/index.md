@@ -73,6 +73,6 @@ La propiedad {{ Cssxref("font-size-adjust") }} también se establece a su valor 
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}

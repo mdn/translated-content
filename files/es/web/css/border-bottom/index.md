@@ -69,7 +69,7 @@ Como el valor por defecto de {{ Cssxref("border-bottom-style") }} es `none`, el 
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

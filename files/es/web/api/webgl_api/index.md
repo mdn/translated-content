@@ -43,6 +43,6 @@ WebGL trae gráficos en 3D para la Web mediante la introducción de una API que 
 - [Planeta WebGL](http://planet-webgl.org/)
   - : Un agregador de RSS para las personas que pertenecen a la comunidad WebGL.
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}

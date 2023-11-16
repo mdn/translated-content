@@ -69,7 +69,7 @@ background-color: color | transparent | inherit
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

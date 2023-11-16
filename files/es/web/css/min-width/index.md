@@ -45,7 +45,7 @@ form{min-width: 0;}
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -35,7 +35,7 @@ Esta es una norma soportada por Chrome, Firefox entre otros.
 
 No forma parte de ninguna especificación. No es una norma.
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

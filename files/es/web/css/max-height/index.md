@@ -42,7 +42,7 @@ form { max-width: none; }
 
 {{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
 {{Compat}}
 
