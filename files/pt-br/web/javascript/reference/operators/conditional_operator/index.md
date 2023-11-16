@@ -44,8 +44,8 @@ var firstCheck = false,
   access = firstCheck
     ? "Access denied"
     : secondCheck
-    ? "Access denied"
-    : "Access granted";
+      ? "Access denied"
+      : "Access granted";
 
 console.log(access); // logs "Access granted"
 ```

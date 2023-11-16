@@ -419,8 +419,8 @@ const ajaxRequest = new (function () {
   window.addEventListener
     ? addEventListener("load", init, false)
     : window.attachEvent
-    ? attachEvent("onload", init)
-    : (onload = init);
+      ? attachEvent("onload", init)
+      : (onload = init);
 
   // Public methods
 
