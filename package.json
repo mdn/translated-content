@@ -38,7 +38,7 @@
     "markdownlint-rule-search-replace": "1.2.0",
     "mdast-util-from-markdown": "^2.0.0",
     "ora": "^7.0.1",
-    "prettier": "3.0.3",
+    "prettier": "3.1.0",
     "unist-util-visit": "^5.0.0",
     "yargs": "^17.7.2"
   }
