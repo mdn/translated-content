@@ -44,7 +44,7 @@ btn.addEventListener("click", () => {
 - {{domxref("ServiceWorkerRegistration")}}
   - : 该对象包含 {{domxref("ServiceWorkerRegistration.showNotification()")}} 和 {{domxref("ServiceWorkerRegistration.getNotifications()")}} 方法，用于控制通知的显示。
 - {{domxref("ServiceWorkerGlobalScope")}}
-  - : 该对象包含 {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} 事件处理函数，用于通知被点击的时候触发绑定的事件处理函数。
+  - : 该对象包含 {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} 事件处理器，用于通知被点击的时候触发自定义函数。
 - {{domxref("NotificationEvent")}}
   - : 该对象是功能明确的事件对象，表示一个被触发的通知事件，继承自 {{domxref("ExtendableEvent")}}。
 
