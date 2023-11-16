@@ -362,8 +362,8 @@ All these things are done automatically by the web browser whenever you submit a
             ? this.contentType === "multipart\/form-data"
               ? 3
               : this.contentType === "text\/plain"
-              ? 2
-              : 1
+                ? 2
+                : 1
             : 0;
           this.receiver = oTarget.action;
           this.status = 0;
