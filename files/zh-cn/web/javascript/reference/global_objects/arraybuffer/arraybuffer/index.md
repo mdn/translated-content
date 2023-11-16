@@ -34,7 +34,7 @@ new ArrayBuffer(length, options)
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : 以下情况中抛出：
+  - : 有下列情况之一时抛出：
     - `length` 或 `maxByteLength` 大于 {{jsxref("Number.MAX_SAFE_INTEGER")}}（≥ 2<sup>53</sup>）或者为负数。
     - `length` 大于 `maxByteLength`。
 
