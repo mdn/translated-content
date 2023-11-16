@@ -25,7 +25,7 @@ new ArrayBuffer(length, options)
 - `options` {{optional_inline}}
   - : 一个对象，可以包含以下属性：
     - `maxByteLength` {{optional_inline}}
-      - : 数组缓冲区可以调整的最大大小，以字节为单位。
+      - : 数组缓冲区可以调整到的最大大小，以字节为单位。
 
 ### 返回值
 
