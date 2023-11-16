@@ -12,10 +12,10 @@ slug: Learn/MathML/First_steps/Scripts
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本的计算机操作能力，<a
+        基本的计算机操作能力、<a
         href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
         >安装基本软件</a
-        >，<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        >、<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
         >处理文件</a>的基本知识，以及
       HTML 基础知识（可以学习 <a
         href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
@@ -67,9 +67,9 @@ slug: Learn/MathML/First_steps/Scripts
 </p>
 ```
 
-以下是在你的浏览器中呈现上述示例的结果。
+以下是在你的浏览器中的上述示例的渲染结果。
 
-{{EmbedLiveSample('msub_msup_msubsup 的子树', 700, 200)}}
+{{EmbedLiveSample('下标和上标', 700, 200)}}
 
 可以看出：
 
@@ -78,7 +78,7 @@ slug: Learn/MathML/First_steps/Scripts
 - `<msubsup>` 元素的第二个和第三个子元素分别作为其第一个子元素的下标和上标附加。
 - 上下标内的文本会缩小显示。
 
-> **备注：** MathML 元素 `<msub>` 和 `<msup>` 与 HTML 元素 [`<sub>`](/zh-CN/docs/Web/HTML/Element/sub) 和 [`<sup>`](/zh-CN/docs/Web/HTML/Element/sup) 不同。它们允许开发者将任意的 MathML 子树作为上下标，而不仅仅是文本。
+> **备注：** MathML 元素 `<msub>` 和 `<msup>` 与 HTML 元素 [`<sub>`](/zh-CN/docs/Web/HTML/Element/sub) 和 [`<sup>`](/zh-CN/docs/Web/HTML/Element/sup) 不同。它们允许开发者将任意的 MathML 子树作为附加符号，而不仅仅是文本。
 
 ## 正下标和正上标
 
@@ -139,7 +139,7 @@ document.getElementById("showSolution").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample('munder_mover_munderover 的子树', 700, 400, "", "") }}
+{{EmbedLiveSample('主动学习：识别正下标和正上标', 700, 400)}}
 
 ### 主动学习：识别附加符号元素
 
@@ -249,15 +249,15 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample('主动学习：识别附加符号元素', 700, 400, "", "") }}
+{{EmbedLiveSample('主动学习：识别附加符号元素', 700, 400)}}
 
 ## 其他运算符属性
 
-我们之前已经了解了 `<mo>` 元素的一些[属性](/zh-CN/docs/Learn/MathML/First_steps/Text_containers#mo_的运算符属性)，包括在垂直方向上的拉伸和间距。现在有了附加符号元素，我们可以扩展该列表。我们将通过修改我们的[上一个示例](#主动学习_识别附加符号元素)来实现这一点。
+我们之前已经了解了 `<mo>` 元素的一些[属性](/zh-CN/docs/Learn/MathML/First_steps/Text_containers#mo_的运算符属性)，包括在垂直方向上的拉伸和间距。现在有了附加符号元素，我们可以扩展该列表。我们将通过修改我们的[上一个示例](#主动学习：识别附加符号元素)来实现这一点。
 
 ### 在水平方向上的拉伸
 
-首先，让我们进行以下替换： <math> <mi>β</mi> <mo>≔</mo> <mrow> <msub> <mi>z</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>z</mi> <mn>2</mn> </msub> </mrow> </math> 和 <math> <mi>α</mi> <mo>≔</mo> <mrow> <msub> <mi>v</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>v</mi> <mn>2</mn> </msub> </mrow> </math>：
+首先，让我们进行以下替换：<math> <mi>β</mi> <mo>≔</mo> <mrow> <msub> <mi>z</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>z</mi> <mn>2</mn> </msub> </mrow> </math> 和 <math> <mi>α</mi> <mo>≔</mo> <mrow> <msub> <mi>v</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>v</mi> <mn>2</mn> </msub> </mrow> </math>：
 
 ```html hidden
 <!doctype html>
@@ -355,7 +355,7 @@ math {
 }
 ```
 
-{{ EmbedLiveSample('水平方向拉伸', 700, 200, "", "") }}
+{{EmbedLiveSample('在水平方向上的拉伸', 700, 200)}}
 
 可以看出底部括号“⎵”和右箭头“→”在水平方向上会延伸以覆盖被替代值的宽度。回想一下，[一些竖直运算符可以伸展](/zh-CN/docs/Learn/MathML/First_steps/Text_containers#active_learning_stretchy_operators)，以覆盖 `<mrow>` 中非伸展兄弟节点的高度。类似地，一些水平运算符可以伸展以覆盖 `<munder>`、`<mover>` 或 `<munderover>` 元素中非伸展兄弟节点的宽度。
 
@@ -461,7 +461,7 @@ math {
 }
 ```
 
-{{ EmbedLiveSample('大型运算符和极限', 700, 200, "", "") }}
+{{EmbedLiveSample('大型运算符和极限', 700, 200)}}
 
 不出所料，公式不再居中，渲染方式发生变动，导致高度最小化。注意求和符号，可以看到求和符号变小了，并且 `<munderover>` 元素的附加符号现在以下标和上标的方式附加在其上！这是由于“∑”运算符的两个属性：
 
