@@ -96,7 +96,7 @@ const view = new Int32Array(buffer);
 
 ## 参见
 
-- [`core-js` 中的 `ArrayBuffer` Polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`core-js` 中 `ArrayBuffer` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}
-- [RangeError：无效的数组长度](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
+- [RangeError: invalid array length](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
