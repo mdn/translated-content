@@ -375,8 +375,8 @@ foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
             ? this.contentType === "multipart\/form-data"
               ? 3
               : this.contentType === "text\/plain"
-              ? 2
-              : 1
+                ? 2
+                : 1
             : 0;
           this.receiver = oTarget.action;
           this.status = 0;

@@ -49,9 +49,8 @@ button.onclick = () => {
   try {
     throw new DOMException("已触发自定义 DOM 异常。");
   } catch (error) {
-    document.querySelector(
-      "#output",
-    ).textContent = `错误信息：${error.message}`;
+    document.querySelector("#output").textContent =
+      `错误信息：${error.message}`;
   }
 };
 ```

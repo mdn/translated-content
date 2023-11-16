@@ -190,8 +190,8 @@ function pollGamepads() {
   let gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads
-    : [];
+      ? navigator.webkitGetGamepads
+      : [];
   for (let i = 0; i < gamepads.length; i++) {
     let gp = gamepads[i];
     if (gp) {
@@ -228,8 +228,8 @@ function gameLoop() {
   let gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads()
-    : [];
+      ? navigator.webkitGetGamepads()
+      : [];
   if (!gamepads) {
     return;
   }
@@ -369,8 +369,8 @@ function scangamepads() {
   let gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads()
-    : [];
+      ? navigator.webkitGetGamepads()
+      : [];
   for (let i = 0; i < gamepads.length; i++) {
     if (gamepads[i]) {
       if (gamepads[i].index in controllers) {
