@@ -37,4 +37,4 @@ console.log(navigator.platform);
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.platform")}}
+{{Compat}}

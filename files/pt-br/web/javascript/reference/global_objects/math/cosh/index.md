@@ -69,7 +69,7 @@ Math.cosh =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.cosh")}}
+{{Compat}}
 
 ## See also
 

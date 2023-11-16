@@ -37,7 +37,7 @@ Este exemplo define um título de duas linhas.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.title")}}
+{{Compat}}
 
 ## Veja também
 

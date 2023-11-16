@@ -57,7 +57,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.sessions")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

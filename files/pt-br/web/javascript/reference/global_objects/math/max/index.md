@@ -77,7 +77,7 @@ Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o res
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.max")}}
+{{Compat}}
 
 ## Veja também
 

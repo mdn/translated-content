@@ -66,7 +66,7 @@ Object.isExtensible(1);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.isExtensible")}}
+{{Compat}}
 
 ## See also
 

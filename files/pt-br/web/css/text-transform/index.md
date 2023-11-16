@@ -366,7 +366,7 @@ Some characters exists in two formats, normal width and a full-width, with diffe
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.text-transform")}}
+{{Compat}}
 
 ## See also
 

@@ -25,4 +25,4 @@ var lastChance = SyncEvent.lastChance
 
 ## ブラウザー実装状況
 
-{{Compat("api.SyncEvent.lastChance")}}
+{{Compat}}

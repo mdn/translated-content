@@ -94,7 +94,7 @@ myObj + 3; // 7
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.valueOf")}}
+{{Compat}}
 
 ## 関連情報
 

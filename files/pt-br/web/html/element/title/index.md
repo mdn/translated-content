@@ -54,4 +54,4 @@ Para ajudar o usuário, atualize o valor do `title` para refletir mudanças sign
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.title")}}
+{{Compat}}

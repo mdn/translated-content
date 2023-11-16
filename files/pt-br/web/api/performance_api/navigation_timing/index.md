@@ -77,4 +77,4 @@ var connectTime = perfData.responseEnd - perfData.requestStart;
 
 ## Compatibillidade de Navegadores
 
-{{Compat("api.PerformanceNavigationTiming")}}
+{{Compat}}

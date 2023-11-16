@@ -37,7 +37,7 @@ Esse elemento implementa a interface[`HTMLDetailsElement`](/pt-BR/DOM/HTMLDetail
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.details")}}
+{{Compat}}
 
 ## Veja também
 

@@ -45,7 +45,7 @@ Este elemento implementa a interface do [`SVGTitleElement`](/pt-BR/DOM/SVGTitleE
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.title")}}
+{{Compat}}
 
 ## Veja também
 

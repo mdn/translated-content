@@ -8696,10 +8696,6 @@
     "modified": "2020-10-15T22:21:32.685Z",
     "contributors": ["eltociear", "daisuke-f"]
   },
-  "Web/API/FormData/Using_FormData_Objects": {
-    "modified": "2019-04-05T12:43:46.777Z",
-    "contributors": ["silverskyvicto"]
-  },
   "Web/API/FormData/append": {
     "modified": "2020-01-07T21:28:31.225Z",
     "contributors": ["metaist"]
@@ -14776,45 +14772,6 @@
       "Okome"
     ]
   },
-  "Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest": {
-    "modified": "2020-10-15T21:07:58.610Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "ethertank",
-      "DavidWalsh",
-      "Potappo",
-      "ziyunfei",
-      "myakura"
-    ]
-  },
-  "Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data": {
-    "modified": "2020-08-12T11:45:51.223Z",
-    "contributors": ["mfuji09", "SphinxKnight", "yoya"]
-  },
-  "Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests": {
-    "modified": "2020-09-01T03:34:39.238Z",
-    "contributors": ["mfuji09", "hamasaki", "acid"]
-  },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2020-10-15T21:03:56.132Z",
-    "contributors": [
-      "eltociear",
-      "mfuji09",
-      "kyanny",
-      "dlwe",
-      "Uemmra3",
-      "Jeremie",
-      "clariroid",
-      "taiyaki32",
-      "acid",
-      "SoutaTakada",
-      "ethertank",
-      "maco81",
-      "saneyuki_s",
-      "Potappo"
-    ]
-  },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2019-03-18T21:37:11.435Z",
     "contributors": ["mfuji09"]
@@ -14930,6 +14887,49 @@
   "Web/API/XMLHttpRequestEventTarget": {
     "modified": "2020-10-15T22:32:23.587Z",
     "contributors": ["mpcjazz"]
+  },
+  "Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest": {
+    "modified": "2020-10-15T21:07:58.610Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "ethertank",
+      "DavidWalsh",
+      "Potappo",
+      "ziyunfei",
+      "myakura"
+    ]
+  },
+  "Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data": {
+    "modified": "2020-08-12T11:45:51.223Z",
+    "contributors": ["mfuji09", "SphinxKnight", "yoya"]
+  },
+  "Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests": {
+    "modified": "2020-09-01T03:34:39.238Z",
+    "contributors": ["mfuji09", "hamasaki", "acid"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_FormData_Objects": {
+    "modified": "2019-04-05T12:43:46.777Z",
+    "contributors": ["silverskyvicto"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2020-10-15T21:03:56.132Z",
+    "contributors": [
+      "eltociear",
+      "mfuji09",
+      "kyanny",
+      "dlwe",
+      "Uemmra3",
+      "Jeremie",
+      "clariroid",
+      "taiyaki32",
+      "acid",
+      "SoutaTakada",
+      "ethertank",
+      "maco81",
+      "saneyuki_s",
+      "Potappo"
+    ]
   },
   "Web/API/XMLSerializer": {
     "modified": "2020-10-15T21:17:59.715Z",
@@ -15100,67 +15100,67 @@
       "saneyuki_s"
     ]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2020-11-27T14:41:08.119Z",
     "contributors": ["yumetodo", "takamin", "yyss"]
   },
-  "Web/API/console/clear": {
+  "Web/API/console/clear_static": {
     "modified": "2020-11-27T13:49:44.683Z",
     "contributors": ["yumetodo", "853419196", "yyss"]
   },
-  "Web/API/console/count": {
+  "Web/API/console/count_static": {
     "modified": "2020-11-27T14:24:35.469Z",
     "contributors": ["yumetodo", "yyss"]
   },
-  "Web/API/console/countReset": {
+  "Web/API/console/countreset_static": {
     "modified": "2020-11-27T14:37:31.289Z",
     "contributors": ["yumetodo"]
   },
-  "Web/API/console/debug": {
+  "Web/API/console/debug_static": {
     "modified": "2020-11-27T14:40:02.073Z",
     "contributors": ["yumetodo", "silverskyvicto"]
   },
-  "Web/API/console/dirxml": {
+  "Web/API/console/dirxml_static": {
     "modified": "2019-03-23T22:34:53.031Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/group": {
+  "Web/API/console/group_static": {
     "modified": "2020-10-15T21:45:35.788Z",
     "contributors": ["munieru_jp", "dskmori", "yyss"]
   },
-  "Web/API/console/groupCollapsed": {
+  "Web/API/console/groupcollapsed_static": {
     "modified": "2019-03-23T22:34:55.714Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/groupEnd": {
+  "Web/API/console/groupend_static": {
     "modified": "2019-03-23T22:34:56.119Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/info": {
+  "Web/API/console/info_static": {
     "modified": "2020-10-15T21:45:37.023Z",
     "contributors": ["u_7cc", "yyss"]
   },
-  "Web/API/console/profile": {
+  "Web/API/console/profile_static": {
     "modified": "2019-03-23T22:34:55.973Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/profileEnd": {
+  "Web/API/console/profileend_static": {
     "modified": "2019-03-23T22:34:42.618Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/table": {
+  "Web/API/console/table_static": {
     "modified": "2019-03-23T22:34:44.337Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/timeStamp": {
+  "Web/API/console/timestamp_static": {
     "modified": "2019-03-23T22:34:51.368Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/trace": {
+  "Web/API/console/trace_static": {
     "modified": "2020-10-15T21:45:37.860Z",
     "contributors": ["YujiSoftware", "woodmix", "yyss"]
   },
-  "Web/API/console/warn": {
+  "Web/API/console/warn_static": {
     "modified": "2019-03-23T22:34:47.743Z",
     "contributors": ["yyss"]
   },
@@ -23045,7 +23045,7 @@
       "GoToLoop"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_class_fields": {
+  "Web/JavaScript/Reference/Classes/Private_properties": {
     "modified": "2020-11-09T13:32:25.251Z",
     "contributors": ["mpcjazz"]
   },

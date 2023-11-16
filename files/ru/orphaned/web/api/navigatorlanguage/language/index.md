@@ -31,7 +31,7 @@ if ( window.navigator.language.slice(0, 2) !== "en" ) {
 
 ## Доступность в браузерах
 
-{{Compat("api.NavigatorLanguage.language")}}
+{{Compat}}
 
 ## Смотрите также
 

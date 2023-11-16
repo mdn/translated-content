@@ -64,7 +64,7 @@ slug: Learn/Forms
 - [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
   - : 在某些情况下，可能出于样式或功能的原因，原生表单部件无法提供你所需要的东西。在这种情况下，你可能需要使用原生 HTML 构建自己的表单小部件。本文将讲述一个实例，说明你将如何做到这一点，以及在实际操作时需要注意的事项。
 - [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过定制的 JavaScript 发送它，而不是标准的表单提交。它还说明了为什么要这么做，以及这样做的意义。（请参阅[使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)。）
+  - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过定制的 JavaScript 发送它，而不是标准的表单提交。它还说明了为什么要这么做，以及这样做的意义。（请参阅[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)。）
 - [表单控件的 CSS 属性兼容性表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
   - : 最后一篇文章提供了一个方便的参考，以确定 CSS 属性与表单元素的兼容性关系。
 

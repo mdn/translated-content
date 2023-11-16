@@ -110,7 +110,7 @@ The features include:
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Permissions-Policy")}}
+{{Compat}}
 
 ## 関連情報
 

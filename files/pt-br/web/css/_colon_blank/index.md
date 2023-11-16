@@ -21,7 +21,7 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.blank")}}
+{{Compat}}
 
 ## Veja também
 

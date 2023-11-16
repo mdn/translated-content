@@ -2,7 +2,7 @@
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 l10n:
-  sourceCommit: c4e3558ee1045803df4a685f11f94dca273cd5fe
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
@@ -31,6 +31,9 @@ l10n:
 - [`flatMap()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
 - [`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 - [`keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)
+- [`toReversed()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
+- [`toSorted()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)
+- [`toSpliced()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
 - [`values()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
 
 `Array.prototype[@@unscopables]` は、上記のプロパティ名をすべて `true` の値で持つ、空のオブジェクトです。この[プロトタイプは `null`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) なので、 `Object.prototype` のプロパティ、例えば [`toString`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) は偶然にスコープ付けできなくなることはなく、 `with` 文の中の `toString()` は引き続き配列の中で呼び出すことができます。
@@ -63,4 +66,8 @@ ECMAScript 2015 で {{jsxref("Array.prototype.keys()")}} メソッドが導入�
 
 ## 関連情報
 
+- [`Array.prototype[@@unscopables]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
+- {{jsxref("Array")}}
+- {{jsxref("Statements/with", "with")}}
 - {{jsxref("Symbol.unscopables")}}
