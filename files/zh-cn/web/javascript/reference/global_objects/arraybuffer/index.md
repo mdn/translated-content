@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 ### 传输 ArrayBuffer
 
-`ArrayBuffer` 对象可以在不同的执行上下文之间传输，就像 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 或 [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API) 那样，使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。这可以通过在 {{domxref("Worker.postMessage()")}} 或 {{domxref("ServiceWorker.postMessage()")}} 的调用中传入 `ArrayBuffer` 对象作为[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)来完成。在纯 JavaScript 中，也可以使用 {{jsxref("ArrayBuffer/transfer", "transfer()")}} 或 {{jsxref("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}} 方法来转移内存的所有权。
+`ArrayBuffer` 对象可以在不同的执行上下文之间传输，就像 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 或 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 那样，使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。这可以通过在 {{domxref("Worker.postMessage()")}} 或 {{domxref("ServiceWorker.postMessage()")}} 的调用中传入 `ArrayBuffer` 对象作为[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)来完成。在纯 JavaScript 中，也可以使用 {{jsxref("ArrayBuffer/transfer", "transfer()")}} 或 {{jsxref("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}} 方法来转移内存的所有权。
 
 当一个 `ArrayBuffer` 对象被传输时，它原来的副本会被*分离（detached）*，这意味着它不再可用。在任何时候，只有一个 `ArrayBuffer` 的副本实际拥有底层内存。分离的缓冲区具有以下行为：
 
