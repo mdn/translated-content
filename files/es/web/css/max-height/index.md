@@ -3,8 +3,6 @@ title: max-height
 slug: Web/CSS/max-height
 ---
 
-<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
-
 ### Resumen
 
 La propiedad `max-height` se utiliza para definir la altura máxima de un elemento dado. Impide que el valor de la {{ Cssxref("height", "altura") }} pueda llegar a ser más grande que la de `max-height`.
@@ -42,20 +40,12 @@ form { max-width: none; }
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS2/visudet.html#min-max-heights)
+{{Specifications}}
 
-### Compatibilidades
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 6              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("Modelo de caja", "modelo de caja") }}, {{ Cssxref("width", "ancho") }}, {{ Cssxref("-moz-box-sizing", "tamaño de cajas -Mozilla") }}, {{ Cssxref("min-height", "altura mínima") }}, {{ Cssxref("max-height", "altura máxima") }}
-
-Categorías
-
-Interwiki Languages

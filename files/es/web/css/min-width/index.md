@@ -43,15 +43,11 @@ form{min-width: 0;}
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS2/visudet.html#min-max-widths)
+{{Specifications}}
 
-### Compatibilidad entre navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 6              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 

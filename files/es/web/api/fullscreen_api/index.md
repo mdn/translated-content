@@ -115,20 +115,6 @@ En este código, primero se observa si el atributo `fullscreenElement` de {{ dom
 
 Si el modo de pantalla completa está activado (`fullscreenElement` no es `null`), llamamos a la función {{ domxref("document.exitFullscreen()") }}.
 
-## Prefijado
-
-De momento, no todos los navegadores están implementando la versión sin prefijo de la API. Aquí está la tabla que resume los prefijos y diferencias de nombres entre ellos:
-
-| Estándar                                   | Blink (Chrome y Opera)      | Gecko (Firefox)          | Internet Explorer 11    | Edge                        | Safari (WebKit)             |
-| ------------------------------------------ | --------------------------- | ------------------------ | ----------------------- | --------------------------- | --------------------------- |
-| {{domxref("Document.fullscreen")}}         | `webkitIsFullScreen`        | `mozFullScreen`          | _-_                     | `webkitIsFullScreen`        | `webkitIsFullScreen`        |
-| {{domxref("Document.fullscreenEnabled")}}  | `webkitFullscreenEnabled`   | `mozFullScreenEnabled`   | `msFullscreenEnabled`   | `webkitFullscreenEnabled`   | `webkitFullscreenEnabled`   |
-| {{domxref("Document.fullscreenElement")}}  | `webkitFullscreenElement`   | `mozFullScreenElement`   | `msFullscreenElement`   | `webkitFullscreenElement`   | `webkitFullscreenElement`   |
-| {{domxref("Document.onfullscreenchange")}} | `onwebkitfullscreenchange`  | `onmozfullscreenchange`  | `onmsfullscreenchange`  | `onwebkitfullscreenchange`  | `onwebkitfullscreenchange`  |
-| {{domxref("Document.onfullscreenerror")}}  | `onwebkitfullscreenerror`   | `onmozfullscreenerror`   | `onmsfullscreenerror`   | `onwebkitfullscreenerror`   | `onwebkitfullscreenerror`   |
-| {{domxref("Document.exitFullscreen()")}}   | `webkitExitFullscreen()`    | `mozCancelFullScreen()`  | `msExitFullscreen()`    | `webkitExitFullscreen()`    | `webkitExitFullscreen()`    |
-| {{domxref("Element.requestFullscreen()")}} | `webkitRequestFullscreen()` | `mozRequestFullScreen()` | `msRequestFullscreen()` | `webkitRequestFullscreen()` | `webkitRequestFullscreen()` |
-
 ## Especificaciones
 
 {{Specifications}}
