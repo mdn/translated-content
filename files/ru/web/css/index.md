@@ -46,8 +46,8 @@ slug: Web/CSS
 ## Инструменты для разработки CSS
 
 - Используйте [Службу проверки W3C CSS](https://jigsaw.w3.org/css-validator/) для проверки правильности вашего CSS кода. Это отличный инструмент для отладки.
-- [Инструменты разработчика Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html) позволяют просматривать и изменять "на лету" CSS страницы с помощью инструментов [Инспектор](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) и [Редактор стилей](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html).
-- The [Расширение Web Developer](https://addons.mozilla.org/ru/firefox/addon/web-developer/) для Firefox позволяет отслеживать и изменять "на лету" CSS код на просматриваемых сайтах.
+- [Инструменты разработчика Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html) позволяют просматривать и изменять «на лету» CSS страницы с помощью инструментов [Инспектор](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) и [Редактор стилей](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html).
+- [Расширение Web Developer](https://addons.mozilla.org/ru/firefox/addon/web-developer/) для Firefox позволяет отслеживать и изменять «на лету» CSS код на просматриваемых сайтах.
 
 ## Смотрите также
 
