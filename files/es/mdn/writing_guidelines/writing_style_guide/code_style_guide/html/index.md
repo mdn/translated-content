@@ -1,6 +1,8 @@
 ---
 title: Pautas para escribir ejemplos de código HTML
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+l10n:
+  sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
 ---
 
 {{MDNSidebar}}
@@ -91,7 +93,7 @@ Este es perfectamente entendible y trabaja bien. Si hay un atributo HTML boolean
 <input required="required" />
 ```
 
-## Case
+## Mayúsculas y minúsculas
 
 Utilice minúsculas para todos los nombres de elementos y nombres/valores de atributos porque se ve más ordenado y significa que puede escribir el marcado más rápido. Por ejemplo:
 
@@ -136,6 +138,6 @@ En lugar de:
 Existen algunas reglas para escribir sobre elementos HTML en documentos web de MDN. El cumplimiento de estas reglas produce descripciones coherentes de los elementos y sus componentes y también garantiza la vinculación correcta a la documentación detallada.
 
 - **Nombres de elementos**: Utilice la macro [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs), que crea un enlace a los documentos web de MDN. Por ejemplo escribiendo `\{{HTMLElement("title")}}` produce "{{HTMLElement("title")}}".
-  Si no desea crear un vínculo, **incluya el nombre entre corchetes** y utilice el estilo "Código en línea" (por ejemplo, `título`).
-- **Nombres de atributos**: Utilice el estilo "Código en línea" para colocar los nombres de los atributos en la `fuente del código`. Además, colóquelos en negrita cuando el atributo se mencione junto con una explicación de lo que hace o cuando se use por primera vez en la página.
-- **Valores de atributos**: Utilice el estilo "Código en línea" para aplicar código a valores de atributos y no utilice comillas alrededor de valores de cadena., Por ejemplo, "Cuando el tipo de atributo de un elemento `input` se establece en `email` o `tel`...".
+  Si no desea crear un vínculo, **incluya el nombre entre corchetes** y utilice el estilo "Código en línea" (por ejemplo, `<title>`).
+- **Nombres de atributos**: Utilice el estilo "Código en línea" para colocar los nombres de los atributos en la `fuente del código`. Además, colóquelos en **negrita** cuando el atributo se mencione junto con una explicación de lo que hace o cuando se use por primera vez en la página.
+- **Valores de atributos**: Utilice el estilo "Código en línea" para aplicar código a valores de atributos y no utilice comillas alrededor de valores de cadena. Por ejemplo, "Cuando el atributo `type` de un elemento `input` se establece en `email` o `tel` ...".
