@@ -116,7 +116,7 @@ Reference to [Live sample macros](/en-US/docs/MDN/Writing_guidelines/Page_struct
 
 简体中文标点符号参考资源：
 
-- [教育部《标点符号用法》](<https://people.ubuntu.com/~happyaron/l10n/GB(T)15834-2011.html>)
+- [GB/T 15834―2011 标点符号用法](<https://people.ubuntu.com/~happyaron/l10n/GB(T)15834-2011.html>)
 - [维基百科：标点符号](https://zh.wikipedia.org/zh-cn/标点符号)
 
 ### 中文和拉丁语系文字间加空格
