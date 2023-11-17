@@ -119,7 +119,7 @@ li {
 
 #### 結果
 
-{{EmbedLiveSample('Comparing the keyword values', '100%', 400)}}
+{{EmbedLiveSample('キーワード値の比較', '100%', 400)}}
 
 ## 仕様書
 
