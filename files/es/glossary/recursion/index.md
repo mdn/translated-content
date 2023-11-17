@@ -3,6 +3,8 @@ title: Recursión
 slug: Glossary/Recursion
 ---
 
+{{GlossarySidebar}}
+
 Es el acto de una función llamándose a sí misma. La recursión es utilizada para resolver problemas que contienen subproblemas más pequeños. Una función recursiva puede recibir 2 entradas: un caso base (finaliza la recursión) o un un caso recursivo (continúa la recursión).
 
 ## Saber más
