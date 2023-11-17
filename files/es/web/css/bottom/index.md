@@ -1,6 +1,8 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
+l10n:
+  sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
 {{CSSRef}}
