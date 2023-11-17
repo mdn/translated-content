@@ -3,8 +3,6 @@ title: bottom
 slug: Web/CSS/bottom
 ---
 
-<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
-
 ### Resumen
 
 La propiedad `bottom` especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).
@@ -83,24 +81,12 @@ Para los elementos posicionados de forma absoluta, la propiedad `bottom` no tien
 
 ### Especificaciones
 
-- [CSS 2.1 (en)](http://www.w3.org/TR/CSS21/visuren.html#propdef-bottom)
-- [CSS 3 (en)](http://www.w3.org/Style/CSS/current-work#positioning)
+{{Specifications}}
 
-### Compatibilidad entre navegadores
+### Compatibilidad con navegadores
 
-This is as far back as the documentaion goes.
-
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 5              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 6              |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("position") }}, {{ Cssxref("top") }}, {{ Cssxref("right") }}, {{ Cssxref("left") }}
-
-Categorías
-
-Interwiki Languages
