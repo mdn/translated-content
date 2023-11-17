@@ -7,6 +7,8 @@ slug: Web/SVG/Element/line
 
 Элемент **`<line>`** одна из базовых фигур SVG, используемая для создания линии, связывающей две точки.
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -24,7 +26,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{EmbedLiveSample("Пример", 100, 100)}}
 
 ## Атрибуты
 
@@ -46,7 +48,7 @@ svg {
 
 ### Глобальные атрибуты
 
-- [Основные атрибуты](/docs/Web/SVG/Attribute/Core)
+- [Основные атрибуты](/ru/docs/Web/SVG/Attribute/Core)
   - : В первую очередь: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Атрибуты оформления (стилей)](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
