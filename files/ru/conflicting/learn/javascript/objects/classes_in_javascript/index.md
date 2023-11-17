@@ -1,16 +1,6 @@
 ---
 title: Объектно-ориентированный JavaScript для начинающих
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Constructor
-  - Create
-  - JavaScript
-  - OOJS
-  - Object
-  - Новичку
-  - ООП
-  - экземпляр
-translation_of: Learn/JavaScript/Objects/Object-oriented_JS
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
 
@@ -26,10 +16,10 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
         <p class="brush: html">
           Базовая компьютерная грамотность, базовое понимание HTML и CSS,
           знакомство с основами JavaScript (см.
-          <a href="/en-US/docs/Learn/JavaScript/First_steps">Первые шаги</a> и
-          <a href="/en-US/docs/Learn/JavaScript/Building_blocks">C</a
+          <a href="/ru/docs/Learn/JavaScript/First_steps">Первые шаги</a> и
+          <a href="/ru/docs/Learn/JavaScript/Building_blocks">C</a
           >структурные элементы JavaScript) и основы OOJS (см.
-          <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+          <a href="/ru/docs/Learn/JavaScript/Object-oriented/Introduction"
             >Введение в объекты</a
           >).
         </p>
@@ -247,7 +237,7 @@ person1.bio()
 
 ### Конструктор Object ()
 
-Прежде всего, вы можете использовать конструктор [`Object()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) для создания нового объекта. Да, даже общие объекты имеют конструктор, который генерирует пустой объект.
+Прежде всего, вы можете использовать конструктор [`Object()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object) для создания нового объекта. Да, даже общие объекты имеют конструктор, который генерирует пустой объект.
 
 1. Попробуйте ввести это в консоль JavaScript вашего браузера:
 
@@ -281,7 +271,7 @@ person1.bio()
 
 Конструкторы могут помочь вам определить порядок кода - вы можете создать конструктор в одном месте, а затем создавать экземпляры по мере необходимости, и их происхождение будет понятным.
 
-Однако некоторые люди предпочитают создавать экземпляры объектов без предварительного создания конструкторов, особенно если они создают только несколько экземпляров объекта. JavaScript имеет встроенный метод [`create()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create), который позволяет вам это делать. С его помощью вы можете создать новый объект на основе любого существующего объекта.
+Однако некоторые люди предпочитают создавать экземпляры объектов без предварительного создания конструкторов, особенно если они создают только несколько экземпляров объекта. JavaScript имеет встроенный метод [`create()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create), который позволяет вам это делать. С его помощью вы можете создать новый объект на основе любого существующего объекта.
 
 1. Закончив упражнение из предыдущего раздела, загруженное в браузер, попробуйте это в консоли JavaScript:
 

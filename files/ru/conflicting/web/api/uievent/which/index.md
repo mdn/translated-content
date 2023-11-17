@@ -1,10 +1,6 @@
 ---
 title: MouseEvent.which
 slug: conflicting/Web/API/UIEvent/which
-tags:
-  - API
-  - "События\_DOM"
-translation_of: Web/API/MouseEvent/which
 original_slug: Web/API/MouseEvent/which
 ---
 
@@ -35,7 +31,7 @@ var buttonPressed = instanceOfMouseEvent.which
 
 ## Совместимость с браузерами
 
-{{Compat("api.MouseEvent.which")}}
+{{Compat}}
 
 ## Смотрите также
 

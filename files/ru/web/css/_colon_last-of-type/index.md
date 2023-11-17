@@ -1,14 +1,8 @@
 ---
-title: ':last-of-type'
+title: ":last-of-type"
 slug: Web/CSS/:last-of-type
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Псевдоклассы
-translation_of: Web/CSS/:last-of-type
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:last-of-type`** находит последнего потомка с заданным тегом в списке детей родительского элемента.
@@ -62,7 +56,10 @@ p:last-of-type {
 <article>
   <div>Этот `div` первый.</div>
   <div>Этот <span>вложенный `span` является последним</span>!</div>
-  <div>Этот <em>вложенный `em` первый</em>, а этот <em>вложенный `em` последний</em>!</div>
+  <div>
+    Этот <em>вложенный `em` первый</em>, а этот
+    <em>вложенный `em` последний</em>!
+  </div>
   <b>Этот `b` будет выбран!</b>
   <div>Это последний `div`!</div>
 </article>

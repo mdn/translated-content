@@ -13,9 +13,9 @@ slug: Web/CSS/margin-inline-start
 
 ```css
 /* <length> 値 */
-margin-inline-start: 10px;  /* 絶対的な長さ */
-margin-inline-start: 1em;   /* テキストの大きさに対する相対値 */
-margin-inline-start: 5%;    /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-inline-start: 10px; /* 絶対的な長さ */
+margin-inline-start: 1em; /* テキストの大きさに対する相対値 */
+margin-inline-start: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 
 /* キーワード値 */
 margin-inline-start: auto;

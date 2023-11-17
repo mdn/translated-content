@@ -82,7 +82,7 @@ My cat is very grumpy
 ここまでは HTML 要素について見てきましたが、しかし、要素単体ではあまり役には立ちません。ここからはどのようにしてそれぞれの要素を組み合わせ、 HTML ページ全体を作っていくのかを勉強していきましょう。[ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)で出てきた `index.html` に書いてあるコードをもう一度見てみましょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
@@ -117,7 +117,7 @@ My cat is very grumpy
 
 また、 `alt` (alternative; 代替) 属性も指定しています。 [`alt` 属性](/ja/docs/Web/HTML/Element/img#意味のある代替説明を書く)は、以下のような理由で画像を見られない人に向けて説明するテキストを指定するものです。
 
-1. 目が不自由な人。著しく目の不自由な人はよく画面リーダーと呼ばれるツールを使っていて、それが画像の `alt` 属性の内容を読み上げます。
+1. 目が不自由な人。著しく目の不自由な人はよくスクリーンリーダーと呼ばれるツールを使っていて、それが画像の `alt` 属性の内容を読み上げます。
 2. 何らかの理由で画像の表示に失敗した場合。例えば、 `src` 属性の中のパスをわざと正しくないものに変更してみてください。ページを保存したり再読み込みしたりすると、画像の場所に下記のようなものが表示されるでしょう。
 
 ![テスト画像という言葉](alt-text-example.png)
@@ -148,7 +148,7 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
 
 それでは、あなたの HTML の {{htmlelement("img")}} 要素の上に適切なタイトルを付けてみましょう。
 
-> **メモ:** 見出しレベル 1 には、暗黙のスタイルがあることがわかりますね。テキストを大きくしたり、太くしたりするために見出し要素を使用しないでください。見出し要素は[アクセシビリティ](/ja/docs/Learn/Accessibility/HTML#text_content)や [SEO などの理由](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure)で使用されているからです。段階を飛ばすことなく、意味のある見出しの並びをページ上に作るようにしてください。
+> **メモ:** 見出しレベル 1 には、暗黙のスタイルがあることがわかりますね。テキストを大きくしたり、太くしたりするために見出し要素を使用しないでください。見出し要素は[アクセシビリティ](/ja/docs/Learn/Accessibility/HTML#テキストコンテンツ)や [SEO などの理由](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure)で使用されているからです。段階を飛ばすことなく、意味のある見出しの並びをページ上に作るようにしてください。
 
 ### 段落
 
@@ -211,7 +211,7 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
    <a href="">Mozilla Manifesto</a>
    ```
 
-    このリンクのリンク先になるウェブアドレスを、この属性の値に書き込みます。
+   このリンクのリンク先になるウェブアドレスを、この属性の値に書き込みます。
 
    ```html
    <a href="https://www.mozilla.org/en-US/about/manifesto/">

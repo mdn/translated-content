@@ -1,7 +1,6 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
-original_slug: Web/HTML/Elemento/input/email
 ---
 
 {{HTMLSidebar}}
@@ -232,7 +231,7 @@ Como siempre, puedes proporcionar un valor predeterminado para un cuadro de entr
 
 #### Ofreciendo valores sugeridos
 
-Yendo un paso más allá, puedes proporcionar una lista de opciones predeterminadas entre las que el usuario puede seleccionar especificando el atributo [`list`](/es/docs/Web/HTML/Element/input#list). Esto no limita al usuario a esas opciones, pero le permite seleccionar rápidamente las direcciones de correo de uso común. Esto también ofrece sugerencias para [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete). El atributo {{HTMLAttrDef("list")}} especifica el ID de un {{HTMLElement("datalist")}}, que a su vez contiene un elemento {{HTMLElement("option")}} por valor sugerido; El `value` de cada `option` es el valor sugerido correspondiente para el cuadro de entrada de correo.
+Yendo un paso más allá, puedes proporcionar una lista de opciones predeterminadas entre las que el usuario puede seleccionar especificando el atributo [`list`](/es/docs/Web/HTML/Element/input#list). Esto no limita al usuario a esas opciones, pero le permite seleccionar rápidamente las direcciones de correo de uso común. Esto también ofrece sugerencias para [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete). El atributo `list` especifica el ID de un {{HTMLElement("datalist")}}, que a su vez contiene un elemento {{HTMLElement("option")}} por valor sugerido; El `value` de cada `option` es el valor sugerido correspondiente para el cuadro de entrada de correo.
 
 ```html
 <input type="email" size="40" list="defaultEmails" />
@@ -313,8 +312,7 @@ label::after {
       required
       placeholder="username@beststartupever.com"
       pattern=".+@beststartupever\.com"
-      title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever"
-    />
+      title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
   </div>
 
   <div class="messageBox">
@@ -324,8 +322,7 @@ label::after {
       cols="80"
       rows="8"
       required
-      placeholder="Mis zapatos están demasiado apretados y he olvidado cómo bailar."
-    ></textarea>
+      placeholder="Mis zapatos están demasiado apretados y he olvidado cómo bailar."></textarea>
   </div>
   <input type="submit" value="Enviar solicitud" />
 </form>
@@ -368,8 +365,7 @@ Adicionalmente, el elemento {{HTMLElement("label")}} se utiliza para establecer 
   list="defaultEmails"
   size="64"
   maxlength="256"
-  multiple
-/>
+  multiple />
 
 <datalist id="defaultEmails">
   <option value="jbond007@mi6.defence.gov.uk"></option>

@@ -3,6 +3,8 @@ title: SQL 注入
 slug: Glossary/SQL_Injection
 ---
 
+{{GlossarySidebar}}
+
 **SQL 注入（SQL injection）**利用了網路程式（Web apps）的錯誤輸入。駭客可以透過執行後端資料庫的網路程式，惡意繞過 SQL 指令。
 
 SQL 注入能在未授權的情況下，直接從資料庫訪問資料庫與檢索信息。許多數據洩露肇因於 SQL 注入。

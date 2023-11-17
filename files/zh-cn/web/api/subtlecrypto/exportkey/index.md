@@ -64,10 +64,7 @@ exportKey(format, key)
 导出给定密钥，并将其写入“exported-key”的区域。
 */
 async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey(
-    "raw",
-    key
-  );
+  const exported = await window.crypto.subtle.exportKey("raw", key);
   const exportedKeyBuffer = new Uint8Array(exported);
 
   const exportKeyOutput = document.querySelector(".exported-key");
@@ -78,19 +75,21 @@ async function exportCryptoKey(key) {
 生成加密/解密密钥，
 然后在“导出”按钮上设置事件监听器。
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "AES-GCM",
-    length: 256,
-  },
-  true,
-  ["encrypt", "decrypt"]
-).then((key) => {
-  const exportButton = document.querySelector(".raw");
-  exportButton.addEventListener("click", () => {
-    exportCryptoKey(key);
+window.crypto.subtle
+  .generateKey(
+    {
+      name: "AES-GCM",
+      length: 256,
+    },
+    true,
+    ["encrypt", "decrypt"],
+  )
+  .then((key) => {
+    const exportButton = document.querySelector(".raw");
+    exportButton.addEventListener("click", () => {
+      exportCryptoKey(key);
+    });
   });
-});
 ```
 
 ### 导出为 PKCS #8 格式
@@ -110,10 +109,7 @@ function ab2str(buf) {
 导出给定密钥，并将其写入“exported-key”的区域。
 */
 async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey(
-    "pkcs8",
-    key
-  );
+  const exported = await window.crypto.subtle.exportKey("pkcs8", key);
   const exportedAsString = ab2str(exported);
   const exportedAsBase64 = window.btoa(exportedAsString);
   const pemExported = `-----BEGIN PRIVATE KEY-----\n${exportedAsBase64}\n-----END PRIVATE KEY-----`;
@@ -126,23 +122,24 @@ async function exportCryptoKey(key) {
 生成签名/验证密钥对，
 然后在“导出”按钮上设置事件监听器。
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "RSA-PSS",
-    // 考虑为要求保证长期安全性的系统使用 4096 位的密钥
-    modulusLength: 2048,
-    publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256",
-  },
-  true,
-  ["sign", "verify"]
-).then((keyPair) => {
-  const exportButton = document.querySelector(".pkcs8");
-  exportButton.addEventListener("click", () => {
-    exportCryptoKey(keyPair.privateKey);
+window.crypto.subtle
+  .generateKey(
+    {
+      name: "RSA-PSS",
+      // 考虑为要求保证长期安全性的系统使用 4096 位的密钥
+      modulusLength: 2048,
+      publicExponent: new Uint8Array([1, 0, 1]),
+      hash: "SHA-256",
+    },
+    true,
+    ["sign", "verify"],
+  )
+  .then((keyPair) => {
+    const exportButton = document.querySelector(".pkcs8");
+    exportButton.addEventListener("click", () => {
+      exportCryptoKey(keyPair.privateKey);
+    });
   });
-
-});
 ```
 
 ### 导出为 SubjectPublicKeyInfo 格式
@@ -163,10 +160,7 @@ function ab2str(buf) {
 导出给定密钥，并将其写入“exported-key”的区域。
 */
 async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey(
-    "spki",
-    key
-  );
+  const exported = await window.crypto.subtle.exportKey("spki", key);
   const exportedAsString = ab2str(exported);
   const exportedAsBase64 = window.btoa(exportedAsString);
   const pemExported = `-----BEGIN PUBLIC KEY-----\n${exportedAsBase64}\n-----END PUBLIC KEY-----`;
@@ -179,22 +173,24 @@ async function exportCryptoKey(key) {
 生成加密/解密密钥对，
 然后在“导出”按钮上设置事件监听器。
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "RSA-OAEP",
-    // 考虑为要求保证长期安全性的系统使用 4096 位的密钥
-    modulusLength: 2048,
-    publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256",
-  },
-  true,
-  ["encrypt", "decrypt"]
-).then((keyPair) => {
-  const exportButton = document.querySelector(".spki");
-  exportButton.addEventListener("click", () => {
-    exportCryptoKey(keyPair.publicKey);
+window.crypto.subtle
+  .generateKey(
+    {
+      name: "RSA-OAEP",
+      // 考虑为要求保证长期安全性的系统使用 4096 位的密钥
+      modulusLength: 2048,
+      publicExponent: new Uint8Array([1, 0, 1]),
+      hash: "SHA-256",
+    },
+    true,
+    ["encrypt", "decrypt"],
+  )
+  .then((keyPair) => {
+    const exportButton = document.querySelector(".spki");
+    exportButton.addEventListener("click", () => {
+      exportCryptoKey(keyPair.publicKey);
+    });
   });
-});
 ```
 
 ### 导出为 JSON Web Key 格式
@@ -206,32 +202,30 @@ window.crypto.subtle.generateKey(
 导出给定密钥，并将其写入“exported-key”的区域。
 */
 async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey(
-    "jwk",
-    key
-  );
+  const exported = await window.crypto.subtle.exportKey("jwk", key);
   const exportKeyOutput = document.querySelector(".exported-key");
   exportKeyOutput.textContent = JSON.stringify(exported, null, " ");
- }
+}
 
 /*
 生成签名/验证密钥对，
 然后在“导出”按钮上设置事件监听器。
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "ECDSA",
-    namedCurve: "P-384"
-  },
-  true,
-  ["sign", "verify"]
-).then((keyPair) => {
-  const exportButton = document.querySelector(".jwk");
-  exportButton.addEventListener("click", () => {
-    exportCryptoKey(keyPair.privateKey);
+window.crypto.subtle
+  .generateKey(
+    {
+      name: "ECDSA",
+      namedCurve: "P-384",
+    },
+    true,
+    ["sign", "verify"],
+  )
+  .then((keyPair) => {
+    const exportButton = document.querySelector(".jwk");
+    exportButton.addEventListener("click", () => {
+      exportCryptoKey(keyPair.privateKey);
+    });
   });
-
-});
 ```
 
 ## 规范

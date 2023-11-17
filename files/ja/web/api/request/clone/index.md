@@ -35,7 +35,7 @@ clone()
 次のスニペットは、{{domxref("Request.Request()")}} コンストラクタをー使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストをコピーしています。
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const newRequest = myRequest.clone(); // a copy of the request is now stored in newRequest
 ```
 

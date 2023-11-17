@@ -1,14 +1,6 @@
 ---
 title: Element.onwheel
 slug: Web/API/Element/wheel_event
-tags:
-  - API
-  - DOM
-  - Gestionnaires d'évènements
-  - Propriété
-  - évènements
-translation_of: Web/API/GlobalEventHandlers/onwheel
-original_slug: Web/API/GlobalEventHandlers/onwheel
 ---
 
 {{ ApiRef("DOM") }}

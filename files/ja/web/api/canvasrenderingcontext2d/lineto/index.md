@@ -43,13 +43,13 @@ ctx.lineTo(x, y);
 The line begins at (30, 50) and ends at (150, 100).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.beginPath();       // 新しいパスを開始
-ctx.moveTo(30, 50);    // ペンを (30, 50) へ移動
-ctx.lineTo(150, 100);  // 直線を (150, 100) へ描く
-ctx.stroke();          // パスを描画
+ctx.beginPath(); // 新しいパスを開始
+ctx.moveTo(30, 50); // ペンを (30, 50) へ移動
+ctx.lineTo(150, 100); // 直線を (150, 100) へ描く
+ctx.stroke(); // パスを描画
 ```
 
 #### 結果
@@ -70,8 +70,8 @@ ctx.stroke();          // パスを描画
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.moveTo(90, 130);
 ctx.lineTo(95, 25);

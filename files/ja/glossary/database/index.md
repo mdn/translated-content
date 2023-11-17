@@ -13,5 +13,5 @@ slug: Glossary/Database
 
 1. [データベース](https://ja.wikipedia.org/wiki/データベース) (Wikipedia)
 
-    1. {{Glossary("IndexedDB")}}
-    2. {{Glossary("SQL")}}
+   1. {{Glossary("IndexedDB")}}
+   2. {{Glossary("SQL")}}

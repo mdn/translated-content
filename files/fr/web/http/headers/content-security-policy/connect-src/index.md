@@ -1,8 +1,6 @@
 ---
-title: 'CSP : connect-src'
+title: "CSP : connect-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/connect-src
-browser-compat: http.headers.csp.Content-Security-Policy.connect-src
 ---
 
 {{HTTPSidebar}}
@@ -65,7 +63,7 @@ Content-Security-Policy: connect-src https://example.com/
 Les connexions suivantes seront bloquées et ne se chargeront pas&nbsp;:
 
 ```html
-<a ping="https://not-example.com">
+<a ping="https://not-example.com"></a>
 
 <script>
   let xhr = new XMLHttpRequest();

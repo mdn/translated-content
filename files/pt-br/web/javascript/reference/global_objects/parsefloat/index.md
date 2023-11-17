@@ -12,7 +12,7 @@ A função `parseFloat` analisa um argumento (convertendo-o para uma string prim
 ## Sintaxe
 
 ```js
-parseFloat(string)
+parseFloat(string);
 ```
 
 ### Parâmetros
@@ -49,7 +49,7 @@ parseFloat("0.0314E+2");
 parseFloat("3.14more non-digit characters");
 ```
 
-### `parseFloat` retornando `NaN`:
+### `parseFloat` retornando `NaN`
 
 O exemplo a seguir retorna `NaN`
 
@@ -63,20 +63,19 @@ As vezes é útil ter uma maneira mais rigorosa para analisar valores float, exp
 
 ```js
 var filterFloat = function (value) {
-    if(/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/
-      .test(value))
-      return Number(value);
+  if (/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(value))
+    return Number(value);
   return NaN;
-}
+};
 
-console.log(filterFloat('421'));               // 421
-console.log(filterFloat('-421'));              // -421
-console.log(filterFloat('+421'));              // 421
-console.log(filterFloat('Infinity'));          // Infinity
-console.log(filterFloat('1.61803398875'));     // 1.61803398875
-console.log(filterFloat('421e+0'));            // NaN
-console.log(filterFloat('421hop'));            // NaN
-console.log(filterFloat('hop1.61803398875'));  // NaN
+console.log(filterFloat("421")); // 421
+console.log(filterFloat("-421")); // -421
+console.log(filterFloat("+421")); // 421
+console.log(filterFloat("Infinity")); // Infinity
+console.log(filterFloat("1.61803398875")); // 1.61803398875
+console.log(filterFloat("421e+0")); // NaN
+console.log(filterFloat("421hop")); // NaN
+console.log(filterFloat("hop1.61803398875")); // NaN
 ```
 
 Observe que este código é somente um exemplo; ele não aceita números válidos, tais como 1. ou 0,5.

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.CompileError
 slug: WebAssembly/JavaScript_interface/CompileError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 
 {{WebAssemblySidebar}}
@@ -43,15 +42,15 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 
 ```js
 try {
-  throw new WebAssembly.CompileError('Hello', 'someFile', 10);
+  throw new WebAssembly.CompileError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof CompileError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "CompileError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // コードが実行されていた位置を返す
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "CompileError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // コードが実行されていた位置を返す
 }
 ```
 

@@ -1,6 +1,9 @@
 ---
-title: HTMLTableElement.deleteTFoot()
+title: "HTMLTableElement: deleteTFoot() メソッド"
+short-title: deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,9 +12,17 @@ slug: Web/API/HTMLTableElement/deleteTFoot
 
 ## 構文
 
-```js
-HTMLTableElement.deleteTFoot();
+```js-nolint
+deleteTFoot()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -21,23 +32,35 @@ HTMLTableElement.deleteTFoot();
 
 ```html
 <table>
-  <thead><th>名前</th><th>スコア</th></thead>
-  <tr><td>Bob</td><td>541</td></tr>
-  <tr><td>Jim</td><td>225</td></tr>
-  <tfoot><th>平均</th><td>383</td></tfoot>
+  <thead>
+    <th>名前</th>
+    <th>スコア</th>
+  </thead>
+  <tr>
+    <td>Bob</td>
+    <td>541</td>
+  </tr>
+  <tr>
+    <td>Jim</td>
+    <td>225</td>
+  </tr>
+  <tfoot>
+    <th>平均</th>
+    <td>383</td>
+  </tfoot>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 table.deleteTFoot();
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

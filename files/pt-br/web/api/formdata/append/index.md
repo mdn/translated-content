@@ -46,19 +46,17 @@ var formData = new FormData(); // Corrente vazio
 Podes adicionar chaves/valores pares para usar (domxref("FormData.append")}}:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+formData.append("username", "Chris");
+formData.append("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 ## Especificações
 
-| Especificações                                                                       | Estato                   | Comentario |
-| ------------------------------------------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('Fetch')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.append")}}
+{{Compat}}
 
 ## Veja Tambem
 

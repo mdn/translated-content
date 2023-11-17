@@ -1,11 +1,6 @@
 ---
-title: ':read-write'
+title: ":read-write"
 slug: Web/CSS/:read-write
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:read-write
 ---
 
 {{CSSRef}}
@@ -36,19 +31,31 @@ input:read-write {
 ### CSS
 
 ```css
-input { min-width: 25em; }
-input:-moz-read-write { background: cyan; }
-input:read-write { background: cyan; }
+input {
+  min-width: 25em;
+}
+input:-moz-read-write {
+  background: cyan;
+}
+input:read-write {
+  background: cyan;
+}
 
-p:-moz-read-write { background: lightgray; }
-p:read-write { background: lightgray; }
-p[contenteditable="true"] { color: blue; }
+p:-moz-read-write {
+  background: lightgray;
+}
+p:read-write {
+  background: lightgray;
+}
+p[contenteditable="true"] {
+  color: blue;
+}
 ```
 
 ### HTML
 
 ```html
-<input type="text" value="Un champ en lecture seule"/>
+<input type="text" value="Un champ en lecture seule" />
 <p contenteditable>Essayez un peu d'éditer ce paragraphe.</p>
 <p>Bonne chance pour celui-là !</p>
 ```

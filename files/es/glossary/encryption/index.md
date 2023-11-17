@@ -1,8 +1,9 @@
 ---
 title: Encriptación
 slug: Glossary/Encryption
-original_slug: Glossary/Encriptación
 ---
+
+{{GlossarySidebar}}
 
 En {{glossary("cryptography", "criptografía")}}, la **encriptación** es la conversión del {{glossary("cleartext", "lenguaje natural")}} en un texto codificado o {{glossary("ciphertext", "cifrado")}}. Un texto cifrado es utilizado para ser ilegible por lectores no autorizados.
 

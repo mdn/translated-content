@@ -2,6 +2,7 @@
 title: element.scrollIntoView
 slug: Web/API/Element/scrollIntoView
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} 인터페이스의 **`scrollIntoView()`** 메소드는 `scrollIntoView()`가 호출 된 요소가 사용자에게 표시되도록 요소의 상위 컨테이너를 스크롤합니다.

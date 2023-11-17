@@ -2,6 +2,7 @@
 title: MessageEvent
 slug: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent`** 는 {{domxref("WebSocket")}} 또는 WebRTC {{domxref("RTCDataChannel")}} 으로 된 타겟으로 부터 전달받은 메시지를 보여주는 interface 입니다.

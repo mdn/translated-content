@@ -1,7 +1,6 @@
 ---
 title: Detección de colisiones 2D
 slug: Games/Techniques/2D_collision_detection
-original_slug: Games/Techniques/2D_collision_detection
 ---
 
 {{GamesSidebar}}
@@ -14,31 +13,41 @@ Una de las formas más simples de detección de colisiones es entre dos rectáng
 
 ```html hidden
 <div id="cr-stage"></div>
-<p>Mueva el rectángulo con las teclas de flecha. Verde significa colisión, azul significa que no hay colisión.</p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<p>
+  Mueva el rectángulo con las teclas de flecha. Verde significa colisión, azul
+  significa que no hay colisión.
+</p>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```js
 Crafty.init(200, 200);
 
-var dim1 = {x: 5, y: 5, w: 50, h: 50}
-var dim2 = {x: 20, y: 10, w: 60, h: 40}
+var dim1 = { x: 5, y: 5, w: 50, h: 50 };
+var dim2 = { x: 20, y: 10, w: 60, h: 40 };
 
 var rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
 
-var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
+var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway")
+  .fourway(2)
+  .attr(dim2)
+  .color("blue");
 
 rect2.bind("EnterFrame", function () {
-    if (rect1.x < rect2.x + rect2.w &&
-        rect1.x + rect1.w > rect2.x &&
-        rect1.y < rect2.y + rect2.h &&
-        rect1.h + rect1.y > rect2.y) {
-        // ¡colisión detectada!
-        this.color("green");
-    } else {
-        // no hay colisión
-        this.color("blue");
-    }
+  if (
+    rect1.x < rect2.x + rect2.w &&
+    rect1.x + rect1.w > rect2.x &&
+    rect1.y < rect2.y + rect2.h &&
+    rect1.h + rect1.y > rect2.y
+  ) {
+    // ¡colisión detectada!
+    this.color("green");
+  } else {
+    // no hay colisión
+    this.color("blue");
+  }
 });
 ```
 
@@ -52,67 +61,75 @@ Otra forma simple para la detección de colisiones es entre dos círculos. Este 
 
 ```html hidden
 <div id="cr-stage"></div>
-<p>Mueve el círculo con las teclas de flecha. Verde significa colisión, azul significa que no hay colisión.</p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<p>
+  Mueve el círculo con las teclas de flecha. Verde significa colisión, azul
+  significa que no hay colisión.
+</p>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```css hidden
 #cr-stage {
-    position: static !important;
-    height: 200px !important;
+  position: static !important;
+  height: 200px !important;
 }
 ```
 
 ```js
 Crafty.init(200, 200);
 
-var dim1 = {x: 5, y: 5}
-var dim2 = {x: 20, y: 20}
+var dim1 = { x: 5, y: 5 };
+var dim2 = { x: 20, y: 20 };
 
 Crafty.c("Circle", {
-   circle: function(radius, color) {
-        this.radius = radius;
-        this.w = this.h = radius * 2;
-        this.color = color || "#000000";
+  circle: function (radius, color) {
+    this.radius = radius;
+    this.w = this.h = radius * 2;
+    this.color = color || "#000000";
 
-        this.bind("Move", Crafty.DrawManager.drawAll)
-        return this;
-   },
+    this.bind("Move", Crafty.DrawManager.drawAll);
+    return this;
+  },
 
-   draw: function() {
-       var ctx = Crafty.canvas.context;
-       ctx.save();
-       ctx.fillStyle = this.color;
-       ctx.beginPath();
-       ctx.arc(
-           this.x + this.radius,
-           this.y + this.radius,
-           this.radius,
-           0,
-           Math.PI * 2
-       );
-       ctx.closePath();
-       ctx.fill();
-       ctx.restore();
-    }
+  draw: function () {
+    var ctx = Crafty.canvas.context;
+    ctx.save();
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(
+      this.x + this.radius,
+      this.y + this.radius,
+      this.radius,
+      0,
+      Math.PI * 2,
+    );
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  },
 });
 
 var circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
 
-var circle2 = Crafty.e("2D, Canvas, Circle, Fourway").fourway(2).attr(dim2).circle(20, "blue");
+var circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
+  .fourway(2)
+  .attr(dim2)
+  .circle(20, "blue");
 
 circle2.bind("EnterFrame", function () {
-    var dx = (circle1.x + circle1.radius) - (circle2.x + circle2.radius);
-    var dy = (circle1.y + circle1.radius) - (circle2.y + circle2.radius);
-    var distance = Math.sqrt(dx * dx + dy * dy);
+  var dx = circle1.x + circle1.radius - (circle2.x + circle2.radius);
+  var dy = circle1.y + circle1.radius - (circle2.y + circle2.radius);
+  var distance = Math.sqrt(dx * dx + dy * dy);
 
-    if (distance < circle1.radius + circle2.radius) {
-        // ¡colisión detectada!
-        this.color = "green";
-    } else {
-        // no hay colisión
-        this.color = "blue";
-    }
+  if (distance < circle1.radius + circle2.radius) {
+    // ¡colisión detectada!
+    this.color = "green";
+  } else {
+    // no hay colisión
+    this.color = "blue";
+  }
 });
 ```
 

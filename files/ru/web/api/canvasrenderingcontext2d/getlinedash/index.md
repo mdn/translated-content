@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
-translation_of: Web/API/CanvasRenderingContext2D/getLineDash
 ---
 
 {{APIRef}}
@@ -35,11 +34,11 @@ ctx.getLineDash();
 Используя {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} задано, что штрихи состоят из отрезков в 10 единиц и разрывами между ними в 20 единиц.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.setLineDash([10, 20]);
-console.log(ctx.getLineDash());  // [10, 20]
+console.log(ctx.getLineDash()); // [10, 20]
 
 // Нарисовать штрихованную линию
 ctx.beginPath();

@@ -23,12 +23,12 @@ Un objeto {{domxref("IDBTransaction")}}.
 
 Éste método puede invocar una excepción {{domxref("DOMException")}} de alguno de los siguientes tipos:
 
-| Excepción                           | Descripción                                                                                                |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Excepción                        | Descripción                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [`InvalidStateError`](/es/docs/) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
-| `NotFoundError`                     | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.                |
-| `TypeError`                         | El valor para el parámetro `mode` es inválido.                                                             |
-| `InvalidAccessError`                | La función fue llamada con una lista vacía de nombres de almacenes.                                        |
+| `NotFoundError`                  | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.      |
+| `TypeError`                      | El valor para el parámetro `mode` es inválido.                                                   |
+| `InvalidAccessError`             | La función fue llamada con una lista vacía de nombres de almacenes.                              |
 
 ## Ejemplo
 
@@ -40,27 +40,28 @@ var db;
 // Abrimos nuestra base de datos:
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de datos inicializada.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de datos inicializada.</li>";
 
   // almacenar el resultado de la apertura de la base de datos en la variable db. Esto es bastante usado más abajo:
   db = DBOpenRequest.result;
 
   // ejecutar la función displayData() para popular la lista de tareas con los datos "to-do" que existen actualmente en la Base de Datos Indizada (IDB):
   displayData();
-
 };
 
 // abrir una transacción lectura/escritura, lista para añadir los datos:
 var transaction = db.transaction(["toDoList"], "readwrite");
 
 // reportar cuando haya éxito al abrir la transacción
-transaction.oncomplete = function(event) {
-  note.innerHTML += '<li>Transacción completa: modificación a la base de datos finalizada.</li>';
+transaction.oncomplete = function (event) {
+  note.innerHTML +=
+    "<li>Transacción completa: modificación a la base de datos finalizada.</li>";
 };
 
-transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transacción no abierta debido a un error. No se permite duplicar ítems.</li>';
+transaction.onerror = function (event) {
+  note.innerHTML +=
+    "<li>Transacción no abierta debido a un error. No se permite duplicar ítems.</li>";
 };
 
 // después deberías continuar y hacerle algo a esta base de datos a través del almacén de objetos:
@@ -95,7 +96,7 @@ var objectStore = transaction.objectStore("toDoList");
     Si necesitas abrir un almacén de objetos en modo `readwrite` para cambiar los datos, usa lo siguiente:
 
     ```js
-    var transaction = db.transaction('my-store-name', "readwrite");
+    var transaction = db.transaction("my-store-name", "readwrite");
     ```
 
     Desde Firefox 40, las transacciones de IndexedDB tienen garantías de durabilidad relajadas para aumentar el rendimiento (ver [Error 1112702 en Firefox](https://bugzil.la/1112702)), lo cual es el mismo comportamiento de otros navegadores que soportan IndexedDB. Es decir, anteriormente en una transacción `readwrite` el evento {{domxref("IDBTransaction.oncomplete")}} era invocado sólo cuando se garantizaba que todos los datos habían sido vaciados al disco duro. En Firefox 40+ el evento `complete` es accionado después de indicársele al Sistema Operativo que escriba los datos al disco pero esta confirmación podría suceder poco antes de que los datos hayan sido verdaderamente escritos en él. Si bien dicho evento puede entonces ser entregado un poco antes de tiempo, de cualquier modo, existe una pequeña probabilidad de que la entera transacción se pierda si el SO se bloquea o si ha ocurrido una pérdida de energía antes de que los datos efectivamente se descarguen al disco duro. Como esas catastróficas circunstancias son más bien raras, la mayoría de los consumidores no deberían preocuparse demasiado.

@@ -1,11 +1,6 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
-tags:
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@namespace
 ---
 
 {{CSSRef}}
@@ -19,13 +14,16 @@ translation_of: Web/CSS/@namespace
 /* Cela correspond à tous les éléments XHTML <a>
   car XHTML est l'espace de nom par défaut, sans
   préfixe. */
-a {}
+a {
+}
 
 /* Cela correspond à tous les éléments SVG <a> */
-svg|a {}
+svg|a {
+}
 
 /* Cela correspond aux éléments <a> XHTML et SVG */
-*|a {}
+*|a {
+}
 ```
 
 Les règles `@namespace` doivent suivre les règles @ {{cssxref("@charset")}} et {{cssxref("@import")}} et précéder les autres règles @ ainsi que les déclarations de style contenus dans la feuille de style.

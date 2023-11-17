@@ -98,11 +98,13 @@ Un elemento flotante es al menos tan alto como su elemento hijo flotante más al
   <div class="left">1</div>
   <div class="left">2</div>
   <div class="right">3</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     Morbi tristique sapien ac erat tincidunt, sit amet dignissim
-     lectus vulputate. Donec id iaculis velit. Aliquam vel
-     malesuada erat. Praesent non magna ac massa aliquet tincidunt
-     vel in massa. Phasellus feugiat est vel leo finibus congue.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
+    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
+    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
+    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
+    congue.
+  </p>
 </section>
 ```
 
@@ -136,27 +138,18 @@ div {
 
 {{EmbedLiveSample('','400','180')}}
 
-### Limpiando (clearing) flotantes:
+### Limpiando (clearing) flotantes
 
 A veces querrás forzar un item a moverse por debajo de elementos flotantes. Por ejemplo, párrafos que han de permanecer adyacentes a elementos flotantes, pero forzar a los encabezados a estar en su propia línea. Para ello revisa el siguiente ejemplo: {{cssxref("clear")}}
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#float)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-float)
+{{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Netscape          | 4              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("clear") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}
-
-Categorías
-
-Interwiki Language

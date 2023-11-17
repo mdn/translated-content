@@ -1,14 +1,12 @@
 ---
 title: Exemple basique
 slug: Web/API/XSLTProcessor/Basic_Example
-translation_of: Web/API/XSLTProcessor/Basic_Example
-original_slug: XSLT_dans_Gecko/Exemple_basique
 ---
 
 1. [Introduction](/fr/docs/XSLT_dans_Gecko)
 2. [Exemple basique](/fr/docs/XSLT_dans_Gecko/Exemple_basique)
-3. [Génération de HTML](/fr/docs/XSLT_dans_Gecko/G%c3%a9n%c3%a9ration_de_HTML)
-4. [Différences entre les navigateurs](/fr/docs/XSLT_dans_Gecko/Diff%c3%a9rences_entre_les_navigateurs)
+3. [Génération de HTML](/fr/docs/XSLT_dans_Gecko/Génération_de_HTML)
+4. [Différences entre les navigateurs](/fr/docs/XSLT_dans_Gecko/Différences_entre_les_navigateurs)
 5. [Ressources](/fr/docs/XSLT_dans_Gecko/Ressources)
 
 ## Exemple basique

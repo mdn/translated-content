@@ -1,7 +1,6 @@
 ---
 title: Decremento(--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-original_slug: Web/JavaScript/Referencia/Operadores/Decremento
 ---
 
 {{jsSidebar("Operators")}}

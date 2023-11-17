@@ -1,14 +1,6 @@
 ---
 title: Cross-origin resource sharing (CORS)
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - HTTP
-  - Same-origin policy
-  - XMLHttpRequest
-  - cross-site
-translation_of: Web/HTTP/CORS
 ---
 
 {{HTTPSidebar}}
@@ -90,11 +82,11 @@ Si, par exemple, on a un contenu web situé sous le domaine `http://toto.example
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://truc.autre/resources/public-data/';
+var url = "http://truc.autre/resources/public-data/";
 
 function callOtherDomain() {
-  if(invocation) {
-    invocation.open('GET', url, true);
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.onreadystatechange = handler;
     invocation.send();
   }
@@ -326,11 +318,11 @@ Dans cet exemple, le contenu chargé depuis `http://toto.example` effectue une r
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://truc.autre/resources/credentialed-content/';
+var url = "http://truc.autre/resources/credentialed-content/";
 
-function callOtherDomain(){
-  if(invocation) {
-    invocation.open('GET', url, true);
+function callOtherDomain() {
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();

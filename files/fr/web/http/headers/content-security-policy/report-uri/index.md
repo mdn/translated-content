@@ -1,15 +1,6 @@
 ---
-title: 'CSP: report-uri'
+title: "CSP: report-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-uri
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Sécurité
-translation_of: Web/HTTP/Headers/Content-Security-Policy/report-uri
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}

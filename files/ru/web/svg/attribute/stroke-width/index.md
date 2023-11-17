@@ -1,7 +1,6 @@
 ---
 title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
-translation_of: Web/SVG/Attribute/stroke-width
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
@@ -12,11 +11,11 @@ translation_of: Web/SVG/Attribute/stroke-width
 
 ## Usage context
 
-| **Категория**        | Атрибут представления                                                                                                                                                 |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Категория**        | Атрибут представления                                                                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------- |
 | **Значения**         | [\<length>](/en/SVG/Content_type#Length) \| [\<percentage>](/en/SVG/Content_type#Percentage) \| inherit |
-| **Анимируемый**      | Да                                                                                                                                                                    |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeWidthProperty)                                                                                   |
+| **Анимируемый**      | Да                                                                                                      |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeWidthProperty)                     |
 
 ## Example
 

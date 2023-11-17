@@ -1,15 +1,9 @@
 ---
 title: SVG
 slug: Glossary/SVG
-tags:
-  - SVG
-  - Глоссарий
-  - Графика
-  - Начинающий
-  - Программирование
-translation_of: Glossary/SVG
-original_slug: Глоссарий/SVG
 ---
+
+{{GlossarySidebar}}
 
 _Масштабируемая векторная графика_ ( **SVG** ) - это формат двумерного векторного изображения на основе синтаксиса {{Glossary("XML")}}.
 

@@ -1,17 +1,17 @@
 ---
 title: <area>
 slug: Web/HTML/Element/area
-translation_of: Web/HTML/Element/area
 ---
+
 **HTML `<area>` элемент** определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 
-| [Категории содержимого](en-US/docs/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразового контента](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                   |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                       | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                        |
-| Пропуск тегов                                               | Открывающий тег обязателен, закрывающего быть не должно.                                                                                                                                                                  |
-| Допустимые родители                                         | Любой элемент, допускающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). У элемента `<area>` должен быть родитель {{HTMLElement("map")}}, но он не должен быть прямым родителем. |
-| Допустимые ARIA-роли                                        | Нет                                                                                                                                                                                                                       |
-| DOM-интерфейс                                               | {{domxref("HTMLAreaElement")}}                                                                                                                                                                                  |
+| [Категории содержимого](/ru/docs/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразового контента](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                            |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                     | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                                            |
+| Пропуск тегов                                             | Открывающий тег обязателен, закрывающего быть не должно.                                                                                                                                                            |
+| Допустимые родители                                       | Любой элемент, допускающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). У элемента `<area>` должен быть родитель {{HTMLElement("map")}}, но он не должен быть прямым родителем. |
+| Допустимые ARIA-роли                                      | Нет                                                                                                                                                                                                                 |
+| DOM-интерфейс                                             | {{domxref("HTMLAreaElement")}}                                                                                                                                                                                      |
 
 ## Атрибуты
 
@@ -24,7 +24,7 @@ translation_of: Web/HTML/Element/area
 - {{htmlattrdef("coords")}}
   - : Задаёт значения координат для активной области. Значение и количество значений зависят от значения указанного для атрибута **shape**. Для `rect` или прямоугольника задаются две пары значений x,y **coords**: лево, верх, право и низ. Для `circle`, значения `x,y,r` где `x,y` координаты центра круга, а `r` радиус. Для `poly` или многоугольника, значения задаются парой x и y для каждой вершины многоугольника: `x1,y1,x2,y2,x3,y3,` и т.д. В HTML4 значения задаются в пикселях или процентах, когда добавлен знак (%); в HTML5, значения — величины в пикселях.
 - {{htmlattrdef("download")}}
-  - : Этот атрибут, если он добавлен, указывает, что ссылка используется для скачивания файла. Смотри {{HTMLElement("a")}} для полного описания атрибута {{htmlattrxref("download", "a")}}.
+  - : Этот атрибут, если он добавлен, указывает, что ссылка используется для скачивания файла. Смотри {{HTMLElement("a")}} для полного описания атрибута [`download`](/ru/docs/Web/HTML/Element/a#download).
 - {{htmlattrdef("href")}}
   - : Ссылка для активной области. Это значение действующего URL. В HTML4, этот или **nohref** атрибут обязательный. В HTML5, данный атрибут можно пропустить при условии, что активная область не является ссылкой.
 - {{htmlattrdef("hreflang")}}
@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/area
 - {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
   - : A string indicating which referrer to use when fetching the resource:
     - `"no-referrer"` meaning that the `Referer:` header will not be sent.
-    - "`no-referrer-when-downgrade`" meaning that no `Referer:` header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.
+    - "`no-referrer-when-downgrade`" meaning that no `Referer:` header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent's default behavior, if no policy is otherwise specified.
     - `"origin"` meaning that the referrer will be the origin of the page, that is roughly the scheme, the host and the port.
     - "origin-when-cross-origin" meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.
     - `"unsafe-url"` meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
@@ -62,10 +62,18 @@ translation_of: Web/HTML/Element/area
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left">
-  <area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="left.html"
+    alt="Click to go Left" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="right.html"
+    alt="Click to go Right" />
 </map>
-<img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic">
+<img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic" />
 ```
 
 ### Результат

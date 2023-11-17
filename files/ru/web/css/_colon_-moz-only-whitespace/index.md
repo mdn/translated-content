@@ -1,14 +1,8 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:-moz-only-whitespace
-tags:
-  - ':blank'
-  - CSS
-  - Псевдо-класс
-  - Экспериментальное
-  - селектор
-translation_of: Web/CSS/:-moz-only-whitespace
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 [CSS псевдо класс](/ru/docs/Web/CSS) **`:blank`** находит элементы, у которых либо вообще нет дочерних узлов, либо только пустые текстовые узлы, либо только текстовые узлы, содержащие только пробельные символы.
@@ -22,7 +16,7 @@ translation_of: Web/CSS/:-moz-only-whitespace
 ### HTML
 
 ```html
-<div> </div>
+<div></div>
 ```
 
 ### CSS

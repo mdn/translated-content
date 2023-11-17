@@ -1,7 +1,6 @@
 ---
 title: サイト表示互換性に関するノウハウ
 slug: orphaned/Web/Compatibility_FAQ
-original_slug: Web/Compatibility_FAQ
 ---
 
 モバイルデバイスを利用する上で、特定のデバイス／ブラウザに依存せず、どのブラウザでもサイトが正常表示可能な環境が理想的と考えています。

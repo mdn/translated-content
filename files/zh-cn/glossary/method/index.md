@@ -13,7 +13,7 @@ slug: Glossary/Method
 
 ### Learn about it
 
-- [Method (computer programming)](https://zh.wikipedia.org/wiki/Method_(computer_programming)) in Wikipedia
+- [Method (computer programming)](<https://zh.wikipedia.org/wiki/Method_(computer_programming)>) in Wikipedia
 - [Defining a method in JavaScript](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparison of the traditional syntax and the new shorthand)
 
 ### Technical reference

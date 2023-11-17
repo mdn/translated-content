@@ -1,13 +1,6 @@
 ---
 title: IDBTransaction.mode
 slug: Web/API/IDBTransaction/mode
-tags:
-  - API
-  - IDBTransaction
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBTransaction/mode
 ---
 
 {{APIRef("IndexedDB")}}
@@ -26,10 +19,10 @@ var modeCourant = IDBTransaction.mode;
 
 Un objet {{domxref("IDBTransactionMode")}} qui définit le mode d'accès aux données des magasins d'objet :
 
-| Valeur          | Signification                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `readonly`      | Lecture seule : on peut lire (consulter) les données mais on ne peut pas les modifier.                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `readwrite`     | Lecture et écriture : on peut lire et écrire (modifier) des données dans les magasins d'objet.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Valeur          | Signification                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `readonly`      | Lecture seule : on peut lire (consulter) les données mais on ne peut pas les modifier.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `readwrite`     | Lecture et écriture : on peut lire et écrire (modifier) des données dans les magasins d'objet.                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `versionchange` | Toutes les opérations peuvent être effectuées, y compris celles qui suppriment ou créent des magasins d'objets et des index. Ce mode doit être utilisé lorsqu'on souhaite mettre à jour le numéro de version pour les transactions qui démarrent avec {{domxref("IDBDatabase.setVersion()")}}. Les transactions effectuées dans ce mode ne peuvent pas être exécutées de façon concurrente avec les autres transactions. Les transactions effectuées dans ce mode sont parfois appelées transactions de mise à jour (_upgrade transactions_). |
 
 ## Exemples

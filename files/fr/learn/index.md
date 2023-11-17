@@ -1,18 +1,6 @@
 ---
 title: Apprendre le développement web
 slug: Learn
-tags:
-  - Apprendre
-  - Beginner
-  - CSS
-  - Débutant
-  - HTML
-  - Index
-  - Introduction
-  - Landing
-  - Web
-translation_of: Learn
-original_slug: Apprendre
 ---
 
 {{LearnSidebar}}
@@ -85,9 +73,9 @@ Si vous préférez copier le dépôt d'une manière plus flexible qui permet des
 4. Ouvrir l'[invite de commande](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) ou un terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
 5. Pour copier depuis le dépôt de l'espace d'apprentissage un répertoire nommé «&nbsp;learning-area&nbsp;» à l'emplacement courant dans votre ordinateur, utilisez la commande suivante&nbsp;:
 
-    ```bash
-    git clone https://github.com/mdn/learning-area
-    ```
+   ```bash
+   git clone https://github.com/mdn/learning-area
+   ```
 
 6. Vous pouvez maintenant saisir le répertoire et retrouver les fichiers recherchés (soit avec votre explorateur de fichiers ou avec la [commande `cd`](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
@@ -95,15 +83,15 @@ Vous pouvez mettre à jour le dépôt de `learning-area` pour tout changement in
 
 1. Dans votre terminal/invite de commande, allez dans le répertoire `learning-area` avec `cd`. Par exemple, si vous êtes dans son répertoire parent&nbsp;:
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
 2. Mettez à jour le dépôt avec la commande&nbsp;:
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## Nous contacter
 

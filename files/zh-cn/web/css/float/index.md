@@ -1,7 +1,6 @@
 ---
 title: float
 slug: Web/CSS/float
-original_slug: CSS/float
 ---
 
 {{CSSRef}}
@@ -14,22 +13,22 @@ original_slug: CSS/float
 
 由于 `float` 意味着使用块布局，它在某些情况下会修改 {{cssxref("display")}} 值的计算值：
 
-| 指定值                | 计算值          |
-| -------------------- | -------------- |
-| `inline`             | `block`        |
-| `inline-block`       | `block`        |
-| `inline-table`       | `table`        |
-| `table-row`          | `block`        |
-| `table-row-group`    | `block`        |
-| `table-column`       | `block`        |
-| `table-column-group` | `block`        |
-| `table-cell`         | `block`        |
-| `table-caption`      | `block`        |
-| `table-header-group` | `block`        |
-| `table-footer-group` | `block`        |
-| `inline-flex`        | `flex`         |
-| `inline-grid`        | `grid`         |
-| _other_              | _unchanged_    |
+| 指定值               | 计算值      |
+| -------------------- | ----------- |
+| `inline`             | `block`     |
+| `inline-block`       | `block`     |
+| `inline-table`       | `table`     |
+| `table-row`          | `block`     |
+| `table-row-group`    | `block`     |
+| `table-column`       | `block`     |
+| `table-column-group` | `block`     |
+| `table-cell`         | `block`     |
+| `table-caption`      | `block`     |
+| `table-header-group` | `block`     |
+| `table-footer-group` | `block`     |
+| `inline-flex`        | `flex`      |
+| `inline-grid`        | `grid`      |
+| _other_              | _unchanged_ |
 
 > **备注：** 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
 
@@ -90,11 +89,13 @@ float: unset;
   <div class="left">1</div>
   <div class="left">2</div>
   <div class="right">3</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     Morbi tristique sapien ac erat tincidunt, sit amet dignissim
-     lectus vulputate. Donec id iaculis velit. Aliquam vel
-     malesuada erat. Praesent non magna ac massa aliquet tincidunt
-     vel in massa. Phasellus feugiat est vel leo finibus congue.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
+    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
+    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
+    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
+    congue.
+  </p>
 </section>
 ```
 

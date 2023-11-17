@@ -19,7 +19,7 @@ function () {};
 () => {};
 ```
 
-**命名函数**是具有函数名称的函数：
+**具名函数**是具有函数名称的函数：
 
 ```js
 function foo() {}
@@ -30,16 +30,16 @@ const foo = () => {};
 **内部函数**是另一个函数内的函数（下面例子中的 `square`）。外部函数是包含一个函数的函数（下面例子中的 `addSquares`）：
 
 ```js
-function addSquares(a,b) {
-   function square(x) {
-      return x * x;
-   }
-   return square(a) + square(b);
-};
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
 //Using ECMAScript 2015 arrow notation
-const addSquares = (a,b) => {
-   const square = x => x*x;
-   return square(a) + square(b);
+const addSquares = (a, b) => {
+  const square = (x) => x * x;
+  return square(a) + square(b);
 };
 ```
 
@@ -47,15 +47,13 @@ const addSquares = (a,b) => {
 
 ```js
 function loop(x) {
-   if (x >= 10)
-      return;
-   loop(x + 1);
-};
+  if (x >= 10) return;
+  loop(x + 1);
+}
 //Using ECMAScript 2015 arrow notation
-const loop = x => {
-   if (x >= 10)
-      return;
-   loop(x + 1);
+const loop = (x) => {
+  if (x >= 10) return;
+  loop(x + 1);
 };
 ```
 
@@ -70,19 +68,17 @@ function foo() {
 */
 
 (function foo() {
-    console.log("Hello Foo");
-}());
+  console.log("Hello Foo");
+})();
 
 (function food() {
-    console.log("Hello Food");
+  console.log("Hello Food");
 })();
 ```
 
 如果你想进一步了解 IIFE, 可参考以下的维基百科的页面：[Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 
-## 了解更多
-
-### 技术参考
+## 参见
 
 - [Functions](/zh-CN/docs/Web/JavaScript/Guide/Functions)
 - [Arrow Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

@@ -1,7 +1,6 @@
 ---
 title: Funciones avanzadas de las tablas HTML y accesibilidad
 slug: Learn/HTML/Tables/Advanced
-original_slug: Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesibilidad
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
@@ -35,7 +34,9 @@ Puedes dar un título a tu tabla colocándolo dentro de un elemento {{htmlelemen
 
 ```html
 <table>
-  <caption>Dinosaurios en el período Jurásico</caption>
+  <caption>
+    Dinosaurios en el período Jurásico
+  </caption>
 
   ...
 </table>
@@ -82,16 +83,16 @@ Pongamos en acción estos elementos nuevos.
 5. Luego, añade un atributo [`colspan`](/es/docs/Web/HTML/Element/td#colspan) para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».
 6. Vamos a añadir un estilo adicional sencillo a la tabla para que veas cuán útiles son estos elementos para aplicar CSS. Dentro del encabezado del documento HTML hay un elemento {{htmlelement ("style")}} vacío. Añade a este elemento las líneas de código CSS siguientes:
 
-    ```css
-    tbody {
-      font-size: 95%;
-      font-style: italic;
-    }
+   ```css
+   tbody {
+     font-size: 95%;
+     font-style: italic;
+   }
 
-    tfoot {
-      font-weight: bold;
-    }
-    ```
+   tfoot {
+     font-weight: bold;
+   }
+   ```
 
 7. Guarda, actualiza, y échale un vistazo al resultado. Si los elementos `<tbody>` y `<tfoot>` no estuvieran en su lugar, tendrías que escribir selectores/reglas mucho más complicados para obtener la misma aplicación de estilo.
 
@@ -100,121 +101,118 @@ Pongamos en acción estos elementos nuevos.
 Tu tabla final debería tener un aspecto similar al siguiente:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title> Mi historial de gastos </title>
+    <meta charset="utf-8" />
+    <title>Mi historial de gastos</title>
     <style>
+      html {
+        font-family: sans-serif;
+      }
 
-        html {
-          font-family: sans-serif;
-        }
+      table {
+        border-collapse: collapse;
+        border: 4px solid rgb(200, 200, 200);
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+      }
 
-          table {
-          border-collapse: collapse;
-          border: 4px solid rgb(200,200,200);
-          letter-spacing: 1px;
-          font-size: 0.8rem;
-        }
+      td,
+      th {
+        border: 2px solid rgb(190, 190, 190);
+        padding: 10px 20px;
+      }
 
-        td, th {
-          border: 2px solid rgb(190,190,190);
-          padding: 10px 20px;
-        }
+      th {
+        background-color: rgb(235, 235, 235);
+      }
 
-        th {
-          background-color: rgb(235,235,235);
-        }
+      td {
+        text-align: center;
+      }
 
-        td {
-          text-align: center;
-        }
+      tr:nth-child(even) td {
+        background-color: rgb(250, 250, 250);
+      }
 
-        tr:nth-child(even) td {
-          background-color: rgb(250,250,250);
-        }
+      tr:nth-child(odd) td {
+        background-color: rgb(245, 245, 245);
+      }
 
-        tr:nth-child(odd) td {
-          background-color: rgb(245,245,245);
-        }
+      caption {
+        padding: 10px;
+      }
 
-        caption {
-          padding: 10px;
-        }
+      tbody {
+        font-size: 90%;
+        font-style: italic;
+      }
 
-        tbody {
-          font-size: 90%;
-          font-style: italic;
-        }
-
-        tfoot {
-          font-weight: bold;
-        }
+      tfoot {
+        font-weight: bold;
+      }
     </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Cómo elegí gastar mi dinero
+      </caption>
+      <thead>
+        <tr>
+          <th>Compra</th>
 
-</head>
-<body>
-<table>
+          <th>Ubicación</th>
+          <th>Fecha</th>
+          <th>Revisión</th>
 
-<caption> Cómo elegí gastar mi dinero </caption>
-<thead>
-<tr>
-<th> Compra </th>
+          <th>Coste (€)</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4">SUM</td>
+          <td>118</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Corte de pelo</td>
 
-<th> Ubicación </th>
-<th> Fecha </th>
-<th> Revisión </th>
+          <td>Peluquería</td>
+          <td>12/09</td>
 
-<th> Coste (€) </th>
-</tr>
-</thead>
-<tfoot>
-<tr>
-<td colspan="4">SUM</td>
-<td>118</td>
-</tr>
-</tfoot>
-<tbody>
-<tr>
-<td> Corte de pelo </td>
+          <td>Gran idea</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Lasaña</td>
 
-<td> Peluquería </td>
-<td>12/09</td>
+          <td>Restaurante</td>
+          <td>12/09</td>
+          <td>Arrepentimiento</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Zapatos</td>
+          <td>Zapatería</td>
+          <td>13/09</td>
 
-<td> Gran idea </td>
-<td>30</td>
-</tr>
-<tr>
+          <td>Mucho arrepentimiento</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Pasta de dientes</td>
+          <td>Supermercado</td>
+          <td>13/09</td>
 
-<td> Lasaña </td>
-
-<td> Restaurante </td>
-<td>12/09</td>
-<td> Arrepentimiento </td>
-<td>18</td>
-</tr>
-<tr>
-
-<td> Zapatos </td>
-<td> Zapatería </td>
-<td>13/09</td>
-
-<td> Mucho arrepentimiento </td>
-<td>65</td>
-</tr>
-<tr>
-<td> Pasta de dientes </td>
-<td> Supermercado </td>
-<td>13/09</td>
-
-<td> Bien </td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-
-</body>
+          <td>Bien</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
 ```
 
@@ -391,10 +389,10 @@ Y también cada fila podría tener un encabezado definido de esta manera (si añ
 <tr>
   <th scope="row">Corte de pelo</th>
 
-<td>Peluquería</td>
+  <td>Peluquería</td>
   <td>12/09</td>
 
-<td>Gran idea</td>
+  <td>Gran idea</td>
   <td>30</td>
 </tr>
 ```
@@ -425,16 +423,15 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
   </tr>
 </thead>
 <tbody>
-<tr>
-  <th id="haircut">Corte de pelo</th>
-  <td headers="location haircut">Peluquería</td>
-  <td headers="date haircut">12/09</td>
-  <td headers="evaluation haircut">Gran idea</td>
-  <td headers="cost haircut">30</td>
-</tr>
+  <tr>
+    <th id="haircut">Corte de pelo</th>
+    <td headers="location haircut">Peluquería</td>
+    <td headers="date haircut">12/09</td>
+    <td headers="evaluation haircut">Gran idea</td>
+    <td headers="cost haircut">30</td>
+  </tr>
 
   ...
-
 </tbody>
 ```
 

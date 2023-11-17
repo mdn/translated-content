@@ -1,15 +1,6 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - Interface
-  - Reference
-  - Web
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest")}}

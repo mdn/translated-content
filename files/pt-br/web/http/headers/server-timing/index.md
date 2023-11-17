@@ -2,6 +2,7 @@
 title: Server-Timing
 slug: Web/HTTP/Headers/Server-Timing
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Server-Timing`** comunica uma ou mais métricas e descrições para um dado ciclo de requisição e resposta. Ele é usado para dar uma visão superficial de qualquer métrica de tempo do servidor _backend_ (e.g. leitura e escrita de banco de dados, tempo de CPU, acesso ao sistema de arquivos, etc.) nas ferramentas do desenvolvedor no navegador do usuário ou na interface {{domxref("PerformanceServerTiming")}}.
@@ -54,13 +55,11 @@ Em adição tendo o cabeçalho `Server-Timing` de métricas aparecendo nas ferra
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                               | Título             |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Server Timing','#the-server-timing-header-field', 'Server-Timing Header Field')}} | {{Spec2("Server Timing")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Server-Timing")}}
+{{Compat}}
 
 ## Veja também
 

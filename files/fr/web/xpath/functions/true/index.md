@@ -1,10 +1,6 @@
 ---
-title: 'true'
+title: "true"
 slug: Web/XPath/Functions/true
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/true
-original_slug: Web/XPath/Fonctions/true
 ---
 
 {{ XsltRef() }}

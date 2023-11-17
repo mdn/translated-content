@@ -1,12 +1,6 @@
 ---
-title: '<title> : l''élément de titre du document'
+title: "<title> : l'élément de titre du document"
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/title
 ---
 
 {{HTMLSidebar}}
@@ -58,7 +52,10 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
 #### Exemple
 
 ```html
-<title>2 erreurs sur votre commande - Restaurant chinois Maison bleue - Commande en ligne</title>
+<title>
+  2 erreurs sur votre commande - Restaurant chinois Maison bleue - Commande en
+  ligne
+</title>
 ```
 
 - [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)

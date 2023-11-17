@@ -1,15 +1,6 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Microdata
-  - Référence(2)
-translation_of: Web/HTML/Global_attributes/itemtype
-original_slug: Web/HTML/Attributs_universels/itemtype
 ---
 
 {{HTMLSidebar("Global_attributes")}}

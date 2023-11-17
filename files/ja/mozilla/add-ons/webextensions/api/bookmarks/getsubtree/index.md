@@ -13,9 +13,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 
 ```js
 browser.bookmarks.getSubTree(
-  id,      // 文字列
-  callback // 関数
-)
+  id, // 文字列
+  callback, // 関数
+);
 ```
 
 ### 引数
@@ -31,7 +31,7 @@ browser.bookmarks.getSubTree(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.getSubTree")}}
+{{Compat}}
 
 ## 例
 

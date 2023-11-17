@@ -1,7 +1,6 @@
 ---
-title: 'HTMLMediaElement: abort event'
+title: "HTMLMediaElement: abort event"
 slug: Web/API/HTMLMediaElement/abort_event
-translation_of: Web/API/HTMLMediaElement/abort_event
 ---
 
 {{APIRef}}
@@ -34,16 +33,16 @@ translation_of: Web/API/HTMLMediaElement/abort_event
 ## Примеры
 
 ```js
-const video = document.querySelector('video');
-const videoSrc = 'https://path/to/video.webm';
+const video = document.querySelector("video");
+const videoSrc = "https://path/to/video.webm";
 
-video.addEventListener('abort', () => {
+video.addEventListener("abort", () => {
   console.log(`Abort loading: ${videoSrc}`);
 });
 
-const source = document.createElement('source');
-source.setAttribute('src', videoSrc);
-source.setAttribute('type', 'video/webm');
+const source = document.createElement("source");
+source.setAttribute("src", videoSrc);
+source.setAttribute("type", "video/webm");
 
 video.appendChild(source);
 ```

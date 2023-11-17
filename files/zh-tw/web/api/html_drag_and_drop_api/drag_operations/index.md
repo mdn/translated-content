@@ -75,7 +75,7 @@ draggable 為 true 後，該 DIV 元素便可以拖曳，反之，倘若 draggab
 event.dataTransfer.setData("text/plain", "Text to drag");
 ```
 
-上例資料是”Text to drag”文字，型態是 text/plain。
+上例資料是「Text to drag」文字，型態是 text/plain。
 
 呼叫多次 setData 我們就可以攜帶多種資料。
 
@@ -86,7 +86,7 @@ dt.setData("text/uri-list", "http://www.mozilla.org");
 dt.setData("text/plain", "http://www.mozilla.org");
 ```
 
-這裡加入了三種資料，第一種是自定義的”application/x-bookmark”，雖然有更豐富的內容可使用，但只有我們自己認識，而另外我們又為其他網站或應用加入了兩種比較常見的資料，”text/uri-list”以及”text/plain”。
+這裡加入了三種資料，第一種是自定義的「application/x-bookmark」，雖然有更豐富的內容可使用，但只有我們自己認識，而另外我們又為其他網站或應用加入了兩種比較常見的資料，「text/uri-list」以及「text/plain」。
 
 如果對同一種資料型態加入兩次資料，則新加資料會取代舊資料。
 
@@ -114,7 +114,7 @@ setDragImage 需要三個參數，一是圖片來源(通常是圖片元素，但
 function dragWithCustomImage(event) {
   var canvas = document.createElementNS(
     "http://www.w3.org/1999/xhtml",
-    "canvas"
+    "canvas",
   );
   canvas.width = canvas.height = 50;
 
@@ -283,7 +283,7 @@ function doDrop(event)
 }
 ```
 
-上面的範例取得連結資料，然後生成連結元素、加入頁面。從 text/uri-list 字面上不難猜出這種資料是一行行的 URL，所以我們呼叫[split](/zh-TW/docs/JavaScript/Reference/Global_Objects/String/split)方法拆開一行行的 URL，再將 URL 一個一個加入頁面。請注意我們有避開開頭為”#”字元的註解。
+上面的範例取得連結資料，然後生成連結元素、加入頁面。從 text/uri-list 字面上不難猜出這種資料是一行行的 URL，所以我們呼叫 [split](/zh-TW/docs/JavaScript/Reference/Global_Objects/String/split) 方法拆開一行行的 URL，再將 URL 一個一個加入頁面。請注意我們有避開開頭為「#」字元的註解。
 
 更簡單的作法是採用特別 URL 型態。URL 型態是一個特殊簡寫用途形態，它不會出現在{types}屬性中，但它可以方便的取得第一個連結，如下:
 

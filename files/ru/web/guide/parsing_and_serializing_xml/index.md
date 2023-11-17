@@ -1,8 +1,8 @@
 ---
 title: Прямая и обратная обработка XML
 slug: Web/Guide/Parsing_and_serializing_XML
-translation_of: Web/Guide/Parsing_and_serializing_XML
 ---
+
 Иногда возникает необходимость в обработке {{Glossary("XML")}} и в последующей конвертации в древо {{Glossary("DOM")}}. Или наоборот, необходимо перевести древо DOM в XML. В этой статье рассмотрим объекты платформы web для обработки XML.
 
 - {{domxref("XMLSerializer")}}
@@ -27,7 +27,11 @@ var sMyString = '<a id="a"><b id="b">hey!</b></a>';
 var oParser = new DOMParser();
 var oDOM = oParser.parseFromString(sMyString, "application/xml");
 // print the name of the root element or error message
-console.log(oDOM.documentElement.nodeName == "parsererror" ? "error while parsing" : oDOM.documentElement.nodeName);
+console.log(
+  oDOM.documentElement.nodeName == "parsererror"
+    ? "error while parsing"
+    : oDOM.documentElement.nodeName,
+);
 ```
 
 ### Parsing URL-addressable ресурсов в дерево DOM
@@ -38,12 +42,12 @@ console.log(oDOM.documentElement.nodeName == "parsererror" ? "error while parsin
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.onload = function() {
+xhr.onload = function () {
   dump(xhr.responseXML.documentElement.nodeName);
-}
-xhr.onerror = function() {
+};
+xhr.onerror = function () {
   dump("Error while getting XML.");
-}
+};
 xhr.open("GET", "example.xml");
 xhr.responseType = "document";
 xhr.send();

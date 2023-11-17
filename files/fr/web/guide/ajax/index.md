@@ -1,7 +1,6 @@
 ---
 title: AJAX
 slug: Web/Guide/AJAX
-translation_of: Web/Guide/AJAX
 ---
 
 ## Démarrer avec AJAX

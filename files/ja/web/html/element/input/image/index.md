@@ -2,7 +2,7 @@
 title: <input type="image">
 slug: Web/HTML/Element/input/image
 l10n:
-  sourceCommit: 7594b50698a76ce79209b159835e615052915723
+  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
 ---
 
 {{HTMLSidebar}}
@@ -10,45 +10,6 @@ l10n:
 {{HTMLElement("input")}} 要素の **`image`** 型は、テキストではなく画像の形をとる送信ボタン、すなわちテキストではなく画像の形をとる送信ボタンを作成するために使用されます。
 
 {{EmbedInteractiveExample("pages/tabbed/input-image.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
-      <td>なし — `value` 属性は指定しないでください。</td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#src"><code>src</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#width"><code>width</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#height"><code>height</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td>{{domxref("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 値
 
@@ -66,7 +27,7 @@ l10n:
 
 > **メモ:** `alt` 属性は技術的には省略可能ですが、コンテンツの利用性を最大化するために常に設定してください。
 
-`<input type="image">` の `alt` 属性は、機能的には {{HTMLElement("img")}} 要素における [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性と同様に動作します。
+`<input type="image">` 要素の `alt` 属性は、機能的には {{HTMLElement("img")}} 要素における [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性と同様に動作します。
 
 ### formaction
 
@@ -79,7 +40,7 @@ l10n:
 文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
 
 - `application/x-www-form-urlencoded`
-  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って URL エンコーディングした後で送信します。
+  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って [URL エンコーディング](https://ja.wikipedia.org/wiki/パーセントエンコーディング)した後で送信します。
 - `multipart/form-data`
   - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) が `file` のもの ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`
@@ -166,7 +127,7 @@ l10n:
 {{ EmbedLiveSample('Essential_image_input_features', 600, 50) }}
 
 - [`src`](/ja/docs/Web/HTML/Element/input#src) 属性は、ボタンに表示したい画像のパスを指定するために使用されます。
-- [`alt`](/ja/docs/Web/HTML/Element/input#alt) 属性は画像の alt テキストを提供し、画面リーダーの利用者がボタンが何に使われるかをより良く理解することができるようにします。また、何らかの理由で画像を表示できない場合にも表示されます（例えば、パスのスペルが間違っている場合など）。可能であれば、標準的な送信ボタンを使用する場合に使用するラベルと一致するテキストを使用してください。
+- [`alt`](/ja/docs/Web/HTML/Element/input#alt) 属性は画像の alt テキストを提供し、スクリーンリーダーの利用者がボタンが何に使われるかをより良く理解することができるようにします。また、何らかの理由で画像を表示できない場合にも表示されます（例えば、パスのスペルが間違っている場合など）。可能であれば、標準的な送信ボタンを使用する場合に使用するラベルと一致するテキストを使用してください。
 - [`width`](/ja/docs/Web/HTML/Element/input#width) および [`height`](/ja/docs/Web/HTML/Element/input#height) 属性は、画像を表示する幅と高さをピクセル単位で指定するために使用されます。ボタンは画像と同じ大きさです。ボタンのヒット領域を画像より大きくしたい場合は、 CSS を使う必要があります（例： {{cssxref("padding")}}）。また、片方の寸法だけを指定した場合、もう片方は自動的に調整され、画像は元のアスペクト比を維持します。
 
 ### 既定のフォームの動作の上書き
@@ -210,7 +171,7 @@ l10n:
 
 画像をクリックしてフォームを送信すると、 `?x=52&y=55` のようなデータが引数として URL に付加されるのがわかります。画像入力に [`name`](/ja/docs/Web/HTML/Element/input#name) 属性がある場合、指定した名前はすべての属性の先頭に付くことに注意してください。したがって、`name` が `position` である場合、返される座標は URL で `?position.x=52&position.y=55` という書式となります。もちろん、これは他のすべての属性にも当てはまります。
 
-これらは、マウスでクリックしてフォームを送信した画像の X と Y の座標で、 (0,0) が画像の左上となります。これらは、画像の中でクリックされた位置が重要である場合、例えば、地図がクリックされると、クリックされた座標がサーバーに送信されるような場合に利用することができます。サーバー側のコードは、クリックされた場所を特定し、その近くの場所についての情報を返します。
+これらは、マウスでクリックしてフォームを送信した画像の X と Y の座標で、 (0,0) が画像の左上となり、画像のクリック以外で送信が発生した場合の既定値もこれになります。これらは、画像の中でクリックされた位置が重要である場合、例えば、地図がクリックされると、クリックされた座標がサーバーに送信されるような場合に利用することができます。サーバー側のコードは、クリックされた場所を特定し、その近くの場所についての情報を返します。
 
 上記の例では、サーバー側のコードで、送信された座標からどの色がクリックされたかを調べ、人々が投票した好きな色の集計を行うことができます。
 
@@ -271,7 +232,7 @@ label {
 
 この例では、前の例を応用して画像のための空間を確保し、 {{cssxref("object-fit")}} と {{cssxref("object-position")}} で実際の画像の大きさと位置を調整しています。
 
-#### 実行例
+#### 例
 
 {{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}
 
@@ -323,6 +284,51 @@ label {
 
 ここでは、 `object-position` は画像を要素の右上隅に描画するように設定され、 `object-fit` は `contain` に設定されています。これは、画像の縦横比を変えずに要素のボックス内に収まる最大の大きさで描画することを意味しています。画像で覆われていない領域では、要素の灰色の背景がまだ見えていることに注意してください。
 
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">値</a></strong></td>
+      <td>なし — <code>value</code> 属性は指定しないでください。</td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#src"><code>src</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#width"><code>width</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#height"><code>height</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td>{{domxref("HTMLInputElement")}}</td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>なし</td>
+    </tr>
+     <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## 仕様書
 
 {{Specifications}}
@@ -334,5 +340,6 @@ label {
 ## 関連情報
 
 - {{HTMLElement("input")}} および実装している {{domxref("HTMLInputElement")}} インターフェイス
+- HTML の {{HTMLElement("img")}} 要素
 - `<input>` 要素の枠内における画像の位置と大きさの指定: {{cssxref("object-position")}} および {{cssxref("object-fit")}}
 - [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

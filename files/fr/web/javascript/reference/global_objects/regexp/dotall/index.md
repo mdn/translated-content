@@ -1,15 +1,6 @@
 ---
 title: RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
-tags:
-  - Draft
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/dotAll
 ---
 
 {{JSRef}}

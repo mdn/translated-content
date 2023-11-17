@@ -28,7 +28,9 @@ HTML 中，例如，{{htmlelement("h1")}} 元素是一个语义化元素，赋�
 另一方面，你可以通过样式（CSS）来让任何的元素*看上去*像是一个最高级别的标题，就像下面所展示的方法一样：
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Is this a top level heading?</span
+>
 ```
 
 这将会把这个元素渲染得像是一个最高级别的标题，但是它的值没有对应到最“最高级别标题”这一语义，所以在此之上，它不会获得更多额外的描述（只是一个普通“span”元素而不是“最高级别标题”这一语义）。所以在恰当的需求下使用恰当的 HTML 元素是一个不错的主意。
@@ -47,7 +49,7 @@ HTML 应该编写为表示将要填充的数据，而不是基于其默认的演
 
 ## 语义化元素
 
-这是一些语义化的元（[source](https://www.w3schools.com/html/html5_semantic_elements.asp)）。
+这是一些语义化的元素（[source](https://www.w3schools.com/html/html5_semantic_elements.asp)）。
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -63,28 +65,11 @@ HTML 应该编写为表示将要填充的数据，而不是基于其默认的演
 - {{htmlelement("summary")}}
 - {{htmlelement("time")}}
 
-## 了解更多
+## 参见
 
-- [HTML element reference](/zh-CN/docs/Web/HTML/Element#Inline_text_semantics) on MDN
-- [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Element/Heading_Elements#Problems_solved_by_HTML5) on MDN
-- [HTML5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) on w3schools
-- [The meaning of semantics in computer science](https://zh.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
-- [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
+- [HTML element reference](/zh-CN/docs/Web/HTML/Element#inline_text_semantics) on MDN
+- [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Element/Heading_Elements#usage_notes) on MDN
+- [The meaning of semantics in computer science](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
+- [Glossary](/zh-CN/docs/Glossary)
 
   - {{Glossary("SEO")}}
-
-- Some of semantic elements in HTML
-
-  - {{htmlelement("article")}}
-  - {{htmlelement("aside")}}
-  - {{htmlelement("details")}}
-  - {{htmlelement("figcaption")}}
-  - {{htmlelement("figure")}}
-  - {{htmlelement("footer")}}
-  - {{htmlelement("header")}}
-  - {{htmlelement("main")}}
-  - {{htmlelement("mark")}}
-  - {{htmlelement("nav")}}
-  - {{htmlelement("section")}}
-  - {{htmlelement("summary")}}
-  - {{htmlelement("time")}}

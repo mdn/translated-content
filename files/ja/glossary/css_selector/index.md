@@ -25,7 +25,11 @@ div.warning {
 }
 
 #customized {
-  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+  font:
+    16px Lucida Grande,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -71,8 +75,8 @@ div.warning {
 
 - 結合子
 
-  - [隣接兄弟セレクター](/ja/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
-  - [一般兄弟セレクター](/ja/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [子セレクター](/ja/docs/Web/CSS/Child_combinator) `A > B`
   - [子孫セレクター](/ja/docs/Web/CSS/Descendant_combinator) `A B`
 

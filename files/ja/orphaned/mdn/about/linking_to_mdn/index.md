@@ -1,7 +1,6 @@
 ---
 title: MDN にリンクするには
 slug: orphaned/MDN/About/Linking_to_MDN
-original_slug: MDN/About/Linking_to_MDN
 ---
 
 {{MDNSidebar}}

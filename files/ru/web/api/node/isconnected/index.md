@@ -1,7 +1,6 @@
 ---
 title: Node.isConnected
 slug: Web/API/Node/isConnected
-translation_of: Web/API/Node/isConnected
 ---
 
 {{APIRef("DOM")}}
@@ -23,7 +22,7 @@ A {{domxref("Boolean")}} that is `true` if the node is connected to its relevant
 Стандартный DOM пример:
 
 ```js
-let test = document.createElement('p');
+let test = document.createElement("p");
 console.log(test.isConnected); // returns false
 document.body.appendChild(test);
 console.log(test.isConnected); // returns true
@@ -33,35 +32,34 @@ A shadow DOM example:
 
 ```js
 // Create a shadow root
-var shadow = this.attachShadow({mode: 'open'});
+var shadow = this.attachShadow({ mode: "open" });
 
 // Create some CSS to apply to the shadow dom
-var style = document.createElement('style');
+var style = document.createElement("style");
 console.log(style.isConnected); // returns false
 
-style.textContent = '.wrapper {' +
-                       'position: relative;' +
-                    '}' +
+style.textContent =
+  ".wrapper {" +
+  "position: relative;" +
+  "}" +
+  ".info {" +
+  "font-size: 0.8rem;" +
+  "width: 200px;" +
+  "display: inline-block;" +
+  "border: 1px solid black;" +
+  "padding: 10px;" +
+  "background: white;" +
+  "border-radius: 10px;" +
+  "opacity: 0;" +
+  "transition: 0.6s all;" +
+  "position: absolute;" +
+  "bottom: 20px;" +
+  "left: 10px;" +
+  "z-index: 3;" +
+  "}" +
+  // attach the created style element to the shadow dom
 
-                     '.info {' +
-                        'font-size: 0.8rem;' +
-                        'width: 200px;' +
-                        'display: inline-block;' +
-                        'border: 1px solid black;' +
-                        'padding: 10px;' +
-                        'background: white;' +
-                        'border-radius: 10px;' +
-                        'opacity: 0;' +
-                        'transition: 0.6s all;' +
-                        'position: absolute;' +
-                        'bottom: 20px;' +
-                        'left: 10px;' +
-                        'z-index: 3;' +
-                      '}' +
-
-// attach the created style element to the shadow dom
-
-shadow.appendChild(style);
+  shadow.appendChild(style);
 console.log(style.isConnected); // returns true
 ```
 

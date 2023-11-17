@@ -20,14 +20,13 @@ var credentialsContainer = navigator.credentials
 ## 示例
 
 ```js
-if ('credentials' in navigator) {
-  navigator.credentials.get({password: true})
-  .then(function(creds) {
+if ("credentials" in navigator) {
+  navigator.credentials.get({ password: true }).then(function (creds) {
     //Do something with the credentials.
   });
 } else {
   //Handle sign-in the way you did before.
-};
+}
 ```
 
 ## Specifications

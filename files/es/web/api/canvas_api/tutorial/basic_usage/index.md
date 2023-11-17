@@ -1,7 +1,6 @@
 ---
 title: Uso básico de Canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Dibujando_formas")}}
@@ -18,9 +17,9 @@ A primera vista, un elemento {{HTMLElement("canvas")}} es parecido al elemento {
 
 > **Nota:** Si su renderizado se ve distorsionado, pruebe especificar los atributos width y height explícitamente en los atributos del `<canvas>` , y no usando CSS.
 
-El atributo [id](/es/docs/Web/HTML/Atributos_Globales/id) no está especificado para el elemento `<canvas>` pero es uno de los [atributos globales de HTML](/es/docs/Web/HTML/Atributos_Globales) el cual puede ser aplicado a cualquier elemento HTML (como [class](en-US/docs/Web/HTML/Global_attributes/class) por ejemplo). Siempre es buena idea proporcionar un `id` porque esto hace más fácil identificarlo en un script.
+El atributo [id](/es/docs/Web/HTML/Atributos_Globales/id) no está especificado para el elemento `<canvas>` pero es uno de los [atributos globales de HTML](/es/docs/Web/HTML/Atributos_Globales) el cual puede ser aplicado a cualquier elemento HTML (como [class](/es/docs/Web/HTML/Global_attributes/class) por ejemplo). Siempre es buena idea proporcionar un `id` porque esto hace más fácil identificarlo en un script.
 
-El elemento `<canvas>` puede ser estilizado como a cualquier imagen normal (margin, border, background, etc). Estas reglas, sin embargo, no afectan a lo dibujado sobre el canvas. Mas adelante veremos cómo se hace esto en un [capítulo dedicado](en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) en este tutorial. Cuando no tenemos reglas de estilo aplicadas al canvas, este será completamente transparente.
+El elemento `<canvas>` puede ser estilizado como a cualquier imagen normal (margin, border, background, etc). Estas reglas, sin embargo, no afectan a lo dibujado sobre el canvas. Mas adelante veremos cómo se hace esto en un [capítulo dedicado](/es/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) en este tutorial. Cuando no tenemos reglas de estilo aplicadas al canvas, este será completamente transparente.
 
 ### Contenido alternativo
 
@@ -36,7 +35,7 @@ Por ejemplo, podremos proporcionar un texto descriptivo del contenido del canvas
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -55,8 +54,8 @@ Si el contenido alternativo no se necesita, un simple `<canvas id="foo" ...></ca
 El canvas esta inicialmente en blanco. Para mostrar alguna cosa, un script primero necesita acceder al contexto a renderizar y dibujar sobre este. El elemento {{HTMLElement("canvas")}} tiene un [method](/es/docs/Web/API/HTMLCanvasElement#Methods) llamado `getContext()`, usado para obtener el contexto a renderizar y sus funciones de dibujo. `getContext()` toma un parametro, el tipo de contexto. Para graficos 2D, como los que cubre este tutorial, su especificacion es "2d".
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("tutorial");
+var ctx = canvas.getContext("2d");
 ```
 
 La primera linea regresa el nodo DOM para el elemento {{HTMLElement("canvas")}} llamando al metodo {{domxref("document.getElementById()")}}. Una vez tu tienes el elemento nodo, tu puedes acceder al contexto de dibujo usando su metodo `getContext()`.
@@ -66,10 +65,10 @@ La primera linea regresa el nodo DOM para el elemento {{HTMLElement("canvas")}} 
 El contenido de regreso que es mostrado en navegadores los cuales no soportan {{HTMLElement("canvas")}}. Para los Scripts puede tambien comprobarse su soporte desde la programacion por un simple test para la presencia del metodo `getContext()`. Con un trozo de codigo parecido al que viene debajo:
 
 ```js
-var canvas = document.getElementById('tutorial');
+var canvas = document.getElementById("tutorial");
 
-if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+if (canvas.getContext) {
+  var ctx = canvas.getContext("2d");
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -85,15 +84,17 @@ Aqui esta una plantilla minimalista, la cual usaremos como punto de partida para
   <head>
     <title>Canvas tutorial</title>
     <script type="text/javascript">
-      function draw(){
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
+      function draw() {
+        var canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style type="text/css">
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -114,25 +115,25 @@ Para comenzar, daremos un vistazo a un simple ejemplo que dibuja dos rectangulos
 
 ```html
 <html>
- <head>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById("canvas");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+  <head>
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10, 10, 55, 50);
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 55, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

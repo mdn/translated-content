@@ -19,6 +19,6 @@ window.back()
 
 ```js
 function goBack() {
-   if ( canGoBack ) window.back();
+  if (canGoBack) window.back();
 }
 ```

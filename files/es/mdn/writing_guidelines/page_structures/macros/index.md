@@ -1,10 +1,9 @@
 ---
 title: Utilizando macros
 slug: MDN/Writing_guidelines/Page_structures/Macros
-page-type: mdn-writing-guide
 l10n:
   sourceCommit: 92cbbdaf81325539eace880b5e78152e3cb8ba49
---- 
+---
 
 {{MDNSidebar}}
 
@@ -21,7 +20,7 @@ Las macros en MDN se implementan utilizando código [JavaScript](/es/docs/Web/Ja
 Para utilizar una macro, encierre la llamada a la macro en un par de llaves dobles incluyendo sus parámetros, si los hay.
 
 ```plain
-\{{nombredelamacro(lista-de-parámetros)}} 
+\{{nombredelamacro(lista-de-parámetros)}}
 ```
 
 Algunos apuntes sobre la llamada a las macros

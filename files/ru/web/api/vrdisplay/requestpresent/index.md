@@ -1,8 +1,8 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
-translation_of: Web/API/VRDisplay/requestPresent
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Метод **`requestPresent()`** объекта реализующего интерфейс {{domxref("VRDisplay")}} отвечает за начало отображения сцены на VR устройстве, которое представлено этим объектом.
@@ -10,7 +10,7 @@ translation_of: Web/API/VRDisplay/requestPresent
 ## Синтаксис
 
 ```js
-vrDisplayInstance.requestPresent(layers).then(function() {
+vrDisplayInstance.requestPresent(layers).then(function () {
   //Действия после начала отображения сцены
 });
 ```
@@ -27,44 +27,48 @@ vrDisplayInstance.requestPresent(layers).then(function() {
 - Если {{domxref("VRDisplayCapabilities.canPresent")}} ложно или если массив объектов VRLayer содержит более чем {{domxref("VRDisplayCapabilities.maxLayers")}} слоёв, произойдёт переход в состояние "отклонено".
 - Если объект {{domxref("VRDisplay")}} уже отображает сцену, то вызов его метода `requestPresent()` обновит массив отображаемых `VRLayer` объектов.
 - Если объект `VRDisplay` уже отображает сцену, а вызов метода `requestPresent()` приведёт к возврату Promise в состоянии "отклонено", то отображение сцены прекратится.
-- If `requestPresent()` is called outside of an engagement gesture the promise will be rejected unless the `VRDisplay` was already presenting. This engagement gesture is also sufficient to allow [`requestPointerLock()`](/en-US/docs/Web/API/Element/requestPointerLock) calls until presentation has ended.
+- If `requestPresent()` is called outside of an engagement gesture the promise will be rejected unless the `VRDisplay` was already presenting. This engagement gesture is also sufficient to allow [`requestPointerLock()`](/ru/docs/Web/API/Element/requestPointerLock) calls until presentation has ended.
 
 ## Examples
 
 ```js
-if(navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+if (navigator.getVRDisplays) {
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then(function (displays) {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
-      console.log('Display found');
+      console.log("Display found");
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener('click', function() {
-        if(btn.textContent === 'Start VR display') {
-          vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-            console.log('Presenting to WebVR display');
+      btn.addEventListener("click", function () {
+        if (btn.textContent === "Start VR display") {
+          vrDisplay.requestPresent([{ source: canvas }]).then(function () {
+            console.log("Presenting to WebVR display");
 
             // Set the canvas size to the size of the vrDisplay viewport
 
-            var leftEye = vrDisplay.getEyeParameters('left');
-            var rightEye = vrDisplay.getEyeParameters('right');
+            var leftEye = vrDisplay.getEyeParameters("left");
+            var rightEye = vrDisplay.getEyeParameters("right");
 
-            canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
-            canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
+            canvas.width =
+              Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
+            canvas.height = Math.max(
+              leftEye.renderHeight,
+              rightEye.renderHeight,
+            );
 
             // stop the normal presentation, and start the vr presentation
             window.cancelAnimationFrame(normalSceneFrame);
             drawVRScene();
 
-            btn.textContent = 'Exit VR display';
+            btn.textContent = "Exit VR display";
           });
         } else {
           vrDisplay.exitPresent();
-          console.log('Stopped presenting to WebVR display');
+          console.log("Stopped presenting to WebVR display");
 
-          btn.textContent = 'Start VR display';
+          btn.textContent = "Start VR display";
 
           // Stop the VR presentation, and start the normal presentation
           vrDisplay.cancelAnimationFrame(vrSceneFrame);
@@ -80,9 +84,7 @@ if(navigator.getVRDisplays) {
 
 ## Specifications
 
-| Specification                                                                                            | Status                       | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrdisplay-requestpresent', 'requestPresent()')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

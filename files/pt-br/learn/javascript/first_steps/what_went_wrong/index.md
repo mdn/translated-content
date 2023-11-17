@@ -53,20 +53,20 @@ Neste ponto, vamos consultar o console do desenvolvedor para ver se identificamo
 Anteriormente no curso, nós fizemos você digitar alguns comandos simples de JavaScript no [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) (se você não se lembra como, abra o link anterior). O que é ainda mais útil é o fato do console lhe mostrar mensagens de erro sempre que existir algo errado na sintaxe dentro do JavaScript enviado ao motor de JavaScript do navegador. Agora vamos à caça.
 
 1. Vá até a aba onde você tem aberto o arquivo `jogo-numero-erros.html` e abra o console JavaScript. Você deverá ver uma mensagem de erro sendo exibida:
-    ![](nao-e-uma-funcao.png)
+   ![](nao-e-uma-funcao.png)
 2. Esse é um erro bem fácil de identifcar, e o navegador lhe fornece várias informações úteis para lhe ajudar (a captura de tela acima foi feita no Firefox, mas os outros navegadores oferecem informações similares). Da esquerda para a direita, nós temos:
 
-    - Um "x" laranja para indicar que esse é um erro.
-    - Uma mensagem de erro para indicar o que está errado: "TypeError: envioPalpite.addeventListener is not a function"
-    - Um link "Learn More" que encaminha à uma página no MDN docs explicando o que esse erro significa em uma quantidade enorme de detalhes.
-    - O nome do arquivo JavaScript, que direciona à aba Debugger das ferramentas de desenvolvimento. Se você clicar nesse link, verá a linha exata onde o erro está destatacada.
-    - O número da linha onde o erro se encontra, e o número do caractere na linha onde o erro é encontrado primeiro. Neste caso nós temos, linha 86, caractere número 3.
+   - Um "x" laranja para indicar que esse é um erro.
+   - Uma mensagem de erro para indicar o que está errado: "TypeError: envioPalpite.addeventListener is not a function"
+   - Um link "Learn More" que encaminha à uma página no MDN docs explicando o que esse erro significa em uma quantidade enorme de detalhes.
+   - O nome do arquivo JavaScript, que direciona à aba Debugger das ferramentas de desenvolvimento. Se você clicar nesse link, verá a linha exata onde o erro está destatacada.
+   - O número da linha onde o erro se encontra, e o número do caractere na linha onde o erro é encontrado primeiro. Neste caso nós temos, linha 86, caractere número 3.
 
 3. Se olharmos para a linha 86 em nosso nosso código de código, vamos encontrar a seguinte linha:
 
-    ```js
-    envioPalpite.addeventListener('click', conferir Palpite);
-    ```
+   ```js
+   envioPalpite.addeventListener('click', conferir Palpite);
+   ```
 
 4. O erro diz o seguinte "envioPalpite.addeventListener is not a function", que significa envioPalpite.addeventListener não é uma funçao. Então provavelmente digitamos algo errado. Se você não estiver certo da digitação correta de parte da sintaxe, é uma boa ideia procurar a funcionalidade no MDN docs. A melhor forma de fazer isso atualmente é pesquisar por "mdn _nome-da-funcionalidade_" em seu mecanismo de buscas favorito. Aqui está um atalho para te salvar algum tempo nesse caso: [`addEventListener()`](/pt-BR/docs/Web/API/Element/addEventListener).
 5. Então, olhando nessa essa página, o erro parece ser termos digitado o nome da função errado! Lembre-se de que o JavaScript diferencia letras maiúsculas de minúsculas, então qualquer diferença na digitação ou no uso de letras maiúsculas irá causar um erro. Alterar `addeventListener` para `addEventListener` deverá corrigir esse erro. Faça essa alteração no código do seu arquivo.
@@ -77,41 +77,41 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
 
 1. Salve o arquivo e atualize a aba do navegador, e você poderá ver que o erro foi corrigido.
 2. Agora se você tentar enviar um palpite e pressionar o botão !Enviar palpite" você verá... outro erro!
-    ![](variavel-e-nula.png)
+   ![](variavel-e-nula.png)
 3. Dessa vez o erro informado é "TypeError: baixoOuAlto is null", na linha 78.
 
-    > **Nota:** [`Null`](/en-US/docs/Glossary/Null) é um valor especial que significa "nada", ou "sem valor". Então `baixoOuAlto` foi declarado e inicializado, mas não com algum valor significativo — não possui nenhum caractere ou valor.
+   > **Nota:** [`Null`](/pt-BR/docs/Glossary/Null) é um valor especial que significa "nada", ou "sem valor". Então `baixoOuAlto` foi declarado e inicializado, mas não com algum valor significativo — não possui nenhum caractere ou valor.
 
-    > **Nota:** Esse erro não apareceu assim que a página foi carregada porque esse erro ocorreu dentro de uma função (dentro do bloco `conferirPalpite() { ... }` ). Como você irá aprender com mais detalhes no nosso artigo de funções mais tarde, o código localizado dentro de funções roda em um escopo separado do código presente fora das funções. Nesse caso, o código não estava rodando e o erro não estava aparecendo até a função `conferirPalpite()` ser executada na linha 86.
+   > **Nota:** Esse erro não apareceu assim que a página foi carregada porque esse erro ocorreu dentro de uma função (dentro do bloco `conferirPalpite() { ... }` ). Como você irá aprender com mais detalhes no nosso artigo de funções mais tarde, o código localizado dentro de funções roda em um escopo separado do código presente fora das funções. Nesse caso, o código não estava rodando e o erro não estava aparecendo até a função `conferirPalpite()` ser executada na linha 86.
 
 4. Dê uma olhada na linha 78, e você verá o seguinte código:
 
-    ```js
-    baixoOuAlto.textContent = 'Seu palpite foi muito alto!';
-    ```
+   ```js
+   baixoOuAlto.textContent = "Seu palpite foi muito alto!";
+   ```
 
 5. Essa linha está tentando definir a propriedade `textContent` (conteúdo de texto) da variável `baixoOuAlto` como uma sequência de texto, mas isso não está funcionando porque `baixoOuAlto` não contém o que deveria conter. Vamos ver o porquê — tente localizar outras instâncias de `baixoOuAlto` no código. A instância que aparece primeiro no código JavaScript é na linha 48:
 
-    ```js
-    var baixoOuAlto = document.querySelector('baixoOuAlto');
-    ```
+   ```js
+   var baixoOuAlto = document.querySelector("baixoOuAlto");
+   ```
 
 6. Nesse ponto estamos tentando fazer com que a variável contenha uma referência a um elemento no documento HTML. Vamos conferir se o valor é `null` (nulo) depois que essa linha é executada. Adicione o seguinte código na linha 49:
 
-    ```js
-    console.log(baixoOuAlto);
-    ```
+   ```js
+   console.log(baixoOuAlto);
+   ```
 
-    > **Nota:** [`console.log()`](/en-US/docs/Web/API/Console/log) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
+   > **Nota:** [`console.log()`](/pt-BR/docs/Web/API/Console/log) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
 
 7. Salve o arquivo e o atualize no navegador, e você deverá ver agora o resultado do `console.log()` na tela do seu console.
-    ![](console-log-saida.png)
-    Pois bem, nesse ponto o valor de `baixoOuAlto` e `null`, então definitivamente há um problema com a linha 48.
-8. Vamos pensar em qual poderia ser o problema. A linha 48 está usando um método [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) para pegar a referência do elemento selecionado com um seletor CSS selector (_CSS selector_). Olhando mais acima no nosso código, podemos encontrar o parágrafo em questão:
+   ![](console-log-saida.png)
+   Pois bem, nesse ponto o valor de `baixoOuAlto` e `null`, então definitivamente há um problema com a linha 48.
+8. Vamos pensar em qual poderia ser o problema. A linha 48 está usando um método [`document.querySelector()`](/pt-BR/docs/Web/API/Document/querySelector) para pegar a referência do elemento selecionado com um seletor CSS selector (_CSS selector_). Olhando mais acima no nosso código, podemos encontrar o parágrafo em questão:
 
-    ```js
-    <p class="baixoOuAlto"></p>
-    ```
+   ```js
+   <p class="baixoOuAlto"></p>
+   ```
 
 9. Então nós precisamos de um seletor de classe aqui, que começa com um ponto (.), mas o seletor passado pelo método `querySelector()` na linha 48 não tem o ponto. Esse pode ser o problema! Tente mudar `baixoOuAlto` para `.baixoOuAlto` na linha 48.
 10. Tente salvar o arquivo e atualizá-lo no navegador de novo, e a sua declaração `console.log()` deverá retornar o elemento `<p>` que queremos. Ufa! Outro erro resolvido! Você pode deletar a linha do seu `console.log()` agora, ou mantê-la para referência posterior — a escolha é sua.
@@ -132,33 +132,33 @@ Há sem dúvida um problema na lógica do jogo em algum lugar — o jogo não es
 
 1. Procure pela variável `numeroAleatorio`, e as linhas onde o número aleatório é definido primeiro. A instância que armazena o número aleatório que queremos adivinhar no começo do jogo deve estar na linha 44 ou próximo a ela:
 
-    ```js
-    var numeroAleatorio = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   var numeroAleatorio = Math.floor(Math.random()) + 1;
+   ```
 
 2. E a linha que gera o número aleatório antes de cada jogo subsequente está na linha 113, ou próximo a ela:
 
-    ```js
-    numeroAleatorio = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   numeroAleatorio = Math.floor(Math.random()) + 1;
+   ```
 
 3. Para checar se essas linhas são mesmo o problema, vamos recorrer ao nosso amigo `console.log()` de novo — insira a seguinte linha diretamente abaixo de cada uma das duas linhas:
 
-    ```js
-    console.log(numeroAleatorio);
-    ```
+   ```js
+   console.log(numeroAleatorio);
+   ```
 
 4. Salve o arquivo e atualize o navegador, então jogue algumas vezes — você verá que o `numeroAleatorio` é igual a 1 cada vez em que é exibido no console.
 
 ### Trabalhando através da lógica
 
-Para consertar isso, vamos considerar como essa linha está trabalhando. Primeiro, nós invocamos [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random), que gera um número decimal aleatório entre 0 e 1, ex. 0.5675493843.
+Para consertar isso, vamos considerar como essa linha está trabalhando. Primeiro, nós invocamos [`Math.random()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random), que gera um número decimal aleatório entre 0 e 1, ex. 0.5675493843.
 
 ```js
-Math.random()
+Math.random();
 ```
 
-Em seguida, passamos o resultado invocando `Math.random()` através de [`Math.floor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), que arredonda o número passado para o menor número inteiro mais próximo. E então adicionamos 1 ao resultado:
+Em seguida, passamos o resultado invocando `Math.random()` através de [`Math.floor()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), que arredonda o número passado para o menor número inteiro mais próximo. E então adicionamos 1 ao resultado:
 
 ```
 Math.floor(Math.random()) + 1
@@ -167,13 +167,13 @@ Math.floor(Math.random()) + 1
 Arredondando um número decimal aleatório entre 0 e 1 para baixo irá sempre retornar 0, então adicionando 1 a ele sempre retornará 1. Precisamos multiplicar o número aleatório por 100 antes de o arredondarmos para baixo. O código seguinte nos daria um número aleatório entre 0 and 99:
 
 ```js
-Math.floor(Math.random()*100);
+Math.floor(Math.random() * 100);
 ```
 
 Por isso, queremos adicionar 1, para nos dar um número aleatório entre 1 e 100:
 
 ```js
-Math.floor(Math.random()*100) + 1;
+Math.floor(Math.random() * 100) + 1;
 ```
 
 Tente atualizar as duas linhas dessa forma, então salve e atualize o navegador — o jogo deve agora funcionar como nós queremos que funcione!

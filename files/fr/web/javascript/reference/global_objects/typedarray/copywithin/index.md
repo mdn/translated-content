@@ -1,14 +1,6 @@
 ---
 title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/copyWithin
 ---
 
 {{JSRef}}
@@ -47,9 +39,9 @@ Cette méthode remplace la méthode expérimentale {{jsxref("TypedArray.prototyp
 ```js
 var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+uint8.set([1, 2, 3]);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
-uint8.copyWithin(3,0,3);
+uint8.copyWithin(3, 0, 3);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 ```
 

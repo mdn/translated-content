@@ -55,17 +55,17 @@ El elemento insertado o `null`, si la inserción falla.
 ## Ejemplo
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+beforeBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement('beforebegin',tempDiv);
+  activeElem.insertAdjacentElement("beforebegin", tempDiv);
   setListener(tempDiv);
 });
 
-afterBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+afterBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement('afterend',tempDiv);
+  activeElem.insertAdjacentElement("afterend", tempDiv);
   setListener(tempDiv);
 });
 ```

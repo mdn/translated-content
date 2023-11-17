@@ -1,5 +1,5 @@
 ---
-title: ':host'
+title: ":host"
 slug: Web/CSS/:host
 ---
 
@@ -27,26 +27,29 @@ Los siguientes fragmentos se toman de nuestro ejemplo de [selectores de host](ht
 En este ejemplo, tenemos un elemento personalizado simple — `<context-span>` — que se puede envolver alrededor del texto:
 
 ```html
-<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+<h1>
+  Host selectors <a href="#"><context-span>example</context-span></a>
+</h1>
 ```
 
 Dentro del constructor del elemento, creamos los elementos `style` y `span`, llenamos el `span` con el contenido del elemento personalizado y llenamos el elemento `style` con algunas reglas CSS:
 
 ```js
-let style = document.createElement('style');
-      let span = document.createElement('span');
-      span.textContent = this.textContent;
+let style = document.createElement("style");
+let span = document.createElement("span");
+span.textContent = this.textContent;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
-      shadowRoot.appendChild(style);
-      shadowRoot.appendChild(span);
+const shadowRoot = this.attachShadow({ mode: "open" });
+shadowRoot.appendChild(style);
+shadowRoot.appendChild(span);
 
-      style.textContent = 'span:hover { text-decoration: underline; }' +
-                          ':host-context(h1) { font-style: italic; }' +
-                          ':host-context(h1):after { content: " - no links in headers!" }' +
-                          ':host-context(article, aside) { color: gray; }' +
-                          ':host(.footer) { color : red; }' +
-                          ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+style.textContent =
+  "span:hover { text-decoration: underline; }" +
+  ":host-context(h1) { font-style: italic; }" +
+  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ":host-context(article, aside) { color: gray; }" +
+  ":host(.footer) { color : red; }" +
+  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
 La regla `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` estiliza todas las instancias del elemento `<context-span>` (la sombra host en esta instancia) en el documento.

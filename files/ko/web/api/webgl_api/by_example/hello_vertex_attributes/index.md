@@ -14,56 +14,57 @@ slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 어떻게 GPU 메모리에 데이터를 저장함으로써 쉐이더 프로그램에 입력 값을 넣을 수 있을까?
 
 ```html hidden
-<p>First encounter with attributes and sending data to GPU. Click
-on the canvas to change the horizontal position of the square.</p>
+<p>
+  First encounter with attributes and sending data to GPU. Click on the canvas
+  to change the horizontal position of the square.
+</p>
 ```
 
 ```html hidden
-<canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+<canvas>Your browser does not seem to support HTML5 canvas.</canvas>
 ```
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
 ```html
 <script type="x-shader/x-vertex" id="vertex-shader">
-#version 100
-precision highp float;
+  #version 100
+  precision highp float;
 
-attribute float position;
+  attribute float position;
 
-void main() {
-  gl_Position = vec4(position, 0.0, 0.0, 1.0);
-  gl_PointSize = 64.0;
-}
+  void main() {
+    gl_Position = vec4(position, 0.0, 0.0, 1.0);
+    gl_PointSize = 64.0;
+  }
 </script>
 ```
 
 ```html
 <script type="x-shader/x-fragment" id="fragment-shader">
-#version 100
-precision mediump float;
-void main() {
-  gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
-}
+  #version 100
+  precision mediump float;
+  void main() {
+    gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
+  }
 </script>
 ```
 
@@ -146,16 +147,16 @@ function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  var gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
+  var gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     var paragraph = document.querySelector("p");
-    paragraph.innerHTML = "Failed to get WebGL context."
-      + "Your browser or device may not support WebGL.";
+    paragraph.innerHTML =
+      "Failed to get WebGL context." +
+      "Your browser or device may not support WebGL.";
     return null;
   }
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;

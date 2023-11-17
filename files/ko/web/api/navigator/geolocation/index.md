@@ -5,6 +5,7 @@ slug: Web/API/Navigator/geolocation
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`Navigator.geolocation`** 읽기 전용 속성은 웹에서 장치의 위치를 알아낼 때 사용할 수 있는 {{domxref("Geolocation")}} 객체를 반환합니다. 웹 사이트나 웹 앱은 위치정보를 사용해 결과 화면을 맞춤 설정할 수 있습니다.

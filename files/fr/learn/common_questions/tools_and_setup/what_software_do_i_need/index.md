@@ -1,13 +1,6 @@
 ---
 title: De quels logiciels ai-je besoin pour construire un site web ?
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-tags:
-  - Beginner
-  - Learn
-  - NeedsActiveLearning
-  - WebMechanics
-translation_of: Learn/Common_questions/What_software_do_I_need
-original_slug: Learn/Common_questions/What_software_do_I_need
 ---
 
 Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre en ligne ou consulter un site web.
@@ -44,7 +37,7 @@ Tous les systèmes d'exploitation (ou presque) possèdent par défaut un éditeu
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
 
 ## Aller plus loin
 

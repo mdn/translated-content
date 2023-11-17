@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reduceRight
 ---
 
 {{JSRef("Objetos_globales", "Array")}}
@@ -42,21 +41,21 @@ La primera vez que se llama a la función, el `valorPrevio` y el `valorActual` p
 Algún ejemplo de la ejecución de la función paso a paso sería similar a esto:
 
 ```js
-[0,1,2,3,4].reduceRight(function(valorPrevio, valorActual, indice, array){
+[0, 1, 2, 3, 4].reduceRight(function (valorPrevio, valorActual, indice, array) {
   return valorPrevio + valorActual;
 });
 
 // First call
-valorPrevio = 4, valorActual = 3, indice = 3
+(valorPrevio = 4), (valorActual = 3), (indice = 3);
 
 // Second call
-valorPrevio = 7, valorActual = 2, indice = 2
+(valorPrevio = 7), (valorActual = 2), (indice = 2);
 
 // Third call
-valorPrevio = 9, valorActual = 1, indice = 1
+(valorPrevio = 9), (valorActual = 1), (indice = 1);
 
 // Fourth call
-valorPrevio = 10, valorActual = 0, indice = 0
+(valorPrevio = 10), (valorActual = 0), (indice = 0);
 
 // el array sobre el que se llama a reduceRight siempre es el objeto [0,1,2,3,4]
 
@@ -66,24 +65,24 @@ valorPrevio = 10, valorActual = 0, indice = 0
 Y si proporcionas un `valorInicial`, el resultado sería como este:
 
 ```js
-[0,1,2,3,4].reduceRight(function(valorPrevio, valorActual, indice, array){
+[0, 1, 2, 3, 4].reduceRight(function (valorPrevio, valorActual, indice, array) {
   return valorPrevio + currentValue;
 }, 10);
 
 // Primera llamada
-valorPrevio = 10, valorActual = 4, indice = 4
+(valorPrevio = 10), (valorActual = 4), (indice = 4);
 
 // Segunda llamada
-valorPrevio = 14, valorActual = 3, indice = 3
+(valorPrevio = 14), (valorActual = 3), (indice = 3);
 
 // Tercera llamada
-valorPrevio = 17, valorActual = 2, indice = 2
+(valorPrevio = 17), (valorActual = 2), (indice = 2);
 
 // Cuarta llamada
-valorPrevio = 19, valorActual = 1, indice = 1
+(valorPrevio = 19), (valorActual = 1), (indice = 1);
 
 // Quinta llamada
-valorPrevio = 20, valorActual = 0, indice = 0
+(valorPrevio = 20), (valorActual = 0), (indice = 0);
 
 // el array sobre el que se llama a reduce siempre es el objeto [0,1,2,3,4]
 
@@ -95,44 +94,31 @@ valorPrevio = 20, valorActual = 0, indice = 0
 `reduceRight` es una extensión de JavaScript al estándar ECMA-262; como tal puede que no esté presente en otras implementaciones del estándar. Puedes trabajar con ésto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `reduceRight` en implementaciones de ECMA-262 que no lo implementan de modo nativo. Este algoritmo es exactamente el mismo usando en Firefox y SpiderMonkey.
 
 ```js
-if (!Array.prototype.reduceRight)
-{
-  Array.prototype.reduceRight = function(fun /*, inicial*/)
-  {
+if (!Array.prototype.reduceRight) {
+  Array.prototype.reduceRight = function (fun /*, inicial*/) {
     var longitud = this.length;
-    if (typeof fun != "function")
-      throw new TypeError();
+    if (typeof fun != "function") throw new TypeError();
 
     // no se devuelve ningún valor si no hay valor inicial y el array está vacío
-    if (longitud == 0 && arguments.length == 1)
-      throw new TypeError();
+    if (longitud == 0 && arguments.length == 1) throw new TypeError();
 
     var indice = longitud - 1;
-    if (arguments.length >= 2)
-    {
+    if (arguments.length >= 2) {
       var rv = arguments[1];
-    }
-    else
-    {
-      do
-      {
-        if (indice in this)
-        {
+    } else {
+      do {
+        if (indice in this) {
           rv = this[indice--];
           break;
         }
 
         // si el array no contiene valores, no existe valor incial a devolver
-        if (--indice < 0)
-          throw new TypeError();
-      }
-      while (true);
+        if (--indice < 0) throw new TypeError();
+      } while (true);
     }
 
-    for (; indice >= 0; indice--)
-    {
-      if (indice in this)
-        rv = fun.call(null, rv, this[indice], indice, this);
+    for (; indice >= 0; indice--) {
+      if (indice in this) rv = fun.call(null, rv, this[indice], indice, this);
     }
 
     return rv;
@@ -145,14 +131,20 @@ if (!Array.prototype.reduceRight)
 ### Ejemplos: Resumir todos los valores de un array
 
 ```js
-var total = [0, 1, 2, 3].reduceRight(function(a, b) { return a + b; });
+var total = [0, 1, 2, 3].reduceRight(function (a, b) {
+  return a + b;
+});
 // total == 6
 ```
 
 ### Ejemplo: Integrar un array a partir de varios arrays
 
 ```js
-var integrado = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+var integrado = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduceRight(function (a, b) {
   return a.concat(b);
 }, []);
 // integrado es [4, 5, 2, 3, 0, 1]

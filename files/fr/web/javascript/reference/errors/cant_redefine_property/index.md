@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cant_redefine_property
-original_slug: Web/JavaScript/Reference/Erreurs/Cant_redefine_property
 ---
 
 {{jsSidebar("Errors")}}
@@ -35,9 +29,9 @@ La méthode {{jsxref("Object.defineProperty()")}} crée des propriétés non-con
 
 ```js example-bad
 var obj = Object.create({});
-Object.defineProperty(obj, "toto", {value: "machin"});
+Object.defineProperty(obj, "toto", { value: "machin" });
 
-Object.defineProperty(obj, "toto", {value: "bidule"});
+Object.defineProperty(obj, "toto", { value: "bidule" });
 // TypeError: can't redefine non-configurable property "toto"
 ```
 
@@ -45,8 +39,8 @@ Si on veut pouvoir redéfinir la propriété "toto" dans la suite du code, il fa
 
 ```js example-good
 var obj = Object.create({});
-Object.defineProperty(obj, "toto", {value: "machin", configurable: true});
-Object.defineProperty(obj, "toto", {value: "bidule", configurable: true});
+Object.defineProperty(obj, "toto", { value: "machin", configurable: true });
+Object.defineProperty(obj, "toto", { value: "bidule", configurable: true });
 ```
 
 ## Voir aussi

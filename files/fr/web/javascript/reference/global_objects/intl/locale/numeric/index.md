@@ -1,15 +1,6 @@
 ---
 title: Intl.Locale.prototype.numeric
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/numeric
 ---
 
 {{JSRef}}
@@ -37,7 +28,7 @@ console.log(numericStr.numeric);
 Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété `numeric` sur cet objet afin de définir le système de numération à utiliser pour cette locale.
 
 ```js
-let numericViaObj= new Intl.Locale("en-Latn-US", {numeric: true});
+let numericViaObj = new Intl.Locale("en-Latn-US", { numeric: true });
 console.log(us12hour.numeric);
 // Affichera "true" dans la console
 ```

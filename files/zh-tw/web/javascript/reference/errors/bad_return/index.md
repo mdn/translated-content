@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: return not in function'
+title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
 ---
 
@@ -38,7 +38,7 @@ var cheer = function(score) {
 乍看之下大括號寫對了，但其實在第一個 `if` 的後面，少了一個 `{`。正確的寫法應該是：
 
 ```js example-good
-var cheer = function(score) {
+var cheer = function (score) {
   if (score === 147) {
     return "Maximum!";
   }

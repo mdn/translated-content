@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 490c9e8c6d2a0faf04f8dcff3472dbe5c324eac3
 ---
 
+{{GlossarySidebar}}
+
 **Base64** est un groupe de schémas pour [encoder des données binaires sous forme d'un texte](https://fr.wikipedia.org/wiki/Conversion_du_binaire_en_texte) au format ASCII grâce à la représentation de ces données en base 64. Le terme _base64_ vient à l'origine de l'encodage utilisé pour transférer certains [contenus MIME](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions#Content-Transfer-Encoding).
 
 Les schémas d'encodage en base64 sont principalement utilisés lorsqu'il s'agit d'enregistrer ou d'envoyer des données binaires via un média qui a été conçu pour gérer du texte en ASCII. Cette transformation permet de conserver l'intégrité des données envoyées lors du transport. Base64 est utilisé par plusieurs applications, notamment celles qui gèrent les courriels avec [MIME](https://fr.wikipedia.org/wiki/MIME), et le stockage de données complexes en [XML](/fr/docs/Web/XML).
@@ -40,17 +42,17 @@ Comme les chaînes de caractères JavaScript sont encodées sur 16 bits, pour la
 ```js example-bad
 // unescape() et escape() sont dépréciées, à éviter !
 
-function utf8_to_b64( str ) {
-  return window.btoa(unescape(encodeURIComponent( str )));
+function utf8_to_b64(str) {
+  return window.btoa(unescape(encodeURIComponent(str)));
 }
 
-function b64_to_utf8( str ) {
-  return decodeURIComponent(escape(window.atob( str )));
+function b64_to_utf8(str) {
+  return decodeURIComponent(escape(window.atob(str)));
 }
 
 // Utilisation :
-utf8_to_b64('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
-b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
+utf8_to_b64("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
+b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
 ```
 
 Cette solution a été proposée dans un article de [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
@@ -83,14 +85,14 @@ function b64ToUint6(nChr) {
   return nChr > 64 && nChr < 91
     ? nChr - 65
     : nChr > 96 && nChr < 123
-    ? nChr - 71
-    : nChr > 47 && nChr < 58
-    ? nChr + 4
-    : nChr === 43
-    ? 62
-    : nChr === 47
-    ? 63
-    : 0;
+      ? nChr - 71
+      : nChr > 47 && nChr < 58
+        ? nChr + 4
+        : nChr === 43
+          ? 62
+          : nChr === 47
+            ? 63
+            : 0;
 }
 
 function base64DecToArr(sBase64, nBlocksSize) {
@@ -128,14 +130,14 @@ function uint6ToB64(nUint6) {
   return nUint6 < 26
     ? nUint6 + 65
     : nUint6 < 52
-    ? nUint6 + 71
-    : nUint6 < 62
-    ? nUint6 - 4
-    : nUint6 === 62
-    ? 43
-    : nUint6 === 63
-    ? 47
-    : 65;
+      ? nUint6 + 71
+      : nUint6 < 62
+        ? nUint6 - 4
+        : nUint6 === 62
+          ? 43
+          : nUint6 === 63
+            ? 47
+            : 65;
 }
 
 function base64EncArr(aBytes) {
@@ -156,7 +158,7 @@ function base64EncArr(aBytes) {
         uint6ToB64((nUint24 >>> 18) & 63),
         uint6ToB64((nUint24 >>> 12) & 63),
         uint6ToB64((nUint24 >>> 6) & 63),
-        uint6ToB64(nUint24 & 63)
+        uint6ToB64(nUint24 & 63),
       );
       nUint24 = 0;
     }
@@ -185,27 +187,27 @@ function UTF8ArrToStr(aBytes) {
             aBytes[++nIdx] -
             128
         : nPart > 247 && nPart < 252 && nIdx + 4 < nLen /* cinq octets */
-        ? ((nPart - 248) << 24) +
-          ((aBytes[++nIdx] - 128) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* quatre octets */
-        ? ((nPart - 240) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* trois octets */
-        ? ((nPart - 224) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* deux octets */
-        ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
-        : /* nPart < 127 ? */ /* un octet */
-          nPart
+          ? ((nPart - 248) << 24) +
+            ((aBytes[++nIdx] - 128) << 18) +
+            ((aBytes[++nIdx] - 128) << 12) +
+            ((aBytes[++nIdx] - 128) << 6) +
+            aBytes[++nIdx] -
+            128
+          : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* quatre octets */
+            ? ((nPart - 240) << 18) +
+              ((aBytes[++nIdx] - 128) << 12) +
+              ((aBytes[++nIdx] - 128) << 6) +
+              aBytes[++nIdx] -
+              128
+            : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* trois octets */
+              ? ((nPart - 224) << 12) +
+                ((aBytes[++nIdx] - 128) << 6) +
+                aBytes[++nIdx] -
+                128
+              : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* deux octets */
+                ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
+                : /* nPart < 127 ? */ /* un octet */
+                  nPart,
     );
   }
   return sView;
@@ -227,14 +229,14 @@ function strToUTF8Arr(sDOMStr) {
       nChr < 0x80
         ? 1
         : nChr < 0x800
-        ? 2
-        : nChr < 0x10000
-        ? 3
-        : nChr < 0x200000
-        ? 4
-        : nChr < 0x4000000
-        ? 5
-        : 6;
+          ? 2
+          : nChr < 0x10000
+            ? 3
+            : nChr < 0x200000
+              ? 4
+              : nChr < 0x4000000
+                ? 5
+                : 6;
   }
   aBytes = new Uint8Array(nArrLen);
 
@@ -312,10 +314,14 @@ Ces fonctions permettent de créer des objets [`Uint8Array`](/fr/docs/Web/JavaSc
 
 ```js
 // "Base 64 \u2014 Mozilla Developer Network"
-var monTableau = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==");
+var monTableau = base64DecToArr(
+  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
+);
 
 // "Base 64 \u2014 Mozilla Developer Network"
-var monBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==").buffer;
+var monBuffer = base64DecToArr(
+  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
+).buffer;
 
 alert(monBuffer.byteLength);
 ```

@@ -1,7 +1,6 @@
 ---
 title: 사용자 정의 요소 사용하기
 slug: Web/API/Web_components/Using_custom_elements
-original_slug: Web/Web_Components/Using_custom_elements
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -21,7 +20,7 @@ original_slug: Web/Web_Components/Using_custom_elements
 예를 들어, 사용자 정의 [단어 카운트 요소](https://mdn.github.io/web-components-examples/word-count-web-component/)를 다음과 같이 정의할 수 있습니다.
 
 ```js
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 이 요소는 `word-count` 라고 불리며, 이것의 클래스 객체는 `WordCount` 이고, 이것은 {{htmlelement("p")}}요소를 확장합니다.
@@ -48,7 +47,7 @@ class WordCount extends HTMLParagraphElement {
 두 종류의 사용자 정의 요소가 있습니다.
 
 - **독립적인 사용자 정의 요소**는 독립적입니다. 이 유형의 요소는 표준 HTML 요소를 상속받지 않습니다. 이러한 요소는 페이지에서 말 그대로 HTML 요소로 작성됨으로써 사용됩니다. 예를 들어 `<popup-info>`, 혹은 `document.createElement("popup-info")`.
-- **사용자 정의된 내장 요소**는 기본 HTML 요소를 상속받습니다. 이러한 요소를 생성하기 위해서는, (위의 예제에서 암시되었듯이) 어떤 요소를 이것이 확장하는지 명시해야 하며, 이러한 요소는 기본 요소를 작성함으로써 사용되나 {{htmlattrxref("is")}} 특성 (혹은 속성) 에 사용자 정의 요소의 이름을 명시해야 합니다. 예를 들어 `<p is="word-count">`, 혹은 `document.createElement("p", { is: "word-count" })`.
+- **사용자 정의된 내장 요소**는 기본 HTML 요소를 상속받습니다. 이러한 요소를 생성하기 위해서는, (위의 예제에서 암시되었듯이) 어떤 요소를 이것이 확장하는지 명시해야 하며, 이러한 요소는 기본 요소를 작성함으로써 사용되나 [`is`](/ko/docs/Web/HTML/Global_attributes#is) 특성 (혹은 속성) 에 사용자 정의 요소의 이름을 명시해야 합니다. 예를 들어 `<p is="word-count">`, 혹은 `document.createElement("p", { is: "word-count" })`.
 
 ## 몇 가지 간단한 예제 살펴보기
 
@@ -79,42 +78,47 @@ class PopUpInfo extends HTMLElement {
 
 ```js
 // shadow root을 생성합니다
-this.attachShadow({mode: 'open'}); // 'this.shadowRoot'을 설정하고 반환합니다
+this.attachShadow({ mode: "open" }); // 'this.shadowRoot'을 설정하고 반환합니다
 
 // (중첩된) span 요소들을 생성합니다
-const wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-const icon = wrapper.appendChild(document.createElement('span'));
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
+const wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+const icon = wrapper.appendChild(document.createElement("span"));
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
 // 정의된 특성으로부터의 아이콘 혹은 기본 아이콘을 삽입합니다
-const img = icon.appendChild(document.createElement('img'));
-img.src = this.hasAttribute('src') ? this.getAttribute('src') : 'img/default.png';
+const img = icon.appendChild(document.createElement("img"));
+img.src = this.hasAttribute("src")
+  ? this.getAttribute("src")
+  : "img/default.png";
 
-const info = wrapper.appendChild(document.createElement('span'));
-info.setAttribute('class','info');
+const info = wrapper.appendChild(document.createElement("span"));
+info.setAttribute("class", "info");
 // 특성의 내용을 취하고 그것을 info span 내부에 넣습니다
-info.textContent = this.getAttribute('data-text');
+info.textContent = this.getAttribute("data-text");
 
 // shadow dom에 적용할 몇 가지 CSS를 생성합니다
-const style = document.createElement('style');
-style.textContent = '.wrapper {' +
-// 간결함을 위해 CSS 생략됨
+const style = document.createElement("style");
+style.textContent =
+  ".wrapper {" +
+  // 간결함을 위해 CSS 생략됨
 
-// 생성된 요소들을 shadow DOM에 부착합니다
-this.shadowRoot.append(style,wrapper);
+  // 생성된 요소들을 shadow DOM에 부착합니다
+  this.shadowRoot.append(style, wrapper);
 ```
 
 마지막으로, `CustomElementRegistry` 에 사용자 정의 요소를 앞에서 언급된 `define()` 메서드를 사용해 등록합니다. 매개변수에서 요소의 이름과, 그리고 나서 요소의 기능을 정의하는 클래스명을 명시합니다.
 
 ```js
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 이 요소는 이제 페이지에서 사용 가능합니다. HTML 전체에서, 요소를 다음과 같이 사용합니다.
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."></popup-info>
 ```
@@ -129,9 +133,9 @@ customElements.define('popup-info', PopUpInfo);
 
 ```js
 // 외부 스타일을 shadow dom에 적용하기
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // 생성된 요소를 shadow dom에 부착하기
 shadow.appendChild(linkElem);
@@ -165,16 +169,14 @@ class ExpandingList extends HTMLUListElement {
 다음으로, 전과 같이 `define()` 메서드를 사용하여 요소를 등록하나, 이번엔 이 사용자 정의 요소가 어떤 요소를 상속받는지를 나타내는 옵션 객체를 포함합니다.
 
 ```js
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 웹 document에서 이 내장 요소를 사용하는 것은 또한 어느 정도 다르게 보입니다.
 
 ```html
 <ul is="expanding-list">
-
   ...
-
 </ul>
 ```
 
@@ -189,6 +191,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 - `connectedCallback`: 사용자 정의 요소가 문서에 연결된 요소에 추가될 때마다 호출됩니다. 이것은 노드가 이동될 때마다 발생할 것이며, 요소의 내용이 완전히 해석되기 전에 발생할 지도 모릅니다.
 
   > **참고:** `connectedCallback` 은 요소가 더 이상 연결되지 않았을 때 호출될 수도 있으므로, 확실하게 하기 위해선 {{domxref("Node.isConnected")}}를 사용하세요.
+
 - `disconnectedCallback`: 사용자 정의 요소가 document의 DOM에서 연결 해제되었을 때마다 호출됩니다.
 - `adoptedCallback`: 사용자 정의 요소가 새로운 document로 이동되었을 때마다 호출됩니다.
 - `attributeChangedCallback`: 사용자 정의 요소의 특성들 중 하나가 추가되거나, 제거되거나, 변경될 때마다 호출됩니다. 어떤 특성이 변경에 대해 알릴지는 static get `observedAttributes` 메서드에서 명시됩니다.
@@ -202,10 +205,10 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 클래스 생성자는 정말로 간단합니다. shadow DOM을 요소에 부착하고, 빈 {{htmlelement("div")}} 와 {{htmlelement("style")}} 요소를 shadow root에 부착합니다.
 
 ```js
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 
-const div = document.createElement('div');
-const style = document.createElement('style');
+const div = document.createElement("div");
+const style = document.createElement("style");
 shadow.appendChild(style);
 shadow.appendChild(div);
 ```
@@ -215,11 +218,11 @@ shadow.appendChild(div);
 ```js
 function updateStyle(elem) {
   const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
+  shadow.querySelector("style").textContent = `
     div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
+      width: ${elem.getAttribute("l")}px;
+      height: ${elem.getAttribute("l")}px;
+      background-color: ${elem.getAttribute("c")};
     }
   `;
 }

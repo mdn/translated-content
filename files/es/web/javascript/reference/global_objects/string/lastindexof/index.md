@@ -1,7 +1,6 @@
 ---
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/lastIndexOf
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -19,6 +18,7 @@ cadena.lastIndexOf(valorBusqueda[, indiceDesde])
 ### Parámetros
 
 - `valorBusqueda`
+
   - : Una cadena que representa el valor que se desea buscar.
 
 - `indiceDesde`
@@ -29,16 +29,16 @@ cadena.lastIndexOf(valorBusqueda[, indiceDesde])
 Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer carácter es 0, y el índice del último carácter es `nombreCadena.length - 1`.
 
 ```js
-"canal".lastIndexOf("a")   // returns 3
-"canal".lastIndexOf("a",2) // returns 1
-"canal".lastIndexOf("a",0) // returns -1
-"canal".lastIndexOf("x")   // returns -1
+"canal".lastIndexOf("a"); // returns 3
+"canal".lastIndexOf("a", 2); // returns 1
+"canal".lastIndexOf("a", 0); // returns -1
+"canal".lastIndexOf("x"); // returns -1
 ```
 
 El método `lastIndexOf` es sensible a mayúsculas. Por ejemplo, la siguiente expresión devuelve -1:
 
 ```js
-"Ballena Azul, Ballena Asesina".lastIndexOf("azul")
+"Ballena Azul, Ballena Asesina".lastIndexOf("azul");
 ```
 
 ## Ejemplos
@@ -48,20 +48,24 @@ El método `lastIndexOf` es sensible a mayúsculas. Por ejemplo, la siguiente ex
 El siguiente ejemplo utiliza `indexOf` y `lastIndexOf` para localizar valores en la cadena "`Brave new world`".
 
 ```js
-var anyString="Brave new world"
+var anyString = "Brave new world";
 
 // Displays 8
-document.write("<P>The index of the first w from the beginning is " +
-   anyString.indexOf("w"))
+document.write(
+  "<P>The index of the first w from the beginning is " + anyString.indexOf("w"),
+);
 // Displays 10
-document.write("<P>The index of the first w from the end is " +
-   anyString.lastIndexOf("w"))
+document.write(
+  "<P>The index of the first w from the end is " + anyString.lastIndexOf("w"),
+);
 // Displays 6
-document.write("<P>The index of 'new' from the beginning is " +
-   anyString.indexOf("new"))
+document.write(
+  "<P>The index of 'new' from the beginning is " + anyString.indexOf("new"),
+);
 // Displays 6
-document.write("<P>The index of 'new' from the end is " +
-   anyString.lastIndexOf("new"))
+document.write(
+  "<P>The index of 'new' from the end is " + anyString.lastIndexOf("new"),
+);
 ```
 
 ## Vea También

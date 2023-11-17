@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.getContext()`** 메소드는 캔버스의 드로잉 컨텍스트를 반환합니다. 컨텍스트 식별자가 지원되지 않을 경우 {{jsxref("null")}}을 반환합니다.
@@ -65,8 +66,8 @@ var ctx = canvas.getContext(contextType, contextAttributes);
 다음 코드를 사용해 캔버스의 `2d` 컨텍스트를 얻을 수 있습니다.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 

@@ -7,7 +7,7 @@ slug: Web/Guide/Graphics
 
 ## 2D 圖像
 
-- [Canvas](/zh-TW/docs/HTML/Canvas)
+- [Canvas](/zh-TW/docs/Web/API/Canvas_API)
   - : _{{HTMLElement("canvas")}} 元素提供_ _APIs 讓開發者透過 Javascript 來繪製 2D 圖像._
 - [SVG](/zh-TW/docs/Web/SVG)
   - : _可縮放向量圖像(SVG) 讓你可以使用直線，曲線以及其他幾何圖形來編寫圖像。避免使用點陣圖像(bitmaps)，你可以創造出適合任何大小的圖像。_

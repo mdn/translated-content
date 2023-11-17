@@ -13,24 +13,32 @@ slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 
 ```js
 // Display Author delete form on GET.
-exports.author_delete_get = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-            Author.findById(req.params.id).exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.params.id }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.author==null) { // No results.
-            res.redirect('/catalog/authors');
-        }
-        // Successful, so render.
-        res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
-    });
-
+exports.author_delete_get = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.params.id).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.params.id }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.author == null) {
+        // No results.
+        res.redirect("/catalog/authors");
+      }
+      // Successful, so render.
+      res.render("author_delete", {
+        title: "Delete Author",
+        author: results.author,
+        author_books: results.authors_books,
+      });
+    },
+  );
 };
 ```
 
@@ -52,32 +60,41 @@ exports.author_delete_get = function(req, res, next) {
 
 ```js
 // Handle Author delete on POST.
-exports.author_delete_post = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-          Author.findById(req.body.authorid).exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.body.authorid }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        // Success
-        if (results.authors_books.length > 0) {
-            // Author has books. Render in same way as for GET route.
-            res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
-            return;
-        }
-        else {
-            // Author has no books. Delete object and redirect to the list of authors.
-            Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
-                if (err) { return next(err); }
-                // Success - go to author list
-                res.redirect('/catalog/authors')
-            })
-        }
-    });
+exports.author_delete_post = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.body.authorid).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.body.authorid }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      // Success
+      if (results.authors_books.length > 0) {
+        // Author has books. Render in same way as for GET route.
+        res.render("author_delete", {
+          title: "Delete Author",
+          author: results.author,
+          author_books: results.authors_books,
+        });
+        return;
+      } else {
+        // Author has no books. Delete object and redirect to the list of authors.
+        Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
+          if (err) {
+            return next(err);
+          }
+          // Success - go to author list
+          res.redirect("/catalog/authors");
+        });
+      }
+    },
+  );
 };
 ```
 
@@ -133,7 +150,7 @@ block content
 
 打开 **author_detail.pug** 视图，并在底部添加以下行。
 
-```html
+```pug
 hr
 p
   a(href=author.url+'/delete') Delete author
@@ -147,11 +164,11 @@ p
 
 运行应用程序，并将浏览器打开，到<http://localhost:3000/>。然后选择所有作者链接 _All authors_，然后选择一个特定作者。最后选择删除作者链接 _Delete_ author。
 
-如果作者没有书本，您将看到这样的页面。按删除后，服务器将删除作者并重定向到作者列表。
+如果作者没有书本，你将看到这样的页面。按删除后，服务器将删除作者并重定向到作者列表。
 
 ![](locallibary_express_author_delete_nobooks.png)
 
-如果作者确实有书本，那么您将看到如下视图。然后，您可以从其详细信息页面中，删除这些书本（一旦该代码被实现！）。
+如果作者确实有书本，那么你将看到如下视图。然后，你可以从其详细信息页面中，删除这些书本（一旦该代码被实现！）。
 
 ![](locallibary_express_author_delete_withbooks.png)
 

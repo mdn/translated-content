@@ -71,7 +71,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 所有瀏覽器都支援 `XMLHttpRequest` 物件實體的 `onreadystatechange` 屬性。
 
-之後，各個瀏覽器實作了多種額外的事件處理器（如 `onload`、`onerror`、`onprogress` 等）。請參考[使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
+之後，各個瀏覽器實作了多種額外的事件處理器（如 `onload`、`onerror`、`onprogress` 等）。請參考[使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)。
 
 除了以 `on*` 屬性來設定事件處理函式，更多現代覽瀏器（包括 Firefox）也支援使用標準的 [`addEventListener()`](/zh-TW/docs/Web/API/EventTarget/addEventListener) API 註冊監聽 `XMLHttpRequest` 的事件。
 
@@ -117,9 +117,9 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 - MDN 上涵蓋 XMLHttpRequest 的相關教學：
 
-  - [Ajax — Getting Started](/zh-TW/docs/AJAX/Getting_Started)
-  - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+  - [Ajax](/zh-TW/docs/Web/Guide/AJAX)
+  - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+  - [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [`FormData`](/zh-TW/docs/Web/API/FormData)
 
 - [HTML5 Rocks — New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)

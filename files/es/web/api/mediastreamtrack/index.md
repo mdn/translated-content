@@ -44,7 +44,7 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 - {{domxref("MediaStreamTrack.onoverconstrained")}}
   - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un objeto [`overconstrained`](/es/docs/Web/Reference/Events/overconstrained) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
 - {{domxref("MediaStreamTrack.oneended")}}
-  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un evento [`ended`](/es/docs/Web/Reference/Events/ended_(MediaStream)) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
+  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un evento [`ended`](</es/docs/Web/Reference/Events/ended_(MediaStream)>) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
 
 ## Métodos
 

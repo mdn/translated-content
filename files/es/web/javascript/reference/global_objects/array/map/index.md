@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/map
 ---
 
 {{JSRef}}
@@ -10,15 +9,15 @@ El método **`map()`** crea un nuevo array con los resultados de la llamada a la
 
 ```js
 var numbers = [1, 5, 10, 15];
-var doubles = numbers.map(function(x) {
-   return x * 2;
+var doubles = numbers.map(function (x) {
+  return x * 2;
 });
 // doubles is now [2, 10, 20, 30]
 // numbers is still [1, 5, 10, 15]
 
 var numbers = [1, 4, 9];
-var roots = numbers.map(function(num) {
-    return Math.sqrt(num);
+var roots = numbers.map(function (num) {
+  return Math.sqrt(num);
 });
 // roots is now [1, 2, 3]
 // numbers is still [1, 4, 9]
@@ -71,7 +70,7 @@ El rango de elementos procesado por `map` es establecido antes de la primera inv
 El siguiente código itera sobre un array de números, aplicándoles la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo array a partir del inicial.
 
 ```js
-var numeros= [1, 4, 9];
+var numeros = [1, 4, 9];
 var raices = numeros.map(Math.sqrt);
 // raices tiene [1, 2, 3]
 // numeros aún mantiene [1, 4, 9]
@@ -82,14 +81,16 @@ var raices = numeros.map(Math.sqrt);
 El siguiente código toma un array de objetos y crea un nuevo array que contiene los nuevos objetos formateados.
 
 ```js
-var kvArray = [{clave:1, valor:10},
-               {clave:2, valor:20},
-               {clave:3, valor: 30}];
+var kvArray = [
+  { clave: 1, valor: 10 },
+  { clave: 2, valor: 20 },
+  { clave: 3, valor: 30 },
+];
 
-var reformattedArray = kvArray.map(function(obj){
-   var rObj = {};
-   rObj[obj.clave] = obj.valor;
-   return rObj;
+var reformattedArray = kvArray.map(function (obj) {
+  var rObj = {};
+  rObj[obj.clave] = obj.valor;
+  return rObj;
 });
 
 // reformattedArray es ahora [{1:10}, {2:20}, {3:30}],
@@ -106,7 +107,7 @@ El siguiente código muestra cómo trabaja `map` cuando se utiliza una función 
 
 ```js
 var numeros = [1, 4, 9];
-var dobles  = numeros.map(function(num) {
+var dobles = numeros.map(function (num) {
   return num * 2;
 });
 
@@ -120,7 +121,9 @@ Este ejemplo muestra como usar `map` en {{jsxref("Global_Objects/String", "Strin
 
 ```js
 var map = Array.prototype.map;
-var valores = map.call('Hello World', function(char) { return char.charCodeAt(0); });
+var valores = map.call("Hello World", function (char) {
+  return char.charCodeAt(0);
+});
 // valores ahora tiene [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 ```
 
@@ -129,8 +132,8 @@ var valores = map.call('Hello World', function(char) { return char.charCodeAt(0)
 Este ejemplo muestra como iterar sobre una colección de objetos obtenidos por `querySelectorAll`. En este caso obtenemos todas las opciones seleccionadas en pantalla y se imprimen en la consola:
 
 ```js
-var elems = document.querySelectorAll('select option:checked');
-var values = [].map.call(elems, function(obj) {
+var elems = document.querySelectorAll("select option:checked");
+var values = [].map.call(elems, function (obj) {
   return obj.value;
 });
 ```
@@ -138,10 +141,13 @@ var values = [].map.call(elems, function(obj) {
 ### Usando `map` para invertir una cadena
 
 ```js
-var str = '12345';
-[].map.call(str, function(x) {
-  return x;
-}).reverse().join('');
+var str = "12345";
+[].map
+  .call(str, function (x) {
+    return x;
+  })
+  .reverse()
+  .join("");
 
 // Salida: '54321'
 // Bonus: usa'===' para probar si la cadena original era un palindromo
@@ -155,7 +161,7 @@ Es común utilizar el callback con un argumento (el elemento siendo pasado). Cie
 
 ```js
 // Considera:
-['1', '2', '3'].map(parseInt);
+["1", "2", "3"].map(parseInt);
 // Mientras uno esperaría [1, 2, 3]
 // en realidad se obtiene [1, NaN, NaN]
 
@@ -170,11 +176,11 @@ function returnInt(element) {
   return parseInt(element, 10);
 }
 
-['1', '2', '3'].map(returnInt); // [1, 2, 3]
+["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // El resultado es un arreglo de números (como se esperaba)
 
 // Un modo más simple de lograr lo de arriba, mientras de evita el "gotcha":
-['1', '2', '3'].map(Number); // [1, 2, 3]
+["1", "2", "3"].map(Number); // [1, 2, 3]
 ```
 
 ## Polyfill
@@ -185,13 +191,11 @@ function returnInt(element) {
 // Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
-
-  Array.prototype.map = function(callback, thisArg) {
-
+  Array.prototype.map = function (callback, thisArg) {
     var T, A, k;
 
     if (this == null) {
-      throw new TypeError(' this is null or not defined');
+      throw new TypeError(" this is null or not defined");
     }
 
     // 1. Let O be the result of calling ToObject passing the |this|
@@ -205,8 +209,8 @@ if (!Array.prototype.map) {
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -224,7 +228,6 @@ if (!Array.prototype.map) {
 
     // 8. Repeat, while k < len
     while (k < len) {
-
       var kValue, mappedValue;
 
       // a. Let Pk be ToString(k).
@@ -234,7 +237,6 @@ if (!Array.prototype.map) {
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal
         //    method of O with argument Pk.
         kValue = O[k];

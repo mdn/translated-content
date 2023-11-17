@@ -1,12 +1,6 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Web
-translation_of: Web/CSS/caret-color
 ---
 
 {{CSSRef}}

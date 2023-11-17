@@ -1,12 +1,6 @@
 ---
 title: Collections indexées
 slug: Web/JavaScript/Guide/Indexed_collections
-tags:
-  - Array
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Indexed_collections
-original_slug: Web/JavaScript/Guide/Collections_indexées
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
@@ -15,7 +9,7 @@ Ce chapitre présente les collections de données qui sont ordonnées par un ind
 
 ## Le type `Array`
 
-Un *tableau* (<i lang="en">array</i> en anglais) est un ensemble ordonné de valeurs auxquelles on peut faire référence avec un nom et un indice. Par exemple, si on a un tableau `emp` qui contient les noms d'employés indexés par leurs numéros d'employé, on pourrait utiliser `emp[0]` pour accéder à l'employé 0, `emp[1]` pour accéder au suivant et ainsi de suite.
+Un _tableau_ (<i lang="en">array</i> en anglais) est un ensemble ordonné de valeurs auxquelles on peut faire référence avec un nom et un indice. Par exemple, si on a un tableau `emp` qui contient les noms d'employés indexés par leurs numéros d'employé, on pourrait utiliser `emp[0]` pour accéder à l'employé 0, `emp[1]` pour accéder au suivant et ainsi de suite.
 
 JavaScript ne possède pas de type particulier pour représenter un tableau de données. En revanche, il est possible d'utiliser l'objet natif `Array` ainsi que ses méthodes pour manipuler des tableaux. L'objet `Array` possède plusieurs méthodes qui permettent de manipuler les tableaux pour les fusionner, les inverser, les trier, etc. Il possède une propriété de longueur ainsi que d'autres propriétés qui peuvent être utilisées avec les expressions rationnelles.
 
@@ -62,9 +56,9 @@ let obj = {prop: [élément0, élément1, ...., élémentN]}
 Si on souhaite initialiser un tableau avec un seul élément et que cet élément est un nombre, il est nécessaire d'utiliser la notation littérale. En effet, si un nombre est passé à la fonction `Array()` pour construire le tableau, celui-ci sera interprété comme une longueur et non comme la valeur d'un élément.
 
 ```js
-let arr1 = [42];      // Le tableau créé contient bien un élément qui vaut 42
+let arr1 = [42]; // Le tableau créé contient bien un élément qui vaut 42
 let arr2 = Array(42); // Crée un tableau sans élément
-                      // mais dont arr.length vaut 42
+// mais dont arr.length vaut 42
 
 // Le code ci-dessus est équivalent à
 let arr = [];
@@ -74,7 +68,7 @@ arr.length = 42;
 Si N est un nombre décimal dont la partie fractionnaire n'est pas nulle, tout appel à `Array(N)` renverra une exception `RangeError`. Par exemple&nbsp;:
 
 ```js
-let arr = Array(9.3);  // RangeError: Invalid array length
+let arr = Array(9.3); // RangeError: Invalid array length
 ```
 
 Si on souhaite créer un tableau d'un seul élément et ce quel que soit le type de données, il sera préférable d'utiliser les littéraux de tableaux. Sinon, on peut créer un tableau vide puis lui ajouter un seul élément.
@@ -101,15 +95,15 @@ emp[2] = "August West";
 > ```js
 > let arr = [];
 > arr[3.4] = "Oranges";
-> console.log(arr.length);                // 0
-> console.log(arr.hasOwnProperty(3.4));   // true
+> console.log(arr.length); // 0
+> console.log(arr.hasOwnProperty(3.4)); // true
 > ```
 
 Il est aussi possible de remplir un tableau directement lors de sa création&nbsp;:
 
 ```js
 let monTableau = new Array("Coucou", maVar, 3.14159);
-let monTableau = ["Mangue", "Pomme", "Orange"]
+let monTableau = ["Mangue", "Pomme", "Orange"];
 ```
 
 ### Faire référence aux éléments d'un tableau
@@ -126,8 +120,8 @@ On pourra accéder au premier élément du tableau en utilisant `monTableau[0]`,
 >
 > ```js
 > let arr = ["un", "deux", "trois"];
-> arr[2];         // "trois" - on accède à un élément du tableau
-> arr["length"];  // 3 - on accède à une propriété du tableau
+> arr[2]; // "trois" - on accède à un élément du tableau
+> arr["length"]; // 3 - on accède à une propriété du tableau
 > ```
 
 ### Comprendre la propriété `length`
@@ -136,14 +130,14 @@ En termes d'implémentation, les tableaux JavaScript stockent leurs éléments c
 
 ```js
 let chats = [];
-chats[30] = ['Biduche'];
+chats[30] = ["Biduche"];
 console.log(chats.length); // 31
 ```
 
 Il est aussi possible d'affecter une valeur à la propriété `length`. Si la valeur fournie est inférieure au nombre d'éléments stockés, cela tronquera le tableau. Si la valeur est 0, cela videra le tableau&nbsp;:
 
 ```js
-let chats = ['Marie', 'Toulouse', 'Berlioz'];
+let chats = ["Marie", "Toulouse", "Berlioz"];
 console.log(chats.length); // 3
 
 chats.length = 2;
@@ -161,7 +155,7 @@ console.log(chats); // [ <3 empty slots> ]
 Un tableau est une structure de données qui se prête particulièrement aux boucles, on pourra utiliser ces dernières pour parcourir les éléments du tableau de façon itérative. Voici un exemple de parcours simple&nbsp;:
 
 ```js
-let couleurs = ['rouge', 'vert', 'bleu'];
+let couleurs = ["rouge", "vert", "bleu"];
 for (let i = 0; i < couleurs.length; i++) {
   console.log(couleurs[i]);
 }
@@ -170,8 +164,8 @@ for (let i = 0; i < couleurs.length; i++) {
 Si on sait qu'aucun des éléments ne vaut `false` dans un contexte booléen (par exemple, si le tableau contient des nœuds du [DOM](/fr/docs/Web/API/Document_Object_Model)), on peut utiliser une formulation encore plus concise&nbsp;:
 
 ```js
-let divs = document.getElementsByTagName('div');
-for (let i = 0, div; div = divs[i]; i++) {
+let divs = document.getElementsByTagName("div");
+for (let i = 0, div; (div = divs[i]); i++) {
   /* On effectue un traitement sur les div */
 }
 ```
@@ -181,8 +175,8 @@ Cette syntaxe permet d'éviter d'avoir à vérifier la longueur du tableau et de
 La méthode [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) fournit une autre méthode pour parcourir un tableau&nbsp;:
 
 ```js
-let couleurs = ['rouge', 'vert', 'bleu'];
-couleurs.forEach(function(couleur) {
+let couleurs = ["rouge", "vert", "bleu"];
+couleurs.forEach(function (couleur) {
   console.log(couleur);
 });
 ```
@@ -190,8 +184,8 @@ couleurs.forEach(function(couleur) {
 Avec les fonctions fléchées (apparues avec ES6 / ECMAScript 2015), on peut obtenir un code plus concis&nbsp;:
 
 ```js
-let couleurs = ['rouge', 'vert', 'bleu'];
-couleurs.forEach(couleur => console.log(couleur));
+let couleurs = ["rouge", "vert", "bleu"];
+couleurs.forEach((couleur) => console.log(couleur));
 ```
 
 La fonction passée comme argument à `forEach()` est exécutée une fois pour chacun des éléments du tableau (l'élément du tableau sera passé comme argument de cette fonction). Les éléments qui n'ont pas de valeur affectée ne sont pas parcourus lors d'une boucle `forEach`.
@@ -199,21 +193,23 @@ La fonction passée comme argument à `forEach()` est exécutée une fois pour c
 On notera que les éléments ne sont pas parcourus lorsqu'ils n'ont pas eu de valeur affectée. Cependant, si on a affecté la valeur [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) de façon explicite à un élément, il sera pris en compte lors de la boucle&nbsp;:
 
 ```js
-let tableau = ['premier', 'deuxième', , 'quatrième'];
+let tableau = ["premier", "deuxième", , "quatrième"];
 
 // affiche ['premier', 'deuxième', 'quatrième'];
-tableau.forEach(function(élément) {
+tableau.forEach(function (élément) {
   console.log(élément);
 });
 
-if(tableau[2] === undefined) { console.log('tableau[2] vaut undefined'); } // true
+if (tableau[2] === undefined) {
+  console.log("tableau[2] vaut undefined");
+} // true
 
-let tableau = ['premier', 'deuxième', undefined, 'quatrième'];
+let tableau = ["premier", "deuxième", undefined, "quatrième"];
 
 // renvoie ['premier', 'deuxième', undefined, 'quatrième'];
-tableau.forEach(function(élément) {
+tableau.forEach(function (élément) {
   console.log(élément);
-})
+});
 ```
 
 Étant donné que les éléments des tableaux sont stockés comme des propriétés classiques, il n'est pas conseillé d'utiliser des boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) pour parcourir les tableaux car cela listerait également les propriétés énumérables (en plus des éléments).
@@ -225,76 +221,76 @@ L'objet `Array` possède les méthodes suivantes&nbsp;:
 - [`concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) permet de fusionner deux ou plusieurs tableaux et de renvoyer le résultat dans un nouveau tableau&nbsp;:
 
   ```js
-    let monTableau = new Array("1", "2", "3");
-    monTableau = monTableau.concat("a", "b", "c"); // monTableau is now ["1", "2", "3", "a", "b", "c"]
-    ```
+  let monTableau = new Array("1", "2", "3");
+  monTableau = monTableau.concat("a", "b", "c"); // monTableau is now ["1", "2", "3", "a", "b", "c"]
+  ```
 
 - [`join(délimiteur = ',')`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join) permet de fusionner les éléments du tableau en une chaîne de caractères&nbsp;:
 
   ```js
-    let monTableau = new Array("Air", "Eau", "Feu");
-    let list = monTableau.join(" - "); // list sera "Air - Eau - Feu"
-    ```
+  let monTableau = new Array("Air", "Eau", "Feu");
+  let list = monTableau.join(" - "); // list sera "Air - Eau - Feu"
+  ```
 
 - [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push) permet d'ajouter un ou plusieurs éléments à la fin d'un tableau et renvoie la longueur du tableau&nbsp;:
 
   ```js
-    let monTableau = new Array("1", "2");
-    monTableau.push("3"); // monTableau vaut désormais ["1", "2", "3"]
-    ```
+  let monTableau = new Array("1", "2");
+  monTableau.push("3"); // monTableau vaut désormais ["1", "2", "3"]
+  ```
 
 - [`pop()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) permet de retirer le dernier élément (le plus à droite) du tableau et renvoie cet élément&nbsp;:
 
   ```js
-    let monTableau = new Array("1", "2", "3");
-    let dernier = monTableau.pop(); // monTableau vaut désormais ["1", "2"], dernier = "3"
-    ```
+  let monTableau = new Array("1", "2", "3");
+  let dernier = monTableau.pop(); // monTableau vaut désormais ["1", "2"], dernier = "3"
+  ```
 
 - [`shift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) retire le premier élément d'un tableau (le plus à gauche) et renvoie cet élément&nbsp;:
 
   ```js
-    let monTableau = new Array("1", "2", "3");
-    let premier = monTableau.shift(); // monTableau vaut désormais ["2", "3"], premier vaut "1"
-    ```
+  let monTableau = new Array("1", "2", "3");
+  let premier = monTableau.shift(); // monTableau vaut désormais ["2", "3"], premier vaut "1"
+  ```
 
 - [`unshift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) ajoute un ou plusieurs éléments au début du tableau et renvoie la longueur du tableau ainsi modifié&nbsp;:
 
   ```js
-    let monTableau = new Array("1", "2", "3");
-    monTableau.unshift("4", "5"); // monTableau devient ["4", "5", "1", "2", "3"]
-    ```
+  let monTableau = new Array("1", "2", "3");
+  monTableau.unshift("4", "5"); // monTableau devient ["4", "5", "1", "2", "3"]
+  ```
 
 - [`slice(indice_début, indice_fin)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) extrait une portion d'un tableau et renvoie un nouveau tableau avec ce fragment&nbsp;:
 
   ```js
-    let monTableau = new Array ("a", "b", "c", "d", "e");
-    monTableau = monTableau.slice(1, 4); // extrait les éléments entre l'indice 1 et jusqu'à
-                                         // celui d'indice 3 (4-1), elle renvoie
-                                         // [ "b", "c", "d"]
-    ```
+  let monTableau = new Array("a", "b", "c", "d", "e");
+  monTableau = monTableau.slice(1, 4); // extrait les éléments entre l'indice 1 et jusqu'à
+  // celui d'indice 3 (4-1), elle renvoie
+  // [ "b", "c", "d"]
+  ```
 
 - [`splice(indice, nbASupprimer, ajouterElement1, ajouterElement2, ...)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) retire des éléments du tableau et (éventuellement) les remplace&nbsp;:
 
   ```js
-    let monTableau = new Array ("1", "2", "3", "4", "5");
-    monTableau.splice(1, 3, "a", "b", "c", "d"); // monTableau vaut désormais ["1", "a", "b", "c", "d", "5"]
-      // Le code remplace à partir de l'indice 1 (où il y avait la valeur "2"), supprime trois éléments puis
-      // insère les arguments fournis à la suite.
-    ```
+  let monTableau = new Array("1", "2", "3", "4", "5");
+  monTableau.splice(1, 3, "a", "b", "c", "d"); // monTableau vaut désormais ["1", "a", "b", "c", "d", "5"]
+  // Le code remplace à partir de l'indice 1 (où il y avait la valeur "2"), supprime trois éléments puis
+  // insère les arguments fournis à la suite.
+  ```
 
 - [`reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) transpose les éléments du tableau à même ce tableau&nbsp;: le premier élément devient le dernier, le dernier devient le premier et ainsi de suite&nbsp;:
 
   ```js
-    let monTableau = new Array ("1", "2", "3");
-    monTableau.reverse(); // monTableau vaut maintenant [ "3", "2", "1" ]
-    ```
+  let monTableau = new Array("1", "2", "3");
+  monTableau.reverse(); // monTableau vaut maintenant [ "3", "2", "1" ]
+  ```
 
 - [`sort()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) trie les éléments d'un tableau à même ce tableau&nbsp;:
 
   ```js
-    let monTableau = new Array("Air", "Feu", "Eau");
-    monTableau.sort(); // trie le tableau [ "Air", "Eau", "Feu" ]
-    ```
+  let monTableau = new Array("Air", "Feu", "Eau");
+  monTableau.sort(); // trie le tableau [ "Air", "Eau", "Feu" ]
+  ```
 
   `sort()` peut également utiliser une fonction de rappel (<i lang="en">callback</i>) qui détermine comment les éléments sont comparés. La fonction compare deux arguments et renvoie une valeur selon les règles suivantes&nbsp;:
 
@@ -305,84 +301,88 @@ L'objet `Array` possède les méthodes suivantes&nbsp;:
   Par exemple, on peut utilise la fonction suivante pour trier par rapport à la dernière lettre du mot&nbsp;:
 
   ```js
-    let sortFn = function(a, b){
-      if (a[a.length - 1] < b[b.length - 1]) return -1;
-      if (a[a.length - 1] > b[b.length - 1]) return 1;
-      if (a[a.length - 1] == b[b.length - 1]) return 0;
-    }
-    monTableau.sort(sortFn); // le tableau devient = ["Air","Feu","Eau"]
-    ```
+  let sortFn = function (a, b) {
+    if (a[a.length - 1] < b[b.length - 1]) return -1;
+    if (a[a.length - 1] > b[b.length - 1]) return 1;
+    if (a[a.length - 1] == b[b.length - 1]) return 0;
+  };
+  monTableau.sort(sortFn); // le tableau devient = ["Air","Feu","Eau"]
+  ```
 
   Du code permettant d'émuler ces fonctions est disponible sur chacune des pages (_polyfill_). Le support natif de ces fonctionnalités dans les différents navigateurs peut être trouvé [ici](http://www.robertnyman.com/javascript/).
 
 - [`indexOf(élémentRecherché[, indiceDépart])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) recherche la valeur `élémentRecherché` dans le tableau et renvoie l'indice du premier élément qui correspond&nbsp;:
 
   ```js
-    let a = ['a', 'b', 'a', 'b', 'a'];
-    console.log(a.indexOf('b'));    // Affiche 1
-    // On recherche après la première correspondance :
-    console.log(a.indexOf('b', 2)); // Affiche 3
-    console.log(a.indexOf('z'));    // Affiche -1 car 'z' n'a pas été trouvé
-    ```
+  let a = ["a", "b", "a", "b", "a"];
+  console.log(a.indexOf("b")); // Affiche 1
+  // On recherche après la première correspondance :
+  console.log(a.indexOf("b", 2)); // Affiche 3
+  console.log(a.indexOf("z")); // Affiche -1 car 'z' n'a pas été trouvé
+  ```
 
 - [`lastIndexOf(élémentRecherché[, fromIndex])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) fonctionne comme `indexOf`, mais recherche à partir de la fin du tableau&nbsp;:
 
   ```js
-    let a = ['a', 'b', 'c', 'd', 'a', 'b'];
-    console.log(a.lastIndexOf('b'));    // Affiche 5
-    // On continue la recherche après la première correspondance en fin de tableau
-    console.log(a.lastIndexOf('b', 4)); // Affiche 1
-    console.log(a.lastIndexOf('z'));    // Affiche -1
-    ```
+  let a = ["a", "b", "c", "d", "a", "b"];
+  console.log(a.lastIndexOf("b")); // Affiche 5
+  // On continue la recherche après la première correspondance en fin de tableau
+  console.log(a.lastIndexOf("b", 4)); // Affiche 1
+  console.log(a.lastIndexOf("z")); // Affiche -1
+  ```
 
 - [`forEach(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) exécute la fonction `callback` sur chaque élément du tableau.
 
   ```js
-    let a = ['a', 'b', 'c'];
-    a.forEach(console.log); // Affichera la valeur de chaque élément dans la console
-    ```
+  let a = ["a", "b", "c"];
+  a.forEach(console.log); // Affichera la valeur de chaque élément dans la console
+  ```
 
 - [`map(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map) renvoie un nouveau tableau dont les éléments sont les images des éléments du tableau courant par la fonction `callback`&nbsp;:
 
   ```js
-    let a1 = ['a', 'b', 'c'];
-    let a2 = a1.map(function(item) { return item.toUpperCase(); });
-    console.log(a2); // affichera A,B,C dans la console
-    ```
+  let a1 = ["a", "b", "c"];
+  let a2 = a1.map(function (item) {
+    return item.toUpperCase();
+  });
+  console.log(a2); // affichera A,B,C dans la console
+  ```
 
 - [`filter(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) renvoie un nouveau tableau qui contient les éléments du tableau courant pour lesquels `callback` a renvoyé `true`.
 
   ```js
-    let a1 = ['a', 10, 'b', 20, 'c', 30];
-    let a2 = a1.filter(function(item) { return typeof item == 'number'; });
-    console.log(a2); // Affichera 10,20,30 dans la console
-    ```
+  let a1 = ["a", 10, "b", 20, "c", 30];
+  let a2 = a1.filter(function (item) {
+    return typeof item == "number";
+  });
+  console.log(a2); // Affichera 10,20,30 dans la console
+  ```
 
 - [`every(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every) renvoie `true` si `callback` renvoie `true` pour chaque élément du tableau.
 
   ```js
-    function isNumber(value){
-      return typeof value === 'number';
-    }
-    let a1 = [1, 2, 3];
-    console.log(a1.every(isNumber)); // affiche true
-    let a2 = [1, '2', 3];
-    console.log(a2.every(isNumber)); // affiche false
-    ```
+  function isNumber(value) {
+    return typeof value === "number";
+  }
+  let a1 = [1, 2, 3];
+  console.log(a1.every(isNumber)); // affiche true
+  let a2 = [1, "2", 3];
+  console.log(a2.every(isNumber)); // affiche false
+  ```
 
 - [`some(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some) renvoie `true` si `callback` renvoie `true` pour au moins un élément du tableau.
 
   ```js
-    function isNumber(value){
-      return typeof value === 'number';
-    }
-    let a1 = [1, 2, 3];
-    console.log(a1.some(isNumber)); // Affiche true
-    let a2 = [1, '2', 3];
-    console.log(a2.some(isNumber)); // Affiche true
-    let a3 = ['1', '2', '3'];
-    console.log(a3.some(isNumber)); // Affiche false
-    ```
+  function isNumber(value) {
+    return typeof value === "number";
+  }
+  let a1 = [1, 2, 3];
+  console.log(a1.some(isNumber)); // Affiche true
+  let a2 = [1, "2", 3];
+  console.log(a2.some(isNumber)); // Affiche true
+  let a3 = ["1", "2", "3"];
+  console.log(a3.some(isNumber)); // Affiche false
+  ```
 
   Les méthodes présentées ci-avant qui prennent une fonction de rappel (<i lang="en">callback</i>) en argument sont appelées méthodes itératives, car elles parcourent le tableau de façon itérative. Chacune de ces méthodes peut prendre en compte un deuxième argument (optionnel) qui sera l'objet `this` pris en compte par le <i lang="en">callback</i>. Si ce deuxième argument n'est pas fourni, `this` vaudra la valeur de l'objet global.
 
@@ -391,10 +391,12 @@ L'objet `Array` possède les méthodes suivantes&nbsp;:
 - [`reduce(callback[, valeurInitiale])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) applique `callback(premièreValeur, secondeValeur)` au fur et à mesure sur le tableau pour le réduire en une seule valeur, c'est cette valeur qui est renvoyée par la fonction&nbsp;:
 
   ```js
-    let a = [10, 20, 30];
-    let total = a.reduce(function(premier, deuxième) { return premier + deuxième; }, 0);
-    console.log(total) // Affiche 60
-    ```
+  let a = [10, 20, 30];
+  let total = a.reduce(function (premier, deuxième) {
+    return premier + deuxième;
+  }, 0);
+  console.log(total); // Affiche 60
+  ```
 
 - [`reduceRight(callback[, valeurInitiale])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight) fonctionne comme `reduce()`, mais débute avec le dernier élément (parcourt le tableau de droite à gauche).
 
@@ -432,7 +434,7 @@ Il est aussi possible d'utiliser les tableaux comme des objets afin de stocker d
 ```js
 const tableau = [1, 2, 3];
 tableau.propriete = "valeur";
-console.log(tableau.propriete);  // Affiche "valeur" dans la console
+console.log(tableau.propriete); // Affiche "valeur" dans la console
 ```
 
 ### Les tableaux et les expressions rationnelles
@@ -447,7 +449,8 @@ Les méthodes du prototype des tableaux permettent d'utiliser les méthodes d'ob
 
 ```js example-bad
 function printArguments() {
-  arguments.forEach(function(item) {  // TypeError: arguments.forEach is not a function
+  arguments.forEach(function (item) {
+    // TypeError: arguments.forEach is not a function
     console.log(item);
   });
 }
@@ -455,7 +458,7 @@ function printArguments() {
 
 ```js
 function printArguments() {
-  Array.prototype.forEach.call(arguments, function(item) {
+  Array.prototype.forEach.call(arguments, function (item) {
     console.log(item);
   });
 }
@@ -464,8 +467,8 @@ function printArguments() {
 Il est possible d'utiliser ces méthodes génériques sur des chaînes de caractères&nbsp;:
 
 ```js
-Array.prototype.forEach.call("une chaîne", function(chr) {
-   console.log(chr);
+Array.prototype.forEach.call("une chaîne", function (chr) {
+  console.log(chr);
 });
 ```
 
@@ -487,19 +490,19 @@ Le type [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBu
 
 Les vues de tableaux typés possèdent des noms explicites et fournissent des vues pour les types numériques usuels tels que `Int8`, `Uint32`, `Float64` et ainsi de suite. Il existe un type de vue spécial qui est `Uint8ClampedArray`. Ce type ramène les différentes valeurs exploitées entre 0 et 255. Cela peut notamment être utile pour [le traitement des données d'un canvas](/fr/docs/Web/API/ImageData).
 
-| Type                                     | Intervalle de valeurs | Taille exprimée en octets | Description                                                                  | Type Web IDL          | Type équivalent en C               |
-| ---------------------------------------- | --------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)         | `-128` à `127`                                                 | 1             | Entier signé avec complément à deux sur 8 bits                                        | `byte`                | `int8_t`                          |
-| [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)         | `0` à `255`                                                    | 1             | Entier non-signé sur 8 bits                                                       | `octet`               | `uint8_t`                           |
-| [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | `0` à `255`                                                    | 1             | Entier non-signé sur 8 bit (écrété)                                             | `octet`               | `uint8_t`                       |
-| [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)         | `-32768` à `32767`                                             | 2             | Entier signé avec complément à deux sur 16 bits                                       | `short`               | `int16_t`                       |
-| [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)         | `0` à `65535`                                                  | 2             | Entier non-signé sur 16 bits                                                      | `unsigned short`      | `uint16_t`                        |
-| [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)         | `-2147483648` à `2147483647`                                   | 4             | Entier signé avec complément à deux sur 32 bits                                       | `long`                | `int32_t`                       |
-| [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)         | `0` à `4294967295`                                             | 4             | Entier non-signé sur 32 bits                                                      | `unsigned long`       | `uint32_t`                        |
-| [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)     | `-3.4E38` à `3.4E38` et `1.2E-38` est le plus petit nombre positif | 4             | Nombre flottant sur 32 bits IEEE 754 (7 chiffres significatifs, ex. `1.123456`)    | `unrestricted float`  | `float`                        |
-| [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)     | `-1.8E308` à `1.8E308` et `5E-324` est le plus petit nombre positif | 8             | Nombre flottant sur 64 bits IEEE 754 (16 chiffres significatifs, ex. `1.123...15`) | `unrestricted double` | `double`                      |
-| [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)     | `-2^63` à `2^63 - 1`                                           | 8             | Entier signé avec complément à deux sur 64 bits                                       | `bigint`              | `int64_t (signed long long)`  |
-| [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)     | `0` à `2^64 - 1`                                               | 8             | Entier non-signé sur 64 bits                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+| Type                                                                                      | Intervalle de valeurs                                               | Taille exprimée en octets | Description                                                                        | Type Web IDL          | Type équivalent en C            |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------- | ---------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
+| [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)                 | `-128` à `127`                                                      | 1                         | Entier signé avec complément à deux sur 8 bits                                     | `byte`                | `int8_t`                        |
+| [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)               | `0` à `255`                                                         | 1                         | Entier non-signé sur 8 bits                                                        | `octet`               | `uint8_t`                       |
+| [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | `0` à `255`                                                         | 1                         | Entier non-signé sur 8 bit (écrété)                                                | `octet`               | `uint8_t`                       |
+| [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)               | `-32768` à `32767`                                                  | 2                         | Entier signé avec complément à deux sur 16 bits                                    | `short`               | `int16_t`                       |
+| [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)             | `0` à `65535`                                                       | 2                         | Entier non-signé sur 16 bits                                                       | `unsigned short`      | `uint16_t`                      |
+| [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)               | `-2147483648` à `2147483647`                                        | 4                         | Entier signé avec complément à deux sur 32 bits                                    | `long`                | `int32_t`                       |
+| [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)             | `0` à `4294967295`                                                  | 4                         | Entier non-signé sur 32 bits                                                       | `unsigned long`       | `uint32_t`                      |
+| [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)           | `-3.4E38` à `3.4E38` et `1.2E-38` est le plus petit nombre positif  | 4                         | Nombre flottant sur 32 bits IEEE 754 (7 chiffres significatifs, ex. `1.123456`)    | `unrestricted float`  | `float`                         |
+| [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)           | `-1.8E308` à `1.8E308` et `5E-324` est le plus petit nombre positif | 8                         | Nombre flottant sur 64 bits IEEE 754 (16 chiffres significatifs, ex. `1.123...15`) | `unrestricted double` | `double`                        |
+| [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)         | `-2^63` à `2^63 - 1`                                                | 8                         | Entier signé avec complément à deux sur 64 bits                                    | `bigint`              | `int64_t (signed long long)`    |
+| [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)       | `0` à `2^64 - 1`                                                    | 8                         | Entier non-signé sur 64 bits                                                       | `bigint`              | `uint64_t (unsigned long long)` |
 
 Pour plus d'informations sur les tableaux typés, voir [l'article de la référence](/fr/docs/Web/JavaScript/Typed_arrays) sur les différents objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
 

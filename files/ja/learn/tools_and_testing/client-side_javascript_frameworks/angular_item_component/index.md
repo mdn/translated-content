@@ -72,8 +72,7 @@ HTML ファイルと CSS ファイルへの参照は、 `item.component.ts` の 
     [id]="item.description"
     type="checkbox"
     (change)="item.done = !item.done"
-    [checked]="item.done"
-  />
+    [checked]="item.done" />
   <label [for]="item.description">\{{item.description}}</label>
 
   <div class="btn-wrapper" *ngIf="!editable">
@@ -88,8 +87,7 @@ HTML ファイルと CSS ファイルへの参照は、 `item.component.ts` の 
       placeholder="edit item"
       [value]="item.description"
       #editedItem
-      (keyup.enter)="saveItem(editedItem.value)"
-    />
+      (keyup.enter)="saveItem(editedItem.value)" />
 
     <div class="btn-wrapper">
       <button class="btn" (click)="editable = !editable">Cancel</button>
@@ -132,8 +130,7 @@ Angular は `\{{item.description}}` を使用して、 `items` 配列から現�
     placeholder="edit item"
     [value]="item.description"
     #editedItem
-    (keyup.enter)="saveItem(editedItem.value)"
-  />
+    (keyup.enter)="saveItem(editedItem.value)" />
 
   <div class="btn-wrapper">
     <button class="btn" (click)="editable = !editable">Cancel</button>

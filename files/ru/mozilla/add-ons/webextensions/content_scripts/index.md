@@ -1,11 +1,8 @@
 ---
 title: Встраиваемый скрипт
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
-tags:
-  - Web-расширение
-  - Расширение
-translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}
 
 Встраиваемый скрипт - это часть расширения, которая выполняется в контексте отдельной веб-страницы (в отличии от фоновых скриптов, выполняющихся в контексте целого браузера).
@@ -70,7 +67,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 Например, рассмотрите эту веб-страницу:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -97,9 +94,9 @@ document.body.appendChild(p);
 window.foo = "Эта глобальная переменная была добавлена страничным скриптом";
 
 // переопределяет встроенную window.confirm() функцию
-window.confirm = function() {
+window.confirm = function () {
   alert("Страничный скрипт так же переопределил 'confirm'");
-}
+};
 ```
 
 Теперь расширение загружает встраиваемый скрипт на страницу:
@@ -112,7 +109,7 @@ var pageScriptPara = document.getElementById("page-script-para");
 pageScriptPara.style.backgroundColor = "blue";
 
 // не может видеть свойств определённых страничным скриптом
-console.log(window.foo);  // undefined
+console.log(window.foo); // undefined
 
 // видит изначальное значение свойства, переопределённого страничным скриптом
 window.confirm("Вы уверены?"); // вызывает оригинальный window.confirm()
@@ -208,7 +205,7 @@ function notifyExtension(e) {
   if (e.target.tagName != "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -221,10 +218,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "Вы нажали на ссылку!",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "Вы нажали на ссылку!",
+    message: message.url,
   });
 }
 ```
@@ -247,7 +244,7 @@ function notify(message) {
 
 Результатом вызова этих методов будет возвращение [`runtime.Port`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) объекта.
 
-- [`runtime.onConnect`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) методу передаётся аргумент, являющийся собственным портом этого скрипта, [`runtime.Port`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) объект.
+- [`runtime.onConnect`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) методу передаётся аргумент, являющийся собственным портом этого скрипта, [`runtime.Port`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) объект.
 
 Как только обе стороны имеют порт, они могут:
 
@@ -264,16 +261,18 @@ function notify(message) {
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "Привет из встраиваемого скрипта"});
+var myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "Привет из встраиваемого скрипта" });
 
-myPort.onMessage.addListener(function(m) {
-  console.log("Во встраиваемом скрипте, получено сообщение из фонового скрипта: ");
+myPort.onMessage.addListener(function (m) {
+  console.log(
+    "Во встраиваемом скрипте, получено сообщение из фонового скрипта: ",
+  );
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
-  myPort.postMessage({greeting: "Они кликнули по странице!"});
+document.body.addEventListener("click", function () {
+  myPort.postMessage({ greeting: "Они кликнули по странице!" });
 });
 ```
 
@@ -295,17 +294,19 @@ var portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "Привет, встраиваемый скрипт!"});
-  portFromCS.onMessage.addListener(function(m) {
-    console.log("В фоновом скрипте, получено сообщение от встраиваемого скрипта");
+  portFromCS.postMessage({ greeting: "Привет, встраиваемый скрипт!" });
+  portFromCS.onMessage.addListener(function (m) {
+    console.log(
+      "В фоновом скрипте, получено сообщение от встраиваемого скрипта",
+    );
     console.log(m.greeting);
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  portFromCS.postMessage({greeting: "Они нажали кнопку!"});
+browser.browserAction.onClicked.addListener(function () {
+  portFromCS.postMessage({ greeting: "Они нажали кнопку!" });
 });
 ```
 
@@ -316,19 +317,19 @@ browser.browserAction.onClicked.addListener(function() {
 ```js
 // background-script.js
 
-var ports = []
+var ports = [];
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id] = p;
   //...
 }
 
-browser.runtime.onConnect.addListener(connected)
+browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach(p => {
-        p.postMessage({greeting: "Они нажали на кнопку!"})
-    })
+browser.browserAction.onClicked.addListener(function () {
+  ports.forEach((p) => {
+    p.postMessage({ greeting: "Они нажали на кнопку!" });
+  });
 });
 ```
 
@@ -355,11 +356,15 @@ function messageContentScript() {
 ```js
 // content-script.js
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &&
-      event.data &&
-      event.data.direction == "from-page-script") {
-    alert("Встраиваемый скрипт получил сообщение: \"" + event.data.message + "\"");
+window.addEventListener("message", function (event) {
+  if (
+    event.source == window &&
+    event.data &&
+    event.data.direction == "from-page-script"
+  ) {
+    alert(
+      'Встраиваемый скрипт получил сообщение: "' + event.data.message + '"',
+    );
   }
 });
 ```
@@ -373,10 +378,12 @@ window.addEventListener("message", function(event) {
 > ```js
 > // content-script.js
 >
-> window.addEventListener("message", function(event) {
->   if (event.source == window &&
->       event.data.direction &&
->       event.data.direction == "from-page-script") {
+> window.addEventListener("message", function (event) {
+>   if (
+>     event.source == window &&
+>     event.data.direction &&
+>     event.data.direction == "from-page-script"
+>   ) {
 >     eval(event.data.message);
 >   }
 > });
@@ -398,15 +405,18 @@ window.addEventListener("message", function(event) {
 ```js
 // content-script.js
 
-window.eval('window.x = 1;');
-eval('window.y = 2');
+window.eval("window.x = 1;");
+eval("window.y = 2");
 
 console.log(`Во встраиваемом скрипте, window.x: ${window.x}`);
 console.log(`Во встраиваемом скрипте, window.y: ${window.y}`);
 
-window.postMessage({
-  message: "check"
-}, "*");
+window.postMessage(
+  {
+    message: "check",
+  },
+  "*",
+);
 ```
 
 Этот код создаёт переменные `x` and `y`, используя `window.eval()` и `eval()`, затем записывает их значения, и отправляет сообщение на веб-страницу.
@@ -414,7 +424,7 @@ window.postMessage({
 Получая сообщение, страничный скрипт записывает те же самые переменные:
 
 ```js
-window.addEventListener("message", function(event) {
+window.addEventListener("message", function (event) {
   if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
@@ -449,13 +459,13 @@ In page script, window.y: undefined
 >
 > var original = console.log;
 >
-> console.log = function() {
+> console.log = function () {
 >   original(true);
-> }
+> };
 > ```
 >
 > ```js
 > // content-script.js вызывает переопределённую версию
 >
-> window.eval('console.log(false)');
+> window.eval("console.log(false)");
 > ```

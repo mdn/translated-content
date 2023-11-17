@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: loadeddata イベント'
+title: "HTMLMediaElement: loadeddata イベント"
 slug: Web/API/HTMLMediaElement/loadeddata_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('loadeddata', (event) => {});
+addEventListener("loadeddata", (event) => {});
 
-onloadeddata = (event) => { };
+onloadeddata = (event) => {};
 ```
 
 ## イベント型
@@ -32,22 +32,26 @@ onloadeddata = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('loadeddata', (event) => {
-  console.log('Yay! The readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for the first time.');
+video.addEventListener("loadeddata", (event) => {
+  console.log(
+    "Yay! The readyState just increased to  " +
+      "HAVE_CURRENT_DATA or greater for the first time.",
+  );
 });
 ```
 
 `onloadeddata` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onloadeddata = (event) => {
-  console.log('Yay! The readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for the first time.');
+  console.log(
+    "Yay! The readyState just increased to  " +
+      "HAVE_CURRENT_DATA or greater for the first time.",
+  );
 };
 ```
 

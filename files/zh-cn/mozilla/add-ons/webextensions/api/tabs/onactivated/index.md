@@ -8,9 +8,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 ## 语法
 
 ```js
-browser.tabs.onActivated.addListener(listener)
-browser.tabs.onActivated.removeListener(listener)
-browser.tabs.onActivated.hasListener(listener)
+browser.tabs.onActivated.addListener(listener);
+browser.tabs.onActivated.removeListener(listener);
+browser.tabs.onActivated.hasListener(listener);
 ```
 
 此事件有三个方法：
@@ -52,8 +52,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 ```js
 function handleActivated(activeInfo) {
-  console.log("Tab " + activeInfo.tabId +
-              " was activated");
+  console.log("Tab " + activeInfo.tabId + " was activated");
 }
 
 browser.tabs.onActivated.addListener(handleActivated);

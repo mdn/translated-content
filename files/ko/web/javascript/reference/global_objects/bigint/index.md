@@ -2,6 +2,7 @@
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt`** 는 {{jsxref("Number")}} 원시 값이 안정적으로 나타낼 수 있는 최대치인 2^53 - 1보다 큰 정수를 표현할 수 있는 내장 객체입니다.
@@ -22,7 +23,9 @@ const hugeString = BigInt("9007199254740991");
 const hugeHex = BigInt("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111");
+const hugeBin = BigInt(
+  "0b11111111111111111111111111111111111111111111111111111",
+);
 // ↪ 9007199254740991n
 ```
 
@@ -33,14 +36,14 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 `BigInt`의 `typeof` 판별 결과는 `"bigint"`입니다.
 
 ```js
-typeof 1n === 'bigint'; // true
-typeof BigInt('1') === 'bigint'; // true
+typeof 1n === "bigint"; // true
+typeof BigInt("1") === "bigint"; // true
 ```
 
 {{jsxref("Object")}}로 감싼 `BigInt`는 일반적인 `object` 자료형으로 취급합니다.
 
 ```js
-typeof Object(1n) === 'object'; // true
+typeof Object(1n) === "object"; // true
 ```
 
 ### 연산자
@@ -90,29 +93,29 @@ const rounded = 5n / 2n;
 `BigInt`는 {{jsxref("Number")}}와 일치하지 않지만 동등합니다.
 
 ```js
-0n === 0
+0n === 0;
 // ↪ false
 
-0n == 0
+0n == 0;
 // ↪ true
 ```
 
 `Number`와 `BigInt`는 일반적인 방법으로 비교할 수 있습니다.
 
 ```js
-1n < 2
+1n < 2;
 // ↪ true
 
-2n > 1
+2n > 1;
 // ↪ true
 
-2 > 2
+2 > 2;
 // ↪ false
 
-2n > 2
+2n > 2;
 // ↪ false
 
-2n >= 2
+2n >= 2;
 // ↪ true
 ```
 
@@ -133,7 +136,7 @@ mixed.sort();
 Object(0n) === Object(0n); // false
 
 const o = Object(0n);
-o === o // true
+o === o; // true
 ```
 
 ### 조건
@@ -146,29 +149,29 @@ o === o // true
 
 ```js
 if (0n) {
-  console.log('if에서 안녕!');
+  console.log("if에서 안녕!");
 } else {
-  console.log('else에서 안녕!');
+  console.log("else에서 안녕!");
 }
 
 // ↪ "else에서 안녕!"
 
-0n || 12n
+0n || 12n;
 // ↪ 12n
 
-0n && 12n
+0n && 12n;
 // ↪ 0n
 
-Boolean(0n)
+Boolean(0n);
 // ↪ false
 
-Boolean(12n)
+Boolean(12n);
 // ↪ true
 
-!12n
+!12n;
 // ↪ false
 
-!0n
+!0n;
 // ↪ true
 ```
 
@@ -208,7 +211,9 @@ Boolean(12n)
 `BigInt`는 직렬화할 수 없기 때문에, {{jsxref("JSON.stringify()")}}에 `BigInt`를 포함한 값을 전달한다면 `TypeError`가 발생합니다. 대신, 필요한 경우 자신만의 `toJSON` 메서드를 만들 수 있습니다.
 
 ```js
-BigInt.prototype.toJSON = function() { return this.toString(); }
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
 ```
 
 이제 아래 코드가 오류를 던지지 않고 문자열을 반환합니다.
@@ -247,7 +252,7 @@ function nthPrime(nth) {
   return prime;
 }
 
-nthPrime(20n)
+nthPrime(20n);
 // ↪ 73n
 ```
 

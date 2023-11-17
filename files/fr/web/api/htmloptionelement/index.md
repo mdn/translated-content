@@ -1,13 +1,6 @@
 ---
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
-translation_of: Web/API/HTMLOptionElement
 ---
 
 {{APIRef("HTML DOM")}}

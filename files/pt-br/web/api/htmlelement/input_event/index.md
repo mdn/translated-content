@@ -1,7 +1,6 @@
 ---
 title: input
 slug: Web/API/HTMLElement/input_event
-original_slug: Web/Events/input
 ---
 
 O evento `input` do DOM é disparado sincronicamente quando o valor de um elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} é alterado. (Para elementos input com `type=checkbox` ou `type=radio`, o evento `input` não é disparado quando o usuário clica no elemento, porque o valor do atributo não é alterado.) Além disso, o evento é disparado no [`contenteditable`](/pt-BR/docs/Web/API/HTMLElement/contentEditable) editors quando o seu conteúdo é alterado. Nesse caso, O alvo do evento é o elemento host da edição. Se houver dois ou mais elementos que tenha `contenteditable` como true, o "host de edição" é o elemento antepassado mais próximo cujo pai não é editável. Similarmente, ele também é disparado no element raiz do [`designMode`](/pt-BR/docs/Web/API/Document/designMode) editors.
@@ -23,16 +22,20 @@ O evento `input` do DOM é disparado sincronicamente quando o valor de um elemen
 
 ## Propriedades
 
-| Propriedade                           | Tipo                                 | Descrição                                          |
-| ------------------------------------- | ------------------------------------ | -------------------------------------------------- |
+| Propriedade                     | Tipo                       | Descrição                                          |
+| ------------------------------- | -------------------------- | -------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | O alvo do evento (o alvo mais alto na árvore DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Tipo do evento.                                    |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Se o evento borbulha ou não.                       |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Se o evento é cancelável, ou não.                  |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Tipo do evento.                                    |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Se o evento borbulha ou não.                       |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Se o evento é cancelável, ou não.                  |
+
+## Especificações
+
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.input_event")}}
+{{Compat}}
 
 ## Veja também
 

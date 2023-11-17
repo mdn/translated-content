@@ -1,7 +1,6 @@
 ---
 title: Modelo de Objeto CSS (CSSOM)
 slug: Glossary/CSSOM
-original_slug: Glossario/CSSOM
 ---
 
 O **Modelo de Objeto CSS (CSSOM)** é um mapeamento de todos os seletores CSS e propriedades relevantes para cada seletor no formato de árvore, com um nó raiz, irmão, descendente, filho e outro relacionamento. O CSSOM é muito similar ao {{glossary('DOM', 'Modelo de Objeto de Documento (DOM)')}}. Ambos são parte do caminho de renderização crítica, o qual é uma série de etapas que devem acontecer para renderizar o site corretamente.

@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
-translation_of: Web/API/ServiceWorkerContainer/controller
 ---
 
 {{APIRef("Service Workers API")}}
@@ -21,15 +20,17 @@ var myController = navigator.serviceWorker.controller;
 ## Пример
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Проверяем, находится ли данная страница под управлением service worker.
   if (navigator.serviceWorker.controller) {
-    console.log(`Эта страница сейчас контролируется ${navigator.serviceWorker.controller}`);
+    console.log(
+      `Эта страница сейчас контролируется ${navigator.serviceWorker.controller}`,
+    );
   } else {
-    console.log('Эта страница не контролируется service worker.');
+    console.log("Эта страница не контролируется service worker.");
   }
 } else {
-  console.log('Данный браузер не поддерживает Service Worker API.');
+  console.log("Данный браузер не поддерживает Service Worker API.");
 }
 ```
 

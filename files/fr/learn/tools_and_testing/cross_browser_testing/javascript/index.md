@@ -1,17 +1,6 @@
 ---
 title: Gérer les problèmes courants en JavaScript
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
-tags:
-  - Apprentissage
-  - Débutant
-  - JavaScript
-  - Librairies
-  - détection de fonctionnalité
-  - linting
-  - navigateur croisé
-  - polyfills
-  - test
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -60,18 +49,18 @@ Les choses se sont bien améliorées depuis ; les navigateurs modernes font un b
 
 De nos jours, la plupart des problèmes de JavaScript en navigateur croisé sont :
 
-- Lorsque la mauvaise qualité du détecteur de code du navigateur, la fonctionnalité de détection de code ou l'utilisation des [préfixes vendeurs](/fr/docs/Glossaire/Pr%C3%A9fixe_Vendeur) empêchent les navigateurs d'exécuter du code qu'autrement ils pourraient utiliser sans difficultés.
+- Lorsque la mauvaise qualité du détecteur de code du navigateur, la fonctionnalité de détection de code ou l'utilisation des [préfixes vendeurs](/fr/docs/Glossaire/Préfixe_Vendeur) empêchent les navigateurs d'exécuter du code qu'autrement ils pourraient utiliser sans difficultés.
 - Lorsque les développeurs se servent de fonctionnalités nouvelles/naissantes JavaScript (par exemple les fonctionnalités [ECMAScript 6](/fr/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) / [ECMAScript Next](/fr/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla), les APIs web modernes...) dans leur code, et trouvent que de telles fonctionnalités ne marchent pas sur d'anciens navigateurs.
 
 Nous aborderons tout ces problèmes et d'autres encore plus bas.
 
 ## Résoudre les problèmes généraux en JavaScript
 
-Comme nous le disions dans l'[article précédent](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Commen%C3%A7ons_par_le_commencement_r%C3%A9soudre_les_probl%C3%A8mes_g%C3%A9n%C3%A9raux) sur le HTML/CSS, vous devriez vous assurer que votre code fonctionne en général, avant de vous concentrer sur les problèmes en navigateur-croisé. Si vous n'êtes pas encore trop familier avec les bases de [La résolution JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong), vous devriez étudier cet article avant de continuer. Il y a plusieurs problèmes courants en JavaScript avec lesquelles vous devez être attentif, comme :
+Comme nous le disions dans l'[article précédent](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Commençons_par_le_commencement_résoudre_les_problèmes_généraux) sur le HTML/CSS, vous devriez vous assurer que votre code fonctionne en général, avant de vous concentrer sur les problèmes en navigateur-croisé. Si vous n'êtes pas encore trop familier avec les bases de [La résolution JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong), vous devriez étudier cet article avant de continuer. Il y a plusieurs problèmes courants en JavaScript avec lesquelles vous devez être attentif, comme :
 
 - Les problèmes basiques de syntaxe et de logique (une fois encore, aller voir [La résolution JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)).
 - Définir des variables sûres, etc. qui sont défnies dans le périmètre correct, et que vous ne rencontrez pas des conflits entre des items déclarés à des endroits différents (voir [Function scope and conflicts](/fr/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)).
-- La confusion à propos de [this](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this), concernant le périmètre auquel il s'applique, et par conséquent si sa valeur et celle que vous souhaitiez. Vous pouvez lire [Qu'est-ce que "this" ?](/fr/docs/Learn/JavaScript/Objects/Basics#Qu'est-ce_que_%C2%AB_this_%C2%BB) pour une simple introduction ; vous devriez également étudier des exemples comme [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), qui présente un modèle typique de sauvegarde du périmètre de `this` dans une variable séparée, puis utilise cette variable dans une fonction imbriquée pour que vous soyez sûr que vous appliquez la fonction au bon périmètre de `this`.
+- La confusion à propos de [this](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this), concernant le périmètre auquel il s'applique, et par conséquent si sa valeur et celle que vous souhaitiez. Vous pouvez lire [Qu'est-ce que "this" ?](/fr/docs/Learn/JavaScript/Objects/Basics#Qu'est-ce_que_«_this_») pour une simple introduction ; vous devriez également étudier des exemples comme [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), qui présente un modèle typique de sauvegarde du périmètre de `this` dans une variable séparée, puis utilise cette variable dans une fonction imbriquée pour que vous soyez sûr que vous appliquez la fonction au bon périmètre de `this`.
 - Utiliser les fonctions de manière incorrecte dans les boucles — par exemple, dans [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (voir [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), on boucle sur 10 itérations, à chaque fois on créé un paragraphe et on y ajoute un évènement gestionnaire [onclick](/fr/docs/Web/API/GlobalEventHandlers/onclick). Lorsqu'ils sont cliqués, chacun d'entre eux doit fournir un message d'alerte contenant son numéro (la valeur de `i` au moment où il était créé), cependant chacun d'entre eux retourne `i` comme 11, parce que les boucle for font toutes leurs itérations avant que les fonctions imbriquées ne soit appelées. Si vous voulez que ça marche correctement, vous devez définir une fonction pour ajouter le gestionnaire séparément, l'appellant à chaque itération et lui passer la valeur courante de `para` et `i` à chaque fois (ou quelque chose de similaire). Voir [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) (voir également le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/good-for-loop.html)) pour une version qui fonctionne.
 - S'assurer que les opérations asynchrones sont retournées avant d'essayer d'utiliser les valeurs qu'elles retournent. Par exemple, [cet exemple Ajax](/fr/docs/Web/Guide/AJAX/Premiers_pas#.C3.89tape_3_.E2.80.94_Un_exemple_simple) vérifie que la requête est complète et que la réponse a été retournée avant qu'on ait essayé d'utiliser cette réponse pour quoi que ce soit. Ce type d'opération a été rendue plus simple à gérer grâce à l'introduction des [Promises](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) dans le langage JavaScript.
 
@@ -137,9 +126,10 @@ function populateHeader(jsonObj) {
 Le code casse aussitôt qu'on essaye d'accèder à `jsonObj` (ce qui comme vous pouvez vous y attendre, est supposé être un [objet JSON](/fr/docs/Learn/JavaScript/Objects/JSON)). C'est supposé aller le chercher dans un fichier externe `.json` en utilisant l'appel XMLHttpRequest suivant :
 
 ```js
-var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 var request = new XMLHttpRequest();
-request.open('GET', requestURL);
+request.open("GET", requestURL);
 request.send();
 
 var superHeroes = request.response;
@@ -156,7 +146,7 @@ Vous savez peut-être déjà ce qui ne va pas avec ce code, mais analysons-le un
 Essayer d'insérer la ligne suivante juste avant la ligne 31 (en gras au-dessus) :
 
 ```js
-console.log('Response value: ' + superHeroes);
+console.log("Response value: " + superHeroes);
 ```
 
 Rafraîchissez la page dans le navigateur, et vous obtiendrez un résultat dans la console comme celui-ci :
@@ -174,11 +164,11 @@ showHeroes(superHeroes);
 par le suivant :
 
 ```js
-request.onload = function() {
+request.onload = function () {
   var superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 Cela résout le problème asynchrone, en garantissant que les fonctions ne sont pas exécutées et passent l'objet `superHeroes` jusqu'à ce que la réponse ait fini de charger et soit disponible.
@@ -187,7 +177,7 @@ En résumé, à chaque fois que quelque chose ne marche pas et qu'une valeur ne 
 
 #### Utiliser le débogueur JavaScript
 
-Nous avons résolu un problème, mais nous sommes toujours coincés avec le message d'erreur "TypeError: heroes is undefined", reporté à la ligne 51. Examinons-la maintenant, en utilisant une fonctionnalité plus sophistiquée des outils de développement web : le [débogueur JavaScript](/fr/docs/Outils/D%C3%A9bogueur) comme il est appellé dans Firefox.
+Nous avons résolu un problème, mais nous sommes toujours coincés avec le message d'erreur "TypeError: heroes is undefined", reporté à la ligne 51. Examinons-la maintenant, en utilisant une fonctionnalité plus sophistiquée des outils de développement web : le [débogueur JavaScript](/fr/docs/Outils/Débogueur) comme il est appellé dans Firefox.
 
 > **Note :** Des outils similaires sont disponibles dans d'autres navigateurs ; le [Sources tab](https://developers.google.com/web/tools/chrome-devtools/#sources) dans Chrome, le Débogueur dans Safari (voir [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
 
@@ -218,7 +208,7 @@ Ici, nous pouvons obtenir des informations très utiles.
 
 > **Note :** Nous aimerions que vous essayez de résoudre ce problème par vous-même. Pour vous donner un indice, vous avez le choix entre [tell the XMLHttpRequest object explicitly to return JSON format](/fr/docs/Web/API/XMLHttpRequest/responseType), ou [conversion entre objet et texte](/fr/docs/Learn/JavaScript/Objects/JSON#Convertion_entre_objets_et_textes) après l'arrivée de la réponse. Si vous restez bloqué, consultez notre exemple [fixed-ajax.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fixed-ajax.html).
 
-> **Note :** L'onglet débogueur a tant d'autres fonctionnalités utiles que nous n'aborderons pas ici, par exemple les points d'arrêt conditionnels et les expressions espionnes. Pour bien plus d'informations, voyez la page du [Débogueur](/fr/docs/Outils/D%C3%A9bogueur).
+> **Note :** L'onglet débogueur a tant d'autres fonctionnalités utiles que nous n'aborderons pas ici, par exemple les points d'arrêt conditionnels et les expressions espionnes. Pour bien plus d'informations, voyez la page du [Débogueur](/fr/docs/Outils/Débogueur).
 
 ### Les problèmes de performance
 
@@ -227,7 +217,7 @@ Dès que vos applis vont devenir plus complexes vous allez commencer à utiliser
 - Eviter de charger plus de JavaSacript que nécessaire, réunissez vos scripts dans un seul fichier en utilisant une solution comme [Browserify](http://browserify.org/). En général, réduire le nombre de requêtes HTTP est très bon pour la performance.
 - S'assurer que vos fichiers sont le plus petits en les minifiant avant de les charger sur votre serveur de production. Minifier réduit tout le code en une seule et immense ligne, donnant au fichier une taille beaucoup moins importante. C'est vilain, mais vous n'avez pas besoin de la lire lorsque c'est terminé ! Cette tâche est la mieux réalisée avec un outil de minification comme [Uglify](https://github.com/mishoo/UglifyJS2) (il y aussi une version en ligne — voir [JSCompress.com](https://jscompress.com/)).
 - Lorsque que vous utilisez des APIs, assurez-vous de désactiver les fonctionnalités de l'API quand elles ne sont pas utilisées ; certains appels d'API peuvent être très coûteux en puissance de traitement. Par exemple, lorsque vous montrez un stream video, assurez-vous que s'est désactivé quand vous ne pouvez pas le voir. Quand vous tracer la localisation d'un appareil en utilisant des appels répétés de Géolocalisation, assurez-vous de le désactiver quand l'utilisateur arrête de l'utiliser.
-- Les animations peuvent être très coûteuses pour la performance. Beaucoup de librairies JavaScript fournissent des possibilités d'animation programmée avec JavaScript, mais c'est beaucoup plus rentable de faire les animations via les fonctionnalités natives des navigateurs comme [les Animations CSS](/fr/docs/Web/CSS/Animations_CSS) (ou la naissante [Web Animations API](/fr/docs/Web/API/Web_Animations_API)) qu'en JavaScript. Lisez [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) pour des théories très utiles sur l'animation coûteuse, des conseils sur comment améliorer la performance des animations, et des informations à propos de l'API Web Animations.
+- Les animations peuvent être très coûteuses pour la performance. Beaucoup de librairies JavaScript fournissent des possibilités d'animation programmée avec JavaScript, mais c'est beaucoup plus rentable de faire les animations via les fonctionnalités natives des navigateurs comme [les Animations CSS](/fr/docs/Web/CSS/Animations_CSS) (ou la naissante [Web Animations API](/fr/docs/Web/API/Web_Animations_API)) qu'en JavaScript. Lisez [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) pour des théories très utiles sur l'animation coûteuse, des conseils sur comment améliorer la performance des animations, et des informations à propos de l'API Web Animations.
 
 > **Note :** Le [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.
 
@@ -242,16 +232,16 @@ Dans cette section, nous regarderons certains des problèmes JavaScript les plus
 
 ### Utiliser des fonctionnalités JavaScript/API modernes
 
-Dans l'[article précédent](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Les_vieux_navigateurs_ne_supportant_pas_les_fonctionnalit%C3%A9s_r%C3%A9centes) nous décrivions quelques façons dont les erreurs HTML et CSS et les fonctionnalités non reconnues peuvent être gérées grâce à la nature du langage. JavaScript n'est toutefois pas autant permissif que le HTML et le CSS — si le moteur de JavaScript rencontre une faute ou une syntaxe inconnue, le plus souvent il renverra des erreurs.
+Dans l'[article précédent](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Les_vieux_navigateurs_ne_supportant_pas_les_fonctionnalités_récentes) nous décrivions quelques façons dont les erreurs HTML et CSS et les fonctionnalités non reconnues peuvent être gérées grâce à la nature du langage. JavaScript n'est toutefois pas autant permissif que le HTML et le CSS — si le moteur de JavaScript rencontre une faute ou une syntaxe inconnue, le plus souvent il renverra des erreurs.
 
-Il y a plusieurs fonctionnalités modernes du langage JavaScript décrites dans les versions récentes des spécifications ([ECMAScript 6](/fr/docs/Web/JavaScript/Nouveaut%C3%A9s_et_historique_de_JavaScript/Support_ECMAScript_2015_par_Mozilla) / [ECMAScript Next](/fr/docs/Web/JavaScript/Nouveaut%C3%A9s_et_historique_de_JavaScript/Support_ECMAScript_Next_par_Mozilla)) qui ne marchent tout simplement pas sur les plus vieux navigateurs. Certaines d'entre elles sont des améliorations syntaxiques (essentiellement une façon plus simple, adéquate d'écrire ce que vous pouvez déjà écrire en utilisant des fonctionnalités existantes), et certaines offrent de nouvelles possibilités intéressantes.
+Il y a plusieurs fonctionnalités modernes du langage JavaScript décrites dans les versions récentes des spécifications ([ECMAScript 6](/fr/docs/Web/JavaScript/Nouveautés_et_historique_de_JavaScript/Support_ECMAScript_2015_par_Mozilla) / [ECMAScript Next](/fr/docs/Web/JavaScript/Nouveautés_et_historique_de_JavaScript/Support_ECMAScript_Next_par_Mozilla)) qui ne marchent tout simplement pas sur les plus vieux navigateurs. Certaines d'entre elles sont des améliorations syntaxiques (essentiellement une façon plus simple, adéquate d'écrire ce que vous pouvez déjà écrire en utilisant des fonctionnalités existantes), et certaines offrent de nouvelles possibilités intéressantes.
 
 Par exemple :
 
 - Les [Promises](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sont une super nouvelle fonctionnalité pour réaliser des opérations asynchrones et s'assurer que c'est opérations sont complètes avant que le code qui s'appuie sur eux ne soit utiliser pour autre chose. A titre d'exemple, l'[API Fetch](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch) (un équivalent moderne de [XMLHTTPRequest](/fr/docs/Web/API/XMLHttpRequest)) utilise les promises pour rapporter les ressources à travers le réseau et s'assurer que la réponse a été retournée avant qu'elles ne soient utilisées (par exemple afficher une image dans un élément {{htmlelement("img")}} ). Elles ne sont pas du tout supportées par IE mais sont supportées par tous les navigateurs modernes.
-- Les fonctions fléchées apportent une syntaxe courte, plus convenable pour écrire des [anonymous functions](/fr/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions), ce qui a aussi d'autres avantages (voir [Fonctions Fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)). Comme exemple rapide, voir [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html)). Les fonctions fléchées sont supportées par tous les navigateurs modernes, excepté par IE et Safari.
+- Les fonctions fléchées apportent une syntaxe courte, plus convenable pour écrire des [anonymous functions](/fr/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions), ce qui a aussi d'autres avantages (voir [Fonctions Fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées)). Comme exemple rapide, voir [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html)). Les fonctions fléchées sont supportées par tous les navigateurs modernes, excepté par IE et Safari.
 - Déclarer [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) en haut de votre code JavaScript l'amène à être décomposé en une liste de règles plus strictes, impliquant que plus d'avertissements et d'erreurs seront retournés, et certaines choses seront rejetées qui auraient normalement été acceptées. C'est probablement une bonne idée d'utiliser le mode stricte, comme il permet une amélioration et une meilleur efficacité du code, bien qu'il ait un support limité/incomplet selon les navigateurs (voir [Le mode strict dans les navigateurs](/fr/docs/Web/JavaScript/Reference/Strict_mode#Le_mode_strict_dans_les_navigateurs)).
-- [Les tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typ%C3%A9s) permettent au code JavaScript d'accéder et de manipuler des données binaires brutes, ce qui est indispensable pour les APIs navigateur par exemple qui commencent à manipuler les streams des données vidéo et audio brutes.
+- [Les tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés) permettent au code JavaScript d'accéder et de manipuler des données binaires brutes, ce qui est indispensable pour les APIs navigateur par exemple qui commencent à manipuler les streams des données vidéo et audio brutes.
 
 Il y a également beaucoup de nouvelles APIs qui apparaissent dans les navigateurs récents, qui ne fonctionnent pas sur les plus vieux navigateurs, par exemple :
 
@@ -271,8 +261,8 @@ Il y a plusieurs stratégies pour gérer les incompatibilités entre navigateurs
 L'idée derrière une fonctionnalité de détection est que vous pouvez exécuter un test pour déterminer si une fonctionnalité est supportée dans le navigateur courant, et ensuite exécuter conditionnellement un code pour fournir une expérience acceptable sur chaque navigateur qui supporte et ne supporte pas la fonctionnalité. A titre d'exemple rapide, l'[API Geolocalisation](/fr/docs/Using_geolocation) (qui présente des données de localisation pour l'appareil sur lequel le navigateur est en train d'être exécuté) a un point d'entrée principal pour son utilisation — une propriété `geolocation` disponible dans l'objet global [Navigator](/fr/docs/Web/API/Navigator). Par conséquent, vous pouvez détecter si le navigateur supporte la géolocalisation ou non en utilisant quelque chose comme suit :
 
 ```js
-if("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position) {
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(function (position) {
     // show the location on a map, perhaps using the Google Maps API
   });
 } else {
@@ -320,26 +310,26 @@ Observons cet exercice — dans cet exemple nous allons utiliser un polyfill Fet
 2. Ensuite, sauvegarder les copies de [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) et de [es6-promises polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js) dans le même répertoire que le HTML.
 3. Appliquer les scripts de polyfill à la page en utilisant le code suivant — placez-les au-dessus de l'élément {{htmlelement("script")}} existant ainsi ils seront déjà disponibles sur la page quand on essaiera d'utiliser Fetch :
 
-    ```js
-    <script src="es6-promise.js"></script>
-    <script src="fetch.js"></script>
-    ```
+   ```js
+   <script src="es6-promise.js"></script>
+   <script src="fetch.js"></script>
+   ```
 
 4. Dans le {{htmlelement("script")}} original, ajoutez le code suivant :
 
-    ```js
-    var myImage = document.querySelector('.my-image');
+   ```js
+   var myImage = document.querySelector(".my-image");
 
-    fetch('flowers.jpg').then(function(response) {
-      response.blob().then(function(myBlob) {
-        var objectURL = URL.createObjectURL(myBlob);
-        myImage.src = objectURL;
-      });
-    });
-    ```
+   fetch("flowers.jpg").then(function (response) {
+     response.blob().then(function (myBlob) {
+       var objectURL = URL.createObjectURL(myBlob);
+       myImage.src = objectURL;
+     });
+   });
+   ```
 
 5. Maintenant si vous le chargez dans un navigateur qui ne supporte pas Fetch (Safari et IE sont des candidats de choix), vous devriez quand même voir l'image de la fleur apparaitre — cool !
-    ![](fetch-image.jpg)
+   ![](fetch-image.jpg)
 
 > **Note :** Vous pouvez consulter notre version terminée sur [fetch-polyfill-finished.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
 
@@ -353,7 +343,7 @@ Faire cela nécessite un peu de code supplémentaire dans votre JavaScript. Vous
 if (browserSupportsAllFeatures()) {
   main();
 } else {
-  loadScript('polyfills.js', main);
+  loadScript("polyfills.js", main);
 }
 
 function main(err) {
@@ -373,13 +363,13 @@ Ici on vérifie si l'objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_
 
 ```js
 function loadScript(src, done) {
-  var js = document.createElement('script');
+  var js = document.createElement("script");
   js.src = src;
-  js.onload = function() {
+  js.onload = function () {
     done();
   };
-  js.onerror = function() {
-    done(new Error('Failed to load script ' + src));
+  js.onerror = function () {
+    done(new Error("Failed to load script " + src));
   };
   document.head.appendChild(js);
 }
@@ -426,9 +416,9 @@ Le code utilisé ressemble à quelque chose comme ça (bien que ça soit un exem
 ```js
 var ua = navigator.userAgent;
 
-if(ua.indexOf('Firefox') !== -1) {
+if (ua.indexOf("Firefox") !== -1) {
   // run Firefox-specific code
-} else if(ua.indexOf('Chrome') !== -1) {
+} else if (ua.indexOf("Chrome") !== -1) {
   // run Chrome-specific code
 }
 ```
@@ -449,7 +439,7 @@ Si vous rejoignez un projet existant où il y a déjà de la détection de navig
 
 ### Gérer les préfixes JavaScript
 
-Dans l'article précédent, nous parlions quelque peu de la [gestion des préfixes CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Gestion_des_pr%C3%A9fixes_CSS). Alors, les nouvelles implémentations JavaScript utilisent parfois aussi des préfixes, bien que JavaScript utilise le camel case plutôt que l'hyphenation comme CSS. Par exemple, si un préfixe est utilisé sur un objet d'une toute belle API appelée `Ojbect` :
+Dans l'article précédent, nous parlions quelque peu de la [gestion des préfixes CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Gestion_des_préfixes_CSS). Alors, les nouvelles implémentations JavaScript utilisent parfois aussi des préfixes, bien que JavaScript utilise le camel case plutôt que l'hyphenation comme CSS. Par exemple, si un préfixe est utilisé sur un objet d'une toute belle API appelée `Ojbect` :
 
 - Mozilla utilisera `mozObject`
 - Chrome/Opera/Safariutiliseront `webkitObject`
@@ -473,7 +463,7 @@ Une fois encore, les fonctions préfixées n'ont jamais été supposées être u
 Par exemple, essayez d'aller dans la console de développeur de votre navigateur et commencez à taper
 
 ```js
-window.AudioContext
+window.AudioContext;
 ```
 
 Si cette fonctionnalité est supportée par votre navigateur, elle s'autocomplètera.

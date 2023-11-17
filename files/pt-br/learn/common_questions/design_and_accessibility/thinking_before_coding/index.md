@@ -1,7 +1,6 @@
 ---
 title: Como eu começo a criar meu site?
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
-original_slug: Learn/Common_questions/Thinking_before_coding
 ---
 
 Este artigo abrange o primeiro passo, muito importante, de cada projeto: definir o que você deseja realizar com ele.

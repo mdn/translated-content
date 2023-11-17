@@ -1,18 +1,6 @@
 ---
 title: APIs vidéo et audio
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
-tags:
-  - API
-  - Apprendre
-  - Article
-  - Audio
-  - Codage
-  - Débutant
-  - Guide
-  - JavaScript
-  - Video
-translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -53,9 +41,12 @@ Les balises {{htmlelement("video")}} et {{htmlelement("audio")}} permettent d'in
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Votre navigateur ne supporte pas la vidéo HTML5. Voici à la place <a href="rabbit320.mp4">un lien vers la vidéo</a>.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Votre navigateur ne supporte pas la vidéo HTML5. Voici à la place
+    <a href="rabbit320.mp4">un lien vers la vidéo</a>.
+  </p>
 </video>
 ```
 
@@ -92,12 +83,15 @@ Ouvrez le fichier HTML d'index. Vous allez voir que le HTML contient majoritaire
 ```html
 <div class="player">
   <video controls>
-    <source src="video/sintel-short.mp4" type="video/mp4">
-    <source src="video/sintel-short.mp4" type="video/webm">
+    <source src="video/sintel-short.mp4" type="video/mp4" />
+    <source src="video/sintel-short.mp4" type="video/webm" />
     <!-- fallback contenu ici -->
   </video>
   <div class="controls">
-    <button class="play" data-icon="P" aria-label="bascule lecture pause"></button>
+    <button
+      class="play"
+      data-icon="P"
+      aria-label="bascule lecture pause"></button>
     <button class="stop" data-icon="S" aria-label="stop"></button>
     <div class="timer">
       <div></div>
@@ -137,7 +131,8 @@ Maintenant, ouvrez le fichier CSS et jetez-y un coup d'oeil. Le CSS pour cet exe
   display: flex;
 }
 
-.player:hover .controls, player:focus .controls {
+.player:hover .controls,
+player:focus .controls {
   opacity: 1;
 }
 ```
@@ -150,13 +145,14 @@ Ensuite, voyons les icônes des boutons:
 
 ```css
 @font-face {
-   font-family: 'HeydingsControlsRegular';
-   src: url('fonts/heydings_controls-webfont.eot');
-   src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
-        url('fonts/heydings_controls-webfont.woff') format('woff'),
-        url('fonts/heydings_controls-webfont.ttf') format('truetype');
-   font-weight: normal;
-   font-style: normal;
+  font-family: "HeydingsControlsRegular";
+  src: url("fonts/heydings_controls-webfont.eot");
+  src:
+    url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/heydings_controls-webfont.woff") format("woff"),
+    url("fonts/heydings_controls-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 button:before {
@@ -194,7 +190,7 @@ Dernier point mais non des moindres, le CSS du décompte :
 
 .timer div {
   position: absolute;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   left: 0;
   top: 0;
   width: 0;
@@ -221,34 +217,34 @@ Nous avons déjà une interface HTML et CSS assez complète; nous avons maintena
 1. Créez un nouveau fichier JavaScript dans le même répertoire que votre fichier index.html. Nous l'appelerons `custom-player.js`.
 2. En haut de ce fichier, insérez le code suivant :
 
-    ```js
-    var media = document.querySelector('video');
-    var controls = document.querySelector('.controls');
+   ```js
+   var media = document.querySelector("video");
+   var controls = document.querySelector(".controls");
 
-    var play = document.querySelector('.play');
-    var stop = document.querySelector('.stop');
-    var rwd = document.querySelector('.rwd');
-    var fwd = document.querySelector('.fwd');
+   var play = document.querySelector(".play");
+   var stop = document.querySelector(".stop");
+   var rwd = document.querySelector(".rwd");
+   var fwd = document.querySelector(".fwd");
 
-    var timerWrapper = document.querySelector('.timer');
-    var timer = document.querySelector('.timer span');
-    var timerBar = document.querySelector('.timer div');
-    ```
+   var timerWrapper = document.querySelector(".timer");
+   var timer = document.querySelector(".timer span");
+   var timerBar = document.querySelector(".timer div");
+   ```
 
-    Ici, nous créons des variables pour stocker les références de tous les objets que nous voulons manipuler. Nous avons trois groupes :
+   Ici, nous créons des variables pour stocker les références de tous les objets que nous voulons manipuler. Nous avons trois groupes :
 
-    - L'élément `<video>`, et la barre de contrôle.
-    - Les boutons play/pause, stop, retour arrière, et avance rapide.
-    - Le `<div>` externe, le `<span>` qui décompte le temps écoulé, et le `<div>` interne qui affiche le progrès de la vidéo.
+   - L'élément `<video>`, et la barre de contrôle.
+   - Les boutons play/pause, stop, retour arrière, et avance rapide.
+   - Le `<div>` externe, le `<span>` qui décompte le temps écoulé, et le `<div>` interne qui affiche le progrès de la vidéo.
 
 3. Ensuite, insérez ce qui suit en bas de votre code :
 
-    ```js
-    media.removeAttribute('controls');
-    controls.style.visibility = 'visible';
-    ```
+   ```js
+   media.removeAttribute("controls");
+   controls.style.visibility = "visible";
+   ```
 
-    Ces deux lignes suppriment les contrôles par défaut du navigateur sur la vidéo, et rendent nos contrôles personnalisés visibles.
+   Ces deux lignes suppriment les contrôles par défaut du navigateur sur la vidéo, et rendent nos contrôles personnalisés visibles.
 
 #### Lecture et pause de la vidéo
 
@@ -256,52 +252,52 @@ Imlémentons le contrôle le plus important — le bouton play/pause.
 
 1. Tout d'abord, ajoutez ce qui suit au bas de votre code, pour que la fonction `playPauseMedia()` soit invoquée quand le bouton play est cliqué :
 
-    ```js
-    play.addEventListener('click', playPauseMedia);
-    ```
+   ```js
+   play.addEventListener("click", playPauseMedia);
+   ```
 
 2. Maintenant, définissons `playPauseMedia()` — ajoutez ce qui suit, toujours au bas de votre code :
 
-    ```js
-    function playPauseMedia() {
-      if(media.paused) {
-        play.setAttribute('data-icon','u');
-        media.play();
-      } else {
-        play.setAttribute('data-icon','P');
-        media.pause();
-      }
-    }
-    ```
+   ```js
+   function playPauseMedia() {
+     if (media.paused) {
+       play.setAttribute("data-icon", "u");
+       media.play();
+     } else {
+       play.setAttribute("data-icon", "P");
+       media.pause();
+     }
+   }
+   ```
 
-    Ici, nous utilisons une instruction [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) pour vérifier si la vidéo est en pause. La propriété {{domxref("HTMLMediaElement.paused")}} retourne vrai si le média est en pause — c'est le cas quand la vidéo n'est pas en cours de lecture, y compris quand la vidéo est au début après son chargement. Si elle est en pause, nous définissons la valeur de l'attribut `data-icon` à "u", qui est une icône "en pause", et invoquons la méthode {{domxref("HTMLMediaElement.play()")}} pour jouer le média.
+   Ici, nous utilisons une instruction [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) pour vérifier si la vidéo est en pause. La propriété {{domxref("HTMLMediaElement.paused")}} retourne vrai si le média est en pause — c'est le cas quand la vidéo n'est pas en cours de lecture, y compris quand la vidéo est au début après son chargement. Si elle est en pause, nous définissons la valeur de l'attribut `data-icon` à "u", qui est une icône "en pause", et invoquons la méthode {{domxref("HTMLMediaElement.play()")}} pour jouer le média.
 
-    Au second clic, le bouton sera de nouveau alterné — l'icône "play" sera affiché, et la vidéo sera mise en pause avec {{domxref("HTMLMediaElement.paused()")}}.
+   Au second clic, le bouton sera de nouveau alterné — l'icône "play" sera affiché, et la vidéo sera mise en pause avec {{domxref("HTMLMediaElement.paused()")}}.
 
 #### Stopper la vidéo
 
 1. Ajoutons la possibilité d'arrêter la vidéo. Ajoutez les lignes [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) suivantes au-dessous de vos ajouts précédents :
 
-    ```js
-    stop.addEventListener('click', stopMedia);
-    media.addEventListener('ended', stopMedia);
-    ```
+   ```js
+   stop.addEventListener("click", stopMedia);
+   media.addEventListener("ended", stopMedia);
+   ```
 
-    L'événement [`click`](/fr//docs/Web/API/Element/click_event) est explicite — nous voulons stopper la vidéo en appelant la fonction `stopMedia()` quand le bouton stop est cliqué. Cependant, nous voulons également stopper la vidéo quand elle a fini de jouer — signalé par l'événement [`ended`](/fr//docs/Web/API/HTMLMediaElement/ended_event), nous pouvons donc mettre en place un gestionnaire d'événement pour exécuter la fonction quand cet évènement se produit.
+   L'événement [`click`](/fr//docs/Web/API/Element/click_event) est explicite — nous voulons stopper la vidéo en appelant la fonction `stopMedia()` quand le bouton stop est cliqué. Cependant, nous voulons également stopper la vidéo quand elle a fini de jouer — signalé par l'événement [`ended`](/fr//docs/Web/API/HTMLMediaElement/ended_event), nous pouvons donc mettre en place un gestionnaire d'événement pour exécuter la fonction quand cet évènement se produit.
 
 2. Ensuite, définissons `stopMedia()` — ajoutez ce qui suit après la fonction `playPauseMedia()` :
 
-    ```js
-    function stopMedia() {
-      media.pause();
-      media.currentTime = 0;
-      play.setAttribute('data-icon','P');
-    }
-    ```
+   ```js
+   function stopMedia() {
+     media.pause();
+     media.currentTime = 0;
+     play.setAttribute("data-icon", "P");
+   }
+   ```
 
-    Il n'y a pas de méthode `stop()` dans l'API HTMLMediaElement — l'équivalent du stop est de mettre `pause()` sur la vidéo, et de définir la propriété {{domxref("HTMLMediaElement.currentTime","currentTime")}} à 0. Définir une valeur à `currentTime` (en secondes) change immédiatement la position du temps du média.
+   Il n'y a pas de méthode `stop()` dans l'API HTMLMediaElement — l'équivalent du stop est de mettre `pause()` sur la vidéo, et de définir la propriété {{domxref("HTMLMediaElement.currentTime","currentTime")}} à 0. Définir une valeur à `currentTime` (en secondes) change immédiatement la position du temps du média.
 
-    Tout ce qui nous reste à faire après ça est d'afficher l'icône "play". Que la vidéo ait été en train de jouer ou en pause, quand le bouton stop est pressé, vous voulez qu'elle doit prête à être lue.
+   Tout ce qui nous reste à faire après ça est d'afficher l'icône "play". Que la vidéo ait été en train de jouer ou en pause, quand le bouton stop est pressé, vous voulez qu'elle doit prête à être lue.
 
 #### Retour arrière et avance rapide
 
@@ -309,85 +305,85 @@ Il y a différentes manières d'implémenter le retour arrière et l'avance rapi
 
 1. Tout d'abord, ajoutez les lignes [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) suivantes à la suite des précédentes :
 
-    ```js
-    rwd.addEventListener('click', mediaBackward);
-    fwd.addEventListener('click', mediaForward);
-    ```
+   ```js
+   rwd.addEventListener("click", mediaBackward);
+   fwd.addEventListener("click", mediaForward);
+   ```
 
 2. Maintenant, occupons-nous des fonctions des gestionnaires d'évènement — ajoutez le code suivant à la suite des fonctions précédentes pour définir `mediaBackward()` et `mediaForward()` :
 
-    ```js
-    var intervalFwd;
-    var intervalRwd;
+   ```js
+   var intervalFwd;
+   var intervalRwd;
 
-    function mediaBackward() {
-      clearInterval(intervalFwd);
-      fwd.classList.remove('active');
+   function mediaBackward() {
+     clearInterval(intervalFwd);
+     fwd.classList.remove("active");
 
-      if(rwd.classList.contains('active')) {
-        rwd.classList.remove('active');
-        clearInterval(intervalRwd);
-        media.play();
-      } else {
-        rwd.classList.add('active');
-        media.pause();
-        intervalRwd = setInterval(windBackward, 200);
-      }
-    }
+     if (rwd.classList.contains("active")) {
+       rwd.classList.remove("active");
+       clearInterval(intervalRwd);
+       media.play();
+     } else {
+       rwd.classList.add("active");
+       media.pause();
+       intervalRwd = setInterval(windBackward, 200);
+     }
+   }
 
-    function mediaForward() {
-      clearInterval(intervalRwd);
-      rwd.classList.remove('active');
+   function mediaForward() {
+     clearInterval(intervalRwd);
+     rwd.classList.remove("active");
 
-      if(fwd.classList.contains('active')) {
-        fwd.classList.remove('active');
-        clearInterval(intervalFwd);
-        media.play();
-      } else {
-        fwd.classList.add('active');
-        media.pause();
-        intervalFwd = setInterval(windForward, 200);
-      }
-    }
-    ```
+     if (fwd.classList.contains("active")) {
+       fwd.classList.remove("active");
+       clearInterval(intervalFwd);
+       media.play();
+     } else {
+       fwd.classList.add("active");
+       media.pause();
+       intervalFwd = setInterval(windForward, 200);
+     }
+   }
+   ```
 
-    Vous remarquerez que nous commençons par initialiser deux variables — `intervalFwd` et `intervalRwd` — vous verrez à quoi elles servent plus tard.
+   Vous remarquerez que nous commençons par initialiser deux variables — `intervalFwd` et `intervalRwd` — vous verrez à quoi elles servent plus tard.
 
-    Voyons pas à pas `mediaBackward()` (`mediaForward()` fait la même chose, mais dans l'autre sens) :
+   Voyons pas à pas `mediaBackward()` (`mediaForward()` fait la même chose, mais dans l'autre sens) :
 
-    1. Nous effaçons les classes et intervales qui sont définits sur la fonctionnalité d'avance rapide — de cette manière, si on presse le bouton `rwd` après avoir pressé le bouton `fwd`, on annule l'avance rapide et la remplaçons avec le retour arrière. Si on essayait de faire les deux à la fois, le lecteur échouerait.
-    2. Nous utilisons une instruction `if` pour vérifier si la classe `active` a été définie sur le bouton `rwd`, ce qui indique qu'il a déjà été pressé. La propriété {{domxref("classList")}} est une propriété plutôt pratique qui existe sur chaque élément — elle contient une liste de toutes les classes définies sur l'élément, ainsi que des méthodes pour en ajouter/supprimer, etc. Nous utilisons la méthode `classList.contains()` pour vérifier si la liste contient la classe `active`. Cela retourne un booléen `true`/`false` en résultat.
-    3. Si la classe `active` a été définie sur le bouton `rwd`, nous la supprimons avec `classList.remove()`, effaçons l'intervale qui a été définit sur le bouton quand il a été pressé (voir ci-dessous pour plus d'explication), et utilisons {{domxref("HTMLMediaElement.play()")}} pour annuler le retour arrière et démarrer la vidéo normalement.
-    4. Sinon, nous ajoutons la classe `active` sur le bouton `rwd` avec `classList.add()`, mettons la vidéo en pause en utilisant {{domxref("HTMLMediaElement.pause()")}}, puis définissons la variable `intervalRwd` en appelant [`setInterval()`](/fr/docs/Web/API/setInterval). Quand elle invoquée, la fonction `setInterval()` créé un intervale actif, ce qui signifie qu'une fonction donnée en paramètre est exécutée toutes les x millisecondes — x est la valeur du 2ème paramètre. Ainsi, nous exécutons ici la fonction `windBackward()` toutes les 200 millisecondes — nous utiliserons cette fonction pour retourner la fonction en arrière de manière constante. Pour stopper un intervale actif, vous devez appeler [`clearInterval()`](/fr/docs/Web/API/clearInterval) en lui donnant l'intervale à arrêter en paramètre, dans notre cas il est stocké dans la variable `intervalRwd` (voir l'appel à `clearInterval()` effectué plus tôt dans la fonction).
+   1. Nous effaçons les classes et intervales qui sont définits sur la fonctionnalité d'avance rapide — de cette manière, si on presse le bouton `rwd` après avoir pressé le bouton `fwd`, on annule l'avance rapide et la remplaçons avec le retour arrière. Si on essayait de faire les deux à la fois, le lecteur échouerait.
+   2. Nous utilisons une instruction `if` pour vérifier si la classe `active` a été définie sur le bouton `rwd`, ce qui indique qu'il a déjà été pressé. La propriété {{domxref("classList")}} est une propriété plutôt pratique qui existe sur chaque élément — elle contient une liste de toutes les classes définies sur l'élément, ainsi que des méthodes pour en ajouter/supprimer, etc. Nous utilisons la méthode `classList.contains()` pour vérifier si la liste contient la classe `active`. Cela retourne un booléen `true`/`false` en résultat.
+   3. Si la classe `active` a été définie sur le bouton `rwd`, nous la supprimons avec `classList.remove()`, effaçons l'intervale qui a été définit sur le bouton quand il a été pressé (voir ci-dessous pour plus d'explication), et utilisons {{domxref("HTMLMediaElement.play()")}} pour annuler le retour arrière et démarrer la vidéo normalement.
+   4. Sinon, nous ajoutons la classe `active` sur le bouton `rwd` avec `classList.add()`, mettons la vidéo en pause en utilisant {{domxref("HTMLMediaElement.pause()")}}, puis définissons la variable `intervalRwd` en appelant [`setInterval()`](/fr/docs/Web/API/setInterval). Quand elle invoquée, la fonction `setInterval()` créé un intervale actif, ce qui signifie qu'une fonction donnée en paramètre est exécutée toutes les x millisecondes — x est la valeur du 2ème paramètre. Ainsi, nous exécutons ici la fonction `windBackward()` toutes les 200 millisecondes — nous utiliserons cette fonction pour retourner la fonction en arrière de manière constante. Pour stopper un intervale actif, vous devez appeler [`clearInterval()`](/fr/docs/Web/API/clearInterval) en lui donnant l'intervale à arrêter en paramètre, dans notre cas il est stocké dans la variable `intervalRwd` (voir l'appel à `clearInterval()` effectué plus tôt dans la fonction).
 
 3. Pour en finir avec cette section, nous devons définir les fonctions `windBackward()` et `windForward()` invoquées dans les appels `setInterval()`. Ajoutez ce qui suit après les deux fonctions précédentes :
 
-    ```js
-    function windBackward() {
-      if(media.currentTime <= 3) {
-        rwd.classList.remove('active');
-        clearInterval(intervalRwd);
-        stopMedia();
-      } else {
-        media.currentTime -= 3;
-      }
-    }
+   ```js
+   function windBackward() {
+     if (media.currentTime <= 3) {
+       rwd.classList.remove("active");
+       clearInterval(intervalRwd);
+       stopMedia();
+     } else {
+       media.currentTime -= 3;
+     }
+   }
 
-    function windForward() {
-      if(media.currentTime >= media.duration - 3) {
-        fwd.classList.remove('active');
-        clearInterval(intervalFwd);
-        stopMedia();
-      } else {
-        media.currentTime += 3;
-      }
-    }
-    ```
+   function windForward() {
+     if (media.currentTime >= media.duration - 3) {
+       fwd.classList.remove("active");
+       clearInterval(intervalFwd);
+       stopMedia();
+     } else {
+       media.currentTime += 3;
+     }
+   }
+   ```
 
-    Encore une fois, nous allons voir pas à pas la première fonction, puisque les deux fonctions font la même chose mais dans le sens inverse. Dans `windBackward()`, nous faisons comme suit — gardez à l'esprit que la fonction est exécutée toutes les 200 millisecondes.
+   Encore une fois, nous allons voir pas à pas la première fonction, puisque les deux fonctions font la même chose mais dans le sens inverse. Dans `windBackward()`, nous faisons comme suit — gardez à l'esprit que la fonction est exécutée toutes les 200 millisecondes.
 
-    1. Nous commençons avec une instruction `if` qui vérifie si le temps en cours est inférieur à 3 secondes, c'est à dire si le retour arrière nous ramènerait avant le début de la vidéo. Cela provoquerait un comportement étrange. Ainsi, si c'est le cas, nous arrêtons la vidéo en appelant `stopMedia()`, supprimons la classe `active` du bouton, et stoppons l'intervale `intervalRwd` pour stopper le retour arrière. Si nous n'avions pas ajouté cette dernière étape, la vidéo continuerait de se remboniner éternellement.
-    2. Si le temps en cours n'est pas inférieur à 3 secondes, nous retournons en arrière de 3 secondes en exécutant `media.currentTime -= 3`. Dans les faits, on rembobine donc la vidéo de 3 secondes toutes les 200 millisecondes.
+   1. Nous commençons avec une instruction `if` qui vérifie si le temps en cours est inférieur à 3 secondes, c'est à dire si le retour arrière nous ramènerait avant le début de la vidéo. Cela provoquerait un comportement étrange. Ainsi, si c'est le cas, nous arrêtons la vidéo en appelant `stopMedia()`, supprimons la classe `active` du bouton, et stoppons l'intervale `intervalRwd` pour stopper le retour arrière. Si nous n'avions pas ajouté cette dernière étape, la vidéo continuerait de se remboniner éternellement.
+   2. Si le temps en cours n'est pas inférieur à 3 secondes, nous retournons en arrière de 3 secondes en exécutant `media.currentTime -= 3`. Dans les faits, on rembobine donc la vidéo de 3 secondes toutes les 200 millisecondes.
 
 #### Mettre à jour le temps écoulé
 
@@ -396,7 +392,7 @@ La dernière chose à implémenter pour notre lecteur multimédia est l'affichag
 Ajoutez la ligne `addEventListener()` suivante à la suite des autres :
 
 ```js
-media.addEventListener('timeupdate', setTime);
+media.addEventListener("timeupdate", setTime);
 ```
 
 Maintenant, ajoutez la fonction `setTime()` :
@@ -409,22 +405,23 @@ function setTime() {
   var secondValue;
 
   if (minutes < 10) {
-    minuteValue = '0' + minutes;
+    minuteValue = "0" + minutes;
   } else {
     minuteValue = minutes;
   }
 
   if (seconds < 10) {
-    secondValue = '0' + seconds;
+    secondValue = "0" + seconds;
   } else {
     secondValue = seconds;
   }
 
-  var mediaTime = minuteValue + ':' + secondValue;
+  var mediaTime = minuteValue + ":" + secondValue;
   timer.textContent = mediaTime;
 
-  var barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
-  timerBar.style.width = barLength + 'px';
+  var barLength =
+    timerWrapper.clientWidth * (media.currentTime / media.duration);
+  timerBar.style.width = barLength + "px";
 }
 ```
 
@@ -445,8 +442,8 @@ Il nous reste un problème à régler. Si on presse les boutons play/pause ou st
 Tout d'abord, ajoutez les lignes qui suivent à l'intérieur de la fonction `stopMedia()` — n'importe où :
 
 ```js
-rwd.classList.remove('active');
-fwd.classList.remove('active');
+rwd.classList.remove("active");
+fwd.classList.remove("active");
 clearInterval(intervalRwd);
 clearInterval(intervalFwd);
 ```
@@ -469,11 +466,11 @@ Voici quelques suggestions de modifications à apporter à l'exemple que nous av
 2. Parce que les éléments `<audio>` ont la même fonctionnalité {{domxref("HTMLMediaElement")}} de disponible, vous pouvez faire fonctionner ce lecteur avec un élément `<audio>`. Essayez de le faire.
 3. Trouvez un moyen de transformer le `<div>` interne en une véritable barre de progrès — quand vous cliquez quelque part sur la barre, vous vous déplacez à la position relative dans la vidéo. Un indice: vous pouvez trouver les valeurs X et Y des côtés gauche/droite et haut/bas d'un l'élément via la méthode [`getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect), et vous pouvez trouver les coordonnées de la souris au moment du clic à l'intérieur de l'objet `event` du clic, appelé sur l'objet {{domxref("Document")}}. Par exemple :
 
-    ```js
-    document.onclick = function(e) {
-      console.log(e.x) + ',' + console.log(e.y)
-    }
-    ```
+   ```js
+   document.onclick = function (e) {
+     console.log(e.x) + "," + console.log(e.y);
+   };
+   ```
 
 ## Voir aussi
 

@@ -80,4 +80,4 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 - [webassembly.org](https://webassembly.org/)
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)
-- [Emscripting a C Library to Wasm](https://web.dev/emscripting-a-c-library/)
+- [將 C 程式庫編寫至 Wasm](https://web.dev/articles/emscripting-a-c-library)

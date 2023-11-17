@@ -13,21 +13,26 @@ En SVG, el elemento \<a> es un contenedor, es decir, puede crear un enlace alred
 
 ```css hidden
 @namespace svgns url(http://www.w3.org/2000/svg);
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Un vínculo alrededor de una forma -->
   <a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle">
-    <circle cx="50" cy="40" r="35"/>
+    <circle cx="50" cy="40" r="35" />
   </a>
 
   <!-- Un vínculo alrededor de una forma -->
   <a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle">
-    <text x="50" y="90" text-anchor="middle">
-      &lt;circle&gt;
-    </text>
+    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
   </a>
 </svg>
 ```
@@ -47,7 +52,8 @@ svgns|a text {
   text-decoration: underline;
 }
 
-svgns|a:hover, svgns|a:active {
+svgns|a:hover,
+svgns|a:active {
   outline: dotted 1px blue;
 }
 ```

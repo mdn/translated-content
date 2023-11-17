@@ -1,17 +1,8 @@
 ---
 title: WindowClient
 slug: Web/API/WindowClient
-tags:
-  - API
-  - Client
-  - Experimental
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-translation_of: Web/API/WindowClient
 ---
+
 {{APIRef("Service Workers API")}}
 
 Интерфейс `WindowClient` [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API) представляет область действия клиента сервис-воркера, который представляет собой документ в контексте просмотра, управляемый активным исполнителем. Клиент сервис-воркера самостоятельно выбирает и использует сервис-воркера для собственной загрузки и загрузки подресурсов.
@@ -37,25 +28,28 @@ _`WindowClient` наследует методы от своего родител
 ## Пример
 
 ```js
-self.addEventListener('notificationclick', function(event) {
-  console.log('On notification click: ', event.notification.tag);
+self.addEventListener("notificationclick", function (event) {
+  console.log("On notification click: ", event.notification.tag);
   event.notification.close();
 
   // Проверяем, открыто ли окно и
   // сфокусированы ли на нем
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
-        client.focus();
-        break;
-      }
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then(function (clientList) {
+        for (var i = 0; i < clientList.length; i++) {
+          var client = clientList[i];
+          if (client.url == "/" && "focus" in client) {
+            client.focus();
+            break;
+          }
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 });
 ```
 

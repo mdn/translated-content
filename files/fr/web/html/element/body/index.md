@@ -1,15 +1,6 @@
 ---
-title: '<body> : l''élément pour le corps du document'
+title: "<body> : l'élément pour le corps du document"
 slug: Web/HTML/Element/body
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Sectioning Root Element
-  - Sections
-  - Web
-translation_of: Web/HTML/Element/body
-browser-compat: html.elements.body
 ---
 
 {{HTMLSidebar}}

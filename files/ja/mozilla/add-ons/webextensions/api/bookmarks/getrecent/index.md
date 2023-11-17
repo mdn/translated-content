@@ -12,8 +12,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 ```js
 browser.bookmarks.getRecent(
   numberOfItems, // 整数
-  callback       // 関数
-)
+  callback, // 関数
+);
 ```
 
 ### 引数
@@ -29,7 +29,7 @@ browser.bookmarks.getRecent(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.getRecent")}}
+{{Compat}}
 
 ## 使用例
 

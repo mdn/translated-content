@@ -11,11 +11,11 @@ slug: Glossary/Callback_function
 
 ```js
 function greeting(name) {
-  alert('Hello ' + name);
+  alert("Hello " + name);
 }
 
 function processUserInput(callback) {
-  var name = prompt('Please enter your name.');
+  var name = prompt("Please enter your name.");
   callback(name);
 }
 

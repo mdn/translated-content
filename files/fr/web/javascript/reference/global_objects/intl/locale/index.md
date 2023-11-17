@@ -1,14 +1,6 @@
 ---
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
-tags:
-  - Constructeur
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale
 ---
 
 {{JSRef}}{{SeeCompatTable}}

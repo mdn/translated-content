@@ -68,9 +68,8 @@ Función que acepta un `<length>` o un `<percentage>` como un argumento.
 <div id="container">
   <div>Item as wide as the content.</div>
   <div>
-    Item con más texto en él. Porque el contenido que es
-    mas grande que el ancho máximo, está restringido a los
-    300 pixeles.
+    Item con más texto en él. Porque el contenido que es mas grande que el ancho
+    máximo, está restringido a los 300 pixeles.
   </div>
   <div>Flexible item</div>
 </div>

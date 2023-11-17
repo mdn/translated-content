@@ -35,8 +35,8 @@ function* [name]([param1[, param2[, ..., paramN]]]) {
 下面的示例定义了一个未命名的生成器函数并把它赋值给`x`。函数产出它的传入参数的平方：
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 
@@ -48,14 +48,10 @@ var x = function*(y) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("GeneratorFunction")}} 对象
-- [The Iterator protocol](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("GeneratorFunction")}}
+- [迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} 对象
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}

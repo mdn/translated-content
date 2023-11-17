@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/concat
 
 ## 語法
 
-```js
+```js-nolint
 concat(str1)
 concat(str1, str2)
 concat(str1, str2, ... , strN)
@@ -45,21 +45,21 @@ concat(str1, str2, ... , strN)
 以下的例子示範如何將那些給定的字串組合成新的字串。
 
 ```js
-let hello = 'Hello, '
-console.log(hello.concat('Kevin', '. Have a nice day.'))
+let hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
 // Hello, Kevin. Have a nice day.
 
-let greetList = ['Hello', ' ', 'Venkat', '!']
-"".concat(...greetList)  // "Hello Venkat!"
+let greetList = ["Hello", " ", "Venkat", "!"];
+"".concat(...greetList); // "Hello Venkat!"
 
-"".concat({})    // [object Object]
-"".concat([])    // ""
-"".concat(null)  // "null"
-"".concat(true)  // "true"
-"".concat(4, 5)  // "45"
+"".concat({}); // [object Object]
+"".concat([]); // ""
+"".concat(null); // "null"
+"".concat(true); // "true"
+"".concat(4, 5); // "45"
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
 

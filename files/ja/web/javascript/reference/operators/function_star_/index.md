@@ -33,13 +33,13 @@ function* [name]([param1[, param2[, ..., paramN]]]) {
 
 ## 例
 
-### function* の使用
+### function\* の使用
 
 次の例では、無名ジェネレーター関数を定義し、`x` に代入します。関数は引数の二乗を生成します。
 
 ```js
-let x = function*(y) {
-   yield y * y;
+let x = function* (y) {
+  yield y * y;
 };
 ```
 

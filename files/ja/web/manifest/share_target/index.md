@@ -112,7 +112,7 @@ self.addEventListener("fetch", (event) => {
       // ユーザーをリダイレクトします。
       const responseUrl = await saveBookmark(link);
       return Response.redirect(responseUrl, 303);
-    })()
+    })(),
   );
 });
 ```

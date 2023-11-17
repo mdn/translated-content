@@ -22,27 +22,27 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 下面这段 html 代码展示了`stack` 属性的使用方法
 
 ```html
-<!DOCTYPE HTML>
-<meta charset="UTF-8">
+<!doctype html>
+<meta charset="UTF-8" />
 <title>Stack Trace Example</title>
 <body>
-<script>
-function trace() {
-  try {
-    throw new Error('myError');
-  }
-  catch(e) {
-    alert(e.stack);
-  }
-}
-function b() {
-  trace();
-}
-function a() {
-  b(3, 4, '\n\n', undefined, {});
-}
-a('first call, firstarg');
-</script>
+  <script>
+    function trace() {
+      try {
+        throw new Error("myError");
+      } catch (e) {
+        alert(e.stack);
+      }
+    }
+    function b() {
+      trace();
+    }
+    function a() {
+      b(3, 4, "\n\n", undefined, {});
+    }
+    a("first call, firstarg");
+  </script>
+</body>
 ```
 
 假设上面这段代码被保存在 Windows 系统下的 `C:\example.html` 在处理过程中抛出如下所示的错误信息
@@ -81,14 +81,13 @@ Firefox30 以 Gecko 30 格式开头，`Function()` 和 `eval()` 调用产生的�
 
 ```js
 try {
-  new Function('throw new Error()')();
+  new Function("throw new Error()")();
 } catch (e) {
   console.log(e.stack);
 }
 
 // anonymous@file:///C:/example.html line 7 > Function:1:1
 // @file:///C:/example.html:7:6
-
 
 try {
   eval("eval('FAIL')");

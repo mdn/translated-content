@@ -1,10 +1,6 @@
 ---
 title: Deprecated and obsolete features
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-tags:
-  - Deprecated
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
 
 {{JsSidebar("More")}}
@@ -19,30 +15,30 @@ These deprecated features can still be used, but should be used with caution bec
 
 The following properties are deprecated. This does not affect their use in {{jsxref("String.replace", "replacement strings", "", 1)}}:
 
-| Свойство                                                         | Описание                                                                                                                                                   |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.n", "$1-$9")}}                         | Parenthesized substring matches, if any. **Warning:** Using these properties can result in problems, since browser extensions can modify them. Avoid them! |
-| {{jsxref("RegExp.input", "$_")}}                     | Смотрите `input`.                                                                                                                                          |
-| {{jsxref("RegExp.multiline", "$*")}}                 | Смотрите `multiline`.                                                                                                                                      |
-| {{jsxref("RegExp.lastMatch", "$&amp;")}}             | Смотрите `lastMatch`.                                                                                                                                      |
-| {{jsxref("RegExp.lastParen", "$+")}}                 | Смотрите `lastParen`.                                                                                                                                      |
-| {{jsxref("RegExp.leftContext", "$`")}}             | Смотрите `leftContext`.                                                                                                                                    |
-| {{jsxref("RegExp.rightContext", "$'")}}             | Смотрите `rightContext`.                                                                                                                                   |
-| {{jsxref("RegExp.input", "input")}}                 | The string against which a regular expression is matched.                                                                                                  |
-| {{jsxref("RegExp.lastMatch", "lastMatch")}}         | The last matched characters.                                                                                                                               |
-| {{jsxref("RegExp.lastParen", "lastParen")}}         | The last parenthesized substring match, if any.                                                                                                            |
-| {{jsxref("RegExp.leftContext", "leftContext")}} | The substring preceding the most recent match.                                                                                                             |
+| Свойство                                          | Описание                                                                                                                                                   |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.n", "$1-$9")}}                   | Parenthesized substring matches, if any. **Warning:** Using these properties can result in problems, since browser extensions can modify them. Avoid them! |
+| {{jsxref("RegExp.input", "$_")}}                  | Смотрите `input`.                                                                                                                                          |
+| {{jsxref("RegExp.multiline", "$*")}}              | Смотрите `multiline`.                                                                                                                                      |
+| {{jsxref("RegExp.lastMatch", "$&amp;")}}          | Смотрите `lastMatch`.                                                                                                                                      |
+| {{jsxref("RegExp.lastParen", "$+")}}              | Смотрите `lastParen`.                                                                                                                                      |
+| {{jsxref("RegExp.leftContext", "$`")}}            | Смотрите `leftContext`.                                                                                                                                    |
+| {{jsxref("RegExp.rightContext", "$'")}}           | Смотрите `rightContext`.                                                                                                                                   |
+| {{jsxref("RegExp.input", "input")}}               | The string against which a regular expression is matched.                                                                                                  |
+| {{jsxref("RegExp.lastMatch", "lastMatch")}}       | The last matched characters.                                                                                                                               |
+| {{jsxref("RegExp.lastParen", "lastParen")}}       | The last parenthesized substring match, if any.                                                                                                            |
+| {{jsxref("RegExp.leftContext", "leftContext")}}   | The substring preceding the most recent match.                                                                                                             |
 | {{jsxref("RegExp.rightContext", "rightContext")}} | The substring following the most recent match.                                                                                                             |
 
 The following are now properties of `RegExp` instances, no longer of the `RegExp` object:
 
-| Свойство                                                     | Описание                                                                                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| {{jsxref("RegExp.global", "global")}}             | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
+| Свойство                                      | Описание                                                                                                           |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("RegExp.global", "global")}}         | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
 | {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Whether or not to ignore case while attempting a match in a string.                                                |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | The index at which to start the next match.                                                                        |
-| {{jsxref("RegExp.multiline", "multiline")}}     | Whether or not to search in strings across multiple lines.                                                         |
-| {{jsxref("RegExp.source", "source")}}             | The text of the pattern.                                                                                           |
+| {{jsxref("RegExp.lastIndex", "lastIndex")}}   | The index at which to start the next match.                                                                        |
+| {{jsxref("RegExp.multiline", "multiline")}}   | Whether or not to search in strings across multiple lines.                                                         |
+| {{jsxref("RegExp.source", "source")}}         | The text of the pattern.                                                                                           |
 
 ### RegExp methods
 
@@ -107,26 +103,26 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 ### Объект
 
-| Свойство                                                                                 | Описание                                                                       |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "**count**")}}                 | Returns the number of enumerable properties directly on a user-defined object. |
-| {{jsxref("Global_Objects/Object/Parent", "**parent**")}}             | Points to an object's context.                                                 |
+| Свойство                                                            | Описание                                                                       |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| {{jsxref("Global_Objects/Object/count", "**count**")}}              | Returns the number of enumerable properties directly on a user-defined object. |
+| {{jsxref("Global_Objects/Object/Parent", "**parent**")}}            | Points to an object's context.                                                 |
 | {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
-| {{jsxref("Object.observe()")}}                                                 | Asynchronously observing the changes to an object.                             |
-| {{jsxref("Object.unobserve()")}}                                             | Remove observers.                                                              |
-| {{jsxref("Object.getNotifier()")}}                                             | Creates an object that allows to synthetically trigger a change.               |
+| {{jsxref("Object.observe()")}}                                      | Asynchronously observing the changes to an object.                             |
+| {{jsxref("Object.unobserve()")}}                                    | Remove observers.                                                              |
+| {{jsxref("Object.getNotifier()")}}                                  | Creates an object that allows to synthetically trigger a change.               |
 
 ### Function
 
-| Свойство                                                             | Описание                    |
-| -------------------------------------------------------------------- | --------------------------- |
+| Свойство                                             | Описание                    |
+| ---------------------------------------------------- | --------------------------- |
 | {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. |
 
 ### Массив
 
-| Свойство                                 | Описание                                   |
-| ---------------------------------------- | ------------------------------------------ |
-| {{jsxref("Array.observe()")}} | Асинхронный просмотр изменений в массивах. |
+| Свойство                        | Описание                                   |
+| ------------------------------- | ------------------------------------------ |
+| {{jsxref("Array.observe()")}}   | Асинхронный просмотр изменений в массивах. |
 | {{jsxref("Array.unobserve()")}} | Remove observers.                          |
 
 ### Число

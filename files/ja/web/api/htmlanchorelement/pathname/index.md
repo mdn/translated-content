@@ -1,7 +1,6 @@
 ---
 title: "HTMLAnchorElement: pathname プロパティ"
 slug: Web/API/HTMLAnchorElement/pathname
-original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
@@ -17,9 +16,9 @@ l10n:
 ## 例
 
 ```js
-// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementById("myAnchor");
-anchor.pathname; // '/en-US/docs/HTMLAnchorElement' を返す
+anchor.pathname; // '/ja/docs/HTMLAnchorElement' を返す
 ```
 
 ## 仕様書

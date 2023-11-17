@@ -26,9 +26,9 @@ Cuando la solicitud `POST` es enviada por otro método distinto a un formulario 
 | Pedir como cuerpo                                        | Sí                                |
 | -------------------------------------------------------- | --------------------------------- |
 | Respuesta válida como cuerpo                             | Sí                                |
-| {{Glossary("Seguro")}}                             | No                                |
-| {{Glossary("Idempotente")}}                     | No                                |
-| {{Glossary("Cacheable")}}                         | Sólo si incluye nueva información |
+| {{Glossary("Seguro")}}                                   | No                                |
+| {{Glossary("Idempotente")}}                              | No                                |
+| {{Glossary("Cacheable")}}                                | Sólo si incluye nueva información |
 | Permitido en [HTML forms](/es/docs/Web/Guide/HTML/Forms) | Sí                                |
 
 ## Sintaxis
@@ -41,7 +41,7 @@ POST /index.html
 
 Un formulario simple empleando el tipo de contenido por defecto `application/x-www-form-urlencoded`:
 
-```html
+```http
 POST / HTTP/1.1
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
@@ -52,7 +52,7 @@ say=Hi&to=Mom
 
 Un formulario usando el tipo de contenido `multipart/form-data`:
 
-```
+```http
 POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"

@@ -9,26 +9,26 @@ slug: Web/CSS/float
 
 {{EmbedInteractiveExample("pages/css/float.html")}}
 
-*浮動要素* (floating element) とは、`float` の計算値が `none` 以外の要素です。
+_浮動要素_ (floating element) とは、`float` の計算値が `none` 以外の要素です。
 
 `float` は暗黙的にブロックレイアウトの使用を意味しており、 {{cssxref("display")}} の計算値を変更する場合があります。
 
-| 指定値               | 計算値         |
-| -------------------- | -------------- |
-| `inline`             | `block`        |
-| `inline-block`       | `block`        |
-| `inline-table`       | `table`        |
-| `table-row`          | `block`        |
-| `table-row-group`    | `block`        |
-| `table-column`       | `block`        |
-| `table-column-group` | `block`        |
-| `table-cell`         | `block`        |
-| `table-caption`      | `block`        |
-| `table-header-group` | `block`        |
-| `table-footer-group` | `block`        |
-| `inline-flex`        | `flex`         |
-| `inline-grid`        | `grid`         |
-| _その他_             | _変更なし_     |
+| 指定値               | 計算値     |
+| -------------------- | ---------- |
+| `inline`             | `block`    |
+| `inline-block`       | `block`    |
+| `inline-table`       | `table`    |
+| `table-row`          | `block`    |
+| `table-row-group`    | `block`    |
+| `table-column`       | `block`    |
+| `table-column-group` | `block`    |
+| `table-cell`         | `block`    |
+| `table-caption`      | `block`    |
+| `table-header-group` | `block`    |
+| `table-footer-group` | `block`    |
+| `inline-flex`        | `flex`     |
+| `inline-grid`        | `grid`     |
+| _その他_             | _変更なし_ |
 
 > **メモ:** JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになり、 Internet Explorer のバージョン 8 以前では、 `styleFloat` を使用しています。これは、ダッシュ区切りの CSS 名は DOM メンバーとしてキャメルケースで綴るというルールの例外でした (これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです)。
 
@@ -89,11 +89,13 @@ float: unset;
   <div class="left">1</div>
   <div class="left">2</div>
   <div class="right">3</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     Morbi tristique sapien ac erat tincidunt, sit amet dignissim
-     lectus vulputate. Donec id iaculis velit. Aliquam vel
-     malesuada erat. Praesent non magna ac massa aliquet tincidunt
-     vel in massa. Phasellus feugiat est vel leo finibus congue.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
+    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
+    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
+    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
+    congue.
+  </p>
 </section>
 ```
 

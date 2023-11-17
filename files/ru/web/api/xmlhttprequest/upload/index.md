@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
-translation_of: Web/API/XMLHttpRequest/upload
 ---
 
 {{APIRef('XMLHttpRequest')}}

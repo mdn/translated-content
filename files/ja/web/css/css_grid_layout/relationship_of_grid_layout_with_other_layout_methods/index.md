@@ -1,7 +1,6 @@
 ---
 title: グリッドレイアウトと他のレイアウト方法との関係
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 
 {{CSSRef}}
@@ -21,7 +20,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 {{cssxref("flex-wrap")}} プロパティを `wrap` に設定し、コンテナーの大きさが狭くなりすぎて flex basis を維持することができなくなったら、項目が次の行へ折り返されるようにしています。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -70,7 +71,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 次の例では、グリッドを使って同様のレイアウトを構築します。今回は 3 つの `1fr` の列トラックがあります。アイテム自体には何も設定する必要はりません。構築されたグリッドのセルそれぞれにアイテムを一つずつ配置していきます。厳格なグリッドにアイテムが配置されているため、行と列は整列しています。アイテムは 5 つなので、2 行目の最後は空間になります。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -130,7 +133,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 最初の例では、フレックスボックスを使用しており、3 つの要素を持つコンテナーがあります。コンテナーである `wrapper` には {{cssxref("min-height")}} が設定され、フレックスコンテナーの高さを決めています。コンテナーには {{cssxref("align-items")}} を `flex-end` に設定してコンテナーの末尾に要素が並ぶようにしています。また、`box1` の {{cssxref("align-self")}} プロパティをコンテナーの高さに合わせるよう `streach` へ上書きし、`box2` もコンテナーの始まりから整列するにように上書きしています。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -176,7 +181,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 2 つ目の例ではグリッドを使って同じレイアウトを作りましょう。今回はグリッドレイアウトを使うため、ボックス配置プロパティを使います。従って、 `start` と `end` を `flex-start` と `flex-end` の代わりに使って配置します。グリッドレイアウトの場合は、グリッド領域の中にアイテムを配置していきます。今回のケースでは単一のグリッドセルを作成していますが、これは複数のグリッドセルで構成された領域にもなることが可能です。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -204,7 +211,7 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: end;
   grid-auto-rows: 200px;
 }
@@ -233,7 +240,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 次の例では、反復記法で整数の代わりに `auto-fill` キーワードを使用し、トラックリストを 200 ピクセルに設定しています。これにより、 grid はコンテナーに収まるだけの 200 ピクセルの列トラックを作成します。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -272,7 +281,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 これはフレックスボックスとは全く同じではありません。フレックスボックスの例では、アイテムは折り返す前では 200 ピクセルの基準よりも大きくなっています。グリッドでも `auto-fit` と {{cssxref("minmax()", "minmax()")}} 関数を組み合わせることで、同じことが実現できます。次の例では、 `minmax` を使って自動フィットトラックを作成します。トラックの大きさは最低でも 200 ピクセルにしたいので、最大値を `1fr` に設定しています。ブラウザーは、 200 ピクセルがコンテナーにいくつ収まるかを計算し、グリッドの隙間も考慮した上で、最大値の `1fr` を、アイテム間の残りの空間を共有する指示として扱います。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -319,7 +330,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 以下の例では、4 つの子アイテムを含むラッパーがあります。アイテム 3 は絶対的な位置が指定されており、線ベースの配置を用いてグリッドに配置されています。グリッドコンテナーには `position: relative` が設定されているので、このアイテムの位置指定コンテキストになります。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -341,7 +354,7 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
   <div class="box1">One</div>
   <div class="box2">Two</div>
   <div class="box3">
-   このブロックは絶対位置指定されます。この例では、グリッドコンテナーが包含ブロックとなっているため、絶対位置指定のオフセット値は、配置された領域の外縁から計算されます。
+    このブロックは絶対位置指定されます。この例では、グリッドコンテナーが包含ブロックとなっているため、絶対位置指定のオフセット値は、配置された領域の外縁から計算されます。
   </div>
   <div class="box4">Four</div>
 </div>
@@ -350,7 +363,7 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   gap: 20px;
   position: relative;
@@ -387,7 +400,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 `.box3` に相対位置を与え、オフセットプロパティを使ってサブアイテムを配置しています。この場合、位置指定コンテキストはグリッド領域です。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -408,9 +423,10 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 <div class="wrapper">
   <div class="box1">One</div>
   <div class="box2">Two</div>
-  <div class="box3">Three
+  <div class="box3">
+    Three
     <div class="abspos">
-     このブロックは絶対的に位置指定されます。この例では、グリッド領域が包含ブロックとなっているため、絶対位置指定のオフセット値はグリッド領域の外縁から計算されます。
+      このブロックは絶対的に位置指定されます。この例では、グリッド領域が包含ブロックとなっているため、絶対位置指定のオフセット値はグリッド領域の外縁から計算されます。
     </div>
   </div>
   <div class="box4">Four</div>
@@ -420,7 +436,7 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   gap: 20px;
 }
@@ -435,8 +451,8 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255,255,255,.5);
-  border: 1px solid rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   color: #000;
   padding: 10px;
 }
@@ -457,7 +473,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 次のマークアップでは、グリッドがあり、グリッド上の最初のアイテムが 3 つの列トラックすべてにまたがるように設定されています。その中には 3 つの入れ子になったアイテムが含まれています。これらのアイテムは直接の子ではないので、グリッドレイアウトの一部にはならず、通常のブロックレイアウトで表示されます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -513,7 +531,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 次に、`box1` のルールに `display:` `contents` を追加すると、そのアイテムのボックスは消え、サブアイテムはグリッドアイテムとなり、自動配置ルールを使ってレイアウトされるようになりました。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

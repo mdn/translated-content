@@ -29,33 +29,36 @@ slug: Web/SVG/Attribute/text-anchor
 
 ```html
 <?xml version="1.0"?>
-<svg width="120" height="120" viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1">
+  <!-- Materialisation of anchors -->
+  <path
+    d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110"
+    stroke="grey" />
 
-    <!-- Materialisation of anchors -->
-    <path d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110" stroke="grey" />
+  <!-- Anchors in action -->
+  <text text-anchor="start" x="60" y="40">A</text>
 
+  <text text-anchor="middle" x="60" y="75">A</text>
 
-    <!-- Anchors in action -->
-    <text text-anchor="start"
-          x="60" y="40">A</text>
+  <text text-anchor="end" x="60" y="110">A</text>
 
-    <text text-anchor="middle"
-          x="60" y="75">A</text>
+  <!-- Materialisation of anchors -->
+  <circle cx="60" cy="40" r="3" fill="red" />
+  <circle cx="60" cy="75" r="3" fill="red" />
+  <circle cx="60" cy="110" r="3" fill="red" />
 
-    <text text-anchor="end"
-          x="60" y="110">A</text>
-
-    <!-- Materialisation of anchors -->
-    <circle cx="60" cy="40" r="3" fill="red" />
-    <circle cx="60" cy="75" r="3" fill="red" />
-    <circle cx="60" cy="110" r="3" fill="red" />
-
-<style><![CDATA[
-text{
-    font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-}
-]]></style>
+  <style>
+    <![CDATA[
+    text{
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+    }
+    ]]>
+  </style>
 </svg>
 ```
 

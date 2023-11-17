@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toUTCString
 ---
 
 {{JSRef}}
@@ -44,7 +43,7 @@ Antes de ECMAScript 2018, el formato del valor devuelto variaba según la plataf
 ### Usando `toUTCString()`
 
 ```js
-var today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+var today = new Date("Wed, 14 Jun 2017 00:00:00 PDT");
 var UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 ```
 

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/join
 ## 구문
 
 ```js
-    arr.join([separator])
+arr.join([separator]);
 ```
 
 ### 매개변수
@@ -37,11 +37,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/join
 다음 예제에서는 3개의 요소를 가진 배열 `a`를 만들고, 기본 구분자, 쉼표와 공백, 더하기 기호, 빈 문자열의 네 가지 구분자를 사용해 배열을 연결합니다.
 
 ```js
-var a = ['바람', '비', '불'];
-var myVar1 = a.join();      // myVar1에 '바람,비,불'을 대입
-var myVar2 = a.join(', ');  // myVar2에 '바람, 비, 불'을 대입
-var myVar3 = a.join(' + '); // myVar3에 '바람 + 비 + 불'을 대입
-var myVar4 = a.join('');    // myVar4에 '바람비불'을 대입
+var a = ["바람", "비", "불"];
+var myVar1 = a.join(); // myVar1에 '바람,비,불'을 대입
+var myVar2 = a.join(", "); // myVar2에 '바람, 비, 불'을 대입
+var myVar3 = a.join(" + "); // myVar3에 '바람 + 비 + 불'을 대입
+var myVar4 = a.join(""); // myVar4에 '바람비불'을 대입
 ```
 
 ## 명세

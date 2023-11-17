@@ -1,7 +1,6 @@
 ---
 title: 段組みでのはみ出しの扱い
 slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
-original_slug: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 ---
 
 {{CSSRef}}

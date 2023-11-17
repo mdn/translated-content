@@ -1,7 +1,6 @@
 ---
 title: Tipos de enlaces
 slug: Web/HTML/Attributes/rel
-original_slug: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}
@@ -23,8 +22,8 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>alternate</code></td>
       <td>
        <ul>
-        <li>Si el elemento es {{HTMLElement("link")}} y el atributo <a href="/es/docs/Web/HTML/Element/link#rel"><code>rel</code></a> tambien contiene el tipo <code>stylesheet</code>, el enlace define una <a href="/en-US/docs/Alternative_style_sheets">hoja de estilo alternativa</a>; en ese caso el atributo <a href="/es/docs/Web/HTML/Element/link#title"><code>title</code></a> deberá estar presente y no ser una cadena vacia.</li>
-        <li>Si el atributo <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> es puesto a <code>application/rss+xml</code> o <code>application/atom+xml</code>, el enlace define un <a href="/en-US/docs/RSS/Getting_Started/Syndicating">feed de distribución</a>. El primero de ellos definido en la pagina es el tomado por default.</li>
+        <li>Si el elemento es {{HTMLElement("link")}} y el atributo <a href="/es/docs/Web/HTML/Element/link#rel"><code>rel</code></a> tambien contiene el tipo <code>stylesheet</code>, el enlace define una <a href="/es/docs/Alternative_style_sheets">hoja de estilo alternativa</a>; en ese caso el atributo <a href="/es/docs/Web/HTML/Element/link#title"><code>title</code></a> deberá estar presente y no ser una cadena vacia.</li>
+        <li>Si el atributo <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> es puesto a <code>application/rss+xml</code> o <code>application/atom+xml</code>, el enlace define un <a href="/es/docs/RSS/Getting_Started/Syndicating">feed de distribución</a>. El primero de ellos definido en la pagina es el tomado por default.</li>
         <li>De otra forma, el enlace define una pagina alternativa, de uno de los siguientes tipos:
          <ul>
           <li>para otros medios, como un dispositivo portatil (si el atributo <a href="/es/docs/Web/HTML/Element/link#media"><code>media</code></a> esta indicado)</li>
@@ -58,7 +57,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
      </tr>
      <tr>
       <td><code>bookmark</code></td>
-      <td>Indica que el hipervínculo es un <a href="/en-US/docs/Permalink">permalink</a> al ancestro más cercano del elemento {{HTMLElement("article")}}. Si no hay ninguno, entonces es un permalink para la <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document">sección</a> con la que el elemento está más estrechamente asociado.<br>
+      <td>Indica que el hipervínculo es un <a href="/es/docs/Permalink">permalink</a> al ancestro más cercano del elemento {{HTMLElement("article")}}. Si no hay ninguno, entonces es un permalink para la <a href="/es/docs/Sections_and_Outlines_of_an_HTML5_document">sección</a> con la que el elemento está más estrechamente asociado.<br>
        <br>
        Esto permite crear marcadores a un artículo en particular dentro de una página con múltiples artículos, como por ejemplo una página con un resumen mensual de un blog, o un agregador de blog.</td>
       <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
@@ -171,7 +170,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>prefetch</code></td>
       <td>Hints the browser to fetch in advance the linked resource, as it will likely be requested by the user.<br>
        <br>
-       <strong>Note:</strong> the <a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
+       <strong>Note:</strong> the <a href="/es/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
       <td>{{HTMLElement("a")}} {{unimplemented_inline}},<br>
        {{HTMLElement("area")}} {{unimplemented_inline}},<br>
        {{HTMLElement("link")}}</td>
@@ -203,7 +202,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>search</code></td>
       <td>Indicates that the hyperlink reference a document whose interface is specially designing for searching in this document, or site, and its resources.<br>
        <br>
-       If the <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
+       If the <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/es/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
       <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
       <td><em>None.</em></td>
      </tr>
@@ -211,7 +210,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>stylesheet</code></td>
       <td>Defines an external resource to be used as a stylesheet. If the <code>type</code> is not set, the browser should assume it is a <code>text/css</code> stylesheet until further inspection.<br>
        <br>
-       If used in combination with the <code>alternate</code> keyword, it defines an <a href="/en-US/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the <a href="/es/docs/Web/HTML/Element/link#title"><code>title</code></a> attribute must be present and not be the empty string.</td>
+       If used in combination with the <code>alternate</code> keyword, it defines an <a href="/es/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the <a href="/es/docs/Web/HTML/Element/link#title"><code>title</code></a> attribute must be present and not be the empty string.</td>
       <td>{{HTMLElement("link")}}</td>
       <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
      </tr>

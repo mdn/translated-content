@@ -1,8 +1,8 @@
 ---
 title: DocumentOrShadowRoot.styleSheets
 slug: Web/API/Document/styleSheets
-original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
+
 {{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 
 {{domxref("DocumentOrShadowRoot")}} 인터페이스의 **`styleSheets`** 읽기 전용 속성은 문서에서 명시적으로 링크했거나, 안에 포함된 스타일시트에 대한 {{domxref('CSSStyleSheet')}} 객체의 {{domxref('StyleSheetList')}}를 반환합니다.
@@ -11,9 +11,9 @@ original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 
 ```js
 function getStyleSheet(unique_title) {
-  for(var i=0; i<document.styleSheets.length; i++) {
+  for (var i = 0; i < document.styleSheets.length; i++) {
     var sheet = document.styleSheets[i];
-    if(sheet.title == unique_title) {
+    if (sheet.title == unique_title) {
       return sheet;
     }
   }

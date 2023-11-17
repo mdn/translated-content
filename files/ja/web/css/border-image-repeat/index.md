@@ -65,7 +65,7 @@ border-image-repeat: unset;
   padding: 1rem;
   border: 40px solid;
   border-image: url("border.png") 27;
-  border-image-repeat: stretch;  /* live sample で変更可能 */
+  border-image-repeat: stretch; /* live sample で変更可能 */
 }
 ```
 
@@ -85,7 +85,8 @@ border-image-repeat: unset;
 ```js hidden
 var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
-  document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
+  document.getElementById("bordered").style.borderImageRepeat =
+    evt.target.value;
 });
 ```
 

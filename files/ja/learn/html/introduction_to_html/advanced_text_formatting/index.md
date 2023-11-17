@@ -103,7 +103,8 @@ HTML テキストの基礎では、HTML で [基本的なリストをマーク�
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
@@ -203,7 +204,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -251,7 +252,7 @@ HTML には引用をマークアップするための機能もあります。ど
 ```html
 <p>こちらが引用です。</p>
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -271,7 +272,7 @@ HTML には引用をマークアップするための機能もあります。ど
 ```html
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
 </p>
@@ -283,19 +284,19 @@ HTML には引用をマークアップするための機能もあります。ど
 
 ### 引用元
 
-[`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性の内容は有用そうに見えますが、残念ながらブラウザーや 画面リーダーなどは、この属性を実際にはあまり使用してくれません。 JavaScript や CSS を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
+[`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性の内容は有用そうに見えますが、残念ながらブラウザーや スクリーンリーダーなどは、この属性を実際にはあまり使用してくれません。 JavaScript や CSS を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
 
 {{htmlelement("cite")}} 要素がありますが、これは引用されたリソースのタイトル、例えば書籍の名前を格納することを意味しています。しかし、 `<cite>` 内のテキストを何らかの方法で引用元とリンクできない理由はありません。
 
 ```html-nolint
 <p>
   According to the
-  <a href="/en-US/docs/Web/HTML/Element/blockquote">
+  <a href="/ja/docs/Web/HTML/Element/blockquote">
     <cite>MDN blockquote page</cite></a>:
 </p>
 
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -305,10 +306,10 @@ HTML には引用をマークアップするための機能もあります。ど
 
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
-  — <a href="/en-US/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
+  — <a href="/ja/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
 </p>
 ```
 
@@ -338,7 +339,8 @@ HTML には引用をマークアップするための機能もあります。ど
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
@@ -434,7 +436,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -499,7 +501,8 @@ textarea.onkeyup = () => {
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 50px; width: 95%">
@@ -593,7 +596,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;

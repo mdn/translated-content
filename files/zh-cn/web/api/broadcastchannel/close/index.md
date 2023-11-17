@@ -19,7 +19,7 @@ var str = channel.close();
 
 ```js
 // 连接到指定频道
-var bc = new BroadcastChannel('test_channel');
+var bc = new BroadcastChannel("test_channel");
 
 // 其他操作 (如：postMessage, …)
 

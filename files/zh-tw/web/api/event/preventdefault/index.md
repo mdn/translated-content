@@ -20,7 +20,7 @@ event.preventDefault();
 Toggling a checkbox is the default action of clicking on a checkbox. This example demonstrates how to prevent that from happening:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>preventDefault example</title>
@@ -39,7 +39,7 @@ Toggling a checkbox is the default action of clicking on a checkbox. This exampl
           alert("preventDefault will stop you from checking this checkbox!");
           event.preventDefault();
         },
-        false
+        false,
       );
     </script>
   </body>
@@ -75,7 +75,7 @@ function checkName(evt) {
           "\n" +
           "charCode: " +
           charCode +
-          "\n"
+          "\n",
       );
     }
   }

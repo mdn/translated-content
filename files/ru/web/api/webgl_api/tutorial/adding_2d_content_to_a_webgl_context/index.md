@@ -35,7 +35,10 @@ function initShaders() {
 
   gl.useProgram(shaderProgram);
 
-  vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+  vertexPositionAttribute = gl.getAttribLocation(
+    shaderProgram,
+    "aVertexPosition",
+  );
   gl.enableVertexAttribArray(vertexPositionAttribute);
 }
 ```
@@ -73,14 +76,14 @@ function getShader(gl, id) {
 Как только элемент с указанным ID найден, его текст помещается в переменную `theSource`.
 
 ```js
-  if (shaderScript.type == "x-shader/x-fragment") {
-    shader = gl.createShader(gl.FRAGMENT_SHADER);
-  } else if (shaderScript.type == "x-shader/x-vertex") {
-    shader = gl.createShader(gl.VERTEX_SHADER);
-  } else {
-     // неизвестный тип шейдера
-     return null;
-  }
+if (shaderScript.type == "x-shader/x-fragment") {
+  shader = gl.createShader(gl.FRAGMENT_SHADER);
+} else if (shaderScript.type == "x-shader/x-vertex") {
+  shader = gl.createShader(gl.VERTEX_SHADER);
+} else {
+  // неизвестный тип шейдера
+  return null;
+}
 ```
 
 После того, как код для шейдера считан, мы проверяем MIME тип шейдерного объекта, чтобы определить является он вершинным (MIME type "x-shader/x-vertex") или фрагментным (MIME type "x-shader/x-fragment") шейдером, а затем создаём соответствующий тип шейдера из полученного исходного кода.
@@ -143,17 +146,14 @@ function getShader(gl, id) {
 Перед тем, как мы отрисуем наш квадрат, нам необходимо создать буфер, который содержит его вершины. Мы сделаем это, вызвав функцию `initBuffers().` По мере ознакомления с другими концепциями WebGL, эта функция будет усложняться при создании более сложных трёхмерных объектов.
 
 ```js
-var horizAspect = 480.0/640.0;
+var horizAspect = 480.0 / 640.0;
 
 function initBuffers() {
   squareVerticesBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesBuffer);
 
   var vertices = [
-    1.0,  1.0,  0.0,
-    -1.0, 1.0,  0.0,
-    1.0,  -1.0, 0.0,
-    -1.0, -1.0, 0.0
+    1.0, 1.0, 0.0, -1.0, 1.0, 0.0, 1.0, -1.0, 0.0, -1.0, -1.0, 0.0,
   ];
 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
@@ -172,7 +172,7 @@ function initBuffers() {
 function drawScene() {
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-  perspectiveMatrix = makePerspective(45, 640.0/480.0, 0.1, 100.0);
+  perspectiveMatrix = makePerspective(45, 640.0 / 480.0, 0.1, 100.0);
 
   loadIdentity();
   mvTranslate([-0.0, 0.0, -6.0]);
@@ -213,7 +213,11 @@ function mvTranslate(v) {
 
 function setMatrixUniforms() {
   var pUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
-  gl.uniformMatrix4fv(pUniform, false, new Float32Array(perspectiveMatrix.flatten()));
+  gl.uniformMatrix4fv(
+    pUniform,
+    false,
+    new Float32Array(perspectiveMatrix.flatten()),
+  );
 
   var mvUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
   gl.uniformMatrix4fv(mvUniform, false, new Float32Array(mvMatrix.flatten()));

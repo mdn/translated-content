@@ -1,7 +1,6 @@
 ---
 title: コード例のガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-original_slug: MDN/Guidelines/Code_guidelines
 ---
 
 {{MDNSidebar}}
@@ -58,7 +57,7 @@ MDN Web Docs のコード例を整形するためのこれらのガイドライ�
 ```js example-good
 function myFunc() {
   if (thingy) {
-    console.log('Yup, that worked.');
+    console.log("Yup, that worked.");
   }
 }
 ```
@@ -67,7 +66,7 @@ function myFunc() {
 
 制御文やループキーワードと、その開始括弧の間にスペースを追加してください。
 
- ```js example-good
+```js example-good
 if (condition) {
   /* handle the condition */
 } else {
@@ -84,16 +83,18 @@ if (condition) {
 例えば、次のものは良くありません。
 
 ```js example-bad
-let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';
+let tommyCat =
+  "Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.";
 ```
 
 次のものはましですが、まだ幾らかぎこちないです。
 
 ```js
-let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
-+ 'matter may have nestled its way into his mighty throat. Many a fat alley rat '
-+ 'had met its demise while staring point blank down the cavernous barrel of '
-+ 'this awesome prowling machine.';
+let tommyCat =
+  "Said Tommy the Cat as he reeled back to clear whatever foreign " +
+  "matter may have nestled its way into his mighty throat. Many a fat alley rat " +
+  "had met its demise while staring point blank down the cavernous barrel of " +
+  "this awesome prowling machine.";
 ```
 
 テンプレートリテラルを使うのもよいでしょう。
@@ -140,32 +141,32 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 下記のように、主要な色やその他の「基本的な」色はキーワードを使用することを推奨します。
 
-  ```css example-good
-  color: black;
-  color: white;
-  color: red;
-  ```
+```css example-good
+color: black;
+color: white;
+color: red;
+```
 
-  もっと複雑な色には `rgb()` を使用してください（半透過のものも含む）。
+もっと複雑な色には `rgb()` を使用してください（半透過のものも含む）。
 
-  ```css example-good
-  color: rgb(0, 0, 0, 0.5);
-  color: rgb(248, 242, 230);
-  ```
+```css example-good
+color: rgb(0, 0, 0, 0.5);
+color: rgb(248, 242, 230);
+```
 
-  16 進の色を使用する必要がある場合は、小文字を使用してください。
+16 進の色を使用する必要がある場合は、小文字を使用してください。
 
-  ```css example-good
-  color: #058ed9;
-  color: #a39a92;
-  ```
+```css example-good
+color: #058ed9;
+color: #a39a92;
+```
 
-  冗長であれば短縮形を使用してください。
+冗長であれば短縮形を使用してください。
 
-  ```css example-good
-  color: #ff0;
-  color: #fff;
-  ```
+```css example-good
+color: #ff0;
+color: #fff;
+```
 
 ### 良い例と悪い例の強調表示
 
@@ -177,8 +178,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 ```js
 function myFunc() {
-  console.log('Hello!');
-};
+  console.log("Hello!");
+}
 ```
 
 コードブロックを良い例、悪い例と表示するには、以下のように、 `example-good` または `example-bad` を言語文字列の後に入れてください。
@@ -196,9 +197,9 @@ function myFunc() {
 これらは次のように表示されます。
 
 ```html example-good
-<p class="brush: js example-good">
+<p class="brush: js example-good"></p>
 ```
 
 ```html example-bad
-<p class="brush: js example-bad">
+<p class="brush: js example-bad"></p>
 ```

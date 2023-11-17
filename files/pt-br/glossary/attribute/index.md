@@ -1,7 +1,6 @@
 ---
 title: Atributo HTML
 slug: Glossary/Attribute
-original_slug: Glossario/Atributo
 ---
 
 _Atributos_ estendem uma {{Glossary("tag")}} ("etiqueta"), modificando o comportamento dela ou fornecendo meta dados.

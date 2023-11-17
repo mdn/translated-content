@@ -66,13 +66,13 @@ console.log(Object.keys(myObj)); // ['foo']
 
 ### 在基本类型中使用 Object.keys()
 
-非对象参数会[强制转换为对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。只有字符串可以有自己的可枚举属性，而其他所有基本类型都返回一个空数组。
+非对象参数会[强制转换为对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。[`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 和 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 不能被强制转换为对象，会立即抛出 {{jsxref("TypeError")}}。只有字符串可以有自己的可枚举属性，而其他所有基本类型都返回一个空数组。
 
 ```js
 // 字符串具有索引作为可枚举的自有属性
 console.log(Object.keys("foo")); // ['0', '1', '2']
 
-// 其他基本类型没有自有属性
+// 其他基本类型（除了 undefined 和 null）没有自有属性
 console.log(Object.keys(100)); // []
 ```
 

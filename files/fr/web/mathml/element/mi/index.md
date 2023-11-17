@@ -1,11 +1,6 @@
 ---
 title: mi
 slug: Web/MathML/Element/mi
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Référence
-translation_of: Web/MathML/Element/mi
 ---
 
 L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **identifiant** (comme les noms de fonctions, de variables ou les constantes symboliques). Il est également possible de l'utiliser avec du texte en général pour annoter.
@@ -68,7 +63,6 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
 
 ```html
 <math>
-
   <mi> y </mi>
 
   <mi> sin </mi>
@@ -76,7 +70,6 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
   <mi mathvariant="monospace"> x </mi>
 
   <mi mathvariant="bold"> &pi; </mi>
-
 </math>
 ```
 

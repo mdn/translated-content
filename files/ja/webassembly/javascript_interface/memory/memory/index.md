@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Memory() コンストラクター
 slug: WebAssembly/JavaScript_interface/Memory/Memory
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
 ---
 
 {{WebAssemblySidebar}}
@@ -13,7 +12,7 @@ JavaScript または WebAssembly コードから生成されたメモリーは J
 ## 構文
 
 ```js
-new WebAssembly.Memory(memoryDescriptor)
+new WebAssembly.Memory(memoryDescriptor);
 ```
 
 ### 引数
@@ -43,14 +42,15 @@ new WebAssembly.Memory(memoryDescriptor)
 `WebAssembly.Memory` オブジェクトを取得する方法は 2 つあります。 1 つ目は JavaScript から構築する方法です。次の例では、新しい WebAssembly Memory インスタンスを初期サイズが 10 ページ (640KiB) 、最大サイズが 100 ページ (6.4MiB) で生成しています。この [`buffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) プロパティは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を返します。
 
 ```js
-var memory = new WebAssembly.Memory({initial:10, maximum:100});
+var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
 2 つ目は WebAssembly モジュールからエクスポートされた `WebAssembly.Memory` オブジェクトを使用する方法です。次の例では (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) および[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照)、 memory.wasm バイトコードを {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドで読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
 
 ```js
-WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
   var i32 = new Uint32Array(memory.buffer);
   for (var i = 0; i < 10; i++) {
     i32[i] = i;
@@ -66,7 +66,11 @@ WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 の初期化オブジェクトに `shared: true` を渡してください。
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+let memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100,
+  shared: true,
+});
 ```
 
 このメモリーの `buffer` プロパティは [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) を返します。

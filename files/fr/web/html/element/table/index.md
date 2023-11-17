@@ -1,13 +1,6 @@
 ---
-title: '<table> : l''élément de tableau'
+title: "<table> : l'élément de tableau"
 slug: Web/HTML/Element/table
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Tableaux
-  - Web
-translation_of: Web/HTML/Element/table
 ---
 
 {{HTMLSidebar}}
@@ -201,8 +194,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 <!-- Tableau utilisant colgroup et col -->
 <table>
   <colgroup>
-    <col class="column1">
-    <col class="columns2plus3" span="2">
+    <col class="column1" />
+    <col class="columns2plus3" span="2" />
   </colgroup>
   <tr>
     <th>Citron vert</th>
@@ -218,7 +211,9 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 <!-- Tableau simple avec une légende -->
 <table>
-  <caption>Super légende</caption>
+  <caption>
+    Super légende
+  </caption>
   <tr>
     <td>Données géniales</td>
   </tr>
@@ -248,7 +243,9 @@ L'attribut [`scope`](/fr/docs/Web/HTML/Element/th#scope) peut être redondant da
 
 ```html
 <table>
-  <caption>Noms et valeurs des couleurs</caption>
+  <caption>
+    Noms et valeurs des couleurs
+  </caption>
   <tbody>
     <tr>
       <th scope="col">Nom</th>

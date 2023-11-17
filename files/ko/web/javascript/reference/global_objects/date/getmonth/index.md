@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ## 구문
 
 ```js
-    dateObj.getMonth()
+dateObj.getMonth();
 ```
 
 ### 반환 값
@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 다음 예제는 {{jsxref("Date")}} 객체 `Xmas95`의 값을 사용해 변수 `month`에 11을 할당합니다.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var month = Xmas95.getMonth();
 
 console.log(month); // 11
@@ -35,10 +35,10 @@ console.log(month); // 11
 > **참고:** **참고:** 필요한 경우 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat()")}}과 `options` 매개변수를 사용해 해당하는 달의 이름(`"January"` 등)을 가져올 수 있습니다. 이 방법을 사용하면 국제화도 보다 편리합니다.
 
 ```js
-var options = { month: 'long'};
-console.log(new Intl.DateTimeFormat('ko-KR', options).format(Xmas95));
+var options = { month: "long" };
+console.log(new Intl.DateTimeFormat("ko-KR", options).format(Xmas95));
 // 12월
-console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 // December
 ```
 

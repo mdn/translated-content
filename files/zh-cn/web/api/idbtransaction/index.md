@@ -16,8 +16,8 @@ If you must ensure durability for some reason (e.g. you're storing critical data
 ```js
 var trans1 = db.transaction("foo", "readwrite");
 var trans2 = db.transaction("foo", "readwrite");
-var objectStore2 = trans2.objectStore("foo")
-var objectStore1 = trans1.objectStore("foo")
+var objectStore2 = trans2.objectStore("foo");
+var objectStore1 = trans1.objectStore("foo");
 objectStore2.put("2", "key");
 objectStore1.put("1", "key");
 ```
@@ -82,16 +82,17 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 Transactions 可使用以下三种模式中的一种：
 
-| 常量                 | 值                           | 描述                                                                                                                                                                                                                                                                                  |
-| -------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `READ_ONLY`      | "readonly"(0 in Chrome)      | 允许读取数据，不改变。                                                                                                                                                                                                                                                                |
-| `READ_WRITE`     | "readwrite"(1 in Chrome)     | 允许读取和写入现有数据存储，数据被改变。                                                                                                                                                                                                                                              |
+| 常量             | 值                           | 描述                                                                                                                                                                                                                                                                               |
+| ---------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `READ_ONLY`      | "readonly"(0 in Chrome)      | 允许读取数据，不改变。                                                                                                                                                                                                                                                             |
+| `READ_WRITE`     | "readwrite"(1 in Chrome)     | 允许读取和写入现有数据存储，数据被改变。                                                                                                                                                                                                                                           |
 | `VERSION_CHANGE` | "versionchange"(2 in Chrome) | 允许执行任何操作，包括删除和创建对象存储和索引。此模式是用于开始使用[IDBDatabase](/zh-CN/docs/IndexedDB/IDBDatabase) 的 [`setVersion()`](/zh-CN/docs/IndexedDB/IDBDatabase#setVersion)方法更新版本号事务。这种模式的事务无法与其他事务并发运行。这种模式下的事务被称为“升级事务”。 |
 
 即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in Chrome [the change was made in version 21](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/))。你应当防止出现对象不存在的情况：
 
 ```js
-var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
+var myIDBTransaction = window.IDBTransaction ||
+  window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
 ```
 
 ## Example
@@ -102,8 +103,8 @@ In the following code snippet, we open a read/write transaction on our database 
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;
@@ -114,19 +115,30 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // Create a new object ready for being inserted into the IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  var newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // open a read/write db transaction, ready for adding the data
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML +=
+      "<li>Transaction completed: database modification finished.</li>";
   };
 
-
-  transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
   };
 
   // create an object store on the transaction
@@ -135,11 +147,11 @@ function addData() {
   // add our newItem object to the object store
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // report the success of our new item going into the database
-    note.innerHTML += '<li>New item added to database.</li>';
+    note.innerHTML += "<li>New item added to database.</li>";
   };
-};
+}
 ```
 
 ## Specifications

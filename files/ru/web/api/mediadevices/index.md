@@ -1,19 +1,6 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
-tags:
-  - API
-  - Devices
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - WebRTC
-translation_of: Web/API/MediaDevices
 ---
 
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
@@ -38,7 +25,7 @@ _Наследуемый метод родителя {{domxref("EventTarget")}}._
 - {{ domxref("MediaDevices.enumerateDevices()") }}
   - : Получает массив информации о медиа-устройстве ввода-вывода.
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-  - : Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}, чтобы узнать больше об ограничениях и их использовании.
+  - : Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри [Capabilities and constraints](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints), чтобы узнать больше об ограничениях и их использовании.
 - {{ domxref("MediaDevices.getUserMedia()") }}
   - : С разрешения пользователя (у пользователя будет запрошено разрешение) включает камеру, микрофон или общий доступ к экрану и предоставляет {{domxref("MediaStream")}}, содержащий входящую видео- и/или звуковую дорожку.
 
@@ -50,42 +37,50 @@ _Наследуемый метод родителя {{domxref("EventTarget")}}._
 ## Пример
 
 ```js
-'use strict';
+"use strict";
 
 // Помещаем переменные в глобальную область видимости, чтобы сделать их доступными для консоли браузера
-var video = document.querySelector('video');
-var constraints = window.constraints = {
+var video = document.querySelector("video");
+var constraints = (window.constraints = {
   audio: false,
-  video: true
-};
-var errorElement = document.querySelector('#errorMsg');
-
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  var videoTracks = stream.getVideoTracks();
-  console.log('Получил поток с ограничениями:', constraints);
-  console.log('Использую видео-устройство: ' + videoTracks[0].label);
-  stream.onended = function() {
-    console.log('Трансляция закончилась');
-  };
-  window.stream = stream; // Делаем переменную доступной для консоли браузера
-  video.srcObject = stream;
-})
-.catch(function(error) {
-  if (error.name === 'ConstraintNotSatisfiedError') {
-    errorMsg('Разрешение ' + constraints.video.width.exact + 'x' +
-        constraints.video.height.exact + ' px не поддерживается устройством.');
-  } else if (error.name === 'PermissionDeniedError') {
-    errorMsg('Разрешения на использование камеры и микрофона не были предоставлены. ' +
-      'Вам нужно разрешить странице доступ к вашим устройствам,' +
-      ' чтобы демо-версия работала.');
-  }
-  errorMsg('getUserMedia error: ' + error.name, error);
+  video: true,
 });
+var errorElement = document.querySelector("#errorMsg");
+
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (stream) {
+    var videoTracks = stream.getVideoTracks();
+    console.log("Получил поток с ограничениями:", constraints);
+    console.log("Использую видео-устройство: " + videoTracks[0].label);
+    stream.onended = function () {
+      console.log("Трансляция закончилась");
+    };
+    window.stream = stream; // Делаем переменную доступной для консоли браузера
+    video.srcObject = stream;
+  })
+  .catch(function (error) {
+    if (error.name === "ConstraintNotSatisfiedError") {
+      errorMsg(
+        "Разрешение " +
+          constraints.video.width.exact +
+          "x" +
+          constraints.video.height.exact +
+          " px не поддерживается устройством.",
+      );
+    } else if (error.name === "PermissionDeniedError") {
+      errorMsg(
+        "Разрешения на использование камеры и микрофона не были предоставлены. " +
+          "Вам нужно разрешить странице доступ к вашим устройствам," +
+          " чтобы демо-версия работала.",
+      );
+    }
+    errorMsg("getUserMedia error: " + error.name, error);
+  });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '<p>' + msg + '</p>';
-  if (typeof error !== 'undefined') {
+  errorElement.innerHTML += "<p>" + msg + "</p>";
+  if (typeof error !== "undefined") {
     console.error(error);
   }
 }

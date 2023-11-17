@@ -1,14 +1,6 @@
 ---
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -45,9 +37,9 @@ str.localeCompare(compareString[, locales[, options]])
 Следующий пример демонстрирует различные потенциальные результаты для строки, находящейся до, после или на том же самом уровне, что и другая строка:
 
 ```js
-console.log(new Intl.Collator().compare('a', 'c')); // -2, -1 или другое отрицательное значение
-console.log(new Intl.Collator().compare('c', 'a')); // 2, 1 или другое положительное значение
-console.log(new Intl.Collator().compare('a', 'a')); // 0
+console.log(new Intl.Collator().compare("a", "c")); // -2, -1 или другое отрицательное значение
+console.log(new Intl.Collator().compare("c", "a")); // 2, 1 или другое положительное значение
+console.log(new Intl.Collator().compare("a", "a")); // 0
 ```
 
 Обратите внимание, что результат, показанный в коде выше, может сильно различаться в зависимости от браузера и его версии. Происходит это потому, что возвращаемые значения зависят от реализации. То есть, спецификация требует только того, чтобы значение было отрицательным, если строка данная следует до переданной, и положительным — если после.
@@ -59,9 +51,9 @@ console.log(new Intl.Collator().compare('a', 'a')); // 0
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'a'.localeCompare('b', 'i');
+    "a".localeCompare("b", "i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -72,8 +64,8 @@ function localeCompareSupportsLocales() {
 Результаты, предоставляемые методом `localeCompare()`, сильно различаются в зависимости от языка. Для получения порядка сортировки языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент `locales`:
 
 ```js
-console.log('ä'.localeCompare('z', 'de')); // отрицательное значение: в немецком буква ä идёт рядом с буквой a
-console.log('ä'.localeCompare('z', 'sv')); // положительное значение: в шведском буква ä следует после буквы z
+console.log("ä".localeCompare("z", "de")); // отрицательное значение: в немецком буква ä идёт рядом с буквой a
+console.log("ä".localeCompare("z", "sv")); // положительное значение: в шведском буква ä следует после буквы z
 ```
 
 ### Пример: использование аргумента `options`
@@ -82,10 +74,10 @@ console.log('ä'.localeCompare('z', 'sv')); // положительное зна
 
 ```js
 // В немецком буква a является базовой для буквы ä
-console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
+console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
 
 // В шведском буквы ä и a являются двумя разными базовыми буквами
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // положительное значение
+console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // положительное значение
 ```
 
 ## Производительность

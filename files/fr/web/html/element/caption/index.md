@@ -1,19 +1,6 @@
 ---
-title: '<caption> : l''élément de légende d''un tableau'
+title: "<caption> : l'élément de légende d'un tableau"
 slug: Web/HTML/Element/caption
-tags:
-  - Element
-  - HTML
-  - HTML Tables
-  - HTML tabular data
-  - Reference
-  - Table Captions
-  - Table Titles
-  - Tables
-  - Web
-  - caption
-translation_of: Web/HTML/Element/caption
-browser-compat: html.elements.caption
 ---
 
 {{HTMLSidebar}}
@@ -115,7 +102,9 @@ Cet exemple simple présente un tableau qui comprend une légende.
 
 ```html
 <table>
-  <caption>Légende de l'exemple</caption>
+  <caption>
+    Légende de l'exemple
+  </caption>
   <tr>
     <th>Connexion</th>
     <th>Courriel :</th>
@@ -133,15 +122,17 @@ Cet exemple simple présente un tableau qui comprend une légende.
 
 ```css hidden
 caption {
-    caption-side: top;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0px;
-  }
-  table, th, td {
-    border: 1px solid black;
-  }
+  caption-side: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
 ```
 
 ### Résultat

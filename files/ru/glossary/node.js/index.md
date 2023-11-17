@@ -1,14 +1,9 @@
 ---
 title: Node.js
 slug: Glossary/Node.js
-tags:
-  - Glossary
-  - Infrastructure
-  - JavaScript
-  - node.js
-translation_of: Glossary/Node.js
-original_slug: Глоссарий/Node.js
 ---
+
+{{GlossarySidebar}}
 
 Node.js является межплатформенной средой выполнения, созданной на {{Glossary("JavaScript")}}, которая позволяет разработчикам создавать серверные и сетевые приложения с помощью JavaScript.
 

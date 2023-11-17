@@ -11,18 +11,18 @@ slug: Glossary/TLS
 
 1. 仕様書
 
-    1. [RFC 5246](https://tools.ietf.org/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
+   1. [RFC 5246](https://tools.ietf.org/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
 
 2. Wikipedia の記事
 
-    1. [Transport Layer Security](https://ja.wikipedia.org/wiki/Transport_Layer_Security)
+   1. [Transport Layer Security](https://ja.wikipedia.org/wiki/Transport_Layer_Security)
 
 3. 関連情報
 
-    1. [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security)
-    2. [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+   1. [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security)
+   2. [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
 
 4. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("HTTPS")}}
-    2. {{Glossary("SSL")}}
+   1. {{Glossary("HTTPS")}}
+   2. {{Glossary("SSL")}}

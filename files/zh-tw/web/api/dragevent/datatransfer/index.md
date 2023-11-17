@@ -35,7 +35,7 @@ dragTarget.addEventListener(
     // Call the drag and drop data processor
     if (ev.dataTransfer != null) process_data(ev.dataTransfer);
   },
-  false
+  false,
 );
 ```
 

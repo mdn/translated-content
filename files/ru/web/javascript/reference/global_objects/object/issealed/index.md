@@ -1,14 +1,8 @@
 ---
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Сводка
@@ -42,12 +36,12 @@ Object.preventExtensions(empty);
 assert(Object.isSealed(empty) === true);
 
 // То же самое не верно для не пустого объекта, пока все его свойства не станут не настраиваемыми.
-var hasProp = { fee: 'fie foe fum' };
+var hasProp = { fee: "fie foe fum" };
 Object.preventExtensions(hasProp);
 assert(Object.isSealed(hasProp) === false);
 
 // Но сделав все его свойства не настраиваемыми, объект становится запечатанным.
-Object.defineProperty(hasProp, 'fee', { configurable: false });
+Object.defineProperty(hasProp, "fee", { configurable: false });
 assert(Object.isSealed(hasProp) === true);
 
 // Простейшим способом запечатать объект, конечно, является использование метода Object.seal.
@@ -64,7 +58,11 @@ assert(Object.isFrozen(sealed) === true); // все свойства также 
 var s2 = Object.seal({ p: 3 });
 assert(Object.isFrozen(s2) === false); // свойство 'p' всё ещё записываемое
 
-var s3 = Object.seal({ get p() { return 0; } });
+var s3 = Object.seal({
+  get p() {
+    return 0;
+  },
+});
 assert(Object.isFrozen(s3) === true); // для свойств доступа значение имеет только их настраиваемость
 ```
 

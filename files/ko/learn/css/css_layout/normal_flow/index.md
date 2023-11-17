@@ -1,7 +1,6 @@
 ---
 title: 일반 대열
 slug: Learn/CSS/CSS_layout/Normal_Flow
-original_slug: Learn/CSS/CSS_layout/일반_흐름
 ---
 
 {{LearnSidebar}}
@@ -18,7 +17,7 @@ original_slug: Learn/CSS/CSS_layout/일반_흐름
         HTML의 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML에 대한 소개</a
         >)와 CSS 작동 방식에 대한 개념(<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 소개</a
         >를 공부하세요.)
       </td>
@@ -54,13 +53,32 @@ original_slug: Learn/CSS/CSS_layout/일반_흐름
 ```html
 <h1>기본 문서 flow</h1>
 
-<p>나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에 자리합니다.</p>
+<p>
+  나는 기본 볼록 수준 요소입니다. 나와 인접한 블록 수준 요소는 내 아래 새 줄에
+  자리합니다.
+</p>
 
-<p>기본값으로 우리는 우리 부모 요소의 너비 100%를 넘나들며, 우리 자녀 콘텐츠의 최대 높이를 취합니다. 우리의 총 너비와 총 높이는 우리의 콘텐츠 + 패딩 + 테두리 너비 및 높이입니다.</p>
+<p>
+  기본값으로 우리는 우리 부모 요소의 너비 100%를 넘나들며, 우리 자녀 콘텐츠의
+  최대 높이를 취합니다. 우리의 총 너비와 총 높이는 우리의 콘텐츠 + 패딩 + 테두리
+  너비 및 높이입니다.
+</p>
 
-<p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
+<p>
+  우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로
+  구분됩니다. 두게의 여백이 아니라.
+</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 오버플로할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
+<p>
+  인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은
+  라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게
+  됩니다. 인라인 요소가 오버플로할 경우
+  <span
+    >(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로
+    접혀들어갑니다.)</span
+  >, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는
+  것처럼: <img src="long.jpg" />
+</p>
 ```
 
 ```css
@@ -70,8 +88,8 @@ body {
 }
 
 p {
-  background: rgba(255,84,104,0.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
 }

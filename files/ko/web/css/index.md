@@ -1,5 +1,5 @@
 ---
-title: 'CSS: Cascading Style Sheets'
+title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
 ---
 
@@ -45,6 +45,7 @@ MDN [CSS 학습지](/ko/docs/Learn/CSS)는 CSS를 처음부터 알려주는 모�
     있습니다. 이 모듈에서는 CSS의 기본적인 작동 원리와 구문의 생김새, HTML에 실제로 적용하는 법을 배우면서 다음 과정으로
     가는 길을 닦습니다.
 - [CSS의 구성 블록](/ko/docs/Learn/CSS/Building_blocks)
+
   - : 이 모듈은 [CSS 첫걸음](/ko/docs/Learn/CSS/First_steps)이 끝난 곳부터 시작합니다. 이제 언어와 구문에
     익숙해졌고, 기본적인 사용법도 익혀봤으니 약간 더 깊게 들어갈 차례입니다. 이 모듈에서는 종속과 상속, 사용할 수 있는
     모든 선택자 유형, 단위와 크기, 배경과 테두리 스타일, 디버깅 등등 많은 것을 알아봅니다.
@@ -53,6 +54,7 @@ MDN [CSS 학습지](/ko/docs/Learn/CSS)는 CSS를 처음부터 알려주는 모�
     [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text)나
     [CSS 레이아웃](/ko/docs/Learn/CSS/CSS_layout)처럼 더 상세한 주제로 들어가기 전에 알고 있어야 할 필수
     이론을 익히는 것입니다.
+
 - [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text)
   - : CSS 언어 기초를 다뤘으니, 다음 주제는 대표적인 CSS의 영역인 텍스트 스타일링에 집중합니다. 여기서는 글꼴 설정, 굵기,
     기울임꼴, 행간과 자간, 그림자 등 다양한 텍스트 기능을 배웁니다. 그 후 사용자 지정 글꼴을 페이지에 적용하는 법,

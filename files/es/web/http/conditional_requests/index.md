@@ -1,7 +1,6 @@
 ---
 title: Peticiones condicionales en HTTP
 slug: Web/HTTP/Conditional_requests
-original_slug: Web/HTTP/Peticiones_condicionales
 ---
 
 {{HTTPSidebar}}
@@ -120,7 +119,7 @@ Las peticiones condicionales permiten implementar el _algoritmo de bloqueo optim
 
 Esto se implementa utilizando el encabezado {{HTTPHeader("If-Match")}} o {{HTTPHeader("If-Unmodified-Since")}}. Si la etag no coincide con el archivo original, o si el archivo ha sido modificado desde que se obtuvo, el cambio simplemente se rechaza con un error {{HTTPStatus("412")}} `Precondition Failed`. Depende entonces del cliente lidiar con el error: ya sea notificando al usuario que vuelva a comenzar (esta vez en la versión más reciente) o mostrándole al usuario una _diferencia_ entre ambas versiones, Ayudándoles a decidir qué cambios desean mantener.
 
-### Tratar con la primera subida de un recurso.
+### Tratar con la primera subida de un recurso
 
 La primera subida de un recurso es un caso similar al anterior. Como cualquier actualización de un recurso, está sujeta a una condición de carrera si dos clientes intentan realizarla en tiempos similares. Para evitar esto, se pueden utilizar peticiones condicionales: añadiendo el encabezado {{HTTPHeader("If-None-Match")}} con el valor especial `'*'`, representando cualquier etag. La petición sólo tendrá éxito si el recurso no existía antes:
 

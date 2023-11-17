@@ -1,9 +1,9 @@
 ---
 title: 일반 미디어 타입에서 "codecs" 파라미터 사용하기
 slug: Web/Media/Formats/codecs_parameter
-original_slug: Web/Media/Formats/코덱파라미터
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+
+{{QuickLinksWithSubpages("/ko/docs/Web/Media")}}
 
 기본적으로, `video/mp4`, `audio/mpeg` 처럼 {{Glossary("MIME")}} 타입을 통해 미디어 파일 포맷을 명시할 수 있습니다. 하지만 많은 미디어 타입들이-특히 비디오 트랙을 지원하는 경우-가지고 있는 데이터 포맷에 대해 더 상세하고 정확하게 명시할 수 있습니다. 예를들어 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#MP4) 비디오라고 해서 MIME 타입을 `video/mp4`만 명시한다면 정확히 어떤 미디어를 가지고 있는 지 아무 정보도 알 수 없습니다.
 
@@ -143,7 +143,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
         한자리 숫자 모노크롬 플래그; 0인 경우 비디오는 U, V, Y 성분을 모두
         가지고 있습니다. 아닌 경우 전체 비디오 데이터는 Y(휘도) 성분 뿐으로
         모노크롬 이미지를 가집니다. 자세한 내용은
-        [YUV](/en-US/docs/Web/Media/Formats/Video_concepts#yuv)를
+        [YUV](/ko/docs/Web/Media/Formats/Video_concepts#yuv)를
         참조하여 YUV 컬러 시스템이 어떻게 동작하는지 알아보세요. 기본 값은 0
         (모노크롬 아님)입니다.
       </td>
@@ -264,15 +264,15 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
 
 모든 미디어 타입은 [ISO Base Media File Format](https://en.wikipedia.org/wiki/ISO_base_media_file_format) (ISO BMFF)를 기반으로 하며 `codecs` 문법을 공유합니다. 이들 미디어 타입은 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#MP4) (또 사실상 MPEG-4를 기반으로 하고 있으므로 [QuickTime](/ko/docs/Web/Media/Formats/Containers#QuickTime)도 포함)과 [3GP](/ko/docs/Web/Media/Formats/Containers#3GP)를 포함합니다. MIME 타입의 `codecs` 파라미터를 통해 아래와 같이 비디오/오디오 트랙 둘 다 기술할 수 있습니다.:
 
-| MIME 타입         | 설명                                                                                                                                                  |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MIME 타입         | 설명                                                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `audio/3gpp`      | 3GP 오디오 ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
 | `video/3gpp`      | 3GP 비디오 ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
-| `audio/3gp2`      | 3GP2 오디오 ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
-| `video/3gp2`      | 3GP2 비디오 ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
-| `audio/mp4`       | MP4 오디오 ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
-| `video/mp4`       | MP4 비디오 ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
-| `application/mp4` | 오디오/비디오가 아닌 MPEG-4 컨테이너 미디어                                                                                                           |
+| `audio/3gp2`      | 3GP2 오디오 ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
+| `video/3gp2`      | 3GP2 비디오 ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
+| `audio/mp4`       | MP4 오디오 ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
+| `video/mp4`       | MP4 비디오 ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
+| `application/mp4` | 오디오/비디오가 아닌 MPEG-4 컨테이너 미디어                                                                         |
 
 `codecs` 파라미티에는 간단하게 컨테이너 명(`3gp`, `mp4`, `quicktime`, etc.)만 기술할 수도 있으며 컨테이너 명에 코덱 이름 및 설정 값을 함께 기술할 수도 있습니다. 각 코덱 등은 온점(`.`)으로 구분된 요소를 다수 가질 수 있습니다.
 
@@ -287,6 +287,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : 마찬가지로 `oo` 는 미디어 콘텐츠를 명시하는 OTI 값이며, `V` 는 한자리 숫자 _비디오_ OTI 값입니다.
 - `avc1.oo[.PPCCLL]` (AVC video)
+
   - : `oo` 는 콘텐츠를 명시하는 OTI 값이며, while `PPCCLL` 는 6자리 16진수로써 프로파일 넘버 (`PP`), 제약 플래그 (`CC`), 레벨 (`LL`)을 의미합니다. `PP`로 가능한 값은 [AVC profiles](#avc_profiles)를 참조하세요.
 
     제약 플래그는 1 비트 불리언 값이며, MSB는 flag 0(또는 일부에선 `constraint_set0_flag`)로 취급합니다. 그리고 이어지는 비트는 하나씩 번호가 높게 매겨집니다. 현재로썬 0부터 2번째 비트까지만 사용하며;나머지 5개의 비트는 _반드시_ 0이어야합니다. 각 플래그의 의미는 사용하는 프로파일에 따라 달라집니다.

@@ -1,7 +1,6 @@
 ---
 title: Desarrollo web Front-end
 slug: Learn/Front-end_web_developer
-original_slug: Learn/Desarrollo_web_Front-end
 ---
 
 {{learnsidebar}}

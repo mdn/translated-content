@@ -1,17 +1,6 @@
 ---
 title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/values
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/values
 ---
 
 {{JSRef}}
@@ -23,7 +12,7 @@ La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient
 ## Syntaxe
 
 ```js
-typedArr.values()
+typedArr.values();
 ```
 
 ### Valeur de retour

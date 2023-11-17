@@ -1,15 +1,6 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Microdata
-  - Reference
-translation_of: Web/HTML/Global_attributes/itemscope
-original_slug: Web/HTML/Attributs_universels/itemscope
 ---
 
 {{HTMLSidebar("Global_attributes")}}

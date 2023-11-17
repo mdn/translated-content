@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ## 구문
 
 ```js
-has(key)
+has(key);
 ```
 
 ### 매개변수
@@ -31,10 +31,10 @@ has(key)
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // true 반환
-wm.has('baz');  // false 반환
+wm.has("baz"); // false 반환
 ```
 
 ## 명세서

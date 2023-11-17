@@ -1,19 +1,13 @@
 ---
 title: isNaN
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-tags:
-  - Functions
-  - JavaScript
-  - Method
-  - NeedsUpdate
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Аннотация
 
-Функция **`isNaN()`** определяет является ли литерал или переменная нечисловым значением ({{jsxref("Global_Objects/NaN", "NaN")}}) или нет. При работе с функцией необходимо проявлять осторожность так как она [имеет свои особенности](#Description). В качестве альтернативы можно использовать метод {{jsxref("Number.isNaN()")}} из ECMAScript 6, или дополнительно проверять литерал или переменную на нечисловое значение при помощи [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
+Функция **`isNaN()`** определяет является ли литерал или переменная нечисловым значением ({{jsxref("Global_Objects/NaN", "NaN")}}) или нет. При работе с функцией необходимо проявлять осторожность так как она [имеет свои особенности](#Description). В качестве альтернативы можно использовать метод {{jsxref("Number.isNaN()")}} из ECMAScript 6, или дополнительно проверять литерал или переменную на нечисловое значение при помощи [`typeof`](/ru/docs/Web/JavaScript/Reference/Operators/typeof).
 
 ## Синтаксис
 
@@ -32,7 +26,7 @@ isNaN(значение)
 
 В отличие от других возможных значениях в JavaScript, при работе с значением данного типа невозможно полагаться на == и === для определения, является ли переменная или литерал нечисловым значением ({{jsxref("Global_Objects/NaN", "NaN")}}) или нет, так как проверки `NaN == NaN` и `NaN === NaN` _в качестве значения вернут_ `false`. Следовательно, для проверки нужна функция `isNaN`.
 
-#### Примечание:
+#### Примечание
 
 Для альтернативной проверки переменной на NaN без использования функции isNaN() можно воспользоваться конструкцией x !== x
 
@@ -65,28 +59,28 @@ x !== x // true
 ## Пример
 
 ```js
-isNaN(NaN);       // true
+isNaN(NaN); // true
 isNaN(undefined); // true
-isNaN({});        // true
+isNaN({}); // true
 
-isNaN(true);      // false
-isNaN(null);      // false
-isNaN(37);        // false
+isNaN(true); // false
+isNaN(null); // false
+isNaN(37); // false
 
 // strings
-isNaN("37");      // false: "37" преобразуется в число 37 которое не NaN
-isNaN("37.37");   // false: "37.37" преобразуется в число 37.37 которое не NaN
-isNaN("");        // false: пустая строка преобразуется в 0 которое не NaN
-isNaN(" ");       // false: строка с пробелом преобразуется в 0 которое не NaN
-isNaN("37,5");    // true
+isNaN("37"); // false: "37" преобразуется в число 37 которое не NaN
+isNaN("37.37"); // false: "37.37" преобразуется в число 37.37 которое не NaN
+isNaN(""); // false: пустая строка преобразуется в 0 которое не NaN
+isNaN(" "); // false: строка с пробелом преобразуется в 0 которое не NaN
+isNaN("37,5"); // true
 
 // Даты
-isNaN(new Date());                // false
-isNaN(new Date().toString());     // true
+isNaN(new Date()); // false
+isNaN(new Date().toString()); // true
 
 // Пример почему использование isNaN не всегда уместно
-isNaN("blabla")   // true: "blabla" преобразовано в число.
-                  // При парсинге преобразуется в число при неудаче возвращает NaN
+isNaN("blabla"); // true: "blabla" преобразовано в число.
+// При парсинге преобразуется в число при неудаче возвращает NaN
 ```
 
 ## Спецификация

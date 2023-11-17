@@ -1,16 +1,8 @@
 ---
 title: MediaStream
 slug: Web/API/MediaStream
-tags:
-  - API
-  - Media Streams API
-  - MediaStream
-  - Reference
-  - TopicStub
-  - WebRTC
-  - Интерфейс
-translation_of: Web/API/MediaStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 Интерфейс **`MediaStream`** представляет поток медиа данных. Поток состоит из нескольких **треков**, таких как видео и аудио треки. Каждый трек является экземпляром {{domxref("MediaStreamTrack")}}. MediaStream можно получить либо с помощью конструктора, либо вызовом {{domxref("MediaDevices.getUserMedia()")}}.
@@ -81,18 +73,18 @@ _Этот интерфейс наследует методы своего род
 
 ## События
 
-- [`addtrack`](/en-US/docs/Web/API/MediaStream/addtrack_event)
+- [`addtrack`](/ru/docs/Web/API/MediaStream/addtrack_event)
   - : Вызывается при добавлении нового объекта {{domxref("MediaStreamTrack")}}.
-    Также доступно как свойство [`onaddtrack`](/en-US/docs/Web/API/MediaStream/onaddtrack).
-- [`removetrack`](/en-US/docs/Web/API/MediaStream/removetrack_event)
+    Также доступно как свойство [`onaddtrack`](/ru/docs/Web/API/MediaStream/onaddtrack).
+- [`removetrack`](/ru/docs/Web/API/MediaStream/removetrack_event)
   - : Вызывается при удалении объекта {{domxref("MediaStreamTrack")}}.
-    Также доступно как свойство [`onremovetrack`](/en-US/docs/Web/API/MediaStream/onremovetrack).
+    Также доступно как свойство [`onremovetrack`](/ru/docs/Web/API/MediaStream/onremovetrack).
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

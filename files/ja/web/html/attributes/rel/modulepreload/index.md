@@ -1,7 +1,6 @@
 ---
 title: rel=modulepreload
 slug: Web/HTML/Attributes/rel/modulepreload
-original_slug: Web/HTML/Link_types/modulepreload
 l10n:
   sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---

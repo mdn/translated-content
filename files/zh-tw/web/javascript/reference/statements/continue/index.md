@@ -1,7 +1,6 @@
 ---
 title: continue 語法
 slug: Web/JavaScript/Reference/Statements/continue
-original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/continue_語法
 ---
 
 `continue` 語法可用來重新開始 `while`、`do-while`、`for`、`label` 語法。

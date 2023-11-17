@@ -1,8 +1,6 @@
 ---
 title: Access-Control-Request-Headers
 slug: Web/HTTP/Headers/Access-Control-Request-Headers
-translation_of: Web/HTTP/Headers/Access-Control-Request-Headers
-browser-compat: http.headers.Access-Control-Request-Headers
 ---
 
 {{HTTPSidebar}}

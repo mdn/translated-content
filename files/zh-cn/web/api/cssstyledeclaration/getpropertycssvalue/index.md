@@ -29,7 +29,7 @@ The following JavaScript code gets an object containing the computed RGB values 
 
 ```js
 var style = window.getComputedStyle(elem, null);
-var rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
+var rgbObj = style.getPropertyCSSValue("color").getRGBColorValue();
 ```
 
 ## 规范

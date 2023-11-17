@@ -16,7 +16,7 @@ Abre el _Diálogo de Impresión_ para imprimir el documento actual.
 ## Sintaxis
 
 ```js
-window.print()
+window.print();
 ```
 
 ## Notas

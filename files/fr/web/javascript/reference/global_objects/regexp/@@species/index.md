@@ -1,15 +1,6 @@
 ---
 title: get RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@species
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La propriété accesseur **`RegExp[@@species]`** renvoie le constructeur `RegExp
 ## Syntaxe
 
 ```js
-RegExp[Symbol.species]
+RegExp[Symbol.species];
 ```
 
 ## Description
@@ -42,7 +33,9 @@ Pour les objets dérivés (par exemple, une classe `MaRegExp`), la valeur de `sp
 class MaRegExp extends RegExp {
   // On surcharge species pour renvoyer
   // le constructeur parent RegExp
-  static get [Symbol.species]() { return RegExp; }
+  static get [Symbol.species]() {
+    return RegExp;
+  }
 }
 ```
 

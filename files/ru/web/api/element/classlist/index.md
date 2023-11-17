@@ -1,7 +1,6 @@
 ---
 title: Element.classList
 slug: Web/API/Element/classList
-translation_of: Web/API/Element/classList
 ---
 
 {{APIRef("DOM")}}
@@ -38,11 +37,13 @@ var elementClasses = elem.classList;
 ## Примеры
 
 ```js
-<div id="clock" class="example for you"> </div>
+<div id="clock" class="example for you">
+  {" "}
+</div>
 ```
 
 ```js
-var elem = document.querySelector("#clock")
+var elem = document.querySelector("#clock");
 
 //Выведем классы
 console.log(elem.classList); //DOMTokenList ["example", "for", "you"]
@@ -71,73 +72,83 @@ console.log(elem.classList); //DOMTokenList ["ok"]
 
 ```js
 // Источник: https://gist.github.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca
-;(function() {
-    // helpers
-    var regExp = function(name) {
-        return new RegExp('(^| )'+ name +'( |$)');
-    };
-    var forEach = function(list, fn, scope) {
-        for (var i = 0; i < list.length; i++) {
-            fn.call(scope, list[i]);
-        }
-    };
-
-    // class list object with basic methods
-    function ClassList(element) {
-        this.element = element;
+(function () {
+  // helpers
+  var regExp = function (name) {
+    return new RegExp("(^| )" + name + "( |$)");
+  };
+  var forEach = function (list, fn, scope) {
+    for (var i = 0; i < list.length; i++) {
+      fn.call(scope, list[i]);
     }
+  };
 
-    ClassList.prototype = {
-        add: function() {
-            forEach(arguments, function(name) {
-                if (!this.contains(name)) {
-                    this.element.className += ' '+ name;
-                }
-            }, this);
-        },
-        remove: function() {
-            forEach(arguments, function(name) {
-                this.element.className =
-                    this.element.className.replace(regExp(name), '');
-            }, this);
-        },
-        toggle: function(name) {
-            return this.contains(name)
-                ? (this.remove(name), false) : (this.add(name), true);
-        },
-        contains: function(name) {
-            return regExp(name).test(this.element.className);
-        },
-        // bonus..
-        replace: function(oldName, newName) {
-            this.remove(oldName), this.add(newName);
-        }
-    };
+  // class list object with basic methods
+  function ClassList(element) {
+    this.element = element;
+  }
 
-    // IE8/9, Safari
-    if (!('classList' in Element.prototype)) {
-        Object.defineProperty(Element.prototype, 'classList', {
-            get: function() {
-                return new ClassList(this);
-            }
-        });
-    }
+  ClassList.prototype = {
+    add: function () {
+      forEach(
+        arguments,
+        function (name) {
+          if (!this.contains(name)) {
+            this.element.className += " " + name;
+          }
+        },
+        this,
+      );
+    },
+    remove: function () {
+      forEach(
+        arguments,
+        function (name) {
+          this.element.className = this.element.className.replace(
+            regExp(name),
+            "",
+          );
+        },
+        this,
+      );
+    },
+    toggle: function (name) {
+      return this.contains(name)
+        ? (this.remove(name), false)
+        : (this.add(name), true);
+    },
+    contains: function (name) {
+      return regExp(name).test(this.element.className);
+    },
+    // bonus..
+    replace: function (oldName, newName) {
+      this.remove(oldName), this.add(newName);
+    },
+  };
 
-    // replace() support for others
-    if (window.DOMTokenList && DOMTokenList.prototype.replace == null) {
-        DOMTokenList.prototype.replace = ClassList.prototype.replace;
-    }
+  // IE8/9, Safari
+  if (!("classList" in Element.prototype)) {
+    Object.defineProperty(Element.prototype, "classList", {
+      get: function () {
+        return new ClassList(this);
+      },
+    });
+  }
+
+  // replace() support for others
+  if (window.DOMTokenList && DOMTokenList.prototype.replace == null) {
+    DOMTokenList.prototype.replace = ClassList.prototype.replace;
+  }
 })();
 ```
 
-## Поддержка браузерами
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификация
-
-- <http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#dom-classlist>
-- <https://dom.spec.whatwg.org/#interface-domtokenlist>
 
 ## Смотрите также
 

@@ -1,15 +1,6 @@
 ---
 title: Notification.body
 slug: Web/API/Notification/body
-tags:
-  - API
-  - API Notifications
-  - Corps
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-translation_of: Web/API/Notification/body
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -19,7 +10,7 @@ La propriété en lecture seule **`body`** de l'interface {{domxref ("Notificati
 ## Syntaxe
 
 ```js
-Notification.body
+Notification.body;
 ```
 
 ### Valeur

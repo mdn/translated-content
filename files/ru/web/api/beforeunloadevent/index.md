@@ -1,10 +1,6 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
-tags:
-  - Диалог
-  - Окно
-translation_of: Web/API/BeforeUnloadEvent
 ---
 
 {{APIRef}}
@@ -37,12 +33,12 @@ translation_of: Web/API/BeforeUnloadEvent
 ## Примеры
 
 ```js
-window.addEventListener("beforeunload", function( event ) {
-  event.returnValue = "\o/";
+window.addEventListener("beforeunload", function (event) {
+  event.returnValue = "\\o/";
 });
 
 //is equivalent to
-window.addEventListener("beforeunload", function( event ) {
+window.addEventListener("beforeunload", function (event) {
   event.preventDefault();
 });
 ```
@@ -51,14 +47,18 @@ Webkit-based browsers не следуют спецификации диалог�
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage;     //Gecko + IE
-  return confirmationMessage;                                //Webkit, Safari, Chrome etc.
+  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+  return confirmationMessage; //Webkit, Safari, Chrome etc.
 });
 ```
 
-## Совместимость браузеров
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
 

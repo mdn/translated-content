@@ -26,10 +26,10 @@ Canvas API 主要聚焦于 2D 图形。而同样使用`<canvas>`元素的 [WebGL
 由 {{domxref("CanvasRenderingContext2D")}} 接口完成实际的绘制。{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 属性让长方形变成绿色。{{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} 方法将它的左上角放在 (10, 10)，把它的大小设置成宽 150 高 100。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 150, 100);
 ```
 

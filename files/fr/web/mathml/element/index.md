@@ -1,10 +1,6 @@
 ---
 title: Référence des éléments MathML
 slug: Web/MathML/Element
-tags:
-  - MathML
-  - Référence MathML
-translation_of: Web/MathML/Element
 ---
 
 {{MathMLRef}}

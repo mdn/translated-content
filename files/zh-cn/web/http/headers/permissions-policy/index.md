@@ -9,9 +9,9 @@ slug: Web/HTTP/Headers/Permissions-Policy
 
 更多的信息，请查看[Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                             |
 
 ## 语法
 

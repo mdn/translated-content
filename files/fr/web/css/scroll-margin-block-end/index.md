@@ -1,12 +1,6 @@
 ---
 title: scroll-margin-block-end
 slug: Web/CSS/scroll-margin-block-end
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/scroll-margin-block-end
 ---
 
 {{CSSRef}}

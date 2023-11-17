@@ -1,7 +1,6 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/create
 ---
 
 {{JSRef}}
@@ -45,10 +44,10 @@ function Shape() {
 }
 
 // método de la superclase
-Shape.prototype.move = function(x, y) {
-    this.x += x;
-    this.y += y;
-    console.info("Shape moved.");
+Shape.prototype.move = function (x, y) {
+  this.x += x;
+  this.y += y;
+  console.info("Shape moved.");
 };
 
 // Rectangle - subclase
@@ -62,10 +61,8 @@ Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
 
-console.log('¿Es rect una instancia de Rectangle?',
-  rect instanceof Rectangle); // true
-console.log('¿Es rect una instancia de Shape?',
-  rect instanceof Shape); // true
+console.log("¿Es rect una instancia de Rectangle?", rect instanceof Rectangle); // true
+console.log("¿Es rect una instancia de Shape?", rect instanceof Shape); // true
 rect.move(1, 1); // Imprime, 'Shape moved.'
 ```
 
@@ -84,7 +81,7 @@ Object.assign(MyClass.prototype, OtherSuperClass.prototype);
 // re-assign constructor
 MyClass.prototype.constructor = MyClass;
 
-MyClass.prototype.myMethod = function() {
+MyClass.prototype.myMethod = function () {
   // do something
 };
 ```
@@ -99,59 +96,65 @@ var o;
 // crea un objeto con un prototipo como null
 o = Object.create(null);
 
-
 o = {};
 // esto equivale a:
 o = Object.create(Object.prototype);
-
 
 // Ejemplo en donde creamos un objeto con un par de propiedades de ejemplo.
 // (Note que el segundo parámetro mapea claves para los *descriptores de propiedad*.)
 o = Object.create(Object.prototype, {
   // foo es un habitual "propiedad de valor"
-  foo: { writable:true, configurable:true, value: "hello" },
+  foo: { writable: true, configurable: true, value: "hello" },
   // bar es una propiedad getter-and-setter (de acceso)
   bar: {
     configurable: false,
-    get: function() { return 10 },
-    set: function(value) { console.log("Setting `o.bar` to", value) }
-}});
+    get: function () {
+      return 10;
+    },
+    set: function (value) {
+      console.log("Setting `o.bar` to", value);
+    },
+  },
+});
 
-
-function Constructor(){}
+function Constructor() {}
 o = new Constructor();
 // es equivalente a:
 o = Object.create(Constructor.prototype);
 // Por supuesto, si hay un código de inicialización en la
 // función Constructor, el Object.create no puede reflejar esta.
 
-
 // crear un nuevo objeto cuyo prototipo es un nuevo, objeto vacío
 // y agregar una única propiedad 'p', con el valor 42
-o = Object.create({}, { p: { value: 42 } })
+o = Object.create({}, { p: { value: 42 } });
 
 // por defecto las propiedades NO SON editables, enumerables o configurables:
-o.p = 24
-o.p
+o.p = 24;
+o.p;
 // 42
 
-o.q = 12
+o.q = 12;
 for (var prop in o) {
-   console.log(prop)
+  console.log(prop);
 }
 // "q"
 
-delete o.p
+delete o.p;
 // false
 
 // para especificar una propiedad en ES3
 
-o2 = Object.create({}, { p: {
+o2 = Object.create(
+  {},
+  {
+    p: {
       value: 42,
       writable: true,
       enumerable: true,
-      configurable: true }
-});
+      configurable: true,
+    },
+  },
+);
 ```
 
 ## Objetos personalizados y nulos
@@ -205,8 +208,10 @@ _Una función simple de depuración:_
 
 ```js
 // mostrar nombre de propiedad de nivel superior: pares de valores de un objeto dado
-function ShowProperties( b ){
-  for( var i in b ){  console.log( i + ": " + b[i] + "\n" )  }
+function ShowProperties(b) {
+  for (var i in b) {
+    console.log(i + ": " + b[i] + "\n");
+  }
 }
 ```
 
@@ -297,7 +302,7 @@ ob={}; ob.pn=ocn; ob.po=oco; // create a compound object (same as before)
 However, setting the generic **prototype** as the new object's prototype works even better:
 
 ```js
-ocn = Object.create( null );                  // create "null" object (same as before)
+ocn = Object.create(null); // create "null" object (same as before)
 Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to the "generic" object (NOT standard-object)
 ```
 
@@ -320,23 +325,27 @@ Este polyfill cubre el caso de uso principal el cual es la creación de un nuevo
 Note that while the setting of `null` as `[[Prototype]]` is supported in the real ES5 `Object.create`, this polyfill cannot support it due to a limitation inherent in versions of ECMAScript lower than 5.
 
 ```js
- if (typeof Object.create !== "function") {
-    Object.create = function (proto, propertiesObject) {
-        if (typeof proto !== 'object' && typeof proto !== 'function') {
-            throw new TypeError('Object prototype may only be an Object: ' + proto);
-        } else if (proto === null) {
-            throw new Error("This browser's implementation of Object.create is a shim and doesn't support 'null' as the first argument.");
-        }
+if (typeof Object.create !== "function") {
+  Object.create = function (proto, propertiesObject) {
+    if (typeof proto !== "object" && typeof proto !== "function") {
+      throw new TypeError("Object prototype may only be an Object: " + proto);
+    } else if (proto === null) {
+      throw new Error(
+        "This browser's implementation of Object.create is a shim and doesn't support 'null' as the first argument.",
+      );
+    }
 
-        if (typeof propertiesObject != 'undefined') {
-            throw new Error("This browser's implementation of Object.create is a shim and doesn't support a second argument.");
-        }
+    if (typeof propertiesObject != "undefined") {
+      throw new Error(
+        "This browser's implementation of Object.create is a shim and doesn't support a second argument.",
+      );
+    }
 
-        function F() {}
-        F.prototype = proto;
+    function F() {}
+    F.prototype = proto;
 
-        return new F();
-    };
+    return new F();
+  };
 }
 ```
 

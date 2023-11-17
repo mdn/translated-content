@@ -82,7 +82,7 @@ for ([初始表達式]; [條件式]; [遞增表達式])
   var btn = document.getElementById("btn");
   btn.addEventListener("click", function () {
     alert(
-      "Number of options selected: " + howMany(document.selectForm.musicTypes)
+      "Number of options selected: " + howMany(document.selectForm.musicTypes),
     );
   });
 </script>

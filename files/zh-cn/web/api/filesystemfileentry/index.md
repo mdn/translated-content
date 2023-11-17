@@ -33,30 +33,32 @@ slug: Web/API/FileSystemFileEntry
 
 ```js
 function onInitFs(fs) {
-  fs.root.getFile('log.txt', {create: true}, function(fileEntry) {
+  fs.root.getFile(
+    "log.txt",
+    { create: true },
+    function (fileEntry) {
+      // Create a FileWriter object for our FileSystemFileEntry (log.txt).
+      fileEntry.createWriter(function (fileWriter) {
+        fileWriter.onwriteend = function (e) {
+          console.log("Write completed.");
+        };
 
-    // Create a FileWriter object for our FileSystemFileEntry (log.txt).
-    fileEntry.createWriter(function(fileWriter) {
-      fileWriter.onwriteend = function(e) {
-        console.log('Write completed.');
-      };
+        fileWriter.onerror = function (e) {
+          console.log("Write failed: " + e.toString());
+        };
 
-      fileWriter.onerror = function(e) {
-        console.log('Write failed: ' + e.toString());
-      };
+        // Create a new Blob and write it to log.txt.
+        var bb = new BlobBuilder();
+        bb.append("Meow");
 
-      // Create a new Blob and write it to log.txt.
-      var bb = new BlobBuilder();
-      bb.append('Meow');
-
-      fileWriter.write(bb.getBlob('text/plain'));
-    }, errorHandler);
-
-  }, errorHandler);
-
+        fileWriter.write(bb.getBlob("text/plain"));
+      }, errorHandler);
+    },
+    errorHandler,
+  );
 }
 
-window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);
+window.requestFileSystem(window.TEMPORARY, 1024 * 1024, onInitFs, errorHandler);
 ```
 
 ## 规范

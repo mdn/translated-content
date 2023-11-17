@@ -1,8 +1,8 @@
 ---
 title: Node.nodeType
 slug: Web/API/Node/nodeType
-translation_of: Web/API/Node/nodeType
 ---
+
 {{APIRef("DOM")}}
 
 Доступное только для чтения свойство `Node.nodeType` возвращает беззнаковое короткое целочисленное значение, представляющее тип узла.
@@ -18,17 +18,17 @@ var type = node.nodeType;
 | Name                                                                    | Value |
 | ----------------------------------------------------------------------- | ----- |
 | [`ELEMENT_NODE`](/ru/docs/Web/API/Element)                              | `1`   |
-| `ATTRIBUTE_NODE` {{deprecated_inline()}}                       | `2`   |
+| `ATTRIBUTE_NODE` {{deprecated_inline()}}                                | `2`   |
 | [`TEXT_NODE`](/ru/docs/Web/API/Text)                                    | `3`   |
-| `CDATA_SECTION_NODE` {{deprecated_inline()}}                   | `4`   |
-| `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                | `5`   |
-| `ENTITY_NODE` {{deprecated_inline()}}                          | `6`   |
+| `CDATA_SECTION_NODE` {{deprecated_inline()}}                            | `4`   |
+| `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                         | `5`   |
+| `ENTITY_NODE` {{deprecated_inline()}}                                   | `6`   |
 | [`PROCESSING_INSTRUCTION_NODE`](/ru/docs/Web/API/ProcessingInstruction) | `7`   |
 | [`COMMENT_NODE`](/ru/docs/Web/API/document.createComment)               | `8`   |
 | [`DOCUMENT_NODE`](/ru/docs/Web/HTML/Element/html)                       | `9`   |
 | [`DOCUMENT_TYPE_NODE`](/ru/docs/Web/API/document.doctype)               | `10`  |
 | [`DOCUMENT_FRAGMENT_NODE`](/ru/docs/Web/API/DocumentFragment)           | `11`  |
-| `NOTATION_NODE` {{deprecated_inline()}}                        | `12`  |
+| `NOTATION_NODE` {{deprecated_inline()}}                                 | `12`  |
 
 ## Пример
 
@@ -40,8 +40,10 @@ if (node.nodeType != Node.COMMENT_NODE)
   console.log("You should comment your code well!");
 ```
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 2 Core: Node.nodeType](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-111237558)
-- [DOM Level 3 Core: Node.nodeType](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-111237558)
-- [DOM Standard](http://dom.spec.whatwg.org/#node)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

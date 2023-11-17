@@ -1,8 +1,9 @@
 ---
-title: ReadableStream.cancel()
+title: "ReadableStream: cancel() メソッド"
+short-title: cancel()
 slug: Web/API/ReadableStream/cancel
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
@@ -42,60 +43,70 @@ const searchTerm = "service workers";
 const contextBefore = 30;
 const contextAfter = 30;
 const caseInsensitive = true;
-const url = 'https://html.spec.whatwg.org/';
+const url = "https://html.spec.whatwg.org/";
 
 console.log(`'${searchTerm}' を '${url}' で検索`);
 
-fetch(url).then((response) => {
-  console.log('ヘッダーを受信しました');
+fetch(url)
+  .then((response) => {
+    console.log("ヘッダーを受信しました");
 
-  const decoder = new TextDecoder();
-  const reader = response.body.getReader();
-  const toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
-  const bufferSize = Math.max(toMatch.length - 1, contextBefore);
+    const decoder = new TextDecoder();
+    const reader = response.body.getReader();
+    const toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
+    const bufferSize = Math.max(toMatch.length - 1, contextBefore);
 
-  let bytesReceived = 0;
-  let buffer = '';
-  let matchFoundAt = -1;
+    let bytesReceived = 0;
+    let buffer = "";
+    let matchFoundAt = -1;
 
-  return reader.read().then(function process(result) {
-    if (result.done) {
-      console.log('一致が見つかりませんでした');
-      return;
-    }
+    return reader.read().then(function process(result) {
+      if (result.done) {
+        console.log("一致するものが見つかりませんでした");
+        return;
+      }
 
-    bytesReceived += result.value.length;
-    console.log(`これまでに ${bytesReceived} バイトのデータを受信しました`);
+      bytesReceived += result.value.length;
+      console.log(`これまでに ${bytesReceived} バイトのデータを受信しました`);
 
-    buffer += decoder.decode(result.value, {stream: true});
+      buffer += decoder.decode(result.value, { stream: true });
 
-    // 一致するものが既に見つかっており、コンテキストを収集していますか？
-    if (matchFoundAt === -1) {
-      matchFoundAt = (caseInsensitive ? buffer.toLowerCase() : buffer).indexOf(toMatch);
-    }
+      // 一致するものが既に見つかっており、コンテキストを収集していますか？
+      if (matchFoundAt === -1) {
+        matchFoundAt = (
+          caseInsensitive ? buffer.toLowerCase() : buffer
+        ).indexOf(toMatch);
+      }
 
-    if (matchFoundAt === -1) {
-      buffer = buffer.slice(-bufferSize);
-    } else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
-      console.log("これが一致したものです:")
-      console.log(buffer.slice(
-        Math.max(0, matchFoundAt - contextBefore),
-        matchFoundAt + toMatch.length + contextAfter
-      ));
-      console.log("フェッチのキャンセル");
-      reader.cancel();
-      return;
-    } else {
-      console.log('一致が見つかりましたが、さらにコンテキストが必要です…');
-    }
+      if (matchFoundAt === -1) {
+        buffer = buffer.slice(-bufferSize);
+      } else if (
+        buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter
+      ) {
+        console.log("これが一致したものです:");
+        console.log(
+          buffer.slice(
+            Math.max(0, matchFoundAt - contextBefore),
+            matchFoundAt + toMatch.length + contextAfter,
+          ),
+        );
+        console.log("フェッチのキャンセル");
+        reader.cancel();
+        return;
+      } else {
+        console.log("一致が見つかりましたが、さらにコンテキストが必要です…");
+      }
 
-    // 読み続けます
-    return reader.read().then(process);
+      // 読み続ける
+      return reader.read().then(process);
+    });
+  })
+  .catch((err) => {
+    console.error(
+      "失敗しました。詳細については、開発者ツールを参照してください。 レスポンスから CORS ヘッダー抜けていませんか？",
+    );
+    throw err;
   });
-}).catch((err) => {
-  console.error("失敗しました。詳細については、開発者ツールを参照してください。 レスポンスから CORS ヘッダー抜けていませんか？");
-  throw err;
-});
 ```
 
 ## 仕様書
@@ -105,3 +116,8 @@ fetch(url).then((response) => {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクター
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)

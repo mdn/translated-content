@@ -1,7 +1,6 @@
 ---
 title: Whitespace no DOM
 slug: Web/API/Document_Object_Model/Whitespace
-original_slug: DOM/Referencia_do_DOM/Whitespace_in_the_DOM
 ---
 
 ## O problema
@@ -16,15 +15,13 @@ Em outras palavras, a árvore do DOM para o documento seguinte irá parecer como
 ```html
 <!-- Meu documento -->
 <html>
-<head>
-  <title>Meu documento</title>
-</head>
-<body>
-  <h1>Cabeçalho</h1>
-  <p>
-    Parágrafo
-  </p>
-</body>
+  <head>
+    <title>Meu documento</title>
+  </head>
+  <body>
+    <h1>Cabeçalho</h1>
+    <p>Parágrafo</p>
+  </body>
 </html>
 ```
 
@@ -41,22 +38,22 @@ Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que q
      com espaços brancos (whitespaces) entre as tags:
  -->
 <div>
- <ul>
-  <li>Posição 1</li>
-  <li>Posição 2</li>
-  <li>Posição 3</li>
- </ul>
+  <ul>
+    <li>Posição 1</li>
+    <li>Posição 2</li>
+    <li>Posição 3</li>
+  </ul>
 </div>
 
 <!-- Impressão bonita ajustada ao problema:
  -->
-<div
- ><ul
-  ><li>Posição 1</li
-  ><li>Posição 2</li
-  ><li>Posição 3</li
- ></ul
-></div>
+<div>
+  <ul>
+    <li>Posição 1</li>
+    <li>Posição 2</li>
+    <li>Posição 3</li>
+  </ul>
+</div>
 ```
 
 O código Javascript abaixo define funções diversas que fazem a manipulação de [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM) no DOM mais fácil.
@@ -73,7 +70,6 @@ O código Javascript abaixo define funções diversas que fazem a manipulação 
  * que não quebram (e alguns outros caracteres).
  */
 
-
 /**
  * Determina se um conteúdo de texto do nó é inteiramente whitespace.
  *
@@ -82,12 +78,10 @@ O código Javascript abaixo define funções diversas que fazem a manipulação 
  * @return     Verdadeiro se todo conteúdo de texto de |nod| é whitespace,
  *             de outra forma é falso.
  */
-function is_all_ws( nod )
-{
+function is_all_ws(nod) {
   // Usa as características do ECMA-262 Edition 3 String e RegExp
-  return !(/[^\t\n\r ]/.test(nod.textContent));
+  return !/[^\t\n\r ]/.test(nod.textContent);
 }
-
 
 /**
  * Determina se um nó deve ser ignorado pela função de iterador.
@@ -99,10 +93,11 @@ function is_all_ws( nod )
  *             do contrário é falso.
  */
 
-function is_ignorable( nod )
-{
-  return ( nod.nodeType == 8) || // Um nó de comentário
-         ( (nod.nodeType == 3) && is_all_ws(nod) ); // um nó de texto, todo whitespace
+function is_ignorable(nod) {
+  return (
+    nod.nodeType == 8 || // Um nó de comentário
+    (nod.nodeType == 3 && is_all_ws(nod))
+  ); // um nó de texto, todo whitespace
 }
 
 /**
@@ -118,8 +113,7 @@ function is_ignorable( nod )
  *                  ignorável de acordo com |is_ignorable|, ou
  *               2) nulo se tal nó não existe.
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -136,8 +130,7 @@ function node_before( sib )
  *                  ignorável de acordo com |is_ignorable|, ou
  *               2) nulo se tal nó não existe.
  */
-function node_after( sib )
-{
+function node_after(sib) {
   while ((sib = sib.nextSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -156,9 +149,8 @@ function node_after( sib )
  *                  ignorável de acordo com |is_ignorable|, ou
  *               2) nulo se tal nó não existe.
  */
-function last_child( par )
-{
-  var res=par.lastChild;
+function last_child(par) {
+  var res = par.lastChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.previousSibling;
@@ -176,9 +168,8 @@ function last_child( par )
  *                  ignorável de acordo com |is_ignorable|, ou
  *               2) nulo se tal nó não existe.
  */
-function first_child( par )
-{
-  var res=par.firstChild;
+function first_child(par) {
+  var res = par.firstChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.nextSibling;
@@ -195,13 +186,11 @@ function first_child( par )
  * @return     Uma string dando os conteúdos de um nó de texto com
  *             whitespace colapsado.
  */
-function data_of( txt )
-{
+function data_of(txt) {
   var data = txt.textContent;
   // Usa características do ECMA-262 Edition 3 String e RegExp
   data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ")
-    data = data.substring(1, data.length);
+  if (data.charAt(0) == " ") data = data.substring(1, data.length);
   if (data.charAt(data.length - 1) == " ")
     data = data.substring(0, data.length - 1);
   return data;
@@ -214,12 +203,10 @@ O código seguinte demonstra o uso das funções acima. Ele itera através dos f
 
 ```js
 var cur = first_child(document.getElementById("teste"));
-while (cur)
-{
-  if (data_of(cur.firstChild) == "Este é o terceiro parágrafo.")
-  {
-      cur.className = "mágica";
-      cur.firstChild.textContent = "Este é o parágrafo mágico";
+while (cur) {
+  if (data_of(cur.firstChild) == "Este é o terceiro parágrafo.") {
+    cur.className = "mágica";
+    cur.firstChild.textContent = "Este é o parágrafo mágico";
   }
   cur = node_after(cur);
 }

@@ -1,11 +1,8 @@
 ---
 title: StyleSheet.disabled
 slug: Web/API/StyleSheet/disabled
-tags:
-  - Свойство
-  - Стили
-translation_of: Web/API/StyleSheet/disabled
 ---
+
 {{APIRef("CSSOM")}}
 
 Свойство **`disabled`** интерфейса {{domxref("StyleSheet")}} определяет будет ли таблица стилей защищена от применения в документе

@@ -27,7 +27,7 @@ slug: Web/HTML/Element/script
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
-      <td>任何可以接受<a href="/zh-CN/docs/Web/HTML/Content_categories#元数据内容">元数据内容</a>，或者<a href="/en-US/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。</td>
+      <td>任何可以接受<a href="/zh-CN/docs/Web/HTML/Content_categories#元数据内容">元数据内容</a>，或者<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。</td>
     </tr>
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>

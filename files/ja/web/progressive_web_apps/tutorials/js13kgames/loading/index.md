@@ -1,7 +1,6 @@
 ---
 title: プログレッシブ読み込み
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
-original_slug: Web/Progressive_web_apps/Loading
 ---
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
@@ -33,8 +32,8 @@ original_slug: Web/Progressive_web_apps/Loading
 それらは文書自体が解析された*後*にダウンロードされて実行されるので、それは HTML 構造のレンダリングをブロックしません。 CSS ファイルを分割して次のようにメディア種別を追加することもできます。
 
 ```html
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="print.css" media="print">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="print.css" media="print" />
 ```
 
 これは、条件が満たされた場合にのみそれらを読み込むようブラウザーに指示します。
@@ -52,7 +51,7 @@ JavaScript と CSS 以外にも、ウェブサイトには多くの画像が含�
 `<img>` 要素の `src` 属性で参照されるゲームのすべてのスクリーンショットを自動的にダウンロードするようにする代わりに、JavaScript で選択的に実行できます。 js13kPWA アプリは代わりにプレースホルダー画像を使用し、これは小さくて軽量です。 一方、ターゲット画像への最終パスは次のように `data-src` 属性に格納されます。
 
 ```html
-<img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME'>
+<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" />
 ```
 
 これらの画像は、サイトが HTML 構造の構築を完了した*後*に JavaScript で読み込まれます。 プレースホルダー画像は元の画像と同じ方法で拡大縮小されるため、同じスペースを占有し、画像の読み込み時にレイアウトが再描画されることはありません。
@@ -62,11 +61,11 @@ JavaScript と CSS 以外にも、ウェブサイトには多くの画像が含�
 `app.js` ファイルは `data-src` 属性を次のように処理します。
 
 ```js
-let imagesToLoad = document.querySelectorAll('img[data-src]');
+let imagesToLoad = document.querySelectorAll("img[data-src]");
 const loadImages = (image) => {
-  image.setAttribute('src', image.getAttribute('data-src'));
+  image.setAttribute("src", image.getAttribute("data-src"));
   image.onload = () => {
-    image.removeAttribute('data-src');
+    image.removeAttribute("data-src");
   };
 };
 ```
@@ -113,10 +112,10 @@ article img {
 関連するコードは次のようになります。
 
 ```js
-if('IntersectionObserver' in window) {
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
-      if(item.isIntersecting) {
+      if (item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }

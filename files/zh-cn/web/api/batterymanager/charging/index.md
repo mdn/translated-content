@@ -26,11 +26,10 @@ var charging = battery.charging
 ### JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
+  var charging = battery.charging;
 
-    var charging = battery.charging;
-
-    document.querySelector('#charging').textContent = charging ;
+  document.querySelector("#charging").textContent = charging;
 });
 ```
 

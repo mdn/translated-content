@@ -37,10 +37,10 @@ Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ### 使用 `Reflect.getOwnPropertyDescriptor()`
 
 ```js
-Reflect.getOwnPropertyDescriptor({x: "hello"}, "x");
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "x");
 // {value: "hello", writable: true, enumerable: true, configurable: true}
 
-Reflect.getOwnPropertyDescriptor({x: "hello"}, "y");
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "y");
 // undefined
 
 Reflect.getOwnPropertyDescriptor([], "length");

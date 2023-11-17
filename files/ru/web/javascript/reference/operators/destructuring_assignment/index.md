@@ -1,10 +1,6 @@
 ---
 title: Деструктурирующее присваивание
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - JavaScript
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 
 Синтаксис **деструктурирующего присваивания** в выражениях JavaScript позволяет извлекать данные из массивов или объектов при помощи синтаксиса, подобного объявлению массива или литералов в объекте.
@@ -22,11 +18,11 @@ console.log(a); // 1
 console.log(b); // 2
 console.log(rest); // [3, 4, 5]
 
-({a, b} = {a:1, b:2});
+({ a, b } = { a: 1, b: 2 });
 console.log(a); // 1
 console.log(b); // 2
 
-({a, b, ...rest} = {a:1, b:2, c:3, d:4});
+({ a, b, ...rest } = { a: 1, b: 2, c: 3, d: 4 });
 console.log(a); // 1
 console.log(b); // 2
 console.log(rest); // { c:3, d:4 }
@@ -48,8 +44,8 @@ console.log(rest); // { c:3, d:4 }
 var foo = ["one", "two", "three"];
 
 // без деструктурирования
-var one   = foo[0];
-var two   = foo[1];
+var one = foo[0];
+var two = foo[1];
 var three = foo[2];
 
 // с деструктурированием
@@ -112,12 +108,12 @@ console.log("A is " + a + " B is " + b);
 После выполнения кода, a будет 1, b будет 3. Значение 2 игнорируется. Таким же образом вы можете игнорировать любые (или все) значения. Например:
 
 ```js
-[,,] = f();
+[, ,] = f();
 ```
 
 ### Получение значений из результата регулярного выражения
 
-Когда метод [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) регулярного выражения находит совпадение, он возвращает массив, содержащий первый совпадающий фрагмент строки и далее группы, определённые в регулярном выражении. Деструктурирующее присваивание упрощает получение данных из этих групп, игнорируя первый фрагмент:
+Когда метод [`exec()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) регулярного выражения находит совпадение, он возвращает массив, содержащий первый совпадающий фрагмент строки и далее группы, определённые в регулярном выражении. Деструктурирующее присваивание упрощает получение данных из этих групп, игнорируя первый фрагмент:
 
 ```js
 var url = "https://developer.mozilla.org/en-US/Web/JavaScript";
@@ -133,14 +129,14 @@ console.log(protocol); // выведет "https"
 ### Простой пример
 
 ```js
-var o = {p: 42, q: true};
-var {p, q} = o;
+var o = { p: 42, q: true };
+var { p, q } = o;
 
 console.log(p); // 42
 console.log(q); // true
 
 // Объявление новых переменных
-var {p: foo, q: bar} = o;
+var { p: foo, q: bar } = o;
 
 console.log(foo); // 42
 console.log(bar); // true
@@ -151,30 +147,33 @@ console.log(bar); // true
 Деструктурирующее присваивание помогает загружать специфичные наборы модулей, как в [Add-on SDK](/en-US/Add-ons/SDK):
 
 ```js
-const { Loader, main } = require('toolkit/loader');
+const { Loader, main } = require("toolkit/loader");
 ```
 
 ### Вложенный объект и разбор массива
 
 ```js
 var metadata = {
-    title: "Scratchpad",
-    translations: [
-       {
-        locale: "de",
-        localization_tags: [ ],
-        last_edit: "2014-04-14T08:43:37",
-        url: "/de/docs/Tools/Scratchpad",
-        title: "JavaScript-Umgebung"
-       }
-    ],
-    url: "/en-US/docs/Tools/Scratchpad"
+  title: "Scratchpad",
+  translations: [
+    {
+      locale: "de",
+      localization_tags: [],
+      last_edit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
+  ],
+  url: "/ru/docs/Tools/Scratchpad",
 };
 
-var { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
+var {
+  title: englishTitle,
+  translations: [{ title: localeTitle }],
+} = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 ### Деструктурирование во время обхода
@@ -186,22 +185,25 @@ var people = [
     family: {
       mother: "Jane Smith",
       father: "Harry Smith",
-      sister: "Samantha Smith"
+      sister: "Samantha Smith",
     },
-    age: 35
+    age: 35,
   },
   {
     name: "Tom Jones",
     family: {
       mother: "Norah Jones",
       father: "Richard Jones",
-      brother: "Howard Jones"
+      brother: "Howard Jones",
     },
-    age: 25
-  }
+    age: 25,
+  },
 ];
 
-for (var {name: n, family: { father: f } } of people) {
+for (var {
+  name: n,
+  family: { father: f },
+} of people) {
   console.log("Name: " + n + ", Father: " + f);
 }
 
@@ -212,11 +214,11 @@ for (var {name: n, family: { father: f } } of people) {
 ### Получение полей объекта-параметра функции
 
 ```js
-function userId({id}) {
+function userId({ id }) {
   return id;
 }
 
-function whois({displayName, fullName: {firstName: name}}){
+function whois({ displayName, fullName: { firstName: name } }) {
   console.log(displayName + " is " + name);
 }
 
@@ -224,9 +226,9 @@ var user = {
   id: 42,
   displayName: "jdoe",
   fullName: {
-      firstName: "John",
-      lastName: "Doe"
-  }
+    firstName: "John",
+    lastName: "Doe",
+  },
 };
 
 console.log("userId: " + userId(user)); // "userId: 42"

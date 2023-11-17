@@ -1,8 +1,8 @@
 ---
 title: Attr
 slug: Web/API/Attr
-translation_of: Web/API/Attr
 ---
+
 {{APIRef("DOM")}}
 
 Этот тип представляет атрибут элемента DOM в виде объекта. В большинстве методов DOM вы, вероятно, непосредственно извлекаете атрибут в виде строки (например, {{domxref ("Element.getAttribute ()")}}, но некоторые функции (например, {{domxref ("Element.getAttributeNode ()" )}}) или средства итерации, отдают тип `Attr`.
@@ -116,6 +116,6 @@ The following methods have been deprecated:
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

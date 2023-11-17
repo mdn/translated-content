@@ -1,7 +1,6 @@
 ---
 title: ParentNode.childElementCount
 slug: Web/API/Element/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
 ---
 
 {{ APIRef("DOM") }}
@@ -24,7 +23,7 @@ var count = node.childElementCount;
 ## Exemplo
 
 ```js
-var foo = document.getElementById('foo');
+var foo = document.getElementById("foo");
 if (foo.childElementCount > 0) {
   // Faz algo
 }
@@ -35,18 +34,23 @@ if (foo.childElementCount > 0) {
 Essa propriedade não é suportada em versões anteriores ao IE9. Já no IE9 ou Safari, não será suportada somente por Objetos de `Document` e `DocumentFragment`.
 
 ```js
-;(function(constructor) {
-  if (constructor &&
-      constructor.prototype &&
-      constructor.prototype.childElementCount == null) {
-    Object.defineProperty(constructor.prototype, 'childElementCount', {
-      get: function() {
-        var i = 0, count = 0, node, nodes = this.childNodes;
-        while (node = nodes[i++]) {
+(function (constructor) {
+  if (
+    constructor &&
+    constructor.prototype &&
+    constructor.prototype.childElementCount == null
+  ) {
+    Object.defineProperty(constructor.prototype, "childElementCount", {
+      get: function () {
+        var i = 0,
+          count = 0,
+          node,
+          nodes = this.childNodes;
+        while ((node = nodes[i++])) {
           if (node.nodeType === 1) count++;
         }
         return count;
-      }
+      },
     });
   }
 })(window.Node || window.Element);
@@ -54,10 +58,7 @@ Essa propriedade não é suportada em versões anteriores ao IE9. Já no IE9 ou 
 
 ## Especificações
 
-| Especificações                                                                                                                           | Status                                   | Comentários                                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-parentnode-childelementcount', 'ParentNode.childElementCount')}}         | {{Spec2('DOM WHATWG')}}         | Divide a interface `ElementTraversal` entre {{domxref("ChildNode")}} e `ParentNode`. Esse método é definido ao final. {{domxref("Document")}} e {{domxref("DocumentFragment")}} implementam essas novas interfaces. |
-| {{SpecName('Element Traversal', '#attribute-childElementCount', 'ElementTraversal.childElementCount')}} | {{Spec2('Element Traversal')}} | Adicionada sua definição inicial à interface pura do `ElementTraversal` e use-a em {{domxref("Element")}}.                                                                                                                              |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

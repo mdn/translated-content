@@ -1,7 +1,6 @@
 ---
 title: AbortSignal.timeout()
 slug: Web/API/AbortSignal/timeout_static
-original_slug: Web/API/AbortSignal/timeout
 ---
 
 {{APIRef("DOM")}}
@@ -10,14 +9,14 @@ original_slug: Web/API/AbortSignal/timeout
 
 信号在超时时使用 `TimeoutError` {{domxref("DOMException")}} 中止，或者由于按下一个浏览器停止按钮（或者一些内置的“停止”操作）而使用 `AbortError` {{domxref("DOMException")}} 中止。这允许 UI 区分超时错误（通常需要通知用户）和用户触发的错误（不需要通知用户）。
 
-超时将基于活动的时间，而不是经过的时间，如果代码在指定的的 worker 中运行或者文档在往返缓存时（[bfcache](https://web.dev/bfcache/)），将有效地暂停。
+超时将基于活动的时间，而不是经过的时间，如果代码在指定的的 worker 中运行或者文档在往返缓存时（[bfcache](https://web.dev/articles/bfcache)），将有效地暂停。
 
 > **备注：** 在编写代码时，无法组合多个信号。意思是你不能使用超时的 signal 或者通过调用 {{domxref("AbortController.abort()")}} 直接中止下载。
 
 ## 语法
 
-```js
-timeout(time)
+```js-nolint
+AbortSignal.timeout(time)
 ```
 
 ### 参数
@@ -46,7 +45,9 @@ try {
   if (err.name === "TimeoutError") {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
-    console.error("Fetch aborted by user action (browser stop button, closing tab, etc.");
+    console.error(
+      "Fetch aborted by user action (browser stop button, closing tab, etc.",
+    );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");
   } else {

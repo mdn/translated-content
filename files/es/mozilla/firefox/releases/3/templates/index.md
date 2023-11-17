@@ -1,7 +1,6 @@
 ---
 title: Plantillas en Firefox 3
 slug: Mozilla/Firefox/Releases/3/Templates
-original_slug: Plantillas_en_Firefox_3
 l10n:
   sourceCommit: 2aaa075dd310f0de930bab617bb6fe1033970da3
 ---

@@ -35,10 +35,10 @@ Math.cos(x)
 ### Math.cos() の使用
 
 ```js
-Math.cos(0);           // 1
-Math.cos(1);           // 0.5403023058681398
+Math.cos(0); // 1
+Math.cos(1); // 0.5403023058681398
 
-Math.cos(Math.PI);     // -1
+Math.cos(Math.PI); // -1
 Math.cos(2 * Math.PI); // 1
 ```
 
@@ -48,7 +48,7 @@ Math.cos(2 * Math.PI); // 1
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.cos")}}
+{{Compat}}
 
 ## 関連情報
 

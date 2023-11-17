@@ -1,9 +1,6 @@
 ---
 title: document.images
 slug: Web/API/Document/images
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/Document/images
 ---
 
 {{ ApiRef() }}
@@ -13,17 +10,17 @@ translation_of: Web/API/Document/images
 ## Syntaxe
 
 ```js
-HTMLCollection =document.images
+HTMLCollection = document.images;
 ```
 
 ## Exemple
 
 ```js
 var listeimg = document.images;
-for(var i = 0; i < listeimg.length; i++) {
-    if(listeimg[i] == "banner.gif") {
-         // l'image banner a été trouvée
-    }
+for (var i = 0; i < listeimg.length; i++) {
+  if (listeimg[i] == "banner.gif") {
+    // l'image banner a été trouvée
+  }
 }
 ```
 

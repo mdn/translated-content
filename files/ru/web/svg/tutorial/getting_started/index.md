@@ -1,10 +1,6 @@
 ---
 title: Начало работы
 slug: Web/SVG/Tutorial/Getting_Started
-tags:
-  - SVG
-  - SVG:Руководство
-translation_of: Web/SVG/Tutorial/Getting_Started
 ---
 
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
@@ -36,9 +32,9 @@ translation_of: Web/SVG/Tutorial/Getting_Started
 
 1. Мы начинаем с корневого элемента `svg`:
 
-    - как известно из (X)HTML, декларацию doctype следует опустить, потому что DTD на основе валидации SVG приводит к бо́льшим проблемам, чем их решает
-    - до SVG 2, чтобы обозначить версию SVG для других типов валидации, всегда следует использовать атрибуты `version` и `baseProfile`. Но в SVG 2 оба эти атрибута `version` и `baseProfile` обрели статус не рекомендованных
-    - как диалект XML, SVG всегда правильно должен связывать пространства имён (в атрибуте xmlns). Смотри страницу [Namespaces Crash Course](/ru/docs/Web/SVG/Namespaces_Crash_Course) для большей информации.
+   - как известно из (X)HTML, декларацию doctype следует опустить, потому что DTD на основе валидации SVG приводит к бо́льшим проблемам, чем их решает
+   - до SVG 2, чтобы обозначить версию SVG для других типов валидации, всегда следует использовать атрибуты `version` и `baseProfile`. Но в SVG 2 оба эти атрибута `version` и `baseProfile` обрели статус не рекомендованных
+   - как диалект XML, SVG всегда правильно должен связывать пространства имён (в атрибуте xmlns). Смотри страницу [Namespaces Crash Course](/ru/docs/Web/SVG/Namespaces_Crash_Course) для большей информации.
 
 2. Фон устанавливается красным при помощи рисования прямоугольника [`<rect/>`](/en-US/Web/SVG/Element/rect), который покрывает всю область изображения
 3. Зелёный круг [`<circle/>`](/en-US/Web/SVG/Element/circle) с радиусом 80px рисуется поверх центра красного прямоугольника (центр круга смещён на 150px вправо, и 100px вниз).

@@ -1,16 +1,6 @@
 ---
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -45,26 +35,31 @@ Math.clz32(x)
 ### Пример: использование метода `Math.clz32()`
 
 ```js
-Math.clz32(1);                // 31
-Math.clz32(1000);             // 22
-Math.clz32();                 // 32
+Math.clz32(1); // 31
+Math.clz32(1000); // 22
+Math.clz32(); // 32
 
-[NaN, Infinity, -Infinity, 0, -0, null, undefined, 'foo', {}, []].filter(
-function(n) {
-  return Math.clz32(n) !== 32
-});                           // []
+[NaN, Infinity, -Infinity, 0, -0, null, undefined, "foo", {}, []].filter(
+  function (n) {
+    return Math.clz32(n) !== 32;
+  },
+); // []
 
-Math.clz32(true);             // 31
-Math.clz32(3.5);              // 30
+Math.clz32(true); // 31
+Math.clz32(3.5); // 30
 ```
 
 ## Полифил
 
 ```js
-Math.clz32 = Math.clz32 || function(value) {
-  value = Number(value) >>> 0;
-  return value !== 0 ? 31 - Math.floor(Math.log(value + 0.5) / Math.log(2)) : 32;
-};
+Math.clz32 =
+  Math.clz32 ||
+  function (value) {
+    value = Number(value) >>> 0;
+    return value !== 0
+      ? 31 - Math.floor(Math.log(value + 0.5) / Math.log(2))
+      : 32;
+  };
 ```
 
 ## Спецификации

@@ -16,7 +16,7 @@ eventSource.onopen = function
 ## 示例
 
 ```js
-evtSource.onopen = function() {
+evtSource.onopen = function () {
   console.log("Connection to server opened.");
 };
 ```
@@ -31,6 +31,6 @@ evtSource.onopen = function() {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("EventSource")}}

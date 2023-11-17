@@ -2,6 +2,7 @@
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`DataTransfer.getData()`** 메소드는 특정 형태를 위해 ({{domxref("DOMString")}}로) 끌어낸 데이터를 회수한다. 가령, 끌어내는 동작이 데이터를 포함하지 않는다면, 이 메소드는 빈 문자열을 반환한다.
@@ -32,7 +33,9 @@ dataTransfer.getData(format);
 
 ```html
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <span id="drag" draggable="true" ondragstart="drag(event)">drag me to the other box</span>
+  <span id="drag" draggable="true" ondragstart="drag(event)"
+    >drag me to the other box</span
+  >
 </div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 ```
@@ -40,11 +43,12 @@ dataTransfer.getData(format);
 ### CSS 내용
 
 ```css
-#div1, #div2 {
-    width:100px;
-    height:50px;
-    padding:10px;
-    border:1px solid #aaaaaa;
+#div1,
+#div2 {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
 }
 ```
 
@@ -52,20 +56,20 @@ dataTransfer.getData(format);
 
 ```js
 function allowDrop(allowdropevent) {
-    allowdropevent.target.style.color = 'blue';
-    allowdropevent.preventDefault();
+  allowdropevent.target.style.color = "blue";
+  allowdropevent.preventDefault();
 }
 
 function drag(dragevent) {
-    dragevent.dataTransfer.setData("text", dragevent.target.id);
-    dragevent.target.style.color = 'green';
+  dragevent.dataTransfer.setData("text", dragevent.target.id);
+  dragevent.target.style.color = "green";
 }
 
 function drop(dropevent) {
-    dropevent.preventDefault();
-    var data = dropevent.dataTransfer.getData("text");
-    dropevent.target.appendChild(document.getElementById(data));
-    document.getElementById("drag").style.color = 'black';
+  dropevent.preventDefault();
+  var data = dropevent.dataTransfer.getData("text");
+  dropevent.target.appendChild(document.getElementById(data));
+  document.getElementById("drag").style.color = "black";
 }
 ```
 
@@ -73,7 +77,7 @@ function drop(dropevent) {
 
 {{EmbedLiveSample('예제', 600) }}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

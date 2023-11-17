@@ -1,22 +1,6 @@
 ---
-title: 'Руководство Django Часть 8: Аутентификация и авторизация пользователя'
+title: "Руководство Django Часть 8: Аутентификация и авторизация пользователя"
 slug: Learn/Server-side/Django/Authentication
-tags:
-  - Python
-  - Аутентификация
-  - Аутентификация django
-  - Django
-  - Начинающий
-  - Обучение
-  - Разграничение доступа
-  - Руководство
-  - Сервер
-  - Статья
-  - Формы
-  - на стороне сервера
-  - сессии
-translation_of: Learn/Server-side/Django/Authentication
-original_slug: Learn/Server-side/Django/Аутентификация
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
@@ -98,7 +82,7 @@ MIDDLEWARE = [
 3. Введите соответствующие **Username** (имя пользователя) и **Password**/**Password confirmation (пароль/подтверждение пароля)** для вашего тестового пользователя
 4. Нажмите **SAVE** для завершения процесса создания пользователя.
 
-    Административная часть сайта создаст нового пользователя и немедленно перенаправит вас на страницу _Change user (Изменение параметров пользователя)_ где вы можете, соответственно, изменить ваш **username**, а кроме того добавить информацию для дополнительных полей модели User. Эти поля включают в себя имя пользователя, фамилию, адрес электронной почты, статус пользователя, а также соответствующие параметры доступа (может быть установлен только флаг **Active**). Ниже вы можете определить группу для пользователя и необходимые параметры доступа, а кроме того, вы можете увидеть важные даты, относящиеся к пользователю (дату подключения к сайту и дату последнего входа).![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
+   Административная часть сайта создаст нового пользователя и немедленно перенаправит вас на страницу _Change user (Изменение параметров пользователя)_ где вы можете, соответственно, изменить ваш **username**, а кроме того добавить информацию для дополнительных полей модели User. Эти поля включают в себя имя пользователя, фамилию, адрес электронной почты, статус пользователя, а также соответствующие параметры доступа (может быть установлен только флаг **Active**). Ниже вы можете определить группу для пользователя и необходимые параметры доступа, а кроме того, вы можете увидеть важные даты, относящиеся к пользователю (дату подключения к сайту и дату последнего входа).![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
 5. В разделе _Groups_, из списка _Доступные группы_ выберите группу **Library Member**, а затем переместите её в блок "Выбранные группы" (нажмите **стрелку-"направо"**, находящуюся между блоками).![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. Больше нам не нужно здесь нечего делать, просто нажмите "Save"(Сохранить), и вы вернётесь к списку созданных пользователей.
@@ -184,7 +168,7 @@ TEMPLATES = [
 
 Создайте новый HTML файл, названный /**locallibrary/templates/registration/login.html**. дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -248,13 +232,13 @@ LOGIN_REDIRECT_URL = '/'
 
 Создайте и откройте **/locallibrary/templates/registration/logged_out.html**. Скопируйте текст ниже:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-<p>Logged out!</p>
+  <p>Logged out!</p>
 
-<a href="{% url 'login'%}">Click here to login again.</a>
+  <a href="{% url 'login'%}">Click here to login again.</a>
 {% endblock %}
 ```
 
@@ -272,16 +256,15 @@ LOGIN_REDIRECT_URL = '/'
 
 Это форма, используемая для получения адреса электронной почты пользователя (для отправки пароля для сброса пароля). Создайте **/locallibrary/templates/registration/password_reset_form.html** и дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-
-<form action="" method="post">{% csrf_token %}
-    {% if form.email.errors %} \{{ form.email.errors }} {% endif %}
-        <p>\{{ form.email }}</p>
-    <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
-</form>
-
+  <form action="" method="post">{% csrf_token %}
+      {% if form.email.errors %} \{{ form.email.errors }} {% endif %}
+          <p>\{{ form.email }}</p>
+      <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
+  </form>
 {% endblock %}
 ```
 
@@ -289,10 +272,14 @@ LOGIN_REDIRECT_URL = '/'
 
 Эта форма отображается после того, как ваш адрес электронной почты будет собран. Создайте **/locallibrary/templates/registration/password_reset_done.html**, и дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-<p>We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.</p>
+  <p>
+    We've emailed you instructions for setting your password. If they haven't
+    arrived in a few minutes, check your spam folder.
+  </p>
 {% endblock %}
 ```
 
@@ -300,7 +287,7 @@ LOGIN_REDIRECT_URL = '/'
 
 Этот шаблон предоставляет текст электронной почты HTML, содержащий ссылку на сброс, которую мы отправим пользователям. Создайте /locallibrary/templates/registration/password_reset_email.html и дайте ему следующее содержание:
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
@@ -309,37 +296,42 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 На этой странице вы вводите новый пароль после нажатия ссылки в электронном письме с возвратом пароля. Создайте /locallibrary/templates/registration/password_reset_confirm.html и дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-    {% if validlink %}
-        <p>Please enter (and confirm) your new password.</p>
-        <form action="" method="post">
-            {% csrf_token %}
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
-                </tr>
-            </table>
-        </form>
-    {% else %}
-        <h1>Password reset failed</h1>
-        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
-    {% endif %}
-
+  {% if validlink %}
+    <p>Please enter (and confirm) your new password.</p>
+    <form action="" method="post">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td>
+            \{{ form.new_password1.errors }}
+            <label for="id_new_password1">New password:</label>
+          </td>
+          <td>\{{ form.new_password1 }}</td>
+        </tr>
+        <tr>
+          <td>
+            \{{ form.new_password2.errors }}
+            <label for="id_new_password2">Confirm password:</label>
+          </td>
+          <td>\{{ form.new_password2 }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Change my password" /></td>
+        </tr>
+      </table>
+    </form>
+  {% else %}
+    <h1>Password reset failed</h1>
+    <p>
+      The password reset link was invalid, possibly because it has already been
+      used. Please request a new password reset.
+    </p>
+  {% endif %}
 {% endblock %}
 ```
 
@@ -347,13 +339,12 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 Это последний шаблон сброса пароля, который отображается, чтобы уведомить вас о завершении сброса пароля. Создайте /locallibrary/templates/registration/password_reset_complete.html и дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-
-<h1>The password has been changed!</h1>
-<p><a href="{% url 'login' %}">log in again?</a></p>
-
+  <h1>The password has been changed!</h1>
+  <p><a href="{% url 'login' %}">log in again?</a></p>
 {% endblock %}
 ```
 

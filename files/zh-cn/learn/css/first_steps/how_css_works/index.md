@@ -1,7 +1,6 @@
 ---
 title: CSS 如何运行
 slug: Learn/CSS/First_steps/How_CSS_works
-original_slug: Learn/CSS/First_steps/CSS如何运行
 ---
 
 {{LearnSidebar}}
@@ -78,7 +77,9 @@ P
 {{EmbedLiveSample('一个真实的 DOM 案例', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## 应用 CSS 到 DOM

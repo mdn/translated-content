@@ -1,7 +1,6 @@
 ---
 title: コミュニティでの作業
 slug: orphaned/MDN/Community/Working_in_community
-original_slug: MDN/Community/Working_in_community
 ---
 
 {{MDNSidebar}}

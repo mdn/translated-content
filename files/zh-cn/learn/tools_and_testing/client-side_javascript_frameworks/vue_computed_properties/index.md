@@ -40,7 +40,10 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_pro
 现在我们想为待办事项列表添加一个摘要计数器。这在为用户提供帮助的同时，也保留了列表的标签作为辅助。如果我们在待办事项列表中完成了 5 项中的 2 项，那么我们的摘要可以是“已完成 2/5”。似乎我们应该这样做：
 
 ```html
-<h2>\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed</h2>
+<h2>
+  \{{ToDoItems.filter(item =&gt; item.done).length}} out of
+  \{{ToDoItems.length}} items completed
+</h2>
 ```
 
 这个值将在每次渲染时重新计算。对于像当前这样较小的应用程序，这可能并不不会产生什么影响。但是对于更大的应用程序，或者当表达式更复杂时，这可能会导致严重的性能问题。
@@ -70,7 +73,10 @@ computed: {
 <h2 id="list-summary">\{{listSummary}}</h2>
 <ul aria-labelledby="list-summary" class="stack-large">
   <li v-for="item in ToDoItems" :key="item.id">
-    <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
+    <to-do-item
+      :label="item.label"
+      :done="item.done"
+      :id="item.id"></to-do-item>
   </li>
 </ul>
 ```
@@ -86,13 +92,17 @@ computed: {
 把 `ToDoItem.vue` 中的 `<input>` 元素改成下面这样：
 
 ```html
-<input type="checkbox" class="checkbox" :id="id" :checked="isDone"
-       @change="$emit('checkbox-changed')" />
+<input
+  type="checkbox"
+  class="checkbox"
+  :id="id"
+  :checked="isDone"
+  @change="$emit('checkbox-changed')" />
 ```
 
 因为我们只需要触发 `checkbox-changed` 事件，所以我们可以在标签中内联使用 `$emit()` 方法。
 
-在 `App.vue` 中 `addToDo()` 方法下面，添加一个名为 `updateDoneStatus()` 的新方法。这个方法应该有一个参数：待办事项的 _id_ 。我们想要找到与 `id` 匹配的项目，并翻转它的 `done` 状态：
+在 `App.vue` 中 `addToDo()` 方法下面，添加一个名为 `updateDoneStatus()` 的新方法。这个方法应该有一个参数：待办事项的 _id_。我们想要找到与 `id` 匹配的项目，并翻转它的 `done` 状态：
 
 ```js
 updateDoneStatus(toDoId) {
@@ -101,15 +111,18 @@ updateDoneStatus(toDoId) {
 }
 ```
 
-我们想在 `ToDoItem` 触发 `checkbox-changed` 事件时运行此方法，并传入它的 `item.id` 作为参数。将你的 `<to-do-item></to-do-item>` 标签改成下面这样:
+我们想在 `ToDoItem` 触发 `checkbox-changed` 事件时运行此方法，并传入它的 `item.id` 作为参数。将你的 `<to-do-item></to-do-item>` 标签改成下面这样：
 
 ```html
-<to-do-item :label="item.label" :done="item.done" :id="item.id"
-            @checkbox-changed="updateDoneStatus(item.id)">
+<to-do-item
+  :label="item.label"
+  :done="item.done"
+  :id="item.id"
+  @checkbox-changed="updateDoneStatus(item.id)">
 </to-do-item>
 ```
 
-现在如果你勾选了一个 `ToDoItem`，你应该会看到摘要更新了!
+现在如果你勾选了一个 `ToDoItem`，你应该会看到摘要更新了！
 
 ![我们的应用程序，添加了一个已完成待办的计数器。目前它显示已完成 5 项中的 3 项](todo-counter.png)
 

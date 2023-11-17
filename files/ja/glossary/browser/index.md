@@ -16,13 +16,13 @@ slug: Glossary/Browser
 
 1. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("user agent", "ユーザーエージェント")}}
+   1. {{Glossary("user agent", "ユーザーエージェント")}}
 
 2. 一般知識
 
-    1. Wikipedia 上の記事: [ウェブブラウザー](https://ja.wikipedia.org/wiki/ウェブブラウザー)
-    2. [ウェブの進化](http://www.evolutionoftheweb.com/)
+   1. Wikipedia 上の記事: [ウェブブラウザー](https://ja.wikipedia.org/wiki/ウェブブラウザー)
+   2. [ウェブの進化](http://www.evolutionoftheweb.com/)
 
 3. HTTP ヘッダー
 
-    1. {{HTTPHeader("User-agent")}}
+   1. {{HTTPHeader("User-agent")}}

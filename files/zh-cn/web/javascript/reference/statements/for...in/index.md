@@ -25,7 +25,7 @@ for (variable in object)
 
 ### 仅迭代自身的属性
 
-如果你只要考虑对象本身的属性，而不是它的原型，那么使用 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} 或执行 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 来确定某属性是否是对象本身的属性（也能使用{{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}）。或者，如果你知道不会有任何外部代码干扰，您可以使用检查方法扩展内置原型。
+如果你只要考虑对象本身的属性，而不是它的原型，那么使用 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} 或执行 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 来确定某属性是否是对象本身的属性（也能使用{{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}）。或者，如果你知道不会有任何外部代码干扰，你可以使用检查方法扩展内置原型。
 
 ## 为什么用 for ... in?
 
@@ -38,7 +38,7 @@ for (variable in object)
 下面的函数接受一个对象作为参数。被调用时迭代传入对象的所有可枚举属性然后返回一个所有属性名和其对应值的字符串。
 
 ```js
-var obj = {a:1, b:2, c:3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var prop in obj) {
   console.log("obj." + prop + " = " + obj[prop]);
@@ -53,10 +53,10 @@ for (var prop in obj) {
 下面的函数说明了{{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}的用法：继承的属性不显示。
 
 ```js
-var triangle = {a: 1, b: 2, c: 3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
-  this.color = 'red';
+  this.color = "red";
 }
 
 ColoredTriangle.prototype = triangle;
@@ -99,13 +99,11 @@ for (var i = 0 in obj) {
 
 像其他引擎 V8(Chrome)，Chakra (IE/Edge)，JSC (WebKit/Safari) 正在研究去除这种不标准的行为。
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/for...of", "for...of")}} 一个类似的迭代属性值的语句
-- {{jsxref("Statements/for_each...in", "for each in")}} 一个类似的但是迭代的是对象的属性的值而不是其属性名字的语句（过时的）
 - {{jsxref("Statements/for", "for")}}
-- 迭代器和构造器（uses the `for...in` syntax）
 - [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

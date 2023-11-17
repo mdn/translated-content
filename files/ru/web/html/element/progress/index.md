@@ -1,11 +1,8 @@
 ---
-title: '<progress>: Элемент индикатора выполнения'
+title: "<progress>: Элемент индикатора выполнения"
 slug: Web/HTML/Element/progress
-tags:
-  - Progress bar
-  - индикатор загрузки
-translation_of: Web/HTML/Element/progress
 ---
+
 {{HTMLSidebar}}
 
 **HTML-элемент `<progress>` **отображает индикатор, показывающий ход выполнения задачи, обычно отображаемый в виде прогресс бара (индикатора выполнения).
@@ -15,10 +12,10 @@ translation_of: Web/HTML/Element/progress
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), контент, ассоциированный с label, явный контент. |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но среди его потомков не должно быть элемента `<progress>`.                                                              |
-| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                            |
-| Допустимые родители                                         | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                         |
+| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                                 |
+| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                         |
 | Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                                 |
-| DOM-интерфейс                                              | {{domxref("HTMLProgressElement")}}                                                                                                                                                        |
+| DOM-интерфейс                                              | {{domxref("HTMLProgressElement")}}                                                                                                                                                                  |
 
 ## Атрибуты
 

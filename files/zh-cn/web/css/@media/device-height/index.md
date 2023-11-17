@@ -16,7 +16,10 @@ slug: Web/CSS/@media/device-height
 在高度低于 800px 时加载指定样式
 
 ```html
-<link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://foo.bar.com/short-styles.css" />
+<link
+  rel="stylesheet"
+  media="screen and (max-device-height: 799px)"
+  href="http://foo.bar.com/short-styles.css" />
 ```
 
 ## Specifications

@@ -1,14 +1,6 @@
 ---
 title: Window.top
 slug: Web/API/Window/top
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - Propriété
-  - Reference
-  - Window
-translation_of: Web/API/Window/top
 ---
 
 {{APIRef}}

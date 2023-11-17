@@ -1,11 +1,6 @@
 ---
 title: <display-legacy>
 slug: Web/CSS/display-legacy
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
-translation_of: Web/CSS/display-legacy
 ---
 
 {{CSSRef}}

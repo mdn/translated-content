@@ -1,16 +1,6 @@
 ---
-title: 'Attribut HTML : minlength'
+title: "Attribut HTML : minlength"
 slug: Web/HTML/Attributes/minlength
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Input
-  - Reference
-  - minlength
-  - textarea
-translation_of: Web/HTML/Attributes/minlength
 ---
 
 {{HTMLSidebar}}
@@ -25,7 +15,7 @@ En ajoutant `minlength="5"`, la valeur doit soit être vide, soit comporter cinq
 
 ```html
 <label for="fruit">Entrez un nom de fruit d'au moins 5 lettres.</label>
-<input type="text" minlength="5" id="fruit">
+<input type="text" minlength="5" id="fruit" />
 ```
 
 Nous pouvons utiliser des pseudo-classes pour donner un style à l'élément en fonction de la validité de la valeur. La valeur sera valide tant qu'elle sera soit nulle (vide), soit longue de cinq caractères ou plus. _Vert_ est invalide, _Citron_ est valide.

@@ -1,12 +1,6 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/backface-visibility
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -129,8 +123,10 @@ Dans cet exemple, on dessine un cube avec des faces transparentes.
 }
 
 /* On améliore le rendu du tableau */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -160,9 +156,8 @@ th, p, td {
           </div>
         </div>
         <p>
-          Toutes les faces sont transparentes et les trois
-          faces arrières sont visibles au travers des faces
-          avant.
+          Toutes les faces sont transparentes et les trois faces arrières sont
+          visibles au travers des faces avant.
         </p>
       </td>
       <td>
@@ -177,8 +172,8 @@ th, p, td {
           </div>
         </div>
         <p>
-          Aucune face n'est opaque mais les trois faces arrières
-          sont désormais cachées.
+          Aucune face n'est opaque mais les trois faces arrières sont désormais
+          cachées.
         </p>
       </td>
     </tr>

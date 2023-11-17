@@ -1,19 +1,8 @@
 ---
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-tags:
-  - Array
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка
@@ -83,12 +72,14 @@ console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
 
 ```js
 if (!Array.prototype.findIndex) {
-  Array.prototype.findIndex = function(predicate) {
+  Array.prototype.findIndex = function (predicate) {
     if (this == null) {
-      throw new TypeError('Array.prototype.findIndex called on null or undefined');
+      throw new TypeError(
+        "Array.prototype.findIndex called on null or undefined",
+      );
     }
-    if (typeof predicate !== 'function') {
-      throw new TypeError('predicate must be a function');
+    if (typeof predicate !== "function") {
+      throw new TypeError("predicate must be a function");
     }
     var list = Object(this);
     var length = list.length >>> 0;

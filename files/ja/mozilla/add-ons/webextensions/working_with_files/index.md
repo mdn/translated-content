@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/Working_with_files
 この仕組みでは、あなたのウェブサイト(や URL で決められたあらゆる場所)からユーザーのコンピューターにファイルを入手できます。主要なメソッドは {{WebExtAPIRef("downloads.download()")}} で、その簡単なフォームで URL を受け付けて、その URL からユーザーの既定のダウンロードフォルダーにファイルをダウンロードします:
 
 ```js
-browser.downloads.download({url: "https://example.org/image.png"})
+browser.downloads.download({ url: "https://example.org/image.png" });
 ```
 
 ユーザーが `saveAs` パラメーターで指定した場所にダウンロードさせることもできます。
@@ -46,7 +46,7 @@ API リファレンス: [HTML input element](/ja/docs/Web/HTML/Element/input/fil
 
 ## ドラッグアンドドロップを使って拡張機能でファイルを開く
 
-Web Drag and Drop API では別のファイルピッカーがあります。このメソッドを使うには、UI にフィットする ‘drop zone’ を設置して、[dragenter](/ja/docs/Web/Events/dragenter), [dragover](/ja/docs/Web/Events/dragover), [drop](/ja/docs/Web/Events/drop) イベントのリスナーを要素に追加します。ドロップイベントのハンドラーでは、[DataTransfer.files](/ja/docs/Web/API/DataTransfer/files) を使って dataTransfer プロパティから提供されたオブジェクトからユーザーにドロップされたあらゆるファイルに、コードからアクセスできます。すると [DOM File API](/ja/docs/Web/API/File) を使ってファイルにアクセス・操作することができます。
+Web Drag and Drop API では別のファイルピッカーがあります。このメソッドを使うには、UI にフィットする 'drop zone' を設置して、[dragenter](/ja/docs/Web/Events/dragenter), [dragover](/ja/docs/Web/Events/dragover), [drop](/ja/docs/Web/Events/drop) イベントのリスナーを要素に追加します。ドロップイベントのハンドラーでは、[DataTransfer.files](/ja/docs/Web/API/DataTransfer/files) を使って dataTransfer プロパティから提供されたオブジェクトからユーザーにドロップされたあらゆるファイルに、コードからアクセスできます。すると [DOM File API](/ja/docs/Web/API/File) を使ってファイルにアクセス・操作することができます。
 
 例: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 ガイド: [Using files from web applications](/ja/docs/Using_files_from_web_applications) | [File drag and drop](/ja/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
@@ -78,33 +78,33 @@ Store Collected Images の例では、画像コンテキストメニューを使
 
 ```js
 async function saveCollectedBlobs(collectionName, collectedBlobs) {
- const storedImages = await getFileStorage({name: "stored-images"});
+  const storedImages = await getFileStorage({ name: "stored-images" });
 
- for (const item of collectedBlobs) {
+  for (const item of collectedBlobs) {
     await storedImages.put(`${collectionName}/${item.uuid}`, item.blob);
- }
+  }
 }
 ```
 
-`saveCollectedBlobs` is called when the user clicks save in the popup and has provided a name for the image collection. First, `getFileStorage` creates, if it does not exist already, or retrieves the IndexedDB database “stored-images” to the object `storedImages`. `storedImages.put` then adds each collected image to the database, under the collection name, using the blob’s unique id (the file name). If the image being store has the same name as one already in the database, it is overwritten. If you want to avoid this, query the database first using `imagesStore.list()` with a filter for the file name, and, if the list returns a file, add a suitable suffix to the name of the new image to store a separate item.
+`saveCollectedBlobs` is called when the user clicks save in the popup and has provided a name for the image collection. First, `getFileStorage` creates, if it does not exist already, or retrieves the IndexedDB database "stored-images" to the object `storedImages`. `storedImages.put` then adds each collected image to the database, under the collection name, using the blob's unique id (the file name). If the image being store has the same name as one already in the database, it is overwritten. If you want to avoid this, query the database first using `imagesStore.list()` with a filter for the file name, and, if the list returns a file, add a suitable suffix to the name of the new image to store a separate item.
 
 ### 保管された画像を表示用に取得する
 
 ```js
 export async function loadStoredImages(filter) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- let listOptions = filter ? {includes: filter} : undefined;
- const imagesList = await imagesStore.list(listOptions);
- let storedImages = [];
- for (const storedName of imagesList) {
+  const imagesStore = await getFileStorage({ name: "stored-images" });
+  let listOptions = filter ? { includes: filter } : undefined;
+  const imagesList = await imagesStore.list(listOptions);
+  let storedImages = [];
+  for (const storedName of imagesList) {
     const blob = await imagesStore.get(storedName);
-    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
- }
- return storedImages;
+    storedImages.push({ storedName, blobUrl: URL.createObjectURL(blob) });
+  }
+  return storedImages;
 }
 ```
 
-`loadStoredImages` is called when the user clicks view or reload in the navigate collection page. `getFileStorage` opens the “stored-images” database, then `imagesStore.list` gets a filtered list of the stored images. This list is then used to retrieve images with `imagesStore.get` and build a list to return to the UI.
+`loadStoredImages` is called when the user clicks view or reload in the navigate collection page. `getFileStorage` opens the "stored-images" database, then `imagesStore.list` gets a filtered list of the stored images. This list is then used to retrieve images with `imagesStore.get` and build a list to return to the UI.
 
 Note the use of [URL.createObjectURL(blob)](/ja/docs/Web/API/URL/createObjectURL) to create a URL that references the image blob. This URL is then used in the UI ([navigate-collection.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js)[collection.js](https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/navigate-collection.js)) to display the image.
 
@@ -112,24 +112,24 @@ Note the use of [URL.createObjectURL(blob)](/ja/docs/Web/API/URL/createObjectURL
 
 ```js
 async function removeStoredImages(storedImages) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- for (const storedImage of storedImages) {
+  const imagesStore = await getFileStorage({ name: "stored-images" });
+  for (const storedImage of storedImages) {
     URL.revokeObjectURL(storedImage.blobUrl);
     await imagesStore.remove(storedImage.storedName);
- }
+  }
 }
 ```
 
-`removeStoredImages` is called when the user clicks delete in the navigate collection page. Again, `getFileStorage` opens the “stored-images” database then `imagesStore.remove` removes each image from the filtered list of images.
+`removeStoredImages` is called when the user clicks delete in the navigate collection page. Again, `getFileStorage` opens the "stored-images" database then `imagesStore.remove` removes each image from the filtered list of images.
 
-Note the use of [URL.revokeObjectURL()](/ja/docs/Web/API/URL/revokeObjectURL) to explicitly revoke the blob URL. This enables the garbage collector to free the memory allocated to the URL. If this is not done, the memory will not get returned until the page on which it was created is closed. If the URL was created in an extension’s background page, this is not unloaded until the extension is disabled, uninstalled, or reloaded, so holding this memory unnecessarily could affect browser performance. If the URL is created in an extension’s page (new tab, popup, or sidebar) the memory is released when the page is closed, but it is still a good practice to revoke the URL when it is no longer needed.
+Note the use of [URL.revokeObjectURL()](/ja/docs/Web/API/URL/revokeObjectURL) to explicitly revoke the blob URL. This enables the garbage collector to free the memory allocated to the URL. If this is not done, the memory will not get returned until the page on which it was created is closed. If the URL was created in an extension's background page, this is not unloaded until the extension is disabled, uninstalled, or reloaded, so holding this memory unnecessarily could affect browser performance. If the URL is created in an extension's page (new tab, popup, or sidebar) the memory is released when the page is closed, but it is still a good practice to revoke the URL when it is no longer needed.
 
 Once the blob URL has been revoked any attempt to load it will result in an error. 例えば、if the blob url was used as the `SRC` attribute of an `IMG` tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob urls from generated HTML elements when the blob URL is revoked.
 
 Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
 API References: [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
-> **メモ:** You can also use the full Web [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM [Storage API](/ja/Add-ons/WebExtensions/API/Storage).
+> **メモ:** You can also use the full Web [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn't handled well by the simple key/value pairs offered by the DOM [Storage API](/ja/Add-ons/WebExtensions/API/Storage).
 
 ## ローカルアプリでファイルを処理する
 

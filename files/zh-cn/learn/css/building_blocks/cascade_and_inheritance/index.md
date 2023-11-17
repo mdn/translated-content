@@ -3,7 +3,7 @@ title: 层叠与继承
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}
 
 本文旨在让你理解 CSS 的一些最基本的概念——层叠、优先级和继承——这些概念决定着如何将 CSS 应用到 HTML 中，以及如何解决冲突。
 
@@ -12,7 +12,7 @@ slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识、<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -174,15 +174,15 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 否定（[`:not()`](/zh-CN/docs/Web/CSS/:not)）和任意匹配（[`:is()`](/zh-CN/docs/Web/CSS/:is)）伪类本身对优先级没有影响，但它们的参数则会带来影响。参数中，对优先级算法有贡献的参数的优先级的最大值将作为该伪类选择器的优先级。
 
-下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 的[选择器参考页面](/zh-CN/docs/Web/CSS/CSS_Selectors)找到每个选择器的详细信息。
+下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 的[选择器参考页面](/zh-CN/docs/Web/CSS/CSS_selectors)找到每个选择器的详细信息。
 
-| 选择器                                     | ID   | 类   | 元素 | 优先级 |
-| ----------------------------------------- | ---- | ---- | --- | ------ |
-| `h1`                                      | 0    | 0    | 1   | 0-0-1  |
-| `h1 + p::first-letter`                    | 0    | 0    | 3   | 0-0-3  |
-| `li > a[href*="en-US"] > .inline-warning` | 0    | 2    | 2   | 0-2-2  |
-| `#identifier`                             | 1    | 0    | 0   | 1-0-0  |
-| `button:not(#mainBtn, .cta)`              | 1    | 0    | 1   | 1-0-1  |
+| 选择器                                    | ID  | 类  | 元素 | 优先级 |
+| ----------------------------------------- | --- | --- | ---- | ------ |
+| `h1`                                      | 0   | 0   | 1    | 0-0-1  |
+| `h1 + p::first-letter`                    | 0   | 0   | 3    | 0-0-3  |
+| `li > a[href*="en-US"] > .inline-warning` | 0   | 2   | 2    | 0-2-2  |
+| `#identifier`                             | 1   | 0   | 0    | 1-0-0  |
+| `button:not(#mainBtn, .cta)`              | 1   | 0   | 1    | 1-0-1  |
 
 在我们继续之前，先看看这个示例。
 
@@ -264,10 +264,10 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 ## 总结
 
-如果你理解了本文的大部分内容，那么就做得很好了——你已经开始熟悉 CSS 的基本机制。接下来，我们将详细讨论[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)。
+如果你理解了本文的大部分内容，那么就做得很好了——你已经开始熟悉 CSS 的基本机制。接下来，我们将详细讨论[层叠层](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_layers)。
 
 如果你没有完全理解层叠、优先级和继承，也请不要担心！这绝对是我们到目前为止在课程中所涉及到的最复杂的事情，即使是专业的 web 开发人员有时也会觉得棘手。我们建议你在继续学习这门课程的过程中，反复阅读这篇文章几次，并继续思考它。
 
 如果你开始遇到样式没有按照预期应用的奇怪问题，请回到这里。这可能是一个特殊的问题。
 
-{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}

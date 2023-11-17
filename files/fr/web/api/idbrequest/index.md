@@ -1,16 +1,6 @@
 ---
 title: IDBRequest
 slug: Web/API/IDBRequest
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - TopicStub
-translation_of: Web/API/IDBRequest
 ---
 
 {{APIRef("IndexedDB")}}
@@ -69,12 +59,12 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Ces deux gestionnaires d'événement interviennent quand la dase de
 // de données s'ouvre ou non.
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // Affecte le resutat de l'ouverture à la variable.
   db = DBOpenRequest.result;

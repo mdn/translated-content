@@ -26,8 +26,7 @@ function exampleFunction() {
   console.log(x);
 }
 
-
-console.log(x);  // 报错
+console.log(x); // 报错
 ```
 
 但是，下面的代码是有效的，因为变量在函数外被声明，为全局变量：

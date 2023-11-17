@@ -1,7 +1,6 @@
 ---
 title: EventListener
 slug: Web/API/EventTarget/addEventListener
-original_slug: Web/API/EventListener
 ---
 
 {{APIRef("DOM Events")}}
@@ -52,7 +51,7 @@ buttonElement.addEventListener("click", {
 
 {{EmbedLiveSample('範例')}}
 
-### 檢閱相關:
+### 檢閱相關
 
 - [addEventListener](/zh-TW/docs/Web/API/EventTarget/addEventListener)
 

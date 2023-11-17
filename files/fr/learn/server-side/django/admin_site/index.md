@@ -1,15 +1,6 @@
 ---
-title: 'Django didactique Section 4: Site d''administration de Django'
+title: "Django didactique Section 4: Site d'administration de Django"
 slug: Learn/Server-side/Django/Admin_site
-tags:
-  - Apprentissage
-  - Article
-  - Didacticiel
-  - Débutant
-  - Python
-  - django
-  - django_admin
-translation_of: Learn/Server-side/Django/Admin_site
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
@@ -125,7 +116,7 @@ Ce qui manque actuellement ce sont des _Book Instances_. Vous n'en avez pas car 
 
 ![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 
-Créez plusieurs de ces enregistrements pour chacun de vos livres. Définissez un statut **Available** (_Disponible_) pour certains d'entre eux et **On loan** (_Prêt_) pour d’autres. Pour un statut différent de _Available_, vous devrez préciser une date d'échéance à venir.
+Créez plusieurs de ces enregistrements pour chacun de vos livres. Définissez un statut **Available** (_Disponible_) pour certains d'entre eux et **On loan** (_Prêt_) pour d'autres. Pour un statut différent de _Available_, vous devrez préciser une date d'échéance à venir.
 
 Nous avons terminé cette étape ! Vous savez comment configurer et utiliser le site d'administration. Vous pouvez continuer à créer des enregistrements pour Book, BookInstance, Genre et Author, que nous pourrons utiliser une fois que nous aurons créé nos propres vues de détail.
 
@@ -141,7 +132,7 @@ mais vous avez la possibilité de personnaliser le comportement du site d'admini
 - Des vues en liste
 
   - Ajouter des champs ou des informations supplémentaires affichés pour chaque enregistrement.
-  - Ajouter des filtres pour sélectionner les enregistrements répertoriés, en fonction de la date ou d’une autre valeur de sélection (par exemple, le statut du prêt du livre).
+  - Ajouter des filtres pour sélectionner les enregistrements répertoriés, en fonction de la date ou d'une autre valeur de sélection (par exemple, le statut du prêt du livre).
   - Ajouter des options supplémentaires au menu Actions dans les vues de liste et choisir l'emplacement où ce menu est affiché dans le formulaire.
 
 - Vues détaillées
@@ -195,7 +186,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     pass
 ```
 
-Pour le moment, toutes les classes d’administration sont vides (cf. pass), par conséquent le comportement d'affichage n'est pas modifié. Cependant, nous allons pouvoir désormais modifier les comportements d'affichage pour chacun des objets nouvellement enregistrés.
+Pour le moment, toutes les classes d'administration sont vides (cf. pass), par conséquent le comportement d'affichage n'est pas modifié. Cependant, nous allons pouvoir désormais modifier les comportements d'affichage pour chacun des objets nouvellement enregistrés.
 
 ### Configurer les vues en liste
 

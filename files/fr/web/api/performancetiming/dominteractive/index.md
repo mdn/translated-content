@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.domInteractive
 slug: Web/API/PerformanceTiming/domInteractive
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - domInteractive
-translation_of: Web/API/PerformanceTiming/domInteractive
 ---
 
 {{APIRef("Navigation Timing")}}

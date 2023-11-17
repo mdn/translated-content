@@ -128,7 +128,7 @@ const r = 10;
 ```js
 const objectHavingAnEspeciallyLengthyName = { foo: true, bar: false };
 
-if ((o => o.foo && !o.bar)(objectHavingAnEspeciallyLengthyName)) {
+if (((o) => o.foo && !o.bar)(objectHavingAnEspeciallyLengthyName)) {
   // This branch runs.
 }
 ```

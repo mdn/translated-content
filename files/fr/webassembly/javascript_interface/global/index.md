@@ -1,9 +1,6 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
-browser-compat: javascript.builtins.WebAssembly.Global
 ---
 
 {{WebAssemblySidebar}}
@@ -42,28 +39,44 @@ Dans l'exemple suivant, on montre comment créer une nouvelle instance globale g
 On change ensuite la valeur de la variable globale en la passant à `42` grâce à la propriété `Global.value` puis en la passant à `43` grâce à la fonction `incGlobal()` qui a été exportée depuis le module `global.wasm` (cette fonction ajoute `1` à n'imorte quelle valeur puis renvoie cette nouvelle valeur).
 
 ```js
-const output = document.getElementById('output');
+const output = document.getElementById("output");
 
 function assertEq(msg, res, attendu) {
   output.innerHTML += `Test ${msg} : `;
   if (res !== attendu)
     output.innerHTML += `ÉCHEC !<br>Résultat : ${res}<br>Attendu : ${attendu}<br>`;
-  else
-    output.innerHTML += `SUCCÈS ! Résultat : ${res}<br>`;
+  else output.innerHTML += `SUCCÈS ! Résultat : ${res}<br>`;
 }
 
-assertEq("Existence de WebAssembly.Global", typeof WebAssembly.Global, "function");
+assertEq(
+  "Existence de WebAssembly.Global",
+  typeof WebAssembly.Global,
+  "function",
+);
 
-const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
-WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
-.then(({instance}) => {
-    assertEq("Obtention de la valeur initiale depuis wasm", instance.exports.getGlobal(), 0);
+WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+  ({ instance }) => {
+    assertEq(
+      "Obtention de la valeur initiale depuis wasm",
+      instance.exports.getGlobal(),
+      0,
+    );
     global.value = 42;
-    assertEq("Obtention de la valeur mise à jour en JS depuis wasm", instance.exports.getGlobal(), 42);
+    assertEq(
+      "Obtention de la valeur mise à jour en JS depuis wasm",
+      instance.exports.getGlobal(),
+      42,
+    );
     instance.exports.incGlobal();
-    assertEq("Obtention de la valeur mise à jour côté wasm en JS", global.value, 43);
-});
+    assertEq(
+      "Obtention de la valeur mise à jour côté wasm en JS",
+      global.value,
+      43,
+    );
+  },
+);
 ```
 
 > **Note :** Cet exemple est [utilisable sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et [son code source est également disponible](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).

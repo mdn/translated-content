@@ -1,7 +1,6 @@
 ---
-title: 'HTML el atributo: min'
+title: "HTML el atributo: min"
 slug: Web/HTML/Attributes/min
-original_slug: Web/HTML/Atributos/min
 ---
 
 El atributo [`min`](/es/docs/Web/HTML/Element/input#min) define el valor mínimo que es aceptable y válido para el {{HTMLElement("input")}} que contiene el atributo. Si el [value](/es/docs/Web/HTML/Element/input#attr-value) del elemento es menor que esto, el elemento falla la [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation). Este valor debe ser menor o igual que el valor del atributo [`max`](/es/docs/Web/HTML/Element/input#max). Si se especifica un valor para [`min`](/es/docs/Web/HTML/Element/input#min) que no es un número válido, la entrada no tiene un valor mínimo.
@@ -12,15 +11,15 @@ Válido para los tipos de entrada numérica, incluidos los tipos {{HTMLElement("
 
 Si `any` no se establece explícitamente, los valores válidos para el `número`, los tipos de entrada de fecha/hora y los tipos de entrada de `range` son iguales a la base de paso a paso: el valor [`min`](/es/docs/Web/HTML/Element/input#min) y los incrementos del valor del paso, hasta el valor [max](/es/docs/Web/HTML/Attributes/max), si se especifica. Por ejemplo, si tienes `<input type="number" min="10" step="2">`, cualquier entero par, 10 o mayor, es válido. Si se omite, `<input type="number">`, cualquier número entero es válido, pero los flotantes, como 4.2, no son válidos, ya que el `step` predeterminado es 1. Para que 4.2 sea válido, `step` se debería haber configurado en `any`, 0.1, 0.2, o cualquiera, el valor mínimo tendría que ser un número terminado en 0.2 , como `<input type="number" min="-5.2">`
 
-| Tipo del `input`                                                             | Ejemplo                           | Ejemplo                                                |
-| ---------------------------------------------------------------------------- | --------------------------------- | ------------------------------------------------------ |
-| {{HTMLElement("input/date", "date")}}                             | `yyyy-mm-dd`                      | `<input type="date" min="2019-12-25" step="1">`        |
-| {{HTMLElement("input/month", "month")}}                         | `yyyy-mm`                         | `<input type="month" min="2019-12" step="12">`         |
-| {{HTMLElement("input/week", "week")}}                             | `yyyy-W##`                        | `<input type="week" min="2019-W23" step="">`           |
-| {{HTMLElement("input/time", "time")}}                             | `hh:mm`                           | `<input type="time" min="09:00" step="900">`           |
+| Tipo del `input`                                          | Ejemplo                           | Ejemplo                                                |
+| --------------------------------------------------------- | --------------------------------- | ------------------------------------------------------ |
+| {{HTMLElement("input/date", "date")}}                     | `yyyy-mm-dd`                      | `<input type="date" min="2019-12-25" step="1">`        |
+| {{HTMLElement("input/month", "month")}}                   | `yyyy-mm`                         | `<input type="month" min="2019-12" step="12">`         |
+| {{HTMLElement("input/week", "week")}}                     | `yyyy-W##`                        | `<input type="week" min="2019-W23" step="">`           |
+| {{HTMLElement("input/time", "time")}}                     | `hh:mm`                           | `<input type="time" min="09:00" step="900">`           |
 | {{HTMLElement("input/datetime-local", "datetime-local")}} | `yyyy-mm-ddThh:mm`                | `<input type="datetime-local" min="2019-12-25T19:30">` |
-| {{HTMLElement("input/number", "number")}}                     | [number](/es/docs/Web/CSS/number) | `<input type="number" min="0" step="5" max="100">`     |
-| {{HTMLElement("input/range", "range")}}                         | [number](/es/docs/Web/CSS/number) | `<input type="range" min="60" step="5" max="100">`     |
+| {{HTMLElement("input/number", "number")}}                 | [number](/es/docs/Web/CSS/number) | `<input type="number" min="0" step="5" max="100">`     |
+| {{HTMLElement("input/range", "range")}}                   | [number](/es/docs/Web/CSS/number) | `<input type="range" min="60" step="5" max="100">`     |
 
 > **Nota:** Cuando los datos ingresados por el usuario no se adhieren al valor mínimo establecido, el valor se considera inválido en la restricción de validación y coincidirá con la pseudoclase `:invalid`
 
@@ -28,8 +27,8 @@ Consulta [Validación del lado del cliente](/es/docs/Web/Guide/HTML/HTML5/Constr
 
 Para el elemento {{HTMLElement('meter')}}, el atributo [`min`](/es/docs/Web/HTML/Element/input#min) define el límite numérico inferior del rango medido. Debe ser menor que el valor mínimo (atributo [max](/es/docs/Web/HTML/Attributes/max), si se especifica. En ambos casos, si se omite, el valor predeterminado es 1.
 
-| Tipo del `input`                 | Sintaxis                          | Ejemplo                                                                                            |
-| -------------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Tipo del `input`         | Sintaxis                          | Ejemplo                                                                                            |
+| ------------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------- |
 | {{HTMLElement("meter")}} | [number](/es/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
 
 ### Impacto en `step`
@@ -47,7 +46,7 @@ input:invalid {
 Luego define un {{HTMLElement("input")}} con un valor mínimo de 7.2, omitiendo el atributo `step`, en donde el valor predeterminado es 1.
 
 ```html
-<input id="myNumber" name="myNumber" type="number" min="7.2" value="8">
+<input id="myNumber" name="myNumber" type="number" min="7.2" value="8" />
 ```
 
 Dado que `step` tiene el valor predeterminado de 1, los valores válidos incluyen `7.2`, `8.2`, `9.2` y así sucesivamente. El valor 8 no es válido. Dado que incluye un valor no válido, los navegadores compatibles mostrarán el valor como no válido.

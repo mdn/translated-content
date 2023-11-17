@@ -1,8 +1,6 @@
 ---
 title: Fonctions — des blocs de code réutilisables
 slug: Learn/JavaScript/Building_blocks/Functions
-translation_of: Learn/JavaScript/Building_blocks/Functions
-original_slug: Apprendre/JavaScript/Building_blocks/Fonctions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
@@ -38,8 +36,8 @@ Presque à chaque fois que vous utilisez une structure de JavaScript qui utilise
 Nous avons beaucoup utilisé les fonctions intégrées du navigateur dans ce cours. Comme par exemple à chaque fois que nous avons manipulé une chaîne de caractères :
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // La fonction replace () sélectionne une chaîne,
 // remplace une sous-chaîne par une autre, et renvoie
@@ -49,8 +47,8 @@ console.log(newString);
 Ou à chaque fois que nous avons manipulé un tableau :
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
-var madeAString = myArray.join(' ');
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(" ");
 console.log(madeAString);
 // La fonction join() sélectionne un tableau, rassemble
 // tous les éléments du tableau dans une chaîne,
@@ -88,10 +86,10 @@ Nous avons également rencontré beaucoup de fonctions personnalisées dans le c
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -108,7 +106,7 @@ au lieu de devoir ré-écrire tout le code à chaque fois que nous voulons la r�
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -120,10 +118,10 @@ Vous êtes probablement au clair avec cela maintenant, mais juste au cas où… 
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 
-myFunction()
+myFunction();
 // appelle la fonction une fois
 ```
 
@@ -133,7 +131,7 @@ Vous pouvez rencontrer des fonctions définies et invoquées de manière légèr
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
@@ -148,11 +146,11 @@ function() {
 Ceci est une **fonction anonyme** — elle n'a pas de nom ! De plus, elle ne produira pas d'effet par elle-même. Les fonctions anonymes sont généralement utilisées en association avec un gestionnaire d'évènement, comme dans l'exemple suivant qui lance le code inscrit dans la fonction lorsque le bouton associé est cliqué :
 
 ```js
-var myButton = document.querySelector('button');
+var myButton = document.querySelector("button");
 
-myButton.onclick = function() {
-  alert('hello');
-}
+myButton.onclick = function () {
+  alert("hello");
+};
 ```
 
 Cet exemple ci-dessus nécessite qu'il y ait un élément HTML {{htmlelement("button")}} disponible sur la page afin qu'il puisse être cliqué. Vous avez déjà rencontré ce type de structure plusieurs fois dans ce cours et vous en apprendrez plus à son sujet lorsque vous en étudierez l'utilisation dans l'article suivant.
@@ -160,9 +158,9 @@ Cet exemple ci-dessus nécessite qu'il y ait un élément HTML {{htmlelement("bu
 Vous pouvez également assigner une fonction anonyme en tant que valeur d'une variable, comme par exemple :
 
 ```js
-var myGreeting = function() {
-  alert('hello');
-}
+var myGreeting = function () {
+  alert("hello");
+};
 ```
 
 Cette fonction peut désormais être invoquée en utilisant :
@@ -174,9 +172,9 @@ myGreeting();
 Cela a pour effet d'attribuer un nom à la fonction ; vous pouvez également utiliser la fonction anonyme en tant que valeur de variables multiples, comme par exemple :
 
 ```js
-var anotherGreeting = function() {
-  alert('hello');
-}
+var anotherGreeting = function () {
+  alert("hello");
+};
 ```
 
 Cette fonction peut désormais être invoquée en utilisant au choix :
@@ -190,18 +188,18 @@ Cela peut toutefois générer de la confusion, donc ne le faites pas ! Lorsque l
 
 ```js
 function myGreeting() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
 Vous utiliserez principalement des fonctions anonymes simplement pour lancer une partie de code en réponse à un évènement — comme lorsqu'un bouton est cliqué — en utilisant un gestionnaire d'évènement. Cela devrait ressembler à ça :
 
 ```js
-myButton.onclick = function() {
-  alert('hello');
+myButton.onclick = function () {
+  alert("hello");
   // Je peux mettre ici autant
   // de code que je le souhaite
-}
+};
 ```
 
 ## Paramètres des fonctions
@@ -219,8 +217,8 @@ var myNumber = Math.random();
 La fonction de chaîne intégrée du navigateur [replace()](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace) nécessite toutefois deux paramètres — la sous-chaîne qu'elle doit remplacer à l'intérieur de la chaîne, et la sous-chaîne par laquelle elle doit la remplacer :
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 ```
 
 > **Note :** Quand vous devez définir plusieurs paramètres, ils doivent être séparés par des virgules.
@@ -228,8 +226,8 @@ var newString = myText.replace('string', 'sausage');
 Il est également à noter que parfois les paramètres sont optionnels — vous n'avez pas à les spécifier. Si vous ne le faites pas, la fonction va généralement adopter un comportement par défaut. Par exemple, la fonction de tableau [join()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join) a des paramètres optionnels :
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
-var madeAString = myArray.join(' ');
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(" ");
 // renvoie 'I love chocolate frogs'
 var madeAString = myArray.join();
 // renvoie 'I,love,chocolate,frogs'
@@ -258,21 +256,21 @@ Par exemple, disons que vous avez un fichier HTML qui appelle deux fichiers Java
 
 ```js
 // first.js
-var name = 'Chris';
+var name = "Chris";
 function greeting() {
-  alert('Hello ' + name + ': welcome to our company.');
+  alert("Hello " + name + ": welcome to our company.");
 }
 ```
 
 ```js
 // second.js
-var name = 'Zaptec';
+var name = "Zaptec";
 function greeting() {
-  alert('Our company is called ' + name + '.');
+  alert("Our company is called " + name + ".");
 }
 ```
 
-Les deux fonctions que vous voulez appeler s'appellent `greeting()`, mais vous ne pouvez accéder qu'à la fonction `greeting()` du second fichier `second.js`  — car celui-ci est appliqué au code HTML plus tard dans le code source, de sorte que sa variable et sa fonction écrasent celles du premier fichier `first.js`.
+Les deux fonctions que vous voulez appeler s'appellent `greeting()`, mais vous ne pouvez accéder qu'à la fonction `greeting()` du second fichier `second.js` — car celui-ci est appliqué au code HTML plus tard dans le code source, de sorte que sa variable et sa fonction écrasent celles du premier fichier `first.js`.
 
 > **Note :** Vous pouvez voir cet exemple [s'exécuter sur GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (voir aussi le [code source](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
 
@@ -292,89 +290,89 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
 2. Ouvrez l'exemple ci-dessus dans un navigateur et dans un éditeur de texte.
 3. Ouvrez la console JavaScript dans les outils de développement de votre navigateur et entrez la commande suivante :
 
-    ```js
-    output(x);
-    ```
+   ```js
+   output(x);
+   ```
 
-    Vous devriez voir la valeur de la variable `x` renvoyée à l'écran.
+   Vous devriez voir la valeur de la variable `x` renvoyée à l'écran.
 
 4. Maintenant essayez d'entrer les commandes suivantes :
 
-    ```js
-    output(y);
-    output(z);
-    ```
+   ```js
+   output(y);
+   output(z);
+   ```
 
-    Toutes les deux devraient vous renvoyer un message d'erreur du type : "[ReferenceError: y is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)". Pourquoi ? À cause de la portée de la fonction — `y` and `z` sont enfermées dans les fonctions `a()` et `b()`, donc `output()` ne peut pas les atteindre lorsqu'elles sont appelées depuis la portée globale.
+   Toutes les deux devraient vous renvoyer un message d'erreur du type : "[ReferenceError: y is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)". Pourquoi ? À cause de la portée de la fonction — `y` and `z` sont enfermées dans les fonctions `a()` et `b()`, donc `output()` ne peut pas les atteindre lorsqu'elles sont appelées depuis la portée globale.
 
 5. Néanmoins, que se passe-t-il losqu'elles sont appelées de l'intérieur d'une autre fonction ? Essayer d'éditer `a()` et `b()` pour qu'elles aient la forme suivante :
 
-    ```js
-    function a() {
-      var y = 2;
-      output(y);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(y);
+   }
 
-    function b() {
-      var z = 3;
-      output(z);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(z);
+   }
+   ```
 
-    Sauvegardez le code et rechargez-le dans votre navigateur, puis essayez d'appeler les fonctions `a()` et `b()` depuis la console JavaScript :
+   Sauvegardez le code et rechargez-le dans votre navigateur, puis essayez d'appeler les fonctions `a()` et `b()` depuis la console JavaScript :
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    Vous devriez voir les valeurs `y` and `z` renvoyées sur la page. Cela fonctionne très bien car la fonction `output()` est applée à l'intérieur des autres fonctions — dans la portée dans laquelle les variables qu'elle renvoie sont définies. La fonction `output()` est elle-même disponible n'importe où dans le code, car elle est définie dans la portée globale.
+   Vous devriez voir les valeurs `y` and `z` renvoyées sur la page. Cela fonctionne très bien car la fonction `output()` est applée à l'intérieur des autres fonctions — dans la portée dans laquelle les variables qu'elle renvoie sont définies. La fonction `output()` est elle-même disponible n'importe où dans le code, car elle est définie dans la portée globale.
 
 6. Maintenant essayer de mettre à jour le code comme ceci :
 
-    ```js
-    function a() {
-      var y = 2;
-      output(x);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(x);
+   }
 
-    function b() {
-      var z = 3;
-      output(x);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(x);
+   }
+   ```
 
-    Sauvegardez et rechargez à nouveau dans la console JavaScript :
+   Sauvegardez et rechargez à nouveau dans la console JavaScript :
 
    ```js
-    a();
-    b();
-    ```
+   a();
+   b();
+   ```
 
-    Les deux fonctions `a()` et `b()` appelées devraient renvoyer la valeur x — 1. Cela fonctionne très bien car même si la fonction `output()` n'est pas dans la même portée que celle dans laquelle `x` est définie, `x` est une variable globale et donc elle est disponible dans n'importe quelle partie du code.
+   Les deux fonctions `a()` et `b()` appelées devraient renvoyer la valeur x — 1. Cela fonctionne très bien car même si la fonction `output()` n'est pas dans la même portée que celle dans laquelle `x` est définie, `x` est une variable globale et donc elle est disponible dans n'importe quelle partie du code.
 
 7. Pour finir, essayez de mettre à jour le code comme ceci :
 
-    ```js
-    function a() {
-      var y = 2;
-      output(z);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(z);
+   }
 
-    function b() {
-      var z = 3;
-      output(y);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(y);
+   }
+   ```
 
 8. Sauvegardez et rechargez à nouveau dans la console JavaScript :
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    Cette fois l'appel de `a()` et `b()` renverra l'erreur "[ReferenceError: z is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)" — parce que l'appel de la fonction `output()` et des variables qu'elle essaie d'afficher ne sont pas définis dans les mêmes portées — les variables sont en effet invisibles pour cet appel de fonction.
+   Cette fois l'appel de `a()` et `b()` renverra l'erreur "[ReferenceError: z is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)" — parce que l'appel de la fonction `output()` et des variables qu'elle essaie d'afficher ne sont pas définis dans les mêmes portées — les variables sont en effet invisibles pour cet appel de fonction.
 
 > **Note :** Ces règles de portée ne s'appliquent pas aux boucles (ex. `for() { ... }`) ni aux instructions conditionnelles (ex. `if() { ... }`) — elles semblent très similaires, mais ce n'est pas la même chose ! Prenez garde de ne pas les confondre.
 
@@ -406,7 +404,7 @@ function subFunction3() {
 }
 ```
 
-Assurez-vous simplement que les valeurs utilisées dans la fonction ont une portée correcte. L'exemple ci-dessus entraînerait une erreur `ReferenceError: myValue is not defined`, car bien que la valeur `myValue`  est définie dans la même portée que les appels de fonction, elle n'est pas définie dans les définitions de fonctions - le code réel qui est exécuté lorsque les fonctions sont appelées. Pour que cela fonctionne, vous devez passer la valeur dans la fonction en tant que paramètre, comme ceci :
+Assurez-vous simplement que les valeurs utilisées dans la fonction ont une portée correcte. L'exemple ci-dessus entraînerait une erreur `ReferenceError: myValue is not defined`, car bien que la valeur `myValue` est définie dans la même portée que les appels de fonction, elle n'est pas définie dans les définitions de fonctions - le code réel qui est exécuté lorsque les fonctions sont appelées. Pour que cela fonctionne, vous devez passer la valeur dans la fonction en tant que paramètre, comme ceci :
 
 ```js
 function myBigFunction() {
@@ -437,6 +435,6 @@ Cet article a exploré les concepts fondamentaux inhérents aux fonctions, ouvra
 ## Voir aussi
 
 - [Fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions) — aborde certaines fonctionnalités avancées non incluses ici.
-- [Valeur par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments), [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) — références avancées
+- [Valeur par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments), [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) — références avancées
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}

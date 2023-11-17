@@ -74,7 +74,7 @@ parseInt("0xF", 16);
 parseInt("F", 16);
 parseInt("17", 8);
 parseInt(021, 8);
-parseInt("015", 10);   // parseInt(015, 8); 返回 13
+parseInt("015", 10); // parseInt(015, 8); 返回 13
 parseInt(15.99, 10);
 parseInt("15,123", 10);
 parseInt("FXX123", 16);
@@ -89,7 +89,7 @@ parseInt("12", 13);
 
 ```js
 parseInt("Hello", 8); // 根本就不是数值
-parseInt("546", 2);   // 除了“0、1”外，其他数字都不是有效二进制数字
+parseInt("546", 2); // 除了“0、1”外，其他数字都不是有效二进制数字
 ```
 
 以下例子均返回 `-15`：
@@ -117,7 +117,7 @@ parseInt(0.00000000000434, 10); // 非常小的数值变成 4
 下面的例子返回 `224`
 
 ```js
-parseInt("0e0",16);
+parseInt("0e0", 16);
 ```
 
 ## 没有指定 `radix` 参数时的八进制解析
@@ -148,19 +148,18 @@ ECMAScript 5 规范不再允许 `parseInt` 函数的实现环境把以 `0` 字�
 
 ```js
 filterInt = function (value) {
-  if(/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
-    return Number(value);
+  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value)) return Number(value);
   return NaN;
-}
+};
 
-console.log(filterInt('421'));               // 421
-console.log(filterInt('-421'));              // -421
-console.log(filterInt('+421'));              // 421
-console.log(filterInt('Infinity'));          // Infinity
-console.log(filterInt('421e+0'));            // NaN
-console.log(filterInt('421hop'));            // NaN
-console.log(filterInt('hop1.61803398875'));  // NaN
-console.log(filterInt('1.61803398875'));     // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
 ## 规范

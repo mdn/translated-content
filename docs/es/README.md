@@ -33,18 +33,17 @@ Ejemplificaremos el proceso a realizar cuando se desea traducir el contenido de 
 Ejemplo:
 
 Digamos que desea traducir el contenido de la página que se observa en esta dirección.
-    ![image](https://user-images.githubusercontent.com/7331511/152851642-5dea4df9-f771-4323-bc13-b238dec511ef.png)
+![image](https://user-images.githubusercontent.com/7331511/152851642-5dea4df9-f771-4323-bc13-b238dec511ef.png)
 
 1. Buscar la [versión original (en inglés)](https://github.com/mdn/content/tree/main/files/en-us) del documento que desea traducir.
-    Debería buscar en el repositorio [en inglés (mdn/content)](https://github.com/mdn/content) el archivo correspondiente al documento, en este caso la dirección sería [`files/en-us/web/javascript/reference/global_objects/array/index.md`](https://github.com/mdn/content/blob/main/files/en-us/web/javascript/reference/global_objects/array/index.md)
+   Debería buscar en el repositorio [en inglés (mdn/content)](https://github.com/mdn/content) el archivo correspondiente al documento, en este caso la dirección sería [`files/en-us/web/javascript/reference/global_objects/array/index.md`](https://github.com/mdn/content/blob/main/files/en-us/web/javascript/reference/global_objects/array/index.md)
 
 2. Buscar la [versión en español](https://github.com/mdn/translated-content/blob/main/files/es/) del [documento](https://github.com/mdn/translated-content/blob/main/files/es/web/javascript/reference/global_objects/array/index.html) que desea traducir. En este caso la dirección seria [`files/es/web/javascript/reference/global_objects/array/index.{html|md}`](https://github.com/mdn/translated-content/blob/main/files/es/web/javascript/reference/global_objects/array/index.html)
 
-    > NOTA:
-    >
-    > - Si el archivo no existe, deberá crearlo en formato `Markdown` imitando la ruta que tiene la versión en inglés.
-    >
-    > - Es posible que el archivo en la versión en español se encuentre en formato `HTML`, en cuyo caso tendrá que reemplazarlo por el formato `Markdown`.
+   > NOTA:
+   >
+   > - Si el archivo no existe, deberá crearlo en formato `Markdown` imitando la ruta que tiene la versión en inglés.
+   > - Es posible que el archivo en la versión en español se encuentre en formato `HTML`, en cuyo caso tendrá que reemplazarlo por el formato `Markdown`.
 
 3. Utilizar el texto y formato en inglés como guía para traducir al español.
 
@@ -71,16 +70,16 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 ### Formatos especiales
 
 | Inglés         | Español            |
-|----------------|--------------------|
+| -------------- | ------------------ |
 | `**Note:**`    | `**Nota:**`        |
-| `**Warning:**` | `**Advertencia:**`  |
+| `**Warning:**` | `**Advertencia:**` |
 | `**Callout:**` | `**Observación:**` |
 
 ## Formateo
 
-| Expresión | Como escribirlo |
-| --------- | --------------- |
-| 2<sup>5</sup> | 2^5         |
+| Expresión     | Como escribirlo |
+| ------------- | --------------- |
+| 2<sup>5</sup> | 2^5             |
 
 Actualmente trabajando en: <https://github.com/mdn/translated-content/issues/8635>
 
@@ -118,6 +117,7 @@ Tutorial para crear el ambiente de desarrollo para MDN
 
 Guía de markdown
 <https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN>
+
 </details>
 
 Más información [aqui](https://github.com/mdn/translated-content/discussions/4029)

@@ -1,7 +1,6 @@
 ---
 title: アクセシビリティとは？
 slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
-original_slug: Learn/Common_questions/What_is_accessibility
 ---
 
 この記事はウェブアクセシビリティの背景にある基本的な概念を紹介します。

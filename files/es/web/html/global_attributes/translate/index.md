@@ -1,7 +1,6 @@
 ---
 title: translate
 slug: Web/HTML/Global_attributes/translate
-original_slug: Web/HTML/Atributos_Globales/translate
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}

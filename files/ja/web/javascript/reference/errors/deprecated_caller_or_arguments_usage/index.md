@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: deprecated caller or arguments usage'
+title: "ReferenceError: deprecated caller or arguments usage"
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
 
@@ -31,13 +31,13 @@ strict モードでのみ、{{jsxref("ReferenceError")}} の警告が発生し�
 {{jsxref("Function.caller")}} と [`arguments.callee.caller`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee) は非推奨です (詳細は参照記事を見てください)。
 
 ```js example-bad
-'use strict';
+"use strict";
 
 function myFunc() {
   if (myFunc.caller == null) {
-    return 'The function was called from the top!';
+    return "The function was called from the top!";
   } else {
-    return 'This function\'s caller was ' + myFunc.caller;
+    return "This function's caller was " + myFunc.caller;
   }
 }
 
@@ -51,19 +51,23 @@ myFunc();
 {{jsxref("Function.arguments")}} は非推奨です (詳細は参照記事を見てください)。
 
 ```js example-bad
-'use strict';
+"use strict";
 
-function f(n) { g(n - 1); }
+function f(n) {
+  g(n - 1);
+}
 
 function g(n) {
-  console.log('before: ' + g.arguments[0]);
-  if (n > 0) { f(n); }
-  console.log('after: ' + g.arguments[0]);
+  console.log("before: " + g.arguments[0]);
+  if (n > 0) {
+    f(n);
+  }
+  console.log("after: " + g.arguments[0]);
 }
 
 f(2);
 
-console.log('returned: ' + g.arguments);
+console.log("returned: " + g.arguments);
 // Warning: ReferenceError: deprecated arguments usage
 ```
 

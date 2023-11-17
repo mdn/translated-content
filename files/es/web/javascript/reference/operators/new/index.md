@@ -1,7 +1,6 @@
 ---
 title: Operador new
 slug: Web/JavaScript/Reference/Operators/new
-original_slug: Web/JavaScript/Referencia/Operadores/new
 ---
 
 {{jsSidebar("Operators", "Operadores")}}
@@ -19,6 +18,7 @@ new constructor[([arguments])]
 ### Parámetros
 
 - `constructor`
+
   - : Una clase o función que especifica el tipo de instancia del objeto.
 
 - `arguments`
@@ -55,18 +55,18 @@ function Car() {}
 car1 = new Car();
 car2 = new Car();
 
-console.log(car1.color);    // undefined
+console.log(car1.color); // undefined
 
-Car.prototype.color = 'color original';
-console.log(car1.color);    // 'color original'
+Car.prototype.color = "color original";
+console.log(car1.color); // 'color original'
 
-car1.color = 'black';
-console.log(car1.color);    // 'black'
+car1.color = "black";
+console.log(car1.color); // 'black'
 
 console.log(Object.getPrototypeOf(car1).color); // 'color original'
 console.log(Object.getPrototypeOf(car2).color); // 'color original'
-console.log(car1.color);   // 'black'
-console.log(car2.color);   // 'color original'
+console.log(car1.color); // 'black'
+console.log(car2.color); // 'color original'
 ```
 
 > **Nota:** Si no escribiste el operador `new`, **la función `constructor` se invocará como cualquier función normal**, _sin crear un objeto._ En este caso, el valor de `this` también es diferente.
@@ -88,7 +88,7 @@ function Car(make, model, year) {
 Ahora puedes crear un objeto llamado `myCar` de la siguiente manera:
 
 ```js
-var myCar = new Car('Eagle', 'Talon TSi', 1993);
+var myCar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 Esta declaración crea `myCar` y le asigna los valores especificados para sus propiedades. Entonces el valor de `myCar.make` es la cadena "Eagle", `myCar.year` es el entero 1993, y así sucesivamente.
@@ -96,7 +96,7 @@ Esta declaración crea `myCar` y le asigna los valores especificados para sus pr
 Puedes crear cualquier número de objetos `car` mediante llamadas a `new`. Por ejemplo:
 
 ```js
-var kensCar = new Car('Nissan', '300ZX', 1992);
+var kensCar = new Car("Nissan", "300ZX", 1992);
 ```
 
 ### Propiedad del objeto que en sí mismo es otro objeto
@@ -114,8 +114,8 @@ function Person(name, age, sex) {
 Y luego creas una instancia de dos nuevos objetos `Person` de la siguiente manera:
 
 ```js
-var rand = new Person('Rand McNally', 33, 'M');
-var ken = new Person('Ken Jones', 39, 'M');
+var rand = new Person("Rand McNally", 33, "M");
+var ken = new Person("Ken Jones", 39, "M");
 ```
 
 Luego, puedes reescribir la definición de `Car` para incluir una propiedad para `owner` (propietario en español) que tome un objeto `Person`, de la siguiente manera:
@@ -132,14 +132,14 @@ function Car(make, model, year, owner) {
 Para crear instancias de los nuevos objetos, utiliza lo siguiente:
 
 ```js
-var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
-var car2 = new Car('Nissan', '300ZX', 1992, ken);
+var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+var car2 = new Car("Nissan", "300ZX", 1992, ken);
 ```
 
 En lugar de pasar una cadena literal o un valor entero al crear los nuevos objetos, las declaraciones anteriores pasan los objetos `rand` y `ken` como parámetros para los propietarios. Para conocer el nombre del propietario de `car2`, puedes acceder a la siguiente propiedad:
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 ## Especificaciones

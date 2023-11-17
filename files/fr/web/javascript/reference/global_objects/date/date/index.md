@@ -1,8 +1,6 @@
 ---
 title: Constructeur Date()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-translation-of: Web/JavaScript/Reference/Global_Objects/Date/Date
-browser-compat: javascript.builtins.Date.Date
 ---
 
 {{JSRef}}
@@ -14,16 +12,16 @@ Crée une instance d'un objet JavaScript **`Date`** qui représente un instant d
 ## Syntaxe
 
 ```js
-new Date()
-new Date(value)
-new Date(dateString)
+new Date();
+new Date(value);
+new Date(dateString);
 
-new Date(year, monthIndex)
-new Date(year, monthIndex, day)
-new Date(year, monthIndex, day, hours)
-new Date(year, monthIndex, day, hours, minutes)
-new Date(year, monthIndex, day, hours, minutes, seconds)
-new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+new Date(year, monthIndex);
+new Date(year, monthIndex, day);
+new Date(year, monthIndex, day, hours);
+new Date(year, monthIndex, day, hours, minutes);
+new Date(year, monthIndex, day, hours, minutes, seconds);
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 ```
 
 > **Note :** La seule façon correcte d'instancier un nouvel objet `Date` est d'utiliser l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Si vous invoquez ce constructeur directement (`now = Date()` par exemple), la valeur renvoyée sera une chaîne de caractères plutôt qu'un objet `Date`.
@@ -88,11 +86,11 @@ Les exemples qui suivent illustrent différentes façons de créer des dates Jav
 > **Note :** L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date` (ou `Date.parse` qui est équivalent à cet égard) est fortement déconseillée en raison des différences et incohérences entre les navigateurs.
 
 ```js
-let today = new Date()
-let birthday = new Date('December 17, 1995 13:24:00')
-let birthday = new Date('1995-12-17T13:24:00')
-let birthday = new Date(1995, 11, 17)            // les mois sont numérotés à partir de 0
-let birthday = new Date(1995, 11, 17, 13, 24, 0)
+let today = new Date();
+let birthday = new Date("December 17, 1995 13:24:00");
+let birthday = new Date("1995-12-17T13:24:00");
+let birthday = new Date(1995, 11, 17); // les mois sont numérotés à partir de 0
+let birthday = new Date(1995, 11, 17, 13, 24, 0);
 ```
 
 ## Spécifications

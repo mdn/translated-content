@@ -1,7 +1,6 @@
 ---
 title: Block-level content (ブロックレベルコンテンツ)
 slug: Glossary/Block-level_content
-original_slug: Web/HTML/Block-level_elements
 l10n:
   sourceCommit: a46d4d15ea85b4bbb83df145228bc40f658868be
 ---

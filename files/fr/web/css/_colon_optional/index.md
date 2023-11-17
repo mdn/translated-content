@@ -1,11 +1,6 @@
 ---
-title: ':optional'
+title: ":optional"
 slug: Web/CSS/:optional
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:optional
 ---
 
 {{CSSRef}}
@@ -47,11 +42,11 @@ input:required {
 ```html
 <form>
   <label for="url-input">Tapez une URL :</label>
-  <input type="url" id="url-input">
-  <br>
-  <br>
+  <input type="url" id="url-input" />
+  <br />
+  <br />
   <label for="email-input">Tapez une adresse électronique :</label>
-  <input type="email" id="email-input" required>
+  <input type="email" id="email-input" required />
 </form>
 ```
 

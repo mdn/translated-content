@@ -21,11 +21,11 @@ The following example uses the beforeinstallprompt function to verify that it is
 
 ```js
 let isTooSoon = true;
-window.addEventListener("beforeinstallprompt", function(e) {
+window.addEventListener("beforeinstallprompt", function (e) {
   if (isTooSoon) {
     e.preventDefault(); // Prevents prompt display
     // Prompt later instead:
-    setTimeout(function() {
+    setTimeout(function () {
       isTooSoon = false;
       e.prompt(); // Shows prompt
     }, 10000);

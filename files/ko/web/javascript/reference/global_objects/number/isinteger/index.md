@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ## 구문
 
 ```js
-    Number.isInteger(value)
+Number.isInteger(value);
 ```
 
 ### 매개변수
@@ -31,31 +31,35 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ## 예제
 
 ```js
-    Number.isInteger(0);         // true
-    Number.isInteger(1);         // true
-    Number.isInteger(-100000);   // true
-    Number.isInteger(99999999999999999999999); // true
+Number.isInteger(0); // true
+Number.isInteger(1); // true
+Number.isInteger(-100000); // true
+Number.isInteger(99999999999999999999999); // true
 
-    Number.isInteger(0.1);       // false
-    Number.isInteger(Math.PI);   // false
+Number.isInteger(0.1); // false
+Number.isInteger(Math.PI); // false
 
-    Number.isInteger(NaN);       // false
-    Number.isInteger(Infinity);  // false
-    Number.isInteger(-Infinity); // false
-    Number.isInteger('10');      // false
-    Number.isInteger(true);      // false
-    Number.isInteger(false);     // false
-    Number.isInteger([1]);       // false
+Number.isInteger(NaN); // false
+Number.isInteger(Infinity); // false
+Number.isInteger(-Infinity); // false
+Number.isInteger("10"); // false
+Number.isInteger(true); // false
+Number.isInteger(false); // false
+Number.isInteger([1]); // false
 ```
 
 ## 폴리필
 
 ```js
-Number.isInteger = Number.isInteger || function(value) {
-  return typeof value === "number" &&
-    isFinite(value) &&
-    Math.floor(value) === value;
-};
+Number.isInteger =
+  Number.isInteger ||
+  function (value) {
+    return (
+      typeof value === "number" &&
+      isFinite(value) &&
+      Math.floor(value) === value
+    );
+  };
 ```
 
 ## 명세

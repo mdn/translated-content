@@ -1,12 +1,6 @@
 ---
 title: FeaturePolicy.features()
 slug: Web/API/FeaturePolicy/features
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - Reference
-translation_of: Web/API/FeaturePolicy/features
 ---
 
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
@@ -16,7 +10,7 @@ La méthode **`features()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourn
 ## Syntaxe
 
 ```js
-const fonctionnalitésSupportées = FeaturePolicy.features()
+const fonctionnalitésSupportées = FeaturePolicy.features();
 ```
 
 ### Paramètres
@@ -33,14 +27,13 @@ Cet exemple affiche dans la console toutes les directives supportées par votre 
 
 ```js
 // Récupère l'objet Feature Policy
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Récupère la liste des noms de directives de Feature Policy dont les fonctionnalités sont supportées
-const fonctionnalitésSupportées = featurePolicy.features()
+const fonctionnalitésSupportées = featurePolicy.features();
 
 // Affiche chaque directive dans la console
-for (const directive of fonctionnalitésSupportées)
-  console.log(directive)
+for (const directive of fonctionnalitésSupportées) console.log(directive);
 ```
 
 ## Spécifications

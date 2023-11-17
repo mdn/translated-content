@@ -1,12 +1,8 @@
 ---
 title: document.createElement
 slug: Web/API/Document/createElement
-tags:
-  - DOM
-  - Gecko
-translation_of: Web/API/Document/createElement
-original_slug: DOM/document.createElement
 ---
+
 {{ ApiRef() }}
 
 ### Общая информация
@@ -33,26 +29,25 @@ var element = document.createElement(tagName, [options]);
 
 ```html
 <div><h1>Привет!</h1></div>
-<div id='org_div1'>Текст выше сгенерирован автоматически.</div>
+<div id="org_div1">Текст выше сгенерирован автоматически.</div>
 ```
 
 ```js
-  document.body.onload = addElement;
-var my_div = newDiv = null;
+document.body.onload = addElement;
+var my_div = (newDiv = null);
 
-  function addElement() {
+function addElement() {
+  // Создаём новый элемент div
+  // и добавляем в него немного контента
 
-    // Создаём новый элемент div
-    // и добавляем в него немного контента
+  var newDiv = document.createElement("div");
+  newDiv.innerHTML = "<h1>Привет!</h1>";
 
-    var newDiv = document.createElement("div");
-        newDiv.innerHTML = "<h1>Привет!</h1>";
+  // Добавляем только что созданный элемент в дерево DOM
 
-    // Добавляем только что созданный элемент в дерево DOM
-
-    my_div = document.getElementById("org_div1");
-    document.body.insertBefore(newDiv, my_div);
-  }
+  my_div = document.getElementById("org_div1");
+  document.body.insertBefore(newDiv, my_div);
+}
 ```
 
 ### Примечания
@@ -65,6 +60,10 @@ var my_div = newDiv = null;
 
 Для обратной совместимости с предыдущими версиями спецификации пользовательских элементов некоторые браузеры позволяют передавать здесь строку вместо объекта, где значением строки является имя тега пользовательского элемента.
 
-### Спецификации
+## Спецификации
 
-[DOM 2 Модуль: createElement](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-2141741547)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

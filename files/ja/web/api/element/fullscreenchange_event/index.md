@@ -1,8 +1,9 @@
 ---
-title: 'Element: fullscreenchange イベント'
+title: "Element: fullscreenchange イベント"
+short-title: fullscreenchange
 slug: Web/API/Element/fullscreenchange_event
 l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
@@ -20,9 +21,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('fullscreenchange', (event) => { });
+addEventListener("fullscreenchange", (event) => {});
 
-onfullscreenchange = (event) => { };
+onfullscreenchange = (event) => {};
 ```
 
 ## イベント型
@@ -51,32 +52,36 @@ onfullscreenchange = (event) => { };
 ### JavaScript
 
 ```js
-function fullscreenchanged (event) {
+function fullscreenchanged(event) {
   // document.fullscreenElement は、全画面モードにある要素があれば
   // それを指します。要素がなければ、このプロパティの値は null に
   // あります。
   if (document.fullscreenElement) {
-    console.log(`Element: ${document.fullscreenElement.id} entered fullscreen mode.`);
+    console.log(
+      `Element: ${document.fullscreenElement.id} entered fullscreen mode.`,
+    );
   } else {
-    console.log('Leaving fullscreen mode.');
+    console.log("Leaving fullscreen mode.");
   }
-};
+}
 
-const el = document.getElementById('fullscreen-div');
+const el = document.getElementById("fullscreen-div");
 
-el.addEventListener('fullscreenchange', fullscreenchanged);
+el.addEventListener("fullscreenchange", fullscreenchanged);
 // or
 el.onfullscreenchange = fullscreenchanged;
 
 // トグルボタンがクリックされたら、全画面モードを切り替える
-document.getElementById('toggle-fullscreen').addEventListener('click', (event) => {
-  if (document.fullscreenElement) {
-    // exitFullscreen は Document オブジェクトでのみ使用可
-    document.exitFullscreen();
-  } else {
-    el.requestFullscreen();
-  }
-});
+document
+  .getElementById("toggle-fullscreen")
+  .addEventListener("click", (event) => {
+    if (document.fullscreenElement) {
+      // exitFullscreen は Document オブジェクトでのみ使用可
+      document.exitFullscreen();
+    } else {
+      el.requestFullscreen();
+    }
+  });
 ```
 
 ## 仕様書

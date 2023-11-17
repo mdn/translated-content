@@ -1,8 +1,6 @@
 ---
 title: HTMLElement.offsetParent
 slug: Web/API/HTMLElement/offsetParent
-translation_of: Web/API/HTMLElement/offsetParent
-browser-compat: api.HTMLElement.offsetParent
 ---
 
 {{APIRef("HTML DOM")}}

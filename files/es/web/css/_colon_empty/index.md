@@ -1,5 +1,5 @@
 ---
-title: ':empty'
+title: ":empty"
 slug: Web/CSS/:empty
 ---
 
@@ -28,7 +28,7 @@ div:empty {
 <div class="box"><!-- Voy a ser de color lima. --></div>
 <div class="box">Voy a ser de color rosa.</div>
 <div class="box">
-    <!-- Seré de color rosa debido a los espacios en blanco alrededor de este comentario. -->
+  <!-- Seré de color rosa debido a los espacios en blanco alrededor de este comentario. -->
 </div>
 ```
 

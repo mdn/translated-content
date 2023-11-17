@@ -1,11 +1,6 @@
 ---
 title: API de Vibration
 slug: Web/API/Vibration_API
-tags:
-  - Débutant
-  - Firefox OS
-  - Vibration
-translation_of: Web/API/Vibration_API
 ---
 
 ## Description des vibrations
@@ -48,21 +43,21 @@ var vibrateInterval;
 
 // Démarre une vibration avec une durée
 function startVibrate(duration) {
-    navigator.vibrate(duration);
+  navigator.vibrate(duration);
 }
 
 // Arrête la vibration
 function stopVibrate() {
-    // Vide l'intervalle et annule les vibrations persistantes
-    if(vibrateInterval) clearInterval(vibrateInterval);
-    navigator.vibrate(0);
+  // Vide l'intervalle et annule les vibrations persistantes
+  if (vibrateInterval) clearInterval(vibrateInterval);
+  navigator.vibrate(0);
 }
 
 // Démarre la vibration persistante avec un intervalle et une durée donnée
 function startPeristentVibrate(duration, interval) {
-    vibrateInterval = setInterval(function() {
-        startVibrate(duration);
-    }, interval);
+  vibrateInterval = setInterval(function () {
+    startVibrate(duration);
+  }, interval);
 }
 ```
 

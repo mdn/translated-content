@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/itemscope
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemscope`** 전역 특성은 연관된 메타데이터의 범위를 지정하는 불리언 특성입니다. 요소에 `itemscope` 특성을 지정하면 새로운 아이템을 생성하고, 그 결과로 요소에 관련된 키-값 쌍 다수를 낳습니다. 관련 특성인 {{htmlattrxref("itemtype")}}은 어휘([schema.org](https://schema.org/) 등)의 유효한 {{glossary("URL")}}을 지정할 때 사용합니다. 아래 각각의 예제는 [schema.org](https://schema.org/)의 어휘를 사용합니다.
+**`itemscope`** 전역 특성은 연관된 메타데이터의 범위를 지정하는 불리언 특성입니다. 요소에 `itemscope` 특성을 지정하면 새로운 아이템을 생성하고, 그 결과로 요소에 관련된 키-값 쌍 다수를 낳습니다. 관련 특성인 [`itemtype`](/ko/docs/Web/HTML/Global_attributes#itemtype)은 어휘([schema.org](https://schema.org/) 등)의 유효한 {{glossary("URL")}}을 지정할 때 사용합니다. 아래 각각의 예제는 [schema.org](https://schema.org/)의 어휘를 사용합니다.
 
 모든 HTML 요소는 `itemscope` 특성을 가질 수 있습니다. `itemscope`를 가졌으나 연결된 `itemtype`이 없는 경우 반드시 연관된 `itemref`를 가져야 합니다.
 
@@ -67,7 +67,7 @@ slug: Web/HTML/Global_attributes/itemscope
 
 ### `itemscope` id 특성
 
-요소에 `itemscope` 특성을 지정하면 새로운 아이템이 생성됩니다. 아이템은 이름-값 쌍 그룹으로 이루어집니다. `itemscope`와 `itemtype` 특성을 가진 요소의 경우, {{htmlattrxref("id")}} 특성도 지정할 수 있습니다. `id`를 사용하면 새로운 아이템에 대한 전역 식별자를 설정할 수 있으며, 전역 식별자를 사용하면 웹에서 찾을 수 있는 다른 아이템과 연결할 수 있습니다.
+요소에 `itemscope` 특성을 지정하면 새로운 아이템이 생성됩니다. 아이템은 이름-값 쌍 그룹으로 이루어집니다. `itemscope`와 `itemtype` 특성을 가진 요소의 경우, [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성도 지정할 수 있습니다. `id`를 사용하면 새로운 아이템에 대한 전역 식별자를 설정할 수 있으며, 전역 식별자를 사용하면 웹에서 찾을 수 있는 다른 아이템과 연결할 수 있습니다.
 
 ### 예제
 
@@ -76,40 +76,57 @@ slug: Web/HTML/Global_attributes/itemscope
 ```html
 <div itemscope itemtype="http://schema.org/Recipe">
   <h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
-  <img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" />
+  <img
+    itemprop="image"
+    src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg"
+    width="50"
+    height="50" />
   <p>
-    By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+    By
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
       <span itemprop="name">Carol Smith</span>
     </span>
   </p>
   <p>
-    Published: <time datetime="2009-11-05" itemprop="datePublished">November 5, 2009</time>
+    Published:
+    <time datetime="2009-11-05" itemprop="datePublished">November 5, 2009</time>
   </p>
-  <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</span>
-  <br>
-  <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews
+  <span itemprop="description"
+    >This is my grandmother's apple pie recipe. I like to add a dash of
+    nutmeg.</span
+  >
+  <br />
+  <span
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="http://schema.org/AggregateRating">
+    <span itemprop="ratingValue">4.0</span> stars based on
+    <span itemprop="reviewCount">35</span> reviews
   </span>
-  <br>
-  Prep time: <time datetime="PT30M" itemprop="prepTime">30 min</time><br>
-  Cook time: <time datetime="PT1H" itemprop="cookTime">1 hou</time>r<br>
-  Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time><br>
-  Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span><br>
-  <span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
-    Serving size: <span itemprop="servingSize">1 medium slice</span><br>
-    Calories per serving: <span itemprop="calories">250 cal</span><br>
-    Fat per serving: <span itemprop="fatContent">12 g</span><br>
+  <br />
+  Prep time: <time datetime="PT30M" itemprop="prepTime">30 min</time><br />
+  Cook time: <time datetime="PT1H" itemprop="cookTime">1 hou</time>r<br />
+  Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time
+  ><br />
+  Yield: <span itemprop="recipeYield">1 9" pie (8 servings)</span><br />
+  <span
+    itemprop="nutrition"
+    itemscope
+    itemtype="http://schema.org/NutritionInformation">
+    Serving size: <span itemprop="servingSize">1 medium slice</span><br />
+    Calories per serving: <span itemprop="calories">250 cal</span><br />
+    Fat per serving: <span itemprop="fatContent">12 g</span><br />
   </span>
   <p>
-    Ingredients:<br>
-    <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
-    <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
+    Ingredients:<br />
+    <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br /></span>
+    <span itemprop="recipeIngredient">White sugar: 3/4 cup<br /></span>
     ...
   </p>
-  Directions: <br>
+  Directions: <br />
   <div itemprop="recipeInstructions">
-    1. Cut and peel apples<br>
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
+    1. Cut and peel apples<br />
+    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br />
     ...
   </div>
 </div>
@@ -255,7 +272,7 @@ slug: Web/HTML/Global_attributes/itemscope
 - 다른 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
 - 마이크로데이터 관련 다른 전역 특성
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/ko/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemtype`](/ko/docs/Web/HTML/Global_attributes#itemtype)

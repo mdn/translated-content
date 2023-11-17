@@ -33,7 +33,7 @@ reading the remote resource at https://some-url-here. (Reason:
 additional information here).
 ```
 
-> **참고:** **Note:**보안상의 이유로, CORS 요청에서 정확히 무엇을 위반했는지에 대한 사항은 _자바스크립트 코드상에서 사용할 수 없습니다._ 코드상에서 알 수 있는 것은 에러가 발생했다는 것 뿐입니다.
+> **참고:** **Note:**보안상의 이유로, CORS 요청에서 정확히 무엇을 위반했는지에 대한 사항은 _JavaScript 코드상에서 사용할 수 없습니다._ 코드상에서 알 수 있는 것은 에러가 발생했다는 것 뿐입니다.
 > 정확히 무엇이 잘못됐는지 파악하려면 브라우저 콘솔을 살피는 수밖에 없습니다.
 
 ## CORS 에러 메시지
@@ -43,31 +43,31 @@ Firefox 콘솔은 CORS에 의해 요청이 실패했을 때 메시지를 출력�
 
 - [Reason: CORS disabled](/ko/docs/Web/HTTP/CORS/Errors/CORSDisabled)
 - [Reason: CORS request did not succeed](/ko/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed)
-- [Reason: CORS header ‘Origin’ cannot be
+- [Reason: CORS header 'Origin' cannot be
   added](/ko/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
 - [Reason: CORS request external redirect
   not allowed](/ko/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed)
 - [Reason: CORS request not http](/ko/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)
 - [Reason: CORS header
-  ‘Access-Control-Allow-Origin’ missing](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
+  'Access-Control-Allow-Origin' missing](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
 - [Reason: CORS header
-  ‘Access-Control-Allow-Origin’ does not match ‘xyz’](/ko/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
+  'Access-Control-Allow-Origin' does not match 'xyz'](/ko/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
 - [Reason: Credential is not supported if the
-  CORS header ‘Access-Control-Allow-Origin’ is ‘\*’](/ko/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
+  CORS header 'Access-Control-Allow-Origin' is '\*'](/ko/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
 - [Reason: Did not find method in CORS header
-  ‘Access-Control-Allow-Methods’](/ko/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
-- [Reason: expected ‘true’ in CORS header
-  ‘Access-Control-Allow-Credentials’](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
+  'Access-Control-Allow-Methods'](/ko/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
+- [Reason: expected 'true' in CORS header
+  'Access-Control-Allow-Credentials'](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
 - [Reason: CORS preflight channel did not
   succeed](/ko/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed)
-- [Reason: invalid token ‘xyz’ in CORS header
-  ‘Access-Control-Allow-Methods’](/ko/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
-- [Reason: invalid token ‘xyz’ in CORS header
-  ‘Access-Control-Allow-Headers’](/ko/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
-- [Reason: missing token ‘xyz’ in CORS
-  header ‘Access-Control-Allow-Headers’ from CORS preflight channel](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
+- [Reason: invalid token 'xyz' in CORS header
+  'Access-Control-Allow-Methods'](/ko/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
+- [Reason: invalid token 'xyz' in CORS header
+  'Access-Control-Allow-Headers'](/ko/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
+- [Reason: missing token 'xyz' in CORS
+  header 'Access-Control-Allow-Headers' from CORS preflight channel](/ko/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
 - [Reason: Multiple CORS header
-  ‘Access-Control-Allow-Origin’ not allowed](/ko/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
+  'Access-Control-Allow-Origin' not allowed](/ko/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
 
 ## 더보기
 

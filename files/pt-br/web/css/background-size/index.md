@@ -34,7 +34,7 @@ background-size: auto 6px;
 background-size: auto auto;
 
 /* Vários planos de fundo */
-background-size: auto, auto;/* Não confunda com `auto auto` */
+background-size: auto, auto; /* Não confunda com `auto auto` */
 background-size: 50%, 25%, 25%;
 background-size: 6px, auto, contain;
 
@@ -51,7 +51,7 @@ A propriedade `background-size` é especificada de uma das seguintes maneiras:
 - Usando a palavra-chave `contain` ou `cover`.
 - Usando somente o valor da largura, caso em que o padrão de altura é `auto`.
 - Usando ambos os valores da largura e altura, nesse caso o primeiro define a largura e o segundo define a altura.
-Cada valor pode ser {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou `auto`.
+  Cada valor pode ser {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou `auto`.
 
 Para especificar o tamanho de várias imagens de fundo, separe o valor de cada uma com uma vírgula.
 
@@ -69,7 +69,7 @@ Para especificar o tamanho de várias imagens de fundo, separe o valor de cada u
   - : Estende a imagem na dimensão correspondente ao comprimento especificado. Valores negativos não são permitidos.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Estende a imagem na dimensão correspondente à porcentagem especificada da _área de posicionamento do plano de fundo_.
-  A área de posicionamento do plano de fundo é determinada pelo valor de {{cssxref("background-origin")}} (por padrão, o padding box).
+    A área de posicionamento do plano de fundo é determinada pelo valor de {{cssxref("background-origin")}} (por padrão, o padding box).
     No entanto, se o valor {{cssxref("background-attachment")}} do plano de fundo for `fixed`, a área de posicionamento será o {{glossary("viewport")}} inteiro.
     Valores negativos não são permitidos.
 
@@ -165,5 +165,5 @@ Veja [Redimensionando as imagens de fundo](/pt-BR/docs/Web/CSS/CSS_Backgrounds_a
 ## Veja também
 
 - [Redimensionando as imagens de fundo](/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
-- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [Scaling of SVG backgrounds](/pt-BR/docs/Web/CSS/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

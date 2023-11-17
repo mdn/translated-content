@@ -1,9 +1,6 @@
 ---
 title: WebAssembly.Exception.prototype.is()
 slug: WebAssembly/JavaScript_interface/Exception/is
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is
-browser-compat: javascript.builtins.WebAssembly.Exception.is
 ---
 
 {{WebAssemblySidebar}}
@@ -17,7 +14,7 @@ La méthode peut être utilisée afin de tester si une balise est correcte avant
 ## Syntaxe
 
 ```js
-is(tag)
+is(tag);
 ```
 
 ### Paramètres
@@ -39,7 +36,7 @@ const tag1 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
 const exception1 = new WebAssembly.Exception(tag1, [42, 42.3]);
 
 // On vérifie que "tag1" correspond pour cette exception
-console.log(`Tag1 : ${ exception1.is(tag1) }`);
+console.log(`Tag1 : ${exception1.is(tag1)}`);
 
 // Affichage dans la console :
 // Tag1 : true
@@ -51,7 +48,7 @@ On peut aussi montrer que l'exception ne correspondra pas à une autre balise, m
 // On crée une nouvelle balise avec les mêmes paramètres
 // et on vérifie qu'elle ne correspond pas
 const tag2 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
-console.log(`Tag2 : ${ exception1.is(tag2) }`);
+console.log(`Tag2 : ${exception1.is(tag2)}`);
 
 // Affichage dans la console :
 // Tag2 : false

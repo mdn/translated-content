@@ -1,7 +1,6 @@
 ---
 title: Closures
 slug: Web/JavaScript/Closures
-original_slug: Web/JavaScript/Guide/Closures
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -55,7 +54,7 @@ Aqui temos um exemplo um pouco mais interessante, a função `makeAdder`:
 
 ```js
 function makeAdder(x) {
-  return function(y) {
+  return function (y) {
     return x + y;
   };
 }
@@ -63,7 +62,7 @@ function makeAdder(x) {
 var add5 = makeAdder(5);
 var add10 = makeAdder(10);
 
-print(add5(2));  // 7
+print(add5(2)); // 7
 print(add10(2)); // 12
 ```
 
@@ -103,8 +102,8 @@ O código JavaScript:
 
 ```js
 function makeSizer(size) {
-  return function() {
-    document.body.style.fontSize = size + 'px';
+  return function () {
+    document.body.style.fontSize = size + "px";
   };
 }
 
@@ -116,9 +115,9 @@ var size16 = makeSizer(16);
 `size12`, `size14` e `size16` agora são funções que devem redimensionar o texto do elemento body para 12, 14 e 16 pixels respectivamente. Nós podemos designá-las a botões (neste caso, links) como feito a seguir:
 
 ```js
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
@@ -138,22 +137,22 @@ O JavaScript não oferece uma maneira nativa de fazer isso, mas é possível emu
 Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como [module pattern](http://www.google.com/search?q=javascript+module+pattern):
 
 ```js
-var Counter = (function() {
+var Counter = (function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 })();
 
 alert(Counter.value()); /* Alerts 0 */
@@ -173,22 +172,22 @@ Aquelas três funções públicas são closures que compartilham o mesmo ambient
 > **Nota:** Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável `Counter`. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.
 
 ```js
-var makeCounter = function() {
+var makeCounter = function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 };
 
 var Counter1 = makeCounter();
@@ -212,29 +211,29 @@ Antes da introdução da palavra chave [`let`](/pt-BR/docs/JavaScript/Reference/
 
 ```html
 <p id="help">Notas úteis aparecerão aqui</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Nome: <input type="text" id="name" name="name"></p>
-<p>Idade: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Nome: <input type="text" id="name" name="name" /></p>
+<p>Idade: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
     // O culpado é o uso do `var` nesta linha
     var item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
-    }
+    };
   }
 }
 
@@ -253,20 +252,20 @@ Uma solução seria neste caso usar mais closures: em particular, usar uma fábr
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function makeHelpCallback(help) {
-  return function() {
+  return function () {
     showHelp(help);
   };
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -286,14 +285,14 @@ Uma outra maneira de escrever o mesmo usando closures anônimas é:
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -313,14 +312,14 @@ Se você não quiser usar mais closures, você pode usar a palavra-chave [`let`]
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   for (let i = 0; i < helpText.length; i++) {
@@ -340,14 +339,14 @@ Outra alternativa poderia ser usar `forEach()` para iterar sobre o array `helpTe
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    {'id': 'email', 'help': 'Seu e-mail'},
-    {'id': 'name', 'help': 'Seu nome completo'},
-    {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
+    { id: "email", help: "Seu e-mail" },
+    { id: "name", help: "Seu nome completo" },
+    { id: "age", help: "Sua idade (você deve ter mais de 16 anos)" },
   ];
 
   helpText.forEach(function (text) {
@@ -372,11 +371,11 @@ Considere o seguinte exemplo pouco prático porém demonstrativo:
 function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
-  this.getName = function() {
+  this.getName = function () {
     return this.name;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }
@@ -390,12 +389,12 @@ function MyObject(name, message) {
   this.message = message.toString();
 }
 MyObject.prototype = {
-  getName: function() {
+  getName: function () {
     return this.name;
   },
-  getMessage: function() {
+  getMessage: function () {
     return this.message;
-  }
+  },
 };
 ```
 
@@ -406,10 +405,10 @@ function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
-MyObject.prototype.getName = function() {
+MyObject.prototype.getName = function () {
   return this.name;
 };
-MyObject.prototype.getMessage = function() {
+MyObject.prototype.getMessage = function () {
   return this.message;
 };
 ```

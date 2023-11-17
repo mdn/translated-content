@@ -1,8 +1,6 @@
 ---
-title: '@media'
+title: "@media"
 slug: Web/CSS/@media
-translation_of: Web/CSS/@media
-browser-compat: css.at-rules.media
 ---
 
 {{CSSRef}}
@@ -13,7 +11,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) **`@media`** permet d'appliquer une part
 
 ## Syntaxe
 
-Une requête média (type `<media-query>`) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre [règle conditionnelle](/fr/docs/Web/CSS/At-rule#les_r%c3%a8gles_de_groupe_conditionnelles).
+Une requête média (type `<media-query>`) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre [règle conditionnelle](/fr/docs/Web/CSS/At-rule#les_règles_de_groupe_conditionnelles).
 
 ```css
 /* Au niveau le plus haut du code */
@@ -122,9 +120,11 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 - `and`
   - : Cet opérateur permet de combiner plusieurs tests de caractéristiques afin que le résultat du test vaille `true` si chacun des tests individuels vaut `true`. Il permet également de joindre des tests de caractéristiques média et des tests de type de média.
 - `not`
+
   - : Cet opérateur donne la négation d'une requête média, renvoyant `true` si la requête devait renvoyer `false`. Si cet opérateur est présent dans une liste de requêtes séparées par des virgules, la négation portera uniquement sur la requête sur laquelle l'opérateur est appliqué. Si l'opérateur `not` est utilisé, il _est nécessaire_ d'indiquer un type de média.
 
     > **Note :** Dans la spécification de niveau 3, le mot-clé `not` permet uniquement de prendre la négation d'une requête média entière (et pas d'une caractéristique seule).
+
 - `only`
   - : Applique la mise en forme uniquement si toute la requête correspond. Ce mot-clé est utile pour empêcher les anciens navigateurs d'appliquer les styles en question. Sans utiliser `only`, les anciens navigateurs interpréteraient la requête `screen and (max-width: 500px)` comme `screen`, en ignorant le reste et en appliquant donc le style à tous les écrans. Si l'opérateur `only` est utilisé, il _est nécessaire_ d'indiquer un type de média.
 - `,` (virgule)
@@ -152,20 +152,25 @@ Pour ces raisons, un navigateur peut choisir de mentir sur les valeurs renvoyée
 
 ```css
 @media print {
-  body { font-size: 10pt }
+  body {
+    font-size: 10pt;
+  }
 }
 @media screen {
-  body { font-size: 13px }
+  body {
+    font-size: 13px;
+  }
 }
 @media screen, print {
-  body { line-height: 1.2 }
+  body {
+    line-height: 1.2;
+  }
 }
 
-@media only screen
-  and (min-width: 320px)
-  and (max-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    body { line-height: 1.4 }
+@media only screen and (min-width: 320px) and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    line-height: 1.4;
+  }
 }
 ```
 
@@ -173,11 +178,15 @@ Avec la mise à jour de la spécification pour les requêtes média, une nouvell
 
 ```css
 @media (height > 600px) {
-  body { line-height: 1.4; }
+  body {
+    line-height: 1.4;
+  }
 }
 
 @media (400px <= width <= 700px) {
-  body { line-height: 1.4; }
+  body {
+    line-height: 1.4;
+  }
 }
 ```
 

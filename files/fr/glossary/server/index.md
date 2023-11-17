@@ -1,15 +1,9 @@
 ---
 title: Serveur
 slug: Glossary/Server
-tags:
-  - Glossaire
-  - Infrastructure
-  - Réseau
-  - Serveur
-  - protocole
-translation_of: Glossary/Server
-original_slug: Glossaire/Serveur
 ---
+
+{{GlossarySidebar}}
 
 Un serveur matériel est un ordinateur partagé sur un réseau qui fournit des services à des clients. Un serveur logiciel est un programme qui fournit des services à des programmes clients.
 

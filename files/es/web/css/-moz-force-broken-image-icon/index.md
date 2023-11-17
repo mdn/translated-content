@@ -1,5 +1,5 @@
 ---
-title: '-moz-force-broken-image-icon'
+title: "-moz-force-broken-image-icon"
 slug: Web/CSS/-moz-force-broken-image-icon
 ---
 
@@ -28,13 +28,13 @@ slug: Web/CSS/-moz-force-broken-image-icon
 ```css
 img {
   -moz-force-broken-image-icon: 1;
-  height:100px;
-  width:100px;
+  height: 100px;
+  width: 100px;
 }
 ```
 
 ```html
-<img src='/enlace/roto/imagen.png' alt='Imagen con enlace roto'>
+<img src="/enlace/roto/imagen.png" alt="Imagen con enlace roto" />
 ```
 
 {{ EmbedLiveSample('Examples','125','125','/files/4619/broken%20image%20link.png') }}

@@ -1,7 +1,6 @@
 ---
 title: Arrastar e soltar arquivos
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
-original_slug: DragDrop/Drag_and_Drop/Arrastar_e_soltar_arquivos
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -25,7 +24,10 @@ O elemento de destino do evento {{event("drop")}} precisa de um event handler gl
 Normalmente, um aplicativo inclui um event handler {{event("dragover")}} no elemento de destino do drop e esse manipulador desativará o comportamento de arraste padrão do navegador. Para adicionar esse handler, você precisa incluir um event handler global {{domxref("GlobalEventHandlers.ondragover","ondragover")}}:
 
 ```html
-<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+<div
+  id="drop_zone"
+  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
   <p>Drag one or more files to this Drop Zone ...</p>
 </div>
 ```
@@ -35,7 +37,7 @@ Por fim, um aplicativo pode querer estilizar o elemento da drop zone para indica
 ```css
 #drop_zone {
   border: 5px solid blue;
-  width:  200px;
+  width: 200px;
   height: 100px;
 }
 ```
@@ -52,7 +54,7 @@ Observe que neste exemplo, Qualquer item de arrasto que não seja um arquivo é 
 
 ```js
 function dropHandler(ev) {
-  console.log('File(s) dropped');
+  console.log("File(s) dropped");
 
   // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
   ev.preventDefault();
@@ -61,15 +63,17 @@ function dropHandler(ev) {
     // Use a interface DataTransferItemList para acessar o (s) arquivo (s)
     for (var i = 0; i < ev.dataTransfer.items.length; i++) {
       // Se os itens soltos não forem arquivos, rejeite-os
-      if (ev.dataTransfer.items[i].kind === 'file') {
+      if (ev.dataTransfer.items[i].kind === "file") {
         var file = ev.dataTransfer.items[i].getAsFile();
-        console.log('... file[' + i + '].name = ' + file.name);
+        console.log("... file[" + i + "].name = " + file.name);
       }
     }
   } else {
     // Use a interface DataTransfer para acessar o (s) arquivo (s)
     for (var i = 0; i < ev.dataTransfer.files.length; i++) {
-      console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
+      console.log(
+        "... file[" + i + "].name = " + ev.dataTransfer.files[i].name,
+      );
     }
   }
 }
@@ -81,7 +85,7 @@ O seguinte event handler {{event("dragover")}} chama {{domxref("Event.preventDef
 
 ```js
 function dragOverHandler(ev) {
-  console.log('File(s) in drop zone');
+  console.log("File(s) in drop zone");
 
   // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
   ev.preventDefault();

@@ -1,15 +1,6 @@
 ---
-title: 'Руководство часть 9: Работа с формами'
+title: "Руководство часть 9: Работа с формами"
 slug: Learn/Server-side/Django/Forms
-tags:
-  - HTML
-  - django
-  - Для начинающих
-  - Руководство
-  - Серверная сторона
-  - Формы
-  - Формы Django
-translation_of: Learn/Server-side/Django/Forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
@@ -42,9 +33,13 @@ translation_of: Learn/Server-side/Django/Forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -74,17 +69,17 @@ translation_of: Learn/Server-side/Django/Forms
 
 1. Показ формы по умолчанию при первом запросе со стороны пользователя.
 
-    - Форма может содержать пустые поля (например, если вы создаёте новую запись в базе данных), или они (поля) могут иметь начальные значения (например, если вы изменяете запись, или хотите заполнить её каким-либо начальным значением).
-    - Форма в данный момент является _несвязанной_, потому что она не ассоциируется с какими-либо введёнными пользователем данными (хотя и может иметь начальные значения).
+   - Форма может содержать пустые поля (например, если вы создаёте новую запись в базе данных), или они (поля) могут иметь начальные значения (например, если вы изменяете запись, или хотите заполнить её каким-либо начальным значением).
+   - Форма в данный момент является _несвязанной_, потому что она не ассоциируется с какими-либо введёнными пользователем данными (хотя и может иметь начальные значения).
 
 2. Получение данных из формы (из HTML-формы) со стороны клиента и связывание их с формой (классом формы) на стороне сервера.
 
-    - Связывание данных с формой означает, что данные, введённые пользователем, а также возможные ошибки, при переотрисовке в дальнейшем, будут относиться именно к данной форме, а не к какой-либо ещё.
+   - Связывание данных с формой означает, что данные, введённые пользователем, а также возможные ошибки, при переотрисовке в дальнейшем, будут относиться именно к данной форме, а не к какой-либо ещё.
 
 3. Очистка и валидация данных.
 
-    - Очистка данных - это их проверка на наличие возможных значений, или вставок в поля ввода (то есть очистка - это удаление неправильных символов, которые потенциально могут использоваться для отправки вредоносного содержимого на сервер), с последующей конвертацией очищенных данных в подходящие типы данных Python.
-    - Валидация проверяет, значения полей (например, правильность введённых дат, их диапазон и так далее)
+   - Очистка данных - это их проверка на наличие возможных значений, или вставок в поля ввода (то есть очистка - это удаление неправильных символов, которые потенциально могут использоваться для отправки вредоносного содержимого на сервер), с последующей конвертацией очищенных данных в подходящие типы данных Python.
+   - Валидация проверяет, значения полей (например, правильность введённых дат, их диапазон и так далее)
 
 4. Если какие-либо данные являются неверными, то выполнение перерисовки формы, но на этот раз, с уже введёнными пользователем данными и сообщениями об ошибках, описывающих возникшие проблемы.
 5. Если все данные верны, то исполнение необходимых действий (например, сохранение данных, отправка писем, возврат результата поиска, загрузка файла и так далее)
@@ -126,7 +121,7 @@ class RenewBookForm(forms.Form):
 Общие аргументы для большинства полей перечислены ниже:
 
 - [required](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#required): Если `True`, то данное поле не может быть пустым, или иметь значение `None`. Данное значение установлено по умолчанию.
-- [label](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label): Текстовая метка, используемая для рендеринга поля в HTML-код. Если [label](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label) не определена, то Django попытается создать её значение при помощи имени поля, переводя первый символ в верхний регистр, а также заменяя символы подчёркивания пробелами (например, для переменной с именем renewal_date, будет создан следующий текст метки: _Renewal date_).
+- [label](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label): Текстовая метка, используемая для рендеринга поля в HTML-код. Если [label](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label) не определена, то Django попытается создать её значение при помощи имени поля, переводя первый символ в верхний регистр, а также заменяя символы подчёркивания пробелами (например, для переменной с именем renewal*date, будет создан следующий текст метки: \_Renewal date*).
 - [label_suffix](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label-suffix): По умолчанию показывает двоеточие после текста метки (например, Renewal date**:**). Данный параметр позволяет вам указать любой суффикс по вашему желанию.
 - [initial](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#initial): Начальное значение для поля при показе формы.
 - [widget](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#widget): Применяемый виджет для поля.
@@ -366,9 +361,16 @@ def renew_book_librarian(request, pk):
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required />
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
   </td>
 </tr>
 ```
@@ -380,14 +382,21 @@ def renew_book_librarian(request, pk):
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-   <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required />
-      <br />
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
+  </td>
 </tr>
 ```
 
@@ -409,8 +418,10 @@ def renew_book_librarian(request, pk):
 
 Если вы выполнили задание в [Django руководство часть 8: Аутентификация и разрешение доступа](/ru/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself), то у вас должна быть страница со списком всех книг в наличии библиотеки и данный список (страница) должен быть доступен только её сотрудникам. На данной странице в каждом пункте (для каждой книги) мы можем добавить ссылку на нашу новую страницу обновления книги.
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```django
+{% if perms.catalog.can_mark_returned %}-
+  <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>
+{% endif %}
 ```
 
 > **Примечание:** Помните что, для того чтобы перейти на страницу обновления книги, ваш тестовый логин должен иметь разрешение доступа типа "`catalog.can_mark_returned`"(возможно надо воспользоваться вашим аккаунтом для суперпользователя).
@@ -524,7 +535,7 @@ class AuthorDelete(DeleteView):
 
 Как вы видите, для создания отображений вам надо наследоваться от следующих классов `CreateView`, `UpdateView` и `DeleteView` (соответственно), а затем связать их с соответствующей моделью.
 
-Для случаев "создать" и "обновить" вам также понадобится определить поля для показа на форме (применяя тот же синтаксис, что и для `ModelForm`). В этом случае мы демонстрируем синтаксис и для показа "всех" полей, и перечисление их по отдельности. Также вы можете указать начальные значения для каждого поля, применяя словарь пар _имя_поля_/_значение_ (в целях демонстрации, в нашем примере мы явно указываем дату смерти — если хотите, то вы можете удалить это поле). По умолчанию отображения перенаправляют пользователя на страницу "успеха", показывая только что созданные/отредактированные данные (записи в модели). В нашем случае это, созданная в предыдущей части руководства, подробная информация об авторе. Вы можете указать альтернативное перенаправление при помощи параметра `success_url` (как в примере с классом `AuthorDelete`).
+Для случаев "создать" и "обновить" вам также понадобится определить поля для показа на форме (применяя тот же синтаксис, что и для `ModelForm`). В этом случае мы демонстрируем синтаксис и для показа "всех" полей, и перечисление их по отдельности. Также вы можете указать начальные значения для каждого поля, применяя словарь пар _имя\_поля_/_значение_ (в целях демонстрации, в нашем примере мы явно указываем дату смерти — если хотите, то вы можете удалить это поле). По умолчанию отображения перенаправляют пользователя на страницу "успеха", показывая только что созданные/отредактированные данные (записи в модели). В нашем случае это, созданная в предыдущей части руководства, подробная информация об авторе. Вы можете указать альтернативное перенаправление при помощи параметра `success_url` (как в примере с классом `AuthorDelete`).
 
 Классу `AuthorDelete` не нужно показывать каких либо полей, таким образом их не нужно и декларировать. Тем не менее, вам нужно указать `success_url`, потому что, в данном случае, для Django не очевидно что делать после успешного выполнения операции удаления записи. Мы используем функцию [`reverse_lazy()`](https://docs.djangoproject.com/en/1.10/ref/urlresolvers/#reverse-lazy) для перехода на страницу списка авторов после удаления одного из них — `reverse_lazy()` это более "ленивая" версия `reverse().`
 
@@ -534,19 +545,17 @@ class AuthorDelete(DeleteView):
 
 Создайте файл шаблона **locallibrary/catalog/templates/catalog/author_form.html** и скопируйте в него следующий текст.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-<form action="" method="post">
-    {% csrf_token %}
-    <table>
-    \{{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit" />
-
-</form>
+  <form action="" method="post">
+      {% csrf_token %}
+      <table>
+      \{{ form.as_table }}
+      </table>
+      <input type="submit" value="Submit" />
+  </form>
 {% endblock %}
 ```
 
@@ -554,20 +563,18 @@ class AuthorDelete(DeleteView):
 
 Отображения "удалить" ожидает "найти" шаблон с именем формата _model_name_**\_confirm_delete.html** (и снова, вы можете изменить суффикс при помощи поля отображения `template_name_suffix`). Создайте файл шаблона **locallibrary/catalog/templates/catalog/author_confirm_delete**.html и скопируйте в него текст, указанный ниже.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
+  <h1>Delete Author</h1>
 
-<h1>Delete Author</h1>
+  <p>Are you sure you want to delete the author: \{{ author }}?</p>
 
-<p>Are you sure you want to delete the author: \{{ author }}?</p>
-
-<form action="" method="POST">
-  {% csrf_token %}
-  <input type="submit" value="Yes, delete." />
-</form>
-
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes, delete." />
+  </form>
 {% endblock %}
 ```
 

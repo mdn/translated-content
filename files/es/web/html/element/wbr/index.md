@@ -1,7 +1,6 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-original_slug: Web/HTML/Elemento/wbr
 ---
 
 {{HTMLSidebar}}
@@ -14,11 +13,11 @@ Este elemento fue implementado por primera vez en Internet Explorer 5.5 y fue of
 
 ## Contexto de uso
 
-| Contenido permitido        | Vacío                                                                                                                      |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido        | Vacío                                                                                                           |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Omisión de etiquetas       | Es un {{Glossary("empty element")}}; debe de tener una etiqueta de inicio pero no debe de tener una de cierre . |
-| Elementos padre permitidos | Cualquier elemento que permita contenido estático de texto.                                                                |
-| Documento normativo        | [HTML 5, section 4.6.24](http://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element)                           |
+| Elementos padre permitidos | Cualquier elemento que permita contenido estático de texto.                                                     |
+| Documento normativo        | [HTML 5, section 4.6.24](http://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element)                |
 
 ## Atributos
 
@@ -33,7 +32,9 @@ Este elemento implementa la interface [HTMLElement](/es/docs/Web/API/HTMLElement
 La [guia de estilo de Yahoo](http://styleguide.yahoo.com/) recomienda [romper una URL antes de la puntuación](https://shopping.yahoo.com/9780312569846-yahoo-style-guide/) , para evitar dejar una marca de puntuación en el final de la línea , lo cual el lector podría confundir con el final de la URL .
 
 ```html
-<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+<p>
+  http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages
+</p>
 ```
 
 {{EmbedLiveSample("Example")}}

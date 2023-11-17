@@ -1,7 +1,6 @@
 ---
 title: CSSStyleRule
 slug: Web/API/CSSStyleRule
-translation_of: Web/API/CSSStyleRule
 ---
 
 {{ APIRef("CSSOM") }}

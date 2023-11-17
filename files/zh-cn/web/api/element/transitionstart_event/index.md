@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: transitionstart 事件'
+title: "HTMLElement: transitionstart 事件"
 slug: Web/API/Element/transitionstart_event
 ---
 
@@ -35,8 +35,8 @@ slug: Web/API/Element/transitionstart_event
 下列代码对 `transitionstart` 事件添加了一个监听器：
 
 ```js
-element.addEventListener('transitionstart', () => {
-  console.log('transition 开始');
+element.addEventListener("transitionstart", () => {
+  console.log("transition 开始");
 });
 ```
 
@@ -44,7 +44,7 @@ element.addEventListener('transitionstart', () => {
 
 ```js
 element.ontransitionstart = () => {
-  console.log('transition 开始');
+  console.log("transition 开始");
 };
 ```
 
@@ -61,7 +61,7 @@ element.ontransitionstart = () => {
 .transition {
   width: 100px;
   height: 100px;
-  background: rgba(255,0,0,1);
+  background: rgba(255, 0, 0, 1);
   transition-property: transform, background;
   transition-duration: 2s;
   transition-delay: 1s;
@@ -69,26 +69,26 @@ element.ontransitionstart = () => {
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgba(255,0,0,0);
+  background: rgba(255, 0, 0, 0);
 }
 ```
 
 对此，我们再添加一些 JavaScript 代码来指出 {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} 和 {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} 事件在哪里触发。
 
 ```js
-const transition = document.querySelector('.transition');
-const message = document.querySelector('.message');
+const transition = document.querySelector(".transition");
+const message = document.querySelector(".message");
 
-transition.addEventListener('transitionrun', function() {
-  message.textContent = 'transitionrun 触发了';
+transition.addEventListener("transitionrun", function () {
+  message.textContent = "transitionrun 触发了";
 });
 
-transition.addEventListener('transitionstart', function() {
-  message.textContent = 'transitionstart 触发了';
+transition.addEventListener("transitionstart", function () {
+  message.textContent = "transitionstart 触发了";
 });
 
-transition.addEventListener('transitionend', function() {
-  message.textContent = 'transitionend 触发了';
+transition.addEventListener("transitionend", function () {
+  message.textContent = "transitionend 触发了";
 });
 ```
 

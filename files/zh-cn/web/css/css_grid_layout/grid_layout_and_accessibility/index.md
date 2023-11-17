@@ -34,20 +34,22 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 在这个例子中，用网格布局了一组包含链接的盒子，使用基于线的布局属性把 box1 放置在了网格的第 2 行。虽然 box1 看起来呈现为列表的第四个项目，但如果此时用 tab 链切换链接，仍然是从 box1 开始，因为它在源代码中排得最靠前。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 

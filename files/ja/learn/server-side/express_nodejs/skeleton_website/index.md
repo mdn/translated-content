@@ -1,5 +1,5 @@
 ---
-title: 'Express チュートリアル Part 2: スケルトン Web サイトの作成'
+title: "Express チュートリアル Part 2: スケルトン Web サイトの作成"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 
@@ -146,24 +146,24 @@ express express-locallibrary-tutorial --view=pug
 
 1. まず、依存関係をインストールします (`install` コマンドはプロジェクトの **package.json** ファイルにリストされているすべての依存関係パッケージを取得します)
 
-    ```bash
-    cd express-locallibrary-tutorial
-    npm install
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   npm install
+   ```
 
 2. その後、アプリケーションを実行します
 
-    - Windows では、次のコマンドを使用します
+   - Windows では、次のコマンドを使用します
 
-      ```bash
-      SET DEBUG=express-locallibrary-tutorial:* & npm start
-      ```
+     ```bash
+     SET DEBUG=express-locallibrary-tutorial:* & npm start
+     ```
 
-    - macOS または Linux では、次のコマンドを使用します
+   - macOS または Linux では、次のコマンドを使用します
 
-      ```bash
-      DEBUG=express-locallibrary-tutorial:* npm start
-      ```
+     ```bash
+     DEBUG=express-locallibrary-tutorial:* npm start
+     ```
 
 3. その後、ブラウザーに <http://localhost:3000/> をロードしてアプリにアクセスします
 
@@ -324,7 +324,7 @@ scripts セクションは "start" スクリプトを定義します。これは
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require("../app");
 ```
 
 > **メモ:** `require()` は、現在のファイルにモジュールをインポートするために使われるグローバル Node 関数です。 ここでは相対パスを使用し、オプションの (.**js**) ファイル拡張子を省略して **app.js** モジュールを指定します。
@@ -347,18 +347,18 @@ module.exports = app;
 **app.js** ファイルを詳しく見ていきましょう。まず、NPM を使用してアプリケーション用に以前にダウンロードした express、serve-favicon、morgan、cookie-parser など、`require()` を使用していくつかの便利な Node ライブラリをファイルにインポートします。path は、ファイルとディレクトリーのパスを解析するためのコア Node ライブラリです。
 
 ```js
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
+var express = require("express");
+var path = require("path");
+var favicon = require("serve-favicon");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
 ```
 
 それから routes ディレクトリーから `require()` モジュールを呼び出します。これらのモジュール/ファイルには、関連する "ルート" (URL パス) の特定のセットを処理するためのコードが含まれています。たとえばライブラリ内のすべての本をリストするためにスケルトンアプリケーションを拡張するときは、本関連のルートを処理するための新しいファイルを追加します。
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
 ```
 
 > **メモ:** この時点で、モジュールをインポートしたばかりです。 実際にはまだそのルートを使用していません (これはファイルの少し下まで行われます)。
@@ -369,8 +369,8 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 次の一連の関数は `app.use()` を呼び出してミドルウェアライブラリをリクエスト処理チェーンに追加します。以前インポートしたサードパーティのライブラリに加えて、Express がプロジェクトルートの **/public** ディレクトリーにあるすべての静的ファイルを処理するようにするために、`express.static` ミドルウェアを使用します。
@@ -378,18 +378,18 @@ app.set('view engine', 'pug');
 ```js
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 他のすべてのミドルウェアがセットアップされたので、(以前にインポートした) ルート処理コードをリクエスト処理チェーンに追加します。 インポートされたコードは、サイトのさまざまな部分に特定のルートを定義します。
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 ```
 
 > **メモ:** 上記で指定されたパス ('/' と '`/users'`) は、インポートされたファイルで定義されているルートの接頭辞として扱われます。たとえば、インポートされたユーザーモジュールが `/profile` のルートを定義している場合は、`/users/profile` でそのルートにアクセスします。 ルートの詳細については後の記事で説明します。
@@ -398,21 +398,21 @@ app.use('/users', usersRouter);
 
 ```js
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+app.use(function (req, res, next) {
+  var err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render("error");
 });
 ```
 
@@ -427,12 +427,12 @@ module.exports = app;
 ルートファイル **/routes/users.js** を以下に示します (ルートファイルは同様の構造を共有しているので、**index.js** も表示する必要はありません)。まず、express モジュールをロードし、それを使って `express.Router` オブジェクトを取得します。それからそのオブジェクトのルートを指定し、最後にモジュールからルーターをエクスポートします (これがファイルが **app.js** にインポートされることを可能にするものです)。
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
@@ -450,8 +450,8 @@ module.exports = router;
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res) {
+  res.render("index", { title: "Express" });
 });
 ```
 

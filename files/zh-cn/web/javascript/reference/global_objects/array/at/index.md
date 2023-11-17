@@ -66,7 +66,7 @@ console.log(item2); // 输出：'orange'
 const colors = ["red", "green", "blue"];
 
 // 使用长度属性
-const lengthWay = colors[colors.length-2];
+const lengthWay = colors[colors.length - 2];
 console.log(lengthWay); // 输出：'green'
 
 // 使用 slice() 方法。注意会返回一个数组

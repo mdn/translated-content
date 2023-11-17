@@ -1,11 +1,6 @@
 ---
 title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/scroll-snap-stop
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -46,7 +41,8 @@ scroll-snap-type: unset;
 
 ```css
 /* setup */
-:root, body {
+:root,
+body {
   height: 100%;
   display: flex;
   align-items: center;
@@ -122,11 +118,11 @@ scroll-snap-type: unset;
 }
 /* coloration */
 .container > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 .container > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 
@@ -134,7 +130,7 @@ scroll-snap-type: unset;
 
 ```html
 <div class="container x mandatory-scroll-snapping" dir="ltr">
-  <div>X Mand. LTR </div>
+  <div>X Mand. LTR</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>

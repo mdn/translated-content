@@ -2,6 +2,7 @@
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 **`isFinite()`** 전역 함수는 주어진 값이 유한수인지 판별합니다. 필요한 경우 매개변수를 먼저 숫자로 변환합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/isFinite
 ## 구문
 
 ```js
-    isFinite(testValue)
+isFinite(testValue);
 ```
 
 ### 매개변수
@@ -34,22 +35,22 @@ slug: Web/JavaScript/Reference/Global_Objects/isFinite
 ### `isFinite()` 사용하기
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(910);       // true
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(910); // true
 
-isFinite(null);      // true, would've been false with the
-                     // more robust Number.isFinite(null)
+isFinite(null); // true, would've been false with the
+// more robust Number.isFinite(null)
 
-isFinite('0');       // true, would've been false with the
-                     // more robust Number.isFinite("0")
+isFinite("0"); // true, would've been false with the
+// more robust Number.isFinite("0")
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

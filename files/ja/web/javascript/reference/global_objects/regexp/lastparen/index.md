@@ -1,29 +1,33 @@
 ---
 title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
+l10n:
+  sourceCommit: d1edcbabf7431e9929c77e70b0c1bc741d887236
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{deprecated_header}}
 
-標準外の **`lastParen`** プロパティは静的かつ読み取り専用の正規表現のプロパティで、最後に一致した括弧で括られた部分文字列を含みます。 `RegExp.$+` はこのプロパティに対するエイリアスです。
+> **メモ:** グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
+
+**`RegExp.lastParen`** は静的アクセサープロパティで、最後に一致した括弧で括られた部分文字列があれば返します。`RegExp["$+"]` はこのプロパティの別名です。
 
 ## 解説
 
-`lastParen` プロパティは静的プロパティです。個々の正規表現オブジェクトのプロパティではありません。常に、 `RegExp.lastParen` または `RegExp['$+']` として使用してください。
+`lastParen` は {{jsxref("RegExp")}} の静的プロパティですので、作成した `RegExp` オブジェクトのプロパティとしてではなく、常に `RegExp.lastParen` または `RegExp["$+"]` として使用してください。
 
-`lastParen` プロパティの値は読み取り専用で、一致に成功するたびに変更されます。
+`lastParen` の値は `RegExp` の（ただし `RegExp` のサブクラスではない）インスタンスが照合に成功するたびに更新されます。照合が行われていない場合、または直近の正規表現にキャプチャグループが格納されていない場合、`lastParen` は空文字列になります。`lastParen` の設定アクセサーは `undefined` なので、このプロパティを直接変更することはできません。
 
-ドットプロパティアクセサー (`RegExp.$+`) で短縮エイリアスを使用することはできません。その場合、パーサーは "+" という表現を期待して {{jsxref("SyntaxError")}} が発生します。[プロパティへのアクセスにはブラケット表記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用してください。
+ドットプロパティアクセサー (`RegExp.$+`) で短縮エイリアスを使用することはできません。`+` は識別子の一部として有効ではないので、{{jsxref("SyntaxError")}} が発生します。代わりに[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用してください。
 
 ## 例
 
-### lastMatch と $+ の使用
+### lastParen と $+ の使用
 
 ```js
-var re = /(hi)/g;
-re.test('hi there!');
+const re = /(hi)/g;
+re.test("hi there!");
 RegExp.lastParen; // "hi"
-RegExp['$+'];     // "hi"
+RegExp["$+"]; // "hi"
 ```
 
 ## 仕様書
@@ -32,7 +36,7 @@ RegExp['$+'];     // "hi"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.lastParen")}}
+{{Compat}}
 
 ## 関連情報
 
@@ -40,4 +44,4 @@ RegExp['$+'];     // "hi"
 - {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
 - {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

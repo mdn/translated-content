@@ -1,7 +1,6 @@
 ---
 title: Изменение размеров в CSS
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
-translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
@@ -9,8 +8,8 @@ translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 В предыдущих уроках вы познакомились с некоторыми способами изменения размеров элементов на веб-странице с помощью CSS. Понимание того, насколько велики будут различные элементы в вашем дизайне — важно, и в этом уроке мы подведем итог по различным способам задания размеров элементов с помощью CSS и расскажем о некоторых терминах, связанных с размерами, которые помогут вам в будущем.
 
 | Необходимые условия: | Базовая компьютерная грамотность, [Установка базового ПО](/ru/Learn/Getting_started_with_the_web/Installing_basic_software), базовые знания [работы с файлами](/ru/Learn/Getting_started_with_the_web/Dealing_with_files), основы HTML ([Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), и общее представление о том, как работает CSS ([Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                | Изучить различные способы задания размеров объектов в CSS.                                                                                                                                                                                                                                                                                                                                                                                                              |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                | Изучить различные способы задания размеров объектов в CSS.                                                                                                                                                                                                                                                                                                                                              |
 
 ## Размер по умолчанию или внутренний размер
 
@@ -103,10 +102,10 @@ translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 2. [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+   - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+   - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+   - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 3. [Блочная модель(The box model)](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
 4. [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

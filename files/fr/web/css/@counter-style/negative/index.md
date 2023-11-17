@@ -1,11 +1,6 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@counter-style/negative
 ---
 
 {{CSSRef}}
@@ -14,8 +9,8 @@ Le descripteur **`negative`**, associé à la règle @ {{cssxref("@counter-style
 
 ```css
 /* Valeurs représentant les symboles */
-negative: "-";       /* Préfixe '-' si la valeur est négative */
-negative: "(" ")";   /* Entoure la valeur avec '(' et ')' si elle est négative */
+negative: "-"; /* Préfixe '-' si la valeur est négative */
+negative: "(" ")"; /* Entoure la valeur avec '(' et ')' si elle est négative */
 ```
 
 Si la valeur du compteur est négative, le symbole fourni par le descripteur sera utilisé comme préfixe à la représentation du compteur. Un deuxième symbole peut être indiqué et est alors utilisé comme suffixe. Le descripteur `negative` n'a d'effet que si la valeur du descripteur `system` est `symbolic`, `alphabetic`, `numeric`, `additive` ou `extends` et si le compteur personnalisé utilise des indices négatifs. Dans les autres cas, si le descripteur `negative` est fourni, il est ignoré.

@@ -23,7 +23,7 @@ var candidate = RTCIceCandidate.candidate;
 
 candidate 문자열에 대한 구문은 {{RFC(5245, "", 15.1)}}에 설명되어있습니다.
 
-``` plain
+```plain
 a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 ```
 
@@ -60,7 +60,7 @@ function handleNewIceCandidate(candidateSDP) {
 위 예제는 더 간단하게 표현 될 수 있습니다. ECMAScript 2016의 고급 기능들을 사용해서 아래와 같이 나타낼 수 있습니다:
 
 ```js
-let handleNewIceCandidate = candidateSDP =>
+let handleNewIceCandidate = (candidateSDP) =>
   myPeerConnection.addIceCandidate(new RTCIceCandidate(candidateSDP));
 ```
 

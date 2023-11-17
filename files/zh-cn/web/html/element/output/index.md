@@ -51,9 +51,9 @@ slug: Web/HTML/Element/output
 
 ```html
 <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-    <input type="range" name="b" value="50" /> +
-    <input type="number" name="a" value="10" /> =
-    <output name="result"></output>
+  <input type="range" name="b" value="50" /> +
+  <input type="number" name="a" value="10" /> =
+  <output name="result"></output>
 </form>
 ```
 

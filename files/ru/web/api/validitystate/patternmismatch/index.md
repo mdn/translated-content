@@ -1,13 +1,6 @@
 ---
 title: ValidityState.patternMismatch
 slug: Web/API/ValidityState/patternMismatch
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
-browser-compat: api.ValidityState.patternMismatch
 ---
 
 Доступное только для чтения свойство **`patternMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} шаблону, указанному в атрибуте [`pattern`](/ru/docs/Web/HTML/Attributes/pattern).
@@ -20,11 +13,30 @@ browser-compat: api.ValidityState.patternMismatch
 
 ```html
 <p>
- <label>Enter your phone number in the format (123)456-7890
-  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>)-
-   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
-   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
- </label>
+  <label
+    >Enter your phone number in the format (123)456-7890 (<input
+      name="tel1"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit area code"
+      size="2" />)-
+    <input
+      name="tel2"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit prefix"
+      size="2" />
+    -
+    <input
+      name="tel3"
+      type="tel"
+      pattern="[0-9]{4}"
+      placeholder="####"
+      aria-label="4-digit number"
+      size="3" />
+  </label>
 </p>
 ```
 
@@ -40,7 +52,7 @@ input:invalid {
 
 {{EmbedLiveSample("Examples", 300, 40)}}
 
-Обратите внимание, что в данном примере мы получаем значение свойства `patternMismatch`, а не {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}, потому что ограничения заданы именно с помощью атрибута `pattern`. Если бы вместо него использовались атрибуты [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength), для валидации можно было использовать {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}.
+Обратите внимание, что в данном примере мы получаем значение свойства `patternMismatch`, а не {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}, потому что ограничения заданы именно с помощью атрибута `pattern`. Если бы вместо него использовались атрибуты [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength), для валидации можно было использовать {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}.
 
 > **Примечание:** Примечание: Если атрибут `pattern` не используется, поле `{{HTMLElement("input/email", "email")}}` требует, соответствия значения хотя бы формату `x@y`, а поле `{{HTMLElement("input/url", "url")}}` — хотя бы формату `x:`. Если поле не валидно, свойство {{domxref('validityState.typeMismatch')}} будет `true`, если не используется атрибут `pattern`.
 

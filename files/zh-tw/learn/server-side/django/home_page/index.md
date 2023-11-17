@@ -68,7 +68,7 @@ slug: Learn/Server-side/Django/Home_page
 
 ## 創建索引頁面
 
-我們將創建的第一頁是索引頁 (`catalog/`)。 這將顯示一些靜態 HTML，以及數據庫中不同記錄的一些計算出的“計數”。 為了完成這項工作，我們必須創建一個 URL 映射，視圖和模板。
+我們將創建的第一頁是索引頁 (`catalog/`)。 這將顯示一些靜態 HTML，以及數據庫中不同記錄的一些計算出的「計數」。 為了完成這項工作，我們必須創建一個 URL 映射，視圖和模板。
 
 > **備註：** 值得在本節中多加註意。大多數材料是所有頁面共有的。
 
@@ -99,7 +99,7 @@ urlpatterns = [
 - URL 模式，它是一個空字符串：`''`。 處理其他視圖時，我們將詳細討論 URL 模式。
 - 如果檢測到 URL 模式，將調用一個視圖函數：`views.index`, 它是**views.py**文件中名為`index()` 的函數。
 
-`path()` 函數還指定一個`name`參數，它是此特定 URL 映射的唯一標識符。 您可以使用該名稱來“反向”映射器，即，動態創建指向映射器旨在處理的資源的 URL。 例如，通過在模板中添加以下鏈接，我們可以使用 name 參數從任何其他頁面鏈接到我們的主頁：
+`path()` 函數還指定一個`name`參數，它是此特定 URL 映射的唯一標識符。 您可以使用該名稱來「反向」映射器，即，動態創建指向映射器旨在處理的資源的 URL。 例如，通過在模板中添加以下鏈接，我們可以使用 name 參數從任何其他頁面鏈接到我們的主頁：
 
 ```html
 <a href="{% url 'index' %}">Home</a>.
@@ -148,7 +148,7 @@ def index(request):
     return render(request, 'index.html', context=context)
 ```
 
-視圖函數的第一部分使用模型類上的 `objects.all()` 屬性獲取記錄數。 它還獲取具有狀態字段值為“ a”（可用）的`BookInstance` 物件列表。 在上一教程([Django Tutorial Part 3: Using models > Searching for records](/zh-TW/docs/Learn/Server-side/Django/Models#Searching_for_records))中，您可以找到更多有關如何從模型進行訪問的信息。.
+視圖函數的第一部分使用模型類上的 `objects.all()` 屬性獲取記錄數。 它還獲取具有狀態字段值為「 a」（可用）的`BookInstance` 物件列表。 在上一教程([Django Tutorial Part 3: Using models > Searching for records](/zh-TW/docs/Learn/Server-side/Django/Models#Searching_for_records))中，您可以找到更多有關如何從模型進行訪問的信息。.
 
 在函數的最後，我們調用 `render()` 函數來創建並返回 HTML 頁面作為響應（此快捷功能包裝了許多其他函數，從而簡化了這種非常常見的用例）。它以原始 `request` 物件 (一個 `HttpRequest`), 帶有數據佔位符的 HTML 模板以及上下文 `context` 變量包含將插入到這些佔位符中的數據的 Python 字典）為參數。
 
@@ -285,7 +285,7 @@ def index(request):
 {% endblock %}
 ```
 
-在 _Dynamic content_ 部分中，我們聲明了要從視圖中包含的信息的佔位符（_template variables_）。 變量使用“雙括號”或“把手”語法標記（請參見上面的粗體）。
+在 _Dynamic content_ 部分中，我們聲明了要從視圖中包含的信息的佔位符（_template variables_）。 變量使用「雙括號」或「把手」語法標記（請參見上面的粗體）。
 
 > **備註：** 因為變量具有雙括號 (`\{{ num_books }}`)，而標籤則用百分號括在單括號中擴展為 (`{% extends "base_generic.html" %}`)，所以您可以輕鬆識別是要處理模板變量還是模板標籤（函數）。
 
@@ -306,7 +306,7 @@ return render(request, 'index.html', context=context)
 
 您的項目可能會使用靜態資源，包括 JavaScript，CSS 和圖像。 由於這些文件的位置可能未知（或可能會更改），因此 Django 允許您相對於`STATIC_URL` 全局設置在模板中指定這些文件的位置（默認框架網站將`STATIC_URL` 的值設置為'`/static/`'，但您可以選擇將其託管在內容分發網絡或其他地方）。
 
-在模板中，您首先調用指定為“ static”的`load` 模板標籤以添加此模板庫（如下所示）。 加載靜態文件後，您可以使用`static` 模板標籤，指定感興趣文件的相對 URL。
+在模板中，您首先調用指定為「 static」的`load` 模板標籤以添加此模板庫（如下所示）。 加載靜態文件後，您可以使用`static` 模板標籤，指定感興趣文件的相對 URL。
 
 ```django
 <!-- Add additional CSS in static file -->

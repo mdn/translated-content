@@ -24,7 +24,9 @@ var successBool = window.navigator.vibrate(pattern);
 
 ```js
 window.navigator.vibrate(200); // vibrate for 200ms
-window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]); // モールス信号で 'SOS' とバイブレーションします。
+window.navigator.vibrate([
+  100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
+]); // モールス信号で 'SOS' とバイブレーションします。
 ```
 
 ## 仕様書
@@ -33,7 +35,7 @@ window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,3
 
 ## ブラウザーの互換性
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## 関連情報
 

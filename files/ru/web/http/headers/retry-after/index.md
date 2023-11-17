@@ -1,14 +1,8 @@
 ---
 title: Retry-After
 slug: Web/HTTP/Headers/Retry-After
-tags:
-  - HTTP
-  - Заголовок
-  - заголовок ответа
-  - ответ
-translation_of: Web/HTTP/Headers/Retry-After
-original_slug: Web/HTTP/Заголовки/Retry-After
 ---
+
 {{HTTPSidebar}}
 
 **`Retry-After`** заголовок HTTP ответа показывает, как долго клиент должен подождать перед последующим запросом. Есть три основных случая, в которых следует использовать этот заголовок:
@@ -59,8 +53,8 @@ Retry-After: 120
 
 ## Спецификации
 
-| Specification                                        | Title                                                         |
-| ---------------------------------------------------- | ------------------------------------------------------------- |
+| Specification                           | Title                                                         |
+| --------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Retry-After", "7.1.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Поддержка браузеров

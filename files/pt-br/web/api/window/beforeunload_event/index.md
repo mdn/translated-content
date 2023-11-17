@@ -1,7 +1,6 @@
 ---
 title: beforeunload
 slug: Web/API/Window/beforeunload_event
-original_slug: Web/Events/beforeunload
 ---
 
 O evento **`beforeunload`** é disparado quando o _window_, o _document_ e seus recursos estão prestes a ser descarregados.
@@ -31,19 +30,19 @@ Quando uma _string_ é atribuída na propriedade `returnValue` do _Event_, uma c
 
 ## Propriedades
 
-| Propriedade                           | Tipo                                 | Descrição                                                              |
-| ------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------- |
+| Propriedade                     | Tipo                       | Descrição                                                              |
+| ------------------------------- | -------------------------- | ---------------------------------------------------------------------- |
 | `target` {{readOnlyInline}}     | {{domxref("EventTarget")}} | O evento alvo (the topmost target in the DOM tree).                    |
-| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}     | O tipo de evento.                                                      |
-| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}         | O evento é normalmente _bubble_?                                       |
-| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}         | É possível cancelar o evento?                                          |
-| `returnValue`                         | {{domxref("DOMString")}}     | O valor de retorno do evento (a mensagem que será exibida ao usuário). |
+| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}   | O tipo de evento.                                                      |
+| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}      | O evento é normalmente _bubble_?                                       |
+| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}      | É possível cancelar o evento?                                          |
+| `returnValue`                   | {{domxref("DOMString")}}   | O valor de retorno do evento (a mensagem que será exibida ao usuário). |
 
 ## Exemplos
 
 ```js
 window.addEventListener("beforeunload", function (event) {
-  event.returnValue = "\o/";
+  event.returnValue = "\\o/";
 });
 
 // equivalente a
@@ -56,16 +55,16 @@ Navegadores baseados no WebKit não seguem a especificação para caixas de diá
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  e.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+
-  return confirmationMessage;              // Gecko, WebKit, Chrome <34
+  e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+
+  return confirmationMessage; // Gecko, WebKit, Chrome <34
 });
 ```
 
 ## Notas
 
-Quando este evento retorna um valor não vazio (_non-void_), é solicitada ao usuário uma confirmação para descarregar a página. Na maioria dos navegadores o valor retornado no evento é exibido como mensagem nessa confirmação. No Firefox 4 e versões anteriores a _string_ retornada não é exibida para o usuário. Ao invés disso, o Firefox exibe a mensagem "Esta página está perguntanto se você deseja sair - é possível que as alterações feitas não sejam salvas." Veja {{bug("588292")}}.
+Quando este evento retorna um valor não vazio (_non-void_), é solicitada ao usuário uma confirmação para descarregar a página. Na maioria dos navegadores o valor retornado no evento é exibido como mensagem nessa confirmação. No Firefox 4 e versões anteriores a _string_ retornada não é exibida para o usuário. Ao invés disso, o Firefox exibe a mensagem "Esta página está perguntanto se você deseja sair - é possível que as alterações feitas não sejam salvas." Veja [Erro do Firefox 588292](https://bugzil.la/588292).
 
 Desde 25 de maio de 2011 a especificação HTML5 define que chamadas aos métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} e {{domxref("window.prompt()")}} serão ignoradas durante este evento. Para mais detalhes veja a [especificação HTML5](https://www.w3.org/TR/html5/webappapis.html#user-prompts) (em inglês).
 

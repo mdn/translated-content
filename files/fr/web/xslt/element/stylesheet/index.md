@@ -1,10 +1,6 @@
 ---
 title: stylesheet
 slug: Web/XSLT/Element/stylesheet
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/stylesheet
-original_slug: Web/XSLT/stylesheet
 ---
 
 {{ XsltRef() }}

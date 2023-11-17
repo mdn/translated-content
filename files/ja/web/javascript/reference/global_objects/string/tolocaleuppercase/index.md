@@ -1,6 +1,8 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
+l10n:
+  sourceCommit: b5c766f4eecb4fcf9d8ba175caddb94f7c3e9d20
 ---
 
 {{JSRef}}
@@ -11,25 +13,22 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 
 ## 構文
 
-```
-str.toLocaleUpperCase()
-str.toLocaleUpperCase(locale)
-str.toLocaleUpperCase([locale, locale, ...])
+```js-nolint
+toLocaleUpperCase()
+toLocaleUpperCase(locales)
 ```
 
 ### 引数
 
 - `locale` {{optional_inline}}
-  - : `locale` 引数は、ロケールに依存した対応に基づいた大文字への変換に使用されるロケールを示します。複数のロケールが {{jsxref("Array")}} で与えられた場合は、[利用可能な最良のロケール](https://tc39.github.io/ecma402/#sec-bestavailablelocale)が使用されます。既定のロケールはホスト環境の現在のロケールです。
+
+  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 ロケール固有の大文字小文字の対応付けに従って大文字に変換するために使用するロケールを示します。 引数 `locales` の一般的な形成と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数) を参照してください。
+
+    引数 `locales` を使用する他のメソッドとは異なり、`toLocaleLowerCase()` はロケールの照合を許可しません。 そのため、引数 `locales` の有効性を調べた後、 `toLocaleLowerCase()` は常にリストの最初のロケール（リストが空の場合は既定値）を、そのロケールに実装で対応していない場合でも使用します。
 
 ### 返値
 
 呼び出した文字列をロケールに依存した対応に基づいて大文字に変換したものを表す新しい文字列です。
-
-### 例外
-
-- A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") は `locale` 引数が妥当な言語タグでない場合に発生します。
-- A {{jsxref("TypeError")}} ("invalid element in locales argument") は、配列の要素が文字列型でなかった場合に発生します。
 
 ## 解説
 
@@ -43,14 +42,14 @@ str.toLocaleUpperCase([locale, locale, ...])
 ### toLocaleUpperCase() の使用
 
 ```js
-'alphabet'.toLocaleUpperCase(); // 'ALPHABET'
+"alphabet".toLocaleUpperCase(); // 'ALPHABET'
 
-'Gesäß'.toLocaleUpperCase(); // 'GESÄSS'
+"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
 
-'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
+"i\u0307".toLocaleUpperCase("lt-LT"); // 'I'
 
-let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
-'i\u0307'.toLocaleUpperCase(locales); // 'I'
+const locales = ["lt", "LT", "lt-LT", "lt-u-co-phonebk", "lt-x-lietuva"];
+"i\u0307".toLocaleUpperCase(locales); // 'I'
 ```
 
 ## 仕様書
@@ -59,7 +58,7 @@ let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.toLocaleUpperCase")}}
+{{Compat}}
 
 ## 関連情報
 

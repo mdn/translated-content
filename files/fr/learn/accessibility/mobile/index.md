@@ -1,15 +1,6 @@
 ---
 title: Accessibilité mobile
 slug: Learn/Accessibility/Mobile
-tags:
-  - Accessibilité
-  - Article
-  - Débutant
-  - Mobile
-  - responsive
-  - toucher
-translation_of: Learn/Accessibility/Mobile
-original_slug: Apprendre/a11y/Mobile
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
@@ -40,7 +31,7 @@ L'accès Web sur les appareils mobiles étant si populaire et les plates-formes 
 
 ## Accessibilité sur les appareils mobiles
 
-L’état de l’accessibilité - et la prise en charge des normes Web en général - est bon pour les appareils mobiles modernes. Le temps où les appareils mobiles utilisaient des technologies Web complètement différentes des navigateurs de bureau, forçait les développeurs à utiliser le sniffing de navigateur et à leur servir des sites complètement séparés (même si de nombreuses entreprises détectent encore l'utilisation d'appareils mobiles et leur servent un domaine distinct).
+L'état de l'accessibilité - et la prise en charge des normes Web en général - est bon pour les appareils mobiles modernes. Le temps où les appareils mobiles utilisaient des technologies Web complètement différentes des navigateurs de bureau, forçait les développeurs à utiliser le sniffing de navigateur et à leur servir des sites complètement séparés (même si de nombreuses entreprises détectent encore l'utilisation d'appareils mobiles et leur servent un domaine distinct).
 
 De nos jours, les appareils mobiles en général peuvent gérer des sites Web "complets", et les principales plates-formes ont même des lecteurs d'écran intégrés pour permettre aux utilisateurs malvoyants de les utiliser avec succès. Les navigateurs mobiles modernes ont tendance à avoir un bon support pour [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics), aussi
 
@@ -54,13 +45,13 @@ Certaines exceptions nécessitent une attention particulière pour le mobile; le
 
 ## Résumé des tests de lecteur d'écran sur Android et iOS
 
-Les plates-formes mobiles les plus courantes disposent de lecteurs d’écran entièrement fonctionnels. Celles-ci fonctionnent à peu près de la même manière que les lecteurs d’écran de bureau, sauf qu’elles sont largement utilisées avec des gestes tactiles plutôt que des combinaisons de touches.
+Les plates-formes mobiles les plus courantes disposent de lecteurs d'écran entièrement fonctionnels. Celles-ci fonctionnent à peu près de la même manière que les lecteurs d'écran de bureau, sauf qu'elles sont largement utilisées avec des gestes tactiles plutôt que des combinaisons de touches.
 
 Regardons les deux principaux: TalkBack sur Android et VoiceOver sur iOS.
 
 ### Android TalkBack
 
-Le lecteur d’écran TalkBack est intégré au système d’exploitation Android.
+Le lecteur d'écran TalkBack est intégré au système d'exploitation Android.
 
 Pour l'activer, sélectionnez Paramètres> Accessibilité> TalkBack, puis appuyez sur le curseur pour l'activer. Suivez toute invite supplémentaire à l'écran qui vous est présentée.
 
@@ -114,9 +105,9 @@ Par exemple, avec TalkBack activé:
 2. Activer la barre d'URL.
 3. Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
 
-    - Sélectionnez la barre d’URL en glissant gauche / droite jusqu’à ce que vous y arriviez, puis en double tapant .
-    - Maintenez votre doigt appuyé sur le clavier virtuel jusqu'à obtenir le caractère souhaité, puis relâchez-le pour le saisir. Répétez pour chaque caractère.
-    - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
+   - Sélectionnez la barre d'URL en glissant gauche / droite jusqu'à ce que vous y arriviez, puis en double tapant .
+   - Maintenez votre doigt appuyé sur le clavier virtuel jusqu'à obtenir le caractère souhaité, puis relâchez-le pour le saisir. Répétez pour chaque caractère.
+   - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
 
 4. Balayez vers la gauche et la droite pour vous déplacer entre différents éléments de la page. .
 5. Faites glisser votre doigt vers le haut et vers la droite avec un mouvement fluide pour accéder au menu de contenu local.
@@ -135,7 +126,7 @@ Pour l'activer, accédez à l'application _Paramètres_, puis sélectionnez _Gé
 Une fois que VoiceOver est activé, les gestes de contrôle de base de l'iOS seront un peu différents :
 
 1. Un simple tapement entraînera la sélection de l'élément sur lequel vous appuyez; votre appareil parlera de l'élément sur lequel vous avez tapé.
-2. Vous pouvez également parcourir les éléments à l’écran en balayant vers la gauche ou vers la droite pour les déplacer, ou en faisant glisser votre doigt sur l’écran pour naviguer entre les différents éléments (lorsque vous trouvez l’élément souhaité, vous pouvez le retirer pour le sélectionner).
+2. Vous pouvez également parcourir les éléments à l'écran en balayant vers la gauche ou vers la droite pour les déplacer, ou en faisant glisser votre doigt sur l'écran pour naviguer entre les différents éléments (lorsque vous trouvez l'élément souhaité, vous pouvez le retirer pour le sélectionner).
 3. Pour activer l'élément sélectionné (par exemple, ouvrir une application sélectionnée), appuyez deux fois n'importe où sur l'écran.
 4. Faites glisser votre doigt avec trois doigts pour faire défiler une page.
 5. Appuyez avec deux doigts pour effectuer une action liée au contexte - par exemple, prendre une photo alors que vous êtes dans l'application Appareil photo.
@@ -150,11 +141,11 @@ Pour déverrouiller le téléphone, vous devez appuyer sur le bouton d'accueil (
 
 Lorsque VoiceOver est activé, vous disposez d'une fonction de navigation appelée Rotor, qui vous permet de choisir rapidement parmi un certain nombre d'options utiles courantes. Pour l'utiliser:
 
-1. Tournez deux doigts sur l’écran comme si vous tourniez un cadran. Chaque option sera lue à voix haute au fur et à mesure que vous tournez. Vous pouvez aller et venir pour parcourir les options.
+1. Tournez deux doigts sur l'écran comme si vous tourniez un cadran. Chaque option sera lue à voix haute au fur et à mesure que vous tournez. Vous pouvez aller et venir pour parcourir les options.
 2. Une fois que vous avez trouvé l'option que vous voulez:
 
-    - Relâchez vos doigts pour le sélectionner.
-    - S'il s'agit d'une option dont vous pouvez parcourir la valeur (telle que le volume ou la vitesse de parole), vous pouvez effectuer un balayage vers le haut ou le bas pour augmenter ou diminuer la valeur de l'élément sélectionné.
+   - Relâchez vos doigts pour le sélectionner.
+   - S'il s'agit d'une option dont vous pouvez parcourir la valeur (telle que le volume ou la vitesse de parole), vous pouvez effectuer un balayage vers le haut ou le bas pour augmenter ou diminuer la valeur de l'élément sélectionné.
 
 Les options disponibles sous Rotor dépendent du contexte. Elles diffèrent en fonction de l'application ou de la vue dans laquelle vous vous trouvez (voir l'exemple ci-dessous).
 
@@ -166,20 +157,20 @@ Essayons la navigation Web avec VoiceOver:
 2. Activer la barre d'URL.
 3. Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
 
-    - Sélectionnez la barre d’URL en glissant gauche / droite jusqu’à ce que vous y arriviez, puis en double-tapant.
-    - Pour chaque caractère, maintenez votre doigt appuyé sur le clavier virtuel jusqu'à ce que vous obteniez le caractère souhaité, puis relâchez votre doigt pour le sélectionner. Appuyez deux fois pour le taper.
-    - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
+   - Sélectionnez la barre d'URL en glissant gauche / droite jusqu'à ce que vous y arriviez, puis en double-tapant.
+   - Pour chaque caractère, maintenez votre doigt appuyé sur le clavier virtuel jusqu'à ce que vous obteniez le caractère souhaité, puis relâchez votre doigt pour le sélectionner. Appuyez deux fois pour le taper.
+   - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
 
 4. Balayez vers la gauche et la droite pour vous déplacer entre les éléments de la page. Vous pouvez appuyer deux fois sur un élément pour le sélectionner (par exemple, suivre un lien).
-5. Par défaut, l’option de rotor sélectionnée sera Speaking Rate; vous pouvez actuellement balayer de haut en bas pour augmenter ou diminuer le débit.
+5. Par défaut, l'option de rotor sélectionnée sera Speaking Rate; vous pouvez actuellement balayer de haut en bas pour augmenter ou diminuer le débit.
 6. Maintenant, tournez deux doigts autour de l'écran comme un cadran pour afficher le rotor et passez d'une option à l'autre. Voici quelques exemples d'options disponibles:
 
-    - _Taux de parole_ : Modifiez le taux de parole.
-    - _Conteneurs_ : déplacez-vous entre différents conteneurs sémantiques de la page.
-    - _En-têtes_ : déplacez-vous entre les en-têtes de la page.
-    - _Liens_ : permet de se déplacer entre les liens de la page.
-    - _Contrôles de formulaire_ : déplacez-vous entre les contrôles de formulaire de la page.
-    - _Langue_ : déplacez-vous entre différentes traductions, si elles sont disponibles.
+   - _Taux de parole_ : Modifiez le taux de parole.
+   - _Conteneurs_ : déplacez-vous entre différents conteneurs sémantiques de la page.
+   - _En-têtes_ : déplacez-vous entre les en-têtes de la page.
+   - _Liens_ : permet de se déplacer entre les liens de la page.
+   - _Contrôles de formulaire_ : déplacez-vous entre les contrôles de formulaire de la page.
+   - _Langue_ : déplacez-vous entre différentes traductions, si elles sont disponibles.
 
 7. S*électionnez les en-têtes*. Vous pouvez maintenant glisser de haut en bas pour vous déplacer entre les titres de la page.
 
@@ -196,11 +187,11 @@ Sinon, des événements spécifiques à la souris, tels que [mousedown](/fr/docs
 Si vous essayez de contrôler notre exemple [simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html) ([see example live](http://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) avec un clavier ou une touche, vous verrez le problème. Cela se produit car nous utilisons un code tel que:
 
 ```js
-div.onmousedown = function() {
+div.onmousedown = function () {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-}
+};
 
 document.onmouseup = stopMove;
 ```
@@ -208,29 +199,29 @@ document.onmouseup = stopMove;
 Pour activer d'autres formes de contrôle, vous devez utiliser des événements différents mais équivalents. Par exemple, les événements tactiles fonctionnent sur les périphériques à écran tactile:
 
 ```js
-div.ontouchstart = function(e) {
+div.ontouchstart = function (e) {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-}
+};
 
 panel.ontouchend = stopMove;
 ```
 
 Nous avons fourni un exemple simple qui montre comment utiliser simultanément les événements de la souris et des événements tactiles — voir [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([see the example live](http://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html) aussi).
 
-**Note:** Vous pouvez également voir des exemples fonctionnels montrant comment implémenter différents mécanismes de contrôle à   [Implementing game control mechanisms](/fr/docs/Games/Techniques/Control_mechanisms).
+**Note:** Vous pouvez également voir des exemples fonctionnels montrant comment implémenter différents mécanismes de contrôle à [Implementing game control mechanisms](/fr/docs/Games/Techniques/Control_mechanisms).
 
 ## Responsive design
 
-[Responsive design](/fr/docs/Web/Apps/Progressive/Responsive) a l’habitude de faire en sorte que vos mises en page et les autres fonctionnalités de vos applications changent de manière dynamique en fonction de facteurs tels que la taille de l’écran et la résolution, de sorte qu’elles soient utilisables et accessibles aux utilisateurs de différents types d’appareils. .
+[Responsive design](/fr/docs/Web/Apps/Progressive/Responsive) a l'habitude de faire en sorte que vos mises en page et les autres fonctionnalités de vos applications changent de manière dynamique en fonction de facteurs tels que la taille de l'écran et la résolution, de sorte qu'elles soient utilisables et accessibles aux utilisateurs de différents types d'appareils. .
 
 En particulier, les problèmes les plus courants auxquels le mobile doit faire face sont les suivants:
 
 - Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que [media queries](/fr/docs/Web/CSS/Media_Queries), [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), et [flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
-- Conserver les tailles d’image téléchargées. En général, les appareils de petite taille n’auront pas besoin d’images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d’être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant [responsive image techniques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
-- Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d’image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée   (voir [Adding vector graphics to the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) pour plus de détails ).
+- Conserver les tailles d'image téléchargées. En général, les appareils de petite taille n'auront pas besoin d'images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d'être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant [responsive image techniques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+- Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d'image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée (voir [Adding vector graphics to the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) pour plus de détails ).
 
 **Note:** Nous ne fournirons pas une analyse complète des techniques de conception réactive ici, car elles sont couvertes ailleurs au sein de MDN (voir les liens ci-dessus).
 
@@ -243,10 +234,10 @@ Il existe d'autres problèmes importants à prendre en compte lors de la créati
 En utilisant [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), il est possible de désactiver le zoom, en utilisant un code comme celui-ci dans votre {{htmlelement("head")}}:
 
 ```html
-<meta name="viewport" content="user-scalable=no">
+<meta name="viewport" content="user-scalable=no" />
 ```
 
-Vous ne devriez jamais faire cela autant que possible - beaucoup de gens comptent sur le zoom pour voir le contenu de votre site web, aussi, enlever cette fonctionnalité est une très mauvaise idée. Il y a certaines situations où le zoom peut casser l'interface utilisateur; Dans de tels cas, si vous estimez que vous devez absolument désactiver le zoom, vous devez fournir un autre type d’équivalent, tel qu’une commande permettant d’augmenter la taille du texte de manière à ne pas endommager votre interface utilisateur.
+Vous ne devriez jamais faire cela autant que possible - beaucoup de gens comptent sur le zoom pour voir le contenu de votre site web, aussi, enlever cette fonctionnalité est une très mauvaise idée. Il y a certaines situations où le zoom peut casser l'interface utilisateur; Dans de tels cas, si vous estimez que vous devez absolument désactiver le zoom, vous devez fournir un autre type d'équivalent, tel qu'une commande permettant d'augmenter la taille du texte de manière à ne pas endommager votre interface utilisateur.
 
 #### Garder les menus accessibles
 
@@ -262,7 +253,7 @@ Sur les appareils mobiles, la saisie de données a tendance à être plus agaça
 
 Pour cette raison, il vaut la peine d'essayer de minimiser la quantité de frappe nécessaire. Par exemple, au lieu de forcer les utilisateurs à saisir chaque fois le titre de leur travail en utilisant une entrée de texte standard, vous pouvez proposer un menu {{htmlelement("select")}} contenant les options les plus courantes (ce qui aide également à cohérence dans la saisie des données), et offrent une option "Autre" qui affiche un champ de texte dans lequel taper les valeurs aberrantes. Vous pouvez voir un exemple simple de cette idée en action dans [common-job-types.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/common-job-types.html) ( voir le [common jobs example live](http://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
 
-Il est également utile d’envisager l’utilisation de types de saisie de formulaire au format HTML5, tels que la date sur les plates-formes mobiles car ils les gèrent bien (Android et iOS, par exemple, affichent des widgets utilisables qui correspondent bien à l’expérience de l’appareil. Voir [html5-form-examples.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html) pour quelques exemples (voir [HTML5 form examples live](http://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — essayez de les charger et de les manipuler sur des appareils mobiles. Par exemple:
+Il est également utile d'envisager l'utilisation de types de saisie de formulaire au format HTML5, tels que la date sur les plates-formes mobiles car ils les gèrent bien (Android et iOS, par exemple, affichent des widgets utilisables qui correspondent bien à l'expérience de l'appareil. Voir [html5-form-examples.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html) pour quelques exemples (voir [HTML5 form examples live](http://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — essayez de les charger et de les manipuler sur des appareils mobiles. Par exemple:
 
 - Les types `number`, `tel`, et `email` affichent des claviers virtuels appropriés pour la saisie de numéros / numéros de téléphone.
 - Les types `time` et `date` affichent des sélecteurs appropriés pour la sélection des heures et des dates. .

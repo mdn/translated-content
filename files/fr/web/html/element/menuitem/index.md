@@ -1,20 +1,13 @@
 ---
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
-tags:
-  - Déprécié
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/menuitem
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header("HTML5.2")}}
 
 L'élément HTML **`<menuitem>`** représente une commande qu'un utilisateur peut utiliser via un menu contextuel ou un menu rattaché à un bouton.
 
-Une commande peut être définie explicitement, avec un texte et éventuellement une icône ou bien faire référence à une commande décrite dans un autre élément. Une commande peut prendre la forme d'une case à cocher ou d’un groupe de boutons radio.
+Une commande peut être définie explicitement, avec un texte et éventuellement une icône ou bien faire référence à une commande décrite dans un autre élément. Une commande peut prendre la forme d'une case à cocher ou d'un groupe de boutons radio.
 
 ## Attributs
 
@@ -54,14 +47,20 @@ Cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Att
 
 <menu type="context" id="popup-menu">
   <menuitem type="checkbox" checked>Une case à cocher</menuitem>
-  <hr>
-  <menuitem type="command" label="Cette commande ne fait rien" icon="https://developer.mozilla.org/static/img/favicon144.png">
+  <hr />
+  <menuitem
+    type="command"
+    label="Cette commande ne fait rien"
+    icon="https://developer.mozilla.org/static/img/favicon144.png">
     Les commandes n'affichent pas leurs contenus.
   </menuitem>
-  <menuitem type="command" label="Cette commande contient du JavAScript" onclick="alert('command clicked')">
+  <menuitem
+    type="command"
+    label="Cette commande contient du JavAScript"
+    onclick="alert('command clicked')">
     Les commandes n'affichent pas leurs contenus.
   </menuitem>
-  <hr>
+  <hr />
   <menuitem type="radio" radiogroup="group1">Bouton radio 1</menuitem>
   <menuitem type="radio" radiogroup="group1">Bouton radio 2</menuitem>
 </menu>

@@ -3,6 +3,8 @@ title: Node.js
 slug: Glossary/Node.js
 ---
 
+{{GlossarySidebar}}
+
 Node.js 為 {{Glossary("JavaScript")}} 跨平台執行環境，可讓開發者建立伺服器端 JavaScript 網路程式。
 
 ## 了解詳情

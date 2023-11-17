@@ -1,17 +1,6 @@
 ---
 title: Node
 slug: Web/API/Node
-tags:
-  - API
-  - DOM
-  - Document
-  - Element
-  - Interface
-  - Node
-  - Référence DOM
-  - Structure
-  - hierarchy
-translation_of: Web/API/Node
 ---
 
 {{ApiRef("DOM")}}
@@ -41,23 +30,23 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.nextSibling")}} {{readonlyInline}}
   - : Retourne un {{domxref("Node")}} représentant le nœud suivant dans l'arbre ou `null` s'il n'y en a pas.
 - {{DOMxRef("Node.nodeName")}} {{readonlyInline}}
-  - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom du nœud. La structure du nom diffère du type de nœud. Par exemple, un {{domxref("HTMLElement")}} contiendra le nom de la balise correspondante, comme `'audio'`  pour un {{domxref("HTMLAudioElement")}}, un nœud {{domxref("Text")}} doit avoir la chaîne `'#text'` ou un {{domxref("Document")}} doit avoir la chaîne `'#document'.`.
+  - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom du nœud. La structure du nom diffère du type de nœud. Par exemple, un {{domxref("HTMLElement")}} contiendra le nom de la balise correspondante, comme `'audio'` pour un {{domxref("HTMLAudioElement")}}, un nœud {{domxref("Text")}} doit avoir la chaîne `'#text'` ou un {{domxref("Document")}} doit avoir la chaîne `'#document'.`.
 - {{DOMxRef("Node.nodeType")}}{{readonlyInline}}
   - : Retourne un `unsigned short` (_non signé court_) représentant le type du nœud. Les valeurs possibles sont :
 
-| Nom                                                      | Valeur |
-| -------------------------------------------------------- | ------ |
-| `ELEMENT_NODE`                                           | `1`    |
+| Nom                                             | Valeur |
+| ----------------------------------------------- | ------ |
+| `ELEMENT_NODE`                                  | `1`    |
 | `ATTRIBUTE_NODE` {{deprecated_inline()}}        | `2`    |
-| `TEXT_NODE`                                              | `3`    |
+| `TEXT_NODE`                                     | `3`    |
 | `CDATA_SECTION_NODE` {{deprecated_inline()}}    | `4`    |
 | `ENTITY_REFERENCE_NODE` {{deprecated_inline()}} | `5`    |
 | `ENTITY_NODE` {{deprecated_inline()}}           | `6`    |
-| `PROCESSING_INSTRUCTION_NODE`                            | `7`    |
-| `COMMENT_NODE`                                           | `8`    |
-| `DOCUMENT_NODE`                                          | `9`    |
-| `DOCUMENT_TYPE_NODE`                                     | `10`   |
-| `DOCUMENT_FRAGMENT_NODE`                                 | `11`   |
+| `PROCESSING_INSTRUCTION_NODE`                   | `7`    |
+| `COMMENT_NODE`                                  | `8`    |
+| `DOCUMENT_NODE`                                 | `9`    |
+| `DOCUMENT_TYPE_NODE`                            | `10`   |
+| `DOCUMENT_FRAGMENT_NODE`                        | `11`   |
 | `NOTATION_NODE` {{deprecated_inline()}}         | `12`   |
 
 - {{DOMxRef("Node.nodeValue")}}
@@ -88,7 +77,7 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 > **Note :** Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/) pour HTML et XML.
 
 - {{DOMxRef("Node.prefix")}} {{deprecated_inline}}{{readonlyInline}}
-  - : Est une {{domxref("DOMString")}} représentant le préfixe de l'espace de nom du nœud ou `null`  si aucun préfixe n'est spécifié.
+  - : Est une {{domxref("DOMString")}} représentant le préfixe de l'espace de nom du nœud ou `null` si aucun préfixe n'est spécifié.
 - {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{deprecated_inline}}
   - : Un `nsIPrincipal` représentant le nœud principal.
 - {{DOMxRef("Node.rootNode")}} {{deprecated_inline}}{{ReadOnlyInline}}
@@ -152,7 +141,7 @@ _Hérite des méthodes de son parent {{domxref("EventTarget")}}_.
 La fonction suivante parcourt de manière récursive tous les nœuds enfants d'un noeud et exécute une fonction de rappel sur eux (et sur le nœud parent lui-même).
 
 ```js
-function DOMComb (oParent, oCallback) {
+function DOMComb(oParent, oCallback) {
   if (oParent.hasChildNodes()) {
     for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
       DOMComb(oNode, oCallback);
@@ -170,7 +159,7 @@ DOMComb(parentNode, callbackFunction);
 
 #### Description
 
-Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `parentNode` lui-même, et exécute la fonction `callbackFunction` (_rappel_) sur eux comme un objet [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `parentNode` lui-même, et exécute la fonction `callbackFunction` (_rappel_) sur eux comme un objet [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
 
 #### Paramètres
 
@@ -184,8 +173,10 @@ Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `pare
 L'exemple suivant envoie à la `console.log` le contenu texte du corps :
 
 ```js
-function printContent () {
-  if (this.nodeValue) { console.log(this.nodeValue); }
+function printContent() {
+  if (this.nodeValue) {
+    console.log(this.nodeValue);
+  }
 }
 
 onload = function () {
@@ -197,7 +188,9 @@ onload = function () {
 
 ```js
 Element.prototype.removeAll = function () {
-  while (this.firstChild) { this.removeChild(this.firstChild); }
+  while (this.firstChild) {
+    this.removeChild(this.firstChild);
+  }
   return this;
 };
 ```

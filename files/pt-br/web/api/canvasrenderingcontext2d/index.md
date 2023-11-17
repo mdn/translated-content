@@ -8,15 +8,15 @@ slug: Web/API/CanvasRenderingContext2D
 Para obter um objeto desta interface, chama-se {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} em um `elemento <canvas>`, adicionando "2d" como argumento, veja o exemplo abaixo:
 
 ```js
-var canvas = document.getElementById('meuCanvas'); // em seu HTML esse elemento se parece com <canvas id="meuCanvas"></canvas>
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("meuCanvas"); // em seu HTML esse elemento se parece com <canvas id="meuCanvas"></canvas>
+var ctx = canvas.getContext("2d");
 ```
 
 Agora que você possui o contexto de renderização 2D, você pode desenhar dentro deste canvas. Por exemplo:
 
 ```js
 ctx.fillStyle = "rgb(200,0,0)"; // define a cor de preenchimento do retângulo
-ctx.fillRect(10, 10, 55, 50);   // desenha o retângulo na posição 10, 10 com 55 pixels de largura e uma altura de 50
+ctx.fillRect(10, 10, 55, 50); // desenha o retângulo na posição 10, 10 com 55 pixels de largura e uma altura de 50
 ```
 
 Veja as propriedades e métodos no menu lateral e abaixo. O [tutorial canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial) tem mais informações, exemplos e recursos.
@@ -303,24 +303,13 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.demote()`
   - : This causes a context that is currently using a hardware-accelerated backend to fallback to a software one. All state should be preserved.
 
-### Internet Explorer
-
-- {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
-  - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
-
 ## Especificações
 
-| Specification                                                                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D")}}
-
-## Compatibility notes
-
-- Starting with Gecko 5.0, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate()`, `scale()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
+{{Compat}}
 
 ## Veja também
 

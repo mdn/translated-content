@@ -2,6 +2,7 @@
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
+
 {{JSRef}}
 
 > **경고:** 경고: 엄밀히 말해서 `String.prototype.substr()` 메서드가 더 이상 사용되지 않는, 즉 "웹 표준에서 제거된" 건 아닙니다. 그러나 `substr()`이 포함된 ECMA-262 표준의 [부록 B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers)는 다음과 같이 명시하고 있습니다.> … 본 부록이 포함한 모든 언어 기능과 행동은 하나 이상의 바람직하지 않은 특징을 갖고 있으며 사용처가 없어질 경우 명세에서 제거될 것입니다. …
@@ -40,14 +41,14 @@ str.substr(start[, length])
 ### `substr()` 사용하기
 
 ```js
-var str = 'abcdefghij';
+var str = "abcdefghij";
 
-console.log('(1, 2): '   + str.substr(1, 2));   // '(1, 2): bc'
-console.log('(-3, 2): '  + str.substr(-3, 2));  // '(-3, 2): hi'
-console.log('(-3): '     + str.substr(-3));     // '(-3): hij'
-console.log('(1): '      + str.substr(1));      // '(1): bcdefghij'
-console.log('(-20, 2): ' + str.substr(-20, 2)); // '(-20, 2): ab'
-console.log('(20, 2): '  + str.substr(20, 2));  // '(20, 2): '
+console.log("(1, 2): " + str.substr(1, 2)); // '(1, 2): bc'
+console.log("(-3, 2): " + str.substr(-3, 2)); // '(-3, 2): hi'
+console.log("(-3): " + str.substr(-3)); // '(-3): hij'
+console.log("(1): " + str.substr(1)); // '(1): bcdefghij'
+console.log("(-20, 2): " + str.substr(-20, 2)); // '(-20, 2): ab'
+console.log("(20, 2): " + str.substr(20, 2)); // '(20, 2): '
 ```
 
 ## 폴리필
@@ -56,23 +57,25 @@ Microsoft의 JScript는 시작 인덱스에서 음수값을 지원하지 않습�
 
 ```js
 // only run when the substr() function is broken
-if ('ab'.substr(-1) != 'b') {
+if ("ab".substr(-1) != "b") {
   /**
    *  Get the substring of a string
    *  @param  {integer}  start   where to start the substring
    *  @param  {integer}  length  how many characters to return
    *  @return {string}
    */
-  String.prototype.substr = function(substr) {
-    return function(start, length) {
+  String.prototype.substr = (function (substr) {
+    return function (start, length) {
       // call the original method
-      return substr.call(this,
+      return substr.call(
+        this,
         // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
-        length)
-    }
-  }(String.prototype.substr);
+        length,
+      );
+    };
+  })(String.prototype.substr);
 }
 ```
 

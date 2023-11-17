@@ -1,10 +1,6 @@
 ---
 title: <br> - элемент переноса строки
 slug: Web/HTML/Element/br
-tags:
-  - HTML
-  - Элемент
-translation_of: Web/HTML/Element/br
 ---
 
 {{HTMLSidebar}}
@@ -40,11 +36,11 @@ translation_of: Web/HTML/Element/br
 В следующем примере мы используем элемент `<br>` для разрыва линий в почтовом адресе:
 
 ```html
-Mozilla<br>
-331 E. Evelyn Avenue<br>
-Mountain View, CA<br>
-94041<br>
-USA<br>
+Mozilla<br />
+331 E. Evelyn Avenue<br />
+Mountain View, CA<br />
+94041<br />
+USA<br />
 ```
 
 Результат будет выглядеть так:

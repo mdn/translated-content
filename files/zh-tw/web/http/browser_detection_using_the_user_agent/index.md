@@ -173,7 +173,7 @@ addEventListener(
   function () {
     orientationChanged = true;
   },
-  PASSIVE_LISTENER_OPTION
+  PASSIVE_LISTENER_OPTION,
 );
 
 addEventListener(
@@ -186,8 +186,8 @@ addEventListener(
           mqL[i][1](mqL[i][0]);
       mediaQueryUpdated = orientationChanged = false;
     },
-    0
-  )
+    0,
+  ),
 );
 ```
 

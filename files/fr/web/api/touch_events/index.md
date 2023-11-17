@@ -1,9 +1,6 @@
 ---
 title: Évènements tactiles
 slug: Web/API/Touch_events
-translation_of: Web/API/Touch_events
-original_slug: Web/Guide/DOM/Events/Touch_events
-browser-compat: api.Touch
 ---
 
 {{DefaultAPISidebar("Touch Events")}}
@@ -42,8 +39,9 @@ Dans cet exemple, on suit plusieurs points de contact à la fois, ce qui permet 
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   Votre navigateur ne prend pas en charge l'élément canvas.
 </canvas>
-<br>
-Journal : <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Journal :
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ```css
@@ -61,15 +59,15 @@ Elle met en place les différents gestionnaires d'évènements de l'élément [`
 
 ```js
 function startup() {
-  const el = document.getElementById('canvas');
-  el.addEventListener('touchstart', handleStart);
-  el.addEventListener('touchend', handleEnd);
-  el.addEventListener('touchcancel', handleCancel);
-  el.addEventListener('touchmove', handleMove);
-  log('Initialisation.');
+  const el = document.getElementById("canvas");
+  el.addEventListener("touchstart", handleStart);
+  el.addEventListener("touchend", handleEnd);
+  el.addEventListener("touchcancel", handleCancel);
+  el.addEventListener("touchmove", handleMove);
+  log("Initialisation.");
 }
 
-document.addEventListener('DOMContentLoaded', startup);
+document.addEventListener("DOMContentLoaded", startup);
 ```
 
 #### Suivre les nouvelles touches
@@ -85,18 +83,20 @@ Lorsqu'un évènement [`touchstart`](/fr/docs/Web/API/Element/touchstart_event) 
 ```js
 function handleStart(evt) {
   evt.preventDefault();
-  log('touchstart.');
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  log("touchstart.");
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
     log(`touchstart: ${i}.`);
     ongoingTouches.push(copyTouch(touches[i]));
     const color = colorForTouch(touches[i]);
-    log(`Couleur de cette touche avec l'identifiant ${ touches[i].identifier } = ${ color }`);
+    log(
+      `Couleur de cette touche avec l'identifiant ${touches[i].identifier} = ${color}`,
+    );
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // un cercle au début
+    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // un cercle au début
     ctx.fillStyle = color;
     ctx.fill();
   }
@@ -114,8 +114,8 @@ Chaque fois qu'un ou plusieurs doigts se déplace, un évènement [`touchmove`](
 ```js
 function handleMove(evt) {
   evt.preventDefault();
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -123,17 +123,19 @@ function handleMove(evt) {
     const idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
-      log(`progression du point de touche ${ idx }`);
+      log(`progression du point de touche ${idx}`);
       ctx.beginPath();
-      log(`ctx.moveTo( ${ ongoingTouches[idx].pageX }, ${ ongoingTouches[idx].pageY } );`);
+      log(
+        `ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`,
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      log(`ctx.lineTo( ${ touches[i].pageX }, ${ touches[i].pageY } );`);
+      log(`ctx.lineTo( ${touches[i].pageX}, ${touches[i].pageY} );`);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
       ctx.stroke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // on met à jour le point de contact
+      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // on met à jour le point de contact
     } else {
       log(`impossible de déterminer le point de contact à faire avancer`);
     }
@@ -154,9 +156,9 @@ Lorsque la personne lève le doigt de la surface, un évènement [`touchend`](/f
 ```js
 function handleEnd(evt) {
   evt.preventDefault();
-  log('touchend');
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  log("touchend");
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -169,8 +171,8 @@ function handleEnd(evt) {
       ctx.beginPath();
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // on dessine un carré à la fin
-      ongoingTouches.splice(idx, 1);  // on le retire du tableau de suivi
+      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // on dessine un carré à la fin
+      ongoingTouches.splice(idx, 1); // on le retire du tableau de suivi
     } else {
       log(`impossible de déterminer le point de contact à terminer`);
     }
@@ -187,12 +189,12 @@ Si le doigt de la personne va jusqu'à l'interface utilisateur du navigateur ou 
 ```js
 function handleCancel(evt) {
   evt.preventDefault();
-  log('touchcancel.');
+  log("touchcancel.");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
     let idx = ongoingTouchIndexById(touches[i].identifier);
-    ongoingTouches.splice(idx, 1);  // on le retire du tableau de suivi
+    ongoingTouches.splice(idx, 1); // on le retire du tableau de suivi
   }
 }
 ```
@@ -245,7 +247,7 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1;    // non trouvé
+  return -1; // non trouvé
 }
 ```
 
@@ -253,8 +255,8 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  const container = document.getElementById('log');
-  container.textContent = `${ msg } \n${ container.textContent }`;
+  const container = document.getElementById("log");
+  container.textContent = `${msg} \n${container.textContent}`;
 }
 ```
 
@@ -280,31 +282,48 @@ En appelant `preventDefault()` sur un évènement [`touchstart`](/fr/docs/Web/AP
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == 'touchend' && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type == "touchend" && evt.touches.length > 0)
+  )
     return;
 
-  const newEvt = document.createEvent('MouseEvents');
+  const newEvt = document.createEvent("MouseEvents");
   let type = null;
   let touch = null;
 
   switch (evt.type) {
-    case 'touchstart':
-      type = 'mousedown';
+    case "touchstart":
+      type = "mousedown";
       touch = evt.changedTouches[0];
       break;
-    case 'touchmove':
-      type = 'mousemove';
+    case "touchmove":
+      type = "mousemove";
       touch = evt.changedTouches[0];
       break;
-    case 'touchend':
-      type = 'mouseup';
+    case "touchend":
+      type = "mouseup";
       touch = evt.changedTouches[0];
       break;
   }
 
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shiftKey,
+    evt.metaKey,
+    0,
+    null,
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```

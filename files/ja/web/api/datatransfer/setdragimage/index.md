@@ -14,7 +14,7 @@ slug: Web/API/DataTransfer/setDragImage
 ## 構文
 
 ```js
-setDragImage(imgElement, xOffset, yOffset)
+setDragImage(imgElement, xOffset, yOffset);
 ```
 
 ### 引数

@@ -26,7 +26,7 @@ HTTP の **`Authorization`** リクエストヘッダーは、ユーザーエー
 
 ## 構文
 
-```html
+```http
 Authorization: <type> <credentials>
 ```
 
@@ -58,10 +58,10 @@ Apache や nginx サーバーで HTTP Basic 認証を使用してサイトを保
 
 ## 仕様書
 
-| 仕様書                                               | 題名                                   |
-| ---------------------------------------------------- | -------------------------------------- |
+| 仕様書                                  | 題名                                   |
+| --------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                 | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                         | The 'Basic' HTTP Authentication Scheme |
 
 ## 関連情報
 

@@ -1,7 +1,6 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-original_slug: Web/JavaScript/Referencia/Sentencias/block
 ---
 
 {{jsSidebar("Statements")}}
@@ -25,7 +24,7 @@ Esta sentencia se utiliza comúnmente para controlar sentencias de flujo (es dec
 
 ```js
 while (x < 10) {
-   x++;
+  x++;
 }
 ```
 
@@ -34,7 +33,7 @@ Las variables declaradas con `var` **no** tienen alcance de bloque(block scope).
 ```js
 var x = 1;
 {
-   var x = 2;
+  var x = 2;
 }
 alert(x); // resultado 2
 ```
@@ -72,12 +71,12 @@ Tenga en cuenta que la variable `const c = 2 con alcance de bloque`, **_no_ lanz
 La [declaración de una función](/es/docs/Web/JavaScript/Reference/Statements/function) también tiene un alcance limitado dentro del bloque donde se produce la declaración:
 
 ```js
-nacion('frances');  // TypeError: nacion no es una función
+nacion("frances"); // TypeError: nacion no es una función
 {
   function nacion(nacionalidad) {
-   console.log('Yo soy ' + nacionalidad);
+    console.log("Yo soy " + nacionalidad);
   }
-nacion('español'); // correcto. logs Yo soy español
+  nacion("español"); // correcto. logs Yo soy español
 }
 ```
 

@@ -1,14 +1,6 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/replace
 ---
 
 {{JSRef}}

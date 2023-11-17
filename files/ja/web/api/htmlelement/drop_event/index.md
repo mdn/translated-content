@@ -83,18 +83,18 @@ body {
 let dragged = null;
 
 const source = document.getElementById("draggable");
-source.addEventListener("dragstart", event => {
+source.addEventListener("dragstart", (event) => {
   // ドラッグ中の要素の参照を保存
   dragged = event.target;
 });
 
 const target = document.getElementById("droptarget");
-target.addEventListener("dragover", event => {
+target.addEventListener("dragover", (event) => {
   // ドロップできるように既定の動作を停止
   event.preventDefault();
 });
 
-target.addEventListener("drop", event => {
+target.addEventListener("drop", (event) => {
   // 既定の動作（一部の要素でリンクとして開く）を行わないようにする。
   event.preventDefault();
   // ドラッグした要素を選択されたドロップターゲットに移動する

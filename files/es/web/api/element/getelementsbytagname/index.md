@@ -12,7 +12,7 @@ Devuelve una lista de elementos que tienen un [tag name](/es/DOM/element.tagName
 ## Sintaxis
 
 ```js
-elements =element.getElementsByTagName(tagName)
+elements = element.getElementsByTagName(tagName);
 ```
 
 - `elements` es un `NodeList` del elemento encontrado en el orden en que aparece en el árbol.
@@ -30,10 +30,10 @@ elements =element.getElementsByTagName(tagName)
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagName("td");
 for (var i = 0; i < cells.length; i++) {
-    status = cells[i].getAttribute("status");
-    if ( status == "open") {
-        // grab the data
-    }
+  status = cells[i].getAttribute("status");
+  if (status == "open") {
+    // grab the data
+  }
 }
 ```
 

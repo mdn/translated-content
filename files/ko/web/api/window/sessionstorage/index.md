@@ -36,7 +36,7 @@ myStorage = window.sessionStorage;
 아래 코드는 현재 출처의 세션 {{domxref("Storage")}} 객체에 접근한 후, {{domxref("Storage.setItem()")}}을 사용해 항목 하나를 추가합니다.
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 다음 예제는 텍스트 필드의 문장을 자동 저장하여 브라우저가 의도치 않게 재시작 되었을 경우 자동으로 텍스트 필드의 내용을 저장된 문장으로 복구하여 작성한 내용이 사라지지 않게 합니다.
@@ -53,7 +53,7 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // 텍스트 입력 칸의 변화 수신
-field.addEventListener("change", function() {
+field.addEventListener("change", function () {
   // 결과를 세션에 저장
   sessionStorage.setItem("autosave", field.value);
 });

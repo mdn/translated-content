@@ -14,12 +14,12 @@ slug: Glossary/Call_stack
 
 ```js
 function greeting() {
-   // [1] Some codes here
-   sayHi();
-   // [2] Some codes here
+  // [1] Some codes here
+  sayHi();
+  // [2] Some codes here
 }
 function sayHi() {
-   return "Hi!";
+  return "Hi!";
 }
 
 // 调用 `greeting` 函数
@@ -34,31 +34,29 @@ greeting();
 2. 把 `greeting()` 添加进调用栈列表。
 3. 执行 `greeting()` 函数体中的所有代码。
 
-    > 调用栈列表：
-    > \- greeting
+   > 调用栈列表：
+   > \- greeting
 
 4. 代码执行到 `sayHi()` 时，该函数被调用。
 5. 把 `sayHi()` 添加进调用栈列表。
 6. 执行 `sayHi()` 函数体中的代码，直到全部执行完毕。
 
-    > 调用栈列表：
-    > \- sayHi
-    > \- greeting
+   > 调用栈列表：
+   > \- sayHi
+   > \- greeting
 
 7. 返回来继续执行 `greeting()` 函数体中 `sayHi()` 后面的代码。
 8. 删除调用栈列表中的 `sayHi()` 函数。
 9. 当 `greeting()` 函数体中的代码全部执行完毕，返回到调用 `greeting()` 的代码行，继续执行剩下的 JS 代码。
 
-    > 调用栈列表：
-    > \- greeting
+   > 调用栈列表：
+   > \- greeting
 
 10. 删除调用栈列表中的 `greeting()` 函数。
 
 一开始，我们得到一个空空如也的调用栈。随后，每当有函数被调用都会自动地添加进调用栈，执行完函数体中的代码后，调用栈又会自动地移除这个函数。最后，我们又得到了一个空空如也的调用栈。
 
-## 了解更多
-
-### 基础知识
+## 参见
 
 - Wikipedia 上的 [调用栈](https://zh.wikipedia.org/wiki/调用栈)
 - [MDN Web 文档中的术语](/zh-CN/docs/Glossary)

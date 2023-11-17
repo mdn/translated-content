@@ -1,12 +1,6 @@
 ---
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
-tags:
-  - CSS
-  - Guide
-  - Recette
-  - flexbox
-translation_of: Web/CSS/Layout_cookbook/Pagination
 ---
 
 {{CSSRef}}
@@ -63,7 +57,7 @@ Voir la section « Voir aussi » en fin d'article pour divers liens portants sur
 
 - {{Cssxref("justify-content")}}
 - {{Cssxref("column-gap")}}
-- _[Know your ARIA: 'Hidden' vs 'None' (en anglais)](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
+- _[Know your ARIA: 'Hidden' vs 'None' (en anglais)](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)_
 - [Utiliser le contenu invisible pour les lecteurs d'écran (en anglais)](https://webaim.org/techniques/css/invisiblecontent/#techniques)
 - [Écrire du CSS sans oublier l'accessibilité (en anglais)](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
 - [Guide stylistique d'accessibilité : la pagination](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)

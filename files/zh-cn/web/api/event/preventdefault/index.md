@@ -30,10 +30,15 @@ event.preventDefault();
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
-         event.preventDefault();
-}, false);
+document.querySelector("#id-checkbox").addEventListener(
+  "click",
+  function (event) {
+    document.getElementById("output-box").innerHTML +=
+      "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 #### HTML
@@ -43,7 +48,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 <form>
   <label for="id-checkbox">Checkbox:</label>
-  <input type="checkbox" id="id-checkbox"/>
+  <input type="checkbox" id="id-checkbox" />
 </form>
 
 <div id="output-box"></div>
@@ -68,7 +73,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
   <p>Please enter your name using lowercase letters only.</p>
 
   <form>
-    <input type="text" id="my-textbox">
+    <input type="text" id="my-textbox" />
   </form>
 </div>
 ```
@@ -93,8 +98,8 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 这里是相关的 JavaScript 代码。首先，监听 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件：
 
 ```js
-var myTextbox = document.getElementById('my-textbox');
-myTextbox.addEventListener('keypress', checkName, false);
+var myTextbox = document.getElementById("my-textbox");
+myTextbox.addEventListener("keypress", checkName, false);
 ```
 
 `checkName()` 方法可以监听按键并且决定是否允许按键的默认行为发生。
@@ -106,8 +111,11 @@ function checkName(evt) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
-        "Please use lowercase letters only."
-        + "\n" + "charCode: " + charCode + "\n"
+        "Please use lowercase letters only." +
+          "\n" +
+          "charCode: " +
+          charCode +
+          "\n",
       );
     }
   }
@@ -131,10 +139,10 @@ function displayWarning(msg) {
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function() {
-      warningBox.parentNode.removeChild(warningBox);
-      warningTimeout = -1;
-    }, 2000);
+  warningTimeout = window.setTimeout(function () {
+    warningBox.parentNode.removeChild(warningBox);
+    warningTimeout = -1;
+  }, 2000);
 }
 ```
 

@@ -1,196 +1,135 @@
 ---
-title: Transforming XML with XSLT
+title: 使用 XSLT 转换 XML
 slug: Web/XSLT/Transforming_XML_with_XSLT
 ---
 
-### An Overview
+{{XsltSidebar}}
 
-The separation of content and presentation is a key design feature of [XML](cn/XML). The structure of an XML document is designed to reflect and clarify important relationships among the individual aspects of the content itself, unhindered by a need to provide any indication about how this data should eventually be presented. This intelligent structuring is particularly important as more and more data transfers are automated and take place between highly heterogeneous machines linked by a network.
+## 概览
 
-Yet eventually much of the content stored in XML documents will need to be presented to human readers. Because a browser provides a familiar and highly flexible interface, it is an ideal mechanism for delivering such presentation versions of XML content. Built from the ground up utilizing a wide variety of XML technologies, Mozilla incorporates within itself all of the mechanisms needed to process both original XML documents and the specialized stylesheets used to style and lay them out for HTML display, reducing server load with client-side processing.
+[概览](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT/An_Overview)
 
-At present, Gecko (the layout engine behind Mozilla and Firefox) supports two forms of XML stylesheets. For basic control of appearance -- fonts, colors, position, and so forth -- Gecko uses [CSS](cn/CSS), familiar from "DHTML". All of CSS1 and most of CSS2 are supported. Support for the emerging CSS3 standard is under development. For further information about CSS, see [Eric Meyer's CSS pages](http://www.meyerweb.com/eric/css/).
+内容和表示分离是 [XML](/zh-CN/docs/Web/XML) 的一个关键设计特性。XML 文档的结构被设计成反映和阐明内容本身的各方面之间的重要关系，而不受需要提供有关此数据最终应该如何呈现的任何指示的障碍。这种智能的结构尤为重要，特别是在越来越多的数据在通过网络连接的高度异构的机器之间自动化传输的趋势下。
 
-Our focus here is on the second type of stylesheet that Gecko supports: the XSLT stylesheet. XSLT stands for eXtensible Stylesheet Language/Transform and the name is apt. XSLT allows a stylesheet author to transform a primary XML document in two significant ways: manipulating and sorting the content, including a wholesale reordering of it if so desired, and transforming the content into a different format (and in the case of Mozilla, the focus is on converting it on the fly into HTML which can then be displayed by the browser).
+然而，最终存储在 XML 文档中的大部分内容都需要呈现给人类。因为浏览器提供了一个熟悉且高度灵活的界面，所以它是传递此类呈现给人类的 XML 内容的理想机制。Firefox 利用各类 XML 技术从头开始构建，将处理原始 XML 文档和用于为显示的 HTML 设置样式和布局的专用样式表所需的机制合并到一起，从而通过客户端处理来减少服务器的负载。
 
-### XSLT/XPath reference
+目前，Gecko（Firefox 的排版引擎）支持两种形式的 XML 样式表。对于外观的基本控制（字体、颜色、位置等），Gecko 使用 [CSS](/zh-CN/docs/Web/CSS)。
 
-#### Elements
+我们这里的重点是 Gecko 支持的第二种样式表：XSLT 样式表。XSLT 代表可扩展样式表转换语言（eXtensible Stylesheet Language/Transform），这个名字很贴切。XSLT 允许样式表的作者以两种重要的方式转换主 XML 文档：对文档进行操作和排序，包括在需要的情况下进行整体重排序，以及将内容转换为不同的格式（以 Firefox 为例，则重点是将其即时转换为后续可用浏览器显示的 HTML）。
 
-- [xsl:apply-imports](cn/XSLT/apply-imports)
-  _(supported)_
-- [xsl:apply-templates](cn/XSLT/apply-templates)
-  _(supported)_
-- [xsl:attribute](cn/XSLT/attribute)
-  _(supported)_
-- [xsl:attribute-set](cn/XSLT/attribute-set)
-  _(supported)_
-- [xsl:call-template](cn/XSLT/call-template)
-  _(supported)_
-- [xsl:choose](cn/XSLT/choose)
-  _(supported)_
-- [xsl:comment](cn/XSLT/comment)
-  _(supported)_
-- [xsl:copy](cn/XSLT/copy)
-  _(supported)_
-- [xsl:copy-of](cn/XSLT/copy-of)
-  _(supported)_
-- [xsl:decimal-format](cn/XSLT/decimal-format)
-  _(supported)_
-- [xsl:element](cn/XSLT/element)
-  _(supported)_
-- [xsl:fallback](cn/XSLT/fallback)
-  _(not supported)_
-- [xsl:for-each](cn/XSLT/for-each)
-  _(supported)_
-- [xsl:if](cn/XSLT/if)
-  _(supported)_
-- [xsl:import](cn/XSLT/import)
-  _(mostly supported)_
-- [xsl:include](cn/XSLT/include)
-  _(supported)_
-- [xsl:key](cn/XSLT/key)
-  _(supported)_
-- [xsl:message](cn/XSLT/message)
-  _(supported)_
-- [xsl:namespace-alias](cn/XSLT/namespace-alias)
-  _(not supported)_
-- [xsl:number](cn/XSLT/number)
-  _(partially supported)_
-- [xsl:otherwise](cn/XSLT/otherwise)
-  _(supported)_
-- [xsl:output](cn/XSLT/output)
-  _(partially supported)_
-- [xsl:param](cn/XSLT/param)
-  _(supported)_
-- [xsl:preserve-space](cn/XSLT/preserve-space)
-  _(supported)_
-- [xsl:processing-instruction](cn/XSLT/processing-instruction)
-- [xsl:sort](cn/XSLT/sort)
-  _(supported)_
-- [xsl:strip-space](cn/XSLT/strip-space)
-  _(supported)_
-- [xsl:stylesheet](cn/XSLT/stylesheet)
-  _(partially supported)_
-- [xsl:template](cn/XSLT/template)
-  _(supported)_
-- [xsl:text](cn/XSLT/text)
-  _(partially supported)_
-- [xsl:transform](cn/XSLT/transform)
-  _(supported)_
-- [xsl:value-of](cn/XSLT/value-of)
-  _(partially supported)_
-- [xsl:variable](cn/XSLT/variable)
-  _(supported)_
-- [xsl:when](cn/XSLT/when)
-  _(supported)_
-- [xsl:with-param](cn/XSLT/with-param)
-  _(supported)_
+## XSLT/XPath 参考
 
-#### Axes
+### 元素
 
-- [ancestor](cn/XPath/Axes/ancestor)
-- [ancestor-or-self](cn/XPath/Axes/ancestor-or-self)
-- [attribute](cn/XPath/Axes/attribute)
-- [child](cn/XPath/Axes/child)
-- [descendant](cn/XPath/Axes/descendant)
-- [descendant-or-self](cn/XPath/Axes/descendant-or-self)
-- [following](cn/XPath/Axes/following)
-- [following-sibling](cn/XPath/Axes/following-sibling)
-- [namespace](cn/XPath/Axes/namespace)
-  _(not supported)_
-- [parent](cn/XPath/Axes/parent)
-- [preceding](cn/XPath/Axes/preceding)
-- [preceding-sibling](cn/XPath/Axes/preceding-sibling)
-- [self](cn/XPath/Axes/self)
+[元素](/zh-CN/docs/Web/XSLT/Element)
 
-#### Functions
+- [xsl:apply-imports](/zh-CN/docs/Web/XSLT/Element/apply-imports)（_支持_）
+- [xsl:apply-templates](/zh-CN/docs/Web/XSLT/Element/apply-templates)（_支持_）
+- [xsl:attribute](/zh-CN/docs/Web/XSLT/Element/attribute)（_支持_）
+- [xsl:attribute-set](/zh-CN/docs/Web/XSLT/Element/attribute-set)（_支持_）
+- [xsl:call-template](/zh-CN/docs/Web/XSLT/Element/call-template)（_支持_）
+- [xsl:choose](/zh-CN/docs/Web/XSLT/Element/choose)（_支持_）
+- [xsl:comment](/zh-CN/docs/Web/XSLT/Element/comment)（_支持_）
+- [xsl:copy](/zh-CN/docs/Web/XSLT/Element/copy)（_支持_）
+- [xsl:copy-of](/zh-CN/docs/Web/XSLT/Element/copy-of)（_支持_）
+- [xsl:decimal-format](/zh-CN/docs/Web/XSLT/Element/decimal-format)（_支持_）
+- [xsl:element](/zh-CN/docs/Web/XSLT/Element/element)（_支持_）
+- [xsl:fallback](/zh-CN/docs/Web/XSLT/Element/fallback)（_不支持_）
+- [xsl:for-each](/zh-CN/docs/Web/XSLT/Element/for-each)（_支持_）
+- [xsl:if](/zh-CN/docs/Web/XSLT/Element/if)（_支持_）
+- [xsl:import](/zh-CN/docs/Web/XSLT/Element/import) _(mostly supported)_
+- [xsl:include](/zh-CN/docs/Web/XSLT/Element/include)（_支持_）
+- [xsl:key](/zh-CN/docs/Web/XSLT/Element/key)（_支持_）
+- [xsl:message](/zh-CN/docs/Web/XSLT/Element/message)（_支持_）
+- [xsl:namespace-alias](/zh-CN/docs/Web/XSLT/Element/namespace-alias)（_不支持_）
+- [xsl:number](/zh-CN/docs/Web/XSLT/Element/number)（_部分支持_）
+- [xsl:otherwise](/zh-CN/docs/Web/XSLT/Element/otherwise)（_支持_）
+- [xsl:output](/zh-CN/docs/Web/XSLT/Element/output)（_部分支持_）
+- [xsl:param](/zh-CN/docs/Web/XSLT/Element/param)（_支持_）
+- [xsl:preserve-space](/zh-CN/docs/Web/XSLT/Element/preserve-space)（_支持_）
+- [xsl:processing-instruction](/zh-CN/docs/Web/XSLT/Element/processing-instruction)
+- [xsl:sort](/zh-CN/docs/Web/XSLT/Element/sort)（_支持_）
+- [xsl:strip-space](/zh-CN/docs/Web/XSLT/Element/strip-space)（_支持_）
+- [xsl:stylesheet](/zh-CN/docs/Web/XSLT/Element/stylesheet)（_部分支持_）
+- [xsl:template](/zh-CN/docs/Web/XSLT/Element/template)（_支持_）
+- [xsl:text](/zh-CN/docs/Web/XSLT/Element/text)（_部分支持_）
+- [xsl:transform](/zh-CN/docs/Web/XSLT/Element/transform)（_支持_）
+- [xsl:value-of](/zh-CN/docs/Web/XSLT/Element/value-of)（_部分支持_）
+- [xsl:variable](/zh-CN/docs/Web/XSLT/Element/variable)（_支持_）
+- [xsl:when](/zh-CN/docs/Web/XSLT/Element/when)（_支持_）
+- [xsl:with-param](/zh-CN/docs/Web/XSLT/Element/with-param)（_支持_）
 
-- [boolean()](cn/XPath/Functions/boolean)
-  _(supported)_
-- [ceiling()](cn/XPath/Functions/ceiling)
-  _(supported)_
-- [concat()](cn/XPath/Functions/concat)
-  _(supported)_
-- [contains()](cn/XPath/Functions/contains)
-  _(supported)_
-- [count()](cn/XPath/Functions/count)
-  _(supported)_
-- [current()](cn/XPath/Functions/current)
-  _(supported)_
-- [document()](cn/XPath/Functions/document)
-  _(supported)_
-- [element-available()](cn/XPath/Functions/element-available)
-  _(supported)_
-- [false()](cn/XPath/Functions/false)
-  _(supported)_
-- [floor()](cn/XPath/Functions/floor)
-  _(supported)_
-- [format-number()](cn/XPath/Functions/format-number)
-  _(supported)_
-- [function-available()](cn/XPath/Functions/function-available)
-  _(supported)_
-- [generate-id()](cn/XPath/Functions/generate-id)
-  _(supported)_
-- [id()](cn/XPath/Functions/id)
-  _(partially supported)_
-- [key()](cn/XPath/Functions/key)
-  _(supported)_
-- [lang()](cn/XPath/Functions/lang)
-  _(supported)_
-- [last()](cn/XPath/Functions/last)
-  _(supported)_
-- [local-name()](cn/XPath/Functions/local-name)
-  _(supported)_
-- [name()](cn/XPath/Functions/name)
-  _(supported)_
-- [namespace-uri()](cn/XPath/Functions/namespace-uri)
-  _(supported)_
-- [normalize-space()](cn/XPath/Functions/normalize-space)
-  _(supported)_
-- [not()](cn/XPath/Functions/not)
-  _(supported)_
-- [number()](cn/XPath/Functions/number)
-  _(supported)_
-- [position()](cn/XPath/Functions/position)
-  _(supported)_
-- [round()](cn/XPath/Functions/round)
-  _(supported)_
-- [starts-with()](cn/XPath/Functions/starts-with)
-  _(supported)_
-- [string()](cn/XPath/Functions/string)
-  _(supported)_
-- [string-length()](cn/XPath/Functions/string-length)
-  _(supported)_
-- [substring()](cn/XPath/Functions/substring)
-  _(supported)_
-- [substring-after()](cn/XPath/Functions/substring-after)
-  _(supported)_
-- [substring-before()](cn/XPath/Functions/substring-before)
-  _(supported)_
-- [sum()](cn/XPath/Functions/sum)
-  _(supported)_
-- [system-property()](cn/XPath/Functions/system-property)
-  _(supported)_
-- [translate()](cn/XPath/Functions/translate)
-  _(supported)_
-- [true()](cn/XPath/Functions/true)
-  _(supported)_
-- [unparsed-entity-url()](cn/XPath/Functions/unparsed-entity-url)
-  _(not supported)_
+### 轴
 
-### For Further Reading
+[轴](/zh-CN/docs/Web/XPath/Axes)
 
-- [Books](cn/Transforming_XML_with_XSLT/For_Further_Reading#Books)
-- [Online](cn/Transforming_XML_with_XSLT/For_Further_Reading#Online)
+- [ancestor](/zh-CN/docs/Web/XPath/Axes#ancestor)
+- [ancestor-or-self](/zh-CN/docs/Web/XPath/Axes#ancestor-or-self)
+- [attribute](/zh-CN/docs/Web/XPath/Axes#attribute)
+- [child](/zh-CN/docs/Web/XPath/Axes#child)
+- [descendant](/zh-CN/docs/Web/XPath/Axes#descendant)
+- [descendant-or-self](/zh-CN/docs/Web/XPath/Axes#descendant-or-self)
+- [following](/zh-CN/docs/Web/XPath/Axes#following)
+- [following-sibling](/zh-CN/docs/Web/XPath/Axes#following-sibling)
+- [namespace](/zh-CN/docs/Web/XPath/Axes#namespace)（_不支持_）
+- [parent](/zh-CN/docs/Web/XPath/Axes#parent)
+- [preceding](/zh-CN/docs/Web/XPath/Axes#preceding)
+- [preceding-sibling](/zh-CN/docs/Web/XPath/Axes#preceding-sibling)
+- [self](/zh-CN/docs/Web/XPath/Axes#self)
 
-  - [The World Wide Web Consortium](cn/Transforming_XML_with_XSLT/For_Further_Reading#The_World_Wide_Web_Consortium)
-  - [Portals](cn/Transforming_XML_with_XSLT/For_Further_Reading#Portals)
-  - [Articles](cn/Transforming_XML_with_XSLT/For_Further_Reading#Articles)
-  - [Tutorials/Examples](cn/Transforming_XML_with_XSLT/For_Further_Reading#Tutorials.2FExamples)
-  - [Mailing Lists/Newsgroups](cn/Transforming_XML_with_XSLT/For_Further_Reading#Mailing_Lists.2FNewsgroups)
+### 函数
 
-### Original Document Information
+[函数](/zh-CN/docs/Web/XPath/Functions)
 
-- Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.
-- Note: This reprinted article was originally part of the DevEdge site.
+- [boolean()](/zh-CN/docs/Web/XPath/Functions/boolean)（_支持_）
+- [ceiling()](/zh-CN/docs/Web/XPath/Functions/ceiling)（_支持_）
+- [concat()](/zh-CN/docs/Web/XPath/Functions/concat)（_支持_）
+- [contains()](/zh-CN/docs/Web/XPath/Functions/contains)（_支持_）
+- [count()](/zh-CN/docs/Web/XPath/Functions/count)（_支持_）
+- [current()](/zh-CN/docs/Web/XPath/Functions/current)（_支持_）
+- [document()](/zh-CN/docs/Web/XPath/Functions/document)（_支持_）
+- [element-available()](/zh-CN/docs/Web/XPath/Functions/element-available)（_支持_）
+- [false()](/zh-CN/docs/Web/XPath/Functions/false)（_支持_）
+- [floor()](/zh-CN/docs/Web/XPath/Functions/floor)（_支持_）
+- [format-number()](/zh-CN/docs/Web/XPath/Functions/format-number)（_支持_）
+- [function-available()](/zh-CN/docs/Web/XPath/Functions/function-available)（_支持_）
+- [generate-id()](/zh-CN/docs/Web/XPath/Functions/generate-id)（_支持_）
+- [id()](/zh-CN/docs/Web/XPath/Functions/id)（_部分支持_）
+- [key()](/zh-CN/docs/Web/XPath/Functions/key)（_支持_）
+- [lang()](/zh-CN/docs/Web/XPath/Functions/lang)（_支持_）
+- [last()](/zh-CN/docs/Web/XPath/Functions/last)（_支持_）
+- [local-name()](/zh-CN/docs/Web/XPath/Functions/local-name)（_支持_）
+- [name()](/zh-CN/docs/Web/XPath/Functions/name)（_支持_）
+- [namespace-uri()](/zh-CN/docs/Web/XPath/Functions/namespace-uri)（_支持_）
+- [normalize-space()](/zh-CN/docs/Web/XPath/Functions/normalize-space)（_支持_）
+- [not()](/zh-CN/docs/Web/XPath/Functions/not)（_支持_）
+- [number()](/zh-CN/docs/Web/XPath/Functions/number)（_支持_）
+- [position()](/zh-CN/docs/Web/XPath/Functions/position)（_支持_）
+- [round()](/zh-CN/docs/Web/XPath/Functions/round)（_支持_）
+- [starts-with()](/zh-CN/docs/Web/XPath/Functions/starts-with)（_支持_）
+- [string()](/zh-CN/docs/Web/XPath/Functions/string)（_支持_）
+- [string-length()](/zh-CN/docs/Web/XPath/Functions/string-length)（_支持_）
+- [substring()](/zh-CN/docs/Web/XPath/Functions/substring)（_支持_）
+- [substring-after()](/zh-CN/docs/Web/XPath/Functions/substring-after)（_支持_）
+- [substring-before()](/zh-CN/docs/Web/XPath/Functions/substring-before)（_支持_）
+- [sum()](/zh-CN/docs/Web/XPath/Functions/sum)（_支持_）
+- [system-property()](/zh-CN/docs/Web/XPath/Functions/system-property)（_支持_）
+- [translate()](/zh-CN/docs/Web/XPath/Functions/translate)（_支持_）
+- [true()](/zh-CN/docs/Web/XPath/Functions/true)（_支持_）
+- [unparsed-entity-url()](/zh-CN/docs/Web/XPath/Functions/unparsed-entity-url)（_不支持_）
+
+## 扩展阅读
+
+[扩展阅读](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading)
+
+- [图书](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#图书)
+- [数字内容](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#数字内容)
+  - [网站](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#网站)
+  - [文章](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#文章)
+  - [教程/示例](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#教程示例)
+  - [其他](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#其他)
+
+## 原始文档信息
+
+- 版权信息：Copyright © 2001-2003 Netscape. All rights reserved.
+- 注意：这篇转载文章最初是 DevEdge 的一部分。

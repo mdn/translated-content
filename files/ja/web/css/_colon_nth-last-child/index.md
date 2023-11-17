@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-child()'
+title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
 ---
 
@@ -92,12 +92,12 @@ table {
 }
 
 /* 最後から 3 つの要素を選択 */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 
 /* 後ろから 2 番目から最初までの要素を選択 */
-tr:nth-last-child(n+2) {
+tr:nth-last-child(n + 2) {
   color: blue;
 }
 
@@ -113,7 +113,7 @@ tr:nth-last-child(2) {
 
 ### 数量クエリー
 
-*数量クエリー*は、要素が存在する数に応じてスタイル付けします。この例では、リストの中に項目が3つ以上ある場合にリスト項目が赤に変わります。これは `nth-last-child` 擬似クラスと [一般兄弟結合子](/ja/docs/Web/CSS/General_sibling_combinator)の機能を組み合わせることで実現できます。
+*数量クエリー*は、要素が存在する数に応じてスタイル付けします。この例では、リストの中に項目が3つ以上ある場合にリスト項目が赤に変わります。これは `nth-last-child` 擬似クラスと [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)の機能を組み合わせることで実現できます。
 
 #### HTML
 
@@ -138,7 +138,7 @@ tr:nth-last-child(2) {
 ```css
 /* 3 つ以上のリスト項目がある場合、
    すべてにスタイル付けする */
-li:nth-last-child(n+3),
+li:nth-last-child(n + 3),
 li:nth-last-child(3) ~ li {
   color: red;
 }

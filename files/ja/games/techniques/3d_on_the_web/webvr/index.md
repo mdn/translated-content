@@ -25,7 +25,7 @@ Oculus Rift の人気とその他の多くの機器が間もなく市場に登�
 
 ### ブラウザーの対応と仕様書の状態
 
-現在、 WebVR API のブラウザー対応はまだ実験的です — [nightly builds of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/) と [experimental builds of Chrome](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&amp;usp=sharing#list) で動作しますが（Mozilla と Google が一丸となって実装に取り組みます）、遅かれ早かれ通常のビルドで見ることができるようになるでしょう。
+現在、 WebVR API のブラウザー対応はまだ実験的です — [nightly builds of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/) と [experimental builds of Chrome](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&usp=sharing#list) で動作しますが（Mozilla と Google が一丸となって実装に取り組みます）、遅かれ早かれ通常のビルドで見ることができるようになるでしょう。
 
 [WebVR 仕様](http://mozvr.github.io/webvr-spec/webvr.html)は、編集者草案の状態にあり、これはまだ変更される可能性があることを意味します。 開発は、Mozilla の [Vladimir Vukicevic](https://twitter.com/vvuk) と Google の [Brandon Jones](https://twitter.com/tojiro) が主導しています。 詳細については、 <https://mixedreality.mozilla.org/> および [WebVR.info](https://webvr.info/) のウェブサイトにアクセスしてください。
 
@@ -38,7 +38,7 @@ WebVR API は、ヘッドセットの両方のレンズに[立体画像](/ja/doc
 コンピューターに接続されている機器に関する情報を取得するには、次のように {{domxref("Navigator/getVRDisplays")}} メソッドを使用できます。
 
 ```js
-navigator.getVRDevices().then(function(devices) {
+navigator.getVRDevices().then(function (devices) {
   for (var i = 0; i < devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];
@@ -47,8 +47,10 @@ navigator.getVRDevices().then(function(devices) {
   }
   if (gHMD) {
     for (var i = 0; i < devices.length; ++i) {
-      if (devices[i] instanceof PositionSensorVRDevice
-         && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
+      if (
+        devices[i] instanceof PositionSensorVRDevice &&
+        devices[i].hardwareUnitId === gHMD.hardwareUnitId
+      ) {
         gPositionSensor = devices[i];
         break;
       }
@@ -60,10 +62,10 @@ navigator.getVRDevices().then(function(devices) {
 このコードは、利用可能な機器をループして、適切なセンサーをヘッドセットに割り当てます。最初の `devices` 配列には、接続された機器が含まれており、{{domxref("HMDVRDevice")}} を見つけるためのチェックが行われ、変数 `gHMD` に割り当てられます。これを使用して、シーンを設定し、目のパラメーターを得て、フィールドオブビュー等を設定することができます。例として
 
 ```js
-function setCustomFOV(up,right,down,left) {
-  var testFOV = new VRFieldOfView(up,right,down,left);
+function setCustomFOV(up, right, down, left) {
+  var testFOV = new VRFieldOfView(up, right, down, left);
 
-  gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
+  gHMD.setFieldOfView(testFOV, testFOV, 0.01, 10000.0);
 }
 ```
 
@@ -73,13 +75,17 @@ function setCustomFOV(up,right,down,left) {
 function setView() {
   var posState = gPositionSensor.getState();
 
-  if(posState.hasPosition) {
-    posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
-                                + roundToTwo(posState.position.y) + " z"
-                                + roundToTwo(posState.position.z);
+  if (posState.hasPosition) {
+    posPara.textContent =
+      "Position: x" +
+      roundToTwo(posState.position.x) +
+      " y" +
+      roundToTwo(posState.position.y) +
+      " z" +
+      roundToTwo(posState.position.z);
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
-    if(-posState.position.z > 0.01) {
+    if (-posState.position.z > 0.01) {
       zPos = -posState.position.z;
     } else {
       zPos = 0.01;
@@ -87,7 +93,6 @@ function setView() {
   }
 
   // …
-
 }
 ```
 

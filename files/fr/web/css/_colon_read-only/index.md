@@ -1,11 +1,6 @@
 ---
-title: ':read-only'
+title: ":read-only"
 slug: Web/CSS/:read-only
-tags:
-  - CSS
-  - Pseudo-classe
-  - Refrence
-translation_of: Web/CSS/:read-only
 ---
 
 {{CSSRef}}
@@ -38,25 +33,33 @@ input:read-only {
 ### CSS
 
 ```css
-input { min-width: 25em; }
-input:-moz-read-only { background: cyan; }
-input:read-only { background: cyan; }
+input {
+  min-width: 25em;
+}
+input:-moz-read-only {
+  background: cyan;
+}
+input:read-only {
+  background: cyan;
+}
 
-p:-moz-read-only { background: lightgray; }
-p:read-only { background: lightgray; }
-p[contenteditable="true"] { color: blue; }
+p:-moz-read-only {
+  background: lightgray;
+}
+p:read-only {
+  background: lightgray;
+}
+p[contenteditable="true"] {
+  color: blue;
+}
 ```
 
 ### HTML
 
 ```html
 <input type="text" value="Un champ en lecture seule" readonly />
-<p contenteditable="true">
-  Essayez un peu d'éditer ce paragraphe.
-</p>
-<p>
-  Bonne chance pour celui-là !
-</p>
+<p contenteditable="true">Essayez un peu d'éditer ce paragraphe.</p>
+<p>Bonne chance pour celui-là !</p>
 ```
 
 ### Résultat

@@ -43,19 +43,19 @@ arr.fill(value[, start[, end]])
 ## 範例
 
 ```js
-[1, 2, 3].fill(4);               // [4, 4, 4]
-[1, 2, 3].fill(4, 1);            // [1, 4, 4]
-[1, 2, 3].fill(4, 1, 2);         // [1, 4, 3]
-[1, 2, 3].fill(4, 1, 1);         // [1, 2, 3]
-[1, 2, 3].fill(4, 3, 3);         // [1, 2, 3]
-[1, 2, 3].fill(4, -3, -2);       // [4, 2, 3]
-[1, 2, 3].fill(4, NaN, NaN);     // [1, 2, 3]
-[1, 2, 3].fill(4, 3, 5);         // [1, 2, 3]
-Array(3).fill(4);                // [4, 4, 4]
-[].fill.call({ length: 3 }, 4);  // {0: 4, 1: 4, 2: 4, length: 3}
+[1, 2, 3].fill(4); // [4, 4, 4]
+[1, 2, 3].fill(4, 1); // [1, 4, 4]
+[1, 2, 3].fill(4, 1, 2); // [1, 4, 3]
+[1, 2, 3].fill(4, 1, 1); // [1, 2, 3]
+[1, 2, 3].fill(4, 3, 3); // [1, 2, 3]
+[1, 2, 3].fill(4, -3, -2); // [4, 2, 3]
+[1, 2, 3].fill(4, NaN, NaN); // [1, 2, 3]
+[1, 2, 3].fill(4, 3, 5); // [1, 2, 3]
+Array(3).fill(4); // [4, 4, 4]
+[].fill.call({ length: 3 }, 4); // {0: 4, 1: 4, 2: 4, length: 3}
 
 // Objects by reference.
-var arr = Array(3).fill({}) // [{}, {}, {}];
+var arr = Array(3).fill({}); // [{}, {}, {}];
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 ```
 
@@ -63,12 +63,11 @@ arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 
 ```js
 if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, 'fill', {
-    value: function(value) {
-
+  Object.defineProperty(Array.prototype, "fill", {
+    value: function (value) {
       // 步驟 1 - 2。
-       if (this == null) {
-        throw new TypeError('this is null or not defined');
+      if (this == null) {
+        throw new TypeError("this is null or not defined");
       }
 
       var O = Object(this);
@@ -81,19 +80,20 @@ if (!Array.prototype.fill) {
       var relativeStart = start >> 0;
 
       // 步驟 8。
-      var k = relativeStart < 0 ?
-        Math.max(len + relativeStart, 0) :
-        Math.min(relativeStart, len);
+      var k =
+        relativeStart < 0
+          ? Math.max(len + relativeStart, 0)
+          : Math.min(relativeStart, len);
 
       // 步驟 9 - 10。
       var end = arguments[2];
-      var relativeEnd = end === undefined ?
-        len : end >> 0;
+      var relativeEnd = end === undefined ? len : end >> 0;
 
       // 步驟 11。
-      var final = relativeEnd < 0 ?
-        Math.max(len + relativeEnd, 0) :
-        Math.min(relativeEnd, len);
+      var final =
+        relativeEnd < 0
+          ? Math.max(len + relativeEnd, 0)
+          : Math.min(relativeEnd, len);
 
       // 步驟 12。
       while (k < final) {
@@ -103,7 +103,7 @@ if (!Array.prototype.fill) {
 
       // 步驟 13。
       return O;
-    }
+    },
   });
 }
 ```

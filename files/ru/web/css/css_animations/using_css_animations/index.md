@@ -1,15 +1,6 @@
 ---
 title: Использование CSS-анимации
 slug: Web/CSS/CSS_animations/Using_CSS_animations
-tags:
-  - Advanced
-  - CSS
-  - CSS Animations
-  - Example
-  - Experimental
-  - Guide
-translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
-original_slug: Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy
 ---
 
 {{SeeCompatTable}}{{CSSRef}}
@@ -91,9 +82,11 @@ p {
 Второй ключевой кадр (to) определяет конец анимации, т.е (100%). Левый отступ устанавливается равным 0, а ширина 100%. Все выглядит так, будто заголовок {{ HTMLElement("p") }} приплывает к левому краю окна браузера.
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 (Обновите страницу, чтобы увидеть анимацию, или щёлкните по кнопке CodePen, чтобы воспроизвести её в окне CodePen)
@@ -138,9 +131,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 Это говорит браузеру о том, что при 75% выполнения анимации, шрифт должен быть 300%, а ширина 150%.
@@ -176,9 +171,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Настройка_повторения","100%","250")}}
@@ -211,9 +208,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{ EmbedLiveSample('Движение_текста_вправо_и_влево', '100%', '250') }}
@@ -298,7 +297,7 @@ animation-iteration-count: 2, 1;
 @-moz-keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%
+    width: 300%;
   }
 
   to {
@@ -310,25 +309,25 @@ animation-iteration-count: 2, 1;
 @-webkit-keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%
+    width: 300%;
   }
 
   to {
-   margin-left: 0%;
-   width: 100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%
+    width: 300%;
   }
 
   to {
-   margin-left: 0%;
-   width: 100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 ```
 
@@ -356,7 +355,7 @@ e.className = "slidein";
 ```js
 function listener(e) {
   var l = document.createElement("li");
-  switch(e.type) {
+  switch (e.type) {
     case "animationstart":
       l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
       break;
@@ -389,11 +388,15 @@ function listener(e) {
 ```html
 <body>
   <h1 id="watchme">Watch me move</h1>
-  <p>This example shows how to use CSS animations to make <code>p</code> elements
-  move across the page.</p>
-  <p>In addition, we output some text each time an animation event fires, so you can see them in action.</p>
-  <ul id="output">
-  </ul>
+  <p>
+    This example shows how to use CSS animations to make <code>p</code> elements
+    move across the page.
+  </p>
+  <p>
+    In addition, we output some text each time an animation event fires, so you
+    can see them in action.
+  </p>
+  <ul id="output"></ul>
 </body>
 ```
 

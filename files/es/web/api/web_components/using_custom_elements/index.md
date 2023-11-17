@@ -1,7 +1,6 @@
 ---
 title: Usando elementos personalizados
 slug: Web/API/Web_components/Using_custom_elements
-original_slug: Web/Web_Components/Using_custom_elements
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -23,7 +22,7 @@ Para registrar un elemento personalizado en la página, debes usar el método {{
 Entonces por ejemplo, podríamos definir un elemento personalizado [word-count](https://mdn.github.io/web-components-examples/word-count-web-component/) como este:
 
 ```js
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 El elemento se llama `word-count`, la clase es `WordCount`, y extiende el elemento {{htmlelement("p")}}.
@@ -81,41 +80,42 @@ Dentro del constructor, definimos toda la funcionalidad que tendrá el elemento 
 
 ```js
 // Creamos un shadow root
-var shadow = this.attachShadow({mode: 'open'});
+var shadow = this.attachShadow({ mode: "open" });
 
 // Creamos spans
-var wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-var icon = document.createElement('span');
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
-var info = document.createElement('span');
-info.setAttribute('class','info');
+var wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+var icon = document.createElement("span");
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
+var info = document.createElement("span");
+info.setAttribute("class", "info");
 
 // Tomamos el contenido del atributo y lo ponemos dentro del span
-var text = this.getAttribute('data-text');
+var text = this.getAttribute("data-text");
 info.textContent = text;
 
 // Añadimos el icono
 var imgUrl;
-if(this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
+if (this.hasAttribute("img")) {
+  imgUrl = this.getAttribute("img");
 } else {
-  imgUrl = 'img/default.png';
+  imgUrl = "img/default.png";
 }
-var img = document.createElement('img');
+var img = document.createElement("img");
 img.src = imgUrl;
 icon.appendChild(img);
 
 // Creamos un poco de CSS para aplicar al shadow dom
-var style = document.createElement('style');
+var style = document.createElement("style");
 
-style.textContent = '.wrapper {' +
-// CSS truncado por brevedad
+style.textContent =
+  ".wrapper {" +
+  // CSS truncado por brevedad
 
-// añade los elementos creados al shadow dom
+  // añade los elementos creados al shadow dom
 
-shadow.appendChild(style);
+  shadow.appendChild(style);
 shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
 wrapper.appendChild(info);
@@ -124,13 +124,15 @@ wrapper.appendChild(info);
 Finalmente, registraremos nuestro elemento en el `CustomElementRegistry` usando el método `define()` que mencionamos anteriormente — en los parámetros especificamos el nombre del elemento, y el nombre de la clase que define su funcionalidad::
 
 ```js
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 Ahora ya está disponible para usarse en nuestra página. En nuestro HTML, lo usamos de esta manera:
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."></popup-info>
 ```
@@ -147,9 +149,9 @@ Por ejemplo, echemos un vistazo al código de ejemplo de [popup-info-box-externa
 
 ```js
 // Creamos elemento link para cargar hoja de estilos externa
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // Añadimos el elemento creado al shadow dom
 shadow.appendChild(linkElem);
@@ -183,16 +185,14 @@ No explicaremos la funcionalidad del elemento en detalle aquí, pero puedes desc
 Después, registramos el elemento usando el método `define()` como antes, excepto que esta vez incluimos un objeto de opciones, en el tercer parámetro, que detalla de qué elemento hereda:
 
 ```js
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 El uso de un elemento preconstruido en un documento web también es algo distinto:
 
 ```html
 <ul is="expanding-list">
-
   ...
-
 </ul>
 ```
 
@@ -221,10 +221,10 @@ Echemos un vistazo a un ejemplo de todo esto. El código de abajo se ha tomado d
 El constructor de la clase es muy simple — adjuntamos un shadow DOM al elemento, y después adjuntamos un {{htmlelement("div")}} vacío y un elemento {{htmlelement("style")}} al shadow root:
 
 ```js
-var shadow = this.attachShadow({mode: 'open'});
+var shadow = this.attachShadow({ mode: "open" });
 
-var div = document.createElement('div');
-var style = document.createElement('style');
+var div = document.createElement("div");
+var style = document.createElement("style");
 shadow.appendChild(style);
 shadow.appendChild(div);
 ```
@@ -234,11 +234,11 @@ La función clave en este ejemplo es `updateStyle()` — esta toma un elemento, 
 ```js
 function updateStyle(elem) {
   const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
+  shadow.querySelector("style").textContent = `
     div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
+      width: ${elem.getAttribute("l")}px;
+      height: ${elem.getAttribute("l")}px;
+      background-color: ${elem.getAttribute("c")};
     }
   `;
 }

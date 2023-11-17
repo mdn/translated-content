@@ -1,7 +1,6 @@
 ---
 title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/SQRT1_2
 ---
 
 {{JSRef}}La propiedad **`Math.SQRT1_2`** representa la raiz cuadrada de 1/2, la cual es equivalente al inverso de la raiz cuadrada de 2, aproximadadamente 0.707:

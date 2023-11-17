@@ -37,7 +37,7 @@ content-visibility: unset;
 
 ## アクセシビリティの考慮
 
-見出しやその他のコンテンツが画面外にあるとみなされた場合、 `content-visibility` によって抑制されます。これは、画面リーダーの利用者が、ページのアウトラインを完全に読み上げるという利点を失う可能性があることを意味します。
+見出しやその他のコンテンツが画面外にあるとみなされた場合、 `content-visibility` によって抑制されます。これは、スクリーンリーダーの利用者が、ページのアウトラインを完全に読み上げるという利点を失う可能性があることを意味します。
 
 詳しくは [Content-visibility and Accessible Semantics](https://marcysutton.com/content-visibility-accessible-semantics) をご覧ください。
 

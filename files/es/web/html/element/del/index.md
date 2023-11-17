@@ -1,12 +1,12 @@
 ---
 title: del
 slug: Web/HTML/Element/del
-original_slug: Web/HTML/Elemento/del
 ---
 
 ### Definición
 
 - El elemento `del` (deleted-borrado) marca las partes de un texto o documento que han sido suprimidas o sustituidas.
+
   - : **Sus etiquetas son**: \<del> y \</del> (ambas obligatorias).
 
     **Crea una caja**: a veces [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
@@ -113,19 +113,13 @@ El siguiente código:
 
 ```html
 Ejemplo de ins en linea:
-<p>
-  El agua es insípida <del>y húmeda.</del> <ins>inodora e incolora.</ins>
-</p>
+<p>El agua es insípida <del>y húmeda.</del> <ins>inodora e incolora.</ins></p>
 
 Ejemplo de ins en bloque:
-<p>
-  El agua es insípida.
-</p>
+<p>El agua es insípida.</p>
 
 <del>
-  <p>
-    y húmeda.
-  </p>
+  <p>y húmeda.</p>
 </del>
 ```
 

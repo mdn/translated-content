@@ -1,13 +1,6 @@
 ---
 title: DOMPointReadOnly
 slug: Web/API/DOMPointReadOnly
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Interface
-  - Quadrilatère
-translation_of: Web/API/DOMPointReadOnly
 ---
 
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
@@ -24,7 +17,7 @@ L'interface **`DOMPointReadOnly`** spécifie les propriétés standard utilisée
 - {{domxref("DOMPointReadOnly.fromPoint")}}
   - : Traduit la position / perspective d'un `DOMPoint` à une nouvelle position (ne semble pas encore être pris en charge).
 - {{domxref("DOMPointReadOnly.matrixTransform")}}
-  - : Applique une transformation matricielle à un objet `DOMPointReadOnly`  (ne semble pas encore être pris en charge).
+  - : Applique une transformation matricielle à un objet `DOMPointReadOnly` (ne semble pas encore être pris en charge).
 - {{domxref("DOMPointReadOnly.toJSON()")}}
   - : Renvoie une représentation JSON de l'objet `DOMPointReadOnly`.
 

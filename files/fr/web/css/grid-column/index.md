@@ -1,16 +1,11 @@
 ---
 title: grid-column
 slug: Web/CSS/grid-column
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-column
 ---
 
 {{CSSRef}}
 
-La propriété **`grid-column`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}}. Elle permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.
+La propriété **`grid-column`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) pour {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}}. Elle permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.
 
 {{EmbedInteractiveExample("pages/css/grid-column.html")}}
 

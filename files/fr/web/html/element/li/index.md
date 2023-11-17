@@ -1,12 +1,6 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Contenu de groupage HTML
-  - Element
-  - HTML
-  - Reference
-translation_of: Web/HTML/Element/li
 ---
 
 {{HTMLSidebar}}

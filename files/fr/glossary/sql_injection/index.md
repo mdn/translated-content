@@ -1,14 +1,9 @@
 ---
 title: Injection SQL
 slug: Glossary/SQL_Injection
-tags:
-  - Attaques
-  - Glossaire
-  - Sql
-  - Sécurité
-translation_of: Glossary/SQL_Injection
-original_slug: Glossaire/Injection_SQL
 ---
+
+{{GlossarySidebar}}
 
 L'injection SQL tire parti des applications web qui ne parviennent pas à valider les entrées utilisateur. Les pirates peuvent transmettre des commandes SQL via l'application web de manière malveillante pour exécution par une base de données principale.
 

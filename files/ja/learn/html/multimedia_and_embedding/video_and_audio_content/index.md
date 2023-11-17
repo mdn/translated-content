@@ -54,7 +54,10 @@ l10n:
 ```html
 <video src="rabbit320.webm" controls>
   <p>
-    お使いのブラウザーは HTML 動画をサポートしていません。その代わりに<a href="rabbit320.webm">動画へのリンク</a>があります。
+    お使いのブラウザーは HTML 動画をサポートしていません。その代わりに<a
+      href="rabbit320.webm"
+      >動画へのリンク</a
+    >があります。
   </p>
 </video>
 ```
@@ -121,7 +124,10 @@ l10n:
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
   <p>
-    お使いのブラウザーはこの動画に対応していません。こちらは代わりの<a href="rabbit320.mp4">動画へのリンク</a>です。
+    お使いのブラウザーはこの動画に対応していません。こちらは代わりの<a
+      href="rabbit320.mp4"
+      >動画へのリンク</a
+    >です。
   </p>
 </video>
 ```
@@ -149,7 +155,10 @@ HTML 動画に含めることができる他の多くの機能があります。
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
   <p>
-    お使いのブラウザーはこの動画に対応していません。代わりに<a href="rabbit320.mp4">動画へのリンク</a>をお使いください。
+    お使いのブラウザーはこの動画に対応していません。代わりに<a
+      href="rabbit320.mp4"
+      >動画へのリンク</a
+    >をお使いください。
   </p>
 </video>
 ```
@@ -189,7 +198,10 @@ HTML 動画に含めることができる他の多くの機能があります。
   <source src="viper.mp3" type="audio/mp3" />
   <source src="viper.ogg" type="audio/ogg" />
   <p>
-    お使いのブラウザーはこの音声ファイルに対応していません。代わりに<a href="viper.mp3">音声へのリンク</a>をお使いください。
+    お使いのブラウザーはこの音声ファイルに対応していません。代わりに<a
+      href="viper.mp3"
+      >音声へのリンク</a
+    >をお使いください。
   </p>
 </audio>
 ```
@@ -248,7 +260,7 @@ WEBVTT
 これを HTML メディアの再生と一緒に表示するには、以下を行う必要があります。
 
 1. 適切な場所に `.vtt` ファイルとして保存します。
-2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/en-US/docs/Web/HTML/Element/track#label) を追加して、読み手が検索している言語を識別しやすくします。
+2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/ja/docs/Web/HTML/Element/track#label) を追加して、読み手が検索している言語を識別しやすくします。
 
 ここに例があります。
 

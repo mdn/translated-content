@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Memory()
 slug: WebAssembly/JavaScript_interface/Memory
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - Object
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 
 {{WebAssemblySidebar}}
@@ -67,14 +58,15 @@ Toutes les instances de `Memory` héritent des propriétés du [prototype du con
 Il existe deux façons de créer un objet `WebAssembly.Memory`. La première consiste à le créer explicitement en JavaScript. Avec l'instruction qui suit, on crée un espace mémoire avec une taille initiale de 10 pages (soit 640 Ko) et une taille maximale de 100 pages (soit 6,4 Mo).
 
 ```js
-var memoire = new WebAssembly.Memory({initial:10, maximum:100});
+var memoire = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
 La seconde méthode permettant d'obtenir un objet `WebAssembly.Memory` est de l'exporter depuis un module WebAssembly. Dans l'exemple suivant (cf. le fichier [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) sur GitHub ainsi que [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) on récupère et on instancie le _bytecode_ `memory.wasm` grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}} tout en important la mémoire créée à la ligne précédente. Ensuite, on enregistre des valeurs au sein de cette mémoire puis on exporte une fonction qu'on utilise pour additionner certaines valeurs.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
   var i32 = new Uint32Array(memory.buffer);
   for (var i = 0; i < 10; i++) {
     i32[i] = i;

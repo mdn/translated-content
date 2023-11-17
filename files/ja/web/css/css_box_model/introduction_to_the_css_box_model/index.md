@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 ブラウザーのレンダリングエンジンは文書をレイアウトする際に、それぞれの要素を標準的な **CSS 基本ボックスモデル**に基づいた長方形のボックスとして表現します。 CSS はこれらのボックスの寸法、位置、プロパティ（色、背景、境界の幅など）を決定します。
 
-それぞれのボックスは 4 つの部品 (または*領域*) から構成され、それぞれの縁について*コンテンツの縁 (content edge)*、*パディングの縁 (padding edge)*、*境界の縁 (border edge)*、*マージンの縁 (margin edge)* が定義されています。
+それぞれのボックスは 4 つの部品 (または*領域*) から構成され、それぞれの縁について*コンテンツの縁 (content edge)*、_パディングの縁 (padding edge)_、_境界の縁 (border edge)_、_マージンの縁 (margin edge)_ が定義されています。
 
 ![CSS ボックスモデル](boxmodel.png)
 

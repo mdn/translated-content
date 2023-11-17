@@ -1,11 +1,6 @@
 ---
 title: Objets avec média
 slug: Web/CSS/Layout_cookbook/Media_objects
-tags:
-  - CSS
-  - Guide
-  - Recette
-translation_of: Web/CSS/Layout_cookbook/Media_objects
 ---
 
 {{CSSRef}}

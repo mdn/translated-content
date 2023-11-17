@@ -1,9 +1,6 @@
 ---
 title: Constructeur pour WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception/Exception
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception
-browser-compat: javascript.builtins.WebAssembly.Exception.Exception
 ---
 
 {{WebAssemblySidebar}}
@@ -17,7 +14,7 @@ Il est aussi possible de passer comme argument un objet `options`. Pour cet obje
 ## Syntaxe
 
 ```js
-new Exception(tag, payload, options)
+new Exception(tag, payload, options);
 ```
 
 ### Paramètres
@@ -27,6 +24,7 @@ new Exception(tag, payload, options)
 - `payload`
   - : Un tableau contenant un ou plusieurs champs de données qui forment la charge utile de l'exception. Les types des éléments doivent correspondre à ceux décrits par la balise `tag`. Si le nombre de champs ou leurs types ne correspond pas, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
 - `options` {{optional_inline}}
+
   - : Un objet avec la propriété optionnelle suivante&nbsp;:
 
     - `traceStack` {{optional_inline}}

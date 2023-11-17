@@ -1,7 +1,6 @@
 ---
 title: Window.ongamepadconnected
 slug: conflicting/Web/API/Window/gamepadconnected_event
-translation_of: Web/API/Window/ongamepadconnected
 original_slug: Web/API/Window/ongamepadconnected
 ---
 

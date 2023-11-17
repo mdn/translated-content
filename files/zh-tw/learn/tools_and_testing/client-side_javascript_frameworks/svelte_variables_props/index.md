@@ -1,7 +1,6 @@
 ---
 title: Svelte 中的動態行為：變數及屬性
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
 ---
 
 {{LearnSidebar}}
@@ -388,8 +387,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
      filter === "active"
        ? todos.filter((t) => !t.completed)
        : filter === "completed"
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
    ```
 
    我們使用 `filter` 變數來控制目前的過濾器：_all_、_active_、_completed_。只要將這些數值中其中一個指定給過濾器變數即可使用該過濾器並更新待辦事項清單。讓我們看看它如何做到這一點。

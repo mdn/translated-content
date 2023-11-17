@@ -92,13 +92,13 @@ If an error occurs while trying to load or render the image, and an [`onerror`](
 
 ```js
 var img1 = new Image(); // Image 构造器
-img1.src = 'image1.png';
-img1.alt = 'alt';
+img1.src = "image1.png";
+img1.alt = "alt";
 document.body.appendChild(img1);
 
-var img2 = document.createElement('img'); // 使用 DOM HTMLImageElement
-img2.src = 'image2.jpg';
-img2.alt = 'alt text';
+var img2 = document.createElement("img"); // 使用 DOM HTMLImageElement
+img2.src = "image2.jpg";
+img2.alt = "alt text";
 document.body.appendChild(img2);
 
 // 使用文档中的第一个 img

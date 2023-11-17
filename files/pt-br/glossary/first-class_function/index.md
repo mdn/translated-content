@@ -1,7 +1,6 @@
 ---
 title: Função First-class
 slug: Glossary/First-class_Function
-original_slug: Glossario/Funcao-First-class
 ---
 
 Entende-se que uma linguagem de programação tem **Função First-class** quando suas funções são tratadas como qualquer outra variável. Por exemplo, numa linguagem desse tipo, a função pode ser passada como argumento pra outras funções, ser retornada por outra função e pode ser atribuída como um valor à uma variável.
@@ -11,9 +10,9 @@ Entende-se que uma linguagem de programação tem **Função First-class** quand
 ### JavaScript
 
 ```js
-const foo = function() {
-   console.log("foobar");
-}
+const foo = function () {
+  console.log("foobar");
+};
 // Chamar a função usando a variável
 foo();
 ```
@@ -28,7 +27,7 @@ Nós atribuímos uma `Função Anônima` à uma `Variável`, então usamos a var
 
 ```js
 function sayHello() {
-   return "Hello, ";
+  return "Hello, ";
 }
 function greeting(helloMessage, name) {
   console.log(helloMessage() + name);
@@ -47,9 +46,9 @@ Nós estamos passando a função `sayHello()` como um argumento pra função `gr
 
 ```js
 function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
+  return function () {
+    console.log("Hello!");
+  };
 }
 ```
 
@@ -62,11 +61,11 @@ De volta ao nosso exemplo; Agora, precisamos chamar a função `sayHello` e a `F
 ### 1- Usando uma variável
 
 ```js
-const sayHello = function() {
-   return function() {
-      console.log("Hello!");
-   }
-}
+const sayHello = function () {
+  return function () {
+    console.log("Hello!");
+  };
+};
 const myFunc = sayHello();
 myFunc();
 ```
@@ -79,9 +78,9 @@ Dessa maneira, ela retorna a mensagem `Hello!`.
 
 ```js
 function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
+  return function () {
+    console.log("Hello!");
+  };
 }
 sayHello()();
 ```
@@ -92,4 +91,4 @@ Estamos usando parênteses duplo `()()` pra chamar também a função retornada.
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "First-class_function", "First-class functions")}} na Wikipedia
+- [First-class functions](https://pt.wikipedia.org/wiki/Função_de_primeira_classe) na Wikipedia

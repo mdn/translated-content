@@ -1,6 +1,9 @@
 ---
-title: CustomEvent.initCustomEvent()
+title: "CustomEvent: initCustomEvent() メソッド"
+short-title: initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("DOM")}}{{Deprecated_header}}
@@ -19,8 +22,8 @@ slug: Web/API/CustomEvent/initCustomEvent
 
 ## 構文
 
-```js
-event.initCustomEvent(type, canBubble, cancelable, detail);
+```js-nolint
+event.initCustomEvent(type, canBubble, cancelable, detail)
 ```
 
 ### 引数

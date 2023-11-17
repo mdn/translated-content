@@ -1,16 +1,8 @@
 ---
 title: Как структурировать HTML-формы
 slug: Learn/Forms/How_to_structure_a_web_form
-tags:
-  - HTML-форма
-  - Веб-форма
-  - Изучение
-  - Новичок
-  - Структурирование
-  - Форма
-translation_of: Learn/Forms/How_to_structure_a_web_form
-original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Ваша_первая_HTML_форма", "Learn/HTML/Forms/Стандартные_виджеты_форм", "Learn/HTML/Forms")}}
 
 Получив базовые знания, теперь мы более подробно рассмотрим элементы, используемые для придания структуры и значения различным частям форм.
@@ -44,15 +36,15 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
   <fieldset>
     <legend>Fruit juice size</legend>
     <p>
-      <input type="radio" name="size" id="size_1" value="small">
+      <input type="radio" name="size" id="size_1" value="small" />
       <label for="size_1">Small</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium">
+      <input type="radio" name="size" id="size_2" value="medium" />
       <label for="size_2">Medium</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_3" value="large">
+      <input type="radio" name="size" id="size_3" value="large" />
       <label for="size_3">Large</label>
     </p>
   </fieldset>
@@ -72,7 +64,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 В предыдущей статье мы увидели, что элемент {{HTMLElement("label")}} принято использовать для указания текстов-подсказок (лейблов) в HTML-формах. Это самый важный элемент для построения доступных форм — при правильной реализации скринридеры будут озвучивать текст-подсказку вместе со связанными элементами. Посмотрите на этот пример из предыдущей статьи:
 
 ```html
-<label for="name">Name:</label> <input type="text" id="name" name="user_name">
+<label for="name">Name:</label> <input type="text" id="name" name="user_name" />
 ```
 
 При правильно связанном элементе `<label>` с элементом `<input>` через атрибуты `for` и `id` соответственно (атрибут `for` ссылается на атрибут `id` соответствующего виджета формы), скринридер прочтёт вслух что-то наподобие "Name, edit text".
@@ -83,7 +75,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 ```html
 <label for="name">
-  Name: <input type="text" id="name" name="user_name">
+  Name: <input type="text" id="name" name="user_name" />
 </label>
 ```
 
@@ -99,11 +91,11 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 <form>
   <p>
     <label for="taste_1">I like cherry</label>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="1" />
   </p>
   <p>
     <label for="taste_2">I like banana</label>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+    <input type="checkbox" id="taste_2" name="taste_banana" value="2" />
   </p>
 </form>
 ```
@@ -122,7 +114,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 <!-- Тогда это: -->
 <div>
   <label for="username">Name:</label>
-  <input type="text" name="username">
+  <input type="text" name="username" />
   <label for="username"><abbr title="required">*</abbr></label>
 </div>
 
@@ -130,7 +122,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 <div>
   <label for="username">
     <span>Name:</span>
-    <input id="username" type="text" name="username">
+    <input id="username" type="text" name="username" />
     <abbr title="required">*</abbr>
   </label>
 </div>
@@ -138,7 +130,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 <!-- Но этот вариант лучше всего: -->
 <div>
   <label for="username">Name: <abbr title="required">*</abbr></label>
-  <input id="username" type="text" name="username">
+  <input id="username" type="text" name="username" />
 </div>
 ```
 
@@ -173,111 +165,113 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 1. Для начала сделайте локальную копию [пустого шаблона](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) и [CSS для нашей платёжной формы](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) в новой директории на вашем компьютере.
 2. Сначала подключите CSS к HTML, добавив следующую строку кода внутрь HTML-элемента {{htmlelement("head")}}:
 
-    ```html
-    <link href="payment-form.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="payment-form.css" rel="stylesheet" />
+   ```
 
 3. Далее начните создавать свою форму с добавления внешнего элемента {{htmlelement("form")}}:
 
-    ```html
-    <form>
-
-    </form>
-    ```
+   ```html
+   <form></form>
+   ```
 
 4. Внутри тега `<form>`, добавьте заголовок и параграф, информирующий пользователей о том, как помечены поля, обязательные для заполнения:
 
-    ```html
-    <h1>Payment form</h1>
-    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
-    ```
+   ```html
+   <h1>Payment form</h1>
+   <p>
+     Required fields are followed by
+     <strong><abbr title="required">*</abbr></strong
+     >.
+   </p>
+   ```
 
 5. Далее нам надо добавить более крупный кусок кода под нашей предыдущей записью. Здесь вы можете увидеть, что мы оборачиваем поля с контактной информацией в отдельный элемент {{htmlelement("section")}}. Более того, у нас есть набор из двух радио-кнопок, каждую из которых мы помещаем в отдельный элемент списка ({{htmlelement("li")}}). Наконец, у нас есть два текстовых поля {{htmlelement("input")}} и связанные с ними элементы {{htmlelement("label")}}, которые находятся внутри элементов {{htmlelement("p")}}, а также поле для ввода пароля. Добавьте этот код в вашу форму:
 
-    ```html
-    <section>
-        <h2>Contact information</h2>
-        <fieldset>
-          <legend>Title</legend>
-          <ul>
-              <li>
-                <label for="title_1">
-                  <input type="radio" id="title_1" name="title" value="M." >
-                  Mister
-                </label>
-              </li>
-              <li>
-                <label for="title_2">
-                  <input type="radio" id="title_2" name="title" value="Ms.">
-                  Miss
-                </label>
-              </li>
-          </ul>
-        </fieldset>
-        <p>
-          <label for="name">
-            <span>Name: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="text" id="name" name="username">
-        </p>
-        <p>
-          <label for="mail">
-            <span>E-mail: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="email" id="mail" name="usermail">
-        </p>
-        <p>
-          <label for="pwd">
-            <span>Password: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="password" id="pwd" name="password">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Contact information</h2>
+     <fieldset>
+       <legend>Title</legend>
+       <ul>
+         <li>
+           <label for="title_1">
+             <input type="radio" id="title_1" name="title" value="M." />
+             Mister
+           </label>
+         </li>
+         <li>
+           <label for="title_2">
+             <input type="radio" id="title_2" name="title" value="Ms." />
+             Miss
+           </label>
+         </li>
+       </ul>
+     </fieldset>
+     <p>
+       <label for="name">
+         <span>Name: </span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="text" id="name" name="username" />
+     </p>
+     <p>
+       <label for="mail">
+         <span>E-mail: </span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="email" id="mail" name="usermail" />
+     </p>
+     <p>
+       <label for="pwd">
+         <span>Password: </span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="password" id="pwd" name="password" />
+     </p>
+   </section>
+   ```
 
 6. Сейчас мы перейдём к второму разделу `<section>` нашей формы — платёжной информации. В этом разделе у нас есть три отдельных виджета формы со связанными с ними лейблами, находящимися внутри тега `<p>`. Первый — это выпадающее меню ({{htmlelement("select")}}) для выбора типа кредитной карты. Второй — это элемент `<input>` с типом `number` для ввода номера карты. Последний виджет — это элемент `<input>` с типом date для указания даты окончания действия карты (должен будет появиться виджет с выбором даты или обычное текстовое поле в браузерах, не поддерживающих данные тип). Более новые типы полей описаны в статье [The HTML5 input types](/ru/docs/Learn/Forms/HTML5_input_types).
 
-    Вставьте следующий код под предыдущим разделом:
+   Вставьте следующий код под предыдущим разделом:
 
-    ```html
-    <section>
-        <h2>Payment information</h2>
-        <p>
-          <label for="card">
-            <span>Card type:</span>
-          </label>
-          <select id="card" name="usercard">
-            <option value="visa">Visa</option>
-            <option value="mc">Mastercard</option>
-            <option value="amex">American Express</option>
-          </select>
-        </p>
-        <p>
-          <label for="number">
-            <span>Card number:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="number" id="number" name="cardnumber">
-        </p>
-        <p>
-          <label for="date">
-            <span>Expiration date:</span>
-            <strong><abbr title="required">*</abbr></strong>
-            <em>formatted as mm/yy</em>
-          </label>
-          <input type="date" id="date" name="expiration">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Payment information</h2>
+     <p>
+       <label for="card">
+         <span>Card type:</span>
+       </label>
+       <select id="card" name="usercard">
+         <option value="visa">Visa</option>
+         <option value="mc">Mastercard</option>
+         <option value="amex">American Express</option>
+       </select>
+     </p>
+     <p>
+       <label for="number">
+         <span>Card number:</span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="number" id="number" name="cardnumber" />
+     </p>
+     <p>
+       <label for="date">
+         <span>Expiration date:</span>
+         <strong><abbr title="required">*</abbr></strong>
+         <em>formatted as mm/yy</em>
+       </label>
+       <input type="date" id="date" name="expiration" />
+     </p>
+   </section>
+   ```
 
 7. Последняя секция, которую мы добавим выглядит намного проще и содержит в себе только элемент {{htmlelement("button")}} с типом `submit`, для отправки данных. Добавьте этот код в конец вашей формы:
 
-    ```html
-    <p> <button type="submit">Validate the payment</button> </p>
-    ```
+   ```html
+   <p><button type="submit">Validate the payment</button></p>
+   ```
 
 Вы можете увидеть законченную форму в действии ниже (также её можно найти на GitHub — посмотрите [payment-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) и [живой пример](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 

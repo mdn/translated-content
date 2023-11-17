@@ -90,8 +90,12 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
   </div>
   <div role="rowgroup">
     <div role="row">
-      <span role="columnheader" aria-sort="none" aria-rowindex="1">ARIA ロール</span>
-      <span role="columnheader" aria-sort="none" aria-rowindex="1">意味論的な要素</span>
+      <span role="columnheader" aria-sort="none" aria-rowindex="1"
+        >ARIA ロール</span
+      >
+      <span role="columnheader" aria-sort="none" aria-rowindex="1"
+        >意味論的な要素</span
+      >
     </div>
   </div>
   <div role="rowgroup">
@@ -132,7 +136,9 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
   </caption>
   <thead role="rowgroup">
     <tr role="row">
-      <th role="columnheader" aria-sort="none" aria-rowindex="1">ARIA ロール</th>
+      <th role="columnheader" aria-sort="none" aria-rowindex="1">
+        ARIA ロール
+      </th>
       <th role="columnheader" aria-sort="none" aria-rowindex="1">
         意味論的な要素
       </th>
@@ -172,7 +178,7 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
 ## 関連情報
 
 - [role="row"](/ja/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [`role="gridcell"`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [`role="gridcell"`](/ja/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [HTML `<td>` 要素](/ja/docs/Web/HTML/Element/td)
 - [HTML `<th>` 要素](/ja/docs/Web/HTML/Element/th)
 - [HTML 表の高度な機能とアクセシビリティ](/ja/docs/Learn/HTML/Tables/Advanced)

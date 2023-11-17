@@ -1,7 +1,6 @@
 ---
 title: Manipular video por medio de canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
-original_slug: Web/HTML/anipular_video_por_medio_de_canvas
 ---
 
 Al combinar las capacidades del elemento [`video`](/En/HTML/Element/Video) introducido en Firefox 3.5 con un elemento [`canvas`](/en/HTML/Canvas) , puedes manipular los datos de video en tiempo real para incorporar una variedad de efectos visuales que se mostrarán en el video. Este artículo, adaptado de [esta entrada del blog](http://blog.mozbox.org/post/2009/02/25/video-canvas%3A-special-effects) de Paul Rouget, muestra cómo realizar una inserción croma (también conocida como el "efecto pantalla verde") utilizando el código JavaScript.
@@ -13,14 +12,13 @@ Al combinar las capacidades del elemento [`video`](/En/HTML/Element/Video) intro
 El documento XHTML que se utiliza para representar este contenido se muestra a continuación.
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <style>
       body {
         background: black;
-        color:#CCCCCC;
+        color: #cccccc;
       }
       #c2 {
         background-image: url(foo.png);
@@ -28,10 +26,10 @@ El documento XHTML que se utiliza para representar este contenido se muestra a c
       }
       div {
         float: left;
-        border :1px solid #444444;
-        padding:10px;
+        border: 1px solid #444444;
+        padding: 10px;
         margin: 10px;
-        background:#3B3B3B;
+        background: #3b3b3b;
       }
     </style>
     <script type="text/javascript;version=1.8" src="main.js"></script>
@@ -39,11 +37,11 @@ El documento XHTML que se utiliza para representar este contenido se muestra a c
 
   <body onload="processor.doLoad()">
     <div>
-      <video id="video" src="video.ogv" controls="true"/>
+      <video id="video" src="video.ogv" controls="true" />
     </div>
     <div>
-      <canvas id="c1" width="160" height="96"/>
-      <canvas id="c2" width="160" height="96"/>
+      <canvas id="c1" width="160" height="96" />
+      <canvas id="c2" width="160" height="96" />
     </div>
   </body>
 </html>
@@ -53,9 +51,9 @@ Los puntos clave a tener en cuenta son:
 
 1. Este documento establece dos elemento&#x20;
 
-    `canvas`
+   `canvas`
 
-    &#x20;, con los identificadores de `c1` y `c2` . Canvas `c1` se utiliza para mostrar la imagen actual del video original, mientras que `c2` se utiliza para mostrar el video después de realizar la manipulación con el efecto croma; `c2` se carga previamente con la imagen fija que se utilizará para sustituir el fondo verde en el video.
+   &#x20;, con los identificadores de `c1` y `c2` . Canvas `c1` se utiliza para mostrar la imagen actual del video original, mientras que `c2` se utiliza para mostrar el video después de realizar la manipulación con el efecto croma; `c2` se carga previamente con la imagen fija que se utilizará para sustituir el fondo verde en el video.
 
 2. El código JavaScript es importado de un script llamado `main.js` ; este script utiliza JavaScript 1.8 características, de modo que la versión se especifica en la línea 22 al importar la secuencia de comandos.
 3. Cuando se carga el documento, se ejecuta el método `processor.doLoad()` de `main.js`.

@@ -5,56 +5,47 @@ slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 
 {{JSRef}}
 
-**`endsWith()`** 方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 `true` 或 `false`。
+**`endsWith()`** 方法用于判断一个字符串是否以指定字符串结尾，如果是则返回 `true`，否则返回 `false`。
 
 {{EmbedInteractiveExample("pages/js/string-endswith.html")}}
 
 ## 语法
 
-```plain
-str.endsWith(searchString[, length])
+```js-nolint
+endsWith(searchString)
+endsWith(searchString, endPosition)
 ```
 
 ### 参数
 
 - `searchString`
-  - : 要搜索的子字符串。
-- `length` {{optional_inline}}
-  - : 作为 `str` 的长度。默认值为 `str.length`。
+  - : 要搜索的作为结尾的字符串，[不能是正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)。所有非正则表达式的值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`endsWith()` 方法会在字符串中搜索 `"undefined"`，这通常不是你想要的。
+- `endPosition` {{optional_inline}}
+  - : 预期找到 `searchString` 的末尾位置（即 `searchString` 最后一个字符的索引加 1）。默认为 `str.length`。
 
 ### 返回值
 
-如果传入的子字符串在搜索字符串的末尾则返回**`true`**；否则将返回 **`false`**。
+如果被检索字符串的末尾出现了指定的字符串（包括 `searchString` 为空字符串的情况），则返回 **`true`**；否则返回 **`false`**。
+
+### 异常
+
+- {{jsxref("TypeError")}}
+  - : 如果 `searchString` [是一个正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，则会抛出。
 
 ## 描述
 
-这个方法帮助你确定一个字符串是否在另一个字符串的末尾。这个方法是大小写敏感的。
-
-## Polyfill
-
-这个方法已经加入到 ECMAScript 6 标准当中，但是可能还没有在所有的 JavaScript 实现中可用。然而，你可以通过如下的代码片段扩展 `String.prototype.endsWith()` 实现兼容：
-
-```js
-if (!String.prototype.endsWith) {
- String.prototype.endsWith = function(search, this_len) {
-  if (this_len === undefined || this_len > this.length) {
-   this_len = this.length;
-  }
-  return this.substring(this_len - search.length, this_len) === search;
- };
-}
-```
+这个方法可以让你确定一个字符串是否以另一个字符串结尾。该方法区分大小写。
 
 ## 示例
 
-### 使用 `endsWith()`
+### 使用 endsWith()
 
 ```js
-var str = "To be, or not to be, that is the question.";
+const str = "生存还是毁灭，这是一个问题。";
 
-alert( str.endsWith("question.") );  // true
-alert( str.endsWith("to be") );      // false
-alert( str.endsWith("to be", 19) );  // true
+console.log(str.endsWith("问题。")); // true
+console.log(str.endsWith("毁灭")); // false
+console.log(str.endsWith("毁灭", 6)); // true
 ```
 
 ## 规范
@@ -67,6 +58,7 @@ alert( str.endsWith("to be", 19) );  // true
 
 ## 参见
 
+- [`core-js` 中 `String.prototype.endsWith` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.startsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

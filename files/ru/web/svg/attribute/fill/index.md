@@ -1,11 +1,6 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-tags:
-  - NeedsUpdate
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/fill
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
@@ -33,11 +28,11 @@ translation_of: Web/SVG/Attribute/fill
 
 ### Для текста и форм
 
-| Категория            | Атрибут представления                                                                                |
-| -------------------- | ---------------------------------------------------------------------------------------------------- |
-| Значение             | [\<paint>](/en/SVG/Content_type#Paint), `context-fill`, `context-stroke` |
-| Анимация             | Да                                                                                                   |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty)                         |
+| Категория            | Атрибут представления                                                        |
+| -------------------- | ---------------------------------------------------------------------------- |
+| Значение             | [\<paint>](/en/SVG/Content_type#Paint), `context-fill`, `context-stroke`     |
+| Анимация             | Да                                                                           |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty) |
 
 ## Примеры
 
@@ -45,7 +40,7 @@ translation_of: Web/SVG/Attribute/fill
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" fill="#666"/>
+  <circle cx="100" cy="100" r="100" fill="#666" />
 </svg>
 ```
 

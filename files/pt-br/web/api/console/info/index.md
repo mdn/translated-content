@@ -29,13 +29,11 @@ Veja [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_tex
 
 ## Especificações
 
-| Especificações                                                                                       | Status                           | Comentários       |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName("Console API", "#consoleinfoobject--object-", "console.info()")}} | {{Spec2("Console API")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.info")}}
+{{Compat}}
 
 ## Veja também
 

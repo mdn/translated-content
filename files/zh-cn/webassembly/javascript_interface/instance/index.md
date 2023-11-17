@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Instance
 slug: WebAssembly/JavaScript_interface/Instance
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
 
 {{WebAssemblySidebar}} {{SeeCompatTable}}

@@ -1,13 +1,6 @@
 ---
 title: border-block-width
 slug: Web/CSS/border-block-width
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-block-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

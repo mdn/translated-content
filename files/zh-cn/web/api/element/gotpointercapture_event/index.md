@@ -45,12 +45,12 @@ function init() {
 
 - 相关事件
 
-  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
-  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
-  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
-  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
-  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
-  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
-  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
+  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)

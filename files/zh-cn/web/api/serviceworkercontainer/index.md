@@ -49,7 +49,6 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("/sw.js")
     .then((registration) => {
-
       console.log("Service worker registration succeeded:", registration);
       // At this point, you can optionally do something
       // with registration. See https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerRegistration
@@ -68,7 +67,7 @@ if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
     console.log(
       "This page is currently controlled by:",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   }
 
@@ -77,7 +76,7 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.oncontrollerchange = () => {
     console.log(
       "This page is now controlled by",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   };
 } else {

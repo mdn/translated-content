@@ -41,15 +41,15 @@ var asyncIterable = {
         }
 
         return Promise.resolve({ done: true });
-      }
+      },
     };
-  }
+  },
 };
 
-(async function() {
-   for await (num of asyncIterable) {
-     console.log(num);
-   }
+(async function () {
+  for await (num of asyncIterable) {
+    console.log(num);
+  }
 })();
 
 // 0
@@ -69,7 +69,7 @@ async function* asyncGenerator() {
   }
 }
 
-(async function() {
+(async function () {
   for await (num of asyncGenerator()) {
     console.log(num);
   }
@@ -111,7 +111,7 @@ async function getResponseSize(url) {
   // expected output: "Response Size: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');
+getResponseSize("https://jsonplaceholder.typicode.com/photos");
 ```
 
 ## 规范
@@ -122,7 +122,7 @@ getResponseSize('https://jsonplaceholder.typicode.com/photos');
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}
 - {{jsxref("Statements/for...of")}}

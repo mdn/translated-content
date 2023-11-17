@@ -37,10 +37,10 @@ gen.throw(exception)
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     try {
-       yield 42;
-    } catch(e) {
+      yield 42;
+    } catch (e) {
       console.log("Error caught!");
     }
   }

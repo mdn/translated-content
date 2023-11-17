@@ -44,7 +44,7 @@ if (window.Worker) {
 创建一个新的 worker 很简单。你需要做的是调用 {{domxref("Worker.Worker", "Worker()")}} 构造器，指定一个脚本的 URI 来执行 worker 线程（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 ```
 
 ### 专用 worker 中消息的接收和发送
@@ -127,12 +127,10 @@ worker 线程会被立即终止。
 Worker 线程能够访问一个全局函数 `importScripts()` 来引入脚本，该函数接受 0 个或者多个 URI 作为参数来引入资源；以下例子都是合法的：
 
 ```js
-importScripts();                        /* 什么都不引入 */
-importScripts("foo.js");                /* 只引入 "foo.js" */
-importScripts("foo.js", "bar.js");      /* 引入两个脚本 */
-importScripts(
-  "//example.com/hello.js"
-); /* 你可以从其他来源导入脚本 */
+importScripts(); /* 什么都不引入 */
+importScripts("foo.js"); /* 只引入 "foo.js" */
+importScripts("foo.js", "bar.js"); /* 引入两个脚本 */
+importScripts("//example.com/hello.js"); /* 你可以从其他来源导入脚本 */
 ```
 
 浏览器加载并运行每一个列出的脚本。每个脚本中的全局对象都能够被 worker 使用。如果脚本无法加载，将抛出 `NETWORK_ERROR` 异常，接下来的代码也无法执行。而之前执行的代码（包括使用 {{domxref("setTimeout()")}} 异步执行的代码）依然能够运行。`importScripts()` **之后**的函数声明依然会被保留，因为它们始终会在其他代码之前运行。
@@ -154,7 +152,7 @@ importScripts(
 生成一个新的共享 worker 与生成一个专用 worker 非常相似，只是构造器的名字不同（查看 [index.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index.html) 和 [index2.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index2.html)）——生成共享 worker 的代码如下：
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 ```
 
 一个非常大的区别在于，与一个共享 worker 通信必须通过 `port` 对象——一个确切的打开的端口供脚本与 worker 通信（在专用 worker 中这一部分是隐式进行的）。
@@ -346,7 +344,7 @@ this.removeListeners = (name) => {
 this.sendQuery = (queryMethod, ...queryMethodArguments) => {
   if (!queryMethod) {
     throw new TypeError(
-      "QueryableWorker.sendQuery takes at least one argument"
+      "QueryableWorker.sendQuery takes at least one argument",
     );
   }
   worker.postMessage({
@@ -367,7 +365,7 @@ worker.onmessage = (event) => {
   ) {
     listeners[event.data.queryMethodListener].apply(
       instance,
-      event.data.queryMethodArguments
+      event.data.queryMethodArguments,
     );
   } else {
     this.defaultListener.call(instance, event.data);
@@ -416,7 +414,7 @@ onmessage = (event) => {
   ) {
     queryableFunctions[event.data.queryMethod].apply(
       self,
-      event.data.queryMethodArguments
+      event.data.queryMethodArguments,
     );
   } else {
     defaultReply(event.data);
@@ -429,7 +427,7 @@ onmessage = (event) => {
 **example.html**（主页面）：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -476,7 +474,7 @@ onmessage = (event) => {
         this.sendQuery = (queryMethod, ...queryMethodArguments) => {
           if (!queryMethod) {
             throw new TypeError(
-              "QueryableWorker.sendQuery takes at least one argument"
+              "QueryableWorker.sendQuery takes at least one argument",
             );
           }
           worker.postMessage({
@@ -493,7 +491,7 @@ onmessage = (event) => {
           ) {
             listeners[event.data.queryMethodListener].apply(
               instance,
-              event.data.queryMethodArguments
+              event.data.queryMethodArguments,
             );
           } else {
             this.defaultListener.call(instance, event.data);
@@ -509,7 +507,7 @@ onmessage = (event) => {
         document
           .getElementById("firstLink")
           .parentNode.appendChild(
-            document.createTextNode(`The difference is ${result}!`)
+            document.createTextNode(`The difference is ${result}!`),
           );
       });
 
@@ -544,12 +542,12 @@ onmessage = (event) => {
 
 ```js
 const queryableFunctions = {
-  // 示例1：得到两个数字的差值：
+  // 示例 1：得到两个数字的差值：
   getDifference(minuend, subtrahend) {
     reply("printStuff", minuend - subtrahend);
   },
 
-  // 示例2：等待三秒
+  // 示例 2：等待三秒
   waitSomeTime() {
     setTimeout(() => {
       reply("doAlert", 3, "seconds");
@@ -582,7 +580,7 @@ onmessage = (event) => {
   ) {
     queryableFunctions[event.data.queryMethod].apply(
       self,
-      event.data.queryMethodArguments
+      event.data.queryMethodArguments,
     );
   } else {
     defaultReply(event.data);
@@ -611,62 +609,62 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 目前没有一种“官方”的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入道到网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 属性，并且它的 `type` 属性没有指定成一个可运行的 MIME type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。“数据块”是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>MDN Example - Embedded worker</title>
-  <script type="text/js-worker">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>MDN Example - Embedded worker</title>
+    <script type="text/js-worker">
       // 该脚本不会被 JS 引擎解析，因为它的 mime-type 是 text/js-worker。
       const myVar = 'Hello World!';
       // 剩下的 worker 代码写到这里。
     </script>
-  <script>
-    // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
-    function pageLog(sMsg) {
-      // 使用 fragment：这样浏览器只会进行一次渲染/重排。
-      const frag = document.createDocumentFragment();
-      frag.appendChild(document.createTextNode(sMsg));
-      frag.appendChild(document.createElement("br"));
-      document.querySelector("#logDisplay").appendChild(frag);
-    }
-  </script>
-  <script type="text/js-worker">
+    <script>
+      // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
+      function pageLog(sMsg) {
+        // 使用 fragment：这样浏览器只会进行一次渲染/重排。
+        const frag = document.createDocumentFragment();
+        frag.appendChild(document.createTextNode(sMsg));
+        frag.appendChild(document.createElement("br"));
+        document.querySelector("#logDisplay").appendChild(frag);
+      }
+    </script>
+    <script type="text/js-worker">
       // 该脚本不会被 JS 引擎解析，因为它的 mime-type 是 text/js-worker。
       onmessage = (event) => {
         postMessage(myVar);
       };
       // 剩下的 worker 代码写到这里。
     </script>
-  <script>
-    // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
+    <script>
+      // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
 
-    // 过去存在 blob builder，但现在我们使用Blob
-    const blob = new Blob(
-      Array.prototype.map.call(
-        document.querySelectorAll("script[type='text\/js-worker']"),
-        (script) => script.textContent,
-        { type: "text/javascript" }
-      )
-    );
+      // 过去存在 blob builder，但现在我们使用 Blob
+      const blob = new Blob(
+        Array.prototype.map.call(
+          document.querySelectorAll("script[type='text\/js-worker']"),
+          (script) => script.textContent,
+          { type: "text/javascript" },
+        ),
+      );
 
-    // 创建一个新的 document.worker 属性，包含所有 "text/js-worker" 脚本。
-    document.worker = new Worker(window.URL.createObjectURL(blob));
+      // 创建一个新的 document.worker 属性，包含所有 "text/js-worker" 脚本。
+      document.worker = new Worker(window.URL.createObjectURL(blob));
 
-    document.worker.onmessage = (event) => {
-      pageLog(`Received: ${event.data}`);
-    };
+      document.worker.onmessage = (event) => {
+        pageLog(`Received: ${event.data}`);
+      };
 
-    // 启动 worker。
-    window.onload = () => {
-      document.worker.postMessage("");
-    };
-  </script>
-</head>
-<body>
-<div id="logDisplay"></div>
-</body>
+      // 启动 worker。
+      window.onload = () => {
+        document.worker.postMessage("");
+      };
+    </script>
+  </head>
+  <body>
+    <div id="logDisplay"></div>
+  </body>
 </html>
 ```
 
@@ -716,62 +714,62 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 #### HTML 代码
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8" />
-  <title>Fibonacci number generator</title>
-  <style>
-    body {
-      width: 500px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fibonacci number generator</title>
+    <style>
+      body {
+        width: 500px;
+      }
 
-    div,
-    p {
-      margin-bottom: 20px;
-    }
-  </style>
-</head>
-<body>
-<form>
-  <div>
-    <label for="number"
-    >Enter a number that is an index position in the fibonacci sequence to
-      see what number is in that position (e.g. enter 5 and you'll get a
-      result of 8 — fibonacci index position 5 is 8).</label
-    >
-    <input type="number" id="number" />
-  </div>
-  <div>
-    <input type="submit" />
-  </div>
-</form>
+      div,
+      p {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="number"
+          >Enter a number that is an index position in the fibonacci sequence to
+          see what number is in that position (e.g. enter 5 and you'll get a
+          result of 8 — fibonacci index position 5 is 8).</label
+        >
+        <input type="number" id="number" />
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
 
-<p id="result"></p>
+    <p id="result"></p>
 
-<script>
-  const form = document.querySelector("form");
-  const input = document.querySelector('input[type="number"]');
-  const result = document.querySelector("p#result");
-  const worker = new Worker("fibonacci.js");
+    <script>
+      const form = document.querySelector("form");
+      const input = document.querySelector('input[type="number"]');
+      const result = document.querySelector("p#result");
+      const worker = new Worker("fibonacci.js");
 
-  worker.onmessage = (event) => {
-    result.textContent = event.data;
-    console.log(`Got: ${event.data}`);
-  };
+      worker.onmessage = (event) => {
+        result.textContent = event.data;
+        console.log(`Got: ${event.data}`);
+      };
 
-  worker.onerror = (error) => {
-    console.log(`Worker error: ${error.message}`);
-    throw error;
-  };
+      worker.onerror = (error) => {
+        console.log(`Worker error: ${error.message}`);
+        throw error;
+      };
 
-  form.onsubmit = (e) => {
-    e.preventDefault();
-    worker.postMessage(input.value);
-    input.value = "";
-  };
-</script>
-</body>
+      form.onsubmit = (e) => {
+        e.preventDefault();
+        worker.postMessage(input.value);
+        input.value = "";
+      };
+    </script>
+  </body>
 </html>
 ```
 
@@ -812,7 +810,7 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 在一个 worker 中最主要的你*不能*做的事情就是直接影响父页面。包括操作父页面的节点以及使用页面中的对象。你只能间接地实现，通过 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 回传消息给主脚本，然后从主脚本那里执行操作或变化。
 
-> **备注：** 你可以使用网站测试一个方法是否对 worker 可用： <https://worker-playground.glitch.me/>。例如，如果你在 Firefox 84 的网站上输入 [EventSource](/en-US/docs/Web/API/EventSource)，你会发现在 service worker 不支持这个方法，但在专用和共享 worker 中支持。
+> **备注：** 你可以使用网站测试一个方法是否对 worker 可用： <https://worker-playground.glitch.me/>。例如，如果你在 Firefox 84 的网站上输入 [EventSource](/zh-CN/docs/Web/API/EventSource)，你会发现在 service worker 不支持这个方法，但在专用和共享 worker 中支持。
 
 > **备注：** 获取 worker 中完整的方法列表，请参阅 [worker 可用的方法和接口](/zh-CN/docs/Web/Reference/Functions_and_classes_available_to_workers)。
 

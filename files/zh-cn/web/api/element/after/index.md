@@ -9,16 +9,18 @@ slug: Web/API/Element/after
 
 ## 语法
 
-```js
-after(... nodes)
+```js-nolint
+after(node1)
+after(node1, node2)
+after(node1, node2, /* … ,*/ nodeN)
 ```
 
 ### 参数
 
-- `nodes`
-  - : 一组准备插入的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 。
+- `node1`, …, `nodeN`
+  - : 一组准备插入的 {{domxref("Node")}} 或字符串。
 
-### 错误
+### 异常
 
 - {{domxref("HierarchyRequestError")}}: 在某些不正确的层级结构进行了插入操作。
 
@@ -73,7 +75,7 @@ console.log(container.outerHTML);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Element.before()")}}
 - {{domxref("Element.append()")}}

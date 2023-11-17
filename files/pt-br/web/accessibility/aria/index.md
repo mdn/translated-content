@@ -47,7 +47,7 @@ O conjunto ARIA pode ser implementado nos navegadores mais populares e em leitor
 - [A Técnica na Execução de _Widgets_, Tutoriais e Exemplos](/pt-BR/docs/Accessibility/ARIA/widgets/overview)
   - : Precisa de um controle dezlizante, um menu, ou algum outro tipo de _widget_? Encontre, aqui, as maneiras de obtê-los.
 - [Bibliotecas JavaScript UI com ARIA habilitada](http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/)
-  - : Se você está começando um projeto novo, escolha uma biblioteca UI para _widget_ com suporte a ARIA já embutido. Atenção: isto é de 2009 -- este conteúdo deve ser movido para uma página MDN, onde pode ser atualizado.
+  - : Se você está começando um projeto novo, escolha uma biblioteca UI para _widget_ com suporte a ARIA já embutido. Atenção: isto é de 2009 — este conteúdo deve ser movido para uma página MDN, onde pode ser atualizado.
 - [Acessibilidade em HTML5 e Aplicações Ricas - Materiais de Oficina CSUN 2012](http://dl.dropbox.com/u/573324/CSUN2012/index.html)
   - : Inclua apresentações de eslaides e exemplos.
 

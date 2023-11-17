@@ -1,8 +1,6 @@
 ---
-title: '<tbody> : l''élément de corps d''un tableau'
+title: "<tbody> : l'élément de corps d'un tableau"
 slug: Web/HTML/Element/tbody
-translation_of: Web/HTML/Element/tbody
-browser-compat: html.elements.tbody
 ---
 
 {{HTMLSidebar}}
@@ -90,6 +88,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 - `charoff` {{deprecated_inline}}
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
 - `valign` {{deprecated_inline}}
+
   - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont&nbsp;:
 
     - `baseline`
@@ -160,14 +159,19 @@ Le CSS permettant la mise en forme du tableau se décompose comme suit&nbsp;:
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
 Pour commencer, on définit le style général du tableau, l'épaisseur, le style et la couleur de la bordure extérieure avec [`border-collapse`](/fr/docs/Web/CSS/border-collapse) pour s'assurer que les lignes de bordure sont partagées entre les cellules adjacentes plutôt que chacune ait ses propres bordures avec un espace interstitiel. [`font`](/fr/docs/Web/CSS/font) est utilisé pour définir une police de caractères pour les textes du tableau.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
@@ -268,10 +272,15 @@ Puis, chaque ligne suivante pour ce `<tbody>` se compose de deux cellules&nbsp;:
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;

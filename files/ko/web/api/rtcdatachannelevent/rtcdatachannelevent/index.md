@@ -33,7 +33,7 @@ var event = new RTCDataChannelEvent(type, RtcDataChannelEventInit);
 아래 예제는 신규 {{event("datachannel")}}를 생성합니다. `dc`는 이미 존재하는 데이터 채널을 뜻합니다.
 
 ```js
-var event = new RTCDataChannelEvent("datachannel", {"channel": dc});
+var event = new RTCDataChannelEvent("datachannel", { channel: dc });
 ```
 
 ## 명세

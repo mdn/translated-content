@@ -1,8 +1,6 @@
 ---
 title: <input type="url">
 slug: Web/HTML/Element/input/url
-translation_of: Web/HTML/Element/input/url
-browser-compat: html.elements.input.input-url
 ---
 
 {{HTMLSidebar}}
@@ -148,7 +146,7 @@ Toutefois, ce mécanisme ne vérifie pas que l'URL saisie existe bien. Seule une
 Actuellement, l'ensemble des navigateurs implémentent ce type de champ comme un champ texte qui dispose de fonctionnalités de validation basiques. Dans sa forme la plus simple, un champ de saisie d'URL ressemblera à&nbsp;:
 
 ```html
-<input id="monURL" name="monURL" type="url">
+<input id="monURL" name="monURL" type="url" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -164,8 +162,11 @@ Il est parfois utile de fournir une indication sur le type de donnée attendu. S
 Dans l'exemple qui suit, le contrôle contient le texte indicatif `http://www.example.com`. Dans le résultat, vous pouvez voir comment ce texte disparaît/réapparaît lorsqu'on saisit une valeur dans le contrôle.
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       placeholder="http://www.example.com">
+<input
+  id="monURL"
+  name="monURL"
+  type="url"
+  placeholder="http://www.example.com" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -179,8 +180,7 @@ Il est possible de contrôler la taille physique de la boîte utilisée pour le 
 C'est l'attribut [`size`](/fr/docs/Web/HTML/Element/Input#attr-size) qui permet de contrôler la taille de la boîte utilisée. La valeur de cet attribut correspond au nombre de caractères qui seront affichés en même temps dans la boîte. Dans l'exemple suivant, on souhaite que la boîte de saisie mesure 30 caractères de large&nbsp;:
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       size="30">
+<input id="monURL" name="monURL" type="url" size="30" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -192,8 +192,13 @@ L'attribut `size` ne limite pas la valeur qui peut être saisie mais uniquement 
 Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 30 caractères de large et on souhaite que l'URL soit plus longue que 10 caractères et moins longue que 80.
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       size="30" minlength="10" maxlength="80">
+<input
+  id="monURL"
+  name="monURL"
+  type="url"
+  size="30"
+  minlength="10"
+  maxlength="80" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -207,8 +212,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 30 caractèr
 On peut fournir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)&nbsp;:
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       value="http://www.example.com">
+<input id="monURL" name="monURL" type="url" value="http://www.example.com" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -218,15 +222,14 @@ On peut fournir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/W
 On peut également fournir une liste d'options parmi lesquelles la personne saisissant une URL peut choisir via l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list). Cette liste ne limite pas l'utilisatrice ou l'utilisateur à ces choix mais permet de choisir certaines URL fréquemment utilisées plus facilement. Cette liste peut également être utilisée par l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/Input#attr-autocomplete). La valeur de l'attribut `list` est un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) que de valeurs suggérées. La valeur de l'attribut `value` de chacun de ces éléments `<option>` correspondra à la valeur qui sera suggérée dans le champ de saisie.
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       list="defaultURLs">
+<input id="monURL" name="monURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/">
-  <option value="http://www.google.com/">
-  <option value="http://www.microsoft.com/">
-  <option value="https://www.mozilla.org/">
-  <option value="http://w3.org/">
+  <option value="https://developer.mozilla.org/"></option>
+  <option value="http://www.google.com/"></option>
+  <option value="http://www.microsoft.com/"></option>
+  <option value="https://www.mozilla.org/"></option>
+  <option value="http://w3.org/"></option>
 </datalist>
 ```
 
@@ -239,15 +242,14 @@ Avec cet élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) et les él
 Il est aussi possible d'inclure des attributs [`label`](/fr/docs/Web/HTML/Element/Option#attr-label) sur un ou plusieurs des éléments `<option>` afin de fournir un libellé textuel. Certains navigateurs n'afficheront que les libellés tandis que d'autres afficheront le libellé et l'URL.
 
 ```html
-<input id="monURL" name="monURL" type="url"
-       list="defaultURLs">
+<input id="monURL" name="monURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
-  <option value="http://www.google.com/" label="Google">
-  <option value="http://www.microsoft.com/" label="Microsoft">
-  <option value="https://www.mozilla.org/" label="Mozilla">
-  <option value="http://w3.org/" label="W3C">
+  <option value="https://developer.mozilla.org/" label="MDN Web Docs"></option>
+  <option value="http://www.google.com/" label="Google"></option>
+  <option value="http://www.microsoft.com/" label="Microsoft"></option>
+  <option value="https://www.mozilla.org/" label="Mozilla"></option>
+  <option value="http://w3.org/" label="W3C"></option>
 </datalist>
 ```
 
@@ -271,7 +273,7 @@ Comme vu ci-avant, on peut rendre la saisie de l'URL obligatoire avec l'attribut
 
 ```html
 <form>
-  <input id="monURL" name="monURL" type="url" required>
+  <input id="monURL" name="monURL" type="url" required />
   <button>Envoyer</button>
 </form>
 ```
@@ -302,14 +304,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -317,16 +320,21 @@ input:valid+span:after {
 ```html
 <form>
   <div>
-    <label for="myURL">Veuillez saisir l'adresse de la page problématique :</label>
-    <input id="myURL" name="myURL" type="url"
-           required pattern=".*\.maboite\..*"
-           title="L'URL doit être sur le domaine maboite.">
+    <label for="myURL"
+      >Veuillez saisir l'adresse de la page problématique :</label
+    >
+    <input
+      id="myURL"
+      name="myURL"
+      type="url"
+      required
+      pattern=".*\.maboite\..*"
+      title="L'URL doit être sur le domaine maboite." />
     <span class="validity"></span>
   </div>
   <div>
     <label for="myComment">Quel est le problème ?</label>
-    <input id="myComment" name="myComment" type="text"
-           required>
+    <input id="myComment" name="myComment" type="text" required />
     <span class="validity"></span>
   </div>
   <div>

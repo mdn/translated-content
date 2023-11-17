@@ -1,13 +1,15 @@
 ---
-title: 'IIFE: Expresión de función ejecutada inmediatamente'
+title: "IIFE: Expresión de función ejecutada inmediatamente"
 slug: Glossary/IIFE
 ---
+
+{{GlossarySidebar}}
 
 Las expresiones de función ejecutadas inmediatamente (**IIFE** por su sigla en inglés) son funciones que se ejecutan tan pronto como se definen.
 
 ```js
 (function () {
-    statements
+  statements;
 })();
 ```
 
@@ -21,18 +23,18 @@ La función se convierte en una expresión de función que es ejecutada inmediat
 
 ```js
 (function () {
-    var aName = "Barry";
+  var aName = "Barry";
 })();
 // Variable name is not accessible from the outside scope
-aName // throws "Uncaught ReferenceError: aName is not defined"
+aName; // throws "Uncaught ReferenceError: aName is not defined"
 ```
 
 Asignar el IIFE a una variable almacena el valor de retorno, no la definición de la función.
 
 ```js
 var result = (function () {
-    var name = "Barry";
-    return name;
+  var name = "Barry";
+  return name;
 })();
 // Immediately creates the output:
 result; // "Barry"

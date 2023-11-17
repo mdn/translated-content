@@ -1,12 +1,6 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Web
-translation_of: Web/CSS/quotes
 ---
 
 {{CSSRef}}
@@ -21,9 +15,9 @@ quotes: none;
 
 /* Chaînes de caractères */
 /* Type <string>         */
-quotes: "«" "»";           /* On utilise les guillemets français
+quotes: "«" "»"; /* On utilise les guillemets français
                               pour ouvrir et fermer une citation  */
-quotes: "«" "»" "‹" "›";   /* On définit deux niveaux de citation */
+quotes: "«" "»" "‹" "›"; /* On définit deux niveaux de citation */
 
 /* Valeurs globales */
 quotes: inherit;
@@ -52,11 +46,12 @@ quotes: unset;
 
 ```html
 <p>
-  <q>Bientôt le Lapin aperçut Alice qui furetait ;
-  il lui cria d’un ton d’impatience :
-    <q>Eh bien ! Marianne, que faites-vous ici ?
-    Courez vite à la maison me chercher une paire
-    de gants et un éventail ! Allons, dépêchons-nous.
+  <q
+    >Bientôt le Lapin aperçut Alice qui furetait ; il lui cria d’un ton
+    d’impatience :
+    <q
+      >Eh bien ! Marianne, que faites-vous ici ? Courez vite à la maison me
+      chercher une paire de gants et un éventail ! Allons, dépêchons-nous.
     </q>
   </q>
 </p>
@@ -66,7 +61,7 @@ quotes: unset;
 
 ```css
 q {
-  quotes : "«" "»" '"' '"';
+  quotes: "«" "»" '"' '"';
 }
 ```
 

@@ -18,7 +18,7 @@ l10n:
 ## 例
 
 ```js
-// 文書内に <a id="myAnchor" href="/en-US/docs/Location.search?q=123"> 要素があるとする
+// 文書内に <a id="myAnchor" href="/ja/docs/Location.search?q=123"> 要素があるとする
 const anchor = document.getElementById("myAnchor");
 const queryString = anchor.search; // Returns:'?q=123'
 

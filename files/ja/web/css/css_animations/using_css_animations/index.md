@@ -82,9 +82,11 @@ p {
 2 番目 (かつ最後) のキーフレームは、100% (代替表記の `to` を使用しています) です。 要素の左マージンを 0% に、幅を 100% に設定しています。 これにより、見出しがコンテンツエリアの左端へすべり込むことでアニメーションが終わります。
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 > **メモ:** アニメーションを見るにはページを再読み込みしてください。
@@ -131,9 +133,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 これはブラウザーに、アニメーションの流れの 75% 経過時点で見出しの左マージンを 25% に、また幅を 150% にするよう設定します。
@@ -171,9 +175,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Making_it_repeat","100%","250")}}
@@ -208,9 +214,11 @@ p {
 ```
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("Making_it_move_back_and_forth","100%","250")}}
@@ -284,13 +292,13 @@ animation-iteration-count: 2, 1;
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 ```
@@ -319,7 +327,7 @@ element.className = "slidein";
 ```js
 function listener(event) {
   var l = document.createElement("li");
-  switch(event.type) {
+  switch (event.type) {
     case "animationstart":
       l.textContent = `Started: elapsed time is ${event.elapsedTime}`;
       break;
@@ -356,11 +364,10 @@ function listener(event) {
   elements move across the page.
 </p>
 <p>
-  In addition, we output some text each time an animation event fires,
-  so you can see them in action.
+  In addition, we output some text each time an animation event fires, so you
+  can see them in action.
 </p>
-<ul id="output">
-</ul>
+<ul id="output"></ul>
 ```
 
 #### 結果

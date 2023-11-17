@@ -1,7 +1,8 @@
 ---
-title: ':target'
+title: ":target"
 slug: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:target`** de [CSS](/es/docs/Web/CSS) representa un elemento único (el _elemento objetivo_) con un [`id`](/es/docs/Web/HTML/Global_attributes#id) que coincide con el fragmento de la URL.
@@ -40,17 +41,24 @@ La pseudo-clase `:target` se puede usar para resaltar la parte de una página a 
 ```html
 <h3>Tabla de contenido</h3>
 <ol>
- <li><a href="#p1">¡Salta al primer párrafo!</a></li>
- <li><a href="#p2">¡Salta al segundo párrafo!</a></li>
- <li><a href="#nowhere">Este enlace no va a ninguna parte,
-   porque el objetivo no existe.</a></li>
+  <li><a href="#p1">¡Salta al primer párrafo!</a></li>
+  <li><a href="#p2">¡Salta al segundo párrafo!</a></li>
+  <li>
+    <a href="#nowhere"
+      >Este enlace no va a ninguna parte, porque el objetivo no existe.</a
+    >
+  </li>
 </ol>
 
 <h3>Mi artículo divertido</h3>
-<p id="p1">Puede orientar elegir como blanco <i>este párrafo</i> utilizando un
-  fragmento de URL. ¡Haz clic en el enlace de arriba para probar!</p>
-<p id="p2">Este es <i>otro párrafo</i>, también accesible
-  desde los enlaces de arriba. ¿No es encantador?</p>
+<p id="p1">
+  Puede orientar elegir como blanco <i>este párrafo</i> utilizando un fragmento
+  de URL. ¡Haz clic en el enlace de arriba para probar!
+</p>
+<p id="p2">
+  Este es <i>otro párrafo</i>, también accesible desde los enlaces de arriba.
+  ¿No es encantador?
+</p>
 ```
 
 #### CSS
@@ -65,7 +73,7 @@ p:target::before {
   font: 70% sans-serif;
   content: "►";
   color: limegreen;
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 
 /* Estilo de elementos en cursiva dentro del elemento de destino */
@@ -95,17 +103,20 @@ Puede usar la pseudo-clase `:target` para crear un lightbox sin usar JavaScript.
 <div class="lightbox" id="ejemplo1">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+    <figcaption>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
+      placerat id eleifend eu, semper vel sem.
+    </figcaption>
   </figure>
 </div>
 
 <div class="lightbox" id="ejemplo2">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Cras risus odio, pharetra nec ultricies et,
-      mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.</figcaption>
+    <figcaption>
+      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
+      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+    </figcaption>
   </figure>
 </div>
 ```
@@ -168,7 +179,7 @@ Puede usar la pseudo-clase `:target` para crear un lightbox sin usar JavaScript.
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "";
   cursor: default;
 }

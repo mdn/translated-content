@@ -53,7 +53,10 @@ HTML 中的\<small>元素將使文本的字体变小一号。(例如从大变成
 ### 例子 1
 
 ```html
-<p>This is the first sentence.  <small>This whole sentence is in small letters.</small></p>
+<p>
+  This is the first sentence.
+  <small>This whole sentence is in small letters.</small>
+</p>
 ```
 
 #### 结果
@@ -63,7 +66,10 @@ This is the first sentence. This whole sentence is in small letters.
 ### 例子 2 (CSS 替代)
 
 ```html
-<p>This is the first sentence. <span style="font-size:0.8em">This whole sentence is in small letters.</span></p>
+<p>
+  This is the first sentence.
+  <span style="font-size:0.8em">This whole sentence is in small letters.</span>
+</p>
 ```
 
 #### 结果

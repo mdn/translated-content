@@ -35,7 +35,10 @@ slug: Web/API/XPathEvaluator
 var xpath = "//div";
 var evaluator = new XPathEvaluator();
 var expression = evaluator.createExpression("//div");
-var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+var result = expression.evaluate(
+  document,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

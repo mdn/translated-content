@@ -1,7 +1,6 @@
 ---
 title: Una reintroducción a JavaScript (Tutorial de JS)
 slug: Web/JavaScript/Language_overview
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 
 {{jsSidebar}}
@@ -76,15 +75,15 @@ var circumference = 2 * Math.PI * r;
 Puedes convertir una cadena en un número entero usando la función {{jsxref("Objetos_Globales/parseInt", "parseInt()")}} incorporada. Esta toma la base para la conversión como un segundo argumento opcional, que siempre debes proporcionar:
 
 ```js
-parseInt('123', 10); // 123
-parseInt('010', 10); // 10
+parseInt("123", 10); // 123
+parseInt("010", 10); // 10
 ```
 
 En los navegadores más antiguos, se supone que las cadenas que comienzan con un "0" están en octal (raíz 8), pero este no ha sido el caso desde 2013 más o menos. A menos que estés seguro de tu formato de cadena, puedes obtener resultados sorprendentes en esos navegadores más antiguos:
 
 ```js
-parseInt('010');  //  8
-parseInt('0x10'); // 16
+parseInt("010"); //  8
+parseInt("0x10"); // 16
 ```
 
 Aquí, vemos que la función {{jsxref("Objetos_Globales/parseInt", "parseInt()")}} trata la primera cadena como octal debido al 0 inicial, y la segunda cadena como hexadecimal debido al "0x" inicial. La _notación hexadecimal todavía está en su lugar_; solo se ha eliminado el octal.
@@ -92,7 +91,7 @@ Aquí, vemos que la función {{jsxref("Objetos_Globales/parseInt", "parseInt()")
 Si deseas convertir un número binario en un entero, simplemente cambia la base:
 
 ```js
-parseInt('11', 2); // 3
+parseInt("11", 2); // 3
 ```
 
 De manera similar, puedes analizar números de coma flotante utilizando la función incorporada {{jsxref("Objetos_Globales/parseFloat", "parseFloat()")}}. A diferencia de su primo {{jsxref("Objetos_Globales/parseInt", "parseInt()")}}, `parseFloat()` siempre usa base 10.
@@ -100,15 +99,15 @@ De manera similar, puedes analizar números de coma flotante utilizando la funci
 También puedes utilizar el operador `+` unario para convertir valores en números:
 
 ```js
-+ '42';   // 42
-+ '010';  // 10
-+ '0x10'; // 16
++"42"; // 42
++"010"; // 10
++"0x10"; // 16
 ```
 
 Se devuelve un valor especial llamado {{jsxref("NaN")}} (abreviatura de "Not a Number" o "No es un número") si la cadena no es numérica:
 
 ```js
-parseInt('hello', 10); // NaN
+parseInt("hello", 10); // NaN
 ```
 
 `NaN` es tóxico: si lo proporcionas como operando para cualquier operación matemática, el resultado también será `NaN`:
@@ -126,7 +125,7 @@ isNaN(NaN); // true
 JavaScript también tiene los valores especiales {{jsxref("Infinity")}} e `-Infinity`:
 
 ```js
- 1 / 0; //  Infinity
+1 / 0; //  Infinity
 -1 / 0; // -Infinity
 ```
 
@@ -149,15 +148,15 @@ Si deseas representar un solo caracter, simplemente usa una cadena que consta de
 Para encontrar la longitud de una cadena (en unidades de código), accede a su propiedad {{jsxref("Objetos_Globales/String/length", "lenght")}}:
 
 ```js
-'hello'.length; // 5
+"hello".length; // 5
 ```
 
 ¡Aquí está nuestra primer pincelada con objetos JavaScript! ¿Mencionamos que también puedes usar cadenas como {{jsxref("Object", "objetos", "", 1)}}? También tienen {{jsxref("String", "métodos", "#Métodos", 1)}} que te permiten manipular la cadena y acceder a información sobre la cadena:
 
 ```js
-'hello'.charAt(0); // "h"
-'hello, world'.replace('world', 'mars'); // "hello, mars"
-'hello'.toUpperCase(); // "HELLO"
+"hello".charAt(0); // "h"
+"hello, world".replace("world", "mars"); // "hello, mars"
+"hello".toUpperCase(); // "HELLO"
 ```
 
 ## Otros tipos
@@ -172,7 +171,7 @@ JavaScript tiene un tipo booleano, con valores posibles `true` y `false` (ambos 
 Puedes realizar esta conversión explícitamente utilizando la función `Boolean()`:
 
 ```js
-Boolean('');  // false
+Boolean(""); // false
 Boolean(234); // true
 ```
 
@@ -188,7 +187,7 @@ Las nuevas variables en JavaScript se declaran utilizando una de tres palabras c
 
 ```js
 let a;
-let name = 'Simon';
+let name = "Simon";
 ```
 
 El siguiente es un ejemplo de alcance con una variable declarada con **`let`**:
@@ -214,7 +213,7 @@ Pi = 1; // arrojará un error porque no puede cambiar una variable constante.
 
 ```js
 var a;
-var name = 'Simon';
+var name = "Simon";
 ```
 
 Un ejemplo de ámbito con una variable declarada con **`var`:**
@@ -247,14 +246,14 @@ Puedes usar `++` y `--` para incrementar y disminuir respectivamente. Estos se p
 El [operador `+`](/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition) también hace concatenación de cadenas:
 
 ```js
-'hello' + ' world'; // "hello world"
+"hello" + " world"; // "hello world"
 ```
 
 Si agregas una cadena a un número (u otro valor), todo se convierte primero en cadena. Esto podría hacerte tropezar:
 
 ```js
-'3' + 4 + 5;  // "345"
- 3 + 4 + '5'; // "75"
+"3" + 4 + 5; // "345"
+3 + 4 + "5"; // "75"
 ```
 
 Agregar una cadena vacía a algo es una forma útil de convertirla en cadena.
@@ -262,15 +261,15 @@ Agregar una cadena vacía a algo es una forma útil de convertirla en cadena.
 [Se pueden realizar comparaciones](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) en JavaScript utilizando `<`, `>`, `<=` y `>=`. Estas funcionan tanto para cadenas como para números. La igualdad es un poco menos sencilla. El operador doble-igual realiza la coerción de tipos si le das diferentes tipos, con resultados a veces interesantes:
 
 ```js
-123 == '123'; // true
+123 == "123"; // true
 1 == true; // true
 ```
 
 Para evitar la coerción de tipos, usa el operador triple-igual:
 
 ```js
-123 === '123'; // false
-1 === true;    // false
+123 === "123"; // false
+1 === true; // false
 ```
 
 También hay operadores `!=` y `!==`.
@@ -282,15 +281,15 @@ JavaScript también tiene [operaciones bit a bit](/es/docs/Web/JavaScript/Refere
 JavaScript tiene un conjunto de estructuras de control similar a otros lenguajes de la familia C. Las declaraciones condicionales son compatibles con `if` y `else`; las puedes encadenarlas si lo deseas:
 
 ```js
-var name = 'kittens';
-if (name == 'puppies') {
-  name += ' woof';
-} else if (name == 'kittens') {
-  name += ' meow';
+var name = "kittens";
+if (name == "puppies") {
+  name += " woof";
+} else if (name == "kittens") {
+  name += " meow";
 } else {
-  name += '!';
+  name += "!";
 }
-name == 'kittens meow';
+name == "kittens meow";
 ```
 
 JavaScript tiene bucles `while` y bucles `do-while`. El primero es bueno para bucles básicos; el segundo bucle para donde deseas asegurarte de que el cuerpo del bucle se ejecute por lo menos una vez:
@@ -345,17 +344,17 @@ var name = cachedName || (cachedName = getName());
 JavaScript tiene un operador ternario para expresiones condicionales:
 
 ```js
-var allowed = (age > 18) ? 'yes' : 'no';
+var allowed = age > 18 ? "yes" : "no";
 ```
 
 La instrucción `switch` se puede usar para múltiples ramas según un número o cadena:
 
 ```js
 switch (action) {
-  case 'draw':
+  case "draw":
     drawIt();
     break;
-  case 'eat':
+  case "eat":
     eatIt();
     break;
   default:
@@ -420,12 +419,12 @@ La sintaxis de objeto literal se puede utilizar para iniciar un objeto en su tot
 
 ```js
 var obj = {
-  name: 'Carrot',
-  for: 'Max', // 'for' es una palabra reservada, use '_for' en su lugar.
+  name: "Carrot",
+  for: "Max", // 'for' es una palabra reservada, use '_for' en su lugar.
   details: {
-    color: 'orange',
-    size: 12
-  }
+    color: "orange",
+    size: 12,
+  },
 };
 ```
 
@@ -433,7 +432,7 @@ El acceso a los atributos se puede encadenar:
 
 ```js
 obj.details.color; // orange
-obj['details']['size']; // 12
+obj["details"]["size"]; // 12
 ```
 
 El siguiente ejemplo crea un prototipo de objeto (`Person`) y una instancia de ese prototipo (`you`).
@@ -445,7 +444,7 @@ function Person(name, age) {
 }
 
 // Define un objeto
-var you = new Person('You', 24);
+var you = new Person("You", 24);
 // Estamos creando una nueva persona llamada "You" de 24 años.
 ```
 
@@ -453,7 +452,7 @@ var you = new Person('You', 24);
 
 ```js
 // notación de puntos
-obj.name = 'Simon';
+obj.name = "Simon";
 var name = obj.name;
 ```
 
@@ -461,18 +460,18 @@ Y...
 
 ```js
 // notación de corchetes
-obj['name'] = 'Simon';
-var name = obj['name'];
+obj["name"] = "Simon";
+var name = obj["name"];
 // puedes usar una variable para definir una clave
-var user = prompt('¿cuál es su clave?')
-obj[user] = prompt('¿cuál es su valor?')
+var user = prompt("¿cuál es su clave?");
+obj[user] = prompt("¿cuál es su valor?");
 ```
 
 Estas también son semánticamente equivalentes. El segundo método tiene la ventaja de que el nombre de la propiedad se proporciona como una cadena, lo cual significa que se puede calcular en tiempo de ejecución. Sin embargo, el uso de este método evita que se apliquen algunas optimizaciones de minificación y del motor de JavaScript. También se puede utilizar para establecer y obtener propiedades con nombres [palabras reservadas](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords):
 
 ```js
-obj.for = 'Simon'; // Error de sintaxis, porque 'for' es una palabra reservada
-obj['for'] = 'Simon'; // trabaja bien
+obj.for = "Simon"; // Error de sintaxis, porque 'for' es una palabra reservada
+obj["for"] = "Simon"; // trabaja bien
 ```
 
 > **Nota:** A partir de ECMAScript 5, las palabras reservadas se pueden utilizar como nombres de propiedad de objeto "en bruto". Esto significa que no necesitan "vestirse" entre comillas al definir objeto literales. Consulta la [especificación](http://es5.github.io/#x7.6.1) de ES5.
@@ -489,24 +488,24 @@ Una forma de crear arreglos es la siguiente:
 
 ```js
 var a = new Array();
-a[0] = 'dog';
-a[1] = 'cat';
-a[2] = 'hen';
+a[0] = "dog";
+a[1] = "cat";
+a[2] = "hen";
 a.length; // 3
 ```
 
 Una notación más conveniente es usar un arreglo literal:
 
 ```js
-var a = ['dog', 'cat', 'hen'];
+var a = ["dog", "cat", "hen"];
 a.length; // 3
 ```
 
 Ten en cuenta que `array.length` no necesariamente es el número de elementos del arreglo. Considera lo siguiente:
 
 ```js
-var a = ['dog', 'cat', 'hen'];
-a[100] = 'fox';
+var a = ["dog", "cat", "hen"];
+a[100] = "fox";
 a.length; // 101
 ```
 
@@ -539,7 +538,7 @@ También puedes iterar sobre un arreglo utilizando el bucle [`for...in`](/es/doc
 Otra forma de iterar sobre un arreglo que se agregó con ECMAScript 5 es {{jsxref("Objetos_Globales/Array/forEach", "arr.forEach()")}}:
 
 ```js
-['dog', 'cat', 'hen'].forEach(function(currentValue, index, array) {
+["dog", "cat", "hen"].forEach(function (currentValue, index, array) {
   // Hacer algo con currentValue o array[index]
 });
 ```
@@ -667,7 +666,7 @@ El segundo argumento de `apply()` es el arreglo que se utilizará como `argument
 JavaScript te permite crear funciones anónimas.
 
 ```js
-var avg = function() {
+var avg = function () {
   var sum = 0;
   for (var i = 0, j = arguments.length; i < j; i++) {
     sum += arguments[i];
@@ -682,7 +681,7 @@ Esto semánticamente es equivalente a la forma `function avg()`. Es extremadamen
 var a = 1;
 var b = 2;
 
-(function() {
+(function () {
   var b = 3;
   a += b;
 })();
@@ -695,11 +694,12 @@ JavaScript te permite llamar a funciones de forma recursiva. Esto es particularm
 
 ```js
 function countChars(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
     count += countChars(child);
   }
   return count;
@@ -710,11 +710,12 @@ Esto resalta un problema potencial con las funciones anónimas: ¿cómo las llam
 
 ```js
 var charsInBody = (function counter(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
     count += counter(child);
   }
   return count;
@@ -735,17 +736,17 @@ En la programación clásica orientada a objetos, los objetos son colecciones de
 function makePerson(first, last) {
   return {
     first: first,
-    last: last
+    last: last,
   };
 }
 function personFullName(person) {
-  return person.first + ' ' + person.last;
+  return person.first + " " + person.last;
 }
 function personFullNameReversed(person) {
-  return person.last + ', ' + person.first;
+  return person.last + ", " + person.first;
 }
 
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 personFullName(s); // "Simon Willison"
 personFullNameReversed(s); // "Willison, Simon"
 ```
@@ -757,16 +758,16 @@ function makePerson(first, last) {
   return {
     first: first,
     last: last,
-    fullName: function() {
-      return this.first + ' ' + this.last;
+    fullName: function () {
+      return this.first + " " + this.last;
     },
-    fullNameReversed: function() {
-      return this.last + ', ' + this.first;
-    }
+    fullNameReversed: function () {
+      return this.last + ", " + this.first;
+    },
   };
 }
 
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
 ```
@@ -776,7 +777,7 @@ Nota sobre la palabra clave [`this`](/es/docs/Web/JavaScript/Reference/Operators
 Ten en cuenta que `this` es una frecuente causa de errores. Por ejemplo:
 
 ```js
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 var fullName = s.fullName;
 fullName(); // undefined undefined
 ```
@@ -789,14 +790,14 @@ Podemos aprovechar la palabra clave `this` para mejorar nuestra función `makePe
 function Person(first, last) {
   this.first = first;
   this.last = last;
-  this.fullName = function() {
-    return this.first + ' ' + this.last;
+  this.fullName = function () {
+    return this.first + " " + this.last;
   };
-  this.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
+  this.fullNameReversed = function () {
+    return this.last + ", " + this.first;
   };
 }
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 ```
 
 Hemos introducido otra palabra clave: [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). `new` está fuertemente relacionado con `this`. Crea un nuevo objeto vacío y luego llama a la función especificada, con `this` configurado para ese nuevo objeto. Sin embargo, ten en cuenta que la función especificada con `this` no devuelve un valor, sino que simplemente modifica el objeto `this`. Es `new` que devuelve el objeto `this` al sitio que realiza la llamada. Las funciones que están diseñadas para ser llamadas por `new` se denominan funciones constructoras. La práctica común es poner en mayúscula estas funciones como recordatorio para llamarlas con `new`.
@@ -807,10 +808,10 @@ Nuestros objetos `person` están mejorando, pero todavía tienen algunos bordes 
 
 ```js
 function personFullName() {
-  return this.first + ' ' + this.last;
+  return this.first + " " + this.last;
 }
 function personFullNameReversed() {
-  return this.last + ', ' + this.first;
+  return this.last + ", " + this.first;
 }
 function Person(first, last) {
   this.first = first;
@@ -827,11 +828,11 @@ function Person(first, last) {
   this.first = first;
   this.last = last;
 }
-Person.prototype.fullName = function() {
-  return this.first + ' ' + this.last;
+Person.prototype.fullName = function () {
+  return this.first + " " + this.last;
 };
-Person.prototype.fullNameReversed = function() {
-  return this.last + ', ' + this.first;
+Person.prototype.fullNameReversed = function () {
+  return this.last + ", " + this.first;
 };
 ```
 
@@ -840,10 +841,10 @@ Person.prototype.fullNameReversed = function() {
 Esta es una herramienta increíblemente poderosa. JavaScript te permite modificar el prototipo de algo en cualquier momento en tu programa, lo cual significa que —en tiempo de ejecución— puedes agregar métodos adicionales a los objetos existentes:
 
 ```js
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 s.firstNameCaps(); // TypeError en la línea 1: s.firstNameCaps no es una función
 
-Person.prototype.firstNameCaps = function() {
+Person.prototype.firstNameCaps = function () {
   return this.first.toUpperCase();
 };
 s.firstNameCaps(); // "SIMON"
@@ -852,11 +853,11 @@ s.firstNameCaps(); // "SIMON"
 Curiosamente, también puedes agregar cosas al prototipo de objetos JavaScript integrados. Agreguemos un método a `String` que devuelva esa cadena a la inversa:
 
 ```js
-var s = 'Simon';
+var s = "Simon";
 s.reversed(); // TypeError en la línea 1: s.reversed no es una función
 
-String.prototype.reversed = function() {
-  var r = '';
+String.prototype.reversed = function () {
+  var r = "";
   for (var i = this.length - 1; i >= 0; i--) {
     r += this[i];
   }
@@ -869,18 +870,18 @@ s.reversed(); // nomiS
 ¡Nuestro método `new` funciona incluso con cadenas literales!
 
 ```js
-'Esto ahora se puede revertir'.reversed(); // ritrever edeup es aroha otsE
+"Esto ahora se puede revertir".reversed(); // ritrever edeup es aroha otsE
 ```
 
 Como se mencionó anteriormente, el prototipo forma parte de una cadena. La raíz de esa cadena es `Object.prototype`, cuyos métodos incluyen `toString()`; es este método el que se llama cuando intentas representar un objeto como una cadena. Esto es útil para depurar nuestros objetos `Person`:
 
 ```js
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 s.toString(); // [object Object]
 
-Person.prototype.toString = function() {
-  return '<Person: ' + this.fullName() + '>';
-}
+Person.prototype.toString = function () {
+  return "<Person: " + this.fullName() + ">";
+};
 
 s.toString(); // "<Person: Simon Willison>"
 ```
@@ -900,13 +901,13 @@ Esta no es una réplica exacta de `new` ya que no configura la cadena de prototi
 Llamar a...
 
 ```js
-var bill = trivialNew(Person, 'William', 'Orange');
+var bill = trivialNew(Person, "William", "Orange");
 ```
 
 ...por tanto, casi es equivalente a
 
 ```js
-var bill = new Person('William', 'Orange');
+var bill = new Person("William", "Orange");
 ```
 
 `apply()` tiene una función hermana llamada {{jsxref("Objetos_Globales/Function/call", "call()")}}, que nuevamente te permite establecer `this` pero toma una lista de argumentos expandida en lugar de un arreglo.
@@ -915,7 +916,7 @@ var bill = new Person('William', 'Orange');
 function lastNameCaps() {
   return this.last.toUpperCase();
 }
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
 // Es lo mismo que:
 s.lastNameCaps = lastNameCaps;
@@ -948,7 +949,7 @@ Esto nos lleva a una de las abstracciones más poderosas que JavaScript tiene pa
 
 ```js
 function makeAdder(a) {
-  return function(b) {
+  return function (b) {
     return a + b;
   };
 }

@@ -28,31 +28,30 @@ _无。_
 
 ```js
 function drop_handler(ev) {
- console.log("Drop");
- ev.preventDefault();
- var data = event.dataTransfer.items;
- for (var i = 0; i < data.length; i += 1) {
-   if ((data[i].kind == 'string') &&
-       (data[i].type.match('^text/plain'))) {
-     // 遍历拖拽项的内容
-     data[i].getAsString(function (s){
-       ev.target.appendChild(document.getElementById(s));
-     });
-   } else if ((data[i].kind == 'string') &&
-              (data[i].type.match('^text/html'))) {
-     // 拖拽项的数据是 HTML
-     console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'string') &&
-              (data[i].type.match('^text/uri-list'))) {
-     // 拖拽项的数据是 URI
-     console.log("... Drop: URI");
-   } else if ((data[i].kind == 'file') &&
-              (data[i].type.match('^image/'))) {
-     // 拖拽项的数据是一个图片
-     var f = data[i].getAsFile();
-     console.log("... Drop: File ");
-   }
- }
+  console.log("Drop");
+  ev.preventDefault();
+  var data = event.dataTransfer.items;
+  for (var i = 0; i < data.length; i += 1) {
+    if (data[i].kind == "string" && data[i].type.match("^text/plain")) {
+      // 遍历拖拽项的内容
+      data[i].getAsString(function (s) {
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if (data[i].kind == "string" && data[i].type.match("^text/html")) {
+      // 拖拽项的数据是 HTML
+      console.log("... Drop: HTML");
+    } else if (
+      data[i].kind == "string" &&
+      data[i].type.match("^text/uri-list")
+    ) {
+      // 拖拽项的数据是 URI
+      console.log("... Drop: URI");
+    } else if (data[i].kind == "file" && data[i].type.match("^image/")) {
+      // 拖拽项的数据是一个图片
+      var f = data[i].getAsFile();
+      console.log("... Drop: File ");
+    }
+  }
 }
 ```
 

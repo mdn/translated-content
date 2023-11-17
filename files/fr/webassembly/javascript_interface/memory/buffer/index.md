@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Memory.prototype.buffer
 slug: WebAssembly/JavaScript_interface/Memory/buffer
-tags:
-  - API
-  - JavaScript
-  - Propriété
-  - Reference
-  - WebAssembly
-  - memory
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
 ---
 
 {{WebAssemblySidebar}}
@@ -19,7 +10,7 @@ La propriété **`buffer`**, rattachée au prototype de l'objet [`Memory`](/fr/d
 ## Syntaxe
 
 ```js
-memory.buffer
+memory.buffer;
 ```
 
 ## Exemples
@@ -27,8 +18,9 @@ memory.buffer
 Dans l'exemple suivant (cf. le fichier [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) sur GitHub ainsi que [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)), on récupère puis on instancie le _bytecode_ `memory.wasm` grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}} tout en important la mémoire créée à la ligne précédente. Ensuite, on enregistre certaines valeurs dans cette mémoire puis on exporte une fonction afin de l'utiliser pour additionner certaines valeurs.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
   var i32 = new Uint32Array(memory.buffer);
   for (var i = 0; i < 10; i++) {
     i32[i] = i;

@@ -1,7 +1,6 @@
 ---
 title: Seguro
 slug: Glossary/Safe
-original_slug: Glossario/seguro
 ---
 
 Um método HTTP é **seguro** se ele não altera o estado do servidor. Em outras palavras, um método é seguro se ele leva a uma operação de somente leitura. Diversos métodos de HTTP são seguros: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, ou {{HTTPMethod("OPTIONS")}}. Todos os métodos seguros também são {{glossary("idempotente")}}s, mas nem todos os métodos idempotentes são seguros. Por exemplo, {{HTTPMethod("PUT")}} e {{HTTPMethod("DELETE")}} são ambos idempotentes, entretanto são inseguros.

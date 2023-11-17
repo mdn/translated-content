@@ -1,7 +1,6 @@
 ---
 title: dt
 slug: Web/HTML/Element/dt
-original_slug: Web/HTML/Elemento/dt
 ---
 
 {{HTMLSidebar}}

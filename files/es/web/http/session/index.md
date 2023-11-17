@@ -1,7 +1,6 @@
 ---
 title: Una típica sesión de HTTP
 slug: Web/HTTP/Session
-original_slug: Web/HTTP/Sesión
 ---
 
 {{HTTPSidebar}}
@@ -28,8 +27,8 @@ Una vez la conexión está establecida, el cliente, puede mandar una petición d
 
 1. La primera parte, consiste en una linea, que contiene un método, seguido de sus parámetros:
 
-    - la dirección del documento pedido: por ejemplo su URL completa, sin indicar el protocolo o el nombre del dominio.
-    - la versión del protocolo HTTP
+   - la dirección del documento pedido: por ejemplo su URL completa, sin indicar el protocolo o el nombre del dominio.
+   - la versión del protocolo HTTP
 
 2. La siguiente parte, está formada por un bloque de líneas consecutivas, que representan las cabeceras de la petición HTTP, y dan información al servidor, sobre que tipo de datos es apropiado (como qué lenguaje usar, o el tipo MIME a usar), u otros datos que modifiquen su comportamiento (como que no envié la respuesta si ya está cacheada). Estas cabeceras HTTP forman un bloque que acaba con una línea en blanco.
 3. La parte final es un bloque de datos opcional, que puede contener más datos para ser usados por el método POST.

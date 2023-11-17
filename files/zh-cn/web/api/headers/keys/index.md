@@ -24,12 +24,12 @@ headers.keys();
 ```js
 // 创建一个 Headers 对象
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // 显示 Headers 中所有的 key
-for(var key of myHeaders.keys()) {
-   console.log(key);
+for (var key of myHeaders.keys()) {
+  console.log(key);
 }
 ```
 
@@ -44,8 +44,8 @@ vary
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

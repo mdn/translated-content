@@ -77,10 +77,10 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 - **合适的介绍简介示例**：在这里，我们看到一个更好的 `strokeText()` 方法的概述。
 
-  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
+  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-CN/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
-  > For more details and examples, see the [Text](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > For more details and examples, see the [Text](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### 使用包容性语言
 
@@ -146,7 +146,7 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
   - **解释用例**：如果所描述的功能有特别常见的用例，那就谈一谈吧！而不是假设用户会在使用过程中出现问题！与其假设用户会发现被记录的方法可以用来解决一个常见的开发问题，不如实际添加一个关于该用例的部分，并提供一个例子和解释该例子如何工作的文字。
   - **添加图片信息**：在所有的图像和图表上包括适当的 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本。这个文本，以及表格和其他数字的标题，都是重要的，因为网络蜘蛛不能抓取图像，所以 `alt` 文本告诉搜索引擎爬虫嵌入式媒体包含哪些内容。
     > **备注：** 不建议包含过多的关键词或与功能无关的关键词，以试图操纵搜索引擎的排名；这种类型的行为很容易被发现，而且往往会受到惩罚。同样，**不要**在实际页面内添加重复的、无益的材料或大量的关键词，以试图提高页面的大小和搜索排名。这对内容的可读性和我们的搜索结果来说都是弊大于利。
-  - **专注于主题内容**： 随着谷歌在 2013 年的 Hummingbird 更新，人们越来越关注使用自然语言来传达信息。这意味着，围绕页面的主题来写内容要比围绕特定的关键词好得多。对于一个给定的主题，你极有可能包括许多关键词；事实上，许多 SEO 编制了一个 5-100 个不同关键词的清单（在短、中、长尾关键词之间变化），以包括在他们的文章中，这取决于长度。这样做会使你的措辞多样化，从而减少重复。
+  - **专注于主题内容**：随着谷歌在 2013 年的 Hummingbird 更新，人们越来越关注使用自然语言来传达信息。这意味着，围绕页面的主题来写内容要比围绕特定的关键词好得多。对于一个给定的主题，你极有可能包括许多关键词；事实上，许多 SEO 编制了一个 5-100 个不同关键词的清单（在短、中、长尾关键词之间变化），以包括在他们的文章中，这取决于长度。这样做会使你的措辞多样化，从而减少重复。
 
 ## 写作风格
 
@@ -195,7 +195,7 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
   以下表格总结了拉丁文缩写的含义和英文对应关系：
 
-  | 缩写形式 | 拉丁文           | 英语含义                 |
+  | 缩写形式 | 拉丁文           | 英语含义                |
   | -------- | ---------------- | ----------------------- |
   | cf.      | _confer_         | compare                 |
   | e.g.     | _exempli gratia_ | for example             |
@@ -502,6 +502,7 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
   > 3. After you have finished your instructions, follow the numbered list with a brief closing summary or explanation about the expected outcome upon completion.
 
   下面是为上述清单写结尾解释的例子：
+
   > We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.
 
   请注意有序列表中的项目如何像简短的段落一样阅读。因为有序列表通常用于教学目的或引导人们完成一个有序的程序，所以要确保每个项目都有重点：每个步骤有一个编号的项目。
@@ -559,7 +560,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 显示在页面顶部的页面标题可以与页面路径名不同，后者是页面 URL 中 `<locale>/docs/` 之后的部分。在定义路径名时，请记住以下准则：
 
 - 路径名应该保持简短。当创建一个新的层次结构时，路径名中的新层次成分应该只是一两个单词。
-- 路径名应使用下划线来表示多字组件，例如 `/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started` 中的 `Getting_started`。
+- 路径名应使用下划线来表示多字组件，例如 `/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started` 中的 `Getting_started`。
 - 在其中的每一个部分也要遵循句子的大小写，如前面例子中的 `Getting_started`。
 
 ### 标题
@@ -574,6 +575,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
   - **错误**："A New Method for Creating JavaScript Rollovers"
 
   我们还有很多旧的页面是在这条规范确立之前就已经发布了的。所以只要你愿意，你随时可以更新它们的标题。我们也正在逐步完善它们。
+
 - **通用原则**：决定你要记录什么，以及你将如何组织这些内容，是写作的第一步。写一个目录可以帮助你决定如何安排信息。先介绍简单的概念，然后再介绍更复杂和高级的概念。先讲概念性的信息，然后再讲面向行动的主题。
 
   在为页面和章节或分节撰写标题时，请牢记以下准则：

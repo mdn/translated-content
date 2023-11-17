@@ -1,75 +1,20 @@
 ---
-title: '<output>: 出力要素'
+title: "<output>: 出力要素"
 slug: Web/HTML/Element/output
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の出力要素** (**`<output>`**) は、サイトやアプリが計算結果やユーザー操作の結果を挿入することができるコンテナー要素です。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
-          >フォーム関連要素</a
-        >
-        (<a href="/ja/docs/Web/HTML/Content_categories#リスト化">リスト化</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
-          >ラベル付け可能</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#リセット可能"
-          >リセット可能</a
-        >)、知覚可能コンテンツ
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可された内容</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">許可された親要素</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >を受け入れるすべての要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code></td>
-    </tr>
-    <tr>
-      <th scope="row">許可された ARIA ロール</th>
-      <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLOutputElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+**`<output>`** は [HTML](/ja/docs/Web/HTML) の要素で、サイトやアプリが計算結果やユーザー操作の結果を挿入することができるコンテナー要素です。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
 - `for`
-  - : 他の要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) の空白区切りのリストで、入力値が計算に使用される (または何らかの影響を与える) 要素を示します。
+  - : 他の要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) の空白区切りのリストで、入力値が計算に使用される（または何らかの影響を与える）要素を示します。
 - `form`
 
   - : この要素に関連付けられた (*フォームオーナー*である) {{HTMLElement("form")}} 要素を指定します。この値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) である必要があります。 (この属性が設定されていない場合、 `<output>` 要素は祖先の `<form>` があれば、その要素に関連づけられます。
@@ -93,11 +38,76 @@ slug: Web/HTML/Element/output
 </form>
 ```
 
+### 結果
+
 {{ EmbedLiveSample('Examples')}}
 
 ## アクセシビリティの考慮
 
-多くのブラウザーでは、この要素を [`aria-live`](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 領域として実装しています。これにより、支援技術は、その中に投稿された UI インタラクションの結果を発表しますが、その結果を生成するコントロールからフォーカスを外す必要はありません。
+多くのブラウザーでは、この要素を [`aria-live`](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 領域として実装しています。これにより、支援技術は、その中に出力された UI 操作の結果を読み上げますが、その結果を生成するコントロールからフォーカスを外す必要はありません。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Content_categories#リスト化"
+          >リスト化</a
+        >、
+        <a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
+          >ラベル付け可能</a
+        >、
+        <a href="/ja/docs/Web/HTML/Content_categories#リセット可能"
+          >リセット可能</a
+        >
+        <a
+          href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
+          >フォーム関連要素</a
+        >、知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可された親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/status_role"><code>status</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">許可された ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLOutputElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
@@ -105,4 +115,4 @@ slug: Web/HTML/Element/output
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.output")}}
+{{Compat}}

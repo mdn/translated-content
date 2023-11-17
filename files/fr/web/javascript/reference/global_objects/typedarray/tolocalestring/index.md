@@ -1,9 +1,6 @@
 ---
 title: TypedArray.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/toLocaleString
-browser-compat: javascript.builtins.TypedArray.toLocaleString
 ---
 
 {{JSRef}}
@@ -13,9 +10,9 @@ La méthode **`toLocaleString()`** renvoie une chaîne de caractères qui repré
 ## Syntaxe
 
 ```js
-toLocaleString()
-toLocaleString(locales)
-toLocaleString(locales, options)
+toLocaleString();
+toLocaleString(locales);
+toLocaleString(locales, options);
 ```
 
 ### Paramètres
@@ -39,10 +36,10 @@ uint.toLocaleString();
 // si on exécute sur un environnement utilisant la locale de-DE
 // "2.000,500,8.123,12,4.212"
 
-uint.toLocaleString('en-US');
+uint.toLocaleString("en-US");
 // "2,000,500,8,123,12,4,212"
 
-uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
+uint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 // "￥2,000,￥500,￥8,123,￥12,￥4,212"
 ```
 

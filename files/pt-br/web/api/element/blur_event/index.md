@@ -1,7 +1,6 @@
 ---
 title: blur (evento)
 slug: Web/API/Element/blur_event
-original_slug: Web/Events/blur
 ---
 
 O evento `blur` é acionado quando um elemento perde foco. A diferença principal entre este evento e [`focusout`](/pt-BR/docs/Mozilla_event_reference/focusout) é que apenas o segundo 'borbulha'.
@@ -21,16 +20,16 @@ O evento `blur` é acionado quando um elemento perde foco. A diferença principa
 - Ação padrão
   - : Nenhuma
 
-> **Nota:** O valor de {{domxref("Document.activeElement")}} varia entre navegadores enquanto este evento é processado ({{bug(452307)}}): O IE10 define-o para o elemento para onde o foco moverá, enquanto Firefox e Chrome muitas vezes definem-o para o `body` do documento.
+> **Nota:** O valor de {{domxref("Document.activeElement")}} varia entre navegadores enquanto este evento é processado ([Erro do Firefox 452307](https://bugzil.la/452307)): O IE10 define-o para o elemento para onde o foco moverá, enquanto Firefox e Chrome muitas vezes definem-o para o `body` do documento.
 
 ## Propriedades
 
-| Property                                 | Type                                               | Description                                |
-| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| Property                           | Type                                     | Description                                |
+| ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
 ## Delegação do evento
@@ -41,8 +40,8 @@ Existem duas maneiras de implementar a delegação de eventos para este evento: 
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 
@@ -50,19 +49,31 @@ Existem duas maneiras de implementar a delegação de eventos para este evento: 
 
 ```js
 var form = document.getElementById("form");
-form.addEventListener("focus", function( event ) {
-  event.target.style.background = "pink";
-}, true);
-form.addEventListener("blur", function( event ) {
-  event.target.style.background = "";
-}, true);
+form.addEventListener(
+  "focus",
+  function (event) {
+    event.target.style.background = "pink";
+  },
+  true,
+);
+form.addEventListener(
+  "blur",
+  function (event) {
+    event.target.style.background = "";
+  },
+  true,
+);
 ```
 
 {{EmbedLiveSample('Event_delegation')}}
 
+## Especificações
+
+{{Specifications}}
+
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.blur_event")}}
+{{Compat}}
 
 ## Eventos relacionados
 

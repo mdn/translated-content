@@ -1,7 +1,6 @@
 ---
-title: 'Объединённый асинхронный JavaScript: Таймауты и интервалы'
+title: "Объединённый асинхронный JavaScript: Таймауты и интервалы"
 slug: conflicting/Learn/JavaScript/Asynchronous
-translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 original_slug: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 ---
 
@@ -34,11 +33,11 @@ original_slug: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 
 Эти функции:
 
-- [`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+- [`setTimeout()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
   - : Выполняет указанный блок кода один раз по истечении указанного времени
-- [`setInterval()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+- [`setInterval()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
   - : Выполняет указанный блок кода несколько раз с определённым интервалом между каждым вызовом.
-- [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame)
+- [`requestAnimationFrame()`](/ru/docs/Web/API/window/requestAnimationFrame)
   - : Современная версия setInterval (). Выполняют указанный блок кода перед тем, как браузер в следующий раз перерисовывает отображение, позволяя запускать анимацию с подходящей частотой кадров независимо от среды, в которой она выполняется.
 
 Асинхронный код, установленный этими функциями, выполняется в основном потоке (по истечении указанного им таймера).
@@ -107,7 +106,7 @@ let myGreeting = setTimeout(sayHi, 2000, 'Mr. Universe');
 
 ### Очистка таймаутов
 
-Наконец, если был создан тайм-аут, вы можете отменить его до истечения указанного времени, вызвав [`clearTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout), передав ему идентификатор вызова `setTimeout()` в качестве параметра. Итак, чтобы отменить указанный выше тайм-аут, вы должны сделать следующее:
+Наконец, если был создан тайм-аут, вы можете отменить его до истечения указанного времени, вызвав [`clearTimeout()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout), передав ему идентификатор вызова `setTimeout()` в качестве параметра. Итак, чтобы отменить указанный выше тайм-аут, вы должны сделать следующее:
 
 ```js
 clearTimeout(myGreeting);
@@ -121,7 +120,7 @@ clearTimeout(myGreeting);
 
 Здесь пригодится [setInterval()](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) . Работает очень похоже на setTimeout (), за исключением того, что функция, которую вы передаёте в качестве первого параметра, выполняется повторно не менее чем за количество миллисекунд, заданных вторым параметром. Вы также можете передать любые параметры, необходимые для выполняемой функции, в качестве последующих параметров вызова setInterval ().
 
-Давайте посмотрим на пример. Следующая функция создаёт новый объект [`Date()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), с помощью [`toLocaleTimeString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString) извлекает из него строку с временем и отображает её в пользовательском интерфейсе. Затем он запускает функцию один раз в секунду с помощью `setInterval()`, создавая эффект цифровых часов, которые обновляются раз в секунду ([реальный пример](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), и [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html)):
+Давайте посмотрим на пример. Следующая функция создаёт новый объект [`Date()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date), с помощью [`toLocaleTimeString()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString) извлекает из него строку с временем и отображает её в пользовательском интерфейсе. Затем он запускает функцию один раз в секунду с помощью `setInterval()`, создавая эффект цифровых часов, которые обновляются раз в секунду ([реальный пример](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), и [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html)):
 
 ```js
 function displayTime() {
@@ -239,7 +238,7 @@ clearTimeout () и `clearInterval ()` используют один и тот ж
 
 ## requestAnimationFrame()
 
-[`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) это специализированная функция цикла, созданная для эффективного запуска анимации в браузере. По сути, это современная версия `setInterval ()` - она выполняет указанный блок кода до того, как браузер перерисовывает изображение, позволяя запускать анимацию с подходящей частотой кадров независимо от среды, в которой она выполняется.
+[`requestAnimationFrame()`](/ru/docs/Web/API/window/requestAnimationFrame) это специализированная функция цикла, созданная для эффективного запуска анимации в браузере. По сути, это современная версия `setInterval ()` - она выполняет указанный блок кода до того, как браузер перерисовывает изображение, позволяя запускать анимацию с подходящей частотой кадров независимо от среды, в которой она выполняется.
 
 Он был создан в ответ на проблемы с `setInterval ()`, который, например, не работает с частотой кадров, оптимизированной для устройства, иногда пропускает кадры, продолжает работать, даже если вкладка не является активной вкладкой или анимация прокручивается со страницы и т. д.([Читай об этом больше в CreativeJS](http://creativejs.com/resources/requestanimationframe/index.html).)
 
@@ -607,7 +606,7 @@ if (posX > width/2) {
 
     1. Во-первых, отмените анимацию спиннера с помощью {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}} (всегда полезно очистить ненужные процессы), и скройте контейнер счётчика.
     2. Затем, отобразите абзац с результатами и установите для его текстового содержимого значение "PLAYERS GO!!" чтобы сообщить игрокам, что теперь они могут нажать свою кнопку, чтобы победить.
-    3. Прикрепите к документу обработчик событий [`keydown`](/en-US/docs/Web/API/Document/keydown_event) . При нажатии любой кнопки запускается функция `keyHandler()`.
+    3. Прикрепите к документу обработчик событий [`keydown`](/ru/docs/Web/API/Document/keydown_event) . При нажатии любой кнопки запускается функция `keyHandler()`.
     4. Внутри `keyHandler()`, код включает объект события в качестве параметра (представленного `e`) — его свойство {{domxref("KeyboardEvent.key", "key")}} содержит только что нажатую клавишу, и вы можете использовать это для ответа на определённые нажатия клавиш определёнными действиями.
     5. Установите для переменной `isOver` значение false, чтобы мы могли отслеживать, были ли нажаты правильные клавиши, чтобы игрок 1 или 2 выиграл. Мы не хотим, чтобы игра заканчивалась при нажатии неправильной клавиши.
     6. Регистрация `e.key` в консоли, это полезный способ узнать значение различных клавиш, которые вы нажимаете.

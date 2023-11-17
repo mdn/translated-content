@@ -19,8 +19,9 @@ grid-template-areas: none;
 
 /* <string> values */
 grid-template-areas: "a b"; /* 一行 两列 */
-grid-template-areas: "a b b"
-                     "a c d"; /* 两行 三列 */
+grid-template-areas:
+  "a b b"
+  "a c d"; /* 两行 三列 */
 
 /* Global values */
 grid-template-areas: inherit; /* 继承 */
@@ -59,9 +60,10 @@ grid-template-areas: unset; /* 未设置 */
   display: grid; /* 1.设置 display 为 grid */
   width: 100%;
   height: 250px;
-  grid-template-areas: "head head"
-                       "nav  main"
-                       "nav  foot"; /* 2.区域划分 当前为 三行 两列 */
+  grid-template-areas:
+    "head head"
+    "nav  main"
+    "nav  foot"; /* 2.区域划分 当前为 三行 两列 */
   grid-template-rows: 50px 1fr 30px; /* 3.各区域 宽高设置 */
   grid-template-columns: 150px 1fr;
 }

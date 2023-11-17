@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-progress-value'
+title: "::-webkit-progress-value"
 slug: Web/CSS/::-webkit-progress-value
 ---
 
@@ -28,7 +28,7 @@ progress {
 ### Contenido HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ## Resultado

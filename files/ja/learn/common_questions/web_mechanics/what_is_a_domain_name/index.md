@@ -1,7 +1,6 @@
 ---
 title: ドメイン名とは？
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/What_is_a_domain_name
 ---
 
 <table>

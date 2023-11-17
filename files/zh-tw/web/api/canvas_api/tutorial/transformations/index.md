@@ -101,7 +101,7 @@ function draw() {
         ctx,
         (20 * (j + 2)) / (j + 1),
         (-8 * (i + 3)) / (i + 1),
-        10
+        10,
       );
       ctx.restore();
     }

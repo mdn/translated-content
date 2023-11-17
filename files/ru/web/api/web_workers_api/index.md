@@ -1,16 +1,8 @@
 ---
 title: Web Workers API
 slug: Web/API/Web_Workers_API
-tags:
-  - API
-  - NeedsTranslation
-  - Service Workers
-  - Shared Workers
-  - TopicStub
-  - Web Workers
-  - Workers
-translation_of: Web/API/Web_Workers_API
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 **Web Workers** это механизм, который позволяет скрипту выполняться в фоновом потоке, который отделен от основного потока веб-приложения. Преимущество заключается в том, что ресурсоёмкие вычисления могут выполняться в отдельном потоке, позволяя запустить основной (обычно пользовательский) поток без блокировки и замедления.

@@ -1,7 +1,6 @@
 ---
 title: Arreglos tipados de JavaScript
 slug: Web/JavaScript/Guide/Typed_arrays
-original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}
@@ -26,19 +25,19 @@ Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript div
 
 Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vistas para todos los tipos numéricos habituales tal como `Int8`, `Uint32`, `Float64` y así sucesivamente. Hay una vista de arreglo tipado especial, la `Uint8ClampedArray`. Esta fija los valores entre 0 y 255. {{JSxRef("../Data_structures", "Tipos de datos JavaScript")}}
 
-| Tipo                                     | Intervalo de valores          | Tamaño en bytes | Descripción                                                                               | Tipo de IDL web           | Tipo C equivalente               |
-| ---------------------------------------- | ----------------------------- | --------------- | ----------------------------------------------------------------------------------------- | ------------------------- | -------------------------------- |
+| Tipo                            | Intervalo de valores          | Tamaño en bytes | Descripción                                                                               | Tipo de IDL web           | Tipo C equivalente               |
+| ------------------------------- | ----------------------------- | --------------- | ----------------------------------------------------------------------------------------- | ------------------------- | -------------------------------- |
 | {{JSxRef("Int8Array")}}         | `-128` a `127`                | 1               | Dos enteros complementarios de 8 bits con signo                                           | `byte`                    | `int8_t`                         |
-| {{JSxRef("Uint8Array")}}         | `0` a `255`                   | 1               | Entero de 8-bit sin signo                                                                 | `octet`                   | `uint8_t`                        |
+| {{JSxRef("Uint8Array")}}        | `0` a `255`                   | 1               | Entero de 8-bit sin signo                                                                 | `octet`                   | `uint8_t`                        |
 | {{JSxRef("Uint8ClampedArray")}} | `0` a `255`                   | 1               | Entero de 8 bits sin signo (sujeto)                                                       | `octet`                   | `uint8_t`                        |
-| {{JSxRef("Int16Array")}}         | `-32768` a `32767`            | 2               | Dos enteros complementarios de 16 bits con signo                                          | `short`                   | `int16_t`                        |
-| {{JSxRef("Uint16Array")}}         | `0` a `65535`                 | 2               | Entero de 16 bits sin signo                                                               | `Short sin signo`         | `uint16_t`                       |
-| {{JSxRef("Int32Array")}}         | `-2147483648` a `2147483647`  | 4               | dos enteros complementarios de 32 bits con signo                                          | `long`                    | `int32_t`                        |
-| {{JSxRef("Uint32Array")}}         | `0` a `4294967295`            | 4               | Enteros de 32 bits sin signo                                                              | `long sin signo`          | `uint32_t`                       |
-| {{JSxRef("Float32Array")}}     | `1.2`×`10-38` a `3.4`×`1038`  | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)   | `float sin restricciones` | `float`                          |
-| {{JSxRef("Float64Array")}}     | `1.2`×`10-38` a `3.4`×`10308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, p. ej., `1.123...15`) | `doble sin restricciones` | `double`                         |
+| {{JSxRef("Int16Array")}}        | `-32768` a `32767`            | 2               | Dos enteros complementarios de 16 bits con signo                                          | `short`                   | `int16_t`                        |
+| {{JSxRef("Uint16Array")}}       | `0` a `65535`                 | 2               | Entero de 16 bits sin signo                                                               | `Short sin signo`         | `uint16_t`                       |
+| {{JSxRef("Int32Array")}}        | `-2147483648` a `2147483647`  | 4               | dos enteros complementarios de 32 bits con signo                                          | `long`                    | `int32_t`                        |
+| {{JSxRef("Uint32Array")}}       | `0` a `4294967295`            | 4               | Enteros de 32 bits sin signo                                                              | `long sin signo`          | `uint32_t`                       |
+| {{JSxRef("Float32Array")}}      | `1.2`×`10-38` a `3.4`×`1038`  | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)   | `float sin restricciones` | `float`                          |
+| {{JSxRef("Float64Array")}}      | `1.2`×`10-38` a `3.4`×`10308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, p. ej., `1.123...15`) | `doble sin restricciones` | `double`                         |
 | {{JSxRef("BigInt64Array")}}     | `-263` a `263-1`              | 8               | Dos enteros complementarios de 64 bits con signo                                          | `bigint`                  | `int64_t (long long con signo)`  |
-| {{JSxRef("BigUint64Array")}}     | `0` a `264-1`                 | 8               | Entero de 64 bits sin signo                                                               | `bigint`                  | `uint64_t (long long sin signo)` |
+| {{JSxRef("BigUint64Array")}}    | `0` a `264-1`                 | 8               | Entero de 64 bits sin signo                                                               | `bigint`                  | `uint64_t (long long sin signo)` |
 
 ### `DataView`
 
@@ -50,7 +49,7 @@ Estos son algunos ejemplos de APIs que utilizan arreglos tipados; hay otras, y t
 
 - [`FileReader.prototype.readAsArrayBuffer()`](/es/docs/Web/API/FileReader)
   - : El método `FileReader.prototype.readAsArrayBuffer()` comienza a leer el contenido del [Blob](/es/docs/Web/API/Blob) o [File](/es/docs/Web/API/File).
-- [`XMLHttpRequest.prototype.send()`](/es/docs/Web/API/XMLHttpRequest#send())
+- [`XMLHttpRequest.prototype.send()`](</es/docs/Web/API/XMLHttpRequest#send()>)
   - : El método `send()` de instancias de `XMLHttpRequest` ahora admiten arreglos tipados y objetos {{JSxRef("ArrayBuffer")}} como argumento.
 - [`ImageData.data`](/es/docs/Web/API/ImageData)
   - : Es un {{JSxRef("Uint8ClampedArray")}} que representa un arreglo unidimensional que contiene los datos en el orden RGBA, con valores enteros entre `0` y `255` inclusive.
@@ -99,7 +98,7 @@ Las cosas comienzan a ponerse realmente interesantes cuando consideras que puede
 let int16View = new Int16Array(buffer);
 
 for (let i = 0; i < int16View.length; i++) {
-  console.log('Entrada ' + i + ': ' + int16View[i]);
+  console.log("Entrada " + i + ": " + int16View[i]);
 }
 ```
 
@@ -109,7 +108,7 @@ Sin embargo, puedes dar un paso más. Considera esto:
 
 ```js
 int16View[0] = 32;
-console.log('La entrada 0 en el arreglo de 32 bits ahora es ' + int32View[0]);
+console.log("La entrada 0 en el arreglo de 32 bits ahora es " + int32View[0]);
 ```
 
 La salida de esto es `"La entrada 0 en el arreglo de 32 bits ahora es 32"`.
@@ -152,7 +151,7 @@ Después de procesar un arreglo con tipo, a veces es útil volver a convertirla 
 
 ```js
 let typedArray = new Uint8Array([1, 2, 3, 4]),
-    normalArray = Array.prototype.slice.call(typedArray);
+  normalArray = Array.prototype.slice.call(typedArray);
 normalArray.length === 4;
 normalArray.constructor === Array;
 ```

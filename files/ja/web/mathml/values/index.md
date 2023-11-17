@@ -1,12 +1,11 @@
 ---
 title: MathML の属性値
 slug: Web/MathML/Values
-original_slug: Web/MathML/Attribute/Values
+l10n:
+  sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/ja/docs/Web/MathML")}}
-</section>
+{{MathMLRef}}
 
 ## MathML 固有の型
 
@@ -21,7 +20,7 @@ original_slug: Web/MathML/Attribute/Values
 
 [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) の代わりに、 MathML は独自の[長さを記述するための型](https://www.w3.org/TR/MathML3/chapter2.html#type.length)を定義していました。受け入れられる値には、単位のないゼロ以外の長さの値（例えば、 `500%` を意味する `5`）、ドットで終わる数字を含む値（例えば、 `34.px`）、名前付きの空間（例えば、 `thinmathspace`）が含まれていました。互換性のために、等価な [`<percentage>`](/ja/docs/Web/CSS/percentage) 値でゼロでない単位なしの長さの値を置き換えること、数字で不要なドットを削除すること、名前付きの長さには以下の置き換えを使用することが推奨されています。
 
-```
+```plain
 veryverythinmathspace  => 0.05555555555555555em
 verythinmathspace      => 0.1111111111111111em
 thinmathspace          => 0.16666666666666666em
@@ -33,21 +32,21 @@ veryverythickmathspace => 0.3888888888888889em
 
 ### 単位
 
-| 単位 | 説明                                                                                                               |
-| ---- | -------------------------------------------------------------------------------------------------------------- |
-| `em` | {{ Cssxref("font-size", "Font-relative") }} 単位                                                               |
+| 単位 | 説明                                                                                                    |
+| ---- | ------------------------------------------------------------------------------------------------------- |
+| `em` | {{ Cssxref("font-size", "Font-relative") }} 単位                                                        |
 | `ex` | {{ Cssxref("font-size", "Font-relative") }} 単位（その要素の "x" 高、多くのフォントでは `1ex ≈ 0.5em`） |
-| `px` | ピクセル                                                                                                         |
-| `in` | インチ（1 インチ = 2.54 センチメートル）                                                                                          |
-| `cm` | センチメートル                                                                                                              |
-| `mm` | ミリメートル                                                                                                                |
-| `pt` | ポイント (1 point = 1/72 inch)                                                                                                |
-| `pc` | パイカ (1 pica = 12 points)                                                                                                  |
-| `%`  | 既定値のパーセント値                                                                                            |
+| `px` | ピクセル                                                                                                |
+| `in` | インチ（1 インチ = 2.54 センチメートル）                                                                |
+| `cm` | センチメートル                                                                                          |
+| `mm` | ミリメートル                                                                                            |
+| `pt` | ポイント (1 point = 1/72 inch)                                                                          |
+| `pc` | パイカ (1 pica = 12 points)                                                                             |
+| `%`  | 既定値のパーセント値                                                                                    |
 
 ### 定数
 
-| 定数                         | 値     |
+| 定数                             | 値        |
 | -------------------------------- | --------- |
 | `veryverythinmathspace`          | 1/18`em`  |
 | `verythinmathspace`              | 2/18`em`  |

@@ -1,52 +1,48 @@
 ---
-title: Response.url
+title: Response：url 属性
 slug: Web/API/Response/url
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
-The **`url`** read-only property of the {{domxref("Response")}} interface contains the URL of the response. The value of the `url` property will be the final URL obtained after any redirects.
+{{domxref("Response")}} 接口的只读属性 **`url`** 包含了响应的 URL 地址。`url` 属性值为经过重定向后最终获得的 URL 地址。
 
-## Syntax
+## 值
 
-```plain
-var myURL = response.url;
-```
+一个字符串。
 
-### Value
+## 示例
 
-A {{domxref("USVString")}}.
+在 [Fetch Response 示例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) 中（请参见 [Fetch Response 实时演示](https://mdn.github.io/dom-examples/fetch/fetch-response/)），我们使用 {{domxref("Request.Request", "Request()")}} 构造函数创建了一个新的 {{domxref("Request")}} 对象，并向其传递了 JPG 的路径。然后，我们使用 {{domxref("fetch()")}} 获取该请求，使用 {{domxref("Response.blob")}} 从响应中提取一个 blob，使用 {{domxref("URL.createObjectURL")}} 从中创建一个对象 URL，并将其显示在 {{htmlelement("img")}} 中。
 
-## Example
-
-In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob from the response using {{domxref("Body.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
-
-Note that at the top of the `fetch()` block we log the response `URL` to the console.
+请注意，在 `fetch()` 块的顶部，我们会将响应 `URL` 记录到控制台。
 
 ```js
-var myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
-  console.log(response.url); // returns https://developer.mozilla.org/en-US/docs/Web/API/Response/flowers.jpg
-  response.blob().then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
+fetch(myRequest)
+  .then((response) => {
+    console.log("response.url =", response.url); // response.url = https://mdn.github.io/dom-examples/fetch/fetch-response/flowers.jpg
+    return response.blob();
+  })
+  .then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

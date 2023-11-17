@@ -83,10 +83,10 @@ doSomething(function (result) {
         function (finalResult) {
           console.log("Got the final result: " + finalResult);
         },
-        failureCallback
+        failureCallback,
       );
     },
-    failureCallback
+    failureCallback,
   );
 }, failureCallback);
 ```

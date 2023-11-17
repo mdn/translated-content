@@ -31,7 +31,7 @@ slug: Web/API/FetchEvent/respondWith
 
 ## 语法
 
-```js
+```js-nolint
 respondWith(response)
 ```
 
@@ -56,16 +56,18 @@ respondWith(response)
 这个 fetch 事件尝试从 cache API 返回一个响应，否则回落至网络请求。
 
 ```js
-addEventListener('fetch', (event) => {
+addEventListener("fetch", (event) => {
   // Prevent the default, and handle the request ourselves.
-  event.respondWith((async () => {
-    // Try to get the response from a cache.
-    const cachedResponse = await caches.match(event.request);
-    // Return it if we found one.
-    if (cachedResponse) return cachedResponse;
-    // If we didn't find a match in the cache, use the network.
-    return fetch(event.request);
-  })());
+  event.respondWith(
+    (async () => {
+      // Try to get the response from a cache.
+      const cachedResponse = await caches.match(event.request);
+      // Return it if we found one.
+      if (cachedResponse) return cachedResponse;
+      // If we didn't find a match in the cache, use the network.
+      return fetch(event.request);
+    })(),
+  );
 });
 ```
 

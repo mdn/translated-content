@@ -1,10 +1,6 @@
 ---
 title: strip-space
 slug: Web/XSLT/Element/strip-space
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/strip-space
-original_slug: Web/XSLT/strip-space
 ---
 
 {{ XsltRef() }}

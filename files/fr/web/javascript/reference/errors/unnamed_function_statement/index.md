@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: function statement requires a name'
+title: "SyntaxError: function statement requires a name"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-original_slug: Web/JavaScript/Reference/Erreurs/Unnamed_function_statement
 ---
 
 {{jsSidebar("Errors")}}
@@ -43,17 +37,15 @@ function () {
 On peut utiliser [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function) à la place :
 
 ```js example-good
-var salutations = function() {
-  return 'Coucou monde :)';
+var salutations = function () {
+  return "Coucou monde :)";
 };
 ```
 
 Si la fonction devait être appelé immédiatement, il suffit d'ajouter des parenthèses autour :
 
 ```js example-good
-(function () {
-
-})();
+(function () {})();
 ```
 
 ### Fonctions étiquetées
@@ -87,7 +79,7 @@ Si vous souhaitez construire une méthode d'un objet, il faudra d'abord créer l
 var greeter = {
   german: function () {
     return "Moin";
-  }
+  },
 };
 ```
 

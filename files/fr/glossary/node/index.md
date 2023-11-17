@@ -1,11 +1,9 @@
 ---
 title: Nœud
 slug: Glossary/Node
-tags:
-  - Disambiguation
-  - Glossaire
-translation_of: Glossary/Node
 ---
+
+{{GlossarySidebar}}
 
 Le terme **nœud** peut avoir plusieurs significations selon le contexte. Il peut correspondre à :
 

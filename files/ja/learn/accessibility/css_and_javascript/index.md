@@ -49,7 +49,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -76,7 +77,8 @@ p, li {
 強調したテキストに対して、なんらかの単純な色付けを加えたいかもしれません。
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -88,7 +90,10 @@ strong, em {
 略語、頭文字語、つまり頭文字で表したものを、その展開形と関連付けることを可能とする要素は、たとえば以下のようなものです。
 
 ```html
-<p>ウェブ・コンテンツは、<abbr title="Hypertext Markup Language">HTML</abbr>を使ってマークアップされています。</p>
+<p>
+  ウェブ・コンテンツは、<abbr title="Hypertext Markup Language">HTML</abbr
+  >を使ってマークアップされています。
+</p>
 ```
 
 この場合も、なんらかの単純な方法でスタイルを付けたいかもしれません。
@@ -106,7 +111,9 @@ abbr {
 ハイパーリンク——ウェブ上の新たな場所に行く方法——は、たとえば以下のようなものです。
 
 ```html
-<p><a href="https://www.mozilla.org">Mozilla のホームページ</a>に来てくださいね。</p>
+<p>
+  <a href="https://www.mozilla.org">Mozilla のホームページ</a>に来てくださいね。
+</p>
 ```
 
 ある種のとても簡単なリンクのスタイル付けを以下に示します。
@@ -116,7 +123,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -142,7 +151,7 @@ a:active {
 ```html
 <div>
   <label for="name">お名前を入力してください</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -202,9 +211,9 @@ JavaScript も、その使い方によっては、アクセシビリティをぶ
 単純なコンテンツと機能——たとえば、テキスト、画像、テーブル、フォーム、関数を起動する押しボタン——は、まず間違いなく、アクセシブルにするのが簡単です。[HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML) の記事で見たように、考慮すべき重要な事項は以下のとおりです。
 
 - 良いセマンティクス: ふさわしい要素をふさわしい役割に使うこと。たとえば、見出しと段落を使い、{{htmlelement("button")}} 要素と {{htmlelement("a")}} 要素を使うようにします。
-- コンテンツを、テキストとして利用可能にすること——テキスト・コンテンツや、フォーム要素に対する適切なテキスト・ラベルの形で、直接的に利用可能とするか、あるいは、たとえば画像に対する alt テキストのような[代替テキスト](/ja/docs/Learn/Accessibility/HTML#Text_alternatives)として、利用可能にすること。
+- コンテンツを、テキストとして利用可能にすること——テキスト・コンテンツや、フォーム要素に対する適切なテキスト・ラベルの形で、直接的に利用可能とするか、あるいは、たとえば画像に対する alt テキストのような[代替テキスト](/ja/docs/Learn/Accessibility/HTML#代替テキスト)として、利用可能にすること。
 
-機能が欠けているところに機能を盛り込むように JavaScript を使う方法の例も見ました ([Building keyboard accessibility back in](/ja/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in) を参照)。この例は理想的ではありません。実際、ただふさわしい要素をふさわしい役割に使うべきなのです。が、この例は、使われるマークアップを何らかの理由で統制できない状況においては、こうしたこともあり得るのだと示しています。非意味的な、JavaScript で実装されたウィジェットについて、アクセシビリティを向上させる別の方法は、WAI-ARIA を用いて追加的なセマンティクスをスクリーン・リーダーのユーザーに提供することです。次の記事では、このことも詳しく扱います。
+機能が欠けているところに機能を盛り込むように JavaScript を使う方法の例も見ました ([キーボードアクセシビリティを呼び戻すように盛り込む](/ja/docs/Learn/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む) を参照)。この例は理想的ではありません。実際、ただふさわしい要素をふさわしい役割に使うべきなのです。が、この例は、使われるマークアップを何らかの理由で統制できない状況においては、こうしたこともあり得るのだと示しています。非意味的な、JavaScript で実装されたウィジェットについて、アクセシビリティを向上させる別の方法は、WAI-ARIA を用いて追加的なセマンティクスをスクリーン・リーダーのユーザーに提供することです。次の記事では、このことも詳しく扱います。
 
 3D ゲームのような複雑な機能は、アクセシブルにするのがそう簡単ではありません。[WebGL](/ja/docs/Web/API/WebGL_API) を使って作られた複雑な 3D ゲームは {{htmlelement("canvas")}} 要素上に描画されるでしょうが、今のところ {{htmlelement("canvas")}} 要素には、重度の視覚障碍のあるユーザーが利用できるように代替テキストもしくは他の情報を提供する手段がないのです。 そうしたゲームは、こうした人々のグループを実際に主要な対象者の一部としてはいないのだ、というのはもっともです。それに、そのゲームを、目の見えない人々にとって 100% アクセシブルにせよ、と期待するのも不合理でしょう。しかし、マウスを使わないユーザーにとって利用可能なように[キーボード・コントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を実装することや、 色覚障碍のある人々にとって利用可能なようにカラー・スキームに十分なコントラストを持たせることならできるでしょう。
 
@@ -233,7 +242,7 @@ JavaScript に頼りすぎると、しばしば問題が起きます。ときど
 
 ```html
 <label for="name">お名前を入力してください (Enter your name):</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 フォームが送信されるときにだけ検査をしています。これは、UI をあまりに頻繁に更新しないようにするため、そして、スクリーン・リーダーのユーザーを (また、おそらくは他のユーザーも) 潜在的に混乱させることがないようにするためです。
@@ -242,16 +251,16 @@ JavaScript に頼りすぎると、しばしば問題が起きます。ときど
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(var i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (var i = 0; i < formItems.length; i++) {
     var testItem = formItems[i];
-    if(testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -267,11 +276,15 @@ function validate(e) {
 
 ```js
 function createLink(testItem) {
-  var listItem = document.createElement('li');
-  var anchor = document.createElement('a');
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  var listItem = document.createElement("li");
+  var anchor = document.createElement("a");
+  anchor.textContent =
+    testItem.input.name +
+    " field is empty: fill in your " +
+    testItem.input.name +
+    ".";
+  anchor.href = "#" + testItem.input.name;
+  anchor.onclick = function () {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -324,7 +337,7 @@ imgThumb.onblur = hideImg;
 
 最初の 2 行は、それぞれ、マウスポインターがサムネイル上にホバーしたときと、マウスポインターがサムネイル上にホバーするのをやめたときに、関数を動作させます。しかしこれだと、ズームしたビューにキーボードを通じてアクセスすることはできません。それをできるようにするために、後ろの方の 2 行を含めました。この 2 行は、画像にフォーカスが当たったときと、画像からフォーカスが外れた (フォーカスが停止した) ときに、関数を動作させます。こうしたことは、タブキーで画像上に移動することでできることです。なぜなら、画像に `tabindex="0"` を含めておいたからです。
 
-[click](/ja/docs/Web/Events/click) クリックイベントは興味深いものです。マウス依存のように聞こえる名前ですが、ほとんどのブラウザーは、フォーカスの当たっているリンクまたはフォーム要素上でエンター / リターンが押された後に、あるいは、そうした要素がタッチスクリーン装置上でタップされたときに、[onclick](/ja/docs/Web/API/GlobalEventHandlers/onclick) イベントハンドラーをアクティブにすることでしょう。しかしこれは、tabindex を用いて、デフォルトではフォーカス可能ではないイベントがフォーカスを持つようにしていると、デフォルトのままではうまく機能しません。そうした場合では、まさにそのキーが具体的にはいつ押されたのかを検出する必要があります ([Building keyboard accessibility back in](/ja/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in) を参照)。
+[click](/ja/docs/Web/Events/click) クリックイベントは興味深いものです。マウス依存のように聞こえる名前ですが、ほとんどのブラウザーは、フォーカスの当たっているリンクまたはフォーム要素上でエンター / リターンが押された後に、あるいは、そうした要素がタッチスクリーン装置上でタップされたときに、[onclick](/ja/docs/Web/API/GlobalEventHandlers/onclick) イベントハンドラーをアクティブにすることでしょう。しかしこれは、tabindex を用いて、デフォルトではフォーカス可能ではないイベントがフォーカスを持つようにしていると、デフォルトのままではうまく機能しません。そうした場合では、まさにそのキーが具体的にはいつ押されたのかを検出する必要があります ([キーボードアクセシビリティを呼び戻すように盛り込む](/ja/docs/Learn/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む) を参照)。
 
 ## まとめ
 

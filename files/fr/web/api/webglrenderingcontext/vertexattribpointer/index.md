@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/vertexAttribPointer
 ---
 
 {{APIRef("WebGL")}}
@@ -139,7 +132,7 @@ Tout d'abord, nous créons dynamiquement le tampon des tableaux à partir de don
 
 ```js
 // Charger la géometrie avec fetch() et Response.json()
-const response = await fetch('assets/geometry.json');
+const response = await fetch("assets/geometry.json");
 const sommets = await response.json();
 
 // Créer le tampon des tableaux
@@ -150,19 +143,19 @@ for (let i = 0; i < sommets.length; i++) {
   dv.setFloat32(20 * i, sommets[i].position[0], true);
   dv.setFloat32(20 * i + 4, sommets[i].position[1], true);
   dv.setFloat32(20 * i + 8, sommets[i].position[2], true);
-  dv.setInt8(20 * i + 12, sommets[i].normale[0] * 0x7F);
-  dv.setInt8(20 * i + 13, sommets[i].normale[1] * 0x7F);
-  dv.setInt8(20 * i + 14, sommets[i].normale[2] * 0x7F);
+  dv.setInt8(20 * i + 12, sommets[i].normale[0] * 0x7f);
+  dv.setInt8(20 * i + 13, sommets[i].normale[1] * 0x7f);
+  dv.setInt8(20 * i + 14, sommets[i].normale[2] * 0x7f);
   dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, sommets[i].coordTex[0] * 0xFFFF, true);
-  dv.setUint16(20 * i + 18, sommets[i].coordTex[1] * 0xFFFF, true);
+  dv.setUint16(20 * i + 16, sommets[i].coordTex[0] * 0xffff, true);
+  dv.setUint16(20 * i + 18, sommets[i].coordTex[1] * 0xffff, true);
 }
 ```
 
 Pour de meilleures performances, nous pourrions également effectuer la conversion JSON vers ArrayBuffer précédente du côté serveur, par ex. avec Node.js. Nous pourrions alors charger le fichier binaire et l'interpréter comme un tampon de tableaux :
 
 ```js
-const response = await fetch('assets/geometry.bin');
+const response = await fetch("assets/geometry.bin");
 const tampon = await response.arrayBuffer();
 ```
 
@@ -192,9 +185,9 @@ gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(2);
 
 // Définir les attributs dans le shader de sommet aux mêmes indices
-gl.bindAttribLocation(shaderProgram, 0, 'position');
-gl.bindAttribLocation(shaderProgram, 1, 'normal');
-gl.bindAttribLocation(shaderProgram, 2, 'texUV');
+gl.bindAttribLocation(shaderProgram, 0, "position");
+gl.bindAttribLocation(shaderProgram, 1, "normal");
+gl.bindAttribLocation(shaderProgram, 2, "texUV");
 // Du fait que indices des attributs ont changé, nous devons refaire l'édition de liens du shader
 // Noter que cela réinitialisera tous les uniforms qui avaient été précédemment définis.
 gl.linkProgram(shaderProgram);
@@ -203,15 +196,15 @@ gl.linkProgram(shaderProgram);
 soit en utilisant l'indice fourni par la carte graphique, au lieu de le définir nous-mêmes ; cela évite la réédition des liens du programme shader.
 
 ```js
-const positionLoc = gl.getAttribLocation(shaderProgram, 'position');
+const positionLoc = gl.getAttribLocation(shaderProgram, "position");
 gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(positionLoc);
 
-const normalLoc = gl.getAttribLocation(shaderProgram, 'normal');
+const normalLoc = gl.getAttribLocation(shaderProgram, "normal");
 gl.vertexAttribPointer(normalLoc, 4, gl.BYTE, true, 20, 12);
 gl.enableVertexAttribArray(normalLoc);
 
-const texUVLoc = gl.getAttribLocation(shaderProgram, 'texUV');
+const texUVLoc = gl.getAttribLocation(shaderProgram, "texUV");
 gl.vertexAttribPointer(texUVLoc, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(texUVLoc);
 ```

@@ -1,12 +1,6 @@
 ---
 title: IDBCursor
 slug: Web/API/IDBCursor
-tags:
-  - API
-  - IndexedDB
-  - Interface
-  - Référence(2)
-translation_of: Web/API/IDBCursor
 ---
 
 {{APIRef("IndexedDB")}}
@@ -15,14 +9,14 @@ L'interface **`IDBCursor`** de l' [API IndexedDB](/fr/docs/Web/API/API_IndexedDB
 
 Le curseur possède une source qui indique l'index ou le magasin d'objets sur lequel il itère. Il est décrit par une position dans cet intervalle et par une direction dans laquelle il se déplace : dans l'ordre des clés d'enregistrement suivant le sens donné au curseur (montant ou descendant). Le curseur permet à une application de traiter de façon asynchrone tous les enregistrements de sa plage.
 
-On peut avoir autant de curseurs qu'on souhaite en même temps. Ce sera toujours le même objet `IDBCursor` qui représentera un curseur donné. Les opérations sont effectuées à l’intérieur de l'index ou du magasin d'objet.
+On peut avoir autant de curseurs qu'on souhaite en même temps. Ce sera toujours le même objet `IDBCursor` qui représentera un curseur donné. Les opérations sont effectuées à l'intérieur de l'index ou du magasin d'objet.
 
 {{AvailableInWorkers}}
 
 ## Méthodes
 
 - {{domxref("IDBCursor.advance()")}}
-  - : Définit le nombre d’itérations vers l'avant.
+  - : Définit le nombre d'itérations vers l'avant.
 - {{domxref("IDBCursor.continue()")}}
   - : Avance le curseur sur la position suivante le long de sa direction, jusqu'à l'élément dont la clé correspond au paramètre (optionnel) passé à la fonction.
 - {{domxref("IDBCursor.delete()")}}
@@ -33,7 +27,7 @@ On peut avoir autant de curseurs qu'on souhaite en même temps. Ce sera toujours
 ## Propriétés
 
 - {{domxref("IDBCursor.source")}} {{readonlyInline}}
-  - : Renvoie le {{domxref("IDBObjectStore")}} ou {{domxref("IDBIndex")}} sur lequel le curseur itère. Cette fonction ne retourne jamais `null` et ne déclenche pas d’exception, même dans les cas ou le curseur est en train d'itérer, s'il a itéré en dehors la plage ou si la transaction n'est pas active.
+  - : Renvoie le {{domxref("IDBObjectStore")}} ou {{domxref("IDBIndex")}} sur lequel le curseur itère. Cette fonction ne retourne jamais `null` et ne déclenche pas d'exception, même dans les cas ou le curseur est en train d'itérer, s'il a itéré en dehors la plage ou si la transaction n'est pas active.
 - {{domxref("IDBCursor.direction")}} {{readonlyInline}}
   - : Renvoie la direction de parcours du curseur. Voir le paragraphe suivant, [Constantes](#constantes), pour les valeurs possibles.
 - {{domxref("IDBCursor.key")}} {{readonlyInline}}
@@ -111,19 +105,20 @@ Dans ce fragment simple, nous créons une transaction, récupérons un magasin d
 
 ```js
 function afficheDonnee() {
-  var transaction = db.transaction(['grandListAlbum'], "readonly");
-  var objectStore = transaction.objectStore('grandListAlbum');
+  var transaction = db.transaction(["grandListAlbum"], "readonly");
+  var objectStore = transaction.objectStore("grandListAlbum");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var curseur = event.target.result;
-    if(curseur) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = curseur.value.titreAlbum + ', ' + curseur.value.annee;
+    if (curseur) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        curseur.value.titreAlbum + ", " + curseur.value.annee;
       list.appendChild(listItem);
 
       curseur.continue();
     } else {
-      console.log('Entrées tous affichés.');
+      console.log("Entrées tous affichés.");
     }
   };
 }

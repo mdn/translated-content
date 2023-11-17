@@ -10,11 +10,11 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">学习本章的前提条件：</th>
+      <th scope="row">前提：</th>
       <td>在尝试这个评定之前，你应该已经把这个模块的所有文章都学习完成了。</td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>检测对 HTML 表格及相关功能的理解。</td>
     </tr>
   </tbody>
@@ -56,6 +56,6 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 
 ## 评定
 
-如果您将此评估作为有组织的课程的一部分，您应该能够将您的工作交给您的老师/导师进行评改。如果您是自学习的，那么您可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得标记指南。首先尝试练习 - 作弊对你没有益处！
+如果你将此评估作为有组织的课程的一部分，你应该能够将你的工作交给你的老师/导师进行评改。如果你是自学习的，那么你可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得标记指南。首先尝试练习 - 作弊对你没有益处！
 
 {{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

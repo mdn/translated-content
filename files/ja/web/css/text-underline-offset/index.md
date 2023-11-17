@@ -54,8 +54,10 @@ text-underline-offset: unset;
 
 ```html
 <p class="oneline">Here's some text with an offset wavy red underline!</p>
-<br>
-<p class="twolines">This text has lines both above and below it. Only the bottom one is offset.</p>
+<br />
+<p class="twolines">
+  This text has lines both above and below it. Only the bottom one is offset.
+</p>
 ```
 
 ```css

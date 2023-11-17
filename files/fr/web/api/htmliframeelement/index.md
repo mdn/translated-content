@@ -1,12 +1,6 @@
 ---
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLIFrameElement
 ---
 
 {{APIRef("HTML DOM")}}

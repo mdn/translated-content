@@ -24,10 +24,10 @@ imgElt.referrerPolicy = refStr;
 
 ```js
 var img = new Image();
-img.src = 'img/logo.png';
-img.referrerPolicy = 'origin';
+img.src = "img/logo.png";
+img.referrerPolicy = "origin";
 
-var div = document.getElementById('divAround');
+var div = document.getElementById("divAround");
 div.appendChild(img); // Fetch the image using the origin as the referrer
 ```
 

@@ -55,15 +55,14 @@ transition: all 4s ease;
 示例：
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.oRequestAnimationFrame ||
-                            window.msRequestAnimationFrame;
+window.requestAnimationFrame =
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.oRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
 ```
 
-## 了解更多
-
-### 基础知识
+## 参见
 
 - 维基百科[浏览器引擎前缀（Vendor prefix）](https://zh.wikipedia.org/wiki/CSS_hack#Browser_prefixes)

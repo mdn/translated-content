@@ -1,7 +1,6 @@
 ---
 title: 웹 서버란 무엇일까?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/What_is_a_web_server
 ---
 
 여기서 우리는 웹 서버가 무엇인지, 어떻게 동작하는지, 왜 중요한지를 알아볼 것입니다.
@@ -11,10 +10,10 @@ original_slug: Learn/Common_questions/What_is_a_web_server
     <tr>
       <th scope="row">선수 지식</th>
       <td>
-        <a href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/ko/docs/Learn/page_vs_site_vs_server_vs_search_engine"
           >웹 페이지와 웹 사이트, 웹 서버, 그리고 검색 엔진의 차이점</a
         >에 대해 이해하고
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/ko/docs/Learn/How_the_Internet_works"
           >인터넷이 어떻게 동작하는지</a
         > 알고있으면 좋습니다.
       </td>

@@ -1,12 +1,6 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-tags:
-  - JavaScript
-  - Mémoire partagée
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics
 ---
 
 {{JSRef}}
@@ -71,4 +65,4 @@ Le méthodes `wait()` et `notify()` sont basées sur les _futex_ Linux (selon le
 - [Web Workers](/fr/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – un bibliothèque simple qui fournit des abstractions pour synchronisers et distribuer des tâches.
 - [La mémoire partagée – un rapide tutoriel](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

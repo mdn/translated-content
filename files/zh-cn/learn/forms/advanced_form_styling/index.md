@@ -81,7 +81,7 @@ HTML 和 CSS 最新的发展扩展了 CSS 的表现力：
 
 ```html
 <form>
-    <input type="search">
+  <input type="search" />
 </form>
 ```
 
@@ -111,18 +111,18 @@ input[type=search] {
 让我们研究一下下面的测试用例：
 
 ```html
-<span><input type="checkbox"></span>
+<span><input type="checkbox" /></span>
 ```
 
 ```css
 span {
-    display: inline-block;
-    background: red;
+  display: inline-block;
+  background: red;
 }
 
-input[type=checkbox] {
-    width : 100px;
-    height: 100px;
+input[type="checkbox"] {
+  width: 100px;
+  height: 100px;
 }
 ```
 
@@ -145,15 +145,20 @@ input[type=checkbox] {
 <form>
   <fieldset>
     <p>
-      <input type="checkbox" id="first" name="fruit-1" value="cherry">
+      <input type="checkbox" id="first" name="fruit-1" value="cherry" />
       <label for="first">I like cherry</label>
     </p>
     <p>
-      <input type="checkbox" id="second" name="fruit-2" value="banana" disabled>
+      <input
+        type="checkbox"
+        id="second"
+        name="fruit-2"
+        value="banana"
+        disabled />
       <label for="second">I can't like banana</label>
     </p>
     <p>
-      <input type="checkbox" id="third" name="fruit-3" value="strawberry">
+      <input type="checkbox" id="third" name="fruit-3" value="strawberry" />
       <label for="third">I like strawberry</label>
     </p>
   </fieldset>
@@ -171,26 +176,26 @@ form {
   display: inline-block;
 
   padding: 0;
-  margin : 0;
+  margin: 0;
 }
 
 fieldset {
-  border : 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  margin : 0;
+  margin: 0;
   padding: 1em;
 }
 
 label {
-  cursor : pointer;
+  cursor: pointer;
 }
 
 p {
-  margin : 0;
+  margin: 0;
 }
 
-p+p {
-  margin : .5em 0 0;
+p + p {
+  margin: 0.5em 0 0;
 }
 ```
 
@@ -208,7 +213,7 @@ p+p {
 - 我们将使用 CSS3 选择器来实现定制的样式，为了支持旧版浏览器，可以在所有选择器前设置{{cssxref(":root")}}伪类。目前所有我们需要支持的浏览器都支持{{cssxref(":root")}}伪类，但是其他的并不能保证。这是一个过滤旧的 Internet Explorer 的便利方式的例子。那些旧版浏览器将看到传统的复选框，而新式的浏览器可以看到定制的复选框。
 
 ```css
-:root input[type=checkbox] {
+:root input[type="checkbox"] {
   /* original check box are push outside the viexport */
   position: absolute;
   left: -1000em;
@@ -218,15 +223,16 @@ p+p {
 现在加上自己的图像就可以摆脱原来的复选框了，为此，要在初始的复选框后面加上{{HTMLElement("label")}}元素，并使用它的{{cssxref(":before")}}伪元素。因此在下面章节中，要使用[selector 属性](/zh-CN/docs/CSS/Attribute_selectors)来选择复选框，然后使用[adjacent sibling selector](/zh-CN/docs/CSS/Adjacent_sibling_selectors)来选择原有复选框后面的`label`。最后，访问{{cssxref(":before")}}伪元素来设计复选框显示定制样式。
 
 ```css
-:root input[type=checkbox] + label:before {
+:root input[type="checkbox"] + label:before {
   content: "";
   display: inline-block;
-  width  : 16px;
-  height : 16px;
-  margin : 0 .5em 0 0;
-  background: url("https://developer.mozilla.org/files/4173/checkbox-sprite.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  margin: 0 0.5em 0 0;
+  background: url("https://developer.mozilla.org/files/4173/checkbox-sprite.png")
+    no-repeat 0 0;
 
-/* The following is used to adjust the position of
+  /* The following is used to adjust the position of
    the check boxes on the text baseline */
 
   vertical-align: bottom;
@@ -238,15 +244,15 @@ p+p {
 在初始复选框上使用{{cssxref(":checked")}}和{{cssxref(":disabled")}}伪类来改变定制复选框的状态。因为使用了 CSS 精灵，我们需要做的只是修改背景的位置。
 
 ```css
-:root input[type=checkbox]:checked + label:before {
+:root input[type="checkbox"]:checked + label:before {
   background-position: 0 -16px;
 }
 
-:root input[type=checkbox]:disabled + label:before {
+:root input[type="checkbox"]:disabled + label:before {
   background-position: 0 -32px;
 }
 
-:root input[type=checkbox]:checked:disabled + label:before {
+:root input[type="checkbox"]:checked:disabled + label:before {
   background-position: 0 -48px;
 }
 ```
@@ -254,7 +260,7 @@ p+p {
 最后一件（但是很重要的）事情：当用户使用键盘从一个表单小部件导航到另一个表单小部件时，每个小部件都应该被显式聚焦。因为我们隐藏了初始的复选框，我们必须自己实现这个特性，让用户知道定制复选框在表单中的位置，下列的 CSS 实现了它们聚焦。
 
 ```css
-:root input[type=checkbox]:focus + label:before {
+:root input[type="checkbox"]:focus + label:before {
   outline: 1px dotted black;
 }
 ```
@@ -277,26 +283,27 @@ p+p {
 
 ```css
 select {
-  width   : 80px;
-  padding : 10px;
+  width: 80px;
+  padding: 10px;
 }
 
 option {
-  padding : 5px;
-  color   : red;
+  padding: 5px;
+  color: red;
 }
 ```
 
 下面的表格显示了在两种情况下不同浏览器的处理方式。头两列就是上面的例子。后面两列使用了其他的定制 CSS，可以对小部件的外观进行更多的控制：
 
 ```css
-select, option {
-  -webkit-appearance : none; /* To gain control over the appearance on WebKit/Chromium */
-  -moz-appearance : none; /* To gain control over the appearance on Gecko */
+select,
+option {
+  -webkit-appearance: none; /* To gain control over the appearance on WebKit/Chromium */
+  -moz-appearance: none; /* To gain control over the appearance on Gecko */
 
   /* To gain control over the appearance on and Trident (IE)
      Note that it also works on Gecko and has partial effects on WebKit */
-  background : none;
+  background: none;
 }
 ```
 

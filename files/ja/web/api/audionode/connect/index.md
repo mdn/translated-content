@@ -23,7 +23,7 @@ connect(destination, outputIndex, inputIndex)
   - : 接続する {{domxref("AudioNode")}} または {{domxref("AudioParam")}} です。
 - `outputIndex` {{optional_inline}}
   - : この `AudioNode` のどの出力を接続先に接続するかを指定するインデックスです。インデックス番号は出力のチャンネル数に基づいて決められます。([オーディオチャンネル](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)を参照してください)
-      ある出力のある入力への接続は 1 回しかできません (2 回目以降は無視されます) が、`connect()` を複数回呼ぶことで 1 個の出力を複数の入力に接続できます。これにより[ファンアウト](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%83%95%E3%82%A1%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%95%E3%82%A1%E3%83%B3%E3%82%A2%E3%82%A6%E3%83%88)を実現できます。デフォルト値は 0 です。
+    ある出力のある入力への接続は 1 回しかできません (2 回目以降は無視されます) が、`connect()` を複数回呼ぶことで 1 個の出力を複数の入力に接続できます。これにより[ファンアウト](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%83%95%E3%82%A1%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%95%E3%82%A1%E3%83%B3%E3%82%A2%E3%82%A6%E3%83%88)を実現できます。デフォルト値は 0 です。
 - `inputIndex` {{optional_inline}}
   - : 接続先のどの入力をこの `AudioNode` に接続するかを指定するインデックスです。デフォルト値は 0 です。インデックス番号は入力のチャンネル数に基づいて決められます。([オーディオチャンネル](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)を参照してください) ある `AudioNode` を別の `AudioNode` に接続し、この `AudioNode` を再び最初の `AudioNode` に接続することで、閉路を作ることもできます。
 

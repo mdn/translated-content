@@ -1,8 +1,8 @@
 ---
 title: Селекторы атрибутов
 slug: Web/CSS/Attribute_selectors
-translation_of: Web/CSS/Attribute_selectors
 ---
+
 {{CSSRef("Selectors")}}
 
 ## Обзор
@@ -28,43 +28,57 @@ translation_of: Web/CSS/Attribute_selectors
 
 ```css
 /* Все span с атрибутом "lang" будут жирными */
-span[lang] {font-weight:bold;}
+span[lang] {
+  font-weight: bold;
+}
 
 /* Все span в Португалии будут зелёными */
-span[lang="pt"] {color:green;}
+span[lang="pt"] {
+  color: green;
+}
 
 /* Все span с американским английским будут синими */
-span[lang~="en-us"] {color: blue;}
+span[lang~="en-us"] {
+  color: blue;
+}
 
 /* Любые span на китайском языке будут красными, как на упрощённом китайском (zh-CN) так и на традиционном (zh-TW) */
-span[lang|="zh"] {color: red;}
+span[lang|="zh"] {
+  color: red;
+}
 
 /* Все внутренние ссылки будут иметь золотой фон */
-a[href^="#"] {background-color:gold}
+a[href^="#"] {
+  background-color: gold;
+}
 
 /* Все ссылки с url заканчивающимся на .cn будут красными */
-a[href$=".cn"] {color: red;}
+a[href$=".cn"] {
+  color: red;
+}
 
 /* Все ссылки содержащие "example" в url будут иметь серый фон */
-a[href*="example"] {background-color: #CCCCCC;}
+a[href*="example"] {
+  background-color: #cccccc;
+}
 ```
 
 ```html
 <div class="hello-example">
-    <a href="http://example.com">English:</a>
-    <span lang="en-us en-gb en-au en-nz">Hello World!</span>
+  <a href="http://example.com">English:</a>
+  <span lang="en-us en-gb en-au en-nz">Hello World!</span>
 </div>
 <div class="hello-example">
-    <a href="#portuguese">Portuguese:</a>
-    <span lang="pt">Olá Mundo!</span>
+  <a href="#portuguese">Portuguese:</a>
+  <span lang="pt">Olá Mundo!</span>
 </div>
 <div class="hello-example">
-    <a href="http://example.cn">Chinese (Simplified):</a>
-    <span lang="zh-CN">世界您好！</span>
+  <a href="http://example.cn">Chinese (Simplified):</a>
+  <span lang="zh-CN">世界您好！</span>
 </div>
 <div class="hello-example">
-    <a href="http://example.cn">Chinese (Traditional):</a>
-    <span lang="zh-TW">世界您好！</span>
+  <a href="http://example.cn">Chinese (Traditional):</a>
+  <span lang="zh-TW">世界您好！</span>
 </div>
 ```
 

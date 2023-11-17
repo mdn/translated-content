@@ -28,8 +28,8 @@ El evento `DeviceMotionEvent` proporciona a los desarrolladores información ace
 ## Ejemplo
 
 ```js
-window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
+window.addEventListener("devicemotion", function (event) {
+  console.log(event.acceleration.x + " m/s2");
 });
 ```
 

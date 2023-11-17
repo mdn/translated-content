@@ -1,13 +1,6 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Итератор
-  - Функция
-  - Экспериментальный
-translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 
 {{jsSidebar("Statements")}}
@@ -42,8 +35,7 @@ function* name([param[, param[, ... param]]]) { statements }
 ```js
 function* idMaker() {
   var index = 0;
-  while (index < 3)
-    yield index++;
+  while (index < 3) yield index++;
 }
 
 var gen = idMaker();
@@ -93,9 +85,9 @@ var gen = logGenerator();
 // первый вызов next выполняется от начала функции
 // и до первого оператора yield
 gen.next();
-gen.next('pretzel'); // pretzel
-gen.next('california'); // california
-gen.next('mayonnaise'); // mayonnaise
+gen.next("pretzel"); // pretzel
+gen.next("california"); // california
+gen.next("mayonnaise"); // mayonnaise
 ```
 
 ### Инструкция return в генераторе
@@ -107,7 +99,7 @@ function* yieldAndReturn() {
   yield "unreachable";
 }
 
-var gen = yieldAndReturn()
+var gen = yieldAndReturn();
 console.log(gen.next()); // { value: "Y", done: false }
 console.log(gen.next()); // { value: "R", done: true }
 console.log(gen.next()); // { value: undefined, done: true }
@@ -117,7 +109,7 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js example-bad
 function* f() {}
-var obj = new f; // throws "TypeError: f is not a constructor"
+var obj = new f(); // throws "TypeError: f is not a constructor"
 ```
 
 ## Спецификации
@@ -136,5 +128,5 @@ var obj = new f; // throws "TypeError: f is not a constructor"
 - Другие ресурсы:
 
   - Компилятор [Regenerator](http://facebook.github.io/regenerator/) из ES2015 в ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](http://taskjs.org/)

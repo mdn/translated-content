@@ -1,12 +1,6 @@
 ---
 title: line-height-step
 slug: Web/CSS/line-height-step
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/line-height-step
 ---
 
 {{CSSRef}}{{Non-standard_header}}

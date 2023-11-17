@@ -29,9 +29,9 @@ match 方法会返回一个数组，它包括整个匹配结果，和通过捕�
 这个方法在 {{jsxref("String.prototype.match()")}} 的内部调用。例如，下面的两个方法返回相同结果。
 
 ```js
-'abc'.match(/a/);
+"abc".match(/a/);
 
-/a/[Symbol.match]('abc');
+/a/[Symbol.match]("abc");
 ```
 
 这个方法为自定义 `RegExp` 子类中的匹配行为而存在。
@@ -44,9 +44,9 @@ match 方法会返回一个数组，它包括整个匹配结果，和通过捕�
 
 ```js
 var re = /[0-9]+/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var result = re[Symbol.match](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### 在子类中使用`@@match`
@@ -61,13 +61,13 @@ class MyRegExp extends RegExp {
     return {
       group(n) {
         return result[n];
-      }
+      },
     };
   }
 }
 
-var re = new MyRegExp('([0-9]+)-([0-9]+)-([0-9]+)');
-var str = '2016-01-02';
+var re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
+var str = "2016-01-02";
 var result = str.match(re); // String.prototype.match calls re[@@match].
 console.log(result.group(1)); // 2016
 console.log(result.group(2)); // 01

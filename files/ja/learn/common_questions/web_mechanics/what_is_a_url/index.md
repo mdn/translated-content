@@ -1,7 +1,6 @@
 ---
 title: URL とは？
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
-original_slug: Learn/Common_questions/What_is_a_URL
 ---
 
 この記事では URL (Uniform Resource Locator) について説明し、その内容と構造を説明します。

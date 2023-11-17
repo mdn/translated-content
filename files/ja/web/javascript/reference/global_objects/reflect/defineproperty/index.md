@@ -43,9 +43,9 @@ Reflect.defineProperty(target, propertyKey, attributes)
 ### Reflect.defineProperty() の使用
 
 ```js
-let obj = {}
-Reflect.defineProperty(obj, 'x', {value: 7})  // true
-obj.x                                         // 7
+let obj = {};
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
+obj.x; // 7
 ```
 
 ### プロパティ定義が成功したかチェックする
@@ -68,7 +68,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.defineProperty")}}
+{{Compat}}
 
 ## 関連情報
 

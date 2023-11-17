@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/tabindex
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 값으로는 정수를 지정할 수 있으며, 수에 따라 결과가 달라집니다.
 
 - **음의 정숫값**(보통 `tabindex="-1"`)은 연속 키보드 탐색으로 접근할 수는 없으나 JavaScript나 시각적(마우스 클릭)으로는 포커스 가능함을 뜻합니다. 보통 JavaScript를 사용한 위젯의 접근성 확보를 위해 사용합니다.

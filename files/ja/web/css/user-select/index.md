@@ -65,6 +65,7 @@ user-select: unset;
   - : `contain` と同じです。 Internet Explorer だけが対応しています。
 
 > **メモ:** CSS UI 4 では、 [`user-select: element` が `contain` に名称が変わります。](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)
+
 </div>
 
 ## 公式定義

@@ -10,7 +10,7 @@ slug: Web/API/Node/hasChildNodes
 ## 구문
 
 ```js
-node.hasChildNodes()
+node.hasChildNodes();
 ```
 
 ## 예시
@@ -20,8 +20,8 @@ node.hasChildNodes()
 ```js
 var foo = document.getElementById("foo");
 
-if ( foo.hasChildNodes() ) {
-  foo.removeChild( foo.childNodes[0] );
+if (foo.hasChildNodes()) {
+  foo.removeChild(foo.childNodes[0]);
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: '::first-line (:first-line)'
+title: "::first-line (:first-line)"
 slug: Web/CSS/::first-line
 ---
 
@@ -42,14 +42,18 @@ slug: Web/CSS/::first-line
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
+</p>
 ```
 
 #### CSS
 
 ```css
-p::first-line { text-transform: uppercase }
+p::first-line {
+  text-transform: uppercase;
+}
 ```
 
 #### 输出
@@ -63,14 +67,18 @@ p::first-line { text-transform: uppercase }
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
+</p>
 ```
 
 #### CSS
 
 ```css
-p::first-line { margin-left: 20px }
+p::first-line {
+  margin-left: 20px;
+}
 ```
 
 #### 输出
@@ -84,14 +92,18 @@ p::first-line { margin-left: 20px }
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
+</p>
 ```
 
 #### CSS
 
 ```css
-p::first-line { text-indent: 20px }
+p::first-line {
+  text-indent: 20px;
+}
 ```
 
 #### 输出

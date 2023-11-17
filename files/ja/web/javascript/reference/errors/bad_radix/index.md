@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: radix must be an integer'
+title: "RangeError: radix must be an integer"
 slug: Web/JavaScript/Reference/Errors/Bad_radix
 ---
 
@@ -42,16 +42,16 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 (42).toString(37);
 (42).toString(150);
 // フォーマットのために、このような文字列は使用できません。
-(12071989).toString('MM-dd-yyyy');
+(12071989).toString("MM-dd-yyyy");
 ```
 
 ### 有効な場合
 
 ```js example-good
-(42).toString(2);     // "101010" (二進法)
-(13).toString(8);     // "15"     (八進法)
-(0x42).toString(10);  // "66"     (十進法)
-(100000).toString(16) // "186a0"  (十六進法)
+(42).toString(2); // "101010" (二進法)
+(13).toString(8); // "15"     (八進法)
+(0x42).toString(10); // "66"     (十進法)
+(100000).toString(16); // "186a0"  (十六進法)
 ```
 
 ## 関連情報

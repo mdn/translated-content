@@ -2,7 +2,7 @@
 title: <input type="email">
 slug: Web/HTML/Element/input/email
 l10n:
-  sourceCommit: 7594b50698a76ce79209b159835e615052915723
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
@@ -12,56 +12,6 @@ l10n:
 {{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
 
 入力値はフォームの送信前に自動的に検証され、空欄または正しい形式のメールアドレス (またはメールアドレスのリスト) のどちらかであることが確認されます。 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスが自動的に適用され、フィールド上の現在の値が妥当なメールアドレスであるかどうかを視覚的に示します。
-
-`email` 型に対応していないブラウザーでは、 `email` 入力欄は標準の {{HTMLElement("input/text", "text")}} 入力欄で代替されます。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>
-        メールアドレスを表す文字列、または空欄
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#name"><code>name</code></a>, <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>list</code> および <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 値
 
@@ -101,7 +51,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
@@ -115,7 +65,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄 (フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#ラベル)を参照してください。
 
 ### readonly
 
@@ -157,7 +107,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 <input id="emailAddress" type="email" multiple />
 ```
 
-{{ EmbedLiveSample('Allowing_multiple_e-mail_addresses', 600, 40) }}
+{{ EmbedLiveSample('Allowing multiple email addresses', 600, 40) }}
 
 入力欄は単一のメールアドレスが入力された時や、任意の数のメールアドレスをカンマ区切りで入力した場合、その中にホワイトスペース文字がある場合も有効として扱われるようになります。
 
@@ -208,7 +158,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 `size` は入力されたメールアドレスの長さ制限からは独立しており、フィールドを小さい空間に収めることができますが、より長いメールアドレス文字列が入力できます。入力されたメールアドレスの最小文字数は [`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性を使用して、同様に入力されたメールアドレスの最大文字数は [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) を使用して設定することができます。
 
-以下の例は 32 文字の幅で、内容は 3 文字より短くなったり、64文字より長くなったりしないようにする必要があるメールアドレス入力ボックスを生成します。
+以下の例は 32 文字の幅で、内容は 3 文字より短くなったり、64 文字より長くなったりしないようにする必要があるメールアドレス入力ボックスを生成します。
 
 ```html
 <input type="email" size="32" minlength="3" maxlength="64" />
@@ -256,10 +206,10 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 基本的な検証
 
-`email` 入力型に対応しているブラウザーは、自動的に検証を行い、インターネットのメールアドレスの標準の書式に一致するテキストのみが入力ボックスに入力されることを保証します。この仕様を実装しているブラウザーは、以下の正規表現に相当するアルゴリズムを使っているはずです。
+ブラウザーは自動的に検証を行い、インターネットのメールアドレスの標準の書式に一致するテキストのみが入力ボックスに入力されることを保証します。ブラウザーは、以下の正規表現に相当するアルゴリズムを使用します。
 
 ```js
-/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 ```
 
 フォーム検証の仕組みと、 {{cssxref(":valid")}} や {{cssxref(":invalid")}} 擬似クラスを使用して、現在の値が有効かどうかに基づいて入力欄のスタイルを設定する方法については、[フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)を参照してください。
@@ -336,7 +286,7 @@ label::after {
 
 このままでは、少なくとも正当な電子メールアドレスを検証していることになります。しかし、もう一歩踏み込んで、メールアドレスが実際に "_username_@beststartupever.com" という形式であることを確認したいのです。そこで [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) を使用することにします。ここでは、 `pattern` を `.+@beststartupever.com` に設定しました。この正規表現は単純ですが、少なくとも 1 つの任意の文字、そして "@" の後にドメイン名 "beststartupever.com" が続く文字列を要求します。
 
-これは、有効な電子メールアドレスの適切なフィルタリングにはほど遠いことに注意してください。 " @beststartupever.com" （先頭のスペースに注意）や "@@beststartupever.com" のような有効ではない表現も許可してしまいます。しかし、ブラウザーは指定されたテキストに対して、標準のメールアドレスフィルターとカスタムパターンの両方を実行します。その結果、「これが有効な電子メールアドレスに似ていることを確認し、もしそうなら、それが beststartupever.com のアドレスであることも確認する」という検証を行うことになります。
+これは、有効な電子メールアドレスの適切なフィルタリングにはほど遠いことに注意してください。" @beststartupever.com"（先頭のスペースに注意）や "@@beststartupever.com" のような有効ではない表現も許可してしまいます。しかし、ブラウザーは指定されたテキストに対して、標準のメールアドレスフィルターとカスタムパターンの両方を実行します。その結果、「これが有効な電子メールアドレスに似ていることを確認し、もしそうなら、それが beststartupever.com のアドレスであることも確認する」という検証を行うことになります。
 
 [`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を `pattern` と併用することをお勧めします。その場合、 `title` でパターンを説明する必要があります。つまり、他の情報ではなく、データがどのような形式を取るべきかを説明してください。これは、 `title` が検証エラーメッセージの一部として表示されたり、読み上げられたりする可能性があるからです。例えば、ブラウザーが「入力された値がフィールドに指定された書式と異なります。」というメッセージの後に、あなたが指定した `title` を表示するかもしれません。もし `title` が "メールアドレス" のようなものであれば、結果は「入力された値がフィールドに指定された書式と異なります。メールアドレス」というメッセージになり、あまり良いものではなくなります。
 
@@ -348,12 +298,12 @@ label::after {
 
 ## 例
 
-ここでは、 ID が `emailAddress` のメール入力があり、最大 256 文字までの長さが許可されています。入力ボックス自体は物理的に 64 文字の幅があり、フィールドが空のときは常にプレースホルダーとして `user@example.gov` というテキストが表示されます。さらに、 [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性を使用すると、[複数のメールアドレスの許可](#複数のメールアドレスの許可)で説明したように、ユーザーがカンマで区切ってゼロ個以上の電子メールアドレスを入力できるようにボックスを構成しています。最後の仕上げとして、 [`list`](/ja/docs/Web/HTML/Attributes/list) 属性は、 {{HTMLElement("datalist")}} その {{HTMLElement("option")}} が、ユーザーが選択できる値の候補を指定する {{HTMLElement("datalist")}} の ID を含んでいます。
+ここでは、 ID が `emailAddress` のメール入力があり、最大 256 文字までの長さが許可されています。入力ボックス自体は物理的に 64 文字の幅があり、フィールドが空のときは常にプレースホルダーとして `user@example.gov` というテキストが表示されます。さらに、 [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性を使用すると、[複数のメールアドレスの許可](#複数のメールアドレスの許可)で説明したように、ユーザーがカンマで区切ってゼロ個以上の電子メールアドレスを入力できるようにボックスを構成しています。最後の仕上げとして、 [`list`](/ja/docs/Web/HTML/Element/input#list) 属性は、 {{HTMLElement("datalist")}} その {{HTMLElement("option")}} が、ユーザーが選択できる値の候補を指定する {{HTMLElement("datalist")}} の ID を含んでいます。
 
 それに加えて、 {{HTMLElement("label")}} 要素を使用してメールアドレスの入力ボックスのラベルを作成し、 [`for`](/ja/docs/Web/HTML/Element/label#for) 属性で `emailAddress` という {{HTMLElement("input")}} 要素の ID を参照するようになっています。このように 2 つの要素を関連付けることで、ラベルをクリックすると input 要素にフォーカスが当たります。
 
 ```html
-<label for="emailAddress">メールアドレス</label><br/>
+<label for="emailAddress">メールアドレス</label><br />
 <input
   id="emailAddress"
   type="email"
@@ -374,6 +324,66 @@ label::after {
 
 {{EmbedLiveSample('Examples', 600, 80)}}
 
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>
+        メールアドレスを表す文字列、または空欄
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#name"><code>name</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>list</code> および <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td>
+        <code>list</code> 属性がない場合:
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code><br />
+        <code>list</code> 属性がある場合:
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## 仕様書
 
 {{Specifications}}
@@ -390,12 +400,12 @@ label::after {
 - [`<input type="url">`](/ja/docs/Web/HTML/Element/input/url)
 - 属性:
 
-  - [`list`](/ja/docs/Web/HTML/Attributes/list)
+  - [`list`](/ja/docs/Web/HTML/Element/input#list)
   - [`minlength`](/ja/docs/Web/HTML/Attributes/minlength)
   - [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength)
   - [`multiple`](/ja/docs/Web/HTML/Attributes/multiple)
   - [`pattern`](/ja/docs/Web/HTML/Attributes/pattern)
-  - [`placeholder`](/ja/docs/Web/HTML/Attributes/placeholder)
+  - [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder)
   - [`readonly`](/ja/docs/Web/HTML/Attributes/readonly)
   - [`size`](/ja/docs/Web/HTML/Attributes/size)
 

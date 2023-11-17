@@ -1,5 +1,5 @@
 ---
-title: '<figure>: O elemento Figure com Caption opcional'
+title: "<figure>: O elemento Figure com Caption opcional"
 slug: Web/HTML/Element/figure
 ---
 
@@ -106,7 +106,9 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 
 ```html
 <figure>
-  <figcaption>Obtenha detalhes do navegador usando o <code>navigator</code>.</figcaption>
+  <figcaption>
+    Obtenha detalhes do navegador usando o <code>navigator</code>.
+  </figcaption>
   <pre>
 function NavigatorExample() {
   var txt;
@@ -130,8 +132,8 @@ function NavigatorExample() {
 <figure>
   <figcaption><b>Edsger Dijkstra:</b></figcaption>
   <blockquote>
-    Se a depuração é o processo de remoção de bugs de software, então a programação deve
-    ser o processo de colocá-los.
+    Se a depuração é o processo de remoção de bugs de software, então a
+    programação deve ser o processo de colocá-los.
   </blockquote>
 </figure>
 ```
@@ -143,10 +145,10 @@ function NavigatorExample() {
 ```html
 <figure>
   <p style="white-space:pre">
-    Ofereça-me um discurso, encantarei seu ouvido, Ou como uma viagem de fadas sobre o
-    verde, Ou, como uma ninfa, com longos cabelos desgrenhados, Dança na areia, e
-    mas nenhum fundamento visto: O amor é um espírito todo compacto de fogo, Não grosseiro para
-    afundar, mas leve, e vai aspirar.
+    Ofereça-me um discurso, encantarei seu ouvido, Ou como uma viagem de fadas
+    sobre o verde, Ou, como uma ninfa, com longos cabelos desgrenhados, Dança na
+    areia, e mas nenhum fundamento visto: O amor é um espírito todo compacto de
+    fogo, Não grosseiro para afundar, mas leve, e vai aspirar.
   </p>
   <figcaption><cite>Vênus e Adônis</cite>, de William Shakespeare</figcaption>
 </figure>

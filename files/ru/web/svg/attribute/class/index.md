@@ -1,7 +1,6 @@
 ---
 title: class
 slug: Web/SVG/Attribute/class
-translation_of: Web/SVG/Attribute/class
 ---
 
 « [Домашняя страница справочника по SVG атрибутам](/en/SVG/Attribute)
@@ -19,7 +18,7 @@ translation_of: Web/SVG/Attribute/class
 
 | Категория            | None                                                                                               |
 | -------------------- | -------------------------------------------------------------------------------------------------- |
-| Значение             | [\<list-of-class-names>](/en/SVG/Content_type#List-of-Ts)         |
+| Значение             | [\<list-of-class-names>](/en/SVG/Content_type#List-of-Ts)                                          |
 | Возможна анимация    | Yes                                                                                                |
 | Нормативный документ | [SVG 1.1 (2nd Edition): The class attribute](http://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 
@@ -29,28 +28,30 @@ translation_of: Web/SVG/Attribute/class
 
 ```html
 <html>
-    <body>
-        <svg width="120" height="220"
-            viewPort="0 0 120 120" version="1.1"
-            xmlns="http://www.w3.org/2000/svg">
+  <body>
+    <svg
+      width="120"
+      height="220"
+      viewPort="0 0 120 120"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <style type="text/css">
+        <![CDATA[
+            rect.rectClass {
+                stroke: #000066;
+                fill:   #00cc00;
+            }
+            circle.circleClass {
+                stroke: #006600;
+                fill:   #cc0000;
+            }
+        ]]>
+      </style>
 
-            <style type="text/css" >
-                <![CDATA[
-                    rect.rectClass {
-                        stroke: #000066;
-                        fill:   #00cc00;
-                    }
-                    circle.circleClass {
-                        stroke: #006600;
-                        fill:   #cc0000;
-                    }
-                ]]>
-            </style>
-
-            <rect class="rectClass" x="10" y="10" width="100" height="100"/>
-            <circle  class="circleClass"   cx="40" cy="50" r="26"/>
-        </svg>
-    </body>
+      <rect class="rectClass" x="10" y="10" width="100" height="100" />
+      <circle class="circleClass" cx="40" cy="50" r="26" />
+    </svg>
+  </body>
 </html>
 ```
 

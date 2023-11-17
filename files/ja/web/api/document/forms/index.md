@@ -24,28 +24,34 @@ collection = document.forms;
 ### フォーム情報の取得
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>document.forms example</title>
+  </head>
 
-<head>
-<title>document.forms example</title>
-</head>
+  <body>
+    <form id="robby">
+      <input
+        type="button"
+        onclick="alert(document.forms[0].id);"
+        value="robby's form" />
+    </form>
 
-<body>
+    <form id="dave">
+      <input
+        type="button"
+        onclick="alert(document.forms[1].id);"
+        value="dave's form" />
+    </form>
 
-<form id="robby">
-  <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
-</form>
-
-<form id="dave">
-  <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
-</form>
-
-<form id="paul">
-  <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
-</form>
-
-</body>
+    <form id="paul">
+      <input
+        type="button"
+        onclick="alert(document.forms[2].id);"
+        value="paul's form" />
+    </form>
+  </body>
 </html>
 ```
 
@@ -59,26 +65,25 @@ var selectFormElement = document.forms[index].elements[index];
 ### 名前付きフォームへのアクセス
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>document.forms example</title>
-</head>
+  <head>
+    <title>document.forms example</title>
+  </head>
 
-<body>
+  <body>
+    <form name="login">
+      <input name="email" type="email" />
+      <input name="password" type="password" />
+      <button type="submit">Log in</button>
+    </form>
 
-<form name="login">
-  <input name="email" type="email">
-  <input name="password" type="password">
-  <button type="submit">Log in</button>
-</form>
-
-<script>
-  var loginForm = document.forms.login; // Or document.forms['login']
-  loginForm.elements.email.placeholder = 'test@example.com';
-  loginForm.elements.password.placeholder = 'password';
-</script>
-</body>
+    <script>
+      var loginForm = document.forms.login; // Or document.forms['login']
+      loginForm.elements.email.placeholder = "test@example.com";
+      loginForm.elements.password.placeholder = "password";
+    </script>
+  </body>
 </html>
 ```
 

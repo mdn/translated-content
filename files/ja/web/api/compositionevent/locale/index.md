@@ -1,8 +1,9 @@
 ---
-title: CompositionEvent.locale
+title: "CompositionEvent: locale プロパティ"
+short-title: locale
 slug: Web/API/CompositionEvent/locale
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{deprecated_header}}{{APIRef("UI Events")}}{{Non-standard_header}}

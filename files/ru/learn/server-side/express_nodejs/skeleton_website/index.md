@@ -1,7 +1,6 @@
 ---
-title: 'Учебник Express часть 2: Создание скелета сайта'
+title: "Учебник Express часть 2: Создание скелета сайта"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
-translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 
 {{LearnSidebar}}
@@ -16,7 +15,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 ## Обзор
 
-В этой статье показано, как создать каркас сайта с помощью средства [Express Application Generator](https://expressjs.com/en/starter/generator.html). Каркас затем можно будет заполнить с помощью путей сайта, шаблонов/представлений и обращений к базе данных. Мы используем это средство для создания основы нашего сайта Local Library. К основе будет добавлен код, необходимый сайту. Создание каркаса чрезвычайно просто -- требуется только вызвать генератор в командной строке, указав имя нового проекта, дополнительно можно указать также движок шаблона сайта и генератор CSS.
+В этой статье показано, как создать каркас сайта с помощью средства [Express Application Generator](https://expressjs.com/en/starter/generator.html). Каркас затем можно будет заполнить с помощью путей сайта, шаблонов/представлений и обращений к базе данных. Мы используем это средство для создания основы нашего сайта Local Library. К основе будет добавлен код, необходимый сайту. Создание каркаса чрезвычайно просто — требуется только вызвать генератор в командной строке, указав имя нового проекта, дополнительно можно указать также движок шаблона сайта и генератор CSS.
 
 Далее показано, как вызвать генератор приложений, и даётся небольшое пояснение различных вариантов представлений и CSS. Мы поясним структуру каркаса веб-сайта. В конце мы покажем, как запустить веб-сайт, чтобы убедиться, что он работает.
 
@@ -87,7 +86,7 @@ express
 
 > **Примечание:** В интернете множество ресурсов, которые помогут сравнить различные варианты!
 
-Для этого проекта мы используем шаблонизатор [Pug](https://pugjs.org/api/getting-started.html) (в прошлом назывался Jade) -- один из популярнейших Express/JavaScript шаблонизаторов, который поддерживается в Express-generator "из коробки".
+Для этого проекта мы используем шаблонизатор [Pug](https://pugjs.org/api/getting-started.html) (в прошлом назывался Jade) — один из популярнейших Express/JavaScript шаблонизаторов, который поддерживается в Express-generator "из коробки".
 
 ### Какие шаблонизаторы CSS следует использовать?
 
@@ -149,24 +148,24 @@ express express-locallibrary-tutorial --view=pug
 
 1. Прежде всего установим зависимости (команда `install` запросит все пакеты зависимостей, указанные в файле **package.json**).
 
-    ```bash
-    cd express-locallibrary-tutorial
-    npm install
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   npm install
+   ```
 
 2. Затем запустим приложение.
 
-    - В Windows используйте команду:
+   - В Windows используйте команду:
 
-      ```bash
-      SET DEBUG=express-locallibrary-tutorial:* & npm start
-      ```
+     ```bash
+     SET DEBUG=express-locallibrary-tutorial:* & npm start
+     ```
 
-    - В Mac OS X или Linux используйте команду:
+   - В Mac OS X или Linux используйте команду:
 
-      ```bash
-      DEBUG=express-locallibrary-tutorial:* npm start
-      ```
+     ```bash
+     DEBUG=express-locallibrary-tutorial:* npm start
+     ```
 
 3. Откроем <http://localhost:3000/> в браузере. Мы должны увидеть такую страницу:
 
@@ -246,7 +245,7 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
 
 ### Структура каталогов
 
-После установки зависимостей проект имеет такую структуру файлов (файлы - это элементы **без** префикса"/"). Файл **package.json** определяет имя файла с приложением, сценарии запуска, зависимости и др. Сценарий запуска задаёт точку входа приложения, у нас -- файл JavaScript **/bin/www**. Этот файл настраивает некоторые обработчики ошибок приложения, а затем загружает **app.js** для выполнения остальной работы. Пути приложения хранятся в отдельных модулях каталога **routes/**. Шаблоны хранятся в каталоге /**views**.
+После установки зависимостей проект имеет такую структуру файлов (файлы - это элементы **без** префикса"/"). Файл **package.json** определяет имя файла с приложением, сценарии запуска, зависимости и др. Сценарий запуска задаёт точку входа приложения, у нас — файл JavaScript **/bin/www**. Этот файл настраивает некоторые обработчики ошибок приложения, а затем загружает **app.js** для выполнения остальной работы. Пути приложения хранятся в отдельных модулях каталога **routes/**. Шаблоны хранятся в каталоге /**views**.
 
 ```
 /express-locallibrary-tutorial
@@ -302,7 +301,7 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
 
 Зависимости включают пакет express и пакет для выбранного движка представления (pug). Кроме того, указаны пакеты, полезные во многих веб-приложениях:
 
-- [body-parser](https://www.npmjs.com/package/body-parser): -- анализирует часть тела входящего запроса HTTP и облегчает извлечение из него различных частей. Например, мы можно читать `POST-`параметры.
+- [body-parser](https://www.npmjs.com/package/body-parser): — анализирует часть тела входящего запроса HTTP и облегчает извлечение из него различных частей. Например, мы можно читать `POST-`параметры.
 - [cookie-parser](https://www.npmjs.com/package/cookie-parser): разбирает заголовок и заполняет `req.cookies` (по сути, даёт удобный метод для доступа к информации cookie).
 - [debug](https://www.npmjs.com/package/debug): небольшой отладчик, работающий по образцу методики отладки ядра node.
 - [morgan](https://www.npmjs.com/package/morgan): средство логирования запросов HTTP для node.
@@ -328,10 +327,10 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require("../app");
 ```
 
-> **Примечание:** `require()` -- это глобальная функция node для импорта модулей в текущий файл. Для модуля **app.js** указан относительный путь, а расширение файла по умолчанию (.js) опущено.
+> **Примечание:** `require()` — это глобальная функция node для импорта модулей в текущий файл. Для модуля **app.js** указан относительный путь, а расширение файла по умолчанию (.js) опущено.
 
 Оставшаяся часть кода настраивает порт сервера node для HTTP (определён в переменной среды или 3000, если не определён), и начинает обработку и протоколирование соединений и ошибок сервера. Сейчас вам не требуется дополнительных сведений о коде (все в этом файле шаблонно), но, при желании, его можно посмотреть.
 
@@ -351,19 +350,19 @@ module.exports = app;
 Рассмотрим детали файла app.js. Сначала при помощи require(...) выполняется импорт некоторых полезных библиотек node: _express,_ s*erve-favicon*, _morgan_, _cookie-parse, body-parser_ (они ранее были загружены для нашего приложения командой npm install), а также path из основной библиотеки node (применяется для разбора путей каталогов и файлов).
 
 ```js
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var express = require("express");
+var path = require("path");
+var favicon = require("serve-favicon");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
 ```
 
 Затем require запрашивает модули из каталога путей route. Эти модули и файлы содержат код для обработки конкретного набора соответствующих путей (URL маршрутов). Если мы расширим каркас приложения, например, чтобы получить список книг библиотеки, нам следует добавить новый файл для обработки пути, связанного с книгами.
 
 ```js
-var index = require('./routes/index');
-var users = require('./routes/users');
+var index = require("./routes/index");
+var users = require("./routes/users");
 ```
 
 > **Примечание:** Здесь мы только импортируем модули. В действительности эти пути ещё не используются — это произойдёт в файле несколько позже.
@@ -374,8 +373,8 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 Следующие строки вызывают app.use(...), чтобы добавить промежуточные (middleware) библиотеки в цепочку обработки запросов. Кроме сторонних библиотек, импортированных ранее, используем библиотеку Express.static, что позволит обрабатывать статические файлы из папки **/public** корня проекта.
@@ -383,18 +382,18 @@ app.set('view engine', 'pug');
 ```js
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 Теперь, когда промежуточные библиотеки настроены, мы добавляем (импортированный ранее) код обработки путей в цепочку обработки запросов. Импортированный код будет задавать отдельные пути для разных частей сайта:
 
 ```js
-app.use('/', index);
-app.use('/users', users);
+app.use("/", index);
+app.use("/users", users);
 ```
 
 > **Примечание:** . пути, указанные выше ('/' и '`/users'`) рассматриваются как префиксы путей, определённых в импортированных файлах. Так, например, если импортированный модуль users определяет путь для /profile, для доступа следует указать /users/profile. Мы поговорим подробнее о путях в последующей статье.
@@ -403,21 +402,21 @@ app.use('/users', users);
 
 ```js
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+app.use(function (req, res, next) {
+  var err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render("error");
 });
 ```
 
@@ -432,18 +431,18 @@ module.exports = app;
 Файл путей /routes/users.js приведён ниже (файлы путей имеют сходную структуру, поэтому нет необходимости приводить также index.js). Сначала загружается модуль Express, затем он используется для получения объекта express.Router. После этого для этого объекта задаётся путь, и, наконец, объект-роутер экспортируется из модуля (именно это позволяет импортировать файл в app.js):.
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
 ```
 
-Путь определяет колбэк-функцию, которая будет вызвана, когда обнаружится HTTP GET-запрос корректного вида. Образец для сопоставления пути задаётся при импорте модуля -- ('`/users`') плюс что-то, определяемое в этом файле ('`/`'). Иными словами, этот путь будет использован, когда получен URL-запрос `/users/`.
+Путь определяет колбэк-функцию, которая будет вызвана, когда обнаружится HTTP GET-запрос корректного вида. Образец для сопоставления пути задаётся при импорте модуля — ('`/users`') плюс что-то, определяемое в этом файле ('`/`'). Иными словами, этот путь будет использован, когда получен URL-запрос `/users/`.
 
 > **Примечание:** запустите сервер и задайте в браузере URL `http://localhost:3000/users/`. Вы должны увидеть сообщение: 'respond with a resource'.
 
@@ -451,12 +450,12 @@ module.exports = router;
 
 ### Представления (шаблоны)
 
-Файлы преставлений (шаблонов) хранятся в каталоге **/views** (это указано в **app.js**) и имеют расширение** **.pug**. Метод [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) выполняет указанный шаблон, передавая объекту значение именованной переменной, и затем посылает результат как ответ. В коде из **/routes/index.js** (приводится ниже) можно увидеть, что роут отвечает, используя шаблон "index" с переданным значением переменной "title" из шаблона.
+Файлы преставлений (шаблонов) хранятся в каталоге **/views** (это указано в **app.js**) и имеют расширение **.pug**. Метод [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) выполняет указанный шаблон, передавая объекту значение именованной переменной, и затем посылает результат как ответ. В коде из **/routes/index.js** (приводится ниже) можно увидеть, что роут отвечает, используя шаблон "index" с переданным значением переменной "title" из шаблона.
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res) {
+  res.render("index", { title: "Express" });
 });
 ```
 

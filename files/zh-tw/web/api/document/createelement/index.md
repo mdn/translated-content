@@ -33,7 +33,7 @@ var element = document.createElement(tagName[, options]);
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>||Working with elements||</title>

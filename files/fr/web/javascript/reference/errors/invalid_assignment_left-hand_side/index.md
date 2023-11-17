@@ -1,12 +1,6 @@
 ---
-title: 'ReferenceError: invalid assignment left-hand side'
+title: "ReferenceError: invalid assignment left-hand side"
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
-tags:
-  - Erreurs
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
-original_slug: Web/JavaScript/Reference/Erreurs/Invalid_assignment_left-hand_side
 ---
 
 {{jsSidebar("Errors")}}
@@ -43,12 +37,10 @@ Dans l'instruction `if`, plutôt qu'une affectation, on voudra plutôt utiliser 
 
 ```js example-good
 if (Math.PI == 3 || Math.PI == 4) {
-  console.log('no way!');
+  console.log("no way!");
 }
 
-var str = 'Hello, '
-+ 'from the '
-+ 'other side!';
+var str = "Hello, " + "from the " + "other side!";
 ```
 
 ## Voir aussi

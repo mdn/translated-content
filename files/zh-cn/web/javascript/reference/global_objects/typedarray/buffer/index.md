@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 
 {{JSRef}}
 
-**`buffer`** 访问器属性表示由 *TypedArray* 在构造期间引用的 {{jsxref("ArrayBuffer")}}。
+**`buffer`** 访问器属性表示由 _TypedArray_ 在构造期间引用的 {{jsxref("ArrayBuffer")}}。
 
 ## 语法
 
@@ -15,7 +15,7 @@ typedArray.buffer
 
 ## 描述
 
-`buffer` 属性是一个访问器属性，它的 set 访问器函数是 `undefined`，意思是你只能够读取这个属性。它的值在 *TypedArray* 构造时建立，不能被修改。*TypedArray* 是这里的[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
+`buffer` 属性是一个访问器属性，它的 set 访问器函数是 `undefined`，意思是你只能够读取这个属性。它的值在 _TypedArray_ 构造时建立，不能被修改。_TypedArray_ 是这里的[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
 ## 示例
 

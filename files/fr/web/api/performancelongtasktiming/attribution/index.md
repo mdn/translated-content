@@ -1,14 +1,6 @@
 ---
 title: PerformanceLongTaskTiming.attribution
 slug: Web/API/PerformanceLongTaskTiming/attribution
-tags:
-  - API
-  - Long Tasks API
-  - PerformanceLongTaskTiming
-  - Property
-  - Propriété
-  - Reference
-translation_of: Web/API/PerformanceLongTaskTiming/attribution
 ---
 
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}

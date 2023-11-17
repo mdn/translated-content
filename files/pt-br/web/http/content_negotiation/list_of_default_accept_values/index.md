@@ -38,10 +38,10 @@ Quando um vídeo é solicitado, via o elemento HTML {{HTMLElement("video")}}, a 
 
 | User Agent                      | Valor                                                                              | Comentário                                                                                                                                                         |
 | ------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Firefox anterior a 3.6          | _sem suporte a {{HTMLElement("video")}}_                                   |                                                                                                                                                                    |
+| Firefox anterior a 3.6          | _sem suporte a {{HTMLElement("video")}}_                                           |                                                                                                                                                                    |
 | Firefox 3.6 e posterior         | `video/webm,video/ogg,video/*;q=0.9,application/ogg;q=0.7,audio/*;q=0.6,*/*;q=0.5` | veja [bug 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071) [fonte](https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLVideoElement.cpp#l136) |
 | Chrome                          | `*/*`                                                                              | [fonte](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                            |
-| Internet Explorer 8 ou anterior | _sem suporte a {{HTMLElement("video")}}_                                   |                                                                                                                                                                    |
+| Internet Explorer 8 ou anterior | _sem suporte a {{HTMLElement("video")}}_                                           |                                                                                                                                                                    |
 
 ## Valores para recursos de áudio
 
@@ -51,7 +51,7 @@ Quando um arquivo de áudio é solicitado, como via o elemento HTML {{HTMLElemen
 | ------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Firefox 3.6 e posterior         | `audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5` | Veja [bug 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071) [fonte](https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLAudioElement.cpp#l81) |
 | Safari, Chrome                  | `*/*`                                                                                        | [fonte](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                           |
-| Internet Explorer 8 ou anterior | _sem suporte para {{HTMLElement("audio")}}_                                          |                                                                                                                                                                   |
+| Internet Explorer 8 ou anterior | _sem suporte para {{HTMLElement("audio")}}_                                                  |                                                                                                                                                                   |
 | Internet Explorer 9             | ?                                                                                            |                                                                                                                                                                   |
 
 ## Valores para scripts

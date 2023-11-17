@@ -9,13 +9,13 @@ l10n:
 
 **XMLHttpRequest.readyState** プロパティは XMLHttpRequest (XHR) クライアントの状態を返します。XHR クライアントは次の状態のいずれかをとります。
 
-| 値    | 状態               | 説明                                                            |
-| ----- | ------------------ | --------------------------------------------------------------- |
-| `0`   | `UNSENT`           | クライアントは作成済み。 `open()` はまだ呼ばれていない。        |
-| `1`   | `OPENED`           | `open()` が呼び出し済み。                                       |
-| `2`   | `HEADERS_RECEIVED` | `send()` が呼び出し済みで、ヘッダーとステータスが利用可能。     |
-| `3`   | `LOADING`          | ダウンロード中。`responseText` には部分データが入っている。     |
-| `4`   | `DONE`             | 操作が完了した。                                                |
+| 値  | 状態               | 説明                                                        |
+| --- | ------------------ | ----------------------------------------------------------- |
+| `0` | `UNSENT`           | クライアントは作成済み。 `open()` はまだ呼ばれていない。    |
+| `1` | `OPENED`           | `open()` が呼び出し済み。                                   |
+| `2` | `HEADERS_RECEIVED` | `send()` が呼び出し済みで、ヘッダーとステータスが利用可能。 |
+| `3` | `LOADING`          | ダウンロード中。`responseText` には部分データが入っている。 |
+| `4` | `DONE`             | 操作が完了した。                                            |
 
 - UNSENT
   - : XMLHttpRequest クライアントは作成済みだが、まだ open() メソッドは呼ばれていない。
@@ -32,17 +32,17 @@ l10n:
 
 ```js
 const xhr = new XMLHttpRequest();
-console.log('UNSENT', xhr.readyState); // readyState will be 0
+console.log("UNSENT", xhr.readyState); // readyState will be 0
 
-xhr.open('GET', '/api', true);
-console.log('OPENED', xhr.readyState); // readyState will be 1
+xhr.open("GET", "/api", true);
+console.log("OPENED", xhr.readyState); // readyState will be 1
 
 xhr.onprogress = () => {
-    console.log('LOADING', xhr.readyState); // readyState will be 3
+  console.log("LOADING", xhr.readyState); // readyState will be 3
 };
 
 xhr.onload = () => {
-    console.log('DONE', xhr.readyState); // readyState will be 4
+  console.log("DONE", xhr.readyState); // readyState will be 4
 };
 
 xhr.send(null);

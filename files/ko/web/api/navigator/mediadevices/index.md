@@ -2,6 +2,7 @@
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`Navigator.mediaDevices`** 읽기 전용 속성은 카메라, 마이크, 화면 공유와 같이 현재 연결된 미디어 입력 장치에 접근할 수 있는 {{domxref("MediaDevices")}} 객체를 반환합니다.

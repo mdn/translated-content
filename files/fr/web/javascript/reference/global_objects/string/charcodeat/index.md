@@ -1,14 +1,6 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-tags:
-  - JavaScript
-  - Méthode
-  - Reference
-  - String
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/charCodeAt
 ---
 
 {{JSRef}}
@@ -22,7 +14,7 @@ Le codet UTF-16 renvoyé correspond au codet Unicode si le caractère peut être
 ## Syntaxe
 
 ```js
-str.charCodeAt(indice)
+str.charCodeAt(indice);
 ```
 
 ### Paramètres
@@ -51,7 +43,7 @@ Dans les anciennes versions (JavaScript 1.2 par exemple) la méthode `charCodeAt
 L'exemple suivant retourne 65, la valeur Unicode de A.
 
 ```js
-"ABC".charCodeAt(0) // returns 65
+"ABC".charCodeAt(0); // returns 65
 ```
 
 ### Utiliser charCodeAt pour gérer les caractères hors du plan multilingue de base sans hypothèse sur leur présence
@@ -59,71 +51,72 @@ L'exemple suivant retourne 65, la valeur Unicode de A.
 Cette fonction peut être utilisée dans des boucles ou autres dans les cas où on ne sait pas si des caractères représentés sur deux demi-codets (hors du plan BMP) existent avant la position indiquée.
 
 ```js
-function fixedCharCodeAt (str, idx) {
-    // ex. fixedCharCodeAt ('\uD800\uDC00', 0); // 65536
-    // ex. fixedCharCodeAt ('\uD800\uDC00', 1); // false
-    idx = idx || 0;
-    var code = str.charCodeAt(idx);
-    var hi, low;
+function fixedCharCodeAt(str, idx) {
+  // ex. fixedCharCodeAt ('\uD800\uDC00', 0); // 65536
+  // ex. fixedCharCodeAt ('\uD800\uDC00', 1); // false
+  idx = idx || 0;
+  var code = str.charCodeAt(idx);
+  var hi, low;
 
-    // On gère le demi-codet supérieur (la borne supérieure
-    // utilisée pourrait être 0xDB7F afin de traiter les
-    // paires surrogates privées comme des caractères uniques)
-    if (0xD800 <= code && code <= 0xDBFF) {
-        hi = code;
-        low = str.charCodeAt(idx+1);
-        if (isNaN(low)) {
-            throw "Le demi-codet supérieur n'est pas suivi "+
-                  "par un demi-codet inférieur dans fixedCharCodeAt()";
-        }
-        return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
+  // On gère le demi-codet supérieur (la borne supérieure
+  // utilisée pourrait être 0xDB7F afin de traiter les
+  // paires surrogates privées comme des caractères uniques)
+  if (0xd800 <= code && code <= 0xdbff) {
+    hi = code;
+    low = str.charCodeAt(idx + 1);
+    if (isNaN(low)) {
+      throw (
+        "Le demi-codet supérieur n'est pas suivi " +
+        "par un demi-codet inférieur dans fixedCharCodeAt()"
+      );
     }
-    if (0xDC00 <= code && code <= 0xDFFF) {
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
+  }
+  if (0xdc00 <= code && code <= 0xdfff) {
     // Demi-codet inférieur
 
-        // On renvoie false pour permettre aux boucles
-        // car le cas a normalement déjà été géré avec
-        // l'étape précédente
-        return false;
-    }
-    return code;
+    // On renvoie false pour permettre aux boucles
+    // car le cas a normalement déjà été géré avec
+    // l'étape précédente
+    return false;
+  }
+  return code;
 }
 ```
 
 ### Utiliser `charCodeAt()` pour gérer les caractères du plan multilingue de base (en sachant qu'ils sont présents)
 
 ```js
-function knownCharCodeAt (str, idx) {
-    str += '';
-    var code,
-        end = str.length;
+function knownCharCodeAt(str, idx) {
+  str += "";
+  var code,
+    end = str.length;
 
-    var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-    while ((surrogatePairs.exec(str)) != null) {
-        var li = surrogatePairs.lastIndex;
-        if (li - 2 < idx) {
-            idx++;
-        }
-        else {
-            break;
-        }
+  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+  while (surrogatePairs.exec(str) != null) {
+    var li = surrogatePairs.lastIndex;
+    if (li - 2 < idx) {
+      idx++;
+    } else {
+      break;
     }
+  }
 
-    if (idx >= end || idx < 0) {
-        return NaN;
-    }
+  if (idx >= end || idx < 0) {
+    return NaN;
+  }
 
-    code = str.charCodeAt(idx);
+  code = str.charCodeAt(idx);
 
-    var hi, low;
-    if (0xD800 <= code && code <= 0xDBFF) {
-        hi = code;
-        low = str.charCodeAt(idx+1);
-        // On prend un caractère de plus
-        // car on a deux demi-codets à récupérer
-        return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
-    }
-    return code;
+  var hi, low;
+  if (0xd800 <= code && code <= 0xdbff) {
+    hi = code;
+    low = str.charCodeAt(idx + 1);
+    // On prend un caractère de plus
+    // car on a deux demi-codets à récupérer
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
+  }
+  return code;
 }
 ```
 

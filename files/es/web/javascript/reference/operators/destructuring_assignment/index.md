@@ -1,7 +1,6 @@
 ---
 title: La desestructuración
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-original_slug: Web/JavaScript/Referencia/Operadores/Destructuring_assignment
 ---
 
 {{jsSidebar("Operators", "Operadores")}}
@@ -27,9 +26,8 @@ console.log(rest); // [30, 40, 50]
 console.log(a); // 10
 console.log(b); // 20
 
-
 // Propuesta de etapa 4 (terminada)
-({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
+({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 });
 console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
@@ -61,7 +59,7 @@ Esta capacidad es similar a las características presentes en lenguajes como Per
 #### Asignación básica de variables
 
 ```js
-const foo = ['one', 'two', 'three'];
+const foo = ["one", "two", "three"];
 
 const [red, yellow, green] = foo;
 console.log(red); // "one"
@@ -88,7 +86,7 @@ A una variable se le puede asignar un valor predeterminado, en el caso de que el
 ```js
 let a, b;
 
-[a=5, b=7] = [1];
+[a = 5, b = 7] = [1];
 console.log(a); // 1
 console.log(b); // 7
 ```
@@ -107,7 +105,7 @@ let b = 3;
 console.log(a); // 3
 console.log(b); // 1
 
-const arr = [1,2,3];
+const arr = [1, 2, 3];
 [arr[2], arr[1]] = [arr[1], arr[2]];
 console.log(arr); // [1,3,2]
 ```
@@ -149,7 +147,7 @@ console.log(c); // 1
 También puedes ignorar todos los valores devueltos:
 
 ```js
-[,,] = f();
+[, ,] = f();
 ```
 
 #### Asignar el resto de un arreglo a una variable
@@ -165,7 +163,7 @@ console.log(b); // [2, 3]
 Ten en cuenta que se lanzará un {{jsxref("SyntaxError")}} si se usa una coma final en el lado derecho con un elemento `rest` o:
 
 ```js example-bad
-const [a, ...b,] = [1, 2, 3];
+const [a, ...b] = [1, 2, 3];
 
 // SyntaxError: el elemento rest no puede tener una coma al final
 // Siempre considera usar el operador rest como último elemento
@@ -199,11 +197,11 @@ console.log(parseProtocol('https://developer.mozilla.org/es/Web/JavaScript'));
 
 ```js
 const user = {
-    id: 42,
-    is_verified: true
+  id: 42,
+  is_verified: true,
 };
 
-const {id, is_verified} = user;
+const { id, is_verified } = user;
 
 console.log(id); // 42
 console.log(is_verified); // true
@@ -216,7 +214,7 @@ A una variable se le puede asignar su valor con desestructuración separada de s
 ```js
 let a, b;
 
-({a, b} = {a: 1, b: 2});
+({ a, b } = { a: 1, b: 2 });
 ```
 
 > **Nota:** Los paréntesis `(...)` alrededor de la declaración de asignación son obligatorios cuando se usa la desestructuración de un objeto literal sin una declaración.
@@ -232,8 +230,8 @@ let a, b;
 Una propiedad se puede desempacar de un objeto y asignar a una variable con un nombre diferente al de la propiedad del objeto.
 
 ```js
-const o = {p: 42, q: true};
-const {p: foo, q: bar} = o;
+const o = { p: 42, q: true };
+const { p: foo, q: bar } = o;
 
 console.log(foo); // 42
 console.log(bar); // true
@@ -246,7 +244,7 @@ Aquí, por ejemplo, `const {p: foo} = o` toma del objeto `o` la propiedad llamad
 A una variable se le puede asignar un valor predeterminado, en el caso de que el valor desempacado del objeto sea `undefined`.
 
 ```js
-const {a = 10, b = 5} = {a: 3};
+const { a = 10, b = 5 } = { a: 3 };
 
 console.log(a); // 3
 console.log(b); // 5
@@ -260,7 +258,7 @@ Una propiedad puede ser ambas
 - Se le asigna un valor predeterminado en caso de que el valor desempacado sea `undefined`.
 
 ```js
-const {a: aa = 10, b: bb = 5} = {a: 3};
+const { a: aa = 10, b: bb = 5 } = { a: 3 };
 
 console.log(aa); // 3
 console.log(bb); // 5
@@ -271,23 +269,23 @@ console.log(bb); // 5
 ```js
 const user = {
   id: 42,
-  displayName: 'jdoe',
+  displayName: "jdoe",
   fullName: {
-    firstName: 'John',
-    lastName: 'Doe'
-  }
+    firstName: "John",
+    lastName: "Doe",
+  },
 };
 
-function userId({id}) {
+function userId({ id }) {
   return id;
 }
 
-function whois({displayName, fullName: {firstName: name}}) {
+function whois({ displayName, fullName: { firstName: name } }) {
   return `${displayName} es ${name}`;
 }
 
 console.log(userId(user)); // 42
-console.log(whois(user));  // "jdoe es John"
+console.log(whois(user)); // "jdoe es John"
 ```
 
 Esto desempaca el `id`, `displayName` y `firstName` del objeto `user` y los imprime.
@@ -295,14 +293,18 @@ Esto desempaca el `id`, `displayName` y `firstName` del objeto `user` y los impr
 #### Establecer el valor predeterminado de un parámetro de función
 
 ```js
-function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
+function drawChart({
+  size = "big",
+  coords = { x: 0, y: 0 },
+  radius = 25,
+} = {}) {
   console.log(size, coords, radius);
   // haz un dibujo de gráfico
 }
 
 drawChart({
-  coords: {x: 18, y: 30},
-  radius: 30
+  coords: { x: 18, y: 30 },
+  radius: 30,
 });
 ```
 
@@ -312,30 +314,30 @@ drawChart({
 
 ```js
 const metadata = {
-  title: 'Scratchpad',
+  title: "Scratchpad",
   translations: [
     {
-      locale: 'de',
+      locale: "de",
       localization_tags: [],
-      last_edit: '2020-08-29T08:43:37',
-      url: '/de/docs/Tools/Scratchpad',
-      title: 'JavaScript-Umgebung'
-    }
+      last_edit: "2020-08-29T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
   ],
-  url: '/es/docs/Tools/Scratchpad'
+  url: "/es/docs/Tools/Scratchpad",
 };
 
 let {
   title: englishTitle, // renombrar
   translations: [
     {
-       title: localeTitle, // renombrar
+      title: localeTitle, // renombrar
     },
   ],
 } = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 #### Iteración "`for...of`" y desestructuración
@@ -343,27 +345,30 @@ console.log(localeTitle);  // "JavaScript-Umgebung"
 ```js
 const people = [
   {
-    name: 'Mike Smith',
+    name: "Mike Smith",
     family: {
-      mother: 'Jane Smith',
-      father: 'Harry Smith',
-      sister: 'Samantha Smith'
+      mother: "Jane Smith",
+      father: "Harry Smith",
+      sister: "Samantha Smith",
     },
-    age: 35
+    age: 35,
   },
   {
-    name: 'Tom Jones',
+    name: "Tom Jones",
     family: {
-      mother: 'Norah Jones',
-      father: 'Richard Jones',
-      brother: 'Howard Jones'
+      mother: "Norah Jones",
+      father: "Richard Jones",
+      brother: "Howard Jones",
     },
-    age: 25
-  }
+    age: 25,
+  },
 ];
 
-for (const {name: n, family: {father: f}} of people) {
-  console.log('Nombre: ' + n + ', Padre: ' + f);
+for (const {
+  name: n,
+  family: { father: f },
+} of people) {
+  console.log("Nombre: " + n + ", Padre: " + f);
 }
 
 // "Nombre: Mike Smith, Padre: Harry Smith"
@@ -375,8 +380,8 @@ for (const {name: n, family: {father: f}} of people) {
 Los nombres de propiedad calculados, como en un {{jsxref("Operators/Object_initializer", "Objeto literal", "#Computed_property_names", 1)}}, se pueden usar con la desestructuración.
 
 ```js
-let key = 'z';
-let {[key]: foo} = {z: 'bar'};
+let key = "z";
+let { [key]: foo } = { z: "bar" };
 
 console.log(foo); // "bar"
 ```
@@ -386,7 +391,7 @@ console.log(foo); // "bar"
 La propuesta [Propiedades `rest`/propagación para ECMAScript](https://github.com/tc39/proposal-object-rest-spread) (etapa 4) agrega la sintaxis {{jsxref("Functions/rest_parameters", "rest", "", 1)}} para desestructurar. Las propiedades de `rest` recopilan las claves de propiedades enumerables restantes que aún no han sido seleccionadas por el patrón de desestructuración.
 
 ```js
-let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+let { a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 };
 a; // 10
 b; // 20
 rest; // { c: 30, d: 40 }
@@ -397,8 +402,8 @@ rest; // { c: 30, d: 40 }
 La desestructuración se puede utilizar con nombres de propiedad que no son {{Glossary("Identifier", "identificadores")}} válidos en JavaScript proporcionando un identificador alternativo que sea válido.
 
 ```js
-const foo = { 'fizz-buzz': true };
-const { 'fizz-buzz': fizzBuzz } = foo;
+const foo = { "fizz-buzz": true };
+const { "fizz-buzz": fizzBuzz } = foo;
 
 console.log(fizzBuzz); // "true"
 ```
@@ -409,24 +414,24 @@ La desestructuración de arreglos y objetos se puede combinar. Supongamos que de
 
 ```js
 const props = [
-  { id: 1, name: 'Fizz'},
-  { id: 2, name: 'Buzz'},
-  { id: 3, name: 'FizzBuzz'}
+  { id: 1, name: "Fizz" },
+  { id: 2, name: "Buzz" },
+  { id: 3, name: "FizzBuzz" },
 ];
 
-const [,, { name }] = props;
+const [, , { name }] = props;
 
 console.log(name); // "FizzBuzz"
 ```
 
-#### Se busca la cadena de prototipos al desestructurar el objeto.
+#### Se busca la cadena de prototipos al desestructurar el objeto
 
 Al deconstruir un objeto, si no se accede a una propiedad en sí misma, continuará buscando a lo largo de la cadena de prototipos.
 
 ```js
-let obj = {self: '123'};
-obj.__proto__.prot = '456';
-const {self, prot} = obj;
+let obj = { self: "123" };
+obj.__proto__.prot = "456";
+const { self, prot } = obj;
 // self "123"
 // prot "456" (Acceso a la cadena de prototipos)
 ```

@@ -12,13 +12,13 @@ slug: Web/CSS/@property/syntax
 如下是所有的有效 syntax 字符串：
 
 ```css
-syntax: '<color>'; /* 接收一个颜色值 */
+syntax: "<color>"; /* 接收一个颜色值 */
 
-syntax: '<length> | <percentage>'; /* 接收长度或百分比参数，但是二者之间不进行计算合并 */
+syntax: "<length> | <percentage>"; /* 接收长度或百分比参数，但是二者之间不进行计算合并 */
 
-syntax: 'small | medium | large'; /* 接收这些参数值之一作为自定义标识符 */
+syntax: "small | medium | large"; /* 接收这些参数值之一作为自定义标识符 */
 
-syntax: '*'; /* 任何有效字符 */
+syntax: "*"; /* 任何有效字符 */
 ```
 
 ## 取值
@@ -72,7 +72,7 @@ syntax: '*'; /* 任何有效字符 */
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -82,10 +82,10 @@ syntax: '*'; /* 任何有效字符 */
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: The Importance of Correct HTML Commenting
 slug: orphaned/The_Importance_of_Correct_HTML_Commenting
-original_slug: The_Importance_of_Correct_HTML_Commenting
 ---
 
 HTML を [標準モード](/ja/Mozilla's_DOCTYPE_sniffing) で記述する場合、不正確に書かれたコメントによってページの表示が崩れ、コンテンツの一部または全体がコメントアウトされた状態になってしまいます。XHTML や XML を記述する場合、不正確なコメントが含まれると、ドキュメントそのものが表示できなくなります。

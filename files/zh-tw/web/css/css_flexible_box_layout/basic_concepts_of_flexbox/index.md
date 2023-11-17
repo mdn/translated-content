@@ -1,7 +1,6 @@
 ---
 title: CSS彈性盒子用法
 slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
 ---
 
 {{CSSRef}}
@@ -92,7 +91,7 @@ Recall that while the display order of the elements is independent of their orde
 這個基本彈性將展示如何把「彈性化」引至某個元素、並在彈性狀態下相鄰該元素的表現。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -153,7 +152,7 @@ Recall that while the display order of the elements is independent of their orde
 這裡展示了貼合了瀏覽器視窗的排版，必須為智慧型手機視窗最佳化的情況。不僅尺寸要縮減，呈現順序也要改變。彈性盒子把這件事變得相當簡單。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <style>

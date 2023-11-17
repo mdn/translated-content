@@ -1,8 +1,6 @@
 ---
 title: Какое программное обеспечение необходимо для создания веб-сайта?
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-translation_of: Learn/Common_questions/What_software_do_I_need
-original_slug: Learn/Common_questions/What_software_do_I_need
 ---
 
 В этой статье мы изложим какие программные компоненты вам понадобятся при редактировании, загрузке или просмотре веб-сайта.

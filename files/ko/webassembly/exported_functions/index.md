@@ -2,6 +2,7 @@
 title: Exported WebAssembly functions
 slug: WebAssembly/Exported_functions
 ---
+
 {{WebAssemblySidebar}}
 
 Exported WebAssembly functions는 JavaScript에서 WebAssembly 함수를 나타내는 방법입니다. 여기서는 이 함수들에 대해 더 자세히 설명합니다.
@@ -12,8 +13,8 @@ Exported WebAssembly functions는 JavaScript에서 WebAssembly 함수를 나타�
 
 두 가지 방법으로 내 보낸 WebAssembly 함수를 검색 할 수 있습니다.
 
-- 기존 테이블에서 [`Table.prototype.get()`](/en-US/docs/WebAssembly/API/Table/get)을 호출합니다.
-- [`Instance.exports`](/en-US/docs/WebAssembly/API/Instance/exports)를 통해 wasm 모듈 인스턴스에서 내보낸 함수에 액세스합니다.
+- 기존 테이블에서 [`Table.prototype.get()`](/ko/docs/WebAssembly/API/Table/get)을 호출합니다.
+- [`Instance.exports`](/ko/docs/WebAssembly/API/Instance/exports)를 통해 wasm 모듈 인스턴스에서 내보낸 함수에 액세스합니다.
 
 어느 쪽이든, 기본 함수에 대해 동일한 종류의 래퍼를 사용합니다. JavaScript의 관점에서 볼 때, 모든 wasm 함수가 JavaScript 함수이기도하지만 - 내보낸 wasm 함수 객체 인스턴스에 의해 캡슐화되며 액세스 할 수있는 제한된 방법이 있습니다.
 
@@ -24,13 +25,12 @@ Exported WebAssembly functions는 JavaScript에서 WebAssembly 함수를 나타�
 ```js
 var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
   var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
-  otherTable.set(0,tbl.get(0));
-  otherTable.set(1,tbl.get(1));
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
+  otherTable.set(0, tbl.get(0));
+  otherTable.set(1, tbl.get(1));
   console.log(otherTable.get(0)());
   console.log(otherTable.get(1)());
 });
@@ -38,13 +38,13 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
 
 {{jsxref("WebAssembly.Table")}}생성자를 사용하여 JavaScript에서 테이블 (`otherTable`)을 만든 다음 {{jsxref("WebAssembly.instantiateStreaming()")}}를 메서드를 사용하여 table.wasm를 우리가 만든 페이지에 로드합니다.
 
-그런 다음 모듈에서 함수를 내보내고 [`tbl.get()`](/en-US/docs/WebAssembly/API/Table/get)을 통해 참조하는 함수를 검색하고 각 함수를 호출 한 결과를 콘솔에 기록합니다. 그런 다음 `set()`을 사용하여 `otherTable` 테이블에 tbl 테이블과 동일한 함수에 대한 참조가 포함되도록합니다.
+그런 다음 모듈에서 함수를 내보내고 [`tbl.get()`](/ko/docs/WebAssembly/API/Table/get)을 통해 참조하는 함수를 검색하고 각 함수를 호출 한 결과를 콘솔에 기록합니다. 그런 다음 `set()`을 사용하여 `otherTable` 테이블에 tbl 테이블과 동일한 함수에 대한 참조가 포함되도록합니다.
 
 이를 증명하기 위해 우리는 이러한 참조를 `otherTable`에서 다시 검색하여 그 결과를 콘솔에도 출력하므로 동일한 결과를 얻을 수 있습니다.
 
 ## They are real functions
 
-앞의 예에서 각 [`Table.prototype.get()`](/en-US/docs/WebAssembly/API/Table/get) 호출의 반환 값은 내 보낸 WebAssembly 함수입니다. 이전에 우리가 이야기했던 대로입니다.
+앞의 예에서 각 [`Table.prototype.get()`](/ko/docs/WebAssembly/API/Table/get) 호출의 반환 값은 내 보낸 WebAssembly 함수입니다. 이전에 우리가 이야기했던 대로입니다.
 
 이것들은 WebAssembly 함수에 대한 래퍼 (wrapper)가 될뿐만 아니라 실제 JavaScript 함수임을 주목할 필요가 있습니다. 위의 예제를 [WebAssembly-supporting browser](/ko/docs/WebAssembly#Browser_compatibility)에 로드하고 콘솔에서 다음 줄을 실행하세요.
 
@@ -53,7 +53,7 @@ var testFunc = otherTable.get(0);
 typeof testFunc;
 ```
 
-그러면 결과 함수(`function`)가 반환됩니다. 그런 다음 JavaScript에서 [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 등의 다른 [functions](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)를 수행 할 수 있는 기능을 수행 할 수 있습니다. `testFunc.toString()`은 흥미로운 결과를 반환합니다.
+그러면 결과 함수(`function`)가 반환됩니다. 그런 다음 JavaScript에서 [`call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 등의 다른 [functions](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)를 수행 할 수 있는 기능을 수행 할 수 있습니다. `testFunc.toString()`은 흥미로운 결과를 반환합니다.
 
 ```js
 function 0() {

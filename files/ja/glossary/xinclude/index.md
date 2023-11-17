@@ -1,7 +1,7 @@
 ---
 title: XInclude
 slug: Glossary/XInclude
-l10n: 
+l10n:
   sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
 ---
 

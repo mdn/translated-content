@@ -17,9 +17,9 @@ Hay un objeto especial `scale` disponible en Phaser con algunos métodos prácti
 
 ```js
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
 }
 ```
 
@@ -38,7 +38,7 @@ Las otras dos lineas de código en la función `preload()` son responsables de a
 También podemos agregar un color de fondo personalizado a nuestro lienzo, por lo que no se mantendrá negro. El objeto `stage` tiene una propiedad `backgroundColor` para este propósito, que podemos establecer usando la sintaxis de definición de color de CSS. Agregue la siguiente línea debajo de las otras tres que agregó anteriormente:
 
 ```js
-game.stage.backgroundColor = '#eee';
+game.stage.backgroundColor = "#eee";
 ```
 
 ## Compara tu código

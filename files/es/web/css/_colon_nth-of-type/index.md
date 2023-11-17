@@ -1,5 +1,5 @@
 ---
-title: ':nth-of-type'
+title: ":nth-of-type"
 slug: Web/CSS/:nth-of-type
 ---
 
@@ -46,7 +46,7 @@ Ver {{Cssxref(":nth-child")}} para una explicación más detallada de su sintaxi
 
 ```css
 /* Párrafos impares */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 

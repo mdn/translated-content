@@ -31,14 +31,14 @@ x-frame-options: DENY
 
 1. Learn more
 
-    1. [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
+   1. [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
 
 2. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Entity header", "エンティティヘッダー")}}
-    2. {{Glossary("Header", "ヘッダー")}}
-    3. {{Glossary("Response header", "レスポンスヘッダー")}}
+   1. {{Glossary("Entity header", "エンティティヘッダー")}}
+   2. {{Glossary("Header", "ヘッダー")}}
+   3. {{Glossary("Response header", "レスポンスヘッダー")}}
 
-        1. {{Glossary("Fetch metadata response header", "フェッチメタデータレスポンスヘッダー")}}
+      1. {{Glossary("Fetch metadata response header", "フェッチメタデータレスポンスヘッダー")}}
 
-    4. {{Glossary("Request header", "リクエストヘッダー")}}
+   4. {{Glossary("Request header", "リクエストヘッダー")}}

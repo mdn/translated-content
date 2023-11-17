@@ -1,16 +1,6 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-tags:
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Prototype
-  - Reference
-  - SharedArrayBuffer
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer/slice
 ---
 
 {{JSRef}}
@@ -22,9 +12,9 @@ La méthode **`SharedArrayBuffer.prototype.slice()`** renvoie un nouvel objet {{
 ## Syntaxe
 
 ```js
-sab.slice()
-sab.slice(début)
-sab.slice(début, fin)
+sab.slice();
+sab.slice(début);
+sab.slice(début, fin);
 ```
 
 ### Paramètres
@@ -55,10 +45,10 @@ Un nouvel objet {{jsxref("SharedArrayBuffer")}} qui contient les éléments extr
 
 ```js
 var sab = new SharedArrayBuffer(1024);
-sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
-sab.slice(0,1); // SharedArrayBuffer { byteLength: 1 }
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
+sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 
 ## Spécifications

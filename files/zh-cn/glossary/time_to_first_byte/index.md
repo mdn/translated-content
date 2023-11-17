@@ -13,7 +13,7 @@ TTFB 是从请求开始到响应开始之间所用的时间，以毫秒为单位
 TTFB = responseStart - requestStart
 ```
 
-## See Also:
+## See Also
 
 - [A typical HTTP session](/zh-CN/docs/Web/HTTP/Session)
 - [PerformanceResourceTiming](/zh-CN/docs/Web/API/PerformanceResourceTiming)

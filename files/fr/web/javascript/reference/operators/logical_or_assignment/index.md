@@ -1,13 +1,6 @@
 ---
 title: Affectation après OU logique (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_or_assignment
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,7 +12,7 @@ L'opérateur d'affectation après OU logique (`x ||= y`) n'affecte la valeur de 
 ## Syntaxe
 
 ```js
-expr1 ||= expr2
+expr1 ||= expr2;
 ```
 
 ## Description
@@ -57,7 +50,7 @@ On notera que ce comportement est différent entre les opérateurs binaires et l
 Dans l'exemple qui suit, si `paroles` est vide, on y place une valeur par défaut :
 
 ```js
-document.getElementById('paroles').textContent ||= 'Aucune parole.'
+document.getElementById("paroles").textContent ||= "Aucune parole.";
 ```
 
 Ici, la notion de court-circuit est utile, car l'élément ne sera pas mis à jour si ce n'est pas nécessaire. Il n'y aura pas d'effet de bord indésiré comme une autre étape de rendu ou la perte du focus, etc.

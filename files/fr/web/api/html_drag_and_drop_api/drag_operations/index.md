@@ -1,8 +1,6 @@
 ---
 title: Opérations de glissement
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-original_slug: Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement
 ---
 
 Ce qui suit décrit les étapes qui se déroulent lors d'un Glisser Déposer.
@@ -24,7 +22,9 @@ Pour rendre un autre élément HTML glissable, deux choses doivent être faites&
 Voici un exemple qui permet à une section de contenu d'être glissée&nbsp;:
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
   Ce texte <strong>peut</strong> être glissé.
 </div>
 ```
@@ -36,7 +36,9 @@ Notez que lorsqu'un élément est rendu glissable, le texte ou les autres élém
 Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable), car tous les éléments XUL sont glissables.
 
 ```html
-<button label="Glisse moi" ondragstart="event.dataTransfer.setData('text/plain', 'Bouton à glisser');">
+<button
+  label="Glisse moi"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Bouton à glisser');"></button>
 ```
 
 ## Démarrer une opération de glissement
@@ -44,7 +46,9 @@ Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut [`dragga
 Dans cet exemple, un scrutateur est ajouté à l'événement dragstart en utilisant l'attribut `ondragstart`.
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
   Ce texte <strong>peut</strong> être glissé.
 </div>
 ```
@@ -105,8 +109,7 @@ event.dataTransfer.setDragImage(image, xOffset, yOffset);
 Trois arguments sont nécessaires. Le premier est la référence à une image. Cette référence pointera en gérénal vers un élément image, mais elle peut pointer aussi vers un canvas ou vers tous autres éléments. L'image filigrane sera simplement générée telle qu'elle ressemble à l'écran, et dessinée à sa taille d'origine. Il est également possible d'utiliser des images et des canvas qui ne sont pas dans un document, comme le montre cet exemple&nbsp;:
 
 ```js
-function dragWithCustomImage(event)
-{
+function dragWithCustomImage(event) {
   var canvas = document.createElement("canvas");
   canvas.width = canvas.height = 50;
 
@@ -119,7 +122,7 @@ function dragWithCustomImage(event)
   ctx.stroke();
 
   var dt = event.dataTransfer;
-  dt.setData('text/plain', 'Data to Drag');
+  dt.setData("text/plain", "Data to Drag");
   dt.setDragImage(canvas, 25, 25);
 }
 ```
@@ -184,7 +187,8 @@ Si vous voulez autoriser un dépôt, vous devez empêcher le comportement par d�
 
 ```html
 <div ondragover="return false">
-<div ondragover="event.preventDefault()">
+  <div ondragover="event.preventDefault()"></div>
+</div>
 ```
 
 L'appel de la méthode [event.preventDefault](/fr/DOM/event.preventDefault) pendant les événements `dragenter` et `dragover` indiquera qu'un dépôt est permis à cet endroit. Toutefois, il est fréquent d'appeler la méthode [event.preventDefault](/fr/DOM/event.preventDefault) seulement dans certaines situations, par exemple si un lien est en train d'être glissé. Pour cela, appelez une fonction qui testera une condition et annulera l'événement seulement si cette condition est rencontrée. Dans le cas contraire, il suffit de ne pas annuler l'événement et aucun dépôt ne se réalisera si l'utilisateur lache le bouton de la souris.
@@ -192,11 +196,9 @@ L'appel de la méthode [event.preventDefault](/fr/DOM/event.preventDefault) pend
 Il est plus fréquent d'accepter ou non un dépôt en fonction du type de la donnée glissée. Par exemple, permettre les images ou les liens, ou bien les deux. Pour cela, testez les [types](/fr/docs/Web/API/DataTransfer/types) de l'objet `dataTransfer`. Les types sont sous la forme d'une liste de chaînes de caractères ajoutées au début du glissement, du plus signifiant au moins signifiant.
 
 ```js
-function doDragOver(event)
-{
+function doDragOver(event) {
   var isLink = event.dataTransfer.types.contains("text/uri-list");
-  if (isLink)
-    event.preventDefault();
+  if (isLink) event.preventDefault();
 }
 ```
 
@@ -233,8 +235,7 @@ During the `drop` event, you should retrieve that data that was dropped from the
 As with all drag related events, the event's `dataTransfer` property will hold the data that is being dragged. The [getData](/fr/docs/Web/API/DragDrop/DataTransfer#getData.28.29) method may be used to retrieve the data again.
 
 ```js
-function onDrop(event)
-{
+function onDrop(event) {
   var data = event.dataTransfer.getData("text/plain");
   event.target.textContent = data;
   event.preventDefault();

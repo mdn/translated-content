@@ -12,7 +12,7 @@ slug: Web/API/Performance/timeOrigin
 ## 構文
 
 ```js
-var timeOrigin = performance.timeOrigin
+var timeOrigin = performance.timeOrigin;
 ```
 
 ### 値

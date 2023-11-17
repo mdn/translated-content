@@ -1,8 +1,6 @@
 ---
 title: 웹 사이트가 제대로 동작하는지 확인하는 방법
-slug: >-
-  Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-original_slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
+slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 ---
 
 이번에는 웹사이트 동작과 관련한 다양한 문제해결 단계와 그 문제들을 해결하기 위한 방법들을 알아보겠습니다.
@@ -13,7 +11,7 @@ original_slug: Learn/Common_questions/Checking_that_your_web_site_is_working_pro
       <th scope="row">전제 조건:</th>
       <td>
         먼저,
-        <a href="/en-US/docs/Learn/Upload_files_to_a_web_server"
+        <a href="/ko/docs/Learn/Upload_files_to_a_web_server"
           >upload files웹 서버에 파일 업로드 방법</a
         >을 알아야 합니다.
       </td>
@@ -47,7 +45,7 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 
 우리의 개인 사이트를 봅시다.(동작x), `http://demozilla.examplehostingprovider.net/`. It's not showing the image we expected!
 
-![Oops, the ‘unicorn’ image is missing](image-missing.png)
+![Oops, the 'unicorn' image is missing](image-missing.png)
 
 Open Firefox's Network tool (**Tools ➤ Web Developer ➤ Network**) and reload the page:
 
@@ -86,7 +84,7 @@ So what went wrong?
 
 At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
 
-![Deleting the ‘s’](code-correct.png)
+![Deleting the 's'](code-correct.png)
 
 Save, [push to the server](/en-US/Learn/Upload_files_to_a_web_server), and reload the page in your browser:
 
@@ -105,7 +103,7 @@ The most frequent errors that we find are these:
 
 #### Typos in the address
 
-We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an “l”:
+We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an "l":
 
 ![Address unreachable](cannot-find-server.png)
 
@@ -154,7 +152,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```
 
-Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an “interrupt” signal to the runtime and tells it to stop. If you don't stop the runtime, `ping` will ping the server indefinitely.
+Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an "interrupt" signal to the runtime and tells it to stop. If you don't stop the runtime, `ping` will ping the server indefinitely.
 
 ### A simple checklist
 

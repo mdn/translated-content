@@ -1,7 +1,6 @@
 ---
 title: Fundamentos de texto en HTML
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-original_slug: Learn/HTML/Introduccion_a_HTML/texto
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
@@ -210,7 +209,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -278,10 +277,7 @@ Cada lista desordenada comienza con un elemento {{HTMLElement("ul")}} («_unorde
 
 ```html
 <ul>
-leche
-huevos
-pan
-hummus
+  leche huevos pan hummus
 </ul>
 ```
 
@@ -405,7 +401,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -566,7 +562,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -730,7 +726,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -956,7 +952,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -983,7 +979,7 @@ textarea.onkeyup = function () {
 
 {{ EmbedLiveSample('Código_reproducible_5', 700, 400, "", "", "hide-codepen-jsfiddle") }}
 
-### Cursiva, negrita, subrayado...
+### Cursiva, negrita, subrayado
 
 Los elementos que hemos comentado hasta ahora tienen asociada una semántica clara. La situación con {{HTMLElement("b")}} (negrita o «**bold**»), {{HTMLElement("i")}} (cursiva o «_italic_») y {{HTMLElement("u")}} (subrayado o «**underline**») es algo más complicada. Surgieron para que las personas pudieran escribir textos en negrita, cursiva o subrayado en un tiempo en el que pocos navegadores o ninguno admitían el CSS. Elementos como estos, que solo afectan a la presentación y no a la semántica, se conocen como **elementos de presentación** y no se deberían usar porque, como hemos visto, la semántica es muy importante para la accesibilidad y el SEO, entre otros aspectos.
 

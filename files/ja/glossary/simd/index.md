@@ -9,9 +9,9 @@ SIMD (「シムディー」と発音します) は[コンピュータ・アー�
 
 1. 一般知識
 
-    1. Wikipedia 上の記事「[SIMD](https://ja.wikipedia.org/wiki/SIMD)」
+   1. Wikipedia 上の記事「[SIMD](https://ja.wikipedia.org/wiki/SIMD)」
 
 2. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("SIMD")}}
-    2. {{Glossary("SISD")}}
+   1. {{Glossary("SIMD")}}
+   2. {{Glossary("SISD")}}

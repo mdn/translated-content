@@ -1,7 +1,6 @@
 ---
 title: DeviceAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
-original_slug: Web/API/DeviceAcceleration
 ---
 
 {{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
@@ -19,6 +18,4 @@ Um objeto `DeviceAcceleration` fornece informações sobre a quantidade de acele
 
 ## Especificações
 
-| Especificações                                                                                               | Status                                   | Comentario        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------- |
-| {{SpecName("Device Orientation", "#device_acceleration", "DeviceAcceleration")}} | {{Spec2("Device Orientation")}} | Definição inicial |
+{{Specifications}}

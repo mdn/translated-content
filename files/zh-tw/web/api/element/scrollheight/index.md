@@ -114,7 +114,7 @@ function checkReading() {
   }
   checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
   document.registration.accept.disabled = document.getElementById(
-    "nextstep"
+    "nextstep",
   ).disabled = !checkReading.read;
   checkReading.noticeBox.innerHTML = checkReading.read
     ? "Thank you."

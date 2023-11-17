@@ -2,6 +2,7 @@
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}}의 메소드인 **`addTrack()`**은 다른 유저에게 전송될 트랙들의 묶음에 신규 미디어 트랙을 추가합니다.
@@ -66,7 +67,7 @@ async openCall(pc) {
 ```js
 let inboundStream = null;
 
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
@@ -76,7 +77,7 @@ pc.ontrack = ev => {
     }
     inboundStream.addTrack(ev.track);
   }
-}
+};
 ```
 
 여기서 `track` 이벤트 핸들러는 스트림을 명시한 경우, 이 이벤트에서 명시한 첫 번째 스트림에 트랙을 추가합니다. 그렇지 않은 경우에는 `ontrack`이 처음 호출되는 순간에 신규 스트림이 생성되고 비디오 엘리먼트에 부착된 다음에서야 트랙이 신규 스트림에 추가됩니다. 이때부터 신규 랙이 해당 스트림에 추가됩니다.
@@ -84,14 +85,14 @@ pc.ontrack = ev => {
 또한, 각각의 트랙을 받을 때 마다, 신규 스트림을 만들 수 있습니다:
 
 ```js
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
     let inboundStream = new MediaStream(track);
     videoElem.srcObject = inboundStream;
   }
-}
+};
 ```
 
 #### 특정 스트림에 트랙 연동하기
@@ -149,20 +150,21 @@ pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
 
 ```js
 var mediaConstraints = {
-  audio: true,            // We want an audio track
-  video: true             // ...and we want a video track
+  audio: true, // We want an audio track
+  video: true, // ...and we want a video track
 };
 
 var desc = new RTCSessionDescription(sdp);
 
-pc.setRemoteDescription(desc).then(function () {
-  return navigator.mediaDevices.getUserMedia(mediaConstraints);
-})
-.then(function(stream) {
-  previewElement.srcObject = stream;
+pc.setRemoteDescription(desc)
+  .then(function () {
+    return navigator.mediaDevices.getUserMedia(mediaConstraints);
+  })
+  .then(function (stream) {
+    previewElement.srcObject = stream;
 
-  stream.getTracks().forEach(track => pc.addTrack(track, stream));
-})
+    stream.getTracks().forEach((track) => pc.addTrack(track, stream));
+  });
 ```
 
 위의 코드는 SDP를 원격 유저로부터 수신 받아서 신규 {{domxref("RTCSessionDescription")}}를 만들고 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}로 전달합니다. `pc.setRemoteDescription(desc)`의 실행이 성공하게되면, {{domxref("MediaDevices.getUserMedia()")}}를 사용해서 로컬 유저의 웹캠과 마이크에 대한접근 권한을 얻습니다. 앞의 과정이 성공하게되면, 스트림은 {{HTMLElement("video")}} 엘리먼트를 위한 소스로 지정됩니다. 이 스트림은 `previewElement`변수를 통해 참조가 가능해집니다.

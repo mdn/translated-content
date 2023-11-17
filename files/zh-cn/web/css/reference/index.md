@@ -57,11 +57,11 @@ div.menu-bar li:hover > ul {
 
 ## 选择器
 
-以下是一些[选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)的列表，它们允许根据 DOM 内元素的各种特征对样式进行条件限制。
+以下是一些[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)的列表，它们允许根据 DOM 内元素的各种特征对样式进行条件限制。
 
 ### 基本选择器
 
-[基本选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
+[基本选择器](/zh-CN/docs/Web/CSS/CSS_selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
 
 - [通配选择器](/zh-CN/docs/Web/CSS/Universal_selectors) `*`
 - [元素选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`（元素名称）
@@ -78,9 +78,9 @@ div.menu-bar li:hover > ul {
 
 组合选择器是在两个或多个简单选择器之间建立关系的选择器，例如“`A` 是 `B` 的子代”或“`A` 与 `B` 相邻”，它们构成了比较复杂的选择器。
 
-- [相邻兄弟选择器](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+- [接续兄弟选择器](/zh-CN/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - : 指定 `A` 和 `B` 选择的元素具有相同的父元素，并且 `B` 选择的元素在水平方向上紧随 `A` 选择的元素。
-- [普通兄弟选择器](/zh-CN/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [后续兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : 指定由 `A` 和 `B` 选择的元素共享相同的父元素，并指定 `A` 选择的元素在 `B` 选择的元素之前（但不一定紧接在 `B` 之前）。
 - [子选择器](/zh-CN/docs/Web/CSS/Child_combinator) `A > B`
   - : 指定 `B` 选择的元素是 `A` 选择的元素的直接子元素。

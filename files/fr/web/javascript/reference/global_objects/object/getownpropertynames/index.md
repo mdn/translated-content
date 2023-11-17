@@ -1,15 +1,6 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La méthode **`Object.getOwnPropertyNames()`** renvoie un tableau de toutes les 
 ## Syntaxe
 
 ```js
-Object.getOwnPropertyNames(obj)
+Object.getOwnPropertyNames(obj);
 ```
 
 ### Paramètres
@@ -47,16 +38,14 @@ console.log(Object.getOwnPropertyNames(arr).sort());
 // ["0", "1", "2", "length"]
 
 // Objet semblable à un tableau (array-like)
-var obj = { 0: "a", 1: "b", 2: "c"};
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.getOwnPropertyNames(obj).sort());
 // ["0", "1", "2"]
 
-
 // On affiche les noms et les valeurs
 // des propriétés avec Array.forEach
-Object.getOwnPropertyNames(obj).forEach(
-  function(val, idx, array) {
-    console.log(val + " -> " + obj[val]);
+Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
+  console.log(val + " -> " + obj[val]);
 });
 // affiche
 // 0 -> a
@@ -64,12 +53,17 @@ Object.getOwnPropertyNames(obj).forEach(
 // 2 -> c
 
 // propriété non-énumérable
-var mon_obj = Object.create({}, {
-  getToto: {
-    value: function() { return this.toto; },
-    enumerable: false
-  }
-});
+var mon_obj = Object.create(
+  {},
+  {
+    getToto: {
+      value: function () {
+        return this.toto;
+      },
+      enumerable: false,
+    },
+  },
+);
 mon_obj.toto = 1;
 
 console.log(Object.getOwnPropertyNames(mon_obj).sort());
@@ -84,7 +78,7 @@ Les propriétés héritées via la chaîne de prototype ne sont pas listées :
 function ClasseParente() {}
 ClasseParente.prototype.inheritedMethod = function () {};
 
-function ClasseFille () {
+function ClasseFille() {
   this.prop = 5;
   this.method = function () {};
 }
@@ -93,9 +87,9 @@ ClasseFille.prototype.prototypeMethod = function () {};
 
 console.log(
   Object.getOwnPropertyNames(
-    new ClasseFille() // ["prop", "method"]
-  )
-)
+    new ClasseFille(), // ["prop", "method"]
+  ),
+);
 ```
 
 ### Obtenir uniquement les propriétés non-énumérables
@@ -106,8 +100,8 @@ On utilise ici la fonction {{jsxref("Array.prototype.filter()")}} pour retirer l
 var target = myObject;
 var enum_et_nonenum = Object.getOwnPropertyNames(target);
 var enum_uniquement = Object.keys(target);
-var nonenum_uniquement = enum_et_nonenum.filter(function(key) {
-  var indexInEnum = enum_uniquement.indexOf(key)
+var nonenum_uniquement = enum_et_nonenum.filter(function (key) {
+  var indexInEnum = enum_uniquement.indexOf(key);
   if (indexInEnum == -1) {
     // non trouvée dans enum_uniquement indique
     // que la clé est non-énumérable, on la
@@ -143,7 +137,7 @@ Object.getOwnPropertyNames('toto')
 
 ## Voir aussi
 
-- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Caract%C3%A8re_%C3%A9num%C3%A9rable_des_propri%C3%A9t%C3%A9s_et_rattachement)
+- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

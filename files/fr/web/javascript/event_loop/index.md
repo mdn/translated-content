@@ -1,12 +1,6 @@
 ---
 title: Gestion de la concurrence et boucle des événements
 slug: Web/JavaScript/Event_loop
-tags:
-  - Avancé
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/EventLoop
-original_slug: Web/JavaScript/EventLoop
 ---
 
 {{jsSidebar("Advanced")}}
@@ -26,12 +20,12 @@ Les sections qui suivent décrivent un modèle théorique. En réalité, les mot
 Les appels de fonction forment une pile de cadre (_frames_).
 
 ```js
-function f(b){
+function f(b) {
   var a = 12;
   return a + b + 35;
 }
 
-function g(x){
+function g(x) {
   var m = 4;
   return f(m * x);
 }
@@ -54,7 +48,7 @@ Un environnement d'exécution JavaScript (_runtime_) contient une queue de messa
 La boucle d'événement tire principalement son nom de son implémentation. Celle-ci ressemble à :
 
 ```js
-while (queue.attendreMessage()){
+while (queue.attendreMessage()) {
   queue.traiterProchainMessage();
 }
 ```
@@ -80,13 +74,13 @@ Voici un exemple qui illustre ce concept (`setTimeout` ne s'exécute pas immédi
 ```js
 const s = new Date().getSeconds();
 
-setTimeout(function() {
+setTimeout(function () {
   // prints
   console.log("Exécuté après " + (new Date().getSeconds() - s) + " secondes.");
 }, 500);
 
-while(true) {
-  if(new Date().getSeconds() - s >= 2) {
+while (true) {
+  if (new Date().getSeconds() - s >= 2) {
     console.log("Ouf, on a bouclé pendant 2 secondes");
     break;
   }
@@ -97,27 +91,25 @@ while(true) {
 
 Un délai à zéro ne signifie pas que le callback sera déclenché après zéro milliseconde. Appeler [`setTimeout`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) avec un délai de `0` (zéro) milliseconde n'éxécute pas le callback après l'interval donné.
 
-L'exécution dépend du nombre de tâches en attente dans la queue. Dans l'exemple ci-dessous, le message `'ceci est juste un message'` sera affiché dans la console avant que le message dans le callback soit traité, parce que le délai est le temps *minimum* requis par l'environnement d'exécution (runtime) pour traiter la demande (pas un temps _garanti_).
+L'exécution dépend du nombre de tâches en attente dans la queue. Dans l'exemple ci-dessous, le message `'ceci est juste un message'` sera affiché dans la console avant que le message dans le callback soit traité, parce que le délai est le temps _minimum_ requis par l'environnement d'exécution (runtime) pour traiter la demande (pas un temps _garanti_).
 
 Fondamentalement, `setTimeout` doit attendre la fin de tout le code pour les messages en file d'attente, même si vous avez spécifié une limite de temps particulière pour votre setTimeout.
 
 ```js
-(function() {
-
-  console.log('ceci est le début');
+(function () {
+  console.log("ceci est le début");
 
   setTimeout(function cb() {
-    console.log('Callback 1: ceci est un msg depuis le callback');
+    console.log("Callback 1: ceci est un msg depuis le callback");
   }); // has a default time value of 0
 
-  console.log('ceci est juste un message');
+  console.log("ceci est juste un message");
 
   setTimeout(function cb1() {
-    console.log('Callback 2: ceci est un msg depuis le callback');
+    console.log("Callback 2: ceci est un msg depuis le callback");
   }, 0);
 
-  console.log('ceci est la fin');
-
+  console.log("ceci est la fin");
 })();
 
 // "ceci est le début"

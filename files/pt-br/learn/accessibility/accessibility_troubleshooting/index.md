@@ -1,7 +1,6 @@
 ---
-title: 'Avaliação: solucionando problemas de acessibilidade'
+title: "Avaliação: solucionando problemas de acessibilidade"
 slug: Learn/Accessibility/Accessibility_troubleshooting
-original_slug: Learn/Accessibility/Acessibilidade_problemas
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
@@ -15,7 +14,7 @@ Na avaliação deste módulo, apresentamos a você um site simples com vários p
       <td>
         Conhecimento básico de informática, entendimento básico de HTML, CSS e
         Javascript, uma compreesão dos
-        <a href="/en-US/docs/Learn/Accessibility"
+        <a href="/pt-BR/docs/Learn/Accessibility"
           >artigos anteriores deste curso</a
         >.
       </td>

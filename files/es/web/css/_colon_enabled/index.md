@@ -1,5 +1,5 @@
 ---
-title: ':enabled'
+title: ":enabled"
 slug: Web/CSS/:enabled
 ---
 
@@ -27,12 +27,12 @@ El siguiente ejemplo hace que el color del texto y el botón {{htmlElement ("inp
 ```html
 <form action="url_of_form">
   <label for="FirstField">Primer campo (habilitado):</label>
-  <input type="text" id="FirstField" value="Lorem"><br>
+  <input type="text" id="FirstField" value="Lorem" /><br />
 
   <label for="SecondField">Segundo campo (deshabilitado):</label>
-  <input type="text" id="SecondField" value="Ipsum" disabled="disabled"><br>
+  <input type="text" id="SecondField" value="Ipsum" disabled="disabled" /><br />
 
-  <input type="button" value="Enviar">
+  <input type="button" value="Enviar" />
 </form>
 ```
 

@@ -21,13 +21,13 @@ slug: Web/HTML/Element/input/button
     </tr>
     <tr>
       <td>이벤트</td>
-      <td>[`click`](/ko/docs/Web/API/Element/click_event)</td>
+      <td><a href="/ko/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
       <td>지원하는 공용 특성</td>
       <td>
-        {{htmlattrxref("type", "input")}},
-        {{htmlattrxref("value", "input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#type"><code>type</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -43,10 +43,10 @@ slug: Web/HTML/Element/input/button
 
 ## 값
 
-`<input type="button">` 요소의 {{htmlattrxref("value", "input")}} 특성은 버튼의 레이블로 사용할 {{domxref("DOMString")}}을 담습니다.
+`<input type="button">` 요소의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 버튼의 레이블로 사용할 {{domxref("DOMString")}}을 담습니다.
 
 ```html
-<input type="button" value="클릭하세요">
+<input type="button" value="클릭하세요" />
 ```
 
 {{EmbedLiveSample("summary-example3", 650, 30)}}
@@ -54,7 +54,7 @@ slug: Web/HTML/Element/input/button
 `value`를 지정하지 않으면 빈 버튼이 됩니다.
 
 ```html
-<input type="button">
+<input type="button" />
 ```
 
 {{EmbedLiveSample("summary-example1", 650, 30)}}
@@ -69,24 +69,24 @@ slug: Web/HTML/Element/input/button
 
 ```html
 <form>
-  <input type="button" value="기계 켜기">
+  <input type="button" value="기계 켜기" />
 </form>
 <p>기계가 멈췄습니다.</p>
 ```
 
 ```js
-var btn = document.querySelector('input');
-var txt = document.querySelector('p');
+var btn = document.querySelector("input");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.value === '기계 켜기') {
-    btn.value = '기계 끄기';
-    txt.textContent = '기계가 켜졌습니다!';
+  if (btn.value === "기계 켜기") {
+    btn.value = "기계 끄기";
+    txt.textContent = "기계가 켜졌습니다!";
   } else {
-    btn.value = '기계 켜기';
-    txt.textContent = '기계가 멈췄습니다.';
+    btn.value = "기계 켜기";
+    txt.textContent = "기계가 멈췄습니다.";
   }
 }
 ```
@@ -97,30 +97,30 @@ function updateBtn() {
 
 ### 버튼에 키보드 단축키 추가하기
 
-접근 키라고도 불리는 키보드 단축키는 사용자가 키보드의 키 혹은 키 조합을 통해 버튼을 누를 수 있는 방법을 제공합니다. 단축키를 추가하는 법은, 다른 {{htmlelement("input")}}과 마찬가지로, {{htmlattrxref("accesskey")}} 전역 특성을 추가하는 것입니다.
+접근 키라고도 불리는 키보드 단축키는 사용자가 키보드의 키 혹은 키 조합을 통해 버튼을 누를 수 있는 방법을 제공합니다. 단축키를 추가하는 법은, 다른 {{htmlelement("input")}}과 마찬가지로, [`accesskey`](/ko/docs/Web/HTML/Global_attributes#accesskey) 전역 특성을 추가하는 것입니다.
 
 이번 예제에서는 이전 예제에 더해 <kbd>s</kbd> 키를 접근 키로 지정합니다. (브라우저/운영체제에 따라 특정 조합키를 같이 눌러야 할 수도 있습니다. [`accesskey`](/ko/docs/Web/HTML/Global_attributes/accesskey) 문서를 방문해 조합키 목록을 확인하세요.)
 
 ```html
 <form>
-  <input type="button" value="기계 켜기" accesskey="s">
+  <input type="button" value="기계 켜기" accesskey="s" />
 </form>
 <p>기계가 멈췄습니다.</p>
 ```
 
 ```js hidden
-var btn = document.querySelector('input');
-var txt = document.querySelector('p');
+var btn = document.querySelector("input");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.value === '기계 켜기') {
-    btn.value = '기계 끄기';
-    txt.textContent = '기계가 켜졌습니다!';
+  if (btn.value === "기계 켜기") {
+    btn.value = "기계 끄기";
+    txt.textContent = "기계가 켜졌습니다!";
   } else {
-    btn.value = '기계 켜기';
-    txt.textContent = '기계가 멈췄습니다.';
+    btn.value = "기계 켜기";
+    txt.textContent = "기계가 멈췄습니다.";
   }
 }
 ```
@@ -131,29 +131,29 @@ function updateBtn() {
 
 ### 버튼 활성화와 비활성화
 
-버튼을 비활성화하려면 간단히 {{htmlattrxref("disabled")}} 전역 특성을 지정하는 것으로 충분합니다.
+버튼을 비활성화하려면 간단히 [`disabled`](/ko/docs/Web/HTML/Global_attributes#disabled) 전역 특성을 지정하는 것으로 충분합니다.
 
 ```html
-<input type="button" value="Disable me" disabled>
+<input type="button" value="Disable me" disabled />
 ```
 
 런타임에서 바꿀 땐 요소의 `disabled` 속성에 `true`나 `false`를 설정하면 끝입니다. 이번 예제의 버튼은 활성화 상태지만, 누르는 순간 `btn.disabled = true`를 통해 비활성화합니다. 그 후, {{domxref("WindowTimers.setTimeout","setTimeout()")}} 함수를 통해 2초 후 다시 활성화 상태로 되돌립니다.
 
 ```html hidden
-<input type="button" value="활성">
+<input type="button" value="활성" />
 ```
 
 ```js hidden
-var btn = document.querySelector('input');
+var btn = document.querySelector("input");
 
-btn.addEventListener('click', disableBtn);
+btn.addEventListener("click", disableBtn);
 
 function disableBtn() {
   btn.disabled = true;
-  btn.value = '비활성';
-  window.setTimeout(function() {
+  btn.value = "비활성";
+  window.setTimeout(function () {
     btn.disabled = false;
-    btn.value = '활성';
+    btn.value = "활성";
   }, 2000);
 }
 ```
@@ -167,21 +167,21 @@ function disableBtn() {
 ```html hidden
 <fieldset>
   <legend>Button group</legend>
-  <input type="button" value="Button 1">
-  <input type="button" value="Button 2">
-  <input type="button" value="Button 3">
+  <input type="button" value="Button 1" />
+  <input type="button" value="Button 2" />
+  <input type="button" value="Button 3" />
 </fieldset>
 ```
 
 ```js hidden
-var btn = document.querySelector('input');
-var fieldset = document.querySelector('fieldset');
+var btn = document.querySelector("input");
+var fieldset = document.querySelector("fieldset");
 
-btn.addEventListener('click', disableBtn);
+btn.addEventListener("click", disableBtn);
 
 function disableBtn() {
   fieldset.disabled = true;
-  window.setTimeout(function() {
+  window.setTimeout(function () {
     fieldset.disabled = false;
   }, 2000);
 }
@@ -199,9 +199,12 @@ function disableBtn() {
 
 ```html
 <div class="toolbar">
-  <input type="color" aria-label="펜 색상">
-  <input type="range" min="2" max="50" value="30" aria-label="펜 크기"><span class="output">30</span>
-  <input type="button" value="캔버스 지우기">
+  <input type="color" aria-label="펜 색상" />
+  <input type="range" min="2" max="50" value="30" aria-label="펜 크기" /><span
+    class="output"
+    >30</span
+  >
+  <input type="button" value="캔버스 지우기" />
 </div>
 
 <canvas class="myCanvas">
@@ -223,7 +226,8 @@ body {
   padding: 5px;
 }
 
-input[type="color"], input[type="button"] {
+input[type="color"],
+input[type="button"] {
   width: 90%;
   margin: 0 auto;
   display: block;
@@ -233,36 +237,36 @@ input[type="range"] {
   width: 70%;
 }
 
- span {
-   position: relative;
-   bottom: 5px;
- }
+span {
+  position: relative;
+  bottom: 5px;
+}
 ```
 
 ```js
-var canvas = document.querySelector('.myCanvas');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight-85;
-var ctx = canvas.getContext('2d');
+var canvas = document.querySelector(".myCanvas");
+var width = (canvas.width = window.innerWidth);
+var height = (canvas.height = window.innerHeight - 85);
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'rgb(0,0,0)';
-ctx.fillRect(0,0,width,height);
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
 var colorPicker = document.querySelector('input[type="color"]');
 var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector('.output');
+var output = document.querySelector(".output");
 var clearBtn = document.querySelector('input[type="button"]');
 
 // covert degrees to radians
 function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
+  return (degrees * Math.PI) / 180;
+}
 
 // update sizepicker output value
 
-sizePicker.oninput = function() {
+sizePicker.oninput = function () {
   output.textContent = sizePicker.value;
-}
+};
 
 // store mouse pointer coordinates, and whether the button is pressed
 var curX;
@@ -270,29 +274,46 @@ var curY;
 var pressed = false;
 
 // update mouse pointer coordinates
-document.onmousemove = function(e) {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-}
+document.onmousemove = function (e) {
+  curX = window.Event
+    ? e.pageX
+    : e.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  curY = window.Event
+    ? e.pageY
+    : e.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
+};
 
-canvas.onmousedown = function() {
+canvas.onmousedown = function () {
   pressed = true;
 };
 
-canvas.onmouseup = function() {
+canvas.onmouseup = function () {
   pressed = false;
-}
+};
 
-clearBtn.onclick = function() {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
-}
+clearBtn.onclick = function () {
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+};
 
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
     ctx.fill();
   }
 

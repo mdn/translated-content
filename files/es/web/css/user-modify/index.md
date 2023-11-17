@@ -1,7 +1,6 @@
 ---
-title: '-moz-user-modify'
+title: "-moz-user-modify"
 slug: Web/CSS/user-modify
-original_slug: Web/CSS/-moz-user-modify
 ---
 
 {{Non-standard_header}}{{CSSRef}}

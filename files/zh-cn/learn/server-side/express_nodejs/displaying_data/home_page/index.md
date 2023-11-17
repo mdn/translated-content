@@ -13,15 +13,15 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 
 ```js
 // GET catalog home page.
-router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix
+router.get("/", book_controller.index); //This actually maps to /catalog/ because we import the route with a /catalog prefix
 ```
 
 在 **/controllers/bookController.js** 中，定义回调函数参数 (`book_controller.index`) ：
 
 ```js
-exports.index = function(req, res, next) {
-    res.send('NOT IMPLEMENTED: Site Home Page');
-}
+exports.index = function (req, res, next) {
+  res.send("NOT IMPLEMENTED: Site Home Page");
+};
 ```
 
 我们扩展这个控制器函数，以从我们的模型获取信息，然后使用模板（视图）渲染它。
@@ -33,13 +33,13 @@ exports.index = function(req, res, next) {
 > **备注：** 我们使用[`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) 方法来获取每个模型的实例数量。这在具有一组可选条件的模型上进行调用，以匹配第一个参数，而回调放在第二个参数（如[使用数据库](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)[(Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)）中讨论的那样，并且还可以返回 `Query` ，然后稍后以回调执行它。当数据库返回计数时，将返回该回调，并将错误值（或空值`null`）作为第一个参数，并将记录计数（如果存在错误，则返回 null）作为第二个参数。
 >
 > ```js
-> SomeModel.count({ a_model_field: 'match_value' }, function (err, count) {
->  // ... do something if there is an err
->  // ... do something with the count if there was no error
->  });
+> SomeModel.count({ a_model_field: "match_value" }, function (err, count) {
+>   // ... do something if there is an err
+>   // ... do something with the count if there was no error
+> });
 > ```
 
-打开 **/controllers/bookController.js**. 在文件顶部附近，您应该看到导出的 `index()` 函数。
+打开 **/controllers/bookController.js**. 在文件顶部附近，你应该看到导出的 `index()` 函数。
 
 ```python
 var Book = require('../models/book')
@@ -52,34 +52,40 @@ exports.index = function(req, res, next) {
 用以下代码片段替换上面的所有代码。这要做的第一件事，是导入 (`require()`) 所有模型（以粗体突出高亮显示）。我们需要这样做，是因为我们将使用它们来获取记录的计数。然后它会导入异步模块 _async_。
 
 ```js
-var Book = require('../models/book');
-var Author = require('../models/author');
-var Genre = require('../models/genre');
-var BookInstance = require('../models/bookinstance');
+var Book = require("../models/book");
+var Author = require("../models/author");
+var Genre = require("../models/genre");
+var BookInstance = require("../models/bookinstance");
 
-var async = require('async');
+var async = require("async");
 
-exports.index = function(req, res) {
-
-    async.parallel({
-        book_count: function(callback) {
-            Book.count({}, callback); // Pass an empty object as match condition to find all documents of this collection
-        },
-        book_instance_count: function(callback) {
-            BookInstance.count({}, callback);
-        },
-        book_instance_available_count: function(callback) {
-            BookInstance.count({status:'Available'}, callback);
-        },
-        author_count: function(callback) {
-            Author.count({}, callback);
-        },
-        genre_count: function(callback) {
-            Genre.count({}, callback);
-        },
-    }, function(err, results) {
-        res.render('index', { title: 'Local Library Home', error: err, data: results });
-    });
+exports.index = function (req, res) {
+  async.parallel(
+    {
+      book_count: function (callback) {
+        Book.count({}, callback); // Pass an empty object as match condition to find all documents of this collection
+      },
+      book_instance_count: function (callback) {
+        BookInstance.count({}, callback);
+      },
+      book_instance_available_count: function (callback) {
+        BookInstance.count({ status: "Available" }, callback);
+      },
+      author_count: function (callback) {
+        Author.count({}, callback);
+      },
+      genre_count: function (callback) {
+        Genre.count({}, callback);
+      },
+    },
+    function (err, results) {
+      res.render("index", {
+        title: "Local Library Home",
+        error: err,
+        data: results,
+      });
+    },
+  );
 };
 ```
 
@@ -87,7 +93,7 @@ exports.index = function(req, res) {
 
 成功时，回调函数调用 [`res.render()`](https://expressjs.com/en/4x/api.html#res.render)，指定名为 '**index**' 的视图（模板），以及一个对象包含了要插入其中的数据（这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。
 
-> **备注：** 上面的`async.parallel()`裡的回调函数有点不寻常，因为不管是否出现错误，我们都会渲染页面（通常您可能使用单独的执行路径来处理错误的显示）。
+> **备注：** 上面的`async.parallel()`裡的回调函数有点不寻常，因为不管是否出现错误，我们都会渲染页面（通常你可能使用单独的执行路径来处理错误的显示）。
 
 ## 视图
 
@@ -127,7 +133,7 @@ block content
 
 ![Home page - Express Local Library site](locallibary_express_home.png)
 
-> **备注：** 您将无法使用侧边栏链接，因为这些网页的网址，视图和模板尚未定义。例如，如果您尝试，取决于您点击的链接，您将获取“尚未实作：图书清单”等错误。在“控制器”文件中的不同控制器中，會指定这些字符串文字（将被合适的数据替换）。
+> **备注：** 你将无法使用侧边栏链接，因为这些网页的网址，视图和模板尚未定义。例如，如果你尝试，取决于你点击的链接，你将获取“尚未实作：图书清单”等错误。在“控制器”文件中的不同控制器中，會指定这些字符串文字（将被合适的数据替换）。
 
 ## 下一步
 

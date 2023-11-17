@@ -1,12 +1,6 @@
 ---
 title: SVGTitleElement
 slug: Web/API/SVGTitleElement
-tags:
-  - Interface Title SVG
-  - SVG
-  - SVG DOM
-  - Title
-translation_of: Web/API/SVGTitleElement
 ---
 
 {{APIRef("SVG")}}

@@ -1,5 +1,5 @@
 ---
-title: '<rb>: The Ruby Base element'
+title: "<rb>: The Ruby Base element"
 slug: Web/HTML/Element/rb
 ---
 
@@ -51,10 +51,7 @@ slug: Web/HTML/Element/rb
 在此示例中，我们提供了与“hanzi”等效的原始字符的注释：
 
 ```html
-<ruby>
-  <rb>漢</rb>字
-  <rp>(</rp><rt>han</rt>zi<rp>)</rp>
-</ruby>
+<ruby> <rb>漢</rb>字 <rp>(</rp><rt>han</rt>zi<rp>)</rp> </ruby>
 ```
 
 请注意我们如何包含两个`<rb>`元素，以分隔 ruby 基本文本的两个独立部分。另一方面，注释由两个{{htmlelement("rt")}}元素分隔。
@@ -65,8 +62,7 @@ slug: Web/HTML/Element/rb
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>han</rt><rp>)</rp>
-  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>han</rt><rp>)</rp> 字 <rp>(</rp><rt>zi</rt><rp>)</rp>
 </ruby>
 ```
 

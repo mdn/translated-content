@@ -1,13 +1,6 @@
 ---
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/ceil
 ---
 
 {{JSRef}}
@@ -19,7 +12,7 @@ La fonction **`Math.ceil()`** retourne le plus petit entier supérieur ou égal 
 ## Syntaxe
 
 ```js
-Math.ceil(x)
+Math.ceil(x);
 ```
 
 ### Paramètres
@@ -44,21 +37,20 @@ Le plus petit entier qui est supérieur ou égal au nombre donné.
 Voici un exemple d'utilisation de `Math.ceil()`.
 
 ```js
-Math.ceil(.95);    // 1
-Math.ceil(4);      // 4
-Math.ceil(7.004);  // 8
-Math.ceil(-0.95);  // -0
-Math.ceil(-4);     // -4
+Math.ceil(0.95); // 1
+Math.ceil(4); // 4
+Math.ceil(7.004); // 8
+Math.ceil(-0.95); // -0
+Math.ceil(-4); // -4
 Math.ceil(-7.004); // -7
-Math.ceil(null);   // 0
+Math.ceil(null); // 0
 ```
 
 ### Arrondi décimal
 
 ```js
 // Fermeture
-(function(){
-
+(function () {
   /**
    * Fonction pour arrondir un nombre.
    *
@@ -69,43 +61,42 @@ Math.ceil(null);   // 0
    */
   function decimalAdjust(type, value, exp) {
     // Si l'exposant vaut undefined ou zero...
-    if (typeof exp === 'undefined' || +exp === 0) {
+    if (typeof exp === "undefined" || +exp === 0) {
       return Math[type](value);
     }
     value = +value;
     exp = +exp;
     // Si value n'est pas un nombre
-        // ou si l'exposant n'est pas entier
-    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
+    // ou si l'exposant n'est pas entier
+    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
       return NaN;
     }
     // Décalage
-    value = value.toString().split('e');
-    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+    value = value.toString().split("e");
+    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
     // Re "calage"
-    value = value.toString().split('e');
-    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+    value = value.toString().split("e");
+    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
   }
 
   // Arrondi décimal
   if (!Math.round10) {
-    Math.round10 = function(value, exp) {
-      return decimalAdjust('round', value, exp);
+    Math.round10 = function (value, exp) {
+      return decimalAdjust("round", value, exp);
     };
   }
   // Arrondi décimal inférieur
   if (!Math.floor10) {
-    Math.floor10 = function(value, exp) {
-      return decimalAdjust('floor', value, exp);
+    Math.floor10 = function (value, exp) {
+      return decimalAdjust("floor", value, exp);
     };
   }
   // Arrondi décimal supérieur
   if (!Math.ceil10) {
-    Math.ceil10 = function(value, exp) {
-      return decimalAdjust('ceil', value, exp);
+    Math.ceil10 = function (value, exp) {
+      return decimalAdjust("ceil", value, exp);
     };
   }
-
 })();
 
 // Arrondi décimal

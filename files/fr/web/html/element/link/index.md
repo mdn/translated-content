@@ -1,12 +1,6 @@
 ---
-title: '<link> : l''élément de lien vers des ressources externes'
+title: "<link> : l'élément de lien vers des ressources externes"
 slug: Web/HTML/Element/link
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/link
 ---
 
 {{HTMLSidebar}}
@@ -18,7 +12,7 @@ L'élément HTML **`<link>`** définit la relation entre le document courant et 
 Pour lier une feuille de style externe, on inclut un élément `<link>` de la forme suivante à l'intérieur de l'élément {{htmlelement("head")}} :
 
 ```html
-<link href="main.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet" />
 ```
 
 Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Types_de_lien).
@@ -26,14 +20,17 @@ Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attr
 Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site dans l'onglet, on trouvera :
 
 ```html
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico" />
 ```
 
 Il existe différents types de relations pour préciser les icônes et qui permettent notamment de cibler certaines plateformes mobiles :
 
 ```html
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-      href="apple-icon-114.png" type="image/png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="apple-icon-114.png"
+  type="image/png" />
 ```
 
 L'attribut `sizes` indique la taille de l'icône tandis que l'attribut `type` contient le type MIME de la ressource qui est liée. Ces attributs permettent alors au navigateur de sélectionner la ressource la plus adéquate.
@@ -41,15 +38,22 @@ L'attribut `sizes` indique la taille de l'icône tandis que l'attribut `type` co
 On peut également fournir l'attribut `media` afin d'utiliser telle ou telle ressource lorsqu'une requête média est vérifiée. Ainsi, on pourra utiliser ce qui suit afin d'avoir une feuille de style utilisée à l'impression et une autre dédiée au mobile :
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link
+  href="mobile.css"
+  rel="stylesheet"
+  media="screen and (max-width: 600px)" />
 ```
 
 Certaines fonctionnalités relatives à la sécurité sont également disponibles avec certains attributs de `<link>`. Dans cet exemple :
 
 ```html
-<link rel="preload" href="myFont.woff2" as="font"
-      type="font/woff2" crossorigin="anonymous">
+<link
+  rel="preload"
+  href="myFont.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous" />
 ```
 
 L'attribut `rel` vaut `preload` et indique que le navigateur doit précharger la ressource (voir [Le préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Précharger_du_contenu) pour plus de détails), l'attribut `as` indique la classe de contenu qui est récupéré et l'attribut `crossorigin` indique si la ressource doit être récupérée avec une requête CORS.
@@ -172,7 +176,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 Pour associer une feuille de style à la page courante, on utilisera la syntaxe suivante :
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### Fournir des feuilles de style alternatives
@@ -182,9 +186,9 @@ Pour un document, on peut indiquer [plusieurs feuilles de style alternatives](/f
 L'utilisateur pourra choisir parmi ces feuilles de style via le menu « Affichage > Style de la page ». Ainsi, un utilisateur pourra voir différentes versions d'une même page.
 
 ```html
-<link href="default.css" rel="stylesheet" title="Mise en forme par défaut">
-<link href="joli.css" rel="alternate stylesheet" title="Joli">
-<link href="simple.css" rel="alternate stylesheet" title="Simple">
+<link href="default.css" rel="stylesheet" title="Mise en forme par défaut" />
+<link href="joli.css" rel="alternate stylesheet" title="Joli" />
+<link href="simple.css" rel="alternate stylesheet" title="Simple" />
 ```
 
 ### Évènements déclenchés au chargement d'une feuille de style
@@ -203,9 +207,11 @@ Il est possible de déterminer si une feuille de style a été chargée en écou
   }
 </script>
 
-<link rel="stylesheet" href="mafeuilledestyle.css"
+<link
+  rel="stylesheet"
+  href="mafeuilledestyle.css"
   onload="sheetLoaded()"
-  onerror="sheetError()">
+  onerror="sheetError()" />
 ```
 
 > **Note :** L'évènement `load` est déclenché une fois que la feuille de style et que le contenu associé ont été chargés et analysés et immédiatement avant que la mise en forme soit appliquée au contenu.

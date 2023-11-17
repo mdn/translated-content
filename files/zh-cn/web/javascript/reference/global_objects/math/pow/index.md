@@ -31,8 +31,8 @@ Math.pow(base, exponent)
 ### 使用 `Math.pow`
 
 ```js
-function raisePower(x,y) {
-   return Math.pow(x,y)
+function raisePower(x, y) {
+  return Math.pow(x, y);
 }
 ```
 

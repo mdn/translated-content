@@ -1,7 +1,6 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-original_slug: Web/HTML/Elemento/abbr
 ---
 
 {{HTMLSidebar}}
@@ -14,7 +13,7 @@ El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una
 
 El artículo [Cómo marcar abreviaciones y hacerlas entendibles](/es/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable) es una guía para aprender a usar `<abbr>` y elementos relacionados.
 
-| Interfaz DOM                                                               | {{domxref("HTMLElement")}}                                                                                                                                                                                         |
+| Interfaz DOM                                                               | {{domxref("HTMLElement")}}                                                                                                                                                                                                   |
 | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico), [contenido estático o de texto](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_estático_o_de_texto), contenido palpable |
 | Conteido permitido                                                         | [Contenido de estático o de texto](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_estático_o_de_texto)                                                                                                            |

@@ -1,13 +1,8 @@
 ---
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
+
 {{JSRef}}
 
 Метод **`Object.fromEntries()`** преобразует список пар ключ-значение в объект.
@@ -42,7 +37,10 @@ Object.fromEntries(iterable);
 С `Object.fromEntries` вы можете преобразовать {{jsxref("Map")}} в {{jsxref("Object")}}:
 
 ```js
-const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+const map = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
 ```
@@ -52,7 +50,11 @@ console.log(obj); // { foo: "bar", baz: 42 }
 С `Object.fromEntries` вы можете преобразовать {{jsxref("Array")}} в {{jsxref("Object")}}:
 
 ```js
-const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+const arr = [
+  ["0", "a"],
+  ["1", "b"],
+  ["2", "c"],
+];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 ```
@@ -65,8 +67,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
-  Object.entries(object1)
-  .map(([ key, val ]) => [ key, val * 2 ])
+  Object.entries(object1).map(([key, val]) => [key, val * 2]),
 );
 
 console.log(object2);

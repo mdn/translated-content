@@ -11,4 +11,4 @@ slug: Glossary/Object_reference
 
 ### 基礎知識
 
-- Wikipedia 上の「[参照 (計算機科学)](https://ja.wikipedia.org/wiki/参照_(計算機科学))」
+- Wikipedia 上の「[参照 (計算機科学)](<https://ja.wikipedia.org/wiki/参照_(計算機科学)>)」

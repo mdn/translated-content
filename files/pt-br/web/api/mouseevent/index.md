@@ -120,11 +120,11 @@ function simulateClick() {
   var evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
-    view: window
+    view: window,
   });
   var cb = document.getElementById("checkbox"); //element to click on
   var canceled = !cb.dispatchEvent(evt);
-  if(canceled) {
+  if (canceled) {
     // A handler called preventDefault
     alert("canceled");
   } else {
@@ -132,12 +132,14 @@ function simulateClick() {
     alert("not canceled");
   }
 }
-document.getElementById("button").addEventListener('click', simulateClick);
+document.getElementById("button").addEventListener("click", simulateClick);
 ```
 
 ```html
-<p><label><input type="checkbox" id="checkbox"> Checked</label>
-<p><button id="button">Click me</button>
+<p>
+  <label><input type="checkbox" id="checkbox" /> Checked</label>
+</p>
+<p><button id="button">Click me</button></p>
 ```
 
 Clique no botão para ver como funciona a amostra:
@@ -146,18 +148,11 @@ Clique no botão para ver como funciona a amostra:
 
 ## Especificações
 
-| Specification                                                                                                    | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSSOM View','#extensions-to-the-mouseevent-interface', 'MouseEvent')}}     | Rascunho de trabalho             | Redefine **`MouseEvent`** de longo para duplo. Isto significa que um **`PointerEvent`** cuja **`pointerType`** é rato será uma de casal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| {{SpecName("HTML WHATWG", "#dom-mouseevent-region", "MouseEvent.region")}}             | {{Spec2('HTML WHATWG')}} | Do [Document Object Model (DOM) Nível 3 Events Specification](https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/) , adicionado propriedades `movementX` e `movementY`.                                                                                                                                                                                       |
-| {{SpecName('Pointer Lock','#extensions-to-the-mouseevent-interface','MouseEvent')}} | {{Spec2('Pointer Lock')}} |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('CSSOM View', '#extensions-to-the-mouseevent-interface', 'MouseEvent')}} | {{Spec2('CSSOM View')}} | A partir [do documento de modelo de objeto (DOM) Nível 3 Especificação de eventos](https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/) , adicionados **`offsetX`** e **`offsetY`**, **`pageX`** e **`pageY`**, **`x`**, e **`y`** propriedades. Propriedades redefinidas de tela, página, cliente e coordenadas (x e y) a partir **`double`** de **`long`**. |
-| {{SpecName('DOM3 Events','#events-mouseevents','MouseEvent')}}                             | {{Spec2('DOM3 Events')}} | Em Document Object Model (DOM) Nível 2, especificação de eventos, adicionado ao construtor **`MouseEvent ()`**, o método **`getModifierState()`** e a propriedade de **`buttons`**.                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent')}}                                 | {{Spec2('DOM2 Events')}} | Definição inicial.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+{{Specifications}}
 
-## Compatibilidade do navegador
+## Compatibilidade com navegadores
 
-{{Compat("api.MouseEvent")}}
+{{Compat}}
 
 ## Veja também
 

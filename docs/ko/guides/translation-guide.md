@@ -30,12 +30,12 @@
 
 **사전 순으로 용어집을 편집해주세요.**
 
-| 용어 | 번역 | 참고 링크 |
-| --- | --- | --- |
-| Note | 참고 | |
-| Warning | 경고 | |
-| Callout | 알림 | |
-| Objective | 목표 | [링크][What_is_accessibility] |
+| 용어          | 번역             | 참고 링크                     |
+| ------------- | ---------------- | ----------------------------- |
+| Note          | 참고             |                               |
+| Warning       | 경고             |                               |
+| Callout       | 알림             |                               |
+| Objective     | 목표             | [링크][What_is_accessibility] |
 | Prerequisites | 필요한 사전 지식 | [링크][What_is_accessibility] |
 
 ### 교육 과정 callout
@@ -56,10 +56,15 @@
 
 ```markdown
 # 참고
+
 > **Note:** This is a note.
+
 # 경고
+
 > **Warning:** This is a warning.
+
 # 알림
+
 > **Callout:** This is a callout.
 ```
 
@@ -67,10 +72,15 @@
 
 ```markdown
 # 참고
+
 > **참고:** 참고입니다.
+
 # 경고
+
 > **경고:** 경고입니다.
+
 # 알림
+
 > **알림:** 알림입니다.
 ```
 

@@ -26,22 +26,22 @@ symbol 原始值不能转换为字符串，所以只能先转换成它的包装�
 ```js
 Symbol("foo") + "bar";
 // TypeError: Can't convert symbol to string
-Symbol("foo").toString() + "bar"
+Symbol("foo").toString() + "bar";
 // "Symbol(foo)bar"，就相当于下面的：
-Object(Symbol("foo")).toString() + "bar"
+Object(Symbol("foo")).toString() + "bar";
 // "Symbol(foo)bar"
 ```
 
 ## 示例
 
 ```js
-Symbol("desc").toString();   // "Symbol(desc)"
+Symbol("desc").toString(); // "Symbol(desc)"
 
 // 内置通用（well-known）symbol
-Symbol.iterator.toString();  // "Symbol(Symbol.iterator)
+Symbol.iterator.toString(); // "Symbol(Symbol.iterator)
 
 // global symbols
-Symbol.for("foo").toString() // "Symbol(foo)"
+Symbol.for("foo").toString(); // "Symbol(foo)"
 ```
 
 ## 规范

@@ -1,13 +1,6 @@
 ---
 title: <meter>
 slug: Web/HTML/Element/meter
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/meter
 ---
 
 {{HTMLSidebar}}
@@ -40,9 +33,7 @@ Comme pour les autres éléments HTML, cet élément inclut également [les attr
     >
     > ```html
     > Utilisation de l'espace de stockage:
-    > <meter value=6 max=8>
-    >   6 blocs utilisés (sur un total de 8)
-    > </meter>
+    > <meter value="6" max="8">6 blocs utilisés (sur un total de 8)</meter>
     > ```
     >
     > Il n'y a pas de moyen sémantique de décrire l'unité de l'attribut **`value`**, néanmoins l'attribut global **`title`** peut être utilisé pour cela.
@@ -54,8 +45,8 @@ Comme pour les autres éléments HTML, cet élément inclut également [les attr
 #### HTML
 
 ```html
-<p>Chauffez le four à
-  <meter min="100" max="250" value="180">180 degrés</meter>.
+<p>
+  Chauffez le four à <meter min="100" max="250" value="180">180 degrés</meter>.
 </p>
 ```
 
@@ -98,7 +89,7 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -110,7 +101,7 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
       <th scope="row"><dfn>Contenu autorisé</dfn></th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >
         ne possédant pas d'élément <code>&#x3C;meter></code> parmi ses
@@ -126,7 +117,7 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>

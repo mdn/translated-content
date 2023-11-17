@@ -1,7 +1,6 @@
 ---
 title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
-original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement
 ---
 
 {{AddonSidebar}}
@@ -33,7 +32,16 @@ let elem = browser.menus.getTargetElement(targetElementId);
 browser.menus.create({
   title: "Remove element",
   documentUrlPatterns: ["*://*/*"],
-  contexts: ["audio", "editable", "frame", "image", "link", "page", "password", "video"],
+  contexts: [
+    "audio",
+    "editable",
+    "frame",
+    "image",
+    "link",
+    "page",
+    "password",
+    "video",
+  ],
   onclick(info, tab) {
     browser.tabs.executeScript(tab.id, {
       frameId: info.frameId,

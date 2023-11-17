@@ -1,7 +1,6 @@
 ---
 title: Mejorando el Rendimiento Inicial
 slug: Web/Performance/Optimizing_startup_performance
-original_slug: Web/Performance/mejorando_rendimienot_inicial
 ---
 
 Un aspecto que a menudo se pasa por alto en el desarrollo de software de aplicaciones, incluso entre aquellos enfocados en la optimización del rendimiento, es el rendimiento inicial. ¿Cuánto tiempo demora su aplicación en iniciarse? ¿Parece que se bloquea el dispositivo o el navegador del usuario no responde mientras se carga la aplicación? Eso hace que los usuarios se preocupen de que su aplicación haya fallado, o de que algo anda mal. Siempre es una buena idea invertir tiempo para asegurarse de que la aplicación se inicie de manera correcta. Este artículo ofrece consejos y sugerencias para ayudar a lograr ese objetivo, tanto al escribir una nueva aplicación como al migrar una aplicación de otra plataforma a la Web.
@@ -68,7 +67,7 @@ Hay otras cosas además de ir asíncrono, que pueden ayudarlo a mejorar el tiemp
 - [Apps](/es/docs/Web/Progressive_web_apps)
 - [Games](/es/docs/Games)
 
-## Información del Documento Original:
+## Información del Documento Original
 
 - Autor(s): Alon Zakai
 - Fuente: [BananaBread (or any compiled codebase) Startup Experience](http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html)

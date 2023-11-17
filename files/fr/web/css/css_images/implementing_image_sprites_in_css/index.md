@@ -1,12 +1,6 @@
 ---
 title: Les sprites CSS
 slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
-tags:
-  - Avancé
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
-original_slug: Web/CSS/CSS_Images/Sprites_CSS
 ---
 
 {{CSSRef}}
@@ -21,7 +15,7 @@ Supposons qu'une image est affichée pour chaque élement de la classe `toolbtn`
 
 ```css
 .toolbtn {
-  background: url('myfile.png');
+  background: url("myfile.png");
   display: inline-block;
   height: 20px;
   width: 20px;

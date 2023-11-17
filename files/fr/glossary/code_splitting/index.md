@@ -1,8 +1,9 @@
 ---
 title: La division du code
 slug: Glossary/Code_splitting
-translation_of: Glossary/Code_splitting
 ---
+
+{{GlossarySidebar}}
 
 La **division du code** (« _code splitting_ » en Anglais) est le fractionnement du code en divers bundles ou composants qui peuvent ensuite être chargés à la demande ou en parallèle.
 

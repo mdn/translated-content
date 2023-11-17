@@ -17,6 +17,7 @@ importNode(externalNode, deep)
 - `externalNode`
   - : 导入当前文档的外部 {{domxref("Node")}} 或 {{domxref("DocumentFragment")}}。
 - `deep` {{ optional_inline() }}
+
   - : 一个布尔值，默认为 `false`。表明是否要导入 `externalNode` 的整个 DOM 子树。
 
     - `deep` 设置为 `true`，则拷贝 `externalNode` 和它的所有后代。
@@ -25,7 +26,7 @@ importNode(externalNode, deep)
 ## 示例
 
 ```js
-const iframe  = document.querySelector("iframe");
+const iframe = document.querySelector("iframe");
 const oldNode = iframe.contentWindow.document.getElementById("myNode");
 const newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);

@@ -29,7 +29,7 @@ clear()
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('.example');
+const buttonEl = document.querySelector(".example");
 
 // style 属性からすべてのスタイルを削除
 buttonEl.attributeStyleMap.clear();

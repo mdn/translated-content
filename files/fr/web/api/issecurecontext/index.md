@@ -1,10 +1,6 @@
 ---
 title: isSecureContext
 slug: Web/API/isSecureContext
-page-type: web-api-global-property
-translation_of: Web/API/isSecureContext
-original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
-browser-compat: api.isSecureContext
 ---
 
 {{APIRef}}{{SeeCompatTable}}

@@ -1,11 +1,6 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/word-spacing
 ---
 
 {{CSSRef}}
@@ -58,8 +53,8 @@ word-spacing: unset;
 ### HTML
 
 ```html
-<p id="ligne1">Voici le texte de la ligne 1 </p>
-<p id="ligne2" >Et voilà celui de la ligne 2 </p>
+<p id="ligne1">Voici le texte de la ligne 1</p>
+<p id="ligne2">Et voilà celui de la ligne 2</p>
 ```
 
 ### CSS

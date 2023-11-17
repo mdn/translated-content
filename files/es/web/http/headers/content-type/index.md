@@ -11,10 +11,10 @@ slug: Web/HTTP/Headers/Content-Type
 
 En solicitudes (tales como {{HTTPMethod("POST")}} o {{HTTPMethod("PUT")}}), el cliente indica al servidor que tipo de dato es enviado actualmente.
 
-| Header type                                                                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                                 | no                                       |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                                       |
+| Header type                                                               | {{Glossary("Entity header")}} |
+| ------------------------------------------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden header name")}}                                     | no                            |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                            |
 
 ## Sintaxis
 
@@ -40,8 +40,8 @@ En una solicitud {{HTTPMethod("POST")}} , que resulta del envio de un formulario
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```

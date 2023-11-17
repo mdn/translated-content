@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 - 內容腳本與整個 extension 間的溝通
 - 打包 extension 所需的資源，讓網頁可以存取
 
-也可以在 GitHub 上找到範例的原始碼： <https://github.com/mdn/webextensions-examples/tree/master/beastify>
+也可以在 GitHub 上找到範例的原始碼： <https://github.com/mdn/webextensions-examples/tree/main/beastify>
 
 實作這個 extension 前，請先確認你的 Firefox 有 45.0 或更新的版本。
 
@@ -59,7 +59,7 @@ cd beastify
   "version": "1.0",
 
   "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
   },
@@ -138,7 +138,7 @@ touch choose_beast.html choose_beast.css choose_beast.js
 HTML 內容長得像這樣：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
@@ -317,7 +317,7 @@ browser.runtime.onMessage.addListener(beastify);
 
 最後，我們需要將動物的照片放進來
 
-新增一個名為 "beasts" 的資料夾，並把三張動物的圖片放進此資料夾中，請取相對應的檔名。可以使用[範例圖片](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts) ，或從這邊下載：
+新增一個名為「beasts」的資料夾，並把三張動物的圖片放進此資料夾中，請取相對應的檔名。可以使用[範例圖片](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts)，或從這邊下載：
 
 ![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 

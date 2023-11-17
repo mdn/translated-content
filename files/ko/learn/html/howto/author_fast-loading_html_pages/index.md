@@ -1,7 +1,6 @@
 ---
 title: Tips for Authoring Fast-loading HTML Pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-original_slug: Tips_for_Authoring_Fast-loading_HTML_Pages
 ---
 
 Summary: Learn common-sense tips for producing HTML pages which load quickly and provide visitor satisfaction. 여기에 나온 팁들은 상식과 실험에 바탕을 두고 있습니다. 만약 당신이 페이지 불러오기 성능을 향상시킬 수 있는 팁을 알고 있다면 이 글의 토론 페이지에 조언해 주시기 바랍니다.
@@ -77,21 +76,27 @@ table기반의 레이아웃을 `<div>`를 쓰거나 table을 작은 table로 나
 아래와 같이 깊게 중첩된 table 대신
 
 ```html
-<TABLE>
-  <TABLE>
-    <TABLE>
-          ...
-    </TABLE>
-  </TABLE>
-</TABLE>
+<table>
+  <table>
+    <table>
+      ...
+    </table>
+  </table>
+</table>
 ```
 
 중첩되지 않은 table 또는 div를 쓰라
 
 ```html
-<TABLE>...</TABLE>
-<TABLE>...</TABLE>
-<TABLE>...</TABLE>
+<table>
+  ...
+</table>
+<table>
+  ...
+</table>
+<table>
+  ...
+</table>
 ```
 
 #### 그림과 표의 크기를 명시하라

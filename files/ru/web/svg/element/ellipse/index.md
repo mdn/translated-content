@@ -1,19 +1,22 @@
 ---
 title: <ellipse>
 slug: Web/SVG/Element/ellipse
-tags:
-  - NeedsUpdate
-translation_of: Web/SVG/Element/ellipse
-original_slug: Web/SVG/Элемент/ellipse
 ---
+
 {{SVGRef}}
 
 Элемент `ellipse` — базовая SVG фигура, используемая для создания эллипсов с помощью координат центра и обоих радиусов.
 
 > **Примечание:** Сам по себе элемент `ellipse` не позволяет задать точное его расположение (например, нельзя сразу отобразить эллипс, повёрнутый на 45**°**), однако его можно повернуть с помощью атрибута {{SVGAttr("transform")}}.
 
+## Пример
+
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -22,7 +25,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('LiveSample', 100, '100%')}}
+{{EmbedLiveSample("Пример", 100, '100%')}}
 
 ## Атрибуты
 
@@ -48,7 +51,7 @@ html,body,svg { height:100% }
 
 ### Глобальные Атрибуты
 
-- [Основные атрибуты](/docs/Web/SVG/Attribute/Core)
+- [Основные атрибуты](/ru/docs/Web/SVG/Attribute/Core)
   - : Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Атрибуты стиля](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}

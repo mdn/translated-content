@@ -33,7 +33,7 @@ name = attribute.localName
 
 ```js
 const element = document.querySelector("#example");
-element.addEventListener("click", function() {
+element.addEventListener("click", function () {
   const attribute = element.attributes[0];
   alert(attribute.localName);
 });

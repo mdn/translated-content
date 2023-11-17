@@ -34,7 +34,7 @@ slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 navigator.registerContentHandler(
   "application/vnd.mozilla.maybe.feed",
   "http://www.theeasyreaderurl.com?feed=%s",
-  "Easy Reader"
+  "Easy Reader",
 );
 ```
 

@@ -84,11 +84,15 @@ En este ejemplo, se presenta un video en una página web. Presionando la tecla <
 Cuando la página se carga, este código se ejecuta para establecer un evento para cuando se presione la tecla <kbd>Enter</kbd>.
 
 ```js
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  function (e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### Cambiando entre modo de pantalla completa y modo de ventana
@@ -98,7 +102,7 @@ Este código es llamado cuando el usuario presiona la tecla <kbd>Enter</kbd>, co
 ```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+    document.documentElement.requestFullscreen();
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -110,20 +114,6 @@ function toggleFullScreen() {
 En este código, primero se observa si el atributo `fullscreenElement` de {{ domxref("document") }} (comprobando si tiene prefijo `moz`, `ms`, o `webkit`). Si es `null`, el documento está en modo de ventana actualmente, así que necesitamos cambiarlo a modo de pantalla completa. Esto se hace llamando a la función {{ domxref("element.requestFullscreen()") }}.
 
 Si el modo de pantalla completa está activado (`fullscreenElement` no es `null`), llamamos a la función {{ domxref("document.exitFullscreen()") }}.
-
-## Prefijado
-
-De momento, no todos los navegadores están implementando la versión sin prefijo de la API. Aquí está la tabla que resume los prefijos y diferencias de nombres entre ellos:
-
-| Estándar                                                 | Blink (Chrome y Opera)      | Gecko (Firefox)          | Internet Explorer 11    | Edge                        | Safari (WebKit)             |
-| -------------------------------------------------------- | --------------------------- | ------------------------ | ----------------------- | --------------------------- | --------------------------- |
-| {{domxref("Document.fullscreen")}}             | `webkitIsFullScreen`        | `mozFullScreen`          | _-_                     | `webkitIsFullScreen`        | `webkitIsFullScreen`        |
-| {{domxref("Document.fullscreenEnabled")}} | `webkitFullscreenEnabled`   | `mozFullScreenEnabled`   | `msFullscreenEnabled`   | `webkitFullscreenEnabled`   | `webkitFullscreenEnabled`   |
-| {{domxref("Document.fullscreenElement")}} | `webkitFullscreenElement`   | `mozFullScreenElement`   | `msFullscreenElement`   | `webkitFullscreenElement`   | `webkitFullscreenElement`   |
-| {{domxref("Document.onfullscreenchange")}} | `onwebkitfullscreenchange`  | `onmozfullscreenchange`  | `onmsfullscreenchange`  | `onwebkitfullscreenchange`  | `onwebkitfullscreenchange`  |
-| {{domxref("Document.onfullscreenerror")}} | `onwebkitfullscreenerror`   | `onmozfullscreenerror`   | `onmsfullscreenerror`   | `onwebkitfullscreenerror`   | `onwebkitfullscreenerror`   |
-| {{domxref("Document.exitFullscreen()")}}     | `webkitExitFullscreen()`    | `mozCancelFullScreen()`  | `msExitFullscreen()`    | `webkitExitFullscreen()`    | `webkitExitFullscreen()`    |
-| {{domxref("Element.requestFullscreen()")}} | `webkitRequestFullscreen()` | `mozRequestFullScreen()` | `msRequestFullscreen()` | `webkitRequestFullscreen()` | `webkitRequestFullscreen()` |
 
 ## Especificaciones
 

@@ -34,7 +34,6 @@ Puedes utilizar la palabra clave {{jsxref("Statements/class", "class")}} para de
 
 ```js
 class Person {
-
   name;
 
   constructor(name) {
@@ -44,7 +43,6 @@ class Person {
   introduceSelf() {
     console.log(`¡Hola!, soy ${this.name}`);
   }
-
 }
 ```
 
@@ -68,7 +66,7 @@ El constructor se define utilizando la palabra clave {{jsxref("Classes/construct
 Dada la declaración de clase anterior, puedes crear y utilizar una nueva instancia de `Person` de la siguiente manera:
 
 ```js
-const gil = new Person('Gil');
+const gil = new Person("Gil");
 
 gil.introduceSelf(); // ¡Hola!, soy Gil
 ```
@@ -81,11 +79,9 @@ En caso de que no necesites algún tipo de inicialización, puedes omitir al con
 
 ```js
 class Animal {
-
   sleep() {
-    console.log('zzzzzzz');
+    console.log("zzzzzzz");
   }
-
 }
 
 const spot = new Animal();
@@ -99,7 +95,6 @@ A partir de la clase `Person`, vamos a definir la subclase `Professor`.
 
 ```js
 class Professor extends Person {
-
   teaches;
 
   constructor(name, teaches) {
@@ -108,7 +103,9 @@ class Professor extends Person {
   }
 
   introduceSelf() {
-    console.log(`Mi nombre es ${this.name}, yo seré tu profesor de ${this.teaches}`);
+    console.log(
+      `Mi nombre es ${this.name}, yo seré tu profesor de ${this.teaches}`,
+    );
   }
 
   grade(paper) {
@@ -131,10 +128,10 @@ Podemos observar que hemos sobreescrito el método `introduceSelf()` de la super
 Con esta declaración ahora podemos crear y usar profesores:
 
 ```js
-const walsh = new Professor('Walsh', 'Psicología');
-walsh.introduceSelf();  // 'Mi nombre es Walsh, yo seré tu profesor de Psicología'
+const walsh = new Professor("Walsh", "Psicología");
+walsh.introduceSelf(); // 'Mi nombre es Walsh, yo seré tu profesor de Psicología'
 
-walsh.grade('mi tarea'); // una calificación aleatoria
+walsh.grade("mi tarea"); // una calificación aleatoria
 ```
 
 ## Encapsulamiento
@@ -145,7 +142,6 @@ Aquí podemos ver la declaración de la clase `Student` que se encarga precisame
 
 ```js
 class Student extends Person {
-
   #year;
 
   constructor(name, year) {
@@ -153,22 +149,22 @@ class Student extends Person {
     this.#year = year;
   }
 
-
   introduceSelf() {
-    console.log(`¡Hola! me llamo ${this.name} y estoy en el año ${this.#year}.`);
+    console.log(
+      `¡Hola! me llamo ${this.name} y estoy en el año ${this.#year}.`,
+    );
   }
 
   canStudyArchery() {
     return this.#year > 1;
   }
-
 }
 ```
 
 En la clase anterior, `year` es una [propiedad de dato privada](/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields). Podemos crear un objeto `Student` que puede acceder a la propiedad `#year` internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad `#year`, el navegador lanzará un error:
 
 ```js
-const summers = new Student('Summers', 2)
+const summers = new Student("Summers", 2);
 
 summers.introduceSelf(); // ¡Hola! me llamo Summers y estoy en el año 2.
 summers.canStudyArchery(); // true
@@ -189,7 +185,7 @@ class Example {
   }
 
   #somePrivateMethod() {
-    console.log('¿Me llamaste?');
+    console.log("¿Me llamaste?");
   }
 }
 

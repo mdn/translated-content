@@ -38,6 +38,7 @@ background-repeat: unset;
 ### 値
 
 - `<repeat-style>`
+
   - : 値 1 つの構文は完全な値 2 つの構文に対する一括指定です。
 
     <table class="standard-table">
@@ -120,25 +121,32 @@ background-repeat: unset;
 
 ```html
 <ol>
-  <li>no-repeat
+  <li>
+    no-repeat
     <div class="one"></div>
   </li>
-  <li>repeat
+  <li>
+    repeat
     <div class="two"></div>
   </li>
-  <li>repeat-x
+  <li>
+    repeat-x
     <div class="three"></div>
   </li>
-  <li>repeat-y
+  <li>
+    repeat-y
     <div class="four"></div>
   </li>
-  <li>space
+  <li>
+    space
     <div class="five"></div>
   </li>
-  <li>round
+  <li>
+    round
     <div class="six"></div>
   </li>
-  <li>repeat-x, repeat-y (multiple images)
+  <li>
+    repeat-x, repeat-y (multiple images)
     <div class="seven"></div>
   </li>
 </ol>
@@ -157,9 +165,9 @@ li {
   margin-bottom: 12px;
 }
 div {
-    background-image: url(starsolid.gif);
-    width: 160px;
-    height: 70px;
+  background-image: url(starsolid.gif);
+  width: 160px;
+  height: 70px;
 }
 
 /* 背景の繰り返し */
@@ -184,10 +192,9 @@ div {
 
 /* 複数の画像 */
 .seven {
-  background-image:  url(starsolid.gif),
-                     url(https://developer.mozilla.org/static/img/favicon32.png);
-  background-repeat: repeat-x,
-                     repeat-y;
+  background-image: url(starsolid.gif),
+    url(https://developer.mozilla.org/static/img/favicon32.png);
+  background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
 ```

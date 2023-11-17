@@ -1,8 +1,9 @@
 ---
 title: Clave
 slug: Glossary/Key
-original_slug: Glossary/Clave
 ---
+
+{{GlossarySidebar}}
 
 Una clave es una pieza de información utilizada por un algoritmo criptográfico para el {{Glossary("encryption", "cifrado")}} y/o {{Glossary("decryption", "descifrado")}}. Los mensajes cifrados deben permanecer seguros incluso si todo lo relacionado con el {{Glossary("cryptosystem","sistema de cifrado")}}, excepto la clave, es de conocimiento público.
 

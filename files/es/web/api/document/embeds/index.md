@@ -10,7 +10,7 @@ slug: Web/API/Document/embeds
 ## Sintaxis
 
 ```js
-nodeList = document.embeds
+nodeList = document.embeds;
 ```
 
 ### Valor

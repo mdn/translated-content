@@ -71,8 +71,8 @@ backface-visibility: unset;
         </div>
       </div>
       <p>
-        すべての面が透明であり、
-        裏面 (2, 4, 5) が 表面 (1, 3, 6) を通して表示されます。
+        すべての面が透明であり、 裏面 (2, 4, 5) が 表面 (1, 3, 6)
+        を通して表示されます。
       </p>
     </td>
     <td>
@@ -86,9 +86,7 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>
-        背後の3面 (2, 4, 5) は非表示です。
-      </p>
+      <p>背後の3面 (2, 4, 5) は非表示です。</p>
     </td>
   </tr>
 </table>
@@ -168,8 +166,10 @@ backface-visibility: unset;
 }
 
 /* テーブルの見栄えをよくする */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;

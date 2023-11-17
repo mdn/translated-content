@@ -1,15 +1,9 @@
 ---
 title: WebSockets
 slug: Glossary/WebSockets
-tags:
-  - Web
-  - WebSocket
-  - Протоколы
-  - Глоссарий
-  - инфраструктура
-translation_of: Glossary/WebSockets
-original_slug: Глоссарий/WebSockets
 ---
+
+{{GlossarySidebar}}
 
 _WebSocket_ - это {{Glossary("protocol", "протокол")}}, который позволяет создать постоянное {{Glossary("TCP")}} соединение между сервером и клиентом, чтобы они могли обмениваться данными в любое время.
 

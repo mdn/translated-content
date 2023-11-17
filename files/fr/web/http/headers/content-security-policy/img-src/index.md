@@ -1,8 +1,6 @@
 ---
-title: 'CSP : img-src'
+title: "CSP : img-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
-browser-compat: http.headers.csp.Content-Security-Policy.img-src
 ---
 
 {{HTTPSidebar}}
@@ -56,7 +54,7 @@ Content-Security-Policy: img-src https://example.com/
 Cet élément [`<img>`](/fr/docs/Web/HTML/Element/Img) sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
-<img src="https://not-example.com/toto.jpg" alt="image d'exemple">
+<img src="https://not-example.com/toto.jpg" alt="image d'exemple" />
 ```
 
 ## Spécifications

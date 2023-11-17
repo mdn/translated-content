@@ -1,7 +1,6 @@
 ---
-title: '<progress>: Elemento indicador de progreso'
+title: "<progress>: Elemento indicador de progreso"
 slug: Web/HTML/Element/progress
-original_slug: Web/HTML/Elemento/progress
 ---
 
 {{HTMLSidebar}}
@@ -22,9 +21,9 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 Este elemento incluye [Atributos Globales](/es/docs/HTML/Global_attributes).
 
-- {{ htmlattrdef("max") }}
+- `max`
   - : Este atributo indica la cantidad de trabajo que demorá la carga, se define en el elemento `progress`. Por ejemplo max="100".
-- {{ htmlattrdef("value") }}
+- `value`
 
   - : Este atributo indica que parte de la tarea ya se ha completado o cargado. Debe especificarse un valor entre 0 y `max`, o entre 0 y 1.0 si `max` está omitido. Si al atributo `value` no se le especifica ningún valor, se estara llevando a cabo la tarea sin que el elemento mueste funcionamiento alguno. Por ejemplo si la carga está al 50% será de 0.5 el valor, en el caso de no especificar max.
 

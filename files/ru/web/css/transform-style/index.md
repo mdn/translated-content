@@ -1,7 +1,6 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-translation_of: Web/CSS/transform-style
 ---
 
 {{CSSRef("CSS Transforms")}}{{SeeCompatTable}}
@@ -40,9 +39,7 @@ transform-style: unset;
 
 ## Specifications
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Transforms', '#transform-style', 'transform-style')}} | {{Spec2('CSS3 Transforms')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,13 +1,6 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/scroll-padding-inline
 ---
 
 {{CSSRef}}
@@ -27,7 +20,7 @@ scroll-padding-inline: auto;
 /* Valeurs de longueur */
 /* Type <length> */
 scroll-padding-inline: 10px;
-scroll-padding-inline: 1em .5em;
+scroll-padding-inline: 1em 0.5em;
 scroll-padding-inline: 10%;
 
 /* Valeurs globales */

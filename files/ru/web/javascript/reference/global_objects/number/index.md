@@ -1,12 +1,8 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 Объект **`Number`** является объектом-обёрткой, позволяющей вам работать с числовыми значениями. Объект `Number` создаётся через конструктор `Number()`.
@@ -109,7 +105,7 @@ var smallestInt = -9007199254740992;
 В следующем примере объект {{jsxref("Global_Objects/Date", "Date")}} преобразуется в числовое значение с использование объекта `Number` в качестве функции:
 
 ```js
-var d = new Date('December 17, 1995 03:24:00');
+var d = new Date("December 17, 1995 03:24:00");
 console.log(Number(d));
 ```
 
@@ -118,13 +114,13 @@ console.log(Number(d));
 ### Пример: преобразование строк с числами в числа
 
 ```js
-Number('123')     // 123
-Number('')        // 0
-Number('0x11')    // 17
-Number('0b11')    // 3
-Number('0o11')    // 9
-Number('foo')     // NaN
-Number('100a')    // NaN
+Number("123"); // 123
+Number(""); // 0
+Number("0x11"); // 17
+Number("0b11"); // 3
+Number("0o11"); // 9
+Number("foo"); // NaN
+Number("100a"); // NaN
 ```
 
 ## Спецификации

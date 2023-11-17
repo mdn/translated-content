@@ -22,20 +22,14 @@ function Overloaded(arg1, arg2, ...,argN){
 要调用 JavaScript 中类的构造函数，请使用 `new` 操作符将新的{{glossary("object reference","对象引用")}}分配给一个{{glossary("variable","变量")}}。
 
 ```js
-function Default() {
-}
+function Default() {}
 
 // 分配给局部变量 defaultReference 的一个新的 Default 对象引用
 var defaultReference = new Default();
 ```
 
-## 了解更多
+## 参见
 
-### 基本常识
-
-- 维基百科上的 [构造函数](https://zh.wikipedia.org/wiki/Constructor_%28object-oriented_programming%29)
-
-### 技术参考
-
+- 维基百科上的[构造函数](https://zh.wikipedia.org/wiki/构造器)
 - MDN 上的 [JavaScript 面向对象编程中的构造函数](/zh-CN/docs/Learn/JavaScript/Objects)
 - MDN 上的 [JavaScript 的 New 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)

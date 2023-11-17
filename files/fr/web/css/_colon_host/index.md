@@ -1,11 +1,6 @@
 ---
-title: ':host'
+title: ":host"
 slug: Web/CSS/:host
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:host
 ---
 
 {{CSSRef}}
@@ -29,29 +24,32 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host`** permet de cibler
 
 Les fragments de code qui suivent sont extraits du dépôt d'exemple [_host-selectors_](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([voir le résultat _live_](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-Dans cet exemple, on dispose d'un élément personnalisé `<context-span>`  qui peut contenir du texte :
+Dans cet exemple, on dispose d'un élément personnalisé `<context-span>` qui peut contenir du texte :
 
 ```html
-<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+<h1>
+  Host selectors <a href="#"><context-span>example</context-span></a>
+</h1>
 ```
 
 Pour le constructeur de cet élément, on crée des éléments `style` et `span` : l'élément `span` recevra le contenu de l'élément personnalisé et `style` recevra quelques règles CSS :
 
 ```js
-let style = document.createElement('style');
-let span = document.createElement('span');
+let style = document.createElement("style");
+let span = document.createElement("span");
 span.textContent = this.textContent;
 
-const shadowRoot = this.attachShadow({mode: 'open'});
+const shadowRoot = this.attachShadow({ mode: "open" });
 shadowRoot.appendChild(style);
 shadowRoot.appendChild(span);
 
-style.textContent = 'span:hover { text-decoration: underline; }' +
-                    ':host-context(h1) { font-style: italic; }' +
-                    ':host-context(h1):after { content: " - no links in headers!" }' +
-                    ':host-context(article, aside) { color: gray; }' +
-                    ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+style.textContent =
+  "span:hover { text-decoration: underline; }" +
+  ":host-context(h1) { font-style: italic; }" +
+  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ":host-context(article, aside) { color: gray; }" +
+  ":host(.footer) { color : red; }" +
+  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
 La règle `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` permet de cibler l'ensemble des instances de `<context-span>` (qui est l'hôte ici) dans le document.

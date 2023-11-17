@@ -143,7 +143,9 @@ function checkData() {
     return true;
   } else {
     alert(
-      "請輸入恰好三個字元. " + document.form1.threeChar.value + " is not valid."
+      "請輸入恰好三個字元. " +
+        document.form1.threeChar.value +
+        " is not valid.",
     );
     return false;
   }
@@ -443,8 +445,8 @@ function imgLoad(url) {
       } else {
         reject(
           Error(
-            "Image didn't load successfully; error code:" + request.statusText
-          )
+            "Image didn't load successfully; error code:" + request.statusText,
+          ),
         );
       }
     };

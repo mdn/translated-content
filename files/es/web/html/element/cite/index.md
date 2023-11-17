@@ -1,12 +1,12 @@
 ---
 title: cite
 slug: Web/HTML/Element/cite
-original_slug: Web/HTML/Elemento/cite
 ---
 
 ### Definición
 
 - **cite** -_cita_ . Marca una referencia a una fuente, o el autor de un texto citado.
+
   - : **Sus etiquetas son**: \<cite> y \</cite> (ambas obligatorias)
 
     **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#defrase), y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
@@ -196,7 +196,7 @@ original_slug: Web/HTML/Elemento/cite
 código:
 
 ```html
-<p> <cite>Galileo</cite> dijo: "... y sin embargo, se mueve." </p>
+<p><cite>Galileo</cite> dijo: "... y sin embargo, se mueve."</p>
 ```
 
 Resultado:

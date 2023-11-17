@@ -44,9 +44,9 @@ Cache-Control: no-cache
 
 1. 一般知識
 
-    1. HTTP 仕様書の [cacheable](https://tools.ietf.org/html/rfc7231#section-4.2.3) の定義
+   1. HTTP 仕様書の [cacheable](https://tools.ietf.org/html/rfc7231#section-4.2.3) の定義
 
 2. 技術的な知識
 
-    1. 一般的なキャッシュ可能なメソッドの説明: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}
-    2. 一般的なキャッシュ不可能なメソッドの説明: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, often {{HTTPMethod("POST")}}
+   1. 一般的なキャッシュ可能なメソッドの説明: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}
+   2. 一般的なキャッシュ不可能なメソッドの説明: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, often {{HTTPMethod("POST")}}

@@ -5,13 +5,13 @@ slug: Web/API/HTMLVideoElement/requestPictureInPicture
 
 {{ APIRef("HTML DOM") }}
 
- **{{domxref("HTMLVideoElement")}}** 接口提供的 **`requestPictureInPicture()`** 方法会发出异步请求，并以画中画的模式显示视频。
+**{{domxref("HTMLVideoElement")}}** 接口提供的 **`requestPictureInPicture()`** 方法会发出异步请求，并以画中画的模式显示视频。
 
 该方法不能保证视频进入画中画。如果授予了进入画中画的权限，则将返回一个 {{jsxref("Promise")}}，最终完成后将收到一个 {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} 事件，来表示它现在处于画中画状态。
 
 ## 语法
 
-```js
+```js-nolint
 requestPictureInPicture()
 ```
 
@@ -25,10 +25,13 @@ requestPictureInPicture()
 
 ```js
 function enterPictureInPicture() {
-  videoElement.requestPictureInPicture()
-    .then(pictureInPictureWindow => {
-      pictureInPictureWindow.addEventListener("resize", () => onPipWindowResize(), false);
-    })
+  videoElement.requestPictureInPicture().then((pictureInPictureWindow) => {
+    pictureInPictureWindow.addEventListener(
+      "resize",
+      () => onPipWindowResize(),
+      false,
+    );
+  });
 }
 ```
 

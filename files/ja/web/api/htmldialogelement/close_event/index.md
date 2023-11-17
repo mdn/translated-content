@@ -1,7 +1,6 @@
 ---
 title: "HTMLDialogElement: close イベント"
 slug: Web/API/HTMLDialogElement/close_event
-original_slug: Web/API/GlobalEventHandlers/onclose
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---

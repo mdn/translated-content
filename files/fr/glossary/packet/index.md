@@ -1,18 +1,9 @@
 ---
 title: Paquet
 slug: Glossary/Packet
-tags:
-  - Glossaire
-  - Paquet
-  - Paquet réseau
-  - Performance Web
-  - Reference
-  - TCP
-  - charge utile
-  - payload
-translation_of: Glossary/Packet
-original_slug: Glossaire/Paquet
 ---
+
+{{GlossarySidebar}}
 
 Un paquet, ou paquet réseau, est un bloc de données formaté envoyé sur un réseau. Les principaux composants d'un paquet réseau sont les données utilisateur et les informations de contrôle. Les données utilisateur sont appelées _payload ou charge utile_. Les informations de contrôle sont les informations de livraison du payload. Il se compose d'adresses réseau pour la source et la destination, des informations de séquencement et des codes de détection d'erreur et se trouve généralement dans les en-têtes et le pied de page des paquets.
 

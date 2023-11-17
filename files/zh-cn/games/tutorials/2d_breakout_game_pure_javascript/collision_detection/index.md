@@ -19,12 +19,12 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            // calculations
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      // calculations
     }
+  }
 }
 ```
 
@@ -39,14 +39,14 @@ function collisionDetection() {
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                dy = -dy;
-            }
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+        dy = -dy;
+      }
     }
+  }
 }
 ```
 
@@ -58,53 +58,58 @@ function collisionDetection() {
 
 ```js
 var bricks = [];
-for(c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0, status: 1 };
-    }
+for (c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
 }
 ```
 
-接下来，我们将在绘制之前在 `drawBricks()` 中检查每个砖块的 `status`属性的值 - 如果 `status`是 `1`，然后画它，但是如果它是 `0`，那么它被球击中，我们不再希望它在屏幕上。更新您的 `drawBricks()` 函数如下：
+接下来，我们将在绘制之前在 `drawBricks()` 中检查每个砖块的 `status`属性的值 - 如果 `status`是 `1`，然后画它，但是如果它是 `0`，那么它被球击中，我们不再希望它在屏幕上。更新你的 `drawBricks()` 函数如下：
 
 ```js
 function drawBricks() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            if(bricks[c][r].status == 1) {
-                var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-                var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-                bricks[c][r].x = brickX;
-                bricks[c][r].y = brickY;
-                ctx.beginPath();
-                ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#0095DD";
-                ctx.fill();
-                ctx.closePath();
-            }
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      if (bricks[c][r].status == 1) {
+        var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+        var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+      }
     }
+  }
 }
 ```
 
 ## 跟踪并更新在撞击侦测函数中的状态
 
-现在我们需要将砖块 `status` 属性包含在 `collisionDetection()`函数中：如果砖块是活动的（它的状态是 `1`），我们将检查碰撞是否发生；如果发生碰撞，我们将给定砖块的状态设置为 `0`，这样它就不会被绘制在屏幕上。更新您的 `collisionDetection()` 函数，如下所示：
+现在我们需要将砖块 `status` 属性包含在 `collisionDetection()`函数中：如果砖块是活动的（它的状态是 `1`），我们将检查碰撞是否发生；如果发生碰撞，我们将给定砖块的状态设置为 `0`，这样它就不会被绘制在屏幕上。更新你的 `collisionDetection()` 函数，如下所示：
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                }
-            }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (b.status == 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
         }
+      }
     }
+  }
 }
 ```
 

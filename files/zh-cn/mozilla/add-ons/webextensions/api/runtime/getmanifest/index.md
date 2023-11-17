@@ -8,7 +8,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ## 语法
 
 ```js
-browser.runtime.getManifest()
+browser.runtime.getManifest();
 ```
 
 ### 参数

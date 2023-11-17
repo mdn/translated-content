@@ -34,9 +34,9 @@ slug: Web/SVG/Tutorial/Getting_Started
 
 1. 从 {{SVGElement("svg")}} 根元素开始：
 
-    - 应舍弃来自 (X)HTML 的 doctype 声明，因为基于 DTD 的 SVG 验证导致的问题比它能解决的问题更多。
-    - SVG 2 之前 `version` 属性和 `baseProfile` 属性用来供其他类型的验证识别 SVG 的版本。SVG 2 已弃用 `version` 和 `baseProfile` 这两个属性。
-    - 作为 XML 的一种方言，SVG 必须正确的绑定命名空间（在 xmlns 属性中绑定）。请阅读[命名空间速成](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course)页面获取更多信息。
+   - 应舍弃来自 (X)HTML 的 doctype 声明，因为基于 DTD 的 SVG 验证导致的问题比它能解决的问题更多。
+   - SVG 2 之前 `version` 属性和 `baseProfile` 属性用来供其他类型的验证识别 SVG 的版本。SVG 2 已弃用 `version` 和 `baseProfile` 这两个属性。
+   - 作为 XML 的一种方言，SVG 必须正确的绑定命名空间（在 xmlns 属性中绑定）。请阅读[命名空间速成](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course)页面获取更多信息。
 
 2. 绘制一个完全覆盖图像区域的矩形 {{SVGElement("rect")}}，把背景颜色设为红色。
 3. 一个半径 80px 的绿色圆圈 {{SVGElement("circle")}} 绘制在红色矩形的正中央（向右偏移 150px，向下偏移 100px）。

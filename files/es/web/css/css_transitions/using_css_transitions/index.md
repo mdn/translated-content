@@ -1,7 +1,6 @@
 ---
 title: Transiciones de CSS
 slug: Web/CSS/CSS_transitions/Using_CSS_transitions
-original_slug: Web/CSS/Transiciones_de_CSS
 ---
 
 {{ SeeCompatTable() }}
@@ -48,70 +47,70 @@ Las transiciones y las animaciones CSS pueden usarse para animar las siguientes 
 
 > **Nota:** el conjunto de propiedades que puede animarse está sujeto a cambios, por lo tanto se recomienda evitar incluir cualquier propiedad en la lista que no anime porque en un futuro podría provocar resultados inesperados.
 
-| Propiedad                                                                   | Tipo de valor                                                                                            |
-| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| {{ cssxref("background-color") }}                                | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("background-image") }}                                | solo degradado; no está implementado en Firefox (see [Error 536540 en Firefox](https://bugzil.la/536540))                           |
-| {{ cssxref("background-position") }}                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("background-size") }}                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("border-color") }} (including sub-properties)         | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("border-radius") }} (including sub-properties)         | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("border-width") }} (including sub-properties)         | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("border-spacing") }}                                    | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("bottom") }}                                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("-moz-box-flex") }}                                    | número                                                                                                   |
-| {{ cssxref("box-shadow") }}                                        | sombra                                                                                                   |
-| {{ cssxref("color") }}                                                | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("-moz-column-count") }}                                | número                                                                                                   |
-| {{ cssxref("-moz-column-gap") }}                                | {{cssxref("&lt;length&gt;")}}, palabras clave                                                 |
-| {{ cssxref("-moz-column-rule-color") }}                        | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("-moz-column-rule-width") }}                        | {{cssxref("&lt;length&gt;")}}, palabras clave                                                 |
-| {{ cssxref("-moz-column-width") }}                                | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("clip") }}                                                | rectágulo                                                                                                |
-| {{ svgattr("fill") }}                                                | pintar                                                                                                   |
-| {{ svgattr("fill-opacity") }}                                    | valor de opacidad                                                                                        |
-| {{ svgattr("flood-color") }}                                        | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                   |
-| {{ cssxref("font-size") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("font-size-adjust") }}                                | números, palabras clave                                                                                  |
-| {{ cssxref("font-stretch") }}                                    | palabras clave                                                                                           |
-| {{ cssxref("font-weight") }}                                        | números\| palabras clave (excluyendo `bolder`, `lighter`)                                                |
-| {{ cssxref("height") }}                                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("-moz-image-region") }}                                | `rect()`                                                                                                 |
-| {{ cssxref("left") }}                                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("letter-spacing") }}                                    | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ svgattr("lighting-color") }}                                    | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                   |
-| {{ cssxref("line-height") }}                                        | número \| {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}       |
-| {{ cssxref("margin") }} (including sub-properties)                 | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("marker-offset") }}                                    | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("max-height") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("max-width") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("min-height") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("min-width") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("opacity") }}                                            | número                                                                                                   |
-| {{ cssxref("outline-color") }}                                    | {{cssxref("&lt;color&gt;")}}                                                                     |
-| {{ cssxref("outline-offset") }}                                    | entero                                                                                                   |
-| {{ cssxref("-moz-outline-radius") }} (including sub-properties) | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("outline-width") }}                                    | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("padding") }} (including sub-properties)                 | {{cssxref("&lt;length&gt;")}}                                                                 |
-| {{ cssxref("right") }}                                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ svgattr("stop-color") }}                                        | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                   |
-| {{ svgattr("stop-opacity") }}                                    | valor de opacidad                                                                                        |
-| {{ svgattr("stroke") }}                                            | pintar                                                                                                   |
-| {{ svgattr("stroke-dasharray") }}                                | dasharray                                                                                                |
-| {{ svgattr("stroke-dashoffset") }}                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ svgattr("stroke-miterlimit") }}                                | miterlimit                                                                                               |
-| {{ svgattr("stroke-opacity") }}                                    | valor de opacidad                                                                                        |
-| {{ svgattr("stroke-width") }}                                    | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("text-indent") }}                                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("text-shadow") }}                                        | sombra                                                                                                   |
-| {{ cssxref("top") }}                                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("-moz-transform-origin") }}                        | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, keywords       |
-| {{ cssxref("-moz-transform") }}                                    | transform-function                                                                                       |
-| {{ cssxref("vertical-align") }}                                    | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, palabras clave |
-| {{ cssxref("visibility") }}                                        | visibilidad                                                                                              |
-| {{ cssxref("width") }}                                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("word-spacing") }}                                    | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                 |
-| {{ cssxref("z-index") }}                                            | entero                                                                                                   |
+| Propiedad                                                       | Tipo de valor                                                                                             |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| {{ cssxref("background-color") }}                               | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("background-image") }}                               | solo degradado; no está implementado en Firefox (see [Error 536540 en Firefox](https://bugzil.la/536540)) |
+| {{ cssxref("background-position") }}                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("background-size") }}                                | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("border-color") }} (including sub-properties)        | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("border-radius") }} (including sub-properties)       | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("border-width") }} (including sub-properties)        | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("border-spacing") }}                                 | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("bottom") }}                                         | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("-moz-box-flex") }}                                  | número                                                                                                    |
+| {{ cssxref("box-shadow") }}                                     | sombra                                                                                                    |
+| {{ cssxref("color") }}                                          | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("-moz-column-count") }}                              | número                                                                                                    |
+| {{ cssxref("-moz-column-gap") }}                                | {{cssxref("&lt;length&gt;")}}, palabras clave                                                             |
+| {{ cssxref("-moz-column-rule-color") }}                         | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("-moz-column-rule-width") }}                         | {{cssxref("&lt;length&gt;")}}, palabras clave                                                             |
+| {{ cssxref("-moz-column-width") }}                              | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("clip") }}                                           | rectágulo                                                                                                 |
+| {{ svgattr("fill") }}                                           | pintar                                                                                                    |
+| {{ svgattr("fill-opacity") }}                                   | valor de opacidad                                                                                         |
+| {{ svgattr("flood-color") }}                                    | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                            |
+| {{ cssxref("font-size") }}                                      | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("font-size-adjust") }}                               | números, palabras clave                                                                                   |
+| {{ cssxref("font-stretch") }}                                   | palabras clave                                                                                            |
+| {{ cssxref("font-weight") }}                                    | números\| palabras clave (excluyendo `bolder`, `lighter`)                                                 |
+| {{ cssxref("height") }}                                         | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("-moz-image-region") }}                              | `rect()`                                                                                                  |
+| {{ cssxref("left") }}                                           | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("letter-spacing") }}                                 | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ svgattr("lighting-color") }}                                 | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                            |
+| {{ cssxref("line-height") }}                                    | número \| {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                              |
+| {{ cssxref("margin") }} (including sub-properties)              | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("marker-offset") }}                                  | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("max-height") }}                                     | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("max-width") }}                                      | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("min-height") }}                                     | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("min-width") }}                                      | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("opacity") }}                                        | número                                                                                                    |
+| {{ cssxref("outline-color") }}                                  | {{cssxref("&lt;color&gt;")}}                                                                              |
+| {{ cssxref("outline-offset") }}                                 | entero                                                                                                    |
+| {{ cssxref("-moz-outline-radius") }} (including sub-properties) | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("outline-width") }}                                  | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("padding") }} (including sub-properties)             | {{cssxref("&lt;length&gt;")}}                                                                             |
+| {{ cssxref("right") }}                                          | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ svgattr("stop-color") }}                                     | {{cssxref("&lt;color&gt;")}} \| palabras clave                                                            |
+| {{ svgattr("stop-opacity") }}                                   | valor de opacidad                                                                                         |
+| {{ svgattr("stroke") }}                                         | pintar                                                                                                    |
+| {{ svgattr("stroke-dasharray") }}                               | dasharray                                                                                                 |
+| {{ svgattr("stroke-dashoffset") }}                              | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ svgattr("stroke-miterlimit") }}                              | miterlimit                                                                                                |
+| {{ svgattr("stroke-opacity") }}                                 | valor de opacidad                                                                                         |
+| {{ svgattr("stroke-width") }}                                   | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("text-indent") }}                                    | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("text-shadow") }}                                    | sombra                                                                                                    |
+| {{ cssxref("top") }}                                            | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("-moz-transform-origin") }}                          | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, keywords                              |
+| {{ cssxref("-moz-transform") }}                                 | transform-function                                                                                        |
+| {{ cssxref("vertical-align") }}                                 | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}, palabras clave                        |
+| {{ cssxref("visibility") }}                                     | visibilidad                                                                                               |
+| {{ cssxref("width") }}                                          | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("word-spacing") }}                                   | {{cssxref("&lt;percentage&gt;")}} \| {{cssxref("&lt;length&gt;")}}                                        |
+| {{ cssxref("z-index") }}                                        | entero                                                                                                    |
 
 ## Cuando las listas de valores de propiedades tienen longitudes diferentes
 
@@ -295,7 +294,10 @@ En lugar de describir el efecto con todo detalle, puedes echar un [vistazo a la 
 En este ejemplo, una pequeña caja con texto dentro se mueve hacia atrás y hacia delante a través de la pantalla y los colores de fondo y del texto se difuminan entre dos valores mientras tiene lugar la animación.
 
 ```html hidden
-<video controls autoplay src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv"></video>
+<video
+  controls
+  autoplay
+  src="https://developer.mozilla.org/samples/cssref/transitions/sample1/transitiondemo1.ogv"></video>
 ```
 
 {{EmbedLiveSample}}

@@ -1,8 +1,6 @@
 ---
 title: Les grilles CSS et l'amélioration progressive
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 ---
 
 {{CSSRef}}
@@ -35,7 +33,7 @@ La version implémentée dans Internet Explorer dispose de propriétés supplém
 L'outil _[autoprefixer](https://github.com/postcss/autoprefixer)_ a été mis à jour afin de prendre en charge les versions préfixées par `-ms-` lorsqu'on utilise les nouvelles propriétés. Par défaut, les préfixes liés à la grille sont désactivés mais vous pouvez les activer avec l'option `grid: autoplace`.
 
 ```js
-autoprefixer({ grid: 'autoplace' })
+autoprefixer({ grid: "autoplace" });
 ```
 
 Les préfixes relatifs aux grilles sont désactivés par défaut car certaines propriétés ne peuvent pas être préfixées
@@ -55,7 +53,9 @@ Jusqu'à présent, pour créer une disposition sur plusieurs colonnes, on a util
 Le mode {{cssxref("float")}} ne s'applique plus sur l'objet et on peut utiliser la propriété {{cssxref("align-self")}} afin d'aligner le contenu vers la fin du conteneur.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 img {
   max-width: 100%;
   display: block;
@@ -89,12 +89,11 @@ img {
 ```html
 <div class="media">
   <div class="image">
-    <img src="http://placehold.it/150x150" alt="placeholder">
+    <img src="http://placehold.it/150x150" alt="placeholder" />
   </div>
   <div class="text">
-    Voici un exemple avec un média. On utilise le flottement
-    pour les anciens navigateurs et une grille pour les
-    nouveaux.
+    Voici un exemple avec un média. On utilise le flottement pour les anciens
+    navigateurs et une grille pour les nouveaux.
   </div>
 </div>
 ```
@@ -114,7 +113,9 @@ L'exemple que nous venons de voir est très simple et on peut résoudre le probl
 Dans le prochain exemple, nous aurons un ensemble de cartes disposées avec du flottement. On a défini une largeur ({{cssxref("width")}}) sur ces cartes afin de pouvoir appliquer le flottement {{cssxref("float")}}. Pour créer des espaces entre les cartes, on utilise une marge ({{cssxref("margin")}}) sur les objets puis une marge négative sur le conteneur.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -151,27 +152,39 @@ Dans le prochain exemple, nous aurons un ensemble de cartes disposées avec du f
   <ul>
     <li class="card">
       <h2>Un</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
       <h2>Deux</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
       <h2>Trois</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
-       <h2>Quatre</h2>
-       <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <h2>Quatre</h2>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
-       <h2>Cinq</h2>
-       <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <h2>Cinq</h2>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
       <h2>Six</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
   </ul>
 </div>
@@ -210,7 +223,9 @@ La prise en charge des requêtes de fonctionnalité par les différents navigate
 On utilise donc `@supports` pour vérifier la prise en charge de `display: grid`;, ensuite on indique que {{HTMLElement("ul")}} est le conteneur de la grille, on définit la largeur et {{cssxref("min-height")}} avec `auto` pour les éléments {{HTMLElement("li")}}. On retire également les marges, les marges négatives et on remplace l'espacement avec la propriété {{cssxref("gap")}}. Cela signifie qu'il n'y aura pas de marge finale sur la dernière ligne de boîtes. La disposition fonctionne également désormais lorsqu'une carte possède plus de contenu qu'une autre.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -230,15 +245,15 @@ On utilise donc `@supports` pour vérifier la prise en charge de `display: grid`
 
 ```css
 .wrapper ul {
-    overflow: hidden;
-    margin: 0 -10px;
-    padding: 0;
-    list-style: none;
+  overflow: hidden;
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
 }
 .wrapper li {
-    float: left;
-    width: calc(33.333333% - 20px);
-    margin: 0 10px 20px 10px;
+  float: left;
+  width: calc(33.333333% - 20px);
+  margin: 0 10px 20px 10px;
 }
 @supports (display: grid) {
   .wrapper ul {
@@ -260,27 +275,39 @@ On utilise donc `@supports` pour vérifier la prise en charge de `display: grid`
   <ul>
     <li class="card">
       <h2>Un</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
       <h2>Deux</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
       <h2>Trois</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
-       <h2>Quatre</h2>
-       <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <h2>Quatre</h2>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
-       <h2>Cinq</h2>
-       <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <h2>Cinq</h2>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
       <h2>Six</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
   </ul>
 </div>
@@ -295,7 +322,9 @@ On utilise donc `@supports` pour vérifier la prise en charge de `display: grid`
 Là encore, on peut utiliser les requêtes de fonctionnalité pour surcharger `display: inline-block`. Ici aussi, il n'est pas nécessaire de tout surcharger. Pour les éléments concernés par `inline-block`, ils deviendront des objets de la grille et `inline-block` ne s'appliquera plus. Dans l'exemple qui suit, on utilise la propriété `vertical-align` sur les éléments lorsqu'on utilise le mode `inline-block`, cette propriété n'étant pas appliquée aux éléments d'une grille, elle est ignorée lorsque l'élément devient un objet de la grille.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -346,27 +375,39 @@ Là encore, on peut utiliser les requêtes de fonctionnalité pour surcharger `d
   <ul>
     <li class="card">
       <h2>Un</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
       <h2>Deux</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
       <h2>Trois</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
-       <h2>Quatre</h2>
-       <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <h2>Quatre</h2>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
-       <h2>Cinq</h2>
-       <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <h2>Cinq</h2>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
     <li class="card">
       <h2>Six</h2>
-      <p>On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.</p>
+      <p>
+        On peut utiliser la grille CSS pour surcharger d'anciennes méthodes.
+      </p>
     </li>
   </ul>
 </div>

@@ -18,9 +18,9 @@ l10n:
 [To-do リストアプリ](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（[ライブ実行のアプリを表示](https://mdn.github.io/dom-examples/to-do-notifications/)）では、 {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して通知を発行し、希望する本文、アイコン、タイトルを指定するために引数を渡します。
 
 ```js
-const notification = new Notification('To do list', {
+const notification = new Notification("To do list", {
   body: text,
-  icon: img
+  icon: img,
 });
 ```
 

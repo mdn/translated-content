@@ -1,7 +1,6 @@
 ---
 title: Tipos de input de HTML5
 slug: Learn/Forms/HTML5_input_types
-original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
@@ -14,7 +13,7 @@ En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimo
       <th scope="row">Requisitos previos:</th>
       <td>
         Formación básica en informática, y una
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >comprensión básica de HTML</a
         >.
       </td>
@@ -38,7 +37,7 @@ Debido a que la apariéncia de un control de formulario puede ser algo distinta 
 Este tipo de campo se define utilizando el valor `email` en el atributo [`type`](/es/docs/Web/HTML/Element/input#type) del elemento \<input>:
 
 ```html
-<input type="email" id="email" name="email">
+<input type="email" id="email" name="email" />
 ```
 
 Cuando se utiliza este valor [`type`](/es/docs/Web/HTML/Element/input#type) , se le obliga al usuario a escribir dentro del campo una dirección de correo electrónico válida. Cualquier otro contenido ocasiona que el navegador muestre un mensaje de error cuando se envía el formulario. Puedes verlo en acción en la siguiente captura de pantalla
@@ -48,7 +47,7 @@ Cuando se utiliza este valor [`type`](/es/docs/Web/HTML/Element/input#type) , se
 Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input `email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
 
 ```html
-<input type="email" id="email" name="email" multiple>
+<input type="email" id="email" name="email" multiple />
 ```
 
 En algunos dispositivos, en particular dispositivos táctiles con teclados dinámicos como los smart phones, debería presentarse un teclado virtual que es más adecuado para introducir direcciones de correo electrónico, incluyendo la tecla `@`. Mira como ejemplo la siguiente captura de pantalla del teclado de Firefox para Android:
@@ -74,7 +73,7 @@ Ten en cuenta que `a@b` es una dirección de correo electrónico válida de acue
 Los campos de búsqueda están destinados a ser utilizados para crear cajas de búsqueda en páginas y aplicaciones. Este tipo de campo se define utilizando el valor `search` en su atributo [`type`](/es/docs/Web/HTML/Element/input#type):
 
 ```html
-<input type="search" id="search" name="search">
+<input type="search" id="search" name="search" />
 ```
 
 La diferéncia principal entre un campo `text` y un campo `search`, es la forma en que el navegador aplica estilo a su apariéncia. A menudo los campos `search` se muestran con bordes redondeados; y a veces también muestran una "Ⓧ", el cual despeja el campo de cualquier valor cuando se pulsa sobre él. Adicionalmente, en dispositivos con teclado dinámico, la tecla enter del teclado puede leer "**search**" o mostrar un icono de lupa.
@@ -90,7 +89,7 @@ Otra característica que vale la pena señalar es que se puede guardar los valor
 Se puede crear un campo especial para introducir números de teléfono utilizando `tel` como valor del atributo [`type`](/es/docs/Web/HTML/Element/input#type):
 
 ```html
-<input type="tel" id="tel" name="tel">
+<input type="tel" id="tel" name="tel" />
 ```
 
 Cuando se accede desde un dispositivo táctil con teclados dinámicos, muchos de ellos mostrarán un teclado numérico cuando se encuentren con `type="tel"`, lo que significa que este tipo es útil no sólo para ser utilizado para números de teléfono, sino también cuando sea útil un teclado numérico.
@@ -108,7 +107,7 @@ Como mencionamos anteriormente, se puede utilizar el atributo [`pattern`](/es/do
 Se puede crear un tipo especial de campo para introducir URLs utilizando el valor `url` para el atributo [`type`](/es/docs/Web/HTML/Element/input#type):
 
 ```html
-<input type="url" id="url" name="url">
+<input type="url" id="url" name="url" />
 ```
 
 Este tipo añade restricciones de validación en el campo. El navegador informará de un error si no se introdujo el protocolo (como `http:`), o si de algún modo el URL está mal formado. En dispositivos con teclados dinámicos a menudo mostrará por defecto algunas o todas las teclas como los dos puntos, el punto, y la barra inclinada.
@@ -134,13 +133,13 @@ También puedes utilizar el atributo `step` para cambiar el incremento y decreme
 Miremos algunos ejemplos. El primero de los siguientes crea un control numérico cuyo valor está restringido a cualquier valor entre `1` y `10`, y sus botones cambian su valor en incrementos o decrementos de `2`.
 
 ```html
-<input type="number" name="age" id="age" min="1" max="10" step="2">
+<input type="number" name="age" id="age" min="1" max="10" step="2" />
 ```
 
 El segundo crea un control numérico cuyo valor está restringido a cualquier valor entre el `0` y `1` ambos inclusive, y sus botones cambian su valor en incrementos o decrementos de `0.01`.
 
 ```html
-<input type="number" name="change" id="pennies" min="0" max="1" step="0.01">
+<input type="number" name="change" id="pennies" min="0" max="1" step="0.01" />
 ```
 
 El tipo de input `number` tiene sentido cuando esté limitado el rango de valores válidos, por ejemplo la edad de una persona o su altura. Si el rango es demasiado grande para que los cambios de incremento tengan sentido ( por ejemplo los códigos postales de USA, cuyo rango va de `00001` a `99999`), entonces sería una mejor opción utilizar el tipo `tel`: proporciona el teclado numérico mientras que omite el componente de interfaz de usuario de los deslizadores de número.
@@ -163,7 +162,14 @@ Let's look at the code behind the above example, so you can see how its done. Fi
 
 ```html
 <label for="price">Choose a maximum house price: </label>
-<input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+<input
+  type="range"
+  name="price"
+  id="price"
+  min="50000"
+  max="500000"
+  step="100"
+  value="250000" />
 <output class="price-output" for="price"></output>
 ```
 
@@ -174,13 +180,13 @@ One problem with sliders is that they don't offer any kind of visual feedback as
 To actually display the current value, and update it as it changed, you must use JavaScript, but this is relatively easy to do:
 
 ```js
-const price = document.querySelector('#price')
-const output = document.querySelector('.price-output')
+const price = document.querySelector("#price");
+const output = document.querySelector(".price-output");
 
-output.textContent = price.value
+output.textContent = price.value;
 
-price.addEventListener('input', function() {
-  output.textContent = price.value
+price.addEventListener("input", function () {
+  output.textContent = price.value;
 });
 ```
 
@@ -205,7 +211,7 @@ Let's look at the different available types in brief. Note that the usage of the
 [`<input type="datetime-local">`](/es/docs/Web/HTML/Element/input/datetime-local) creates a widget to display and pick a date with time with no specific time zone information.
 
 ```html
-<input type="datetime-local" name="datetime" id="datetime">
+<input type="datetime-local" name="datetime" id="datetime" />
 ```
 
 ### `month`
@@ -213,7 +219,7 @@ Let's look at the different available types in brief. Note that the usage of the
 [`<input type="month">`](/es/docs/Web/HTML/Element/input/month) creates a widget to display and pick a month with a year.
 
 ```html
-<input type="month" name="month" id="month">
+<input type="month" name="month" id="month" />
 ```
 
 ### `time`
@@ -221,7 +227,7 @@ Let's look at the different available types in brief. Note that the usage of the
 [`<input type="time">`](/es/docs/Web/HTML/Element/input/time) creates a widget to display and pick a time value. While time may _display_ in 12-hour format, the _value returned_ is in 24-hour format.
 
 ```html
-<input type="time" name="time" id="time">
+<input type="time" name="time" id="time" />
 ```
 
 ### `week`
@@ -231,7 +237,7 @@ Let's look at the different available types in brief. Note that the usage of the
 Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year—which may not include the first day of the year, or may include the last few days of the previous year.
 
 ```html
-<input type="week" name="week" id="week">
+<input type="week" name="week" id="week" />
 ```
 
 ### Constraining date/time values
@@ -240,7 +246,13 @@ All date and time controls can be constrained using the [`min`](/es/docs/Web/HTM
 
 ```html
 <label for="myDate">When are you available this summer?</label>
-<input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate">
+<input
+  type="date"
+  name="myDate"
+  min="2013-06-01"
+  max="2013-08-31"
+  step="7"
+  id="myDate" />
 ```
 
 ### Browser support for date/time inputs
@@ -256,7 +268,7 @@ Colors are always a bit difficult to handle. There are many ways to express them
 A `color` control can be created using the {{HTMLElement("input")}} element with its [`type`](/es/docs/Web/HTML/Element/input#type) attribute set to the value `color`:
 
 ```html
-<input type="color" name="color" id="color">
+<input type="color" name="color" id="color" />
 ```
 
 When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. The following screenshot taken on Firefox for macOS provides an example:

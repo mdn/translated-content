@@ -1,12 +1,6 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - HTTP
-  - Reference
-  - Response
-  - header
-translation_of: Web/HTTP/Headers/ETag
 ---
 
 {{HTTPSidebar}}

@@ -10,15 +10,21 @@ SVG の **`<stop>`** 要素は、グラデーションで使用する色と位�
 <h2 id="Example">例</h2>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 10 10"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="myGradient" gradientTransform="rotate(90)">
-      <stop offset="5%"  stop-color="gold" />
+      <stop offset="5%" stop-color="gold" />
       <stop offset="95%" stop-color="red" />
     </linearGradient>
   </defs>
@@ -34,13 +40,13 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("offset")}}
   - : この属性は、グラデーションベクトルに沿って配置される色停止点の位置を定義します。
-    *値の型*: [**\<number>**](/ja/docs/Web/SVG/Content_type#number)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage); *既定値*: `0`; *アニメーション*: **可**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("stop-color")}}
   - : この属性は、グラデーションの色停止点の色を定義します。CSS プロパティとして使用することができます。
-    *値の型*: `currentcolor`|[**\<color>**](/ja/docs/Web/SVG/Content_type#color)|[**\<icccolor>**](/ja/docs/Web/SVG/Content_type#icccolor); *既定値*: `black`; *アニメーション*: **可**
+    _値の型_: `currentcolor`|[**\<color>**](/ja/docs/Web/SVG/Content_type#color)|[**\<icccolor>**](/ja/docs/Web/SVG/Content_type#icccolor); _既定値_: `black`; _アニメーション_: **可**
 - {{SVGAttr("stop-opacity")}}
   - : この属性はグラデーションの色停止点の (不) 透明度を表します。CSS プロパティとして使用することができます。
-    *値の型*: [**\<opacity>**](/ja/docs/Web/SVG/Content_type#opacity_value); *既定値*: `1`; *アニメーション*: **可**
+    _値の型_: [**\<opacity>**](/ja/docs/Web/SVG/Content_type#opacity_value); _既定値_: `1`; _アニメーション_: **可**
 
 ### グローバル属性
 

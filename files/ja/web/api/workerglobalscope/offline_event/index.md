@@ -1,5 +1,5 @@
 ---
-title: 'WorkerGlobalScope: offline イベント'
+title: "WorkerGlobalScope: offline イベント"
 slug: Web/API/WorkerGlobalScope/offline_event
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('offline', (event) => { });
+addEventListener("offline", (event) => {});
 
-onoffline = (event) => { };
+onoffline = (event) => {};
 ```
 
 ## イベント型
@@ -29,15 +29,15 @@ onoffline = (event) => { };
 
 ```js
 self.onoffline = () => {
-  console.log('Your worker is now offline');
-}
+  console.log("Your worker is now offline");
+};
 ```
 
 同じスニペットですが、 `addEventListener()` を使用したものです。
 
 ```js
-self.addEventListener('offline', () => {
-  console.log('Your worker is now offline');
+self.addEventListener("offline", () => {
+  console.log("Your worker is now offline");
 });
 ```
 

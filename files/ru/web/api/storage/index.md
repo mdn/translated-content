@@ -1,15 +1,6 @@
 ---
 title: Storage
 slug: Web/API/Storage
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Storage
-  - Web Storage
-  - data
-translation_of: Web/API/Storage
 ---
 
 {{APIRef("Web Storage API")}}
@@ -44,32 +35,32 @@ translation_of: Web/API/Storage
 В данном примере мы получаем доступ к объекту Storage вызывая localStorage. Для начала мы проверяем содержит ли local storage элементы данных используя `!localStorage.getItem('bgcolor')`. Если да, мы вызываем функцию `setStyles()` которая получает элементы данных используя {{domxref("localStorage.getItem()")}} и использует их значения для обновления стилей на странице. Если нет, мы вызывает другую функцию, `populateStorage()`, которая использует {{domxref("localStorage.setItem()")}} что бы установить значения для элементов, потом вызываем `setStyles()`.
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
 }
 
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
 
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 

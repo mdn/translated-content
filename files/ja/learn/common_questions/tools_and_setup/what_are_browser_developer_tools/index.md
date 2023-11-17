@@ -1,7 +1,6 @@
 ---
 title: ブラウザーの開発者ツールとは？
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/What_are_browser_developer_tools
 ---
 
 近頃のブラウザーにはパワフルな開発者ツールが入っています。開発者ツールでは、現在の HTML や CSS、JavaScript の状態を検証したり、ページがどういった資産にアクセスし、どれだけ時間がかかったかといった多様なことができます。この記事ではブラウザーの開発者ツールの使い方について説明します。
@@ -20,7 +19,7 @@ original_slug: Learn/Common_questions/What_are_browser_developer_tools
 
 - **Internet Explorer および Edge:**
 
-    <kbd>F12</kbd>
+  <kbd>F12</kbd>
 
   - **macOS:** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
 
@@ -92,7 +91,7 @@ CSS ビューアーの一番上にいくつかのタブメニューがあるこ�
 各ブラウザーのインスペクターの詳細については以下をご覧ください。
 
 - [Firefox インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [Internet Explorer DOM エクスプローラー (英語)](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/dn255008(v=vs.85))
+- [Internet Explorer DOM エクスプローラー (英語)](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/dn255008(v=vs.85)>)
 - [Chrome DOM インスペクタ](https://developer.chrome.com/docs/devtools/dom/) (Opera のインスペクタもこれと同じ動作です)
 - [Safari DOM インスペクタおよびスタイルエクスプローラー (英語)](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
@@ -159,7 +158,7 @@ JavaScript コンソールは、期待通りに使用されていない JavaScri
 
 開発者ツールがすでに開いている場合は、「コンソール」タブをクリックまたは押します。
 
-そうでない場合、Firefox では、<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> またはメニューコマンドを使用して、コンソールを直接開くことができます。メニュー ![](2014-01-10-13-08-08-f52b8c.png) _➤ ウェブ開発者 ➤ ウェブコンソール、または _ ツール ➤ ウェブコンソール_ 他のブラウザーでは、開発者ツールを開き、コンソールタブをクリックしてください。
+そうでない場合、Firefox では、<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> またはメニューコマンドを使用して、コンソールを直接開くことができます。メニュー ![](2014-01-10-13-08-08-f52b8c.png) \_➤ ウェブ開発者 ➤ ウェブコンソール、または \_ ツール ➤ ウェブコンソール\_ 他のブラウザーでは、開発者ツールを開き、コンソールタブをクリックしてください。
 
 すると、次のようなウィンドウが表示されます。
 
@@ -168,17 +167,20 @@ JavaScript コンソールは、期待通りに使用されていない JavaScri
 以下のコードをひとつずつコンソールに入力して（Enterキーを押して）、何が起こるか試してみてください。
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 ```js
-document.querySelector('html').style.backgroundColor = 'purple';
+document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-const myWordmark = document.createElement('img');
-myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myWordmark.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png",
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 では、次のような誤ったバージョンのコードを入力してみて、何が返されるかを見てみましょう。
@@ -188,13 +190,16 @@ alert('hello!);
 ```
 
 ```js example-bad
-document.cheeseSelector('html').style.backgroundColor = 'purple';
+document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
 ```js example-bad
-const myWordmark = document.createElement('img');
-myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myBanana.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png",
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 ブラウザーが返すエラーの種類を見ることができるようになります。多くの場合、これらのエラーはかなり不可解ですが、これらの問題を解決するのはかなり簡単なはずです。
@@ -204,7 +209,7 @@ document.querySelector('h1').appendChild(myWordmark);
 様々なブラウザーでの JavaScript コンソールについて詳しく知ることができます。
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [IE JavaScript console](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))
+- [IE JavaScript console](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85)>)
 - [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera's inspector works the same as this)
 - [Safari Console](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 

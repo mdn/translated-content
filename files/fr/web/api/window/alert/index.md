@@ -1,8 +1,6 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-translation_of: Web/API/Window/alert
-browser-compat: api.Window.alert
 ---
 
 {{APIRef}}
@@ -14,8 +12,8 @@ Sous certaines conditions, par exemple au changement d'onglet, le navigateur pou
 ## Syntaxe
 
 ```js
-alert()
-alert(message)
+alert();
+alert(message);
 ```
 
 ### Paramètres

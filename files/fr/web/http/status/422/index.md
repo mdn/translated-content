@@ -1,7 +1,6 @@
 ---
 title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
-translation_of: Web/HTTP/Status/422
 ---
 
 {{HTTPSidebar}}
@@ -19,7 +18,3 @@ Le code de statut de réponse HTTP **`422 Unprocessable Entity`** indique que le
 ## Spécifications
 
 {{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}

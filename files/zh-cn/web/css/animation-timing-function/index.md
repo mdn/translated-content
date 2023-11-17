@@ -120,26 +120,26 @@ animation-timing-function: unset;
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 
@@ -183,26 +183,26 @@ animation-timing-function: unset;
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 

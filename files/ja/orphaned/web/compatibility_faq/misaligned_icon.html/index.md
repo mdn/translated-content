@@ -1,7 +1,6 @@
 ---
 title: アイコン、画像の表示位置がずれる
 slug: orphaned/Web/Compatibility_FAQ/Misaligned_Icon.html
-original_slug: Web/Compatibility_FAQ/Misaligned_Icon.html
 ---
 
 ## 概要

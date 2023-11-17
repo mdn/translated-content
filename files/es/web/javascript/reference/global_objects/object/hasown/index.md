@@ -46,16 +46,16 @@ El siguiente código muestra como determinar si el objeto `example` contiene una
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false - 'prop' no ha sido definido
+Object.hasOwn(example, "prop"); // false - 'prop' no ha sido definido
 
-example.prop = 'existe';
-Object.hasOwn(example, 'prop');   // true - 'prop' ha sido definido
+example.prop = "existe";
+Object.hasOwn(example, "prop"); // true - 'prop' ha sido definido
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true - la propiedad existe con valor nulo
+Object.hasOwn(example, "prop"); // true - la propiedad existe con valor nulo
 
 example.prop = undefined;
-Object.hasOwn(example, 'prop');   // true - la propiedad existe con valor de indefinido
+Object.hasOwn(example, "prop"); // true - la propiedad existe con valor de indefinido
 ```
 
 ### Propiedades directas vs. heredadas
@@ -64,17 +64,17 @@ El siguiente ejemplo diferencía entre propiedades directas y propiedades hereda
 
 ```js
 const example = {};
-example.prop = 'existe';
+example.prop = "existe";
 
 // `hasOwn` solo devolverá verdadero para propiedades directas:
-Object.hasOwn(example, 'prop');                      // Devuelve verdadero
-Object.hasOwn(example, 'toString');                 // Devuelve falso
-Object.hasOwn(example, 'hasOwnProperty');   // Devuelve falso
+Object.hasOwn(example, "prop"); // Devuelve verdadero
+Object.hasOwn(example, "toString"); // Devuelve falso
+Object.hasOwn(example, "hasOwnProperty"); // Devuelve falso
 
 // El operador `in` devolverá verdadero para propiedades directas o heredadas:
-'prop' in example;                                   // Devuelve verdadero
-'toString' in example;                              // Devuelve verdadero
-'hasOwnProperty' in example;                // Devuelve verdadero
+"prop" in example; // Devuelve verdadero
+"toString" in example; // Devuelve verdadero
+"hasOwnProperty" in example; // Devuelve verdadero
 ```
 
 ### Iterando sobre las propiedades de un objeto
@@ -104,9 +104,9 @@ for (const name in example) {
 Los elementos de un {{jsxref("Array")}} son definidos como propiedades directas, asi que se puede usar el método `hasOwn()` para comprobar si existe un índice en particular:
 
 ```js
-const fruits = ['Apple', 'Banana', 'Watermelon', 'Orange'];
-Object.hasOwn(fruits, 3);   // true ('Orange')
-Object.hasOwn(fruits, 4);   // false - not defined
+const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
+Object.hasOwn(fruits, 3); // true ('Orange')
+Object.hasOwn(fruits, 4); // false - not defined
 ```
 
 ### Casos problematicos de hasOwnProperty
@@ -118,10 +118,10 @@ const foo = {
   hasOwnProperty() {
     return false;
   },
-  bar: 'Los dragones están fuera de la oficina',
+  bar: "Los dragones están fuera de la oficina",
 };
 
-if (Object.hasOwn(foo, 'bar')) {
+if (Object.hasOwn(foo, "bar")) {
   console.log(foo.bar); //true - la reimplementación de hasOwnProperty() no afecta a Object
 }
 ```
@@ -131,8 +131,8 @@ También se puede usar para probar objetos creados usando
 
 ```js
 const foo = Object.create(null);
-foo.prop = 'existe';
-if (Object.hasOwn(foo, 'prop')) {
+foo.prop = "existe";
+if (Object.hasOwn(foo, "prop")) {
   console.log(foo.prop); //true - funciona independientemente de cómo se crea el objeto.
 }
 ```

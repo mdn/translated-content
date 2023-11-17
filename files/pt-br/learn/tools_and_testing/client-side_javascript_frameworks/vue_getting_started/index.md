@@ -1,7 +1,6 @@
 ---
 title: Iniciando com Vue
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_iniciando
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -15,11 +14,11 @@ Agora vamos apresentar o Vue, o nosso terceiro frameworks. Neste artigo, examina
       <td>
         <p>
           Conhecimento com as liguagens
-          <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, e
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, conhecimento do
+          <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
+          <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e
+          <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>, conhecimento do
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>
@@ -56,21 +55,21 @@ Para uma boa comparação (mas potencialmente tendenciosa) entre o Vue e muitos 
 
 ## Installation
 
-To use Vue in an existing site, you can drop one of the following [`<script>`](/en-US/docs/Web/HTML/Element/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like JQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
+To use Vue in an existing site, you can drop one of the following [`<script>`](/pt-BR/docs/Web/HTML/Element/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like JQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
 
 - Development Script (Unoptimized, but includes console warnings. Great for development
 
-  ```html
+  ```vue
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   ```
 
 - Production Script (Optimized version, minimal console warnings. It is recommended that you specify a version number when including Vue on your site so that any framework updates do not break your live site without you knowing.)
 
-  ```html
+  ```vue
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   ```
 
-However, this approach has some limitations. To build more complex apps, you’ll want to use the [Vue NPM package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
+However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue NPM package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
 
 1. Node.js 8.11+ installed.
 2. npm or yarn.
@@ -91,7 +90,7 @@ yarn global add @vue/cli
 
 Once installed, to initialize a new project you can then open a terminal in the directory you want to create the project in, and run `vue create <project-name>`. The CLI will then give you a list of project configurations you can use. There are a few preset ones, and you can make your own. These options let you configure things like TypeScript, linting, vue-router, testing, and more.
 
-We’ll look at using this below.
+We'll look at using this below.
 
 ## Initializing a new project
 
@@ -100,47 +99,47 @@ To explore various features of Vue, we will be building up a sample todo list ap
 1. In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
 2. Use the arrow keys and
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    to select the "Manually select features" option.
+   to select the "Manually select features" option.
 
-3. The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press
+3. The first menu you'll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    to proceed.
+   to proceed.
 
-4. Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit
+4. Next you'll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    again. This will help us catch common errors, but not be overly opinionated.
+   again. This will help us catch common errors, but not be overly opinionated.
 
 5. Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    to continue.
+   to continue.
 
 6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    .
+   .
 
 7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type
 
-    <kbd>y</kbd>
+   <kbd>y</kbd>
 
-    , otherwise type
+   , otherwise type
 
-    <kbd>n</kbd>
+   <kbd>n</kbd>
 
-    .
+   .
 
 The CLI will now begin scaffolding out your project, and installing all of your dependencies.
 
-If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag `--packageManager=<package-manager>`, when you run `vue create`. So if you wanted to create the `moz-todo-vue` project with npm and you'd previously chosen yarn, you’d run `vue create moz-todo-vue --packageManager=npm`.
+If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag `--packageManager=<package-manager>`, when you run `vue create`. So if you wanted to create the `moz-todo-vue` project with npm and you'd previously chosen yarn, you'd run `vue create moz-todo-vue --packageManager=npm`.
 
 > **Nota:** We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
 
@@ -179,7 +178,7 @@ Let's explore this now.
 
 ### App.vue
 
-Open your `App.vue` file — you’ll see that it has three parts: `<template>`, `<script>`, and `<style>`, which contain the component’s template, scripting, and styling information. All Single File Components share this same basic structure.
+Open your `App.vue` file — you'll see that it has three parts: `<template>`, `<script>`, and `<style>`, which contain the component's template, scripting, and styling information. All Single File Components share this same basic structure.
 
 `<template>` contains all the markup structure and display logic of your component. Your template can contain any valid HTML, as well as some Vue-specific syntax that we'll cover later.
 
@@ -189,15 +188,15 @@ Open your `App.vue` file — you’ll see that it has three parts: `<template>`,
 
 In the case of `App.vue`, our default export sets the name of the component to `app` and registers the `HelloWorld` component by adding it into the `components` property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.
 
-```js
-import HelloWorld from './components/HelloWorld.vue';
+```jsx
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     //You can register components locally here.
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 ```
 
@@ -209,7 +208,7 @@ export default {
 
 ## Running the app locally
 
-The Vue CLI comes with a built-in development server. This allows you to run your app locally so you can test it easily without needing to configure a server yourself. The CLI adds a `serve` command to the project’s `package.json` file as an npm script, so you can easily run it.
+The Vue CLI comes with a built-in development server. This allows you to run your app locally so you can test it easily without needing to configure a server yourself. The CLI adds a `serve` command to the project's `package.json` file as an npm script, so you can easily run it.
 
 In your terminal, try running `npm run serve` (or `yarn serve` if you prefer yarn). Your terminal should output something like the following:
 
@@ -227,45 +226,45 @@ INFO  Starting development server...
   To create a production build, run npm run build.
 ```
 
-If you navigate to the “local” address in a new browser tab (this should be something like `http://localhost:8080` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
+If you navigate to the "local" address in a new browser tab (this should be something like `http://localhost:8080` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
 
 ![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
 
 ## Making a couple of changes
 
-Let's make our first change to the app — we’ll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/en-US/docs/Web/HTML/Element/img) element from the template section:
+Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/pt-BR/docs/Web/HTML/Element/img) element from the template section:
 
-```html
-<img alt="Vue logo" src="./assets/logo.png">
+```vue
+<img alt="Vue logo" src="./assets/logo.png" />
 ```
 
-If your server is still running, you should see the logo removed from the rendered site almost instantly. Let’s also remove the `HelloWorld` component from our template.
+If your server is still running, you should see the logo removed from the rendered site almost instantly. Let's also remove the `HelloWorld` component from our template.
 
 First of all delete this line:
 
-```html
-<HelloWorld msg="Welcome to Your Vue.js App"/>
+```vue
+<HelloWorld msg="Welcome to Your Vue.js App" />
 ```
 
-If you save your `App.vue` file now, the rendered app will throw an error because we’ve registered the component but are not using it. We also need to remove the lines from inside the `<script>` element that import and register the component:
+If you save your `App.vue` file now, the rendered app will throw an error because we've registered the component but are not using it. We also need to remove the lines from inside the `<script>` element that import and register the component:
 
 Delete these lines now:
 
 ```js
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 ```
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 
 Your rendered app should no longer show an error, just a blank page, as we currently have no visible content inside `<template>`.
 
-Let’s add a new `<h1>` inside `<div id="app">`. Since we’re going to be creating a todo list app below, let's set our header text to "To-Do List". Add it like so:
+Let's add a new `<h1>` inside `<div id="app">`. Since we're going to be creating a todo list app below, let's set our header text to "To-Do List". Add it like so:
 
-```html
+```vue
 <template>
   <div id="app">
     <h1>To-Do List</h1>

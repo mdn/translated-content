@@ -42,7 +42,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 reduceRight 콜백 호출은 다음과 같습니다.
 
 ```js
-array.reduceRight(function(previousValue, currentValue, index, array) {
+array.reduceRight(function (previousValue, currentValue, index, array) {
   // ...
 });
 ```
@@ -54,9 +54,11 @@ array.reduceRight(function(previousValue, currentValue, index, array) {
 함수의 일부 실행 예제는 다음과 같습니다.
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
-  return previousValue + currentValue;
-});
+[0, 1, 2, 3, 4].reduceRight(
+  function (previousValue, currentValue, index, array) {
+    return previousValue + currentValue;
+  },
+);
 ```
 
 콜백은 네 번 호출되며 각 호출의 인수와 반환 값은 다음과 같습니다.
@@ -73,7 +75,12 @@ reduceRight에 의해 반환 된 값은 마지막 콜백 호출 (10)의 값이�
 initialValue를 제공하면 결과는 다음과 같습니다.
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+[0, 1, 2, 3, 4].reduceRight(function (
+  previousValue,
+  currentValue,
+  index,
+  array,
+) {
   return previousValue + currentValue;
 }, 10);
 ```
@@ -93,7 +100,7 @@ reduceRight에 의해 이번에 반환 된 값은 물론 20입니다.
 ### 배열 내 모든 값의 합계 구하기
 
 ```js
-var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+var sum = [0, 1, 2, 3].reduceRight(function (a, b) {
   return a + b;
 });
 // sum is 6
@@ -102,8 +109,12 @@ var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
 ### 이중 배열 전개하기
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
-    return a.concat(b);
+var flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduceRight(function (a, b) {
+  return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
 ```
@@ -112,10 +123,14 @@ var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
 
 ```js
 var a = ["1", "2", "3", "4", "5"];
-var left  = a.reduce(function(prev, cur)      { return prev + cur; });
-var right = a.reduceRight(function(prev, cur) { return prev + cur; });
+var left = a.reduce(function (prev, cur) {
+  return prev + cur;
+});
+var right = a.reduceRight(function (prev, cur) {
+  return prev + cur;
+});
 
-console.log(left);  // "12345"
+console.log(left); // "12345"
 console.log(right); // "54321"
 ```
 
@@ -126,16 +141,19 @@ console.log(right); // "54321"
 ```js
 // ECMA-262, 5 판, 15.4.4.22의 제작 단계
 // 참조 : http://es5.github.io/#x15.4.4.22
-if ('function' !== typeof Array.prototype.reduceRight) {
-  Array.prototype.reduceRight = function(callback /*, initialValue*/) {
-    'use strict';
-    if (null === this || 'undefined' === typeof this) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined' );
+if ("function" !== typeof Array.prototype.reduceRight) {
+  Array.prototype.reduceRight = function (callback /*, initialValue*/) {
+    "use strict";
+    if (null === this || "undefined" === typeof this) {
+      throw new TypeError("Array.prototype.reduce called on null or undefined");
     }
-    if ('function' !== typeof callback) {
-      throw new TypeError(callback + ' is not a function');
+    if ("function" !== typeof callback) {
+      throw new TypeError(callback + " is not a function");
     }
-    var t = Object(this), len = t.length >>> 0, k = len - 1, value;
+    var t = Object(this),
+      len = t.length >>> 0,
+      k = len - 1,
+      value;
     if (arguments.length >= 2) {
       value = arguments[1];
     } else {
@@ -143,7 +161,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
         k--;
       }
       if (k < 0) {
-        throw new TypeError('Reduce of empty array with no initial value');
+        throw new TypeError("Reduce of empty array with no initial value");
       }
       value = t[k--];
     }

@@ -1,7 +1,6 @@
 ---
 title: 使用 shadow DOM
 slug: Web/API/Web_components/Using_shadow_DOM
-original_slug: Web/Web_Components/Using_shadow_DOM
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -15,17 +14,22 @@ Web components 的一个重要属性是封装——可以将标记结构、样�
 本文章假设你对 [DOM（文档对象模型）](/zh-CN/docs/Web/API/Document_Object_Model/Introduction)有一定的了解，它是由不同的元素节点、文本节点连接而成的一个树状结构，应用于标记文档中（例如 Web 文档中常见的 HTML 文档）。请看如下示例，一段 HTML 代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -54,8 +58,8 @@ _Shadow_ DOM 允许将隐藏的 DOM 树附加到常规的 DOM 树中——它以
 可以使用 {{domxref("Element.attachShadow()")}} 方法来将一个 shadow root 附加到任何一个元素上。它接受一个配置对象作为参数，该对象有一个 `mode` 属性，值可以是 `open` 或者 `closed`：
 
 ```js
-let shadow = elementRef.attachShadow({mode: 'open'});
-let shadow = elementRef.attachShadow({mode: 'closed'});
+let shadow = elementRef.attachShadow({ mode: "open" });
+let shadow = elementRef.attachShadow({ mode: "closed" });
 ```
 
 `open` 表示可以通过页面内的 JavaScript 方法来获取 Shadow DOM，例如使用 {{domxref("Element.shadowRoot")}} 属性：
@@ -71,7 +75,7 @@ let myShadowDom = myCustomElem.shadowRoot;
 如果你想将一个 Shadow DOM 附加到 custom element 上，可以在 custom element 的构造函数中添加如下实现（目前，这是 shadow DOM 最实用的用法）：
 
 ```js
-let shadow = this.attachShadow({mode: 'open'});
+let shadow = this.attachShadow({ mode: "open" });
 ```
 
 将 Shadow DOM 附加到一个元素之后，就可以使用 DOM APIs 对它进行操作，就和处理常规 DOM 一样。
@@ -107,7 +111,7 @@ class PopUpInfo extends HTMLElement {
 
 ```js
 // 创建 shadow root
-var shadow = this.attachShadow({mode: 'open'});
+var shadow = this.attachShadow({ mode: "open" });
 ```
 
 ### 创建 shadow DOM 结构
@@ -116,26 +120,26 @@ var shadow = this.attachShadow({mode: 'open'});
 
 ```js
 // 创建 span
-var wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-var icon = document.createElement('span');
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
-var info = document.createElement('span');
-info.setAttribute('class','info');
+var wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+var icon = document.createElement("span");
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
+var info = document.createElement("span");
+info.setAttribute("class", "info");
 
 // 获取属性的内容并将内容添加到 info 元素内
-var text = this.getAttribute('text');
+var text = this.getAttribute("text");
 info.textContent = text;
 
 // 插入 icon
 var imgUrl;
-if(this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
+if (this.hasAttribute("img")) {
+  imgUrl = this.getAttribute("img");
 } else {
-  imgUrl = 'img/default.png';
+  imgUrl = "img/default.png";
 }
-var img = document.createElement('img');
+var img = document.createElement("img");
 img.src = imgUrl;
 icon.appendChild(img);
 ```
@@ -146,7 +150,7 @@ icon.appendChild(img);
 
 ```js
 // 为 shadow DOM 添加一些 CSS 样式
-var style = document.createElement('style');
+var style = document.createElement("style");
 
 style.textContent = `
 .wrapper {
@@ -196,11 +200,13 @@ wrapper.appendChild(info);
 
 ```js
 // 定义新的元素
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card.">
+<popup-info
+  img="img/alt.png"
+  text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info>
 ```
 
 ### 使用外部引入的样式
@@ -211,9 +217,9 @@ customElements.define('popup-info', PopUpInfo);
 
 ```js
 // 将外部引用的样式添加到 Shadow DOM 上
-const linkElem = document.createElement('link');
-linkElem.setAttribute('rel', 'stylesheet');
-linkElem.setAttribute('href', 'style.css');
+const linkElem = document.createElement("link");
+linkElem.setAttribute("rel", "stylesheet");
+linkElem.setAttribute("href", "style.css");
 
 // 将所创建的元素添加到 Shadow DOM 上
 

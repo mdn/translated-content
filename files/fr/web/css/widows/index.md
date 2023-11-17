@@ -1,11 +1,6 @@
 ---
 title: widows
 slug: Web/CSS/widows
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/widows
 ---
 
 {{CSSRef}}
@@ -66,8 +61,13 @@ p:first-child {
 ```html
 <div>
   <p>Un premier paragraphe avec un peu de texte.</p>
-  <p>Un deuxième paragraphe avec un peu plus de texte et qui permet d'illustrer le fonctionnement de widows.</p>
-  <p>Enfin, un troisième paragraphe avec un peu plus de texte que le premier.</p>
+  <p>
+    Un deuxième paragraphe avec un peu plus de texte et qui permet d'illustrer
+    le fonctionnement de widows.
+  </p>
+  <p>
+    Enfin, un troisième paragraphe avec un peu plus de texte que le premier.
+  </p>
 </div>
 ```
 

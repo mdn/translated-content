@@ -1,14 +1,6 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/freeze
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`Object.freeze()`** permet de geler un objet, c'est-à-dire qu'on 
 ## Syntaxe
 
 ```js
-Object.freeze(obj)
+Object.freeze(obj);
 ```
 
 ### Paramètres
@@ -46,8 +38,8 @@ La fonction renvoie l'objet passé en argument, elle ne crée pas une copie « g
 
 ```js
 var obj = {
-  prop: function (){},
-  toto: "truc"
+  prop: function () {},
+  toto: "truc",
 };
 
 // On peut ajouter de nouvelles propriétés,
@@ -68,15 +60,15 @@ Object.isFrozen(obj); // true
 // Maintenant que l'objet est gelé, les changements échoueront
 obj.toto = "eheh"; // échoue silencieusement
 obj.roxor = "ga bu zo meu"; // échoue silencieusement et n'ajoute
-                            // pas la propriété
+// pas la propriété
 
 // ...en mode strict, l'échec se traduira par une exception TypeErrors
-function echec(){
+function echec() {
   "use strict";
   obj.toto = "bipbip"; // renvoie une TypeError
-  delete obj.toto;     // renvoie une TypeError
-  delete obj.roxor;    // renvoie true car l'attribut n' a pas été ajouté
-  obj.bipbip = "arf";  // renvoie une TypeError
+  delete obj.toto; // renvoie une TypeError
+  delete obj.roxor; // renvoie true car l'attribut n' a pas été ajouté
+  obj.bipbip = "arf"; // renvoie une TypeError
 }
 
 echec();
@@ -100,13 +92,13 @@ let a = [0];
 Object.freeze(a);
 // Le tableau ne peut plus être modifié
 
-a[0] = 1;  // échoue silencieusement
+a[0] = 1; // échoue silencieusement
 a.push(2); // échoue silencieusement
 
 // en mode strict, de telles tentatives
 // déclencheront des exceptions TypeError
 function echec() {
-  "use strict"
+  "use strict";
   a[0] = 1;
   a.push(2);
 }
@@ -118,13 +110,13 @@ L'exemple qui suit illustre comment les propriétés qui sont des objets peuvent
 
 ```js
 obj1 = {
-  internal: {}
+  internal: {},
 };
 
 Object.freeze(obj1);
-obj1.internal.a = 'valeurA';
+obj1.internal.a = "valeurA";
 
-obj1.internal.a // 'valeurA'
+obj1.internal.a; // 'valeurA'
 ```
 
 L'objet qui est gelé est immuable mais ce n'est pas nécessairement une constante. Pour obtenir une constante, il faut que l'ensemble des références (directes et indirectes) pointe vers des objets immuables. Les chaînes de caractères, les nombres et les booléens sont toujours immuables. La plupart du temps, on aura besoin de créer des constantes au cas par cas (et non de façon générale).
@@ -139,8 +131,8 @@ var employé = {
   designation: "Développeur",
   adresse: {
     cp: "72000",
-    ville: "Le Mans"
-  }
+    ville: "Le Mans",
+  },
 };
 
 Object.freeze(employé);
@@ -155,15 +147,13 @@ Pour rendre l'objet complètement immuable, on gèle chacun des objets qu'il con
 
 ```js
 function deepFreeze(obj) {
-
   // On récupère les noms des propriétés définies sur obj
   var propNames = Object.getOwnPropertyNames(obj);
 
   // On gèle les propriétés avant de geler l'objet
-  for(let name of propNames){
+  for (let name of propNames) {
     let value = obj[name];
-    obj[name] = value && typeof value === "object" ?
-      deepFreeze(value) : value;
+    obj[name] = value && typeof value === "object" ? deepFreeze(value) : value;
   }
 
   // On gèle l'objet initial
@@ -172,12 +162,12 @@ function deepFreeze(obj) {
 
 obj2 = {
   internal: {
-    a: null
-  }
+    a: null,
+  },
 };
 
 deepFreeze(obj2);
-obj2.internal.a = 'valeurB'; // échouera silencieusement en mode non-strict
+obj2.internal.a = "valeurB"; // échouera silencieusement en mode non-strict
 obj2.internal.a; // null
 ```
 

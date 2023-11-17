@@ -1,12 +1,6 @@
 ---
-title: ':-moz-submit-invalid'
+title: ":-moz-submit-invalid"
 slug: Web/CSS/:-moz-submit-invalid
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-submit-invalid
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -18,7 +12,8 @@ Par défaut, aucun style n'est appliqué. Vous pouvez utiliser cette pseudo-clas
 ## Syntaxe
 
 ```css
-:-moz-submit-invalid
+:-moz-submit-invalid {
+}
 ```
 
 ## Spécifications

@@ -1,15 +1,6 @@
 ---
-title: 'Apprendre le HTML : guides et didacticiels'
+title: "Apprendre le HTML : guides et didacticiels"
 slug: Learn/HTML
-tags:
-  - Apprentissage
-  - Débutant
-  - Guide
-  - HTML
-  - Introduction
-  - Rubrique
-translation_of: Learn/HTML
-original_slug: Apprendre/HTML
 ---
 
 {{LearnSidebar}}

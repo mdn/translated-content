@@ -35,7 +35,6 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 ```json
 {
-
   "description": "Native messaging example extension",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -60,7 +59,6 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
   },
 
   "permissions": ["nativeMessaging"]
-
 }
 ```
 
@@ -82,7 +80,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -99,7 +97,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 >   "description": "Example host for native messaging",
 >   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
 >   "type": "stdio",
->   "allowed_extensions": [ "ping_pong@example.org" ]
+>   "allowed_extensions": ["ping_pong@example.org"]
 > }
 > ```
 >
@@ -190,9 +188,7 @@ function onError(error) {
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage(
-    "ping_pong",
-    "ping");
+  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```

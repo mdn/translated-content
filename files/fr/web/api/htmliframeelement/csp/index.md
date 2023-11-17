@@ -1,8 +1,6 @@
 ---
 title: HTMLIFrameElement.csp
 slug: Web/API/HTMLIFrameElement/csp
-translation_of: HTMLIFrameElement.csp
-browser-compat: api.HTMLIFrameElement.csp
 ---
 
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
@@ -12,8 +10,8 @@ La propriété **`csp`** de l'interface {{domxref("HTMLIFrameElement")}} spécif
 ## Syntaxe
 
 ```js
-var csp = HTMLIFrameElement.csp
-HTMLIFrameElement.csp = csp
+var csp = HTMLIFrameElement.csp;
+HTMLIFrameElement.csp = csp;
 ```
 
 ### Valeur

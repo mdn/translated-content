@@ -10,8 +10,8 @@ slug: Web/API/ShadowRoot/innerHTML
 ## 構文
 
 ```js
-var domString = shadowRoot.innerHTML
-shadowRoot.innerHTML = domString
+var domString = shadowRoot.innerHTML;
+shadowRoot.innerHTML = domString;
 ```
 
 ### 値
@@ -21,10 +21,10 @@ shadowRoot.innerHTML = domString
 ## 例
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 
-shadow.innerHTML = '<strong>This element should be more important!</strong>';
+shadow.innerHTML = "<strong>This element should be more important!</strong>";
 ```
 
 ## 仕様書

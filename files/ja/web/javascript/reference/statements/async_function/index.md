@@ -229,7 +229,7 @@ setTimeout(parallel, 10000); // 本当に並列処理となるため 1 秒後に
 `sequentialStart` では、最初の `await` のために実行が 2 秒間待機し、 2 つ目の `await` のためにさらに 1 秒間待機します。 2 つ目のタイマーは最初のタイマーが起動している間は作成されません。コードは 3 秒後に終了します。
 
 `concurrentStart` では、両方のタイマーが作成され、両方とも `await` される、すなわち待機させられます。タイマーは同時に実行されているため、 3 秒後ではなく 2 秒後に、すなわち最も遅いタイマーにあわせて終了します。
- しかし、 `await` の呼び出しは依然として逐次処理であり、これは 2 つ目の `await` が 1 つ目の終了まで待つことを意味します。このケースでは、最も速いタイマーが最も遅いタイマーのあとに処理されることになります。
+しかし、 `await` の呼び出しは依然として逐次処理であり、これは 2 つ目の `await` が 1 つ目の終了まで待つことを意味します。このケースでは、最も速いタイマーが最も遅いタイマーのあとに処理されることになります。
 
 複数の処理を安全に並列に実行したい場合は、 [`Promise.all`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) または
 [`Promise.allSettled`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled) の呼び出しで待つ必要があります。

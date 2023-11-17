@@ -33,10 +33,10 @@ firstImage = imageCollection[0];
 
 ```js
 var ilist = document.images;
-for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == "banner.gif") {
-         // 发现了 banner 图片
-    }
+for (var i = 0; i < ilist.length; i++) {
+  if (ilist[i].src == "banner.gif") {
+    // 发现了 banner 图片
+  }
 }
 ```
 

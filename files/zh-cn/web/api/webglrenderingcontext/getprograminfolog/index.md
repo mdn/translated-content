@@ -27,8 +27,8 @@ gl.getProgramInfoLog(program);
 ### Checking program errors
 
 ```js
-var canvas = document.getElementsById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementsById("canvas");
+var gl = canvas.getContext("webgl");
 var program = gl.createProgram();
 
 //vsSource is the source-code-string of vertex-shader

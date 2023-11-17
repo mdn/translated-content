@@ -25,24 +25,21 @@ var ndList = elementNodeReference.childNodes;
 
 ```js
 // parg는 <p> 요소 개체 참조
-if (parg.hasChildNodes())
-// 그래서, 먼저 개체가 찼는 지(자식 노드가 있는 지) 검사
-  {
-    var children = parg.childNodes;
-    for (var i = 0; i < children.length; i++)
-    {
+if (parg.hasChildNodes()) {
+  // 그래서, 먼저 개체가 찼는 지(자식 노드가 있는 지) 검사
+  var children = parg.childNodes;
+  for (var i = 0; i < children.length; i++) {
     // children[i]로 각 자식에 무언가를 함
     // 주의: 목록은 유효해(live), 자식 추가나 제거는 목록을 바꿈
-    };
-  };
+  }
+}
 
 // This는 노드에서 모든 자식을 제거하는 한 방법
 // box는 자식 있는 요소 개체 참조
-while (box.firstChild)
-  {
-    //목록은 유효해서(LIVE) 호출마다 재배열(re-index)함
-    box.removeChild(box.firstChild);
-  };
+while (box.firstChild) {
+  //목록은 유효해서(LIVE) 호출마다 재배열(re-index)함
+  box.removeChild(box.firstChild);
+}
 ```
 
 ## 명세

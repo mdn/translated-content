@@ -3,14 +3,14 @@ title: 组织 CSS
 slug: Learn/CSS/Building_blocks/Organizing
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
 在开始在更大的样式表和大项目上作业的时候，你会发现维护一个大型的 CSS 文件很有挑战性。在本文中，我们将会简要看一下在编写你的 CSS 时，让它更加易于维护的一些最佳实践，以及你会在其他人那里看到的，用来增强可维护性的解决方案。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         电脑的基本操作，<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -58,8 +58,13 @@ slug: Learn/CSS/Building_blocks/Organizing
 你可以看到很多 CSS 格式化的方式，一些开发者将所有的规则放在一行里面，像是这样：
 
 ```css
-.box { background-color: #567895; }
-h2 { background-color: black; color: white; }
+.box {
+  background-color: #567895;
+}
+h2 {
+  background-color: black;
+  color: white;
+}
 ```
 
 还有的开发者更喜欢将所有的东西放在新的一行：
@@ -231,7 +236,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 }
 
 .comment .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .list-item {
@@ -241,7 +246,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 }
 
 .list-item .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 ```
 
@@ -254,14 +259,14 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 }
 
 .media .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .comment img {
   border: 1px solid grey;
 }
 
- .list-item {
+.list-item {
   border-bottom: 1px solid grey;
 }
 ```
@@ -281,7 +286,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 <ul>
   <li class="media list-item">
     <img />
-   <div class="content"></div>
+    <div class="content"></div>
   </li>
 </ul>
 ```
@@ -295,9 +300,7 @@ BEM 即为块级元素修饰字符（Block Element Modifier）。在 BEM 中，�
 ```html
 <form class="form form--theme-xmas form--simple">
   <input class="form__input" type="text" />
-  <input
-    class="form__submit form__submit--disabled"
-    type="submit" />
+  <input class="form__submit form__submit--disabled" type="submit" />
 </form>
 ```
 
@@ -363,4 +366,4 @@ $base-color: #c6538c;
 
 你应该也有了探索[MDN CSS](/zh-CN/docs/Web/CSS)学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的[CSS Cookbook](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的排布，在诸如[Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)的一些更加专门的指导里阅读更多。.
 
-{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

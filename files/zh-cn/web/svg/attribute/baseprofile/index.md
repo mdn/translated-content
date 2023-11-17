@@ -29,11 +29,13 @@ slug: Web/SVG/Attribute/baseProfile
 ## 例子
 
 ```html
-<svg width="120" height="120" version="1.1"
- xmlns="http://www.w3.org/2000/svg" baseProfile="full">
-
+<svg
+  width="120"
+  height="120"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  baseProfile="full">
   ...
-
 </svg>
 ```
 

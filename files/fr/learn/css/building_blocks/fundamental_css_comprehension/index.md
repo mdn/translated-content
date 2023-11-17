@@ -1,19 +1,6 @@
 ---
 title: Compréhension des fondements des CSS
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-tags:
-  - CSS
-  - Codage
-  - Commentaires
-  - Débutant
-  - Evaluation
-  - Règles
-  - Style
-  - Syntaxe
-  - Sélecteurs
-  - modèle de boîte
-translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-original_slug: Apprendre/CSS/Introduction_à_CSS/Fundamental_CSS_comprehension
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}

@@ -1,5 +1,5 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
 ---
 
@@ -37,29 +37,34 @@ div:fullscreen {
 ```html
 <div id="fullscreen">
   <h1>Demostración :fullscreen</h1>
-  <p>Este texto se pondrá grande y rojo cuando el navegador esté en modo de pantalla completa.</p>
+  <p>
+    Este texto se pondrá grande y rojo cuando el navegador esté en modo de
+    pantalla completa.
+  </p>
   <button id="fullscreen-button">Entrar en pantalla completa</button>
 </div>
 ```
 
 ```js hidden
 var fullscreenButton = document.getElementById("fullscreen-button");
-var fullscreenDiv    = document.getElementById("fullscreen");
-var fullscreenFunc   = fullscreenDiv.requestFullscreen;
+var fullscreenDiv = document.getElementById("fullscreen");
+var fullscreenFunc = fullscreenDiv.requestFullscreen;
 
 if (!fullscreenFunc) {
-  ['mozRequestFullScreen',
-   'msRequestFullscreen',
-   'webkitRequestFullScreen'].forEach(function (req) {
-     fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
-   });
+  [
+    "mozRequestFullScreen",
+    "msRequestFullscreen",
+    "webkitRequestFullScreen",
+  ].forEach(function (req) {
+    fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
+  });
 }
 
 function enterFullscreen() {
   fullscreenFunc.call(fullscreenDiv);
 }
 
-fullscreenButton.addEventListener('click', enterFullscreen);
+fullscreenButton.addEventListener("click", enterFullscreen);
 ```
 
 ```css hidden
@@ -104,7 +109,7 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 #fullscreen:fullscreen {
   padding: 42px;
   background-color: pink;
-  border:2px solid #f00;
+  border: 2px solid #f00;
   font-size: 200%;
 }
 

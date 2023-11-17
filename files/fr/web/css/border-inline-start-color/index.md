@@ -1,13 +1,6 @@
 ---
 title: border-inline-start-color
 slug: Web/CSS/border-inline-start-color
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-inline-start-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

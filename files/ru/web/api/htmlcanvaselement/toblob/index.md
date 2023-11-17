@@ -1,7 +1,6 @@
 ---
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
-translation_of: Web/API/HTMLCanvasElement/toBlob
 ---
 
 {{APIRef("Canvas API")}}
@@ -36,13 +35,13 @@ void canvas.toBlob(callback, mimeType, qualityArgument);
 Как только вы нарисовали содержимое в `canvas`, вы можете сконвертировать его в файл изображения любого поддерживаемого формата. Ниже приведён фрагмент кода, для примера, принимает изображение в элементе {{HTMLElement("canvas")}} с ID = "canvas" и получает его копию в виде PNG изображения, затем добавляет в документ новый элемент {{HTMLElement("img")}}, исходное изображение которого создано с помощью холста.
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 
-canvas.toBlob(function(blob) {
-  var newImg = document.createElement('img'),
-      url = URL.createObjectURL(blob);
+canvas.toBlob(function (blob) {
+  var newImg = document.createElement("img"),
+    url = URL.createObjectURL(blob);
 
-  newImg.onload = function() {
+  newImg.onload = function () {
     // больше не нужно читать blob, поэтому он отменён
     URL.revokeObjectURL(url);
   };
@@ -63,29 +62,32 @@ canvas.toBlob(function(blob) {
 Это использует `-moz-parse` для преобразования cnavas в ICO. Windows XP не поддерживает преобразование из PNG в ico, поэтому вместо этого использует bmp. Ссылка для загрузки создаётся путём установки атрибута загрузки. Значение атрибута загрузки - это имя, которое он будет использовать в качестве имени файла.
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 var d = canvas.width;
-ctx = canvas.getContext('2d');
+ctx = canvas.getContext("2d");
 ctx.beginPath();
 ctx.moveTo(d / 2, 0);
 ctx.lineTo(d, d);
 ctx.lineTo(0, d);
 ctx.closePath();
-ctx.fillStyle = 'yellow';
+ctx.fillStyle = "yellow";
 ctx.fill();
 
 function blobCallback(iconName) {
-  return function(b) {
-    var a = document.createElement('a');
-    a.textContent = 'Download';
+  return function (b) {
+    var a = document.createElement("a");
+    a.textContent = "Download";
     document.body.appendChild(a);
-    a.style.display = 'block';
-    a.download = iconName + '.ico';
+    a.style.display = "block";
+    a.download = iconName + ".ico";
     a.href = window.URL.createObjectURL(b);
-  }
+  };
 }
-canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');
+canvas.toBlob(
+  blobCallback("passThisString"),
+  "image/vnd.microsoft.icon",
+  "-moz-parse-options:format=bmp;bpp=32",
+);
 ```
 
 ### Сохранение toBlob на диске ОС(chrome/add-on context only)
@@ -93,42 +95,48 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 > **Примечание:** Этот метод сохраняет его на рабочем столе и полезен только в контексте Firefox chrome или дополнительном коде, поскольку API ОС не присутствуют на веб-сайтах.
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 var d = canvas.width;
-ctx = canvas.getContext('2d');
+ctx = canvas.getContext("2d");
 ctx.beginPath();
 ctx.moveTo(d / 2, 0);
 ctx.lineTo(d, d);
 ctx.lineTo(0, d);
 ctx.closePath();
-ctx.fillStyle = 'yellow';
+ctx.fillStyle = "yellow";
 ctx.fill();
 
 function blobCallback(iconName) {
-  return function(b) {
+  return function (b) {
     var r = new FileReader();
     r.onloadend = function () {
-    // r.result contains the ArrayBuffer.
-    Cu.import('resource://gre/modules/osfile.jsm');
-    var writePath = OS.Path.join(OS.Constants.Path.desktopDir,
-                                 iconName + '.ico');
-    var promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result),
-                                      {tmpPath:writePath + '.tmp'});
-    promise.then(
-      function() {
-        console.log('successfully wrote file');
-      },
-      function() {
-        console.log('failure writing file')
-      }
-    );
+      // r.result contains the ArrayBuffer.
+      Cu.import("resource://gre/modules/osfile.jsm");
+      var writePath = OS.Path.join(
+        OS.Constants.Path.desktopDir,
+        iconName + ".ico",
+      );
+      var promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result), {
+        tmpPath: writePath + ".tmp",
+      });
+      promise.then(
+        function () {
+          console.log("successfully wrote file");
+        },
+        function () {
+          console.log("failure writing file");
+        },
+      );
+    };
+    r.readAsArrayBuffer(b);
   };
-  r.readAsArrayBuffer(b);
-  }
 }
 
-canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');
+canvas.toBlob(
+  blobCallback("passThisString"),
+  "image/vnd.microsoft.icon",
+  "-moz-parse-options:format=bmp;bpp=32",
+);
 ```
 
 ## Спецификации
@@ -143,25 +151,23 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 
 Полифил, основанный на toDataURL, со слабой производительностью.
 
-```
+```js
 if (!HTMLCanvasElement.prototype.toBlob) {
-  Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+  Object.defineProperty(HTMLCanvasElement.prototype, "toBlob", {
     value: function (callback, type, quality) {
-      var dataURL = this.toDataURL(type, quality).split(',')[1];
-      setTimeout(function() {
+      var dataURL = this.toDataURL(type, quality).split(",")[1];
+      setTimeout(function () {
+        var binStr = atob(dataURL),
+          len = binStr.length,
+          arr = new Uint8Array(len);
 
-        var binStr = atob( dataURL ),
-            len = binStr.length,
-            arr = new Uint8Array(len);
-
-        for (var i = 0; i < len; i++ ) {
+        for (var i = 0; i < len; i++) {
           arr[i] = binStr.charCodeAt(i);
         }
 
-        callback( new Blob( [arr], {type: type || 'image/png'} ) );
-
+        callback(new Blob([arr], { type: type || "image/png" }));
       });
-    }
+    },
   });
 }
 ```

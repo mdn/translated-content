@@ -1,13 +1,6 @@
 ---
 title: Carte
 slug: Web/CSS/Layout_cookbook/Card
-tags:
-  - CSS
-  - CSS Grid
-  - Guide
-  - Recette
-translation_of: Web/CSS/Layout_cookbook/Card
-original_slug: Web/CSS/Layout_cookbook/Carte
 ---
 
 {{CSSRef}}

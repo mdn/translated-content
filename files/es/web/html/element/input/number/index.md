@@ -186,7 +186,13 @@ Los elementos {{HTMLElement("input")}} de tipo `number` no soportan atributos de
 Por ejemplo, para ajustar el ancho de la entrada para que sea tan ancho como se necesita para ingresar un número de tres dígitos, podemos cambiar nuestro HTML para incluir un [`id`](/es/docs/Web/HTML/Global_attributes#id) y acortar nuestro marcador de posición ya que el campo es demasiado ancho para el texto que hemos estado usando hasta ahora:
 
 ```html
-<input type="number" placeholder="x10" step="10" min="0" max="100" id="number">
+<input
+  type="number"
+  placeholder="x10"
+  step="10"
+  min="0"
+  max="100"
+  id="number" />
 ```
 
 Entonces añadimos un poco de CSS para acortar el ancho del elemento con el selector `id` `#number`:
@@ -235,7 +241,14 @@ El siguiente ejemplo presenta todas las características anteriores, así como e
 <form>
   <div>
     <label for="balloons">Número de globos a comprar (múltiplos de 10):</label>
-    <input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required>
+    <input
+      id="balloons"
+      type="number"
+      name="balloons"
+      step="10"
+      min="0"
+      max="100"
+      required />
     <span class="validity"></span>
   </div>
   <div>
@@ -296,7 +309,14 @@ El HTML se ve así:
 <form>
   <div class="metersInputGroup">
     <label for="meters">Introduce tu estatura en metros:</label>
-    <input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="p. ej. 1.78" required>
+    <input
+      id="meters"
+      type="number"
+      name="meters"
+      step="0.01"
+      min="0"
+      placeholder="p. ej. 1.78"
+      required />
     <span class="validity"></span>
   </div>
   <div class="feetInputGroup" style="display: none;">
@@ -309,7 +329,10 @@ El HTML se ve así:
     <span class="validity"></span>
   </div>
   <div>
-    <input type="button" class="meters" value="Introduce la altura en pies y pulgadas">
+    <input
+      type="button"
+      class="meters"
+      value="Introduce la altura en pies y pulgadas" />
   </div>
   <div>
     <input type="submit" value="Enviar formulario" />

@@ -1,8 +1,6 @@
 ---
 title: Document.registerElement()
 slug: Web/API/CustomElementRegistry/define
-translation_of: Web/API/Document/registerElement
-original_slug: Web/API/Document/registerElement
 ---
 
 {{APIRef("DOM")}}
@@ -31,7 +29,7 @@ var constructor = document.registerElement(tag-name, options);
 Here is a very simple example:
 
 ```js
-var Mytag = document.registerElement('my-tag');
+var Mytag = document.registerElement("my-tag");
 ```
 
 Now the new tag is registered in the browser. The `Mytag` variable holds a constructor that you can use to create a `my-tag` element in the document as follows:
@@ -47,11 +45,9 @@ var mytag = document.getElementsByTagName("my-tag")[0];
 mytag.textContent = "I am a my-tag element.";
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                            | Status                               | Comment            |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Custom Elements')}} | {{Spec2('Custom Elements')}} | Initial definition |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

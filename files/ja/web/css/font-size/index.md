@@ -115,7 +115,7 @@ span {
 
 ```html
 <div>
-<span>Outer <span>inner</span> outer</span>
+  <span>Outer <span>inner</span> outer</span>
 </div>
 ```
 
@@ -123,7 +123,7 @@ span {
 
 {{EmbedLiveSample("Ems", 400, 40)}}
 
-ブラウザーの既定の `font-size` が 16px と仮定すると、単語 “outer” は 16px で描画され、単語 “inner” は 25.6px で描画されます。これは、内側の {{HTMLElement("span")}} 要素の `font-size` は 1.6em ですが、これは親要素の `font-size` からの相対値で、さらにその親要素の `font-size` からの相対値になるからです。これはよく**複合** (compounding) と呼ばれます。
+ブラウザーの既定の `font-size` が 16px と仮定すると、単語 "outer" は 16px で描画され、単語 "inner" は 25.6px で描画されます。これは、内側の {{HTMLElement("span")}} 要素の `font-size` は 1.6em ですが、これは親要素の `font-size` からの相対値で、さらにその親要素の `font-size` からの相対値になるからです。これはよく**複合** (compounding) と呼ばれます。
 
 <h3 id="Rems" name="Rems">rem</h3>
 
@@ -148,7 +148,7 @@ span {
 
 {{EmbedLiveSample("Rems", 400, 40)}}
 
-この例では、単語 “outer inner outer” はすべて 16px で表示されます (ブラウザーの `font-size` は既定値が 16px のままであるとします)。
+この例では、単語 "outer inner outer" はすべて 16px で表示されます (ブラウザーの `font-size` は既定値が 16px のままであるとします)。
 
 ### ex
 

@@ -28,18 +28,21 @@ None.
 下面的示例注册一个 service worker，然后绑定事件到按钮，这样你可以有需要时，明确的更新 server worker：
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
-    // registration worked
-    console.log('Registration succeeded.');
-    button.onclick = function() {
-      registration.update();
-    }
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-};
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw-test/sw.js", { scope: "sw-test" })
+    .then(function (registration) {
+      // registration worked
+      console.log("Registration succeeded.");
+      button.onclick = function () {
+        registration.update();
+      };
+    })
+    .catch(function (error) {
+      // registration failed
+      console.log("Registration failed with " + error);
+    });
+}
 ```
 
 ## 规范

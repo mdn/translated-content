@@ -31,16 +31,13 @@ Voici le fragment de code HTML correspondant à cet exemple :
 <form>
   <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="telephone">
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
     <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="courrier">
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
     <label for="contactChoice3">Courrier</label>
   </div>
   <div>
@@ -55,7 +52,7 @@ Voici le résultat obtenu :
 
 {{EmbedLiveSample('Définir_un_groupe_de_boutons_radio', 600, 130)}}
 
-### La représentation des données d’un groupe de boutons radio
+### La représentation des données d'un groupe de boutons radio
 
 Lorsqu'on envoie le formulaire précédent avec une option sélectionnée, les données du formulaire contiendront une valeur sous la forme `"contact=valeur"`. Ainsi, si l'utilisateur clique sur le bouton radio « Téléphone » et envoie le formulaire, les données du formulaire contiendront `"contact=telephone"`.
 
@@ -71,24 +68,20 @@ Ajoutant un peu de code à notre exemple pour étudier les données générées 
 <form>
   <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="telephone">
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
     <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="courrier">
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
     <label for="contactChoice3">Courrier</label>
   </div>
   <div>
     <button type="submit">Envoyer</button>
   </div>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 Ensuite, on ajoute du code [JavaScript](/fr/docs/Web/JavaScript) pour rattacher un gestionnaire d'évènement sur l'évènement [`submit`](/fr/docs/Web/API/HTMLFormElement/submit_event) qui est déclenché lorsque l'utilisateur clique sur le bouton « Envoyer » :
@@ -97,29 +90,33 @@ Ensuite, on ajoute du code [JavaScript](/fr/docs/Web/JavaScript) pour rattacher 
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
-  for (const entry of data) {
-    output = entry[0] + "=" + entry[1] + "\r";
-  };
-  log.innerText = output;
-  event.preventDefault();
-}, false);
+form.addEventListener(
+  "submit",
+  function (event) {
+    var data = new FormData(form);
+    var output = "";
+    for (const entry of data) {
+      output = entry[0] + "=" + entry[1] + "\r";
+    }
+    log.innerText = output;
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 Vous pouvez manipuler cet exemple et voir qu'il n'y a jamais plus 'un résultat pour le groupe `"contact"`.
 
-{{EmbedLiveSample("La_représentation_des_données_d’un_groupe_de_boutons_radio", 600, 130)}}
+{{EmbedLiveSample("La_représentation_des_données_d'un_groupe_de_boutons_radio", 600, 130)}}
 
 ## Attributs supplémentaires
 
 En complément des attributs partagés par l'ensemble des éléments {{HTMLElement("input")}}, les boutons radio peuvent utiliser les attributs suivants :
 
-| Attribut                   | Definition                                                                                                     |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Attribut              | Definition                                                                                                     |
+| --------------------- | -------------------------------------------------------------------------------------------------------------- |
 | [`checked`](#checked) | Un attribut booléen qui indique si le bouton radio est l'élément sélectionné du groupe.                        |
-| [`value`](#value) | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
+| [`value`](#value)     | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
 
 ### `checked`
 
@@ -143,16 +140,18 @@ Pour qu'un bouton radio soit sélectionné par défaut, on ajoutera l'attribut b
 <form>
   <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
+    <input
+      type="radio"
+      id="contactChoice1"
+      name="contact"
+      value="email"
+      checked />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="telephone">
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
     <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="courrier">
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
     <label for="contactChoice3">Courrier</label>
   </div>
   <div>
@@ -186,16 +185,22 @@ L'exemple qui suit est une version légèrement plus détaillée de l'exemple pr
   <fieldset>
     <legend>Veuillez choisir la meilleure méthode pour vous contacter :</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="telephone">
+      <input
+        type="radio"
+        id="contactChoice2"
+        name="contact"
+        value="telephone" />
       <label for="contactChoice2">Téléphone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="courrier">
+      <input type="radio" id="contactChoice3" name="contact" value="courrier" />
       <label for="contactChoice3">Courrier</label>
     </div>
     <div>

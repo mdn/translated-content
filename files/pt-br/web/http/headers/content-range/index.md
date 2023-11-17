@@ -53,13 +53,13 @@ Content-Range: bytes 200-1000/67589
 
 ## Especificações
 
-| Especificação                                        | Título                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------ |
+| Especificação                           | Título                                                 |
+| --------------------------------------- | ------------------------------------------------------ |
 | {{RFC("7233", "Content-Range", "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Range")}}
+{{Compat}}
 
 ## Veja também
 

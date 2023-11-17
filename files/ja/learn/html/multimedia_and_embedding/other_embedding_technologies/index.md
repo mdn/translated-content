@@ -72,7 +72,8 @@ l10n:
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea
@@ -129,9 +130,9 @@ reset.addEventListener("click", function () {
 });
 
 solution.addEventListener("click", function () {
-  if(solution.value === "答えを表示") {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
     solution.value = "答えを表示";
@@ -167,7 +168,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -182,7 +183,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === "答えを表示") {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -219,7 +220,7 @@ textarea.onkeyup = function () {
     sandbox>
     <p>
       <a href="/ja/docs/Glossary">
-         iframe に対応していないブラウザーのための代替リンク
+        iframe に対応していないブラウザーのための代替リンク
       </a>
     </p>
   </iframe>

@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.layerX
 slug: Web/API/MouseEvent/layerX
-original_slug: Web/API/UIEvent/layerX
 l10n:
   sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---

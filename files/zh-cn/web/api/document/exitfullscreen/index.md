@@ -21,9 +21,9 @@ document.exitFullscreen();
 // 点击切换全屏模式
 document.onclick = function (event) {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document.exitFullscreen();
   } else {
-    document.documentElement.requestFullscreen()
+    document.documentElement.requestFullscreen();
   }
 };
 ```

@@ -22,7 +22,7 @@ values()
 {{jsxref("TypedArray")}} 对象重写了{{jsxref("Object")}}的 `toString`方法。对 TypedArray 对象来说，`toString` 方法联结了数组，并返回一个字符串，它包含由逗号分隔的数组元素。例如，下面的代码创建了一个类型数组，使用`toString` 将数组转化为字符串。
 
 ```js
-var numbers = new Uint8Array([2, 5, 8, 1, 4])
+var numbers = new Uint8Array([2, 5, 8, 1, 4]);
 numbers.toString(); // "2,5,8,1,4"
 ```
 
@@ -33,7 +33,7 @@ numbers.toString(); // "2,5,8,1,4"
 如果浏览器还不支持`TypedArray.prototype.toString()` 方法，JavaScript 将调用{{jsxref("Object")}}的 `toString` 方法：
 
 ```js
-var numbers = new Uint8Array([2, 5, 8, 1, 4])
+var numbers = new Uint8Array([2, 5, 8, 1, 4]);
 numbers.toString(); // "[object Uint8Array]"
 ```
 

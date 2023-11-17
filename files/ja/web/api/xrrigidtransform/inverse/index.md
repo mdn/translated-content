@@ -33,8 +33,11 @@ for (let view of pose.view) {
   /* ... */
 
   mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, objectMatrix);
-  gl.uniformMatrix4fv(programInfo.uniformLocations.modelViewMatrix,
-                      false, modelViewMatrix);
+  gl.uniformMatrix4fv(
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
 
   /* ... */
 }
@@ -48,4 +51,4 @@ for (let view of pose.view) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.inverse")}}
+{{Compat}}

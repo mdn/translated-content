@@ -1,13 +1,6 @@
 ---
 title: Fonctionnalités dépréciées
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-tags:
-  - Deprecated
-  - JavaScript
-  - Obsolete
-  - Reference
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-original_slug: JavaScript/Reference/Annexes/Fonctionnalités_dépréciées
 ---
 
 {{JsSidebar("More")}}
@@ -94,13 +87,13 @@ Les propriétés suivantes sont dépréciées. Cela n'affecte pas le comportemen
 
 Les propriétés qui suivent sont désormais des propriétés des instances de `RegExp` et ne sont plus des propriétés de l'objet `RegExp` :
 
-| Propriété                                                    | Description                                                                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.global", "global")}}             | Permet d'utiliser une expression rationnelle pour relever l'ensemble des correspondances ou uniquement la première. |
+| Propriété                                     | Description                                                                                                         |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.global", "global")}}         | Permet d'utiliser une expression rationnelle pour relever l'ensemble des correspondances ou uniquement la première. |
 | {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Définit si la casse doit être ignorée ou non lors de la recherche d'une correspondance.                             |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | L'index à partir duquel chercher la prochaine correspondance.                                                       |
-| {{jsxref("RegExp.multiline", "multiline")}}     | Définit si la recherche doit s'effectuer sur une seule ligne ou plusieurs.                                          |
-| {{jsxref("RegExp.source", "source")}}             | Le texte du motif.                                                                                                  |
+| {{jsxref("RegExp.lastIndex", "lastIndex")}}   | L'index à partir duquel chercher la prochaine correspondance.                                                       |
+| {{jsxref("RegExp.multiline", "multiline")}}   | Définit si la recherche doit s'effectuer sur une seule ligne ou plusieurs.                                          |
+| {{jsxref("RegExp.source", "source")}}         | Le texte du motif.                                                                                                  |
 
 ### Méthodes de `RegExp`
 
@@ -170,15 +163,15 @@ Ces fonctionnalités sont obsolètes et ont intégralement été retirées de Ja
 
 ### `Function`
 
-| Propriété                                                            | Description                                    |
-| -------------------------------------------------------------------- | ---------------------------------------------- |
+| Propriété                                            | Description                                    |
+| ---------------------------------------------------- | ---------------------------------------------- |
 | {{jsxref("Objets_globaux/Function/arity", "arity")}} | Nombre d'arguments déclarés pour une fonction. |
 
 ### `Array`
 
-| Propriété                                | Description                                                           |
-| ---------------------------------------- | --------------------------------------------------------------------- |
-| {{jsxref("Array.observe()")}} | Observe les modifications apportées à un tableau de façon asynchrone. |
+| Propriété                       | Description                                                           |
+| ------------------------------- | --------------------------------------------------------------------- |
+| {{jsxref("Array.observe()")}}   | Observe les modifications apportées à un tableau de façon asynchrone. |
 | {{jsxref("Array.unobserve()")}} | Retire les observateurs ajoutés à un tableau.                         |
 
 ### `Number`

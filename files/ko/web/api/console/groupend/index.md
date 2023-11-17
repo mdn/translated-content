@@ -12,7 +12,7 @@ slug: Web/API/console/groupEnd
 ## 구문
 
 ```js
-groupEnd()
+groupEnd();
 ```
 
 ### 매개변수

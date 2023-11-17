@@ -1,8 +1,6 @@
 ---
 title: Mise en forme des liens
 slug: Learn/CSS/Styling_text/Styling_links
-translation_of: Learn/CSS/Styling_text/Styling_links
-original_slug: Learn/CSS/Styling_text/Mise_en_forme_des_liens
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
@@ -119,28 +117,21 @@ Pour commencer, nous écrirons notre jeu de règles vides :
 
 ```css
 a {
-
 }
 
-
 a:link {
-
 }
 
 a:visited {
-
 }
 
 a:focus {
-
 }
 
 a:hover {
-
 }
 
 a:active {
-
 }
 ```
 
@@ -171,31 +162,33 @@ a:link {
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
 a:focus {
   border-bottom: 1px solid;
-  background: #BAE498;
+  background: #bae498;
 }
 
 a:hover {
   border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #cdfeaa;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
+  color: #cdfeaa;
 }
 ```
 
 Nous allons aussi fournir un extrait d'HTML auquel appliquer le CSS :
 
 ```html
-<p>Il y a plusieurs navigateurs disponibles, tels que <a href="#">Mozilla
-Firefox</a>, <a href="#">Google Chrome</a>, et
-<a href="#">Microsoft Edge</a>.</p>
+<p>
+  Il y a plusieurs navigateurs disponibles, tels que
+  <a href="#">Mozilla Firefox</a>, <a href="#">Google Chrome</a>, et
+  <a href="#">Microsoft Edge</a>.
+</p>
 ```
 
 En mettant les deux ensemble, nous obtenons ce résultat :
@@ -221,14 +214,25 @@ Dans cette session d'apprentissage actif, nous aimerions que vous utilisiez notr
 Si vous faites une erreur, vous pouvez toujours l'annuler en utilisant le bouton _Réinitialiser_. Si vous êtes vraiment bloqué, appuyez sur le bouton _Afficher la solution_ pour insérer l'exemple que nous avons montré ci-dessus.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>Zone de saisie HTML</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><p>Il y a plusieurs navigateurs disponibles, tels que <a href="#">Mozilla
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<p>Il y a plusieurs navigateurs disponibles, tels que <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a>, et
-<a href="#">Microsoft Edge</a>.</p></textarea>
+<a href="#">Microsoft Edge</a>.</p></textarea
+  >
 
   <h2>Zone de saisie de la CSS</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">a {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+a {
 
 }
 
@@ -250,13 +254,24 @@ a:hover {
 
 a:active {
 
-}</textarea>
+}</textarea
+  >
 
   <h2>Zone de rendu</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Réinitialiser" style="margin: 10px 10px 0 0;">
-    <input id="solution" type="button" value="Voir la solution" style="margin: 10px 0 0 10px;">
+    <input
+      id="reset"
+      type="button"
+      value="Réinitialiser"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Voir la solution"
+      style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
@@ -270,8 +285,8 @@ var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 var solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -279,15 +294,16 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
+solution.addEventListener("click", function () {
   htmlInput.value = htmlCode;
-  cssInput.value = 'p {\n font-size: 1.2rem;\n font-family: sans-serif;\n line-height: 1.4;\n}\n\na {\n outline: none;\n text-decoration: none;\n padding: 2px 1px 0;\n}\n\na:link {\n color: #265301;\n}\n\na:visited {\n color: #437A16;\n}\n\na:focus {\n border-bottom: 1px solid;\n background: #BAE498;\n}\n\na:hover {\n border-bottom: 1px solid;\n background: #CDFEAA;\n}\n\na:active {\n background: #265301;\n color: #CDFEAA;\n}';
+  cssInput.value =
+    "p {\n font-size: 1.2rem;\n font-family: sans-serif;\n line-height: 1.4;\n}\n\na {\n outline: none;\n text-decoration: none;\n padding: 2px 1px 0;\n}\n\na:link {\n color: #265301;\n}\n\na:visited {\n color: #437A16;\n}\n\na:focus {\n border-bottom: 1px solid;\n background: #BAE498;\n}\n\na:hover {\n border-bottom: 1px solid;\n background: #CDFEAA;\n}\n\na:active {\n background: #265301;\n color: #CDFEAA;\n}";
   drawOutput();
 });
 
@@ -305,8 +321,12 @@ Une pratique courante consiste à inclure des icônes dans des liens pour fourni
 Regardons un peu d'HTML et de CSS qui nous donneront l'effet que nous voulons. Tout d'abord, un peu d'HTML simple à mettre en forme :
 
 ```html
-<p>Pour davantage d'information sur la météo, visitez notre <a href="http://#">page météo</a>,
-jetez un œil sur <a href="http://#">météo sur Wikipédia</a>, ou regardez la <a href="http://#">météo sur Science Extrême </a>.</p>
+<p>
+  Pour davantage d'information sur la météo, visitez notre
+  <a href="http://#">page météo</a>, jetez un œil sur
+  <a href="http://#">météo sur Wikipédia</a>, ou regardez la
+  <a href="http://#">météo sur Science Extrême </a>.
+</p>
 ```
 
 Ensuite, le CSS:
@@ -336,7 +356,8 @@ a:visited {
   color: purple;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   border-bottom: 1px solid;
 }
 
@@ -345,7 +366,7 @@ a:active {
 }
 
 a[href*="http"] {
-  background: url('external-link-52.png') no-repeat 100% 0;
+  background: url("external-link-52.png") no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
@@ -363,7 +384,7 @@ Un dernier mot : comment avons-nous sélectionné uniquement les liens externes 
 
 Alors voilà, essayez de revoir la section d'apprentissage actif ci-dessus et d'explorer cette nouvelle technique !
 
-> **Note :** Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) ; ceux-ci sont expliqués par ailleurs.
+> **Note :** Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
 
 ## Mise en forme de liens comme des boutons
 
@@ -375,14 +396,19 @@ D'abord, un peu d'HTML :
 
 ```html
 <ul>
-  <li><a href="#">Accueil</a></li><li><a href="#">Pizza</a></li><li><a href="#">Musique</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
+  <li><a href="#">Accueil</a></li>
+  <li><a href="#">Pizza</a></li>
+  <li><a href="#">Musique</a></li>
+  <li><a href="#">Wombats</a></li>
+  <li><a href="#">Finland</a></li>
 </ul>
 ```
 
 Et maintenant, notre CSS :
 
 ```css
-body,html {
+body,
+html {
   margin: 0;
   font-family: sans-serif;
 }
@@ -411,7 +437,9 @@ li:last-child a {
   margin-right: 0;
 }
 
-a:link, a:visited, a:focus {
+a:link,
+a:visited,
+a:focus {
   background: yellow;
 }
 

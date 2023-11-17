@@ -17,7 +17,7 @@ MediaStream 对象有着单一的输入和输出。由 [`getUserMedia()`](/zh-CN
 
 ## 接口
 
-在这些参考文章中，您将找到构成 Media Capture 和 Streams API 的每个接口需要了解的基本信息。
+在这些参考文章中，你将找到构成 Media Capture 和 Streams API 的每个接口需要了解的基本信息。
 
 - {{domxref("CanvasCaptureMediaStreamTrack")}}
 - {{domxref("InputDeviceInfo")}}

@@ -1,17 +1,8 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Reference
-  - Référence(2)
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка
@@ -43,19 +34,19 @@ String.fromCodePoint(num1[, ...[, numN]])
 ### Пример: использование метода `fromCodePoint()`
 
 ```js
-String.fromCodePoint(42);       // "*"
-String.fromCodePoint(65, 90);   // "AZ"
-String.fromCodePoint(0x404);    // "\u0404"
-String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
-String.fromCodePoint(194564);   // "\uD87E\uDC04"
-String.fromCodePoint(0x1D306, 0x61, 0x1D307) // "\uD834\uDF06a\uD834\uDF07"
+String.fromCodePoint(42); // "*"
+String.fromCodePoint(65, 90); // "AZ"
+String.fromCodePoint(0x404); // "\u0404"
+String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
+String.fromCodePoint(194564); // "\uD87E\uDC04"
+String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
 
-String.fromCodePoint('_');      // RangeError
+String.fromCodePoint("_"); // RangeError
 String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1);       // RangeError
-String.fromCodePoint(3.14);     // RangeError
-String.fromCodePoint(3e-2);     // RangeError
-String.fromCodePoint(NaN);      // RangeError
+String.fromCodePoint(-1); // RangeError
+String.fromCodePoint(3.14); // RangeError
+String.fromCodePoint(3e-2); // RangeError
+String.fromCodePoint(NaN); // RangeError
 ```
 
 ```js
@@ -63,7 +54,7 @@ String.fromCodePoint(NaN);      // RangeError
 // Следующий же метод может вернуть 4-байтный символ так же, как и обычный
 // 2-байтный (то есть, он может вернуть один символ, который на самом деле
 // имеет длину 2, а не 1!)
-console.log(String.fromCodePoint(0x2F804)); // или 194564 в десятичной записи
+console.log(String.fromCodePoint(0x2f804)); // или 194564 в десятичной записи
 ```
 
 ## Полифил
@@ -73,19 +64,19 @@ console.log(String.fromCodePoint(0x2F804)); // или 194564 в десятичн
 ```js
 /*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
 if (!String.fromCodePoint) {
-  (function() {
-    var defineProperty = (function() {
+  (function () {
+    var defineProperty = (function () {
       // IE 8 поддерживает метод `Object.defineProperty` только на элементах DOM
       try {
         var object = {};
         var $defineProperty = Object.defineProperty;
         var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch(error) {}
+      } catch (error) {}
       return result;
-    }());
+    })();
     var stringFromCharCode = String.fromCharCode;
     var floor = Math.floor;
-    var fromCodePoint = function() {
+    var fromCodePoint = function () {
       var MAX_SIZE = 0x4000;
       var codeUnits = [];
       var highSurrogate;
@@ -93,26 +84,28 @@ if (!String.fromCodePoint) {
       var index = -1;
       var length = arguments.length;
       if (!length) {
-        return '';
+        return "";
       }
-      var result = '';
+      var result = "";
       while (++index < length) {
         var codePoint = Number(arguments[index]);
         if (
-          !isFinite(codePoint) ||       // `NaN`, `+Infinity` или `-Infinity`
-          codePoint < 0 ||              // неверная кодовая точка Юникода
-          codePoint > 0x10FFFF ||       // неверная кодовая точка Юникода
+          !isFinite(codePoint) || // `NaN`, `+Infinity` или `-Infinity`
+          codePoint < 0 || // неверная кодовая точка Юникода
+          codePoint > 0x10ffff || // неверная кодовая точка Юникода
           floor(codePoint) != codePoint // не целое число
         ) {
-          throw RangeError('Invalid code point: ' + codePoint);
+          throw RangeError("Invalid code point: " + codePoint);
         }
-        if (codePoint <= 0xFFFF) { // кодовая точка Базовой многоязыковой плоскости (БМП)
+        if (codePoint <= 0xffff) {
+          // кодовая точка Базовой многоязыковой плоскости (БМП)
           codeUnits.push(codePoint);
-        } else { // Астральная кодовая точка; делим её на суррогатную пару
+        } else {
+          // Астральная кодовая точка; делим её на суррогатную пару
           // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           codePoint -= 0x10000;
-          highSurrogate = (codePoint >> 10) + 0xD800;
-          lowSurrogate = (codePoint % 0x400) + 0xDC00;
+          highSurrogate = (codePoint >> 10) + 0xd800;
+          lowSurrogate = (codePoint % 0x400) + 0xdc00;
           codeUnits.push(highSurrogate, lowSurrogate);
         }
         if (index + 1 == length || codeUnits.length > MAX_SIZE) {
@@ -123,15 +116,15 @@ if (!String.fromCodePoint) {
       return result;
     };
     if (defineProperty) {
-      defineProperty(String, 'fromCodePoint', {
-        'value': fromCodePoint,
-        'configurable': true,
-        'writable': true
+      defineProperty(String, "fromCodePoint", {
+        value: fromCodePoint,
+        configurable: true,
+        writable: true,
       });
     } else {
       String.fromCodePoint = fromCodePoint;
     }
-  }());
+  })();
 }
 ```
 

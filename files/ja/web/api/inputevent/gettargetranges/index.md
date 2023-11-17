@@ -33,7 +33,10 @@ getTargetRanges()
 
 ```js
 function isBeforeInputEventAvailable() {
-  return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
+  return (
+    window.InputEvent &&
+    typeof InputEvent.prototype.getTargetRanges === "function"
+  );
 }
 ```
 
@@ -44,10 +47,10 @@ function isBeforeInputEventAvailable() {
 ```js
 const editableElem = document.querySelector('[contenteditable="true"]');
 
-editableElem.addEventListener('beforeinput', (e) => {
-    const targetRanges = e.getTargetRanges();
-    console.log(targetRanges);
-})
+editableElem.addEventListener("beforeinput", (e) => {
+  const targetRanges = e.getTargetRanges();
+  console.log(targetRanges);
+});
 ```
 
 ## 仕様書

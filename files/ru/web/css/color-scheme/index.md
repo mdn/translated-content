@@ -1,20 +1,6 @@
 ---
 title: color-scheme
 slug: Web/CSS/color-scheme
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - color-scheme
-  - recipe:css-property
-browser-compat: css.properties.color-scheme
 ---
 
 {{CSSRef}}

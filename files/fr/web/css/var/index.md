@@ -1,14 +1,6 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - Experimental
-  - Fonction CSS
-  - Reference
-  - Variables CSS
-translation_of: Web/CSS/var()
-original_slug: Web/CSS/var()
 ---
 
 {{CSSRef}}
@@ -39,7 +31,7 @@ Le premier argument de la fonction est le nom de la propriété qu'on veut subst
 ## Exemples
 
 ```css
-:root{
+:root {
   --main-bg-color: pink;
 }
 

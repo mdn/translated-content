@@ -1,7 +1,6 @@
 ---
 title: Navigator.getGamepads()
 slug: Web/API/Navigator/getGamepads
-translation_of: Web/API/Navigator/getGamepads
 ---
 
 {{APIRef("Gamepad API")}}{{SeeCompatTable}}
@@ -17,11 +16,15 @@ translation_of: Web/API/Navigator/getGamepads
 ## Пример
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", function (e) {
   var gp = navigator.getGamepads()[0];
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-  gp.index, gp.id,
-  gp.buttons.length, gp.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    gp.index,
+    gp.id,
+    gp.buttons.length,
+    gp.axes.length,
+  );
 });
 ```
 

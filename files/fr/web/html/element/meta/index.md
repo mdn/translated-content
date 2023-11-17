@@ -1,12 +1,6 @@
 ---
-title: '<meta> : l''élément de métadonnées du document'
+title: "<meta> : l'élément de métadonnées du document"
 slug: Web/HTML/Element/meta
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/meta
 ---
 
 {{HTMLSidebar}}
@@ -34,7 +28,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
     > - L'élément {{HTMLElement("meta")}} doit appartenir à l'élément {{HTMLElement("head")}} et doit apparaître parmi les **512 premiers octets de la page**. En effet, certains navigateurs ne consultent seulement ces premiers octets pour déterminer l'encodage utilisé pour la page.
     > - L'élément {{HTMLElement("meta")}} ne représente qu'une partie de l'[algorithme déterminant le jeu de caractères](https://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#encoding-sniffing-algorithm) à appliquer sur la page par le navigateur. Ainsi, l'en-tête HTTP Content-Type et tous les éléments BOM auront une priorité supérieure à cet élément.
     > - Définir le jeu de caractères utilisé grâce à cet attribut représente une bonne pratique et est fortement recommandé. Si aucun encodage n'est défini pour la page, plusieurs techniques XSS peuvent porter atteinte à l'utilisateur (voir l'exemple de la [technique XSS de recours à UTF-7](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7)). Toujours renseigner cet élément meta protégera contre ces dangers.
-    > - L'élément {{HTMLElement("meta")}} est un synonyme de `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` utilisé avant HTML5. Ici *`IANAcharset`* correspond à la valeur de l'attribut [`charset`](/fr/docs/Web/HTML/Element/meta#charset) correspondant. Bien qu'elle soit obsolète et qu'elle ne soit plus recommandée, cette syntaxe est toujours autorisée.
+    > - L'élément {{HTMLElement("meta")}} est un synonyme de `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` utilisé avant HTML5. Ici _`IANAcharset`_ correspond à la valeur de l'attribut [`charset`](/fr/docs/Web/HTML/Element/meta#charset) correspondant. Bien qu'elle soit obsolète et qu'elle ne soit plus recommandée, cette syntaxe est toujours autorisée.
 
 - `content`
   - : Cet attribut fournit la valeur associée avec l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) ou l'attribut [`name`](/fr/docs/Web/HTML/Element/meta#name) suivant le contexte utilisé.
@@ -176,6 +170,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
       > - Lorsque plusieurs règles conflictuelles sont définies, c'est la règle `no-referrer` qui est appliquée.
 
     - `theme-color` qui indique une suggestion de couleur que l'agent utilisateur devrait prendre en compte afin de personnaliser l'affichage de la page ou l'interface utilisateur environnante. L'attribut `content` contiendra une couleur valide au sens CSS (cf. {{cssxref("&lt;color&gt;")}}).
+
       - `color-scheme`
 
         - : Définit un ou plusieurs modes de couleurs avec lesquels le document est compatible. Le navigateur utilisera cette information ainsi que les réglages du navigateur ou de l'appareil pour déterminer les couleurs à utiliser (que ce soit pour l'arrière-plan, les contrôles, les barres de défilement, etc.). `<meta name="color-scheme">` sert principalement à indiquer la compatibilité et la préférence pour les différents modes de couleur (sombre / clair entre autres).
@@ -192,7 +187,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
           Ainsi, si on préfére utiliser un mode sombre et laisser le mode clair utilisable, on pourra écrire :
 
           ```html
-          <meta name="color-scheme" content="dark light">
+          <meta name="color-scheme" content="dark light" />
           ```
 
           Cela fonctionne pour l'ensemble du document. Pour cibler des éléments en particulier, on pourra utiliser la propriété CSS {{cssxref("color-scheme")}}. La mise en forme pourra tirer parti du mode utilisé par le système grâce à la caractéristique [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme).
@@ -441,10 +436,10 @@ Selon les attributs qui sont renseignés, la métadonnée peut être de différe
 
 ```html
 <!-- En HTML5 -->
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- Rediriger la page après 3 secondes -->
-<meta http-equiv="refresh" content="3;url=http://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=http://www.mozilla.org" />
 ```
 
 ## Accessibilité
@@ -486,7 +481,7 @@ Désactiver la possibilité de zoom avec `user-scalable: no` empêche les person
         >
         ou du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>

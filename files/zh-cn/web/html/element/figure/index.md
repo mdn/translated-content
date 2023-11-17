@@ -69,12 +69,16 @@ slug: Web/HTML/Element/figure
 ```html
 <!-- 只有图像 -->
 <figure>
-  <img src="/en-US/docs/Web/HTML/Element/figure/favicon-192x192.png" alt="The beautiful MDN logo." />
+  <img
+    src="/zh-CN/docs/Web/HTML/Element/figure/favicon-192x192.png"
+    alt="The beautiful MDN logo." />
 </figure>
 
 <!-- 有标题的图像 -->
 <figure>
-  <img src="/en-US/docs/Web/HTML/Element/figure/favicon-192x192.png" alt="The beautiful MDN logo." />
+  <img
+    src="/zh-CN/docs/Web/HTML/Element/figure/favicon-192x192.png"
+    alt="The beautiful MDN logo." />
   <figcaption>MDN Logo</figcaption>
 </figure>
 ```

@@ -1,5 +1,5 @@
 ---
-title: '<menu>: El elemento menú'
+title: "<menu>: El elemento menú"
 slug: Web/HTML/Element/menu
 l10n:
   sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35

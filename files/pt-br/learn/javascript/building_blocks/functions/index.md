@@ -1,7 +1,6 @@
 ---
 title: Funções — blocos reutilizáveis de código
 slug: Learn/JavaScript/Building_blocks/Functions
-original_slug: Aprender/JavaScript/Elementos_construtivos/Functions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
@@ -14,7 +13,7 @@ Outro conceito essencial em código é função, que permitem que você armazene
       <th scope="row">Prerequisitos:</th>
       <td>
         Infrmática básica, um entendimento básico de HTML e CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
           >Primeiros passos em JavaScript</a
         >.
       </td>
@@ -39,8 +38,8 @@ Praticamente sempre que você faz uso de um uma estrutura JavaScript em que tem 
 Nós fizemos bastante uso de funções embutidas do navegador neste curso. Toda vez que manipulamos uma string de texto, por exemplo:
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // the replace() string function takes a string,
 // replaces one substring with another, and returns
@@ -50,8 +49,8 @@ console.log(newString);
 Ou toda vez que manipulamos uma lista:
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
-var madeAString = myArray.join(' ');
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(" ");
 console.log(madeAString);
 // the join() function takes an array, joins
 // all the array items together into a single
@@ -89,10 +88,10 @@ Nós vimos também várias funções personalizadas no curso até agora — fun�
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -109,7 +108,7 @@ ao invés de ter que escrever todo o código novamente todas as vezes que querem
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -121,10 +120,10 @@ Provavelmente você já tem conhecimento sobre iso agora, mas... para realmente 
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 
-myFunction()
+myFunction();
 // Chama a função um vez
 ```
 
@@ -134,7 +133,7 @@ Você viu funções definidas e invocadas de maneiras ligeiramente diferentes. A
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
@@ -149,11 +148,11 @@ function() {
 Isto é chamado **Função anônima** — não tem nome! E também não fará nada em si mesma. Você geralmente cria funções anônimas junto com um manipulador de eventos, o exemplo a seguir poderia rodar o código dentro da função sempre que o botão associado é clicado:
 
 ```js
-var myButton = document.querySelector('button');
+var myButton = document.querySelector("button");
 
-myButton.onclick = function() {
-  alert('hello');
-}
+myButton.onclick = function () {
+  alert("hello");
+};
 ```
 
 O exemplo acima requer que exista um elemento {{htmlelement("button")}} diponível na página para selecionar e clicar. Você já viu essa estrutura algumas vezes ao longo do curso, e aprenderá mais a respeito disso e o verá no próximo artigo.
@@ -161,9 +160,9 @@ O exemplo acima requer que exista um elemento {{htmlelement("button")}} diponív
 Voce também pode atribuir uma função anônima para ser o valor de uma variável, por exemplo:
 
 ```js
-var myGreeting = function() {
-  alert('hello');
-}
+var myGreeting = function () {
+  alert("hello");
+};
 ```
 
 Esta função agora poder ser invocada usando:
@@ -175,9 +174,9 @@ myGreeting();
 Isso dá efetivamente um nome a função; você também pode atribuir uma função para ser o valor de múltiplas variáveis , por exemplo:
 
 ```js
-var anotherGreeting = function() {
-  alert('hello');
-}
+var anotherGreeting = function () {
+  alert("hello");
+};
 ```
 
 Esta função agora pode ser invocada usando qualquer das funções abaixo
@@ -191,18 +190,18 @@ Mas isso pode simplesmente ser confuso, então não faça! Quando criar funçõe
 
 ```js
 function myGreeting() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
 De modo geral você irá usar funções anônimas só para rodar um código em resposta a um disparo de evento — como um botão ao ser clicado — usando um gerenciador de eventos. Novamente, Isso é algo parecido com:
 
 ```js
-myButton.onclick = function() {
-  alert('hello');
+myButton.onclick = function () {
+  alert("hello");
   // Eu posso colocar código aqui
   // dentro o quanto eu quiser
-}
+};
 ```
 
 ## Parâmetro de funções
@@ -220,8 +219,8 @@ var myNumber = Math.random();
 A função embutida de navegador [replace()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace) entretanto precisa de dois parâmetros — a substring para encotrar a string principal, e a substring para ser substituida com ela:
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 ```
 
 > **Nota:** Quando você precisa especificar multiplos parâmetros, eles são separados por vígulas.
@@ -229,8 +228,8 @@ var newString = myText.replace('string', 'sausage');
 Nota-se também que algumas vezes os parâmetros são opcionais — você não tem que especificá-los. Se você não o faz, a função geralmente adota algum tipo de comportamento padrão. Como exemplo, a função [join()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join) tem parâmetro opcional:
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
-var madeAString = myArray.join(' ');
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(" ");
 // returns 'I love chocolate frogs'
 var madeAString = myArray.join();
 // returns 'I,love,chocolate,frogs'
@@ -259,17 +258,17 @@ Por exemplo, digamos que você tem um arquivo HTML que está chamando dois arqui
 
 ```js
 // first.js
-var name = 'Chris';
+var name = "Chris";
 function greeting() {
-  alert('Olá ' + name + ': bem-vindo a nossa compania.');
+  alert("Olá " + name + ": bem-vindo a nossa compania.");
 }
 ```
 
 ```js
 // second.js
-var name = 'Zaptec';
+var name = "Zaptec";
 function greeting() {
-  alert('Nossa compania é chamada ' + name + '.');
+  alert("Nossa compania é chamada " + name + ".");
 }
 ```
 
@@ -293,89 +292,89 @@ Vamos observar um exemplo real para mostrar escopo.
 2. Abra o exemplo em um navegador e em um editor de textos.
 3. Abra o console JavaScript no developer tools de seu navegador. No console JavaScript, digite o seguinte comando:
 
-    ```js
-    output(x);
-    ```
+   ```js
+   output(x);
+   ```
 
-    Você deve ver o valor da variável `x` exibida na página.
+   Você deve ver o valor da variável `x` exibida na página.
 
 4. Agora tente digitar o seguinte no seu console:
 
-    ```js
-    output(y);
-    output(z);
-    ```
+   ```js
+   output(y);
+   output(z);
+   ```
 
-    Ambos dever retornar um erro com as seguintes linhas "[ReferenceError: y is not defined](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_defined)". Por que isso? Porque o escopo da função — `y` e `z` estão trancadas dentro das funções `a()` e `b()`, então `output()` não pode acessá-las quando chamadas do escopo global.
+   Ambos dever retornar um erro com as seguintes linhas "[ReferenceError: y is not defined](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_defined)". Por que isso? Porque o escopo da função — `y` e `z` estão trancadas dentro das funções `a()` e `b()`, então `output()` não pode acessá-las quando chamadas do escopo global.
 
 5. Contudo, que tal chamá-las de dentro de outra função? Tente editar `a()` e `b()` para que fiquem desta forma:
 
-    ```js
-    function a() {
-      var y = 2;
-      output(y);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(y);
+   }
 
-    function b() {
-      var z = 3;
-      output(z);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(z);
+   }
+   ```
 
-    Salve o código e atualize o navegador, então tente chamar as funções `a()` e `b()` do console JavaScript:
+   Salve o código e atualize o navegador, então tente chamar as funções `a()` e `b()` do console JavaScript:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    Você verá os valores de `y` e `z` mostrados na página. Isso funciona bem, desde que a função `output()` está sendo chamada dentro de outra função — no mesmo escopo que as variáveis que estam imprimindo são definidas, em cada caso. `output()` em si é acessível de qualquer lugar, como é definido no escopo global.
+   Você verá os valores de `y` e `z` mostrados na página. Isso funciona bem, desde que a função `output()` está sendo chamada dentro de outra função — no mesmo escopo que as variáveis que estam imprimindo são definidas, em cada caso. `output()` em si é acessível de qualquer lugar, como é definido no escopo global.
 
 6. Agora tente atualizar seu código como este:
 
-    ```js
-    function a() {
-      var y = 2;
-      output(x);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(x);
+   }
 
-    function b() {
-      var z = 3;
-      output(x);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(x);
+   }
+   ```
 
-    Salve e atualize novamente, e tente isso novamente em seu console JavaScript:
+   Salve e atualize novamente, e tente isso novamente em seu console JavaScript:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    Ambas chamadas de `a()` e `b()` devem mostrar o valor de x — 1. Isso dá certo porque até mesmo a chamada de `output()` não está no mesmo escopo em que `x` é definido, `x` é uma variável global então é disponível dentro de todo código, em toda parte.
+   Ambas chamadas de `a()` e `b()` devem mostrar o valor de x — 1. Isso dá certo porque até mesmo a chamada de `output()` não está no mesmo escopo em que `x` é definido, `x` é uma variável global então é disponível dentro de todo código, em toda parte.
 
 7. Finalmente, tente atualizar o código o seguinte:
 
-    ```js
-    function a() {
-      var y = 2;
-      output(z);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(z);
+   }
 
-    function b() {
-      var z = 3;
-      output(y);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(y);
+   }
+   ```
 
-    Salve e atualize novamente, e tente isso novamente em seu console JavaScript:
+   Salve e atualize novamente, e tente isso novamente em seu console JavaScript:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    Desta vez as chamadas de `a()` e `b()` retornaram o irritante erro "[ReferenceError: z is not defined](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_defined)" — isto porque a chamada de `output()` e as variáveis que eles estão tentando imprimir não estão definidas dentro do mesmo escopo das funções — as variáveis são efetivamente invisíveis aquelas chamadas de função.
+   Desta vez as chamadas de `a()` e `b()` retornaram o irritante erro "[ReferenceError: z is not defined](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_defined)" — isto porque a chamada de `output()` e as variáveis que eles estão tentando imprimir não estão definidas dentro do mesmo escopo das funções — as variáveis são efetivamente invisíveis aquelas chamadas de função.
 
 > **Nota:** As mesmas regras de escopo não se aplicam a laços (ex.: `for() { ... }`) e blocos condicionais (ex.: `if() { ... }`) — eles parecem muito semelhantes, mas eles não são a mesma coisa! Tome cuidado para não confudir-se.
 

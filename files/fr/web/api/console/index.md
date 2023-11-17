@@ -1,13 +1,6 @@
 ---
 title: Console
 slug: Web/API/console
-tags:
-  - API
-  - Interface
-  - Reference
-  - console
-  - débogage
-translation_of: Web/API/Console
 ---
 
 {{APIRef("Console API")}}
@@ -17,7 +10,7 @@ L'objet **`console`** donne accès à la console de débogage du navigateur (par
 La `console` est accessible de n'importe quel objet global, {{domxref("Window")}} du cadre de navigation, {{domxref("WorkerGlobalScope")}} et ses variantes spécifiques pour les workers. Elle est exposée comme {{domxref ("Window.console")}} et peut être référencée simplement comme console. Par exemple :
 
 ```js
-console.log("Failed to open the specified link")
+console.log("Failed to open the specified link");
 ```
 
 Cette page documente les [méthodes](#méthodes) disponibles pour l'objet `console` et donne quelques [exemples d'utilisation](#exemples_dutilisation).
@@ -101,7 +94,7 @@ Vous pouvez aussi afficher plusieurs objets, en les séparant par une virgule, c
 
 ```js
 var car = "Dodge Charger";
-var someObject = {str:"Some text", id:5};
+var someObject = { str: "Some text", id: 5 };
 console.info("My first car was a", car, ". The object is: ", someObject);
 ```
 
@@ -154,8 +147,8 @@ Gecko 9.0 a amené le support des caractères de substitution. Lorsque l'on pass
 Chacun de ceux-ci ira chercher l'argument qui suit la chaîne à formater. Par exemple :
 
 ```js
-for (var i=0; i<5; i++) {
-  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+for (var i = 0; i < 5; i++) {
+  console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
 }
 ```
 
@@ -174,7 +167,10 @@ L'affichage ressemblera à ceci :
 Vous pouvez utiliser l'instruction `"%c"` pour appliquer du style CSS à l'affichage de la console :
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+);
 ```
 
 ![](css-styling.png)
@@ -255,7 +251,7 @@ L'affichage dans la console ressemblera à ceci :
 
 - [Outils de développement](/fr/docs/Outils)
 - [Console web](/fr/docs/Outils/Console_Web) - comment la console Web de Firefox gère les appels d'API de console
-- [Débogage distant](/fr/docs/Outils/D%C3%A9bogage_distant) - comment afficher la sortie de la console lorsque la cible de débogage est un périphérique mobile
+- [Débogage distant](/fr/docs/Outils/Débogage_distant) - comment afficher la sortie de la console lorsque la cible de débogage est un périphérique mobile
 - [Journalisation console sur l'appareil](/fr/docs/Archive/B2G_OS/Debugging/Journalisation_console) - comment se connecter sur les appareils Firefox OS
 
 ### Autres implémentations

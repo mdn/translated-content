@@ -15,7 +15,7 @@ slug: Web/API/Screen/height
 
 ```js
 if (window.screen.availHeight !== window.screen.height) {
-   // 何かが画面を占拠している
+  // 何かが画面を占拠している
 }
 ```
 

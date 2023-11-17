@@ -62,8 +62,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 [Arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 提供更段的语法做相同的测试。
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## Polyfill
@@ -73,8 +73,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
 if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
+  Object.defineProperty(Uint8Array.prototype, "some", {
+    value: Array.prototype.some,
   });
 }
 ```

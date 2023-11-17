@@ -1,7 +1,6 @@
 ---
 title: "HTMLElement: paste イベント"
 slug: Web/API/HTMLElement/paste_event
-original_slug: Web/API/HTMLElement/onpaste
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -39,7 +38,9 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ```html
 <h3>このテキストエリアで実行してみる</h3>
-<textarea id="editor" rows="3">このフィールドにテキストをコピー＆ペーストしてみてください。</textarea>
+<textarea id="editor" rows="3">
+このフィールドにテキストをコピー＆ペーストしてみてください。
+</textarea>
 
 <h3>ログ:</h3>
 <p id="log"></p>

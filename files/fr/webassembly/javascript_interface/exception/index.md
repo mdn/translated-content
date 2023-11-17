@@ -1,9 +1,6 @@
 ---
 title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
-browser-compat: javascript.builtins.WebAssembly.Exception
 ---
 
 {{WebAssemblySidebar}}
@@ -30,6 +27,7 @@ Afin que l'émission des exceptions soit plus rapide, les exceptions levées dep
 ## Méthodes des instansces
 
 - [`Exception.prototype.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is)
+
   - : Teste si une exception correspond à une balise donnée.
 
 - [`Exception.prototype.getArg()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg)

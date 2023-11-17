@@ -1,7 +1,6 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/anchor
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -43,7 +42,7 @@ document.body.innerHTML = miCadena.anchor("ancla_contenidos");
 obtendrá el siguiente HTML:
 
 ```html
-<a name="ancla_contenidos">Tabla de Contenidos</A>
+<a name="ancla_contenidos">Tabla de Contenidos</a>
 ```
 
 ### Vea También

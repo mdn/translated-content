@@ -48,7 +48,7 @@ someElement.addEventListener(
   function () {
     someElement.style.backgroundColor = "blue";
   },
-  false
+  false,
 );
 ```
 

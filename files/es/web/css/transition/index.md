@@ -27,7 +27,9 @@ transition: margin-left 4s 1s;
 transition: margin-left 4s ease-in-out 1s;
 
 /* Aplicar a 2 propiedades */
-transition: margin-left 4s, color 1s;
+transition:
+  margin-left 4s,
+  color 1s;
 
 /* Aplicar a todas las propiedades que cambien */
 transition: all 0.5s ease-out;

@@ -1,12 +1,6 @@
 ---
 title: <ul>
 slug: Web/HTML/Element/ul
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ul
 ---
 
 {{HTMLSidebar}}
@@ -70,21 +64,24 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 ```html
 <ul>
   <li>1 artichaut</li>
-  <li>Les trucs pour le gateau
-  <!-- On voit que </li> n'est pas là -->
+  <li>
+    Les trucs pour le gateau
+    <!-- On voit que </li> n'est pas là -->
     <ul>
       <li>3 oeufs</li>
-      <li>La génoise
-      <!-- Là on ouvre une autre liste -->
+      <li>
+        La génoise
+        <!-- Là on ouvre une autre liste -->
         <ul>
           <li>100g de sucre</li>
           <li>1 oeuf</li>
           <li>150g de farine</li>
         </ul>
-      </li> <!-- On ferme la liste la plus imbriquée -->
+      </li>
+      <!-- On ferme la liste la plus imbriquée -->
       <li>200g de chocolat</li>
     </ul>
-  <!-- On ferme la liste imbriquée avec </li> -->
+    <!-- On ferme la liste imbriquée avec </li> -->
   </li>
   <li>De l'essuie-tout</li>
 </ul>
@@ -101,7 +98,8 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 ```html
 <ul>
   <li>Lire un livre</li>
-  <li>Préparer une soupe
+  <li>
+    Préparer une soupe
     <ol>
       <li>Couper les légumes</li>
       <li>Mettre dans l'eau et cuire</li>

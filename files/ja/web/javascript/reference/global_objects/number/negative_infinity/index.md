@@ -19,7 +19,7 @@ l10n:
 
 ## 解説
 
-`Number.NEGATIVE_INFINITY` の値は、数がt九的な無限大とは少々異なった振る舞いをします。
+`Number.NEGATIVE_INFINITY` の値は、数学的な無限大とは少々異なった振る舞いをします。
 
 - {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}} も含む任意の正の値と、 `NEGATIVE_INFINITY` の積は `NEGATIVE_INFINITY` になります。
 - `NEGATIVE_INFINITY` も含む任意の負の値と、 `NEGATIVE_INFINITY` の積は {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}} になります。

@@ -24,11 +24,11 @@ arr.keys()
 ### 鍵迭代器不會乎略陣列中的空元素
 
 ```js
-var arr = ['a', , 'c'];
+var arr = ["a", , "c"];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys);  // [0, 1, 2]
+console.log(denseKeys); // [0, 1, 2]
 ```
 
 ## 規範

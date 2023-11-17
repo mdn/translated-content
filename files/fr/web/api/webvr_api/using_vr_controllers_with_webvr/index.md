@@ -1,8 +1,6 @@
 ---
 title: Utiliser des contrôleurs de réalité virtuelle pour du WebVR
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
-translation_of: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
-original_slug: Web/API/WebVR_API/Utiliser_des_contrôleurs_de_realite_virtuelle_pour_du_WebVR
 ---
 
 {{APIRef("WebVR API")}}
@@ -43,11 +41,12 @@ The first notable code is as follows:
 ```js
 var initialRun = true;
 
-if(navigator.getVRDisplays && navigator.getGamepads) {
-  info.textContent = 'WebVR API and Gamepad API supported.'
+if (navigator.getVRDisplays && navigator.getGamepads) {
+  info.textContent = "WebVR API and Gamepad API supported.";
   reportDisplays();
 } else {
-  info.textContent = 'WebVR API and/or Gamepad API not supported by this browser.'
+  info.textContent =
+    "WebVR API and/or Gamepad API not supported by this browser.";
 }
 ```
 
@@ -55,20 +54,30 @@ Here we first use a tracking variable, `initialRun`, to note that this is the fi
 
 ```js
 function reportDisplays() {
-  navigator.getVRDisplays().then(function(displays) {
-      console.log(displays.length + ' displays');
-    for(var i = 0; i < displays.length; i++) {
+  navigator.getVRDisplays().then(function (displays) {
+    console.log(displays.length + " displays");
+    for (var i = 0; i < displays.length; i++) {
       var cap = displays[i].capabilities;
       // cap is a VRDisplayCapabilities object
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>Display ' + (i+1) + '</strong>'
-                   + '<br>VR Display ID: ' + displays[i].displayId
-                   + '<br>VR Display Name: ' + displays[i].displayName
-                   + '<br>Display can present content: ' + cap.canPresent
-                   + '<br>Display is separate from the computer\'s main display: ' + cap.hasExternalDisplay
-                   + '<br>Display can return position info: ' + cap.hasPosition
-                   + '<br>Display can return orientation info: ' + cap.hasOrientation
-                   + '<br>Display max layers: ' + cap.maxLayers;
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>Display " +
+        (i + 1) +
+        "</strong>" +
+        "<br>VR Display ID: " +
+        displays[i].displayId +
+        "<br>VR Display Name: " +
+        displays[i].displayName +
+        "<br>Display can present content: " +
+        cap.canPresent +
+        "<br>Display is separate from the computer's main display: " +
+        cap.hasExternalDisplay +
+        "<br>Display can return position info: " +
+        cap.hasPosition +
+        "<br>Display can return orientation info: " +
+        cap.hasOrientation +
+        "<br>Display max layers: " +
+        cap.maxLayers;
       list.appendChild(listItem);
     }
 
@@ -88,18 +97,28 @@ The `reportGamepads()` function looks like this:
 
 ```js
 function reportGamepads() {
-    var gamepads = navigator.getGamepads();
-    console.log(gamepads.length + ' controllers');
-    for(var i = 0; i < gamepads.length; ++i) {
-        var gp = gamepads[i];
-    var listItem = document.createElement('li');
-    listItem.classList = 'gamepad';
-    listItem.innerHTML = '<strong>Gamepad ' + gp.index + '</strong> (' + gp.id + ')'
-                 + '<br>Associated with VR Display ID: ' + gp.displayId
-                 + '<br>Gamepad associated with which hand: ' + gp.hand
-                 + '<br>Available haptic actuators: ' + gp.hapticActuators.length
-                 + '<br>Gamepad can return position info: ' + gp.pose.hasPosition
-                 + '<br>Gamepad can return orientation info: ' + gp.pose.hasOrientation;
+  var gamepads = navigator.getGamepads();
+  console.log(gamepads.length + " controllers");
+  for (var i = 0; i < gamepads.length; ++i) {
+    var gp = gamepads[i];
+    var listItem = document.createElement("li");
+    listItem.classList = "gamepad";
+    listItem.innerHTML =
+      "<strong>Gamepad " +
+      gp.index +
+      "</strong> (" +
+      gp.id +
+      ")" +
+      "<br>Associated with VR Display ID: " +
+      gp.displayId +
+      "<br>Gamepad associated with which hand: " +
+      gp.hand +
+      "<br>Available haptic actuators: " +
+      gp.hapticActuators.length +
+      "<br>Gamepad can return position info: " +
+      gp.pose.hasPosition +
+      "<br>Gamepad can return orientation info: " +
+      gp.pose.hasOrientation;
     list.appendChild(listItem);
   }
   initialRun = false;
@@ -126,12 +145,12 @@ At the end of our example we first include the `removeGamepads()` function:
 
 ```js
 function removeGamepads() {
-    var gpLi = document.querySelectorAll('.gamepad');
-    for(var i = 0; i < gpLi.length; i++) {
+  var gpLi = document.querySelectorAll(".gamepad");
+  for (var i = 0; i < gpLi.length; i++) {
     list.removeChild(gpLi[i]);
-    }
+  }
 
-    reportGamepads();
+  reportGamepads();
 }
 ```
 
@@ -140,15 +159,15 @@ This function simply grabs references to all list items with a class name of `ga
 `removeGamepads()` will be run each time a gamepad is connected or disconnected, via the following event handlers:
 
 ```js
-window.addEventListener('gamepadconnected', function(e) {
-  info.textContent = 'Gamepad ' + e.gamepad.index + ' connected.';
-  if(!initialRun) {
-      setTimeout(removeGamepads, 1000);
+window.addEventListener("gamepadconnected", function (e) {
+  info.textContent = "Gamepad " + e.gamepad.index + " connected.";
+  if (!initialRun) {
+    setTimeout(removeGamepads, 1000);
   }
 });
 
-window.addEventListener('gamepaddisconnected', function(e) {
-  info.textContent = 'Gamepad ' + e.gamepad.index + ' disconnected.';
+window.addEventListener("gamepaddisconnected", function (e) {
+  info.textContent = "Gamepad " + e.gamepad.index + " disconnected.";
   setTimeout(removeGamepads, 1000);
 });
 ```
@@ -173,11 +192,11 @@ Inside the `drawVRScene()` function, you'll find this bit of code:
 var gamepads = navigator.getGamepads();
 var gp = gamepads[0];
 
-if(gp) {
+if (gp) {
   var gpPose = gp.pose;
   var curPos = gpPose.position;
   var curOrient = gpPose.orientation;
-  if(poseStatsDisplayed) {
+  if (poseStatsDisplayed) {
     displayPoseStats(gpPose);
   }
 }
@@ -190,24 +209,16 @@ The next thing we do is to get the {{domxref("GamepadPose")}} object for the con
 Slightly later in the code, you can find this block:
 
 ```js
-if(gp && gpPose.hasPosition) {
+if (gp && gpPose.hasPosition) {
   mvTranslate([
-                0.0 + (curPos[0] * 15) - (curOrient[1] * 15),
-                0.0 + (curPos[1] * 15) + (curOrient[0] * 15),
-                -15.0 + (curPos[2] * 25)
-             ]);
-} else if(gp) {
-  mvTranslate([
-                0.0 + (curOrient[1] * 15),
-                0.0 + (curOrient[0] * 15),
-                -15.0
-             ]);
+    0.0 + curPos[0] * 15 - curOrient[1] * 15,
+    0.0 + curPos[1] * 15 + curOrient[0] * 15,
+    -15.0 + curPos[2] * 25,
+  ]);
+} else if (gp) {
+  mvTranslate([0.0 + curOrient[1] * 15, 0.0 + curOrient[0] * 15, -15.0]);
 } else {
-  mvTranslate([
-                0.0,
-                0.0,
-                -15.0
-             ]);
+  mvTranslate([0.0, 0.0, -15.0]);
 }
 ```
 
@@ -228,31 +239,67 @@ function displayPoseStats(pose) {
   var angVel = pose.angularVelocity;
   var angAcc = pose.angularAcceleration;
 
-  if(pose.hasPosition) {
-    posStats.textContent = 'Position: x ' + pos[0].toFixed(3) + ', y ' + pos[1].toFixed(3) + ', z ' + pos[2].toFixed(3);
+  if (pose.hasPosition) {
+    posStats.textContent =
+      "Position: x " +
+      pos[0].toFixed(3) +
+      ", y " +
+      pos[1].toFixed(3) +
+      ", z " +
+      pos[2].toFixed(3);
   } else {
-    posStats.textContent = 'Position not reported';
+    posStats.textContent = "Position not reported";
   }
 
-  if(pose.hasOrientation) {
-    orientStats.textContent = 'Orientation: x ' + orient[0].toFixed(3) + ', y ' + orient[1].toFixed(3) + ', z ' + orient[2].toFixed(3);
+  if (pose.hasOrientation) {
+    orientStats.textContent =
+      "Orientation: x " +
+      orient[0].toFixed(3) +
+      ", y " +
+      orient[1].toFixed(3) +
+      ", z " +
+      orient[2].toFixed(3);
   } else {
-    orientStats.textContent = 'Orientation not reported';
+    orientStats.textContent = "Orientation not reported";
   }
 
-  linVelStats.textContent = 'Linear velocity: x ' + linVel[0].toFixed(3) + ', y ' + linVel[1].toFixed(3) + ', z ' + linVel[2].toFixed(3);
-  angVelStats.textContent = 'Angular velocity: x ' + angVel[0].toFixed(3) + ', y ' + angVel[1].toFixed(3) + ', z ' + angVel[2].toFixed(3);
+  linVelStats.textContent =
+    "Linear velocity: x " +
+    linVel[0].toFixed(3) +
+    ", y " +
+    linVel[1].toFixed(3) +
+    ", z " +
+    linVel[2].toFixed(3);
+  angVelStats.textContent =
+    "Angular velocity: x " +
+    angVel[0].toFixed(3) +
+    ", y " +
+    angVel[1].toFixed(3) +
+    ", z " +
+    angVel[2].toFixed(3);
 
-  if(linAcc) {
-    linAccStats.textContent = 'Linear acceleration: x ' + linAcc[0].toFixed(3) + ', y ' + linAcc[1].toFixed(3) + ', z ' + linAcc[2].toFixed(3);
+  if (linAcc) {
+    linAccStats.textContent =
+      "Linear acceleration: x " +
+      linAcc[0].toFixed(3) +
+      ", y " +
+      linAcc[1].toFixed(3) +
+      ", z " +
+      linAcc[2].toFixed(3);
   } else {
-    linAccStats.textContent = 'Linear acceleration not reported';
+    linAccStats.textContent = "Linear acceleration not reported";
   }
 
-  if(angAcc) {
-    angAccStats.textContent = 'Angular acceleration: x ' + angAcc[0].toFixed(3) + ', y ' + angAcc[1].toFixed(3) + ', z ' + angAcc[2].toFixed(3);
+  if (angAcc) {
+    angAccStats.textContent =
+      "Angular acceleration: x " +
+      angAcc[0].toFixed(3) +
+      ", y " +
+      angAcc[1].toFixed(3) +
+      ", z " +
+      angAcc[2].toFixed(3);
   } else {
-    angAccStats.textContent = 'Angular acceleration not reported';
+    angAccStats.textContent = "Angular acceleration not reported";
   }
 }
 ```

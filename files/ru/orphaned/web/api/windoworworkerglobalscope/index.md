@@ -1,19 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope
 slug: orphaned/Web/API/WindowOrWorkerGlobalScope
-tags:
-  - API
-  - DOM
-  - DOM API
-  - NeedsTranslation
-  - Service Worker
-  - TopicStub
-  - Window
-  - WindowOrWorkerGlobalScope
-  - Worker
-  - WorkerGlobalScope
-translation_of: Web/API/WindowOrWorkerGlobalScope
-original_slug: Web/API/WindowOrWorkerGlobalScope
 ---
 
 {{ApiRef()}}
@@ -58,17 +45,11 @@ original_slug: Web/API/WindowOrWorkerGlobalScope
 
 ## Specifications
 
-| Specification                                                                                                                                                            | Status                               | Comment                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------- |
-| {{SpecName("HTML WHATWG",'webappapis.html#windoworworkerglobalscope-mixin', '<code>WindowOrWorkerGlobalScope</code> mixin')}} | {{Spec2('HTML WHATWG')}}     | This is where the main mixin is defined.      |
-| {{SpecName('Fetch','#fetch-method','fetch()')}}                                                                                                         | {{Spec2('Fetch')}}             | Definition of the `fetch()` method.           |
-| {{SpecName('Service Workers', '#self-caches', 'caches')}}                                                                                             | {{Spec2('Service Workers')}} | Definition of the `caches` property.          |
-| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}}                                                         | {{Spec2('IndexedDB 2')}}     | Definition of the `indexedDB` property.       |
-| {{SpecName('Secure Contexts', '#dom-windoworworkerglobalscope-issecurecontext', 'isSecureContext')}}                                     | {{Spec2('Secure Contexts')}} | Definition of the `isSecureContext` property. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.WindowOrWorkerGlobalScope")}}
+{{Compat}}
 
 ## See also
 

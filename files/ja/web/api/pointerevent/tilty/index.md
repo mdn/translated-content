@@ -20,9 +20,13 @@ l10n:
 この例は、{{domxref("PointerEvent.tiltX","tiltX")}} プロパティおよび `tiltY` プロパティへの簡単なアクセスを示しています。
 
 ```js
-someElement.addEventListener("pointerdown", (event) => {
-  process_tilt(event.tiltX, event.tiltY);
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    process_tilt(event.tiltX, event.tiltY);
+  },
+  false,
+);
 ```
 
 ## 仕様書

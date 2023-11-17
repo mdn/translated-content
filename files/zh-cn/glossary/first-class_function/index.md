@@ -12,9 +12,9 @@ slug: Glossary/First-class_Function
 ### JavaScript
 
 ```js
-const foo = function() {
-   console.log("foobar");
-}
+const foo = function () {
+  console.log("foobar");
+};
 // 用变量来调用它
 foo();
 ```
@@ -29,7 +29,7 @@ foo();
 
 ```js
 function sayHello() {
-   return "Hello, ";
+  return "Hello, ";
 }
 function greeting(helloMessage, name) {
   console.log(helloMessage() + name);
@@ -48,9 +48,9 @@ greeting(sayHello, "JavaScript!"); // Hello, JavaScript!
 
 ```js
 function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
+  return function () {
+    console.log("Hello!");
+  };
 }
 ```
 
@@ -63,11 +63,11 @@ function sayHello() {
 ### 1- 用一个变量
 
 ```js
-const sayHello = function() {
-   return function() {
-      console.log("Hello!");
-   }
-}
+const sayHello = function () {
+  return function () {
+    console.log("Hello!");
+  };
+};
 const myFunc = sayHello();
 myFunc(); // Hello!
 ```
@@ -80,17 +80,15 @@ myFunc(); // Hello!
 
 ```js
 function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
+  return function () {
+    console.log("Hello!");
+  };
 }
 sayHello()();
 ```
 
 我们使用双括号 `()()` 来调用 `sayHello()` 返回的函数。
 
-## 了解更多
-
-### 常识
+## 参见
 
 - [First-class functions](https://zh.wikipedia.org/wiki/First-class_functions) 在维基百科

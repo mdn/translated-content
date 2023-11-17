@@ -14,14 +14,13 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 以下是用于渲染该内容的 XHTML 文档。
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <style>
       body {
         background: black;
-        color:#CCCCCC;
+        color: #cccccc;
       }
       #c2 {
         background-image: url(foo.png);
@@ -29,10 +28,10 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
       }
       div {
         float: left;
-        border :1px solid #444444;
-        padding:10px;
+        border: 1px solid #444444;
+        padding: 10px;
         margin: 10px;
-        background:#3B3B3B;
+        background: #3b3b3b;
       }
     </style>
     <script type="text/javascript;" src="main.js"></script>
@@ -40,11 +39,11 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
   <body onload="processor.doLoad()">
     <div>
-      <video id="video" src="video.ogv" controls="true"/>
+      <video id="video" src="video.ogv" controls="true" />
     </div>
     <div>
-      <canvas id="c1" width="160" height="96"/>
-      <canvas id="c2" width="160" height="96"/>
+      <canvas id="c1" width="160" height="96" />
+      <canvas id="c2" width="160" height="96" />
     </div>
   </body>
 </html>
@@ -114,21 +113,20 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 下方展示的 `computeFrame()` 方法负责真实获取一帧数据并执行色度键控效果。
 
 ```js
-  processor.computeFrame = function computeFrame() {
-    this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-    let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    let l = frame.data.length / 4;
+processor.computeFrame = function computeFrame() {
+  this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
+  let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+  let l = frame.data.length / 4;
 
-    for (let i = 0; i < l; i++) {
-      let r = frame.data[i * 4 + 0];
-      let g = frame.data[i * 4 + 1];
-      let b = frame.data[i * 4 + 2];
-      if (g > 100 && r > 100 && b < 43)
-        frame.data[i * 4 + 3] = 0;
-    }
-    this.ctx2.putImageData(frame, 0, 0);
-    return;
+  for (let i = 0; i < l; i++) {
+    let r = frame.data[i * 4 + 0];
+    let g = frame.data[i * 4 + 1];
+    let b = frame.data[i * 4 + 2];
+    if (g > 100 && r > 100 && b < 43) frame.data[i * 4 + 3] = 0;
   }
+  this.ctx2.putImageData(frame, 0, 0);
+  return;
+};
 ```
 
 当这段例行程序被调用时，video 元素正显示最新的视频数据帧，就像这样：

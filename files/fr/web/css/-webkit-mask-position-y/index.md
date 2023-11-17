@@ -1,12 +1,6 @@
 ---
-title: '-webkit-mask-position-y'
+title: "-webkit-mask-position-y"
 slug: Web/CSS/-webkit-mask-position-y
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-webkit-mask-position-y
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -30,7 +24,10 @@ La propriété **`-webkit-mask-position-y`** permet de définir la position vert
 -webkit-mask-position-y: -1cm;
 
 /* Gestion de plusieurs valeurs */
--webkit-mask-position-y: 50px, 25%, -3em;
+-webkit-mask-position-y:
+  50px,
+  25%,
+  -3em;
 
 /* Valeurs globales */
 -webkit-mask-position-y: inherit;

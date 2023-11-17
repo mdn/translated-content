@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: notificationclick イベント'
+title: "ServiceWorkerGlobalScope: notificationclick イベント"
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('notificationclick', (event) => { });
+addEventListener("notificationclick", (event) => {});
 
-onnotificationclick = (event) => { };
+onnotificationclick = (event) => {};
 ```
 
 ## イベント型
@@ -41,22 +41,24 @@ _親である {{domxref("Event")}} からプロパティを継承しています
 `notificationclick` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッド内で使用することができます。
 
 ```js
-self.addEventListener('notificationclick', (event) => {
-  console.log('On notification click: ', event.notification.tag);
+self.addEventListener("notificationclick", (event) => {
+  console.log("On notification click: ", event.notification.tag);
   event.notification.close();
 
   // This looks to see if the current is already open and
   // focuses if it is
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then((clientList) => {
-    for (const client of clientList) {
-      if (client.url === '/' && 'focus' in client)
-        return client.focus();
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then((clientList) => {
+        for (const client of clientList) {
+          if (client.url === "/" && "focus" in client) return client.focus();
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 });
 ```
 
@@ -64,56 +66,60 @@ self.addEventListener('notificationclick', (event) => {
 
 ```js
 self.onnotificationclick = (event) => {
-  console.log('On notification click: ', event.notification.tag);
+  console.log("On notification click: ", event.notification.tag);
   event.notification.close();
 
   // This looks to see if the current is already open and
   // focuses if it is
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then((clientList) => {
-    for (const client of clientList) {
-      if (client.url === '/' && 'focus' in client)
-        return client.focus();
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then((clientList) => {
+        for (const client of clientList) {
+          if (client.url === "/" && "focus" in client) return client.focus();
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 };
 ```
 
 イベントのアクションは `event.action` を使って {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} イベントハンドラーの中で処理することができます。
 
 ```js
-navigator.serviceWorker.register('sw.js');
+navigator.serviceWorker.register("sw.js");
 Notification.requestPermission((result) => {
-  if (result === 'granted') {
+  if (result === "granted") {
     navigator.serviceWorker.ready.then((registration) => {
       // Archive というタイトルのアクションを含んだ通知を表示します。
-      registration.showNotification('New mail from Alice',
-        {
-          actions: [
-            {
-              action: 'archive',
-              title: 'Archive'
-            }
-          ]
-        }
-      )
+      registration.showNotification("New mail from Alice", {
+        actions: [
+          {
+            action: "archive",
+            title: "Archive",
+          },
+        ],
+      });
     });
   }
 });
 
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-  if (event.action === 'archive') {
-    // ユーザーが [Archive] アクションを選択しました。
-    archiveEmail();
-  } else {
-    // ユーザーが通知本文を選択（例：クリック）した。
-    clients.openWindow('/inbox');
-  }
-}, false);
+self.addEventListener(
+  "notificationclick",
+  (event) => {
+    event.notification.close();
+    if (event.action === "archive") {
+      // ユーザーが [Archive] アクションを選択しました。
+      archiveEmail();
+    } else {
+      // ユーザーが通知本文を選択（例：クリック）した。
+      clients.openWindow("/inbox");
+    }
+  },
+  false,
+);
 ```
 
 ## 仕様書

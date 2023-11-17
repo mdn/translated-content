@@ -1,15 +1,6 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
-  - isPrototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isPrototypeOf
 ---
 
 {{JSRef}}
@@ -23,7 +14,7 @@ La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la ch
 ## Syntaxe
 
 ```js
-prototypeObj.isPrototypeOf(objet)
+prototypeObj.isPrototypeOf(objet);
 ```
 
 ### Paramètres

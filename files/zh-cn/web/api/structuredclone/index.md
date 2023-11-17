@@ -12,7 +12,7 @@ slug: Web/API/structuredClone
 
 ## 语法
 
-```js
+```js-nolint
 structuredClone(value)
 structuredClone(value, { transfer })
 ```
@@ -67,8 +67,10 @@ for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 
-const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
-console.log(uInt8Array.byteLength);  // 0
+const transferred = structuredClone(uInt8Array, {
+  transfer: [uInt8Array.buffer],
+});
+console.log(uInt8Array.byteLength); // 0
 ```
 
 你可以克隆任意数量的对象，并传输对象的任意子集。
@@ -76,8 +78,9 @@ console.log(uInt8Array.byteLength);  // 0
 
 ```js
 const transferred = structuredClone(
-   { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
-   { transfer: [arrayBuffer1] });
+  { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
+  { transfer: [arrayBuffer1] },
+);
 ```
 
 ## 规范

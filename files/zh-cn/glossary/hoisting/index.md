@@ -9,7 +9,7 @@ slug: Glossary/Hoisting
 
 例如，从概念的字面意义上说，“变量提升”意味着变量和函数的声明会在物理层面移动到代码的最前面，但这么说并不准确。实际上变量和函数声明在代码里的位置是不会动的，而是在编译阶段被放入内存中。
 
-## 了解更多
+## 参见
 
 ### 技术范例
 
@@ -17,10 +17,10 @@ JavaScript 在执行任何代码段之前，将函数声明放入内存中的优
 
 ```js
 /**
-* 正确的方式：先声明函数，再调用函数 (最佳实践)
-*/
+ * 正确的方式：先声明函数，再调用函数 (最佳实践)
+ */
 function catName(name) {
-    console.log("我的猫名叫 " + name);
+  console.log("我的猫名叫 " + name);
 }
 
 catName("Tigger");
@@ -34,13 +34,13 @@ catName("Tigger");
 
 ```js
 /**
-* 不推荐的方式：先调用函数，再声明函数
-*/
+ * 不推荐的方式：先调用函数，再声明函数
+ */
 
 catName("Chloe");
 
 function catName(name) {
-    console.log("我的猫名叫 " + name);
+  console.log("我的猫名叫 " + name);
 }
 
 /*
@@ -76,21 +76,21 @@ var num;
 
 ```js
 // Example 1 - only y is hoisted
-var x = 1;                 // 声明 + 初始化 x
-console.log(x + " " + y);  // '1 undefined'
-var y = 2;                 // 声明 + 初始化 y
+var x = 1; // 声明 + 初始化 x
+console.log(x + " " + y); // '1 undefined'
+var y = 2; // 声明 + 初始化 y
 
 // Example 2 - Hoists
-var num1 = 3;                   // Declare and initialize num1
-num2 = 4;                       // Initialize num2
+var num1 = 3; // Declare and initialize num1
+num2 = 4; // Initialize num2
 console.log(num1 + " " + num2); //'3 4'
-var num2;                       // Declare num2 for hoisting
+var num2; // Declare num2 for hoisting
 
 // Example 3 - Hoists
-a = 'Cran';              // Initialize a
-b = 'berry';             // Initialize b
+a = "Cran"; // Initialize a
+b = "berry"; // Initialize b
 console.log(a + "" + b); // 'Cranberry'
-var a, b;                // Declare both a & b for hoisting
+var a, b; // Declare both a & b for hoisting
 ```
 
 ### 技术参考

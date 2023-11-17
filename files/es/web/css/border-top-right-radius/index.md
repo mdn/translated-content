@@ -137,7 +137,7 @@ div {
   border-top-right-radius: 40%;
   height: 100px;
   width: 100px;
-  background-color: rgb(250,20,70);
+  background-color: rgb(250, 20, 70);
   background-clip: content-box;
 }
 ```

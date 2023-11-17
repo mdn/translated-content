@@ -34,7 +34,7 @@ requestIdleCallback(callback, options)
 
 ## 示例
 
-请阅读我们这篇[后台任务 API 的协同调度]((/zh-CN/docs/Web/API/Background_Tasks_API))文章中的[完整示例](/zh-CN/docs/Web/API/Background_Tasks_API#示例)。
+请阅读我们这篇[后台任务 API 的协同调度](/zh-CN/docs/Web/API/Background_Tasks_API)文章中的[完整示例](/zh-CN/docs/Web/API/Background_Tasks_API#示例)。
 
 ## 规范
 

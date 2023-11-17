@@ -1,14 +1,6 @@
 ---
 title: CSS Logical Properties
 slug: Web/CSS/CSS_logical_properties_and_values
-tags:
-  - Aperçu
-  - CSS
-  - CSS Logical Properties
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/CSS_Logical_Properties
-original_slug: Web/CSS/CSS_Logical_Properties
 ---
 
 {{CSSRef}}

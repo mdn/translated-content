@@ -1,17 +1,6 @@
 ---
 title: browserAction.enable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/enable
-tags:
-  - API
-  - Add-ons
-  - Enable
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/enable
 ---
 
 {{AddonSidebar()}}
@@ -22,8 +11,8 @@ Active l'action du navigateur pour un onglet. Par défaut, les actions du naviga
 
 ```js
 browser.browserAction.enable(
-  tabId // optional integer
-)
+  tabId, // optional integer
+);
 ```
 
 ### Paramètres

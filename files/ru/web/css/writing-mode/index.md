@@ -1,8 +1,8 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-translation_of: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Summary
@@ -69,9 +69,7 @@ writing-mode: unset;
 
 ## Specification
 
-| Specification                                                                            | Status                                   | Comment            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS3 Writing Modes")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -79,6 +77,6 @@ writing-mode: unset;
 
 ## See also
 
-- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
+- SVG [`writing-mode`](/ru/docs/Web/SVG/Attribute/writing-mode) attribute
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}

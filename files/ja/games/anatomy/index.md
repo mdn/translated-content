@@ -109,7 +109,7 @@ window.cancelAnimationFrame( MyGame.stopMain );
 
 究極的には JavaScript ではブラウザーはそれ自身のメインループを走らせて、あなたのコードはそれのいくつかの段階に存在します。これからのセクションではメインループがブラウザーからコントロールを奪い取らないようにすることについて記述します。これらのメイン関数は自身 を`window.requestAnimationFrame()` にアタッチし、`window.requestAnimationFrame()` はブラウザーに次に来るであろうフレームへのコントロールを要求します。どうやってこれらの要求をブラウザーのメインループと関連付けるかはブラウザー任せです。[W3C の requestAnimationFrame の仕様](http://www.w3.org/TR/animation-timing/)はいつ requestAnimationFrame コールバックが実行されるのか厳密に定義していません。これはいいことです - なぜかというと、そうすることでブラウザのベンダーが自由に最適だと感じる解決策を実験し、何回も微調整することができるからです。
 
-最近の Firefox と Google Chrome (と、たぶん他のも) のバーションはフレームのタイムスライスの初めで `requestAnimationFrame` コールバックをメインスレッドに接続***しよう***とします。ブラウザーのメインスレッドはしたがってこんな風に見***せよう***とします。
+最近の Firefox と Google Chrome (と、たぶん他のも) のバーションはフレームのタイムスライスの初めで `requestAnimationFrame` コールバックをメインスレッドに接続**_しよう_**とします。ブラウザーのメインスレッドはしたがってこんな風に見**_せよう_**とします。
 
 1. 新しいフレームを始める (一方、前のフレームはディスプレイによって制御されます)
 2. `requestAnimationFrame` コールバックのリストを通ってそれらを invoke します

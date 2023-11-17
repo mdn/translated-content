@@ -26,10 +26,10 @@ var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td");
 
 for (var i = 0; i < cells.length; i++) {
-    var axis = cells[i].getAttribute("axis");
-    if (axis == "year") {
-        // grab the data
-    }
+  var axis = cells[i].getAttribute("axis");
+  if (axis == "year") {
+    // grab the data
+  }
 }
 ```
 

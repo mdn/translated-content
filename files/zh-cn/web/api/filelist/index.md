@@ -20,7 +20,7 @@ slug: Web/API/FileList
 下面的一行代码演示如何获取到一个 FileList 对象中的第一个文件 ([`File`](/zh-CN/docs/Web/API/File) 对象):
 
 ```js
-var file = document.getElementById('fileItem').files[0];
+var file = document.getElementById("fileItem").files[0];
 ```
 
 ## 方法概述
@@ -70,53 +70,47 @@ var file;
 
 // 遍历所有文件
 for (var i = 0; i < files.length; i++) {
-
-    // 取得一个文件
-    file = files.item(i);
-    // 这样也行
-    file = files[i];
-    // 取得文件名
-    alert(file.name);
+  // 取得一个文件
+  file = files.item(i);
+  // 这样也行
+  file = files[i];
+  // 取得文件名
+  alert(file.name);
 }
 ```
 
 下面是一个更完整的例子。
 
 ```html
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-<head>
-</head>
-<body>
-<!-- multiple 属性允许用户选择多个文件 -->
+  <head> </head>
+  <body>
+    <!-- multiple 属性允许用户选择多个文件 -->
 
-<input id="myfiles" multiple type="file">
+    <input id="myfiles" multiple type="file" />
+  </body>
 
-</body>
+  <script>
+    var pullfiles = function () {
+      // love the query selector
+      var fileInput = document.querySelector("#myfiles");
+      var files = fileInput.files;
+      // 获取所选文件数量
+      var fl = files.length;
+      var i = 0;
 
-<script>
-
-var pullfiles=function(){
-    // love the query selector
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-    // 获取所选文件数量
-    var fl = files.length;
-    var i = 0;
-
-    while ( i < fl) {
+      while (i < fl) {
         // localize file var in the loop
         var file = files[i];
         alert(file.name);
         i++;
-    }
-}
+      }
+    };
 
-// 设置 change 事件处理函数
-document.querySelector("#myfiles").onchange=pullfiles;
-
-</script>
-
+    // 设置 change 事件处理函数
+    document.querySelector("#myfiles").onchange = pullfiles;
+  </script>
 </html>
 ```
 

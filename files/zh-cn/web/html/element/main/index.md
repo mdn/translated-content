@@ -36,20 +36,19 @@ HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的�
 
   <article>
     <h2>Red Delicious</h2>
-    <p>These bright red apples are the most common found in many
-    supermarkets.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>
+      These bright red apples are the most common found in many supermarkets.
+    </p>
+    <p>...</p>
+    <p>...</p>
   </article>
 
   <article>
     <h2>Granny Smith</h2>
-    <p>These juicy, green apples make a great filling for
-    apple pies.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>These juicy, green apples make a great filling for apple pies.</p>
+    <p>...</p>
+    <p>...</p>
   </article>
-
 </main>
 
 <!-- 其他内容 -->
@@ -96,9 +95,7 @@ HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的�
 `<main>` 标签受广泛支持。对于 IE 浏览器 11 版本和低于 11 的版本，推荐向 `<main>` 元素添加 `"main" 这一` {{glossary("ARIA")}} 角色，以保证其无障碍。(屏幕阅读器，如 JAWS，当与较旧版本的 Internet Explorer 一起使用时，需包括此 `role` 属性才能理解 `<main>` 元素的语义含义）
 
 ```html
-<main role="main">
-  ...
-</main>
+<main role="main">...</main>
 ```
 
 {{Compat}}

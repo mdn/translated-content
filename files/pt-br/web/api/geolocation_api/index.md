@@ -1,7 +1,6 @@
 ---
 title: Usando geolocation
 slug: Web/API/Geolocation_API
-original_slug: Using_geolocation
 ---
 
 A **API geolocation** permite que o usuário forneça sua localização a aplicativos web se ele desejar. Por questões de privacidade, o usuário é perguntado se permite fornecer informações de localização.
@@ -14,15 +13,18 @@ O aplicativo de geolocalização é utilizado através de um objeto filho chamad
 if ("geolocation" in navigator) {
   /* geolocation is available */
 } else {
-  alert("I'm sorry, but geolocation services are not supported by your browser.");
+  alert(
+    "I'm sorry, but geolocation services are not supported by your browser.",
+  );
 }
 ```
 
 Ao iniciar no Gecko 1.9.2 (Firefox 3.6), add-ons podem obter o objeto de geolocalização obtendo a referência para o serviço de geolocaliazação como se ve a seguir:
 
 ```js
-var geolocation = Components.classes["@mozilla.org/geolocation;1"]
-                            .getService(Components.interfaces.nsIDOMGeoGeolocation);
+var geolocation = Components.classes["@mozilla.org/geolocation;1"].getService(
+  Components.interfaces.nsIDOMGeoGeolocation,
+);
 ```
 
 ### Obtendo a posição atual
@@ -32,7 +34,7 @@ Para obter a localização atual do usuário, você pode utiliza o método `getC
 Use `getCurrentPosition()` se você deseja uma única posição rapidamente, independente da precisão. Dispositivos com GPS, por exemplo, podem levar um minuto ou mais para conseguir a localização, e portanto dados menos precisos (localização do IP location ou rede wifi) podem retornar do método `getCurrentPosition()`.
 
 ```js
-navigator.geolocation.getCurrentPosition(function(position) {
+navigator.geolocation.getCurrentPosition(function (position) {
   do_something(position.coords.latitude, position.coords.longitude);
 });
 ```
@@ -46,10 +48,9 @@ Se os dados de posição mudam (sejam pelo movimento do dispositivo ou se uma in
 O `watchPosition()` pode ser usado sem que não haja a chamada inicial de `getCurrentPosition()`.
 
 ```js
-var watchID = navigator.geolocation.watchPosition(function(position) {
+var watchID = navigator.geolocation.watchPosition(function (position) {
   do_something(position.coords.latitude, position.coords.longitude);
-}
-);
+});
 ```
 
 O método `watchPosition()` retorna um número de ID que pode ser usado para identificar a `posição` solicitada; você pode usar esse valor em conjunto com o método `clearWatch()`, parando a localização do usuário.
@@ -121,67 +122,75 @@ Qualquer add-on hospedado em addons.mozilla.org, que faz uso de dados de geoloca
 
 ```js
 function prompt(window, pref, message, callback) {
-    let branch = Components.classes["@mozilla.org/preferences-service;1"]
-                           .getService(Components.interfaces.nsIPrefBranch);
+  let branch = Components.classes[
+    "@mozilla.org/preferences-service;1"
+  ].getService(Components.interfaces.nsIPrefBranch);
 
-    if (branch.getPrefType(pref) === branch.PREF_STRING) {
-        switch (branch.getCharPref(pref)) {
-        case "always":
-            return callback(true);
-        case "never":
-            return callback(false);
-        }
+  if (branch.getPrefType(pref) === branch.PREF_STRING) {
+    switch (branch.getCharPref(pref)) {
+      case "always":
+        return callback(true);
+      case "never":
+        return callback(false);
     }
+  }
 
-    let done = false;
+  let done = false;
 
-    function remember(value, result) {
-        return function() {
-            done = true;
-            branch.setCharPref(pref, value);
-            callback(result);
+  function remember(value, result) {
+    return function () {
+      done = true;
+      branch.setCharPref(pref, value);
+      callback(result);
+    };
+  }
+
+  let self = window.PopupNotifications.show(
+    window.gBrowser.selectedBrowser,
+    "geolocation",
+    message,
+    "geo-notification-icon",
+    {
+      label: "Share Location",
+      accessKey: "S",
+      callback: function (notification) {
+        done = true;
+        callback(true);
+      },
+    },
+    [
+      {
+        label: "Always Share",
+        accessKey: "A",
+        callback: remember("always", true),
+      },
+      {
+        label: "Never Share",
+        accessKey: "N",
+        callback: remember("never", false),
+      },
+    ],
+    {
+      eventCallback: function (event) {
+        if (event === "dismissed") {
+          if (!done) callback(false);
+          done = true;
+          window.PopupNotifications.remove(self);
         }
-    }
-
-    let self = window.PopupNotifications.show(
-        window.gBrowser.selectedBrowser,
-        "geolocation",
-        message,
-        "geo-notification-icon",
-        {
-            label: "Share Location",
-            accessKey: "S",
-            callback: function(notification) {
-                done = true;
-                callback(true);
-            }
-        }, [
-            {
-                label: "Always Share",
-                accessKey: "A",
-                callback: remember("always", true)
-            },
-            {
-                label: "Never Share",
-                accessKey: "N",
-                callback: remember("never", false)
-            }
-        ], {
-            eventCallback: function(event) {
-                if (event === "dismissed") {
-                    if (!done) callback(false);
-                    done = true;
-                    window.PopupNotifications.remove(self);
-                }
-            },
-            persistWhileVisible: true
-        });
+      },
+      persistWhileVisible: true,
+    },
+  );
 }
 
-prompt(window,
-       "extensions.foo-addon.allowGeolocation",
-       "Foo Add-on wants to know your location.",
-       function callback(allowed) { alert(allowed); });
+prompt(
+  window,
+  "extensions.foo-addon.allowGeolocation",
+  "Foo Add-on wants to know your location.",
+  function callback(allowed) {
+    alert(allowed);
+  },
+);
 ```
 
 ## Veja também

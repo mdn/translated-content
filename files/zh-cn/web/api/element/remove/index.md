@@ -24,7 +24,7 @@ node.remove();
 ```
 
 ```js
-var el = document.getElementById('div-02');
+var el = document.getElementById("div-02");
 el.remove();
 // id 为 'div-02' 的 div 被删掉了
 ```
@@ -36,7 +36,7 @@ el.remove();
 在 `with` 语句中，`remove()` 方法是不可见的。参阅 {{jsxref("Symbol.unscopables")}} 了解更多信息。
 
 ```js
-with(node) {
+with (node) {
   remove();
 }
 // ReferenceError: remove is not defined
@@ -49,17 +49,17 @@ You can polyfill the `remove()` method in Internet Explorer 9 and higher with th
 ```js
 //https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/remove()/remove().md
 (function (arr) {
-   arr.forEach(function (item) {
-    if (item.hasOwnProperty('remove')) {
+  arr.forEach(function (item) {
+    if (item.hasOwnProperty("remove")) {
       return;
     }
-    Object.defineProperty(item, 'remove', {
+    Object.defineProperty(item, "remove", {
       configurable: true,
       enumerable: true,
       writable: true,
       value: function remove() {
         this.parentNode.removeChild(this);
-      }
+      },
     });
   });
 })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);

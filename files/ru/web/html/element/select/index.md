@@ -1,7 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-translation_of: Web/HTML/Element/select
 ---
 
 **HTML тэг `<select>`** представляет собой элемент управления который содержит меню опций:

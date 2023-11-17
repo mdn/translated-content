@@ -1,7 +1,6 @@
 ---
 title: Filter Effects
 slug: Web/CSS/CSS_filter_effects
-original_slug: Web/CSS/Filter_Effects
 ---
 
 {{CSSRef}}
@@ -22,7 +21,3 @@ original_slug: Web/CSS/Filter_Effects
 ## 명세
 
 {{Specifications}}
-
-## 브라우저 호환성
-
-{{Compat}}

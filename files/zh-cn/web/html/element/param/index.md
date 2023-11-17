@@ -45,6 +45,7 @@ slug: Web/HTML/Element/param
 - `value`
   - : 确定参数的值。
 - `valuetype` {{Deprecated_Inline}}
+
   - : 确定参数的类型。可选值如下：
 
     - data: 默认值。该值作为字符串变量传递给对象实例。

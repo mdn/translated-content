@@ -1,7 +1,6 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
-original_slug: Web/CSS/gradient/repeating-linear-gradient()
 ---
 
 {{CSSRef}}
@@ -43,7 +42,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 
   - : グラデーション線の開始点の位置。指定する場合は、 `to` に続けて 2 つ以下のキーワードを指定します。一つは水平方向の辺 (`left` または `right`)、もう一方は垂直方向の辺 (`top` または `bottom`) です。辺を表すキーワードは順不同です。指定しない場合は、 `to bottom` が既定になります。
 
-     `to top`, `to bottom`, `to left`, `to right` の値は、 `0deg`, `180deg`, `270deg`, `90deg` の角度にそれぞれ対応します。他の値は角度に変換されます。
+    `to top`, `to bottom`, `to left`, `to right` の値は、 `0deg`, `180deg`, `270deg`, `90deg` の角度にそれぞれ対応します。他の値は角度に変換されます。
 
 - {{cssxref("&lt;angle&gt;")}}
   - : グラデーション線の方向を角度で示します。 `0deg` の値は `to top` と等価で、値が増加するとそこから時計回りに回ります。
@@ -81,15 +80,19 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(-45deg,
-      transparent,
-      transparent 20px,
-      black 20px,
-      black 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    black 20px,
+    black 40px
+  );
   /* 複数の色経由点の位置 */
-  background-image: repeating-linear-gradient(-45deg,
-      transparent 0 20px,
-      black 20px 40px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 20px,
+    black 20px 40px
+  );
 }
 ```
 
@@ -106,10 +109,12 @@ body {
 
 ```css
 body {
-  background-image: repeating-linear-gradient(to bottom,
-      rgb(26,198,204),
-      rgb(26,198,204) 7%,
-      rgb(100,100,100) 10%);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
 }
 ```
 

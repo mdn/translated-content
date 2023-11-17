@@ -16,45 +16,70 @@ slug: Web/SVG/Tutorial/Filter_effects
 滤镜通过 {{SVGElement('filter')}} 元素进行定义，并且置于 `<defs>` 区块中。在 `filter` 标签中提供一系列*图元*（_primitives_），以及在前一个基本变换操作上建立的另一个操作（比如添加模糊后又添加明亮效果）。如果要应用所创建的滤镜效果，只需要为 SVG 图形元素设置 {{SVGAttr('filter')}} 属性即可。
 
 ```html
-<svg width="250" viewBox="0 0 200 85"
-     xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg
+  width="250"
+  viewBox="0 0 200 85"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1">
   <defs>
     <!-- Filter declaration -->
-    <filter id="MyFilter" filterUnits="userSpaceOnUse"
-            x="0" y="0"
-            width="200" height="120">
-
+    <filter
+      id="MyFilter"
+      filterUnits="userSpaceOnUse"
+      x="0"
+      y="0"
+      width="200"
+      height="120">
       <!-- offsetBlur -->
-      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
-      <feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+      <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
 
       <!-- litPaint -->
-      <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75"
-                          specularExponent="20" lighting-color="#bbbbbb"
-                          result="specOut">
-        <fePointLight x="-5000" y="-10000" z="20000"/>
+      <feSpecularLighting
+        in="blur"
+        surfaceScale="5"
+        specularConstant=".75"
+        specularExponent="20"
+        lighting-color="#bbbbbb"
+        result="specOut">
+        <fePointLight x="-5000" y="-10000" z="20000" />
       </feSpecularLighting>
-      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
-      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic"
-                   k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+      <feComposite
+        in="specOut"
+        in2="SourceAlpha"
+        operator="in"
+        result="specOut" />
+      <feComposite
+        in="SourceGraphic"
+        in2="specOut"
+        operator="arithmetic"
+        k1="0"
+        k2="1"
+        k3="1"
+        k4="0"
+        result="litPaint" />
 
       <!-- merge offsetBlur + litPaint -->
       <feMerge>
-        <feMergeNode in="offsetBlur"/>
-        <feMergeNode in="litPaint"/>
+        <feMergeNode in="offsetBlur" />
+        <feMergeNode in="litPaint" />
       </feMerge>
     </filter>
   </defs>
 
   <!-- Graphic elements -->
   <g filter="url(#MyFilter)">
-      <path fill="none" stroke="#D90000" stroke-width="10"
-            d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z" />
-      <path fill="#D90000"
-            d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" />
-      <g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" >
-        <text x="52" y="52">SVG</text>
-      </g>
+    <path
+      fill="none"
+      stroke="#D90000"
+      stroke-width="10"
+      d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z" />
+    <path
+      fill="#D90000"
+      d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" />
+    <g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana">
+      <text x="52" y="52">SVG</text>
+    </g>
   </g>
 </svg>
 ```
@@ -64,9 +89,7 @@ slug: Web/SVG/Tutorial/Filter_effects
 ### 步骤 1
 
 ```html
-<feGaussianBlur in="SourceAlpha"
-                stdDeviation="4"
-                result="blur"/>
+<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
 ```
 
 设置 {{SVGElement('feGaussianBlur')}} 中的 `in` 属性为 `"SourceAlpha"` 值，即原图像的 alpha 通道，并设置了模糊度为 4 以及把 `result` 保存在了一个名为 "blur" 的临时缓冲区中。
@@ -74,9 +97,7 @@ slug: Web/SVG/Tutorial/Filter_effects
 ### 步骤 2
 
 ```html
-<feOffset in="blur"
-          dx="4" dy="4"
-          result="offsetBlur"/>
+<feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
 ```
 
 {{SVGElement('feOffset')}} 设置 `in` 的值为 "blur"，即我们前面保存 `result` 的那个临时缓冲区。然后设置相对坐标，向右偏移 4，向下偏移 4。最后把结果 `result` 保存到名为 "offsetBlur" 的缓冲区中。步骤 1、2 其实是创建图形阴影的两个图元。
@@ -84,11 +105,14 @@ slug: Web/SVG/Tutorial/Filter_effects
 ### 步骤 3
 
 ```html
-<feSpecularLighting in="offsetBlur"
-                    surfaceScale="5" specularConstant=".75"
-                    specularExponent="20" lighting-color="#bbbbbb"
-                    result="specOut">
-  <fePointLight x="-5000" y="-10000" z="20000"/>
+<feSpecularLighting
+  in="offsetBlur"
+  surfaceScale="5"
+  specularConstant=".75"
+  specularExponent="20"
+  lighting-color="#bbbbbb"
+  result="specOut">
+  <fePointLight x="-5000" y="-10000" z="20000" />
 </feSpecularLighting>
 ```
 
@@ -97,9 +121,7 @@ slug: Web/SVG/Tutorial/Filter_effects
 ### 步骤 4
 
 ```html
-<feComposite in="specOut" in2="SourceAlpha"
-             operator="in"
-             result="specOut"/>
+<feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
 ```
 
 第一个 {{SVGElement('feComposite')}} 元素设置输入源为 "specOut"，第二个输入源（`in2`）为 "SourceAlpha"，将 "specOut" 的结果效果遮盖掉，以致于最后的结果不会大于 "SourceAlpha"（源图像），最后覆盖输出结果 `result` 为 "specOut"。

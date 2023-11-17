@@ -76,7 +76,8 @@ My cat is very grumpy
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="playable-code" style="min-height: 100px;width: 95%">
@@ -168,7 +169,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -197,7 +198,7 @@ textarea.onkeyup = () => {
 
 ### 要素を入れ子にする
 
-要素の中に要素を入れることができます。これは**入れ子**（ネスト）と呼ばれています。たとえば “My cat is **very** grumpy.” と記述したい場合、“very” という語を {{htmlelement("strong")}} 要素で囲むことができ、その語がより強く強調表示されることを意味します。
+要素の中に要素を入れることができます。これは**入れ子**（ネスト）と呼ばれています。たとえば "My cat is **very** grumpy." と記述したい場合、"very" という語を {{htmlelement("strong")}} 要素で囲むことができ、その語がより強く強調表示されることを意味します。
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>
@@ -245,7 +246,7 @@ textarea.onkeyup = () => {
 
 ### 実習: 要素に属性を追加する
 
-要素のもう一つの例は{{htmlelement("a")}}です。これは_anchor_の略です。アンカーは、それが囲んでいるテキストをハイパーリンクにすることができます。アンカーは様々な属性を受け取ることができますが、以下のようなものがあります。
+要素のもう一つの例は{{htmlelement("a")}}です。これは*anchor*の略です。アンカーは、それが囲んでいるテキストをハイパーリンクにすることができます。アンカーは様々な属性を受け取ることができますが、以下のようなものがあります。
 
 - `href`
   - : この属性の値は、リンク先のウェブアドレスを指定します。例えば、`href="https://www.mozilla.org/"` です。
@@ -271,7 +272,8 @@ textarea.onkeyup = () => {
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
@@ -331,7 +333,7 @@ reset.addEventListener("click", () => {
 });
 
 solution.addEventListener("click", () => {
-  if(solution.value === "答えを見る") {
+  if (solution.value === "答えを見る") {
     textarea.value = solutionEntry;
     solution.value = "答えを隠す";
   } else {
@@ -365,7 +367,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -380,7 +382,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === "答えを見る") {
+  if (solution.value === "答えを見る") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -475,7 +477,7 @@ textarea.onkeyup = () => {
 これまで、個々の HTML の要素の基礎を説明しましたが、それら単体ではあまり有用ではありません。ここでは個々の HTML の要素を使って HTML ページを構成する方法を説明していきます。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -533,7 +535,8 @@ textarea.onkeyup = () => {
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
@@ -635,7 +638,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -649,7 +652,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === "答えを見る") {
+  if (solution.value === "答えを見る") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

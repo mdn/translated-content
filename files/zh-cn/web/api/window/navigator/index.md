@@ -18,7 +18,8 @@ navigatorObject = window.navigator
 ### 例子 #1：检测浏览器并返回浏览器名称字符串
 
 ```js
-var sBrowser, sUsrAg = navigator.userAgent;
+var sBrowser,
+  sUsrAg = navigator.userAgent;
 
 // The order matters here, and this may report false positives for unlisted browsers.
 
@@ -50,10 +51,10 @@ alert("当前浏览器为：" + sBrowser);
 ### 例子 #2：检测浏览器并返回代表当前浏览器的索引数字
 
 ```js
-function getBrowserId () {
+function getBrowserId() {
   var aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
-      sUsrAg = navigator.userAgent,
-      nIdx = aKeys.length - 1;
+    sUsrAg = navigator.userAgent,
+    nIdx = aKeys.length - 1;
 
   for (nIdx; nIdx > -1 && sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
 

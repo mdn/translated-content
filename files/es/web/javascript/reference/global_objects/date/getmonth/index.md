@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMonth
 ---
 
 {{JSRef}}
@@ -31,7 +30,7 @@ El valor devuelto por getMonth() es un entero entre 0 y 11, donde 0 corresponde 
 En el siguiente ejemplo, la segunda línea asigna el valor 11 a la variable mes, basado en el valor del objeto {{jsxref("Date")}} `Navidad`.
 
 ```js
-var Navidad = new Date('December 25, 2014 23:15:30');
+var Navidad = new Date("December 25, 2014 23:15:30");
 var mes = Navidad.getMonth();
 
 console.log(mes); // 11

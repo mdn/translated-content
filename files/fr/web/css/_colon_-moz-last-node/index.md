@@ -1,12 +1,6 @@
 ---
-title: ':-moz-last-node'
+title: ":-moz-last-node"
 slug: Web/CSS/:-moz-last-node
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-last-node
 ---
 
 {{Non-standard_header}}{{CSSRef}}

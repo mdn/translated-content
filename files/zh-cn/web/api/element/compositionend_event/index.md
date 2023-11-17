@@ -28,16 +28,16 @@ slug: Web/API/Element/compositionend_event
 
 ## Properties
 
-| Property                              | Type                                      | Description                                                                 |
-| ------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------- |
-| `target` {{ReadOnlyInline}}     | {{domxref("EventTarget")}}      | 聚焦元素处理成分                                                            |
-| `type` {{ReadOnlyInline}}       | {{domxref("DOMString")}}          | 事件类型                                                                    |
-| `bubbles` {{ReadOnlyInline}}    | `boolean`                                 | 事件是否冒泡                                                                |
-| `cancelable` {{ReadOnlyInline}} | `boolean`                                 | 是否可以取消该事件                                                          |
-| `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}      | {{domxref("Document.defaultView")}} (`window` of the document) |
-| `detail` {{ReadOnlyInline}}     | `long` (`float`)                          | 0.                                                                          |
-| `data` {{ReadOnlyInline}}       | {{domxref("DOMString")}} (string) | 正在编辑的原始字符串，否则为空字符串。只读。                                |
-| `locale`                              | {{domxref("DOMString")}} (string) | 组合事件的语言代码 (如果可用);否则，为空字符串。只读。                      |
+| Property                        | Type                              | Description                                                    |
+| ------------------------------- | --------------------------------- | -------------------------------------------------------------- |
+| `target` {{ReadOnlyInline}}     | {{domxref("EventTarget")}}        | 聚焦元素处理成分                                               |
+| `type` {{ReadOnlyInline}}       | {{domxref("DOMString")}}          | 事件类型                                                       |
+| `bubbles` {{ReadOnlyInline}}    | `boolean`                         | 事件是否冒泡                                                   |
+| `cancelable` {{ReadOnlyInline}} | `boolean`                         | 是否可以取消该事件                                             |
+| `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}        | {{domxref("Document.defaultView")}} (`window` of the document) |
+| `detail` {{ReadOnlyInline}}     | `long` (`float`)                  | 0.                                                             |
+| `data` {{ReadOnlyInline}}       | {{domxref("DOMString")}} (string) | 正在编辑的原始字符串，否则为空字符串。只读。                   |
+| `locale`                        | {{domxref("DOMString")}} (string) | 组合事件的语言代码 (如果可用);否则，为空字符串。只读。         |
 
 ## 规范
 

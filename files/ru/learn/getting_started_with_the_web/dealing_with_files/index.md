@@ -1,19 +1,6 @@
 ---
 title: Работа с файлами
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Guide
-  - HTML
-  - theory
-  - website
-  - Новичку
-  - Руководство
-  - Файлы
-  - сайт
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
@@ -54,18 +41,18 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 1. Скопируйте изображение, которое вы выбрали ранее, в папку `images`.
 2. Откройте ваш файл `index.html` и вставьте следующий код в файл именно в таком виде. Не беспокойтесь о том, что все это значит - позже в этом руководстве мы рассмотрим структуры более подробно.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Моя тестовая страница</title>
-      </head>
-      <body>
-        <img src="" alt="Моё тестовое изображение">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>Моя тестовая страница</title>
+     </head>
+     <body>
+       <img src="" alt="Моё тестовое изображение" />
+     </body>
+   </html>
+   ```
 
 3. Строка `<img src="" alt="Моё тестовое изображение">` - это HTML код, который вставляет изображение на страницу. Мы должны сказать HTML, где находится изображение. Изображение находится внутри папки _images_, которая находится в той же директории что и `index.html`. Чтобы спуститься вниз по нашей файловой структуре от `index.html` до нашего изображения, путь к файлу должен выглядеть так `images/your-image-filename`. Например наше изображение, названное `firefox-icon.png`, имеет такой путь к файлу: `images/firefox-icon.png`.
 4. Вставьте путь к файлу в ваш HTML код между двойными кавычками `src=""`.

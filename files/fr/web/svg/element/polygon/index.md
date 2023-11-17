@@ -1,13 +1,6 @@
 ---
 title: <polygon>
 slug: Web/SVG/Element/polygon
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphique
-translation_of: Web/SVG/Element/polygon
-browser-compat: svg.elements.polygon
 ---
 
 {{SVGRef}}
@@ -17,7 +10,11 @@ L'élément **`<polygon>`** délimite une forme close composée d'un groupe de p
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

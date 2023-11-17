@@ -179,7 +179,7 @@ addEventListener(
   () => {
     orientationChanged = true;
   },
-  PASSIVE_LISTENER_OPTION
+  PASSIVE_LISTENER_OPTION,
 );
 
 addEventListener("resize", () =>
@@ -190,7 +190,7 @@ addEventListener("resize", () =>
       }
     }
     mediaQueryUpdated = orientationChanged = false;
-  }, 0)
+  }, 0),
 );
 ```
 
@@ -206,17 +206,17 @@ addEventListener("resize", () =>
 
 また、 BrowserName に単純な正規表現を使用しないように注意してください。ユーザーエージェント文字列には、 Keyword/Value 構文以外の文字列も含まれています。例えば、 Safari や Chrome では、 'like Gecko' のような文字列が含まれています。
 
-| エンジン                          | 必ず含む                  | 決して含まない                 |
-| ------------------------------- | ----------------------- | ------------------------------ |
-| Firefox                         | `Firefox/xyz`           | `Seamonkey/xyz`                |
-| Seamonkey                       | `Seamonkey/xyz`         |                                |
-| Chrome                          | `Chrome/xyz`            | `Chromium/xyz` または `Edg.*/xyz`  |
-| Chromium                        | `Chromium/xyz`          |                                |
-| Safari                          | `Safari/xyz`            | `Chrome/xyz` または `Chromium/xyz` |
-| Opera 15+ (Blink ベースのエンジン)  | `OPR/xyz`               |                                |
-| Opera 12- (Presto ベースのエンジン) | `Opera/xyz`             |                                |
-| Internet Explorer 10-           | `; MSIE xyz;`           |                                |
-| Internet Explorer 11            | `Trident/7.0; .*rv:xyz` |                                |
+| エンジン                            | 必ず含む                | 決して含まない                     |
+| ----------------------------------- | ----------------------- | ---------------------------------- |
+| Firefox                             | `Firefox/xyz`           | `Seamonkey/xyz`                    |
+| Seamonkey                           | `Seamonkey/xyz`         |                                    |
+| Chrome                              | `Chrome/xyz`            | `Chromium/xyz` または `Edg.*/xyz`  |
+| Chromium                            | `Chromium/xyz`          |                                    |
+| Safari                              | `Safari/xyz`            | `Chrome/xyz` または `Chromium/xyz` |
+| Opera 15+ (Blink ベースのエンジン)  | `OPR/xyz`               |                                    |
+| Opera 12- (Presto ベースのエンジン) | `Opera/xyz`             |                                    |
+| Internet Explorer 10-               | `; MSIE xyz;`           |                                    |
+| Internet Explorer 11                | `Trident/7.0; .*rv:xyz` |                                    |
 
 \[1] Safari はバージョン番号を 2 つ提供しており、一方は技術的な Safari/xyz のトークン、もう一方はユーザーに分かりやすい Version/xyz のトークンです。
 
@@ -234,11 +234,11 @@ addEventListener("resize", () =>
 
 主なレンダリングエンジンには、 Trident, Gecko, Presto, Blink, WebKit の 5 つがあります。レンダリングエンジンの名前を探すのが一般的であるため、たくさんのレンダリングエンジンが他のレンダリングエンジンの名前も追加して検出されるようにしています。したがって、レンダリングエンジンを判定する際には誤判定をしないように注意を払うことが重要です。
 
-| エンジン   | 必ず含む        | コメント                                                                                                                                                                                                            |
-| -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| エンジン | 必ず含む          | コメント                                                                                                                                                                                                            |
+| -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Gecko    | `Gecko/xyz`       |                                                                                                                                                                                                                     |
 | WebKit   | `AppleWebKit/xyz` | 注意: WebKit ブラウザーは 'like Gecko' の文字列を追加するので、判定時に注意しないと Gecko と誤認することがあります。                                                                                                |
-| Presto   | `Opera/xyz`       | **メモ:** Presto は Opera ブラウザーのバージョン 15 以降では使用されない ('Blink' を参照)                                                                                                                             |
+| Presto   | `Opera/xyz`       | **メモ:** Presto は Opera ブラウザーのバージョン 15 以降では使用されない ('Blink' を参照)                                                                                                                           |
 | Trident  | `Trident/xyz`     | Internet Explorer はこのトークンをユーザーエージェント文字列の*コメント*部分に入れる                                                                                                                                |
 | EdgeHTML | `Edge/xyz`        | Chromium ではない Edge は、 _Edge/_ のトークンの後にアプリケーションのバージョンではなく、エンジンのバージョンを入れる。 **注:** EdgeHTML は Edge ブラウザーのバージョン 79 以降では使用されない ('Blink' を参照)。 |
 | Blink    | `Chrome/xyz`      |                                                                                                                                                                                                                     |
@@ -262,14 +262,14 @@ addEventListener("resize", () =>
 
 次の表は主要なブラウザーのベンダーが、ブラウザーがモバイル端末上で動作していることを示す方法をまとめたものです。
 
-| ブラウザー                                                  | ルール                                                                                                                                                                                                                                                      | 例                                                                                                                                                             |
-| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mozilla (Gecko, Firefox)                                    | `Mobile` または `Tablet` のトークンがコメントの中にある。                                                                                                                                                 | Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0                                                                                                 |
+| ブラウザー                                                  | ルール                                                                                                                                                                                                                                                     | 例                                                                                                                                                             |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mozilla (Gecko, Firefox)                                    | `Mobile` または `Tablet` のトークンがコメントの中にある。                                                                                                                                                                                                  | Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0                                                                                                 |
 | WebKit ベースのもの (Android, Safari)                       | `Mobile Safari` のトークンがコメントの[外](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3)にある。 | Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30               |
-| Blink ベースのもの (Chromium, Google Chrome, Opera 15 以降) | `Mobile Safari` のトークンがコメントの[外](https://developer.chrome.com/docs/multidevice/user-agent/)にある。                                                                                                                                           | Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047 |
-| Presto ベースのもの (Opera 12 まで)                         | `Opera Mobi/xyz` のトークンがコメントの[中](https://developers.whatismybrowser.com/useragents/explore/layout_engine_name/presto/)にある。                                                                                                                   | Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50                                                            |
-| Internet Explorer                                           | `IEMobile/xyz` のトークンがコメントの中にある。                                                                                                                                                                                                           | Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)                                                                            |
-| Edge on Windows 10 Mobile                                   | `Mobile/xyz` および `Edge/` のトークンがコメントの外にある。                                                                                                                                                                                                      | Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299 |
+| Blink ベースのもの (Chromium, Google Chrome, Opera 15 以降) | `Mobile Safari` のトークンがコメントの[外](https://developer.chrome.com/docs/multidevice/user-agent/)にある。                                                                                                                                              | Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047 |
+| Presto ベースのもの (Opera 12 まで)                         | `Opera Mobi/xyz` のトークンがコメントの[中](https://developers.whatismybrowser.com/useragents/explore/layout_engine_name/presto/)にある。                                                                                                                  | Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50                                                            |
+| Internet Explorer                                           | `IEMobile/xyz` のトークンがコメントの中にある。                                                                                                                                                                                                            | Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)                                                                            |
+| Edge on Windows 10 Mobile                                   | `Mobile/xyz` および `Edge/` のトークンがコメントの外にある。                                                                                                                                                                                               | Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299 |
 
 要するに、モバイル端末を検出するには、ユーザーエージェント文字列のどこかに文字列 `Mobi` があるかどうかを探すことをお勧めします。
 

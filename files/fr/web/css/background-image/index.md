@@ -1,8 +1,6 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-browser-compat: css.properties.background-image
-translation_of: Web/CSS/background-image
 ---
 
 {{CSSRef}}
@@ -23,14 +21,17 @@ Si une image donnée ne peut pas être chargée (par exemple lorsqu'il est impos
 
 ```css
 /* Valeur simple */
-background-image: url('https://example.com/bck.png');
+background-image: url("https://example.com/bck.png");
 
 /* Plusieurs valeurs */
-background-image: url('https://example.com/top.png'), url('https://example.com/bottom.png');
+background-image: url("https://example.com/top.png"),
+  url("https://example.com/bottom.png");
 
-background-image:
-  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url('catfront.png');
+background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 0, 0.5),
+    rgba(0, 0, 255, 0.5)
+  ), url("catfront.png");
 
 /* Valeur avec un mot-clé */
 background-image: none;
@@ -53,7 +54,7 @@ background-image: unset;
 
 Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisatrices et utilisateurs. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
 
-- [Comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
+- [Comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de succès 1.1.1 — Comprendre les règles du WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Définition formelle
@@ -73,12 +74,12 @@ On voit ici l'effet obtenu avec plusieurs images&nbsp;: l'étoile est légèreme
 ```html
 <div>
   <p class="catsandstars">
-    Un paragraphe avec des chats<br/>
+    Un paragraphe avec des chats<br />
     et des étoiles.
   </p>
   <p>Pas ici.</p>
   <p class="catsandstars">
-    Et voilà encore des chats.<br/>
+    Et voilà encore des chats.<br />
     Et des étoiles !
   </p>
   <p>Puis plus rien.</p>
@@ -90,7 +91,7 @@ On voit ici l'effet obtenu avec plusieurs images&nbsp;: l'étoile est légèreme
 ```css
 p {
   font-size: 1.5em;
-  color: #FE7F88;
+  color: #fe7f88;
   background-color: transparent;
   background-image: none;
 }
@@ -100,8 +101,7 @@ div {
 }
 
 .catsandstars {
-  background-image:  url("startransparent.gif"),
-                     url("catfront.png");
+  background-image: url("startransparent.gif"), url("catfront.png");
   background-color: transparent;
 }
 ```
@@ -126,15 +126,15 @@ div {
   - [`<image>`](/fr/docs/Web/CSS/image)
   - [`<gradient>`](/fr/docs/Web/CSS/gradient)
 - Les fonctions CSS relatives aux images&nbsp;:
-  - [`cross-fade()`](/fr/docs/Web/CSS/cross-fade())
-  - [`element()`](/fr/docs/Web/CSS/element())
-  - [`image()`](/fr/docs/Web/CSS/image/image())
-  - [`image-set()`](/fr/docs/Web/CSS/image/image-set())
-  - [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient())
-  - [`radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient())
-  - [`conic-gradient`](/fr/docs/Web/CSS/gradient/conic-gradient())
-  - [`repeating-linear-gradient`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient())
-  - [`repeating-radial-gradient`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient())
-  - [`repeating-conic-gradient`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient()),
-  - [`paint()`](/fr/docs/Web/CSS/image/paint())
-  - [`url()`](/fr/docs/Web/CSS/url())
+  - [`cross-fade()`](</fr/docs/Web/CSS/cross-fade()>)
+  - [`element()`](</fr/docs/Web/CSS/element()>)
+  - [`image()`](</fr/docs/Web/CSS/image/image()>)
+  - [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
+  - [`linear-gradient`](</fr/docs/Web/CSS/gradient/linear-gradient()>)
+  - [`radial-gradient`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
+  - [`conic-gradient`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
+  - [`repeating-linear-gradient`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
+  - [`repeating-radial-gradient`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)
+  - [`repeating-conic-gradient`](</fr/docs/Web/CSS/gradient/repeating-conic-gradient()>)
+  - [`paint()`](</fr/docs/Web/CSS/image/paint()>)
+  - [`url()`](</fr/docs/Web/CSS/url()>)

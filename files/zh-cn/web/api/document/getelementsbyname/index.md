@@ -19,21 +19,21 @@ elements = document.getElementsByName(name)
 ## 例子
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
- ...
-</head>
+  <head>
+    ...
+  </head>
 
-<body>
-<form name="up"><input type="text"></form>
-<div name="down"><input type="text"></div>
+  <body>
+    <form name="up"><input type="text" /></form>
+    <div name="down"><input type="text" /></div>
 
-<script>
-var up_forms = document.getElementsByName("up");
-console.log(up_forms[0].tagName); // returns "FORM"
-</script>
-</body>
+    <script>
+      var up_forms = document.getElementsByName("up");
+      console.log(up_forms[0].tagName); // returns "FORM"
+    </script>
+  </body>
 </html>
 ```
 

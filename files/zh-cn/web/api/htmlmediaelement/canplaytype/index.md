@@ -33,8 +33,8 @@ str = audioOrVideo.canPlayType(mediaType);
 ## 示例
 
 ```js
-var obj = document.createElement('video');
-console.log(obj.canPlayType('video/mp4')); // "maybe"
+var obj = document.createElement("video");
+console.log(obj.canPlayType("video/mp4")); // "maybe"
 ```
 
 ## 规范

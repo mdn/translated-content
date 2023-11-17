@@ -1,11 +1,8 @@
 ---
 title: <mstyle>
 slug: Web/MathML/Element/mstyle
-tags:
-  - MathML
-  - MathML:Element
-translation_of: Web/MathML/Element/mstyle
 ---
+
 {{MathMLRef}}
 
 Элемент `<mstyle>` разметки MathML используется для изменения стиля его дочерних элементов. Он принимает все атрибуты всех элементов представления MathML, за некоторыми исключениями и c дополнительными атрибутами, перечисленными ниже.
@@ -44,10 +41,8 @@ translation_of: Web/MathML/Element/mstyle
 
 ```html
 <math>
-
   <mstyle displaystyle="true" mathcolor="teal">
     <mrow>
-
       <munderover>
         <mo stretchy="true" form="prefix">&sum;</mo>
         <mrow>
@@ -64,34 +59,15 @@ translation_of: Web/MathML/Element/mstyle
           <mi>n</mi>
         </mfrac>
       </mstyle>
-
     </mrow>
   </mstyle>
-
 </math>
 ```
 
-## Характеристики
+## Спецификации
 
-| Характеристика                                                                           | Статус                           | Комментарий            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{SpecName("MathMLCore", "#style-change-mstyle", "mstyle")}}         | {{Spec2("MathMLCore")}} | Проект спецификации    |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mstyle', 'mstyle') }} | {{ Spec2('MathML3') }}     | Текущая спецификация   |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mstyle', 'mstyle') }} | {{ Spec2('MathML2') }}     | Начальная спецификация |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Особенности ядра Gecko
-
-- До Gecko 6.0 реализация `<mstyle>` не была завершена и [была исправлена](https://bugzilla.mozilla.org/show_bug.cgi?id=569125). В частности, установка этих атрибутов в `mstyle` не влияла на его дочерние элементы:
-
-  - Атрибут `bevelled` на элементы {{ MathMLElement("mfrac") }}.
-  - Атрибут `notation` на элементы {{ MathMLElement("menclose") }}.
-  - Атрибуты `open`, `close` и `separators` на элементы {{ MathMLElement("mfenced") }}.
-  - Атрибуты `accent` и `accentunder` на элементы {{ MathMLElement("mover") }}, {{ MathMLElement("munder") }} и {{ MathMLElement("munderover") }}.
-  - Атрибут `selection` на элементы {{ MathMLElement("maction") }}.
-  - Атрибут `mathvariant` на элементы {{ MathMLElement("mi") }}.
-
-- Начиная с Gecko 29.0, атрибуты, принятые в элементе `<mstyle>` ограничены фактически используемыми на практике: `id, class, style, href, mathcolor, mathbackground, scriptlevel, displaystyle, scriptsizemultiplier, scriptminsize, dir, mathsize, mathvariant, fontfamily, fontweight, fontstyle, fontsize, color, background`.

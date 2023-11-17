@@ -12,27 +12,29 @@
 
 ```yaml
 ---
-title: Fetch API
-slug: Web/API/Fetch_API
-page-type: web-api-overview
-browser-compat: api.fetch
+title: atob() global function
+short-title: atob()
+slug: Web/API/atob
+page-type: web-api-global-function
+browser-compat: api.atob
 ---
 ```
 
 其中：
 
 - `title` 为文档的大标题
+- `short-title` 为显示在侧边栏和面包屑中的短标题
 - `slug` 为与网页 URL 相关的元数据（URL path 部分的规则为：`/<locale>/docs/<slug>`）
 - `page-type` 为页面的类型，将被用于站点管理和自动化数据处理
-- `browser-compat` 为[**浏览器兼容性表**][]对应的宏所使用的元数据。
+- `browser-compat` 为[**浏览器兼容性表**][]对应的宏所使用的元数据
 
-在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。
+在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。对于 `short-title`，如果简体中文文档采用的短标题与英文文档相同，则无需添加（仅在使用与英文文档*不同*的短标题时添加该元数据）。
 
 最终在简体中文文档中呈现的元数据如下所示：
 
 ```yaml
-title: Fetch API
-slug: Web/API/Fetch_API
+title: atob() 全局函数
+slug: Web/API/atob
 ```
 
 ## 翻译标题和 ID
@@ -114,12 +116,16 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 
 #### 常见中/英文标点
 
+<!-- markdownlint-disable search-replace -->
+
 | 名称   | 中文 | 英文    |
 | ------ | ---- | ------- |
 | 括号   | （） | ()      |
 | 冒号   | ：   | :       |
 | 引号   | “”   | ""      |
 | 破折号 | ——   | -- 、 — |
+
+<!-- markdownlint-enable search-replace -->
 
 简体中文标点符号参考资源：
 
@@ -176,7 +182,11 @@ Like this.
 
 ### 代名词
 
+<!-- markdownlint-disable search-replace -->
+
 我们无需将“you”翻译为“您”，在文档正文部分的翻译中，请统一使用“你”。
+
+<!-- markdownlint-enable search-replace -->
 
 ### 复数形式
 
@@ -187,20 +197,15 @@ Like this.
 - 不宜：`应用程序接口（APIs）`
 - 不宜：`应用程序接口们（APIs）`
 
+### 术语表
+
+我们在仓库中维护了一个[术语表](glossary.md)，旨在统一目前还未有明确中文翻译的术语。在翻译文档时，请尽量使用术语表中的术语，以保证文档的一致性。
+
+> 如果术语表中缺少某些术语，或者你对其中的术语翻译有任何疑问，欢迎提出[议题](https://github.com/mdn/translated-content/issues/new/choose)或发起 PR。
+
 ### 常用标题
 
-英文文档中使用了一些常见标题，为了保持简体中文文档的一致性，我们作如下约定：
-
-| 英文                   | 简体中文翻译 |
-| ---------------------- | ------------ |
-| Accessibility concerns | 无障碍考虑   |
-| Active learning        | 动手练习     |
-| Browser compatibility  | 浏览器兼容性 |
-| Examples               | 示例         |
-| See also               | 参见         |
-| Specifications         | 规范         |
-| Technical summary      | 技术概要     |
-| Usage notes            | 使用说明     |
+英文文档中使用了一些常见标题，为了保持简体中文文档的一致性，请在翻译时参考术语表中的[标题和表格的翻译](glossary.md#标题表格)。
 
 [如何使用 markdown 来撰写文档]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [**浏览器兼容性表**]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables

@@ -46,10 +46,10 @@ console.log(beverage); // "Beer"
 const greeting = (person) => {
   const name = person ? person.name : "stranger";
   return `Howdy, ${name}`;
-}
+};
 
-console.log(greeting({ name: "Alice" }));  // "Howdy, Alice"
-console.log(greeting(null));             // "Howdy, stranger"
+console.log(greeting({ name: "Alice" })); // "Howdy, Alice"
+console.log(greeting(null)); // "Howdy, stranger"
 ```
 
 ### 条件链
@@ -58,9 +58,12 @@ console.log(greeting(null));             // "Howdy, stranger"
 
 ```js
 function example() {
-  return condition1 ? value1
-        : condition2 ? value2
-        : condition3 ? value3
+  return condition1
+    ? value1
+    : condition2
+      ? value2
+      : condition3
+        ? value3
         : value4;
 }
 ```

@@ -1,7 +1,6 @@
 ---
 title: 处理不同方向的文本
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
@@ -13,7 +12,7 @@ original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         计算机基础知识，基本软件（参见<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"

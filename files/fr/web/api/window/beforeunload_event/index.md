@@ -1,8 +1,6 @@
 ---
 title: beforeunload
 slug: Web/API/Window/beforeunload_event
-translation_of: Web/API/Window/beforeunload_event
-original_slug: Web/Events/beforeunload
 ---
 
 L'événement **`beforeunload`** est déclenché quand la fênetre, ou le document, et leurs resources sont sur le point d'être déchargés.
@@ -36,19 +34,19 @@ Lorsqu'une chaîne de caractères est assignée à la propriété `returnValue` 
 
 ## Propriétés
 
-| Propriété                             | Type                                 | Description                                                               |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------- |
+| Propriété                       | Type                       | Description                                                               |
+| ------------------------------- | -------------------------- | ------------------------------------------------------------------------- |
 | `target` {{readOnlyInline}}     | {{domxref("EventTarget")}} | La cible de l'événement (la plus haute cible dans l'arbre du DOM).        |
-| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}     | Le type de l'événement.                                                   |
-| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}         | Est-ce que l'événement se propage ?                                       |
-| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}         | Est-il possible d'annuler l'événement ?                                   |
-| `returnValue`                         | {{domxref("DOMString")}}     | La valeur de retour de l'événement (le message à afficher à l'utlisateur) |
+| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}   | Le type de l'événement.                                                   |
+| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}      | Est-ce que l'événement se propage ?                                       |
+| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}      | Est-il possible d'annuler l'événement ?                                   |
+| `returnValue`                   | {{domxref("DOMString")}}   | La valeur de retour de l'événement (le message à afficher à l'utlisateur) |
 
 ## Exemples
 
 ```js
 window.addEventListener("beforeunload", function (event) {
-  event.returnValue = "\o/";
+  event.returnValue = "\\o/";
 });
 
 // est équivalent à
@@ -61,10 +59,10 @@ Les navigateurs basés sur WebKit ne suivent pas les spécifications pour la bo�
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  e.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+
-  return confirmationMessage;              // Gecko, WebKit, Chrome <34
+  e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+
+  return confirmationMessage; // Gecko, WebKit, Chrome <34
 });
 ```
 

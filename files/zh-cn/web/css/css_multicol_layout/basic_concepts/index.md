@@ -62,7 +62,7 @@ Multicol 与 CSS 中的任何其他布局方法不同，它将内容（包括所
 
 ### `columns` 缩写
 
-您可以使用 columns 缩写来设置 `column-count` 和 `column-width`。如果设置长度单位，这将用于 `column-width`，设置一个整数，它将用于 `column-count`。您可以设置两者，用空格分隔这两个值。
+你可以使用 columns 缩写来设置 `column-count` 和 `column-width`。如果设置长度单位，这将用于 `column-width`，设置一个整数，它将用于 `column-count`。你可以设置两者，用空格分隔这两个值。
 
 此 CSS 结果与示例 1 相同，column-count 设置为 3。
 

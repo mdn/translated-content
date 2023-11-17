@@ -1,7 +1,6 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
 
 {{JSRef}}
@@ -51,16 +50,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ```js
 const duck = {
-  name: 'Maurice',
-  color: 'white',
-  greeting: function() {
+  name: "Maurice",
+  color: "white",
+  greeting: function () {
     console.log(`Quaaaack! My name is ${this.name}`);
-  }
-}
+  },
+};
 
-Reflect.has(duck, 'color');
+Reflect.has(duck, "color");
 // true
-Reflect.has(duck, 'haircut');
+Reflect.has(duck, "haircut");
 // false
 ```
 
@@ -74,7 +73,7 @@ Reflect.ownKeys(duck);
 ### Добавление нового свойства в объект
 
 ```js
-Reflect.set(duck, 'eyes', 'black');
+Reflect.set(duck, "eyes", "black");
 // вернётся "true" если вызов успешен
 // объект "duck" теперь содержит свойство "eyes" со значением "black"
 ```

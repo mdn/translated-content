@@ -27,7 +27,7 @@ const arr3 = [element0, element1, /* … ,*/ elementN];
 
 `element0, element1, …, elementN` 是数组元素的值列表。当指定这些值时，数组将用它们作为数组的元素初始化。数组的 `length` 属性被设置为参数的数量。
 
-括号语法称为“数组字面量”或“数组初始化式”。它比其他形式的数组创建更短，因此通常是首选。详见[数组字面量](zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals)。
+括号语法称为“数组字面量”或“数组初始化式”。它比其他形式的数组创建更短，因此通常是首选。详见[数组字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals)。
 
 为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：
 
@@ -89,7 +89,7 @@ const wisenArray = Array.of(9.3); // wisenArray 只包含一个元素：9.3
 因为元素也是属性，你可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问。假设你定义了以下数组：
 
 ```js
-const myArray = ['Wind', 'Rain', 'Fire'];
+const myArray = ["Wind", "Rain", "Fire"];
 ```
 
 你可以将数组的第一个元素引用为 `myArray[0]`，将数组的第二个元素引用为 `myArray[1]`，等等...元素的索引从零开始。
@@ -97,9 +97,9 @@ const myArray = ['Wind', 'Rain', 'Fire'];
 > **备注：** 你也可以使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问数组的其他属性，就像对象一样。
 >
 > ```js
-> const arr = ['one', 'two', 'three'];
-> arr[2]          // three
-> arr['length']   // 3
+> const arr = ["one", "two", "three"];
+> arr[2]; // three
+> arr["length"]; // 3
 > ```
 
 ## 填充数组
@@ -108,16 +108,16 @@ const myArray = ['Wind', 'Rain', 'Fire'];
 
 ```js
 const emp = [];
-emp[0] = 'Casey Jones';
-emp[1] = 'Phil Lesh';
-emp[2] = 'August West';
+emp[0] = "Casey Jones";
+emp[1] = "Phil Lesh";
+emp[2] = "August West";
 ```
 
 > **备注：** 如果你在以上代码中给数组运算符的是一个非整型数值，那么它将作为一个表示数组的对象的属性创建，而不是数组的元素。
 >
 > ```js
 > const arr = [];
-> arr[3.4] = 'Oranges';
+> arr[3.4] = "Oranges";
 > console.log(arr.length); // 0
 > console.log(Object.hasOwn(arr, 3.4)); // true
 > ```
@@ -125,9 +125,9 @@ emp[2] = 'August West';
 你也可以在创建数组的时候去填充它：
 
 ```js
-const myArray = new Array('Hello', myVar, 3.14159);
+const myArray = new Array("Hello", myVar, 3.14159);
 // 或
-const myArray = ['Mango', 'Apple', 'Orange'];
+const myArray = ["Mango", "Apple", "Orange"];
 ```
 
 ### 理解 length
@@ -140,7 +140,7 @@ const myArray = ['Mango', 'Apple', 'Orange'];
 
 ```js
 const cats = [];
-cats[30] = ['Dusty'];
+cats[30] = ["Dusty"];
 console.log(cats.length); // 31
 ```
 
@@ -149,7 +149,7 @@ console.log(cats.length); // 31
 写一个小于数组元素数量的值将截断数组，写 `0` 会彻底清空数组：
 
 ```js
-const cats = ['Dusty', 'Misty', 'Twiggy'];
+const cats = ["Dusty", "Misty", "Twiggy"];
 console.log(cats.length); // 3
 
 cats.length = 2;
@@ -187,7 +187,7 @@ for (let i = 0, div; (div = divs[i]); i++) {
 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 方法提供了遍历数组元素的其他方法：
 
 ```js
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 colors.forEach((color) => console.log(color));
 // red
 // green
@@ -199,7 +199,7 @@ colors.forEach((color) => console.log(color));
 注意，在数组定义时省略的元素不会在 `forEach` 遍历时被列出，但是手动赋值为 `undefined` 的元素是*会*被列出的：
 
 ```js
-const sparseArray = ['first', 'second', , 'fourth'];
+const sparseArray = ["first", "second", , "fourth"];
 
 sparseArray.forEach((element) => {
   console.log(element);
@@ -209,10 +209,10 @@ sparseArray.forEach((element) => {
 // fourth
 
 if (sparseArray[2] === undefined) {
-  console.log('sparseArray[2] 是 undefined');  // true
+  console.log("sparseArray[2] 是 undefined"); // true
 }
 
-const nonsparseArray = ['first', 'second', undefined, 'fourth'];
+const nonsparseArray = ["first", "second", undefined, "fourth"];
 
 nonsparseArray.forEach((element) => {
   console.log(element);
@@ -232,29 +232,29 @@ nonsparseArray.forEach((element) => {
 [`concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) 方法连接两个或多个数组并返回一个新的数组。
 
 ```js
-let myArray = ['1', '2', '3'];
-myArray = myArray.concat('a', 'b', 'c');
+let myArray = ["1", "2", "3"];
+myArray = myArray.concat("a", "b", "c");
 // myArray 现在是 ["1", "2", "3", "a", "b", "c"]
 ```
 
 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 方法将数组中的所有元素连接成一个字符串。
 
 ```js
-const myArray = ['Wind', 'Rain', 'Fire'];
-const list = myArray.join(' - '); // list 现在是 "Wind - Rain - Fire"
+const myArray = ["Wind", "Rain", "Fire"];
+const list = myArray.join(" - "); // list 现在是 "Wind - Rain - Fire"
 ```
 
 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 方法在数组末尾添加一个或多个元素，并返回数组操作后的 `length`。
 
 ```js
-const myArray = ['1', '2'];
-myArray.push('3'); // myArray 现在是 ["1", "2", "3"]
+const myArray = ["1", "2"];
+myArray.push("3"); // myArray 现在是 ["1", "2", "3"]
 ```
 
 [`pop()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 方法从数组移出最后一个元素，并返回该元素。
 
 ```js
-const myArray = ['1', '2', '3'];
+const myArray = ["1", "2", "3"];
 const last = myArray.pop();
 // myArray 现在是 ["1", "2"]，last 为 "3"
 ```
@@ -262,7 +262,7 @@ const last = myArray.pop();
 [`shift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) 方法从数组移出第一个元素，并返回该元素。
 
 ```js
-const myArray = ['1', '2', '3'];
+const myArray = ["1", "2", "3"];
 const first = myArray.shift();
 // myArray 现在是 ["2", "3"]，first 为 "1"
 ```
@@ -270,8 +270,8 @@ const first = myArray.shift();
 [`unshift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) 方法在数组开头添加一个或多个元素，并返回数组的新长度。
 
 ```js
-const myArray = ['1', '2', '3'];
-myArray.unshift('4', '5');
+const myArray = ["1", "2", "3"];
+myArray.unshift("4", "5");
 // myArray 变成了 ["4", "5", "1", "2", "3"]
 ```
 
@@ -286,15 +286,15 @@ myArray = myArray.slice(1, 4); // [ "b", "c", "d"]
 [`at()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/at) 方法返回数组中指定索引处的元素，如果索引超出范围，则返回 `undefined`。它主要用于从数组末尾访问元素的负下标。
 
 ```js
-const myArray = ['a', 'b', 'c', 'd', 'e'];
+const myArray = ["a", "b", "c", "d", "e"];
 myArray.at(-2); // "d"，myArray 的倒数第二个元素
 ```
 
 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从数组移除一些元素，并（可选地）替换它们。它返回从数组中删除的元素。
 
 ```js
-const myArray = ['1', '2', '3', '4', '5'];
-myArray.splice(1, 3, 'a', 'b', 'c', 'd');
+const myArray = ["1", "2", "3", "4", "5"];
+myArray.splice(1, 3, "a", "b", "c", "d");
 // myArray 现在是 ["1", "a", "b", "c", "d", "5"]
 // 本代码从 1 号索引开始（或元素“2”所在的位置），
 // 移除 3 个元素，然后将后续元素插入到那个位置上。
@@ -303,7 +303,7 @@ myArray.splice(1, 3, 'a', 'b', 'c', 'd');
 [`reverse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 方法原地颠倒数组元素的顺序：第一个数组元素变为最后一个数组元素，最后一个数组元素变为第一个数组元素。它返回对数组的引用。
 
 ```js
-const myArray = ['1', '2', '3'];
+const myArray = ["1", "2", "3"];
 myArray.reverse();
 // 将原数组颠倒，myArray = [ "3", "2", "1" ]
 ```
@@ -319,7 +319,7 @@ myArray = myArray.flat();
 [`sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) 方法对数组的元素进行适当的排序，并返回对数组的引用。
 
 ```js
-const myArray = ['Wind', 'Rain', 'Fire'];
+const myArray = ["Wind", "Rain", "Fire"];
 myArray.sort();
 // 对数组排序，myArray = ["Fire", "Rain", "Wind"]
 ```
@@ -334,7 +334,7 @@ const sortFn = (a, b) => {
     return 1; // 正数 => a > b，a 在 b 之后
   }
   return 0; // 0 => a = b，a 和 b 保持原来的顺序
-}
+};
 myArray.sort(sortFn);
 // 对数组排序，myArray = ["Wind","Fire","Rain"]
 ```
@@ -346,29 +346,29 @@ myArray.sort(sortFn);
 [`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 方法在数组中搜索 `searchElement` 并返回第一个匹配的索引。
 
 ```js
-const a = ['a', 'b', 'a', 'b', 'a'];
-console.log(a.indexOf('b')); // 1
+const a = ["a", "b", "a", "b", "a"];
+console.log(a.indexOf("b")); // 1
 
 // 再试一次，这次从最后一次匹配之后开始
-console.log(a.indexOf('b', 2)); // 3
-console.log(a.indexOf('z')); // -1, 因为找不到 'z'
+console.log(a.indexOf("b", 2)); // 3
+console.log(a.indexOf("z")); // -1, 因为找不到 'z'
 ```
 
 [`lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) 方法的工作原理类似于 `indexOf`，但这是从末尾开始，反向搜索。
 
 ```js
-const a = ['a', 'b', 'c', 'd', 'a', 'b'];
-console.log(a.lastIndexOf('b')); // 5
+const a = ["a", "b", "c", "d", "a", "b"];
+console.log(a.lastIndexOf("b")); // 5
 
 // 再试一次，这次从最后一次匹配之前开始
-console.log(a.lastIndexOf('b', 4)); // 1
-console.log(a.lastIndexOf('z')); // -1
+console.log(a.lastIndexOf("b", 4)); // 1
+console.log(a.lastIndexOf("z")); // -1
 ```
 
 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 方法对数组中的每个元素执行 `callback` 并返回 `undefined`。
 
 ```js
-const a = ['a', 'b', 'c'];
+const a = ["a", "b", "c"];
 a.forEach((element) => {
   console.log(element);
 });
@@ -385,7 +385,7 @@ a.forEach((element) => {
 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 方法返回由每个数组元素上执行 `callback` 的返回值所组成的新数组。
 
 ```js
-const a1 = ['a', 'b', 'c'];
+const a1 = ["a", "b", "c"];
 const a2 = a1.map((item) => item.toUpperCase());
 console.log(a2); // ['A', 'B', 'C']
 ```
@@ -393,7 +393,7 @@ console.log(a2); // ['A', 'B', 'C']
 [`flatMap()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap) 方法先执行 `map()`，再执行深度为 1 的 `flat()`。
 
 ```js
-const a1 = ['a', 'b', 'c'];
+const a1 = ["a", "b", "c"];
 const a2 = a1.flatMap((item) => [item.toUpperCase(), item.toLowerCase()]);
 console.log(a2); // ['A', 'a', 'B', 'b', 'C', 'c']
 ```
@@ -401,40 +401,40 @@ console.log(a2); // ['A', 'a', 'B', 'b', 'C', 'c']
 [`filter()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 方法返回一个新数组，其中包含 `callback` 返回 `true` 的元素。
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const a2 = a1.filter((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const a2 = a1.filter((item) => typeof item === "number");
 console.log(a2); // [10, 20, 30]
 ```
 
 [`find()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find) 方法返回 `callback` 返回 `true` 的第一个元素。
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const i = a1.find((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.find((item) => typeof item === "number");
 console.log(i); // 10
 ```
 
 [`findLast()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast) 方法返回 `callback` 返回 `true` 的最后一个元素。
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const i = a1.findLast((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.findLast((item) => typeof item === "number");
 console.log(i); // 30
 ```
 
 [`findIndex()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) 方法返回 `callback` 返回 `true` 的第一个元素的索引。
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const i = a1.findIndex((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.findIndex((item) => typeof item === "number");
 console.log(i); // 1
 ```
 
 [`findLastIndex()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex) 方法返回 `callback` 返回 `true` 的最后一个元素的索引。
 
 ```js
-const a1 = ['a', 10, 'b', 20, 'c', 30];
-const i = a1.findLastIndex((item) => typeof item === 'number');
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.findLastIndex((item) => typeof item === "number");
 console.log(i); // 5
 ```
 
@@ -442,11 +442,11 @@ console.log(i); // 5
 
 ```js
 function isNumber(value) {
-  return typeof value === 'number';
+  return typeof value === "number";
 }
 const a1 = [1, 2, 3];
 console.log(a1.every(isNumber)); // true
-const a2 = [1, '2', 3];
+const a2 = [1, "2", 3];
 console.log(a2.every(isNumber)); // false
 ```
 
@@ -454,13 +454,13 @@ console.log(a2.every(isNumber)); // false
 
 ```js
 function isNumber(value) {
-  return typeof value === 'number';
+  return typeof value === "number";
 }
 const a1 = [1, 2, 3];
 console.log(a1.some(isNumber)); // true
-const a2 = [1, '2', 3];
+const a2 = [1, "2", 3];
 console.log(a2.some(isNumber)); // true
-const a3 = ['1', '2', '3'];
+const a3 = ["1", "2", "3"];
 console.log(a3.some(isNumber)); // false
 ```
 

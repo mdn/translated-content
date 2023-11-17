@@ -10,7 +10,7 @@ slug: Web/API/AudioParam/linearRampToValueAtTime
 ## 구문
 
 ```js
-var AudioParam = AudioParam.linearRampToValueAtTime(value, endTime)
+var AudioParam = AudioParam.linearRampToValueAtTime(value, endTime);
 ```
 
 ### 매개변수
@@ -36,14 +36,14 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 // 예제를 위한 기본 변수를 설정합니다
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var myAudio = document.querySelector("audio");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
-var linearRampPlus = document.querySelector('.linear-ramp-plus');
-var linearRampMinus = document.querySelector('.linear-ramp-minus');
+var linearRampPlus = document.querySelector(".linear-ramp-plus");
+var linearRampMinus = document.querySelector(".linear-ramp-minus");
 
 // MediaElementAudioSourceNode를 생성합니다
 // HTMLMediaElement를 노드 내로 전달합니다
@@ -59,13 +59,13 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // onclick이 발생했을 때 무언가를 하기 위해 버튼을 설정합니다
-linearRampPlus.onclick = function() {
+linearRampPlus.onclick = function () {
   gainNode.gain.linearRampToValueAtTime(1.0, audioCtx.currentTime + 2);
-}
+};
 
-linearRampMinus.onclick = function() {
+linearRampMinus.onclick = function () {
   gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 2);
-}
+};
 ```
 
 ## 명세서

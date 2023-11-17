@@ -1,7 +1,6 @@
 ---
 title: <address>
 slug: Web/HTML/Element/address
-original_slug: Web/HTML/Elemento/address
 ---
 
 {{HTMLSidebar}}
@@ -14,12 +13,12 @@ El **elemento HTML `<address>`** aporta información de contacto para su {{HTMLE
 > - Este elemento no debe contener más información que la información de contacto, como una fecha de publicación (que pertenece al elemento {{HTMLElement("time")}}).
 > - Normalmente un elemento `<address>` puede ser colocado dentro del elemento {{HTMLElement("footer")}} de la sección actual, si lo hay.
 
-| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico), contenido palpable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico), contenido palpable                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Contenido permitido                                                        | [Contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico), pero no con elementos `<address>` anidados, no contenidos de cabecera ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}), no contenido de sección ({{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}), y no elemento {{HTMLElement("header")}} o {{HTMLElement("footer")}}. |
-| Etiqueta de omisión                                                        | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Elementos padre permitidos                                                 | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Interfaz DOM                                                               | {{domxref("HTMLElement")}} antes de Gecko 2.0 (Firefox 4), Gecko implementó este elemento usando la interfaz {{domxref("HTMLSpanElement")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Etiqueta de omisión                                                        | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Elementos padre permitidos                                                 | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico).                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Interfaz DOM                                                               | {{domxref("HTMLElement")}} antes de Gecko 2.0 (Firefox 4), Gecko implementó este elemento usando la interfaz {{domxref("HTMLSpanElement")}}.                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## Atributos
 
@@ -28,16 +27,18 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Atributos_
 ## Example
 
 ```html
-  <address>
-    You can contact author at <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br>
-    If you see any bugs, please <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br>
-    You may also want to visit us:<br>
-    Mozilla Foundation<br>
-    1981 Landings Drive<br>
-    Building K<br>
-    Mountain View, CA 94043-0801<br>
-    USA
-  </address>
+<address>
+  You can contact author at
+  <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br />
+  If you see any bugs, please
+  <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br />
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  1981 Landings Drive<br />
+  Building K<br />
+  Mountain View, CA 94043-0801<br />
+  USA
+</address>
 ```
 
 Above HTML will output:

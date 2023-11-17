@@ -29,9 +29,9 @@ slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 3. 演示页/博客文章/其他信息：尽可能找到充实的参考信息。
 4. 实用的工程人员联系方式：找到一个友好的工程联系人来询问有关规范的问题是非常有用的，这个人可能参与了 API 的标准化或在浏览器中的实现。找到他们的好地方是：
 
-    - 如果你在相关公司工作，可以在内部联系手册中找到。
-    - 参与该 API 讨论的公开邮件列表，如 Mozilla 的 [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) 或 W3C 的 [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/) 等列表。
-    - 规范本身。如 [Web Audio API 规范](https://webaudio.github.io/web-audio-api/)在最顶部列出了规范的作者和他们的联系方式。
+   - 如果你在相关公司工作，可以在内部联系手册中找到。
+   - 参与该 API 讨论的公开邮件列表，如 Mozilla 的 [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) 或 W3C 的 [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/) 等列表。
+   - 规范本身。如 [Web Audio API 规范](https://webaudio.github.io/web-audio-api/)在最顶部列出了规范的作者和他们的联系方式。
 
 ### 花点时间体验 API
 
@@ -135,9 +135,9 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 
 #### 概念/指南页
 
-大多数 API 参考资料至少有一个指南，有时还有一个概念页与之配套。至少，一个 API 参考资料应该包含一个名为“Using *name-of-api*”的指南，它将提供一个关于如何使用 API 的基本指南。更复杂的 API 可能需要多个使用指南来解释如何使用 API 的不同方面。
+大多数 API 参考资料至少有一个指南，有时还有一个概念页与之配套。至少，一个 API 参考资料应该包含一个名为“Using _name-of-api_”的指南，它将提供一个关于如何使用 API 的基本指南。更复杂的 API 可能需要多个使用指南来解释如何使用 API 的不同方面。
 
-如果需要，你也可以包括一篇名为“*name-of-api* concepts”的概念文章，它将提供与 API 相关的任何概念背后的理论解释，开发人员应该理解这些概念以有效使用它。
+如果需要，你也可以包括一篇名为“_name-of-api_ concepts”的概念文章，它将提供与 API 相关的任何概念背后的理论解释，开发人员应该理解这些概念以有效使用它。
 
 这些文章都应该作为 API 概述页面的子页面来创建。例如，Web 音频有四篇指南和一篇概念文章：
 
@@ -207,24 +207,25 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 现在你应该准备好开始撰写你的接口页了。每个接口参考页都应该遵守以下结构：
 
 1. **\\{{APIRef}}**：在每个界面页面的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \\{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
-    ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
+   ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 2. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
-    - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
-    - \\{{Deprecated_header}}
-    - \\{{Non-standard_header}}
+   - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
+   - \\{{Deprecated_header}}
+   - \\{{Non-standard_header}}
 
 3. **描述**：接口页面的第一段应该对接口的总体目的进行简短的描述。如果需要额外的描述，你也可以多写几段。如果这个接口实际上是一个字典，你应该用这个术语而不是“接口”。
 4. **继承图**：使用 [`\{{InheritanceDiagram}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) 宏来嵌入接口的 SVG 继承图。
 5. **属性列表、方法列表**：这些部分的标题应该是“Properties”和“Methods”，并使用 \\{{domxref}} 宏提供到该接口的每个属性/方法的参考页的链接，以及每个属性/方法的描述。这些应该用[描述/定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)来标注。每个描述都应该是短小精悍的，尽可能使用一句话进行概括。参见“用 \\{{domxref}} 宏引用其他 API 功能”一节，以了解创建其他页面链接的更快方法。
 
    在这两部分的开头，在属性/方法列表的开始之前，用适当的斜体句子表示继承性：
+
    - _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口不实现任何特定属性，但是从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承属性。_）
    - _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口也从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承属性。_）
    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口不实现任何特定方法，但是从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承方法。_）
    - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口也从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承方法。_）
 
-    > **备注：** 只读属性应该使用 \\{{ReadOnlyInline}} 宏，它可以创建一个漂亮的“只读”徽章，与它们的 \\{{domxref}} 链接在同一行（如果需要使用 \\{{experimentalInline}}、\\{{non-standard_Inline}} 和 \\{{deprecatedInline}} 宏，则需要放置在它们之后）。
+   > **备注：** 只读属性应该使用 \\{{ReadOnlyInline}} 宏，它可以创建一个漂亮的“只读”徽章，与它们的 \\{{domxref}} 链接在同一行（如果需要使用 \\{{experimentalInline}}、\\{{non-standard_Inline}} 和 \\{{deprecatedInline}} 宏，则需要放置在它们之后）。
 
 6. **示例**：包括一个代码清单，以显示 API 的主要功能的典型用法。你不应该列出所有的代码，而应该列出其中一个有趣的子集。对于一个完整的代码清单，你可以参考包含完整示例的 [GitHub](https://github.com/) 仓库，你也可以链接到使用 [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) 功能创建的实时示例（当然，只要它只使用客户端代码）。如果该示例是可视化的，你也可以使用 MDN [实时示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)功能，使其在页面上实时播放。
 7. **标准表格**：此时你需要包含一个标准表格——参见“创建规范参考表格”一节以获得更多信息。
@@ -254,21 +255,21 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 
 1. **标题**：页面的标题必须为 **InterfaceName.propertyName**。接口名称必须以大写字母开头。尽管接口在 JavaScript 中是在对象的原型上实现的，但我们不会像在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)中那样，在标题中包括`.prototype.`。
 2. **\\{{APIRef}}**：在每个属性页的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
-    ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
+   ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 3. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
-    - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
-    - \\{{Deprecated_header}}
-    - \\{{Non-standard_header}}
+   - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
+   - \\{{Deprecated_header}}
+   - \\{{Non-standard_header}}
 
 4. **描述**：属性页的第一段应该对属性的总体目的提供一个简短的、扼要的描述。如果需要任何额外的描述，你可能还想再包括几段。要包括的额外信息是它的默认/初始值，以及它是否是只读的。第一句话的结构必须是：
 
-    - 对于只读属性
-      - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that...
-    - 对于其他属性
-      - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
+   - 对于只读属性
+     - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that...
+   - 对于其他属性
+     - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
 
-    > **备注：** `InterfaceName.property` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
+   > **备注：** `InterfaceName.property` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
 
 5. **值**：Value 部分将包含属性值的描述。这应该包含该属性的数据类型，以及它所代表的内容。关于其示例，详见 {{domxref("SpeechRecognition.grammars")}}。
 
@@ -292,21 +293,21 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 
 1. **标题**: 页面的标题必须为 **InterfaceName.method()**（含有一对英文括号），但页面路径名不能包含括号。另外，接口名称必须以大写字母开头。尽管接口在 JavaScript 中是在对象的原型上实现的，但我们不会像在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)中那样，在标题中包括 `.prototype.`。
 2. **\\{{APIRef}}**：在每个方法页的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \\{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
-    ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
+   ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 3. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
 
-    - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
-    - \\{{Deprecated_header}}
-    - \\{{Non-standard_header}}
+   - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
+   - \\{{Deprecated_header}}
+   - \\{{Non-standard_header}}
 
 4. **描述**：方法页的第一段应该对该方法的首要目的进行简短的描述。如果需要额外的描述，你可能还想多写几段。明显需要包括的额外信息是它的默认参数值，该方法所依赖的任何理论，以及参数值的作用。
 
-    - 第一句话的开头必须遵循这样的结构：
-      - : The **InterfaceName.method()** method interface ...
+   - 第一句话的开头必须遵循这样的结构：
+     - : The **InterfaceName.method()** method interface ...
 
-    > **备注：** `InterfaceName.method()` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
+   > **备注：** `InterfaceName.method()` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
 
-5. **语法**：语法部分应该包括一个2-3行的例子——通常只是构建接口，然后调用接口方法。
+5. **语法**：语法部分应该包括一个 2-3 行的例子——通常只是构建接口，然后调用接口方法。
 
    - 语法应该是类似于这样的结构：
      - : method(param1, param2, …)

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/shift
 ---
 
 {{JSRef}}
@@ -27,17 +26,17 @@ El método `shift` elimina el elemento en el índice cero y desplaza los valores
 El siguiente código muestra el contenido del array `miPescado` antes y después de eliminar el primer elemento. También muestra el elemento eliminado:
 
 ```js
-var miPescado = ['ángel', 'payaso', 'mandarín', 'cirujano'];
+var miPescado = ["ángel", "payaso", "mandarín", "cirujano"];
 
-console.log('miPescado antes: ' + miPescado);
+console.log("miPescado antes: " + miPescado);
 // "miPescado antes: ángel,payaso,mandarín,cirujano"
 
 var eliminado = miPescado.shift();
 
-console.log('miPescado después: ' + miPescado);
+console.log("miPescado después: " + miPescado);
 // "miPescado after: payaso,mandarín,cirujano"
 
-console.log('Elemento eliminado: ' + eliminado);
+console.log("Elemento eliminado: " + eliminado);
 // "Elemento eliminado: ángel"
 ```
 

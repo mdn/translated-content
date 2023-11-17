@@ -2,6 +2,7 @@
 title: 계단식 및 상속
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 이 수업의 목적은 CSS 가 HTML 에 적용되는 방법과 충돌을 해결하는 방법을 제어하는 CSS 의 가장 기본적인 개념인 — 계단식, 우선 순위 및 상속 — 에 대한 이해를 발전시키는 것입니다.
@@ -23,11 +24,11 @@ slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -166,7 +167,7 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 선택자의 우선 순위는 4개의 다른 값 (또는 구성 요소) 을 사용하여 측정되며, 이는 4개의 열에서 Thousands, Hundreds, Tens 및 Ones 개의 단일 자릿수로 간주될 수 있습니다.
 
-1. **Thousands**: 선언이 인라인 스타일인 {{htmlattrxref("style")}} 속성 안에 있으면, 열에서 1점을 얻습니다. 이러한 선언에는 선택자가 없으므로 그 우선 순위는 항상 1000 입니다.
+1. **Thousands**: 선언이 인라인 스타일인 [`style`](/ko/docs/Web/HTML/Global_attributes#style) 속성 안에 있으면, 열에서 1점을 얻습니다. 이러한 선언에는 선택자가 없으므로 그 우선 순위는 항상 1000 입니다.
 2. **Hundreds**: 전체 선택자에 포함된 각 ID 선택자에 대해 이 열에서 1점을 얻습니다.
 3. **Tens**: 이 선택란에서 전체 선택자 내에 포함된 각 class 선택자, 속성 선택자 또는 pseudo-class 에 대해 이 열에서 1점을 얻습니다.
 4. **Ones**: 이 항목에서 각 요소 선택자 또는 전체 선택자 내에 포함된 pseudo-element 에 대해 1점을 얻습니다.
@@ -175,13 +176,13 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 다음 표는 기분을 전환하기 위해 몇 가지 분리된 예를 보여줍니다. 이것들을 살펴보고 왜 그들이 우리에게 그들에게 주어진 우선 순위를 가지고 있는지 이해하도록 하십시오. 선택자는 아직 자세히 다루지 않았지만, MDN [선택자 참조](/ko/docs/Web/CSS/CSS_Selectors) 에서 각 선택자의 세부 정보를 찾을 수 있습니다.
 
-| 선택자                                                                          | Thousands | Hundreds | Tens | Ones | Total specificity |
-| ------------------------------------------------------------------------------- | --------- | -------- | ---- | ---- | ----------------- |
-| `h1`                                                                            | 0         | 0        | 0    | 1    | 0001              |
-| `h1 + p::first-letter`                                                          | 0         | 0        | 0    | 3    | 0003              |
-| `li > a[href*="en-US"] > .inline-warning`                                       | 0         | 0        | 2    | 2    | 0022              |
-| `#identifier`                                                                   | 0         | 1        | 0    | 0    | 0100              |
-| 요소의 {{htmlattrxref("style")}} 속성 안에 규칙이 있는 선택자가 없습니다 | 1         | 0        | 0    | 0    | 1000              |
+| 선택자                                                                                              | Thousands | Hundreds | Tens | Ones | Total specificity |
+| --------------------------------------------------------------------------------------------------- | --------- | -------- | ---- | ---- | ----------------- |
+| `h1`                                                                                                | 0         | 0        | 0    | 1    | 0001              |
+| `h1 + p::first-letter`                                                                              | 0         | 0        | 0    | 3    | 0003              |
+| `li > a[href*="en-US"] > .inline-warning`                                                           | 0         | 0        | 2    | 2    | 0022              |
+| `#identifier`                                                                                       | 0         | 1        | 0    | 0    | 0100              |
+| 요소의 [`style`](/ko/docs/Web/HTML/Global_attributes#style) 속성 안에 규칙이 있는 선택자가 없습니다 | 1         | 0        | 0    | 0    | 1000              |
 
 계속 진행하기 전에, 실제 사례를 살펴보겠습니다.
 
@@ -209,7 +210,7 @@ CSS 속기 속성을 `all` 로 사용하면 이러한 상속 값 중 하나를 (
 
 1. 세 번째 규칙의 {{cssxref("color")}} 및 {{cssxref("padding")}} 값이 적용되었지만, {{cssxref("background-color")}} 가 적용되었음을 알 수 있습니다. 왜죠? 소스 순서 후반의 규칙은 일반적으로 이전 규칙보다 우선하기 때문에 세 가지 모두가 반드시 적용되어야 합니다.
 2. 그러나, class 선택자는 요소 선택자보다 높은 우선 순위에 있기 때문에 위의 규칙이 우선합니다.
-3. 두 요소 모두 {{htmlattrxref("class")}} 가 **`더 우수`** 하지만, 두 번째 요소는 {{htmlattrxref("id")}} 도 **`이기고`** 있습니다. ID 는 classe 보다 우선 순위가 _더 높기_ 때문에 페이지에서 각 고유 ID 를 가진 요소는 하나만 가질 수 있지만, class 는 같은 요소가 많습니다 — ID 선택자는 대상에 따라 **_매우 다릅니다_.** 빨간색 배경색과 1 px 검은색 테두리를 두 번째 요소에 적용해야 합니다. 첫 번째 요소는 회색 배경색을 가져오고 class 에서 지정한대로 테두리가 없습니다.
+3. 두 요소 모두 [`class`](/ko/docs/Web/HTML/Global_attributes#class) 가 **`더 우수`** 하지만, 두 번째 요소는 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 도 **`이기고`** 있습니다. ID 는 classe 보다 우선 순위가 _더 높기_ 때문에 페이지에서 각 고유 ID 를 가진 요소는 하나만 가질 수 있지만, class 는 같은 요소가 많습니다 — ID 선택자는 대상에 따라 **_매우 다릅니다_.** 빨간색 배경색과 1 px 검은색 테두리를 두 번째 요소에 적용해야 합니다. 첫 번째 요소는 회색 배경색을 가져오고 class 에서 지정한대로 테두리가 없습니다.
 4. 두 번째 요소는 빨간색 배경색을 얻지만, 테두리는 없습니다. 왜일까요? 두 번째 규칙의 `!important` 선언으로 인해 — `border: none` 뒤에 이것을 포함하면 ID 가 더 높은 우선 순위에도 불구하고 이 선언이 이전 규칙의 테두리 값 보다 우선함을 의미합니다.
 
 > **참고:** 이 `!important` 선언을 재정의하는 유일한 방법은 소스 순서에서 나중에 같은 우선 순위를 가진 선언에 또는 다른 고유한 선언에 다른 `!important` 선언을 포함시키는 것입니다.

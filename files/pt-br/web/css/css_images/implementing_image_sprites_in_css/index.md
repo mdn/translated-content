@@ -1,7 +1,6 @@
 ---
 title: Implementando sprites de imagens em CSS
 slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
-original_slug: Web/CSS/CSS_Images/Implementando_sprites_de_imagens_em_CSS
 ---
 
 {{cssRef}}

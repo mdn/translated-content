@@ -9,7 +9,7 @@ l10n:
 
 **JavaScript** (**JS**)는 가벼운, 인터프리터 혹은 [just-in-time](https://ko.wikipedia.org/wiki/JIT_%EC%BB%B4%ED%8C%8C%EC%9D%BC) 컴파일 프로그래밍 언어로, {{Glossary("First-class Function", "일급 함수")}}를 지원합니다. 웹 페이지를 위한 스크립트 언어로 잘 알려져 있지만, {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/), [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html)처럼 [많은 비 브라우저 환경](https://en.wikipedia.org/wiki/JavaScript#Other_usage)에서도 사용하고 있습니다. JavaScript는 {{Glossary("Prototype-based programming", "프로토타입 기반")}}, 다중 패러다임, [단일 스레드](/ko/docs/Glossary/Thread), [동적](/ko/docs/Glossary/Dynamic_typing) 언어로, 객체지향형, 명령형, 선언형(함수형 프로그래밍 등) 스타일을 지원합니다.
 
-JavaScript의 동적 기능에는 런타임 객체 구성, 변수 매개변수 목록, 함수 변수, ([`eval`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)을 통한) 동적 스크립트 생성, ([`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 및 [`Object` 유틸리티](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#정적_메서드)를 통한) 객체 검사 그리고 소스 코드 복구(JavaScript 함수는 소스 텍스트를 저장하고 [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)을 통해 다시 찾을 수 있습니다.)가 있습니다.
+JavaScript의 동적 기능에는 런타임 객체 구성, 변수 매개변수 목록, 함수 변수, ([`eval`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)을 통한) 동적 스크립트 생성, ([`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 및 [`Object` 유틸리티](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#정적_메서드)를 통한) 객체 검사 그리고 소스 코드 복구(JavaScript 함수는 소스 텍스트를 저장하고 [`toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)을 통해 다시 찾을 수 있습니다.)가 있습니다.
 
 이 섹션은 JavaScript 언어 자체를 다루며 웹 페이지 또는 다른 사용 환경에 대해 다루지 않습니다. 웹 페이지의 특정 {{Glossary("API","API")}}에 대한 정보를 알고 싶다면, [웹 API](/ko/docs/Web/API)와 {{Glossary("DOM")}}을 참고하시기 바랍니다.
 
@@ -58,7 +58,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 
 - [클라이언트 측 JavaScript 프레임워크 이해](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : JavaScript 프레임워크는 현대 프런트 엔드 웹 개발의 필수 부분으로, 개발자에게 확장 가능한 상호작용형 웹 응용 프로그램을 구축하기위한 입증된 도구를 제공합니다. 이 과정에서는 오늘날 가장 인기있는 일부 프레임워크를 다루는 자습서 시리즈로 이동하기 전에 클라이언트 측 프레임워크가 작동하는 방식과 도구 집합에 맞는 방식에 대한 기본적인 배경 지식을 제공합니다.
-- [자바스크립트 개요](/ko/docs/Web/JavaScript/Language_Overview)
+- [JavaScript 개요](/ko/docs/Web/JavaScript/Language_Overview)
   - : 다른 프로그래밍 언어에서 넘어 온 사람들이 빨리 배울 수 있는 JavaScript의 기본 구문과 의미 체계에 대한 개요입니다.
 - [JavaScript 데이터 구조](/ko/docs/Web/JavaScript/Data_structures)
   - : JavaScript에서 이용 가능한 데이터 구조 개요입니다.

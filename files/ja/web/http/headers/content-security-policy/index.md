@@ -109,7 +109,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
   - : ユーザーエージェントにコンテンツセキュリティポリシーの違反を報告するよう指示します。これらの違反の報告は、 {{Glossary("JSON")}} 文書を HTTP の `POST` リクエストで指定された URI に送信することで行われます。
 
-     > **警告:** {{CSP("report-to")}} ディレクティブは非推奨の **`report-uri`** ディレクティブを置き換えることを意図していますが、 {{CSP("report-to")}} はまだ多くのブラウザーが対応していません。そのため、ブラウザーで {{CSP("report-to")}} の対応が行われるまでは、現在のブラウザーとの互換性のため、 **`report-uri`** と {{CSP("report-to")}} の両方を指定することができます。
+    > **警告:** {{CSP("report-to")}} ディレクティブは非推奨の **`report-uri`** ディレクティブを置き換えることを意図していますが、 {{CSP("report-to")}} はまだ多くのブラウザーが対応していません。そのため、ブラウザーで {{CSP("report-to")}} の対応が行われるまでは、現在のブラウザーとの互換性のため、 **`report-uri`** と {{CSP("report-to")}} の両方を指定することができます。
     >
     > ```http
     > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to groupname

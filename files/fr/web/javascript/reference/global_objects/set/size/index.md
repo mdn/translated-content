@@ -1,15 +1,6 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/size
 ---
 
 {{JSRef}}
@@ -28,7 +19,7 @@ La valeur de `size` est un entier représentant le nombre d'éléments contenus 
 var monSet = new Set();
 monSet.add(1);
 monSet.add(5);
-monSet.add("du texte")
+monSet.add("du texte");
 
 monSet.size; // 3
 ```

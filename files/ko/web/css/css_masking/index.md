@@ -1,7 +1,6 @@
 ---
 title: CSS Masking
 slug: Web/CSS/CSS_masking
-original_slug: Web/CSS/CSS_Masks
 ---
 
 {{CSSRef}}

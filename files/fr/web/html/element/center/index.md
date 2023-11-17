@@ -1,18 +1,6 @@
 ---
-title: '<center> : l''élément de texte centré'
+title: "<center> : l'élément de texte centré"
 slug: Web/HTML/Element/center
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Text
-  - Text Alignment
-  - Web
-  - alignment
-  - center
-translation_of: Web/HTML/Element/center
-browser-compat: html.elements.center
 ---
 
 {{HTMLSidebar}}
@@ -51,7 +39,7 @@ Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLEleme
 
 ```html
 <p style="text-align:center">
-  Cette ligne sera centrée.<br>
+  Cette ligne sera centrée.<br />
   Ainsi que cette ligne.
 </p>
 ```

@@ -1,7 +1,6 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
 
 {{JSRef}}
@@ -12,8 +11,7 @@ El método **`handler.set()`** captura las asignaciones de un valor a una determ
 
 ```js
 var p = new Proxy(target, {
-  set: function(target, property, value, receiver) {
-  }
+  set: function (target, property, value, receiver) {},
 });
 ```
 
@@ -28,6 +26,7 @@ El método `set` recibe los siguientes parámetros. `this` se asocia al handler.
 - `value`
   - : El nuevo valor asignado a la propiedad.
 - `receiver`
+
   - : El objeto al que originalmente iba dirigida la asignación. Normalmente es el proxy. Sin embargo el manejador o `set` handler puede ser llamado de forma indirecta a través de un prototipo entre otros.
 
     Por ejemplo, suponga que un escript ejecuta la sentencia `obj.name = "jen"`, y `obj` no es un proxy, y no posee la propiedad `.name`, pero tiene un proxy en su cadena de prototipos. El manejador `set` de este proxy será llamado y obj será pasado como el receiver.
@@ -61,19 +60,22 @@ Si los siguientes invariantes son violados, el proxy lanzará un {{jsxref("TypeE
 El siguiente código captura la asignación de un valor a una propiedad.
 
 ```js
-var p = new Proxy({}, {
-  set: function(target, prop, value, receiver) {
-    target[prop] = value
-    console.log('property set: ' + prop + ' = ' + value)
-    return true
-  }
-})
+var p = new Proxy(
+  {},
+  {
+    set: function (target, prop, value, receiver) {
+      target[prop] = value;
+      console.log("property set: " + prop + " = " + value);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p)  // false
+console.log("a" in p); // false
 
-p.a = 10               // "propiedad asignada: a = 10"
-console.log('a' in p)  // true
-console.log(p.a)       // 10
+p.a = 10; // "propiedad asignada: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
 ```
 
 ## Especificaciones

@@ -1,6 +1,9 @@
 ---
-title: FileReaderSync.readAsText()
+title: "FileReaderSync: readAsText() メソッド"
+short-title: readAsText()
 slug: Web/API/FileReaderSync/readAsText
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("File API")}}
@@ -9,11 +12,11 @@ slug: Web/API/FileReaderSync/readAsText
 
 ## 構文
 
-```js
-readAsText(File);
-readAsText(Blob);
-readAsText(File, encoding);
-readAsText(Blob, encoding);
+```js-nolint
+readAsText(File)
+readAsText(Blob)
+readAsText(File, encoding)
+readAsText(Blob, encoding)
 ```
 
 ### 引数
@@ -21,11 +24,11 @@ readAsText(Blob, encoding);
 - `blob`
   - : 読み込み対象の DOM {{DOMxRef("File")}} または {{DOMxRef("Blob")}}。
 - `encoding`
-  - : オプションのパラメータは、使用するエンコーディングを指定します (例: iso-8859-1 または UTF-8)。存在しない場合、メソッドはそれに対して検出アルゴリズムを適用します。
+  - : オプションの引数で、使用するエンコーディングを指定します（`iso-8859-1` や `UTF-8` など）。存在しない場合、このメソッドは検出アルゴリズムを適用します。
 
 ### 返値
 
-入力データを表す {{DOMxRef("DOMString")}}。
+入力データを表す文字列です。
 
 ## 例外
 
@@ -57,4 +60,4 @@ readAsText(Blob, encoding);
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

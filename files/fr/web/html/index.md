@@ -1,13 +1,6 @@
 ---
 title: HTML (HyperText Markup Language)
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML5
-  - Landing
-  - Reference
-  - Web
-translation_of: Web/HTML
 ---
 
 {{HTMLSidebar}}

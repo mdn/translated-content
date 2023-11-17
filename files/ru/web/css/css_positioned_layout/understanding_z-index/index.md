@@ -1,17 +1,6 @@
 ---
 title: Понимание CSS z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - NeedsTranslation
-  - TopicStub
-  - Understanding_CSS_z-index
-  - Web
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
 
 Обычно HTML страницы можно считать двухмерными, потому что текст, картинки и другие элементы расположены на странице без перекрытия. Существует единый нормальный поток отрисовки (rendering flow) и элементы избегают пространства, занятого другими.{{cssxref("z-index")}} атрибут позволяет регулировать порядок наложения объектов друг на друга в процессе отрисовки контента (rendering content).

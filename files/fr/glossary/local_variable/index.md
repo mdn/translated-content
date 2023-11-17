@@ -1,12 +1,9 @@
 ---
 title: Variable locale
 slug: Glossary/Local_variable
-tags:
-  - Encodage
-  - Glossaire
-translation_of: Glossary/Local_variable
-original_slug: Glossaire/Variable_locale
 ---
+
+{{GlossarySidebar}}
 
 Une {{glossary("Variable","variable")}} dont le nom est associé à sa {{glossary("Value","valeur")}} uniquement dans une {{Glossary("Local scope","portée locale")}}.
 

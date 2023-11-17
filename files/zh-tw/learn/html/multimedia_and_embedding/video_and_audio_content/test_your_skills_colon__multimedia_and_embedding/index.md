@@ -1,7 +1,6 @@
 ---
 title: 測試你的技能：多媒體和嵌入
-slug: >-
-  Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
+slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
 ---
 
 {{learnsidebar}}這項技能測試的目的是評估您是否了解我們的[視訊和音訊內容](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)以及[從物件到 iframe 的其他嵌入技術](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)文章。
@@ -64,7 +63,7 @@ T 嘗試更新下面的程式碼以完成測驗：
 1. 將您的工作放入在線共享編輯器中，例如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 或 [Glitch](https://glitch.com/). 您可以自己編寫程式碼，也可以使用以上各節中連接到的初始文件。
 2. 撰寫帖子，要求評估和/或幫助 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). 你的貼文應包括：
 
-   - 描述性標題，例如“ HTML 圖像基礎知識 1 技能測試所需的評估”。
+   - 描述性標題，例如「 HTML 圖像基礎知識 1 技能測試所需的評估」。
    - 您已經嘗試過的內容以及您希望我們做什麼的詳細信息，例如如果您陷入困境並需要幫助，或者需要評估。
    - 聯機共享編輯器中您要評估或需要幫助的示例的鏈接（如上面的步驟 1 中所述）。這是進入的好習慣-如果看不到他們的代碼，很難幫助有編碼問題的人。
    - 指向實際任務或評估頁面的鏈接，因此我們可以找到您需要幫助的問題。

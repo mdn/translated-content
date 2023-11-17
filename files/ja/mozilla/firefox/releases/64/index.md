@@ -103,7 +103,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- シマンテックの CA を失効させる計画を実装しました ([Firefox バグ 1409257](https://bugzil.la/1409257) を参照。詳しくは [Mozilla’s Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) の議論もご覧ください)。
+- シマンテックの CA を失効させる計画を実装しました ([Firefox バグ 1409257](https://bugzil.la/1409257) を参照。詳しくは [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) の議論もご覧ください)。
 - {{httpheader("Referrer-Policy")}} を、スタイルシートで読み込むリソースの制御で使用可能になりました ([Firefox バグ 1330487](https://bugzil.la/1330487))。詳しくは [CSS との統合](/ja/docs/Web/HTTP/Headers/Referrer-Policy#css_%E3%81%A8%E3%81%AE%E7%B5%B1%E5%90%88) をご覧ください。
 
 ### プラグイン

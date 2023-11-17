@@ -1,7 +1,6 @@
 ---
 title: include
 slug: Web/XSLT/Element/include
-original_slug: Web/XSLT/include
 ---
 
 {{XsltRef}}

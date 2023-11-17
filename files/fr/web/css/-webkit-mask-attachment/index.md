@@ -1,12 +1,6 @@
 ---
-title: '-webkit-mask-attachment'
+title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-webkit-mask-attachment
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -46,7 +40,7 @@ Si la propriété {{cssxref("-webkit-mask-image")}} est définie, **`-webkit-mas
 
 ```css
 body {
-  -webkit-mask-image: url('images/mask.png');
+  -webkit-mask-image: url("images/mask.png");
   -webkit-mask-attachment: fixed;
 }
 ```

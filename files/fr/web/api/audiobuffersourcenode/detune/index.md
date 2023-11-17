@@ -1,12 +1,6 @@
 ---
 title: AudioBufferSourceNode.detune
 slug: Web/API/AudioBufferSourceNode/detune
-tags:
-  - API
-  - Propriété
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioBufferSourceNode/detune
 ---
 
 {{ APIRef("Web Audio API") }}

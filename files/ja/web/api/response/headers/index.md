@@ -20,9 +20,9 @@ l10n:
 `fetch()` ブロックの上部でレスポンス `headers` の値をコンソールに記録している事に注意して下さい。
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   // 各レスポンスヘッダーについて、ヘッダー名をキーとする配列をログ出力します。

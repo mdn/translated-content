@@ -1,5 +1,5 @@
 ---
-title: '<dir>:  O elemento obsoleto Directory'
+title: "<dir>:  O elemento obsoleto Directory"
 slug: Web/HTML/Element/dir
 ---
 
@@ -15,7 +15,7 @@ Este elemento implementa a interface {{domxref("HTMLDirectoryElement")}}.
 
 Como todos os outros elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("compact")}}
+- `compact`
 
   - : Este atributo booleano indica que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do agente do usuário e não funciona em todos os navegadores.
 
@@ -23,7 +23,7 @@ Como todos os outros elementos HTML, este elemento suporta os [global attributes
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.dir")}}
+{{Compat}}
 
 ## Veja também
 
@@ -32,7 +32,7 @@ Como todos os outros elementos HTML, este elemento suporta os [global attributes
 
   - A propriedade {{cssxref('list-style')}}, útil para escolher a maneira como o ordinal é exibido.
   - [CSS counters](/pt-BR/docs/CSS_Counters), útil para lidar com listas aninhadas complexas.
-  - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto {{htmlattrxref("compact", "dir")}}.
+  - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto [`compact`](/pt-BR/docs/Web/HTML/Element/dir#compact).
   - A propriedade {{cssxref('margin')}}, útil para controlar o recuo da lista.
 
 {{HTMLSidebar}}

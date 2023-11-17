@@ -22,11 +22,11 @@ slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -45,8 +45,14 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ```css
 .box {
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
-  url(big-star.png) center no-repeat, rebeccapurple;
+  background:
+    linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      ) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
 }
 ```
 
@@ -54,7 +60,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ### 배경 색상
 
-{{cssxref("background-color")}} 속성은 CSS 의 모든 요소에 대한 배경색을 정의합니다. 이 속성은 유효한 [`<color>`](/en-US/docs/Web/CSS/color_value) 를 허용합니다. `background-color` 는 요소의 내용 및 패딩 박스 아래로 확장됩니다.
+{{cssxref("background-color")}} 속성은 CSS 의 모든 요소에 대한 배경색을 정의합니다. 이 속성은 유효한 [`<color>`](/ko/docs/Web/CSS/color_value) 를 허용합니다. `background-color` 는 요소의 내용 및 패딩 박스 아래로 확장됩니다.
 
 아래 예에서는 다양한 색상 값을 사용하여 박스, 제목 및 {{htmlelement("span")}} 요소에 배경색을 추가했습니다.
 
@@ -162,7 +168,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 배경에 사용될 때 — Gradient — 는 이미지 처럼 작동하며 {{cssxref("background-image")}} 속성을 사용하여 설정 됩니다.
 
-[`<gradient>`](/en-US/docs/Web/CSS/gradient) 데이터 유형에 대한 MDN 페이지에서 다양한 유형의 그라디언트 및 그라디언트로 수행 할 수 있는 작업에 대한 자세한 내용을 읽을 수 있습니다. 그라디언트를 재생하는 재미있는 방법은 웹에서 사용할 수 있는 많은 CSS 그라디언트 생성기 중 [하나](https://cssgradient.io/) 를 사용하는 것입니다. 그라디언트를 생성한 다음 이를 생성하는 소스 코드를 복사하여 붙여 넣을 수 있습니다.
+[`<gradient>`](/ko/docs/Web/CSS/gradient) 데이터 유형에 대한 MDN 페이지에서 다양한 유형의 그라디언트 및 그라디언트로 수행 할 수 있는 작업에 대한 자세한 내용을 읽을 수 있습니다. 그라디언트를 재생하는 재미있는 방법은 웹에서 사용할 수 있는 많은 CSS 그라디언트 생성기 중 [하나](https://cssgradient.io/) 를 사용하는 것입니다. 그라디언트를 생성한 다음 이를 생성하는 소스 코드를 복사하여 붙여 넣을 수 있습니다.
 
 아래 예제에서 다른 그라디언트를 사용해 보십시오. 두 개의 박스에는 각각 전체 박스에 걸쳐 펼쳐지는 선형 그라디언트와 설정된 크기의 방사형 그라디언트가 있습니다. 따라서 반복됩니다.
 
@@ -179,9 +185,12 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 다른 `background-*` 속성은 `background-image` 와 같은 방식으로 쉼표로 구분된 값을 가질 수도 있습니다:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+background-image: url(image1.png), url(image2.png), url(image3.png),
+  url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px,  top right;
+background-position:
+  10px 20px,
+  top right;
 ```
 
 다른 속성의 각 값은 다른 속성의 같은 위치에 있는 값과 일치합니다. 예를 들어, `image1` 의 `background-repeat` 값은 `no-repeat` 입니다. 그러나, 다른 속성의 값이 다른 경우 어떻게 됩니까? 답은 더 적은 수의 값이 순환한다는 것입니다 — 위의 예에서는 4 개의 배경 이미지가 있지만 2 개의 `background-position` 값만 있습니다. 처음 두 위치 값은 처음 두 이미지에 적용되고 다시 순환됩니다 — `image3` 에는 첫 번째 위치값이 제공되고, `image4` 에는 두 번째 위치값이 제공됩니다.

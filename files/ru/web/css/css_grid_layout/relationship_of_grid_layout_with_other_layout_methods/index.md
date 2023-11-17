@@ -1,11 +1,6 @@
 ---
 title: Связь Grid позиционирования с другими методами позиционирования
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-tags:
-  - Руководство
-  - Сетка
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 
 **CSS Grid Layout** спроектирован таким образом, чтобы работать вместе с другими частями CSS и составлять с ними законченную систему создания макетов страниц. В рамках этого руководства, мы объясним, каким образом сочетать гриды с другими техниками, которыми Вы, возможно, уже пользуетесь в своей работе.
@@ -23,40 +18,42 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 Также установим свойство {{cssxref("flex-wrap")}} в значение `wrap` . Это приведёт к тому, что если свободного пространства в нашем контейнере будет не хватать для размещения элемента в 200px, наши элементы спокойно перейдут на новую строку.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: flex;
-   flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .wrapper > div {
-   flex: 1 1 200px;
+  flex: 1 1 200px;
 }
 ```
 
@@ -71,37 +68,39 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 В примере ниже мы создаём тот же самый макет, но используя гриды. На этот раз у нас три трека-колонки шириной в `1fr` . И при этом нам не требуется задавать какие-либо свойства дочерним элементам, потому что они самостоятельно занимают по одной ячейке созданного грида. Как видите, наши элементы лежат в жёсткой сетке и выравниваются и по строке, и по колонке. Поскольку у нас пять элементов, в результате мы получаем пустую ячейку в конце второй строки.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 ```
 
@@ -131,42 +130,44 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 В первом примере, использующем flexbox, у нас есть контейнер с тремя элементами. Для блока-обёртки wrapper установлено свойство {{cssxref("min-height")}}, и оно задаёт высоту flex-контейнера. Мы установили свойство {{cssxref("align-items")}} flex-контейнера в значение `flex-end` , поэтому элементы выравниваются по концу flex-контейнера. Мы также установили значение свойства {{cssxref("align-self")}} для `box1` таким образом, что оно перезапишет поведение по умолчанию и заставит наш блок растянутся на всю высоту контейнера. Для `box2` свойство {{cssxref("align-self")}} установлено таким образом, что блок перепрыгнет в начало flex-контейнера.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: flex;
-   align-items: flex-end;
-   min-height: 200px;
+  display: flex;
+  align-items: flex-end;
+  min-height: 200px;
 }
 .box1 {
-   align-self: stretch;
+  align-self: stretch;
 }
 .box2 {
-   align-self: flex-start;
+  align-self: flex-start;
 }
 ```
 
@@ -177,42 +178,45 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 Второй пример использует грид, чтобы создать тот же самый макет, и на этот раз мы рассмотрим то, как свойства выравнивания блоков применяются к гридам. Вместо `flex-start` и `flex-end` мы задаём `start` и `end` . В случае с макетом на гридах мы выравниваем элементы внутри их грид-области, в данном примере - это одна единственная грид-ячейка, но в целом грид-область может состоять из нескольких грид-ячеек.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3,1fr);
-   align-items: end;
-   grid-auto-rows: 200px;
-}.box1 {
-   align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  grid-auto-rows: 200px;
+}
+.box1 {
+  align-self: stretch;
 }
 .box2 {
-   align-self: start;
+  align-self: start;
 }
 ```
 
@@ -233,35 +237,37 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 В примере ниже мы используем ключевое слово `auto-fill` вместо целого числа в repeat-нотации и задаём структуру треков размером в 200 пикселей. Это значит, что грид создаст столько треков-колонок размером в 200 пикселей, сколько их может разместиться в контейнере.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, 200px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
 }
 ```
 
@@ -272,35 +278,37 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 Давайте вспомним пример с flexbox, когда элементы, размер которых больше 200 пикселей, переходят на новую строку. Тот же самый эффект в гридах мы можем получить комбинируя `auto-fill` и функцию {{cssxref("minmax", "minmax()")}}. В примере ниже мы создаём автозаполненные треки с помощью `minmax`. Мы хотим, чтобы треки были как минимум 200 пикселей в ширину, это наше минимальное значение, а для максимального зададим `1fr`. В процессе, когда браузер вычисляет, сколько блоков в 200 пикселей может разместиться в контейнере - при этом учитывая грид-зазоры - он расценивает максимум `1fr` как инструкцию распределить оставшееся свободное пространство между этими блоками.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
@@ -319,51 +327,54 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 В примере ниже у нас есть блок-обёртка с четырьмя дочерними элементами. Третий элемент абсолютно позиционирован и одновременно размещён в гриде с помощью привязки к грид-линиям. У грид-контейнера `position:` `relative` , поэтому он становится контекстом позиционирования для нашего третьего элемента.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">
-    Этот блок абсолютно позиционирован.
-В нашем примере грид-контейнер является контейнерным блоком, поэтому значения сдвига абсолютного позиционирования отсчитываются от внешнего края той области, в которой размещён элемент.
-   </div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">
+    Этот блок абсолютно позиционирован. В нашем примере грид-контейнер является
+    контейнерным блоком, поэтому значения сдвига абсолютного позиционирования
+    отсчитываются от внешнего края той области, в которой размещён элемент.
+  </div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
-   grid-auto-rows: 200px;
-   grid-gap: 20px;
-   position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 20px;
+  position: relative;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   position: absolute;
-   top: 40px;
-   left: 40px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  position: absolute;
+  top: 40px;
+  left: 40px;
 }
 ```
 
@@ -388,58 +399,63 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 Задаём `.box3` свойство position в значении relative и затем перемещаем наш под-элемент с помощью свойств сдвига. В данном случае контекстом позиционирования является грид-область.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three
-       <div class="abspos">
-        Этот блок абсолютно позиционирован. В данном примере контекстом позиционирования является грид-область, поэтому значения сдвига отсчитываются от внешних краёв грид-области.
-       </div>
-   </div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">
+    Three
+    <div class="abspos">
+      Этот блок абсолютно позиционирован. В данном примере контекстом
+      позиционирования является грид-область, поэтому значения сдвига
+      отсчитываются от внешних краёв грид-области.
+    </div>
+  </div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
-   grid-auto-rows: 200px;
-   grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 20px;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   position: relative;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  position: relative;
 }
 .abspos {
-   position: absolute;
-   top: 40px;
-   left: 40px;
-   background-color: rgba(255,255,255,.5);
-   border: 1px solid rgba(0,0,0,0.5);
-   color: #000;
-   padding: 10px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #000;
+  padding: 10px;
 }
 ```
 
@@ -449,57 +465,59 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 Последнее, о чем нужно упомянуть, говоря о взаимодействии гридов с другими спецификациями, касающимися позиционирования элементов, - это взаимодействие между CSS Grid Layout и `display:` `contents`. Значение `contents` свойства display - новое свойство CSS, которое описывается в спецификации [Display](https://drafts.csswg.org/css-display/#box-generation) следующим образом:
 
-> “Сам элемент не генерирует никаких блоков (боксов), но его дочерние элементы и его псевдо-элементы по-прежнему генерируют блоки, в установленном порядке. Относительно генерации и позиционирования блоков элемент должен восприниматься так, как если бы он полностью замещался своими дочерними элементами и псевдо-элементами в дереве документа.”
+> "Сам элемент не генерирует никаких блоков (боксов), но его дочерние элементы и его псевдо-элементы по-прежнему генерируют блоки, в установленном порядке. Относительно генерации и позиционирования блоков элемент должен восприниматься так, как если бы он полностью замещался своими дочерними элементами и псевдо-элементами в дереве документа."
 
 Если вы пишете для элемента `display:` `contents` , блок (бокс), который он должен создать в дереве документа исчезает, а вот блоки его дочерних элементов и его псевдо-элементов переходят на один уровень вверх. А значит это то, что дочерние элементы грид-элемента могут сами стать грид-элементами. Звучит непонятно? Давайте разберёмся на простом примере. В разметке ниже у нас есть грид. Первый элемент этого грида настроен так, чтобы занимать все три трека-колонки. У него есть три вложенных элемента. Поскольку эти вложенные элементы не являются прямыми потомками грида, они не становятся частью грид-макета и отображаются, как обычные блоки.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .box {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box box1">
-       <div class="nested">a</div>
-       <div class="nested">b</div>
-       <div class="nested">c</div>
-   </div>
-   <div class="box box2">Two</div>
-   <div class="box box3">Three</div>
-   <div class="box box4">Four</div>
-   <div class="box box5">Five</div>
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
+  </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-auto-rows: minmax(100px, auto);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
 }
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 ```
 
@@ -508,53 +526,55 @@ original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 Если мы теперь добавим правило `display:` `contents` для `box1`, блок этого бокса исчезнет, зато дочерние элементы станут грид-элементами и будут расположены в соответствии с правилами авторазмещения.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .box {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box box1">
-       <div class="nested">a</div>
-       <div class="nested">b</div>
-       <div class="nested">c</div>
-   </div>
-   <div class="box box2">Two</div>
-   <div class="box box3">Three</div>
-   <div class="box box4">Four</div>
-   <div class="box box5">Five</div>
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
+  </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-auto-rows: minmax(100px, auto);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
 }
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   display: contents;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: contents;
 }
 ```
 

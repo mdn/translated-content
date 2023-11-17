@@ -29,14 +29,14 @@ l10n:
 ## 例
 
 ```js
-const xhr = new XMLHttpRequest;
-xhr.open('GET', '/server');
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "/server");
 
 // responseType を指定する場合は、空文字列または "document" でなければならない
-xhr.responseType = 'document';
+xhr.responseType = "document";
 
 // レスポンスを XML として解釈するよう強制する
-xhr.overrideMimeType('text/xml');
+xhr.overrideMimeType("text/xml");
 
 xhr.onload = () => {
   if (xhr.readyState === xhr.DONE && xhr.status === 200) {

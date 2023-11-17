@@ -1,12 +1,6 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/template
 ---
 
 {{HTMLSidebar}}
@@ -55,7 +49,6 @@ Avec le tableau créé et le template défini, on utilise JavaScript pour insér
 // l'élément HTML template en vérifiant la présence
 // de l'attribut content pour l'élément template.
 if ("content" in document.createElement("template")) {
-
   // On prépare une ligne pour le tableau
   var template = document.querySelector("#productrow");
 
@@ -76,7 +69,6 @@ if ("content" in document.createElement("template")) {
 
   // Puis on insère
   tbody.appendChild(clone2);
-
 } else {
   // Une autre méthode pour ajouter les lignes
   // car l'élément HTML n'est pas pris en charge.
@@ -110,7 +102,7 @@ table td {
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
           >Contenu de méta-données</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
@@ -138,7 +130,7 @@ table td {
       <td>
         Tout élément qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
           >Contenu de méta-données</a
         >, du
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"

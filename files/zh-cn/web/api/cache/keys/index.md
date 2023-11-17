@@ -14,7 +14,7 @@ slug: Web/API/Cache/keys
 ## 语法
 
 ```js
-cache.keys(request,{options}).then(function(keys) {
+cache.keys(request, { options }).then(function (keys) {
   //do something with your array of requests
 });
 ```
@@ -39,13 +39,13 @@ cache.keys(request,{options}).then(function(keys) {
 ## 示例
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.keys().then(function(keys) {
-    keys.forEach(function(request, index, array) {
+caches.open("v1").then(function (cache) {
+  cache.keys().then(function (keys) {
+    keys.forEach(function (request, index, array) {
       cache.delete(request);
     });
   });
-})
+});
 ```
 
 ## 规范

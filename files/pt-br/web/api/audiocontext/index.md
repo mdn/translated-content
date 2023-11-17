@@ -121,13 +121,11 @@ var finish = audioCtx.destination;
 
 ## Especificações
 
-| Especificação                                                                                        | Estado                               | Comentário |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Audio API', '#the-audiocontext-interface', 'AudioContext')}} | {{Spec2('Web Audio API')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AudioContext")}}
+{{Compat}}
 
 ## Veja também
 

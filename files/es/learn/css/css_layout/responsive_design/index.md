@@ -1,7 +1,6 @@
 ---
 title: Diseño receptivo
 slug: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/Diseño_receptivo
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
@@ -264,7 +263,7 @@ Esto significa que necesitamos especificar el tamaño de letra para el título d
 Si observas el tipo de letra de una página HTML responsiva, en general vas a encontrar la siguiente etiqueta {{htmlelement ("meta")}} en la cabecera del documento.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 Esta metaetiqueta informa a los navegadores de los dispositivos móviles que deben establecer el ancho de la ventana gráfica al ancho del dispositivo y escalar el documento al 100% de ese tamaño, de modo que el documento se mostrará al tamaño optimizado para esos dispositivos móviles.
@@ -286,8 +285,6 @@ Con la metaetiqueta `viewport` puedes usar otras configuraciones, aunque, en gen
 - `user-scalable`: Impide el zoom si se establece en `no`.
 
 Deberías evitar el uso de `minimum-scale` y `maximum-scale`, y en particular establecer `user-scalable` en `no`. Hay que permitir a los usuarios hacer zoom tanto o tan poco como lo necesiten; evitarlo provoca problemas de accesibilidad.
-
-> **Nota:** Hay una @regla CSS establecida para reemplazar la metaetiqueta `viewport`: [@viewport](/es/docs/Web/CSS/@viewport). Sin embargo, tiene poca compatibilidad con los navegadores. Se implementó en Internet Explorer y Edge, pero una vez que se lance el navegador Edge basado en Chromium, dejará de formar parte del navegador Edge.
 
 ## Resumen
 

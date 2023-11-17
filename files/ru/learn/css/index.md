@@ -1,17 +1,6 @@
 ---
 title: Научитесь стилизовать HTML с помощью CSS
 slug: Learn/CSS
-tags:
-  - Новичкам
-  - CSS
-  - Программирование
-  - Отладка
-  - Лэндинг
-  - Стили
-  - Тема
-  - Длина
-  - Специфичность
-translation_of: Learn/CSS
 ---
 
 {{LearnSidebar}}

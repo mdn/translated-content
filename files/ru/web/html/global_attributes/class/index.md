@@ -1,8 +1,8 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
-translation_of: Web/HTML/Global_attributes/class
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **`class`** это разделённый пробелом список регистров зависимых классов элемента. Классы позволяют CSS и Javascript выбирать и получать доступ с помощью [селекторов класса](/ru/docs/Web/CSS/Class_selectors) или функций, таких как методы DOM {{domxref("document.getElementsByClassName")}}.

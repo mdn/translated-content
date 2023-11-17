@@ -17,14 +17,14 @@ slug: Glossary/Endianness
 
 1. 関連情報
 
-    1. {{jsxref("ArrayBuffer")}}
-    2. {{jsxref("DataView")}}
-    3. [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+   1. {{jsxref("ArrayBuffer")}}
+   2. {{jsxref("DataView")}}
+   3. [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
 
 2. Wikipedia 記事
 
-    1. [エンディアン](https://ja.wikipedia.org/wiki/エンディアン)
+   1. [エンディアン](https://ja.wikipedia.org/wiki/エンディアン)
 
 3. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Data structure", "データ構造")}}
+   1. {{Glossary("Data structure", "データ構造")}}

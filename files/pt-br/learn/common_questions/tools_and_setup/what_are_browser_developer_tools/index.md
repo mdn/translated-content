@@ -1,7 +1,6 @@
 ---
 title: O que são as ferramentas de desenvolvimento do navegador
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/What_are_browser_developer_tools
 ---
 
 Todo navegador web moderno inclui um poderoso conjunto de ferramentas para desenvolvedores. Essas ferramentas fazem muitas coisas, desde inspecionar o HTML, CSS e JavaScript recém carregado e quais recursos foram requeridos até mostrar quanto tempo a página precisou para carregar. Este artigo explica como usar as funções básicas das ferramentas para desenvolvedores do seu navegador.
@@ -23,7 +22,7 @@ Como você acessa? Três modos:
 
 - _**Menu bar.**_
 
-  - **Firefox.** Menu ![](2014-01-10-13-08-08-f52b8c.png) _➤ ![](screenshot_from_2014-11-26_14-24-56.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
+  - **Firefox.** Menu ![](2014-01-10-13-08-08-f52b8c.png) *➤ ![](screenshot_from_2014-11-26_14-24-56.png) *➤ Web Developer ➤ Toggle Tools,_ or \_Tools ➤_ _Web Developer ➤ Toggle Tools_
   - **Chrome.** _View ➤ Developer ➤ Developer Tools_
   - **Safari.** _Develop ➤ Show Web Inspector._ Se você não consegue ver o _menu Desenvolvedor_ , vá para _Safari ➤ Preferências ➤ Avançado_ e confira o _Show Develop menu no menu bar_ checkbox.
   - **Opera**. _Developer ➤ Web Inspector_
@@ -171,7 +170,7 @@ document.querySelector("html").style.backgroundColor = "purple";
 const myWordmark = document.createElement("img");
 myWordmark.setAttribute(
   "src",
-  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png",
 );
 document.querySelector("h1").appendChild(myWordmark);
 ```
@@ -190,7 +189,7 @@ document.cheeseSelector("html").style.backgroundColor = "purple";
 const myWordmark = document.createElement("img");
 myBanana.setAttribute(
   "src",
-  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png",
 );
 document.querySelector("h1").appendChild(myWordmark);
 ```

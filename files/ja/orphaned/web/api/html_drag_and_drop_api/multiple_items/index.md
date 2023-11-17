@@ -1,7 +1,6 @@
 ---
 title: 複数のアイテムのドラッグ & ドロップ
 slug: orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
-original_slug: Web/API/HTML_Drag_and_Drop_API/Multiple_items
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

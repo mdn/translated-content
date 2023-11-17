@@ -1,7 +1,6 @@
 ---
 title: caches
 slug: Web/API/caches
-original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 l10n:
   sourceCommit: e910d1f446a8b3fa8c60c7cb34c272f4a13b3892
 ---
@@ -38,8 +37,8 @@ this.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```

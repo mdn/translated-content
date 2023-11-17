@@ -1,7 +1,6 @@
 ---
 title: 權限 (Permissions)
 slug: Web/API/Permissions_API
-original_slug: WebAPI/Permissions
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
@@ -53,7 +52,7 @@ apps.onsuccess = function () {
           request +
           '" permission, which is "' +
           p +
-          '"'
+          '"',
       );
     }
   });

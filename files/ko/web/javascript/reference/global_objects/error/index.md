@@ -68,13 +68,13 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
 - {{jsxref("Error.prototype.number")}}
   - : 오류 번호를 위한 비표준 마이크로소프트 속성
 - {{jsxref("Error.prototype.fileName")}}
-  - : 해당 오류를 발생시킨 파일의 경로를 표시하기 위한 비표준 모질라 속성
+  - : 해당 오류를 발생시킨 파일의 경로를 표시하기 위한 비표준 Mozilla 속성
 - {{jsxref("Error.prototype.lineNumber")}}
-  - : 해당 오류를 발생시킨 파일의 줄 번호를 표시하기 위한 비표준 모질라 속성
+  - : 해당 오류를 발생시킨 파일의 줄 번호를 표시하기 위한 비표준 Mozilla 속성
 - {{jsxref("Error.prototype.columnNumber")}}
-  - : 해당 오류를 발생시킨 파일의 칸 번호를 표시하기 위한 비표준 모질라 속성
+  - : 해당 오류를 발생시킨 파일의 칸 번호를 표시하기 위한 비표준 Mozilla 속성
 - {{jsxref("Error.prototype.stack")}}
-  - : 스택 추적을 위한 비표준 모질라 속성
+  - : 스택 추적을 위한 비표준 Mozilla 속성
 
 ## 인스턴스 메서드
 
@@ -133,7 +133,7 @@ try {
 
 ```js
 class CustomError extends Error {
-  constructor(foo = 'bar', ...params) {
+  constructor(foo = "bar", ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params);
 
@@ -149,8 +149,8 @@ class CustomError extends Error {
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e){
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
   console.log(e.foo); //baz
   console.log(e.message); //bazMessage
   console.log(e.stack); //stacktrace
@@ -178,26 +178,25 @@ CustomError.prototype = Object.create(Error.prototype, {
     value: Error,
     enumerable: false,
     writable: true,
-    configurable: true
-  }
+    configurable: true,
+  },
 });
 
-if (Object.setPrototypeOf){
+if (Object.setPrototypeOf) {
   Object.setPrototypeOf(CustomError, Error);
 } else {
   CustomError.__proto__ = Error;
 }
 
-
 try {
-  throw new CustomError('baz', 'bazMessage');
-} catch(e){
+  throw new CustomError("baz", "bazMessage");
+} catch (e) {
   console.log(e.foo); //baz
-  console.log(e.message) ;//bazMessage
+  console.log(e.message); //bazMessage
 }
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

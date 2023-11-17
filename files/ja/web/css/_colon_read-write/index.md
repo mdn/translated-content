@@ -1,5 +1,5 @@
 ---
-title: ':read-write'
+title: ":read-write"
 slug: Web/CSS/:read-write
 ---
 
@@ -8,7 +8,8 @@ slug: Web/CSS/:read-write
 **`:read-write`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが編集できる要素 (`input` や `textarea` など) を表します。
 
 ```css
-input:read-write, textarea:read-write {
+input:read-write,
+textarea:read-write {
   background-color: #bbf;
 }
 
@@ -32,8 +33,10 @@ p:read-write {
 `:read-only` 擬似クラスは、入力欄をクリック可能なフィールドのように見せるスタイル付けをすべて削除するために使用されており、読み取り専用の段落のように見えます。一方、 `:read-write` 擬似クラスは、編集可能な `<textarea>` により良いスタイル付けを行うために使用されています。
 
 ```css
-input:-moz-read-only, textarea:-moz-read-only,
-input:read-only, textarea:read-only {
+input:-moz-read-only,
+textarea:-moz-read-only,
+input:read-only,
+textarea:read-only {
   border: 0;
   box-shadow: none;
   background-color: white;

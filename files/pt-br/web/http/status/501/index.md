@@ -20,12 +20,12 @@ O código de resposta HTTP **`501 Not Implemented`** indica que o servidor não 
 
 ## Especificações
 
-| Especificação                                                    | Título                                                        |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                    | Título                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "501 Not Implemented" , "6.6.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
 The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.501")}}
+{{Compat}}

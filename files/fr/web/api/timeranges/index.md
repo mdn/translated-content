@@ -1,17 +1,6 @@
 ---
 title: TimeRanges
 slug: Web/API/TimeRanges
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsBrowserCompatibility
-  - NeedsMarkupWork
-  - NeedsNewLayout
-  - NeedsSpecTable
-  - Reference
-  - Référence(2)
-translation_of: Web/API/TimeRanges
 ---
 
 {{ APIRef }}

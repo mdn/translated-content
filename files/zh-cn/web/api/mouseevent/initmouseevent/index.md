@@ -85,25 +85,42 @@ event.initMouseEvent(type, canBubble, cancelable, view,
 
 ```html
 <div style="background:red;width:180px;padding:10px;">
- <div id="out"></div>
- <input type="text">
+  <div id="out"></div>
+  <input type="text" />
 </div>
 ```
 
 ### JavaScript
 
 ```js
-document.body.onclick = function(){
- e = arguments[0];
- var dt = e.target,stag = dt.tagName.toLowerCase();
- document.getElementById("out").innerHTML = stag;
+document.body.onclick = function () {
+  e = arguments[0];
+  var dt = e.target,
+    stag = dt.tagName.toLowerCase();
+  document.getElementById("out").innerHTML = stag;
 };
-var simulateClick = function(){
- var evt = document.createEvent("MouseEvents");
- evt.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
- document.body.dispatchEvent(evt);
-}
-simulateClick();//Why it can not show "input" ?
+var simulateClick = function () {
+  var evt = document.createEvent("MouseEvents");
+  evt.initMouseEvent(
+    "click",
+    true,
+    true,
+    window,
+    0,
+    0,
+    0,
+    80,
+    20,
+    false,
+    false,
+    false,
+    false,
+    0,
+    null,
+  );
+  document.body.dispatchEvent(evt);
+};
+simulateClick(); //Why it can not show "input" ?
 ```
 
 这里有个在线演示

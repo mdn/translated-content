@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
-original_slug: Web/API/AudioContext/createAnalyser
 ---
 
 {{APIRef("Web Audio API")}}
@@ -15,7 +14,7 @@ original_slug: Web/API/AudioContext/createAnalyser
 ## 構文
 
 ```js
-createAnalyser()
+createAnalyser();
 ```
 
 ### 引数

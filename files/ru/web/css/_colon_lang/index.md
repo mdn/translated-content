@@ -1,10 +1,6 @@
 ---
-title: ':lang()'
+title: ":lang()"
 slug: Web/CSS/:lang
-tags:
-  - CSS
-  - Псевдо-класс
-translation_of: Web/CSS/:lang
 ---
 
 {{CSSRef}}
@@ -14,11 +10,11 @@ translation_of: Web/CSS/:lang
 ```css
 /* Выбирает все <p>, что на английском (en) */
 p:lang(en) {
-  quotes: '\201C' '\201D' '\2018' '\2019';
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 ```
 
-> **Примечание:** В HTML язык определяется комбинацией атрибута {{htmlattrxref("lang")}}, элемента {{HTMLElement("meta")}} и иногда информацией из протокола (такой, как заголовки HTTP ). Для других типов документов могут быть другие методы определения языка.
+> **Примечание:** В HTML язык определяется комбинацией атрибута [`lang`](/ru/docs/Web/HTML/Global_attributes#lang), элемента {{HTMLElement("meta")}} и иногда информацией из протокола (такой, как заголовки HTTP ). Для других типов документов могут быть другие методы определения языка.
 
 ## Синтаксис
 
@@ -38,17 +34,29 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ### HTML
 
 ```html
-<div lang="en"><q>This English quote has a <q>nested</q> quote inside.</q></div>
-<div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
-<div lang="de"><q>This German quote has a <q>nested</q> quote inside.</q></div>
+<div lang="en">
+  <q>This English quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="fr">
+  <q>This French quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="de">
+  <q>This German quote has a <q>nested</q> quote inside.</q>
+</div>
 ```
 
 ### CSS
 
 ```css
-:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) > q { quotes: '« ' ' »'; }
-:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+:lang(en) > q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+:lang(fr) > q {
+  quotes: "« " " »";
+}
+:lang(de) > q {
+  quotes: "»" "«" "\2039" "\203A";
+}
 ```
 
 ### Результат
@@ -66,5 +74,5 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ## Также смотрите
 
 - Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- HTML {{htmlattrxref("lang")}} attribute
+- HTML [`lang`](/ru/docs/Web/HTML/Global_attributes#lang) attribute
 - [BCP 47 - Tags for Identifying Languages](https://tools.ietf.org/html/bcp47)

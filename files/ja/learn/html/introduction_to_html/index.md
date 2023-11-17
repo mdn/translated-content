@@ -15,7 +15,7 @@ l10n:
 >
 > ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
 >
->[**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
 ## 前提条件
 

@@ -1,22 +1,15 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
+l10n:
+  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}
 
 **`<strike>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストの上に取り消し線（水平線）を引きます。
 
-> **警告:** この要素は HTML 4 および XHTML 1 で非推奨になり、 HTML5 で廃止されました。意味的に適切であれば、すなわち、*削除された*コンテンツを表すのであれば、代わりに {{HTMLElement("del")}} を使用してください。それ以外の場合は {{HTMLElement("s")}} を使用してください。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{DOMxRef("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+> **警告:** この要素は HTML 4 および XHTML 1 で非推奨になり、HTML5 で廃止されました。意味的に適切であれば、すなわち、*削除された*コンテンツを表すのであれば、代わりに {{HTMLElement("del")}} を使用してください。それ以外の場合は {{HTMLElement("s")}} を使用してください。
 
 ## 属性
 
@@ -32,6 +25,17 @@ slug: Web/HTML/Element/strike
 このコードの結果は次の通りです。
 
 {{EmbedLiveSample("Example")}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{DOMxRef("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

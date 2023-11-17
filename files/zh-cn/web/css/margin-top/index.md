@@ -5,11 +5,11 @@ slug: Web/CSS/margin-top
 
 {{CSSRef}}
 
-**`margin-top`** [CSS](/en-US/docs/Web/CSS) 属性用于设置元素的顶部外边距[外边距区域](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#外边距区域)。正值使它离相邻元素更远，而负值使它更靠近相邻元素。
+**`margin-top`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的顶部外边距[外边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#外边距区域)。正值使它离相邻元素更远，而负值使它更靠近相邻元素。
 
 {{EmbedInteractiveExample("pages/css/margin-top.html")}}
 
-此属性对于*不*[*可替换*](/en-US/docs/Web/CSS/Replaced_element)的内联元素没有效果，比如 {{HTMLElement("span")}} 或 {{HTMLElement("code")}}。
+此属性对于*不*[_可替换_](/zh-CN/docs/Web/CSS/Replaced_element)的内联元素没有效果，比如 {{HTMLElement("span")}} 或 {{HTMLElement("code")}}。
 
 ## 语法
 

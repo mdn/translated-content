@@ -23,7 +23,7 @@ Empezando en Firefox 9, tu debes llamar al nuevo método `nsIChromeFrameMessageM
 
 ```js
 browser.messageManager.removeDelayedFrameScript(
-  "chrome://myextension/content/somescript.js"
+  "chrome://myextension/content/somescript.js",
 );
 ```
 

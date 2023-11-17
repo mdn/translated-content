@@ -1,14 +1,6 @@
 ---
 title: Conception d'une page web
 slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
-tags:
-  - Beginner
-  - CSS
-  - Design
-  - HTML
-  - NeedsActiveLearning
-translation_of: Learn/Common_questions/Common_web_layouts
-original_slug: Learn/Common_questions/Common_web_layouts
 ---
 
 Lorsque vous concevez des pages pour votre site Internet, il est utile d'avoir en tête les modèles de mise en page les plus fréquemment utilisés.

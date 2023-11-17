@@ -2,6 +2,7 @@
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 **`URLSearchParams()`** 생성자는 새로운 {{domxref("URLSearchParams")}} 객체를 생성하고 반환합니다.
@@ -11,8 +12,8 @@ slug: Web/API/URLSearchParams/URLSearchParams
 ## 구문
 
 ```js
-new URLSearchParams()
-new URLSearchParams(init)
+new URLSearchParams();
+new URLSearchParams(init);
 ```
 
 ### 매개변수
@@ -33,7 +34,7 @@ new URLSearchParams(init)
 
 ```js
 // url 생성자에 전달된 주소를 url.search를 통해 params라는 변수로 검색합니다.
-var url = new URL('https://example.com?foo=1&bar=2');
+var url = new URL("https://example.com?foo=1&bar=2");
 var params = new URLSearchParams(url.search);
 
 // 문자열 리터럴을 전달합니다.
@@ -41,16 +42,19 @@ var params2 = new URLSearchParams("foo=1&bar=2");
 var params2a = new URLSearchParams("?foo=1&bar=2");
 
 // 일련의 쌍으로 전달합니다.
-var params3 = new URLSearchParams([["foo", "1"], ["bar", "2"]]);
+var params3 = new URLSearchParams([
+  ["foo", "1"],
+  ["bar", "2"],
+]);
 
 // 레코드로 전달합니다.
-var params4 = new URLSearchParams({"foo": "1", "bar": "2"});
+var params4 = new URLSearchParams({ foo: "1", bar: "2" });
 ```
 
 다음 예제는 검색 매개변수를 포함한 URL과, 검색 매개변수 객체를 사용해 새로운 URL을 만드는 모습을 보입니다.
 
 ```js
-const url = new URL('https://example.com/?a=hello&b=world');
+const url = new URL("https://example.com/?a=hello&b=world");
 
 console.log(url.href);
 // https://example.com/?a=hello&b=world
@@ -59,14 +63,14 @@ console.log(url.origin);
 // https://example.com
 
 const add_params = {
-    c: 'a',
-    d: new String(2),
-    e: false.toString(),
-}
+  c: "a",
+  d: new String(2),
+  e: false.toString(),
+};
 
 const new_params = new URLSearchParams([
-    ...Array.from(url.searchParams.entries()), // [["a","hello"],["b","world"]]
-    ...Object.entries(add_params), // [["c","a"],["d","2"],["e","false"]]
+  ...Array.from(url.searchParams.entries()), // [["a","hello"],["b","world"]]
+  ...Object.entries(add_params), // [["c","a"],["d","2"],["e","false"]]
 ]).toString();
 console.log(new_params);
 // a=hello&b=world&c=a&d=2&e=false
@@ -82,7 +86,7 @@ const addSearchParams = (url, params = {}) =>
     `${url.origin}${url.pathname}?${new URLSearchParams([
       ...Array.from(url.searchParams.entries()),
       ...Object.entries(params),
-    ]).toString()}`
+    ]).toString()}`,
   );
 ```
 

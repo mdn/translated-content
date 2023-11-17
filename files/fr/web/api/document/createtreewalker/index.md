@@ -1,15 +1,6 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Document
-  - Filtre
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/Document/createTreeWalker
 ---
 
 {{ApiRef("Document")}}
@@ -19,7 +10,12 @@ La méthode de création **`Document.createTreeWalker()`** renvoie un nouvel obj
 ## Syntaxe
 
 ```js
-treeWalker = document.createTreeWalker(root, whatToShow, filter, entityReferenceExpansion);
+treeWalker = document.createTreeWalker(
+  root,
+  whatToShow,
+  filter,
+  entityReferenceExpansion,
+);
 ```
 
 ### Paramètres
@@ -156,13 +152,17 @@ L'exemple suivant passe à travers tous les noeuds du "body" (_corps du document
 var treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-  false
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 
 var nodeList = [];
 
-while(treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
+while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 ```
 
 ## Spécifications

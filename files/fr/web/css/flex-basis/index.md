@@ -1,11 +1,6 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/flex-basis
 ---
 
 {{CSSRef}}
@@ -98,10 +93,10 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 }
 
 .flex {
-  background: #6AB6D8;
+  background: #6ab6d8;
   padding: 10px;
   margin-bottom: 50px;
-  border: 3px solid #2E86BB;
+  border: 3px solid #2e86bb;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -124,7 +119,7 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 }
 
 .flex1:after {
-  content: 'auto';
+  content: "auto";
 }
 
 .flex2 {
@@ -132,7 +127,7 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 }
 
 .flex2:after {
-  content: 'max-content';
+  content: "max-content";
 }
 
 .flex3 {
@@ -140,7 +135,7 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 }
 
 .flex3:after {
-  content: 'min-content';
+  content: "min-content";
 }
 
 .flex4 {
@@ -148,15 +143,15 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 }
 
 .flex4:after {
-  content: 'fit-content';
+  content: "fit-content";
 }
 
 .flex5 {
-   flex-basis: content;
+  flex-basis: content;
 }
 
 .flex5:after {
-  content: 'content';
+  content: "content";
 }
 
 .flex6 {
@@ -164,7 +159,7 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 }
 
 .flex6:after {
-  content: 'fill';
+  content: "fill";
 }
 ```
 

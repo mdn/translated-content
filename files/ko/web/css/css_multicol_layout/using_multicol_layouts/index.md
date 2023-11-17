@@ -1,7 +1,6 @@
 ---
 title: CSS 다단 레이아웃 사용
 slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-original_slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
 ---
 
 {{CSSRef("CSS Multi-columns")}}
@@ -23,16 +22,23 @@ original_slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
 ### HTML
 
 ```html
-<div id="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+<div id="col">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</div>
 ```
 
 ### CSS
 
 ```css
 #col {
--moz-column-count: 2;
--webkit-column-count: 2;
-column-count: 2;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
 }
 ```
 
@@ -49,16 +55,23 @@ column-count: 2;
 ### HTML
 
 ```html
-<div id="wid">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+<div id="wid">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</div>
 ```
 
 ### CSS
 
 ```css
 #wid {
--moz-column-width: 100px;
--webkit-column-width: 100px;
-column-width: 100px;
+  -moz-column-width: 100px;
+  -webkit-column-width: 100px;
+  column-width: 100px;
 }
 ```
 
@@ -81,17 +94,24 @@ column-width: 100px;
 ### HTML
 
 ```html
-<div id="col_short">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+<div id="col_short">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</div>
 ```
 
 ### CSS
 
 ```css
 #col_short {
--moz-column-width: 12em;
--moz-columns: 12em;
--webkit-columns: 12em;
-columns: 12em;
+  -moz-column-width: 12em;
+  -moz-columns: 12em;
+  -webkit-columns: 12em;
+  columns: 12em;
 }
 ```
 
@@ -106,17 +126,24 @@ columns: 12em;
 ### HTML
 
 ```html
-<div id="columns_4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+<div id="columns_4">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</div>
 ```
 
 ### CSS
 
 ```css
-#columns_4{
--moz-column-count: 4;
--moz-columns: 4;
--webkit-columns: 4;
-columns: 4;
+#columns_4 {
+  -moz-column-count: 4;
+  -moz-columns: 4;
+  -webkit-columns: 4;
+  columns: 4;
 }
 ```
 
@@ -131,16 +158,23 @@ columns: 4;
 ### HTML
 
 ```html
-<div id="columns_12">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+<div id="columns_12">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</div>
 ```
 
 ### CSS
 
 ```css
 #columns_12 {
--moz-columns: 12 8em;
--webkit-columns: 12 8em;
-columns: 12 8em;
+  -moz-columns: 12 8em;
+  -webkit-columns: 12 8em;
+  columns: 12 8em;
 }
 ```
 
@@ -163,19 +197,26 @@ CSS3 Column 스펙은 단 높이는 균형을 이루어야 함을 요구합니�
 ### HTML
 
 ```html
-<div id="column_gap">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+<div id="column_gap">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</div>
 ```
 
 ### CSS
 
 ```css
 #column_gap {
--webkit-column-count: 5;
--moz-column-count: 5;
-column-count: 5;
--moz-column-gap: 2em;
--webkit-column-gap: 2em;
-column-gap: 2em;
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  column-count: 5;
+  -moz-column-gap: 2em;
+  -webkit-column-gap: 2em;
+  column-gap: 2em;
 }
 ```
 

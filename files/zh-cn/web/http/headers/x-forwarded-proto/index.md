@@ -9,9 +9,9 @@ slug: Web/HTTP/Headers/X-Forwarded-Proto
 
 HTTP 协议中的 {{HTTPHeader("Forwarded")}} 是这个消息首部的标准化版本。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 

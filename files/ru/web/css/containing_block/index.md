@@ -1,7 +1,6 @@
 ---
 title: Разметка и содержащий блок
 slug: Web/CSS/Containing_block
-translation_of: Web/CSS/Containing_block
 ---
 
 {{cssref}}
@@ -33,21 +32,21 @@ translation_of: Web/CSS/Containing_block
 
 1. Если свойство `position` имеет значение **`static`**, **`relative`**, или **`sticky`**, то содержащий блок задаётся краем _content бокса_ ближайшего предка, который:
 
-    - либо является **блочным контейнером** (block container), например, если его свойство display имеет значение inline-block, block или list-item.
-    - либо **устанавливает контекст форматирования** (formatting context), например, контейнер таблицы (table container), flex-контейнер (flex container), grid-контейнер (grid container) или блочный контейнер (block container).
+   - либо является **блочным контейнером** (block container), например, если его свойство display имеет значение inline-block, block или list-item.
+   - либо **устанавливает контекст форматирования** (formatting context), например, контейнер таблицы (table container), flex-контейнер (flex container), grid-контейнер (grid container) или блочный контейнер (block container).
 
 2. Если свойство **`position`** имеет значение **`absolute`**, то содержащий блок задаётся краем _padding бокса_ ближайшего предка, у которого свойство **`position`** имеет значение отличное от `static` (`fixed`, `absolute`, `relative` или `sticky`).
 3. Если свойство **`position`** имеет значение **`fixed`**, то содержащий блок задаётся:
 
-    - в случае непрерывного медиа (continuous media) областью просмотра (вьюпорт - {{glossary("viewport")}});
-    - в случае страничного медиа (paged media) областью страницы.
+   - в случае непрерывного медиа (continuous media) областью просмотра (вьюпорт - {{glossary("viewport")}});
+   - в случае страничного медиа (paged media) областью страницы.
 
 4. Если свойство **`position`** имеет значение **`absolute`** или **`fixed`**, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
 
-    1. Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от `none`.
-    2. Свойство {{cssxref("will-change")}} имеет значение `transform` или `perspective`.
-    3. Свойство {{cssxref("filter")}} имеет значение отличное от `none` или `will-change` value of `filter` (работает только в Firefox).
-    4. Свойство {{cssxref("contain")}} имеет значение `paint` (например, `contain: paint;`).
+   1. Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от `none`.
+   2. Свойство {{cssxref("will-change")}} имеет значение `transform` или `perspective`.
+   3. Свойство {{cssxref("filter")}} имеет значение отличное от `none` или `will-change` value of `filter` (работает только в Firefox).
+   4. Свойство {{cssxref("contain")}} имеет значение `paint` (например, `contain: paint;`).
 
 > **Примечание:**Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется **начальный содержащий блок**. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).
 
@@ -97,10 +96,10 @@ section {
 }
 
 p {
-  width: 50%;   /* == 400px * .5 = 200px */
-  height: 25%;  /* == 160px * .25 = 40px */
-  margin: 5%;   /* == 400px * .05 = 20px */
-  padding: 5%;  /* == 400px * .05 = 20px */
+  width: 50%; /* == 400px * .5 = 200px */
+  height: 25%; /* == 160px * .25 = 40px */
+  margin: 5%; /* == 400px * .05 = 20px */
+  padding: 5%; /* == 400px * .05 = 20px */
   background: cyan;
 }
 ```
@@ -109,7 +108,7 @@ p {
 
 ### Example 2
 
-In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because `<section>` is not a block container (because of `display: inline`) and doesn’t establish a formatting context.
+In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because `<section>` is not a block container (because of `display: inline`) and doesn't establish a formatting context.
 
 ```html hidden
 <body>
@@ -130,8 +129,8 @@ section {
 }
 
 p {
-  width: 50%;     /* == half the body's width */
-  height: 200px;  /* Note: a percentage would be 0 */
+  width: 50%; /* == half the body's width */
+  height: 200px; /* Note: a percentage would be 0 */
   background: cyan;
 }
 ```
@@ -167,10 +166,10 @@ section {
 
 p {
   position: absolute;
-  width: 50%;   /* == (400px + 20px + 20px) * .5 = 220px */
-  height: 25%;  /* == (160px + 30px + 30px) * .25 = 55px */
-  margin: 5%;   /* == (400px + 20px + 20px) * .05 = 22px */
-  padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
+  width: 50%; /* == (400px + 20px + 20px) * .5 = 220px */
+  height: 25%; /* == (160px + 30px + 30px) * .25 = 55px */
+  margin: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
+  padding: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
   background: cyan;
 }
 ```
@@ -204,10 +203,10 @@ section {
 
 p {
   position: fixed;
-  width: 50%;   /* == (50vw - (width of vertical scrollbar)) */
-  height: 50%;  /* == (50vh - (height of horizontal scrollbar)) */
-  margin: 5%;   /* == (5vw - (width of vertical scrollbar)) */
-  padding: 5%;  /* == (5vw - (width of vertical scrollbar)) */
+  width: 50%; /* == (50vw - (width of vertical scrollbar)) */
+  height: 50%; /* == (50vh - (height of horizontal scrollbar)) */
+  margin: 5%; /* == (5vw - (width of vertical scrollbar)) */
+  padding: 5%; /* == (5vw - (width of vertical scrollbar)) */
   background: cyan;
 }
 ```
@@ -242,10 +241,10 @@ p {
   position: absolute;
   left: 80px;
   top: 30px;
-  width: 50%;   /* == 200px */
-  height: 25%;  /* == 40px */
-  margin: 5%;   /* == 20px */
-  padding: 5%;  /* == 20px */
+  width: 50%; /* == 200px */
+  height: 25%; /* == 40px */
+  margin: 5%; /* == 20px */
+  padding: 5%; /* == 20px */
   background: cyan;
 }
 ```

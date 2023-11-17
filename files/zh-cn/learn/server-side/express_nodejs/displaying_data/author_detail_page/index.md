@@ -12,36 +12,42 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 在档案最上方，加入底下几行，引入 async 和 Book 模组 (作者细节页面需要它们)。
 
 ```js
-var async = require('async');
-var Book = require('../models/book');
+var async = require("async");
+var Book = require("../models/book");
 ```
 
 找到 exported `author_detail()` 控制器方法，并用底下代码置换。
 
 ```js
 // Display detail page for a specific Author.
-exports.author_detail = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-            Author.findById(req.params.id)
-              .exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.params.id },'title summary')
-          .exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); } // Error in API usage.
-        if (results.author==null) { // No results.
-            var err = new Error('Author not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render.
-        res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
-    });
-
+exports.author_detail = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.params.id).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.params.id }, "title summary").exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      } // Error in API usage.
+      if (results.author == null) {
+        // No results.
+        var err = new Error("Author not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Successful, so render.
+      res.render("author_detail", {
+        title: "Author Detail",
+        author: results.author,
+        author_books: results.authors_books,
+      });
+    },
+  );
 };
 ```
 

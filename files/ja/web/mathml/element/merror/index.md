@@ -22,17 +22,15 @@ MathML `<merror>` 要素は、エラーメッセージとしてコンテンツ�
 
 ```html
 <math>
-
-<merror>
-  <mrow>
-    <mtext> Division by zero: </mtext>
-    <mfrac>
-      <mn> 1 </mn>
-      <mn> 0 </mn>
-    </mfrac>
-  </mrow>
-</merror>
-
+  <merror>
+    <mrow>
+      <mtext> Division by zero: </mtext>
+      <mfrac>
+        <mn> 1 </mn>
+        <mn> 0 </mn>
+      </mfrac>
+    </mrow>
+  </merror>
 </math>
 ```
 
@@ -42,4 +40,4 @@ MathML `<merror>` 要素は、エラーメッセージとしてコンテンツ�
 
 ## ブラウザー互換性
 
-{{Compat("mathml.elements.merror")}}
+{{Compat}}

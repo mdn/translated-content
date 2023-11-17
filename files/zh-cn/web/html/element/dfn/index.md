@@ -52,7 +52,11 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ```html
 <!-- Define "The Internet" -->
-<p><dfn id="def-internet">The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</p>
+<p>
+  <dfn id="def-internet">The Internet</dfn> is a global system of interconnected
+  networks that use the Internet Protocol Suite (TCP/IP) to serve billions of
+  users worldwide.
+</p>
 ```
 
 在同一文档的后面：
@@ -65,7 +69,10 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
       <abbr title="World-Wide Web">WWW</abbr>
     </dfn>
   </dt>
-  <dd>The World-Wide Web (WWW) is a system of interlinked hypertext documents accessed on <a href="#def-internet">the Internet</a>.</dd>
+  <dd>
+    The World-Wide Web (WWW) is a system of interlinked hypertext documents
+    accessed on <a href="#def-internet">the Internet</a>.
+  </dd>
 </dl>
 ```
 
