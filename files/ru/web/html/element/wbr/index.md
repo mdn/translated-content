@@ -7,7 +7,7 @@ slug: Web/HTML/Element/wbr
 
 **Элемент HTML `<wbr>`** предоставляет возможность переноса слова – позицию в тексте, где браузер может по желанию разбить строку, в противном случае его правила разрыва строки не будут создавать разрыв в этом месте.
 
-**{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}**
+{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}
 
 | Категории контента    | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,21 +39,18 @@ slug: Web/HTML/Element/wbr
 </p>
 ```
 
-**{{EmbedLiveSample("Пример")}}**
+{{EmbedLiveSample("Пример")}}
 
 ## Спецификация
 
-| Спецификация                                                                              | **Статус**                   | Комментарии |
-| ----------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| **{{SpecName('HTML WHATWG', 'semantics.html#the-wbr-element', '&lt;wbr&gt;')}}**          | **{{Spec2('HTML WHATWG')}}** |             |
-| **{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-wbr-element', '&lt;wbr&gt;')}}** | **{{Spec2('HTML5 W3C')}}**   |             |
+{{Specifications}}
 
 ## Поддержка браузерами
 
-**{{Compat}}**
+{{Compat}}
 
 ## Смотрите также
 
-- **{{cssxref("overflow-wrap")}}**
-- **{{cssxref("word-break")}}**
-- **{{cssxref("hyphens")}}**
+- {{cssxref("overflow-wrap")}}
+- {{cssxref("word-break")}}
+- {{cssxref("hyphens")}}

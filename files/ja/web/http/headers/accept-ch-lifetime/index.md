@@ -41,7 +41,7 @@ Accept-CH-Lifetime: 86400
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Accept-CH-Lifetime")}}
+{{Compat}}
 
 ## 関連情報
 

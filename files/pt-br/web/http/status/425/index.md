@@ -21,4 +21,4 @@ O status HTTP **`425 Too Early`** indica que o servidor não quer correr o risco
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.425")}}
+{{Compat}}

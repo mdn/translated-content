@@ -40,8 +40,8 @@ var firstCheck = false,
   access = firstCheck
     ? "Acceso Denegado"
     : secondCheck
-    ? "Acceso Denegado"
-    : "Acceso Permitido";
+      ? "Acceso Denegado"
+      : "Acceso Permitido";
 
 console.log(access); // muestra "Acceso Permitido"
 ```

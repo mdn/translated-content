@@ -55,7 +55,7 @@ O elemento implementa a interface do [`SVGStyleElement`](/pt-BR/DOM/SVGStyleElem
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.style")}}
+{{Compat}}
 
 ## Veja também
 

@@ -85,7 +85,7 @@ a(10, 20).then((v) => {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.AsyncFunction")}}
+{{Compat}}
 
 ## Veja também
 

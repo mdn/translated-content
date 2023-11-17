@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.LanguageCode")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

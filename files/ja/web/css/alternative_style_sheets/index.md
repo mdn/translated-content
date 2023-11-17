@@ -59,4 +59,4 @@ Firefox では、_表示_ >*スタイルシート*のサブメニューを使用
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.link.rel.alternate_stylesheet")}}
+{{Compat}}

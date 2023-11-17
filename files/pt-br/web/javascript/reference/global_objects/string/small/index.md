@@ -43,13 +43,11 @@ document.getElementById("#oIdDoElemento").style.fontSize = "0.7em";
 
 ## Especificações
 
-| Specification                                                                    |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.small', 'String.prototype.small')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.small")}}
+{{Compat}}
 
 ## Veja também
 

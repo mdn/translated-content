@@ -38,7 +38,7 @@ myVar = x.valueOf(); // atribui o valor false à variável myVar
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Boolean.valueOf")}}
+{{Compat}}
 
 ## Veja também
 

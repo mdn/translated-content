@@ -173,7 +173,7 @@ var fct2 = eval(fctStr2); // return a function
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.eval")}}
+{{Compat}}
 
 ## Veja também
 

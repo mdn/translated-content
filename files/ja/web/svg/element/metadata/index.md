@@ -33,4 +33,4 @@ _この要素には専用属性はありません。_
 
 ## ブラウザ実装状況
 
-{{Compat("svg.elements.metadata")}}
+{{Compat}}

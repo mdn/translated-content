@@ -56,6 +56,6 @@ canvas.toBlob(function (blob) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("FileReader")}}

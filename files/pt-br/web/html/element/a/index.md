@@ -457,16 +457,11 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 ## Specifications
 
-| Specification                                                                                         | Status                       | Comment                               |
-| ----------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------- |
-| {{SpecName("Referrer Policy", "#referrer-policy-delivery-referrer-attribute", "referrer attribute")}} | {{Spec2("Referrer Policy")}} | Added the `referrerpolicy` attribute. |
-| {{SpecName("HTML WHATWG", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                    | {{Spec2("HTML WHATWG")}}     |                                       |
-| {{SpecName("HTML5 W3C", "textlevel-semantics.html#the-a-element", "&lt;a&gt;")}}                      | {{Spec2("HTML5 W3C")}}       |                                       |
-| {{SpecName("HTML4.01", "struct/links.html#h-12.2", "&lt;a&gt;")}}                                     | {{Spec2("HTML4.01")}}        |                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.a")}}
+{{Compat}}
 
 ## See also
 

@@ -28,7 +28,7 @@ Não é parte de qualquer especificação.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.timeEnd")}}
+{{Compat}}
 
 ## Veja também
 

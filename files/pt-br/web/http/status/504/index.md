@@ -23,7 +23,7 @@ Um [Gateway](https://pt.wikipedia.org/wiki/Gateway) pode referir-se a diferentes
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.504")}}
+{{Compat}}
 
 ## Veja também
 

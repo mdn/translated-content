@@ -108,16 +108,11 @@ answer(1337); // 56154
 
 ## Especificações
 
-| Especificação                                                        | Situação             | Comentário         |
-| -------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES1')}}                                                  | {{Spec2('ES1')}}     | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}               | {{Spec2('ES5.1')}}   |                    |
-| {{SpecName('ES6', '#sec-return-statement', 'Return statement')}}     | {{Spec2('ES6')}}     |                    |
-| {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.return")}}
+{{Compat}}
 
 ## Veja também
 

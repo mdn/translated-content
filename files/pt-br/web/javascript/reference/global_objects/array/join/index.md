@@ -55,7 +55,7 @@ f(1, "a", true);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## Veja Também
 

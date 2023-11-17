@@ -26,7 +26,7 @@ data = ClipboardEvent.clipboardData
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 与复制相关的事件：[`copy`](/zh-CN/docs/Web/API/Element/copy_event), [`cut`](/zh-CN/docs/Web/API/Element/cut_event), [`paste`](/zh-CN/docs/Web/API/Element/paste_event)
 - 本对象所属的{{domxref("ClipboardEvent")}}接口。

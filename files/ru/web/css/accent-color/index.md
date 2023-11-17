@@ -79,7 +79,7 @@ input.custom {
 
 #### Результат
 
-{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}
+{{EmbedLiveSample("Установка_пользовательского_акцентного_цвета", 500, 200)}}
 
 ## Спецификации
 
@@ -92,6 +92,6 @@ input.custom {
 ## Смотрите также
 
 - {{HTMLElement("input")}} элемент
-- [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
 - {{cssxref("&lt;color&gt;")}}
 - Другие свойства, связанные с цветом: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} и {{cssxref("column-rule-color")}}

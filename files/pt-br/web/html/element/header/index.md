@@ -38,7 +38,7 @@ Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.header")}}
+{{Compat}}
 
 ## Veja também
 

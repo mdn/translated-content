@@ -80,14 +80,11 @@ Reflect.set(duck, "eyes", "black");
 
 ## Especificações
 
-| Especificação                                             | Situação             | Comentário                      |
-| --------------------------------------------------------- | -------------------- | ------------------------------- |
-| {{SpecName('ES6', '#sec-reflect-object', 'Reflect')}}     | {{Spec2('ES6')}}     | Definição Inicial               |
-| {{SpecName('ESDraft', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ESDraft')}} | Reflect.enumerate foi removido. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect")}}
+{{Compat}}
 
 ## Veja também
 

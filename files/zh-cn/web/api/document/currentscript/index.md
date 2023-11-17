@@ -37,7 +37,7 @@ if (document.currentScript.async) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{JSxRef("Statements/import%2Emeta", "import.meta")}}
 - {{HTMLElement("script")}}

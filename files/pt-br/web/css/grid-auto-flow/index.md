@@ -122,7 +122,7 @@ function changeGridAutoFlow() {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.grid-auto-flow")}}
+{{Compat}}
 
 ## Veja Também
 

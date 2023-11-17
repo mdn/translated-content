@@ -65,7 +65,7 @@ Reflect.ownKeys(obj);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.ownKeys")}}
+{{Compat}}
 
 ## 関連情報
 

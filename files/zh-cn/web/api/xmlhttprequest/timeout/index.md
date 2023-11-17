@@ -9,15 +9,15 @@ slug: Web/API/XMLHttpRequest/timeout
 
 > **备注：** 你不能在拥有的 window 中，给同步请求使用超时。
 
-[在异步请求中使用 timeout](/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#.E4.BE.8B.E5.AD.90.3A_.E4.BD.BF.E7.94.A8.E8.B6.85.E6.97.B6)
+[在异步请求中使用 timeout](/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#例子：使用超时)
 
 在 IE 中，超时属性可能只能在调用 [open()](/zh-CN/docs/Web/API/XMLHttpRequest/open) 方法之后且在调用 [send()](/zh-CN/docs/Web/API/XMLHttpRequest/send) 方法之前设置。
 
 ## 示例
 
-```
+```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // 超时时间，单位是毫秒
 

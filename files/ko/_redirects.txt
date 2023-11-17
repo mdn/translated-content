@@ -184,7 +184,9 @@
 /ko/docs/Glossary/Descriptor_(CSS)	/ko/docs/Glossary/CSS_Descriptor
 /ko/docs/Glossary/Empty_element	/ko/docs/Glossary/Void_element
 /ko/docs/Glossary/Header	/ko/docs/Glossary/HTTP_header
+/ko/docs/Glossary/I18N	/ko/docs/Glossary/Internationalization
 /ko/docs/Glossary/Index	/ko/docs/Glossary
+/ko/docs/Glossary/Internationalization_and_localization	/ko/docs/conflicting/Glossary/Internationalization
 /ko/docs/Glossary/Symbol	/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ko/docs/Glossary/Transmission_Control_Protocol_(TCP)	/ko/docs/Glossary/TCP
 /ko/docs/Glossary/XHR_(XMLHttpRequest)	/ko/docs/Glossary/XMLHttpRequest
@@ -412,6 +414,7 @@
 /ko/docs/Web/API/AudioWorkletNode/onprocessorerror	/ko/docs/Web/API/AudioWorkletNode/processorerror_event
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/CSSOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
+/ko/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/ko/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
 /ko/docs/Web/API/DOMRect/fromRect	/ko/docs/Web/API/DOMRect/fromRect_static
 /ko/docs/Web/API/DOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
@@ -438,6 +441,7 @@
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
 /ko/docs/Web/API/File/Using_files_from_web_applications	/ko/docs/Web/API/File_API/Using_files_from_web_applications
 /ko/docs/Web/API/File/size	/ko/docs/Web/API/Blob/size
+/ko/docs/Web/API/File/type	/ko/docs/conflicting/Web/API/Blob/type
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
 /ko/docs/Web/API/GlobalEventHandlers/onchange	/ko/docs/Web/API/HTMLElement/change_event
 /ko/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ko/docs/Web/API/Element/contextmenu_event
@@ -496,6 +500,7 @@
 /ko/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ko/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ko/docs/Web/API/WebRTC_API/adapter.js	/ko/docs/Web/API/WebRTC_API#상호_운용성
+/ko/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext	/ko/docs/conflicting/Web/API/Web_Audio_API
 /ko/docs/Web/API/Window/DOMContentLoaded_event	/ko/docs/Web/API/Document/DOMContentLoaded_event
 /ko/docs/Web/API/Window/crypto	/ko/docs/Web/API/crypto_property
 /ko/docs/Web/API/WindowEventHandlers/onhashchange	/ko/docs/Web/API/Window/hashchange_event
@@ -525,8 +530,8 @@
 /ko/docs/Web/CSS/CSS_Columns	/ko/docs/Web/CSS/CSS_multicol_layout
 /ko/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/ko/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ko/docs/Web/CSS/CSS_Device_Adaptation	/ko/docs/Web/CSS
-/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox의_기본_개념	/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사용례	/ko/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
+/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/플렉스박스의_기본_개념	/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/플렉스박스의_대표적인_사용례	/ko/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /ko/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/ko/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 /ko/docs/Web/CSS/CSS_Flow_Layout/대열과_탈대열	/ko/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 /ko/docs/Web/CSS/CSS_Flow_Layout/일반_흐름_속_블록_및_인라인_레이아웃	/ko/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
@@ -649,7 +654,7 @@
 /ko/docs/Web/HTML/Canvas/Tutorial/Basic_animations	/ko/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /ko/docs/Web/HTML/Canvas/Tutorial/Basic_usage	/ko/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /ko/docs/Web/HTML/Canvas/Tutorial/Compositing	/ko/docs/Web/API/Canvas_API/Tutorial/Compositing
-/ko/docs/Web/HTML/Canvas/Tutorial/Compositing/Example	/ko/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/ko/docs/Web/HTML/Canvas/Tutorial/Compositing/Example	/ko/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes	/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ko/docs/Web/HTML/Canvas/Tutorial/Finale	/ko/docs/Web/API/Canvas_API/Tutorial/Finale
 /ko/docs/Web/HTML/Canvas/Tutorial/Optimizing_canvas	/ko/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
@@ -697,6 +702,7 @@
 /ko/docs/Web/JavaScript/Reference/About	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
+/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Private_properties
 /ko/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ko/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ko/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ko/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
 /ko/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ko/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point

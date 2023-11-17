@@ -64,13 +64,11 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## Especificações
 
-| Especificação                                                                    |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect.defineProperty")}}
+{{Compat}}
 
 ## Veja também
 

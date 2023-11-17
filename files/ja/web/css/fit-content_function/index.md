@@ -89,11 +89,11 @@ fit-content(40%)
 
 ### width (および他の大きさのプロパティ) での対応
 
-{{Compat("css.properties.width.fit-content_function")}}
+{{Compat}}
 
 ### グリッドレイアウトでの対応
 
-{{Compat("css.properties.grid-template-columns.fit-content")}}
+{{Compat}}
 
 ## 関連情報
 

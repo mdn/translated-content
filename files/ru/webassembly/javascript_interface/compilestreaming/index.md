@@ -44,9 +44,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
 
 ## Характеристики
 
-| Спецификация                                                                                | Статус                             | Коммент                             |
-| ------------------------------------------------------------------------------------------- | ---------------------------------- | ----------------------------------- |
-| {{SpecName('WebAssembly Embedding', '#webassemblycompilestreaming', 'compileStreaming()')}} | {{Spec2('WebAssembly Embedding')}} | Первоначальное определение проекта. |
+{{Specifications}}
 
 ## Совместимость с браузером
 

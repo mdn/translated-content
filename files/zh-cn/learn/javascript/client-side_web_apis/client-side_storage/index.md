@@ -765,7 +765,7 @@ self.addEventListener("fetch", function (e) {
 
 现在就是这些。我们希望你能感觉到我们对客户端存储技术的介绍很有用。
 
-## 相关链接
+## 参见
 
 - [网页存储 API](/zh-CN/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)

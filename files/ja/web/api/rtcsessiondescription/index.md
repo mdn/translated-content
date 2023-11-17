@@ -75,7 +75,7 @@ signalingChannel.onmessage = function (evt) {
 
 ## ブラウザーの対応
 
-{{Compat("api.RTCSessionDescription")}}
+{{Compat}}
 
 ## 関連情報
 

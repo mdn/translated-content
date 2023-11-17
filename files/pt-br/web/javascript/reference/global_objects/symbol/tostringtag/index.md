@@ -68,13 +68,11 @@ test[Symbol.toStringTag]; // Retona HTMLButtonElement
 
 ## Especificações
 
-| Especificação                                                            |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.toStringTag")}}
+{{Compat}}
 
 ## Veja também
 

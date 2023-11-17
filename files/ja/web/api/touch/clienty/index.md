@@ -61,4 +61,4 @@ src.addEventListener(
 
 ## ブラウザーの互換性
 
-{{Compat("api.Touch.clientY")}}
+{{Compat}}

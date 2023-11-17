@@ -210,7 +210,7 @@ var result = mapped.map(function (el) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.sort")}}
+{{Compat}}
 
 ## Veja também
 

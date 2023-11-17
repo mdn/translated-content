@@ -23,7 +23,7 @@ browser.i18n.getUILanguage();
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.getUILanguage")}}
+{{Compat}}
 
 ## 例
 

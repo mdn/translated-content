@@ -3,6 +3,8 @@ title: Alignment subject
 slug: Glossary/Alignment_Subject
 ---
 
+{{GlossarySidebar}}
+
 Dans le [CSS Box Alignment (alignement des boîtes en CSS)](/fr/docs/Web/CSS/CSS_Box_Alignment) l'**alignment subject** (le sujet de l'alignement) est la ou les choses alignées par la propriété.
 
 Pour {{cssxref("justify-self")}} et {{cssxref("align-self")}}, l'**alignment subject** est la marge de la boite sur laquelle la propriété est définie, en utilisant le mode d'écriture de cette zone.

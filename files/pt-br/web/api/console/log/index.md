@@ -33,7 +33,7 @@ Não faz parte de nenhuma especificação.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.log")}}
+{{Compat}}
 
 ## Ver também
 

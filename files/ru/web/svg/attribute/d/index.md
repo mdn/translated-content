@@ -7,9 +7,11 @@ slug: Web/SVG/Attribute/d
 
 Атрибут **`d`** предоставляет определение пути для рисования.
 
-Определение пути - это [список команд пути](#Path_commands), в которых каждая команда состоит из буквы и некоторых чисел, представляющих параметр команды. Ниже приведены все возможные команды.
+Определение пути - это [список команд пути](#path_commands), в которых каждая команда состоит из буквы и некоторых чисел, представляющих параметр команды. Ниже приведены все возможные команды.
 
 Три элемента используют этот атрибут: {{SVGElement("path")}}, {{SVGElement("glyph")}}, и {{SVGElement("missing-glyph")}}
+
+## Пример
 
 ```css hidden
 html,
@@ -32,7 +34,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## path
 
@@ -527,8 +529,4 @@ svg {
 
 ## Specification
 
-| Specification                                                    | Status              | Comment                                                |
-| ---------------------------------------------------------------- | ------------------- | ------------------------------------------------------ |
-| {{SpecName("SVG2", "paths.html#DProperty", "d")}}                | {{Spec2("SVG2")}}   | Definition for `<path>`                                |
-| {{SpecName("SVG1.1", "fonts.html#GlyphElementDAttribute", "d")}} | {{Spec2("SVG1.1")}} | Initial definition for `<glyph>` and `<missing-glyph>` |
-| {{SpecName("SVG1.1", "paths.html#DAttribute", "d")}}             | {{Spec2("SVG1.1")}} | Initial definition for `<path>`                        |
+{{Specifications}}

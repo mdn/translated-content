@@ -46,7 +46,7 @@ slug: Mozilla/Firefox/Releases/25
 
 ### SVG
 
-## 相关链接
+## 参见
 
 - [Firefox 25 网站兼容性](/zh-CN/docs/Mozilla/Firefox/Releases/25/Site_Compatibility)
 

@@ -30,7 +30,7 @@ slug: Web/API/Canvas_API/Tutorial
 - [优化 canvas](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
 - [终曲](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Finale)
 
-## 相关链接
+## 参见
 
 - [Canvas 专题页](/zh-CN/docs/Web/API/Canvas_API)
 - [Adobe Illustrator to Canvas plug-in](http://visitmix.com/labs/ai2canvas/)

@@ -1,37 +1,45 @@
 ---
-title: PeformanceObserver.disconnect()
+title: "PerformanceObserver: disconnect() メソッド"
+short-title: disconnect()
 slug: Web/API/PerformanceObserver/disconnect
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
-{{domxref('PerformanceObserver')}} インターフェイスの **`disconnect()`** メソッドは、パフォーマンスオブザーバーが{{domxref("PerformanceEntry","パフォーマンスエントリ", '', 'true')}}イベントを受け取らないようにするために使用されます。
+**`disconnect()`** は {{domxref('PerformanceObserver')}} インターフェイスのメソッドで、パフォーマンスオブザーバーが{{domxref("PerformanceEntry","パフォーマンス項目", '', 'true')}}イベントを受け取らないようにするために使用されます。
 
 ## 構文
 
+```js-nolint
+disconnect()
 ```
-performanceObserver.disconnect();
-```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-```js
-var observer = new PerformanceObserver(function (list, obj) {
-  var entries = list.getEntries();
-  for (var i = 0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
-  }
-});
-observer.observe({ entryTypes: ["mark", "frame"] });
+### パフォーマンスオブザーバーの停止
 
-function perf_observer(list, observer) {
-  // Process the "measure" event
-  // ...
-  // Disable additional performance events
-  observer.disconnect();
-}
-var observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({ entryTypes: ["measure"] });
+次の例では、パフォーマンスオブザーバーを切断して、パフォーマンス項目イベントの受信を無効にしています。
+
+```js
+const observer = new PerformanceObserver((list, obj) => {
+  list.getEntries().forEach((entry) => {
+    // "measure" イベントを処理
+    // …
+    // それ以降のパフォーマンスイベントを無効化
+    observer.disconnect();
+  });
+});
+observer.observe({ entryTypes: ["mark", "measure"] });
 ```
 
 ## 仕様書
@@ -40,4 +48,4 @@ observer2.observe({ entryTypes: ["measure"] });
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceObserver.disconnect")}}
+{{Compat}}

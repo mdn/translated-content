@@ -76,7 +76,7 @@
 /zh-TW/docs/DOM	/en-US/docs/Web/API/Document_Object_Model
 /zh-TW/docs/DOM/XMLHttpRequest	/zh-TW/docs/Web/API/XMLHttpRequest
 /zh-TW/docs/DOM/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
-/zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest	/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest	/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /zh-TW/docs/DOM_中的空白字元	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
 /zh-TW/docs/DragDrop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/DragDrop/Drag_and_Drop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
@@ -426,6 +426,8 @@
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/Web/OpenSearch
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval
 /zh-TW/docs/Web/API/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
+/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+/zh-TW/docs/Web/API/console/assert	/zh-TW/docs/Web/API/console/assert_static
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
 /zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/Web/CSS
