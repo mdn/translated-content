@@ -66,7 +66,6 @@ El proceso de renderizado incluye lo siguiente :
 
 ### Tipos de archivos SVG
 
-
 Los archivos SVG son de dos tipos. Los archivos SVG normales, que son simples archivos de texto que contienen marcas SVG y tienen como extensión recomendada ".svg" (todo en minúsculas).
 
 Debido al enorme tamaño que pueden alcanzar los archivos SVG cuando se utilizan para algunas aplicaciones (por ejemplo, aplicaciones geográficas), la especificación SVG también permite archivos SVG comprimidos con gzip. La extensión recomendada para estos archivos es ".svgz" (todo en minúsculas). Desafortunadamente, es muy problemático conseguir que los archivos SVG comprimidos con gzip funcionen de forma fiable en todos los agentes de usuario con capacidad SVG cuando se sirven desde un servidor Microsoft IIS, y Firefox no puede cargar SVG comprimidos con gzip desde el ordenador local. Evite los archivos SVG comprimidos con gzip excepto cuando los publique en un servidor web que sepa que los servirá correctamente (véase más abajo).
