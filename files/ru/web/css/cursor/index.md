@@ -5,41 +5,61 @@ slug: Web/CSS/cursor
 
 {{CSSRef}}
 
-## Описание
+CSS-свойство `cursor` устанавливает курсор мыши, если таковой имеется, для отображения, когда указатель мыши находится над элементом.
 
-The **`cursor`** CSS property specifies the mouse cursor displayed when the mouse pointer is over an element.
+Внешний вид курсора помогает информировать пользователей об операциях, которые можно выполнять при взаимодействии с элементом, включая: выделение текста, активацию справки или контекстного меню, копирование содержимого, изменение размера таблиц и так далее.
+Вы можете указать _тип_ курсора с помощью ключевого слова или загрузить свой значок (с дополнительными резервными изображениями и ключевым словом в качестве резервного варианта отображения).
 
-{{cssinfo}}
+{{EmbedInteractiveExample("pages/css/cursor.html")}}
 
 ## Синтаксис
 
 ```css
-/* Применение ключевых значений */
-cursor: pointer;
+/* Значения ключевых слов */
 cursor: auto;
+cursor: pointer;
+/* … */
+cursor: zoom-out;
 
-/* Использование URL и координат */
+/* Использование с обязательным резервным ключевым словом */
+cursor: url(hand.cur), pointer;
+
+/* Использование URL и координат с обязательным резервным ключевым словом */
 cursor:
-  url(cursor1.png) 4 12,
+  url(cursor_1.png) 4 12,
   auto;
 cursor:
-  url(cursor2.png) 2 2,
+  url(cursor_2.png) 2 2,
   pointer;
+
+/* Использование URL с резервными URL (иногда с координатами) с обязательным резервным ключевым словом */
+cursor:
+  url(cursor_1.svg) 4 5,
+  url(cursor_2.svg),
+  /* …, */ url(cursor_n.cur) 5 5,
+  progress;
 
 /* Глобальные значения */
 cursor: inherit;
 cursor: initial;
+cursor: revert;
+cursor: revert-layer;
 cursor: unset;
 ```
 
 ### Значения
 
-- `<url>`
+- `<url>` {{optional_inline}}
   - : Ссылка или разделённый запятыми список ссылок: `url(…), url(…), …`, указывающие на файл изображения. Дополнительные ссылки могут быть предоставлены в качестве запасных значений, на случай если изображение по основной ссылке не поддерживается в качестве курсора. Запасное значение, не являющееся ссылкой (одно или несколько ключевых слов) **должно** находиться в конце списка значений. See [Using URL values for the cursor property](/ru/docs/CSS/Using_URL_values_for_the_cursor_property) for more details.
-- `<x>` `<y>` {{experimental_inline}}
+- `<x>`, `<y>` {{optional_inline}}
   - : Необязательные значения х- и у- координат. Два безразмерных неотрицательных числа меньше 32.
-- Ключевые слова
-  - : **Наведите курсор на картинку, чтобы увидеть пример в действии:**<table class="standard-table">
+- `keyword`
+
+  - : Ключевое слово _должно_ быть установлено для указания типа используемого курсора или резервного курсора, который будет использоваться, если не удастся загрузить указанные значки.
+
+    Доступные ключевые слова перечислены в таблице ниже. Значения кроме `none` (что означает отсутствие курсора), являются изображением, которое будет использовано для отображения курсора. Вы можете навести указатель мыши на строки таблицы, чтобы увидеть эффект применения различных значений ключевых слов.
+
+    <table class="standard-table">
       <tbody>
         <tr>
           <th>Категория</th>
@@ -302,26 +322,30 @@ cursor: unset;
       </tbody>
     </table>
 
-### Формальный синтаксис
+## Формальное определение
+
+{{cssinfo}}
+
+## Формальный синтаксис
 
 {{csssyntax}}
 
 ## Примеры
+
+### Задание типа курсора
 
 ```css
 .foo {
   cursor: crosshair;
 }
 
-/* use prefixed-value if "zoom-in" isn't supported */
 .bar {
-  cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
 
-/* standard cursor value as fallback for url() must be provided (doesn't work without) */
+/* Использование резервного ключевого слова обязательно при использовании URL */
 .baz {
-  cursor: url(hyper.cur), auto;
+  cursor: url("hyper.cur"), auto;
 }
 ```
 
@@ -335,6 +359,5 @@ cursor: unset;
 
 ## Смотрите также
 
-- [Using URL values for the cursor property](/ru/docs/CSS/Using_URL_values_for_the_cursor_property)
 - {{cssxref("pointer-events")}}
-- [Cursor Property (MSDN)](http://msdn.microsoft.com/en-us/library/aa358795.aspx)
+- {{cssxref("url", "url()")}} function
