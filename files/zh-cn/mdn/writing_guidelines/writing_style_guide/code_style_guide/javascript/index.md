@@ -1,144 +1,143 @@
 ---
-title: Guidelines for writing JavaScript code examples
+title: JavaScript 代码示例编写指南
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
 
-The following guidelines cover writing JavaScript example code for MDN Web Docs. This article is a list of rules for writing concise examples that will be understandable by as many people as possible.
+以下指南涵盖了如何为 MDN Web Docs 编写 JavaScript 示例代码。本文列出了编写简洁示例的规则，以期这些示例将被尽可能多的人理解。
 
-## General guidelines for JavaScript code examples
+## JavaScript 代码示例的一般准则
 
-This section explains the general guidelines to keep in mind while writing JavaScript code examples. The later sections will cover more specific details.
+本节解释了编写 JavaScript 代码示例时要牢记的一般准则。后面的部分将涵盖更具体的细节。
 
-### Choosing a format
+### 选择格式
 
-Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
+关于正确缩进、空格和行的长度方面的观点一直存在争议。对这些主题的讨论会分散创作和维护内容的注意力。
 
-On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep the code style consistent (and to avoid off-topic discussions). You can consult our [configuration file](https://github.com/mdn/content/blob/main/.prettierrc.json) to learn about the current rules, and read the [Prettier documentation](https://prettier.io/docs/en/index.html).
+在 MDN Web Docs，我们使用 [Prettier](https://prettier.io/) 作为代码格式化工具以保持代码样式的一致性（同时避免偏离主题的讨论）。你可以查阅我们的[配置文件](https://github.com/mdn/content/blob/main/.prettierrc.json)了解当前规则，并阅读 [Prettier 文档](https://prettier.io/docs/en/index.html)。
 
-Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
+Prettier 格式化所有代码并保持风格一致。尽管如此，你还需要遵守一些额外的规则。
 
-### Using modern JavaScript features
+### 使用现代 JavaScript 特性
 
-You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them.
+如果新的特性被每个主流的浏览器——Chrome、Edge、Firefox 和 Safari 所支持，你就可以使用它们。
 
-## Arrays
+## 数组
 
-### Array creation
+### 创建数组
 
-For creating arrays, use literals and not constructors.
+请使用字面量而非构造函数来创建数组。
 
-Create arrays like this:
+像这样来创建数组：
 
 ```js example-good
 const visitedCities = [];
 ```
 
-Don't do this while creating arrays:
+而不要这样创建数组：
 
 ```js example-bad
 const visitedCities = new Array(length);
 ```
 
-### Item addition
+### 添加元素
 
-When adding items to an array, use [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) and not direct assignment. Consider the following array:
+向数组添加元素时，请使用 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 而非直接赋值。考虑如下数组：
 
 ```js
 const pets = [];
 ```
 
-Add items to the array like this:
+像这样向数组添加元素：
 
 ```js example-good
 pets.push("cat");
 ```
 
-Don't add items to the array like this:
+而不要像这样向数组添加元素：
 
 ```js example-bad
 pets[pets.length] = "cat";
 ```
 
-## Asynchronous methods
+## 异步方法
 
-Writing asynchronous code improves performance and should be used when possible. In particular, you can use:
+编写异步代码可以提高性能，应尽可能使用。特别是，你可以使用：
 
 - [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [`async`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await)
 
-When both techniques are possible, we prefer using the simpler `async`/`await` syntax. Unfortunately, you can't use `await` at the top level unless you are in an ECMAScript module. CommonJS modules used by Node.js are not ES modules. If your example is intended to be used everywhere, avoid top-level `await`.
+当两种语法都可行时，我们倾向于使用更简单的 `async`/`await` 语法。不幸的是，你不能在顶层使用 `await`，除非你在 ECMAScript 模块中。但 Node.js 使用 CommonJS 模块而不是 ES 模块。因此，如果你打算在所有地方使用该示例，请避免顶层的 `await`。
 
-## Comments
+## 注释
 
-Comments are critical to writing good code examples. They clarify the intent of the code and help developers understand it. Pay special attention to them.
+注释对于编写好的代码示例非常重要。它们清楚地阐明了代码的意图，并帮助开发者理解它。要特别注意它们。
 
-- If the purpose or logic of the code isn't obvious, add a comment with your intention, as shown below:
+- 如果代码的目的或逻辑不明显，请添加表明你的意图的注释，就像下面这样：
 
   ```js example-good
   let total = 0;
 
-  // Calculate the sum of the four first elements of arr
+  // 计算数组 arr 的前四个元素的和
   for (let i = 0; i < 4; i++) {
     total += arr[i];
   }
   ```
 
-  On the other hand, restating the code in prose is not a good use of comments:
+  另一方面，请不要用文字重述代码来作为注释：
 
   ```js example-bad
   let total = 0;
 
-  // For loop from 1 to 4
+  // 从 1 到 4 的 for 循环
   for (let i = 0; i < 4; i++) {
-    // Add value to the total
+    // 将值添加到总数
     total += arr[i];
   }
   ```
 
-- Comments are also not necessary when functions have explicit names that describe what they're doing. Write:
+- 当函数的名称清楚地描述了它们的作用时，不需要再注释。如：
 
   ```js example-good
   closeConnection();
   ```
 
-  Don't write:
+  不要写像下面这样的注释：
 
   ```js example-bad
   closeConnection(); // Closing the connection
   ```
 
-### Use single-line comments
+### 使用单行注释
 
-Single-line comments are marked with `//`, as opposed to block comments enclosed between `/* … */`.
+单行注释用 `//` 标记，与包含在 `/* … */` 之间的块注释相反。
 
-In general, use single-line comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* … */` while debugging.
+通常情况下，使用单行注释来注释代码。编写者必须用 `//` 标记每一行的注释，这样就更容易直观地注意到注释掉的代码。此外，这种约定允许在调试时使用 `/* … */` 注释掉部分代码。
 
-- Leave a space between the slashes and the comment. Start with a capital letter, like a sentence, but don't end the comment with a period.
+- 在斜杠和空格之间留一个空格。注释以大写字母开头，就像句子一样，但不要在结尾加句号。
 
   ```js example-good
-  // This is a well-written single-line comment
+  // 这是一个良好的单行注释
   ```
 
-- If a comment doesn't start immediately after a new indentation level, add an empty line and then add the comment. It will create a code block, making it obvious what the comment refers to. Also, put your comments on separate lines preceding the code they are referring to. This is shown in the following example:
+- 如果一个注释没有在新缩进级别之后开始，请在空行后添加注释。这将创建一个代码块，使得注释与代码的关联更加清晰。此外，将你的注释放在它们所指的代码之前的单独一行上。如下例所示：
 
   ```js example-good
   function checkout(goodsPrice, shipmentPrice, taxes) {
-    // Calculate the total price
+    // 计算总价
     const total = goodsPrice + shipmentPrice + taxes;
 
-    // Create and append a new paragraph to the document
+    // 创建一个文档并向其添加一个新的段落
     const para = document.createElement("p");
-    para.textContent = `Total price is ${total}`;
+    para.textContent = `总价是 ${total}`;
     document.body.appendChild(para);
   }
   ```
 
-### Output of logs
+### 打印的输出
 
-- In code intended to run in a production environment, you rarely need to comment when you log some data. In code examples, we often use `console.log()`, `console.error()`, or similar functions to output important values. To help the reader understand what will happen without running the code, you can put a comment _after_ the function with the log that will be produced. Write:
+- 对于预期在生产环境中运行的代码，你很少会需要对打印代码进行注释。在代码示例中，我们经常使用 `console.log()`、`console.error()` 或类似的函数来输出重要的值。为了帮助读者在不运行代码的情况下理解会发生什么，你可以在打印函数*之后*注释输出的内容。比如：
 
   ```js example-good
   function exampleFunc(fruitBasket) {
@@ -146,7 +145,7 @@ In general, use single-line comments to comment code. Writers must mark each lin
   }
   ```
 
-  Don't write:
+  请不要这样写：
 
   ```js example-bad
   function exampleFunc(fruitBasket) {
@@ -155,7 +154,7 @@ In general, use single-line comments to comment code. Writers must mark each lin
   }
   ```
 
-- In case the line becomes too long, put the comment _after_ the function, like this:
+- 如果这样会让行变得太长，请将注释*放在*函数之后，如下所示：
 
   ```js example-good
   function exampleFunc(fruitBasket) {
@@ -164,9 +163,9 @@ In general, use single-line comments to comment code. Writers must mark each lin
   }
   ```
 
-### Multi-line comments
+### 多行注释
 
-Short comments are usually better, so try to keep them in one line of 60–80 characters. If this is not possible, use `//` at the beginning of each line:
+简短的注释通常更好，所以尝试将他们保持在 60–80 个字符的单行中。如果这不可能，请在每行的开头使用 `//`：
 
 ```js example-good
 // This is an example of a multi-line comment.
@@ -176,7 +175,7 @@ Short comments are usually better, so try to keep them in one line of 60–80 ch
 // Limitation 2
 ```
 
-Don't use `/* … */`:
+请不要使用 `/* … */`:
 
 ```js example-bad
 /* This is an example of a multi-line comment.
@@ -186,22 +185,22 @@ Don't use `/* … */`:
   Limitation 2 */
 ```
 
-### Use comments to mark ellipsis
+## 使用注释来标记省略号
 
-Skipping redundant code using ellipses (…) is necessary to keep examples short. Still, writers should do it thoughtfully as developers frequently copy & paste examples into their code, and all of our code samples should be valid JavaScript.
+为了保持示例简短，我们需要使用省略号（…）来跳过冗余代码。尽管如此，编写者应该仔细考虑，因为开发者经常复制粘贴示例到他们的代码中，所以我们所有的示例代码都应该是有效的 JavaScript。
 
-In JavaScript, you should put the ellipses (`…`) in a comment. When possible, indicate what action somebody reusing this snippet is expected to add.
+在 JavaScript 中，你应该将省略号（`…`）放在注释之中。可能的话，请指出重用此代码片段的人预计会添加什么操作。
 
-Using a comment for the ellipses (…) is more explicit, preventing errors when a developer copies and pastes a sample code. Write:
+对省略号（…）使用注释更加明确，可以防止开发人员复制和粘贴示例代码时出现错误。比如：
 
 ```js example-good
 function exampleFunc() {
-  // Add your code here
+  // 在此处添加你的代码
   // …
 }
 ```
 
-Don't use ellipses (…) like this:
+请不要像这样这样使用省略号（…）：
 
 ```js example-bad
 function exampleFunc() {
@@ -209,11 +208,11 @@ function exampleFunc() {
 }
 ```
 
-### Comment out parameters
+### 注释掉参数
 
-When writing code, you usually omit parameters you don't need. But in some code examples, you want to demonstrate that you didn't use some possible parameters.
+在编写代码时，你通常会省略你不需要的参数。但在某些代码示例中，你想要显式的说明你没有使用某些可能的参数。
 
-To do so, use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
+为此，请在参数列表中使用 `/* … */`。这是只使用单行注释（`//`）的规则的一个例外。
 
 ```js
 array.forEach((value /* , index, array */) => {
@@ -221,13 +220,13 @@ array.forEach((value /* , index, array */) => {
 });
 ```
 
-## Functions
+## 函数
 
-### Function names
+### 函数名称
 
-For function names, use {{Glossary("camel_case", "camel case")}}, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
+对于函数名称，请使用以小写字母开头的{{Glossary("camel_case", "小驼峰式")}}命名。酌情使用简洁、可读的和语义化的名称。
 
-The following is a correct example of a function name:
+以下是函数名称的正确示例：
 
 ```js example-good
 function sayHello() {
@@ -235,7 +234,7 @@ function sayHello() {
 }
 ```
 
-Don't use function names like these:
+请不要使用像这样的函数名称：
 
 ```js example-bad
 function SayHello() {
@@ -247,11 +246,11 @@ function doIt() {
 }
 ```
 
-### Function declarations
+### 函数声明
 
-- Where possible, use the function declaration over function expressions to define functions.
+- 在可能的情况下，请使用函数声明而不是函数表达式来定义函数。
 
-  Here is the recommended way to declare a function:
+  以下是声明函数的推荐方式：
 
   ```js example-good
   function sum(a, b) {
@@ -259,7 +258,7 @@ function doIt() {
   }
   ```
 
-  This is not a good way to define a function:
+  以下不是定义函数的好方法：
 
   ```js example-bad
   let sum = function (a, b) {
@@ -267,16 +266,16 @@ function doIt() {
   };
   ```
 
-- When using anonymous functions as a callback (a function passed to another method invocation), if you do not need to access `this`, use an arrow function to make the code shorter and cleaner.
+- 当使用匿名函数作为回调（传递给另一个方法调用的函数），如果你不需要访问 `this`，使用箭头函数可以让代码更加简洁明了。
 
-  Here is the recommended way:
+  以下是推荐的方式：
 
   ```js example-good
   const array1 = [1, 2, 3, 4];
   const sum = array1.reduce((a, b) => a + b);
   ```
 
-  Instead of this:
+  而不是这样：
 
   ```js example-bad
   const array1 = [1, 2, 3, 4];
@@ -285,7 +284,7 @@ function doIt() {
   });
   ```
 
-- Consider avoiding using arrow function to assign a function to an identifier. In particular, don't use arrow functions for methods. Use function declarations with the keyword `function`:
+- 考虑避免使用箭头函数将函数分配给标识符。尤其是，不要对方法使用箭头函数。使用带有关键字 `function` 的函数声明：
 
   ```js example-good
   function x() {
@@ -293,7 +292,7 @@ function doIt() {
   }
   ```
 
-  Don't do:
+  不要这样：
 
   ```js example-bad
   const x = () => {
@@ -301,13 +300,13 @@ function doIt() {
   };
   ```
 
-- When using arrow functions, use [implicit return](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _expression body_) when possible:
+- 使用箭头函数时，尽可能使用[隐式返回](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#函数体)（也称为*表达式体*）：
 
   ```js example-good
   arr.map((e) => e.id);
   ```
 
-  And not:
+  而不是：
 
   ```js example-bad
   arr.map((e) => {
@@ -315,15 +314,15 @@ function doIt() {
   });
   ```
 
-## Loops and conditional statements
+## 循环和条件语句
 
-### Loop initialization
+### 循环初始化
 
-When [loops](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code) are required, choose the appropriate one from [`for(;;)`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while), etc.
+当需要[循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)时，从 [`for(;;)`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)、[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)、[`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 等中选择合适的。
 
-- When iterating through all collection elements, avoid using the classical `for (;;)` loop; prefer `for...of` or `forEach()`. Note that if you are using a collection that is not an `Array`, you have to check that `for...of` is actually supported (it requires the variable to be iterable), or that the `forEach()` method is actually present.
+- 在遍历集合中的所有元素时，避免使用传统的 `for (;;)` 循环；优先使用 `for...of` 或 `forEach()`。请注意，如果你使用的是一个不是 `Array` 的集合，你必须检查 `for...of` 是否真的被支持（它需要变量是可迭代的），或者 `forEach()` 方法是否存在。
 
-  Use `for...of`:
+  使用 `for...of`：
 
   ```js example-good
   const dogs = ["Rex", "Lassie"];
@@ -332,7 +331,7 @@ When [loops](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   }
   ```
 
-  Or `forEach()`:
+  或 `forEach()`：
 
   ```js example-good
   const dogs = ["Rex", "Lassie"];
@@ -341,7 +340,7 @@ When [loops](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   });
   ```
 
-  Do not use `for (;;)` — not only do you have to add an extra index, `i`, but you also have to track the length of the array. This can be error-prone for beginners.
+  请不要使用 `for (;;)`——你不仅需要添加额外的索引 `i`，你还必须跟踪数组的长度。这对于初学者来说很容易出错。
 
   ```js example-bad
   const dogs = ["Rex", "Lassie"];
@@ -350,7 +349,7 @@ When [loops](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   }
   ```
 
-- Make sure that you define the initializer properly by using the `const` keyword for `for...of` or `let` for the other loops. Don't omit it. These are correct examples:
+- 确保你正确地定义了初始化器，对 `for...of` 使用 `const` 关键字，或对其他循环使用 `let`。注意不要遗漏。以下是正确的示例：
 
   ```js example-good
   const cats = ["Athena", "Luna"];
@@ -363,7 +362,7 @@ When [loops](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   }
   ```
 
-  The example below does not follow the recommended guidelines for the initialization (it implicitly creates a global variable and will fail in strict mode):
+  下面的示例没有遵循推荐的初始化准则（它隐式创建了全局变量，并且在严格模式下会失败）：
 
   ```js example-bad
   const cats = ["Athena", "Luna"];
@@ -372,7 +371,7 @@ When [loops](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   }
   ```
 
-- When you need to access both the value and the index, you can use `.forEach()` instead of `for (;;)`. Write:
+- 但是需要同时范围值和索引时，你可以使用 `.forEach()` 而不是 `for (;;)`。例如：
 
   ```js example-good
   const gerbils = ["Zoé", "Chloé"];
@@ -381,7 +380,7 @@ When [loops](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   });
   ```
 
-  Do not write:
+  请不要这样写：
 
   ```js example-bad
   const gerbils = ["Zoé", "Chloé"];
@@ -390,43 +389,43 @@ When [loops](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code) are requ
   }
   ```
 
-> **Warning:** Never use `for...in` with arrays and strings.
+> **警告：** 切勿使用 `for...in` 遍历数组和字符串。
 
-> **Note:** Consider not using a `for` loop at all. If you are using an [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) (or a [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) for some operations), consider using more semantic iteration methods instead, like [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`findIndex()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`find()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [`includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), and many more.
+> **备注：** 考虑完全不使用 `for` 循环。如果你正在使用 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)（或者在某些操作中使用 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)），请考虑使用更具语义的迭代方法，比如 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`every()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/every)、[`findIndex()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)、[`find()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find)、[`includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 等。
 
-### Control statements
+### 控制语句
 
-There is one notable case to keep in mind for the `if...else` control statements. If the `if` statement ends with a `return`, do not add an `else` statement.
+对于 `if...else` 控制语句，有一个值得注意的情况。如果 `if` 语句以 `return` 结尾，则不要添加 `else` 语句。
 
-Continue right after the `if` statement. Write:
+在 `if` 语句后继续，例如：
 
 ```js example-good
 if (test) {
-  // Perform something if test is true
+  // 如果 test 为真则执行某些操作
   // …
   return;
 }
 
-// Perform something if test is false
+// 如果 test 为假则执行某些操作
 // …
 ```
 
-Do not write:
+请不要这样写：
 
 ```js example-bad
 if (test) {
-  // Perform something if test is true
+  //  如果 test 为真则执行某些操作
   // …
   return;
 } else {
-  // Perform something if test is false
+  // 如果 test 为假则执行某些操作
   // …
 }
 ```
 
-### Use braces with control flow statements and loops
+### 将大括号与控制流语句和循环一起使用
 
-While control flow statements like `if`, `for`, and `while` don't require the use of braces when the content is made of one single statement, you should always use braces. Write:
+虽然像 `if`、`for` 和 `while` 的控制流语句不需要在内容中只有一个语句时使用大括号，但你总是应该使用大括号。比如：
 
 ```js example-good
 for (const car of storedCars) {
@@ -434,19 +433,19 @@ for (const car of storedCars) {
 }
 ```
 
-Don't write:
+不要这样写：
 
 ```js example-bad
 for (const car of storedCars) car.paint("red");
 ```
 
-This prevent forgetting to add the braces when adding more statements.
+这可以防止忘记在添加更多语句时添加大括号。
 
-### Switch statements
+### Switch 语句
 
-Switch statements can be a little tricky.
+switch 语句可能有点棘手。
 
-- Don't add a `break` statement after a `return` statement in a specific case. Instead, write `return` statements like this:
+- 不要在 `return` 语句后添加 `break` 语句。相反，请像下面这样编写 `return` 语句：
 
   ```js example-good
   switch (species) {
@@ -459,7 +458,7 @@ Switch statements can be a little tricky.
   }
   ```
 
-  If you add a `break` statement, it will be unreachable. Do not write:
+  如果你添加了 `break` 语句，它用于不会被访问。不要这样写：
 
   ```js example-bad
   switch (species) {
@@ -474,9 +473,9 @@ Switch statements can be a little tricky.
   }
   ```
 
-- Use `default` as the last case, and don't end it with a `break` statement. If you need to do it differently, add a comment explaining why.
+- 使用 `default` 作为最后一个 case，不要在 `default` 后面添加 `break` 语句。如果你需要做不同的事情，请添加注释来解释为什么。
 
-- Remember that when you declare a local variable for a case, you need to use braces to define a scope:
+- 请记住，当你为一个 case 声明一个局部变量时，你需要使用大括号来定义范围：
 
   ```js
   switch (fruits) {
@@ -493,9 +492,9 @@ Switch statements can be a little tricky.
   }
   ```
 
-### Error handling
+### 错误处理
 
-- If certain states of your program throw uncaught errors, they will halt execution and potentially reduce the usefulness of the example. You should, therefore, catch errors using a [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) block, as shown below:
+- 如果程序的某些状态引发未捕获的错误，它们会停止执行，并可能降低示例的可读性。因此，你应该使用 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块来捕获错误，如下所示：
 
   ```js example-good
   try {
@@ -505,25 +504,25 @@ Switch statements can be a little tricky.
   }
   ```
 
-- When you don't need the parameter of the `catch` statement, omit it:
+- 但你不需要捕获的错误，请省略 `catch` 语句的参数：
 
   ```js example-good
   try {
     console.log(getResult());
   } catch {
-    console.error("An error happened!");
+    console.error("发生了一个错误！");
   }
   ```
 
-> **Note:** Keep in mind that only _recoverable_ errors should be caught and handled. All non-recoverable errors should be let through and bubble up the call stack.
+> **备注：** 请记住，只有*可恢复*的错误才应该被捕获和处理。所有不可恢复的错误都应该被抛出，并逐步向上冒泡。
 
-## Objects
+## 对象
 
-### Object names
+### 对象名称
 
-- When defining a class, use _PascalCase_ (starting with a capital letter) for the class name and _camelCase_ (starting with a lowercase letter) for the object property and method names.
+- 当定义一个类时，使用*大驼峰式*（以大写字母开头）来命名类，使用*小驼峰式*（以小写字母开头）来命名对象属性和方法名。
 
-- When defining an object instance, either a literal or via a constructor, use _camelCase_, starting with lower-case character, for the instance name. For example:
+- 当定义一个对象实例时，使用字面量或构造函数，请使用*小驼峰式*（以小写字母开头）为实例命名。比如：
 
   ```js example-good
   const hanSolo = new Person("Han Solo", 25, "he/him");
@@ -535,27 +534,27 @@ Switch statements can be a little tricky.
   };
   ```
 
-### Object creation
+### 创建对象
 
-For creating general objects (i.e., when classes are not involved), use literals and not constructors.
+对于创建普通对象（即，当不涉及类时），请使用字面量而非构造函数。
 
-For example, do this:
+例如，这样做：
 
 ```js example-good
 const object = {};
 ```
 
-Don't create a general object like this:
+不要像这样创建普通对象：
 
 ```js example-bad
 const object = new Object();
 ```
 
-### Object classes
+#### 对象类
 
-- Use ES class syntax for objects, not old-style constructors.
+- 使用新的 ES 类语法进行定义，而不是构造函数。
 
-  For example, this is the recommended way:
+  例如，这是推荐的方式：
 
   ```js example-good
   class Person {
@@ -571,7 +570,7 @@ const object = new Object();
   }
   ```
 
-- Use `extends` for inheritance:
+- 使用 `extends` 进行继承：
 
   ```js example-good
   class Teacher extends Person {
@@ -579,9 +578,9 @@ const object = new Object();
   }
   ```
 
-### Methods
+### 方法
 
-To define methods, use the method definition syntax:
+要定义方法，请使用方法定义语法：
 
 ```js example-good
 const obj = {
@@ -594,7 +593,7 @@ const obj = {
 };
 ```
 
-Instead of:
+而不是：
 
 ```js example-bad
 const obj = {
@@ -607,10 +606,11 @@ const obj = {
 };
 ```
 
-### Object properties
+### 对象属性
 
-- The [`Object.prototype.hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) method has been deprecated in favor of [`Object.hasOwn()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn).
+- [`Object.prototype.hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 方法已被弃用，取而代之的是 [`Object.hasOwn()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)。
 - When possible, use the shorthand avoiding the duplication of the property identifier. Write:
+- 在可能的情况下，使用简写来避免属性标识符的重复。比如：
 
   ```js example-good
   function createObject(name, age) {
@@ -618,7 +618,7 @@ const obj = {
   }
   ```
 
-  Don't write:
+  不要这样写：
 
   ```js example-bad
   function createObject(name, age) {
@@ -626,19 +626,19 @@ const obj = {
   }
   ```
 
-## Operators
+## 运算符
 
-This section lists our recommendations of which operators to use and when.
+本节列出了我们对使用哪些运算符以及何时使用的建议。
 
-### Conditional operators
+### 条件运算符
 
-When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
+当你想要根据条件将一个字面量存储到变量中时，请使用[条件（三元）运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)而不是 `if...else` 语句。此规则也适用于返回值时。比如：
 
 ```js example-good
 const x = condition ? 1 : 2;
 ```
 
-Do not write:
+而不要这样：
 
 ```js example-bad
 let x;
@@ -649,96 +649,96 @@ if (condition) {
 }
 ```
 
-The conditional operator is helpful when creating strings to log information. In such cases, using a regular `if...else` statement leads to long blocks of code for a side operation like logging, obfuscating the central point of the example.
+条件运算符在创建用来打印新信息的字符串时很有帮助。在这种情况下，使用常规的 `if...else` 语句会导致像打印日志这样的副操作变成长代码块，则会混淆示例的重点。
 
-### Strict equality operator
+### 严格相等运算符
 
-Prefer the [strict equality](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) (triple equals) and inequality operators over the loose equality (double equals) and inequality operators.
+优先使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（三等号）和不等运算符，而不是相等运算符（双等号）和不等运算符。
 
-Use the strict equality and inequality operators like this:
+像这样使用严格相等和不等运算符：
 
 ```js example-good
 name === "Shilpa";
 age !== 25;
 ```
 
-Don't use the loose equality and inequality operators, as shown below:
+不要像下面这样使用普通的相等和不等运算符：
 
 ```js example-bad
 name == "Shilpa";
 age != 25;
 ```
 
-If you need to use `==` or `!=`, remember that `== null` is the only acceptable case. As TypeScript will fail on all other cases, we don't want to have them in our example code. Consider adding a comment to explain why you need it.
+如果你需要使用 `==` 或 `!=`，请记住 `== null` 是唯一可接受的情况。由于 TypeScript 在所有其他情况下都会失败，因此我们不希望在示例代码中使用。考虑添加注释来解释你为什么需要它。
 
-### Shortcuts for boolean tests
+### 布尔值测试的简便方式
 
-Prefer shortcuts for boolean tests. For example, use `if (x)` and `if (!x)`, not `if (x === true)` and `if (x === false)`, unless different kinds of truthy or falsy values are handled differently.
+优先使用简便布尔值测试。例如，使用 `if (x)` 和 `if (!x)`，而不是 `if (x === true)` 和 `if (x === false)`，除非以不同的方式处理不同种类的真值或假值。
 
-## Strings
+## 字符串
 
-String literals can be enclosed within single quotes, as in `'A string'`, or within double quotes, as in `"A string"`. Don't worry about which one to use; Prettier keeps it consistent.
+字符串字面量可以用单引号包含起来，比如 `'A string'`，也可以用双引号包含起来，比如 `"A string"`。不过，请不要在意需要选择使用哪个，Prettier 会保持一致。
 
-### Template literals
+### 模版字面量
 
-For inserting values into strings, use [template literals](/zh-CN/docs/Web/JavaScript/Reference/Template_literals).
+要将值插入字符串，请使用[模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)。
 
-- Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
+- 这里是一个推荐的使用模板字面量的例子。它们的使用可以防止大量的空格错误。
 
   ```js example-good
   const name = "Shilpa";
   console.log(`Hi! I'm ${name}!`);
   ```
 
-  Don't concatenate strings like this:
+  请不要像这样串联字符串：
 
   ```js example-bad
   const name = "Shilpa";
   console.log("Hi! I'm" + name + "!"); // Hi! I'mShilpa!
   ```
 
-- Don't overuse template literals. If there are no substitutions, use a normal string literal instead.
+- 请不要过度使用模版字面量。如果没有替换的话，请使用普通字符串。
 
-## Variables
+## 变量
 
-### Variable names
+### 变量名称
 
-Good variable names are essential to understanding code.
+好的变量名对理解代码至关重要。
 
-- Use short identifiers, and avoid non-common abbreviations. Good variable names are usually between 3 to 10-character long, but as a hint only. For example, `accelerometer` is more descriptive than abbreviating to `acclmtr` for the sake of character length.
-- Try to use real-world relevant examples where each variable has clear semantics. Only fall back to placeholder names like `foo` and `bar` when the example is simple and contrived.
-- Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null` or `name = "John Doe"` instead of `sName = "John Doe"`.
-- For collections, avoid adding the type such as list, array, queue in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. There may be exceptions, like when you want to show the abstract form of a feature without the context of a particular application.
-- For primitive values, use _camelCase_, starting with a lowercase character. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
-- Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`. There may be exceptions, like when describing a feature in general without a practical context.
-- Use variable names as shown here:
+- 使用简短的标识符，并避免不常用的缩写。好的变量名通常在 3 到 10 个字符之间，但这只是一个提示。例如，`accelerometer` 比为了字符长度而缩写的缩写 `acclmtr` 更具描述性。
+- 尝试使用现实世界相关的例子，其中每个变量都有清晰的语义。只有在示例简单且随意时才使用占位名称，比如 `foo` 和 `bar`。
+- 不要使用[匈牙利命名法](https://zh.wikipedia.org/wiki/匈牙利命名法)命名约定。不要在变量名前面加上类型。比如，不要写成 `bBought = oCar.sBuyer != null` 或 `sName = "John Doe"`，而是 `bought = car.buyer !== null` 或 `sName = "John Doe"`。
+- 对于集合，避免在命名中添加例如列表、数组、队列这样的类型名称。使用复数形式的内容名称。例如，对于汽车数组，使用 `cars` 而不是 `carArray` 或 `carList`。有时会有例外，比如你想在没有特定应用程序的上下文中展示一个特性的抽象形式。
+- 对于原始值，使用*小驼峰命名法*，以小写字母开头。不要使用`_`。使用适当的简洁、可读性好的和语义化的名称，当适当时。比如，使用 `currencyName` 而不是 `currency_name`。
+- 避免使用冠词和所有格，例如，使用 `car` 而不是 `myCar` 或 `aCar`。有时会有例外，比如你想在没有特定应用程序的上下文中展示一个特性的抽象形式。
+- 使用变量名如下所示：
 
   ```js example-good
   const playerScore = 0;
   const speed = distance / time;
   ```
 
-  Don't name variables like this:
+  不要像这样命名变量：
 
   ```js example-bad
   const thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
   const s = d / t;
   ```
 
-> **Note:** The only place where it's allowed not to use human-readable, semantic names is where a very commonly recognized convention exists, such as using `i` and `j` for loop iterators.
+> **备注：** 唯一不允许使用可读性好的语义名称的地方是存在非常公认的惯例，例如将 `i` 和 `j` 用于循环迭代器。
 
-### Variable declarations
+### 变量声明
 
-When declaring variables and constants, use the [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) keywords, not [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var). The following examples show what's recommended and what's not on MDN Web Docs:
+在声明变量和常量时，使用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 关键字，而不是 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)。下面的例子展示了 MDN Web Docs 上推荐的和不推荐的用法：
 
-- If a variable will not be reassigned, prefer `const`, like so:
+- 如果一个变量不会被重新赋值，请使用 `const`，如下所示：
 
   ```js example-good
   const name = "Shilpa";
   console.log(name);
   ```
 
-- If you'll change the value of a variable, use `let` as shown below:
+- 如果你会改变变量的值，请使用 `let`，如下所示：
 
   ```js example-good
   let age = 40;
@@ -746,14 +746,14 @@ When declaring variables and constants, use the [`let`](/zh-CN/docs/Web/JavaScri
   console.log("Happy birthday!");
   ```
 
-- The example below uses `let` where it should be `const`. The code will work, but we want to avoid this usage in MDN Web Docs code examples.
+- 下面的示例在应该使用 `const` 的地方使用了 `let`，代码仍然可以运行，但我们希望在 MDN Web Docs 代码示例中避免这种用法。
 
   ```js example-bad
   let name = "Shilpa";
   console.log(name);
   ```
 
-- The example below uses `const` for a variable that gets reassigned. The reassignment will throw an error.
+- 下面的示例使用 `const` 声明了一个变量，该变量会被重新赋值。重新赋值会抛出一个错误。
 
   ```js example-bad
   const age = 40;
@@ -761,14 +761,14 @@ When declaring variables and constants, use the [`let`](/zh-CN/docs/Web/JavaScri
   console.log("Happy birthday!");
   ```
 
-- The example below uses `var`, polluting the global scope:
+- 下面的示例使用了 `var`，这会污染全局范围：
 
   ```js example-bad
   var age = 40;
   var name = "Shilpa";
   ```
 
-- Declare one variable per line, like so:
+- 每行声明一个变量，如下所示：
 
   ```js example-good
   let var1;
@@ -777,16 +777,16 @@ When declaring variables and constants, use the [`let`](/zh-CN/docs/Web/JavaScri
   let var4 = var3;
   ```
 
-  Do not declare multiple variables in one line, separating them with commas or using chain declaration. Avoid declaring variables like this:
+  不要在一行中通过逗号或链式声明来声明多个变量。避免像这样声明变量：
 
   ```js-nolint example-bad
   let var1, var2;
-  let var3 = var4 = "Apapou"; // var4 is implicitly created as a global variable; fails in strict mode
+  let var3 = var4 = "Apapou"; // var4 被隐式创建为全局变量；这在严格模式下会失败
   ```
 
-### Type coercion
+### 类型强制转换
 
-Avoid implicit type coercions. In particular, avoid `+val` to force a value to a number and `"" + val` to force it to a string. Use `Number()` and `String()`, without `new`, instead. Write:
+避免隐式强制类型转换。特别是，避免 `+val` 以强制将值转换未为数字，以及 `"" + val` 来将其强制转换为字符串。改为在不使用 `new` 的情况下使用 `Number()` 和 `String()`。例如：
 
 ```js example-good
 class Person {
@@ -800,7 +800,7 @@ class Person {
 }
 ```
 
-Don't write:
+不要这样写：
 
 ```js example-bad
 class Person {
@@ -814,41 +814,41 @@ class Person {
 }
 ```
 
-## Web APIs to avoid
+## 要避免的 Web API
 
-In addition to these JavaScript language features, we recommend a few guidelines related to Web APIs to keep in mind.
+除了这些 JavaScript 语言特性之外，我们还建议你牢记一些与 Web API 相关的准则。
 
-### Avoid browser prefixes
+### 避免浏览器前缀
 
-If all major browsers (Chrome, Edge, Firefox, and Safari) support a feature, don't prefix the feature. Write:
+如果所有主流浏览器（Chrome、Edge、Firefox 和 Safari）都支持某个特性，请不要在该特性前面加上前缀。比如：
 
 ```js example-good
 const context = new AudioContext();
 ```
 
-Avoid the added complexity of prefixes. Don't write:
+避免增加前缀的复杂性，不要这样写：
 
 ```js example-bad
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const context = new AudioContext();
 ```
 
-The same rule applies to CSS prefixes.
+同样的规则也适用于 CSS 前缀。
 
-### Avoid deprecated APIs
+### 避免已弃用的 API
 
-When a method, a property, or a whole interface is deprecated, do not use it (outside its documentation). Instead, use the modern API.
+当一个方法、属性或一整个接口都已经弃用，不要使用它（除了它的文档）。相反，使用现代的 API。
 
-Here is a non-exhaustive list of Web APIs to avoid and what to replace them with:
+以下是要避免的 Web API 以及用什么来替换它们的非详尽列表：
 
-- Use `fetch()` instead of XHR (`XMLHttpRequest`).
-- Use `AudioWorklet` instead of `ScriptProcessorNode`, in the Web Audio API.
+- 使用 `fetch()` 来替代 XHR (`XMLHttpRequest`).
+- 在 Web 音频 API 中使用 `AudioWorklet` 来替代 `ScriptProcessorNode`。
 
-### Use safe and reliable APIs
+### 使用安全可靠的 API
 
-- Do not use {{DOMxRef("Element.innerHTML")}} to insert purely textual content into an element; use {{DOMxRef("Node.textContent")}} instead. The property `innerHTML` leads to security problems if a developer doesn't control the parameter. The more we as writers avoid using it, the fewer security flaws are created when a developer copies and pastes our code.
+- 请不要使用 {{DOMxRef("Element.innerHTML")}} 将纯文本内容插入到元素中；而是使用 {{DOMxRef("Node.textContent")}} 作为替代。`innerHTML` 属性可能会导致安全问题，如果开发人员不控制参数。作为编写者，我们越避免使用它，开发者复制和粘贴我们的代码时产生的安全漏洞就越少。
 
-  The example below demonstrates the use of `textContent`.
+  下面的示例演示了 `textContent` 的用法。
 
   ```js example-good
   const text = "Hello to all you good people";
@@ -856,7 +856,7 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
   para.textContent = text;
   ```
 
-  Don't use `innerHTML` to insert _pure text_ into DOM nodes.
+  不要使用 `innerHTML` 将*纯文本*插入到 DOM 节点中。
 
   ```js example-bad
   const text = "Hello to all you good people";
@@ -864,13 +864,13 @@ Here is a non-exhaustive list of Web APIs to avoid and what to replace them with
   para.innerHTML = text;
   ```
 
-- The `alert()` function is unreliable. It doesn't work in live examples on MDN Web Docs that are inside an {{HTMLElement("iframe")}}. Moreover, it is modal to the whole window, which is annoying. In static code examples, use `console.log()` or `console.error()`. In [live examples](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples), avoid `console.log()` and `console.error()` because they are not displayed. Use a dedicated UI element.
+- `alert()` 函数是不可靠的。它在 MDN Web Docs 页面中嵌入的 {{HTMLElement("iframe")}} 中的实时示例中不起作用。此外，它是对整个窗口的模态提示，这很烦人。在静态代码示例中，使用 `console.log()` 或 `console.error()`。在[实时示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)中，避免使用 `console.log()` 和 `console.error()`，因为它们不会显示。使用专用的 UI 元素。
 
-### Use the appropriate log method
+### 使用合适的打印方法
 
-- When logging a message, use `console.log()`.
-- When logging an error, use `console.error()`.
+- 当打印一个消息时，使用 `console.log()`。
+- 当淡印一个错误时，使用 `console.error()`
 
-## See also
+## 参见
 
-[JavaScript language reference](/zh-CN/docs/Web/JavaScript/Reference) - browse through our JavaScript reference pages to check out some good, concise, meaningful JavaScript snippets.
+[JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)——浏览我们的 JavaScript 参考页面，查看一些优秀、简洁、有意义的 JavaScript 代码片段。
