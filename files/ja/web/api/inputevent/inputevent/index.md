@@ -1,8 +1,9 @@
 ---
-title: InputEvent()
+title: "InputEvent: InputEvent() コンストラクター"
+short-title: InputEvent()
 slug: Web/API/InputEvent/InputEvent
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("UI Events")}}

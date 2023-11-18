@@ -3,8 +3,6 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 ---
 
-<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
-
 ### Resumen
 
 La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica la distancia entre los bordes de celdas adyacentes (sólo para el modelo de [separación de borde](/es/CSS/border-collapse)). Es el equivalente al atributo `cellspacing` en HTML.
@@ -43,23 +41,12 @@ El espaciado de borde también se utiliza en los bordes exteriores de las tablas
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/tables.html#propdef-border-spacing)
+{{Specifications}}
 
-### Compatibilidades
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Netscape          | 6              |
-| Internet Explorer | 7              |
-| Firefox           | 1              |
-| Mozilla           | 1              |
-| Safari            | 1              |
-| Opera             | 6              |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("border-collapse") }}
-
-Categorías
-
-Interwiki Languages
