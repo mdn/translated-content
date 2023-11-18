@@ -16871,14 +16871,6 @@
       "tselishev-semen"
     ]
   },
-  "conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c": {
-    "modified": "2020-10-15T22:28:09.577Z",
-    "contributors": ["almaceleste", "chrisdavidmills"]
-  },
-  "conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205": {
-    "modified": "2020-10-15T22:28:08.596Z",
-    "contributors": ["almaceleste", "chrisdavidmills"]
-  },
   "conflicting/Web/Media/Formats": {
     "modified": "2019-03-23T22:40:43.218Z",
     "contributors": ["SedovDP", "a-goodwin", "PPerminov", "MuradAz"]
