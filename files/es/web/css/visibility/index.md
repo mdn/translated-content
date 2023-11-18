@@ -16,7 +16,7 @@ La propiedad `visibility` se usa para dos efectos:
 - Se aplica a: Todos los elementos.
 - {{ Cssxref("inheritance", "Valor heredado") }}: Sí
 - Porcentajes: N/A
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: Como se especifica.
 
 ### Sintaxis
