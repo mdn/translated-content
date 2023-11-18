@@ -2,12 +2,12 @@
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 l10n:
-  sourceCommit: d42c4bd039f84d228a339a4a15c8abf9e67cf608
+  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
 {{JSRef}}
 
-**_TypedArray_** オブジェクトは、背後にある[バイナリーデータバッファー](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)の、配列風のビューを表します。 `TypedArray` という名称のグローバルプロパティは存在せず、また直接 `TypedArray` コンストラクターが見えるわけではありません。代わりに、さまざまなグローバルプロパティがあり、それらの値は後述するように特定の要素の型における型付き配列のコンストラクターになります。下記のページで、それぞれの要素を持つ片引き配列で使用できる共通のプロパティやメソッドを確認できます。
+**_TypedArray_** オブジェクトは、背後にある[バイナリーデータバッファー](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)の、配列風のビューを表します。 `TypedArray` という名称のグローバルプロパティがあるわけではなく、また直接 `TypedArray` コンストラクターが見えるわけではありません。代わりに、さまざまなグローバルプロパティがあり、それらの値は後述するように特定の要素の型における型付き配列のコンストラクターになります。下記のページで、それぞれの要素を持つ片引き配列で使用できる共通のプロパティやメソッドを確認できます。
 
 {{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
 
@@ -19,19 +19,36 @@ l10n:
 
 ### TypedArray オブジェクト
 
-| 型                              | 値の範囲                                                   | サイズ (バイト数) | 説明                                                                         | Web IDL 型            | 同等の C 型                     |
-| ------------------------------- | ---------------------------------------------------------- | ----------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| {{jsxref("Int8Array")}}         | -128 から 127                                              | 1                 | 8 ビット長、2 の補数方式の符号付き整数値                                     | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}        | 0 から 255                                                 | 1                 | 8 ビット長、符号なし整数値                                                   | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | 0 から 255                                                 | 1                 | 8 ビット長、符号なし整数値 (切り詰め)                                        | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}        | -32768 から 32767                                          | 2                 | 16 ビット長、2 の補数方式の符号付き整数値                                    | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}       | 0 から 65535                                               | 2                 | 16 ビット長、符号なし整数値                                                  | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}        | -2147483648 から 2147483647                                | 4                 | 32 ビット長、2 の補数方式の符号付き整数値                                    | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}       | 0 から 4294967295                                          | 4                 | 32 ビット長、符号なし整数値                                                  | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}      | `-3.4E38` から `3.4E38` および `1.2E-38` （最小の正の数）  | 4                 | 32 ビット長 IEEE 方式浮動小数点数 (有効桁数 7 桁、例えば `1.234567`)         | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}      | `-1.8E308` から `1.8E308` および `5E-324` （最小の正の数） | 8                 | 64 ビット長 IEEE 方式浮動小数点数 (有効桁数 16 桁、例えば`1.23456789012345`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                      | 8                 | 64 ビット長、2 の補数方式の符号付き整数値                                    | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                                    | 8                 | 64 ビット長、符号なし整数値                                                  | `bigint`              | `uint64_t (unsigned long long)` |
+| 型                              | 値の範囲                                                   | サイズ (バイト数) | Web IDL 型            |
+| ------------------------------- | ---------------------------------------------------------- | ----------------- | --------------------- |
+| {{jsxref("Int8Array")}}         | -128 から 127                                              | 1                 | `byte`                |
+| {{jsxref("Uint8Array")}}        | 0 から 255                                                 | 1                 | `octet`               |
+| {{jsxref("Uint8ClampedArray")}} | 0 から 255                                                 | 1                 | `octet`               |
+| {{jsxref("Int16Array")}}        | -32768 から 32767                                          | 2                 | `short`               |
+| {{jsxref("Uint16Array")}}       | 0 から 65535                                               | 2                 | `unsigned short`      |
+| {{jsxref("Int32Array")}}        | -2147483648 から 2147483647                                | 4                 | `long`                |
+| {{jsxref("Uint32Array")}}       | 0 から 4294967295                                          | 4                 | `unsigned long`       |
+| {{jsxref("Float32Array")}}      | `-3.4E38` から `3.4E38` および `1.2E-38` （最小の正の数）  | 4                 | `unrestricted float`  |
+| {{jsxref("Float64Array")}}      | `-1.8E308` から `1.8E308` および `5E-324` （最小の正の数） | 8                 | `unrestricted double` |
+| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                      | 8                 | `bigint`              |
+| {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                                    | 8                 | `bigint`              |
+
+### 値のエンコード方式と正規化
+
+すべての型付き配列は `ArrayBuffer` を操作して、各要素の正確なバイト表現を見ることができますので、数値がバイナリー形式でどのようにエンコードされているかが重要です。
+
+- 符号なし整数の配列 (`Uint8Array`, `Uint16Array`, `Uint32Array`, `BigUint64Array`) は、数値を直接バイナリーで格納します。
+- 符号付き整数の配列 (`Int8Array`, `Int16Array`, `Int32Array`, `BigInt64Array`) は、数値を [2 の補数](https://ja.wikipedia.org/wiki/2の補数)を用いて格納します。
+- 浮動小数点の配列 (`Float32Array`, `Float64Array`) は [IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754) 浮動小数点形式を使用して数値を格納します。 [`Number`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding) のリファレンスには、正確な形式についての詳細情報があります。 JavaScript の数値は既定では倍精度浮動小数点数で、 `Float64Array` と同じ形式を使用します。 `Float32Array` で仮数に（52 ビットの代わりに）23 ビット、指数に（11 ビットの代わりに） 8 ビットを使用します。仕様では、すべての {{jsxref("NaN")}} 値が同じビットエンコーダ方式を使用することが要求されていますが、正確なビットパターンは実装に依存することに注意してください。
+- `Uint8ClampedArray` は特殊なケースです。これは `Uint8Array` と同じようにバイナリーで格納されますが、範囲外の数値を格納した場合、最上位ビットを切り捨てるのではなく、数学的な値で 0 から 255 の範囲に数値を丸めます。
+
+`Int8Array`、`Uint8Array`、`Uint8ClampedArray` を除くすべての型付き配列は、各要素を複数のバイトを使用して格納します。これらのバイトは、最上位から最下位（ビッグエンディアン）、または最下位から最上位（リトルエンディアン）の順に並べられます。詳しい説明は[エンディアン](/ja/docs/Glossary/Endianness)を参照してください。型付き配列は常にプラットフォームネイティブのバイト順を使用します。バッファーから読み書きする際にエンディアンを指定したい場合は、代わりに {{jsxref("DataView")}} を使用してください。
+
+これらの型付き配列に書き込む場合、表現可能な範囲外の値は正規化されます。
+
+- すべての整数配列（`Uint8ClampedArray`を除く）は[固定幅の数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)を使用します。
+- `Uint8ClampedArray` は、最初に数値を 0 から 255 の範囲に収めます（255 より大きい値は 255 になり、0 より小さい値は 0 になります）。そして、（切り捨てるのではなく）最も近い整数に丸めます。つまり、 2 つの整数のちょうど中間にある場合は、最も近い偶数の整数に丸めます。例えば、`0.5` は `0`、`1.5` は `2`、`2.5` は `2` となります。
+- `Float32Array` では "round to even" を行い、 64 ビット浮動小数点数を 32 ビットに変換します。これは {{jsxref("Math.fround()")}} で指定されたアルゴリズムと同じです。
 
 ### サイズ変更可能なバッファー表示時の動作について
 
@@ -133,13 +150,13 @@ new TypedArray(buffer, byteOffset, length)
 ### 引数
 
 - `typedArray`
-  - : `TypedArray` のサブクラスのインスタンスを指定して呼び出されると、`typedArray` が新しい型付き配列にコピーされます。[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)以外の `TypedArray` コンストラクターでは、`typedArray` 引数には[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)以外の型付き配列のうちのいずれか（{{JSxRef("Int32Array")}} など）を指定します。同様に、[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の `TypedArray` コンストラクター（{{JSxRef("BigInt64Array")}} または {{JSxRef("BigUint64Array")}}）では、`typedArray` 引数には[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)型のいずれかしか指定できません。`typedArray` の各値は、新しい配列にコピーされる前にコンストラクターの対応する型に変換される。新しい型付き配列の長さは `typedArray` の引数の長さと同じになります。
+  - : `TypedArray` のサブクラスのインスタンスを指定して呼び出されると、`typedArray` が新しい型付き配列にコピーされます。[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)以外の `TypedArray` コンストラクターでは、`typedArray` 引数には[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)以外の型付き配列のうちのいずれか（{{jsxref("Int32Array")}} など）を指定します。同様に、[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の `TypedArray` コンストラクター（{{jsxref("BigInt64Array")}} または {{jsxref("BigUint64Array")}}）では、`typedArray` 引数には[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)型のいずれかしか指定できません。`typedArray` の各値は、新しい配列にコピーされる前にコンストラクターの対応する型に変換される。新しい型付き配列の長さは `typedArray` の引数の長さと同じになります。
 - `object`
   - : `TypedArray` インスタンスでないオブジェクトで呼び出された場合、[`TypedArray.from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/from) メソッドと同じ方法で、新しい型付き配列を生成します。
 - `length` {{optional_inline}}
   - : オブジェクト以外で呼び出された場合、引数は型付き配列の長さを指定する数値として扱われます。内部配列バッファーがメモリー内に作成され、サイズは `length` に [`BYTES_PER_ELEMENT`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) バイトを乗じたものとなり、0 で満たされます。すべての引数を除外すると、`0` を `length` として使用することと同じになります。
 - `buffer`, `byteOffset` {{optional_inline}}, `length` {{optional_inline}}
-  - : [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) インスタンスを指定し、さらに `byteOffset` および `length` 引数を付けて呼び出すと、指定したバッファーを参照する型付き配列ビューを新たに作成することができます。`byteOffset` と `length` の引数は、型付き配列ビューが参照するメモリー範囲を指定します。両方とも省略した場合、`buffer` の全体が参照されます。`length` のみが省略された場合、`buffer` の `byteOffset` 以降の部分が表示されます。`length` が省略された場合、型付き配列は[長さ追跡](#behavior_when_viewing_a_resizable_buffer)となります。
+  - : [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) インスタンスを指定し、さらに `byteOffset` および `length` 引数を付けて呼び出すと、指定したバッファーを参照する型付き配列ビューを新たに作成することができます。`byteOffset` （バイト単位）と `length` （要素数で、それぞれが [`BYTES_PER_ELEMENT`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) バイトを占めます）の引数は、型付き配列ビューが参照するメモリー範囲を指定します。両方とも省略した場合、`buffer` の全体が参照されます。`length` のみが省略された場合、`buffer` の `byteOffset` 以降の部分が表示されます。`length` が省略された場合、型付き配列は[長さ追跡](#behavior_when_viewing_a_resizable_buffer)となります。
 
 ### 例外
 
@@ -160,15 +177,13 @@ new TypedArray(buffer, byteOffset, length)
 
 これらのプロパティは `TypedArray` コンストラクターオブジェクトで定義されており、したがってすべての `TypedArray` サブクラスのコンストラクターで共有されます。
 
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/@@species", "TypedArray[@@species]")}}
   - : 派生オブジェクトを作成するために使用されるコンストラクター関数です。
 
 すべての `TypedArray` サブクラスには以下の静的プロパティもあります。
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
-  - : さまざまな `TypedArray` オブジェクトの要素のサイズを数値で返します。
-- {{jsxref("TypedArray.name")}}
-  - : コンストラクターの[名前](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/name)を文字列値で返します（例: `"Int8Array"`）。
+  - : さまざまな {{jsxref("TypedArray")}} インスタンスの要素のサイズを数値で返します。
 
 ## 静的メソッド
 
@@ -181,7 +196,7 @@ new TypedArray(buffer, byteOffset, length)
 
 ## インスタンスプロパティ
 
-これらのプロパティは `TypedArray` のプロトタイプオブジェクトで定義されており、すべての `TypedArray` のサブクラスインスタンスで共有されています。
+これらのプロパティは `TypedArray.prototype` オブジェクトで定義されており、すべての `TypedArray` のサブクラスインスタンスで共有されています。
 
 - {{jsxref("TypedArray.prototype.buffer")}}
   - : この型付き配列によって参照さている {{jsxref("ArrayBuffer")}} を返します。
@@ -194,12 +209,12 @@ new TypedArray(buffer, byteOffset, length)
 - {{jsxref("TypedArray.prototype.length")}}
   - : 型付き配列内に保持された要素の数を返します。
 - `TypedArray.prototype[@@toStringTag]`
-  - : [`TypedArray.prototype[@@toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値はゲッターで、型付き配列の[名前](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name)と同じ文字列を返します。このプロパティは `this` の値が型付き配列のサブクラスのいずれでもない場合、 `undefined` を返します。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。ただし、`TypedArray` は独自の [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) メソッドを持っているので、このプロパティは[`Object.prototype.toString.call()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)を `thisArg` に型付き配列を設定して呼び出差ない限り、このプロパティの使用されません。
+  - : [`TypedArray.prototype[@@toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値はゲッターで、型付き配列ののコンストラクター名と同じ文字列を返します。このプロパティは `this` の値が型付き配列のサブクラスのいずれでもない場合、 `undefined` を返します。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。ただし、`TypedArray` は独自の [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) メソッドを持っているので、このプロパティは[`Object.prototype.toString.call()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)を `thisArg` に型付き配列を設定して呼び出差ない限り、このプロパティの使用されません。
 
 すべての `TypedArray` のサブクラスには、以下のインスタンスプロパティもあります。
 
 - {{jsxref("TypedArray.prototype.BYTES_PER_ELEMENT")}}
-  - : 様々な `TypedArray` オブジェクトの要素の大きさを数値で返します。
+  - : 様々な {{jsxref("TypedArray")}} インスタンスの要素の大きさを数値で返します。
 
 ## インスタンスメソッド
 
@@ -224,7 +239,7 @@ new TypedArray(buffer, byteOffset, length)
 - {{jsxref("TypedArray.prototype.findLast()")}}
   - : 指定されたテスト関数を満たす配列の最後の要素の値を返し、適切な要素が得られなかった場合は `undefined` を返します。{{jsxref("Array.prototype.findLast()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.findLastIndex()")}}
-  - : 指定されたテスト関数を満たす配列の最後の要素の添字を返し、適切な要素が見つからなかった場合は `-1` を返します。{{jsxref("Array.prototype.findLastIndex()")}} も参照してください。
+  - : 指定されたテスト関数を満たす配列の最後の要素のインデックスを返し、適切な要素が見つからなかった場合は `-1` を返します。{{jsxref("Array.prototype.findLastIndex()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.forEach()")}}
   - : 配列内の各要素に対する関数を呼び出します。 {{jsxref("Array.prototype.forEach()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.includes()")}}
@@ -255,20 +270,26 @@ new TypedArray(buffer, byteOffset, length)
   - : 配列の要素をソートし、その結果を返します。 {{jsxref("Array.prototype.sort()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.subarray()")}}
   - : 与えられた開始位置と終了位置の要素インデックスから、新しい `TypedArray` を返します。
-- {{jsxref("TypedArray.prototype.values()")}}
-  - : 配列内のそれぞれの位置に対する値を含む新しい配列イテレーターオブジェクトを返します。 {{jsxref("Array.prototype.values()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.toLocaleString()")}}
   - : 配列と要素を表すローカライズされた文字列を返します。 {{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
+- {{jsxref("TypedArray.prototype.toReversed()")}}
+  - : 元の配列を変更せずに、要素を逆順に並べた新しい配列を返します。
+- {{jsxref("TypedArray.prototype.toSorted()")}}
+  - : 元の配列を変更せずに、要素を昇順に並べた新しい配列を返します。
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : 配列と要素を表す文字列を返します。 {{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.values()")}}
+  - : 配列内のそれぞれの位置に対する値を含む新しい配列イテレーターオブジェクトを返します。 {{jsxref("Array.prototype.values()")}} も参照してください。
+- {{jsxref("TypedArray.prototype.with()")}}
+  - : 指定された位置の要素を指定された値で置き換えた新しい配列を、元の配列に変更を加えることなく返します。
+- [`TypedArray.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
   - : 配列内でそれぞれの位置に対する値を含む新しい配列イテレーターオブジェクトを返します。
 
 ## 例
 
 ### プロパティへのアクセス
 
-配列内の要素は、標準の配列の添字構文 (すなわち、かぎ括弧を使用する表記) を使用して参照することができます。しかし、型付き配列で添字付きプロパティで取得または設定するときは、範囲外の添字でもプロパティのプロトタイプチェーンを探索しません。添字付きプロパティは {{jsxref("ArrayBuffer")}} を調べるのであり、オブジェクトのプロパティは探索しません。他のオブジェクト同様に、名前付きプロパティは使用できます。
+配列内の要素は、標準の配列の添字構文 (すなわち、かぎ括弧を使用する表記) を使用して参照することができます。しかし、型付き配列でインデックス付きプロパティで取得または設定するときは、範囲外のインデックスでもプロパティのプロトタイプチェーンを探索しません。インデックス付きプロパティは {{jsxref("ArrayBuffer")}} を調べるのであり、オブジェクトのプロパティは探索しません。他のオブジェクト同様に、名前付きプロパティは使用できます。
 
 ```js
 // 標準的な配列構文を使用して設定および取得
@@ -276,7 +297,7 @@ const int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
 
-// プロトタイプで添字付き配列を使用しても探索しない (Fx 25)
+// プロトタイプでインデックス付き配列を使用しても探索しない (Fx 25)
 Int8Array.prototype[20] = "foo";
 new Int8Array(32)[20]; // 0
 // even when out of bound
@@ -338,7 +359,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## 関連情報
 
 - [型付き配列のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [TextDecoder](/ja/docs/Web/API/TextDecoder) — 数値データから文字列をデコードするヘルパー
+- {{domxref("TextDecoder")}}

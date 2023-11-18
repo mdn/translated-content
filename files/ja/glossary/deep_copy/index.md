@@ -9,7 +9,7 @@ slug: Glossary/Deep_copy
 
 結果として、コピー元かコピー先のどちらかを変更しても、そのほかのオブジェクトにも変更を及ぼしていないことを保証できます。すなわち、コピー元かコピー先に意図せずに予期しない変更が加えられるこはありません。
 
-この振る舞いは[シャローコピー](/ja/docs/Glossary/Shallow_copy)とは対照的で、コピー元かコピー先のどちらかを変更すると他のオブジェクトも変更される可能性があります。（なぜならば、それら2つのオブジェクトは参照を共有しているためです）
+この振る舞いは[シャローコピー](/ja/docs/Glossary/Shallow_copy)とは対照的です。シャローコピーでは、コピー元かコピー先のどちらかを変更すると他のオブジェクトも変更される可能性があります。（なぜならば、それら2つのオブジェクトは参照を共有しているためです）
 
 JavaScript では、オブジェクトを操作する標準の組み込み構文や関数（[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Object.assign()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/assign), [`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create)）はディープコピーを作成しません。（代わりにシャローコピーで作成されます）。
 
