@@ -17239,10 +17239,6 @@
     "modified": "2020-10-15T21:36:43.124Z",
     "contributors": ["fscholz", "AlexAlex"]
   },
-  "orphaned/Web/API/NavigatorID/platform": {
-    "modified": "2020-10-15T21:36:42.389Z",
-    "contributors": ["mqqza", "AlexAlex"]
-  },
   "orphaned/Web/API/NavigatorID/product": {
     "modified": "2019-03-23T22:54:26.372Z",
     "contributors": ["AlexAlex"]
