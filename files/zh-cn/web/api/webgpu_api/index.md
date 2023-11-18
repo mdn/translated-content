@@ -13,7 +13,7 @@ WebGPU 是 {{domxref("WebGL_API", "WebGL", "", 1)}} 的继任者，为现代 GPU
 
 很公平地说，{{domxref("WebGL_API", "WebGL", "", 1)}} 在 2011 年左右首次出现后，在图形功能方面彻底改变了 web。WebGL 是 [OpenGL ES 2.0](https://registry.khronos.org/OpenGL-Refpages/es2.0/) 图形库的 JavaScript 端口，允许 web 页面直接将渲染计算传递给设备的 GPU，这会以非常高的速度处理，并在 {{htmlelement("canvas")}} 内渲染结果。
 
-WebGL 和用于编写 WebGL 着色器代码的 [GLSL](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>) 语言十分负责，因此创建了几个 WebGL 库，以便更轻松地编写 WebGL 应用程序：流行的示例包括 [Three.js](https://threejs.org/)、[Babylon.js](https://www.babylonjs.com/) 以及 [PlayCanvas](https://playcanvas.com/)。开发者可以使用这些工具去构建身临其境的基于 web 3D 的游戏、音乐视频、培训和建模工具、VR 和 AR 体验等。
+WebGL 和用于编写 WebGL 着色器代码的 [GLSL](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>) 语言十分复杂，因此创建了几个 WebGL 库，以便更轻松地编写 WebGL 应用程序：流行的示例包括 [Three.js](https://threejs.org/)、[Babylon.js](https://www.babylonjs.com/) 以及 [PlayCanvas](https://playcanvas.com/)。开发者可以使用这些工具去构建身临其境的基于 web 3D 的游戏、音乐视频、培训和建模工具、VR 和 AR 体验等。
 
 然而，WebGL 有一些需要解决的基本问题：
 

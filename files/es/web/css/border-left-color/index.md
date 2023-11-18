@@ -11,7 +11,7 @@ slug: Web/CSS/border-left-color
 - Se aplica a : todos los elementos
 - {{ Xref_cssinherited() }}: no
 - Porcentajes: N/A
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}: cuando son tomados de la propiedad 'color',los valores computarizados de 'color'; de otra manera como sean especificados.
 
 ### Sintaxis
