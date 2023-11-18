@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.getModifierState()
+title: "MouseEvent: getModifierState() メソッド"
+short-title: getModifierState()
 slug: Web/API/MouseEvent/getModifierState
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
@@ -21,7 +22,7 @@ getModifierState(key)
 
 - `key`
   - : 修飾キーの値です。
-    値は修飾キーまたは `"Accel"` {{deprecated_inline}} を表す {{domxref("KeyboardEvent.key")}} 値のいずれかである必要があります。
+    値は修飾キーを表す {{domxref("KeyboardEvent.key")}} 値のいずれか、または `"Accel"` {{deprecated_inline}} である必要があります。
     これは大文字と小文字を区別します。
 
 ### 返値
