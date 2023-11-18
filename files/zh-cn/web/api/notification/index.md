@@ -28,7 +28,7 @@ slug: Web/API/Notification
     - `granted`——用户接受显示通知。
     - `default`——用户选择是未知的，因此浏览器的行为类似于值是 denied。
 
-- {{domxref("Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.maxActions_static")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 设备和用户代理支持的最大的操作数量。
 
 ## 实例属性
