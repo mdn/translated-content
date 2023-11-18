@@ -17239,10 +17239,6 @@
     "modified": "2020-10-15T21:36:43.124Z",
     "contributors": ["fscholz", "AlexAlex"]
   },
-  "orphaned/Web/API/NavigatorID/appName": {
-    "modified": "2019-03-23T22:54:41.758Z",
-    "contributors": ["AlexAlex"]
-  },
   "orphaned/Web/API/NavigatorID/appVersion": {
     "modified": "2019-03-23T22:54:32.102Z",
     "contributors": ["FordSoft", "AlexAlex"]
