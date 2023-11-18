@@ -17235,14 +17235,6 @@
     "modified": "2019-03-23T22:18:51.568Z",
     "contributors": ["sosnovskyas"]
   },
-  "orphaned/Web/API/NavigatorID": {
-    "modified": "2020-10-15T21:36:43.124Z",
-    "contributors": ["fscholz", "AlexAlex"]
-  },
-  "orphaned/Web/API/NavigatorID/userAgent": {
-    "modified": "2019-05-31T01:04:23.816Z",
-    "contributors": ["Grawl", "patsuckow", "AlexAlex"]
-  },
   "orphaned/Web/API/NavigatorLanguage": {
     "modified": "2019-03-23T22:54:36.204Z",
     "contributors": ["AlexAlex"]
