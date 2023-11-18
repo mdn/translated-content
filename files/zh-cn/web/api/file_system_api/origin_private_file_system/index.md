@@ -43,19 +43,25 @@ OPFS 提供了页面所属源私有的、对用户不可见的、底层的逐字
 
 ```js
 // 创建层级结构的文件和文件夹
-const fileHandle = await opfsRoot
-    .getFileHandle('my first file', {create: true});
-const directoryHandle = await opfsRoot
-    .getDirectoryHandle('my first folder', {create: true});
-const nestedFileHandle = await directoryHandle
-    .getFileHandle('my first nested file', {create: true});
-const nestedDirectoryHandle = await directoryHandle
-    .getDirectoryHandle('my first nested folder', {create: true});
+const fileHandle = await opfsRoot.getFileHandle("my first file", {
+  create: true,
+});
+const directoryHandle = await opfsRoot.getDirectoryHandle("my first folder", {
+  create: true,
+});
+const nestedFileHandle = await directoryHandle.getFileHandle(
+  "my first nested file",
+  { create: true },
+);
+const nestedDirectoryHandle = await directoryHandle.getDirectoryHandle(
+  "my first nested folder",
+  { create: true },
+);
 
 // 通过文件名和文件夹名访问已有的文件和文件夹
-const existingFileHandle = await opfsRoot.getFileHandle('my first file');
-const existingDirectoryHandle = await opfsRoot
-    .getDirectoryHandle('my first folder');
+const existingFileHandle = await opfsRoot.getFileHandle("my first file");
+const existingDirectoryHandle =
+  await opfsRoot.getDirectoryHandle("my first folder");
 ```
 
 ### 读取文件
