@@ -16871,10 +16871,6 @@
       "tselishev-semen"
     ]
   },
-  "conflicting/Web/Manifest": {
-    "modified": "2020-10-15T22:28:08.586Z",
-    "contributors": ["almaceleste", "chrisdavidmills"]
-  },
   "conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c": {
     "modified": "2020-10-15T22:28:09.577Z",
     "contributors": ["almaceleste", "chrisdavidmills"]
