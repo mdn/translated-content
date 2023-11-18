@@ -37,12 +37,12 @@ OPFS 提供了页面所属源私有的、对用户不可见的、底层的逐字
 
 ## 在主线程中操作 OPFS
 
-在主线程中访问 OPFS 时，你要使用基于 {{jsxref("Promise")}} 的异步 API。 You can access file ({{domxref("FileSystemFileHandle")}}) and directory ({{domxref("FileSystemDirectoryHandle")}}) handles by calling {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} and {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} respectively on the {{domxref("FileSystemDirectoryHandle")}} object representing the OPFS root (and child directories, as they are created).
+在主线程中访问 OPFS 时，你要使用基于 {{jsxref("Promise")}} 的异步 API。你可以调用代表 OPFS 根目录（以及其中被创建的子目录）的 {{domxref("FileSystemDirectoryHandle")}} 对象上的 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 和 {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} 方法来分别访问文件（{{domxref("FileSystemFileHandle")}}）和目录（{{domxref("FileSystemDirectoryHandle")}}）。
 
 > **备注：** 在上述方法中传入 `{ create: true }` 会在文件或文件夹不存在时创建相应的文件或文件夹。
 
 ```js
-// Create a hierarchy of files and folders
+// 创建层级结构的文件和文件夹
 const fileHandle = await opfsRoot
     .getFileHandle('my first file', {create: true});
 const directoryHandle = await opfsRoot
@@ -52,7 +52,7 @@ const nestedFileHandle = await directoryHandle
 const nestedDirectoryHandle = await directoryHandle
     .getDirectoryHandle('my first nested folder', {create: true});
 
-// Access existing files and folders via their names
+// 通过文件名和文件夹名访问已有的文件和文件夹
 const existingFileHandle = await opfsRoot.getFileHandle('my first file');
 const existingDirectoryHandle = await opfsRoot
     .getDirectoryHandle('my first folder');
@@ -60,32 +60,32 @@ const existingDirectoryHandle = await opfsRoot
 
 ### 读取文件
 
-1. Make a {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} call to return a {{domxref("FileSystemFileHandle")}} object.
-2. Call the {{domxref("FileSystemFileHandle.getFile()")}} object to return a {{domxref("File")}} object. This is a specialized type of {{domxref("Blob")}}, and as such can be manipulated just like any other `Blob`. For example, you could access the text content directly via {{domxref("Blob.text()")}}.
+1. 调用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 以返回一个 {{domxref("FileSystemFileHandle")}} 对象。
+2. 调用 {{domxref("FileSystemFileHandle.getFile()")}} 方法返回一个 {{domxref("File")}} 对象。这是一种特化的 {{domxref("Blob")}} 对象，所以可以像操作其他 `Blob` 对象那样去操作它。比如，你可以通过 {{domxref("Blob.text()")}} 直接访问其文本内容。
 
 ### 写入文件
 
-1. Make a {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} call to return a {{domxref("FileSystemFileHandle")}} object.
-2. Call {{domxref("FileSystemFileHandle.createWritable()")}} to return a {{domxref("FileSystemWritableFileStream")}} object, which is a specialized type of {{domxref("WritableStream")}}.
-3. Write contents to it using a {{domxref("FileSystemWritableFilestream.write()")}} call.
-4. Close the stream using {{domxref("WritableStream.close()")}}.
+1. 调用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 以返回一个 {{domxref("FileSystemFileHandle")}} 对象。
+2. 调用 {{domxref("FileSystemFileHandle.createWritable()")}} 方法返回一个 {{domxref("FileSystemWritableFileStream")}} 对象，这是一种特化的 {{domxref("WritableStream")}} 对象。
+3. 调用 {{domxref("FileSystemWritableFilestream.write()")}} 来向其写入内容。
+4. 使用 {{domxref("WritableStream.close()")}} 关闭流。
 
 ### 删除文件或目录
 
-You can call {{domxref("FileSystemDirectoryHandle.removeEntry()")}} on the parent directory, passing it the name of the item you want to remove:
+你可以在父目录上调用 {{domxref("FileSystemDirectoryHandle.removeEntry()")}}，向它传入你想要删除的项的名称：
 
 ```js
 directoryHandle.removeEntry("my first nested file");
 ```
 
-You can also call {{domxref("FileSystemHandle.remove()")}} on the {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} representing the item you want to remove. To delete a folder including all subfolders, pass the `{ recursive: true }` option.
+你也可以在代表你想要删除的项目的 {{domxref("FileSystemFileHandle")}} 或 {{domxref("FileSystemDirectoryHandle")}} 上调用 {{domxref("FileSystemHandle.remove()")}} 来进行删除。要删除一个文件夹和它所有的子文件夹，需要传递 `{ recursive: true }` 选项。
 
 ```js
 await fileHandle.remove();
 await directoryHandle.remove({ recursive: true });
 ```
 
-The following provides a quick way to clear the entire OPFS:
+下面提供一个快捷的方法清空整个 OPFS：
 
 ```js
 await (await navigator.storage.getDirectory()).remove({ recursive: true });
@@ -93,9 +93,9 @@ await (await navigator.storage.getDirectory()).remove({ recursive: true });
 
 ### 列出文件夹中的内容
 
-{{domxref("FileSystemDirectoryHandle")}} is an [asynchronous iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols). As such, you can iterate over it with a [`for await…of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop and standard methods such as [`entries()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), [`values()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), and [`keys()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries).
+{{domxref("FileSystemDirectoryHandle")}} 是一个[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。所以，你可以用 [`for await…of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和诸如 [`entries()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries)、[`values()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 和 [`keys()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 这样的标准方法对其进行迭代。
 
-For example:
+例如：
 
 ```js
 for await (let [name, handle] of directoryHandle) {
@@ -110,30 +110,30 @@ for await (let name of directoryHandle.keys()) {
 
 ## 在 web worker 中操作 OPFS
 
-Web Workers don't block the main thread, which means you can use the synchronous file access APIs in this context. Synchronous APIs are faster as they avoid having to deal with promises.
+Web Worker 不会阻塞主线程，这意味着你可以在其上下文中使用同步文件访问 API。同步的 API 因其不需要处理 promise，所以更快。
 
-You can synchronously access a file by calling {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} on a regular {{domxref("FileSystemFileHandle")}}:
+你可以通过在常规的 {{domxref("FileSystemFileHandle")}} 上调用 {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} 来同步地处理文件：
 
-> **Note:** Despite having "Sync" in its name, the `createSyncAccessHandle()` method itself is asynchronous.
+> **备注：** 虽然 `createSyncAccessHandle()` 的名称带有“Sync（同步）”字眼，但是这个方法本身是异步的。
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
-const fileHandle = await opfsRoot.getFileHandle("my highspeed file.txt", {
+const fileHandle = await opfsRoot.getFileHandle("高速文件.txt", {
   create: true,
 });
 const syncAccessHandle = await fileHandle.createSyncAccessHandle();
 ```
 
-There are a number of _synchronous_ methods available on the returned {{domxref("FileSystemSyncAccessHandle")}}:
+返回的 {{domxref("FileSystemSyncAccessHandle")}} 上有几个*同步的*方法可用：
 
-- {{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}}: Returns the size of the file in bytes.
-- {{domxref("FileSystemSyncAccessHandle.write", "write()")}}: Writes the content of a buffer into the file, optionally at a given offset, and returns the number of written bytes. Checking the returned number of written bytes allows callers to detect and handle errors and partial writes.
-- {{domxref("FileSystemSyncAccessHandle.read", "read()")}}: Reads the contents of the file into a buffer, optionally at a given offset.
-- {{domxref("FileSystemSyncAccessHandle.truncate", "truncate()")}}: Resizes the file to the given size.
-- {{domxref("FileSystemSyncAccessHandle.flush", "flush()")}}: Ensures that the file contents contain all the modifications done through `write()`.
-- {{domxref("FileSystemSyncAccessHandle.close", "close()")}}: Closes the access handle.
+- {{domxref("FileSystemSyncAccessHandle.getSize", "getSize()")}}：返回文件的字节大小。
+- {{domxref("FileSystemSyncAccessHandle.write", "write()")}}：将一个缓冲区的内容写入到文件中，可选择在给定的偏移处开始写入。它会返回写入的字节数。检查返回的写入字节数可以让调用方检测并处理错误和不完整的写入。
+- {{domxref("FileSystemSyncAccessHandle.read", "read()")}}：读取文件的内容到一个缓冲区中，可选择在给定的偏移处开始读取。
+- {{domxref("FileSystemSyncAccessHandle.truncate", "truncate()")}}：将文件调整至给定的大小。
+- {{domxref("FileSystemSyncAccessHandle.flush", "flush()")}}：确保文件的内容包含所有通过 `write()` 完成的修改。
+- {{domxref("FileSystemSyncAccessHandle.close", "close()")}}：关闭访问句柄。
 
-Here is an example that uses all the methods mentioned above:
+这里是一个使用了上述所有方法的示例：
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
@@ -143,43 +143,42 @@ const accessHandle = await fileHandle.createSyncAccessHandle();
 const textEncoder = new TextEncoder();
 const textDecoder = new TextDecoder();
 
-// Initialize this variable for the size of the file.
+// 将这个变量初始化为文件的大小。
 let size;
-// The current size of the file, initially `0`.
+// 文件当前的大小，最开始是 `0`。
 size = accessHandle.getSize();
-// Encode content to write to the file.
+// 编码要写入文件的内容。
 const content = textEncoder.encode("Some text");
-// Write the content at the beginning of the file.
+// 在文件的开头写入内容。
 accessHandle.write(content, { at: size });
-// Flush the changes.
+// 强制刷入更改。
 accessHandle.flush();
-// The current size of the file, now `9` (the length of "Some text").
+// 文件当前的大小，现在是 `9`（"Some text" 的长度）。
 size = accessHandle.getSize();
 
-// Encode more content to write to the file.
+// 编码更多要写入文件的内容。
 const moreContent = textEncoder.encode("More content");
-// Write the content at the end of the file.
+// 在文件的末尾写入内容。
 accessHandle.write(moreContent, { at: size });
-// Flush the changes.
+// 强制刷入更改。
 accessHandle.flush();
-// The current size of the file, now `21` (the length of
-// "Some textMore content").
+// 文件当前的大小，现在是 `21`（"Some textMore content" 的长度）。
 size = accessHandle.getSize();
 
-// Prepare a data view of the length of the file.
+// 准备一个长度与文件相同的数据视图。
 const dataView = new DataView(new ArrayBuffer(size));
 
-// Read the entire file into the data view.
+// 将整个文件读取到数据视图。
 accessHandle.read(dataView);
-// Logs `"Some textMore content"`.
+// 打印 `"Some textMore content"`。
 console.log(textDecoder.decode(dataView));
 
-// Read starting at offset 9 into the data view.
+// 在数据视图中的偏移位置 9 处开始读取。
 accessHandle.read(dataView, { at: 9 });
-// Logs `"More content"`.
+// 打印 `"More content"`。
 console.log(textDecoder.decode(dataView));
 
-// Truncate the file after 4 bytes.
+// 裁去文件头 4 个字节之后的内容。
 accessHandle.truncate(4);
 ```
 
