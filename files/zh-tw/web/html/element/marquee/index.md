@@ -70,7 +70,7 @@ HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"> This text will bounce </marquee>
+  <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
 ```
 
