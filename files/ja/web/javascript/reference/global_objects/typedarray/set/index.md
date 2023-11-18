@@ -2,12 +2,12 @@
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`set()`** メソッドは、複数の値を指定した配列から入力値を読み込み、型付き配列に格納します。
+**`set()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、複数の値を指定した配列から入力値を読み込み、型付き配列に格納します。
 
 {{EmbedInteractiveExample("pages/js/typedarray-set.html")}}
 
@@ -32,12 +32,12 @@ set(typedarray, targetOffset)
 
 ### 返値
 
-{{jsxref("undefined")}} です。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
 - {{jsxref("RangeError")}}
-  - : 2 つの条件のいずれかが満たされた場合に発生します。
+  - : 以下の条件のいずれかで発生します。
     - `targetOffset` が大きすぎるか、`array` または `typedarray` が大きすぎるために、要素が配列の末尾を越えて格納されることになる。
     - `targetOffset` が負の数である。
 
@@ -65,6 +65,6 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 ## 関連情報
 
 - [`TypedArray.prototype.set` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
