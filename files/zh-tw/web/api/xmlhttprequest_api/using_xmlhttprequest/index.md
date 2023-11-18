@@ -360,8 +360,8 @@ function loadEnd(e) {
             ? this.contentType === "multipart\/form-data"
               ? 3
               : this.contentType === "text\/plain"
-              ? 2
-              : 1
+                ? 2
+                : 1
             : 0;
           this.receiver = oTarget.action;
           this.status = 0;

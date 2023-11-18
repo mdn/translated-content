@@ -54,8 +54,8 @@ const secondCheck = false;
 const access = firstCheck
   ? "Доступ запрещён"
   : secondCheck
-  ? "Доступ запрещён"
-  : "Доступ разрешён";
+    ? "Доступ запрещён"
+    : "Доступ разрешён";
 
 console.log(access); // выводит в консоль "Доступ разрешён"
 ```
