@@ -17239,10 +17239,6 @@
     "modified": "2020-10-15T21:36:43.124Z",
     "contributors": ["fscholz", "AlexAlex"]
   },
-  "orphaned/Web/API/NavigatorID/taintEnabled": {
-    "modified": "2020-10-15T21:36:42.862Z",
-    "contributors": ["fscholz", "AlexAlex"]
-  },
   "orphaned/Web/API/NavigatorID/userAgent": {
     "modified": "2019-05-31T01:04:23.816Z",
     "contributors": ["Grawl", "patsuckow", "AlexAlex"]
