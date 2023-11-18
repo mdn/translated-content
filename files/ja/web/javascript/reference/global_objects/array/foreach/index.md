@@ -2,7 +2,7 @@
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
-  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
@@ -13,116 +13,70 @@ l10n:
 
 ## 構文
 
-```js
-// アロー関数
-forEach((element) => {
-  /* … */
-});
-forEach((element, index) => {
-  /* … */
-});
-forEach((element, index, array) => {
-  /* … */
-});
-
-// コールバック関数
-forEach(callbackFn);
-forEach(callbackFn, thisArg);
-
-// インラインコールバック関数
-forEach(function (element) {
-  /* … */
-});
-forEach(function (element, index) {
-  /* … */
-});
-forEach(function (element, index, array) {
-  /* … */
-});
-forEach(function (element, index, array) {
-  /* … */
-}, thisArg);
+```js-nolint
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### 引数
 
 - `callbackFn`
-
-  - : 各要素に対して実行されるコールバック関数です。
-
-    この関数は、以下の引数と共に呼び出されます。
-
+  - : 配列のそれぞれの要素に対して実行する関数。返値は破棄されます。この関数は以下の引数で呼び出されます。
     - `element`
-      - : 現在処理されている配列の要素です。
+      - : 現在処理中の配列の要素です。
     - `index`
-      - : 配列内の `element` の添字です。
+      - : 現在処理中の配列の要素のインデックスです。
     - `array`
       - : `forEach()` が呼び出されている配列です。
-
 - `thisArg` {{optional_inline}}
-  - : `callbackFn` 内で `this` として使用する値です。
+  - : `callbackFn` を実行するときに `this` として使用する値です。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
-`undefined` です。
+なし ({{jsxref("undefined")}})。
 
 ## 解説
 
-`forEach()` は、与えられた関数 `callbackFn` を配列に含まれる各要素に対して一度ずつ、昇順で呼び出します。インデックスプロパティが削除されていたり、初期化されていなかったりした場合は呼び出されません。（不連続な配列については、[下記の例を参照](#初期化されていない値については何もしない（不連続な配列）)。）
+`forEach()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された関数 `callbackFn` を配列に含まれる各要素に対して一度ずつ、昇順で呼び出します。 {{jsxref("Array/map", "map()")}} と異なり、 `forEach()` は常に {{jsxref("undefined")}} を返し、連鎖させることはできません。典型的な使用する用途は、チェーンの終わりで副次効果を実行することです。
 
-`callbackFn` は次の 3 つの引数で呼び出されます。
+`callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で空のスロットに対しては呼び出されません。
 
-1. 要素の値
-2. 要素のインデックス
-3. 走査されている配列
+`forEach()` メソッドは呼び出し元の配列を変更しませんが、 `callbackFn` に指定された関数は変更することがあります。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
 
-`thisArg` 引数が `forEach()` に与えられると、それがコールバックの `this` 値になります。
-最終的に `callbackFn` から見える `thisArg` の値は、[関数が見る `this` を決める通常のルール](/ja/docs/Web/JavaScript/Reference/Operators/this) に従って決定されます。
-
-`forEach()` によって処理される配列要素の範囲は、`callbackFn` が最初に呼び出される前に設定されます。訪問済みの添字、または範囲を外れた添字に割り当てられている要素については `callbackFn` が実行されません。既存の配列要素が変更または削除された場合、`callbackFn` に渡される値は `forEach()` がそれらを参照した時点での値になります。削除された配列要素を参照することはありません。既に参照された配列要素が反復処理の間に（例えば {{jsxref("Array.prototype.shift()", "shift()")}} を使用して）削除された場合、後の要素は飛ばされます。([下記の例を参照してください](#反復処理中の配列の変更)。)
+- `callbackFn` は `forEach()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
+- 既に訪問した位置を変更しても、 `callbackFn` が再度呼び出されることはありません。
+- まだ訪問していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は `undefined` であるかのように処理されます。
 
 > **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
-`forEach()` は配列の各要素に対して `callbackFn` 関数を一度ずつ実行します。{{jsxref("Array.prototype.map()", "map()")}} や {{jsxref("Array.prototype.reduce()", "reduce()")}} と異なり、返値は常に {{jsxref("undefined")}} であり、チェーンできません。チェーンの最後に副作用を生じさせるのが典型的な使用法です。
+`forEach()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
-`forEach()` は呼び出された配列を変化させません。(ただし `callbackFn` が変化させる可能性があります)
+例外を発生する以外の方法で、 `forEach()` ループを止めたり脱出したりする方法はありません。そのような動作を行う場合、 `forEach()` メソッドは適切な方法ではありません。
 
-> **メモ:** 例外を発生する以外の方法で、`forEach()` ループを止めることはできません。ループ中に中断する必要がある場合、`forEach()` メソッドは適切な方法ではありません。
->
-> 早期終了を行うには下記のような手段が適しています。
->
-> - 単純な [for](/ja/docs/Web/JavaScript/Reference/Statements/for) ループ
-> - [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
->   / [for...in](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループ
-> - {{jsxref("Array.prototype.every()")}}
-> - {{jsxref("Array.prototype.some()")}}
-> - {{jsxref("Array.prototype.find()")}}
-> - {{jsxref("Array.prototype.findIndex()")}}
->
-> 他の Array のメソッドである {{jsxref("Array.prototype.every()", "every()")}}, {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()", "find()")}}, {{jsxref("Array.prototype.findIndex()", "findIndex()")}} は、配列の要素を検査する際、truthy の値を返すことで以降の繰り返しが必要であるかどうかを決めます。
+早期終了は [`for`](/ja/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of), [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) のようなループ文で行うことができます。また、{{jsxref("Array/every", "every()")}}, {{jsxref("Array/some", "some()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}} のような配列メソッドも、それ以上の反復処理が不要な場合は、直ちに反復処理を停止します。
 
-> **メモ:** forEach は同期関数を期待します。
->
-> `forEach` はプロミスを待ちません。`forEach` のコールバックとしてプロミス (または非同期関数) を使用する場合は、その意味合いを理解しておくようにしてください。
->
-> ```js
-> const ratings = [5, 4, 5];
-> let sum = 0;
->
-> const sumFunction = async (a, b) => a + b;
->
-> ratings.forEach(async (rating) => {
->   sum = await sumFunction(sum, rating);
-> });
->
-> console.log(sum);
-> // 本来期待される出力: 14
-> // 実際の出力: 0
-> ```
+`forEach()` は同期関数を期待します。プロミスを待ちません。`forEach` のコールバックとしてプロミス（または非同期関数）を使用する場合は、その意味合いを理解しておくようにしてください。
+
+```js
+const ratings = [5, 4, 5];
+let sum = 0;
+
+const sumFunction = async (a, b) => a + b;
+
+ratings.forEach(async (rating) => {
+  sum = await sumFunction(sum, rating);
+});
+
+console.log(sum);
+// 本来期待される出力: 14
+// 実際の出力: 0
+```
+
+一連の非同期処理を順次または並列に実行するには、[プロミスの合成](/ja/docs/Web/JavaScript/Guide/Using_promises#合成)を参照してください。
 
 ## 例
 
-### 初期化されていない値については何もしない（不連続な配列）
+### 不連続な配列に対する forEach() の使用
 
 ```js-nolint
 const arraySparse = [1, 3, /* 空 */, 7];
@@ -215,7 +169,8 @@ console.log(obj.sum); // 16
 
 次のコードは与えられたオブジェクトのコピーを生成します。
 
-オブジェクトのコピーを作成するには様々な方法があります。以下のものは一つの方法で、`Array.prototype.forEach()` が `Object.*` ユーティリティ関数を使用して、どのように動作するかを説明しています。
+オブジェクトのコピーを作成するには様々な方法があります。
+以下のものは一つの方法で、`Array.prototype.forEach()` が `Object.*` ユーティリティ関数を使用して、どのように動作するかを説明しています。
 
 ```js
 const copy = (obj) => {
@@ -253,9 +208,10 @@ words.forEach((word) => {
 console.log(words); // ['two', 'three', 'four']
 ```
 
-### 配列の平板化
+### 配列の平坦化
 
-次の例は学習目的だけのものです。組み込みメソッドを使用して配列を平板化したい場合は、{{jsxref("Array.prototype.flat()")}} を使用することができます。
+次の例は学習目的だけのものです。
+組み込みメソッドを使用して配列を平坦化したい場合は、{{jsxref("Array.prototype.flat()")}} を使用することができます。
 
 ```js
 const flatten = (arr) => {
@@ -275,6 +231,24 @@ const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
 console.log(flatten(nested)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
+### 配列以外のオブジェクトに対する forEach() の呼び出し
+
+`forEach()` メソッドは `this` の `length` プロパティを読み込み、次にキーが `length` より小さい非負の整数である各プロパティにアクセスします。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 5, // length が 3 であるため forEach() からは無視される
+};
+Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
+// 2
+// 3
+// 4
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -286,11 +260,13 @@ console.log(flatten(nested)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ## 関連情報
 
 - [`Array.prototype.forEach` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.filter()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
 - {{jsxref("Set.prototype.forEach()")}}

@@ -98,8 +98,8 @@ if (!Array.prototype.copyWithin) {
           positiveT
             ? [target, stop - start, hold]
             : positiveS
-            ? [target, stop, hold]
-            : [target, start, hold],
+              ? [target, stop, hold]
+              : [target, start, hold],
         ),
         this.join(delimiter).split(delimiter).slice(zero, length)
       );

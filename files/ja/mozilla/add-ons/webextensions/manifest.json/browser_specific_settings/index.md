@@ -77,7 +77,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 使用可能なキーをすべて使用した例です。たいていの拡張機能では `strict_max_version` と `update_url` は省略するのに注意してください。
 
 ```json
-"applications": {
+"browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0",
