@@ -19,7 +19,7 @@ MathML 是用于在网页中编写数学公式的标记语言。本单元将为�
 
 在开始本单元之前，你应具备以下知识：
 
-1. 对使用计算机和被动使用网络（即查看内容）有基本熟悉。
+1. 对使用计算机和被动使用 Web（即查看内容）有基本熟悉。
 2. 已完成基本的工作环境设置，详见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，并了解如何创建和管理文件，详见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)。
 3. 熟悉 HTML 的基本知识，详见 [HTML 入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)。
 
@@ -35,8 +35,8 @@ MathML 是用于在网页中编写数学公式的标记语言。本单元将为�
   - : 现在你对 MathML 有了更好的了解，我们将介绍文本容器（变量、数字、运算符等），它们是 MathML 公式的构建模块。
 - [分数和根号](/zh-CN/docs/Learn/MathML/First_steps/Fractions_and_roots)
   - : 在文本容器的基础上，本文介绍了如何通过嵌套分数和根号来构建更复杂的 MathML 表达式。
-- [脚本](/zh-CN/docs/Learn/MathML/First_steps/Scripts)
-  - : 我们继续回顾基本数学符号，并重点介绍如何使用脚本构建 MathML 元素。
+- [附加符号](/zh-CN/docs/Learn/MathML/First_steps/Scripts)
+  - : 我们继续回顾基本数学符号，并重点介绍如何使用附加符号构建 MathML 元素。
 - [表格](/zh-CN/docs/Learn/MathML/First_steps/Tables)
   - : 在掌握所有基本数学符号后，我们需要考虑表格布局，它可用于矩阵式表达式和其他高级数学布局。
 

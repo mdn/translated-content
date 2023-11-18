@@ -336,8 +336,8 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
             ? this.contentType === "multipart\/form-data"
               ? 3
               : this.contentType === "text\/plain"
-              ? 2
-              : 1
+                ? 2
+                : 1
             : 0;
           this.receiver = target.action;
           this.status = 0;

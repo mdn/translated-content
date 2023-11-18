@@ -609,10 +609,6 @@
     "modified": "2020-11-29T12:51:47.015Z",
     "contributors": ["BehemothOz", "Antosik"]
   },
-  "Glossary/First_interactive": {
-    "modified": "2019-11-20T05:51:30.233Z",
-    "contributors": ["Antosik"]
-  },
   "Glossary/First_meaningful_paint": {
     "modified": "2019-11-19T16:13:59.472Z",
     "contributors": ["Antosik"]
@@ -5306,10 +5302,6 @@
     "modified": "2020-10-15T21:39:13.511Z",
     "contributors": ["YozhEzhi", "In4in", "antage"]
   },
-  "Web/API/FormData/Using_FormData_Objects": {
-    "modified": "2020-05-07T13:53:48.011Z",
-    "contributors": ["crystalbit", "Excent163", "egsk", "MariaEvstropova"]
-  },
   "Web/API/FormData/append": {
     "modified": "2019-03-23T22:41:37.934Z",
     "contributors": ["DenisLukyanov", "Bargamut", "sgrogov", "Zimson", "x1unix"]
@@ -7562,29 +7554,6 @@
       "kohei.yoshino"
     ]
   },
-  "Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data": {
-    "modified": "2020-11-20T18:11:14.497Z",
-    "contributors": ["rsvato", "b0rique", "bagau", "saga111a"]
-  },
-  "Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests": {
-    "modified": "2019-03-18T20:59:58.784Z",
-    "contributors": ["Antonbreakble"]
-  },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2020-08-29T22:53:18.449Z",
-    "contributors": [
-      "Saiffer",
-      "Longraf",
-      "carboncheg",
-      "higimo",
-      "vladlipski",
-      "forestbird",
-      "Leo240",
-      "iameugene",
-      "vittorio-tortugo",
-      "almakano"
-    ]
-  },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2020-01-20T13:55:36.892Z",
     "contributors": ["Don2Quixote", "fuggy", "lisapedia"]
@@ -7671,6 +7640,33 @@
     "modified": "2020-10-30T13:55:59.918Z",
     "contributors": ["Zakhse", "nakhodkiin", "Salasar"]
   },
+  "Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data": {
+    "modified": "2020-11-20T18:11:14.497Z",
+    "contributors": ["rsvato", "b0rique", "bagau", "saga111a"]
+  },
+  "Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests": {
+    "modified": "2019-03-18T20:59:58.784Z",
+    "contributors": ["Antonbreakble"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_FormData_Objects": {
+    "modified": "2020-05-07T13:53:48.011Z",
+    "contributors": ["crystalbit", "Excent163", "egsk", "MariaEvstropova"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2020-08-29T22:53:18.449Z",
+    "contributors": [
+      "Saiffer",
+      "Longraf",
+      "carboncheg",
+      "higimo",
+      "vladlipski",
+      "forestbird",
+      "Leo240",
+      "iameugene",
+      "vittorio-tortugo",
+      "almakano"
+    ]
+  },
   "Web/API/XMLSerializer": {
     "modified": "2019-03-23T22:17:05.888Z",
     "contributors": ["t1gor"]
@@ -7702,47 +7698,47 @@
       "fscholz"
     ]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2020-10-15T21:45:38.665Z",
     "contributors": ["almaceleste", "lazyexpert"]
   },
-  "Web/API/console/clear": {
+  "Web/API/console/clear_static": {
     "modified": "2020-10-15T21:49:40.634Z",
     "contributors": ["georgelviv", "YozhEzhi", "art-gur"]
   },
-  "Web/API/console/count": {
+  "Web/API/console/count_static": {
     "modified": "2019-03-23T22:08:48.787Z",
     "contributors": ["FlowerDeLuce"]
   },
-  "Web/API/console/countReset": {
+  "Web/API/console/countreset_static": {
     "modified": "2020-10-15T22:14:44.244Z",
     "contributors": ["damirJa"]
   },
-  "Web/API/console/debug": {
+  "Web/API/console/debug_static": {
     "modified": "2020-11-19T07:02:35.541Z",
     "contributors": ["m0nclous", "ekirpichyov"]
   },
-  "Web/API/console/dir": {
+  "Web/API/console/dir_static": {
     "modified": "2019-04-03T11:56:01.265Z",
     "contributors": ["Dzvonek", "Polina", "einomi", "NovikovViktor"]
   },
-  "Web/API/console/dirxml": {
+  "Web/API/console/dirxml_static": {
     "modified": "2020-10-15T22:04:45.997Z",
     "contributors": ["snegovik.dev", "MindWorm"]
   },
-  "Web/API/console/error": {
+  "Web/API/console/error_static": {
     "modified": "2019-03-23T22:10:04.839Z",
     "contributors": ["csepanda"]
   },
-  "Web/API/console/group": {
+  "Web/API/console/group_static": {
     "modified": "2019-03-23T22:03:18.640Z",
     "contributors": ["vilyus"]
   },
-  "Web/API/console/info": {
+  "Web/API/console/info_static": {
     "modified": "2019-03-23T22:27:55.127Z",
     "contributors": ["pk.prog", "nontrip"]
   },
-  "Web/API/console/log": {
+  "Web/API/console/log_static": {
     "modified": "2020-10-15T21:39:00.717Z",
     "contributors": [
       "aleshkanet",
@@ -7753,15 +7749,15 @@
       "Lukavyi"
     ]
   },
-  "Web/API/console/profile": {
+  "Web/API/console/profile_static": {
     "modified": "2020-10-15T21:54:55.312Z",
     "contributors": ["ekirpichyov", "RslnMtvv"]
   },
-  "Web/API/console/table": {
+  "Web/API/console/table_static": {
     "modified": "2019-11-28T12:52:39.225Z",
     "contributors": ["1cepeak", "xefimx"]
   },
-  "Web/API/console/time": {
+  "Web/API/console/time_static": {
     "modified": "2020-10-15T21:37:02.751Z",
     "contributors": [
       "Mialik-Kirill-Sergeevich",
@@ -7771,7 +7767,7 @@
       "terranisu"
     ]
   },
-  "Web/API/console/timeEnd": {
+  "Web/API/console/timeend_static": {
     "modified": "2020-10-15T21:29:08.226Z",
     "contributors": [
       "Arhidimon",
@@ -7783,19 +7779,19 @@
       "Troynov"
     ]
   },
-  "Web/API/console/timeLog": {
+  "Web/API/console/timelog_static": {
     "modified": "2020-10-15T22:12:51.490Z",
     "contributors": ["ekirpichyov", "evilandfox"]
   },
-  "Web/API/console/timeStamp": {
+  "Web/API/console/timestamp_static": {
     "modified": "2020-10-15T22:22:33.891Z",
     "contributors": ["ekirpichyov"]
   },
-  "Web/API/console/trace": {
+  "Web/API/console/trace_static": {
     "modified": "2020-10-15T21:56:15.688Z",
     "contributors": ["Solant", "nikitaermishin"]
   },
-  "Web/API/console/warn": {
+  "Web/API/console/warn_static": {
     "modified": "2020-10-15T22:00:31.979Z",
     "contributors": ["ekirpichyov", "ArtemPolanskiy"]
   },
@@ -11896,7 +11892,7 @@
       "fscholz"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_class_fields": {
+  "Web/JavaScript/Reference/Classes/Private_properties": {
     "modified": "2020-10-15T22:33:38.348Z",
     "contributors": ["cliggen", "DarkExodusXX"]
   },
@@ -16070,6 +16066,10 @@
   "conflicting/Glossary/Chrome": {
     "modified": "2019-03-23T23:17:01.096Z",
     "contributors": ["Norville", "LunaticRL"]
+  },
+  "conflicting/Glossary/First_CPU_idle": {
+    "modified": "2019-11-20T05:51:30.233Z",
+    "contributors": ["Antosik"]
   },
   "conflicting/Learn/CSS": {
     "modified": "2019-09-11T09:43:50.277Z",
