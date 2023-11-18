@@ -13,7 +13,7 @@ slug: Web/CSS/border-bottom-style
 - Se aplica a: todos los elementos
 - {{ Cssxref("inheritance", "Valor heredado") }}: no
 - Porcentajes: N/A
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: como se especificó
 
 ### Sintaxis

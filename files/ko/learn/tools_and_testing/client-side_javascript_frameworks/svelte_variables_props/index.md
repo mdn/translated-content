@@ -389,8 +389,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
      filter === "active"
        ? todos.filter((t) => !t.completed)
        : filter === "completed"
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
    ```
 
    활성 필터(_all_, _active_ 또는 _completed_)를 제어하기 위해 `filter` 변수를 사용합니다. 이 값 중 하나를 필터 변수에 할당하기만 하면 필터가 활성화되고 할 일 목록이 업데이트됩니다. 이를 달성하는 방법을 살펴보겠습니다.
