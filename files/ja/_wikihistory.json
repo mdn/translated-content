@@ -766,10 +766,6 @@
     "modified": "2019-12-15T06:30:03.345Z",
     "contributors": ["Uemmra3", "EriIke"]
   },
-  "Glossary/First_interactive": {
-    "modified": "2020-08-05T12:42:22.221Z",
-    "contributors": ["eltociear"]
-  },
   "Glossary/First_meaningful_paint": {
     "modified": "2020-08-15T13:52:06.233Z",
     "contributors": ["eltociear"]
@@ -30209,6 +30205,10 @@
   "WebAssembly/existing_C_to_Wasm": {
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
+  },
+  "conflicting/Glossary/First_CPU_idle": {
+    "modified": "2020-08-05T12:42:22.221Z",
+    "contributors": ["eltociear"]
   },
   "conflicting/Glossary/Scroll_container": {
     "modified": "2019-03-18T20:53:07.981Z",

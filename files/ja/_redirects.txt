@@ -1336,6 +1336,7 @@
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Descriptor_(CSS)	/ja/docs/Glossary/CSS_Descriptor
 /ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element
+/ja/docs/Glossary/First_interactive	/ja/docs/conflicting/Glossary/First_CPU_idle
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
