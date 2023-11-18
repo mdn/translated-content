@@ -42,22 +42,13 @@ div {
 }
 ```
 
-### Notas
-
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-right)
-- [CSS 3](http://www.w3.org/Style/CSS/current-work#positioning)
+{{Specifications}}
 
-### Compatibilidad entre navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | ?              |
-| Firefox           | 1              |
-| Netscape          | ?              |
-| Opera             | ?              |
-| Safari            | ?              |
+{{Compat}}
 
 ### Ver también
 
