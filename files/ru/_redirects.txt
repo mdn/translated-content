@@ -90,7 +90,7 @@
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Glossary/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
-/ru/docs/Glossary/First_interactive	/ru/docs/conflicting/Glossary/First_CPU_idle
+/ru/docs/Glossary/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Glossary/Round_Trip_Time_(RTT)	/ru/docs/Glossary/Round_Trip_Time
 /ru/docs/Glossary/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Glossary/XHR_(XMLHttpRequest)	/ru/docs/Glossary/XMLHttpRequest
@@ -995,6 +995,7 @@
 /ru/docs/XHTML	/ru/docs/Glossary/XHTML
 /ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
+/ru/docs/conflicting/Glossary/First_CPU_idle	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/conflicting/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ru/docs/en	/en-US/
 /ru/docs/Заглавная_страница	/ru/docs/Web
@@ -1072,7 +1073,7 @@
 /ru/docs/Словарь/First_CPU_idle	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Словарь/First_contentful_paint	/ru/docs/Glossary/First_contentful_paint
 /ru/docs/Словарь/First_input_delay	/ru/docs/Glossary/First_input_delay
-/ru/docs/Словарь/First_interactive	/ru/docs/conflicting/Glossary/First_CPU_idle
+/ru/docs/Словарь/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Словарь/First_paint	/ru/docs/Glossary/First_paint
 /ru/docs/Словарь/Flex_Item	/ru/docs/Glossary/Flex_Item
 /ru/docs/Словарь/Flexbox	/ru/docs/Glossary/Flexbox
