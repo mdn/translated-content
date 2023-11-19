@@ -5,21 +5,21 @@ slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 
 {{MDNSidebar}}
 
-下面的指南涵盖了如何为 MDN Web Docs 编写 HTML 示例代码。
+下面的指南涵盖了如何为 MDN Web 文档编写 HTML 示例代码。
 
 ## HTML 代码示例常规指南
 
 ### 格式的选择
 
-有关正确的缩进、空格还有行长度的观点一直都有争议。对这些主题的讨论会分散我们在创建和维护内容方面的注意力。
+关于正确缩进、空格和行长度的意见一直存在争议。对这些主题的讨论会分散注意力，从而影响内容的创建和维护。
 
-在 MDN Web Docs 上，我们使用 [Prettier](https://prettier.io/) 作为代码格式化工具来保持代码风格的一致（以及避免讨论偏离主题）。你可以查阅我们的[配置文件](https://github.com/mdn/content/blob/main/.prettierrc.json)来了解当前的规则以及阅读 [Prettier 文档](https://prettier.io/docs/en/index.html)。
+在 MDN Web 文档中，我们使用 [Prettier](https://prettier.io/) 作为代码格式化工具，以保持代码风格的一致性（并避免偏离主题讨论）。你可以参考我们的[配置文件](https://github.com/mdn/content/blob/main/.prettierrc.json)来了解当前的规则，并阅读 [Prettier 的文档](https://prettier.io/docs/en/index.html)。
 
-Prettier 会格式化所有的代码并且保持风格的一致。但是，仍然有一些额外的规则需要你去遵守。
+Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需要遵循一些额外的规则。
 
 ## 完整的 HTML 文档
 
-> **备注：** 这个章节中的指南只适用于你需要展示一份完整的 HTML 文档的时候。一个片段通常就足以用于演示一种特性。在使用 [EmbedLiveSample 宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#传统运行实例)时，只需要包含 HTML 片段，片段会在显示的时候被自动插入到一个完整的 HTML 文档中。
+> **备注：** 这个小节中的指南只适用于你需要展示一份完整的 HTML 文档的时候。一个片段通常就足以用于演示一种特性。在使用 [EmbedLiveSample 宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#传统运行实例)时，只需要包含 HTML 片段，片段会在显示的时候被自动插入到一个完整的 HTML 文档中。
 
 ### Doctype
 
@@ -37,7 +37,7 @@ Prettier 会格式化所有的代码并且保持风格的一致。但是，仍�
 <html lang="zh-CN"></html>
 ```
 
-这对于无障碍功能和搜索引擎有益，有助于本土化内容以及提醒人们使用最佳实践。
+这对于无障碍功能和搜索引擎有益，有助于本地化内容以及提醒人们使用最佳实践。
 
 ### 文档字符集
 
@@ -47,11 +47,11 @@ Prettier 会格式化所有的代码并且保持风格的一致。但是，仍�
 <meta charset="utf-8" />
 ```
 
-除非你有特别好的理由，否则都使用 UTF-8，无论你在文档里使用什么语言，它都能很大程度地覆盖到所有需要的字符。
+除非你有特别好的理由，否则都应使用 UTF-8，无论你在文档中使用什么语言，它都能很大程度地覆盖到所有需要的字符。
 
 ### Viewport meta 标签
 
-最后，你应当永远记得在你的 HTML {{HTMLElement("head")}} 标签里添加 viewport meta 标签，好让你的代码示例有更好的机会在移动设备上运作。你至少应该在你的文档中包含以下内容，以后可以根据需要进行更改：
+最后，你应当永远记得在 HTML {{HTMLElement("head")}} 标签里添加 viewport meta 标签，好让你的代码示例更好地在移动设备上运作。你至少应该在文档中包含以下内容，以后可以根据需要进行更改：
 
 ```html example-good
 <meta name="viewport" content="width=device-width" />
@@ -98,7 +98,7 @@ Prettier 会格式化所有的代码并且保持风格的一致。但是，仍�
 ```
 
 ```html-nolint example-bad
-<P CLASS="WHOA-THERE">为什么这标记看着像是在呐喊？</P>
+<P CLASS="WHOA-THERE">为什么这标记看着像是在咆哮？</P>
 ```
 
 ## Class 和 ID 名称
@@ -106,11 +106,11 @@ Prettier 会格式化所有的代码并且保持风格的一致。但是，仍�
 使用语义化的 class/ID 名称，并且使用连字符分隔多个单词（{{Glossary("kebab_case", "短横线命名法")}}）。不要使用{{Glossary("camel_case", "骆驼式命名法")}}。例如：
 
 ```html example-good
-<p class="editorial-summary">随便乱写</p>
+<p class="editorial-summary">其他内容</p>
 ```
 
 ```html example-bad
-<p class="bigRedBox">随便乱写</p>
+<p class="bigRedBox">其他内容</p>
 ```
 
 ## 实体引用
@@ -131,8 +131,8 @@ Prettier 会格式化所有的代码并且保持风格的一致。但是，仍�
 
 ## HTML 元素
 
-在 MDN Web Docs 上书写 HTML 元素有一些规则。遵守这些规则可以对元素及其组件进行一致的描述，并且能确保正确链接到详细的文档。
+MDN Web 文档对书写 HTML 元素有一些规则。遵守这些规则可以对元素及其组件进行一致的描述，并且能确保正确链接到详细的文档。
 
-- **元素名称**：使用 [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏，可以创建一个指向对应元素的 MDN Web Docs 页面的链接。例如，书写 `\{{HTMLElement("title")}}` 会产生“{{HTMLElement("title")}}”。如果你不想创建链接，**将元素名称用尖括号括起来**并且使用“行内代码”样式（例：`<title>`）。
-- **属性名称**：使用“行内代码”样式将属性名称设为`代码字体`。另外，在对属性作用的解释中关联性地提及属性时或是在页面中第一次使用该属性，要将属性名称设为**`粗体`**。
-- **属性值**：使用“行内代码”样式将 `<code>` 样式应用于属性值，并且除非是出于代码示例的语法需要，否则不要在字符串值周围使用引号。例如：“当 `<input>` 元素的 `type` 属性被设为 `email` 或 `tel`……”。
+- **元素名称**：使用 [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏，可以创建一个指向对应元素的 MDN Web 文档页面的链接。例如，书写 `\{{HTMLElement("title")}}` 会产生“{{HTMLElement("title")}}”。如果你不想创建链接，**将元素名称用尖括号括起来**并且使用“行内代码”样式（例：`<title>`）。
+- **属性名称**：使用“行内代码”样式将属性名称设为“代码字体”。另外，在对属性作用的解释中关联性地提及属性时或是在页面中第一次使用该属性，要将属性名称设为“**粗体**”。
+- **属性值**：使用“行内代码”样式将 `<code>` 应用于属性值，并且除非是出于代码示例的语法需要，否则不要在字符串值周围使用引号。例如：“当 `<input>` 元素的 `type` 属性被设为 `email` 或 `tel`……”。
