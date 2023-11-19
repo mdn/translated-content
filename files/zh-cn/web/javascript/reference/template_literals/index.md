@@ -109,8 +109,8 @@ let classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-  ? " icon-expander"
-  : " icon-collapser";
+    ? " icon-expander"
+    : " icon-collapser";
 ```
 
 用模板字面量但不嵌套时，你可以这么做：
