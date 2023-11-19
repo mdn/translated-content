@@ -73,7 +73,7 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 <img src=images/logo.jpg alt=A circular globe icon class=no-border>
 ```
 
-省略引号还会引发问题。在上面的示例里，`alt` 属性会被理解为多个属性，因为没有引号来明确“A circular globe icon”是单个属性值。
+省略引号还会引发问题。在上面的示例里，`alt` 属性会被解释为多个属性，因为没有引号来明确“A circular globe icon”是单个属性值。
 
 ## 布尔属性
 
