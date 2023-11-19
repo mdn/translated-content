@@ -335,8 +335,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
             ? this.contentType === "multipart\/form-data"
               ? 3
               : this.contentType === "text\/plain"
-                ? 2
-                : 1
+              ? 2
+              : 1
             : 0;
           this.receiver = target.action;
           this.status = 0;
@@ -835,7 +835,7 @@ req.send(null);
 
 ## Воркеры
 
-Установка `overrideMimeType` не работает с {{domxref("Worker")}}. Это баг – {{bug(678057)}}. В разных браузерах поведение может отличаться.
+Установка `overrideMimeType` не работает с {{domxref("Worker")}}. Это баг – [Firefox bug 678057](https://bugzil.la/678057). В разных браузерах поведение может отличаться.
 
 ## Спецификации
 
