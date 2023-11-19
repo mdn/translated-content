@@ -40,13 +40,13 @@ In addition to the attributes commonly supported by all {{HTMLElement("input")}}
 | [`readonly`](#readonly)       | A Boolean attribute controlling whether or not the value is read-only                                   |
 | [`step`](#step)               | A stepping interval to use when using up and down arrows to adjust the value, as well as for validation |
 
-### {{htmlattrdef("max")}}
+### `max`
 
 The maximum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 
 This value must be greater than or equal to the value of the `min` attribute.
 
-### {{htmlattrdef("min")}}
+### `min`
 
 The minimum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
@@ -56,7 +56,7 @@ This value must be less than or equal to the value of the `max` attribute.
 
 {{page("/ru/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
 
-### {{htmlattrdef("step")}}
+### `step`
 
 Атрибут `step` – это число, которое определяет точность, с которой задаётся значение, или специальное значение `any`, описанное ниже. Только значения, кратные шагу ([`min`](#min), если задано, иначе [`value`](/ru/docs/Web/HTML/Element/input#value), или подходящее стандартное значение, если ни одно из двух не задано) будут корректными.
 
