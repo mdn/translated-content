@@ -339,7 +339,7 @@ Neste caso, o this da função interior não está definido, portanto ele retorn
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.this")}}
+{{Compat}}
 
 ## Veja também
 

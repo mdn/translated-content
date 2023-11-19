@@ -40,7 +40,7 @@ console.log(x.valueOf()); // retorna 'Olá, mundo'
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.valueOf")}}
+{{Compat}}
 
 ## Veja também
 

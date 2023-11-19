@@ -48,7 +48,7 @@ Embora os valores Unicode mais comuns possam ser representados com um número de
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.fromCharCode")}}
+{{Compat}}
 
 ## Veja também
 

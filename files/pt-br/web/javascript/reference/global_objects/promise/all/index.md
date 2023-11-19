@@ -208,7 +208,7 @@ Promise.all([
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.all")}}
+{{Compat}}
 
 ## Veja também
 

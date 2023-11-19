@@ -51,7 +51,7 @@ Nick Desaulnier の [bufferWhenNeeded デモ](https://github.com/nickdesaulniers
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.abort")}}
+{{Compat}}
 
 ## 関連情報
 

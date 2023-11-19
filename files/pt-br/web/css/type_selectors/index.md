@@ -48,4 +48,4 @@ span {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.type")}}
+{{Compat}}

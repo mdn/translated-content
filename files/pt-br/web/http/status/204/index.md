@@ -23,7 +23,7 @@ O caso de uso comum é retornar `204` como resultado de uma solicitação {{HTTP
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.204")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

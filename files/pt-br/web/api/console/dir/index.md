@@ -30,7 +30,7 @@ console.dir(object);
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.dir")}}
+{{Compat}}
 
 ## Ver também
 

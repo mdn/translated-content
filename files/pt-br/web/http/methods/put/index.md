@@ -84,7 +84,7 @@ Content-Location: /existing.html
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.PUT")}}
+{{Compat}}
 
 ## Veja também
 

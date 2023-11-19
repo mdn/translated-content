@@ -2368,10 +2368,6 @@
       "natevw"
     ]
   },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2019-03-23T23:25:28.545Z",
-    "contributors": ["jackblackevo", "teoli", "foxbrush"]
-  },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2020-04-01T05:25:46.906Z",
     "contributors": ["ginszme"]
@@ -2392,6 +2388,10 @@
     "modified": "2020-10-15T22:17:19.013Z",
     "contributors": ["willh"]
   },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2019-03-23T23:25:28.545Z",
+    "contributors": ["jackblackevo", "teoli", "foxbrush"]
+  },
   "Web/API/btoa": {
     "modified": "2020-10-15T22:35:15.820Z",
     "contributors": ["evo938evo938"]
@@ -2400,7 +2400,7 @@
     "modified": "2020-10-15T22:03:31.329Z",
     "contributors": ["Syihoy", "porfirion"]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2020-10-15T22:03:27.482Z",
     "contributors": ["lin826", "iigmir"]
   },

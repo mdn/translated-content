@@ -63,7 +63,7 @@ Apesar de formalmente correta, ela sofre de algumas problemas relacionadas à co
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.asinh")}}
+{{Compat}}
 
 ## Veja também
 

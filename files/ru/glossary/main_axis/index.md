@@ -3,6 +3,8 @@ title: Главная ось
 slug: Glossary/Main_Axis
 ---
 
+{{GlossarySidebar}}
+
 Главная ось в {{glossary("flexbox")}} определяется направлением, установленным в свойстве {{cssxref("flex-direction")}}. Это свойство может принимать одно из четырёх значений:
 
 - `row`

@@ -43,7 +43,7 @@ wm.has(window); // Retorna false. O objeto window não é mais pertecente ao Wea
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.delete")}}
+{{Compat}}
 
 ## Ver também
 

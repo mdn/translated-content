@@ -45,7 +45,7 @@ recognition.onresult = function (event) {
 
 ## ブラウザー実装状況
 
-{{Compat("api.SpeechRecognitionAlternative.transcript")}}
+{{Compat}}
 
 - \[1] Chrome では、SpeechRecognitionare インターフェースにプレフィックスが必要です。そのため、インターフェース名に `webkitSpeechRecognition` のようなプレフィックスが必要です; また、認識を動作させるには、Web サーバ上から提供する必要があります。
 - \[2]&#x20;

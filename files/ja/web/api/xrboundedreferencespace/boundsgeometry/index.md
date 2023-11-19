@@ -47,4 +47,4 @@ bounds = xrReferenceSpace.boundsGeometry;
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRBoundedReferenceSpace.boundsGeometry")}}
+{{Compat}}

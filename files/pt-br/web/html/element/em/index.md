@@ -100,7 +100,7 @@ Um exemplo para `<i>` poderia ser: "A _Rainha Mary_ velejou na noite passada". A
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.em")}}
+{{Compat}}
 
 ## Veja também
 

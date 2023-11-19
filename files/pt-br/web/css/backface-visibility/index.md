@@ -190,7 +190,7 @@ td {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## Veja também
 

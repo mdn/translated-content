@@ -37,16 +37,13 @@ Object.getPrototypeOf("foo");
 // String.prototype                  (código ES6)
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                             | Status             | Comentário         |
-| ------------------------------------------------------------------------- | ------------------ | ------------------ |
-| {{SpecName('ES5.1', '#sec-15.2.3.2', 'Object.getPrototypeOf')}}           | {{Spec2('ES5.1')}} | definição inicial. |
-| {{SpecName('ES6', '#sec-object.getprototypeof', 'Object.getProtoypeOf')}} | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.getPrototypeOf")}}
+{{Compat}}
 
 ## Notas específicas para o Opera
 

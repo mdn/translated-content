@@ -44,7 +44,7 @@ console.log("This is what a " + supText.sup() + " looks like.");
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.sup")}}
+{{Compat}}
 
 ## Veja também
 

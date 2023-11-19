@@ -49,7 +49,7 @@ Math.sqrt(-1); // NaN
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.sqrt")}}
+{{Compat}}
 
 ## Ver também
 
