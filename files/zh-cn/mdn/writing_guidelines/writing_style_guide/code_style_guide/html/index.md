@@ -7,7 +7,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 
 下面的指南涵盖了如何为 MDN Web 文档编写 HTML 示例代码。
 
-## HTML 代码示例常规指南
+## HTML 代码示例一般准则
 
 ### 格式的选择
 
@@ -19,7 +19,7 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 
 ## 完整的 HTML 文档
 
-> **备注：** 这个小节中的指南只适用于你需要展示一份完整的 HTML 文档的时候。一个片段通常就足以用于演示一种特性。在使用 [EmbedLiveSample 宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#传统运行实例)时，只需要包含 HTML 片段，片段会在显示的时候被自动插入到一个完整的 HTML 文档中。
+> **备注：** 这个小节中的准则只适用于你需要展示一份完整的 HTML 文档的时候。一个片段通常就足以用于演示一种特性。在使用 [EmbedLiveSample 宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#传统运行实例)时，只需要包含 HTML 片段，片段会在显示的时候被自动插入到一个完整的 HTML 文档中。
 
 ### Doctype
 
@@ -61,7 +61,7 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 
 ## 属性
 
-你应该把所有的属性值放在双引号之间。自从 HTML5 允许省略引号后，人们很轻易地就会这样做，但是添加引号能让标记更加简洁和易读。例如，这样就比较好：
+你应该把所有的属性值放在双引号之间。自从 HTML5 允许省略引号后，人们会很轻易地省略引号，但是添加引号能让标记更加简洁和易读。例如，这样就比较好：
 
 ```html example-good
 <img src="images/logo.jpg" alt="A circular globe icon" class="no-border" />
@@ -106,11 +106,11 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 使用语义化的 class/ID 名称，并且使用连字符分隔多个单词（{{Glossary("kebab_case", "短横线命名法")}}）。不要使用{{Glossary("camel_case", "骆驼式命名法")}}。例如：
 
 ```html example-good
-<p class="editorial-summary">其他内容</p>
+<p class="editorial-summary">短横线命名法</p>
 ```
 
 ```html example-bad
-<p class="bigRedBox">其他内容</p>
+<p class="bigRedBox">骆驼式命名法</p>
 ```
 
 ## 实体引用
