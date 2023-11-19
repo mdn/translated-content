@@ -25,7 +25,7 @@ Ces caractéristiques sont particulièrement utiles pour les domaines où DTLS e
 
   - [La RFC 5763 dressant le cadre pour utiliser SRTP avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc5763)
   - [La RFC 5764 spécifiant une extension DTLS pour l'établissement des clés pour SRTP (en anglais)](https://datatracker.ietf.org/doc/html/rfc5764)
-  - [La RFC 6083 dressant le cadre pour utiliser SCTP avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc5764)
+  - [La RFC 6083 dressant le cadre pour utiliser SCTP avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc6083)
   - [La RFC 8261 spécifiant l'encapsulation des paquets SCTP avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc8261)
   - [La RFC 7350 spécifiant l'utilisation de STUN avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc7350)
   - [La RFC 7925 pour les profils TLS / DTLS pour l'Internet des objets (en anglais)](https://datatracker.ietf.org/doc/html/rfc7925)
