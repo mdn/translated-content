@@ -156,5 +156,5 @@ slug: Web/HTML/Element/ol
 
   - свойство {{CSSxRef("list-style")}}, для порядковых показов
   - [CSS счётчики](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), для более сложных вложенных списков
-  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства [compact](/ru/docs/Web/HTML/Element/ol#attr-compact)
+  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства [compact](#compact)
   - Свойство [margin](/ru/docs/Web/CSS/margin), для контроля отступа в списке

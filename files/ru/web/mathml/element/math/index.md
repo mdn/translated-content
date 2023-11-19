@@ -31,7 +31,7 @@ slug: Web/MathML/Element/math
     Значение по умолчанию `inline`.
 
 - mode {{ deprecated_inline() }}
-  - : Устаревшие значение [display attribute](/ru/docs/MathML/Element/math#attr-display).
+  - : Устаревшие значение [display attribute](#display).
     Возможные значения: `display` (который имеет тот же эффект, как `display="block"` ) и `inline` .
 - overflow
   - : Определяет, как выражение ведёт себя, если текст слишком длинный и не помещается в указанном диапазоне ширины.
