@@ -6572,7 +6572,6 @@
 /fr/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox	/fr/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 /fr/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox	/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /fr/docs/conflicting/Web/CSS/CSS_Fonts	/fr/docs/Web/CSS/CSS_fonts
-/fr/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95	/fr/docs/Web/CSS/CSS_fonts
 /fr/docs/conflicting/Web/CSS/CSS_Scroll_Snap	/fr/docs/Web/CSS/CSS_scroll_snap
 /fr/docs/conflicting/Web/CSS/CSS_paged_media	/fr/docs/Web/CSS/CSS_paged_media
 /fr/docs/conflicting/Web/CSS/Filter_Effects	/fr/docs/Web/CSS/CSS_filter_effects
