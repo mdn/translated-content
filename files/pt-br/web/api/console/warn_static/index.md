@@ -1,6 +1,7 @@
 ---
 title: Console.warn()
-slug: Web/API/console/warn
+slug: Web/API/console/warn_static
+original_slug: Web/API/console/warn
 ---
 
 {{APIRef("Console API")}}{{non-standard_header}}
