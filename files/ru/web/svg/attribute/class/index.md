@@ -22,8 +22,6 @@ slug: Web/SVG/Attribute/class
 | Возможна анимация    | Yes                                                                                                |
 | Нормативный документ | [SVG 1.1 (2nd Edition): The class attribute](http://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 
-{{ page("/en/SVG/Content_type","List-of-Ts") }}
-
 ## Example
 
 ```html
