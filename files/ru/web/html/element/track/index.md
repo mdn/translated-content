@@ -67,10 +67,6 @@ slug: Web/HTML/Element/track
 
 Отдельный `media` элемент не может иметь элементы `track` с одинаковыми значениями `kind`, `srclang` и `label`.
 
-### Обнаружение изменений сигнала
-
-{{page("/ru/docs/Web/API/TextTrack/cuechange_event", "On the track element")}}
-
 ## Пример
 
 ```html
