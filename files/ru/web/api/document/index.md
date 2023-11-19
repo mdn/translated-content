@@ -77,8 +77,6 @@ slug: Web/API/Document
 
 The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
 
-{{page("/ru/docs/Web/API/ParentNode","Properties")}}
-
 ### Extension for HTML documents
 
 The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5, is extended for such documents:
