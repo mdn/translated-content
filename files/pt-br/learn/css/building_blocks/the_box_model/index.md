@@ -67,7 +67,7 @@ Nesse ponto, é melhor também explicar os tipos de exibição interna ( **inner
 
 Caixas possuem também um tipo de display _inner_, que determina como elementos dentro da caixa são posicionados. Por default, os elementos dentro de uma caixa são posicionados em um fluxo normal ( **[normal flow](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow)** ), significando que eles se comportam como qualquer outro bloco e elementos inline (como explicado acima).
 
-Podemos, no entando, altrar o tipo de exibição(display) interna usando valores `display` como `flex`. Se definirmos `display: flex;` em um elemento, o tipo dee exibição externo será `block`, mas o tipo de exibição interna será alterada para `flex`. Todos os filhos diretos desta caixa se tornarão itens flexíveis e serão dispostos de acordo com as regras estabelecidas na especificação [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox), que você aprenderá mais tarde.
+Podemos, no entando, alterar o tipo de exibição (display) interna usando valores `display` como `flex`. Se definirmos `display: flex;` em um elemento, o tipo de exibição externo será `block`, mas o tipo de exibição interna será alterada para `flex`. Todos os filhos diretos desta caixa se tornarão itens flexíveis e serão dispostos de acordo com as regras estabelecidas na especificação [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox), que você aprenderá mais tarde.
 
 > **Nota:** Para ler mais sobre valores de exibição(display) ee como caixas funcionam nos layouts `block` e `inline`, dê uma olhada no guia MDN sobre [Block e Inline Layout](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 
