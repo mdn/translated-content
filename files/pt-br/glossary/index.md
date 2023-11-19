@@ -6,8 +6,6 @@ slug: Glossary
 
 {{GlossarySidebar}}
 
-{{GlossarySidebar}}
-
 Tecnologias da Web contém longas listas de jargões e abreviações usadas em documentação e codificação. Este glossário fornece definições de palavras e abreviaturas que você precisa saber para entender e desenvolver para a web com sucesso.
 
 Os termos do glossário podem ser selecionados na barra lateral.
