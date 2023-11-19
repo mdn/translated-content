@@ -11,12 +11,12 @@ slug: Web/API/Document
 
 - Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/HTML/Element/Script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
 - Через свойство [`contentDocument`](/ru/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
-- Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responseXML) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
+- Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responsexml) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
 - Доступ к документу может быть получен из элемента или узла через свойство {{domxref("Node.ownerDocument","ownerDocument")}}.
 
-В зависимости от вида документа (т.е. [HTML](/ru/docs/HTML) или [XML](/ru/docs/XML)) у объекта **document** могут быть доступны разные API.
+В зависимости от вида документа (т.е. [HTML](/ru/docs/Web/HTML) или [XML](/ru/docs/XML)) у объекта **document** могут быть доступны разные API.
 
-- Все объекты документов реализуют интерфейс [`Document`](http://dom.spec.whatwg.org/#interface-document) (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.
+- Все объекты документов реализуют интерфейс [`Document`](https://dom.spec.whatwg.org/#interface-document) (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.
 - В современных браузерах некоторые документы (т.е. те, которые содержат контент `text/html`) также реализуют {{domxref("HTMLDocument")}} интерфейс.
 - В современных браузерах SVG документы реализуют {{domxref("SVGDocument")}} интерфейс.
 
@@ -260,7 +260,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns true if the formating command is supported on the current range.
 - {{domxref("Document.queryCommandValue","Document.queryCommandValue(String command)")}}
   - : Returns the current value of the current range for a formatting command.
-- {{domxref("Document.registerElement","Document.registerElement(String tagname[, Object options])")}}
+- {{domxref("CustomElementRegistry/define","Document.registerElement(String tagname[, Object options])")}}
   - : Registers a new custom element in the browser and returns a constructor for the new element.
 - {{domxref("Document.write","Document.write(String text)")}}
   - : Writes text in a document.
