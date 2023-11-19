@@ -498,7 +498,7 @@
 /ru/docs/Web/API/Node.replaceChild	/ru/docs/Web/API/Node/replaceChild
 /ru/docs/Web/API/Node.textContent	/ru/docs/Web/API/Node/textContent
 /ru/docs/Web/API/Node/innerText	/ru/docs/Web/API/HTMLElement/innerText
-/ru/docs/Web/API/Node/isSupported	/ru/docs/conflicting/Web/API/Node
+/ru/docs/Web/API/Node/isSupported	/ru/docs/Web/API/Node
 /ru/docs/Web/API/Node/localName	/ru/docs/Web/API/Element/localName
 /ru/docs/Web/API/Node/namespaceURI	/ru/docs/Web/API/Element/namespaceURI
 /ru/docs/Web/API/Node/prefix	/ru/docs/Web/API/Element/prefix
