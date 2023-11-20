@@ -31,7 +31,7 @@ Web 通知最明显的用例之一是基于 Web 的邮件或 IRC 应用程序，
 
 ### 检查当前权限状态
 
-你可以通过检查只读属性 {{domxref("Notification.permission")}} 的值来查看你是否已经有权限。该属性的值将会是下列三个之一：
+你可以通过检查只读属性 {{domxref("Notification.permission_static", "Notification.permission")}} 的值来查看你是否已经有权限。该属性的值将会是下列三个之一：
 
 - `default`
   - : 用户还未被询问是否授权，所以通知不会被显示。
