@@ -5,7 +5,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知；这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在你自己的应用程序中使用此 API 的基础知识。
+[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序以系统级别发送在页面外部显示的通知；这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在你自己的应用程序中使用此 API 的基础知识。
 
 通常，系统通知是指操作系统的标准通知机制，例如，思考典型的桌面系统或移动设备如何发布通知。
 
@@ -17,7 +17,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 Web 通知最明显的用例之一是基于 Web 的邮件或 IRC 应用程序，即使用户正在使用另一个应用程序执行其他操作，它也需要在收到新消息时通知用户。现在存在许多这样的例子，例如 [Slack](https://slack.com/)。
 
-我们编写了一个现实世界的示例——一个待办事项列表应用程序——来让你更多地了解如何使用网络通知。它使用 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 在本地存储数据，并在任务到期时使用系统通知通知用户。[下载待办事项列表代码](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)，或[查看实时运行的应用程序](https://mdn.github.io/dom-examples/to-do-notifications/)。
+我们编写了一个现实世界的示例——一个待办事项列表应用程序——来让你更多地了解如何使用 Web 通知。它使用 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 在本地存储数据，并在任务到期时使用系统通知通知用户。[下载待办事项列表代码](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)，或[查看实时运行的应用程序](https://mdn.github.io/dom-examples/to-do-notifications/)。
 
 ## 请求权限
 
@@ -25,9 +25,7 @@ Web 通知最明显的用例之一是基于 Web 的邮件或 IRC 应用程序，
 
 由于过去滥用推送通知，网络浏览器和开发人员已开始实施策略来帮助缓解此问题。你应该仅请求同意显示通知以响应用户手势（例如：单击按钮）。这不仅是最佳实践（你不应该向用户发送他们不同意的通知），而且未来的浏览器将明确禁止未响应用户手势而触发的通知权限请求。例如，Firefox 从版本 72 开始就已经这样做了，Safari 也已经这样做了一段时间了。
 
-此外，在 Chrome 和 Firefox 中，除非网站是安全上下文（即 HTTPS），否则你根本无法请求通知，并且你不能再允许从跨域 {{htmlelement("iframe")}} 请求通知权限。
-
-在应用可以发送通知之前，用户必须授予应用这么做的权限。这是一个常见的要求，当一个 API 至少一次试图与网页外部进行交互时，用户不得不专门授予该应用程序发送通知的权限，从而让用户控制哪些应用程序或网站允许显示通知。
+此外，在 Chrome 和 Firefox 中，除非网站是安全上下文（即 HTTPS），否则你根本无法请求通知，并且你不能再从跨源 {{htmlelement("iframe")}} 请求通知权限。
 
 ### 检查当前权限状态
 
@@ -50,7 +48,7 @@ Notification.requestPermission().then((result) => {
 });
 ```
 
-这使用了该方法的基于承诺的版本。如果你想支持旧版本，你可能必须使用旧的回调版本，如下所示：
+这使用了该方法的基于 promise 的版本。如果你想支持旧版本，你可能必须使用旧的回调版本，如下所示：
 
 ```js
 Notification.requestPermission((result) => {
@@ -60,7 +58,7 @@ Notification.requestPermission((result) => {
 
 回调版本可以选择接受一个回调函数，一旦用户响应了显示权限的请求，就会调用该回调函数。
 
-> **备注：** 目前无法可靠地对 `Notification.requestPermission` 是否支持基于 Promise 的版本进行功能测试。如果你需要支持较旧的浏览器，只需使用基于回调的版本——尽管它已被弃用，但它仍然可以在新浏览器中使用。有关更多信息，请参阅[浏览器兼容性表](/zh-CN/docs/Web/API/Notification/requestPermission_static#browser_compatibility)。
+> **备注：** 目前无法可靠地对 `Notification.requestPermission` 是否支持基于 Promise 的版本进行特性测试。如果你需要支持较旧的浏览器，只需使用基于回调的版本——尽管它已被弃用，但它仍然可以在新浏览器中使用。有关更多信息，请参阅[浏览器兼容性表](/zh-CN/docs/Web/API/Notification/requestPermission_static#浏览器兼容性)。
 
 ### 示例
 
@@ -92,11 +90,11 @@ function askNotificationPermission() {
 }
 ```
 
-首先查看第二个主要块，你会发现我们首先检查是否支持通知。如果是的话，我们然后运行检查以查看是否支持基于 Promise 的 `Notification.requestPermission()` 版本。如果是，我们运行基于 Promise 的版本（除 Safari 外均受支持），如果不是，我们运行基于回调的旧版本（Safari 受支持）。
+首先查看第二个主要块，你会发现我们首先检查是否支持通知。如果支持的话，我们接着运行基于 Promise 的 `Notification.requestPermission()` 版本（除 Safari 外均受支持），否则在控制台输出不支持通知的消息。
 
 为了避免重复代码，我们在 `handlePermission()` 函数中存储了一些内部代码，这是该代码段中的第一个主要块。在这里，我们明确设置了 `Notification.permission` 值（某些旧版本的 Chrome 无法自动执行此操作），并根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
 
-> **备注：** 在版本 37 之前，Chrome 不允许你在 `load` 事件处理程序中调用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}（请参阅 [issue 274284](https://crbug .com/274284)）。
+> **备注：** 在 Chrome 的 37 版本之前，其不允许你在 `load` 事件处理程序中调用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}（请参阅 [issue 274284](https://crbug .com/274284)）。
 
 ## 创建通知
 
@@ -118,7 +116,7 @@ const notification = new Notification("待办列表", { body: text, icon: img })
 const n = new Notification("我的歌");
 document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "visible") {
-    // 该选项卡已变得可见，因此可以清楚地看到现已过时的通知。
+    // 该标签页已对用户可见，因此可以清除现已过时的通知。
     n.close();
   }
 });
@@ -141,7 +139,7 @@ document.addEventListener("visibilitychange", () => {
 - `show`
   - : 当向用户显示通知时触发。
 
-可以使用 {{domxref("Notification.click_event","onclick")}}、{{domxref("Notification.close_event","onclose")}}、{{domxref("Notification.error_event","onerror")}} 和 {{domxref("Notification.show_event","onshow")}} 处理程序跟踪这些事件。因为 {{domxref("Notification")}} 也继承自 {{domxref("EventTarget")}}，所以可以使用 {{domxref("EventTarget.addEventListener","addEventListener()")}} 方法。
+可以使用 {{domxref("Notification.click_event","onclick")}}、{{domxref("Notification.close_event","onclose")}}、{{domxref("Notification.error_event","onerror")}} 和 {{domxref("Notification.show_event","onshow")}} 处理器跟踪这些事件。因为 {{domxref("Notification")}} 也继承自 {{domxref("EventTarget")}}，所以可以使用 {{domxref("EventTarget.addEventListener","addEventListener()")}} 方法。
 
 ## 替换现有通知
 
@@ -215,7 +213,7 @@ window.addEventListener("load", () => {
 
 ### 结果
 
-{{ EmbedLiveSample('Tag_example', '100%', 30) }}
+{{ EmbedLiveSample('标签示例', '100%', 30) }}
 
 ## 规范
 
