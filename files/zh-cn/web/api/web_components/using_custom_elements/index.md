@@ -1,7 +1,6 @@
 ---
 title: 使用 custom elements
 slug: Web/API/Web_components/Using_custom_elements
-page-type: guide
 ---
 
 {{DefaultAPISidebar("Web Components")}}
