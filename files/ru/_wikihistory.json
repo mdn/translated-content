@@ -16484,17 +16484,6 @@
     "modified": "2019-03-24T00:00:53.915Z",
     "contributors": ["Dionys"]
   },
-  "conflicting/Web/Guide/AJAX": {
-    "modified": "2019-03-24T00:01:49.926Z",
-    "contributors": [
-      "DanilaH",
-      "chrisdavidmills",
-      "Megapotz",
-      "Apparition",
-      "Square",
-      "Kwinto"
-    ]
-  },
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:27:06.077Z",
     "contributors": ["wbamberg"]
@@ -17400,10 +17389,6 @@
   "orphaned/Web/CSS/repeating-linear-gradient()": {
     "modified": "2020-11-18T14:46:25.201Z",
     "contributors": ["chrisdavidmills", "YozhEzhi", "arcady-zherdev"]
-  },
-  "orphaned/Web/Guide/AJAX/С_чего_начать?": {
-    "modified": "2019-01-16T16:10:29.921Z",
-    "contributors": ["chrisdavidmills", "Sheppy", "Nikol"]
   },
   "orphaned/Web/Guide/Events": {
     "modified": "2020-08-20T10:40:53.452Z",
