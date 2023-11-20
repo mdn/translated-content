@@ -1,6 +1,8 @@
 ---
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
+l10n:
+  sourceCommit: 2184f627ae940cca9d95ba9846903ae0cfc4d323
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -90,7 +92,7 @@ function askNotificationPermission() {
 }
 ```
 
-首先查看第二个主要块，你会发现我们首先检查是否支持通知。如果支持的话，我们接着运行基于 Promise 的 `Notification.requestPermission()` 版本（除 Safari 外均受支持），否则在控制台输出不支持通知的消息。
+首先查看第二个主要块，你会发现我们首先检查是否支持通知。如果支持的话，我们接着运行基于 Promise 的 `Notification.requestPermission()` 版本，否则在控制台输出一条消息。
 
 为了避免重复代码，我们在 `handlePermission()` 函数中存储了一些内部代码，这是该代码段中的第一个主要块。在这里，我们明确设置了 `Notification.permission` 值（某些旧版本的 Chrome 无法自动执行此操作），并根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
 
