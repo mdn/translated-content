@@ -22,7 +22,7 @@ slug: Web/HTML/Element/dd
 
 Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : Если значение атрибута установлено `yes`, текст определения не будет переноситься. Значение по умолчанию `no`.
 
 ## Пример

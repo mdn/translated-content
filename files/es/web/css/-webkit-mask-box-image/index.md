@@ -14,7 +14,7 @@ slug: Web/CSS/-webkit-mask-box-image
 - {{ Xref_cssinitial() }}: none
 - Se aplica a : Todos los elementos
 - {{ Xref_cssinherited() }}: no
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}: tal y como se especfica
 
 ## Síntaxis
