@@ -114,7 +114,7 @@ l10n:
 1. 流动 `tabindex`: 通过编程移动 focus
 2. `aria-activedescendent`: 管理一个“虚拟”focus
 
-### 方法 1: 流动 tabindex
+### 方法 1：流动 tabindex
 
 在被聚焦的元素上设置 `tabindex` 为“0”，这样可以保证在用户在 tab 离开又返回后仍然选中组合组件中之前被选中的那项。注意在更改 `tabindex` 为“0”同时需要把之前选中过的那项设置 `tabindex="-1"`。这个方法包含在键盘事件里面通过程序移动焦点以及更改 `tabindex` 到当前焦点中的那项上。需要做以下几步：
 
@@ -138,7 +138,7 @@ l10n:
 
 `onfocus` 和 `onblur` 现在可以在每个元素上使用。没有标准的 DOM 接口来获取当前文档的焦点，如果要跟踪焦点状态，可以使用 [document.activeElement](/zh-CN/docs/Web/API/Document/activeElement) 来获取活动元素。还可以使用 [document.hasFocus](/zh-CN/docs/Web/API/Document/hasFocus) 来确定当前文档是否处于焦点状态。
 
-### 方法 2: `aria-activedescendant`
+### 方法 2：`aria-activedescendant`
 
 这个办法包含绑定一个单独的事件句柄到容器窗口组件上，运用 `aria-activedescendent` 属性来追踪一个“虚拟”焦点。（关于 ARIA 更多的信息，查看[无障碍的 Web 应用程序和组件概述](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)。）
 
