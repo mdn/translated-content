@@ -75,9 +75,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${quota} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${quota} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -160,9 +159,8 @@ document.querySelector("#generate").addEventListener("click", () => {
 // データから受け取った生成された素数の個数を含むユーザーへの
 // メッセージで出力ボックスを更新します。
 worker.addEventListener("message", (message) => {
-  document.querySelector(
-    "#output",
-  ).textContent = `${message.data} 個の素数を生成しました。`;
+  document.querySelector("#output").textContent =
+    `${message.data} 個の素数を生成しました。`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {

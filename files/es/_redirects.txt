@@ -1612,7 +1612,7 @@
 /es/docs/Web/API/Canvas_API/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
-/es/docs/Web/API/Console/tabla	/es/docs/Web/API/console/table
+/es/docs/Web/API/Console/tabla	/es/docs/Web/API/console/table_static
 /es/docs/Web/API/Constraint_validation/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/Coordinates	/es/docs/Web/API/GeolocationCoordinates
 /es/docs/Web/API/Coordinates/latitude	/es/docs/Web/API/GeolocationCoordinates/latitude
@@ -1751,6 +1751,18 @@
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
 /es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /es/docs/Web/API/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
+/es/docs/Web/API/console/assert	/es/docs/Web/API/console/assert_static
+/es/docs/Web/API/console/count	/es/docs/Web/API/console/count_static
+/es/docs/Web/API/console/dir	/es/docs/Web/API/console/dir_static
+/es/docs/Web/API/console/dirxml	/es/docs/Web/API/console/dirxml_static
+/es/docs/Web/API/console/error	/es/docs/Web/API/console/error_static
+/es/docs/Web/API/console/info	/es/docs/Web/API/console/info_static
+/es/docs/Web/API/console/log	/es/docs/Web/API/console/log_static
+/es/docs/Web/API/console/table	/es/docs/Web/API/console/table_static
+/es/docs/Web/API/console/time	/es/docs/Web/API/console/time_static
+/es/docs/Web/API/console/timeEnd	/es/docs/Web/API/console/timeend_static
+/es/docs/Web/API/console/trace	/es/docs/Web/API/console/trace_static
+/es/docs/Web/API/console/warn	/es/docs/Web/API/console/warn_static
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented
 /es/docs/Web/API/event.which	/es/docs/Web/API/UIEvent/which
 /es/docs/Web/Accesibilidad	/es/docs/Web/Accessibility
