@@ -166,7 +166,7 @@ class MyCustomElement extends HTMLElement {
 customElements.define("my-custom-element", MyCustomElement);
 ```
 
-请注意，如果元素的 `HTML` 声明包含一个被观察的属性，那么在元素的声明首次解析时，`attributeChangedCallback()` 将被调用，即在属性被初始化后。  因此，在以下示例中，即使属性再也没有被更改，当 DOM 被解析时，`attributeChangedCallback()` 也会被调用：（译注：即每个直接在 HTML 中声明的且被观察的属性会立即触发 `attributeChangedCallback()` 一次）
+请注意，如果元素的 `HTML` 声明包含一个被观察的属性，那么在元素的声明首次解析时，`attributeChangedCallback()` 将被调用，即在属性被初始化后。 因此，在以下示例中，即使属性再也没有被更改，当 DOM 被解析时，`attributeChangedCallback()` 也会被调用：（译注：即每个直接在 HTML 中声明的且被观察的属性会立即触发 `attributeChangedCallback()` 一次）
 
 ```html
 <my-custom-element size="100"></my-custom-element>
