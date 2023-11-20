@@ -163,7 +163,7 @@ window.addEventListener("load", () => {
 
   if (window.self !== window.top) {
     // 确保如果我们的文档位于框架中，我们会让用户首先在自己的选项卡或窗口中打开它。否则，它将无法请求发送通知的权限
-    button.textContent = "View live result of the example code above";
+    button.textContent = "查看上面示例代码的实时运行结果";
     button.addEventListener("click", () => window.open(location.href));
     return;
   }
