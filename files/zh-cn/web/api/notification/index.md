@@ -38,7 +38,7 @@ slug: Web/API/Notification
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 在构造函数的 `options` 参数中指定的通知的操作数组。
 - {{domxref("Notification.badge")}} {{ReadOnlyInline}}
-  - : 当没有足够的空间去显示通知自身时，用于表示通知图像的 URL。
+  - : 当没有足够的空间去显示通知自身（例如 Android 通知栏）时，用于表示通知图像的 URL。在安卓设备上，徽章的分辨率应达到 4x（约 96 x 96 px），图片会自动屏蔽。
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的正文字符串。
 - {{domxref("Notification.data")}} {{ReadOnlyInline}}
@@ -58,7 +58,7 @@ slug: Web/API/Notification
 - {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
   - : 一个布尔值，表示通知应该保持活动状态，直到用户点击或者关掉它，而不是自动关闭。
 - {{domxref("Notification.silent")}} {{ReadOnlyInline}}
-  - : 指定通知是否应该静音——即，无论设备的设置如何，都不应发出声音和摆动。
+  - : 指定通知是否应该静音——即，无论设备的设置如何，都不应发出声音和振动。
 - {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 指定通知创建或者应用时（过去、现在或者未来）的时间。
 - {{domxref("Notification.title")}} {{ReadOnlyInline}}
