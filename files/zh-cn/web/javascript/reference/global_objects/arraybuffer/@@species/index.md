@@ -39,7 +39,7 @@ class SubArrayBuffer extends ArrayBuffer {}
 SubArrayBuffer[Symbol.species] === SubArrayBuffer; // true
 ```
 
-当调用不会修改现有对象，而是返回一个新的数组缓冲区实例数组缓冲区方法（例如，[`slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice)）时，对象的 `constructor[@@species]` 将被访问。返回的构造函数将用于该构造数组缓冲区方法的返回值。
+当调用不会修改现有对象，而是返回一个新的数组缓冲区实例数组缓冲区方法（例如，[`slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice)）时，对象的 `constructor[@@species]` 将被访问。返回的构造函数将用于构造该数组缓冲区方法的返回值。
 
 ## 示例
 
