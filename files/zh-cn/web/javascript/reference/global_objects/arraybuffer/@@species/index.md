@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 
 **`ArrayBuffer[@@species]`** 静态访问器属性返回用于构造数组缓冲区方法返回值的构造函数。
 
-> **警告：** `@@species` 的存在允许执行任意代码，并可能产生安全漏洞。这也使某些优化变得更加困难。引擎实现者正在[调查是否删除此功能](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能的话，避免依赖它。
+> **警告：** `@@species` 的存在允许任意代码执行，并可能产生安全漏洞。这也使某些优化变得更加困难。引擎实现者正在[调查是否删除此特性](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能的话，请避免依赖它。
 
 ## 语法
 
