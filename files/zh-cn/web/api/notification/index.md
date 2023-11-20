@@ -37,7 +37,7 @@ slug: Web/API/Notification
 
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 在构造函数的 `options` 参数中指定的通知的操作数组。
-- {{domxref("Notification.badge")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.badge")}} {{ReadOnlyInline}}
   - : 当没有足够的空间去显示通知自身时，用于表示通知图像的 URL。
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的正文字符串。
@@ -55,9 +55,9 @@ slug: Web/API/Notification
   - : 作为通知的一部分显示的图像 URL，在构造函数的选项参数中指定。
 - {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 指定在新通知取代旧通知后，是否应该通知用户。
-- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
   - : 一个布尔值，表示通知应该保持活动状态，直到用户点击或者关掉它，而不是自动关闭。
-- {{domxref("Notification.silent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.silent")}} {{ReadOnlyInline}}
   - : 指定通知是否应该静音——即，无论设备的设置如何，都不应发出声音和摆动。
 - {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 指定通知创建或者应用时（过去、现在或者未来）的时间。
