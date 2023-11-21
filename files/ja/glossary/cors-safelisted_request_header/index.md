@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
+{{GlossarySidebar}}
+
 [CORS セーフリストリクエストヘッダー](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)は、次の [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)のうちの一つです:
 
 - {{HTTPHeader("Accept")}}
