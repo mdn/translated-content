@@ -1,38 +1,63 @@
 ---
-title: Console.assert()
+title: "console : méthode statique assert()"
 slug: Web/API/console/assert_static
-original_slug: Web/API/console/assert
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-Affiche un message d'erreur dans la console si l'assertion est fausse. Si l'assertion est vraie, rien ne se produit.
+La méthode **`console.assert()`** permet d'écrire un message d'erreur dans la console si l'assertion passée en argument est fausse. Si l'assertion est bien vérifiée, rien ne se passe.
 
 {{AvailableInWorkers}}
 
-> **Note :** _La méthode `console.assert()` est implémentée différement dans les vieilles version de Node.js que dans celle disponible dans les navigateurs._
->
-> Plus précisément, dans les navigateurs, appeler `console.assert()` avec une condition fausse affichera le `message` dans la console sans interrompre l'éxecution du code suivant. Dans les versions inférieure à la v10 de Node.js, cependant, une assertion fausse lèvera une exception `AssertionError`. Cette différence de comportement a été corrigée par la v10 de Node et `console.assert()` se comporte maintenant de la même façon dans Node et dans les navigateurs.
-
 ## Syntaxe
 
-```js
-console.assert(assertion, obj1 [, obj2, ..., objN]);
-console.assert(assertion, msg [, subst1, ..., substN]);
+```js-nolint
+assert(assertion, obj1)
+assert(assertion, obj1, obj2)
+assert(assertion, obj1, obj2, /* …, */ objN)
+
+assert(assertion, msg)
+assert(assertion, msg, subst1)
+assert(assertion, msg, subst1, /* …, */ substN)
 ```
 
 ### Paramètres
 
 - `assertion`
-  - : N'importe quelle expression booléenne. Si l'assertion est fausse, le message s'affichera dans la console.
-- `obj1` ... `objN`
-  - : Une liste d'objets javascript à afficher. La représentation textuelle de chacun de ces objets est ajoutée à la suite de la précédente dans l'ordre donné et est ensuite affichée.
+  - : Une expression booléenne. Si l'assertion est fausse, le message est affiché dans la console.
+- `obj1` … `objN`
+  - : Une liste d'objets JavaScript à afficher. Les représentations en chaînes de caractères de ces objets sont concaténés dans l'ordre et affichés dans la console.
 - `msg`
-  - : Une chaîne de caractères javascript contenant zéro ou plus chaîne(s) de caractères de substitution.
-- `subst1` ... `substN`
-  - : L'objet javascript avec lequel remplacer les chaînes de substitution dans `msg`. Ceci vous offre plus de contrôle sur ce qui est affiché.
+  - : Une chaîne de caractères JavaScript qui contient zéro ou plusieurs chaînes de substitution.
+- `subst1` … `substN`
+  - : Des objets JavaScript avec lesquels remplacer les chaînes de substitution dans `msg`. Ce paramètre permet un contrôle supplémentaire sur le format de ce qui est affiché.
 
-Allez voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{domxref("console")}} pour plus de détails.
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+
+## Exemples
+
+Dans l'exemple suivant, on illustre comment utiliser un objet comme deuxième argument&nbsp;:
+
+```js
+const messageErreur = "le nombre n'est pas pair";
+for (let nombre = 2; nombre <= 5; nombre++) {
+  console.log(`le nombre est ${nombre}`);
+  console.assert(nombre % 2 === 0, "%o", { nombre, messageErreur });
+}
+// Ce qui est affiché dans la console :
+// le nombre est 2
+// le nombre est 3
+// Assertion failed: {nombre: 3, messageErreur: "le nombre n'est pas pair"}
+// le nombre est 4
+// le nombre est 5
+// Assertion failed: {nombre: 5, messageErreur: "le nombre n'est pas pair"}
+```
+
+Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_les_caractères_de_substitution) pour plus de détails.
 
 ## Spécifications
 
@@ -41,10 +66,3 @@ Allez voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputti
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Voir aussi
-
-- [WHATWG Console Standard: console.assert](https://console.spec.whatwg.org/#assert-condition-data)
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/devtools/docs/console#assertions)

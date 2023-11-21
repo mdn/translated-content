@@ -1,34 +1,41 @@
 ---
-title: Console.warn()
+title: "console : méthode statique warn()"
 slug: Web/API/console/warn_static
-original_slug: Web/API/console/warn
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{ APIRef("Console API") }}
+{{APIRef("Console API")}}
 
-Affiche un message d'avertissement dans la console web.
+La méthode **`console.warn()`** affiche un message d'avertissement dans la console.
 
 {{AvailableInWorkers}}
 
-> **Note :** Dans Firefox, une icône de point d'exclamation est affichée à côté des messages d'avertissement
+> **Note :** Dans Chrome et Firefox, les avertissements sont indiqués par un triangle avec un point d'exclamation.
 
 ## Syntaxe
 
-```js
-console.warn(obj1 [, obj2, ..., objN]);
-console.warn(msg [, subst1, ..., substN]);
+```js-nolint
+warn(obj1)
+warn(obj1, /* …, */ objN)
+warn(msg)
+warn(msg, subst1, /* …, */ substN)
 ```
 
-## Paramétres
+### Paramètres
 
-- `obj1` ... `objN`
-  - : Une liste d'objets JavaScript à afficher. La représentation, en chaîne de caractéres, de chacun de ces objets est affichée dans l'ordre de la liste.
+- `obj1` … `objN`
+  - : Une liste d'objets JavaScript à afficher. Les représentations en chaînes de caractères de ces objets sont concaténés dans l'ordre et affichés dans la console.
 - `msg`
-  - : Une chaîne de caractères JavaScript contenant zéro ou plusieurs subdivisions de chaîne de caractères.
-- `subst1` ... `substN`
-  - : Une liste d'objets JavaScript qui remplace les chaînes de caractéres de `msg`. Cela vous donne plus de contrôle sur le format de sortie.
+  - : Une chaîne de caractères JavaScript qui contient zéro ou plusieurs chaînes de substitution qui seront remplacées par `subst1` … `substN` dans l'ordre.
+- `subst1` … `substN`
+  - : Des objets JavaScript avec lesquels remplacer les chaînes de substitution dans `msg`. Ce paramètre permet un contrôle supplémentaire sur le format de ce qui est affiché. Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_les_caractères_de_substitution) pour plus de détails.
 
-Voir [Outputting text to the console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{ domxref("console") }} pour plus de détails.
+Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#afficher_du_texte_dans_la_console) pour plus de détails.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Spécifications
 
@@ -40,5 +47,6 @@ Voir [Outputting text to the console](/fr/docs/Web/API/console#Outputting_text_t
 
 ## Voir aussi
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [Documentation Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/console-log#console-messages-examples-log-info-error-and-warn)
+- [Documentation Node.JS sur l'API Console](https://nodejs.org/docs/latest/api/console.html#consolewarndata-args)
+- [Documentation Chrome](https://developer.chrome.com/docs/devtools/console/api/#warn)

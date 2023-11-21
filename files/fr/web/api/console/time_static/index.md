@@ -1,25 +1,33 @@
 ---
-title: console.time
+title: "console: time() static method"
 slug: Web/API/console/time_static
-original_slug: Web/API/console/time
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-Chronomètre une opération. Chaque "timer" doit avoir un nom unique. Il peut y avoir jusqu'à 10000 "timers" sur une même page. En appelant {{ domxref("console.timeEnd()") }} avec le même nom, le navigateur affichera le temps d'execution en millisecondes dans la console.
+La méthode **`console.time()`** démarre un chronomètre qui permet de mesurer la durée d'une opération. Chaque chronomètre peut être identifié avec un nom donné et on peut avoir jusqu'à 10 000 chronomètres simultanés sur une même page. Lorsqu'on appelle [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static) avec le même nom, la durée associée depuis le démarrage du chronomètre correspondant s'affichera dans la console (exprimée en millisecondes).
 
-Voir [Timers](/fr/docs/Web/API/console#Timers) dans la documentation de {{ domxref("console") }} pour plus de details et d'exemples.
+Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronométrage) pour plus de détails et d'exemples.
+
+{{AvailableInWorkers}}
 
 ## Syntaxe
 
-```js
-console.time(label);
+```js-nolint
+time()
+time(libelle)
 ```
 
-## Paramètres
+### Paramètres
 
-- `label`
-  - : Nom qui identifiera le nouveau "timer". Il faut utiliser le même nom pour {{ domxref("console.timeEnd()") }} pour arrêter le "timer" et afficher le temps dans la console.
+- `libelle` {{optional_inline}}
+  - : Une chaîne de caractères qui représente le nom à donner au chronomètre. Ce nom servira d'identifiant, qu'il faudra passer à [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static) pour arrêter le chronomètre correspondant. Si cet argument est omis, le libellé `"default"` sera utilisé.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Spécifications
 
@@ -31,5 +39,5 @@ console.time(label);
 
 ## Voir aussi
 
-- {{ domxref("console.timeEnd()") }}
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static)
+- [`console.timeLog()`](/fr/docs/Web/API/console/timelog_static)

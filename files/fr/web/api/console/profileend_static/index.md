@@ -1,33 +1,36 @@
 ---
-title: Console.profileEnd()
+title: "console : méthode statique profileEnd()"
 slug: Web/API/console/profileend_static
-original_slug: Web/API/console/profileEnd
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-> **Attention :** L'appel de cet API immédiatement après `console.profile()` peut l'empêcher de fonctionner. Pour contourner ce problème, appelez-le par un `setTimeout` avec un délai d'au-moins 5 ms. Voir [bug #1173588](https://bugzilla.mozilla.org/show_bug.cgi?id=1173588).
+La méthode **`console.profileEnd()`** arrête l'enregistrement d'un profil de performance précédemment initié avec un appel à [`console.profile()`](/fr/docs/Web/API/console/profile_static).
 
-La méthode `profileEnd` arrête l'enregistrement d'un profil lancé précédemment avec {{domxref("Console.profile()")}}.
+Un argument facultatif permet d'indiquer le nom du profil en question. Utiliser ce nom permet de cibler un profil donné pour l'arrêt de l'enregistrement lorsque plusieurs profils sont enregistrés.
 
-Vous pouvez éventuellement insérer un argument pour nommer le profil. Cela vous permet d'arrêter uniquement ce profil si vous avez enregistré plusieurs profils.
-
-- Si `Console.profileEnd()` reçoit un nom de profil qui correspond au nom d'un profil en cours d'enregistrement, ce profil est arrêté.
-- Si `Console.profileEnd()` reçoit un nom de profil qui ne correspond pas au nom d'un profil en cours d'enregistrement, aucune modification n'est apportée.
-- Si `Console.profileEnd()` ne reçoit pas un nom de profil, le dernier profil démarré est arrêté.
+- Si `console.profileEnd()` est utilisée avec un nom de profil et que celui-ci correspond à un profil en cours d'enregistrement, l'enregistrement de ce profil donné est arrêté.
+- Si `console.profileEnd()` est utilisée avec un nom de profil qui ne correspond à aucun profil en cours d'enregistrement, rien ne se passe.
+- Si `console.profileEnd()` est utilisée sans nom de profil, c'est le profil dont l'enregistrement a démarré en dernier qui est arrêté.
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-```js
-console.profileEnd(profileName);
+```js-nolint
+profileEnd(nomProfil)
 ```
 
-## Paramètres
+### Paramètres
 
-- `profileName`
-  - : Le nom à donner au profil. Ce paramètre est facultatif.
+- `nomProfil` {{optional_inline}}
+  - : Le nom à donner au profil.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Compatibilité des navigateurs
 
@@ -35,4 +38,4 @@ console.profileEnd(profileName);
 
 ## Voir aussi
 
-- {{domxref("Console.profile()")}}
+- [`console.profile()`](/fr/docs/Web/API/console/profile_static)

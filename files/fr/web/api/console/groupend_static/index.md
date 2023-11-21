@@ -1,24 +1,29 @@
 ---
-title: Console.groupEnd()
+title: "console : méthode statique groupEnd()"
 slug: Web/API/console/groupend_static
-original_slug: Web/API/console/groupEnd
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-Quitte le groupe en ligne actuel dans la [console Web](/fr/docs/Outils/Console_Web). Voir [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_console) dans la documentation {{domxref("console.group()")}} pour plus de détails et des exemples.
+La méthode **`console.groupEnd()`** clôture le groupe courant dans la console. Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/Console#utiliser_des_groupes_dans_la_console) pour plus de détails et d'exemples.
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-```js
-console.groupEnd();
+```js-nolint
+groupEnd()
 ```
 
-## Paramètres
+### Paramètres
 
 Aucun.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Spécifications
 
@@ -30,4 +35,5 @@ Aucun.
 
 ## Voir aussi
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [`console.group()`](/fr/docs/Web/API/console/group_static)
+- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupcollapsed_static)

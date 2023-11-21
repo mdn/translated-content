@@ -1,47 +1,59 @@
 ---
-title: console.log()
+title: "console : méthode statique log()"
 slug: Web/API/console/log_static
-original_slug: Web/API/console/log
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-La méthode **`console.log()`** affiche un message dans la console Web. Le message peut être une simple chaine de caractères (avec des valeurs optionnelles de substitution) ou peut être composé d'un ou plusieurs objets JavaScript.
+La méthode **`console.log()`** permet d'afficher un message dans la console. Le message peut être une chaîne de caractères (avec d'éventuelles valeurs de substitution) ou un ou plusieurs objets JavaScript.
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-```js
-console.log(obj1 [, obj2, ..., objN]);
-console.log(msg [, subst1, ..., substN]);
+```js-nolint
+log(obj1)
+log(obj1, /* …, */ objN)
+log(msg)
+log(msg, subst1, /* …, */ substN)
 ```
 
 ### Paramètres
 
-- `obj1` ... `objN`
-  - : Une liste d'objets Javascript à afficher. Les représentations textuelles de chacun de ces objets seront affichées dans la console du navigateur selon l'ordre indiqué. Attention, pour les versions récentes de Chrome et Firefox, ce qui apparaît dans la console est une **référence à l'objet** et pas nécessairement la valeur de l'objet au moment de l'appel à `console.log()` mais sa valeur au moment où on ouvre la console.
+- `obj1` … `objN`
+  - : Une liste d'objets JavaScript à afficher. Les objets sont affichés dans l'ordre des arguments. Attention, pour certains navigateurs, ce qui est affiché dans la console est _une référence à l'objet_ et pas nécessairement la valeur de l'objet au moment où `console.log()` est appelé (mais la valeur de l'objet au moment où la console est ouverte).
 - `msg`
-  - : Une chaîne de caractères JavaScript contenant zéro ou plusieurs chaînes de substitution.
-- `subst1` ... `substN`
-  - : Des objets JavaScript dont les valeurs textuelles remplaceront les emplacements à substituer indiqués dans `msg`. Cela offre plus de contrôle sur le format d'affichage.
+  - : Une chaîne de caractères JavaScript qui contient zéro ou plusieurs chaînes de substitution qui seront remplacées par `subst1` … `substN` dans l'ordre.
+- `subst1` … `substN`
+  - : Des objets JavaScript avec lesquels remplacer les chaînes de substitution dans `msg`. Ce paramètre permet un contrôle supplémentaire sur le format de ce qui est affiché. Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_les_caractères_de_substitution) pour plus de détails.
 
-Voir [Afficher du texte sur la console](/fr/docs/Web/API/Console#outputting_text_to_the_console) dans la documentation de [`console`](/fr/docs/Web/API/Console) pour plus de détails.
+Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#afficher_du_texte_dans_la_console) pour plus de détails.
 
-## Différence entre console.log() et console.dir()
+### Valeur de retour
 
-Vous pourriez vous demander quelles sont les différences entre [`console.dir()`](/fr/docs/Web/API/Console/dir) et `console.log()`.
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
-Celles-ci concernent principalement la gestion particulière des objets du DOM :
+## Journaliser des objets
 
-- `console.log()` affiche les éléments dans un arbre de type HTML,
-- `console.dir()` affiche les propriétés de l'objet JavaScript.
+Les informations relatives aux objets sont récupérées lorsque c'est nécessaire. Cela signifie que le message dans la console affiche le contenu de l'objet au moment où on l'observe depuis la console, et pas le contenu de l'objet au moment où la méthode a été appelée. Par exemple, avec&nbsp;:
 
-![](dozdcyr.png)
+```js
+const obj = {};
+console.log(obj);
+obj.prop = 123;
+```
 
-## Affichage d'objets dans la console
+On verra `{}` affiché comme résultat. Mais si on déplie le détail de l'objet, on verra alors `prop: 123`.
 
-Évitez d'utiliser `console.log(obj)` mais préférez `console.log(JSON.parse(JSON.stringify(obj)))` si vous souhaîtez être sûr·e d'observer la valeur de l'objet au moment de l'exécution de `console.log()`. Autrement, de nombreux navigateurs produisent un affichage interactif de l'objet qui se maintient à jour quand les propriétés de l'objet changent. Cela ne pourrait pas être ce que vous voulez et peut porter à confusion.
+Si vous modifiez l'objet et que vous ne voulez pas que les informations journalisées dans la console soient mises à jour, il faudra réaliser [un clone profond](/fr/docs/Glossary/Deep_copy) de l'objet avant de le journaliser. Une méthode courante pour ce faire consiste à utiliser [`JSON.stringify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) puis [`JSON.parse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)&nbsp;:
+
+```js
+console.log(JSON.parse(JSON.stringify(obj)));
+```
+
+D'autres méthodes, comme [`structuredClone()`](/fr/docs/Web/API/structuredClone), peuvent fonctionner dans les navigateurs et seront plus efficaces pour cloner différents types d'objet.
 
 ## Spécifications
 
@@ -53,6 +65,6 @@ Celles-ci concernent principalement la gestion particulière des objets du DOM :
 
 ## Voir aussi
 
-- [Docs Microsoft : Edge - Afficher des messages dans la console](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/console-log)
-- [La référence de l'API Console pour Chrome](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)
-- [NodeJS : API Console](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)
+- [Documentation Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/console-log#console-messages-examples-log-info-error-and-warn)
+- [Documentation Node.JS sur l'API Console](https://nodejs.org/docs/latest/api/console.html#consolelogdata-args)
+- [Documentation Chrome](https://developer.chrome.com/docs/devtools/console/api/#log)

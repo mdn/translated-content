@@ -1,109 +1,87 @@
 ---
-title: Console.countReset()
+title: "console : méthode statique countReset()"
 slug: Web/API/console/countreset_static
-original_slug: Web/API/console/countReset
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-Remet le compteur à zero. Cette fonction prend un argument optionnel `label`
+La méthode **`console.countReset()`** permet de réinitialiser le compteur utilisé avec [`console.count()`](/fr/docs/Web/API/console/count).
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-```
-console.countReset([label]);
-```
-
-### Parameters
-
-- `label`
-  - : Si specifié, `countReset()` remet à zero le compteur associé à ce label. S'il n'est pas specifié, `countReset()` remet à zéro le compteur par defaut.
-
-### Return value
-
-Si le paramètre label à été spécifié :
-
-```
-counter-name: 0
+```js-nolint
+countReset()
+countReset(libelle)
 ```
 
-Si aucun label n'as été specifié
+### Paramètres
 
-```
-default: 0
-```
+- `libelle` {{optional_inline}}
+  - : Une chaîne de caractères. Si cet argument est fourni, `countReset()` remet à zéro le compteur associé à ce libellé. Si l'argumetn est absent, `countReset()` remet à zéro le compteur par défaut.
 
-### Warnings
+### Valeur de retour
 
-Si `label` est specifié mais n'existe pas `countReset()` renvoie cet avertissement :
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
-```
-Counter "counter-name" doesn’t exist.
-```
+## Exemples
 
-Si `label` n'est pas specifé et que `count()` n'as pas encore été appellé `countReset()` renvoie cette avertissement :
-
-```
-Counter "default" doesn’t exist.
-```
-
-## Examples
-
-Par exemple avec un code comme celui ci :
+Prenons le code suivant par exemple&nbsp;:
 
 ```js
-var user = "";
+let personne = "";
 
-function greet() {
+function salutations() {
   console.count();
-  return "hi " + user;
+  return `Coucou ${personne}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+personne = "bob";
+salutations();
+personne = "alice";
+salutations();
+salutations();
 console.count();
 console.countReset();
 ```
 
-Le retour de la console ressemblera à ceci :
+La console affichera ce qui suit&nbsp;:
 
-```
+```plain
 "default: 1"
 "default: 2"
 "default: 3"
-"default: 1"
+"default: 4"
 "default: 0"
 ```
 
-Pour information l'appel à `console.counterReset()` remet à zero la valeur du compteur par défaut.
+On voit que l'appel à `console.counterReset()` réinitialise la valeur du compteur par défaut à 0.
 
-S'il on passe la variable `user` comme argument pour `label` et que l'on effectue un premier appel de la fonction `count()`, avec la chaine "bob" puis un second appel avec la chaine "alice" :
+Si on passe la variable `personne` en paramètre pour le libellé (ici d'abord avec `"bob"`, puis avec `"alice"`)&nbsp;:
 
 ```js
-var user = "";
+let personne = "";
 
-function greet() {
-  console.count(user);
-  return "hi " + user;
+function salutations() {
+  console.count(personne);
+  return `Coucou ${personne}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+personne = "bob";
+salutations();
+personne = "alice";
+salutations();
+salutations();
 console.countReset("bob");
 console.count("alice");
 ```
 
-On obtiendra ce retour dans la console
+On obtiendra le résultat suivant&nbsp;:
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"
@@ -111,7 +89,7 @@ On obtiendra ce retour dans la console
 "alice: 3"
 ```
 
-Remettre à zero le compteur "bob" change uniquement la valeur de celui-ci. La valeur du compteur "alice" reste inchangée.
+En réinitialisant la valeur du compteur `"bob"`, on ne modifie pas pour autant le compteur `"alice"`.
 
 ## Spécifications
 

@@ -1,83 +1,91 @@
 ---
-title: Console.count()
+title: "console : méthode statique count()"
 slug: Web/API/console/count_static
-original_slug: Web/API/console/count
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-Affiche dans la console le nombre de fois où la fonction `count()` a été appelée. Cette fonction accepte l'argument optionnel `label`.
+La méthode **`console.count()`** affiche le nombre de fois que `count()` a été appelée (le compteur pouvat être identifié par l'argument passé à la méthode).
 
 {{AvailableInWorkers}}
 
-Si un `label` est passé en paramètre, la fonction affiche le nombre de fois où la fonction `count()` a été appelée pour ce `label` spécifiquempent.
+## Syntaxe
 
-Si aucun `label` est passé en paramètre, la fonction affiche le nombre de fois où la fonction `count()` a été appelée jusqu'à présent.
+```js-nolint
+count()
+count(libelle)
+```
 
-Ci-dessous, un exemple d'utilisation :
+### Paramètres
+
+- `libelle` {{Optional_Inline}}
+  - : Une chaîne de caractères. Si cet argument est fourni, `count()` affiche le nombre de fois qu'elle a été appelée avec ce libellé. Si cet argument est absent, `count()` se comporte comme si elle avait été appelée avec le libellé `"default"`.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+
+## Exemples
+
+Prneons le code suivant&nbsp;:
 
 ```js
-function greet() {
+let personne = "";
+
+function salutation() {
   console.count();
-  return "hi " + user;
+  return `Coucou ${personne}`;
 }
 
-var user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+personne = "bob";
+salutation();
+personne = "alice";
+salutation();
+salutation();
 console.count();
 ```
 
-La console affichera les lignes suivantes :
+L'affichage dans la console ressemblera à&nbsp;:
 
+```plain
+"default: 1"
+"default: 2"
+"default: 3"
+"default: 4"
 ```
-"<no label>: 1"
-"<no label>: 2"
-"<no label>: 3"
-"<no label>: 1"
-```
 
-A noter, la dernière ligne inscrite dans la console fait référence à l'appel de la fonction `count()` de la ligne 11 qui est traité comme un événement indépendant.
+On voit que le libellé affiché est `default`, car aucun libellé explicite n'a été fourni à `count()`.
 
-Si la variable `user` est passée à la fonction comme paramètre `label`, le code ci-dessous génèrera un nouveau compteur lorsque la variable `user` sera modifiée :
+Si on passe la variable `personne` comme argument pour le premier appel à `count()`, puis la chaîne de caractères `"alice"` lors du second appel&nbsp;:
 
 ```js
-function greet() {
-  console.count(user);
-  return "hi " + user;
+let personne = "";
+
+function salutation() {
+  console.count(personne);
+  return `Coucou ${personne}`;
 }
 
-var user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+personne = "bob";
+salutation();
+personne = "alice";
+salutation();
+salutation();
 console.count("alice");
 ```
 
-La console affichera les lignes suivantes :
+On obtiendra ce résultat&nbsp;:
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"
 "alice: 3"
 ```
 
-Nous obtenons maintenant deux compteurs distinct basés sur un libellé différent. L'appel de la fonction `count()` avec "alice" à la ligne 11 n'est pas considéré comme un événement indépendant car le compteur existe déjà.
-
-## Syntaxe
-
-```js
-console.count([label]);
-```
-
-## Paramètres
-
-- `label`
-  - : Une chaîne de caractères. Si ce paramètre est renseigné, `count()` affiche le nombre de fois que la fonction a été appelée jusqu'à présent avec ce libellé. S'il est omis, `count()` affiche le nombre de fois que la fonction a été appelée sur cette ligne.
+Et on peut ici compter le nombre d'appels en fonction du libellé passé en argument.
 
 ## Spécifications
 

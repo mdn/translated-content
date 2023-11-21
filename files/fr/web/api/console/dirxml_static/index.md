@@ -1,21 +1,28 @@
 ---
-title: Console.dirxml()
+title: "console : méthode statique dirxml()"
 slug: Web/API/console/dirxml_static
-original_slug: Web/API/console/dirxml
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef ("Console API")}}Affiche un arbre interactif des éléments descendants de l'élément XML / HTML spécifié. S'il n'est pas possible d'afficher en tant qu'élément, la vue Objet JavaScript est affichée à la place. La sortie est présentée sous la forme d'une liste hiérarchique des noeuds extensibles qui vous permettent de voir le contenu des nœuds enfants.
+{{APIRef("Console API")}}
+
+La méthode **`console.dirxml()`** affiche un arbre hiérarchique des éléments enfants de l'élément XML/HTML passé en argument. Si l'affichage sous la forme d'un élément n'est pas possible, l'argument est affiché comme un objet JavaScript.
 
 ## Syntaxe
 
-```js
-console.dirxml(object);
+```js-nolint
+dirxml(objet)
 ```
 
-## Paramètres
+### Paramètres
 
-- `object`
-  - : Un objet JavaScript dont les propriétés doivent être sorties.
+- `objet`
+  - : Un objet JavaScript dont on souhaite afficher les propriétés.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Spécifications
 
@@ -24,7 +31,3 @@ console.dirxml(object);
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Voir aussi
-
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

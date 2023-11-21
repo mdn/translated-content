@@ -1,22 +1,27 @@
 ---
-title: clear()
+title: "console : méthode statique clear()"
 slug: Web/API/console/clear_static
-original_slug: Web/API/console/clear
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-Vide la console.
-
-Tous les messages de la console seront supprimés et remplacés par un message de confirmation ("Console was cleared").
-
-À noter: sur Google Chrome, `console.clear()` n'a aucun effet si l'utilisateur a coché "Preserve log upon navigation" dans les [paramètres de l'inspecteur](https://developer.chrome.com/devtools/docs/settings#preserve-log%20upon%20navigation).
+La méthode **`console.clear()`** vide l'affichage de la console, si celle-ci le permet. Une console graphique, comme celle utilisée par les navigateurs, autorisera ce vidage, tandis qu'une console affichée dans un terminal (comme celle de Node.js), ne prendra pas en charge ce comportement et la méthode n'aura pas d'effet (et ne déclenchera pas d'erreur non plus).
 
 ## Syntaxe
 
-```js
-console.clear();
+```js-nolint
+clear()
 ```
+
+### Paramètres
+
+Aucune.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Spécifications
 
@@ -25,9 +30,3 @@ console.clear();
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Voir aussi
-
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/devtools/docs/console#assertions)

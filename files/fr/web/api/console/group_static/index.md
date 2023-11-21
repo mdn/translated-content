@@ -1,50 +1,56 @@
 ---
-title: Console.group()
+title: "console : méthode statique group()"
 slug: Web/API/console/group_static
-original_slug: Web/API/console/group
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-Création d'un nouveau groupe en ligne dans la [console Web](/fr/docs/Tools/Web_Console). Cela indente les messages de console suivants par un niveau supplémentaire, jusqu'à ce que {{domxref("console.groupEnd()")}} soit appelé.
+La méthode **`console.group()`** crée un nouveau groupe dans le journal affiché dans la console. Les messages affichés ensuite seront indentés d'un niveau jusqu'à ce que [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static) soit appelée.
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-```js
-console.group();
+```js-nolint
+group()
+group(libelle)
 ```
 
-## Paramètres
+### Paramètres
 
-- `label`
-  - : donne une étiquette au groupe. Facultatif. (Chrome 59 testé). Ne fonctionne pas avec `console.groupEnd()`.
+- `libelle` {{optional_inline}}
+  - : Un libellé pour identifier le groupe.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Exemples
 
-Vous pouvez utiliser des groupes imbriqués pour organiser votre sortie en associant visuellement les messages correspondants. Pour créer un nouveau bloc imbriqué, appelez `console.group ()`. La méthode `console.groupCollapsed ()` est similaire, mais le nouveau bloc est réduit et nécessite de cliquer sur un bouton de divulgation pour le lire.
+Vous pouvez utiliser des groupes imbriqués pour organiser l'affichage dans la console et regrouper les messages associés. Pour créer un nouveau bloc imbriqué, on appellera `console.group()`. La méthode [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupcollapsed_static) est similaire, mais produit un groupe replié par défaut (il faut cliquer sur le symbole de dépliage pour voir les messages).
 
-Pour sortir du groupe courant, appeler `console.groupEnd()`. Par exemple, étant donné ce code :
+Pour clôturer le groupe courant, on appellera [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static). Par exemple, si on a écrit&nbsp;:
 
 ```js
-console.log("This is the outer level");
+console.log("Il s'agit du niveau extérieur");
 console.group();
-console.log("Level 2");
+console.log("Niveau 2");
 console.group();
-console.log("Level 3");
-console.warn("More of level 3");
+console.log("Niveau 3");
+console.warn("Un avertissement au niveau 3");
 console.groupEnd();
-console.log("Back to level 2");
+console.log("Retour au niveau 2");
 console.groupEnd();
-console.log("Back to the outer level");
+console.log("Retour au niveau extérieur");
 ```
 
-La sortie ressemble à ceci :
+L'affichage dans la console ressemblera à ceci&nbsp;:
 
-![Une capture d'écran de messages imbriqués dans la sortie de la console.](nesting.png)
+![Une capture d'écran des messages imbriqués dans la sortie de la console.](nesting.png)
 
-Pour plus de détail, se reporter à l'article [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_console) dans la documentation sur la {{domxref("console")}}.
+Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/Console#utiliser_des_groupes_dans_la_console) pour plus de détails.
 
 ## Spécifications
 
@@ -56,4 +62,5 @@ Pour plus de détail, se reporter à l'article [Using groups in the console](/fr
 
 ## Voir aussi
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static)
+- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupcollapsed_static)

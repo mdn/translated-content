@@ -1,27 +1,32 @@
 ---
-title: Console.timeStamp()
+title: "console : méthode statique timeStamp()"
 slug: Web/API/console/timestamp_static
-original_slug: Web/API/console/timeStamp
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-Ajoute un seul marqueur à l'outil [Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference) ou [Waterfall](/fr/docs/Outils/Performance/Waterfall) du navigateur. Cela vous permet de corréler un point de votre code avec les autres événements enregistrés dans la chronologie, tels que les événements de mise en page et de peinture.
+La méthode **`console.timeStamp()`** permet d'ajouter un marqueur de performance pour l'outil de mesure des performance du navigateur ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)). Cela permet de dresser des corrélations entre un moment dans le code et d'autres évènements mesurés dans la chronologie (comme ceux relatifs à la disposition ou au rendu à l'écran).
 
-Vous pouvez éventuellement fournir un argument pour étiqueter l'horodatage, et cette étiquette sera ensuite affichée à côté du marqueur.
+Un argument optionnel permet de fournir un libellé pour le marqueur.
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-```js
-console.timeStamp(label);
+```js-nolint
+timeStamp(libelle)
 ```
 
-## Paramètres
+### Paramètres
 
-- `label`
-  - : Étiquette pour l'horodatage. Facultatif.
+- `libelle` {{optional_inline}}
+  - : Un libellé à utiliser pour le marqueur d'horodatage.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Compatibilité des navigateurs
 
@@ -29,6 +34,6 @@ console.timeStamp(label);
 
 ## Voir aussi
 
-- {{domxref("Console.time()")}}
-- {{domxref("Console.timeEnd()")}}
-- [Ajout d'un marqueur de temps pour le Waterfall](/fr/docs/Outils/Performance/Waterfall#Marqueurs_de_temps)
+- [`console.time()`](/fr/docs/Web/API/console/time_static)
+- [`console.timeLog()`](/fr/docs/Web/API/console/timelog_static)
+- [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static)

@@ -1,29 +1,34 @@
 ---
-title: Console.profile()
+title: "console : méthode statique profile()"
 slug: Web/API/console/profile_static
-original_slug: Web/API/console/profile
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-Commence l'enregistrement d'un profil de performance (par exemple, l'outil [performance de Firefox](/fr/docs/Outils/Performance)).
+La méthode **`console.profile()`** démarre l'enregistrement d'un profil de performance.
 
-Vous pouvez éventuellement fournir un argument pour nommer le profil, ce qui vous permet d'arrêter uniquement ce profil si plusieurs profils sont enregistrés. Voir {{domxref("Console.profileEnd()")}} pour voir comment cet argument est interprété.
+On peut fournir un argument indiquant le nom du profil, ce qui permet d'enregistrer plusieurs profils nommés en parallèle. Voir la documentation de [`console.profileEnd()`](/fr/docs/Web/API/console/profileend_static) pour plus d'informations sur cet argument.
 
-Pour arrêter l'enregistrement, appeler {{domxref("Console.profileEnd()")}}.
+Pour arrêter l'enregistrement du profil, on appellera [`console.profileEnd()`](/fr/docs/Web/API/console/profileend_static).
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-```js
-console.profile(profileName);
+```js-nolint
+profile(nomProfil)
 ```
 
-## Paramètres
+### Paramètres
 
-- `profileName`
-  - : Le nom à donner au profil. Facultatif.
+- `nomProfil` {{optional_inline}}
+  - : Le nom à donner au profil.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Compatibilité des navigateurs
 
@@ -31,4 +36,4 @@ console.profile(profileName);
 
 ## Voir aussi
 
-- {{domxref("Console.profileEnd()")}}
+- [`console.profileEnd()`](/fr/docs/Web/API/console/profileend_static)

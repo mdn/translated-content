@@ -1,29 +1,35 @@
 ---
-title: Console.groupCollapsed()
+title: "console : méthode statique groupCollapsed()"
 slug: Web/API/console/groupcollapsed_static
-original_slug: Web/API/console/groupCollapsed
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-Crée un nouveau groupe intégré dans la console Web. Contrairement à {{domxref ("console.group ()")}}, le nouveau groupe est créé réduit. L'utilisateur devra utiliser le bouton de divulgation à côté pour le développer, en révélant les entrées créées dans le groupe.
+La méthode **`console.groupCollapsed()`** crée un nouveau groupe dans le journal affiché dans la console. À la différence de [`console.group()`](/fr/docs/Web/API/console/group_static), le groupe créé ici est replié. La personne devra utiliser l'icône de dépliage pour révéler les informations du groupe.
 
-Appellez {{domxref("console.groupEnd()")}} pour revenir au groupe parent.
+Il faudra appeler [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static) pour fermer le groupe courant et revenir au niveau du groupe parent.
 
-Voir [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_console) dans la documentation de {{domxref("console")}} pour plus de détails et des exemples.
+Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/Console#utiliser_des_groupes_dans_la_console) pour plus de détails et d'exemples.
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-```js
-console.groupCollapsed([label]);
+```js-nolint
+groupCollapsed()
+groupCollapsed(libelle)
 ```
 
-## Paramètres
+### Paramètres
 
-- `label`
-  - : Étiquette pour le groupe. Facultatif.
+- `libelle` {{optional_inline}}
+  - : Un libellé identifiant le groupe courant.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Spécifications
 
@@ -35,4 +41,5 @@ console.groupCollapsed([label]);
 
 ## Voir aussi
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [`console.group()`](/fr/docs/Web/API/console/group_static)
+- [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static)

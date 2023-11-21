@@ -1,36 +1,39 @@
 ---
-title: console.error()
+title: "console : méthode statique error()"
 slug: Web/API/console/error_static
-original_slug: Web/API/console/error
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
 
-Affiche un message d'erreur dans la console du navigateur.
+La méthode **`console.error()`** permet d'afficher un message d'erreur dans la console.
 
 {{AvailableInWorkers}}
 
 ## Syntaxe
 
-```js
-console.error(obj1 [, obj2, ..., objN]);
-console.error(msg [, subst1, ..., substN]);
-console.exception(obj1 [, obj2, ..., objN]);
-console.exception(msg [, subst1, ..., substN]);
+```js-nolint
+error(obj1)
+error(obj1, /* …, */ objN)
+error(msg)
+error(msg, subst1, /* …, */ substN)
 ```
-
-> **Note :** `console.exception()` est un alias de `console.error()`; ils sont fonctionnellement identiques.
 
 ### Paramètres
 
-- `obj1` ... `objN`
-  - : Une liste d'objets JavaScript à afficher. La représentation, en chaîne de caractéres, de chacun de ces objets est affichée dans l'ordre de la liste.
+- `obj1` … `objN`
+  - : Une liste d'objets JavaScript à afficher. Les représentations en chaînes de caractères de ces objets sont concaténés dans l'ordre et affichés dans la console.
 - `msg`
-  - : Une chaîne de caractères JavaScript contenant zéro ou plusieurs subdivisions de chaîne de caractères.
-- `subst1` ... `substN`
-  - : Une liste d'objets JavaScript qui remplace les chaînes de caractéres de `msg`. Cela vous donne plus de contrôle sur le format de sortie.
+  - : Une chaîne de caractères JavaScript qui contient zéro ou plusieurs chaînes de substitution qui seront remplacées par `subst1` … `substN` dans l'ordre.
+- `subst1` … `substN`
+  - : Des objets JavaScript avec lesquels remplacer les chaînes de substitution dans `msg`. Ce paramètre permet un contrôle supplémentaire sur le format de ce qui est affiché. Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_les_caractères_de_substitution) pour plus de détails.
 
-Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{domxref("console")}} pour plus de détails.
+Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#afficher_du_texte_dans_la_console) pour plus de détails.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Spécifications
 
@@ -42,6 +45,5 @@ Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_tex
 
 ## Voir aussi
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developers.google.com/chrome-developer-tools/docs/console#errors_and_warnings)
+- [La documentation Edge sur `console.error()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#error)
+- [La documentation Chrome sur `console.error()`](https://developer.chrome.com/docs/devtools/console/api/#error)

@@ -1,71 +1,98 @@
 ---
-title: Console.timeLog()
+title: "console : méthode statique timeLog()"
 slug: Web/API/console/timelog_static
-original_slug: Web/API/console/timeLog
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}}{{AvailableInWorkers}}
 
-Affiche dans la console la valeur actuelle d'un timer précédemment appelé par {{domxref("console.time()")}}
-
-Voir [Timers](/fr/docs/Web/API/console#Timers) dans la documentation pour des exemples et plus de détails
-
-{{AvailableInWorkers}}
+La méthode **`console.timeLog()`** affiche la valeur courante du chronomètre précédemment démarré par un appel à [`console.time()`](/fr/docs/Web/API/console/time_static).
 
 ## Syntaxe
 
-```js
-console.timeLog(label);
+```js-nolint
+timeLog()
+timeLog(libelle)
+timeLog(libelle, val1)
+timeLog(libelle, val1, /* …, */ valN)
 ```
 
 ### Paramètres
 
-- `label`
-  - : Le nom du timer à afficher sur la console
+- `libelle` {{optional_inline}}
+  - : Le nom du chronomètre dont on souhaite afficher la mesure dans la console. Si cet argument est absent, c'est le libellé `"default"` qui est utilisé.
+- `valN` {{optional_inline}}
+  - : Des valeurs additionnelels à afficher dans la console après la mesure temporelle.
 
 ### Valeur de retour
 
-Si aucun label n'est inclus
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
-```
-default: 1042ms
-```
+## Description
 
-Si un `label` est inclus:
+La méthode `console.timeLog()` affiche la durée mesurée jusqu'à présent pour un chronomètre.
 
-```
-timer name: 1242ms
-```
+On peut passer un nom comme argument à cette méthode, ce sera alors la durée du chronomètre (précédemment créé avec un appel à [`console.time()`](/fr/docs/Web/API/console/time_static)) avec ce nom qui sera affichée&nbsp;:
 
-### Exceptions
-
-Si aucun timer n'est en cours d'éxecution, `timeLog()` retourne l'avertissement suivant :
-
-```
-Timer “default” doesn’t exist.
+```js
+console.time("réticulateur de spleens");
+reticulerLesSpleens();
+console.timeLog("réticulateur de spleens");
+// réticulateur de spleens : 650ms
 ```
 
-Si le paramètre label est spécifé mais aucun timer n'y correspond :
+Si le nom n'est pas fourni, ce sera la durée du chronomètre par défaut qui sera affiché&nbsp;:
 
+```js
+console.time();
+reticulerLesSpleens();
+console.timeLog();
+// default : 780ms
 ```
-Timer “timer name” doesn’t exist.
+
+```js
+console.time("default");
+reticulerLesSpleens();
+console.timeLog();
+// default : 780ms
 ```
+
+S'il n'y a pas de chronomètre associé existant, `timeLog()` affichera un avertissement&nbsp;:
+
+```plain
+Le minuteur « nom du chronomètre » n'existe pas.
+```
+
+On peut aussi fournir des valeurs supplémentaires, à afficher après la durée&nbsp;:
+
+```js
+console.time();
+reticulerLesSpleens();
+console.timeLog("default", "Coucou", "monde");
+// default : 780ms Coucou monde
+```
+
+Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronométrage) pour plus de détails et d'exemples.
 
 ## Exemples
 
 ```js
-console.time("answer time");
-alert("Click to continue");
-console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
-console.timeEnd("answer time");
+console.time("ma mesure de temps");
+alert("Cliquez pour continuer");
+console.timeLog("ma mesure de temps");
+alert("Faire d'autres trucs…");
+console.timeEnd("ma mesure de temps");
 ```
 
-Le résultat de l'exemple ci-dessus montre le temps qu'a mis l'utilisateur à fermer la première pop-up d'alerte, puis le temps que l'utilisateur a pris pour fermer la seconde :
+Avec le fragment de code ci-avant, on affichera le temps écoulé après que la personne a fermé la première fenêtre modale, puis le temps total pris pour fermer les deux fenêtres&nbsp;:
 
-![](timer_output.png)
+```plain
+ma mesure de temps : 1287 ms
+ma mesure de temps : 2808 ms - chronomètre arrêté
+```
 
-Notez que le nom du timer est à la fois affiché lorsque la valeur est affichée par `timeLog()` et lorsque le timer est arrêté
+On notera que le nom du chronomètre est affiché avec la durée lors de l'appel à `timeLog()`, puis lors de l'arrêt. Quand on appelle `timeEnd()`, on a en plus le message «&nbsp;chronomètre arrêté&nbsp;» qui précise que le chronomètre est terminé.
 
 ## Spécifications
 
@@ -77,4 +104,5 @@ Notez que le nom du timer est à la fois affiché lorsque la valeur est affiché
 
 ## Voir aussi
 
-- [Documentation d'Opera Dragonfly: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [`console.time()`](/fr/docs/Web/API/console/time_static)
+- [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static)

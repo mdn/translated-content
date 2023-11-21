@@ -1,7 +1,8 @@
 ---
-title: "console : méthode table()"
+title: "console : méthode statique table()"
 slug: Web/API/console/table_static
-original_slug: Web/API/console/table
+l10n:
+  sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
 
 {{APIRef("Console API")}}
