@@ -2,14 +2,14 @@
 title: 键盘导航的 JavaScript 微件
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 l10n:
-  sourceCommit: d498fb827ff0f62c71bfcce764f53b8fabe3b230
+  sourceCommit: 02e06e701230eb5c67caa00fc8d09604a07d5734
 ---
 
 <section id="Quick_links">
   {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
 </section>
 
-网页应用经常使用 JavaScript 来模拟桌面组件，比如菜单、树状视图、富文本以及标签面板等。网页中这些组件通常是由 {{ HTMLElement("div") }} 和 {{ HTMLElement("span") }} 等元素组合而成，并不是原生的，也不会提供对应的桌面组件所拥有的键盘功能。本文档主要描述能让 JavaScript 组件使用键盘访问的技术。
+网页应用经常使用 JavaScript 来模拟桌面组件，比如菜单、树状视图、富文本以及标签面板等。网页中这些微件通常是由 {{ HTMLElement("div") }} 和 {{ HTMLElement("span") }} 等元素组合而成，并不是原生的，也不会提供对应的桌面组件所拥有的键盘功能。本文档主要描述能让 JavaScript 微件使用键盘访问的技术。
 
 ## 利用 tabindex
 
@@ -68,9 +68,9 @@ l10n:
 
 ### 组合控件
 
-对于菜单、选项卡列表、网格或树状视图等分组部件，父元素应处于选项卡顺序中（`tabindex="0"`），而每个子选项/选项卡/单元格/行都应从选项卡顺序中移除（`tabindex="-1"`）。用户应能使用箭头键浏览后代元素。（有关典型窗口小部件通常需要的键盘支持的完整描述，请参阅 [WAI-ARIA 创作实践](https://www.w3.org/WAI/ARIA/apg/)）。
+对于菜单、选项卡列表、网格或树状视图等组合微件，父元素应处于选项卡顺序中（`tabindex="0"`），而每个子选项/选项卡/单元格/行都应从选项卡顺序中移除（`tabindex="-1"`）。用户应能使用箭头键浏览后代元素。（有关典型窗口微件通常需要的键盘支持的完整描述，请参阅 [WAI-ARIA 创作实践](https://www.w3.org/WAI/ARIA/apg/)）。
 
-下面的示例展示了这种技术在嵌套菜单控件中的应用。一旦键盘焦点落在包含 {{ HTMLElement("ul") }} 的元素上，JavaScript 开发人员就必须以编程方式管理焦点并响应箭头键。有关在部件内管理焦点的技术，请参阅下面的“在组内管理焦点”。
+下面的示例展示了这种技术在嵌套菜单控件中的应用。一旦键盘焦点落在包含 {{ HTMLElement("ul") }} 的元素上，JavaScript 开发人员就必须以编程方式管理焦点并响应箭头键。有关在微件内管理焦点的技术，请参阅下面的“在组内管理焦点”。
 
 ```html
 <ul id="mb1" tabindex="0">
@@ -105,18 +105,18 @@ l10n:
 
 #### 被禁用的控件
 
-当一个自定义控件变成禁用（disabled）状态时，通过设置 `tabindex="-1"` 把它从 tab 序列里面移除。请注意，分组 widget 中禁用的项目（如菜单中的菜单项）仍可使用箭头键导航。
+当一个自定义控件变成禁用（disabled）状态时，通过设置 `tabindex="-1"` 把它从 tab 序列里面移除。请注意，组合微件中禁用的项目（如菜单中的菜单项）仍可使用箭头键导航。
 
 ## 在组合控件里面管理焦点
 
-当用户从一个组件 tab 离开之后 focus 回来，焦点应该回到离开之时正被 focus 中的元素上，比如某个树节点或者网格单元。有两种办法完成这一点：
+当用户从一个微件 tab 离开之后聚焦回来，焦点应该回到离开之时正被聚焦的元素上，比如某个树节点或者网格单元。有两种办法完成这一点：
 
-1. 流动 `tabindex`: 通过编程移动 focus
-2. `aria-activedescendent`: 管理一个“虚拟”focus
+1. 流动 `tabindex`: 通过编程移动焦点
+2. `aria-activedescendent`: 管理一个“虚拟”焦点
 
 ### 方法 1：流动 tabindex
 
-在被聚焦的元素上设置 `tabindex` 为“0”，这样可以保证在用户在 tab 离开又返回后仍然选中组合组件中之前被选中的那项。注意在更改 `tabindex` 为“0”同时需要把之前选中过的那项设置 `tabindex="-1"`。这个方法包含在键盘事件里面通过程序移动焦点以及更改 `tabindex` 到当前焦点中的那项上。需要做以下几步：
+在被聚焦的元素上设置 `tabindex` 为“0”，这样可以保证在用户在 tab 离开又返回后仍然选中组合微件中之前被选中的那项。注意在更改 `tabindex` 为“0”同时需要把之前选中过的那项设置 `tabindex="-1"`。这个方法包含在键盘事件里面通过程序移动焦点以及更改 `tabindex` 到当前焦点中的那项上。需要做以下几步：
 
 在每个元素上绑定 key down 事件，当捕捉到控制移动到另外元素的方向键时：
 
@@ -140,7 +140,7 @@ l10n:
 
 ### 方法 2：`aria-activedescendant`
 
-这个办法包含绑定一个单独的事件句柄到容器窗口组件上，运用 `aria-activedescendent` 属性来追踪一个“虚拟”焦点。（关于 ARIA 更多的信息，查看[无障碍的 Web 应用程序和组件概述](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)。）
+这个办法包含绑定一个单独的事件句柄到容器窗口微件上，运用 `aria-activedescendent` 属性来追踪一个“虚拟”焦点。（关于 ARIA 更多的信息，查看[无障碍的 Web 应用程序和微件概述](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)。）
 
 `aria-activedescendant` 属性标识当前具有虚拟焦点的后代元素的 ID。容器上的事件处理程序必须通过更新 `aria-activedescendant` 属性的值来响应按键和鼠标事件，并确保当前项目的样式适当（例如，使用边框或背景色）。
 
@@ -164,7 +164,7 @@ IE 不会触发非字母数字键的 `keypress` 事件。使用 `onkeydown` 替�
 
 ### 阻止浏览器的按键事件处理
 
-如果你用自己的插件处理按键事件，可以通过事件处理程序的返回值来阻止浏览器的缺省处理（例如，响应方向键的滚动）。如果你的事件处理程序返回 `false`，事件就不会传播到处理程序之外。
+如果你用自己的微件处理按键事件，可以通过事件处理程序的返回值来阻止浏览器的缺省处理（例如，响应方向键的滚动）。如果你的事件处理程序返回 `false`，事件就不会传播到处理程序之外。
 
 例如：
 
