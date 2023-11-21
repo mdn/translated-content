@@ -169,7 +169,6 @@ slug: Web/API/Document_Object_Model
 
 ### 棄用的 HTML 介面
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG 介面
