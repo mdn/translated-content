@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate_static
-original_slug: WebAssembly/JavaScript_interface/validate
 ---
 
 {{WebAssemblySidebar}}
@@ -42,15 +41,15 @@ fetch("simple.wasm")
   });
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [WebAssembly](/zh-CN/docs/WebAssembly) overview page
 - [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
