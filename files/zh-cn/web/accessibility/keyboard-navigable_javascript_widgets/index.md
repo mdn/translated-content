@@ -1,5 +1,5 @@
 ---
-title: 键盘导航的 JavaScript 组件
+title: 键盘导航的 JavaScript 微件
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 l10n:
   sourceCommit: d498fb827ff0f62c71bfcce764f53b8fabe3b230
@@ -48,7 +48,7 @@ l10n:
     <tr>
       <td>零（也就是说，<code>tabindex="0"</code>）</td>
       <td>是</td>
-      <td>相对于元素在文档中的位置，以 tab 顺序排列（请注意，交互式元素如 {{HTMLElement('a')}}} 默认具有这种行为，它们不需要该属性）。</td>
+      <td>相对于元素在文档中的位置，以 tab 顺序排列（请注意，交互式元素如 {{HTMLElement('a')}} 默认具有这种行为，它们不需要该属性）。</td>
     </tr>
     <tr>
       <td>正值（如 <code>tabindex="33"</code>）</td>
@@ -68,7 +68,7 @@ l10n:
 
 ### 组合控件
 
-对于菜单、选项卡列表、网格或树状视图等分组部件，父元素应处于选项卡顺序中（`tabindex="0"`），而每个子选项/选项卡/单元格/行都应从选项卡顺序中移除（`tabindex="-1"`）。用户应能使用箭头键浏览后代元素。（有关典型窗口小部件通常需要的键盘支持的完整描述，请参阅 [WAI-ARIA 创作实践](https://www.w3.org/TR/wai-aria-practices-1.1/)）。
+对于菜单、选项卡列表、网格或树状视图等分组部件，父元素应处于选项卡顺序中（`tabindex="0"`），而每个子选项/选项卡/单元格/行都应从选项卡顺序中移除（`tabindex="-1"`）。用户应能使用箭头键浏览后代元素。（有关典型窗口小部件通常需要的键盘支持的完整描述，请参阅 [WAI-ARIA 创作实践](https://www.w3.org/WAI/ARIA/apg/)）。
 
 下面的示例展示了这种技术在嵌套菜单控件中的应用。一旦键盘焦点落在包含 {{ HTMLElement("ul") }} 的元素上，JavaScript 开发人员就必须以编程方式管理焦点并响应箭头键。有关在部件内管理焦点的技术，请参阅下面的“在组内管理焦点”。
 
