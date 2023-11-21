@@ -3,6 +3,8 @@ title: AJAX
 slug: Glossary/AJAX
 ---
 
+{{GlossarySidebar}}
+
 **AJAX** (Asynchronous {{Glossary("JavaScript")}} And {{Glossary("XML")}}) は、 {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}} として知られる技術を用いて、より複雑で動的なウェブページを構築するプログラミング手法のことです。
 
 AJAX によって、ウェブページ全体を再読み込みせずに、 {{Glossary("HTML")}} ページの {{Glossary("DOM")}} の一部分を更新することができます。 AJAX は非同期処理も可能です。つまり、ウェブページのある部分を再読み込みしようとする間もコードは実行され続けます (ウェブページのある部分の再読み込みが終わるまでコードの実行がブロックされる同期処理と比べて)。

@@ -28,7 +28,7 @@ slug: Web/API/File_System_API
 
 ### 源私有文件系统
 
-[源私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（origin private file system，OPFS）属于文件系统 API，提供了页面所属的源专用的存储端点，并且像常规文件系统一样对用户不可见。它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地写入访问。
+源私有文件系统（origin private file system，OPFS）属于文件系统 API，提供了页面所属的源专用的存储端点，并且不像常规文件系统那样对用户可见。它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地写入访问。
 
 请阅读我们的[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)，以了解如何使用它。
 

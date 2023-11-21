@@ -53,17 +53,17 @@ defaultValue =
 
 Смотрите [управление диапазоном с помощью решётки](/ru/docs/Web/HTML/Element/Input/range#A_range_control_with_hash_marks) ниже, для примера того, как параметры диапазона обозначаются в поддерживаемых браузерах.
 
-### {{htmlattrdef("max")}}
+### `max`
 
 Это значение должно быть больше или равно значению атрибута `min`.
 
-### {{htmlattrdef("min")}}
+### `min`
 
 Наименьшее значение в диапазоне допустимых значений. Если [`value`](/ru/docs/Web/HTML/Element/input#value), введённый в элемент, меньше этого значения, то элемент не проходит [проверку ограничения](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). Если значение атрибута `min` не является числом, то элемент не имеет максимального значения.
 
 Это значение должно быть меньше или равно значению атрибута `max`.
 
-### {{htmlattrdef("step")}}
+### `step`
 
 {{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}
 
@@ -75,7 +75,7 @@ defaultValue =
 | ------------------- | ---------------------------------------------------- |
 | [`orient`](#orient) | Устанавливает ориентацию слайдера. **Firefox only.** |
 
-- {{htmlattrdef("orient")}} {{non-standard_inline}}
+- `orient` {{non-standard_inline}}
   - : Похоже на -moz-orient не стандартное CSS-свойство влияющее на {{htmlelement('progress')}} и{{htmlelement('meter')}} элементы, `orient` атрибут определяем ориентацию слайдера. Значение `horizontal`, значит что слайдер будет отображён горизонтально, а `vertical`- что вертикально .
 
 > **Примечание:** Note: Следующие атрибуты не применимы: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, и `width`. Каждый из них будет проигнорирован в случае употребления.
