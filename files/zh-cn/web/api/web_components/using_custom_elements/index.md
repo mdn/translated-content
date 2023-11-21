@@ -272,7 +272,7 @@ class PopupInfo extends HTMLElement {
 
 类定义包含类的 [`constructor()`](/docs/Web/JavaScript/Reference/Classes/constructor) 方法，该方法始终以调用 [`super()`](/docs/Web/JavaScript/Reference/Operators/super) 开始，以便正确建立原型链。
 
-在 `connectedCallback()` 方法内部，我们定义了元素连接到 DOM 时元素将具有的所有功能。在这种情况下，我们将一个 shadow root 附加到自定义元素，使用一些 DOM 操作来创建元素的 shadow DOM 结构——然后将其附加到 shadow root——最后将一些CSS附加到 shadow root 以进行样式设置。我们不在构造函数中执行这项工作，因为在连接到 DOM之前，元素的属性是不可用的。
+在 `connectedCallback()` 方法内部，我们定义了元素连接到 DOM 时元素将具有的所有功能。在这种情况下，我们将一个 shadow root 附加到自定义元素，使用一些 DOM 操作来创建元素的 shadow DOM 结构——然后将其附加到 shadow root——最后将一些 CSS 附加到 shadow root 以进行样式设置。我们不在构造函数中执行这项工作，因为在连接到 DOM 之前，元素的属性是不可用的。
 
 最后，我们使用前面提到的 `define()` 方法在 `CustomElementRegistry` 中注册我们的自定义元素 —— 在参数中，我们指定元素名称，然后是定义其功能的类名称：
 
