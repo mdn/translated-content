@@ -5,7 +5,7 @@ slug: Web/API/Web_components/Using_custom_elements
 
 {{DefaultAPISidebar("Web Components")}}
 
-web components 的一个关键特性是创建 _自定义元素_：即由 Web 开发人员定义行为的 HTML 元素，扩展了浏览器中可用的元素集。
+web components 的一个关键特性是创建*自定义元素*：即由 Web 开发人员定义行为的 HTML 元素，扩展了浏览器中可用的元素集。
 
 这篇文章介绍了自定义元素，并通过一些示例进行了详细说明。
 
@@ -14,11 +14,11 @@ web components 的一个关键特性是创建 _自定义元素_：即由 Web 开
 有两种类型的自定义元素：
 
 - **Customized built-in elements** 继承自标准的HTML元素，例如 {{domxref("HTMLImageElement")}} 或 {{domxref("HTMLParagraphElement")}}。它们的实现定制了标准元素的行为。
-- **Autonomous custom elements** 继承自HTML元素基类 {{domxref("HTMLElement")}}。您必须从头开始实现它们的行为。
+- **Autonomous custom elements** 继承自HTML元素基类 {{domxref("HTMLElement")}}。你必须从头开始实现它们的行为。
 
 ## 实现自定义元素
 
-自定义元素作为一个[类](/docs/Web/JavaScript/Reference/Classes)来实现，该类可以扩展 {{domxref("HTMLElement")}}（对于 autonomous elements）或者您想要定制的接口（对于 customized built-in elements）。
+自定义元素作为一个[类](/docs/Web/JavaScript/Reference/Classes)来实现，该类可以扩展 {{domxref("HTMLElement")}}（对于 autonomous elements）或者你想要定制的接口（对于 customized built-in elements）。
 
 以下是一个最小自定义元素的实现示例，该元素定制了 {{HTMLElement("p")}} 元素：
 
@@ -42,11 +42,11 @@ class PopupInfo extends HTMLElement {
 }
 ```
 
-在类的[构造函数](/docs/Web/JavaScript/Reference/Classes/constructor)中，您可以设置初始状态和默认值，注册事件侦听器，甚至创建一个 shadow root。在此处，您不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅 [Requirements for custom element constructors and reactions](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
+在类的[构造函数](/docs/Web/JavaScript/Reference/Classes/constructor)中，你可以设置初始状态和默认值，注册事件侦听器，甚至创建一个 shadow root。在此处，你不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅 [Requirements for custom element constructors and reactions](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
 
 ### 自定义元素生命周期回调
 
-一旦您的自定义元素被注册，当页面中的代码以特定方式与您的自定义元素交互时，浏览器将调用您的类的某些方法。通过提供这些方法的实现，规范称之为 _生命周期回调_，您可以运行代码来响应这些事件。
+一旦你的自定义元素被注册，当页面中的代码以特定方式与你的自定义元素交互时，浏览器将调用你的类的某些方法。通过提供这些方法的实现，规范称之为*生命周期回调*，你可以运行代码来响应这些事件。
 
 自定义元素生命周期回调包括：
 
@@ -99,7 +99,7 @@ customElements.define("my-custom-element", MyCustomElement);
   - : 自定义元素的构造函数。
 - `options`
   - : 仅对于 customized built-in elements，这是一个包含单个属性 `extends` 的对象，该属性是一个字符串，命名了要扩展的内置元素。
-  
+
 例如，以下代码注册了名为 `WordCount` 的 customized built-in element：
 
 ```js
@@ -114,7 +114,7 @@ customElements.define("popup-info", PopupInfo);
 
 ## 使用自定义元素
 
-一旦您定义并注册了自定义元素，就可以在代码中使用它。
+一旦你定义并注册了自定义元素，就可以在代码中使用它。
 
 要使用 customized built-in element，请使用内置元素，但将自定义名称作为 [`is`](/docs/Web/HTML/Global_attributes/is) 属性的值：
 
@@ -174,9 +174,9 @@ customElements.define("my-custom-element", MyCustomElement);
 
 有关使用 `attributeChangedCallback()` 的完整示例，请参阅本页面中的[生命周期回调](#生命周期回调)。
 
-## 例子
+## 示例
 
-在本指南的其余部分，我们将看一些示例自定义元素。您可以在 [web-components-examples](https://github.com/mdn/web-components-examples) 存储库中找到所有这些示例的源代码，以及更多示例，并且您可以在 <https://mdn.github.io/web-components-examples/> 上实时查看它们。
+在本指南的其余部分，我们将看一些示例自定义元素。你可以在 [web-components-examples](https://github.com/mdn/web-components-examples) 存储库中找到所有这些示例的源代码，以及更多示例，并且你可以在 <https://mdn.github.io/web-components-examples/> 上实时查看它们。
 
 ### 一个 autonomous custom element
 
@@ -272,7 +272,7 @@ class PopupInfo extends HTMLElement {
 
 类定义包含类的 [`constructor()`](/docs/Web/JavaScript/Reference/Classes/constructor) 方法，该方法始终以调用 [`super()`](/docs/Web/JavaScript/Reference/Operators/super) 开始，以便正确建立原型链。
 
-在 `connectedCallback()` 方法内部，我们定义了元素连接到 DOM 时元素将具有的所有功能。在这种情况下，我们将一个 shadow root 附加到自定义元素，使用一些 DOM 操作来创建元素的 shadow DOM 结构 —— 然后将其附加到 shadow root —— 最后将一些CSS附加到 shadow root 以进行样式设置。我们不在构造函数中执行这项工作，因为在连接到 DOM之前，元素的属性是不可用的。
+在 `connectedCallback()` 方法内部，我们定义了元素连接到 DOM 时元素将具有的所有功能。在这种情况下，我们将一个 shadow root 附加到自定义元素，使用一些 DOM 操作来创建元素的 shadow DOM 结构——然后将其附加到 shadow root——最后将一些CSS附加到 shadow root 以进行样式设置。我们不在构造函数中执行这项工作，因为在连接到 DOM之前，元素的属性是不可用的。
 
 最后，我们使用前面提到的 `define()` 方法在 `CustomElementRegistry` 中注册我们的自定义元素 —— 在参数中，我们指定元素名称，然后是定义其功能的类名称：
 
@@ -292,7 +292,7 @@ customElements.define("popup-info", PopupInfo);
 
 ### 引用外部样式
 
-在上面的示例中，我们使用 {{htmlelement("style")}} 元素为 shadow DOM 应用样式，但您也可以从 {{htmlelement("link")}} 元素引用外部样式表。在此示例中，我们将修改 `<popup-info>` 自定义元素以使用外部样式表。
+在上面的示例中，我们使用 {{htmlelement("style")}} 元素为 shadow DOM 应用样式，但你也可以从 {{htmlelement("link")}} 元素引用外部样式表。在此示例中，我们将修改 `<popup-info>` 自定义元素以使用外部样式表。
 
 - [查看在线示例](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/)
 - [查看源代码](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-external-stylesheet/)
@@ -445,7 +445,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 </ul>
 ```
 
-您使用 `<ul>` 元素与往常一样，但在 `is` 属性内指定自定义元素的名称。
+你使用 `<ul>` 元素与往常一样，但在 `is` 属性内指定自定义元素的名称。
 
 请注意，在这种情况下，我们必须确保定义自定义元素的脚本在 `DOM` 完全解析后执行，因为 `connectedCallback()` 在展开的列表被添加到 DOM 时就会被调用，而此时其子元素尚未添加，因此 `querySelectorAll()` 调用将找不到任何项。确保这一点的一种方法是在包含脚本的行上添加 [`defer`](/docs/Web/HTML/Element/script#defer) 属性：
 
@@ -476,7 +476,7 @@ constructor() {
 }
 ```
 
-这个示例的关键函数是 `updateStyle()` —— 它接受一个元素，获取其 shadow root，找到它的 `<style>` 元素，然后添加 {{cssxref("width")}}, {{cssxref("height")}}, 和 {{cssxref("background-color")}} 到样式上。
+这个示例的关键函数是 `updateStyle()`——它接受一个元素，获取其 shadow root，找到它的 `<style>` 元素，然后添加 {{cssxref("width")}}、{{cssxref("height")}} 和 {{cssxref("background-color")}} 到样式上。
 
 ```js
 function updateStyle(elem) {
@@ -491,7 +491,7 @@ function updateStyle(elem) {
 }
 ```
 
-实际的更新都是由生命周期回调处理的。`connectedCallback()` 每次将元素添加到 DOM 时都会运行一次 —— 在这里，我们运行 `updateStyle()` 函数，以确保正方形的样式与其属性中定义的一致：
+实际的更新都是由生命周期回调处理的。`connectedCallback()` 每次将元素添加到 DOM 时都会运行一次——在这里，我们运行 `updateStyle()` 函数，以确保正方形的样式与其属性中定义的一致：
 
 ```js
 connectedCallback() {
@@ -512,7 +512,7 @@ adoptedCallback() {
 }
 ```
 
-`attributeChangedCallback()` 回调在元素的属性以某种方式更改时运行。正如您从其参数中看到的那样，可以单独处理属性，查看它们的名称以及旧的和新的属性值。不过在这种情况下，我们只是再次运行 `updateStyle()` 函数，以确保正方形的样式根据新的值更新：
+`attributeChangedCallback()` 回调在元素的属性以某种方式更改时运行。正如你从其参数中看到的那样，可以单独处理属性，查看它们的名称以及旧的和新的属性值。不过在这种情况下，我们只是再次运行 `updateStyle()` 函数，以确保正方形的样式根据新的值更新：
 
 ```js
 attributeChangedCallback(name, oldValue, newValue) {
@@ -521,7 +521,7 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 ```
 
-请注意，要在属性更改时触发 `attributeChangedCallback()` 回调，必须观察这些属性。这通过在自定义元素类内指定一个 `static get observedAttributes()` 方法来实现 —— 该方法应返回一个包含要观察的属性名称的数组：
+请注意，要在属性更改时触发 `attributeChangedCallback()` 回调，必须观察这些属性。这通过在自定义元素类内指定一个 `static get observedAttributes()` 方法来实现——该方法应返回一个包含要观察的属性名称的数组：
 
 ```js
 static get observedAttributes() {
