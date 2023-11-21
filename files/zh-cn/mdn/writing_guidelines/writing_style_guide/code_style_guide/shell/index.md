@@ -16,7 +16,7 @@ shell 是一个等待你输入命令然后按回车键的程序。为了指明�
 这样的一块内容类似如下：
 
 ```bash example-good
-# 这可能需要等一会...
+# 这可能需要运行一段时间...
 git clone https://github.com/mdn/content
 cd content
 ```
