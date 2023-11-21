@@ -3,6 +3,8 @@ title: TTL
 slug: Glossary/TTL
 ---
 
+{{GlossarySidebar}}
+
 TTL には以下の意味があります。
 
 - ネットワーク内でパケットが破棄されるまで存在できる時間
