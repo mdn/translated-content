@@ -12,7 +12,7 @@ slug: Web/CSS/background-position
 ## Синтаксис
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 background-position: top;
 background-position: bottom;
 background-position: left;

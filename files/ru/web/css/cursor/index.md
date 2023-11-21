@@ -14,7 +14,7 @@ The **`cursor`** CSS property specifies the mouse cursor displayed when the mous
 ## Синтаксис
 
 ```css
-/* Применение ключевых значений */
+/* Ключевые слова */
 cursor: pointer;
 cursor: auto;
 
