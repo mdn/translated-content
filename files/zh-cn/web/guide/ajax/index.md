@@ -352,8 +352,6 @@ TIME: 312.15
     - [监控请求过程](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#监控请求过程)
     - [提交表单或者上传二进制文件](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)，使用*纯* Ajax 或者 {{domxref("FormData")}} 对象
     - 在 [Web worker](/zh-CN/docs/Web/API/Worker) 中使用 Ajax
-- [_纯 Ajax_ 导航示例](/zh-CN/docs/Web/API/History_API/Example)
-  - : 本文提供了一个仅由三个页面组成的*纯 Ajax* 网站的（最小）工作示例。
 - [发送和接收二进制数据](/zh-CN/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data)
   - : `XMLHttpRequest` 对象的 `responseType` 属性可以被设置来改变服务器的预期响应类型。可能的值是空字符串（默认）、`arraybuffer`、`blob`、`document`、`json` 和 `text`。`response` 属性将根据 `responseType` 包含，作为一个 `ArrayBuffer`、`Blob`、`Document`、`JSON` 或字符串的实体主体。这篇文章将展示一些 Ajax I/O 技术。
 - [XML](/zh-CN/docs/Glossary/XML)

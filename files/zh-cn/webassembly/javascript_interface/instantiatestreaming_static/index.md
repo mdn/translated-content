@@ -1,6 +1,6 @@
 ---
 title: WebAssembly.instantiateStreaming()
-slug: WebAssembly/JavaScript_interface/instantiateStreaming
+slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
 ---
 
 {{WebAssemblySidebar}}
