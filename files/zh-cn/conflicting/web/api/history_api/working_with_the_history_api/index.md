@@ -1,6 +1,7 @@
 ---
 title: Ajax navigation example
-slug: Web/API/History_API/Example
+slug: conflicting/Web/API/History_API/Working_with_the_History_API
+original_slug: Web/API/History_API/Example
 ---
 
 这是一个仅由三个页面组成的 AJAX 网站示例 (_first_page.php_, _second_page.php_ and _third_page.php_). 要查看其如何工作的，请创建以下文件 (或 git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):

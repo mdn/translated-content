@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.instantiate()
-slug: WebAssembly/JavaScript_interface/instantiate
+slug: WebAssembly/JavaScript_interface/instantiate_static
+original_slug: WebAssembly/JavaScript_interface/instantiate
 ---
 
 {{WebAssemblySidebar}}

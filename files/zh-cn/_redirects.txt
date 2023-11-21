@@ -1617,6 +1617,7 @@
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
+/zh-CN/docs/Web/API/History_API/Example	/zh-CN/docs/conflicting/Web/API/History_API/Working_with_the_History_API
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
@@ -2591,11 +2592,11 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module	/zh-CN/docs/WebAssembly/JavaScript_interface/Module
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError	/zh-CN/docs/WebAssembly/JavaScript_interface/RuntimeError
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table	/zh-CN/docs/WebAssembly/JavaScript_interface/Table
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile	/zh-CN/docs/WebAssembly/JavaScript_interface/compile
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming	/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate	/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming	/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate	/zh-CN/docs/WebAssembly/JavaScript_interface/validate
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile	/zh-CN/docs/WebAssembly/JavaScript_interface/compile_static
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming	/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming_static
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate	/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming	/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate	/zh-CN/docs/WebAssembly/JavaScript_interface/validate_static
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
@@ -2693,6 +2694,11 @@
 /zh-CN/docs/Web/性能	/zh-CN/docs/Web/Performance
 /zh-CN/docs/Web/演示说明	/zh-CN/docs/Web/Demos
 /zh-CN/docs/WebAPI/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
+/zh-CN/docs/WebAssembly/JavaScript_interface/compile	/zh-CN/docs/WebAssembly/JavaScript_interface/compile_static
+/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming	/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming_static
+/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate	/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static
+/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming	/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static
+/zh-CN/docs/WebAssembly/JavaScript_interface/validate	/zh-CN/docs/WebAssembly/JavaScript_interface/validate_static
 /zh-CN/docs/WebAssembly/概念	/zh-CN/docs/WebAssembly/Concepts
 /zh-CN/docs/WebGL	/zh-CN/docs/Web/API/WebGL_API
 /zh-CN/docs/WebGL/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
