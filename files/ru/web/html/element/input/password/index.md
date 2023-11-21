@@ -145,7 +145,7 @@ document.getElementById("selectAll").onclick = function (event) {
 
 {{EmbedLiveSample("Валидация", 600, 40)}}
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Этот Boolean атрибут указывает, что поле пароля недоступно для взаимодействия. Кроме того, отключённые значения полей не отправляются с формой.
 
 ## Примеры

@@ -40,7 +40,7 @@ String.fromCharCode(65, 66, 67); // retorna "ABC"
 
 ## Fazendo-o funcionar com valores maiores
 
-Embora os valores Unicode mais comuns possam ser representados com um número de 16 bits (como experado durante a padronização do JavaScript) e o fromCharCode() possa ser usado para retornar um único caracter dos valores mais comuns (por exemplo: valores UCS-2 que são os melhores subconjuntos do UTF-16 com os caractres mais comuns), a fim de resolver TODOS os valores Unicode legais (até 21 bits) o método fromCharCode() sozinho é inadequado. Como os caracteres de ponto de código mais alto usam 2 (valor menor) numeros "substitutos" para formar um único caracter, {{jsxref("String.fromCodePoint()")}} (parte do padrão ES2015) pode ser usado para retornar tal par e ainda representar adequadamente esses caracteres de valores altos.
+Embora os valores Unicode mais comuns possam ser representados com um número de 16 bits (como esperado durante a padronização do JavaScript) e o fromCharCode() possa ser usado para retornar um único caracter dos valores mais comuns (por exemplo: valores UCS-2 que são os melhores subconjuntos do UTF-16 com os caractres mais comuns), a fim de resolver TODOS os valores Unicode legais (até 21 bits) o método fromCharCode() sozinho é inadequado. Como os caracteres de ponto de código mais alto usam 2 (valor menor) numeros "substitutos" para formar um único caracter, {{jsxref("String.fromCodePoint()")}} (parte do padrão ES2015) pode ser usado para retornar tal par e ainda representar adequadamente esses caracteres de valores altos.
 
 ## Especificações
 
