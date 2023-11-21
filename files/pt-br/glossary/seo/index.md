@@ -3,6 +3,8 @@ title: SEO - Otimização dos Mecanismos de Buscas
 slug: Glossary/SEO
 ---
 
+{{GlossarySidebar}}
+
 **SEO** (Search Engine Optimization - Otimização dos Mecanismos de Pesquisa) é o processo de fazer com que um sítio fique mais visível nos resultados da procura, também denominado melhoramento na classificação da busca.
 
 Os mecanismos de pesquisa {{Glossary("Crawler", "crawl")}} vasculham a _web_ seguindo vínculos de uma página para outra (_link_) e listando os resultados encontrados. Quando se faz uma busca, o mecanismo de pesquisa exibe o conteúdo classificado. Os rastreadores seguem regras. Se você seguir essas regras, metodicamente, ao fazer uma SEO para um sítio, existirão melhores chances de que o mesmo apareça entre os primeiros resultados, aumentando o tráfego e as possibilidades de rendimentos (pelo comércio eletrônico e publicidade).
