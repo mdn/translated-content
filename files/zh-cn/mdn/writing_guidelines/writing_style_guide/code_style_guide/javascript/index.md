@@ -298,7 +298,7 @@ function doIt() {
   };
   ```
 
-- 使用箭头函数时，尽可能使用[隐式返回](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#函数体)（也称为*表达式体*）：
+- 使用箭头函数时，尽可能使用[隐式返回](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#函数体)（也称为*表达式主体*）：
 
   ```js example-good
   arr.map((e) => e.id);
