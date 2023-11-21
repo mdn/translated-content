@@ -1617,7 +1617,7 @@
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
-/zh-CN/docs/Web/API/History_API/Example	/zh-CN/docs/conflicting/Web/API/History_API/Working_with_the_History_API
+/zh-CN/docs/Web/API/History_API/Example	/zh-CN/docs/Web/API/History_API/Working_with_the_History_API
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
