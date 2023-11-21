@@ -38,7 +38,7 @@ slug: Web/API/Notification
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 在构造函数的 `options` 参数中指定的通知的操作数组。
 - {{domxref("Notification.badge")}} {{ReadOnlyInline}}
-  - : 当没有足够的空间去显示通知自身（例如 Android 通知栏）时，用于表示通知图像的 URL。在安卓设备上，徽章的分辨率应达到 4x（约 96 x 96 px），图片会自动屏蔽。
+  - : 当没有足够的空间去显示通知自身（例如 Android 通知栏）时，用于表示通知图像的 URL。在安卓设备上，徽章的分辨率应达到 4x（约 96 x 96 px），图片会被自动屏蔽。
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的正文字符串。
 - {{domxref("Notification.data")}} {{ReadOnlyInline}}
