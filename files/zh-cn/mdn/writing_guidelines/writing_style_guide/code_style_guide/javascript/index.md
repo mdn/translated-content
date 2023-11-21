@@ -43,7 +43,7 @@ const visitedCities = new Array(length);
 
 ### 添加元素
 
-向数组添加元素时，请使用 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 而非直接赋值。考虑如下数组：
+向数组添加元素时，请使用 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 而非直接赋值。考虑有如下数组：
 
 ```js
 const pets = [];
@@ -72,7 +72,7 @@ pets[pets.length] = "cat";
 
 ## 注释
 
-注释对于编写好的代码示例非常重要。它们清楚地阐明了代码的意图，并帮助开发者理解它。要特别注意它们。
+注释对于编写良好的代码示例非常重要。它们清楚地阐明了代码的意图，并帮助开发者理解它。因此要特别注意它们。
 
 - 如果代码的目的或逻辑不明显，请添加表明你的意图的注释，就像下面这样：
 
@@ -106,7 +106,7 @@ pets[pets.length] = "cat";
   不要写像下面这样的注释：
 
   ```js example-bad
-  closeConnection(); // Closing the connection
+  closeConnection(); // 关闭连接
   ```
 
 ### 使用单行注释
@@ -137,7 +137,7 @@ pets[pets.length] = "cat";
 
 ### 打印的输出
 
-- 对于预期在生产环境中运行的代码，你很少会需要对打印代码进行注释。在代码示例中，我们经常使用 `console.log()`、`console.error()` 或类似的函数来输出重要的值。为了帮助读者在不运行代码的情况下理解会发生什么，你可以在打印函数*之后*注释输出的内容。比如：
+- 对于预期在生产环境中运行的代码，你很少会需要对打印语句进行注释。在代码示例中，我们经常使用 `console.log()`、`console.error()` 或类似的函数来输出重要的值。为了帮助读者在不运行代码的情况下理解会发生什么，你可以在打印函数*之后*注释输出的内容。比如：
 
   ```js example-good
   function exampleFunc(fruitBasket) {
@@ -168,21 +168,19 @@ pets[pets.length] = "cat";
 简短的注释通常更好，所以尝试将他们保持在 60–80 个字符的单行中。如果这不可能，请在每行的开头使用 `//`：
 
 ```js example-good
-// This is an example of a multi-line comment.
-// The imaginary function that follows has some unusual
-// limitations that I want to call out.
-// Limitation 1
-// Limitation 2
+// 这是一个多行注释的示例。
+// 假设下面的函数有一些我想指出的不寻常的局限性。
+// 局限 1
+// 局限 2
 ```
 
 请不要使用 `/* … */`:
 
 ```js example-bad
-/* This is an example of a multi-line comment.
-  The imaginary function that follows has some unusual
-  limitations that I want to call out.
-  Limitation 1
-  Limitation 2 */
+/* 这是一个多行注释的示例。
+  假设下面的函数有一些我想指出的不寻常的局限性。
+  局限 1
+  局限 2 */
 ```
 
 ## 使用注释来标记省略号
