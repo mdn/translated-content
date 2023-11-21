@@ -103,5 +103,4 @@ const currentState = history.state;
 ## 参见
 
 - [历史记录 API](/zh-CN/docs/Web/API/History_API)
-- [历史导航示例](/zh-CN/docs/Web/API/History_API/Example)
 - {{domxref("window.history", "history")}} 全局对象
