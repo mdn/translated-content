@@ -37,19 +37,19 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 | [`readonly`](#readonly)       | A Boolean attribute which, if present, indicates that the field's contents should not be user-editable |
 | [`size`](#size)               | The number of characters wide the input field should be onscreen                                       |
 
-### {{htmlattrdef("maxlength")}}
+### `maxlength`
 
 The maximum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the telephone number field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
 The input will fail [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long.
 
-### {{htmlattrdef("minlength")}}
+### `minlength`
 
 The minimum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the telephone number input has no minimum length.
 
 The telephone number field will fail [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long.
 
-### {{htmlattrdef("pattern")}}
+### `pattern`
 
 {{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}
 
@@ -70,11 +70,11 @@ The following non-standard attributes are available to telephone number input fi
 | [`autocorrect`](#autocorrect)     | Whether or not to allow autocorrect while editing this input field. **Safari only.**                                                                                                                                                                                    |
 | [`mozactionhint`](#mozactionhint) | A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. **Firefox for Android only.** |
 
-### {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
+### `autocorrect` {{non-standard_inline}}
 
 {{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}
 
-### {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
+### `mozactionhint` {{non-standard_inline}}
 
 {{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}
 
