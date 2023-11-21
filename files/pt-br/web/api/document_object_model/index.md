@@ -169,7 +169,6 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 
 ### Obsoleto HTML interfaces
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG interfaces
