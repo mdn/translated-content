@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 04e75ce1f83a591a576f52b143f195133bfcbe96
 ---
 
+{{GlossarySidebar}}
+
 **Base64** とは、[バイナリーからテキストへの符号化](https://en.wikipedia.org/wiki/Binary-to-text_encoding)を行う手法のグループであり、バイナリーデータを 64 を基数とする表現に変換することで、 ASCII 文字列で表すことができます。_Base64_ という呼び方は、 [MIME の Content-Transfer-Encoding](https://ja.wikipedia.org/wiki/MIME#Content-Transfer-Encoding) における特定の符号化方式の名前に由来します。
 
 Base64 符号化方式がよく使われるのは、テキストデータを扱うよう設計されたメディア上で、バイナリーデータを格納または転送する必要がある場合です。Base64 符号化により、転送中に変換されることなく、バイナリーデータがそのままであることを保証できます。Base64 は、[MIME](https://ja.wikipedia.org/wiki/MIME) による電子メールや [XML](/ja/docs/Web/XML) における複合型データの格納など、多くのアプリケーションで幅広く使われています。
