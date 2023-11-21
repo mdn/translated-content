@@ -1,23 +1,24 @@
 ---
 title: WebAssembly.Module.imports()
 slug: WebAssembly/JavaScript_interface/Module/imports_static
-original_slug: WebAssembly/JavaScript_interface/Module/imports
+l10n:
+  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
 {{WebAssemblySidebar}}
 
-La méthode **`WebAssembly.imports()`** renvoie un tableau qui contient les références des fonctions importées qui sont disponibles dans un module WebAssembly donné.
+La méthode statique **`WebAssembly.Module.imports()`** renvoie un tableau qui contient les références des fonctions importées qui sont disponibles dans un module WebAssembly donné.
 
 ## Syntaxe
 
-```js
-var arrImport = WebAssembly.Module.imports(module);
+```js-nolint
+WebAssembly.Module.imports(module)
 ```
 
 ### Paramètres
 
 - `module`
-  - : Une instance de {{jsxref("WebAssembly.Module")}}.
+  - : Une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module).
 
 ### Valeur de retour
 
@@ -25,20 +26,20 @@ Un tableau qui contient des objets représentant les fonctions importées du mod
 
 ### Exceptions
 
-Si `module` n'est pas une instance de {{jsxref("WebAssembly.Module")}}, une exception {{jsxref("TypeError")}} sera levée.
+Si `module` n'est pas une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module), une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
 
 ## Exemples
 
-Dans l'exemple qui suit, on compile le module `simple.wasm` puis on parcourt ses imports (cf. aussi [le code sur GitHub](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html) et [l'exemple _live_](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html))
+Dans l'exemple qui suit, on compile le module `simple.wasm` puis on parcourt ses imports (cf. aussi [le code sur GitHub](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/imports.html) et [l'exemple <i lang="en">live</i>](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html))
 
 ```js
-WebAssembly.compileStreaming(fetch("simple.wasm")).then(function (mod) {
-  var imports = WebAssembly.Module.imports(mod);
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) => {
+  const imports = WebAssembly.Module.imports(mod);
   console.log(imports[0]);
 });
 ```
 
-Le résultat affiché dans la console ressemble alors à :
+Le résultat affiché dans la console ressemble alors à&nbsp;:
 
 ```js
 { module: "imports", name: "imported_func", kind: "function" }

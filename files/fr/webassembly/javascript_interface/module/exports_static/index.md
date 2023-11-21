@@ -1,23 +1,24 @@
 ---
 title: WebAssembly.Module.exports()
 slug: WebAssembly/JavaScript_interface/Module/exports_static
-original_slug: WebAssembly/JavaScript_interface/Module/exports
+l10n:
+  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
 {{WebAssemblySidebar}}
 
-La fonction **`WebAssembly.Module.exports()`** renvoie un tableau qui contient les descriptions des exports déclarés pour un module donné.
+La méthode statique **`WebAssembly.Module.exports()`** renvoie un tableau qui contient les descriptions des exports déclarés pour un module donné.
 
 ## Syntaxe
 
-```js
-var exports = WebAssembly.Module.exports(module);
+```js-nolint
+WebAssembly.Module.exports(module)
 ```
 
 ### Paramètres
 
 - `module`
-  - : Un objet {{jsxref("WebAssembly.Module")}}.
+  - : Un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module).
 
 ### Valeur de retour
 
@@ -25,40 +26,40 @@ Un tableau qui contient des objets représentants les fonctions exportés du mod
 
 ### Exceptions
 
-Si l'argument n'est pas une instance de {{jsxref("WebAssembly.Module")}}, une exception {{jsxref("TypeError")}} sera levée.
+Si l'argument n'est pas une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module), une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
 
 ## Exemples
 
-Dans l'exemple suivant (basé sur le fichier [`index-compile.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) disponible sur GitHub avec [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le _bytecode_ `simple.wasm` grâce à la fonction {{jsxref("WebAssembly.compileStreaming()")}} puis on envoie le résultat à un _[worker](/fr/docs/Web/API/Web_Workers_API)_ grâce à la méthode [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
+Dans l'exemple suivant (basé sur le fichier [`index-compile.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) disponible sur GitHub avec [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le <i lang="en">bytecode</i> `simple.wasm` grâce à la fonction [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/compileStreaming_static) puis on envoie le résultat à un [<i lang="en">worker</i>](/fr/docs/Web/API/Web_Workers_API) grâce à la méthode [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
 
 ```js
-var worker = new Worker("wasm_worker.js");
+const worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
   worker.postMessage(mod),
 );
 ```
 
-Dans le _worker_ (cf. [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js)), on définit un objet d'import pour le module puis on paramètre un gestionnaire d'évènement afin de recevoir le module depuis le _thread_ principal. Lorsqu'on reçoit le module, on en crée une instance via la méthode {{jsxref("WebAssembly.Instantiate()")}} puis on appelle une fonction exportée et enfin, on affiche les informations relatives aux exports disponibles grâce à `WebAssembly.Module.exports`.
+Dans le <i lang="en">worker</i> (cf. [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/wasm_worker.js)), on définit un objet d'import pour le module puis on paramètre un gestionnaire d'évènement afin de recevoir le module depuis le <i lang="en">thread</i> principal. Lorsqu'on reçoit le module, on en crée une instance via la méthode [`WebAssembly.Instantiate()`](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static) puis on appelle une fonction exportée et enfin, on affiche les informations relatives aux exports disponibles grâce à `WebAssembly.Module.exports`.
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
-    imported_func: function (arg) {
+    imported_func(arg) {
       console.log(arg);
     },
   },
 };
 
-onmessage = function (e) {
-  console.log("module reçu du thread principal");
-  var mod = e.data;
+onmessage = (e) => {
+  console.log("module received from main thread");
+  const mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function (instance) {
+  WebAssembly.instantiate(mod, importObject).then((instance) => {
     instance.exports.exported_func();
   });
 
-  var exports = WebAssembly.Module.exports(mod);
+  const exports = WebAssembly.Module.exports(mod);
   console.log(exports[0]);
 };
 ```

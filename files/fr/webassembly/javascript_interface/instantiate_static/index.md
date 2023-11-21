@@ -1,21 +1,22 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate_static
-original_slug: WebAssembly/JavaScript_interface/instantiate
+l10n:
+  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
 {{WebAssemblySidebar}}
 
-La fonction **`WebAssembly.instantiate()`** permet de compiler et d'instancier du code WebAssembly. Cette fonction possède deux formes :
+La méthode statique **`WebAssembly.instantiate()`** permet de compiler et d'instancier du code WebAssembly. Cette fonction possède deux formes&nbsp;:
 
-- La première forme prend un code binaire WebAssembly sous forme d'un [tableau typé](/fr/docs/Web/JavaScript/Tableaux_typés) ou d'un {{jsxref("ArrayBuffer")}} et effectue les étapes de compilation et d'instanciation en une fois. La valeur de résolution de la promesse renvoyée se compose d'un module {{jsxref("WebAssembly.Module")}} compilé et de sa première instance {{jsxref("WebAssembly.Instance")}}.
-- La seconde forme prend un module ({{jsxref("WebAssembly.Module")}}) déjà compilé et renvoie une promesse dont la valeur de résolution est une instance de ce module. Cette forme s'avère utile lorsque le module a déjà été compilé.
+- La première forme prend un code binaire WebAssembly sous forme d'un [tableau typé](/fr/docs/Web/JavaScript/Tableaux_typés) ou d'un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) et effectue les étapes de compilation et d'instanciation en une fois. La valeur de résolution de la promesse renvoyée se compose d'un module [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) compilé et de sa première instance [`WebAssembly.Instance`](/fr/docs/WebAssembly/JavaScript_interface/Instance).
+- La seconde forme prend un module ([`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module)) déjà compilé et renvoie une promesse dont la valeur de résolution est une instance de ce module. Cette forme s'avère utile lorsque le module a déjà été compilé.
 
-> **Attention :** Tant que faire se peut, utiliser la méthode {{jsxref("WebAssembly.instantiateStreaming()")}} car elle est plus efficace et récupère, compile et instancie un module en une seule étape à partir du _bytecode_ et il n'est pas nécessaire de passer par une conversion en {{jsxref("ArrayBuffer")}}.
+> **Attention :** Tant que faire se peut, utiliser la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static), car elle est plus efficace et récupère, compile et instancie un module en une seule étape à partir du <i lang="en">bytecode</i> et il n'est pas nécessaire de passer par une conversion en [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 ## Syntaxe
 
-### Première forme : utiliser le _bytecode_ WebAssembly
+### Première forme&nbsp;: utiliser le code binaire WebAssembly
 
 ```js
 WebAssembly.instantiate(bufferSource, importObject);
@@ -24,23 +25,25 @@ WebAssembly.instantiate(bufferSource, importObject);
 #### Paramètres
 
 - `bufferSource`
-  - : Un [tableau typé](/fr/docs/Web/JavaScript/Tableaux_typés) ou un {{jsxref("ArrayBuffer")}} qui contient le _bytecode_ du module WebAssembly qu'on souhaite compiler.
+  - : Un [tableau typé](/fr/docs/Web/JavaScript/Tableaux_typés) ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) qui contient le _bytecode_ du module WebAssembly qu'on souhaite compiler ou un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module).
 - `importObject` {{optional_inline}}
-  - : Un objet qui contient les valeurs à importer dans l'instance qui sera créée. Ces valeurs peuvent être des fonctions ou des objets {{jsxref("WebAssembly.Memory")}}. Il doit y avoir une propriété correspondante au sein du module compilé pour chacun des imports, si ce n'est pas le cas, une exception {{jsxref("WebAssembly.LinkError")}} sera levée.
+  - : Un objet qui contient les valeurs à importer dans l'instance qui sera créée. Ces valeurs peuvent être des fonctions ou des objets [`WebAssembly.Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory). Il doit y avoir une propriété correspondante au sein du module compilé pour chacun des imports, si ce n'est pas le cas, une exception [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError) sera levée.
 
 #### Valeur de retour
 
-Une promesse qui est résoluee en un objet qui contient deux champs :
+Une promesse qui est résolue en un objet qui contient deux champs&nbsp;:
 
-- `module` : un objet {{jsxref("WebAssembly.Module")}} qui représente le module WebAssembly compilé. Ce module peut être instancié à nouveau grâce à {{domxref("Worker.postMessage", "postMessage()")}} ou via [un cache IndexedDB](/fr/docs/WebAssembly/Caching_modules).
-- `instance` : un objet {{jsxref("WebAssembly.Instance")}} qui contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions).
+- `module`
+  - : Un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module WebAssembly compilé. Ce module peut être instancié à nouveau grâce à [`postMessage()`](/fr/docs/Web/API/Worker/postMessage) ou via [un cache](/fr/docs/WebAssembly/Caching_modules).
+- `instance`
+  - : Un objet [`WebAssembly.Instance`](/fr/docs/WebAssembly/JavaScript_interface/Instance) qui contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions).
 
 #### Exceptions
 
-- Si l'un des paramètres n'a pas le bon type ou la bonne structure, une exception {{jsxref("TypeError")}} sera levée.
-- Si l'opération échoue, la promesse est rompue avec une exception {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}} ou {{jsxref("WebAssembly.RuntimeError")}} selon l'origine de l'échec.
+- Si l'un des paramètres n'a pas le bon type ou la bonne structure, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
+- Si l'opération échoue, la promesse est rompue avec une exception [`WebAssembly.CompileError`](/fr/docs/WebAssembly/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError), ou [`WebAssembly.RuntimeError`](/fr/docs/WebAssembly/JavaScript_interface/RuntimeError) selon l'origine de l'échec.
 
-### Seconde forme : utiliser une instance d'un module
+### Seconde forme&nbsp;: utiliser une instance d'un module
 
 ```js
 WebAssembly.instantiate(module, importObject);
@@ -49,31 +52,31 @@ WebAssembly.instantiate(module, importObject);
 #### Paramètres
 
 - `module`
-  - : L'objet {{jsxref("WebAssembly.Module")}} qui doit être instancié.
+  - : L'objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui doit être instancié.
 - `importObject` {{optional_inline}}
-  - : Un objet qui contient les valeurs à importer dans l'instance qui sera créée. Ces valeurs peuvent être des fonctions ou des objets {{jsxref("WebAssembly.Memory")}}. Il doit y avoir une propriété correspondante au sein du module compilé pour chacun des imports, si ce n'est pas le cas, une exception {{jsxref("WebAssembly.LinkError")}} sera levée.
+  - : Un objet qui contient les valeurs à importer dans l'instance qui sera créée. Ces valeurs peuvent être des fonctions ou des objets [`WebAssembly.Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory). Il doit y avoir une propriété correspondante au sein du module compilé pour chacun des imports, si ce n'est pas le cas, une exception [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError) sera levée.
 
 #### Valeur de retour
 
-Une promesse qui est résolue en un objet {{jsxref("WebAssembly.Instance")}}.
+Une promesse qui est résolue en un objet [`WebAssembly.Instance`](/fr/docs/WebAssembly/JavaScript_interface/Instance).
 
 #### Exceptions
 
-- Si l'un des paramètres n'est pas du bon type ou n'a pas la bonne structure, une exception {{jsxref("TypeError")}} est levée.
-- Si l'opération échoue, la promesse sera rompue avec une exception {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}} ou {{jsxref("WebAssembly.RuntimeError")}} selon l'origine de l'échec.
+- Si l'un des paramètres n'est pas du bon type ou n'a pas la bonne structure, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) est levée.
+- Si l'opération échoue, la promesse sera rompue avec une exception [`WebAssembly.CompileError`](/fr/docs/WebAssembly/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError), ou [`WebAssembly.RuntimeError`](/fr/docs/WebAssembly/JavaScript_interface/RuntimeError) selon l'origine de l'échec.
 
 ## Exemples
 
-> **Note :** Dans la plupart des cas, on utilisera plus vraisemblablement {{jsxref("WebAssembly.instantiateStreaming()")}} qui est plus efficace que `instantiate()`.
+> **Note :** Dans la plupart des cas, on utilisera plus vraisemblablement [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) qui est plus efficace que `instantiate()`.
 
 ### Première forme
 
-Après avoir récupéré le _bytecode_ WebAssembly grâce à `fetch()`, on compile et on instancie le module grâce à la fonction {{jsxref("WebAssembly.instantiate()")}} et on importe une fonction JavaScript dans le module lors de cette étape. Ensuite, on invoque [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Exported_functions) via l'instance.
+Après avoir récupéré le code binaire WebAssembly grâce à `fetch()`, on compile et on instancie le module grâce à la fonction `WebAssembly.instantiate()` et on importe une fonction JavaScript dans le module lors de cette étape. Ensuite, on invoque [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Exported_functions) via l'instance.
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
-    imported_func: function (arg) {
+    imported_func(arg) {
       console.log(arg);
     },
   },
@@ -85,36 +88,36 @@ fetch("simple.wasm")
   .then((result) => result.instance.exports.exported_func());
 ```
 
-> **Note :** Voir le fichier [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) sur GitHub ([ainsi que la démonstration associée](https://mdn.github.io/webassembly-examples/js-api-examples/)) qui contient un exemple analogue et qui utilise la fonction utilitaire [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1).
+> **Note :** Voir le fichier [`index.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index.html) sur GitHub ([ainsi que la démonstration associée](https://mdn.github.io/webassembly-examples/js-api-examples/)).
 
 ### Seconde forme
 
-Dans l'exemple qui suit (tiré du fichier [`index-compile.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) sur GitHub et qui dispose d'[une démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le _bytecode_ du module chargé `simple.wasm` grâce à la fonction {{jsxref("WebAssembly.compileStreaming()")}} puis on envoie le résultat à un _[worker](/fr/docs/Web/API/Web_Workers_API)_ grâce à la méthode {{domxref("Worker.postMessage", "postMessage()")}}.
+Dans l'exemple qui suit (tiré du fichier [`index-compile.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) sur GitHub et qui dispose d'[une démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le <i lang="en">bytecode</i> du module chargé `simple.wasm` grâce à la fonction {{jsxref[`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/compileStreaming_static) puis on envoie le résultat à un [<i lang="en">worker</i>](/fr/docs/Web/API/Web_Workers_API) grâce à la méthode [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
 
 ```js
-var worker = new Worker("wasm_worker.js");
+const worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
   worker.postMessage(mod),
 );
 ```
 
-Dans le _worker_ (cf. [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js)), on définit un objet d'import qui sera utilisé par le module puis on paramètre un gestionnaire d'évènement afin de recevoir le module depuis le _thread_ principal. Lorsqu'on reçoit le module, on en crée une instance grâce à la méthode {{jsxref("WebAssembly.instantiate()")}} puis on appelle une fonction exportée depuis le module.
+Dans le <i lang="en">worker</i> (cf. [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/wasm_worker.js)), on définit un objet d'import qui sera utilisé par le module puis on paramètre un gestionnaire d'évènement afin de recevoir le module depuis le <i lang="en">thread</i> principal. Lorsqu'on reçoit le module, on en crée une instance grâce à la méthode `WebAssembly.instantiate()` puis on appelle une fonction exportée depuis le module.
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
-    imported_func: function (arg) {
+    imported_func(arg) {
       console.log(arg);
     },
   },
 };
 
-onmessage = function (e) {
-  console.log("module reçu depuis le thread principal");
-  var mod = e.data;
+onmessage = (e) => {
+  console.log("module received from main thread");
+  const mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function (instance) {
+  WebAssembly.instantiate(mod, importObject).then((instance) => {
     instance.exports.exported_func();
   });
 };
