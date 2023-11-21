@@ -1,439 +1,198 @@
 ---
-title: Exemple de navigation en Ajax
+title: Utiliser l'API History
 slug: Web/API/History_API/Working_with_the_History_API
-original_slug: Web/API/History_API/Example
+l10n:
+  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-Voici un exemple de site web AJAX composé uniquement de trois pages (_page_un.php_, _page_deux.php_ et _page_trois.php_). Pour tester cet exemple, merci de créer les fichiers suivants :
+{{DefaultAPISidebar("History API")}}
 
-**page_un.php**:
+L'API <i lang="en">History</i> permet à un site web d'interagir avec l'historique de la session du navigateur, c'est-à-dire la liste des pages que la personne a visitées sur une période donnée. Lorsqu'une personne visite de nouvelles pages, par exemple en cliquant sur des liens, ces nouvelles pages sont ajoutées à l'historique de la session. La personne peut alors se déplacer dans cet historique en utilisant les boutons «&nbsp;Précédent&nbsp;» et «&nbsp;Suivant&nbsp;» du navigateur.
 
-```php
-<?php
-    $page_title = "Page un";
+L'interface principale de cette API est l'interface [`History`](/fr/docs/Web/API/History) qui définit deux ensembles de méthodes&nbsp;:
 
-    $as_json = false;
-    if (isset($_GET["vie
-        $as_json =
-        ob_start();
-    } else {
-?>
-<!doctype html>
-<html>
-<head>
-<?php
-        include "include/header.php";
-        echo "<title>" . $page_title . "</title>";
-?>
-</head>
+- Les méthodes pour naviguer vers une page de l'historique&nbsp;:
 
-<body>
+  - [`History.back()`](/fr/docs/Web/API/History/back)
+  - [`History.forward()`](/fr/docs/Web/API/History/forward)
+  - [`History.go()`](/fr/docs/Web/API/History/go)
 
-<?php include "include/before_content.php"; ?>
+- Les méthodes pour modifier l'historique de la session&nbsp;:
 
-<p>This paragraph is shown only when the navigation starts from <strong>first_page.php</strong>.</p>
+  - [`History.pushState()`](/fr/docs/Web/API/History/pushState)
+  - [`History.replaceState()`](/fr/docs/Web/API/History/replaceState)
 
-<div id="ajax-content">
-<?php } ?>
+Dans ce guide, nous nous intéresserons surtout au deuxième groupe, dont le comportement peut être plus complexe.
 
-    <p>This is the content of <strong>first_page.php</strong>.</p>
+La méthode `pushState()` permet d'ajouter une nouvelle entrée dans l'historique. La méthode `replaceState()` met à jour l'historique de la session pour la page courante. Ces deux méthodes prennent un paramètre `state` qui peut contenir n'importe quel [objet sérialisable](/fr/docs/Glossary/Serializable_object). Lorsqu'on utilise le navigateur pour accéder à cette entrée d'historique, il déclenchera un évènement [`popstate`](/fr/docs/Web/API/Window/popstate_event) qui contient l'objet d'état associé à cette entrée.
 
-<?php
-    if ($as_json) {
-        echo json_encode(array("page" => $page_title, "content" => ob_get_clean()));
-    } else {
-?>
-</div>
+L'objectif principal de cette API est d'assister les [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA) qui utilisent les API comme [`fetch()`](/fr/docs/Web/API/fetch) pour mettre à jour la page avec du nouveau contenu plutôt que de charger une nouvelle page complète.
 
-<p>This paragraph is shown only when the navigation starts from <strong>first_page.php</strong>.</p>
+## SPA et historique de session
 
-<?php
-        include "include/after_content.php";
-        echo "</body>\n</html>";
-    }
-?>
-```
+Historiquement, les sites web étaient implémentés comme des ensembles de pages. Lorsqu'une personne naviguait vers un autre endroit d'un site en cliquant sur un lien, le navigateur chargeait une nouvelle page à chaque fois.
 
-**page_deux.php**:
+Si cette approche peut très bien convenir pour de nombreux sites, elle possède quelques inconvénients&nbsp;:
 
-```php
-<?php
-    $page_title = "Page deux";
+- Il peut être inefficace de charger toute une page à chaque fois, alors que seule une partie de la page doit être mise à jour.
+- Il est difficile de maintenir l'état de l'application lorsqu'on navigue entre différentes pages.
 
-    $as_json = false;
-    if (isset($_GET["vie
-        $as_json =
-        ob_start();
-    } else {
-?>
-<!doctype html>
-<html>
-<head>
-<?php
-        include "include/header.php";
-        echo "<title>" . $page_title . "</title>";
-?>
-</head>
+C'est pour ces raisons que certains sites sont désormais implémentés sous la forme de [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA), où le site est en réalité une seule page, et où lorsqu'une personne clique sur un lien, la page&nbsp;:
 
-<body>
+1. Empêche l'action par défaut du navigateur consistant à charger une nouvelle page
+2. Récupère avec [`fetch()`](/fr/docs/Web/API/fetch) le nouveau contenu à afficher
+3. Met à jour la page avec le nouveau contenu
 
-<?php include "include/before_content.php"; ?>
-
-<p>This paragraph is shown only when the navigation starts from <strong>second_page.php</strong>.</p>
-
-<div id="ajax-content">
-<?php } ?>
-
-    <p>This is the content of <strong>second_page.php</strong>.</p>
-
-<?php
-    if ($as_json) {
-        echo json_encode(array("page" => $page_title, "content" => ob_get_clean()));
-    } else {
-?>
-</div>
-
-<p>This paragraph is shown only when the navigation starts from <strong>second_page.php</strong>.</p>
-
-<?php
-        include "include/after_content.php";
-        echo "</body>\n</html>";
-    }
-?>
-```
-
-**page_trois.php**:
-
-```php
-<?php
-    $page_title = "Page trois";
-    $page_content = "<p>Ceci est le contenu de la <strong>page_trois.php</strong>. Ce contenu est stocké dans une variable PHP.</p>";
-
-    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
-        echo json_encode(array("page" => $page_title, "content" => $page_content));
-    } else {
-?>
-<!doctype html>
-<html>
-<head>
-<?php
-        include "include/header.php";
-        echo "<title>" . $page_title . "</title>";
-?>
-</head>
-
-<body>
-
-<?php include "include/before_content.php"; ?>
-
-<p>This paragraph is shown only when the navigation starts from <strong>third_page.php</strong>.</p>
-
-<div id="ajax-content">
-<?php echo $page_content; ?>
-</div>
-
-<p>This paragraph is shown only when the navigation starts from <strong>third_page.php</strong>.</p>
-
-<?php
-        include "include/after_content.php";
-        echo "</body>\n</html>";
-    }
-?>
-```
-
-**css/style.css**:
-
-```css
-#ajax-loader {
-  position: fixed;
-  display: table;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#ajax-loader > div {
-  display: table-cell;
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-  text-align: center;
-  background-color: #000000;
-  opacity: 0.65;
-}
-```
-
-**include/after_content.php**:
-
-```php
-<p>Ceci est le pied-de-page. Il est commun à toutes les pages ajax.</p>
-```
-
-**include/before_content.php**:
-
-```php
-<p>
-[ <a class="ajax-nav" href="page_un.php">Premier exemple</a>
-| <a class="ajax-nav" href="page_deux.php">Second exemple</a>
-| <a class="ajax-nav" href="page_trois.php">Troisième exemple</a>
-| <a class="ajax-nav" href="inexistante.php">Page inexistante</a> ]
-</p>
-```
-
-**include/header.php**:
-
-```html
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="js/ajax_nav.js"></script>
-<link rel="stylesheet" href="css/style.css" />
-```
-
-**js/ajax_nav.js**:
+Par exemple&nbsp;:
 
 ```js
-"use strict";
-
-const ajaxRequest = new (function () {
-  function closeReq() {
-    oLoadingBox.parentNode && document.body.removeChild(oLoadingBox);
-    bIsLoading = false;
-  }
-
-  function abortReq() {
-    if (!bIsLoading) {
-      return;
-    }
-    oReq.abort();
-    closeReq();
-  }
-
-  function ajaxError() {
-    alert("Unknown error.");
-  }
-
-  function ajaxLoad() {
-    var vMsg,
-      nStatus = this.status;
-    switch (nStatus) {
-      case 200:
-        vMsg = JSON.parse(this.responseText);
-        document.title = oPageInfo.title = vMsg.page;
-        document.getElementById(sTargetId).innerHTML = vMsg.content;
-        if (bUpdateURL) {
-          history.pushState(oPageInfo, oPageInfo.title, oPageInfo.url);
-          bUpdateURL = false;
-        }
-        break;
-      default:
-        vMsg = nStatus + ": " + (oHTTPStatus[nStatus] || "Unknown");
-        switch (Math.floor(nStatus / 100)) {
-          /*
-                    case 1:
-                        // Informational 1xx
-                        console.log("Information code " + vMsg);
-                        break;
-                    case 2:
-                        // Successful 2xx
-                        console.log("Successful code " + vMsg);
-                        break;
-                    case 3:
-                        // Redirection 3xx
-                        console.log("Redirection code " + vMsg);
-                        break;
-                    */
-          case 4:
-            /* Client Error 4xx */
-            alert("Client Error #" + vMsg);
-            break;
-          case 5:
-            /* Server Error 5xx */
-            alert("Server Error #" + vMsg);
-            break;
-          default:
-            /* Unknown status */
-            ajaxError();
-        }
-    }
-    closeReq();
-  }
-
-  function filterURL(sURL, sViewMode) {
-    return (
-      sURL.replace(rSearch, "") +
-      (
-        "?" +
-        sURL
-          .replace(rHost, "&")
-          .replace(rView, sViewMode ? "&" + sViewKey + "=" + sViewMode : "")
-          .slice(1)
-      ).replace(rEndQstMark, "")
-    );
-  }
-
-  function getPage(sPage) {
-    if (bIsLoading) {
-      return;
-    }
-    oReq = new XMLHttpRequest();
-    bIsLoading = true;
-    oReq.onload = ajaxLoad;
-    oReq.onerror = ajaxError;
-    if (sPage) {
-      oPageInfo.url = filterURL(sPage, null);
-    }
-    oReq.open("get", filterURL(oPageInfo.url, "json"), true);
-    oReq.send();
-    oLoadingBox.parentNode || document.body.appendChild(oLoadingBox);
-  }
-
-  function requestPage(sURL) {
-    if (history.pushState) {
-      bUpdateURL = true;
-      getPage(sURL);
-    } else {
-      /* Ajax navigation is not supported */
-      location.assign(sURL);
+document.addEventListener("click", async (event) => {
+  const creature = event.target.getAttribute("data-creature");
+  if (creature) {
+    // Empêche le chargement d'une nouvelle page
+    event.preventDefault();
+    try {
+      // Récupère le nouveau contenu
+      const response = await fetch(`creatures/${creature}.json`);
+      const json = await response.json();
+      // Met à jour la page avec le nouveau contenu
+      displayContent(json);
+    } catch (err) {
+      console.error(err);
     }
   }
-
-  function processLink() {
-    if (this.className === sAjaxClass) {
-      requestPage(this.href);
-      return false;
-    }
-    return true;
-  }
-
-  function init() {
-    oPageInfo.title = document.title;
-    history.replaceState(oPageInfo, oPageInfo.title, oPageInfo.url);
-    for (
-      var oLink, nIdx = 0, nLen = document.links.length;
-      nIdx < nLen;
-      document.links[nIdx++].onclick = processLink
-    );
-  }
-
-  const /* customizable constants */
-    sTargetId = "ajax-content",
-    sViewKey = "view_as",
-    sAjaxClass = "ajax-nav",
-    /* not customizable constants */
-    rSearch = /\?.*$/,
-    rHost = /^[^\?]*\?*&*/,
-    rView = new RegExp("&" + sViewKey + "\\=[^&]*|&*$", "i"),
-    rEndQstMark = /\?$/,
-    oLoadingBox = document.createElement("div"),
-    oCover = document.createElement("div"),
-    oLoadingImg = new Image(),
-    oPageInfo = {
-      title: null,
-      url: location.href,
-    },
-    oHTTPStatus =
-      /* http://www.iana.org/assignments/http-status-codes/http-status-codes.xml */ {
-        100: "Continue",
-        101: "Switching Protocols",
-        102: "Processing",
-        200: "OK",
-        201: "Created",
-        202: "Accepted",
-        203: "Non-Authoritative Information",
-        204: "No Content",
-        205: "Reset Content",
-        206: "Partial Content",
-        207: "Multi-Status",
-        208: "Already Reported",
-        226: "IM Used",
-        300: "Multiple Choices",
-        301: "Moved Permanently",
-        302: "Found",
-        303: "See Other",
-        304: "Not Modified",
-        305: "Use Proxy",
-        306: "Reserved",
-        307: "Temporary Redirect",
-        308: "Permanent Redirect",
-        400: "Bad Request",
-        401: "Unauthorized",
-        402: "Payment Required",
-        403: "Forbidden",
-        404: "Not Found",
-        405: "Method Not Allowed",
-        406: "Not Acceptable",
-        407: "Proxy Authentication Required",
-        408: "Request Timeout",
-        409: "Conflict",
-        410: "Gone",
-        411: "Length Required",
-        412: "Precondition Failed",
-        413: "Request Entity Too Large",
-        414: "Request-URI Too Long",
-        415: "Unsupported Media Type",
-        416: "Requested Range Not Satisfiable",
-        417: "Expectation Failed",
-        422: "Unprocessable Entity",
-        423: "Locked",
-        424: "Failed Dependency",
-        425: "Unassigned",
-        426: "Upgrade Required",
-        427: "Unassigned",
-        428: "Precondition Required",
-        429: "Too Many Requests",
-        430: "Unassigned",
-        431: "Request Header Fields Too Large",
-        500: "Internal Server Error",
-        501: "Not Implemented",
-        502: "Bad Gateway",
-        503: "Service Unavailable",
-        504: "Gateway Timeout",
-        505: "HTTP Version Not Supported",
-        506: "Variant Also Negotiates (Experimental)",
-        507: "Insufficient Storage",
-        508: "Loop Detected",
-        509: "Unassigned",
-        510: "Not Extended",
-        511: "Network Authentication Required",
-      };
-
-  var oReq,
-    bIsLoading = false,
-    bUpdateURL = false;
-
-  oLoadingBox.id = "ajax-loader";
-  oCover.onclick = abortReq;
-  oLoadingImg.src =
-    "data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==";
-  oCover.appendChild(oLoadingImg);
-  oLoadingBox.appendChild(oCover);
-
-  onpopstate = function (oEvent) {
-    bUpdateURL = false;
-    oPageInfo.title = oEvent.state.title;
-    oPageInfo.url = oEvent.state.url;
-    getPage();
-  };
-
-  window.addEventListener
-    ? addEventListener("load", init, false)
-    : window.attachEvent
-      ? attachEvent("onload", init)
-      : (onload = init);
-
-  // Public methods
-
-  this.open = requestPage;
-  this.stop = abortReq;
-  this.rebuildLinks = init;
-})();
+});
 ```
 
-> **Note :** [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) (instruction de constante) **ne fait pas partie de ECMAScript 5**. Il est supporté dans Firefox et Chrome (V8) et partiellement supporté dans Opera 9+ et Safari. **Il n'est pas supporté dans Internet Explorer 6-9, ou dans la version de prévisualisation de Internet Explorer 10**. [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) sera défini par ECMAScript 6, mais avec une sémantique différente. Proches des variables déclarées avec l'instruction [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let), les constantes déclarées avec [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) seront limitées en portée. **Nous ne l'avons utilisé que pour des raisons pédagogiques, si vous souhaitez une compatibilité maximale de ce code, merci de remplacer les références à** **[`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) par des instructions [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var).**
+Dans le gestionnaire d'évènement pour le clic, si le lien contient un attribut de données `"data-creature"`, on utilise la valeur de cet attribut pour récupérer un fichier JSON qui contient les nouvelles informations à afficher sur la page.
 
-Pour plus d'informations, voyez : [Manipuler l'historique du navigateur](/fr/docs/DOM/manipuler_lhistorique_du_navigateur).
+Le fichier JSON en question pourra ressembler à&nbsp;:
 
-## Lire également
+```json
+{
+  "description": "Bald eagles are not actually bald.",
+  "image": {
+    "src": "images/eagle.jpg",
+    "alt": "A bald eagle"
+  },
+  "name": "Eagle"
+}
+```
 
-- {{ domxref("window.history") }}
-- {{ domxref("window.onpopstate") }}
+Notre fonction `displayContent()` met à jour la page avec le contenu du fichier JSON&nbsp;:
+
+```js
+// Mettre à jour la page avec le nouveau contenu
+function displayContent(content) {
+  document.title = `Creatures: ${content.name}`;
+
+  const description = document.querySelector("#description");
+  description.textContent = content.description;
+
+  const photo = document.querySelector("#photo");
+  photo.setAttribute("src", content.image.src);
+  photo.setAttribute("alt", content.image.alt);
+}
+```
+
+Le problème est que cela interfère avec le comportement normal du navigateur pour les boutons «&nbsp;Précédent&nbsp;» et «&nbsp;Suivant&nbsp;».
+
+Du point de vue de la personne, elle a cliqué et la page a été mise à jour et cela ressemble donc à une nouvelle page. Si la personne clique sur le bouton «&nbsp;Précédent&nbsp;», elle s'attend à revenir à l'état tel qu'il était avant de cliquer sur le lien.
+
+Mais pour le navigateur, le dernier lien n'a pas chargé de nouvelle page (et donc créé de nouvelle entrée dans l'historique), et le bouton «&nbsp;Précédent&nbsp;» ramènera la personne sur la page qui était chargée avant l'ouverture de la SPA.
+
+C'est pour résoudre ce problème que nous avons les méthodes `pushState()`, `replaceState()`, et l'évènement `popstate`. Ils nous permettent de synchroniser les éléments d'historique et d'être notifié·e quand l'entrée courante de l'historique arrive sur une telle page (par exemple, parce que la personne a utilisé les boutons «&nbsp;Précédent&nbsp;» ou «&nbsp;Suivant&nbsp;»).
+
+## Utiliser `pushState()`
+
+On peut ajouter une entrée dans l'historique grâce à notre gestionnaire d'évènement pour le clic&nbsp;:
+
+```js
+document.addEventListener("click", async (event) => {
+  const creature = event.target.getAttribute("data-creature");
+  if (creature) {
+    event.preventDefault();
+    try {
+      const response = await fetch(`creatures/${creature}.json`);
+      const json = await response.json();
+      displayContent(json);
+      // On ajoute une nouvelle entrée à l'historique.
+      // Cela simule le chargement d'une nouvelle page.
+      history.pushState(json, "", creature);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+});
+```
+
+Dans cet exemple, nous appelons `pushState()` avec trois arguments&nbsp;:
+
+- `json`
+  - : Il s'agit du contenu qui vient d'être récupéré. Il sera stocké avec l'entrée de l'historique et inclus plus tard dans la propriété [`state`](/fr/docs/Web/API/PopStateEvent/state) de l'argument passé au gestionnaire d'évènements `popstate`.
+- `""`
+  - : Cet argument est nécessaire pour la rétrocompatibilité avec les anciens sites et devrait toujours être une chaîne de caractères vide.
+- `creature`
+  - : Cette valeur sera utilisée comme URL pour l'entrée d'historique. Elle sera affichée dans la barre d'URL du navigateur et utilisée comme valeur pour l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) des requêtes HTTP effectuées par la page. Cette valeur doit avoir la [même origine](/fr/docs/Glossary/Same-origin_policy) que la page.
+
+## Utiliser l'évènement `popstate`
+
+Prenons le scénario suivant&nbsp;:
+
+1. La personne clique sur un lien dans notre SPA, et nous mettons à jour la page en ajoutant une entrée d'historique A grâce à `pushState()`
+2. Elle clique ensuite sur un autre lien, et nous mettons à jour la page en ajoutant une entrée d'historique B avec `pushState()`
+3. Elle clique sur le bouton «&nbsp;Précédent&nbsp;»
+
+L'entrée actuelle est A, et le navigateur déclenche l'évènement `popstate`. L'argument passé au gestionnaire d'évènement contient le JSON passé `pushState()` lors de la navigation vers A. Cela signifie que nous pouvons restaurer le contenu correct avec un gestionnaire d'évènement comme celui-ci&nbsp;:
+
+```js
+// Gestion des boutons précédent/suivant
+window.addEventListener("popstate", (event) => {
+  // Si un état a été fourni, nous avons une page "simulée"
+  // et nous mettons à jour la page courante.
+  if (event.state) {
+    // On simule le chargement de la page précédente
+    displayContent(event.state);
+  }
+});
+```
+
+## Utiliser `replaceState()`
+
+Il nous reste une brique à ajouter. Lorsqu'on charge la SPA, le navigateur ajoute une entrée d'historique. Comme il s'agit d'un chargement de page classique, l'entrée dans l'historique ne possède pas d'état associé. Prenons maintenant le scénario suivant&nbsp;:
+
+1. On charge la SPA&nbsp;: le navigateur ajoute une entrée d'historique
+2. On clique sur un lien dans la SPA&nbsp;: le gestionnaire de clic met à jour la page et rajoute une entrée dans l'historique à l'aide de la méthode `pushState()`
+3. On clique sur le bouton «&nbsp;Précédent&nbsp;»
+
+Nous voudrions que cela restaure l'état initial de la SPA. Mais comme il s'agit d'une navigation vers le même document, la page n'est pas rechargée, et comme l'entrée d'historique ne possède pas d'état pour la page initiale, nous ne pouvons pas utiliser `popstate` pour le restaurer.
+
+La solution consiste à utiliser `replaceState()` pour définir l'objet d'état pour la page initiale. Par exemple&nbsp;:
+
+```js
+// On crée l'état au chargement de la page et on remplace l'entrée courante
+// de l'historique avec cet état
+const image = document.querySelector("#photo");
+const initialState = {
+  description: document.querySelector("#description").textContent,
+  image: {
+    src: image.getAttribute("src"),
+    alt: image.getAttribute("alt"),
+  },
+  name: "Home",
+};
+history.replaceState(initialState, "", document.location.href);
+```
+
+Au chargement de la page, on collecte tous les endroits de la page qui doivent être restaurés quand on reviendra à l'emplacement initial de la SPA. On utilise ici la même structure que le JSON qui est récupéré lors des autres navigations. Les données sont assemblées dans un objet `initialState` qui est passé à `replaceState()`, ce qui permet d'associer ces données à l'entrée courante de l'historique.
+
+Désormais, lorsqu'on reviendra au point de départ, l'évènement `popstate` contiendra les informations de l'état initial et on pourra utiliser la fonction `displayContent()` afin de mettre à jour la page.
+
+## Un exemple complet
+
+Vous pouvez trouver cet exemple dans son intégralité à l'URL <https://github.com/mdn/dom-examples/tree/main/history-api>, et voir la démo correspondante à l'adresse <https://mdn.github.io/dom-examples/history-api/>.
+
+## Voir aussi
+
+- [L'API <i lang="en">History</i>](/fr/docs/Web/API/History_API)
+- L'objet global [`history`](/fr/docs/Web/API/Window/history)
