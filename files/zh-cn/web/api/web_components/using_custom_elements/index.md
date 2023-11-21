@@ -27,7 +27,7 @@ class WordCount extends HTMLParagraphElement {
   constructor() {
     super();
   }
-  // Element functionality written in here
+  // 此处编写元素功能
 }
 ```
 
@@ -38,11 +38,11 @@ class PopupInfo extends HTMLElement {
   constructor() {
     super();
   }
-  // Element functionality written in here
+  // 此处编写元素功能
 }
 ```
 
-在类的[构造函数](/docs/Web/JavaScript/Reference/Classes/constructor)中，你可以设置初始状态和默认值，注册事件侦听器，甚至创建一个 shadow root。在此处，你不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅 [Requirements for custom element constructors and reactions](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
+在类的[构造函数](/docs/Web/JavaScript/Reference/Classes/constructor)中，你可以设置初始状态和默认值，注册事件侦听器，甚至创建一个 shadow root。在此处，你不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅 [自定义元素构造函数和交互行为的要求](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
 
 ### 自定义元素生命周期回调
 
@@ -58,12 +58,12 @@ class PopupInfo extends HTMLElement {
 以下是一个记录这些生命周期事件的最小自定义元素示例：
 
 ```js
-// Create a class for the element
+// 为这个元素创建类
 class MyCustomElement extends HTMLElement {
   static observedAttributes = ["color", "size"];
 
   constructor() {
-    // Always call super first in constructor
+    // 必须首先调用 super 方法
     super();
   }
 
@@ -122,11 +122,11 @@ customElements.define("popup-info", PopupInfo);
 <p is="word-count"></p>
 ```
 
-要使用 autonomous custom element，就像使用内置的HTML元素一样，使用自定义名称即可：
+要使用 autonomous custom element，就像使用内置的 HTML 元素一样，使用自定义名称即可：
 
 ```html
 <popup-info>
-  <!-- content of the element -->
+  <!-- 元素的内容 -->
 </popup-info>
 ```
 
@@ -148,7 +148,7 @@ customElements.define("popup-info", PopupInfo);
 例如，下面这个 autonomous element 将观察一个 `size` 属性，并在它们发生变化时记录旧值和新值：
 
 ```js
-// Create a class for the element
+// 为这个元素创建类
 class MyCustomElement extends HTMLElement {
   static observedAttributes = ["size"];
 
@@ -180,7 +180,7 @@ customElements.define("my-custom-element", MyCustomElement);
 
 ### 一个 autonomous custom element
 
-首先，我们将看一个自主自定义元素。`<popup-info>` 自定义元素接受图像图标和文本字符串作为属性，并将图标嵌入到页面中。当焦点在图标上时，它会在弹出的信息框中显示文本，以提供更多上下文信息。
+首先，我们将看一个 autonomous custom element。`<popup-info>` 自定义元素接受图像图标和文本字符串作为属性，并将图标嵌入到页面中。当焦点在图标上时，它会在弹出的信息框中显示文本，以提供更多上下文信息。
 
 - [查看在线示例](https://mdn.github.io/web-components-examples/popup-info-box-web-component)
 - [查看源代码](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component)
@@ -188,18 +188,18 @@ customElements.define("my-custom-element", MyCustomElement);
 首先，JavaScript 文件定义了一个名为 `PopupInfo` 的类，该类扩展了 {{domxref("HTMLElement")}} 类。
 
 ```js
-// Create a class for the element
+// 为当这个元素创建一个类
 class PopupInfo extends HTMLElement {
   constructor() {
-    // Always call super first in constructor
+    // 必须首先调用 super 方法
     super();
   }
 
   connectedCallback() {
-    // Create a shadow root
+    // 创建 shadow root
     const shadow = this.attachShadow({ mode: "open" });
 
-    // Create spans
+    // 创建几个 span
     const wrapper = document.createElement("span");
     wrapper.setAttribute("class", "wrapper");
 
@@ -210,11 +210,11 @@ class PopupInfo extends HTMLElement {
     const info = document.createElement("span");
     info.setAttribute("class", "info");
 
-    // Take attribute content and put it inside the info span
+    // 获取属性内容然后将其放入 info 这个 span 内
     const text = this.getAttribute("data-text");
     info.textContent = text;
 
-    // Insert icon
+    // 插入图标
     let imgUrl;
     if (this.hasAttribute("img")) {
       imgUrl = this.getAttribute("img");
@@ -226,7 +226,7 @@ class PopupInfo extends HTMLElement {
     img.src = imgUrl;
     icon.appendChild(img);
 
-    // Create some CSS to apply to the shadow dom
+    // 创建一些 CSS 应用于 shadow dom
     const style = document.createElement("style");
     console.log(style.isConnected);
 
@@ -260,7 +260,7 @@ class PopupInfo extends HTMLElement {
       }
     `;
 
-    // Attach the created elements to the shadow dom
+    // 将创建好的元素附加到 shadow dom 上
     shadow.appendChild(style);
     console.log(style.isConnected);
     shadow.appendChild(wrapper);
@@ -274,7 +274,7 @@ class PopupInfo extends HTMLElement {
 
 在 `connectedCallback()` 方法内部，我们定义了元素连接到 DOM 时元素将具有的所有功能。在这种情况下，我们将一个 shadow root 附加到自定义元素，使用一些 DOM 操作来创建元素的 shadow DOM 结构——然后将其附加到 shadow root——最后将一些 CSS 附加到 shadow root 以进行样式设置。我们不在构造函数中执行这项工作，因为在连接到 DOM 之前，元素的属性是不可用的。
 
-最后，我们使用前面提到的 `define()` 方法在 `CustomElementRegistry` 中注册我们的自定义元素 —— 在参数中，我们指定元素名称，然后是定义其功能的类名称：
+最后，我们使用前面提到的 `define()` 方法在 `CustomElementRegistry` 中注册我们的自定义元素——在参数中，我们指定元素名称，然后定义其功能的类名称：
 
 ```js
 customElements.define("popup-info", PopupInfo);
@@ -300,18 +300,18 @@ customElements.define("popup-info", PopupInfo);
 下面是类的定义：
 
 ```js
-// Create a class for the element
+// 为这个元素创建类
 class PopupInfo extends HTMLElement {
   constructor() {
-    // Always call super first in constructor
+    // 必须首先调用 super 方法
     super();
   }
 
   connectedCallback() {
-    // Create a shadow root
+    // 创建 shadow root
     const shadow = this.attachShadow({ mode: "open" });
 
-    // Create spans
+    // 创建几个 span
     const wrapper = document.createElement("span");
     wrapper.setAttribute("class", "wrapper");
 
@@ -322,11 +322,11 @@ class PopupInfo extends HTMLElement {
     const info = document.createElement("span");
     info.setAttribute("class", "info");
 
-    // Take attribute content and put it inside the info span
+    // 获取属性内容然后将其放入 info 这个 span 内
     const text = this.getAttribute("data-text");
     info.textContent = text;
 
-    // Insert icon
+    // 插入图标
     let imgUrl;
     if (this.hasAttribute("img")) {
       imgUrl = this.getAttribute("img");
@@ -338,12 +338,12 @@ class PopupInfo extends HTMLElement {
     img.src = imgUrl;
     icon.appendChild(img);
 
-    // Apply external styles to the shadow dom
+    // 将外部样式添加至 shadow dom
     const linkElem = document.createElement("link");
     linkElem.setAttribute("rel", "stylesheet");
     linkElem.setAttribute("href", "style.css");
 
-    // Attach the created elements to the shadow dom
+    // 将创建好的元素附加到 shadow dom 上
     shadow.appendChild(linkElem);
     shadow.appendChild(wrapper);
     wrapper.appendChild(icon);
@@ -368,48 +368,47 @@ class PopupInfo extends HTMLElement {
 首先，我们定义了这个元素的类：
 
 ```js
-// Create a class for the element
+// 为这个元素创建类
 class ExpandingList extends HTMLUListElement {
   constructor() {
-    // Always call super first in constructor
-    // Return value from super() is a reference to this element
+    // 必须首先调用 super 方法
+    // super() 的返回值是对当前元素的引用
     self = super();
   }
 
   connectedCallback() {
-    // Get ul and li elements that are a child of this custom ul element
-    // li elements can be containers if they have uls within them
+    // 获取当前自定义 ul 元素的 ul 和 li 子元素
+    // 包含 ul 的 li 元素可以成为容器
     const uls = Array.from(self.querySelectorAll("ul"));
     const lis = Array.from(self.querySelectorAll("li"));
-    // Hide all child uls
-    // These lists will be shown when the user clicks a higher level container
+    // 隐藏所有子 ul
+    // 当用户点击更高级别的容器时，这些列表就会显示出来
     uls.forEach((ul) => {
       ul.style.display = "none";
     });
 
-    // Look through each li element in the ul
+    // 仔细观察每个在 ul 中的 li 元素
     lis.forEach((li) => {
-      // If this li has a ul as a child, decorate it and add a click handler
+      // 如果这个 li 有一个 ul 作为子元素，则对其进行装饰并添加一个点击处理程序
       if (li.querySelectorAll("ul").length > 0) {
-        // Add an attribute which can be used  by the style
-        // to show an open or closed icon
+        // 添加一个属性，以便通过样式使用
+        // 来显示打开或关闭的图标
         li.setAttribute("class", "closed");
-
-        // Wrap the li element's text in a new span element
-        // so we can assign style and event handlers to the span
+        // 将 li 元素的文本包裹在一个新的 span 元素中
+        // 这样我们就可以将样式和事件处理程序分配给 span
         const childText = li.childNodes[0];
         const newSpan = document.createElement("span");
 
-        // Copy text from li to span, set cursor style
+        // 从 li 复制文本到 span，设置光标样式
         newSpan.textContent = childText.textContent;
         newSpan.style.cursor = "pointer";
 
-        // Add click handler to this span
+        // 为这个 span 添加事件处理程序
         newSpan.addEventListener("click", (e) => {
-          // next sibling to the span should be the ul
+          // span 的下一个兄弟元素应该是 ul
           const nextul = e.target.nextElementSibling;
 
-          // Toggle visible state and update class attribute on ul
+          // 切换可见状态并更新 ul 的 class 属性
           if (nextul.style.display == "block") {
             nextul.style.display = "none";
             nextul.parentNode.setAttribute("class", "closed");
@@ -418,7 +417,7 @@ class ExpandingList extends HTMLUListElement {
             nextul.parentNode.setAttribute("class", "open");
           }
         });
-        // Add the span and remove the bare text node from the li
+        // 添加 span 并从 li 中移除纯文本节点
         childText.parentNode.insertBefore(newSpan, childText);
         childText.parentNode.removeChild(childText);
       }
@@ -464,7 +463,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 ```js
 constructor() {
-  // Always call super first in constructor
+  // 必须首先调用 super 方法
   super();
 
   const shadow = this.attachShadow({ mode: "open" });
