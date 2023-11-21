@@ -2396,6 +2396,10 @@
     "modified": "2019-03-23T22:15:27.700Z",
     "contributors": ["MarceloBRN", "sergiorg"]
   },
+  "Web/API/CanvasRenderingContext2D/globalCompositeOperation": {
+    "modified": "2019-03-18T21:37:01.783Z",
+    "contributors": ["CarlosRodrigues"]
+  },
   "Web/API/CanvasRenderingContext2D/lineTo": {
     "modified": "2019-03-23T22:18:50.928Z",
     "contributors": ["MarceloBRN"]
@@ -2471,10 +2475,6 @@
   "Web/API/Canvas_API/Tutorial/Compositing": {
     "modified": "2019-03-23T22:12:17.031Z",
     "contributors": ["CarlosRodrigues", "Fernandolrs", "mak213k"]
-  },
-  "Web/API/Canvas_API/Tutorial/Compositing/Example": {
-    "modified": "2019-03-18T21:37:01.783Z",
-    "contributors": ["CarlosRodrigues"]
   },
   "Web/API/Canvas_API/Tutorial/Drawing_shapes": {
     "modified": "2020-06-20T19:01:22.926Z",
@@ -4097,30 +4097,6 @@
       "fusionchess"
     ]
   },
-  "Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests": {
-    "modified": "2019-03-18T20:53:32.225Z",
-    "contributors": [
-      "helton-mori-dev",
-      "Laercio89",
-      "erickfaraujo",
-      "filipecalasans",
-      "melostbr"
-    ]
-  },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2019-03-23T23:31:13.941Z",
-    "contributors": [
-      "JosOe",
-      "yuhzador",
-      "glaudiston",
-      "flaviomicheletti",
-      "RodrigoMarques",
-      "vitornogueira",
-      "teoli",
-      "MarcoBruno",
-      "vagnerleitte"
-    ]
-  },
   "Web/API/XMLHttpRequest/abort": {
     "modified": "2019-03-23T22:16:54.432Z",
     "contributors": ["gustavobeavis"]
@@ -4149,6 +4125,30 @@
     "modified": "2019-03-23T22:27:06.677Z",
     "contributors": ["trestini"]
   },
+  "Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests": {
+    "modified": "2019-03-18T20:53:32.225Z",
+    "contributors": [
+      "helton-mori-dev",
+      "Laercio89",
+      "erickfaraujo",
+      "filipecalasans",
+      "melostbr"
+    ]
+  },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2019-03-23T23:31:13.941Z",
+    "contributors": [
+      "JosOe",
+      "yuhzador",
+      "glaudiston",
+      "flaviomicheletti",
+      "RodrigoMarques",
+      "vitornogueira",
+      "teoli",
+      "MarcoBruno",
+      "vagnerleitte"
+    ]
+  },
   "Web/API/XSLTProcessor": {
     "modified": "2019-03-23T23:03:40.500Z",
     "contributors": ["EduardoRedressa"]
@@ -4171,51 +4171,51 @@
       "lfarroco"
     ]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2019-03-23T22:25:22.069Z",
     "contributors": ["mayronmedeiros"]
   },
-  "Web/API/console/clear": {
+  "Web/API/console/clear_static": {
     "modified": "2020-10-15T22:29:37.104Z",
     "contributors": ["webfelipemaia"]
   },
-  "Web/API/console/count": {
+  "Web/API/console/count_static": {
     "modified": "2019-03-23T22:16:10.687Z",
     "contributors": ["vspedr"]
   },
-  "Web/API/console/dir": {
+  "Web/API/console/dir_static": {
     "modified": "2019-03-23T22:50:36.909Z",
     "contributors": ["belsanpesou"]
   },
-  "Web/API/console/error": {
+  "Web/API/console/error_static": {
     "modified": "2019-03-23T22:45:13.263Z",
     "contributors": ["raduq"]
   },
-  "Web/API/console/info": {
+  "Web/API/console/info_static": {
     "modified": "2019-03-23T22:29:13.618Z",
     "contributors": ["zaclummys", "HugoOliveira"]
   },
-  "Web/API/console/log": {
+  "Web/API/console/log_static": {
     "modified": "2019-03-23T22:56:56.119Z",
     "contributors": ["odahcam", "Higo"]
   },
-  "Web/API/console/table": {
+  "Web/API/console/table_static": {
     "modified": "2020-10-15T22:16:14.686Z",
     "contributors": ["elielsonbatista"]
   },
-  "Web/API/console/time": {
+  "Web/API/console/time_static": {
     "modified": "2019-10-03T22:24:48.908Z",
     "contributors": ["gcacars"]
   },
-  "Web/API/console/timeEnd": {
+  "Web/API/console/timeend_static": {
     "modified": "2019-03-23T23:04:24.266Z",
     "contributors": ["teoli", "perrucho"]
   },
-  "Web/API/console/timeStamp": {
+  "Web/API/console/timestamp_static": {
     "modified": "2019-10-03T22:25:43.901Z",
     "contributors": ["gcacars"]
   },
-  "Web/API/console/warn": {
+  "Web/API/console/warn_static": {
     "modified": "2019-03-18T21:45:25.881Z",
     "contributors": ["raduq"]
   },

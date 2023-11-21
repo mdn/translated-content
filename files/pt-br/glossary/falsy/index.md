@@ -3,6 +3,8 @@ title: Falsy
 slug: Glossary/Falsy
 ---
 
+{{GlossarySidebar}}
+
 Um valor **falsy** é um valor que se traduz em falso quando avaliado em um contexto {{Glossary("Boolean")}}.
 
 {{Glossary("JavaScript")}} usa tipo {{Glossary("Type_Conversion", "coercion")}} em contextos booleanos.
