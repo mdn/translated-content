@@ -16,7 +16,7 @@ slug: Web/CSS/scroll-behavior
 ## Синтаксис
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
