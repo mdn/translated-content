@@ -65,7 +65,7 @@ pets[pets.length] = "cat";
 
 编写异步代码可以提高性能，应尽可能使用。特别是，你可以使用：
 
-- [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [`async`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await)
 
 当两种语法都可行时，我们倾向于使用更简单的 `async`/`await` 语法。不幸的是，你不能在顶层使用 `await`，除非你在 ECMAScript 模块中。但 Node.js 使用 CommonJS 模块而不是 ES 模块。因此，如果你打算在所有地方使用该示例，请避免顶层的 `await`。
