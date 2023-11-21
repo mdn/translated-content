@@ -149,7 +149,7 @@ pets[pets.length] = "cat";
 
   ```js example-bad
   function exampleFunc(fruitBasket) {
-    // Logs: ['banana', 'mango', 'orange']
+    // 输出：['banana', 'mango', 'orange']
     console.log(fruitBasket);
   }
   ```
