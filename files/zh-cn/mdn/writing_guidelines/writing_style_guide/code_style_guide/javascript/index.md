@@ -92,7 +92,7 @@ pets[pets.length] = "cat";
 
   // 从 1 到 4 的 for 循环
   for (let i = 0; i < 4; i++) {
-    // 将值添加到总数
+    // 将值累加到总和（total）
     total += arr[i];
   }
   ```
