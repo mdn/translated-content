@@ -456,7 +456,7 @@ switch 语句可能有点棘手。
   }
   ```
 
-  如果你添加了 `break` 语句，它用于不会被访问。不要这样写：
+  如果你添加了 `break` 语句，它会是不可达的。不要这样写：
 
   ```js example-bad
   switch (species) {
@@ -473,7 +473,7 @@ switch 语句可能有点棘手。
 
 - 使用 `default` 作为最后一个 case，不要在 `default` 后面添加 `break` 语句。如果你需要做不同的事情，请添加注释来解释为什么。
 
-- 请记住，当你为一个 case 声明一个局部变量时，你需要使用大括号来定义范围：
+- 请记住，当你为一个 case 声明一个局部变量时，你需要使用大括号来定义作用域：
 
   ```js
   switch (fruits) {
@@ -492,7 +492,7 @@ switch 语句可能有点棘手。
 
 ### 错误处理
 
-- 如果程序的某些状态引发未捕获的错误，它们会停止执行，并可能降低示例的可读性。因此，你应该使用 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块来捕获错误，如下所示：
+- 如果程序的某些状态引发未捕获的错误，它们会停止执行，并可能降低示例的可用性。因此，你应该使用 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块来捕获错误，如下所示：
 
   ```js example-good
   try {
@@ -502,7 +502,7 @@ switch 语句可能有点棘手。
   }
   ```
 
-- 但你不需要捕获的错误，请省略 `catch` 语句的参数：
+- 在你不需要 `catch` 语句的参数时，请省略它：
 
   ```js example-good
   try {
@@ -512,7 +512,7 @@ switch 语句可能有点棘手。
   }
   ```
 
-> **备注：** 请记住，只有*可恢复*的错误才应该被捕获和处理。所有不可恢复的错误都应该被抛出，并逐步向上冒泡。
+> **备注：** 请记住，只有*可恢复*的错误才应该被捕获和处理。所有不可恢复的错误都应该被抛出，并在调用栈中逐级向上冒泡。
 
 ## 对象
 
@@ -607,7 +607,6 @@ const obj = {
 ### 对象属性
 
 - [`Object.prototype.hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 方法已被弃用，取而代之的是 [`Object.hasOwn()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)。
-- When possible, use the shorthand avoiding the duplication of the property identifier. Write:
 - 在可能的情况下，使用简写来避免属性标识符的重复。比如：
 
   ```js example-good
@@ -647,7 +646,7 @@ if (condition) {
 }
 ```
 
-条件运算符在创建用来打印新信息的字符串时很有帮助。在这种情况下，使用常规的 `if...else` 语句会导致像打印日志这样的副操作变成长代码块，则会混淆示例的重点。
+条件运算符在创建用来打印新信息的字符串时很有帮助。在这种情况下，使用常规的 `if...else` 语句会导致像打印日志这样的副操作变成长代码块，会混淆示例的重点。
 
 ### 严格相等运算符
 
@@ -660,7 +659,7 @@ name === "Shilpa";
 age !== 25;
 ```
 
-不要像下面这样使用普通的相等和不等运算符：
+不要像下面这样使用宽松相等和不等运算符：
 
 ```js example-bad
 name == "Shilpa";
@@ -703,11 +702,11 @@ age != 25;
 
 好的变量名对理解代码至关重要。
 
-- 使用简短的标识符，并避免不常用的缩写。好的变量名通常在 3 到 10 个字符之间，但这只是一个提示。例如，`accelerometer` 比为了字符长度而缩写的缩写 `acclmtr` 更具描述性。
+- 使用简短的标识符，并避免不常用的缩写。好的变量名通常在 3 到 10 个字符之间，但这只是一个提示。例如，`accelerometer` 比为了字符长度而减短的缩写 `acclmtr` 更具描述性。
 - 尝试使用现实世界相关的例子，其中每个变量都有清晰的语义。只有在示例简单且随意时才使用占位名称，比如 `foo` 和 `bar`。
-- 不要使用[匈牙利命名法](https://zh.wikipedia.org/wiki/匈牙利命名法)命名约定。不要在变量名前面加上类型。比如，不要写成 `bBought = oCar.sBuyer != null` 或 `sName = "John Doe"`，而是 `bought = car.buyer !== null` 或 `sName = "John Doe"`。
+- 不要使用[匈牙利命名法](https://zh.wikipedia.org/wiki/匈牙利命名法)命名约定。不要在变量名前面加上类型。比如，不要写成 `bBought = oCar.sBuyer != null` 或 `sName = "John Doe"`，而是写成 `bought = car.buyer !== null` 或 `sName = "John Doe"`。
 - 对于集合，避免在命名中添加例如列表、数组、队列这样的类型名称。使用复数形式的内容名称。例如，对于汽车数组，使用 `cars` 而不是 `carArray` 或 `carList`。有时会有例外，比如你想在没有特定应用程序的上下文中展示一个特性的抽象形式。
-- 对于原始值，使用*小驼峰命名法*，以小写字母开头。不要使用`_`。使用适当的简洁、可读性好的和语义化的名称，当适当时。比如，使用 `currencyName` 而不是 `currency_name`。
+- 对于原始值，使用*小驼峰命名法*，以小写字母开头。不要使用 `_`。在适当的情况下，使用简洁、可读性好且语义化的名称。比如，使用 `currencyName` 而不是 `currency_name`。
 - 避免使用冠词和所有格，例如，使用 `car` 而不是 `myCar` 或 `aCar`。有时会有例外，比如你想在没有特定应用程序的上下文中展示一个特性的抽象形式。
 - 使用变量名如下所示：
 
@@ -727,7 +726,7 @@ age != 25;
 
 ### 变量声明
 
-在声明变量和常量时，使用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 关键字，而不是 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)。下面的例子展示了 MDN Web Docs 上推荐的和不推荐的用法：
+在声明变量和常量时，使用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 关键字，而不是 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)。下面的例子展示了 MDN Web 文档上推荐的和不推荐的用法：
 
 - 如果一个变量不会被重新赋值，请使用 `const`，如下所示：
 
@@ -744,7 +743,7 @@ age != 25;
   console.log("Happy birthday!");
   ```
 
-- 下面的示例在应该使用 `const` 的地方使用了 `let`，代码仍然可以运行，但我们希望在 MDN Web Docs 代码示例中避免这种用法。
+- 下面的示例在应该使用 `const` 的地方使用了 `let`，代码仍然可以运行，但我们希望在 MDN Web 文档代码示例中避免这种用法。
 
   ```js example-bad
   let name = "Shilpa";
@@ -759,14 +758,14 @@ age != 25;
   console.log("Happy birthday!");
   ```
 
-- 下面的示例使用了 `var`，这会污染全局范围：
+- 下面的示例使用了 `var`，这会污染全局作用域：
 
   ```js example-bad
   var age = 40;
   var name = "Shilpa";
   ```
 
-- 每行声明一个变量，如下所示：
+- 一行声明一个变量，如下所示：
 
   ```js example-good
   let var1;
@@ -782,7 +781,7 @@ age != 25;
   let var3 = var4 = "Apapou"; // var4 被隐式创建为全局变量；这在严格模式下会失败
   ```
 
-### 类型强制转换
+### 强制类型转换
 
 避免隐式强制类型转换。特别是，避免 `+val` 以强制将值转换未为数字，以及 `"" + val` 来将其强制转换为字符串。改为在不使用 `new` 的情况下使用 `Number()` 和 `String()`。例如：
 
@@ -839,12 +838,12 @@ const context = new AudioContext();
 
 以下是要避免的 Web API 以及用什么来替换它们的非详尽列表：
 
-- 使用 `fetch()` 来替代 XHR (`XMLHttpRequest`).
+- 使用 `fetch()` 来替代 XHR（`XMLHttpRequest`）。
 - 在 Web 音频 API 中使用 `AudioWorklet` 来替代 `ScriptProcessorNode`。
 
 ### 使用安全可靠的 API
 
-- 请不要使用 {{DOMxRef("Element.innerHTML")}} 将纯文本内容插入到元素中；而是使用 {{DOMxRef("Node.textContent")}} 作为替代。`innerHTML` 属性可能会导致安全问题，如果开发人员不控制参数。作为编写者，我们越避免使用它，开发者复制和粘贴我们的代码时产生的安全漏洞就越少。
+- 请不要使用 {{DOMxRef("Element.innerHTML")}} 将纯文本内容插入到元素中；而是使用 {{DOMxRef("Node.textContent")}} 替代。`innerHTML` 属性可能会导致安全问题，如果开发人员不控制参数。作为编写者，我们越避免使用它，开发者复制和粘贴我们的代码时产生的安全漏洞就越少。
 
   下面的示例演示了 `textContent` 的用法。
 
@@ -862,12 +861,12 @@ const context = new AudioContext();
   para.innerHTML = text;
   ```
 
-- `alert()` 函数是不可靠的。它在 MDN Web Docs 页面中嵌入的 {{HTMLElement("iframe")}} 中的实时示例中不起作用。此外，它是对整个窗口的模态提示，这很烦人。在静态代码示例中，使用 `console.log()` 或 `console.error()`。在[实时示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)中，避免使用 `console.log()` 和 `console.error()`，因为它们不会显示。使用专用的 UI 元素。
+- `alert()` 函数是不可靠的。在 MDN Web 文档，它在嵌入到 {{HTMLElement("iframe")}} 中的实时示例内无法正常工作。此外，它是对整个窗口的模态提示，这很令人讨厌。在静态代码示例中，使用 `console.log()` 或 `console.error()`。在[实时示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)中，避免使用 `console.log()` 和 `console.error()`，因为它们不会显示。而是使用专用的 UI 元素。
 
 ### 使用合适的打印方法
 
 - 当打印一个消息时，使用 `console.log()`。
-- 当淡印一个错误时，使用 `console.error()`
+- 当打印一个错误时，使用 `console.error()`。
 
 ## 参见
 
