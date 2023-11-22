@@ -1,8 +1,7 @@
 ---
 title: Ajax ナビゲーションの例
-slug: Web/API/History_API/Example
-l10n:
-  sourceCommit: c09b8e9dd0022a33cf84355704ca281d6a5f29f5
+slug: conflicting/Web/API/History_API/Working_with_the_History_API
+original_slug: Web/API/History_API/Example
 ---
 
 これは 3 つのページ (first_page.php、second_page.php、third_page.php) で構成された AJAX ウェブサイトの例です。どのように動作するかを確認するには、以下のファイル (または git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example)) を作成してください。
