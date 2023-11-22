@@ -141,7 +141,7 @@ pets[pets.length] = "cat";
 
   ```js example-good
   function exampleFunc(fruitBasket) {
-    console.log(fruitBasket); // ['banana', 'mango', 'orange']
+    console.log(fruitBasket); // ['香蕉', '芒果', '橙子']
   }
   ```
 
@@ -149,7 +149,7 @@ pets[pets.length] = "cat";
 
   ```js example-bad
   function exampleFunc(fruitBasket) {
-    // 输出：['banana', 'mango', 'orange']
+    // 输出：['香蕉', '芒果', '橙子']
     console.log(fruitBasket);
   }
   ```
@@ -159,7 +159,7 @@ pets[pets.length] = "cat";
   ```js example-good
   function exampleFunc(fruitBasket) {
     console.log(fruitBasket);
-    // ['banana', 'mango', 'orange', 'apple', 'pear', 'durian', 'lemon']
+    // ['香蕉', '芒果', '橙子', '苹果', '梨', '榴莲', '柠檬']
   }
   ```
 
@@ -228,7 +228,7 @@ array.forEach((value /* , index, array */) => {
 
 ```js example-good
 function sayHello() {
-  console.log("Hello!");
+  console.log("你好！");
 }
 ```
 
@@ -236,11 +236,11 @@ function sayHello() {
 
 ```js example-bad
 function SayHello() {
-  console.log("Hello!");
+  console.log("你好！");
 }
 
 function doIt() {
-  console.log("Hello!");
+  console.log("你好！");
 }
 ```
 
