@@ -246,7 +246,7 @@ APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指
       <td>无损</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
         根据<a href="http://creativecommons.org/licenses/by-sa/3.0/">创作共用署名-相同方式共享许可</a>（<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>）3.0 或更高版本免费开放。
       </td>
@@ -339,7 +339,7 @@ Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，�
       <td>有损压缩和无损压缩</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
         免版税。有关许可信息，请访问<a href="https://aomedia.org/license/">版权页面</a>。
       </td>
@@ -443,7 +443,7 @@ BMP 理论上支持多种内部数据表示。最简单也是最常用的 BMP �
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
         由 <a href="https://docs.microsoft.com/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a> 记载，虽然微软拥有针对 BMP 的专利，但他们已公布了一项承诺，只要满足特定条件，他们就不会主张其专利权。但这并不等同于许可。BMP 包含在 Windows 元文件格式（<code>.wmf</code>）中。
       </td>
@@ -541,7 +541,7 @@ GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF
       <td>无损 (LZW)</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
         虽然 GIF 格式本身是开放的，但 LZW 压缩算法在本世纪初之前一直受专利保护。截至 2004 年 7 月 7 日，所有相关专利都已过期，GIF 格式可以自由使用。
       </td>
@@ -687,7 +687,7 @@ ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌�
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>—</td>
     </tr>
   </tbody>
@@ -775,7 +775,7 @@ JPEG 实际上是一种压缩照片的数据格式，而不是一种文件类型
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>截至 2006 年 10 月 27 日，所有美国专利均已过期。</td>
     </tr>
   </tbody>
@@ -929,7 +929,7 @@ PNG 受广泛支持，所有主要浏览器都完全支持其特性。Internet E
       <td>无损，可选择索引颜色，如 GIF</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
         ©2003 <a href="https://www.w3.org/">W3C</a>（<a href="http://www.lcs.mit.edu/">MIT</a>、<a href="http://www.ercim.org/">ERCIM</a>、<a href="https://www.keio.ac.jp/">Keio</a>)，保留所有权利。W3C
         <a href="https://www.w3.org/policies/#disclaimers">免责声明</a>、<a href="https://www.w3.org/policies/#trademarks">商标</a>、<a href="https://www.w3.org/copyright/document-license/">文档使用</a>和<a href="https://www.w3.org/copyright/software-license/">软件授权</a>适用。没有已知的专利使用费。
@@ -1028,7 +1028,7 @@ SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像�
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
         ©2018 <a href="https://www.w3.org/">W3C</a>（<a
           href="http://www.lcs.mit.edu/"
@@ -1154,7 +1154,7 @@ TIFF 不仅支持 RGB，还支持多种色彩空间。这些空间包括 CMYK、
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
         无需许可证（除了与你可能使用的库相关的许可证）；所有已知专利均已过期。
       </td>
@@ -1249,7 +1249,7 @@ WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但
       <td>无损（Huffman、LZ77 或 color cache codes）或有损（VP8）</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>无需许可证；源代码可公开获取。</td>
     </tr>
   </tbody>
@@ -1341,7 +1341,7 @@ static unsigned char square8_bits[] = {
       <td>无损</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>开源</td>
     </tr>
   </tbody>
