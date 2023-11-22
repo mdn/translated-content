@@ -30185,23 +30185,6 @@
     "modified": "2019-03-18T20:53:07.981Z",
     "contributors": ["mfuji09"]
   },
-  "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
-    "modified": "2020-08-12T11:49:11.332Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "chrisdavidmills",
-      "fscholz",
-      "ethertank",
-      "Potappo",
-      "Mgjbot",
-      "Summit677",
-      "Marsf",
-      "Shimono",
-      "Taken Bot",
-      "Dria"
-    ]
-  },
   "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-12-06T14:17:48.495Z",
     "contributors": [
@@ -30394,10 +30377,6 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
   },
-  "conflicting/Web/API/History_API/Working_with_the_History_API": {
-    "modified": "2020-02-15T02:40:44.391Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
@@ -30569,10 +30548,6 @@
   },
   "orphaned/Web/API/Element/show_event": {
     "modified": "2020-10-15T22:28:00.883Z",
-    "contributors": ["mfuji09"]
-  },
-  "orphaned/Web/API/HTMLDialogElement/cancel_event": {
-    "modified": "2020-10-15T22:28:07.370Z",
     "contributors": ["mfuji09"]
   },
   "orphaned/Web/API/HTMLElement/contextMenu": {
