@@ -374,7 +374,7 @@ function doIt() {
   ```js example-good
   const gerbils = ["舒克", "贝塔"];
   gerbils.forEach((gerbil, i) => {
-    console.log(`Gerbil #${i}: ${gerbil}`);
+    console.log(`沙鼠 ${i}号：${gerbil}`);
   });
   ```
 
@@ -383,7 +383,7 @@ function doIt() {
   ```js example-bad
   const gerbils = ["舒克", "贝塔"];
   for (let i = 0; i < gerbils.length; i++) {
-    console.log(`Gerbil #${i}: ${gerbils[i]}`);
+    console.log(`沙鼠 ${i}号：${gerbil}`);
   }
   ```
 
@@ -563,7 +563,7 @@ const object = new Object();
     }
 
     greeting() {
-      console.log(`Hi! I'm ${this.name}`);
+      console.log(`你好！我是 ${this.name}`);
     }
   }
   ```
@@ -684,14 +684,14 @@ age != 25;
 
   ```js example-good
   const name = "Shilpa";
-  console.log(`Hi! I'm ${name}!`);
+  console.log(`你好！我是 ${name}！`);
   ```
 
   请不要像这样串联字符串：
 
   ```js example-bad
   const name = "Shilpa";
-  console.log("Hi! I'm" + name + "!"); // Hi! I'mShilpa!
+  console.log("你好！我是 " + name + "！"); // 你好！我是 Shilpa！
   ```
 
 - 请不要过度使用模版字面量。如果没有替换的话，请使用普通字符串。
@@ -740,7 +740,7 @@ age != 25;
   ```js example-good
   let age = 40;
   age++;
-  console.log("Happy birthday!");
+  console.log("生日快乐！");
   ```
 
 - 下面的示例在应该使用 `const` 的地方使用了 `let`，代码仍然可以运行，但我们希望在 MDN Web 文档代码示例中避免这种用法。
@@ -755,7 +755,7 @@ age != 25;
   ```js example-bad
   const age = 40;
   age++;
-  console.log("Happy birthday!");
+  console.log("生日快乐！");
   ```
 
 - 下面的示例使用了 `var`，这会污染全局作用域：
@@ -770,7 +770,7 @@ age != 25;
   ```js example-good
   let var1;
   let var2;
-  let var3 = "Apapou";
+  let var3 = "张三";
   let var4 = var3;
   ```
 
@@ -778,7 +778,7 @@ age != 25;
 
   ```js-nolint example-bad
   let var1, var2;
-  let var3 = var4 = "Apapou"; // var4 被隐式创建为全局变量；这在严格模式下会失败
+  let var3 = var4 = "张三"; // var4 被隐式创建为全局变量；这在严格模式下会失败
   ```
 
 ### 强制类型转换
@@ -848,7 +848,7 @@ const context = new AudioContext();
   下面的示例演示了 `textContent` 的用法。
 
   ```js example-good
-  const text = "Hello to all you good people";
+  const text = "父老乡亲们大家好";
   const para = document.createElement("p");
   para.textContent = text;
   ```
@@ -856,7 +856,7 @@ const context = new AudioContext();
   不要使用 `innerHTML` 将*纯文本*插入到 DOM 节点中。
 
   ```js example-bad
-  const text = "Hello to all you good people";
+  const text = "父老乡亲们大家好";
   const para = document.createElement("p");
   para.innerHTML = text;
   ```
