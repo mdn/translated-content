@@ -1168,7 +1168,7 @@ WebP 支持通过基于 VP8 视频编解码器的预测编码进行有损压缩�
 
 WebP 还支持动画：在有损 WebP 文件中，图像数据由 VP8 比特流表示，其中可能包含多个帧。无损 WebP 包含描述动画的 `ANIM` 块和表示动画序列一帧的 `ANMF` 块。支持循环播放。
 
-WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但还没有深入的历史支持。需要提供 [JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的后备，例如 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)。
+WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但还没有深入的历史支持。需要提供 [JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的回退，例如 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)。
 
 <table class="standard-table">
   <tbody>
@@ -1353,13 +1353,13 @@ static unsigned char square8_bits[] = {
 
 ### 照片
 
-有损压缩（取决于编码器的配置）通常能很好地压缩照片。这使得 [JPEG](#jpeg（联合图像专家小组图像）) 和 [WebP](#webp_图像) 成为照片的不错选择，JPEG 的兼容性更好，但 WebP 的压缩效果可能更好。为了最大限度地提高质量和减少下载时间，可以考虑同时提供这两种格式的[后备图像](#提供后备图像)，WebP 是首选，JPEG 是次选。否则，为了兼容性，JPEG 是安全的选择。
+有损压缩（取决于编码器的配置）通常能很好地压缩照片。这使得 [JPEG](#jpeg（联合图像专家小组图像）) 和 [WebP](#webp_图像) 成为照片的不错选择，JPEG 的兼容性更好，但 WebP 的压缩效果可能更好。为了最大限度地提高质量和减少下载时间，可以考虑同时提供这两种格式的[回退图像](#提供回退图像)，WebP 是首选，JPEG 是次选。否则，为了兼容性，JPEG 是安全的选择。
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
     <tr>
       <th scope="col" style="width: 50%">最佳选择</th>
-      <th scope="col">后备方案</th>
+      <th scope="col">回退方案</th>
     </tr>
   </thead>
   <tbody>
@@ -1372,15 +1372,15 @@ static unsigned char square8_bits[] = {
 
 ### 图标
 
-对于图标等较小的图像，应使用无损格式，以避免在大小受限的图像中丢失细节。虽然无损 WebP 是实现这一目的的理想选择，但其支持尚未普及，因此 PNG 是更好的选择，除非你提供[后备选项](#提供后备图像)。如果图像包含的颜色少于 256 种，GIF 也是一种选择，不过 PNG 通过其索引压缩选项（PNG-8）通常可以压缩得更小。
+对于图标等较小的图像，应使用无损格式，以避免在大小受限的图像中丢失细节。虽然无损 WebP 是实现这一目的的理想选择，但其支持尚未普及，因此 PNG 是更好的选择，除非你提供[回退选项](#提供回退图像)。如果图像包含的颜色少于 256 种，GIF 也是一种选择，不过 PNG 通过其索引压缩选项（PNG-8）通常可以压缩得更小。
 
-如果图标可以用矢量图形表示，可以考虑使用 [SVG](#svg（可缩放矢量图形）)，因为它可以在各种分辨率和尺寸下缩放，非常适合响应式设计。虽然 SVG 支持良好，但仍值得为旧版浏览器提供 PNG 后备功能。
+如果图标可以用矢量图形表示，可以考虑使用 [SVG](#svg（可缩放矢量图形）)，因为它可以在各种分辨率和尺寸下缩放，非常适合响应式设计。虽然 SVG 支持良好，但仍值得为旧版浏览器提供 PNG 回退功能。
 
 <table class="standard-table" style="max-width: 42rem">
   <thead>
     <tr>
       <th scope="col" style="width: 50%">最佳选择</th>
-      <th scope="col">后备方案</th>
+      <th scope="col">回退方案</th>
     </tr>
     <tr>
       <td>SVG、无损 WebP 或 PNG</td>
@@ -1399,7 +1399,7 @@ PNG 可能是最好的选择，但无损 WebP 的压缩效果可能更好。
   <thead>
     <tr>
       <th scope="col" style="width: 50%">最佳选择</th>
-      <th scope="col">后备方案</th>
+      <th scope="col">回退方案</th>
     </tr>
     <tr>
       <td>
@@ -1418,7 +1418,7 @@ PNG 可能是最好的选择，但无损 WebP 的压缩效果可能更好。
   <thead>
     <tr>
       <th scope="col" style="width: 50%">最佳选择</th>
-      <th scope="col">后备方案</th>
+      <th scope="col">回退方案</th>
     </tr>
     <tr>
       <td><a href="#svg（可缩放矢量图形）">SVG</a></td>
@@ -1427,11 +1427,11 @@ PNG 可能是最好的选择，但无损 WebP 的压缩效果可能更好。
   </thead>
 </table>
 
-## 提供后备图像
+## 提供回退图像
 
 虽然标准 HTML {{HTMLElement("img")}} 元素不支持图片的兼容性回退，但 {{HTMLElement("picture")}} 元素支持。`<picture>` 被用作多个 {{HTMLElement("source")}} 元素的包装器，每个元素都指定了不同格式或不同[媒体条件](/zh-CN/docs/Web/CSS/@media)下的图像版本，以及一个 `<img>` 元素，该元素定义了图像的显示位置以及默认或“最兼容”版本的回退。
 
-例如，如果要显示一个最好使用 SVG 显示的图表，但希望提供一个 PNG 或 GIF 图表的后备选项，可以这样做：
+例如，如果要显示一个最好使用 SVG 显示的图表，但希望提供一个 PNG 或 GIF 图表的回退选项，可以这样做：
 
 ```html
 <picture>
