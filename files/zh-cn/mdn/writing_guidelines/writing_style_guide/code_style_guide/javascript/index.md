@@ -350,7 +350,7 @@ function doIt() {
 - 确保你正确地定义了初始化器，对 `for...of` 使用 `const` 关键字，或对其他循环使用 `let`。注意不要遗漏。以下是正确的示例：
 
   ```js example-good
-  const cats = ["Athena", "Luna"];
+  const cats = ["汤姆", "胖橘"];
   for (const cat of cats) {
     console.log(cat);
   }
