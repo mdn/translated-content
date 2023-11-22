@@ -93,7 +93,7 @@ console.log(proxy.proxied); // "replaced value"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`Proxy` and `Reflect` in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Meta_programming)
-- {{jsxref("Global_Objects/Reflect", "Reflect")}}
+- [元编程](/zh-CN/docs/Web/JavaScript/Guide/Meta_programming)指南
+- {{jsxref("Reflect")}}

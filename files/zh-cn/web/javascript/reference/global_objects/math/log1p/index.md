@@ -47,6 +47,12 @@ Math.log1p("foo"); // NaN
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Global_Objects/Math", "Math")}} 对象。
+- [`core-js` 中 `Math.log1p` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.expm1()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

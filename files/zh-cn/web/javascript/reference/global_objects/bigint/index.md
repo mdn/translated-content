@@ -261,6 +261,6 @@ nthPrime(20n);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{JSxRef("Number")}}

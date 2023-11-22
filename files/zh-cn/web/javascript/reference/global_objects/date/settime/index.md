@@ -46,7 +46,7 @@ sameAsBigDay.setTime(theBigDay.getTime());
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getTime()")}}
 - {{jsxref("Date.prototype.setUTCHours()")}}

@@ -84,7 +84,7 @@ Reflect.set(duck, 'eyes', 'black');
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Proxy")}} 全局对象。
 - {{jsxref("Proxy.handler", "处理器")}} 对象。

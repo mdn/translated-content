@@ -68,7 +68,7 @@ if (!Date.prototype.toISOString) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}

@@ -42,7 +42,7 @@ var seconds = today.getUTCSeconds();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getSeconds()")}}
 - {{jsxref("Date.prototype.setUTCSeconds()")}}
