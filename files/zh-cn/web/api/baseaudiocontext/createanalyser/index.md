@@ -2,8 +2,6 @@
 title: "BaseAudioContext: createAnalyser() 方法"
 short-title: createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
-page-type: web-api-instance-method
-browser-compat: api.BaseAudioContext.createAnalyser
 ---
 
 {{APIRef("Web Audio API")}}
