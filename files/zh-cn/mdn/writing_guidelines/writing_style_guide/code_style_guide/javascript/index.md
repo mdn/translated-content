@@ -323,7 +323,7 @@ function doIt() {
   使用 `for...of`：
 
   ```js example-good
-  const dogs = ["Rex", "Lassie"];
+  const dogs = ["旺财", "来福"];
   for (const dog of dogs) {
     console.log(dog);
   }
@@ -332,7 +332,7 @@ function doIt() {
   或 `forEach()`：
 
   ```js example-good
-  const dogs = ["Rex", "Lassie"];
+  const dogs = ["旺财", "来福"];
   dogs.forEach((dog) => {
     console.log(dog);
   });
