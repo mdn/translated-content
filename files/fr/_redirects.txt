@@ -4,11 +4,11 @@
 #    yarn content add-redirect <fromURL> <toURL>
 #
 # FROM-URL	TO-URL
-/fr/docs/AJAX	/fr/docs/Web/Guide/AJAX
-/fr/docs/AJAX/Communauté	/fr/docs/Web/Guide/AJAX
-/fr/docs/AJAX/Premiers_pas	/fr/docs/Web/Guide/AJAX
-/fr/docs/AJAX:Communauté	/fr/docs/Web/Guide/AJAX
-/fr/docs/AJAX:Premiers_pas	/fr/docs/Web/Guide/AJAX
+/fr/docs/AJAX	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/AJAX/Communauté	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/AJAX/Premiers_pas	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/AJAX:Communauté	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/AJAX:Premiers_pas	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /fr/docs/ARIA	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/ARIA/Accessible_Rich_Internet_Applications	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/ARIA/Applications_riches_Internet_accessibles	/fr/docs/Web/Accessibility/ARIA
@@ -4726,10 +4726,11 @@
 /fr/docs/Web/Events/touchend	/fr/docs/Web/API/Element/touchend_event
 /fr/docs/Web/Events/transitionend	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/Web/Events/unload	/fr/docs/Web/API/Window/unload_event
-/fr/docs/Web/Guide/AJAX/Communauté	/fr/docs/Web/Guide/AJAX
-/fr/docs/Web/Guide/AJAX/Community	/fr/docs/Web/Guide/AJAX
-/fr/docs/Web/Guide/AJAX/Getting_Started	/fr/docs/Web/Guide/AJAX
-/fr/docs/Web/Guide/AJAX/Premiers_pas	/fr/docs/Web/Guide/AJAX
+/fr/docs/Web/Guide/AJAX	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/Web/Guide/AJAX/Communauté	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/Web/Guide/AJAX/Community	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/Web/Guide/AJAX/Getting_Started	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/Web/Guide/AJAX/Premiers_pas	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /fr/docs/Web/Guide/API/DOM	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/Guide/API/DOM/Storage	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/Web/Guide/API/Gamepad	/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
@@ -6450,6 +6451,7 @@
 /fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies_fbe06d127f73df4dd2f56a31b7c2bd2d	/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+/fr/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /fr/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /fr/docs/conflicting/Learn/JavaScript/Objects	/fr/docs/Learn/JavaScript/Objects
 /fr/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript	/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
@@ -6635,8 +6637,8 @@
 /fr/docs/conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7	/fr/docs/Web/CSS
 /fr/docs/conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244	/fr/docs/Web/CSS
 /fr/docs/conflicting/Web/Guide	/fr/docs/Web/Guide
-/fr/docs/conflicting/Web/Guide/AJAX	/fr/docs/Web/Guide/AJAX
-/fr/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e	/fr/docs/Web/Guide/AJAX
+/fr/docs/conflicting/Web/Guide/AJAX	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/conflicting/Web/HTML	/fr/docs/Web/HTML
 /fr/docs/conflicting/Web/HTML/Attributes/rel	/fr/docs/Web/HTML/Attributes/rel
