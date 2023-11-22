@@ -19362,27 +19362,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/AJAX": {
-    "modified": "2020-06-08T12:58:09.722Z",
-    "contributors": [
-      "Maxi-MenuBestOfPlus",
-      "CyrilKrylatov",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Arkhall",
-      "Nothus",
-      "tregagnon",
-      "arena",
-      "Mgjbot",
-      "Summit677",
-      "Fredchat",
-      "BenoitL",
-      "Neumann",
-      "Chbok",
-      "VincentN",
-      "Dria"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-03-23T23:08:38.035Z",
     "contributors": ["SphinxKnight", "demangejeremy", "shing0608"]
@@ -27456,6 +27435,27 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
+    "modified": "2020-06-08T12:58:09.722Z",
+    "contributors": [
+      "Maxi-MenuBestOfPlus",
+      "CyrilKrylatov",
+      "SphinxKnight",
+      "chrisdavidmills",
+      "Arkhall",
+      "Nothus",
+      "tregagnon",
+      "arena",
+      "Mgjbot",
+      "Summit677",
+      "Fredchat",
+      "BenoitL",
+      "Neumann",
+      "Chbok",
+      "VincentN",
+      "Dria"
     ]
   }
 }
