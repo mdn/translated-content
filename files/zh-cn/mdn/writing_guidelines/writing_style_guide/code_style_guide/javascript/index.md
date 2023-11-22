@@ -341,7 +341,7 @@ function doIt() {
   请不要使用 `for (;;)`——你不仅需要添加额外的索引 `i`，你还必须跟踪数组的长度。这对于初学者来说很容易出错。
 
   ```js example-bad
-  const dogs = ["Rex", "Lassie"];
+  const dogs = ["旺财", "来福"];
   for (let i = 0; i < dogs.length; i++) {
     console.log(dogs[i]);
   }
@@ -363,7 +363,7 @@ function doIt() {
   下面的示例没有遵循推荐的初始化准则（它隐式创建了全局变量，并且在严格模式下会失败）：
 
   ```js example-bad
-  const cats = ["Athena", "Luna"];
+  const cats = ["汤姆", "胖橘"];
   for (i of cats) {
     console.log(i);
   }
@@ -372,7 +372,7 @@ function doIt() {
 - 但是需要同时范围值和索引时，你可以使用 `.forEach()` 而不是 `for (;;)`。例如：
 
   ```js example-good
-  const gerbils = ["Zoé", "Chloé"];
+  const gerbils = ["舒克", "贝塔"];
   gerbils.forEach((gerbil, i) => {
     console.log(`Gerbil #${i}: ${gerbil}`);
   });
@@ -381,7 +381,7 @@ function doIt() {
   请不要这样写：
 
   ```js example-bad
-  const gerbils = ["Zoé", "Chloé"];
+  const gerbils = ["舒克", "贝塔"];
   for (let i = 0; i < gerbils.length; i++) {
     console.log(`Gerbil #${i}: ${gerbils[i]}`);
   }
@@ -427,14 +427,14 @@ if (test) {
 
 ```js example-good
 for (const car of storedCars) {
-  car.paint("red");
+  car.paint("红色");
 }
 ```
 
 不要这样写：
 
 ```js example-bad
-for (const car of storedCars) car.paint("red");
+for (const car of storedCars) car.paint("红色");
 ```
 
 这可以防止忘记在添加更多语句时添加大括号。
