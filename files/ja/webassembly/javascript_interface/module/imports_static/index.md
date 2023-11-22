@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.Module.imports()
-slug: WebAssembly/JavaScript_interface/Module/imports
+slug: WebAssembly/JavaScript_interface/Module/imports_static
+original_slug: WebAssembly/JavaScript_interface/Module/imports
 ---
 
 {{WebAssemblySidebar}}

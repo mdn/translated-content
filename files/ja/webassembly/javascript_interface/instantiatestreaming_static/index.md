@@ -1,8 +1,7 @@
 ---
 title: WebAssembly.instantiateStreaming()
-slug: WebAssembly/JavaScript_interface/instantiateStreaming
-l10n:
-  sourceCommit: d606f8dc936dcf766e1540f687eba8dc9dd9ed13
+slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
+original_slug: WebAssembly/JavaScript_interface/instantiateStreaming
 ---
 
 {{WebAssemblySidebar}}

@@ -1,8 +1,7 @@
 ---
 title: WebAssembly.compileStreaming()
-slug: WebAssembly/JavaScript_interface/compileStreaming
-l10n:
-  sourceCommit: 48882b75978cef6a4fbc68a35e547b33f8012f93
+slug: WebAssembly/JavaScript_interface/compileStreaming_static
+original_slug: WebAssembly/JavaScript_interface/compileStreaming
 ---
 
 {{WebAssemblySidebar}}
