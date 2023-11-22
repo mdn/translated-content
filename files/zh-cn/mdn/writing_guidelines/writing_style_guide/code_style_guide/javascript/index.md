@@ -374,7 +374,7 @@ function doIt() {
   ```js example-good
   const gerbils = ["舒克", "贝塔"];
   gerbils.forEach((gerbil, i) => {
-    console.log(`沙鼠 ${i}号：${gerbil}`);
+    console.log(`沙鼠 ${i} 号：${gerbil}`);
   });
   ```
 
@@ -383,7 +383,7 @@ function doIt() {
   ```js example-bad
   const gerbils = ["舒克", "贝塔"];
   for (let i = 0; i < gerbils.length; i++) {
-    console.log(`沙鼠 ${i}号：${gerbil}`);
+    console.log(`沙鼠 ${i} 号：${gerbil}`);
   }
   ```
 
