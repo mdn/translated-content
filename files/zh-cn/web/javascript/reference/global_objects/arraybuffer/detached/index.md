@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/detached
 
 ## 描述
 
-`detached` 属性是一个访问器属性，其 set 访问器函数是 `undefined`，这意味着你只能读取此属性。该属性的值在创建 `ArrayBuffer` 时设置为 `false`。如果将 `ArrayBuffer` 已经被[传输](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#传输_arraybuffer)，则该值将变为 `true`，这将使该实例从其底层内存中分离。一旦缓冲区变成分离的，它就不再可用。
+`detached` 属性是一个访问器属性，其 set 访问器函数是 `undefined`，这意味着你只能读取此属性。该属性的值在创建 `ArrayBuffer` 时设置为 `false`。如果 `ArrayBuffer` 已[被传输](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#传输_arraybuffer)，则该值将变为 `true`，这将使该实例从其底层内存中分离。一旦缓冲区被分离，它就不再可用。
 
 ## 示例
 
