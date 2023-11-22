@@ -26,10 +26,10 @@ new constructor[([arguments])]
 
 **`new`** 关键字会进行如下的操作：
 
-1. 创建一个空的简单 JavaScript 对象（即 **`{}`**）；
-2. 为步骤 1 新创建的对象添加属性 **`__proto__`**，将该属性链接至构造函数的原型对象；
-3. 将步骤 1 新创建的对象作为 **`this`** 的上下文；
-4. 如果该函数没有返回对象，则返回 **`this`**。
+1. 创建一个空的简单 JavaScript 对象（即 **`{}`**），为方便起见，我们称之为 `newInstance`；
+2. 为 `newInstance` 对象添加属性 **`__proto__`**，将该属性链接至构造函数的原型对象；
+3. 执行构造函数，并将 `newInstance` 绑定为 **`this`** 的上下文；
+4. 如果该构造函数没有返回对象，则返回 **`this`** 即 `newInstance`
 
 （译注：关于对象的 **`constructor`**，参见 **`Object.prototype.constructor`**）
 
