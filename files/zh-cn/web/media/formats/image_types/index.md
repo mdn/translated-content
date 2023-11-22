@@ -932,7 +932,7 @@ PNG 受广泛支持，所有主要浏览器都完全支持其特性。Internet E
       <th scope="row">授权</th>
       <td>
         ©2003 <a href="https://www.w3.org/">W3C</a>（<a href="http://www.lcs.mit.edu/">MIT</a>、<a href="http://www.ercim.org/">ERCIM</a>、<a href="https://www.keio.ac.jp/">Keio</a>)，保留所有权利。W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">责任</a>、<a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">商标</a>、<a href="https://www.w3.org/Consortium/Legal/copyright-documents">文档使用</a>和<a href="https://www.w3.org/Consortium/Legal/copyright-software">软件授权</a>适用。没有已知的专利使用费。
+        <a href="https://www.w3.org/policies/#disclaimers">免责声明</a>、<a href="https://www.w3.org/policies/#trademarks">商标</a>、<a href="https://www.w3.org/copyright/document-license/">文档使用</a>和<a href="https://www.w3.org/copyright/software-license/">软件授权</a>适用。没有已知的专利使用费。
       </td>
     </tr>
   </tbody>
@@ -1034,7 +1034,7 @@ SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像�
           href="http://www.lcs.mit.edu/"
           >MIT</a
         >、<a href="http://www.ercim.org/">ERCIM</a>、<a href="https://www.keio.ac.jp/">Keio</a>、<a href="https://ev.buaa.edu.cn/">Beihang</a>），保留所有权利。W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">责任</a>、<a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">商标</a>、<a href="https://www.w3.org/Consortium/Legal/copyright-documents">文档使用</a>和<a href="https://www.w3.org/Consortium/Legal/copyright-software">软件授权</a>适用。没有已知的专利使用费。
+        <a href="https://www.w3.org/policies/#disclaimers">责任</a>、<a href="https://www.w3.org/policies/#trademarks">商标</a>、<a href="https://www.w3.org/copyright/document-license/">文档使用</a>和<a href="https://www.w3.org/copyright/software-license/">软件授权</a>适用。没有已知的专利使用费。
       </td>
     </tr>
   </tbody>
