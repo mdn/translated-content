@@ -20932,22 +20932,6 @@
       "ethertank"
     ]
   },
-  "Web/Guide/AJAX": {
-    "modified": "2020-08-06T07:28:20.783Z",
-    "contributors": [
-      "luojia",
-      "Yang-yibu",
-      "anchen",
-      "makaria",
-      "chunnallu",
-      "chrisdavidmills",
-      "renzhengyu",
-      "MMHGH",
-      "zjhch123",
-      "XiaoyaoChen",
-      "Noly1990"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-03-23T23:17:06.067Z",
     "contributors": ["RainSlide", "Sheppy"]
@@ -32788,6 +32772,22 @@
       "kingysu",
       "skyfore",
       "xgqfrms-GitHub"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
+    "modified": "2020-08-06T07:28:20.783Z",
+    "contributors": [
+      "luojia",
+      "Yang-yibu",
+      "anchen",
+      "makaria",
+      "chunnallu",
+      "chrisdavidmills",
+      "renzhengyu",
+      "MMHGH",
+      "zjhch123",
+      "XiaoyaoChen",
+      "Noly1990"
     ]
   }
 }
