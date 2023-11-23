@@ -15,14 +15,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 显式调用：
 
-```plain
+```js-nolint
 Date.parse(dateString)
-```
-
-`隐式调用：`
-
-```plain
-new Date(dateString).getTime()
 ```
 
 ### 参数
@@ -146,10 +140,6 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 兼容性提示
-
-Firefox 49 修改了解析 2 位数年份的方式，从和 Internet Explorer 一致改为和 Google Chrome 浏览器一致。现在，2 位数的年份小于等于 `50` 的将会被解析为 21 世纪的年份。比如，`04/16/17`，在之前会被解析为 1917 年 4 月 16 日，现在将被解析为 2017 年 4 月 16 日。为了避免任何可能的同步问题或者有歧义的年份，推荐使用 ISO 8601 格式如 "2017-04-16" ([Firefox bug 1265136](https://bugzil.la/1265136))。
 
 ## 参见
 

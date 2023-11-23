@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 ## 语法
 
-```plain
+```js-nolint
 parseFloat(string)
 ```
 

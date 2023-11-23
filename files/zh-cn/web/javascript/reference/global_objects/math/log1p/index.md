@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 
 ## 语法
 
-```plain
+```js-nolint
 Math.log1p(x)
 ```
 
@@ -22,7 +22,7 @@ Math.log1p(x)
 
 ## 描述
 
-如果参数的值小于`-1`, 则返回 `NaN.`
+如果参数的值小于 `-1`，则返回 `NaN`。
 
 函数 `y = log(x+1)` 的图形是这样的：
 

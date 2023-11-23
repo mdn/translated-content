@@ -53,7 +53,7 @@ Math.asin(2); // NaN
 
 ## 参见
 
-- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.acos()")}}
 - {{jsxref("Math.atan()")}}
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}

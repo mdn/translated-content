@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 
 ## 语法
 
-```plain
+```js-nolint
 new Proxy(target, handler)
 ```
 

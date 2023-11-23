@@ -251,11 +251,9 @@ nthPrime(20n);
 // ↪ 73n
 ```
 
-## 标准
+## 规范
 
-| 标准                                                          | 状态      |
-| ------------------------------------------------------------- | --------- |
-| [BigInt](https://tc39.es/proposal-bigint/#sec-bigint-objects) | 第 4 阶段 |
+{{Specifications}}
 
 ## 浏览器兼容性
 

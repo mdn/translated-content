@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 
 ## 语法
 
-```plain
+```js-nolint
 Math.exp(x)
 ```
 
