@@ -108,7 +108,7 @@ document.getElementById("expirationWarning").className = "";
 
 ### Attributs ARIA utilisés
 
-- [alert (en)](http://www.w3.org/TR/wai-aria/#alert)
+- [alert (en)](https://www.w3.org/TR/wai-aria/#alert)
 
 ### Techniques ARIA connexes
 
