@@ -1,6 +1,8 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
+l10n:
+  sourceCommit: 8099d0d958b098c10cd4152c29922b6855ad601c
 ---
 
 {{FirefoxSidebar}}
