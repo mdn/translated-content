@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 
 ## 语法
 
-```plain
+```js-nolint
 Math.log1p(x)
 ```
 
@@ -22,7 +22,7 @@ Math.log1p(x)
 
 ## 描述
 
-如果参数的值小于`-1`, 则返回 `NaN.`
+如果参数的值小于 `-1`，则返回 `NaN`。
 
 函数 `y = log(x+1)` 的图形是这样的：
 
@@ -47,6 +47,12 @@ Math.log1p("foo"); // NaN
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Global_Objects/Math", "Math")}} 对象。
+- [`core-js` 中 `Math.log1p` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.expm1()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

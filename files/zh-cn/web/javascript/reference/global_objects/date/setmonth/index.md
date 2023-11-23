@@ -53,7 +53,7 @@ theBigDay.setMonth(6);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getMonth()")}}
 - {{jsxref("Date.prototype.setUTCMonth()")}}

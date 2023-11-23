@@ -43,7 +43,7 @@ dataview3.byteLength; // 6 (due to the offset of the constructed DataView)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

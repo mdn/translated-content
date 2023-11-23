@@ -150,7 +150,7 @@ console.log(
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}

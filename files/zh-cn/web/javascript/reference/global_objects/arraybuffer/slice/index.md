@@ -47,6 +47,6 @@ var buf2 = buf1.slice(0);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("ArrayBuffer")}}
