@@ -103,14 +103,14 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 
 ## Class 和 ID 名称
 
-使用语义化的 class/ID 名称，并且使用连字符分隔多个单词（{{Glossary("kebab_case", "短横线命名法")}}）。不要使用{{Glossary("camel_case", "骆驼式命名法")}}。例如：
+使用语义化的 class/ID 名称，并且使用连字符分隔多个单词（{{Glossary("kebab_case", "短横线命名法")}}）。不要使用{{Glossary("camel_case", "驼峰式命名法")}}。例如：
 
 ```html example-good
 <p class="editorial-summary">短横线命名法</p>
 ```
 
 ```html example-bad
-<p class="bigRedBox">骆驼式命名法</p>
+<p class="bigRedBox">驼峰式命名法</p>
 ```
 
 ## 实体引用
