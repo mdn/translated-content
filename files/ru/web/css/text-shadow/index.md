@@ -28,7 +28,7 @@ text-shadow: white 2px 5px;
 /* Используем значения по умолчанию для цвета и радиуса-размытия */
 text-shadow: 5px 10px;
 
-/* Значения принятые глобально */
+/* Глобальные значения */
 text-shadow: inherit;
 text-shadow: initial;
 text-shadow: unset;

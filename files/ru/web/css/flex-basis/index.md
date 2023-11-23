@@ -30,7 +30,7 @@ flex-basis: fit-content;
 /* Автоматически изменяет размер на основе содержимого элемента */
 flex-basis: content;
 
-/* Глобальное значения */
+/* Глобальные значения */
 flex-basis: inherit;
 flex-basis: initial;
 flex-basis: unset;

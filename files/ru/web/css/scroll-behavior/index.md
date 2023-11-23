@@ -20,7 +20,7 @@ slug: Web/CSS/scroll-behavior
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
-/* Глобальные свойства */
+/* Глобальные значения */
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: unset;
