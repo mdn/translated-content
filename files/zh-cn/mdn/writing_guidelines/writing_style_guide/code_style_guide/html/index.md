@@ -106,11 +106,11 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 使用语义化的 class/ID 名称，并且使用连字符分隔多个单词（{{Glossary("kebab_case", "短横线命名法")}}）。不要使用{{Glossary("camel_case", "驼峰式命名法")}}。例如：
 
 ```html example-good
-<p class="editorial-summary">短横线命名法</p>
+<p class="editorial-summary">其他内容</p>
 ```
 
 ```html example-bad
-<p class="bigRedBox">驼峰式命名法</p>
+<p class="bigRedBox">其他内容</p>
 ```
 
 ## 实体引用
