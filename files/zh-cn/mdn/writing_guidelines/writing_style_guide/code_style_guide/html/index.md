@@ -7,7 +7,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 
 下面的指南涵盖了如何为 MDN Web 文档编写 HTML 示例代码。
 
-## HTML 代码示例一般准则
+## HTML 代码示例常规指南
 
 ### 格式的选择
 
@@ -19,7 +19,7 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 
 ## 完整的 HTML 文档
 
-> **备注：** 这个小节中的准则只适用于你需要展示一份完整的 HTML 文档的时候。一个片段通常就足以用于演示一种特性。在使用 [EmbedLiveSample 宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#传统运行实例)时，只需要包含 HTML 片段，片段会在显示的时候被自动插入到一个完整的 HTML 文档中。
+> **备注：** 这个小节中的指南只适用于你需要展示一份完整的 HTML 文档的时候。一个片段通常就足以用于演示一种特性。在使用 [EmbedLiveSample 宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#传统运行实例)时，只需要包含 HTML 片段，片段会在显示的时候被自动插入到一个完整的 HTML 文档中。
 
 ### Doctype
 
