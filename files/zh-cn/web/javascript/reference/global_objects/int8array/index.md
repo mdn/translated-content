@@ -161,4 +161,3 @@ var dv = new Int8Array([1, 2, 3]);
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-
