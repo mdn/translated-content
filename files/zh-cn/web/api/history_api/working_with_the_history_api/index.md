@@ -40,7 +40,7 @@ l10n:
 由于这些原因，{{Glossary("SPA", "单页应用")}}（SPA）是一种流行的 web 应用程序模式，在这种模式中，网站由一个页面组成，当用户点击链接时，页面会：
 
 1. 阻止加载新页面的默认行为
-2. {{domxref("fetch()", "获取", "", "nocode")}}显示新内容
+2. {{domxref("fetch()", "获取", "", "nocode")}}要显示的新内容
 3. 用新内容更新页面
 
 例如：
@@ -64,18 +64,18 @@ document.addEventListener("click", async (event) => {
 });
 ```
 
-在该点击处理程序中，如果链接包含数据属性 `"data-creature"`，我们就会使用该属性的值来获取包含页面新内容的 JSON 文件。
+在该单击处理器中，如果链接包含数据属性 `"data-creature"`，我们就会使用该属性的值来获取包含页面新内容的 JSON 文件。
 
 JSON 文件可能如下所示：
 
 ```json
 {
-  "description": "秃鹫并不“秃”。",
+  "description": "Bald eagles are not actually bald.",
   "image": {
     "src": "images/eagle.jpg",
-    "alt": "一只秃鹫"
+    "alt": "A bald eagle"
   },
-  "name": "秃鹫"
+  "name": "Eagle"
 }
 ```
 
@@ -101,7 +101,7 @@ function displayContent(content) {
 
 但在浏览器看来，最后一个链接并没有加载新页面，因此“后退”按钮会将浏览器带回到用户打开 SPA 之前加载的页面。
 
-这正是 `pushState()`、`replaceState()` 和 `popstate` 事件所要解决的问题。它们使我们能够合成历史条目，并在当前会话历史条目更改为这些条目之一（例如，由于用户按下了“后退”或“前进”按钮）时获得通知。
+这正是 `pushState()`、`replaceState()` 和 `popstate` 事件所要解决的问题。它们使我们能够合成历史条目，并在当前会话历史条目更改为这些条目之一（例如，由于用户按下了“后退”或“前进”按钮）时收到通知。
 
 ## 使用 `pushState()`
 
@@ -130,7 +130,7 @@ document.addEventListener("click", async (event) => {
 
 - `json`：这是我们刚刚获取的内容。它将与历史条目一起存储，之后将作为 {{domxref("PopStateEvent.state", "state")}} 属性包含在传递给 `popstate` 事件处理器的参数中。
 - `""`：这是与传统网站向后兼容所必需的，应始终为空字符串。
-- `creature`：这将用作条目的 URL。它将显示在浏览器的 URL 栏中，并在页面发出的任何 HTTP 请求中用作 {{httpheader("Referer")}} 标头的值。请注意，这必须与页面{{Glossary("Same-origin policy", "同源")}}} 。
+- `creature`：这将用作条目的 URL。它将显示在浏览器的 URL 栏中，并在页面发出的任何 HTTP 请求中用作 {{httpheader("Referer")}} 标头的值。请注意，这必须与页面{{Glossary("Same-origin policy", "同源")}} 。
 
 ## 使用 `popstate` 事件
 
