@@ -27,7 +27,7 @@ new constructor[([arguments])]
 **`new`** 关键字会进行如下的操作：
 
 1. 创建一个空的简单 JavaScript 对象（即 **`{}`**），为方便起见，我们称之为 `newInstance`；
-2. 如果构造函数的原型属性是一个对象，将 `newInstance` 的[[Prototype]]指向构造函数的原型属性，否则, `newInstance`将保持为一个普通对象，其 [[Prototype]] 为 `Object.prototype`；
+2. 如果构造函数的原型属性是一个对象，将 `newInstance` 的[[Prototype]]指向构造函数的原型属性，否则 `newInstance` 将保持为一个普通对象，其 [[Prototype]] 为 `Object.prototype`；
 > 注意：因此，通过构造函数创建的所有实例都可以访问添加到构造函数原型属性中的属性/对象。
 4. 使用给定参数执行构造函数，并将 `newInstance` 绑定为 **`this`** 的上下文；
 5. 如果构造函数返回[非原始值](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures)，则该返回值成为整个 `new` 表达式的结果。否则，返回 `newInstance`。（通常构造函数不返回值，但可以选择返回值，以覆盖正常的对象创建过程） 
