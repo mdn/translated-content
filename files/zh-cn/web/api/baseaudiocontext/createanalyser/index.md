@@ -24,7 +24,7 @@ createAnalyser()
 
 ### 返回值
 
-{{domxref("AnalyserNode")}} 对象
+一个 {{domxref("AnalyserNode")}} 对象。
 
 ## 示例
 
