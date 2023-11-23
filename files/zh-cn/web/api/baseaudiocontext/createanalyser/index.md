@@ -41,7 +41,7 @@ const bufferLength = analyser.frequencyBinCount;
 const dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
 
-// draw an oscilloscope of the current audio source
+// 画出当前音频源的示波器
 
 function draw() {
   drawVisual = requestAnimationFrame(draw);
