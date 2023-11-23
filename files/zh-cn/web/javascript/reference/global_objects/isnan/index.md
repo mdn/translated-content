@@ -155,7 +155,7 @@ isNaN() == isNaN(Number()); // false, because isNaN() == true and Number() == 0
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("NaN")}}
 - {{jsxref("Number.isNaN()")}}

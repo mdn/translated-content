@@ -75,6 +75,6 @@ function getRandomIntInclusive(min, max) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`window.crypto.getRandomValues()`](/zh-CN/docs/Web/API/RandomSource/getRandomValues)
+- {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}}
