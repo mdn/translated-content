@@ -1,5 +1,5 @@
 ---
-title: "BaseAudioContext: createAnalyser() 方法"
+title: BaseAudioContext：createAnalyser() 方法
 short-title: createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
 ---
