@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/maxByteLength
 
 ### 使用 maxByteLength
 
-在该示例中，我们创建一个 8 字节缓冲区，该缓冲区可调整到最大长度为 16 字节，然后返回其 `maxByteLength`：
+在该示例中，我们创建一个 8 字节缓冲区，该缓冲区可调整到的最大长度为 16 字节，然后返回其 `maxByteLength`：
 
 ```js
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
