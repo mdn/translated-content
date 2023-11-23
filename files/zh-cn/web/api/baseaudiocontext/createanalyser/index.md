@@ -41,7 +41,7 @@ const bufferLength = analyser.frequencyBinCount;
 const dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
 
-// 画出当前音频源的示波器
+// 绘制当前音频源的波形图
 
 function draw() {
   drawVisual = requestAnimationFrame(draw);
