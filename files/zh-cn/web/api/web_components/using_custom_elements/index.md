@@ -5,7 +5,7 @@ slug: Web/API/Web_components/Using_custom_elements
 
 {{DefaultAPISidebar("Web Components")}}
 
-web components 的一个关键特性是创建*自定义元素*：即由 Web 开发人员定义行为的 HTML 元素，扩展了浏览器中可用的元素集。
+Web 组件的一个关键特性是创建*自定义元素*：即由 Web 开发人员定义行为的 HTML 元素，扩展了浏览器中可用的元素集。
 
 这篇文章介绍了自定义元素，并通过一些示例进行了详细说明。
 
@@ -42,7 +42,7 @@ class PopupInfo extends HTMLElement {
 }
 ```
 
-在类的[构造函数](/docs/Web/JavaScript/Reference/Classes/constructor)中，你可以设置初始状态和默认值，注册事件侦听器，甚至创建一个 shadow root。在此处，你不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅 [自定义元素构造函数和交互行为的要求](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
+在类的[构造函数](/docs/Web/JavaScript/Reference/Classes/constructor)中，你可以设置初始状态和默认值，注册事件监听器，甚至创建一个影子根（shadow root）。在此处，你不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅 [自定义元素构造函数和交互行为的要求](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
 
 ### 自定义元素生命周期回调
 
@@ -196,7 +196,7 @@ class PopupInfo extends HTMLElement {
   }
 
   connectedCallback() {
-    // 创建 shadow root
+    // 创建影子根
     const shadow = this.attachShadow({ mode: "open" });
 
     // 创建几个 span
@@ -226,7 +226,7 @@ class PopupInfo extends HTMLElement {
     img.src = imgUrl;
     icon.appendChild(img);
 
-    // 创建一些 CSS 应用于 shadow dom
+    // 创建一些 CSS 应用于影子 DOM
     const style = document.createElement("style");
     console.log(style.isConnected);
 
@@ -260,7 +260,7 @@ class PopupInfo extends HTMLElement {
       }
     `;
 
-    // 将创建好的元素附加到 shadow dom 上
+    // 将创建好的元素附加到影子 DOM 上
     shadow.appendChild(style);
     console.log(style.isConnected);
     shadow.appendChild(wrapper);
@@ -272,7 +272,7 @@ class PopupInfo extends HTMLElement {
 
 类定义包含类的 [`constructor()`](/docs/Web/JavaScript/Reference/Classes/constructor) 方法，该方法始终以调用 [`super()`](/docs/Web/JavaScript/Reference/Operators/super) 开始，以便正确建立原型链。
 
-在 `connectedCallback()` 方法内部，我们定义了元素连接到 DOM 时元素将具有的所有功能。在这种情况下，我们将一个 shadow root 附加到自定义元素，使用一些 DOM 操作来创建元素的 shadow DOM 结构——然后将其附加到 shadow root——最后将一些 CSS 附加到 shadow root 以进行样式设置。我们不在构造函数中执行这项工作，因为在连接到 DOM 之前，元素的属性是不可用的。
+在 `connectedCallback()` 方法内部，我们定义了元素连接到 DOM 时元素将具有的所有功能。在这种情况下，我们将一个影子根附加到自定义元素，使用一些 DOM 操作来创建元素的影子 DOM 结构——然后将其附加到影子根——最后将一些 CSS 附加到影子根以进行样式设置。我们不在构造函数中执行这项工作，因为在连接到 DOM 之前，元素的属性是不可用的。
 
 最后，我们使用前面提到的 `define()` 方法在 `CustomElementRegistry` 中注册我们的自定义元素——在参数中，我们指定元素名称，然后定义其功能的类名称：
 
@@ -292,7 +292,7 @@ customElements.define("popup-info", PopupInfo);
 
 ### 引用外部样式
 
-在上面的示例中，我们使用 {{htmlelement("style")}} 元素为 shadow DOM 应用样式，但你也可以从 {{htmlelement("link")}} 元素引用外部样式表。在此示例中，我们将修改 `<popup-info>` 自定义元素以使用外部样式表。
+在上面的示例中，我们使用 {{htmlelement("style")}} 元素为影子 DOM 应用样式，但你也可以从 {{htmlelement("link")}} 元素引用外部样式表。在此示例中，我们将修改 `<popup-info>` 自定义元素以使用外部样式表。
 
 - [查看在线示例](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/)
 - [查看源代码](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-external-stylesheet/)
@@ -308,7 +308,7 @@ class PopupInfo extends HTMLElement {
   }
 
   connectedCallback() {
-    // 创建 shadow root
+    // 创建影子根
     const shadow = this.attachShadow({ mode: "open" });
 
     // 创建几个 span
@@ -338,12 +338,12 @@ class PopupInfo extends HTMLElement {
     img.src = imgUrl;
     icon.appendChild(img);
 
-    // 将外部样式添加至 shadow dom
+    // 将外部样式添加至影子 DOM
     const linkElem = document.createElement("link");
     linkElem.setAttribute("rel", "stylesheet");
     linkElem.setAttribute("href", "style.css");
 
-    // 将创建好的元素附加到 shadow dom 上
+    // 将创建好的元素附加到影子 DOM 上
     shadow.appendChild(linkElem);
     shadow.appendChild(wrapper);
     wrapper.appendChild(icon);
@@ -352,9 +352,9 @@ class PopupInfo extends HTMLElement {
 }
 ```
 
-这与原始的 `<popup-info>` 示例相同，只是我们使用 {{HTMLElement("link")}} 元素链接到外部样式表，然后将其添加到 shadow DOM 中。
+这与原始的 `<popup-info>` 示例相同，只是我们使用 {{HTMLElement("link")}} 元素链接到外部样式表，然后将其添加到影子 DOM 中。
 
-请注意，{{htmlelement("link")}} 元素不会阻止 shadow root 的绘制，因此在样式表加载时可能会出现未经样式化的内容（FOUC）。
+请注意，{{htmlelement("link")}} 元素不会阻止影子根的绘制，因此在样式表加载时可能会出现未经样式化的内容（FOUC）。
 
 许多现代浏览器对于从公共节点克隆的 {{htmlelement("style")}} 标签或具有相同文本的标签都实施了一种优化，使它们可以共享单个后备样式表。通过这种优化，外部和内部样式的性能应该是相似的。
 
@@ -459,7 +459,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 - [查看在线示例](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)
 - [查看源代码](https://github.com/mdn/web-components-examples/tree/main/life-cycle-callbacks)
 
-在类的构造函数中，我们将 shadow DOM 附加到元素上，然后再附加空的 {{htmlelement("div")}} 和 {{htmlelement("style")}} 元素到 shadow root 上：
+在类的构造函数中，我们将影子 DOM 附加到元素上，然后再附加空的 {{htmlelement("div")}} 和 {{htmlelement("style")}} 元素到影子根上：
 
 ```js
 constructor() {
@@ -475,7 +475,7 @@ constructor() {
 }
 ```
 
-这个示例的关键函数是 `updateStyle()`——它接受一个元素，获取其 shadow root，找到它的 `<style>` 元素，然后添加 {{cssxref("width")}}、{{cssxref("height")}} 和 {{cssxref("background-color")}} 到样式上。
+这个示例的关键函数是 `updateStyle()`——它接受一个元素，获取其影子根，找到它的 `<style>` 元素，然后添加 {{cssxref("width")}}、{{cssxref("height")}} 和 {{cssxref("background-color")}} 到样式上。
 
 ```js
 function updateStyle(elem) {
