@@ -28,7 +28,7 @@ Math.log1p(x)
 
 ![log(x+1)](logx1.jpg)
 
-**示例**
+## 示例
 
 ```js
 Math.log1p(Math.E - 1); // 1
