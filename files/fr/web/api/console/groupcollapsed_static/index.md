@@ -11,7 +11,7 @@ La méthode **`console.groupCollapsed()`** crée un nouveau groupe dans le journ
 
 Il faudra appeler [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static) pour fermer le groupe courant et revenir au niveau du groupe parent.
 
-Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/Console#utiliser_des_groupes_dans_la_console) pour plus de détails et d'exemples.
+Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/console#utiliser_des_groupes_dans_la_console) pour plus de détails et d'exemples.
 
 {{AvailableInWorkers}}
 

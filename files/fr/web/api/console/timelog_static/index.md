@@ -23,7 +23,7 @@ timeLog(libelle, val1, /* …, */ valN)
 - `libelle` {{optional_inline}}
   - : Le nom du chronomètre dont on souhaite afficher la mesure dans la console. Si cet argument est absent, c'est le libellé `"default"` qui est utilisé.
 - `valN` {{optional_inline}}
-  - : Des valeurs additionnelels à afficher dans la console après la mesure temporelle.
+  - : Des valeurs additionnelles à afficher dans la console après la mesure temporelle.
 
 ### Valeur de retour
 
@@ -73,7 +73,7 @@ console.timeLog("default", "Coucou", "monde");
 // default : 780ms Coucou monde
 ```
 
-Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronométrage) pour plus de détails et d'exemples.
+Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronomètres) pour plus de détails et d'exemples.
 
 ## Exemples
 

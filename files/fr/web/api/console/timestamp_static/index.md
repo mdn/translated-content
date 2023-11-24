@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-La méthode **`console.timeStamp()`** permet d'ajouter un marqueur de performance pour l'outil de mesure des performance du navigateur ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)). Cela permet de dresser des corrélations entre un moment dans le code et d'autres évènements mesurés dans la chronologie (comme ceux relatifs à la disposition ou au rendu à l'écran).
+La méthode **`console.timeStamp()`** permet d'ajouter un marqueur de performance pour l'outil de mesure des performances du navigateur ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)). Cela permet de dresser des corrélations entre un moment dans le code et d'autres évènements mesurés dans la chronologie (comme ceux relatifs à la disposition ou au rendu à l'écran).
 
 Un argument optionnel permet de fournir un libellé pour le marqueur.
 
