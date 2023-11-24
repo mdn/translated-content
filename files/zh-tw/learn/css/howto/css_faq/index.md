@@ -90,7 +90,7 @@ CSS 並不支援「以另一個樣式規則為基準」的樣式設定法。 (�
 - 使用 `*` 選取符
 - CSS 明確性
 
-你可以使用 [DOM 觀察器](zh_tw/DOM_%e8%a7%80%e5%af%9f%e5%99%a8) 的 _CSS Style Rules_ 來檢查上述問題。
+你可以使用 [DOM 觀察器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) 的 _CSS Style Rules_ 來檢查上述問題。
 
 ### HTML 元素層次問題
 

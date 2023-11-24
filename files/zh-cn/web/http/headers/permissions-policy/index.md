@@ -28,7 +28,7 @@ Permissions-Policy: <directive> <allowlist>
     - `'src'`: (只在 iframe 中允许) 只要在{{HTMLElement('iframe','src','#Attributes')}} 中的 URL 和加载 iframe 用的 URL 相同，则本特性在 iframe 中允许，
     - `'none'`: 从最上层到包含的内容都禁止本特性。 \<origin(s)>: 在特定的源中允许，源 URL 以空格分割。
 
-`*`(在所有源地址启用)`或'none'`(在所有源地址禁用) 只允许单独使用，而`'self'`和`'src'`可以与多个源地址一起使用。
+`*` 或 `none` 值只允许单独使用，而 `self` 和 `src` 值可以与多个源一起使用。
 
 所有的特性都有一个如下的默认的 allowlist
 

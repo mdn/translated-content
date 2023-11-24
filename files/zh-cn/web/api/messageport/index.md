@@ -40,9 +40,9 @@ _继承自父类 {{domxref("EventTarget")}} 的事件回调。_
 
 ## 示例
 
-在下面的示例中，你可以看到一个使用 {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} 构造函数创建出的新 channel.
+在下面的示例中，你可以看到一个使用 {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} 构造函数创建出的新通道。
 
-当 IFrame 加载完成后，我们给 {{domxref("MessageChannel.port1")}} 注册了一个 {{domxref("MessagePort.onmessage","onmessage")}} 回调，并且使用 {{domxref("window.postMessage")}} 方法把 {{domxref("MessageChannel.port2")}} 和一条消息一起传给 IFrame.
+当 IFrame 加载完成后，我们给 {{domxref("MessageChannel.port1")}} 注册了一个 {{domxref("MessagePort.onmessage","onmessage")}} 回调，并且使用 {{domxref("window.postMessage")}} 方法把 {{domxref("MessageChannel.port2")}} 和一条消息一起传给 IFrame。
 
 当从 IFrame 收到消息时，`onMessage` 方法会把消息输出到一个段落里。
 
