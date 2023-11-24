@@ -9,7 +9,7 @@ l10n:
 
 La méthode **`console.timeEnd()`** arrête un chronomètre qui avait été démarré à l'aide de [`console.time()`](/fr/docs/Web/API/console/time_static).
 
-Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronométrage) pour plus de détails et d'exemples.
+Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronomètres) pour plus de détails et d'exemples.
 
 {{AvailableInWorkers}}
 

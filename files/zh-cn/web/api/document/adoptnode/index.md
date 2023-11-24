@@ -7,64 +7,25 @@ slug: Web/API/Document/adoptNode
 
 从其他的 document 文档中获取一个节点。该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的[`ownerDocument`](/zh-CN/docs/DOM/Node.ownerDocument) 属性会变成当前的 document 文档。之后你可以把这个节点插入到当前文档中。
 
-**从 Gecko 1.9 (Firefox 3) 开始支持**
-
 ## 语法
 
-```plain
-node = document.adoptNode(externalNode);
+```js-nolint
+adoptNode(externalNode)
 ```
 
-- `node`
-  - : 导入当前文档的新节点。新节点的 [`parentNode`](/zh-CN/DOM/Node.parentNode) 是 `null`, 因为它还没有插入当前文档的文档树中，属于游离状态。
 - `externalNode`
   - : 将要从外部文档导入的节点。
 
-## 例子
+## 示例
 
 ```js
-// 该函数用来从本文档的第一个 iframe 中获取第一个 element 元素，
-// 并插入到当前文档树中
-function getEle() {
-  var iframe = document.getElementsByTagName("iframe")[0],
-    ele = iframe.contentWindow.document.body.firstElementChild;
-  if (ele) {
-    document.body.appendChild(document.adoptNode(ele));
-  } else {
-    alert("没有更多元素了");
-  }
-}
-document.getElementById("move").onclick = getEle;
-```
+const iframe = document.querySelector("iframe");
+const iframeImages = iframe.contentDocument.querySelectorAll("img");
+const newParent = document.getElementById("images");
 
-HTML 文档
-
-```html
-// index.html
-
-<!doctype html>
-<html>
-  <head>
-    <title>index.html</title>
-  </head>
-  <body>
-    <iframe src="iframe.html"></iframe>
-    <button id="move">移动元素</button>
-  </body>
-</html>
-
-// iframe.html
-
-<!doctype html>
-<html>
-  <head>
-    <title>iframe.html</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-    <h3>My world!</h3>
-  </body>
-</html>
+iframeImages.forEach((imgEl) => {
+  newParent.appendChild(document.adoptNode(imgEl));
+});
 ```
 
 ## 笔记

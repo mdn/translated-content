@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Console API")}}
 
-La méthode **`console.groupEnd()`** clôture le groupe courant dans la console. Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/Console#utiliser_des_groupes_dans_la_console) pour plus de détails et d'exemples.
+La méthode **`console.groupEnd()`** clôture le groupe courant dans la console. Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/console#utiliser_des_groupes_dans_la_console) pour plus de détails et d'exemples.
 
 {{AvailableInWorkers}}
 
