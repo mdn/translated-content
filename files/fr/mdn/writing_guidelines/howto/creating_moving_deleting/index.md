@@ -1,6 +1,8 @@
 ---
 title: Créer et modifier des pages
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
+l10n:
+  sourceCommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
 ---
 
 {{MDNSidebar}}
