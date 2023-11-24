@@ -172,8 +172,6 @@ Think of an extension as compressing a file before e-mailing it to someone. What
 
 > **备注：** 扩展在规范的 5.8, 9, 11.3.2, and 11.4 进行了解释
 
-_TODO_
-
 ### 子协议
 
 可以把子协议理解成一个自定义[XML schema](https://en.wikipedia.org/wiki/XML_schema)或[文件类型声明](https://en.wikipedia.org/wiki/Document_Type_Definition)。你仍然使用 XML 和它的语法，但是还要额外受限于你声明的格式。

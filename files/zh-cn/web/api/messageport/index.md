@@ -11,7 +11,7 @@ slug: Web/API/MessagePort
 
 ## 方法
 
-_继承自父类 {{domxref("EventTarget")}} 的方法_
+_继承自父类 {{domxref("EventTarget")}} 的方法。_
 
 - {{domxref("MessagePort.postMessage")}}
   - : 从端口发送一条消息，并且可选是否将对象的所有权交给其他浏览器上下文。
@@ -22,7 +22,7 @@ _继承自父类 {{domxref("EventTarget")}} 的方法_
 
 ## 事件回调
 
-_继承自父类 {{domxref("EventTarget")}} 的事件回调_
+_继承自父类 {{domxref("EventTarget")}} 的事件回调。_
 
 - {{domxref("MessagePort.onmessage")}}
   - : 是一个 {{domxref("EventListener")}}, 当类型为 `message` 的 {{domxref("MessageEvent")}} 在该端口触发时，它将会被调用 ── 也就是说，该端口收到了一条消息。
@@ -38,18 +38,18 @@ _继承自父类 {{domxref("EventTarget")}} 的事件回调_
   - : 当 `MessagePort` 对象收到无法被反序列化的消息时触发。
     也可以通过 {{domxref("MessagePort.onmessageerror","onmessageerror")}} 属性使用。
 
-## 例子
+## 示例
 
-在下面的例子中，你可以看到一个使用 {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} 构造函数创建出的新 channel.
+在下面的示例中，你可以看到一个使用 {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} 构造函数创建出的新 channel.
 
 当 IFrame 加载完成后，我们给 {{domxref("MessageChannel.port1")}} 注册了一个 {{domxref("MessagePort.onmessage","onmessage")}} 回调，并且使用 {{domxref("window.postMessage")}} 方法把 {{domxref("MessageChannel.port2")}} 和一条消息一起传给 IFrame.
 
 当从 IFrame 收到消息时，`onMessage` 方法会把消息输出到一个段落里。
 
-```plain
+```js
 var channel = new MessageChannel();
-var output = document.querySelector('.output');
-var iframe = document.querySelector('iframe');
+var output = document.querySelector(".output");
+var iframe = document.querySelector("iframe");
 
 // 等待 iframe 加载
 iframe.addEventListener("load", onLoad);
@@ -59,9 +59,10 @@ function onLoad() {
   channel.port1.onmessage = onMessage;
 
   // 把 port2 传给 iframe
-  iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  iframe.contentWindow.postMessage("Hello from the main page!", "*", [
+    channel.port2,
+  ]);
 }
-
 
 // 处理 port1 收到的消息
 function onMessage(e) {

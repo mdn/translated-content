@@ -47,7 +47,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 与此同时，你也可以先引入一个后台页面，再在后台页面中引入脚本。这样做能为后台脚本添加 ES 6 模块支持，算是一个优势。
 
-**manifest.json**
+manifest.json：
 
 ```json
 // manifest.json
@@ -57,7 +57,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 }
 ```
 
-**background-page.html**
+background-page.html：
 
 ```html
 <!doctype html>
