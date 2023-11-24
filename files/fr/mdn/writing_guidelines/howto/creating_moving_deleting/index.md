@@ -160,13 +160,10 @@ Pour modifier une page, vous devez trouver la source de la page dans nos dépôt
 ### Prévisualiser les modifications
 
 - **Si vous éditez la version anglaise**
-
   - : Si vous éditez la page localement, pour voir à quoi ressemblent vos changements, vous pouvez aller dans le dossier `content` du dépôt, exécuter la commande CLI `yarn start`, aller à `localhost:5042` dans votre navigateur, et naviguer jusqu'à la page et la voir.
-
 - **Si vous éditez une version traduite**
-
   - : Pour éditer la page localement et voir à quoi ressemblent vos modifications, il vous faut aller dans le dossier `yari` (Vous devez préalablement avoir paramétré votre environnement et avoir au même niveau que `yari` les dossiers `content` et `translated-content`), exécuter la commande CLI `yarn start`, aller à `localhost:5042` dans votre navigateur, et naviguer jusqu'à la page et la voir.
-  
+
 Entrez le titre dans la barre de recherche pour la trouver facilement. La page prévisualisée se mettra à jour dans le navigateur au fur et à mesure que vous modifierez la source.
 
 ### Joindre des fichiers
