@@ -45,7 +45,8 @@ range.selectNodeContents(referenceNode);
 
 ```html
 <p id="p">
-  <strong>以下のボタンを使用して</strong>この段落の内容を選択または選択解除してください。
+  <strong>以下のボタンを使用して</strong
+  >この段落の内容を選択または選択解除してください。
 </p>
 <button id="select-button">段落を選択</button>
 <button id="deselect-button">段落を選択解除</button>
