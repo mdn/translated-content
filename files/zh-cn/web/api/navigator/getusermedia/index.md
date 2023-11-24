@@ -100,5 +100,5 @@ if (navigator.getUserMedia) {
 
 - {{domxref("MediaDevices.getUserMedia()")}} 代替了这个已弃用的方法。
 - [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)——该 API 的介绍页面
-- [媒体捕获和流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)——媒体流对象的 API
+- [媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)——媒体流对象的 API
 - [使用网络摄像头拍摄照片](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)——使用 `getUserMedia()` 拍摄照片（而不是视频）的教程。
