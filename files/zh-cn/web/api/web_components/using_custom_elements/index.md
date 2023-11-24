@@ -13,12 +13,12 @@ Web 组件的一个关键特性是创建*自定义元素*：即由 Web 开发人
 
 有两种类型的自定义元素：
 
-- **Customized built-in elements** 继承自标准的 HTML 元素，例如 {{domxref("HTMLImageElement")}} 或 {{domxref("HTMLParagraphElement")}}。它们的实现定义了标准元素的行为。
-- **Autonomous custom elements** 继承自 HTML 元素基类 {{domxref("HTMLElement")}}。你必须从头开始实现它们的行为。
+- **自定义内置元素** 继承自标准的 HTML 元素，例如 {{domxref("HTMLImageElement")}} 或 {{domxref("HTMLParagraphElement")}}。它们的实现定义了标准元素的行为。
+- **独立自定义元素** 继承自 HTML 元素基类 {{domxref("HTMLElement")}}。你必须从头开始实现它们的行为。
 
 ## 实现自定义元素
 
-自定义元素作为一个[类](/docs/Web/JavaScript/Reference/Classes)来实现，该类可以扩展 {{domxref("HTMLElement")}}（对于 autonomous elements）或者你想要定制的接口（对于 customized built-in elements）。
+自定义元素作为一个[类](/docs/Web/JavaScript/Reference/Classes)来实现，该类可以扩展 {{domxref("HTMLElement")}}（在独立元素的情况下）或者你想要定制的接口（在自定义内置元素的情况下）。
 
 以下是一个最小自定义元素的实现示例，该元素定制了 {{HTMLElement("p")}} 元素：
 
@@ -31,7 +31,7 @@ class WordCount extends HTMLParagraphElement {
 }
 ```
 
-以下是一个 autonomous custom element 的最小实现：
+以下是一个独立自定义元素的最小实现：
 
 ```js
 class PopupInfo extends HTMLElement {
@@ -98,15 +98,15 @@ customElements.define("my-custom-element", MyCustomElement);
 - `constructor`
   - : 自定义元素的构造函数。
 - `options`
-  - : 仅对于 customized built-in elements，这是一个包含单个属性 `extends` 的对象，该属性是一个字符串，命名了要扩展的内置元素。
+  - : 仅对于自定义内置元素，这是一个包含单个属性 `extends` 的对象，该属性是一个字符串，命名了要扩展的内置元素。
 
-例如，以下代码注册了名为 `WordCount` 的 customized built-in element：
+例如，以下代码注册了名为 `WordCount` 的自定义内置元素：
 
 ```js
 customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-以下代码注册了名为 `PopupInfo` 的 autonomous custom element:
+以下代码注册了名为 `PopupInfo` 的独立自定义元素：
 
 ```js
 customElements.define("popup-info", PopupInfo);
@@ -122,7 +122,7 @@ customElements.define("popup-info", PopupInfo);
 <p is="word-count"></p>
 ```
 
-要使用 autonomous custom element，就像使用内置的 HTML 元素一样，使用自定义名称即可：
+要使用独立自定义元素，就像使用内置的 HTML 元素一样，使用自定义名称即可：
 
 ```html
 <popup-info>
@@ -145,7 +145,7 @@ customElements.define("popup-info", PopupInfo);
 - 属性的旧值。
 - 属性的新值。
 
-例如，下面这个 autonomous element 将观察一个 `size` 属性，并在它们发生变化时记录旧值和新值：
+例如，下面这个独立自定义元素将观察一个 `size` 属性，并在它们发生变化时记录旧值和新值：
 
 ```js
 // 为这个元素创建类
@@ -178,9 +178,9 @@ customElements.define("my-custom-element", MyCustomElement);
 
 在本指南的其余部分，我们将看一些示例自定义元素。你可以在 [web-components-examples](https://github.com/mdn/web-components-examples) 存储库中找到所有这些示例的源代码，以及更多示例，并且你可以在 <https://mdn.github.io/web-components-examples/> 上实时查看它们。
 
-### 一个 autonomous custom element
+### 一个独立自定义元素
 
-首先，我们将看一个 autonomous custom element。`<popup-info>` 自定义元素接受图像图标和文本字符串作为属性，并将图标嵌入到页面中。当焦点在图标上时，它会在弹出的信息框中显示文本，以提供更多上下文信息。
+首先，我们来看一个独立自定义元素。`<popup-info>` 自定义元素接受图像图标和文本字符串作为属性，并将图标嵌入到页面中。当焦点在图标上时，它会在弹出的信息框中显示文本，以提供更多上下文信息。
 
 - [查看在线示例](https://mdn.github.io/web-components-examples/popup-info-box-web-component)
 - [查看源代码](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component)
@@ -358,7 +358,7 @@ class PopupInfo extends HTMLElement {
 
 许多现代浏览器对于从公共节点克隆的 {{htmlelement("style")}} 标签或具有相同文本的标签都实施了一种优化，使它们可以共享单个后备样式表。通过这种优化，外部和内部样式的性能应该是相似的。
 
-### Customized built-in elements
+### 自定义内置元素
 
 现在让我们看一个 customized built in element 的例子。这个例子扩展了内置的 {{HTMLElement("ul")}} 元素，以支持展开和折叠列表项。
 
@@ -454,7 +454,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 ### 生命周期回调
 
-到目前为止，我们只看到了一个生命周期回调的实际应用：`connectedCallback()`。在最后一个例子中，`<custom-square>`，我们将看到一些其他的回调。`<custom-square>` autonomous custom element 绘制一个正方形，其大小和颜色由两个名为 `"size"` 和 `"color"` 的属性确定。
+到目前为止，我们只看到了一个生命周期回调的实际应用：`connectedCallback()`。在最后一个例子中，`<custom-square>`，我们将看到一些其他的回调。`<custom-square>` 独立自定义元素绘制一个正方形，其大小和颜色由两个名为 `"size"` 和 `"color"` 的属性确定。
 
 - [查看在线示例](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)
 - [查看源代码](https://github.com/mdn/web-components-examples/tree/main/life-cycle-callbacks)
