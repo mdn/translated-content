@@ -762,17 +762,3 @@ function updateValue(select, index) {
 Если вы хотите двигаться далее, то код в этом примере нуждается в некотором улучшении прежде чем станет универсальным и многоразовым. Это упражнение, которое вы можете попробовать выполнить. Две подсказки, которые помогут вам в этом: первый аргумент всех наших функций одинаков, это значит что эти функции должны быть в одном контексте. Было бы разумным создать объект для совместного использования этого контекста. Также вам нужно сделать его функциональным; это значит, что ему необходимо одинаково хорошо работать с различными браузерами, чья совместимость с Web стандартами очень отличается. Повеселись!
 
 {{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
-
-## В этом модуле
-
-- [Ваша первая HTML форма](/ru/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [Как структурировать HTML форму](/ru/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/ru/docs/Learn/HTML/Forms/%D0%A1%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D1%8B%D0%B5_%D0%B2%D0%B8%D0%B4%D0%B6%D0%B5%D1%82%D1%8B_%D1%84%D0%BE%D1%80%D0%BC)
-- [Отправка данных формы](/ru/docs/Learn/HTML/Forms/%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0_%D0%B8_%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85_%D1%84%D0%BE%D1%80%D0%BC%D1%8B)
-- [Проверка данных формы](/ru/docs/Learn/HTML/Forms/Form_validation)
-- [Как создавать пользовательские виджеты форм](/ru/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/ru/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/ru/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/ru/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/ru/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
