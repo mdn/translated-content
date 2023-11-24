@@ -63,7 +63,7 @@ Il est facile de déplacer un ou plusieurs documents ou une arborescence entièr
 
 Il vous suffit de spécifier le nom du document existant que vous souhaitez déplacer (par exemple, `Learn/Accessibility`), ainsi que le nom de son nouvel emplacement (par exemple, `Learn/A11y`), suivi éventuellement de la langue du document existant (par défaut `en-US`).
 
-Si le document existant que vous souhaitez déplacer a des documents enfants (c'est-à-dire qu'il représente une arborescence de  documents), le nom de l'arborescence peut être modifié, il représente une arborescence de documents), la commande `yarn content move` déplacera l'arbre entier.
+Si le document existant que vous souhaitez déplacer a des documents enfants (c'est-à-dire qu'il représente une arborescence de documents), le nom de l'arborescence peut être modifié, il représente une arborescence de documents), la commande `yarn content move` déplacera l'arbre entier.
 
 1. Vous commencerez à travailler dans une nouvelle branche.
 
@@ -160,9 +160,11 @@ Pour modifier une page, vous devez trouver la source de la page dans nos dépôt
 ### Prévisualiser les modifications
 
 - **Si vous éditez la version anglaise**
+
   - : Si vous éditez la page localement, pour voir à quoi ressemblent vos changements, vous pouvez aller dans le dossier `content` du dépôt, exécuter la commande CLI `yarn start`, aller à `localhost:5042` dans votre navigateur, et naviguer jusqu'à la page et la voir.
 
 - **Si vous éditez une version traduite**
+
   - : Pour éditer la page localement et voir à quoi ressemblent vos modifications, il vous faut aller dans le dossier `yari` (Vous devez préalablement avoir paramétré votre environnement et avoir au même niveau que `yari` les dossiers `content` et `translated-content`), exécuter la commande CLI `yarn start`, aller à `localhost:5042` dans votre navigateur, et naviguer jusqu'à la page et la voir.
   
 Entrez le titre dans la barre de recherche pour la trouver facilement. La page prévisualisée se mettra à jour dans le navigateur au fur et à mesure que vous modifierez la source.
