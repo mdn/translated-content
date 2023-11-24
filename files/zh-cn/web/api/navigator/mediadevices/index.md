@@ -30,4 +30,4 @@ navigator.mediaDevices
 ## 参见
 
 - [媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Streams_API)：有关整个媒体捕捉与媒体流 API 的文档的入口点。
-- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)：密切相关的 WebRTC API 的相关文档。
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)：与之密切相关的 WebRTC API 的相关文档。
