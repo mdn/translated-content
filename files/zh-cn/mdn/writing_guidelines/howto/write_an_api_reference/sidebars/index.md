@@ -1,6 +1,8 @@
 ---
 title: API 参考侧边栏
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
+l10n:
+  sourceCommit: fc7310a85a8e6d5c0677dfaffba9b8fbbadc94a9
 ---
 
 {{MDNSidebar}}
@@ -60,7 +62,7 @@ slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
 <li><a href="/zh-CN/docs/Web/API/Response">Response</a></li>
 ```
 
-这也有些例外。例如，“guides”子成员包含一个或多个链接信息（标题和别名），用于定义与指南/教程相关的链接。在这种情况下，别名将附加到 MDN 文档根路径（`https://developer.mozilla.org/_<language-code>/docs`）的末尾，并允许包含 MDN 上任何位置的文章。
+这也有些例外。例如，“guides”子成员包含指向与指南/教程相关的 URL。在这种情况下，URL 将附加到 MDN 文档根路径（`https://developer.mozilla.org/<language-code>`）的末尾，从而允许包含 MDN 上任何位置的文章。
 
 以下是可用的成员。这些都是可选的，但强烈建议你不要省略它们，而是包含空数组。
 
