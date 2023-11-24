@@ -5,38 +5,43 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 
 {{JSRef}}
 
-**`slice()`**方法返回一个新的 `ArrayBuffer` ，它的内容是这个 `ArrayBuffer` 的字节副本，从 begin（包括），到 end（不包括）。
+{{jsxref("ArrayBuffer")}} 实例的 **`slice()`** 方法返回一个新的 {{jsxref("ArrayBuffer")}} 实例，其包含原 `ArrayBuffer` 实例中从 `begin` 开始（包含）到 `end` 结束（不含）的所有字节的副本。
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
 
 ## 语法
 
-```plain
-arraybuffer.slice(begin[, end])
+```js-nolint
+slice()
+slice(start)
+slice(start, end)
 ```
 
 ### 参数
 
-- `begin`
-  - : 从零开始的字节索引，切片从这开始。
-- `end`
-  - : 结束切片的字节索引。如果没指定 end，新的 `ArrayBuffer` 将包含这个 `ArrayBuffer` 从头到尾的所有字节。由 begin 和 end 指定的这个范围夹在当前数组的有效索引范围内。如果新`ArrayBuffer`的长度在计算后为负，它将强制为 0。
+- `start` {{optional_inline}}
+  - : 要开始提取的位置下标，以 0 为起始，将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+    - 负数下标将会从缓冲区末尾开始计算——如果 `start < 0`，那么将会使用 `start + buffer.length`。
+    - 如果 `start < -buffer.length` 或省略了 `start`，则会使用 `0`。
+    - 如果 `start >= buffer.length`，则不会提取任何内容。
+- `end` {{optional_inline}}
+  - : 要结束提取的位置下标，以 0 为起始，将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。`slice()` 提取到但不包括 `end`。
+    - 负数下标将会从缓冲区末尾开始计算——如果 `end < 0`，那么将会使用 `end + buffer.length`。
+    - 如果 `end < -buffer.length`，则会使用 `0`。
+    - 如果 `end >= buffer.length` 或省略了 `end`，则会使用 `buffer.length`，则会导致直到末尾的所有元素都被提取。
+    - 如果标准化后的 `end` 位置在 `start` 位置之前，则不会提取任何内容。
 
 ### 返回值
 
-一个新的 `ArrayBuffer` 对象。
-
-## 描述
-
-`slice` 方法复制到但不包括由 end 参数指示的字节。如果 begin 或 end 是负数，则指的是从数组末尾开始的索引，而不是从头开始。
+一个新的 {{jsxref("ArrayBuffer")}} 对象。
 
 ## 示例
 
-### 复制一个 `ArrayBuffer`
+### 复制一个 ArrayBuffer
 
 ```js
-var buf1 = new ArrayBuffer(8);
-var buf2 = buf1.slice(0);
+const buf1 = new ArrayBuffer(8);
+const buf2 = buf1.slice(0);
 ```
 
 ## 规范
