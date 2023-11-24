@@ -139,7 +139,7 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>
@@ -220,7 +220,7 @@ Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td>
         <ul>
           <li>
