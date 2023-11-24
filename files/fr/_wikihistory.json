@@ -10259,7 +10259,7 @@
       "pparidans"
     ]
   },
-  "Web/API/History_API/Example": {
+  "Web/API/History_API/Working_with_the_History_API": {
     "modified": "2019-03-23T23:32:28.258Z",
     "contributors": ["tregagnon", "matteodelabre"]
   },
@@ -13412,7 +13412,7 @@
       "fscholz"
     ]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2020-10-15T21:37:07.545Z",
     "contributors": [
       "Fenn",
@@ -13422,31 +13422,31 @@
       "ElianWonhalf"
     ]
   },
-  "Web/API/console/clear": {
+  "Web/API/console/clear_static": {
     "modified": "2019-03-23T22:18:57.653Z",
     "contributors": ["christophe.hurpeau", "DavidLibeau"]
   },
-  "Web/API/console/count": {
+  "Web/API/console/count_static": {
     "modified": "2020-10-15T21:39:57.745Z",
     "contributors": ["loella16", "christophe.hurpeau", "normannMarit", "Styus"]
   },
-  "Web/API/console/countReset": {
+  "Web/API/console/countreset_static": {
     "modified": "2020-10-15T22:22:03.008Z",
     "contributors": ["tbetous", "quentin.lamamy"]
   },
-  "Web/API/console/debug": {
+  "Web/API/console/debug_static": {
     "modified": "2020-10-15T22:21:32.530Z",
     "contributors": ["thiag73"]
   },
-  "Web/API/console/dir": {
+  "Web/API/console/dir_static": {
     "modified": "2020-10-15T21:43:00.216Z",
     "contributors": ["xavierartot", "loella16", "sylvaindethier", "Chevallm"]
   },
-  "Web/API/console/dirxml": {
+  "Web/API/console/dirxml_static": {
     "modified": "2020-10-15T21:56:31.266Z",
     "contributors": ["loella16", "BEHOUBA"]
   },
-  "Web/API/console/error": {
+  "Web/API/console/error_static": {
     "modified": "2020-10-15T21:37:29.101Z",
     "contributors": [
       "SphinxKnight",
@@ -13457,23 +13457,23 @@
       "JulienItard"
     ]
   },
-  "Web/API/console/group": {
+  "Web/API/console/group_static": {
     "modified": "2020-10-15T21:39:57.936Z",
     "contributors": ["loella16", "Styus"]
   },
-  "Web/API/console/groupCollapsed": {
+  "Web/API/console/groupcollapsed_static": {
     "modified": "2020-10-15T21:39:57.660Z",
     "contributors": ["loella16", "Styus"]
   },
-  "Web/API/console/groupEnd": {
+  "Web/API/console/groupend_static": {
     "modified": "2020-10-15T21:39:57.905Z",
     "contributors": ["loella16", "christophe.hurpeau", "Styus"]
   },
-  "Web/API/console/info": {
+  "Web/API/console/info_static": {
     "modified": "2020-11-11T13:53:02.402Z",
     "contributors": ["Yukulele.", "unpeudetout", "JonGiamp", "JulienItard"]
   },
-  "Web/API/console/log": {
+  "Web/API/console/log_static": {
     "modified": "2020-11-11T19:51:04.080Z",
     "contributors": [
       "JNa0",
@@ -13485,23 +13485,23 @@
       "benfarhat.elyes"
     ]
   },
-  "Web/API/console/profile": {
+  "Web/API/console/profile_static": {
     "modified": "2020-10-15T22:01:10.357Z",
     "contributors": ["loella16"]
   },
-  "Web/API/console/profileEnd": {
+  "Web/API/console/profileend_static": {
     "modified": "2020-10-15T22:01:12.608Z",
     "contributors": ["loella16"]
   },
-  "Web/API/console/table": {
+  "Web/API/console/table_static": {
     "modified": "2020-10-15T21:30:09.666Z",
     "contributors": ["loella16", "DCLAN", "fscholz", "tregagnon"]
   },
-  "Web/API/console/time": {
+  "Web/API/console/time_static": {
     "modified": "2020-10-15T21:26:08.561Z",
     "contributors": ["loella16", "mireero", "fscholz", "khalid32", "fvelcker"]
   },
-  "Web/API/console/timeEnd": {
+  "Web/API/console/timeend_static": {
     "modified": "2020-10-15T21:28:27.222Z",
     "contributors": [
       "loella16",
@@ -13511,19 +13511,19 @@
       "Automatik"
     ]
   },
-  "Web/API/console/timeLog": {
+  "Web/API/console/timelog_static": {
     "modified": "2020-10-15T22:20:05.673Z",
     "contributors": ["ewen-lbh", "SphinxKnight"]
   },
-  "Web/API/console/timeStamp": {
+  "Web/API/console/timestamp_static": {
     "modified": "2020-10-15T22:02:32.433Z",
     "contributors": ["loella16"]
   },
-  "Web/API/console/trace": {
+  "Web/API/console/trace_static": {
     "modified": "2020-10-15T21:37:28.957Z",
     "contributors": ["loella16", "JonGiamp", "JulienItard"]
   },
-  "Web/API/console/warn": {
+  "Web/API/console/warn_static": {
     "modified": "2020-10-15T21:37:32.060Z",
     "contributors": ["loella16", "unpeudetout", "JulienItard"]
   },
@@ -19360,27 +19360,6 @@
       "ethertank",
       "tregagnon",
       "Sheppy"
-    ]
-  },
-  "Web/Guide/AJAX": {
-    "modified": "2020-06-08T12:58:09.722Z",
-    "contributors": [
-      "Maxi-MenuBestOfPlus",
-      "CyrilKrylatov",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Arkhall",
-      "Nothus",
-      "tregagnon",
-      "arena",
-      "Mgjbot",
-      "Summit677",
-      "Fredchat",
-      "BenoitL",
-      "Neumann",
-      "Chbok",
-      "VincentN",
-      "Dria"
     ]
   },
   "Web/Guide/API": {
@@ -27387,15 +27366,15 @@
     "modified": "2020-10-15T21:51:45.857Z",
     "contributors": ["SphinxKnight"]
   },
-  "WebAssembly/JavaScript_interface/Module/customSections": {
+  "WebAssembly/JavaScript_interface/Module/customSections_static": {
     "modified": "2020-10-15T21:52:20.338Z",
     "contributors": ["SphinxKnight"]
   },
-  "WebAssembly/JavaScript_interface/Module/exports": {
+  "WebAssembly/JavaScript_interface/Module/exports_static": {
     "modified": "2020-10-15T21:52:21.568Z",
     "contributors": ["SphinxKnight"]
   },
-  "WebAssembly/JavaScript_interface/Module/imports": {
+  "WebAssembly/JavaScript_interface/Module/imports_static": {
     "modified": "2020-10-15T21:52:21.616Z",
     "contributors": ["SphinxKnight"]
   },
@@ -27423,23 +27402,23 @@
     "modified": "2020-10-15T21:52:22.914Z",
     "contributors": ["SphinxKnight"]
   },
-  "WebAssembly/JavaScript_interface/compile": {
-    "modified": "2020-10-15T21:52:23.421Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "WebAssembly/JavaScript_interface/compileStreaming": {
+  "WebAssembly/JavaScript_interface/compileStreaming_static": {
     "modified": "2020-10-15T21:58:30.533Z",
     "contributors": ["SphinxKnight"]
   },
-  "WebAssembly/JavaScript_interface/instantiate": {
-    "modified": "2020-10-15T21:52:23.620Z",
+  "WebAssembly/JavaScript_interface/compile_static": {
+    "modified": "2020-10-15T21:52:23.421Z",
     "contributors": ["SphinxKnight"]
   },
-  "WebAssembly/JavaScript_interface/instantiateStreaming": {
+  "WebAssembly/JavaScript_interface/instantiateStreaming_static": {
     "modified": "2020-10-15T21:58:30.104Z",
     "contributors": ["SphinxKnight"]
   },
-  "WebAssembly/JavaScript_interface/validate": {
+  "WebAssembly/JavaScript_interface/instantiate_static": {
+    "modified": "2020-10-15T21:52:23.620Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/validate_static": {
     "modified": "2020-10-15T21:52:22.760Z",
     "contributors": ["SphinxKnight"]
   },

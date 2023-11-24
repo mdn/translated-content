@@ -481,6 +481,6 @@ fact(5); // 120
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

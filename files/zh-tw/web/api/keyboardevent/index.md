@@ -9,14 +9,14 @@ slug: Web/API/KeyboardEvent
 
 > **備註：** `KeyboardEvent` 僅顯示在鍵盤上發生的事。當你需要進行文字輸入的操作，請使用 HTML5 [`input`](/zh-TW/docs/DOM/DOM_event_reference/input) event 代替 `KeyboardEvent` 。舉例來說，當使用者在手寫系統，例如平板電腦，輸入文字時，並不會啟動 key events 。
 
-## Constructor
+## 建構子
 
 - {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
-  - : 建立一 `KeyboardEvent` object。
+  - : 建立一 `KeyboardEvent` 物件。
 
-## Methods
+## 方法
 
-_本介面（ interface）亦繼承其父， {{domxref("UIEvent")}} 和 {{domxref("Event")}} ，的 methods_
+_本介面（interface）亦繼承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的方法。_
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
   - : 回傳一 {{jsxref("Boolean")}}。用來表示當事件建立時，修飾鍵（例如 <kbd>Alt</kbd>、 <kbd>Shift</kbd>、 <kbd>Ctrl</kbd>、或是 <kbd>Meta</kbd>） 是否是按下的。

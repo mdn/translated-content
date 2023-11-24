@@ -4,7 +4,7 @@
 #    yarn content add-redirect <fromURL> <toURL>
 #
 # FROM-URL	TO-URL
-/es/docs/AJAX	/es/docs/Web/Guide/AJAX
+/es/docs/AJAX	/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /es/docs/AJAX/Comunidad	/es/docs/conflicting/Web/Guide/AJAX
 /es/docs/AJAX/Primeros_Pasos	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /es/docs/AJAX:Comunidad	/es/docs/conflicting/Web/Guide/AJAX
@@ -1957,6 +1957,7 @@
 /es/docs/Web/Events/transitioncancel	/es/docs/Web/API/Element/transitioncancel_event
 /es/docs/Web/Events/transitionend	/es/docs/Web/API/Element/transitionend_event
 /es/docs/Web/Events/wheel	/es/docs/Web/API/Element/wheel_event
+/es/docs/Web/Guide/AJAX	/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /es/docs/Web/Guide/AJAX/Community	/es/docs/conflicting/Web/Guide/AJAX
 /es/docs/Web/Guide/AJAX/Comunidad	/es/docs/conflicting/Web/Guide/AJAX
 /es/docs/Web/Guide/AJAX/Getting_Started	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
