@@ -1255,7 +1255,7 @@ WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但
   </tbody>
 </table>
 
-> **备注：** 尽管 Apple [宣布在 Safari 14 中支持 WebP](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)，但在 Safari 版本 16.0 之前，`.webp` 图像无法在早于 Big Sur 版本的 macOS 桌面版本上正常显示，而 iOS 14 上的 Safari *却能*正常显示 `.webp` 图像。
+> **备注：** 在 macOS 版 Safari 上，WebP 支持取决于 Safari 和 macOS 的版本。你需要 Safari 14 或更高版本，以及 macOS Big Sur (11) 或更高版本。
 
 ### XBM（X Window 系统位图文件）
 
