@@ -50,7 +50,7 @@ L'affichage dans la console ressemblera à ceci&nbsp;:
 
 ![Une capture d'écran des messages imbriqués dans la sortie de la console.](nesting.png)
 
-Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/Console#utiliser_des_groupes_dans_la_console) pour plus de détails.
+Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/console#utiliser_des_groupes_dans_la_console) pour plus de détails.
 
 ## Spécifications
 

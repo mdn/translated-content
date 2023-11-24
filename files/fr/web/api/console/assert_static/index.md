@@ -57,7 +57,7 @@ for (let nombre = 2; nombre <= 5; nombre++) {
 // Assertion failed: {nombre: 5, messageErreur: "le nombre n'est pas pair"}
 ```
 
-Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_les_caractères_de_substitution) pour plus de détails.
+Voir [la page sur les chaînes de caractères de substitution avec `console`](/fr/docs/Web/API/console#utiliser_des_chaînes_de_substitution) pour plus de détails.
 
 ## Spécifications
 

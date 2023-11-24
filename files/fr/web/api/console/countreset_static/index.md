@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Console API")}}
 
-La méthode **`console.countReset()`** permet de réinitialiser le compteur utilisé avec [`console.count()`](/fr/docs/Web/API/console/count).
+La méthode **`console.countReset()`** permet de réinitialiser le compteur utilisé avec [`console.count()`](/fr/docs/Web/API/console/count_static).
 
 {{AvailableInWorkers}}
 
@@ -21,7 +21,7 @@ countReset(libelle)
 ### Paramètres
 
 - `libelle` {{optional_inline}}
-  - : Une chaîne de caractères. Si cet argument est fourni, `countReset()` remet à zéro le compteur associé à ce libellé. Si l'argumetn est absent, `countReset()` remet à zéro le compteur par défaut.
+  - : Une chaîne de caractères. Si cet argument est fourni, `countReset()` remet à zéro le compteur associé à ce libellé. Si l'argument est absent, `countReset()` remet à zéro le compteur par défaut.
 
 ### Valeur de retour
 
