@@ -20,13 +20,13 @@ slice(start, end)
 ### 参数
 
 - `start` {{optional_inline}}
-  - : 要开始提取的位置下标，以 0 为起始，将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
-    - 负数下标将会从缓冲区末尾开始计算——如果 `start < 0`，那么将会使用 `start + buffer.length`。
+  - : 要开始提取的位置索引（从 0 开始），将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+    - 负数索引将会从缓冲区末尾开始计算——如果 `start < 0`，那么将会使用 `start + buffer.length`。
     - 如果 `start < -buffer.length` 或省略了 `start`，则会使用 `0`。
     - 如果 `start >= buffer.length`，则不会提取任何内容。
 - `end` {{optional_inline}}
-  - : 要结束提取的位置下标，以 0 为起始，将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。`slice()` 提取到但不包括 `end`。
-    - 负数下标将会从缓冲区末尾开始计算——如果 `end < 0`，那么将会使用 `end + buffer.length`。
+  - : 要结束提取的位置索引（从 0 开始），将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。`slice()` 提取到但不包括 `end`。
+    - 负数索引将会从缓冲区末尾开始计算——如果 `end < 0`，那么将会使用 `end + buffer.length`。
     - 如果 `end < -buffer.length`，则会使用 `0`。
     - 如果 `end >= buffer.length` 或省略了 `end`，则会使用 `buffer.length`，则会导致直到末尾的所有元素都被提取。
     - 如果标准化后的 `end` 位置在 `start` 位置之前，则不会提取任何内容。
