@@ -11,11 +11,11 @@ The **XMLDocument** interface represents an XML document. It inherits from the g
 
 ## 属性
 
-_Also inherits properties from: {{DOMxRef("Document")}}_
+_Also inherits properties from: {{DOMxRef("Document")}}._
 
 ## 方法
 
-_Also inherits methods from: {{DOMxRef("Document")}}_
+_Also inherits methods from: {{DOMxRef("Document")}}._
 
 ## 规范
 

@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 ## 语法
 
-```plain
+```js-nolint
 parseFloat(string)
 ```
 
@@ -84,7 +84,7 @@ parseFloat("900719925474099267n");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
