@@ -64,7 +64,7 @@ Reflect.get(obj, "foo"); // "foobar"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)

@@ -32,6 +32,6 @@ sab.byteLength; // 1024
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("SharedArrayBuffer")}}

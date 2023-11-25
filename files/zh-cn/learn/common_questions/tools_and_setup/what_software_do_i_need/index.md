@@ -130,7 +130,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>

@@ -18,7 +18,7 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 - `"android"`
   - : Le système d'exploitation est sous Android.
 - `"cros"`
-  - : Le système d'exploitation est sous Chrome OS.
+  - : Le système d'exploitation est sous ChromeOS.
 - `"linux"`
   - : Le système d'exploitation est sous Linux.
 - `"openbsd"`
