@@ -283,41 +283,375 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 }
 ```
 
-Итак, вот результат с нашими тремя состояниями:
+Итак, вот результат с нашими тремя состояниями ([исходный код можно посмотреть здесь](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1)):
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col" style="text-align: center">Основное состояние</th>
-      <th scope="col" style="text-align: center">Активное состояние</th>
-      <th scope="col" style="text-align: center">Развёрнутое состояние</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{ EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1") }}
-      </td>
-      <td>
-        {{ EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1") }}
-      </td>
-      <td>
-        {{ EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1") }}
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3" style="text-align: center">
-        <a
-          href="/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          title="/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          >Посмотреть исходный код</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### Основное состояние
 
-## Оживи свой виджет с JavaScript
+```html hidden
+<div class="select">
+  <span class="value">Cherry</span>
+  <ul class="optList hidden">
+    <li class="option">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
+
+```css hidden
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+{{EmbedLiveSample("Основное_состояние", 120, 130)}}
+
+#### Активное состояние
+
+```html hidden
+<div class="select active">
+  <span class="value">Cherry</span>
+  <ul class="optList hidden">
+    <li class="option">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
+
+```css hidden
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+{{EmbedLiveSample("Активное_состояние", 120, 130)}}
+
+#### Развёрнутое состояние
+
+```html hidden
+<div class="select active">
+  <span class="value">Cherry</span>
+  <ul class="optList">
+    <li class="option highlight">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
+
+```css hidden
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("Развёрнутое_состояние", 120, 130)}}
+
+## Оживляем виджет с помощью JavaScript
 
 Теперь, когда наш дизайн и структура готовы, мы можем написать код на JavaScript чтобы виджет действительно заработал.
 
@@ -325,7 +659,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 > **Примечание:** Создание многократно используемых виджетов может быть немного сложнее. [W3C Web Component draft](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) является одним из ответов на этот конкретный вопрос. [The X-Tag project](http://x-tags.org/) попытка реализовать эту спецификацию; пожалуйста, посмотрите этот проект.
 
-### Почему он не работает?
+### Почему не работает?
 
 Прежде чем мы начнём, запомните одну важную вещь о JavaScript: в браузере **это ненадёжная технология**. Когда вы создаёте пользовательские виджеты, вы будете полагаться на JavaScript потому что это необходимое звено для связки. Однако во многих случаях JavaScript невозможно запустить в браузере:
 
@@ -392,33 +726,195 @@ window.addEventListener("load", function () {
 });
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col" style="text-align: center">Без JS</th>
-      <th scope="col" style="text-align: center">С JS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{ EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2") }}
-      </td>
-      <td>
-        {{ EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2") }}
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="text-align: center">
-        <a
-          href="/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          title="/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          >Посмотреть исходный код</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### Без JS
+
+Посмотрите [полный исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#no_js).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+```
+
+{{EmbedLiveSample("Без_JS",120,130)}}
+
+#### Вместе с JS
+
+Посмотрите [полный исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#js).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+```js hidden
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+```
+
+{{EmbedLiveSample("Вместе_с_JS", 120, 130)}}
 
 > **Примечание:** Если вы действительно хотите сделать свой код универсальным и многоразовым, то вместо переключения классов гораздо лучше просто добавить класс элементам {{HTMLElement("select")}} чтобы их скрыть, и динамически добавлять дерево DOM представляющее пользовательский виджет после каждого элемента {{HTMLElement("select")}} на странице.
 
@@ -570,10 +1066,224 @@ window.addEventListener("load", function () {
 
 В этот момент наш виджет будет изменять состояние в соответствии с нашим дизайном, но не будет обновлять его значение. С этим мы разберёмся дальше.
 
-| Пример                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------- |
-| {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3") }} |
-| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                   |
+#### Живой пример
+
+Посмотрите [полный исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit" tabindex="-1">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select" tabindex="0">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+```js hidden
+function deactivateSelect(select) {
+  if (!select.classList.contains("active")) return;
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.add("hidden");
+  select.classList.remove("active");
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains("active")) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add("active");
+}
+
+function toggleOptList(select, show) {
+  const optList = select.querySelector(".optList");
+
+  optList.classList.toggle("hidden");
+}
+
+function highlightOption(select, option) {
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.classList.remove("highlight");
+  });
+
+  option.classList.add("highlight");
+}
+
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
+
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+
+    optionList.forEach((option) => {
+      option.addEventListener("mouseover", () => {
+        highlightOption(select, option);
+      });
+    });
+
+    select.addEventListener(
+      "click",
+      (event) => {
+        toggleOptList(select);
+      },
+      false,
+    );
+
+    select.addEventListener("focus", (event) => {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener("blur", (event) => {
+      deactivateSelect(select);
+    });
+
+    select.addEventListener("keyup", (event) => {
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("Живой_пример", 120, 130)}}
 
 ### Обработка значения виджета
 
@@ -676,14 +1386,270 @@ window.addEventListener("load", function () {
 
 С этим мы закончили! Вот результат:
 
-| Пример                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------- |
-| {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4") }} |
-| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                   |
+#### Живой пример
 
-Но секундочку, мы точно закончили?
+Посмотрите [полный исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4).
 
-## Делаем доступным
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+```js hidden
+function deactivateSelect(select) {
+  if (!select.classList.contains("active")) return;
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.add("hidden");
+  select.classList.remove("active");
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains("active")) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add("active");
+}
+
+function toggleOptList(select, show) {
+  const optList = select.querySelector(".optList");
+
+  optList.classList.toggle("hidden");
+}
+
+function highlightOption(select, option) {
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.classList.remove("highlight");
+  });
+
+  option.classList.add("highlight");
+}
+
+function updateValue(select, index) {
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
+
+  nativeWidget.selectedIndex = index;
+  value.innerHTML = optionList[index].innerHTML;
+  highlightOption(select, optionList[index]);
+}
+
+function getIndex(select) {
+  const nativeWidget = select.previousElementSibling;
+
+  return nativeWidget.selectedIndex;
+}
+
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
+
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+
+    optionList.forEach((option) => {
+      option.addEventListener("mouseover", () => {
+        highlightOption(select, option);
+      });
+    });
+
+    select.addEventListener("click", (event) => {
+      toggleOptList(select);
+    });
+
+    select.addEventListener("focus", (event) => {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener("blur", (event) => {
+      deactivateSelect(select);
+    });
+  });
+});
+
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
+
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
+
+    select.tabIndex = 0;
+    select.previousElementSibling.tabIndex = -1;
+
+    updateValue(select, selectedIndex);
+
+    optionList.forEach((option, index) => {
+      option.addEventListener("click", (event) => {
+        updateValue(select, index);
+      });
+    });
+
+    select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
+
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
+        index++;
+      }
+      if (event.key === "ArrowUp" && index > 0) {
+        index--;
+      }
+
+      updateValue(select, index);
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("Живой_пример", 120, 130)}}
+
+Но подождите, мы точно закончили?
+
+## Добавляем доступность
 
 Мы создали нечто работающее, и, хотя это далеко от полнофункционального выпадающего списка, работает это хорошо. Однако то, что мы сделали, это не более, чем возня с DOM. У него нет настоящей семантики, и хотя оно выглядит как раскрывающейся список, с точки зрения браузера - это не так, поэтому вспомогательные технологии не смогут понять что это он и есть. Короче говоря, этот хорошенький список для выбора фруктов не является доступным для людей с ограниченными возможностями!
 
@@ -741,12 +1707,264 @@ function updateValue(select, index) {
 }
 ```
 
-Вот окончательный результат всех этих изменений (вы сможете это лучше прочувствовать если испробуете это со вспомогательными технологиями, такими как [NVDA](http://www.nvda-project.org/) или [VoiceOver](https://www.apple.com/accessibility/voiceover/)):
+Ниже окончательный результат всех этих изменений (для большей наглядности попробуйте эти примеры со вспомогательными технологиями, такими как [NVDA](http://www.nvda-project.org/) или [VoiceOver](https://www.apple.com/accessibility/voiceover/)).
 
-| Пример                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------- |
-| {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5") }} |
-| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)                   |
+#### Живой пример
+
+Посмотрите [полный исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select" role="listbox">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden" role="presentation">
+      <li class="option" role="option" aria-selected="true">Cherry</li>
+      <li class="option" role="option">Lemon</li>
+      <li class="option" role="option">Banana</li>
+      <li class="option" role="option">Strawberry</li>
+      <li class="option" role="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline-color: transparent;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+```js hidden
+function deactivateSelect(select) {
+  if (!select.classList.contains("active")) return;
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.add("hidden");
+  select.classList.remove("active");
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains("active")) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add("active");
+}
+
+function toggleOptList(select, show) {
+  const optList = select.querySelector(".optList");
+
+  optList.classList.toggle("hidden");
+}
+
+function highlightOption(select, option) {
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.classList.remove("highlight");
+  });
+
+  option.classList.add("highlight");
+}
+
+function updateValue(select, index) {
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.setAttribute("aria-selected", "false");
+  });
+
+  optionList[index].setAttribute("aria-selected", "true");
+
+  nativeWidget.selectedIndex = index;
+  value.innerHTML = optionList[index].innerHTML;
+  highlightOption(select, optionList[index]);
+}
+
+function getIndex(select) {
+  const nativeWidget = select.previousElementSibling;
+
+  return nativeWidget.selectedIndex;
+}
+
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
+
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
+
+    select.tabIndex = 0;
+    select.previousElementSibling.tabIndex = -1;
+
+    updateValue(select, selectedIndex);
+
+    optionList.forEach((option, index) => {
+      option.addEventListener("mouseover", () => {
+        highlightOption(select, option);
+      });
+
+      option.addEventListener("click", (event) => {
+        updateValue(select, index);
+      });
+    });
+
+    select.addEventListener("click", (event) => {
+      toggleOptList(select);
+    });
+
+    select.addEventListener("focus", (event) => {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener("blur", (event) => {
+      deactivateSelect(select);
+    });
+
+    select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
+
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
+        index++;
+      }
+      if (event.key === "ArrowUp" && index > 0) {
+        index--;
+      }
+
+      updateValue(select, index);
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("Живой_пример", 120, 130)}}
 
 ## Заключение
 
