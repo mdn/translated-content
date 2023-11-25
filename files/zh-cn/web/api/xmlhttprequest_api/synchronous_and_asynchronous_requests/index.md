@@ -237,5 +237,4 @@ function logData() {
 
 - [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)
 - [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [AJAX](/zh-CN/docs/Web/Guide/AJAX)
 - [`navigator.sendBeacon`](/zh-CN/docs/Web/API/Navigator/sendBeacon)

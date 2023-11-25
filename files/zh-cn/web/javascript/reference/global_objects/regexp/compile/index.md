@@ -53,6 +53,6 @@ regexObj.compile("new foo", "g");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("RegExp")}}
