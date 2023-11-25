@@ -18,7 +18,7 @@ Web 组件的一个关键特性是创建*自定义元素*：即由 Web 开发人
 
 ## 实现自定义元素
 
-自定义元素作为一个[类](/docs/Web/JavaScript/Reference/Classes)来实现，该类可以扩展 {{domxref("HTMLElement")}}（在独立元素的情况下）或者你想要定制的接口（在自定义内置元素的情况下）。
+自定义元素作为一个[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)来实现，该类可以扩展 {{domxref("HTMLElement")}}（在独立元素的情况下）或者你想要定制的接口（在自定义内置元素的情况下）。
 
 以下是一个最小自定义元素的实现示例，该元素定制了 {{HTMLElement("p")}} 元素：
 
@@ -42,7 +42,7 @@ class PopupInfo extends HTMLElement {
 }
 ```
 
-在类的[构造函数](/docs/Web/JavaScript/Reference/Classes/constructor)中，你可以设置初始状态和默认值，注册事件监听器，甚至创建一个影子根（shadow root）。在此处，你不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅[自定义元素构造函数和交互行为的要求](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
+在类的[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)中，你可以设置初始状态和默认值，注册事件监听器，甚至创建一个影子根（shadow root）。在此处，你不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅[自定义元素构造函数和交互行为的要求](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
 
 ### 自定义元素生命周期回调
 
@@ -116,7 +116,7 @@ customElements.define("popup-info", PopupInfo);
 
 一旦你定义并注册了自定义元素，就可以在代码中使用它。
 
-要使用自定义内置元素，请使用内置元素，但将自定义名称作为 [`is`](/docs/Web/HTML/Global_attributes/is) 属性的值：
+要使用自定义内置元素，请使用内置元素，但将自定义名称作为 [`is`](/zh-CN/docs/Web/HTML/Global_attributes/is) 属性的值：
 
 ```html
 <p is="word-count"></p>
@@ -270,7 +270,7 @@ class PopupInfo extends HTMLElement {
 }
 ```
 
-类定义包含类的 [`constructor()`](/docs/Web/JavaScript/Reference/Classes/constructor) 方法，该方法始终以调用 [`super()`](/docs/Web/JavaScript/Reference/Operators/super) 开始，以便正确建立原型链。
+类定义包含类的 [`constructor()`](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor) 方法，该方法始终以调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 开始，以便正确建立原型链。
 
 在 `connectedCallback()` 方法内部，我们定义了元素连接到 DOM 时元素将具有的所有功能。在这种情况下，我们将一个影子根附加到自定义元素，使用一些 DOM 操作来创建元素的影子 DOM 结构——然后将其附加到影子根——最后将一些 CSS 附加到影子根以进行样式设置。我们不在构造函数中执行这项工作，因为在连接到 DOM 之前，元素的属性是不可用的。
 
@@ -446,7 +446,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 你使用 `<ul>` 元素与往常一样，但在 `is` 属性内指定自定义元素的名称。
 
-请注意，在这种情况下，我们必须确保定义自定义元素的脚本在 DOM 完全解析后执行，因为 `connectedCallback()` 在展开的列表被添加到 DOM 时就会被调用，而此时其子元素尚未添加，因此 `querySelectorAll()` 调用将找不到任何项。确保这一点的一种方法是在包含脚本的行上添加 [`defer`](/docs/Web/HTML/Element/script#defer) 属性：
+请注意，在这种情况下，我们必须确保定义自定义元素的脚本在 DOM 完全解析后执行，因为 `connectedCallback()` 在展开的列表被添加到 DOM 时就会被调用，而此时其子元素尚未添加，因此 `querySelectorAll()` 调用将找不到任何项。确保这一点的一种方法是在包含脚本的行上添加 [defer](/zh-CN/docs/Web/HTML/Element/script#defer) 属性：
 
 ```html
 <script src="main.js" defer></script>
