@@ -50,10 +50,10 @@ class PopupInfo extends HTMLElement {
 
 自定义元素生命周期回调包括：
 
-- `connectedCallback()`: 每当元素添加到文档中时调用。规范建议开发人员尽可能在此回调中实现自定义元素的设定，而不是在构造函数中实现。
-- `disconnectedCallback()`: 每当元素从文档中移除时调用。
-- `adoptedCallback()`: 每当元素被移动到新文档中时调用。
-- `attributeChangedCallback()`: 在属性更改、添加、移除或替换时调用。有关此回调的更多详细信息，请参见[响应属性变化](#响应属性变化)。
+- `connectedCallback()`：每当元素添加到文档中时调用。规范建议开发人员尽可能在此回调中实现自定义元素的设定，而不是在构造函数中实现。
+- `disconnectedCallback()`：每当元素从文档中移除时调用。
+- `adoptedCallback()`：每当元素被移动到新文档中时调用。
+- `attributeChangedCallback()`：在属性更改、添加、移除或替换时调用。有关此回调的更多详细信息，请参见[响应属性变化](#响应属性变化)。
 
 以下是一个记录这些生命周期事件的最小自定义元素示例：
 
