@@ -148,8 +148,8 @@ var uint32 = new Uint32Array(iterable);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

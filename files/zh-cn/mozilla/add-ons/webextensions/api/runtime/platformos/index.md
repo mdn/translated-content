@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 - `"android"`
   - : 表示底层操作系统是 Android.
 - `"cros"`
-  - : 表示底层操作系统是 Chrome OS.
+  - : 表示底层操作系统是 ChromeOS.
 - `"linux"`
   - : 表示底层操作系统是 Linux.
 - `"openbsd"`

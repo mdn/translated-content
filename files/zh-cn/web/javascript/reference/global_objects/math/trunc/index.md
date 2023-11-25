@@ -87,8 +87,9 @@ if (!Math.trunc) {
 
 {{Compat}}
 
-**相关链接**
+## 参见
 
+- [`core-js` 中 `Math.trunc` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}

@@ -74,7 +74,7 @@ Object.isExtensible(1);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.isExtensible()")}}
