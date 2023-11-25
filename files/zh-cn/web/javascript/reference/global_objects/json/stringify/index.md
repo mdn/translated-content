@@ -250,7 +250,7 @@ console.log(restoredSession);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中对现代 `JSON.stringify` 行为（符号和良好格式的 unicode）的 polyfill](https://github.com/zloirock/core-js#ecmascript-json)
 - {{JSxRef("JSON.parse()")}}
-- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – Introduces two functions: `JSON.decycle` and `JSON.retrocycle`. These allow encoding and decoding of cyclical structures and DAGs into an extended and retrocompatible JSON format.

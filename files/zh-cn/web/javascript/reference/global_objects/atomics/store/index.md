@@ -51,7 +51,7 @@ Atomics.store(ta, 0, 12); // 12
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.load()")}}
