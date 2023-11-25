@@ -52,6 +52,6 @@ Symbol.for("foo").toString(); // "Symbol(foo)"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.toString()")}}

@@ -59,7 +59,7 @@ try {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("decodeURI")}}
 - {{jsxref("encodeURI")}}

@@ -3,7 +3,7 @@ title: Deep copy (ディープコピー)
 slug: Glossary/Deep_copy
 ---
 
-{{MDNSidebar}}
+{{GlossarySidebar}}
 
 オブジェクトの **ディープコピー** とは、コピー先のオブジェクトのプロパティがコピー元のオブジェクトのプロパティと同一の参照（同じ値を指す）を共有しないコピーのことです。
 
