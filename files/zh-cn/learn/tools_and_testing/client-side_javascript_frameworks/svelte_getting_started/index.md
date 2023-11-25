@@ -59,7 +59,7 @@ Svelte 可以被用来开发一小块界面或整个应用程序。你也可以�
 
 - 让网站应用程序更适用于低功耗装置：使用 Svelte 建构的应用程序将拥有较小的包大小，特别适用于网络联机缓慢和处理能力有限的装置。因为程序代码较少，所以需要下载、解析、执行并保存于内存中的大小也较少。
 - 可应付需频繁互动的页面或复杂的可视化需求：比如你建构一个数据可视化应用程序，你可能会需要显示大量的 DOM 元素，从该框架就能获得较好的性能增益，因为它不会有运行途中的消耗，将可以确保使用者的互动更快速与实时。
-- 具备基本的网站开发知识即可：Svelte 学习曲线不高。网站开发人员具备基本的 HTML、CSS、JavaScript 知识就能在短时间简单地抓住 Svelte 要点并开始建构网站应用程序。
+- 具备基本的网站开发知识即可：Svelte 学习曲线不高。网站开发人员具备基本的 HTML、CSS、JavaScript 知识就能在短时间简单地掌握 Svelte 要点并开始建构网站应用程序。
 
 Svelte 团队推出了 [SvelteKit](https://kit.svelte.dev)，这是一个使用 Svelte 构建 Web 应用程序的框架。它包含了现代 Web 框架的特性，如基于文件系统的路由，服务器端渲染（SSR），页面特定的渲染模式，离线支持等。关于 SvelteKit 的更多信息，可以参考[官方教程](https://learn.svelte.dev)和[文档](https://kit.svelte.dev/docs)。
 
@@ -143,7 +143,7 @@ moz-todo-svelte
 - `package.json` 和 `package-lock.json`：Node.js/npm 用它来组织化管理你的项目。在这个教学系列中，你完全不需要了解这个文件，但如果你想要学习更多的话，你可以至 npmjs.com 阅读 [`package.json` 处理](https://docs.npmjs.com/cli/configuring-npm/package-json)；我们在[基础包管理教学系列](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)也有谈到。
 - `node_modules`：这里是 node 存放项目依赖的地方。这些依赖在正式环境不会用到，只有开发时才会被使用到。
 - `.gitignore`：告诉 git 有哪些文件或文件夹不要纳入项目版本控制——如果你决定将应用程序包含在 git 仓库中，它还蛮实用的！
-- `rollup.config.js`：Svelte 使用 [rollup.js](https://rollupjs.org/) 做为模块打包工具。这个配置文件告诉 rollup 如何编译和建构你的应用程序。假如你偏好使用 [webpack](https://webpack.js.org/)，你可以改执行 `npx degit sveltejs/template-webpack svelte-app` 来建构你的初始应用程序。
+- `rollup.config.js`：Svelte 使用 [rollup.js](https://rollupjs.org/) 作为模块打包工具。这个配置文件告诉 rollup 如何编译和构建你的应用程序。假如你偏好使用 [webpack](https://webpack.js.org/)，你可以改为执行 `npx degit sveltejs/template-webpack svelte-app` 来构建你的初始应用程序。
 - `scripts`：包含所需的设置脚本。现在应该只有 `setupTypeScript.js`。
 
   - `setupTypeScript.js`：此脚本用来支持 Svelte 使用 TypeScript。我们将在之后的文章谈到更多。
@@ -167,7 +167,7 @@ moz-todo-svelte
 
 组件是 Svelte 应用程序建构的基础。组件位于 `.svelte` 文件中，可以使用 HTML 的超集来编写。
 
-总共有三个区块—— `<script>`，`<styles>` 和标记（markup）区块——各区块存在与否由你决定。
+总共有三个区块——`<script>`，`<styles>` 和标记（markup）区块——各区块存在与否由你决定。
 
 ```html
 <script>
@@ -231,7 +231,7 @@ moz-todo-svelte
 </script>
 ```
 
-Svelte 使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 关键词将变量宣告标记为属性，代表这个属性可以被外部其它组件存取。这是 Svelte 扩展 JavaScript 语法让其更有用且使用上如同以往的其中一个例子。
+Svelte 使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 关键词将变量标记为属性，代表这个属性可以被外部其它组件存取。这是 Svelte 扩展 JavaScript 语法让其更有用且使用上如同以往的其中一个例子。
 
 ### 标记区块
 
@@ -247,7 +247,7 @@ Svelte 使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export)
 </main>
 ```
 
-Svelte 也支持一些标签，像是 `{#if...}`，`{#each...}` 和 `{#await...}` ——分别允许你可以条件式渲染部分标记区块，迭代列表元素与处理异步数值。
+Svelte 也支持一些标签，像是 `{#if...}`、`{#each...}` 和 `{#await...}`——分别允许你可以条件式渲染部分标记区块，迭代列表元素与处理异步数值。
 
 ### `<style>` 区块
 
@@ -281,7 +281,7 @@ Svelte 也支持一些标签，像是 `{#if...}`，`{#each...}` 和 `{#await...}
 
 在 Svelte 中，组件 `<style>` 区块中的 CSS 会被局限于该组件范围之内。这是透过对所选的元素加上一个类来实现，而这个类名则会是基于组件样式的哈希值。
 
-你可以观察到这个现象。在浏览器开一个新标签，进入 `localhost:8080`，对准 _HELLO WORLD!_ 标签鼠标右键／按 <kbd>Ctrl</kbd> 键同时点击该标签，之后选择*检查*：
+你可以观察到这个现象。在浏览器打开一个新标签，进入 `localhost:8080`，对准 _HELLO WORLD!_ 标签鼠标右键／按 <kbd>Ctrl</kbd> 键同时点击该标签，之后选择*检查*：
 
 ![打开开发工具的 Svelte 入门应用程序，显示范围样式的类](02-svelte-component-scoped-styles.png)
 
@@ -451,7 +451,7 @@ Svelte 的 REPL 功能却不只如此。它是一个在线工具，允许你建�
 
 每当你在 REPL 改变任何文件，Svelte 将会重新编译应用程序并更新结果（Result）标签。为了分享你的应用程序，可以分享其网址。举个例子，这是运行我们完整应用程序的 REPL 链接：<https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>。
 
-> **备注：** 可以注意一下在链接上标注 Svelte 版本的方式。当你在汇报 Svelte 特定版本的问题时，这是很有帮助的。
+> **备注：** 可以注意一下在链接上标注 Svelte 版本的方式。当你在报告 Svelte 特定版本的问题时，这是很有帮助的。
 
 我们将会在每一篇文章的开头与结尾提供 REPL，所以你就能立刻和我们一起撰写程序代码。
 
