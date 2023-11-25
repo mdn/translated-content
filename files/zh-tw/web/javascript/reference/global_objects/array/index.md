@@ -7,112 +7,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 JavaScript 中的 **`Array`** 全域物件被用於建構陣列；陣列為高階（high-level）、似列表（list-like）的物件。陣列在 Javascript 裡面並沒有固定的長度與型別。由於陣列的長度可以隨時被改變，所以並不能保證陣列的密度。這取決於開發者如何使用陣列。一般來說，這是個非常方便的特性，但如果這並不適用於你的開發工作，你也許會考慮使用型別陣列。
 
-**建立陣列**
-
-```js
-var fruits = ["Apple", "Banana"];
-
-console.log(fruits.length);
-// 2
-```
-
-**（透過索引）取得陣列項目**
-
-```js
-var first = fruits[0];
-// Apple
-
-var last = fruits[fruits.length - 1];
-// Banana
-```
-
-**迭代陣列**
-
-```js
-fruits.forEach(function (item, index, array) {
-  console.log(item, index);
-});
-// Apple 0
-// Banana 1
-```
-
-**加入項目至陣列末端**
-
-```js
-var newLength = fruits.push("Orange");
-// ["Apple", "Banana", "Orange"]
-```
-
-**移除陣列末端項目**
-
-```js
-var last = fruits.pop(); // 移除 (最末端的) Orange
-// ["Apple", "Banana"];
-```
-
-**移除陣列前端項目**
-
-```js
-var first = fruits.shift(); // 移除 (最前端的) Apple
-// ["Banana"];
-```
-
-**加入項目至陣列前端**
-
-```js
-var newLength = fruits.unshift("Strawberry"); // 加到陣列前端
-// ["Strawberry", "Banana"];
-```
-
-**在陣列中尋找項目的索引**
-
-```js
-fruits.push("Mango");
-// ["Strawberry", "Banana", "Mango"]
-
-var pos = fruits.indexOf("Banana");
-// 1
-```
-
-**移除指定索引位置的項目**
-
-```js
-var removedItem = fruits.splice(pos, 1); // 移除 pos 起的 1 個項目
-
-// ["Strawberry", "Mango"]
-```
-
-**移除指定索引位置起的多個項目**
-
-```js
-var vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
-console.log(vegetables);
-// ["Cabbage", "Turnip", "Radish", "Carrot"]
-
-var pos = 1,
-  n = 2;
-
-var removedItems = vegetables.splice(pos, n);
-// 這就是移除項目的方式，
-// n 表示從該位置 (pos) 開始，一直到陣列的尾端有多少項目需要移除
-
-console.log(vegetables);
-// ["Cabbage", "Carrot"] (原始的陣列被改變)
-
-console.log(removedItems);
-// ["Turnip", "Radish"]
-```
-
-**複製陣列**
-
-```js
-var shallowCopy = fruits.slice(); // 這就是複製陣列的方式
-// ["Strawberry", "Mango"]
-```
-
 ## 語法
 
-```plain
+```js-nolint
 [element0, element1, ..., elementN]
 new Array(element0, element1[, ...[, elementN]])
 new Array(arrayLength)
@@ -360,6 +257,100 @@ msgArray[99] = "world";
 if (msgArray.length === 100) {
   console.log("The length is 100.");
 }
+```
+
+### （透過索引）取得陣列項目
+
+```js
+var first = fruits[0];
+// Apple
+
+var last = fruits[fruits.length - 1];
+// Banana
+```
+
+### 迭代陣列
+
+```js
+fruits.forEach(function (item, index, array) {
+  console.log(item, index);
+});
+// Apple 0
+// Banana 1
+```
+
+### 加入項目至陣列末端
+
+```js
+var newLength = fruits.push("Orange");
+// ["Apple", "Banana", "Orange"]
+```
+
+### 移除陣列末端項目
+
+```js
+var last = fruits.pop(); // 移除（最末端的）Orange
+// ["Apple", "Banana"];
+```
+
+### 移除陣列前端項目
+
+```js
+var first = fruits.shift(); // 移除（最前端的）Apple
+// ["Banana"];
+```
+
+### 加入項目至陣列前端
+
+```js
+var newLength = fruits.unshift("Strawberry"); // 加到陣列前端
+// ["Strawberry", "Banana"];
+```
+
+### 在陣列中尋找項目的索引
+
+```js
+fruits.push("Mango");
+// ["Strawberry", "Banana", "Mango"]
+
+var pos = fruits.indexOf("Banana");
+// 1
+```
+
+### 移除指定索引位置的項目
+
+```js
+var removedItem = fruits.splice(pos, 1); // 移除 pos 起的 1 個項目
+
+// ["Strawberry", "Mango"]
+```
+
+### 移除指定索引位置起的多個項目
+
+```js
+var vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
+console.log(vegetables);
+// ["Cabbage", "Turnip", "Radish", "Carrot"]
+
+var pos = 1,
+  n = 2;
+
+var removedItems = vegetables.splice(pos, n);
+// 這就是移除項目的方式，
+// n 表示從該位置開始，一直到陣列的尾端有多少項目需要移除
+
+console.log(vegetables);
+// ["Cabbage", "Carrot"]（原始的陣列被改變）
+
+console.log(removedItems);
+// ["Turnip", "Radish"]
+```
+
+### 複製陣列
+
+```js
+var shallowCopy = fruits.slice(); // 這就是複製陣列的方式
+// ["Strawberry", "Mango"]
 ```
 
 ### 建立二維陣列

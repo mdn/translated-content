@@ -92,7 +92,7 @@ return Promise.resolve(true);
 return Promise.reject(false);
 ```
 
-## 相关链接
+## 参见
 
 - {{Glossary("constructor")}}
-- [`new` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
+- [`new` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)

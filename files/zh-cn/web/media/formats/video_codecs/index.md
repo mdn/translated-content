@@ -1047,7 +1047,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
         <p>
           Firefox 仅在<a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>容器中支持 MP4V-ES。
         </p>
-        <p>Chrome 不支持 MP4V-ES；但是，Chrome OS 可以。</p>
+        <p>Chrome 不支持 MP4V-ES；但是，ChromeOS 可以。</p>
       </td>
     </tr>
     <tr>
