@@ -39,6 +39,7 @@ getRoot1_2(); // 0.7071067811865476
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

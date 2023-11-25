@@ -21,7 +21,7 @@ slug: Web/SVG/Element/metadata
 
 ### 专有属性
 
-_没有专有属性_
+_没有专有属性。_
 
 ## DOM 接口
 

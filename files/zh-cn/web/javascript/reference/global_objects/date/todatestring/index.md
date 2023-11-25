@@ -40,7 +40,7 @@ println(d.toDateString()); // prints Wed Jul 28 1993
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}

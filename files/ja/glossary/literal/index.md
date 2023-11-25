@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 05d10f3e6eb1d5d8a8c5a236744c10249ade2e08
 ---
 
+{{GlossarySidebar}}
+
 **リテラル**は JavaScript の値を表します。これらは（変数ではなく）固定値であり、スクリプト内に文字で提供されます。
 
 - [配列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#配列リテラル)
