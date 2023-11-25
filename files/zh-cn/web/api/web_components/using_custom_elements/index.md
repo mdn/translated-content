@@ -68,19 +68,19 @@ class MyCustomElement extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log("Custom element added to page.");
+    console.log("自定义元素添加至页面。");
   }
 
   disconnectedCallback() {
-    console.log("Custom element removed from page.");
+    console.log("自定义元素从页面中移除。");
   }
 
   adoptedCallback() {
-    console.log("Custom element moved to new page.");
+    console.log("自定义元素移动至新页面。");
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log(`Attribute ${name} has changed.`);
+    console.log(`属性 ${name} 已变更。`);
   }
 }
 
@@ -158,7 +158,7 @@ class MyCustomElement extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     console.log(
-      `Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
+      `属性 ${name} 已由 ${oldValue} 变更为 ${newValue}。`,
     );
   }
 }
@@ -166,7 +166,7 @@ class MyCustomElement extends HTMLElement {
 customElements.define("my-custom-element", MyCustomElement);
 ```
 
-请注意，如果元素的 `HTML` 声明包含一个被观察的属性，那么在元素的声明首次解析时，`attributeChangedCallback()` 将被调用，即在属性被初始化后。因此，在以下示例中，即使属性再也没有被更改，当 DOM 被解析时，`attributeChangedCallback()` 也会被调用：（译注：即每个直接在 HTML 中声明的且被观察的属性会立即触发 `attributeChangedCallback()` 一次）
+请注意，如果元素的 `HTML` 声明包含一个被观察的属性，那么在属性被初始化后，`attributeChangedCallback()` 将在元素的声明首次解析时被调用。因此，在以下示例中，即使属性再也没有被更改，当 DOM 被解析时，`attributeChangedCallback()` 也会被调用：
 
 ```html
 <my-custom-element size="100"></my-custom-element>
@@ -176,7 +176,7 @@ customElements.define("my-custom-element", MyCustomElement);
 
 ## 示例
 
-在本指南的其余部分，我们将看一些示例自定义元素。你可以在 [web-components-examples](https://github.com/mdn/web-components-examples) 存储库中找到所有这些示例的源代码，以及更多示例，并且你可以在 <https://mdn.github.io/web-components-examples/> 上实时查看它们。
+在本指南的其余部分，我们将看一些示例自定义元素。你可以在 [web-components-examples](https://github.com/mdn/web-components-examples) 仓库中找到所有这些示例的源代码，以及更多示例，并且你可以在 <https://mdn.github.io/web-components-examples/> 上实时查看它们。
 
 ### 一个独立自定义元素
 
@@ -356,7 +356,7 @@ class PopupInfo extends HTMLElement {
 
 请注意，{{htmlelement("link")}} 元素不会阻止影子根的绘制，因此在样式表加载时可能会出现未经样式化的内容（FOUC）。
 
-许多现代浏览器对于从公共节点克隆的 {{htmlelement("style")}} 标签或具有相同文本的标签都实施了一种优化，使它们可以共享单个后备样式表。通过这种优化，外部和内部样式的性能应该是相似的。
+许多现代浏览器对于从公共节点克隆的 {{htmlelement("style")}} 标签或具有相同文本的标签都实现了一种优化，使它们可以共享单个后备样式表。通过这种优化，外部和内部样式的性能应该是相似的。
 
 ### 自定义内置元素
 
@@ -454,7 +454,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 ### 生命周期回调
 
-到目前为止，我们只看到了一个生命周期回调的实际应用：`connectedCallback()`。在最后一个例子中，`<custom-square>`，我们将看到一些其他的回调。`<custom-square>` 独立自定义元素绘制一个正方形，其大小和颜色由两个名为 `"size"` 和 `"color"` 的属性确定。
+到目前为止，我们只看到了一个生命周期回调的实际应用：`connectedCallback()`。在最后一个示例——`<custom-square>`——中，我们将看到一些其他的回调。`<custom-square>` 独立自定义元素绘制一个正方形，其大小和颜色由两个名为 `"size"` 和 `"color"` 的属性确定。
 
 - [查看在线示例](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)
 - [查看源代码](https://github.com/mdn/web-components-examples/tree/main/life-cycle-callbacks)
@@ -494,7 +494,7 @@ function updateStyle(elem) {
 
 ```js
 connectedCallback() {
-  console.log("Custom square element added to page.");
+  console.log("自定义正方形元素添加至页面。");
   updateStyle(this);
 }
 ```
@@ -503,11 +503,11 @@ connectedCallback() {
 
 ```js
 disconnectedCallback() {
-  console.log("Custom square element removed from page.");
+  console.log("自定义正方形元素从页面中移除。");
 }
 
 adoptedCallback() {
-  console.log("Custom square element moved to new page.");
+  console.log("自定义正方形元素移动至新页面。");
 }
 ```
 
@@ -515,7 +515,7 @@ adoptedCallback() {
 
 ```js
 attributeChangedCallback(name, oldValue, newValue) {
-  console.log("Custom square element attributes changed.");
+  console.log("自定义正方形元素的属性已变更。");
   updateStyle(this);
 }
 ```
