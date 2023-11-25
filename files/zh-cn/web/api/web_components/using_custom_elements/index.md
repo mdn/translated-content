@@ -13,8 +13,8 @@ Web 组件的一个关键特性是创建*自定义元素*：即由 Web 开发人
 
 有两种类型的自定义元素：
 
-- **自定义内置元素**继承自标准的 HTML 元素，例如 {{domxref("HTMLImageElement")}} 或 {{domxref("HTMLParagraphElement")}}。它们的实现定义了标准元素的行为。
-- **独立自定义元素**继承自 HTML 元素基类 {{domxref("HTMLElement")}}。你必须从头开始实现它们的行为。
+- **自定义内置元素**（Customized built-in element）继承自标准的 HTML 元素，例如 {{domxref("HTMLImageElement")}} 或 {{domxref("HTMLParagraphElement")}}。它们的实现定义了标准元素的行为。
+- **独立自定义元素**（Autonomous custom element）继承自 HTML 元素基类 {{domxref("HTMLElement")}}。你必须从头开始实现它们的行为。
 
 ## 实现自定义元素
 
