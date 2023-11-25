@@ -46,7 +46,7 @@ sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("SharedArrayBuffer")}}
 - {{jsxref("Array.prototype.slice()")}}
