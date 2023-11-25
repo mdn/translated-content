@@ -17112,10 +17112,6 @@
     "modified": "2019-03-29T04:27:38.888Z",
     "contributors": ["karr1d"]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-18T21:06:53.326Z",
-    "contributors": ["gladisihor"]
-  },
   "orphaned/Toolkit_API": {
     "modified": "2019-01-16T14:44:25.079Z",
     "contributors": ["bill.gates"]
