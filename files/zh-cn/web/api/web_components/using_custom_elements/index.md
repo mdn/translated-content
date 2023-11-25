@@ -157,9 +157,7 @@ class MyCustomElement extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log(
-      `属性 ${name} 已由 ${oldValue} 变更为 ${newValue}。`,
-    );
+    console.log(`属性 ${name} 已由 ${oldValue} 变更为 ${newValue}。`);
   }
 }
 
