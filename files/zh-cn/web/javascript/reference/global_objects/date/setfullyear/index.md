@@ -47,7 +47,7 @@ theBigDay.setFullYear(1997);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setUTCFullYear()")}}

@@ -3,6 +3,8 @@ title: JavaScript
 slug: Glossary/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 ## 概要
 
 JavaScript (または JS) は、主にウェブページの動的なクライアントサイドスクリプトとして使用されるプログラミング言語です。しかし、{{Glossary("Server","サーバー")}}サイドでも [Node.js](https://nodejs.org/) のようなランタイムを用いて、たびたび使用されています。
