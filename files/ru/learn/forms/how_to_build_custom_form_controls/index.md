@@ -5,8 +5,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
-
 Существует много случаев, когда возможностей стандартных элементов управления HTML форм недостаточно. Если вы хотите [придать лучший вид](/ru/docs/Advanced_styling_for_HTML_forms) каким-либо элементам управления (например, {{HTMLElement("select")}}) или вы хотите добавить особое поведение, то у вас нет другого выбора, кроме как создать собственные элементы управления.
 
 В этой статье мы рассмотрим как создать собственный элемент управления. Для этого мы возьмём пример: переделка элемента {{HTMLElement("select")}} .
