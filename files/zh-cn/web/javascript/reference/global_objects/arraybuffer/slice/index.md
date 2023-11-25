@@ -1,6 +1,8 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
+l10n:
+  sourceCommit: d254545601e07aa48a6bb9d5bfc1a75f6561de4d
 ---
 
 {{JSRef}}
