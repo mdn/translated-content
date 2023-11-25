@@ -42,7 +42,7 @@ var weekday = today.getUTCDay();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCDate()")}}
 - {{jsxref("Date.prototype.getDay()")}}

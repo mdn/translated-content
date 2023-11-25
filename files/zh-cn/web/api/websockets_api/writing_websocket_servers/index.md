@@ -170,9 +170,7 @@ WebSocket 扩展和子协议是在握手过程中通过头信息进行协商的�
 
 Think of an extension as compressing a file before e-mailing it to someone. Whatever you do, you're sending the _same_ data in different forms. The recipient will eventually be able to get the same data as your local copy, but it is sent differently. That's what an extension does. WebSockets defines a protocol and a simple way to send data, but an extension such as compression could allow sending the same data but in a shorter format.
 
-> **备注：** 扩展在规范的 5.8, 9, 11.3.2, and 11.4 进行了解释
-
-_TODO_
+> **备注：** 扩展在规范的第 5.8、9、11.3.2 和 11.4 条进行了解释。
 
 ### 子协议
 

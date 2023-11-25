@@ -213,6 +213,9 @@ f(); // 6
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)参考
+- [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

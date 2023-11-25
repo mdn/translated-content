@@ -42,6 +42,6 @@ myVar = x.valueOf(); // assigns false to myVar
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.valueOf()")}}
