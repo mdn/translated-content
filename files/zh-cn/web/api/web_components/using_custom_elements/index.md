@@ -1,5 +1,5 @@
 ---
-title: 使用 custom elements
+title: 使用自定义元素
 slug: Web/API/Web_components/Using_custom_elements
 ---
 
@@ -13,8 +13,8 @@ Web 组件的一个关键特性是创建*自定义元素*：即由 Web 开发人
 
 有两种类型的自定义元素：
 
-- **自定义内置元素** 继承自标准的 HTML 元素，例如 {{domxref("HTMLImageElement")}} 或 {{domxref("HTMLParagraphElement")}}。它们的实现定义了标准元素的行为。
-- **独立自定义元素** 继承自 HTML 元素基类 {{domxref("HTMLElement")}}。你必须从头开始实现它们的行为。
+- **自定义内置元素**继承自标准的 HTML 元素，例如 {{domxref("HTMLImageElement")}} 或 {{domxref("HTMLParagraphElement")}}。它们的实现定义了标准元素的行为。
+- **独立自定义元素**继承自 HTML 元素基类 {{domxref("HTMLElement")}}。你必须从头开始实现它们的行为。
 
 ## 实现自定义元素
 
@@ -42,7 +42,7 @@ class PopupInfo extends HTMLElement {
 }
 ```
 
-在类的[构造函数](/docs/Web/JavaScript/Reference/Classes/constructor)中，你可以设置初始状态和默认值，注册事件监听器，甚至创建一个影子根（shadow root）。在此处，你不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅 [自定义元素构造函数和交互行为的要求](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
+在类的[构造函数](/docs/Web/JavaScript/Reference/Classes/constructor)中，你可以设置初始状态和默认值，注册事件监听器，甚至创建一个影子根（shadow root）。在此处，你不应检查元素的属性或子元素，也不应添加新的属性或子元素。有关完整的要求集，请参阅[自定义元素构造函数和交互行为的要求](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element-conformance)。
 
 ### 自定义元素生命周期回调
 
@@ -116,7 +116,7 @@ customElements.define("popup-info", PopupInfo);
 
 一旦你定义并注册了自定义元素，就可以在代码中使用它。
 
-要使用 customized built-in element，请使用内置元素，但将自定义名称作为 [`is`](/docs/Web/HTML/Global_attributes/is) 属性的值：
+要使用自定义内置元素，请使用内置元素，但将自定义名称作为 [`is`](/docs/Web/HTML/Global_attributes/is) 属性的值：
 
 ```html
 <p is="word-count"></p>
@@ -360,7 +360,7 @@ class PopupInfo extends HTMLElement {
 
 ### 自定义内置元素
 
-现在让我们看一个 customized built in element 的例子。这个例子扩展了内置的 {{HTMLElement("ul")}} 元素，以支持展开和折叠列表项。
+现在让我们看一个自定义内置元素的例子。这个例子扩展了内置的 {{HTMLElement("ul")}} 元素，以支持展开和折叠列表项。
 
 - [查看在线示例](https://mdn.github.io/web-components-examples/expanding-list-web-component/)
 - [查看源代码](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
