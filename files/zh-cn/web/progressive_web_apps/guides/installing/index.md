@@ -63,7 +63,7 @@ slug: Web/Progressive_web_apps/Guides/Installing
 
 一旦安装，PWA 的行为就像其他已安装的应用程序一样：单击应用程序图标即可打开 PWA，即使用户处于离线状态也可以打开。
 
-所有现代桌面和移动设备都支持安装。PWA 是否可以由浏览器在操作系统上安装取决于浏览器/操作系统的组合。大多数浏览器直接或在安装扩展程序后支持在所有操作系统（如 Chrome OS、MacOS、Windows、Android、Linux 等）上安装 PWA。
+所有现代桌面和移动设备都支持安装。PWA 是否可以由浏览器在操作系统上安装取决于浏览器/操作系统的组合。大多数浏览器直接或在安装扩展程序后支持在所有操作系统（如 ChromeOS、MacOS、Windows、Android、Linux 等）上安装 PWA。
 
 Firefox 需要 [PWA 扩展](https://addons.mozilla.org/zh-CN/firefox/addon/pwas-for-firefox/)。
 

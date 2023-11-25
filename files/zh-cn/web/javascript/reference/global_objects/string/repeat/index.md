@@ -53,7 +53,7 @@ repeat(count)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [`core-js` 中 `String.prototype.repeat` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.concat()")}}

@@ -2078,6 +2078,25 @@
     "modified": "2020-09-22T05:14:27.901Z",
     "contributors": ["Nachec", "Enesimus"]
   },
+  "Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
+    "modified": "2019-03-18T21:14:54.246Z",
+    "contributors": [
+      "AlePerez92",
+      "chrisdavidmills",
+      "ccarruitero",
+      "chukito",
+      "Mgjbot",
+      "Nukeador",
+      "Summit677",
+      "Pascalc",
+      "Jorolo",
+      "Marianov",
+      "Takenbot",
+      "Baluart",
+      "Breaking Pitt",
+      "Seres"
+    ]
+  },
   "Learn/JavaScript/Client-side_web_APIs/Introduction": {
     "modified": "2020-07-16T22:32:44.249Z",
     "contributors": [
@@ -8476,25 +8495,6 @@
       "hjaguen",
       "ethertank",
       "Sheppy"
-    ]
-  },
-  "Web/Guide/AJAX": {
-    "modified": "2019-03-18T21:14:54.246Z",
-    "contributors": [
-      "AlePerez92",
-      "chrisdavidmills",
-      "ccarruitero",
-      "chukito",
-      "Mgjbot",
-      "Nukeador",
-      "Summit677",
-      "Pascalc",
-      "Jorolo",
-      "Marianov",
-      "Takenbot",
-      "Baluart",
-      "Breaking Pitt",
-      "Seres"
     ]
   },
   "Web/Guide/CSS/Block_formatting_context": {
