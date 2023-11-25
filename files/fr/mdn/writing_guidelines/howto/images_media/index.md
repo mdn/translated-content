@@ -7,7 +7,7 @@ l10n:
 
 {{MDNSidebar}}
 
-# Ajouter des images
+## Ajouter des images
 
 Pour ajouter une image à un document, ajoutez le fichier image dans le dossier du document puis référencez l'image dans le fichier `index.md` du document en utilisant un élément `<img>` ou [la syntaxe Markdown équivalente](https://github.github.com/gfm/#images).
 
@@ -42,8 +42,8 @@ Prenons un exemple&nbsp;:
 4. Référencez votre image dans le document avec un élément `<img>` et un attribut `alt` dans `files/fr/web/css/index.md` :
 
    ```html
-    <img src="ma-superbe-image.png" alt="Ma superbe image" />
-    ```
+   <img src="ma-superbe-image.png" alt="Ma superbe image" />
+   ```
 
 5. Ajoutez et livrez (<i lang="en">commit</i> en anglais) tous les fichiers supprimés, créés et modifiés, puis poussez votre branche vers votre fork&nbsp;:
 
@@ -54,7 +54,6 @@ Prenons un exemple&nbsp;:
    ```
 
 6. Vous êtes maintenant prêt à créer votre [requête de tirage (<i lang="en">pull request</i> en anglais)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
-
 
 ## Ajouter les textes alternatifs aux images
 
