@@ -59,7 +59,7 @@ Math.atanh =
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}

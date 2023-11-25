@@ -1,5 +1,8 @@
 {
   "extends": "../../.markdownlint.jsonc",
+  "no-trailing-punctuation": {
+    "punctuation": ".,;:。，"
+  },
   "search-replace": {
     "rules": [
       {
@@ -84,15 +87,14 @@
         "searchPattern": "/\\]\\(https:\\/\\/developer.mozilla.org\\/(?!en-US\\/blog\\/)/g",
         "replace": "](/",
         "searchScope": "text"
+      },
+      {
+        "name": "localhost-links",
+        "message": "Don't use localhost for links",
+        "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
+        "replace": "](/",
+        "searchScope": "text"
       }
-      // XXX Many instances still found in translated content
-      // {
-      //   "name": "localhost-links",
-      //   "message": "Don't use localhost for links",
-      //   "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
-      //   "replace": "](/",
-      //   "searchScope": "text"
-      // }
     ]
   }
 }
