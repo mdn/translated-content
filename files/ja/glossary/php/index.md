@@ -3,6 +3,8 @@ title: PHP
 slug: Glossary/PHP
 ---
 
+{{GlossarySidebar}}
+
 PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソースのサーバー側スクリプト言語で、 HTML に組み込んで、ウェブアプリや動的なウェブサイトを構築することができます。
 
 ## 例

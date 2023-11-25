@@ -8995,10 +8995,6 @@
     "modified": "2020-10-15T21:40:06.130Z",
     "contributors": ["mfuji09", "YuichiNukiyama"]
   },
-  "Web/API/HTMLDialogElement/cancel_event": {
-    "modified": "2020-10-15T22:28:07.370Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/API/HTMLDialogElement/close_event": {
     "modified": "2020-10-15T21:23:57.919Z",
     "contributors": ["mpcjazz", "teoli", "arunpandianp", "ethertank"]
@@ -9908,10 +9904,6 @@
       "ethertank",
       "saneyuki_s"
     ]
-  },
-  "Web/API/History_API/Example": {
-    "modified": "2020-02-15T02:40:44.391Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "Web/API/History_API/Working_with_the_History_API": {
     "modified": "2020-05-28T00:42:35.014Z",
@@ -20273,23 +20265,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/AJAX": {
-    "modified": "2020-08-12T11:49:11.332Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "chrisdavidmills",
-      "fscholz",
-      "ethertank",
-      "Potappo",
-      "Mgjbot",
-      "Summit677",
-      "Marsf",
-      "Shimono",
-      "Taken Bot",
-      "Dria"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-11-24T06:54:13.469Z",
     "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "Sheppy"]
@@ -30108,15 +30083,15 @@
     "modified": "2020-12-06T05:19:41.051Z",
     "contributors": ["mfuji09", "ukyo"]
   },
-  "WebAssembly/JavaScript_interface/Module/customSections": {
+  "WebAssembly/JavaScript_interface/Module/customSections_static": {
     "modified": "2019-03-23T22:10:48.073Z",
     "contributors": ["ukyo"]
   },
-  "WebAssembly/JavaScript_interface/Module/exports": {
+  "WebAssembly/JavaScript_interface/Module/exports_static": {
     "modified": "2020-10-15T21:54:53.049Z",
     "contributors": ["ukyo"]
   },
-  "WebAssembly/JavaScript_interface/Module/imports": {
+  "WebAssembly/JavaScript_interface/Module/imports_static": {
     "modified": "2020-10-15T21:54:52.650Z",
     "contributors": ["mfuji09", "ukyo"]
   },
@@ -30148,23 +30123,23 @@
     "modified": "2020-10-15T21:54:51.626Z",
     "contributors": ["mfuji09", "bellbind", "ukyo"]
   },
-  "WebAssembly/JavaScript_interface/compile": {
-    "modified": "2020-10-15T21:53:09.837Z",
-    "contributors": ["ukyo"]
-  },
-  "WebAssembly/JavaScript_interface/compileStreaming": {
+  "WebAssembly/JavaScript_interface/compileStreaming_static": {
     "modified": "2020-10-15T21:58:31.035Z",
     "contributors": ["ukyo"]
   },
-  "WebAssembly/JavaScript_interface/instantiate": {
-    "modified": "2020-12-06T05:02:05.948Z",
-    "contributors": ["mfuji09", "michitaro", "ukyo"]
+  "WebAssembly/JavaScript_interface/compile_static": {
+    "modified": "2020-10-15T21:53:09.837Z",
+    "contributors": ["ukyo"]
   },
-  "WebAssembly/JavaScript_interface/instantiateStreaming": {
+  "WebAssembly/JavaScript_interface/instantiateStreaming_static": {
     "modified": "2020-10-15T21:58:31.752Z",
     "contributors": ["ukyo"]
   },
-  "WebAssembly/JavaScript_interface/validate": {
+  "WebAssembly/JavaScript_interface/instantiate_static": {
+    "modified": "2020-12-06T05:02:05.948Z",
+    "contributors": ["mfuji09", "michitaro", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/validate_static": {
     "modified": "2020-10-15T21:53:09.850Z",
     "contributors": ["ukyo"]
   },
@@ -30209,6 +30184,23 @@
   "conflicting/Glossary/Scroll_container": {
     "modified": "2019-03-18T20:53:07.981Z",
     "contributors": ["mfuji09"]
+  },
+  "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
+    "modified": "2020-08-12T11:49:11.332Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "chrisdavidmills",
+      "fscholz",
+      "ethertank",
+      "Potappo",
+      "Mgjbot",
+      "Summit677",
+      "Marsf",
+      "Shimono",
+      "Taken Bot",
+      "Dria"
+    ]
   },
   "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-12-06T14:17:48.495Z",
@@ -30402,6 +30394,10 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
   },
+  "conflicting/Web/API/History_API/Working_with_the_History_API": {
+    "modified": "2020-02-15T02:40:44.391Z",
+    "contributors": ["mfuji09", "silverskyvicto"]
+  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
@@ -30573,6 +30569,10 @@
   },
   "orphaned/Web/API/Element/show_event": {
     "modified": "2020-10-15T22:28:00.883Z",
+    "contributors": ["mfuji09"]
+  },
+  "orphaned/Web/API/HTMLDialogElement/cancel_event": {
+    "modified": "2020-10-15T22:28:07.370Z",
     "contributors": ["mfuji09"]
   },
   "orphaned/Web/API/HTMLElement/contextMenu": {

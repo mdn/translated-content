@@ -65,8 +65,9 @@ Been formally correct it suffers from a number of issues related to floating poi
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `Math.asinh` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

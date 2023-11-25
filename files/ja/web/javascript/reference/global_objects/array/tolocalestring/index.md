@@ -32,7 +32,7 @@ toLocaleString(locales, options);
 
 ## 解説
 
-`Array.prototype.toLocaleString` メソッドは、その内容を走査し、すべての要素に対s知恵 `toLocaleString` メソッドを、引数 `locales` と `options` を指定して呼び出し、実装で定義された区切り文字 (",") でその結果を連結したものを返します。このメソッド自身は、この 2 つの引数を使用せず、各要素に対する `toLocaleString()` の呼び出しで渡すだけであることに注意してください。区切り文字列の選択はホストの現在のロケールに依存し、 `locales` 引数は使用しません。
+`Array.prototype.toLocaleString` メソッドは、その内容を走査し、すべての要素に対して `toLocaleString` メソッドを、引数 `locales` と `options` を指定して呼び出し、実装で定義された区切り文字 (",") でその結果を連結したものを返します。このメソッド自身は、この 2 つの引数を使用せず、各要素に対する `toLocaleString()` の呼び出しで渡すだけであることに注意してください。区切り文字列の選択はホストの現在のロケールに依存し、 `locales` 引数は使用しません。
 
 ## 例
 
