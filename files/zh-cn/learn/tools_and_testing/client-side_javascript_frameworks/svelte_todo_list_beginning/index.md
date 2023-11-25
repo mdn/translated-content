@@ -174,7 +174,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
   <!-- 待办 -->
   <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
-    <!-- 待办-1（编辑模式）-->
+    <!-- 待办—1（编辑模式）-->
     <li class="todo">
       <div class="stack-small">
         <form class="stack-small">
@@ -202,7 +202,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
       </div>
     </li>
 
-    <!-- 待办-2 -->
+    <!-- 待办—2 -->
     <li class="todo">
       <div class="stack-small">
         <div class="c-cb">
@@ -224,7 +224,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
       </div>
     </li>
 
-    <!-- 待办-3 -->
+    <!-- 待办—3 -->
     <li class="todo">
       <div class="stack-small">
         <div class="c-cb">
@@ -381,7 +381,7 @@ Svelte 透过 [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plug
 让我们来将待办列表变得好看些。将以下内容取代至 `public/global.css` 文件中：
 
 ```css
-/* RESETS */
+/* 重置 */
 *,
 *::before,
 *::after {
@@ -452,9 +452,9 @@ body {
     line-height: 1.31579;
   }
 }
-/*END RESETS*/
+/* 重置结尾 */
 
-/* GLOBAL STYLES */
+/* 全局样式 */
 .form-group > input[type="text"] {
   display: inline-block;
   margin-top: 0.4rem;
@@ -534,7 +534,7 @@ body {
 .stack-exception {
   margin-top: 1.2rem;
 }
-/* END GLOBAL STYLES */
+/* 全局样式结尾 */
 
 .todoapp {
   background: #fff;
@@ -597,7 +597,7 @@ body {
   width: 100%;
   margin: unset auto;
 }
-/* Todo item styles */
+/* 待办条目样式 */
 .todo {
   display: flex;
   flex-direction: row;
@@ -615,7 +615,7 @@ body {
 .todo-text:focus {
   box-shadow: inset 0 0 0 2px;
 }
-/* CHECKBOX STYLES */
+/* 复选框样式 */
 .c-cb {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
