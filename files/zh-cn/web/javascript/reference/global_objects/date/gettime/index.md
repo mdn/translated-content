@@ -61,7 +61,7 @@ console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.setTime()")}}
 - {{jsxref("Date.prototype.valueOf()")}}
