@@ -131,7 +131,7 @@ round(1.005, 2); //1.01
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
