@@ -234,6 +234,6 @@ func(); // undefined
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Function")}}

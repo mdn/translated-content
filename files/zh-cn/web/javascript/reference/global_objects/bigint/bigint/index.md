@@ -9,8 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 
 ## 语法
 
-```plain
-BigInt(value);
+```js-nolint
+BigInt(value)
 ```
 
 ### 参数
@@ -35,6 +35,6 @@ BigInt(123);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("BigInt")}} class
+- {{jsxref("BigInt")}}
