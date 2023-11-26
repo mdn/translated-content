@@ -1,19 +1,16 @@
 ---
-title: Touch.identifier
+title: "Touch: identifier プロパティ"
+short-title: identifier
 slug: Web/API/Touch/identifier
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("Touch Events") }}{{SeeCompatTable}}
+{{ APIRef("Touch Events") }}
 
-**`Touch.identifier`** はタッチ面に接触した点を識別する固有の値を返します。この値は、タッチ面上でのこの指 (またはスタイラス) の動きに関わるすべてのイベントに対して、タッチ面から離れるまで一貫したものです。
+**`Touch.identifier`** はタッチ面に接触した点を識別する固有の値を返します。この値は、タッチ面上でのこの指（またはスタイラス）の動きに関わるすべてのイベントに対して、タッチ面から離れるまで一貫したものです。
 
-## 構文
-
-```
-touchItem.identifier;
-```
-
-### 返値
+## 値
 
 `long` で、 {{ domxref("Touch") }} オブジェクトの固有の ID を表します。
 
@@ -22,15 +19,12 @@ touchItem.identifier;
 ```js
 someElement.addEventListener(
   "touchmove",
-  function (e) {
-    // Iterate through the list of touch points that changed
-    // since the last event and print each touch point's identifier.
-    for (var i = 0; i < e.changedTouches.length; i++) {
+  (e) => {
+    // 最後のイベント以降に変更されたタッチ点のリストを反復処理し、
+    // 各タッチ点の識別子を出力する。
+    for (let i = 0; i < e.changedTouches.length; i++) {
       console.log(
-        "changedTouches[" +
-          i +
-          "].identifier = " +
-          e.changedTouches[i].identifier,
+        `changedTouches[${i}].identifier = ${e.changedTouches[i].identifier}`,
       );
     }
   },
