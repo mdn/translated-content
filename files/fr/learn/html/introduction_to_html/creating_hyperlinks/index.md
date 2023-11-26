@@ -2,7 +2,7 @@
 title: Création d'hyperliens
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 l10n:
-  sourceCommit : cb551824f3dac0aa6828de78e0f9bc476c6110d1
+  sourceCommit: cb551824f3dac0aa6828de78e0f9bc476c6110d1
 ---
 
 {{LearnSidebar}}
@@ -75,7 +75,8 @@ Si vous voulez faire d'un élément d'en-tête un lien, enveloppez-le dans un é
   <h1>MDN Web Docs</h1>
 </a>
 <p>
-  Documente les technologies web, y compris CSS, HTML et JavaScript, depuis 2005.
+  Documente les technologies web, y compris CSS, HTML et JavaScript, depuis
+  2005.
 </p>
 ```
 
@@ -241,7 +242,10 @@ Regardons un exemple particulier&nbsp;:
 **Mauvais** texte de lien&nbsp;: [Cliquer ici](https://www.mozilla.org/firefox/) pour télécharger Firefox
 
 ```html example-bad
-<p><a href="https://www.mozilla.org/firefox/">Cliquer ici</a> pour télécharger Firefox</p>
+<p>
+  <a href="https://www.mozilla.org/firefox/">Cliquer ici</a> pour télécharger
+  Firefox
+</p>
 ```
 
 Autres conseils&nbsp;:
@@ -304,11 +308,11 @@ Vous aurez besoin de faire des copies locales des quatre pages suivantes, toutes
 Vous devez&nbsp;:
 
 1. Ajouter une liste non-ordonnée à l'endroit indiqué sur une page, qui contiendra les noms des pages à relier.
-  Un menu de navigation n'est habituellement qu'une liste de liens, donc c'est ok sur le plan sémantique.
+   Un menu de navigation n'est habituellement qu'une liste de liens, donc c'est ok sur le plan sémantique.
 2. Changer chaque nom de page en un lien vers cette page.
 3. Copier le menu de navigation dans chaque page.
 4. Sur chaque page, enlever seulement le lien vers cette page, c'est source de confusion et sans objet pour une page que d'inclure un lien vers elle-même.
-  Et l'absence d'un lien constitue un bon rappel visuel pour se souvenir sur quelle page vous êtes actuellement.
+   Et l'absence d'un lien constitue un bon rappel visuel pour se souvenir sur quelle page vous êtes actuellement.
 
 L'exemple terminé devrait finir par ressembler à quelque chose comme ce qui suit&nbsp;:
 
@@ -350,7 +354,7 @@ Voici un exemple incluant `cc` (carbon copy), `bcc` (blind cc), `subject` (sujet
 > **Note :** La valeur de chaque champ doit être codée à la façon d'une URL, c'est-à-dire que les caractères non-imprimables (les caractères «&nbsp;invisibles&nbsp;» tels que les tabulations, les retours chariot et les sauts de page) et les espaces doivent être échapé avec un [encodage-pourcent](https://fr.wikipedia.org/wiki/Encodage-pourcent).
 > Notez également l'utilisation du point d'interrogation (`?`) pour séparer l'URL principale des valeurs de champ et de l'esperluette (&) pour séparer chaque champ dans l'URL `mailto:`.
 > C'est la notation standard des requêtes URL.
-> Lire [La méthode GET](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data#La_méthode_GET) pour comprendre ce pourquoi la notation de requête URL est habituellement le plus souvent utilisée.
+> Lire [La méthode GET](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data#la_méthode_get) pour comprendre ce pourquoi la notation de requête URL est habituellement le plus souvent utilisée.
 
 Voici quelques autres exemples d'URL `mailto`&nbsp;:
 
