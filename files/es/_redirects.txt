@@ -746,7 +746,6 @@
 /es/docs/HTML/Elemento/input	/es/docs/Web/HTML/Element/input
 /es/docs/HTML/Elemento/ins	/es/docs/Web/HTML/Element/ins
 /es/docs/HTML/Elemento/kbd	/es/docs/Web/HTML/Element/kbd
-/es/docs/HTML/Elemento/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/HTML/Elemento/label	/es/docs/Web/HTML/Element/label
 /es/docs/HTML/Elemento/legend	/es/docs/Web/HTML/Element/legend
 /es/docs/HTML/Elemento/li	/es/docs/Web/HTML/Element/li
@@ -2021,7 +2020,6 @@
 /es/docs/Web/HTML/Element/blink	/es/docs/orphaned/Web/HTML/Element/blink
 /es/docs/Web/HTML/Element/content	/es/docs/Web/HTML/element/slot
 /es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
-/es/docs/Web/HTML/Element/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/Elementos_títulos	/es/docs/Web/HTML/Element/Heading_Elements
@@ -2105,7 +2103,6 @@
 /es/docs/Web/HTML/Elemento/input/text	/es/docs/Web/HTML/Element/input/text
 /es/docs/Web/HTML/Elemento/ins	/es/docs/Web/HTML/Element/ins
 /es/docs/Web/HTML/Elemento/kbd	/es/docs/Web/HTML/Element/kbd
-/es/docs/Web/HTML/Elemento/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/Web/HTML/Elemento/label	/es/docs/Web/HTML/Element/label
 /es/docs/Web/HTML/Elemento/legend	/es/docs/Web/HTML/Element/legend
 /es/docs/Web/HTML/Elemento/li	/es/docs/Web/HTML/Element/li
