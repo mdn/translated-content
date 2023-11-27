@@ -17,7 +17,7 @@ Al finalizar este tutorial tendrás un juego _demo_ completamente funcional: [Cy
 
 ## Phaser framework
 
-[Phaser](http://phaser.io/) es un _framework_ para construir juegos, de móvil o escritorio, en HTML5 . Es nuevo pero está creciendo velozmente gracias a la apasionada comunidad involucrada en el proceso de desarrollo. Puedes chequearlo [en GitHub](https://github.com/photonstorm/phaser) donde se encuentra como _open source._ Lee [la documentación](http://docs.phaser.io/) en línea y recorre su gran colección de [ejemplos](http://examples.phaser.io/). El _framework_ Phaser provee una serie de herramientas que acelerarán el desarrollo y te ayudaran a manejar las tareas genéricas necesarias para completar tu juego, para que así puedas concentrarte en la idea del juego en sí.
+[Phaser](http://phaser.io/) es un _framework_ para construir juegos, de móvil o escritorio, en HTML5 . Es nuevo pero está creciendo velozmente gracias a la apasionada comunidad involucrada en el proceso de desarrollo. Puedes chequearlo [en GitHub](https://github.com/photonstorm/phaser) donde se encuentra como _open source._ Lee [la documentación](https://phaser.io/docs/2.2.2/) en línea y recorre su gran colección de [ejemplos](https://phaser.io/examples). El _framework_ Phaser provee una serie de herramientas que acelerarán el desarrollo y te ayudaran a manejar las tareas genéricas necesarias para completar tu juego, para que así puedas concentrarte en la idea del juego en sí.
 
 ## Empezando con el proyecto
 
