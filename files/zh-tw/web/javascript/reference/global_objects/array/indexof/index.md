@@ -62,7 +62,7 @@ console.log(indices);
 // [0, 2, 4]
 ```
 
-### 尋找元素是否存在於陣列中，若沒有則加入到陣列裡。
+### 尋找元素是否存在於陣列中，若沒有則加入到陣列裡
 
 ```js
 function updateVegetablesCollection(veggies, veggie) {

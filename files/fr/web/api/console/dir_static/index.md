@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Console API")}}
 
-La méthode **`console.dir()`** affiche une liste interactive des propriétés de l'objet JavaScript passé en argument. L'affichage est une hiérarchie avec des flèches/triangles qui permettent de déplier/replier le contneu des propriétés et objets enfants.
+La méthode **`console.dir()`** affiche une liste interactive des propriétés de l'objet JavaScript passé en argument. L'affichage est une hiérarchie avec des flèches/triangles qui permettent de déplier/replier le contenu des propriétés et objets enfants.
 
 Autrement dit, `console.dir()` permet de voir l'ensemble des propriétés d'un objet JavaScript dans la console et de manipuler les niveaux hiérarchiques.
 

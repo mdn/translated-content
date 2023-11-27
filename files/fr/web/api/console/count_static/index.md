@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Console API")}}
 
-La méthode **`console.count()`** affiche le nombre de fois que `count()` a été appelée (le compteur pouvat être identifié par l'argument passé à la méthode).
+La méthode **`console.count()`** affiche le nombre de fois que `count()` a été appelée (le compteur pouvant être identifié par l'argument passé à la méthode).
 
 {{AvailableInWorkers}}
 

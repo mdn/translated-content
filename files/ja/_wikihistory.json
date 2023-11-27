@@ -30390,10 +30390,6 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
   },
-  "conflicting/Web/API/History_API/Working_with_the_History_API": {
-    "modified": "2020-02-15T02:40:44.391Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
@@ -30565,10 +30561,6 @@
   },
   "orphaned/Web/API/Element/show_event": {
     "modified": "2020-10-15T22:28:00.883Z",
-    "contributors": ["mfuji09"]
-  },
-  "orphaned/Web/API/HTMLDialogElement/cancel_event": {
-    "modified": "2020-10-15T22:28:07.370Z",
     "contributors": ["mfuji09"]
   },
   "orphaned/Web/API/HTMLElement/contextMenu": {

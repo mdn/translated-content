@@ -37,7 +37,7 @@ selection.modify("extend", "forward", "word");
 
 ## 规范
 
-_无_
+_无。_
 
 ## 浏览器兼容性
 

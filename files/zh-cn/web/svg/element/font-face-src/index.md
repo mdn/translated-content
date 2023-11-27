@@ -21,7 +21,7 @@ slug: Web/SVG/Element/font-face-src
 
 ### 专有属性
 
-_无_
+_无。_
 
 ## DOM 接口
 
