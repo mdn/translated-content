@@ -585,7 +585,7 @@ function useDatabase(db) {
 
 IndexedDB usa o princípio de mesma origem, o que significa que o banco só será acessado pelo site que o criou.
 
-É importante notar que o IndexedDB não funciona para conteúdo carregado em um frame de outro site (seja {{ HTMLElement("frame") }} ou {{ HTMLElement("iframe") }}. Esta é uma política de segurança e privacidade análoga ao bloqueio de cookies de terceiros. Para mais detalhes, veja {{ bug(595307) }}.
+É importante notar que o IndexedDB não funciona para conteúdo carregado em um frame de outro site (seja {{ HTMLElement("frame") }} ou {{ HTMLElement("iframe") }}. Esta é uma política de segurança e privacidade análoga ao bloqueio de cookies de terceiros. Para mais detalhes, veja [Firefox bug 595307](https://bugzil.la/595307).
 
 ## Alerta sobre fechar o navegador
 
@@ -595,7 +595,7 @@ Primeiro, você deve ter o cuidado de sempre deixar seu banco de dados em um est
 
 Em segundo lugar, você nunca deve amarrar as operações de banco de dados ao evento unload. Se o evento unload é acionado pelo fechamento do navegador, todas as transações criadas no unload nunca serão concluídas. Uma abordagem intuitiva para manter algumas informações em sessões do navegador é lê-la a partir do banco de dados quando o navegador (ou uma determinada página) é aberta, atualizá-la assim que o usuário interagir com o navegador, e depois salvá-lo para o banco de dados quando o navegador (ou página) será fechada. No entanto, isso não vai funcionar. As transações de banco de dados será criado no unload, mas como elas são assíncronas, serão abortadas antes que eles possam executar.
 
-De fato, não existe uma maneira de garantir que as transações no IndexedDBserão completadas, mesmo com o fechamento padrão do navegador. Ver {{ bug(870645) }}.
+De fato, não existe uma maneira de garantir que as transações no IndexedDBserão completadas, mesmo com o fechamento padrão do navegador. Ver [Firefox bug 870645](https://bugzil.la/870645).
 
 ## Exemplo de IndexedDB
 
