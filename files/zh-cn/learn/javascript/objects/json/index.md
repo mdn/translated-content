@@ -196,7 +196,7 @@ async function populate() {
 
 > **备注：**`fetch()` API 是**异步**的。我们将在[下一个模块](/zh-CN/docs/Learn/JavaScript/Asynchronous)中详细了解有关异步函数的知识，但现在我们只需知道需要在使用 fetch API 的函数名称之前添加 {{jsxref("Statements/async_function", "async")}} 关键字，并在任何异步函数的调用之前添加 {{jsxref("Operators/await", "await")}} 关键字。
 
-在这一切之后，`superHeroes` 变量将包含基于 JSON 的 JavaScript 对象。然后，我们将该对象传递给两个函数调用 —— 第一个函数用正确的数据填充 `<header>`，而第二个函数为团队中的每个英雄创建一个信息卡，并将其插入到 `<section>` 中。
+在这一切之后，`superHeroes` 变量将包含基于 JSON 的 JavaScript 对象。然后，我们将该对象传递给两个函数调用——第一个函数用正确的数据填充 `<header>`，而第二个函数为团队中的每个英雄创建一个信息卡，并将其插入到 `<section>` 中。
 
 ### 填充 header
 
