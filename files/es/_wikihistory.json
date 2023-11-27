@@ -14929,10 +14929,6 @@
     "modified": "2019-03-18T21:08:10.456Z",
     "contributors": ["fitojb", "yuniers"]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-23T22:45:28.352Z",
-    "contributors": ["yuniers"]
-  },
   "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
     "modified": "2019-03-23T22:45:27.399Z",
     "contributors": ["yuniers"]
