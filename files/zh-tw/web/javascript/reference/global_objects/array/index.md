@@ -24,9 +24,9 @@ new Array(arrayLength)
 
 ## 說明
 
-Array（「陣列」）是類似列表（list）的物件（Object），它們的原型（Prototype）擁有方法（methods）來執行遍歷和變異操作。JavaScript 陣列的長度（元素數量），以及其元素的類型都不是固定的。取決於工程師如何選擇使用陣列，可以隨時更改陣列的長度，也可不連續儲存資料， 所以並不保證這些資料是集中的。一般情況下，這些特性很方便使用；但若這些功能都不符合您的用途，您可能會想使用型別陣列（typed arrays）。
+Array（「陣列」）是類似列表（list）的物件（Object），它們的原型（Prototype）擁有方法（methods）來執行遍歷和變異操作。JavaScript 陣列的長度（元素數量），以及其元素的類型都不是固定的。取決於工程師如何選擇使用陣列，可以隨時更改陣列的長度，也可不連續儲存資料， 所以並不保證這些資料是集中的。一般情況下，這些特性很方便使用；但若這些功能都不符合你的用途，你可能會想使用型別陣列（typed arrays）。
 
-有些人認為即便會發生警告，仍然[不應該使用關聯陣列](http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/)，而應該使用 {{jsxref("Global_Objects/Object", "objects")}}。您可參考[輕量級 JavaScript 字典](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)當中的範例。
+有些人認為即便會發生警告，仍然[不應該使用關聯陣列](http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/)，而應該使用 {{jsxref("Global_Objects/Object", "objects")}}。你可參考[輕量級 JavaScript 字典](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)當中的範例。
 
 ### 存取陣列元素
 
@@ -45,7 +45,7 @@ Array 元素同時也是物件的屬性，與 `toString` 是一種屬性相同�
 console.log(arr.0); // 語法錯誤
 ```
 
-會造成如此的原因沒有什麼特別的，在 JavaScript 當中無法用小數點的方式來參照一個名稱開頭為數字的屬性，而必須括號的表示方式來存取。舉例來說，若您有個物件的屬性名稱為「`3d`」，就只能用括號的方式來參照。
+會造成如此的原因沒有什麼特別的，在 JavaScript 當中無法用小數點的方式來參照一個名稱開頭為數字的屬性，而必須括號的表示方式來存取。舉例來說，若你有個物件的屬性名稱為「`3d`」，就只能用括號的方式來參照。
 
 請看下列範例：
 
@@ -60,7 +60,7 @@ renderer.3d.setTexture(model, 'character.png');     // 語法錯誤
 renderer['3d'].setTexture(model, 'character.png');  // 程式正常
 ```
 
-注意：以這個 `'3d'` 例子來說，必須用引號將 `3d` 包起來。您也可以將 JavaScript 陣列的索引用引號包起來（例如使用 `years['2']` 而不用 `years[2]`），但這不是必要的。JavaScript 會透過隱含的 `toString`，將 `years[2]` 當中的 2 強制轉換為字串。由於這個原因，`'2'` 與 `'02'` 會參照到 `years` 物件中的不同項目，下列程式範例結果可能回傳 `true`：
+注意：以這個 `'3d'` 例子來說，必須用引號將 `3d` 包起來。你也可以將 JavaScript 陣列的索引用引號包起來（例如使用 `years['2']` 而不用 `years[2]`），但這不是必要的。JavaScript 會透過隱含的 `toString`，將 `years[2]` 當中的 2 強制轉換為字串。由於這個原因，`'2'` 與 `'02'` 會參照到 `years` 物件中的不同項目，下列程式範例結果可能回傳 `true`：
 
 ```js
 console.log(years["2"] != years["02"]);
