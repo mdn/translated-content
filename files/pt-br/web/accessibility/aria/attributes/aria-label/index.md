@@ -9,7 +9,7 @@ O atributo `aria-label` define um valor de string que rotula um elemento interat
 
 Às vezes, o [nome acessível](https://w3c.github.io/accname/#dfn-accessible-name) padrão de um elemento está ausente ou não descreve com precisão seu conteúdo e não há conteúdo visível no DOM que pode ser associado ao objeto para dar-lhe significado. Um exemplo comum é um botão contendo um SVG ou [fonte de ícone (que você não deveria usar)](https://www.youtube.com/watch?v=9xXBYcWgCHA) sem nenhum texto.
 
-Nos casos em que um elemento interativo não tem um nome acessível, ou um nome acessível que não é preciso, e não há conteúdo visível no DOM que possa ser referenciado via [`aria-labelledby`](/pt-BR/docs /Web/Accessibility/ARIA/Attributes/aria-labelledby), o atributo `aria-label` pode ser usado para definir uma string que rotula o elemento interativo no qual está definido. Isso fornece ao elemento seu nome acessível.
+Nos casos em que um elemento interativo não tem um nome acessível, ou um nome acessível que não é preciso, e não há conteúdo visível no DOM que possa ser referenciado via [`aria-labelledby` (en-US)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), o atributo `aria-label` pode ser usado para definir uma string que rotula o elemento interativo no qual está definido. Isso fornece ao elemento seu nome acessível.
 
 ```html
 <button aria-label="Fechar" onclick="myDialog.close()">
