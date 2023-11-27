@@ -18,8 +18,8 @@ L'objectif de ce test de compétences est d'évaluer si vous comprenez comment [
 Dans cette tâche, nous vous demandons de nous aider à remplir les liens de notre page d'information sur les baleines&nbsp;:
 
 - Le premier lien doit renvoyer à une page appelée `whales.html`, qui se trouve dans le même répertoire que la page actuelle.
-- Nous aimerions également que vous lui donniez une infobulle qui indique à l'utilisateur que la page contient des informations sur les baleines bleues et les cachalots.
-- Le deuxième lien doit être transformé en un lien sur lequel vous pouvez cliquer pour ouvrir un e-mail dans l'application de messagerie par défaut de l'utilisateur, le destinataire étant «&nbsp;whales\@example.com&nbsp;».
+- Nous aimerions également que vous lui donniez une infobulle qui indique à l'utilisateur·ice que la page contient des informations sur les baleines bleues et les cachalots.
+- Le deuxième lien doit être transformé en un lien sur lequel vous pouvez cliquer pour ouvrir un e-mail dans l'application de messagerie par défaut de l'utilisateur·ice, le destinataire étant «&nbsp;whales\@example.com&nbsp;».
 - Vous obtiendrez un point bonus si vous faites en sorte que l'objet de l'e-mail devienne automatiquement «&nbsp;Question sur les baleines&nbsp;».
 
 > **Note :** Les deux liens de l'exemple ont l'attribut `target="_blank"` défini. Ce n'est pas la meilleure pratique, mais nous l'avons fait ici pour que les liens ne s'ouvrent pas dans l'`<iframe>` intégrée, ce qui permet de se débarrasser du code de l'exemple&nbsp;!

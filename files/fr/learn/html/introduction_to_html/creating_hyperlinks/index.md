@@ -47,7 +47,7 @@ Les hyperliens permettent de relier des documents à d'autres documents ou resso
 > **Note :** Une URL peut pointer vers des fichiers HTML, des fichiers textes, des images, des documents textuels, des fichiers vidéo ou audio et tout ce qui peut exister sur le Web.
 > Si le navigateur Web ne sait pas comment afficher ou gérer un fichier, il vous demande si vous voulez ouvrir le fichier (dans ce cas, la responsabilité de l'ouverture et de la gestion du fichier incombe à l'application native adéquate sur l'appareil) ou bien télécharger le fichier (auquel cas, vous pouvez essayer de vous en occuper plus tard).
 
-La page d'accueil de la BBC, par exemple, contient un nombre important de liens pour pointer, non seulement vers de multiples articles d'actualité, mais encore vers d'autres zones du site (fonctionnalité de navigation) , des pages d'inscription/de connexion (outils utilisateur) et plus encore.
+La page d'accueil de la BBC, par exemple, contient un nombre important de liens pour pointer, non seulement vers de multiples articles d'actualité, mais encore vers d'autres zones du site (fonctionnalité de navigation), des pages d'inscription/de connexion (outils utilisateur·ice) et plus encore.
 
 ![page d'accueil de bbc.co.uk, montrant de nombreux articles d'actualité et la fonctionnalité du menu de navigation](updated-bbc-website.png)
 
@@ -127,7 +127,7 @@ Nous obtenons le résultat suivant et le survol du lien affiche le titre sous fo
 {{EmbedLiveSample("Ajouter des informations d'assistance avec l'attribut title", "100%", 150)}}
 
 > **Note :** le `title` d'un lien n'est révélé que lors du survol de la souris, ce qui signifie que les personnes utilisant les commandes clavier pour naviguer dans les pages web auront des difficultés à accéder aux informations de `title`.
-> Si une information de `title` est vraiment importante pour l'utilisation d'une page, alors vous devez la présenter de manière accessible à tout utilisateur, par exemple, en la mettant dans le texte normal.
+> Si une information de `title` est vraiment importante pour l'utilisation d'une page, alors vous devez la présenter de manière accessible à tout utilisateur·ice, par exemple, en la mettant dans le texte normal.
 
 ### Apprentissage actif&nbsp;: création de votre propre exemple de lien
 
@@ -209,11 +209,11 @@ Vous pouvez même utiliser une référence au fragment de document seul pour fai
 
 Deux termes que vous rencontrerez sur le Web sont **URL absolue** et **URL relative**&nbsp;:
 
-**URL absolue**&nbsp;: pointe sur un emplacement défini de manière absolue sur le web, y compris en précisant le [protocole](/fr/docs/Glossary/Protocol) et le [nom de domaine](/fr/docs/Glossary/Domain_name). Ainsi par exemple, si une page `index.html` est téléversée dans le dossier nommé `projects` à la racine du serveur web, et que le domaine du site est `https://www.example.com`, la page sera accessible à l'adresse `https://www.example.com/projects/index.html` (ou même seulement `https://www.example.com/projects/`, du fait que la plupart des serveurs web cherchent pour le chargement une page d'accueil comme `index.htm`, si ce n'est pas précisé dans l'URL).
+**URL absolue**&nbsp;: pointe sur un emplacement défini de manière absolue sur le web, y compris en précisant le [protocole](/fr/docs/Glossary/Protocol) et le [nom de domaine](/fr/docs/Glossary/Domain_name). Ainsi, si une page `index.html` est téléversée dans le dossier nommé `projects` à la racine du serveur web, et que le domaine du site est `https://www.example.com`, la page sera accessible à l'adresse `https://www.example.com/projects/index.html` (ou même seulement `https://www.example.com/projects/`, du fait que la plupart des serveurs web cherchent pour le chargement une page d'accueil comme `index.htm`, si ce n'est pas précisé dans l'URL).
 
 Une URL absolue pointera toujours vers le même emplacement, quel que soit l'endroit où elle est utilisée.
 
-**URL** **relative&nbsp;:** pointe vers un emplacement qui est _relatif_ au fichier à partir duquel vous établissez le lien, tout comme ce que nous avons vu précédemment. Donc, si nous voulons créer un lien depuis notre fichier d'exemple en `https://www.example.com/projects/index.html` vers un fichier PDF dans le même dossier, l'URL sera seulement le nom du fichier — càd., `project-brief.pdf` — pas besoin d'information supplémentaire. Si le PDF est disponible dans un sous-dossier de `projects` appelé `pdfs`, le lien relatif serait `pdfs/project-brief.pdf` (l'URL absolue équivalente serait `https://www.example.com/projects/pdfs/project-brief.pdf`).
+**URL** **relative&nbsp;:** pointe vers un emplacement qui est _relatif_ au fichier à partir duquel vous établissez le lien, tout comme ce que nous avons vu précédemment. Donc, si nous voulons créer un lien depuis notre fichier d'exemple en `https://www.example.com/projects/index.html` vers un fichier PDF dans le même dossier, l'URL sera seulement le nom du fichier — c'est-à-dire, `project-brief.pdf` — pas besoin d'information supplémentaire. Si le PDF est disponible dans un sous-dossier de `projects` appelé `pdfs`, le lien relatif serait `pdfs/project-brief.pdf` (l'URL absolue équivalente serait `https://www.example.com/projects/pdfs/project-brief.pdf`).
 
 Une URL relative pointera vers des emplacements différents en fonction de l'endroit où se situe le fichier qui est utilisé&nbsp;; par exemple, si nous déplacions notre `index.html` du dossier `projects` vers la racine du site web (au niveau le plus élevé, dans aucun dossier), le lien de l'URL relative `pdfs/project-brief.pdf` qui s'y trouve pointerait alors vers un fichier situé en `https://www.example.com/pdfs/project-brief.pdf`, et non vers un fichier situé en `https://www.example.com/projects/pdfs/project-brief.pdf`.
 
@@ -227,9 +227,9 @@ Il y a quelques bonnes pratiques à suivre pour l'écriture de liens. Jetons-y u
 
 Il est facile de mettre des liens sur une page. Mais ce n'est pas suffisant. Nous devons rendre nos liens _accessibles_ à tous les lecteurs, indépendamment de leur contexte d'installation et des outils qu'ils préfèrent. Par exemple&nbsp;:
 
-- les utilisateurs de lecteurs d'écran aiment à sauter de lien en lien sur la page, et à les lire hors contexte.
+- les utilisateur·ice·s de lecteurs d'écran aiment à sauter de lien en lien sur la page, et à les lire hors contexte.
 - les moteurs de recherche utilisent le texte des liens pour indexer les fichiers cibles, c'est donc une bonne idée que d'inclure des mots-clés dans le texte du lien pour décrire effectivement à quoi il est lié.
-- les utilisateurs visuels survolent la page plutôt que d'en lire chaque mot, et leurs yeux seront forcément attirés par les particularités qui se détachent de la page, comme les liens. Ils trouveront utile le texte descriptif du lien.
+- les utilisateur·ice·s visuels survolent la page plutôt que d'en lire chaque mot, et leurs yeux seront forcément attirés par les particularités qui se détachent de la page, comme les liens. Ils trouveront utile le texte descriptif du lien.
 
 Regardons un exemple particulier&nbsp;:
 
@@ -252,10 +252,10 @@ Autres conseils&nbsp;:
 
 - Ne répétez pas l'URL dans le texte du lien — les URL sont moches, et elles le sont encore plus à entendre quand un lecteur d'écran les épèle.
 - Ne dites pas «&nbsp;lien&nbsp;» ou «&nbsp;liens vers...&nbsp;» dans le texte du lien, ce n'est que du rabâchage. Les lecteurs d'écran indiquent aux gens qu'il y a un lien.
-  Les utilisateurs visuels verront aussi qu'il y a un lien, du fait que les liens sont généralement de couleur différente et soulignés (de façon générale, cette convention tacite ne devrait pas être trahie, car les utilisateurs y sont très habitués).
-- Faites que vos étiquettes de lien soient aussi courtes que possible&nbsp;: les liens longs agacent particulièrement les utilisateurs de lecteurs d'écran, qui doivent en écouter la lecture entière.
+  Les utilisateur·ice·s visuels verront aussi qu'il y a un lien, du fait que les liens sont généralement de couleur différente et soulignés (de façon générale, cette convention tacite ne devrait pas être trahie, car les utilisateur·ice·s y sont très habitués).
+- Faites que vos étiquettes de lien soient aussi courtes que possible&nbsp;: les liens longs agacent particulièrement les utilisateur·ice·s de lecteurs d'écran, qui doivent en écouter la lecture entière.
 - Minimiser les cas où plusieurs copies d'un même texte pointent vers des emplacements différents.
-  Afficher une liste de liens hors contexte peut poser problème aux utilisateurs de lecteurs d'écran&nbsp;: ainsi plusieurs liens tous étiquetés «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;» seront source de confusion.
+  Afficher une liste de liens hors contexte peut poser problème aux utilisateur·ice·s de lecteurs d'écran&nbsp;: ainsi plusieurs liens tous étiquetés «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;», «&nbsp;cliquez ici&nbsp;» seront source de confusion.
 
 ### Liaison vers des ressources non-HTML — signalez‑les clairement
 
@@ -333,8 +333,8 @@ Sous sa forme la plus basique et la plus communément utilisée, un lien `mailto
 
 Ceci donne un résultat qui ressemble à ceci&nbsp;: [Envoyer un courriel à nullepart](mailto:nullepart@mozilla.org).
 
-En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre [`href`](/fr/docs/Web/HTML/Element/a#href) est simplement `mailto:`), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur, sans adresse de destination encore spécifiée.
-C'est souvent utile comme pour les liens «&nbsp;Partager&nbsp;» que lesquels les utilisateurs peuvent cliquer pour envoyer un e-mail à l'adresse de leur choix.
+En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre [`href`](/fr/docs/Web/HTML/Element/a#href) est simplement `mailto:`), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur·ice, sans adresse de destination encore spécifiée.
+C'est souvent utile comme pour les liens «&nbsp;Partager&nbsp;» que lesquels les utilisateur·ice·s peuvent cliquer pour envoyer un e-mail à l'adresse de leur choix.
 
 ### Spécification des détails
 
