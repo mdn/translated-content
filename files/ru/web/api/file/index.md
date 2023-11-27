@@ -58,7 +58,7 @@ _Интерфейс `File` также наследует свойства от {
   );
   ```
 
-- Следующие нестандартные методы и свойства были убраны в Gecko 7: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Стандартные свойства {{domxref("File.name")}}, {{domxref("Blob.size")}}, и методы {{domxref("FileReader")}} должны быть использованы вместо них.
+- Следующие нестандартные методы и свойства были убраны в Gecko 7: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ([Firefox bug 661876](https://bugzil.la/661876)). Стандартные свойства {{domxref("File.name")}}, {{domxref("Blob.size")}}, и методы {{domxref("FileReader")}} должны быть использованы вместо них.
 
 ## Смотрите также
 
