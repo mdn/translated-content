@@ -30,7 +30,8 @@ Windows, Linux, macOS におけるコード値は、 [KeyboardEvent: コード�
 
 ```html
 <p>
-  キーボードのキーを押して、 KeyboardEvent のキーとコードの値がそれぞれどうなっているかを確認しましょう。
+  キーボードのキーを押して、 KeyboardEvent
+  のキーとコードの値がそれぞれどうなっているかを確認しましょう。
 </p>
 <div id="output" tabindex="0"></div>
 ```
