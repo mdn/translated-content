@@ -39,13 +39,13 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_s
 
 ## Svelte：建构丰富用户界面的新方式
 
-与此模块中介绍的其它框架相比，Svelte 提供了建构网站应用程序的不同的方式。应用程序运行时，像 React 和 Vue 等框架会在使用者的浏览器做一大堆工作，而 Svelte 则是将做的这些事移到编译阶段处理，因此那些要做的事情只会发生在你构建应用程序的时候，进而能产生高度优化的原生 JavaScript 程序代码。
+与此模块中介绍的其它框架相比，Svelte 提供了建构 web 应用程序的不同的方式。应用程序运行时，像 React 和 Vue 等框架会在使用者的浏览器做一大堆工作，而 Svelte 则是将做的这些事移到编译阶段处理，因此那些要做的事情只会发生在你构建应用程序的时候，进而能产生高度优化的原生 JavaScript 程序代码。
 
 这种方式产生的结果并不只是将应用程序的包最小化及取得最佳性能。对于现代的生态环境拥有较少技术经验的人，也可以通过 Svelte 取得更好的开发体验。
 
 Svelte 更贴近传统的 Web 开发模型（HTML、CSS、JS），它只是对 HTML 和 JavaScript 增加了一点扩展。与其它框架相比，可以说只有一点点概念和工具需要学习。
 
-现阶段的缺点是它目前仍在发展中——和其它成熟框架相比，它的生态环境较受限于工具、支持、插件、使用模式等等限制，工作机会也比较少。但它的优点应该足够让你感兴趣并去探索它。
+现阶段的缺点是它目前仍在发展中——和其它成熟框架相比，它的生态环境较受到了工具、支持、插件、使用模式等等限制，工作机会也比较少。但它的优点应该足够让你感兴趣并去探索它。
 
 > **备注：** Svelte 具有 [TypeScript 支持](https://svelte.dev/blog/svelte-and-typescript)。我们将在之后的教学系列中讲到它。
 
@@ -57,7 +57,7 @@ Svelte 可以被用来开发一小块界面或整个应用程序。你也可以�
 
 不过 Svelte 特别适合处理下列几种情况：
 
-- 让网站应用程序更适用于低功耗设备：使用 Svelte 建构的应用程序将拥有较小的包大小，特别适用于网络连接缓慢和处理能力有限的设备。因为程序代码较少，所以需要下载、解析、执行并保存于内存中的字节数也较少。
+- 让 web 应用程序更适用于低功耗设备：使用 Svelte 建构的应用程序将拥有较小的包大小，特别适用于网络连接缓慢和处理能力有限的设备。因为程序代码较少，所以需要下载、解析、执行并保存于内存中的字节数也较少。
 - 可应付需频繁互动的页面或复杂的可视化需求：比如你建构一个数据可视化应用程序，你可能会需要显示大量的 DOM 元素，从该框架就能获得较好的性能增益，因为它不会有运行时的开销，可以确保使用者的互动更快速与实时。
 - 具备基本的 Web 开发知识即可：Svelte 学习曲线不高。Web 开发人员具备基本的 HTML、CSS、JavaScript 知识就能在短时间简单地掌握 Svelte 要点并开始建构 Web 应用程序。
 
@@ -69,7 +69,7 @@ Svelte 也可以通过 [Svelte Native](https://svelte-native.technology) 用于�
 
 ## Svelte 如何工作？
 
-作为一个编译程序，Svelte 能扩展 HTML、CSS、JavaScript，产生最佳的 JavaScript 程序代码而不会有任何运行途中的消耗。为了达成这个目的，Svelte 透过下列方法来扩展其原生网站技术：
+作为一个编译程序，Svelte 能扩展 HTML、CSS、JavaScript，产生最佳的 JavaScript 程序代码而不会有任何运行途中的消耗。为了达成这个目的，Svelte 透过下列方法来扩展其原生 web 技术：
 
 - 藉由对 HTML 扩展允许标记 JavaScript 表达式和提供一些指令来使用条件和循环，做法和 handlebars 相似。
 - 藉由对 CSS 扩展加上范围机制，允许每个组件去定义它们自己的样式，不会因为其它组件的样式改变而被影响。
@@ -83,9 +83,9 @@ Svelte 也可以通过 [Svelte Native](https://svelte-native.technology) 用于�
 
 ### 条件
 
-要想使用 Svelte，你需要安装 [Node.js](https://nodejs.org/en/)。推荐使用长期支持版本（LTS）。Node 包含 npm（the node package manager）和 npx（the node package runner）。另外你也可以使用 Yarn 包管理工具来代替 npm，但我们先假定你用 npm 来走完这个教学系列。若想知道更多 npm 和 yarn 的相关信息可以至[基础包管理](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)了解。
+要想使用 Svelte，你需要安装 [Node.js](https://nodejs.org/en/)。推荐使用长期支持版本（LTS）。Node 包含 npm（node 包管理器）和 npx（node 包运行器）。另外你也可以使用 Yarn 包管理工具来代替 npm，但我们先假定你用 npm 来走完这个教学系列。若想知道更多 npm 和 yarn 的相关信息可以至[基础包管理](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)了解。
 
-如果你是使用 Windows 的话，你需要安装一些软件来达到和 Unix/macOS 操作系统使用终端一样的行为，为的是接下来走教学系列时，可以使用到一些被提及的终端指令。Gitbash（[适用于 Windows 的 git 工具集](https://gitforwindows.org/)中的一部分功能）或使用[适用于 Linux 的 Windows 子系统（WSL）](https://docs.microsoft.com/zh-CN/windows/wsl/about)，这些都是蛮合适的解决方案。若想知道更多命令行的相关信息可以至[命令行课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)了解。
+如果你是使用 Windows 的话，你需要安装一些软件来达到和 Unix/macOS 操作系统终端一样的行为，为的是接下来的教学系列，可以使用到一些被提及的终端指令。Gitbash（[适用于 Windows 的 git 工具集](https://gitforwindows.org/)中的一部分功能）或使用[适用于 Linux 的 Windows 子系统（WSL）](https://docs.microsoft.com/zh-CN/windows/wsl/about)，这些都是蛮合适的解决方案。若想知道更多命令行的相关信息可以至[命令行课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)了解。
 
 若想知道更多相关信息也可以阅读下列资料：
 
