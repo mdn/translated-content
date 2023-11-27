@@ -10932,10 +10932,6 @@
       "xgqfrms-GitHub"
     ]
   },
-  "Web/API/History_API/Example": {
-    "modified": "2019-07-31T00:29:31.092Z",
-    "contributors": ["Shadowhiker", "xgqfrms"]
-  },
   "Web/API/History_API/Working_with_the_History_API": {
     "modified": "2020-09-07T23:10:09.451Z",
     "contributors": ["Nothing_bin"]
@@ -20934,22 +20930,6 @@
       "wtb",
       "Kasuganosora",
       "ethertank"
-    ]
-  },
-  "Web/Guide/AJAX": {
-    "modified": "2020-08-06T07:28:20.783Z",
-    "contributors": [
-      "luojia",
-      "Yang-yibu",
-      "anchen",
-      "makaria",
-      "chunnallu",
-      "chrisdavidmills",
-      "renzhengyu",
-      "MMHGH",
-      "zjhch123",
-      "XiaoyaoChen",
-      "Noly1990"
     ]
   },
   "Web/Guide/API": {
@@ -32727,23 +32707,23 @@
     "modified": "2020-11-04T03:44:08.051Z",
     "contributors": ["moniang", "hurrytospring"]
   },
-  "WebAssembly/JavaScript_interface/compile": {
-    "modified": "2020-10-15T21:58:44.128Z",
-    "contributors": ["kungfucode-rex"]
-  },
-  "WebAssembly/JavaScript_interface/compileStreaming": {
+  "WebAssembly/JavaScript_interface/compileStreaming_static": {
     "modified": "2020-10-15T22:15:30.451Z",
     "contributors": ["Cyandev"]
   },
-  "WebAssembly/JavaScript_interface/instantiate": {
-    "modified": "2020-10-15T21:57:59.458Z",
-    "contributors": ["wallena3", "Hedgehog", "airt", "kungfucode-rex"]
+  "WebAssembly/JavaScript_interface/compile_static": {
+    "modified": "2020-10-15T21:58:44.128Z",
+    "contributors": ["kungfucode-rex"]
   },
-  "WebAssembly/JavaScript_interface/instantiateStreaming": {
+  "WebAssembly/JavaScript_interface/instantiateStreaming_static": {
     "modified": "2020-10-15T22:11:30.410Z",
     "contributors": ["Xiaoming666"]
   },
-  "WebAssembly/JavaScript_interface/validate": {
+  "WebAssembly/JavaScript_interface/instantiate_static": {
+    "modified": "2020-10-15T21:57:59.458Z",
+    "contributors": ["wallena3", "Hedgehog", "airt", "kungfucode-rex"]
+  },
+  "WebAssembly/JavaScript_interface/validate_static": {
     "modified": "2020-10-15T22:15:29.365Z",
     "contributors": ["Cyandev"]
   },

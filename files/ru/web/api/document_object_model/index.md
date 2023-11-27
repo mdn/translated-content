@@ -167,7 +167,6 @@ DOM чаще всего используется в JavaScript, но не явл
 
 ### Устаревшие HTML интерфейсы
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG интерфейсы

@@ -37,7 +37,7 @@ dataview.buffer; // ArrayBuffer { byteLength: 8 }
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

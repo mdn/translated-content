@@ -3,6 +3,8 @@ title: Call stack (Pilha de chamadas)
 slug: Glossary/Call_stack
 ---
 
+{{GlossarySidebar}}
+
 A pilha de chamadas **(call stack)** é um mecanismo do interpretador de uma linguagem que organiza o funcionamento do script quando são chamadas muitas funções, qual função está sendo executada no momento, e quais serão chamadas dentro de alguma função, etc.
 
 - Quando o script chama a função, ela é adicionada à pilha de chamadas, e então é iniciado o carregamento da função.
