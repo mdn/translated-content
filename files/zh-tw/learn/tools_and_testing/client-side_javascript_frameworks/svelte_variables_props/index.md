@@ -233,7 +233,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
    Svelte 中處理器的一個常見錯誤是將執行函式的結果作為處理器傳遞，而不是傳遞函式。舉例來說，假如你指定 `on:click={removeTodo(todo)}`，它會執行 `removeTodo(todo)` 並把結果作為處理器傳遞，但這不是我們要的。
 
-   在這種情況下，您必須指定 `on:click={() => removeTodo(todo)}` 作為處理器。如果 `removeTodo()` 沒有接收參數，你可以使用 `on:event={removeTodo}`，但不能使用 `on:event={removeTodo()}`。這並不是 Svelte 中的特殊語法——這裡我們只是使用常規的 JavaScript [箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
+   在這種情況下，你必須指定 `on:click={() => removeTodo(todo)}` 作為處理器。如果 `removeTodo()` 沒有接收參數，你可以使用 `on:event={removeTodo}`，但不能使用 `on:event={removeTodo()}`。這並不是 Svelte 中的特殊語法——這裡我們只是使用常規的 JavaScript [箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
 這是不錯的進展——此時，我們現在能刪除任務了。當一個待辦事項的 _Delete_ 按鈕被按下時，相關的待辦事項會從 `todos` 陣列中被移除並且更新使用者介面讓它不再顯示。此外，我們現在能勾選勾選框，相關待辦事項的已完成狀態將在 `todos` 陣列中被更新。
 
