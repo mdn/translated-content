@@ -2,7 +2,7 @@
 title: ArrayBuffer.prototype.transferToFixedLength()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transferToFixedLength
 l10n:
-  sourceCommit:
+  sourceCommit: fb236a32b20d1985b35b1c0c25ce99f2a0e0d5fe
 ---
 
 {{JSRef}} {{SeeCompatTable}}
