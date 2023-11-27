@@ -30334,18 +30334,6 @@
     "modified": "2020-10-15T21:21:07.088Z",
     "contributors": ["mfuji09", "fscholz", "AshfaqHossain", "ethertank"]
   },
-  "conflicting/Web/API/Element/touchcancel_event": {
-    "modified": "2020-10-15T22:15:27.879Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/Element/touchend_event": {
-    "modified": "2020-10-15T22:15:13.928Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/Element/touchstart_event": {
-    "modified": "2020-10-15T22:15:27.113Z",
-    "contributors": ["mfuji09"]
-  },
   "conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98": {
     "modified": "2020-02-11T06:17:04.429Z",
     "contributors": ["tyankatsu", "Marsf"]

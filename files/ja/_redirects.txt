@@ -2712,10 +2712,10 @@
 /ja/docs/Web/API/Document/pointerover_event	/ja/docs/Web/API/Element/pointerover_event
 /ja/docs/Web/API/Document/pointerup_event	/ja/docs/Web/API/Element/pointerup_event
 /ja/docs/Web/API/Document/selectstart_event	/ja/docs/Web/API/Node/selectstart_event
-/ja/docs/Web/API/Document/touchcancel_event	/ja/docs/conflicting/Web/API/Element/touchcancel_event
-/ja/docs/Web/API/Document/touchend_event	/ja/docs/conflicting/Web/API/Element/touchend_event
+/ja/docs/Web/API/Document/touchcancel_event	/ja/docs/Web/API/Element/touchcancel_event
+/ja/docs/Web/API/Document/touchend_event	/ja/docs/Web/API/Element/touchend_event
 /ja/docs/Web/API/Document/touchmove_event	/ja/docs/Web/API/Element/touchmove_event
-/ja/docs/Web/API/Document/touchstart_event	/ja/docs/conflicting/Web/API/Element/touchstart_event
+/ja/docs/Web/API/Document/touchstart_event	/ja/docs/Web/API/Element/touchstart_event
 /ja/docs/Web/API/Document/transitioncancel_event	/ja/docs/Web/API/Element/transitioncancel_event
 /ja/docs/Web/API/Document/transitionend_event	/ja/docs/Web/API/Element/transitionend_event
 /ja/docs/Web/API/Document/transitionrun_event	/ja/docs/Web/API/Element/transitionrun_event
