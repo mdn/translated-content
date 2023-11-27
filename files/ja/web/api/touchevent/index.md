@@ -46,6 +46,7 @@ _このインターフェイスは、親である {{domxref("UIEvent")}} およ�
 タッチ関連の変化があったことを示すために発生するイベントは、数種類あります。イベントの {{domxref("event.type", "TouchEvent.type")}} プロパティを確認すると、何が発生したかを判断できます。
 
 - {{domxref("Element/touchstart_event", "touchstart")}}
+
   - : ユーザーがタッチ面のタッチ点に触れたときに発生します。イベントのターゲットは、タッチが発生した場所の要素 ({{domxref("Element")}}) です。
 
 - {{domxref("Element/touchend_event", "touchend")}}
