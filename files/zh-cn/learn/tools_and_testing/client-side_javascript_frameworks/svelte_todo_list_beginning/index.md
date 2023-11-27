@@ -1,14 +1,14 @@
 ---
-title: 开始写我们的 Svelte 待办列表应用程序
+title: 开始编写我们的 Svelte 待办列表应用程序
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 ---
 
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-现在我们对 Svelte 运作机制有初步的了解后，就能开始建构我们的范例应用程序：一个待办列表。此篇文章中，我们会先确认应用程序所需的功能有哪些，接着我们会建立 `Todos.svelte` 组件并写一些静态标记（markup）语言和样式，待一切准备就绪后，就能开始开发我们待办列表应用程序的相关功能，随着后续文章会逐渐充实它。
+现在我们对 Svelte 运作机制有初步的了解后，就能开始建构我们的范例应用程序：一个待办列表。此篇文章中，会先确认应用程序所需的功能，接着会建立 `Todos.svelte` 组件并编写一些静态标记（markup）语言和样式，待一切准备就绪后，就能开始开发待办列表应用程序的相关特性，我们将在后续文章实现它们。
 
-我们想要让使用者们能够浏览、新增和删除任务，也能标记它们为完成。这将是我们在走这个教学系列时会开发到的基本功能，此外，在开发过程中我们将会学到一些更进阶的概念。
+我们想要让用户能够浏览、新增和删除任务，也能标记它们为完成状态。这将是我们在本系列教程中要开发的基本功能，此外，在开发过程中我们将会学到一些更进阶的概念。
 
 <table>
   <tbody>
@@ -43,13 +43,13 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list
 
 ### Git
 
-复制 Github 仓库（假如你还没做这个）如下：
+使用以下命令克隆 Github 仓库（假如本地还没有代码）：
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
 ```
 
-接着取得当前应用程序状态，执行如下：
+接着取得当前应用程序状态，执行：
 
 ```bash
 cd mdn-svelte-tutorial/02-starting-our-todo-app
@@ -65,11 +65,11 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
 ### REPL
 
-为了使用 REPL 和我们一起编写程序代码，点击如下连结：
+为了使用 REPL 和我们一起编写程序代码，点击如下链接：
 
 <https://svelte.dev/repl/b7b831ea3a354d3789cefbc31e2ca495?version=3.23.2>
 
-## 待办列表应用程序特征
+## 待办列表应用程序特性
 
 这是我们预计完成待办列表应用程序的样子：
 
@@ -78,12 +78,12 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 使用这个用户界面，我们的用户将能够做到以下事情：
 
 - 浏览他们的任务。
-- 注记任务为已完成或待办理，而不是删除它们。
+- 标记任务为已完成或待办理，而不是删除它们。
 - 删除任务。
 - 新增任务。
-- 藉由状态来过滤那些任务：全部、现行或已完成任务。
+- 通过状态过滤任务：全部、正在进行或已完成任务。
 - 编辑任务。
-- 注记全部任务为现行或已完成状态。
+- 标记全部任务为正在进行或已完成状态。
 - 删除全部已完成任务。
 
 ## 建立我们第一个组件
@@ -116,7 +116,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
    <Todos />
    ```
 
-5. 在开发模式中，如果定义属性没有存在于组件中，Svelte 将会在浏览器控制台发出警告；在此例中，当我们于 `src/main.js` 实例化 `App` 组件时，由于我们已经明确定义出 `name` 属性，但并无实际在 `App` 中使用到，所以控制台现在应该会给你一个警告讯息，如“\<App> was created with unknown prop 'name'”。而为了排除这个问题，请从 `src/main.js` 中移除 `name` 属性；看起来应该要像是如下这样：
+5. 在开发模式中，如果定义属性没有存在于组件中，Svelte 将会在浏览器控制台发出警告；在此例中，当我们于 `src/main.js` 实例化 `App` 组件时，由于我们已经明确定义出 `name` 属性，但并没有实际在 `App` 中使用到，所以控制台现在应该会给你一个警告信息，如“\<App> was created with unknown prop 'name'”。为了排除这个问题，请从 `src/main.js` 中移除 `name` 属性；`main.js` 现在应该类似于这样：
 
    ```js
    import App from "./App.svelte";
@@ -134,7 +134,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
 ## 加上静态标记语言
 
-我们将会从应用程序的静态标记语言表示开始，所以你将会看到它长什么样子。复制并粘贴下面内容至 `Todos.svelte` 组件文件以取代现有内容：
+我们将会从应用程序的静态标记语言表示开始，所以你将会看到它的外观。复制并粘贴下面内容至 `Todos.svelte` 组件文件以取代现有内容：
 
 ```svelte
 <!-- Todos.svelte -->
@@ -261,17 +261,17 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
 ![一个待办事项列表应用程序，但没有样式，标题为“what needs to be done”，有输入框、复选框等。](03-unstyled-todo-app.png)
 
-上面 HTML 标记语言的样式并不是那么好看，而且也没有实际功能。尽管如此，接着来看看它和我们想要的功能如何关联起来：
+上面 HTML 标记语言的样式并不是那么好看，而且也没有实际功能。尽管如此，让我们来看看这些标记，看看它们如何与我们想要的特性关联起来：
 
 - 一个标签和一个输入框用来输入新任务。
-- 三个按钮则依据状态来过滤任务。
+- 三个按钮用来依据状态来过滤任务。
 - 一个标签用来显示任务总数及已完成任务数量。
-- 一个无顺序列表，其中包含每一个任务项目。
-- 编辑任务时，列表条目会有输入框和两个按钮去取消或保存变更。
-- 任务处于非编辑状态时，会有勾选框可以去设定已完成状态和两个按钮去编辑或删除任务。
-- 最后有两个按钮可以去勾选/不勾选所有任务和删除已完成的那些任务。
+- 一个无序列表，其中包含每一个任务项目。
+- 编辑任务时，列表条目会有输入框和两个按钮用来取消或保存变更。
+- 任务处于非编辑状态时，有一个复选框用于设置已完成状态，还有两个按钮用于编辑或删除任务。
+- 最后有两个按钮，分别用于选中/取消选中所有任务和删除已完成任务。
 
-随后的文章我们会逐一将这些功能完善，以及除此之外的功能等等。
+随后的文章我们会逐一将这些特性完善，以及实现更多其他特性。
 
 ### 待办列表的无障碍特性
 
@@ -285,11 +285,11 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 </button>
 ```
 
-在这里，`aria-pressed` 告诉无障碍技术（像是屏幕阅读器）按钮可以是两状态其中之一：`pressed` 或 `unpressed`。可以想象类似于开关状态。设定数值为 `true` 时，意谓着按钮默认是被按下的。
+在这里，`aria-pressed` 告诉无障碍技术（如屏幕阅读器）按钮可以是两种状态之一：`pressed` 或 `unpressed`。可以想象类似于开关状态。设定数值为 `true` 时，意谓着按钮默认是被按下的。
 
-`visually-hidden` 类别现在还没有效果，因为我们还没引入任何 CSS。一旦引入我们的样式后，对于可以看见的使用者们会隐藏那些具有此类别的元素并仍能够让那些屏幕阅读器用户来使用——这是因为这些文字并不需要给可以看见的使用者看到；它们提供更多信息让那些屏幕阅读器用户了解按钮实际可以做什么，而不需要借助一些额外的视觉环境来帮助他们。
+`visually-hidden` 类别现在还没有效果，因为我们还没引入任何 CSS。不过，一旦我们设置了样式，任何带有该类的元素都将对视力正常的用户隐藏起来，但屏幕阅读器用户仍然可以使用，这是因为视力正常的用户并不需要这些文字；这些文字是为了向屏幕阅读器用户提供更多有关按钮作用的信息，因为屏幕阅读器用户没有额外的视觉上下文来帮助他们。
 
-在往下看一点，你可以找到如下 `<ul>` 元素：
+再往下看一点，你可以找到如下 `<ul>` 元素：
 
 ```svelte
 <ul
@@ -298,17 +298,17 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
   aria-labelledby="list-heading"></ul>
 ```
 
-`role` 属性则帮助无障碍技术去解释元素具有什么种类的语义数值——或它的目的。默认情况下，`<ul>` 会被视为列表，但在加上样式之后会破坏原有性质。明确定义规则为“list”将能复原 `<ul>` 元素本身意义。假如你想要知道更多为什么需要明确定义的话，可以去参考 Scott O'Hara 的[“修复列表”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)（2019）文章。
+`role` 属性则帮助无障碍技术去解释元素具有什么种类的语义数值——或它的目的。默认情况下，`<ul>` 会被视为列表，但在加上样式之后会破坏原有性质。明确定义规则为“list”将能复原 `<ul>` 元素本身意义。如果你想要想进一步了解为什么有必要这样做，可以去参考 Scott O'Hara 的[“修复列表”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)（2019）文章。
 
-`aria-labelledby` 属性则告诉辅助技术，我们把 `<h2>` 且 `id` 为 `list-heading` 作为描述下面列表用途的标签。建立这种关联为列表提供更多上下文信息，这可以帮助屏幕阅读器用户更好地去了解它的目的。
+`aria-labelledby` 属性则告诉辅助技术，我们把具有 `id` 属性值为 `list-heading` 的 `<h2>` 元素作为描述下面列表用途的标签。这种关联为列表提供了更多的上下文信息，可以帮助屏幕阅读器用户更好地理解列表的目的。
 
 这似乎是讨论 Svelte 如何处理无障碍的好时机；让我们继续看下去。
 
 ## Svelte 无障碍性支持
 
-Svelte 特别重视无障碍性。目的是鼓励开发人员尽可能预设地写出无障碍程序代码。作为编译程序，Svelte 能静态地分析我们的 HTML 模板，而当组件被编译后，就能提出一些无障碍警告。
+Svelte 特别重视无障碍性。目的是鼓励开发人员尽可能“默认”编写更具有无障碍性的代码。作为编译程序，Svelte 能静态地分析我们的 HTML 模板，而当组件被编译后，就能提出一些无障碍警告。
 
-无障碍性（缩写为 a11y）一直以来不容易写正确，但 Svelte 将会协助并警告你，假如你写出了不容易阅读的标记语言。
+无障碍性（缩写为 a11y）并不总是容易做到，但 Svelte 会在编写不具无障碍性的标记时发出警告，从而帮助你。
 
 举例来说，假如我们新增 `<img>` 元素至我们的 `todos.svelte` 组件，但没有对应的 `alt` 属性：
 
@@ -318,7 +318,7 @@ Svelte 特别重视无障碍性。目的是鼓励开发人员尽可能预设地�
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-编译程序将会报出下列警告：
+编译器将会报出下列警告：
 
 ```bash
 (!) Plugin svelte: A11y: <img> element should have an alt attribute
@@ -332,20 +332,20 @@ created public/build/bundle.js in 220ms
 [2020-07-15 04:07:43] waiting for changes...
 ```
 
-此外，在我们调用编译程序之前，编辑器也会显示这个警告：
+此外，在我们调用编译器之前，编辑器也会显示这个警告：
 
 ![显示图像标签的代码编辑器窗口，并弹出错误消息，指出该元素应具有 alt 属性](04-svelte-accessibility-support.png)
 
-你可以使用以 `svelte-ignore` 开头的[批注](https://svelte.dev/docs#Comments)，来告诉 Svelte 去忽略下一个标记语言区块的警告，像是如下：
+你可以像这样使用以 `svelte-ignore` 开头的[注释](https://svelte.dev/docs#Comments)，来告诉 Svelte 去忽略下一个标记语言区块的警告：
 
 ```svelte
 <!-- svelte-ignore a11y-missing-attribute -->
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-> **备注：** 透过 VSCode 你可以点击 _Quick fix..._ 链接或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 来自动地加上这个忽略批注。
+> **备注：** 透过 VSCode 你可以点击 _Quick fix..._ 链接或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 来自动地加上这个忽略注释。
 
-假如你想要全局地关闭这个警告，可以在你的 `rollup.config.js` 文件中调整 `Svelte` 插件并补上这个 `onwarn` 处理程序即可，像是如下：
+假如你想要全局地关闭这个警告，可以像这样在你的 `rollup.config.js` 文件中调整 `Svelte` 插件配置并补上这个 `onwarn` 处理器：
 
 ```js
 plugins: [
@@ -370,18 +370,18 @@ plugins: [
 ];
 ```
 
-在设计上，这些警告被实现于编译程序本身，而不是你可以选择性加入项目的插件。理念是默认会检查你的标记语言有无 a11y 问题并让你可以选择排除特定警告。
+在设计上，这些警告是在编译器本身中实现的，而不是可以选择性加入项目的插件。这样做的目的是在默认情况下检查标记中的无障碍问题，并让你选择不使用特定的警告。
 
-> **备注：** 假如你有足够充分的理由，则可以先停用这些警告，例如当你在快速建构原型时。但请记住你需要成为优秀的网民并让你的页面尽可能无障碍，可以更广泛地被用户阅读。
+> **备注：** 只有在有充分理由的情况下，例如在构建快速原型时，才应禁用这些警告。做一名优秀的网络公民，让尽可能多的用户都能访问你的网页，这一点非常重要。
 
-Svelte 透过 [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules) 来检查无障碍性规则，它是提供在 JSX 元素方面的许多无障碍性规则静态检查的一个 ESLint 插件。Svelte 企图将它们全部实现于编译程序中，而大部分都已经移植至 Svelte 中。你可以在 GitHub 中看到[尚未实现的无障碍检查](https://github.com/sveltejs/svelte/issues/820)。点击规则的链接可以查阅它们各自的涵义。
+Svelte 通过 [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules) 来检查无障碍性规则，它是提供在 JSX 元素方面的许多无障碍性规则静态检查的一个 ESLint 插件。Svelte 的目标是在其编译器中实现所有这些功能，其中大部分功能已经移植到 Svelte 中。你可以在 GitHub 中看到[尚未实现的无障碍检查](https://github.com/sveltejs/svelte/issues/820)。点击规则的链接可以查阅它们各自的含义。
 
 ## 为标记语言加上样式
 
-让我们来将待办列表变得好看些。将以下内容取代至 `public/global.css` 文件中：
+让我们来将待办列表变得好看些。将 `public/global.css` 文件替换为如下内容：
 
 ```css
-/* 重置 */
+/* 重置样式 */
 *,
 *::before,
 *::after {
@@ -452,7 +452,7 @@ body {
     line-height: 1.31579;
   }
 }
-/* 重置结尾 */
+/* 重置样式结尾 */
 
 /* 全局样式 */
 .form-group > input[type="text"] {
@@ -709,12 +709,12 @@ npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
 
 ### REPL
 
-若要在 REPL 看见当前程序代码状态，请点击如下连结：
+若要在 REPL 查看当前程序代码状态，请点击如下链接：
 
 <https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2>
 
 ## 总结
 
-随着我们对标记语言加上样式后，待办列表应用程序开始逐渐成形，我们终于可以专注在需要实现的功能上了。
+随着标记和样式设计的到位，我们的待办事项列表应用程序已初具雏形，一切准备就绪，我们可以开始专注于需要实现的特性了。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
