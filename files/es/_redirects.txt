@@ -1516,7 +1516,6 @@
 /es/docs/SVG	/es/docs/Web/SVG
 /es/docs/SVG/Tutorial	/es/docs/Web/SVG/Tutorial
 /es/docs/SVG/Tutorial/Getting_Started	/es/docs/Web/SVG/Tutorial/Getting_Started
-/es/docs/SVG_en_Firefox	/es/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Seguridad_en_Firefox_2	/es/docs/Mozilla/Firefox/Releases/2/Security_changes
 /es/docs/Server-sent_events	/es/docs/Web/API/Server-sent_events
 /es/docs/Server-sent_events/utilizando_server_sent_events_sse	/es/docs/Web/API/Server-sent_events/Using_server-sent_events
@@ -2783,7 +2782,6 @@
 /es/docs/Web/Reference/Events/wheel	/es/docs/Web/API/Element/wheel_event
 /es/docs/Web/SVG/Element/glifo	/es/docs/Web/SVG/Element/glyph
 /es/docs/Web/SVG/Index	/es/docs/Web/SVG
-/es/docs/Web/SVG/SVG_1.1_Support_in_Firefox	/es/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Web/SVG/Tutorial/Introducción	/es/docs/Web/SVG/Tutorial/Introduction
 /es/docs/Web/Security/Same-origin_politica	/es/docs/Web/Security/Same-origin_policy
 /es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
