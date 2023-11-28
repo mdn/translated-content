@@ -40,4 +40,4 @@ mybutton:-moz-focusring {
 
 ## Смотрите также
 
-- {{bug("418521")}}
+- [Firefox bug 418521](https://bugzil.la/418521)

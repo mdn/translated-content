@@ -319,7 +319,7 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
   </thead>
 </table>
 
-\[1] В Internet Explorer (проверено на релизах 9 и 11), а также во всех версиях Firefox, клавиша <kbd>Windows</kbd> сообщается как `"OS"` а не `"Meta"`. Это будет изменено в Firefox в {{bug(1232918)}}. Пока это не будет исправлено, эти ключи возвращаются как `"OS"` в Firefox: `VK_LWIN` (0x5B) и `VK_RWIN` (0x5C) в Windows, и `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, и `GDK_KEY_Hyper_R (0xFFEE)` в Linux.
+\[1] В Internet Explorer (проверено на релизах 9 и 11), а также во всех версиях Firefox, клавиша <kbd>Windows</kbd> сообщается как `"OS"` а не `"Meta"`. Это будет изменено в Firefox в [Firefox bug 1232918](https://bugzil.la/1232918). Пока это не будет исправлено, эти ключи возвращаются как `"OS"` в Firefox: `VK_LWIN` (0x5B) и `VK_RWIN` (0x5C) в Windows, и `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, и `GDK_KEY_Hyper_R (0xFFEE)` в Linux.
 
 \[2] Internet Explorer (проверено на релизах 9 и 11) сообщает `"Scroll"` вместо `"ScrollLock"` для клавиши <kbd>Scroll Lock</kbd>.
 
@@ -327,7 +327,7 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
 
 \[4] Firefox генерирует значение ключа `"OS`" для клавиш <kbd>Super</kbd> и <kbd>Hyper</kbd> вместо `"Super"` и `"Hyper"`.
 
-\[5] Chrome 67 и Firefox 63 теперь правильно интерпретируют правую клавишу <kbd>Alt</kbd> для раскладок клавиатуры, которые сопоставляют эту клавишу с <kbd>AltGr</kbd>. См. Дополнительные сведения об ошибке {{bug(900750)}} и [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) для подробных деталей.
+\[5] Chrome 67 и Firefox 63 теперь правильно интерпретируют правую клавишу <kbd>Alt</kbd> для раскладок клавиатуры, которые сопоставляют эту клавишу с <kbd>AltGr</kbd>. См. Дополнительные сведения об ошибке [Firefox bug 900750](https://bugzil.la/900750) и [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) для подробных деталей.
 
 ## Пробельные клавиши
 
