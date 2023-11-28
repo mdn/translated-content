@@ -13,7 +13,7 @@ slug: Web/Guide/WOFF
 
 ## 使用 WOFF
 
-您可透過{{cssxref("@font-face")}} CSS 屬性在網頁內的文字使用 WOFF 字型。它的運作方式和 OpenType 以及 TrueType 字型並無二異，但在下載內容時可能會更有效率，這完全歸功於其與生俱來的壓縮特性。
+你可透過{{cssxref("@font-face")}} CSS 屬性在網頁內的文字使用 WOFF 字型。它的運作方式和 OpenType 以及 TrueType 字型並無二異，但在下載內容時可能會更有效率，這完全歸功於其與生俱來的壓縮特性。
 
 ## 規格文件
 
