@@ -111,7 +111,7 @@ Novamente, perceba que essa implementação foca na absoluta compatibilidade com
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.lastIndexOf")}}
+{{Compat}}
 
 ## Veja também
 

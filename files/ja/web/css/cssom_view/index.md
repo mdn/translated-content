@@ -26,4 +26,4 @@ slug: Web/CSS/CSSOM_view
 
 ### `scroll-behavior` プロパティ
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

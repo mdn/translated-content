@@ -34,4 +34,4 @@ O evento keyup é iniciado quando o usuário libera a tecla é pressionada.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GlobalEventHandlers.onkeyup")}}
+{{Compat}}

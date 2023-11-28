@@ -41,7 +41,7 @@ browser.bookmarks.update(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.update")}}
+{{Compat}}
 
 ## 使用例
 

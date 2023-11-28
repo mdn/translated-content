@@ -3,6 +3,8 @@ title: Representation header (表現ヘッダー)
 slug: Glossary/Representation_header
 ---
 
+{{GlossarySidebar}}
+
 **表現ヘッダー** (representation header) は {{glossary("HTTP_header", "HTTP ヘッダー")}}のうち、 HTTP メッセージの本文で送られる特定の*表現*を説明するものです。
 
 表現とは、特定のリソースをさまざまな形で表現したものです。

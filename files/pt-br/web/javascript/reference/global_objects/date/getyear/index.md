@@ -82,7 +82,7 @@ var year = Xmas.getYear(); // returns 95
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getYear")}}
+{{Compat}}
 
 ## Veja também
 

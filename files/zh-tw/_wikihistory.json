@@ -948,6 +948,21 @@
     "modified": "2020-07-16T22:32:43.326Z",
     "contributors": ["tangerine1202", "nykevinwong", "mubiesam"]
   },
+  "Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
+    "modified": "2019-03-24T00:02:43.850Z",
+    "contributors": [
+      "circlepen",
+      "drinktea28",
+      "jackblackevo",
+      "chrisdavidmills",
+      "ethertank",
+      "fscholz",
+      "happysadman",
+      "Mgjbot",
+      "kourge",
+      "BobChao"
+    ]
+  },
   "Learn/JavaScript/First_steps": {
     "modified": "2020-10-14T02:07:07.650Z",
     "contributors": [
@@ -2368,10 +2383,6 @@
       "natevw"
     ]
   },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2019-03-23T23:25:28.545Z",
-    "contributors": ["jackblackevo", "teoli", "foxbrush"]
-  },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2020-04-01T05:25:46.906Z",
     "contributors": ["ginszme"]
@@ -2392,6 +2403,10 @@
     "modified": "2020-10-15T22:17:19.013Z",
     "contributors": ["willh"]
   },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2019-03-23T23:25:28.545Z",
+    "contributors": ["jackblackevo", "teoli", "foxbrush"]
+  },
   "Web/API/btoa": {
     "modified": "2020-10-15T22:35:15.820Z",
     "contributors": ["evo938evo938"]
@@ -2400,7 +2415,7 @@
     "modified": "2020-10-15T22:03:31.329Z",
     "contributors": ["Syihoy", "porfirion"]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2020-10-15T22:03:27.482Z",
     "contributors": ["lin826", "iigmir"]
   },
@@ -2686,21 +2701,6 @@
       "alk03073135",
       "ethertank",
       "Sheppy"
-    ]
-  },
-  "Web/Guide/AJAX": {
-    "modified": "2019-03-24T00:02:43.850Z",
-    "contributors": [
-      "circlepen",
-      "drinktea28",
-      "jackblackevo",
-      "chrisdavidmills",
-      "ethertank",
-      "fscholz",
-      "happysadman",
-      "Mgjbot",
-      "kourge",
-      "BobChao"
     ]
   },
   "Web/Guide/Graphics": {

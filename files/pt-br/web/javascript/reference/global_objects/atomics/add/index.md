@@ -48,7 +48,7 @@ Atomics.load(ta, 0); // 12
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Atomics.add")}}
+{{Compat}}
 
 ## Veja também
 

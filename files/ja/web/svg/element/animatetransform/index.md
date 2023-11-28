@@ -70,4 +70,4 @@ slug: Web/SVG/Element/animateTransform
 
 ## ブラウザ互換性
 
-{{Compat("svg.elements.animateTransform")}}
+{{Compat}}

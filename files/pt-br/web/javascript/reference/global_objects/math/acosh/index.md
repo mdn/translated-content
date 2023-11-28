@@ -64,7 +64,7 @@ Math.acosh =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.acosh")}}
+{{Compat}}
 
 ## See also
 

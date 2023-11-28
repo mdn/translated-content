@@ -67,7 +67,7 @@ try {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.EvalError")}}
+{{Compat}}
 
 ## Veja também
 

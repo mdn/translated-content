@@ -187,7 +187,7 @@ if (!Array.prototype.filter) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.filter")}}
+{{Compat}}
 
 ## Veja também
 

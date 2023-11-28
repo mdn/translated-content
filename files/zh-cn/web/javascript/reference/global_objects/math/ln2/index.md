@@ -39,6 +39,8 @@ getNatLog2(); // 0.6931471805599453
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log2()")}}

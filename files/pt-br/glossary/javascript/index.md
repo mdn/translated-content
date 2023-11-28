@@ -3,6 +3,8 @@ title: JavaScript
 slug: Glossary/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 ## Sumário
 
 JavaScript (ou "JS") é uma linguagem de programação utilizada principalmente para scripts dinâmicos do lado do cliente em páginas web, podendo também ser utilizada no lado do {{Glossary("Server","servidor")}}, usando um interpretador (em inglês: _runtime_) como o [Node.js](https://nodejs.org/).

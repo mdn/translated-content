@@ -44,7 +44,7 @@ OS の通知メカニズムを使って、ユーザーへの通知を表示し�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.notifications")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

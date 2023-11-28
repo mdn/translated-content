@@ -80,7 +80,7 @@ Promise.race([p5, p6]).then(
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.race")}}
+{{Compat}}
 
 ## Ver também
 

@@ -40,7 +40,7 @@ sameAsBigDay.setTime(theBigDay.getTime());
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setTime")}}
+{{Compat}}
 
 ## Veja também
 

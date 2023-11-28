@@ -70,7 +70,7 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.bindBuffer")}}
+{{Compat}}
 
 ## 関連項目
 

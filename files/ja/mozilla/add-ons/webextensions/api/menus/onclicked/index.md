@@ -44,7 +44,7 @@ browser.menus.onClicked.hasListener(listener);
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.menus.onClicked", 10)}}
+{{Compat}}
 
 ## 例
 

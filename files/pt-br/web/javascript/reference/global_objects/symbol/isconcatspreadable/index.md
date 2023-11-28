@@ -70,7 +70,7 @@ x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.isConcatSpreadable")}}
+{{Compat}}
 
 ## Veja também
 

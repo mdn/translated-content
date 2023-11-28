@@ -22,20 +22,20 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 
 ## 实例属性
 
-- {{DOMxRef("Blob.prototype.size")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
   - : `Blob` 对象中所包含数据的大小（字节）。
-- {{DOMxRef("Blob.prototype.type")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.type")}} {{ReadOnlyInline}}
   - : 一个字符串，表明该 `Blob` 对象所包含数据的 MIME 类型。如果类型未知，则该值为空字符串。
 
 ## 实例方法
 
-- {{DOMxRef("Blob.prototype.arrayBuffer()")}}
+- {{DOMxRef("Blob.arrayBuffer()")}}
   - : 返回一个 promise，其会兑现一个包含 `Blob` 所有内容的二进制格式的 {{jsxref("ArrayBuffer")}}。
-- {{DOMxRef("Blob.prototype.slice()")}}
+- {{DOMxRef("Blob.slice()")}}
   - : 返回一个新的 `Blob` 对象，包含了源 `Blob` 对象中指定范围内的数据。
-- {{DOMxRef("Blob.prototype.stream()")}}
+- {{DOMxRef("Blob.stream()")}}
   - : 返回一个能读取 `Blob` 内容的 {{DOMxRef("ReadableStream")}}。
-- {{DOMxRef("Blob.prototype.text()")}}
+- {{DOMxRef("Blob.text()")}}
   - : 返回一个 promise，其会兑现一个包含 `Blob` 所有内容的 UTF-8 格式的字符串。
 
 ## 示例
@@ -130,7 +130,7 @@ reader.readAsArrayBuffer(blob);
 const text = await new Response(blob).text();
 ```
 
-或者，也可以使用 {{DOMxRef("Blob.prototype.text()")}}：
+或者，也可以使用 {{DOMxRef("Blob.text()")}}：
 
 ```js
 const text = await blob.text();

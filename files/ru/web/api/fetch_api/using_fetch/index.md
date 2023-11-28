@@ -398,8 +398,8 @@ if (self.fetch) {
 
 Для того, чтобы использовать Fetch в неподдерживаемых браузерах, существует Fetch Polyfill , который воссоздаёт функциональность для не поддерживающих браузеров.
 
-СпецификацииSpecification Status Comment{{SpecName('Fetch')}} {{Spec2('Fetch')}} Initial definitionСовместимость браузера
+СпецификацииSpecification Status Comment [Fetch](https://fetch.spec.whatwg.org/) Живой стандарт Initial definitionСовместимость браузера
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 Смотрите такжеServiceWorker APIHTTP access control (CORS)HTTPFetch polyfillFetch examples on Github`

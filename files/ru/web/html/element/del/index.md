@@ -21,9 +21,9 @@ slug: Web/HTML/Element/del
 
 Атрибуты этого элемента включают [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : URI для ресурса, который объясняет изменение (например, протоколы соединений).
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : Этот атрибут устанавливает время и дату изменение и должен представлять собой строку с допустимой датой и временем (время не является обязательным параметром - параметр опционален). Если значение не может быть проанализировано как дата с опционально временем, элемент не будет иметь соответствующей временной отметки. Формат строки без времени смотри в [Format of a valid date string](/ru/docs/Web/HTML/Date_and_time_formats#date_strings). Формат строки с датой и временем описан в [Format of a valid local date and time string](/ru/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
 
 ## Примеры

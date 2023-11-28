@@ -2078,6 +2078,25 @@
     "modified": "2020-09-22T05:14:27.901Z",
     "contributors": ["Nachec", "Enesimus"]
   },
+  "Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
+    "modified": "2019-03-18T21:14:54.246Z",
+    "contributors": [
+      "AlePerez92",
+      "chrisdavidmills",
+      "ccarruitero",
+      "chukito",
+      "Mgjbot",
+      "Nukeador",
+      "Summit677",
+      "Pascalc",
+      "Jorolo",
+      "Marianov",
+      "Takenbot",
+      "Baluart",
+      "Breaking Pitt",
+      "Seres"
+    ]
+  },
   "Learn/JavaScript/Client-side_web_APIs/Introduction": {
     "modified": "2020-07-16T22:32:44.249Z",
     "contributors": [
@@ -4251,10 +4270,6 @@
       "marco_mucino"
     ]
   },
-  "Web/API/FormData/Using_FormData_Objects": {
-    "modified": "2019-03-23T23:19:26.530Z",
-    "contributors": ["ramingar", "Siro_Diaz", "wilo"]
-  },
   "Web/API/Fullscreen_API": {
     "modified": "2019-03-23T22:19:43.566Z",
     "contributors": ["wbamberg", "israel-munoz"]
@@ -5646,22 +5661,6 @@
       "Jorolo"
     ]
   },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2020-03-17T04:09:47.273Z",
-    "contributors": [
-      "jccuevas",
-      "camsa",
-      "david_ru",
-      "cesaruve",
-      "Sheppy",
-      "Sebastianz",
-      "iiegor",
-      "javierdp",
-      "bardackx",
-      "teoli",
-      "inma_610"
-    ]
-  },
   "Web/API/XMLHttpRequest/abort": {
     "modified": "2019-03-23T22:12:16.683Z",
     "contributors": ["Sheppy", "todomagichere"]
@@ -5677,6 +5676,26 @@
   "Web/API/XMLHttpRequest/timeout": {
     "modified": "2020-10-15T22:26:49.508Z",
     "contributors": ["mmednik"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_FormData_Objects": {
+    "modified": "2019-03-23T23:19:26.530Z",
+    "contributors": ["ramingar", "Siro_Diaz", "wilo"]
+  },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2020-03-17T04:09:47.273Z",
+    "contributors": [
+      "jccuevas",
+      "camsa",
+      "david_ru",
+      "cesaruve",
+      "Sheppy",
+      "Sebastianz",
+      "iiegor",
+      "javierdp",
+      "bardackx",
+      "teoli",
+      "inma_610"
+    ]
   },
   "Web/API/atob": {
     "modified": "2019-03-23T23:03:12.715Z",
@@ -5702,51 +5721,51 @@
     "modified": "2019-08-30T08:42:12.082Z",
     "contributors": ["ajuanjojjj", "fcanellas", "vlguerrero", "chrisdavidmills"]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2019-03-23T22:47:53.587Z",
     "contributors": ["Takumakun", "AlePerez92", "danycoro"]
   },
-  "Web/API/console/count": {
+  "Web/API/console/count_static": {
     "modified": "2019-03-23T22:07:26.644Z",
     "contributors": ["deluxury", "roberbnd"]
   },
-  "Web/API/console/dir": {
+  "Web/API/console/dir_static": {
     "modified": "2020-11-11T11:46:41.122Z",
     "contributors": ["jomoji", "laloptk"]
   },
-  "Web/API/console/dirxml": {
+  "Web/API/console/dirxml_static": {
     "modified": "2019-03-23T22:18:03.809Z",
     "contributors": ["aeroxmotion"]
   },
-  "Web/API/console/error": {
+  "Web/API/console/error_static": {
     "modified": "2019-03-23T22:06:32.134Z",
     "contributors": ["BrodaNoel"]
   },
-  "Web/API/console/info": {
+  "Web/API/console/info_static": {
     "modified": "2019-03-23T22:12:32.604Z",
     "contributors": ["Lwissitoon"]
   },
-  "Web/API/console/log": {
+  "Web/API/console/log_static": {
     "modified": "2019-03-23T22:19:48.741Z",
     "contributors": ["BrodaNoel", "fcanellas"]
   },
-  "Web/API/console/table": {
+  "Web/API/console/table_static": {
     "modified": "2019-03-23T22:20:30.589Z",
     "contributors": ["AlePerez92"]
   },
-  "Web/API/console/time": {
+  "Web/API/console/time_static": {
     "modified": "2019-03-18T21:42:22.745Z",
     "contributors": ["jotaoncode"]
   },
-  "Web/API/console/timeEnd": {
+  "Web/API/console/timeend_static": {
     "modified": "2020-10-15T22:13:11.825Z",
     "contributors": ["xlhector10"]
   },
-  "Web/API/console/trace": {
+  "Web/API/console/trace_static": {
     "modified": "2019-03-23T22:22:51.545Z",
     "contributors": ["Axl-Nolasco"]
   },
-  "Web/API/console/warn": {
+  "Web/API/console/warn_static": {
     "modified": "2020-10-15T21:53:36.780Z",
     "contributors": ["juanluisrp", "oderflaj"]
   },
@@ -8478,25 +8497,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/AJAX": {
-    "modified": "2019-03-18T21:14:54.246Z",
-    "contributors": [
-      "AlePerez92",
-      "chrisdavidmills",
-      "ccarruitero",
-      "chukito",
-      "Mgjbot",
-      "Nukeador",
-      "Summit677",
-      "Pascalc",
-      "Jorolo",
-      "Marianov",
-      "Takenbot",
-      "Baluart",
-      "Breaking Pitt",
-      "Seres"
-    ]
-  },
   "Web/Guide/CSS/Block_formatting_context": {
     "modified": "2019-03-23T22:32:27.340Z",
     "contributors": ["Enesimus", "javichito"]
@@ -10575,7 +10575,7 @@
       "GoToLoop"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_class_fields": {
+  "Web/JavaScript/Reference/Classes/Private_properties": {
     "modified": "2020-10-15T22:33:54.045Z",
     "contributors": ["aronvx"]
   },
@@ -14929,10 +14929,6 @@
     "modified": "2019-03-18T21:08:10.456Z",
     "contributors": ["fitojb", "yuniers"]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-23T22:45:28.352Z",
-    "contributors": ["yuniers"]
-  },
   "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
     "modified": "2019-03-23T22:45:27.399Z",
     "contributors": ["yuniers"]
@@ -15323,10 +15319,6 @@
     "modified": "2019-03-23T22:36:13.994Z",
     "contributors": ["jcr4"]
   },
-  "orphaned/Web/HTML/Element/keygen": {
-    "modified": "2019-03-24T00:06:20.618Z",
-    "contributors": ["wbamberg", "teoli", "deimidis"]
-  },
   "orphaned/Web/HTML/Element/multicol": {
     "modified": "2019-03-23T22:36:14.458Z",
     "contributors": ["jcr4"]
@@ -15349,10 +15341,6 @@
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2019-03-23T22:41:19.266Z",
     "contributors": ["JuanSerrano02", "jcr4"]
-  },
-  "orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey": {
-    "modified": "2019-03-18T21:20:44.665Z",
-    "contributors": ["WriestTavo"]
   },
   "orphaned/Web/HTML/Inline_elements": {
     "modified": "2019-03-23T22:46:15.359Z",
@@ -15451,10 +15439,6 @@
       "cmeraz",
       "davy.martinez"
     ]
-  },
-  "orphaned/Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-23T23:43:25.545Z",
-    "contributors": ["teoli", "Superruzafa", "Jorolo"]
   },
   "orphaned/Web/SVG/SVG_en_Firefox_1.5": {
     "modified": "2019-03-23T23:42:07.791Z",

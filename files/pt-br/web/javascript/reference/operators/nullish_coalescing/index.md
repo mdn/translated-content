@@ -136,7 +136,7 @@ console.log(valC); // 42
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.nullish_coalescing")}}
+{{Compat}}
 
 ## Veja também
 
