@@ -81,7 +81,7 @@ if (!String.prototype.includes) {
 
 ## String.prototype.contains
 
-В Firefox с версии 18 по версию 39, этот метод назывался «contains». Он был переименован в «includes» в замечании {{bug(1102219)}} по следующей причине:
+В Firefox с версии 18 по версию 39, этот метод назывался «contains». Он был переименован в «includes» в замечании [Firefox bug 1102219](https://bugzil.la/1102219) по следующей причине:
 
 Как было [сообщено](https://bugzilla.mozilla.org/show_bug.cgi?id=789036), некоторые сайты, использующие MooTools 1.2, ломаются в Firefox 17. Эта версия MooTools проверяет существование метода `String.prototype.contains()` и, если он не существует, добавляет свой собственный. С введением этого метода в Firefox 17, поведение этой проверки изменилось таким образом, что реализация `String.prototype.contains()`, основанная на MooTools, сломалась. В результате это изменение было [отключено](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8) в Firefox 17. Метод `String.prototype.contains()` доступен в следующей версии Firefox — Firefox 18.
 
