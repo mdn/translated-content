@@ -21,7 +21,7 @@ JavaScript 型別陣列提供了存取二進制資料更有效率的機制。
 
 ### ArrayBuffer
 
-{{jsxref("ArrayBuffer")}} 是一種資料型態，用於表示通用的固定長度二進制資料緩衝區。 您不能直接操作 `ArrayBuffer` 的內容。但是，您可以建立一個型別陣列視圖 (typed array view) 或一個 {{jsxref("DataView")}}，它以特定格式代表緩衝區，並使用它讀取和寫入緩衝區的內容。
+{{jsxref("ArrayBuffer")}} 是一種資料型態，用於表示通用的固定長度二進制資料緩衝區。 你不能直接操作 `ArrayBuffer` 的內容。但是，你可以建立一個型別陣列視圖 (typed array view) 或一個 {{jsxref("DataView")}}，它以特定格式代表緩衝區，並使用它讀取和寫入緩衝區的內容。
 
 ### 型別陣列視圖 (Typed array views)
 
