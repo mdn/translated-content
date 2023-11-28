@@ -5,7 +5,7 @@ slug: Learn/Getting_started_with_the_web/JavaScript_basics
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
-JavaScript 是一個可以幫您在網站裡加入互動功能的程式語言（舉例來說，一個遊戲可能會在按鈕按下或資料被輸入表單內時回應、動態更改樣式、以及展示動畫等）。這篇文章會幫助您踏上學習這個令人興奮的語言的旅程，並展示她可以實現的所有可能。
+JavaScript 是一個可以幫你在網站裡加入互動功能的程式語言（舉例來說，一個遊戲可能會在按鈕按下或資料被輸入表單內時回應、動態更改樣式、以及展示動畫等）。這篇文章會幫助你踏上學習這個令人興奮的語言的旅程，並展示她可以實現的所有可能。
 
 ## 所以 JavaScript 到底是什麼？
 
@@ -17,17 +17,17 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 
 - 內建在瀏覽器內的應用程式介面（Application Programming Interfaces，{{Glossary("API","APIs")}}）提供了多樣化的功能，像是動態產生 HTML 以及設定 CSS 樣式、擷取以及處理從使用者的網路攝影機錄下的影像、製作立體圖形或是聲音樣本。
 - 第三方 API 允許開發者將他們的網頁與其他如 Twitter 或 Facebook 提供的內容合併在一起。
-- 第三方框架和函式庫允許您將這些元件套用在您的 HTML 文件內，讓您可以迅速地建立網頁或應用程式。
+- 第三方框架和函式庫允許你將這些元件套用在你的 HTML 文件內，讓你可以迅速地建立網頁或應用程式。
 
 ## 「Hello world」範例程式
 
-前面所述的功能聽起來令人興奮，而她也的確符合這樣的期待— JavaScript 是眾多令人感到興奮的網路科技之一，您會因為選擇利用她來製作網頁而進入一個嶄新且充滿創意及力量的次元。
+前面所述的功能聽起來令人興奮，而她也的確符合這樣的期待— JavaScript 是眾多令人感到興奮的網路科技之一，你會因為選擇利用她來製作網頁而進入一個嶄新且充滿創意及力量的次元。
 
-但無論如何，要讓 JavaScript 跟 HTML 和 CSS 合作無間的話，可能還要費一些功夫。現在您將會從一些細小的地方開始著手，接著一步步地往前進。首先，我們將會向您展示如何將一些基本的 JavaScript 給加入您的頁面中，並且打造一個*「hello world!」*的範例（[這同時也是許多程式語言的標準範例程式](https://zh.wikipedia.org/zh-tw/Hello_World)）。
+但無論如何，要讓 JavaScript 跟 HTML 和 CSS 合作無間的話，可能還要費一些功夫。現在你將會從一些細小的地方開始著手，接著一步步地往前進。首先，我們將會向你展示如何將一些基本的 JavaScript 給加入你的頁面中，並且打造一個*「hello world!」*的範例（[這同時也是許多程式語言的標準範例程式](https://zh.wikipedia.org/zh-tw/Hello_World)）。
 
-> **警告：** 如果您還沒有學習過先前的課程，[請您下載這個範例程式碼](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip)，並以此開始練習。
+> **警告：** 如果你還沒有學習過先前的課程，[請你下載這個範例程式碼](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip)，並以此開始練習。
 
-1. 首先，進入您測試網頁的資料夾中，並建立一個名為 `main.js` 的檔案，再將她存放於 `scripts` 資料夾內。
+1. 首先，進入你測試網頁的資料夾中，並建立一個名為 `main.js` 的檔案，再將她存放於 `scripts` 資料夾內。
 2. 接著，開啟 `index.html` 檔案，並在 `</body>` 這個結束標籤之前的位置，使用一行新的空間來輸入以下的元素：
 
    ```html
@@ -42,13 +42,13 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
    myHeading.textContent = "Hello world!";
    ```
 
-5. 現在請您將修改過的 HTML 和 JavaScript 給存檔，再用瀏覽器讀取 `index.html`。您應該會看到以下的內容：![](hello-world.png)
+5. 現在請你將修改過的 HTML 和 JavaScript 給存檔，再用瀏覽器讀取 `index.html`。你應該會看到以下的內容：![](hello-world.png)
 
 > **備註：** 我們選擇將 {{htmlelement("script")}} 元素放在接近 HTML 檔案底部的原因，是因為瀏覽器是依照程式碼存在檔案中的順序來讀取 HTML 檔案的。如果 JavaScript 先被瀏覽器讀取了，那她應該要去影響她之後的 HTML 程式碼，但有時候卻行不通，因為她比應該產生改變的 HTML 還要早被讀取到。因此，把她放在接近檔案底部的位置，通常都會是一個不錯的策略。
 
 ### 發生什麼事了？
 
-所以您的標題文字已經被 JavaScript 修改成「Hello world!」了。我們先使用了一個叫做 {{domxref("Document.querySelector", "querySelector()")}} 的函式來取得了我們標題參考（Reference），並且將她存在一個叫做 `myHeading` 的變數裡面。這跟我們在操作 CSS 時使用的選擇器是相似的。當您想要更動某個元素時，首先您要將她選取起來。
+所以你的標題文字已經被 JavaScript 修改成「Hello world!」了。我們先使用了一個叫做 {{domxref("Document.querySelector", "querySelector()")}} 的函式來取得了我們標題參考（Reference），並且將她存在一個叫做 `myHeading` 的變數裡面。這跟我們在操作 CSS 時使用的選擇器是相似的。當你想要更動某個元素時，首先你要將她選取起來。
 
 之後，我們將變數 `myHeading` 中 {{domxref("Element.innerHTML", "innerHTML")}} 特性的值設為「Hello world!」。
 
@@ -56,13 +56,13 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 
 ## 語言基礎速成
 
-接著我們來解釋一下 JavaScript 基本特性，以讓您更加地了解她是如何運作的。更好的事情是，這些特性基本上也存在於所有程式語言中。所以如果您可以充分理解這些基礎知識，您就可以撰寫程式來創造無限可能！
+接著我們來解釋一下 JavaScript 基本特性，以讓你更加地了解她是如何運作的。更好的事情是，這些特性基本上也存在於所有程式語言中。所以如果你可以充分理解這些基礎知識，你就可以撰寫程式來創造無限可能！
 
-> **警告：** 在這篇文章中，請您試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果您想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn/Discover_browser_developer_tools)。
+> **警告：** 在這篇文章中，請你試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果你想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn/Discover_browser_developer_tools)。
 
 ### 變數（Variables）
 
-變數（{{Glossary("Variable", "Variables")}}）是可以用來儲存數值的容器。要宣告一個變數，首先要用關鍵字 `var` 來開頭，並在後面輸入您想要用來呼叫她的名字：
+變數（{{Glossary("Variable", "Variables")}}）是可以用來儲存數值的容器。要宣告一個變數，首先要用關鍵字 `var` 來開頭，並在後面輸入你想要用來呼叫她的名字：
 
 ```js
 let myVariable;
@@ -70,29 +70,29 @@ let myVariable;
 
 > **備註：** 在 JavaScript 檔案內的每行內容都需要在結尾加上分號，以標示出這行結束的位置。只有在需要於單行中隔開敘述句時，分號才是絕對需要的。然而，有些人相信在每一個敘述句結尾加上分號才是最佳實踐。這裡有其他何時要加或不加分號的規則——請參考 [Your Guide to Semicolons in JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) 以瞭解更多資訊。
 
-> **備註：** 基本上您可以幫變數取任何名字，不過還是有一些限制的（請參閱[這篇文章](http://www.codelifter.com/main/tips/tip_020.shtml)以了解變數的命名規則）。假如不太確定，可以[檢查變數名稱](https://mothereff.in/js-variables)來看看是否合法。
+> **備註：** 基本上你可以幫變數取任何名字，不過還是有一些限制的（請參閱[這篇文章](http://www.codelifter.com/main/tips/tip_020.shtml)以了解變數的命名規則）。假如不太確定，可以[檢查變數名稱](https://mothereff.in/js-variables)來看看是否合法。
 
-> **備註：** JavaScript 是會區分大小寫字母的——`myVariable` 就跟 `myvariable` 不相同。如果您的程式碼出現了一些問題，可以試著檢查一下字母的大小寫！
+> **備註：** JavaScript 是會區分大小寫字母的——`myVariable` 就跟 `myvariable` 不相同。如果你的程式碼出現了一些問題，可以試著檢查一下字母的大小寫！
 
-宣告了一個變數之後，您可以為她指定一個數值：
+宣告了一個變數之後，你可以為她指定一個數值：
 
 ```js
 myVariable = "Bob";
 ```
 
-您可以呼叫這個變數的名字來取得這個值：
+你可以呼叫這個變數的名字來取得這個值：
 
 ```js
 myVariable;
 ```
 
-如果您有需要，您也可以在一行之內同時做完這兩件事情：
+如果你有需要，你也可以在一行之內同時做完這兩件事情：
 
 ```js
 let myVariable = "Bob";
 ```
 
-當您把一個數值指定給一個變數之後，您也可以再次改變它：
+當你把一個數值指定給一個變數之後，你也可以再次改變它：
 
 ```plain
 let myVariable = 'Bob';
@@ -113,7 +113,7 @@ myVariable = 'Steve';
     <tr>
       <th scope="row">{{Glossary("String")}}</th>
       <td>
-        字串，一段文字。如果要將字串指定給一個變數，您應該將內容用引號給框起來。
+        字串，一段文字。如果要將字串指定給一個變數，你應該將內容用引號給框起來。
       </td>
       <td><code>let myVariable = 'Bob';</code></td>
     </tr>
@@ -159,11 +159,11 @@ myVariable = 'Steve';
   </tbody>
 </table>
 
-所以為什麼我們需要變數？這個嘛，我們寫程式時可以做的任何有趣的事情，都需要有變數的參與。如果數值不會更動，那您也無法做任何動態的事情，像是客製化一個歡迎訊息、或是變更相簿裡的圖片。
+所以為什麼我們需要變數？這個嘛，我們寫程式時可以做的任何有趣的事情，都需要有變數的參與。如果數值不會更動，那你也無法做任何動態的事情，像是客製化一個歡迎訊息、或是變更相簿裡的圖片。
 
 ### 註解（Comments）
 
-您可以在您的 JavaScript 程式碼中加入註解，就像您在撰寫 CSS 時做的事情一樣：
+你可以在你的 JavaScript 程式碼中加入註解，就像你在撰寫 CSS 時做的事情一樣：
 
 ```js
 /*
@@ -171,7 +171,7 @@ Everything in between is a comment.
 */
 ```
 
-如果您的註解只有一行，我們通常會簡單將註解放在兩個斜線的後方，像以下的範例：
+如果你的註解只有一行，我們通常會簡單將註解放在兩個斜線的後方，像以下的範例：
 
 ```js
 // This is a comment
@@ -179,7 +179,7 @@ Everything in between is a comment.
 
 ### 運算子（Operators）
 
-運算子（ {{Glossary("operator")}}）是一個數學符號，可以讓兩個數值（或是變數）交互作用以後產生結果。您可以從以下的表格中看到一些最簡單的運算子，並將範例輸入 JavaScript 主控台來測試看看。
+運算子（ {{Glossary("operator")}}）是一個數學符號，可以讓兩個數值（或是變數）交互作用以後產生結果。你可以從以下的表格中看到一些最簡單的運算子，並將範例輸入 JavaScript 主控台來測試看看。
 
 <table>
   <thead>
@@ -212,7 +212,7 @@ Everything in between is a comment.
     </tr>
     <tr>
       <th scope="row">指定運算子</th>
-      <td>您已經見過她了：這可以將一個數值指定給一個變數。</td>
+      <td>你已經見過她了：這可以將一個數值指定給一個變數。</td>
       <td><code>=</code></td>
       <td><code>var myVariable = 'Bob';</code></td>
     </tr>
@@ -256,13 +256,13 @@ Everything in between is a comment.
   </tbody>
 </table>
 
-其實還有更多的運算子等的您去探索，但我們將在這裡先打住。您可以參照這篇[運算式與運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators)以取得完整的列表。
+其實還有更多的運算子等的你去探索，但我們將在這裡先打住。你可以參照這篇[運算式與運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators)以取得完整的列表。
 
-> **備註：** 混合使用多種資料型態的話，可能會在計算時產生一些奇怪的結果，所以您要謹慎地為變數選用正確的資料類型。舉個例子：在主控台中輸入 `"35" + "25"`。為什麼您沒有得到您所想要的結果？因為使用引號框住數字會將她轉換成字串，所以您其實是將兩個字串給連接起來，而不是將她們給相加。如果您輸入的是 `35 + 25`，您將會得到正確的結果。
+> **備註：** 混合使用多種資料型態的話，可能會在計算時產生一些奇怪的結果，所以你要謹慎地為變數選用正確的資料類型。舉個例子：在主控台中輸入 `"35" + "25"`。為什麼你沒有得到你所想要的結果？因為使用引號框住數字會將她轉換成字串，所以你其實是將兩個字串給連接起來，而不是將她們給相加。如果你輸入的是 `35 + 25`，你將會得到正確的結果。
 
 ### 條件（Conditionals）
 
-條件是種程式碼結構，可以讓您測試某個陳述式會不會回傳真值，並根據不同的結果執行不同程式碼。最常見的形式是 `if ... else` 。以下是一個範例：
+條件是種程式碼結構，可以讓你測試某個陳述式會不會回傳真值，並根據不同的結果執行不同程式碼。最常見的形式是 `if ... else` 。以下是一個範例：
 
 ```js
 let iceCream = "chocolate";
@@ -277,7 +277,7 @@ if (iceCream === "chocolate") {
 
 ### 函式（Functions）
 
-函式（{{Glossary("Function", "Functions")}}）是一種將需要重複使用的功能打包裝起來的方法，所以當要再次執行這些功能的時候，就可以呼叫這個函式來達成，而不是一再的重新撰寫程式碼。您在先前的篇幅中其實已經看過一些函式了，例如：
+函式（{{Glossary("Function", "Functions")}}）是一種將需要重複使用的功能打包裝起來的方法，所以當要再次執行這些功能的時候，就可以呼叫這個函式來達成，而不是一再的重新撰寫程式碼。你在先前的篇幅中其實已經看過一些函式了，例如：
 
 ```js
 let myVariable = document.querySelector("h1");
@@ -287,13 +287,13 @@ let myVariable = document.querySelector("h1");
 alert("hello!");
 ```
 
-這些函式是瀏覽器為您內建的，您可以自由地使用。
+這些函式是瀏覽器為你內建的，你可以自由地使用。
 
-如果您看到某些很像是變數名稱的東西，但是後面帶有括號 — `()` — 的話，表示這可能是一個函式。函式通常會接收參數（{{Glossary("Argument", "arguments")}}）—這是一些可以讓她完成工作的必要資料。這些參數會被寫在括號裡面，如果有不只一個參數的話，彼此間要用逗號隔開。
+如果你看到某些很像是變數名稱的東西，但是後面帶有括號 — `()` — 的話，表示這可能是一個函式。函式通常會接收參數（{{Glossary("Argument", "arguments")}}）—這是一些可以讓她完成工作的必要資料。這些參數會被寫在括號裡面，如果有不只一個參數的話，彼此間要用逗號隔開。
 
 舉例來說，`alert()` 這個函式會在瀏覽器內視窗內產生一個彈出視窗，但是我們必須要傳給她一個字串當作參數，告訴這個函式，該把什麼東西放到這個彈出視窗裡。
 
-好消息是：您可以定義您自己的函式 — 底下的這個範例中，我們將會為您帶來一個簡單的函式，她會接收兩個數字當作參數，並將其相乘：
+好消息是：你可以定義你自己的函式 — 底下的這個範例中，我們將會為你帶來一個簡單的函式，她會接收兩個數字當作參數，並將其相乘：
 
 ```js
 function multiply(num1, num2) {
@@ -302,7 +302,7 @@ function multiply(num1, num2) {
 }
 ```
 
-您可以試著在主控台中執行上述的函式，然後再用不同的參數來測試這個函式幾次，例如：
+你可以試著在主控台中執行上述的函式，然後再用不同的參數來測試這個函式幾次，例如：
 
 ```js
 multiply(4, 7);
@@ -314,7 +314,7 @@ multiply(0.5, 3);
 
 ### 事件（Events）
 
-如果要在網頁上創造真正的互動功能，您將會需要事件（Events） — 這是一種可以監聽瀏覽器發生了什麼事情的程式碼結構，接著她會允許您執行其他程式碼以回應這些事件。最明顯的事件就是 [click event](/zh-TW/docs/Web/Events/click) 了，當瀏覽器裡的某個東西被滑鼠點選時，這個事件就會被觸發。如果要測試一下這個事件，請您把底下的程式碼輸入到主控台內，接著用滑鼠點選目前的網頁：
+如果要在網頁上創造真正的互動功能，你將會需要事件（Events） — 這是一種可以監聽瀏覽器發生了什麼事情的程式碼結構，接著她會允許你執行其他程式碼以回應這些事件。最明顯的事件就是 [click event](/zh-TW/docs/Web/Events/click) 了，當瀏覽器裡的某個東西被滑鼠點選時，這個事件就會被觸發。如果要測試一下這個事件，請你把底下的程式碼輸入到主控台內，接著用滑鼠點選目前的網頁：
 
 ```js
 document.querySelector("html").onclick = function () {
@@ -341,15 +341,15 @@ myHTML.onclick = function () {};
 
 ## 徹底加強我們的範例網頁
 
-到目前為止，我們已經學會一些 JavaScript 的基礎知識了，接下來讓我們幫這個網頁新增一些很酷的特色，並給您一些靈感。
+到目前為止，我們已經學會一些 JavaScript 的基礎知識了，接下來讓我們幫這個網頁新增一些很酷的特色，並給你一些靈感。
 
 ### 加入一個圖片變換器
 
 在這個小節中，我們將在這個網頁裡添加一個圖片，以及一些簡單的 JavaScript，當這個圖片被滑鼠點選的時候，就會在兩個圖片之間互相切換。
 
-1. 首先，先去找張您可以為您的網頁增添光彩的圖片。請盡量找一張尺寸跟第一張圖相同的圖片、或至少是張相似尺寸的圖片。
+1. 首先，先去找張你可以為你的網頁增添光彩的圖片。請盡量找一張尺寸跟第一張圖相同的圖片、或至少是張相似尺寸的圖片。
 2. 將圖片存放到 `images` 資料夾內。
-3. 編輯您的 `main.js` 檔案，並且將以下的 JavaScript 輸入到檔案內（如果您還有看見那段 hello world 的 JavaScript，請把她們給刪除）：
+3. 編輯你的 `main.js` 檔案，並且將以下的 JavaScript 輸入到檔案內（如果你還有看見那段 hello world 的 JavaScript，請把她們給刪除）：
 
    ```js
    var myImage = document.querySelector("img");
@@ -364,7 +364,7 @@ myHTML.onclick = function () {};
    };
    ```
 
-4. 請將全部檔案儲存，並用瀏覽器開啟 `index.html`。現在請您點選圖片，她應該會切換成另外一張！
+4. 請將全部檔案儲存，並用瀏覽器開啟 `index.html`。現在請你點選圖片，她應該會切換成另外一張！
 
 在這裡，我們把一個圖片元素的參考存進了 `myImage` 變數裡。接著，我們把這個變數的 `onclick` 事件處理器設定為一個匿名函式。現在，每當這個圖片被點選一次：
 
@@ -424,15 +424,15 @@ myHTML.onclick = function () {};
    };
    ```
 
-現在當您造訪這個網頁時，她會詢問您的名字，並且給您一個客製化過的歡迎訊息。在這之後，您也可以隨時透過點選那個按鈕來更改名字。順帶一提，因為這組客製化過的訊息是存在 localStorage 裡的，所以即使您將網頁關起來，她還是會保留著，所以當您下次開啟這個網頁時，這段客製化的訊息依然會出現！
+現在當你造訪這個網頁時，她會詢問你的名字，並且給你一個客製化過的歡迎訊息。在這之後，你也可以隨時透過點選那個按鈕來更改名字。順帶一提，因為這組客製化過的訊息是存在 localStorage 裡的，所以即使你將網頁關起來，她還是會保留著，所以當你下次開啟這個網頁時，這段客製化的訊息依然會出現！
 
 ### 用戶名稱是否為 null
 
-當您運行範例並出現提示您輸入用戶名稱的對話框時，請嘗試按下*取消* 鈕。您會看到一個標題顯示著"Mozilla is cool, null"。這是因為當您取消提示時，該值將會被設為 null。null 在 Javascript 中的一個特殊值，基本上用來表示沒有任何值。
+當你運行範例並出現提示你輸入用戶名稱的對話框時，請嘗試按下*取消* 鈕。你會看到一個標題顯示著"Mozilla is cool, null"。這是因為當你取消提示時，該值將會被設為 null。null 在 Javascript 中的一個特殊值，基本上用來表示沒有任何值。
 
-再試試按下 OK，但不輸入任何名字。您將會看到"Mozilla is cool,"，該結果的原因非常簡單的可以理解。
+再試試按下 OK，但不輸入任何名字。你將會看到"Mozilla is cool,"，該結果的原因非常簡單的可以理解。
 
-如果你想避免產生這些問題，您應該檢查使用者是否輸入了 null 或是空白的名字。試著透過修改`setUserName()`來應對這些問題，結果如下：
+如果你想避免產生這些問題，你應該檢查使用者是否輸入了 null 或是空白的名字。試著透過修改`setUserName()`來應對這些問題，結果如下：
 
 ```plain
 function setUserName() {
@@ -450,13 +450,13 @@ function setUserName() {
 
 ## 結語
 
-如果您已經照著這篇文章的所有步驟做完了，您應該會看到以下的畫面（或者您也可以[瀏覽我們製作的版本](https://mdn.github.io/beginner-html-site-scripted/)）：
+如果你已經照著這篇文章的所有步驟做完了，你應該會看到以下的畫面（或者你也可以[瀏覽我們製作的版本](https://mdn.github.io/beginner-html-site-scripted/)）：
 
 ![](website-screen-scripted.png)
 
-如果在過程中遇到了任何問題，您也可以隨時把您的成品與我們 [放在 Github 上的範例](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js) 相互對照。
+如果在過程中遇到了任何問題，你也可以隨時把你的成品與我們 [放在 Github 上的範例](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js) 相互對照。
 
-在此，我們只稍稍體驗了 JavaScript 的一些皮毛。如果您非常享受這段學習的過程，並想要繼續深究，請您繼續瀏覽我們製作的 [JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide)。
+在此，我們只稍稍體驗了 JavaScript 的一些皮毛。如果你非常享受這段學習的過程，並想要繼續深究，請你繼續瀏覽我們製作的 [JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide)。
 
 ## See also
 
