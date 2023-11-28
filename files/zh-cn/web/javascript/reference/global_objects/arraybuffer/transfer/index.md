@@ -26,20 +26,20 @@ transfer(newByteLength)
 
 ### 返回值
 
-一个新的 {{jsxref("ArrayBuffer")}} 对象。其内容被初始化为此 `ArrayBuffer` 的内容，如果有额外的字节。则填充为零。当且仅当此 `ArrayBuffer` 是可调整大小的，新 `ArrayBuffer` 才是可调整大小的，在这种情况下，其 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} 和此 `ArrayBuffer` 的相同。原始 `ArrayBuffer` 将被分离。
+一个新的 {{jsxref("ArrayBuffer")}} 对象。其内容被初始化为当前 `ArrayBuffer` 的内容，如果有额外的字节。则填充为零。当且仅当当前 `ArrayBuffer` 是可调整大小的，新 `ArrayBuffer` 才是可调整大小的，在这种情况下，其 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} 和当前 `ArrayBuffer` 的相同。当前 `ArrayBuffer` 将被分离。
 
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : 如果此 `ArrayBuffer` 是可调整大小的并且 `newByteLength` 大于此 `ArrayBuffer` 的 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}}，则抛出此错误。
+  - : 如果当前 `ArrayBuffer` 是可调整大小的并且 `newByteLength` 大于当前 `ArrayBuffer` 的 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}}，则抛出此错误。
 - {{jsxref("TypeError")}}
-  - : 如果此 `ArrayBuffer` 已经分离，则抛出此错误。
+  - : 如果当前 `ArrayBuffer` 已经分离，则抛出此错误。
 
 ## 描述
 
-`transfer()` 方法执行与[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)相同的操作。它将此 `ArrayBuffer` 的字节复制到一个新的 `ArrayBuffer` 对象中，然后分离此 `ArrayBuffer` 对象。有关更多信息，请参阅[传输 ArrayBuffers](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#传输_arraybuffer)。
+`transfer()` 方法执行与[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)相同的操作。它将当前 `ArrayBuffer` 的字节复制到一个新的 `ArrayBuffer` 对象中，然后分离当前 `ArrayBuffer` 对象。有关更多信息，请参阅[传输 ArrayBuffers](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#传输_arraybuffer)。
 
-`transfer()` 保留了此 `ArrayBuffer` 的大小可调整性。如果你希望新的 `ArrayBuffer` 不可调整大小，请使用 {{jsxref("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}} 代替。没有办法通过传输使长度固定的缓冲区变为可调整大小的缓冲区。
+`transfer()` 保留了当前 `ArrayBuffer` 的大小可调整性。如果你希望新的 `ArrayBuffer` 不可调整大小，请使用 {{jsxref("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}} 代替。没有办法通过传输使长度固定的缓冲区变为可调整大小的缓冲区。
 
 `transfer()` 是非常高效的，因为（引擎）实现可能以零拷贝移动或 `realloc`——没有实际数据的复制——来实现此方法。
 
