@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}} {{SeeCompatTable}}
 
-{{jsxref("ArrayBuffer")}} 实例的 **`transfer()`** 方法创建一个内容与此缓冲区相同的新 `ArrayBuffer` 实例，然后将此缓冲区分离。
+{{jsxref("ArrayBuffer")}} 实例的 **`transfer()`** 方法创建一个内容与该缓冲区相同的新 `ArrayBuffer` 实例，然后将当前缓冲区分离。
 
 ## 语法
 
@@ -19,10 +19,10 @@ transfer(newByteLength)
 ### 参数
 
 - `newByteLength` {{optional_inline}}
-  - : 新的 `ArrayBuffer` 的 {{jsxref("ArrayBuffer/byteLength", "byteLength")}}。默认为此 `ArrayBuffer` 的 `byteLength`。
-    - 如果 `newByteLength` 小于此 `ArrayBuffer` 的 `byteLength`，“溢出”的字节将被丢弃。
-    - 如果 `newByteLength` 大于此 `ArrayBuffer` 的 `byteLength`，剩下的的字节将用零填充。
-    - 如果此 `ArrayBuffer` 是可调整大小的，`newByteLength` 一定不能大于其 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}}。
+  - : 新的 `ArrayBuffer` 的 {{jsxref("ArrayBuffer/byteLength", "byteLength")}}。默认为当前 `ArrayBuffer` 的 `byteLength`。
+    - 如果 `newByteLength` 小于当前 `ArrayBuffer` 的 `byteLength`，“溢出”的字节将被丢弃。
+    - 如果 `newByteLength` 大于当前 `ArrayBuffer` 的 `byteLength`，剩下的的字节将用零填充。
+    - 如果当前的 `ArrayBuffer` 是可调整大小的，`newByteLength` 一定不能大于其 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}}。
 
 ### 返回值
 
