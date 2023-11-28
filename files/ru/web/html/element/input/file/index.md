@@ -86,7 +86,7 @@ Each `File` object contains the following information:
 - webkitRelativePath {{non-standard_inline}}
   - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the [`webkitdirectory`](/ru/docs/Web/HTML/Element/input#webkitdirectory) attribute is set). _This is non-standard and should be used with caution._
 
-> **Примечание:** You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).
+> **Примечание:** You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).
 
 ### Limiting accepted file types
 
