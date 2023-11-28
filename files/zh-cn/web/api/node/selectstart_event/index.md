@@ -24,7 +24,7 @@ onselectstart = (event) => {};
 
 ## 事件类型
 
-一个通用的 {{domxref("Event")}}。
+通用的 {{domxref("Event")}}。
 
 ## 示例
 
