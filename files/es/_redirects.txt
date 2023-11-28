@@ -2013,7 +2013,6 @@
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Element/bgsound	/es/docs/Web/HTML/Element/audio
-/es/docs/Web/HTML/Element/blink	/es/docs/orphaned/Web/HTML/Element/blink
 /es/docs/Web/HTML/Element/content	/es/docs/Web/HTML/element/slot
 /es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
@@ -2035,7 +2034,6 @@
 /es/docs/Web/HTML/Elemento/bdo	/es/docs/Web/HTML/Element/bdo
 /es/docs/Web/HTML/Elemento/bgsound	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/big	/es/docs/Web/HTML/Element/big
-/es/docs/Web/HTML/Elemento/blink	/es/docs/orphaned/Web/HTML/Element/blink
 /es/docs/Web/HTML/Elemento/blockquote	/es/docs/Web/HTML/Element/blockquote
 /es/docs/Web/HTML/Elemento/body	/es/docs/Web/HTML/Element/body
 /es/docs/Web/HTML/Elemento/br	/es/docs/Web/HTML/Element/br
