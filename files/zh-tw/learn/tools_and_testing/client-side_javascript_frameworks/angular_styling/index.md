@@ -37,7 +37,7 @@ Angular CLI 會產生兩種類型的樣式檔：
 - 元件樣式：Angular CLI 提供了元件各自的樣式檔案。這些樣式檔只會套用在其所屬的元件。
 - `styles.css`：在 `src` 目錄底下，除非你在元件層級指定樣式，否則這個檔案的樣式會套用到整個應用程式。
 
-根據您是否使用 CSS 預處理器，CSS 檔案的副檔名也會有所變化，Angular 支援純 CSS、SCSS、Sass、Less、以及 Stylus。
+根據你是否使用 CSS 預處理器，CSS 檔案的副檔名也會有所變化，Angular 支援純 CSS、SCSS、Sass、Less、以及 Stylus。
 
 在 `src/styles.css` 中，貼上以下樣式：
 
@@ -169,6 +169,6 @@ ul li {
 
 ## 結語
 
-我們對 Angular 樣式的簡介也告一個段落了，接下來讓我們開始幫應用程式加上功能吧。在下一篇文章中，我們將建立一個適用於待辦事項的元件，並使其成為可以讓您標示完成、編輯以及刪除待辦事項。
+我們對 Angular 樣式的簡介也告一個段落了，接下來讓我們開始幫應用程式加上功能吧。在下一篇文章中，我們將建立一個適用於待辦事項的元件，並使其成為可以讓你標示完成、編輯以及刪除待辦事項。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
