@@ -386,7 +386,7 @@ Promise 在所有现代浏览器的最新版本中都可以使用；唯一会出
 
 在这篇文章中，我们没有涉及到所有的 Promise 功能，只是介绍了最有趣和最有用的那一部分。随着你开始学习更多关于 Promise 的知识，你会遇到更多有趣的特性。
 
-许多现代 Web API 是基于 Promise 的，包括 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)、[Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API) 等等。
+许多现代 Web API 是基于 Promise 的，包括 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)、[媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)等等。
 
 ## 参见
 
