@@ -126,7 +126,7 @@ Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/
 | `minimal-ui` | 這看起來和感覺上就像是獨立應用程式一樣，但將有控制導覽列 UI 元素的最小設置，元素會因瀏覽器而不同。                                                                             | `browser`         |
 | `browser`    | 預設值。 應用程式如常規般地被開啟於瀏覽器分頁或新視窗，依瀏覽器與平台而不同。                                                                                                  | (None)            |
 
-> **備註：** 您能根據顯示模式選擇性地將 CSS [display-mode](/docs/Web/CSS/@media/display-mode) media 功能運用於您的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。
+> **備註：** 你能根據顯示模式選擇性地將 CSS [display-mode](/docs/Web/CSS/@media/display-mode) media 功能運用於你的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。
 
 ### `icons`
 
