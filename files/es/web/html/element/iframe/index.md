@@ -1,8 +1,6 @@
 ---
 title: "<iframe>: el elemento Inline Frame"
 slug: Web/HTML/Element/iframe
-l10n:
-  sourceCommit: 0c45d0d3ec3e3eeb80fcf2101a30704dae7c8ee9
 ---
 
 {{HTMLSidebar}}
