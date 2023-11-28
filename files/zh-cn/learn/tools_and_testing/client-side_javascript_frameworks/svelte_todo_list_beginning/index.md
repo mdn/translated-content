@@ -17,8 +17,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list
       <td>
         <p>
           推荐你至少需熟悉基本的
-          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、
-          <a href="/zh-CN/docs/Learn/CSS">CSS</a> 与
+          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 与
           <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>
           等程序语言且具备<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
@@ -55,7 +54,7 @@ git clone https://github.com/opensas/mdn-svelte-tutorial.git
 cd mdn-svelte-tutorial/02-starting-our-todo-app
 ```
 
-或直接下载文件夹内容如下：
+或像这样直接下载文件夹内容：
 
 ```bash
 npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
@@ -343,7 +342,7 @@ created public/build/bundle.js in 220ms
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-> **备注：** 透过 VSCode 你可以点击 _Quick fix..._ 链接或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 来自动地加上这个忽略注释。
+> **备注：** 通过 VSCode 你可以点击 _Quick fix..._ 链接或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 来自动地加上这个忽略注释。
 
 假如你想要全局地关闭这个警告，可以像这样在你的 `rollup.config.js` 文件中调整 `Svelte` 插件配置并补上这个 `onwarn` 处理器：
 
