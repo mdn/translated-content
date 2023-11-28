@@ -120,7 +120,7 @@ div {
 
 ### Quantum CSS заметки
 
-- В Gecko есть ошибка, означающая, что `background-position` не может быть {{cssxref("transition","transitioned")}} между двумя значениями, содержащими разные числа значений {{cssxref("&lt;position&gt;")}}, для примера `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (смотрите {{bug(1390446)}}). Новый параллельный CSS движок Firefox (также известный как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), который планируется выпустить в Firefox 57) исправляет это.
+- В Gecko есть ошибка, означающая, что `background-position` не может быть {{cssxref("transition","transitioned")}} между двумя значениями, содержащими разные числа значений {{cssxref("&lt;position&gt;")}}, для примера `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (смотрите [Firefox bug 1390446](https://bugzil.la/1390446)). Новый параллельный CSS движок Firefox (также известный как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), который планируется выпустить в Firefox 57) исправляет это.
 
 ## Смотрите также
 

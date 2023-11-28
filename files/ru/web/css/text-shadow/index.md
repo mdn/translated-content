@@ -110,7 +110,7 @@ text-shadow: unset;
 
 ### Примечание Quantum CSS
 
-- В движке Gecko есть программная ошибка в результате которой метод перехода ({{cssxref("transition")}}) не будет производить переход от элемента со свойством `text-shadow` с заданным цветом к элементу со свойством `text-shadow` без заданного цвета ({{bug(726550)}}). Данная ошибка была исправлена в параллельной ветке движка CSS для Firefox (так же известном как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), выпуск которого запланирован уже в версии Firefox 57).
+- В движке Gecko есть программная ошибка в результате которой метод перехода ({{cssxref("transition")}}) не будет производить переход от элемента со свойством `text-shadow` с заданным цветом к элементу со свойством `text-shadow` без заданного цвета ([Firefox bug 726550](https://bugzil.la/726550)). Данная ошибка была исправлена в параллельной ветке движка CSS для Firefox (так же известном как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), выпуск которого запланирован уже в версии Firefox 57).
 
 ## Также смотрите
 
