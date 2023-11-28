@@ -16,7 +16,7 @@ var elements = document.getElementsByTagName(name);
 - `elements` это живая {{domxref("HTMLCollection")}} (с учётом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве.
 - `name` строка представляющая собой имя элемента. Специальная строка "\*" позволяет получить все элементы.
 
-> **Примечание:** [Последняя W3C спецификация](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) говорит что `elements` является `HTMLCollection`; между тем, данный метод возвращает {{domxref("NodeList")}} в WebKit браузерах. См. {{bug(14869)}} для большей информации.
+> **Примечание:** [Последняя W3C спецификация](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) говорит что `elements` является `HTMLCollection`; между тем, данный метод возвращает {{domxref("NodeList")}} в WebKit браузерах. См. [Firefox bug 14869](https://bugzil.la/14869) для большей информации.
 
 ## Примеры
 
@@ -86,7 +86,7 @@ var elements = document.getElementsByTagName(name);
 
 ## Примечания
 
-Когда вызывается на HTML document, `getElementsByTagName()` переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. Смотрите также {{Bug(499656)}}.
+Когда вызывается на HTML document, `getElementsByTagName()` переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. Смотрите также [Firefox bug 499656](https://bugzil.la/499656).
 
 `document.getElementsByTagName()` подобен {{domxref("element.getElementsByTagName()")}}, за исключением того что поиск охватывает весь документ.
 
