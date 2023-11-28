@@ -52,7 +52,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onChildrenReordered")}}
+{{Compat}}
 
 ## 使用例
 

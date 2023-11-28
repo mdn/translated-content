@@ -90,7 +90,7 @@ if (!Object.is) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.is")}}
+{{Compat}}
 
 ## Veja também
 

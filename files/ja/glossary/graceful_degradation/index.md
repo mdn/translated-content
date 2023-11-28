@@ -3,6 +3,8 @@ title: Graceful degradation (グレースフルデグラデーション)
 slug: Glossary/Graceful_degradation
 ---
 
+{{GlossarySidebar}}
+
 **グレースフルデグラデーション** (上品な劣化) とは設計哲学の一つで、最新のブラウザーで動作するように新しいウェブサイトやアプリケーションを構築するものの、古いブラウザーでも、良いものでなくても基本的なコンテンツや機能を引き続き提供する使用方法で代替できるようにしようとすることを目指したものです。
 
 {{Glossary("Polyfill","ポリフィル")}}を使用して JavaScript で[不足している機能](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)を構築することは可能ですが、 CSS のカスケードや HTML の代替の振る舞いなど、可能な限りスタイル付けやレイアウトなどの機能の代替案を用意する必要があります。いくつかの良い事例は、[一般的な HTML と CSS の問題の扱い](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)で見ることができます。

@@ -67,7 +67,7 @@ var int8 = new Int8Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Int8Array.Int8Array")}}
+{{Compat}}
 
 ### 互換性メモ
 

@@ -24,7 +24,7 @@ contain-intrinsic-size: 10%;
 
 ## Browser compatibility
 
-{{Compat("css.properties.contain-intrinsic-size")}}
+{{Compat}}
 
 ## See Also
 

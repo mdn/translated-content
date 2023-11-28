@@ -41,7 +41,7 @@ Este elemento implementa a interface do [`SVGFilterElement`](/pt-BR/DOM/SVGFilte
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.filter")}}
+{{Compat}}
 
 ## Veja também
 

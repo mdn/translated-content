@@ -85,4 +85,4 @@ initial-letter: unset;
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.initial-letter")}}
+{{Compat}}

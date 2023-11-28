@@ -79,4 +79,4 @@ text {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.paint-order")}}
+{{Compat}}

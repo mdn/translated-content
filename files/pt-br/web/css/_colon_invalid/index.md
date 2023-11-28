@@ -102,7 +102,7 @@ Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completam
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.invalid")}}
+{{Compat}}
 
 ## Veja também
 

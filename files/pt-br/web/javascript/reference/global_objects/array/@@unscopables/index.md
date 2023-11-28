@@ -41,7 +41,7 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.@@unscopables")}}
+{{Compat}}
 
 ## Veja também
 

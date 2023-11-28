@@ -1,8 +1,9 @@
 ---
-title: InputEvent.isComposing
+title: "InputEvent: isComposing プロパティ"
+short-title: isComposing
 slug: Web/API/InputEvent/isComposing
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("UI Events")}}

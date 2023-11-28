@@ -66,7 +66,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

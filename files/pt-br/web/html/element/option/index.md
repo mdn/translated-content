@@ -43,7 +43,7 @@ Veja os exemplos do elemento {{HTMLElement("select")}}.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.option")}}
+{{Compat}}
 
 ## Veja também
 

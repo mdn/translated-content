@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.MutedInfoReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

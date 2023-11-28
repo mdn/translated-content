@@ -378,7 +378,7 @@ Note that in the `if` test, a reference to `noFunc` is used—there are no brack
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions")}}
+{{Compat}}
 
 ## Veja também
 

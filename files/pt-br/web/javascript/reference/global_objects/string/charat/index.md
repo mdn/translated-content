@@ -206,7 +206,7 @@ function fixedCharAt(str, idx) {
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.charAt")}}
+{{Compat}}
 
 ## Veja também
 

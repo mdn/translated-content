@@ -5,17 +5,17 @@ slug: Learn/JavaScript/First_steps/Arrays
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
-## Arreglos o Matrices
+## Arreglos
 
-En este último artículo de este módulo, veremos las matrices — una manera ordenada de almacenar una lista de elementos de datos bajo un solo nombre de variable. Aquí vemos por qué esto es útil, luego exploramos cómo crear una matriz, recuperar, agregar y eliminar elementos almacenados en una matriz, y más.
+En este último artículo de este módulo, veremos las matrices — una manera ordenada de almacenar una lista de elementos de datos bajo un solo nombre de variable. Aquí vemos por qué esto es útil, luego exploramos cómo crear un arreglo, recuperar, agregar y eliminar elementos almacenados en un arreglo, y más.
 
 | Prerrequisitos: | Conocimientos básicos de informática, una comprensión básica de HTML y CSS, una idea de lo que es JavaScript. |
 | --------------- | ------------------------------------------------------------------------------------------------------------- |
 | Objectivo:      | Para entender qué son las matrices y cómo manipularlas en JavaScript.                                         |
 
-## ¿Qué es una matriz?
+## ¿Qué es un arreglo?
 
-Las matrices se describen como "objetos tipo lista"; básicamente son objetos individuales que contienen múltiples valores almacenados en una lista. Los objetos de matriz pueden almacenarse en variables y tratarse de la misma manera que cualquier otro tipo de valor, la diferencia es que podemos acceder individualmente a cada valor dentro de la lista y hacer cosas útiles y eficientes con la lista, como recorrerlo con un bucle y hacer una misma cosa a cada valor. Tal vez tenemos una serie de productos y sus precios almacenados en una matriz, y queremos recorrerlos e imprimirlos en una factura, sumando todos los precios e imprimiendo el total en la parte inferior.
+Las matrices se describen como "objetos tipo lista"; básicamente son objetos individuales que contienen múltiples valores almacenados en una lista. Los objetos de arreglos pueden almacenarse en variables y tratarse de la misma manera que cualquier otro tipo de valor, la diferencia es que podemos acceder individualmente a cada valor dentro de la lista y hacer cosas útiles y eficientes con la lista, como recorrerlo con un bucle y hacer una misma cosa a cada valor. Tal vez tenemos una serie de productos y sus precios almacenados en un arreglo, y queremos recorrerlos e imprimirlos en una factura, sumando todos los precios e imprimiendo el total en la parte inferior.
 
 Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada, luego llamar al código que hace la impresión y agregarlo por separado para cada artículo. Esto sería mucho más largo de escribir, menos eficiente y más propenso a errores. si tuviéramos 10 elementos para agregar a la factura, ya sería suficientemente malo, pero ¿ qué pasa con 100 o 1000 artículos? Volveremos a este ejemplo más adelante en el artículo.
 
@@ -126,18 +126,18 @@ Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de 
 
 {{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-### Creando una matriz
+### Creando un arreglo
 
 Las matrices se construyen con corchetes, que contiene una lista de elementos separdos por comas.
 
-1. Digamos que queríamos almacenar una lista de compras en una matriz — haríamos algo como lo siguiente. Ingresa las siguientes líneas en la consola:
+1. Digamos que queríamos almacenar una lista de compras en un arreglo — haríamos algo como lo siguiente. Ingresa las siguientes líneas en la consola:
 
    ```js
    let shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
    shopping;
    ```
 
-2. En este caso, cada elemento de la matriz es una cadena, pero ten en cuenta que puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz. También puedes mezclar y combinar tipos de elementos — no todos tienen que ser números, cadenas, etc. Prueba estos:
+2. En este caso, cada elemento del arreglo es una cadena, pero ten en cuenta que puedes almacenar cualquier elemento en un arreglo — cadena, número, objeto, otra variable, incluso otro arreglo. También puedes mezclar y combinar tipos de elementos — no todos tienen que ser números, cadenas, etc. Prueba estos:
 
    ```js
    let sequence = [1, 1, 2, 3, 5, 8, 13];
@@ -146,9 +146,9 @@ Las matrices se construyen con corchetes, que contiene una lista de elementos se
 
 3. Intenta creando un par de matrices por tu cuenta, antes de continuar.
 
-### Accediendo y modificando elementos de la matriz
+### Accediendo y modificando elementos del arreglo
 
-Puedes entonces acceder a elementos individuales en la matriz mediante la notación de corchetes, del mismo modo que [accediste a las letras de una cadena](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+Puedes entonces acceder a elementos individuales en el arreglo mediante la notación de corchetes, del mismo modo que [accediste a las letras de una cadena](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Ingresa lo siguiente en tu consola:
 
@@ -157,7 +157,7 @@ Puedes entonces acceder a elementos individuales en la matriz mediante la notaci
    // devuelve "bread"
    ```
 
-2. también puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor. Prueba esto:
+2. también puedes modificar un elemento en un arreglo simplemente dando a un item del arreglo un nuevo valor. Prueba esto:
 
    ```js
    shopping[0] = "tahini";
@@ -167,7 +167,7 @@ Puedes entonces acceder a elementos individuales en la matriz mediante la notaci
 
    > **Nota:** Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
 
-3. Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
+3. Ten en cuenta que un arreglo dentro de otro arreglo se llama arrelog multidimensional o matriz. Puedes acceder a los elementos de un arreglo que estén dentro de otro, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
 
    ```js
    random[2][2];
@@ -175,16 +175,16 @@ Puedes entonces acceder a elementos individuales en la matriz mediante la notaci
 
 4. Intenta seguir jugando y haciendo algunas modificaciones más a tus ejemplos de matriz antes de continuar.
 
-### Encontrar la longitud de una matriz
+### Encontrar la longitud de un arreglo
 
-Puedes averiguar la longitud de una matriz (cuántos elementos contiene) exactamente de la misma manera que determinas la longitud (en caracteres) de una cadena— utilizando la propiedad {{jsxref("Array.prototype.length","length")}}. Prueba lo siguiente:
+Puedes averiguar la longitud de un arreglo (cuántos elementos contiene) exactamente de la misma manera que determinas la longitud (en caracteres) de una cadena— utilizando la propiedad {{jsxref("Array.prototype.length","length")}}. Prueba lo siguiente:
 
 ```js
 sequence.length;
 // Deve devolver 7
 ```
 
-Esto tiene otros usos, pero se usa más comunmente para indicarle a un ciclo que continúe hasta que haya recorrido todos los elementos de la matriz. Así por ejemplo:
+Esto tiene otros usos, pero se usa más comunmente para indicarle a un ciclo que continúe hasta que haya recorrido todos los elementos del arreglo. Así por ejemplo:
 
 ```js
 let sequence = [1, 1, 2, 3, 5, 8, 13];
@@ -195,19 +195,19 @@ for (var i = 0; i < sequence.length; i++) {
 
 Aprenderás acerca de bucles correctamente en un artículo futuro, pero brevemente, éste código dice:
 
-1. Comienza el bucle en el elemento de la posición 0 en la matriz.
-2. Detén el bucle en el número de item igual a la longitud de la matriz. Esto funcionará para una matriz de cualquier longitid, pero en este caso el ciclo se detendrá en el elemento número 7 (esto es bueno, ya que el último elemento — que queremos que recorra el bucle — es 6.
+1. Comienza el bucle en el elemento de la posición 0 en el arreglo.
+2. Detén el bucle en el número de item igual a la longitud del arreglo. Esto funcionará para un arreglo de cualquier longitid, pero en este caso el ciclo se detendrá en el elemento número 7 (esto es bueno, ya que el último elemento — que queremos que recorra el bucle — es 6.
 3. Para cada elemento, imprime en la consola del navegador con [`console.log()`](/es/docs/Web/API/console/log).
 
-## Alguno métodos de matriz útiles
+## Algunos métodos de arreglo útiles
 
-En esta sección veremos algunos métodos bastante útiles relacionados con matrices que nos permiten dividir cadenas en elementos de matriz y viceversa, y agregar nuevos elementos en matrices.
+En esta sección veremos algunos métodos bastante útiles relacionados con matrices que nos permiten dividir cadenas en elementos de arreglo y viceversa, y agregar nuevos elementos en matrices.
 
 ### Conversión entre matrices y cadenas
 
-A menudo se te presentarán algunos datos brutos contenidos en una cadena larga y grande, y es posible que desees separar los elementos útiles de una forma más conveniente y luego hacerle cosas, como mostrarlos en una tabla de datos. Para hacer esto, podemos usar el método {{jsxref("String.prototype.split()","split()")}}. En su forma más simple, esto toma un único parámetro, el caracter que quieres separar de la cadena, y devuelve las subcadenas entre el separador como elementos en una matriz.
+A menudo se te presentarán algunos datos brutos contenidos en una cadena larga y grande, y es posible que desees separar los elementos útiles de una forma más conveniente y luego hacerle cosas, como mostrarlos en una tabla de datos. Para hacer esto, podemos usar el método {{jsxref("String.prototype.split()","split()")}}. En su forma más simple, esto toma un único parámetro, el caracter que quieres separar de la cadena, y devuelve las subcadenas entre el separador como elementos en un arreglo.
 
-> **Nota:** Bien, esto es técnicamente un método de cadena, no un método de matriz, pero lo hemos incluido con las matrices, ya que va bien aquí.
+> **Nota:** Bien, esto es técnicamente un método de cadena, no un método de arreglo, pero lo hemos incluido con las matrices, ya que va bien aquí.
 
 1. Vamos a jugar con esto, para ver como funciona. Primero, crea una cadena en tu consola:
 
@@ -222,7 +222,7 @@ A menudo se te presentarán algunos datos brutos contenidos en una cadena larga 
    myArray;
    ```
 
-3. Finalmente, intenta encontrar la longitud de tu nueva matriz y recuperar algunos elementos de ella:
+3. Finalmente, intenta encontrar la longitud de tu nuevo arreglo y recuperar algunos elementos de ella:
 
    ```js
    myArray.length;
@@ -238,16 +238,16 @@ A menudo se te presentarán algunos datos brutos contenidos en una cadena larga 
    myNewString;
    ```
 
-5. Otra forma de convertir una matriz en cadena es usar el método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` es posiblemente más simple que `join()` ya que no toma un parámetro, pero es más limitado. Con `join()` puedes especificar diferentes separadores (intenta ejecutar el Paso 4 con un caracter diferente a la coma).
+5. Otra forma de convertir un arreglo en cadena es usar el método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` es posiblemente más simple que `join()` ya que no toma un parámetro, pero es más limitado. Con `join()` puedes especificar diferentes separadores (intenta ejecutar el Paso 4 con un caracter diferente a la coma).
 
    ```js
    let dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
    dogNames.toString(); //Rocket,Flash,Bella,Slugger
    ```
 
-### Agregar y eliminar elementos de la matriz
+### Agregar y eliminar elementos del arreglo
 
-Todavia no hemos cubierto la posibilidad de agregar y eliminar elementos de la matriz — echemos un vistazo a esto ahora. Usaremos la matriz `myArray` con la que terminamos en la última sección. Si todavía no has seguido esa sección, primero crea la matriz en tu consola:
+Todavia no hemos cubierto la posibilidad de agregar y eliminar elementos del arreglo — echemos un vistazo a esto ahora. Usaremos el arreglo `myArray` con la que terminamos en la última sección. Si todavía no has seguido esa sección, primero crea el arreglo en tu consola:
 
 ```js
 let myArray = [
@@ -260,9 +260,9 @@ let myArray = [
 ];
 ```
 
-Antes que nada, para añdir o eliminar un elemento al final de una matriz podemos usar {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} respectivamente.
+Antes que nada, para añdir o eliminar un elemento al final de un arreglo podemos usar {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} respectivamente.
 
-1. primero usemos `push()` — nota que necesitas incluir uno o más elementos que desees agregas al final de tu matriz. Prueba esto:
+1. primero usemos `push()` — nota que necesitas incluir uno o más elementos que desees agregas al final de tu arreglo. Prueba esto:
 
    ```js
    myArray.push("Cardiff");
@@ -271,7 +271,7 @@ Antes que nada, para añdir o eliminar un elemento al final de una matriz podemo
    myArray;
    ```
 
-2. La nueva longitud de la matriz se devuelve cuando finaliza la llamada al método. Si quisieras almacenar la nueva longitud de matriz en una variable, podrías hacer algo como esto:
+2. La nueva longitud del arreglo se devuelve cuando finaliza la llamada al método. Si quisieras almacenar la nueva longitud del arreglo en una variable, podrías hacer algo como esto:
 
    ```js
    let newLength = myArray.push("Bristol");
@@ -279,7 +279,7 @@ Antes que nada, para añdir o eliminar un elemento al final de una matriz podemo
    newLength;
    ```
 
-3. Eliminar el último elemento de una matriz es tan simple como ejecutar `pop()` en ella. Prueba esto:
+3. Eliminar el último elemento de un arreglo es tan simple como ejecutar `pop()` en ella. Prueba esto:
 
    ```js
    myArray.pop();
@@ -293,7 +293,7 @@ Antes que nada, para añdir o eliminar un elemento al final de una matriz podemo
    removedItem;
    ```
 
-{{jsxref("Array.prototype.unshift()","unshift()")}} y {{jsxref("Array.prototype.shift()","shift()")}} funcionan exactamente igual de `push()` y `pop()`, respectivamente, excepto que funcionan al principio de la matriz, no al final.
+{{jsxref("Array.prototype.unshift()","unshift()")}} y {{jsxref("Array.prototype.shift()","shift()")}} funcionan exactamente igual de `push()` y `pop()`, respectivamente, excepto que funcionan al principio del arreglo, no al final.
 
 1. Primero `unshift()` — prueba el siguiente comando:
 
@@ -314,9 +314,9 @@ Antes que nada, para añdir o eliminar un elemento al final de una matriz podemo
 
 Volvamos al ejemplo que describimos anteriormente — imprima los nombres de los productos y los precios en una factura, luego, sume los precios e imprímelos en la parte inferior. En el ejemplo editable a continuación, hay comentarios que contienen números — cada uno de estos marca un lugar donde debe agregar algo al código. Ellos son los siguientes:
 
-1. Debajo de `// number 1` hay un número de cadena, cada una de las cuales contiene un nombre de producto y un precio separados por dos puntos. Nos gustaría que conviertas esto en una matriz y lo almacenamos en una matriz llamda `products`.
-2. En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el [bucle for](/es/docs/Learn/JavaScript/First_steps/A_first_splash#loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud la matriz `products` .
-3. Justo debajo del comentario `// number 3` queremos que escriba una línea de código que divide el elemento actual de la matriz (`nombre:precio`) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo [Métodos de cadenas útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) para obtener ayuda o, mejor aún, consulte la sección [Conversión entre cadenas y matrices](#converting_between_strings_and_arrays) de este artículo.
+1. Debajo de `// number 1` hay un número de cadena, cada una de las cuales contiene un nombre de producto y un precio separados por dos puntos. Nos gustaría que conviertas esto en un arreglo y lo almacenamos en un arreglo llamda `products`.
+2. En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el [bucle for](/es/docs/Learn/JavaScript/First_steps/A_first_splash#loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud del arreglo `products` .
+3. Justo debajo del comentario `// number 3` queremos que escriba una línea de código que divide el elemento actual del arreglo (`nombre:precio`) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo [Métodos de cadenas útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) para obtener ayuda o, mejor aún, consulte la sección [Conversión entre cadenas y matrices](#converting_between_strings_and_arrays) de este artículo.
 4. Como parte de la línea de código anterior, también querras convertir el precio de una cadena a un número. Si no pudes recordar como hacerlo, consulta el [primer artículo de cadenas](/es/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
 5. Hay una variable llamada `total` que se crea y se le da un valor de 0 en la parte superior del código. Dentro del ciclo (debajo de `// number 4`) queremos que agregues una línea que añade el precio actual del artículo a ese total en cada iteración del ciclo, de modo que al final del código el total correcto se imprima en la factura. Es posible que necesites un [operador de asignación](/es/docs/Learn/JavaScript/First_steps/Math#assignment_operators) para hacer esto.
 6. Queremos que cambies la línea justo de bajo `// number 5` para que la variable `itemText` se iguale a "nombre de elemnto actual — $precio de elemento actual", por ejemplo "Zapatos — $23.99" en cada caso, por lo que la información correcta del artículo está impreso en la factura. Esto es simplemente una concatenación de cadenas, lo que debería ser familiar para ti.
@@ -481,7 +481,7 @@ body {
 
 ## Aprendizaje Activo: Top 5 búsquedas
 
-Un buen uso para los métodos de matriz como {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} es cuando estás manteniendo un registro de elementos actualmente activos en una aplicación web. En una escena animada por ejemplo, es posible que tengas una matriz de objetos que representan los gráficos de fondo que se muestran actualmente, y es posible que sólo desees que se muestren 50 a la vez, por razones de rendimiento o desorden. A medida que se crean y agregan nuevos objetos a la matriz, se puede eliminar los más antiguos de la matriz para mantener el número deseado.
+Un buen uso para los métodos de arreglo como {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} es cuando estás manteniendo un registro de elementos actualmente activos en una aplicación web. En una escena animada por ejemplo, es posible que tengas un arreglo de objetos que representan los gráficos de fondo que se muestran actualmente, y es posible que sólo desees que se muestren 50 a la vez, por razones de rendimiento o desorden. A medida que se crean y agregan nuevos objetos al arreglo, se puede eliminar los más antiguos del arreglo para mantener el número deseado.
 
 En este ejemplo vamos a mostrar un uso mucho más simple — aquí te daremos un sitio de búsqueda falso, con un cuadro de búsqueda. La idea es que cuando los términos se ingresan en un cuadro de búsqueda, se muetren el top 5 de términos de búsqueda previos en la lista. Cuando el número de términos supera el 5, el último término comienza a borrarse cada vez que agregas un nuevo término a la parte superior, por lo que siempre se muestran los 5 términos anteriores.
 
@@ -489,8 +489,8 @@ En este ejemplo vamos a mostrar un uso mucho más simple — aquí te daremos un
 
 Para completar la aplicación necesitamos:
 
-1. Agregar una línea debajo del comentario `// number 1` que agrega el valor actual ingresado en la entrada de la búsqueda al inicio de la matriz. Esto se puede recuperar usando `searchInput.value`.
-2. Agrega una línea debajo del comentario `// number 2` que elimina el valor actualmente al final de la matriz.
+1. Agregar una línea debajo del comentario `// number 1` que agrega el valor actual ingresado en la entrada de la búsqueda al inicio del arreglo. Esto se puede recuperar usando `searchInput.value`.
+2. Agrega una línea debajo del comentario `// number 2` que elimina el valor actualmente al final del arreglo.
 
 ```html hidden
 <h2>Salida en vivo</h2>
@@ -661,7 +661,7 @@ textarea.onkeyup = function () {
 
 ## Conclusión
 
-Después de leer este artículo, estamos seguros de que estaras de acuerdo en que las matrices parecen bastante útiles; las verás aparecer en todas partes en JavaScript, a menudo en asociación con bucles para hacer una misma cosa con cada elemento de la matriz. Te enseñaremos todos los aspectos básicos útiles que hay que conocer sobre los bucles en el siguiente módulo, pero por ahora debes darte un aplauso y tomarte un merecido descanso; ¡has trabajado en todos los artículos de este módulo!
+Después de leer este artículo, estamos seguros de que estaras de acuerdo en que las matrices parecen bastante útiles; las verás aparecer en todas partes en JavaScript, a menudo en asociación con bucles para hacer una misma cosa con cada elemento del arreglo. Te enseñaremos todos los aspectos básicos útiles que hay que conocer sobre los bucles en el siguiente módulo, pero por ahora debes darte un aplauso y tomarte un merecido descanso; ¡has trabajado en todos los artículos de este módulo!
 
 Lo único que queda por hacer es trabajar a través de la evaluación de este módulo, que te pondrá a prueba tu comprensión de los de los artículos anteriores.
 

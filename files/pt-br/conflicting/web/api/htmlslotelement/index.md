@@ -29,7 +29,7 @@ _Esta interface herda os méthodos de {{domxref("HTMLElement")}}._
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLContentElement")}}
+{{Compat}}
 
 ## Veja também
 

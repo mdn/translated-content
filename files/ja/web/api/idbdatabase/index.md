@@ -117,7 +117,7 @@ const objectStore = db
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBDatabase")}}
+{{Compat}}
 
 ## 関連情報
 

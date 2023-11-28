@@ -19,8 +19,6 @@ HTML 表单可以声明式地发送一个 [HTTP](/zh-CN/docs/Web/HTTP) 请求。
 
 许多现代用户界面只使用 HTML 表单来收集用户输入，而不是用于数据提交。当用户尝试发送数据时，应用程序会控制并在后台异步传输数据，只更新用户界面中需要更改的部分。
 
-异步发送任意数据一般称为 [AJAX](/zh-CN/docs/Web/Guide/AJAX)，它代表“**异步 JavaScript 和 XML**”。
-
 ### 表单提交和 AJAX 请求之间的区别？
 
 {{domxref("XMLHttpRequest")}}（XHR）DOM 对象可以构建 HTTP 请求、发送请求并获取结果。从历史上看，{{domxref("XMLHttpRequest")}} 是为获取和发送 [XML](/zh-CN/docs/Web/XML) 作为交换格式而设计的，后来这种格式被 [JSON](/zh-CN/docs/Glossary/JSON) 所取代。但是，XML 和 JSON 都不适合表单数据请求编码。表单数据（`application/x-www-form-urlencoded`）由键/值对的 URL 编码列表组成。为了传输二进制数据，HTTP 请求被重塑为 `multipart/form-data`。
@@ -113,7 +111,7 @@ btn.addEventListener("click", () => {
 
 {{domxref("FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。
 
-该对象的使用详见[使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)，下面是两个示例：
+该对象的使用详见[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)，下面是两个示例：
 
 #### 使用一个独立的 FormData 对象
 

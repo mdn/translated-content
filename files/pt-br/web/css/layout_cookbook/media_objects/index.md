@@ -63,8 +63,8 @@ Os vários métodos de layout tem suporte diferente para os navegadores. Veja os
 
 #### Áreas de Modelo de Grade
 
-{{Compat("css.properties.grid-template-areas")}}
+{{Compat}}
 
 #### Flutuador
 
-{{Compat("css.properties.float")}}
+{{Compat}}

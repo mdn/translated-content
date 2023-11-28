@@ -128,7 +128,7 @@ Number("100a"); // NaN
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number")}}
+{{Compat}}
 
 ## Veja também
 

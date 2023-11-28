@@ -49,7 +49,7 @@ Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.matchAll")}}
+{{Compat}}
 
 ## Veja também
 

@@ -13,6 +13,7 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 - `true` 或*空字符串*，表示元素是可编辑的。
 - `false` 表示元素不是可编辑的。
+- `plaintext-only` 表示元素的原始文本是可编辑的，但富文本格式会被禁用。
 
 如果没有设置该属性的值（例如：`<label contenteditable>Example Label</label>`），则其值被视为空字符串。
 

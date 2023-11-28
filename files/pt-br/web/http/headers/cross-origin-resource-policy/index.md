@@ -44,7 +44,7 @@ Para mais exemplos, veja <https://resourcepolicy.fyi/>.
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Cross-Origin-Resource-Policy")}}
+{{Compat}}
 
 ## Veja também
 

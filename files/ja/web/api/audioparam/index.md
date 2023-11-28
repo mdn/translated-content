@@ -79,7 +79,7 @@ biquadFilter.gain.value = 25;
 
 ## Browser compatibility
 
-{{Compat("api.AudioParam")}}
+{{Compat}}
 
 ## See also
 

@@ -48,7 +48,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Cross-Origin-Resource-Policy")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -63,7 +63,7 @@ HTML marquee 元素（`<marquee>`）用来插入一段滚动的文字。你可�
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"> This text will bounce </marquee>
+  <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
 ```
 
