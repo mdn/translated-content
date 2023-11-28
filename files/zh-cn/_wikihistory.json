@@ -32765,13 +32765,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/Window/scrollX": {
-    "modified": "2019-03-23T22:24:38.179Z",
-    "contributors": ["Ende93"]
-  },
-  "conflicting/Web/API/Window/scrollY": {
-    "modified": "2019-08-28T13:19:48.429Z",
-    "contributors": ["Bayes", "Ende93"]
   }
 }
