@@ -34,7 +34,7 @@ transferToFixedLength(newByteLength)
 
 ## 描述
 
-和 {{jsxref("ArrayBuffer/transfer", "transfer()")}} 不同，`transferToFixedLength()` 总是创建一个不可调整大小的 `ArrayBuffer`。这意味着 `newByteLength` 可以比 `maxByteLength` 大，即使此 `ArrayBuffer` 是可调整大小的。有关更多信息，请参阅[传输 ArrayBuffers](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#传输_arraybuffer)。
+和 {{jsxref("ArrayBuffer/transfer", "transfer()")}} 不同，`transferToFixedLength()` 总是创建一个不可调整大小的 `ArrayBuffer`。这意味着 `newByteLength` 可以比 `maxByteLength` 大，即使此 `ArrayBuffer` 是可调整大小的。有关更多信息，请参阅[传输 ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#传输_arraybuffer)。
 
 ## 示例
 
