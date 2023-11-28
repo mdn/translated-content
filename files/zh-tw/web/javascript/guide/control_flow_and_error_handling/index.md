@@ -227,7 +227,7 @@ console.log("Is there anything else you'd like?");
 throw expression;
 ```
 
-您可以拋出任何運算式，而不僅僅是特定類型的運算式。以下的程式碼會拋出一些不同類型的例外：
+你可以拋出任何運算式，而不僅僅是特定類型的運算式。以下的程式碼會拋出一些不同類型的例外：
 
 ```js
 throw "Error2"; // 字串形態
@@ -240,7 +240,7 @@ throw {
 };
 ```
 
-> **備註：** 您可以在拋出例外時指定物件。然後，可以在 catch 區塊中引用對象的屬性。
+> **備註：** 你可以在拋出例外時指定物件。然後，可以在 catch 區塊中引用對象的屬性。
 
 ```js
 // 創建類型爲 UserException 的物件
@@ -310,7 +310,7 @@ catch (catchID) {
 }
 ```
 
-`catch` 區塊指定用來保存 `throw` 陳述式所丟出的值的標識符（前面語法中的 `catchID`） 您可以使用此標識符獲取有關被拋出的例外的信息。 JavaScript 在進入`catch` 區塊時創建此標識符; 標識符僅持續 `catch` 區塊的持續時間；在 `catch` 區塊完成執行後，標識符不再可用。
+`catch` 區塊指定用來保存 `throw` 陳述式所丟出的值的標識符（前面語法中的 `catchID`） 你可以使用此標識符獲取有關被拋出的例外的信息。 JavaScript 在進入`catch` 區塊時創建此標識符; 標識符僅持續 `catch` 區塊的持續時間；在 `catch` 區塊完成執行後，標識符不再可用。
 
 例如，下列的程式碼中丟出了一個例外，當例外發生後，控制權被轉交給 `catch` 區塊。
 
@@ -327,7 +327,7 @@ try {
 
 `finally` 區塊中包含在 `try` 和 `catch` 區塊執行之後但在 `try...catch` 陳述式之後的陳述式之前 執行的陳述式。 無論是否拋出例外，`finally` 區塊都會執行。 如果拋出例外，則即使沒有 `catch` 區塊處理例外，`finally` 區塊中的陳述式也會執行。
 
-您可以使用 `finally` 區塊來使腳本在發生例外時正常地結束。例如，您可能需要釋放腳本中綁定的資源。 在以下示例中，打開一個文件，然後執行使用該文件的陳述式（伺服器端 JavaScript 允許您訪問文件）。 如果在打開文件時拋出例外，`finally` 區塊會在腳本結束之前關閉文件。
+你可以使用 `finally` 區塊來使腳本在發生例外時正常地結束。例如，你可能需要釋放腳本中綁定的資源。 在以下示例中，打開一個文件，然後執行使用該文件的陳述式（伺服器端 JavaScript 允許你訪問文件）。 如果在打開文件時拋出例外，`finally` 區塊會在腳本結束之前關閉文件。
 
 ```js
 openMyFile();
@@ -396,9 +396,9 @@ try {
 
 ### 使用 `Error` 物件
 
-根據錯誤的類型，您可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)位於 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
+根據錯誤的類型，你可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)位於 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
 
-假如您要丟出自定義的例外， 為了方便使用這些屬性（例如，如果你的 `catch` 區塊並不要區分你自己的例外和系統的），你可以使用 `Error` 構造子。舉例來說：
+假如你要丟出自定義的例外， 為了方便使用這些屬性（例如，如果你的 `catch` 區塊並不要區分你自己的例外和系統的），你可以使用 `Error` 構造子。舉例來說：
 
 ```js
 function doSomethingErrorProne () {
@@ -420,7 +420,7 @@ catch (e) {
 
 ## Promises 容器
 
-從 ECMAScript2015 起，JavaScript 支援 {{jsxref("Promise")}} 物件，允許您控制延遲和異步操作的流程。
+從 ECMAScript2015 起，JavaScript 支援 {{jsxref("Promise")}} 物件，允許你控制延遲和異步操作的流程。
 
 `Promise` 有以下幾種狀態:
 
@@ -431,7 +431,7 @@ catch (e) {
 
 ### 使用 XHR 載入圖檔
 
-這裏有個簡單的範例，使用了 `Promise` 物件與及 [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入 MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html) repository 中的一張圖檔。你也可以[觀看結果](http://mdn.github.io/promises-test/)。 每一步都有註解來讓您慢慢理解 Promise 物件與及 XHR 架構。 下面的版本沒有註解，但藉由觀察 `Promise` 物件的變動您或許可以對 promise 物件有所了解:
+這裏有個簡單的範例，使用了 `Promise` 物件與及 [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入 MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html) repository 中的一張圖檔。你也可以[觀看結果](http://mdn.github.io/promises-test/)。 每一步都有註解來讓你慢慢理解 Promise 物件與及 XHR 架構。 下面的版本沒有註解，但藉由觀察 `Promise` 物件的變動你或許可以對 promise 物件有所了解:
 
 ```js
 function imgLoad(url) {
