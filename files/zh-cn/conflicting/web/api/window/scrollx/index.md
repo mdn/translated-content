@@ -1,6 +1,7 @@
 ---
 title: Window.pageXOffset
-slug: Web/API/Window/pageXOffset
+slug: conflicting/Web/API/Window/scrollX
+original_slug: Web/API/Window/pageXOffset
 ---
 
 {{ APIRef() }}

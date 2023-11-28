@@ -1,6 +1,7 @@
 ---
 title: Window.pageYOffset
-slug: Web/API/Window/pageYOffset
+slug: conflicting/Web/API/Window/scrollY
+original_slug: Web/API/Window/pageYOffset
 ---
 
 {{ APIRef("CSSOM View") }}

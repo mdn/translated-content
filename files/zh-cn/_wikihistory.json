@@ -15485,14 +15485,6 @@
     "modified": "2019-03-23T23:10:28.668Z",
     "contributors": ["teoli", "AlexChao"]
   },
-  "Web/API/Window/pageXOffset": {
-    "modified": "2019-03-23T22:24:38.179Z",
-    "contributors": ["Ende93"]
-  },
-  "Web/API/Window/pageYOffset": {
-    "modified": "2019-08-28T13:19:48.429Z",
-    "contributors": ["Bayes", "Ende93"]
-  },
   "Web/API/Window/pagehide_event": {
     "modified": "2020-11-12T00:42:52.516Z",
     "contributors": ["xgqfrms"]
@@ -32773,5 +32765,13 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/API/Window/scrollX": {
+    "modified": "2019-03-23T22:24:38.179Z",
+    "contributors": ["Ende93"]
+  },
+  "conflicting/Web/API/Window/scrollY": {
+    "modified": "2019-08-28T13:19:48.429Z",
+    "contributors": ["Bayes", "Ende93"]
   }
 }
