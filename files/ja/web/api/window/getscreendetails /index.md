@@ -1,47 +1,42 @@
 ---
-title: "Window: getScreenDetails() method"
-short-title: getScreenDetails()
+title: "Window: getScreenDetails()"
 slug: Web/API/Window/getScreenDetails
-page-type: web-api-instance-method
-status:
-  - experimental
-browser-compat: api.Window.getScreenDetails
+l10n:
+  sourceCommit: e089abbca14964a8ce945135d954cbfd098fd6f7
 ---
 
 {{APIRef("Window Management API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`getScreenDetails()`** method of the
-{{domxref("Window")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object instance representing the details of all the screens available to the user's device.
-
-## Syntax
+{{domxref("Window")}} インターフェイスの **`getScreenDetails()`** メソッドは、ユーザーのデバイスで利用できるすべての画面の詳細を表す {{domxref("ScreenDetails")}} オブジェクト インスタンスで満たされる {{domxref("Promise")}} を返します。
+## 構文
 
 ```js-nolint
 getScreenDetails()
 ```
 
-### Parameters
+### 引数
 
-None.
+なし。
 
-### Return value
+### 返値
 
-A {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object instance.
+{{domxref("ScreenDetails")}} オブジェクト インスタンスで満たされる {{jsxref("Promise")}}。
 
-### Exceptions
+### 例外
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if a {{httpheader("Permissions-Policy/window-management", "window-management")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is set that blocks use of the [Window Management API](/en-US/docs/Web/API/Window_Management_API), or if the user has explicitly denied the browser's permission request to use the API.
+  - : [Permissions-Policy](/ja/docs/Web/HTTP/Permissions_Policy) によって [Window Management API](/ja/docs/Web/API/Window_Management_API) の使用がブロックされている場合、またはユーザーが明示的にブラウザのパーミッションリクエストを拒否した場合にスローされます。
 
-## Examples
+## 例
 
-When `getScreenDetails()` is invoked, the user will be asked for permission to manage windows on all their displays (the status of this permission can be checked using {{domxref("Permissions.query()")}} to query `window-management`). Provided they grant permission, the resulting {{domxref("ScreenDetails")}} object contains details of all the screens available to the user's system.
+`getScreenDetails()` が呼び出されると、ユーザーに対してすべてのディスプレイでウィンドウを管理する許可を求めるダイアログが表示されます（この許可の状態は、`window-management` をクエリするために {{domxref("Permissions.query()")}} を使用して確認できます）。許可が与えられた場合、結果として得られる {{domxref("ScreenDetails")}} オブジェクトには、ユーザーのシステムで利用可能なすべてのスクリーンの詳細が含まれています。
 
-The below example opens a full-size window on each available display.
+以下の例では、利用可能な各ディスプレイ上でフルサイズのウィンドウが開きます。
 
 ```js
 const screenDetails = await window.getScreenDetails();
 
-// Open a full-size window on each screen available to the device
+// 端末で使用可能のすべてのスクリーンに対して、フルスクリーンのウィンドウを開きます
 for (const screen of screenDetails.screens) {
   window.open(
     "https://example.com",
@@ -54,16 +49,16 @@ for (const screen of screenDetails.screens) {
 }
 ```
 
-> **Note:** See [Multi-window learning environment](https://mdn.github.io/dom-examples/window-management-api/) for a full example (see the [source code](https://github.com/mdn/dom-examples/tree/main/window-management-api) also).
+> **注意:** 完全な例については、[マルチウィンドウ学習環境](https://mdn.github.io/dom-examples/window-management-api/)を参照してください([ソースコード](https://github.com/mdn/dom-examples/tree/main/window-management-api)も参照してください。)
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Window Management API](/en-US/docs/Web/API/Window_Management_API)
+- [Window Management API](/ja/docs/Web/API/Window_Management_API)
