@@ -5,13 +5,13 @@ slug: Web/API/Fullscreen_API
 
 {{DefaultAPISidebar("Fullscreen API")}}
 
-全螢幕 API 提供一個簡便的方式使網頁可以使用佔用使用者的整個螢幕的方式來顯示內容。該 API 讓您能夠容易地指示瀏覽器使某個元素及其子系（如有）佔用整個螢幕，並隱藏螢幕上所有瀏覽器使用者介面及其他應用程式。
+全螢幕 API 提供一個簡便的方式使網頁可以使用佔用使用者的整個螢幕的方式來顯示內容。該 API 讓你能夠容易地指示瀏覽器使某個元素及其子系（如有）佔用整個螢幕，並隱藏螢幕上所有瀏覽器使用者介面及其他應用程式。
 
-> **備註：** 目前並非所有瀏覽器均使用 API 的沒有前綴的版本。請查閱有關前綴以及名稱差異的表格（您也可以使用 Fscreen 來提供跨瀏覽器 API 存取）。
+> **備註：** 目前並非所有瀏覽器均使用 API 的沒有前綴的版本。請查閱有關前綴以及名稱差異的表格（你也可以使用 Fscreen 來提供跨瀏覽器 API 存取）。
 
 ## 啟動全螢幕模式
 
-如果您有一個元素打算以全螢幕模式展示（例如 {{ HTMLElement("video") }}），您可以呼叫該元素之 {{ domxref("Element.requestFullscreen()") }} 方法使之以全螢幕模式顯示。
+如果你有一個元素打算以全螢幕模式展示（例如 {{ HTMLElement("video") }}），你可以呼叫該元素之 {{ domxref("Element.requestFullscreen()") }} 方法使之以全螢幕模式顯示。
 
 考慮此 {{ HTMLElement("video") }} 元素：
 
@@ -39,7 +39,7 @@ if (elem.requestFullscreen) {
 
 ### 呈現差異
 
-值得留意的是，Gecko 及 WebKit 的實作有關鍵分別：Gecko 會增加 CSS 規則讓全螢幕的元素展延至填滿整個螢幕："`width: 100%; height: 100%`"。WebKit 則不會執行此動作，取而代之的是把該元素置中，並以原先的大小顯示。要取得同樣的全螢幕行為，您需要為該元素自行添加 "`width: 100%; height: 100%;`" 的 CSS 規則：
+值得留意的是，Gecko 及 WebKit 的實作有關鍵分別：Gecko 會增加 CSS 規則讓全螢幕的元素展延至填滿整個螢幕："`width: 100%; height: 100%`"。WebKit 則不會執行此動作，取而代之的是把該元素置中，並以原先的大小顯示。要取得同樣的全螢幕行為，你需要為該元素自行添加 "`width: 100%; height: 100%;`" 的 CSS 規則：
 
 ```css
 #myvideo:-webkit-full-screen {
@@ -48,11 +48,11 @@ if (elem.requestFullscreen) {
 }
 ```
 
-另一方面，如果您嘗試在 Gecko 上模擬 WebKit 的行為，您需要把呈現的元素放置在另一個實際調整為全螢幕的元素裡面，再使用 CSS 規則來調整內部元素至您想要的外觀。
+另一方面，如果你嘗試在 Gecko 上模擬 WebKit 的行為，你需要把呈現的元素放置在另一個實際調整為全螢幕的元素裡面，再使用 CSS 規則來調整內部元素至你想要的外觀。
 
 ### 通知
 
-如果成功進入全螢幕模式，包含該元素的文件將會接收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。當離開全螢幕模式時，則會收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。注意 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。
+如果成功進入全螢幕模式，包含該元素的文件將會接收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。當離開全螢幕模式時，則會收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。注意 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示你正在處於全螢幕模式。
 
 ### 全螢幕要求失敗
 
@@ -62,7 +62,7 @@ if (elem.requestFullscreen) {
 
 ## 離開全螢幕模式
 
-使用者永遠可以自行離開全螢幕模式，詳見 [Things your users want to know](#things_your_users_want_to_know)。您也可以呼叫 {{domxref("Document.exitFullscreen()")}} 方法來達到相同效果。
+使用者永遠可以自行離開全螢幕模式，詳見 [Things your users want to know](#things_your_users_want_to_know)。你也可以呼叫 {{domxref("Document.exitFullscreen()")}} 方法來達到相同效果。
 
 ## 其他資訊
 
@@ -71,11 +71,11 @@ if (elem.requestFullscreen) {
 - {{ domxref("document.fullscreenElement", "fullscreenElement") }}
   - : `fullscreenElement` 屬性傳回正在顯示為全螢幕模式的 {{ domxref("element") }}。如其為非 null 值，表示文件目前在全螢幕模式。如其為 null，表示文件目前不在全螢幕模式。
 - {{ domxref("document.fullscreenEnabled", "fullscreenEnabled") }}
-  - : `fullscreenEnabled` 屬性傳回文件是否容許您要求進入全螢幕訊息。
+  - : `fullscreenEnabled` 屬性傳回文件是否容許你要求進入全螢幕訊息。
 
 ## 使用者可能想了解的訊息
 
-您可能會讓使用者知道他們可以按 <kbd>ESC</kbd> 或 <kbd>F11</kbd> 鍵來離開全螢幕模式。
+你可能會讓使用者知道他們可以按 <kbd>ESC</kbd> 或 <kbd>F11</kbd> 鍵來離開全螢幕模式。
 
 此外，瀏覽其他頁面、切換分頁、或切換到其他應用程式（例如按 鍵）亦會離開全螢幕模式。
 
