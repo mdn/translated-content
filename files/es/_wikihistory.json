@@ -15299,9 +15299,9 @@
       "jesanchez"
     ]
   },
-  "orphaned/Web/HTML/Element/applet": {
-    "modified": "2019-03-23T23:42:26.076Z",
-    "contributors": ["Sebastianz", "teoli", "Jorolo"]
+  "orphaned/Web/HTML/Element/blink": {
+    "modified": "2019-10-10T16:37:40.291Z",
+    "contributors": ["teoli", "jcr4"]
   },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-10-05T04:48:52.506Z",

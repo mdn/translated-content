@@ -695,7 +695,6 @@
 /es/docs/HTML/Elemento/abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/HTML/Elemento/acronym	/es/docs/Web/HTML/Element/acronym
 /es/docs/HTML/Elemento/address	/es/docs/Web/HTML/Element/address
-/es/docs/HTML/Elemento/applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/HTML/Elemento/area	/es/docs/Web/HTML/Element/area
 /es/docs/HTML/Elemento/article	/es/docs/Web/HTML/Element/article
 /es/docs/HTML/Elemento/aside	/es/docs/Web/HTML/Element/aside
@@ -790,7 +789,6 @@
 /es/docs/HTML:Elemento:abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/HTML:Elemento:acronym	/es/docs/Web/HTML/Element/acronym
 /es/docs/HTML:Elemento:address	/es/docs/Web/HTML/Element/address
-/es/docs/HTML:Elemento:applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/HTML:Elemento:area	/es/docs/Web/HTML/Element/area
 /es/docs/HTML:Elemento:b	/es/docs/Web/HTML/Element/b
 /es/docs/HTML:Elemento:base	/es/docs/Web/HTML/Element/base
@@ -2013,7 +2011,6 @@
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
 /es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
-/es/docs/Web/HTML/Element/applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Element/bgsound	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Element/content	/es/docs/Web/HTML/element/slot
@@ -2026,7 +2023,6 @@
 /es/docs/Web/HTML/Elemento/abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/Web/HTML/Elemento/acronym	/es/docs/Web/HTML/Element/acronym
 /es/docs/Web/HTML/Elemento/address	/es/docs/Web/HTML/Element/address
-/es/docs/Web/HTML/Elemento/applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/Web/HTML/Elemento/area	/es/docs/Web/HTML/Element/area
 /es/docs/Web/HTML/Elemento/article	/es/docs/Web/HTML/Element/article
 /es/docs/Web/HTML/Elemento/aside	/es/docs/Web/HTML/Element/aside
