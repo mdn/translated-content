@@ -66,6 +66,6 @@ ng build -c production
 
 ## 總結
 
-以上。希望您喜歡 Angular！
+以上。希望你喜歡 Angular！
 
 {{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
