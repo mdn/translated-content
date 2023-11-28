@@ -1,6 +1,8 @@
 ---
 title: ArrayBuffer.prototype.maxByteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/maxByteLength
+l10n:
+  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
 {{JSRef}}
