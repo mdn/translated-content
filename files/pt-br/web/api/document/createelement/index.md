@@ -65,7 +65,7 @@ function adcElemento() {
 - Antes do Gecko 2.0 você podia incluir os símbolos de menor que e maior que em volta da `tagName` no modo _quirks_; a partir do Gecko 2.0, a função comporta-se da mesma forma em ambos os modos _quirks_ e estrito.
 - A partir do Gecko 19.0, `createElement(null)` funciona como `createElement("null")`. Note que o Opera torna `null` uma _string_, mas ambos Chrome e Internet Explorer lançarão erros.
 - A partir do Gecko 22.0 `createElement()` não mais usa a interface {{domxref("HTMLSpanElement")}} quando o argumento é "bgsounds", "multicol", or "image". Ao invés disso, `HTMLUnknownElement` é usado para "bgsound", "multicol" e {{domxref("HTMLElement")}} `HTMLElement` é usado para "image".
-- A implementação Gecko de `createElement` não se conforma à especificação DOM para documentos XUL e XHTML: `localName` e `namespaceURI` não estão definidos para `null` no elemento criado. Veja {{ Bug(280692) }} para detalhes.
+- A implementação Gecko de `createElement` não se conforma à especificação DOM para documentos XUL e XHTML: `localName` e `namespaceURI` não estão definidos para `null` no elemento criado. Veja [Firefox bug 280692](https://bugzil.la/280692) para detalhes.
 
 ## Especificações
 

@@ -277,7 +277,7 @@ var d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 ```
 
-注意類別並無法擴充一般(non-constructible 不可建構的)物件。如果您想要繼承自一般的物件，可以使用{{jsxref("Object.setPrototypeOf()")}}來達成。
+注意類別並無法擴充一般(non-constructible 不可建構的)物件。如果你想要繼承自一般的物件，可以使用{{jsxref("Object.setPrototypeOf()")}}來達成。
 
 ```js
 var Animal = {

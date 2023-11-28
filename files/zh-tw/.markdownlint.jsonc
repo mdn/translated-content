@@ -94,6 +94,12 @@
         "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
         "replace": "](/",
         "searchScope": "text"
+      },
+      {
+        "name": "force-pronoun",
+        "message": "Consider using '你' instead of '您'",
+        "searchPattern": "/您/g",
+        "searchScope": "text"
       }
     ]
   }
