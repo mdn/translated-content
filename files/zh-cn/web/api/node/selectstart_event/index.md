@@ -1,6 +1,5 @@
 ---
 title: Node：selectstart 事件
-short-title: selectstart
 slug: Web/API/Node/selectstart_event
 l10n:
   sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
