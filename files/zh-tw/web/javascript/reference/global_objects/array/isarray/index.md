@@ -77,7 +77,7 @@ arr instanceof Array; // false
 
 ## Polyfill
 
-如果 `Array.isArray()` 不存在於您的環境，在其他程式碼前執行下列程式碼可建置 `Array.isArray()`。
+如果 `Array.isArray()` 不存在於你的環境，在其他程式碼前執行下列程式碼可建置 `Array.isArray()`。
 
 ```js
 if (!Array.isArray) {
