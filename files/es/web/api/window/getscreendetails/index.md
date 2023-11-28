@@ -1,5 +1,5 @@
 ---
-title: "Método: window.getScreenDetails()"
+title: "Window: método getScreenDetails()"
 slug: Web/API/Window/getScreenDetails
 l10n:
   sourceCommit: e089abbca14964a8ce945135d954cbfd098fd6f7
@@ -23,7 +23,7 @@ Ninguno.
 
 Una {{jsxref("Promise", "Promesa")}} que cumple con la instancia de un objeto {{domxref("ScreenDetails")}}.
 
-### Errores
+### Excepciones
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Se produce si se establece una [Politica de permisos](/es/docs/Web/HTTP/Permissions_Policy) de {{httpheader("Permissions-Policy/window-management", "administración de ventanas")}} que bloquea el uso del [API de administracion de ventanas](/es/docs/Web/API/Window_Management_API), o si el usuario ha negado explícitamente la solicitud de permiso del navegador para utilizar la API.
