@@ -28,7 +28,7 @@ Windows, Linux, macOS におけるコード値は、 [KeyboardEvent: コード�
 
 #### HTML
 
-```html
+```html-nolint
 <p>
   キーボードのキーを押して、 KeyboardEvent のキーとコードの値がそれぞれどうなっているかを確認しましょう。
 </p>
