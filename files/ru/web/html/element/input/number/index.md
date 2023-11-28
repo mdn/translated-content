@@ -70,7 +70,7 @@ This value must be less than or equal to the value of the `max` attribute.
 
 `<input type="number">` elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper `type` value, `number`, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.
 
-> **Предупреждение:** **Important**: Bear in mind that logically you should not be able to enter characters inside a number of input other than numbers. There seems to be some disagreement about this among browsers; see {{bug(1398528)}}.
+> **Предупреждение:** **Important**: Bear in mind that logically you should not be able to enter characters inside a number of input other than numbers. There seems to be some disagreement about this among browsers; see [Firefox bug 1398528](https://bugzil.la/1398528).
 
 > **Примечание:** It's crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have any security implications of any kind.
 

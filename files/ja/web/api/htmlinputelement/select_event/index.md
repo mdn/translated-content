@@ -1,8 +1,9 @@
 ---
 title: "HTMLInputElement: select イベント"
+short-title: select
 slug: Web/API/HTMLInputElement/select_event
 l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
