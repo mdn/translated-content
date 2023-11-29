@@ -4,17 +4,9 @@ slug: Web/HTML/Element/em
 ---
 
 ## 简介
+**`<em>`**（英文全称：emphasis）元素标记出需要用户着重阅读的内容， `<em>` 元素是可以嵌套的，嵌套层次越深，则其包含的内容被认定为越需要着重阅读。
 
-**HTML 着重元素** (**`<em>`**) 标记出需要用户着重阅读的内容， `<em>` 元素是可以嵌套的，嵌套层次越深，则其包含的内容被认定为越需要着重阅读。
-
-> **备注：** 通常地，该元素会被浏览器展示为斜体文本，但是，它不应该仅仅用于应用斜体样式；为此目的，请使用 CSS 样式。使用 {{HTMLElement("cite")}} 元素标记作品的标题（书籍，戏剧，歌曲等）；它通常也采用斜体样式，但具有不同的含义。使用 {{HTMLElement("strong")}} 元素标记比周围文本更重要的文本。
-
-- _内容类别_
-  流内容，推辞内容，可触及内容
-- _Permitted content_ [Phrasing content](/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content).
-- _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content).
-- _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.
+> **备注：** 通常地，该元素会被浏览器展示为斜体文本，但是，它不应该仅仅用于应用斜体样式；为此目的，请使用 CSS {{cssxref("font-style")}} 样式。使用 {{HTMLElement("cite")}} 元素标记作品的标题（书籍，戏剧，歌曲等）；它通常也采用斜体样式，但具有不同的含义。使用 {{HTMLElement("strong")}} 元素标记比周围文本更重要的文本。
 
 ## 属性
 
@@ -34,6 +26,71 @@ slug: Web/HTML/Element/em
 ### 结果
 
 In HTML 5, what was previously called _block-level_ content is now called _flow_ content.
+
+## 技术概览
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容类别</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#flow_content"
+          >流内容</a
+        >,
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#phrasing_content"
+          >推辞内容</a
+        >, 可触及内容.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">emphasis</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>
+        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
+        inclusive, Firefox implements the
+        {{domxref("HTMLSpanElement")}} interface for this element.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## \<i> vs. \<em>
 
