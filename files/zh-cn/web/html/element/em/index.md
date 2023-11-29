@@ -60,12 +60,12 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
       <td>{{no_tag_omission}}</td>
     </tr>
     <tr>
-      <th scope="row">Permitted parents</th>
+      <th scope="row">允许的父元素</th>
       <td>
-        Any element that accepts
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
-          >phrasing content</a
-        >.
+        任何接受<a
+          href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >的元素。
       </td>
     </tr>
     <tr>
