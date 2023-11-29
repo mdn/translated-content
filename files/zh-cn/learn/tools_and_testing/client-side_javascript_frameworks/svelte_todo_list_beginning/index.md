@@ -2,7 +2,7 @@
 title: 开始编写我们的 Svelte 待办事项列表应用程序
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 l10n:
-  sourceCommit: 8be0eefa0e55fa6a963cfc01ce01a0d6d300f9d3
+  sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
 ---
 
 {{LearnSidebar}}
@@ -543,8 +543,8 @@ body {
   padding: 1rem;
   position: relative;
   box-shadow:
-    0 2px 4px 0 rgba(0, 0, 0, 0.2),
-    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+    0 2px 4px 0 rgb(0 0 0 / 20%),
+    0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
 @media screen and (min-width: 550px) {
   .todoapp {
