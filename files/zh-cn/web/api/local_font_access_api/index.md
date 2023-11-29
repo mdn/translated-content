@@ -11,13 +11,13 @@ l10n:
 
 ## 概念和用法
 
-[Web fonts](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts) 通过允许 Web 设计人员提供在 Web 文档上使用的自定义字体，在实现 Web 排版方面具有革命性意义。通过 {{cssxref("@font-face")}} at-规则指定，网络字体可以从 `url()` 函数中提供的 URL 加载。
+[Web fonts](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts) 通过允许 Web 设计人员提供在网页文档上使用的自定义字体，在实现 Web 排版方面具有革命性意义。通过 {{cssxref("@font-face")}} at-规则，网络字体可以通过 `url()` 函数中提供的 URL 加载。
 
 `@font-face` 还有其他几个有用的功能可用。特别是，你还可以在 `local()` 函数中指定字体的完整名称或 Postscript 名称，以告诉浏览器在用户计算机上安装了该字体时使用本地副本。这并非没有问题——`local()` 作为[指纹向量](https://developer.chrome.com/articles/local-fonts/#local-fonts-as-fingerprint-vector)已经变得臭名昭著。
 
 此外，由于准确的字体枚举和访问低级字体数据（例如，应用过滤器和转换）方面的挑战，高端设计工具历来难以在网络上提供。当前的应用程序通常依赖于解决方法，例如要求用户将字体上传到服务器，在服务器上处理字体以获取原始字节数据，或者安装单独的本地程序以提供附加功能。
 
-本地字体访问 API 的创建就是为了解决这些问题。
+Local Font Access API 的创建就是为了解决这些问题。
 
 {{domxref("Window.queryLocalFonts()")}} 方法提供对本地安装的字体的数组的访问，每个字体都由一个 {{domxref("FontData")}} 对象实例表示。{{domxref("FontData")}} 有多个属性，提供对名称、样式和字体族的访问，并且它还有一个 {{domxref("FontData.blob", "blob()")}} 方法，提供对包含底层字体文件的原始字节内容的 {{domxref("Blob")}} 的访问。
 
