@@ -47,9 +47,9 @@ Svelte 更贴近传统的 Web 开发模型（HTML、CSS、JS），它只是对 H
 
 现阶段的缺点是它目前仍在发展中——和其它成熟框架相比，它的生态环境较受到了工具、支持、插件、使用模式等等限制，工作机会也比较少。但它的优点应该足够让你感兴趣并去探索它。
 
-> **备注：** Svelte 具有 [TypeScript 支持](https://svelte.dev/blog/svelte-and-typescript)。我们将在之后的教学系列中讲到它。
+> **备注：** Svelte 具有[官方的 TypeScript 支持](https://svelte.dev/docs/typescript)。我们将在之后的教学系列中讲到它。
 
-我们鼓励你完成 [Svelte 教学](https://svelte.dev/tutorial/basics)来快速了解基本的概念，然后再回到此教学系列来学习如何建构一些更深入的东西。
+我们鼓励你完成 [Svelte 教程](https://learn.svelte.dev/)来快速了解基本的概念，然后再回到此教学系列来学习如何建构一些更深入的东西。
 
 ## 使用案例
 
@@ -57,25 +57,25 @@ Svelte 可以被用来开发一小块界面或整个应用程序。你也可以�
 
 不过 Svelte 特别适合处理下列几种情况：
 
-- 让 web 应用程序更适用于低功耗设备：使用 Svelte 建构的应用程序将拥有较小的包大小，特别适用于网络连接缓慢和处理能力有限的设备。因为程序代码较少，所以需要下载、解析、执行并保存于内存中的字节数也较少。
-- 可应付需频繁互动的页面或复杂的可视化需求：比如你建构一个数据可视化应用程序，你可能会需要显示大量的 DOM 元素，从该框架就能获得较好的性能增益，因为它不会有运行时的开销，可以确保使用者的互动更快速与实时。
-- 具备基本的 Web 开发知识即可：Svelte 学习曲线不高。Web 开发人员具备基本的 HTML、CSS、JavaScript 知识就能在短时间简单地掌握 Svelte 要点并开始建构 Web 应用程序。
+- 让 web 应用程序更适用于低功耗设备：使用 Svelte 建构的应用程序将拥有较小的捆绑包（bundle）大小，特别适用于网络连接缓慢和处理能力有限的设备。因为程序代码较少，所以需要下载、解析、执行并保存于内存中的字节数也较少。
+- 可应付需频繁交互的页面或复杂的可视化需求：比如你建构一个数据可视化应用程序，你可能会需要显示大量的 DOM 元素，从该框架就能获得较好的性能增益，因为它不会有运行时的开销，可以确保使用者的互动更快速与实时。
+- 具备基本的 Web 开发知识即可：Svelte 学习曲线不高。Web 开发人员具备基本的 HTML、CSS、JavaScript 知识就能在短时间简单地掌握 Svelte 的要点并开始构建 Web 应用程序。
 
-Svelte 团队推出了 [SvelteKit](https://kit.svelte.dev)，这是一个使用 Svelte 构建 Web 应用程序的框架。它包含了现代 Web 框架的特性，如基于文件系统的路由，服务器端渲染（SSR），页面特定的渲染模式，离线支持等。关于 SvelteKit 的更多信息，可以参考[官方教程](https://learn.svelte.dev)和[文档](https://kit.svelte.dev/docs)。
+Svelte 团队推出了 [SvelteKit](https://kit.svelte.dev)，这是一个使用 Svelte 构建 Web 应用程序的框架。它包含了现代 Web 框架的特性，如基于文件系统的路由、服务器端渲染（SSR）、页面特定的渲染模式、离线支持等。关于 SvelteKit 的更多信息，可以参考[官方教程](https://learn.svelte.dev)和[文档](https://kit.svelte.dev/docs)。
 
-> **备注：** SvelteKit 是设计用来取代 [Sapper](https://sapper.svelte.dev/) 的 Svelte 框架，它是建立 web 应用的推荐方案。
+> **备注：** 作为构建 Web 应用的推荐 Svelte 框架，SvelteKit 旨在取代 [Sapper](https://sapper.svelte.dev/)。
 
 Svelte 也可以通过 [Svelte Native](https://svelte-native.technology) 用于移动开发。
 
 ## Svelte 如何工作？
 
-作为一个编译程序，Svelte 能扩展 HTML、CSS、JavaScript，产生最佳的 JavaScript 程序代码而不会有任何运行途中的消耗。为了达成这个目的，Svelte 通过下列方法来扩展其原生 web 技术：
+作为一个编译程序，Svelte 能扩展 HTML、CSS、JavaScript，产生最佳的 JavaScript 程序代码而不会有任何运行时开销。为了达成这个目的，Svelte 通过下列方法来扩展其原生 web 技术：
 
-- 通过对 HTML 扩展允许标记 JavaScript 表达式和提供一些指令来使用条件和循环，做法和 handlebars 相似。
-- 通过对 CSS 扩展加上范围机制，允许每个组件去定义它们自己的样式，不会因为其它组件的样式改变而被影响。
-- 通过对 JavaScript 扩展重新诠释语言的一些特定指令来达到真实的响应式和减轻组件状态管理的复杂度。
+- 扩展 HTML：允许在标记中使用 JavaScript 表达式并提供了一些指令来使用条件和循环，做法和 handlebars 相似。
+- 扩展 CSS：添加作用域机制，并允许每个组件定义自己的样式（不会因为其它组件的样式改变而被影响）。
+- 扩展 JavaScript：重新解释一些特定指令来达到真实的响应式并减轻组件状态管理的复杂度。
 
-只有在非常特殊的情况和 Svelte 组件的上下文中编译程序才会介入。其中对 JavaScript 的扩展相对也比较少且谨慎，就是为了不破坏 JavaScript 一些语法，而使开发人员觉得困惑。事实上，你大部分时间还是会用到原生 JavaScript 来开发。
+只有在非常特殊的情况和 Svelte 组件的上下文中编译程序才会介入。其中对 JavaScript 的扩展也相对比较少且谨慎，就是为了不破坏 JavaScript 的语法，而使开发人员觉得困惑。事实上，你大部分时间还是会用到原生 JavaScript 来开发。
 
 ## Svelte 第一步
 
@@ -83,20 +83,20 @@ Svelte 也可以通过 [Svelte Native](https://svelte-native.technology) 用于�
 
 ### 条件
 
-要想使用 Svelte，你需要安装 [Node.js](https://nodejs.org/en/)。推荐使用长期支持版本（LTS）。Node 包含 npm（node 包管理器）和 npx（node 包运行器）。另外你也可以使用 Yarn 包管理工具来代替 npm，但我们先假定你用 npm 来走完这个教学系列。若想知道更多 npm 和 yarn 的相关信息可以至[基础包管理](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)了解。
+要想使用 Svelte，你需要安装 [Node.js](https://nodejs.org/en/)。推荐使用长期支持版本（LTS）。Node 包含 npm（node 包管理器）和 npx（node 包运行器）。另外你也可以使用 Yarn 包管理工具来代替 npm，但我们先假定你在教学系列中使用 npm。若想知道更多 npm 和 yarn 的相关信息，请参见[软件包管理基础](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
 
-如果你是使用 Windows 的话，你需要安装一些软件来达到和 Unix/macOS 操作系统终端一样的行为，为的是接下来的教学系列，可以使用到一些被提及的终端指令。Gitbash（[适用于 Windows 的 git 工具集](https://gitforwindows.org/)中的一部分功能）或使用[适用于 Linux 的 Windows 子系统（WSL）](https://docs.microsoft.com/zh-CN/windows/wsl/about)，这些都是蛮合适的解决方案。若想知道更多命令行的相关信息可以至[命令行课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)了解。
+如果你使用的是 Windows 的话，则需要安装一些软件来使其命令行与 Unix/macOS 的终端的行为一致，以便使用本教程中提到的终端命令。Gitbash（[适用于 Windows 的 git 工具集](https://gitforwindows.org/)中的一部分功能）或使用[适用于 Linux 的 Windows 子系统（WSL）](https://docs.microsoft.com/zh-CN/windows/wsl/about)，这些都是合适的解决方案。若想了解有关命令行的更多信息，请参见[命令行课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
 
 若想知道更多相关信息也可以阅读下列资料：
 
-- 可以至 npm 文档了解[“关于 npm 的信息”](https://docs.npmjs.com/about-npm)
-- 可以至 npm 博客了解[“介绍 npx”](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
+- npm 文档：[“关于 npm”](https://docs.npmjs.com/about-npm)
+- npm 博客：[“npx 介绍”](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
 
 ### 建构你的第一个 Svelte 应用程序
 
-最简单的方式就是使用入门模板来建构初始应用程序。你可以至 [sveltejs/template](https://github.com/sveltejs/template) 下载并解压缩入门模板或者使用 [degit](https://github.com/Rich-Harris/degit) 来做这件事。
+最简单的方式就是使用入门模板来建构初始应用程序。你可以访问 GitHub 上的 [sveltejs/template](https://github.com/sveltejs/template) 下载并解压起始模板或者使用 [degit](https://github.com/Rich-Harris/degit) 来做这件事。
 
-为了建构你第一个入门模板应用程序，请先执行下列终端指令：
+要构建你第一个起始模板应用程序，请先执行下列终端指令：
 
 ```bash
 npx degit sveltejs/template moz-todo-svelte
@@ -105,9 +105,9 @@ npm install
 npm run dev
 ```
 
-> **备注：** 不用太惊讶 degit 做了这么多事情——它其实就只是让你可以从 git 仓库下载和解压缩最新版本的内容。使用它比起使用 `git clone` 更快能达到我们的目的，因为它并不会下载整个仓库的历史以及不会创建完整的本地克隆。
+> **备注：** 不用太惊讶 degit 做了这么多事情——它其实就只是让你可以从 git 仓库下载和解压缩最新版本的内容。使用它比起使用 `git clone` 要快得多，因为它并不会下载整个仓库的历史记录，也不会创建完整的本地克隆。
 
-之后执行 `npm run dev`，Svelte 将会编译和建构你的应用程序。它会跑在本机 `localhost:8080` 地址。当你对源代码文件做了变动，Svelte 将会侦测到文件更新并自动地重新编译和刷新你的应用程序。你的浏览器将会显示如下图：
+执行 `npm run dev` 之后，Svelte 将会编译和建构你的应用程序。它会在 `localhost:8080` 上运行本地服务器。当你对源代码文件做了变动，Svelte 将会侦测到文件更新并自动地重新编译和刷新应用程序。你的浏览器将显示如下内容：
 
 ![一个简单的起始页，上面写着 hello world，并提供指向官方 svelte 教程的链接](01-svelte-starter-app.png)
 
@@ -140,34 +140,34 @@ moz-todo-svelte
 
 内容解释如下：
 
-- `package.json` 和 `package-lock.json`：Node.js/npm 用它来组织化管理你的项目。在这个教学系列中，你完全不需要了解这个文件，但如果你想要学习更多的话，你可以至 npmjs.com 阅读 [`package.json` 处理](https://docs.npmjs.com/cli/configuring-npm/package-json)；我们在[基础包管理教学系列](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)也有谈到。
-- `node_modules`：这里是 node 存放项目依赖的地方。这些依赖在正式环境不会用到，只有开发时才会被使用到。
+- `package.json` 和 `package-lock.json`：包含 Node.js/npm 用于组织化管理你的项目的信息。在这个教程中，你完全不需要了解这个文件，但如果你想要学习更多内容，你可以阅读 npmjs.com 上的 [`package.json` 处理](https://docs.npmjs.com/cli/configuring-npm/package-json)；我们在[软件包管理基础教程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)也有谈到。
+- `node_modules`：这里是 node 存放项目依赖的地方。这些依赖在生产环境中不会用到，只有开发时才会被使用到。
 - `.gitignore`：告诉 git 有哪些文件或文件夹不要纳入项目版本控制——如果你决定将应用程序包含在 git 仓库中，它还蛮实用的！
-- `rollup.config.js`：Svelte 使用 [rollup.js](https://rollupjs.org/) 作为模块打包工具。这个配置文件告诉 rollup 如何编译和构建你的应用程序。假如你偏好使用 [webpack](https://webpack.js.org/)，你可以改为执行 `npx degit sveltejs/template-webpack svelte-app` 来构建你的初始应用程序。
+- `rollup.config.js`：Svelte 使用 [rollup.js](https://rollupjs.org/) 作为模块打包工具。这个配置文件告诉 rollup 如何编译和构建你的应用程序。假如你偏好使用 [webpack](https://webpack.js.org/)，你可以改为执行 `npx degit sveltejs/template-webpack svelte-app` 来创建你的入门项目。
 - `scripts`：包含所需的设置脚本。现在应该只有 `setupTypeScript.js`。
 
-  - `setupTypeScript.js`：此脚本用来支持 Svelte 使用 TypeScript。我们将在之后的文章谈到更多。
+  - `setupTypeScript.js`：此脚本用来支持 Svelte 使用 TypeScript。我们将在之后的文章详细讨论这一点。
 
-- `src`：这个目录主要放你应用程序的源代码——你写的程序代码基本都会放在这。
+- `src`：这个目录主要放置应用程序的源代码——你创建的程序代码基本都会放在这里。
 
-  - `App.svelte`：在你的应用程序中它是最高层级的组件。不过它现在只会渲染出“Hello World!”的讯息给你看。
-  - `main.js`：我们应用程序的进入点。它会实例化 `App` 组件并将其绑定至我们 HTML 页面的 body 上。
+  - `App.svelte`：在你的应用程序中它是顶层组件。不过它现在只会渲染信息“Hello World!”。
+  - `main.js`：我们应用程序的入口点。它会实例化 `App` 组件并将其绑定至我们 HTML 页面的 body 上。
 
-- `public`：这个目录包含所有我们会发布于正式环境的文件。
+- `public`：这个目录包含我们会在生产环境中发布的所有文件。
 
   - `favicon.png`：这个是你应用程序的图标。现在应该会是 Svelte 的标志。
-  - `index.html`：这个是你应用程序的主页面。最初为一个空的 HTML5 页面，接着会载入由 Svelte 产生的 CSS 文件和 js 包。
-  - `global.css`：这个文件包含没有范围限制的样式。这是一个正规的 CSS 文件，将会套用至整个应用程序。
+  - `index.html`：这个是你应用程序的主页面。最初为一个空的，会载入由 Svelte 产生的 CSS 文件和 js 捆绑包的 HTML 页面。
+  - `global.css`：这个文件包含没有作用域限制的样式。这是一个常规的，会被应用到整个应用程序的 CSS 文件。
   - `build`：这个文件夹会包含那些编译生成的 CSS 和 JavaScript 源代码。
 
-    - `bundle.css`：所有定义于你个别组件中的样式，都会被 Svelte 编译生成至这个 CSS 文件中。
-    - `bundle.js`：所有你的 JavaScript 源代码都会被编译生成至这个 JavaScript 文件中。
+    - `bundle.css`：Svelte 根据每一个组件所定义的样式生产的 CSS 文件。
+    - `bundle.js`：从所有的 JavaScript 源代码编译而来的 JavaScript 文件。
 
-## 让我们来看看第一个 Svelte 组件
+## 查看第一个 Svelte 组件
 
 组件是 Svelte 应用程序建构的基础。组件位于 `.svelte` 文件中，可以使用 HTML 的超集来编写。
 
-总共有三个区块——`<script>`，`<styles>` 和标记（markup）区块——各区块存在与否由你决定。
+总共有三个部分——`<script>`、`<styles>` 和标记（markup）区块——它们都是可选的，而且可以按你喜欢的顺序排列。
 
 ```html
 <script>
@@ -181,7 +181,7 @@ moz-todo-svelte
 <!-- 标记（零或多个 HTML 元素）放这 -->
 ```
 
-> **备注：** 更多组件格式的信息，可以至 [Svelte 文件](https://svelte.dev/docs#Component_format)阅读。
+> **备注：** 有关组件格式的更多信息，请查看 [Svelte 组件文档](https://svelte.dev/docs/svelte-components)。
 
 接着我们来看入门模板中的 `src/App.svelte` 文件，你应该会看到以下内容：
 
@@ -221,9 +221,9 @@ moz-todo-svelte
 </style>
 ```
 
-### `<script>` 区块
+### `<script>` 部分
 
-`<script>` 区块包含组件实例被建构时运行的 JavaScript。组件标记区块则可以使用顶层那些被声明（或导入）的变量。顶层变量是 Svelte 用来处理组件状态的方式，它们默认是响应式的。我们之后会用更多细节来说明这个。
+`<script>` 区块包含组件实例被创建时运行的 JavaScript。顶层声明（或导入）的变量对于组件标记是“可见”的。顶层变量是 Svelte 用来处理组件状态的方式，它们默认是响应式的。我们之后会详细解释这意味着什么。
 
 ```html
 <script>
@@ -231,11 +231,11 @@ moz-todo-svelte
 </script>
 ```
 
-Svelte 使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 关键词将变量标记为属性，代表这个属性可以被外部其它组件存取。这是 Svelte 扩展 JavaScript 语法让其更有用且使用上如同以往的其中一个例子。
+Svelte 使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 关键字将变量声明为属性，代表这个属性可以被组件的使用者（例如，其它组件）访问。这是 Svelte 扩展 JavaScript 语法使其更有用且使用上如同以往的其中一个例子。
 
-### 标记区块
+### 标记部分
 
-标记区块中你可以插入任何 HTML，另外你也可以插入有效的 JavaScript 表达式在大括号（`{}`）中。此例中我们嵌入 `name` 属性值在 `Hello` 文字的右边。
+在标记部分，你可以插入任何 HTML，另外你也可以在一对大括号（`{}`）中插入有效的 JavaScript 表达式。此例中我们在 `Hello` 文本之后嵌入 `name` 属性值。
 
 ```html
 <main>
@@ -247,9 +247,9 @@ Svelte 使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export)
 </main>
 ```
 
-Svelte 也支持一些标签，像是 `{#if...}`、`{#each...}` 和 `{#await...}`——分别允许你可以条件式渲染部分标记区块，迭代列表元素与处理异步数值。
+Svelte 也支持一些标签，像是 `{#if...}`、`{#each...}` 和 `{#await...}`——分别允许你可以条件式地渲染标记中的一部分、迭代列表元素和处理异步值。
 
-### `<style>` 区块
+### `<style>` 部分
 
 假如你有写过一些 CSS，下面这段应该不会太陌生：
 
@@ -277,17 +277,17 @@ Svelte 也支持一些标签，像是 `{#if...}`、`{#each...}` 和 `{#await...}
 </style>
 ```
 
-我们现在对 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素套用了一些样式。对于其它组件中的 `<h1>` 元素们将会有什么影响呢？
+我们现在对 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素应用了一些样式。这对其它组件中的 `<h1>` 元素们将会有什么影响呢？
 
 在 Svelte 中，组件 `<style>` 区块中的 CSS 会被局限于该组件范围之内。这是通过对所选的元素加上一个类来实现，而这个类名则会是基于组件样式的哈希值。
 
-你可以观察到这个现象。在浏览器打开一个新标签，进入 `localhost:8080`，对准 _HELLO WORLD!_ 标签鼠标右键／按 <kbd>Ctrl</kbd> 键同时点击该标签，之后选择*检查*：
+你可以观察到这个现象。在浏览器打开一个新标签，进入 `localhost:8080`，对准 _HELLO WORLD!_ 标签鼠标右键/按 <kbd>Ctrl</kbd> 键同时点击该标签，之后选择*检查*：
 
 ![打开开发工具的 Svelte 入门应用程序，显示范围样式的类](02-svelte-component-scoped-styles.png)
 
-编译应用程序时，Svelte 会改变我们 `h1` 的样式定义为 `h1.svelte-1tky8bj` 并更改每一个在此组件中的 `<h1>` 元素为 `<h1 class="svelte-1tky8bj">`，如此就能让该组件取得所需的样式。
+编译应用程序时，Svelte 会将 `h1` 的样式定义改变为 `h1.svelte-1tky8bj` 并更改每一个在此组件中的 `<h1>` 元素为 `<h1 class="svelte-1tky8bj">`，如此就能让该组件取得所需的样式。
 
-> **备注：** 你也可以使用 `:global(...)` 修饰符覆写此行为并且套用样式至全局选择器上（可以至 [Svelte `<style>` 文件](https://svelte.dev/docs#style)阅读更多信息）。
+> **备注：** 你也可以使用 `:global()` 修饰符覆盖此行为并且应用全局选择器的样式（请参见 [Svelte `<style>` 文档](https://svelte.dev/docs/svelte-components#style)以了解更多信息）。
 
 ## 做一些小改变
 
@@ -297,15 +297,15 @@ Svelte 也支持一些标签，像是 `{#if...}`、`{#each...}` 和 `{#await...}
 <h1>Hello {name} from MDN!</h1>
 ```
 
-保存你的变更之后，`localhost:8080` 地址的应用程序将会自动更新。
+保存你的变更之后，运行在 `localhost:8080` 上的应用程序将会自动更新。
 
 ### 初见 Svelte 响应式
 
 在用户界面框架当中，响应式意味着当任何组件的状态被改变时，框架能够自动地更新 DOM。
 
-在 Svelte 中，可以通过在组件中指定新数值给任何顶层变量来触发响应。举个例子，我们可以在 `App` 组件中写一个 `toggleName()` 方法并通过一个按钮来触发它。
+在 Svelte 中，可以通过为组件中的任何顶层变量分配新值来触发响应。例如，我们可以在 `App` 组件中写一个 `toggleName()` 方法并通过一个按钮来运行它。
 
-尝试更新你的 `<script>` 和标记区块如下：
+尝试更新你的 `<script>` 和标记部分，如下：
 
 ```html
 <script>
@@ -324,21 +324,21 @@ Svelte 也支持一些标签，像是 `{#if...}`、`{#each...}` 和 `{#await...}
   <h1>Hello {name}!</h1>
   <button on:click="{toggleName}">Toggle name</button>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
 ```
 
-每当按钮被点击，Svelte 会执行 `toggleName()` 方法并更新 `name` 变量数值。
+每当按钮被点击，Svelte 会执行 `toggleName()` 函数并更新 `name` 变量的值。
 
-你可以看到 `<h1>` 标签已经自动地被更新。Svelte 在背后建立了一些 JavaScript 程序代码，每当 name 变量数值改变时，就会更新 DOM，而没有使用到任何虚拟 DOM 或复杂的协调机制。
+你可以看到 `<h1>` 标签已经自动地被更新。Svelte 在背后创建了一些 JavaScript 程序代码，每当 name 变量数值改变时，就会更新 DOM，而没有使用到任何虚拟 DOM 或复杂的协调机制。
 
-注意在 `on:click` 使用的 `:`。这是 Svelte 用于 DOM 事件监听的语法。
+注意在 `on:click` 中使用的 `:`。这是 Svelte 用于 DOM 事件监听的语法。
 
-## 检视 main.js：我们应用程序的进入点
+## 检视 main.js：我们应用程序的入口点
 
-让我们打开 `src/main.js`，`App` 组件正是在这里被加载并使用。这个文件是我们应用程序的进入点，起初内容如下：
+让我们打开 `src/main.js`，`App` 组件正是在这里被加载并使用的。这个文件是我们应用程序的入口点，初始内容如下：
 
 ```js
 import App from "./App.svelte";
@@ -353,7 +353,7 @@ const app = new App({
 export default app;
 ```
 
-`main.js` 一开始就会把我们要使用的 Svelte 组件加载。然后于第 3 行位置会传入具有如下属性的选项对象并实例化这个组件：
+`main.js` 一开始就会导入要使用的 Svelte 组件。然后在第 3 行的位置传入具有如下属性的选项对象并实例化这个组件：
 
 - `target`：决定我们想要把组件渲染在哪一个 DOM 元素上，此例为 `<body>` 元素。
 - `props`：指定 `App` 组件中的属性值。
@@ -362,9 +362,9 @@ export default app;
 
 Svelte 是如何很好地让所有文件协同工作？
 
-Svelte 编译程序处理每一个组件的 `<style>` 区块并编译它们至 `public/build/bundle.css` 文件中。
+Svelte 编译程序处理每一个组件的 `<style>` 部分并将它们编译到 `public/build/bundle.css` 文件中。
 
-它也编译每一个组件的标记和 `<script>` 区块并把结果储存至 `public/build/bundle.js`。它也会添加一些程序代码到 `src/main.js` 以帮助参考每一个组件的功能。
+它也编译每一个组件的标记和 `<script>` 部分并把结果储存至 `public/build/bundle.js`。它也会添加一些程序代码到 `src/main.js` 以引用每一个组件的功能。
 
 最后 `public/index.html` 文件会引入那些生成的 `bundle.css` 和 `bundle.js` 文件：
 
@@ -388,17 +388,17 @@ Svelte 编译程序处理每一个组件的 `<style>` 区块并编译它们至 `
 </html>
 ```
 
-`bundle.js` 的压缩版本容量大概 3KB 多一点，其中包含“Svelte 执行环境”（约 300 行 JavaScript 程序代码）和被编译后的 `App.svelte` 组件。可以看出，`bundle.js` 是唯一一个被 `index.html` 引用的 JavaScript 文件。网页没有载入其他库。
+`bundle.js` 的压缩版本容量大概 3KB 多一点，其中包含“Svelte 运行时”（约 300 行 JavaScript 程序代码）和被编译后的 `App.svelte` 组件。可以看出，`bundle.js` 是唯一一个被 `index.html` 引用的 JavaScript 文件。网页没有载入其他库。
 
-比起其它框架编译后的包，这要小的多。考虑到程序代码包这件事，问题不仅仅是需下载文件的大小，还包含将可执行程序代码解析、执行并保存于内存中。所以确实有蛮大的不同，特别是对于低功耗装置或 CPU 密集型应用程序而言。
+比起其它框架编译后的捆绑包，这要小的多。考虑到代码捆绑包这件事，问题不仅仅是需下载文件的大小，还包括将可执行代码解析、执行并保存于内存中。所以这很重要，特别是对于低功耗设备或 CPU 密集型应用程序而言。
 
-## 跟着这个教学系列
+## 跟随这个教程
 
-在这个教学系列你将建构一个完整的 web 应用程序。我们将学习有关 Svelte 的所有基础，以及一些进阶课题。
+在这个教学系列你将建构一个完整的 web 应用程序。我们将学习有关 Svelte 的所有基础，以及一些进阶内容。
 
-你可以只阅读内容来充分了解 Svelte 的一些特性，但如果你跟着我们一起撰写应用程序，将可以从本教学系列获得最大收益。为了让你可以更简单跟着每一篇文章做，我们提供了一个 GitHub 仓库并以文件夹分隔出每一个教学系列开头需要的应用程序源代码。
+你只需阅读内容就可充分了解 Svelte 的一些特性，但如果你跟着我们一起编写应用程序，将可以从本教程获得最大的收益。为了让你可以更轻松地阅读每一篇文章，我们提供了一个 GitHub 仓库并以文件夹分隔出每一个教程开头需要的应用程序源代码。
 
-Svelte 也提供了一个在线 REPL，它是在 web 上用于实时撰写 Svelte 应用程序的一个游乐场，而不用安装任何东西在你的机器上。我们在每一篇文章都有提供 REPL，所以你可以即刻撰写程序代码。接着谈一谈如何使用这些工具。
+Svelte 也提供了一个在线 REPL，它是在 web 上用于实时编写 Svelte 应用程序的一个游乐场，而无需在计算机上安装任何东西。我们在每一篇文章都有提供 REPL，所以你可以马上开始编写代码。接着谈一谈如何使用这些工具。
 
 ### 使用 Git
 
@@ -406,13 +406,13 @@ Svelte 也提供了一个在线 REPL，它是在 web 上用于实时撰写 Svelt
 
 我们将会使用 GitHub，所以你可以在每一篇文章轻易地下载到源代码。不用担心你错过了什么，因为你将能够取得这些于每一篇文章欲完成的程序代码内容。
 
-[安装 git](https://git-scm.com/downloads) 之后，为了复制仓库你应该执行下列指令：
+[安装 git](https://git-scm.com/downloads) 之后，为了克隆仓库你应该执行：
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
 ```
 
-接着在开始阅读每一篇文章前，你可以 `cd` 至对应文件夹并将应用程序以开发（dev）模式运行确认其当前状态为何，像是如下列指令：
+接着在开始阅读每一篇文章前，你可以 `cd` 至对应文件夹并将应用程序以开发（dev）模式运行确认其当前状态为何，如下所示：
 
 ```bash
 cd 02-starting-our-todo-app
@@ -420,9 +420,9 @@ npm install
 npm run dev
 ```
 
-假如你想要学习更多关于 git 和 GitHub，我们已经有整理一些有帮助的链接列表至指南——看看 [Git 和 GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub)。
+假如你想要学习有关 git 和 GitHub 的更多信息，我们已经整理了一些有帮助的指南的链接列表——请参阅 [Git 和 GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub)。
 
-> **备注：** 假如你只是想要下载文件而不是复制 git 仓库，你可以使用 degit 工具像是这样—— `npx degit opensas/mdn-svelte-tutorial`。你也可以用 `npx degit opensas/mdn-svelte-tutorial/01-getting-started` 来下载特定文件夹。Degit 不会建立本地 git 仓库，它只下载特定文件夹下的文件。
+> **备注：** 假如你只是想要下载文件而不是克隆 git 仓库，你可以使用 degit 工具，像这样——`npx degit opensas/mdn-svelte-tutorial`。你也可以用 `npx degit opensas/mdn-svelte-tutorial/01-getting-started` 来下载特定文件夹。Degit 不会创建本地 git 仓库，它只下载特定文件夹下的文件。
 
 ### 使用 Svelte REPL
 
@@ -430,50 +430,50 @@ REPL（[读取—求值—输出循环](https://zh.wikipedia.org/wiki/读取-求
 
 Svelte 的 REPL 功能却不只如此。它是一个在线工具，允许你建构一个完整的应用程序并储存它们于线上，也能分享给其他人。
 
-它是最简单可以在任何机器上开始体验 Svelte 的方式，而不需要安装任何东西。它也广泛地被 Svelte 社群所使用。假如你想要分享一些想法、寻求帮助或汇报问题，建立一个 REPL 来演示问题总是有帮助的。
+它是在任何机器上开始体验 Svelte 的最简单的方式，无需安装任何东西。它也广泛地被 Svelte 社区所使用。假如你想要分享一些想法、寻求帮助或报告问题，创建一个 REPL 来演示问题总是有帮助的。
 
 让我们快速看一下 Svelte REPL 和你应该怎么去使用它。它的界面是这样的：
 
 ![运行中的 svelte repl，左侧显示组件代码，右侧显示输出结果](03-svelte-repl-in-action.png)
 
-为了开始使用 REPL，打开你的浏览器并至 <https://svelte.dev/repl>。
+要开始使用 REPL，打开你的浏览器并导航至 <https://svelte.dev/repl>。
 
-- 屏幕左边你将可以看到你组件的程序代码，屏幕右边你可以看到你应用程序的执行输出。
-- 程序代码上方的列让你可以建立 `.svelte` 和 `.js` 文件，也能重新排列它们。要将文件建立在文件夹中，你只要输入完整的路径名称—— `components/MyComponent.svelte`。文件夹将自动地被建立。
-- 更上方的列有你 REPL 的标题。点击可以编辑它。
+- 屏幕左边你将可以看到你组件的代码，屏幕右边你可以看到你应用程序的执行输出。
+- 程序代码上方的栏让你可以创建 `.svelte` 和 `.js` 文件，也能重新排列它们。要在文件夹中创建文件，你只要输入完整的路径名称——`components/MyComponent.svelte`。文件夹将被自动创建。
+- 更上方的栏是 REPL 的标题。点击可以编辑它。
 - 右边有三个标签：
 
   - _Result_ 标签内会显示你应用程序的输出，底下也有提供控制台。
-  - _JS output_ 标签内会让你检查 Svelte 产生的 JavaScript 程序代码并可以设定编译程序选项。
+  - _JS output_ 标签内可以让你检查 Svelte 产生的 JavaScript 代码且可以设定编译选项。
   - _CSS output_ 标签内会显示 Svelte 产生的 CSS。
 
-- 这些标签的上方，你将会找到一个工具栏，让你可以进入全屏幕模式和下载你的应用程序。假如你有登入 GitHub 账号，你将能够复刻（fork）和储存应用程序。通过点击你 GitHub 的用户概况并选取那些*你已储存的应用程序*，将能够看到所有你已储存的 REPL。
+- 这些标签的上方，你将会找到一个工具栏，让你可以进入全屏幕模式和下载你的应用程序。假如你有登入 GitHub 账号，你将能够复刻（fork）和保存应用程序。通过点击你 GitHub 的用户名个人资料并选择*你已保存的应用程序*（Your saved apps），将能够看到你已保存的所有 REPL。
 
-每当你在 REPL 改变任何文件，Svelte 将会重新编译应用程序并更新结果（Result）标签。为了分享你的应用程序，可以分享其网址。举个例子，这是运行我们完整应用程序的 REPL 链接：<https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>。
+每当你在 REPL 中改变任何文件，Svelte 将会重新编译应用程序并更新结果（Result）标签。要分享你的应用程序，请直接分享其网址。例如，这是运行我们完整应用程序的 REPL 链接：<https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>。
 
-> **备注：** 可以注意一下在链接上标注 Svelte 版本的方式。当你在报告 Svelte 特定版本的问题时，这是很有帮助的。
+> **备注：** 请注意在链接上标注 Svelte 版本的方式。当你在报告 Svelte 特定版本的问题时，这会非常有用。
 
-我们将会在每一篇文章的开头与结尾提供 REPL，所以你就能立刻和我们一起撰写程序代码。
+我们将会在每一篇文章的开头与结尾提供 REPL，所以你就能立刻和我们一起编写代码。
 
-> **备注：** 不知何时 REPL 变得没办法适当地处理文件夹名称。假如你是使用 REPL 来跟着教学系列，只需要将所有你的组件建立在根目录即可。接着当你看到程序代码中的路径时，举例来说如果是 `import Todos from './components/Todos.svelte'`，只需要将它换成类似如 `import Todos from './Todos.svelte'` 即可。
+> **备注：** 目前 REPL 无法正确处理文件夹名称。如果你按照 REPL 上的教程进行操作，只需在根文件夹中创建所有组件即可。然后在你看到代码中的路径时，例如 `import Todos from './components/Todos.svelte'`，只需要将它替换成类似 `import Todos from './Todos.svelte'` 这样的即可。
 
-## 到目前为止的程序代码
+## 到目前为止的代码
 
 ### Git
 
-复制 Github 仓库（假如你还没完成）如下：
+克隆 Github 仓库（假如你还没完成）如下：
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
 ```
 
-接着取得当前应用程序状态，执行如下：
+然后获得当前应用程序状态，运行
 
 ```bash
 cd mdn-svelte-tutorial/01-getting-started
 ```
 
-或直接下载文件夹内容如下：
+或直接下载文件夹内容：
 
 ```bash
 npx degit opensas/mdn-svelte-tutorial/01-getting-started
@@ -483,22 +483,22 @@ npx degit opensas/mdn-svelte-tutorial/01-getting-started
 
 ### REPL
 
-要使用 REPL 和我们一起撰写程序代码，点击如下连结：
+要使用 REPL 和我们一起编写代码，请点击
 
 <https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2>
 
 ## 总结
 
-这篇文章初步带我们了解了 Svelte 的来龙去脉，包含如何安装本地环境，建构起始应用程序以及它的基本工作方式。下一篇文章将开始建构我们第一个应用程序——一个待办列表。在我们开始之前，让我们先回顾一下已经学到的那些东西。
+这篇文章带我们初步了解了 Svelte，包含如何在本地安装、创建起始应用程序以及它的基本工作方式。在下一篇文章中，我们将开始构建第一个应用程序——一个待办事项列表。在我们开始之前，让我们先回顾一下已经学到的东西。
 
 在 Svelte 当中：
 
-- 我们在每个组件中定义脚本、样式、标记区块于单一的 `.svelte` 文件中。
-- 通过 `export` 关键词来声明组件属性。
+- 我们在每个组件（单个 `.svelte` 文件）中定义脚本、样式、标记。
+- 通过 `export` 关键字来声明组件属性。
 - 可以通过加载对应的 `.svelte` 文件来使用这些 Svelte 组件。
 - 组件样式有范围限制，以防止它们之间有冲突。
-- 标记区块中你可以包含任何 JavaScript 表达式，将它以大括号包起来。
-- 组件中的顶层变量会构成其组件状态。
-- 当指定新数值给顶层变量时，将会触发其响应。
+- 在标记部分，你可以通过将 JavaScript 表达式放在大括号之间来包含它们。
+- 组件中的顶层变量会构成其状态。
+- 当为顶层变量赋新值时，将触发其响应。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
