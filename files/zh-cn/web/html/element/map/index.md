@@ -51,7 +51,6 @@ l10n:
 #### 结果
 
 {{ EmbedLiveSample('含有两个区域的图像映射', '', '250') }}
- 
 ## 技术概要
 
 <table class="properties">
