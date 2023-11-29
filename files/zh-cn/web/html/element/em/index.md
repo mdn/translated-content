@@ -69,7 +69,7 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
       </td>
     </tr>
     <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">隐式 ARIA 角色</th>
       <td>
         <code
           ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">emphasis</a
