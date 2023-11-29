@@ -82,7 +82,7 @@ async function computeOutlineFormat() {
     for (const fontData of availableFonts) {
       // `blob()` 方法返回一个包含有效且完整的 SFNT 包装字体数据的 Blob。
       const sfnt = await fontData.blob();
-      // 仅剪切出我们需要的字节部分：前 4 个字节是 SFNT 版本信息。
+      // 仅裁剪出我们需要的字节部分：前 4 个字节是 SFNT 版本信息。
       // 标准：https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
