@@ -646,7 +646,7 @@ Pour qu'une partie de la chaîne de caractère corresponde mais que la correspon
 ## Utiliser les expressions rationnelles
 
 Les expresssions régulières sont utilisées avec les méthodes {{jsxref("RegExp/test", "test()")}} et {{jsxref("RegExp/exec", "exec()")}} de l'objet `RegExp` et avec les méthodes {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/replaceAll", "replaceAll()")}}, {{jsxref("String/search", "search()")}}, et {{jsxref("String/split", "split()")}}.
- de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
 | Méthode                                       | Description                                                                                                                                                                                        |
 | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
