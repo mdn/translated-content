@@ -50,9 +50,9 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
-          >Phrasing content</a
-        >.
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >。
       </td>
     </tr>
     <tr>
