@@ -1,50 +1,47 @@
 ---
-title: "Window: queryLocalFonts() method"
-short-title: queryLocalFonts()
+title: Window：queryLocalFonts() 方法
 slug: Web/API/Window/queryLocalFonts
-page-type: web-api-instance-method
-status:
-  - experimental
-browser-compat: api.Window.queryLocalFonts
+l10n:
+  sourceCommit: 800701224bc85a647803b1d364d5df5dd3fa2e0f
 ---
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
-The **`window.queryLocalFonts()`** method returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
+**`window.queryLocalFonts()`** 方法返回一个兑现一个表示本地可用字体的 {{domxref("FontData")}} 对象数组的 {{jsxref("Promise")}}。
 
-To use this method, the user must grant permission to access `local-fonts` (permission status can be queried via the {{domxref("Permissions API", "", "", "nocode")}}). In addition, this feature may be blocked by a [Permissions Policy](/zh-CN/docs/Web/HTTP/Permissions_Policy) set on your server.
+要使用此方法，用户必须授予访问 `local-fonts` 权限（可以通过 {{domxref("Permissions API", "", "", "nocode")}} 查询权限状态）。此外，此功能可能会被你服务器上设置的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
 
-## Syntax
+## 语法
 
 ```js-nolint
 queryLocalFonts(options)
 ```
 
-### Parameters
+### 参数
 
 - `options` {{optional_inline}}
-  - : Contains optional configuration parameters. Currently only one property is defined:
+  - : 包含可选配置参数。目前仅定义了一个属性：
     - `postscriptNames` {{optional_inline}}
-      - : An array of font PostScript names. If this is specified, only fonts with PostScript names matching those in the array will be included in the results; if not, all fonts will be included in the results.
+      - : 一个包含字体 PostScript 名称的数组。如果指定了此项，则只有 PostScript 名称与数组中的 PostScript 名称匹配的字体才会包含在结果中；如果没有，所有字体都将包含在结果中。
 
-### Return value
+### 返回值
 
-A {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
+一个兑现一个表示本地可用字体的 {{domxref("FontData")}} 对象数组的 {{jsxref("Promise")}}。
 
-### Exceptions
+### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : The user chose to deny permission to use this feature when presented with the browser's permission prompt after the method was first invoked.
+  - : 首次调用该方法后，当浏览器出现权限提示时，用户选择拒绝授予此功能的权限。
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/zh-CN/docs/Web/HTTP/Permissions_Policy), or it was not called via a user interaction such as a button press, or current {{glossary("origin")}} is an opaque origin.
+  - : 此功能的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止，或者不是缘于用户交互（例如按下按钮）调用或当前的 {{glossary("origin")}} 是一个不透明的来源。
 
-## Examples
+## 示例
 
-For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/).
+有关实时演示，请参阅[字体选择演示](https://local-font-access.glitch.me/demo/)。
 
-### Font enumeration
+### 字体枚举
 
-The following snippet will query for all available fonts and log metadata. This could be used, for example, to populate a font picker control.
+以下代码片段将查询所有可用的字体并打印元数据。例如，这可以用于填充字体选择器控件。
 
 ```js
 async function logFontData() {
@@ -62,9 +59,9 @@ async function logFontData() {
 }
 ```
 
-### Limiting returned results
+### 限制返回结果
 
-To limit the returned font data to only a specific list of font faces, use the `postscriptNames` option.
+要将返回的字体数据限制为特定的字体列表，使用 `postscriptNames` 选项。
 
 ```js
 async function returnSpecificFonts() {
@@ -76,9 +73,9 @@ async function returnSpecificFonts() {
 }
 ```
 
-### Accessing low-level data
+### 访问低级数据
 
-The {{domxref("FontData.blob", "blob()")}} method provides access to low-level [SFNT](https://en.wikipedia.org/wiki/SFNT) data — this is a font file format that can contain other font formats, such as PostScript, TrueType, OpenType, or Web Open Font Format (WOFF).
+{{domxref("FontData.blob", "blob()")}} 方法提供对低级 [SFNT](https://en.wikipedia.org/wiki/SFNT) 数据的访问——这是一种可以包含其他字体格式的字体文件格式，例如 PostScript、TrueType、OpenType 或 Web 开放字体格式 (WOFF)。
 
 ```js
 async function computeOutlineFormat() {
@@ -87,12 +84,10 @@ async function computeOutlineFormat() {
       postscriptNames: ["ComicSansMS"],
     });
     for (const fontData of availableFonts) {
-      // `blob()` returns a Blob containing valid and complete
-      // SFNT-wrapped font data.
+      // `blob()` 方法返回一个包含有效且完整的 SFNT 包装字体数据的 Blob。
       const sfnt = await fontData.blob();
-      // Slice out only the bytes we need: the first 4 bytes are the SFNT
-      // version info.
-      // Spec: https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
+      // 仅裁剪出我们需要的字节部分：前 4 个字节是 SFNT 版本信息。
+      // 标准：https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
       let outlineFormat = "UNKNOWN";
@@ -114,16 +109,16 @@ async function computeOutlineFormat() {
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+- [使用带有本地字体的高级排版](https://developer.chrome.com/articles/local-fonts/)
 - {{cssxref("@font-face")}}
