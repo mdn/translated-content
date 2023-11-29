@@ -1,8 +1,7 @@
 ---
 title: First interactive
-slug: Glossary/First_interactive
-l10n:
-  sourceCommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
+slug: conflicting/Glossary/First_CPU_idle
+original_slug: Glossary/First_interactive
 ---
 
 {{GlossarySidebar}}
