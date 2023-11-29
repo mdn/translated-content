@@ -92,7 +92,6 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
   </tbody>
 </table>
 
-
 ## \<i> vs. \<em>
 
 新的开发人员看到多个元素产生相似的效果，经常被混淆。`<em>` 和 `<i>` 就是一对常见的例子，因为它们都对文字斜体化。它们的区别是什么？应该使用哪一个？
