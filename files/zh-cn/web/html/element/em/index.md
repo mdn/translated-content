@@ -28,7 +28,7 @@ slug: Web/HTML/Element/em
 
 In HTML 5, what was previously called _block-level_ content is now called _flow_ content.
 
-## 技术概览
+## 技术概要
 
 <table class="properties">
   <tbody>
