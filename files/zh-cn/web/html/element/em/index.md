@@ -82,11 +82,10 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
       <td>任何角色</td>
     </tr>
     <tr>
-      <th scope="row">DOM interface</th>
+      <th scope="row">DOM 接口</th>
       <td>
-        {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4)
-        inclusive, Firefox implements the
-        {{domxref("HTMLSpanElement")}} interface for this element.
+        {{domxref("HTMLElement")}}。Firefox 在直至但不包含 Gecko 1.9.2（Firefox 4）的版本中为这个元素实现了
+        {{domxref("HTMLSpanElement")}} 接口。
       </td>
     </tr>
   </tbody>
