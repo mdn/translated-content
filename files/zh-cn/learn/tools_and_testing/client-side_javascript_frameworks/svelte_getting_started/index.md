@@ -15,8 +15,9 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_s
       <td>
         <p>
           推荐你至少需熟悉基本的
-          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、
-          <a href="/zh-CN/docs/Learn/CSS">CSS</a> 与
+          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
+            href="/zh-CN/docs/Learn/CSS"
+            >CSS</a> 与
           <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>
           等程序语言且具备<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
