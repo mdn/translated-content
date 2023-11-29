@@ -52,7 +52,7 @@ My cat is very grumpy
 
 ### 嵌套元素
 
-也可以将一个元素置于其他元素之中——称作**嵌套**。要表明猫咪非常暴躁，可以将“very”用 {{htmlelement("strong")}} 元素包围，爆字将突出显示：
+也可以将一个元素置于其他元素之中——称作**嵌套**。要表明猫咪非常暴躁，可以将“very”用 {{htmlelement("strong")}} 元素包围，“very”将突出显示：
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>

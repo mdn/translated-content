@@ -161,7 +161,7 @@ say=Hi&to=Mom
 
 `Content-Length`数据头表示主体的大小，`Content-Type`数据头表示发送到服务器的资源类型。稍后我们将讨论这些标头。
 
-> **备注：** 你可以在 GitHub 上看到本例——见 [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
+> **备注：** 你可以在 GitHub 上看到本例——见 [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html)（[预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)）。
 
 #### 查看 HTTP 请求
 

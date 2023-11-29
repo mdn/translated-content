@@ -197,7 +197,7 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 
 问题在于现代 Web 应用程序通常不仅仅是静态文本——它们往往有很多动态更新内容，即通过 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)，[Fetch](/zh-CN/docs/Web/API/Fetch_API) 或[DOM API](/zh-CN/docs/Web/API/Document_Object_Model) 等机制重新加载整个页面的内容。这些有时被称为**实时区域**。
 
-我们来看一个小例子——[aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html))。在这个例子我们哟一个小的随机引用块：
+我们来看一个小例子——[aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html)（[在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)）。在这个例子我们引用一个小的随机引用块：
 
 ```html
 <section>
@@ -367,7 +367,7 @@ function toggleMusician(bool) {
 
 这个例子在键盘无障碍方面运行良好——你可以愉快地在不同选项卡之间进行 tab 并选择它们然后显示选项卡内容。它也是相当容易访问的——你可以滚动浏览内容并使用标题进行导航，即使你无法看到屏幕上发生的事情。然而，内容并不明显——屏幕阅读器目前将内容报告为链接列表，以及一些内容包含三个标题。它不会让你知道内容之间的关系。为用户提供有关内容结构的更多线索总是好的。
 
-为了优化它，我们创建了一个新的例子，名为： [aria-tabbed-info-box.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-tabbed-info-box.html) ([看在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). 我们更新了选项卡式界面的结构，如下所示：
+为了优化它，我们创建了一个新的示例，名为 [`aria-tabbed-info-box.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-tabbed-info-box.html)（[查看在线运行的实例](http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)）。我们更新了选项卡式界面的结构，如下所示：
 
 ```html
 <ul role="tablist">
@@ -406,7 +406,7 @@ function toggleMusician(bool) {
 </div>
 ```
 
-> **备注：** 这里最明显的变化是我们删除了最初在示例中出现的链接，并且只使用了列表项作为选项卡 - 这样做是因为它使屏幕阅读器用户不那么容易混淆（链接并不会跳转，它们只更改视图），它允许 大小修改/位置变化 一类的 feature 更好地工作——当这些被放在链接上时，浏览器始终报告"1 of 1"，而不是"1 of 3 "，"2 of 3"等
+> **备注：** 这里最明显的变化是我们删除了最初在示例中出现的链接，并且只使用了列表项作为选项卡——这样做是因为它使屏幕阅读器用户不那么容易混淆（链接并不会跳转，它们只更改视图），它允许大小修改/位置变化一类的特性更好地工作——当这些被放在链接上时，浏览器始终报告“1 of 1”，而不是“1 of 3”、“2 of 3”等。
 
 以下刚刚用上的新特性：
 

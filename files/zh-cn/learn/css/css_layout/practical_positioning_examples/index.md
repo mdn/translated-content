@@ -41,7 +41,7 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 > **备注：** 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
 
-在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件——[info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html). 保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
+在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件——[info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html)。保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
 
 ```html
 <section class="info-box">
