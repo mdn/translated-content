@@ -39,12 +39,12 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#flow_content"
-          >流内容</a
-        >,
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#phrasing_content"
-          >推辞内容</a
-        >, 可触及内容.
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a
+          href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >和可感知内容。
       </td>
     </tr>
     <tr>
