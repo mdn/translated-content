@@ -78,8 +78,8 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
       </td>
     </tr>
     <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>任何角色</td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
