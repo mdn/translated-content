@@ -1,12 +1,12 @@
 ---
-title: 开始编写我们的 Svelte 待办列表应用程序
+title: 开始编写我们的 Svelte 待办事项列表应用程序
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 ---
 
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-现在我们对 Svelte 运作机制有初步的了解后，就能开始建构我们的范例应用程序：一个待办列表。此篇文章中，会先确认应用程序所需的功能，接着会建立 `Todos.svelte` 组件并编写一些静态标记（markup）语言和样式，待一切准备就绪后，就能开始开发待办列表应用程序的相关特性，我们将在后续文章实现它们。
+现在我们对 Svelte 运作机制有初步的了解后，就能开始构建我们的示例应用程序：一个待办事项列表。此篇文章中，会先确认应用程序所需的功能，接着会建立 `Todos.svelte` 组件并编写一些静态标记（markup）语言和样式，待一切准备就绪后，就能开始开发待办事项列表应用程序的相关特性，我们将在后续文章实现它们。
 
 我们想要让用户能够浏览、新增和删除任务，也能标记它们为完成状态。这将是我们在本系列教程中要开发的基本功能，此外，在开发过程中我们将会学到一些更进阶的概念。
 
@@ -32,7 +32,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list
     <tr>
       <th scope="row">目标：</th>
       <td>
-        学习如何建立一个 Svelte 组件并于另一个组件内渲染它，透过属性（props）传递数据并保存它的状态。
+        学习如何建立一个 Svelte 组件并于另一个组件内渲染它，通过属性（prop）传递数据并保存它的状态。
       </td>
     </tr>
   </tbody>
