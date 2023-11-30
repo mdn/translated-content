@@ -35,7 +35,7 @@ onfullscreenerror = (event) => {};
 const requestor = document.querySelector("div");
 
 function handleError(event) {
-  console.error("an error occurred changing into fullscreen");
+  console.error("切换至全屏模式时发生错误");
   console.log(event);
 }
 
