@@ -57,6 +57,8 @@ p ~ span {
 }
 ```
 
+{{EmbedLiveSample("Utilisation du combinateur avec des sélecteurs simples", "auto", 200)}}
+
 ### Utilisation du combinateur avec des sélecteurs complexes
 
 Cet exemple contient deux [sélecteurs complexes](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selecteur_complexe), tous deux utilisant le combinateur de voisins généraux&nbsp;: `.monTexte p ~ span` et `.monTexte p ~ .monTexte span`.
