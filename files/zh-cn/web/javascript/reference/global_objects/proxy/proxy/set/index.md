@@ -11,9 +11,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 
 ## 语法
 
-```plain
-const p = new Proxy(target, {
-  set: function(target, property, value, receiver) {
+```js-nolint
+new Proxy(target, {
+  set(target, property, value, receiver) {
   }
 });
 ```
