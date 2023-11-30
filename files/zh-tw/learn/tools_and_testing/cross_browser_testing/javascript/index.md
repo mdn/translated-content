@@ -1,6 +1,7 @@
 ---
 title: Writing forward-compatible websites
-slug: Web/Guide/Writing_forward-compatible_websites
+slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+original_slug: Web/Guide/Writing_forward-compatible_websites
 ---
 
 這個頁面將解釋如何撰寫在新的瀏覽器版本發布時不會遭受毀損的網頁。
@@ -13,7 +14,7 @@ slug: Web/Guide/Writing_forward-compatible_websites
 
 當一個事件處理器內容屬性（例如：`onclick`, `onmouseover` 等等）被使用在 HTML 的元素上時，所有對於屬性內名稱的查找首先發生在元素本身，若元素為表單控制項，再來尋找元素的表單，接著是 document，最後是 window（你定義全域變數的地方）。例如，如果你有這樣的原始碼：
 
-```plain
+```html
 <div onclick="alert(ownerDocument)">點我一下</div>
 ```
 
@@ -23,10 +24,10 @@ slug: Web/Guide/Writing_forward-compatible_websites
 
 為了避免這種情況，以 window 來限定全域變數的存取，例如：
 
-```plain
+```html
 <script>
   function localName() {
-    alert('函式 localName 被呼叫了');
+    alert("函式 localName 被呼叫了");
   }
 </script>
 <div onclick="window.localName()">按一下會跑出一個提示訊息</div>
@@ -92,7 +93,7 @@ slug: Web/Guide/Writing_forward-compatible_websites
 
 廠商前綴的功能可以在將來的版本中改變。然而，一旦瀏覽器已提供不帶前綴的功能，你可以在確保不帶前綴版在可用時總會被套用下，使用前綴版本針對舊版本。一個很好的例子，假設`-vnd` 廠商已經將不帶前綴的 `make-it-pretty` 屬性實作加入新出品的瀏覽器，包含一個前綴版與不含前綴版作用不同的值「`sometimes`」：
 
-```plain
+```html
 <style>
   .pretty-element {
     -vnd-make-it-pretty: sometimes;
