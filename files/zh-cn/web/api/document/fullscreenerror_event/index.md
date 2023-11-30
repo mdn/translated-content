@@ -59,4 +59,4 @@ requestor.requestFullscreen();
 - {{domxref("Document/fullscreenchange_event", "fullscreenchange")}}
 - {{domxref("Element")}}：{{domxref("Element/fullscreenerror_event", "fullscreenerror")}} 事件
 - [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)
-- [全屏 API 使用指南](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- [全屏 API 使用指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
