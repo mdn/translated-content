@@ -2280,7 +2280,7 @@
 /zh-CN/docs/Web/Events/进度条	/zh-CN/docs/Web/API/XMLHttpRequest/progress_event
 /zh-CN/docs/Web/Guide/AJAX	/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /zh-CN/docs/Web/Guide/AJAX/Getting_Started	/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
-/zh-CN/docs/Web/Guide/API	/zh-CN/docs/conflicting/Web/API
+/zh-CN/docs/Web/Guide/API	/zh-CN/docs/Web/API
 /zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm	/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 /zh-CN/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
 /zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn/CSS
