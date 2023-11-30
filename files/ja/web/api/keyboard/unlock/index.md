@@ -9,6 +9,7 @@ l10n:
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 **`unlock()`** は {{domxref("Keyboard")}} インターフェイスのメソッドで、 {{domxref('Keyboard.lock()')}} メソッドによってキャプチャされているすべてのキーのロックを解放し、同期的に返ります。
+
 ## 構文
 
 ```js-nolint
