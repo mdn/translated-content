@@ -41,7 +41,7 @@ Local Font Access API 的创建就是为了解决这些问题。
 
 有关实时演示，请参阅[字体选择演示](https://local-font-access.glitch.me/demo/)。
 
-### 特征检测
+### 特性检测
 
 ```js
 if ("queryLocalFonts" in window) {
