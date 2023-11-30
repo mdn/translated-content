@@ -49,7 +49,7 @@ const myWorker = new Worker("worker.js");
 
 ### 专用 worker 中消息的接收和发送
 
-你可以通过 {{domxref("Worker.postMessage", "postMessage()")}} 方法和 {{domxref("Worker.onmessage", "onmessage")}} 事件处理函数触发 worker 的方法。当你想要向一个 worker 发送消息时，你只需要这样做（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/worker.js)）：
+你可以通过 {{domxref("Worker.postMessage", "postMessage()")}} 方法和 {{domxref("Worker.onmessage", "onmessage")}} 事件处理函数触发 worker 的方法。当你想要向一个 worker 发送消息时，你只需要这样做（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
 
 ```js
 first.onchange = () => {
