@@ -20,7 +20,7 @@ img ~ p {
 ## Syntaxe
 
 ```css-nolint
-/* L'espace entre la tilde (~) est optionnel mais est recommendé. */
+/* L'espace entre le tilde (~) est optionnel mais est recommendé. */
 premier_element ~ second_element { propriétés de style }
 ```
 
@@ -36,15 +36,14 @@ This example shows the use of the `~` combinator when both the selectors are sim
   <p>Voici un paragraphe.</p>
   <code>Voici un extrait de code.</code>
   <span>
-    Ce span est rouge parce qu'il apparaît après le paragraphe,
-    même s'il y a d'autres nœuds entre les deux.
+    Ce span est rouge parce qu'il apparaît après le paragraphe, même s'il y a
+    d'autres nœuds entre les deux.
   </span>
   <p>Quoi qu'il en soit, gardez le sourire.</p>
   <h1>Rêver en grand</h1>
   <span>
-    Quel que soit le nombre ou le type de nœuds intermédiaires,
-    tous les span issues du même parent après un paragraphe
-    sont rouges.
+    Quel que soit le nombre ou le type de nœuds intermédiaires, tous les span
+    issues du même parent après un paragraphe sont rouges.
   </span>
 </article>
 <span>
