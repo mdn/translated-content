@@ -42,7 +42,7 @@ var sab = new SharedArrayBuffer(1024);
 var int32 = new Int32Array(sab);
 ```
 
-一个读线程会进入休眠并监视索引 0 处的值（默认为 0）。只要索引 0 处的值不为 0，读进程就会唤醒。但是，一旦写进程存储了一个新的值，写进程就会产生一个提醒并返回写入后的新值（123）。（这里示例有问题或者说对初学者不友好，如果直接在浏览器控制台运行下面代码会报错，因为我们不能尝试睡眠主线程，可以见 [重学 js —— 结构化数据之 Atomics 对象](https://github.com/lizhongzhen11/lizz-blog/issues/125#notice)，同时我在 **codepen** 写了一个示例：[Atomics.wait 使用示例](https://codepen.io/lizhongzhen11/project/editor/AmzyaY#)）
+一个读线程会进入休眠并监视索引 0 处的值（默认为 0）。只要索引 0 处的值不为 0，读进程就会唤醒。但是，一旦写进程存储了一个新的值，写进程就会产生一个提醒并返回写入后的新值（123）。（这里示例有问题或者说对初学者不友好，如果直接在浏览器控制台运行下面代码会报错，因为我们不能尝试睡眠主线程，可以见[重学 js——结构化数据之 Atomics 对象](https://github.com/lizhongzhen11/lizz-blog/issues/125#notice)，同时我在 **codepen** 写了一个示例：[Atomics.wait 使用示例](https://codepen.io/lizhongzhen11/project/editor/AmzyaY#)）
 
 ```js
 Atomics.wait(int32, 0, 0);

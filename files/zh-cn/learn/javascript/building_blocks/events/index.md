@@ -734,7 +734,7 @@ container.addEventListener("click", (event) => {
 
 在这个学习阶段，你不需要了解其他此类环境的情况；我们只是想让你明白，在不同的编程环境中，事件会有所不同。
 
-## 测试你的技能！
+## 技能测试！
 
 你已经到了本文的结尾，但你能记住最重要的信息吗？在你继续前进之前，要验证你是否记住了这些信息，请前往[技能测试：事件](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events)页面进行测试。
 
