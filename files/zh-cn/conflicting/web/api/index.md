@@ -1,6 +1,7 @@
 ---
 title: Web API 指南
-slug: Web/Guide/API
+slug: conflicting/Web/API
+original_slug: Web/Guide/API
 ---
 
 <section id="Quick_links">
