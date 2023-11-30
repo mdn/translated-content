@@ -20,7 +20,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 
 > **备注：** 在 Firefox 中，[Web Storage](/zh-CN/docs/Web/API/Web_Storage_API)也将很快开始使用相同的存储管理工具，如本文档中所述。
 
-> **备注：** 在隐私浏览模式下，大多数数据存储不被支持。本地存储数据和 cookie 仍然可用，但它们是短暂的 ——当关闭最后一个隐私浏览窗口时，数据将被删除。
+> **备注：** 在隐私浏览模式下，大多数数据存储不被支持。本地存储数据和 cookie 仍然可用，但它们是短暂的——当关闭最后一个隐私浏览窗口时，数据将被删除。
 
 源的“最后访问时间”会更新，当其中任何一个被激活/停用时——所有这些源下的配额客户端的数据会被回收。
 
@@ -67,7 +67,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 - `mozilla.org`——组 1，源 1
 - `www.mozilla.org`——组 1，源 2
 - `joe.blogs.mozilla.org`——组 1，源 3
-- `firefox.com` ——组 2，源 4
+- `firefox.com`——组 2，源 4
 
 在这个组中，`mozilla.org`、`www.mozilla.org`和`joe.blogs.mozilla.org`可以聚合使用最多 20％的全局限制。firefox.com 单独最多使用 20％。
 
