@@ -29,7 +29,7 @@ Pour toute page du glossaire, le premier paragraphe consiste en une description 
 
 #### Rédiger une bonne entrée dans le glossaire
 
-Ajoutez quelques paragraphes si nécessaire, mais attention au risque d'écrire un article complet. Un article complet est intéressant mais n'a pas sa place dans le glossaire. Si vous n'êtes pas certaine ou certain de l'emplacement de votre page, n'hésitez pas à [nous contacter pour en discuter](/fr/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+Ajoutez quelques paragraphes si nécessaire, mais attention au risque d'écrire un article complet. Un article complet est intéressant mais n'a pas sa place dans le glossaire. Si vous n'êtes pas certaine ou certain de l'emplacement de votre page, n'hésitez pas à [nous contacter pour en discuter](/fr/docs/MDN/Community/Discussions).
 
 Voici quelques lignes directrices à garder à l'esprit pour écrire une bonne entrée de glossaire&nbsp;:
 
@@ -39,12 +39,12 @@ Voici quelques lignes directrices à garder à l'esprit pour écrire une bonne e
 
 ### Ajouter des liens
 
-Une entrée du glossaire devrait toujours finir par une section _En savoir plus_. Dans cette section, on devrait trouver des liens qui aident la lectrice ou le lecteur à aller plus loin en découvrant plus de détails, ou en apprenant à utiliser la technologie associée.
+Une entrée du glossaire devrait toujours finir par une section _Voir aussi_. Dans cette section, on devrait trouver des liens qui aident la lectrice ou le lecteur à aller plus loin en découvrant plus de détails, ou en apprenant à utiliser la technologie associée.
 
 Une bonne pratique consiste à organiser ces liens en trois groupes&nbsp;:
 
 - Connaissances générales
-  - : Ces liens fournissent des informations généralistes à propos du terme ou du sujet. Il peut par exemple s'agir d'un lien vers une page [Wikipédia](https://www.wikipedia.org/) correspondante.
+  - : Ces liens fournissent des informations généralistes à propos du terme ou du sujet. Il peut par exemple s'agir d'un lien vers une page [Wikipédia](https://fr.wikipedia.org/) correspondante.
 - Référence technique
   - : Ces liens fournissent des ressources avec des informations techniques détaillées, sur MDN ou d'autres sites.
 - En apprendre plus
