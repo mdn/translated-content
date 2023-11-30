@@ -1,6 +1,5 @@
 ---
-title: Blob: slice() 方法
-short-title: slice()
+title: Blob：slice() 方法
 slug: Web/API/Blob/slice
 ---
 
