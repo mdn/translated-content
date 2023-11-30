@@ -61,7 +61,6 @@ CSS オブジェクトモデルで使用する 4 つの標準座標系があり�
 {{domxref("MouseEvent.screenX")}} と {{domxref("MouseEvent.screenY")}} プロパティは、画面の原点を基準としたマウスイベントの位置の座標を示します。
 {{domxref("TouchEvent", "タッチイベント", "", 1)}}における {{domxref("Touch.screenX")}} と {{domxref("Touch.screenY")}} の座標は同じ原点からの相対座標です。
 
-
 ## 例
 
 要素内のマウス座標をログ出力する例を見ていきましょう。
