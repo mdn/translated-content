@@ -1,6 +1,7 @@
 ---
 title: Guide to Web APIs
-slug: Web/Guide/API
+slug: conflicting/Web/API
+original_slug: Web/Guide/API
 ---
 
 Aquí encontrarás links a cada una de las guías introduciendo y explicando cada una de las APIs que conforman la la arquitectura del desarrollo web.
