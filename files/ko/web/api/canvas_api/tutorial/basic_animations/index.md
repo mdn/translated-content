@@ -330,7 +330,7 @@ function draw() {
 <canvas id="canvas" width="800" height="200"></canvas>
 ```
 
-**Live sample**
+#### Live sample
 
 {{EmbedLiveSample("A_looping_panorama", "830", "230")}}
 
