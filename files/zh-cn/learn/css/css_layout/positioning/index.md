@@ -727,9 +727,9 @@ body {
 
 > **备注：** 你可以在 [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html))。
 
-## 试试你的技术！
+## 技能测试！
 
-这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[试试你的技术](/zh-CN/docs/Learn/CSS/CSS_layout/Position_skills)。
+这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[技能测试：定位](/zh-CN/docs/Learn/CSS/CSS_layout/Position_skills)。
 
 ## 总结
 
