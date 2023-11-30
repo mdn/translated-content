@@ -1,6 +1,5 @@
 ---
 title: Blob: arrayBuffer() 方法
-short-title: arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
 ---
 
