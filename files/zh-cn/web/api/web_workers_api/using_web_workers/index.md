@@ -292,7 +292,7 @@ onmessage = (event) => {
 };
 ```
 
-[结构化克隆](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)算法可以接收 JSON 数据以及一些 JSON 不能表示的数据——比如循环引用。
+[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)算法可以接收 JSON 数据以及一些 JSON 不能表示的数据——比如循环引用。
 
 ### 传递数据的例子
 
