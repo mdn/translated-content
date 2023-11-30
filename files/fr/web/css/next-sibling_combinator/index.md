@@ -1,11 +1,13 @@
 ---
-title: Combinateur de voisin direct
+title: Combinateur de voisins directs
 slug: Web/CSS/Next-sibling_combinator
+l10n:
+  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
 {{CSSRef("Selectors")}}
 
-Cette forme de combinateur permet de sélectionner un élément uniquement si celui-ci « suit » un élément donné et que les deux éléments sont les fils d'un même élément parent.
+Le **combinateur de voisin direct** (`+`) sépare deux sélecteurs et ne fait correspondre le second élément que s'il suit _immédiatement_ le premier élément, et si les deux sont des enfants du même [`element`](/fr/docs/Web/API/Element) parent.
 
 ```css
 /* Ne cible que les paragraphes situé directement après une image */
@@ -16,8 +18,9 @@ img + p {
 
 ## Syntaxe
 
-```css
-premier_element + element_cible { styles }
+```css-nolint
+/* L'espace blanc autour du combinateur + est facultatif mais recommandé. */
+premier_element + second_element { propriétés de style }
 ```
 
 ## Exemples
@@ -42,7 +45,7 @@ li:first-of-type + li {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', 200, 100)}}
+{{EmbedLiveSample('Exemples', "auto", 100)}}
 
 ## Spécifications
 
@@ -54,4 +57,4 @@ li:first-of-type + li {
 
 ## Voir aussi
 
-- [Les combinateurs d'éléments voisins](/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux)
+- [Les combinateur de voisins généraux](/fr/docs/Web/CSS/Subsequent-sibling_combinator)
