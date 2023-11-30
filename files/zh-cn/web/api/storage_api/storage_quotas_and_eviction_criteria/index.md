@@ -24,7 +24,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 
 源的“最后访问时间”会更新，当其中任何一个被激活/停用时——所有这些源下的配额客户端的数据会被回收。
 
-在 Chrome/Opera 中，Quota Management API 处理[AppCache](/zh-CN/docs/Web/HTML/Using_the_application_cache)，[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)，WebSQL 和[File System API](/zh-CN/docs/WebGuide/API/File_System)的配额管理。
+在 Chrome/Opera 中，Quota Management API 处理 [AppCache](/zh-CN/docs/Web/HTML/Using_the_application_cache)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、WebSQL 和 [File System API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction) 的配额管理。
 
 ## 数据存储的不同类型
 
@@ -32,21 +32,21 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 
 一般来说，数据存储的的类型主要有以下两种：
 
-- 持久化存储：这种数据是希望长久保留的，只有的当用户选择清除才会被删除掉（比如，在 Firefox 中，你可以通过转到*“首选项”*并使用“ *隐私和安全”>“Cookie 和站点数据”*下的选项，选择删除所有存储的数据或仅删除所选来源的存储数据）。
-- 临时存储：这种数据不用保存很久，当最近一次使用时[储存限制](#储存限制)达到限制大小就会被自动清理掉（[LRU 策略](#lru策略)）。
+- 持久化存储：这种数据是希望长久保留的，只有的当用户选择清除才会被删除掉（比如，在 Firefox 中，你可以通过转到“_首选项_”并使用“_隐私和安全_”>“_Cookie 和站点数据_”下的选项，选择删除所有存储的数据或仅删除所选来源的存储数据）。
+- 临时存储：这种数据不用保存很久，当最近一次使用时[储存限制](#储存限制)达到限制大小就会被自动清理掉（[LRU 策略](#lru_策略)）。
 
 在 Firefox 中，当使用持久存储时，会向用户提供一个 UI 弹出窗口，提醒他们这些数据将持续存在，并询问他们是否对此感到满意。临时数据存储不会引发任何用户提示。
 
-默认的是临时存储；开发人员可以选择使用{{domxref("StorageManager.persist()")}}方法使用持久储存。
+默认的是临时存储；开发人员可以选择使用 {{domxref("StorageManager.persist()")}} 方法使用持久储存。
 
 ## 数据存储在哪里？
 
 每种存储类型代表一个单独的存储库。这是用户 Firefox 配置文件下目录的实际映射（其他浏览器可能略有不同）：
 
-- `<profile>/storage` — 配额管理器维护的主要顶级目录（见下文）
-- `<profile>/storage/permanent` — 持久数据存储库
-- `<profile>/storage/temporary` —临时数据存储库
-- `<profile>/storage/default` — 默认数据存储库
+- `<profile>/storage`——配额管理器维护的主要顶级目录（见下文）
+- `<profile>/storage/permanent`——持久数据存储库
+- `<profile>/storage/temporary`——临时数据存储库
+- `<profile>/storage/default`——默认数据存储库
 
 > **备注：** 引入[Storage API](/zh-CN/docs/Web/API/Web_Storage_API)后，“permanent”文件夹可以被认为是过时的；“permanent”文件夹仅存储 IndexedDB 持久性数据库。模式是“best-effort”还是“persistent”并不重要——数据存储在\<profile>/storage/default 下。
 
