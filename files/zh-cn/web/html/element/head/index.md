@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<head>`** 元素包含机器可读的文档相关信息（{{glossary("metadata", "元数据")}}），如文档的[标题](/zh-CN/docs/Web/HTML/Element/title)，[脚本](/zh-CN/docs/Web/HTML/Element/script)和[样式表](/zh-CN/docs/Web/HTML/Element/style)。
+[HTML](/zh-CN/docs/Web/HTML) **`<head>`** 元素包含机器可读的文档相关信息（{{glossary("metadata", "元数据")}}），如文档的[标题](/zh-CN/docs/Web/HTML/Element/title)、[脚本](/zh-CN/docs/Web/HTML/Element/script)和[样式表](/zh-CN/docs/Web/HTML/Element/style)。
 
 > **备注：** `<head>` 主要保存供机器处理的信息，而非人类可读信息。对于人类可见的信息，如顶级标题和列出的作者，请参见 {{HTMLElement("header")}} 元素。
 
