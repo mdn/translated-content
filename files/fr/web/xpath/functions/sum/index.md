@@ -24,7 +24,7 @@ Un nombre.
 
 ### Notes
 
-_(Aucune)_
+_Aucune._
 
 ### Définition
 

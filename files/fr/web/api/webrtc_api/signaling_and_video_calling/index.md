@@ -38,7 +38,7 @@ function error(err) {
 }
 ```
 
-**Initialiser un appel**
+### Initialiser un appel
 
 l'appelant doit utiliser {{domxref("navigator.getUserMedia()")}} pour obtenir un flux vidéo, puis ajouter ce flux à l'instance de RTCPeerConnection. Une fois que cela a été fait, il doit appeler {{domxref("RTCPeerConnection.createOffer()")}} pour créer une offre,puis la configurer et l'envoyer a un serveur faisant office d'intermediaire.
 
@@ -63,7 +63,7 @@ navigator.getUserMedia({ video: true }, function (stream) {
 });
 ```
 
-**Répondre à un appel**
+### Répondre à un appel
 
 sur l'autre machine, l'ami recevra l'offre à partir du serveur en utilisant le protocole approprié (définit par le serveur). Une fois que l'offre arrive,{{domxref("navigator.getUserMedia()")}} est une fois de plus appelée pour créer le second flux, qui est ajouté à la RTCPeerConnection. Un objet {{domxref("RTCSessionDescription")}} est créé, et mis en place comme la description du distant en appelant {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 
@@ -93,7 +93,7 @@ navigator.getUserMedia({ video: true }, function (stream) {
 });
 ```
 
-**Gestion de la réponse**
+### Gestion de la réponse
 
 retour a la première machine, qui recois la reponse. une fois cette dernière arrivée,l'appelant utilise {{domxref("RTCPeerConnection.setRemoteDescription()")}} pour définir la réponse comme la description de l'autre l'extrémité de la connexion.
 

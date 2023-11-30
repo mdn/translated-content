@@ -30,7 +30,7 @@ L'événement **complete** est déclenché lorsque le rendu d'un {{domxref("Offl
 
 ## Evénements liés
 
-_Aucun_
+_Aucun._
 
 ## Spécifications
 

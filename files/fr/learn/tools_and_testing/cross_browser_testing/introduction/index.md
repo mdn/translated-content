@@ -70,7 +70,7 @@ Si vous attendez la fin d'un projet pour démarrer les sessions de tests, chaque
 
 Le flux de travail pour tester et fixer les bugs sur un projet peut-être diviser en quatre phases ( c'est assez dur— certaines personnes peuvent agir un peu différemment ) :
 
-**Plan initial > Développement > Test/découvertes > Fixes/itération**
+**Plan initial** > **Développement** > **Test/découvertes** > **Fixes/itération**
 
 Les étapes 2-4 vont tendre à se répéter autant de fois que nécessaire jusqu'à ce que l'implémentation soit aboutie. Nous aborderons les différentes parties du processus de test dans plus de détails dans des articles subséquents, pour l'instant, commençons par résumer ce qu'on peut faire dans chacune de ces étapes.
 

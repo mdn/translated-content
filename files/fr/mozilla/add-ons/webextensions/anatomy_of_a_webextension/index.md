@@ -47,7 +47,7 @@ Vous pouvez spécifier plusieurs scripts en arrière-plan : si vous le faites, i
 
 Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une page d'arrière-plan qui a l'avantage supplémentaire de supporter les modules ES6 :
 
-**manifest.json**
+**manifest.json:**
 
 ```json
 // manifest.json
@@ -57,7 +57,7 @@ Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une pa
 }
 ```
 
-**background-page.html**
+**background-page.html:**
 
 ```html
 <!doctype html>

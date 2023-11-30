@@ -99,7 +99,6 @@ Notez, cependant, que beaucoup de conseils énumérés dans cette page sont des 
 - [Livre&nbsp;: "Speed Up Your Site" par Andy King](http://www.websiteoptimization.com/)
 - [Site Optimization Tutorial (WebMonkey)](http://webmonkey.wired.com/webmonkey/design/site_building/tutorials/tutorial2.html) (en anglais)
 - [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (en anglais)
+- Document d'information d'origine:
 
-**Document d'information d'origine**
-
-- <https://developer.mozilla.org/en/Tips_for_Authoring_Fast-loading_HTML_Pages>
+  - [Astuces de création de pages HTML à affichage rapide](/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
