@@ -7,15 +7,15 @@ l10n:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Local Font Access API")}}
 
-**Local Font Access API** 提供了一种访问用户本地安装的字体数据的机制——这包括更高级别的详细信息，例如名称、样式和系列，以及底层字体文件的原始字节内容。
+**Local Font Access API** 提供了一种访问用户本地安装的字体数据的机制——这包括更高层次的详细信息，例如名称、样式和系列，以及底层字体文件的原始字节内容。
 
 ## 概念和用法
 
-[Web fonts](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts) 通过允许 Web 设计人员提供在网页文档上使用的自定义字体，在实现 Web 排版方面具有革命性意义。通过 {{cssxref("@font-face")}} at-规则，网络字体可以通过 `url()` 函数中提供的 URL 加载。
+[Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)允许 Web 设计人员提供在 Web 文档上使用的自定义字体，因而在实现 Web 排版方面具有革命性意义。通过 {{cssxref("@font-face")}} at 规则，Web 字体可以通过 `url()` 函数中提供的 URL 加载。
 
-`@font-face` 还有其他几个有用的功能可用。特别是，你还可以在 `local()` 函数中指定字体的完整名称或 Postscript 名称，以告诉浏览器在用户计算机上安装了该字体时使用本地副本。这并非没有问题——`local()` 作为[指纹向量](https://developer.chrome.com/articles/local-fonts/#local-fonts-as-fingerprint-vector)已经变得臭名昭著。
+`@font-face` 还有其他几个有用的特性。特别是，你还可以在 `local()` 函数中指定字体的完整名称或 Postscript 名称，以告诉浏览器在用户计算机上安装了该字体时使用本地副本。这并非没有问题——`local()` 作为[指纹向量](https://developer.chrome.com/articles/local-fonts/#local-fonts-as-fingerprint-vector)已经变得臭名昭著。
 
-此外，由于准确的字体枚举和访问低级字体数据（例如，应用过滤器和转换）方面的挑战，高端设计工具历来难以在网络上提供。当前的应用程序通常依赖于解决方法，例如要求用户将字体上传到服务器，在服务器上处理字体以获取原始字节数据，或者安装单独的本地程序以提供附加功能。
+此外，由于准确的字体枚举和访问底层字体数据（例如，应用过滤器和转换）方面的挑战，高端设计工具历来难以在 Web 上提供。当前的应用程序通常依赖于变通办法，例如要求用户将字体上传到服务器，在服务器上处理字体以获取原始字节数据，或者安装单独的本地程序以提供附加功能。
 
 Local Font Access API 的创建就是为了解决这些问题。
 
@@ -23,9 +23,9 @@ Local Font Access API 的创建就是为了解决这些问题。
 
 在隐私和安全方面：
 
-- 本地字体访问 API 旨在仅提供对解决上述问题所需的数据的访问。它既不要求浏览器提供可用本地字体的完整列表，也不要求按照磁盘上显示的顺序提供数据。
+- 本地字体访问 API 旨在仅提供对解决上述问题所需的数据的访问。它既不要求浏览器提供可用本地字体的完整列表，也不要求按照磁盘上出现的顺序提供数据。
 - 当调用 {{domxref("Window.queryLocalFonts()")}} 时，系统会请求用户授予访问其本地字体的权限。此权限的状态可以通过 {{domxref("Permissions API")}}（`local-fonts` 权限）查询。
-- 你可以使用 {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 控制对此功能的访问。
+- 你可以使用 {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)控制对此特性的访问。
 
 ## 接口
 
@@ -35,7 +35,7 @@ Local Font Access API 的创建就是为了解决这些问题。
 ## 其他接口的扩展
 
 - {{domxref("Window.queryLocalFonts()")}}
-  - : 返回一个 {{jsxref("Promise")}}，它成功完成时返回表示本地可用字体的 {{domxref("FontData")}} 对象的数组。
+  - : 返回一个 {{jsxref("Promise")}}，它会兑现一个表示本地可用字体的 {{domxref("FontData")}} 对象的数组。
 
 ## 示例
 
@@ -69,9 +69,9 @@ async function logFontData() {
 }
 ```
 
-### 访问低级数据
+### 访问底层数据
 
-{{domxref("FontData.blob", "blob()")}} 方法提供对低级 [SFNT](https://en.wikipedia.org/wiki/SFNT) 数据的访问——这是一种可以包含其他字体格式的字体文件格式，例如 PostScript、TrueType、OpenType 或 Web 开放字体格式（WOFF）。
+{{domxref("FontData.blob", "blob()")}} 方法提供对底层 [SFNT](https://zh.wikipedia.org/wiki/SFNT) 数据的访问——这是一种可以包含其他字体格式的字体文件格式，例如 PostScript、TrueType、OpenType 或 Web 开放字体格式（WOFF）。
 
 ```js
 async function computeOutlineFormat() {
@@ -83,7 +83,7 @@ async function computeOutlineFormat() {
       // `blob()` 方法返回一个包含有效且完整的 SFNT 包装字体数据的 Blob。
       const sfnt = await fontData.blob();
       // 仅裁剪出我们需要的字节部分：前 4 个字节是 SFNT 版本信息。
-      // 标准：https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
+      // 规范：https://learn.microsoft.com/zh-cn/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
       let outlineFormat = "UNKNOWN";
@@ -117,4 +117,4 @@ async function computeOutlineFormat() {
 
 - [使用带有本地字体的高级排版](https://developer.chrome.com/articles/local-fonts/)
 - {{cssxref("@font-face")}}
-- {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 指令
+- {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)指令
