@@ -72,7 +72,7 @@ class MyModelName(models.Model):
         """
         String for representing the MyModelName object (in Admin site etc.)
         """
-        return self.field_name
+        return self.my_field_name
 ```
 
 В следующих разделах мы подробно рассмотрим каждый элемент внутри модели:
