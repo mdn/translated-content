@@ -1,6 +1,7 @@
 ---
 title: Writing forward-compatible websites
-slug: Web/Guide/Writing_forward-compatible_websites
+slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+original_slug: Web/Guide/Writing_forward-compatible_websites
 ---
 
 這個頁面將解釋如何撰寫在新的瀏覽器版本發布時不會遭受毀損的網頁。
