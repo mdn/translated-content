@@ -43,7 +43,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 一份**文档**是由标记语言组织起来的文本文件——{{Glossary("HTML")}} 是最常见的标记语言，但你可能也听说过其他可标记语言，如 {{Glossary("SVG")}} 或 {{Glossary("XML")}}。
 
-**展示**一份文档给用户实际上是将文档变成用户可用的文件。{{Glossary("browser","Browsers")}}：如 {{Glossary("Mozilla Firefox","Firefox")}}，{{Glossary("Google Chrome","Chrome")}}, 或 {{Glossary("Microsoft Edge","Edge")}}，都可以将文档在电脑屏幕、投影仪或打印机等设备上进行可视化。
+**展示**一份文档给用户实际上是将文档变成用户可用的文件。{{Glossary("browser","浏览器")}}：如 {{Glossary("Mozilla Firefox","Firefox")}}、{{Glossary("Google Chrome","Chrome")}} 或 {{Glossary("Microsoft Edge","Edge")}}，都可以将文档在电脑屏幕、投影仪或打印机等设备上进行可视化。
 
 > **备注：** 浏览器有时候也被称为 {{Glossary("User agent","user agent")}}，大致可以当这个程序是一个存在于计算机系统中的人。当我们讨论 CSS 时，浏览器是 User agent 的主要形式，然而它并不是唯一的一个。还有其他可用的 user agents — 像是那些可以把 HTML 和 CSS 文档转换为可以打印的 PDF 文档的软件。
 

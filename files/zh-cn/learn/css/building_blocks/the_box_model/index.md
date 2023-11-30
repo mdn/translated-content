@@ -40,7 +40,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
 
 ## 块级盒子（Block box）和 内联盒子（Inline box）
 
-在 CSS 中我们广泛地使用两种“盒子”——**块级盒子** (**block box**) 和 **内联盒子** (**inline box**)。这两种盒子会在**页面流**（page flow）和元素之间的关系方面表现出不同的行为：
+在 CSS 中我们广泛地使用两种“盒子”——**块级盒子**（block box）和**内联盒子**（inline box）。这两种盒子会在**页面流**（page flow）和元素之间的关系方面表现出不同的行为：
 
 一个被定义成块级的（block）盒子会表现出以下行为：
 

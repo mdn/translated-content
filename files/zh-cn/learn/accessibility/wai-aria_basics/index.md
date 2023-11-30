@@ -355,7 +355,7 @@ function toggleMusician(bool) {
 </div>
 ```
 
-这时候再用屏幕阅读器，这次你会听到短语 "Click me!, button"——舒服了。
+这时候再用屏幕阅读器，这次你会听到短语“Click me!, button”——舒服了。
 
 > **备注：** 别忘了无论如何用正确的语义化元素是最佳选择。如果你想创建一个按钮，你可用 {{htmlelement("button")}} 元素，你应该用 {{htmlelement("button")}} 元素！
 

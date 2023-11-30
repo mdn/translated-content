@@ -81,7 +81,7 @@ var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', '
 var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 ```
 
-语法格式使用的是 [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**)——你可以在前面的链接中了解更多关于语法格式的规范。不过现在，让我们快速地浏览它：
+语法格式使用的是 [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/)（**JSGF**）——你可以在前面的链接中了解更多关于语法格式的规范。不过现在，让我们快速地浏览它：
 
 - 每一行用分号分隔，和 js 中一样
 - 第一行——`#JSGF V1.0`——说的是语法使用的格式和版本。这总是需要首先包括在内
