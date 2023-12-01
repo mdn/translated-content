@@ -24,7 +24,7 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 - [從現有的 C 模組編譯為 WebAssembly](/zh-TW/docs/WebAssembly/existing_C_to_wasm)
   - : WebAssembly 核心的使用案例是期望能讓開發者在 Web 環境中使用現存 C 的生態環境。
 - [將 Rust 程式碼編譯為 WebAssembly](/zh-TW/docs/WebAssembly/Rust_to_wasm)
-  - : 你可以將 Rust 編譯為 WebAssembly！本教程將帶您了解將 Rust 項目編譯為 wasm 並在現有的 Web 應用程序中使用它所需的所有知識。
+  - : 你可以將 Rust 編譯為 WebAssembly！本教程將帶你了解將 Rust 項目編譯為 wasm 並在現有的 Web 應用程序中使用它所需的所有知識。
 - [載入並運行 WebAssembly 程式碼](/zh-TW/docs/WebAssembly/Loading_and_running)
   - : 本文介紹如何透過把 [Fetch](/zh-TW/docs/Web/API/Fetch_API) 或 [XHR](/zh-TW/docs/Web/API/XMLHttpRequest) API 與 [WebAssembly JavaScript](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) API 結合起來、編譯及實例化 .wasm 文件。
 - [使用 WebAssembly 的 JavaScript API](/zh-TW/docs/WebAssembly/Using_the_JavaScript_API)

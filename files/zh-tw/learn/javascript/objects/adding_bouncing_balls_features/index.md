@@ -157,6 +157,6 @@ To implement the score counter, follow the following steps:
 
 ## 交作業
 
-如果你是在某個課堂上操作這份作業，那麼請將成品交給您的老師 / 助教；如果您是自學者，在我們的[專屬討論區](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [Mozilla IRC](https://wiki.mozilla.org/IRC) 上的 [#mdn](irc://irc.mozilla.org/mdn) 頻道都可以很輕鬆地找到人給予指教。記得先認真做一下習題，要怎麼收獲先那麼栽呀！
+如果你是在某個課堂上操作這份作業，那麼請將成品交給你的老師 / 助教；如果你是自學者，在我們的[專屬討論區](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [Mozilla IRC](https://wiki.mozilla.org/IRC) 上的 [#mdn](irc://irc.mozilla.org/mdn) 頻道都可以很輕鬆地找到人給予指教。記得先認真做一下習題，要怎麼收獲先那麼栽呀！
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

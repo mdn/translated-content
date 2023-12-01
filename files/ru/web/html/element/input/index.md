@@ -239,9 +239,9 @@ The result is:
 
 \[4] `datetime` был удалён из спецификации и браузеров в пользу `datetime-local`.
 
-\[5] См {{bug(1355389)}}
+\[5] См [Firefox bug 1355389](https://bugzil.la/1355389)
 
-\[6] Ещё не имплементировано. Наблюдать: {{bug("888320")}} и [TPE DOM/Date time input types](https://wiki.mozilla.org/TPE_DOM/Date_time_input_types).
+\[6] Ещё не имплементировано. Наблюдать: [Firefox bug 888320](https://bugzil.la/888320) и [TPE DOM/Date time input types](https://wiki.mozilla.org/TPE_DOM/Date_time_input_types).
 
 ### Gecko notes
 

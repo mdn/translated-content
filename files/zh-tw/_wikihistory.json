@@ -1288,6 +1288,10 @@
     "modified": "2020-07-16T22:39:19.937Z",
     "contributors": ["wbamberg", "iigmir", "roycrxtw"]
   },
+  "Learn/Tools_and_testing/Cross_browser_testing/JavaScript": {
+    "modified": "2019-03-24T00:17:14.604Z",
+    "contributors": ["fscholz", "irvinfly", "Littlebtc", "Sonrisa", "sycheng"]
+  },
   "MDN": {
     "modified": "2019-09-10T15:45:39.460Z",
     "contributors": [
@@ -2513,6 +2517,10 @@
     "modified": "2020-05-11T23:59:37.780Z",
     "contributors": ["wildsky", "iigmir", "1986slayer"]
   },
+  "Web/CSS/CSS_fonts/WOFF": {
+    "modified": "2019-03-23T23:28:22.570Z",
+    "contributors": ["fscholz", "carl_tw"]
+  },
   "Web/CSS/CSS_grid_layout": {
     "modified": "2020-02-01T05:41:13.615Z",
     "contributors": ["SvampK", "iigmir", "1986slayer", "jackblackevo"]
@@ -2706,18 +2714,6 @@
   "Web/Guide/Graphics": {
     "modified": "2019-04-23T04:21:07.806Z",
     "contributors": ["jackblackevo", "pytseng"]
-  },
-  "Web/Guide/Introduction_to_Web_development": {
-    "modified": "2019-04-23T03:25:16.725Z",
-    "contributors": ["jackblackevo", "khhyoshida", "happysadman"]
-  },
-  "Web/Guide/WOFF": {
-    "modified": "2019-03-23T23:28:22.570Z",
-    "contributors": ["fscholz", "carl_tw"]
-  },
-  "Web/Guide/Writing_forward-compatible_websites": {
-    "modified": "2019-03-24T00:17:14.604Z",
-    "contributors": ["fscholz", "irvinfly", "Littlebtc", "Sonrisa", "sycheng"]
   },
   "Web/HTML": {
     "modified": "2020-10-16T05:00:10.652Z",

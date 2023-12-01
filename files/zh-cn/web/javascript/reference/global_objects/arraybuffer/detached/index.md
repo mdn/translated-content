@@ -1,6 +1,8 @@
 ---
 title: ArrayBuffer.prototype.detached
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/detached
+l10n:
+  sourceCommit: f6e304f08e3fe566465a40830ea7d589ef5e83a8
 ---
 
 {{JSRef}} {{SeeCompatTable}}

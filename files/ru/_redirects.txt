@@ -400,7 +400,7 @@
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/ByteString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /ru/docs/Web/API/CSS_Object_Model/ориентация_экрана	/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
-/ru/docs/Web/API/CanvasRenderingContext2D/currentTransform	/ru/docs/conflicting/Web/API/CanvasRenderingContext2D
+/ru/docs/Web/API/CanvasRenderingContext2D/currentTransform	/ru/docs/Web/API/CanvasRenderingContext2D
 /ru/docs/Web/API/Canvas_API/A_basic_ray-caster	/ru/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /ru/docs/Web/API/Canvas_API/Tutorial/Использование_изображений	/ru/docs/Web/API/Canvas_API/Tutorial/Using_images
 /ru/docs/Web/API/Canvas_API/Tutorial/Композиции	/ru/docs/Web/API/Canvas_API/Tutorial/Compositing
@@ -587,7 +587,7 @@
 /ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/ru/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
-/ru/docs/Web/CSS/:-moz-focusring	/ru/docs/conflicting/Web/CSS/:focus-visible
+/ru/docs/Web/CSS/:-moz-focusring	/ru/docs/Web/CSS/:focus-visible
 /ru/docs/Web/CSS/:blank	/ru/docs/Web/CSS/:-moz-only-whitespace
 /ru/docs/Web/CSS/:host()	/ru/docs/Web/CSS/:host_function
 /ru/docs/Web/CSS/@viewport	/ru/docs/Web/CSS

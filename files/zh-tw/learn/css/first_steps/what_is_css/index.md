@@ -5,7 +5,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
-**{{Glossary("CSS")}}** （階層式樣式表）可以讓您建立出好看的網頁，但是它背後是怎麼運作的？在這個主題裡，藉由簡單的語法範例來說明 CSS 是什麼，以及含蓋這個語言的一些關鍵項目。
+**{{Glossary("CSS")}}** （階層式樣式表）可以讓你建立出好看的網頁，但是它背後是怎麼運作的？在這個主題裡，藉由簡單的語法範例來說明 CSS 是什麼，以及含蓋這個語言的一些關鍵項目。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -31,11 +31,11 @@ slug: Learn/CSS/First_steps/What_is_CSS
   </tbody>
 </table>
 
-在 [HTML 入門](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)單元中，我們含蓋了什麼是 HTML 以及它是如何被用來標記文件。這些文件能夠被瀏覽器讀取，標題的文字會看起來比一般段落更大，段落之間會換行並帶有間隔。連結會帶有顏色及底線，讓它與其它一般的文字有區別。您所看到的這些是瀏覽器的預設樣式，用來確保當作者沒有指定任何樣式的狀況下，仍有一些非常基本的樣式被套用上，好讓內容基本上能夠被閱讀（如下圖所示）。
+在 [HTML 入門](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)單元中，我們含蓋了什麼是 HTML 以及它是如何被用來標記文件。這些文件能夠被瀏覽器讀取，標題的文字會看起來比一般段落更大，段落之間會換行並帶有間隔。連結會帶有顏色及底線，讓它與其它一般的文字有區別。你所看到的這些是瀏覽器的預設樣式，用來確保當作者沒有指定任何樣式的狀況下，仍有一些非常基本的樣式被套用上，好讓內容基本上能夠被閱讀（如下圖所示）。
 
 ![The default styles used by a browser](html-example.png)
 
-然而，如果所有的網站都長這個樣子，網路世界將是個很無趣的地方。您能使用 CSS 對 HTML 元件的樣子作更多控制，將這些標記以任何您喜歡的設計作調整。
+然而，如果所有的網站都長這個樣子，網路世界將是個很無趣的地方。你能使用 CSS 對 HTML 元件的樣子作更多控制，將這些標記以任何你喜歡的設計作調整。
 
 看看下面的影片，了解更多關於瀏覽器預設樣式（可開 CC 字幕並自動翻譯為中文）。
 
@@ -45,7 +45,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 如同我們前面所提到的， CSS 是一種用來指定文件該用什麼方式呈現的語言，可以定義它們的樣式、布局…等。
 
-**文件**通常指的是使用標記語言的文字檔案，{{Glossary("HTML")}} 是其中最常見的，但是您也可能遇到其它例如 {{Glossary("SVG")}} 或 {{Glossary("XML")}} 的標記語言。
+**文件**通常指的是使用標記語言的文字檔案，{{Glossary("HTML")}} 是其中最常見的，但是你也可能遇到其它例如 {{Glossary("SVG")}} 或 {{Glossary("XML")}} 的標記語言。
 
 所謂的**呈現**文件，指的是將文件轉換為你的讀者可用的形式。像是 {{Glossary("Mozilla Firefox","Firefox")}} 、 {{Glossary("Google Chrome","Chrome")}} 或 {{Glossary("Microsoft Edge","Edge")}} 這類的{{Glossary("browser","瀏灠器")}}，是設計來將文件視覺化，再呈現電腦螢幕、投影機上或是由列表機列印出來。
 
@@ -55,7 +55,7 @@ CSS 可以用在很基本文字樣式上頭，像是改變標題和連結的[顏
 
 ## CSS 語法
 
-CSS 是一種基於規則的語言，您對網頁裡特定或一群元素指定一系列的規則。舉例來說：「我要讓頁面裡的主標題，以紅色且大號的字體呈現」。
+CSS 是一種基於規則的語言，你對網頁裡特定或一群元素指定一系列的規則。舉例來說：「我要讓頁面裡的主標題，以紅色且大號的字體呈現」。
 
 下面這段語法是為了實現上面的需求，用簡單 CSS 規則示範：
 
@@ -66,7 +66,7 @@ h1 {
 }
 ```
 
-樣式規則以一個{{Glossary("CSS Selector", "選擇器")}}開始。它*選擇*了您預計改變樣式的 HTML 元素。在這個例子中，我們要調整的是第一級的標題元素（{{htmlelement("h1")}}）。
+樣式規則以一個{{Glossary("CSS Selector", "選擇器")}}開始。它*選擇*了你預計改變樣式的 HTML 元素。在這個例子中，我們要調整的是第一級的標題元素（{{htmlelement("h1")}}）。
 
 接著我們跟著一組花括號 `{ }`，裡面是一到多個**聲明**，它的形式是一對一對**屬性名稱**和**屬性內容**的組合。每一對聲明會將我們選中元素的屬性，付予我們所想要設定的內容（或數值）。
 
@@ -85,17 +85,17 @@ p {
 }
 ```
 
-你將會發些有些值很容易學會，而另一些則需要查資料確認。MDN 上有各個屬性的獨立頁面讓您能查到屬性及其可使用的值，在你忘記了或是想知道其它可能用法的時候提供一個快速的路徑。
+你將會發些有些值很容易學會，而另一些則需要查資料確認。MDN 上有各個屬性的獨立頁面讓你能查到屬性及其可使用的值，在你忘記了或是想知道其它可能用法的時候提供一個快速的路徑。
 
-> **備註：** 您可以在 MDN 的 [CSS 參考資源](/zh-TW/docs/Web/CSS/Reference)找到所有的 CSS 屬性（以及其它 CSS 特性）頁面的連結。 另外，當您需要得到某個 CSS 特性的更多資訊，應該去習慣使用「mdn _特性名稱_」的方式在您喜歡搜尋引擊上搜尋。舉例來說，嘗試以「mdn color」和「mdn font-size」作關鍵字搜尋！
+> **備註：** 你可以在 MDN 的 [CSS 參考資源](/zh-TW/docs/Web/CSS/Reference)找到所有的 CSS 屬性（以及其它 CSS 特性）頁面的連結。 另外，當你需要得到某個 CSS 特性的更多資訊，應該去習慣使用「mdn _特性名稱_」的方式在你喜歡搜尋引擊上搜尋。舉例來說，嘗試以「mdn color」和「mdn font-size」作關鍵字搜尋！
 
 ## CSS 的各個主題（單元）
 
-由於 CSS 有太多的項目可以進行設定，因此將這個語言依不同主題切分出單元。您將會在探索 MDN 的時候看到這些單元，並發現許多文章是圍繞著特定單元所組織的。舉例來說，您可以在 MDN 關於[背景與邊框](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders)的單元裡，看到它的目的，以及其包含了哪些不同的屬性及特性。 您也將在文末發現到相關 *CSS 規範*的連結。
+由於 CSS 有太多的項目可以進行設定，因此將這個語言依不同主題切分出單元。你將會在探索 MDN 的時候看到這些單元，並發現許多文章是圍繞著特定單元所組織的。舉例來說，你可以在 MDN 關於[背景與邊框](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders)的單元裡，看到它的目的，以及其包含了哪些不同的屬性及特性。 你也將在文末發現到相關 *CSS 規範*的連結。
 
 在這裡不用太煩惱 CSS 的架構，可以讓尋找資訊變得簡單一些。例如說，當你知道某個屬性可能用在其它類似的東西上，因此它們可能被放在同一個規範（單元）裡。
 
-舉個特別的例子，讓我們回到背景與邊框的單元中，您可能會認為在邏輯上 [`background-color`](/zh-TW/docs/Web/CSS/background-color) 和 [`border-color`](/zh-TW/docs/Web/CSS/border-color) 會在同一個單元裡被定義。所以您猜對了。
+舉個特別的例子，讓我們回到背景與邊框的單元中，你可能會認為在邏輯上 [`background-color`](/zh-TW/docs/Web/CSS/background-color) 和 [`border-color`](/zh-TW/docs/Web/CSS/border-color) 會在同一個單元裡被定義。所以你猜對了。
 
 ### CSS 規範
 
@@ -113,6 +113,6 @@ CSS 並沒有什麼不同，它由 W3C 一個被稱為 [CSS 工作組](https://w
 
 ## 下一步…
 
-現在您已經知卜 CSS 是什麼，接著移動到 [CSS 入門](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)單元，你可以在這裡開始寫一些 CSS。
+現在你已經知卜 CSS 是什麼，接著移動到 [CSS 入門](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)單元，你可以在這裡開始寫一些 CSS。
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}

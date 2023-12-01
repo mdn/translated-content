@@ -108,7 +108,7 @@
 /ja/docs/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/Language_overview
 /ja/docs/Aardvark_(external)	https://addons.mozilla.org/ja/firefox/addon/4111
 /ja/docs/About_JavaScript	/ja/docs/Web/JavaScript
-/ja/docs/About_WOFF	/ja/docs/Web/Guide/WOFF
+/ja/docs/About_WOFF	/ja/docs/Web/CSS/CSS_fonts/WOFF
 /ja/docs/About_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Accessibility	/ja/docs/Web/Accessibility
 /ja/docs/Accessibility/ARIA	/ja/docs/Web/Accessibility/ARIA
@@ -902,7 +902,6 @@
 /ja/docs/DOM/window.URL.revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/DOM/window.alert	/ja/docs/Web/API/Window/alert
 /ja/docs/DOM/window.alert-redirect-1	/ja/docs/Web/API/Window/alert
-/ja/docs/DOM/window.applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/DOM/window.arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/DOM/window.atob	/ja/docs/Web/API/atob
 /ja/docs/DOM/window.atob-redirect-1	/ja/docs/Web/API/atob
@@ -1130,7 +1129,6 @@
 /ja/docs/DOM:selection	/ja/docs/Web/API/Selection
 /ja/docs/DOM:window	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.alert	/ja/docs/Web/API/Window/alert
-/ja/docs/DOM:window.applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/DOM:window.atob	/ja/docs/Web/API/atob
 /ja/docs/DOM:window.back	/ja/docs/Web/API/Window/back
 /ja/docs/DOM:window.blur	/ja/docs/Web/API/Window/blur
@@ -1347,7 +1345,7 @@
 /ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
-/ja/docs/Glossary/Scrollport	/ja/docs/conflicting/Glossary/Scroll_container
+/ja/docs/Glossary/Scrollport	/ja/docs/Glossary/Scroll_container
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
 /ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
@@ -2565,7 +2563,7 @@
 /ja/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /ja/docs/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/View_source	https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html
-/ja/docs/WOFF	/ja/docs/Web/Guide/WOFF
+/ja/docs/WOFF	/ja/docs/Web/CSS/CSS_fonts/WOFF
 /ja/docs/Web-based_protocol_handlers	/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /ja/docs/Web-d/Guide/CSS/Getting_started	/ja/docs/Learn/CSS
 /ja/docs/Web-d/Guide/CSS/Getting_started/Boxes	/ja/docs/Learn/CSS/Building_blocks/The_box_model
@@ -2626,6 +2624,7 @@
 /ja/docs/Web/API/AudioTrackList/onaddtrack	/ja/docs/Web/API/AudioTrackList/addtrack_event
 /ja/docs/Web/API/AudioTrackList/onchange	/ja/docs/Web/API/AudioTrackList/change_event
 /ja/docs/Web/API/AudioTrackList/onremovetrack	/ja/docs/Web/API/AudioTrackList/removetrack_event
+/ja/docs/Web/API/AudioWorkletProcessor/parameterDescriptors	/ja/docs/Web/API/AudioWorkletProcessor
 /ja/docs/Web/API/BarcodeDetector/getSupportedFormats	/ja/docs/Web/API/BarcodeDetector/getSupportedFormats_static
 /ja/docs/Web/API/BaseAudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/statechange_event
 /ja/docs/Web/API/BlobBuilder	/ja/docs/Web/API/Blob
@@ -3152,7 +3151,6 @@
 /ja/docs/Web/API/Window/animationend_event	/ja/docs/Web/API/Element/animationend_event
 /ja/docs/Web/API/Window/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
-/ja/docs/Web/API/Window/applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
@@ -3366,7 +3364,6 @@
 /ja/docs/Web/API/window.URL.createObjectURL	/ja/docs/Web/API/URL/createObjectURL_static
 /ja/docs/Web/API/window.URL.revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/Web/API/window.alert	/ja/docs/Web/API/Window/alert
-/ja/docs/Web/API/window.applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/Web/API/window.arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/window.atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/window.back	/ja/docs/Web/API/Window/back
@@ -3883,6 +3880,7 @@
 /ja/docs/Web/Guide/AJAX/Community	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /ja/docs/Web/Guide/AJAX/Getting_Started	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /ja/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support	/ja/docs/Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
+/ja/docs/Web/Guide/API	/ja/docs/Web/API
 /ja/docs/Web/Guide/API/Gamepad	/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /ja/docs/Web/Guide/API/Vibration	/ja/docs/Web/API/Vibration_API
 /ja/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/ja/docs/Web/Guide/Audio_and_video_delivery
@@ -3969,11 +3967,15 @@
 /ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/Guide/HTML/XHTML	/ja/docs/Glossary/XHTML
 /ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
+/ja/docs/Web/Guide/Introduction_to_Web_development	/ja/docs/Learn
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ja/docs/Web/Guide/Mobile/Separate_sites	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
+/ja/docs/Web/Guide/Printing	/ja/docs/Web/CSS/CSS_media_queries/Printing
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
 /ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
+/ja/docs/Web/Guide/WOFF	/ja/docs/Web/CSS/CSS_fonts/WOFF
+/ja/docs/Web/Guide/Writing_forward-compatible_websites	/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /ja/docs/Web/HTML/Applying_color	/ja/docs/Web/CSS/CSS_colors/Applying_color
 /ja/docs/Web/HTML/Block-level_elements	/ja/docs/Glossary/Block-level_content
 /ja/docs/Web/HTML/CORS_settings_attributes	/ja/docs/Web/HTML/Attributes/crossorigin
@@ -4655,10 +4657,10 @@
 /ja/docs/Web_Developer_Extension_(external)	https://addons.mozilla.org/ja/firefox/addon/60
 /ja/docs/Web_Development	/ja/docs/Web/Guide
 /ja/docs/Web_Development/Historical_artifacts_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
-/ja/docs/Web_Development/Introduction_to_Web_development	/ja/docs/Web/Guide/Introduction_to_Web_development
+/ja/docs/Web_Development/Introduction_to_Web_development	/ja/docs/Learn
 /ja/docs/Web_Development/Mobile	/ja/docs/Web/Guide/Mobile
 /ja/docs/Web_Development/Mobile/Responsive_design	/ja/docs/Web/Progressive_web_apps
-/ja/docs/Web_Development/Writing_forward-compatible_websites	/ja/docs/Web/Guide/Writing_forward-compatible_websites
+/ja/docs/Web_Development/Writing_forward-compatible_websites	/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /ja/docs/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
 /ja/docs/XHTML	/ja/docs/Glossary/XHTML
 /ja/docs/XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest

@@ -7,7 +7,7 @@ slug: Web/API/fetch
 
 全局的 **`fetch()`** 方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 {{domxref("Response")}} 对象。
 
-{{domxref("Window")}} 和 {{domxref("WorkerGlobalScope")}} 都实现了 WorkerOrGlobalScope。 ——这意味着基本在任何场景下只要你想获取资源，都可以使用 位于 WorkerOrGlobalScope 中的 `fetch()` 方法。
+{{domxref("Window")}} 和 {{domxref("WorkerGlobalScope")}} 都实现了 WorkerOrGlobalScope。——这意味着基本在任何场景下只要你想获取资源，都可以使用 位于 WorkerOrGlobalScope 中的 `fetch()` 方法。
 
 当遇到网络错误时，{{domxref("fetch()")}} 返回的 promise 会被 reject，并传回 {{jsxref("TypeError")}}，虽然这也可能因为权限或其他问题导致。成功的 fetch() 检查不仅要包括 promise 被 resolve，还要包括 {{domxref("Response.ok")}} 属性为 true。HTTP 404 状态并不被认为是网络错误。
 

@@ -830,9 +830,9 @@ textarea.onkeyup = function () {
 
 {{ EmbedLiveSample('主动学习：更多颜色选择！', '100%', 850) }}
 
-## 测试你的技能！
+## 技能测试！
 
-你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[测试你的技能：条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals)
+你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[技能测试：条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals)
 
 ## 结论
 

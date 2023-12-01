@@ -3647,6 +3647,10 @@
       "fuzz139"
     ]
   },
+  "Learn/Tools_and_testing/Cross_browser_testing/JavaScript": {
+    "modified": "2019-03-24T00:13:14.456Z",
+    "contributors": ["kohei.yoshino", "yyss"]
+  },
   "Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies": {
     "modified": "2020-07-16T22:39:07.309Z",
     "contributors": ["Uemmra3", "silverskyvicto"]
@@ -16477,6 +16481,18 @@
     "modified": "2020-09-25T11:49:11.515Z",
     "contributors": ["mfuji09", "silverskyvicto"]
   },
+  "Web/CSS/CSS_fonts/WOFF": {
+    "modified": "2020-10-15T21:07:56.108Z",
+    "contributors": [
+      "YujiSoftware",
+      "xl1",
+      "yyss",
+      "fscholz",
+      "ethertank",
+      "ziyunfei",
+      "Marsf"
+    ]
+  },
   "Web/CSS/CSS_fragmentation": {
     "modified": "2019-03-18T21:34:51.102Z",
     "contributors": ["mfuji09"]
@@ -16582,6 +16598,10 @@
   "Web/CSS/CSS_masking": {
     "modified": "2020-10-15T21:54:38.952Z",
     "contributors": ["mfuji09", "dskmori"]
+  },
+  "Web/CSS/CSS_media_queries/Printing": {
+    "modified": "2020-01-12T12:37:57.185Z",
+    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "Web/CSS/CSS_media_queries/Testing_media_queries": {
     "modified": "2020-10-15T21:07:28.863Z",
@@ -20265,10 +20285,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/API": {
-    "modified": "2019-11-24T06:54:13.469Z",
-    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "Sheppy"]
-  },
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2019-04-07T08:59:12.823Z",
     "contributors": ["silverskyvicto", "chrisdavidmills", "stingray"]
@@ -20311,17 +20327,6 @@
     "modified": "2020-07-24T06:19:03.585Z",
     "contributors": ["Wind1808"]
   },
-  "Web/Guide/Introduction_to_Web_development": {
-    "modified": "2020-05-04T12:39:54.645Z",
-    "contributors": [
-      "Uemmra3",
-      "silverskyvicto",
-      "mfuji09",
-      "SphinxKnight",
-      "nonki777",
-      "Yuuki Takahashi"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2020-03-07T14:24:28.388Z",
     "contributors": ["mfuji09", "silverskyvicto"]
@@ -20342,29 +20347,9 @@
     "modified": "2019-06-08T03:16:25.641Z",
     "contributors": ["silverskyvicto"]
   },
-  "Web/Guide/Printing": {
-    "modified": "2020-01-12T12:37:57.185Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "Web/Guide/User_input_methods": {
     "modified": "2020-07-22T12:39:35.178Z",
     "contributors": ["mfuji09", "silverskyvicto"]
-  },
-  "Web/Guide/WOFF": {
-    "modified": "2020-10-15T21:07:56.108Z",
-    "contributors": [
-      "YujiSoftware",
-      "xl1",
-      "yyss",
-      "fscholz",
-      "ethertank",
-      "ziyunfei",
-      "Marsf"
-    ]
-  },
-  "Web/Guide/Writing_forward-compatible_websites": {
-    "modified": "2019-03-24T00:13:14.456Z",
-    "contributors": ["kohei.yoshino", "yyss"]
   },
   "Web/HTML": {
     "modified": "2020-12-14T11:33:50.265Z",
@@ -30181,9 +30166,22 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Glossary/Scroll_container": {
-    "modified": "2019-03-18T20:53:07.981Z",
-    "contributors": ["mfuji09"]
+  "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
+    "modified": "2020-08-12T11:49:11.332Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "chrisdavidmills",
+      "fscholz",
+      "ethertank",
+      "Potappo",
+      "Mgjbot",
+      "Summit677",
+      "Marsf",
+      "Shimono",
+      "Taken Bot",
+      "Dria"
+    ]
   },
   "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-12-06T14:17:48.495Z",
@@ -30557,17 +30555,6 @@
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
-  },
-  "orphaned/Web/API/Window/applicationCache": {
-    "modified": "2019-03-18T21:25:20.909Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Mgjbot",
-      "Kohei"
-    ]
   },
   "orphaned/Web/API/XSLTProcessor/Browser_Differences": {
     "modified": "2020-04-13T14:01:47.252Z",

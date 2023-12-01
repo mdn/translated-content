@@ -473,6 +473,9 @@
 /zh-TW/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form
 /zh-TW/docs/Web/Guide/HTML/HTML5	/zh-TW/docs/Glossary/HTML5
 /zh-TW/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/Learn/HTML
+/zh-TW/docs/Web/Guide/Introduction_to_Web_development	/zh-TW/docs/Learn
+/zh-TW/docs/Web/Guide/WOFF	/zh-TW/docs/Web/CSS/CSS_fonts/WOFF
+/zh-TW/docs/Web/Guide/Writing_forward-compatible_websites	/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /zh-TW/docs/Web/Guide/圖像	/zh-TW/docs/Web/Guide/Graphics
 /zh-TW/docs/Web/HTML/Block-level_elements	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTML/Canvas	/zh-TW/docs/Web/API/Canvas_API
@@ -602,10 +605,10 @@
 /zh-TW/docs/WebSockets/Writing_WebSocket_client_applications	/zh-TW/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /zh-TW/docs/Web_Audio_API	/zh-TW/docs/Web/API/Web_Audio_API
 /zh-TW/docs/Web_development	/zh-TW/docs/Web/Guide
-/zh-TW/docs/Web_development/Writing_forward-compatible_websites	/zh-TW/docs/Web/Guide/Writing_forward-compatible_websites
+/zh-TW/docs/Web_development/Writing_forward-compatible_websites	/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /zh-TW/docs/Web_開發	/zh-TW/docs/Web/Guide
 /zh-TW/docs/Web_開發/Historical_artifacts_to_avoid	/zh-TW/docs/Learn/HTML/Introduction_to_HTML
-/zh-TW/docs/Web_開發/Web開發入門	/zh-TW/docs/Web/Guide/Introduction_to_Web_development
+/zh-TW/docs/Web_開發/Web開發入門	/zh-TW/docs/Learn
 /zh-TW/docs/XHTML	/zh-TW/docs/Glossary/XHTML
 /zh-TW/docs/en	/en-US/
 /zh-TW/docs/zh-tw	/zh-TW/

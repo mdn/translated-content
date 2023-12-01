@@ -14929,10 +14929,6 @@
     "modified": "2019-03-18T21:08:10.456Z",
     "contributors": ["fitojb", "yuniers"]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-23T22:45:28.352Z",
-    "contributors": ["yuniers"]
-  },
   "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
     "modified": "2019-03-23T22:45:27.399Z",
     "contributors": ["yuniers"]
@@ -15052,10 +15048,6 @@
   "orphaned/Web/API/Body/json": {
     "modified": "2020-10-15T22:29:20.361Z",
     "contributors": ["camsa"]
-  },
-  "orphaned/Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-03-19T08:57:21.057Z",
-    "contributors": ["AzazelN28", "Fandres91", "dkocho4", "preteric"]
   },
   "orphaned/Web/API/ChildNode": {
     "modified": "2019-03-29T14:12:39.589Z",
@@ -15303,14 +15295,6 @@
       "jesanchez"
     ]
   },
-  "orphaned/Web/HTML/Element/applet": {
-    "modified": "2019-03-23T23:42:26.076Z",
-    "contributors": ["Sebastianz", "teoli", "Jorolo"]
-  },
-  "orphaned/Web/HTML/Element/blink": {
-    "modified": "2019-10-10T16:37:40.291Z",
-    "contributors": ["teoli", "jcr4"]
-  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-10-05T04:48:52.506Z",
     "contributors": ["titox", "jcr4"]
@@ -15322,10 +15306,6 @@
   "orphaned/Web/HTML/Element/isindex": {
     "modified": "2019-03-23T22:36:13.994Z",
     "contributors": ["jcr4"]
-  },
-  "orphaned/Web/HTML/Element/keygen": {
-    "modified": "2019-03-24T00:06:20.618Z",
-    "contributors": ["wbamberg", "teoli", "deimidis"]
   },
   "orphaned/Web/HTML/Element/multicol": {
     "modified": "2019-03-23T22:36:14.458Z",
@@ -15349,10 +15329,6 @@
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2019-03-23T22:41:19.266Z",
     "contributors": ["JuanSerrano02", "jcr4"]
-  },
-  "orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey": {
-    "modified": "2019-03-18T21:20:44.665Z",
-    "contributors": ["WriestTavo"]
   },
   "orphaned/Web/HTML/Inline_elements": {
     "modified": "2019-03-23T22:46:15.359Z",
@@ -15451,10 +15427,6 @@
       "cmeraz",
       "davy.martinez"
     ]
-  },
-  "orphaned/Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-23T23:43:25.545Z",
-    "contributors": ["teoli", "Superruzafa", "Jorolo"]
   },
   "orphaned/Web/SVG/SVG_en_Firefox_1.5": {
     "modified": "2019-03-23T23:42:07.791Z",
