@@ -45,13 +45,13 @@ page-type: learn-module-chapter
 
 기존의 프로젝트에서 팀과 함께 작업하는 경우, 프로젝트에 CSS를 위한 기존 스타일 가이드가 있는지 확인하는 것이 먼저입니다. 팀 스타일 가이드는 항상 자신의 개인적 선호보다 우선되야 합니다. 일을 하는 데에 옳거나 틀린 방법은 거의 없지만, 일관성이 중요합니다.
 
-예를 들어, [CSS guidelines for MDN code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)를 살펴보세요.
+예를 들어, [CSS guidelines for N code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)를 살펴보세요.
 
-### Keep it consistent
+### 일관성을 유지하세요
 
-If you get to set the rules for the project or are working alone, then the most important thing to do is to keep things consistent. Consistency can be applied in all sorts of ways, such as using the same naming conventions for classes, choosing one method of describing color, or maintaining consistent formatting. (For example, will you use tabs or spaces to indent your code? If spaces, how many spaces?)
+프로젝트의 규칙을 정하거나 혼자 작업을 한다면, 가장 중요한 일은 일관성을 유지하는 것입니다. 일관성은 클래스에 동일한 이름을 붙이는 규칙을 사용하거나, 색상을 묘사하는 방법을 선택하거나, 일관된 형식을 유지하는 것과 같은 모든 종류의 방법에 적용될 수 있습니다. (예를 들어, 코드를 들여쓸 때 탭을 사용할 건가요, 스페이스를 사용할 건가요? 스페이스가 있는 경우 몇 개의 스페이스를 사용할 건가요?)
 
-Having a set of rules you always follow reduces the amount of mental overhead needed when writing CSS, as some of the decisions are already made.
+항상 따르는 일련의 규칙이 있다면 CSS를 작성할 때 일부 결정이 되어 있기 때문에 필요한 정신적 오버헤드의 양이 줄어듭니다.
 
 ### Formatting readable CSS
 
