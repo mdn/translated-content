@@ -5,7 +5,7 @@ slug: Web/API/Blob/arrayBuffer
 
 {{APIRef("File API")}}
 
-{{domxref("Blob")}} 接口的 **`arrayBuffer()`** 方法返回一个 {{jsxref("Promise")}} 对象，包含 blob 中的数据，并在 {{domxref("ArrayBuffer")}} 中以二进制数据的形式呈现。
+{{domxref("Blob")}} 接口的 **`arrayBuffer()`** 方法返回一个 {{jsxref("Promise")}}，其会兑现一个包含 blob 二进制数据内容的 {{jsxref("ArrayBuffer")}}。
 
 ## 语法
 
