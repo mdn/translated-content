@@ -1,5 +1,5 @@
 ---
-title: Blob： Blob() 构造函数
+title: Blob：Blob() 构造函数
 slug: Web/API/Blob/Blob
 ---
 
