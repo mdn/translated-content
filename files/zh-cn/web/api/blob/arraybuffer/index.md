@@ -27,7 +27,7 @@ arrayBuffer()
 
 ## 使用说明
 
-{{domxref("FileReader.readAsArrayBuffer()")}} 这个方法与之类似，但 `arrayBuffer()` 返回一个 promise 对象，而不是像 `FileReader` 接口的方法一样返回一个基于事件的 API。
+{{domxref("FileReader.readAsArrayBuffer()")}} 方法与之类似，但 `arrayBuffer()` 返回一个 promise 对象，而不是像 `FileReader` 接口的方法一样返回一个基于事件的 API。
 
 ## 规范
 
