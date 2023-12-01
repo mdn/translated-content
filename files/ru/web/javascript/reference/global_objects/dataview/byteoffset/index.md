@@ -1,22 +1,17 @@
 ---
 title: DataView.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
-tags:
-  - DataView
-  - JavaScript
-  - byteOffset
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 ---
 
 {{JSRef}}
 
-Свойство **`byteOffset`** возвращает смещение в байтах объектов {{jsxref("DataView")}} относительно начала своего {{jsxref("ArrayBuffer")}} или {{jsxref("SharedArrayBuffer")}}.
+Свойство **`byteOffset`** экземпляров {{jsxref("DataView")}} возвращает смещение (в байтах) этого `DataView` относительно начала своего {{jsxref("ArrayBuffer")}} или {{jsxref("SharedArrayBuffer")}}.
 
 {{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}
 
 ## Описание
 
-Свойство `byteOffset` - это свойством доступа, функция set accessor которого `undefined`, что означает, что вы можете только читать это свойство. Значение устанавливается при создании объекта `DataView` и не может быть изменено.
+`byteOffset` — это свойство, функция доступа которого равна `undefined`, то есть это свойство доступно только для чтения. Значение устанавливается при создании `DataView` и не может быть изменено.
 
 ## Примеры
 
@@ -25,10 +20,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 ```js
 const buffer = new ArrayBuffer(8);
 const dataview = new DataView(buffer);
-dataview.byteOffset; // 0 (смещение не указано)
+dataview.byteOffset; // 0 (смещение не установлено)
 
 const dataview2 = new DataView(buffer, 3);
-dataview2.byteOffset; // 3 (как указано при построении DataView)
+dataview2.byteOffset; // 3 (как установлено при создании DataView)
 ```
 
 ## Спецификации
