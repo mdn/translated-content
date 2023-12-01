@@ -6,34 +6,32 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
-As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
+더 큰 스타일시트와 큰 프로젝트에서 작업하기 시작하면 거대한 CSS 파일을 유지하는 것이 어렵다는 것을 알게 됩니다. 이 글에서는 CSS를 쉽게 유지 관리할 수 있도록 작성하기 위한 몇 가지 모범 사례와 유지 관리성을 향상시키기 위해 다른 사람들이 사용하는 솔루션에 대해 간략히 알아보겠습니다.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
-        Basic computer literacy,
+        기본 컴퓨터 활용 능력,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
-        >, basic knowledge of
-        <a
+          >기본 소프트웨어 설치</a
+        >, <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >working with files</a
-        >, HTML basics (study
+          >파일 작업</a
+        > 에 대한 기본 지식
+        , HTML 기본 사항 (
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+          >HTML 소개</a
+        > 학습) 및, CSS 작동 방식 이해 (
+        <a href="/en-US/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">목표:</th>
       <td>
-        To learn some tips and best practices for organizing stylesheets, and
-        find out about some of the naming conventions and tools in common usage
-        to help with CSS organization and team working.
+        스타일시트를 구성하기 위한 몇 가지 팁과 모범 사례를 알아보고, CSS 구성 및 팀 작업에 도움이 되는 일반적인 사용 방식의 명명 규칙과 도구를 알아봅시다.
       </td>
     </tr>
   </tbody>
