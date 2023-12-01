@@ -45,19 +45,25 @@ OPFS がユーザーから見えるファイルシステムと異なる点をま
 
 ```js
 // ファイルとフォルダー内の階層を作成
-const fileHandle = await opfsRoot
-    .getFileHandle('my first file', {create: true});
-const directoryHandle = await opfsRoot
-    .getDirectoryHandle('my first folder', {create: true});
-const nestedFileHandle = await directoryHandle
-    .getFileHandle('my first nested file', {create: true});
-const nestedDirectoryHandle = await directoryHandle
-    .getDirectoryHandle('my first nested folder', {create: true});
+const fileHandle = await opfsRoot.getFileHandle("my first file", {
+  create: true,
+});
+const directoryHandle = await opfsRoot.getDirectoryHandle("my first folder", {
+  create: true,
+});
+const nestedFileHandle = await directoryHandle.getFileHandle(
+  "my first nested file",
+  { create: true },
+);
+const nestedDirectoryHandle = await directoryHandle.getDirectoryHandle(
+  "my first nested folder",
+  { create: true },
+);
 
 // 既存のファイル名やフォルダー内にアクセス
-const existingFileHandle = await opfsRoot.getFileHandle('my first file');
-const existingDirectoryHandle = await opfsRoot
-    .getDirectoryHandle('my first folder');
+const existingFileHandle = await opfsRoot.getFileHandle("my first file");
+const existingDirectoryHandle =
+  await opfsRoot.getDirectoryHandle("my first folder");
 ```
 
 ### ファイルの読み取り
