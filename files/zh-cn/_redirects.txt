@@ -2338,7 +2338,7 @@
 /zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
-/zh-CN/docs/Web/Guide/Introduction_to_Web_development	/zh-CN/docs/conflicting/Learn
+/zh-CN/docs/Web/Guide/Introduction_to_Web_development	/zh-CN/docs/Learn
 /zh-CN/docs/Web/Guide/Performance/Using_web_workers	/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers
 /zh-CN/docs/Web/Guide/Printing	/zh-CN/docs/Web/CSS/CSS_media_queries/Printing
 /zh-CN/docs/Web/Guide/Using_FormData_Objects	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
@@ -2713,8 +2713,8 @@
 /zh-CN/docs/WebGuide/API/File_System/Introduction	/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /zh-CN/docs/WebRTC/navigator.getUserMedia	/zh-CN/docs/Web/API/Navigator/getUserMedia
 /zh-CN/docs/WebRTC/介绍	/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime
-/zh-CN/docs/Web_Development/Introduction_to_Web_development	/zh-CN/docs/conflicting/Learn
-/zh-CN/docs/Web_Development/Web开发介绍	/zh-CN/docs/conflicting/Learn
+/zh-CN/docs/Web_Development/Introduction_to_Web_development	/zh-CN/docs/Learn
+/zh-CN/docs/Web_Development/Web开发介绍	/zh-CN/docs/Learn
 /zh-CN/docs/XHTML	/zh-CN/docs/Glossary/XHTML
 /zh-CN/docs/XMLSerializer	/zh-CN/docs/Web/API/XMLSerializer
 /zh-CN/docs/XMLSerializer-840092-dup	/zh-CN/docs/Web/API/XMLSerializer
