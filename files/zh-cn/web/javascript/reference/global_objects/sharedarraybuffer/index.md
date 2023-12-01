@@ -69,7 +69,7 @@ if (crossOriginIsolated) {
 根据是否采取了上述安全措施，各类内存共享 API 具有不同的可用性：
 
 - `Atomics` 对象总是可用的。
-- `SharedArrayBuffer` 对象在原则上始终可用，但遗憾的是，除非设置了前面提到的两个头，否则其在全局对象上的构造函数是隐藏的，以兼容 web 内容。有望在未来移除这个限制。尽管如此，仍然可以用 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) 来获取实例。
+- `SharedArrayBuffer` 对象在原则上始终可用，但遗憾的是，除非设置了前面提到的两个头，否则其在全局对象上的构造函数是隐藏的，这是为了兼容 web 内容。这个限制有望在未来被移除。尽管如此，仍然可以用 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) 来获取实例。
 - 除非设置了上文提到的两个头，否则各种 `postMessage()` 的 API 在处理 `SharedArrayBuffer` 对象时会抛出异常。如果正确设置了这两个头，`Window` 对象和专用 worker 线程上的 `postMessage()` 都可以正常工作，并允许跨线程共享内存。
 
 ### WebAssembly 共享内存
@@ -82,9 +82,9 @@ WebAssembly Threads 提案还定义了一套新的[原子](https://github.com/We
 
 `SharedArrayBuffer` 对象可以通过在调用 {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} 时包含 `maxByteLength` 选项来使其可增长。你可以通过访问 `SharedArrayBuffer` 的 {{jsxref("SharedArrayBuffer/growable", "growable")}} 和 {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} 属性来分别查询其是否可增长以及其最大大小。你还可以通过调用 {{jsxref("SharedArrayBuffer/grow", "grow()")}} 为一个可增长的 `SharedArrayBuffer` 分配新的大小。新字节被初始化为 0。
 
-这些特性令增长 `SharedArrayBuffer` 更为高效——否则，你必须将创建一个新大小的缓冲区副本。它还使得 JavaScript 在这方面与 WebAssembly 保持一致（Wasm 线性内存可以通过 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 调整大小）。
+这些特性令增长 `SharedArrayBuffer` 更为高效——否则，你必须创建一个新大小的缓冲区副本。它还使得 JavaScript 在这方面与 WebAssembly 保持一致（Wasm 线性内存可以通过 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 调整大小）。
 
-出于安全原因，`SharedArrayBuffer` 无法缩小大小，只能增长。
+出于安全原因，`SharedArrayBuffer` 的大小无法缩小，只能增长。
 
 ## 构造函数
 
