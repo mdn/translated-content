@@ -23,7 +23,7 @@ new Blob(array, options)
 - `options` {{optional_inline}}
   - ：一个可以指定以下任意属性的对象：
     - `type` {{optional_inline}}
-      - ：将会被存储到 blob 中的数据的 {{Glossary("MIME 类型")}}。默认值是空字符，（`""`）。
+      - ：将会被存储到 blob 中的数据的 {{Glossary("MIME type")}}。默认值是空字符，（`""`）。
     - `endings` {{optional_inline}} {{non-standard_inline}}
       - ：如果数据是文本，那么如何解释其中的换行符（`\n`）。默认值 `transparent` 会将换行符复制到 blob 中而不会改变它们。要将换行符转换为主机系统的本地约定，请指定值 `native`。
 
