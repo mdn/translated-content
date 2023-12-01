@@ -2,7 +2,7 @@
 title: 디바이스 방향 이벤트
 slug: Web/API/Device_orientation_events
 l10n:
-  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
+  sourceCommit: 6754a50ec57c8c9758a65a42691878e5fd1f910a
 ---
 
 {{DefaultAPISidebar("Device Orientation Events")}}
