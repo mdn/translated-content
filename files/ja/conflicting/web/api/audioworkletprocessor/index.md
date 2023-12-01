@@ -1,8 +1,7 @@
 ---
 title: "AudioWorkletProcessor: parameterDescriptors プロパティ"
-slug: Web/API/AudioWorkletProcessor/parameterDescriptors
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+slug: conflicting/Web/API/AudioWorkletProcessor
+original_slug: Web/API/AudioWorkletProcessor/parameterDescriptors
 ---
 
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}

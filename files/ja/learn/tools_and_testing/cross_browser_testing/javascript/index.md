@@ -1,6 +1,7 @@
 ---
 title: 前方互換性のあるウェブサイトを書く
-slug: Web/Guide/Writing_forward-compatible_websites
+slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+original_slug: Web/Guide/Writing_forward-compatible_websites
 ---
 
 このページでは、新しいバージョンのブラウザーが公開されても壊れることのないウェブサイトを記述する方法を説明します。
