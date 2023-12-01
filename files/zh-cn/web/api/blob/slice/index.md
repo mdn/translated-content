@@ -27,7 +27,7 @@ slice(start, end, contentType)
 
 ### 返回值
 
-一个新的 {{domxref("Blob")}} 对象，它包含了原始 {{domxref("Blob")}} 对象的某一个段的数据。原始的 {{domxref("Blob")}} 不会被改变。
+一个新的 {{domxref("Blob")}} 对象，它包含了调用该方法的原始 blob 对象所包含数据的指定子集。原始的 blob 不会被改变。
 
 ## 规范
 
