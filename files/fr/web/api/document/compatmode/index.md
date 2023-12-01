@@ -1,7 +1,6 @@
 ---
 title: document.compatMode
 slug: Web/API/Document/compatMode
-translation_of: Web/API/Document/compatMode
 ---
 
 {{ ApiRef("DOM") }}

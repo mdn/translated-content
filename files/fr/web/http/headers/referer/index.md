@@ -1,7 +1,6 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-translation_of: Web/HTTP/Headers/Referer
 ---
 
 {{HTTPSidebar}}

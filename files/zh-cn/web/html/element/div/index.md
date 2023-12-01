@@ -58,8 +58,7 @@ slug: Web/HTML/Element/div
 
 ```html
 <div>
-  <p>这里可以是任何内容，比如 &lt;p&gt;,
-  &lt;table&gt;，一切由你作主！</p>
+  <p>这里可以是任何内容，比如 &lt;p&gt;, &lt;table&gt;，一切由你作主！</p>
 </div>
 ```
 
@@ -75,8 +74,7 @@ slug: Web/HTML/Element/div
 
 ```html
 <div class="shadowbox">
-  <p>Here's a very interesting note displayed in a
-  lovely shadowed box.</p>
+  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
 </div>
 ```
 

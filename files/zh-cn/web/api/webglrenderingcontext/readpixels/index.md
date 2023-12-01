@@ -73,7 +73,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 
 - `pixels`
 
-  - : 用于读取数据的对象，必须与参数 `type` 的类型相匹配:
+  - : 用于读取数据的对象，必须与参数 `type` 的类型相匹配：
 
     - {{jsxref("Uint8Array")}}：`gl.UNSIGNED_BYTE`。
     - {{jsxref("Uint16Array")}}：`gl.UNSIGNED_SHORT_5_6_5`、`gl.UNSIGNED_SHORT_4_4_4_4` 或 `gl.UNSIGNED_SHORT_5_5_5_1`。
@@ -100,10 +100,20 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 ## 示例
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
-const pixels = new Uint8Array(gl.drawingBufferWidth * gl.drawingBufferHeight * 4);
-gl.readPixels(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const pixels = new Uint8Array(
+  gl.drawingBufferWidth * gl.drawingBufferHeight * 4,
+);
+gl.readPixels(
+  0,
+  0,
+  gl.drawingBufferWidth,
+  gl.drawingBufferHeight,
+  gl.RGBA,
+  gl.UNSIGNED_BYTE,
+  pixels,
+);
 console.log(pixels); // Uint8Array
 ```
 

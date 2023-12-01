@@ -1,7 +1,6 @@
 ---
 title: <tspan>
 slug: Web/SVG/Element/tspan
-translation_of: Web/SVG/Element/tspan
 ---
 
 {{SVGRef}}

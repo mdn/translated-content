@@ -10,8 +10,8 @@ slug: Web/API/WebGLRenderingContext
 要获得这个接口的对象以用于 2D 和 3D 的图形渲染，可以通过在 `<canvas>` 元素上调用 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入“webgl”参数：
 
 ```js
-const canvas = document.getElementById('myCanvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("myCanvas");
+const gl = canvas.getContext("webgl");
 ```
 
 当你获取到 canvas 元素的 WebGL 绘图上下文，你便可以在里面绘图。点击 [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)获取更多资料，例如，关于如何开始 WebGL 编程的知识。

@@ -1,7 +1,6 @@
 ---
 title: Microdatos
 slug: Web/HTML/Microdata
-original_slug: Web/HTML/Microdatos
 ---
 
 ## Resumen

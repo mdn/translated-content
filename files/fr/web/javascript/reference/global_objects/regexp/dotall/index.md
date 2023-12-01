@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 ---
 
 {{JSRef}}

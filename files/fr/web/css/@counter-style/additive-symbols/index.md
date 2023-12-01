@@ -1,7 +1,6 @@
 ---
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
-translation_of: Web/CSS/@counter-style/additive-symbols
 ---
 
 {{CSSRef}}
@@ -10,8 +9,12 @@ Le descripteur **`additive-symbols`**, utilisé pour la règle @ {{cssxref("@cou
 
 ```css
 additive-symbols: 3 "0";
-additive-symbols: 3 "0", 2 "\2E\20";
-additive-symbols: 3 "0", 2 url(symbol.png);
+additive-symbols:
+  3 "0",
+  2 "\2E\20";
+additive-symbols:
+  3 "0",
+  2 url(symbol.png);
 ```
 
 Lorsque la valeur du descripteur `system` est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`, c'est le descripteur `symbols` qui est utilisé à la place de `additive-symbols` afin de définir les symboles utilisés pour le compteur.
@@ -31,7 +34,10 @@ Lorsque la valeur du descripteur `system` est `cyclic`, `numeric`, `alphabetic`,
 ```css
 @counter-style additive-symbols-example {
   system: additive;
-  additive-symbols: V 5, IV 4, I 1;
+  additive-symbols:
+    V 5,
+    IV 4,
+    I 1;
 }
 .exemple {
   list-style: additive-symbols-example;

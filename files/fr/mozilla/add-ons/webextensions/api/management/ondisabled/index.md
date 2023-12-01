@@ -1,7 +1,6 @@
 ---
 title: management.onDisabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 ---
 
 {{AddonSidebar()}}

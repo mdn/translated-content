@@ -1,7 +1,6 @@
 ---
 title: La sécurité d'un site Web
 slug: Learn/Server-side/First_steps/Website_security
-translation_of: Learn/Server-side/First_steps/Website_security
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/Premiers_pas")}}

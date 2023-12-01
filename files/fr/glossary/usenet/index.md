@@ -1,8 +1,9 @@
 ---
 title: Usenet
 slug: Glossary/Usenet
-translation_of: Glossary/Usenet
 ---
+
+{{GlossarySidebar}}
 
 Usenet est un système de discussion sur internet où chaque message est dupliqué sur plusieurs serveurs. Équivalent aux forums Internet actuels, Usenet fonctionnait comme un bulletin board system.
 

@@ -1,7 +1,6 @@
 ---
 title: 次にどうするのか？
 slug: Mozilla/Add-ons/WebExtensions/What_next
-original_slug: Mozilla/Add-ons/WebExtensions/What_next_
 ---
 
 {{AddonSidebar}}

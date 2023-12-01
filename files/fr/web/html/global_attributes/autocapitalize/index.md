@@ -1,7 +1,6 @@
 ---
 title: autocapitalize
 slug: Web/HTML/Global_attributes/autocapitalize
-translation_of: Web/HTML/Global_attributes/autocapitalize
 ---
 
 {{HTMLSidebar("Global_attributes")}}

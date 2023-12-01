@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.previousSibling()
 slug: Web/API/TreeWalker/previousSibling
-translation_of: Web/API/TreeWalker/previousSibling
 ---
 
 {{ APIRef("DOM") }}

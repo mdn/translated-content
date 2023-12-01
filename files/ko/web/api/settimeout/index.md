@@ -2,6 +2,7 @@
 title: setTimeout()
 slug: Web/API/setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 전역 **`setTimeout()`** 메서드는 만료된 후 함수나 지정한 코드 조각을 실행하는 타이머를 설정합니다.
@@ -44,9 +45,15 @@ var timeoutID = setTimeout(code[, delay]);
 다음 예제를 살펴보세요.
 
 ```js
-setTimeout(() => {console.log("첫 번째 메시지")}, 5000);
-setTimeout(() => {console.log("두 번째 메시지")}, 3000);
-setTimeout(() => {console.log("세 번째 메시지")}, 1000);
+setTimeout(() => {
+  console.log("첫 번째 메시지");
+}, 5000);
+setTimeout(() => {
+  console.log("두 번째 메시지");
+}, 3000);
+setTimeout(() => {
+  console.log("세 번째 메시지");
+}, 1000);
 
 // 콘솔 출력:
 
@@ -69,20 +76,20 @@ setTimeout(() => {console.log("세 번째 메시지")}, 1000);
 다음 코드를 살펴보세요.
 
 ```js
-const myArray = ['zero', 'one', 'two'];
+const myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
   console.log(arguments.length > 0 ? this[sProperty] : this);
 };
 
-myArray.myMethod();  // "zero,one,two" 기록
+myArray.myMethod(); // "zero,one,two" 기록
 myArray.myMethod(1); // "one" 기록
 ```
 
 위의 코드는 `myMethod`를 호출할 때, 호출로 인해 `this`가 `myArray`로 설정되기 때문에 정상적으로 동작합니다. `this[sProperty]`가 `myArray[sProperty]`와 동일함을 확인하세요. 그러나, 다음의 코드도 살펴보세요.
 
 ```js
-setTimeout(myArray.myMethod, 1.0*1000);      // 1초 후 "[object Window]" 기록
-setTimeout(myArray.myMethod, 1.5*1000, '1'); // 1.5초 후 "undefined" 기록
+setTimeout(myArray.myMethod, 1.0 * 1000); // 1초 후 "[object Window]" 기록
+setTimeout(myArray.myMethod, 1.5 * 1000, "1"); // 1.5초 후 "undefined" 기록
 ```
 
 `myArray.myMethod`를 `setTimeout`에 전달했고, 타이머 만료 후 호출 시점에 `this`가 따로 설정되지 않으므로 기본 값인 `window` 객체를 가리키게 돼 정상적인 동작을 하지 않습니다.
@@ -90,8 +97,8 @@ setTimeout(myArray.myMethod, 1.5*1000, '1'); // 1.5초 후 "undefined" 기록
 {{jsxref("Array.forEach()", "forEach()")}}와 {{jsxref("Array.reduce()", "reduce()")}} 등 {{jsxref("Array")}}의 메서드와는 달리 `setTimeout()`에는 `thisArg`를 설정할 수 있는 방법 또한 존재하지 않습니다. 그리고 `call`을 사용해 `this`를 설정하는 것 역시 작동하지 않습니다.
 
 ```js
-setTimeout.call(myArray, myArray.myMethod, 2.0*1000);    // 오류
-setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // 같은 오류
+setTimeout.call(myArray, myArray.myMethod, 2.0 * 1000); // 오류
+setTimeout.call(myArray, myArray.myMethod, 2.5 * 1000, 2); // 같은 오류
 ```
 
 #### 해결법
@@ -101,15 +108,23 @@ setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // 같은 오류
 이 문제를 해결할 때 자주 사용하는 방법 중 하나는 `this`를 설정할 수 있도록 함수를 다른 함수로 감싸는 것입니다.
 
 ```js
-setTimeout(function(){myArray.myMethod()}, 2.0*1000);    // 2초 후 "zero,one,two" 기록
-setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // 2.5초 후 "one" 기록
+setTimeout(function () {
+  myArray.myMethod();
+}, 2.0 * 1000); // 2초 후 "zero,one,two" 기록
+setTimeout(function () {
+  myArray.myMethod("1");
+}, 2.5 * 1000); // 2.5초 후 "one" 기록
 ```
 
 화살표 함수로 감쌀 수도 있습니다.
 
 ```js
-setTimeout(() => {myArray.myMethod()}, 2.0*1000);    // 2초 후 "zero,one,two" 기록
-setTimeout(() => {myArray.myMethod('1')}, 2.5*1000); // 2.5초 후 "one" 기록
+setTimeout(() => {
+  myArray.myMethod();
+}, 2.0 * 1000); // 2초 후 "zero,one,two" 기록
+setTimeout(() => {
+  myArray.myMethod("1");
+}, 2.5 * 1000); // 2.5초 후 "one" 기록
 ```
 
 ##### bind() 사용하기
@@ -117,15 +132,15 @@ setTimeout(() => {myArray.myMethod('1')}, 2.5*1000); // 2.5초 후 "one" 기록
 다른 방법으로는 {{jsxref("Function.bind()", "bind()")}}를 사용해서 주어진 함수의 모든 호출에서 `this` 값을 설정하는 것입니다.
 
 ```js
-const myArray = ['zero', 'one', 'two'];
-const myBoundMethod = (function (sProperty) {
-    console.log(arguments.length > 0 ? this[sProperty] : this);
-}).bind(myArray);
+const myArray = ["zero", "one", "two"];
+const myBoundMethod = function (sProperty) {
+  console.log(arguments.length > 0 ? this[sProperty] : this);
+}.bind(myArray);
 
-myBoundMethod();  // "zero,one,two" 기록, this가 myArray에 바인딩됐기 때문
+myBoundMethod(); // "zero,one,two" 기록, this가 myArray에 바인딩됐기 때문
 myBoundMethod(1); // "one" 기록
-setTimeout(myBoundMethod, 1.0*1000);      // 1초 후, 바인딩으로 인해 여전히 "zero,one,two" 기록
-setTimeout(myBoundMethod, 1.5*1000, "1"); // 1.5초 후 "one" 기록
+setTimeout(myBoundMethod, 1.0 * 1000); // 1초 후, 바인딩으로 인해 여전히 "zero,one,two" 기록
+setTimeout(myBoundMethod, 1.5 * 1000, "1"); // 1.5초 후 "one" 기록
 ```
 
 ### 문자열 리터럴 지정하기
@@ -139,8 +154,8 @@ setTimeout("console.log('Hello World!');", 500);
 
 ```js example-good
 // 이렇게 사용하세요
-setTimeout(function() {
-  console.log('Hello World!');
+setTimeout(function () {
+  console.log("Hello World!");
 }, 500);
 ```
 
@@ -198,7 +213,9 @@ function pad(number) {
 function logline(now) {
   // log the last timestamp, the new timestamp, and the difference
   const newLine = document.createElement("pre");
-  newLine.textContent = `${pad(last)}         ${pad(now)}          ${now - last}`;
+  newLine.textContent = `${pad(last)}         ${pad(now)}          ${
+    now - last
+  }`;
   document.getElementById("log").appendChild(newLine);
   last = now;
 }
@@ -226,14 +243,14 @@ Firefox는 추적 스크립트로 인식한 스크립트에 대해 추가 스로
 
 #### 늦은 타임아웃
 
-페이지, 운영체제, 브라우저가 다른 작업으로 인해 바쁠 경우 타임아웃이 예쌍보다 늦게 실행될 수 있습니다. 한 가지 중요한 점은, `setTimeout()`을 호출한 스레드가 종료되기 전에는 지정한 함수 또는 코드 조각을 실행할 수 없다는 것입니다.
+페이지, 운영체제, 브라우저가 다른 작업으로 인해 바쁠 경우 타임아웃이 예상보다 늦게 실행될 수 있습니다. 한 가지 중요한 점은, `setTimeout()`을 호출한 스레드가 종료되기 전에는 지정한 함수 또는 코드 조각을 실행할 수 없다는 것입니다.
 
 ```js
 function foo() {
-  console.log('foo 호출');
+  console.log("foo 호출");
 }
 setTimeout(foo, 0);
-console.log('setTimeout 완료');
+console.log("setTimeout 완료");
 ```
 
 위 코드의 콘솔 기록 결과는 다음과 같습니다.
@@ -278,12 +295,12 @@ Internet Explorer, Chrome, Safari, Firefox를 포함한 브라우저는 딜레�
 let timeoutID;
 
 function setOutput(outputContent) {
-  document.querySelector('#output').textContent = outputContent;
+  document.querySelector("#output").textContent = outputContent;
 }
 
 function delayedMessage() {
-  setOutput('');
-  timeoutID = setTimeout(setOutput, 2*1000, '너무 느려요!');
+  setOutput("");
+  timeoutID = setTimeout(setOutput, 2 * 1000, "너무 느려요!");
 }
 
 function clearMessage() {
@@ -293,7 +310,7 @@ function clearMessage() {
 
 ```css hidden
 #output {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 ```
 

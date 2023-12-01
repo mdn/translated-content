@@ -1,7 +1,6 @@
 ---
 title: Link
 slug: Web/HTTP/Headers/Link
-translation_of: Web/HTTP/Headers/Link
 l10n:
   sourceCommit: 4c8cc837352076a0d2973e3f2b637c5f6b4452e5
 ---

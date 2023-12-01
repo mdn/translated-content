@@ -1,13 +1,6 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -19,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ## Синтаксис
 
 ```js
-Object.preventExtensions(obj)
+Object.preventExtensions(obj);
 ```
 
 ### Параметры
@@ -58,12 +51,12 @@ assert(Object.isExtensible(empty) === false);
 // Object.defineProperty выбрасывает исключение при добавлении нового свойства в нерасширяемый объект.
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', { value: 8675309 }); // выбросит TypeError
+Object.defineProperty(nonExtensible, "new", { value: 8675309 }); // выбросит TypeError
 
 // В строгом режиме, попытки добавить новые свойства к нерасширяемому объекту, будут выбрасывать исключение TypeError.
 function fail() {
-  'use strict';
-  nonExtensible.newProperty = 'ОШИБКА'; // выбросит TypeError
+  "use strict";
+  nonExtensible.newProperty = "ОШИБКА"; // выбросит TypeError
 }
 fail();
 
@@ -71,7 +64,7 @@ fail();
 // (которое является устаревшим. Используйте вместо него метод Object.getPrototypeOf)):
 // нерасширяемые объекты неизменны.
 var fixed = Object.preventExtensions({});
-fixed.__proto__ = { oh: 'hai' }; // выбросит TypeError
+fixed.__proto__ = { oh: "hai" }; // выбросит TypeError
 ```
 
 ## Примечания

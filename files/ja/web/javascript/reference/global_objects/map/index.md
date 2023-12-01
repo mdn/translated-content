@@ -125,7 +125,7 @@ l10n:
         では反復処理を行うのに、いくつかの形でキーの一覧を取得して、そのうえで反復処理を行う必要があります。
         <p>
           <code>Object</code> は <a
-            href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol"
+            href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル"
             >反復処理プロトコル</a
           >を実装していないので、オブジェクトを JavaScript の <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of"
             >for...of</a
@@ -193,8 +193,8 @@ Map オブジェクトに対してオブジェクトプロパティを設定す�
 
 ```js example-bad
 const wrongMap = new Map();
-wrongMap['bla'] = 'blaa';
-wrongMap['bla2'] = 'blaaa2';
+wrongMap["bla"] = "blaa";
+wrongMap["bla2"] = "blaaa2";
 
 console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
@@ -202,24 +202,58 @@ console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 しかし、このようにプロパティを設定すると、 Map データ構造を使用しません。一般的なオブジェクトの機能を使用します。 'bla' の値はクエリーを行うための Map に格納されません。データにその他の操作を行うと失敗します。
 
 ```js example-bad
-wrongMap.has('bla')    // false
-wrongMap.delete('bla') // false
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+wrongMap.has("bla"); // false
+wrongMap.delete("bla"); // false
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 Map にデータを格納する正しい方法は、 `set(key, value)` メソッドを使用する方法です。
 
 ```js example-good
-const contacts = new Map()
-contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
-contacts.has('Jessie') // true
-contacts.get('Hilary') // undefined
-contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
-contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
-contacts.delete('Raymond') // false
-contacts.delete('Jessie') // true
-console.log(contacts.size) // 1
+const contacts = new Map();
+contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
+contacts.has("Jessie"); // true
+contacts.get("Hilary"); // undefined
+contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
+contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete("Raymond"); // false
+contacts.delete("Jessie"); // true
+console.log(contacts.size); // 1
 ```
+
+## Map 風のブラウザー API
+
+**ブラウザーの `Map` 風オブジェクト** (または「Map 風オブジェクト」) は、多くの点で `Map` のようにふるまう [Web API](/ja/docs/Web/API) のインターフェイスです。
+
+`Map` と同様に、エントリーはオブジェクトに追加されたのと同じ順番で走査できます。
+また、`Map` 風オブジェクトと `Map` は同じ名前で同じ挙動のプロパティおよびメソッドを持ちます。
+しかし、`Map` と違い、各エントリーのキーと値には事前に定義された特定の型しか使用できません。
+
+使用可能な型は、仕様書の IDL 定義で設定されています。
+たとえば、{{domxref("RTCStatsReport")}} はキーには文字列を、値にはオブジェクトを用いなければならない `Map` 風オブジェクトです。
+これは、仕様書の IDL で以下のように定義されています。
+
+```webidl
+interface RTCStatsReport {
+  readonly maplike<DOMString, object>;
+};
+```
+
+`Map` 風オブジェクトは読み取り専用のことも、読み書き可能なこともあります。(上の IDL の `readonly` キーワードに注目してください)
+
+- 読み取り専用の `Map` 風オブジェクトは、プロパティ [`size`](#map.prototype.size) と、メソッド [`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`get()`](#map.prototype.get)、[`has()`](#map.prototype.has)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values)、[`@@iterator`](#map.prototypeiterator) を持ちます。
+- 書き込み可能な `Map` 風オブジェクトは、これに加えてメソッド [`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete)、[`set()`](#map.prototype.set) を持ちます。
+
+これらのメソッドとプロパティは、キーと値の型の制約を除いて、`Map` の対応するエンティティと同様にふるまいます。
+
+以下は、読み取り専用の `Map` 風ブラウザーオブジェクトの例です。
+
+- {{domxref("AudioParamMap")}}
+- {{domxref("RTCStatsReport")}}
+- {{domxref("EventCounts")}}
+- {{domxref("KeyboardLayoutMap")}}
+- {{domxref("MIDIInputMap")}}
+- {{domxref("MIDIOutputMap")}}
 
 ## コンストラクター
 
@@ -295,12 +329,12 @@ console.log(myMap.get(function() {})); // undefined, keyFunc !== function () {} 
 
 ```js
 const myMap = new Map();
-myMap.set(NaN, 'not a number');
+myMap.set(NaN, "not a number");
 
 myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo');
+const otherNaN = Number("foo");
 myMap.get(otherNaN);
 // "not a number"
 ```
@@ -311,8 +345,8 @@ myMap.get(otherNaN);
 
 ```js
 const myMap = new Map();
-myMap.set(0, 'zero');
-myMap.set(1, 'one');
+myMap.set(0, "zero");
+myMap.set(1, "one");
 
 for (const [key, value] of myMap) {
   console.log(`${key} = ${value}`);
@@ -354,12 +388,15 @@ myMap.forEach((value, key) => {
 ### Array オブジェクトとの関係
 
 ```js
-const kvArray = [['キー1', '値1'], ['キー2', '値2']];
+const kvArray = [
+  ["キー1", "値1"],
+  ["キー2", "値2"],
+];
 
 // 通常の Map コンストラクターを使って、キーと値の 2 次元配列をマップに変換する
 const myMap = new Map(kvArray);
 
-console.log(myMap.get('キー1')); // "値1" を返す
+console.log(myMap.get("キー1")); // "値1" を返す
 
 // 展開演算子を使って、マップをキー・値の 2 次元配列に変換する
 console.log(Array.from(myMap)); // kvArray とまったく同じ Array を表示する
@@ -376,9 +413,7 @@ console.log(Array.from(myMap.keys())); // ["key1", "key2"] が出力される
 `Array` と同様に、 `Map` は複製することができます。
 
 ```js
-const original = new Map([
-  [1, 'one'],
-]);
+const original = new Map([[1, "one"]]);
 
 const clone = new Map(original);
 
@@ -392,14 +427,14 @@ console.log(original === clone); // false (useful for shallow comparison)
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // 2 つのマップを混合します。重複するキーは後勝ちになります。
@@ -415,18 +450,18 @@ Map は Array と混合することもできます。
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // マップと配列を混合します。重複するキーは後勝ちになります。
-const merged = new Map([...first, ...second, [1, 'eins']]);
+const merged = new Map([...first, ...second, [1, "eins"]]);
 
 console.log(merged.get(1)); // eins
 console.log(merged.get(2)); // dos

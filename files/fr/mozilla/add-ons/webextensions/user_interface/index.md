@@ -1,7 +1,6 @@
 ---
 title: Interface utilisateur
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 ---
 
 {{AddonSidebar}}

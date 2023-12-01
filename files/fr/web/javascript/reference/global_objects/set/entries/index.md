@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`entries()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/Ja
 ## Syntaxe
 
 ```js
-monSet.entries()
+monSet.entries();
 ```
 
 ### Valeur de retour

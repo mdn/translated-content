@@ -1,7 +1,6 @@
 ---
 title: onConnectivityAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
 ---
 
 {{AddonSidebar()}}

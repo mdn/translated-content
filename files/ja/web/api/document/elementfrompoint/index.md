@@ -1,7 +1,6 @@
 ---
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
-original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
 
 {{APIRef("DOM")}}
@@ -21,7 +20,7 @@ original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ## 構文
 
 ```js
-elementFromPoint(x, y)
+elementFromPoint(x, y);
 ```
 
 ### 引数

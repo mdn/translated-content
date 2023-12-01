@@ -1,10 +1,6 @@
 ---
 title: Переход к строгому режиму
 slug: conflicting/Web/JavaScript/Reference/Strict_mode
-tags:
-  - Advanced
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 original_slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
 
@@ -32,7 +28,7 @@ original_slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 - Объявление функций в блоках `if (a < b) { function f() {} }`
 - Очевидные ошибки
 
-  - Объявление дважды свойства с одним и тем же именем в литерале объекта `{a: 1, b: 3, a: 7}`. Это уже изменилось в ECMAScript 6 ({{bug(1041128)}}).
+  - Объявление дважды свойства с одним и тем же именем в литерале объекта `{a: 1, b: 3, a: 7}`. Это уже изменилось в ECMAScript 6 ([Firefox bug 1041128](https://bugzil.la/1041128)).
   - Объявление нескольких аргументов функции с одним и тем же именем `function f(a, b, b) {}`
 
 Эти ошибки хороши тем, что обличают скользкие, едва уловимые ошибки и плохие практики написания кода.

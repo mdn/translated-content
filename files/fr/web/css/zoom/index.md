@@ -1,7 +1,6 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
-translation_of: Web/CSS/zoom
 ---
 
 {{CSSRef}}{{Non-standard_header}}

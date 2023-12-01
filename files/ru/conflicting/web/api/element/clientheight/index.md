@@ -1,12 +1,6 @@
 ---
 title: Document.height
 slug: conflicting/Web/API/Element/clientHeight
-tags:
-  - Document
-  - HTML
-  - Obsolete
-  - Property
-translation_of: Web/API/Document/height
 original_slug: Web/API/Document/height
 ---
 

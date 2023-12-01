@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
-translation_of: Web/API/HTMLElement/hidden
 ---
 
 HTMLElement Свойство **`hidden`** является {{jsxref("Boolean")}} типом данных , который принимает значение true , если содержимое спрятано, в противном случае значение будет false. Это свойство совершенно отличается от использования CSS-свойства {{cssxref("display")}} , чтобы контролировать отображение элемента.Свойство `hidden` применимо ко всем режимам представления и не должно использоваться для скрытия содержимого предназначенного для прямого доступа к пользователю. Соответствующие варианты использования включают:
@@ -38,11 +37,14 @@ HTMLElement.hidden = true | false;
 ### JavaScript
 
 ```js
-document.getElementById("okButton")
-        .addEventListener("click", function() {
-  document.getElementById("welcome").hidden = true;
-  document.getElementById("awesome").hidden = false;
-}, false);
+document.getElementById("okButton").addEventListener(
+  "click",
+  function () {
+    document.getElementById("welcome").hidden = true;
+    document.getElementById("awesome").hidden = false;
+  },
+  false,
+);
 ```
 
 Этот код устанавливает обработчика для кнопки "OK", которая скрывает панель приветствия и делает The follow-up panel панель с необычным именем "awesome" - видимой в этом месте.
@@ -70,9 +72,10 @@ HTML-код для двух boxes показанных здесь.
 ```html
 <div id="awesome" class="panel" hidden>
   <h1>Thanks!</h1>
-  <p>Thank you <strong>so</strong> much for agreeing to be
-  awesome today! Now get out there and do awesome things
-  awesomely to make the world more awesome!</p>
+  <p>
+    Thank you <strong>so</strong> much for agreeing to be awesome today! Now get
+    out there and do awesome things awesomely to make the world more awesome!
+  </p>
 </div>
 ```
 
@@ -82,7 +85,11 @@ HTML-код для двух boxes показанных здесь.
 
 ```css
 .panel {
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border: 1px solid #22d;
   padding: 12px;
   width: 500px;
@@ -90,7 +97,11 @@ HTML-код для двух boxes показанных здесь.
 }
 
 .button {
-  font: 22px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    22px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   padding: 5px 36px;
 }
 
@@ -104,15 +115,11 @@ h1 {
 
 {{ EmbedLiveSample('Example', 560, 200) }}
 
-## Технические требования
+## Спецификации
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "interaction.html#dom-hidden", "HTMLElement.hidden")}}     | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}}     | {{Spec2('HTML5.1')}}     |         |
-| {{SpecName('HTML5 W3C', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}} | {{Spec2('HTML5 W3C')}}     |         |
+{{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

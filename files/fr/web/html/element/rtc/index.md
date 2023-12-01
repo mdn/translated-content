@@ -1,7 +1,6 @@
 ---
 title: "<rtc> : l'élément de conteneur de texte Ruby"
 slug: Web/HTML/Element/rtc
-translation_of: Web/HTML/Element/rtc
 ---
 
 {{HTMLSidebar}}
@@ -20,10 +19,8 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ```html
 <ruby>
-   <rb>旧</rb> <rt>jiù</rt>
-   <rb>金</rb> <rt>jīn</rt>
-   <rb>山</rb> <rt>shān</rt>
-   <rtc>San Francisco</rtc>
+  <rb>旧</rb> <rt>jiù</rt> <rb>金</rb> <rt>jīn</rt> <rb>山</rb> <rt>shān</rt>
+  <rtc>San Francisco</rtc>
 </ruby>
 ```
 

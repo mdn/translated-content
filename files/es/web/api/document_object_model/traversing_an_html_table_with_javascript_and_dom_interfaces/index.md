@@ -1,7 +1,6 @@
 ---
 title: Trazado de una tabla HTML mediante JavaScript y la Interface DOM
 slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-original_slug: Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM
 ---
 
 ## Introducción

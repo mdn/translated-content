@@ -1,11 +1,6 @@
 ---
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
-tags:
-  - CSS
-  - Обучение
-  - Стилизация
-translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}

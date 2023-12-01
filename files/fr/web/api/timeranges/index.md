@@ -1,7 +1,6 @@
 ---
 title: TimeRanges
 slug: Web/API/TimeRanges
-translation_of: Web/API/TimeRanges
 ---
 
 {{ APIRef }}

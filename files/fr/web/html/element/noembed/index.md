@@ -1,7 +1,6 @@
 ---
 title: "<noembed> : l'élément alternatif au contenu embarqué (obsolète)"
 slug: Web/HTML/Element/noembed
-translation_of: Web/HTML/Element/noembed
 ---
 
 {{HTMLSidebar}}{{Non-standard_header}}{{deprecated_header}}

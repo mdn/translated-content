@@ -1,7 +1,6 @@
 ---
 title: Applications web progressives
 slug: Web/Progressive_web_apps
-translation_of: Web/Progressive_web_apps
 ---
 
 Les **applications web progressives** (ou <i lang="en">progressive web applications</i> en anglais, abrégées en PWAs) sont des applications web qui utilisent [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), [les manifestes](/fr/docs/Web/Manifest), et d'autres fonctionnalités de la plateforme web, avec [l'amélioration progressive](/fr/docs/Glossary/Progressive_Enhancement) pour fournir aux utilisatrices et utilisateurs une expérience équivalente à celle des applications natives.

@@ -1,7 +1,6 @@
 ---
 title: Document.xmlVersion
 slug: Web/API/Document/xmlVersion
-translation_of: Web/API/Document/xmlVersion
 ---
 
 {{APIRef("DOM")}}{{deprecated_header}}

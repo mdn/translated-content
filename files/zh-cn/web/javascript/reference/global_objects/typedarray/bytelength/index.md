@@ -15,7 +15,7 @@ typedarray.byteLength
 
 ## 描述
 
-`byteLength` 是一个访问器属性，它的 set 访问器函数是 `undefined`，意思是你只能够读取这个属性。它的值在 *TypedArray* 构造时建立，不能被修改。如果 _TypedArray_ 没有指定 `byteOffset` 或者 `length`，会返回所引用的 `ArrayBuffer` 的 `length`。_TypedArray_ 是这里的 [TypedArray 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
+`byteLength` 是一个访问器属性，它的 set 访问器函数是 `undefined`，意思是你只能够读取这个属性。它的值在 _TypedArray_ 构造时建立，不能被修改。如果 _TypedArray_ 没有指定 `byteOffset` 或者 `length`，会返回所引用的 `ArrayBuffer` 的 `length`。_TypedArray_ 是这里的 [TypedArray 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
 ## 示例
 

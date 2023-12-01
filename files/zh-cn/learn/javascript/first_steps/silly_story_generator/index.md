@@ -10,7 +10,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>请读完本章所有小节的内容后再开始这个测验。</td>
     </tr>
     <tr>

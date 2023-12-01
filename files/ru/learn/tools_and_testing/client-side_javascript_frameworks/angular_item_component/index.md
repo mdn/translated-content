@@ -1,21 +1,6 @@
 ---
 title: Создание компонента элемента (item component)
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
-original_slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
-tags:
-  - Новички
-  - Фреймворки
-  - JavaScript
-  - Изучение
-  - client-side
-  - Angular
-  - Компоненты
-  - События
-  - Данные
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

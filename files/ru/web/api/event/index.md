@@ -1,14 +1,6 @@
 ---
 title: Event
 slug: Web/API/Event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - Событие
-translation_of: Web/API/Event
 ---
 
 {{APIRef("DOM")}}

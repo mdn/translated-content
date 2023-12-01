@@ -108,7 +108,7 @@ const windowFeatures = "left=100,top=100,width=320,height=320";
 const handle = window.open(
   "https://www.mozilla.org/",
   "mozillaWindow",
-  windowFeatures
+  windowFeatures,
 );
 if (!handle) {
   // The window wasn't allowed to open
@@ -153,7 +153,7 @@ link.addEventListener(
     openRequestedTab(link.href);
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -209,7 +209,7 @@ function openRequestedSingleTab(url) {
 }
 
 const links = document.querySelectorAll(
-  "a[target='SingleSecondaryWindowName']"
+  "a[target='SingleSecondaryWindowName']",
 );
 for (const link of links) {
   link.addEventListener(
@@ -218,7 +218,7 @@ for (const link of links) {
       openRequestedSingleTab(link.href);
       event.preventDefault();
     },
-    false
+    false,
   );
 }
 ```

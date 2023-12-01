@@ -1,7 +1,6 @@
 ---
 title: Contrôles DHTML personnalisés navigables au clavier
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
-translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
 
 ### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier

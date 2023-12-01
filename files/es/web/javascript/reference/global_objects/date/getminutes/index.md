@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMinutes
 ---
 
 {{JSRef}}
@@ -29,7 +28,7 @@ El valor devuelto por `getMinutes()` es un número entero entre 0 y 59.
 La segunda declaración del código mostrado a continuación le asigna el valor 15 a la variable `minutos`, basado en el valor del {{jsxref("Global_Objects/Date", "Date")}} `objeto Xmas95`.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var minutos = Xmas95.getMinutes();
 
 console.log(minutos); // 15

@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/test
 ---
 
 {{JSRef}}
@@ -44,12 +43,12 @@ console.log(result); // true
 El siguiente ejemplo registra un mensaje que depende del éxito de la prueba:
 
 ```js
-function probarEntrada(regexp, cadena){
+function probarEntrada(regexp, cadena) {
   var subcadena;
   if (regexp.test(cadena)) {
-    subcadena = ' contiene ';
+    subcadena = " contiene ";
   } else {
-    subcadena = ' no contiene ';
+    subcadena = " no contiene ";
   }
   console.log(cadena + subcadena + regexp.source);
 }

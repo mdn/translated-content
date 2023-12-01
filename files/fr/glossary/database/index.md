@@ -1,8 +1,9 @@
 ---
 title: Base de données
 slug: Glossary/Database
-translation_of: Glossary/Database
 ---
+
+{{GlossarySidebar}}
 
 Une **base de donnée** est un système de stockage qui collecte des données organisées, pour faciliter certains travaux comme la recherche, la structure et l'extension.
 

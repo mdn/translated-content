@@ -1,7 +1,6 @@
 ---
 title: notifications
 slug: Mozilla/Add-ons/WebExtensions/API/notifications
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications
 ---
 
 {{AddonSidebar}}

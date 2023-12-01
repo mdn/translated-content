@@ -1,7 +1,6 @@
 ---
 title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
-translation_of: Web/API/Window/defaultStatus
 ---
 
 {{ APIRef() }}{{deprecated_header}}

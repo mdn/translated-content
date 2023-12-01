@@ -1,9 +1,9 @@
 ---
 title: Частота кадров (FPS)
 slug: Glossary/FPS
-translation_of: Glossary/FPS
-original_slug: Глоссарий/FPS
 ---
+
+{{GlossarySidebar}}
 
 **Частота кадров** - это скорость, с которой браузер может пересчитывать, размещать и отображать содержимое на дисплее. **FPS** (англ. frames per second) - количество сменяемых кадров за одну секунду.
 

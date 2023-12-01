@@ -1,7 +1,6 @@
 ---
 title: Constructeur WebAssembly.LinkError()
 slug: WebAssembly/JavaScript_interface/LinkError/LinkError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError
 ---
 
 {{WebAssemblySidebar}}

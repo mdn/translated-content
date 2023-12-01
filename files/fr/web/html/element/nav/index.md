@@ -1,7 +1,6 @@
 ---
 title: "<nav> : l'élément de section de navigation"
 slug: Web/HTML/Element/nav
-translation_of: Web/HTML/Element/nav
 ---
 
 {{HTMLSidebar}}

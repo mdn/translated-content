@@ -24,6 +24,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `aCommandName`
 
   - : 文字列で、実行するコマンドの名前を指定します。以下のコマンドが使用できます。
+
     - `backColor`
       - : 文書の背景色を変更します。 `styleWithCss` モードでは、文書ではなく含まれているブロックの背景色に影響します。この場合、引数として {{cssxref("&lt;color&gt;")}} 値の文字列を渡す必要があります。
     - `bold`
@@ -115,6 +116,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `unlink`
       - : 選択されたハイパーリンクから[アンカー要素](/ja/docs/Web/HTML/Element/a)を削除します。
     - `useCSS` {{Deprecated_inline}}
+
       - : 生成するマークアップに HTML タグと CSS のどちらを使用するかを切り替えます。引数として true または false の真偽値が必要です。
         > **メモ:** この引数は論理が逆です（つまり、`false` で CSS が使用され、`true` で HTML が使用される）。これは `styleWithCSS` に置き換えられ、非推奨になりました。
 
@@ -179,7 +181,7 @@ for (const buttonContainer of buttonContainers) {
   for (const button of buttons) {
     const elementName = button.getAttribute("data-el");
     button.addEventListener("click", () =>
-      insertText(`<${elementName}></${elementName}>`, pasteTarget)
+      insertText(`<${elementName}></${elementName}>`, pasteTarget),
     );
   }
 }

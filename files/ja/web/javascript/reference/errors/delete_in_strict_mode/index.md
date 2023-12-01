@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: applying the ''delete'' operator to an unqualified name is deprecated'
+title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
 
@@ -36,7 +36,7 @@ JavaScript では、通常の変数を [`delete`](/ja/docs/Web/JavaScript/Refere
 JavaScript ではプレーンな変数を削除しようとすると動作せず、 strict モードだとエラーをスローします。
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var x;
 
@@ -51,7 +51,7 @@ delete x;
 変数のコンテンツを解放するには、{{jsxref("null")}} を設定してください。
 
 ```js example-good
-'use strict';
+"use strict";
 
 var x;
 

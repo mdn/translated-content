@@ -1,7 +1,6 @@
 ---
 title: PasswordCredential.name
 slug: Web/API/PasswordCredential/name
-translation_of: Web/API/PasswordCredential/name
 ---
 
 {{SeeCompatTable}}{{APIRef("")}}

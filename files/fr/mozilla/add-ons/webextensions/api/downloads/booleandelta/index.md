@@ -1,7 +1,6 @@
 ---
 title: downloads.BooleanDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta
 ---
 
 {{AddonSidebar()}}

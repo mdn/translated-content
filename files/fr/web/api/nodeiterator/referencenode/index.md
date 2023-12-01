@@ -1,7 +1,6 @@
 ---
 title: NodeIterator.referenceNode
 slug: Web/API/NodeIterator/referenceNode
-translation_of: Web/API/NodeIterator/referenceNode
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable }}

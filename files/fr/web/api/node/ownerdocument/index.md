@@ -1,7 +1,6 @@
 ---
 title: element.ownerDocument
 slug: Web/API/Node/ownerDocument
-translation_of: Web/API/Node/ownerDocument
 ---
 
 {{APIRef("DOM")}}

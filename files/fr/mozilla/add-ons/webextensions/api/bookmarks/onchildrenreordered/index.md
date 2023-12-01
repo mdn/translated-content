@@ -1,7 +1,6 @@
 ---
 title: bookmarks.onChildrenReordered
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
 ---
 
 {{AddonSidebar()}}

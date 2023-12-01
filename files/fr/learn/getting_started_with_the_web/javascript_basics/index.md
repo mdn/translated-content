@@ -1,7 +1,6 @@
 ---
 title: Les bases de JavaScript
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Module() コンストラクター
 slug: WebAssembly/JavaScript_interface/Module/Module
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
 ---
 
 {{WebAssemblySidebar}}

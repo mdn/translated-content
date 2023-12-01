@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
-translation_of: Web/API/WebGLRenderingContext/clear
 ---
 
 {{APIRef("WebGL")}}

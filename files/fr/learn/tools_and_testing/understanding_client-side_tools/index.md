@@ -1,7 +1,6 @@
 ---
 title: Understanding client-side web development tools
 slug: Learn/Tools_and_testing/Understanding_client-side_tools
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 情報セキュリティの基本
 slug: orphaned/Web/Security/Information_Security_Basics
-original_slug: Web/Security/Information_Security_Basics
 ---
 
 情報セキュリティを基本的に理解しておくことは、ソフトウェアやサイトが危険で脆弱なままで、資産を奪ったりその他の悪意の理由のために弱点を悪用されるのを防ぐのに役立ちます。これらの記事は知るべきことを学ぶのに役立ちます。 この情報から、ウェブ開発を通じて、またそれ以外のコンテンツのデプロイにおいても、セキュリティの役割と重要性に気づくでしょう。

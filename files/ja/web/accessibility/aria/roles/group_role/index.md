@@ -1,7 +1,6 @@
 ---
 title: group ロールの使用
 slug: Web/Accessibility/ARIA/Roles/group_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 ---
 
 ### 説明

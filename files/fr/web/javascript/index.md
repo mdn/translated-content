@@ -1,7 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-translation_of: Web/JavaScript
 ---
 
 {{JsSidebar}}

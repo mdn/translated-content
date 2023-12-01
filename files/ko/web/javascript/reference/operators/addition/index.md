@@ -2,7 +2,7 @@
 title: 더하기 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 l10n:
-  sourceCommit:93d2d79c1c68af93f2730d27cdea9d527eee0d7a
+  sourceCommit: 93d2d79c1c68af93f2730d27cdea9d527eee0d7a
 ---
 
 {{jsSidebar("Operators")}}
@@ -42,13 +42,13 @@ const t = Temporal.Now.instant();
 
 ```js
 // Number + Number -> 덧셈
-1 + 2 // 3
+1 + 2; // 3
 
 // Boolean + Number -> 덧셈
-true + 1 // 2
+true + 1; // 2
 
 // Boolean + Boolean -> 덧셈
-false + false // 0
+false + false; // 0
 ```
 
 ## BigInt 덧셈
@@ -69,13 +69,13 @@ Number(1n) + 2; // 3
 
 ```js
 // String + String -> 연결
-'foo' + 'bar' // "foobar"
+"foo" + "bar"; // "foobar"
 
 // Number + String -> 연결
-5 + 'foo' // "5foo"
+5 + "foo"; // "5foo"
 
 // String + Boolean -> 연결
-'foo' + false // "foofalse"
+"foo" + false; // "foofalse"
 ```
 
 ## 명세

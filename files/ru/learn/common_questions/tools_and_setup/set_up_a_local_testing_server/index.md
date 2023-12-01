@@ -1,8 +1,6 @@
 ---
 title: Как настроить локальный сервер для тестирования?
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
-translation_of: Learn/Common_questions/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
 
 Эта статья объясняет как установить простой локальный тестовый сервер на вашем компьютере, а так же основы его использования.

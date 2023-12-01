@@ -1,7 +1,6 @@
 ---
 title: Constructeur Object()
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
 
 {{JSRef}}
@@ -17,8 +16,8 @@ Lorsqu'il est appelé comme une fonction plutôt que comme un constructeur (c'es
 ## Syntaxe
 
 ```js
-new Object()
-new Object(valeur)
+new Object();
+new Object(valeur);
 ```
 
 ### Paramètres

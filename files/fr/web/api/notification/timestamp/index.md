@@ -1,7 +1,6 @@
 ---
 title: Notification.timestamp
 slug: Web/API/Notification/timestamp
-translation_of: Web/API/Notification/timestamp
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

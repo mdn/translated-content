@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onauxclick
 slug: Web/API/Element/auxclick_event
-translation_of: Web/API/GlobalEventHandlers/onauxclick
 ---
 
 {{ApiRef("HTML DOM")}} {{SeeCompatTable}}

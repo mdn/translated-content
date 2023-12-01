@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onselect
 slug: Web/API/HTMLInputElement/select_event
-original_slug: Web/API/GlobalEventHandlers/onselect
 ---
 
 {{ ApiRef("HTML DOM") }}Un manejador de evento para el evento select en la ventana.

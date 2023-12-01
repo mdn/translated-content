@@ -1,7 +1,6 @@
 ---
 title: "Multimédia : Images"
 slug: Learn/Performance/Multimedia
-translation_of: Learn/Performance/Multimedia
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}

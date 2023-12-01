@@ -1,7 +1,6 @@
 ---
 title: browsingData.removeHistory()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 ---
 
 {{AddonSidebar()}}

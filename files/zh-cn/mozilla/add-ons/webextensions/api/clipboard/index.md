@@ -1,7 +1,6 @@
 ---
 title: clipboard
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard
-original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板
 ---
 
 {{AddonSidebar}}

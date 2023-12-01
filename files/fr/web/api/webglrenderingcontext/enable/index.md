@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.enable()
 slug: Web/API/WebGLRenderingContext/enable
-translation_of: Web/API/WebGLRenderingContext/enable
 ---
 
 {{APIRef("WebGL")}}

@@ -1,7 +1,6 @@
 ---
 title: CSS 如何运行
 slug: Learn/CSS/First_steps/How_CSS_works
-original_slug: Learn/CSS/First_steps/CSS如何运行
 ---
 
 {{LearnSidebar}}

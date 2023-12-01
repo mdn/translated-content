@@ -1,7 +1,6 @@
 ---
 title: resolution
 slug: Web/CSS/@media/resolution
-translation_of: Web/CSS/@media/resolution
 ---
 
 {{CSSRef}}

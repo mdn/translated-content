@@ -1,8 +1,8 @@
 ---
 title: Breadcrumb Navigation
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
+
 {{CSSRef}}
 
 Навигация по хлебным крошкам помогает пользователю понять своё местоположение на веб-сайте, обеспечивая обратный путь к начальной странице.
@@ -38,7 +38,7 @@ translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Смотреть также
 

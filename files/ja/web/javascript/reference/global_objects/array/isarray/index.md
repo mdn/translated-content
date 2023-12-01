@@ -2,23 +2,18 @@
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`Array.isArray()`** メソッドは、渡された値が {{jsxref("Array")}} かどうかを判断します。
+**`Array.isArray()`** 静的メソッドは、渡された値が {{jsxref("Array")}} かどうかを判断します。
 
-```js
-Array.isArray([1, 2, 3]);  // true
-Array.isArray({foo: 123}); // false
-Array.isArray('foobar');   // false
-Array.isArray(undefined);  // false
-```
+{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
 
 ## 構文
 
-```js
+```js-nolint
 Array.isArray(value)
 ```
 
@@ -29,25 +24,26 @@ Array.isArray(value)
 
 ### 返値
 
-この値が {{jsxref("Array")}} の場合は `true` です。そうでなければ `false` を返します。
+`value` が {{jsxref("Array")}} の場合は `true` です。そうでなければ `false` を返します。 `value` が {{jsxref("TypedArray")}} インスタンスであった場合は常に `false` を返します。
 
 ## 解説
 
-値が {{jsxref("Array")}} の場合は `true` が返ります。それ以外の場合は `false` が返ります。
+`Array.isArray()` は、渡された値が {{jsxref("Array")}} であるかどうかを調べます。値のプロトタイプチェーンを調べたり、 `Array` コンストラクターに頼っているわけではありません。配列リテラル構文または `Array` コンストラクターを使用して作成した値に対しては `true` を返します。このため、 `Array` コンストラクターの ID が異なり、[`instanceof Array`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) が失敗してしまうような領域を超えるオブジェクトでも安全に使用することができます。
 
 詳しくは、 ["Determining with absolute accuracy whether or not a JavaScript object is an array"](https://web.mit.edu/jwalden/www/isArray.html) を参照してください。
-{{jsxref("TypedArray")}} のインスタンスが与えられると、常に `false` が返されます。
+
+また、 `Array.isArray()` は `Array.prototype` をプロトタイプチェーンに持つオブジェクトも拒否しますが、 `instanceof Array` が受け入れる実際の配列ではありません。
 
 ## 例
 
-### Array.isArray の使用
+### Array.isArray() の使用
 
 ```js
 // 以下の呼び出しはすべて true を返します
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
-Array.isArray(new Array('a', 'b', 'c', 'd'));
+Array.isArray(new Array("a", "b", "c", "d"));
 Array.isArray(new Array(3));
 // あまり知られていないものの Array.prototype は配列です
 Array.isArray(Array.prototype);
@@ -58,26 +54,29 @@ Array.isArray({});
 Array.isArray(null);
 Array.isArray(undefined);
 Array.isArray(17);
-Array.isArray('Array');
+Array.isArray("Array");
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray(new Uint8Array(32));
+// これは配列ではありません。配列リテラルを使用した構文でも、
+// Array コンストラクターでもないからです。
 Array.isArray({ __proto__: Array.prototype });
 ```
 
-### `instanceof` と `isArray`
+### instanceof と Array.isArray()
 
-`Array` のインスタンスをチェックする際、`Array.isArray` は `iframes` で動作するので、`instanceof` よりも推奨されます。
+`Array` のインスタンスをチェックする際、 `Array.isArray` は領域を超えても動作するので、 `instanceof` よりも推奨されます。
 
 ```js
-const iframe = document.createElement('iframe');
+const iframe = document.createElement("iframe");
 document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length-1].Array;
-const arr = new xArray(1,2,3); // [1,2,3]
+const xArray = window.frames[window.frames.length - 1].Array;
+const arr = new xArray(1, 2, 3); // [1, 2, 3]
 
 // 配列を正しくチェックできます
-Array.isArray(arr);  // true
-// iframe を介して配列を正しくチェックできません
+Array.isArray(arr); // true
+// arr のプロトタイプは xArray.prototype であり、
+// Array.prototype とは異なるオブジェクトです。
 arr instanceof Array; // false
 ```
 
@@ -92,5 +91,5 @@ arr instanceof Array; // false
 ## 関連情報
 
 - [`Array.isArray` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [ポリフィル](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

@@ -18,11 +18,11 @@ slug: Web/API/MediaStream/active
 ```js
 const promise = navigator.mediaDevices.getUserMedia({
   audio: true,
-  video: true
+  video: true,
 });
 
 promise.then((stream) => {
-  const startBtn = document.querySelector('#startBtn');
+  const startBtn = document.querySelector("#startBtn");
   startBtn.disabled = stream.active;
 });
 ```

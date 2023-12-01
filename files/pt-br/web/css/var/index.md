@@ -1,7 +1,6 @@
 ---
 title: var()
 slug: Web/CSS/var
-original_slug: Web/CSS/var()
 ---
 
 {{CSSRef}}
@@ -60,13 +59,11 @@ body {
 
 ## Especificações
 
-| Especificação                                                                    | Status                               | Comentário        |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Variables', '#using-variables', 'var()')}} | {{Spec2('CSS3 Variables')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.custom-property.var")}}
+{{Compat}}
 
 ## Veja também
 

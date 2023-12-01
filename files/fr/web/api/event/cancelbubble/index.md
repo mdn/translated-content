@@ -1,7 +1,6 @@
 ---
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
-translation_of: Web/API/Event/cancelBubble
 ---
 
 {{APIRef("DOM Events")}}

@@ -10,8 +10,8 @@ l10n:
 {{Glossary("CSS")}}では、セレクター (selector) を使って装飾したい {{glossary("HTML")}} 要素を選択します。CSS セレクターは種類豊富なので、装飾したい要素を細かく選択できます。この記事では、さまざまな種類のセレクターについて、その機能を詳しく確認します。
 
 | 前提条件: | 基本的なコンピューターリテラシー、[基本的なソフトウェアがインストールされている](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)こと、[ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)、HTML の基本 ([HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)) および CSS に関するアイデア ([CSS の第一歩](/ja/docs/Learn/CSS/First_steps)) に関する基本的な知識を得ている。 |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | CSS セレクターがどのように機能するかを学ぶ。                                                                                                                                                                                                                                                                                                                                                                           |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | CSS セレクターがどのように機能するかを学ぶ。                                                                                                                                                                                                                                                                                                                                                                                     |
 
 ## セレクターとは
 
@@ -39,7 +39,7 @@ h1 {
 
 カンマ区切りでセレクターリストにもできます。
 
-```css
+```css-nolint
 h1, .special {
   color: blue;
 }
@@ -75,7 +75,8 @@ h1 {
 ただし結合した場合は、ルール全体が無効とみなされ、`h1` も装飾されません。
 
 ```css
-h1, ..special {
+h1,
+..special {
   color: blue;
 }
 ```
@@ -86,22 +87,25 @@ h1, ..special {
 
 ### 要素・クラス・ID によるセレクター
 
- `<h1>` のような HTML 要素を選択するセレクターがこのグループに属します。
+`<h1>` のような HTML 要素を選択するセレクターがこのグループに属します。
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 クラスを選択するセレクターも同様です。
 
 ```css
-.box { }
+.box {
+}
 ```
 
 あとは ID です。
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### 属性によるセレクター
@@ -109,13 +113,16 @@ h1 { }
 特定の属性を持つ要素を選択するセレクターがこのグループに属します。
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 特定の属性を持ち、かつ、特定の属性値を持つ要素を選択するセレクターもあります。
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### 擬似クラスおよび疑似要素によるセレクター
@@ -123,13 +130,15 @@ a[href="https://example.com"] { }
 疑似クラス (pseudo-class) 、つまり特定の状態にある要素を選択するセレクターがこのグループに属します。たとえば、`:hover` 擬似クラスはマウスポインターがホバーしているときにのみ要素を選択します。
 
 ```css
-a:hover { }
+a:hover {
+}
 ```
 
 擬似要素 (pseudo-element) 、つまり要素自体ではなく要素の特定の部分を選択するセレクターもあります。たとえば、`::first-line` は要素（以下の例では `<p>`）内の最初の行をまるで `<span>` でラップしてスタイルしたかのように動作します。
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### 結合子
@@ -137,7 +146,8 @@ p::first-line { }
 最後のグループのセレクターは、セレクター同士を組み合わせて文書内のターゲット要素を選択します。たとえば、以下の例では子結合子（子コンビネーター、child combinator）(`>`) によって `<article>` 要素の直接の子である段落を選択します。
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## 次のステップ
@@ -150,16 +160,16 @@ article > p { }
 
 以下の表で使用可能な各セレクターの概要と、それぞれの使い方を示すガイド内ページへのリンクを紹介します。そこには各セレクターのブラウザーサポートを確認できる MDN ページへのリンクもあります。セレクターを検索したり一般的に CSS を体験するときに、ここに戻ってきて参照できます。
 
-| セレクター                                                     | 例                  | CSS チュートリアル                                                                                                            |
-| -------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [要素セレクター](/ja/docs/Web/CSS/Type_selectors)              | `h1 { }`            | [要素セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#Type_selectors)            |
-| [全称セレクター](/ja/docs/Web/CSS/Universal_selectors)         | `* { }`             | [全称セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#The_universal_selector)    |
-| [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)           | `.box { }`          | [クラスセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#Class_selectors)         |
-| [ID セレクター](/ja/docs/Web/CSS/ID_selectors)                 | `#unique { }`       | [ID セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#ID_Selectors)               |
-| [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)         | `a[title] { }`      | [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)                             |
-| [擬似クラスセレクター](/ja/docs/Web/CSS/Pseudo-classes)        | `p:first-child { }` | [疑似クラス](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#What_is_a_pseudo-class) |
-| [疑似要素セレクター](/ja/docs/Web/CSS/Pseudo-elements)         | `p::first-line { }` | [疑似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#What_is_a_pseudo-element) |
-| [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)           | `article p`         | [子孫結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Descendant_Selector)                           |
-| [子結合子](/ja/docs/Web/CSS/Child_combinator)                  | `article > p`       | [子結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Child_combinator)                                |
-| [隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`            | [隣接兄弟](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Adjacent_sibling)                                |
-| [一般兄弟結合子](/ja/docs/Web/CSS/General_sibling_combinator)  | `h1 ~ p`            | [一般兄弟](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#General_sibling)                                 |
+| セレクター                                                       | 例                  | CSS チュートリアル                                                                                                |
+| ---------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| [要素セレクター](/ja/docs/Web/CSS/Type_selectors)                | `h1 { }`            | [要素セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#Type_selectors)         |
+| [全称セレクター](/ja/docs/Web/CSS/Universal_selectors)           | `* { }`             | [全称セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#The_universal_selector) |
+| [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)             | `.box { }`          | [クラスセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#Class_selectors)      |
+| [ID セレクター](/ja/docs/Web/CSS/ID_selectors)                   | `#unique { }`       | [ID セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#ID_Selectors)            |
+| [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)           | `a[title] { }`      | [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)                          |
+| [擬似クラスセレクター](/ja/docs/Web/CSS/Pseudo-classes)          | `p:first-child { }` | [疑似クラス](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#擬似クラスとは何か)  |
+| [疑似要素セレクター](/ja/docs/Web/CSS/Pseudo-elements)           | `p::first-line { }` | [疑似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#擬似要素とは何か)      |
+| [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)             | `article p`         | [子孫結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Descendant_Selector)                        |
+| [子結合子](/ja/docs/Web/CSS/Child_combinator)                    | `article > p`       | [子結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Child_combinator)                             |
+| [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)         | `h1 + p`            | [隣接兄弟](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Adjacent_sibling)                             |
+| [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator) | `h1 ~ p`            | [一般兄弟](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators#General_sibling)                              |

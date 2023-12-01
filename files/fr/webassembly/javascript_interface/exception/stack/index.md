@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Exception.prototype.stack
 slug: WebAssembly/JavaScript_interface/Exception/stack
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack
 ---
 
 {{WebAssemblySidebar}}

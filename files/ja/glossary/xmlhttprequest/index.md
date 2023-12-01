@@ -1,8 +1,9 @@
 ---
 title: XHR (XMLHttpRequest)
 slug: Glossary/XMLHttpRequest
-original_slug: Glossary/XHR_(XMLHttpRequest)
 ---
+
+{{GlossarySidebar}}
 
 {{domxref("XMLHttpRequest")}} (XHR) とは {{Glossary("AJAX")}} リクエストを作成する {{Glossary("JavaScript")}} {{Glossary("API")}} です。これは{{Glossary("browser", "ブラウザー")}} と{{Glossary("server", "サーバー")}} との間のネットワークリクエストの送信を可能にするメソッドです。.
 

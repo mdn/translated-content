@@ -1,5 +1,5 @@
 ---
-title: ':read-write'
+title: ":read-write"
 slug: Web/CSS/:read-write
 ---
 
@@ -31,8 +31,8 @@ input:read-write {
 ### HTML
 
 ```html
-<input type="text" value="Type whatever you want here.">
-<input type="text" value="This is a read-only field." readonly>
+<input type="text" value="Type whatever you want here." />
+<input type="text" value="This is a read-only field." readonly />
 <p>This is a normal paragraph.</p>
 <p contenteditable="true">You can edit this paragraph!</p>
 ```
@@ -40,13 +40,25 @@ input:read-write {
 ### CSS
 
 ```css
-input { min-width: 25em; }
-input:-moz-read-write { background: cyan; }
-input:read-write { background: cyan; }
+input {
+  min-width: 25em;
+}
+input:-moz-read-write {
+  background: cyan;
+}
+input:read-write {
+  background: cyan;
+}
 
-p:-moz-read-write { background: lightgray; }
-p:read-write { background: lightgray; }
-p[contenteditable="true"] { color: blue; }
+p:-moz-read-write {
+  background: lightgray;
+}
+p:read-write {
+  background: lightgray;
+}
+p[contenteditable="true"] {
+  color: blue;
+}
 ```
 
 ### 结果

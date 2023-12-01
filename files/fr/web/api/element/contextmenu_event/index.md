@@ -1,7 +1,6 @@
 ---
 title: "Element : évènement contextmenu"
 slug: Web/API/Element/contextmenu_event
-translation_of: Web/API/Element/contextmenu_event
 ---
 
 {{APIRef}}

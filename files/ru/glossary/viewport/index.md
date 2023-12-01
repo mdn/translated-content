@@ -1,9 +1,9 @@
 ---
 title: Viewport
 slug: Glossary/Viewport
-translation_of: Glossary/Viewport
-original_slug: Глоссарий/Viewport
 ---
+
+{{GlossarySidebar}}
 
 Viewport - это видимая пользователю область веб-страницы, то, что может увидеть пользователь, не прибегая к прокрутке.
 

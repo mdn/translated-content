@@ -28,7 +28,7 @@ Escuta por usuário executando comandos que você registrou usando o [`commands`
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.commands")}}{{WebExtExamples("h2")}}
+{{Compat}}{{WebExtExamples("h2")}}
 
 > **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.commands`](https://developer.chrome.com/extensions/commands) do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
 

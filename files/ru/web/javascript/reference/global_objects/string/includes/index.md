@@ -1,14 +1,8 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-tags:
-  - JavaScript
-  - Prototype
-  - Reference
-  - String
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
+
 {{JSRef}}
 
 Метод **`includes()`** проверяет, содержит ли строка заданную подстроку, и возвращает, соответственно `true` или `false`.
@@ -39,7 +33,7 @@ str.includes(searchString[, position])
 Метод `includes()` является регистрозависимым. Например, следующее выражение вернёт `false`:
 
 ```js
-'Синий кит'.includes('синий'); // вернёт false
+"Синий кит".includes("синий"); // вернёт false
 ```
 
 ## Примеры
@@ -47,13 +41,13 @@ str.includes(searchString[, position])
 ### Использование `includes()`
 
 ```js
-var str = 'Быть или не быть вот в чём вопрос.';
+var str = "Быть или не быть вот в чём вопрос.";
 
-console.log(str.includes('Быть'));       // true
-console.log(str.includes('вопрос'));    // true
-console.log(str.includes('несуществующий')); // false
-console.log(str.includes('Быть', 1));    // false
-console.log(str.includes('БЫТЬ'));       // false
+console.log(str.includes("Быть")); // true
+console.log(str.includes("вопрос")); // true
+console.log(str.includes("несуществующий")); // false
+console.log(str.includes("Быть", 1)); // false
+console.log(str.includes("БЫТЬ")); // false
 ```
 
 ## Полифил
@@ -62,9 +56,9 @@ console.log(str.includes('БЫТЬ'));       // false
 
 ```js
 if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
-    if (typeof start !== 'number') {
+  String.prototype.includes = function (search, start) {
+    "use strict";
+    if (typeof start !== "number") {
       start = 0;
     }
 
@@ -87,7 +81,7 @@ if (!String.prototype.includes) {
 
 ## String.prototype.contains
 
-В Firefox с версии 18 по версию 39, этот метод назывался «contains». Он был переименован в «includes» в замечании {{bug(1102219)}} по следующей причине:
+В Firefox с версии 18 по версию 39, этот метод назывался «contains». Он был переименован в «includes» в замечании [Firefox bug 1102219](https://bugzil.la/1102219) по следующей причине:
 
 Как было [сообщено](https://bugzilla.mozilla.org/show_bug.cgi?id=789036), некоторые сайты, использующие MooTools 1.2, ломаются в Firefox 17. Эта версия MooTools проверяет существование метода `String.prototype.contains()` и, если он не существует, добавляет свой собственный. С введением этого метода в Firefox 17, поведение этой проверки изменилось таким образом, что реализация `String.prototype.contains()`, основанная на MooTools, сломалась. В результате это изменение было [отключено](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8) в Firefox 17. Метод `String.prototype.contains()` доступен в следующей версии Firefox — Firefox 18.
 

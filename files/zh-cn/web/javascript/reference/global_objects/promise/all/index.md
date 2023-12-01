@@ -71,7 +71,7 @@ setTimeout(() => {
   console.log(p3);
 });
 
-// 打印:
+// 打印：
 // Promise { <state>: "fulfilled", <value>: Array[3] }
 // Promise { <state>: "fulfilled", <value>: Array[4] }
 // Promise { <state>: "rejected", <reason>: 555 }
@@ -95,7 +95,7 @@ setTimeout(() => {
   console.log(p);
 });
 
-// 按顺序打印:
+// 按顺序打印：
 // Promise { <state>: "pending" }
 // 队列现在为空
 // Promise { <state>: "fulfilled", <value>: Array[2] }
@@ -244,7 +244,7 @@ Promise.all([p1, p2, p3, p4, p5])
     console.error(error.message);
   });
 
-// 打印:
+// 打印：
 // "拒绝"
 ```
 

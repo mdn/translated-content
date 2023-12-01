@@ -18,7 +18,7 @@ La valeur de l'attribut `value` d'un élément `<input type="reset">` contient u
 ### Exemple 1
 
 ```html
-<input type="reset" value="Réinitialiser le formulaire">
+<input type="reset" value="Réinitialiser le formulaire" />
 ```
 
 {{EmbedLiveSample("Exemple_1", 650, 30)}}
@@ -28,7 +28,7 @@ Si aucune valeur n'est indiquée, le bouton aura le texte par défaut « Réinit
 ### Exemple 2
 
 ```html
-<input type="reset">
+<input type="reset" />
 ```
 
 {{EmbedLiveSample("Exemple_2", 650, 30)}}
@@ -45,10 +45,10 @@ Commençons par créer un bouton de réinitialisation simple :
 <form>
   <div>
     <label for="example">Voici un champ</label>
-    <input id="example" type="text">
+    <input id="example" type="text" />
   </div>
   <div>
-    <input type="reset" value="Réinitialiser le formulaire">
+    <input type="reset" value="Réinitialiser le formulaire" />
   </div>
 </form>
 ```
@@ -69,11 +69,10 @@ Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur 
 <form>
   <div>
     <label for="example">Saisir un peu de texte</label>
-    <input id="example" type="text">
+    <input id="example" type="text" />
   </div>
   <div>
-    <input type="reset" value="Réinitialiser le formulaire"
-     accesskey="r">
+    <input type="reset" value="Réinitialiser le formulaire" accesskey="r" />
   </div>
 </form>
 ```
@@ -87,7 +86,7 @@ Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur 
 Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribut [`disabled`](/fr/docs/Web/HTML/Global_attributes#disabled) sur l'élément :
 
 ```html
-<input type="reset" value="Désactivé" disabled>
+<input type="reset" value="Désactivé" disabled />
 ```
 
 On peut activer/désactiver le bouton lors de la navigation sur la page avec JavaScript en modifiant la valeur de l'attribut `disabled` pour la passer de `true` à `false` et _vice versa_ (par exemple avec une instruction telle que `btn.disabled = true`).

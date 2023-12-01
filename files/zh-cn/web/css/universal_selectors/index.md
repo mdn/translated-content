@@ -18,9 +18,15 @@ slug: Web/CSS/Universal_selectors
 ## 示例
 
 ```css
-*[lang^=en]{color:green;}
-*.warning {color:red;}
-*#maincontent {border: 1px solid blue;}
+*[lang^="en"] {
+  color: green;
+}
+*.warning {
+  color: red;
+}
+*#maincontent {
+  border: 1px solid blue;
+}
 ```
 
 上面的 CSS 作用于下面的 HTML:

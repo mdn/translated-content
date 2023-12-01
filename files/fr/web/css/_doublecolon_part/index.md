@@ -1,7 +1,6 @@
 ---
-title: '::part()'
+title: "::part()"
 slug: Web/CSS/::part
-translation_of: Web/CSS/::part
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -26,7 +25,9 @@ custom-element::part(foo) {
 
 ```html
 <style type="text/css">
-  *, ::before, ::after {
+  *,
+  ::before,
+  ::after {
     box-sizing: border-box;
   }
 
@@ -34,15 +35,9 @@ custom-element::part(foo) {
     display: flex;
   }
 </style>
-<div part="tab active">
-  Tab 1
-</div>
-<div part="tab">
-  Tab 2
-</div>
-<div part="tab">
-  Tab 3
-</div>
+<div part="tab active">Tab 1</div>
+<div part="tab">Tab 2</div>
+<div part="tab">Tab 3</div>
 ```
 
 #### Feuille de style chargée dans un arbre léger

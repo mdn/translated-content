@@ -1,7 +1,6 @@
 ---
 title: Passo-a-Passo
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Passo-a-Passo
 ---
 
 Neste artigo iremos criar uma Extensão para Firefox do início ao fim.

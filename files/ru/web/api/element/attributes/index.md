@@ -1,8 +1,8 @@
 ---
 title: Element.attributes
 slug: Web/API/Element/attributes
-translation_of: Web/API/Element/attributes
 ---
+
 {{ APIRef("DOM") }}
 
 Свойство **`Element.attributes`** возвращает группу атрибутов всех узлов, зарегистрированных в указанном узле. Это {{domxref("NamedNodeMap")}}, то есть полученные данные не являются массивом `Array`, не содержат {{jsxref("Array")}} методы и {{domxref("Attr")}} индекс узлов может отличаться в различных браузерах. Если сказать более точно, атрибуты **(attributes)** это строка, пара ключ/значение которая представляет собой информацию относительно этого атрибута.
@@ -29,53 +29,49 @@ var atts = para.attributes;
 Следующий пример проходит через узлы атрибутов для элемента в документе с идентификатором «p1» и печатает значение каждого атрибута.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+  <head>
+    <title>Attributes example</title>
+    <script type="text/javascript">
+      function listAttributes() {
+        var paragraph = document.getElementById("paragraph");
+        var result = document.getElementById("result");
 
- <head>
-  <title>Attributes example</title>
-  <script type="text/javascript">
-   function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
+        // Во-первых,  давайте убедимся, что в абзаце есть какие-то атрибуты
+        if (paragraph.hasAttributes()) {
+          var attrs = paragraph.attributes;
+          var output = "";
+          for (var i = attrs.length - 1; i >= 0; i--) {
+            output += attrs[i].name + "->" + attrs[i].value;
+          }
+          result.value = output;
+        } else {
+          result.value = "No attributes to show";
+        }
+      }
+    </script>
+  </head>
 
-     // Во-первых,  давайте убедимся, что в абзаце есть какие-то атрибуты
-     if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
-       }
-       result.value = output;
-     } else {
-       result.value = "No attributes to show";
-     }
-   }
-  </script>
- </head>
-
-<body>
- <p id="paragraph" style="color: green;">Sample Paragraph</p>
- <form action="">
-  <p>
-    <input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();">
-    <input id="result" type="text" value="">
-  </p>
- </form>
-</body>
+  <body>
+    <p id="paragraph" style="color: green;">Sample Paragraph</p>
+    <form action="">
+      <p>
+        <input
+          type="button"
+          value="Show first attribute name and value"
+          onclick="listAttributes();" />
+        <input id="result" type="text" value="" />
+      </p>
+    </form>
+  </body>
 </html>
 ```
 
 ## Specifications
 
-| Specification                                                                                        | Status                           | Comment                                                                                                    |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-attributes', 'Element.attributes')}} | {{Spec2('DOM WHATWG')}} | From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} to {{domxref("Element")}} |
-| {{SpecName('DOM3 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM3 Core')}}     | No change from {{SpecName('DOM2 Core')}}                                                            |
-| {{SpecName('DOM2 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM2 Core')}}     | No change from {{SpecName('DOM1')}}                                                                |
-| {{SpecName('DOM1', 'level-one-core.html#ID-84CF096', 'Element.attributes')}} | {{Spec2('DOM1')}}         | Initial definition.                                                                                        |
+{{Specifications}}
 
 ## Browser compatibility
 

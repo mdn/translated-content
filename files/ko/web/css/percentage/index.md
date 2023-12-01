@@ -2,6 +2,7 @@
 title: <percentage>
 slug: Web/CSS/percentage
 ---
+
 {{CSSRef}}
 
 **`<percentage>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 백분율 값을 나타냅니다. 보통 부모 객체와의 상대적 크기를 지정할 때 사용합니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("font-size")}} 처럼 다양한 속성에서 백분율을 쓸 수 있습니다.

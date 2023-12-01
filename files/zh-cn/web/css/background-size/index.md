@@ -168,18 +168,19 @@ background-size: unset;
 
 ```css
 .bar {
-       width: 50px; height: 100px;
-       background-image: gradient(...);
+  width: 50px;
+  height: 100px;
+  background-image: gradient(...);
 
-       /* 不推荐 */
-       background-size: 25px;
-       background-size: 50%;
-       background-size: auto 50px;
-       background-size: auto 50%;
+  /* 不推荐 */
+  background-size: 25px;
+  background-size: 50%;
+  background-size: auto 50px;
+  background-size: auto 50%;
 
-       /* 可行 */
-       background-size: 25px 50px;
-       background-size: 50% 50%;
+  /* 可行 */
+  background-size: 25px 50px;
+  background-size: 50% 50%;
 }
 ```
 
@@ -213,12 +214,12 @@ While this property was added in Firefox 3.6, it is possible to stretch a image 
 .foo {
   background-image: url(bg-image.png);
 
-  -webkit-background-size: 100% 100%;           /* Safari 3.0 */
-     -moz-background-size: 100% 100%;           /* Gecko 1.9.2 (Firefox 3.6) */
-       -o-background-size: 100% 100%;           /* Opera 9.5 */
-          background-size: 100% 100%;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+  -webkit-background-size: 100% 100%; /* Safari 3.0 */
+  -moz-background-size: 100% 100%; /* Gecko 1.9.2 (Firefox 3.6) */
+  -o-background-size: 100% 100%; /* Opera 9.5 */
+  background-size: 100% 100%; /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
 
-  -moz-border-image: url(bg-image.png) 0;    /* Gecko 1.9.1 (Firefox 3.5) */
+  -moz-border-image: url(bg-image.png) 0; /* Gecko 1.9.1 (Firefox 3.5) */
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: local-name
 slug: Web/XPath/Functions/local-name
-translation_of: Web/XPath/Functions/local-name
 ---
 
 {{ XsltRef() }}

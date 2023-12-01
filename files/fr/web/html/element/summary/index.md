@@ -1,7 +1,6 @@
 ---
 title: "<summary> : l'élément de révélation d'un résumé"
 slug: Web/HTML/Element/summary
-translation_of: Web/HTML/Element/summary
 ---
 
 {{HTMLSidebar}}
@@ -41,8 +40,7 @@ Voir la section ci-après sur la compatibilité des navigateurs à ce sujet car 
 ```html
 <details open>
   <summary>Détails produit</summary>
-  <p>Ce produit a été fabriqué par
-  ACME et respecte les pandas.</p>
+  <p>Ce produit a été fabriqué par ACME et respecte les pandas.</p>
 </details>
 ```
 

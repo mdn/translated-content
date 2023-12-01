@@ -1,7 +1,6 @@
 ---
 title: IntersectionObserver.disconnect()
 slug: Web/API/IntersectionObserver/disconnect
-translation_of: Web/API/IntersectionObserver/disconnect
 ---
 
 {{APIRef("Intersection Observer API")}}

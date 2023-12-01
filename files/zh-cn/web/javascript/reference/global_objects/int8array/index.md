@@ -119,7 +119,7 @@ console.log(int8.length); // 2
 console.log(int8.BYTES_PER_ELEMENT); // 1
 
 // 以数组构造对象
-var arr = new Int8Array([21,31]);
+var arr = new Int8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // 从另一数组构造对象
@@ -154,8 +154,10 @@ var dv = Int8Array([1, 2, 3]);
 var dv = new Int8Array([1, 2, 3]);
 ```
 
-## 相关链接
+## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [`core-js` 中 `Int8Array` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)指南
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

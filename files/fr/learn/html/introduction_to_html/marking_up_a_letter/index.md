@@ -1,7 +1,6 @@
 ---
 title: Faire une lettre
 slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
-translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_à_HTML")}}

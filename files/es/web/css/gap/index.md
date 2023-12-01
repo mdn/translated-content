@@ -1,7 +1,6 @@
 ---
 title: grid-gap
 slug: Web/CSS/gap
-original_slug: Web/CSS/grid-gap
 ---
 
 {{CSSRef}}

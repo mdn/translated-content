@@ -9,7 +9,7 @@ slug: Web/API/WritableStream/abort
 
 ## 语法
 
-```js
+```js-nolint
 abort(reason)
 ```
 

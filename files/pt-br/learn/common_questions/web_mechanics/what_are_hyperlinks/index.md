@@ -1,7 +1,6 @@
 ---
 title: O que são hyperlinks?
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
-original_slug: Learn/Common_questions/What_are_hyperlinks
 ---
 
 Neste artigo, veremos o que são hiperlinks e por que eles são importantes.

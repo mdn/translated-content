@@ -1,7 +1,6 @@
 ---
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
-translation_of: Web/API/Document/createEvent
 ---
 
 > **Attention :** De nombreuses méthodes utilisées avec `createEvent`, tels que `initCustomEvent`, sont obsolètes. Utilisez le [constructeur d'évènement](/fr/docs/Web/API/CustomEvent) à la place.

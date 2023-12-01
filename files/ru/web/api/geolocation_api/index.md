@@ -1,13 +1,8 @@
 ---
 title: Использование геолокации
 slug: Web/API/Geolocation_API
-tags:
-  - Geolocation API
-  - Guide
-  - Intermediate
-translation_of: Web/API/Geolocation_API
-original_slug: Web/API/Geolocation/Using_geolocation
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 **Geolocation API** позволяет пользователю предоставлять своё местоположение web-приложению, если пользователь согласится предоставить его. Из соображений конфиденциальности, у пользователя будет запрошено разрешение на предоставление информации о местоположении.
@@ -53,11 +48,11 @@ API геолокации может быть вызвано через {{domxref
 
 ## Спецификации
 
-{{Specifications("api.Geolocation")}}
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ### Доступность
 

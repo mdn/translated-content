@@ -1,7 +1,6 @@
 ---
 title: Firefox 3 のための拡張機能の更新
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-original_slug: Updating_extensions_for_Firefox_3
 l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---

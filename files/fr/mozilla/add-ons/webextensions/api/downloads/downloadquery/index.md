@@ -1,7 +1,6 @@
 ---
 title: downloads.DownloadQuery
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 ---
 
 {{AddonSidebar()}}

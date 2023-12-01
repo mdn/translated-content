@@ -1,7 +1,6 @@
 ---
 title: Cómo manejan el espacio en blanco HTML, CSS y el DOM
 slug: Web/API/Document_Object_Model/Whitespace
-original_slug: Referencia_DOM_de_Gecko/Cómo_espacioenblanco
 ---
 
 {{APIRef("DOM")}}

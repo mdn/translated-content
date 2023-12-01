@@ -58,7 +58,6 @@ request.send();
 
 request.onreadystatechange = () => {
   if (request.readyState === this.HEADERS_RECEIVED) {
-
     // 生のヘッダー文字列を取得
     const headers = request.getAllResponseHeaders();
 
@@ -69,13 +68,13 @@ request.onreadystatechange = () => {
     // ヘッダー名と値のマップを生成
     const headerMap = {};
     arr.forEach((line) => {
-      const parts = line.split(': ');
+      const parts = line.split(": ");
       const header = parts.shift();
-      const value = parts.join(': ');
+      const value = parts.join(": ");
       headerMap[header] = value;
     });
   }
-}
+};
 ```
 
 いったんこれを行えば、次のようなことができます。

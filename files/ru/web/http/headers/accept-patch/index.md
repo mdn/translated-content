@@ -1,8 +1,6 @@
 ---
 title: Accept-Patch
 slug: Web/HTTP/Headers/Accept-Patch
-translation_of: Web/HTTP/Headers/Accept-Patch
-original_slug: Web/HTTP/Заголовки/Accept-Patch
 ---
 
 {{HTTPSidebar}}
@@ -58,8 +56,8 @@ Accept-Patch: application/merge-patch+json
 
 ## Спецификации
 
-| Спецификация                                         | Название   |
-| ---------------------------------------------------- | ---------- |
+| Спецификация                           | Название   |
+| -------------------------------------- | ---------- |
 | {{RFC("5789", "Accept-Patch", "3.1")}} | HTTP PATCH |
 
 ## Совместимость с браузером

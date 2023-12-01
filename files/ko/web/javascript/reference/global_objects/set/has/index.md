@@ -32,18 +32,18 @@ mySet.has(value);
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.has('foo');  // true
-mySet.has('bar');  // false
+mySet.has("foo"); // true
+mySet.has("bar"); // false
 
 var set1 = new Set();
-var obj1 = {'key1': 1};
+var obj1 = { key1: 1 };
 set1.add(obj1);
 
-set1.has(obj1);        // true
-set1.has({'key1': 1}); // false, 형태만 같은 서로 다른 객체의 참조이기 때문
-set1.add({'key1': 1}); // set1의 요소가 2개로 늘어남
+set1.has(obj1); // true
+set1.has({ key1: 1 }); // false, 형태만 같은 서로 다른 객체의 참조이기 때문
+set1.add({ key1: 1 }); // set1의 요소가 2개로 늘어남
 ```
 
 ## 명세

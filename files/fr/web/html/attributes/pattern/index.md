@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : pattern"
 slug: Web/HTML/Attributes/pattern
-translation_of: Web/HTML/Attributes/pattern
 ---
 
 {{HTMLSidebar}}

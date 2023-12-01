@@ -1,14 +1,9 @@
 ---
 title: BiDi
 slug: Glossary/BiDi
-tags:
-  - Accessibility
-  - Glossary
-  - Общедоступность
-  - Глоссарий
-translation_of: Glossary/BiDi
-original_slug: Глоссарий/BiDi
 ---
+
+{{GlossarySidebar}}
 
 **BiDi** (BiDirectional) относится к документу, содержащему текст справа налево и слева направо. Даже когда оба направления встречаются в одном и том же абзаце, текст на каждом языке должен отображаться в правильной направленности.
 

@@ -1,107 +1,108 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
+l10n:
+  sourceCommit: 6e3889be77fa45d5823216d0cc61b4f7c4b99e1b
 ---
 
 {{JSRef}}
 
-**`replaceAll()`** メソッドは、`pattern` にマッチしたすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` は文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各マッチに対して呼び出される関数を指定することができます。
-
-元の文字列は変更されません。
+**`replaceAll()`** メソッドは、`pattern` に一致したすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` は文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各一致に対して呼び出される関数を指定することができます。元の文字列は変更されません。
 
 {{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
 
 ## 構文
 
+```js-nolint
+replaceAll(pattern, replacement)
 ```
-const newStr = str.replaceAll(regexp|substr, newSubstr|function)
-```
-
-> **メモ:** \`_regexp_\`を使用する場合は、グローバル("g")フラグを設定する必要があります。それ以外の場合は、`TypeError` が投げられます："replaceAll must be called with a global RegExp".
 
 ### 引数
 
-- `regexp` (pattern)
-  - : グローバルフラグを持つ {{jsxref("RegExp")}} オブジェクトまたはリテラルです。マッチしたものは `newSubstr` または、指定された `function` によって返された値に置き換えられます。グローバル("g")フラグのない RegExp は `TypeError` を投げます："replaceAll must be called with a global RegExp".
-- `substr`
-  - : `newSubstr` で置き換えられる {{jsxref("String")}} です。これは文字列リテラルとして扱われ、正規表現として解釈されません。
-- `newSubstr` (replacement)
-  - : `regexp` または `substr` で指定された部分文字列を置き換える {{jsxref("String")}} です。いくつかの特殊な置換パターンがサポートされています。下記の「[引数としての文字列の指定](#Specifying_a_string_as_a_parameter)」セクションで説明しています。
-- `function` (replacement)
-  - : 指定された `regexp` または `substr` のマッチを置き換えるために使用される、新しい部分文字列を生成するために呼び出される関数です。この関数に与えられる引数については、下記の「[引数としての関数の指定](#Specifying_a_function_as_a_parameter)」セクションで説明しています。
+- `pattern`
 
-### 戻り値
+  - : 文字列または [`Symbol.replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを持つオブジェクトを置くことができます。典型的な例は[正規表現](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)です。`Symbol.replace` メソッドを持たない値は文字列に変換されます。
 
-パターンにマッチしたすべての文字列を置換文字列で置き換えた新しい文字列です。
+    `regexp` が[正規表現である](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)場合、グローバルフラグ (`g`) が設定されます。そうでなければ {{jsxref("TypeError")}} が発生します。
 
-## 説明
+- `replacement`
+  - : 文字列または関数を指定することができます。この置換は [`String.prototype.replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) と意味的に同じです。
 
-このメソッドは、呼び出し元の {{jsxref("String")}} オブジェクトを変更しません。戻り値として新しい文字列を返します。
+### 返値
 
-### 引数としての文字列の指定
+パターンに一致したすべての文字列を置換文字列で置き換えた新しい文字列です。
 
-置換文字列には以下の特殊な置換パターンを含めることができます。
+### 例外
 
-| パターン                                | 挿入                                                                                                                                                                                                           |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`   | `"$"` を挿入します。                                                                                                                                                                                           |
-| `$&`                                    | マッチした部分文字列を挿入します。                                                                                                                                                                             |
-| `` $` ``                                | マッチした部分文字列の直前の文字列の部分を挿入します。                                                                                                                                                         |
-| `$'`                                    | マッチした部分文字列の直後の文字列の部分を挿入します。                                                                                                                                                         |
-| `$n`                                    | `n` は 100 未満の正の整数です。第一引数が {{jsxref("RegExp")}} オブジェクトだった場合に `n` 番目の括弧でキャプチャされた文字列を挿入します。`1`, `2`, ... でインデックスされることに注意してください。 |
+- {{jsxref("TypeError")}}
+  - : `pattern` が[正規表現である](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)場合で、グローバルフラグ (`g`) が設定されていない場合（[`flags`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) プロパティに `"g"` が含まれていない場合）。
 
-### 引数としての関数の指定
+## 解説
 
-第二引数として関数を指定することができます。このとき、関数はマッチが完了した後に実行されます。関数呼び出しの結果（返り値）は、置換文字列として使われます（**注:** 上記の特殊な置換パターンはこの場合には適用されません）。
+このメソッドは呼び出された文字列値を変更しません。新しい文字列を返します。
 
-第一引数の正規表現がグローバルだと、置換されるべきマッチごとに関数が複数回実行されうることに注意してください。
+[`replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) とは異なり、このメソッドは最初に一致した文字列だけでなく、出現した文字列を置き換えます。これは文字列が静的に既知でない場合に特に有用です。特殊文字をエスケープせずに [`RegExp()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) コンストラクターを呼び出すと、意図せずに意味づけが変わってしまう可能性があるからです。
 
-関数に与えられる引数は次の通りです。
+```js
+function unsafeRedactName(text, name) {
+  return text.replace(new RegExp(name, "g"), "[REDACTED]");
+}
+function safeRedactName(text, name) {
+  return text.replaceAll(name, "[REDACTED]");
+}
 
-| 名前                                          | 与えられる値                                                                                                                                                                                                                                                                        |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `match`     | マッチした部分文字列（上記の `$&` に対応）です。                                                                                                                                                                                                                                    |
-| `p1, p2, ...`                                 | `replace()` の第一引数が {{jsxref("RegExp")}} オブジェクトだった場合、_n_ 番目の括弧でキャプチャされたグループの文字列（上記の `$1`, `$2`, などに対応）です。例えば `/(\a+)(\b+)/` が与えられた場合、`p1` は `\a+` に対するマッチ、`p2` は `\b+` に対するマッチとなります。 |
-| `offset`                                      | マッチした部分文字列の、分析中の文字列全体の中でのオフセットです（例えば、文字列全体が `'abcd'` で、マッチした部分文字列が `'bc'` ならば、この引数は `1` となります）。                                                                                                             |
-| `string`                                      | 分析中の文字列全体です。                                                                                                                                                                                                                                                            |
+const report =
+  "A hacker called ha.*er used special characters in their name to breach the system.";
 
-（引数の正確な個数は、第一引数が {{jsxref("RegExp")}} オブジェクトかどうか、そうならばさらに括弧でキャプチャされるサブマッチがいくつ指定されているかに依ります。）
+console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name to breach the system."
+console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
+```
+
+`pattern` が [`Symbol.replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを持つオブジェクト（`RegExp` オブジェクトを含む）である場合、そのメソッドは対象の文字列と `replacement` を引数として呼び出されます。その返値は `replaceAll()` の返値となります。この場合、`replaceAll()` の動作は完全に `@@replace` メソッドによってエンコードされるので、 `replace()` と同じ結果になります（正規表現がグローバルであるかどうかの余分な入力検証を除けば）。
+`pattern` が空文字列の場合、[`split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) の動作と同様に、UTF-16 のコード単位ごとに置換文字列が挿入されます。
+
+```js
+"xxx".replaceAll("", "_"); // "_x_x_x_"
+```
+
+正規表現プロパティ（特に [sticky](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) フラグ）と `replaceAll()` との相互作用については、[`RegExp.prototype[@@replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) を参照してください。
 
 ## 例
 
-### replaceAll の使用
+### replaceAll() の使用
 
 ```js
-'aabbcc'.replaceAll('b', '.');
+"aabbcc".replaceAll("b", ".");
 // 'aa..cc'
 ```
 
 ### グローバルではない正規表現
 
-正規表現フラグを使用する場合は、グローバルである必要があります。これは機能しません：
+正規表現フラグを使用する場合は、グローバルである必要があります。これは動作しません。
 
 ```js example-bad
-'aabbcc'.replaceAll(/b/, '.');
-TypeError: replaceAll must be called with a global RegExp
+"aabbcc".replaceAll(/b/, ".");
+// TypeError: replaceAll must be called with a global RegExp
 ```
 
-これは機能します：
+これは動作します。
 
 ```js example-good
-'aabbcc'.replaceAll(/b/g, '.');
-"aa..cc"
+"aabbcc".replaceAll(/b/g, ".");
+("aa..cc");
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.replaceAll")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`String.prototype.replaceAll` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}

@@ -1,7 +1,6 @@
 ---
 title: Masque de couleur
 slug: Web/API/WebGL_API/By_example/Color_masking
-translation_of: Web/API/WebGL_API/By_example/Color_masking
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée","Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples")}}

@@ -1,7 +1,6 @@
 ---
 title: "HTMLDialogElement: close event"
 slug: Web/API/HTMLDialogElement/close_event
-translation_of: Web/API/HTMLDialogElement/close_event
 ---
 
 {{ APIRef() }}

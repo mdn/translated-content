@@ -1,7 +1,6 @@
 ---
 title: Update Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
 ---
 
 Наконец, в разделе показано, как определить страницу для обновления объектов `Book`. Обработка форм при обновлении книги аналогична обработке форм при создании книги, за исключением того, что необходимо заполнить форму в маршруте `GET` значениями из базы данных.

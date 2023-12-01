@@ -45,7 +45,7 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-overflow.html", '100%', 720)}}
 设置 `overflow: auto` 会自动创建包含浮动的新 BFC。现在，我们的 DIV 在布局中变成了一个迷你布局。任何子元素都将包含在其中。
 
-使用 `overflow` 创建新的 BFC 的问题在于， `overflow` 属性用于告诉浏览器您希望如何处理溢出的内容。在某些情况下，当您纯粹使用此属性创建 BFC 时，您会发现不需要的滚动条或剪切阴影。另外，对于未来的开发人员来说，它可能不太可读，因为不能显式地表明为什么要使用溢出来实现这一目的。如果您使用了这个方法，最好对代码进行注释以便他人理解。
+使用 `overflow` 创建新的 BFC 的问题在于， `overflow` 属性用于告诉浏览器你希望如何处理溢出的内容。在某些情况下，当你纯粹使用此属性创建 BFC 时，你会发现不需要的滚动条或剪切阴影。另外，对于未来的开发人员来说，它可能不太可读，因为不能显式地表明为什么要使用溢出来实现这一目的。如果你使用了这个方法，最好对代码进行注释以便他人理解。
 
 ### 使用 display:flow-root 显式创建 BFC
 

@@ -1,7 +1,6 @@
 ---
 title: Utiliser le rôle listbox
 slug: Web/Accessibility/ARIA/Roles/listbox_role
-translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 ---
 
 ### Description

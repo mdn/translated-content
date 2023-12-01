@@ -1,8 +1,6 @@
 ---
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
-translation_of: Web/HTTP/Headers/If-Match
-original_slug: Web/HTTP/Заголовки/If-Match
 ---
 
 {{HTTPSidebar}}
@@ -55,8 +53,8 @@ If-Match: *
 
 ## Спецификации
 
-| Спецификация                                 | Название                                                     |
-| -------------------------------------------- | ------------------------------------------------------------ |
+| Спецификация                       | Название                                                     |
+| ---------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-Match", "3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Совместимость с браузером

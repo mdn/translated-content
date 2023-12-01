@@ -1,7 +1,6 @@
 ---
 title: PerformanceElementTiming.loadTime
 slug: Web/API/PerformanceElementTiming/loadTime
-translation_of: Web/API/PerformanceElementTiming/loadTime
 ---
 
 {{APIRef("Element Timing API")}}

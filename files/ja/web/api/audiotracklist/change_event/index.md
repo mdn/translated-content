@@ -48,7 +48,7 @@ toggleTrackButton.addEventListener("click", () => {
 ```js
 const videoElement = document.querySelector("video");
 videoElement.audioTracks.onchange = (event) => {
-    console.log(`'${event.type}' イベント発生`);
+  console.log(`'${event.type}' イベント発生`);
 };
 
 // `enabled` の値を変更すると `change` イベントを引き起こします

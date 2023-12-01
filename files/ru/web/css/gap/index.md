@@ -1,9 +1,6 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-page-type: css-property
-translation_of: Web/CSS/gap
-browser-compat: css.properties.gap
 ---
 
 {{CSSRef}}

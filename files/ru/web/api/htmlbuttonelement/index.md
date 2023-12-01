@@ -1,7 +1,6 @@
 ---
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
-translation_of: Web/API/HTMLButtonElement
 ---
 
 {{APIRef("HTML DOM")}}
@@ -211,23 +210,18 @@ _Наследует свойства от его родителя, {{domxref("HT
 
 _Наследует свойства от его родителя, {{domxref("HTMLElement")}}._
 
-| Name                                    | Return Type                  | Description                        |
-| --------------------------------------- | ---------------------------- | ---------------------------------- |
+| Name                                    | Return Type            | Description                        |
+| --------------------------------------- | ---------------------- | ---------------------------------- |
 | `checkValidity()`                       | {{domxref("Boolean")}} | Not supported for button elements. |
-| `setCustomValidity(in DOMString error)` | `void`                       | Not supported for button elements. |
+| `setCustomValidity(in DOMString error)` | `void`                 | Not supported for button elements. |
 
 WIth Gecko-based browser, use the {{cssxref(":-moz-submit-invalid")}} pseudo-class to style submit buttons based on the validation of a form.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                            | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "text-level-semantics.html#the-a-element", "HTMLAnchorElement")}} | {{Spec2('HTML WHATWG')}} | The following attribute has been added: `menu`. The `type` attribute can take one more value, `"menu"`.                                                                                                                                                                                                                                                                                                                          |
-| {{SpecName('HTML5 W3C', "text-level-semantics.html#the-a-element", "HTMLAnchorElement")}} | {{Spec2('HTML5 W3C')}}     | The attributes `tabindex` and `accesskey`, are now defined on {{domxref("HTMLElement")}}. The following attributes have been added: `autofocus`, `formAction`, `formEncType`, `formMethod`, `formNoValidate`, `formTarget`, `labels`, `validity`, `validationMessage`, and `willValidate`. The following methods have been added: `checkValidity()`, `setCustomValidity()`. The `type` attribute is no more read-only. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-ID-48250443', 'HTMLAnchorElement')}}                     | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName("DOM1")}}.                                                                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-48250443', 'HTMLAnchorElement')}}                     | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                                              |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

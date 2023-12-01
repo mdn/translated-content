@@ -1,14 +1,6 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
-tags:
-  - Element
-  - HTML
-  - Разделы
-  - Разделы HTML
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/header
 ---
 
 {{HTMLSidebar}}
@@ -20,7 +12,7 @@ translation_of: Web/HTML/Element/header
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                                                                                                                                                          |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                            | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), кроме `<header>` и {{HTMLElement("footer")}}                                                                                                                                                                                        |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                          |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                              |
 | Допустимые родители                                              | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого. Обратите внимание, что элемент `<header>` не должен быть потомком элемента {{HTMLElement("address")}}, {{HTMLElement("footer")}} или другого элемента `<header>`. |
 | Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                               |
 | DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                       |

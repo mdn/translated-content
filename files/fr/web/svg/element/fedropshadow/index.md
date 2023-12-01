@@ -1,7 +1,6 @@
 ---
 title: <feDropShadow>
 slug: Web/SVG/Element/feDropShadow
-translation_of: Web/SVG/Element/feDropShadow
 ---
 
 {{SVGRef}}

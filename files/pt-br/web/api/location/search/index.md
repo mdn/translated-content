@@ -1,5 +1,5 @@
 ---
-title: 'Location: search'
+title: "Location: search"
 slug: Web/API/Location/search
 ---
 
@@ -28,12 +28,10 @@ let params = new URLSearchParams(queryString);
 let q = parseInt(params.get("q")); // é o número 123
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                    | Status                           | Comentário         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-location-search', 'search')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Location.search")}}
+{{Compat}}

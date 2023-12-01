@@ -1,7 +1,6 @@
 ---
 title: Event.explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
-translation_of: Web/API/Event/explicitOriginalTarget
 l10n:
   sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---

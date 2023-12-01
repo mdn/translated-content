@@ -1,8 +1,8 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-translation_of: Web/CSS/background-position
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`background-position`** устанавливает начальную позицию для каждого фонового изображения. Положение относительно уровня положения, установленного {{cssxref("background-origin")}}.
@@ -28,7 +28,9 @@ background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
 /* Несколько изображений */
-background-position: 0 0, center;
+background-position:
+  0 0,
+  center;
 
 /* Значения смещения края */
 background-position: bottom 10px right 20px;
@@ -49,8 +51,8 @@ background-position: unset;
 - `<position>`
   - : {{cssxref("&lt;position&gt;")}}. Позиция определяет координату x/y, чтобы разместить элемент относительно границ поля элемента. Она может быть определена с использованием одного и двух значений. Если используются два значения, первое значение предоставляет горизонтальную позицию, а второе представляет вертикальную позицию. Если указано только одно, второе значение считается `center`.**Синтаксис 1-значения:** значение может быть:
     - Значение ключевого слова `center`, которое центрирует изображение.
-    - Одно из значений ключевых слов `top`, `left`, `bottom`, `right`. Оно указывает край напротив, которого нужно поместить элемент. Затем для другого измерения устанавливается значение 50%, таким образом элемент размещается в середине указанного края.
-    - {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Оно указывает координату X относительно левого края, с координатой Y установленной на 50%.**Синтаксис с 2-значениями:** одно из значений определяет X, а другое определяет Y. Каждое значение может быть:
+    - Одно из значений ключевых слов `top`, `left`, `bottom`, `right`. Оно указывает край, на который следует поместить элемент. Затем для другого измерения устанавливается значение 50%, таким образом элемент размещается в середине указанного края.
+    - {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Оно указывает координату X относительно левого края, с координатой Y установленной на 50%. **Синтаксис с 2-значениями:** одно из значений определяет X, а другое определяет Y. Каждое значение может быть:
       - Одно из значений ключевых слов `top`, `left`, `bottom`, `right`. Если здесь указаны `left` или `right`, то оно определяет X, а другое заданное значение определяет Y. Если даны `top` или `bottom`, то оно определяет Y, а другое значение определяет X.
     - {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Если другое значение является `left` или `right`, то оно определяет Y, относительно верхнего края. Если другое значение `top` или `bottom`, то оно определяет X, относительно левого края. Если оба значения `<length>` или `<percentage>`, то первое определяет X, а второе Y.Обратите внимание,что:
       - Если одно значение `top` или `bottom`, то другое значение не может быть `top` или `bottom`.
@@ -77,7 +79,7 @@ background-position: unset;
 ```css
 /* Общий среди всех <div>-ов */
 div {
-  background-color: #FFEE99;
+  background-color: #ffee99;
   background-repeat: no-repeat;
   width: 300px;
   height: 80px;
@@ -86,19 +88,19 @@ div {
 
 /* В этих примерах используется сокращённое свойство 'background' */
 .exampleone {
-  background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("startransparent.gif") #FFEE99 3em 50% no-repeat;
+  background: url("startransparent.gif") #ffee99 3em 50% no-repeat;
 }
 
 /* Несколько фоновых изображений: каждое изображение сопоставляется
    с соответствующей позицией, от первого указанного до последнего. */
 .examplethree {
-  background-image:    url("startransparent.gif"),
-                       url("catfront.png");
-  background-position: 0px 0px,
-                       center;
+  background-image: url("startransparent.gif"), url("catfront.png");
+  background-position:
+    0px 0px,
+    center;
 }
 ```
 
@@ -118,7 +120,7 @@ div {
 
 ### Quantum CSS заметки
 
-- В Gecko есть ошибка, означающая, что `background-position` не может быть {{cssxref("transition","transitioned")}} между двумя значениями, содержащими разные числа значений {{cssxref("&lt;position&gt;")}}, для примера `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (смотрите {{bug(1390446)}}). Новый параллельный CSS движок Firefox (также известный как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), который планируется выпустить в Firefox 57) исправляет это.
+- В Gecko есть ошибка, означающая, что `background-position` не может быть {{cssxref("transition","transitioned")}} между двумя значениями, содержащими разные числа значений {{cssxref("&lt;position&gt;")}}, для примера `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (смотрите [Firefox bug 1390446](https://bugzil.la/1390446)). Новый параллельный CSS движок Firefox (также известный как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), который планируется выпустить в Firefox 57) исправляет это.
 
 ## Смотрите также
 

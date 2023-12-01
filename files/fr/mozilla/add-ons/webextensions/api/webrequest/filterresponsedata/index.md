@@ -1,7 +1,6 @@
 ---
 title: webRequest.filterResponseData()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
 ---
 
 {{AddonSidebar()}}

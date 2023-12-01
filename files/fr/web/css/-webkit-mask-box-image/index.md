@@ -1,7 +1,6 @@
 ---
-title: '-webkit-mask-box-image'
+title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
-translation_of: Web/CSS/-webkit-mask-box-image
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -55,11 +54,11 @@ Où :
 
 ```css
 .exempleUn {
-  -webkit-mask-box-image: url('mask.png');
+  -webkit-mask-box-image: url("mask.png");
 }
 
 .exempleDeux {
-  -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```
 

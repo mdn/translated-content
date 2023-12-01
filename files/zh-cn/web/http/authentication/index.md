@@ -5,7 +5,7 @@ slug: Web/HTTP/Authentication
 
 {{HTTPSidebar}}
 
-HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通用的 HTTP 认证框架，并且展示了如何通过 HTTP “Basic”模式限制对你服务器的访问。
+HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通用的 HTTP 认证框架，并且展示了如何通过 HTTP 的“Basic”模式限制对你服务器的访问。
 
 ## 通用的 HTTP 认证框架
 
@@ -80,7 +80,7 @@ IANA 维护了[一系列的验证方案](http://www.iana.org/assignments/http-au
 - **Bearer**
   - : 参见 {{rfc(6750)}}，bearer 令牌通过 OAuth 2.0 保护资源。
 - **Digest**
-  - : 参见 {{rfc(7616)}}，Firefox 93 及更高版本支持 SHA-256 算法。以前的版本仅支持MD5散列（不建议）。
+  - : 参见 {{rfc(7616)}}，Firefox 93 及更高版本支持 SHA-256 算法。以前的版本仅支持 MD5 散列（不建议）。
 - **HOBA**
   - : 参见 {{rfc(7486)}}，阶段三，**H**TTP **O**rigin-**B**ound 认证，基于数字签名。
 - **Mutual**
@@ -100,7 +100,7 @@ IANA 维护了[一系列的验证方案](http://www.iana.org/assignments/http-au
 
 ## Basic 验证方案
 
-“Basic” HTTP 验证方案是在 {{rfc(7617)}} 中规定的，在该方案中，使用用户的 ID/密码作为凭据信息，并且使用 base64 算法进行编码。
+“Basic”HTTP 验证方案是在 {{rfc(7617)}} 中规定的，在该方案中，使用用户的 ID/密码作为凭据信息，并且使用 base64 算法进行编码。
 
 ### Basic 验证方案的安全性
 

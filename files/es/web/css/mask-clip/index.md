@@ -1,7 +1,6 @@
 ---
 title: "-webkit-mask-clip"
 slug: Web/CSS/mask-clip
-original_slug: Web/CSS/-webkit-mask-clip
 ---
 
 {{ CSSRef() }}

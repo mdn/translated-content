@@ -1,7 +1,6 @@
 ---
 title: starts-with
 slug: Web/XPath/Functions/starts-with
-translation_of: Web/XPath/Functions/starts-with
 ---
 
 {{ XsltRef() }}

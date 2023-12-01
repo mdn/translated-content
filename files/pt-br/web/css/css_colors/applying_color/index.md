@@ -11,7 +11,7 @@ Este artigo é uma cartilha que apresenta cada uma das maneiras pelas quais as c
 
 O uso da cor é uma forma fundamental de expressão humana. As crianças experimentam a cor antes mesmo de terem a destreza manual para desenhar. Talvez seja por isso que a cor é uma das primeiras coisas que as pessoas muitas vezes querem experimentar quando aprendem a desenvolver sites. Com [CSS](/pt-BR/docs/Web/CSS), há várias maneiras de adicionar cor aos seus [elementos](/pt-BR/docs/Web/HTML/Element) [HTML](/pt-BR/docs/Web/HTML) para criar exatamente a aparência desejada.
 
-Vamos abordar a maior parte do que você precisa saber ao usar cores, incluindo uma [lista do que você pode colorir e quais propriedades CSS estão envolvidas](#things_that_can_have_color), [como você descreve as cores](#how_to_describe_a_color ), e como realmente [usar cores em folhas de estilo e em scripts](#using_color). Também veremos como [deixar o usuário escolher uma cor](#letting_the_user_pick_a_color).
+Vamos abordar a maior parte do que você precisa saber ao usar cores, incluindo uma [lista do que você pode colorir e quais propriedades CSS estão envolvidas](#things_that_can_have_color), [como você descreve as cores](#how_to_describe_a_color), e como realmente [usar cores em folhas de estilo e em scripts](#using_color). Também veremos como [deixar o usuário escolher uma cor](#letting_the_user_pick_a_color).
 
 Em seguida, encerraremos as coisas com uma breve discussão sobre como [usar cores com sabedoria](#using_color_wisely): como selecionar cores apropriadas, tendo em mente as necessidades de pessoas com diferentes capacidades visuais.
 
@@ -148,7 +148,11 @@ Aqui estão algumas cores de amostra em notação HSL:
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -283,7 +287,10 @@ Nossas duas caixas coloridas compartilham várias propriedades em comum, então,
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,7 +370,11 @@ O CSS estabelece um tamanho para a caixa e alguns estilos básicos para as apar�
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -378,13 +389,21 @@ const output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", (event) => {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  (event) => {
+    box.style.borderColor = event.target.value;
+  },
+  false,
+);
 
-colorPicker.addEventListener("change", (event) => {
-  output.innerText = `Cor definida como ${colorPicker.value}.`;
-}, false);
+colorPicker.addEventListener(
+  "change",
+  (event) => {
+    output.innerText = `Cor definida como ${colorPicker.value}.`;
+  },
+  false,
+);
 ```
 
 O evento {{domxref("HTMLElement/input_event", "input")}} é enviado toda vez que o valor do elemento muda; ou seja, toda vez que o usuário ajusta a cor no seletor de cores. Cada vez que esse evento chega, definimos a cor da borda da caixa para corresponder ao valor atual do seletor de cores.

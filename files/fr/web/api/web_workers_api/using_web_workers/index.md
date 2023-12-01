@@ -1,7 +1,6 @@
 ---
 title: Utilisation des web workers
 slug: Web/API/Web_Workers_API/Using_web_workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}

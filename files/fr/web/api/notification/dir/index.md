@@ -1,7 +1,6 @@
 ---
 title: Notification.dir
 slug: Web/API/Notification/dir
-translation_of: Web/API/Notification/dir
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

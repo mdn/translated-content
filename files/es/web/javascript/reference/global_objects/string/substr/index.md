@@ -1,12 +1,12 @@
 ---
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/substr
 ---
 
 {{JSRef("Objetos_globales", "String")}}
 
 > **Advertencia:** Advertencia: Aunque `String.prototype.substr(…)` no está estrictamente obsoleto (como en "eliminado de los estándares web"), se define en el anexo B de la norma ECMA-262, cuya introducción establece:
+>
 > > ... Todas las características y comportamientos del lenguaje especificados en este anexo tienen una o más características indeseables y, en ausencia de uso heredado, se eliminarían de esta especificación. ... ... Los programadores no deben usar ni asumir la existencia de estas características y comportamientos al escribir un nuevo código ECMAScript.
 
 ## Resumen
@@ -22,6 +22,7 @@ cadena.substr(inicio[, longitud])
 ### Parámetros
 
 - `inicio`
+
   - : Localización en la cual se empiezan a extraer caracteres. Si se da un número negativo, se trata como `longCad + inicio` donde `longCad` es la longitud de la cadena (por ejemplo, si `inicio` es -3 se trata como `longCad - 3`).
 
 - `longitud`
@@ -48,12 +49,12 @@ Si `longitud` es 0 o negativa, `substr` devuelve una cadena vacía. Si se omite 
 ```js
 var cadena = "abcdefghij";
 
-console.log("(1,2): "    + cadena.substr(1,2));   // '(1, 2): bc'
-console.log("(-3,2): "   + cadena.substr(-3,2));  // '(-3, 2): hi'
-console.log("(-3): "     + cadena.substr(-3));    // '(-3): hij'
-console.log("(1): "      + cadena.substr(1));     // '(1): bcdefghij'
-console.log("(-20, 2): " + cadena.substr(-20,2)); // '(-20, 2): ab'
-console.log("(20, 2): "  + cadena.substr(20,2));  // '(20, 2): '
+console.log("(1,2): " + cadena.substr(1, 2)); // '(1, 2): bc'
+console.log("(-3,2): " + cadena.substr(-3, 2)); // '(-3, 2): hi'
+console.log("(-3): " + cadena.substr(-3)); // '(-3): hij'
+console.log("(1): " + cadena.substr(1)); // '(1): bcdefghij'
+console.log("(-20, 2): " + cadena.substr(-20, 2)); // '(-20, 2): ab'
+console.log("(20, 2): " + cadena.substr(20, 2)); // '(20, 2): '
 ```
 
 Este script muestra:

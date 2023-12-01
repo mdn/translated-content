@@ -50,7 +50,7 @@ const alarm = {
         this.remind(msg);
       },
       1000,
-      "일어나세요!"
+      "일어나세요!",
     );
   },
 

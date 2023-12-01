@@ -1,7 +1,6 @@
 ---
 title: <feTile>
 slug: Web/SVG/Element/feTile
-translation_of: Web/SVG/Element/feTile
 ---
 
 {{SVGRef}}

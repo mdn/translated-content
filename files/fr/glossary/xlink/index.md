@@ -1,8 +1,9 @@
 ---
 title: XLink
 slug: Glossary/XLink
-translation_of: Glossary/XLink
 ---
+
+{{GlossarySidebar}}
 
 XLink est un standard du W3C qui sert à décrire des liens entre documents XML ou entre XML et d'autres documents. Un certain nombre de ses comportements est laissé à l'implémentation qui détermine comment ils doivent être gérés.
 

@@ -1,7 +1,6 @@
 ---
 title: Sélecteurs d'ID
 slug: Web/CSS/ID_selectors
-translation_of: Web/CSS/ID_selectors
 ---
 
 {{CSSRef("Selectors")}}
@@ -22,7 +21,6 @@ Un sélecteur d'identifiant (_ID selector_) permet, pour un document HTML, de ci
 ```
 
 > **Note :** Cela est équivalent à la notation suivante qui utilise un {{cssxref("Sélecteurs_d_attribut", "sélecteur d'attribut")}}:
->
 >
 > ```
 > [id=valeur_identifiant] { déclarations }

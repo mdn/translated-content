@@ -1,7 +1,6 @@
 ---
 title: Atributos globales
 slug: Web/HTML/Global_attributes
-original_slug: Web/HTML/Atributos_Globales
 ---
 
 {{HTMLSidebar("Atributos_globales")}}

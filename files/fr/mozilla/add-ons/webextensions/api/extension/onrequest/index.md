@@ -1,7 +1,6 @@
 ---
 title: extension.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Lignes directrices du CSS
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-translation_of: MDN/Guidelines/Code_guidelines/CSS
 ---
 
 {{MDNSidebar}}

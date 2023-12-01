@@ -1,7 +1,5 @@
 ---
-title: >-
-  SyntaxError: applying the 'delete' operator to an unqualified name is
-  deprecated
+title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
 
@@ -21,7 +19,7 @@ slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 
 ## 무엇이 잘못되었을까?
 
-자바스크립트에서 일반 변수는 [`delete`](/ko/docs/Web/JavaScript/Reference/Operators/delete) 연산자를 사용하여 삭제할 수 없습니다. 엄격 모드에서 변수를 삭제하는 접근은 허용되지 않으므로 에러가 발생합니다.
+JavaScript에서 일반 변수는 [`delete`](/ko/docs/Web/JavaScript/Reference/Operators/delete) 연산자를 사용하여 삭제할 수 없습니다. 엄격 모드에서 변수를 삭제하는 접근은 허용되지 않으므로 에러가 발생합니다.
 
 `delete` 연산자는 오직 객체의 속성만을 삭제할 수 있습니다. 객체 속성은 설정할 수 있는 경우 "수식"될 수 있습니다.
 
@@ -31,10 +29,10 @@ slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 
 ## 예제
 
-자바스크립트에서 일반 변수를 삭제하려고 하면 동작하지 않습니다. 그리고 엄격 모드에서는 에러가 발생합니다:
+JavaScript에서 일반 변수를 삭제하려고 하면 동작하지 않습니다. 그리고 엄격 모드에서는 에러가 발생합니다:
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var x;
 
@@ -49,7 +47,7 @@ delete x;
 변수의 내용을 비우려면 {{jsxref("null")}}을 설정하면 됩니다:
 
 ```js example-good
-'use strict';
+"use strict";
 
 var x;
 

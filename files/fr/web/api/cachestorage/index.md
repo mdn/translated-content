@@ -1,7 +1,6 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
-translation_of: Web/API/CacheStorage
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

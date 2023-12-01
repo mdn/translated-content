@@ -1,7 +1,6 @@
 ---
 title: "HTMLAreaElement: pathname プロパティ"
 slug: Web/API/HTMLAreaElement/pathname
-original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
@@ -17,9 +16,9 @@ l10n:
 ## 例
 
 ```js
-// <area id="myArea" href="/en-US/docs/HTMLAreaElement"> 要素が文書にあったとします
+// <area id="myArea" href="/ja/docs/HTMLAreaElement"> 要素が文書にあったとします
 const area = document.getElementById("myArea");
-area.pathname; // '/en-US/docs/HTMLAreaElement' を返す
+area.pathname; // '/ja/docs/HTMLAreaElement' を返す
 ```
 
 ## 仕様書

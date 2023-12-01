@@ -1,7 +1,6 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
-translation_of: Web/CSS/:last-child
 ---
 
 {{CSSRef}}
@@ -37,8 +36,8 @@ li:last-child {
 
 ```html
 <ul>
-   <li>Cet élément n'est pas vert !</li>
-   <li>Celui-ci est vert.</li>
+  <li>Cet élément n'est pas vert !</li>
+  <li>Celui-ci est vert.</li>
 </ul>
 ```
 

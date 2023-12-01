@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
 
 {{JSRef}}
@@ -15,7 +14,7 @@ Vous pouvez utiliser cette méthode pour vous affecter une date et un temps à u
 ## Syntaxe
 
 ```js
-dateObj.getTime()
+dateObj.getTime();
 ```
 
 ### Valeur de retour
@@ -29,7 +28,7 @@ La valeur renvoyée par la méthode `getTime()` est le nombre de millièmes de s
 L'exemple qui suit assigne la valeur de `anniversaire` à `copie` :
 
 ```js
-var anniversaire = new Date(1994 , 11, 10); // 10 décembre 1994
+var anniversaire = new Date(1994, 11, 10); // 10 décembre 1994
 var copie = new Date();
 copie.setTime(anniversaire.getTime());
 ```
@@ -47,7 +46,9 @@ for (var i = 0; i < 1000; i++) {
 }
 fin = new Date();
 
-console.log('Durée de cette opération : ' + (fin.getTime() - début.getTime()) + ' msec');
+console.log(
+  "Durée de cette opération : " + (fin.getTime() - début.getTime()) + " msec",
+);
 ```
 
 ## Précision temporelle réduite
@@ -61,7 +62,6 @@ new Date().getTime();
 // 1519211810362
 // 1519211811670
 // ...
-
 
 // précision temporelle avec `privacy.resistFingerprinting` activé
 new Date().getTime();

@@ -1,7 +1,6 @@
 ---
 title: ExtendableMessageEvent.ports
 slug: Web/API/ExtendableMessageEvent/ports
-translation_of: Web/API/ExtendableMessageEvent/ports
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

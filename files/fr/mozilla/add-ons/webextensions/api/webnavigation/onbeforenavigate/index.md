@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onBeforeNavigate
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
 ---
 
 {{AddonSidebar()}}

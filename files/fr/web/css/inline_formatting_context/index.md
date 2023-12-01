@@ -1,7 +1,6 @@
 ---
 title: Contexte de formatage en ligne (inline/incise)
 slug: Web/CSS/Inline_formatting_context
-translation_of: Web/CSS/Inline_formatting_context
 ---
 
 {{CSSRef}}

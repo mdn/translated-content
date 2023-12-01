@@ -59,9 +59,8 @@ document.body.innerHTML = "";
 이 예제는 문서의 현재 HTML 마크업을 가져오고, `"<"` 문자를 HTML 엔터티 `"&lt;"` 로 대체하합니다. 그러면 HTML을 원시 텍스트(raw text - 파싱 이전의 모습)로 반환합니다. 이것을 {{HTMLElement("pre")}} 요소로 래핑합니다. 그러면 `innerHTML` 값은 새 문자열로 변경됩니다. 그 결과, 문서의 내용은 페이지의 전체 소스 코드의 출력으로 대체됩니다.
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 #### Operational details
@@ -89,7 +88,7 @@ el.innerHTML = name; // harmless in this case
 
 이것은 [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) 공격처럼 보일 수 있지만, 결과는 무해합니다. HTML5 는 `innerHTML` 과 함께 삽입된 {{HTMLElement("script")}} 태그가 [실행되지 않도록](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0) 지정합니다.
 
-그러나 {{HTMLElement("script")}} 요소를 사용하지 않고, 자바스크립트를 실행하는 방법이 있으므로, `innerHTML` 을 사용하여 제어할 수 없는 문자열을 설정할 때 마다 여전히 보안위험이 있습니다. 예를들어:
+그러나 {{HTMLElement("script")}} 요소를 사용하지 않고, JavaScript를 실행하는 방법이 있으므로, `innerHTML` 을 사용하여 제어할 수 없는 문자열을 설정할 때 마다 여전히 보안위험이 있습니다. 예를들어:
 
 ```js
 const name = "<img src='x' onerror='alert(1)'>";
@@ -124,8 +123,14 @@ log("Logging mouse events inside this container...");
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```

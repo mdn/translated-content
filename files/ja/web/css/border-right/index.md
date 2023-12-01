@@ -73,9 +73,7 @@ border-right: unset;
 #### HTML
 
 ```html
-<div>
-  このボックスには右側に境界線があります。
-</div>
+<div>このボックスには右側に境界線があります。</div>
 ```
 
 #### CSS

@@ -1,7 +1,6 @@
 ---
 title: ol
 slug: Web/HTML/Element/ol
-original_slug: Web/HTML/Elemento/ol
 ---
 
 ### Definición

@@ -1,7 +1,6 @@
 ---
 title: element.textContent
 slug: Web/API/Node/textContent
-translation_of: Web/API/Node/textContent
 ---
 
 {{APIRef("DOM")}}

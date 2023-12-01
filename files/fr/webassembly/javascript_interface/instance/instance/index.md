@@ -1,7 +1,6 @@
 ---
 title: Constructeur WebAssembly.Instance()
 slug: WebAssembly/JavaScript_interface/Instance/Instance
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
 ---
 
 {{WebAssemblySidebar}}

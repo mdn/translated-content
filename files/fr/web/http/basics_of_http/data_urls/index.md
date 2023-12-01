@@ -1,7 +1,6 @@
 ---
 title: URLs de données
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
 {{HTTPSidebar}}

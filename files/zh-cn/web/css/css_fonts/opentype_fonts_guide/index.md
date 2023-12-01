@@ -148,7 +148,9 @@ According to the specification you can either supply just the 4-character featur
 
 ```css
 .no-ligatures {
-  font-feature-settings: "liga" 0, "dlig" 0;
+  font-feature-settings:
+    "liga" 0,
+    "dlig" 0;
 }
 ```
 
@@ -165,14 +167,14 @@ For example, small caps can be set several ways, but if you want to ensure that 
 
 ```css
 .small-caps {
-   font-feature-settings: "smcp", "c2sc";
+  font-feature-settings: "smcp", "c2sc";
 }
 
 @supports (font-variant-caps: all-small-caps) {
-   .small-caps {
-       font-feature-settings: normal;
-       font-variant-caps: all-small-caps;
-   }
+  .small-caps {
+    font-feature-settings: normal;
+    font-variant-caps: all-small-caps;
+  }
 }
 ```
 

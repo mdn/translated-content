@@ -1,7 +1,6 @@
 ---
-title: '@supports'
+title: "@supports"
 slug: Web/CSS/@supports
-translation_of: Web/CSS/@supports
 ---
 
 {{ CSSRef() }}
@@ -129,9 +128,7 @@ not ( not ( transform-origin: 2px ) )
 
 ## Спецификации
 
-| Спецификация                                                                         | Статус                                   | Комментарий                 |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------- |
-| {{ SpecName('CSS3 Conditional', '#at-supports', '@supports') }} | {{ Spec2('CSS3 Conditional') }} | Первоначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

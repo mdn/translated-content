@@ -1,7 +1,6 @@
 ---
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol
 l10n:
   sourceCommit: 54ae754f4d18601ee91f741c7b774d2238e2656e
 ---
@@ -17,21 +16,21 @@ Se garantiza que cada llamada a `Symbol()` devuelve un único Symbol. Cada llama
 Para crear un nuevo Símbolo primitivo, se escribe `Symbol()` con una cadena opcional como descripción:
 
 ```js
-let sym1 = Symbol()
-let sym2 = Symbol('foo')
-let sym3 = Symbol('foo')
+let sym1 = Symbol();
+let sym2 = Symbol("foo");
+let sym3 = Symbol("foo");
 ```
 
 El código anterior crea tres nuevos símbolos. Tenga en cuenta que `Symbol("foo")` no coacciona la cadena `"foo"` en un Symbol. Crea un nuevo Symbol cada vez:
 
 ```js
-Symbol('foo') === Symbol('foo')  // false
+Symbol("foo") === Symbol("foo"); // false
 ```
 
 La siguiente sintaxis con el operador {{jsxref("Operators/new", "new")}} lanzará un {{jsxref("TypeError")}}:
 
 ```js
-let sym = new Symbol()  // TypeError
+let sym = new Symbol(); // TypeError
 ```
 
 Esto evita que los autores creen un objeto envolvente explícito `Symbol` en lugar de un nuevo valor Symbol y podría ser sorprendente ya que la creación de objetos envolventes explícitos alrededor de tipos de datos primitivos es generalmente posible (por ejemplo, `new Boolean`, `new String` y `new Number`).
@@ -39,10 +38,10 @@ Esto evita que los autores creen un objeto envolvente explícito `Symbol` en lug
 Si realmente quieres crear un objeto envolvente `Symbol`, puedes utilizar la función `Object()`:
 
 ```js
-let sym = Symbol('foo')
-typeof sym      // "symbol"
-let symObj = Object(sym)
-typeof symObj   // "object"
+let sym = Symbol("foo");
+typeof sym; // "symbol"
+let symObj = Object(sym);
+typeof symObj; // "object"
 ```
 
 ### Symbols compartidos en el registro global de Symbols
@@ -115,9 +114,9 @@ El método {{jsxref("Object.getOwnPropertySymbols()")}} devuelve una matriz de S
 El operador {{jsxref("Operators/typeof", "typeof")}} puede ayudarle a identificar los Symbols.
 
 ```js
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
 ```
 
 ### Conversiones de tipos de Symbols
@@ -135,15 +134,15 @@ Algunas cosas a tener en cuenta cuando se trabaja con la conversión de tipo de 
 Los Symbols no son enumerables en las iteraciones [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in). Además, {{jsxref("Object.getOwnPropertyNames()")}} no devolverá las propiedades del objeto Symbol, sin embargo, puede utilizar {{jsxref("Object.getOwnPropertySymbols()")}} para obtenerlas.
 
 ```js
-let obj = {}
+let obj = {};
 
-obj[Symbol('a')] = 'a'
-obj[Symbol.for('b')] = 'b'
-obj['c'] = 'c'
-obj.d = 'd'
+obj[Symbol("a")] = "a";
+obj[Symbol.for("b")] = "b";
+obj["c"] = "c";
+obj.d = "d";
 
 for (let i in obj) {
-   console.log(i)  // imprime en registro "c" y "d"
+  console.log(i); // imprime en registro "c" y "d"
 }
 ```
 
@@ -152,7 +151,7 @@ for (let i in obj) {
 Las propiedades con clave de Symbol serán completamente ignoradas cuando se utilice `JSON.stringify()`:
 
 ```js
-JSON.stringify({[Symbol('foo')]: 'foo'})
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
 ```
 
@@ -163,10 +162,10 @@ Para más detalles, consulte {{jsxref("JSON.stringify()")}}.
 Cuando se utiliza un objeto envolvente de un Symbol como clave de propiedad, este objeto será coaccionado a su Symbol envolvente:
 
 ```js
-let sym = Symbol('foo')
-let obj = {[sym]: 1}
-obj[sym]             // 1
-obj[Object(sym)]     // sigue siendo 1
+let sym = Symbol("foo");
+let obj = { [sym]: 1 };
+obj[sym]; // 1
+obj[Object(sym)]; // sigue siendo 1
 ```
 
 ## Especificaciones

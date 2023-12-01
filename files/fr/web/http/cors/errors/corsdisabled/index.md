@@ -1,7 +1,6 @@
 ---
 title: "Raison : CORS désactivé"
 slug: Web/HTTP/CORS/Errors/CORSDisabled
-translation_of: Web/HTTP/CORS/Errors/CORSDisabled
 ---
 
 {{HTTPSidebar}}

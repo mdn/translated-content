@@ -42,17 +42,14 @@ slug: Web/HTML/Element/ruby
 
 ```html
 <ruby>
-  汉 <rp>(</rp><rt>han</rt><rp>)</rp>
-  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+  汉 <rp>(</rp><rt>han</rt><rp>)</rp> 字 <rp>(</rp><rt>zi</rt><rp>)</rp>
 </ruby>
 ```
 
 ### 示例 2: 词
 
 ```html
-<ruby>
-  明 日 <rp>(</rp><rt>ming ri</rt><rp>)</rp>
-</ruby>
+<ruby> 明 日 <rp>(</rp><rt>ming ri</rt><rp>)</rp> </ruby>
 ```
 
 ## 规范

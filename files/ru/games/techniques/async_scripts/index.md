@@ -1,12 +1,6 @@
 ---
 title: Асинхронные скрипты для asm.js
 slug: Games/Techniques/Async_scripts
-tags:
-  - Games
-  - JavaScript
-  - asm.js
-  - async
-translation_of: Games/Techniques/Async_scripts
 ---
 
 Каждая средняя или большая игра должна компилировать код [asm.js](/ru/docs/Games/Tools/asm.js) как часть асинхронного скрипта, чтобы дать браузеру максимальную гибкость для оптимизации процесса компиляции. В Gecko асинхронная компиляция позволяет движку JavaScript компилировать asm.js из основного потока когда игра загружается, и кешировать сгенерированный машинный код, так что игру не нужно компилировать при последующих загрузках (начиная с Firefox 28). Чтобы увидеть разницу, переключите `javascript.options.parallel_parsing` в `about:config`.

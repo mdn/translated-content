@@ -1,7 +1,6 @@
 ---
 title: Canvas
 slug: Web/API/Canvas_API
-original_slug: Web/HTML/Canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -27,10 +26,10 @@ O método {{domxref("Document.getElementById()")}} pega uma referência para o e
 O desenho atual é feito usando a interface {{domxref("CanvasRenderingContext2D")}}. A propriedade {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} faz o retângulo verde. O método {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} coloca seu canto superior direito em (10, 10) e dá a ele o tamanho de 150 unidades de largura e 100 de altura.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 150, 100);
 ```
 
@@ -94,13 +93,11 @@ A API Canvas é extremamente poderosa, mas nem sempre é simples de usar. As bib
 
 ## Especificações
 
-| Especificações                                                                               | Estado                           | Comentário |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#2dcontext', 'the 2D rendering context')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-Aplicações Mozilla ganharam suporte para `<canvas>` a partir do Gecko 1.8 ([Firefox 1.5](/pt-BR/docs/Mozilla/Firefox/Releases/1.5)). O elemento foi originalmente introduzido pela Apple para o Dashboard OS X e Safari. O Internet Explorer suporta `<canvas>` quando inclui-se um script do projeto Explorer Canvas, da google. Google Chrome e Opera 9 também suportam `<canvas>`.
+{{Compat}}
 
 ## Ver também
 

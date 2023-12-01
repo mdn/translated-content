@@ -2,6 +2,7 @@
 title: RTCPeerConnectionIceEvent.candidate
 slug: Web/API/RTCPeerConnectionIceEvent/candidate
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnectionIceEvent")}} 인터페이스의 candidate 속성은 읽기 전용입니다. 이 속성은 {{domxref("RTCIceCandidate")}}와 관련된 이벤트를 반환합니다.
@@ -9,7 +10,7 @@ slug: Web/API/RTCPeerConnectionIceEvent/candidate
 ## Syntax
 
 ```js
- var candidate = event.candidate;
+var candidate = event.candidate;
 ```
 
 ### 값
@@ -19,11 +20,13 @@ ICE candidate를 나타내는 {{domxref("RTCIceCandidate")}} 객체. 해당 네�
 ## 예시
 
 ```js
-pc.onicecandidate = function( ev ) {
-  alert("The ICE candidate (transport address: '" +
-    ev.candidate.candidate +
-    "') has been added to this connection.");
-}
+pc.onicecandidate = function (ev) {
+  alert(
+    "The ICE candidate (transport address: '" +
+      ev.candidate.candidate +
+      "') has been added to this connection.",
+  );
+};
 ```
 
 ## 명세

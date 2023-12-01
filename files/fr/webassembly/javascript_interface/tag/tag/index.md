@@ -1,7 +1,6 @@
 ---
 title: Constructeur pour WebAssembly.Tag()
 slug: WebAssembly/JavaScript_interface/Tag/Tag
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag
 ---
 
 {{WebAssemblySidebar}}

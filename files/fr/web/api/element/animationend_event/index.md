@@ -1,7 +1,6 @@
 ---
 title: animationend
 slug: Web/API/Element/animationend_event
-translation_of: Web/API/HTMLElement/animationend_event
 ---
 
 L'événement `animationend est déclenché quand une animation CSS est terminée.`

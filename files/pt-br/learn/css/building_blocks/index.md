@@ -1,7 +1,6 @@
 ---
 title: Construindo blocos CSS
 slug: Learn/CSS/Building_blocks
-original_slug: Aprender/CSS/Construindo_blocos
 ---
 
 {{LearnSidebar}}

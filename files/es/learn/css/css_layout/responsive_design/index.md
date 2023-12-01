@@ -1,7 +1,6 @@
 ---
 title: Diseño receptivo
 slug: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/Diseño_receptivo
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}

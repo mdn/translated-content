@@ -25,16 +25,15 @@ slug: Web/CSS/display-outside
 ### HTML
 
 ```html
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
 ### CSS
 
 ```css
 span {
-    display: block;
-    border: 1px solid rebeccapurple;
+  display: block;
+  border: 1px solid rebeccapurple;
 }
 ```
 
@@ -48,7 +47,7 @@ span {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## 関連情報
 

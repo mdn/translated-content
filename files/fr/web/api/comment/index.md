@@ -1,7 +1,6 @@
 ---
 title: Comment
 slug: Web/API/Comment
-translation_of: Web/API/Comment
 ---
 
 {{ ApiRef("DOM") }}

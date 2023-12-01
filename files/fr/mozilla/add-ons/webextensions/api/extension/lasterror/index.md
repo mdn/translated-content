@@ -1,7 +1,6 @@
 ---
 title: extension.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/extension/lastError
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/lastError
 ---
 
 {{AddonSidebar()}}

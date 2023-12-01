@@ -1,7 +1,6 @@
 ---
 title: <animate>
 slug: Web/SVG/Element/animate
-translation_of: Web/SVG/Element/animate
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: <dimension>
 slug: Web/CSS/dimension
-translation_of: Web/CSS/dimension
 ---
 
 {{CSSRef}}

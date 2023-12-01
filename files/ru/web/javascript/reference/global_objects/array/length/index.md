@@ -1,11 +1,6 @@
 ---
 title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
 
 {{JSRef("Global_Objects", "Array")}}
@@ -15,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 Свойство **`length`** объекта, который является экземпляром типа `Array` , устанавливает или возвращает число элементов этого массива. Значение данного свойства 32-битное безнаковое целое число, которое всегда численно больше чем самый наибольший индекс в массиве.
 
 ```js
-var items = ['shoes', 'shirts', 'socks', 'sweaters'];
+var items = ["shoes", "shirts", "socks", "sweaters"];
 items.length;
 
 // возвращает 4
@@ -33,15 +28,13 @@ arr.length
 
 ```js
 var namelistA = new Array(4294967296); //2 в 32 степени = 4294967296
-var namelistC = new Array(-100) //отрицательная величина
+var namelistC = new Array(-100); //отрицательная величина
 
 console.log(namelistA.length); //RangeError: Invalid array length
 console.log(namelistC.length); //RangeError: Invalid array length
 
-
-
 var namelistB = [];
-namelistB.length = Math.pow(2,32)-1; //устанавливает длину массива меньше 2 в 32 степени
+namelistB.length = Math.pow(2, 32) - 1; //устанавливает длину массива меньше 2 в 32 степени
 console.log(namelistB.length);
 
 //4294967295
@@ -64,10 +57,9 @@ function printEntries(arr) {
     if (result.done !== true) {
       console.log(result.value[1]);
       goNext = true;
-    } else
-      goNext = false;
+    } else goNext = false;
   }
-  console.log('=== printed ===');
+  console.log("=== printed ===");
 }
 
 // 1

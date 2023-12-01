@@ -1,7 +1,6 @@
 ---
 title: change
 slug: Web/API/HTMLElement/change_event
-translation_of: Web/API/HTMLElement/change_event
 ---
 
 {{APIRef}}

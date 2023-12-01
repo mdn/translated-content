@@ -1,7 +1,6 @@
 ---
 title: Response.redirect()
 slug: Web/API/Response/redirect_static
-original_slug: Web/API/Response/redirect
 ---
 
 {{APIRef("Fetch")}}
@@ -37,7 +36,7 @@ var response = Response.redirect(url, status);
 ## 示例
 
 ```js
-responseObj.redirect('https://www.example.com', 302);
+responseObj.redirect("https://www.example.com", 302);
 ```
 
 ## 规范

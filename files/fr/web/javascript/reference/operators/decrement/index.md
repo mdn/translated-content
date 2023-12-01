@@ -1,7 +1,6 @@
 ---
 title: Décrémentation (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-translation_of: Web/JavaScript/Reference/Operators/Decrement
 ---
 
 {{jsSidebar("Operators")}}

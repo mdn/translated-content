@@ -1,15 +1,6 @@
 ---
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
-tags:
-  - API
-  - DOM
-  - Element
-  - Gecko
-  - Method
-  - Reference
-  - insertAdjacentElement
-translation_of: Web/API/Element/insertAdjacentElement
 ---
 
 {{APIRef("DOM")}}
@@ -64,20 +55,20 @@ foo
 ## Примеры
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+beforeBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
-    activeElem.insertAdjacentElement('beforebegin',tempDiv);
+    activeElem.insertAdjacentElement("beforebegin", tempDiv);
   }
   setListener(tempDiv);
 });
 
-afterBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+afterBtn.addEventListener("click", function () {
+  var tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
-    activeElem.insertAdjacentElement('afterend',tempDiv);
+    activeElem.insertAdjacentElement("afterend", tempDiv);
   }
   setListener(tempDiv);
 });
@@ -85,11 +76,9 @@ afterBtn.addEventListener('click', function() {
 
 Посмотрите наше демо [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) на Github (так же посмотрите [исходный код](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html)). В этом демо мы имеем последовательность {{htmlelement("div")}} элементов внутри контейнера. При выборе одного из них можно нажать кнопку _Insert before_ или _Insert after_ и добавить новые div до или после выбранного элемента используя метод `insertAdjacentElement()`.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                             | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-element-insertadjacentelement', 'insertAdjacentElement()')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

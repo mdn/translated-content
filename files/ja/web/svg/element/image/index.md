@@ -51,9 +51,8 @@ SVG 内における PNG 画像の基本的な描画:
 ### SVG
 
 ```html
-<svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg">
-  <image href="mdn_logo_only_color.png" height="200" width="200"/>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <image href="mdn_logo_only_color.png" height="200" width="200" />
 </svg>
 ```
 
@@ -67,4 +66,4 @@ SVG 内における PNG 画像の基本的な描画:
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.image")}}
+{{Compat}}

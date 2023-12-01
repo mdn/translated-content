@@ -1,7 +1,6 @@
 ---
 title: Itens do menu de contexto
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto
 ---
 
 {{AddonSidebar}}

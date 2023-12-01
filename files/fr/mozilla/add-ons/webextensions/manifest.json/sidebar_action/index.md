@@ -1,7 +1,6 @@
 ---
 title: sidebar_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 ---
 
 {{AddonSidebar}}

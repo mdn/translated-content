@@ -1,8 +1,6 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-translation_of: Web/CSS/minmax()
-original_slug: Web/CSS/minmax()
 ---
 
 **`minmax()`** это [CSS](/ru/docs/Web/CSS) функция, определяющая диапазон размеров, который больше или равен _min_ и меньше или равен _max_. Используется в [CSS Grids](/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes).
@@ -88,15 +86,11 @@ minmax(auto, 300px)
 ```html
 <div id="container">
   <div>
-    Item as wide as the content,<br/>
+    Item as wide as the content,<br />
     but at most 300 pixels.
   </div>
-  <div>
-    Item with flexible width but a minimum of 200 pixels.
-  </div>
-  <div>
-    Inflexible item of 150 pixels width.
-  </div>
+  <div>Item with flexible width but a minimum of 200 pixels.</div>
+  <div>Inflexible item of 150 pixels width.</div>
 </div>
 ```
 

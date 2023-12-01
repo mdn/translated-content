@@ -91,7 +91,10 @@ details.addEventListener("toggle", (event) => {
 
 ```css
 details {
-  font: 16px "Open Sans", Calibri, sans-serif;
+  font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
   width: 620px;
 }
 
@@ -146,7 +149,10 @@ details[open] > summary {
 
 ```css
 details {
-  font: 16px "Open Sans", Calibri, sans-serif;
+  font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
   width: 620px;
 }
 

@@ -53,7 +53,7 @@ findLast(callbackFn, thisArg)
 - 给已访问过的索引重新赋值将不会被 `callbackFn` 重新访问。
 - 如果 `callbackFn` 更改了数组中现有的、尚未访问的元素，则其传递给 `callbackFn` 的值将是 `findLast()` 访问该元素索引时的值。[已删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素会被当做 `undefined` 来访问。
 
->**警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
+> **警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
 
 `findLast()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
@@ -92,9 +92,9 @@ const inventory = [
   { name: "cherries", quantity: 5 },
 ];
 
-const result = inventory.findLast( ({ quantity }) => quantity < 2 );
+const result = inventory.findLast(({ quantity }) => quantity < 2);
 
-console.log(result) 
+console.log(result);
 // { name: "fish", quantity: 1 }
 ```
 

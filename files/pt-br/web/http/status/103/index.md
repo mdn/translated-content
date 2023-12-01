@@ -15,13 +15,13 @@ O código de informação de status de resposta HTTP **`103 Early Hints`** é de
 
 ## Especificações
 
-| Especificação                                | Status   | Comentários       |
-| -------------------------------------------- | -------- | ----------------- |
+| Especificação                    | Status   | Comentários       |
+| -------------------------------- | -------- | ----------------- |
 | {{RFC(8297, "103 Early Hints")}} | IETF RFC | Definição inicial |
 
 ## Comptabilidade de navegador
 
-{{Compat("http.status.103")}}
+{{Compat}}
 
 ## Veja também
 

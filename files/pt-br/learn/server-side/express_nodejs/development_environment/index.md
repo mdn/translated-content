@@ -1,7 +1,6 @@
 ---
 title: Configurando o Node como ambiente de desenvolvimento
 slug: Learn/Server-side/Express_Nodejs/development_environment
-original_slug: Learn/Server-side/Express_Nodejs/ambiente_de_desenvolvimento
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}

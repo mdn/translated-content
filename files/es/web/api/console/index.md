@@ -1,7 +1,6 @@
 ---
 title: Consola
 slug: Web/API/console
-original_slug: Web/API/Console
 ---
 
 {{APIRef("Console API")}}

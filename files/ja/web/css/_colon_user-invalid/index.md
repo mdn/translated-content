@@ -1,5 +1,5 @@
 ---
-title: ':user-invalid (:-moz-ui-invalid)'
+title: ":user-invalid (:-moz-ui-invalid)"
 slug: Web/CSS/:user-invalid
 ---
 
@@ -25,7 +25,7 @@ slug: Web/CSS/:user-invalid
 ```html
 <form>
   <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" required>
+  <input id="email" name="email" type="email" required />
   <span></span>
 </form>
 ```
@@ -36,7 +36,7 @@ input:user-invalid {
 }
 
 input:user-invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 ```

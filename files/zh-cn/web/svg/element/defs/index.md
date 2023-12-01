@@ -44,16 +44,16 @@ SVG 允许我们定义以后需要重复使用的图形元素。建议把所有�
 
 ### 专有属性
 
-_没有专有属性_
+_没有专有属性。_
 
 ## DOM 接口
 
-这个元素实现了[`SVGDefsElement`](/zh-CN/DOM/SVGDefsElement) 接口。
+这个元素实现了 [`SVGDefsElement`](/zh-CN/DOM/SVGDefsElement) 接口。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{ SVGElement("use") }}

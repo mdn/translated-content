@@ -17,13 +17,13 @@ Um [Gateway](https://pt.wikipedia.org/wiki/Gateway) pode referir-se a diferentes
 
 ## Especificações
 
-| Especificação                                                    | Título                                                        |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                    | Título                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "504 Gateway Timeout" , "6.6.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.504")}}
+{{Compat}}
 
 ## Veja também
 

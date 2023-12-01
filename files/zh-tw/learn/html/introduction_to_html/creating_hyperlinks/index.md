@@ -88,7 +88,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 ### 區塊級連結(Block-level links)
 
-就像先前所提到的，你可以將任何內容轉換成連結，就算是[區塊級元素](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements)也沒問題！如果你有一張圖片要轉換成連結，你可以把圖片元素放在 `<a>` 標籤裡，像這樣：
+就像先前所提到的，你可以將任何內容轉換成連結，就算是[區塊級元素](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#區塊級元素_vs._行內元素（block_versus_inline_element）)也沒問題！如果你有一張圖片要轉換成連結，你可以把圖片元素放在 `<a>` 標籤裡，像這樣：
 
 ```html
 <a href="https://www.mozilla.org/en-US/">

@@ -1,7 +1,6 @@
 ---
 title: Crear hipervínculos
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-original_slug: Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

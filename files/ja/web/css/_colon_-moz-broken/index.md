@@ -1,5 +1,5 @@
 ---
-title: ':-moz-broken'
+title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
 ---
 
@@ -12,7 +12,7 @@ slug: Web/CSS/:-moz-broken
 ## 構文
 
 ```css
-:-moz-broken
+:-moz-broken;
 ```
 
 ## 例
@@ -20,7 +20,7 @@ slug: Web/CSS/:-moz-broken
 ### HTML
 
 ```html
-<img src="broken.jpg" alt="This image is broken. :-(">
+<img src="broken.jpg" alt="This image is broken. :-(" />
 ```
 
 ### CSS

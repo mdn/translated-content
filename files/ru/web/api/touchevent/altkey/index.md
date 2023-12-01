@@ -1,8 +1,8 @@
 ---
 title: TouchEvent.altKey
 slug: Web/API/TouchEvent/altKey
-translation_of: Web/API/TouchEvent/altKey
 ---
+
 {{APIRef("Touch Events") }}
 
 ## Сводка
@@ -34,13 +34,17 @@ var altEnabled = touchEvent.altKey;
 В фрагменте кода ниже обработчик события {{event("touchstart")}} логирует состояние клавиш-модификаторов события.
 
 ```js
-someElement.addEventListener('touchstart', function(e) {
-   // Log the state of this event's modifier keys
-   console.log("altKey = " + e.altKey);
-   console.log("ctrlKey = " + e.ctrlKey);
-   console.log("metaKey = " + e.metaKey);
-   console.log("shiftKey = " + e.shiftKey);
-}, false);
+someElement.addEventListener(
+  "touchstart",
+  function (e) {
+    // Log the state of this event's modifier keys
+    console.log("altKey = " + e.altKey);
+    console.log("ctrlKey = " + e.ctrlKey);
+    console.log("metaKey = " + e.metaKey);
+    console.log("shiftKey = " + e.shiftKey);
+  },
+  false,
+);
 ```
 
 ## Спецификации

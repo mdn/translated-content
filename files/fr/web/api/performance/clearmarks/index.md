@@ -1,7 +1,6 @@
 ---
 title: performance.clearMarks()
 slug: Web/API/Performance/clearMarks
-translation_of: Web/API/Performance/clearMarks
 ---
 
 {{APIRef("User Timing API")}}

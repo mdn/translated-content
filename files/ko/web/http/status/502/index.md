@@ -2,6 +2,7 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
 ---
+
 {{HTTPSidebar}}
 
 하이퍼텍스트 전송 프로토콜(HTTP) **`502 Bad Gateway`** 에러 응답코드는 서버가 게이트웨이나 프록시 서버 역할을 하면서 업스트림 서버로부터 유효하지 않은 응답을 받았다는 것을 의미합니다.
@@ -14,7 +15,7 @@ slug: Web/HTTP/Status/502
 502 Bad Gateway
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

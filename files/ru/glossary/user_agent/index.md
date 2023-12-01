@@ -1,9 +1,9 @@
 ---
 title: Агент пользователя
 slug: Glossary/User_agent
-translation_of: Glossary/User_agent
-original_slug: Глоссарий/User_agent
 ---
+
+{{GlossarySidebar}}
 
 **Пользовательский агент** (_user agent_, UA), или **агент пользователя**, это компьютерная программа, представляющая пользователя и выполняющая действия от его лица, например, {{Glossary("Browser","браузер")}} в контексте {{Glossary("World Wide Web", "Всемирной паутины")}}.
 

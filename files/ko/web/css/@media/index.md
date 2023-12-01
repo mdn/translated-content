@@ -1,5 +1,5 @@
 ---
-title: '@media'
+title: "@media"
 slug: Web/CSS/@media
 ---
 
@@ -57,22 +57,27 @@ Level 4 미디어 쿼리를 통한 사용자 경험 향상도 고려해보세요
 
 ```css
 @media print {
-  body { font-size: 10pt; }
+  body {
+    font-size: 10pt;
+  }
 }
 
 @media screen {
-  body { font-size: 13px; }
+  body {
+    font-size: 13px;
+  }
 }
 
 @media screen, print {
-  body { line-height: 1.2; }
+  body {
+    line-height: 1.2;
+  }
 }
 
-@media only screen
-  and (min-width: 320px)
-  and (max-width: 480px)
-  and (resolution: 150dpi) {
-    body { line-height: 1.4; }
+@media only screen and (min-width: 320px) and (max-width: 480px) and (resolution: 150dpi) {
+  body {
+    line-height: 1.4;
+  }
 }
 ```
 
@@ -80,11 +85,15 @@ Media Queries Level 4부터는 새로운 범위 표현 구문을 사용해 더 �
 
 ```css
 @media (height > 600px) {
-    body { line-height: 1.4; }
+  body {
+    line-height: 1.4;
+  }
 }
 
 @media (400px <= width <= 700px) {
-    body { line-height: 1.4; }
+  body {
+    line-height: 1.4;
+  }
 }
 ```
 

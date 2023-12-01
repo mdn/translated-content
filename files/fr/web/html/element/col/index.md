@@ -1,7 +1,6 @@
 ---
 title: "<col> : l'élément représentant une colonne"
 slug: Web/HTML/Element/col
-translation_of: Web/HTML/Element/col
 ---
 
 {{HTMLSidebar}}

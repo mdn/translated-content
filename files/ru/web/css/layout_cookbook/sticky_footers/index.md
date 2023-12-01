@@ -1,8 +1,8 @@
 ---
 title: Sticky footers
 slug: Web/CSS/Layout_cookbook/Sticky_footers
-translation_of: Web/CSS/Layout_cookbook/Sticky_footers
 ---
+
 {{CSSRef}}
 
 Шаблон нижнего колонтитула - это шаблон, в котором нижний колонтитул вашей страницы «прилипает» к нижней части области просмотра в тех случаях, когда содержимое короче высоты области просмотра. Рассмотрим два способа, как этого достичь.
@@ -42,19 +42,19 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 #### grid-template-rows
 
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 #### flex-direction
 
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 #### flex-grow
 
-{{Compat("css.properties.flex-grow")}}
+{{Compat}}
 
 #### flex-shrink
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Resources on MDN
 

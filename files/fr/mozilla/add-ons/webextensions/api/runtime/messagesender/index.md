@@ -1,7 +1,6 @@
 ---
 title: runtime.MessageSender
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 ---
 
 {{AddonSidebar()}}

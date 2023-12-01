@@ -10,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ## 構文
 
 ```js
-var openingPage = browser.runtime.openOptionsPage()
+var openingPage = browser.runtime.openOptionsPage();
 ```
 
 ### パラメータ
@@ -23,7 +23,7 @@ var openingPage = browser.runtime.openOptionsPage()
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.runtime.openOptionsPage")}}
+{{Compat}}
 
 ## 例
 

@@ -1,7 +1,6 @@
 ---
 title: NonDocumentTypeChildNode.previousElementSibling
 slug: Web/API/Element/previousElementSibling
-original_slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
 ---
 
 {{APIRef}}

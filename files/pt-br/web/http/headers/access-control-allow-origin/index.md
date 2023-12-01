@@ -59,13 +59,11 @@ Vary: Origin
 
 ## Especificações
 
-| Specification                                                                                                        | Status                   | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## Veja também
 

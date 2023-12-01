@@ -1,7 +1,6 @@
 ---
 title: onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 ---
 
 {{AddonSidebar()}}

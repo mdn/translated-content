@@ -1,9 +1,6 @@
 ---
 title: Базовое использование Canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-tags:
-  - Canvas
-translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
@@ -38,7 +35,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -57,8 +54,8 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 Холст изначально пустой и прозрачный. Первым делом скрипт получает доступ к контексту и отрисовывает его. Элемент {{HTMLElement("canvas")}} имеет [метод](/ru/docs/Web/API/HTMLCanvasElement#Method) `getContext()`, используется для получения контекста визуализации и её функции рисования. `getContext()` принимает один параметр, тип контекста. Для 2D графики, которая охвачена этим руководством будем использовать метку "2d".
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById("tutorial");
+const ctx = canvas.getContext("2d");
 ```
 
 В первой строке скрипта мы получаем узел нашего холста {{HTMLElement("canvas")}}, далее с помощью {{domxref("document.getContext()")}} метода мы присваиваем ему контекст. Имея узел элемента , вы всегда можете получить для рисования контекст при помощи метода `getContext()`.
@@ -68,10 +65,10 @@ var ctx = canvas.getContext('2d');
 Ранее уже упоминалось, что в браузерах, которые не поддерживают {{HTMLElement("canvas")}} отображается запасное содержимое. Но помимо этого, определить, поддерживает ли браузер `canvas`, можно прямо из кода, проверив наличие метода `getContext()`. Код с запасным содержимым, который мы приводили Выше, становится следующим:
 
 ```js
-var canvas = document.getElementById('tutorial');
+const canvas = document.getElementById("tutorial");
 
-if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+if (canvas.getContext) {
+  const ctx = canvas.getContext("2d");
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -85,20 +82,22 @@ if (canvas.getContext){
 > **Примечание:** вставка скрипта внутрь HTML не является хорошей практикой. Мы делаем это здесь, чтобы сделать пример короче.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Canvas tutorial</title>
     <script type="text/javascript">
-      function draw(){
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
+      function draw() {
+        const canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style type="text/css">
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -118,27 +117,27 @@ if (canvas.getContext){
 Для начала, давайте посмотрим на простой пример, который рисует два пересекающихся прямоугольника, один из которых имеет прозрачность alpha. Мы изучим, как это работает более детально в последующих примерах.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
- <head>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById("canvas");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+  <head>
+    <script type="application/javascript">
+      function draw() {
+        const canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10, 10, 55, 50);
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 55, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

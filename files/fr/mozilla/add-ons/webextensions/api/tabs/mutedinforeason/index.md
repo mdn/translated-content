@@ -1,7 +1,6 @@
 ---
 title: tabs.MutedInfoReason
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 ---
 
 {{AddonSidebar()}}

@@ -1,10 +1,6 @@
 ---
 title: Анатомия Расширения
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - Расширение
-  - веб расширение
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 
 {{AddonSidebar}}
@@ -51,7 +47,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 Вместо указания несколько фоновых сценариев вы можете указать фоновую страницу, которая так же преимущества поддержки ES6 модулей:
 
-**manifest.json**
+**manifest.json:**
 
 ```json
 // manifest.json
@@ -61,7 +57,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 }
 ```
 
-**background-page.html**
+**background-page.html:**
 
 ```html
 <!doctype html>

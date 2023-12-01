@@ -276,7 +276,7 @@ l10n:
 
 - {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
 
-  - : [`value`](/ja/docs/Web/HTML/Element/input#value) を ([`step`](/ja/docs/Web/HTML/Element/input#step) * n) だけ減少させます。 n が指定されなかった場合の既定値は 1 です。次の場合は `InvalidStateError` 例外が発生します。
+  - : [`value`](/ja/docs/Web/HTML/Element/input#value) を ([`step`](/ja/docs/Web/HTML/Element/input#step) \* n) だけ減少させます。 n が指定されなかった場合の既定値は 1 です。次の場合は `InvalidStateError` 例外が発生します。
 
     - 現在の [`type`](/ja/docs/Web/HTML/Element/input#type) の値にこのメソッドが適用できない場合
     - 要素に [`step`](/ja/docs/Web/HTML/Element/input#step) 値が設定されていない場合
@@ -285,7 +285,7 @@ l10n:
 
 - {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
 
-  - : [`value`](/ja/docs/Web/HTML/Element/input#value) を ([`step`](/ja/docs/Web/HTML/Element/input#step) * n) だけ増加させます。 n が指定されなかった場合の既定値は 1 です。次の場合は INVALID_STATE_ERR 例外が発生します。
+  - : [`value`](/ja/docs/Web/HTML/Element/input#value) を ([`step`](/ja/docs/Web/HTML/Element/input#step) \* n) だけ増加させます。 n が指定されなかった場合の既定値は 1 です。次の場合は INVALID_STATE_ERR 例外が発生します。
 
     - 現在の [`type`](/ja/docs/Web/HTML/Element/input#type) の値にこのメソッドが適用できない場合
     - 要素に [`step`](/ja/docs/Web/HTML/Element/input#step) 値が設定されていない場合

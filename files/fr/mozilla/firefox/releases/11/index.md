@@ -1,7 +1,6 @@
 ---
 title: Firefox 11 pour les développeurs
 slug: Mozilla/Firefox/Releases/11
-translation_of: Mozilla/Firefox/Releases/11
 ---
 
 {{FirefoxSidebar}}

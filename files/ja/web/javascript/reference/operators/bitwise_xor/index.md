@@ -12,14 +12,14 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ## 構文
 
 ```js
-a ^ b
+a ^ b;
 ```
 
 ## 解説
 
 オペランドは 32 ビットの整数値に変換され、ビット (ゼロまたは 1) の並びによって表現されます。32 ビットを超える数値は最上位のビットが破棄されます。例えば、次の 32 ビットを超える整数は 32 ビット整数に変換されます。
 
-```js
+```plain
 変換前: 11100110111110100000000000000110000000000001
 変換後:             10100000000000000110000000000001
 ```
@@ -37,7 +37,7 @@ XOR 演算の真理値表は次のようになります。
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
 
-```js
+```plain
      9 (10 進数) = 00000000000000000000000000001001 (2 進数)
     14 (10 進数) = 00000000000000000000000000001110 (2 進数)
                    --------------------------------
@@ -68,5 +68,5 @@ XOR 演算の真理値表は次のようになります。
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)
 - [ビット排他的論理和代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)

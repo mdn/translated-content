@@ -1,11 +1,8 @@
 ---
 title: font-family
 slug: Web/CSS/@font-face/font-family
-tags:
-  - Шрифты
-  - дескрипторы
-translation_of: Web/CSS/@font-face/font-family
 ---
+
 {{CSSRef}}
 
 CSS дескриптор **`font-family`** позволяет авторам указывать font family для шрифта, указанного в правиле {{cssxref("@font-face")}}.
@@ -17,7 +14,7 @@ CSS дескриптор **`font-family`** позволяет авторам у�
 ```css
 /* <string> значения */
 font-family: "font family";
-font-family: 'another font family';
+font-family: "another font family";
 
 /* <custom-ident> значение */
 font-family: examplefont;
@@ -37,7 +34,7 @@ font-family: examplefont;
 ```css
 @font-face {
   font-family: examplefont;
-  src: url('examplefont.ttf');
+  src: url("examplefont.ttf");
 }
 ```
 

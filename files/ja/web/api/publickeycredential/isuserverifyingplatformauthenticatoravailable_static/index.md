@@ -1,8 +1,6 @@
 ---
 title: PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
-slug: >-
-  Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
-original_slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable
+slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
@@ -47,7 +45,8 @@ PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
       // Use another kind of authenticator or a classical login/password
       // workflow
     }
-  }).catch((err) => {
+  })
+  .catch((err) => {
     // Something went wrong
     console.error(err);
   });

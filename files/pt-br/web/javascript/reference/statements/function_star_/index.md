@@ -41,10 +41,9 @@ Uma expressão `return` em um gerador, quando executada, fará com que o gerador
 ### Exemplo simples
 
 ```js
-function* idMaker(){
-    var index = 0;
-    while(true)
-        yield index++;
+function* idMaker() {
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker();
@@ -65,7 +64,7 @@ function* outroGerador(i) {
   yield i + 3;
 }
 
-function* gerador(i){
+function* gerador(i) {
   yield i;
   yield* outroGerador(i);
   yield i + 10;
@@ -136,15 +135,11 @@ console.log(bar.next()); // {value: 10, done: false}
 
 ## Especificações
 
-| Especificação                                                                                        | Status                       | Comentário                                                                                                            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2015')}}     | Definição inicial.                                                                                                    |
-| {{SpecName('ES2016', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2016')}}     | Mudou para que _generators_ não tenham a armadilha de \[\[Construct]] e irão lançar um erro, quando usados com `new`. |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.generator_function")}}
+{{Compat}}
 
 ## Observações específicas Firefox
 

@@ -1,7 +1,6 @@
 ---
 title: 创建我的第一个表单
 slug: Learn/Forms/Your_first_form
-original_slug: Learn/HTML/Forms/Your_first_HTML_form
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
@@ -11,7 +10,7 @@ original_slug: Learn/HTML/Forms/Your_first_HTML_form
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           基本计算机素养和<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"

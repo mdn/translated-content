@@ -1,8 +1,9 @@
 ---
 title: RTF
 slug: Glossary/RTF
-translation_of: Glossary/RTF
 ---
+
+{{GlossarySidebar}}
 
 RTF (Rich Text Format) est un format de fichier en texte brut avec prise en charge d'instructions de formatage (comme gras ou italique).
 

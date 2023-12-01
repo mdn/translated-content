@@ -1,7 +1,6 @@
 ---
 title: Document.releaseCapture()
 slug: Web/API/Document/releaseCapture
-translation_of: Web/API/Document/releaseCapture
 ---
 
 {{ ApiRef("DOM") }}

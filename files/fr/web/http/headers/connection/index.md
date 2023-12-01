@@ -1,7 +1,6 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-translation_of: Web/HTTP/Headers/Connection
 ---
 
 {{HTTPSidebar}}

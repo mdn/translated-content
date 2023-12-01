@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/Element/contextmenu_event
-original_slug: Web/API/GlobalEventHandlers/oncontextmenu
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -20,13 +19,19 @@ window.oncontextmenu = funcRef;
 페이지상에서 오른쪽 클릭을 막는 예제들 입니다:
 
 ```js
-document.oncontextmenu = function () { // Use document as opposed to window for IE8 compatibility
-   return false;
+document.oncontextmenu = function () {
+  // Use document as opposed to window for IE8 compatibility
+  return false;
 };
 
-window.addEventListener('contextmenu', function (e) { // Not compatible with IE < 9
+window.addEventListener(
+  "contextmenu",
+  function (e) {
+    // Not compatible with IE < 9
     e.preventDefault();
-}, false);
+  },
+  false,
+);
 ```
 
 ## 명세서

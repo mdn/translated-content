@@ -1,7 +1,6 @@
 ---
 title: 웹의 동작 방식
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 ---
 
 {{LearnSidebar}}
@@ -18,7 +17,7 @@ original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 
 ![](client-server.jpg)
 
-- 클라이언트는 일반적인 웹 사용자의 인터넷이 연결된 장치들 (예를 들어, 여러분의 컴퓨터는 WI-FI에 연결되어 있고, 또는 여러분의 폰은 모바일 네트워크에 연결되어 있습니다) 과 이런 장치들에서 이용가능한 웹에 접근하는 소프트웨어 (일반적으로 파이어폭스 또는 크롬 과 같은 웹 브라우저) 입니다.
+- 클라이언트는 일반적인 웹 사용자의 인터넷이 연결된 장치들 (예를 들어, 여러분의 컴퓨터는 WI-FI에 연결되어 있고, 또는 여러분의 폰은 모바일 네트워크에 연결되어 있습니다) 과 이런 장치들에서 이용가능한 웹에 접근하는 소프트웨어 (일반적으로 Firefox 또는 크롬 과 같은 웹 브라우저) 입니다.
 - 서버는 웹페이지, 사이트, 또는 앱을 저장하는 컴퓨터입니다. 클라이언트의 장비가 웹페이지에 접근하길 원할 때, 서버로부터 클라이언트의 장치로 사용자의 웹 브라우저에서 보여지기 위한 웹페이지의 사본이 다운로드 됩니다.
 
 ## 도구 상자의 다른 부분들
@@ -65,7 +64,7 @@ original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 
 - [인터넷 작동 방식](/ko/docs/Learn/Common_questions/How_does_the_Internet_work)
 - [HTTP — 어플리케이션-계층 규약](https://dev.opera.com/articles/http-basic-introduction/)
-- [HTTP: Let’s GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
+- [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: 응답 코드](https://dev.opera.com/articles/http-response-codes/)
 
 ## 크레딧

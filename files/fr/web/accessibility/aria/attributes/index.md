@@ -1,7 +1,6 @@
 ---
 title: États et propriétés ARIA
 slug: Web/Accessibility/ARIA/Attributes
-translation_of: Web/Accessibility/ARIA/Attributes
 ---
 
 Cette page constitue un index des pages de référence couvrant l'ensemble des attributs WAI-ARIA sur MDN.

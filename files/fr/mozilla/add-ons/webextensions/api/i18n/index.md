@@ -1,7 +1,6 @@
 ---
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
 
 {{AddonSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: "Element : évènement mouseover"
 slug: Web/API/Element/mouseover_event
-translation_of: Web/API/Element/mouseover_event
 ---
 
 {{APIRef}}

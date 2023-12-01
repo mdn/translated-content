@@ -1,7 +1,6 @@
 ---
 title: IDBKeyRange.lowerOpen
 slug: Web/API/IDBKeyRange/lowerOpen
-translation_of: Web/API/IDBKeyRange/lowerOpen
 ---
 
 {{APIRef("IndexedDB")}}

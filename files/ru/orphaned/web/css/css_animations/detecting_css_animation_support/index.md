@@ -1,8 +1,6 @@
 ---
 title: Detecting CSS animation support
 slug: orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
-translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
-original_slug: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 ---
 {{CSSRef}}
 

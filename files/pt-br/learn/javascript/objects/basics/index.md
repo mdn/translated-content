@@ -1,7 +1,6 @@
 ---
 title: O básico sobre objetos JavaScript
 slug: Learn/JavaScript/Objects/Basics
-original_slug: Aprender/JavaScript/Objetos/Básico
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}

@@ -1,8 +1,9 @@
 ---
 title: Axe principal
 slug: Glossary/Main_Axis
-translation_of: Glossary/Main_Axis
 ---
+
+{{GlossarySidebar}}
 
 L'axe principal d'une {{glossary("flexbox")}} est déterminé par la direction définie dans la propriété {{cssxref("flex-direction")}}. Il y a 4 valeurs possibles pour `flex-direction`. Ce sont :
 

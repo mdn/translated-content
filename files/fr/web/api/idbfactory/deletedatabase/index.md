@@ -1,7 +1,6 @@
 ---
 title: IDBFactory.deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
-translation_of: Web/API/IDBFactory/deleteDatabase
 ---
 
 {{APIRef("IndexedDB")}}

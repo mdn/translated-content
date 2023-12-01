@@ -1,7 +1,6 @@
 ---
 title: Paddle과 키보드 컨트롤
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls
 ---
 
 {{GamesSidebar}}
@@ -50,7 +49,7 @@ var rightPressed = false;
 var leftPressed = false;
 ```
 
-처음에는 컨트롤 버튼이 눌려지지 않은 상태이므로 두개의 기본값은 false 입니다. 키가 눌렸음을 인식하기 위해, 이벤트 리스너를 설정합니다. 자바스크립트 하단에 `setInterval()` 바로 위에 아래 코드를 추가합니다.:
+처음에는 컨트롤 버튼이 눌려지지 않은 상태이므로 두개의 기본값은 false 입니다. 키가 눌렸음을 인식하기 위해, 이벤트 리스너를 설정합니다. JavaScript 하단에 `setInterval()` 바로 위에 아래 코드를 추가합니다.:
 
 ```js
 document.addEventListener("keydown", keyDownHandler, false);

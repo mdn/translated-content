@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.target
 slug: Web/API/HTMLFormElement/target
-translation_of: Web/API/HTMLFormElement/target
 ---
 
 {{APIRef("HTML DOM")}}

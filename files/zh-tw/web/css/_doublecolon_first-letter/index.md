@@ -7,15 +7,15 @@ slug: Web/CSS/::first-letter
 
 ## 概要
 
-`::first-letter` [CSS](/zh-TW/CSS) [虛擬元素](/zh-TW/CSS/Pseudo-elements)選取了一個區塊第一行的第一個字母，如果那一行前面沒有其他內容（例如圖片或是行內表格）。
+`::first-letter` [CSS](/zh-TW/docs/Web/CSS) [虛擬元素](/zh-TW/docs/CSS/Pseudo-elements)選取了一個區塊第一行的第一個字母，如果那一行前面沒有其他內容（例如圖片或是行內表格）。
 
 The first letter of an element is not necessarily trivial to identify:
 
 - Punctuation, that is any characters defined in Unicode in the _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf) and _other punctuation_ (Po) classes, preceding or immediately following the first letter is also matched by this pseudo-element.
-- Similarly some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these rare cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element. (This is poorly supported by browsers, check the [browser compatibility table](/En/CSS/::first-letter#Browser_compatibility)).
+- Similarly some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these rare cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element. (This is poorly supported by browsers, check the [browser compatibility table](/zh-TW/docs/CSS/::first-letter#瀏覽器相容性)).
 - Finally, a combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
 
-A first line has meaning only in a [block-container box](/zh-TW/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes), therefore the `::first-letter` pseudo-element has an effect only on elements with a {{ cssxref("display") }} value of `block`, `inline-block`, `table-cell`, `list-item` or `table-caption`. In all other cases, `::first-letter` has no effect.
+A first line has meaning only in a [block-container box](/zh-TW/docs/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), therefore the `::first-letter` pseudo-element has an effect only on elements with a {{ cssxref("display") }} value of `block`, `inline-block`, `table-cell`, `list-item` or `table-caption`. In all other cases, `::first-letter` has no effect.
 
 Only a small subset of all CSS properties can be used inside a declaration block of a CSS ruleset containing a selector using the `::first-letter` pseudo-element:
 

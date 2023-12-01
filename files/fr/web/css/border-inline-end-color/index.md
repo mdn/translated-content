@@ -1,7 +1,6 @@
 ---
 title: border-inline-end-color
 slug: Web/CSS/border-inline-end-color
-translation_of: Web/CSS/border-inline-end-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

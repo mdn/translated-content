@@ -1,7 +1,6 @@
 ---
 title: load
 slug: Web/API/Window/load_event
-original_slug: Web/Events/load
 ---
 
 {{ APIRef }}

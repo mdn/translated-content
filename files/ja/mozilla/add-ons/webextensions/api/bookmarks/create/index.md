@@ -12,8 +12,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ```js
 browser.bookmarks.create(
   bookmark, // CreateDetails
-  callback  // 関数（省略可）
-)
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
@@ -29,7 +29,7 @@ browser.bookmarks.create(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.create")}}
+{{Compat}}
 
 ## 使用例
 
@@ -40,10 +40,13 @@ function onBookmarkAdded(bookmarkItem) {
   console.log("Bookmark added with ID: " + bookmarkItem.id);
 }
 
-chrome.bookmarks.create({
-  title: "bookmarks.create() on MDN",
-  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
-}, onBookmarkAdded);
+chrome.bookmarks.create(
+  {
+    title: "bookmarks.create() on MDN",
+    url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create",
+  },
+  onBookmarkAdded,
+);
 ```
 
 {{WebExtExamples}}

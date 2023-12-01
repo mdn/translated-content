@@ -48,12 +48,12 @@ super[expression]
 ```js
 class Polygon {
   constructor(height, width) {
-    this.name = 'Rectangle';
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
   sayName() {
-    console.log('Hi, I am a ', this.name + '.');
+    console.log("Hi, I am a ", this.name + ".");
   }
   get area() {
     return this.height * this.width;
@@ -73,7 +73,7 @@ class Square extends Polygon {
 
     // 注意：在派生的类中，在你可以使用 'this' 之前，必须先调用 super()。
     // 现在可以使用 'this' 了，忽略 'this' 将导致引用错误（ReferenceError）
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
@@ -85,7 +85,7 @@ class Square extends Polygon {
 ```js
 class Rectangle {
   static logNbSides() {
-    return 'I have 4 sides';
+    return "I have 4 sides";
   }
 }
 
@@ -151,14 +151,14 @@ new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
 ```js
 const obj1 = {
   method1() {
-    console.log('method 1');
-  }
-}
+    console.log("method 1");
+  },
+};
 const obj2 = {
   method2() {
     super.method1();
-  }
-}
+  },
+};
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // logs "method 1"
 ```
@@ -206,16 +206,28 @@ anotherChild.myParent(); //依然打印 "1"
 
 ```js
 class Base {
-  baseGetX() { return 1; }
-  static staticBaseGetX() { return 3; }
+  baseGetX() {
+    return 1;
+  }
+  static staticBaseGetX() {
+    return 3;
+  }
 }
 class AnotherBase {
-  baseGetX() { return 2; }
-  static staticBaseGetX() { return 4; }
+  baseGetX() {
+    return 2;
+  }
+  static staticBaseGetX() {
+    return 4;
+  }
 }
 class Extended extends Base {
-  getX() { return super.baseGetX(); }
-  static staticGetX() { return super.staticBaseGetX(); }
+  getX() {
+    return super.baseGetX();
+  }
+  static staticGetX() {
+    return super.staticBaseGetX();
+  }
 }
 const e = new Extended();
 // 重置实例部分的继承
@@ -227,7 +239,7 @@ Object.setPrototypeOf(Extended, AnotherBase);
 console.log(Extended.staticGetX()); //现在打印 "4"
 ```
 
-### 设置 super.prop 将在此基础上设置属性。
+### 设置 super.prop 将在此基础上设置属性
 
 设置 `super` 的属性，比如 `super.x = 1`，就像 `Reflect.set(Object.getPrototypeOf(objectLiteral), "x", 1, this)` 的行为。这是一个将 `super` 简单理解为“原型对象的引用”的情况，因为它实际上是在 `this` 上设置属性。
 
@@ -260,7 +272,7 @@ b2.setX.call(null); // TypeError: Cannot assign to read only property 'x' of obj
 class X {
   constructor() {
     // Create a non-writable property
-    Object.defineProperty(this, 'prop', {
+    Object.defineProperty(this, "prop", {
       configurable: true,
       writable: false,
       value: 1,
@@ -272,7 +284,7 @@ class Y extends X {
     super();
   }
   foo() {
-    super.prop = 2;   // Cannot overwrite the value.
+    super.prop = 2; // Cannot overwrite the value.
   }
 }
 const y = new Y();

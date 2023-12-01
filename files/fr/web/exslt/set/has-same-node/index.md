@@ -1,7 +1,6 @@
 ---
 title: has-same-node
 slug: Web/EXSLT/set/has-same-node
-translation_of: Web/EXSLT/set/has-same-node
 ---
 
 {{ XsltRef() }}

@@ -1,7 +1,6 @@
 ---
 title: "CSS: escape() 静的メソッド"
 slug: Web/API/CSS/escape_static
-original_slug: Web/API/CSS/escape
 l10n:
   sourceCommit: f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
 ---

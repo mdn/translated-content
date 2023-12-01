@@ -1,15 +1,6 @@
 ---
 title: Селекторы типа, класса и ID
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-tags:
-  - CSS
-  - id
-  - Класс
-  - Начинающий
-  - Обучение
-  - Селекторы
-translation_of: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Selectors
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}

@@ -1,7 +1,6 @@
 ---
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
 
 {{AddonSidebar}}

@@ -1,8 +1,9 @@
 ---
 title: Analyseur syntaxique
 slug: Glossary/Parser
-translation_of: Glossary/Parser
 ---
+
+{{GlossarySidebar}}
 
 Le module d'un compilateur ou d'un interprête qui effectue **l'**{{glossary("parse","analyse syntaxique")}} d'un fichier de code source.
 

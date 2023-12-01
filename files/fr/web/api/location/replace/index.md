@@ -1,7 +1,6 @@
 ---
 title: Location.replace()
 slug: Web/API/Location/replace
-translation_of: Web/API/Location/replace
 ---
 
 {{APIRef("Location")}}

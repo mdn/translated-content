@@ -1,8 +1,6 @@
 ---
 title: Tester le bon fonctionnement de votre site web
-slug: >-
-  Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
+slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 ---
 
 Dans cet article, nous présenterons les différentes étapes permettant de diagnostiquer les problèmes d'un site web ainsi que les mesures à prendre pour corriger certains de ces problèmes.

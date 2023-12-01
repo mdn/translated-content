@@ -72,9 +72,11 @@ navigator.registerProtocolHandler(protocol, url, title);
 사이트 주소가 `burgers.example.com`인 경우, 아래 코드로 `web+burger:` 스킴에 대한 처리기를 등록할 수 있습니다.
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://burgers.example.com/?burger=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.com/?burger=%s",
+  "Burger handler",
+);
 ```
 
 이제, `web+burger:` 링크는 사용자를 `burgers.example.com`로 보내고, 자신의 URL을 `%s` 위치에 삽입합니다.

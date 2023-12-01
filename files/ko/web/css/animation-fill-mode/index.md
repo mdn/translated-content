@@ -2,6 +2,7 @@
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
 ---
+
 {{CSSRef}}
 
 **`animation-fill-mode`** [CSS](/en/CSS) 속성은 CSS 애니메이션이 실행 전과 후에 대상에 스타일을 적용하는 방법을 지정합니다.
@@ -82,8 +83,12 @@ animation-fill-mode: both, forwards, none;
 }
 
 @keyframes grow {
-  0% { font-size: 0; }
-  100% { font-size: 40px; }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 
 .demo:hover .grows {

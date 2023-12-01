@@ -21,21 +21,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 
 ```js
 const myAsyncIterable = {
-    async* [Symbol.asyncIterator]() {
-        yield "hello";
-        yield "async";
-        yield "iteration!";
-    }
+  async *[Symbol.asyncIterator]() {
+    yield "hello";
+    yield "async";
+    yield "iteration!";
+  },
 };
 
 (async () => {
-    for await (const x of myAsyncIterable) {
-        console.log(x);
-        // 期待される出力:
-        // "hello"
-        // "async"
-        // "iteration!"
-    }
+  for await (const x of myAsyncIterable) {
+    console.log(x);
+    // 期待される出力:
+    // "hello"
+    // "async"
+    // "iteration!"
+  }
 })();
 ```
 
@@ -51,7 +51,7 @@ API を作成するとき、非同期反復可能項目はデータのストリ�
 
 ## ブラウザー実装状況
 
-{{compat("javascript.builtins.Symbol.asyncIterator")}}
+{{Compat}}
 
 ## 関連情報
 

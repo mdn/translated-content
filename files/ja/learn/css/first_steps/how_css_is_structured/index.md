@@ -46,7 +46,7 @@ CSS の概要と基本的な使い方について理解できたので、今度�
 HTML の `<link>` 要素から外部 CSS スタイルシートを参照しています。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -94,7 +94,7 @@ p {
 例えば、 HTML はこのようになります。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -127,7 +127,7 @@ p {
 インラインスタイルは、単一の HTML 要素のみに影響を与える CSS 宣言で、 `style` 属性の中に記述します。 HTML 文書におけるインラインスタイルの実装は次のようになります。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -153,7 +153,7 @@ p {
 **index.html:**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -423,7 +423,10 @@ CSS のコメントは `/*` で始まり `*/` で終わります。以下の例�
 /* 基本的な要素のスタイル付けを扱う */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -480,7 +483,10 @@ p {
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;

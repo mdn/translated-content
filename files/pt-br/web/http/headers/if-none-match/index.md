@@ -58,13 +58,13 @@ If-None-Match: *
 
 ## Especificações
 
-| Especificação                                        | Título                                                       |
-| ---------------------------------------------------- | ------------------------------------------------------------ |
+| Especificação                           | Título                                                       |
+| --------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-None-Match", "3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.If-None-Match")}}
+{{Compat}}
 
 ## Veja também
 

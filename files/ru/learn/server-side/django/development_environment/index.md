@@ -1,7 +1,6 @@
 ---
 title: Setting up a Django development environment
 slug: Learn/Server-side/Django/development_environment
-translation_of: Learn/Server-side/Django/development_environment
 ---
 
 {{LearnSidebar}}

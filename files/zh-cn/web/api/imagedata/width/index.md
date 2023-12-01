@@ -17,7 +17,7 @@ imagedata.width
 
 ```js
 var imagedata = new ImageData(100, 100);
-imagedata.width // 100
+imagedata.width; // 100
 ```
 
 ## 规范

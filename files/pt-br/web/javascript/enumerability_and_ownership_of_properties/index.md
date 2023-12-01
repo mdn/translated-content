@@ -1,7 +1,6 @@
 ---
 title: Enumerabilidade e posse de propriedades
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-original_slug: Web/JavaScript/Enumerabilidade_e_posse_de_propriedades
 ---
 
 {{JsSidebar("Mais")}}
@@ -210,66 +209,86 @@ Note que não é o algoritmo mais eficiente para todos os casos, mas útil para 
 
 ```js
 var SimplePropertyRetriever = {
-    getOwnEnumerables: function (obj) {
-        return this._getPropertyNames(obj, true, false, this._enumerable);
-         // Ou poderia usar for..in filtrado com hasOwnProperty ou apenas isto: return Object.keys(obj);
-    },
-    getOwnNonenumerables: function (obj) {
-        return this._getPropertyNames(obj, true, false, this._notEnumerable);
-    },
-    getOwnEnumerablesAndNonenumerables: function (obj) {
-        return this._getPropertyNames(obj, true, false, this._enumerableAndNotEnumerable);
-        // Ou apenas use: return Object.getOwnPropertyNames(obj);
-    },
-    getPrototypeEnumerables: function (obj) {
-        return this._getPropertyNames(obj, false, true, this._enumerable);
-    },
-    getPrototypeNonenumerables: function (obj) {
-        return this._getPropertyNames(obj, false, true, this._notEnumerable);
-    },
-    getPrototypeEnumerablesAndNonenumerables: function (obj) {
-        return this._getPropertyNames(obj, false, true, this._enumerableAndNotEnumerable);
-    },
-    getOwnAndPrototypeEnumerables: function (obj) {
-        return this._getPropertyNames(obj, true, true, this._enumerable);
-        // Ou poderia usar filtrado for..in
-    },
-    getOwnAndPrototypeNonenumerables: function (obj) {
-        return this._getPropertyNames(obj, true, true, this._notEnumerable);
-    },
-    getOwnAndPrototypeEnumerablesAndNonenumerables: function (obj) {
-        return this._getPropertyNames(obj, true, true, this._enumerableAndNotEnumerable);
-    },
-    // Private static property checker callbacks
-    _enumerable : function (obj, prop) {
-        return obj.propertyIsEnumerable(prop);
-    },
-    _notEnumerable : function (obj, prop) {
-        return !obj.propertyIsEnumerable(prop);
-    },
-    _enumerableAndNotEnumerable : function (obj, prop) {
-        return true;
-    },
-    // Inspirado por http://stackoverflow.com/a/8024294/271577
-    _getPropertyNames : function getAllPropertyNames(obj, iterateSelfBool, iteratePrototypeBool, includePropCb) {
-        var props = [];
+  getOwnEnumerables: function (obj) {
+    return this._getPropertyNames(obj, true, false, this._enumerable);
+    // Ou poderia usar for..in filtrado com hasOwnProperty ou apenas isto: return Object.keys(obj);
+  },
+  getOwnNonenumerables: function (obj) {
+    return this._getPropertyNames(obj, true, false, this._notEnumerable);
+  },
+  getOwnEnumerablesAndNonenumerables: function (obj) {
+    return this._getPropertyNames(
+      obj,
+      true,
+      false,
+      this._enumerableAndNotEnumerable,
+    );
+    // Ou apenas use: return Object.getOwnPropertyNames(obj);
+  },
+  getPrototypeEnumerables: function (obj) {
+    return this._getPropertyNames(obj, false, true, this._enumerable);
+  },
+  getPrototypeNonenumerables: function (obj) {
+    return this._getPropertyNames(obj, false, true, this._notEnumerable);
+  },
+  getPrototypeEnumerablesAndNonenumerables: function (obj) {
+    return this._getPropertyNames(
+      obj,
+      false,
+      true,
+      this._enumerableAndNotEnumerable,
+    );
+  },
+  getOwnAndPrototypeEnumerables: function (obj) {
+    return this._getPropertyNames(obj, true, true, this._enumerable);
+    // Ou poderia usar filtrado for..in
+  },
+  getOwnAndPrototypeNonenumerables: function (obj) {
+    return this._getPropertyNames(obj, true, true, this._notEnumerable);
+  },
+  getOwnAndPrototypeEnumerablesAndNonenumerables: function (obj) {
+    return this._getPropertyNames(
+      obj,
+      true,
+      true,
+      this._enumerableAndNotEnumerable,
+    );
+  },
+  // Private static property checker callbacks
+  _enumerable: function (obj, prop) {
+    return obj.propertyIsEnumerable(prop);
+  },
+  _notEnumerable: function (obj, prop) {
+    return !obj.propertyIsEnumerable(prop);
+  },
+  _enumerableAndNotEnumerable: function (obj, prop) {
+    return true;
+  },
+  // Inspirado por http://stackoverflow.com/a/8024294/271577
+  _getPropertyNames: function getAllPropertyNames(
+    obj,
+    iterateSelfBool,
+    iteratePrototypeBool,
+    includePropCb,
+  ) {
+    var props = [];
 
-        do {
-            if (iterateSelfBool) {
-                Object.getOwnPropertyNames(obj).forEach(function (prop) {
-                    if (props.indexOf(prop) === -1 && includePropCb(obj, prop)) {
-                        props.push(prop);
-                    }
-                });
-            }
-            if (!iteratePrototypeBool) {
-                break;
-            }
-            iterateSelfBool = true;
-        } while (obj = Object.getPrototypeOf(obj));
+    do {
+      if (iterateSelfBool) {
+        Object.getOwnPropertyNames(obj).forEach(function (prop) {
+          if (props.indexOf(prop) === -1 && includePropCb(obj, prop)) {
+            props.push(prop);
+          }
+        });
+      }
+      if (!iteratePrototypeBool) {
+        break;
+      }
+      iterateSelfBool = true;
+    } while ((obj = Object.getPrototypeOf(obj)));
 
-        return props;
-    }
+    return props;
+  },
 };
 ```
 

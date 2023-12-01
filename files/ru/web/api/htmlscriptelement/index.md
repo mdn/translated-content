@@ -1,8 +1,8 @@
 ---
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
-translation_of: Web/API/HTMLScriptElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTML-элементы {{HTMLElement("script")}} предоставляют **`HTMLScriptElement`** интерфейс, который предоставляет специальные свойства и методы для манипулирования поведением и выполнением `<script>` элементов (за пределами унаследованного {{domxref("HTMLElement")}} интерфейса).
@@ -216,14 +216,21 @@ _Нет специальных методов; наследует методы �
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(
+    "The script " + oError.target.src + " didn't load correctly.",
+  );
 }
 
 function prefixScript(url, onloadFunction) {
   var newScript = document.createElement("script");
   newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
-  document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
+  if (onloadFunction) {
+    newScript.onload = onloadFunction;
+  }
+  document.currentScript.parentNode.insertBefore(
+    newScript,
+    document.currentScript,
+  );
   newScript.src = url;
 }
 ```
@@ -232,13 +239,17 @@ function prefixScript(url, onloadFunction) {
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError(
+    "The script " + oError.target.src + " didn't load correctly.",
+  );
 }
 
 function affixScriptToHead(url, onloadFunction) {
   var newScript = document.createElement("script");
   newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
+  if (onloadFunction) {
+    newScript.onload = onloadFunction;
+  }
   document.head.appendChild(newScript);
   newScript.src = url;
 }
@@ -248,7 +259,9 @@ function affixScriptToHead(url, onloadFunction) {
 
 ```js
 affixScriptToHead("myScript1.js");
-affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js\" has been correctly loaded."); });
+affixScriptToHead("myScript2.js", function () {
+  alert('The script "myScript2.js" has been correctly loaded.');
+});
 ```
 
 ## Спецификации

@@ -1,7 +1,6 @@
 ---
 title: IDBDatabase.onversionchange
 slug: Web/API/IDBDatabase/versionchange_event
-translation_of: Web/API/IDBDatabase/onversionchange
 ---
 
 {{APIRef("IndexedDB")}}

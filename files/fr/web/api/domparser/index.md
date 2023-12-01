@@ -1,7 +1,6 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-translation_of: Web/API/DOMParser
 ---
 
 {{APIRef("DOM")}}

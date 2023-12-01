@@ -1,8 +1,9 @@
 ---
 title: Variable globale
 slug: Glossary/Global_variable
-translation_of: Glossary/Global_variable
 ---
+
+{{GlossarySidebar}}
 
 Une variable globale est une {{glossary("Variable")}} déclarée dans une {{glossary("Global scope","portée globale")}} en d'autres termes, une variable visible depuis toutes les autres portées.
 

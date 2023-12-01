@@ -1,7 +1,6 @@
 ---
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ---
 
 {{AddonSidebar}}

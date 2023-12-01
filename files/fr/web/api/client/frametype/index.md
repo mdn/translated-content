@@ -1,7 +1,6 @@
 ---
 title: Client.frameType
 slug: Web/API/Client/frameType
-translation_of: Web/API/Client/frameType
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

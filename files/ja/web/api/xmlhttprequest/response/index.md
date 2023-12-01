@@ -23,7 +23,7 @@ l10n:
 {{domxref("XMLHttpRequest.responseType", "responseType")}} を上書きするものがないため）。
 
 ```js
-const url = 'somePage.html'; //A local page
+const url = "somePage.html"; //A local page
 
 function load(url, callback) {
   const xhr = new XMLHttpRequest();
@@ -32,10 +32,10 @@ function load(url, callback) {
     if (xhr.readyState === 4) {
       callback(xhr.response);
     }
-  }
+  };
 
-  xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.open("GET", url, true);
+  xhr.send("");
 }
 ```
 

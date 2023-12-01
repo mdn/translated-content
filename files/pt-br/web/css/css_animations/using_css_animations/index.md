@@ -1,7 +1,6 @@
 ---
 title: Usando animações CSS
 slug: Web/CSS/CSS_animations/Using_CSS_animations
-original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
 ---
 
 {{SeeCompatTable}}{{CSSRef}}
@@ -64,7 +63,7 @@ p {
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%
+    width: 300%;
   }
 
   to {
@@ -84,9 +83,9 @@ O segundo (e último) keyframe ocorre na etapa 100% do progresso (ou seja, o úl
 
 ```html
 <p>
-A Lagarta e Alice olharam-se por algum tempo em silêncio:
-finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.
+  A Lagarta e Alice olharam-se por algum tempo em silêncio: finalmente, a
+  Lagarta tirou o narguilé da boca e dirigiu-se a ela com uma voz lânguida e
+  sonolenta.
 </p>
 ```
 
@@ -127,9 +126,9 @@ p {
 
 ```html
 <p>
-A Lagarta e Alice olharam-se por algum tempo em silêncio:
-finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.
+  A Lagarta e Alice olharam-se por algum tempo em silêncio: finalmente, a
+  Lagarta tirou o narguilé da boca e dirigiu-se a ela com uma voz lânguida e
+  sonolenta.
 </p>
 ```
 
@@ -167,9 +166,9 @@ Adicionando ao código existente:
 
 ```html
 <p>
-A Lagarta e Alice olharam-se por algum tempo em silêncio:
-finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.
+  A Lagarta e Alice olharam-se por algum tempo em silêncio: finalmente, a
+  Lagarta tirou o narguilé da boca e dirigiu-se a ela com uma voz lânguida e
+  sonolenta.
 </p>
 ```
 
@@ -204,9 +203,9 @@ p {
 
 ```html
 <p>
-A Lagarta e Alice olharam-se por algum tempo em silêncio:
-finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.
+  A Lagarta e Alice olharam-se por algum tempo em silêncio: finalmente, a
+  Lagarta tirou o narguilé da boca e dirigiu-se a ela com uma voz lânguida e
+  sonolenta.
 </p>
 ```
 
@@ -240,38 +239,38 @@ Nós começamos criando o CSS para a animação. Essa animação vai durar por 3
 
 @-moz-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 
 @-webkit-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 ```
 
@@ -299,7 +298,7 @@ Os eventos são entregues à função `listener()`, a qual é mostrada abaixo.
 ```js
 function listener(e) {
   var l = document.createElement("li");
-  switch(e.type) {
+  switch (e.type) {
     case "animationstart":
       l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
       break;
@@ -332,11 +331,13 @@ Apenas por questão de completude, aqui está o HTML que exibe o conteúdo da pa
 ```html
 <h1 id="watchme">Veja-me mover</h1>
 <p>
-  Este exemplo mostra como usar animações CSS para fazer o elemento <code>h1</code>
+  Este exemplo mostra como usar animações CSS para fazer o elemento
+  <code>h1</code>
   se mover pela página
 </p>
 <p>
-  Além disso, emitimos algum texto sempre que um evento de animação dispara, para que você possa vê-los em ação.
+  Além disso, emitimos algum texto sempre que um evento de animação dispara,
+  para que você possa vê-los em ação.
 </p>
 <ul id="output"></ul>
 ```

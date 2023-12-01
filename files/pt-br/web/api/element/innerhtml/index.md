@@ -92,7 +92,9 @@ A propriedade `innerHTML` de vários tipos de elementos — incluindo {{HTMLElem
 
 ```js
 // Copie e cole este código, em uma única linha, na barra de endereços
-javascript:"<pre>"+document.documentElement.innerHTML.replace(/</g,"&lt;") + "</pre>";
+javascript: "<pre>" +
+  document.documentElement.innerHTML.replace(/</g, "&lt;") +
+  "</pre>";
 ```
 
 Essa propriedade foi implementada inicialmente pelos navegadores web, e então especificada pela WHATWG e W3C no HTML5. Implementações antigas talvez não tenham implementado-a exatamente da mesma forma. Por exemplo, quando um texto é inserido em uma caixa de texto, o Internet Explorer muda o valor do atributo innerHTML dessa entrada, mas os navegadores Gecko não.
@@ -124,11 +126,13 @@ el.innerHTML = name; // exibe uma caixa de alerta
 
 Por essa razão, recomenda-se que você não use o `innerHTML` quando estiver inserindo texto puro; como alternativa, utilize {{domxref("node.textContent")}}. Isso não interpreta o conteúdo passado como HTML, mas em vez disso, insere-o como texto puro.
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                        | Estado                               | Comentário        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('DOM Parsing', '#widl-Element-innerHTML', 'Element.innerHTML')}} | {{ Spec2('DOM Parsing') }} | Definição inicial |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

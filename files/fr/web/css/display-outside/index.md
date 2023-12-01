@@ -1,7 +1,6 @@
 ---
 title: display-outside
 slug: Web/CSS/display-outside
-translation_of: Web/CSS/display-outside
 ---
 
 {{CSSRef}}
@@ -48,8 +47,7 @@ span {
 ### HTML
 
 ```html
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
 ### Résultat

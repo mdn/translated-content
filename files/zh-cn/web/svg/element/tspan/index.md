@@ -34,7 +34,9 @@ svg {
   </style>
 
   <text x="10" y="30" class="small">
-    你<tspan>不是</tspan>香蕉！
+    你
+    <tspan>不是</tspan>
+    香蕉！
   </text>
 </svg>
 ```
@@ -65,7 +67,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了[`SVGTSpanElement`](/zh-CN/DOM/SVGTSpanElement)接口。
+该元素实现了 [`SVGTSpanElement`](/zh-CN/DOM/SVGTSpanElement) 接口。
 
 ## 浏览器兼容性
 

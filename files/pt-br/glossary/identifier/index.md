@@ -1,8 +1,9 @@
 ---
 title: Identificador (Identifier)
 slug: Glossary/Identifier
-original_slug: Glossario/Identificador
 ---
+
+{{GlossarySidebar}}
 
 Uma sequência de caracteres no código, que identifica uma **{{glossary("variável")}}, {{glossary("função")}}, ou {{glossary("propriedade")}}**.
 

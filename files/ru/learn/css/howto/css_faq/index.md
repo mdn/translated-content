@@ -1,8 +1,6 @@
 ---
 title: Common CSS questions
 slug: Learn/CSS/Howto/CSS_FAQ
-translation_of: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/Common_CSS_Questions
 ---
 
 ## Why doesn't my CSS, which is valid, render correctly?

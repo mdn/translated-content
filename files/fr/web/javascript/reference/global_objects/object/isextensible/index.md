@@ -1,7 +1,6 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`Object.isExtensible()`** permet de déterminer si un objet est ex
 ## Syntaxe
 
 ```js
-Object.isExtensible(obj)
+Object.isExtensible(obj);
 ```
 
 ### Paramètres

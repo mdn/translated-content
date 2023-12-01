@@ -1,7 +1,6 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-translation_of: Mozilla/Firefox
 ---
 
 {{FirefoxSidebar}}

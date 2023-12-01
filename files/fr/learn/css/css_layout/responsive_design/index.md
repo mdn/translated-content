@@ -1,7 +1,6 @@
 ---
 title: Responsive design
 slug: Learn/CSS/CSS_layout/Responsive_Design
-translation_of: Learn/CSS/CSS_layout/Responsive_Design
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Apprendre/CSS/CSS_layout/Media_queries", "Apprendre/CSS/CSS_layout")}}

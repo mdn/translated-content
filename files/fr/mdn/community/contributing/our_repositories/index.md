@@ -1,7 +1,6 @@
 ---
 title: Où se trouve tout sur MDN ? Un guide de nos dépôts
 slug: MDN/Community/Contributing/Our_repositories
-translation_of: MDN/Contribute/Where_is_everything
 ---
 
 {{MDNSidebar}}

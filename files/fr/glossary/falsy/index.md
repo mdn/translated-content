@@ -1,8 +1,9 @@
 ---
 title: Falsy (Valeurs de type fausses)
 slug: Glossary/Falsy
-translation_of: Glossary/Falsy
 ---
+
+{{GlossarySidebar}}
 
 Les valeurs fausses (**falsy**) sont des valeurs évaluées comme fausses quand elles sont évaluées dans un contexte {{Glossary("Boolean","booléen")}}.
 

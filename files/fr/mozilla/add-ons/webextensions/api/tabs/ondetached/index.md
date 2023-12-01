@@ -1,7 +1,6 @@
 ---
 title: tabs.onDetached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
 ---
 
 {{AddonSidebar()}}

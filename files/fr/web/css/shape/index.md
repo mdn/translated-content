@@ -1,7 +1,6 @@
 ---
 title: <shape>
 slug: Web/CSS/shape
-translation_of: Web/CSS/shape
 ---
 
 {{CSSRef}}{{deprecated_header}}

@@ -1,7 +1,6 @@
 ---
 title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
 ---
 
 {{AddonSidebar()}}

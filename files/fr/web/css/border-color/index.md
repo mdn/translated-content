@@ -1,7 +1,6 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-translation_of: Web/CSS/border-color
 ---
 
 {{CSSRef}}
@@ -96,7 +95,8 @@ ul {
 ```html
 <div id="unevaleur">
   <p><code>border-color: red;</code> équivalent à</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -104,7 +104,8 @@ ul {
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code> équivalent à</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -112,7 +113,8 @@ ul {
 </div>
 <div id="hauthoribas">
   <p><code>border-color: red cyan gold;</code> équivalent à</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -120,7 +122,8 @@ ul {
 </div>
 <div id="hdbg">
   <p><code>border-color: red cyan black gold;</code> équivalent à</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>

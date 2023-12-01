@@ -1,8 +1,9 @@
 ---
 title: WebKit
 slug: Glossary/WebKit
-translation_of: Glossary/WebKit
 ---
+
+{{GlossarySidebar}}
 
 _WebKit_ est un framework destiné à afficher des pages web correctement formatées en se basant sur leur balisage. {{Glossary("Apple Safari")}} dépend de WebKit tout comme de nombreux navigateurs pour mobiles (car WebKit est hautement portable et personnalisable).
 

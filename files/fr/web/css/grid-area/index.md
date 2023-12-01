@@ -1,7 +1,6 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
-translation_of: Web/CSS/grid-area
 ---
 
 {{CSSRef}}

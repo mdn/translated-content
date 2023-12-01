@@ -1,7 +1,6 @@
 ---
 title: L'API WebRTC
 slug: Web/API/WebRTC_API
-translation_of: Web/API/WebRTC_API
 ---
 
 {{APIRef("WebRTC")}}

@@ -1,7 +1,6 @@
 ---
 title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 ---
 
 {{AddonSidebar}}

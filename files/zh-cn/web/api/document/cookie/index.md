@@ -57,7 +57,10 @@ alert(document.cookie);
 document.cookie = "test1=Hello";
 document.cookie = "test2=World";
 
-var myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+var myCookie = document.cookie.replace(
+  /(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/,
+  "$1",
+);
 
 alert(myCookie);
 // 显示：World
@@ -77,7 +80,7 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.
 
 ## 一个小框架：一个完整支持 unicode 的 cookie 读取/写入器
 
-作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和[`Storage 对象`](/zh-CN/docs/Web/Guide/API/DOM/Storage#Storage)部分`一致的`对象（docCookies），简化`document.cookie` 的获取方法。它提供完全的 Unicode 支持。
+作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和 [`Storage` 对象](/zh-CN/docs/Web/API/Storage)部分一致的对象（docCookies），简化 `document.cookie` 的获取方法。它提供完全的 Unicode 支持。
 
 ```js
 /*\
@@ -103,15 +106,31 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.
 
 var docCookies = {
   getItem: function (sKey) {
-    return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[-.+*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+    return (
+      decodeURIComponent(
+        document.cookie.replace(
+          new RegExp(
+            "(?:(?:^|.*;)\\s*" +
+              encodeURIComponent(sKey).replace(/[-.+*]/g, "\\$&") +
+              "\\s*\\=\\s*([^;]*).*$)|^.*$",
+          ),
+          "$1",
+        ),
+      ) || null
+    );
   },
   setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
-    if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
+    if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) {
+      return false;
+    }
     var sExpires = "";
     if (vEnd) {
       switch (vEnd.constructor) {
         case Number:
-          sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+          sExpires =
+            vEnd === Infinity
+              ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT"
+              : "; max-age=" + vEnd;
           break;
         case String:
           sExpires = "; expires=" + vEnd;
@@ -121,22 +140,43 @@ var docCookies = {
           break;
       }
     }
-    document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+    document.cookie =
+      encodeURIComponent(sKey) +
+      "=" +
+      encodeURIComponent(sValue) +
+      sExpires +
+      (sDomain ? "; domain=" + sDomain : "") +
+      (sPath ? "; path=" + sPath : "") +
+      (bSecure ? "; secure" : "");
     return true;
   },
   removeItem: function (sKey, sPath, sDomain) {
-    if (!sKey || !this.hasItem(sKey)) { return false; }
-    document.cookie = encodeURIComponent(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + ( sDomain ? "; domain=" + sDomain : "") + ( sPath ? "; path=" + sPath : "");
+    if (!sKey || !this.hasItem(sKey)) {
+      return false;
+    }
+    document.cookie =
+      encodeURIComponent(sKey) +
+      "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" +
+      (sDomain ? "; domain=" + sDomain : "") +
+      (sPath ? "; path=" + sPath : "");
     return true;
   },
   hasItem: function (sKey) {
-    return (new RegExp("(?:^|;\\s*)" + encodeURIComponent(sKey).replace(/[-.+*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+    return new RegExp(
+      "(?:^|;\\s*)" +
+        encodeURIComponent(sKey).replace(/[-.+*]/g, "\\$&") +
+        "\\s*\\=",
+    ).test(document.cookie);
   },
   keys: /* optional method: you can safely remove it! */ function () {
-    var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
-    for (var nIdx = 0; nIdx < aKeys.length; nIdx++) { aKeys[nIdx] = decodeURIComponent(aKeys[nIdx]); }
+    var aKeys = document.cookie
+      .replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "")
+      .split(/\s*(?:\=[^;]*)?;\s*/);
+    for (var nIdx = 0; nIdx < aKeys.length; nIdx++) {
+      aKeys[nIdx] = decodeURIComponent(aKeys[nIdx]);
+    }
     return aKeys;
-  }
+  },
 };
 ```
 
@@ -240,11 +280,20 @@ docCookies.keys()
 
 ```js
 docCookies.setItem("test0", "Hello world!");
-docCookies.setItem("test1", "Unicode test: \u00E0\u00E8\u00EC\u00F2\u00F9", Infinity);
+docCookies.setItem(
+  "test1",
+  "Unicode test: \u00E0\u00E8\u00EC\u00F2\u00F9",
+  Infinity,
+);
 docCookies.setItem("test2", "Hello world!", new Date(2020, 5, 12));
 docCookies.setItem("test3", "Hello world!", new Date(2027, 2, 3), "/blog");
 docCookies.setItem("test4", "Hello world!", "Sun, 06 Nov 2022 21:43:15 GMT");
-docCookies.setItem("test5", "Hello world!", "Tue, 06 Dec 2022 13:11:07 GMT", "/home");
+docCookies.setItem(
+  "test5",
+  "Hello world!",
+  "Tue, 06 Dec 2022 13:11:07 GMT",
+  "/home",
+);
 docCookies.setItem("test6", "Hello world!", 150);
 docCookies.setItem("test7", "Hello world!", 245, "/content");
 docCookies.setItem("test8", "Hello world!", null, null, "example.com");
@@ -279,7 +328,7 @@ Web 应用程序通常使用 cookies 来标识用户身份及他们的登录会�
 
 - 从 Firefox 2 起，有更好的客户端存储机制用以替代 cookie - [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
 - 你可以通过更新一个 cookie 的过期时间为 0 来删除一个 cookie。
-- 请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果您只是需要存储些 "client-only" 的数据，那么郑重建议您使用 [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
+- 请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果你只是需要存储些 "client-only" 的数据，那么郑重建议你使用 [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
 
 ## 规范
 

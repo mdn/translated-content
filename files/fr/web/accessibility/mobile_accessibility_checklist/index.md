@@ -1,7 +1,6 @@
 ---
 title: Check-list pour l'accessibilité mobile
 slug: Web/Accessibility/Mobile_accessibility_checklist
-translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
 
 Ce document fournit une liste concise des points à vérifier par les développeuses et développeurs pour garantir l'accessibilité d'une application mobile. Ce document est amené à évoluer pour tenir compte de nouvelles bonnes pratiques.

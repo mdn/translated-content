@@ -1,7 +1,6 @@
 ---
 title: userScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/register
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/register
 ---
 
 {{AddonSidebar}}

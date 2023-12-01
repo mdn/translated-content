@@ -1,7 +1,6 @@
 ---
 title: Présentation
 slug: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
-translation_of: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
 ---
 
 [« Transformations XML avec XSLT](/fr/docs/Transformations_XML_avec_XSLT)

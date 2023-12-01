@@ -1,7 +1,6 @@
 ---
 title: PerformanceLongTaskTiming
 slug: Web/API/PerformanceLongTaskTiming
-translation_of: Web/API/PerformanceLongTaskTiming
 ---
 
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}

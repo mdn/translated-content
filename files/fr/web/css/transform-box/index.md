@@ -1,7 +1,6 @@
 ---
 title: transform-box
 slug: Web/CSS/transform-box
-translation_of: Web/CSS/transform-box
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -61,7 +60,7 @@ p {
 }
 
 .premier {
-   border: 3px black solid;
+  border: 3px black solid;
 }
 
 .deuxieme {

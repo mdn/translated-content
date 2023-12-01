@@ -1,11 +1,6 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
-tags:
-  - ECMAScript6
-  - JavaScript
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
 
 {{JSRef()}}
@@ -64,10 +59,10 @@ ws.add(window);
 ws.add(obj);
 
 ws.has(window); // true
-ws.has(foo);    // false, foo не добавлен в WeakSet
+ws.has(foo); // false, foo не добавлен в WeakSet
 
 ws.delete(window); // удаляет window из WeakSet
-ws.has(window);    // false, window был удалён
+ws.has(window); // false, window был удалён
 ```
 
 ## Спецификации

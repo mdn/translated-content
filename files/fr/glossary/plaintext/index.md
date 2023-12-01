@@ -1,8 +1,9 @@
 ---
 title: Texte brut
 slug: Glossary/Plaintext
-translation_of: Glossary/Plaintext
 ---
+
+{{GlossarySidebar}}
 
 Un texte brut désigne soit une information qui a été utilisée comme entrée pour un {{Glossary("algorithme")}} de {{Glossary("chiffrement")}} , soit un {{Glossary("cryptogramme")}} qui a été déchiffré.
 

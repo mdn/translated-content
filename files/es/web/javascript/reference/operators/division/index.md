@@ -1,7 +1,6 @@
 ---
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
-original_slug: Web/JavaScript/Referencia/Operadores/Division
 ---
 
 {{jsSidebar("Operators")}}
@@ -21,21 +20,21 @@ Operador: x / y
 ### Division basica
 
 ```js
-1 / 2              // 0.5
+1 / 2; // 0.5
 
-Math.floor(3 / 2) // 1
+Math.floor(3 / 2); // 1
 
-1.0 / 2.0         // 0.5
+1.0 / 2.0; // 0.5
 ```
 
 ### Division por cero
 
 ```js
-2.0 / 0     // Retorna Infinity
+2.0 / 0; // Retorna Infinity
 
-2.0 / 0.0   // Retorna Infinity, Dado que 0.0 === 0
+2.0 / 0.0; // Retorna Infinity, Dado que 0.0 === 0
 
-2.0 / -0.0  // Retorna -Infinity
+2.0 / -0.0; // Retorna -Infinity
 ```
 
 ## Especificaciones

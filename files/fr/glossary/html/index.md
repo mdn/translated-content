@@ -1,8 +1,9 @@
 ---
 title: HTML
 slug: Glossary/HTML
-translation_of: Glossary/HTML
 ---
+
+{{GlossarySidebar}}
 
 {{QuickLinksWithSubpages("/fr/docs/Glossaire")}}
 

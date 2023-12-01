@@ -26,9 +26,7 @@ target.onanimationcancel = {{jsxref("Function")}}
   </div>
 </div>
 
-<div class="button" id="toggleBox">
-  Hide the Box
-</div>
+<div class="button" id="toggleBox">Hide the Box</div>
 
 <pre id="log"></pre>
 ```
@@ -37,12 +35,12 @@ target.onanimationcancel = {{jsxref("Function")}}
 
 ```css hidden
 :root {
-  --boxwidth:50px;
+  --boxwidth: 50px;
 }
 
 .main {
   width: 300px;
-  height:300px;
+  height: 300px;
   border: 1px solid black;
 }
 
@@ -57,7 +55,10 @@ target.onanimationcancel = {{jsxref("Function")}}
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 #text {
@@ -67,7 +68,10 @@ target.onanimationcancel = {{jsxref("Function")}}
   text-align: center;
   align-self: center;
   color: white;
-  font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
+  font:
+    bold 1.4em "Lucida Grande",
+    "Open Sans",
+    sans-serif;
 }
 ```
 
@@ -79,10 +83,10 @@ Leaving out some bits of the CSS that don't matter for the discussion here, let'
   height: var(--boxwidth);
   left: 0;
   top: 0;
-  border: 1px solid #7788FF;
+  border: 1px solid #7788ff;
   margin: 0;
   position: relative;
-  background-color: #2233FF;
+  background-color: #2233ff;
   display: flex;
   justify-content: center;
   animation: 5s ease-in-out 0s infinite alternate both slideBox;
@@ -94,12 +98,12 @@ The animation's keyframes are described next, plotting a course from the top-lef
 ```css
 @keyframes slideBox {
   from {
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
   }
   to {
-    left:calc(100% - var(--boxwidth));
-    top:calc(100% - var(--boxwidth))
+    left: calc(100% - var(--boxwidth));
+    top: calc(100% - var(--boxwidth));
   }
 }
 ```
@@ -117,13 +121,16 @@ function log(msg, event) {
   logBox.innerHTML += msg;
 
   if (event) {
-    logBox.innerHTML += " <code>"+ event.animationName +
-        "</code> at time " + event.elapsedTime.toFixed(2) +
-        " seconds.";
+    logBox.innerHTML +=
+      " <code>" +
+      event.animationName +
+      "</code> at time " +
+      event.elapsedTime.toFixed(2) +
+      " seconds.";
   }
 
   logBox.innerHTML += "\n";
-};
+}
 ```
 
 Then we set up the `handleCancelEvent()` function, which is called in response to the `animationcancel` event, as set up in the HTML above. All we do here is log information to the console, but you might find other use cases, such as starting a new animation or effect, or terminating some dependent operation.
@@ -131,7 +138,7 @@ Then we set up the `handleCancelEvent()` function, which is called in response t
 ```js
 function handleCancelEvent(event) {
   log("Animation canceled", event);
-};
+}
 ```
 
 Then we add a method to handle toggle {{cssxref("display")}} between `"flex"` and `"none"` and establish it as the handler for a [`click`](/zh-CN/docs/Web/API/Element/click_event) event on the "Hide/Show" the Box button:

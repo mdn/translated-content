@@ -1,7 +1,6 @@
 ---
 title: "<portal> : l'élément de portail"
 slug: Web/HTML/Element/portal
-translation_of: Web/HTML/Element/portal
 ---
 
 {{HTMLSidebar}}

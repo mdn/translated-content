@@ -101,7 +101,7 @@ const select = document.getElementById("s");
 console.log(select.selectedIndex); // 1
 
 // 選択された選択肢の値を返す
-console.log(select.options[select.selectedIndex].value) // Second
+console.log(select.options[select.selectedIndex].value); // Second
 ```
 
 ユーザーの選択の変更を追跡するのであれば、 {{domxref("HTMLElement/change_event", "change")}} イベントが `<select>` に発生するのを監視するほうがより良い方法です。これは値が変化したときに通知され、必要なものを更新することができます。詳しくは、 `change` イベントのドキュメントで[提供されている例](/ja/docs/Web/API/HTMLElement/change_event#select_element)を参照してください。

@@ -1,9 +1,9 @@
 ---
 title: "HTMLInputElement: select イベント"
+short-title: select
 slug: Web/API/HTMLInputElement/select_event
-original_slug: Web/API/Element/select_event
 l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
@@ -29,7 +29,7 @@ onselect = (event) => {};
 ### 選択範囲をログ出力
 
 ```html
-<input value="この要素のテキストの一部を選択してみてください。">
+<input value="この要素のテキストの一部を選択してみてください。" />
 <p id="log"></p>
 ```
 
@@ -38,7 +38,7 @@ function logSelection(event) {
   const log = document.getElementById("log");
   const selection = event.target.value.substring(
     event.target.selectionStart,
-    event.target.selectionEnd
+    event.target.selectionEnd,
   );
   log.textContent = `You selected: ${selection}`;
 }

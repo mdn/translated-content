@@ -1,7 +1,6 @@
 ---
 title: "XML: Extensible Markup Language"
 slug: Web/XML
-translation_of: Web/XML
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/XML")}}

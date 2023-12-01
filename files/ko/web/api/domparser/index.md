@@ -16,7 +16,7 @@ HTML 문서의 경우, {{domxref("Element.innerHTML")}} 속성과 {{domxref("Ele
 ## 문법
 
 ```js
-let domparser = new DOMParser()
+let domparser = new DOMParser();
 ```
 
 ## 메소드
@@ -26,7 +26,7 @@ let domparser = new DOMParser()
 #### 문법
 
 ```js
-let doc = domparser.parseFromString(string, mimeType)
+let doc = domparser.parseFromString(string, mimeType);
 ```
 
 #### 반환
@@ -40,13 +40,13 @@ let doc = domparser.parseFromString(string, mimeType)
 - `string`
   - : 해석할 {{domxref("DOMString")}} 문자열. 반드시 {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}} 또는 {{Glossary("svg")}} 문서 형식에 맞아야 한다.
 - `mimeType`
-  - | : 아래 표에 정의한 형식을 반환 값으로 제공할 {{domxref("DOMString")}} 문자열. | `mimeType`                             | `doc.constructor` |
-    | ------------------------------------------------------------------------------------- | -------------------------------------- | ----------------- |
-    | `text/html`                                                                           | `{{domxref("Document")}}`     |
-    | `text/xml`                                                                            | `{{domxref("XMLDocument")}}` |
-    | `application/xml`                                                                     | `{{domxref("XMLDocument")}}` |
-    | `application/xhtml+xml`                                                               | `{{domxref("XMLDocument")}}` |
-    | `image/svg+xml`                                                                       | `{{domxref("XMLDocument")}}` |
+  - | : 아래 표에 정의한 형식을 반환 값으로 제공할 {{domxref("DOMString")}} 문자열. | `mimeType`                   | `doc.constructor` |
+    | ----------------------------------------------------------------------------- | ---------------------------- | ----------------- |
+    | `text/html`                                                                   | `{{domxref("Document")}}`    |
+    | `text/xml`                                                                    | `{{domxref("XMLDocument")}}` |
+    | `application/xml`                                                             | `{{domxref("XMLDocument")}}` |
+    | `application/xhtml+xml`                                                       | `{{domxref("XMLDocument")}}` |
+    | `image/svg+xml`                                                               | `{{domxref("XMLDocument")}}` |
 
 ## 예제
 

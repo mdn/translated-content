@@ -1,7 +1,6 @@
 ---
 title: PerformanceElementTiming.url
 slug: Web/API/PerformanceElementTiming/url
-translation_of: Web/API/PerformanceElementTiming/url
 ---
 
 {{APIRef("Element Timing API")}}

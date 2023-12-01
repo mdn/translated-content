@@ -1,7 +1,6 @@
 ---
 title: tabs.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
 ---
 
 {{AddonSidebar()}}

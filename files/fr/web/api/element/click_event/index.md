@@ -1,7 +1,6 @@
 ---
 title: "Element : évènement click"
 slug: Web/API/Element/click_event
-translation_of: Web/API/Element/click_event
 ---
 
 {{APIRef}}

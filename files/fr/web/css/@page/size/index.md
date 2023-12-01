@@ -1,7 +1,6 @@
 ---
 title: size
 slug: Web/CSS/@page/size
-translation_of: Web/CSS/@page/size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

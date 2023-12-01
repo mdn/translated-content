@@ -1,7 +1,6 @@
 ---
 title: Attr
 slug: Web/API/Attr
-translation_of: Web/API/Attr
 ---
 
 {{APIRef("DOM")}}
@@ -92,8 +91,6 @@ Les méthodes suivantes ont été dépréciées:
   - : Cette méthode retourne désormais toujours false.
 - `insertBefore()`
   - : Modifiez à la place la valeur de {{domxref ("Attr.value")}}.
-- `isSupported()`
-  - : Vous n'auriez pas dû l'utiliser en premier lieu, donc cela ne devrait pas vous ennuyer qu'il soit retiré.
 - `isEqualNode()`
   - : Vous n'auriez pas dû l'utiliser en premier lieu, donc cela ne devrait pas vous ennuyer qu'il soit retiré.
 - `normalize()`

@@ -1,8 +1,9 @@
 ---
 title: Asynchrone
 slug: Glossary/Asynchronous
-translation_of: Glossary/Asynchronous
 ---
+
+{{GlossarySidebar}}
 
 _Asynchrone_ fait référence à un environnement de communication où chaque partie reçoit et traite les messages lorsque c'est possible ou plus pratique, au lieu de le faire au même moment.
 

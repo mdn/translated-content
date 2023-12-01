@@ -1,10 +1,6 @@
 ---
 title: Создание контента для редактирования
 slug: conflicting/Web/HTML/Global_attributes/contenteditable
-tags:
-  - HTML5
-  - contenteditable
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Editable_content
 ---
 

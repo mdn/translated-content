@@ -12,7 +12,7 @@ slug: Web/API/HTMLElement/click
 ## 구문
 
 ```js
-element.click()
+element.click();
 ```
 
 ## 명세

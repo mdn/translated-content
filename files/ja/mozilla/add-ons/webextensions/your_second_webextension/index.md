@@ -1,7 +1,6 @@
 ---
 title: 2 つめの拡張機能
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 l10n:
   sourceCommit: 593600a6822de931ce9fb369849146ad25f22c6f
 ---
@@ -65,9 +64,7 @@ cd beastify
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -141,7 +138,7 @@ touch choose_beast.html choose_beast.css choose_beast.js
 HTML ファイルは次のようになります。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -190,19 +187,19 @@ button {
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
-  background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 button:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 button[type="reset"] {
-  background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 button[type="reset"]:hover {
-  background-color: #EAEA9D;
+  background-color: #eaea9d;
 }
 ```
 
@@ -249,7 +246,7 @@ function listenForClicks() {
         let url = beastNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "beastify",
-          beastURL: url
+          beastURL: url,
         });
       });
     }

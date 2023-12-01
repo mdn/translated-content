@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`entries()`** renvoie un nouvel objet `Array Iterator` qui contien
 ## Syntaxe
 
 ```js
-arr.entries()
+arr.entries();
 ```
 
 ### Valeur de retour

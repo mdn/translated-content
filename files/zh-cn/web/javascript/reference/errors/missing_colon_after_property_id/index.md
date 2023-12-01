@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing : after property id'
+title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
 
@@ -20,7 +20,7 @@ SyntaxError: missing : after property id
 当使用[对象初始化](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)语法创建对象的时候，需要使用半角冒号 (:) 将属性键与属性值隔开。
 
 ```js
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 ```
 
 ## 示例
@@ -37,12 +37,12 @@ var obj = { propertyKey = 'value' };
 修复方法就是使用冒号，或者是在对象创建之后使用方括号语法来为其设定新的属性。
 
 ```js example-good
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 
 // or alternatively
 
-var obj = { };
-obj['propertyKey'] = 'value';
+var obj = {};
+obj["propertyKey"] = "value";
 ```
 
 ### 空属性
@@ -72,7 +72,7 @@ var obj = { 'b'+'ar': 'foo' };
 把计算表达式放置到方括号（`[]`）中：
 
 ```js example-good
-var obj = { ['b'+'ar']: 'foo' };
+var obj = { ["b" + "ar"]: "foo" };
 ```
 
 ## 相关内容

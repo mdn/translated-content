@@ -1,7 +1,6 @@
 ---
 title: Styles des navigateurs
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 
 {{AddonSidebar}}

@@ -1,13 +1,8 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
-tags:
-  - API
-  - DOM
-  - Interface
-  - NodeList
-translation_of: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 Объект **NodeList** — это коллекция узлов, возвращаемая такими методами, как {{domxref("Node.childNodes")}} и {{domxref("document.querySelectorAll")}}.
@@ -41,10 +36,10 @@ translation_of: Web/API/NodeList
 В определённых случаях `NodeList` может являться _динамической коллекцией_. Это означает, что любые изменения в DOM тут же отражаются на коллекции. Примером подобной коллекции является {{domxref("Node.childNodes")}}:
 
 ```js
-const parent = document.getElementById('parent');
+const parent = document.getElementById("parent");
 const childNodes = parent.childNodes;
 console.log(childNodes.length); // пусть равно "2"
-parent.appendChild(document.createElement('div')); // добавляем новый div
+parent.appendChild(document.createElement("div")); // добавляем новый div
 console.log(childNodes.length); // выведет "3"
 ```
 
@@ -83,7 +78,7 @@ for (let i = 0; i < myNodeList.length; i++) {
 Циклы [`for...of`](/ru/docs/JavaScript/Reference/Statements/for...of) корректно перечисляют все объекты внутри `NodeList` :
 
 ```js
-const list = document.querySelectorAll('input[type=checkbox]');
+const list = document.querySelectorAll("input[type=checkbox]");
 for (const item of list) {
   item.checked = true;
 }
@@ -94,11 +89,15 @@ for (const item of list) {
 Иногда удобнее работать с содержимым `NodeList`, используя методы `Array`. Ниже приведены способы преобразования `NodeList` к `Array`:
 
 ```js
-const list = document.querySelectorAll('div'); // возвращает NodeList
+const list = document.querySelectorAll("div"); // возвращает NodeList
 const array1 = Array.from(list); // преобразует NodeList в Array
 const array2 = [...list]; // преобразует NodeList в Array
 ```
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 3](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-536297177)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

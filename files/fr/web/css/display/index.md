@@ -1,7 +1,6 @@
 ---
 title: display
 slug: Web/CSS/display
-translation_of: Web/CSS/display
 ---
 
 {{CSSRef}}
@@ -128,12 +127,8 @@ En plus de l'exemple qui suit, vous pouvez voir d'autres exemples sur les sectio
 ### HTML
 
 ```html
-<p>
-  Texte visible
-</p>
-<p class="secret">
-  Texte invisible
-</p>
+<p>Texte visible</p>
+<p class="secret">Texte invisible</p>
 ```
 
 ### CSS

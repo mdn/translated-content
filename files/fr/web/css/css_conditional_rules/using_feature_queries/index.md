@@ -1,7 +1,6 @@
 ---
 title: Utiliser les requêtes de fonctionnalité (feature queries)
 slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
-translation_of: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
 ---
 
 {{CSSRef}}

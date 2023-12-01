@@ -1,7 +1,6 @@
 ---
 title: order
 slug: Web/CSS/order
-translation_of: Web/CSS/order
 ---
 
 {{CSSRef}}
@@ -44,10 +43,10 @@ order: unset;
 ### HTML
 
 ```html
-<div id='main'>
-   <article>Lorem ipsum</article>
-   <nav> consectetur adipisicing elit, sed do eiusmod</nav>
-   <aside>tempor incididunt ut labore et dolore magna</aside>
+<div id="main">
+  <article>Lorem ipsum</article>
+  <nav>consectetur adipisicing elit, sed do eiusmod</nav>
+  <aside>tempor incididunt ut labore et dolore magna</aside>
 </div>
 ```
 
@@ -61,7 +60,7 @@ Grâce à ces déclarations CSS, on crée un disposition avec deux barres entour
 }
 
 #main > article {
-  flex:1;
+  flex: 1;
   order: 2;
   border: 1px dotted orange;
 }

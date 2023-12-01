@@ -26,36 +26,38 @@ var string = event.type;
 ```
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
+  <head>
+    <title>exemplo de tipo</title>
 
-<title>exemplo de tipo</title>
+    <script>
+      var currEvent = null;
 
-<script>
-var currEvent = null;
+      function getEvtType(evt) {
+        currEvent = evt.type;
+        document.getElementById("Etype").firstChild.nodeValue = currEvent;
+      }
+    </script>
+  </head>
 
-function getEvtType(evt) {
-  currEvent = evt.type;
-  document.getElementById("Etype").firstChild.nodeValue = currEvent;
-}
-
-</script>
-</head>
-
-<body
-  onkeydown="getEvtType(event)"
-  onkeyup="getEvtType(event)"
-  onmousedown="getEvtType(event)"
-  onmouseup="getEvtType(event)">
-
-<p>Pressione uma tecla ou clique com o mouse para obter o tipo de evento.</p>
-<p>Tipo de evento: <span id="Etype">-</span></p>
-
-</body>
+  <body
+    onkeydown="getEvtType(event)"
+    onkeyup="getEvtType(event)"
+    onmousedown="getEvtType(event)"
+    onmouseup="getEvtType(event)">
+    <p>
+      Pressione uma tecla ou clique com o mouse para obter o tipo de evento.
+    </p>
+    <p>Tipo de evento: <span id="Etype">-</span></p>
+  </body>
 </html>
 ```
 
-## Especificação
+## Especificações
 
-- [type](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-type)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

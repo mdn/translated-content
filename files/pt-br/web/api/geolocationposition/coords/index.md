@@ -15,13 +15,11 @@ coord = position.coords
 
 ## Especificações
 
-| Especificação                                                                | Status                           | Comentário             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation', '#coords', 'Position.coords')}} | {{Spec2('Geolocation')}} | Especificação inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GeolocationPosition.coords")}}
+{{Compat}}
 
 ## Veja também
 

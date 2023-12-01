@@ -1,7 +1,6 @@
 ---
 title: L'héritage au sein de JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-translation_of: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}

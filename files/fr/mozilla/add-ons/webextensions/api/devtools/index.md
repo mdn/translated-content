@@ -1,7 +1,6 @@
 ---
 title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools
 ---
 
 {{AddonSidebar}}

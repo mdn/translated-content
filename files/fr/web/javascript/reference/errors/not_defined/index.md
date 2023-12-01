@@ -1,7 +1,6 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
 
 {{jsSidebar("Errors")}}
@@ -42,9 +41,9 @@ toto.substring(1); // "ruc"
 Une variable doit être disponible dans le contexte d'exécution où elle est utilisée. Les variables définies au sein d'une fonction ne peuvent pas être utilisées en dehors de cette fonction car la variable appartient à la _portée_ de la fonction.
 
 ```js example-bad
-function numbers () {
+function numbers() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
   return num1 + num2;
 }
 
@@ -55,9 +54,9 @@ Toutefois, une fonction peut accéder aux variables et aux fonctions définies d
 
 ```js example-good
 var num1 = 2,
-    num2 = 3;
+  num2 = 3;
 
-function numbers () {
+function numbers() {
   return num1 + num2;
 }
 

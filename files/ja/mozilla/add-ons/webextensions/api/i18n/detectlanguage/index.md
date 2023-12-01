@@ -13,8 +13,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
 
 ```js
 var detectingLanguages = browser.i18n.detectLanguage(
-  text                  // string
-)
+  text, // string
+);
 ```
 
 ### 引数
@@ -39,19 +39,19 @@ var detectingLanguages = browser.i18n.detectLanguage(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.detectLanguage")}}
+{{Compat}}
 
 ## 例
 
 ```js
 function onLanguageDetected(langInfo) {
-  for (lang of  langInfo.languages) {
+  for (lang of langInfo.languages) {
     console.log("Language is: " + lang.language);
     console.log("Percentage is: " + lang.percentage);
   }
 }
 
-var text = "L'homme est né libre, et partout il est dans les fers."
+var text = "L'homme est né libre, et partout il est dans les fers.";
 
 var detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);

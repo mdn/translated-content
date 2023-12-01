@@ -13,74 +13,92 @@ slug: Web/API/Web_Animations_API/Keyframe_Formats
 
 1. 一个由多个关键帧的属性和值组成的对象所构成的`数组`。这是{{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}}方法返回的规范格式。
 
-    ```js
-    element.animate([
-      { // from
-        opacity: 0,
-        color: "#fff"
-      },
-      { // to
-        opacity: 1,
-        color: "#000"
-      }
-    ], 2000);
-    ```
+   ```js
+   element.animate(
+     [
+       {
+         // from
+         opacity: 0,
+         color: "#fff",
+       },
+       {
+         // to
+         opacity: 1,
+         color: "#000",
+       },
+     ],
+     2000,
+   );
+   ```
 
-    对每个关键帧的偏移可以通过提供一个`offset`来指定。
+   对每个关键帧的偏移可以通过提供一个`offset`来指定。
 
-    ```js
-    element.animate([ { opacity: 1 },
-                      { opacity: 0.1, offset: 0.7 },
-                      { opacity: 0 } ],
-                    2000);
-    ```
+   ```js
+   element.animate(
+     [{ opacity: 1 }, { opacity: 0.1, offset: 0.7 }, { opacity: 0 }],
+     2000,
+   );
+   ```
 
-    > **备注：** `offset` 的值必须是在 **\[0.0, 1.0]** 这个区间内，且须升序排列。
+   > **备注：** `offset` 的值必须是在 **\[0.0, 1.0]** 这个区间内，且须升序排列。
 
-    并非所有的关键帧都需要设置 `offset`。没有指定 `offset` 的关键帧将与相邻的关键帧均匀间隔。
+   并非所有的关键帧都需要设置 `offset`。没有指定 `offset` 的关键帧将与相邻的关键帧均匀间隔。
 
-    可以通过提供`easing`过渡来给指定关键帧之间应用过渡效果，如下所示：
+   可以通过提供`easing`过渡来给指定关键帧之间应用过渡效果，如下所示：
 
-    ```js
-    element.animate([ { opacity: 1, easing: 'ease-out' },
-                      { opacity: 0.1, easing: 'ease-in' },
-                      { opacity: 0 } ],
-                    2000);
-    ```
+   ```js
+   element.animate(
+     [
+       { opacity: 1, easing: "ease-out" },
+       { opacity: 0.1, easing: "ease-in" },
+       { opacity: 0 },
+     ],
+     2000,
+   );
+   ```
 
-    在这个例子中，指定的 easing 仅适用于指定它的关键帧到下一帧之间。但是在`options`中指定的 `easing` 值都将应用在一个动画的整个持续时间里。
+   在这个例子中，指定的 easing 仅适用于指定它的关键帧到下一帧之间。但是在`options`中指定的 `easing` 值都将应用在一个动画的整个持续时间里。
 
 2. 一个包含 key-value 键值的`对象`需要包含动画的属性和要循环变化的值`数组`。
 
-    ```js
-    element.animate({
-      opacity: [ 0, 1 ],          // [ from, to ]
-      color:   [ "#fff", "#000" ] // [ from, to ]
-    }, 2000);
-    ```
+   ```js
+   element.animate(
+     {
+       opacity: [0, 1], // [ from, to ]
+       color: ["#fff", "#000"], // [ from, to ]
+     },
+     2000,
+   );
+   ```
 
-    使用这种格式，每个数组的元素数量不必相等。所提供的值将独立分开。
+   使用这种格式，每个数组的元素数量不必相等。所提供的值将独立分开。
 
-    ```js
-    element.animate({
-      opacity: [ 0, 1 ], // offset: 0, 1
-      backgroundColor: [ "red", "yellow", "green" ], // offset: 0, 0.5, 1
-    }, 2000);
-    ```
+   ```js
+   element.animate(
+     {
+       opacity: [0, 1], // offset: 0, 1
+       backgroundColor: ["red", "yellow", "green"], // offset: 0, 0.5, 1
+     },
+     2000,
+   );
+   ```
 
-    特殊键`offset`，`easing`和`composite`（如下）可以与属性值一起指定。
+   特殊键`offset`，`easing`和`composite`（如下）可以与属性值一起指定。
 
-    ```js
-    element.animate({
-      opacity: [ 0, 0.9, 1 ],
-      offset: [ 0, 0.8 ], // [ 0, 0.8, 1 ] 的简写
-      easing: [ 'ease-in', 'ease-out' ],
-    }, 2000);
-    ```
+   ```js
+   element.animate(
+     {
+       opacity: [0, 0.9, 1],
+       offset: [0, 0.8], // [ 0, 0.8, 1 ] 的简写
+       easing: ["ease-in", "ease-out"],
+     },
+     2000,
+   );
+   ```
 
-    从属性值列表生成一组合适的关键帧后，每个提供的偏移量将应用于相应的关键帧。如果值不足或者列表包含空值`null`，则以没有指定处理（即和上面第 1 种数组格式的一样均匀间隔）.
+   从属性值列表生成一组合适的关键帧后，每个提供的偏移量将应用于相应的关键帧。如果值不足或者列表包含空值`null`，则以没有指定处理（即和上面第 1 种数组格式的一样均匀间隔）.
 
-    如果`easing` 或`composite` 值太少，将根据需要，重复相应的列表。
+   如果`easing` 或`composite` 值太少，将根据需要，重复相应的列表。
 
 ## 属性
 

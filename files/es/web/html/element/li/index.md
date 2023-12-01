@@ -1,7 +1,6 @@
 ---
 title: li
 slug: Web/HTML/Element/li
-original_slug: Web/HTML/Elemento/li
 ---
 
 ### Definición

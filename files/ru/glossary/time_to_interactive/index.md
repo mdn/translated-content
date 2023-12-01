@@ -1,9 +1,9 @@
 ---
 title: Time to interactive
 slug: Glossary/Time_to_interactive
-translation_of: Glossary/Time_to_interactive
-original_slug: Глоссарий/Time_to_interactive
 ---
+
+{{GlossarySidebar}}
 
 **Время до интерактивности** (англ. Time to Interactive, TTI) - это нестандартизированная метрика веб-производительности, которая определяется как момент времени, когда завершилась последняя [долгая задача](/ru/docs/Web/API/Long_Tasks_API), после которой следовало 5 секунд бездействия сети и основного потока.
 

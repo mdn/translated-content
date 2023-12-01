@@ -1,7 +1,6 @@
 ---
 title: pageAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
 ---
 
 {{AddonSidebar()}}

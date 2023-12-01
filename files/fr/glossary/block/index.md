@@ -1,8 +1,9 @@
 ---
 title: Bloc
 slug: Glossary/Block
-translation_of: Glossary/Block
 ---
+
+{{GlossarySidebar}}
 
 Le terme **bloc** possède différentes significations en fonction du contexte :
 

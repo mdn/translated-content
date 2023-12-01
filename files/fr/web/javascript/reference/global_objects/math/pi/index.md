@@ -1,7 +1,6 @@
 ---
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
 
 {{JSRef}}
@@ -27,7 +26,7 @@ function calculPérimètre(rayon) {
   return 2 * Math.PI * rayon;
 }
 
-calculPérimètre(1);  // 6.283185307179586
+calculPérimètre(1); // 6.283185307179586
 ```
 
 ## Spécifications

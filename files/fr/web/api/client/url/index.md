@@ -1,7 +1,6 @@
 ---
 title: Client.url
 slug: Web/API/Client/url
-translation_of: Web/API/Client/url
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}La propriété **`url`** (lecture seule) de l'interface {{domxref("Client")}} retourne l'url du service worker client courant.

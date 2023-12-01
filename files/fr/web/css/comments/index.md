@@ -1,7 +1,6 @@
 ---
 title: Commentaires
 slug: Web/CSS/Comments
-translation_of: Web/CSS/Comments
 ---
 
 {{CSSRef}}
@@ -26,7 +25,6 @@ Commentaire
 sur plusieurs
 lignes
 */
-
 
 /* Le commentaire qui suit permet
    de désactiver une règle */

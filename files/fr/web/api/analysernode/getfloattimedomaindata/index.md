@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.getFloatTimeDomainData()
 slug: Web/API/AnalyserNode/getFloatTimeDomainData
-translation_of: Web/API/AnalyserNode/getFloatTimeDomainData
 ---
 
 {{ APIRef("Web Audio API") }}

@@ -3,7 +3,6 @@ title: ウェブフォームへのスタイル設定
 slug: Learn/Forms/Styling_web_forms
 l10n:
   sourceCommit: 4ca03cbbfe78d66e4e7efd7ceaf04acb08a18572
-original_slug: Learn/Forms/Styling_HTML_forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}

@@ -1,7 +1,6 @@
 ---
 title: PerformanceMark
 slug: Web/API/PerformanceMark
-translation_of: Web/API/PerformanceMark
 ---
 
 {{APIRef("User Timing API")}}

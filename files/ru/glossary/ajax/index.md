@@ -1,14 +1,9 @@
 ---
 title: AJAX
 slug: Glossary/AJAX
-tags:
-  - AJAX
-  - Написание скриптов
-  - Глоссарий
-  - инфраструктура
-translation_of: Glossary/AJAX
-original_slug: Глоссарий/AJAX
 ---
+
+{{GlossarySidebar}}
 
 **Ajax**, который изначально означал «Асинхронный {{Glossary("JavaScript")}} и {{Glossary("XML")}}», — это практика программирования для создания сложных, динамических веб-страниц с использованием технологии {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}.
 

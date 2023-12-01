@@ -1,7 +1,6 @@
 ---
 title: text-orientation
 slug: Web/CSS/text-orientation
-translation_of: Web/CSS/text-orientation
 ---
 
 {{CSSRef}}

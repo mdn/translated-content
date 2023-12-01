@@ -1,7 +1,6 @@
 ---
 title: notifications.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
 ---
 
 {{AddonSidebar()}}

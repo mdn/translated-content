@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
 
 {{JSRef}}
@@ -19,7 +18,7 @@ dateObj.setMinutes(valeurMinutes[, valeurSecondes[, valeurMs]])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setMinutes(valeurMinutes)
+dateObj.setMinutes(valeurMinutes);
 ```
 
 ### Paramètres

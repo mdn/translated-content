@@ -1,15 +1,6 @@
 ---
 title: Коды ответа HTTP
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - HTTP Response codes
-  - HTTP response code
-  - код ответа HTTP
-  - коды HTTP
-  - ошибки HTTP
-  - HTTP-коды ответов
-translation_of: Web/HTTP/Status
 ---
 
 {{HTTPSidebar}}
@@ -393,7 +384,7 @@ translation_of: Web/HTTP/Status
           href="http://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/"
           >HTTP механизмы предварительного соединения</a
         >
-        для ускорения сёрфинга (смотрите {{ bug(634278) }}, будущей
+        для ускорения сёрфинга (смотрите [Firefox bug 634278](https://bugzil.la/634278), будущей
         реализации этого механизма в Firefox). Также учитывайте, что некоторые
         серверы прерывают соединения не отправляя подобных сообщений.
       </td>

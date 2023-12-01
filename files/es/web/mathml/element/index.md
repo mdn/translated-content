@@ -1,7 +1,6 @@
 ---
 title: Referencia de elementos de MathML
 slug: Web/MathML/Element
-original_slug: Web/MathML/Elemento
 ---
 
 A continuación se muestra una lista alfabética de elementos de **presentación** en MathML.

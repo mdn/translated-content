@@ -1,7 +1,6 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
-translation_of: Web/API/Worker/Worker
 ---
 
 {{APIRef("Worker")}}

@@ -16,7 +16,7 @@ function logTabs(tabs) {
   console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs);
+browser.tabs.query({ currentWindow: true }, logTabs);
 ```
 
 API の多くは非同期で、 {{JSxRef("Promise")}} を返します:
@@ -30,9 +30,7 @@ function logError(e) {
   console.error(e);
 }
 
-let setCookie = browser.cookies.set(
-  {url: "/"}
-);
+let setCookie = browser.cookies.set({ url: "/" });
 setCookie.then(logCookie, logError);
 ```
 

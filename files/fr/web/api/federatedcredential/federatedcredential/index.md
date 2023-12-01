@@ -1,7 +1,6 @@
 ---
 title: FederatedCredential
 slug: Web/API/FederatedCredential/FederatedCredential
-translation_of: Web/API/FederatedCredential/FederatedCredential
 ---
 
 {{APIRef("")}}{{Non-standard_header}}

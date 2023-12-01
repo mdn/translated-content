@@ -43,26 +43,36 @@ Lorsqu'une règle `important` est utilisée dans une déclaration de style, cett
 1. Utiliser mieux la cascade CSS
 2. Utiliser davantage des règles spécifiques. En indiquant un ou plusieurs éléments avant l'élément sélectionné, la règle devient plus spécifique et sa priorité est accrue&nbsp;:
 
-    ```html
-    <div id="test">
-      <span>Texte</span>
-    </div>
-    ```
+   ```html
+   <div id="test">
+     <span>Texte</span>
+   </div>
+   ```
 
-    ```css
-    div#test span { color: green; }
-    div span { color: blue; }
-    span { color: red; }
-    ```
+   ```css
+   div#test span {
+     color: green;
+   }
+   div span {
+     color: blue;
+   }
+   span {
+     color: red;
+   }
+   ```
 
-    L'ordre n'a aucune importance, le texte sera en vert (_green_) car cette règle est plus spécifique. (Également, la règle pour bleu est prioritaire par rapport à celle pour rouge, là encore l'ordre n'a pas d'importance)
+   L'ordre n'a aucune importance, le texte sera en vert (_green_) car cette règle est plus spécifique. (Également, la règle pour bleu est prioritaire par rapport à celle pour rouge, là encore l'ordre n'a pas d'importance)
 
 3. En rapport avec le point 2, le fait de dupliquer des sélecteurs simples afin d''augmenter la spécificité lorsque vous n'avez aucun autre moyen de le faire, n'a aucun sens.
 
-    ```css
-    #monId#monId span { color: yellow; }
-    .maClasse.maClasse span { color: orange; }
-    ```
+   ```css
+   #monId#monId span {
+     color: yellow;
+   }
+   .maClasse.maClasse span {
+     color: orange;
+   }
+   ```
 
 #### Utilisation de !important
 
@@ -105,15 +115,23 @@ A) Ajouter une autre règle CSS avec `!important` et, soit donner au sélecteur 
 Quelques exemples avec une spécificité accrue&nbsp;:
 
 ```css
-table td    { height: 50px !important; }
-.monTableau td { height: 50px !important; }
-#monTableau td { height: 50px !important; }
+table td {
+  height: 50px !important;
+}
+.monTableau td {
+  height: 50px !important;
+}
+#monTableau td {
+  height: 50px !important;
+}
 ```
 
 B) Ou ajouter le même sélecteur après le sélecteur existant&nbsp;:
 
 ```css
-td { height: 50px !important; }
+td {
+  height: 50px !important;
+}
 ```
 
 C) Ou, de préférence, réécrire la règle d'origine afin d'éviter totalement l'utilisation de `!important`.
@@ -200,7 +218,12 @@ div p {
 
 ```html hidden
 <div id="no-where-support">
-⚠️ Votre navigateur ne prend pas en charge la pseudo-classe <code><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top">:where()</a></code>.
+  ⚠️ Votre navigateur ne prend pas en charge la pseudo-classe
+  <code
+    ><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top"
+      >:where()</a
+    ></code
+  >.
 </div>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
-translation_of: Web/API/DOMRectReadOnly/DOMRectReadOnly
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable }}

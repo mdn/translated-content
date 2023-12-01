@@ -1,12 +1,6 @@
 ---
 title: <maction>
 slug: Web/MathML/Element/maction
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Enlivening Expressions
-translation_of: Web/MathML/Element/maction
 ---
 
 {{MathMLRef}}

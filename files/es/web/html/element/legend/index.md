@@ -1,7 +1,6 @@
 ---
 title: legend
 slug: Web/HTML/Element/legend
-original_slug: Web/HTML/Elemento/legend
 ---
 
 ### Definición

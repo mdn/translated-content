@@ -1,9 +1,9 @@
 ---
 title: Semantics
 slug: Glossary/Semantics
-translation_of: Glossary/Semantics
-original_slug: Глоссарий/Semantics
 ---
+
+{{GlossarySidebar}}
 
 В программировании, **Семантика** означает _значение_ фрагмента кода - например, «К какому результату приведёт выполнение этой строки JavaScript?», или «Каково предназначение или какая роль у этого элемента HTML?», а не «Как он выглядит?».
 

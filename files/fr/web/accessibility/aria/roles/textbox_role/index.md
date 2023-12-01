@@ -1,7 +1,6 @@
 ---
 title: Utiliser le rôle textbox
 slug: Web/Accessibility/ARIA/Roles/textbox_role
-translation_of: Web/Accessibility/ARIA/Roles/textbox_role
 ---
 
 ### Description

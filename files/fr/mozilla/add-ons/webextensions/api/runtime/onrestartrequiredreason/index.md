@@ -1,7 +1,6 @@
 ---
 title: runtime.OnRestartRequiredReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
 ---
 
 {{AddonSidebar()}}

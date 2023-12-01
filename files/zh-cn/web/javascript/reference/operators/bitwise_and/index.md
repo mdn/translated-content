@@ -1,7 +1,6 @@
 ---
 title: 按位与（&）
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-original_slug: Web/JavaScript/Reference/Operators/按位与
 ---
 
 {{jsSidebar("Operators")}}

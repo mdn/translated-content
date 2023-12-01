@@ -27,7 +27,7 @@ TBD
 
 ## ブラウザーの互換性
 
-{{Compat("api.GamepadPose.hasOrientation")}}
+{{Compat}}
 
 ## 関連情報
 

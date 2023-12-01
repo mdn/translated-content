@@ -1,7 +1,6 @@
 ---
 title: <style>
 slug: Web/SVG/Element/style
-translation_of: Web/SVG/Element/style
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: EXSLT
 slug: Web/EXSLT
-translation_of: Web/EXSLT
 ---
 
 {{ XsltRef() }}

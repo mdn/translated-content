@@ -1,7 +1,6 @@
 ---
 title: Страница списка книг
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
 
 Далее мы реализуем нашу страницу списка книг. На этой странице должен отображаться список всех книг и их авторов в базе данных, причём каждое название книги является гиперссылкой на соответствующую страницу сведений о книге.

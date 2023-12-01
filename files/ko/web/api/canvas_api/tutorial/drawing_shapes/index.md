@@ -1,7 +1,6 @@
 ---
 title: 캔버스(canvas)를 이용한 도형 그리기
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-original_slug: Web/HTML/Canvas/Tutorial/Drawing_shapes
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
@@ -33,17 +32,17 @@ original_slug: Web/HTML/Canvas/Tutorial/Drawing_shapes
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -99,17 +98,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="100" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="100" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -137,26 +136,26 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-     var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
     ctx.stroke();
   }
 }
@@ -183,17 +182,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // Filled triangle
     ctx.beginPath();
@@ -230,7 +229,7 @@ function draw() {
 
 `arc` 메소드의 여섯개의 매개변수에 대하여 좀 더 자세하게 알아봅시다: `x` 와 `y`는 호를 그릴 때 필요한 원점 좌표입니다. 반지름(`radius`) 은 말 그대로 호의 반지름을 뜻합니다. `startAngle` 및 `endAngle` 매개 변수는 원의 커브를 따라 호의 시작점과 끝점을 라디안 단위로 정의합니다. 이 변수들은 x축을 기준으로 계산됩니다. Boolean 값을 가지는 `anticlockwise` 변수는 `true`일 때 호를 반시계 방향으로 그리게 되며, 그렇지 않을 경우에는 시계 방향으로 그리게 됩니다.
 
-> **참고:** `arc` 함수에서 각도는 각이 아닌 라디안 값을 사용합니다. 각도를 라디안으로 바꾸려면 다음의 자바스크립트(JavaScript) 코드를 사용하실 수 있습니다: `radians = (Math.PI/180)*degrees`.
+> **참고:** `arc` 함수에서 각도는 각이 아닌 라디안 값을 사용합니다. 각도를 라디안으로 바꾸려면 다음의 JavaScript(JavaScript) 코드를 사용하실 수 있습니다: `radians = (Math.PI/180)*degrees`.
 
 다음의 예제는 우리가 이제껏 봐 왔던 예제들 보다 약간 더 복잡합니다. 이 예제는 12가지의 다양한 각도로 채워진 각기 다른 호를 그립니다.
 
@@ -244,9 +243,9 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="200"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="200"></canvas>
+  </body>
 </html>
 ```
 
@@ -304,17 +303,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // Quadratric curves example
     ctx.beginPath();
@@ -338,17 +337,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // Cubic curves example
     ctx.beginPath();
@@ -381,17 +380,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     roundedRect(ctx, 12, 12, 150, 150, 15);
     roundedRect(ctx, 19, 19, 150, 150, 9);
@@ -431,7 +430,7 @@ function draw() {
     ctx.lineTo(83, 116);
     ctx.fill();
 
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = "white";
     ctx.beginPath();
     ctx.moveTo(91, 96);
     ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
@@ -445,7 +444,7 @@ function draw() {
     ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
 
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = "black";
     ctx.beginPath();
     ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
@@ -464,7 +463,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
   ctx.lineTo(x, y + height - radius);
   ctx.arcTo(x, y + height, x + radius, y + height, radius);
   ctx.lineTo(x + width - radius, y + height);
-  ctx.arcTo(x + width, y + height, x + width, y + height-radius, radius);
+  ctx.arcTo(x + width, y + height, x + width, y + height - radius, radius);
   ctx.lineTo(x + width, y + radius);
   ctx.arcTo(x + width, y, x + width - radius, y, radius);
   ctx.lineTo(x + radius, y);
@@ -491,9 +490,9 @@ function roundedRect(ctx, x, y, width, height, radius) {
   - : **`Path2D()`** 생성자는 새로운 `Path2D` 객체를 반환합니다. 선택적으로 다른 경로를 인수로 받거나(복사본을 생성), SVG 경로 데이터로 구성된 문자열을 받아서 객체로 반환합니다.
 
 ```js
-new Path2D();     // empty path object
+new Path2D(); // empty path object
 new Path2D(path); // copy from another Path2D object
-new Path2D(d);    // path from SVG path data
+new Path2D(d); // path from SVG path data
 ```
 
 `moveTo`, `rect`, `arc` 혹은 `quadraticCurveTo` 등과 같은 모든 경로 메소드 ([path methods](/ko/docs/Web/API/CanvasRenderingContext2D#Paths))들은 `Path2D` 객체에서 사용 가능합니다.
@@ -509,17 +508,17 @@ new Path2D(d);    // path from SVG path data
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     var rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
@@ -543,7 +542,7 @@ function draw() {
 path는 (`M10 10`) 점으로 이동한 다음, 수평하게 오른쪽으로 으로 80 포인트 (`h 80`) 만큼 이동합니다. 이후 수직으로 80포인트 (v 80) 내려간 다음, 80 포인트 왼쪽으로 (`h -80`) 수평하게 이동하고 다시 시작점 (`z`)으로 돌아갑니다. 예시는 [이곳](/ko/docs/Web/API/Path2D.Path2D#Using_SVG_paths)( `Path2D` constructor )에서 확인하실 수 있습니다.
 
 ```js
-var p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ```
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

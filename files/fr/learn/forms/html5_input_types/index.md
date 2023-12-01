@@ -1,7 +1,6 @@
 ---
 title: Les types de champs de formulaire HTML5
 slug: Learn/Forms/HTML5_input_types
-translation_of: Learn/Forms/HTML5_input_types
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}

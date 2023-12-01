@@ -1,9 +1,6 @@
 ---
 title: Введение в кросс-браузерное тестирование
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
-tags:
-  - тестирование
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -56,7 +53,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 Рабочий процесс над тестированием и исправлением ошибок может быть разбит на следующие четыре фазы (очень грубое разделение - у разных людей этот процесс может очень сильно отличаться):
 
-**Начальное планирование > Разработка > Тестирование > Исправление ошибок**
+**Начальное планирование** > **Разработка** > **Тестирование** > **Исправление ошибок**
 
 Шаги 2-4 будут повторяться до тех пор, пока не будут реализованы все возможности. Мы рассмотрим различные элементы процесса тестирования более детально в следующих статьях, но пока давайте соберём то, что может происходить на каждом этапе.
 

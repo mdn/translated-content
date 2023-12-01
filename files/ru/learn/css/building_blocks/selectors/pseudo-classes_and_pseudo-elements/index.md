@@ -1,16 +1,6 @@
 ---
 title: Псевдоклассы, псевдоэлементы
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-tags:
-  - CSS
-  - Начинающий
-  - Обучение
-  - Псевдо
-  - Псевдоэлемент
-  - Селекторы
-  - псевдокласс
-translation_of: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_pseudo-elements
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}

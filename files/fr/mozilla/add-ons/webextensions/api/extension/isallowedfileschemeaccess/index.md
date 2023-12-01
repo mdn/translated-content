@@ -1,7 +1,6 @@
 ---
 title: extension.isAllowedFileSchemeAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
 ---
 
 {{AddonSidebar()}}Renvoie `true` si l'extension peut accéder au schéma "file://", sinon `false`.

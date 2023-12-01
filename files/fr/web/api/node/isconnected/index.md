@@ -1,7 +1,6 @@
 ---
 title: Node.isConnected
 slug: Web/API/Node/isConnected
-translation_of: Web/API/Node/isConnected
 ---
 
 {{APIRef("DOM")}}

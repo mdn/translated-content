@@ -33,15 +33,14 @@ Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/
 ```js
 var imageCapture;
 
-navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream => {
-  document.querySelector('video').srcObject = mediaStream;
+navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
+  document.querySelector("video").srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];
   imageCapture = new ImageCapture(track);
 
   return imageCapture.getPhotoCapabilities();
-})
+});
 ```
 
 ## 仕様書

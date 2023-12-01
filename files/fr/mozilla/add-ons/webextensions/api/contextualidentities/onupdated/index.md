@@ -1,7 +1,6 @@
 ---
 title: contextualIdentities.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
 ---
 
 {{AddonSidebar()}}

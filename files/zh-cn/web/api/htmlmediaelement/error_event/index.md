@@ -14,9 +14,9 @@ slug: Web/API/HTMLMediaElement/error_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('error', (event) => {});
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## 事件类型
@@ -26,14 +26,14 @@ onerror = (event) => { };
 ## 示例
 
 ```js
-const video = document.querySelector('video');
-const videoSrc = 'https://path/to/video.webm';
+const video = document.querySelector("video");
+const videoSrc = "https://path/to/video.webm";
 
-video.addEventListener('error', () => {
+video.addEventListener("error", () => {
   console.error(`Error loading: ${videoSrc}`);
 });
 
-video.setAttribute('src', videoSrc);
+video.setAttribute("src", videoSrc);
 ```
 
 ## 规范

@@ -42,15 +42,15 @@ Content-Type: text/html
 
 ## Especificações
 
-| Epecificação                                                         | Título                                        |
-| -------------------------------------------------------------------- | --------------------------------------------- |
+| Epecificação                                         | Título                                        |
+| ---------------------------------------------------- | --------------------------------------------- |
 | {{RFC("7725", "451 Unavailable For Legal Reasons")}} | An HTTP Status Code to Report Legal Obstacles |
 
 ## Compatibilidade com navegadores
 
 A informação exibida acima está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.451")}}
+{{Compat}}
 
 ## Veja também
 

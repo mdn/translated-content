@@ -1,7 +1,6 @@
 ---
 title: Principaux blocs en JS
 slug: Learn/JavaScript/Building_blocks
-translation_of: Learn/JavaScript/Building_blocks
 ---
 
 {{JsSidebar}}{{PreviousNext("Learn/JavaScript/First_steps", "Learn/JavaScript/Objects")}}

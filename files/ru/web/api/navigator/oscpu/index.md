@@ -1,7 +1,6 @@
 ---
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
-translation_of: Web/API/Navigator/oscpu
 ---
 
 {{ ApiRef("HTML DOM") }}

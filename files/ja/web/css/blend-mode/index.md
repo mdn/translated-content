@@ -17,7 +17,7 @@ l10n:
 
 - `normal`
   - : 下の色が何であるかに関わらず、上の色が最終的な色になります。
-     この効果は 2 枚の不透明の紙が重なっているようなものです。
+    この効果は 2 枚の不透明の紙が重なっているようなものです。
 - `multiply`
   - : 上の色と下の色を掛け合わせた結果が最終的な色になります。
     黒いレイヤーは最終的に黒いレイヤーになり、白いレイヤーは変化をもたらしません。
@@ -386,18 +386,20 @@ l10n:
 div {
   width: 300px;
   height: 300px;
-  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
-      no-repeat center, linear-gradient(to bottom, blue, orange);
+  background:
+    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+      no-repeat center,
+    linear-gradient(to bottom, blue, orange);
 }
 ```
 
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   divElem.style.backgroundBlendMode = selectElem.value;
 });
 ```

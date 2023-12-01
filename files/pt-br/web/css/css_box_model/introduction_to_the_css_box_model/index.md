@@ -1,7 +1,6 @@
 ---
 title: Box model
 slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
-original_slug: Web/CSS/box_model
 ---
 
 ## Resumo
@@ -29,13 +28,6 @@ O tamanho da área de margem é controlada utilizando as seguintes propriedades 
 Quando ocorre um [colapso de margens](/pt-BR/docs/Web/CSS/margin_collapsing), a área de margem não está claramente definida, uma vez que as margens são compartilhadas entre os boxes.
 
 Finalmente, note que, para elementos não substituídos inline, o total de espaço ocupado (para a altura da linha) é determinado pela propriedade {{ cssxref('line-height') }}, mesmo que a borda e o padding aparecerem visualmente em torno do conteúdo.
-
-## Especificação
-
-| Especificação                                                    | Status                       | Comentário                                                        |
-| ---------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------- |
-| {{ SpecName("CSS2.1","box.html#box-dimensions")}} | {{ Spec2('CSS2.1') }} | Embora mais precisamente formulada, não existem mudanças práticas |
-| {{ SpecName("CSS1","#formatting-model")}}         | {{ Spec2('CSS1') }}     |                                                                   |
 
 ## Veja também
 

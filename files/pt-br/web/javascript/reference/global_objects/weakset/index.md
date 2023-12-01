@@ -57,22 +57,19 @@ ws.add(window);
 ws.add(obj);
 
 ws.has(window); // true
-ws.has(foo);    // false, foo não foi adicionado ao set
+ws.has(foo); // false, foo não foi adicionado ao set
 
 ws.delete(window); // remove window do set
-ws.has(window);    // false, window foi removido
+ws.has(window); // false, window foi removido
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                       | Comentário        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-weakset-objects', 'WeakSet')}}     | {{Spec2('ES6')}}         | Definição inicial |
-| {{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatilidade de Browser
 
-{{Compat("javascript.builtins.WeakSet")}}
+{{Compat}}
 
 ## Veja também
 

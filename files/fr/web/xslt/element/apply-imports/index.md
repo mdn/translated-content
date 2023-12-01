@@ -1,7 +1,6 @@
 ---
 title: apply-imports
 slug: Web/XSLT/Element/apply-imports
-translation_of: Web/XSLT/Element/apply-imports
 ---
 
 {{ XsltRef() }}

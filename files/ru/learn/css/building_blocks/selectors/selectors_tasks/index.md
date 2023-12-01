@@ -1,11 +1,6 @@
 ---
 title: "Проверьте ваши навыки: Селекторы"
 slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
-tags:
-  - CSS
-  - Начинающий
-translation_of: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
-original_slug: Learn/CSS/Building_blocks/Селекторы/Селекторы_Задачи
 ---
 
 {{LearnSidebar}}

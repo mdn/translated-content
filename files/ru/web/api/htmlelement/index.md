@@ -1,7 +1,6 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
-translation_of: Web/API/HTMLElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -76,11 +75,11 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
 Most events properties, of the form `onXYZ`, are defined on the {{domxref("GlobalEventHandlers")}} or {{domxref("TouchEventHandlers")}}, implemented by `HTMLElement`. A few more are specific to `HTMLElement`.
 
 - {{ domxref("HTMLElement.oncopy") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `copy` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `copy` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.oncut") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `cut` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `cut` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `paste` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `paste` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
   - : Returns the event handling code for the {{event("touchstart")}} event.
 - {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
@@ -109,13 +108,7 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 
 ## Specifications
 
-| Specification                                                                                                    | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSSOM View', '#extensions-to-the-htmlelement-interface', 'HTMLElement')}} | {{Spec2('CSSOM View')}} | Added the following properties: `offsetParent`, `offsetTop`, `offsetLeft`, `offsetWidth`, and `offsetHeight`.                                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML WHATWG', 'elements.html#htmlelement', 'HTMLElement')}}                 | {{Spec2('HTML WHATWG')}} | Added the following properties: `translate`, `itemScope`, `itemType`, `itemId`, `itemRef`, `itemProp`, `properties`, and `itemValue`. Added the following method: `forceSpellcheck()`. Moved the `onXYZ` attributes to the {{domxref("GlobalEventHandlers")}} interface and added an inheritance from it.                                                                                                                 |
-| {{SpecName('HTML5 W3C', 'dom.html#htmlelement', 'HTMLElement')}}                             | {{Spec2('HTML5 W3C')}}     | Added the following properties: `dataset`, `hidden`, `tabindex`, `accessKey`, `accessKeyLabel`, `draggable`, `dropzone`, `contentEditable`, `isContentEditable`, `contextMenu`, `spellcheck`, `commandType`, `commandLabel`, `commandIcon`, `commandHidden`, `commandDisabled`, `commandChecked`, `style`, and all the `onXYZ` properties. Moved the `id` and `className` properties to the {{domxref("Element")}} interface. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-011100101', 'HTMLElement')}}                         | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName('DOM2 HTML')}}                                                                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-011100101', 'HTMLElement')}}                 | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+{{Specifications}}
 
 ## Browser compatibility
 

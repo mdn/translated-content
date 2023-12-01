@@ -1,8 +1,9 @@
 ---
 title: Fork
 slug: Glossary/Fork
-translation_of: Glossary/Fork
 ---
+
+{{GlossarySidebar}}
 
 Un _fork_ est une copie d'un projet logiciel existant à un moment donné pour permettre à quelque-un d'ajouter ses propres modifications au projet. Si la licence du logiciel original le permet, vous pouvez copier le code pour développer votre propre version de ce logiciel, avec vos propres ajouts, qui sera alors un « fork ».
 

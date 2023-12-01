@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 98832710c51ef34cf84846e9f7590aadc32c92f4
 ---
 
+{{GlossarySidebar}}
+
 [Safari](https://www.apple.com/fr/safari/) est un [navigateur web](/fr/docs/Glossary/Browser) développé par la société Apple. Il est installé de base sur les systèmes d'exploitation macOS et iOS. Il est basé sur le moteur en source ouverte [WebKit](https://webkit.org/).
 
 ## Voir aussi

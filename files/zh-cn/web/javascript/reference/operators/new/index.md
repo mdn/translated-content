@@ -11,27 +11,34 @@ slug: Web/JavaScript/Reference/Operators/new
 
 ## 语法
 
-```plain
-new constructor[([arguments])]
+```js-nolint
+new constructor
+new constructor()
+new constructor(arg1)
+new constructor(arg1, arg2)
+new constructor(arg1, arg2, /* …, */ argN)
 ```
 
 ### 参数
 
 - `constructor`
   - : 一个指定对象实例的类型的类或函数。
-- `arguments`
-  - : 一个用于被 `constructor` 调用的参数列表。
+- `arg1`、`arg2`、……、`argN`
+  - : 一个用于被 `constructor` 调用的值列表。`new Foo` 与 `new Foo()` 等价，例如：如果没有指定参数列表，则在不带参数的情况下调用 `Foo`。
 
 ## 描述
 
-**`new`** 关键字会进行如下的操作：
+当使用 **`new`** 关键字调用函数时，该函数将被用作构造函数。`new` 将执行以下操作：
 
-1. 创建一个空的简单 JavaScript 对象（即 **`{}`**）；
-2. 为步骤 1 新创建的对象添加属性 **`__proto__`**，将该属性链接至构造函数的原型对象；
-3. 将步骤 1 新创建的对象作为 **`this`** 的上下文；
-4. 如果该函数没有返回对象，则返回 **`this`**。
+1. 创建一个空的简单 JavaScript 对象。为方便起见，我们称之为 `newInstance`。
+2. 如果构造函数的 `prototype` 属性是一个{{jsxref("Object", "对象", "", 1)}}，则将 `newInstance` 的 [[Prototype]] 指向构造函数的这个属性，否则 `newInstance` 将保持为一个普通对象，其 [[Prototype]] 为 `Object.prototype`。
 
-（译注：关于对象的 **`constructor`**，参见 **`Object.prototype.constructor`**）
+   > **备注：** 因此，通过构造函数创建的所有实例都可以访问添加到构造函数 `prototype` 属性中的属性/对象。
+
+3. 使用给定参数执行构造函数，并将 `newInstance` 绑定为 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的上下文（例如，在构造函数中的所有 `this` 引用都指向 `newInstance`）。
+4. 如果构造函数返回[非原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)，则该返回值成为整个 `new` 表达式的结果。否则，如果构造函数未返回任何值或返回了一个原是值，则返回 `newInstance`。（通常构造函数不返回值，但可以选择返回值，以覆盖正常的对象创建过程。）
+
+[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)只能用 `new` 运算符实例化——尝试不使用 `new` 调用一个类将抛出 `TypeError`。
 
 创建一个用户自定义的对象需要两步：
 
@@ -55,18 +62,18 @@ function Car() {}
 car1 = new Car();
 car2 = new Car();
 
-console.log(car1.color);    // undefined
+console.log(car1.color); // undefined
 
 Car.prototype.color = "original color";
-console.log(car1.color);    // original color
+console.log(car1.color); // original color
 
-car1.color = 'black';
-console.log(car1.color);   // black
+car1.color = "black";
+console.log(car1.color); // black
 
-console.log(car1.__proto__.color) //original color
-console.log(car2.__proto__.color) //original color
-console.log(car1.color)  // black
-console.log(car2.color) // original color
+console.log(car1.__proto__.color); //original color
+console.log(car2.__proto__.color); //original color
+console.log(car1.color); // black
+console.log(car2.color); // original color
 ```
 
 > **备注：** 如果你没有使用 `new` 运算符，构造函数会像其他的常规函数一样被调用，并不会创建一个对象。在这种情况下， `this` 的指向也是不一样的。
@@ -79,9 +86,9 @@ console.log(car2.color) // original color
 
 ```js
 function Car(make, model, year) {
-   this.make = make;
-   this.model = model;
-   this.year = year;
+  this.make = make;
+  this.model = model;
+  this.year = year;
 }
 ```
 
@@ -105,9 +112,9 @@ var kenscar = new Car("Nissan", "300ZX", 1992);
 
 ```js
 function Person(name, age, sex) {
-   this.name = name;
-   this.age = age;
-   this.sex = sex;
+  this.name = name;
+  this.age = age;
+  this.sex = sex;
 }
 ```
 
@@ -122,10 +129,10 @@ var ken = new Person("Ken Jones", 39, "M");
 
 ```js
 function Car(make, model, year, owner) {
-   this.make = make;
-   this.model = model;
-   this.year = year;
-   this.owner = owner;
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.owner = owner;
 }
 ```
 
@@ -139,7 +146,7 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
 创建对象时，并没有传字符串或数字给 owner，而是传了对象 `rand` 和 `ken` 。这个时候，你可以这样来获取 `car2` 的 owner 的 name：
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 ## 规范

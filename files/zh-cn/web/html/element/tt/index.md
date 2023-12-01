@@ -24,9 +24,12 @@ HTML 电报文本元素 (`<tt>`) 产生一个内联元素，使用浏览器内�
 ## 示例
 
 ```html
-<p>Enter the following at the telnet command prompt: <code>set localecho</code><br />
+<p>
+  Enter the following at the telnet command prompt: <code>set localecho</code
+  ><br />
 
-The telnet client should display: <tt>Local Echo is on</tt></p>
+  The telnet client should display: <tt>Local Echo is on</tt>
+</p>
 ```
 
 ### 结果

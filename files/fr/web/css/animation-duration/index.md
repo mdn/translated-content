@@ -1,7 +1,6 @@
 ---
 title: animation-duration
 slug: Web/CSS/animation-duration
-translation_of: Web/CSS/animation-duration
 ---
 
 {{CSSRef}}
@@ -67,9 +66,9 @@ p {
 
 ```html
 <p>
-  La Chenille et Alice se considérèrent un instant en silence.
-  Enfin la Chenille sortit le houka de sa bouche, et lui adressa
-  la parole d’une voix endormie et traînante.
+  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
+  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
+  traînante.
 </p>
 ```
 

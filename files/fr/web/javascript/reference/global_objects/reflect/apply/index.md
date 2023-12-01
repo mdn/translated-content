@@ -1,7 +1,6 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode statique **`Reflect.apply()`** permet d'appeler une fonction cible a
 ## Syntaxe
 
 ```js
-Reflect.apply(cible, argumentThis, listeArguments)
+Reflect.apply(cible, argumentThis, listeArguments);
 ```
 
 ### Paramètres

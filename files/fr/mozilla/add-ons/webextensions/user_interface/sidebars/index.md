@@ -1,7 +1,6 @@
 ---
 title: Barres laterales
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 ---
 
 {{AddonSidebar}}

@@ -42,12 +42,12 @@ order: unset;
 这里是一个基本的 HTML 代码片段：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <header>…</header>
-<div id='main'>
-   <article>…</article>
-   <nav>…</nav>
-   <aside>…</aside>
+<div id="main">
+  <article>…</article>
+  <nav>…</nav>
+  <aside>…</aside>
 </div>
 <footer>…</footer>
 ```
@@ -55,10 +55,21 @@ order: unset;
 下面的 CSS 代码会创建一个经典的双 sidebar 围绕一个中央内容块的布局。Flexible Box 布局模块会自动地创建三个具有相同高度的内容块，也会使用所有可用的水平空间。
 
 ```css
-#main { display: flex; }
-#main > article { flex:1;         order: 2; }
-#main > nav     { width: 200px;   order: 1; }
-#main > aside   { width: 200px;   order: 3; }
+#main {
+  display: flex;
+}
+#main > article {
+  flex: 1;
+  order: 2;
+}
+#main > nav {
+  width: 200px;
+  order: 1;
+}
+#main > aside {
+  width: 200px;
+  order: 3;
+}
 ```
 
 ## 规范

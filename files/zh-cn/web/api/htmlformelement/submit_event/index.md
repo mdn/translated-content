@@ -1,5 +1,5 @@
 ---
-title: 'HTMLFormElement: submit event'
+title: "HTMLFormElement: submit event"
 slug: Web/API/HTMLFormElement/submit_event
 ---
 
@@ -42,8 +42,8 @@ slug: Web/API/HTMLFormElement/submit_event
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text"></label>
-  <br><br>
+  <label>Test field: <input type="text" /></label>
+  <br /><br />
   <button type="submit">Submit form</button>
 </form>
 <p id="log"></p>
@@ -57,9 +57,9 @@ function logSubmit(event) {
   event.preventDefault();
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("submit", logSubmit);
 ```
 
 ### 结果

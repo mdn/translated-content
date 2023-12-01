@@ -1,7 +1,6 @@
 ---
 title: blockquote
 slug: Web/HTML/Element/blockquote
-original_slug: Web/HTML/Elemento/blockquote
 ---
 
 ### Definición

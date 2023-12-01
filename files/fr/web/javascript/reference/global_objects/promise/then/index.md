@@ -24,12 +24,12 @@ then(siTenue, siRejetée)
   - : Une fonction à exécuter de façon asynchrone quand la promesse est tenue. La valeur de retour de cette fonction devient la valeur de réussite de la promesse renvoyée par `then()`. Cette fonction de rappel est appelée avec les arguments suivants&nbsp;:
     - `valeur`
       - : La valeur avec laquelle la promesse a été tenue.
-    Si cet argument n'est pas une fonction, il est remplacé en interne par la fonction _identité_ (`(x) => x`) qui passe la valeur de réussite.
+        Si cet argument n'est pas une fonction, il est remplacé en interne par la fonction _identité_ (`(x) => x`) qui passe la valeur de réussite.
 - `siRejetée` {{optional_inline}}
   - : Une fonction à exécuter de façon asynchrone quand la promesse est rompue. Sa valeur de retour devient la valeur de réussite de la promesse renvoyée par `catch()`. Cette fonction de rappel est appelée avec les arguments suivants&nbsp;:
     - `raison`
       - : La valeur avec laquelle la promesse a été rompue.
-    Si cet argument n'est pas une fonction, il est remplacé en interne par une fonction de _rejet_ (`(x) => { throw x; }`) qui renvoie la raison d'échec qui a été reçue en amont.
+        Si cet argument n'est pas une fonction, il est remplacé en interne par une fonction de _rejet_ (`(x) => { throw x; }`) qui renvoie la raison d'échec qui a été reçue en amont.
 
 ### Valeur de retour
 
@@ -117,7 +117,7 @@ Promise.resolve("toto")
   // avant le traitement de la chaîne dans le bloc then() précédent.
   .then((chaine) => {
     console.log(
-      "Dernier then(). Oups, on n'a pas pris la peine d'instancier et de renvoyer une promesse dans l'appel then() précédent. L'ordre de la séquence pourrait être surprenant."
+      "Dernier then(). Oups, on n'a pas pris la peine d'instancier et de renvoyer une promesse dans l'appel then() précédent. L'ordre de la séquence pourrait être surprenant.",
     );
 
     // On notera qu'ici `chaine` n'a pas le suffixe 'machin'. En effet, nous avons
@@ -182,7 +182,9 @@ Promise.resolve()
     console.error(`Fonction siRejetée() appelée : ${erreur.message}`);
   })
   .then(() => {
-    console.log("Je suis toujours appelée, même si la promesse du then() précédent échoue.");
+    console.log(
+      "Je suis toujours appelée, même si la promesse du then() précédent échoue.",
+    );
   });
 ```
 
@@ -256,7 +258,7 @@ function obtenirDonnees() {
     const j = response.json();
     // faire quelque chose avec j
 
-    // La valeur de réussite fournie lorsqu'on 
+    // La valeur de réussite fournie lorsqu'on
     // appelle obtenirDonnees().then()
     return j;
   });
@@ -268,11 +270,11 @@ function obtenirDonnees() {
 Dans l'exemple qui suit, on illustre le caractère asynchrone de la méthode `then()`.
 
 ```js
-// Prenons une promesse résolue comme 'promResolue', l'appel à 
+// Prenons une promesse résolue comme 'promResolue', l'appel à
 // 'promResolue.then(…)' renvoie immédiatement une nouvelle promesse,
 // mais la fonction de rappel '(value) => {…}' sera appelée de
 // façon asynchrone, comme on peut le voir dans la console.
-// La nouvelle promesse est affectée à 'promSuivante', cette 
+// La nouvelle promesse est affectée à 'promSuivante', cette
 // dernière est résolue avec la valeur renvoyée par le gestionnaire.
 const promResolue = Promise.resolve(33);
 console.log(promResolue);
@@ -280,9 +282,7 @@ console.log(promResolue);
 const promSuivante = promResolue.then((valeur) => {
   console.log(
     `Ceci est appelé après la fin de la pile principale. ` +
-    `La valeur reçue est : ${valeur}, la valeur renvoyée est : ${
-      valeur + 1
-    }`,
+      `La valeur reçue est : ${valeur}, la valeur renvoyée est : ${valeur + 1}`,
   );
   return valeur + 1;
 });

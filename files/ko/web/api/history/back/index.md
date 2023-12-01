@@ -2,6 +2,7 @@
 title: History.back()
 slug: Web/API/History/back
 ---
+
 {{APIRef("DOM")}}
 
 **`History.back()`** 메서드는 브라우저가 세션 기록의 바로 뒤 페이지로 이동하도록 지시합니다. {{domxref("History.go", "history.go(-1)")}}와 같습니다. 이전 페이지가 없는 경우 아무것도 하지 않습니다.
@@ -11,7 +12,7 @@ slug: Web/API/History/back
 ## 구문
 
 ```js
-history.back()
+history.back();
 ```
 
 ## 예제
@@ -27,7 +28,7 @@ history.back()
 ### JavaScript
 
 ```js
-document.getElementById('go-back').addEventListener('click', () => {
+document.getElementById("go-back").addEventListener("click", () => {
   window.history.back();
 });
 ```

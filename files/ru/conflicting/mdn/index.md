@@ -1,14 +1,6 @@
 ---
 title: URL-суффиксы
 slug: conflicting/MDN
-tags:
-  - HTTP
-  - Kuma
-  - MDN Мета
-  - URL
-  - Параметры URL
-  - инструменты
-translation_of: MDN/Tools/Document_parameters
 original_slug: MDN/Tools/Unsupported_GET_API
 ---
 

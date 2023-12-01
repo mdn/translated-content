@@ -9,7 +9,7 @@ slug: Web/CSS/@media/color-index
 
 ## 構文
 
- `color-index` 特性は {{cssxref("&lt;integer&gt;")}} 値で指定し、出力端末の色参照テーブルの項目数を表します。 (端末がそのようなテーブルを使用していなければ、値はゼロになります)。これは範囲を持つ特性であり、つまり接頭辞の付いた **`min-color-index`** および **`max-color-index`** という変化形を使用して、それぞれ最小値と最大値を問い合わせることができます。
+`color-index` 特性は {{cssxref("&lt;integer&gt;")}} 値で指定し、出力端末の色参照テーブルの項目数を表します。 (端末がそのようなテーブルを使用していなければ、値はゼロになります)。これは範囲を持つ特性であり、つまり接頭辞の付いた **`min-color-index`** および **`max-color-index`** という変化形を使用して、それぞれ最小値と最大値を問い合わせることができます。
 
 ## 例
 
@@ -51,7 +51,10 @@ p {
 
 ```html
 <link rel="stylesheet" href="http://foo.bar.com/base.css" />
-<link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/color-stylesheet.css" />
+<link
+  rel="stylesheet"
+  media="all and (min-color-index: 256)"
+  href="http://foo.bar.com/color-stylesheet.css" />
 ```
 
 ## 仕様書

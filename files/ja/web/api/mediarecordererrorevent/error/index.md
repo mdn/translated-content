@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
- `error` は **{{domxref("MediaRecorderErrorEvent")}}** インタフェースの読み取り専用のプロパティで、{{domxref("MediaRecorder")}} インスタンスによって発生した例外に関する詳細を提供する {{domxref("DOMException")}} オブジェクトです。
+`error` は **{{domxref("MediaRecorderErrorEvent")}}** インタフェースの読み取り専用のプロパティで、{{domxref("MediaRecorder")}} インスタンスによって発生した例外に関する詳細を提供する {{domxref("DOMException")}} オブジェクトです。
 
 `MediaRecorderErrorEvent` が発生した場合、`MediaRecorder` の {{domxref("MediaRecorder/error_event", "error")}} イベントハンドラーである {{domxref("MediaRecorder/error_event", "onerror")}} によって受けた `MediaRecorderErrorEvent` 内の `error` プロパティを調べることによって、何が問題であるかをある程度判断できます。
 
@@ -52,7 +52,7 @@ function recordStream(stream) {
     console.error(`Error: ${event.error}`);
   };
 
-  recorder.start(100);  /* バッファあたり 100ms のタイムスライス */
+  recorder.start(100); /* バッファあたり 100ms のタイムスライス */
   return recorder;
 }
 ```

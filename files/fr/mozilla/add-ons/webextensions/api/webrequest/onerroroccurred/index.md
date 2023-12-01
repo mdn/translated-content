@@ -1,7 +1,6 @@
 ---
 title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: IDBKeyRange.upperOpen
 slug: Web/API/IDBKeyRange/upperOpen
-translation_of: Web/API/IDBKeyRange/upperOpen
 ---
 
 {{ APIRef("IndexedDB") }}

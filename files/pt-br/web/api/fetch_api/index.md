@@ -41,11 +41,9 @@ Você pode criar um pedido e uma resposta diretamente usando os construtores {{d
 
 ## Especificações
 
-| Especificação                | Status                   | Comentários       |
-| ---------------------------- | ------------------------ | ----------------- |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Definição inicial |
+{{Specifications}}
 
-## Navegadores Compatíveis
+## Compatibilidade com navegadores
 
 {{Compat}}
 

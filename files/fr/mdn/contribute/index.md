@@ -1,7 +1,6 @@
 ---
 title: Contribuer à MDN
 slug: MDN/Contribute
-translation_of: MDN/Contribute
 ---
 
 {{MDNSidebar}}

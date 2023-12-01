@@ -1,7 +1,6 @@
 ---
 title: ImageData.data
 slug: Web/API/ImageData/data
-translation_of: Web/API/ImageData/data
 ---
 
 {{APIRef("Canvas API")}}

@@ -37,10 +37,10 @@ gen.throw(exception)
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     try {
-       yield 42;
-    } catch(e) {
+      yield 42;
+    } catch (e) {
       console.log("Error caught!");
     }
   }
@@ -59,6 +59,6 @@ g.throw(new Error("Something went wrong")); // "Error caught!"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
+- {{jsxref("Statements/function*", "function*")}}

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing formal parameter'
+title: "SyntaxError: missing formal parameter"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
 
@@ -47,15 +47,15 @@ function log({ obj: "value"}) {
 ```js example-good
 function square(number) {
   return number * number;
-};
+}
 
 function greet(greeting) {
   return greeting;
-};
+}
 
 function log(arg) {
-  console.log(arg)
-};
+  console.log(arg);
+}
 ```
 
 之后可以传入你想要传入的实际参数调用函数：
@@ -65,7 +65,7 @@ square(2); // 4
 
 greet("Howdy"); // "Howdy"
 
-log({obj: "value"}); // Object { obj: "value" }
+log({ obj: "value" }); // Object { obj: "value" }
 ```
 
 ## 参见

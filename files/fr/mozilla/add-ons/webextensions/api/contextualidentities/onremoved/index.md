@@ -1,7 +1,6 @@
 ---
 title: contextualIdentities.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved
 ---
 
 {{AddonSidebar()}}

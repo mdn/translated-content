@@ -1,7 +1,6 @@
 ---
 title: Collections avec clés
 slug: Web/JavaScript/Guide/Keyed_collections
-translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Collections_indexées", "Web/JavaScript/Guide/Utiliser_les_objets")}}
@@ -107,7 +106,7 @@ Il est possible de créer un {{jsxref("Array")}} à partir d'un `Set` grâce à 
 Array.from(monSet);
 [...monSet2];
 
-monSet2 = new Set([1,2,3,4]);
+monSet2 = new Set([1, 2, 3, 4]);
 ```
 
 ### Comparaison entre `Array` et `Set`

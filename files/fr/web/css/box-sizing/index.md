@@ -1,7 +1,6 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-translation_of: Web/CSS/box-sizing
 ---
 
 {{CSSRef}}
@@ -88,7 +87,7 @@ div {
 
 ```html
 <div class="content-box">Content box</div>
-<br>
+<br />
 <div class="border-box">Border box</div>
 ```
 

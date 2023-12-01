@@ -1,7 +1,6 @@
 ---
 title: width
 slug: Web/CSS/@media/width
-translation_of: Web/CSS/@media/width
 ---
 
 {{CSSRef}}
@@ -14,13 +13,16 @@ translation_of: Web/CSS/@media/width
 
 ```css
 /* Largeur exacte */
-@media (width: 300px) {}
+@media (width: 300px) {
+}
 
 /* Un viewport avec une largeur minimale */
-@media (min-width: 50em) {}
+@media (min-width: 50em) {
+}
 
 /* Un viewport avec une largeur maximale */
-@media (max-width: 1000px) {}
+@media (max-width: 1000px) {
+}
 ```
 
 ## Exemples
@@ -28,7 +30,9 @@ translation_of: Web/CSS/@media/width
 ### HTML
 
 ```html
-<div>Observez cet élément lorsque vous redimensionnez la largeur du viewport.</div>
+<div>
+  Observez cet élément lorsque vous redimensionnez la largeur du viewport.
+</div>
 ```
 
 ### CSS

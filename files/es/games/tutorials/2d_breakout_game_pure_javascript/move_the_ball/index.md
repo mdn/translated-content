@@ -1,7 +1,6 @@
 ---
 title: Mueve la bola
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola
 ---
 
 {{GamesSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
-translation_of: Web/API/Navigator/registerProtocolHandler
 ---
 
 {{APIRef("HTML DOM")}}

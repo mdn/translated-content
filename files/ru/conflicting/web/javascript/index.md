@@ -1,13 +1,6 @@
 ---
 title: О JavaScript
 slug: conflicting/Web/JavaScript
-tags:
-  - Beginner
-  - Introduction
-  - JavaScript
-  - Вступление
-  - Новичку
-translation_of: Web/JavaScript/About_JavaScript
 original_slug: Web/JavaScript/About_JavaScript
 ---
 

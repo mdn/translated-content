@@ -1,7 +1,6 @@
 ---
 title: bdo
 slug: Web/HTML/Element/bdo
-original_slug: Web/HTML/Elemento/bdo
 ---
 
 ### Definición

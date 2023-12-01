@@ -1,7 +1,6 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-translation_of: Web/CSS/text-transform
 ---
 
 {{CSSRef}}

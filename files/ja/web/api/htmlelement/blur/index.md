@@ -31,7 +31,9 @@ blur()
 
 ```html
 <input type="text" id="sampleText" value="サンプルテキスト" /><br /><br />
-<button type="button" onclick="focusInput()">クリックするとフォーカスを得ます</button>
+<button type="button" onclick="focusInput()">
+  クリックするとフォーカスを得ます
+</button>
 ```
 
 #### JavaScript

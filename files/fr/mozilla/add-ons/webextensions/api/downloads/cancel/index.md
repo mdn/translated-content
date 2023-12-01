@@ -1,7 +1,6 @@
 ---
 title: downloads.cancel()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/cancel
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/cancel
 ---
 
 {{AddonSidebar()}}

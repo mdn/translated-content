@@ -1,7 +1,6 @@
 ---
 title: acronym
 slug: Web/HTML/Element/acronym
-original_slug: Web/HTML/Elemento/acronym
 ---
 
 ### Definición

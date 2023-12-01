@@ -1,8 +1,6 @@
 ---
 title: NavigatorLanguage.languages
 slug: orphaned/Web/API/NavigatorLanguage/languages
-translation_of: Web/API/NavigatorLanguage/languages
-original_slug: Web/API/NavigatorLanguage/languages
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
@@ -30,13 +28,11 @@ navigator.languages  //["en-US", "zh-CN", "ja-JP"]
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                       | Комментарий        |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{ SpecName('HTML5.1', '#dom-navigator-languages', 'NavigatorLanguage.languages') }} | {{ Spec2('HTML5.1') }} | Начальное описание |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat("api.NavigatorLanguage.languages")}}
+{{Compat}}
 
 ## Смотрите также
 

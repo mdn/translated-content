@@ -1,7 +1,6 @@
 ---
 title: 用語集の項目を書いたり参照したりするには
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
 
 {{MDNSidebar}}

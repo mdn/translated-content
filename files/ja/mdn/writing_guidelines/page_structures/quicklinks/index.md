@@ -1,7 +1,6 @@
 ---
 title: クイックリンク
 slug: MDN/Writing_guidelines/Page_structures/Quicklinks
-original_slug: MDN/Structures/Quicklinks
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---

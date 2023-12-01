@@ -102,6 +102,7 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 - {{domxref("HTMLInputElement.autofocus", "autofocus")}}
 
   - : `boolean`: **Retorna / Define** o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Element/Input#autofocus) do elemento, que especifica que um controle de formulário deve ter foco de entrada quando a página é carregada, a menos que o usuário a substitua, por exemplo, digitando um controle diferente. Apenas um elemento de formulário em um documento pode ter o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Element/Input#autofocus).
+
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
 
   - : `boolean`: **Retorna / Define** o atributo [`disabled`](/pt-BR/docs/Web/HTML/Element/Input#disabled) do elemento, indicando que o controle não está disponível para interação. Os valores de entrada não serão enviados com o formulário. Veja também [`readonly`](/pt-BR/docs/Web/HTML/Element/Input#readonly).

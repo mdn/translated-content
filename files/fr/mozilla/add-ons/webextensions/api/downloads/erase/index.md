@@ -1,7 +1,6 @@
 ---
 title: downloads.erase()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/erase
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/erase
 ---
 
 {{AddonSidebar()}}

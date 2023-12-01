@@ -1,7 +1,6 @@
 ---
 title: Stocker les informations nécessaires — les variables
 slug: Learn/JavaScript/First_steps/Variables
-translation_of: Learn/JavaScript/First_steps/Variables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}

@@ -1,7 +1,6 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-translation_of: Web/API/KeyboardEvent
 ---
 
 {{APIRef("DOM Events")}}

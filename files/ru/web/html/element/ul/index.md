@@ -1,7 +1,6 @@
 ---
-title: "<ul> - элемент «Неупорядоченный список»"
+title: <ul> - элемент «Неупорядоченный список»
 slug: Web/HTML/Element/ul
-translation_of: Web/HTML/Element/ul
 ---
 
 {{HTMLSidebar}}
@@ -22,10 +21,10 @@ translation_of: Web/HTML/Element/ul
 
 Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-- {{ htmlattrdef("compact") }} {{Deprecated_inline}}
+- `compact` {{Deprecated_inline}}
   - : Атрибут логического значения (bool) говорит о том, что список будет представлен в более компактном стиле. Интерпретация этого атрибута зависит от {{glossary("user agent")}} и не работает со всеми браузерами.
     > **Предупреждение:** Не используйте этот атрибут, ибо он устаревший и больше не используется, используйте [CSS](/ru/docs/CSS). Для схожего эффекта с `compact`, подойдёт свойство CSS {{cssxref("line-height")}} с значением `80%`.
-- {{ htmlattrdef("type") }} {{Deprecated_inline}}
+- `type` {{Deprecated_inline}}
   - : Этот атрибут добавляет маркеры (bullets) в список. Значения установлены под [HTML3.2](/ru/docs/HTML3.2) и переходными на [HTML 4.0/4.01](/ru/docs/HTML4.01) являются:
     - `circle`
     - `disc`
@@ -59,22 +58,25 @@ translation_of: Web/HTML/Element/ul
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Закрывающий тег </li> пишем не здесь! -->
+  <li>
+    second item
+    <!-- Закрывающий тег </li> пишем не здесь! -->
     <ul>
       <li>second item first subitem</li>
-      <li>second item second subitem
-     <!-- То же самое для второго вложенного неупорядоченного списка! -->
+      <li>
+        second item second subitem
+        <!-- То же самое для второго вложенного неупорядоченного списка! -->
         <ul>
           <li>second item second subitem first sub-subitem</li>
           <li>second item second subitem second sub-subitem</li>
           <li>second item second subitem third sub-subitem</li>
         </ul>
-      </li> <!-- Закрывающий тег </li>, который
+      </li>
+      <!-- Закрывающий тег </li>, который
 закрывает третий неупорядоченный список -->
       <li>second item third subitem</li>
     </ul>
-  <!-- Вот закрывающий тег </li> -->
+    <!-- Вот закрывающий тег </li> -->
   </li>
   <li>third item</li>
 </ul>
@@ -89,14 +91,15 @@ translation_of: Web/HTML/Element/ul
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Закрывающий тег </li> пишем не здесь! -->
+  <li>
+    second item
+    <!-- Закрывающий тег </li> пишем не здесь! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-   <!-- Вот закрывающий тег </li> -->
+    <!-- Вот закрывающий тег </li> -->
   </li>
   <li>third item</li>
 </ul>

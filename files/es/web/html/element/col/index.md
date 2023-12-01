@@ -1,7 +1,6 @@
 ---
 title: col
 slug: Web/HTML/Element/col
-original_slug: Web/HTML/Elemento/col
 ---
 
 ### Definición

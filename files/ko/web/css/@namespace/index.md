@@ -1,5 +1,5 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
 ---
 
@@ -40,13 +40,16 @@ slug: Web/CSS/@namespace
 @namespace svg url(http://www.w3.org/2000/svg);
 
 /* 이는 모든 XHTML <a> 요소와 일치합니다, XHTML이 접두어 붙지 않은 기본 네임스페이스이기에 */
-a {}
+a {
+}
 
 /* 이는 모든 SVG <a> 요소와 일치합니다 */
-svg|a {}
+svg|a {
+}
 
 /* 이는 XHTML 및 SVG <a> 요소 둘 다와 일치합니다 */
-*|a {}
+*|a {
+}
 ```
 
 ## 명세

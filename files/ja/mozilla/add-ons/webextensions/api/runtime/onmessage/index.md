@@ -62,6 +62,7 @@ browser.runtime.onMessage.hasListener(listener)
   - : このイベントが発生したときに実行されるリスナー関数。関数には次の引数が渡される。
 
     - `message`
+
       - : `object` 型。メッセージ本体。これは JSON 化できるオブジェクトです（[データクローンアルゴリズム](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#データクローンアルゴリズム)を参照）。
 
     - `sender`
@@ -85,24 +86,22 @@ browser.runtime.onMessage.hasListener(listener)
     >
     > ```js example-bad
     > // このようにしないでください
-    > browser.runtime.onMessage.addListener(
-    >   async (data, sender) => {
-    >     if (data.type === 'handle_me') { return 'done'; }
+    > browser.runtime.onMessage.addListener(async (data, sender) => {
+    >   if (data.type === "handle_me") {
+    >     return "done";
     >   }
-    > );
+    > });
     > ```
     >
     > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを非同期関数として定義し、リスナーが応答する予定のメッセージに対してのみプロミスを返す必要があります - そうでなければ、false または undefined を返してください。
     >
     > ```js example-good
-    > browser.runtime.onMessage.addListener(
-    >   (data, sender) => {
-    >     if (data.type === 'handle_me') {
-    >       return Promise.resolve('done');
-    >     }
-    >     return false;
+    > browser.runtime.onMessage.addListener((data, sender) => {
+    >   if (data.type === "handle_me") {
+    >     return Promise.resolve("done");
     >   }
-    > );
+    >   return false;
+    > });
     > ```
 
 ## ブラウザーの互換性
@@ -124,7 +123,7 @@ function notifyExtension(e) {
   if (e.target.tagName !== "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -137,10 +136,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "リンクをクリックしました!",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "リンクをクリックしました!",
+    message: message.url,
   });
 }
 ```
@@ -161,7 +160,9 @@ function handleError(error) {
 }
 
 function sendMessage(e) {
-  const sending = browser.runtime.sendMessage({content: "コンテンツスクリプトからのメッセージです"});
+  const sending = browser.runtime.sendMessage({
+    content: "コンテンツスクリプトからのメッセージです",
+  });
   sending.then(handleResponse, handleError);
 }
 
@@ -174,8 +175,10 @@ window.addEventListener("click", sendMessage);
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  console.log(`コンテンツスクリプトがメッセージを送信しました: ${request.content}`);
-  sendResponse({response: "バックグラウンドスクリプトからの応答です"});
+  console.log(
+    `コンテンツスクリプトがメッセージを送信しました: ${request.content}`,
+  );
+  sendResponse({ response: "バックグラウンドスクリプトからの応答です" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
@@ -187,8 +190,12 @@ browser.runtime.onMessage.addListener(handleMessage);
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  console.log(`コンテンツスクリプトがメッセージを送信しました: ${request.content}`);
-  return Promise.resolve({response: "バックグラウンドスクリプトからの応答です"});
+  console.log(
+    `コンテンツスクリプトがメッセージを送信しました: ${request.content}`,
+  );
+  return Promise.resolve({
+    response: "バックグラウンドスクリプトからの応答です",
+  });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
@@ -202,9 +209,13 @@ browser.runtime.onMessage.addListener(handleMessage);
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  console.log(`コンテンツスクリプトがメッセージを送信しました: ${request.content}`);
+  console.log(
+    `コンテンツスクリプトがメッセージを送信しました: ${request.content}`,
+  );
   setTimeout(() => {
-    sendResponse({response: "非同期的なバックグラウンドスクリプトからの応答です"});
+    sendResponse({
+      response: "非同期的なバックグラウンドスクリプトからの応答です",
+    });
   }, 1000);
   return true;
 }
@@ -227,9 +238,11 @@ function handleResponse(isBookmarked) {
   }
 }
 
-browser.runtime.sendMessage({
-  url: firstLink.href
-}).then(handleResponse);
+browser.runtime
+  .sendMessage({
+    url: firstLink.href,
+  })
+  .then(handleResponse);
 ```
 
 これが対応するバックグラウンドスクリプトです。`{{WebExtAPIRef("bookmarks.search()")}}` を使うことで、リンクがブックマークされているかを確認する {{jsxref("Promise")}} を返します。
@@ -238,9 +251,11 @@ browser.runtime.sendMessage({
 // background-script.js
 
 function isBookmarked(message, sender, response) {
-  return browser.bookmarks.search({
-    url: message.url
-  }).then((results) => results.length > 0);
+  return browser.bookmarks
+    .search({
+      url: message.url,
+    })
+    .then((results) => results.length > 0);
 }
 
 browser.runtime.onMessage.addListener(isBookmarked);
@@ -254,7 +269,9 @@ browser.runtime.onMessage.addListener(isBookmarked);
 function handleMessage(request, sender, sendResponse) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve({response: "非同期的なバックグラウンドスクリプトからの応答です"});
+      resolve({
+        response: "非同期的なバックグラウンドスクリプトからの応答です",
+      });
     }, 1000);
   });
 }

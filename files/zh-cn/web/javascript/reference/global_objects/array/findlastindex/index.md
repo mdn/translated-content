@@ -29,6 +29,7 @@ findLastIndex(callbackFn, thisArg)
       - : 当前正在处理的元素的索引。
     - `array`
       - : 调用 `findLastIndex()` 的数组本身。
+
 - `thisArg` {{optional_inline}}
   - : 执行 `callbackFn` 时，用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
@@ -48,7 +49,7 @@ findLastIndex(callbackFn, thisArg)
 - 对已访问索引的更改不会导致对它们再次调用 `callbackFn` 函数。
 - 如果 `callbackFn` 更改了数组中现有的、尚未访问的元素，它传递给`callbackFn` 的值将是该元素被访问时的值。[已删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)元素被当作 `undefined` 来访问。
 
->**警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
+> **警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
 
 `findLastIndex()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整型键属性。
 

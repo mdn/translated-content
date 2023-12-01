@@ -1,7 +1,6 @@
 ---
 title: "-webkit-mask-image"
 slug: Web/CSS/mask-image
-original_slug: Web/CSS/-webkit-mask-image
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -1,7 +1,6 @@
 ---
 title: sessions.Filter
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
 ---
 
 {{AddonSidebar()}}

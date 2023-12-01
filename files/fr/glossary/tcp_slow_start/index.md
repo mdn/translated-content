@@ -1,8 +1,9 @@
 ---
 title: TCP slow start
 slug: Glossary/TCP_slow_start
-translation_of: Glossary/TCP_slow_start
 ---
+
+{{GlossarySidebar}}
 
 Le démarrage lent, ou _TCP slow start_, permet d'accumulez la vitesse de transmission des capacités du réseau sans savoir initialement quelles sont ces capacités et sans créer de congestion. {{glossary('TCP')}} slow start est un algorithme utilisé pour détecter la bande passante disponible pour la transmission par paquets. Il empêche l'apparition d'une congestion du réseau dont les capacités sont initialement inconnues.
 

@@ -1,7 +1,6 @@
 ---
 title: WebGLTexture
 slug: Web/API/WebGLTexture
-translation_of: Web/API/WebGLTexture
 ---
 
 {{APIRef("WebGL")}}

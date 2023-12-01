@@ -1,7 +1,6 @@
 ---
 title: <feMorphology>
 slug: Web/SVG/Element/feMorphology
-translation_of: Web/SVG/Element/feMorphology
 ---
 
 {{SVGRef}}

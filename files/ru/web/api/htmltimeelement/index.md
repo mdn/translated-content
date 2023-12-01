@@ -1,7 +1,6 @@
 ---
 title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
-translation_of: Web/API/HTMLTimeElement
 ---
 
 {{ APIRef("HTML DOM") }}

@@ -1,11 +1,6 @@
 ---
-title: ':in-range'
+title: ":in-range"
 slug: Web/CSS/:in-range
-tags:
-  - CSS
-  - Псевдоклассы
-  - Руководство
-translation_of: Web/CSS/:in-range
 ---
 
 {{CSSRef}}
@@ -34,24 +29,24 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:in-ra
 
 ```css
 li {
-    list-style: none;
-    margin-bottom: 1em;
+  list-style: none;
+  margin-bottom: 1em;
 }
 input {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 input:in-range {
-    background-color: rgba(0, 255, 0, 0.25);
+  background-color: rgba(0, 255, 0, 0.25);
 }
 input:out-of-range {
-    background-color: rgba(255, 0, 0, 0.25);
-    border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 2px solid red;
 }
 input:in-range + label::after {
-    content:' НОРМАЛЬНОЕ';
+  content: " НОРМАЛЬНОЕ";
 }
 input:out-of-range + label::after {
-    content:'вне диапазона!';
+  content: "вне диапазона!";
 }
 ```
 

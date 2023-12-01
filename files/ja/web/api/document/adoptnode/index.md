@@ -29,11 +29,11 @@ const importedNode = document.adoptNode(externalNode);
 ## 例
 
 ```js
-const iframe = document.querySelector('iframe');
-const iframeImages = iframe.contentDocument.querySelectorAll('img');
-const newParent = document.getElementById('images');
+const iframe = document.querySelector("iframe");
+const iframeImages = iframe.contentDocument.querySelectorAll("img");
+const newParent = document.getElementById("images");
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach(function (imgEl) {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```

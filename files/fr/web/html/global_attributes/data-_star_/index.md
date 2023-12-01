@@ -1,7 +1,6 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-translation_of: Web/HTML/Global_attributes/data-*
 ---
 
 {{HTMLSidebar("Global_attributes")}}

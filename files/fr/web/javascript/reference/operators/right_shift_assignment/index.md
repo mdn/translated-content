@@ -12,8 +12,8 @@ L'opérateur de décalage à droite et d'affectation (`>>=`) décale la séquenc
 ## Syntaxe
 
 ```js
-Opérateur : x >>= y
-Signification :  x   = x >> y
+Opérateur: x >>= y;
+Signification: x = x >> y;
 ```
 
 ## Exemples
@@ -22,10 +22,10 @@ Signification :  x   = x >> y
 
 ```js
 let a = 5; //   (00000000000000000000000000000101)
-a >>= 2;   // 1 (00000000000000000000000000000001)
+a >>= 2; // 1 (00000000000000000000000000000001)
 
 let b = -5; //  (-00000000000000000000000000000101)
-b >>= 2;  // -2 (-00000000000000000000000000000010)
+b >>= 2; // -2 (-00000000000000000000000000000010)
 ```
 
 ## Spécifications

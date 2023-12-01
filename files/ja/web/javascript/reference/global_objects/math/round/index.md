@@ -35,10 +35,10 @@ Math.round(x)
 ### round の使用
 
 ```js
-Math.round( 20.49); //  20
-Math.round( 20.5 ); //  21
-Math.round( 42   ); //  42
-Math.round(-20.5 ); // -20
+Math.round(20.49); //  20
+Math.round(20.5); //  21
+Math.round(42); //  42
+Math.round(-20.5); // -20
 Math.round(-20.51); // -21
 ```
 
@@ -48,7 +48,7 @@ Math.round(-20.51); // -21
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.round")}}
+{{Compat}}
 
 ## 関連情報
 

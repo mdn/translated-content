@@ -1,7 +1,6 @@
 ---
 title: フレックスボックスと他のレイアウト方法の関係
-slug: >-
-  Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
+slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 ---
 
 {{CSSRef}}
@@ -19,7 +18,7 @@ slug: >-
 ボックス配置に含まれているプロパティがフレックスボックス仕様においても詳細に記述され残っているのは、すべてのレイアウトタイプにおける配置方法の詳細を記さなければいけないボックス配置によって、フレックスボックス仕様の完成が遅れることのないようにするためです。フレックスボックス仕様には、将来 Box Alignment Level 3 が完成した際には、フレックスボックス仕様の定義はボックス配置の定義に取って代わられるというメモがあります。
 
 > "メモ: 配置のためのプロパティは CSS Box Alignment [CSS-ALIGN-3] 中で定義されていますが、仕様策定を遅らせうるような依存関係を持たせないために、Flexible Box Layout にも同様のプロパティの定義が重複して掲載されています。これらのプロパティは CSS Box Alignment Level 3 が完成し、他のレイアウトモードへの効果を定義するまでは、flex レイアウトのみに適用されます。さらに、Box Alignment モジュールにて定義されるすべての新しい値は Flexible Box Layout にも適用されます。言い換えると、Box Alignment モジュールの完成後には、Box Alignment モジュールでの定義がここでの定義に取って代わるということです。"
-(訳注: [https://www.w3.org/TR/css-flexbox-1/#alignment](https://www.w3.org/TR/css-flexbox-1/#alignment) より引用)
+> (訳注: [https://www.w3.org/TR/css-flexbox-1/#alignment](https://www.w3.org/TR/css-flexbox-1/#alignment) より引用)
 
 このガイドの後の記事「[フレックスコンテナーでのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)」では、フレックスアイテムに適用できるボックス配置プロパティについて詳細に見ていきます。
 
@@ -88,7 +87,7 @@ CSS の `writing-mode` プロパティを文書全体の書字方向を変更す
 {{cssxref("display")}} プロパティの値 `contents` は、仕様書の中で以下のように述べられている新しい値です。
 
 > 「要素自体はボックスを生成しませんが、その子要素や擬似要素については通常と変わらずボックスを生成します。ボックス生成とレイアウトにおいては、この要素はその子要素や擬似要素によって置き換えられたように扱わなければなりません」
-(訳注: [https://www.w3.org/TR/css-display-3/#box-generation](https://www.w3.org/TR/css-display-3/#box-generation) より引用)
+> (訳注: [https://www.w3.org/TR/css-display-3/#box-generation](https://www.w3.org/TR/css-display-3/#box-generation) より引用)
 
 `display` のこの値はボックス生成を制御し、ページ上に表示されスタイリングすることができるボックスをその要素が生成すべきか、または通常生成されるボックスは削除して子要素を親要素が元々加わっていたレイアウト方法に引き上げて参加させるべきかを制御します。これについては例を見たほうがわかりやすいでしょう。
 

@@ -1,7 +1,6 @@
 ---
 title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
-translation_of: Web/API/Performance/clearMeasures
 ---
 
 {{APIRef("User Timing API")}}

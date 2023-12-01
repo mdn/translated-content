@@ -75,12 +75,12 @@ var matches = container.querySelectorAll("li[data-active='1']");
 
 一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。如果数组为空（即，其`length`属性为 0），则找不到匹配项。
 
-否则，您只需使用标准数组方法来访问列表的内容。您可以使用任何常见的循环语句，例如：
+否则，你只需使用标准数组方法来访问列表的内容。你可以使用任何常见的循环语句，例如：
 
 ```js
 var highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach(function (userItem) {
   deleteUser(userItem);
 });
 ```
@@ -96,8 +96,7 @@ highlightedItems.forEach(function(userItem) {
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```
@@ -105,8 +104,8 @@ highlightedItems.forEach(function(userItem) {
 ### JavaScript
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll('.outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(".outer .inner");
 inner.length; // 1, not 0!
 ```
 
@@ -115,8 +114,8 @@ inner.length; // 1, not 0!
 {{cssxref(":scope")}} 伪类符合预期的行为，只匹配基本元素后代的选择器：
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll(':scope .outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(":scope .outer .inner");
 inner.length; // 0
 ```
 

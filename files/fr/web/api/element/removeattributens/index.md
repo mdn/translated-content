@@ -1,7 +1,6 @@
 ---
 title: element.removeAttributeNS
 slug: Web/API/Element/removeAttributeNS
-translation_of: Web/API/Element/removeAttributeNS
 ---
 
 {{ APIRef("DOM") }}

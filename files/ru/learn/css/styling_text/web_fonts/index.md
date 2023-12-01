@@ -1,8 +1,6 @@
 ---
 title: Веб-шрифты
 slug: Learn/CSS/Styling_text/Web_fonts
-translation_of: Learn/CSS/Styling_text/Web_fonts
-original_slug: Learn/CSS/Styling_text/Веб_шрифты
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}

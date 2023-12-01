@@ -1,13 +1,8 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reflect
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
+
 {{JSRef}}
 
 Статический метод **`Reflect.apply()`** вызывает переданную ему функцию с указанными аргументами.
@@ -58,10 +53,12 @@ Reflect.apply(Math.floor, undefined, [1.75]);
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
 // "hello"
 
-Reflect.apply(RegExp.prototype.exec, /вы/, ['превысокомногорассмотрительствующий']).index;
+Reflect.apply(RegExp.prototype.exec, /вы/, [
+  "превысокомногорассмотрительствующий",
+]).index;
 // 4
 
-Reflect.apply(''.charAt, 'пони', [3]);
+Reflect.apply("".charAt, "пони", [3]);
 // "и"
 ```
 

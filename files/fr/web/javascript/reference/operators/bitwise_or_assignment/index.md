@@ -12,8 +12,8 @@ L'opérateur d'affectation après OU binaire (`|=`) utilise la représentation b
 ## Syntaxe
 
 ```js
-Opérateur : x |= y
-Signification :  x = x | y
+Opérateur: x |= y;
+Signification: x = x | y;
 ```
 
 ## Exemples

@@ -1,8 +1,9 @@
 ---
 title: Certifié
 slug: Glossary/Certified
-translation_of: Glossary/Certified
 ---
+
+{{GlossarySidebar}}
 
 **Certifié** signifie qu'un contenu, une application ou une transmission de données a passé avec succès une évaluation faite par des professionnels ayant une expertise dans le domaine concerné, indiquant ainsi l'exhaustivité, la sécurité et la fiabilité.
 

@@ -1,9 +1,6 @@
 ---
 title: С чего начать
 slug: conflicting/Web/Guide/AJAX
-tags:
-  - AJAX
-translation_of: Web/Guide/AJAX/Getting_Started
 original_slug: Web/Guide/AJAX/Getting_Started
 ---
 

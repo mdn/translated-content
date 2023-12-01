@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
-translation_of: Web/API/HTMLMediaElement/captureStream
 ---
 
 {{APIRef("HTML Media Capture")}}

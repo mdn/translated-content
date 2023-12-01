@@ -1,8 +1,6 @@
 ---
 title: Создаём зону кирпичей
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}

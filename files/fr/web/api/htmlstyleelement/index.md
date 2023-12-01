@@ -1,7 +1,6 @@
 ---
 title: style
 slug: Web/API/HTMLStyleElement
-translation_of: Web/API/HTMLStyleElement
 ---
 
 {{ ApiRef() }}

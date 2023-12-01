@@ -1,7 +1,6 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant to
 ## Syntaxe
 
 ```js
-Object.getOwnPropertySymbols(obj)
+Object.getOwnPropertySymbols(obj);
 ```
 
 ### Paramètres
@@ -44,8 +43,8 @@ obj[b] = "symboleGlobal";
 var objectSymboles = Object.getOwnPropertySymbols(obj);
 
 console.log(objectSymboles.length); // 2
-console.log(objectSymboles)         // [Symbol(a), Symbol(b)]
-console.log(objectSymboles[0])      // Symbol(a)
+console.log(objectSymboles); // [Symbol(a), Symbol(b)]
+console.log(objectSymboles[0]); // Symbol(a)
 ```
 
 ## Spécifications

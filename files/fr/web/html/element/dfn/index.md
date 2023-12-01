@@ -1,7 +1,6 @@
 ---
 title: "<dfn> : l'élément de définition"
 slug: Web/HTML/Element/dfn
-translation_of: Web/HTML/Element/dfn
 ---
 
 {{HTMLSidebar}}

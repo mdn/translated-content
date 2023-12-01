@@ -1,6 +1,8 @@
 ---
 title: XML
 slug: Glossary/XML
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 XML(eXtensible Markup Language)은 W3C에서 지정한 범용 마크업 언어입니다. 정보 기술(IT) 산업에서는 데이터 기술 언어로서 XML을 기반으로 한 많은 언어를 사용하고 있습니다.

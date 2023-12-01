@@ -1,7 +1,6 @@
 ---
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
-translation_of: Web/API/EventTarget/EventTarget
 ---
 
 {{APIRef("DOM Events")}}
@@ -31,12 +30,14 @@ class MyEventTarget extends EventTarget {
     this._secret = mySecret;
   }
 
-  get secret() { return this._secret; }
-};
+  get secret() {
+    return this._secret;
+  }
+}
 
 let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret;  // == 5
-myEventTarget.addEventListener("foo", function(e) {
+let value = myEventTarget.secret; // == 5
+myEventTarget.addEventListener("foo", function (e) {
   this._secret = e.detail;
 });
 
@@ -45,15 +46,11 @@ myEventTarget.dispatchEvent(event);
 let newValue = myEventTarget.secret; // == 7
 ```
 
-## Спецификация
+## Спецификации
 
-Спецификация
+{{Specifications}}
 
-| Спецификация                                                                                                         | Статус                           | Комментарии |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}} | {{Spec2('DOM WHATWG')}} |             |
-
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

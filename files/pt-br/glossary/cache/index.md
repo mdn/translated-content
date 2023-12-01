@@ -1,8 +1,9 @@
 ---
 title: Cache
 slug: Glossary/Cache
-original_slug: Glossario/Cache
 ---
+
+{{GlossarySidebar}}
 
 O **cache** (web cache ou HTTP cache) é uma forma de armazenar dados que foram recebidos por respostas HTTP temporariamente para que possam ser usados em requisições HTTP subsequentes enquanto as condições de seu uso forem satisfeitas.
 

@@ -1,7 +1,6 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
-translation_of: Web/CSS/overflow-anchor
 ---
 
 {{CSSRef}}

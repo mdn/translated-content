@@ -1,7 +1,6 @@
 ---
 title: Textes
 slug: Web/SVG/Tutorial/Texts
-translation_of: Web/SVG/Tutorial/Texts
 ---
 
 {{PreviousNext("Web/SVG/Tutoriel/Motifs", "Web/SVG/Tutoriel/Transformations_de_base")}}

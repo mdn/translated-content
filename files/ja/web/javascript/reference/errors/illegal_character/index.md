@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: illegal character'
+title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 ---
 
@@ -21,7 +21,7 @@ SyntaxError: Invalid or unexpected token (Chrome)
 
 ## 何がうまくいかなかったのか？
 
-コードのこの位置に属していない、無効なトークンまたは予期しないトークンがあります。構文強調機能のあるエディターを使用して、マイナス記号 (` - `) とダッシュ (` – `) や、単純な引用符 (` " `) と標準外の引用符 (` “ `) のようなミスがないか、コードを注意深くチェックしてください。
+コードのこの位置に属していない、無効なトークンまたは予期しないトークンがあります。構文強調機能のあるエディターを使用して、マイナス記号 (`-`) とダッシュ (`–`) や、単純な引用符 (`"`) と標準外の引用符 (`“`) のようなミスがないか、コードを注意深くチェックしてください。
 
 ## 例
 
@@ -45,7 +45,7 @@ var foo = 'bar';             // SyntaxError: illegal character
 ```js example-good
 "This is actually a string";
 42 - 13;
-var foo = 'bar';
+var foo = "bar";
 ```
 
 エディターや IDE の中には、その旨を通知してくれたり、少なくとも若干異なる強調表示をしてくれるものもありますが、すべてではありません。自分のコードにこのようなことが起こり、問題の原因がわからない場合は、問題のある行を削除して再入力するのが最善の方法です。
@@ -62,7 +62,7 @@ var colors = ['#000', #333', '#666'];
 `'#333'` に付け忘れている引用符を追加してください。
 
 ```js example-good
-var colors = ['#000', '#333', '#666'];
+var colors = ["#000", "#333", "#666"];
 ```
 
 ### 隠れた文字
@@ -70,7 +70,7 @@ var colors = ['#000', '#333', '#666'];
 外部のソースをコピー＆ペーストすると、不正な文字が含まれていることがあります。気を付けて!
 
 ```js example-bad
-var foo = 'bar';
+var foo = "bar";
 // SyntaxError: illegal character
 ```
 

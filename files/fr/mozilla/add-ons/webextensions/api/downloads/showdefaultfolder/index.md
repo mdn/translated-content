@@ -1,7 +1,6 @@
 ---
 title: downloads.showDefaultFolder()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
-title: ':empty'
+title: ":empty"
 slug: Web/CSS/:empty
-translation_of: Web/CSS/:empty
 ---
 
 {{CSSRef}}
@@ -49,7 +48,7 @@ body {
 <div class="box"><!-- Je serai bleu. --></div>
 <div class="box">Je serai rouge.</div>
 <div class="box">
-    <!-- Je serai rouge à cause des espaces autour du commentaire -->
+  <!-- Je serai rouge à cause des espaces autour du commentaire -->
 </div>
 ```
 

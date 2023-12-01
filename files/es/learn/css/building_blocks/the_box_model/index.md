@@ -1,7 +1,6 @@
 ---
 title: El modelo de caja
 slug: Learn/CSS/Building_blocks/The_box_model
-original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}

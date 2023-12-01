@@ -1,7 +1,6 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-translation_of: Web/CSS/basic-shape
 ---
 
 {{CSSRef}}
@@ -123,7 +122,10 @@ Afin d'obtenir une interpolation entre deux formes simples, il faut que les règ
 #### HTML
 
 ```html
-<img class="clipped" src="https://pixabay.com/static/uploads/photo/2016/01/17/04/29/rain-drops-1144448_960_720.jpg" alt="Rain Drops">
+<img
+  class="clipped"
+  src="https://pixabay.com/static/uploads/photo/2016/01/17/04/29/rain-drops-1144448_960_720.jpg"
+  alt="Rain Drops" />
 ```
 
 #### Résultat

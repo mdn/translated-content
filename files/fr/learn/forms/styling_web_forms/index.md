@@ -1,7 +1,6 @@
 ---
 title: Mise en forme des formulaires HTML
 slug: Learn/Forms/Styling_web_forms
-translation_of: Learn/Forms/Styling_web_forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}

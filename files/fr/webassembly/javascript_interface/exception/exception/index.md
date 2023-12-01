@@ -1,7 +1,6 @@
 ---
 title: Constructeur pour WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception/Exception
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception
 ---
 
 {{WebAssemblySidebar}}

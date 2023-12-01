@@ -1,7 +1,6 @@
 ---
 title: Generador de historias absurdas
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-original_slug: Learn/JavaScript/First_steps/Generador_de_historias_absurdas
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

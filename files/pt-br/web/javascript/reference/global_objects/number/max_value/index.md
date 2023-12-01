@@ -31,13 +31,11 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.max_value', 'Number.MAX_VALUE')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.MAX_VALUE")}}
+{{Compat}}
 
 ## Veja também
 

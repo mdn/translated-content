@@ -1,7 +1,6 @@
 ---
 title: IDBDatabase.close()
 slug: Web/API/IDBDatabase/close
-translation_of: Web/API/IDBDatabase/close
 ---
 
 {{APIRef("IndexedDB")}}

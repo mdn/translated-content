@@ -1,7 +1,6 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 ---
 
 {{JSRef}}

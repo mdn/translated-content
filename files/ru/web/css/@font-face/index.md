@@ -1,24 +1,16 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
-tags:
-  - '@font-face'
-  - At-rule
-  - CSS
-  - CSS Fonts
-  - NeedsTranslation
-  - Reference
-  - типографика
-translation_of: Web/CSS/@font-face
 ---
 
 **`@font-face`** [CSS](/ru/docs/CSS) [@-правило](/ru/docs/CSS/At-rule) позволяет указать шрифты для отображения текста на веб-страницах, которые могут быть загружены либо с удалённого сервера, либо с компьютера пользователя. Если в правиле была объявлена функция `local()`, с названием шрифта, то будет производиться поиск на компьютере пользователя, и в случае обнаружения будет использован этот шрифт. Иначе будет скачан и использован шрифт, указанный в функции `url()`. `@font-face` позволяет разрабатывать контент не ограничиваясь набором "безопасных" шрифтов (шрифтов, которые настолько распространены, что считаются доступными по умолчанию). Возможность определить локально установленный шрифт позволяет более гибко настраивать шрифты не полагаясь на соединение с интернетом.Распространённым случаем является одновременное использование `url()` и `local()`, чтобы использовать локальный шрифт, если он доступен, или иначе скачать копию шрифта.Это правило может использоваться не только на верхнем уровне CSS, но и внутри любого [@-правила](/ru/docs/CSS/At-rule).
 
 ```css
 @font-face {
- font-family: "Open Sans";
- src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-family: "Open Sans";
+  src:
+    url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 }
 ```
 
@@ -70,20 +62,22 @@ translation_of: Web/CSS/@font-face
 
 ```html
 <html>
-<head>
-  <title>Web Font Sample</title>
-  <style type="text/css" media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
-    }
+  <head>
+    <title>Web Font Sample</title>
+    <style type="text/css" media="screen, print">
+      @font-face {
+        font-family: "Bitstream Vera Serif Bold";
+        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+      }
 
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
+      body {
+        font-family: "Bitstream Vera Serif Bold", serif;
+      }
+    </style>
+  </head>
+  <body>
+    This is Bitstream Vera Serif Bold.
+  </body>
 </html>
 ```
 
@@ -92,9 +86,8 @@ translation_of: Web/CSS/@font-face
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-       local("HelveticaNeue-Bold"),
-       url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```
@@ -118,7 +111,7 @@ translation_of: Web/CSS/@font-face
     @font-face {
       font-family: MyHelvetica;
       src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-          url(MgOpenModernaBold.ttf);
+        url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }
   }

@@ -2,6 +2,7 @@
 title: AudioWorklet
 slug: Web/API/AudioWorklet
 ---
+
 {{APIRef("Web Audio API")}}{{securecontext_header}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 **`AudioWorklet`** 인터페이스는 아주 낮은 레이턴시의 오디오 프로세싱을 제공하기 위해 별도의 스레드에서 실행되는 사용자 정의 오디오 프로세싱 스크립트를 제공하려는 목적으로 사용됩니다.

@@ -1,17 +1,6 @@
 ---
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -40,10 +29,10 @@ str.codePointAt(pos)
 ### Пример: использование метода `codePointAt()`
 
 ```js
-'ABC'.codePointAt(1);          // 66
-'\uD800\uDC00'.codePointAt(0); // 65536
+"ABC".codePointAt(1); // 66
+"\uD800\uDC00".codePointAt(0); // 65536
 
-'XYZ'.codePointAt(42); // undefined
+"XYZ".codePointAt(42); // undefined
 ```
 
 ## Полифил
@@ -53,9 +42,9 @@ str.codePointAt(pos)
 ```js
 /*! http://mths.be/codepointat v0.1.0 от @mathias */
 if (!String.prototype.codePointAt) {
-  (function() {
-    'use strict'; // необходимо для поддержки методов `apply`/`call` с `undefined`/`null`
-    var codePointAt = function(position) {
+  (function () {
+    "use strict"; // необходимо для поддержки методов `apply`/`call` с `undefined`/`null`
+    var codePointAt = function (position) {
       if (this == null) {
         throw TypeError();
       }
@@ -63,7 +52,8 @@ if (!String.prototype.codePointAt) {
       var size = string.length;
       // `ToInteger`
       var index = position ? Number(position) : 0;
-      if (index != index) { // лучше, чем `isNaN`
+      if (index != index) {
+        // лучше, чем `isNaN`
         index = 0;
       }
       // Проверяем выход индекса за границы строки
@@ -73,28 +63,31 @@ if (!String.prototype.codePointAt) {
       // Получаем первое кодовое значение
       var first = string.charCodeAt(index);
       var second;
-      if ( // проверяем, не начинает ли оно суррогатную пару
-        first >= 0xD800 && first <= 0xDBFF && // старшая часть суррогатной пары
+      if (
+        // проверяем, не начинает ли оно суррогатную пару
+        first >= 0xd800 &&
+        first <= 0xdbff && // старшая часть суррогатной пары
         size > index + 1 // следующее кодовое значение
       ) {
         second = string.charCodeAt(index + 1);
-        if (second >= 0xDC00 && second <= 0xDFFF) { // младшая часть суррогатной пары
+        if (second >= 0xdc00 && second <= 0xdfff) {
+          // младшая часть суррогатной пары
           // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
+          return (first - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
         }
       }
       return first;
     };
     if (Object.defineProperty) {
-      Object.defineProperty(String.prototype, 'codePointAt', {
-        'value': codePointAt,
-        'configurable': true,
-        'writable': true
+      Object.defineProperty(String.prototype, "codePointAt", {
+        value: codePointAt,
+        configurable: true,
+        writable: true,
       });
     } else {
       String.prototype.codePointAt = codePointAt;
     }
-  }());
+  })();
 }
 ```
 

@@ -1,8 +1,9 @@
 ---
 title: Semântica
 slug: Glossary/Semantics
-original_slug: Glossario/Semantica
 ---
+
+{{GlossarySidebar}}
 
 Na programação, a **Semântica** se refere ao _significado_ de um trecho de código — por exemplo, "que efeito tem a execução dessa linha de JavaScript?", Ou "que finalidade ou função esse elemento HTML tem" (em vez de "como ele se parece?").
 

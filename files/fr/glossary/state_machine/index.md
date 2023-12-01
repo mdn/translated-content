@@ -1,8 +1,9 @@
 ---
 title: Machine d'état
 slug: Glossary/State_machine
-translation_of: Glossary/State_machine
 ---
+
+{{GlossarySidebar}}
 
 Une machine d'état est une abstraction mathématique utilisée pour concevoir des algorithmes. Une machine d'état lit un ensemble d'entrées et passe à un état différent en fonction de ces entrées.
 

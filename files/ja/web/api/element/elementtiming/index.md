@@ -2,7 +2,6 @@
 title: "Element: elementTiming プロパティ"
 short-title: elementTiming
 slug: Web/API/Element/elementTiming
-page-type: web-api-instance-property
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---

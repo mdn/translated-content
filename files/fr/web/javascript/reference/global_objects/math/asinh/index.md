@@ -1,7 +1,6 @@
 ---
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
 ---
 
 {{JSRef}}
@@ -15,7 +14,7 @@ La fonction **`Math.asinh()`** renvoie l'arc sinus hyperbolique d'un nombre :
 ## Syntaxe
 
 ```js
-Math.asinh(x)
+Math.asinh(x);
 ```
 
 ### Paramètres
@@ -36,13 +35,15 @@ L'arc sinus hyperbolique du nombre passé en argument.
 ### Utiliser `Math.asinh()`
 
 ```js
-Math.asinh = Math.asinh || function(x) {
-  if (x === -Infinity) {
-    return x;
-  } else {
-    return Math.log(x + Math.sqrt(x * x + 1));
-  }
-};
+Math.asinh =
+  Math.asinh ||
+  function (x) {
+    if (x === -Infinity) {
+      return x;
+    } else {
+      return Math.log(x + Math.sqrt(x * x + 1));
+    }
+  };
 ```
 
 ## Spécifications

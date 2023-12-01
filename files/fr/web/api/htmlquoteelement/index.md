@@ -1,7 +1,6 @@
 ---
 title: HTMLQuoteElement
 slug: Web/API/HTMLQuoteElement
-translation_of: Web/API/HTMLQuoteElement
 ---
 
 {{APIRef("HTML DOM")}}

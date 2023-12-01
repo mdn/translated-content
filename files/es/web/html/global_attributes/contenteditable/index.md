@@ -1,7 +1,6 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-original_slug: Web/HTML/Atributos_Globales/contenteditable
 ---
 
 > **Nota:** {{HTMLSidebar("Global_attributes")}}

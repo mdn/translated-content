@@ -1,7 +1,6 @@
 ---
 title: <mfenced>
 slug: Web/MathML/Element/mfenced
-translation_of: Web/MathML/Element/mfenced
 ---
 
 {{MathMLRef}}

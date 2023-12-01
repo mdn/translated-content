@@ -28,13 +28,13 @@ var cssStyleValues[] = StylePropertyMapReadOnly.getAll(property)
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // `computedStyleMap` ですべての計算済みスタイルが取得できます
 const allComputedStyles = buttonEl.computedStyleMap();
 
 // getAll() を background-image プロパティに対して使用
-const allBkImages = allComputedStyles.getAll('background-image');
+const allBkImages = allComputedStyles.getAll("background-image");
 console.log(allBkImages); // それぞれの背景画像を項目とした配列を出力
 ```
 

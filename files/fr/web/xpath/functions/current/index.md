@@ -1,7 +1,6 @@
 ---
 title: current
 slug: Web/XPath/Functions/current
-translation_of: Web/XPath/Functions/current
 ---
 
 {{ XsltRef() }}

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Memory.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Memory/grow
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow
 ---
 
 {{WebAssemblySidebar}}

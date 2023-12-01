@@ -1,7 +1,6 @@
 ---
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isInteger
 ---
 
 {{JSRef}}
@@ -32,31 +31,35 @@ Si el valor seleccionado es un entero, devuelve `true`, de lo contrario `false`.
 ## Ejemplos
 
 ```js
-Number.isInteger(0);         // true
-Number.isInteger(1);         // true
-Number.isInteger(-100000);   // true
+Number.isInteger(0); // true
+Number.isInteger(1); // true
+Number.isInteger(-100000); // true
 Number.isInteger(99999999999999999999999); // true
 
-Number.isInteger(0.1);       // false
-Number.isInteger(Math.PI);   // false
+Number.isInteger(0.1); // false
+Number.isInteger(Math.PI); // false
 
-Number.isInteger(NaN);       // false
-Number.isInteger(Infinity);  // false
+Number.isInteger(NaN); // false
+Number.isInteger(Infinity); // false
 Number.isInteger(-Infinity); // false
-Number.isInteger('10');      // false
-Number.isInteger(true);      // false
-Number.isInteger(false);     // false
-Number.isInteger([1]);       // false
+Number.isInteger("10"); // false
+Number.isInteger(true); // false
+Number.isInteger(false); // false
+Number.isInteger([1]); // false
 ```
 
 ## Polyfill
 
 ```js
-Number.isInteger = Number.isInteger || function(value) {
-  return typeof value === 'number' &&
-    isFinite(value) &&
-    Math.floor(value) === value;
-};
+Number.isInteger =
+  Number.isInteger ||
+  function (value) {
+    return (
+      typeof value === "number" &&
+      isFinite(value) &&
+      Math.floor(value) === value
+    );
+  };
 ```
 
 ## Especificaciones

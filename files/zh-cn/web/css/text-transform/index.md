@@ -214,7 +214,7 @@ strong {
 </p>
 ```
 
-这个示例展示了荷兰语双字母字符 *ij* 必须像一个单一的字母一样处理。
+这个示例展示了荷兰语双字母字符 _ij_ 必须像一个单一的字母一样处理。
 
 {{ EmbedLiveSample('使用“capitalize”（荷兰语 ij 双字母字符）', '100%', '100px') }}
 
@@ -267,10 +267,12 @@ strong {
 span {
   text-transform: uppercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
-这个示例展示了希腊元音除了不连读的 *eta* 之外，应该没有重音，而元音对中第一个元音的重音变成了第二个元音的重音。
+这个示例展示了希腊元音除了不连读的 _eta_ 之外，应该没有重音，而元音对中第一个元音的重音变成了第二个元音的重音。
 
 {{ EmbedLiveSample('使用“uppercase”（希腊语元音）', '100%', '100px') }}
 

@@ -1,7 +1,6 @@
 ---
 title: FormData
 slug: Web/API/FormData
-original_slug: Web/API/XMLHttpRequest/FormData
 ---
 
 {{APIRef("XMLHttpRequest")}}

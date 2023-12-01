@@ -1,7 +1,6 @@
 ---
 title: events.UrlFilter
 slug: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
-translation_of: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Жизнь WebRTC-сессии
 slug: Web/API/WebRTC_API/Session_lifetime
-translation_of: Web/API/WebRTC_API/Session_lifetime
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

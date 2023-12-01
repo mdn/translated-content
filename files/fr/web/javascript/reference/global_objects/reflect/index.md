@@ -1,7 +1,6 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
 
 {{JSRef}}

@@ -1,8 +1,9 @@
 ---
 title: Point de code
 slug: Glossary/Code_point
-translation_of: Glossary/Code_point
 ---
+
+{{GlossarySidebar}}
 
 Un _point de code_ est un nombre attribué pour représenter un caractère abstrait dans un système de représentation de texte (tel que Unicode). En Unicode, un point de code est exprimé sous la forme `U+1234` où `1234` est le numéro attribué. Par exemple, le caractère «&nbsp;A&nbsp;» se voit attribuer un point de code `U+0041`.
 

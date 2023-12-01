@@ -1,7 +1,6 @@
 ---
 title: Premiers pas avec CSS
 slug: Learn/CSS/First_steps
-translation_of: Learn/CSS/First_steps
 ---
 
 {{LearnSidebar}}

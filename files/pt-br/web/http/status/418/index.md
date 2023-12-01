@@ -15,13 +15,13 @@ O código de erro HTTP para o cliente **`418 I'm a teapot`** indica que o servid
 
 ## Especificações
 
-| Especificação                                                | Título                                                                     |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| Especificação                                 | Título                                                                     |
+| --------------------------------------------- | -------------------------------------------------------------------------- |
 | {{RFC("2324", "418 I'm a teapot" , "2.3.2")}} | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.418")}}
+{{Compat}}
 
 ## Veja também
 

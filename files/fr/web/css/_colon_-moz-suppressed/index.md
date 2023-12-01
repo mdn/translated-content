@@ -1,7 +1,6 @@
 ---
-title: ':-moz-suppressed'
+title: ":-moz-suppressed"
 slug: Web/CSS/:-moz-suppressed
-translation_of: Web/CSS/:-moz-suppressed
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -13,7 +12,8 @@ Ce sélecteur est principalement destiné aux développeurs de thèmes.
 ## Syntaxe
 
 ```css
-:-moz-suppressed
+:-moz-suppressed {
+}
 ```
 
 ## Exemple

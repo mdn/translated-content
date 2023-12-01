@@ -1,7 +1,6 @@
 ---
 title: Empty element
 slug: Glossary/Void_element
-original_slug: Glossary/Empty_element
 ---
 
 {{GlossarySidebar}}

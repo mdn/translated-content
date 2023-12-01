@@ -1,10 +1,6 @@
 ---
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/fill-opacity
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
@@ -13,12 +9,12 @@ translation_of: Web/SVG/Attribute/fill-opacity
 
 ## Контекст использования
 
-| Категория                  | Атрибут оформления                                                                                    |
-| -------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Значение                   | [\<opacity-value>](/en/SVG/Content_type#Opacity_value) \| inherit |
-| Предустановленное значение | 1                                                                                                     |
-| Анимируемый                | Да                                                                                                    |
-| Спецификация               | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillOpacityProperty)                   |
+| Категория                  | Атрибут оформления                                                                  |
+| -------------------------- | ----------------------------------------------------------------------------------- |
+| Значение                   | [\<opacity-value>](/en/SVG/Content_type#Opacity_value) \| inherit                   |
+| Предустановленное значение | 1                                                                                   |
+| Анимируемый                | Да                                                                                  |
+| Спецификация               | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillOpacityProperty) |
 
 ## Примеры
 

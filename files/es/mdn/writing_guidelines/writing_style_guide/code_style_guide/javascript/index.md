@@ -1,7 +1,6 @@
 ---
 title: Pautas para dar estilos a ejemplos de código JavaScript
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}

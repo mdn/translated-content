@@ -1,7 +1,6 @@
 ---
 title: "Document: évènement transitionend"
 slug: Web/API/Element/transitionend_event
-translation_of: Web/API/Document/transitionend_event
 ---
 
 {{APIRef}}

@@ -1,7 +1,6 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
-translation_of: Web/API/Element/matches
 ---
 
 {{ APIRef("DOM") }}
@@ -28,16 +27,14 @@ var result = element.matches(selectorString)
 <div class="someClass" id="two">Второй подопытный</div>
 
 <script type="text/javascript">
-
   var coll = document.querySelectorAll("div");
   for (var i = 0, len = coll.length; i < len; i++) {
     if (coll[i].matches(".someClass")) {
-      alert(coll[i].id+": Я выжил!");
-    }else{
+      alert(coll[i].id + ": Я выжил!");
+    } else {
       coll[i].remove();
     }
   }
-
 </script>
 ```
 
@@ -53,22 +50,31 @@ var result = element.matches(selectorString)
 Полифил будет работать только в браузерах, поддерживающих метод document.queryselectorAll.
 
 ```js
-;(function(e) {
-    var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
-    !matches ? (e.matches = e.matchesSelector = function matches(selector) {
-        var matches = document.querySelectorAll(selector);
-        var th = this;
-        return Array.prototype.some.call(matches, function(e) {
+(function (e) {
+  var matches =
+    e.matches ||
+    e.matchesSelector ||
+    e.webkitMatchesSelector ||
+    e.mozMatchesSelector ||
+    e.msMatchesSelector ||
+    e.oMatchesSelector;
+  !matches
+    ? (e.matches = e.matchesSelector =
+        function matches(selector) {
+          var matches = document.querySelectorAll(selector);
+          var th = this;
+          return Array.prototype.some.call(matches, function (e) {
             return e === th;
-        });
-    }) : (e.matches = e.matchesSelector = matches);
+          });
+        })
+    : (e.matches = e.matchesSelector = matches);
 })(Element.prototype);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

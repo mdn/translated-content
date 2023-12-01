@@ -1,7 +1,6 @@
 ---
 title: Fondos y bordes
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
-original_slug: Learn/CSS/Building_blocks/Fondos_y_bordes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}

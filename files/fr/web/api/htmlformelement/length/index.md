@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.length
 slug: Web/API/HTMLFormElement/length
-translation_of: Web/API/HTMLFormElement/length
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,15 +1,6 @@
 ---
 title: NavigatorID.platform
 slug: orphaned/Web/API/NavigatorID/platform
-tags:
-  - API
-  - Navigator
-  - NavigatorID
-  - Property
-  - Refe
-  - platform
-translation_of: Web/API/NavigatorID/platform
-original_slug: Web/API/NavigatorID/platform
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -42,10 +33,8 @@ console.log(navigator.platform);
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                           | Комментарий       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-platform', 'NavigatorID.platform')}} | {{Spec2('HTML WHATWG')}} | Текущее описание. |
+{{Specifications}}
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.platform")}}
+{{Compat}}

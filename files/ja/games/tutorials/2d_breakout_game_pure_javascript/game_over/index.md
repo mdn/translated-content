@@ -1,7 +1,6 @@
 ---
 title: ゲームオーバー
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
 {{GamesSidebar}}

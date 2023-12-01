@@ -1,7 +1,6 @@
 ---
 title: dy
 slug: Web/SVG/Attribute/dy
-translation_of: Web/SVG/Attribute/dy
 ---
 
 {{SVGRef}}

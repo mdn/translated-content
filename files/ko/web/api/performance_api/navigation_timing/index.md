@@ -1,7 +1,6 @@
 ---
 title: 내비게이션 타이밍(Navigation Timing)
 slug: Web/API/Performance_API/Navigation_timing
-original_slug: Web/API/Navigation_timing_API
 ---
 
 **Navigation Timing API**는 웹 사이트의 성능을 측정하는 데 사용할 수 있는 데이터를 제공합니다. 같은 목적에 사용했던 다른 JavaScript 기반 메커니즘과 다르게 이 API는 더 유용하고 정확한 종단 간(end-to-end) 대기 시간(latency)을 제공할 수 있습니다.
@@ -10,9 +9,9 @@ original_slug: Web/API/Navigation_timing_API
 
 ```js
 function onLoad() {
-    var now = new Date().getTime();
-    var page_load_time = now - performance.timing.navigationStart;
-    console.log("User-perceived page loading time: " + page_load_time);
+  var now = new Date().getTime();
+  var page_load_time = now - performance.timing.navigationStart;
+  console.log("User-perceived page loading time: " + page_load_time);
 }
 ```
 
@@ -75,9 +74,3 @@ var connectTime = perfData.responseEnd - perfData.requestStart;
 - [Test Page](http://webtimingdemo.appspot.com/)
 - <http://w3c-test.org/webperf/specs/NavigationTiming/>
 - <http://www.w3.org/TR/navigation-timing/>
-
-### 브라우저 호환
-
-### `Window.performance.timing`
-
-{{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: Types MIME
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 
 {{HTTPSidebar}}

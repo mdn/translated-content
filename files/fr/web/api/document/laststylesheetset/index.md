@@ -1,7 +1,6 @@
 ---
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
-translation_of: Web/API/Document/lastStyleSheetSet
 ---
 
 {{ APIRef("DOM") }}

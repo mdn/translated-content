@@ -20,8 +20,8 @@ a OP1 b OP2 c
 如果 `OP1` 和 `OP2` 具有不同的优先级（见下表），则优先级最高的运算符先执行，不用考虑结合性。观察乘法如何具有比加法更高的优先级并首先执行，即使加法是首先写入代码的。
 
 ```js
-console.log(3 + 10 * 2);   // 输出 23
-console.log(3 + (10 * 2)); // 输出 23 因为这里的括号是多余的
+console.log(3 + 10 * 2); // 输出 23
+console.log(3 + 10 * 2); // 输出 23 因为这里的括号是多余的
 console.log((3 + 10) * 2); // 输出 26 因为括号改变了优先级
 ```
 
@@ -160,19 +160,19 @@ Evaluating the right side
 短路是条件求值的术语。例如，在表达式 `a && (b + c)` 中，如果 `a` 为虚值（{{Glossary("falsy")}}），那么即使 `(b + c)` 在圆括号中，也不会被求值。我们可以说逻辑或运算符（“OR”）是“短路的”。除了逻辑或运算符外，其他短路运算符还包括逻辑与（“AND”）、空值合并、可选链和条件（三元）运算符。下面有更多例子：
 
 ```js
-a || (b * c);  // 首先对 `a` 求值，如果 `a` 为真值则直接返回 `a`
-a && (b < c);  // 首先对 `a` 求值，如果 `a` 为虚值则直接返回 `a`
+a || b * c; // 首先对 `a` 求值，如果 `a` 为真值则直接返回 `a`
+a && b < c; // 首先对 `a` 求值，如果 `a` 为虚值则直接返回 `a`
 a ?? (b || c); // 首先对 `a` 求值，如果 `a` 不是 `null` 或 `undefined` 则直接返回 `a`
-a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` 则直接返回 `undefined`
+a?.b.c; // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` 则直接返回 `undefined`
 ```
 
 ## 示例
 
 ```js
-3 > 2 && 2 > 1
+3 > 2 && 2 > 1;
 // 返回 true
 
-3 > 2 > 1
+3 > 2 > 1;
 // 返回 false，因为 3 > 2 是 true，然后 true 会在比较运算符中
 // 被隐式转换为 1，因此 true > 1 会变为 1 > 1，结果是 false
 // 加括号可以更清楚：(3 > 2) > 1
@@ -182,7 +182,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
 
 下面的表格将所有运算符按照优先级的不同从高（19）到低（1）排列。
 
-请注意，下表中故意不包含[展开语法（Spread syntax）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) —— 原因可以引用[Stack Overflow 上的一个回答](https://stackoverflow.com/a/48656377)，“[展开语法不是一个运算符](https://stackoverflow.com/q/44934828/1048572)，因此没有优先级。它是数组字面量和函数调用（和对象字面量）语法的一部分。”
+请注意，下表中故意不包含[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)——原因可以引用 [Stack Overflow 上的一个回答](https://stackoverflow.com/a/48656377)，“[展开语法不是一个运算符](https://stackoverflow.com/q/44934828/1048572)，因此没有优先级。它是数组字面量和函数调用（和对象字面量）语法的一部分。”
 
 <table class="fullwidth-table">
     <tbody>

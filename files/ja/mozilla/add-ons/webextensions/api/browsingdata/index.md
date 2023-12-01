@@ -59,7 +59,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browsingData", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -1,7 +1,6 @@
 ---
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
-translation_of: Web/API/AnimationEvent/AnimationEvent
 l10n:
   sourceCommit: c000698d544f932314050edec3f47b8b8dc906bf
 ---

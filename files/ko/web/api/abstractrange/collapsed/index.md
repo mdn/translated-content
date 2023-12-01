@@ -10,7 +10,7 @@ slug: Web/API/AbstractRange/collapsed
 ## 문법
 
 ```js
-    var isCollpased = range.collapsed
+var isCollpased = range.collapsed;
 ```
 
 ### Value

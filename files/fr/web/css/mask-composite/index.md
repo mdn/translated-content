@@ -1,7 +1,6 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
-translation_of: Web/CSS/mask-composite
 ---
 
 {{CSSRef}}

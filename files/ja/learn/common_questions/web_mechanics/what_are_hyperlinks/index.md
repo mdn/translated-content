@@ -1,7 +1,6 @@
 ---
 title: ハイパーリンクとは？
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
-original_slug: Learn/Common_questions/What_are_hyperlinks
 ---
 
 この記事では、ハイパーリンクとは何か、なぜ重要なのかを詳しく説明します。

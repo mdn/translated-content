@@ -1,7 +1,6 @@
 ---
 title: include
 slug: Web/XSLT/Element/include
-translation_of: Web/XSLT/Element/include
 ---
 
 {{ XsltRef() }}

@@ -1,24 +1,23 @@
 ---
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
-translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
 
 {{JSRef}}{{deprecated_header}}
 
-La méthode **`blink()`** crée un élément HTML {{HTMLElement("blink")}} qui affiche la chaine de caractères en clignotant.
+La méthode **`blink()`** crée un élément HTML `<blink>` qui affiche la chaine de caractères en clignotant.
 
 > **Attention :** Les textes clignotants sont fortement déconseillés par de nombreux standards d'accessibilité. L'élément `<blink>` est lui-même non standard et obsolète !
 
 ## Syntaxe
 
 ```js
-str.blink()
+str.blink();
 ```
 
 ### Valeur de retour
 
-Une chaine de caractères représentant un élément HTML {{HTMLElement("blink")}}.
+Une chaine de caractères représentant un élément HTML `<blink>`.
 
 ## Description
 

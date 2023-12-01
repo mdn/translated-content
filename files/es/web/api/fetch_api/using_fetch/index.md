@@ -1,7 +1,6 @@
 ---
 title: Uso de Fetch
 slug: Web/API/Fetch_API/Using_Fetch
-original_slug: Web/API/Fetch_API/Utilizando_Fetch
 ---
 
 {{DefaultAPISidebar("Fetch API")}}{{ SeeCompatTable }}

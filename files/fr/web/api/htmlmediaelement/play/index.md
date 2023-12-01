@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.play()
 slug: Web/API/HTMLMediaElement/play
-translation_of: Web/API/HTMLMediaElement/play
 ---
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}

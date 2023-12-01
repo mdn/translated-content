@@ -1,7 +1,6 @@
 ---
 title: IntersectionObserver.thresholds
 slug: Web/API/IntersectionObserver/thresholds
-translation_of: Web/API/IntersectionObserver/thresholds
 ---
 
 {{APIRef("Intersection Observer API")}}

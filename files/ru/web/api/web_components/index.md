@@ -1,8 +1,6 @@
 ---
 title: Веб-компоненты
 slug: Web/API/Web_components
-translation_of: Web/Web_Components
-original_slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Веб-компоненты")}}
@@ -133,23 +131,11 @@ original_slug: Web/Web_Components
 
 ## Спецификации
 
-| Спецификация                                                                                                                 | Статус                           | Комментарии                                                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG","scripting.html#the-template-element","&lt;template&gt; element")}} | {{Spec2("HTML WHATWG")}} | Определение {{HTMLElement("template")}}.                                                                   |
-| {{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}             | {{Spec2("HTML WHATWG")}} | Определение [пользовательских HTML-элементов](/ru/docs/Web/Web_Components/Использование_пользовательских_элементов) |
-| {{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}                                                 | {{Spec2("DOM WHATWG")}} | Определение [Shadow DOM](/ru/docs/Web/Web_Components/Using_shadow_DOM)                                              |
-| {{SpecName("HTML Imports", "", "")}}                                                                             | {{Spec2("HTML Imports")}} | Начальное определение [HTML импорта](/ru/docs/Web/Web_Components/HTML_Imports)                                      |
-| {{SpecName("Shadow DOM", "", "")}}                                                                                 | {{Spec2("Shadow DOM")}} | Начальное определение [Shadow DOM](/ru/docs/Web/Web_Components/Using_shadow_DOM)                                    |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-В основном:
-
-- Веб-компоненты по умолчанию поддерживаются в Firefox (версия 63), Chrome и Opera.
-- Safari поддерживает ряд функций веб-компонентов, но меньше, чем указанные выше браузеры.
-- Edge работает над реализацией.
-
-Для получения подробной информации о поддержке определённых функций браузером обратитесь к перечисленным выше справочным страницам.
+{{Compat}}
 
 ## Смотрите также
 

@@ -43,7 +43,10 @@ slug: Web/HTML/Element/bdi
 ## 示例
 
 ```html
-<p dir="ltr">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>
+<p dir="ltr">
+  This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed
+  right-to-left.
+</p>
 ```
 
 ### 结果

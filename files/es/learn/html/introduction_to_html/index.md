@@ -1,7 +1,6 @@
 ---
 title: Introducción a HTML
 slug: Learn/HTML/Introduction_to_HTML
-original_slug: Learn/HTML/Introduccion_a_HTML
 ---
 
 {{LearnSidebar}}

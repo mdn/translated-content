@@ -1,8 +1,9 @@
 ---
 title: Viewport
 slug: Glossary/Viewport
-original_slug: Glossario/Viewport
 ---
+
+{{GlossarySidebar}}
 
 Uma viewport representa uma área poligonal (normalmente retangular) que está sendo exibida no momento. Em termos de navegador web, se refere a parte do documento que é exibida na janela (ou tela, se o documento estiver exibido em modo tela-cheia). Conteúdos fora da viewport não são visíveis na janela/tela até que seja rolado para sua área de visualização.
 

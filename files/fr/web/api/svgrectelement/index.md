@@ -1,7 +1,6 @@
 ---
 title: SVGRectElement
 slug: Web/API/SVGRectElement
-translation_of: Web/API/SVGRectElement
 ---
 
 {{APIRef("SVG")}}

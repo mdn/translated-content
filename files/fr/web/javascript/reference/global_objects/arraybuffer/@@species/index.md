@@ -1,7 +1,6 @@
 ---
 title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ La propriété d'accesseur **`ArrayBuffer[@@species]`** renvoie le constructeur 
 ## Syntaxe
 
 ```js
-ArrayBuffer[Symbol.species]
+ArrayBuffer[Symbol.species];
 ```
 
 ## Description
@@ -32,7 +31,9 @@ Pour un objet dérivé (par exemple une classe sur mesure `MonArrayBuffer`), le 
 class MonArrayBuffer extends ArrayBuffer {
   // On surcharge species pour renvoyer
   // le constructeur parent ArrayBuffer
-  static get [Symbol.species]() { return ArrayBuffer; }
+  static get [Symbol.species]() {
+    return ArrayBuffer;
+  }
 }
 ```
 

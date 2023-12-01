@@ -52,7 +52,7 @@ _プロパティディスクリプタ_ は、次の属性のいくつかを持�
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -66,12 +66,9 @@ superclass.prototype = {
   // Define your methods and properties here
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define your methods and properties here
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define your methods and properties here
+});
 ```
 
 ## 仕様書
@@ -80,7 +77,7 @@ subclass.prototype = Object.create(
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}
+{{Compat}}
 
 ## 関連情報
 

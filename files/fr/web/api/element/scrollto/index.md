@@ -1,7 +1,6 @@
 ---
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
-translation_of: Web/API/Element/scrollTo
 ---
 
 {{ APIRef }}

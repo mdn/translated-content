@@ -1,7 +1,6 @@
 ---
 title: DataTransfer.mozTypesAt()
 slug: orphaned/Web/API/DataTransfer/mozTypesAt
-original_slug: Web/API/DataTransfer/mozTypesAt
 ---
 
 {{APIRef("HTML Drag and Drop API")}}

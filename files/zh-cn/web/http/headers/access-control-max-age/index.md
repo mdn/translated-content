@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Access-Control-Max-Age
 
 The **`Access-Control-Max-Age`** 这个响应头表示 {{glossary("preflight request")}} （预检请求）的返回结果（即 {{HTTPHeader("Access-Control-Allow-Methods")}} 和{{HTTPHeader("Access-Control-Allow-Headers")}} 提供的信息）可以被缓存多久。
 
-| 报头类型                                         | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| 报头类型                              | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

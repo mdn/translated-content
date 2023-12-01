@@ -72,8 +72,7 @@ new IntersectionObserver(callback, options)
 この例では、監視されている要素の可視範囲が 10% を越える毎に `myObserverCallback` を呼び出すような新しい交差オブザーバーを生成します。
 
 ```js
-let observer = new IntersectionObserver(myObserverCallback,
-                   {threshold: 0.1});
+let observer = new IntersectionObserver(myObserverCallback, { threshold: 0.1 });
 ```
 
 ## 仕様書

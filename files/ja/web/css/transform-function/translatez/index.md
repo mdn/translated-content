@@ -1,7 +1,6 @@
 ---
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
-original_slug: Web/CSS/transform-function/translateZ()
 ---
 
 {{CSSRef}}
@@ -98,7 +97,7 @@ div {
 ```
 
 ここで重要なのは "moved" というクラスで、その機能を見てみましょう。まず、
-[`perspective()`](/ja/docs/Web/CSS/transform-function/perspective()) 関数は、 z=0 の位置にある平面 (要するに画面の表面) の相対位置に閲覧者を位置付けます。 `500px` という値は、ユーザーが z=0 にある画像の 500 ピクセル「前」にいることを意味します。
+[`perspective()`](</ja/docs/Web/CSS/transform-function/perspective()>) 関数は、 z=0 の位置にある平面 (要するに画面の表面) の相対位置に閲覧者を位置付けます。 `500px` という値は、ユーザーが z=0 にある画像の 500 ピクセル「前」にいることを意味します。
 
 次に、`translateZ()` 関数は、要素を画面からユーザーの方に「外向きに」200 ピクセル移動します。 これは、二次元のディスプレイ上で見たときに要素を大きく見せる、または VR ヘッドセットや他の三次元ディスプレイ機器を使用して見たときに要素をより近く見せるという効果があります。
 

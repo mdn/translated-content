@@ -34,7 +34,7 @@ var span = document.querySelector("span");
 var classes = span.classList;
 var length = classes.length;
 
-span.textContent = 'classList length = ' + length;
+span.textContent = "classList length = " + length;
 ```
 
 运行得出的结果如下：

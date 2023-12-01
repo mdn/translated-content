@@ -1,13 +1,6 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
-  - Массив
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ---
 
 {{JSRef}}
@@ -36,7 +29,7 @@ arr[Symbol.unscopables]
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('что-то');
+  keys.push("что-то");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);

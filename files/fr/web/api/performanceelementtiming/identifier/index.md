@@ -1,7 +1,6 @@
 ---
 title: PerformanceElementTiming.identifier
 slug: Web/API/PerformanceElementTiming/identifier
-translation_of: Web/API/PerformanceElementTiming/identifier
 ---
 
 {{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}

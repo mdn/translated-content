@@ -1,7 +1,6 @@
 ---
 title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 ---
 
 {{AddonSidebar()}}

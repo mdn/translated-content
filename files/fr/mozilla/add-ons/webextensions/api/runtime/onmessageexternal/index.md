@@ -1,7 +1,6 @@
 ---
 title: runtime.onMessageExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
 ---
 
 {{AddonSidebar()}}Utilisez cet événement pour écouter les messages d'une autre extension.

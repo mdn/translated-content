@@ -1,7 +1,6 @@
 ---
 title: Les bases de JavaScript, orienté objet
 slug: Learn/JavaScript/Objects/Basics
-translation_of: Learn/JavaScript/Objects/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}

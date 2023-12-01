@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.getAll()
 slug: Web/API/IDBObjectStore/getAll
-translation_of: Web/API/IDBObjectStore/getAll
 ---
 
 {{APIRef("IndexedDB")}}

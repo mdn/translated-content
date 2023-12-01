@@ -2,7 +2,6 @@
 title: "Element: animationiteration イベント"
 short-title: animationiteration
 slug: Web/API/Element/animationiteration_event
-original_slug: Web/API/Document/animationiteration_event
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---

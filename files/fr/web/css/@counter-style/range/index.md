@@ -1,7 +1,6 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
-translation_of: Web/CSS/@counter-style/range
 ---
 
 {{CSSRef}}
@@ -32,8 +31,12 @@ range: 6 infinite;
 range: infinite infinite;
 
 /* Valeurs indiquant plusieurs intervalles */
-range: 2 5, 8 10;
-range: infinite 6, 10 infinite;
+range:
+  2 5,
+  8 10;
+range:
+  infinite 6,
+  10 infinite;
 ```
 
 ### Values
@@ -55,7 +58,9 @@ range: infinite 6, 10 infinite;
 @counter-style range-multi-example {
   system: cyclic;
   symbols: "\25A0" "\25A1";
-  range: 2 4, 7 9;
+  range:
+    2 4,
+    7 9;
 }
 
 .exemple {

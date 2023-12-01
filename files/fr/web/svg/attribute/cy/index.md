@@ -1,7 +1,6 @@
 ---
 title: cy
 slug: Web/SVG/Attribute/cy
-translation_of: Web/SVG/Attribute/cy
 ---
 
 {{SVGRef}}

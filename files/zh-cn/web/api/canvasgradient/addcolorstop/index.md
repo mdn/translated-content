@@ -29,7 +29,7 @@ void gradient.addColorStop(offset, color);
 #### HTML
 
 ```html
- <canvas id="canvas"></canvas>
+<canvas id="canvas"></canvas>
 ```
 
 #### JavaScript
@@ -38,11 +38,11 @@ void gradient.addColorStop(offset, color);
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-var gradient = ctx.createLinearGradient(0,0,200,0);
-gradient.addColorStop(0,"green");
-gradient.addColorStop(1,"white");
+var gradient = ctx.createLinearGradient(0, 0, 200, 0);
+gradient.addColorStop(0, "green");
+gradient.addColorStop(1, "white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);
+ctx.fillRect(10, 10, 200, 100);
 ```
 
 编辑以下代码可看到画布变化：
@@ -58,7 +58,8 @@ var gradient = ctx.createLinearGradient(0,0,200,0);
 gradient.addColorStop(0,"green");
 gradient.addColorStop(1,"white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);</textarea>
+ctx.fillRect(10,10,200,100);</textarea
+>
 ```
 
 ```js hidden
@@ -74,14 +75,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

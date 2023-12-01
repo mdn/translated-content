@@ -1,7 +1,6 @@
 ---
 title: window.getComputedStyle
 slug: Web/API/Window/getComputedStyle
-translation_of: Web/API/Window/getComputedStyle
 ---
 
 {{ ApiRef() }}

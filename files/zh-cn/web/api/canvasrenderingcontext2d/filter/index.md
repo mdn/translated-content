@@ -66,12 +66,12 @@ filter 属性接受{{domxref("DOMString")}}字符串，可以包含一个或多�
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.filter = 'blur(4px)';
-ctx.font = '48px serif';
-ctx.fillText('Hello world', 50, 100);
+ctx.filter = "blur(4px)";
+ctx.font = "48px serif";
+ctx.fillText("Hello world", 50, 100);
 ```
 
 #### 结果

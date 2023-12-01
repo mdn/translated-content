@@ -1,7 +1,6 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
-translation_of: Web/HTTP/Status/302
 ---
 
 {{HTTPSidebar}}

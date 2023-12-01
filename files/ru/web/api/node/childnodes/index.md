@@ -1,7 +1,6 @@
 ---
 title: Node.childNodes
 slug: Web/API/Node/childNodes
-translation_of: Web/API/Node/childNodes
 ---
 
 {{APIRef("DOM")}}
@@ -14,7 +13,7 @@ translation_of: Web/API/Node/childNodes
 var ndList = elementNodeReference.childNodes;
 ```
 
-_ndList_ — упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, *ndList *пуст.
+_ndList_ — упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, _ndList_ пуст.
 
 _ndList_ — переменная, хранящая список дочерних элементов. Тип этого списка — {{domxref("NodeList")}}.
 
@@ -41,8 +40,8 @@ if (parg.hasChildNodes()) {
 // box -- ссылка на элемент с детьми
 
 while (box.firstChild) {
-    //Список является ссылкой, то есть он будет переиндексирован перед каждым вызовом
-    box.removeChild(box.firstChild);
+  //Список является ссылкой, то есть он будет переиндексирован перед каждым вызовом
+  box.removeChild(box.firstChild);
 }
 ```
 
@@ -54,11 +53,13 @@ while (box.firstChild) {
 
 `childNodes` также включают, например, текстовые узлы и комментарии. Чтобы пропустить их, используйте {{ domxref("ParentNode.children") }} взамен.
 
-## Спецификация
+## Спецификации
 
-- [W3C DOM 2 Core: childNodes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1451460987)
-- [W3C DOM 3 Core: childNodes](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1451460987)
-- [W3C DOM 3 NodeList interface](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-536297177)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

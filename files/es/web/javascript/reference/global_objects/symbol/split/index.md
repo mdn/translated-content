@@ -1,7 +1,6 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
@@ -21,12 +20,12 @@ Para más información, véase {{jsxref("RegExp.@@split", "RegExp.prototype[@@sp
 ```js
 class ReverseSplit {
   [Symbol.split](string) {
-    const array = string.split(' ');
+    const array = string.split(" ");
     return array.reverse();
   }
 }
 
-console.log('Another one bites the dust'.split(new ReverseSplit()));
+console.log("Another one bites the dust".split(new ReverseSplit()));
 // resultado esperado: [ "dust", "the", "bites", "one", "Another" ]
 ```
 

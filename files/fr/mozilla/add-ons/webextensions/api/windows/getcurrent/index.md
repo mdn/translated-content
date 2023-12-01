@@ -1,7 +1,6 @@
 ---
 title: windows.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 ---
 
 {{AddonSidebar()}}

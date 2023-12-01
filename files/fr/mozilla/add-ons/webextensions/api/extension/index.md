@@ -1,7 +1,6 @@
 ---
 title: extension
 slug: Mozilla/Add-ons/WebExtensions/API/extension
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension
 ---
 
 {{AddonSidebar}}

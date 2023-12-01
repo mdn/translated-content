@@ -1,7 +1,6 @@
 ---
 title: NodeList.values()
 slug: Web/API/NodeList/values
-translation_of: Web/API/NodeList/values
 ---
 
 {{APIRef("DOM")}}

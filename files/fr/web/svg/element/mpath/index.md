@@ -1,7 +1,6 @@
 ---
 title: <mpath>
 slug: Web/SVG/Element/mpath
-translation_of: Web/SVG/Element/mpath
 ---
 
 {{SVGRef}}

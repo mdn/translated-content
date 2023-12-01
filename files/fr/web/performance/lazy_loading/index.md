@@ -1,7 +1,6 @@
 ---
 title: Le chargement différé
 slug: Web/Performance/Lazy_loading
-translation_of: Web/Performance/Lazy_loading
 ---
 
 Le **chargement différé** (<i lang="en">lazy loading</i> en anglais) est une stratégie d'identification des ressources non bloquantes (non critiques) afin de ne les charger qu'au moment où elles sont utiles. C'est une façon de raccourcir le [chemin critique de rendu](/fr/docs/Web/Performance/Critical_rendering_path), ce qui se traduit par une réduction du temps de chargement de la page.

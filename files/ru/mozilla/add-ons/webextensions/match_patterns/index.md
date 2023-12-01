@@ -1,7 +1,6 @@
 ---
 title: Шаблоны совпадения в расширении
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
-translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
 
 {{AddonSidebar}}

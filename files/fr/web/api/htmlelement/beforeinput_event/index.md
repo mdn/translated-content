@@ -1,7 +1,6 @@
 ---
 title: "HTMLElement: beforeinput event"
 slug: Web/API/HTMLElement/beforeinput_event
-translation_of: Web/API/HTMLElement/beforeinput_event
 ---
 
 {{APIRef}} {{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: PerformanceObserverEntryList.getEntriesByName()
 slug: Web/API/PerformanceObserverEntryList/getEntriesByName
-translation_of: Web/API/PerformanceObserverEntryList/getEntriesByName
 ---
 
 {{APIRef("Performance Timeline API")}}

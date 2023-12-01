@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.getEyeParameters()
 slug: Web/API/VRDisplay/getEyeParameters
-original_slug: Web/API/VRDevice/getEyeParameters
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -13,7 +12,7 @@ original_slug: Web/API/VRDevice/getEyeParameters
 ## 構文
 
 ```js
-getEyeParameters(whichEye)
+getEyeParameters(whichEye);
 ```
 
 ### 引数
@@ -23,7 +22,7 @@ getEyeParameters(whichEye)
 
 ### 返値
 
- {{domxref("VREyeParameters")}} オブジェクト、または VR コンテンツを表示できない場合（例えば {{domxref("VRDisplayCapabilities.canPresent")}} が `false` を返す場合）は null です。
+{{domxref("VREyeParameters")}} オブジェクト、または VR コンテンツを表示できない場合（例えば {{domxref("VRDisplayCapabilities.canPresent")}} が `false` を返す場合）は null です。
 
 ## 例
 

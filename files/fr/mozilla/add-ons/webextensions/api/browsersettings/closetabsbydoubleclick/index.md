@@ -1,7 +1,6 @@
 ---
 title: browserSettings.closeTabsByDoubleClick
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick
 ---
 
 {{AddonSidebar()}}

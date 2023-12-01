@@ -17,18 +17,18 @@ ECMAScript 2015 で値と値とをマッピングする新しいデータ構造�
 
 ```js
 let sayings = new Map();
-sayings.set('dog', 'woof');
-sayings.set('cat', 'meow');
-sayings.set('elephant', 'toot');
+sayings.set("dog", "woof");
+sayings.set("cat", "meow");
+sayings.set("elephant", "toot");
 sayings.size; // 3
-sayings.get('dog'); // woof
-sayings.get('fox'); // undefined
-sayings.has('bird'); // false
-sayings.delete('dog');
-sayings.has('dog'); // false
+sayings.get("dog"); // woof
+sayings.get("fox"); // undefined
+sayings.has("bird"); // false
+sayings.delete("dog");
+sayings.has("dog"); // false
 
 for (let [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+  console.log(key + " goes " + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -54,7 +54,7 @@ sayings.size; // 0
 
 ### `WeakMap` オブジェクト
 
-{{jsxref("WeakMap")}} オブジェクトは、**キーはオブジェクトのみ**で**、**値は任意の値にできるキー / バリューのペアからなるコレクションです。キーによるオブジェクト参照は**弱く**保持され、そのオブジェクトへの参照が他に存在しないときはガベージコレクション (GC) の対象になります。`WeakMap` API は `Map` API と同じです。
+{{jsxref("WeakMap")}} オブジェクトは、**キーはオブジェクトのみ**で、値は任意の値にできるキー / バリューのペアからなるコレクションです。キーによるオブジェクト参照は**弱く**保持され、そのオブジェクトへの参照が他に存在しないときはガベージコレクション (GC) の対象になります。`WeakMap` API は `Map` API と同じです。
 
 `Map` オブジェクトとの違いの１つは、`WeakMap` のキーは列挙可能ではないことです（すなわち、キーのリストを取得するメソッドがありません）。もしも列挙可能であれば、リストは非決定性をもたらす、ガベージコレクションの状態に依存することになってしまいます。
 
@@ -91,11 +91,11 @@ module.exports = Public;
 ```js
 let mySet = new Set();
 mySet.add(1);
-mySet.add('some text');
-mySet.add('foo');
+mySet.add("some text");
+mySet.add("foo");
 
 mySet.has(1); // true
-mySet.delete('foo');
+mySet.delete("foo");
 mySet.size; // 2
 
 for (let item of mySet) console.log(item);
@@ -132,7 +132,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 {{jsxref("Set")}} オブジェクトとの主な違いは下記の通りです :
 
 - `Set` とは対照的に、`WeakSet` は**オブジェクトのみのコレクション**で、任意の型の任意の値でのコレクションではありません。
-- `WeakSet` は*弱い: コレクションでのオブジェクトでの参照は弱く保持されています。`WeakSet` 内に格納されているオブジェクトに対する参照がなくなった場合、ガベージコレクションされます。これはまた、現在コレクション内に格納されているオブジェクトのリストがないということを表しています。`WeakSet` は列挙可能ではありません。
+- `WeakSet` は弱い: コレクションでのオブジェクトでの参照は弱く保持されています。`WeakSet` 内に格納されているオブジェクトに対する参照がなくなった場合、ガベージコレクションされます。これはまた、現在コレクション内に格納されているオブジェクトのリストがないということを表しています。`WeakSet` は列挙可能ではありません。
 
 `WeakSet` オブジェクトの使用例は限定的です。メモリーリークが発生しないため、例えば、DOM 要素をキーとして使用し、監視するためにそれらにマーキングすることが安全に行なえます。
 

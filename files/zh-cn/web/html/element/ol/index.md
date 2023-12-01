@@ -49,10 +49,13 @@ slug: Web/HTML/Element/ol
 - `reversed`
   - : 此布尔值属性指定列表中的条目是否是倒序排列的，即编号是否应从高到低反向标注。
 - `start`
+
   - : 一个整数值属性，指定了列表编号的起始值。此属性的值应为阿拉伯数字，尽管列表条目的编号类型 `type` 属性可能指定为了罗马数字编号等其他类型的编号。比如说，想要让元素的编号从英文字母 "d" 或者罗马数字 "iv" 开始，都应当使用 `start="4"`。
 
     > **备注：** 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。
+
 - `type`
+
   - : 设置编号的类型：
 
     - `a` 表示小写英文字母编号
@@ -132,13 +135,16 @@ slug: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item  <!-- closing </li> tag not here! -->
+  <li>
+    second item
+    <!-- closing </li> tag not here! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  </li>            <!-- Here's the closing </li> tag -->
+  </li>
+  <!-- Here's the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```
@@ -152,13 +158,16 @@ slug: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item  <!-- closing </li> tag not here! -->
+  <li>
+    second item
+    <!-- closing </li> tag not here! -->
     <ul>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ul>
-  </li>            <!-- Here's the closing </li> tag -->
+  </li>
+  <!-- Here's the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```

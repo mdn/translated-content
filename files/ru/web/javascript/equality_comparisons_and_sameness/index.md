@@ -1,11 +1,6 @@
 ---
 title: Операторы сравнения
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-tags:
-  - Равенство
-  - Сравнение
-  - Средний
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
 
 {{jsSidebar("Intermediate")}}

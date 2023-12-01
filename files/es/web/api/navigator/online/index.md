@@ -1,7 +1,6 @@
 ---
 title: Navigator.onLine
 slug: Web/API/Navigator/onLine
-original_slug: Web/API/NavigatorOnLine/onLine
 ---
 
 {{ApiRef("HTML DOM")}}

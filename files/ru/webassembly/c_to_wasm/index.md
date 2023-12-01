@@ -1,7 +1,6 @@
 ---
 title: Компиляция кода C/C++ в WebAssembly
 slug: WebAssembly/C_to_Wasm
-translation_of: WebAssembly/C_to_wasm
 ---
 
 {{WebAssemblySidebar}}

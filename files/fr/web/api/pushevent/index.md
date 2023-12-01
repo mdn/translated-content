@@ -1,7 +1,6 @@
 ---
 title: PushEvent
 slug: Web/API/PushEvent
-translation_of: Web/API/PushEvent
 ---
 
 {{APIRef("Push API")}}{{SeeCompatTable()}}

@@ -21,12 +21,12 @@ align-self: normal;
 /* Positional alignment */
 /* align-self does not take left and right values */
 align-self: center; /* Put the item around the center */
-align-self: start;  /* Put the item at the start */
-align-self: end;    /* Put the item at the end */
+align-self: start; /* Put the item at the start */
+align-self: end; /* Put the item at the end */
 align-self: self-start; /* Align the item flush at the start */
-align-self: self-end;   /* Align the item flush at the end */
+align-self: self-end; /* Align the item flush at the end */
 align-self: flex-start; /* Put the flex item at the start */
-align-self: flex-end;   /* Put the flex item at the end */
+align-self: flex-end; /* Put the flex item at the end */
 
 /* Baseline alignment */
 align-self: baseline;

@@ -1,10 +1,6 @@
 ---
 title: stroke
 slug: Web/SVG/Attribute/stroke
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/stroke
 ---
 
 « [SVG Attribute reference home](/en/SVG/Attribute)
@@ -13,11 +9,11 @@ translation_of: Web/SVG/Attribute/stroke
 
 ## Контекст использования
 
-| Категория            | Presentation attribute                                                                               |
-| -------------------- | ---------------------------------------------------------------------------------------------------- |
-| Значения             | [\<paint>](/en/SVG/Content_type#Paint), `context-fill`, `context-stroke` |
-| Анимируемый          | Да                                                                                                   |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeProperty)                       |
+| Категория            | Presentation attribute                                                         |
+| -------------------- | ------------------------------------------------------------------------------ |
+| Значения             | [\<paint>](/en/SVG/Content_type#Paint), `context-fill`, `context-stroke`       |
+| Анимируемый          | Да                                                                             |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeProperty) |
 
 ## Примеры
 
@@ -27,7 +23,7 @@ translation_of: Web/SVG/Attribute/stroke
 
 ```html
 <svg height="50" width="300">
-    <path stroke="green" d="M5 20 1215 0" />
+  <path stroke="green" d="M5 20 1215 0" />
 </svg>
 ```
 
@@ -37,7 +33,7 @@ translation_of: Web/SVG/Attribute/stroke
 
 ```html
 <svg height="100" width="100">
-    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill="black" />
+  <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill="black" />
 </svg>
 ```
 

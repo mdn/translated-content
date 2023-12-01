@@ -15,9 +15,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 一个 `Promise` 必然处于以下几种状态之一：
 
-- *待定（pending）*：初始状态，既没有被兑现，也没有被拒绝。
-- *已兑现（fulfilled）*：意味着操作成功完成。
-- *已拒绝（rejected）*：意味着操作失败。
+- _待定（pending）_：初始状态，既没有被兑现，也没有被拒绝。
+- _已兑现（fulfilled）_：意味着操作成功完成。
+- _已拒绝（rejected）_：意味着操作失败。
 
 一个待定的 Promise *最终状态*可以是*已兑现*并返回一个值，或者是*已拒绝*并返回一个原因（错误）。当其中任意一种情况发生时，通过 Promise 的 `then` 方法串联的处理程序将被调用。如果绑定相应处理程序时 Promise 已经兑现或拒绝，这处理程序将被立即调用，因此在异步操作完成和绑定处理程序之间不存在竞态条件。
 
@@ -62,7 +62,7 @@ myPromise
 
 即使 `.then()` 缺少返回 Promise 对象的回调函数，处理程序仍会继续到链的下一个链式调用。因此，在最终的 `.catch()` 之前，可以安全地省略每个链式调用中处理*已拒绝*状态的回调函数。
 
-在每个 `.then()` 中处理被拒绝的 Promise 对于 Promise 链的下游有重要的影响。有时候别无选择，因为有的错误必须立即被处理。在这种情况下，必须抛出某种类型的错误以维护链中的错误状态。另一方面，在没有迫切需要的情况下，最好将错误处理留到最后一个 `.catch()` 语句。`.catch()` 其实就是一个没有为 Promise 时的回调函数留出空位的 `.then()`。
+在每个 `.then()` 中处理被拒绝的 Promise 对于 Promise 链的下游有重要的影响。有时候别无选择，因为有的错误必须立即被处理。在这种情况下，必须抛出某种类型的错误以维护链中的错误状态。另一方面，在没有迫切需要的情况下，最好将错误处理留到最后一个 `.catch()` 语句。`.catch()` 其实就是一个没有为 Promise 兑现时的回调函数留出空位的 `.then()`。
 
 ```js
 myPromise
@@ -292,7 +292,7 @@ new Promise(tetheredGetNumber)
     if (reason.cause) {
       console.error("已经在前面处理过错误了");
     } else {
-      console.error(`运行 promiseGetWord() 时遇到问题: ${reason}`);
+      console.error(`运行 promiseGetWord() 时遇到问题：${reason}`);
     }
   })
   .finally((info) => console.log("所有回调都完成了"));
@@ -333,10 +333,13 @@ function testPromise() {
       `${thisPromiseCount}) Promise constructor<br>`,
     );
     // 这只是一个创建异步操作的示例
-    setTimeout(() => {
-      // We fulfill the promise
-      resolve(thisPromiseCount);
-    }, Math.random() * 2000 + 1000);
+    setTimeout(
+      () => {
+        // We fulfill the promise
+        resolve(thisPromiseCount);
+      },
+      Math.random() * 2000 + 1000,
+    );
   });
 
   // 我们使用 then() 来定义 Promise 被解决时的操作，
@@ -373,7 +376,7 @@ btn.addEventListener("click", testPromise);
 我们可以尝试在文档中嵌入 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)，并让其与父级上下文通信。由于所有的 web API 都有现有设置对象，下面的代码能够在所有的浏览器中运行：
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- 在这里有一个 realm -->
 <script>
   // 这里也有一个 realm
@@ -387,7 +390,7 @@ btn.addEventListener("click", testPromise);
 同样的概念也适用于 promise。如果我们稍加修改上面的示例，我们就能得到这个：
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- 在这里有一个领域 -->
 <script>
   // 这里也有一个领域
@@ -402,7 +405,7 @@ btn.addEventListener("click", testPromise);
 
 ```html
 <!-- y.html -->
-<!DOCTYPE html>
+<!doctype html>
 <iframe src="x.html"></iframe>
 <script>
   const bound = frames[0].postMessage.bind(frames[0], "一些数据", "*");
@@ -412,7 +415,7 @@ btn.addEventListener("click", testPromise);
 
 ```html
 <!-- x.html -->
-<!DOCTYPE html>
+<!doctype html>
 <script>
   window.addEventListener(
     "message",
@@ -443,5 +446,5 @@ btn.addEventListener("click", testPromise);
 - [`core-js` 中 `Promise` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
 - [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ 规范](https://promisesaplus.com/)
-- [JavaScript Promises：简介](https://web.dev/promises/)
+- [JavaScript Promise：简介](https://web.dev/articles/promises)
 - [Domenic Denicola：回调、Promise 和协程——JavaScript 中的异步编程模式](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)

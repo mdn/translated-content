@@ -1,7 +1,6 @@
 ---
-title: '-webkit-transform-3d'
+title: "-webkit-transform-3d"
 slug: Web/CSS/@media/-webkit-transform-3d
-translation_of: Web/CSS/@media/-webkit-transform-3d
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -1,7 +1,6 @@
 ---
 title: Element.before()
 slug: Web/API/Element/before
-translation_of: Web/API/Element/before
 ---
 
 {{APIRef("DOM")}}

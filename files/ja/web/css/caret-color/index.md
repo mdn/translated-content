@@ -58,10 +58,11 @@ caret-color: unset;
 #### HTML
 
 ```html
-<input value="このフィールドは既定のキャレットを使用します。" size="64"/>
-<input class="custom" value="キャレットが独自の色になります！" size="64"/>
-<p contenteditable class="custom">この段落は編集可能であり、
-   同様にキャレットが独自の色です！</p>
+<input value="このフィールドは既定のキャレットを使用します。" size="64" />
+<input class="custom" value="キャレットが独自の色になります！" size="64" />
+<p contenteditable class="custom">
+  この段落は編集可能であり、 同様にキャレットが独自の色です！
+</p>
 ```
 
 #### CSS
@@ -70,7 +71,7 @@ caret-color: unset;
 input {
   caret-color: auto;
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 input.custom {

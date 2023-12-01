@@ -1,7 +1,6 @@
 ---
 title: "CSP : font-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/font-src
 ---
 
 {{HTTPSidebar}}

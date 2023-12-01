@@ -1,10 +1,6 @@
 ---
 title: Композиция и обрезка
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - канвас
-translation_of: Web/API/Canvas_API/Tutorial/Compositing
-original_slug: Web/API/Canvas_API/Tutorial/Композиции
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
@@ -19,8 +15,6 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
   - : Это задаёт Тип операции композиции для применения при разработке новых форм, где Тип является строкой, идентифицирующей, какие из двенадцати операций композитинг в использовании.
 
 См. [примеры компоновки](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) кода из следующих примеров.
-
-{{ EmbedLiveSample("Compositing_example", "100%", 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example" )}}
 
 ## Обрезка контуров
 
@@ -43,7 +37,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
 
@@ -54,8 +48,8 @@ function draw() {
 
   // draw background
   var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, '#232256');
-  lingrad.addColorStop(1, '#143778');
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
 
   ctx.fillStyle = lingrad;
   ctx.fillRect(-75, -75, 150, 150);
@@ -63,13 +57,14 @@ function draw() {
   // draw stars
   for (var j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = '#fff';
-    ctx.translate(75 - Math.floor(Math.random() * 150),
-                  75 - Math.floor(Math.random() * 150));
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
     drawStar(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();
   }
-
 }
 
 function drawStar(ctx, r) {
@@ -102,6 +97,6 @@ draw();
 
 Все, что нарисовано после создания отсечённого контура, появится только внутри этого пути. Вы можете видеть это чётко в линейном градиенте, который нарисован далее. После этого набирается набор из 50 случайно расположенных и масштабированных звёзд, используя `drawStar()`. Снова звезды появляются только в пределах определённого обтравочного контура.
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
+{{EmbedLiveSample("Пример_обрезки", 180, 190, "canvas_clip.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

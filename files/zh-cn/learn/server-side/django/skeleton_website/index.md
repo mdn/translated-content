@@ -90,7 +90,7 @@ locallibrary 项目的子文件夹是整个网站的进入点：
 
 ## 创建 catalog 应用
 
-接下来，在 locallibrary 项目里，使用下面的命令创建 catalog 应用（和您项目的**manage.py**在同一个文件夹下）
+接下来，在 locallibrary 项目里，使用下面的命令创建 catalog 应用（和你项目的**manage.py**在同一个文件夹下）
 
 ```bash
 python3 manage.py startapp catalog
@@ -345,7 +345,7 @@ python3 manage.py runserver
 
 该 **catalog/** 目录包含视图，模型和应用程序其他部分的文件。你可以打开这些文件并查看样板。
 
-如上所述，管理站点的 URL 映射已经添加到项目的 **urls.py** 中。导航到浏览器中的管理区域，看看会发生什么（您可以从上面的映射中推断出正确的 URL）。
+如上所述，管理站点的 URL 映射已经添加到项目的 **urls.py** 中。导航到浏览器中的管理区域，看看会发生什么（你可以从上面的映射中推断出正确的 URL）。
 
 ## 概要
 

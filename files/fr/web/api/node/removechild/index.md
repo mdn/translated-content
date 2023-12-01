@@ -1,7 +1,6 @@
 ---
 title: element.removeChild
 slug: Web/API/Node/removeChild
-translation_of: Web/API/Node/removeChild
 ---
 
 {{ ApiRef("DOM") }}

@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
-tags:
-  - API
-  - Градиент
-  - Холст
-  - метод
-translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
 
 {{APIRef}}
@@ -58,18 +52,18 @@ CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 // Создание линейного градиента
 // Точка начала линии градиента: x=20, y=0
 // Точка конца линии градиента: x=220, y=0
-var gradient = ctx.createLinearGradient(20,0, 220,0);
+var gradient = ctx.createLinearGradient(20, 0, 220, 0);
 
 // Добавление трёх контрольных точек
-gradient.addColorStop(0, 'green');
-gradient.addColorStop(.5, 'cyan');
-gradient.addColorStop(1, 'green');
+gradient.addColorStop(0, "green");
+gradient.addColorStop(0.5, "cyan");
+gradient.addColorStop(1, "green");
 
 // Установка стиля заливки и отрисовка прямоугольника градиента
 ctx.fillStyle = gradient;
@@ -87,10 +81,6 @@ ctx.fillRect(20, 20, 200, 100);
 ## Совместимость с браузерами
 
 {{Compat}}
-
-### Специфично для Gecko
-
-- Начиная с Gecko 2.0, указание не конечных значений выбрасывает `NOT_SUPPORTED_ERR` вместо `SYNTAX_ERR`.
 
 ## Смотрите также
 

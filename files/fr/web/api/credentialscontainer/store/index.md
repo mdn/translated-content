@@ -1,7 +1,6 @@
 ---
 title: CredentialsContainer.store()
 slug: Web/API/CredentialsContainer/store
-translation_of: Web/API/CredentialsContainer/store
 ---
 
 {{APIRef("")}}{{SeeCompatTable}}

@@ -2,6 +2,7 @@
 title: Document.all
 slug: Web/API/Document/all
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 {{DOMxRef("Document")}} 인터페이스의 read-only **`all`** 요소는 document node에 위치한{{DOMxRef("HTMLAllCollection")}} 반환한다. 간단하게 말하면 read-only **`all`** 요소는 페이지의 모든 contents를 반환 해준다.

@@ -1,7 +1,6 @@
 ---
 title: performance.memory
 slug: Web/API/Performance/memory
-translation_of: Web/API/Performance/memory
 ---
 
 {{APIRef}}

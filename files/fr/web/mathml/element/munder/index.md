@@ -1,7 +1,6 @@
 ---
 title: <munder>
 slug: Web/MathML/Element/munder
-translation_of: Web/MathML/Element/munder
 ---
 
 {{MathMLRef()}}

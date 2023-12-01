@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
-translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
 
 {{APIRef}}

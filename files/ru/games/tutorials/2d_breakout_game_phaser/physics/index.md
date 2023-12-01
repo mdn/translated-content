@@ -1,14 +1,6 @@
 ---
 title: Физика
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - JavaScript
-  - Phaser
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Physics
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Physics
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls")}}

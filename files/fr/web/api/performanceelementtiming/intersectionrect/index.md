@@ -1,7 +1,6 @@
 ---
 title: PerformanceElementTiming.intersectionRect
 slug: Web/API/PerformanceElementTiming/intersectionRect
-translation_of: Web/API/PerformanceElementTiming/intersectionRect
 ---
 
 {{APIRef("Element Timing API")}}

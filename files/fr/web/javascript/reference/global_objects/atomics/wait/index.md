@@ -1,7 +1,6 @@
 ---
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 ---
 
 {{JSRef}}

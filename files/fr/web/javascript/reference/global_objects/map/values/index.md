@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/values
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`values()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript
 ## Syntaxe
 
 ```js
-maMap.values()
+maMap.values();
 ```
 
 ### Valeur de retour

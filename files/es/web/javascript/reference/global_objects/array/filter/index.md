@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/filter
 ---
 
 {{JSRef}}
@@ -77,17 +76,17 @@ var arr = [
   { id: 0 },
   { id: 3 },
   { id: 12.2 },
-  { },
+  {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' }
+  { id: "undefined" },
 ];
 
 var entradasInvalidas = 0;
 // Si el elemento tiene un atributo id, y su valor correspondiente es un numero
 // Y no es el valor NaN, entonces es una entrada válida
 function filtrarPorID(obj) {
-  if ('id' in obj && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
+  if ("id" in obj && typeof obj.id === "number" && !isNaN(obj.id)) {
     return true;
   } else {
     entradasInvalidas++;
@@ -97,10 +96,10 @@ function filtrarPorID(obj) {
 
 var arrPorID = arr.filter(filtrarPorID);
 
-console.log('Array Filtrado\n', arrPorID);
+console.log("Array Filtrado\n", arrPorID);
 // [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Número de Entradas Invalidas = ', entradasInvalidas);
+console.log("Número de Entradas Invalidas = ", entradasInvalidas);
 // 4
 ```
 
@@ -109,37 +108,37 @@ console.log('Número de Entradas Invalidas = ', entradasInvalidas);
 El siguiente ejemplo emplea filter() para filtrar el contendio de un arreglo en función de un criterio de búsqueda.
 
 ```js
-var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+var fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * Filtra la matríz en función de un criterio de búsqueda (query)
  */
 function filterItems(query) {
-  return fruits.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-  })
+  return fruits.filter(function (el) {
+    return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+  });
 }
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 ```
 
 ### Implementación en ES2015
 
 ```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * Filtra la matríz en función de un criterio de búsqueda (query)
  */
-const filterItems = query => {
-  return fruits.filter((el) =>
-    el.toLowerCase().indexOf(query.toLowerCase()) > -1
+const filterItems = (query) => {
+  return fruits.filter(
+    (el) => el.toLowerCase().indexOf(query.toLowerCase()) > -1,
   );
-}
+};
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 ```
 
 ## Polyfill

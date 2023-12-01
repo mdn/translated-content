@@ -1,7 +1,6 @@
 ---
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
-translation_of: Web/API/Node/getRootNode
 ---
 
 {{APIRef("DOM")}}

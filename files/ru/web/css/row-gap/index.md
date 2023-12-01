@@ -1,9 +1,6 @@
 ---
 title: row-gap
 slug: Web/CSS/row-gap
-page-type: css-property
-translation_of: Web/CSS/row-gap
-browser-compat: css.properties.row-gap
 ---
 
 {{CSSRef}}

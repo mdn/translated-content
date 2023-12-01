@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming.domainLookupEnd
 slug: Web/API/PerformanceResourceTiming/domainLookupEnd
-translation_of: Web/API/PerformanceResourceTiming/domainLookupEnd
 ---
 
 {{APIRef("Resource Timing API")}}

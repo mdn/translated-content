@@ -1,7 +1,6 @@
 ---
 title: Une session HTTP typique
 slug: Web/HTTP/Session
-translation_of: Web/HTTP/Session
 ---
 
 {{HTTPSidebar}}

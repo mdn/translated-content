@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La propriété **`byteOffset`** est un accesseur représentant le décalage, exp
 ## Syntaxe
 
 ```js
-dataview.byteOffset
+dataview.byteOffset;
 ```
 
 ## Description

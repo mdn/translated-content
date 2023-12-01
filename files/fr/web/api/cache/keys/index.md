@@ -1,7 +1,6 @@
 ---
 title: Cache.keys()
 slug: Web/API/Cache/keys
-translation_of: Web/API/Cache/keys
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/hypot
 ---
 
 {{JSRef}}
@@ -46,13 +45,13 @@ Con sólo un argumento, `Math.hypot()` retornaría lo mismo que `Math.abs()`.
 ### Usando `Math.hypot()`
 
 ```js
-Math.hypot(3, 4);        // 5
-Math.hypot(3, 4, 5);     // 7.0710678118654755
-Math.hypot();            // 0
-Math.hypot(NaN);         // NaN
-Math.hypot(3, 4, 'foo'); // NaN, +'foo' => NaN
-Math.hypot(3, 4, '5');   // 7.0710678118654755, +'5' => 5
-Math.hypot(-3);          // 3, lo mismo que Math.abs(-3)
+Math.hypot(3, 4); // 5
+Math.hypot(3, 4, 5); // 7.0710678118654755
+Math.hypot(); // 0
+Math.hypot(NaN); // NaN
+Math.hypot(3, 4, "foo"); // NaN, +'foo' => NaN
+Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
+Math.hypot(-3); // 3, lo mismo que Math.abs(-3)
 ```
 
 ## Polyfill
@@ -60,11 +59,14 @@ Math.hypot(-3);          // 3, lo mismo que Math.abs(-3)
 Esto puede ser emulado usando la siguiente función:
 
 ```js
-Math.hypot = Math.hypot || function() {
-  var y = 0, i = arguments.length;
-  while (i--) y += arguments[i] * arguments[i];
-  return Math.sqrt(y);
-};
+Math.hypot =
+  Math.hypot ||
+  function () {
+    var y = 0,
+      i = arguments.length;
+    while (i--) y += arguments[i] * arguments[i];
+    return Math.sqrt(y);
+  };
 ```
 
 Un polyfill que evita subdesbordamientos (underflows) y desbordamientos (overflows):

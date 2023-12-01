@@ -1,7 +1,6 @@
 ---
 title: user_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts
 ---
 
 {{AddonSidebar}}

@@ -21,9 +21,9 @@ HTML 标准列出了[应该触发 `change` 事件的 `<input>` 类型](https://h
 在方法（如 {{domxref("EventTarget.addEventListener", "addEventListener()")}}）中使用事件的名称，或设置事件处理器属性。
 
 ```js
-addEventListener('change', (event) => {});
+addEventListener("change", (event) => {});
 
-onchange = (event) => { };
+onchange = (event) => {};
 ```
 
 ## 事件类型
@@ -68,10 +68,10 @@ select {
 #### JavaScript
 
 ```js
-const selectElement = document.querySelector('.ice-cream');
+const selectElement = document.querySelector(".ice-cream");
 
-selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('.result');
+selectElement.addEventListener("change", (event) => {
+  const result = document.querySelector(".result");
   result.textContent = `你喜欢 ${event.target.value}`;
 });
 ```
@@ -94,10 +94,10 @@ selectElement.addEventListener('change', (event) => {
 #### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('change', updateValue);
+input.addEventListener("change", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

@@ -1,11 +1,6 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-tags:
-  - Класс
-  - Function
-  - JavaScript
-browser-compat: javascript.builtins.Function
 ---
 
 {{JSRef}}
@@ -54,22 +49,22 @@ browser-compat: javascript.builtins.Function
 var x = 10;
 
 function createFunction1() {
-    var x = 20;
-    return new Function('return x;'); // здесь |x| ссылается на глобальный |x|
+  var x = 20;
+  return new Function("return x;"); // здесь |x| ссылается на глобальный |x|
 }
 
 function createFunction2() {
-    var x = 20;
-    function f() {
-        return x; // здесь |x| ссылается на локальный |x| выше
-    }
-    return f;
+  var x = 20;
+  function f() {
+    return x; // здесь |x| ссылается на локальный |x| выше
+  }
+  return f;
 }
 
 var f1 = createFunction1();
-console.log(f1());          // 10
+console.log(f1()); // 10
 var f2 = createFunction2();
-console.log(f2());          // 20
+console.log(f2()); // 20
 ```
 
 Хотя этот код работает в браузерах, в окружении Node.js вызов `f1()` приведёт к ошибке `ReferenceError`, потому что `x` не будет найден. Это происходит из-за того, что область видимости верхнего уровня в Node не является глобальной областью видимости, поэтому `x` ссылается на локальную переменную в пределах текущего модуля.

@@ -2,7 +2,7 @@
 title: 式と演算子
 slug: Web/JavaScript/Guide/Expressions_and_operators
 l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+  sourceCommit: d71b141d2d18b96639547856714df19cefacfebf
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
@@ -38,7 +38,7 @@ const x = 1 + 2 * 3;
 const y = 2 * 3 + 1;
 ```
 
-`*` と `+` の順序が異なるにもかかわらず、どちらの式も `7` という結果になります。なぜなら、 `*` は `+` よりも優先されるので、 `*` と結合された式が常に最初に評価されるからです。演算子の優先順位を上書きするには、括弧を使用します（[グループ化式](#グループ演算子) - 基本的な式を作成します）。演算子の優先順位の完全な表と様々な注意点を見るには、[演算子の優先順位のリファレンス](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#一覧表)ページを参照してください。
+`*` と `+` の順序が異なるにもかかわらず、どちらの式も `7` という結果になります。なぜなら、 `*` は `+` よりも優先されるので、 `*` と結合された式が常に最初に評価されるからです。演算子の優先順位を上書きするには、括弧を使用します（[グループ化式](#グループ演算子) - 基本的な式を作成します）。演算子の優先順位の完全な表と様々な注意点を見るには、[演算子の優先順位のリファレンス](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#一覧表)ページを参照してください。
 
 JavaScript は _二項演算子_ や _単項演算子_ を実装しており、さらには特殊な三項演算子である条件演算子も実装しています。
 二項演算子は次のように、演算子の前と演算子の後に 2 つのオペランド (operand) が必要となります。
@@ -66,28 +66,28 @@ JavaScript は _二項演算子_ や _単項演算子_ を実装しており、�
 
 次の表にまとめられているように、演算子を省略表記した複合代入演算子もあります。
 
-| 名前                                                                                                              | 略記演算子 | 意味          |
-| ----------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- |
-| [代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)                                           | `x = f()`          | `x = f()`        |
-| [加算代入](/ja/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                         | `x += f()`         | `x = x + f()`      |
-| [減算代入](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                   | `x -= f()`         | `x = x - f()`      |
-| [乗算代入](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)             | `x *= f()`         | `x = x * f()`      |
-| [除算代入](/ja/docs/Web/JavaScript/Reference/Operators/Division_assignment)                         | `x /= f()`         | `x = x / f()`      |
-| [剰余代入](/ja/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                       | `x %= f()`         | `x = x % f()`      |
-| [べき乗代入](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)             | `x **= f()`        | `x = x ** f()`     |
-| [左シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)                     | `x <<= f()`        | `x = x << f()`     |
-| [右シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)                   | `x >>= f()`        | `x = x >> f()`     |
-| [符号なし右シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= f()`       | `x = x >>> f()`    |
-| [ビット論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)                   | `x &= f()`         | `x = x & f()`      |
-| [ビット排他的論理和 (XOR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)                   | `x ^= f()`         | `x = x ^ f()`      |
-| [ビット論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| f()`     |
-| [論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = f())`   |
-| [論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = f())` |
-| [Null 合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)     | `x ??= f()`        | `x ?? (x = f())`   |
+| 名前                                                                                                | 略記演算子    | 意味               |
+| --------------------------------------------------------------------------------------------------- | ------------- | ------------------ |
+| [代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)                                      | `x = f()`     | `x = f()`          |
+| [加算代入](/ja/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                         | `x += f()`    | `x = x + f()`      |
+| [減算代入](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                      | `x -= f()`    | `x = x - f()`      |
+| [乗算代入](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)                   | `x *= f()`    | `x = x * f()`      |
+| [除算代入](/ja/docs/Web/JavaScript/Reference/Operators/Division_assignment)                         | `x /= f()`    | `x = x / f()`      |
+| [剰余代入](/ja/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                        | `x %= f()`    | `x = x % f()`      |
+| [べき乗代入](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)                 | `x **= f()`   | `x = x ** f()`     |
+| [左シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)                   | `x <<= f()`   | `x = x << f()`     |
+| [右シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)                  | `x >>= f()`   | `x = x >> f()`     |
+| [符号なし右シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= f()`  | `x = x >>> f()`    |
+| [ビット論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)       | `x &= f()`    | `x = x & f()`      |
+| [ビット排他的論理和 (XOR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment) | `x ^= f()`    | `x = x ^ f()`      |
+| [ビット論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)         | `x \|= f()`   | `x = x \| f()`     |
+| [論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)             | `x &&= f()`   | `x && (x = f())`   |
+| [論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)               | `x \|\|= f()` | `x \|\| (x = f())` |
+| [Null 合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)          | `x ??= f()`   | `x ?? (x = f())`   |
 
 ### プロパティへの代入
 
-ある式が[オブジェクト](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)として評価される場合、代入式の左辺をその式のプロパティへの代入にすることができます。例えば次のようになります。
+ある式が[オブジェクト](/ja/docs/Web/JavaScript/Guide/Working_with_objects)として評価される場合、代入式の左辺をその式のプロパティへの代入にすることができます。例えば次のようになります。
 
 ```js
 const obj = {};
@@ -102,7 +102,7 @@ console.log(obj[key]); // 5 と表示
 console.log(obj); // { x: 3, y: 5 } と表示
 ```
 
-オブジェクトについて詳しくは、[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)を読んでください。
+オブジェクトについて詳しくは、[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_objects)を読んでください。
 
 式がオブジェクトとして評価されない場合は、その式のプロパティへの代入は行われません。
 
@@ -122,6 +122,8 @@ console.log(val); // 0 と表示
 
 より複雑な代入方法、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文は、配列やオブジェクトのリテラル構造を反映した構文を用いて、配列やオブジェクトからデータを抽出することができる JavaScript の式です。
 
+分割代入をしないと、配列やオブジェクトから値を取り出すのに複数の文が必要になります。
+
 ```js
 const foo = ["one", "two", "three"];
 
@@ -129,8 +131,11 @@ const foo = ["one", "two", "three"];
 const one = foo[0];
 const two = foo[1];
 const three = foo[2];
+```
 
-// 分割代入
+分割代入を使用すると、単一の文で複数の値を別々の変数に抽出することができます。
+
+```js
 const [one, two, three] = foo;
 ```
 
@@ -236,14 +241,14 @@ x[f()] = g();
    2. 内側の配列リテラル `[ f(), x = g() ]` の評価が始まります。
       1. 関数呼び出し `f()` でコンソールに "F!" と表示し、次に数値 `2` と評価されます。
       2. 代入式 `x = g()` の評価が始まります。
-          1. この代入の左辺にある `x` は、 `x` という名前の変数への参照として評価されます。
-          2. 関数呼び出し `g()` でコンソールに "G!" と表示し、次に数値 `3` と評価されます。
-          3. `3` が `g()` の結果となり `x` に代入されます。
+         1. この代入の左辺にある `x` は、 `x` という名前の変数への参照として評価されます。
+         2. 関数呼び出し `g()` でコンソールに "G!" と表示し、次に数値 `3` と評価されます。
+         3. `3` が `g()` の結果となり `x` に代入されます。
       3. 代入式 `x = g()` の評価が終わりました。
-        その結果は、 `x` の新しい値、すなわち `3` です。
-        この `3` の結果は、内側の配列リテラルの次の要素になります（`f()` の `2` の後です）。
+         その結果は、 `x` の新しい値、すなわち `3` です。
+         この `3` の結果は、内側の配列リテラルの次の要素になります（`f()` の `2` の後です）。
    3. 内側の配列リテラル `[ f(), x = g() ]` の評価が終わりました。
-       結果は 2 つの値を持つ配列、 `[ 2, 3 ]` です。
+      結果は 2 つの値を持つ配列、 `[ 2, 3 ]` です。
    4. その配列 `[ 2, 3 ]` が `y`
 2. 代入式 `y = [ f(), x = g() ]` の評価が終わりました。
    結果として `y` が新しい値、 `[ 2, 3 ]` になります。
@@ -254,17 +259,17 @@ x[f()] = g();
 
 `x[f()] = g()` も左から右へ評価されます。
 （この例では `x` には既に何らかのオブジェクトが代入されていると想定してください。
-オブジェクトについて詳しくは、[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)をお読みください。
+オブジェクトについて詳しくは、[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_objects)をお読みください。
 
 1. 代入式 `x[f()] = g()` の評価が始まります。
-    1. この代入における代入の左辺の `x[f()]` プロパティアクセスの評価が始まります。
-        1. このプロパティアクセスの `x` は、 `x` という名前の変数への参照として評価されます。
-        2. そして、関数呼び出し `f()` でコンソールに "F!" と表示し、次に数値 `2` と評価されます。
-    2. この代入における `x[f()]` プロパティアクセスの評価が終わりました。
-       結果は変数プロパティ参照である `x[2]` です。
-    3. そして、関数呼び出し `g()` でコンソールに "G!" と表示し、次に数値 `3` と評価されます。
-    4. `3` が `x[2]` に代入されます。
-       （この過程は `x` に[オブジェクト](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)が代入されているときのみ成功します。）
+   1. この代入における代入の左辺の `x[f()]` プロパティアクセスの評価が始まります。
+      1. このプロパティアクセスの `x` は、 `x` という名前の変数への参照として評価されます。
+      2. そして、関数呼び出し `f()` でコンソールに "F!" と表示し、次に数値 `2` と評価されます。
+   2. この代入における `x[f()]` プロパティアクセスの評価が終わりました。
+      結果は変数プロパティ参照である `x[2]` です。
+   3. そして、関数呼び出し `g()` でコンソールに "G!" と表示し、次に数値 `3` と評価されます。
+   4. `3` が `x[2]` に代入されます。
+      （この過程は `x` に[オブジェクト](/ja/docs/Web/JavaScript/Guide/Working_with_objects)が代入されているときのみ成功します。）
 2. 代入式 `x[f()] = g()` の評価が終わりました。
    返値は `x[2]` の新しい値– ここでは `3` です。
    `x[2]` には `3` が代入され、コンソールには "F!" に続いて "G!" が表示されます。
@@ -286,7 +291,7 @@ const z = y = x = f();
 ## 比較演算子
 
 比較演算子はオペランドを比較して、その結果が真であるかに基づいて論理値を返します。
-オペランドには数値、文字列、論理値、[オブジェクト](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)を使用できます。
+オペランドには数値、文字列、論理値、[オブジェクト](/ja/docs/Web/JavaScript/Guide/Working_with_objects)を使用できます。
 文字列は Unicode の値を用い、標準的な辞書順に基づいて比較されます。
 ほとんどの場合、2 つのオペランドが異なる型ならば JavaScript はそのオペランドを比較に適した型に変換しようとします。
 こうした挙動により、一般的にオペランドは数値的に比較される結果となります。
@@ -502,15 +507,15 @@ const var2 = 4;
 
 次の表は JavaScript のビット演算子の概要です。
 
-| 演算子                                                                                     | 使用法     | 説明                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [ビット論理積](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) (AND)                    | `a & b`   | オペランドの対応するビットがともに 1 である各ビットについて 1 を返します。                                                                          |
-| [ビット論理和](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR) (OR)                      | `a \| b`  | オペランドの対応するビットがともに 0 である各ビットについて 0 を返します。                                                                        |
-| [ビット排他的論理和](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR) (XOR)                    | `a ^ b`   | オペランドの対応するビットが同じ各ビットについて 0 を返します。 [オペランドの対応するビットが異なる各ビットについて 1 を返します。] |
-| [ビット否定](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT) (NOT)                    | `~ a`     | オペランドの各ビットを反転します。                                                                                                                                        |
-| [左シフト](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)                      | `a << b`  | 2 進表現の `a` を `b` ビット分だけ左にシフトします。右から 0 で詰めます。                                                                             |
-| [符号維持右シフト](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift)   | `a >> b`  | 2 進表現の `a` を `b` ビット分だけ右にシフトします。溢れたビットは破棄します。                                                                                 |
-| [ゼロ埋め右シフト](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) | `a >>> b` | 2 進表現の `a` を `b` ビット分だけ右にシフトします。溢れたビットは破棄し、左から 0 で詰めます。                                            |
+| 演算子                                                                               | 使用法    | 説明                                                                                                                                |
+| ------------------------------------------------------------------------------------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| [ビット論理積](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) (AND)        | `a & b`   | オペランドの対応するビットがともに 1 である各ビットについて 1 を返します。                                                          |
+| [ビット論理和](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR) (OR)          | `a \| b`  | オペランドの対応するビットがともに 0 である各ビットについて 0 を返します。                                                          |
+| [ビット排他的論理和](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR) (XOR)  | `a ^ b`   | オペランドの対応するビットが同じ各ビットについて 0 を返します。 [オペランドの対応するビットが異なる各ビットについて 1 を返します。] |
+| [ビット否定](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT) (NOT)          | `~ a`     | オペランドの各ビットを反転します。                                                                                                  |
+| [左シフト](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)                   | `a << b`  | 2 進表現の `a` を `b` ビット分だけ左にシフトします。右から 0 で詰めます。                                                           |
+| [符号維持右シフト](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift)          | `a >> b`  | 2 進表現の `a` を `b` ビット分だけ右にシフトします。溢れたビットは破棄します。                                                      |
+| [ゼロ埋め右シフト](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) | `a >>> b` | 2 進表現の `a` を `b` ビット分だけ右にシフトします。溢れたビットは破棄し、左から 0 で詰めます。                                     |
 
 #### ビット論理演算子
 
@@ -531,13 +536,13 @@ const var2 = 4;
 例えば 9 の 2 進表現は 1001 で、15 の 2 進表現は 1111 です。
 したがって、ビット演算子がこれらの値に適用されたときの結果は以下のようになります。
 
-| 式         | 結果   | 2 進数での説明                                    |
-| ---------- | ------ | ------------------------------------------------- |
-| `15 & 9`   | `9`    | `1111 & 1001 = 1001`                              |
-| `15 \| 9`  | `15`   | `1111 \| 1001 = 1111`                             |
-| `15 ^ 9`   | `6`    | `1111 ^ 1001 = 0110`                              |
-| `~15`      | `-16`  | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
-| `~9`       | `-10`  | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
+| 式        | 結果  | 2 進数での説明                                    |
+| --------- | ----- | ------------------------------------------------- |
+| `15 & 9`  | `9`   | `1111 & 1001 = 1001`                              |
+| `15 \| 9` | `15`  | `1111 \| 1001 = 1111`                             |
+| `15 ^ 9`  | `6`   | `1111 ^ 1001 = 0110`                              |
+| `~15`     | `-16` | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`      | `-10` | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 なお、ビット否定演算子を使うと 32 ビットすべてが反転し、その値の最上位（最も左）のビットは（2 の補数表現で）負の数を表す 1 に設定されることに注意してください。 `~x` は `-x - 1` と同じ値に評価されます。
 
@@ -752,7 +757,7 @@ mystring += "bet"; // "alphabet" と評価されて、mystring にその値を�
 
 ### 条件（三項）演算子
 
-[条件演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)は JavaScript で唯一 3 つのオペランドを取る演算子です。条件に基づいて 2 つの値のうちの 1 つを選択します。構文は以下の通りです。
+[条件演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)は JavaScript で唯一 3 つのオペランドを取る演算子です。条件に基づいて 2 つの値のうちの 1 つを選択します。構文は以下の通りです。
 
 ```js-nolint
 condition ? val1 : val2
@@ -770,7 +775,7 @@ const status = age >= 18 ? "adult" : "minor";
 
 ## カンマ演算子
 
-[カンマ演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`) は、オペランドの両方を評価し、最後のオペランドの値を返します。この演算子は、主に `for` ループの中で、繰り返しのたびに複数の変数を更新するために使用されます。
+[カンマ演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comma_operator) (`,`) は、オペランドの両方を評価し、最後のオペランドの値を返します。この演算子は、主に `for` ループの中で、繰り返しのたびに複数の変数を更新するために使用されます。
 必要でないのに他の場所で使用するのは、悪いスタイルと見なされます。
 多くの場合、独立した 2 つの文を代わりに使用することができ、また使用すべきです。
 
@@ -1007,8 +1012,8 @@ a * c + b * c // 9
 
 [`new` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)を使用すると、いずれかのユーザー定義オブジェクト型や組み込みオブジェクト型のインスタンスを生成することができます。 `new` の使用法は以下のとおりです。
 
-```js
-const オブジェクト名 = new objectType(引数1, 引数2, /* …, */ 引数N);
+```js-nolint
+const オブジェクト名 = new オブジェクト型(引数1, 引数2, /* …, */ 引数N);
 ```
 
 ### super
@@ -1016,7 +1021,7 @@ const オブジェクト名 = new objectType(引数1, 引数2, /* …, */ 引数
 [`super` キーワード](/ja/docs/Web/JavaScript/Reference/Operators/super)は自分の親のオブジェクトに関数を呼び出すのに使います。
 これは下の例のように、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)と共に使って親のコンストラクターを呼び出すのに便利です。
 
-```js
+```js-nolint
 super(引数); // 親のコンストラクターを呼び出す。
 super.親の関数(引数);
 ```

@@ -1,7 +1,6 @@
 ---
 title: Introduction à WebRTC
 slug: Web/API/WebRTC_API/Session_lifetime
-translation_of: Web/API/WebRTC_API/Session_lifetime
 ---
 
 > **Note :** WebRTC vous permet de faire de la communication pair-à-pair dans une application du navigateur.

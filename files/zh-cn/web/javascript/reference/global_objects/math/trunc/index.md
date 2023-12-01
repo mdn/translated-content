@@ -33,14 +33,14 @@ Math.trunc(value)
 ## 示例
 
 ```js
-Math.trunc(13.37)    // 13
-Math.trunc(42.84)    // 42
-Math.trunc(0.123)    //  0
-Math.trunc(-0.123)   // -0
-Math.trunc("-1.123") // -1
-Math.trunc(NaN)      // NaN
-Math.trunc("foo")    // NaN
-Math.trunc()         // NaN
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
 ```
 
 ## Polyfill
@@ -87,8 +87,9 @@ if (!Math.trunc) {
 
 {{Compat}}
 
-**相关链接**
+## 参见
 
+- [`core-js` 中 `Math.trunc` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}

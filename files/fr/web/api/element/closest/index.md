@@ -1,7 +1,6 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
-translation_of: Web/API/Element/closest
 ---
 
 {{APIRef('DOM')}}

@@ -1,8 +1,6 @@
 ---
 title: Element.accessKey
 slug: Web/API/HTMLElement/accessKey
-translation_of: Web/API/HTMLElement/accessKey
-translation_of_original: Web/API/Element/accessKey
 ---
 
 {{APIRef("DOM")}}

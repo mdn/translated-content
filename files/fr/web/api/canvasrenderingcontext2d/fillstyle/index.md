@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
-translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 
 {{APIRef}}

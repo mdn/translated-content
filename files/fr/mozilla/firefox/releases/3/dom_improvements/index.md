@@ -1,7 +1,6 @@
 ---
 title: Améliorations DOM dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
-translation_of: Mozilla/Firefox/Releases/3/DOM_improvements
 ---
 
 {{FirefoxSidebar}}

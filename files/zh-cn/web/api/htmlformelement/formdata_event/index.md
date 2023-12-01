@@ -22,11 +22,11 @@ target.onformdata = functionRef;
 ```js
 // grab reference to form
 
-const formElem = document.querySelector('form');
+const formElem = document.querySelector("form");
 
 // submit handler
 
-formElem.addEventListener('submit', (e) => {
+formElem.addEventListener("submit", (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -37,7 +37,7 @@ formElem.addEventListener('submit', (e) => {
 // formdata handler to retrieve data
 
 formElem.onformdata = (e) => {
-  console.log('formdata fired');
+  console.log("formdata fired");
 
   // Get the form data from the event object
   let data = e.formData;
@@ -60,8 +60,8 @@ formElem.onformdata = (e) => {
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [`formdata` event](/zh-CN/docs/Web/API/HTMLFormElement/formdata_event)
+- [`formdata` 事件](/zh-CN/docs/Web/API/HTMLFormElement/formdata_event)
 - {{domxref("FormDataEvent")}}
-- [Using FormData Objects](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)

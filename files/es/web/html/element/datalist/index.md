@@ -1,7 +1,6 @@
 ---
 title: datalist
 slug: Web/HTML/Element/datalist
-original_slug: Web/HTML/Elemento/datalist
 ---
 
 El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElement("option")}} que representan los valores disponibles para otros controles.

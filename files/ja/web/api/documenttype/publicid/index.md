@@ -23,7 +23,7 @@ HTML 文書の場合、ソースコード内にある実際の `DOCTYPE` が何�
 const docType = document.implementation.createDocumentType(
   "svg",
   "-//W3C//DTD SVG 1.1//EN",
-  "http://www.w3.org/2000/svg"
+  "http://www.w3.org/2000/svg",
 );
 
 console.log(docType.publicId); // "-//W3C//DTD SVG 1.1//EN" と表示

@@ -1,10 +1,11 @@
 ---
 title: DTLS (Datagram Transport Layer Security)
 slug: Glossary/DTLS
-page-type: glossary-definition
 l10n:
   sourceCommit: a160395a1e4baa10be746c56ec2f25e9d902e5cd
 ---
+
+{{GlossarySidebar}}
 
 **Datagram Transport Layer Security** (**DTLS**) とは、データグラムベースの通信を安全にするためのプロトコルです。ストリーム中心の Transport Layer Security ({{Glossary("TLS")}}) に基づいており、類似の水準のセキュリティーを提供します。一般的なデータグラムプロトコルと同様に、DTLSはメッセージが届く順番は愚か、メッセージが届くかどうかさえ保証しません。しかしながら、DTLSはデータグラムプロトコルの恩恵 ―― 特に低いオーバーヘッドや、レイテンシーの縮小 ――ももたらします。
 

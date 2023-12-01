@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
 ---
 
 {{JSRef}}
@@ -49,9 +48,7 @@ La méthode `set()` renvoie le même objet `Map` et on peut donc la « chaîner 
 ```js
 // On ajoute de nouveaux éléments
 // en enchaînant les appels à set()
-maMap.set('truc', 'toto')
-     .set(1, 'tototruc')
-     .set(2, 'bidule');
+maMap.set("truc", "toto").set(1, "tototruc").set(2, "bidule");
 ```
 
 ## Spécifications

@@ -10,9 +10,9 @@ Canvas 2D API 中的 **`CanvasRenderingContext2D.drawImage()`** 方法提供了�
 ## 语法
 
 ```js
-drawImage(image, dx, dy)
-drawImage(image, dx, dy, dWidth, dHeight)
-drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
+drawImage(image, dx, dy);
+drawImage(image, dx, dy, dWidth, dHeight);
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ```
 
 ![drawImage](canvas_drawimage.jpg)
@@ -61,9 +61,7 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 ```html
 <canvas id="canvas"></canvas>
 <div style="display:none;">
-  <img id="source"
-       src="rhino.jpg"
-       width="300" height="227">
+  <img id="source" src="rhino.jpg" width="300" height="227" />
 </div>
 ```
 
@@ -72,11 +70,11 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 原图像从坐标 (33,71) 处截取一个宽度为 104 高度为 124 的图像。并将其绘制到画布的 (21, 20) 坐标处，并将其缩放为宽 87、高 104 的图像。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const image = document.getElementById('source');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const image = document.getElementById("source");
 
-image.addEventListener('load', (e) => {
+image.addEventListener("load", (e) => {
   ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 });
 ```
@@ -100,14 +98,14 @@ image.addEventListener('load', (e) => {
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 const image = new Image(60, 45); // Using optional size for image
 image.onload = drawImageActualSize; // Draw when image has loaded
 
 // Load an image of intrinsic size 300x227 in CSS pixels
-image.src = 'rhino.jpg';
+image.src = "rhino.jpg";
 
 function drawImageActualSize() {
   // Use the intrinsic size of image in CSS pixels for the canvas element

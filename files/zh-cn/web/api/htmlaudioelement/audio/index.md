@@ -37,7 +37,7 @@ audioObj = new Audio(url);
 基于事件的方法是最优的：
 
 ```js
-myAudioElement.addEventListener("canplaythrough", event => {
+myAudioElement.addEventListener("canplaythrough", (event) => {
   /* 音频可以播放；如果权限允许则播放 */
   myAudioElement.play();
 });

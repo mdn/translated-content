@@ -1,7 +1,6 @@
 ---
 title: element-available
 slug: Web/XPath/Functions/element-available
-translation_of: Web/XPath/Functions/element-available
 ---
 
 {{ XsltRef() }}

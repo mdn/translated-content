@@ -1,7 +1,6 @@
 ---
 title: DeviceMotionEvent.interval
 slug: Web/API/DeviceMotionEvent/interval
-translation_of: Web/API/DeviceMotionEvent/interval
 ---
 
 {{apiref("Device Orientation Events")}}

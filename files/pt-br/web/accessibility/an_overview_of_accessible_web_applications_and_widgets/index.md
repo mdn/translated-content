@@ -1,7 +1,6 @@
 ---
 title: Visão geral da acessibilidade nas aplicações web e widgets
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-original_slug: Web/Acessibilidade/An_overview_of_accessible_web_applications_and_widgets
 ---
 
 A Rede Mundial está mudando. Estatísticamente, os sítios baseados em páginas estão, cada vez mais, sendo repostos por aplicações dinâmicas, em estilo Ambiente, que fazem uso intenso de JavaScript e AJAX. Estilistas estão criando novos _widgets_ e controles inteiramente com a combinação de JavaScript, HTML e CSS. Este salto tem o potencial de aperfeiçoar, dramaticamente, a capacidade de resposta e a usabilidade da Rede, mas milhares de utilizadores estão sob o risco de exclusão, devido a algumas lacunas na acessibilidade. A JavaScript tem, tradicionalmente, tido a reputação de ser inviável para quem usa tecnologias assistivas, como leitores de tela mas, agora, existem maneiras de criar interfaces de utilização dinâmicas acessíveis a uma ampla variedade de pessoas.
@@ -34,7 +33,7 @@ _Exemplo 1: Marcação para um widget de abas construído sem as indicações AR
 ```
 
 _Exemplo 2: Como o widget de abas pode ser visto. Seus utilizadores podem reconhecer sua aparência, mas não há semântica legível por mecanismos de tecnologias assistivas._
-![Screenshot of the tabs widget](/@api/deki/files/4926/=Tabs_Widget.png)
+![Screenshot of the tabs widget](tabs_widget.png)
 
 ## ARIA
 

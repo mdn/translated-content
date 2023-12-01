@@ -1,7 +1,6 @@
 ---
 title: Gestion du dépassement en multi-colonnes
 slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
-translation_of: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 ---
 
 {{CSSRef}}

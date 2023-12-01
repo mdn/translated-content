@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 l10n:
   sourceCommit: f6fe4043bfc7ace3b8caa757547b7d0cb3ad5cc1
 ---
@@ -15,8 +14,8 @@ La méthode **`flat()`** permet de créer un nouveau tableau contenant les élé
 ## Syntaxe
 
 ```js
-flat()
-flat(profondeur)
+flat();
+flat(profondeur);
 ```
 
 ### Paramètres
@@ -74,7 +73,7 @@ arr.reduce((acc, val) => acc.concat(val), []);
 // [1, 2, 3, 4]
 
 // avec la décomposition et les compositions fléchées, on peut écrire :
-const aplati = arr => [].concat(...arr);
+const aplati = (arr) => [].concat(...arr);
 ```
 
 ### `reduce()` + `concat()` + `isArray()` + récursivité

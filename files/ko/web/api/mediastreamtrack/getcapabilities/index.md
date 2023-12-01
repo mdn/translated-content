@@ -12,7 +12,7 @@ slug: Web/API/MediaStreamTrack/getCapabilities
 ## 구문
 
 ```js
-const capabilities = track.getCapabilities()
+const capabilities = track.getCapabilities();
 ```
 
 ### 반환 값

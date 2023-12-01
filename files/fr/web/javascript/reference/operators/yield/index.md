@@ -1,7 +1,6 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-translation_of: Web/JavaScript/Reference/Operators/yield
 ---
 
 {{jsSidebar("Operators")}}
@@ -13,7 +12,7 @@ Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction géné
 ## Syntaxe
 
 ```js
-[rv] = yield [expression]
+[rv] = yield[expression];
 ```
 
 - `expression`
@@ -45,7 +44,7 @@ Entre le chemin de code du générateur, ses opérateurs `yield`, et la possibil
 Le code suivant est la déclaration d'un exemple de fonction génératrice :
 
 ```js
-function* compteVentesPommes () {
+function* compteVentesPommes() {
   var listeVentes = [3, 7, 5];
   for (var i = 0; i < listeVentes.length; i++) {
     yield listeVentes[i];

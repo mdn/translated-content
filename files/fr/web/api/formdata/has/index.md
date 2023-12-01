@@ -1,7 +1,6 @@
 ---
 title: FormData.has()
 slug: Web/API/FormData/has
-translation_of: Web/API/FormData/has
 ---
 
 {{APIRef("XMLHttpRequest")}}

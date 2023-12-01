@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
-original_slug: Web/API/Node/innerText
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLElement")}} 인터페이스의 **`innerText`** 속성은 요소와 그 자손의 렌더링 된 텍스트 콘텐츠를 나타냅니다. `innerText`는 사용자가 커서를 이용해 요소의 콘텐츠를 선택하고 클립보드에 복사했을 때 얻을 수 있는 텍스트의 근삿값을 제공합니다.
@@ -12,8 +12,8 @@ original_slug: Web/API/Node/innerText
 ## 구문
 
 ```js
-const renderedText = htmlElement.innerText
-htmlElement.innerText = string
+const renderedText = htmlElement.innerText;
+htmlElement.innerText = string;
 ```
 
 ### 값
@@ -29,8 +29,12 @@ htmlElement.innerText = string
 ```html
 <h3>원본 요소:</h3>
 <p id="source">
-  <style>#source { color: red; }</style>
-아래에서<br>이 글을<br>어떻게 인식하는지 살펴보세요.
+  <style>
+    #source {
+      color: red;
+    }
+  </style>
+  아래에서<br />이 글을<br />어떻게 인식하는지 살펴보세요.
   <span style="display:none">숨겨진 글</span>
 </p>
 <h3>textContent 결과:</h3>
@@ -42,9 +46,9 @@ htmlElement.innerText = string
 ### JavaScript
 
 ```js
-const source = document.getElementById('source');
-const textContentOutput = document.getElementById('textContentOutput');
-const innerTextOutput = document.getElementById('innerTextOutput');
+const source = document.getElementById("source");
+const textContentOutput = document.getElementById("textContentOutput");
+const innerTextOutput = document.getElementById("innerTextOutput");
 
 textContentOutput.innerHTML = source.textContent;
 innerTextOutput.innerHTML = source.innerText;

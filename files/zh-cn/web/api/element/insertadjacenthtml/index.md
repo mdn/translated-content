@@ -43,8 +43,8 @@ element.insertAdjacentHTML(position, text);
 
 ```js
 // 原为 <div id="one">one</div>
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+var d1 = document.getElementById("one");
+d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 // 此时，新结构变成：
 // <div id="one">one</div><div id="two">two</div>
@@ -66,7 +66,7 @@ d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 包括 Henri Sivonen 在内的某些 [hacks.mozilla.org 客座文章](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) 显示，`insertAdjacentHTML` 在某些情况下可以更快。
 - {{domxref("Element.insertAdjacentElement()")}}

@@ -1,7 +1,6 @@
 ---
 title: extension.setUpdateUrlData()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/setUpdateUrlData
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/setUpdateUrlData
 ---
 
 {{AddonSidebar()}}

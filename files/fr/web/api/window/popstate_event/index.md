@@ -1,7 +1,6 @@
 ---
 title: popstate
 slug: Web/API/Window/popstate_event
-translation_of: Web/API/Window/popstate_event
 ---
 
 L'événement `popstate` est exécuté lorsque l'entrée active de l'historique change. Si l'entrée active de l'historique en cours d'activation a été créé par un appel à `history.pushState()` ou a été affectée par un appel à `history.replaceState()`, la propriété `state` de l'événement `popstate` contient une copie de l'objet `state` de l'entrée d'historique.

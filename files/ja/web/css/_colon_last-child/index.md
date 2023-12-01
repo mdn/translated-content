@@ -1,5 +1,5 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
 ---
 
@@ -53,7 +53,7 @@ p:last-child {
 
 #### 結果
 
-{{EmbedLiveSample('Basic_example', 500, 200)}}
+{{EmbedLiveSample('基本的な例', 500, 200)}}
 
 ### リストのスタイル付け
 
@@ -63,7 +63,8 @@ p:last-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>
@@ -88,7 +89,7 @@ ul li:last-child {
 
 #### 結果
 
-{{EmbedLiveSample('Styling_a_list')}}
+{{EmbedLiveSample('リストのスタイル付け')}}
 
 ## 仕様書
 

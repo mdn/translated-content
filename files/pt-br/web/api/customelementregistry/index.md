@@ -30,45 +30,41 @@ class WordCount extends HTMLParagraphElement {
     // Conta as palavras no elemento pai
     var wcParent = this.parentNode;
 
-    function countWords(node){
-      var text = node.innerText || node.textContent
+    function countWords(node) {
+      var text = node.innerText || node.textContent;
       return text.split(/\s+/g).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    var count = "Words: " + countWords(wcParent);
 
     // Cria um shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // Cria um nó de texto e adiciona o contador de palavra nele
-    var text = document.createElement('span');
+    var text = document.createElement("span");
     text.textContent = count;
 
     // Acrescenta ao shadow root
     shadow.appendChild(text);
 
-
     // Atualiza o contador quando houver mudança
-    setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+    setInterval(function () {
+      var count = "Words: " + countWords(wcParent);
       text.textContent = count;
-    }, 200)
-
+    }, 200);
   }
 }
 
 // Define um novo elemento
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 > **Nota:** Note: The CustomElementsRegistry is available through the {{domxref("Window.customElements")}} property.
 
 ## Especificações
 
-| Specification                                                                                                                        | Status                           | Comment           |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName("HTML WHATWG", "custom-elements.html#customelementregistry", "CustomElementRegistry")}} | {{Spec2("HTML WHATWG")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CustomElementRegistry")}}
+{{Compat}}

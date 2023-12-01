@@ -1,7 +1,6 @@
 ---
 title: Jeux de caractères CSS
 slug: Web/CSS/CSS_charsets
-translation_of: Web/CSS/CSS_Charsets
 ---
 
 {{CSSRef}}

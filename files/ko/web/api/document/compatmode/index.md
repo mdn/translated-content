@@ -10,7 +10,7 @@ slug: Web/API/Document/compatMode
 ## 구문
 
 ```js
-const mode = document.compatMode
+const mode = document.compatMode;
 ```
 
 ### 값
@@ -30,7 +30,7 @@ if (document.compatMode == "BackCompat") {
 }
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

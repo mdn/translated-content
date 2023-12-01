@@ -1,7 +1,6 @@
 ---
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
-translation_of: Web/API/BroadcastChannel/BroadcastChannel
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---

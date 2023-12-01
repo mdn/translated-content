@@ -1,7 +1,6 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
-original_slug: Aprender/HTML/Tables/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Aprender/HTML/Tabelas/Avançado", "Aprender/HTML/Tabelas")}}
@@ -458,7 +457,7 @@ Como `colspan` e `rowspan`, `span` aceita um valor de número sem unidade que es
 
 Agora é hora de tentar sozinho.
 
-Abaixo encontram-se os horários de uma professora de línguas. Na sexta-feira ela tem uma nova aula ensinando holandês todos os dias, mas ela também ensina alemão alguns poucos períodos das terças-feiras e quintas-feiras. Ela quer destacar as colunas contendo os dias que têm aula.
+Abaixo encontram-se os horários de uma professora de línguas. Na sexta-feira ela tem uma nova aula ensinando holandês o dia todo, mas ela também ensina alemão alguns poucos períodos das terças-feiras e quintas-feiras. Ela quer destacar as colunas contendo os dias que têm aula.
 
 {{EmbedGHLiveSample("learning-area/html/tables/basic/timetable-fixed.html", '100%', 320)}}
 

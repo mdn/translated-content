@@ -1,7 +1,6 @@
 ---
 title: Animaciones básicas
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
@@ -325,8 +324,6 @@ Debajo esta el elemento {{HTMLElement("canvas")}} en el cual va la imagen se va 
 
 ## Otros ejemplos
 
-- [Un ray-caster básico](/es/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : Un buen ejemplo de como hacer animaciones usando como control el teclado.
 - [Animaciones avanzadas](/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : Vamos a echar un vistazo a algunas técnicas de animación avanzadas y física en el próximo capítulo.
 

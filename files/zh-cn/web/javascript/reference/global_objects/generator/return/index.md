@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 
 ## 语法
 
-```plain
-gen.return(value)
+```js-nolint
+generatorInstance.return()
+generatorInstance.return(value)
 ```
 
 ### 参数
@@ -37,9 +38,9 @@ function* gen() {
 
 var g = gen();
 
-g.next();        // { value: 1, done: false }
+g.next(); // { value: 1, done: false }
 g.return("foo"); // { value: "foo", done: true }
-g.next();        // { value: undefined, done: true }
+g.next(); // { value: undefined, done: true }
 ```
 
 如果对已经处于“完成”状态的生成器调用`return(value)`，则生成器将保持在“完成”状态。如果没有提供参数，则返回对象的`value`属性与示例最后的`.next()`方法相同。如果提供了参数，则参数将被设置为返回对象的`value`属性的值。
@@ -68,6 +69,6 @@ g.return(1); // { value: 1, done: true }
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
+- {{jsxref("Statements/function*", "function*")}}

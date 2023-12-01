@@ -1,8 +1,9 @@
 ---
 title: Palavra-chave
 slug: Glossary/Keyword
-original_slug: Glossario/Palavra-chave
 ---
+
+{{GlossarySidebar}}
 
 Uma **palavra-chave** é a palavra ou a frase que descreve conteúdo. Palavras-chave on-line são utilizadas como pistas para buscadores ou como um conjunto de palavras que identifica e sintetiza o conteúdo dos sites.
 

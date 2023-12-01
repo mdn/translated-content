@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
-translation_of: Web/API/AnalyserNode/getByteFrequencyData
 ---
 
 {{ APIRef("Web Audio API") }}

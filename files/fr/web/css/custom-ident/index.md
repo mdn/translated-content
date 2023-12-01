@@ -1,7 +1,6 @@
 ---
 title: <custom-ident>
 slug: Web/CSS/custom-ident
-translation_of: Web/CSS/custom-ident
 ---
 
 {{CSSRef}}

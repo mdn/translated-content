@@ -1,8 +1,9 @@
 ---
 title: Accentuation
 slug: Glossary/Accent
-translation_of: Glossary/accent
 ---
+
+{{GlossarySidebar}}
 
 Une **accentuation** est une couleur généralement vive qui contraste avec les couleurs d'arrière-plan et de premier plan plus utilitaires d'un jeu de couleurs. Celles-ci sont présentes dans le style visuel de nombreuses plates-formes (mais pas toutes).
 

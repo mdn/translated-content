@@ -1,16 +1,8 @@
 ---
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
-tags:
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -37,11 +29,11 @@ Math.fround(x)
 ### Пример: использование метода `Math.fround()`
 
 ```js
-Math.fround(0);     // 0
-Math.fround(1);     // 1
+Math.fround(0); // 0
+Math.fround(1); // 1
 Math.fround(1.337); // 1.3370000123977661
-Math.fround(1.5);   // 1.5
-Math.fround(NaN);   // NaN
+Math.fround(1.5); // 1.5
+Math.fround(NaN); // NaN
 ```
 
 ## Полифил
@@ -49,9 +41,11 @@ Math.fround(NaN);   // NaN
 Этот метод может эмулироваться следующим образом, при условии, что среда выполнения поддерживает объект {{jsxref("Float32Array")}}:
 
 ```js
-Math.fround = Math.fround || function(x) {
-  return new Float32Array([x])[0];
-};
+Math.fround =
+  Math.fround ||
+  function (x) {
+    return new Float32Array([x])[0];
+  };
 ```
 
 ## Спецификации

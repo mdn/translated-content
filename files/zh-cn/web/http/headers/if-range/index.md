@@ -11,9 +11,9 @@ slug: Web/HTTP/Headers/If-Range
 
 **`If-Range`** 头字段通常用于断点续传的下载过程中，用来自从上次中断后，确保下载的资源没有发生改变。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 

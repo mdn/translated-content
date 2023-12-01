@@ -1,7 +1,6 @@
 ---
 title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
-translation_of: Web/API/Range/surroundContents
 ---
 
 {{ApiRef("DOM")}}

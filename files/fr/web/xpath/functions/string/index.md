@@ -1,7 +1,6 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
-translation_of: Web/XPath/Functions/string
 ---
 
 {{ XsltRef() }}

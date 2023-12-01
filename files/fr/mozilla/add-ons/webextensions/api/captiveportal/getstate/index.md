@@ -1,7 +1,6 @@
 ---
 title: getState
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
 ---
 
 {{AddonSidebar()}}

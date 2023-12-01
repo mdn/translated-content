@@ -60,14 +60,11 @@ Reflect.apply("".charAt, "ponies", [3]);
 
 ## Especificações
 
-| Especificação                                                                        | Status                       | Comentário         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-reflect.apply', 'Reflect.apply')}}         | {{Spec2('ES6')}}         | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect.apply")}}
+{{Compat}}
 
 ## Veja também
 

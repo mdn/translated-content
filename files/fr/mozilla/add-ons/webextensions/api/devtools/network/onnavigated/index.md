@@ -1,7 +1,6 @@
 ---
 title: devtools.network.onNavigated
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated
 ---
 
 {{AddonSidebar()}}

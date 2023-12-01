@@ -1,7 +1,6 @@
 ---
 title: Anatomia de uma WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension
 ---
 
 Uma extensão consiste de uma coleção de arquivos, empacotados para distribuição e instalação. Nesse artigo vamos falar rapidamente sobre os arquivos que podem estar presentes em uma extensão.

@@ -1,7 +1,6 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-translation_of: Web/API/Element/getBoundingClientRect
 ---
 
 {{APIRef("DOM")}}

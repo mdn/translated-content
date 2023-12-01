@@ -1,7 +1,6 @@
 ---
 title: element.dispatchEvent
 slug: Web/API/EventTarget/dispatchEvent
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
 
 {{APIRef("DOM Events")}}

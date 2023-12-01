@@ -1,7 +1,6 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
-translation_of: Web/API/Notifications_API
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}
@@ -48,7 +47,7 @@ Notifications API позволяют web-страницам контролиро
 
 ## Поддержка браузерами
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Firefox OS разрешения
 

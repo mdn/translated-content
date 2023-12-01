@@ -1,7 +1,6 @@
 ---
 title: SVGAElement
 slug: Web/API/SVGAElement
-translation_of: Web/API/SVGAElement
 ---
 
 ## SVG a DOM interface

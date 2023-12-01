@@ -1,7 +1,6 @@
 ---
 title: "<dt> : l'élément pour le terme d'une description"
 slug: Web/HTML/Element/dt
-translation_of: Web/HTML/Element/dt
 ---
 
 {{HTMLSidebar}}

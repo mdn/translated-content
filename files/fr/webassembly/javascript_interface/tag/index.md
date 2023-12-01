@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Tag
 slug: WebAssembly/JavaScript_interface/Tag
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag
 ---
 
 {{WebAssemblySidebar}}

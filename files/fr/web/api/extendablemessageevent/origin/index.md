@@ -1,7 +1,6 @@
 ---
 title: ExtendableMessageEvent.origin
 slug: Web/API/ExtendableMessageEvent/origin
-translation_of: Web/API/ExtendableMessageEvent/origin
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

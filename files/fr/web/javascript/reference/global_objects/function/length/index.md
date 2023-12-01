@@ -1,7 +1,6 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
 
 {{JSRef}}
@@ -27,12 +26,12 @@ La propriété `length` du prototype de {{jsxref("Function")}} vaut 0.
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
-console.log((function(...args) {}).length);
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 etc. */
+console.log(function (...args) {}.length);
 // 0, le paramètre du reste n'est pas compté
-console.log((function(a, b = 1, c) {}).length);
+console.log(function (a, b = 1, c) {}.length);
 // 1, seuls les paramètres avant les valeurs par
 // défaut sont comptés
 ```

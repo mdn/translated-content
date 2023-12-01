@@ -44,12 +44,13 @@ Se o documento contém atributos [`xml:base`](/pt-BR/docs/XML/xml:base) ( que vo
 
 Você pode usar `{{domxref("element")}}.baseURI` para obter a URL base de um elemento.
 
-## Especificação
+## Especificações
 
-| Especificação                                                                            | Status                               | Comentário  |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{ SpecName( "DOM WHATWG", "#dom-node-baseuri", "baseURI" ) }}     | {{ Spec2( "DOM WHATWG" ) }} |             |
-| {{ SpecName( "DOM3 Core", "core.html#Node3-baseURI", "baseURI" ) }} | {{ Spec2( "DOM3 Core" ) }} | Introduzida |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Ver também
 

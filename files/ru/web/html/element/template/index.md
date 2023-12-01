@@ -1,20 +1,6 @@
 ---
-title: '<template>: элемент шаблона контента'
+title: "<template>: элемент шаблона контента"
 slug: Web/HTML/Element/template
-tags:
-  - Элемент
-  - HTML
-  - HTML Веб-компоненты
-  - HTML:Основной поток
-  - HTML:Метаданные
-  - HTML:Фразовый контент
-  - HTML:Элементы поддержки скриптов
-  - Справочник
-  - Шаблон
-  - Веб
-  - Веб-компоненты
-translation_of: Web/HTML/Element/template
-browser-compat: html.elements.template
 ---
 
 {{HTMLSidebar}}
@@ -23,14 +9,14 @@ browser-compat: html.elements.template
 
 Шаблон можно представить себе как фрагмент контента страницы, сохранённый для последующего использования в документе. Хотя парсер и обрабатывает содержимое элемента **`<template>`** во время загрузки страницы, он делает это, только чтобы убедиться в валидности содержимого, само содержимое при этом не отображается.
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Метаданные](/ru/docs/Web/Guide/HTML/Content_categories#метаданные), [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#основной_поток), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#phrasing_content), [элементы поддержки скриптов](/ru/docs/Web/Guide/HTML/Content_categories#элементы_поддержки_скриптов)                                                                                                                          |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                               | Нет ограничений                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Метаданные](/ru/docs/Web/Guide/HTML/Content_categories#метаданные), [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#основной_поток), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#phrasing_content), [элементы поддержки скриптов](/ru/docs/Web/Guide/HTML/Content_categories#элементы_поддержки_скриптов)                                                                                                                  |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                               | Нет ограничений                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Допустимые родители                                              | Любые элементы, которые могут содержать [метаданные](/ru/docs/Web/Guide/HTML/Content_categories#метаданные), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#phrasing_content) или [элементы поддержки скриптов](/ru/docs/Web/Guide/HTML/Content_categories#элементы_поддержки_скриптов). Допускается вкладывать элемент в {{HTMLElement("colgroup")}}, у которого _отсутствует_ атрибут [`span`](/ru/docs/Web/HTML/Element/colgroup#span). |
-| Неявные ARIA-роли                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                                                                                                                                                                                                            |
+| Неявные ARIA-роли                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                                                                                                                                                                                                    |
 | Допустимые ARIA-роли                                             | Нет                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| DOM-интерфейс                                                    | {{domxref("HTMLTemplateElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| DOM-интерфейс                                                    | {{domxref("HTMLTemplateElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ## Атрибуты
 
@@ -70,12 +56,11 @@ browser-compat: html.elements.template
 ```js
 // Убеждаемся, что браузер поддерживает тег <template>,
 // проверив наличие атрибута content у элемента template.
-if ('content' in document.createElement('template')) {
-
+if ("content" in document.createElement("template")) {
   // Находим элемент tbody таблицы
   // и шаблон строки
   var tbody = document.querySelector("tbody");
-  var template = document.querySelector('#productrow');
+  var template = document.querySelector("#productrow");
 
   // Клонируем новую строку и вставляем её в таблицу
   var clone = template.content.cloneNode(true);
@@ -92,7 +77,6 @@ if ('content' in document.createElement('template')) {
   td[1].textContent = "Acme Kidney Beans 2";
 
   tbody.appendChild(clone2);
-
 } else {
   // Иной способ заполнить таблицу, потому что
   // HTML-элемент template не поддерживается.

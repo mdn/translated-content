@@ -1,7 +1,6 @@
 ---
 title: mfrac
 slug: Web/MathML/Element/mfrac
-translation_of: Web/MathML/Element/mfrac
 ---
 
 L'élément MathML `<mfrac>` est utilisé pour afficher des fractions.

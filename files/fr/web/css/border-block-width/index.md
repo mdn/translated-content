@@ -1,7 +1,6 @@
 ---
 title: border-block-width
 slug: Web/CSS/border-block-width
-translation_of: Web/CSS/border-block-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

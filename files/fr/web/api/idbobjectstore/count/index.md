@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.count()
 slug: Web/API/IDBObjectStore/count
-translation_of: Web/API/IDBObjectStore/count
 ---
 
 {{APIRef("IndexedDB")}}

@@ -1,7 +1,6 @@
 ---
 title: DOMRectReadOnly.top
 slug: Web/API/DOMRectReadOnly/top
-translation_of: Web/API/DOMRectReadOnly/top
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

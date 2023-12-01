@@ -1,7 +1,6 @@
 ---
 title: ins
 slug: Web/HTML/Element/ins
-original_slug: Web/HTML/Elemento/ins
 ---
 
 ### Definición

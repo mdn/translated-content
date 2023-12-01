@@ -1,7 +1,6 @@
 ---
 title: OpenSearch 記述形式
 slug: Web/OpenSearch
-original_slug: Creating_OpenSearch_plugins_for_Firefox
 ---
 
 {{AddonSidebar}}

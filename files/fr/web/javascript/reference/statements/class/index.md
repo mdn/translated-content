@@ -1,7 +1,6 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-translation_of: Web/JavaScript/Reference/Statements/class
 ---
 
 {{jsSidebar("Statements")}}
@@ -35,7 +34,7 @@ Dans l'exemple qui suit, on définit une classe `Polygone` pour laquelle on cré
 ```js
 class Polygone {
   constructor(hauteur, largeur) {
-    this.nom = 'Polygone';
+    this.nom = "Polygone";
     this.hauteur = hauteur;
     this.largeur = largeur;
   }
@@ -43,8 +42,8 @@ class Polygone {
 
 class Carré extends Polygone {
   constructor(longueur) {
-    super(longueur,longueur);
-    this.nom = 'Carré';
+    super(longueur, longueur);
+    this.nom = "Carré";
   }
 }
 ```
@@ -53,12 +52,12 @@ class Carré extends Polygone {
 >
 > ```js
 > // Deux déclarations avec le même nom
-> class Toto {};
-> class Toto {}; // Uncaught SyntaxError: Identifier 'Toto' has already been declared
+> class Toto {}
+> class Toto {} // Uncaught SyntaxError: Identifier 'Toto' has already been declared
 >
 > // Expression puis déclaration
 > var Truc = class {};
-> class Truc {}; // Uncaught TypeError: Identifier 'Truc' has already been declared
+> class Truc {} // Uncaught TypeError: Identifier 'Truc' has already been declared
 > ```
 
 ## Spécifications

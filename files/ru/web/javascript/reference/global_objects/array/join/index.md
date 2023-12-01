@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Массив
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
 
 {{JSRef("Global_Objects", "Array")}}
@@ -46,11 +37,11 @@ arr.join([separator])
 В следующем примере создаётся массив `a` с тремя элементами, затем они четыре раза объединяются в строку: с использованием разделителя по умолчанию, запятой с пробелом, плюса, окружённого пробелами, и пустой строки.
 
 ```js
-var a = ['Ветер', 'Дождь', 'Огонь'];
-var myVar1 = a.join();      // присвоит 'Ветер,Дождь,Огонь' переменной myVar1
-var myVar2 = a.join(', ');  // присвоит 'Ветер, Дождь, Огонь' переменной myVar2
-var myVar3 = a.join(' + '); // присвоит 'Ветер + Дождь + Огонь' переменной myVar3
-var myVar4 = a.join('');    // присвоит 'ВетерДождьОгонь' переменной myVar4
+var a = ["Ветер", "Дождь", "Огонь"];
+var myVar1 = a.join(); // присвоит 'Ветер,Дождь,Огонь' переменной myVar1
+var myVar2 = a.join(", "); // присвоит 'Ветер, Дождь, Огонь' переменной myVar2
+var myVar3 = a.join(" + "); // присвоит 'Ветер + Дождь + Огонь' переменной myVar3
+var myVar4 = a.join(""); // присвоит 'ВетерДождьОгонь' переменной myVar4
 ```
 
 ### Соединение элементов массивоподобного объекта
@@ -62,7 +53,7 @@ function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
-f(1, 'a', true);
+f(1, "a", true);
 ```
 
 ## Спецификации

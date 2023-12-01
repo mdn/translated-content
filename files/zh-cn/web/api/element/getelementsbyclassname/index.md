@@ -24,28 +24,31 @@ var elements = element.getElementsByClassName(names);
 获取所有包含 class 名称为 test 的元素：
 
 ```js
-element.getElementsByClassName('test');
+element.getElementsByClassName("test");
 ```
 
 获取所有包含 `red` 和 `test` class 名的元素：
 
 ```js
-element.getElementsByClassName('red test');
+element.getElementsByClassName("red test");
 ```
 
 获取 `id` 为 `main` 的元素的所有包含一个 `test` class 名的后代元素：
 
 ```js
-document.getElementById('main').getElementsByClassName('test');
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 可以在任何 {{domxref("HTMLCollection")}} 上面使用 {{jsxref("Array.prototype")}} 的方法，要把 `HTMLCollection` 作为该方法的上下文对象（this）。下例，查找类名为 `test` 的元素中的所有 {{HTMLElement("div")}} 元素：
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement){
-    return testElement.nodeName === 'div';
-});
+var testElements = document.getElementsByClassName("test");
+var testDivs = Array.prototype.filter.call(
+  testElements,
+  function (testElement) {
+    return testElement.nodeName === "div";
+  },
+);
 ```
 
 ## 规范

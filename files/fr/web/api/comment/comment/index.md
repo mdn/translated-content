@@ -1,7 +1,6 @@
 ---
 title: Comment()
 slug: Web/API/Comment/Comment
-translation_of: Web/API/Comment/Comment
 ---
 
 {{ApiRef("DOM")}}{{seeCompatTable}}

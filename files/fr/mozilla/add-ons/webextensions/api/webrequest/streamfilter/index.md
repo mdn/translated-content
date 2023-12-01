@@ -1,7 +1,6 @@
 ---
 title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 ---
 
 {{AddonSidebar()}}

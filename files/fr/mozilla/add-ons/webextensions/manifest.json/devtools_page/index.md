@@ -1,7 +1,6 @@
 ---
 title: devtools_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 ---
 
 {{AddonSidebar}}

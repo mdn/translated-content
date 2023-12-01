@@ -1,7 +1,6 @@
 ---
 title: Référence des attributs SVG
 slug: Web/SVG/Attribute
-translation_of: Web/SVG/Attribute
 ---
 
 {{SVGRef}}

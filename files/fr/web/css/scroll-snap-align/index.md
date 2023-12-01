@@ -1,7 +1,6 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
-translation_of: Web/CSS/scroll-snap-align
 ---
 
 {{CSSRef}}

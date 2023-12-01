@@ -1,7 +1,6 @@
 ---
 title: tabs.onHighlighted
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
 ---
 
 {{AddonSidebar()}}

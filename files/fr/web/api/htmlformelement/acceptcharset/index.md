@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.acceptCharset
 slug: Web/API/HTMLFormElement/acceptCharset
-translation_of: Web/API/HTMLFormElement/acceptCharset
 ---
 
 {{APIRef("HTML DOM")}}

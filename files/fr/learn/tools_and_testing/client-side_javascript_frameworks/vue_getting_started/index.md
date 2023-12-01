@@ -1,7 +1,6 @@
 ---
 title: Prise en main de Vue
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
 
 {{LearnSidebar}}

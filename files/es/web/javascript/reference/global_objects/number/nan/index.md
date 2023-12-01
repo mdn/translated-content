@@ -1,7 +1,6 @@
 ---
 title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/NaN
 ---
 
 {{JSRef}}

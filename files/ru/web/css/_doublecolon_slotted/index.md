@@ -1,7 +1,6 @@
 ---
-title: '::slotted()'
+title: "::slotted()"
 slug: Web/CSS/::slotted
-translation_of: Web/CSS/::slotted
 ---
 
 {{ CSSRef }}
@@ -48,26 +47,29 @@ translation_of: Web/CSS/::slotted
 Пользовательский элемент — `<person-details>` — определяется следующим образом:
 
 ```js
-customElements.define('person-details',
+customElements.define(
+  "person-details",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('person-template');
+      let template = document.getElementById("person-template");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
 
-      let style = document.createElement('style');
-      style.textContent = 'div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }' +
-                           'h2 { margin: 0 0 10px; }' +
-                           'ul { margin: 0; }' +
-                           'p { margin: 10px 0; }' +
-                           '::slotted(*) { color: gray; font-family: sans-serif; } ';
+      let style = document.createElement("style");
+      style.textContent =
+        "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
+        "h2 { margin: 0 0 10px; }" +
+        "ul { margin: 0; }" +
+        "p { margin: 10px 0; }" +
+        "::slotted(*) { color: gray; font-family: sans-serif; } ";
 
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
-  }
-})
+    }
+  },
+);
 ```
 
 Вы увидите, что при заполнении элемента `style` содержимым мы выбираем все slotted-элементы (`::slotted(*)`) и задаём им другой цвет и шрифт. Это позволяет им лучше выделяться рядом с теми слотами, которые ещё не были успешно заполнены.

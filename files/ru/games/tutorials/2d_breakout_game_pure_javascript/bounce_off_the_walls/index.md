@@ -1,15 +1,6 @@
 ---
 title: Отскок от стен
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-tags:
-  - Анимация
-  - Графика
-  - Игры
-  - Начинающим
-  - Обучение
-  - Примеры
-  - столкновения
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

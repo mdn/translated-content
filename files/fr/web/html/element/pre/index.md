@@ -90,8 +90,8 @@ Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments
                   ||     ||
   </pre>
   <figcaption id="cow-caption">
-    Une vache qui dit "Je suis la meuhieure.". La vache
-    est illustrée à l'aide de caractères préformatés.
+    Une vache qui dit "Je suis la meuhieure.". La vache est illustrée à l'aide
+    de caractères préformatés.
   </figcaption>
 </figure>
 ```

@@ -1,7 +1,6 @@
 ---
 title: API de geolocalización
 slug: Web/API/Geolocation_API
-original_slug: WebAPI/Using_geolocation
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}

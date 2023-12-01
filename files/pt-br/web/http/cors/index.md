@@ -1,7 +1,6 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/CORS
-original_slug: Web/HTTP/Controle_Acesso_CORS
 ---
 
 {{HTTPSidebar}}
@@ -20,7 +19,7 @@ O mecânismo CORS suporta requisições seguras do tipo _cross-origin e_ transfe
 
 Todos, realmente.
 
-Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/en-US/docs/Web/HTTP/Server-Side_Access_Control), pode ser uma leitura complementar.
+Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/pt-BR/docs/Web/HTTP/CORS), pode ser uma leitura complementar.
 
 ## Quais solicitações usam o CORS?
 
@@ -51,7 +50,7 @@ Uma discussão sobre _Cross-Origin Resource Sharing_ a partir da perspectiva do 
 
 ### Requisições simples
 
-Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests). Essas são denominadas neste artigo como "requisições simples" (_simple request_), embora a especificação {{SpecName('Fetch')}} (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) — denominada "requisição simples" — é uma que **atende todas as seguintes condições**:
+Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests). Essas são denominadas neste artigo como "requisições simples" (_simple request_), embora a especificação [Fetch](https://fetch.spec.whatwg.org/) (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) — denominada "requisição simples" — é uma que **atende todas as seguintes condições**:
 
 - Os únicos métodos permitidos são:
 
@@ -83,11 +82,11 @@ Por exemplo, suponha que o conteúdo web no domínio `http://foo.example` deseje
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+var url = "http://bar.other/resources/public-data/";
 
 function callOtherDomain() {
-  if(invocation) {
-    invocation.open('GET', url, true);
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.onreadystatechange = handler;
     invocation.send();
   }
@@ -100,7 +99,7 @@ Isso fará uma troca simples entre cliente e servidor, utilizando o cabeçalho C
 
 Neste caso, vamos ver o que o navegador enviará ao servidor e vamos olhar como o servidor responde:
 
-```html
+```http
 GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
@@ -319,11 +318,11 @@ In this example, content originally loaded from `http://foo.example` makes a sim
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/credentialed-content/';
+var url = "http://bar.other/resources/credentialed-content/";
 
-function callOtherDomain(){
-  if(invocation) {
-    invocation.open('GET', url, true);
+function callOtherDomain() {
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();
@@ -493,13 +492,11 @@ Examples of this usage can be [found above](#Preflighted_requests).
 
 ## Especificações
 
-| Specification                                                    | Status                   | Comment                                                                          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### Notas de compatibilidade
 

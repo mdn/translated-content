@@ -30,13 +30,11 @@ Se o método {{domxref("Animation.playState")}} da animação estiver executando
 
 ## Especificações
 
-| Specification                                                                                            | Status                               | Comment         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------- |
-| {{SpecName('Web Animations', '#dom-animation-cancel', 'Animation.cancel()' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Animation.cancel")}}
+{{Compat}}
 
 ## Veja também
 

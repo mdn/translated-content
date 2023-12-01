@@ -1,7 +1,6 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
-translation_of: Web/API/URLSearchParams
 ---
 
 {{ApiRef("URL API")}}
@@ -28,7 +27,7 @@ _Наследование свойств отсутствует._
 
 ## Методы
 
-_Отсутствует наследование методов_
+_Отсутствует наследование методов._
 
 - {{domxref("URLSearchParams.append()")}}
   - : Добавляет указанную пару key/value в качестве нового параметра поиска.
@@ -54,7 +53,7 @@ _Отсутствует наследование методов_
 ## Пример
 
 ```js
-var paramsString = "q=URLUtils.searchParams&topic=api"
+var paramsString = "q=URLUtils.searchParams&topic=api";
 var searchParams = new URLSearchParams(paramsString);
 
 // Итерируем параметры поиска.

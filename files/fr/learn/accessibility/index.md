@@ -1,7 +1,6 @@
 ---
 title: Accessibilité
 slug: Learn/Accessibility
-translation_of: Learn/Accessibility
 ---
 
 {{LearnSidebar}}

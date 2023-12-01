@@ -26,7 +26,7 @@ slug: Web/SVG/Element/font-face-uri
 
 ## DOM 接口
 
-该元素实现了[`SVGFontFaceUriElement`](/zh-CN/DOM/SVGFontFaceUriElement)接口。
+该元素实现了 [`SVGFontFaceUriElement`](/zh-CN/DOM/SVGFontFaceUriElement) 接口。
 
 ## 参见
 

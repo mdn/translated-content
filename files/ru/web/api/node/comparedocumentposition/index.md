@@ -1,7 +1,6 @@
 ---
 title: Node.compareDocumentPosition
 slug: Web/API/Node/compareDocumentPosition
-translation_of: Web/API/Node/compareDocumentPosition
 ---
 
 {{ ApiRef() }}
@@ -37,8 +36,10 @@ node.compareDocumentPosition( otherNode )
 ## Пример
 
 ```js
-var head = document.getElementsByTagName('head').item(0);
-if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
+var head = document.getElementsByTagName("head").item(0);
+if (
+  head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING
+) {
   console.log("well-formed document");
 } else {
   console.log("<head> is not before <body>");
@@ -49,10 +50,11 @@ if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWI
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус         | Комментарий |
-| -------------------------------------------------------------------------------------------- | -------------- | ----------- |
-| [DOM Level 3](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition) | Рекомендация   |             |
-| [DOM Standard](http://dom.spec.whatwg.org/#dom-node-comparedocumentposition)                 | Живой стандарт |             |
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

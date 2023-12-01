@@ -1,7 +1,6 @@
 ---
 title: AbortSignal
 slug: Web/API/AbortSignal
-translation_of: Web/API/AbortSignal
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

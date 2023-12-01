@@ -1,7 +1,6 @@
 ---
 title: Изменение размеров в CSS
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
-translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}

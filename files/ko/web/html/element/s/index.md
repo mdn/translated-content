@@ -9,8 +9,6 @@ slug: Web/HTML/Element/s
 
 {{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -67,7 +65,7 @@ slug: Web/HTML/Element/s
 ## 예제
 
 ```html
-<s>Today's Special: Salmon</s> SOLD OUT<br>
+<s>Today's Special: Salmon</s> SOLD OUT<br />
 ```
 
 {{EmbedLiveSample("예제")}}

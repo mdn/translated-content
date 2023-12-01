@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.hourCycle
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
 ---
 
 {{JSRef}}

@@ -1,8 +1,9 @@
 ---
 title: Nombre de encabezado prohibido
 slug: Glossary/Forbidden_header_name
-original_slug: Glossary/Nombre_de_encabezado_prohibido
 ---
+
+{{GlossarySidebar}}
 
 Un nombre de encabezado prohibido es un nombre de [encabezado HTTP](/es/docs/Web/HTTP/Headers) que no se puede modificar mediante programación; específicamente, un nombre de encabezado de HTTP **solicitud** HTTP.
 

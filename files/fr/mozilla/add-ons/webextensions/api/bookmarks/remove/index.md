@@ -1,7 +1,6 @@
 ---
 title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 
 {{AddonSidebar()}}

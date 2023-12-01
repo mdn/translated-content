@@ -1,7 +1,6 @@
 ---
 title: FeaturePolicy
 slug: Web/API/FeaturePolicy
-translation_of: Web/API/FeaturePolicy
 ---
 
 {{APIRef("Feature Policy")}}

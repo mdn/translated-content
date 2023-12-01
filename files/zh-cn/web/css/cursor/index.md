@@ -20,8 +20,12 @@ cursor: auto;
 cursor: url(hand.cur), pointer;
 
 /* URL 和 xy 的坐标偏移值，最后提供一个关键字值作为备用 */
-cursor:  url(cursor1.png) 4 12, auto;
-cursor:  url(cursor2.png) 2 2, pointer;
+cursor:
+  url(cursor1.png) 4 12,
+  auto;
+cursor:
+  url(cursor2.png) 2 2,
+  pointer;
 
 /* 全局属性 */
 cursor: inherit;
@@ -36,7 +40,10 @@ cursor 属性为零个或多个[\<url>](/zh-CN/docs/Web/CSS/cursor#%3Curl%3E)值
 例如，下面的例子使用\<url>值指定两个图像，为第二个图像提供\<x>\<y>坐标，如果两个图像都无法加载，则返回`progress`关键字值：
 
 ```css
-cursor: url(one.svg), url(two.svg) 5 5, progress;
+cursor:
+  url(one.svg),
+  url(two.svg) 5 5,
+  progress;
 ```
 
 ### 值

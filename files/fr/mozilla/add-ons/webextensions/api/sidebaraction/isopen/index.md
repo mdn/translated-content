@@ -1,7 +1,6 @@
 ---
 title: sidebarAction.isOpen()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
 ---
 
 {{AddonSidebar()}}

@@ -2,7 +2,7 @@
 title: while
 slug: Web/JavaScript/Reference/Statements/while
 l10n:
-  sourceCommit: 5e207965797b3672d3c06b65298de551d1eac515
+  sourceCommit: 62b2885cf645395c39081f8ffa8f6023d7d1bc0b
 ---
 
 {{jsSidebar("Statements")}}
@@ -15,14 +15,14 @@ L'instruction **`while`** permet de créer une boucle qui s'exécute tant qu'une
 
 ```js-nolint
 while (condition)
-  statement
+  instruction
 ```
 
 - `condition`
   - : Une expression qui est évaluée avant chaque passage dans la boucle. Si cette expression est [évaluée à vrai](/fr/docs/Glossary/Truthy), `instruction` est exécutée. Lorsque la condition [n'est pas vérifiée](/fr/docs/Glossary/Falsy), l'exécution se poursuit avec l'instruction qui suit la boucle `while`.
 - `instruction`
-  - : Une instruction optionnelle qui doit être exécutée tant que la condition d'entrée est vérifiée. Afin d'exécuter plusieurs instructions au sein de la boucle, on utilisera généralement un [bloc d'instructions (`{ /* ... */ }`)](/fr/docs/Web/JavaScript/Reference/Statements/block#instruction_de_bloc) pour les regrouper.
-    > **Note :** On pourra utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Instructions/break) afin d'arrêter une boucle avant que la condition soit vérifiée.
+  - : Une instruction optionnelle qui doit être exécutée tant que la condition d'entrée est vérifiée. Afin d'exécuter plusieurs instructions au sein de la boucle, on utilisera généralement un [bloc d'instructions (`{ /* … */ }`)](/fr/docs/Web/JavaScript/Reference/Statements/block#instruction_de_bloc) pour les regrouper.
+    > **Note :** On pourra utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break) afin d'arrêter une boucle avant que la condition soit vérifiée.
 
 ## Exemples
 
@@ -48,24 +48,6 @@ while (n < 3) {
 
 Une fois que la troisième itération est exécutée, la condition `n` < 3 n'est plus vérifiée et donc la boucle se termine.
 
-### Fonction avec itération
-
-Dans la fonction qui suit, on incrémente un compteur grâce à une boucle `while` puis on affiche la valeur atteinte.
-
-```js
-const maFonctionAvecWhile = () => {
-  let i = 0;
-  while (i< 20){
-    i++;
-  };
-  console.log(i);
-};
-```
-
-Dans l'exemple ci-avant, le code de la boucle s'exécutera encore et encore tant que la variable `i` est inférieure à 20.
-
-**Attention :** Si on oublie d'augmenter la variable utilisée dans la condition, la boucle ne se terminera jamais et cela bloquera le navigateur.
-
 ### Attention aux affectations dans les conditions
 
 La condition passée à l'instruction correspond généralement à un test. Si on oublie un signe égal `=`, [un test d'égalité ou de comparaison](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#opérateurs_de_comparaison) peut devenir [une affectation](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#opérateurs_daffectation) et entraîner un comportement inattendu avec une boucle infinie.
@@ -75,7 +57,7 @@ Par exemple, le fragment qui suit causera une boucle infinie&nbsp;:
 ```js example-bad
 const seuil = 14;
 let compteur = 0;
-while (compteur = seuil) {
+while ((compteur = seuil)) {
   compteur++;
   /* Faire quelque chose avec compteur */
 }
@@ -92,7 +74,7 @@ while (compteur <= seuil) {
 }
 ```
 
-Si on veut explicitement utiliser une affectation comme condition pour la boucle `while`, la convention veut d'ajouter une paire de parenthèses autour de l'instruction d'affectation afin d'afficher clairement l'intention&nbsp;:
+Si on veut explicitement utiliser une affectation comme condition pour la boucle `while`, la convention veut d'ajouter une paire de parenthèses (correspondant à [l'opérateur de groupement](/fr/docs/Web/JavaScript/Reference/Operators/Grouping)) autour de l'instruction d'affectation afin d'afficher clairement l'intention, idéalement en utilisant la valeur de retour de cette affectation pour faire la comparaison&nbsp;:
 
 ```js example-good
 const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);

@@ -1,7 +1,6 @@
 ---
 title: storage.managed
 slug: Mozilla/Add-ons/WebExtensions/API/storage/managed
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/managed
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: opacity()
 slug: Web/CSS/filter-function/opacity
-original_slug: Web/CSS/filter-function/opacity()
 ---
 
 {{cssref}}

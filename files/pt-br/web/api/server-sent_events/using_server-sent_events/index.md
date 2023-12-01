@@ -18,7 +18,9 @@ const evtSource = new EventSource("ssedemo.php");
 Se o script do gerador de eventos estiver hospedado em uma origem diferente, um novo objeto `EventSource` deve ser criado com a URL e um dicionário de opções. Por exemplo, supondo que o script do cliente esteja em `example.com`:
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
+const evtSource = new EventSource("//api.example.com/ssedemo.php", {
+  withCredentials: true,
+});
 ```
 
 Depois de instanciar a origem do evento, você pode começar a ouvir as mensagens do servidor anexando um manipulador para o evento {{domxref("EventSource.message_event", "message")}}:
@@ -30,14 +32,14 @@ evtSource.onmessage = (event) => {
 
   newElement.textContent = `message: ${event.data}`;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 Este código escuta as mensagens recebidas (ou seja, avisos do servidor que não possuem um campo `event`) e anexa o texto da mensagem a uma lista no HTML do documento.
 
 Você também pode escutar eventos com `addEventListener()`:
 
-``` js
+```js
 evtSource.addEventListener("ping", (evento) => {
   const novoElemento = document.createElement("li");
   const eventList = document.getElementById("list");
@@ -190,6 +192,10 @@ evento: mensagem do usuário
 data: {"username": "bobby", "time": "02:34:11", "text": "Olá a todos."}
 ```
 
-## Compatibilidade do navegador
+## Especificações
+
+{{Specifications}}
+
+## Compatibilidade com navegadores
 
 {{Compat}}

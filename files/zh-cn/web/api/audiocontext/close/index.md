@@ -27,13 +27,13 @@ audioCtx.close().then(function() { ... });
 下面这段代码是[AudioContext states demo](https://github.com/mdn/audiocontext-states/settings) ([直接运行](http://mdn.github.io/audiocontext-states/)) 中的，点击停止按钮调用`close()`。promise 释放后，回到初始状态。
 
 ```js
-stopBtn.onclick = function() {
-  audioCtx.close().then(function() {
-    startBtn.removeAttribute('disabled');
-    susresBtn.setAttribute('disabled','disabled');
-    stopBtn.setAttribute('disabled','disabled');
+stopBtn.onclick = function () {
+  audioCtx.close().then(function () {
+    startBtn.removeAttribute("disabled");
+    susresBtn.setAttribute("disabled", "disabled");
+    stopBtn.setAttribute("disabled", "disabled");
   });
-}
+};
 ```
 
 ## 规范

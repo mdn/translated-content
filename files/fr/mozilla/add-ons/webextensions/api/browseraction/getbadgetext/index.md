@@ -1,7 +1,6 @@
 ---
 title: browserAction.getBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
 ---
 
 {{AddonSidebar()}}

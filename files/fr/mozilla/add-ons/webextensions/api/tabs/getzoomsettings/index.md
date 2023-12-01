@@ -1,7 +1,6 @@
 ---
 title: tabs.getZoomSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getZoomSettings
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getZoomSettings
 ---
 
 {{AddonSidebar()}}

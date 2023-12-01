@@ -1,7 +1,6 @@
 ---
 title: downloads.removeFile()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 ---
 
 {{AddonSidebar()}}

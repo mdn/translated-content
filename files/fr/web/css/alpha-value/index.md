@@ -1,7 +1,6 @@
 ---
 title: alpha-value
 slug: Web/CSS/alpha-value
-translation_of: Web/CSS/alpha-value
 ---
 
 {{CSSRef}}
@@ -25,7 +24,7 @@ Certaines fonctionnalités CSS utilisent des valeurs `<alpha-value>` dont [les n
 ```css
 /* <rgba()> */
 color: rgba(34, 12, 64, 0.6);
-color: rgba(34.0 12 64 / 60%);
+color: rgba(34 12 64 / 60%);
 ```
 
 ```css

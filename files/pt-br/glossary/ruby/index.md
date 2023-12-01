@@ -1,8 +1,9 @@
 ---
 title: Ruby
 slug: Glossary/Ruby
-original_slug: Glossario/Ruby
 ---
+
+{{GlossarySidebar}}
 
 _Ruby_ é uma linguagem de programação de código aberto. Em um contexto {{glossary("world wide web","Web")}}, Ruby é geralmente usado em servidores com o framework _Ruby On Rails_ (ROR) para produzir websites/apps.
 

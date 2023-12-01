@@ -1,7 +1,6 @@
 ---
 title: 로컬 테스트 서버 설치하기
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
 
 이 글에서는 간단한 로컬 테스트 서버를 여러분의 장비에 설치하는 법과 기본적인 사용법을 설명합니다.
@@ -44,36 +43,36 @@ original_slug: Learn/Common_questions/set_up_a_local_testing_server
 
 1. 파이썬을 설치합니다. 리눅스나 맥OS 사용자라면 이미 시스템에 설치되어 있을 것입니다. 윈도우 사용자일 경우, 다음과 같이 파이썬 홈페이지로부터 설치 프로그램을 다운 받고 설치합니다:
 
-    - 파이썬 홈페이지([python.org](https://www.python.org/))로 이동합니다.
-    - 다운로드(download) 영역에서 Python "3.xxx" 링크를 클릭합니다.
-    - 페이지의 아래쪽에 있는 *Windows x86 executable installer*를 선택하고 다운로드 받습니다.
-    - 다운로드가 완료되면 실행합니다.
-    - 설치 프로그램의 첫 번째 페이지에서 "Add Python 3.xxx to PATH" 체크박스를 체크해야 합니다.
-    - *Install*을 클릭하고 설치가 완료되면 *Close*를 클릭합니다.
+   - 파이썬 홈페이지([python.org](https://www.python.org/))로 이동합니다.
+   - 다운로드(download) 영역에서 Python "3.xxx" 링크를 클릭합니다.
+   - 페이지의 아래쪽에 있는 *Windows x86 executable installer*를 선택하고 다운로드 받습니다.
+   - 다운로드가 완료되면 실행합니다.
+   - 설치 프로그램의 첫 번째 페이지에서 "Add Python 3.xxx to PATH" 체크박스를 체크해야 합니다.
+   - *Install*을 클릭하고 설치가 완료되면 *Close*를 클릭합니다.
 
 2. 명령 실행창(윈도우의 경우는 command prompt, OS/X나 리눅스인 경우에는 터미널창)을 엽니다. 파이썬이 설치되었는지 확인하기 위해 다음 명령을 입력합니다.:
 
-    ```bash
-    python -V
-    ```
+   ```bash
+   python -V
+   ```
 
 3. 이 명령은 버전 번호를 반환합니다. 정상적으로 작동하면, `cd` 명령을 이용해 여러분의 예제가 존재하는 디렉토리로 이동합니다.
 
-    ```bash
-    # 들어가고자 하는 디렉토리 명을 입력합니다. 예를 들어,
-    cd Desktop
-    # 한 단계 상위 디렉토리로 이동하려면 점 두 개를 사용합니다.
-    cd ..
-    ```
+   ```bash
+   # 들어가고자 하는 디렉토리 명을 입력합니다. 예를 들어,
+   cd Desktop
+   # 한 단계 상위 디렉토리로 이동하려면 점 두 개를 사용합니다.
+   cd ..
+   ```
 
 4. 그 경로에 있는 서버를 구동하기 위한 명령을 입력합니다:
 
-    ```bash
-    # 위에서 반환된 파이썬 버전이 3.X인 경우
-    python -m http.server
-    # 위에서 반환된 파이썬 버전이 2.X인 경우
-    python -m SimpleHTTPServer
-    ```
+   ```bash
+   # 위에서 반환된 파이썬 버전이 3.X인 경우
+   python -m http.server
+   # 위에서 반환된 파이썬 버전이 2.X인 경우
+   python -m SimpleHTTPServer
+   ```
 
 5. 이 명령은 기본적으로 로컬 웹 서버의 8000번 포트를 이용해 해당 경로의 컨텐츠를 실행시킵니다. 웹 브라우저에서 주소줄에 `localhost:8000`를 입력하면 이 서버로 이동할 수 있습니다. 그러면 그 디렉토리의 컨텐츠 목록을 볼 수 있는데 실행하고자 하는 HTML 파일을 클릭합니다.
 
@@ -83,7 +82,7 @@ original_slug: Learn/Common_questions/set_up_a_local_testing_server
 
 ## 서버측 언어를 로컬에서 실행하기
 
-파이썬의 `SimpleHTTPServer (python 2.0) http.server (python 3.0)` 모듈은 유용하기는 하나 파이썬이나 PHP 또는 자바스크립트와 같은 언어로 작성된 코드를 실행하지 못합니다. 이런 코드를 처리하기 위해서는 뭔가가 더 필요합니다 — 정확하게 무엇이 필요한지는 실행하고자 하는 서버측 언어가 무엇인지에 따라 다릅니다. 다음에 몇 가지 사례를 소개합니다:
+파이썬의 `SimpleHTTPServer (python 2.0) http.server (python 3.0)` 모듈은 유용하기는 하나 파이썬이나 PHP 또는 JavaScript와 같은 언어로 작성된 코드를 실행하지 못합니다. 이런 코드를 처리하기 위해서는 뭔가가 더 필요합니다 — 정확하게 무엇이 필요한지는 실행하고자 하는 서버측 언어가 무엇인지에 따라 다릅니다. 다음에 몇 가지 사례를 소개합니다:
 
 - 파이썬으로된 서버측 코드를 실행하기 위해서는 파이썬 웹 프레임워크(Python web framework)를 사용할 필요가 있습니다. [Django Web Framework (Python)](/ko/docs/Learn/Server-side/Django)를 읽어보면 Django framework를 이용하는 법을 알 수 있습니다. [Flask](http://flask.pocoo.org/)는 Djang를 대신할 좋은(조금 더 가벼운) 대안이될 수 있습니다. Flask를 실행하기 위해서는 Python/PIP([install Python/PIP](/ko/docs/Learn/Server-side/Django/development_environment#Installing_Python_3))를 설치하고, `pip3 install flask` 명령으로 Flask를 설치해야 합니다. 이 때부터 파이썬 Flask 예제를 실행할 수 있는데, 예를 들어, `python3 python-example.py`명령을 실행하고 브라우저에서 `localhost:5000`으로 이동하면 됩니다.
 - Node.js (JavaScript)라는 서버측 코드를 실행하기 위해서는 기본 node(raw node)나 그 위에 설치되는 프레임워크를 이용해야 합니다. Express가 좋은 선택이될 수 있습니다 — [Express Web Framework (Node.js/JavaScript)](/ko/docs/Learn/Server-side/Express_Nodejs)를 살펴보시기 바랍니다.

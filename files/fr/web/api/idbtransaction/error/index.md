@@ -1,7 +1,6 @@
 ---
 title: IDBTransaction.error
 slug: Web/API/IDBTransaction/error
-translation_of: Web/API/IDBTransaction/error
 ---
 
 {{APIRef("IndexedDB")}}

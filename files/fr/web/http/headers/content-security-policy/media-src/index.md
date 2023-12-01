@@ -1,7 +1,6 @@
 ---
 title: "CSP : media-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/media-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/media-src
 ---
 
 {{HTTPSidebar}}

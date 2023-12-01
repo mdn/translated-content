@@ -1,7 +1,6 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
-translation_of: Web/API/Performance/mark
 ---
 
 {{APIRef("User Timing API")}}

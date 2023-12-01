@@ -9,17 +9,17 @@ slug: Web/API/XMLHttpRequest/statusText
 
 ```js
 var xhr = new XMLHttpRequest();
-console.log('0 UNSENT', xhr.statusText);
+console.log("0 UNSENT", xhr.statusText);
 
-xhr.open('GET', '/server', true);
-console.log('1 OPENED', xhr.statusText);
+xhr.open("GET", "/server", true);
+console.log("1 OPENED", xhr.statusText);
 
 xhr.onprogress = function () {
-  console.log('3 LOADING', xhr.statusText);
+  console.log("3 LOADING", xhr.statusText);
 };
 
 xhr.onload = function () {
-  console.log('4 DONE', xhr.statusText);
+  console.log("4 DONE", xhr.statusText);
 };
 
 xhr.send(null);

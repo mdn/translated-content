@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ; before statement'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
 
@@ -37,7 +37,7 @@ var foo = 'Tom's bar';
 
 二重引用符を使用するか、アポストロフィをエスケープするかしてください。
 
-```js example-good
+```js-nolint example-good
 var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
 ```
@@ -58,10 +58,10 @@ var array[0] = 'there'; // SyntaxError missing ; before statement
 
 ```js example-good
 var obj = {};
-obj.foo = 'hi';
+obj.foo = "hi";
 
 var array = [];
-array[0] = 'there';
+array[0] = "there";
 ```
 
 ### 誤ったキーワード
@@ -77,9 +77,9 @@ def print(info){
 `function` を `def` の代わりに使用してください。
 
 ```js example-good
-function print(info){
+function print(info) {
   console.log(info);
-};
+}
 ```
 
 ## 関連情報

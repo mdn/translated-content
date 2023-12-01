@@ -1,7 +1,6 @@
 ---
 title: Cache
 slug: Web/API/Cache
-translation_of: Web/API/Cache
 ---
 
 {{APIRef("Service Workers API")}} {{SeeCompatTable}}

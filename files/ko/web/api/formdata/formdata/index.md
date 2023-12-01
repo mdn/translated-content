@@ -12,7 +12,7 @@ slug: Web/API/FormData/FormData
 ## Syntax
 
 ```js
-var formData = new FormData(form)
+var formData = new FormData(form);
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ var formData = new FormData(); // Currently empty
 {{domxref("FormData.append")}}을 사용하여 key/value 쌍을 추가할 수 있습니다:
 
 ```js
-formData.append('username', 'Chris');
+formData.append("username", "Chris");
 ```
 
 또는 `FormData` 객체를 만들 때 선택적으로 `form` argument를 지정할 수 있는데, 지정된 양식대로 value를 미리 채우는 것입니다:
@@ -40,24 +40,24 @@ formData.append('username', 'Chris');
 <form id="myForm" name="myForm">
   <div>
     <label for="username">Enter name:</label>
-    <input type="text" id="username" name="username">
+    <input type="text" id="username" name="username" />
   </div>
   <div>
     <label for="useracc">Enter account number:</label>
-    <input type="text" id="useracc" name="useracc">
+    <input type="text" id="useracc" name="useracc" />
   </div>
   <div>
     <label for="userfile">Upload file:</label>
-    <input type="file" id="userfile" name="userfile">
+    <input type="file" id="userfile" name="userfile" />
   </div>
-<input type="submit" value="Submit!">
+  <input type="submit" value="Submit!" />
 </form>
 ```
 
 > **참고:** 모든 입력 요소는 'name' 속성(attribute) 을 갖고 있습니다. 나중에 value에 접근하는데 필요합니다.
 
 ```js
-var myForm = document.getElementById('myForm');
+var myForm = document.getElementById("myForm");
 formData = new FormData(myForm);
 ```
 

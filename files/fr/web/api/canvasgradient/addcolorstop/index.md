@@ -1,7 +1,6 @@
 ---
 title: CanvasGradient.addColorStop()
 slug: Web/API/CanvasGradient/addColorStop
-translation_of: Web/API/CanvasGradient/addColorStop
 ---
 
 {{APIRef("Canvas API")}}

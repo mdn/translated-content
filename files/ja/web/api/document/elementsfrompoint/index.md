@@ -1,7 +1,6 @@
 ---
 title: "Document: elementsFromPoint() メソッド"
 slug: Web/API/Document/elementsFromPoint
-original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---

@@ -3,7 +3,6 @@ title: カスタムフォームコントロールの作成方法
 slug: Learn/Forms/How_to_build_custom_form_controls
 l10n:
   sourceCommit: 741bc42293cb9a434367f5e998f5076a8ae8137e
-original_slug: Learn/Forms/How_to_build_custom_form_widgets
 ---
 
 {{LearnSidebar}}

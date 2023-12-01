@@ -19,7 +19,7 @@ slug: Web/API/Notification/data
 
 ```js
 const options = {
-  body: "您提交的代码收到了 3 条新的审阅意见。",
+  body: "你提交的代码收到了 3 条新的审阅意见。",
   data: {
     url: "https://example.com/review/12345",
     status: "open",

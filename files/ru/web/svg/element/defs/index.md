@@ -1,13 +1,6 @@
 ---
 title: <defs>
 slug: Web/SVG/Element/defs
-tags:
-  - NeedsUpdate
-  - SVG
-  - Контейнер SVG
-  - Элемент
-translation_of: Web/SVG/Element/defs
-original_slug: Web/SVG/Элемент/defs
 ---
 
 {{SVGRef}}
@@ -37,7 +30,7 @@ SVG позволяет задавать графические объекты д
 
 ### Специфичные атрибуты
 
-_Нет_
+_Нет._
 
 ## Интерфейс DOM
 

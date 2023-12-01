@@ -1,7 +1,6 @@
 ---
 title: Introduction au JavaScript asynchrone
 slug: Learn/JavaScript/Asynchronous/Introducing
-translation_of: Learn/JavaScript/Asynchronous/Introducing
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
@@ -110,9 +109,8 @@ function genererNbPremiers(quota) {
 document.querySelector("#generer").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const nbPremiers = genererNbPremiers(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${quota} nombres premiers terminée !`;
 });
 
 document.querySelector("#recharger").addEventListener("click", () => {
@@ -178,9 +176,8 @@ function genererNbPremiers(quota) {
 document.querySelector("#generer").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const nbPremiers = genererNbPremiers(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${quota} nombres premiers terminée !`;
 });
 
 document.querySelector("#recharger").addEventListener("click", () => {

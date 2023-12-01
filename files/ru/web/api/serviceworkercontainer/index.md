@@ -1,19 +1,8 @@
 ---
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
-tags:
-  - API
-  - Draft
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorkerContainer
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerContainer
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API) предоставляет интерфейс `ServiceWorkerContainer`, являющийся объектом (объект представляет собой сервис воркер, как единое целое в сетевой экосистеме) включающим следующие средства:
@@ -58,30 +47,34 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 This code snippet is from the [service worker fallback-response sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/fallback-response/index.html#L126) (see [fallback-response live](http://googlechrome.github.io/samples/service-worker/fallback-response/)). The code checks to see if the browser supports service workers. Then the code registers the service worker and determines if the page is actively controlled by the service worker. If it isn't, it prompts the user to reload the page so the service worker can take control. The code also reports any registration failures.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js', {scope: './'}).then(function() {
-    if (navigator.serviceWorker.controller) {
-      document.querySelector('#status').textContent = 'The service worker is currently handling network operations.';
-      showRequestButtons();
-    } else {
-      document.querySelector('#status').textContent = 'Please reload this page to allow the service worker to handle network operations.';
-    }
-  }).catch(function(error) {
-    document.querySelector('#status').textContent = error;
-  });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("service-worker.js", { scope: "./" })
+    .then(function () {
+      if (navigator.serviceWorker.controller) {
+        document.querySelector("#status").textContent =
+          "The service worker is currently handling network operations.";
+        showRequestButtons();
+      } else {
+        document.querySelector("#status").textContent =
+          "Please reload this page to allow the service worker to handle network operations.";
+      }
+    })
+    .catch(function (error) {
+      document.querySelector("#status").textContent = error;
+    });
 } else {
-  var aElement = document.createElement('a');
-  aElement.href = 'http://www.chromium.org/blink/serviceworker/service-worker-faq';
-  aElement.textContent = 'unavailable';
-  document.querySelector('#status').appendChild(aElement);
+  var aElement = document.createElement("a");
+  aElement.href =
+    "http://www.chromium.org/blink/serviceworker/service-worker-faq";
+  aElement.textContent = "unavailable";
+  document.querySelector("#status").appendChild(aElement);
 }
 ```
 
 ## Specifications
 
-| Specification                                                                                                        | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,7 +1,6 @@
 ---
 title: Learning area release notes
 slug: conflicting/Learn
-original_slug: Learn/Release_notes
 ---
 
 {{learnsidebar}}

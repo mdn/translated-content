@@ -1,7 +1,6 @@
 ---
 title: Seguridad de Sitios Web
 slug: Learn/Server-side/First_steps/Website_security
-original_slug: Learn/Server-side/Primeros_pasos/seguridad_sitios_web
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

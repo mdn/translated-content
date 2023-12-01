@@ -1,7 +1,6 @@
 ---
 title: browserAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Audio
 slug: Web/HTML/Element/audio
-original_slug: Web/HTML/Elemento/audio
 ---
 
 El elemento `audio` se usa para insertar contenido de audio en un documento HTML o XHTML. El elemento `audio` se agregó como parte de HTML 5.

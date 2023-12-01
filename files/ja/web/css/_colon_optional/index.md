@@ -1,5 +1,5 @@
 ---
-title: ':optional'
+title: ":optional"
 slug: Web/CSS/:optional
 ---
 
@@ -34,12 +34,12 @@ input:optional {
 <form>
   <div class="field">
     <label for="url_input">Enter a URL:</label>
-    <input type="url" id="url_input">
+    <input type="url" id="url_input" />
   </div>
 
   <div class="field">
     <label for="email_input">Enter an email address:</label>
-    <input type="email" id="email_input" required>
+    <input type="email" id="email_input" required />
   </div>
 </form>
 ```

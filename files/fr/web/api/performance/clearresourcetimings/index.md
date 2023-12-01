@@ -1,7 +1,6 @@
 ---
 title: performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
-translation_of: Web/API/Performance/clearResourceTimings
 ---
 
 {{APIRef("Resource Timing API")}}

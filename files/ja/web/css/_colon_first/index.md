@@ -1,5 +1,5 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
 ---
 
@@ -49,7 +49,7 @@ p {
 ### JavaScript
 
 ```js
-document.querySelector("button").addEventListener('click', () => {
+document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```

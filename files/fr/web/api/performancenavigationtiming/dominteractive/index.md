@@ -1,7 +1,6 @@
 ---
 title: PerformanceNavigationTiming.domInteractive
 slug: Web/API/PerformanceNavigationTiming/domInteractive
-translation_of: Web/API/PerformanceNavigationTiming/domInteractive
 ---
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}

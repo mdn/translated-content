@@ -3,7 +3,6 @@ title: 例 1
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 l10n:
   sourceCommit: 9b1f7aa6cb8d0479b4df91a3e2249003a8a863f1
-original_slug: Learn/Forms/How_to_build_custom_form_widgets/Example_1
 ---
 
 これは、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)を説明する最初のコード例です。

@@ -1,7 +1,6 @@
 ---
 title: last
 slug: Web/XPath/Functions/last
-translation_of: Web/XPath/Functions/last
 ---
 
 {{ XsltRef() }}

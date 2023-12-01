@@ -64,7 +64,7 @@ border-image: unset;
 
 支援技術は境界画像を解釈することができません。画像にページ全体の目的を理解するために重要な情報が含まれている場合は、文書内に意味的に記述したほうがいいでしょう。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 公式定義
@@ -101,12 +101,8 @@ border-image: unset;
   margin: 30px;
   padding: 10px;
 
-  border-image:
-      url("border.png")  /* source */
-      27 /                    /* slice */
-      36px 28px 18px 8px /    /* width */
-      18px 14px 9px 4px       /* outset */
-      round;                  /* repeat */
+  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
+    round;
 }
 ```
 

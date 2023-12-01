@@ -1,7 +1,6 @@
 ---
 title: Apprendre le développement web
 slug: Learn
-translation_of: Learn
 ---
 
 {{LearnSidebar}}

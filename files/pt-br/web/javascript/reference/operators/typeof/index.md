@@ -44,47 +44,47 @@ Esta tabela resume os possíveis valores que são retornados pelo `typeof`:
 
 ```js
 // Números - Numéricos
-typeof 37 === 'number';
-typeof 3.14 === 'number';
-typeof Math.LN2 === 'number';
-typeof Infinity === 'number';
-typeof NaN === 'number'; // Apesar de ser "Não-Numérico"
-typeof Number(1) === 'number'; // mas nunca utilize desta forma!
+typeof 37 === "number";
+typeof 3.14 === "number";
+typeof Math.LN2 === "number";
+typeof Infinity === "number";
+typeof NaN === "number"; // Apesar de ser "Não-Numérico"
+typeof Number(1) === "number"; // mas nunca utilize desta forma!
 
 // Strings - Seqüências de caracteres
-typeof "" === 'string';
-typeof "bla" === 'string';
-typeof (typeof 1) === 'string'; // typeof sempre retorna uma string
-typeof String("abc") === 'string'; // mas nunca utilize desta forma!
+typeof "" === "string";
+typeof "bla" === "string";
+typeof typeof 1 === "string"; // typeof sempre retorna uma string
+typeof String("abc") === "string"; // mas nunca utilize desta forma!
 
 // Booleans - Lógicos booleanos
-typeof true === 'boolean';
-typeof false === 'boolean';
-typeof Boolean(true) === 'boolean'; // mas nunca utilize desta forma!
+typeof true === "boolean";
+typeof false === "boolean";
+typeof Boolean(true) === "boolean"; // mas nunca utilize desta forma!
 
 // Undefined - Indefinidos
-typeof undefined === 'undefined';
-typeof blabla === 'undefined'; // uma variável indefinida
+typeof undefined === "undefined";
+typeof blabla === "undefined"; // uma variável indefinida
 
 // Objetos
-typeof {a:1} === 'object';
-typeof [1, 2, 4] === 'object'; // use Array.isArray ou Object.prototype.toString.call para diferenciar os objetos das arrays
-typeof new Date() === 'object';
+typeof { a: 1 } === "object";
+typeof [1, 2, 4] === "object"; // use Array.isArray ou Object.prototype.toString.call para diferenciar os objetos das arrays
+typeof new Date() === "object";
 
-typeof new Boolean(true) === 'object'; // isto é confuso, portanto não use desta forma!
-typeof new Number(1) === 'object'; // isto é confuso, portanto não use desta forma!
-typeof new String("abc") === 'object';  // isso também é confuso, assim evite usar esta construção!
+typeof new Boolean(true) === "object"; // isto é confuso, portanto não use desta forma!
+typeof new Number(1) === "object"; // isto é confuso, portanto não use desta forma!
+typeof new String("abc") === "object"; // isso também é confuso, assim evite usar esta construção!
 
 // Funções
-typeof function(){} === 'function';
-typeof Math.sin === 'function';
+typeof function () {} === "function";
+typeof Math.sin === "function";
 ```
 
 ### `null`
 
 ```js
 // Desde os primóridos do JavaScript
-typeof null === 'object';
+typeof null === "object";
 ```
 
 Na primeira implementação do JavaScript, valores em JavaScript foram representados com uma tag (etiqueta) de tipo e um valor. A tag de tipo para objetos foi 0. `null` foi representada com o ponteiro NULL (0x00 na maioria das plataformas). Consequentemente, null teve 0 como sua tag de tipo, portanto o `typeof` retorna esse valor. (necessário referência)
@@ -96,8 +96,8 @@ Está previsto [para ser corrigido na próxima versão do ECMAScript](http://wik
 Expressões regulares que podem ser chamadas foram uma adição não-padrão em alguns browsers (necessidade de referência para dizer qual).
 
 ```js
-typeof /s/ === 'function'; // Chrome 1-12 ... // Não-conforme no ECMAScript 5.1
-typeof /s/ === 'object'; // Firefox 5+ ...    // Conforme no ECMAScript 5.1
+typeof /s/ === "function"; // Chrome 1-12 ... // Não-conforme no ECMAScript 5.1
+typeof /s/ === "object"; // Firefox 5+ ...    // Conforme no ECMAScript 5.1
 ```
 
 ### Outras peculiaridades

@@ -1,8 +1,9 @@
 ---
 title: Native
 slug: Glossary/Native
-translation_of: Glossary/Native
 ---
+
+{{GlossarySidebar}}
 
 Une application _native_ a été compilée pour s'exécuter sur la combinaison logiciel-matériel habituelle de l'architecture cible.
 

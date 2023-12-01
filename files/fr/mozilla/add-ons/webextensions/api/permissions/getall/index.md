@@ -1,7 +1,6 @@
 ---
 title: permissions.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
 ---
 
 {{AddonSidebar()}}

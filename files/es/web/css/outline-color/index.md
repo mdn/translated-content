@@ -1,7 +1,6 @@
 ---
 title: outline-color
 slug: Web/CSS/outline-color
-original_slug: Web/CSS/outline-color
 ---
 
 {{CSSRef}}

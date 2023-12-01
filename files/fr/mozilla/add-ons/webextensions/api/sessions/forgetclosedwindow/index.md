@@ -1,7 +1,6 @@
 ---
 title: sessions.forgetClosedWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedWindow
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedWindow
 ---
 
 {{AddonSidebar()}}Supprime une fenêtre fermée de la liste des fenêtres récemment fermées du navigateur.Notez que les sites visités par cette fenêtre ne sont pas supprimés de l'historique du navigateur. Utilisez les API {{WebExtAPIRef("browsingData")}} ou {{WebExtAPIRef("history")}} pour supprimer l'historique.

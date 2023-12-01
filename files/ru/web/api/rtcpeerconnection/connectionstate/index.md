@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
-translation_of: Web/API/RTCPeerConnection/connectionState
 ---
 
 {{APIRef("WebRTC")}}

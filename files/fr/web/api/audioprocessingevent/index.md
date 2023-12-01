@@ -1,7 +1,6 @@
 ---
 title: AudioProcessingEvent
 slug: Web/API/AudioProcessingEvent
-translation_of: Web/API/AudioProcessingEvent
 ---
 
 {{APIRef("Web Audio API")}}{{deprecated_header}}

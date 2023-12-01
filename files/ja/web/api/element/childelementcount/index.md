@@ -2,7 +2,6 @@
 title: "Element: childElementCount プロパティ"
 short-title: childElementCount
 slug: Web/API/Element/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---

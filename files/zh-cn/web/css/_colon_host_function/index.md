@@ -1,7 +1,6 @@
 ---
-title: ':host()'
+title: ":host()"
 slug: Web/CSS/:host_function
-original_slug: Web/CSS/:host()
 ---
 
 {{seecompattable}}{{CSSRef}}
@@ -14,9 +13,9 @@ original_slug: Web/CSS/:host()
 
 ```css
 /* 选择阴影根元素，仅当它与选择器参数匹配 */
- :host(.special-custom-element) {
-   font-weight: bold;
- }
+:host(.special-custom-element) {
+  font-weight: bold;
+}
 ```
 
 ## 语法
@@ -32,26 +31,29 @@ original_slug: Web/CSS/:host()
 在这个例子中，有一个简单的自定义元素 `<context-span>` 可以用它包裹文本：
 
 ```html
-<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+<h1>
+  Host selectors <a href="#"><context-span>example</context-span></a>
+</h1>
 ```
 
 在元素的构造函数中，创建`style`和`span`元素，填充`span`自定义元素的内容，并`style`使用一些 CSS 规则填充元素：
 
 ```js
-let style = document.createElement('style');
-let span = document.createElement('span');
+let style = document.createElement("style");
+let span = document.createElement("span");
 span.textContent = this.textContent;
 
-const shadowRoot = this.attachShadow({mode: 'open'});
+const shadowRoot = this.attachShadow({ mode: "open" });
 shadowRoot.appendChild(style);
 shadowRoot.appendChild(span);
 
-style.textContent = 'span:hover { text-decoration: underline; }' +
-                    ':host-context(h1) { font-style: italic; }' +
-                    ':host-context(h1):after { content: " - no links in headers!" }' +
-                    ':host-context(article, aside) { color: gray; }' +
-                    ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+style.textContent =
+  "span:hover { text-decoration: underline; }" +
+  ":host-context(h1) { font-style: italic; }" +
+  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ":host-context(article, aside) { color: gray; }" +
+  ":host(.footer) { color : red; }" +
+  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
 `:host(.footer) { color : red; }` 规则为文档中所有在其上设置了 `footer` 类的`<context-span>` 元素实例（此实例中的影子宿主）设置样式——使用它来为 {{htmlelement("footer")}} 中的元素提供实例一种特殊的颜色。

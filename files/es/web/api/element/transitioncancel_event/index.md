@@ -1,7 +1,6 @@
 ---
 title: transitioncancel
 slug: Web/API/Element/transitioncancel_event
-original_slug: Web/API/HTMLElement/transitioncancel_event
 ---
 
 {{ APIRef }}{{SeeCompatTable}}

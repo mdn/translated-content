@@ -11,10 +11,10 @@ slug: Web/HTTP/Headers/Content-Type
 
 在请求中 (如{{HTTPMethod("POST")}} 或 {{HTTPMethod("PUT")}})，客户端告诉服务器实际发送的数据类型。
 
-| Header type                                                                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                                 | no                                       |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | yes                                      |
+| Header type                                                               | {{Glossary("Entity header")}} |
+| ------------------------------------------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden header name")}}                                     | no                            |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | yes                           |
 
 ## 句法
 
@@ -40,8 +40,8 @@ Content-Type: multipart/form-data; boundary=something
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```

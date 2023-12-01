@@ -1,14 +1,13 @@
 ---
 title: 대열과 탈대열
 slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
-original_slug: Web/CSS/CSS_Flow_Layout/대열과_탈대열
 ---
 
 {{CSSRef}}
 
 [이전 안내서](/ko/docs/Web/CSS/CSS_Flow_Layout/%EC%9D%BC%EB%B0%98_%ED%9D%90%EB%A6%84_%EC%86%8D_%EB%B8%94%EB%A1%9D_%EB%B0%8F_%EC%9D%B8%EB%9D%BC%EC%9D%B8_%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83)에서 제가 일반 대열 속 블록 및 인라인 레이아웃에 대해 설명하였습니다. 대열에 속한 모든 요소는 이 메서드를 사용하여 배치됩니다.
 
-다음 예제에서는 머리글, 단락, 목록 및 `strong` 요소가 포함된 마지막 단락이 있습니다. 머리글과 단락은 블록 레벨이며, `strong` 요소는 인라인입니다. 목록은 가변상자를 사용하여 항목을 행 내부로 정렬하지만 블록 및 인라인 레이아웃에도 참여하고 있습니다. 컨테이너는 외곽에 `display` 유형이 `block` 대열에 참여하고 있습니다.
+다음 예제에서는 머리글, 단락, 목록 및 `strong` 요소가 포함된 마지막 단락이 있습니다. 머리글과 단락은 블록 레벨이며, `strong` 요소는 인라인입니다. 목록은 플렉스박스를 사용하여 항목을 행 내부로 정렬하지만 블록 및 인라인 레이아웃에도 참여하고 있습니다. 컨테이너는 외곽에 `display` 유형이 `block` 대열에 참여하고 있습니다.
 
 {{EmbedGHLiveSample("css-examples/flow/in-flow/in-flow.html", '100%', 800)}}
 

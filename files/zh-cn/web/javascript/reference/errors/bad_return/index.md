@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: return not in function'
+title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
-original_slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
 
 {{jsSidebar("Errors")}}
@@ -40,7 +39,7 @@ var cheer = function(score) {
 初次看好像没什么错误，但是上面这段代码在第一个 if 后面少了一个“ { ”。正确的应该如下：
 
 ```js example-good
-var cheer = function(score) {
+var cheer = function (score) {
   if (score === 147) {
     return "Maximum!";
   }

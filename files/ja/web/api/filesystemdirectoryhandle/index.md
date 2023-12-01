@@ -35,7 +35,7 @@ _親の {{DOMxRef("FileSystemHandle")}} からメソッドを継承します。_
   - : 親ハンドルから指定の子エントリーへのディレクトリー名の {{jsxref('Array')}} (最後の要素は指定した子エントリーの名前) で解決する {{jsxref('Promise')}} を返します。
 - {{domxref('FileSystemDirectoryHandle.values()')}}
   - : `FileSystemDirectoryHandle` 内の各インデックスに対応する値を含む新しい _非同期イテレーター_ を返します。
-- [`FileSystemDirectoryHandle[@@asyncIterator]()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries)
+- [`FileSystemDirectoryHandle[@@asyncIterator]()`](/ja/docs/Web/API/FileSystemDirectoryHandle/entries)
   - : デフォルトでは `entries` 関数を返します。
 
 ## 例

@@ -1,7 +1,6 @@
 ---
 title: Suivre le score et gagner
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
 
 {{GamesSidebar}}

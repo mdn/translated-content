@@ -1,7 +1,6 @@
 ---
 title: A web e seus padrões
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-original_slug: Aprender/Getting_started_with_the_web/A_web_e_seus_padrões
 ---
 
 {{learnsidebar}}
@@ -113,7 +112,7 @@ A sintaxe real para mensagens HTTP (chamadas de solicitações e respostas) não
 
   Na analogia da casa, o JavaScript é como o fogão, a TV, o microondas ou o secador de cabelo - as coisas que fornecem funcionalidade útil à sua casa
 
-### Ferramental
+### Ferramentas
 
 Depois de aprender as tecnologias "brutas" que podem ser usadas para construir páginas da web (como HTML, CSS e JavaScript), você logo começará a encontrar várias ferramentas que podem ser usadas para tornar seu trabalho mais fácil ou mais eficiente. Exemplos incluem:
 

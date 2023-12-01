@@ -1,7 +1,6 @@
 ---
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode statique **`Atomics.sub()`** permet de soustraire une valeur donnée
 ## Syntaxe
 
 ```js
-Atomics.sub(typedArray, index, valeur)
+Atomics.sub(typedArray, index, valeur);
 ```
 
 ### Paramètres
@@ -43,7 +42,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 48;
 
 Atomics.sub(ta, 0, 12); // renvoie 48, l'ancienne valeur
-Atomics.load(ta, 0);    // 36
+Atomics.load(ta, 0); // 36
 ```
 
 ## Spécifications

@@ -1,7 +1,6 @@
 ---
 title: Como CSS é estruturado
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-original_slug: Learn/CSS/First_steps/Como_CSS_e_estruturado
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

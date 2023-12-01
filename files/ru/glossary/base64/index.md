@@ -1,9 +1,9 @@
 ---
 title: Кодирование и декодирование в формате Base64
 slug: Glossary/Base64
-translation_of: Glossary/Base64
-original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 ---
+
+{{GlossarySidebar}}
 
 **Base64** - это группа схожих [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) схем, которые представляют двоичные данные в ASCII-формате методом перевода в radix-64 представление. Термин _Base64_ происходит от a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 

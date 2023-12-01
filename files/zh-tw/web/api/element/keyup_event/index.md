@@ -1,7 +1,6 @@
 ---
 title: keyup
 slug: Web/API/Element/keyup_event
-original_slug: Web/API/Document/keyup_event
 ---
 
 {{APIRef}}

@@ -1,7 +1,6 @@
 ---
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
-translation_of: Web/API/Worker/postMessage
 ---
 
 {{ apiref("Worker") }}

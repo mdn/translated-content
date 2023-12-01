@@ -1,7 +1,6 @@
 ---
 title: ¿Qué software necesito para construir un sitio web?
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-original_slug: Learn/Common_questions/What_software_do_I_need
 ---
 
 En este artículo se explican cuales componentes de software necesita para editar, cargar, o visualizar un sitio web.
@@ -158,7 +157,7 @@ Todos los sistemas operativos de escritorio traen un editor de texto básico. Es
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>
@@ -239,7 +238,7 @@ Subir archivos a un sitio web es un paso muy importante mientras se crea un siti
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td>
         <ul>
           <li><a href="https://shiftedit.net/">ShiftEdit</a> (Todos los SO)</li>

@@ -1,7 +1,6 @@
 ---
 title: "<canvas> : l'élément de canevas graphique"
 slug: Web/HTML/Element/canvas
-translation_of: Web/HTML/Element/canvas
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <feGaussianBlur>
 slug: Web/SVG/Element/feGaussianBlur
-translation_of: Web/SVG/Element/feGaussianBlur
 ---
 
 {{SVGRef}}

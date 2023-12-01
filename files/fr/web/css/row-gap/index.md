@@ -1,7 +1,6 @@
 ---
 title: row-gap (grid-row-gap)
 slug: Web/CSS/row-gap
-translation_of: Web/CSS/row-gap
 ---
 
 {{CSSRef}}

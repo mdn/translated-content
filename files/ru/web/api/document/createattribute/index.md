@@ -1,7 +1,6 @@
 ---
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
-translation_of: Web/API/Document/createAttribute
 ---
 
 {{ ApiRef("DOM") }}
@@ -40,12 +39,7 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 ## Спецификации
 
-| Specification                                                                                                        | Status                           | Comment                                 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-document-createattribute','Document.createAttribute()')}} | {{Spec2("DOM WHATWG")}} | Точное поведение с прописными символами |
-| {{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM3 Core')}}     | No change.                              |
-| {{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM2 Core')}}     | No change.                              |
-| {{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}     | {{Spec2('DOM1')}}         | Первоначальное определение.             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

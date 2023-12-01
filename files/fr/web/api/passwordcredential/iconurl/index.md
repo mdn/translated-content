@@ -1,7 +1,6 @@
 ---
 title: PasswordCredential.iconURL
 slug: Web/API/PasswordCredential/iconURL
-translation_of: Web/API/PasswordCredential/iconURL
 ---
 
 {{SeeCompatTable}}{{APIRef("")}}

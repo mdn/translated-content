@@ -1,7 +1,6 @@
 ---
 title: notifications.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
 ---
 
 {{AddonSidebar()}}

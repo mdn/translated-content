@@ -1,7 +1,6 @@
 ---
 title: "Django didactique Section 5: Créer la page d'accueil"
 slug: Learn/Server-side/Django/Home_page
-translation_of: Learn/Server-side/Django/Home_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}

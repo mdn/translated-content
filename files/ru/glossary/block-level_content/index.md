@@ -1,15 +1,9 @@
 ---
 title: Блочные элементы
 slug: Glossary/Block-level_content
-tags:
-  - HTML
-  - HTML5
-  - Web
-  - Начинающий
-  - Разработка
-translation_of: Web/HTML/Block-level_elements
-original_slug: Web/HTML/Block-level_elements
 ---
+
+{{GlossarySidebar}}
 
 Исторически HTML-элементы было принято делить на блочные и [строчные](/ru/docs/Web/HTML/Строчные_Элементы). Блочные элементы занимают всю ширину своего родителя (контейнера), формально создавая «блок» (отсюда и название).
 

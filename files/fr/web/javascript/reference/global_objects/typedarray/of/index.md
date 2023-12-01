@@ -1,7 +1,6 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 ---
 
 {{JSRef}}
@@ -47,10 +46,10 @@ Il existe de légères différences entre {{jsxref("Array.of()")}} et `TypedArra
 ## Exemples
 
 ```js
-Uint8Array.of(1);            // Uint8Array [ 1 ]
+Uint8Array.of(1); // Uint8Array [ 1 ]
 Int8Array.of("1", "2", "3"); // Int8Array [ 1, 2, 3 ]
-Float32Array.of(1, 2, 3);    // Float32Array [ 1, 2, 3 ]
-Int16Array.of(undefined);    // Int16Array [ 0 ]
+Float32Array.of(1, 2, 3); // Float32Array [ 1, 2, 3 ]
+Int16Array.of(undefined); // Int16Array [ 0 ]
 ```
 
 ## Spécifications

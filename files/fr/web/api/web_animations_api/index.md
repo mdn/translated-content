@@ -1,7 +1,6 @@
 ---
 title: Web Animations API
 slug: Web/API/Web_Animations_API
-translation_of: Web/API/Web_Animations_API
 ---
 
 {{DefaultAPISidebar("Web Animations")}}

@@ -1,8 +1,9 @@
 ---
 title: Promesse
 slug: Glossary/Promise
-translation_of: Glossary/Promise
 ---
+
+{{GlossarySidebar}}
 
 Une **{{jsxref("Promise")}}** est un {{Glossary("Objet")}} retourné par une {{Glossary("Fonction")}} n'ayant pas encore terminé son travail. La promesse représente littéralement une promesse faite par la fonction qui retournera éventuellement un résultat à travers l'objet promesse.
 

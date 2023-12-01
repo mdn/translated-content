@@ -11,14 +11,14 @@ slug: Web/API/ReadableStreamDefaultController/error
 
 ## 语法
 
-```js
+```js-nolint
 error(e)
 ```
 
 ### 参数
 
 - `e`
-  - : 您需要在后面使用的错误信息。
+  - : 你需要在后面使用的错误信息。
 
 ### 返回值
 

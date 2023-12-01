@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`toTimeString()`** renvoie la partie « heure » de l'objet `Date`
 ## Syntaxe
 
 ```js
-dateObj.toTimeString()
+dateObj.toTimeString();
 ```
 
 ### Valeur de retour
@@ -33,7 +32,7 @@ La méthode `toTimeString()` est particulièrement utile parce que les moteurs i
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);
 
-console.log(d.toString());     // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toString()); // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
 ```
 

@@ -117,16 +117,18 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
 ## 例子
 
 ```js
-gl.texImage3D(gl.TEXTURE_3D,
-              0,                                          // level
-              gl.RGBA,                                    // internalFormat
-              1,                                          // width
-              1,                                          // height
-              1,                                          // depth
-              0,                                          // border
-              gl.RGBA,                                    // format
-              gl.UNSIGNED_BYTE,                           // type
-              new Uint8Array([0xff, 0x00, 0x00, 0x00]));  // data
+gl.texImage3D(
+  gl.TEXTURE_3D,
+  0, // level
+  gl.RGBA, // internalFormat
+  1, // width
+  1, // height
+  1, // depth
+  0, // border
+  gl.RGBA, // format
+  gl.UNSIGNED_BYTE, // type
+  new Uint8Array([0xff, 0x00, 0x00, 0x00]),
+); // data
 ```
 
 ## 规范

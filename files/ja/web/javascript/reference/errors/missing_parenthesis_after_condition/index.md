@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ) after condition'
+title: "SyntaxError: missing ) after condition"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 ---
 
@@ -66,7 +66,7 @@ if (done is true) {
 
 ```js example-good
 if (done === true) {
- console.log("we are done!");
+  console.log("we are done!");
 }
 ```
 

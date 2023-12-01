@@ -24,23 +24,21 @@ document.write(markup);
 
 ```html
 <html>
+  <head>
+    <title>書き込み例</title>
 
-<head>
-  <title>書き込み例</title>
+    <script>
+      function newContent() {
+        document.open();
+        document.write("<h1>新しい内容では、古い内容は削除されます！</h1>");
+        document.close();
+      }
+    </script>
+  </head>
 
-  <script>
-    function newContent() {
-      document.open();
-      document.write("<h1>新しい内容では、古い内容は削除されます！</h1>");
-      document.close();
-    }
-  </script>
-</head>
-
-<body onload="newContent();">
-  <p>元の文書コンテンツ。</p>
-</body>
-
+  <body onload="newContent();">
+    <p>元の文書コンテンツ。</p>
+  </body>
 </html>
 ```
 
@@ -56,7 +54,7 @@ document.write(markup);
 
 ```html
 <script>
-  document.write("<h1>Main title</h1>")
+  document.write("<h1>Main title</h1>");
 </script>
 ```
 

@@ -175,13 +175,10 @@ const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
 会被兑现为一个表示密钥的 CryptoKey 对象。
 */
 function importSecretKey(rawKey) {
-  return window.crypto.subtle.importKey(
-    "raw",
-    rawKey,
-    "AES-GCM",
-    true,
-    ["encrypt", "decrypt"]
-  );
+  return window.crypto.subtle.importKey("raw", rawKey, "AES-GCM", true, [
+    "encrypt",
+    "decrypt",
+  ]);
 }
 ```
 
@@ -216,7 +213,10 @@ function importPrivateKey(pem) {
   // 获取 PEM 字符串在头部和尾部之间的部分
   const pemHeader = "-----BEGIN PRIVATE KEY-----";
   const pemFooter = "-----END PRIVATE KEY-----";
-  const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
+  const pemContents = pem.substring(
+    pemHeader.length,
+    pem.length - pemFooter.length,
+  );
   // 将字符串通过 base64 解码为二进制数据
   const binaryDerString = window.atob(pemContents);
   // 将二进制字符串转换为 ArrayBuffer
@@ -230,7 +230,7 @@ function importPrivateKey(pem) {
       hash: "SHA-256",
     },
     true,
-    ["sign"]
+    ["sign"],
   );
 }
 ```
@@ -240,41 +240,44 @@ function importPrivateKey(pem) {
 该示例从一个 PEM 编码的 SubjectPublicKeyInfo 对象导入一个 RSA 公钥。[在 GitHub 上查看完整代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/spki.js)
 
 ```js
-  // 来自 https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
-  function str2ab(str) {
-    const buf = new ArrayBuffer(str.length);
-    const bufView = new Uint8Array(buf);
-    for (let i = 0, strLen = str.length; i < strLen; i++) {
-      bufView[i] = str.charCodeAt(i);
-    }
-    return buf;
+// 来自 https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+function str2ab(str) {
+  const buf = new ArrayBuffer(str.length);
+  const bufView = new Uint8Array(buf);
+  for (let i = 0, strLen = str.length; i < strLen; i++) {
+    bufView[i] = str.charCodeAt(i);
   }
+  return buf;
+}
 
-  const pemEncodedKey = `-----BEGIN PUBLIC KEY-----
+const pemEncodedKey = `-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy3Xo3U13dc+xojwQYWoJLCbOQ5fOVY8LlnqcJm1W1BFtxIhOAJWohiHuIRMctv7dzx47TLlmARSKvTRjd0dF92jx/xY20Lz+DXp8YL5yUWAFgA3XkO3LSJgEOex10NB8jfkmgSb7QIudTVvbbUDfd5fwIBmCtaCwWx7NyeWWDb7A9cFxj7EjRdrDaK3ux/ToMLHFXVLqSL341TkCf4ZQoz96RFPUGPPLOfvN0x66CM1PQCkdhzjE6U5XGE964ZkkYUPPsy6Dcie4obhW4vDjgUmLzv0z7UD010RLIneUgDE2FqBfY/C+uWigNPBPkkQ+Bv/UigS6dHqTCVeD5wgyBQIDAQAB
 -----END PUBLIC KEY-----`;
 
-  function importRsaKey(pem) {
-    // 获取 PEM 字符串在头部和尾部之间的部分
-    const pemHeader = "-----BEGIN PUBLIC KEY-----";
-    const pemFooter = "-----END PUBLIC KEY-----";
-    const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
-    // 将字符串通过 base64 解码为二进制数据
-    const binaryDerString = window.atob(pemContents);
-    // 将二进制字符串转换为 ArrayBuffer
-    const binaryDer = str2ab(binaryDerString);
+function importRsaKey(pem) {
+  // 获取 PEM 字符串在头部和尾部之间的部分
+  const pemHeader = "-----BEGIN PUBLIC KEY-----";
+  const pemFooter = "-----END PUBLIC KEY-----";
+  const pemContents = pem.substring(
+    pemHeader.length,
+    pem.length - pemFooter.length,
+  );
+  // 将字符串通过 base64 解码为二进制数据
+  const binaryDerString = window.atob(pemContents);
+  // 将二进制字符串转换为 ArrayBuffer
+  const binaryDer = str2ab(binaryDerString);
 
-    return window.crypto.subtle.importKey(
-      "spki",
-      binaryDer,
-      {
-        name: "RSA-OAEP",
-        hash: "SHA-256"
-      },
-      true,
-      ["encrypt"]
-    );
-  }
+  return window.crypto.subtle.importKey(
+    "spki",
+    binaryDer,
+    {
+      name: "RSA-OAEP",
+      hash: "SHA-256",
+    },
+    true,
+    ["encrypt"],
+  );
+}
 ```
 
 ### 导入 JSON Web Key 格式的密钥
@@ -283,13 +286,13 @@ MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy3Xo3U13dc+xojwQYWoJLCbOQ5fOVY8Llnqc
 
 ```js
 const jwkEcKey = {
-  "crv": "P-384",
-  "d": "wouCtU7Nw4E8_7n5C1-xBjB4xqSb_liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK_",
-  "ext": true,
-  "key_ops": ["sign"],
-  "kty": "EC",
-  "x": "SzrRXmyI8VWFJg1dPUNbFcc9jZvjZEfH7ulKI1UkXAltd7RGWrcfFxqyGPcwu6AQ",
-  "y": "hHUag3OvDzEr0uUQND4PXHQTXP5IDGdYhJhL-WLKjnGjQAw0rNGy5V29-aV-yseW"
+  crv: "P-384",
+  d: "wouCtU7Nw4E8_7n5C1-xBjB4xqSb_liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK_",
+  ext: true,
+  key_ops: ["sign"],
+  kty: "EC",
+  x: "SzrRXmyI8VWFJg1dPUNbFcc9jZvjZEfH7ulKI1UkXAltd7RGWrcfFxqyGPcwu6AQ",
+  y: "hHUag3OvDzEr0uUQND4PXHQTXP5IDGdYhJhL-WLKjnGjQAw0rNGy5V29-aV-yseW",
 };
 
 /*
@@ -303,10 +306,10 @@ function importPrivateKey(jwk) {
     jwk,
     {
       name: "ECDSA",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     true,
-    ["sign"]
+    ["sign"],
   );
 }
 ```

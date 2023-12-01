@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
 
 {{JSRef}}
@@ -19,7 +18,7 @@ dateObj.setHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setHours(valeurHeures)
+dateObj.setHours(valeurHeures);
 ```
 
 ### Paramètres

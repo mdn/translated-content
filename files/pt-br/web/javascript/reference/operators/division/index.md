@@ -20,21 +20,21 @@ x / y
 ### Divisão básica
 
 ```js
-1 / 2              // 0.5
+1 / 2; // 0.5
 
-Math.floor(3 / 2) // 1
+Math.floor(3 / 2); // 1
 
-1.0 / 2.0         // 0.5
+1.0 / 2.0; // 0.5
 ```
 
 ### Divisão por zero
 
 ```js
-2.0 / 0     // Infinito
+2.0 / 0; // Infinito
 
-2.0 / 0.0   // Infinito, porque 0.0 === 0
+2.0 / 0.0; // Infinito, porque 0.0 === 0
 
-2.0 / -0.0  // -Infinito
+2.0 / -0.0; // -Infinito
 ```
 
 ## Especificações

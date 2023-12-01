@@ -1,7 +1,6 @@
 ---
 title: storage.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
 ---
 
 {{AddonSidebar()}}

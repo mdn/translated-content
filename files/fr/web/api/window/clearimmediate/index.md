@@ -1,7 +1,6 @@
 ---
 title: Window.clearImmediate()
 slug: Web/API/Window/clearImmediate
-translation_of: Web/API/Window/clearImmediate
 ---
 
 {{APIRef("HTML DOM")}}{{Non-standard_header}}

@@ -1,13 +1,6 @@
 ---
 title: "Django Руководство часть 11: Разворачивание сайта на сервере"
 slug: Learn/Server-side/Django/Deployment
-tags:
-  - Веб-сервер
-  - Для начинающих
-  - Разворачивание на сервере
-  - Развёртывание Django
-translation_of: Learn/Server-side/Django/Deployment
-original_slug: Learn/Server-side/Django/Разворачивание
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}

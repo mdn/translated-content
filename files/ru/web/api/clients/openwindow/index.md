@@ -1,16 +1,6 @@
 ---
 title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
-tags:
-  - API
-  - Clients
-  - Experimental
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - openWindow
-translation_of: Web/API/Clients/openWindow
 ---
 
 {{APIRef("Service Workers API")}}
@@ -42,26 +32,38 @@ self.clients.openWindow(url).then(function(windowClient) {
 
 ```js
 // Отправить уведомление в OS, если возможно
-if (self.Notification.permission === 'granted') {
+if (self.Notification.permission === "granted") {
   const notificationObject = {
-    body: 'Click here to view your messages.',
-    data: { url: self.location.origin + '/some/path' },
+    body: "Click here to view your messages.",
+    data: { url: self.location.origin + "/some/path" },
     // data: { url: 'http://example.com' },
   };
-  self.registration.showNotification('You\'ve got messages!', notificationObject);
+  self.registration.showNotification(
+    "You've got messages!",
+    notificationObject,
+  );
 }
 
 // Обработчик события клика по уведомлению
-self.addEventListener('notificationclick', e => {
+self.addEventListener("notificationclick", (e) => {
   // Закрываем всплывающее окно с уведомлением
   e.notification.close();
   // Получите все клиенты Windows
-  e.waitUntil(clients.matchAll({ type: 'window' }).then(clientsArr => {
-    // Если вкладка, соответствующая целевому URL-адресу, уже существует, сфокусируйтесь на ней;
-    const hadWindowToFocus = clientsArr.some(windowClient => windowClient.url === e.notification.data.url ? (windowClient.focus(), true) : false);
-    // В противном случае откройте новую вкладку для соответствующего URL-адреса и сфокусируйте её.
-    if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient => windowClient ? windowClient.focus() : null);
-  }));
+  e.waitUntil(
+    clients.matchAll({ type: "window" }).then((clientsArr) => {
+      // Если вкладка, соответствующая целевому URL-адресу, уже существует, сфокусируйтесь на ней;
+      const hadWindowToFocus = clientsArr.some((windowClient) =>
+        windowClient.url === e.notification.data.url
+          ? (windowClient.focus(), true)
+          : false,
+      );
+      // В противном случае откройте новую вкладку для соответствующего URL-адреса и сфокусируйте её.
+      if (!hadWindowToFocus)
+        clients
+          .openWindow(e.notification.data.url)
+          .then((windowClient) => (windowClient ? windowClient.focus() : null));
+    }),
+  );
 });
 ```
 

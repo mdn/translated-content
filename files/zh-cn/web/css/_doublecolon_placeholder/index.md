@@ -1,5 +1,5 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
 ---
 
@@ -27,7 +27,7 @@ slug: Web/CSS/::placeholder
 #### HTML
 
 ```html
-<input placeholder="我是红色的！">
+<input placeholder="我是红色的！" />
 ```
 
 #### CSS
@@ -49,7 +49,7 @@ input::placeholder {
 #### HTML
 
 ```html
-<input placeholder="而我是绿色的！">
+<input placeholder="而我是绿色的！" />
 ```
 
 #### CSS

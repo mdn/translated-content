@@ -12,8 +12,8 @@ slug: Web/CSS/font-language-override
 font-language-override: normal;
 
 /* <string> 値 */
-font-language-override: "ENG";  /* 英語の字形 */
-font-language-override: "TRK";  /* トルコ語の字形 */
+font-language-override: "ENG"; /* 英語の字形 */
+font-language-override: "TRK"; /* トルコ語の字形 */
 
 /* グローバル値 */
 font-language-override: inherit;
@@ -54,7 +54,9 @@ font-language-override: unset;
 
 ```html
 <p class="para1">Default language setting.</p>
-<p class="para2">This is a string with the <code>font-language-override</code> set to Danish.</p>
+<p class="para2">
+  This is a string with the <code>font-language-override</code> set to Danish.
+</p>
 ```
 
 #### CSS

@@ -1,7 +1,6 @@
 ---
 title: Événements de pointeur
 slug: Web/API/Pointer_events
-translation_of: Web/API/Pointer_events
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}

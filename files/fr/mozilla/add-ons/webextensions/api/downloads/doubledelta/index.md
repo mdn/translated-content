@@ -1,7 +1,6 @@
 ---
 title: downloads.DoubleDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DoubleDelta
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DoubleDelta
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 ---
 
 {{AddonSidebar()}}

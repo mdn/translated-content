@@ -2,6 +2,7 @@
 title: Clients.claim()
 slug: Web/API/Clients/claim
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Worker Clients")}}
 
 {{domxref("Clients")}} 의 **`claim()`** 메소드는 active 서비스워커가 그것의 {{domxref("ServiceWorkerRegistration.scope", "scope")}} 를 가지는 모든 클라이언트들의 {{domxref("ServiceWorkerContainer.controller", "controller")}} 로서 자신을 등록하는 것을 허용한다. 이것은 이 서비스워커가 제어하게 될 클라이언트들에 "`controllerchange`" 이벤트를 발생시킨다.
@@ -27,7 +28,7 @@ A {{jsxref("Promise")}} for `void`.
 다음 예시는 서비스워커의 "`activate`" 이벤트 리스너에서 `claim()` 를 사용하므로, fetch 들이 이 서비스워커를 통과하기 전에 동일한 스코프에서 로드된 클라이언트들은 다시 로드될 필요가 없다. .
 
 ```js
-self.addEventListener('activate', event => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(clients.claim());
 });
 ```

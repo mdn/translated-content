@@ -1,7 +1,6 @@
 ---
 title: Sélecteurs d'attribut
 slug: Web/CSS/Attribute_selectors
-translation_of: Web/CSS/Attribute_selectors
 ---
 
 {{CSSRef}}
@@ -16,7 +15,8 @@ a[title] {
 
 /* Les éléments <a> avec un href qui correspond */
 /* à "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 

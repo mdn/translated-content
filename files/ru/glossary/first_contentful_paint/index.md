@@ -1,9 +1,9 @@
 ---
 title: First contentful paint
 slug: Glossary/First_contentful_paint
-translation_of: Glossary/First_contentful_paint
-original_slug: Глоссарий/First_contentful_paint
 ---
+
+{{GlossarySidebar}}
 
 **Первое существенное отображение** (англ. First Contentful Paint, FCP) - время, за которое пользователь увидит какое-то содержимое веб-страницы, например, текст или картинку.
 

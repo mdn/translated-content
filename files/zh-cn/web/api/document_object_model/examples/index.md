@@ -12,7 +12,7 @@ slug: Web/API/Document_Object_Model/Examples
 下面的示例展示了不同尺寸的图片对 `height` 和 `width` 属性的使用：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <title>宽度/高度示例</title>
@@ -79,7 +79,7 @@ slug: Web/API/Document_Object_Model/Examples
 ## 示例 2：图片属性
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <title>修改图片的边框</title>
@@ -121,7 +121,7 @@ slug: Web/API/Document_Object_Model/Examples
 在这个简单的例子中，HTML 段落元素的一些基本样式属性是使用该元素上的样式对象和该对象的 CSS 样式属性来访问的，这些对象可以从 DOM 中检索和设置。在这个示例中，你是直接操作各个样式的。在下一个例子中（见示例 4），你可以使用样式表及其规则来改变整个文档的样式。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <title>改变颜色和字体大小的示例</title>
@@ -192,7 +192,7 @@ P
 然而，stopEvent 也调用了事件对象方法 {{domxref("event.stopPropagation")}}，它使事件不再向 DOM 中冒泡。请注意，表格本身有一个 {{domxref("Element.click_event", "onclick")}} 事件处理器，当表格被点击时应该显示一条信息。但是 stopEvent 方法已经停止了传播，所以在表格中的数据被更新后，事件阶段实际上已经结束，并且显示了一个警报框来确认这一点。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <title>事件传播</title>
@@ -243,7 +243,7 @@ P
 `getComputedStyle()` 返回一个 {{domxref("CSSStyleDeclaration")}} 对象，其各个样式属性可以用这个对象的 {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} 方法进行引用，正如下面的示例文档所示。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <title>getComputedStyle 示例</title>
@@ -310,7 +310,7 @@ P
 把下面的代码放到一个空白的文本文件中，并把它加载到各种浏览器中，你会对不同数量和名称的属性感到惊讶。你可能还想在页面中添加一些元素，从不同的事件处理程序中调用这个函数。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />

@@ -1,9 +1,6 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - Obsolete
-translation_of: Web/HTML/Element/acronym
 ---
 
 ## Аннотация
@@ -25,7 +22,10 @@ translation_of: Web/HTML/Element/acronym
 ## Пример
 
 ```html
-<p>The <acronym title="World Wide Web">WWW</acronym> is only one component of the Internet.</p>
+<p>
+  The <acronym title="World Wide Web">WWW</acronym> is only one component of the
+  Internet.
+</p>
 ```
 
 ## Стилизация по умолчанию
@@ -40,9 +40,7 @@ translation_of: Web/HTML/Element/acronym
 
 ## Спецификации
 
-| Спецификация                                                                                         | Статус                       | Комментарий |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-ACRONYM', '&lt;acronym&gt;')}} | {{Spec2('HTML4.01')}} |             |
+{{Specifications}}
 
 ## Совместимость
 

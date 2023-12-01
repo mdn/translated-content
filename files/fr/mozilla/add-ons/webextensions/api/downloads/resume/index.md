@@ -1,7 +1,6 @@
 ---
 title: downloads.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/resume
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/resume
 ---
 
 {{AddonSidebar()}}

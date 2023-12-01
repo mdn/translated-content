@@ -1,7 +1,6 @@
 ---
 title: Código em loop
 slug: Learn/JavaScript/Building_blocks/Looping_code
-original_slug: Aprender/JavaScript/Elementos_construtivos/Código_em_loop
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

@@ -1,7 +1,6 @@
 ---
 title: Firefox 26 for developers
 slug: Mozilla/Firefox/Releases/26
-translation_of: Mozilla/Firefox/Releases/26
 ---
 
 {{FirefoxSidebar}}

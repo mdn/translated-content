@@ -1,7 +1,6 @@
 ---
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
-translation_of: Web/API/EventTarget/EventTarget
 ---
 
 {{APIRef("DOM Events")}}

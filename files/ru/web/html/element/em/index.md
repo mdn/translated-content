@@ -1,20 +1,19 @@
 ---
-title: '<em>: Элемент акцентирования'
+title: "<em>: Элемент акцентирования"
 slug: Web/HTML/Element/em
-translation_of: Web/HTML/Element/em
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<em>` элемент** отмечает акцентируемый текст. Элемент `<em>` может быть вложенным, причём каждый уровень вложенности указывает на большую степень акцента.
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент.     |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                        | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                             |
-| Пропуск тегов                                             | {{no_tag_omission}}                                                                                                                                                    |
-| Допустимые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                            |
-| Допустимые ARIA-роли                                      | Любые                                                                                                                                                                  |
-| DOM-интерфейс                                             | {{domxref ("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно Firefox реализует интерфейс {{domxref ("HTMLSpanElement")}} для этого элемента. |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент. |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                        |
+| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                               |
+| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                       |
+| Допустимые ARIA-роли                                       | Любые                                                                                                                                                             |
+| DOM-интерфейс                                              | {{domxref ("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно Firefox реализует интерфейс {{domxref ("HTMLSpanElement")}} для этого элемента.               |
 
 ## Атрибуты
 
@@ -44,9 +43,8 @@ translation_of: Web/HTML/Element/em
 
 ```html
 <p>
-  В HTML 5, что ранее называлось
-  контентом <em>уровня блока</em> теперь называется
-  контентом <em>потока</em>.
+  В HTML 5, что ранее называлось контентом <em>уровня блока</em> теперь
+  называется контентом <em>потока</em>.
 </p>
 ```
 

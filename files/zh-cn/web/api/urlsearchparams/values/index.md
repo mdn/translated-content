@@ -26,7 +26,7 @@ searchParams.values();
 var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // 输出值
-for(var value of searchParams.values()) {
+for (var value of searchParams.values()) {
   console.log(value);
 }
 ```

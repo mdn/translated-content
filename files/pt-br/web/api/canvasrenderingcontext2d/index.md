@@ -8,15 +8,15 @@ slug: Web/API/CanvasRenderingContext2D
 Para obter um objeto desta interface, chama-se {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} em um `elemento <canvas>`, adicionando "2d" como argumento, veja o exemplo abaixo:
 
 ```js
-var canvas = document.getElementById('meuCanvas'); // em seu HTML esse elemento se parece com <canvas id="meuCanvas"></canvas>
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("meuCanvas"); // em seu HTML esse elemento se parece com <canvas id="meuCanvas"></canvas>
+var ctx = canvas.getContext("2d");
 ```
 
 Agora que você possui o contexto de renderização 2D, você pode desenhar dentro deste canvas. Por exemplo:
 
 ```js
 ctx.fillStyle = "rgb(200,0,0)"; // define a cor de preenchimento do retângulo
-ctx.fillRect(10, 10, 55, 50);   // desenha o retângulo na posição 10, 10 com 55 pixels de largura e uma altura de 50
+ctx.fillRect(10, 10, 55, 50); // desenha o retângulo na posição 10, 10 com 55 pixels de largura e uma altura de 50
 ```
 
 Veja as propriedades e métodos no menu lateral e abaixo. O [tutorial canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial) tem mais informações, exemplos e recursos.
@@ -150,8 +150,6 @@ Os seguintes métodos podem ser usados para manipular caminhos de desenhos.
 
 Objects in the `CanvasRenderingContext2D` rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("SVGMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.
 
-- {{domxref("CanvasRenderingContext2D.currentTransform")}}
-  - : Current transformation matrix ({{domxref("SVGMatrix")}} object).
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - : Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.
 - {{domxref("CanvasRenderingContext2D.scale()")}}
@@ -271,10 +269,6 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 #### Prefixed APIs
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inversed transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozFillRule`
   - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
@@ -303,24 +297,13 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.demote()`
   - : This causes a context that is currently using a hardware-accelerated backend to fallback to a software one. All state should be preserved.
 
-### Internet Explorer
-
-- {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
-  - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
-
 ## Especificações
 
-| Specification                                                                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D")}}
-
-## Compatibility notes
-
-- Starting with Gecko 5.0, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate()`, `scale()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
+{{Compat}}
 
 ## Veja também
 

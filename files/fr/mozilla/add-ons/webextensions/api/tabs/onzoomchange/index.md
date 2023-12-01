@@ -1,7 +1,6 @@
 ---
 title: tabs.onZoomChange
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
 ---
 
 {{AddonSidebar()}}

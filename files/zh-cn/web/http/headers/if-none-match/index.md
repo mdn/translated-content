@@ -18,9 +18,9 @@ slug: Web/HTTP/Headers/If-None-Match
 - 采用 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法，来更新拥有特定的{{HTTPHeader("ETag")}} 属性值的缓存。
 - 采用其他方法，尤其是 {{HTTPMethod("PUT")}}，将 `If-None-Match` used 的值设置为 \* ，用来生成事先并不知道是否存在的文件，可以确保先前并没有进行过类似的上传操作，防止之前操作数据的丢失。这个问题属于[更新丢失问题](https://www.w3.org/1999/04/Editing/#3.1)的一种。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 

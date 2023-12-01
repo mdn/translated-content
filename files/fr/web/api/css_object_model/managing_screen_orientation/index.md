@@ -1,7 +1,6 @@
 ---
 title: Gérer l'orientation de l'écran
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
-translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
 
 {{SeeCompatTable}}{{APIRef}}

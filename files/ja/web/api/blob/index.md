@@ -61,7 +61,11 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ```html
 <p>
-  この例では、スペース文字から文字 Z までの ASCII コードを含む型付けされた配列を作成し、それをオブジェクト URL に変換します。そのオブジェクト URL を開くためのリンクが作成されます。リンクをクリックすると、デコードされたオブジェクト URL が表示されます。
+  この例では、スペース文字から文字 Z までの ASCII
+  コードを含む型付けされた配列を作成し、それをオブジェクト URL
+  に変換します。そのオブジェクト URL
+  を開くためのリンクが作成されます。リンクをクリックすると、デコードされたオブジェクト
+  URL が表示されます。
 </p>
 ```
 
@@ -89,7 +93,7 @@ function showViewLiveResultButton() {
 if (!showViewLiveResultButton()) {
   function typedArrayToURL(typedArray, mimeType) {
     return URL.createObjectURL(
-      new Blob([typedArray.buffer], { type: mimeType })
+      new Blob([typedArray.buffer], { type: mimeType }),
     );
   }
   const bytes = new Uint8Array(59);
@@ -119,7 +123,7 @@ if (!showViewLiveResultButton()) {
 ```js
 const reader = new FileReader();
 reader.addEventListener("loadend", () => {
-   // reader.result には blob の内容が型付き配列として格納されます。
+  // reader.result には blob の内容が型付き配列として格納されます。
 });
 reader.readAsArrayBuffer(blob);
 ```

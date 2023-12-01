@@ -1,7 +1,6 @@
 ---
 title: Estilizando texto
 slug: Learn/CSS/Styling_text
-original_slug: Aprender/CSS/Estilizando_texto
 ---
 
 {{LearnSidebar}}

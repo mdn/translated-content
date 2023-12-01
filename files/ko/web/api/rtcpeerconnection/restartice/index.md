@@ -29,14 +29,14 @@ RTCPeerConnection.restartIce();
 
 {{domxref("RTCPeerConnection.createOffer", "createOffer()")}}를 사용해서 만들어진 다음 offer가 신호 메커니즘을 통해 원격 유저에게 전달이 되면, ICE 재시작을 시작하도록 만듭니다. ICE를 재시작하게되면 기본적으로 ICE가 초기화되고, 새로운 증명서를 사용해서 신규 candidate를 생성합니다. 기존에 존재하던 미디어 전송/수신은 이 과정동안에는 방해받지 않습니다.
 
-ICE 재시작의 작동원리를 좀 더 자세히 알고 싶다면, [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart)와 {{RFC(5245, "ICE specification", "9.1.1.1")}}를 참고하십시오.
+ICE 재시작의 작동원리를 좀 더 자세히 알고 싶다면, [ICE restart](/ko/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart)와 {{RFC(5245, "ICE specification", "9.1.1.1")}}를 참고하십시오.
 
 ## 예시
 
 아래의 예제는 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 이벤트에 대한 핸들러입니다. 이 핸들러는 ICE를 재시작하여 `failed` 상태로의 전환을 관리합니다.
 
 ```js
-pc.addEventListener("iceconnectionstatechange", event => {
+pc.addEventListener("iceconnectionstatechange", (event) => {
   if (pc.iceConnectionState === "failed") {
     /* possibly reconfigure the connection in some way here */
     /* then request ICE restart */

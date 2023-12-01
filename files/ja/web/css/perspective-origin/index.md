@@ -9,7 +9,7 @@ slug: Web/CSS/perspective-origin
 
 {{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 
-**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`perspective()`](/ja/docs/Web/CSS/transform-function/perspective()) 変換関数とは異なります。
+**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`perspective()`](</ja/docs/Web/CSS/transform-function/perspective()>) 変換関数とは異なります。
 
 ## 構文
 
@@ -69,175 +69,173 @@ perspective-origin: unset;
 
 ```html
 <section>
-
-<figure>
-  <figcaption><code>perspective-origin: top left;</code></figcaption>
+  <figure>
+    <figcaption><code>perspective-origin: top left;</code></figcaption>
     <div class="container">
-     <div class="cube potl">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-     </div>
+      <div class="cube potl">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: top;</code></figcaption>
-   <div class="container">
-    <div class="cube potm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: top;</code></figcaption>
+    <div class="container">
+      <div class="cube potm">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: top right;</code></figcaption>
-  <div class="container">
-    <div class="cube potr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: top right;</code></figcaption>
+    <div class="container">
+      <div class="cube potr">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: left;</code></figcaption>
-  <div class="container">
-    <div class="cube poml">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: left;</code></figcaption>
+    <div class="container">
+      <div class="cube poml">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: 50% 50%;</code></figcaption>
-  <div class="container">
-    <div class="cube pomm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: 50% 50%;</code></figcaption>
+    <div class="container">
+      <div class="cube pomm">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: right;</code></figcaption>
-  <div class="container">
-    <div class="cube pomr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: right;</code></figcaption>
+    <div class="container">
+      <div class="cube pomr">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: bottom left;</code></figcaption>
-  <div class="container">
-    <div class="cube pobl">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: bottom left;</code></figcaption>
+    <div class="container">
+      <div class="cube pobl">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: bottom;</code></figcaption>
-  <div class="container">
-    <div class="cube pobm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: bottom;</code></figcaption>
+    <div class="container">
+      <div class="cube pobm">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: bottom right;</code></figcaption>
-  <div class="container">
-    <div class="cube pobr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: bottom right;</code></figcaption>
+    <div class="container">
+      <div class="cube pobr">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: -200% -200%;</code></figcaption>
-  <div class="container">
-    <div class="cube po200200neg">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: -200% -200%;</code></figcaption>
+    <div class="container">
+      <div class="cube po200200neg">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: 200% 200%;</code></figcaption>
-  <div class="container">
-    <div class="cube po200200pos">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: 200% 200%;</code></figcaption>
+    <div class="container">
+      <div class="cube po200200pos">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<figure>
-  <figcaption><code>perspective-origin: 200% -200%;</code></figcaption>
-  <div class="container">
-    <div class="cube po200200">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+  <figure>
+    <figcaption><code>perspective-origin: 200% -200%;</code></figcaption>
+    <div class="container">
+      <div class="cube po200200">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
     </div>
-  </div>
-</figure>
-
+  </figure>
 </section>
 ```
 
@@ -340,7 +338,7 @@ perspective-origin: unset;
 
 /* レイアウトの見栄えをよくする */
 section {
-  background-color: #EEE;
+  background-color: #eee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
@@ -367,4 +365,4 @@ section {
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}
-- [`transform: perspective()`](/ja/docs/Web/CSS/transform-function/perspective()) 関数
+- [`transform: perspective()`](</ja/docs/Web/CSS/transform-function/perspective()>) 関数

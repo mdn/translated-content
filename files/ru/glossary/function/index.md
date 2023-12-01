@@ -1,14 +1,9 @@
 ---
 title: Функция
 slug: Glossary/Function
-tags:
-  - JavaScript
-  - Глоссарий
-  - КодингСкриптинг
-  - Функция
-translation_of: Glossary/Function
-original_slug: Глоссарий/Функция
 ---
+
+{{GlossarySidebar}}
 
 **Функция** это отрывок кода который может быть вызван из другого кода или вызван собой, или это {{glossary("variable","переменная")}} которая ссылается на функцию. Когда функция вызвана, {{glossary("argument","аргументы")}} переданы в функцию как вход, и функция может необязательно вернуть вывод. Функция в {{glossary("JavaScript")}} это {{glossary("object","объект")}}.
 

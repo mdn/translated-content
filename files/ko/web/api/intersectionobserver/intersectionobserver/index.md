@@ -18,6 +18,7 @@ new IntersectionObserver(callback[, options]);
 ### 매개변수
 
 - `callback`
+
   - : 대상 요소의 보이는 영역 비율이 역치를 위아래로 넘을 때 (더 커졌거나 작아졌을 때 모두) 호출할 함수입니다. 두 개의 매개변수를 받습니다.
     - `entries`
       - : 더 드러나거나 가려져서 지정한 역치를 넘어가게 된 요소를 나타내는 {{domxref("IntersectionObserverEntry")}} 객체의 배열.
@@ -49,8 +50,7 @@ new IntersectionObserver(callback[, options]);
 요소의 볼 수 있는 영역 비율이 10% 위아래로 넘어갈 때 `myObserverCallback` 함수를 호출하는 새로운 교차 탐지기를 생성하는 예제입니다.
 
 ```js
-let observer = new IntersectionObserver(myObserverCallback,
-                   {threshold: 0.1});
+let observer = new IntersectionObserver(myObserverCallback, { threshold: 0.1 });
 ```
 
 ## 명세

@@ -1,7 +1,6 @@
 ---
 title: page-break-after
 slug: Web/CSS/page-break-after
-translation_of: Web/CSS/page-break-after
 ---
 
 {{CSSRef}}

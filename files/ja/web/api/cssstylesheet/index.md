@@ -39,7 +39,7 @@ _親である {{domxref("StyleSheet")}} からプロパティを継承してい�
 
   - : 生きた {{domxref("CSSRuleList")}} を返します。これは、スタイルシートを構成する {{domxref("CSSRule")}} オブジェクトの最新リストを維持します。
 
-   > **メモ:** 一部のブラウザーでは、スタイルシートが異なるドメインから読み込まれた場合、`cssRules` にアクセスすると `SecurityError` が発生します。
+  > **メモ:** 一部のブラウザーでは、スタイルシートが異なるドメインから読み込まれた場合、`cssRules` にアクセスすると `SecurityError` が発生します。
 
 - {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
   - : これが {{cssxref("@import")}} ルールを使用して文書にインポートされたスタイルシートである場合、`ownerRule` は、その {{domxref("CSSImportRule")}} を返します。そうでない場合、`null` を返します。

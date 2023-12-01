@@ -45,19 +45,23 @@ Void.
 ```html
 <h1>setBaseAndExtent example</h1>
 <div>
-  <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
+  <p class="one">
+    <span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span>
+  </p>
   <p>MIDDLE</p>
-  <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
+  <p class="two">
+    <span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span>
+  </p>
 </div>
 
 <div>
   <p>
     <label for="aOffset">Anchor offset</label>
-    <input id="aOffset" name="aOffset" type="number" value="0">
+    <input id="aOffset" name="aOffset" type="number" value="0" />
   </p>
   <p>
     <label for="fOffset">Focus offset</label>
-    <input id="fOffset" name="fOffset" type="number" value="0">
+    <input id="fOffset" name="fOffset" type="number" value="0" />
   </p>
   <p><button>Capture selection</button></p>
 </div>
@@ -68,28 +72,28 @@ Void.
 JavaScript 像这样：
 
 ```js
-var one = document.querySelector('.one');
-var two = document.querySelector('.two');
+var one = document.querySelector(".one");
+var two = document.querySelector(".two");
 
-var aOffset = document.getElementById('aOffset');
-var fOffset = document.getElementById('fOffset');
+var aOffset = document.getElementById("aOffset");
+var fOffset = document.getElementById("fOffset");
 
-var button = document.querySelector('button');
+var button = document.querySelector("button");
 
-var output = document.querySelector('.output');
+var output = document.querySelector(".output");
 
 var selection;
 
-button.onclick = function() {
+button.onclick = function () {
   try {
     selection = document.getSelection();
     selection.setBaseAndExtent(one, aOffset.value, two, fOffset.value);
     var text = selection.toString();
     output.textContent = text;
-  } catch(e) {
+  } catch (e) {
     output.textContent = e.message;
   }
-}
+};
 ```
 
 在下面在线运行实例，设置不同的偏移值去观察它怎么去影响选中内容的。

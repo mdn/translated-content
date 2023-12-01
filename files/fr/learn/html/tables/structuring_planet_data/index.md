@@ -1,7 +1,6 @@
 ---
-title: "Structurer les données des planètes"
+title: Structurer les données des planètes
 slug: Learn/HTML/Tables/Structuring_planet_data
-translation_of: Learn/HTML/Tables/Structuring_planet_data
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

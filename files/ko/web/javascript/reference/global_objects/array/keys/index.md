@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 ## 구문
 
 ```js
-    arr.keys()
+arr.keys();
 ```
 
 ### 반환 값
@@ -32,11 +32,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 배열에 실제로 존재하는 키 값만을 포함하는 {{jsxref("Object.keys()")}} 와 달리, `keys()` 반복기는 누락된 속성이 나타나는 빈 공간을 무시하지 않습니다.
 
 ```js
-var arr = ['a', , 'c'];
+var arr = ["a", , "c"];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys);  // [0, 1, 2]
+console.log(denseKeys); // [0, 1, 2]
 ```
 
 ### Calling keys() on non-array objects

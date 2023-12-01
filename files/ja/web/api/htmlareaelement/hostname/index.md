@@ -1,7 +1,6 @@
 ---
 title: "HTMLAreaElement: hostname プロパティ"
 slug: Web/API/HTMLAreaElement/hostname
-original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
@@ -24,7 +23,7 @@ l10n:
     id="area1"
     shape="rect"
     coords="184,6,253,27"
-    href="/en-US/docs/HTMLAreaElement"
+    href="/ja/docs/HTMLAreaElement"
     target="_blank"
     alt="Mozilla" />
   <area

@@ -1,7 +1,6 @@
 ---
 title: Notre premier code JavaScript
 slug: Learn/JavaScript/First_steps/A_first_splash
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}

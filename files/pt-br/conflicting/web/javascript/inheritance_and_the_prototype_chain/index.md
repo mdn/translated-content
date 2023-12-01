@@ -1,7 +1,6 @@
 ---
 title: Detalhes do modelo de objeto
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 
 JavaScript é uma linguagem orientada a objetos com base em protótipos, em vez de ser baseada em classes. Devido a essa base diferente, pode ser menos evidente como o JavaScript permite criar hierarquias de objetos e ter herança de propriedades e seus valores. Este capítulo tenta esclarecer essa situação.
@@ -249,14 +248,14 @@ Employee.prototype.specialty = "none";
 
 As soon as JavaScript executes this statement, the `mark` object also has the `specialty` property with the value of `"none"`. The following figure shows the effect of adding this property to the `Employee` prototype and then overriding it for the `Engineer` prototype.
 
-![](/@api/deki/files/4422/=figure8.4.png)
+![](figure8.4.png)
 **Adding properties**
 
 ## More flexible constructors
 
 The constructor functions shown so far do not let you specify property values when you create an instance. As with Java, you can provide arguments to constructors to initialize property values for instances. The following figure shows one way to do this.
 
-![](/@api/deki/files/4423/=figure8.5.png)
+![](figure8.5.png)
 **Specifying properties in a constructor, take 1**
 
 The following table shows the Java and JavaScript definitions for these objects.
@@ -360,7 +359,7 @@ Notice that with these definitions, you cannot specify an initial value for an i
 
 So far, the constructor function has created a generic object and then specified local properties and values for the new object. You can have the constructor add more properties by directly calling the constructor function for an object higher in the prototype chain. The following figure shows these new definitions.
 
-![](/@api/deki/files/4430/=figure8.6.png)
+![](figure8.6.png)
 **Specifying properties in a constructor, take 2**
 
 Let's look at one of these definitions in detail. Here's the new definition for the `Engineer` constructor:
@@ -554,7 +553,7 @@ function instanceOf(object, constructor) {
 }
 ```
 
-> **Nota:** The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See {{ bug(634150) }} if you want the nitty-gritty details.
+> **Nota:** The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See [Firefox bug 634150](https://bugzil.la/634150) if you want the nitty-gritty details.
 
 > **Nota:** Using the `instanceOf` function defined above, these expressions are true:
 

@@ -1,7 +1,6 @@
 ---
 title: Contrôle à la souris
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
 {{GamesSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Formes simples
 slug: Web/CSS/CSS_shapes/Basic_shapes
-translation_of: Web/CSS/CSS_Shapes/Basic_Shapes
 ---
 
 {{CSSRef}}

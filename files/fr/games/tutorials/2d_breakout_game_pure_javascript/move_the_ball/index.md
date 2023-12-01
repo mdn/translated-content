@@ -1,7 +1,6 @@
 ---
 title: Déplacer la balle
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
 {{GamesSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Instructions
 slug: Web/JavaScript/Reference/Statements
-translation_of: Web/JavaScript/Reference/Statements
 ---
 
 {{jsSidebar("Statements")}}

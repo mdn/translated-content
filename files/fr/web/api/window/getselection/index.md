@@ -1,7 +1,6 @@
 ---
 title: window.getSelection
 slug: Web/API/Window/getSelection
-translation_of: Web/API/Window/getSelection
 ---
 
 {{ ApiRef() }}

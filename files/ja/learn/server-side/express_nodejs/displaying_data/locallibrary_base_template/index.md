@@ -7,7 +7,7 @@ Now that we understand how to extend templates using Pug, let's start by creatin
 
 Open **/views/layout.pug** and replace the content with the code below.
 
-```html
+```pug
 doctype html
 html(lang='en')
   head
@@ -57,9 +57,9 @@ The base template also references a local css file (**style.css**) that provides
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 

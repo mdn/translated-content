@@ -1,7 +1,6 @@
 ---
 title: icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
 
 {{AddonSidebar}}

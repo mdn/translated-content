@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onloadend
 slug: Web/API/XMLHttpRequest/loadend_event
-translation_of: Web/API/GlobalEventHandlers/onloadend
 ---
 
 {{ApiRef}}

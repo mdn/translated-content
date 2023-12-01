@@ -67,17 +67,17 @@ then(onFulfilled, onRejected)
 
 ```js
 const p1 = new Promise((resolve, reject) => {
-  resolve("成功!");
+  resolve("成功！");
   // 或
   // reject(new Error("错误!"));
 });
 
 p1.then(
   (value) => {
-    console.log(value); // 成功!
+    console.log(value); // 成功！
   },
   (reason) => {
-    console.error(reason); // 错误!
+    console.error(reason); // 错误！
   },
 );
 ```
@@ -120,7 +120,7 @@ Promise.resolve("foo")
   // 字符串实际上是由上一个回调函数之前的那块异步代码处理的。
   .then((string) => {
     console.log(
-      "最后一个 then：哎呀……之前懒得实例化并返回一个 Promise，所以顺序可能有点令人惊讶"
+      "最后一个 then：哎呀……之前懒得实例化并返回一个 Promise，所以顺序可能有点令人惊讶",
     );
 
     // 注意 `string` 这时不会存在 'baz'。
@@ -177,7 +177,7 @@ Promise.resolve()
 Promise.resolve()
   .then(() => {
     // 令 .then() 返回一个被拒绝的 promise
-    throw new Error("噢，不!");
+    throw new Error("噢，不！");
   })
   .catch((error) => {
     console.error(`onRejected 函数被调用：${error.message}`);
@@ -242,7 +242,7 @@ p3.then(
 );
 ```
 
-你可以使用链式调用，在一个函数上实现基于 Promise 的API，在另一个函数之上。
+你可以使用链式调用，在一个函数上实现基于 Promise 的 API，在另一个函数之上。
 
 ```js
 function fetchCurrentData() {
@@ -276,9 +276,7 @@ console.log(resolvedProm);
 
 const thenProm = resolvedProm.then((value) => {
   console.log(
-    `在主堆栈结束后被调用。收到的值是：${value}，返回的值是：${
-      value + 1
-    }`,
+    `在主堆栈结束后被调用。收到的值是：${value}，返回的值是：${value + 1}`,
   );
   return value + 1;
 });

@@ -1,7 +1,6 @@
 ---
 title: pageAction
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 ---
 
 {{AddonSidebar}}

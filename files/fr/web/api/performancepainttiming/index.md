@@ -1,7 +1,6 @@
 ---
 title: PerformancePaintTiming
 slug: Web/API/PerformancePaintTiming
-translation_of: Web/API/PerformancePaintTiming
 ---
 
 {{APIRef("Performance Timeline API")}}

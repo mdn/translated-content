@@ -1,7 +1,6 @@
 ---
 title: Aplicación de efectos de SVG para el contenido HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-original_slug: Applying_SVG_effects_to_HTML_content
 ---
 
 Aplicación de efectos de SVG para el contenido HTML.

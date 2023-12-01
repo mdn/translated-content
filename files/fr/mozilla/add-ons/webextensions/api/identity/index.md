@@ -1,7 +1,6 @@
 ---
 title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
-translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 ---
 
 {{AddonSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: x
 slug: Web/SVG/Attribute/x
-translation_of: Web/SVG/Attribute/x
 ---
 
 {{SVGRef}}

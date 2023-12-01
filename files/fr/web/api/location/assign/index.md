@@ -1,7 +1,6 @@
 ---
 title: Location.assign()
 slug: Web/API/Location/assign
-translation_of: Web/API/Location/assign
 ---
 
 {{ APIRef("Location") }}

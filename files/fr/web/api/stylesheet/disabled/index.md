@@ -1,7 +1,6 @@
 ---
 title: StyleSheet.disabled
 slug: Web/API/StyleSheet/disabled
-translation_of: Web/API/StyleSheet/disabled
 ---
 
 {{APIRef("CSSOM")}}

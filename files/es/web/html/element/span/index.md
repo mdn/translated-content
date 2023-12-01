@@ -1,7 +1,6 @@
 ---
 title: span
 slug: Web/HTML/Element/span
-original_slug: Web/HTML/Elemento/span
 ---
 
 ### Definición

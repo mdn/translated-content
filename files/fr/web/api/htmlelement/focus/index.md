@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
-translation_of: Web/API/HTMLElement/focus
 ---
 
 {{APIRef("HTML DOM")}}

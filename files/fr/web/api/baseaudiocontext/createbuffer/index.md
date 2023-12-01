@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
-translation_of: Web/API/BaseAudioContext/createBuffer
 ---
 
 {{APIRef("API Web Audio")}}

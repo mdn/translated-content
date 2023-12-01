@@ -1,8 +1,9 @@
 ---
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
-translation_of: Glossary/Microsoft_Internet_Explorer
 ---
+
+{{GlossarySidebar}}
 
 Internet Explorer (ou IE) est un {{glossary("navigateur")}} graphique gratuit maintenu par Microsoft pour conserver une compatibilité avec son utilisation en entreprise. {{glossary("Microsoft Edge")}} est actuellement le navigateur par défaut sous Windows.
 

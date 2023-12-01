@@ -1,9 +1,6 @@
 ---
 title: Как разместить свой сайт в Google App Engine
-slug: >-
-  Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
-translation_of: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
-original_slug: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
+slug: Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 ---
 
 [Google App Engine](https://cloud.google.com/appengine/) - это мощная платформа, которая позволяет создавать и запускать приложения в инфраструктуре Google - нужно ли создавать многоуровневое веб-приложение с нуля или размещать статический веб-сайт. Вот пошаговое руководство по размещению вашего сайта в Google App Engine.

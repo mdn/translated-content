@@ -1,8 +1,9 @@
 ---
 title: Dégradation gracieuse
 slug: Glossary/Graceful_degradation
-translation_of: Glossary/Graceful_degradation
 ---
+
+{{GlossarySidebar}}
 
 **La dégradation gracieuse** est une philosophie de conception centrée sur la création d'un site / application web moderne qui fonctionnera dans les navigateurs les plus récents, mais qui sera remplacé par un contenu et une fonctionnalité essentiels dans les anciens navigateurs, même moins performant.
 

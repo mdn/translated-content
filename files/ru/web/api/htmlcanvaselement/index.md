@@ -1,15 +1,6 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-tags:
-  - API
-  - Canvas
-  - HTML DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLCanvasElement
 ---
 
 {{APIRef("Canvas API")}}
@@ -46,16 +37,11 @@ _Наследуются от родителя,_ _{{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Возвращает объект {{domxref("File")}} представляющий картинку, которая содержится в холсте. This file is a memory-based file, with the specified `name`. Если тип не указан, используется `image/png`.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                                        | Status                                               | Comment                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Media Capture DOM Elements', '#html-media-element-media-capture-extensions', 'HTMLCanvasElement')}} | {{Spec2('Media Capture DOM Elements')}} | Adds the method `captureStream()`.                                                                                                                                                                                      |
-| {{SpecName('HTML WHATWG', "#the-canvas-element", "HTMLCanvasElement")}}                                                     | {{Spec2('HTML WHATWG')}}                     | The method `getContext()` now returns a {{domxref("RenderingContext")}} rather than an opaque `object`. The methods `probablySupportsContext()`, `setContext()` and `transferControlToProxy()` have been added. |
-| {{SpecName('HTML5.1', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5.1')}}                         |                                                                                                                                                                                                                         |
-| {{SpecName('HTML5 W3C', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5 W3C')}}                         | Initial definition.                                                                                                                                                                                                     |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

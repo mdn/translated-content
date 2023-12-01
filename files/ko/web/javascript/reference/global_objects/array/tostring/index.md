@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 ## 구문
 
 ```js
-    arr.toString()
+arr.toString();
 ```
 
 ### 반환 값
@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 {{jsxref("Array")}} 객체는 {{jsxref("Object")}}의 `toString` 메서드를 재정의(override)합니다. Array 객체에 대해, `toString` 메서드는 배열을 합쳐(join) 쉼표로 구분된 각 배열 요소를 포함하는 문자열 하나를 반환합니다. 예를 들어, 다음 코드는 배열을 생성하며 그 배열을 문자열로 변환하기 위해 `toString`을 사용합니다.
 
 ```js
-var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
+var monthNames = ["Jan", "Feb", "Mar", "Apr"];
 var myVar = monthNames.toString(); // 'Jan,Feb,Mar,Apr'을 myVar에 할당.
 ```
 

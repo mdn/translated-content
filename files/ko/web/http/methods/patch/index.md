@@ -56,7 +56,7 @@ PATCH /file.txt HTTP/1.1
 
 ### Request
 
-```html
+```http
 PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example

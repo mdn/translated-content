@@ -1,7 +1,6 @@
 ---
 title: windows.WINDOW_ID_CURRENT
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_CURRENT
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_CURRENT
 ---
 
 {{AddonSidebar()}}

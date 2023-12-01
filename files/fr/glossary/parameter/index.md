@@ -1,8 +1,9 @@
 ---
 title: Paramètre
 slug: Glossary/Parameter
-translation_of: Glossary/Parameter
 ---
+
+{{GlossarySidebar}}
 
 Un paramètre est une variable nommée passée à une {{Glossary("fonction")}}. Les paramètres servent à importer des {{Glossary("argument","arguments")}} à l'intérieur des fonctions.
 

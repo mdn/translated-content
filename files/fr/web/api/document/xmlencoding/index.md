@@ -1,7 +1,6 @@
 ---
 title: Document.xmlEncoding
 slug: Web/API/Document/xmlEncoding
-translation_of: Web/API/Document/xmlEncoding
 ---
 
 {{APIRef("DOM")}}{{deprecated_header}}

@@ -1,14 +1,8 @@
 ---
 title: Location
 slug: Web/API/Location
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Location
-  - Refernce
-translation_of: Web/API/Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 Интерфейс **`Location`** представляет собой адрес (URL) объекта, с которым он связан. Его модификации отражаются на родительском объекте. Интерфейсы {{domxref("Document")}} и {{domxref("Window")}} имеют подобный `Location`, к которому можно получить доступ через {{domxref("Document.location")}} и {{domxref("Window.location")}} соответственно.
@@ -58,17 +52,18 @@ _Интерфейс `Location`_ _не имеет унаследованных м
 ```js
 // Этот пример создаёт ссылку и использует её свойство href
 // Корректная альтернатива - использовать document.location или window.location текущего URL
-var url = document.createElement('a');
-url.href = 'https://developer.mozilla.org/en-US/search?q=URL#search-results-close-container';
-console.log(url.href);      // https://developer.mozilla.org/en-US/search?q=URL#search-results-close-container
-console.log(url.protocol);  // https:
-console.log(url.host);      // developer.mozilla.org
-console.log(url.hostname);  // developer.mozilla.org
-console.log(url.port);      // (пустой - https подразумевает порт 443)
-console.log(url.pathname);  // /en-US/search
-console.log(url.search);    // ?q=URL
-console.log(url.hash);      // #search-results-close-container
-console.log(url.origin);    // https://developer.mozilla.org
+var url = document.createElement("a");
+url.href =
+  "https://developer.mozilla.org/en-US/search?q=URL#search-results-close-container";
+console.log(url.href); // https://developer.mozilla.org/en-US/search?q=URL#search-results-close-container
+console.log(url.protocol); // https:
+console.log(url.host); // developer.mozilla.org
+console.log(url.hostname); // developer.mozilla.org
+console.log(url.port); // (пустой - https подразумевает порт 443)
+console.log(url.pathname); // /en-US/search
+console.log(url.search); // ?q=URL
+console.log(url.hash); // #search-results-close-container
+console.log(url.origin); // https://developer.mozilla.org
 ```
 
 ## Спецификации

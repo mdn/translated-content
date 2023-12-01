@@ -1,7 +1,6 @@
 ---
 title: Utilisations non-cryptographiques de SubtleCrypto
 slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
-translation_of: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
 ---
 
 {{APIRef("Web Crypto API")}}

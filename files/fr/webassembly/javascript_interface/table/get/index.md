@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.get()
 slug: WebAssembly/JavaScript_interface/Table/get
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get
 ---
 
 {{WebAssemblySidebar}}

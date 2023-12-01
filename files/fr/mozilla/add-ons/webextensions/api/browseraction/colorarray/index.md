@@ -1,7 +1,6 @@
 ---
 title: browserAction.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 ---
 
 {{AddonSidebar()}}

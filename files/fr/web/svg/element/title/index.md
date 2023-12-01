@@ -1,7 +1,6 @@
 ---
 title: title
 slug: Web/SVG/Element/title
-translation_of: Web/SVG/Element/title
 ---
 
 {{SVGRef}}

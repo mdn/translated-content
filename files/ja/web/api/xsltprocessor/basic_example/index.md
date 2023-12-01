@@ -1,19 +1,16 @@
 ---
 title: XSLT の基本的な例
 slug: Web/API/XSLTProcessor/Basic_Example
+l10n:
+  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-## 基本的な例
+{{APIRef("XSLT")}}
 
-最初の例は、ブラウザーで XSLT 変換の設定の基本を実演します。 この例は、人が読むことのできる書式で書かれた記事についての情報 (タイトル、著者の一覧、本文) を含む XML 文書を取得します。
+この最初の例では、ブラウザーで XSLT 変換を設定する基本を示します。
+この例では、記事に関する情報（タイトル、著者の一覧、本文）を含む XML 文書を取り込み、それを人間が読める形式で表示します。
 
-図 1 は基本的な XSLT の例のソースです。 XML 文書 (example.xml) は記事についての情報を含んでいます。 `?xml-stylesheet?` で処理を指示すると、その href 属性を通して XSLT スタイルシートへリンクします。
-
-XSLT スタイルシートは、最終的な出力を生成するためのすべてのテンプレートを含む、`xsl:stylesheet` 要素で開始します。図 1 の例には二つのテンプレートがあります。一つはルートノードに対応し、一つは Author ノードに対応します。ルートノードが出力する記事のタイトルにテンプレートが一致すると、(`apply-templates` を通して) Authors ノードの子の、すべての Author ノードに対応するテンプレートが処理されます。
-
-図 1 : 簡単な XSLT の例
-
-XML 文書 (example.xml) :
+XML 文書 (**example.xml**) は次の通りです。
 
 ```xml
 <?xml version="1.0"?>
@@ -28,7 +25,9 @@ XML 文書 (example.xml) :
 </Article>
 ```
 
-XSL スタイルシート (example.xsl) :
+この XML ファイルの `?xml-stylesheet` 処理命令により、その `href` 属性で適用する XSLT スタイルシートを指定します。
+
+XSL スタイルシートファイル (**example.xsl**) は次の通りです。
 
 ```xml
 <?xml version="1.0"?>
@@ -48,11 +47,27 @@ XSL スタイルシート (example.xsl) :
 </xsl:stylesheet>
 ```
 
-ブラウザーの出力:
+XSLT スタイルシートは、最終的な出力を生成するためのすべてのテンプレートを含む、`xsl:stylesheet` 要素で始まります。
+この例には 2 つのテンプレートがあります。一つはルートノードに対応し、一つは Author ノードに対応します。
+ルートノードが出力する記事のタイトルにテンプレートが一致すると、（`apply-templates` を通して） Authors ノードの子の、すべての Author ノードに対応するテンプレートが処理されます。
 
-```
-Article - My Article
-Authors:
-- Mr. Foo
-- Mr. Bar
-```
+例を試してみましょう。
+
+1. ファイルシステム上にディレクトリーを作成し、その中に上記の `example.xml` と `example.xsl` を作成します。
+2. ファイルのあるディレクトリーで[ローカルサーバーを起動](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server)します。
+   これにより、あたかもインターネット上でホスティングされているかのように、ディレクトリー内のファイルを閲覧することができます。
+
+   > **警告:** ファイルシステムからスタイルシートを読み込むことは[オリジン間リクエスト](/ja/docs/Web/HTTP/CORS)であり、既定で許可されないためです。
+   > XML とスタイルシートを同じローカルサーバーでホスティングすることで、同一のオリジンになることが保証されます。
+
+3. ブラウザーから **example.xml** を開きます。
+4. ブラウザーの出力は次のようになります。
+
+   ```plain
+   Browser Output :
+
+       Article - My Article
+       Authors:
+       - Mr. Foo
+       - Mr. Bar
+   ```

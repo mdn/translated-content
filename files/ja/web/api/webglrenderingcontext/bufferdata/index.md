@@ -76,8 +76,8 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 ### `bufferData` の使用
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
@@ -98,7 +98,7 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.bufferData")}}
+{{Compat}}
 
 ## 関連項目
 

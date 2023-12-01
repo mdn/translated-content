@@ -1,7 +1,6 @@
 ---
 title: Chrome incompatibilities
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 
 {{AddonSidebar}}

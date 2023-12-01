@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.lastChild()
 slug: Web/API/TreeWalker/lastChild
-translation_of: Web/API/TreeWalker/lastChild
 ---
 
 {{ APIRef("DOM") }}

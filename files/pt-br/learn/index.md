@@ -1,7 +1,6 @@
 ---
 title: Aprendendo desenvolvimento web
 slug: Learn
-original_slug: Aprender
 ---
 
 {{LearnSidebar}}

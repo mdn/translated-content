@@ -1,7 +1,6 @@
 ---
 title: i18n.getUILanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
 ---
 
 {{AddonSidebar()}}

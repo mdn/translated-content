@@ -1,7 +1,6 @@
 ---
 title: Types CSS
 slug: Web/CSS/CSS_Types
-translation_of: Web/CSS/CSS_Types
 ---
 
 {{CSSRef}}

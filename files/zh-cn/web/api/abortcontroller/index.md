@@ -17,7 +17,7 @@ slug: Web/API/AbortController
 ## 属性
 
 - {{domxref("AbortController.signal")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("AbortSignal")}} 对象实例，它可以用来 with/abort 一个 Web（网络）请求。
+  - : 返回一个 {{domxref("AbortSignal")}} 对象实例，可以用它与一个 DOM 请求进行通信或者中止该请求。
 
 ## 方法
 
@@ -36,17 +36,17 @@ slug: Web/API/AbortController
 
 ```js
 let controller;
-const url = 'video.mp4';
+const url = "video.mp4";
 
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   if (controller) {
     controller.abort();
-    console.log('中止下载');
+    console.log("中止下载");
   }
 });
 
@@ -55,7 +55,7 @@ function fetchVideo() {
   const signal = controller.signal;
   fetch(url, { signal })
     .then((response) => {
-      console.log('下载完成', response);
+      console.log("下载完成", response);
     })
     .catch((err) => {
       console.error(`下载错误：${err.message}`);

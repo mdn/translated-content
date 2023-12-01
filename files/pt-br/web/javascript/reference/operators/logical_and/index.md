@@ -1,8 +1,6 @@
 ---
 title: AND lógico (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
-page-type: javascript-operator
-browser-compat: javascript.operators.logical_and
 ---
 
 {{jsSidebar("Operators")}}

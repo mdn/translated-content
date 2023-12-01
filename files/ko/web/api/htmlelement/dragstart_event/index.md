@@ -1,7 +1,6 @@
 ---
-title: 'Document: dragstart 이벤트'
+title: "Document: dragstart 이벤트"
 slug: Web/API/HTMLElement/dragstart_event
-original_slug: Web/API/Document/dragstart_event
 ---
 
 {{APIRef}}
@@ -49,9 +48,7 @@ original_slug: Web/API/Document/dragstart_event
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">
-    드래그 가능
-  </div>
+  <div id="draggable" draggable="true">드래그 가능</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -77,19 +74,19 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
 #### JavaScript
 
 ```js
-document.addEventListener("dragstart", event => {
+document.addEventListener("dragstart", (event) => {
   // 반투명하게 만들기
   event.target.classList.add("dragging");
 });
 
-document.addEventListener("dragend", event => {
+document.addEventListener("dragend", (event) => {
   // 불투명하게 초기화
   event.target.classList.remove("dragging");
 });

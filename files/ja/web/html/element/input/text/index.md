@@ -137,11 +137,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 <form>
   <div>
     <label for="uname">ユーザー名を選んでください: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="小文字で一語で" />
+    <input type="text" id="uname" name="name" placeholder="小文字で一語で" />
   </div>
   <div>
     <button>送信</button>
@@ -258,7 +254,7 @@ input:valid + span::after {
 
 ### 入力値の長さ
 
- [`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性を使用して入力された値の最小の長さ (文字数) を指定することができます。同様に、 [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) を使用して入力された値の最大長を文字数で設定します。
+[`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性を使用して入力された値の最小の長さ (文字数) を指定することができます。同様に、 [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) を使用して入力された値の最大長を文字数で設定します。
 
 以下の例では、入力値が4～8文字の長さであることが求められます。
 
@@ -313,7 +309,7 @@ input:valid + span::after {
 
 ### パターンの指定
 
- [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn/Forms/Form_validation#正規表現での検証)をご覧ください）。
+[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn/Forms/Form_validation#正規表現での検証)をご覧ください）。
 
 以下の例では、 4～8 文字の値で、英小文字のみが含まれているという要件の制約を与えます。
 
@@ -371,7 +367,7 @@ input:valid + span::after {
 
 ## 例
 
- [最初の HTML フォーム](/ja/docs/Learn/Forms/Your_first_form)および [HTML フォームの構成方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)の記事の文脈で、良いテキスト入力欄の例を見ることができます。
+[最初の HTML フォーム](/ja/docs/Learn/Forms/Your_first_form)および [HTML フォームの構成方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)の記事の文脈で、良いテキスト入力欄の例を見ることができます。
 
 ## 技術的概要
 

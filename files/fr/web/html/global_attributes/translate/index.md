@@ -1,7 +1,6 @@
 ---
 title: translate
 slug: Web/HTML/Global_attributes/translate
-translation_of: Web/HTML/Global_attributes/translate
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -19,9 +18,9 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`translate`** e
 
 ```html
 <label for="postcode" translate="no">
-   <span translate="yes">Enter your postcode to find the nearest store</span>
+  <span translate="yes">Enter your postcode to find the nearest store</span>
 </label>
-<input id="postcode" type="text">
+<input id="postcode" type="text" />
 ```
 
 ### Résultat

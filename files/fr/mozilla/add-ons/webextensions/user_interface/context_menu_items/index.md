@@ -1,7 +1,6 @@
 ---
 title: Elements du menu contextuel
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
 
 {{AddonSidebar}}

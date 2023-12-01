@@ -1,7 +1,6 @@
 ---
 title: L'API Web Speech
 slug: Web/API/Web_Speech_API
-translation_of: Web/API/Web_Speech_API
 ---
 
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}

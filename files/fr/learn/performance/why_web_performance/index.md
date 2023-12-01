@@ -1,7 +1,6 @@
 ---
 title: Le "pourquoi" des performances Web
 slug: Learn/Performance/why_web_performance
-translation_of: Learn/Performance/why_web_performance
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}

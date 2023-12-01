@@ -24,7 +24,7 @@ l10n:
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <title>HTML Standard</title>
 <body>
   <hgroup id="document-title">

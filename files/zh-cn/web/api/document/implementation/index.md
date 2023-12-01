@@ -20,9 +20,9 @@ DOMImpObj = document.implementation;
 ```js
 var modName = "HTML";
 var modVer = "2.0";
-var conformTest = document.implementation.hasFeature( modName, modVer );
+var conformTest = document.implementation.hasFeature(modName, modVer);
 
-alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
+alert("DOM " + modName + " " + modVer + " supported?: " + conformTest);
 
 // alerts with: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
 ```
@@ -35,13 +35,13 @@ W3C 的 DOM1 级建议值规定了一种检测浏览器对某个 DOM 模型是�
 
 ## 方法
 
-| 名称                                                                                                                                                             | 动作 | 返回值                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------------------------------ |
+| 名称                                                                                                                                | 动作 | 返回值                      |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ---- | --------------------------- |
 | {{domxref("DOMImplementation.createDocument","createDocument")}} (`namespaceURI`, `qualifiedNameStr`, {{domxref("DocumentType")}} ) |      | {{domxref("document")}}     |
-| {{domxref("DOMImplementation.createDocumentType","createDocumentType")}} ( `qualifiedNameStr`, `publicId`, `systemId` )                  |      | {{domxref("DocumentType")}} |
-| {{domxref("DOMImplementation.createHTMLDocument","createHTMLDocument")}} ( `title` )                                                     |      | {{domxref("document")}}     |
-| {{domxref("DOMImplementation.getFeature","getFeature")}} ( `feature`, `version` )                                                            |      | {{domxref("DOMObject")}}     |
-| {{domxref("DOMImplementation.hasFeature","hasFeature")}} ( `feature`, `version` )                                                            |      | {{domxref("Boolean")}}         |
+| {{domxref("DOMImplementation.createDocumentType","createDocumentType")}} ( `qualifiedNameStr`, `publicId`, `systemId` )             |      | {{domxref("DocumentType")}} |
+| {{domxref("DOMImplementation.createHTMLDocument","createHTMLDocument")}} ( `title` )                                                |      | {{domxref("document")}}     |
+| {{domxref("DOMImplementation.getFeature","getFeature")}} ( `feature`, `version` )                                                   |      | {{domxref("DOMObject")}}    |
+| {{domxref("DOMImplementation.hasFeature","hasFeature")}} ( `feature`, `version` )                                                   |      | {{domxref("Boolean")}}      |
 
 ## 规范
 

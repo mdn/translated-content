@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
 
 {{JSRef}}
@@ -49,16 +48,16 @@ function Product(name, price) {
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 
 function Toy(name, price) {
   Product.call(this, name, price);
-  this.category = 'toy';
+  this.category = "toy";
 }
 
-var cheese = new Food('feta', 5);
-var fun = new Toy('robot', 40);
+var cheese = new Food("feta", 5);
+var fun = new Toy("robot", 40);
 ```
 
 ### Utiliser `call()` pour invoquer une fonction anonyme
@@ -67,15 +66,15 @@ Dans cet exemple (purement inventé), on crée une fonction anonyme et on utilis
 
 ```js
 var animaux = [
-  {espece: 'Lion', nom: 'Roi'},
-  {espece: 'Éléphant', nom: 'Dumbo'}
+  { espece: "Lion", nom: "Roi" },
+  { espece: "Éléphant", nom: "Dumbo" },
 ];
 
 for (var i = 0; i < animaux.length; i++) {
   (function (i) {
     this.print = function () {
-      console.log('#' + i  + ' ' + this.espece + ' : ' + this.nom);
-    }
+      console.log("#" + i + " " + this.espece + " : " + this.nom);
+    };
     this.print();
   }).call(animaux[i], i);
 }
@@ -93,7 +92,7 @@ function saluer() {
 
 var personne1 = {
   nom: "Sénèque",
-  role: "philosophe"
+  role: "philosophe",
 };
 
 saluer.call(personne1); // Sénèque est un philosophe.
@@ -104,10 +103,10 @@ saluer.call(personne1); // Sénèque est un philosophe.
 Dans l'exemple qui suit, on appelle la fonction `afficher()` sans lui passer d'argument. C'est donc l'objet global qui est utilisé comme contexte :
 
 ```js
-var prenom = 'Archibald';
+var prenom = "Archibald";
 
 function afficher() {
-  console.log('prenom vaut ' + this.prenom);
+  console.log("prenom vaut " + this.prenom);
 }
 
 afficher.call(); // prenom est Archibald
@@ -116,12 +115,12 @@ afficher.call(); // prenom est Archibald
 > **Note :** La valeur de `this` sera {{jsxref("undefined")}} en mode strict.
 >
 > ```js
-> 'use strict';
+> "use strict";
 >
-> var prenom = 'Archibald';
+> var prenom = "Archibald";
 >
 > function afficher() {
->   console.log('prenom vaut ' + this.prenom);
+>   console.log("prenom vaut " + this.prenom);
 > }
 >
 > afficher.call(); // Cannot read the property prenom' of undefined

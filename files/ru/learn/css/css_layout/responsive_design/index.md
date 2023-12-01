@@ -1,8 +1,6 @@
 ---
 title: Отзывчивый дизайн
 slug: Learn/CSS/CSS_layout/Responsive_Design
-translation_of: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}

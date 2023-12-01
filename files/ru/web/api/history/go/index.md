@@ -1,14 +1,8 @@
 ---
 title: History.go()
 slug: Web/API/History/go
-tags:
-  - API
-  - History API
-  - История
-  - Определение
-  - метод
-translation_of: Web/API/History/go
 ---
+
 {{APIRef("History API")}}
 
 Метод **`History.go()`** выполняет переход на определённую страницу в истории текущей сессии. С его помощью можно перемещаться как вперёд, так и назад, в зависимости от значения параметра.
@@ -31,13 +25,13 @@ history.go([delta])
 Перемещение на 1 страницу назад (аналог вызова {{domxref("History.back", "back()")}}):
 
 ```js
-history.go(-1)
+history.go(-1);
 ```
 
 Перемещение на страницу вперёд, как {{domxref("History.forward", "forward()")}}:
 
 ```js
-history.go(1)
+history.go(1);
 ```
 
 Перемещение на 2 страницы вперёд:
@@ -63,7 +57,7 @@ history.go(0);
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,7 +1,6 @@
 ---
 title: windows.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
 ---
 
 {{AddonSidebar()}}

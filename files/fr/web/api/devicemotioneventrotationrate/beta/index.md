@@ -1,8 +1,6 @@
 ---
 title: DeviceRotationRate.beta
 slug: Web/API/DeviceMotionEventRotationRate/beta
-translation_of: Web/API/DeviceMotionEventRotationRate/beta
-translation_of_original: Web/API/DeviceRotationRate/beta
 ---
 
 {{ ApiRef("Device Orientation Events") }}

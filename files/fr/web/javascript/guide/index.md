@@ -1,7 +1,6 @@
 ---
 title: Guide JavaScript
 slug: Web/JavaScript/Guide
-translation_of: Web/JavaScript/Guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}

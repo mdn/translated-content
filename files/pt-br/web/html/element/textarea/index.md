@@ -24,7 +24,7 @@ O `<textarea>` O elemento também aceita vários atributos comuns para formar `<
 
 Este elemento inclui os atributos globais.
 
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
+- `autocapitalize` {{non-standard_inline}}
 
   - : Este é um atributo não padrão suportado pelo WebKit no iOS (portanto, quase todos os navegadores executados no iOS, incluindo Safari, Firefox e Chrome), que controla se e como o valor do texto deve ser automaticamente capitalizado quando é inserido / editado pelo do utilizador. Os valores não preteridos estão disponíveis no iOS 5 e posterior. Os valores possíveis são:
 
@@ -35,7 +35,7 @@ Este elemento inclui os atributos globais.
     - `on`: {{deprecated_inline()}} Descontinuado desde o iOS 5.
     - `off`: {{deprecated_inline()}} Descontinuado desde o iOS 5.
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
 
   - : Este atributo indica se o valor do controle pode ser preenchido automaticamente pelo navegador. Os valores possíveis são:
 
@@ -44,33 +44,33 @@ Este elemento inclui os atributos globais.
 
     Se o `autocomplete` atributo não está especificado em um `<textarea>` elemento, o navegador usa o elemento `autocomplete` valor do atributo `<textarea>` proprietário do formulário do elemento. O proprietário do formulário é o {{HTMLElement("form")}} elemento que este`<textarea>` elemento é um descendente ou o elemento de formulário cuja `id` é especificado pelo `form` atributo do elemento de entrada. Para mais informações, consulte o [`autocomplete`](/pt-BR/docs/Web/HTML/Element/form#autocomplete) atribuno no {{HTMLElement("form")}}.
 
-- {{ htmlattrdef("autofocus") }}
+- `autofocus`
   - : Esse atributo booleano permite especificar que um controle de formulário tenha foco de entrada quando a página for carregada. Somente um elemento associado ao formulário em um documento pode ter esse atributo especificado.
-- {{ htmlattrdef("cols") }}
+- `cols`
   - : A largura visível do controle de texto, em larguras médias de caracteres. Se for especificado, deve ser um número inteiro positivo. Se não for especificado, o valor padrão é 20.
-- {{ htmlattrdef("disabled") }}
+- `disabled`
   - : Esse atributo booleano indica que o usuário não pode interagir com o controle. Se esse atributo não for especificado, o controle herdará sua configuração do elemento que contém, por exemplo {{ HTMLElement("fieldset") }}; se não houver elemento contendo quando o `disabled` atributo estiver definido, o controle está ativado.
-- {{ htmlattrdef("form") }}
+- `form`
   - : O elemento do formulário que o `<textarea>` elemento está associado (seu "proprietário do formulário"). O valor do atributo deve ser o `id` de um elemento de formulário no mesmo documento. Se este atributo não for especificado, o atributo `<textarea>` O elemento deve ser um descendente de um elemento do formulário. Este atributo permite que você coloque`<textarea>` elementos em qualquer lugar do documento, não apenas como descendentes de elementos do formulário.
-- {{ htmlattrdef("maxlength") }}
+- `maxlength`
   - : O número máximo de caracteres (pontos de código unicode) que o usuário pode inserir. Se esse valor não for especificado, o usuário poderá inserir um número ilimitado de caracteres.
-- {{ htmlattrdef("minlength") }}
+- `minlength`
   - : O número mínimo de caracteres (pontos de código unicode) exigidos pelo usuário.
-- {{ htmlattrdef("name") }}
+- `name`
   - : O nome do controle.
-- {{ htmlattrdef("placeholder") }}
+- `placeholder`
 
   - : Uma dica para o usuário sobre o que pode ser inserido no controle. Retornos de carro ou feeds de linha no texto do espaço reservado devem ser tratados como quebras de linha ao renderizar a dica.
 
     > **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada** {{HTMLElement("label")}} elemento vinculado à entrada. Veja [Labels e placeholders](/pt-BR/docs/Web/HTML/Element/input#labels_and_placeholders) para uma explicação completa.
 
-- {{ htmlattrdef("readonly") }}
+- `readonly`
   - : Esse atributo booleano indica que o usuário não pode modificar o valor do controle. Ao contrário do `disabled` atributo, o`readonly` O atributo não impede o usuário de clicar ou selecionar no controle. O valor de um controle somente leitura ainda é enviado com o formulário.
-- {{ htmlattrdef("required") }}
+- `required`
   - : Este atributo especifica que o usuário deve preencher um valor antes de enviar um formulário.
-- {{ htmlattrdef("rows") }}
+- `rows`
   - : O número de linhas de texto visíveis para o controle.
-- {{ htmlattrdef("spellcheck") }}
+- `spellcheck`
 
   - : Especifica se o `<textarea>`está sujeito a verificação ortográfica pelo navegador / SO subjacente. o valor pode ser:
 
@@ -78,7 +78,7 @@ Este elemento inclui os atributos globais.
     - `default` :Indica que o elemento deve agir de acordo com um comportamento padrão, possivelmente com base no próprio elemento pai `spellcheck` valor.
     - `false` : Indica que o elemento não deve ter verificação ortográfica.
 
-- {{ htmlattrdef("wrap") }}
+- `wrap`
 
   - : Indica como o controle quebra o texto. Os valores possíveis são:
 
@@ -102,7 +102,7 @@ A especificação HTML não define onde a linha de base de um `<textarea>` ou se
 
 Na maioria dos navegadores, `<textarea>`s são redimensionáveis - você notará a alça de arrasto no canto direito, que pode ser usada para alterar o tamanho do elemento na página. Isso é controlado pelo {{ cssxref("resize") }} Propriedade CSS - o redimensionamento está ativado por padrão, mas você pode desativá-lo explicitamente usando um`resize` valor de`none`:
 
-```html
+```css
 textarea {
   resize: none;
 }
@@ -118,7 +118,7 @@ textarea:invalid {
 }
 
 textarea:valid {
-   border: 2px solid lime;
+  border: 2px solid lime;
 }
 ```
 
@@ -129,8 +129,7 @@ textarea:valid {
 O exemplo a seguir mostra uma área de texto muito simples, com um número definido de linhas e colunas e algum conteúdo padrão.
 
 ```html
-<textarea name="textarea"
-   rows="10" cols="50">Write something here</textarea>
+<textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
 {{ EmbedLiveSample('Basic_example','600','150') }}
@@ -140,9 +139,9 @@ O exemplo a seguir mostra uma área de texto muito simples, com um número defin
 Este exemplo tem um número mínimo e máximo de caracteres - de 10 e 20, respectivamente. Experimente e veja.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   minlength="10" maxlength="20">Write something here</textarea>
+<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">
+Write something here</textarea
+>
 ```
 
 {{ EmbedLiveSample('Min_and_max_length','600','80') }}
@@ -154,9 +153,11 @@ Observe que `minlength` não impede o usuário de remover caracteres para que o 
 Este exemplo tem um espaço reservado definido. Observe como ele desaparece quando você começa a digitar na caixa.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   placeholder="Comment text."></textarea>
+<textarea
+  name="textarea"
+  rows="5"
+  cols="30"
+  placeholder="Comment text."></textarea>
 ```
 
 {{ EmbedLiveSample('Placeholder','600','80') }}
@@ -168,12 +169,12 @@ Este exemplo tem um espaço reservado definido. Observe como ele desaparece quan
 Este exemplo mostra dois `<textarea>`s — um dos quais é `disabled`, e o outro é `readonly`.Brinque com os dois e verá a diferença de comportamento - O `disabled` elemento não é selecionável de forma alguma (e seu valor não é enviado), enquanto o elemento `readonly` é selecionável e seu conteúdo copiável (e seu valor é enviado); você simplesmente não pode editar o conteúdo.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   disabled>I am a disabled textarea</textarea>
-<textarea name="textarea"
-   rows="5" cols="30"
-   readonly>I am a readonly textarea</textarea>
+<textarea name="textarea" rows="5" cols="30" disabled>
+I am a disabled textarea</textarea
+>
+<textarea name="textarea" rows="5" cols="30" readonly>
+I am a readonly textarea</textarea
+>
 ```
 
 {{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
@@ -223,17 +224,13 @@ Este exemplo mostra dois `<textarea>`s — um dos quais é `disabled`, e o outro
   </tbody>
 </table>
 
-## Especificacões
+## Especificações
 
-| Specificação                                                                                                 | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.7', '&lt;textarea&gt;')}}         | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.textarea")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,7 +1,6 @@
 ---
 title: Extension des outils de développement
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
-translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
 
 {{AddonSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Understanding CSS z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
 
 Normalmente páginas HTML podem ser consideradas bi-dimensionais, pois texto, imagens e outros elementos podem ser dispostos na página sem sobreposição. Há apenas um fluxo de renderização e todos os elementos sabem do espaço ocupado por outros. O atributo {{cssxref("z-index")}} lhe permite ajustar a ordem de sobreposição dos objetos ao renderizar o conteúdo.

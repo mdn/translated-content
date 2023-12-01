@@ -2,7 +2,6 @@
 title: "Element: children プロパティ"
 short-title: children
 slug: Web/API/Element/children
-original_slug: Web/API/ParentNode/children
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---

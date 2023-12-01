@@ -1,7 +1,6 @@
 ---
 title: sub
 slug: Web/HTML/Element/sub
-original_slug: Web/HTML/Elemento/sub
 ---
 
 {{HTMLSidebar}}

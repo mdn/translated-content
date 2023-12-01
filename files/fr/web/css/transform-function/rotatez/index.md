@@ -1,7 +1,6 @@
 ---
 title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
-translation_of: Web/CSS/transform-function/rotateZ()
 ---
 
 {{CSSRef}}

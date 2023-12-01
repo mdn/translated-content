@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`sort()`** permet de trier numériquement les éléments d'un tabl
 ## Syntaxe
 
 ```js
-typedarray.sort([fonctionComparaison])
+typedarray.sort([fonctionComparaison]);
 ```
 
 ### Paramètres

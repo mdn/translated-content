@@ -1,7 +1,6 @@
 ---
 title: Ecrire des applications client WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 
 Les WebSockets représentent une technologie, basée sur le protocole web socket, qui permet d'établir une session de communication bilatérale entre un navigateur web et un serveur. Un navigateur web est un exemple typique de client websocket typique mais le protocole n'est dépendant d'aucune plateforme.

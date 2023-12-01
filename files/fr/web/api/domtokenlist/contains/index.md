@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
-translation_of: Web/API/DOMTokenList/contains
 ---
 
 {{APIRef("DOM")}}

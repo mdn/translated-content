@@ -1,7 +1,6 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
-translation_of: Web/CSS/image-rendering
 ---
 
 {{CSSRef}}

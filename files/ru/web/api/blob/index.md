@@ -1,8 +1,8 @@
 ---
 title: Blob
 slug: Web/API/Blob
-translation_of: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 Объект `Blob` представляет из себя подобный файлу объект с неизменяемыми, необработанными данными; они могут читаться как текст или двоичные данные, либо могут быть преобразованы в {{DOMxRef("ReadableStream")}}, таким образом, его методы могут быть использованы для обработки данных.
@@ -51,8 +51,10 @@ API, принимающие объекты `Blob`, также перечисле
 Конструктор {{domxref("Blob.Blob", "Blob() constructor")}} может создавать объекты blob из других объектов. Например, чтобы сконструировать blob из строки JSON:
 
 ```js
-const obj = {hello: 'world'};
-const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+const obj = { hello: "world" };
+const blob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 ```
 
 > **Предупреждение:** До того как конструктор Blob стал доступен, это могло быть выполнено через устаревший API {{domxref("BlobBuilder")}}:
@@ -61,7 +63,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 > var builder = new BlobBuilder();
 > var fileParts = ['<a id="a"><b id="b">hey!</b></a>'];
 > builder.append(fileParts[0]);
-> var myBlob = builder.getBlob('text/xml');
+> var myBlob = builder.getBlob("text/xml");
 > ```
 
 ### Создание URL для содержимого типизированного массива
@@ -71,10 +73,11 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 #### HTML
 
 ```html
-<p>This example creates a typed array containing the ASCII codes
-   for the space character through the letter Z, then converts it
-   to an object URL. A link to open that object URL is created.
-   Click the link to see the decoded object URL.</p>
+<p>
+  This example creates a typed array containing the ASCII codes for the space
+  character through the letter Z, then converts it to an object URL. A link to
+  open that object URL is created. Click the link to see the decoded object URL.
+</p>
 ```
 
 #### JavaScript
@@ -83,20 +86,20 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 
 ```js
 function typedArrayToURL(typedArray, mimeType) {
-  return URL.createObjectURL(new Blob([typedArray.buffer], {type: mimeType}))
+  return URL.createObjectURL(new Blob([typedArray.buffer], { type: mimeType }));
 }
 
 const bytes = new Uint8Array(59);
 
-for(let i = 0; i < 59; i++) {
+for (let i = 0; i < 59; i++) {
   bytes[i] = 32 + i;
 }
 
-const url = typedArrayToURL(bytes, 'text/plain');
+const url = typedArrayToURL(bytes, "text/plain");
 
-const link = document.createElement('a');
+const link = document.createElement("a");
 link.href = url;
-link.innerText = 'Open the array URL';
+link.innerText = "Open the array URL";
 
 document.body.appendChild(link);
 ```
@@ -105,7 +108,7 @@ document.body.appendChild(link);
 
 ```js
 var typedArray = GetTheTypedArraySomehow();
-var blob = new Blob([typedArray], {type: 'application/octet-binary'}); // pass a useful mime type here
+var blob = new Blob([typedArray], { type: "application/octet-binary" }); // pass a useful mime type here
 var url = URL.createObjectURL(blob);
 // url will be something like: blob:d3958f5c-0777-0845-9dcf-2cb28783acaf
 // now you can use the url in any context that regular URLs can be used in, for example img.src, etc.
@@ -117,8 +120,8 @@ var url = URL.createObjectURL(blob);
 
 ```js
 var reader = new FileReader();
-reader.addEventListener("loadend", function() {
-   // reader.result contains the contents of blob as a typed array
+reader.addEventListener("loadend", function () {
+  // reader.result contains the contents of blob as a typed array
 });
 reader.readAsArrayBuffer(blob);
 ```
@@ -126,7 +129,7 @@ reader.readAsArrayBuffer(blob);
 Другой способ прочитать содержимое из `Blob` – это использовать {{domxref("Response")}}. Следующий код читает содержимое `Blob` как текст:
 
 ```js
-const text = await (new Response(blob)).text();
+const text = await new Response(blob).text();
 ```
 
 Или можно использовать {{DOMxRef("Blob.text()")}}:
@@ -141,19 +144,9 @@ const text = await blob.text();
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Замечания Gecko: доступность в привилегированном коде
-
-Для использования в коде chrome, JSM и Bootstrap scope, вы должны импортировать его следующим образом:
-
-```js
-Cu.importGlobalProperties(['Blob']);
-```
-
-`Blob` доступен в Worker scopes.
 
 ## Смотрите также
 

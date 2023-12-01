@@ -1,7 +1,6 @@
 ---
 title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
-original_slug: Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/byteLength
 ---
 
 {{JSRef}}

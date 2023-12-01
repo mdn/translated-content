@@ -1,7 +1,6 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-original_slug: Web/HTML/Elemento/data
 ---
 
 ## Resúmen

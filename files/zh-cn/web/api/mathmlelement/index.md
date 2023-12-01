@@ -9,11 +9,11 @@ slug: Web/API/MathMLElement
 
 ## 属性
 
-_This interface has no properties, but inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}_
+_This interface has no properties, but inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}._
 
 ## 方法
 
-_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}_
+_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}._
 
 ## 示例
 
@@ -30,7 +30,7 @@ _This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAn
 ### JavaScript
 
 ```js
-document.querySelector('msqrt').constructor.name; // MathMLElement
+document.querySelector("msqrt").constructor.name; // MathMLElement
 ```
 
 ## 规范

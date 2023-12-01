@@ -1,7 +1,6 @@
 ---
 title: top
 slug: Web/CSS/top
-translation_of: Web/CSS/top
 ---
 
 {{CSSRef}}
@@ -91,7 +90,7 @@ div {
 p.relatif {
   position: relative;
   top: 5em;
-  border: 2px black solid
+  border: 2px black solid;
 }
 ```
 

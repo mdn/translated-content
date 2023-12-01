@@ -1,7 +1,6 @@
 ---
 title: "HTML el atributo: multiple"
 slug: Web/HTML/Attributes/multiple
-original_slug: Web/HTML/Atributos/multiple
 ---
 
 El atributo booleano [`multiple`](/es/docs/Web/HTML/Element/input#multiple), si se establece, significa que el control del formulario acepta uno o más valores. Válido para los {{HTMLElement("input")}}s de tipo {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/file", "file")}} y {{HTMLElement("select")}}, la forma en que el usuario opta por valores múltiples depende del control del formulario.

@@ -1,7 +1,6 @@
 ---
 title: theme.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/reset
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme/reset
 ---
 
 {{AddonSidebar()}}

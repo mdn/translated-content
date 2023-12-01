@@ -52,7 +52,7 @@ Este elemento implementa a interface [`SVGDefsElement`](/pt-BR/DOM/SVGDefsElemen
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.defs")}}
+{{Compat}}
 
 ## Veja também
 

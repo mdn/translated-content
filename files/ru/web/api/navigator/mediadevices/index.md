@@ -1,8 +1,8 @@
 ---
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
-translation_of: Web/API/Navigator/mediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 Свойство **`Navigator.mediaDevices`** только для чтения, возвращает объект {{domxref("MediaDevices")}}, который предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера и микрофон, а также совместное использование экрана.
@@ -21,7 +21,7 @@ var mediaDevices = navigator.mediaDevices;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

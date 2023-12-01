@@ -35,6 +35,7 @@ zoom: unset;
 - `reset` {{non-standard_inline}}
 
   - : ユーザーが非ピンチベースのズームを利用したときは (たとえばキーボードで <kbd>Ctrl</kbd>-<kbd>-</kbd> または <kbd>Ctrl</kbd>+<kbd>+</kbd> のショートカット) 要素を拡大しない。 WebKit (とおそらく Blink) のみ対応しています。
+
 - {{cssxref("&lt;percentage&gt;")}}
   - : ズーム率です。 `100%` と `normal` は等価です。 `100%` よりも大きな値はズームイン、 `100%`よりも小さな値はズームアウトします。
 - {{cssxref("&lt;number&gt;")}}

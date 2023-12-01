@@ -1,7 +1,6 @@
 ---
 title: Axes
 slug: Web/XPath/Axes
-translation_of: Web/XPath/Axes
 ---
 
 {{ XsltRef() }}

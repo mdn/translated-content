@@ -29,10 +29,10 @@ Math.sinh(x)
 ## 示例
 
 ```js
-Math.sinh(0)      // 0
-Math.sinh(1)      // 1.1752011936438014
-Math.sinh("-1")   // -1.1752011936438014
-Math.sinh("foo")  // NaN
+Math.sinh(0); // 0
+Math.sinh(1); // 1.1752011936438014
+Math.sinh("-1"); // -1.1752011936438014
+Math.sinh("foo"); // NaN
 ```
 
 ## 规范
@@ -44,8 +44,8 @@ Math.sinh("foo")  // NaN
 该函数可以使用 {{jsxref("Math.exp()")}} 函数来实现：
 
 ```js
-function sinh(x){
-    return  (Math.exp(x) - Math.exp(-x)) / 2;
+function sinh(x) {
+  return (Math.exp(x) - Math.exp(-x)) / 2;
 }
 ```
 
@@ -53,7 +53,7 @@ function sinh(x){
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.acos()")}}
 - {{jsxref("Math.asin()")}}

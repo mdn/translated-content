@@ -32,9 +32,9 @@ sab.slice(begin, end)
 
 ```js
 var sab = new SharedArrayBuffer(1024);
-sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 
@@ -46,7 +46,7 @@ sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("SharedArrayBuffer")}}
 - {{jsxref("Array.prototype.slice()")}}

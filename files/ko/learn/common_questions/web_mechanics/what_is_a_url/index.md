@@ -1,7 +1,6 @@
 ---
 title: URL이란?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
-original_slug: Learn/Common_questions/What_is_a_URL
 l10n:
   sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---

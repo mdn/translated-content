@@ -1,7 +1,6 @@
 ---
 title: Firefox 7 pour les développeurs
 slug: Mozilla/Firefox/Releases/7
-translation_of: Mozilla/Firefox/Releases/7
 ---
 
 {{FirefoxSidebar}}
