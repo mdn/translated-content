@@ -1,5 +1,5 @@
 ---
-title: Blob： text() 方法
+title: Blob：text() 方法
 slug: Web/API/Blob/text
 ---
 
