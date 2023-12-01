@@ -1,6 +1,7 @@
 ---
 title: 印刷
-slug: Web/Guide/Printing
+slug: Web/CSS/CSS_media_queries/Printing
+original_slug: Web/Guide/Printing
 ---
 
 コンテンツを印刷するときに、ウェブサイトまたはアプリケーションで使い勝手を向上させたい場合があります。考えられるシナリオはいくつかあります。

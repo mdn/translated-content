@@ -62,7 +62,7 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 
 - [可变字体指南](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : 了解如何在你的设计中使用可变字体。
-- [网络开放字体格式（The Web Open Font Format，简称 WOFF）](/zh-CN/docs/Web/Guide/WOFF)
+- [网络开放字体格式（WOFF）](/zh-CN/docs/Web/CSS/CSS_fonts/WOFF)
   - : WOFF（网络开放字体格式）是在网络上开放给任何人免费使用的字体文件格式。
 
 ## 用户界面开发
