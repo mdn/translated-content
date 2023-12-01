@@ -30166,17 +30166,6 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Learn": {
-    "modified": "2020-05-04T12:39:54.645Z",
-    "contributors": [
-      "Uemmra3",
-      "silverskyvicto",
-      "mfuji09",
-      "SphinxKnight",
-      "nonki777",
-      "Yuuki Takahashi"
-    ]
-  },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
     "modified": "2020-08-12T11:49:11.332Z",
     "contributors": [
@@ -30317,10 +30306,6 @@
   "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": ["chrisdavidmills", "dvincent"]
-  },
-  "conflicting/Web/API": {
-    "modified": "2019-11-24T06:54:13.469Z",
-    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "Sheppy"]
   },
   "conflicting/Web/API/Document": {
     "modified": "2020-10-15T22:12:31.952Z",
