@@ -1,12 +1,7 @@
 ---
 title: Web 开放字体格式（WOFF）
 slug: Web/CSS/CSS_fonts/WOFF
-original_slug: Web/Guide/WOFF
 ---
-
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
-</section>
 
 **WOFF**（**Web Open Font Format**，Web 开放字体格式）是由 Mozilla 与 Type Supply、LettError 及其他组织协同开发的一种新的网页字体格式。它使用了与 TrueType、OpenType、Open Font 所采用的 `sfnt` 结构类似的压缩算法，不过还添加了元数据（metadata）及私有数据结构，其中包括了自定义空间，允许厂家和经销商在需要时提供许可证。
 
