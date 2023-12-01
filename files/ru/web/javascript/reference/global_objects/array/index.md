@@ -211,37 +211,37 @@ if (Array.every(str, isLetter)) {
   //   return typeof Array[methodName] === 'function'
   // });
   const methods = [
-      "join",
-      "reverse",
-      "sort",
-      "push",
-      "pop",
-      "shift",
-      "unshift",
-      "splice",
-      "concat",
-      "slice",
-      "indexOf",
-      "lastIndexOf",
-      "forEach",
-      "map",
-      "reduce",
-      "reduceRight",
-      "filter",
-      "some",
-      "every",
-    ],
-    methodCount = methods.length,
-    assignArrayGeneric = function (methodName) {
-      if (!Array[methodName]) {
-        const method = Array.prototype[methodName];
-        if (typeof method === "function") {
-          Array[methodName] = function () {
-            return method.call.apply(method, arguments);
-          };
-        }
+    "join",
+    "reverse",
+    "sort",
+    "push",
+    "pop",
+    "shift",
+    "unshift",
+    "splice",
+    "concat",
+    "slice",
+    "indexOf",
+    "lastIndexOf",
+    "forEach",
+    "map",
+    "reduce",
+    "reduceRight",
+    "filter",
+    "some",
+    "every",
+  ];
+  const methodCount = methods.length;
+  const assignArrayGeneric = function (methodName) {
+    if (!Array[methodName]) {
+      const method = Array.prototype[methodName];
+      if (typeof method === "function") {
+        Array[methodName] = function () {
+          return method.call.apply(method, arguments);
+        };
       }
-    };
+    }
+  };
 
   for (let i = 0; i < methodCount; i++) {
     assignArrayGeneric(methods[i]);
