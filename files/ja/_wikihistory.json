@@ -30158,36 +30158,6 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
-    "modified": "2020-08-12T11:49:11.332Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "chrisdavidmills",
-      "fscholz",
-      "ethertank",
-      "Potappo",
-      "Mgjbot",
-      "Summit677",
-      "Marsf",
-      "Shimono",
-      "Taken Bot",
-      "Dria"
-    ]
-  },
-  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
-    "modified": "2020-12-06T14:17:48.495Z",
-    "contributors": [
-      "eldesh",
-      "silverskyvicto",
-      "mfuji09",
-      "JuthaDDA",
-      "Uemmra3",
-      "hamasaki",
-      "kenji-yamasaki",
-      "sii"
-    ]
-  },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",
     "contributors": ["mfuji09", "silverskyvicto"]
