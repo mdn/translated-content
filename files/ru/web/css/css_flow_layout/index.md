@@ -1,13 +1,6 @@
 ---
 title: Поточная раскладка CSS
 slug: Web/CSS/CSS_flow_layout
-tags:
-  - CSS
-  - Раскладка
-  - Руководство
-  - поток
-  - поточная раскладка
-translation_of: Web/CSS/CSS_Flow_Layout
 ---
 
 {{CSSRef}}

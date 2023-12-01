@@ -1,7 +1,6 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
-translation_of: Web/HTML/Element/input/month
 ---
 
 {{HTMLSidebar}}

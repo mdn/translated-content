@@ -1,7 +1,6 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-original_slug: Web/HTML/Elemento/template
 ---
 
 El **elemento** **HTML `<template>`** es un mecanismo para mantener el contenido {{Glossary("HTML")}} del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript.

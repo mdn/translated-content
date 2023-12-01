@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
-translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
 
 {{APIRef}}

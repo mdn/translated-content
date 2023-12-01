@@ -1,8 +1,6 @@
 ---
 title: Страница о Mozilla
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

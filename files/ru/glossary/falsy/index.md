@@ -1,11 +1,9 @@
 ---
 title: Ложноподобное значение
 slug: Glossary/Falsy
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
 ---
+
+{{GlossarySidebar}}
 
 **Ложноподобное** (**falsy**) значение — значение, которое становится `false` в {{Glossary("Boolean", "булевом")}} контексте.
 

@@ -1,7 +1,6 @@
 ---
 title: DOMPointReadOnly
 slug: Web/API/DOMPointReadOnly
-translation_of: Web/API/DOMPointReadOnly
 ---
 
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}

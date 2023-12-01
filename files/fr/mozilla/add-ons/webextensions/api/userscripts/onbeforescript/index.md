@@ -1,7 +1,6 @@
 ---
 title: userScripts.onBeforeScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
 ---
 
 {{AddonSidebar}}La propriété **`onBeforeScript`** de l'événement {{WebExtAPIRef("userScripts","browser.userScripts")}} est un gestionnaire d'évènement qui traite l'évènement `beforeScript`.

@@ -1,7 +1,6 @@
 ---
 title: Contexte de formatage de blocs
 slug: Web/Guide/CSS/Block_formatting_context
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
 
 {{CSSRef}}

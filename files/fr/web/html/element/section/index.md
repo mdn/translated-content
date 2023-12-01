@@ -1,7 +1,6 @@
 ---
 title: "<section> : l'élément de section générique"
 slug: Web/HTML/Element/section
-translation_of: Web/HTML/Element/section
 ---
 
 {{HTMLSidebar}}

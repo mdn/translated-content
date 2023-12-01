@@ -1,7 +1,7 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-l10:
+l10n:
   sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
 ---
 

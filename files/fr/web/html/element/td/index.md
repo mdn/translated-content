@@ -1,7 +1,6 @@
 ---
 title: "<td> : l'élément de cellule de tableau"
 slug: Web/HTML/Element/td
-translation_of: Web/HTML/Element/td
 ---
 
 {{HTMLSidebar}}

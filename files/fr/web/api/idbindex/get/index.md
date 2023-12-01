@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.get()
 slug: Web/API/IDBIndex/get
-translation_of: Web/API/IDBIndex/get
 ---
 
 {{ APIRef("IndexedDB") }}

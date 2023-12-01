@@ -1,7 +1,6 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`Object.getPrototypeOf()`** renvoie le prototype d'un objet donné
 ## Syntaxe
 
 ```js
-Object.getPrototypeOf(obj)
+Object.getPrototypeOf(obj);
 ```
 
 ### Paramètres

@@ -1,7 +1,6 @@
 ---
 title: number
 slug: Web/XSLT/Element/number
-translation_of: Web/XSLT/Element/number
 ---
 
 {{ XsltRef() }}

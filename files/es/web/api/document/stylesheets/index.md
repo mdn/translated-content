@@ -1,7 +1,6 @@
 ---
 title: Document.styleSheets
 slug: Web/API/Document/styleSheets
-original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
 
 {{ ApiRef() }}

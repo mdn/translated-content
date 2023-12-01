@@ -1,7 +1,6 @@
 ---
 title: topSites.MostVisitedURL
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL
-translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL
 ---
 
 {{AddonSidebar()}}

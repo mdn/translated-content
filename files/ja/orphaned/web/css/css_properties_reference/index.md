@@ -1,7 +1,6 @@
 ---
 title: CSS プロパティリファレンス
 slug: orphaned/Web/CSS/CSS_Properties_Reference
-original_slug: Web/CSS/CSS_Properties_Reference
 ---
 
 ## 一般的な CSS プロパティリファレンス

@@ -1,8 +1,9 @@
 ---
 title: Évènement
 slug: Glossary/Event
-translation_of: Glossary/event
 ---
+
+{{GlossarySidebar}}
 
 Les évèhements sont des éléments actifs générés par les éléments [DOM](/fr/docs/Glossaire/DOM) qui peuvent être manipulés par un code Javascript.
 

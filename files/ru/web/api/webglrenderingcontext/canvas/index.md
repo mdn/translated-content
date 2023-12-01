@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
-translation_of: Web/API/WebGLRenderingContext/canvas
 ---
 
 {{APIRef("WebGL")}}
@@ -31,8 +30,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get back a reference to it from the `WebGLRenderingContext` using the `canvas` property:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 gl.canvas; // HTMLCanvasElement
 ```
 
@@ -42,15 +41,13 @@ Example using the experimental {{domxref("OffscreenCanvas")}} object.
 
 ```js
 var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext('webgl');
+var gl = offscreen.getContext("webgl");
 gl.canvas; // OffscreenCanvas
 ```
 
 ## Specifications
 
-| Specification                                                                                                            | Status                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('WebGL', "#DOM-WebGLRenderingContext-canvas", "WebGLRenderingContext.canvas")}} | {{Spec2('WebGL')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

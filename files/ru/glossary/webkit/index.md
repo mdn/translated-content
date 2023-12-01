@@ -1,9 +1,9 @@
 ---
 title: WebKit
 slug: Glossary/WebKit
-translation_of: Glossary/WebKit
-original_slug: Глоссарий/WebKit
 ---
+
+{{GlossarySidebar}}
 
 _WebKit_ это фреймворк который показывает правильно отформатированные веб-страницы на основе их разметки. {{Glossary("Apple Safari")}} и большинство мобильных браузеров зависят от Webkit (Webkit это очень портативный и легко настраиваемый фреймворк).
 

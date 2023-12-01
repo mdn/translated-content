@@ -1,7 +1,6 @@
 ---
 title: font-family
 slug: Web/CSS/@font-face/font-family
-translation_of: Web/CSS/@font-face/font-family
 ---
 
 {{CSSRef}}

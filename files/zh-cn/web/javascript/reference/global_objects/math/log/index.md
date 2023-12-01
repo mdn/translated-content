@@ -47,7 +47,7 @@ Math.log(10); // 2.302585092994046
 
 ```js
 function getBaseLog(x, y) {
-    return Math.log(y) / Math.log(x);
+  return Math.log(y) / Math.log(x);
 }
 ```
 
@@ -61,8 +61,10 @@ function getBaseLog(x, y) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
 - {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log2()")}}
 - {{jsxref("Math.pow()")}}

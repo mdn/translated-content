@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Operators/Remainder
 ## 構文
 
 ```js
-x % y
+x % y;
 ```
 
 ## 例
@@ -22,33 +22,33 @@ x % y
 ### 正の値の剰余
 
 ```js
- 12 % 5  //  2
- 1 % -2 //  1
- 1 % 2  //  1
- 2 % 3  //  2
-5.5 % 2 // 1.5
+12 % 5; // 2
+1 % -2; // 1
+1 % 2; // 1
+2 % 3; // 2
+5.5 % 2; // 1.5
 ```
 
 ### 負の値の剰余
 
 ```js
--12 % 5 // -2
--1 % 2  // -1
--4 % 2  // -0
+-12 % 5; // -2
+-1 % 2; // -1
+-4 % 2; // -0
 ```
 
 ### NaN の剰余
 
 ```js
-NaN % 2 // NaN
+NaN % 2; // NaN
 ```
 
 ### 無限大の剰余
 
 ```js
-Infinity % 2 // NaN
-Infinity % 0 // NaN
-Infinity % Infinity // NaN
+Infinity % 2; // NaN
+Infinity % 0; // NaN
+Infinity % Infinity; // NaN
 ```
 
 ## 仕様書

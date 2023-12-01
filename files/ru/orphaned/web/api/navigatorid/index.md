@@ -1,8 +1,6 @@
 ---
 title: NavigatorID
 slug: orphaned/Web/API/NavigatorID
-translation_of: Web/API/NavigatorID
-original_slug: Web/API/NavigatorID
 ---
 
 {{APIRef("HTML DOM")}}
@@ -41,7 +39,7 @@ _Интерфейс_ _`NavigatorID`_ _не наследует других ме�
 
 ## Совместимость в браузерах
 
-{{Compat("api.NavigatorID")}}
+{{Compat}}
 
 ## Смотрите также
 

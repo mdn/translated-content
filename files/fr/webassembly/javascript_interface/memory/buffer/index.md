@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Memory.prototype.buffer
 slug: WebAssembly/JavaScript_interface/Memory/buffer
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
 ---
 
 {{WebAssemblySidebar}}

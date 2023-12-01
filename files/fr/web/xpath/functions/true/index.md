@@ -1,7 +1,6 @@
 ---
 title: "true"
 slug: Web/XPath/Functions/true
-translation_of: Web/XPath/Functions/true
 ---
 
 {{ XsltRef() }}

@@ -1,12 +1,6 @@
 ---
 title: Оператор группировки
 slug: Web/JavaScript/Reference/Operators/Grouping
-tags:
-  - JavaScript
-  - Оператор
-  - Основные выражения
-translation_of: Web/JavaScript/Reference/Operators/Grouping
-original_slug: Web/JavaScript/Reference/Operators/Группировка
 ---
 
 {{jsSidebar("Operators")}}
@@ -29,22 +23,22 @@ original_slug: Web/JavaScript/Reference/Operators/Группировка
 
 Переопределяем порядок, когда сначала выполняется умножение и деление, а потом сложение и вычитание, чтобы сначала выполнить сложение.
 
-```js
+```js-nolint
 let a = 1;
 let b = 2;
 let c = 3;
 
 // обычный порядок
-a + b * c     // 7
+a + b * c; // 7
 // выполнится так
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // теперь переопределим порядок
 // сложение будет до умножения
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // что эквивалентно следующему
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ## Спецификации

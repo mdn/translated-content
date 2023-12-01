@@ -1,7 +1,6 @@
 ---
 title: API de Notifications
 slug: Web/API/Notifications_API
-translation_of: Web/API/Notifications_API
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

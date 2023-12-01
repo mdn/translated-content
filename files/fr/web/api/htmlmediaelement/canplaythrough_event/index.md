@@ -1,7 +1,6 @@
 ---
 title: "HTMLMediaElement: canplaythrough"
 slug: Web/API/HTMLMediaElement/canplaythrough_event
-translation_of: Web/API/HTMLMediaElement/canplaythrough_event
 ---
 
 L'événement **`canplaythrough`** est déclenché lorsque le user agent peut jouer le média et estime que suffisament de données ont été chargées pour le lire jusqu'au bout. (Sans s'arrêter afin de charger plus contenu en mémoire)

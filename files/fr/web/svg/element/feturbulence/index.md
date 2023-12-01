@@ -1,7 +1,6 @@
 ---
 title: <feTurbulence>
 slug: Web/SVG/Element/feTurbulence
-translation_of: Web/SVG/Element/feTurbulence
 ---
 
 {{SVGRef}}

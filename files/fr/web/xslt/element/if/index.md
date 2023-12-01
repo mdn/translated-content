@@ -1,7 +1,6 @@
 ---
 title: if
 slug: Web/XSLT/Element/if
-translation_of: Web/XSLT/Element/if
 ---
 
 {{ XsltRef() }}

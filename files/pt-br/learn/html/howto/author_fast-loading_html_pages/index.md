@@ -1,7 +1,6 @@
 ---
 title: Dicas para criar páginas HTML de carregamento rápido
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-original_slug: Web/HTML/Dicas_para_criar_páginas_HTML_de_carregamento_rápido
 ---
 
 Estas dicas são baseadas em conhecimento comum e experimentação.

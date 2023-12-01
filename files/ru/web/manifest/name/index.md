@@ -1,11 +1,6 @@
 ---
 title: name
 slug: Web/Manifest/name
-tags:
-  - Manifest
-  - Web
-  - name
-translation_of: Web/Manifest/name
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

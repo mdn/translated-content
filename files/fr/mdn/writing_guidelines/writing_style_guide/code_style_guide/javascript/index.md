@@ -1,7 +1,6 @@
 ---
 title: Lignes directrices pour JavaScript
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-translation_of: MDN/Guidelines/Code_guidelines/JavaScript
 ---
 
 {{MDNSidebar}}

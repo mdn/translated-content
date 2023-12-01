@@ -1,16 +1,8 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-tags:
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -40,10 +32,10 @@ Math.cbrt(x)
 
 ```js
 Math.cbrt(-1); // -1
-Math.cbrt(0);  // 0
-Math.cbrt(1);  // 1
+Math.cbrt(0); // 0
+Math.cbrt(1); // 1
 
-Math.cbrt(2);  // 1.2599210498948734
+Math.cbrt(2); // 1.2599210498948734
 ```
 
 ## Полифил
@@ -51,15 +43,17 @@ Math.cbrt(2);  // 1.2599210498948734
 Для всех <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math>, мы имеем <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math>, так что этот метод может эмулироваться следующим образом:
 
 ```js
-Math.cbrt = Math.cbrt || function(x) {
-  if (x === 0 || x === +1 / 0 || x === -1 / 0 || x !== x) {
-    return x;
-  }
-  var a = Math.abs(x);
-  var y = Math.exp(Math.log(a) / 3);
-  // from http://en.wikipedia.org/wiki/Cube_root#Numerical_methods
-  return (x / a) * (y + (a / (y * y) - y) / 3);
-};
+Math.cbrt =
+  Math.cbrt ||
+  function (x) {
+    if (x === 0 || x === +1 / 0 || x === -1 / 0 || x !== x) {
+      return x;
+    }
+    var a = Math.abs(x);
+    var y = Math.exp(Math.log(a) / 3);
+    // from http://en.wikipedia.org/wiki/Cube_root#Numerical_methods
+    return (x / a) * (y + (a / (y * y) - y) / 3);
+  };
 ```
 
 ## Спецификации

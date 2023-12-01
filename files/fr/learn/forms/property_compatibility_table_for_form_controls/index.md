@@ -1,7 +1,6 @@
 ---
 title: Table de compatibilité des propriétés pour les widgets de formulaire
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
 ---
 
 {{learnsidebar}}

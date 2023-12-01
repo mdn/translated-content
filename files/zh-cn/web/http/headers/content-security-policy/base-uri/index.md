@@ -1,5 +1,5 @@
 ---
-title: 'CSP: base-uri'
+title: "CSP: base-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
 ---
 
@@ -44,7 +44,7 @@ Content-Security-Policy: base-uri <source> <source>;
 ### Meta tag 配置
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
 ```
 
 ### Apache 配置
@@ -66,12 +66,10 @@ add_header Content-Security-Policy "base-uri 'self';"
 假如你的域名不是 `example.com`，那么将 {{HTMLElement("base")}} 元素的 `href` 属性值设置成 `https://example.com` 会违反 CSP 策略。
 
 ```html example-bad
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
-<base href="http://example.com/">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
+<base href="http://example.com/" />
 
-// Error: Refused to set the document's base URI to 'http://example.com/'
-// because it violates the following Content Security Policy
-// directive: "base-uri 'self'"
+<!-- Error: Refused to set the document's base URI to 'http://example.com/' because it violates the following Content Security Policy directive: "base-uri 'self'" -->
 ```
 
 ## 规范

@@ -1,7 +1,6 @@
 ---
 title: Fonctionnalités de performances liées à HTML
 slug: Learn/Performance/HTML
-translation_of: Learn/Performance/HTML
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}

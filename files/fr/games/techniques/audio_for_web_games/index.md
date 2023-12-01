@@ -1,7 +1,6 @@
 ---
 title: L'audio dans les jeux Web
 slug: Games/Techniques/Audio_for_Web_Games
-translation_of: Games/Techniques/Audio_for_Web_Games
 ---
 
 {{GamesSidebar}}

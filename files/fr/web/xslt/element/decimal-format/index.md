@@ -1,7 +1,6 @@
 ---
 title: decimal-format
 slug: Web/XSLT/Element/decimal-format
-translation_of: Web/XSLT/Element/decimal-format
 ---
 
 {{ XsltRef() }}

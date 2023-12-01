@@ -1,7 +1,6 @@
 ---
 title: Manipulation Audio et Vidéo
 slug: Web/Guide/Audio_and_video_manipulation
-translation_of: Web/Guide/Audio_and_video_manipulation
 ---
 
 La beauté du web est qu'on peut combiner différentes technologies pour en créer de nouvelles. Avoir de l'audio et vidéo nativement dans le navigateur nous donne la possibilité d'utiliser ces flux de données avec d'autres technologies comme {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou [Web Audio API](/fr/docs/Web/API/Web_Audio_API) pour modifier le média — par exemple ajouter des effets de réverbération ou de compression à l'audio, ou encore des filtres noir & blanc/sépia aux vidéos. Cet article fournit une référence pour expliquer ce que vous pouvez faire.
@@ -31,10 +30,10 @@ On peut configurer notre lecteur vidéo et l'élément `<canvas>` comme ceci:
   height="270"
   crossorigin="anonymous">
   <source
-    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
   <source
-    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
     type="video/mp4" />
 </video>
 
@@ -114,9 +113,9 @@ processor.doLoad();
 
 Exemple:
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note :** Vous pouvez trouver le [code source de cette démo sur GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) ([la voir en direct](https://mdn.github.io/webgl-examples/tutorial/sample8/) aussi).
+> **Note :** Vous pouvez trouver le [code source de cette démo sur GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([la voir en direct](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) aussi).
 
 ### Vitesse de lecture
 
@@ -128,7 +127,7 @@ HTML:
 <video
   id="my-video"
   controls
-  src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
+  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
 ```
 
 JavaScript:
@@ -143,10 +142,10 @@ myVideo.playbackRate = 2;
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270">
   <source
-    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
     type="video/webm" />
   <source
-    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
     type="video/mp4" />
 </video>
 <div class="playable-buttons">

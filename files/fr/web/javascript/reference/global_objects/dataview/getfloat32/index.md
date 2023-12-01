@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.getFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 ---
 
 {{JSRef}}

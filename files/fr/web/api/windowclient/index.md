@@ -1,7 +1,6 @@
 ---
 title: WindowClient
 slug: Web/API/WindowClient
-translation_of: Web/API/WindowClient
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

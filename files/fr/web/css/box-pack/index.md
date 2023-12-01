@@ -1,7 +1,6 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
-translation_of: Web/CSS/box-pack
 ---
 
 {{CSSRef}}{{Non-standard_header}}

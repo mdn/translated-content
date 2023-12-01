@@ -1,15 +1,22 @@
 ---
-title: Navigator.doNotTrack
+title: "Navigator: doNotTrack プロパティ"
+short-title: doNotTrack
 slug: Web/API/Navigator/doNotTrack
+l10n:
+  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
 
-{{ApiRef("HTML DOM")}}
+{{ApiRef("HTML DOM")}}{{Deprecated_header}}
 
 **`Navigator.doNotTrack`** プロパティは、ユーザーの Do Not Track 設定を返します。これは、ユーザーがウェブサイトと広告主に対して追跡しないよう要求しているかどうかを示します。
 
 プロパティの値は HTTP の {{httpheader("DNT")}} ヘッダーの値、つまり、 "`1`", "`0`", "`unspecified`" の値を返します。
 
-## 構文
+## 例
+
+文字列または `null` です。
+
+## 例
 
 ```js
 console.log(navigator.doNotTrack);
@@ -22,8 +29,8 @@ console.log(navigator.doNotTrack);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Navigator.doNotTrack")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Do Not Track フィールドガイド](/ja/docs/Web/Security/Do_not_track_field_guide)
+- {{httpheader("DNT")}} HTTP ヘッダー

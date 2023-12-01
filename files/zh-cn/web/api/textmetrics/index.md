@@ -101,7 +101,7 @@ const textMetrics = ctx.measureText(text);
 console.log(textMetrics.width);
 // 459.8833312988281
 console.log(
-  textMetrics.actualBoundingBoxRight + textMetrics.actualBoundingBoxLeft
+  textMetrics.actualBoundingBoxRight + textMetrics.actualBoundingBoxLeft,
 );
 // 462.8833333333333
 ```

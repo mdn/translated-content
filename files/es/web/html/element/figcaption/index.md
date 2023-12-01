@@ -1,7 +1,6 @@
 ---
 title: <figcaption>
 slug: Web/HTML/Element/figcaption
-original_slug: Web/HTML/Elemento/figcaption
 ---
 
 {{HTMLSidebar}}

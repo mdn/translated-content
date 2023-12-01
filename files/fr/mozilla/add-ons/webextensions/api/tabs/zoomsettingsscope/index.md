@@ -1,7 +1,6 @@
 ---
 title: tabs.ZoomSettingsScope
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope
 ---
 
 {{AddonSidebar()}}

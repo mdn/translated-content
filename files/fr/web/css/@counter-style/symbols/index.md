@@ -1,7 +1,6 @@
 ---
 title: symbols
 slug: Web/CSS/@counter-style/symbols
-translation_of: Web/CSS/@counter-style/symbols
 ---
 
 {{CSSRef}}

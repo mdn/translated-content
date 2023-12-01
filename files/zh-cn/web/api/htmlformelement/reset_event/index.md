@@ -22,12 +22,12 @@ slug: Web/API/HTMLFormElement/reset_event
 
 ## 属性
 
-| Property                              | Type                                 | Description                        |
-| ------------------------------------- | ------------------------------------ | ---------------------------------- |
+| Property                        | Type                       | Description                        |
+| ------------------------------- | -------------------------- | ---------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 事件的目标（DOM 树最顶端的元素）。 |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | 事件的类型。                       |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | 是否指定事件冒泡。                 |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | 事件是否可以被取消。               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | 事件的类型。                       |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | 是否指定事件冒泡。                 |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | 事件是否可以被取消。               |
 
 ## 规范
 

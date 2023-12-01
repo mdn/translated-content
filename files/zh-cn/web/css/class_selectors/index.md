@@ -60,9 +60,7 @@ li.spacious.elegant {
 
 ```html
 <p class="red">这段文字是红色的。</p>
-<p class="red yellow-bg">
-  这段文字是红色的，背景是黄色的。
-</p>
+<p class="red yellow-bg">这段文字是红色的，背景是黄色的。</p>
 <p class="red fancy">这段文字是红色的，有“fancy”样式。</p>
 <p>这只是普通的段落。</p>
 ```

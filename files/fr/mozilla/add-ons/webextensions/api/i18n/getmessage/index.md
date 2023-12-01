@@ -1,7 +1,6 @@
 ---
 title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 ---
 
 {{AddonSidebar()}}

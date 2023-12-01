@@ -1,7 +1,6 @@
 ---
 title: Lidando com arquivos
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-original_slug: Aprender/Getting_started_with_the_web/lidando_com_arquivos
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}

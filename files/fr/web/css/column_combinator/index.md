@@ -1,7 +1,6 @@
 ---
 title: Combinateur de colonne
 slug: Web/CSS/Column_combinator
-translation_of: Web/CSS/Column_combinator
 ---
 
 {{CSSRef("Selectors")}}{{SeeCompatTable}}

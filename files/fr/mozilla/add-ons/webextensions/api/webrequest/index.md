@@ -1,7 +1,6 @@
 ---
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
 
 {{AddonSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: events.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/events/Rule
-translation_of: Mozilla/Add-ons/WebExtensions/API/events/Rule
 ---
 
 {{AddonSidebar()}}

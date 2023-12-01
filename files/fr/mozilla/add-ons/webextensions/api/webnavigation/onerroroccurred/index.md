@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
 ---
 
 {{AddonSidebar()}}

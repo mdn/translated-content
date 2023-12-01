@@ -1,17 +1,6 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-  - Window
-  - WindowLocalStorage
-  - localStorage
-translation_of: Web/API/Window/localStorage
 ---
 
 {{APIRef("Web Storage API")}}
@@ -42,19 +31,19 @@ myStorage = window.localStorage;
 Следующий код показывает пример доступа к локальному объекту {{DOMxRef("Storage")}} для текущего домена и добавляет данные в него с помощью {{DOMxRef("Storage.setItem()")}}.
 
 ```js
-localStorage.setItem('myCat', 'Tom');
+localStorage.setItem("myCat", "Tom");
 ```
 
 Считывать данные из localStorage для определённого ключа, можно следующим образом:
 
 ```js
-let cat = localStorage.getItem('myCat');
+let cat = localStorage.getItem("myCat");
 ```
 
 Удалять данные можно так:
 
 ```js
-localStorage.removeItem('myCat'); // вернёт undefined
+localStorage.removeItem("myCat"); // вернёт undefined
 ```
 
 Для удаления всех записей, то есть полной очистки `localStorage`, используйте:

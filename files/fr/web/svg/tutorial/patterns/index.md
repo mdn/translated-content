@@ -1,7 +1,6 @@
 ---
 title: Motifs
 slug: Web/SVG/Tutorial/Patterns
-translation_of: Web/SVG/Tutorial/Patterns
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Gradients", "Web/SVG/Tutoriel/Texts") }}

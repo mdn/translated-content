@@ -1,7 +1,6 @@
 ---
 title: Видео и аудио контент
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}

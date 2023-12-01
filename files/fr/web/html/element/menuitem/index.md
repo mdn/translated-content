@@ -1,7 +1,6 @@
 ---
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
-translation_of: Web/HTML/Element/menuitem
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header("HTML5.2")}}

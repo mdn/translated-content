@@ -1,7 +1,6 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
-translation_of: Web/API/HTMLCanvasElement/getContext
 ---
 
 {{APIRef("Canvas API")}}

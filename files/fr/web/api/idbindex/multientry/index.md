@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.multiEntry
 slug: Web/API/IDBIndex/multiEntry
-translation_of: Web/API/IDBIndex/multiEntry
 ---
 
 {{APIRef("IndexedDB")}}

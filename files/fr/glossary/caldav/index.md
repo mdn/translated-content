@@ -1,8 +1,9 @@
 ---
 title: CalDAV
 slug: Glossary/CalDAV
-translation_of: Glossary/CalDAV
 ---
+
+{{GlossarySidebar}}
 
 CalDAV (extensions de gestion de calendrier pour {{Glossary("WebDAV")}}) est un {{glossary("protocol","protocole")}} normalisé par l'IETF utilisé pour accéder à distance à des données d'agendas stockées sur un {{glossary("server","serveur")}}.
 

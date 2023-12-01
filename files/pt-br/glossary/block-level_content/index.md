@@ -1,8 +1,9 @@
 ---
 title: Elementos block-level
 slug: Glossary/Block-level_content
-original_slug: Web/HTML/Block-level_elements
 ---
+
+{{GlossarySidebar}}
 
 Elementos HTML **(Linguagem de marcação de hipertexto)** historicamente foram categorizados como "nível de bloco" ou [elementos "em linha"](/pt-BR/docs/HTML/Inline_elements). Um elemento em nível de bloco ocupa todo o espaço de seu elemento pai (container), criando assim um "bloco". Este artigo ajuda a explicar o que isso significa.
 

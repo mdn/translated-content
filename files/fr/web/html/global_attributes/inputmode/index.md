@@ -1,7 +1,6 @@
 ---
 title: inputmode
 slug: Web/HTML/Global_attributes/inputmode
-translation_of: Web/HTML/Global_attributes/inputmode
 ---
 
 {{HTMLSidebar("Global_attributes")}}

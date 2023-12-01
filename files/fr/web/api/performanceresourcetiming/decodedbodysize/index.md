@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming.decodedBodySize
 slug: Web/API/PerformanceResourceTiming/decodedBodySize
-translation_of: Web/API/PerformanceResourceTiming/decodedBodySize
 ---
 
 {{APIRef("Resource Timing API")}}

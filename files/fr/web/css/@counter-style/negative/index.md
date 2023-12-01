@@ -1,7 +1,6 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
-translation_of: Web/CSS/@counter-style/negative
 ---
 
 {{CSSRef}}

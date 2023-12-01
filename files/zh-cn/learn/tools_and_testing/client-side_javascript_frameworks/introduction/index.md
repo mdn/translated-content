@@ -1,7 +1,6 @@
 ---
 title: 客户端框架介绍
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -11,7 +10,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">先决条件：</th>
+   <th scope="row">前提：</th>
    <td>熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>, <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 以及 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言的核心。</td>
   </tr>
   <tr>

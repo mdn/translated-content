@@ -1,7 +1,6 @@
 ---
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
-translation_of: Web/CSS/@font-face/font-weight
 ---
 
 {{CSSRef}}

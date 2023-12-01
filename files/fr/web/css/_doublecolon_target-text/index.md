@@ -1,7 +1,6 @@
 ---
 title: "::target-text"
 slug: Web/CSS/::target-text
-translation_of: Web/CSS/::target-text
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

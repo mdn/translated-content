@@ -1,7 +1,6 @@
 ---
 title: "<strong> : l'élément de haute importance"
 slug: Web/HTML/Element/strong
-translation_of: Web/HTML/Element/strong
 ---
 
 {{HTMLSidebar}}

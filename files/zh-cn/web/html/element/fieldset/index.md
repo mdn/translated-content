@@ -20,6 +20,7 @@ slug: Web/HTML/Element/fieldset
 - `form`
   - : 将该值设为一个 {{HTMLElement("form")}} 元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性值以将 `<fieldset>` 设置成这个 {{HTMLElement("form")}} 的一部分。
 - `name`
+
   - : 元素分组的名称
 
     > **备注：** fieldset 的标题由第一个 {{HTMLElement("legend")}} 子元素确定。
@@ -48,7 +49,7 @@ slug: Web/HTML/Element/fieldset
 <form action="#">
   <fieldset>
     <legend>Simple fieldset</legend>
-    <input type="radio" id="radio">
+    <input type="radio" id="radio" />
     <label for="radio">Spirit of radio</label>
   </fieldset>
 </form>
@@ -66,11 +67,11 @@ slug: Web/HTML/Element/fieldset
     <legend>Disabled fieldset</legend>
     <div>
       <label for="name">Name: </label>
-      <input type="text" id="name" value="Chris">
+      <input type="text" id="name" value="Chris" />
     </div>
     <div>
       <label for="pwd">Archetype: </label>
-      <input type="password" id="pwd" value="Wookie">
+      <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
 </form>

@@ -1,8 +1,9 @@
 ---
 title: WebGL
 slug: Glossary/WebGL
-translation_of: Glossary/WebGL
 ---
+
+{{GlossarySidebar}}
 
 **WebGL** (_Web Graphics Library_) est une {{Glossary("API")}} {{Glossary("JavaScript")}} pour produire des graphismes 2D et 3D interactifs.
 

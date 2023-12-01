@@ -1,5 +1,5 @@
 ---
-title: '-moz-force-broken-image-icon'
+title: "-moz-force-broken-image-icon"
 slug: Web/CSS/-moz-force-broken-image-icon
 ---
 
@@ -29,7 +29,7 @@ slug: Web/CSS/-moz-force-broken-image-icon
 ### HTML
 
 ```html
-<img src='/broken/image/link.png' alt='Broken image link'>
+<img src="/broken/image/link.png" alt="Broken image link" />
 ```
 
 ### CSS

@@ -25,8 +25,8 @@ void gl.deleteTexture(texture);
 ### Deleting a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var texture = gl.createTexture();
 
 // ...

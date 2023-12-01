@@ -1,16 +1,8 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
-tags:
-  - API
-  - Animation
-  - Element
-  - Experimental
-  - Method
-  - Reference
-  - web animation
-translation_of: Web/API/Element/animate
 ---
+
 {{APIRef('Web Animations')}} {{SeeCompatTable}}
 
 Метод **`animate()`** интерфейса {{domxref("Element")}} это быстрый способ создания {{domxref("Animation")}}, которая сразу применяется к элементу, а затем проигрывает эту анимацию. Метод возвращает созданный экземпляр класса {{domxref("Animation")}}.
@@ -68,15 +60,18 @@ var animation = element.animate(keyframes, options);
 В демо [Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010), мы используем удобный метод `animate()`, чтобы сразу создать и проиграть анимацию на элементе `#tunnel`, чтобы заставить его крутиться в падении, бесконечно. Обратите внимание на массив объектов, в котором переданы ключевые кадры, а также блок временных параметров.
 
 ```js
-document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translate3D(0, 0, 0)' },
-  { transform: 'translate3D(0, -300px, 0)' }
-], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
-})
+document.getElementById("tunnel").animate(
+  [
+    // keyframes
+    { transform: "translate3D(0, 0, 0)" },
+    { transform: "translate3D(0, -300px, 0)" },
+  ],
+  {
+    // timing options
+    duration: 1000,
+    iterations: Infinity,
+  },
+);
 ```
 
 ## Спецификации

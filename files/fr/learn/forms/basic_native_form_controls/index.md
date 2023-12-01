@@ -1,7 +1,6 @@
 ---
 title: Les contrôles de formulaire natifs
 slug: Learn/Forms/Basic_native_form_controls
-translation_of: Learn/Forms/Basic_native_form_controls
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}

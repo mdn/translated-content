@@ -1,7 +1,6 @@
 ---
 title: RegisteredUserScript.unregister()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 ---
 
 {{AddonSidebar}}

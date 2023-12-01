@@ -1,7 +1,6 @@
 ---
 title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
 
 {{AddonSidebar()}}

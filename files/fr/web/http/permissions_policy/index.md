@@ -1,7 +1,6 @@
 ---
 title: Feature Policy
 slug: Web/HTTP/Permissions_Policy
-translation_of: Web/HTTP/Feature_Policy
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 ---
 
 {{JSRef}}
@@ -123,7 +122,7 @@ console.log(bigInt64.length); // 2
 console.log(bigInt64.BYTES_PER_ELEMENT); // 8
 
 // Construction à partir d'un tableau
-var arr = new BigInt64Array([21n,31n]);
+var arr = new BigInt64Array([21n, 31n]);
 console.log(arr[1]); // 31n
 
 // Construction à partir d'un tableau typé
@@ -136,7 +135,9 @@ var buffer = new ArrayBuffer(32);
 var z = new BigInt64Array(buffer, 0, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
+var iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 var BigInt64 = new BigInt64Array(iterable);
 // BigInt64Array[1n, 2n, 3n]
 ```

@@ -1,7 +1,6 @@
 ---
 title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 ---
 
 {{AddonSidebar()}}

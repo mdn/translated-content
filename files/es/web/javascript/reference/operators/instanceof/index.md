@@ -1,7 +1,6 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-original_slug: Web/JavaScript/Referencia/Operadores/instanceof
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,6 +18,7 @@ objeto instanceof constructor
 ### Parámetros
 
 - `objeto`
+
   - : Objeto a verificar.
 
 - `constructor`
@@ -31,10 +31,10 @@ Utilice `instanceof` cuando necesite confirmar el tipo de un objeto en tiempo de
 Debe especificar un objeto en el lado derecho del operador `instanceof`. Por ejemplo, puede especificar una cadena creada con el constructor `String`, pero no puede especificar un literal de cadena.
 
 ```js
-color1 = new String("verde")
-color1 instanceof String // devuelve verdadero (true)
-color2 = "coral"
-color2 instanceof String // devuelve falso (color2 no es un objeto String)
+color1 = new String("verde");
+color1 instanceof String; // devuelve verdadero (true)
+color2 = "coral";
+color2 instanceof String; // devuelve falso (color2 no es un objeto String)
 ```
 
 ### Ejemplos
@@ -46,7 +46,7 @@ También vea los ejemplos de {{jsxref("Sentencias/throw", "throw")}}.
 El siguiente código utiliza `instanceof` para determinar si `elDia` es un objeto `Date`. Debido a que `elDia` es un objeto `Date`, las instrucciones de la sentencia if se ejecutan.
 
 ```js
-elDia = new Date(1995, 12, 17)
+elDia = new Date(1995, 12, 17);
 if (elDia instanceof Date) {
   // instrucciones a ejecutar
 }
@@ -57,16 +57,16 @@ if (elDia instanceof Date) {
 El siguiente código utiliza `instanceof` para demostrar que los objetos `String` y `Date` son también del tipo `Object` (éstos se derivan de `Object`).
 
 ```js
-miCadena = new String()
-miFecha = new Date()
+miCadena = new String();
+miFecha = new Date();
 
-miCadena instanceof String // devuelve true
-miCadena instanceof Object // devuelve true
-miCadena instanceof Date   // devuelve false
+miCadena instanceof String; // devuelve true
+miCadena instanceof Object; // devuelve true
+miCadena instanceof Date; // devuelve false
 
-miFecha instanceof Date     // devuelve true
-miFecha instanceof Object   // devuelve true
-miFecha instanceof String   // devuelve false
+miFecha instanceof Date; // devuelve true
+miFecha instanceof Object; // devuelve true
+miFecha instanceof String; // devuelve false
 ```
 
 #### Ejemplo: Demostrando que `miCoche` es del tipo `Coche` y del tipo `Object`
@@ -75,11 +75,11 @@ El siguiente código crea un objeto del tipo `Coche` y una instancia de ese tipo
 
 ```js
 function Coche(fabricante, modelo, ejercicio) {
-  this.fabricante = fabricante
-  this.modelo = modelo
-  this.ejercicio= ejercicio
+  this.fabricante = fabricante;
+  this.modelo = modelo;
+  this.ejercicio = ejercicio;
 }
-miCoche = new Coche("Honda", "Accord", 1998)
-a = miCoche instanceof Coche // devuelve verdadero (true)
-b = miCoche instanceof Object // devuelve verdadero (true)
+miCoche = new Coche("Honda", "Accord", 1998);
+a = miCoche instanceof Coche; // devuelve verdadero (true)
+b = miCoche instanceof Object; // devuelve verdadero (true)
 ```

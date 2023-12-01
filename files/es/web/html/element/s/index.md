@@ -1,7 +1,6 @@
 ---
 title: s
 slug: Web/HTML/Element/s
-original_slug: Web/HTML/Elemento/s
 ---
 
 ### Definición

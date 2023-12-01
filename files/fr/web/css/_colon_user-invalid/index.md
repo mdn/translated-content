@@ -1,7 +1,6 @@
 ---
 title: ":-moz-ui-invalid"
 slug: Web/CSS/:user-invalid
-translation_of: Web/CSS/:user-invalid
 ---
 
 {{Non-standard_header}}{{CSSRef}}

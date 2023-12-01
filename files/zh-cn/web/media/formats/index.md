@@ -1,56 +1,51 @@
 ---
-title: Guide to media types and formats on the web
+title: 媒体类型和格式指南：图片、音频和视频内容
 slug: Web/Media/Formats
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
-几乎从一开始，网络就包含了对某种形式的视觉媒体呈现的支持。最初，这些功能是有限的，但是不同的浏览器厂商扩展了这些功能，并且找到了自己的解决方案来解决网络上的静态和视频图像等问题。现代 Web 具有强大的功能来支持媒体的呈现和操作，多个与媒体相关的 API 支持各种类型的内容。通常，浏览器支持的媒体格式完全取决于浏览器的创建者，这可能会使 Web 开发人员的工作复杂化。
+几乎从一开始，Web 就包含了对某种形式的视觉媒体呈现的支持。最初，这些功能是有限的，但是不同的浏览器厂商扩展了这些功能，并且找到了自己的解决方案来解决网络上的静态和视频图像等问题。现代 Web 具有强大的功能来支持媒体的呈现和操作，多个与媒体相关的 API 支持各种类型的内容。通常，浏览器支持的媒体格式完全取决于浏览器的创建者，这可能会使 Web 开发人员的工作复杂化。
 
-This guide provides an overview of the media file types, {{Glossary("codec", "codecs")}}, and algorithms that may comprise media used on the web. It also provides browser support information for various combinations of these, and suggestions for prioritization of formats, as well as which formats excel at specific types of content.
+本指南概述了组成 web 中使用的媒体的媒体文件类型、{{Glossary("codec", "编解码器")}}以及算法。本指南还提供了浏览器对这些格式的各种组合的支持信息、格式优先级建议，以及哪些格式擅长于特定类型的内容。
 
-## References
+## 参考
 
-### Images
+### 图片
 
-- [Image file type and format guide](/zh-CN/docs/Web/Media/Formats/Image_types)
-  - : Covers support of image file types and content formats across the major web browsers, as well as providing basic information about each type: benefits, limitations, and use cases of interest to web designers and developers.
-- [Image file types for web designers](/zh-CN/docs/Web/Media/Formats/Images_for_web_designers)
-  - : Fundamental information about the various image file types that may be useful for web designers, including best practices and use cases for each type, and guidelines for choosing the right image file format for specific types of content.
+- [图片文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
+  - : 互联网上使用的主要图像文件类型和内容格式指南。其中包括对浏览器支持、优点和限制的高度概述，以及最佳实践指南，以帮助网页设计人员为特定类型的内容选择正确的图像文件格式。
 
-### Media file types and codecs
+### 媒体文件格式和编解码器
 
-- [Media containers (file types)](/zh-CN/docs/Web/Media/Formats/Containers)
-  - : A guide to the file types that contain media data. Some are audio-specific, while others may be used for either audio or combined audiovisual content such as movies. Includes overviews of each of the file types supported by the major web browsers, along with browser support information and supported features.
+- [媒体容器（文件类型）](/zh-CN/docs/Web/Media/Formats/Containers)
+  - : 包含媒体数据的文件类型指南。其中一些是音频专用文件，而另一些既可用于音频，也可用于电影等综合视听内容。包括主要 web 浏览器支持的每种文件类型的概述，以及浏览器支持信息和支持的特性。
+- [Web 音频编解码器指南](/zh-CN/docs/Web/Media/Formats/Audio_codecs)
+  - : 常用媒体容器和主要浏览器允许使用的音频编解码器指南。包括优点、限制、主要规范和功能以及使用案例。还包括各浏览器对在特定容器中使用编解码器的支持。
+- [Web 视频编解码器指南](/zh-CN/docs/Web/Media/Formats/Video_codecs)
+  - : 本文提供了有关主要浏览器支持的视频编解码器的基本信息，以及一些不常支持但仍可能遇到的编解码器。文章还介绍了编解码器的功能、优点、限制以及浏览器支持级别和限制。
+- [不同媒体类型的编解码器](/zh-CN/docs/Web/Media/Formats/codecs_parameter)
+  - : 在指定描述媒体格式的 MIME 类型时，可以使用作为类型字符串一部分的 `codecs` 参数提供详细信息。本指南介绍常见媒体类型的 `codecs` 参数的格式和可能的值。
+- [WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)
+  - : [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 不使用容器，而是使用 {{domxref("MediaStreamTrack")}} 对象在点对点之间流式传输编码媒体本身，以表示每个音频或视频音轨。本指南将讨论 WebRTC 常用的编解码器。
 
-<!---->
+## 指南
 
-- [Web audio codec guide](/zh-CN/docs/Web/Media/Formats/Audio_codecs)
-  - : A guide to the audio codecs allowed for by the common media containers, as well as by the major browsers. Includes benefits, limitations, key specifications and capabilities, and use cases. It also covers each browser's support for using the codec in given containers.
-- [Web video codec guide](/zh-CN/docs/Web/Media/Formats/Video_codecs)
-  - : This article provides basic information about the video codecs supported by the major browsers, as well as some that are not commonly supported but that you might still run into. It also covers codec capabilities, benefits, limitations, and browser support levels and restrictions.
-- [The "codecs" parameter in common media types](/zh-CN/docs/Web/Media/Formats/codecs_parameter)
-  - : When specifying the MIME type describing a media format, you can provide details using the `codecs` parameter as part of the type string. This guide describes the format and possible values of the `codecs` parameter for the common media types.
-- [Codecs used by WebRTC](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)
-  - : [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) doesn't use a container, but instead streams the encoded media itself from peer to peer using {{domxref("MediaStreamTrack")}} objects to represent each audio or video track. This guide discusses the codecs commonly used with WebRTC.
+### 概念
 
-## Guides
+- [数字音频概念](/zh-CN/docs/Web/Media/Formats/Audio_concepts)
+  - : 介绍如何将音频转换成数字形式并存储起来供计算机使用。它解释了音频采样的基本概念，以及采样率、音频帧和音频压缩等概念。
+- [数字视频概念](/zh-CN/docs/Web/Media/Formats/Video_concepts)
+  - : Web 数字视频基本概念指南，包括色彩格式、色度二次抽样、人类感知如何影响视频编码等基础知识。
 
-### Concepts
+### 教程
 
-- [Digital audio concepts](/zh-CN/docs/Web/Media/Formats/Audio_concepts)
-  - : An introduction to how audio is converted into digital form and stored for use by computers. It explains basic concepts about how audio is sampled, as well as concepts such as sample rate, audio frames, and audio compression.
-- [Digital video concepts](/zh-CN/docs/Web/Media/Formats/Video_concepts)
-  - : A guide to fundamental concepts involved with digital video as used on the web, including basics about color formats, chroma subsampling, how human perception influences video coding, and so forth.
+- [学习区：视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - : 本教程介绍了在 web 上使用媒体的方法和细节。
+- [处理 web 内容的媒体支持问题](/zh-CN/docs/Web/Media/Formats/Support_issues)
+  - : 在本指南中，我们将探讨如何通过明智地选择媒体格式，并在有帮助的地方提供回退和替代格式，在提供尽可能广泛的兼容性的同时，最大限度地提高网页内容的质量或性能。
 
-### Tutorials and how-tos
+## 其他主题
 
-- [Learning: Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - : This tutorial introduces and details the use of media on the web.
-- [Handling media support issues in web content](/zh-CN/docs/Web/Media/Formats/Support_issues)
-  - : In this guide, we look at how to build web content that maximizes quality or performance while providing the broadest possible compatibility, by choosing media formats wisely, and offering fallbacks and alternate formats where it would be helpful.
-
-## Other topics
-
-- [Media Capabilities API](/zh-CN/docs/Web/API/Media_Capabilities_API)
-  - : The Media Capabilities API lets you discover the encoding and decoding capabilities of the device your app or site is running on. This lets you make real-time decisions about what formats to use and when.
+- [媒体能力 API](/zh-CN/docs/Web/API/Media_Capabilities_API)
+  - : 媒体能力 API 可让你发现应用程序或网站所运行设备的编码和解码能力。这样，你就可以实时决定何时使用何种格式。

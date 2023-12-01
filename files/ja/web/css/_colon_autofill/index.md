@@ -1,7 +1,6 @@
 ---
-title: ':autofill'
+title: ":autofill"
 slug: Web/CSS/:autofill
-original_slug: Web/CSS/:-webkit-autofill
 ---
 
 {{CSSRef}}
@@ -44,7 +43,8 @@ input:autofill {
 
 ```html
 <form method="post" action="">
-  <label for="email">Email</label> <input type="email" name="email" id="email" autocomplete="email">
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" autocomplete="email" />
 </form>
 ```
 

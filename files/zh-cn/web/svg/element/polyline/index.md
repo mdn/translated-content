@@ -52,7 +52,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了[`SVGPolylineElement`](/zh-CN/DOM/SVGPolylineElement)接口。
+该元素实现了 [`SVGPolylineElement`](/zh-CN/DOM/SVGPolylineElement) 接口。
 
 ## 浏览器兼容性
 

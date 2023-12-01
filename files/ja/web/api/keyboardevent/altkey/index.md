@@ -1,8 +1,9 @@
 ---
-title: KeyboardEvent.altKey
+title: "KeyboardEvent: altKey プロパティ"
+short-title: altKey
 slug: Web/API/KeyboardEvent/altKey
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("UI Events")}}
@@ -16,7 +17,7 @@ l10n:
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
@@ -34,7 +35,7 @@ l10n:
             "\n" +
             "ALT key KeyDown: " +
             e.altKey +
-            "\n"
+            "\n",
         );
       }
     </script>

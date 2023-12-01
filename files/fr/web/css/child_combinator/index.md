@@ -1,7 +1,6 @@
 ---
 title: Sélecteurs enfant
 slug: Web/CSS/Child_combinator
-translation_of: Web/CSS/Child_combinator
 ---
 
 {{CSSRef("Selectors")}}

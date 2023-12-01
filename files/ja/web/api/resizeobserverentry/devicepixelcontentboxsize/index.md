@@ -34,7 +34,7 @@ const observer = new ResizeObserver((entries) => {
 
   /* … render to canvas … */
 });
-observer.observe(canvas, {box: ['device-pixel-content-box']});
+observer.observe(canvas, { box: ["device-pixel-content-box"] });
 ```
 
 ## 仕様書

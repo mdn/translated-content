@@ -1,7 +1,6 @@
 ---
 title: "Window: messageerror event"
 slug: Web/API/Window/messageerror_event
-translation_of: Web/API/Window/messageerror_event
 ---
 
 {{APIRef}}

@@ -1,7 +1,6 @@
 ---
 title: AudioBuffer.getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
-translation_of: Web/API/AudioBuffer/getChannelData
 ---
 
 {{ APIRef("Web Audio API") }}

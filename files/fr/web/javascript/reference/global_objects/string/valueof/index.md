@@ -1,7 +1,6 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Str
 ## Syntaxe
 
 ```js
-str.valueOf()
+str.valueOf();
 ```
 
 ### Valeur de retour

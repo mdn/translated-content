@@ -1,7 +1,6 @@
 ---
 title: "Tutoriel Django - 6e partie : Vues génériques pour les listes et les détails"
 slug: Learn/Server-side/Django/Generic_views
-translation_of: Learn/Server-side/Django/Generic_views
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}Ce tutoriel améliore notre site web [LocalLibrary](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website), en ajoutant des pages de listes et de détails pour les livres et les auteurs. Ici nous allons apprendre les vues génériques basées sur des classes, et montrer comment elles peuvent réduire le volume de code à écrire pour les cas ordinaires. Nous allons aussi entrer plus en détail dans la gestion des URLs, en montrant comment réaliser des recherches de patterns simples.

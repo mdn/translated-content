@@ -1,7 +1,6 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
 
 {{JSRef}}
@@ -70,11 +69,11 @@ Avant l'apparition de `Reflect`, on pouvait construire des objets avec une combi
 
 ```js
 function MaClasseA() {
-  this.name = 'A';
+  this.name = "A";
 }
 
 function MaClasseB() {
-  this.name = 'B';
+  this.name = "B";
 }
 
 // Avec cette instruction :
@@ -100,11 +99,11 @@ Mais quand on appelle `Reflect.construct()`, `new.target` pointe vers la valeur 
 
 ```js
 function MaClasseA() {
-  console.log('MaClasseA');
+  console.log("MaClasseA");
   console.log(new.target);
 }
 function MaClasseB() {
-  console.log('MaClasseB');
+  console.log("MaClasseB");
   console.log(new.target);
 }
 

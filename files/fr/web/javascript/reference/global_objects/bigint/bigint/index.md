@@ -1,7 +1,6 @@
 ---
 title: Constructeur BigInt()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
 
 {{JSRef}}

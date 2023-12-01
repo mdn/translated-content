@@ -1,8 +1,9 @@
 ---
 title: Nome de cabeçalho proibido
 slug: Glossary/Forbidden_header_name
-original_slug: Glossario/Forbidden_header_name
 ---
+
+{{GlossarySidebar}}
 
 Um _nome de cabeçalho proibido_ é o nome de qualquer [cabeçalho HTTP](/pt-BR/docs/Web/HTTP/Headers) que não pode ser modificado programaticamente; especificamente, um nome de cabeçalho de **solicitação** HTTP (em contraste com um {{Glossary("Forbidden response header name")}}).
 

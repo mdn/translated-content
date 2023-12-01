@@ -1,7 +1,6 @@
 ---
 title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
-translation_of: Mozilla/Firefox/Releases/25
 ---
 
 {{FirefoxSidebar}}

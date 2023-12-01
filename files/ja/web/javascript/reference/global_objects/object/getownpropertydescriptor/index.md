@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ## 構文
 
 ```js
-Object.getOwnPropertyDescriptor(obj, prop)
+Object.getOwnPropertyDescriptor(obj, prop);
 ```
 
 ### 引数
@@ -52,8 +52,12 @@ Object.getOwnPropertyDescriptor(obj, prop)
 ```js
 var o, d;
 
-o = { get foo() { return 17; } };
-d = Object.getOwnPropertyDescriptor(o, 'foo');
+o = {
+  get foo() {
+    return 17;
+  },
+};
+d = Object.getOwnPropertyDescriptor(o, "foo");
 // d is {
 //   configurable: true,
 //   enumerable: true,
@@ -62,7 +66,7 @@ d = Object.getOwnPropertyDescriptor(o, 'foo');
 // }
 
 o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, 'bar');
+d = Object.getOwnPropertyDescriptor(o, "bar");
 // d is {
 //   configurable: true,
 //   enumerable: true,
@@ -70,8 +74,8 @@ d = Object.getOwnPropertyDescriptor(o, 'bar');
 //   writable: true
 // }
 
-o = { [Symbol.for('baz')]: 73 }
-d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
+o = { [Symbol.for("baz")]: 73 };
+d = Object.getOwnPropertyDescriptor(o, Symbol.for("baz"));
 // d is {
 //   configurable: true,
 //   enumerable: true,
@@ -80,12 +84,12 @@ d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
 // }
 
 o = {};
-Object.defineProperty(o, 'qux', {
+Object.defineProperty(o, "qux", {
   value: 8675309,
   writable: false,
-  enumerable: false
+  enumerable: false,
 });
-d = Object.getOwnPropertyDescriptor(o, 'qux');
+d = Object.getOwnPropertyDescriptor(o, "qux");
 // d is {
 //   value: 8675309,
 //   writable: false,
@@ -99,10 +103,10 @@ d = Object.getOwnPropertyDescriptor(o, 'qux');
 ECMAScript 5 では、このメソッドへの最初の引数がオブジェクトでない (プリミティブである) 場合は、 {{jsxref("TypeError")}} が発生します。 ECMAScript 2015 では、最初の引数がオブジェクトでなくても、最初に強制的にオブジェクトに変換します。
 
 ```js
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not an object  // ES5 code
 
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // Object returned by ES2015 code: {
 //   configurable: false,
 //   enumerable: true,

@@ -1,7 +1,6 @@
 ---
 title: font-smooth
 slug: Web/CSS/font-smooth
-translation_of: Web/CSS/font-smooth
 ---
 
 {{CSSRef}}{{Non-standard_header}}

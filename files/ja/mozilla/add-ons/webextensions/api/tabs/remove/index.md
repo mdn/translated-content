@@ -13,8 +13,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 
 ```js
 var removing = browser.tabs.remove(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### パラメータ
@@ -28,7 +28,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.remove")}}
+{{Compat}}
 
 ## 例
 

@@ -1,8 +1,9 @@
 ---
 title: Robots.txt
 slug: Glossary/Robots.txt
-translation_of: Glossary/Robots.txt
 ---
+
+{{GlossarySidebar}}
 
 Robots.txt est un fichier qui est habituellement placé à la racine d'un site web. Il détermine si les {{Glossary("crawler", "robots d'indexation")}} ont ou non l'autorisation d'accéder au site web.
 

@@ -1,7 +1,6 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-translation_of: Web/CSS/outline-offset
 ---
 
 {{CSSRef}}

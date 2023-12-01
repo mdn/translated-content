@@ -28,7 +28,7 @@ The `toTimeString` method is especially useful because compliant engines impleme
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);
 
-println(d.toString());     // prints Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+println(d.toString()); // prints Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 println(d.toTimeString()); // prints 14:39:07 GMT-0600 (PDT)
 ```
 
@@ -40,7 +40,7 @@ println(d.toTimeString()); // prints 14:39:07 GMT-0600 (PDT)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toDateString()")}}

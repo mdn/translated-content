@@ -1,7 +1,6 @@
 ---
 title: webRequest.StreamFilter.status
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
 ---
 
 {{AddonSidebar()}}

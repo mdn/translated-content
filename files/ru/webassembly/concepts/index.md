@@ -1,7 +1,6 @@
 ---
 title: Основы WebAssembly
 slug: WebAssembly/Concepts
-translation_of: WebAssembly/Concepts
 ---
 
 {{WebAssemblySidebar}}

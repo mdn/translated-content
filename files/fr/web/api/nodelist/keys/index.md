@@ -1,7 +1,6 @@
 ---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
-translation_of: Web/API/NodeList/keys
 ---
 
 {{APIRef("DOM")}}

@@ -35,19 +35,17 @@ box-sizing: inherit
 
 .exemplo {
   -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                | Situação                             | Comentário |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('CSS3 Basic UI', '#box-sizing', 'box-sizing')}} | {{Spec2('CSS3 Basic UI')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## Veja também
 

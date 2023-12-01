@@ -1,7 +1,6 @@
 ---
 title: Installation des outils de base
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 ---
 
 {{LearnSidebar}}

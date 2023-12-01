@@ -59,7 +59,7 @@ console.log(re.lastIndex);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("RegExp.prototype.ignoreCase")}}
 - {{jsxref("RegExp.prototype.global")}}

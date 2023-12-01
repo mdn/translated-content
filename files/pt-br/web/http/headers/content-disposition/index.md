@@ -97,15 +97,15 @@ value2
 
 ## Especificações
 
-| Especificação        | Título                                                                                            |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
+| Especificação   | Título                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------- |
 | {{RFC("7578")}} | Returning Values from Forms: multipart/form-data                                                  |
 | {{RFC("6266")}} | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)             |
 | {{RFC("2183")}} | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Disposition")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

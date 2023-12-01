@@ -1,7 +1,6 @@
 ---
 title: margin-block-end
 slug: Web/CSS/margin-block-end
-translation_of: Web/CSS/margin-block-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

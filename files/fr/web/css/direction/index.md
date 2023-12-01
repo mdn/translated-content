@@ -1,7 +1,6 @@
 ---
 title: direction
 slug: Web/CSS/direction
-translation_of: Web/CSS/direction
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: menus.ItemType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
 ---
 
 {{AddonSidebar()}}

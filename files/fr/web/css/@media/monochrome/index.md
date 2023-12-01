@@ -1,7 +1,6 @@
 ---
 title: monochrome
 slug: Web/CSS/@media/monochrome
-translation_of: Web/CSS/@media/monochrome
 ---
 
 {{CSSRef}}

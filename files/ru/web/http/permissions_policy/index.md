@@ -1,8 +1,6 @@
 ---
 title: Feature Policy
 slug: Web/HTTP/Permissions_Policy
-translation_of: Web/HTTP/Feature_Policy
-original_slug: Web/HTTP/Feature_Policy
 ---
 
 {{SeeCompatTable}}{{HTTPSidebar}}
@@ -104,13 +102,11 @@ The features include:
 
 ## Specifications
 
-| Specification                                                                                                    | Status                               | Comment                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Feature Policy','#feature-policy-http-header-field','Feature-Policy')}} | {{Spec2('Feature Policy')}} | Initial definition. Defines the {{httpheader('Feature-Policy')}} header. Directives are defined in the specs for the features they control. See individual directive pages for details. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat}}
 
 ## See also
 

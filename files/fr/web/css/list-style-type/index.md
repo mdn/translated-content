@@ -1,7 +1,6 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
-translation_of: Web/CSS/list-style-type
 ---
 
 {{CSSRef}}

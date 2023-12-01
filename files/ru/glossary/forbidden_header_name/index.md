@@ -1,14 +1,9 @@
 ---
 title: Запрещённое имя заголовка
 slug: Glossary/Forbidden_header_name
-tags:
-  - HTTP
-  - Заголовки
-  - Глоссарий
-  - запрещённый
-translation_of: Glossary/Forbidden_header_name
-original_slug: Глоссарий/Forbidden_header_name
 ---
+
+{{GlossarySidebar}}
 
 **Запрещённое имя заголовка** (Forbidden header name) – это имя какого-либо [HTTP заголовка](/ru/docs/Web/HTTP/Headers), который нельзя изменить программно.
 

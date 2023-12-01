@@ -42,8 +42,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 // storage contains two items,
 // "kitten" and "monster"
 browser.storage.local.set({
-  kitten:  {name:"Mog", eats:"mice"},
-  monster: {name:"Kraken", eats:"people"}
+  kitten: { name: "Mog", eats: "mice" },
+  monster: { name: "Kraken", eats: "people" },
 });
 ```
 
@@ -90,7 +90,11 @@ gettingItem.then(onGot, onError);
 이름들을 인수로 하면 전체 일치 항목을 모두 담은 객체를 반환한다:
 
 ```js
-let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+let gettingItem = browser.storage.local.get([
+  "kitten",
+  "monster",
+  "grapefruit",
+]);
 gettingItem.then(onGot, onError);
 
 // -> Object { kitten: Object, monster: Object }
@@ -104,8 +108,8 @@ let gettingItem = browser.storage.local.get({
   monster: "no monster",
   grapefruit: {
     name: "Grape Fruit",
-    eats: "Water"
-  }
+    eats: "Water",
+  },
 });
 
 // -> Object { kitten: Object, monster: Object, grapefruit: Object }
@@ -118,15 +122,15 @@ let gettingItem = browser.storage.local.get({
 크롬에서는 [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)가 아니라 콜백 형태로 해야 한다.
 
 ```js
-chrome.storage.local.get("kitten", function(items){
-  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+chrome.storage.local.get("kitten", function (items) {
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
 
 또는 화살표 함수로 할 수 있다.
 
 ```js
-chrome.storage.local.get("kitten", items=>{
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```

@@ -1,7 +1,6 @@
 ---
 title: CSS Font Loading API
 slug: Web/API/CSS_Font_Loading_API
-translation_of: Web/API/CSS_Font_Loading_API
 ---
 
 {{DefaultAPISidebar("CSS Font Loading API")}}{{SeeCompatTable}}

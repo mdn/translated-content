@@ -1,7 +1,6 @@
 ---
 title: border
 slug: Web/CSS/border
-translation_of: Web/CSS/border
 ---
 
 {{CSSRef("CSS Borders")}}

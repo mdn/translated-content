@@ -1,14 +1,6 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-tags:
-  - WebExtensions
-  - manifest.json
-  - Веб-расширения
-  - Дополнения
-  - Обзор
-  - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
 
 {{AddonSidebar}}

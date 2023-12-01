@@ -17,7 +17,7 @@ WebDAV 允许客户端执行以下操作
 - 复制和移动网页
 - 锁定文档以免被多人编辑
 
-## 了解更多
+## 参见
 
 - 维基百科上的 [WebDAV](https://zh.wikipedia.org/wiki/WebDAV)
 - 技术参考：

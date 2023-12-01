@@ -1,7 +1,6 @@
 ---
 title: Armazenando as informações que você precisa — Variáveis
 slug: Learn/JavaScript/First_steps/Variables
-original_slug: Learn/JavaScript/First_steps/Variáveis
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
@@ -190,7 +189,7 @@ Você pode chamar uma variável praticamente qualquer nome que queira, mas há l
 - Você não deve usar outros caracteres porque eles podem causar erros ou ser difíceis de entender por uma audiência internacional.
 - Não use underline no início do nome de variáveis — isso é utilizado em certos construtores JavaScript para significar coisas específicas, então pode deixar as coisas confusas.
 - Não use número no início do nome de variáveis. Isso não é permitido e irá causar um erro.
-- Uma conveção segura e se ater é a chamada ["lower camel case"](https://pt.wikipedia.org/wiki/CamelCase), onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguida, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.
+- Uma conveção segura é se ater à chamada ["lower camel case"](https://pt.wikipedia.org/wiki/CamelCase), onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguida, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.
 - Faça nomes de variáveis intuitivos, para que descrevam o dado que ela contém. Não use letras ou números únicos, ou frases muito longas.
 - As variáveis diferenciam letras maiúsculas e minúsculas — então `minhaidade` é uma variável diferente de `minhaIdade`.
 - Um último ponto — você também precisa evitar utilizar palavras reservadas pelo JavaScript como nome para suas variáveis — com isso, queremos dizer as palavras que fazem parte da sintaxe do JavaScript! Então você não pode usar palavras como `var`, `function`, `let` e `for` como nome de variáveis. Os navegadores vão reconhecê-las como itens de código diferentes e, portanto, você terá erros.
@@ -249,7 +248,7 @@ var despedidaGolfinho = "Até logo e obrigado por todos os peixes!";
 
 ### _Booleans_ (boleanos)
 
-_Booleans_ são valores verdadeiro/falso (_true/false_) — eles podem ter dois valores, `true` (verdadeiro) ou `false` (falso). São geralmente usados para verificar uma condição, que em seguida o código é executado apopriadamente. Por exemplo, um caso simples seria:
+_Booleans_ são valores verdadeiro/falso (_true/false_) — eles podem ter dois valores, `true` (verdadeiro) ou `false` (falso). São geralmente usados para verificar uma condição, que em seguida o código é executado apropriadamente. Por exemplo, um caso simples seria:
 
 ```js
 var estouVivo = true;

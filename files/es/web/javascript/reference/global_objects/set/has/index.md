@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/has
 ---
 
 {{JSRef}}
@@ -32,8 +31,8 @@ mySet.has(value);
 var mySet = new Set();
 mySet.add("foo");
 
-mySet.has("foo");  // retorna true
-mySet.has("bar");  // retorna false
+mySet.has("foo"); // retorna true
+mySet.has("bar"); // retorna false
 ```
 
 ## Especificaciones

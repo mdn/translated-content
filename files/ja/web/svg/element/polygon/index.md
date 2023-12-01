@@ -12,7 +12,11 @@ slug: Web/SVG/Element/polygon
 ## 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -61,7 +65,7 @@ html,body,svg { height:100% }
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.polygon")}}
+{{Compat}}
 
 ## 関連情報
 

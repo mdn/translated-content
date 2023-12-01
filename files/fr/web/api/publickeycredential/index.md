@@ -1,7 +1,6 @@
 ---
 title: PublicKeyCredential
 slug: Web/API/PublicKeyCredential
-translation_of: Web/API/PublicKeyCredential
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}

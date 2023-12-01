@@ -1,7 +1,6 @@
 ---
 title: Jeux 3D sur le web
 slug: Games/Techniques/3D_on_the_web
-translation_of: Games/Techniques/3D_on_the_web
 ---
 
 {{GamesSidebar}}

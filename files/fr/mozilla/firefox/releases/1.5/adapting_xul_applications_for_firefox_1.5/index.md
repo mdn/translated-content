@@ -1,7 +1,6 @@
 ---
 title: Adaptation des applications XUL pour Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
-translation_of: Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
 ---
 
 {{FirefoxSidebar}}

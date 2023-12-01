@@ -1,7 +1,6 @@
 ---
 title: system
 slug: Web/CSS/@counter-style/system
-translation_of: Web/CSS/@counter-style/system
 ---
 
 {{CSSRef}}

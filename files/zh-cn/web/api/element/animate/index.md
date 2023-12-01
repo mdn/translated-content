@@ -70,18 +70,18 @@ body {
 
 ```js
 const newspaperSpinning = [
-  { transform: 'rotate(0) scale(1)' },
-  { transform: 'rotate(360deg) scale(0)' }
+  { transform: "rotate(0) scale(1)" },
+  { transform: "rotate(360deg) scale(0)" },
 ];
 
 const newspaperTiming = {
   duration: 2000,
   iterations: 1,
-}
+};
 
 const newspaper = document.querySelector(".newspaper");
 
-newspaper.addEventListener('click', () => {
+newspaper.addEventListener("click", () => {
   newspaper.animate(newspaperSpinning, newspaperTiming);
 });
 ```
@@ -95,15 +95,18 @@ newspaper.addEventListener('click', () => {
 在演示 [Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010) 中，我们用 `animate()` 来快速创建并运行使 `#tunnel` 元素无限循环缓慢升起的动画。注意关键帧的对象数组和时间可选项。
 
 ```js
-document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
-], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
-});
+document.getElementById("tunnel").animate(
+  [
+    // keyframes
+    { transform: "translateY(0px)" },
+    { transform: "translateY(-300px)" },
+  ],
+  {
+    // timing options
+    duration: 1000,
+    iterations: Infinity,
+  },
+);
 ```
 
 ### 隐含关键帧
@@ -111,9 +114,7 @@ document.getElementById("tunnel").animate([
 在新版的浏览器中，你可以只设置动画的开始或结束状态（即单个关键帧），如果可以，浏览器会自动推断动画的另一端（结束或开始）的状态。例如，考虑[这个简单动画](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html)——关键帧对象如下所示：
 
 ```js
-let rotate360 = [
-  { transform: 'rotate(360deg)' }
-];
+let rotate360 = [{ transform: "rotate(360deg)" }];
 ```
 
 我们仅指定了动画的结束状态，开始状态是隐含的。

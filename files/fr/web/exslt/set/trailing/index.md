@@ -1,7 +1,6 @@
 ---
 title: set:trailing()
 slug: Web/EXSLT/set/trailing
-translation_of: Web/EXSLT/set/trailing
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}

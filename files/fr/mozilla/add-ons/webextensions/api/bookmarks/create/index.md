@@ -1,7 +1,6 @@
 ---
 title: bookmarks.create()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ---
 
 {{AddonSidebar()}}

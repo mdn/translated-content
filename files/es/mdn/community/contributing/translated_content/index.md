@@ -1,7 +1,6 @@
 ---
 title: Localización de MDN Web Docs
 slug: MDN/Community/Contributing/Translated_content
-page-type: mdn-community-guide
 l10n:
   sourceCommit: 4c6b993ad0d43bc679688a3488e13a4ec0b2c3ec
 ---
@@ -44,11 +43,11 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 ### Ruso (ru)
 
 - Discusiones: [Matrix (canal #mdn-l10n-ru)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Colaboradores actuales: [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Colaboradores actuales: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
 ### Español (es)
 
-- Discusiones: [Matrix (canal #mdn-l10n-es)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (canal MDN l10n ES)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (MDN Web Docs Community ,canal #spanish)](https://discord.gg/aZqEtMrbr7)
+- Discusiones: [Matrix (canal #mdn-l10n-es)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (canal MDN l10n ES)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (MDN Web Docs Community ,canal #spanish)](/discord)
 - Colaboradores actuales: [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz), [Jalkhov](https://github.com/Jalkhov), [marcelozarate](https://github.com/marcelozarate), [davbrito](https://github.com/davbrito), [Vallejoanderson](https://github.com/Vallejoanderson).
 
 > **Nota:** Si quiere hablar sobre la posibilidad de _descongelar_ una localización, las [directrices sobre lo que se requiere se pueden encontrar aquí](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)

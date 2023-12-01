@@ -1,7 +1,6 @@
 ---
 title: Un aperçu de HTTP
 slug: Web/HTTP/Overview
-translation_of: Web/HTTP/Overview
 ---
 
 {{HTTPSidebar}}

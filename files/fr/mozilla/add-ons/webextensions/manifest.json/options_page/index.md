@@ -1,7 +1,6 @@
 ---
 title: options_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
 ---
 
 {{AddonSidebar}}

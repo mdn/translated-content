@@ -1,8 +1,9 @@
 ---
 title: WebRTC
 slug: Glossary/WebRTC
-translation_of: Glossary/WebRTC
 ---
+
+{{GlossarySidebar}}
 
 **WebRTC** (_Web Real-Time Communication_) _(communication en temps réel web)_ est une {{Glossary("API")}} appelée par les applications web de tchat vidéo, d'appels vocaux et de partage de fichiers P2P.
 

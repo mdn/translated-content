@@ -1,7 +1,6 @@
 ---
 title: Formatage avancé du texte
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}

@@ -1,7 +1,6 @@
 ---
 title: Tailles de canvas et WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
-translation_of: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}

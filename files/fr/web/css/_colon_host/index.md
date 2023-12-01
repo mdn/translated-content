@@ -1,7 +1,6 @@
 ---
 title: ":host"
 slug: Web/CSS/:host
-translation_of: Web/CSS/:host
 ---
 
 {{CSSRef}}

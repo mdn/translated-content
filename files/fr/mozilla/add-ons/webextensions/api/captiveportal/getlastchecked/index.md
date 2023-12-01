@@ -1,7 +1,6 @@
 ---
 title: getLastChecked
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
 ---
 
 {{AddonSidebar()}}

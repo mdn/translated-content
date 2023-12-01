@@ -1,7 +1,6 @@
 ---
 title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
-translation_of: Web/SVG/Attribute/stroke-width
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: ":focus"
 slug: Web/CSS/:focus
-translation_of: Web/CSS/:focus
 ---
 
 {{CSSRef}}

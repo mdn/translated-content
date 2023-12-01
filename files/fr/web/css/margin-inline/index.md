@@ -1,7 +1,6 @@
 ---
 title: margin-inline
 slug: Web/CSS/margin-inline
-translation_of: Web/CSS/margin-inline
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

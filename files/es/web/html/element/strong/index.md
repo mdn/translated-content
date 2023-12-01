@@ -1,7 +1,6 @@
 ---
 title: strong
 slug: Web/HTML/Element/strong
-original_slug: Web/HTML/Elemento/strong
 ---
 
 ### Definición

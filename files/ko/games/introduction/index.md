@@ -1,13 +1,15 @@
 ---
 title: 웹 게임 개발에 대해
 slug: Games/Introduction
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
 
 현대의 웹은 뛰어나고 고품질의 게임을 만들 뿐 만 아니라 이 게임들을 배급 하는 플랫폼으로 성장하였습니다.
 
-제작되는 게임의 범위는 데스크탑이나 기본OS용 게임들에도 필적합니다다. 현대의 웹 기술과 최신 브라우저로 최고 사양의 웹 게임을 만드는게 가능해졌습니다. 우리는 예전에 Flash® 가지고 하던 가벼운 카드 게임이나 멀티플레이 소셜 게임을 말하는 게 아닙니다. 끝내주는 고사양의 3D 액션 슈팅 게임, RPG 게임, 그 이상을 말하는 것이죠. 자바 스크립트의 실시간 컴파일러 기술과 새로운 API의 대대적인 퍼포먼스 개선으로 이런게 가능해졌습니다. 브라우저로 (또는 HTML5를 사용하는 장비에서, 예시로 파이어폭스 OS로 운영되는 장치에서 ) 운영되는 게임을 제작할 수 있게 되었습니다.
+제작되는 게임의 범위는 데스크탑이나 기본OS용 게임들에도 필적합니다다. 현대의 웹 기술과 최신 브라우저로 최고 사양의 웹 게임을 만드는게 가능해졌습니다. 우리는 예전에 Flash® 가지고 하던 가벼운 카드 게임이나 멀티플레이 소셜 게임을 말하는 게 아닙니다. 끝내주는 고사양의 3D 액션 슈팅 게임, RPG 게임, 그 이상을 말하는 것이죠. 자바 스크립트의 실시간 컴파일러 기술과 새로운 API의 대대적인 퍼포먼스 개선으로 이런게 가능해졌습니다. 브라우저로 (또는 HTML5를 사용하는 장비에서, 예시로 Firefox OS로 운영되는 장치에서 ) 운영되는 게임을 제작할 수 있게 되었습니다.
 
 ## HTML5 게임 플랫폼
 
@@ -50,7 +52,7 @@ slug: Games/Introduction
 - [IndexedDB](/ko/docs/IndexedDB)
   - : 사용자 데이터를 사용자 기기에 저장시키는 강력한 데이터 저장 API 입니다. 로컬데이터로 저장하여 매번 다운로드 받을 필요 없이 게임 state와 다른 정보들 필요할 때 마다 저장 할 수 있습니다. 또한 당신의 게임이 오프라인 상에서도 실행이 가능하도록 하는데 도움이 됩니다. ( 유저가 비행모드 일 때 등등 말이죠)
 - [JavaScript](/ko/docs/JavaScript)
-  - : 자바스크립트, 웹 개발에 사용되는 언어, 이는 최신 브라우저에서 아주 빠르고 매번 더욱 빨라지고 있습니다. 이 강력한 언어를 당신의 게임을 위해 사용 해보시고, 현재 이미 만들어진 게임에 [Emscripten](https://github.com/kripken/emscripten/wiki) 혹은 [Asm.js](http://asmjs.org/spec/latest/) 과같은 기술들을 사용해보세요.
+  - : JavaScript, 웹 개발에 사용되는 언어, 이는 최신 브라우저에서 아주 빠르고 매번 더욱 빨라지고 있습니다. 이 강력한 언어를 당신의 게임을 위해 사용 해보시고, 현재 이미 만들어진 게임에 [Emscripten](https://github.com/kripken/emscripten/wiki) 혹은 [Asm.js](http://asmjs.org/spec/latest/) 과같은 기술들을 사용해보세요.
 - [Pointer Lock API](/ko/docs/WebAPI/Pointer_Lock)
   - : The Pointer Lock API lets you lock the mouse or other pointing device within your game's interface so that instead of absolute cursor positioning you receive coordinate deltas that give you more precise measurements of what the user is doing, and prevent the user from accidentally sending their input somewhere else, thereby missing important action.
 - [SVG](/ko/docs/SVG) (Scalable Vector Graphics)

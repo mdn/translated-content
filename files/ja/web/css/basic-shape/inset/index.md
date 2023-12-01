@@ -1,7 +1,6 @@
 ---
 title: inset()
 slug: Web/CSS/basic-shape/inset
-original_slug: Web/CSS/basic-shape/inset()
 ---
 
 {{CSSRef}}

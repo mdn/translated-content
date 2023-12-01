@@ -1,7 +1,6 @@
 ---
 title: GlobalFetch.fetch()
 slug: Web/API/fetch
-translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 
 {{APIRef("Fetch")}}

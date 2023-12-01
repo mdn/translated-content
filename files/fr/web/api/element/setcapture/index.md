@@ -1,7 +1,6 @@
 ---
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
-translation_of: Web/API/Element/setCapture
 ---
 
 {{ APIRef("DOM") }}

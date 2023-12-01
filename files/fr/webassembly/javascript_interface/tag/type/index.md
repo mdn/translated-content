@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Tag.prototype.type()
 slug: WebAssembly/JavaScript_interface/Tag/type
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/type
 ---
 
 {{WebAssemblySidebar}}

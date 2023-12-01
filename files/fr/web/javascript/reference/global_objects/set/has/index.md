@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 
 {{JSRef}}
@@ -33,16 +32,16 @@ Un booléen : `true` s'il existe un élément avec la valeur donnée au sein du 
 var monSet = new Set();
 monSet.add("toto");
 
-monSet.has("toto");  // renvoie true
-monSet.has("truc");  // renvoie false
+monSet.has("toto"); // renvoie true
+monSet.has("truc"); // renvoie false
 
 var set1 = new Set();
-var obj1 = {'cle1': 1};
+var obj1 = { cle1: 1 };
 set1.add(obj1);
 
-set1.has(obj1);        // renvoie true
-set1.has({'cle1': 1}); // renvoie false car ce sont deux objets distincts
-set1.add({'cle1': 1}); // set1 contient désormais 2 éléments
+set1.has(obj1); // renvoie true
+set1.has({ cle1: 1 }); // renvoie false car ce sont deux objets distincts
+set1.add({ cle1: 1 }); // set1 contient désormais 2 éléments
 ```
 
 ## Spécifications

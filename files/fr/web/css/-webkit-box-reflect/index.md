@@ -1,7 +1,6 @@
 ---
 title: "-webkit-box-reflect"
 slug: Web/CSS/-webkit-box-reflect
-translation_of: Web/CSS/-webkit-box-reflect
 ---
 
 {{Non-standard_header}}{{CSSRef}}

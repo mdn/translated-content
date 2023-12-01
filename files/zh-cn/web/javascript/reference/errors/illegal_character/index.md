@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: illegal character'
+title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 ---
 
@@ -18,7 +18,7 @@ SyntaxError: Invalid or unexpected token (Chrome)
 
 ## 哪里出错了？
 
-在代码中有非法的或者不期望出现的标记符号出现在不该出现的位置。请使用支持语法高亮功能的编辑器仔细检查你的代码，看看是否存在张冠李戴的情况，比如减号 (` - `) 与连接符 (` – `) ，或者是英文双引号 (` " `) 与中文双引号 (` “ `)。
+在代码中有非法的或者不期望出现的标记符号出现在不该出现的位置。请使用支持语法高亮功能的编辑器仔细检查你的代码，看看是否存在张冠李戴的情况，比如减号 (`-`) 与连接符 (`–`) ，或者是英文双引号 (`"`) 与中文双引号 (`“`)。
 
 ## 示例
 
@@ -54,7 +54,7 @@ var colors = ['#000', #333', '#666'];
 把遗漏的引号给 '#333' 添加上。
 
 ```js example-good
-var colors = ['#000', '#333', '#666'];
+var colors = ["#000", "#333", "#666"];
 ```
 
 ### 隐藏字符

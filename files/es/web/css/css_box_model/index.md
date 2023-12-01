@@ -1,7 +1,6 @@
 ---
 title: Modelo de Caja de CSS
 slug: Web/CSS/CSS_box_model
-original_slug: Web/CSS/CSS_Modelo_Caja
 ---
 
 {{CSSRef}}

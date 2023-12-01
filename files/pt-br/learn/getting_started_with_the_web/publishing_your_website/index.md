@@ -1,7 +1,6 @@
 ---
 title: Publicando seu site
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-original_slug: Aprender/Getting_started_with_the_web/Publicando_seu_site
 ---
 
 {{LearnSidebar}}

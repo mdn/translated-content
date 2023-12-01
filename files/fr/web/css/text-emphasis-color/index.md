@@ -1,7 +1,6 @@
 ---
 title: text-emphasis-color
 slug: Web/CSS/text-emphasis-color
-translation_of: Web/CSS/text-emphasis-color
 ---
 
 {{CSSRef}}

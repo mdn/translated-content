@@ -1,7 +1,6 @@
 ---
 title: idle.onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
 ---
 
 {{AddonSidebar()}}

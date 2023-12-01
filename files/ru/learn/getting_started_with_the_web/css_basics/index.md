@@ -1,17 +1,6 @@
 ---
 title: Основы CSS
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Learn
-  - Styling
-  - Web
-  - Веб
-  - Новичку
-  - Обучение
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}

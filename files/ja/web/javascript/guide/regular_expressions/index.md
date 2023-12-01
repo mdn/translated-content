@@ -27,7 +27,7 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 - また、次のように {{jsxref("RegExp")}} オブジェクトのコンストラクター関数を呼び出す方法があります。
 
   ```js
-  const re = new RegExp('ab+c');
+  const re = new RegExp("ab+c");
   ```
 
   コンストラクター関数を使用すると、実行時にその正規表現をコンパイルします。
@@ -171,13 +171,13 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 例えば、 "C:\" という文字列で "C" が任意の英字になる場合は、 `/[A-Z]:\\/` を使用します。最初のバックスラッシュがその次の文字をエスケープするので、この表現は単一のバックスラッシュを検索します。
 
 `RegExp` コンストラクターに文字列リテラルを渡して使用する場合は、バックスラッシュは文字列リテラルでのエスケープ文字でもあることを思い出してください。つまり、バックスラッシュを正規表現で用いるには文字列リテラルレベルでエスケープする必要があります。
-`/a\*b/` と `new RegExp("a\\*b")` は同じ表現を生成するものであり、 "a" の次に "*"、その次に "b" があるものを探します。
+`/a\*b/` と `new RegExp("a\\*b")` は同じ表現を生成するものであり、 "a" の次に "\*"、その次に "b" があるものを探します。
 
 エスケープ文字がパターンに含まれていない場合は、 {{jsxref('String.prototype.replace()')}} を使用して追加することができます。
 
 ```js
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& は一致した部分文字列全体を意味します
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& は一致した部分文字列全体を意味します
 }
 ```
 
@@ -195,15 +195,15 @@ _なぜこれが JavaScript に組み込まれていないのでしょうか？_
 
 正規表現は、 {{jsxref("RegExp")}} の {{jsxref("RegExp/test", "test()")}} と {{jsxref("RegExp/exec", "exec()")}} メソッド、 {{jsxref("String")}} の {{jsxref("String/match", "match()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/search", "search()")}}、{{jsxref("String/split", "split()")}} メソッドとともに使用します。
 
-| メソッド                                          | 説明                                                                                                      |
+| メソッド                                        | 説明                                                                                                             |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | {{jsxref("RegExp/exec", "exec()")}}             | 文字列内で一致するものの検索を実行します。結果情報の配列を返します。一致するものがなければ `null` を返します。   |
 | {{jsxref("RegExp/test", "test()")}}             | 文字列内で一致するものがあるか検査します。 `true` または `false` を返します。                                    |
 | {{jsxref("String/match", "match()")}}           | キャプチャグループを含む、すべての一致するものを含む配列を返します。一致するものがない場合は `null` を返します。 |
-| {{jsxref("String/matchAll", "matchAll()")}}     | キャプチャグループを含む、すべての一致するものを含むイテレーターを返します。                                           |
+| {{jsxref("String/matchAll", "matchAll()")}}     | キャプチャグループを含む、すべての一致するものを含むイテレーターを返します。                                     |
 | {{jsxref("String/search", "search()")}}         | 文字列内で一致するものがあるか検査します。一致した位置を返します。検索に失敗した場合は `-1` を返します。         |
 | {{jsxref("String/replace", "replace()")}}       | 文字列内で一致するものを一つ検索し、一致した部分文字列を置換する部分文字列で置換します。                         |
-| {{jsxref("String/replaceAll", "replaceAll()")}} | 文字列内で一致するものすべてを検索し、一致した部分文字列を置換する部分文字列で置換します。                   |
+| {{jsxref("String/replaceAll", "replaceAll()")}} | 文字列内で一致するものすべてを検索し、一致した部分文字列を置換する部分文字列で置換します。                       |
 | {{jsxref("String/split", "split()")}}           | 正規表現または固定文字列を用いて文字列を分割し、部分文字列の配列に入れます。                                     |
 
 あるパターンが文字列に存在するかを知りたいときは、`test()` または `search()` メソッドを使用してください。詳細な情報が知りたいときは (実行時間が長くなりますが) `exec()` または `match()` メソッドを使用してください。
@@ -214,13 +214,13 @@ _なぜこれが JavaScript に組み込まれていないのでしょうか？_
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 正規表現のプロパティにアクセスする必要がない場合、 `myArray` を作成するもう一つの方法はこのスクリプトの通りです。
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 // 'cdbbdbsbz'.match(/d(b+)d/g) と同様。ただし、
 // 'cdbbdbsbz'.match(/d(b+)d/g) は配列 [ "dbbd" ] を出力するのに対し、
 // /d(b+)d/g.exec('cdbbdbsbz') は配列 [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ] を出力する。
@@ -231,8 +231,8 @@ const myArray = /d(b+)d/g.exec('cdbbdbsbz');
 ある文字列から正規表現を組み立てたい場合は、次のスクリプトのような方法があります。
 
 ```js
-const myRe = new RegExp('d(b+)d', 'g');
-const myArray = myRe.exec('cdbbdbsbz');
+const myRe = new RegExp("d(b+)d", "g");
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 これらのスクリプトでは一致したものがあると、配列を返すとともに次表で示されるプロパティを更新します。
@@ -297,7 +297,7 @@ const myArray = myRe.exec('cdbbdbsbz');
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 
 // "The value of lastIndex is 5"
@@ -306,7 +306,7 @@ console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 しかし、このスクリプトの場合は次のようになります。
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 
 // "The value of lastIndex is 0"
@@ -320,15 +320,15 @@ console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 正規表現には、グローバル検索や大文字小文字を区別しない検索などの機能を実現する 6 種類のオプションフラグがあります。
 これらのフラグは、個別に使用することも一緒に使用することもでき、順序は問いません。正規表現の一部に含まれます。
 
-| フラグ | 説明                                                                                                     | 対応するプロパティ                          |
-| ---- | --------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `d`  | 一致した部分文字列の位置を生成します。                                                                                                   | {{jsxref("RegExp/hasIndices", "hasIndices")}} |
-| `g`  | グローバル検索を行います。                                                                                                                           | {{jsxref("RegExp/global", "global")}}         |
-| `i`  | 大文字・小文字を区別しない検索です。                                                                                                                 | {{jsxref("RegExp/ignoreCase", "ignoreCase")}} |
-| `m`  | 複数行の検索です。                                                                                                                       | {{jsxref("RegExp/multiline", "multiline")}}   |
-| `s`  | `.` が改行文字に一致するようにします。                                                                                                  | {{jsxref("RegExp/dotAll", "dotAll")}}         |
-| `u`  | "unicode" です。パターンを一連の Unicode コードポイントとして扱います。                                                                         | {{jsxref("RegExp/unicode", "unicode")}}       |
-| `y`  | 対象文字列の現在の位置から始まる部分に一致するものを探す「先頭固定」 (sticky) 検索を行います。 {{jsxref("RegExp.sticky", "sticky")}} を参照してください。 | {{jsxref("RegExp/sticky", "sticky")}}         |
+| フラグ | 説明                                                                                                                                                      | 対応するプロパティ                            |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `d`    | 一致した部分文字列の位置を生成します。                                                                                                                    | {{jsxref("RegExp/hasIndices", "hasIndices")}} |
+| `g`    | グローバル検索を行います。                                                                                                                                | {{jsxref("RegExp/global", "global")}}         |
+| `i`    | 大文字・小文字を区別しない検索です。                                                                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}} |
+| `m`    | 複数行の検索です。                                                                                                                                        | {{jsxref("RegExp/multiline", "multiline")}}   |
+| `s`    | `.` が改行文字に一致するようにします。                                                                                                                    | {{jsxref("RegExp/dotAll", "dotAll")}}         |
+| `u`    | "unicode" です。パターンを一連の Unicode コードポイントとして扱います。                                                                                   | {{jsxref("RegExp/unicode", "unicode")}}       |
+| `y`    | 対象文字列の現在の位置から始まる部分に一致するものを探す「先頭固定」 (sticky) 検索を行います。 {{jsxref("RegExp.sticky", "sticky")}} を参照してください。 | {{jsxref("RegExp/sticky", "sticky")}}         |
 
 フラグを正規表現に含めるには、次のようにしてください。
 
@@ -339,7 +339,7 @@ const re = /pattern/flags;
 または
 
 ```js
-const re = new RegExp('pattern', 'flags');
+const re = new RegExp("pattern", "flags");
 ```
 
 フラグは正規表現を作る際になくてはならないものであることに注意してください。後から加えたり取り除いたりすることはできません。
@@ -348,7 +348,7 @@ const re = new RegExp('pattern', 'flags');
 
 ```js
 const re = /\w+\s/g;
-const str = 'fee fi fo fum';
+const str = "fee fi fo fum";
 const myArray = str.match(re);
 console.log(myArray);
 
@@ -364,7 +364,7 @@ const re = /\w+\s/g;
 をこの行、
 
 ```js
-const re = new RegExp('\\w+\\s', 'g');
+const re = new RegExp("\\w+\\s", "g");
 ```
 
 に置き換えることができます。得られる結果は同じです。
@@ -377,7 +377,7 @@ const re = new RegExp('\\w+\\s', 'g');
 {{jsxref("RegExp.prototype.exec()")}} メソッドに `g` フラグを付けると、それぞれ一致した値とその位置を繰り返し返します。
 
 ```js
-const str = 'fee fi fo fum';
+const str = "fee fi fo fum";
 const re = /\w+\s/g;
 
 console.log(re.exec(str)); // ["fee ", index: 0, input: "fee fi fo fum"]
@@ -399,7 +399,7 @@ console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 例えば、次のような正規表現を使用して、任意の Unicode の「語」と照合することができます。
 
 ```js
-/\p{L}*/u
+/\p{L}*/u;
 ```
 
 Unicode 正規表現と非 Unicode 正規表現との間には、他にも注意すべき違いがいくつかあります。
@@ -452,9 +452,9 @@ Unicode の正規表現は、同様に異なる動作をします。 [`RegExp.pr
 #### JavaScript
 
 ```js
-const form = document.querySelector('#form');
-const input = document.querySelector('#phone');
-const output = document.querySelector('#output');
+const form = document.querySelector("#form");
+const input = document.querySelector("#phone");
+const output = document.querySelector("#output");
 
 const re = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
 
@@ -466,7 +466,7 @@ function testInfo(phoneInput) {
     : `${phoneInput.value} は市外局番付き電話番号ではありません！`;
 }
 
-form.addEventListener('submit', (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   testInfo(input);
 });

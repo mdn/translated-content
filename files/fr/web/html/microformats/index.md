@@ -1,7 +1,6 @@
 ---
 title: Microformats
 slug: Web/HTML/microformats
-translation_of: Web/HTML/microformats
 ---
 
 Les [_microformats_](https://microformats.org/) (parfois abrégés **μF**) sont des normes utilisées pour intégrer la sémantique et les données structurées dans le HTML, et fournir une API à utiliser par les moteurs de recherche, les agrégateurs et autres outils. Ces modèles minimaux de HTML sont utilisés pour marquer des entités allant d'informations fondamentales à des informations spécifiques à un domaine, telles que des personnes, des organisations, des événements et des lieux. Les microformats utilisent des vocabulaires de soutien pour décrire les objets et des paires nom-valeur pour attribuer des valeurs à leurs propriétés. Les propriétés sont transportées dans des attributs de classe qui peuvent être ajoutés à tout élément HTML, tandis que les valeurs des données réutilisent le contenu des éléments HTML et les attributs sémantiques. Microformats2 est une mise à jour de microformats qui offre un moyen plus simple d'annoter la syntaxe structurée et les vocabulaires HTML que les approches précédentes utilisant RDFa et microdata qui nécessitent l'apprentissage de nouveaux attributs.

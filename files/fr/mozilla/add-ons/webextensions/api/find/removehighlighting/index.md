@@ -1,7 +1,6 @@
 ---
 title: find.removeHighlighting()
 slug: Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting
-translation_of: Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting
 ---
 
 {{AddonSidebar()}}

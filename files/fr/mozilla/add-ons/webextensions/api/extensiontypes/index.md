@@ -1,7 +1,6 @@
 ---
 title: extensionTypes
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
-translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 ---
 
 {{AddonSidebar}}

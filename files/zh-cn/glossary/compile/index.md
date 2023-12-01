@@ -13,14 +13,8 @@ slug: Glossary/Compile
 
 实时编译器通常是用来提高性能的，令你没有感知的。例如在浏览器中，Firefox 的 SpiderMonkey 的 JavaScript 引擎又一个内置的实时编译器会在你浏览时将网页中的 JavaScript 代码编译为机器码，从而提供运行效率。类似 WebAssembly 的项目正在使这些工作做的更好。
 
-## 了解更多
+## 参见
 
-### 基础知识
-
+- [Compiling from C/C++ to WebAssembly](/zh-CN/docs/WebAssembly/C_to_Wasm)
+- [Compiling from Rust to WebAssembly](/zh-CN/docs/WebAssembly/Rust_to_Wasm)
 - [Compiler](https://zh.wikipedia.org/wiki/Compiler) on Wikipedia
-- The [GNU Compiler Collection (GCC)](https://gcc.gnu.org)
-
-### 学习资料
-
-- [Base CS Introduction on Compilers](https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842)
-- [A big list of learning material on StackOverflow](https://stackoverflow.com/a/1672/133203)

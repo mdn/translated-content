@@ -2,6 +2,7 @@
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
+
 {{JSRef}}
 
 **`Array.of()`** 메서드는 인자의 수나 유형에 관계없이 가변 인자를 갖는 새 `Array` 인스턴스를 만듭니다.
@@ -9,11 +10,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/of
 `Array.of()`와 `Array` 생성자의 차이는 정수형 인자의 처리 방법에 있습니다. `Array.of(7)`은 하나의 요소 `7`을 가진 배열을 생성하지만 `Array(7)`은 `length` 속성이 7인 빈 배열을 생성합니다.
 
 ```js
-Array.of(7);       // [7]
+Array.of(7); // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
 
-Array(7);          // [ , , , , , , ]
-Array(1, 2, 3);    // [1, 2, 3]
+Array(7); // [ , , , , , , ]
+Array(1, 2, 3); // [1, 2, 3]
 ```
 
 ## 구문
@@ -38,8 +39,8 @@ Array(1, 2, 3);    // [1, 2, 3]
 ## 예제
 
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 
@@ -49,7 +50,7 @@ Array.of(undefined); // [undefined]
 
 ```js
 if (!Array.of) {
-  Array.of = function() {
+  Array.of = function () {
     return Array.prototype.slice.call(arguments);
   };
 }

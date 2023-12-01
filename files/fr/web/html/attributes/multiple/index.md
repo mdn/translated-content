@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : multiple"
 slug: Web/HTML/Attributes/multiple
-translation_of: Web/HTML/Attributes/multiple
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: "::file-selector-button"
 slug: Web/CSS/::file-selector-button
-original_slug: Web/CSS/::file-selector-button
 ---
 
 {{CSSRef}}

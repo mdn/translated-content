@@ -1,7 +1,6 @@
 ---
 title: system-property
 slug: Web/XPath/Functions/system-property
-translation_of: Web/XPath/Functions/system-property
 ---
 
 {{ XsltRef() }}

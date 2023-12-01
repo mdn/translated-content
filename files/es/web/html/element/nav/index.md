@@ -1,7 +1,6 @@
 ---
 title: "<nav>: El elemento de sección de navegación"
 slug: Web/HTML/Element/nav
-original_slug: Web/HTML/Elemento/nav
 ---
 
 {{HTMLSidebar}}

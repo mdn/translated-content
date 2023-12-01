@@ -36,7 +36,7 @@ addEventListener("notificationclick", (event) => {
       for (const client of allClients) {
         const url = new URL(client.url);
 
-        if (url.pathname == '/chat/') {
+        if (url.pathname == "/chat/") {
           // よし、使ってみよう！
           client.focus();
           chatClient = client;
@@ -52,7 +52,7 @@ addEventListener("notificationclick", (event) => {
 
       // クライアントにメッセージを送ります。
       chatClient.postMessage("新しいチャットメッセージ！");
-    })()
+    })(),
   );
 });
 ```

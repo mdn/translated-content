@@ -1,7 +1,6 @@
 ---
 title: HTTP
 slug: Web/HTTP
-translation_of: Web/HTTP
 ---
 
 {{HTTPSidebar}}

@@ -22,12 +22,9 @@ async function* createAsyncGenerator() {
   yield await Promise.resolve(3);
 }
 const asyncGen = createAsyncGenerator();
-asyncGen.next()
-  .then((res) => console.log(res.value)); // 1
-asyncGen.next()
-  .then((res) => console.log(res.value)); // 2
-asyncGen.next()
-  .then((res) => console.log(res.value)); // 3
+asyncGen.next().then((res) => console.log(res.value)); // 1
+asyncGen.next().then((res) => console.log(res.value)); // 2
+asyncGen.next().then((res) => console.log(res.value)); // 3
 ```
 
 ## 实例属性
@@ -48,7 +45,7 @@ asyncGen.next()
 - {{jsxref("AsyncGenerator.prototype.next()")}}
   - : 返回 {{jsxref("Promise")}}，它将通过 {{jsxref("Operators/yield", "yield")}} 表达式产生的给定值兑现。
 - {{jsxref("AsyncGenerator.prototype.return()")}}
-  - : 就好像在生成器的暂停位置插入一个 `return` 语句，这将结束生成器并允许生成器执行任何清理的renew，尤其是与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) 块结合的时候。
+  - : 就好像在生成器的暂停位置插入一个 `return` 语句，这将结束生成器并允许生成器执行任何清理任务，尤其是与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) 块结合的时候。
 - {{jsxref("AsyncGenerator.prototype.throw()")}}
   - : 就好像在生成器的暂停位置插入一个 `throw` 语句，这将通知生成器错误的状况并允许去处理错误，或者执行清理操作并关闭它自己。
 
@@ -74,17 +71,16 @@ async function* generate() {
   yield delayedValue(250, 4);
   yield delayedValue(125, 5);
   yield delayedValue(50, 6);
-  console.log('All done!');
+  console.log("All done!");
 }
 
 async function main() {
   for await (const value of generate()) {
-    console.log('value', value);
+    console.log("value", value);
   }
 }
 
-main()
-  .catch((e) => console.error(e));
+main().catch((e) => console.error(e));
 ```
 
 ## 规范

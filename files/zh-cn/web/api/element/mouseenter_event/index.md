@@ -12,9 +12,9 @@ slug: Web/API/Element/mouseenter_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener('mouseenter', (event) => {});
+addEventListener("mouseenter", (event) => {});
 
-onmouseenter = (event) => { };
+onmouseenter = (event) => {};
 ```
 
 ## 事件类型
@@ -127,17 +127,17 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 ```js
 let enterEventCount = 0;
 let leaveEventCount = 0;
-const mouseTarget = document.getElementById('mouseTarget');
-const unorderedList = document.getElementById('unorderedList');
+const mouseTarget = document.getElementById("mouseTarget");
+const unorderedList = document.getElementById("unorderedList");
 
-mouseTarget.addEventListener('mouseenter', (e) => {
-  mouseTarget.style.border = '5px dotted orange';
+mouseTarget.addEventListener("mouseenter", (e) => {
+  mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
   addListItem(`This is mouseenter event ${enterEventCount}.`);
 });
 
-mouseTarget.addEventListener('mouseleave', (e) => {
-  mouseTarget.style.border = '1px solid #333';
+mouseTarget.addEventListener("mouseleave", (e) => {
+  mouseTarget.style.border = "1px solid #333";
   leaveEventCount++;
   addListItem(`This is mouseleave event ${leaveEventCount}.`);
 });

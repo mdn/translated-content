@@ -58,7 +58,7 @@ slug: Web/HTML/Element/object
 
 <!-- Embed a flash movie with parameters -->
 <object data="move.swf" type="application/x-shockwave-flash">
-  <param name="foo" value="bar">
+  <param name="foo" value="bar" />
 </object>
 ```
 

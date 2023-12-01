@@ -1,7 +1,6 @@
 ---
 title: Como converter exemplos de codigos para funcionar "ao vivo"
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
-original_slug: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 ---
 
 {{MDNSidebar}}

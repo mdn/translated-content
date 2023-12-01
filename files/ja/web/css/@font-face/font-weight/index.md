@@ -43,17 +43,17 @@ CSS Fonts レベル 4 では、構文を拡張して 1 から 1000 までの任�
 
 `100` から `900` の数値は、おおよそ以下の太さの名前に対応します。
 
-| 値    | 太さの名前                |
-| ----- | ------------------------- |
-| 100   | Thin (Hairline)           |
-| 200   | Extra Light (Ultra Light) |
-| 300   | Light                     |
-| 400   | Normal                    |
-| 500   | Medium                    |
-| 600   | Semi Bold (Demi Bold)     |
-| 700   | Bold                      |
-| 800   | Extra Bold (Ultra Bold)   |
-| 900   | Black (Heavy)             |
+| 値  | 太さの名前                |
+| --- | ------------------------- |
+| 100 | Thin (Hairline)           |
+| 200 | Extra Light (Ultra Light) |
+| 300 | Light                     |
+| 400 | Normal                    |
+| 500 | Medium                    |
+| 600 | Semi Bold (Demi Bold)     |
+| 700 | Bold                      |
+| 800 | Extra Bold (Ultra Bold)   |
+| 900 | Black (Heavy)             |
 
 ### 可変フォント
 
@@ -65,7 +65,7 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 
 弱視の人は、 `font-weight` の値が `100` (Thin/Hairline) または `200` (Extra Light) の場合、特にフォントの[コントラスト比が低い場合](/ja/docs/Web/CSS/color#accessibility_concerns)は、テキストを読むのが難しくなることがあります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 公式定義
@@ -85,8 +85,9 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    local("Open Sans") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
   font-weight: 400;
 }
 ```

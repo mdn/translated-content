@@ -12,7 +12,7 @@ O método **`entries()`** retorna um novo objeto **[iterador](/pt-BR/docs/Web/Ja
 ## Sintaxe
 
 ```js
-entries()
+entries();
 ```
 
 ### Valor retornado
@@ -24,16 +24,16 @@ Um novo objeto iterador {{jsxref("Map")}}.
 ### Usando o entries()]
 
 ```js
-let myMap = new Map()
-myMap.set('0', 'foo')
-myMap.set(1, 'bar')
-myMap.set({}, 'baz')
+let myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
-let mapIter = myMap.entries()
+let mapIter = myMap.entries();
 
-console.log(mapIter.next().value) // ["0", "foo"]
-console.log(mapIter.next().value) // [1, "bar"]
-console.log(mapIter.next().value) // [Object, "baz"]
+console.log(mapIter.next().value); // ["0", "foo"]
+console.log(mapIter.next().value); // [1, "bar"]
+console.log(mapIter.next().value); // [Object, "baz"]
 ```
 
 ## Especificação

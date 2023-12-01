@@ -1,7 +1,6 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
-translation_of: Web/API/DOMHighResTimeStamp
 ---
 
 {{APIRef("High Resolution Time")}}

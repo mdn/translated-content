@@ -1,15 +1,6 @@
 ---
 title: <span>
 slug: Web/HTML/Element/span
-tags:
-  - Element
-  - HTML
-  - Web
-  - Веб
-  - Потоковый контент
-  - Справка
-  - Элемент
-translation_of: Web/HTML/Element/span
 ---
 
 {{HTMLSidebar}}
@@ -21,10 +12,10 @@ translation_of: Web/HTML/Element/span
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                    |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                            | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                                                                       |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                    |
 | Допустимые родители                                              | Любой элемент, который разрешает [фразовый](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content) или [потоковый](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент) контент в качестве содержимого. |
 | Допустимые ARIA-роли                                             | Любые                                                                                                                                                                                                                  |
-| DOM-интерфейс                                                    | {{domxref("HTMLSpanElement")}} (до {{glossary("HTML5")}}, интерфейсом был {{domxref("HTMLElement")}})                                                                                       |
+| DOM-интерфейс                                                    | {{domxref("HTMLSpanElement")}} (до {{glossary("HTML5")}}, интерфейсом был {{domxref("HTMLElement")}})                                                                                                                  |
 
 ## Атрибуты
 
@@ -47,9 +38,11 @@ translation_of: Web/HTML/Element/span
 ### HTML
 
 ```html
-<li><span>
+<li>
+  <span>
     <a href="portfolio.html" target="_blank">Посмотреть моё портфолио</a>
-</span></li>
+  </span>
+</li>
 ```
 
 ### CSS
@@ -57,7 +50,7 @@ translation_of: Web/HTML/Element/span
 ```css
 li span {
   background: gold;
- }
+}
 ```
 
 ### Результат

@@ -1,11 +1,6 @@
 ---
 title: FileList
 slug: Web/API/FileList
-tags:
-  - API
-  - File API
-  - Files
-translation_of: Web/API/FileList
 ---
 
 {{APIRef("File API")}}
@@ -25,7 +20,7 @@ translation_of: Web/API/FileList
 `Этот код извлекает первый File` object из списка:
 
 ```js
-var file = document.getElementById('fileItem').files[0];
+var file = document.getElementById("fileItem").files[0];
 ```
 
 ## Обзор методов
@@ -74,54 +69,49 @@ var file;
 
 // обходит файлы используя цикл
 for (var i = 0; i < files.length; i++) {
+  // получаем сам файл
+  file = files.item(i);
+  // или можно так
+  file = files[i];
 
-    // получаем сам файл
-    file = files.item(i);
-    // или можно так
-    file = files[i];
-
-    alert(file.name);
+  alert(file.name);
 }
 ```
 
 Здесь пример посложнее.
 
 ```html
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-<head>
-</head>
-<body>
-<!--атрибут multiple позволяет выбрать сразу несколько файлов-->
+  <head> </head>
+  <body>
+    <!--атрибут multiple позволяет выбрать сразу несколько файлов-->
 
-<input id="myfiles" multiple type="file">
+    <input id="myfiles" multiple type="file" />
+  </body>
 
-</body>
+  <script>
+    var pullfiles = function () {
+      // выбираем файловые инпуты на странице
+      var fileInput = document.querySelector("#myfiles");
+      var files = fileInput.files;
+      // кешируем files.length
+      var fl = files.length;
+      var i = 0;
 
-<script>
-
-var pullfiles=function(){
-    // выбираем файловые инпуты на странице
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-    // кешируем files.length
-    var fl=files.length;
-    var i=0;
-
-    while ( i < fl) {
+      while (i < fl) {
         // локализуем файловую переменную в цикле
         var file = files[i];
         alert(file.name);
         i++;
-    }
-}
+      }
+    };
 
-// привязываем событие изменения input
-document.querySelector("#myfiles").onchange=pullfiles;
+    // привязываем событие изменения input
+    document.querySelector("#myfiles").onchange = pullfiles;
 
-//a.t
-</script>
-
+    //a.t
+  </script>
 </html>
 ```
 

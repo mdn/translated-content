@@ -1,7 +1,6 @@
 ---
 title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
 
 {{AddonSidebar()}}

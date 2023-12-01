@@ -175,7 +175,7 @@ reportPerimeter(square1.length, reportList);
 
 还有一种导出类型叫做 **default export** —- 这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) by Jason Orendorff 的模块中所解释的那样；搜索“默认导出”）。
 
-看个例子来解释它如何工作。在我们的基本模块 `square.js` 中，您可以找到一个名为 `randomSquare()` 的函数，它创建一个具有随机颜色，大小和位置的正方形。我们想作为默认导出，所以在文件的底部我们这样写：
+看个例子来解释它如何工作。在我们的基本模块 `square.js` 中，你可以找到一个名为 `randomSquare()` 的函数，它创建一个具有随机颜色，大小和位置的正方形。我们想作为默认导出，所以在文件的底部我们这样写：
 
 ```js
 export default randomSquare;
@@ -277,7 +277,7 @@ import {
 } from "./modules/triangle.js";
 ```
 
-请注意，您可以在模块文件中解决问题，例如
+请注意，你可以在模块文件中解决问题，例如
 
 ```js
 // in square.js
@@ -299,7 +299,7 @@ import {
 } from "/js-examples/modules/renaming/modules/square.js";
 ```
 
-它也会起作用。你使用什么样的风格取决于你，但是单独保留模块代码并在导入中进行更改可能更有意义。当您从没有任何控制权的第三方模块导入时，这尤其有意义。
+它也会起作用。你使用什么样的风格取决于你，但是单独保留模块代码并在导入中进行更改可能更有意义。当你从没有任何控制权的第三方模块导入时，这尤其有意义。
 
 ## 创建模块对象
 
@@ -332,7 +332,7 @@ import * as Circle from "./modules/circle.js";
 import * as Triangle from "./modules/triangle.js";
 ```
 
-在每种情况下，您现在可以访问指定对象名称下面的模块导入。
+在每种情况下，你现在可以访问指定对象名称下面的模块导入。
 
 ```js
 let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
@@ -340,11 +340,11 @@ Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);
 ```
 
-因此，您现在可以像以前一样编写代码（只要您在需要时包含对象名称），并且导入更加整洁。
+因此，你现在可以像以前一样编写代码（只要你在需要时包含对象名称），并且导入更加整洁。
 
 ## 模块与类（class）
 
-正如我们之前提到的那样，您还可以导出和导入类；这是避免代码冲突的另一种选择，如果您已经以面向对象的方式编写了模块代码，那么它尤其有用。
+正如我们之前提到的那样，你还可以导出和导入类；这是避免代码冲突的另一种选择，如果你已经以面向对象的方式编写了模块代码，那么它尤其有用。
 
 你可以在我们的 [classes](https://github.com/mdn/js-examples/tree/main/module-examples/classes) 目录中看到使用 ES 类重写的形状绘制模块的示例。例如，[`square.js`](https://github.com/mdn/js-examples/blob/main/module-examples/classes/modules/square.js) 文件现在包含单个类中的所有功能：
 
@@ -385,7 +385,7 @@ square1.reportPerimeter();
 
 ## 合并模块
 
-有时你会想要将模块聚合在一起。您可能有多个级别的依赖项，您希望简化事物，将多个子模块组合到一个父模块中。这可以使用父模块中以下表单的导出语法：
+有时你会想要将模块聚合在一起。你可能有多个级别的依赖项，你希望简化事物，将多个子模块组合到一个父模块中。这可以使用父模块中以下表单的导出语法：
 
 ```js
 export * from "x.js";
@@ -424,7 +424,7 @@ export { Circle } from "/js-examples/modules/module-aggregation/modules/shapes/c
 
 > **备注：** 即使 `shapes.js` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。这是使用 JavaScript 模块时混淆的常见原因。
 
-> **备注：** `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此您将无法在同一文件中编写任何有用的相关代码。
+> **备注：** `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此你将无法在同一文件中编写任何有用的相关代码。
 
 所以现在在 `main.js` 文件中，我们可以通过替换来访问所有三个模块类
 
@@ -442,9 +442,9 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 ## 动态加载模块
 
-浏览器中可用的 JavaScript 模块功能的最新部分是动态模块加载。这允许您仅在需要时动态加载模块，而不必预先加载所有模块。这有一些明显的性能优势；让我们继续阅读，看看它是如何工作的。
+浏览器中可用的 JavaScript 模块功能的最新部分是动态模块加载。这允许你仅在需要时动态加载模块，而不必预先加载所有模块。这有一些明显的性能优势；让我们继续阅读，看看它是如何工作的。
 
-这个新功能允许您将 `import()` 作为函数调用，将其作为参数传递给模块的路径。它返回一个 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它用一个模块对象来实现（参见[创建模块对象](#创建模块对象)），让你可以访问该对象的导出，例如
+这个新功能允许你将 `import()` 作为函数调用，将模块的路径作为参数传递。它返回一个 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它用一个模块对象来实现（参见[创建模块对象](#创建模块对象)），让你可以访问该对象的导出，例如
 
 ```js
 import("/modules/mymodule.js").then((module) => {

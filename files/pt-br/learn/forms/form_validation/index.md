@@ -1,7 +1,6 @@
 ---
 title: Form data validation
 slug: Learn/Forms/Form_validation
-original_slug: Web/Guide/HTML/Forms/Form_validation
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}

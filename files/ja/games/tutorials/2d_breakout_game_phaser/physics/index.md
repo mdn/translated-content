@@ -1,7 +1,6 @@
 ---
 title: 物理演算
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
-original_slug: Games/Workflows/2D_breakout_game_Phaser/Physics
 ---
 
 {{GamesSidebar}}

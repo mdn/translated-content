@@ -1,7 +1,6 @@
 ---
 title: IDBTransaction.mode
 slug: Web/API/IDBTransaction/mode
-translation_of: Web/API/IDBTransaction/mode
 ---
 
 {{APIRef("IndexedDB")}}

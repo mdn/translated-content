@@ -1,7 +1,6 @@
 ---
 title: Event.originalTarget
 slug: Web/API/Event/originalTarget
-translation_of: Web/API/Event/originalTarget
 l10n:
   sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---

@@ -1,7 +1,6 @@
 ---
 title: proxy.onProxyError
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onError
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onError
 ---
 
 {{AddonSidebar()}}

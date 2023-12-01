@@ -1,7 +1,6 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-translation_of: Web/HTTP/Methods/HEAD
 ---
 
 {{HTTPSidebar}}

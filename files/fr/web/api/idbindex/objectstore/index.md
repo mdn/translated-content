@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.objectStore
 slug: Web/API/IDBIndex/objectStore
-translation_of: Web/API/IDBIndex/objectStore
 ---
 
 {{ APIRef("IndexedDB") }}

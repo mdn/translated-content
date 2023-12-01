@@ -1,9 +1,8 @@
 ---
 title: NonDocumentTypeChildNode.previousElementSibling
 slug: Web/API/Element/previousElementSibling
-translation_of: Web/API/NonDocumentTypeChildNode/previousElementSibling
-original_slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`NonDocumentTypeChildNode.previousElementSibling`** только для чтения возвращает {{domxref("Element")}} элемент стоящий перед применяемым, из списка дочерних элементов родителя или возвращает null, если таковых не имеется.
@@ -24,13 +23,13 @@ prevNode = elementNodeReference.previousElementSibling;
 <div id="div-03">Here is div-03</div>
 
 <script>
-  var el = document.getElementById('div-03').previousElementSibling;
-  document.write('<p>Siblings of div-03</p><ol>');
+  var el = document.getElementById("div-03").previousElementSibling;
+  document.write("<p>Siblings of div-03</p><ol>");
   while (el) {
-    document.write('<li>' + el.nodeName + '</li>');
+    document.write("<li>" + el.nodeName + "</li>");
     el = el.previousElementSibling;
   }
-  document.write('</ol>');
+  document.write("</ol>");
 </script>
 ```
 
@@ -51,15 +50,14 @@ prevNode = elementNodeReference.previousElementSibling;
 
 ```js
 // Ресурс: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
-if(!("previousElementSibling" in document.documentElement)){
-    Object.defineProperty(Element.prototype, "previousElementSibling", {
-        get: function(){
-            var e = this.previousSibling;
-            while(e && 1 !== e.nodeType)
-                e = e.previousSibling;
-            return e;
-        }
-    });
+if (!("previousElementSibling" in document.documentElement)) {
+  Object.defineProperty(Element.prototype, "previousElementSibling", {
+    get: function () {
+      var e = this.previousSibling;
+      while (e && 1 !== e.nodeType) e = e.previousSibling;
+      return e;
+    },
+  });
 }
 ```
 
@@ -69,35 +67,32 @@ if(!("previousElementSibling" in document.documentElement)){
 // Ресурс: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/previousElementSibling/previousElementSibling.md
 (function (arr) {
   arr.forEach(function (item) {
-    if (item.hasOwnProperty('previousElementSibling')) {
+    if (item.hasOwnProperty("previousElementSibling")) {
       return;
     }
-    Object.defineProperty(item, 'previousElementSibling', {
+    Object.defineProperty(item, "previousElementSibling", {
       configurable: true,
       enumerable: true,
       get: function () {
         var el = this;
-        while (el = el.previousSibling) {
+        while ((el = el.previousSibling)) {
           if (el.nodeType === 1) {
             return el;
           }
         }
         return null;
       },
-      set: undefined
+      set: undefined,
     });
   });
 })([Element.prototype, CharacterData.prototype]);
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                                                                                     | Статус                                   | Комментарии                                                                                                                                                                                                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-previouselementsibling', 'NonDocumentTypeChildNode.previousElementSibling')}} | {{Spec2('DOM WHATWG')}}         | Splitted the `ElementTraversal` interface in {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, and {{domxref("NonDocumentTypeChildNode")}}. This method is now defined on the former. The {{domxref("Element")}} and {{domxref("CharacterData")}} interfaces implemented the new interface. |
-| {{SpecName('Element Traversal', '#attribute-previousElementSibling', 'ElementTraversal.previousElementSibling')}}                         | {{Spec2('Element Traversal')}} | Added its initial definition to the `ElementTraversal` pure interface and use it on {{domxref("Element")}}.                                                                                                                                                                                                                        |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

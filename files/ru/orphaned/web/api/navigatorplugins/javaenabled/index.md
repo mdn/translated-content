@@ -1,8 +1,6 @@
 ---
 title: NavigatorPlugins.javaEnabled()
 slug: orphaned/Web/API/NavigatorPlugins/javaEnabled
-translation_of: Web/API/NavigatorPlugins/javaEnabled
-original_slug: Web/API/NavigatorPlugins/javaEnabled
 ---
 
 {{ APIRef("HTML DOM") }}

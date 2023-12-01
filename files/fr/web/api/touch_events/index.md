@@ -1,7 +1,6 @@
 ---
 title: Évènements tactiles
 slug: Web/API/Touch_events
-translation_of: Web/API/Touch_events
 ---
 
 {{DefaultAPISidebar("Touch Events")}}

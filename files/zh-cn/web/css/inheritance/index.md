@@ -14,7 +14,9 @@ slug: Web/CSS/Inheritance
 继承属性的一个典型例子就是 {{ Cssxref("color") }} 属性。给出以下样式规则：
 
 ```css
-p { color: green; }
+p {
+  color: green;
+}
 ```
 
 若将其应用在下面这段 HTML 代码上…
@@ -32,13 +34,15 @@ p { color: green; }
 非继承属性的一个典型例子就是 {{ Cssxref("border") }} 属性。给出以下样式规则：
 
 ```css
- p { border: medium solid; }
+p {
+  border: medium solid;
+}
 ```
 
 若将其应用在下面这段 HTML 代码上…
 
 ```html
-  <p>This paragraph has <em>emphasized text</em> in it.</p>
+<p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
 …文本 "emphasized text" 就没有边框，因为 {{ Cssxref("border-style") }} 属性的初始值为`none`。

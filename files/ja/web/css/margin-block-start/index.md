@@ -13,9 +13,9 @@ slug: Web/CSS/margin-block-start
 
 ```css
 /* <length> 値 */
-margin-block-start: 10px;  /* 絶対的な長さ */
-margin-block-start: 1em;   /* テキストの大きさに対する相対値 */
-margin-block-start: 5%;    /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-block-start: 10px; /* 絶対的な長さ */
+margin-block-start: 1em; /* テキストの大きさに対する相対値 */
+margin-block-start: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 
 /* キーワード値 */
 margin-block-start: auto;

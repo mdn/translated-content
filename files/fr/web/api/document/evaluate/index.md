@@ -1,7 +1,6 @@
 ---
 title: document.evaluate
 slug: Web/API/Document/evaluate
-translation_of: Web/API/Document/evaluate
 ---
 
 {{ ApiRef("DOM") }}

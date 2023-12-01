@@ -1,7 +1,6 @@
 ---
 title: translate
 slug: Web/CSS/translate
-translation_of: Web/CSS/translate
 ---
 
 {{CSSRef}}{{seecompattable}}

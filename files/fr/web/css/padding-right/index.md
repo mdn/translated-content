@@ -1,7 +1,6 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
-translation_of: Web/CSS/padding-right
 ---
 
 {{CSSRef}}

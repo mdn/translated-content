@@ -1,7 +1,6 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode statique **`Atomics.notify()`** permet de réveiller des agents dorm
 ## Syntaxe
 
 ```js
-Atomics.notify(typedArray, index, count)
+Atomics.notify(typedArray, index, count);
 ```
 
 ### Paramètres

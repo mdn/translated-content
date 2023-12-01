@@ -1,8 +1,6 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: WebAssembly/JavaScript_interface/compileStreaming
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
 
 {{WebAssemblySidebar}}
@@ -46,9 +44,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
 
 ## Характеристики
 
-| Спецификация                                                                                | Статус                             | Коммент                             |
-| ------------------------------------------------------------------------------------------- | ---------------------------------- | ----------------------------------- |
-| {{SpecName('WebAssembly Embedding', '#webassemblycompilestreaming', 'compileStreaming()')}} | {{Spec2('WebAssembly Embedding')}} | Первоначальное определение проекта. |
+{{Specifications}}
 
 ## Совместимость с браузером
 

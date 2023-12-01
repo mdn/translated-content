@@ -1,7 +1,6 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/sup
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -27,18 +26,18 @@ Usa el método `sup` junto para formatear y mostrar una cadena en un documento.
 El siguiente ejemplo usa los métodos `sub` y `sup` para formatear una cadena:
 
 ```js
-var textoSuper="superscript"
-var textoSub="subscript"
+var textoSuper = "superscript";
+var textoSub = "subscript";
 
-console.log("Esto es lo que un " + textoSuper.sup() + " parece.")
-console.log("Esto es lo que un " + textoSub.sub() + " parece.")
+console.log("Esto es lo que un " + textoSuper.sup() + " parece.");
+console.log("Esto es lo que un " + textoSub.sub() + " parece.");
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:
 
 ```html
-Esto es lo que <sup>superscript</sup> parece.
-Esto es lo que <sub>subscript</sub> parece.
+Esto es lo que <sup>superscript</sup> parece. Esto es lo que
+<sub>subscript</sub> parece.
 ```
 
 ### Vea También

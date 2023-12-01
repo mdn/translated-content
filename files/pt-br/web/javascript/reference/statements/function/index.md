@@ -2,6 +2,7 @@
 title: Declaração de função
 slug: Web/JavaScript/Reference/Statements/function
 ---
+
 {{jsSidebar("Statements")}}
 
 A **declaração function** define uma função com os especificados parâmetros.
@@ -52,8 +53,8 @@ Note que {{jsxref("Operators/function", "function expressions")}} não são hois
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log("bar");
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -65,23 +66,17 @@ O seguinte código declara uma função que retorna a quantidade total das venda
 
 ```js
 function calc_sales(units_a, units_b, units_c) {
-   return units_a * 79 + units_b * 129 + units_c * 699;
+  return units_a * 79 + units_b * 129 + units_c * 699;
 }
 ```
 
 ## Especificações
 
-| Specification                                                                                        | Status                       | Comment                                            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES3', '#sec-13', 'Function definition')}}                             | {{Spec2('ES3')}}         |                                                    |
-| {{SpecName('ES1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES1')}}         | Definição inicial. Implementado em JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.function")}}
+{{Compat}}
 
 ## Veja também
 

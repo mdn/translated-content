@@ -1,8 +1,6 @@
 ---
 title: RenderingContext
 slug: orphaned/Web/API/RenderingContext
-translation_of: Web/API/RenderingContext
-original_slug: Web/API/RenderingContext
 ---
 
 {{APIRef("Canvas API")}}
@@ -17,9 +15,7 @@ original_slug: Web/API/RenderingContext
 
 ## Спецификации
 
-| Спецификация                                                                                                 | Статус                           | Комментарий            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#renderingcontext", "RenderingContext")}} | {{Spec2('HTML WHATWG')}} | Внутреннее объявление. |
+{{Specifications}}
 
 ## Связанное с этим
 

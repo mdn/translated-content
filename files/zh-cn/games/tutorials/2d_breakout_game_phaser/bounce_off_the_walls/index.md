@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser)的**第 6 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson06.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html)完成本课后，您可以找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser)的**第 6 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson06.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html)完成本课后，你可以找到源代码。
 
 现在已经介绍了物理引擎，我们可以开始在游戏中实现碰撞检测 - 首先我们来看看墙壁。
 
@@ -25,11 +25,11 @@ ball.body.collideWorldBounds = true;
 ball.body.bounce.set(1);
 ```
 
-再次尝试重新加载 index.html - 现在您应该看到球从墙壁上弹起并在画布区域内移动。
+再次尝试重新加载 index.html - 现在你应该看到球从墙壁上弹起并在画布区域内移动。
 
 ## 比较你的代码
 
-您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/dcw36opz/","","400")}}
 

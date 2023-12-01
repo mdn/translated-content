@@ -1,13 +1,6 @@
 ---
 title: Реализация элементов управления с помощью API Gamepad
 slug: Games/Techniques/Controls_Gamepad_API
-tags:
-  - Gamepad API
-  - JavaScript
-  - Игры
-  - геймпады
-  - контроллеры
-translation_of: Games/Techniques/Controls_Gamepad_API
 ---
 
 {{GamesSidebar}}

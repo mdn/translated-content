@@ -1,7 +1,6 @@
 ---
 title: element
 slug: Web/CSS/element
-translation_of: Web/CSS/element()
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

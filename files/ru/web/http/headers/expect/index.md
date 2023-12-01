@@ -1,8 +1,6 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
-translation_of: Web/HTTP/Headers/Expect
-original_slug: Web/HTTP/Заголовки/Expect
 ---
 
 {{HTTPSidebar}}
@@ -62,8 +60,8 @@ Expect: 100-continue
 
 ## Характеристики
 
-| Спецификация                                 | Название                                                      |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Спецификация                       | Название                                                      |
+| ---------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Expect", "5.1.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Совместимость с браузером

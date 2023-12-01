@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 ## 구문
 
 ```js
-Reflect.has(target, propertyKey)
+Reflect.has(target, propertyKey);
 ```
 
 ### 매개변수
@@ -39,18 +39,23 @@ Reflect.has(target, propertyKey)
 ### `Reflect.has()` 사용하기
 
 ```js
-Reflect.has({x: 0}, 'x'); // true
-Reflect.has({x: 0}, 'y'); // false
+Reflect.has({ x: 0 }, "x"); // true
+Reflect.has({ x: 0 }, "y"); // false
 
 // 프로토타입 체인에 존재하는 속성도 true 반환
-Reflect.has({x: 0}, 'toString');
+Reflect.has({ x: 0 }, "toString");
 
 // .has() 처리기 메서드를 가진 Proxy
-obj = new Proxy({}, {
-  has(t, k) { return k.startsWith('door'); }
-});
-Reflect.has(obj, 'doorbell'); // true
-Reflect.has(obj, 'dormitory'); // false
+obj = new Proxy(
+  {},
+  {
+    has(t, k) {
+      return k.startsWith("door");
+    },
+  },
+);
+Reflect.has(obj, "doorbell"); // true
+Reflect.has(obj, "dormitory"); // false
 ```
 
 ## 명세

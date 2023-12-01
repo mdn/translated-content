@@ -18,10 +18,8 @@ O atributo `autocapitalize` nunca ativa a autocapitalização para um elemento {
 
 ## Especificações
 
-| Especificação                                                                                                    | Estado                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "interaction.html#autocapitalization", "autocapitalize")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.autocapitalize")}}
+{{Compat}}

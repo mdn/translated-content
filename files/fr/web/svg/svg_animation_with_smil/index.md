@@ -1,7 +1,6 @@
 ---
 title: Animation SVG avec SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
-translation_of: Web/SVG/SVG_animation_with_SMIL
 ---
 
 > **Attention :** Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis [suspendu](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) cette décision.

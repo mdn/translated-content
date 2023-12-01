@@ -1,8 +1,9 @@
 ---
 title: NaN
 slug: Glossary/NaN
-translation_of: Glossary/NaN
 ---
+
+{{GlossarySidebar}}
 
 `NaN` (Not a Number — _pas un nombre_) est un {{Glossary("Type", "type de données")}} numérique qui indique une valeur indéfinie ou une valeur qui ne peut pas être représentée, en particulier le résultat d'une opération à virgule flottante.
 

@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
-original_slug: Web/API/AudioContext/createBiquadFilter
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -13,7 +12,7 @@ original_slug: Web/API/AudioContext/createBiquadFilter
 ## 構文
 
 ```js
-createBiquadFilter()
+createBiquadFilter();
 ```
 
 ### 引数

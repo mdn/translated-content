@@ -1,7 +1,6 @@
 ---
 title: contextMenuShowEvent
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent
 ---
 
 {{AddonSidebar()}}

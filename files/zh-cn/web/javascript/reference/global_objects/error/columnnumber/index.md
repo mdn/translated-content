@@ -12,9 +12,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 ### 使用 `columnNumber`
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
-console.log(e.columnNumber) // 0
+console.log(e.columnNumber); // 0
 ```
 
 ## 规范
@@ -25,7 +25,7 @@ console.log(e.columnNumber) // 0
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}

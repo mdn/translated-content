@@ -52,7 +52,7 @@ Object.getOwnPropertyDescriptors(obj)
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 

@@ -43,7 +43,7 @@ self.addEventListener("fetch", (event) => {
 
           throw error;
         });
-    })
+    }),
   );
 });
 ```

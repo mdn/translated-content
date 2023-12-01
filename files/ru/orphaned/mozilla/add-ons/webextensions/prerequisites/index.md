@@ -1,8 +1,6 @@
 ---
 title: Prerequisites
 slug: orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
-translation_of: Mozilla/Add-ons/WebExtensions/Prerequisites
-original_slug: Mozilla/Add-ons/WebExtensions/Prerequisites
 ---
 
 {{AddonSidebar}}

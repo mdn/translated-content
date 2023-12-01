@@ -1,7 +1,6 @@
 ---
 title: ExtendableMessageEvent.ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
-translation_of: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 ---
 
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}

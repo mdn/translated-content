@@ -1,7 +1,6 @@
 ---
 title: notifications.onClosed
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
 ---
 
 {{AddonSidebar()}}

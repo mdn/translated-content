@@ -1,7 +1,6 @@
 ---
 title: permissions.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
-translation_of: Web/API/Element/querySelectorAll
 ---
 
 ## Общая информация
@@ -25,20 +24,20 @@ elementList = baseElement.querySelectorAll(selectors);
 Этот пример возвращает список всех элементов с тегом p, которые находятся в теле документа:
 
 ```js
-var matches = document.body.querySelectorAll('p');
+var matches = document.body.querySelectorAll("p");
 ```
 
 Этот пример возвращает список всех элементов с тегом p, которые находятся непосредственно в элементах-контейнерах с тегом div, имеющих класс 'highlighted', которые в свою очередь находятся внутри элемента с идентификатором 'test':
 
 ```js
-var el = document.querySelector('#test');
-var matches = el.querySelectorAll('div.highlighted > p');
+var el = document.querySelector("#test");
+var matches = el.querySelectorAll("div.highlighted > p");
 ```
 
 Этот пример возвращает список всех элементов iframe, которые имеют атрибут "data-src":
 
 ```js
-var matches = el.querySelectorAll('iframe[data-src]');
+var matches = el.querySelectorAll("iframe[data-src]");
 ```
 
 ## Примечания

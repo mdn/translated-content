@@ -1,7 +1,6 @@
 ---
 title: document.createElementNS
 slug: Web/API/Document/createElementNS
-translation_of: Web/API/Document/createElementNS
 ---
 
 {{ApiRef("DOM")}}

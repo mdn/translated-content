@@ -1,7 +1,6 @@
 ---
 title: device-width
 slug: Web/CSS/@media/device-width
-translation_of: Web/CSS/@media/device-width
 ---
 
 {{CSSRef}}{{deprecated_header}}

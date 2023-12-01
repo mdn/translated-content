@@ -1,7 +1,6 @@
 ---
 title: "Window: storage event"
 slug: Web/API/Window/storage_event
-translation_of: Web/API/Window/storage_event
 ---
 
 {{APIRef}}

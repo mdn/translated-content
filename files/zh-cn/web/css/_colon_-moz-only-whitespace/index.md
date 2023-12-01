@@ -1,5 +1,5 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:-moz-only-whitespace
 ---
 
@@ -22,7 +22,7 @@ slug: Web/CSS/:-moz-only-whitespace
 ### HTML
 
 ```html
-<div> </div>
+<div></div>
 ```
 
 ### CSS

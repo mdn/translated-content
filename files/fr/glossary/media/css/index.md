@@ -1,8 +1,9 @@
 ---
 title: Média (CSS)
 slug: Glossary/Media/CSS
-translation_of: Glossary/Media/CSS
 ---
+
+{{GlossarySidebar}}
 
 Dans le contexte de {{Glossary("CSS")}} (Cascading Style Sheets), le terme **_média_** fait référence à la destination vers laquelle le document doit être dessiné par le {{Glossary("rendering engine")}}. Il s'agit généralement d'un écran—mais il peut également s'agir d'une imprimante, d'un synthétiseur vocal, d'un afficheur Braille ou d'un autre type de périphérique.
 

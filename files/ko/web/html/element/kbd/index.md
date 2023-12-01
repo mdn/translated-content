@@ -1,5 +1,5 @@
 ---
-title: '<kbd>: 키보드 입력 요소'
+title: "<kbd>: 키보드 입력 요소"
 slug: Web/HTML/Element/kbd
 ---
 
@@ -72,7 +72,10 @@ slug: Web/HTML/Element/kbd
 ### 기본 예제
 
 ```html
-<p><kbd>help mycommand</kbd> 명령어를 입력해 "mycommand" 명령에 대한 문서를 확인하세요.</p>
+<p>
+  <kbd>help mycommand</kbd> 명령어를 입력해 "mycommand" 명령에 대한 문서를
+  확인하세요.
+</p>
 ```
 
 #### 결과
@@ -90,8 +93,10 @@ slug: Web/HTML/Element/kbd
 ##### HTML
 
 ```html
-<p>새로운 문서는 키보드 단축키
-<kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>으로 만들 수 있습니다.</p>
+<p>
+  새로운 문서는 키보드 단축키 <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd
+  >으로 만들 수 있습니다.
+</p>
 ```
 
 단축키 조합 전체를 하나의 `<kbd>`로 감싼 후, 조합 구성요소를 나타내기 위해 각각의 키보드 키를 다른 `<kbd>`로 감싼 모습입니다.
@@ -127,8 +132,11 @@ kbd.key {
 HTML을 업데이트해 앞선 스타일을 적용합니다.
 
 ```html
-<p>새로운 문서는 키보드 단축키
-<kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd>으로 만들 수 있습니다.</p>
+<p>
+  새로운 문서는 키보드 단축키
+  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd
+  >으로 만들 수 있습니다.
+</p>
 ```
 
 ##### 결과
@@ -142,8 +150,10 @@ HTML을 업데이트해 앞선 스타일을 적용합니다.
 `<kbd>` 요소를 {{htmlelement("samp")}} 요소 안에 배치하면 시스템이 다시 출력한 입력을 나타낼 수 있습니다.
 
 ```html
-<p>구문 오류가 발생하면, 오류 원인을 찾을 수 있도록
-입력받은 명령을 다시 출력합니다.</p>
+<p>
+  구문 오류가 발생하면, 오류 원인을 찾을 수 있도록 입력받은 명령을 다시
+  출력합니다.
+</p>
 <blockquote>
   <samp><kbd>custom-git ad my-new-file.cpp</kbd></samp>
 </blockquote>
@@ -160,12 +170,19 @@ HTML을 업데이트해 앞선 스타일을 적용합니다.
 예를 들면, "파일" 메뉴의 "새 문서" 옵션을 선택하는 방법에 대해 설명하는 HTML은 다음과 같은 형태를 가집니다.
 
 ```html
-<p>새로운 파일을 생성하려면, <kbd>
-<kbd><samp>파일</samp></kbd>⇒<kbd><samp>새 문서</samp></kbd>
-</kbd> 메뉴를 선택하세요.
+<p>
+  새로운 파일을 생성하려면,
+  <kbd>
+    <kbd><samp>파일</samp></kbd
+    >⇒<kbd><samp>새 문서</samp></kbd>
+  </kbd>
+  메뉴를 선택하세요.
+</p>
 
-<p>파일의 이름을 입력한 후, <kbd><samp>확인</samp></kbd>을
-누르는 걸 잊지 마세요.</p>
+<p>
+  파일의 이름을 입력한 후, <kbd><samp>확인</samp></kbd
+  >을 누르는 걸 잊지 마세요.
+</p>
 ```
 
 흥미로운 중첩 사용법을 볼 수 있습니다. 메뉴 옵션 설명을 보면, 전체 입력 시퀀스가 하나의 `<kbd>` 요소에 들어간 것을 볼 수 있으며, 메뉴 이름("파일")과 메뉴 항목("새 문서") 둘 다 각자의 `<kbd>`와 `<samp>`로 표시한 것을 볼 수 있습니다. `<kbd>` 안에 `<samp>`가 존재하므로, "파일"과 "새 문서"는 화면 위의 위젯을 사용한 입력임을 알 수 있습니다.

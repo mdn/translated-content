@@ -1,7 +1,6 @@
 ---
 title: Systèmes de coordonnées
 slug: Web/CSS/CSSOM_view/Coordinate_systems
-translation_of: Web/CSS/CSSOM_View/Coordinate_systems
 ---
 
 {{cssref}}

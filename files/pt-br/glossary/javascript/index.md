@@ -1,8 +1,9 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
-original_slug: Glossario/JavaScript
 ---
+
+{{GlossarySidebar}}
 
 ## Sumário
 

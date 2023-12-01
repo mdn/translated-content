@@ -1,7 +1,6 @@
 ---
 title: progressbar ロールの使用
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 ---
 
 このテクニックは、[`progressbar`](http://www.w3.org/TR/wai-aria/#progressbar) ロールの使い方を示し、ブラウザーや支援技術への影響について説明します。

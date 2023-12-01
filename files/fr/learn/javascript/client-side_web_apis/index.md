@@ -1,7 +1,6 @@
 ---
 title: API web utilisées côté client
 slug: Learn/JavaScript/Client-side_web_APIs
-translation_of: Learn/JavaScript/Client-side_web_APIs
 ---
 
 {{LearnSidebar}}

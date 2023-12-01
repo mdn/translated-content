@@ -1,16 +1,9 @@
 ---
 title: Boolean (Булев, Логический тип данных)
 slug: Glossary/Boolean
-tags:
-  - Boolean
-  - JavaScript
-  - Глоссарий
-  - Логический тип данных
-  - Типы данных
-  - языки программирования
-translation_of: Glossary/Boolean
-original_slug: Глоссарий/Boolean
 ---
+
+{{GlossarySidebar}}
 
 **Boolean (Булев, Логический тип данных)** — примитивный тип данных в информатике, которые могут принимать два возможных значения, иногда называемых истиной (`true`) и ложью (`false`). Например, в JavaScript Булевы состояния часто используются для того, чтобы определить какие части кода выполнять (например, в [операторах if](/ru/docs/Web/JavaScript/Reference/Statements/if...else)) или повторять (например, [циклы for](/ru/docs/Web/JavaScript/Reference/Statements/for)).
 

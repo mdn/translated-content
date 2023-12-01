@@ -2,8 +2,6 @@
 title: "HTMLOutputElement: labels プロパティ"
 short-title: labels
 slug: Web/API/HTMLOutputElement/labels
-l10n:
-	sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: CSS Pages
 slug: Web/CSS/CSS_paged_media
-translation_of: Web/CSS/CSS_Pages
 ---
 
 {{CSSRef}}

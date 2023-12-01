@@ -1,7 +1,6 @@
 ---
 title: Faire un retour à propos de MDN Web Docs
 slug: MDN/Community
-translation_of: MDN/Contribute/Feedback
 ---
 
 {{MDNSidebar}}

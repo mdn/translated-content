@@ -1,7 +1,6 @@
 ---
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
-translation_of: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle","Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex")}}

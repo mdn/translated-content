@@ -1,7 +1,6 @@
 ---
 title: "CSS : Feuilles de style en cascade"
 slug: Web/CSS
-translation_of: Web/CSS
 ---
 
 {{CSSRef}}

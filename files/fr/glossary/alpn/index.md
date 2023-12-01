@@ -1,8 +1,9 @@
 ---
 title: ALPN
 slug: Glossary/ALPN
-translation_of: Glossary/ALPN
 ---
+
+{{GlossarySidebar}}
 
 **Application-Layer {{Glossary("Protocol")}} Negotiation** (**ALPN**) est une extension {{Glossary("TLS")}} qui indique quel protocole de couche d'application négocie la connexion chiffrée sans nécessiter d'aller-retour supplémentaires.
 

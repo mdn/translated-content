@@ -2,7 +2,6 @@
 title: "Element: animationcancel イベント"
 short-title: animationcancel
 slug: Web/API/Element/animationcancel_event
-original_slug: Web/API/Document/animationcancel_event
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---

@@ -1,7 +1,6 @@
 ---
 title: CSS Miscellaneous
 slug: Web/CSS/CSS_miscellaneous
-translation_of: Web/CSS/CSS_Miscellaneous
 ---
 
 {{CSSRef}}

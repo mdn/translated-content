@@ -1,7 +1,6 @@
 ---
 title: Gestión de la conexión en  HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x
 ---
 
 {{HTTPSidebar}}

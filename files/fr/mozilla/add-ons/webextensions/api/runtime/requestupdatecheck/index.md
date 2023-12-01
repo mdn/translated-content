@@ -1,7 +1,6 @@
 ---
 title: runtime.requestUpdateCheck()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: bookmarks.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
 ---
 
 {{AddonSidebar()}}

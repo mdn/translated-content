@@ -1,7 +1,6 @@
 ---
 title: ":playing"
 slug: Web/CSS/:playing
-translation_of: Web/CSS/:playing
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

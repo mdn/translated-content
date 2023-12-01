@@ -188,7 +188,7 @@ console.log(o.a); // 37；赋值不会成功
     writable: false,
   });
   o.b = 3; // 抛出 TypeError: "b" is read-only
-  return o.b; // 如果没有上一行的话，会返回 2 
+  return o.b; // 如果没有上一行的话，会返回 2
 })();
 ```
 
@@ -209,7 +209,7 @@ Object.defineProperty(o, "b", {
 Object.defineProperty(o, "c", {
   value: 3,
 }); // enumerable 默认为 false
-o.d = 4; // 通过赋值创建属性时 enumerable 默认为 true 
+o.d = 4; // 通过赋值创建属性时 enumerable 默认为 true
 Object.defineProperty(o, Symbol.for("e"), {
   value: 5,
   enumerable: true,

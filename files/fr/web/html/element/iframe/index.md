@@ -1,7 +1,6 @@
 ---
 title: "<iframe> : l'élément de cadre intégré"
 slug: Web/HTML/Element/iframe
-translation_of: Web/HTML/Element/iframe
 ---
 
 {{HTMLSidebar}}

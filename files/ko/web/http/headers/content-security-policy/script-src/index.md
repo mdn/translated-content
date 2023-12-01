@@ -1,11 +1,11 @@
 ---
-title: 'CSP: script-src'
+title: "CSP: script-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
 ---
 
 {{HTTPSidebar}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** 는 자바스크립트트에 대한 검증된 출처를 지정합니다. 여기에는 {{HTMLElement("script")}} 요소에서 직접 호출한 URL뿐만 아니라, 인라인 스크립트 이벤트 핸들러(`onclick`) 및 스크립트를 실행할 수 있는 [XSLT stylesheets](/ko/docs/Web/XSLT) 가 포함됩니다.
+HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** 는 JavaScript에 대한 검증된 출처를 지정합니다. 여기에는 {{HTMLElement("script")}} 요소에서 직접 호출한 URL뿐만 아니라, 인라인 스크립트 이벤트 핸들러(`onclick`) 및 스크립트를 실행할 수 있는 [XSLT stylesheets](/ko/docs/Web/XSLT) 가 포함됩니다.
 
 <table class="properties">
   <tbody>
@@ -61,13 +61,13 @@ Content-Security-Policy: script-src https://example.com/
 인라인 스크립트도 실행되지 않습니다:
 
 ```html
-<button id="btn" onclick="doSomething()">
+<button id="btn" onclick="doSomething()"></button>
 ```
 
 {{domxref("EventTarget.addEventListener", "addEventListener")}}를 호출하는 것으로 대체해야 합니다.:
 
 ```js
-document.getElementById("btn").addEventListener('click', doSomething);
+document.getElementById("btn").addEventListener("click", doSomething);
 ```
 
 ### 안전하지 않은 인라인 스크립트
@@ -111,7 +111,9 @@ Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWt
 해시를 생성할 때에는 {{HTMLElement("script")}} 태그를 포함하지 말고, 대소문자, 태그의 앞뒤 공백이 포함되어야 하는 것을 유의해주십시요.
 
 ```html
-<script>var inline = 1;</script>
+<script>
+  var inline = 1;
+</script>
 ```
 
 ### 안전하지 않은 eval 표현식

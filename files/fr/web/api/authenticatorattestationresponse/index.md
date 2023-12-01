@@ -1,7 +1,6 @@
 ---
 title: AuthenticatorAttestationResponse
 slug: Web/API/AuthenticatorAttestationResponse
-translation_of: Web/API/AuthenticatorAttestationResponse
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}

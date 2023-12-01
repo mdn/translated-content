@@ -61,8 +61,6 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
   - {{HTTPHeader("Content-Type")}}（需要注意额外的限制）
   - {{HTTPHeader("Range")}}（只允许[简单的范围标头值](https://fetch.spec.whatwg.org/#simple-range-header-value) 如 `bytes=256-` 或 `bytes=127-255`）
 
-> **备注：** Firefox 还没有将 `Range` 实现为安全的请求标头。参见 [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981)。
-
 - {{HTTPHeader("Content-Type")}} 标头所指定的{{Glossary("MIME type","媒体类型")}}的值仅限于下列三者之一：
 
   - `text/plain`
@@ -84,9 +82,9 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 
 ```js
 const xhr = new XMLHttpRequest();
-const url = 'https://bar.other/resources/public-data/';
+const url = "https://bar.other/resources/public-data/";
 
-xhr.open('GET', url);
+xhr.open("GET", url);
 xhr.onreadystatechange = someHandler;
 xhr.send();
 ```
@@ -147,11 +145,11 @@ Access-Control-Allow-Origin: https://foo.example
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://bar.other/resources/post-here/');
-xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
-xhr.setRequestHeader('Content-Type', 'application/xml');
+xhr.open("POST", "https://bar.other/resources/post-here/");
+xhr.setRequestHeader("X-PINGOTHER", "pingpong");
+xhr.setRequestHeader("Content-Type", "application/xml");
 xhr.onreadystatechange = handler;
-xhr.send('<person><name>Arun</name></person>');
+xhr.send("<person><name>Arun</name></person>");
 ```
 
 上面的代码使用 `POST` 请求发送一个 XML 请求体，该请求包含了一个非标准的 HTTP `X-PINGOTHER` 请求标头。这样的请求标头并不是 HTTP/1.1 的一部分，但通常对于 web 应用很有用处。另外，该请求的 `Content-Type` 为 `application/xml`，且使用了自定义的请求标头，所以该请求需要首先发起“预检请求”。

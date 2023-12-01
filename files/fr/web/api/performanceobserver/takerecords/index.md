@@ -1,7 +1,6 @@
 ---
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
-translation_of: Web/API/PerformanceObserver/disconnect
 ---
 
 {{APIRef("Performance Timeline API")}}

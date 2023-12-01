@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/size
 var mySet = new Set();
 mySet.add(1);
 mySet.add(5);
-mySet.add('some text')
+mySet.add("some text");
 
 mySet.size; // 3
 ```

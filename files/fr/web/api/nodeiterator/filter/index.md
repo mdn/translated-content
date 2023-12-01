@@ -1,7 +1,6 @@
 ---
 title: NodeIterator.filter
 slug: Web/API/NodeIterator/filter
-translation_of: Web/API/NodeIterator/filter
 ---
 
 {{APIRef("DOM")}}

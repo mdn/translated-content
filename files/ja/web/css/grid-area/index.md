@@ -42,8 +42,8 @@ grid-area: some-grid-area;
 grid-area: some-grid-area / another-grid-area;
 
 /* <integer> && <custom-ident>? 値 */
-grid-area:  4 some-grid-area;
-grid-area:  4 some-grid-area / 2 another-grid-area;
+grid-area: 4 some-grid-area;
+grid-area: 4 some-grid-area / 2 another-grid-area;
 
 /* span && [ <integer> || <custom-ident> ] 値 */
 grid-area: span 3;
@@ -71,7 +71,7 @@ grid-area: unset;
 
 - `<integer> && <custom-ident>?`
 
-  - : *n* 番目のグリッド線をグリッドアイテムの配置に使用します。負の整数が指定された場合は、逆方向にカウントし、明示的なグリッドの末尾の端から始めます。
+  - : _n_ 番目のグリッド線をグリッドアイテムの配置に使用します。負の整数が指定された場合は、逆方向にカウントし、明示的なグリッドの末尾の端から始めます。
 
     名前が {{cssxref("&lt;custom-ident&gt;")}} として与えられた場合、その名前の付いた線のみがカウントされます。その名前がある線の数が十分にない場合は、この位置を探す目的においては、すべての暗黙のグリッド線がその名前を持つと仮定されます。
 

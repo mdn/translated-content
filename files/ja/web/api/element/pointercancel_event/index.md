@@ -2,7 +2,6 @@
 title: "Element: pointercancel イベント"
 short-title: pointercancel
 slug: Web/API/Element/pointercancel_event
-original_slug: Web/API/Document/pointercancel_event
 l10n:
   sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
 ---

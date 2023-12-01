@@ -1,7 +1,6 @@
 ---
 title: offset-rotate
 slug: Web/CSS/offset-rotate
-translation_of: Web/CSS/offset-rotate
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

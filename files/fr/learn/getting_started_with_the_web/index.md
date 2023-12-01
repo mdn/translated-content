@@ -1,7 +1,6 @@
 ---
 title: Commencer avec le Web
 slug: Learn/Getting_started_with_the_web
-translation_of: Learn/Getting_started_with_the_web
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-translation_of: Web/CSS/vertical-align
 ---
 
 {{CSSRef}}

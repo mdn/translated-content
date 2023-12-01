@@ -1,7 +1,6 @@
 ---
 title: <feComponentTransfer>
 slug: Web/SVG/Element/feComponentTransfer
-translation_of: Web/SVG/Element/feComponentTransfer
 ---
 
 {{SVGRef}}

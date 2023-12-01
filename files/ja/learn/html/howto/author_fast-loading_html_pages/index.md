@@ -1,7 +1,6 @@
 ---
 title: 読み込みが速い HTML ページを作成するための豆知識
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 ---
 
 これらの豆知識は、一般の知識や実験に基づくものです。

@@ -1,7 +1,6 @@
 ---
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
-translation_of: Web/API/Attr/namespaceURI
 ---
 
 {{APIRef("DOM")}}

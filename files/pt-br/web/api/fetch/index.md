@@ -249,21 +249,21 @@ handled properly, então criamos um Objeto URL disso e exibimos isso em um eleme
 {{htmlelement("img")}}.
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-let myRequest = new Request('flowers.jpg');
+let myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
-.then(function(response) {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return response.blob();
-})
-.then(function(response) {
-  let objectURL = URL.createObjectURL(response);
-  myImage.src = objectURL;
-});
+  .then(function (response) {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.blob();
+  })
+  .then(function (response) {
+    let objectURL = URL.createObjectURL(response);
+    myImage.src = objectURL;
+  });
 ```
 
 No exemplo [Fetch
@@ -272,21 +272,21 @@ Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-req
 `init` quando invocamos o `fetch()`:
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
 let myHeaders = new Headers();
-myHeaders.append('Accept', 'image/jpeg');
+myHeaders.append("Accept", "image/jpeg");
 
 const myInit = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default'
+  mode: "cors",
+  cache: "default",
 };
 
-let myRequest = new Request('flowers.jpg');
+let myRequest = new Request("flowers.jpg");
 
-fetch(myRequest, myInit).then(function(response) {
+fetch(myRequest, myInit).then(function (response) {
   // ...
 });
 ```
@@ -295,7 +295,7 @@ Você também poderia passar o objeto `init` com o constructor
 `Request` para obter o mesmo efeito:
 
 ```js
-let myRequest = new Request('flowers.jpg', myInit);
+let myRequest = new Request("flowers.jpg", myInit);
 ```
 
 Você também pode usar um object literal como `headers` em
@@ -303,22 +303,22 @@ Você também pode usar um object literal como `headers` em
 
 ```js
 const myInit = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'Accept': 'image/jpeg'
+    Accept: "image/jpeg",
   },
-  mode: 'cors',
-  cache: 'default'
+  mode: "cors",
+  cache: "default",
 };
 
-let myRequest = new Request('flowers.jpg', myInit);
+let myRequest = new Request("flowers.jpg", myInit);
 ```
 
 ## Especificações
 
 {{Specifications}}
 
-## Compatibilidade nos navegadores
+## Compatibilidade com navegadores
 
 {{Compat}}
 

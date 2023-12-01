@@ -1,181 +1,256 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/replace
+l10n:
+  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
 {{JSRef("Objetos_globales", "String")}}
 
-## Resumen
-
-El método **`replace()`** devuelve una nueva cadena con algunas o todas las coincidencias de un `patrón`, siendo cada una de estas coincidencias reemplazadas por `remplazo`. El `patrón` puede ser una cadena o una {{jsxref("RegExp")}}, y el `reemplazo` puede ser una cadena o una función que será llamada para cada coincidencia. Si el `patrón` es una cadena, sólo la primera coincidencia será reemplazada.
-
-La cadena original permanecerá inalterada.
+El método **`replace()`** devuelve una nueva cadena con una, algunas, o todas las coincidencias de un `patrón`, siendo cada una de estas coincidencias reemplazadas por un `reemplazo`. El `patrón` puede ser una cadena o un objeto _{{jsxref("RegExp")}}_, y el `reemplazo` puede ser una cadena o una función que será llamada para cada coincidencia. Si el `patrón` es una cadena, sólo la primera coincidencia será reemplazada. La cadena original permanecerá inalterada.
 
 {{EmbedInteractiveExample("pages/js/string-replace.html")}}
 
 ## Sintaxis
 
-```html
-cadena.replace(regexp|substr, newSubStr|function[, {{ Non-standard_inline() }} flags]);
+```js-nolint
+replace(patrón, reemplazo)
 ```
 
 ### Parámetros
 
-- `expresionregular`
-  - : Un objeto {{jsxref("RegExp")}} o literal. Las coincidencias son reemplazadas por `ewSubSt` o el valor devuelto por la función especificada.
+- `patrón`
 
-<!---->
+  - : Puede ser una cadena o un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) — el ejemplo típico es una [expresión regular](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cualquier valor que no tenga el método `Symbol.replace` será convertido a una cadena.
 
-- `subcadena`
-  - : Un objeto {{jsxref("String")}} que será reemplazado por `nuevaSubcadena`.
+- `reemplazo`
+  - : Puede ser una cadena o una función.
+    - Si es una cadena, reemplazará la subcadena que coincida con `patrón`. Un número de patrones de reemplazo especiales son soportados; consulta la sección [Especificando una cadena como el reemplazo](#especificando-una-cadena-como-el-reemplazo).
+    - Si es una función, será invocada para cada coincidencia y su valor de retorno será usado como el texto de reemplazo. Los parámetros proporcionados a esta función son descritos en la sección [Especificando una función como el reemplazo](#especificando-una-función-como-el-reemplazo).
 
-<!---->
+### Valor de retorno
 
-- `nuevaSubcadena`
-  - : El objeto {{jsxref("String")}} que reemplaza la subcadena que recibida desde el primer parámetro.
-
-<!---->
-
-- `funcion`
-  - : Una función que será invocada para crear la nueva subcadena (para ponerla en lugar de la subcadena recibida por el primer parámetro).
-
-<!---->
-
-- `flags` {{ non-standard_inline() }}
-  - : Un objeto {{jsxref("String")}} que contiene cualquier combinación de flags de la clase RegExp: `g` - emparejamiento global, `i` - ignorar mayúsculas, `m` - emparejar multiples líneas. Este parámetro se usa sólo si el primer parámetro es una cadena.
+Una nueva cadena, con una, algunas, o todas las coincidencias de un patrón reemplazadas por el reemplazo especificado.
 
 ## Descripción
 
-Este método no cambia el objeto `String` sobre el que se realiza la llamada. Simplemente devuelve una nueva cadena.
+Este método no cambia el valor de la cadena sobre la que se realiza la llamada. Devuelve una nueva cadena.
 
-Para realizar una búsqueda global y reemplazarla, o se incluye el flag `g` en la expresión regular o si el primer parámetro es una cadena, se incluye `g` en el parámetro `flags`.
+Un patrón de cadena solo será reemplazado una vez. Para realizar una búsqueda y reemplazo global, se debe usar una expresión regular con el parámetro `g`, o usar [`replaceAll()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) en su lugar.
 
-#### Especificando una cadena como un parámetro
+Si `patrón` es un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) (incluyendo objetos de tipo `RegExp`), ese método es llamado con la cadena objetivo y `reemplazo` como parámetros. Su valor de retorno se convierte en el valor de retorno de `replace()`. En este caso el comportamiento de `replace()` es completamente codificado por el método `@@replace` — por ejemplo, cualquier mención de "grupos de captura" en la descripción de abajo es funcionalidad proporcionada por [`RegExp.prototype[@@replace]`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+
+Si el `patrón` es una cadena vacía, el reemplazo será añadido al inicio de la cadena.
+
+```js
+"xxx".replace("", "_"); // "_xxx"
+```
+
+Una _regexp_ con el parámetro `g` es el único caso donde `replace()` reemplaza más de una vez. Para más información acerca de cómo interactúan las propiedades de una _regex_ (especialmente el paramétro [sticky](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)), véase [`RegExp.prototype[@@replace]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+
+#### Especificando una cadena como el reemplazo
 
 La cadena de reemplazo puede incluir los siguientes patrones de reemplazo especiales:
 
-| Patrón       | Inserta                                                                                                                                                                                 |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`         | Inserta una "$".                                                                                                                                                                        |
-| `$&`         | Inserta la subcadena emparejada.                                                                                                                                                        |
-| `` $` ``     | Inserta la sección de cadena que precede a la subcadena emparejada.                                                                                                                     |
-| `$'`         | Inserta la porción de subcadena que sigue a la subcadena emparejada.                                                                                                                    |
-| `$n` o `$nn` | Donde `n` o `nn` son dígitos decimales positivos menores a 100, inserta la subcadena emparejada de orden _n_ del paréntesis, proporcionado por el primer argumento del objeto `RegExp`. |
+| Patrón      | Inserta                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------- |
+| `$$`        | Inserta un `"$"`.                                                                                    |
+| `$&`        | Inserta la subcadena encontrada.                                                                     |
+| `` $` ``    | Inserta la porción de la cadena que precede a la subcadena encontrada.                               |
+| `$'`        | Inserta la porción de la cadena que sigue a la subcadena encontrada.                                 |
+| `$n`        | Inserta el `n`-simo grupo de captura (indexado por `1`) donde `n` es un entero positivo menor a 100. |
+| `$<Nombre>` | Inserta el grupo de captura nombrado donde `Nombre` es el nombre del grupo.                          |
 
-### Especificando una función con un parámetro
-
-Cuando se especifica una función en el segundo parámetro, la función es invocada después de que el emparejamiento se haya realizado. (El uso de una función de este modo se llama expresión lambda.)
-
-En la función, puedes generar dinámicamente la cadena que reemplaza la subcadena emparejada. El resultado de la llamada de la función se usa como valor de reemplazo.
-
-The nested function can use the matched substrings to determine the new string (`newSubStr`) that replaces the found substring. You get the matched substrings through the parameters of your function. The first parameter of your function holds the complete matched substring. If the first argument was a `RegExp` object, then the following*n* parameters can be used for parenthetical matches, remembered submatch strings, where*n* is the number of submatch strings in the regular expression. Finally, the last two parameters are the offset within the string where the match occurred and the string itself. For example, the following `replace` method returns XXzzzz - XX , zzzz.
+`$n` y `$<Name>` solo están disponibles si el parámetro `patrón` es un objeto _{{jsxref("RegExp")}}_. Si el `patrón` es una cadena, o si el correspondiente grupo de captura no está presente en la _regex_, entonces el patrón será reemplazado como un literal. Si el grupo está presente pero no tiene ninguna coincidencia (porque es parte de una disyunción), será reemplazado con una cadena vacía.
 
 ```js
-function replacer(str, p1, p2, offset, s)
-{
-  return str + " - " + p1 + " , " + p2;
-}
-var newString = "XXzzzz".replace(/(X*)(z*)/, replacer);
-console.log(newString); // XXzzzz - XX , zzzz
+"foo".replace(/(f)/, "$2");
+// "$2oo"; la expresión regular no tiene el segundo grupo
+
+"foo".replace("f", "$1");
+// "$1oo"; el patrón es una cadena, por lo que no tiene ningún grupo
+
+"foo".replace(/(f)|(g)/, "$2");
+// "oo"; el segundo grupo existe pero no tiene coincidencia
 ```
+
+### Especificando una función como el reemplazo
+
+Se puede especificar un función como el segundo parámetro. En este caso, la función será invocada después de haber buscado las coincidencias. El resultado de la función (valor de retorno) será usado como la cadena de reemplazo.
+
+> **Nota:** Los patrones de reemplazo especiales mencionados previamente _no_ aplican para las cadenas devueltas por una función de reemplazo.
+
+La función tiene la siguiente firma:
+
+```js
+function replacer(match, p1, p2, /* …, */ pN, offset, string, groups) {
+  return replacement;
+}
+```
+
+Los parámetros para la función son los siguientes:
+
+- `match`
+  - : La cadena encontrada. (Corresponde a `$&` de la tabla de arriba).
+- `p1, p2, …, pN`
+  - : La `n`-sima cadena encontrada por un grupo de captura (incluyendo grupos de captura nombrados), siempre y cuando el primer parámetro para `replace()` sea un objeto _{{jsxref("RegExp")}}_. (Corresponde a `$1`, `$2`, etc. de la tabla de arriba). Por ejemplo, si el `patrón` es `/(\a+)(\b+)/`, entonces `p1` es la coincidencia para `\a+`, y `p2` es la coincidencia para `\b+`. Si el grupo es parte de una disyunción (por ejemplo, `"abc".replace(/(a)|(b)/, replacer)`), la alternativa que no tenga coincidencia será `undefined`.
+- `offset`
+  - : La posición de la subcadena encontrada en toda la cadena siendo examinada. Por ejemplo, si toda la cadena fuera `'abcd'`, y la subcadena encontrada fuera `'bc'`, entonces este parámetro sería `1`.
+- `string`
+  - : Toda la cadena siendo examinada.
+- `groups`
+  - : Un objeto del cual las llaves son los nombres de los grupos usados, y del cual los valores son las porciones encontradas (`undefined` si no hubo ninguna). Solo presente si el `patrón` contiene al menos un grupo de captura nombrado.
+
+El número exacto de parámetros depende de si el primer argumento es un objeto _{{jsxref("RegExp")}}_ — y, si lo es, de cuantos grupos de captura tenga.
+
+El siguient ejemplo cambiará `newString` a `'abc - 12345 - #$*%'`:
+
+```js
+function replacer(match, p1, p2, p3, offset, string) {
+  // p1 no son dígitos, p2 son dígitos, y p3 no son alfanuméricos
+  return [p1, p2, p3].join(" - ");
+}
+const newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+console.log(newString); // abc - 12345 - #$*%
+```
+
+La función será invocada multiple veces para cada coincidencia completa para ser reemplazada si la expresión regular en el primer parámetro es global.
 
 ## Ejemplos
 
-### Ejemplo: Usando `global` e `ignore` con `replace`
+### Definiendo la expresión regular en replace()
 
-En el siguiente ejemplo, la expresión regular incluye las banderas "global" e "ignore case", las cuales permiten al método `replace` reemplazar cada aparición de la cadena 'apples' por la cadena 'oranges'.
-
-```
-var re = /apples/gi;
-var str = "Apples are round, and apples are juicy.";
-var newstr = str.replace(re, "oranges");
-print(newstr);
-```
-
-In this version, a string is used as the first parameter and the global and ignore case flags are specified in the `flags` parameter.
-
-```
-var str = "Apples are round, and apples are juicy.";
-var newstr = str.replace("apples", "oranges", "gi");
-print(newstr);
-```
-
-Both of these examples print "oranges are round, and oranges are juicy."
-
-### Ejemplo: Definiendo la expresión regular en `replace`
-
-En el siguiente ejemplo, se define la expresión regular en `replace` e incluye el flag de ignorar mayúsculas.
-
-```
-var cadena = "Twas the night before Xmas...";
-var nuevaCadena = cadena.replace(/xmas/i, "Christmas");
-print(nuevaCadena);
-```
-
-Esto muestra "Twas the night before Christmas..."
-
-### Ejemplo: Conectando palabras en una cadena
-
-El siguiente código conecta las palabras dentro de la cadena. Para reemplazar el texto, el código usa `$1` y `$2` como patrones de reemplazo.
-
-```
-var expresion = /(\w+)\s(\w+)/;
-var cadena = "John Smith";
-var nuevaCadena = cadena.replace(expresion, "$2, $1");
-print(nuevaCadena);
-```
-
-Esto muestra "Smith, John".
-
-### Ejemplo: Using an inline function that modifies the matched characters
-
-In this example, all occurrences of capital letters in the string are converted to lower case, and a hyphen is inserted just before the match location. The important thing here is that additional operations are needed on the matched item before it is given back as a replacement.
-
-The replacement function accepts the matched snippet as its parameter, and uses it to transform the case and concatenate the hyphen before returning.
+En el siguiente ejemplo, la expresión regular es definida en `replace()` e incluye el parámetro _ignore case_ (ignorar mayúsculas y minúsculas).
 
 ```js
-function styleHyphenFormat(propertyName)
-{
-  function upperToHyphenLower(match)
-  {
-    return '-' + match.toLowerCase();
+const str = "Twas the night before Xmas...";
+const newstr = str.replace(/xmas/i, "Christmas");
+console.log(newstr); // Twas the night before Christmas...
+```
+
+Esto imprime `'Twas the night before Christmas...'`.
+
+> **Nota:** Véase [la guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) para más información acerca de expresiones regulares.
+
+### Usando los parámetros _global_ e _ignoreCase_ con replace()
+
+El reemplazo global solo puede ser hecho con una expresión regular. En el siguiente ejemplo, la expresión regular incluye [los parámetros _global_ e _ignoreCase_](/es/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) los cuales permiten a `replace()` reemplazar cada ocurrencia de `'apples'` en la cadena con `'oranges'`.
+
+```js
+const re = /apples/gi;
+const str = "Apples are round, and apples are juicy.";
+const newstr = str.replace(re, "oranges");
+console.log(newstr); // oranges are round, and oranges are juicy.
+```
+
+Esto imprime `'oranges are round, and oranges are juicy'`.
+
+### Intercambiando palabras en una cadena
+
+El siguiente código intercambia las palabras en la cadena. Para el texto de reemplazo, el código usa [grupos de captura](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) y los patrones de reemplazo `$1` y `$2`.
+
+```js
+const re = /(\w+)\s(\w+)/;
+const str = "Maria Cruz";
+const newstr = str.replace(re, "$2, $1");
+console.log(newstr); // Cruz, Maria
+```
+
+Esto imprime `'Cruz, Maria'`.
+
+### Usando una función en línea que modifica los caracteres encontrados
+
+En este ejemplo, todas las ocurrencias de letras mayúsculas en la cadena son convertidas a minúsculas, y un guion es insertado justo antes de cada ubicación encontrada. La cosa importante aquí es que operaciones adicionales son necesarias en el elemento encontrado antes de que sea devuelto como un reemplazo.
+
+La función de reemplazo acepta la coincidencia encontrada como parámetro, y lo usa para transformar las mayúsculas a minúsculas y para concatenar el guión antes de retornar.
+
+```js
+function styleHyphenFormat(propertyName) {
+  function upperToHyphenLower(match, offset, string) {
+    return (offset > 0 ? "-" : "") + match.toLowerCase();
   }
-  return propertyName.replace(/[A-Z]/, upperToHyphenLower);
+  return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
 }
 ```
 
-Given `styleHyphenFormat('borderTop')`, this returns 'border-top'.
+Dado `styleHyphenFormat('borderTop')`, esto retorna `'border-top'`.
 
-Because we want to further transform the*result* of the match before the final substitution is made, we must use a function. This forces the evaluation of the match prior to the `toLowerCase()` method. If we had tried to do this using the match without a function, the toLowerCase() would have no effect.
+Ya que queremos transformar el _resultado_ de la coincidencia antes de que la sustitución final sea hecha, debemos usar una función. Esto forza la evaluación de la coincidencia antes del método [`toLowerCase()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase). Si hemos intentado hacer esto usando la coincidencia sin una función, {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} no tendrá efecto.
 
-```js
-var newString = propertyName.replace(/[A-Z]/, '-' + '$&'.toLowerCase());  // won't work
+```js example-bad
+// No funcionará
+const newString = propertyName.replace(/[A-Z]/g, "-" + "$&".toLowerCase());
 ```
 
-This is because `'$&'.toLowerCase()` would be evaluated first as a string literal (resulting in the same `'$&'`) before using the characters as a pattern.
+Esto es porque `'$&'.toLowerCase()` sería el primero en ser evaluado como una cadena literal (resultando en el mismo `'$&'`) antes de usar los caracteres como un patrón.
 
-### Ejemplo: Reemplazando grados Fahrenheit con su equivalente Celsius
+### Reemplazando grados Fahrenheit con su equivalente en Celsius
 
-El siguiente ejemplo reemplaza los grados Fahrenheit con su enquivalente en grados Celsius. Los grados Fahrenheit deberían ser un número acabado en F. La función devuelve el número Celsius acabado en C. Por ejemplo, si el número de entrada es 212F, la función devuelve 100C. Si el número es 0F, la función devuelve -17.77777777777778C.
+El siguiente ejemplo reemplaza grados Fahrenheit con su equivalente en grados Celsius. Los grados Fahrenheit deben ser un número terminado en `"F"`. La función retorna el número en Celsius terminando con `"C"`. Por ejemplo, si el número de entrada es `"212F"`, la función retorna `"100C"`. Si el número es `"0F"`, la función retorna `"-17.77777777777778C"`.
 
-La expresión regular `test` revisa si para un número termina en F. El número de grados Fahrenheit es accesible a la función a través de su segundo parámetro, `p1`. La función establece el número Celsius basado en los grados Fahrenheit pasados en una cadena a la función `f2c`. Entonces `f2c` devuelve el número Celsius. Esta función aproxima al flag de Perl s///e.
+La expresión regular `test` verifica cualquier número que termina con `F`. El número de grados Fahrenheit es accesible para la función a través del segundo parámetro, `p1`. La función establece el número Celsius con base en el número de grados Fahrenheit pasados como cadena a la función `f2c()`. Entonces `f2c()` retorna el número en Celsius. Esta función se aproxima a la bandera de Perl `s///e`.
 
 ```js
-function f2c(x)
-{
-  function convert(str, p1, offset, s)
-  {
-    return ((p1-32) * 5/9) + "C";
+function f2c(x) {
+  function convert(str, p1, offset, s) {
+    return `${((p1 - 32) * 5) / 9}C`;
   }
-  var s = String(x);
-  var test = /(\d+(?:\.\d*)?)F\b/g;
+  const s = String(x);
+  const test = /(-?\d+(?:\.\d*)?)F\b/g;
   return s.replace(test, convert);
 }
 ```
 
-## Vea También
+### Creando un reemplazador genérico
 
-- {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+Supongamos que queremos crear un reemplazador que agregue la posición para cada coincidencia encontrada. Ya que la función de reemplazo ya recibe el parámetro `offset`, será trivial si la _regex_ es estáticamente conocida.
+
+```js
+"abcd".replace(/(bc)/, (match, p1, offset) => `${match} (${offset}) `);
+// "abc (1) d"
+```
+
+Sin embargo, este reemplazador debería ser más difícil de generalizar si queremos que trabaje con cualquier expresión regular. El reemplazador es _variadic_ — el número de parámetros que recibe depende del número de grupos de captura presentes. Podemos usar [parámetros rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters), pero también recolectaría `offset`, `string`, etc. en el arreglo. El hecho de que `groups` pueda o no ser pasado dependiendo de la identidad de la _regex_ también haria difícil conocer genéricamente cuál argumento corresponde al `offset`.
+
+```js example-bad
+function addOffset(match, ...args) {
+  const offset = args.at(-2);
+  return `${match} (${offset}) `;
+}
+
+console.log("abcd".replace(/(bc)/, addOffset)); // "abc (1) d"
+console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (abcd) d"
+```
+
+El ejemplo `addOffset` de arriba no funciona cuando _regex_ contiene un grupo nombrado, porque en este caso `args.at(-2)` sería el `string` en lugar del `offset`.
+
+En su lugar, es necesario extraer los últimos parámetros con base en su tipo, porque `groups` es un objeto mientras `string` es una cadena.
+
+```js
+function addOffset(match, ...args) {
+  const hasNamedGroups = typeof args.at(-1) === "object";
+  const offset = hasNamedGroups ? args.at(-3) : args.at(-2);
+  return `${match} (${offset}) `;
+}
+
+console.log("abcd".replace(/(bc)/, addOffset)); // "abc (1) d"
+console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
+```
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
+
+- [Polyfill de `String.prototype.replace` en `core-js` con arreglos e implementación de un comportamiento moderno como el soporte para `Symbol.replace`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.replaceAll", "String.prototype.replaceAll()")}}
+- {{jsxref("String.prototype.match", "String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
+- [`RegExp.prototype[@@replace]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)

@@ -1,7 +1,6 @@
 ---
 title: background-position-y
 slug: Web/CSS/background-position-y
-translation_of: Web/CSS/background-position-y
 ---
 
 {{CSSRef}}

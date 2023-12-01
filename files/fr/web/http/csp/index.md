@@ -1,7 +1,6 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-translation_of: Web/HTTP/CSP
 ---
 
 {{HTTPSidebar}}

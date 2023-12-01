@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onCreatedNavigationTarget
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
 ---
 
 {{AddonSidebar()}}

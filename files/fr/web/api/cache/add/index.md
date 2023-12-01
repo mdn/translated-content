@@ -1,7 +1,6 @@
 ---
 title: Cache.add()
 slug: Web/API/Cache/add
-translation_of: Web/API/Cache/add
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

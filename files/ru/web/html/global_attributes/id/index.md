@@ -1,12 +1,8 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
-tags:
-  - HTML
-  - Глобальные атрибуты
-  - Справка
-translation_of: Web/HTML/Global_attributes/id
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **{{glossary("global attribute", "Глобальный атрибут")}} `id`** устанавливает элементу уникальный идентификатор (ID), имя которого должно быть уникальным в документе (на странице). Его назначением является идентификация элемента при связывании (использование [идентификатора фрагмента](/ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#Fragment)), скриптинге или стилизации (с помощью {{glossary("CSS")}}).

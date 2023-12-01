@@ -1,7 +1,6 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
-translation_of: Web/API/BatteryManager/chargingTime
 ---
 
 {{APIRef("Battery API")}}

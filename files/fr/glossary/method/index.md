@@ -1,8 +1,9 @@
 ---
 title: Méthode
 slug: Glossary/Method
-translation_of: Glossary/Method
 ---
+
+{{GlossarySidebar}}
 
 Une **méthode** est une {{glossary("fonction", "fonction")}} (`function`) qui est une {{glossary("property","propriété")}} d'un {{glossary("object","objet")}}. Il existe deux sortes de méthodes&nbsp;: Les _méthodes d'instance_ qui représentent les fonctions fournissant une interface pour effectuer des actions dans le contexte de l'objet qu'elles composent ou les _méthodes statiques_ qui représentent les fonctions pouvant être exécutées sans nécessiter d'instanciation.
 

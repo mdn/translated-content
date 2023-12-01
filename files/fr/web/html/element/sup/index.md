@@ -1,7 +1,6 @@
 ---
 title: "<sup> : l'élément de mise en exposant"
 slug: Web/HTML/Element/sup
-translation_of: Web/HTML/Element/sup
 ---
 
 {{HTMLSidebar}}

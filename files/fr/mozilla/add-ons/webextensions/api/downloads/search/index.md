@@ -1,7 +1,6 @@
 ---
 title: downloads.search()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/search
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
 
 {{JSRef}}

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
 ## 構文
 
 ```js
-x <<= y // x = x << y
+x <<= y; // x = x << y
 ```
 
 ## 例
@@ -37,5 +37,5 @@ a <<= 2; // 20
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
 - [左シフト演算子](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)

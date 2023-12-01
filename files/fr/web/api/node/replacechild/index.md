@@ -1,7 +1,6 @@
 ---
 title: element.replaceChild
 slug: Web/API/Node/replaceChild
-translation_of: Web/API/Node/replaceChild
 ---
 
 {{APIRef("DOM")}}

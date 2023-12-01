@@ -1,7 +1,6 @@
 ---
 title: <input type="number">
 slug: Web/HTML/Element/input/number
-translation_of: Web/HTML/Element/input/number
 ---
 
 {{HTMLSidebar}}

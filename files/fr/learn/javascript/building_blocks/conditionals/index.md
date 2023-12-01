@@ -1,7 +1,6 @@
 ---
 title: Prendre des décisions dans le code — conditions
 slug: Learn/JavaScript/Building_blocks/conditionals
-translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
 
 {{LearnSidebar}}

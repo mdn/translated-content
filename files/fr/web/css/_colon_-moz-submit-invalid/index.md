@@ -1,7 +1,6 @@
 ---
 title: ":-moz-submit-invalid"
 slug: Web/CSS/:-moz-submit-invalid
-translation_of: Web/CSS/:-moz-submit-invalid
 ---
 
 {{Non-standard_header}}{{CSSRef}}

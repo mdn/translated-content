@@ -17,22 +17,22 @@ slug: Web/API/Event/target
 
 ```js
 // Make a list
-var ul = document.createElement('ul');
+var ul = document.createElement("ul");
 document.body.appendChild(ul);
 
-var li1 = document.createElement('li');
-var li2 = document.createElement('li');
+var li1 = document.createElement("li");
+var li2 = document.createElement("li");
 ul.appendChild(li1);
 ul.appendChild(li2);
 
-function hide(e){
+function hide(e) {
   // e.target 引用着 <li> 元素
   // 不像 e.currentTarget 引用着其父级的 <ul> 元素。
-  e.target.style.visibility = 'hidden';
+  e.target.style.visibility = "hidden";
 }
 
 // 添加监听事件到列表，当每个 <li> 被点击的时候都会触发。
-ul.addEventListener('click', hide, false);
+ul.addEventListener("click", hide, false);
 ```
 
 ## 规范
@@ -49,11 +49,11 @@ ul.addEventListener('click', hide, false);
 function hide(e) {
   // 支持 IE6-8
   var target = e.target || e.srcElement;
-  target.style.visibility = 'hidden';
+  target.style.visibility = "hidden";
 }
 ```
 
-## 相关链接
+## 参见
 
 - [Comparison of Event Targets](/zh-CN/DOM/event/Comparison_of_Event_Targets)
 - {{domxref("Event.currentTarget")}}

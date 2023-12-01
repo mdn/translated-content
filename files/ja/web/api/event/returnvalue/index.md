@@ -1,6 +1,9 @@
 ---
-title: Event.returnValue
+title: "Event: returnValue プロパティ"
+short-title: returnValue
 slug: Web/API/Event/returnValue
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("DOM")}}{{Deprecated_Header}}
@@ -24,3 +27,7 @@ slug: Web/API/Event/returnValue
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLDialogElement.returnValue")}}: {{HTMLElement("dialog")}} の返値

@@ -1,7 +1,6 @@
 ---
 title: IDBDatabase.version
 slug: Web/API/IDBDatabase/version
-translation_of: Web/API/IDBDatabase/version
 ---
 
 {{APIRef("IndexedDB")}}

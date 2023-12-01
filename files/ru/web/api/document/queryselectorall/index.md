@@ -1,13 +1,6 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Selectors
-translation_of: Web/API/Document/querySelectorAll
 ---
 
 {{ ApiRef("DOM") }}
@@ -85,7 +78,7 @@ var matches = container.querySelectorAll("li[data-active='1']");
 ```js
 var highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach(function (userItem) {
   deleteUser(userItem);
 });
 ```
@@ -101,8 +94,7 @@ highlightedItems.forEach(function(userItem) {
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```
@@ -110,8 +102,8 @@ highlightedItems.forEach(function(userItem) {
 ### JavaScript
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll('.outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(".outer .inner");
 inner.length; // 1, не 0!
 ```
 
@@ -120,19 +112,14 @@ inner.length; // 1, не 0!
 Псевдокласс {{cssxref(":scope")}} даёт нам ожидаемый результат. Только соответствующие селекторы в потомках базового элемента:
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll(':scope .outer .inner');
+var select = document.querySelector(".select");
+var inner = select.querySelectorAll(":scope .outer .inner");
 inner.length; // 0
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                                                 | Статус                                       | Комментарий              |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------ |
-| {{SpecName("DOM WHATWG", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}             | {{Spec2("DOM WHATWG")}}             | Живой стандарт           |
-| {{SpecName("Selectors API Level 2", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}} | {{Spec2("Selectors API Level 2")}} | Без изменений            |
-| {{SpecName("DOM4", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}                     | {{Spec2("DOM4")}}                     | Изначальное определение  |
-| {{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}                     | {{Spec2("Selectors API Level 1")}} | Оригинальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

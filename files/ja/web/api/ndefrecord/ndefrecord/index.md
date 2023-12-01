@@ -1,16 +1,19 @@
 ---
-title: NDEFRecord()
+title: "NDEFRecord: NDEFRecord() コンストラクター"
+short-title: NDEFRecord()
 slug: Web/API/NDEFRecord/NDEFRecord
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 **`NDEFRecord()`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のコンストラクターで、新しく構築された {{DOMxRef("NDEFRecord")}} オブジェクトを返します。これは互換性のある NFC 機器（例えば、NDEF に対応している NFC タグ）から読み書きできるデータを表すものです。
 
 ## 構文
 
-```js
-writer = new NDEFRecord(options);
+```js-nolint
+new NDEFRecord(options)
 ```
 
 ### 引数
@@ -20,7 +23,7 @@ writer = new NDEFRecord(options);
   - : 以下のプロパティを持つオブジェクトです。
 
     - `data` {{optional_inline}}
-      - : 転送されるデータが入ります。文字列、{{domxref("BufferSource")}}、またはネストされたレコードの配列のいずれかです。
+      - : 転送されるデータが入ります。文字列のオブジェクトまたはリテラル、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、またはネストされたレコードの配列のいずれかです。
     - `encoding` {{optional_inline}}
       - : 文字列で、このレコードのエンコーディングを指定します。
     - `id` {{optional_inline}}

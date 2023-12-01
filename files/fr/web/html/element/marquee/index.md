@@ -1,7 +1,6 @@
 ---
 title: "<marquee> : l'élément de fronton (obsolète)"
 slug: Web/HTML/Element/marquee
-translation_of: Web/HTML/Element/marquee
 ---
 
 {{HTMLSidebar}}{{non-standard_header}}{{deprecated_header}}
@@ -64,7 +63,7 @@ L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte d�
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"> Ce texte va rebondir </marquee>
+  <marquee behavior="alternate">Ce texte va rebondir</marquee>
 </marquee>
 ```
 

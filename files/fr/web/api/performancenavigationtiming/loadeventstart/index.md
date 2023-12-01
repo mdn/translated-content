@@ -1,7 +1,6 @@
 ---
 title: PerformanceNavigationTiming.loadEventStart
 slug: Web/API/PerformanceNavigationTiming/loadEventStart
-translation_of: Web/API/PerformanceNavigationTiming/loadEventStart
 ---
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}

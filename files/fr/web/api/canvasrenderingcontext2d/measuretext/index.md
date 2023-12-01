@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
-translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
 
 {{APIRef}}

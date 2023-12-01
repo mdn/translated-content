@@ -1,7 +1,6 @@
 ---
 title: menus.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
 ---
 
 {{AddonSidebar()}}

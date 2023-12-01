@@ -1,7 +1,6 @@
 ---
 title: accent-height
 slug: Web/SVG/Attribute/accent-height
-translation_of: Web/SVG/Attribute/accent-height
 ---
 
 {{SVGRef}}{{deprecated_header}}

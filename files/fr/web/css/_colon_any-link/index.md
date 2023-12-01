@@ -1,7 +1,6 @@
 ---
 title: ":any-link"
 slug: Web/CSS/:any-link
-translation_of: Web/CSS/:any-link
 ---
 
 {{CSSRef}}

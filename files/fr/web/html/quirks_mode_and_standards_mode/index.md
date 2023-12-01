@@ -1,7 +1,6 @@
 ---
 title: Mode quirks et mode standard
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
 
 {{HTMLSidebar}}

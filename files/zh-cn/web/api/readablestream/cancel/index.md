@@ -11,7 +11,7 @@ cancel 用于在不再需要来自它的任何数据的情况下（即使仍有�
 
 ## 语法
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```
@@ -40,52 +40,60 @@ var searchTerm = "service workers";
 var contextBefore = 30;
 var contextAfter = 30;
 var caseInsensitive = true;
-var url = 'https://html.spec.whatwg.org/';
+var url = "https://html.spec.whatwg.org/";
 console.log(`Searching '${url}' for '${searchTerm}'`);
-fetch(url).then(response => {
-  console.log('Received headers');
-  var decoder = new TextDecoder();
-  var reader = response.body.getReader();
-  var toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
-  var bufferSize = Math.max(toMatch.length - 1, contextBefore);
-  var bytesReceived = 0;
-  var buffer = '';
-  var matchFoundAt = -1;
-  return reader.read().then(function process(result) {
-    if (result.done) {
-      console.log('Failed to find match');
-      return;
-    }
-    bytesReceived += result.value.length;
-    console.log(`Received ${bytesReceived} bytes of data so far`);
-    buffer += decoder.decode(result.value, {stream: true});
-    // already found match & just context-gathering?
-    if (matchFoundAt === -1) {
-      matchFoundAt = (caseInsensitive ? buffer.toLowerCase() : buffer).indexOf(toMatch);
-    }
-    if (matchFoundAt === -1) {
-      buffer = buffer.slice(-bufferSize);
-    }
-    else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
-      console.log("Here's the match:")
-      console.log(buffer.slice(
-        Math.max(0, matchFoundAt - contextBefore),
-        matchFoundAt + toMatch.length + contextAfter
-      ));
-      console.log("Cancelling fetch");
-      reader.cancel();
-      return;
-    }
-    else {
-      console.log('Found match, but need more context…');
-    }
-    // 保持读取
-    return reader.read().then(process);
+fetch(url)
+  .then((response) => {
+    console.log("Received headers");
+    var decoder = new TextDecoder();
+    var reader = response.body.getReader();
+    var toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
+    var bufferSize = Math.max(toMatch.length - 1, contextBefore);
+    var bytesReceived = 0;
+    var buffer = "";
+    var matchFoundAt = -1;
+    return reader.read().then(function process(result) {
+      if (result.done) {
+        console.log("Failed to find match");
+        return;
+      }
+      bytesReceived += result.value.length;
+      console.log(`Received ${bytesReceived} bytes of data so far`);
+      buffer += decoder.decode(result.value, { stream: true });
+      // already found match & just context-gathering?
+      if (matchFoundAt === -1) {
+        matchFoundAt = (
+          caseInsensitive ? buffer.toLowerCase() : buffer
+        ).indexOf(toMatch);
+      }
+      if (matchFoundAt === -1) {
+        buffer = buffer.slice(-bufferSize);
+      } else if (
+        buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter
+      ) {
+        console.log("Here's the match:");
+        console.log(
+          buffer.slice(
+            Math.max(0, matchFoundAt - contextBefore),
+            matchFoundAt + toMatch.length + contextAfter,
+          ),
+        );
+        console.log("Cancelling fetch");
+        reader.cancel();
+        return;
+      } else {
+        console.log("Found match, but need more context…");
+      }
+      // 保持读取
+      return reader.read().then(process);
+    });
+  })
+  .catch((err) => {
+    console.log(
+      "Something went wrong. See devtools for details. Does the response lack CORS headers?",
+    );
+    throw err;
   });
-}).catch(err => {
-  console.log("Something went wrong. See devtools for details. Does the response lack CORS headers?");
-  throw err;
-});
 ```
 
 ## 规范

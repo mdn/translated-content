@@ -1,7 +1,6 @@
 ---
 title: canvas
 slug: Web/HTML/Element/canvas
-original_slug: Web/HTML/Elemento/canvas
 ---
 
 El elemento HTML _canvas_ (\<canvas>) se puede utilizar para dibujar gráficos a través de secuencias de comandos (por lo general [JavaScript](/en/JavaScript) ). Por ejemplo, puede usarse para dibujar gráficos, hacer composiciones de fotos o incluso realizar animaciones.

@@ -1,7 +1,6 @@
 ---
 title: browserAction.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 ---
 
 {{AddonSidebar()}}

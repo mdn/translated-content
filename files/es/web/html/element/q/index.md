@@ -1,7 +1,6 @@
 ---
 title: "<q>: El elemento de cita en línea"
 slug: Web/HTML/Element/q
-original_slug: Web/HTML/Elemento/q
 ---
 
 {{HTMLSidebar}}

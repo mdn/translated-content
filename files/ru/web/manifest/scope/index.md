@@ -1,11 +1,6 @@
 ---
 title: scope
 slug: Web/Manifest/scope
-tags:
-  - Manifest
-  - Web
-  - scope
-translation_of: Web/Manifest/scope
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

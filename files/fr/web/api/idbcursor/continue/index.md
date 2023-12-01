@@ -1,7 +1,6 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
-translation_of: Web/API/IDBCursor/continue
 ---
 
 {{APIRef("IndexedDB")}}

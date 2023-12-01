@@ -1,7 +1,6 @@
 ---
 title: Modèle de boîte
 slug: Web/CSS/CSS_box_model
-translation_of: Web/CSS/CSS_Box_Model
 ---
 
 {{CSSRef}}

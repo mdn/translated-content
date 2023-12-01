@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.clear()
 slug: Web/API/IDBObjectStore/clear
-translation_of: Web/API/IDBObjectStore/clear
 ---
 
 {{ APIRef("IndexedDB") }}

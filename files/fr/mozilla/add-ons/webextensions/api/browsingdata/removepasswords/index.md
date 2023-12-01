@@ -1,7 +1,6 @@
 ---
 title: browsingData.removePasswords()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
 ---
 
 {{AddonSidebar()}}

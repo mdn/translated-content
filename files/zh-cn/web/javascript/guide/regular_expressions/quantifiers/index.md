@@ -1,7 +1,6 @@
 ---
 title: 量词
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
-original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -39,7 +38,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
       <td>
         <p>
           将前一项“x”匹配 1
-          次或更多次。等价于{1,}。例如，/a+/匹配“candy”中的“a”和“caaaaaaandy”中的“a”。
+          次或更多次。等价于 <code>{1,}</code>。例如，<code>/a+/</code> 匹配“candy”中的“a”和“caaaaaaandy”中的所有“a”。
         </p>
       </td>
     </tr>

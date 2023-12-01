@@ -1,7 +1,6 @@
 ---
 title: border-inline-start-color
 slug: Web/CSS/border-inline-start-color
-translation_of: Web/CSS/border-inline-start-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

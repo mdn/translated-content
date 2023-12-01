@@ -2,6 +2,7 @@
 title: BatteryManager
 slug: Web/API/BatteryManager
 ---
+
 {{APIRef}}{{deprecated_header}}
 
 **`BatteryManager`** 인터페이스는 시스템의 배터리 충전 상태에 대한 정보를 확인 하는 방법을 제공합니다.

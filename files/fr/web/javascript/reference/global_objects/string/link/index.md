@@ -1,7 +1,6 @@
 ---
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
-translation_of: Web/JavaScript/Reference/Global_Objects/String/link
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ La méthode **`link()`** permet de créer une chaîne de caractères représenta
 ## Syntaxe
 
 ```js
-str.link(url)
+str.link(url);
 ```
 
 ### Paramètres

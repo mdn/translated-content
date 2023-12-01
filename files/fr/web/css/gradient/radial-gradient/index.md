@@ -1,7 +1,6 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
-translation_of: Web/CSS/gradient/radial-gradient
 ---
 
 {{CSSRef}}

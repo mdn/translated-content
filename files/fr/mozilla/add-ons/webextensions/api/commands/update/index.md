@@ -1,7 +1,6 @@
 ---
 title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
-translation_of: Mozilla/Add-ons/WebExtensions/API/commands/update
 ---
 
 {{AddonSidebar()}}

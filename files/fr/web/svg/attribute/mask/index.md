@@ -1,7 +1,6 @@
 ---
 title: mask
 slug: Web/SVG/Attribute/mask
-translation_of: Web/SVG/Attribute/mask
 ---
 
 {{SVGRef}}

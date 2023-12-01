@@ -30,13 +30,13 @@ var data = XMLHttpRequest.responseXML;
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 // 如果已指明，responseType 必须是空字符串或 "document"
-xhr.responseType = 'document';
+xhr.responseType = "document";
 
 // overrideMimeType() 用来强制解析 response 为 XML
-xhr.overrideMimeType('text/xml');
+xhr.overrideMimeType("text/xml");
 
 xhr.onload = function () {
   if (xhr.readyState === xhr.DONE) {

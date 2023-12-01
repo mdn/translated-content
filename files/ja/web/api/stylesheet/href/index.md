@@ -18,7 +18,7 @@ l10n:
 ローカルで下記のコードを実行してください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

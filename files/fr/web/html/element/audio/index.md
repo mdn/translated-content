@@ -1,7 +1,6 @@
 ---
 title: "<audio> : l'élément audio embarqué"
 slug: Web/HTML/Element/audio
-translation_of: Web/HTML/Element/audio
 ---
 
 {{HTMLSidebar}}

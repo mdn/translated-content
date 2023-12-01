@@ -1,7 +1,6 @@
 ---
 title: Utilizando texturas en WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
@@ -178,9 +177,9 @@ GL proporciona 32 registros de textura; La primera de ellas es gl.TEXTURE0. Vinc
 
 En este punto, el cubo giratorio debe estar listo.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[Ver el código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [Abrir esta demo en una nueva pestaña](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+[Ver el código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample6) | [Abrir esta demo en una nueva pestaña](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## Texturas entre dominios
 

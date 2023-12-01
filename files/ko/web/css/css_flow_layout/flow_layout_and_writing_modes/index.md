@@ -1,7 +1,6 @@
 ---
 title: 대열 레이아웃과 쓰기 모드
 slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
-original_slug: Web/CSS/CSS_Flow_Layout/흐름_레이아웃과_쓰기_모드
 ---
 
 어떻게 일반 대열이 동작하는지 자세히 설명하는 CSS 2.1 규격은 가로쓰기 모드라고 가정한다. [레이아웃](/ko/docs/Web/CSS/CSS_Flow_Layout/일반_대열_속_블록_및_인라인_레이아웃) 속성은 세로 쓰기 모드에서 동일한 방식으로 작동해야 한다. 이 안내서는 서로 다른 문서 작성 모드에서 사용될 때 대열 레이아웃이 어떻게 작동하는지 살펴 봅니다.

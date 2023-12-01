@@ -1,7 +1,6 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-translation_of: Web/HTTP/Headers/Authorization
 ---
 
 {{HTTPSidebar}}

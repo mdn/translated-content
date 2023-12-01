@@ -1,7 +1,6 @@
 ---
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
-translation_of: Web/API/IDBCursor/advance
 ---
 
 {{APIRef("IndexedDB")}}

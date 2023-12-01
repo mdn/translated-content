@@ -1,7 +1,6 @@
 ---
 title: API イベントサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
-original_slug: MDN/Structures/Page_types/API_event_subpage_template
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---

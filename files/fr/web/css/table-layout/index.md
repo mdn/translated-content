@@ -1,7 +1,6 @@
 ---
 title: table-layout
 slug: Web/CSS/table-layout
-translation_of: Web/CSS/table-layout
 ---
 
 {{CSSRef}}

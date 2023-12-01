@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Inequality
 ## 구문
 
 ```js
-x != y
+x != y;
 ```
 
 ## 설명
@@ -20,9 +20,9 @@ x != y
 부등식 연산자는 피연산자가 같지 않은지 여부를 확인합니다. [동등 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Equality)의 부정이므로 다음 두 줄은 항상 같은 결과를 제공합니다.
 
 ```js
-x != y
+x != y;
 
-!(x == y)
+!(x == y);
 ```
 
 비교 알고리즘에 대한 자세한 내용은 [동등 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Equality) 페이지를 참조하십시오.
@@ -44,39 +44,39 @@ x != y
 ### 타입 변환이 없는 비교
 
 ```js
-1 != 2;              // true
-"hello" != "hola";   // true
+1 != 2; // true
+"hello" != "hola"; // true
 
-1 != 1;              // false
-"hello" != "hello";  // false
+1 != 1; // false
+"hello" != "hello"; // false
 ```
 
 ### 타입 변환이 있는 비교
 
 ```js
-"1" !=  1;            // false
-1 != "1";             // false
-0 != false;           // false
-0 != null;            // true
-0 != undefined;       // true
-0 != !!null;          // false, look at Logical NOT operator
-0 != !!undefined;     // false, look at Logical NOT operator
-null != undefined;    // false
+"1" != 1; // false
+1 != "1"; // false
+0 != false; // false
+0 != null; // true
+0 != undefined; // true
+0 != !!null; // false, look at Logical NOT operator
+0 != !!undefined; // false, look at Logical NOT operator
+null != undefined; // false
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 != 3;         // false
-number1 != number2;   // true
+number1 != 3; // false
+number1 != number2; // true
 ```
 
 ### 객체의 비교
 
 ```js
-const object1 = {"key": "value"}
-const object2 = {"key": "value"};
+const object1 = { key: "value" };
+const object2 = { key: "value" };
 
-object1 != object2 // true
-object2 != object2 // false
+object1 != object2; // true
+object2 != object2; // false
 ```
 
 ## 명세

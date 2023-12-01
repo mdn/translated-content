@@ -1,8 +1,9 @@
 ---
 title: Falsy
 slug: Glossary/Falsy
-original_slug: Glossario/Falsy
 ---
+
+{{GlossarySidebar}}
 
 Um valor **falsy** é um valor que se traduz em falso quando avaliado em um contexto {{Glossary("Boolean")}}.
 

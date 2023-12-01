@@ -46,10 +46,11 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
 ### HTML 内容
 
 ```html
-<p>Everytime Kenny is killed, Stan will announce
-   <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
-     Oh my God, you/they killed Kenny!
-   </q>.
+<p>
+  Everytime Kenny is killed, Stan will announce
+  <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
+    Oh my God, you/they killed Kenny! </q
+  >.
 </p>
 ```
 

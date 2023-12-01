@@ -1,7 +1,6 @@
 ---
 title: element.appendChild
 slug: Web/API/Node/appendChild
-translation_of: Web/API/Node/appendChild
 ---
 
 {{APIRef("DOM")}}

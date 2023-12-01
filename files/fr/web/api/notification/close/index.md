@@ -1,7 +1,6 @@
 ---
 title: Notification.close()
 slug: Web/API/Notification/close
-translation_of: Web/API/Notification/close
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

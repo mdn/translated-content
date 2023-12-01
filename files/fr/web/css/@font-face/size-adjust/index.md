@@ -1,7 +1,6 @@
 ---
 title: size-adjust
 slug: Web/CSS/@font-face/size-adjust
-translation_of: Web/CSS/@font-face/size-adjust
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

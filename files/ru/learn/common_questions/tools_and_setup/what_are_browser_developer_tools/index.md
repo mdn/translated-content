@@ -1,19 +1,6 @@
 ---
 title: Обзор инструментов разработки в браузерах
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-tags:
-  - Beginner
-  - Browser
-  - CSS
-  - CodingScripting
-  - Dev Tools
-  - HTML
-  - JavaScript
-  - Браузер
-  - Новичку
-  - Обучение
-translation_of: Learn/Common_questions/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/What_are_browser_developer_tools
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

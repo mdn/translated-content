@@ -20,9 +20,9 @@ OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()
 ## 样例
 
 ```js
-var htmlCanvas = document.createElement('canvas');
+var htmlCanvas = document.createElement("canvas");
 var offscreen = htmlCanvas.transferControlToOffscreen();
-var gl = offscreen.getContext('webgl');
+var gl = offscreen.getContext("webgl");
 
 // ... some drawing using the gl context ...
 

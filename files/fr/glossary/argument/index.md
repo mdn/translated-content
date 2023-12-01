@@ -1,8 +1,9 @@
 ---
 title: Argument
 slug: Glossary/Argument
-translation_of: Glossary/Argument
 ---
+
+{{GlossarySidebar}}
 
 Un **argument** est une {{Glossary("Value","valeur")}} ({{Glossary("Primitive", "primitive")}} ou {{Glossary("Object", "objet")}}) passée en tant qu'entrée à une {{Glossary("Function", "fonction")}}.
 

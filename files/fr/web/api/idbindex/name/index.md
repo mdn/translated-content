@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.name
 slug: Web/API/IDBIndex/name
-translation_of: Web/API/IDBIndex/name
 ---
 
 {{APIRef("IndexedDB")}}

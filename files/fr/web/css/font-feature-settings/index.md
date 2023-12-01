@@ -1,7 +1,6 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
-translation_of: Web/CSS/font-feature-settings
 ---
 
 {{CSSRef}}

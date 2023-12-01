@@ -1,13 +1,6 @@
 ---
 title: Применение Web Speech API
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
-tags:
-  - API
-  - Web Speech API
-  - Воспроизведение речи
-  - Распознавание речи
-  - Синтез речи
-translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
 
 Web Speech API предоставляет 2 основных типа функциональности — [распознавание речи пользователя](/ru/docs/Web/API/SpeechRecognition) и [речевое воспроизведение текста](/ru/docs/Web/API/SpeechSynthesis). Это предоставляет новые возможности для взаимодействия с интерфейсом и открывает перед нами новые горизонты создания уникального пользовательского опыта. Эта статья даёт краткое описание обоих направлений с примерами кода и ссылкой на работающее приложение онлайн.
@@ -116,7 +109,7 @@ speechRecognitionList.addFromString(grammar, 1);
 ```js
 recognition.grammars = speechRecognitionList;
 //recognition.continuous = false;
-recognition.lang = 'ru-RU';
+recognition.lang = "ru-RU";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 ```
@@ -344,45 +337,47 @@ populateVoiceList();
 ```js
 function speak() {
   if (synth.speaking) {
-    console.error('speechSynthesis.speaking');
+    console.error("speechSynthesis.speaking");
     synth.cancel();
     setTimeout(speak, 300);
-  } else if (inputTxt.value !== '') {
-      const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-      utterThis.onend = function(event) {
-        console.log('SpeechSynthesisUtterance.onend');
-      };
+  } else if (inputTxt.value !== "") {
+    const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+    utterThis.onend = function (event) {
+      console.log("SpeechSynthesisUtterance.onend");
+    };
 
-      utterThis.onerror = function(event) {
-        console.error('SpeechSynthesisUtterance.onerror');
-      };
-      const selectedOption = voicesList.selectedOptions[0].getAttribute('data-name');
+    utterThis.onerror = function (event) {
+      console.error("SpeechSynthesisUtterance.onerror");
+    };
+    const selectedOption =
+      voicesList.selectedOptions[0].getAttribute("data-name");
 
-      for (i = 0; i < voices.length; i++) {
-        if (voices[i].name === selectedOption) {
-          utterThis.voice = voices[i];
-        }
+    for (i = 0; i < voices.length; i++) {
+      if (voices[i].name === selectedOption) {
+        utterThis.voice = voices[i];
       }
+    }
 
-      utterThis.onpause = function(event) {
-        const char = event.utterance.text.charAt(event.charIndex);
-        console.log('Speech paused at character ' +
+    utterThis.onpause = function (event) {
+      const char = event.utterance.text.charAt(event.charIndex);
+      console.log(
+        "Speech paused at character " +
           event.charIndex +
           ' of "' +
           event.utterance.text +
           '", which is "' +
           char +
-          '".'
-        );
-      };
+          '".',
+      );
+    };
 
-      utterThis.pitch = pitch.value;
-      utterThis.rate = rate.value;
-      synth.speak(utterThis);
-    }
+    utterThis.pitch = pitch.value;
+    utterThis.rate = rate.value;
+    synth.speak(utterThis);
+  }
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = function (event) {
   event.preventDefault();
   speak();
   inputTxt.blur();
@@ -394,11 +389,11 @@ inputForm.onsubmit = function(event) {
 Последний пример кода просто обновляет значения высоты тона/скорости, отображаемые в пользовательском интерфейсе, каждый раз, когда позиции ползунка перемещаются.
 
 ```js
-pitch.onchange = function() {
+pitch.onchange = function () {
   pitchValue.textContent = pitch.value;
 };
 
-rate.onchange = function() {
+rate.onchange = function () {
   rateValue.textContent = rate.value;
 };
 ```

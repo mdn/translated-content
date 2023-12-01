@@ -1,8 +1,9 @@
 ---
 title: Instance
 slug: Glossary/Instance
-translation_of: Glossary/Instance
 ---
+
+{{GlossarySidebar}}
 
 Un {{glossary("objet")}} créé par un {{glossary("constructeur")}} est une instance de ce constructeur.
 

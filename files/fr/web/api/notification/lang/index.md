@@ -1,7 +1,6 @@
 ---
 title: Notification.lang
 slug: Web/API/Notification/lang
-translation_of: Web/API/Notification/lang
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

@@ -1,7 +1,6 @@
 ---
 title: downloads.InterruptReason
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
 ---
 
 {{AddonSidebar()}}

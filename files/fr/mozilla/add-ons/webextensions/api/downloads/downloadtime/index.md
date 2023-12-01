@@ -1,7 +1,6 @@
 ---
 title: downloads.DownloadTime
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
 ---
 
 {{AddonSidebar()}}

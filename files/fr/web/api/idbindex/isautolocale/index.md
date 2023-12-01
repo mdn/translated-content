@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.isAutoLocale
 slug: Web/API/IDBIndex/isAutoLocale
-translation_of: Web/API/IDBIndex/isAutoLocale
 ---
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}

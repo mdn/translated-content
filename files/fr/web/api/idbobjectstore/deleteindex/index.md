@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.deleteIndex()
 slug: Web/API/IDBObjectStore/deleteIndex
-translation_of: Web/API/IDBObjectStore/deleteIndex
 ---
 
 {{ APIRef("IndexedDB") }}

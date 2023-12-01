@@ -1,7 +1,6 @@
 ---
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
-translation_of: Web/API/Element/setPointerCapture
 ---
 
 {{APIRef("DOM")}}

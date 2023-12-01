@@ -1,7 +1,6 @@
 ---
 title: NodeIterator.nextNode()
 slug: Web/API/NodeIterator/nextNode
-translation_of: Web/API/NodeIterator/nextNode
 ---
 
 {{APIRef("DOM")}}

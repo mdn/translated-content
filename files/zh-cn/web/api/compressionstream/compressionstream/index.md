@@ -34,7 +34,7 @@ new CompressionStream(format)
 
 ```js
 const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip")
+  new CompressionStream("gzip"),
 );
 ```
 

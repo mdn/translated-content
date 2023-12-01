@@ -1,7 +1,6 @@
 ---
 title: "@charset"
 slug: Web/CSS/@charset
-translation_of: Web/CSS/@charset
 ---
 
 {{CSSRef}}

@@ -9,7 +9,7 @@ HTTP **`Authorization`** 请求标头用于提供服务器验证用户代理身�
 
 **`Authorization`** 标头通常在用户代理首次尝试请求受保护的资源（没有携带凭据）之后发送的，但并不总是发送。服务器响应一条 {{HTTPStatus("401")}} `Unauthorized` 信息，其中包含至少一个 {{HTTPHeader("WWW-Authenticate")}} 标头。该标头表示哪些身份验证的方案可用于访问资源（以及客户端使用它们时需要的额外的信息）。用户代理应该从这些提供的身份验证方案中选择它支持的最安全的身份验证方案，并提示用户提供凭据，然后重新获取资源（包含 **`Authorization`** 标头中编码的凭据）。
 
-> **备注：** 此标头是[通用的 HTTP 认证框架](/zh-CN/docs/Web/HTTP/Authentication#通用的_http_认证框架)的一部分。它可以与许多[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)一起使用.
+> **备注：** 此标头是[通用的 HTTP 认证框架](/zh-CN/docs/Web/HTTP/Authentication#通用的_http_认证框架)的一部分。它可以与许多[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)一起使用。
 
 <table class="properties">
   <tbody>
@@ -57,7 +57,7 @@ Authorization: Digest username=<username>,
 
   - : [身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)定义了凭据如何编码。一些常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
-    > **备注：** 有关更多信息/选项，请参阅 [HTTP身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)
+    > **备注：** 有关更多信息/选项，请参阅 [HTTP 身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)
 
 除 `<auth-scheme>` 外，其余指令特定于每个[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。通常，你需要检查这些方案的相关规范（下面列出了一小部分方案的要点）。
 
@@ -78,7 +78,7 @@ Authorization: Digest username=<username>,
 - `username*`
   - : 使用 RFC5987 中定义的扩展符号格式化的用户名。只有当名称无法在 `username` 中编码并且 `userhash` 设置为 `"false"` 时，才应使用此字段。
 - `uri`
-  - : *有效的请求 URI*。有关更多信息，请参阅规范。
+  - : _有效的请求 URI_。有关更多信息，请参阅规范。
 - `realm`
   - : 请求的用户名/密码的 realm（同样，应该与所请求资源中对应的 {{HTTPHeader("WWW-Authenticate")}} 响应中的值相匹配）。
 - `opaque`

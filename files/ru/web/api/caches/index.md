@@ -1,9 +1,8 @@
 ---
 title: WindowOrWorkerGlobalScope.caches
 slug: Web/API/caches
-translation_of: Web/API/WindowOrWorkerGlobalScope/caches
-original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 **`caches`** {{domxref("WindowOrWorkerGlobalScope")}} свойство только для чтения интерфейса возвращающее объект ассоциированный с текущим контекстом {{domxref("CacheStorage")}}.
@@ -25,22 +24,22 @@ var myCacheStorage = self.caches; // or just caches
 Данный пример показывает как надо использовать кеш в контексте [service worker](/ru/docs/Web/API/Service_Worker_API) для хранения в автономном режиме
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open("v1").then(function (cache) {
       return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        "/sw-test/",
+        "/sw-test/index.html",
+        "/sw-test/style.css",
+        "/sw-test/app.js",
+        "/sw-test/image-list.js",
+        "/sw-test/star-wars-logo.jpg",
+        "/sw-test/gallery/",
+        "/sw-test/gallery/bountyHunters.jpg",
+        "/sw-test/gallery/myLittleVader.jpg",
+        "/sw-test/gallery/snowTroopers.jpg",
       ]);
-    })
+    }),
   );
 });
 ```

@@ -2,6 +2,7 @@
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("Window")}} 또는 {{domxref("Worker")}} 인터페이스의 **`queueMicrotask()`** 메서드는 브라우저의 이벤트 루프로 통제권이 넘어가기 전, 안전한 시점에 실행할 마이크로태스크를 큐에 추가합니다.
@@ -34,7 +35,7 @@ queueMicrotask(function);
 ```js
 queueMicrotask(() => {
   // 함수 내용
-})
+});
 ```
 
 다음은 [queueMicrotask 명세](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing)에서 가져온 예제 코드입니다.
@@ -47,11 +48,13 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(res => res.arrayBuffer()).then(data => {
-      this._cache[url] = data;
-      this._setData(data);
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((res) => res.arrayBuffer())
+      .then((data) => {
+        this._cache[url] = data;
+        this._setData(data);
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```

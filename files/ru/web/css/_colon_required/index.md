@@ -1,9 +1,6 @@
 ---
-title: ':required'
+title: ":required"
 slug: Web/CSS/:required
-tags:
-  - Псевдо-классы
-translation_of: Web/CSS/:required
 ---
 
 {{ CSSRef() }}

@@ -22,7 +22,7 @@ scrollbar-color: dark;
 scrollbar-color: light;
 
 /* <color> values */
-scrollbar-color: rebeccapurple green;   /* Two valid colors.
+scrollbar-color: rebeccapurple green; /* Two valid colors.
 The first applies to the thumb of the scrollbar, the second to the track. */
 
 /* Global values */
@@ -37,7 +37,7 @@ scrollbar-color: unset;
 
   - : 定义滚动条的颜色。
 
-    | 值 | 描述 |
+    | 值                | 描述                                                                                   |
     | ----------------- | -------------------------------------------------------------------------------------- |
     | `auto`            | 在没有任何其他相关滚动条颜色属性的情况下，滚动条的轨道部分默认平台渲染。               |
     | `dark`            | 显示黑色滚动条，可以是平台提供的滚动条的深色变体，也可以是带深色的自定义滚动条。       |
@@ -66,7 +66,13 @@ scrollbar-color: unset;
 ### HTML
 
 ```html
-<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+<div class="scroller">
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+  earthnut pea peanut soko zucchini.
+</div>
 ```
 
 ### 结果

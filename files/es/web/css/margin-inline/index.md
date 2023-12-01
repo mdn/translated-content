@@ -1,69 +1,101 @@
 ---
 title: margin-inline
 slug: Web/CSS/margin-inline
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`margin-inline`** define los márgenes lógicos de inicio y final en línea de un elemento, que se asignan a márgenes físicos según el modo de escritura, la direccionalidad y la orientación del texto del elemento.
+La [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) de [CSS](/es/docs/Web/CSS) **`margin-inline`** es una propiedad abreviada que define los márgenes lógicos de inicio y final en línea de un elemento, que se asignan a márgenes físicos según el modo de escritura, la direccionalidad y la orientación del texto del elemento.
+
+{{EmbedInteractiveExample("pages/css/margin-inline.html")}}
+
+## Propiedades constituyentes
+
+Esta propiedad es una abreviatura de las siguientes propiedades de CSS:
+
+- {{cssxref("margin-inline-start")}}
+- {{cssxref("margin-inline-end")}}
+
+## Sintaxis
 
 ```css
-/* Valores <largo> */
-margin-inline: 10px 20px; /* Un largo absoluto */
-margin-inline: 1em 2em; /* relativo al tamaño del texto */
-margin-inline: 5% 2%; /* relativo al ancho del container del bloque más cercano */
-margin-inline: 10px; /* settear tanto el valor inicial como el final*/
+/* Valores <length> */
+margin-inline: 10px 20px; /* Una longitud absoluta */
+margin-inline: 1em 2em; /* relativa al tamaño del texto */
+margin-inline: 5% 2%; /* relativa al ancho del contenedor del bloque más cercano */
+margin-inline: 10px; /* establece los valores al inicio y al final */
 
-/* Valores keyword */
+/* Valores de palabras clave */
 margin-inline: auto;
 
 /* Valores globales */
 margin-inline: inherit;
 margin-inline: initial;
+margin-inline: revert;
+margin-inline: revert-layer;
 margin-inline: unset;
 ```
 
-Estos valores corresponden a las propiedades {{CSSxRef("margin-top")}} y {{CSSxRef("margin-bottom")}}, o {{CSSxRef("margin-right")}}, y {{CSSxRef("margin-left")}} dependiendo de los valores definidos por {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, y {{CSSxRef("text-orientation")}}.
+Esta propiedad corresponde a las propiedades {{CSSxRef("margin-top")}} y {{CSSxRef("margin-bottom")}}, o {{CSSxRef("margin-right")}} y {{CSSxRef("margin-left")}}, dependiendo de los valores definidos para {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} y {{CSSxRef("text-orientation")}}.
 
-Los valores pueden ser establecidos individualmente como {{CSSxRef("margin-inline-start")}} y {{CSSxRef("margin-inline-end")}}. La propiedad de dirección de bloque es {{CSSxRef("margin-block")}} que establece {{CSSxRef("margin-block-start")}}, y {{CSSxRef("margin-block-end")}}.
+La propiedad `margin-inline` se puede especificar usando uno o dos valores.
 
-## Sintaxis
+- Cuando **un** valor es especificado, se aplica el mismo margen al **inicio** y al **final**.
+- Cuando **dos** valores son especificados, el primer margen aplica al **inicio** y el segundo al **final**.
 
 ### Valores
 
-La propiedad `margin-inline` toma los mismos valores de la propiedad {{CSSxRef("margin-left")}}.
+La propiedad `margin-inline` toma los mismos valores que la propiedad {{CSSxRef("margin", "", "#values")}}.
 
-### Sintaxis formal
+## Definición formal
 
-{{CSSSyntax}}
+{{cssinfo}}
 
-## Ejemplo
+## Sintaxis formal
 
-### Contenido HTML
+{{csssyntax}}
 
-```html
-<div>
-  <p class="exampleText">Texto de ejemplo</p>
-</div>
-```
+## Ejemplos
 
-### Contenido CSS
+### Configuración de márgenes iniciales y finales en línea
+
+#### CSS
 
 ```css
 div {
   background-color: yellow;
   width: 120px;
-  height: 120px;
+  height: auto;
+  border: 1px solid green;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
+p {
+  margin: 0;
   margin-inline: 20px 40px;
-  background-color: #c8c800;
+  background-color: tan;
+}
+
+.verticalExample {
+  writing-mode: vertical-rl;
 }
 ```
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+#### HTML
+
+```html
+<div>
+  <p>Texto de ejemplo</p>
+</div>
+<div class="verticalExample">
+  <p>Texto de ejemplo</p>
+</div>
+```
+
+#### Resultado
+
+{{EmbedLiveSample("Configuración_de_márgenes_iniciales_y_finales_en_línea", 140, 240)}}
 
 ## Especificaciones
 
@@ -73,7 +105,8 @@ div {
 
 {{Compat}}
 
-## Mira también
+## Véase también
 
-- Las propiedades físicas mapeadas: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, y {{CSSxRef("margin-left")}}
+- [Propiedades y valores lógicos de CSS](/es/docs/Web/CSS/CSS_logical_properties_and_values)
+- Las propiedades físicas asignadas: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} y {{CSSxRef("margin-left")}}
 - {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

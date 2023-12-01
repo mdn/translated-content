@@ -1,7 +1,6 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
-translation_of: Web/CSS/@media/pointer
 ---
 
 {{CSSRef}}

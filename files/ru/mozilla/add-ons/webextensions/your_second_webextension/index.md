@@ -1,12 +1,6 @@
 ---
 title: Ваш второй WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 
 {{AddonSidebar}}

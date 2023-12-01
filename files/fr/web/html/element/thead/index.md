@@ -1,7 +1,6 @@
 ---
 title: <thead>
 slug: Web/HTML/Element/thead
-translation_of: Web/HTML/Element/thead
 ---
 
 {{HTMLSidebar}}

@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 
 ## 语法
 
-```js
-dateObj.getMinutes()
+```js-nolint
+getMinutes()
 ```
 
 ### 参数
@@ -42,7 +42,7 @@ var minutes = Xmas95.getMinutes();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCMinutes()")}}
 - {{jsxref("Date.prototype.setMinutes()")}}

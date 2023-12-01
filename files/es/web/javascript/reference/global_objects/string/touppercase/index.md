@@ -1,7 +1,6 @@
 ---
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toUpperCase
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -27,7 +26,7 @@ El método `toUpperCase` devuelve el valor de la cadena convertida a mayúsculas
 El siguiente ejemplo muestra la cadena "`ALPHABET`":
 
 ```js
-console.log( "alphabet".toUpperCase() ); // "ALPHABET"
+console.log("alphabet".toUpperCase()); // "ALPHABET"
 ```
 
 ### Vea También

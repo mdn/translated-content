@@ -83,16 +83,16 @@ Object.setPrototypeOf(SuperHero.prototype, Human.prototype);
 
 Human.prototype.speak = function () {
   return `${this.name} says hello.`;
-}
+};
 
 SuperHero.prototype.fly = function () {
   return `${this.name} is flying.`;
-}
+};
 
-const superMan = new SuperHero('Clark Kent', 1);
+const superMan = new SuperHero("Clark Kent", 1);
 
 console.log(superMan.fly());
-console.log(superMan.speak())
+console.log(superMan.speak());
 ```
 
 上面的类继承（使用 class）和伪类继承（使用带有 `prototype` 属性的构造函数）的相似性已在[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#使用不同的方法来创建对象和生成原型链)中提到。

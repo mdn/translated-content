@@ -1,7 +1,6 @@
 ---
 title: Utilisation des requêtes média pour l'accessibilité
 slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
-translation_of: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/Requêtes_média/")}}

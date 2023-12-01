@@ -1,7 +1,6 @@
 ---
 title: Créer des objets 3D avec WebGL
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

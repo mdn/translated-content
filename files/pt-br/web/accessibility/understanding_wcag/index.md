@@ -1,7 +1,6 @@
 ---
 title: Entendendo as Diretrizes de Acessibilidade do Conteúdo Web
 slug: Web/Accessibility/Understanding_WCAG
-original_slug: Web/Acessibilidade/Entendendo_WCAG
 ---
 
 Este conjunto de artigos fornece explicações rápidas para ajudá-lo a entender as etapas que devem ser seguidas para estar em conformidade com as recomendações descritas nas Diretrizes de Acessibilidade para Conteúdo Web 2.0 ou 2.1 do W3C (ou apenas WCAG, para as finalidades deste artigo).

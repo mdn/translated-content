@@ -1,7 +1,6 @@
 ---
 title: paint()
 slug: Web/CSS/image/paint
-translation_of: Web/CSS/image/paint
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

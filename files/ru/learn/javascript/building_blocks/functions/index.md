@@ -1,12 +1,6 @@
 ---
 title: Функции — Переиспользуемые блоки кода
 slug: Learn/JavaScript/Building_blocks/Functions
-tags:
-  - Функции
-  - аргументы
-  - методы
-  - параметры
-translation_of: Learn/JavaScript/Building_blocks/Functions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}

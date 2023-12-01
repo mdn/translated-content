@@ -1,17 +1,6 @@
 ---
 title: Что такое CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Введение в CSS
-  - Начинающий
-  - Обучение
-  - Синтаксис
-  - Спецификации
-translation_of: Learn/CSS/First_steps/What_is_CSS
-original_slug: Learn/CSS/First_steps/Что_такое_CSS
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First steps")}}
@@ -102,7 +91,7 @@ CSS ничем не отличается — он разработан груп�
 
 Ниже приведена диаграмма данных для CSS свойства [`font-family`](/ru/docs/Web/CSS/font-family):
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## Что дальше?
 

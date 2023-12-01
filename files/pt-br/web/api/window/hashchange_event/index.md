@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers.onhashchange
 slug: Web/API/Window/hashchange_event
-original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
 
 {{APIRef("HTML DOM")}}
@@ -35,13 +34,13 @@ window.addEventListener("hashchange", funcRef, false);
 
 ```js
 if ("onhashchange" in window) {
-    alert("O browser têm suporte ao evento hashchange!");
+  alert("O browser têm suporte ao evento hashchange!");
 }
 
 function locationHashChanged() {
-    if (location.hash === "#algointeressante") {
-        algoInteressante();
-    }
+  if (location.hash === "#algointeressante") {
+    algoInteressante();
+  }
 }
 
 window.onhashchange = locationHashChanged;
@@ -58,12 +57,8 @@ O evento hashchange disparado possui os seguintes campos
 
 ## Especificações
 
-| Especificação                                                                                        | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     |            |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
-## Compatibilidade dos Browsers
+## Compatibilidade com navegadores
 
-{{Compat("api.Window.hashchange_event")}}
+{{Compat}}

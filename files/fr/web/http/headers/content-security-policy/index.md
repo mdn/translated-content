@@ -1,7 +1,6 @@
 ---
 title: Politique de sécurité de contenu
 slug: Web/HTTP/Headers/Content-Security-Policy
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 
 {{HTTPSidebar}}

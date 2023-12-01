@@ -1,7 +1,6 @@
 ---
 title: scroll-padding-block-end
 slug: Web/CSS/scroll-padding-block-end
-translation_of: Web/CSS/scroll-padding-block-end
 ---
 
 {{CSSRef}}

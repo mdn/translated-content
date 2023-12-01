@@ -1,12 +1,6 @@
 ---
 title: Storage Access API
 slug: Web/API/Storage_Access_API
-tags:
-  - API
-  - Reference
-  - Storage
-  - Storage Access API
-translation_of: Web/API/Storage_Access_API
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}{{seecompattable}}
@@ -26,7 +20,8 @@ The Storage Access API is intended to solve this problem; embedded cross-origin 
 In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the `allow-storage-access-by-user-activation` [sandbox token](/ru/docs/Web/HTML/Element/iframe#attr-sandbox). The embedding website needs to add this to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 
 ```html
-<iframe sandbox="allow-storage-access-by-user-activation
+<iframe
+  sandbox="allow-storage-access-by-user-activation
                  allow-scripts
                  allow-same-origin">
   ...
@@ -77,9 +72,9 @@ API на стадии обсуждения — стандартизация не
 
 ## Поддержка браузерами
 
-{{Compat("api.Document.hasStorageAccess")}}
+{{Compat}}
 
-{{Compat("api.Document.requestStorageAccess")}}
+{{Compat}}
 
 ## Смотрите также
 

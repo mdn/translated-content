@@ -1,7 +1,6 @@
 ---
 title: Suggestions de la barre d'adresse
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 ---
 
 {{AddonSidebar()}}

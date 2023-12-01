@@ -23,7 +23,7 @@ slug: Web/API/Clipboard
 
 ## 方法
 
-*`Clipboard` 继承自 {{domxref("EventTarget")}} 接口，因此拥有它的方法。*
+_`Clipboard` 继承自 {{domxref("EventTarget")}} 接口，因此拥有它的方法。_
 
 - {{domxref("Clipboard.read()","read()")}}
   - : 从剪贴板读取数据（比如图片），返回一个 {{jsxref("Promise")}} 对象。在检索到数据后，promise 将兑现一个 {{domxref("ClipboardItem")}} 对象的数组来提供剪切板数据。

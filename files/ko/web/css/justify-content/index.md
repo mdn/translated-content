@@ -2,7 +2,7 @@
 title: justify-content
 slug: Web/CSS/justify-content
 l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f 
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}

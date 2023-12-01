@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
-translation_of: Web/API/WebGLRenderingContext/clearColor
 ---
 
 {{APIRef("WebGL")}}
@@ -46,10 +45,7 @@ gl.getParameter(gl.COLOR_CLEAR_VALUE);
 
 ## Specifications
 
-| Specification                                                                            | Status                               | Comment                     |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------- |
-| {{SpecName('WebGL', "#5.14.3", "clearColor")}}                             | {{Spec2('WebGL')}}             | Initial definition.         |
-| {{SpecName('OpenGL ES 2.0', "glClearColor.xml", "glClearColor")}} | {{Spec2('OpenGL ES 2.0')}} | Man page of the OpenGL API. |
+{{Specifications}}
 
 ## Browser compatibility
 

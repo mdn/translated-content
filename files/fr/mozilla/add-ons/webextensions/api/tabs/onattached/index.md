@@ -1,7 +1,6 @@
 ---
 title: tabs.onAttached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
 ---
 
 {{AddonSidebar()}}

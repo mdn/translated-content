@@ -41,9 +41,11 @@ fetch(resource, options)
   - : 요청에 적용하고자 하는 사용자 지정 설정을 포함하는 객체입니다. 사용 가능한 설정은 다음과 같습니다.
 
     - `method`
+
       - : `GET`, `POST` 등 요청 메서드입니다. 참고로 {{httpheader("Origin")}} 헤더는 {{HTTPMethod("HEAD")}}나 {{HTTPMethod("GET")}} 메서드의 Fetch 요청에는 설정되지 않습니다. (이 동작은 Firefox 65에서 수정되었습니다. [Firefox bug 1508661](https://bugzil.la/1508661)을 참조하세요.) [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview)에 정의된 메서드 중 하나와 대소문자 구분 없이 일치하는 문자열은 자동으로 대문자화됩니다. `PATCH`처럼 별도로 정의한 메서드를 사용하려면 직접 대문자로 입력해야 합니다.
 
     - `headers`
+
       - : 요청에 추가하고자 하는 헤더들입니다. {{domxref("Headers")}} 객체에 넣어 제공할 수도 있고, {{jsxref("String")}} 값들을 가진 객체 리터럴로 제공해도 됩니다. [어떤 이름들은 금지](/ko/docs/Glossary/Forbidden_header_name)된다는 점을 주의하세요.
 
         > **참고:** [`Authorization`](/ko/docs/Web/HTTP/Headers/Authorization) HTTP 헤더는 요청에 추가할 수 있지만, 요청이 다른 출처로 리다이렉트되면 제거됩니다.
@@ -53,6 +55,7 @@ fetch(resource, options)
     - `mode`
       - : 이 요청에 사용할 모드, 즉 `cors`, `no-cors`, 또는 `same-origin`입니다.
     - `credentials`
+
       - : 브라우저가 자격증명([쿠키](/ko/docs/Web/HTTP/Cookies), [HTTP 인증](/ko/docs/Web/HTTP/Authentication) 항목, TLS 클라이언트 인증서)을 어떻게 취급할지 제어합니다. 다음 중 한 문자열이어야 합니다.
 
         - `omit`

@@ -1,7 +1,6 @@
 ---
 title: Pseudo-classes relatives à l'interface utilisateur
 slug: Learn/Forms/UI_pseudo-classes
-translation_of: Learn/Forms/UI_pseudo-classes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}

@@ -1,7 +1,6 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-translation_of: Web/CSS/blend-mode
 ---
 
 {{CSSRef}}

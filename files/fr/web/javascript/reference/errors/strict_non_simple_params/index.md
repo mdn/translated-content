@@ -1,7 +1,6 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with "x" parameter'
 slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
-translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 ---
 
 {{jsSidebar("Errors")}}
@@ -73,7 +72,7 @@ var somme = function somme([a, b]) {
 On peut convertir le fragment de code précédent avec l'expression suivante :
 
 ```js example-good
-var somme = (function() {
+var somme = (function () {
   "use strict";
   return function somme([a, b]) {
     return a + b;

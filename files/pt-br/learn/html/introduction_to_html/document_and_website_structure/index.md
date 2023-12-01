@@ -1,7 +1,6 @@
 ---
 title: Estrutura de documento e sites
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-original_slug: Aprender/HTML/Introducao_ao_HTML/Estrutura_de_documento_e_sites
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}Além de definir as partes individuais de sua página (como "um parágrafo" ou "uma imagem"),

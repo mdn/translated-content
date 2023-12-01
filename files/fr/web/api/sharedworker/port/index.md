@@ -1,7 +1,6 @@
 ---
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
-translation_of: Web/API/SharedWorker/port
 l10n:
   sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
 ---

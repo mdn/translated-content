@@ -1,7 +1,6 @@
 ---
 title: browserSettings.cacheEnabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled
 ---
 
 {{AddonSidebar()}}

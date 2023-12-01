@@ -1,7 +1,6 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
 
 {{JSRef}}
@@ -14,8 +13,7 @@ La méthode **`handler.has()`** est une trappe pour l'opérateur {{jsxref("Opér
 
 ```js
 var p = new Proxy(cible, {
-  has: function(cible, prop) {
-  }
+  has: function (cible, prop) {},
 });
 ```
 
@@ -57,15 +55,18 @@ Si les invariants suivants ne sont pas respectés, le proxy lèvera une exceptio
 Dans l'exemple qui suit, on intercepte l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}} :
 
 ```js
-var p = new Proxy({}, {
-  has: function(cible, prop) {
-    console.log("appelée : " + prop);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    has: function (cible, prop) {
+      console.log("appelée : " + prop);
+      return true;
+    },
+  },
+);
 
 console.log("a" in p); // "appelée : a"
-                       // true
+// true
 ```
 
 L'exemple suivant ne respecte pas un invariant :
@@ -74,9 +75,9 @@ L'exemple suivant ne respecte pas un invariant :
 var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
-  has: function(cible, prop) {
+  has: function (cible, prop) {
     return false;
-  }
+  },
 });
 
 "a" in p; // TypeError levée

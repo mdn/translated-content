@@ -1,8 +1,9 @@
 ---
 title: TLS
 slug: Glossary/TLS
-original_slug: Glossario/TLS
 ---
+
+{{GlossarySidebar}}
 
 Transport Layer Security (TLS), previamente conhecido como Secure Sockets Layer (SSL), é um {{Glossary("Protocol", "protocolo")}} usado por aplicativos para se comunicar de forma segura em toda a rede, evitando adulteração e espionagem no email, navegador, mensagens e outros protocolos.
 

@@ -1,7 +1,6 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
-translation_of: Web/CSS/quotes
 ---
 
 {{CSSRef}}

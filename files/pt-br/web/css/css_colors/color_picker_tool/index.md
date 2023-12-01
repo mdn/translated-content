@@ -1,7 +1,6 @@
 ---
 title: Seletor de cores
 slug: Web/CSS/CSS_colors/Color_picker_tool
-original_slug: Web/CSS/CSS_Colors/seletor_de_cores
 ---
 
 {{CSSRef}}

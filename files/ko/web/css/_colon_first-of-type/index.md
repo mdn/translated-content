@@ -1,7 +1,8 @@
 ---
-title: ':first-of-type'
+title: ":first-of-type"
 slug: Web/CSS/:first-of-type
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`:first-of-type`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 요소 중 자신의 유형과 일치하는 제일 첫 요소를 나타냅니다.
@@ -55,7 +56,9 @@ p:first-of-type {
 <article>
   <div>This `div` is first!</div>
   <div>This <span>nested `span` is first</span>!</div>
-  <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
+  <div>
+    This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!
+  </div>
   <div>This <span>nested `span` gets styled</span>!</div>
   <b>This `b` qualifies!</b>
   <div>This is the final `div`.</div>

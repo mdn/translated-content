@@ -1,7 +1,6 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
-translation_of: Web/CSS/scroll-padding-inline
 ---
 
 {{CSSRef}}

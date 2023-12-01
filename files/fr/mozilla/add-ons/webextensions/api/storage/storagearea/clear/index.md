@@ -1,7 +1,6 @@
 ---
 title: StorageArea.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
 ---
 
 {{AddonSidebar()}}

@@ -1,8 +1,6 @@
 ---
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
-l10n:
-	sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
 {{APIRef("HTML DOM")}}

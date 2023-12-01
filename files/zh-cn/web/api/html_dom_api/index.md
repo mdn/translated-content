@@ -301,13 +301,13 @@ History API 接口允许你访问有关浏览器历史记录的信息，并通�
 
 ```js
 const nameField = document.getElementById("userName");
-const sendButton = document.getElementById("sendButton")
+const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
-// [提示: 这是被禁用的，因为它会导致文章始终加载此示例，并将其聚焦和滚动到视图中]
+// [提示：这是被禁用的，因为它会导致文章始终加载此示例，并将其聚焦和滚动到视图中]
 //nameField.focus();
 
-nameField.addEventListener("input", event => {
+nameField.addEventListener("input", (event) => {
   const elem = event.target;
   const valid = elem.value.length != 0;
 
@@ -321,7 +321,7 @@ nameField.addEventListener("input", event => {
 
 这段代码使用 {{domxref("Document")}} 接口的 {{domxref("Document.getElementById", "getElementById()")}} 方法，获取 ID 为 `userName` 和 `sendButton` 的 {{HTMLElement("input")}} 元素的 DOM 对象。通过这些对象，我们可以访问提供信息的属性和方法，并获得对这些元素的控制权。
 
-“发送” 按钮的 {{domxref("HTMLInputElement")}} 对象的 {{domxref("HTMLInputElement.disabled", "disabled")}} 属性被设置为 `true`，这将禁用 “发送” 按钮，使其无法点击。此外，通过调用继承自 {{domxref("HTMLElement")}} 的 {{domxref("HTMLElement/focus", "focus()")}} 方法，用户名输入字段成为活动焦点。
+“发送”按钮的 {{domxref("HTMLInputElement")}} 对象的 {{domxref("HTMLInputElement.disabled", "disabled")}} 属性被设置为 `true`，这将禁用“发送”按钮，使其无法点击。此外，通过调用继承自 {{domxref("HTMLElement")}} 的 {{domxref("HTMLElement/focus", "focus()")}} 方法，用户名输入字段成为活动焦点。
 
 然后调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来为用户名输入添加一个 `input` 事件的处理器。这段代码检测当前输入值的长度；如果它是零，则禁用“发送”按钮（如果尚未禁用）。否则，该代码确保按钮已启用。
 
@@ -332,17 +332,17 @@ nameField.addEventListener("input", event => {
 表单的 HTML 如下：
 
 ```html
-<p>请提供以下信息。 标有“*”的项目为必填项。</p>
+<p>请提供以下信息。标有“*”的项目为必填项。</p>
 <form action="" method="get">
   <p>
     <label for="userName" required>用户名：</label>
-    <input type="text" id="userName"> (*)
+    <input type="text" id="userName" /> (*)
   </p>
   <p>
     <label for="email">邮箱：</label>
-    <input type="email" id="userEmail">
+    <input type="email" id="userEmail" />
   </p>
-  <input type="submit" value="发送" id="sendButton">
+  <input type="submit" value="发送" id="sendButton" />
 </form>
 ```
 

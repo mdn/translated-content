@@ -1,14 +1,9 @@
 ---
 title: Дерево доступности (AOM)
 slug: Glossary/Accessibility_tree
-tags:
-  - AOM
-  - Доступность
-  - DOM
-  - Глоссарий
-  - Справка
-translation_of: Glossary/Accessibility_tree
 ---
+
+{{GlossarySidebar}}
 
 **Дерево доступности** содержит информацию для большинства HTML-элементов, связанную с {{Glossary("Accessibility", "доступностью")}}.
 

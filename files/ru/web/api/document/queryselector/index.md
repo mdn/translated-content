@@ -1,16 +1,6 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
-tags:
-  - CSS
-  - DOM
-  - Selector
-  - querySelector
-  - выборка
-  - поиск элемента
-  - поиск элементов
-  - селектор
-translation_of: Web/API/Document/querySelector
 ---
 
 {{ApiRef("DOM")}}
@@ -58,15 +48,15 @@ element = document.querySelector(selectors);
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar');               // "#fooar" (\b is the backspace control character)
-  document.querySelector('#foo\bar');    // Does not match anything
+  console.log("#foo\bar"); // "#fooar" (\b is the backspace control character)
+  document.querySelector("#foo\bar"); // Does not match anything
 
-  console.log('#foo\\bar');              // "#foo\bar"
-  console.log('#foo\\\\bar');            // "#foo\\bar"
-  document.querySelector('#foo\\bar'); // Match the first div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\bar"); // Match the first div
 
-  document.querySelector('#foo:bar');    // Does not match anything
-  document.querySelector('#foo\\:bar');  // Match the second div
+  document.querySelector("#foo:bar"); // Does not match anything
+  document.querySelector("#foo\\:bar"); // Match the second div
 </script>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
-translation_of: Web/API/ServiceWorkerContainer
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

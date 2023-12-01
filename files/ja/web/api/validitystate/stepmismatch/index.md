@@ -19,7 +19,7 @@ l10n:
 
 `(value - min) % 2 != 0` であれば、 `stepMismatch` は true になります。
 
- `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
+`true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
 
 ## 仕様書
 

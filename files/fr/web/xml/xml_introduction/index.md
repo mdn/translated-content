@@ -1,7 +1,6 @@
 ---
 title: Introduction à XML
 slug: Web/XML/XML_introduction
-translation_of: Web/XML/XML_introduction
 ---
 
 ### Définition

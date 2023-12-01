@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`toString()`** renvoie une chaîne de caractères représentant l'
 ## Syntaxe
 
 ```js
-dateObj.toString()
+dateObj.toString();
 ```
 
 ### Valeur de retour

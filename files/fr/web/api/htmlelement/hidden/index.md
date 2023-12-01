@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
-translation_of: Web/API/HTMLElement/hidden
 ---
 
 {{ APIRef("HTML DOM") }}

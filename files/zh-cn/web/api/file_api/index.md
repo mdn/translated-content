@@ -22,7 +22,7 @@ slug: Web/API/File_API
 - {{domxref("File")}}
   - : 提供文件的信息并允许网页中的 JavaScript 代码访问其中的内容。
 - {{domxref("FileList")}}
-  - : 由 HTML {{HTMLElement("input")}} 元素的 `files` 属性返回；这让你可以访问用 `<input type="file">` 元素选择的文件列表。当使用拖放API 时，它也被用于放入网页内容的文件列表；关于这种用法的细节，请参见 {{domxref("DataTransfer")}} 对象。
+  - : 由 HTML {{HTMLElement("input")}} 元素的 `files` 属性返回；这让你可以访问用 `<input type="file">` 元素选择的文件列表。当使用拖放 API 时，它也被用于放入网页内容的文件列表；关于这种用法的细节，请参见 {{domxref("DataTransfer")}} 对象。
 - {{domxref("FileReader")}}
   - : 使 web 应用能够异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象来指定要读取的文件或数据。
 - {{domxref("FileReaderSync")}}

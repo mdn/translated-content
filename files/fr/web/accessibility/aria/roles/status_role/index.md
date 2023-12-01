@@ -1,7 +1,6 @@
 ---
 title: Utiliser le rôle status
 slug: Web/Accessibility/ARIA/Roles/status_role
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 ---
 
 ### Description

@@ -1,7 +1,6 @@
 ---
 title: hover
 slug: Web/CSS/@media/hover
-translation_of: Web/CSS/@media/hover
 ---
 
 {{CSSRef}}

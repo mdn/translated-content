@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
 
 {{JSRef}}{{deprecated_header}}
@@ -11,7 +10,7 @@ La méthode **`__lookupSetter__`** renvoie la fonction définie comme mutateur p
 ## Syntaxe
 
 ```js
-obj.__lookupSetter__(sprop)
+obj.__lookupSetter__(sprop);
 ```
 
 ### Paramètres
@@ -35,14 +34,12 @@ Cette méthode ne doit plus être utilisée et peut être remplacée avec la mé
 var obj = {
   set toto(valeur) {
     this.truc = value;
-  }
+  },
 };
 
-
 // Méthode non-standard et dépréciée
-obj.__lookupSetter__('toto')
+obj.__lookupSetter__("toto");
 // (function(valeur) { this.truc = valeur; })
-
 
 // Méthode standard
 Object.getOwnPropertyDescriptor(obj, "toto").set;

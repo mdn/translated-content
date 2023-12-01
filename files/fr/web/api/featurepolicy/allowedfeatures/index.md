@@ -1,7 +1,6 @@
 ---
 title: FeaturePolicy.allowedFeatures()
 slug: Web/API/FeaturePolicy/allowedFeatures
-translation_of: Web/API/FeaturePolicy/allowedFeatures
 ---
 
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}

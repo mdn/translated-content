@@ -1,7 +1,6 @@
 ---
 title: Compteurs CSS
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
-translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: "@keyframes"
 slug: Web/CSS/@keyframes
-translation_of: Web/CSS/@keyframes
 ---
 
 {{CSSRef}}

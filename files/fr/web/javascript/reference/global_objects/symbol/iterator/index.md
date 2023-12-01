@@ -1,7 +1,6 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
 
 {{JSRef}}
@@ -33,13 +32,13 @@ Pour plus d'informations, voir aussi [la page sur les protocoles d'itération](/
 Il est possible de construire un itérable de la façon suivante :
 
 ```js
-var monItérable = {}
+var monItérable = {};
 monItérable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...monItérable] // [1, 2, 3]
+[...monItérable]; // [1, 2, 3]
 ```
 
 On peut également définir ces itérables via des propriétés calculées dans des déclarations de classe ou dans des littéraux objets :

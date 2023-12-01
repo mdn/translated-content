@@ -1,7 +1,6 @@
 ---
 title: 何が起きているかを追跡する
 slug: orphaned/MDN/Community/Whats_happening
-original_slug: MDN/Community/Whats_happening
 ---
 
 {{MDNSidebar}}

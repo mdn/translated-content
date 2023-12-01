@@ -1,8 +1,9 @@
 ---
 title: Adresse IP
 slug: Glossary/IP_Address
-translation_of: Glossary/IP_Address
 ---
+
+{{GlossarySidebar}}
 
 Une adresse IP est une série de chiffres assignée à chaque appareil connecté à un réseau qui utilise le protocole Internet.
 

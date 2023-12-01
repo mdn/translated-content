@@ -1,16 +1,6 @@
 ---
 title: Инициализация фреймворка
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
-tags:
-  - 2D
-  - Canvas
-  - HTML
-  - JavaScript
-  - Phaser
-  - Игры
-  - Руководство
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling")}}

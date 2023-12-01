@@ -1,7 +1,6 @@
 ---
 title: Node.baseURI
 slug: Web/API/Node/baseURI
-translation_of: Web/API/Node/baseURI
 ---
 
 {{APIRef("DOM")}}
@@ -43,9 +42,13 @@ var baseURI = node.baseURI;
 
 Вы можете использовать `{{domxref("element")}}.baseURI` для получения базового URL of элемента.
 
-## Спецификация
+## Спецификации
 
-- {{spec("http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-baseURI","DOM Level 3 Core: baseURI","REC")}}
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

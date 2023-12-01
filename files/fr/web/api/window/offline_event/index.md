@@ -1,7 +1,6 @@
 ---
 title: "Window: Evenement offline"
 slug: Web/API/Window/offline_event
-translation_of: Web/API/Window/offline_event
 ---
 
 {{APIRef}}

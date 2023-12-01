@@ -1,7 +1,6 @@
 ---
 title: Comparativo entre Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
-original_slug: Web/API/Event/Comparativo_entre_Event_Targets
 ---
 
 {{ ApiRef() }}
@@ -101,7 +100,7 @@ Há 5 tipos de _targets_ a se considerar:
         alguma outra razão senão o cruzamento de uma fronteira anônima, este
         evento será colocado no alvo antes que o redirecionamento ocorra. por
         exemplo, eventos do mouse são redirecionados à seus elementos pais
-        quando acontecem sobre nós de texto ({{ Bug("185889") }}), e neste
+        quando acontecem sobre nós de texto ([Firefox bug 185889](https://bugzil.la/185889)), e neste
         caso .target mostrará o nó pai e
         <code>.explicitOriginalTarget</code> mostrará o nó texto. Diferente de
         <code>.originalTarget</code>, <code>.explicitOriginalTarget</code> nunca
@@ -211,10 +210,10 @@ TODO: Adequado apenas para desenvolvedores de extensões?
 
 A propriedade `relatedTarget` do evento de `mouseover` mantém o nó de onde o mouse estava sobre anteriormente. Para o evento de `mouseout`, mantém o nó para onde o mouse se moveu.
 
-| Tipo de Evento | [event.target](/pt-BR/DOM/event.target) | [event.relatedTarget](/pt-BR/DOM/event.relatedTarget) |
-| -------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `mouseover`    | O EventTarget do qual o dispositivo apontador entrou.      | O EventTarget do qual o dispositivo apontador saiu.                             |
-| `mouseout`     | O EventTarget do qual o dispositivo apontador saiu.        | O EventTarget do qual o dispositivo apontador entrou.                           |
+| Tipo de Evento | [event.target](/pt-BR/DOM/event.target)               | [event.relatedTarget](/pt-BR/DOM/event.relatedTarget) |
+| -------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `mouseover`    | O EventTarget do qual o dispositivo apontador entrou. | O EventTarget do qual o dispositivo apontador saiu.   |
+| `mouseout`     | O EventTarget do qual o dispositivo apontador saiu.   | O EventTarget do qual o dispositivo apontador entrou. |
 
 TODO: Necessário descrição complemento sobre eventos de `dragenter` e `dragexit`.
 

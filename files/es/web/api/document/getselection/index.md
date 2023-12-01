@@ -1,7 +1,6 @@
 ---
 title: Document.getSelection()
 slug: Web/API/Document/getSelection
-original_slug: Web/API/DocumentOrShadowRoot/getSelection
 ---
 
 {{APIRef("DOM")}}

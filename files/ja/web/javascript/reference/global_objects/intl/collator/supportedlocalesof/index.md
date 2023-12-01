@@ -7,15 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 
 **`Intl.Collator.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替しなくても照合で対応するロケールを含む配列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-supportedlocalesof.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/intl-collator-supportedlocalesof.html","shorter")}}
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## 構文
 
 ```js
-Intl.Collator.supportedLocalesOf(locales)
-Intl.Collator.supportedLocalesOf(locales, options)
+Intl.Collator.supportedLocalesOf(locales);
+Intl.Collator.supportedLocalesOf(locales, options);
 ```
 
 ### 引数
@@ -44,9 +44,9 @@ Intl.Collator.supportedLocalesOf(locales, options)
 インドネシア語とドイツ語に対応しているもの、バリ語に対応していないランタイムを想定すると、ピンインの照合がインドネシア語では使用されておらず、インドネシアに特化したドイツ語に対応している可能性が低いとしても、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返します。これは "`lookup`" アルゴリズムの仕様であることに注意してください。 "`best fit`" マッチャーは、ほとんどのバリ語話者がインドネシア語も理解しているので、インドネシア語がバリ語に適切であると判断し、バリ語の言語タグも返すかもしれません。
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.Collator.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

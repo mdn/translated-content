@@ -1,7 +1,6 @@
 ---
 title: get()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
 ---
 
 {{AddonSidebar()}}

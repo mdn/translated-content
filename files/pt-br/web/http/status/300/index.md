@@ -17,8 +17,8 @@ Se o servidor tem uma escolha de preferência, ele deve gerar um cabeçalho {{HT
 
 ## Especificações
 
-| Especificação                                                    | Título                                                        |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                     | Título                                                        |
+| ------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "300 Multiple Choices" , "6.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Veja também

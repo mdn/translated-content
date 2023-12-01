@@ -5,9 +5,9 @@ slug: WebAssembly/Understanding_the_text_format
 
 {{WebAssemblySidebar}}
 
-사람이 WebAssembly를 읽고 편집 할 수 있게하려면 wasm 이진 형식의 텍스트 표현이 있어야합니다. 이것은 텍스트 편집기, 브라우저 개발자 도구 등에서 노출되도록 고안된 중간 양식입니다.이 장에서는 원시 구문과 텍스트 형식이 나타내는 기본 바이트 코드와 관련하여 Text format이 작동하는 방식과 자바 스크립트에서 wasm을 나타내는 객체 래퍼에 대해 설명합니다.
+사람이 WebAssembly를 읽고 편집 할 수 있게하려면 wasm 이진 형식의 텍스트 표현이 있어야합니다. 이것은 텍스트 편집기, 브라우저 개발자 도구 등에서 노출되도록 고안된 중간 양식입니다.이 장에서는 원시 구문과 텍스트 형식이 나타내는 기본 바이트 코드와 관련하여 Text format이 작동하는 방식과 JavaScript에서 wasm을 나타내는 객체 래퍼에 대해 설명합니다.
 
-> **참고:** 여기서 다루는 내용은 여러분이 웹어셈블리를 자바스크립트에 바로 불러오는 이전의 방법보다 훨씬 어렵습니다.([웹어셈블리를 자바스크립트 API에 사용하기](/ko/docs/WebAssembly/Using_the_JavaScript_API) 참고), 하지만 여기서 배우는 내용을 통해 웹어셈블리 모듈을 작성해보면, 자바스크립트 라이브러리의 성능을 향상시킬수 있는 방법을 찾거나, 직접 웹어셈블리 컴파일러를 작성하는데 도움이 될 것입니다.
+> **참고:** 여기서 다루는 내용은 여러분이 웹어셈블리를 JavaScript에 바로 불러오는 이전의 방법보다 훨씬 어렵습니다.([웹어셈블리를 JavaScript API에 사용하기](/ko/docs/WebAssembly/Using_the_JavaScript_API) 참고), 하지만 여기서 배우는 내용을 통해 웹어셈블리 모듈을 작성해보면, JavaScript 라이브러리의 성능을 향상시킬수 있는 방법을 찾거나, 직접 웹어셈블리 컴파일러를 작성하는데 도움이 될 것입니다.
 
 ## S-expressions
 
@@ -49,7 +49,7 @@ webassembly 모듈의 모든 코드는 다음과 같은 의사 코드 구조를 
 ```
 
 - **명칭**(**signature**)은 함수에서 (인자를)받고 (반환 값)반환하는 형식을 정의합니다.
-- **지역인수**(**locals**)는 자바스크립트의 변수 같지만, 명시적으로 형식을 정의합니다.
+- **지역인수**(**locals**)는 JavaScript의 변수 같지만, 명시적으로 형식을 정의합니다.
 - **본문**(**body**)은 저수준 정의를 일렬로 나열한 목록입니다.
 
 좀 다르게 보여도 다른 언어의 함수와 비슷합니다.
@@ -170,7 +170,7 @@ locals와 마찬가지로 함수는 기본적으로 인덱스로 식별되지만
 
 예제를 따라하려면 위의 모듈을 `add.wat`라는 파일에 저장 한 다음 wabt를 사용하여 `add.wasm`이라는 이진 파일로 변환하십시오 (자세한 내용은 [Converting WebAssembly text format to wasm](/ko/docs/WebAssembly/Text_format_to_wasm) 참조).
 
-다음으로 바이너리를 `addCode` ([Fetching WebAssembly Bytecode](/ko/docs/WebAssembly/Fetching_WebAssembly_bytecode)에서 설명한대로)라는 형식화 된 배열에로드하고, 컴파일 및 인스턴스화 한 다음 자바 스크립트에서 `add` 함수를 실행합니다. (이제 `add()`는 인스턴스의 [`exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) 속성에서 찾을 수 있습니다)
+다음으로 바이너리를 `addCode` ([Fetching WebAssembly Bytecode](/ko/docs/WebAssembly/Fetching_WebAssembly_bytecode)에서 설명한대로)라는 형식화 된 배열에로드하고, 컴파일 및 인스턴스화 한 다음 자바 스크립트에서 `add` 함수를 실행합니다. (이제 `add()`는 인스턴스의 [`exports`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) 속성에서 찾을 수 있습니다)
 
 ```js
 WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
@@ -200,7 +200,7 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 
 > **참고:** `i32.const`는 단지 32 비트 정수를 정의하고 그것을 스택에 푸시합니다. 사용할 수있는 다른 유형의 `i32`를 바꿀 수 있으며 원하는 값으로 const 값을 변경할 수 있습니다 (여기서는 값을 `42`로 설정했습니다).
 
-In this example you’ll notice an `(export "getAnswerPlus1")` section, declared just after the `func` statement in the second function — this is a shorthand way of declaring that we want to export this function, and defining the name we want to export it as.
+In this example you'll notice an `(export "getAnswerPlus1")` section, declared just after the `func` statement in the second function — this is a shorthand way of declaring that we want to export this function, and defining the name we want to export it as.
 
 이는 함수 밖에서, 예전과 같은 방식으로 모듈의 다른 곳에서 별도의 function 문을 포함하는 것과 기능적으로 동일합니다. 예 :
 
@@ -218,7 +218,7 @@ WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
 
 > **참고:** 이 예제는 GitHub에서 [call.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)).
 
-### 자바스크립트에 함수 가져오기
+### JavaScript에 함수 가져오기
 
 우리는 이미 JavaScript에서 WebAssembly 함수를 호출하는 것을 보았습니다. 그러나 JavaScript 함수를 호출하는 WebAssembly는 어떻습니까? WebAssembly에는 실제로 JavaScript에 대한 기본 지식이 없지만 JavaScript 또는 Wasm 함수를 사용할 수있는 함수를 가져 오는 일반적인 방법이 있습니다. 예제를 살펴 보겠습니다.
 
@@ -291,9 +291,9 @@ JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("Arr
 
 따라서 문자열은 이 선형 메모리 내부의 있는 sequence of bytes라고 할 수 있습니다. 우리가 적절한 바이트 문자열을 메모리에 썼다고 가정 해 보고 어떻게 그 문자열을 JavaScript로 전달하는지 보겠습니다.
 
-핵심은 자바 스크립트가 {{jsxref("WebAssembly.Memory()")}} 인터페이스를 통해 WebAssembly 선형 메모리 인스턴스를 생성하고 연관된 인스턴스를 사용하여 기존 메모리 인스턴스에 액세스 할 수 있다는 것입니다 (현재 모듈 인스턴스 당 하나만 가질 수 있음). 메모리 인스턴스에는 [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) getter가 있습니다.이 buffer getter는 전체 선형 메모리를 가리키는 `ArrayBuffer`를 반환합니다.
+핵심은 자바 스크립트가 {{jsxref("WebAssembly.Memory()")}} 인터페이스를 통해 WebAssembly 선형 메모리 인스턴스를 생성하고 연관된 인스턴스를 사용하여 기존 메모리 인스턴스에 액세스 할 수 있다는 것입니다 (현재 모듈 인스턴스 당 하나만 가질 수 있음). 메모리 인스턴스에는 [`buffer`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) getter가 있습니다.이 buffer getter는 전체 선형 메모리를 가리키는 `ArrayBuffer`를 반환합니다.
 
-예를 들어 JavaScript의 [`Memory.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) 메소드를 통해 메모리 인스턴스를 늘릴 수도 있습니다. grow가 발생하면 `ArrayBuffer`s는 크기를 변경할 수 없기 때문에 현재의 `ArrayBuffer`가 분리되고 더 큰 새 메모리를 가리 키도록 새 `ArrayBuffer`가 만들어집니다. 즉, JavaScript에 문자열을 전달하기 위해 수행해야하는 모든 작업은 길이를 나타내는 방법과 함께 선형 메모리에있는 문자열의 오프셋을 전달하는 것입니다.
+예를 들어 JavaScript의 [`Memory.grow()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) 메소드를 통해 메모리 인스턴스를 늘릴 수도 있습니다. grow가 발생하면 `ArrayBuffer`s는 크기를 변경할 수 없기 때문에 현재의 `ArrayBuffer`가 분리되고 더 큰 새 메모리를 가리 키도록 새 `ArrayBuffer`가 만들어집니다. 즉, JavaScript에 문자열을 전달하기 위해 수행해야하는 모든 작업은 길이를 나타내는 방법과 함께 선형 메모리에있는 문자열의 오프셋을 전달하는 것입니다.
 
 문자열 자체의 길이를 인코딩하는 방법에는 여러 가지가 있습니다 (예 : C 문자열). 여기서 간단히하기 위해 offset과 length를 매개 변수로 전달합니다.
 
@@ -311,7 +311,7 @@ function consoleLogString(offset, length) {
 }
 ```
 
-이제 남은 부분은 `consoleLogString`이 WebAssembly `memory`에 액세스하는 부분입니다. WebAssembly는 JavaScript로 [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 객체를 만들고 WebAssembly 모듈에서 메모리를 가져 오거나 WebAssembly 모듈에서 메모리를 만들어 JavaScript로 내보낼 수 있는 유연성을 제공합니다.
+이제 남은 부분은 `consoleLogString`이 WebAssembly `memory`에 액세스하는 부분입니다. WebAssembly는 JavaScript로 [`Memory`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 객체를 만들고 WebAssembly 모듈에서 메모리를 가져 오거나 WebAssembly 모듈에서 메모리를 만들어 JavaScript로 내보낼 수 있는 유연성을 제공합니다.
 
 간단히하기 위해 JavaScript로 작성한 다음 WebAssembly로 가져와 봅시다. 우리의 `import`statement는 다음과 같이 작성됩니다 :
 
@@ -471,7 +471,7 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 
 > **참고:** [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html)에서 이 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
 
-> **참고:** Memory와 마찬가지로 테이블은 자바 스크립트 ([`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table) 참고)와 다른 wasm 모듈로 가져 오거나 다른 wasm 모듈에서 가져올 수도있다.
+> **참고:** Memory와 마찬가지로 테이블은 자바 스크립트 ([`WebAssembly.Table()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table) 참고)와 다른 wasm 모듈로 가져 오거나 다른 wasm 모듈에서 가져올 수도있다.
 
 ### Mutating tables and dynamic linking
 
@@ -479,7 +479,7 @@ JavaScript는 함수 참조에 대한 모든 액세스 권한을 갖기 때문�
 
 테이블은 변경 가능하기 때문에 정교한 로드 시간 및 런타임 [dynamic linking schemes](http://webassembly.org/docs/dynamic-linking)를 구현하는 데 사용할 수 있습니다. 프로그램이 동적으로 링크되면 여러 인스턴스가 동일한 메모리 및 테이블을 공유합니다. 이것은 여러 컴파일 된 `.dll`이 단일 프로세스의 주소 공간을 공유하는 기본 응용 프로그램과 대칭입니다.
 
-이 작업을 보려면 Memory 객체와 Table 객체가 포함 된 단일 가져 오기 객체를 만들고 동일한 가져 오기 객체를 여러 [`instantiate()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) 호출에 전달합니다.
+이 작업을 보려면 Memory 객체와 Table 객체가 포함 된 단일 가져 오기 객체를 만들고 동일한 가져 오기 객체를 여러 [`instantiate()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) 호출에 전달합니다.
 
 `.wat` 예제는 다음과 같습니다.
 

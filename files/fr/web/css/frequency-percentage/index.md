@@ -1,7 +1,6 @@
 ---
 title: <frequency-percentage>
 slug: Web/CSS/frequency-percentage
-translation_of: Web/CSS/frequency-percentage
 ---
 
 {{CSSRef}}

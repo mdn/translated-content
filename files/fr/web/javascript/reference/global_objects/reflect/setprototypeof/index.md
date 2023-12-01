@@ -1,7 +1,6 @@
 ---
 title: Reflect.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ la méthode statique **`Reflect.setPrototypeOf()`** est semblable à la méthode
 ## Syntaxe
 
 ```js
-Reflect.setPrototypeOf(cible, prototype)
+Reflect.setPrototypeOf(cible, prototype);
 ```
 
 ### Paramètres

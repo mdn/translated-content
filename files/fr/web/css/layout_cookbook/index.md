@@ -1,7 +1,6 @@
 ---
 title: CSS Layout cookbook
 slug: Web/CSS/Layout_cookbook
-translation_of: Web/CSS/Layout_cookbook
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: ウェブサイトを作るのにどんなソフトウェアが必要？
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-original_slug: Learn/Common_questions/What_software_do_I_need
 ---
 
 <div class="summary">
@@ -154,7 +153,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>
@@ -232,7 +231,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td>
         <ul>
           <li><a href="https://shiftedit.net/">ShiftEdit</a> (すべての OS)</li>

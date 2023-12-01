@@ -1,7 +1,6 @@
 ---
 title: attribute-set
 slug: Web/XSLT/Element/attribute-set
-translation_of: Web/XSLT/Element/attribute-set
 ---
 
 {{ XsltRef() }}

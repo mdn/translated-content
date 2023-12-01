@@ -1,7 +1,6 @@
 ---
 title: Fil d'Ariane (breadcrumb)
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
 
 {{CSSRef}}

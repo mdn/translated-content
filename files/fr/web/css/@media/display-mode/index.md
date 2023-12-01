@@ -1,7 +1,6 @@
 ---
 title: display-mode
 slug: Web/CSS/@media/display-mode
-translation_of: Web/CSS/@media/display-mode
 ---
 
 {{CSSRef}}

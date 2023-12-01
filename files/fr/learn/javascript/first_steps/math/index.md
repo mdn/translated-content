@@ -1,7 +1,6 @@
 ---
 title: Mathématiques de base en JavaScript — nombres et opérateurs
 slug: Learn/JavaScript/First_steps/Math
-translation_of: Learn/JavaScript/First_steps/Math
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

@@ -1,7 +1,6 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-translation_of: Web/CSS/background-origin
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Notification.onshow
 slug: Web/API/Notification/show_event
-translation_of: Web/API/Notification/onshow
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

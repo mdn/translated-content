@@ -1,10 +1,6 @@
 ---
 title: Document.documentURIObject
 slug: orphaned/Web/API/Document/documentURIObject
-tags:
-  - свойства DOM
-translation_of: Web/API/Document/documentURIObject
-original_slug: Web/API/Document/documentURIObject
 ---
 
 {{ ApiRef("DOM") }}
@@ -13,7 +9,7 @@ original_slug: Web/API/Document/documentURIObject
 
 Это работает только для привилегированных (UniversalXPConnect) скриптов, включая расширенный код. Для веб содержания это свойство не имеет какого-либо специального значения и может быть использовано так же как и любое другое обычное свойство.
 
-Привилегированный код должен быть осторожным не пытаясь получить или установить это свойство на объект с незапакованным содержанием (e.g. on a `wrappedJSObject` of an [`XPCNativeWrapper`](/en/XPCNativeWrapper "en/XPCNativeWrapper")). Смотрите {{ Bug(324464) }}' комментарии для детализации.
+Привилегированный код должен быть осторожным не пытаясь получить или установить это свойство на объект с незапакованным содержанием (e.g. on a `wrappedJSObject` of an [`XPCNativeWrapper`](/en/XPCNativeWrapper "en/XPCNativeWrapper")). Смотрите [Firefox bug 324464](https://bugzil.la/324464)' комментарии для детализации.
 
 ## Синтаксис
 

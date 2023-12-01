@@ -1,7 +1,6 @@
 ---
 title: Notification.vibrate
 slug: Web/API/Notification/vibrate
-translation_of: Web/API/Notification/vibrate
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

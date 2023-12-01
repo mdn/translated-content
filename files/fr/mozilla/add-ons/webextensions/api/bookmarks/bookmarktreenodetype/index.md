@@ -1,7 +1,6 @@
 ---
 title: bookmarks.BookmarkTreeNodeType
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 ---
 
 {{AddonSidebar()}}

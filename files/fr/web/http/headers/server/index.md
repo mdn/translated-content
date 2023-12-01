@@ -1,7 +1,6 @@
 ---
 title: Serveur
 slug: Web/HTTP/Headers/Server
-translation_of: Web/HTTP/Headers/Server
 ---
 
 {{ HTTPSidebar }}

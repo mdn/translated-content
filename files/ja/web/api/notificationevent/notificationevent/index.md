@@ -23,7 +23,7 @@ var myNotificationEvent = new NotificationEvent(type, NotificationEventInit);
 ## 例
 
 ```js
-var n = new Notification('Hello');
+var n = new Notification("Hello");
 var init = { notification: n };
 var myNotificationEvent = new NotificationEvent(type, init);
 ```
@@ -34,4 +34,4 @@ var myNotificationEvent = new NotificationEvent(type, init);
 
 ## ブラウザーの互換性
 
-{{Compat("api.NotificationEvent.NotificationEvent")}}
+{{Compat}}

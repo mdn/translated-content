@@ -1,7 +1,6 @@
 ---
 title: Définir des termes avec HTML
 slug: Learn/HTML/Howto/Define_terms_with_HTML
-translation_of: Learn/HTML/Howto/Define_terms_with_HTML
 ---
 
 HTML fournit plusieurs méthodes pour décrire la sémantique du contenu qu'on emploie (que ce soit intégré dans le texte ou dans un glossaire à part). Dans cet article, nous verrons comment correctement définir les termes utilisés au sein d'un document.

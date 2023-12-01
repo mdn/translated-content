@@ -1,14 +1,6 @@
 ---
 title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - Продвинутое
-  - Руководство
-  - HTML5
-  - Overview
-  - XUL
-  - drag and drop
-  - events
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -77,7 +69,7 @@ Mozilla и Firefox поддерживают некоторые функции, �
     ev.dataTransfer.setData("text/plain", ev.target.id);
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener("DOMContentLoaded", () => {
     // Найти элемент по id
     const element = document.getElementById("p1");
     // Добавить обработчик события `dragstart`
@@ -104,7 +96,10 @@ function dragstart_handler(ev) {
   // Добавление различных типов данных перетаскивания
   ev.dataTransfer.setData("text/plain", ev.target.innerText);
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
-  ev.dataTransfer.setData("text/uri-list", ev.target.ownerDocument.location.href);
+  ev.dataTransfer.setData(
+    "text/uri-list",
+    ev.target.ownerDocument.location.href,
+  );
 }
 ```
 
@@ -121,7 +116,7 @@ function dragstart_handler(ev) {
   // Примечание: замените "example.gif" на URL-адрес реального изоражения,
   // иначе оно не будет создано и будет использоваться изображение по умолчанию
   let img = new Image();
-  img.src = 'example.gif';
+  img.src = "example.gif";
   ev.dataTransfer.setDragImage(img, 10, 10);
 }
 ```
@@ -162,19 +157,24 @@ function dragstart_handler(ev) {
 
 ```html
 <script>
-function dragover_handler(ev) {
- ev.preventDefault();
- ev.dataTransfer.dropEffect = "move";
-}
-function drop_handler(ev) {
- ev.preventDefault();
- // Получить id цели и добавить перемещённый элемент в его DOM
- const data = ev.dataTransfer.getData("text/plain");
- ev.target.appendChild(document.getElementById(data));
-}
+  function dragover_handler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function drop_handler(ev) {
+    ev.preventDefault();
+    // Получить id цели и добавить перемещённый элемент в его DOM
+    const data = ev.dataTransfer.getData("text/plain");
+    ev.target.appendChild(document.getElementById(data));
+  }
 </script>
 
-<p id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</p>
+<p
+  id="target"
+  ondrop="drop_handler(event)"
+  ondragover="dragover_handler(event)">
+  Drop Zone
+</p>
 ```
 
 Обратите внимание, что каждый обработчик вызывает {{domxref("Event.preventDefault","preventDefault()")}}, чтобы предотвратить дополнительную обработку данного события (например, [события касания](/ru/docs/Web/API/Touch_events) или [события указателя](/ru/docs/Web/API/Pointer_events)).
@@ -193,25 +193,32 @@ function drop_handler(ev) {
 
 ```html
 <script>
-function dragstart_handler(ev) {
- // Добавить id целевого элемента в объект передачи данных
- ev.dataTransfer.setData("application/my-app", ev.target.id);
- ev.dataTransfer.effectAllowed = "move";
-}
-function dragover_handler(ev) {
- ev.preventDefault();
- ev.dataTransfer.dropEffect = "move"
-}
-function drop_handler(ev) {
- ev.preventDefault();
- // Получить id целевого элемента и добавить перемещаемый элемент в его DOM
- const data = ev.dataTransfer.getData("application/my-app");
- ev.target.appendChild(document.getElementById(data));
-}
+  function dragstart_handler(ev) {
+    // Добавить id целевого элемента в объект передачи данных
+    ev.dataTransfer.setData("application/my-app", ev.target.id);
+    ev.dataTransfer.effectAllowed = "move";
+  }
+  function dragover_handler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function drop_handler(ev) {
+    ev.preventDefault();
+    // Получить id целевого элемента и добавить перемещаемый элемент в его DOM
+    const data = ev.dataTransfer.getData("application/my-app");
+    ev.target.appendChild(document.getElementById(data));
+  }
 </script>
 
-<p id="p1" draggable="true" ondragstart="dragstart_handler(event)">This element is draggable.</p>
-<div id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</div>
+<p id="p1" draggable="true" ondragstart="dragstart_handler(event)">
+  This element is draggable.
+</p>
+<div
+  id="target"
+  ondrop="drop_handler(event)"
+  ondragover="dragover_handler(event)">
+  Drop Zone
+</div>
 ```
 
 Для получения дополнительной информации смотрите:
@@ -240,11 +247,13 @@ function drop_handler(ev) {
 - Перетаскивание и сброс файлов (все браузеры): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 - Использование Drag and Drop API в проекте парковки: <https://park.glitch.me/> (Отредактировать можно [здесь](https://glitch.com/edit/#!/park))
 
-## Спецификация
+## Спецификации
 
-| **Specification**                                | **Status**                       | **Comment** |
-| ------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dnd")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

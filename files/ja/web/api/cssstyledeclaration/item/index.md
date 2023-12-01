@@ -40,7 +40,7 @@ const propertyName = style[index];
 ## 例
 
 ```js
-const style = document.getElementById('div1').style;
+const style = document.getElementById("div1").style;
 const propertyName = style.item(1); // または style[1] - リスト中の 2 番目のスタイルを返します
 ```
 

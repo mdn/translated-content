@@ -1,10 +1,6 @@
 ---
 title: Использование изображений
 slug: Web/API/Canvas_API/Tutorial/Using_images
-tags:
-  - Графика
-translation_of: Web/API/Canvas_API/Tutorial/Using_images
-original_slug: Web/API/Canvas_API/Tutorial/Использование_изображений
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Трансформации")}}
@@ -56,8 +52,8 @@ Canvas API может использовать все перечисленные
 Другой способ это создать новые {{domxref("HTMLImageElement")}} объекты в нашем скрипте. Чтобы это сделать, вы можете использовать удобный `Image()` конструктор:
 
 ```js
-var img = new Image();   // Создаёт новый элемент изображения
-img.src = 'myImage.png'; // Устанавливает путь
+var img = new Image(); // Создаёт новый элемент изображения
+img.src = "myImage.png"; // Устанавливает путь
 ```
 
 Когда этот скрипт выполнится, изображение начнёт загружаться.
@@ -65,11 +61,15 @@ img.src = 'myImage.png'; // Устанавливает путь
 Если вы попытаетесь вызвать функцию `drawImage()` перед тем как изображение загрузится, то скрипт ничего не сделает (или, в старых браузерах, может даже выдать исключение). Поэтому вам необходимо использовать событие load, чтобы вы не пытались сделать это прежде, чем изображение загрузится:
 
 ```js
-var img = new Image();   // Создаёт новое изображение
-img.addEventListener("load", function() {
-  // здесь выполняет drawImage функцию
-}, false);
-img.src = 'myImage.png'; // Устанавливает источник файла
+var img = new Image(); // Создаёт новое изображение
+img.addEventListener(
+  "load",
+  function () {
+    // здесь выполняет drawImage функцию
+  },
+  false,
+);
+img.src = "myImage.png"; // Устанавливает источник файла
 ```
 
 Если вы используете только одно стороннее изображение, то этот метод может быть хорошим примером, но если нужно следить за несколькими изображениями, то необходимо придумать что-то более умное. Хотя поиски тактики проверки загрузки изображений выходят за пределы этого обучающего курса, вы должны об этом помнить.
@@ -79,8 +79,9 @@ img.src = 'myImage.png'; // Устанавливает источник файл
 Другой возможный способ включить изображение это через [data: url](/ru/docs/Web/HTTP/data_URIs). Data URLs позволяет вам полностью определить изображение как Base64 кодированную строку символов прямо в ваш код.
 
 ```js
-var img = new Image();   // Создаёт новый элемент img
-img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
+var img = new Image(); // Создаёт новый элемент img
+img.src =
+  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
 ```
 
 Одним из преимуществ data URLs это то что полученное изображение доступно сразу без других запросов туда-обратно на сервер. Другое потенциальное преимущество в том, что также можно инкапсулировать всё в одном файле все ваши [CSS](/ru/docs/Web/CSS), [JavaScript](/ru/docs/Web/JavaScript), [HTML](/ru/docs/Web/HTML), и изображения, что делает его более портативным в других местах.
@@ -93,11 +94,11 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 
 ```js
 function getMyVideo() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
-    return document.getElementById('myvideo');
+    return document.getElementById("myvideo");
   }
 }
 ```
@@ -119,26 +120,26 @@ function getMyVideo() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="180" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="180" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var img = new Image();
-  img.onload = function(){
-    ctx.drawImage(img,0,0);
+  img.onload = function () {
+    ctx.drawImage(img, 0, 0);
     ctx.beginPath();
-    ctx.moveTo(30,96);
-    ctx.lineTo(70,66);
-    ctx.lineTo(103,76);
-    ctx.lineTo(170,15);
+    ctx.moveTo(30, 96);
+    ctx.lineTo(70, 66);
+    ctx.lineTo(103, 76);
+    ctx.lineTo(170, 15);
     ctx.stroke();
   };
-  img.src = 'backdrop.png';
+  img.src = "backdrop.png";
 }
 ```
 
@@ -161,24 +162,24 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var img = new Image();
-  img.onload = function(){
-    for (var i=0;i<4;i++){
-      for (var j=0;j<3;j++){
-        ctx.drawImage(img,j*50,i*38,50,38);
+  img.onload = function () {
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
+        ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = 'rhino.jpg';
+  img.src = "rhino.jpg";
 }
 ```
 
@@ -203,27 +204,36 @@ function draw() {
 
 ```html
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
-   <div style="display:none;">
-     <img id="source" src="rhino.jpg" width="300" height="227">
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
-   </div>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+    <div style="display:none;">
+      <img id="source" src="rhino.jpg" width="300" height="227" />
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+    </div>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
 
   // Рисуем фрагмент
-  ctx.drawImage(document.getElementById('source'),
-                33, 71, 104, 124, 21, 20, 87, 104);
+  ctx.drawImage(
+    document.getElementById("source"),
+    33,
+    71,
+    104,
+    124,
+    21,
+    20,
+    87,
+    104,
+  );
 
   // Рисуем рамку
-  ctx.drawImage(document.getElementById('frame'),0,0);
+  ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
 ```
 
@@ -243,23 +253,23 @@ function draw() {
 
 ```html
 <html>
- <body onload="draw();">
-     <table>
+  <body onload="draw();">
+    <table>
       <tr>
-        <td><img src="gallery_1.jpg"></td>
-        <td><img src="gallery_2.jpg"></td>
-        <td><img src="gallery_3.jpg"></td>
-        <td><img src="gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg" /></td>
+        <td><img src="gallery_2.jpg" /></td>
+        <td><img src="gallery_3.jpg" /></td>
+        <td><img src="gallery_4.jpg" /></td>
       </tr>
       <tr>
-        <td><img src="gallery_5.jpg"></td>
-        <td><img src="gallery_6.jpg"></td>
-        <td><img src="gallery_7.jpg"></td>
-        <td><img src="gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg" /></td>
+        <td><img src="gallery_6.jpg" /></td>
+        <td><img src="gallery_7.jpg" /></td>
+        <td><img src="gallery_8.jpg" /></td>
       </tr>
-     </table>
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
- </body>
+    </table>
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+  </body>
 </html>
 ```
 
@@ -267,7 +277,7 @@ function draw() {
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 
@@ -288,28 +298,25 @@ td {
 
 ```js
 function draw() {
-
   // Цикл по всем изображениям
-  for (var i=0;i<document.images.length;i++){
-
+  for (var i = 0; i < document.images.length; i++) {
     // Не добавляет canvas для изображения рамки
-    if (document.images[i].getAttribute('id')!='frame'){
-
+    if (document.images[i].getAttribute("id") != "frame") {
       // Создаёт элемент canvas
-      var canvas = document.createElement('canvas');
-      canvas.setAttribute('width',132);
-      canvas.setAttribute('height',150);
+      var canvas = document.createElement("canvas");
+      canvas.setAttribute("width", 132);
+      canvas.setAttribute("height", 150);
 
       // Вставляет перед изображением
-      document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+      document.images[i].parentNode.insertBefore(canvas, document.images[i]);
 
-      var ctx = canvas.getContext('2d');
+      var ctx = canvas.getContext("2d");
 
       // Рисует изображение в canvas
-      ctx.drawImage(document.images[i],15,20);
+      ctx.drawImage(document.images[i], 15, 20);
 
       // Добавляет рамку
-      ctx.drawImage(document.getElementById('frame'),0,0);
+      ctx.drawImage(document.getElementById("frame"), 0, 0);
     }
   }
 }

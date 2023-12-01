@@ -1,12 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.fetch()
 slug: Web/API/fetch
-tags:
-  - Справка
-  - запрос
-  - метод
-translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
-original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 
 {{APIRef("Fetch API")}}
@@ -61,7 +55,7 @@ Promise<Response> fetch(input[, init]);
 
 | **Тип**      | **Описание**                                                                                                                                                                            |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `AbortError` | Запрос был отменён (используя {{domxref("AbortController.abort()")}}).                                                                                                    |
+| `AbortError` | Запрос был отменён (используя {{domxref("AbortController.abort()")}}).                                                                                                                  |
 | `TypeError`  | Начиная с версии [Firefox 43](/ru/docs/Mozilla/Firefox/Releases/43), `fetch()` завершится ошибкой `TypeError`, если URL имеет такие полномочия, как `http://user:password@example.com`. |
 
 ## Пример
@@ -69,16 +63,18 @@ Promise<Response> fetch(input[, init]);
 В нашем [Fetch Request примере](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (см. [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) мы создаём новый объект {{domxref("Request")}} (запроса), используя релевантный конструктор, а затем получаем его вызовом `fetch()`. Так как запрашиваемый ресурс - изображение, для того, чтобы присвоить ему подходящий MIME тип и обработать должным образом, мы применяем к ответу метод {{domxref("Body.blob()")}}, после чего создаём для него Object URL и передаём её в элемент {{htmlelement("img")}}.
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
-  return response.blob();
-}).then(function(response) {
-  var objectURL = URL.createObjectURL(response);
-  myImage.src = objectURL;
-});
+fetch(myRequest)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (response) {
+    var objectURL = URL.createObjectURL(response);
+    myImage.src = objectURL;
+  });
 ```
 
 В нашем [Fetch with init then Request примере](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (см. [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)) мы делаем тоже самое, за исключением того, что передаём в качестве аргумента для `fetch()` объект init:
@@ -104,20 +100,22 @@ fetch(myRequest,myInit).then(function(response) {
 Обратите внимание, что объект init в качестве аргумента можно передать и в конструктор `Request` для получения аналогичного результата, например:
 
 ```js
-var myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 ```
 
 Допустимо использования объекта литерала в качестве `headers` в `init`.
 
 ```js
-var myInit = { method: 'GET',
-               headers: {
-                   'Content-Type': 'image/jpeg'
-               },
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: {
+    "Content-Type": "image/jpeg",
+  },
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 ```
 
 ## Спецификации

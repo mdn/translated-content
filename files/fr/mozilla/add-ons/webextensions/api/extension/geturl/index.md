@@ -1,7 +1,6 @@
 ---
 title: extension.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getURL
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getURL
 ---
 
 {{AddonSidebar}}

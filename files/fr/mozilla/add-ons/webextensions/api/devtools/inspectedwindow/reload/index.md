@@ -1,7 +1,6 @@
 ---
 title: devtools.inspectedWindow.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload
 ---
 
 {{AddonSidebar()}}

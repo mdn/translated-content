@@ -14,8 +14,8 @@ slug: Web/API/URL/search
 ## 구문
 
 ```js
-const searchParams = object.search
-url.search = newSearchParams
+const searchParams = object.search;
+url.search = newSearchParams;
 ```
 
 ### 값
@@ -25,7 +25,9 @@ url.search = newSearchParams
 ## Examples
 
 ```js
-const url = new URL('https://developer.mozilla.org/ko/docs/Web/API/URL/search?q=123');
+const url = new URL(
+  "https://developer.mozilla.org/ko/docs/Web/API/URL/search?q=123",
+);
 console.log(url.search); // Logs "?q=123"
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.keyPath
 slug: Web/API/IDBIndex/keyPath
-translation_of: Web/API/IDBIndex/keyPath
 ---
 
 {{ APIRef("IndexedDB") }}

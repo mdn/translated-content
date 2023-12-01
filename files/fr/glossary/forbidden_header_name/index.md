@@ -1,8 +1,9 @@
 ---
 title: Nom d'en-tête interdit
 slug: Glossary/Forbidden_header_name
-translation_of: Glossary/Forbidden_header_name
 ---
+
+{{GlossarySidebar}}
 
 **Un nom d'en-tête interdit** est un nom d'[en-tête HTTP](/fr/docs/HTTP/Headers) qui ne peut être modifié par programmation, spécifiquement, un nom d'en-tête de **requête** HTTP (contraste avec {{Glossary("Forbidden response header name","Nom d'en-tête de réponse interdit")}}).
 

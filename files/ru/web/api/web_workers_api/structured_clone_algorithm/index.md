@@ -1,7 +1,6 @@
 ---
 title: Алгоритм структурированного клонирования
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
-translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
 
 Алгоритм структурированного клонирования — это новый алгоритм, [определённый спецификацией HTML5](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data) для сериализации комплексных JavaScript объектов. Он более функционален, чем [JSON](/en/JSON) в том что способен поддерживать сериализацию объектов содержащих циклические графы — первичные объекты, которые ссылаются на другие объекты у которых есть ссылка на первичные объекты в том же графе. В дополнение, в некоторых других случаях алгоритм структурированного клонирования может быть более эффективен, чем JSON.
@@ -36,12 +35,12 @@ translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 | String object                                                                   |                                                                                                    |
 | [Date](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date)                   |                                                                                                    |
 | [RegExp](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)               | The `lastIndex` field is not preserved.                                                            |
-| {{ domxref("Blob") }}                                                    |                                                                                                    |
-| {{ domxref("File") }}                                                    |                                                                                                    |
-| {{ domxref("FileList") }}                                                |                                                                                                    |
+| {{ domxref("Blob") }}                                                           |                                                                                                    |
+| {{ domxref("File") }}                                                           |                                                                                                    |
+| {{ domxref("FileList") }}                                                       |                                                                                                    |
 | [ArrayBuffer](/ru/docs/Web/API/ArrayBuffer)                                     |                                                                                                    |
 | [ArrayBufferView](/ru/docs/Web/API/ArrayBufferView)                             | This basically means all [typed arrays](/ru/docs/Web/JavaScript/Typed_arrays) like Int32Array etc. |
-| {{ domxref("ImageData") }}                                            |                                                                                                    |
+| {{ domxref("ImageData") }}                                                      |                                                                                                    |
 | [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)                 |                                                                                                    |
 | [Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)               | This just includes plain objects (e.g. from object literals)                                       |
 | [Map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)                     |                                                                                                    |

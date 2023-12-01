@@ -1,8 +1,8 @@
 ---
 title: AbortController.signal
 slug: Web/API/AbortController/signal
-translation_of: Web/API/AbortController/signal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 > **Примечание:**Это свойство только для чтения.

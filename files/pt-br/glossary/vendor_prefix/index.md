@@ -1,8 +1,9 @@
 ---
 title: Prefixos vendor
 slug: Glossary/Vendor_Prefix
-original_slug: Glossario/Prefixos_vendor
 ---
+
+{{GlossarySidebar}}
 
 Os _fabricantes de browsers_, por vezes, adicionam prefixos às propriedades experimentais ou fora dos padrões CSS, de modo que os desenvolvedores podem experimentá-las, enquanto —em teoria— as mudanças no comportamento dos navegadores não quebrarão o código durante o processo de padonização. Os desenvolvedores devem esperar para incluir a propriedade _não pré-fixada_ até que o comportamento do navegador seja padronizado.
 

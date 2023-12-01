@@ -20,7 +20,7 @@ slug: Web/API/HTMLFormElement/submit
 
 ## 语法
 
- ```js
+```js-nolint
 submit()
 ```
 

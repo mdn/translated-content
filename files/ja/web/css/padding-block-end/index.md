@@ -13,11 +13,11 @@ slug: Web/CSS/padding-block-end
 
 ```css
 /* <length> 値 */
-padding-block-end: 10px;   /* 絶対的な長さ */
-padding-block-end: 1em;    /* テキストの大きさに対する相対値 */
+padding-block-end: 10px; /* 絶対的な長さ */
+padding-block-end: 1em; /* テキストの大きさに対する相対値 */
 
 /* <percentage> 値 */
-padding-block-end: 5%;     /* ブロックコンテナーの幅に対する割合のパディング */
+padding-block-end: 5%; /* ブロックコンテナーの幅に対する割合のパディング */
 
 /* グローバル値 */
 padding-block-end: inherit;
@@ -71,7 +71,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-block-end: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
 
 {{JSRef}}
@@ -79,9 +78,11 @@ Vous pouvez utiliser Intl pour formater des dates et nombres dans un format qui 
 const compte = 26254.39;
 const date = new Date("2012-05-24");
 
-function afficher (langue) {
+function afficher(langue) {
   console.log(
-    `${new Intl.DateTimeFormat(langue).format(date)} ${new Intl.NumberFormat(langue).format(compte)}`
+    `${new Intl.DateTimeFormat(langue).format(date)} ${new Intl.NumberFormat(
+      langue,
+    ).format(compte)}`,
   );
 }
 

@@ -1,7 +1,6 @@
 ---
 title: <feConvolveMatrix>
 slug: Web/SVG/Element/feConvolveMatrix
-translation_of: Web/SVG/Element/feConvolveMatrix
 ---
 
 {{SVGRef}}

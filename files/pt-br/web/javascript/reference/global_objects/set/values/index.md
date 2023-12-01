@@ -27,9 +27,9 @@ Um novo objeto **`Iterator`** condendo os valores de cada elemento contido no `S
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
 var setIter = mySet.values();
 
@@ -40,14 +40,11 @@ console.log(setIter.next().value); // "baz"
 
 ## Especificações
 
-| Especificação                                                                                        | Status                       | Comentário           |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ES2015')}}     | Definições iniciais. |
-| {{SpecName('ESDraft', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Browsers compatíveis
 
-{{Compat("javascript.builtins.Set.values")}}
+{{Compat}}
 
 ## Veja também
 

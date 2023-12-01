@@ -1,8 +1,9 @@
 ---
 title: Bézier curve (ベジェ曲線)
 slug: Glossary/Bezier_curve
-original_slug: Glossary/Bézier_curve
 ---
+
+{{GlossarySidebar}}
 
 **ベジェ曲線**は、コンピューターグラフィックスとアニメーションで使用される、数学的に記述された曲線です。ベクター画像では、無期限に拡大できる滑らかな曲線をモデル化するために使用されます。
 

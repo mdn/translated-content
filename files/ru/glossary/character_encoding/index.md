@@ -1,13 +1,9 @@
 ---
 title: Кодировка символов
 slug: Glossary/Character_encoding
-tags:
-  - Composing
-  - Glossary
-  - Глоссарий
-translation_of: Glossary/character_encoding
-original_slug: Глоссарий/character_encoding
 ---
+
+{{GlossarySidebar}}
 
 Кодировка определяет связность между байтами и текстом. Последовательность байтов допускает различные текстовые интерпретации. Указывая конкретную кодировку (например, UTF-8), мы указываем, как следует интерпретировать последовательность байтов.
 

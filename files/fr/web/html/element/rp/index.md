@@ -1,7 +1,6 @@
 ---
 title: "<rp> : l'élément de parenthèses alternatif aux annotations Ruby"
 slug: Web/HTML/Element/rp
-translation_of: Web/HTML/Element/rp
 ---
 
 {{HTMLSidebar}}

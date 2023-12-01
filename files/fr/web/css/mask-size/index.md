@@ -1,7 +1,6 @@
 ---
 title: mask-size
 slug: Web/CSS/mask-size
-translation_of: Web/CSS/mask-size
 ---
 
 {{CSSRef}}

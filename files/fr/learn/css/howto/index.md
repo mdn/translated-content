@@ -1,7 +1,6 @@
 ---
 title: Apprendre à utiliser CSS pour résoudre des problèmes
 slug: Learn/CSS/Howto
-translation_of: Learn/CSS/Howto
 ---
 
 Les liens suivants pointent vers des solutions aux problèmes courants que vous devrez résoudre avec CSS.

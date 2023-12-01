@@ -1,7 +1,6 @@
 ---
 title: grid-column-end
 slug: Web/CSS/grid-column-end
-translation_of: Web/CSS/grid-column-end
 ---
 
 {{CSSRef}}

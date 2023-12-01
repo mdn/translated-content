@@ -2,6 +2,7 @@
 title: HTMLElement.offsetParent
 slug: Web/API/HTMLElement/offsetParent
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetParent`** 읽기전용 프라퍼티는 가장 가까운 (포함 계층에서 가장 가까운) 위치가 정해진 포함하는 엘리먼트 객체에 대한 참조를 반환한다. `offsetParent`는 엘리먼트의 위치가 정해지지 않으면 가장 가까운 테이블 또는 테이블 셀, 루트 엘리먼트 (표준 준수 모드에서는 `html`; quirks 렌더링 모드에서는 `body`) 를 반환한다.

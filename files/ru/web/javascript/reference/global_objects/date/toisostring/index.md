@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
 
 {{JSRef("Global_Objects", "Date")}}
@@ -28,7 +20,7 @@ dateObj.toISOString()
 ### Пример: использование метода `toISOString()`
 
 ```js
-var today = new Date('05 October 2011 14:48 UTC');
+var today = new Date("05 October 2011 14:48 UTC");
 
 console.log(today.toISOString()); // вернёт 2011-10-05T14:48:00.000Z
 ```
@@ -41,27 +33,33 @@ console.log(today.toISOString()); // вернёт 2011-10-05T14:48:00.000Z
 
 ```js
 if (!Date.prototype.toISOString) {
-  (function() {
-
+  (function () {
     function pad(number) {
       if (number < 10) {
-        return '0' + number;
+        return "0" + number;
       }
       return number;
     }
 
-    Date.prototype.toISOString = function() {
-      return this.getUTCFullYear() +
-        '-' + pad(this.getUTCMonth() + 1) +
-        '-' + pad(this.getUTCDate()) +
-        'T' + pad(this.getUTCHours()) +
-        ':' + pad(this.getUTCMinutes()) +
-        ':' + pad(this.getUTCSeconds()) +
-        '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        'Z';
+    Date.prototype.toISOString = function () {
+      return (
+        this.getUTCFullYear() +
+        "-" +
+        pad(this.getUTCMonth() + 1) +
+        "-" +
+        pad(this.getUTCDate()) +
+        "T" +
+        pad(this.getUTCHours()) +
+        ":" +
+        pad(this.getUTCMinutes()) +
+        ":" +
+        pad(this.getUTCSeconds()) +
+        "." +
+        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
+        "Z"
+      );
     };
-
-  }());
+  })();
 }
 ```
 

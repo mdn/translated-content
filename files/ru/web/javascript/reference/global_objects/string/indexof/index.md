@@ -1,15 +1,8 @@
 ---
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка
@@ -34,13 +27,13 @@ str.indexOf(searchValue, [fromIndex])
 Символы в строке идут слева направо. Индекс первого символа равен 0, а последнего символа в строке `stringName` равен `stringName.length - 1`.
 
 ```js
-'Синий кит'.indexOf('Синий');   // вернёт  0
-'Синий кит'.indexOf('Голубой');  // вернёт -1
-'Синий кит'.indexOf('кит', 0);    // вернёт  6
-'Синий кит'.indexOf('кит', 5);    // вернёт  6
-'Синий кит'.indexOf('', 8);       // вернёт  8
-'Синий кит'.indexOf('', 9);      // вернёт 9
-'Синий кит'.indexOf('', 10);      // вернёт 9
+"Синий кит".indexOf("Синий"); // вернёт  0
+"Синий кит".indexOf("Голубой"); // вернёт -1
+"Синий кит".indexOf("кит", 0); // вернёт  6
+"Синий кит".indexOf("кит", 5); // вернёт  6
+"Синий кит".indexOf("", 8); // вернёт  8
+"Синий кит".indexOf("", 9); // вернёт 9
+"Синий кит".indexOf("", 10); // вернёт 9
 ```
 
 ### Регистрозависимость
@@ -48,7 +41,7 @@ str.indexOf(searchValue, [fromIndex])
 Метод `indexOf()` является регистрозависимым. Например, следующее выражение вернёт -1:
 
 ```js
-'Синий кит'.indexOf('синий'); // вернёт -1
+"Синий кит".indexOf("синий"); // вернёт -1
 ```
 
 ### Проверка на вхождение
@@ -56,8 +49,8 @@ str.indexOf(searchValue, [fromIndex])
 Обратите внимание, что значение 0 не вычисляется в `true`, а значение -1 не вычисляется в `false`. Поэтому, для проверки того, что конкретная строка содержится в другой строке, правильно делать так:
 
 ```js
-'Синий кит'.indexOf('Синий') !== -1; // true
-'Синий кит'.indexOf('Голубой') !== -1; // false
+"Синий кит".indexOf("Синий") !== -1; // true
+"Синий кит".indexOf("Голубой") !== -1; // false
 ```
 
 ## Примеры
@@ -67,16 +60,28 @@ str.indexOf(searchValue, [fromIndex])
 В следующем примере используются методы `indexOf()` и {{jsxref("String.prototype.lastIndexOf()", "lastIndexOf()")}} для нахождения значений в строке `"Дивный новый мир"`.
 
 ```js
-var anyString = 'Дивный новый мир';
+var anyString = "Дивный новый мир";
 
-console.log('Индекс первого вхождения «й» с начала строки равен ' + anyString.indexOf('й'));
+console.log(
+  "Индекс первого вхождения «й» с начала строки равен " +
+    anyString.indexOf("й"),
+);
 // Отобразит 5
-console.log('Индекс первого вхождения «й» с конца строки равен ' + anyString.lastIndexOf('й'));
+console.log(
+  "Индекс первого вхождения «й» с конца строки равен " +
+    anyString.lastIndexOf("й"),
+);
 // Отобразит 11
 
-console.log('Индекс вхождения «новый» с начала строки равен ' + anyString.indexOf('новый'));
+console.log(
+  "Индекс вхождения «новый» с начала строки равен " +
+    anyString.indexOf("новый"),
+);
 // Отобразит 7
-console.log('Индекс вхождения «новый» с конца строки равен ' + anyString.lastIndexOf('новый'));
+console.log(
+  "Индекс вхождения «новый» с конца строки равен " +
+    anyString.lastIndexOf("новый"),
+);
 // Отобразит 7
 ```
 
@@ -85,12 +90,16 @@ console.log('Индекс вхождения «новый» с конца стр
 В следующем примере определяются две строковых переменных. Переменные содержат одинаковые строки, за исключение того, что слова во второй строке начинаются с заглавных букв. Первый вызов метода {{domxref("console.log()")}} отобразит 18. Но поскольку метод `indexOf()` является регистрозависимым, строка `"чеддер"` в переменной `myCapString` не будет найдена, так что второй вызов метода `console.log()` отобразит -1.
 
 ```js
-var myString    = 'бри, пеппер джек, чеддер';
-var myCapString = 'Бри, Пеппер Джек, Чеддер';
+var myString = "бри, пеппер джек, чеддер";
+var myCapString = "Бри, Пеппер Джек, Чеддер";
 
-console.log('Вызов myString.indexOf("чеддер") вернул ' + myString.indexOf('чеддер'));
+console.log(
+  'Вызов myString.indexOf("чеддер") вернул ' + myString.indexOf("чеддер"),
+);
 // Отобразит 18
-console.log('Вызов myCapString.indexOf("чеддер") вернул ' + myCapString.indexOf('чеддер'));
+console.log(
+  'Вызов myCapString.indexOf("чеддер") вернул ' + myCapString.indexOf("чеддер"),
+);
 // Отобразит -1
 ```
 
@@ -99,13 +108,13 @@ console.log('Вызов myCapString.indexOf("чеддер") вернул ' + myC
 Следующий пример устанавливает значение переменной `count` в количество вхождений буквы `в` в строку `str`:
 
 ```js
-var str = 'Быть или не быть, вот в чём вопрос.';
+var str = "Быть или не быть, вот в чём вопрос.";
 var count = 0;
-var pos = str.indexOf('в');
+var pos = str.indexOf("в");
 
 while (pos !== -1) {
   count++;
-  pos = str.indexOf('в', pos + 1);
+  pos = str.indexOf("в", pos + 1);
 }
 
 console.log(count); // отобразит 3

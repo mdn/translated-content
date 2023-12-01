@@ -1,7 +1,6 @@
 ---
 title: pkcs11.installModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
-translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
 ---
 
 {{AddonSidebar()}}

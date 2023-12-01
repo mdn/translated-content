@@ -1,7 +1,6 @@
 ---
 title: L'alignement des boîtes avec les grilles CSS
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
-translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission_static
-translation_of: Web/API/Notification/requestPermission
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

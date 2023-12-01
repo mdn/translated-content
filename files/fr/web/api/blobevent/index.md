@@ -1,7 +1,6 @@
 ---
 title: BlobEvent
 slug: Web/API/BlobEvent
-translation_of: Web/API/BlobEvent
 ---
 
 {{APIRef ("Media Capture and Streams")}}

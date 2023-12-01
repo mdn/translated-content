@@ -14,7 +14,7 @@ slug: Web/HTML/Element/input/tel
 > **备注：** 不支持 `tel` 类型的浏览器会回退为标准 {{HTMLElement("input/text", "text")}} 类型输入。
 
 ```html
-<input id="telNo" type="tel">
+<input id="telNo" type="tel" />
 ```
 
 <table class="properties">
@@ -121,7 +121,7 @@ Mozilla 的扩展，当用户编辑该字段时按下键盘的 <kbd>Enter</kbd> 
 
 ## 使用 tel 输入
 
-电话号码是网络上非常普遍收集的数据类型。例如，在创建任何类型的注册或电子商务网站时，无论出于商业目的还是出于紧急联系目的，您都可能需要向用户索要电话号码。鉴于通常输入的电话号码是多少，不幸的是，用于验证电话号码的“一刀切”解决方案是不实际的。
+电话号码是网络上非常普遍收集的数据类型。例如，在创建任何类型的注册或电子商务网站时，无论出于商业目的还是出于紧急联系目的，你都可能需要向用户索要电话号码。鉴于通常输入的电话号码是多少，不幸的是，用于验证电话号码的“一刀切”解决方案是不实际的。
 
 幸运的是，你可以考虑自己网站的要求，并自行实施适当的验证级别。有关详细信息，请参阅下面的[验证](#验证)部分。
 
@@ -295,9 +295,7 @@ input:valid + span::after {
 ```html
 <form>
   <div>
-    <label for="telNo">
-      以 xxx-xxx-xxxx 格式输入一个电话号码：
-    </label>
+    <label for="telNo"> 以 xxx-xxx-xxxx 格式输入一个电话号码： </label>
     <input
       id="telNo"
       name="telNo"
@@ -349,7 +347,7 @@ input:valid + span::after {
 
 在这个示例中，我们展示了一个简单的界面，其中有一个 {{htmlelement("select")}} 元素，让用户选择他们所在的国家，还有一组 `<input type="tel">` 元素，让他们输入电话号码的每一部分；显然你应该有多个 `tel` 输入。
 
-每个输入都有一个 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性，以向视力正常的用户显示一个关于输入内容的提示，一个 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 来执行所需部分的特定字符数。和一个 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label )属性，以包含一个提示，向屏幕阅读器用户宣读要输入的信息。
+每个输入都有一个 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性，以向视力正常的用户显示一个关于输入内容的提示，一个 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 来执行所需部分的特定字符数。和一个 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label)属性，以包含一个提示，向屏幕阅读器用户宣读要输入的信息。
 
 ```html
 <form>
@@ -422,7 +420,7 @@ selectElem.onchange = () => {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{3}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
@@ -444,13 +442,13 @@ selectElem.onchange = () => {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{2,4}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Second part of number");
+    inputElems[2].setAttribute("aria-label", "Second part of number");
   }
-}
+};
 ```
 
 示例的显示效果如下所示：

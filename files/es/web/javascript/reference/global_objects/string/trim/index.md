@@ -1,7 +1,6 @@
 ---
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/Trim
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -29,12 +28,12 @@ El método **trim( )** devuelve la cadena de texto despojada de los espacios en 
 El siguiente ejemplo muestra la cadena de texto en minúsculas 'foo':
 
 ```js
-var orig = '   foo  ';
+var orig = "   foo  ";
 console.log(orig.trim()); // 'foo'
 
 // Otro ejemplo de .trim() eliminando el espacio en blanco sólo de un lado.
 
-var orig = 'foo    ';
+var orig = "foo    ";
 console.log(orig.trim()); // 'foo'
 ```
 
@@ -44,11 +43,11 @@ Ejecutar el siguiente código antes de cualquier otro código creará un trim ( 
 
 ```js
 if (!String.prototype.trim) {
-  (function() {
+  (function () {
     // Make sure we trim BOM and NBSP
     var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-    String.prototype.trim = function() {
-      return this.replace(rtrim, '');
+    String.prototype.trim = function () {
+      return this.replace(rtrim, "");
     };
   })();
 }

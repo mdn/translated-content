@@ -1,7 +1,6 @@
 ---
 title: border-left-width
 slug: Web/CSS/border-left-width
-translation_of: Web/CSS/border-left-width
 ---
 
 {{CSSRef}}

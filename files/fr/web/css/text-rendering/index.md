@@ -1,7 +1,6 @@
 ---
 title: text-rendering
 slug: Web/CSS/text-rendering
-translation_of: Web/CSS/text-rendering
 ---
 
 {{CSSRef}}

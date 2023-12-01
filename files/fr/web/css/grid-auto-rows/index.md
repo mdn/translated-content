@@ -1,7 +1,6 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
-translation_of: Web/CSS/grid-auto-rows
 ---
 
 {{CSSRef}}

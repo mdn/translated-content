@@ -1,11 +1,6 @@
 ---
 title: "Проверьте ваши навыки: Каскад"
 slug: Learn/CSS/Building_blocks/Cascade_tasks
-tags:
-  - CSS
-  - Начинающий
-translation_of: Learn/CSS/Building_blocks/Cascade_tasks
-original_slug: Learn/CSS/Building_blocks/Каскад_задачи
 ---
 
 {{LearnSidebar}}

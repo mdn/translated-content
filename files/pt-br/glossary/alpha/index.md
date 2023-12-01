@@ -1,8 +1,9 @@
 ---
 title: Alpha (canal alfa)
 slug: Glossary/Alpha
-original_slug: Glossario/Alpha
 ---
+
+{{GlossarySidebar}}
 
 Cores são representadas no formato digital como uma coleção de números, cada qual sinalizando o nível de força ou intensidade de dado componente da cor. Cada um desses componententes é chamado de **canal**. Num típico arquivo de imagem, o canais de cores descritos devem ser vermelho, verde e azul, que serão usados para definir a cor final. Para representar uma cor que através dela um plano de fundo possa ser visto, um quarto canal é adicionado a ela: o canal alfa. O canal alfa define o nível de opacidade da cor.
 

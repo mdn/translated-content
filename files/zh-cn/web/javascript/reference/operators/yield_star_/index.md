@@ -95,9 +95,9 @@ console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: undefined, done: true },
-                              // 此时 g4() 返回了 { value: "foo", done: true }
+// 此时 g4() 返回了 { value: "foo", done: true }
 
-console.log(result);          // "foo"
+console.log(result); // "foo"
 ```
 
 ## 规范
@@ -108,9 +108,9 @@ console.log(result);          // "foo"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [迭代器协议](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
 - {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield", "yield")}}

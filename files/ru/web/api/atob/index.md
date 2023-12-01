@@ -1,8 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.atob()
 slug: Web/API/atob
-translation_of: Web/API/WindowOrWorkerGlobalScope/atob
-original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 
 {{APIRef("HTML DOM")}}
@@ -24,7 +22,7 @@ var decodedData = scope.atob(encodedData);
 ## Пример
 
 ```js
-var encodedData = window.btoa('Hello, world'); // кодирует строку
+var encodedData = window.btoa("Hello, world"); // кодирует строку
 var decodedData = window.atob(encodedData); // декодирует строку
 ```
 

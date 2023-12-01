@@ -1,8 +1,8 @@
 ---
 title: background
 slug: Web/CSS/background
-translation_of: Web/CSS/background
 ---
+
 {{CSSRef("CSS Background")}}Сокращённое [CSS](/ru/docs/Web/CSS) свойство **`background`** устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.{{EmbedInteractiveExample("pages/css/background.html")}}
 
 Исходный код этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, пожалуйста клонируйте <https://github.com/mdn/interactive-examples> и отправьте нам запрос на извлечение..
@@ -58,11 +58,12 @@ background: no-repeat center/80% url("../img/image.png");
 
 ```html
 <p class="topbanner">
-  Starry sky<br/>
-  Twinkle twinkle<br/>
+  Starry sky<br />
+  Twinkle twinkle<br />
   Starry sky
 </p>
-<p class="warning">Here is a paragraph<p>
+<p class="warning">Here is a paragraph</p>
+<p></p>
 ```
 
 ### CSS
@@ -73,7 +74,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("starsolid.gif") #00D repeat-y fixed;
+  background: url("starsolid.gif") #00d repeat-y fixed;
 }
 ```
 

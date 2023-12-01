@@ -1,7 +1,6 @@
 ---
 title: Pseudo-éléments
 slug: Web/CSS/Pseudo-elements
-translation_of: Web/CSS/Pseudo-elements
 ---
 
 {{CSSRef}}

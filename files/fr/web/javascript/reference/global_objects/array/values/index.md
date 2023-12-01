@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ La méthode **`values()`** renvoie un nouvel objet **`Array Iterator`** qui cont
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
 ```js
-var a = ['t', 'i', 't', 'o', 'u'];
+var a = ["t", "i", "t", "o", "u"];
 var iterateur = a.values();
 
 console.log(iterateur.next().value); // t
@@ -24,7 +23,7 @@ console.log(iterateur.next().value); // u
 ## Syntaxe
 
 ```js
-array.values()
+array.values();
 ```
 
 ### Valeur de retour
@@ -36,7 +35,7 @@ Un nouvel objet itérateur sur {{jsxref("Array")}}.
 ### Itérer avec une boucle `for...of`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr.values();
 // votre navigateur doit supporter les boucles for..of
 // et les variables définies avec let
@@ -48,7 +47,7 @@ for (let lettre of eArr) {
 ### Itérer avec `next()`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr.values();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y

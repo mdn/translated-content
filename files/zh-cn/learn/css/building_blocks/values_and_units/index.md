@@ -10,7 +10,7 @@ CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上�
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -376,9 +376,9 @@ HTML 是一组嵌套的列表——我们总共有三个列表，并且两个示
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 500)}}
 
-## 测试你的技能！
+## 技能测试！
 
-你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——[测试你的技能：值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_tasks)。
+你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——[技能测试：值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_tasks)。
 
 ## 总结
 

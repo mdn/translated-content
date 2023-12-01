@@ -1,7 +1,6 @@
 ---
 title: tabs.PageSettings
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings
 ---
 
 {{AddonSidebar}}

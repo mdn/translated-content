@@ -1,5 +1,5 @@
 ---
-title: '-webkit-text-stroke-color'
+title: "-webkit-text-stroke-color"
 slug: Web/CSS/-webkit-text-stroke-color
 ---
 
@@ -42,7 +42,7 @@ slug: Web/CSS/-webkit-text-stroke-color
 
 ```html
 <p>Text with stroke</p>
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 #### CSS
@@ -58,7 +58,7 @@ p {
 
 ```js hidden
 var colorPicker = document.querySelector("input");
-colorPicker.addEventListener("change", function(evt) {
+colorPicker.addEventListener("change", function (evt) {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
 });
 ```

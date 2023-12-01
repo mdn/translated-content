@@ -1,7 +1,6 @@
 ---
 title: Svelte をはじめる
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 l10n:
   sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
 ---

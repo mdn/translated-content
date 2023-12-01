@@ -1,14 +1,8 @@
 ---
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
+
 {{JSRef}}
 
 Метод **`Math.random()`** возвращает псевдослучайное число с плавающей запятой из диапазона `[0, 1)`, то есть, от 0 (включительно) до 1 (но не включая 1), которое затем можно отмасштабировать до нужного диапазона. Реализация сама выбирает начальное зерно для алгоритма генерации случайных чисел; оно не может быть выбрано или сброшено пользователем.

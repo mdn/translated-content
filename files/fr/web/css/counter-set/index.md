@@ -1,7 +1,6 @@
 ---
 title: counter-set
 slug: Web/CSS/counter-set
-translation_of: Web/CSS/counter-set
 ---
 
 {{CSSRef}}

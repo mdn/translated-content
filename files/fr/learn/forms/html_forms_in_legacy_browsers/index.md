@@ -1,7 +1,6 @@
 ---
 title: Formulaires HTML dans les navigateurs historiques
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
-translation_of: Learn/Forms/HTML_forms_in_legacy_browsers
 ---
 
 {{LearnSidebar}}

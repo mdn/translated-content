@@ -1,8 +1,9 @@
 ---
 title: URL
 slug: Glossary/URL
-original_slug: Glossario/URL
 ---
+
+{{GlossarySidebar}}
 
 _Uniform Resource Locator_ (**URL**) é uma sequência de texto que especifica onde um recurso pode ser encontrado na Internet.
 

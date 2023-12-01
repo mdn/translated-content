@@ -1,8 +1,6 @@
 ---
 title: url()
 slug: Web/CSS/url
-translation_of: Web/CSS/url()
-original_slug: Web/CSS/url()
 ---
 
 {{CSSRef}}
@@ -102,7 +100,7 @@ url( <string> <url-modifier>* )
 
 ```css
 li::after {
-  content: ' - ' url(star.gif);
+  content: " - " url(star.gif);
 }
 ```
 
@@ -137,12 +135,7 @@ li::after {
 
 ## Specifications
 
-| Specification                                                        | Status                           | Comment                                              |
-| -------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#urls', 'url()')}}         | {{Spec2('CSS4 Values')}} |                                                      |
-| {{SpecName('CSS3 Values', '#urls', 'url()')}}         | {{Spec2('CSS3 Values')}} | No significant change from CSS Level 2 (Revision 1). |
-| {{Specname('CSS2.1', 'syndata.html#uri', 'uri()')}} | {{Spec2('CSS2.1')}}         | No significant change from CSS Level 1.              |
-| {{SpecName('CSS1', '#url', 'url()')}}                     | {{Spec2('CSS1')}}         | Initial definition.                                  |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,7 +1,6 @@
 ---
 title: Valor usado
 slug: Web/CSS/used_value
-original_slug: Web/CSS/Valor_usado
 ---
 
 {{cssref}}
@@ -82,7 +81,7 @@ function updateAllUsedWidths() {
 }
 
 updateAllUsedWidths();
-window.addEventListener('resize', updateAllUsedWidths);
+window.addEventListener("resize", updateAllUsedWidths);
 ```
 
 ### Resultado

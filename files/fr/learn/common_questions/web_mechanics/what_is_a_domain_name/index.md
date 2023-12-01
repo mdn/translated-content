@@ -1,7 +1,6 @@
 ---
 title: Comprendre les noms de domaine
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
-translation_of: Learn/Common_questions/What_is_a_domain_name
 ---
 
 Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment ils sont organisés et comment en avoir un.

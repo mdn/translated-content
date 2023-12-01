@@ -1,8 +1,9 @@
 ---
 title: Ligne de base
 slug: Glossary/Baseline
-translation_of: Glossary/baseline
 ---
+
+{{GlossarySidebar}}
 
 La **ligne de base** (<i lang="en">baseline</i> en anglais) est une expression utilisée en typographie européenne et ouest-asiatique pour désigner une ligne imaginaire sur laquelle les caractères d'une police reposent.
 

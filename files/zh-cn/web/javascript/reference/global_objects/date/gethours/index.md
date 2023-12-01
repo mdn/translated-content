@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 
 ## 语法
 
-```js
-dateObj.getHours()
+```js-nolint
+getHours()
 ```
 
 ### 参数
@@ -44,7 +44,7 @@ alert(hours); // 23
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCHours()")}}
 - {{jsxref("Date.prototype.setHours()")}}

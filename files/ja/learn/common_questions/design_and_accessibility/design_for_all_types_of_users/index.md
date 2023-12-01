@@ -1,7 +1,6 @@
 ---
 title: どうすればすべての種類のユーザーのためにデザインすることができるか？
 slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
-original_slug: Learn/Common_questions/Design_for_all_types_of_users
 ---
 
 この記事ではあらゆる種類のユーザーのためのウェブサイトを設計する基本的なヒントを紹介します。

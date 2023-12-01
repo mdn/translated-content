@@ -1,7 +1,6 @@
 ---
 title: "<track>: El elemento pista de texto incrustado"
 slug: Web/HTML/Element/track
-original_slug: Web/HTML/Element/track
 ---
 
 {{HTMLSidebar}}

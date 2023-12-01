@@ -1,7 +1,6 @@
 ---
 title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 ---
 
 {{AddonSidebar()}}

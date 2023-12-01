@@ -26,7 +26,7 @@ MediaStream = canvas.captureStream(frameRate);
 
 ```js
 //获取所需要截取媒体流的 canvas element
-var canvasElt = document.querySelector('canvas');
+var canvasElt = document.querySelector("canvas");
 
 //截取到媒体流
 var stream = canvasElt.captureStream(25); // 25 FPS

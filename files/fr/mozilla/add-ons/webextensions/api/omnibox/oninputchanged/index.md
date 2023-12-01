@@ -1,7 +1,6 @@
 ---
 title: omnibox.onInputChanged
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
 ---
 
 {{AddonSidebar()}}

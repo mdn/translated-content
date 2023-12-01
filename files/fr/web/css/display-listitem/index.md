@@ -1,7 +1,6 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
-translation_of: Web/CSS/display-listitem
 ---
 
 {{CSSRef}}

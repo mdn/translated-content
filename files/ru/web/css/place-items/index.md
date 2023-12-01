@@ -1,15 +1,8 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-items
 ---
+
 {{CSSRef}}
 
 Сокращённое свойство [CSS](/ru/docs/Web/CSS) **`place-items`** позволяет одновременно выравнивать элементы и колонки, и ряда (т.е. по свойствам {{CSSxRef("align-items")}} и {{CSSxRef("justify-items")}}) в соответствующей системе раскладки, такой как [гриды](/ru/docs/Web/CSS/CSS_Grid_Layout) или [флексбоксы](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout). Если задано одно значение, оно используется для выравнивания и в колонке, и в ряду.
@@ -161,10 +154,10 @@ select {
 ```
 
 ```js hidden
-let values = document.getElementById('values');
-let container = document.getElementById('container');
+let values = document.getElementById("values");
+let container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.placeItems = evt.target.value;
 });
 ```
@@ -173,13 +166,12 @@ values.addEventListener('change', function (evt) {
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: stretch; /* В выпадающем списке ниже можно изменить это значение */
   background-color: #8c8c8c;
   display: flex;
 }
-
 ```
 
 #### Результат
@@ -274,10 +266,10 @@ select {
 ```
 
 ```js hidden
-let values = document.getElementById('gridvalues');
-let container = document.getElementById('gridcontainer');
+let values = document.getElementById("gridvalues");
+let container = document.getElementById("gridcontainer");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.placeItems = evt.target.value;
 });
 ```
@@ -286,7 +278,7 @@ values.addEventListener('change', function (evt) {
 
 ```css
 #gridcontainer {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: stretch; /* В выпадающем списке ниже можно изменить это значение */
   background-color: #8c8c8c;
@@ -297,7 +289,6 @@ values.addEventListener('change', function (evt) {
 #gridcontainer > div {
   width: 50px;
 }
-
 ```
 
 #### Результат

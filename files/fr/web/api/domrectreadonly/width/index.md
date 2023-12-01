@@ -1,7 +1,6 @@
 ---
 title: DOMRectReadOnly.width
 slug: Web/API/DOMRectReadOnly/width
-translation_of: Web/API/DOMRectReadOnly/width
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

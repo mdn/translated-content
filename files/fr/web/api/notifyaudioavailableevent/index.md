@@ -1,7 +1,6 @@
 ---
 title: NotifyAudioAvailableEvent
 slug: Web/API/NotifyAudioAvailableEvent
-translation_of: Web/API/NotifyAudioAvailableEvent
 ---
 
 {{APIRef("Web Audio API")}}{{Non-standard_header}}{{Deprecated_header}}

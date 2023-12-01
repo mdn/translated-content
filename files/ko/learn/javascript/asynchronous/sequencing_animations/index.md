@@ -2,6 +2,7 @@
 title: Sequencing animations
 slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 이 평가에서는 일련의 애니메이션을 순서대로 재생하도록 페이지를 업데이트할 것입니다. 이를 진행하기 위해 [프로미스 사용 방법](/ko/docs/Learn/JavaScript/Asynchronous/Promises)에서 배운 몇 가지 기술을 사용할 예정입니다.
@@ -56,15 +57,15 @@ slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 
 ```js
 const aliceTumbling = [
-  { transform: 'rotate(0) scale(1)' },
-  { transform: 'rotate(360deg) scale(0)' }
+  { transform: "rotate(0) scale(1)" },
+  { transform: "rotate(360deg) scale(0)" },
 ];
 
 const aliceTiming = {
   duration: 2000,
   iterations: 1,
-  fill: 'forwards'
-}
+  fill: "forwards",
+};
 
 const alice1 = document.querySelector("#alice1");
 const alice2 = document.querySelector("#alice2");

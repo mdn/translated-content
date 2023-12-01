@@ -1,7 +1,6 @@
 ---
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
 
 {{AddonSidebar()}}

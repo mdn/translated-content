@@ -1,7 +1,6 @@
 ---
 title: Window.blur()
 slug: Web/API/Window/blur
-translation_of: Web/API/Window/blur
 ---
 
 {{APIRef}}

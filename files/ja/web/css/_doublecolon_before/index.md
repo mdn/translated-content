@@ -1,5 +1,5 @@
 ---
-title: '::before (:before)'
+title: "::before (:before)"
 slug: Web/CSS/::before
 ---
 
@@ -66,12 +66,12 @@ q::after {
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
   content: "このオレンジのボックスを見てください。";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -111,11 +111,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -132,12 +132,16 @@ li.done::before {
 #### JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false,
+);
 ```
 
 ここで上記のコードをライブで実行できます。なお、アイコンは使用しておらず、チェックマークは実際に CSS の `::before` で整形したものです。先に進んでやってみてください。
@@ -157,7 +161,7 @@ list.addEventListener('click', function(ev) {
   <li>Crack Eggs into bowl</li>
   <li>Add Milk</li>
   <li>Add Flour</li>
-  <li aria-current='step'>Mix thoroughly into a smooth batter</li>
+  <li aria-current="step">Mix thoroughly into a smooth batter</li>
   <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
   <li>Fry until the top of the pancake loses its gloss</li>
   <li>Flip it over and fry for a couple more minutes</li>
@@ -169,14 +173,14 @@ list.addEventListener('click', function(ev) {
 
 ```css
 li {
-  padding:0.5em;
+  padding: 0.5em;
 }
 
-li[aria-current='step'] {
-  font-weight:bold;
+li[aria-current="step"] {
+  font-weight: bold;
 }
 
-li[aria-current='step']::after {
+li[aria-current="step"]::after {
   content: " \21E6"; /* 左向きの白い矢印を表す Unicode の 16 進数 */
   display: inline;
 }

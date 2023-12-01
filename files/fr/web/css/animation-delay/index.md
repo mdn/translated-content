@@ -1,7 +1,6 @@
 ---
 title: animation-delay
 slug: Web/CSS/animation-delay
-translation_of: Web/CSS/animation-delay
 ---
 
 {{CSSRef}}

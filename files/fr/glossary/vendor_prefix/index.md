@@ -1,8 +1,9 @@
 ---
 title: Préfixe vendeur
 slug: Glossary/Vendor_Prefix
-translation_of: Glossary/Vendor_Prefix
 ---
+
+{{GlossarySidebar}}
 
 Les vendeurs de navigateurs ajoutent parfois des préfixes aux propriétés CSS expérimentales ou non standards. Les développeurs peuvent ainsi les expérimenter sans que les changements de comportement du navigateur ne cassent le code pendant le processus de standardisation. Les développeurs sont supposés attendre que le comportement du navigateur soit standardisé pour inclure la propriété non préfixée.
 

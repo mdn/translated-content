@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`keys()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/G
 ## Syntaxe
 
 ```js
-maMap.keys()
+maMap.keys();
 ```
 
 ### Valeur de retour

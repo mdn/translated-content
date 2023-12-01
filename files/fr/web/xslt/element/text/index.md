@@ -1,7 +1,6 @@
 ---
 title: text
 slug: Web/XSLT/Element/text
-translation_of: Web/XSLT/Element/text
 ---
 
 {{ XsltRef() }}

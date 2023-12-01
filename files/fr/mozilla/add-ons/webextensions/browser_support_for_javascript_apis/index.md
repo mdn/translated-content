@@ -1,7 +1,6 @@
 ---
 title: Compatibilité des navigateurs avec les API JavaScript WebExtensions
 slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
-translation_of: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 ---
 
 {{AddonSidebar}}

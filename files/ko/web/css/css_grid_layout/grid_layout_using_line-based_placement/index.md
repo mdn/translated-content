@@ -1,7 +1,6 @@
 ---
 title: Line-based placement with CSS Grid
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
-original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
 
 [그리드 레이아웃의 기본 개념을 다룬 문서](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)에서 라인 번호를 사용하여 그리드에 아이템을 배치하는 방법을 잠깐 살펴본 적이 있습니다. 이번 문서에서는 이 기본적 기능이 어떻게 작동하는지를 자세히 살펴보겠습니다.
@@ -17,37 +16,39 @@ original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, 100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -59,10 +60,10 @@ original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 ```
 
@@ -71,53 +72,55 @@ original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 각 아이템을 개별적으로 지정해서 행과 열 트랙에 걸쳐 네 개의 아이템들을 모두 배치할 수 있습니다. 원하시면 여기에 몇몇 셀들을 그냥 비워 둘 수도 있습니다. 그리드 레이아웃의 장점 중 하나는, 비어 있는 공간으로 다른 요소가 떠올라 채워지는 것을 막기 위해 마진을 써서 밀어낼 필요가 없어서, 흰 여백이 들어간 디자인을 쉽게 구현할 수 있다는 점입니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box2 {
-   grid-column-start: 3;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 3;
-   grid-row-start: 1;
-   grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
-   grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 ```
 
@@ -128,51 +131,53 @@ original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 앞의 예제에선 각 아이템을 배치하기 위해 상당히 많은 코드가 작성되었습니다. 그래서 여기엔 분명 {{glossary("shorthand properties", "단축용법")}}이 있을 거란 예상을 충분히 할 수 있습니다. 실제 {{cssxref("grid-column-start")}}와 {{cssxref("grid-column-end")}} 프로퍼티는 {{cssxref("grid-column")}}으로 합칠 수 있으며, {{cssxref("grid-row-start")}}와 {{cssxref("grid-row-end")}}는 {{cssxref("grid-row")}} 프로퍼티로 정의할 수 있습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 / 2;
-   grid-row: 1 / 4;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 / 4;
-   grid-row: 1 / 3;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 / 3;
-   grid-row: 1 /  2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
 }
 ```
 
@@ -183,54 +188,56 @@ original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 위 예제에선, 프로퍼티의 사용법을 설명하려고 모든 행과 열의 마지막 라인을 지정하였습니다. 하지만, 아이템이 오직 하나의 트랙만 차지한다면 `grid-column-end`와 `grid-row-end` 값은 생략할 수 있습니다. 그리드는 기본적으로 하나의 트랙에 걸치게 돼 있습니다. 이 말은 처음의 장황했던 예제가 다음처럼 단축될 수도 있습니다:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
 }
 ```
 
@@ -239,51 +246,53 @@ original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 또한, 단축용법을 사용했던 예제 중 오직 하나의 트랙에 걸쳐 있는 아이템의 경우에는 뒤로 누운 슬래쉬와 두 번째 값을 생략하고 다음처럼 정의할 수 있습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 ;
-   grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 ;
-   grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 ;
-   grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 ```
 
@@ -299,47 +308,49 @@ original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 - grid-column-end
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
-   grid-area: 1 / 3 / 3 / 4;
+  grid-area: 1 / 3 / 3 / 4;
 }
 .box3 {
-   grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 2 / 2 / 3;
 }
 .box4 {
-   grid-area: 3 / 2 / 4 / 4;
+  grid-area: 3 / 2 / 4 / 4;
 }
 ```
 
@@ -363,59 +374,61 @@ original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 다음 예제에는 아이템을 배치할 때 그리드의 오른쪽과 아래에서부터 작업을 시작해서 이전에 작성했던 레이아웃을 거꾸로 뒤집어 보았습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: -1;
-   grid-column-end: -2;
-   grid-row-start: -1;
-   grid-row-end: -4;
+  grid-column-start: -1;
+  grid-column-end: -2;
+  grid-row-start: -1;
+  grid-row-end: -4;
 }
 .box2 {
-   grid-column-start: -3;
-   grid-column-end: -4;
-   grid-row-start: -1;
-   grid-row-end: -3;
+  grid-column-start: -3;
+  grid-column-end: -4;
+  grid-row-start: -1;
+  grid-row-end: -3;
 }
 .box3 {
-   grid-column-start: -2;
-   grid-column-end: -3;
-   grid-row-start: -1;
-   grid-row-end: -2;
+  grid-column-start: -2;
+  grid-column-end: -3;
+  grid-row-start: -1;
+  grid-row-end: -2;
 }
 .box4 {
-   grid-column-start: -2;
-   grid-column-end: -4;
-   grid-row-start: -3;
-   grid-row-end: -4;
+  grid-column-start: -2;
+  grid-column-end: -4;
+  grid-row-start: -3;
+  grid-row-end: -4;
 }
 ```
 
@@ -438,58 +451,60 @@ CSS 그리드 표준 명세서에는 {{cssxref("grid-column-gap")}}과 {{cssxref
 간격은 오직 그리드의 트랙 사이에서만 위치하고, 컨테이너의 위나 아래 혹은 왼쪽과 오른쪽에 공간을 추가하지 않습니다. 이전 예제에 있는 그리드 컨테이너에 여기에 소개한 프로퍼티를 사용하여 간격을 추가한 모습을 아래에서 확인하실 수 있습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 ;
-   grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 ;
-   grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 ;
-   grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 .wrapper {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
-     grid-column-gap: 20px;
-     grid-row-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-column-gap: 20px;
+  grid-row-gap: 1em;
 }
 ```
 
@@ -501,10 +516,10 @@ CSS 그리드 표준 명세서에는 {{cssxref("grid-column-gap")}}과 {{cssxref
 
 ```css
 .wrapper {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
-     grid-gap: 1em 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 1em 20px;
 }
 ```
 
@@ -515,32 +530,34 @@ CSS 그리드 표준 명세서에는 {{cssxref("grid-column-gap")}}과 {{cssxref
 번호를 붙여서 시작과 마지막 라인을 지정하는 법과 더불어, 시작 라인을 지정한 후 원하는 만큼의 영역을 가로질러 확장하는 트랙의 수를 지정해서 사용하실 수도 있습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -550,16 +567,16 @@ CSS 그리드 표준 명세서에는 {{cssxref("grid-column-gap")}}과 {{cssxref
   grid-row: 1 / span 3;
 }
 .box2 {
-   grid-column: 3;
-   grid-row: 1 / span 2;
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 .box3 {
-   grid-column: 2;
-   grid-row: 1;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / span 2;
-   grid-row: 3;
+  grid-column: 2 / span 2;
+  grid-row: 3;
 }
 ```
 
@@ -594,47 +611,47 @@ CSS 그리드 표준 명세서에는 {{cssxref("grid-column-gap")}}과 {{cssxref
 3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
 4. **가이드**
 
-    1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
-    2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
-    3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
-    4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
-    5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
-    6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
+   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+   8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
 5. **프로퍼티**
 
-    1. [grid](/ko/docs/Web/CSS/grid)
-    2. [grid-area](/ko/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/ko/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
-    11. [grid-row](/ko/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/ko/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
+   1. [grid](/ko/docs/Web/CSS/grid)
+   2. [grid-area](/ko/docs/Web/CSS/grid-area)
+   3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
+   4. [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
+   5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
+   6. [grid-column](/ko/docs/Web/CSS/grid-column)
+   7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
+   8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
+   9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
+   10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
+   11. [grid-row](/ko/docs/Web/CSS/grid-row)
+   12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
+   13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
+   14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
+   15. [grid-template](/ko/docs/Web/CSS/grid-template)
+   16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
+   17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
+   18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
 
 6. **용어집**
 
-    1. [Grid](/ko/docs/Glossary/Grid)
-    2. [Grid lines](/ko/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/ko/docs/Glossary/Grid_cell)
-    5. [Grid areas](/ko/docs/Glossary/Grid_areas)
-    6. [Gutters](/ko/docs/Glossary/Gutters)
-    7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
-    8. [Grid row](/ko/docs/Glossary/Grid_rows)
-    9. [Grid column](/ko/docs/Glossary/Grid_column)
+   1. [Grid](/ko/docs/Glossary/Grid)
+   2. [Grid lines](/ko/docs/Glossary/Grid_lines)
+   3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
+   4. [Grid cell](/ko/docs/Glossary/Grid_cell)
+   5. [Grid areas](/ko/docs/Glossary/Grid_areas)
+   6. [Gutters](/ko/docs/Glossary/Gutters)
+   7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
+   8. [Grid row](/ko/docs/Glossary/Grid_rows)
+   9. [Grid column](/ko/docs/Glossary/Grid_column)

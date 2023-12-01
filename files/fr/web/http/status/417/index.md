@@ -1,7 +1,6 @@
 ---
 title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
-translation_of: Web/HTTP/Status/417
 ---
 
 {{HTTPSidebar}}

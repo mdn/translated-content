@@ -1,7 +1,6 @@
 ---
 title: "::part()"
 slug: Web/CSS/::part
-translation_of: Web/CSS/::part
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

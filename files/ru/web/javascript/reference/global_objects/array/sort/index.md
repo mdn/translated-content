@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 
 {{JSRef("Global_Objects", "Array")}}
@@ -35,13 +29,13 @@ arr.sort([compareFunction])
 Если функция сравнения `compareFunction` не предоставляется, элементы сортируются путём преобразования их в строки и сравнения строк в порядке следования кодовых точек Unicode. Например, слово "Вишня" идёт перед словом "бананы". При числовой сортировке, 9 идёт перед 80, но поскольку числа преобразуются в строки, то "80" идёт перед "9" в соответствии с порядком в Unicode.
 
 ```js
-var fruit = ['арбузы', 'бананы', 'Вишня'];
+var fruit = ["арбузы", "бананы", "Вишня"];
 fruit.sort(); // ['Вишня', 'арбузы', 'бананы']
 
 var scores = [1, 2, 10, 21];
 scores.sort(); // [1, 10, 2, 21]
 
-var things = ['слово', 'Слово', '1 Слово', '2 Слова'];
+var things = ["слово", "Слово", "1 Слово", "2 Слова"];
 things.sort(); // ['1 Слово', '2 Слова', 'Слово', 'слово']
 // В Unicode, числа находятся перед буквами в верхнем регистре,
 // а те, в свою очередь, перед буквами в нижнем регистре.
@@ -81,7 +75,7 @@ function compareNumbers(a, b) {
 
 ```js
 var numbers = [4, 2, 5, 1, 3];
-numbers.sort(function(a, b) {
+numbers.sort(function (a, b) {
   return a - b;
 });
 console.log(numbers); // [1, 2, 3, 4, 5]
@@ -91,12 +85,12 @@ console.log(numbers); // [1, 2, 3, 4, 5]
 
 ```js
 var items = [
-  { name: 'Edward', value: 21 },
-  { name: 'Sharpe', value: 37 },
-  { name: 'And', value: 45 },
-  { name: 'The', value: -12 },
-  { name: 'Magnetic' },
-  { name: 'Zeros', value: 37 }
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic" },
+  { name: "Zeros", value: 37 },
 ];
 items.sort(function (a, b) {
   if (a.name > b.name) {
@@ -117,30 +111,39 @@ items.sort(function (a, b) {
 В следующем примере создаётся четыре массива, сначала отображается первоначальный массив, а затем они сортируются. Числовые массивы сортируются сначала без, а потом с функцией сравнения.
 
 ```js
-var stringArray = ['Голубая', 'Горбатая', 'Белуга'];
-var numericStringArray = ['80', '9', '700'];
+var stringArray = ["Голубая", "Горбатая", "Белуга"];
+var numericStringArray = ["80", "9", "700"];
 var numberArray = [40, 1, 5, 200];
-var mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+var mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
 }
 
 // снова предполагаем, что функция печати определена
-console.log('stringArray:', stringArray.join());
-console.log('Сортировка:', stringArray.sort());
+console.log("stringArray:", stringArray.join());
+console.log("Сортировка:", stringArray.sort());
 
-console.log('numberArray:', numberArray.join());
-console.log('Сортировка без функции сравнения:', numberArray.sort());
-console.log('Сортировка с функцией compareNumbers:', numberArray.sort(compareNumbers));
+console.log("numberArray:", numberArray.join());
+console.log("Сортировка без функции сравнения:", numberArray.sort());
+console.log(
+  "Сортировка с функцией compareNumbers:",
+  numberArray.sort(compareNumbers),
+);
 
-console.log('numericStringArray:', numericStringArray.join());
-console.log('Сортировка без функции сравнения:', numericStringArray.sort());
-console.log('Сортировка с функцией compareNumbers:', numericStringArray.sort(compareNumbers));
+console.log("numericStringArray:", numericStringArray.join());
+console.log("Сортировка без функции сравнения:", numericStringArray.sort());
+console.log(
+  "Сортировка с функцией compareNumbers:",
+  numericStringArray.sort(compareNumbers),
+);
 
-console.log('mixedNumericArray:', mixedNumericArray.join());
-console.log('Сортировка без функции сравнения:', mixedNumericArray.sort());
-console.log('Сортировка с функцией compareNumbers:', mixedNumericArray.sort(compareNumbers));
+console.log("mixedNumericArray:", mixedNumericArray.join());
+console.log("Сортировка без функции сравнения:", mixedNumericArray.sort());
+console.log(
+  "Сортировка с функцией compareNumbers:",
+  mixedNumericArray.sort(compareNumbers),
+);
 ```
 
 Этот пример произведёт следующий вывод. Как показывает вывод, когда используется функция сравнения, числа сортируются корректно вне зависимости от того, являются ли они собственно числами или строками с числами.
@@ -167,7 +170,7 @@ mixedNumericArray: 80,9,700,40,1,5,200
 Для сортировки строк с не-ASCII символами, то есть строк с символами акцента (e, é, è, a, ä и т.д.), строк, с языками, отличными от английского: используйте {{jsxref("String.localeCompare")}}. Эта функция может сравнивать эти символы, чтобы они становились в правильном порядке.
 
 ```js
-var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+var items = ["réservé", "premier", "cliché", "communiqué", "café", "adieu"];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -181,24 +184,26 @@ items.sort(function (a, b) {
 
 ```js
 // массив для сортировки
-var list = ['Дельта', 'альфа', 'ЧАРЛИ', 'браво'];
+var list = ["Дельта", "альфа", "ЧАРЛИ", "браво"];
 
 // временный массив содержит объекты с позицией и значением сортировки
-var mapped = list.map(function(el, i) {
-return { index: i, value: el.toLowerCase() };
+var mapped = list.map(function (el, i) {
+  return { index: i, value: el.toLowerCase() };
 });
 
 // сортируем массив, содержащий уменьшенные значения
-mapped.sort(function(a, b) {
+mapped.sort(function (a, b) {
   if (a.value > b.value) {
-    return 1; }
+    return 1;
+  }
   if (a.value < b.value) {
-    return -1; }
+    return -1;
+  }
   return 0;
 });
 
 // контейнер для результа
-var result = mapped.map(function(el) {
+var result = mapped.map(function (el) {
   return list[el.index];
 });
 ```

@@ -1,12 +1,6 @@
 ---
 title: Наследование в JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - JavaScript
-  - Наследование
-  - ООП
-translation_of: Learn/JavaScript/Objects/Inheritance
-original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}

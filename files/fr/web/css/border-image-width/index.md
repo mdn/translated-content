@@ -1,7 +1,6 @@
 ---
 title: border-image-width
 slug: Web/CSS/border-image-width
-translation_of: Web/CSS/border-image-width
 ---
 
 {{CSSRef}}

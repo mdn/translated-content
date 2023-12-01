@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement.remove()
 slug: Web/API/HTMLSelectElement/remove
-translation_of: Web/API/HTMLSelectElement/remove
 ---
 
 {{ APIRef("HTML DOM") }}

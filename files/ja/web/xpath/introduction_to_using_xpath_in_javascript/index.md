@@ -1,19 +1,22 @@
 ---
 title: JavaScript での XPath の利用の手引き
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-original_slug: Introduction_to_using_XPath_in_JavaScript
+l10n:
+  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
 ---
 
-この文書では、拡張機能やウェブサイトから JavaScript 内で [XPath](/ja/docs/Web/XPath) を使うためのインターフェイスについて解説します。 Mozilla は [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html) のかなりの部分を実装しており、 HTML 文書と XML 文書のどちらに対しても XPath 式を実行することができます。
+{{XsltSidebar}}
+
+この文書では、拡張機能やウェブサイトから JavaScript 内で [XPath](/ja/docs/Web/XPath) を使うためのインターフェイスについて解説します。 Mozilla は [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/) のかなりの部分を実装しており、 HTML 文書と XML 文書のどちらに対しても XPath 式を実行することができます。
 
 XPath を使用するための主となるインターフェイスは [document](/ja/docs/Web/API/Document) オブジェクトの [evaluate](/ja/docs/Web/API/Document/evaluate) 関数です。
 
-## document.evaluate
+## document.evaluate()
 
 このメソッドは [XPath](/ja/docs/Web/XPath) 式を [XML](/ja/docs/Glossary/XML) ベースの文書 ( HTML を含む) に対して評価し、 [`XPathResult`](/ja/docs/Web/API/XPathResult) オブジェクトを返します。これは単一のノード、もしくはノードの集合になります。このメソッドの既存のドキュメントは [document.evaluate](/ja/docs/Web/API/Document/evaluate) ですが、このメソッドの解説のためには内容が薄いため、以下でさらに詳しく説明します。
 
 ```js
-var xpathResult = document.evaluate(
+const xpathResult = document.evaluate(
   xpathExpression,
   contextNode,
   namespaceResolver,
@@ -24,7 +27,7 @@ var xpathResult = document.evaluate(
 
 ### 引数
 
-[evaluate](/ja/docs/Web/API/Document/evaluate) 関数は 5 つの引数を取ります。
+[`evaluate()`](/ja/docs/Web/API/Document/evaluate) 関数は 5 つの引数を取ります。
 
 - `xpathExpression`: 評価する XPath 式を文字列で指定します。
 - `contextNode`: `xpathExpression` を評価する対象となる文書内のノードを指定します。指定されたノードの全ての子ノードに対しても評価が行われます。もっともよく使用される値は [document](/ja/docs/Web/API/Document) ノードです。
@@ -46,8 +49,8 @@ var xpathResult = document.evaluate(
 名前空間リゾルバーを作成するには、普通は [document](/ja/docs/Web/API/Document) オブジェクトの `createNSResolver` メソッドを使います。
 
 ```js
-var nsResolver = document.createNSResolver(
-  contextNode.ownerDocument == null
+const nsResolver = document.createNSResolver(
+  contextNode.ownerDocument === null
     ? contextNode.documentElement
     : contextNode.ownerDocument.documentElement,
 );
@@ -56,9 +59,9 @@ var nsResolver = document.createNSResolver(
 または、 `XPathEvaluator` オブジェクトの `createNSResolver` メソッドを使います。
 
 ```js
-var xpEvaluator = new XPathEvaluator();
-var nsResolver = xpEvaluator.createNSResolver(
-  contextNode.ownerDocument == null
+const xpEvaluator = new XPathEvaluator();
+const nsResolver = xpEvaluator.createNSResolver(
+  contextNode.ownerDocument === null
     ? contextNode.documentElement
     : contextNode.ownerDocument.documentElement,
 );
@@ -66,15 +69,15 @@ var nsResolver = xpEvaluator.createNSResolver(
 
 それから 変数 `nsResolver` を引数 `namespaceResolver` として `document.evaluate` に渡します。
 
-注: XPath では接頭辞のない QName は名前空間が null の要素にのみ一致すると定義しています。 XPath には、通常の要素参照に適用される既定の名前空間を取得する手段はありません。 (例: `xmlns='http://www.w3.org/1999/xhtml'` に対する `p[@id='_myid']`)。名前空間が null ではない既定の要素に一致させるには、 `['namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']` のような形を使用して特定の要素を参照するか ([このアプローチ](#using_xpath_functions_to_reference_elements_with_a_default_namespace)は名前空間が不明である可能性のある動的な XPath で有効です)、接頭辞つきの名前テストを使用し、その接頭辞を名前空間にマッピングする名前空間リゾルバーを作成する必要があります。詳しくは下記の[ユーザー定義の名前空間リゾルバーを作成する](#ユーザー定義の名前空間リゾルバーの実装)方法を参照して下さい。
+メモ: XPath では接頭辞のない QName は名前空間が null の要素にのみ一致すると定義しています。 XPath には、通常の要素参照に適用される既定の名前空間を取得する手段はありません（例: `xmlns='http://www.w3.org/1999/xhtml'` に対する `p[@id='_myid']`）。名前空間が null ではない既定の要素に一致させるには、 `['namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']` のような形を使用して特定の要素を参照するか（[このアプローチ](#xpath_関数を使用して既定の名前空間の要素を参照する)は名前空間が不明である可能性のある動的な XPath で有効です）、接頭辞つきの名前テストを使用し、その接頭辞を名前空間にマッピングする名前空間リゾルバーを作成する必要があります。詳しくは下記の[ユーザー定義の名前空間リゾルバーを作成する](#ユーザー定義の名前空間リゾルバーの実装)方法を参照して下さい。
 
-### 注
+### メモ
 
 任意の DOM ノードを名前空間の解決に適応させると、 [XPath](/ja/docs/Web/XPath) 式が文書内に現れたノードのコンテキストに関連して簡単に評価できるようになります。このアダプターは、ノード上の DOM Level 3 メソッド `lookupNamespaceURI` と同様に動作し、 `lookupNamespaceURI` が呼び出された時点でノードの階層で利用可能な現在の情報を使用して、指定された接頭辞から `namespaceURI` を解決します。また、暗黙の `xml` 接頭辞も正しく解決します。
 
 ### 返値の型の指定
 
-`document.evaluate` から返される変数 `xpathResult` は、単一のノード ([単純型](#simple_types)) もしくはノードのコレクション ([ノード集合型](#node-set_types)) から成ります。
+`document.evaluate` から返される変数 `xpathResult` は、単一のノード（[単純型](#単純型)）もしくはノードのコレクション（[ノード集合型](#ノード集合型)）から成ります。
 
 #### 単純型
 
@@ -95,7 +98,7 @@ var nsResolver = xpEvaluator.createNSResolver(
 下の例では XPath 式 [`count(//p)`](/ja/docs/Web/XPath/Functions/count) によって HTML 文書内の `<p>` 要素の数を取得しています。
 
 ```js
-var paragraphCount = document.evaluate(
+const paragraphCount = document.evaluate(
   "count(//p)",
   document,
   null,
@@ -103,17 +106,15 @@ var paragraphCount = document.evaluate(
   null,
 );
 
-alert(
-  "この文書には " +
-    paragraphCount.numberValue +
-    " 個の段落要素が含まれています",
+console.log(
+  `この文書には ${paragraphCount.numberValue} 個の段落要素が含まれています`,
 );
 ```
 
 JavaScript では数値を表示しようとすると文字列に変換されますが、 XPath インターフェイスは `stringValue` プロパティを要求しても数値の結果を自動的に変換しないので、下のコードは**動作しません**。
 
 ```js
-var paragraphCount = document.evaluate(
+const paragraphCount = document.evaluate(
   "count(//p)",
   document,
   null,
@@ -121,10 +122,8 @@ var paragraphCount = document.evaluate(
   null,
 );
 
-alert(
-  "この文書には " +
-    paragraphCount.stringValue +
-    " 個の段落要素が含まれています",
+console.log(
+  `この文書には ${paragraphCount.stringValue} 個の段落要素が含まれています`,
 );
 ```
 
@@ -134,9 +133,9 @@ alert(
 
 `XPathResult` オブジェクトが返すノード集合には主として 3 種類の型があります。
 
-- [イテレーター](#iterators)
-- [スナップショット](#snapshots)
-- [ファーストノード](#first_node)
+- [イテレーター](#イテレーター)
+- [スナップショット](#スナップショット)
+- [ファーストノード](#ファーストノード)
 
 ##### イテレーター
 
@@ -152,7 +151,7 @@ alert(
 ただし、反復処理中に文書が変異した (文書ツリーが改変された) 場合、反復処理は無効化され、`XPathResult` の `invalidIteratorState` プロパティが `true` に設定され、`NS_ERROR_DOM_INVALID_STATE_ERR` 例外が投げられます。
 
 ```js
-var iterator = document.evaluate(
+const iterator = document.evaluate(
   "//phoneNumber",
   documentNode,
   null,
@@ -161,14 +160,14 @@ var iterator = document.evaluate(
 );
 
 try {
-  var thisNode = iterator.iterateNext();
+  let thisNode = iterator.iterateNext();
 
   while (thisNode) {
-    alert(thisNode.textContent);
+    console.log(thisNode.textContent);
     thisNode = iterator.iterateNext();
   }
 } catch (e) {
-  alert("Error: Document tree modified during iteration " + e);
+  console.error(`Error: Document tree modified during iteration ${e}`);
 }
 ```
 
@@ -184,7 +183,7 @@ try {
 スナップショットは文書が変化しても変更されず、イテレーターと違って無効になることはありませんが、スナップショットは現在の文書に対応しないことがあります。ノードが移動されていたり、既に存在しないノードが含まれていたり、新しいノードが追加されている可能性もあります。
 
 ```js
-var nodesSnapshot = document.evaluate(
+const nodesSnapshot = document.evaluate(
   "//phoneNumber",
   documentNode,
   null,
@@ -192,8 +191,8 @@ var nodesSnapshot = document.evaluate(
   null,
 );
 
-for (var i = 0; i < nodesSnapshot.snapshotLength; i++) {
-  alert(nodesSnapshot.snapshotItem(i).textContent);
+for (let i = 0; i < nodesSnapshot.snapshotLength; i++) {
+  console.log(nodesSnapshot.snapshotItem(i).textContent);
 }
 ```
 
@@ -209,7 +208,7 @@ for (var i = 0; i < nodesSnapshot.snapshotLength; i++) {
 ただし、 unordered サブタイプの場合、返される単一のノードは文書順において最初のものではない可能性があるので注意が必要です。 ordered サブタイプの場合は文書順において最初に一致するノードであることが保証されます。
 
 ```js
-var firstPhoneNumber = document.evaluate(
+const firstPhoneNumber = document.evaluate(
   "//phoneNumber",
   documentNode,
   null,
@@ -217,9 +216,8 @@ var firstPhoneNumber = document.evaluate(
   null,
 );
 
-alert(
-  "The first phone number found is " +
-    firstPhoneNumber.singleNodeValue.textContent,
+console.log(
+  `The first phone number found is ${firstPhoneNumber.singleNodeValue.textContent}`,
 );
 ```
 
@@ -229,7 +227,7 @@ alert(
 
 返される結果型は単純型 (`NUMBER_TYPE`, `STRING_TYPE`, `BOOLEAN_TYPE`) のうちのいずれにもなり得ます**が**、もしノード集合であった場合には、`UNORDERED_NODE_ITERATOR_TYPE` に**しか**なり得ません。
 
-評価の後に型を判断するには、 `XPathResult` オブジェクトの `resultType` プロパティを使います。このプロパティの[定数](#xpathresult_の定義済み定数)値は付録に記載されています。 None Yet =====Any_Type Example===== \<pre> \</pre>
+評価の後に型を判断するには、 `XPathResult` オブジェクトの `resultType` プロパティを使います。このプロパティの[定数](#xpathresult_の定義済み定数)値は付録に記載されています。
 
 ## 例
 
@@ -240,7 +238,7 @@ alert(
 XPath を使って HTML 文書内のすべての `<h2>` 見出し要素を抽出したければ、`xpathExpression` は単に '`//h2`' となります。 `//` は再帰下降演算子 (Recursive Descent Operator) なので、この式は文書ツリー内のあらゆる位置にある、nodeName が `h2` である要素に一致します。
 
 ```js
-var headings = document.evaluate(
+const headings = document.evaluate(
   "//h2",
   document,
   null,
@@ -256,12 +254,12 @@ HTML には名前空間がないため、引数 `namespaceResolver` には `null
 この式の結果は `XPathResult` オブジェクトです。返された結果の型を知りたい場合は、返されたオブジェクトの `resultType` プロパティを評価してください。この場合は `4` 、つまり `UNORDERED_NODE_ITERATOR_TYPE` と評価されるでしょう。これは XPath 式の結果がノード集合であった場合の既定の結果型です。この型はノードに一つずつアクセスすることができ、返されるノードの順序は決まっていません。返されたノードにアクセスするには、返されたオブジェクトの `iterateNext()` メソッドを使います。
 
 ```js
-var thisHeading = headings.iterateNext();
+let thisHeading = headings.iterateNext();
 
-var alertText = "この文書内のレベル 2 の見出しは、\n";
+let alertText = "この文書内のレベル 2 の見出しは、\n";
 
 while (thisHeading) {
-  alertText += thisHeading.textContent + "\n";
+  alertText += `${thisHeading.textContent}\n`;
   thisHeading = headings.iterateNext();
 }
 ```
@@ -288,40 +286,30 @@ while (thisHeading) {
 </people>
 ```
 
-拡張機能内で XML 文書の内容を取得できるようにするため、[`XMLHttpRequest`](/ja/XMLHttpRequest) オブジェクトを作成して文書を同期的に読み込みます。変数 `xmlDoc` には文書が [`XMLDocument`](/ja/XMLDocument) オブジェクトとして格納されるので、それに対して `evaluate` メソッドを使う事ができます。
+拡張機能内で XML 文書の内容を取得できるようにするため、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) オブジェクトを作成して文書を同期的に読み込みます。変数 `xmlDoc` には文書が [`XMLDocument`](/ja/docs/Web/API/XMLDocument) オブジェクトとして格納されるので、それに対して `evaluate` メソッドを使う事ができます。
 
 拡張機能の xul/js 文書で使用する JavaScript は以下の通りです。
 
 ```js
-var req = new XMLHttpRequest();
+const req = new XMLHttpRequest();
 
 req.open("GET", "chrome://yourextension/content/peopleDB.xml", false);
 req.send(null);
 
-var xmlDoc = req.responseXML;
+const xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver(
-  xmlDoc.ownerDocument == null
+const nsResolver = xmlDoc.createNSResolver(
+  xmlDoc.ownerDocument === null
     ? xmlDoc.documentElement
     : xmlDoc.ownerDocument.documentElement,
 );
 
-var personIterator = xmlDoc.evaluate(
+const personIterator = xmlDoc.evaluate(
   "//person",
   xmlDoc,
   nsResolver,
   XPathResult.ANY_TYPE,
   null,
-);
-```
-
-### 注
-
-XPathResult オブジェクトが定義されていない場合は、 `Components.interfaces.nsIDOMXPathResult.ANY_TYPE` (`CI.nsIDOMXPathResult`) を使用して、特権的なコードで定数を取得できます。同様に、 XPathEvaluator は次のようにして作成できます。
-
-```js
-Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(
-  Components.interfaces.nsIDOMXPathEvaluator,
 );
 ```
 
@@ -331,7 +319,7 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(
 
 この例は説明のためだけのものです。 この関数は、`xpathExpression` から名前空間接頭辞を取り、その接頭辞に対応する URI を返さなければなりません。例えば、この式は、
 
-```
+```plain
 '//xhtml:td/mathml:math'
 ```
 
@@ -341,7 +329,7 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(
 
 ```js
 function nsResolver(prefix) {
-  var ns = {
+  const ns = {
     xhtml: "http://www.w3.org/1999/xhtml",
     mathml: "http://www.w3.org/1998/Math/MathML",
   };
@@ -406,10 +394,10 @@ null ではない名前空間の既定の要素に一致させる (そして名�
 XLink の `@href` 属性を持つ要素を (名前空間リゾルバーで定義済みの接頭辞にとらわれずに) 正確に把握するためには、次のようにして取得することができます。
 
 ```js
-var xpathEls =
+const xpathEls =
   'someElements[@*[local-name() = "href" and namespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Grabs elements with any single attribute that has both the local name 'href' and the XLink namespace
-var thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
-var thisitemEl = thislevel.iterateNext();
+const thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
+let thisitemEl = thislevel.iterateNext();
 ```
 
 ### XPathResult の定義済み定数
@@ -434,7 +422,5 @@ var thisitemEl = thislevel.iterateNext();
 
 ## 原著情報
 
-- 原文 [Mozilla XPath Tutorial](https://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html) に基づいて作成されています。
 - 原文の著者: James Graham
 - その他の貢献者: James Thompson
-- 最終更新日: 2006 年 3 月 25 日

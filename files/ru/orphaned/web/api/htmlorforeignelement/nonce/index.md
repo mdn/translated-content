@@ -1,8 +1,6 @@
 ---
 title: HTMLElement.nonce
 slug: orphaned/Web/API/HTMLOrForeignElement/nonce
-translation_of: Web/API/HTMLOrForeignElement/nonce
-original_slug: Web/API/HTMLOrForeignElement/nonce
 ---
 
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
@@ -24,10 +22,8 @@ HTMLElement.nonce = nonce
 
 ## Specifications
 
-| Specification                                                    | Status                           | Comment                     |
-| ---------------------------------------------------------------- | -------------------------------- | --------------------------- |
-| {{SpecName('HTML WHATWG','#attr-nonce','nonce')}} | {{Spec2('HTML WHATWG')}} | Первоначальное определение. |
+{{Specifications}}
 
 ## Browser Compatibility
 
-{{Compat("api.HTMLElement.nonce")}}
+{{Compat}}

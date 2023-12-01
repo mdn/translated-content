@@ -1,7 +1,6 @@
 ---
 title: browsingData.DataTypeSet
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 ---
 
 {{AddonSidebar()}}

@@ -26,28 +26,26 @@ eventSource = new EventSource(url, configuration);
 ## Exemplos
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+var evtSource = new EventSource("sse.php");
+var eventList = document.querySelector("ul");
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = function (e) {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 > **Nota:** Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Especificações
 
-| Specification                                                                                        | Status                           | Comment           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG', "comms.html#dom-eventsource", "EventSource()")}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.EventSource.EventSource")}}
+{{Compat}}
 
 ## See also
 

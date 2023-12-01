@@ -1,7 +1,6 @@
 ---
 title: <string>
 slug: Web/CSS/string
-translation_of: Web/CSS/string
 ---
 
 {{CSSRef}}

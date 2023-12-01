@@ -1,7 +1,6 @@
 ---
-title: ':dir()'
+title: ":dir()"
 slug: Web/CSS/:dir
-translation_of: Web/CSS/:dir
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -43,7 +42,8 @@ translation_of: Web/CSS/:dir
 ```html
 <div dir="rtl">
   <span>test1</span>
-  <div dir="ltr">test2
+  <div dir="ltr">
+    test2
     <div dir="auto">עִבְרִית</div>
   </div>
 </div>

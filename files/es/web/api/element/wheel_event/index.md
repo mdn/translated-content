@@ -1,7 +1,6 @@
 ---
 title: "Element: wheel event"
 slug: Web/API/Element/wheel_event
-original_slug: Web/API/Element/wheel_event
 ---
 
 {{APIRef}}

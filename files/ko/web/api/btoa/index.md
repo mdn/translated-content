@@ -12,7 +12,7 @@ ASCII 값 0부터 31까지의 제어 문자처럼 통신에 사용하면 문제�
 ## 구문
 
 ```js
-btoa(stringToEncode)
+btoa(stringToEncode);
 ```
 
 ### 매개변수
@@ -32,7 +32,7 @@ btoa(stringToEncode)
 ## 예제
 
 ```js
-const encodedData = btoa('Hello, world'); // 문자열 인코딩
+const encodedData = btoa("Hello, world"); // 문자열 인코딩
 const decodedData = atob(encodedData); // 문자열 디코딩
 ```
 
@@ -46,10 +46,10 @@ Base64는 이진 데이터를 입력으로 받도록 설계됐습니다. JavaScr
 const ok = "a";
 console.log(ok.codePointAt(0).toString(16)); // 61: 1바이트 미만
 
-const notOK = "✓"
+const notOK = "✓";
 console.log(notOK.codePointAt(0).toString(16)); // 2713: 1바이트 초과
 
-console.log(btoa(ok));    // YQ==
+console.log(btoa(ok)); // YQ==
 console.log(btoa(notOK)); // 오류
 ```
 
@@ -63,7 +63,7 @@ function toBinary(string) {
     codeUnits[i] = string.charCodeAt(i);
   }
   const charCodes = new Uint8Array(codeUnits.buffer);
-  let result = '';
+  let result = "";
   for (let i = 0; i < charCodes.byteLength; i++) {
     result += String.fromCharCode(charCodes[i]);
   }
@@ -75,7 +75,7 @@ const myString = "☸☹☺☻☼☾☿";
 
 const converted = toBinary(myString);
 const encoded = btoa(converted);
-console.log(encoded);                 // OCY5JjomOyY8Jj4mPyY=
+console.log(encoded); // OCY5JjomOyY8Jj4mPyY=
 ```
 
 물론 이렇게 되면 디코딩한 문자열에 역변환까지 해야 원래의 문자열을 구할 수 있습니다.
@@ -87,7 +87,7 @@ function fromBinary(binary) {
     bytes[i] = binary.charCodeAt(i);
   }
   const charCodes = new Uint16Array(bytes.buffer);
-  let result = '';
+  let result = "";
   for (let i = 0; i < charCodes.length; i++) {
     result += String.fromCharCode(charCodes[i]);
   }
@@ -96,7 +96,7 @@ function fromBinary(binary) {
 
 const decoded = atob(encoded);
 const original = fromBinary(decoded);
-console.log(original);                // ☸☹☺☻☼☾☿
+console.log(original); // ☸☹☺☻☼☾☿
 ```
 
 용어집 {{glossary("Base64")}} 항목, [해결책 #1 – 인코딩 전에 문자열 이스케이핑](/ko/docs/Glossary/Base64#solution_1_%E2%80%93_escaping_the_string_before_encoding_it)의 예제 코드 `utf8_to_b64`와 `b64_to_utf8` 함수도 참고하세요.

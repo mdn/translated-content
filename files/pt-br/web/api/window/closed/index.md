@@ -50,11 +50,15 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // Abra uma nova janela de popup
-    popupWindow = window.open("popup.html","dataWindow");
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```
 
-## Especificação
+## Especificações
 
-HTML5
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/MIN_VALUE
 ---
 
 {{JSRef}}

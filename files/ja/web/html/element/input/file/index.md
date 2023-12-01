@@ -192,7 +192,9 @@ div {
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="image_uploads">アップロードする画像を選択してください (PNG, JPG)</label>
+    <label for="image_uploads"
+      >アップロードする画像を選択してください (PNG, JPG)</label
+    >
     <input
       type="file"
       id="image_uploads"
@@ -323,9 +325,9 @@ function updateImageDisplay() {
       const listItem = document.createElement("li");
       const para = document.createElement("p");
       if (validFileType(file)) {
-        para.textContent = `ファイル名: ${file.name}, ファイルサイズ: ${returnFileSize(
-          file.size
-        )}.`;
+        para.textContent = `ファイル名: ${
+          file.name
+        }, ファイルサイズ: ${returnFileSize(file.size)}.`;
         const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
 
@@ -345,7 +347,7 @@ function updateImageDisplay() {
 独自の `validFileType()` 関数は {{domxref("File")}} オブジェクトを引数として取り、それから {{jsxref("Array.prototype.includes()")}} を使用して、 `fileTypes` の中の値にファイルの `type` プロパティに一致するものがあるかどうかをチェックします。一致するものが見つかった場合は、関数は `true` を返します。一致するものが見つからなければ、 `false` を返します。
 
 ```js
-// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
+// https://developer.mozilla.org/ja/docs/Web/Media/Formats/Image_types
 const fileTypes = [
   "image/apng",
   "image/bmp",

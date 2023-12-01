@@ -1,8 +1,6 @@
 ---
 title: アクセシビリティを推進する HTML の機能とは？
-slug: >-
-  Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
-original_slug: Learn/Common_questions/HTML_features_for_accessibility
+slug: Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
 ---
 
 以下のコンテンツは、さまざまな障害を持つ人々にとってウェブページのアクセシビリティをより高めるために使用できる HTML の特定の機能について説明しています。

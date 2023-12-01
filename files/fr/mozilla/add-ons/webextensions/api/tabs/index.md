@@ -1,7 +1,6 @@
 ---
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
 
 {{AddonSidebar}}

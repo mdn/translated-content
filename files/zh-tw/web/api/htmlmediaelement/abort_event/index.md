@@ -1,7 +1,6 @@
 ---
 title: abort
 slug: Web/API/HTMLMediaElement/abort_event
-original_slug: Web/Events/abort
 ---
 
 {{APIRef}}

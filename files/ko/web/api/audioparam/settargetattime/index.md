@@ -28,25 +28,7 @@ var paramRef = param.setTargetAtTime(target, startTime, timeConstant);
 
 ## 설명
 
-변화는 `startTime` 에 명시된 시간에 시작해 `target` 매개변수에 의해 주어진 값을 향해 지수적으로 움직입니다. `timeConstant` 매개변수에 의해 정의된 감소율은 지수적입니다. 그러므로 값은 절대 `target` 에 완벽히 도달하지 못할 것이지만, `timeConstant` 길이의 각 시간 단계 이후에, 값은 또 다른 <math>
-  <semantics>
-    <mrow>
-      <mn>1</mn>
-      <mo>-</mo>
-      <msup>
-        <mi>e</mi>
-        <mrow>
-          <mo>-</mo>
-          <mn>1</mn>
-        </mrow>
-      </msup>
-      <mo>≈</mo>
-      <mn>63.2</mn>
-      <mtext>%</mtext>
-    </mrow>
-    <annotation encoding="TeX">1 - e^{-1} \대략 63.2%</annotation>
-  </semantics>
-</math> 에 의해 `target` 에 다가가게 될 것입니다. (일차 선형 연속 시불변 시스템을 사용하는) 완전한 공식은 [Web
+변화는 `startTime` 에 명시된 시간에 시작해 `target` 매개변수에 의해 주어진 값을 향해 지수적으로 움직입니다. `timeConstant` 매개변수에 의해 정의된 감소율은 지수적입니다. 그러므로 값은 절대 `target` 에 완벽히 도달하지 못할 것이지만, `timeConstant` 길이의 각 시간 단계 이후에, 값은 또 다른 <math><semantics><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>≈</mo><mn>63.2</mn><mtext>%</mtext></mrow><annotation encoding="TeX">1 - e^{-1} \대략 63.2%</annotation></semantics></math> 에 의해 `target` 에 다가가게 될 것입니다. (일차 선형 연속 시불변 시스템을 사용하는) 완전한 공식은 [Web
 Audio 명세서](https://webaudio.github.io/web-audio-api/#dom-audioparam-settargetattime)에서 확인할 수 있습니다.
 
 만약 특정한 시간까지 target 값에 절대적으로 도달할 필요가 있다면, {{domxref("AudioParam.exponentialRampToValueAtTime()")}}를 사용할 수 있습니다. 그러나, 수학적인 이유로, 이 메서드는 현재 값이나 target 값이 `0` 이면 작동하지 않습니다.
@@ -59,16 +41,16 @@ Audio 명세서](https://webaudio.github.io/web-audio-api/#dom-audioparam-settar
 
 시간이 진행함에 따라 어떻게 값이 0%에서 100%로 변화하는지에 대해서는 아래의 표를 참고해 보세요.
 
-| `startTime` 이후로의 시간 | 값                             |
-| ---------------------- | --------------------------------- |
-| `0 * timeConstant`     | 0%                                |
-| `0.5 * timeConstant`   | 39.3%                             |
-| `1 * timeConstant`     | 63.2%                             |
-| `2 * timeConstant`     | 86.5%                             |
-| `3 * timeConstant`     | 95.0%                             |
-| `4 * timeConstant`     | 98.2%                             |
-| `5 * timeConstant`     | 99.3%                             |
-| `n * timeConstant`     | <math><semantics><mrow><mn>1</mn> |
+| `startTime` 이후로의 시간 | 값                                |
+| ------------------------- | --------------------------------- |
+| `0 * timeConstant`        | 0%                                |
+| `0.5 * timeConstant`      | 39.3%                             |
+| `1 * timeConstant`        | 63.2%                             |
+| `2 * timeConstant`        | 86.5%                             |
+| `3 * timeConstant`        | 95.0%                             |
+| `4 * timeConstant`        | 98.2%                             |
+| `5 * timeConstant`        | 99.3%                             |
+| `n * timeConstant`        | <math><semantics><mrow><mn>1</mn> |
 
 <math>
   <semantics>
@@ -98,14 +80,14 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 // 예제를 위한 기본 변수를 설정합니다
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var myAudio = document.querySelector("audio");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
-var atTimePlus = document.querySelector('.at-time-plus');
-var atTimeMinus = document.querySelector('.at-time-minus');
+var atTimePlus = document.querySelector(".at-time-plus");
+var atTimeMinus = document.querySelector(".at-time-minus");
 
 // MediaElementAudioSourceNode를 생성합니다
 // HTMLMediaElement를 노드 내로 전달합니다
@@ -122,15 +104,15 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // onclick이 발생했을 때 무언가를 하기 위해 버튼을 설정합니다
-atTimePlus.onclick = function() {
+atTimePlus.onclick = function () {
   currGain = 1.0;
   gainNode.gain.setTargetAtTime(1.0, audioCtx.currentTime + 1, 0.5);
-}
+};
 
-atTimeMinus.onclick = function() {
+atTimeMinus.onclick = function () {
   currGain = 0;
   gainNode.gain.setTargetAtTime(0, audioCtx.currentTime + 1, 0.5);
-}
+};
 ```
 
 ## 명세서

@@ -1,7 +1,6 @@
 ---
 title: tabs.print()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/print
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/print
 ---
 
 {{AddonSidebar()}}

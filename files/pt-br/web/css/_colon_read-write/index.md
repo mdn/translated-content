@@ -1,5 +1,5 @@
 ---
-title: ':read-write'
+title: ":read-write"
 slug: Web/CSS/:read-write
 ---
 
@@ -8,7 +8,8 @@ slug: Web/CSS/:read-write
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:read-write`** representa um elemento (como o `input` ou `textarea`) que é editável pelo usuário.
 
 ```css
-input:read-write, textarea:read-write {
+input:read-write,
+textarea:read-write {
   background-color: #bbf;
 }
 
@@ -30,8 +31,10 @@ Ao utilizar os controles de formulário `readonly` permite que o usuário verifi
 A pseudo-classe `:read-only` _(:somente-leitura)_ é usada para remover todo o estilo que faz com que as entradas pareçam campos clicáveis, fazendo com que pareçam outro parágrafo _somente-leitura_. A pseudo-classe `:read-write` _(:leitura-escrita)_ por outro lado, é usado para fornecer um estilo mais agradável para a `<textarea>`.
 
 ```css
-input:-moz-read-only, textarea:-moz-read-only,
-input:read-only, textarea:read-only {
+input:-moz-read-only,
+textarea:-moz-read-only,
+input:read-only,
+textarea:read-only {
   border: 0;
   box-shadow: none;
   background-color: white;
@@ -79,15 +82,11 @@ p:read-write {
 
 ## Especificações
 
-| Especificação                                                                                | Status                                   | Comentário                                                     |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-read-write', ':read-write') }} | {{ Spec2('HTML WHATWG') }}     | Nenhuma mudança.                                               |
-| {{ SpecName('HTML5 W3C', '#selector-read-write', ':read-write') }}     | {{ Spec2('HTML5 W3C') }}         | Define a semântica em relação à validação de HTML e restrição. |
-| {{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-write') }}         | {{ Spec2('CSS4 Selectors') }} | Define a pseudo-classe, mas não a semântica associada.         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.read-write")}}
+{{Compat}}
 
 ## Veja também
 

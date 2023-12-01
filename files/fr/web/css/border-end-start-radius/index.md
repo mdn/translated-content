@@ -1,7 +1,6 @@
 ---
 title: border-end-start-radius
 slug: Web/CSS/border-end-start-radius
-translation_of: Web/CSS/border-end-start-radius
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

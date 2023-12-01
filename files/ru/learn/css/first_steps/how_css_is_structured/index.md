@@ -1,21 +1,6 @@
 ---
 title: Как структурирован CSS
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Learn
-  - Комментарии
-  - Обучение
-  - Свойство
-  - Структура
-  - значения
-  - отступ
-  - селектор
-  - сокращение
-translation_of: Learn/CSS/First_steps/How_CSS_is_structured
-original_slug: Learn/CSS/First_steps/Как_структурирован_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

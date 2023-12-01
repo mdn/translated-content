@@ -1,7 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/@media/grid
-translation_of: Web/CSS/@media/grid
 ---
 
 {{CSSRef}}

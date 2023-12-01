@@ -1,7 +1,6 @@
 ---
 title: CompositionEvent
 slug: Web/API/CompositionEvent
-translation_of: Web/API/CompositionEvent
 ---
 
 {{APIRef("DOM Events")}}

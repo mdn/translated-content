@@ -1,7 +1,6 @@
 ---
 title: 2D breakout game using Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
-translation_of: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
 {{GamesSidebar}}

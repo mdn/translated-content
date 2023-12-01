@@ -1,12 +1,6 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
 
 {{JSRef}}
@@ -31,7 +25,7 @@ obj.toString()
 
 ```js
 var o = new Object();
-o.toString();           // вернёт [object Object]
+o.toString(); // вернёт [object Object]
 ```
 
 > **Примечание:** начиная с JavaScript 1.8.5, метод `toString()`, вызванный на {{jsxref("Global_Objects/null", "null")}}, возвращает строку `[object Null]`, а вызванный для {{jsxref("Global_Objects/undefined", "undefined")}}, возвращает строку `[object Undefined]`, как определено в 5-м издании ECMAScript и последующих исправлениях. Смотрите пример [использование метода toString() для определения типа объекта](#using_tostring_to_detect_object_type).
@@ -52,7 +46,7 @@ function Dog(name, breed, color, sex) {
   this.sex = sex;
 }
 
-theDog = new Dog('Болтушка', 'лабрадор', 'шоколадный', 'девочка');
+theDog = new Dog("Болтушка", "лабрадор", "шоколадный", "девочка");
 ```
 
 Если вы вызовете метод `toString()` на этом пользовательском объекте, он вернёт значение по умолчанию, унаследованное от {{jsxref("Global_Objects/Object", "Object")}}:
@@ -65,9 +59,17 @@ theDog.toString(); // вернёт [object Object]
 
 ```js
 Dog.prototype.toString = function dogToString() {
-  var ret = 'Собачка ' + this.name + ' - ' + this.sex + ', ' + this.color + ' ' + this.breed;
+  var ret =
+    "Собачка " +
+    this.name +
+    " - " +
+    this.sex +
+    ", " +
+    this.color +
+    " " +
+    this.breed;
   return ret;
-}
+};
 ```
 
 или
@@ -75,7 +77,7 @@ Dog.prototype.toString = function dogToString() {
 ```js
 Dog.prototype.toString = function dogToString() {
   return `Dog ${this.name} is a ${this.sex} ${this.color} ${this.breed}`;
-}
+};
 ```
 
 После объявления этого метода, при любом использовании переменной `theDog` в строковом контексте, JavaScript будет автоматически вызывать функцию `dogToString()`, возвращающую следующую строку:
@@ -91,13 +93,13 @@ Dog.prototype.toString = function dogToString() {
 ```js
 var toString = Object.prototype.toString;
 
-toString.call(new Date);    // [object Date]
-toString.call(new String);  // [object String]
-toString.call(Math);        // [object Math]
+toString.call(new Date()); // [object Date]
+toString.call(new String()); // [object String]
+toString.call(Math); // [object Math]
 
 // Начиная с JavaScript 1.8.5
-toString.call(undefined);   // [object Undefined]
-toString.call(null);        // [object Null]
+toString.call(undefined); // [object Undefined]
+toString.call(null); // [object Null]
 ```
 
 ## Спецификации

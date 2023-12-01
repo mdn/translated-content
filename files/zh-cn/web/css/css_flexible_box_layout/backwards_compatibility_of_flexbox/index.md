@@ -1,7 +1,6 @@
 ---
 title: Flexbox 的向下支持
 slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 ---
 
 {{CSSRef}}
@@ -16,7 +15,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 
 在 2009 年时，规则看起来很不一样。当时，要创建一个弹性容器你会用`display: box` ，会有一大堆 `box-*` 属性，和现在的弹性盒子显然完全不同。
 
-曾有一个[规范的更新](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/)将语法换成了 `display: flexbox` ——这仍旧是浏览器前缀。
+曾有一个[规范的更新](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/)将语法换成了 `display: flexbox`——这仍旧是浏览器前缀。
 
 最后规范被修改成，定义 `display: flex` 作为创建弹性容器的方式。对于最新版本规范的浏览器支持自此就尽善尽美了。
 
@@ -33,7 +32,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 
 ## 常见问题
 
-由于经过了发展，flexbox 的大多数问题与规范的变更有关，而且事实上我们很多人都试图在生产中环境中使用实验性的规范。如果您要确保与旧版本的浏览器（尤其是 IE10 和 11）向后兼容，则 [Flexbugs](https://github.com/philipwalton/flexbugs) 网站是一个有用的资源。您将看到许多列出的 bug 都适用于旧的浏览器版本，并且在当前的浏览器中已修复。每个错误都有列出的解决方法 - 可以节省许多时间。
+由于经过了发展，flexbox 的大多数问题与规范的变更有关，而且事实上我们很多人都试图在生产中环境中使用实验性的规范。如果你要确保与旧版本的浏览器（尤其是 IE10 和 11）向后兼容，则 [Flexbugs](https://github.com/philipwalton/flexbugs) 网站是一个有用的资源。你将看到许多列出的 bug 都适用于旧的浏览器版本，并且在当前的浏览器中已修复。每个错误都有列出的解决方法 - 可以节省许多时间。
 
 如果你想要支持非常旧的浏览器使用 flexbox 属性，在 CSS 中加入：
 
@@ -46,7 +45,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 }
 ```
 
-[Autoprefixer Online](https://autoprefixer.github.io/)是查看推荐使用前缀浏览器的有效方式，具体取决于您希望通过浏览器支持返回多少版本。您还可以从 [Can I Use](https://caniuse.com/#feat=flexbox) 中以获取浏览器支持的信息，以便在已经支持的浏览器中删除前缀
+[Autoprefixer Online](https://autoprefixer.github.io/)是查看推荐使用前缀浏览器的有效方式，具体取决于你希望通过浏览器支持返回多少版本。你还可以从 [Can I Use](https://caniuse.com/#feat=flexbox) 中以获取浏览器支持的信息，以便在已经支持的浏览器中删除前缀
 
 ## 有用的向下支持技术
 

@@ -1,7 +1,6 @@
 ---
 title: element.insertBefore
 slug: Web/API/Node/insertBefore
-translation_of: Web/API/Node/insertBefore
 ---
 
 {{APIRef("DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: intersection
 slug: Web/EXSLT/set/intersection
-translation_of: Web/EXSLT/set/intersection
 ---
 
 {{ XsltRef() }}

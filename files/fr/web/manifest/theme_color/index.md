@@ -1,7 +1,6 @@
 ---
 title: theme_color
 slug: Web/Manifest/theme_color
-translation_of: Web/Manifest/theme_color
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Manifest")}}

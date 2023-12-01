@@ -21,7 +21,6 @@ El siguiente selector selecciona únicamente los elementos {{HTMLElement("a")}} 
 
 ```css
 a:has(> img) {
-
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: "<rb> : l'élément de base ruby"
 slug: Web/HTML/Element/rb
-translation_of: Web/HTML/Element/rb
 ---
 
 {{HTMLSidebar}}

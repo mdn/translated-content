@@ -1,7 +1,6 @@
 ---
 title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
-translation_of: Web/API/ServiceWorker/state
 ---
 
 {{APIRef("Service Workers API")}}

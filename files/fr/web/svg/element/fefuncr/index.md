@@ -1,7 +1,6 @@
 ---
 title: <feFuncR>
 slug: Web/SVG/Element/feFuncR
-translation_of: Web/SVG/Element/feFuncR
 ---
 
 {{SVGRef}}

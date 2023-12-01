@@ -1,7 +1,6 @@
 ---
 title: permissions.onAdded
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
 ---
 
 {{AddonSidebar()}}

@@ -2,6 +2,7 @@
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 HTML 문서가 `designMode`로 전환되면 문서에서 `execCommand` 메서드를 사용할 수 있게 되는데 이것을 이용해서 문서의 편집 가능한 영역을 변경할 수 있습니다. 대부분의 명령어는 문서의 선택 영역에 영향(_볼드, 이탤릭 등_)을 미치고 나머지는 새 요소를 추가(링크 추가)하거나 전체 줄에 영향(들여쓰기)을 미칩니다. `contentEditable`을 사용할 때에 `execCommand()`를 호출하면 현재 활성화된 편집 요소에 영향을 미칩니다.
@@ -9,7 +10,7 @@ HTML 문서가 `designMode`로 전환되면 문서에서 `execCommand` 메서드
 ## 문법
 
 ```js
-bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ```
 
 ### 반환값

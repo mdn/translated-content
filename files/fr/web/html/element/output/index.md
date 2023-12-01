@@ -1,7 +1,6 @@
 ---
 title: "<output> : l'élément de sortie"
 slug: Web/HTML/Element/output
-translation_of: Web/HTML/Element/output
 ---
 
 {{HTMLSidebar}}
@@ -108,4 +107,4 @@ Le formulaire qui suit fournit un curseur dont la valeur peut aller de 0 à 100 
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.

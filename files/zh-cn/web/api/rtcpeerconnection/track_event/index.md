@@ -22,7 +22,7 @@ RTCPeerConnection.ontrack = eventHandler;
 本示例，从这篇文章的代码和视频调用的代码中，将传入的轨迹连接到将用于显示传入{{HTMLElement("video")}}元素。
 
 ```js
-pc.ontrack = function(event) {
+pc.ontrack = function (event) {
   document.getElementById("received_video").srcObject = event.streams[0];
   document.getElementById("hangup-button").disabled = false;
 };

@@ -1,7 +1,6 @@
 ---
 title: Stockage côté client
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
 
 {{LearnSidebar}}

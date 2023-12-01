@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: microphone'
+title: "Feature-Policy: microphone"
 slug: Web/HTTP/Headers/Permissions-Policy/microphone
-original_slug: Web/HTTP/Headers/Feature-Policy/microphone
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

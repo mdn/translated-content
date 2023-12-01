@@ -1,7 +1,6 @@
 ---
 title: Galerie d'images
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

@@ -1,7 +1,6 @@
 ---
 title: runtime.onStartup
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
 ---
 
 {{AddonSidebar()}}

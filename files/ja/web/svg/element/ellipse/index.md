@@ -10,7 +10,11 @@ slug: Web/SVG/Element/ellipse
 > **メモ:** 楕円要素は楕円の傾きを指定することはできません (例えば、45 度の角度で傾斜した楕円を描画したい場合)、しかし {{SVGAttr("transform")}} 属性を使用することで回転させることは可能です。
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -66,7 +70,7 @@ html,body,svg { height:100% }
 
 ## ブラウザー実装状況
 
-{{Compat("svg.elements.ellipse")}}
+{{Compat}}
 
 ## 関連情報
 

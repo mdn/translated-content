@@ -1,7 +1,6 @@
 ---
 title: コード例のガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-original_slug: MDN/Guidelines/Code_guidelines
 ---
 
 {{MDNSidebar}}

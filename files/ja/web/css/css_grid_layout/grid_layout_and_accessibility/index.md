@@ -1,7 +1,6 @@
 ---
 title: CSS グリッドレイアウトとアクセシビリティ
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 ---
 
 {{CSSRef}}
@@ -35,20 +34,22 @@ CSS に移行する際に、 CSS についてはコンテンツとマークア�
 この例では、グリッドを使用して、リンクを含む一連のボックスを配置しています。線ベースの配置プロパティを使って、ボックス 1 をグリッドの 2 列目に配置しました。視覚的には、リストの 4 番目の項目として表示されています。しかし、リンクからリンクへとタブで移動しても、ソースではボックス 1 が最初に来るので、タブの順序はボックス 1 から始まることになります。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -86,7 +87,7 @@ CSS に移行する際に、 CSS についてはコンテンツとマークア�
 - 構造化された、アクセシブルな文書から始める
   - : グリッドレイアウトでは、希望のレイアウトを実現するために文書ソースを変更する必要がありません。したがって、ページの出発点は、構造化されたアクセス可能な文書でなければなりません。CSS グリッドレイアウトの仕様にもあるように、グリッドレイアウトは*画面が最小の端末*にも適した構造を提供することができます。ユーザーがモバイルで長い文書をスクロールしている場合、そのユーザーにとっての優先順位は、ソースの中で何を優先すべきかによく対応します。
 - レスポンシブで責任感のあるグリッドの作成
-  - : [メディアクエリー](/ja/docs/Web/CSS/Media_queries)を使って列を追加したり、異なる画面サイズや端末に合わせて変更を加えたりすることになるでしょう。グリッドはとても便利で、例えば、モバイルのソース順で優先度の低い要素を、デスクトップのレイアウトではサイドバーに移動させることができます。ここで重要なのは、テストを続けることです。非常に簡単なテストは、*文書を tab で巡回してみることです*。この順番はまだ意味があるでしょうか。奇妙な方法でレイアウトの一番上から一番下に飛び移っていないか確認してみてください。もしそうであれば、レイアウトについて何か対処する必要があるということです。
+  - : [メディアクエリー](/ja/docs/Web/CSS/Media_queries)を使って列を追加したり、異なる画面サイズや端末に合わせて変更を加えたりすることになるでしょう。グリッドはとても便利で、例えば、モバイルのソース順で優先度の低い要素を、デスクトップのレイアウトではサイドバーに移動させることができます。ここで重要なのは、テストを続けることです。非常に簡単なテストは、_文書を tab で巡回してみることです_。この順番はまだ意味があるでしょうか。奇妙な方法でレイアウトの一番上から一番下に飛び移っていないか確認してみてください。もしそうであれば、レイアウトについて何か対処する必要があるということです。
 - ソースに戻る
   - : デザインプロセスの中で、グリッドを使って要素の位置を変更した場合は、文書に戻って論理的な順序を変更する必要があります。CSSグリッドレイアウトの良いところは、レイアウトに大きな変更を加えなくても、ソース内のアイテムを論理的な順序に合わせて移動させることができることです。これは、例えば {{cssxref("float")}} ベースのレイアウトで、様々なブレイクポイントのレイアウトを得るために文書ソースが重要な意味を持つのに比べて、大きな改善です。しかし、論理的な順序を維持するためにソースに戻って更新することを忘れないようにするのは、開発者である私たちの責任です。
 
@@ -102,6 +103,6 @@ CSS グリッドレイアウトや CSS フレックスボックスで注意し�
 
 アクセシビリティと CSS グリッドレイアウトに関する既存の資料はあまり多くありません。問題点の多くは CSS フレックスボックスに関するものと似ていますが、CSS フレックスボックスでも {{cssxref("flex-direction")}} と {{cssxref("order")}} プロパティを使ってコンテンツを並べ替える方法があります。
 
-ドキュメントソースの順序に従った視覚的な表示の概念は、_WCAG Techniques for Success Criteria - [Technique C27](https://www.w3.org/TR/WCAG20-TECHS/C27.html)_に詳細が記載されています。
+ドキュメントソースの順序に従った視覚的な表示の概念は、_WCAG Techniques for Success Criteria - [Technique C27](https://www.w3.org/TR/WCAG20-TECHS/C27.html)_ に詳細が記載されています。
 
-これらの問題について考え始める方法として、 CSS グリッドレイアウトを使用する際に、Léonie Watson 氏の_[Flexbox & the Keyboard Navigation Disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)_を読むことをお勧めします。また、[ffconf での Léonieの プレゼンテーションの動画](https://www.youtube.com/watch?v=spxT2CmHoPk)は、スクリーンリーダーが CSS での視覚的表現をどのように扱うかについて理解を深めるのに役立ちます。Adrian Roselli も [tab order in various browsers](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) を投稿していますが、これは Firefox にグリッドサポートが完全に実装される前のものです。
+これらの問題について考え始める方法として、 CSS グリッドレイアウトを使用する際に、Léonie Watson 氏の _[Flexbox & the Keyboard Navigation Disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)_ を読むことをお勧めします。また、[ffconf での Léonieの プレゼンテーションの動画](https://www.youtube.com/watch?v=spxT2CmHoPk)は、スクリーンリーダーが CSS での視覚的表現をどのように扱うかについて理解を深めるのに役立ちます。Adrian Roselli も [tab order in various browsers](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) を投稿していますが、これは Firefox にグリッドサポートが完全に実装される前のものです。

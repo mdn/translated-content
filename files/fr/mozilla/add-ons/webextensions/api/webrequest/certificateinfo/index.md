@@ -1,7 +1,6 @@
 ---
 title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 ---
 
 {{AddonSidebar()}}

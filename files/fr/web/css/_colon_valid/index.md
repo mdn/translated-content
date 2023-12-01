@@ -1,7 +1,6 @@
 ---
 title: ":valid"
 slug: Web/CSS/:valid
-translation_of: Web/CSS/:valid
 ---
 
 {{CSSRef}}

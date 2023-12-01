@@ -1,7 +1,6 @@
 ---
 title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
-translation_of: Web/API/CacheStorage/match
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

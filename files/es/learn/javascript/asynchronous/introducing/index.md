@@ -1,7 +1,6 @@
 ---
 title: Introducción a JavaScript asíncrono
 slug: Learn/JavaScript/Asynchronous/Introducing
-original_slug: Learn/JavaScript/Asynchronous/Concepts
 l10n:
   sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
@@ -259,7 +258,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 {{EmbedLiveSample("Event handlers", 600, 120)}}
 
-Esto es igual que los [manejadores de eventos que hemos encontrado en un módulo anterior](/es-US/docs/Learn/JavaScript/Building_blocks/Events), excepto que en lugar de que el evento sea una acción del usuario, como que el usuario haga clic en un botón, el evento es un cambio en el estado de algún objeto.
+Esto es igual que los [manejadores de eventos que hemos encontrado en un módulo anterior](/es/docs/Learn/JavaScript/Building_blocks/Events), excepto que en lugar de que el evento sea una acción del usuario, como que el usuario haga clic en un botón, el evento es un cambio en el estado de algún objeto.
 
 ## Callbacks (devoluciones de llamada)
 

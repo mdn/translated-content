@@ -1,7 +1,6 @@
 ---
 title: "SVG: Elément image"
 slug: Web/SVG/Tutorial/SVG_Image_Tag
-translation_of: Web/SVG/Tutorial/SVG_Image_Tag
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/polices_SVG", "Web/SVG/Tutoriel/Tools_for_SVG") }}

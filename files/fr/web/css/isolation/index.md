@@ -1,7 +1,6 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-translation_of: Web/CSS/isolation
 ---
 
 {{CSSRef}}

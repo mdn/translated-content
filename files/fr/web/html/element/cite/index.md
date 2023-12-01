@@ -1,7 +1,6 @@
 ---
 title: "<cite> : l'élément de citation"
 slug: Web/HTML/Element/cite
-translation_of: Web/HTML/Element/cite
 ---
 
 {{HTMLSidebar}}

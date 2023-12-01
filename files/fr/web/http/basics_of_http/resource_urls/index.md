@@ -1,7 +1,6 @@
 ---
 title: URLs de type ressource
 slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
-translation_of: Web/HTTP/Basics_of_HTTP/Resource_URLs
 ---
 
 {{HTTPSidebar}}

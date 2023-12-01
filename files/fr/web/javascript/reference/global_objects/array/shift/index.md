@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`shift()`** permet de retirer le **premier** élément d'un tablea
 ## Syntaxe
 
 ```js
-arr.shift()
+arr.shift();
 ```
 
 ### Valeur de retour
@@ -57,7 +56,7 @@ La méthode `shift()` peut être utilisée dans une boucle [`while`](/fr/docs/We
 
 ```js
 var noms = ["André", "Édouard", "Paul", "Christophe", "Jean"];
-while ( (i = noms.shift()) !== undefined ) {
+while ((i = noms.shift()) !== undefined) {
   console.log(i);
 }
 // André, Édouard, Paul, Christophe, Jean

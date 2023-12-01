@@ -1,8 +1,9 @@
 ---
-title: Gamepad.timestamp
+title: "Gamepad: timestamp プロパティ"
+short-title: timestamp
 slug: Web/API/Gamepad/timestamp
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad API")}}

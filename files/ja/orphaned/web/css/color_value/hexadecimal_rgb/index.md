@@ -1,7 +1,6 @@
 ---
 title: 16 進カラー構文
 slug: orphaned/Web/CSS/color_value/hexadecimal_rgb
-original_slug: Web/CSS/color_value/hexadecimal_rgb
 ---
 
 {{CSSRef}}

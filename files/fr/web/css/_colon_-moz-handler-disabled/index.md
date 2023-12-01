@@ -1,7 +1,6 @@
 ---
 title: ":-moz-handler-disabled"
 slug: Web/CSS/:-moz-handler-disabled
-translation_of: Web/CSS/:-moz-handler-disabled
 ---
 
 {{Non-standard_header}}{{CSSRef}}

@@ -2,7 +2,6 @@
 title: "Element: lostpointercapture イベント"
 short-title: lostpointercapture
 slug: Web/API/Element/lostpointercapture_event
-original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 l10n:
   sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---

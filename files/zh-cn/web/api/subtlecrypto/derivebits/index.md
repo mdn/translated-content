@@ -66,10 +66,10 @@ async function deriveSharedSecret(privateKey, publicKey) {
     {
       name: "ECDH",
       namedCurve: "P-384",
-      public: publicKey
+      public: publicKey,
     },
     privateKey,
-    128
+    128,
   );
 
   const buffer = new Uint8Array(sharedSecret, 0, 5);
@@ -86,19 +86,19 @@ async function deriveSharedSecret(privateKey, publicKey) {
 const generateAlicesKeyPair = window.crypto.subtle.generateKey(
   {
     name: "ECDH",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   false,
-  ["deriveBits"]
+  ["deriveBits"],
 );
 
 const generateBobsKeyPair = window.crypto.subtle.generateKey(
   {
     name: "ECDH",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   false,
-  ["deriveBits"]
+  ["deriveBits"],
 );
 
 Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
@@ -133,7 +133,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -151,11 +151,13 @@ async function getDerivedBits() {
       hash: "SHA-256",
     },
     keyMaterial,
-    256
+    256,
   );
 
   const buffer = new Uint8Array(derivedBits, 0, 5);
-  const derivedBitsValue = document.querySelector(".pbkdf2 .derived-bits-value");
+  const derivedBitsValue = document.querySelector(
+    ".pbkdf2 .derived-bits-value",
+  );
   derivedBitsValue.classList.add("fade-in");
   derivedBitsValue.addEventListener("animationend", () => {
     derivedBitsValue.classList.remove("fade-in");

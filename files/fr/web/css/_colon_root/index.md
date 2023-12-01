@@ -1,7 +1,6 @@
 ---
 title: ":root"
 slug: Web/CSS/:root
-translation_of: Web/CSS/:root
 ---
 
 {{CSSRef}}

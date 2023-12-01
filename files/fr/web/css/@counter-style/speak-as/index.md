@@ -1,7 +1,6 @@
 ---
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
-translation_of: Web/CSS/@counter-style/speak-as
 ---
 
 {{CSSRef}}

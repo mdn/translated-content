@@ -1,7 +1,6 @@
 ---
 title: CSS の一般的な質問
 slug: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/Common_CSS_Questions
 l10n:
   sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---

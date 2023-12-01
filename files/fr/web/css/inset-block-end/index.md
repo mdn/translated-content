@@ -1,7 +1,6 @@
 ---
 title: inset-block-end
 slug: Web/CSS/inset-block-end
-translation_of: Web/CSS/inset-block-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

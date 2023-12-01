@@ -1,8 +1,9 @@
 ---
 title: CORS
 slug: Glossary/CORS
-original_slug: Glossario/CORS
 ---
+
+{{GlossarySidebar}}
 
 **CORS** (Cross-Origin Resource Sharing) é um sistema que consiste na transmissão de {{Glossary("Header", "HTTP headers")}}, que determina se navegadores vão bloquear código JavaScript de acessarem respostas provindas de requisições entre origens.
 
@@ -39,5 +40,3 @@ A [same-origin security policy](/pt-BR/docs/Web/Security/Same-origin_policy) pro
 ### Referência técnica
 
 - [Especificação Fetch](https://fetch.spec.whatwg.org)
-
-{{QuickLinksWithSubpages("/pt-BR/docs/Glossary")}}

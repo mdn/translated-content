@@ -1,7 +1,6 @@
 ---
 title: Iniciando com Vue
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_iniciando
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

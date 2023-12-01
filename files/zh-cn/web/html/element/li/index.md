@@ -41,12 +41,15 @@ slug: Web/HTML/Element/li
 这个元素拥有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `value`
+
   - : 这个整数型属性表明了本 {{HTMLElement("li")}} 元素在有序列表（由 {{HTMLElement("ol")}} 元素定义）中的序号。本属性值只能用数字，即使列表使用罗马数字或字母来展示。随后的列表条目会从设置的值开始计数。**value** 属性对于无序列表 ({{HTMLElement("ul")}}) 或者菜单 ({{HTMLElement("menu")}}) 无效。
 
     > **备注：** 这个属性在 HTML 4 中废弃，但是在 HTML 5 中重新引入。
 
     > **备注：** 在 Gecko 9.0 之前，负值会错误地转换为 0。Gecko 9.0 开始，所有整数值都可以正确解析。
+
 - `type` {{Deprecated_inline}}
+
   - : 这个字符型属性表明了数字的类型：
 
     - `a`: 小写字母
@@ -63,9 +66,9 @@ slug: Web/HTML/Element/li
 
 ```html
 <ol>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ol>
 ```
 
@@ -77,9 +80,9 @@ slug: Web/HTML/Element/li
 
 ```html
 <ul>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
 ```
 

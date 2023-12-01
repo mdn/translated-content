@@ -1,7 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-translation_of: Web/HTML/Element/label
 ---
 
 {{HTMLSidebar}}
@@ -210,4 +209,4 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.

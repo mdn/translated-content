@@ -1,7 +1,6 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
-translation_of: Web/CSS/text-decoration
 ---
 
 {{CSSRef}}

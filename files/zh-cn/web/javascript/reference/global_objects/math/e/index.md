@@ -25,10 +25,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/E
 
 ```js
 function getNapier() {
-   return Math.E
+  return Math.E;
 }
 
-getNapier() // 2.718281828459045
+getNapier(); // 2.718281828459045
 ```
 
 ## 规范
@@ -39,6 +39,8 @@ getNapier() // 2.718281828459045
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log1p()")}}

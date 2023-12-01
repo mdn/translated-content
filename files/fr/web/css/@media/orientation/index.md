@@ -1,7 +1,6 @@
 ---
 title: orientation
 slug: Web/CSS/@media/orientation
-translation_of: Web/CSS/@media/orientation
 ---
 
 {{CSSRef}}

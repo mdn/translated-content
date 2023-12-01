@@ -1,7 +1,6 @@
 ---
 title: "<a>: El elemento ancla"
 slug: Web/HTML/Element/a
-original_slug: Web/HTML/Elemento/a
 ---
 
 {{HTMLSidebar}}
@@ -229,27 +228,6 @@ HTML 3.2 define sólo los atributos `name`, `href`, `rel`, `rev`, y `title`.
 ### Recomendaciones de accesibilidad
 
 Se abusa frecuntemente de las etiquetas de ancla (_anchor tags_) con el uso de los eventos `onclick` para crear pseudo-botones ajustando **href** a `"#"` o `"javascript:void(0)"` para prevenir la recarga de la página. Estos valores provocan comportamientos inesperados con los enlaces de copiado/dibujado, la apertura de enlaces en nuevas pestañas/ventanas, el guardado de enlaces (_bookmarking_), y cuando JavaScript está aún descargando, esto arroja errores, o es deshabilitado. Esto tambíen lleva a semánticas (_semantics_) incorrectas para tecnologías de asistencia (p.ej., lectores de pantalla). En estos casos, se recomienda utilizar un {{HTMLElement("button")}} en su lugar. En general, sólo se debe utilizar una ancla (_anchor_) para navegación utilizando una URL adecuada.
-
-### Cliceo y enfoque
-
-Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acuerdo al navegador y el sistema operativo.
-
-¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
-
-| Navegadores de escritorio                                                                      | Windows 8.1 | OS X 10.9                       |
-| ---------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
-| Firefox 30.0                                                                                   | Si          | Si                              |
-| Chrome ≥39 ([Chromium bug 388666](https://code.google.com/p/chromium/issues/detail?id=388666)) | Si          | Si                              |
-| Safari 7.0.5                                                                                   | N/A         | Sólo cuando tiene un `tabindex` |
-| Internet Explorer 11                                                                           | Si          | N/A                             |
-| Presto (Opera 12)                                                                              | Si          | Si                              |
-
-¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
-
-| Navegadores móviles | iOS 7.1.2                       | Android 4.4.4                   |
-| ------------------- | ------------------------------- | ------------------------------- |
-| Safari Mobile       | Sólo cuando tiene un `tabindex` | N/A                             |
-| Chrome 35           | ???                             | Sólo cuando tiene un `tabindex` |
 
 ## Especificaciones
 

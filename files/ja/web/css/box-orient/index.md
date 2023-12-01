@@ -61,8 +61,8 @@ HTML DOM 要素は既定で中身をインライン軸に沿ってレイアウ�
 
 ```html
 <div class="example">
-    <p>I will be to the left of my sibling.</p>
-    <p>I will be to the right of my sibling.</p>
+  <p>I will be to the left of my sibling.</p>
+  <p>I will be to the right of my sibling.</p>
 </div>
 ```
 
@@ -70,14 +70,14 @@ HTML DOM 要素は既定で中身をインライン軸に沿ってレイアウ�
 
 ```css
 div.example {
-  display: -moz-box;                /* Mozilla */
-  display: -webkit-box;             /* WebKit */
-  display: box;                     /* 仕様書通り */
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  display: box; /* 仕様書通り */
 
   /* 子は垂直に向けられる */
-  -moz-box-orient: horizontal;      /* Mozilla */
-  -webkit-box-orient: horizontal;   /* WebKit */
-  box-orient: horizontal;           /* 仕様書通り */
+  -moz-box-orient: horizontal; /* Mozilla */
+  -webkit-box-orient: horizontal; /* WebKit */
+  box-orient: horizontal; /* 仕様書通り */
 }
 ```
 

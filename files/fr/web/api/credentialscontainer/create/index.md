@@ -1,7 +1,6 @@
 ---
 title: CredentialsContainer.create()
 slug: Web/API/CredentialsContainer/create
-translation_of: Web/API/CredentialsContainer/create
 ---
 
 {{APIRef("Credential Management")}}{{SeeCompatTable}}

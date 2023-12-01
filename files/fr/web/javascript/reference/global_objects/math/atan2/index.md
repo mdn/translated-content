@@ -1,7 +1,6 @@
 ---
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La fonction **`Math.atan2()`** renvoie l'arc tangente du quotient de ses argumen
 ## Syntaxe
 
 ```js
-Math.atan2(y, x)
+Math.atan2(y, x);
 ```
 
 ### Paramètres

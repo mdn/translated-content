@@ -1,7 +1,6 @@
 ---
 title: PerformanceTiming.domContentLoadedEventEnd
 slug: Web/API/PerformanceTiming/domContentLoadedEventEnd
-translation_of: Web/API/PerformanceTiming/domContentLoadedEventEnd
 ---
 
 {{APIRef("Navigation Timing")}}

@@ -1,7 +1,6 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
-translation_of: Web/HTTP/Status/204
 ---
 
 {{HTTPSidebar}}

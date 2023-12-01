@@ -1,7 +1,6 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-translation_of: Web/HTML/Global_attributes/is
 ---
 
 {{HTMLSidebar("Global_attributes")}}

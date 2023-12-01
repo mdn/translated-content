@@ -1,15 +1,6 @@
 ---
-title: ':focus'
+title: ":focus"
 slug: Web/CSS/:focus
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Веб
-  - Псевдо-классы
-  - Раскладка
-translation_of: Web/CSS/:focus
 ---
 
 {{CSSRef}}
@@ -34,8 +25,8 @@ input:focus {
 ### HTML
 
 ```html
-<input class="red-input" value="Я буду красным, если на меня попадёт фокус">
-<input class="lime-input" value="Я буду лаймовым при фокусе">
+<input class="red-input" value="Я буду красным, если на меня попадёт фокус" />
+<input class="lime-input" value="Я буду лаймовым при фокусе" />
 ```
 
 ### CSS

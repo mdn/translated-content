@@ -1,8 +1,8 @@
 ---
 title: Document.contentType
 slug: Web/API/Document/contentType
-translation_of: Web/API/Document/contentType
 ---
+
 {{ ApiRef("DOM") }}{{Non-standard_header}}
 
 Возвращает MIME-тип при рендеринге страницы. Информация может поступать из заголовка HTTP или других ресурсов MIME.

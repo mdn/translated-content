@@ -1,7 +1,6 @@
 ---
 title: management.onInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 ---
 
 {{AddonSidebar()}}

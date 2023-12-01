@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
 
 {{JSRef}}
@@ -19,19 +18,19 @@ Les drapeaux de la propriété `flags` sont rangés par ordre alphabétique de g
 ### Utiliser `flags`
 
 ```js
-/toto/ig.flags;   // "gi"
-/truc/myu.flags;  // "muy"
+/toto/gi.flags; // "gi"
+/truc/muy.flags; // "muy"
 ```
 
 ## Prothèse d'émulation (_polyfill_)
 
 ```js
 if (RegExp.prototype.flags === undefined) {
-  Object.defineProperty(RegExp.prototype, 'flags', {
+  Object.defineProperty(RegExp.prototype, "flags", {
     configurable: true,
-    get: function() {
+    get: function () {
       return this.toString().match(/[gimuy]*$/)[0];
-    }
+    },
   });
 }
 ```

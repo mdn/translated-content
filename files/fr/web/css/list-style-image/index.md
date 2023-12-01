@@ -1,7 +1,6 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-translation_of: Web/CSS/list-style-image
 ---
 
 {{CSSRef}}

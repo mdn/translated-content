@@ -1,7 +1,6 @@
 ---
 title: column-width
 slug: Web/CSS/column-width
-translation_of: Web/CSS/column-width
 ---
 
 {{CSSRef}}

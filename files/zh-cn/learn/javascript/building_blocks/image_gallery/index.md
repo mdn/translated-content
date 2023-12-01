@@ -1,7 +1,6 @@
 ---
 title: 图片库
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-original_slug: learn/JavaScript/Building_blocks/相片走廊
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
@@ -11,7 +10,7 @@ original_slug: learn/JavaScript/Building_blocks/相片走廊
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>请读完本章其他所有小节的内容后再开始这个测验。</td>
     </tr>
     <tr>

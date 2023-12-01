@@ -1,7 +1,6 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
-translation_of: Web/CSS/font-variant-ligatures
 ---
 
 {{CSSRef}}

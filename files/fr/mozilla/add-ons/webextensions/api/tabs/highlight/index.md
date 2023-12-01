@@ -1,7 +1,6 @@
 ---
 title: tabs.highlight()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 ---
 
 {{AddonSidebar()}}Met en évidence (sélectionné) un ou plusieurs onglets. Les onglets sont spécifiés à l'aide d'un identifiant de fenêtre et d'une plage d'indices de tabulation.

@@ -1,7 +1,6 @@
 ---
 title: Utiliser JavaScript au sein d'une page web
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
-translation_of: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
 ---
 
 Dans cet article, nous verrons comment améliorer les pages web en ajoutant du code JavaScript dans des documents HTML.

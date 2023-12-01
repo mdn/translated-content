@@ -1,7 +1,6 @@
 ---
 title: Outils pour SVG
 slug: Web/SVG/Tutorial/Tools_for_SVG
-translation_of: Web/SVG/Tutorial/Tools_for_SVG
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/SVG_Image_Tag") }}

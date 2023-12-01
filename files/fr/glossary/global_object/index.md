@@ -1,8 +1,9 @@
 ---
 title: Objet global
 slug: Glossary/Global_object
-translation_of: Glossary/Global_object
 ---
+
+{{GlossarySidebar}}
 
 Un objet global est un {{glossary("Object","objet")}} qui existe toujours dans la {{glossary("Global scope","portée globale")}}.
 

@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.index()
 slug: Web/API/IDBObjectStore/index
-translation_of: Web/API/IDBObjectStore/index
 ---
 
 {{APIRef("IndexedDB")}}

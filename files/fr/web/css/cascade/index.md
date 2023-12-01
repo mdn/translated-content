@@ -1,7 +1,6 @@
 ---
 title: Introduction à la cascade CSS
 slug: Web/CSS/Cascade
-translation_of: Web/CSS/Cascade
 l10n:
   sourceCommit: 193543a2af9350e76864a93bb751270979305cd0
 ---

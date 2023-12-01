@@ -1,13 +1,8 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 Метод **`Date.UTC()`** принимает те же самые параметры, что и самая длинная форма конструктора {{jsxref("Global_Objects/Date", "Date")}} и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.

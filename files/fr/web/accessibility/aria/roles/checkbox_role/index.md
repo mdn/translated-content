@@ -1,7 +1,6 @@
 ---
 title: Utilisation du rôle checkbox
 slug: Web/Accessibility/ARIA/Roles/checkbox_role
-translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 ---
 
 ### Description

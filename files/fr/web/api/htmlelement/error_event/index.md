@@ -1,7 +1,6 @@
 ---
 title: "Element : évènement error"
 slug: Web/API/HTMLElement/error_event
-translation_of: Web/API/Element/error_event
 ---
 
 {{APIRef}}

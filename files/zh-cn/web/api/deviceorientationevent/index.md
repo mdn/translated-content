@@ -25,8 +25,8 @@ slug: Web/API/DeviceOrientationEvent
 ## 例子
 
 ```js
-window.addEventListener('deviceorientation', function(event) {
-  console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
+window.addEventListener("deviceorientation", function (event) {
+  console.log(event.alpha + " : " + event.beta + " : " + event.gamma);
 });
 ```
 

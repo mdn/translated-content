@@ -1,7 +1,6 @@
 ---
 title: Element.releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
-translation_of: Web/API/Element/releasePointerCapture
 ---
 
 {{APIRef("DOM")}}

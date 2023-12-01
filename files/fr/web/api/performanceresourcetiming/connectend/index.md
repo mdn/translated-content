@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming.connectEnd
 slug: Web/API/PerformanceResourceTiming/connectEnd
-translation_of: Web/API/PerformanceResourceTiming/connectEnd
 ---
 
 {{APIRef("Resource Timing API")}}

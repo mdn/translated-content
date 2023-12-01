@@ -1,7 +1,6 @@
 ---
 title: CredentialsContainer.preventSilentAccess()
 slug: Web/API/CredentialsContainer/preventSilentAccess
-translation_of: Web/API/CredentialsContainer/preventSilentAccess
 ---
 
 {{APIRef("")}}{{SeeCompatTable}}

@@ -1,8 +1,9 @@
 ---
 title: Tableau (Array)
 slug: Glossary/Array
-translation_of: Glossary/array
 ---
+
+{{GlossarySidebar}}
 
 En anglais, un **_array_**, parfois appelé en français « tableau » ou « liste », est une collection de données ({{Glossary("Primitive","primitives")}} ou {{Glossary("Object","objets")}} selon le langage). Ils sont utilisés pour stocker plusieurs valeurs dans une seule variable. Ceci est comparé à une variable qui ne peut stocker qu'une seule valeur.
 

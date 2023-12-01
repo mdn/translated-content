@@ -21,7 +21,7 @@ l10n:
 ## 구문
 
 ```js
-requestAnimationFrame(callback)
+requestAnimationFrame(callback);
 ```
 
 ### 파라미터

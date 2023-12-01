@@ -139,9 +139,15 @@ margin-left: unset;
 ### ピクセル数とパーセント値を使用した左マージンの設定
 
 ```css
-.content { margin-left: 5%; }
-.sidebox { margin-left: 10px; }
-.logo    { margin-left: -5px; }
+.content {
+  margin-left: 5%;
+}
+.sidebox {
+  margin-left: 10px;
+}
+.logo {
+  margin-left: -5px;
+}
 ```
 
 ## 仕様書

@@ -1,9 +1,9 @@
 ---
 title: Первичные данные
 slug: Glossary/Origin
-translation_of: Glossary/Origin
-original_slug: Глоссарий/origin
 ---
+
+{{GlossarySidebar}}
 
 Браузер отправляет серверу **первичные данные** - протокол, _хостинг, домен_, _порт соединения через_ {{Glossary("URL")}}. Два объекта одинаковые если протокол, хост, домен и порт одинаковые.
 

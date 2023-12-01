@@ -1,11 +1,6 @@
 ---
 title: Использование data-* атрибутов
 slug: Learn/HTML/Howto/Use_data_attributes
-tags:
-  - Guide
-  - HTML
-translation_of: Learn/HTML/Howto/Use_data_attributes
-original_slug: Web/Guide/HTML/Using_data_attributes
 ---
 
 [HTML5](/ru/docs/Web/Guide/HTML/HTML5) спроектирован с возможностью расширения данных ассоциированных с каким-либо элементом, но в то же время не обязательно имеющих определённое значение. [`data-*` атрибуты](/ru/docs/Web/HTML/Global_attributes#data-*) позволяют хранить дополнительную информацию в стандартных элементах HTML, без хаков вроде нестандартных атрибутов, лишних DOM-свойств или {{domxref("Node.setUserData()")}}.

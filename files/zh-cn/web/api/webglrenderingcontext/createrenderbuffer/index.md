@@ -26,8 +26,8 @@ None.
 ### 创建一个渲染缓冲区
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var renderBuffer = gl.createRenderBuffer();
 ```
 

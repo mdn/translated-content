@@ -51,7 +51,7 @@ send(body)
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.onload = () => {
   // リクエストの終了。ここの処理を実行します。
@@ -68,16 +68,17 @@ xhr.send(null);
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+xhr.open("POST", "/server", true);
 
 //リクエストに従って正しいヘッダー情報を送信してください
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = () => { // 状態が変化すると関数が呼び出されます。
+xhr.onreadystatechange = () => {
+  // 状態が変化すると関数が呼び出されます。
   if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
     // リクエストの終了。ここの処理を実行します。
   }
-}
+};
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());
 // xhr.send(document);

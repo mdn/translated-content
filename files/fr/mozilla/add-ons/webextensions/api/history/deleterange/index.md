@@ -1,7 +1,6 @@
 ---
 title: history.deleteRange()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 ---
 
 {{AddonSidebar()}}

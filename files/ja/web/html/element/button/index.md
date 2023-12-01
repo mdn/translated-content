@@ -20,9 +20,11 @@ l10n:
 - `autofocus`
   - : 論理属性で、ページ読み込み時にこのボタンが入力[フォーカス](/ja/docs/Web/API/HTMLElement/focus)を持つべきであることを指定します。**文書中の要素一つだけにこの属性を設定することができます。**
 - `autocomplete` {{non-standard_inline}}
+
   - : {{HTMLElement("button")}} におけるこの属性は標準外であり、Firefox 固有のものです。他のブラウザーとは異なり、 Firefox はページを再度読み込む時に[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。そのボタンに `autocomplete="off"` に設定すると、この機能が無効になります。[Firefox バグ 654072](https://bugzil.la/654072) をご覧ください。
 
 - `disabled`
+
   - : 論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。
 
     Firefox の動作は他のブラウザーと異なり、ページを再読み込みしても {{HTMLElement("button")}} を[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](#autocomplete) 属性で制御できます。
@@ -70,12 +72,15 @@ l10n:
     - `_top`: レスポンスを最上位の閲覧コンテキスト (現在のコンテキストの祖先で、それ以前の祖先をもたない閲覧コンテキスト) に読み込みます。親要素がない場合、このオプションは `_self` と同じ振る舞いをします。
 
 - `name`
+
   - : このボタンの名前で、フォームデータの一部としてこのボタンの `value` との組み合わせで送信されます。
 
 - `popovertarget`
+
   - : `<button>` 要素をポップオーバーの制御ボタンに変換します。制御するポップオーバー要素の ID を値として受け取ります。詳しくは{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} のランディングページを参照してください。
 
 - `popovertargetaction`
+
   - : コントロール `<button>` によって制御されているポップオーバー要素に対して実行される動作を指定します。使用可能な値は以下の通りです。
 
     - `"hide"`
@@ -176,7 +181,7 @@ Firefox はフォーカスされたボタンに小さな点線の境界線を表
 色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/intro/wcag) によれば、文字列コンテンツで 4.5:1 以上、大きめの文字列で 3:1 以上のコントラスト比が求められています。 (大きめの文字列とは、 {{cssxref("font-weight", "bold")}} の 18.66px 以上、または 24px 以上と定義されています。)
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ### クリックとフォーカス

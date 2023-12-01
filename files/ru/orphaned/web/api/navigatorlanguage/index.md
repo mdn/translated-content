@@ -1,8 +1,6 @@
 ---
 title: NavigatorLanguage
 slug: orphaned/Web/API/NavigatorLanguage
-translation_of: Web/API/NavigatorLanguage
-original_slug: Web/API/NavigatorLanguage
 ---
 
 {{APIRef("HTML DOM")}}
@@ -26,14 +24,11 @@ _Интерфейс_ _`NavigatorLanguage`_ _ничего не реализовы
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                           | Комментарий                                                                                      |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', '#navigatorlanguage', 'NavigatorLanguage')}} | {{Spec2('HTML WHATWG')}} | Со времени последнего снимка {{SpecName('HTML5 W3C')}}, языковое свойство было добавлено. |
-| {{SpecName('HTML5 W3C', '#navigatorlanguage', 'NavigatorLanguage')}} | {{Spec2('HTML5 W3C')}}     | Первоначальная спецификация; снимок ранней версии {{SpecName('HTML WHATWG')}}.          |
+{{Specifications}}
 
 ## Доступность в браузерах
 
-{{Compat("api.NavigatorLanguage")}}
+{{Compat}}
 
 ## Смотрите также
 

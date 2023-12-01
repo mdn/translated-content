@@ -1,7 +1,6 @@
 ---
 title: "Prueba tus habilidades: controles HTML5"
 slug: Learn/Forms/Test_your_skills:_HTML5_controls
-original_slug: Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5
 ---
 
 {{learnsidebar}}

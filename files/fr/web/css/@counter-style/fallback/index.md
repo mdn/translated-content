@@ -1,7 +1,6 @@
 ---
 title: fallback
 slug: Web/CSS/@counter-style/fallback
-translation_of: Web/CSS/@counter-style/fallback
 ---
 
 {{CSSRef}}

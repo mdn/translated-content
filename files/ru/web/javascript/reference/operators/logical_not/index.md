@@ -1,14 +1,8 @@
 ---
 title: Логическое НЕ (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_not
 ---
+
 {{jsSidebar("Operators")}}
 
 Логический оператор НЕ (`!`) (логическое отрицание) меняет логическое значение операнда с истины в ложь и наоборот. Обычно он используется с {{jsxref("Boolean", "булевыми")}} (логическими) значениями. При использовании с любыми другими значениями, если операнд может быть преобразован в `true`, то вернёт `false`; в противном случае он возвращается `true`.
@@ -18,7 +12,7 @@ browser-compat: javascript.operators.logical_not
 ## Синтаксис
 
 ```js
-!expr
+!expr;
 ```
 
 ## Описание
@@ -44,10 +38,10 @@ browser-compat: javascript.operators.logical_not
 В следующем коде показаны примеры использования оператора `!` (логическое НЕ).
 
 ```js
-n1 = !true               // !t вернёт false
-n2 = !false              // !f вернёт true
-n3 = !''                 // !f вернёт true
-n4 = !'Cat'              // !t вернёт false
+n1 = !true; // !t вернёт false
+n2 = !false; // !f вернёт true
+n3 = !""; // !f вернёт true
+n4 = !"Cat"; // !t вернёт false
 ```
 
 ### Двойное НЕ (`!!`)
@@ -59,12 +53,12 @@ n4 = !'Cat'              // !t вернёт false
   "Boolean")}}.
 
 ```js
-n1 = !!true                   // !!truthy вернёт true
-n2 = !!{}                     // !!truthy вернёт true: любой объект - истинноподобный...
-n3 = !!(new Boolean(false))   // ...даже Boolean-объект со значением false из вызова .valueOf()!
-n4 = !!false                  // !!falsy вернёт false
-n5 = !!""                     // !!falsy вернёт false
-n6 = !!Boolean(false)         // !!falsy вернёт false
+n1 = !!true; // !!truthy вернёт true
+n2 = !!{}; // !!truthy вернёт true: любой объект - истинноподобный...
+n3 = !!new Boolean(false); // ...даже Boolean-объект со значением false из вызова .valueOf()!
+n4 = !!false; // !!falsy вернёт false
+n5 = !!""; // !!falsy вернёт false
+n6 = !!Boolean(false); // !!falsy вернёт false
 ```
 
 ### Конвертация операторов НЕ
@@ -72,13 +66,13 @@ n6 = !!Boolean(false)         // !!falsy вернёт false
 Следующая операция с **булевыми значениями**:
 
 ```js
-!!bCondition
+!!bCondition;
 ```
 
 всегда эквивалентна:
 
 ```js
-bCondition
+bCondition;
 ```
 
 ## Спецификации

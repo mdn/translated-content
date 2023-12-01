@@ -1,13 +1,6 @@
 ---
 title: URL()
 slug: Web/API/URL/URL
-tags:
-  - API
-  - Constructor
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/URL
 ---
 
 {{APIRef("URL API")}}
@@ -41,32 +34,32 @@ const url = new URL(url [, base])
 
 ### Исключения
 
-| Исключение                       | Объяснение                                                                                                |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Исключение              | Объяснение                                                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | {{jsxref("TypeError")}} | `url` (в случае с абсолютным URL-адресом) или `base` + `url` (в случае с относительным URL-адресом) является невалидным URL-адресом. |
 
 ## Примеры
 
 ```js
 // Базовые URL-адреса
-let m = 'https://developer.mozilla.org';
-let a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
-let b = new URL(m);                                     // => 'https://developer.mozilla.org/'
+let m = "https://developer.mozilla.org";
+let a = new URL("/", m); // => 'https://developer.mozilla.org/'
+let b = new URL(m); // => 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/en-US/docs'
-let d = new URL('/en-US/docs', b);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // => 'https://developer.mozilla.org/en-US/docs'
+new URL("en-US/docs", b); // => 'https://developer.mozilla.org/en-US/docs'
+let d = new URL("/en-US/docs", b); // => 'https://developer.mozilla.org/en-US/docs'
+new URL("/en-US/docs", d); // => 'https://developer.mozilla.org/en-US/docs'
+new URL("/en-US/docs", a); // => 'https://developer.mozilla.org/en-US/docs'
 
-        new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                        // => 'https://developer.mozilla.org/en-US/docs'
+new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
+// => 'https://developer.mozilla.org/en-US/docs'
 
-        new URL('/en-US/docs', '');                    // Генерирует TypeError исключение так как '' не является валидным URL-адресом
-        new URL('/en-US/docs');                        // Генерирует TypeError исключение так как '/en-US/docs' не является валидным URL-адресом
-        new URL('http://www.example.com', );           // => 'http://www.example.com/'
-        new URL('http://www.example.com', b);          // => 'http://www.example.com/'
+new URL("/en-US/docs", ""); // Генерирует TypeError исключение так как '' не является валидным URL-адресом
+new URL("/en-US/docs"); // Генерирует TypeError исключение так как '/en-US/docs' не является валидным URL-адресом
+new URL("http://www.example.com"); // => 'http://www.example.com/'
+new URL("http://www.example.com", b); // => 'http://www.example.com/'
 
-        new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (см. относительные URL-адреса)
+new URL("//foo.com", "https://example.com"); // => 'https://foo.com' (см. относительные URL-адреса)
 ```
 
 ## Спецификации

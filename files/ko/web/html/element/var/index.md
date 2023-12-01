@@ -1,5 +1,5 @@
 ---
-title: '<var>: 변수 요소'
+title: "<var>: 변수 요소"
 slug: Web/HTML/Element/var
 ---
 
@@ -81,7 +81,7 @@ slug: Web/HTML/Element/var
 
 `<var>`를 사용해 수학 등식의 변수명을 나타내는 간단한 예제입니다.
 
-```html
+```plain
 A simple equation:
   x = y + 2
 ```

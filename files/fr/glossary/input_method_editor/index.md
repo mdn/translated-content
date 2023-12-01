@@ -1,8 +1,9 @@
 ---
 title: Méthode de saisie
 slug: Glossary/Input_method_editor
-translation_of: Glossary/Input_method_editor
 ---
+
+{{GlossarySidebar}}
 
 Une méthode de saisie (IME pour Input Method Editor) est un programme qui permet de saisir du texte via une interface utilisateur spécialisé. Les méthodes de saisie peuvent être utilisées dans de nombreuses situations dont :
 

@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.textInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTextInfo
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
 ---
 
 {{JSRef}}

@@ -10,7 +10,7 @@ slug: Web/API/MediaStreamTrack/clone
 ## 구문
 
 ```js
-const newTrack = track.clone()
+const newTrack = track.clone();
 ```
 
 ### 반환 값

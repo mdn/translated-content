@@ -1,14 +1,13 @@
 ---
 title: WebAssembly.Memory()
 slug: WebAssembly/JavaScript_interface/Memory
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 
 {{WebAssemblySidebar}}
 
 **`WebAssembly.Memory()`** 생성자는 WebAssembly `Instance`가 액세스하는 메모리의 원시 바이트를 가진 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(크기조정이 가능)인 새 `Memory` 객체를 만듭니다.
 
-메모리는 자바스크립트 혹은 WebAssembly 코드 안에서 만들어지며 자바스크립트 그리고 WebAssembly에서 접근하거나 변경이 가능합니다.
+메모리는 JavaScript 혹은 WebAssembly 코드 안에서 만들어지며 JavaScript 그리고 WebAssembly에서 접근하거나 변경이 가능합니다.
 
 ## Syntax
 

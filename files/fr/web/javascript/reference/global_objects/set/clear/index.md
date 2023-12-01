@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
 
 {{JSRef}}
@@ -27,13 +26,13 @@ var monSet = new Set();
 monSet.add(1);
 monSet.add("toto");
 
-monSet.size;        // 2
+monSet.size; // 2
 monSet.has("toto"); // true
 
 monSet.clear();
 
-monSet.size;       // 0
-monSet.has("truc")  // false
+monSet.size; // 0
+monSet.has("truc"); // false
 ```
 
 ## Spécifications

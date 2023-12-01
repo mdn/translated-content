@@ -1,7 +1,6 @@
 ---
 title: HTMLFormControlsCollection
 slug: Web/API/HTMLFormControlsCollection
-translation_of: Web/API/HTMLFormControlsCollection
 ---
 
 {{APIRef("HTML DOM")}}

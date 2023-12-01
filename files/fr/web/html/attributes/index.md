@@ -1,7 +1,6 @@
 ---
 title: Référence des attributs HTML
 slug: Web/HTML/Attributes
-translation_of: Web/HTML/Attributes
 ---
 
 {{HTMLSidebar}}
@@ -199,8 +198,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >,
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Keygen"><code>&#x3C;keygen></code></a
-        >,
         <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/Textarea"
@@ -332,19 +329,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
       <td>
         À partir de la spécification <i lang="en">HTML Media Capture</i>, spécifie qu'un nouveau fichier peut être capturé.
       </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Keygen#attr-challenge"
-          ><code>challenge</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Keygen"
-          ><code>&#x3C;keygen></code></a
-        >
-      </td>
-      <td>Une chaîne de challenge qui est envoyée avec la clef publique.</td>
     </tr>
     <tr>
       <td>
@@ -716,8 +700,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >,
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Keygen"><code>&#x3C;keygen></code></a
-        >,
         <a href="/fr/docs/Web/HTML/Element/Optgroup"
           ><code>&#x3C;optgroup></code></a
         >,
@@ -822,8 +804,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
           ><code>&#x3C;fieldset></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Keygen"><code>&#x3C;keygen></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/Label"><code>&#x3C;label></code></a
         >,
@@ -1192,19 +1172,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Keygen#attr-keytype"
-          ><code>keytype</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Keygen"
-          ><code>&#x3C;keygen></code></a
-        >
-      </td>
-      <td>Cet attribut définit le type de clé qui est généré.</td>
-    </tr>
-    <tr>
-      <td>
         <a href="/fr/docs/Web/HTML/Element/track#attr-kind"
           ><code>kind</code></a
         >
@@ -1472,8 +1439,6 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Keygen"><code>&#x3C;keygen></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
         >,

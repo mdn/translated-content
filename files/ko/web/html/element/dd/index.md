@@ -9,8 +9,6 @@ slug: Web/HTML/Element/dd
 
 {{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -68,7 +66,7 @@ slug: Web/HTML/Element/dd
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : 값이 `yes`면 너비의 끝에서 정의 텍스트의 줄이 바뀌지 않습니다. 기본값은 `no`입니다.
 
 ## 예제

@@ -1,7 +1,6 @@
 ---
 title: Que software eu preciso para construir um site?
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-original_slug: Learn/Common_questions/What_software_do_I_need
 ---
 
 Neste artigo nós destacamos quais _softwares_ você precisa para editar, fazer _upload_ ou visualizar um _site_.
@@ -140,7 +139,7 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>
@@ -221,7 +220,7 @@ Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td>
         <ul>
           <li>

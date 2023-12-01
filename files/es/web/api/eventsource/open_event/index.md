@@ -1,7 +1,6 @@
 ---
 title: EventSource.onopen
 slug: Web/API/EventSource/open_event
-original_slug: Web/API/EventSource/onopen
 ---
 
 {{APIRef('WebSockets API')}}

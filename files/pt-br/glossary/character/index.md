@@ -1,8 +1,9 @@
 ---
 title: Caractere
 slug: Glossary/Character
-original_slug: Glossario/Caractere
 ---
+
+{{GlossarySidebar}}
 
 Um _caractere_ é um símbolo (letras, números, pontuação) ou de controle não imprimível (por exemplo, carriage return ou hífen). {{glossary ("UTF-8")}} é o conjunto de caracteres mais comum e inclui os grafemas dos idiomas humanos mais populares.
 

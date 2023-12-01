@@ -1,7 +1,6 @@
 ---
 title: ":-moz-suppressed"
 slug: Web/CSS/:-moz-suppressed
-translation_of: Web/CSS/:-moz-suppressed
 ---
 
 {{Non-standard_header}}{{CSSRef}}

@@ -27,25 +27,25 @@ TypeError: Cannot delete property 'x' of #<Object> (Chrome)
 不可配置的属性并不特别常见，但是它们可以使用 {{jsxref("Object.defineProperty()")}} 或 {{jsxref("Object.freeze()")}} 创建。
 
 ```js example-bad
-'use strict';
-var obj = Object.freeze({name: 'Elsa', score: 157});
-delete obj.score;  // TypeError
+"use strict";
+var obj = Object.freeze({ name: "Elsa", score: 157 });
+delete obj.score; // TypeError
 
-'use strict';
+("use strict");
 var obj = {};
-Object.defineProperty(obj, 'foo', {value: 2, configurable: false});
-delete obj.foo;  // TypeError
+Object.defineProperty(obj, "foo", { value: 2, configurable: false });
+delete obj.foo; // TypeError
 
-'use strict';
+("use strict");
 var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray.pop();  // TypeError
+frozenArray.pop(); // TypeError
 ```
 
 也有一些内建于 JavaScript 的不可配置属性。你可能会尝试删除一个数学常量。
 
 ```js example-bad
-'use strict';
-delete Math.PI;  // TypeError
+"use strict";
+delete Math.PI; // TypeError
 ```
 
 ## 另见

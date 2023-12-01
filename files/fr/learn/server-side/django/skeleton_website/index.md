@@ -1,7 +1,6 @@
 ---
 title: "Django didactique Section 2: Créer le squelette du site web"
 slug: Learn/Server-side/Django/skeleton_website
-translation_of: Learn/Server-side/Django/skeleton_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}

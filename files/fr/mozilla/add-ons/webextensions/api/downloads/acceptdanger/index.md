@@ -1,7 +1,6 @@
 ---
 title: downloads.acceptDanger()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
 ---
 
 {{AddonSidebar()}}

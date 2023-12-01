@@ -1,7 +1,6 @@
 ---
 title: テーブルのレイアウトが崩れている
 slug: orphaned/Web/Compatibility_FAQ/Broken_Table_Layout.html
-original_slug: Web/Compatibility_FAQ/Broken_Table_Layout.html
 ---
 
 ## 概要

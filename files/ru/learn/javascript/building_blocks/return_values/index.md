@@ -1,7 +1,6 @@
 ---
 title: Возвращаемые значения функций
 slug: Learn/JavaScript/Building_blocks/Return_values
-translation_of: Learn/JavaScript/Building_blocks/Return_values
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/События", "Learn/JavaScript/Building_blocks")}}

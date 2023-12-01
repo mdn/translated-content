@@ -1,8 +1,9 @@
 ---
 title: Signature (functions) (シグネチャ (関数))
 slug: Glossary/Signature/Function
-original_slug: Glossary/Signature/関数
 ---
+
+{{GlossarySidebar}}
 
 **関数シグネチャ** (もしくは型シグネチャ、メソッドシグネチャ) は{{Glossary("Function", "関数")}}や{{Glossary("Method", "メソッド")}}の入力と出力を定義します。
 

@@ -1,7 +1,6 @@
 ---
 title: ":out-of-range"
 slug: Web/CSS/:out-of-range
-translation_of: Web/CSS/:out-of-range
 ---
 
 {{CSSRef}}

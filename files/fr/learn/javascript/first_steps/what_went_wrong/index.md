@@ -1,7 +1,6 @@
 ---
 title: Qu'est-ce qui n'a pas fonctionné ? Déboguer du code JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

@@ -1,7 +1,6 @@
 ---
 title: "Window: online event"
 slug: Web/API/Window/online_event
-translation_of: Web/API/Window/online_event
 ---
 
 {{APIRef}}

@@ -45,8 +45,14 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ```css
 .box {
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
-  url(big-star.png) center no-repeat, rebeccapurple;
+  background:
+    linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      ) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
 }
 ```
 
@@ -179,9 +185,12 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 다른 `background-*` 속성은 `background-image` 와 같은 방식으로 쉼표로 구분된 값을 가질 수도 있습니다:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+background-image: url(image1.png), url(image2.png), url(image3.png),
+  url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px,  top right;
+background-position:
+  10px 20px,
+  top right;
 ```
 
 다른 속성의 각 값은 다른 속성의 같은 위치에 있는 값과 일치합니다. 예를 들어, `image1` 의 `background-repeat` 값은 `no-repeat` 입니다. 그러나, 다른 속성의 값이 다른 경우 어떻게 됩니까? 답은 더 적은 수의 값이 순환한다는 것입니다 — 위의 예에서는 4 개의 배경 이미지가 있지만 2 개의 `background-position` 값만 있습니다. 처음 두 위치 값은 처음 두 이미지에 적용되고 다시 순환됩니다 — `image3` 에는 첫 번째 위치값이 제공되고, `image4` 에는 두 번째 위치값이 제공됩니다.

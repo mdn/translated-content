@@ -1,11 +1,6 @@
 ---
 title: Заголовки HTTP
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - Заголовки
-translation_of: Web/HTTP/Headers
-original_slug: Web/HTTP/Заголовки
 ---
 
 {{ HTTPSidebar }}
@@ -639,7 +634,7 @@ HTTP-заголовки сопровождают обмен данными по 
         Supported by Firefox 4, Firefox 5 for mobile, IE9, and a few major
         companies.
       </td>
-      <td>{{SpecName("Tracking")}}</td>
+      <td><a href="https://www.w3.org/TR/tracking-dnt/">Tracking Preference Expression (DNT)</a></td>
     </tr>
     <tr>
       <td>

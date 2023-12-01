@@ -1,7 +1,6 @@
 ---
 title: "Window: message event"
 slug: Web/API/Window/message_event
-translation_of: Web/API/Window/message_event
 ---
 
 {{APIRef}}

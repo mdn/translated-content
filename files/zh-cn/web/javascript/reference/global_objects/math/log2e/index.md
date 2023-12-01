@@ -25,10 +25,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 
 ```js
 function getLog2e() {
-   return Math.LOG2E
+  return Math.LOG2E;
 }
 
-getLog2e() // 1.4426950408889634
+getLog2e(); // 1.4426950408889634
 ```
 
 ## 规范
@@ -39,6 +39,8 @@ getLog2e() // 1.4426950408889634
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log2()")}}

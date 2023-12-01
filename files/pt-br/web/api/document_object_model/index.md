@@ -1,7 +1,6 @@
 ---
 title: Modelo de Objeto de Documento (DOM)
 slug: Web/API/Document_Object_Model
-original_slug: DOM/Referencia_do_DOM
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -170,7 +169,6 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 
 ### Obsoleto HTML interfaces
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG interfaces

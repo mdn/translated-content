@@ -1,7 +1,6 @@
 ---
 title: Math.atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/atanh
 ---
 
 {{JSRef}}
@@ -36,9 +35,11 @@ Por que `atanh()` es un metodo estatico de `Math`, tu siempre puedes usar eso co
 Para <math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&#x3C;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &#x3C; 1</annotation></semantics></math>, tenemos <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math> por lo que esto puede estar emulado con la siguiente función:
 
 ```js
-Math.atanh = Math.atanh || function(x) {
-  return Math.log((1+x)/(1-x)) / 2;
-};
+Math.atanh =
+  Math.atanh ||
+  function (x) {
+    return Math.log((1 + x) / (1 - x)) / 2;
+  };
 ```
 
 ## Ejemplos
@@ -46,12 +47,12 @@ Math.atanh = Math.atanh || function(x) {
 ### Using `Math.atanh()`
 
 ```js
-Math.atanh(-2);  // NaN
-Math.atanh(-1);  // -Infinito
-Math.atanh(0);   // 0
+Math.atanh(-2); // NaN
+Math.atanh(-1); // -Infinito
+Math.atanh(0); // 0
 Math.atanh(0.5); // 0.5493061443340548
-Math.atanh(1);   // Infinito
-Math.atanh(2);   // NaN
+Math.atanh(1); // Infinito
+Math.atanh(2); // NaN
 ```
 
 Para valores mayores a 1 o menores a -1, {{jsxref("NaN")}} retorna.

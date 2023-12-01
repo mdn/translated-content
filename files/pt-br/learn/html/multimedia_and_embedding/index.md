@@ -1,7 +1,6 @@
 ---
 title: Multimídia e Incorporação
 slug: Learn/HTML/Multimedia_and_embedding
-original_slug: Aprender/HTML/Multimedia_and_embedding
 ---
 
 {{LearnSidebar}}

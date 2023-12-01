@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
 ## 構文
 
 ```js
-Atomics.load(typedArray, index)
+Atomics.load(typedArray, index);
 ```
 
 ### 引数

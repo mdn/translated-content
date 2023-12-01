@@ -1,5 +1,5 @@
 ---
-title: '-webkit-overflow-scrolling'
+title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
 ---
 
@@ -36,7 +36,7 @@ Não faz parte de nenhuma especificação. A Apple tem [uma descrição na refer
 
 ## Compatibilidade do navegador
 
-{{Compat("css.properties.-webkit-overflow-scrolling")}}
+{{Compat}}
 
 ## Veja também
 

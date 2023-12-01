@@ -9,7 +9,7 @@ slug: Web/API/ReadableStreamDefaultController/enqueue
 
 ## 语法
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 
@@ -41,15 +41,15 @@ const stream = new ReadableStream({
       // 将随机字符串添加到流
       controller.enqueue(string);
       // 在屏幕上展示
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
-    button.addEventListener('click', function() {
+    button.addEventListener("click", function () {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // 在这个例子中不使用 pull
@@ -58,7 +58,7 @@ const stream = new ReadableStream({
     // 如果取消了 reader，则会调用该函数，
     // 所以我们应该在这里停止生成字符串
     clearInterval(interval);
-  }
+  },
 });
 ```
 

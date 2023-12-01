@@ -1,19 +1,8 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Cascade
-  - Inheritance
-  - Keyword
-  - Layout
-  - Reference
-  - Style
-  - inherit
-browser-compat: css.types.global_keywords.inherit
 ---
+
 {{CSSRef}}
 
 Ключевое слово CSS **`inherit`** заставляет в элементе использовать [вычисленное значение](/ru/docs/Web/CSS/computed_value) свойства из родительского элемента. Это значение можно применить к любому CSS-свойству, включая также {{cssxref("all")}}.
@@ -28,16 +17,22 @@ browser-compat: css.types.global_keywords.inherit
 
 ```css
 /* Делает все заголовки второго уровня зелёными... */
-h2 { color: green; }
+h2 {
+  color: green;
+}
 
 /* ...кроме тех, что находятся в сайдбаре, которые унаследуют цвет родительского элемента */
-#sidebar h2 { color: inherit; }
+#sidebar h2 {
+  color: inherit;
+}
 ```
 
 В этом примере элементы `h2` внутри сайдбара могут быть разных цветов. Например, если бы один из них находится в div со следующим правилом...
 
 ```css
-div#current { color: blue; }
+div#current {
+  color: blue;
+}
 ```
 
 ...тогда этот заголовок был бы синего цвета.

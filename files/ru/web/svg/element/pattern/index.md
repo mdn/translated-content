@@ -1,34 +1,42 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
-tags:
-  - SVG
-translation_of: Web/SVG/Element/pattern
-original_slug: Web/SVG/Элемент/pattern
 ---
 
 {{SVGRef}}
 Элемент **`<pattern>`** определяет графический объект, который может быть перерисован с повторяющимися координатами **x** и **y** («мозаичным»), чтобы покрыть область.
 На ссылку `<pattern>` ссылаются атрибуты {{SVGAttr("fill")}} и / или {{SVGAttr("stroke")}} на других [графических элементах](/ru/docs/Web/SVG/Tutorial/Basic_Shapes) , чтобы заполнить или обвести эти элементы указанным шаблоном.
 
+## Пример
+
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
-      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/>
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
     </pattern>
   </defs>
 
-  <circle cx="50"  cy="50" r="50" fill="url(#star)"/>
-  <circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/>
+  <circle cx="50" cy="50" r="50" fill="url(#star)" />
+  <circle
+    cx="180"
+    cy="50"
+    r="40"
+    fill="none"
+    stroke-width="20"
+    stroke="url(#star)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 150, '100%')}}
+{{EmbedLiveSample("Пример", 150, '100%')}}
 
 ## Атрибуты
 
@@ -76,7 +84,7 @@ html,body,svg { height:100% }
 
 ### Глобальные атрибуты
 
-- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+- [Core Attributes](/ru/docs/Web/SVG/Attribute/Core)
   - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
@@ -93,10 +101,7 @@ html,body,svg { height:100% }
 
 ## Характеристики
 
-| Характеристики                                                                           | Статус                   | Коммент            |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'pservers.html#Patterns', '&lt;pattern&gt;')}} | {{Spec2('SVG2')}} |                    |
-| {{SpecName('SVG1.1', 'pservers.html#Patterns', '&lt;pattern&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Совместимость браузера
 

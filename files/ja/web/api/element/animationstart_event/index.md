@@ -2,7 +2,6 @@
 title: "Element: animationstart イベント"
 short-title: animationstart
 slug: Web/API/Element/animationstart_event
-original_slug: Web/API/Document/animationstart_event
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---

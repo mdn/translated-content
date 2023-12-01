@@ -1,13 +1,9 @@
 ---
 title: World Wide Web
 slug: Glossary/World_Wide_Web
-tags:
-  - WWW
-  - World Wide Web
-  - инфраструктура
-translation_of: Glossary/World_Wide_Web
-original_slug: Глоссарий/World_Wide_Web
 ---
+
+{{GlossarySidebar}}
 
 Всемирная сеть — сокращённо: **WWW**, **W3**, или **Web; Сеть**, **паутина** или **веб** — всемирная система публичных веб-страниц в сети {{Glossary("Интернет")}}. Сеть не является Интернетом: Сеть лишь использует Интернет как среду передачи информации и данных.
 

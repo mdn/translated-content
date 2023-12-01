@@ -102,7 +102,7 @@ computed: {
 
 因为我们只需要触发 `checkbox-changed` 事件，所以我们可以在标签中内联使用 `$emit()` 方法。
 
-在 `App.vue` 中 `addToDo()` 方法下面，添加一个名为 `updateDoneStatus()` 的新方法。这个方法应该有一个参数：待办事项的 _id_ 。我们想要找到与 `id` 匹配的项目，并翻转它的 `done` 状态：
+在 `App.vue` 中 `addToDo()` 方法下面，添加一个名为 `updateDoneStatus()` 的新方法。这个方法应该有一个参数：待办事项的 _id_。我们想要找到与 `id` 匹配的项目，并翻转它的 `done` 状态：
 
 ```js
 updateDoneStatus(toDoId) {
@@ -111,7 +111,7 @@ updateDoneStatus(toDoId) {
 }
 ```
 
-我们想在 `ToDoItem` 触发 `checkbox-changed` 事件时运行此方法，并传入它的 `item.id` 作为参数。将你的 `<to-do-item></to-do-item>` 标签改成下面这样:
+我们想在 `ToDoItem` 触发 `checkbox-changed` 事件时运行此方法，并传入它的 `item.id` 作为参数。将你的 `<to-do-item></to-do-item>` 标签改成下面这样：
 
 ```html
 <to-do-item
@@ -122,7 +122,7 @@ updateDoneStatus(toDoId) {
 </to-do-item>
 ```
 
-现在如果你勾选了一个 `ToDoItem`，你应该会看到摘要更新了!
+现在如果你勾选了一个 `ToDoItem`，你应该会看到摘要更新了！
 
 ![我们的应用程序，添加了一个已完成待办的计数器。目前它显示已完成 5 项中的 3 项](todo-counter.png)
 

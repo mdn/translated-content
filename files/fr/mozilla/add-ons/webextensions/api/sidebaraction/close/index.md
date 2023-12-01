@@ -1,7 +1,6 @@
 ---
 title: sidebarAction.close()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/close
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/close
 ---
 
 {{AddonSidebar()}}

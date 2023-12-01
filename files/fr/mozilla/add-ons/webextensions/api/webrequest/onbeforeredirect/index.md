@@ -1,7 +1,6 @@
 ---
 title: webRequest.onBeforeRedirect
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
 ---
 
 {{AddonSidebar()}}

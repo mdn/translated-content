@@ -28,7 +28,7 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
 `fetch` 规范主要在三个方面与 `jQuery.ajax()` 不同：
 
 - 从 `fetch()` 返回的 Promise **不会因 HTTP 的错误状态而被拒绝**，即使响应是 HTTP `404` 或 `500`。相反，它将正常兑现（`ok` 状态会被设置为 `false`），并且只有在网络故障或者有任何阻止请求完成时，才拒绝。
-- 除非你在 [init 对象中](/zh-CN/docs/Web/API/fetch#参数)设置（去包含）*credentials*，否则 `fetch()` **将不会发送跨源 cookie**。
+- 除非你在 [init 对象中](/zh-CN/docs/Web/API/fetch#参数)设置（去包含）_credentials_，否则 `fetch()` **将不会发送跨源 cookie**。
 
   - [2018 年 4 月](https://github.com/whatwg/fetch/pull/585)，该规范将默认的 credentials 策略更改为 `'same-origin'`。以下浏览器发布了过时的原生 fetch，并在以下版本中更新：Firefox 61.0b13、Safari 12、Chrome 68。
   - 如果你的目标是这些旧的浏览器，请务必在所有可能接受 cookie/用户登录状态影响的 API 请求中包含拥有 `credentials: 'same-origin'` 的 [init 对象](/zh-CN/docs/Web/API/fetch#参数)。

@@ -1,7 +1,6 @@
 ---
 title: contentScripts.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
-translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
 ---
 
 {{AddonSidebar()}}

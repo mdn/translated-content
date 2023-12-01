@@ -1,7 +1,6 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
-translation_of: Web/CSS/@media/shape
 ---
 
 {{CSSRef}} {{Non-standard_header}}

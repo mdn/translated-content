@@ -9,10 +9,6 @@ l10n:
 
 **`CSS`** インターフェイス は CSS に関連した便利なメソッドを持っています。このインターフェイスにはオブジェクトは実装されていません。静的メソッドのみがあり、実用的なインターフェイスになっています。
 
-## プロパティ
-
-_CSS インターフェイスはユーティリティインターフェイスです。この型のオブジェクトは作成できませんん。静的プロパティのみが定義されています。_
-
 ### 静的プロパティ
 
 - {{DOMxRef("CSS.highlights_static", "CSS.highlights")}} {{Experimental_Inline}}
@@ -39,8 +35,12 @@ _継承している静的メソッドはありません。_
   - : 使用したファクトリー関数のメソッドの名前を単位としてパラメーターの数値の値を持つ新しい [`CSSUnitValue`](/ja/docs/Web/API/CSSUnitValue) を返すために使用できます。
 
     ```js
-    CSS.em(3) // CSSUnitValue {value: 3, unit: "em"}
+    CSS.em(3); // CSSUnitValue {value: 3, unit: "em"}
     ```
+
+## インスタンスメソッド
+
+_CSS インターフェイスはユーティリティインターフェイスです。この型のオブジェクトは作成できません。静的プロパティのみが定義されています。_
 
 ## 仕様書
 
@@ -49,7 +49,3 @@ _継承している静的メソッドはありません。_
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- [Components.utils.importGlobalProperties](/ja/docs/Components.utils.importGlobalProperties)

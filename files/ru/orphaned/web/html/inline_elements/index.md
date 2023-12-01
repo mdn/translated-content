@@ -1,8 +1,6 @@
 ---
 title: Строчные элементы
 slug: orphaned/Web/HTML/Inline_elements
-translation_of: Web/HTML/Inline_elements
-original_slug: Web/HTML/Inline_elements
 ---
 
 ## Определение

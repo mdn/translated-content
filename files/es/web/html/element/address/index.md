@@ -1,7 +1,6 @@
 ---
 title: <address>
 slug: Web/HTML/Element/address
-original_slug: Web/HTML/Elemento/address
 ---
 
 {{HTMLSidebar}}

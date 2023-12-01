@@ -2,6 +2,7 @@
 title: CSS 첫 번째 단계
 slug: Learn/CSS/First_steps
 ---
+
 {{LearnSidebar}}
 
 CSS (Cascading Style Sheets) 는 콘텐츠의 글꼴, 색상, 크기 및 간격을 변경하거나 여러 열로 분할하거나 애니메이션 및 기타 장식 기능을 추가하는 등의 웹 페이지 스타일 및 레이아웃에 사용됩니다. 이 모듈은 작동 방식, 구문의 모양 및 HTML에 스타일을 추가하기 위해, 이를 사용하는 방법에 대한 기본 사항을 통해 CSS 를 마스터 하는 과정을 부드럽게 시작합니다.
@@ -34,4 +35,4 @@ CSS (Cascading Style Sheets) 는 콘텐츠의 글꼴, 색상, 크기 및 간격�
 ## 참고 항목
 
 - [중급자 웹 활용 능력 1: CSS 소개](https://teach.mozilla.org/activities/intermediate-web-lit/)
-  - _: CSS 소개_ 모듈에서 이야기 한 많은 기술을 탐구하고 테스트하는 훌륭한 모질라 기초 과정입니다. 웹 페이지, CSS 선택자, 속성 및 값의 HTML 요소 스타일 지정에 대해 학습합니다.
+  - _: CSS 소개_ 모듈에서 이야기 한 많은 기술을 탐구하고 테스트하는 훌륭한 Mozilla 기초 과정입니다. 웹 페이지, CSS 선택자, 속성 및 값의 HTML 요소 스타일 지정에 대해 학습합니다.

@@ -1,7 +1,6 @@
 ---
 title: Element.scrollIntoViewIfNeeded()
 slug: Web/API/Element/scrollIntoViewIfNeeded
-translation_of: Web/API/Element/scrollIntoViewIfNeeded
 ---
 
 {{APIRef("DOM")}}{{Non-standard_header}}

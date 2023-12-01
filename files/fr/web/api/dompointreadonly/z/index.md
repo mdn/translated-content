@@ -1,7 +1,6 @@
 ---
 title: DOMPoint.z
 slug: Web/API/DOMPointReadOnly/z
-translation_of: Web/API/DOMPointReadOnly/z
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

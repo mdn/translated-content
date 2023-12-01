@@ -1,7 +1,6 @@
 ---
 title: <details>
 slug: Web/HTML/Element/details
-original_slug: Web/HTML/Elemento/details
 ---
 
 {{ SeeCompatTable() }}

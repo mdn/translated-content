@@ -1,7 +1,6 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-translation_of: Web/CSS/user-select
 ---
 
 {{CSSRef}}

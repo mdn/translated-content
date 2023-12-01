@@ -1,8 +1,9 @@
 ---
 title: Amélioration progressive
 slug: Glossary/Progressive_Enhancement
-translation_of: Glossary/Progressive_Enhancement
 ---
+
+{{GlossarySidebar}}
 
 L'**amélioration progressive** est une philosophie de conception centrée sur la fourniture d'une base de contenu et de fonctionnalités essentielles au plus grand nombre possible d'utilisateurs, tout en allant au-delà et en offrant la meilleure expérience possible aux utilisateurs des navigateurs les plus modernes capables d'exécuter tout le code requis .
 

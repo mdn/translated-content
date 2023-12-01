@@ -1,7 +1,6 @@
 ---
 title: overflow-block
 slug: Web/CSS/@media/overflow-block
-translation_of: Web/CSS/@media/overflow-block
 ---
 
 {{CSSRef}}

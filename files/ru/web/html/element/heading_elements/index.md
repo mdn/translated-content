@@ -1,7 +1,6 @@
 ---
 title: "<h1>–<h6>: HTML-элементы заголовков секций"
 slug: Web/HTML/Element/Heading_Elements
-translation_of: Web/HTML/Element/Heading_Elements
 ---
 
 **HTML-элементы `<h1>`–`<h6>`** представляют собой 6 уровней заголовков секций. `<h1>` это наибольший заголовок и `<h6>` - наименьший
@@ -25,7 +24,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 - Информация о заголовке может использоваться пользовательскими агентами, например, для автоматического создания оглавления для документа
 - Не используйте низкие уровни чтобы снизить размер шрифта: используйте [CSS](/ru/docs/Web/CSS) {{cssxref("font-size")}} вместо.
 - Избегайте пропуск уровней заголовков: всегда начинайте с `<h1>`, потом используйте `<h2>`, и так далее.
-- Вам следует рассмотреть избегание использования \<h1> более раза на страницу. Смотрите {{SectionOnPage("/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines", "Defining sections")}}.
+- Вам следует рассмотреть избегание использования \<h1> более раза на страницу.
 
 ## Примеры
 
@@ -165,11 +164,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 ## Характеристики
 
-| Характеристика                                                                                                                                                     | Статус                   | Комментарий |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}   | {{Spec2('HTML5 W3C')}}   |             |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}                               | {{Spec2('HTML4.01')}}    |             |
+{{Specifications}}
 
 ## Совместимость с браузером
 

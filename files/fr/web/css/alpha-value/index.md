@@ -1,7 +1,6 @@
 ---
 title: alpha-value
 slug: Web/CSS/alpha-value
-translation_of: Web/CSS/alpha-value
 ---
 
 {{CSSRef}}

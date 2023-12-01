@@ -1,7 +1,6 @@
 ---
 title: omnibox.onInputCancelled
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputCancelled
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputCancelled
 ---
 
 {{AddonSidebar()}}

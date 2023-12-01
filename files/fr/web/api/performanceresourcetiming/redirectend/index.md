@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming.redirectEnd
 slug: Web/API/PerformanceResourceTiming/redirectEnd
-translation_of: Web/API/PerformanceResourceTiming/redirectEnd
 ---
 
 {{APIRef("Resource Timing API")}}

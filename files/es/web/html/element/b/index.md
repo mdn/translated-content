@@ -1,7 +1,6 @@
 ---
 title: b
 slug: Web/HTML/Element/b
-original_slug: Web/HTML/Elemento/b
 ---
 
 ### Definición

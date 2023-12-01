@@ -1,7 +1,6 @@
 ---
 title: Les données en WebGL
 slug: Web/API/WebGL_API/Data
-translation_of: Web/API/WebGL_API/Data
 ---
 
 {{DefaultAPISidebar("WebGL")}}

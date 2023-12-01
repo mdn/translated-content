@@ -1,15 +1,9 @@
 ---
 title: CSS-селектор
 slug: Glossary/CSS_Selector
-tags:
-  - CSS
-  - CSS-селектор
-  - HTML
-  - Глоссарий
-  - селектор
-translation_of: Glossary/CSS_Selector
-original_slug: Глоссарий/CSS_Selector
 ---
+
+{{GlossarySidebar}}
 
 **CSS-селектор** это часть CSS-правила, которая позволяет вам указать, к какому элементу (элементам) применить стиль. Например:
 
@@ -61,7 +55,3 @@ p {
 
    1. [Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) `:`
    2. [Псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements) `::`
-
-### Техническая справка
-
-{{SpecName("CSS3 Selectors")}}

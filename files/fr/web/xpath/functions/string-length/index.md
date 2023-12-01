@@ -1,7 +1,6 @@
 ---
 title: string-length
 slug: Web/XPath/Functions/string-length
-translation_of: Web/XPath/Functions/string-length
 ---
 
 {{ XsltRef() }}

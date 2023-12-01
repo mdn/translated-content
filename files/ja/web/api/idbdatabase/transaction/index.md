@@ -26,8 +26,8 @@ transaction(storeNames, mode, options)
   - : 新しいトランザクションの対象となるオブジェクトストアの名前を表す文字列の配列です。アクセスが必要なオブジェクトストアのみを指定してください。アクセスが必要なオブジェクトストアが 1 個だけである場合は、その名前を文字列で指定できます。そのため、以下の行は等価です。
 
     ```js
-    db.transaction(['my-store-name']);
-    db.transaction('my-store-name');
+    db.transaction(["my-store-name"]);
+    db.transaction("my-store-name");
     ```
 
     データベース内の全てのオブジェクトストアにアクセスする必要がある場合は、{{domxref("IDBDatabase.objectStoreNames")}} プロパティを使用できます。
@@ -45,7 +45,7 @@ transaction(storeNames, mode, options)
     データを更新するためオブジェクトストアを `readwrite` モードで開く必要がある場合、以下のようにすると良いです。
 
     ```js
-    const transaction = db.transaction('my-store-name', "readwrite");
+    const transaction = db.transaction("my-store-name", "readwrite");
     ```
 
     Firefox 40 以降、IndexedDB のトランザクションはパフォーマンスを向上させるために永続性を緩めています。([Firefox バグ 1112702](https://bugzil.la/1112702) を参照) これは IndexedDB に対応した他のブラウザーと同様の挙動です。以前は、`readwrite` トランザクションでは {{domxref("IDBTransaction.complete_event", "complete")}} イベントはすべてのデータが確実にディスクに書き込まれてからのみ発火していました。Firefox 40 以降では、`complete` イベントは OS にデータを書き込む指示を出した後に発火し、データはまだ実際にディスクに書き込まれていない可能性があります。そのため、`complete` イベントは以前より早く伝わることがありますが、データがディスクに書き込まれる前に OS がクラッシュしたりシステム電源が喪失したりすると、トランザクション全体が失われる可能性が少しあります。そのような最悪の事象はほとんどないため、ほとんどの利用者は気にしなくていいでしょう。
@@ -85,7 +85,7 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>データベースの初期化が完了しました。</li>';
+  note.innerHTML += "<li>データベースの初期化が完了しました。</li>";
 
   // データベースを開いた結果を変数 db に格納します。
   // これはこの先いっぱい使います。
@@ -94,7 +94,6 @@ DBOpenRequest.onsuccess = (event) => {
   // displayData() 関数を呼び出し、IDB に格納済の TO-DO リストの
   // データ全てをタスクリストに入れます
   displayData();
-
 };
 
 // 読み書き用のデータベーストランザクションを開始し、データを追加する準備をします
@@ -102,11 +101,13 @@ const transaction = db.transaction(["toDoList"], "readwrite");
 
 // トランザクション開始が成功したら報告します
 transaction.oncomplete = (event) => {
-  note.innerHTML += '<li>トランザクション完了: データベースの変更が完了しました。</li>';
+  note.innerHTML +=
+    "<li>トランザクション完了: データベースの変更が完了しました。</li>";
 };
 
 transaction.onerror = (event) => {
-  note.innerHTML += '<li>エラーによりトランザクションが開始できませんでした。アイテムの重複は禁止です。</li>';
+  note.innerHTML +=
+    "<li>エラーによりトランザクションが開始できませんでした。アイテムの重複は禁止です。</li>";
 };
 
 // そして、オブジェクトストアを介してデータベースにさらに何かをするでしょう

@@ -1,7 +1,6 @@
 ---
 title: Constructeur Int8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 ---
 
 {{JSRef}}
@@ -45,7 +44,7 @@ console.log(int8.length); // 2
 console.log(int8.BYTES_PER_ELEMENT); // 1
 
 // À partir d'un tableau
-const arr = new Int8Array([21,31]);
+const arr = new Int8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -58,7 +57,9 @@ const buffer = new ArrayBuffer(8);
 const z = new Int8Array(buffer, 1, 4);
 
 // À partir d'un itérable
-const iterable = function*(){ yield* [1,2,3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const int8 = new Int8Array(iterable);
 // Int8Array[1, 2, 3]
 ```

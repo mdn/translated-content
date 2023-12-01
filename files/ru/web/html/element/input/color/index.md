@@ -1,18 +1,6 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
-tags:
-  - Color Picker
-  - Element
-  - Form input
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input
-  - Input
-  - Reference
-  - color
-translation_of: Web/HTML/Element/input/color
 ---
 
 {{HTMLSidebar}}
@@ -24,11 +12,11 @@ translation_of: Web/HTML/Element/input/color
 {{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
 
 | **[Value](#value)**               | 7-значная {{domxref("DOMString")}} , указывающая {{cssxref("&lt;color&gt;")}} в строчной шестнадцатеричной системе счисления |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **События**                       | {{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}          |
-| **Поддерживаемые общие атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete) и [`list`](/ru/docs/Web/HTML/Element/input#list)                                      |
-| **IDL атрибуты**                  | `list` и `value`                                                                                                                             |
-| **Методы**                        | {{domxref("HTMLInputElement.select", "select()")}}                                                                         |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **События**                       | {{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}                          |
+| **Поддерживаемые общие атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete) и [`list`](/ru/docs/Web/HTML/Element/input#list)              |
+| **IDL атрибуты**                  | `list` и `value`                                                                                                             |
+| **Методы**                        | {{domxref("HTMLInputElement.select", "select()")}}                                                                           |
 
 ## Value
 
@@ -45,7 +33,7 @@ translation_of: Web/HTML/Element/input/color
 Вы можете обновить простой пример выше, чтобы установить значение по умолчанию, так что цветовая заливка будет предварительно заполнена цветом по умолчанию, и палитра цветов (если таковая имеется) также будет по умолчанию использовать этот цвет:
 
 ```html
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 {{EmbedLiveSample("Предоставление_цвета_по_умолчанию", 700, 30)}}
@@ -63,7 +51,7 @@ colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }
@@ -100,18 +88,21 @@ colorWell.select();
 HTML довольно прост — пара абзацев описательного материала с {{HTMLElement ("input")}} типа `color` с идентификатором `colorWell`, который мы будем использовать для изменения цвета текста абзацев.
 
 ```html
-<p>An example demonstrating the use of the <code>&lt;input type="color"&gt;</code>
-   control.</p>
+<p>
+  An example demonstrating the use of the
+  <code>&lt;input type="color"&gt;</code> control.
+</p>
 
 <label for="colorWell">Color:</label>
-<input type="color" value="#ff0000" id="colorWell">
+<input type="color" value="#ff0000" id="colorWell" />
 
-<p>Watch the paragraph colors change when you adjust the color picker.
-   As you make changes in the color picker, the first paragraph's
-   color changes, as a preview (this uses the <code>input</code>
-   event). When you close the color picker, the <code>change</code>
-   event fires, and we detect that to change every paragraph to
-   the selected color.</p>
+<p>
+  Watch the paragraph colors change when you adjust the color picker. As you
+  make changes in the color picker, the first paragraph's color changes, as a
+  preview (this uses the <code>input</code> event). When you close the color
+  picker, the <code>change</code> event fires, and we detect that to change
+  every paragraph to the selected color.
+</p>
 ```
 
 ### JavaScript
@@ -161,7 +152,7 @@ function updateFirst(event) {
 
 ```js
 function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }

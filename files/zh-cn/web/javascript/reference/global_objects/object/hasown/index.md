@@ -32,7 +32,7 @@ Object.hasOwn(obj, prop)
 
 如果指定的属性是该对象的直接属性——**`Object.hasOwn()`** 方法返回 `true`，即使属性值是 `null` 或 `undefined`。如果属性是继承的或者不存在，该方法返回 `false`。它不像 {{jsxref("Operators/in", "in")}} 运算符，这个方法不检查对象的原型链中的指定属性。
 
-建议使用此方法替代 {{jsxref("Object.hasOwnProperty()")}}，因为它适用于使用 `Object.create(null)` 创建的对象且重写了继承的 `hasOwnProperty()` 方法的对象。尽管可以通过在外部对象上调用 `Object.prototype.hasOwnProperty()` 解决这些问题，但是 `Object.hasOwn()` 更加直观。
+建议使用此方法替代 {{jsxref("Object.prototype.hasOwnProperty()")}}，因为它适用于使用 `Object.create(null)` 创建的对象，以及重写了继承的 `hasOwnProperty()` 方法的对象。尽管可以通过在外部对象上调用 `Object.prototype.hasOwnProperty()` 解决这些问题，但是 `Object.hasOwn()` 更加直观。
 
 ## 示例
 
@@ -42,16 +42,16 @@ Object.hasOwn(obj, prop)
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false——目标对象的属性 'prop' 未被定义
+Object.hasOwn(example, "prop"); // false——目标对象的属性 'prop' 未被定义
 
-example.prop = 'exists';
-Object.hasOwn(example, 'prop');   // true——目标对象的属性 'prop' 已被定义
+example.prop = "exists";
+Object.hasOwn(example, "prop"); // true——目标对象的属性 'prop' 已被定义
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true——目标对象本身的属性存在，值为 null
+Object.hasOwn(example, "prop"); // true——目标对象本身的属性存在，值为 null
 
 example.prop = undefined;
-Object.hasOwn(example, 'prop');   // true——目标对象本身的属性存在，值为 undefined
+Object.hasOwn(example, "prop"); // true——目标对象本身的属性存在，值为 undefined
 ```
 
 ### 直接属性和继承属性
@@ -60,17 +60,17 @@ Object.hasOwn(example, 'prop');   // true——目标对象本身的属性存在
 
 ```js
 const example = {};
-example.prop = 'exists';
+example.prop = "exists";
 
 // `hasOwn` 静态方法只会对目标对象的直接属性返回 true：
-Object.hasOwn(example, 'prop');             // 返回 true
-Object.hasOwn(example, 'toString');         // 返回 false
-Object.hasOwn(example, 'hasOwnProperty');   // 返回 false
+Object.hasOwn(example, "prop"); // 返回 true
+Object.hasOwn(example, "toString"); // 返回 false
+Object.hasOwn(example, "hasOwnProperty"); // 返回 false
 
 // `in` 运算符对目标对象的直接属性或继承属性均会返回 true：
-'prop' in example;                          // 返回 true
-'toString' in example;                      // 返回 true
-'hasOwnProperty' in example;                // 返回 true
+"prop" in example; // 返回 true
+"toString" in example; // 返回 true
+"hasOwnProperty" in example; // 返回 true
 ```
 
 ### 迭代对象的属性
@@ -100,9 +100,9 @@ for (const name in example) {
 {{jsxref("Array")}} 中的元素被定义为直接属性，所以你可以使用 `hasOwn()` 方法去检查一个指定的索引是否存在：
 
 ```js
-const fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
-Object.hasOwn(fruits, 3);   // true ('Orange')
-Object.hasOwn(fruits, 4);   // false——没有定义的
+const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
+Object.hasOwn(fruits, 3); // true ('Orange')
+Object.hasOwn(fruits, 4); // false——没有定义的
 ```
 
 ### hasOwnProperty 的问题案例
@@ -114,10 +114,10 @@ const foo = {
   hasOwnProperty() {
     return false;
   },
-  bar: 'The dragons be out of office',
+  bar: "The dragons be out of office",
 };
 
-if (Object.hasOwn(foo, 'bar')) {
+if (Object.hasOwn(foo, "bar")) {
   console.log(foo.bar); //true——重新实现 hasOwnProperty() 不会影响 Object
 }
 ```
@@ -126,8 +126,8 @@ if (Object.hasOwn(foo, 'bar')) {
 
 ```js
 const foo = Object.create(null);
-foo.prop = 'exists';
-if (Object.hasOwn(foo, 'prop')) {
+foo.prop = "exists";
+if (Object.hasOwn(foo, "prop")) {
   console.log(foo.prop); //true——无论对象是如何创建的，它都可以运行。
 }
 ```

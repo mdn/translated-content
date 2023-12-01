@@ -1,5 +1,5 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
 ---
 
@@ -32,7 +32,7 @@ slug: Web/CSS/@namespace
 
 [HTML5](/ja/docs/Glossary/HTML5) では、既知の[外来要素](https://html.spec.whatwg.org/#foreign-elements)へ自動的に名前空間が割り当てられます。すなわち、 HTML 要素は文書内に `xmlns` 属性が存在しなくても XHTML 名前空間 (`http://www.w3.org/1999/xhtml`) に含まれているかのように動作します。また [\<svg>](/ja/docs/Web/SVG/Element/svg) および [\<math>](/ja/docs/Web/MathML/Element/math) 要素は、適切な名前空間（`http://www.w3.org/2000/svg` および `http://www.w3.org/1998/Math/MathML`）が割り当てられます。
 
-> **メモ:** XML では、属性に直接接頭辞を定義しない限り（*例*: `xlink:href`）、属性は名前空間を持ちません。言い換えると、属性は所属する要素から名前空間を継承しません。この動作に合わせるため、 CSS の既定の名前空間は属性セレクターに適用しません。
+> **メモ:** XML では、属性に直接接頭辞を定義しない限り（_例_: `xlink:href`）、属性は名前空間を持ちません。言い換えると、属性は所属する要素から名前空間を継承しません。この動作に合わせるため、 CSS の既定の名前空間は属性セレクターに適用しません。
 
 ## 形式文法
 
@@ -47,13 +47,16 @@ slug: Web/CSS/@namespace
 @namespace svg url(http://www.w3.org/2000/svg);
 
 /* XHTML は既定で接頭辞のない名前空間であるため、これは XHTML のすべての <a> 要素を選択します */
-a {}
+a {
+}
 
 /* これはすべての SVG <a> 要素を選択します */
-svg|a {}
+svg|a {
+}
 
 /* XHTML と SVG の両方の <a> 要素に一致します */
-*|a {}
+*|a {
+}
 ```
 
 ## 仕様書

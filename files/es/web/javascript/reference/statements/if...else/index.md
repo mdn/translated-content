@@ -1,7 +1,6 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-original_slug: Web/JavaScript/Referencia/Sentencias/if...else
 ---
 
 {{jsSidebar("Statements")}}
@@ -17,9 +16,11 @@ if (condición) sentencia1 [else sentencia2]
 ```
 
 - `condición`
+
   - : Una expresión que puede ser evaluada como verdadera o falsa.
 
 - `sentencia1`
+
   - : Sentencia que se ejecutará si `condición` es evaluada como verdadera. Puede ser cualquier sentencia, incluyendo otras sentenccias `if` anidadas. Para ejecutar múltiples sentencias, use una sentencia {{jsxref("Sentencias/block", "block")}} ({ ... }) para agruparlas.
 
 - `sentencia2`
@@ -58,9 +59,9 @@ Para ejecutar varias sentencias en una cláusula, use una sentencia block (`{ ..
 
 ```js
 if (condición) {
-   sentencia1
+  sentencia1;
 } else {
-   sentencia2
+  sentencia2;
 }
 ```
 
@@ -77,10 +78,9 @@ if (b) // Esta condición se evalúa como verdadera
 
 ```js
 if (cipher_char == from_char) {
-   result = result + to_char;
-   x++;
-} else
-   result = result + clear_char;
+  result = result + to_char;
+  x++;
+} else result = result + clear_char;
 ```
 
 ### Ejemplo: Asignación en una expresión condicional
@@ -88,8 +88,8 @@ if (cipher_char == from_char) {
 Es aconsejable no usar asignaciones simples en una expresión condicional, porque la asignación puede ser confundida con igualdad (operador relacional) cuando se lee el código. Por ejemplo, no use el siguiente código:
 
 ```js
-if (x = y) {
-   /* sentencia */
+if ((x = y)) {
+  /* sentencia */
 }
 ```
 
@@ -97,7 +97,7 @@ Si realmente necesita una asignación dentro de una exprsión condicional, una p
 
 ```js
 if ((x = y)) {
-   /* sentencia */
+  /* sentencia */
 }
 ```
 

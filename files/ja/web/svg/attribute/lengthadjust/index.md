@@ -13,20 +13,20 @@ SVG の `<text>` 要素または `<tspan>` 要素が特定の長さを有して�
 
 ```html
 <svg width="300" height="150" xmlns="http://www.w3.org/2000/svg">
-   <g font-face="sans-serif">
-      <text x="0" y="20" textLength="300" lengthAdjust="spacing">
-         Stretched using spacing only.
-      </text>
-      <text x="0" y="50" textLength="300" lengthAdjust="spacingAndGlyphs">
-         Stretched using spacing and glyphs.
-      </text>
-      <text x="0" y="80" textLength="100" lengthAdjust="spacing">
-         Shrunk using spacing only.
-      </text>
-      <text x="0" y="110" textLength="100" lengthAdjust="spacingAndGlyphs">
-         Shrunk using spacing and glyphs.
-      </text>
-   </g>
+  <g font-face="sans-serif">
+    <text x="0" y="20" textLength="300" lengthAdjust="spacing">
+      Stretched using spacing only.
+    </text>
+    <text x="0" y="50" textLength="300" lengthAdjust="spacingAndGlyphs">
+      Stretched using spacing and glyphs.
+    </text>
+    <text x="0" y="80" textLength="100" lengthAdjust="spacing">
+      Shrunk using spacing only.
+    </text>
+    <text x="0" y="110" textLength="100" lengthAdjust="spacingAndGlyphs">
+      Shrunk using spacing and glyphs.
+    </text>
+  </g>
 </svg>
 ```
 

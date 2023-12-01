@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 ## 구문
 
 ```js
-Math.abs(x)
+Math.abs(x);
 ```
 
 ### 매개변수
@@ -42,16 +42,16 @@ Math.abs(x)
 {{jsxref("null")}}, 빈 문자열이나 빈 배열을 제공하면 0을 반환합니다.
 
 ```js
-Math.abs('-1');     // 1
-Math.abs(-2);       // 2
-Math.abs(null);     // 0
-Math.abs('');       // 0
-Math.abs([]);       // 0
-Math.abs([2]);      // 2
-Math.abs([1,2]);    // NaN
-Math.abs({});       // NaN
-Math.abs('string'); // NaN
-Math.abs();         // NaN
+Math.abs("-1"); // 1
+Math.abs(-2); // 2
+Math.abs(null); // 0
+Math.abs(""); // 0
+Math.abs([]); // 0
+Math.abs([2]); // 2
+Math.abs([1, 2]); // NaN
+Math.abs({}); // NaN
+Math.abs("string"); // NaN
+Math.abs(); // NaN
 ```
 
 ## 명세

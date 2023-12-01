@@ -1,7 +1,6 @@
 ---
 title: 一般的なウェブレイアウトには何が含まれているのか？
 slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
-original_slug: Learn/Common_questions/Common_web_layouts
 ---
 
 ウェブサイトのページをデザインする際、最も一般的なレイアウトを把握しておくとよいでしょう。

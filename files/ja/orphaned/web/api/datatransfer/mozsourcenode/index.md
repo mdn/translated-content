@@ -1,7 +1,6 @@
 ---
 title: DataTransfer.mozSourceNode
 slug: orphaned/Web/API/DataTransfer/mozSourceNode
-original_slug: Web/API/DataTransfer/mozSourceNode
 ---
 
 {{APIRef("HTML Drag and Drop API")}}

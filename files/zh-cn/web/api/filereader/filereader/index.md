@@ -24,7 +24,7 @@ None.
 ```js
 function printFile(file) {
   var reader = new FileReader();
-  reader.onload = function(evt) {
+  reader.onload = function (evt) {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
@@ -35,6 +35,6 @@ function printFile(file) {
 
 {{Specifications}}
 
-## 相关链接
+## 参见
 
-- [Using files from web applications](/zh-CN/docs/Web/API/File/Using_files_from_web_applications)
+- [在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)

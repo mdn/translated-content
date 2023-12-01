@@ -1,14 +1,6 @@
 ---
 title: Обработка аудио и видео
 slug: Web/Guide/Audio_and_video_manipulation
-tags:
-  - Видео
-  - Медиа
-  - Обучение
-  - Примеры
-  - Рекомендации
-  - аудио
-translation_of: Web/Guide/Audio_and_video_manipulation
 ---
 
 Веб-технологии примечательны тем, что они позволяют использовать различные инструменты в совокупности. Например, можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmlelement("canvas")}}, [WebGL](/ru/docs/Web/WebGL) или [Web Audio API](/ru/docs/Web/API/Web_Audio_API): напрямую изменять аудио и видео, т.е. добавлять эффекты к аудио (реверберацию, компрессор), или к видео (фильтры ч/б, сепия и т.д.). В этой статье рассказывается о том, как это сделать.
@@ -129,9 +121,9 @@ This is a pretty simple example showing how to manipulate video frames using a c
 
 [WebGL](/ru/docs/Web/WebGL) is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Примечание:** You can find the [source code of this demo on GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) ([see it live](https://mdn.github.io/webgl-examples/tutorial/sample8/) also).
+> **Примечание:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
 
 ### Скорость воспроизведения
 

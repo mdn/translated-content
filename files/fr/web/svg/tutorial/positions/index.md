@@ -1,7 +1,6 @@
 ---
 title: Positionnement
 slug: Web/SVG/Tutorial/Positions
-translation_of: Web/SVG/Tutorial/Positions
 ---
 
 {{ PreviousNext("SVG/Tutoriel/Premiers_pas", "SVG/Tutoriel/Formes_de_base") }}

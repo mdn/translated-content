@@ -1,7 +1,6 @@
 ---
 title: var
 slug: Web/HTML/Element/var
-original_slug: Web/HTML/Elemento/var
 ---
 
 {{HTMLSidebar}}

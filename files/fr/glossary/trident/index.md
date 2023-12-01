@@ -1,8 +1,9 @@
 ---
 title: Trident
 slug: Glossary/Trident
-translation_of: Glossary/Trident
 ---
+
+{{GlossarySidebar}}
 
 Trident (ou MSHTML) est un moteur de rendu qui fait fonctionner {{Glossary("Microsoft Internet Explorer","Internet Explorer")}}. Un "{{Glossary("Fork","embranchement")}}" de Trident appelé _EdgeHTML_ a remplacé Trident dans le successeur d'Internet Explorer, {{Glossary("Microsoft Edge","Edge")}}.
 

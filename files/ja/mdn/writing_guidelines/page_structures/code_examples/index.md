@@ -1,7 +1,6 @@
 ---
 title: コードサンプル
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
-original_slug: MDN/Writing_guidelines/Page_structures/Code_examples
 ---
 
 {{MDNSidebar}}

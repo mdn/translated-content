@@ -1,19 +1,8 @@
 ---
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
-tags:
-  - API
-  - DOM
-  - HTML
-  - HTMLMediaElement
-  - Media
-  - NeedsNewLayout
-  - NeedsTranslation
-  - TopicStub
-  - Интерфейс
-  - Ссылка
-translation_of: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 Интерфейс HTMLMediaElement добавляет к {{domxref ("HTMLElement")}} свойства и методы, необходимые для поддержки базовых мультимедийных возможностей, общих для аудио и видео. Элементы {{domxref ("HTMLVideoElement")}} и {{domxref ("HTMLAudioElement")}} наследуют этот интерфейс.
@@ -223,16 +212,11 @@ _Наследует методы от своего родителя {{domxref ("
 - {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
   - : Срабатывает, когда воспроизведение остановлено из-за временной нехватки данных
 
-## Характеристики
+## Спецификации
 
-| Характеристики                                                                                                           | Статус                               | Комментарий                                                                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}                 | {{Spec2('Media Capture')}} | Добавляет `sinkId` и `setSinkId()`, и `captureStream()`.                                                                                                                                                          |
-| {{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}                                 | {{Spec2('EME')}}                 | Добавляет {{domxref("MediaKeys")}}, {{domxref("MediaEncryptedEvent")}}, {{domxref("setMediaKeys")}}, {{domxref("onencrypted")}}, и {{domxref("onwaitingforkey")}}. |
-| {{SpecName('HTML WHATWG', "the-video-element.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML WHATWG')}}     | Без изменений {{SpecName ('HTML5 W3C')}}                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML5 W3C')}}         | Начальное определение.                                                                                                                                                                                            |
+{{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

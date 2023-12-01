@@ -2,6 +2,7 @@
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
+
 {{JSRef}}
 
 **`map()`** 메서드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.
@@ -64,14 +65,16 @@ var roots = numbers.map(Math.sqrt);
 다음 코드는 오브젝트의 배열을 받아 각 오브젝트를 다른 형태으로 재구성해 새로운 배열을 만듭니다.
 
 ```js
-var kvArray = [{key:1, value:10},
-               {key:2, value:20},
-               {key:3, value: 30}];
+var kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
+];
 
-var reformattedArray = kvArray.map(function(obj){
-   var rObj = {};
-   rObj[obj.key] = obj.value;
-   return rObj;
+var reformattedArray = kvArray.map(function (obj) {
+  var rObj = {};
+  rObj[obj.key] = obj.value;
+  return rObj;
 });
 // reformattedArray는 [{1:10}, {2:20}, {3:30}]
 
@@ -87,7 +90,7 @@ var reformattedArray = kvArray.map(function(obj){
 
 ```js
 var numbers = [1, 4, 9];
-var doubles = numbers.map(function(num) {
+var doubles = numbers.map(function (num) {
   return num * 2;
 });
 // doubles는 이제 [2, 8, 18]
@@ -100,7 +103,9 @@ var doubles = numbers.map(function(num) {
 
 ```js
 var map = Array.prototype.map;
-var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
+var a = map.call("Hello World", function (x) {
+  return x.charCodeAt(0);
+});
 // a는 이제 [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 ```
 
@@ -109,8 +114,8 @@ var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
 아래 예제는 `querySelectorAll`을 사용해서 수집된 객체들을 순회 처리하는 법을 보여줍니다. 이번 경우 체크한 옵션 박스를 콘솔에 프린트합니다.
 
 ```js
-var elems = document.querySelectorAll('select option:checked');
-var values = [].map.call(elems, function(obj) {
+var elems = document.querySelectorAll("select option:checked");
+var values = [].map.call(elems, function (obj) {
   return obj.value;
 });
 ```
@@ -125,7 +130,7 @@ var values = [].map.call(elems, function(obj) {
 
 ```js
 // 아래 라인을 보시면...
-['1', '2', '3'].map(parseInt);
+["1", "2", "3"].map(parseInt);
 // 결과를 [1, 2, 3] 으로 기대할 수 있습니다.
 // 그러나 실제 결과는 [1, NaN, NaN] 입니다.
 
@@ -140,16 +145,16 @@ function returnInt(element) {
   return parseInt(element, 10);
 }
 
-['1', '2', '3'].map(returnInt); // [1, 2, 3]
+["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // 실제 결과가 예상한 대로 배열의 숫자와 같습니다.
 
 // 위와 같지만 더 간단한 화살표 표현식
-['1', '2', '3'].map(str => parseInt(str));
+["1", "2", "3"].map((str) => parseInt(str));
 
 // 더 간단하게 해결할 수 있는 방법
-['1', '2', '3'].map(Number); // [1, 2, 3]
+["1", "2", "3"].map(Number); // [1, 2, 3]
 // 그러나 `parseInt`와 달리 float이나 지수표현도 반환합니다.
-['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
+["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
 ```
 
 ## 폴리필
@@ -160,13 +165,11 @@ function returnInt(element) {
 // Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
-
-  Array.prototype.map = function(callback, thisArg) {
-
+  Array.prototype.map = function (callback, thisArg) {
     var T, A, k;
 
     if (this == null) {
-      throw new TypeError(' this is null or not defined');
+      throw new TypeError(" this is null or not defined");
     }
 
     // 1. Let O be the result of calling ToObject passing the |this|
@@ -180,8 +183,8 @@ if (!Array.prototype.map) {
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -199,7 +202,6 @@ if (!Array.prototype.map) {
 
     // 8. Repeat, while k < len
     while (k < len) {
-
       var kValue, mappedValue;
 
       // a. Let Pk be ToString(k).
@@ -209,7 +211,6 @@ if (!Array.prototype.map) {
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal
         //    method of O with argument Pk.
         kValue = O[k];

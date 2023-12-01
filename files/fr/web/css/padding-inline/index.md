@@ -1,7 +1,6 @@
 ---
 title: padding-inline
 slug: Web/CSS/padding-inline
-translation_of: Web/CSS/padding-inline
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

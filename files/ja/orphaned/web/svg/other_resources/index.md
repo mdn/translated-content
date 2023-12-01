@@ -1,7 +1,6 @@
 ---
 title: その他のリソース
 slug: orphaned/Web/SVG/Other_Resources
-original_slug: Web/SVG/Other_Resources
 ---
 
 こちらは SVG の追加リソースの一覧です。

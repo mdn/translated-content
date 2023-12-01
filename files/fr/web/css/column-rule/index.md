@@ -1,7 +1,6 @@
 ---
 title: column-rule
 slug: Web/CSS/column-rule
-translation_of: Web/CSS/column-rule
 ---
 
 {{CSSRef}}

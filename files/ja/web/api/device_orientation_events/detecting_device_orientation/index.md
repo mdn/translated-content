@@ -1,7 +1,6 @@
 ---
 title: 端末の方向の検出
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
-original_slug: Web/Events/Detecting_device_orientation
 l10n:
   sourceCommit: 161d14143bce668a6d33415d58f349423b3d3758
 ---

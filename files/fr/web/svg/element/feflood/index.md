@@ -1,7 +1,6 @@
 ---
 title: <feFlood>
 slug: Web/SVG/Element/feFlood
-translation_of: Web/SVG/Element/feFlood
 ---
 
 {{SVGRef}}

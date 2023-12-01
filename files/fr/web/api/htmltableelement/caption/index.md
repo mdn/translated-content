@@ -1,7 +1,6 @@
 ---
 title: table.caption
 slug: Web/API/HTMLTableElement/caption
-translation_of: Web/API/HTMLTableElement/caption
 ---
 
 {{ ApiRef() }}

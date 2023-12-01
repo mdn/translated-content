@@ -1,7 +1,6 @@
 ---
 title: CSS Namespaces
 slug: Web/CSS/CSS_namespaces
-translation_of: Web/CSS/CSS_Namespaces
 ---
 
 {{CSSRef}}

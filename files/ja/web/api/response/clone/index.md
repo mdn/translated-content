@@ -38,10 +38,10 @@ clone()
 フェッチが正常に解決されると、それを複製し、2 つの {{domxref("Response.blob")}} 呼び出しを使用して両方のレスポンスから blob を抽出し、 {{domxref("URL.createObjectURL")}} を使用して blob からオブジェクト URL を作成し、それらを 2 つの別々の {{htmlelement("img")}} 要素で表示します。
 
 ```js
-const image1 = document.querySelector('.img1');
-const image2 = document.querySelector('.img2');
+const image1 = document.querySelector(".img1");
+const image2 = document.querySelector(".img2");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   const response2 = response.clone();

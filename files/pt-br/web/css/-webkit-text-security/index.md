@@ -1,5 +1,5 @@
 ---
-title: '-webkit-text-security'
+title: "-webkit-text-security"
 slug: Web/CSS/-webkit-text-security
 ---
 
@@ -23,8 +23,7 @@ Tente digitar no campo abaixo. Se o seu navegador suportar essa propriedade, os 
 ### HTML
 
 ```html
-<label for="name">Name:</label>
-<input type="text" name="name" id="name" />
+<label for="name">Name:</label> <input type="text" name="name" id="name" />
 ```
 
 ### CSS

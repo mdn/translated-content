@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
-translation_of: Web/API/CanvasRenderingContext2D/setLineDash
 ---
 
 {{APIRef}}

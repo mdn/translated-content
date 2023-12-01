@@ -1,11 +1,6 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-tags:
-  - '@@toPrimitive'
-  - JavaScript
-  - toPrimitive
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
 
 {{JSRef}}
@@ -25,25 +20,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ```js
 // Объект без свойства Symbol.toPrimitive
 var obj1 = {};
-console.log(+obj1);     // NaN
+console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ''); // "[object Object]"
+console.log(obj1 + ""); // "[object Object]"
 
 // Объект со свойством Symbol.toPrimitive
 var obj2 = {
   [Symbol.toPrimitive](hint) {
-    if (hint == 'number') {
+    if (hint == "number") {
       return 10;
     }
-    if (hint == 'string') {
-      return 'hello';
+    if (hint == "string") {
+      return "hello";
     }
     return true;
-  }
+  },
 };
-console.log(+obj2);     // 10        -- желаемый тип (hint) - "number"
+console.log(+obj2); // 10        -- желаемый тип (hint) - "number"
 console.log(`${obj2}`); // "hello"   -- желаемый тип (hint) - "string"
-console.log(obj2 + ''); // "true"    -- желаемый тип (hint) - "default"
+console.log(obj2 + ""); // "true"    -- желаемый тип (hint) - "default"
 ```
 
 ## Спецификации

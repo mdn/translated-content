@@ -65,14 +65,15 @@ text-shadow: unset;
 
 ```css
 .red-text-shadow {
-   text-shadow: red 0 -2px;
+  text-shadow: red 0 -2px;
 }
 ```
 
 ```html
 <p class="red-text-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-   inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -82,16 +83,25 @@ text-shadow: unset;
 
 ```css
 .white-with-blue-shadow {
-   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-   color: white;
-   font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  color: white;
+  font:
+    1.5em Georgia,
+    "Bitstream Charter",
+    "URW Bookman L",
+    "Century Schoolbook L",
+    serif;
 }
 ```
 
 ```html
 <p class="white-with-blue-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-   veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 

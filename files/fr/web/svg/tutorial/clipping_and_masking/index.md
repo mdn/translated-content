@@ -1,7 +1,6 @@
 ---
 title: Découpages et masquages
 slug: Web/SVG/Tutorial/Clipping_and_masking
-translation_of: Web/SVG/Tutorial/Clipping_and_masking
 ---
 
 {{ PreviousNext("SVG/Tutoriel/Transformations_de_base", "Web/SVG/Tutoriel/Contenu_embarque_SVG") }}

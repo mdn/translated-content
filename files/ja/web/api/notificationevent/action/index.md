@@ -15,17 +15,21 @@ slug: Web/API/NotificationEvent/action
 
 ```js
 self.registration.showNotification("New articles available", {
-  actions: [{action: "get", title: "Get now."}]
+  actions: [{ action: "get", title: "Get now." }],
 });
 
-self.addEventListener('notificationclick', function(event) {
-  event.notification.close();
-  if (event.action === 'get') {
-    synchronizeReader();
-  } else {
-    clients.openWindow("/reader");
-  }
-}, false);
+self.addEventListener(
+  "notificationclick",
+  function (event) {
+    event.notification.close();
+    if (event.action === "get") {
+      synchronizeReader();
+    } else {
+      clients.openWindow("/reader");
+    }
+  },
+  false,
+);
 ```
 
 ## 仕様書
@@ -34,4 +38,4 @@ self.addEventListener('notificationclick', function(event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.NotificationEvent.action")}}
+{{Compat}}

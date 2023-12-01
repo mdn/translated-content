@@ -1,7 +1,6 @@
 ---
 title: update
 slug: Web/CSS/@media/update
-original_slug: Web/CSS/@media/update-frequency
 ---
 
 {{CSSRef}}
@@ -10,7 +9,7 @@ original_slug: Web/CSS/@media/update-frequency
 
 ## 構文
 
- `update` 特性は、以下の一覧のうち一つのキーワード値で指定します。
+`update` 特性は、以下の一覧のうち一つのキーワード値で指定します。
 
 - `none`
   - : いったん表示されると、レイアウトは更新されることはありません。例: 紙に印刷する文書。

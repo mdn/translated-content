@@ -1,7 +1,6 @@
 ---
 title: BlobEvent.data
 slug: Web/API/BlobEvent/data
-translation_of: Web/API/BlobEvent/data
 ---
 
 {{ apiref("Media Capture and Streams") }}

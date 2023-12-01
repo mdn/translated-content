@@ -1,16 +1,8 @@
 ---
 title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
-tags:
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка
@@ -39,9 +31,9 @@ Math.imul(a, b)
 ### Пример: использование метода `Math.imul()`
 
 ```js
-Math.imul(2, 4);          // 8
-Math.imul(-1, 8);         // -8
-Math.imul(-2, -2);        // 4
+Math.imul(2, 4); // 8
+Math.imul(-1, 8); // -8
+Math.imul(-2, -2); // 4
 Math.imul(0xffffffff, 5); // -5
 Math.imul(0xfffffffe, 5); // -10
 ```
@@ -51,15 +43,17 @@ Math.imul(0xfffffffe, 5); // -10
 Этот метод может эмулироваться следующим способом:
 
 ```js
-Math.imul = Math.imul || function(a, b) {
-  var ah = (a >>> 16) & 0xffff;
-  var al = a & 0xffff;
-  var bh = (b >>> 16) & 0xffff;
-  var bl = b & 0xffff;
-  // сдвиг на 0 бит закрепляет знак в старшей части числа
-  // окончательный |0 преобразует беззнаковое значение обратно в знаковое значение
-  return ((al * bl) + (((ah * bl + al * bh) << 16) >>> 0)|0);
-};
+Math.imul =
+  Math.imul ||
+  function (a, b) {
+    var ah = (a >>> 16) & 0xffff;
+    var al = a & 0xffff;
+    var bh = (b >>> 16) & 0xffff;
+    var bl = b & 0xffff;
+    // сдвиг на 0 бит закрепляет знак в старшей части числа
+    // окончательный |0 преобразует беззнаковое значение обратно в знаковое значение
+    return (al * bl + (((ah * bl + al * bh) << 16) >>> 0)) | 0;
+  };
 ```
 
 ## Спецификации

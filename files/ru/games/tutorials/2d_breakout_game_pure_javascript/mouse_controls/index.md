@@ -1,13 +1,6 @@
 ---
 title: Управление мышью
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-tags:
-  - Игры
-  - Начинающий
-  - канвас
-  - мышь
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключение")}}

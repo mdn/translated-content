@@ -1,7 +1,6 @@
 ---
 title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
-translation_of: Web/API/Node/isEqualNode
 ---
 
 {{APIRef("DOM")}}

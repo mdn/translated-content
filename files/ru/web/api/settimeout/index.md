@@ -1,9 +1,8 @@
 ---
 title: WindowTimers.setTimeout()
 slug: Web/API/setTimeout
-translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
+
 {{ APIRef() }}
 
 ## Краткое изложение
@@ -85,22 +84,38 @@ function clearAlert() {
 
 if (document.all && !window.setTimeout.isPolyfill) {
   var __nativeST__ = window.setTimeout;
-  window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
+  window.setTimeout = function (
+    vCallback,
+    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+  ) {
     var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeST__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
+    return __nativeST__(
+      vCallback instanceof Function
+        ? function () {
+            vCallback.apply(null, aArgs);
+          }
+        : vCallback,
+      nDelay,
+    );
   };
   window.setTimeout.isPolyfill = true;
 }
 
 if (document.all && !window.setInterval.isPolyfill) {
   var __nativeSI__ = window.setInterval;
-  window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
+  window.setInterval = function (
+    vCallback,
+    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+  ) {
     var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeSI__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
+    return __nativeSI__(
+      vCallback instanceof Function
+        ? function () {
+            vCallback.apply(null, aArgs);
+          }
+        : vCallback,
+      nDelay,
+    );
   };
   window.setInterval.isPolyfill = true;
 }
@@ -125,26 +140,35 @@ If you want a completely unobtrusive hack for every other mobile or desktop brow
 Или используйте очень чистый подход, основанный на условном свойстве IE HTML:
 
 ```html
-<!--[if lte IE 9]><script>
-(function(f){
-window.setTimeout =f(window.setTimeout);
-window.setInterval =f(window.setInterval);
-})(function(f){return function(c,t){
-var a=[].slice.call(arguments,2);return f(function(){c.apply(this,a)},t)}
-});
-</script><![endif]-->
+<!--[if lte IE 9
+  ]><script>
+    (function (f) {
+      window.setTimeout = f(window.setTimeout);
+      window.setInterval = f(window.setInterval);
+    })(function (f) {
+      return function (c, t) {
+        var a = [].slice.call(arguments, 2);
+        return f(function () {
+          c.apply(this, a);
+        }, t);
+      };
+    });
+  </script><!
+[endif]-->
 ```
 
 Another possibility is to use an anonymous function to call your callback, but this solution is a bit more expensive. Example:
 
 ```js
-var intervalID = setTimeout(function() { myFunc("one", "two", "three"); }, 1000);
+var intervalID = setTimeout(function () {
+  myFunc("one", "two", "three");
+}, 1000);
 ```
 
 Yet another possibility is to use [function's bind](/ru/docs/JavaScript/Reference/Global_Objects/Function/bind). Example:
 
 ```js
-setTimeout(function(arg1){}.bind(undefined, 10));
+setTimeout(function (arg1) {}.bind(undefined, 10));
 ```
 
 ## Проблема с "`this`"
@@ -158,7 +182,7 @@ Code executed by `setTimeout()` is run in a separate execution context to the fu
 ```js
 myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
+  alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // prints "zero,one,two"
@@ -174,25 +198,44 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 ### Возможное решение
 
-A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones which will enable their invocation through the [`Function.prototype.call`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
+A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones which will enable their invocation through the [`Function.prototype.call`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers
 
-var __nativeST__ = window.setTimeout, __nativeSI__ = window.setInterval;
+var __nativeST__ = window.setTimeout,
+  __nativeSI__ = window.setInterval;
 
-window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeST__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
+window.setTimeout = function (
+  vCallback,
+  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+) {
+  var oThis = this,
+    aArgs = Array.prototype.slice.call(arguments, 2);
+  return __nativeST__(
+    vCallback instanceof Function
+      ? function () {
+          vCallback.apply(oThis, aArgs);
+        }
+      : vCallback,
+    nDelay,
+  );
 };
 
-window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeSI__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
+window.setInterval = function (
+  vCallback,
+  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+) {
+  var oThis = this,
+    aArgs = Array.prototype.slice.call(arguments, 2);
+  return __nativeSI__(
+    vCallback instanceof Function
+      ? function () {
+          vCallback.apply(oThis, aArgs);
+        }
+      : vCallback,
+    nDelay,
+  );
 };
 ```
 
@@ -203,7 +246,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
 ```js
 myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
+  alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 setTimeout(alert, 1500, "Hello world!"); // the standard use of setTimeout and setInterval is preserved, but...
@@ -227,12 +270,12 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 s
 
 ```js
 // Правильно
-window.setTimeout(function() {
-    alert("Hello World!");
+window.setTimeout(function () {
+  alert("Hello World!");
 }, 500);
 
 // Неправильно
-window.setTimeout("alert(\"Hello World!\");", 500);
+window.setTimeout('alert("Hello World!");', 500);
 ```
 
 String literals are evaluated in the global context, so local symbols in the context where `setTimeout()` was called will not be available when the string is evaluated as code.
@@ -249,17 +292,13 @@ To implement a 0 ms timeout in a modern browser, you can use {{ domxref("window.
 
 Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a 32-bit signed Integer internally. This causes an Integer overflow when using delays larger than 2147483647, resulting in the timeout being executed immediately.
 
-#### Неактивные вкладки
+## Спецификации
 
-In Gecko 5.0 and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификация
-
-Part of DOM level 0, as specified in [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers).
 
 ## Также интересно
 

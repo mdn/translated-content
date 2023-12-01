@@ -1,7 +1,6 @@
 ---
 title: 課題の作成と作業のガイドライン
 slug: MDN/Community/Issues
-original_slug: MDN/Contribute/GitHub_best_practices
 l10n:
   sourceCommit: e7981a5962663764c953ef509d7a8f2d0f934885
 ---

@@ -1,11 +1,8 @@
 ---
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
-tags:
-  - HTML формы
-  - HTMLSelectElement
-translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.selectedIndex`** показывает порядковый номер первого выбранного элемента `{{HTMLElement("option")}}`. Значение -1 означает, что ни один из элементов не выбран.
@@ -36,15 +33,15 @@ selectElem.selectedIndex = index;
 ### JavaScript
 
 ```js
-var selectElem = document.getElementById('select')
-var pElem = document.getElementById('p')
+var selectElem = document.getElementById("select");
+var pElem = document.getElementById("p");
 
 // Когда выбран новый элемент <option>
-selectElem.addEventListener('change', function() {
+selectElem.addEventListener("change", function () {
   var index = selectElem.selectedIndex;
   // Добавить данные в <p>
-  pElem.innerHTML = 'selectedIndex: ' + index;
-})
+  pElem.innerHTML = "selectedIndex: " + index;
+});
 ```
 
 {{EmbedLiveSample("Пример", "200px", "80px")}}

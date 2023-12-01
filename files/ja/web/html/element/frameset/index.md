@@ -27,7 +27,7 @@ l10n:
 フレームセット文書では、{{HTMLElement("body")}} 要素の代わりに {{HTMLElement("frameset")}} 要素があります。{{HTMLElement("frame")}} 要素は `<frameset>` の中に配置されます。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <!-- Document metadata goes here -->

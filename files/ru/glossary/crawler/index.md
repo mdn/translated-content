@@ -1,9 +1,9 @@
 ---
 title: Crawler
 slug: Glossary/Crawler
-translation_of: Glossary/Crawler
-original_slug: Глоссарий/Crawler
 ---
+
+{{GlossarySidebar}}
 
 Поисковый робот(паук, краулер) часто называемый просто "бот" или "робот" это программа, систематически обходящая {{glossary("World Wide Web","Web")}} для сбора данных со страниц веб-сайтов. Обычно поисковые сервисы (напр. Google, Bing, и пр.) используют поисковых роботов для индексирования сайтов.
 

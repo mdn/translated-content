@@ -1,19 +1,6 @@
 ---
 title: error
 slug: Web/API/HTMLElement/error_event
-tags:
-  - DOM
-  - UI события
-  - Видео
-  - Запись
-  - Медия
-  - Обработка ошибок
-  - Ошибки
-  - Событие
-  - аудио
-  - события
-translation_of: Web/API/Element/error_event
-original_slug: Web/API/Element/error_event
 ---
 
 Событие `error` возникает, когда произошла какая-либо ошибка. Точные обстоятельства могут быть различными, потому что события с этим именем используются множеством различных API.

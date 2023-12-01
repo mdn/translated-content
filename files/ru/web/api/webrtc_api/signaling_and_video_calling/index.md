@@ -1,7 +1,6 @@
 ---
 title: Сигнализированные и видео вызов
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
-translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -37,7 +36,7 @@ function sendToOneUser(target, msgString) {
   var isUnique = true;
   var i;
 
-  for (i=0; i<connectionArray.length; i++) {
+  for (i = 0; i < connectionArray.length; i++) {
     if (connectionArray[i].username === target) {
       connectionArray[i].send(msgString);
       break;
@@ -58,7 +57,7 @@ if (sendToClients) {
   if (msg.target && msg.target !== undefined && msg.target.length !== 0) {
     sendToOneUser(msg.target, msgString);
   } else {
-    for (i=0; i<connectionArray.length; i++) {
+    for (i = 0; i < connectionArray.length; i++) {
       connectionArray[i].send(msgString);
     }
   }
@@ -163,9 +162,7 @@ The HTML for our client needs a location for video to be presented. This require
   <div class="camera-box">
     <video id="received_video" autoplay></video>
     <video id="local_video" autoplay muted></video>
-    <button id="hangup-button" onclick="hangUpCall();" disabled>
-      Hang Up
-    </button>
+    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
   </div>
 </div>
 ```
@@ -207,7 +204,7 @@ function handleUserlistMsg(msg) {
     listElem.removeChild(listElem.firstChild);
   }
 
-  msg.users.forEach(function(username) {
+  msg.users.forEach(function (username) {
     var item = document.createElement("li");
     item.appendChild(document.createTextNode(username));
     item.addEventListener("click", invite, false);
@@ -232,7 +229,7 @@ When the user clicks on a username they want to call, the `invite()` function is
 ```js
 var mediaConstraints = {
   audio: true, // We want an audio track
-  video: true // ...and we want a video track
+  video: true, // ...and we want a video track
 };
 
 function invite(evt) {
@@ -242,19 +239,24 @@ function invite(evt) {
     var clickedUsername = evt.target.textContent;
 
     if (clickedUsername === myUsername) {
-      alert("I'm afraid I can't let you talk to yourself. That would be weird.");
+      alert(
+        "I'm afraid I can't let you talk to yourself. That would be weird.",
+      );
       return;
     }
 
     targetUsername = clickedUsername;
     createPeerConnection();
 
-    navigator.mediaDevices.getUserMedia(mediaConstraints)
-    .then(function(localStream) {
-      document.getElementById("local_video").srcObject = localStream;
-      localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
-    })
-    .catch(handleGetUserMediaError);
+    navigator.mediaDevices
+      .getUserMedia(mediaConstraints)
+      .then(function (localStream) {
+        document.getElementById("local_video").srcObject = localStream;
+        localStream
+          .getTracks()
+          .forEach((track) => myPeerConnection.addTrack(track, localStream));
+      })
+      .catch(handleGetUserMediaError);
   }
 }
 ```
@@ -281,10 +283,12 @@ If the promise returned by `getUserMedia()` concludes in a failure, our `handleG
 
 ```js
 function handleGetUserMediaError(e) {
-  switch(e.name) {
+  switch (e.name) {
     case "NotFoundError":
-      alert("Unable to open your call because no camera and/or microphone" +
-            "were found.");
+      alert(
+        "Unable to open your call because no camera and/or microphone" +
+          "were found.",
+      );
       break;
     case "SecurityError":
     case "PermissionDeniedError":
@@ -310,19 +314,22 @@ The `createPeerConnection()` function is used by both the caller and the callee 
 ```js
 function createPeerConnection() {
   myPeerConnection = new RTCPeerConnection({
-      iceServers: [     // Information about ICE servers - Use your own!
-        {
-          urls: "stun:stun.stunprotocol.org"
-        }
-      ]
+    iceServers: [
+      // Information about ICE servers - Use your own!
+      {
+        urls: "stun:stun.stunprotocol.org",
+      },
+    ],
   });
 
   myPeerConnection.onicecandidate = handleICECandidateEvent;
   myPeerConnection.ontrack = handleTrackEvent;
   myPeerConnection.onnegotiationneeded = handleNegotiationNeededEvent;
   myPeerConnection.onremovetrack = handleRemoveTrackEvent;
-  myPeerConnection.oniceconnectionstatechange = handleICEConnectionStateChangeEvent;
-  myPeerConnection.onicegatheringstatechange = handleICEGatheringStateChangeEvent;
+  myPeerConnection.oniceconnectionstatechange =
+    handleICEConnectionStateChangeEvent;
+  myPeerConnection.onicegatheringstatechange =
+    handleICEGatheringStateChangeEvent;
   myPeerConnection.onsignalingstatechange = handleSignalingStateChangeEvent;
 }
 ```
@@ -358,18 +365,20 @@ Once the caller has created its {{domxref("RTCPeerConnection")}}, created a medi
 
 ```js
 function handleNegotiationNeededEvent() {
-  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
-    sendToServer({
-      name: myUsername,
-      target: targetUsername,
-      type: "video-offer",
-      sdp: myPeerConnection.localDescription
-    });
-  })
-  .catch(reportError);
+  myPeerConnection
+    .createOffer()
+    .then(function (offer) {
+      return myPeerConnection.setLocalDescription(offer);
+    })
+    .then(function () {
+      sendToServer({
+        name: myUsername,
+        target: targetUsername,
+        type: "video-offer",
+        sdp: myPeerConnection.localDescription,
+      });
+    })
+    .catch(reportError);
 }
 ```
 
@@ -411,32 +420,36 @@ function handleVideoOfferMsg(msg) {
 
   var desc = new RTCSessionDescription(msg.sdp);
 
-  myPeerConnection.setRemoteDescription(desc).then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function(stream) {
-    localStream = stream;
-    document.getElementById("local_video").srcObject = localStream;
+  myPeerConnection
+    .setRemoteDescription(desc)
+    .then(function () {
+      return navigator.mediaDevices.getUserMedia(mediaConstraints);
+    })
+    .then(function (stream) {
+      localStream = stream;
+      document.getElementById("local_video").srcObject = localStream;
 
-    localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
-  })
-  .then(function() {
-    return myPeerConnection.createAnswer();
-  })
-  .then(function(answer) {
-    return myPeerConnection.setLocalDescription(answer);
-  })
-  .then(function() {
-    var msg = {
-      name: myUsername,
-      target: targetUsername,
-      type: "video-answer",
-      sdp: myPeerConnection.localDescription
-    };
+      localStream
+        .getTracks()
+        .forEach((track) => myPeerConnection.addTrack(track, localStream));
+    })
+    .then(function () {
+      return myPeerConnection.createAnswer();
+    })
+    .then(function (answer) {
+      return myPeerConnection.setLocalDescription(answer);
+    })
+    .then(function () {
+      var msg = {
+        name: myUsername,
+        target: targetUsername,
+        type: "video-answer",
+        sdp: myPeerConnection.localDescription,
+      };
 
-    sendToServer(msg);
-  })
-  .catch(handleGetUserMediaError);
+      sendToServer(msg);
+    })
+    .catch(handleGetUserMediaError);
 }
 ```
 
@@ -462,7 +475,7 @@ function handleICECandidateEvent(event) {
     sendToServer({
       type: "new-ice-candidate",
       target: targetUsername,
-      candidate: event.candidate
+      candidate: event.candidate,
     });
   }
 }
@@ -489,8 +502,7 @@ The signaling server delivers each ICE candidate to the destination peer using w
 function handleNewICECandidateMsg(msg) {
   var candidate = new RTCIceCandidate(msg.candidate);
 
-  myPeerConnection.addIceCandidate(candidate)
-    .catch(reportError);
+  myPeerConnection.addIceCandidate(candidate).catch(reportError);
 }
 ```
 
@@ -552,7 +564,7 @@ function hangUpCall() {
   sendToServer({
     name: myUsername,
     target: targetUsername,
-    type: "hang-up"
+    type: "hang-up",
   });
 }
 ```
@@ -579,11 +591,11 @@ function closeVideoCall() {
     myPeerConnection.onnegotiationneeded = null;
 
     if (remoteVideo.srcObject) {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     if (localVideo.srcObject) {
-      localVideo.srcObject.getTracks().forEach(track => track.stop());
+      localVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     myPeerConnection.close();
@@ -621,7 +633,7 @@ There are a number of additional events you can set listeners for which notifyin
 
 ```js
 function handleICEConnectionStateChangeEvent(event) {
-  switch(myPeerConnection.iceConnectionState) {
+  switch (myPeerConnection.iceConnectionState) {
     case "closed":
     case "failed":
     case "disconnected":
@@ -639,12 +651,12 @@ Similarly, we watch for {{event("signalingstatechange")}} events. If the signali
 
 ```js
 function handleSignalingStateChangeEvent(event) {
-  switch(myPeerConnection.signalingState) {
+  switch (myPeerConnection.signalingState) {
     case "closed":
       closeVideoCall();
       break;
   }
-};
+}
 ```
 
 > **Примечание:** The `closed` signaling state has been deprecated in favor of the `closed` {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}. We are watching for it here to add a bit of backward compatibility.

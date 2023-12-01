@@ -1,7 +1,6 @@
 ---
 title: Utilisation d'éléments personnalisés
 slug: Web/API/Web_components/Using_custom_elements
-translation_of: Web/Web_Components/Using_custom_elements
 ---
 
 {{DefaultAPISidebar("Web Components")}}

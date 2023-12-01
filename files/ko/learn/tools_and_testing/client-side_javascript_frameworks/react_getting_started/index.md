@@ -1,7 +1,6 @@
 ---
 title: React 시작하기
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
 <div>{{LearnSidebar}}</div>
@@ -67,9 +66,11 @@ const header = (
 > **참고:** 위의 스니펫에 있는 괄호는 JSX에 유일하지도 않고, 여러분의 애플리케이션에 어떠한 영향을 주지도 않습니다. 이들은 여러 줄의 코드가 동일한 표현식의 부분이라는 것을 당신(과 컴퓨터)에게 알려줍니다. header 표현식은 다음과 같이도 쓸 수도 있습니다.
 
 ```js
-const header = <header>
+const header = (
+  <header>
     <h1>Mozilla Developer Network</h1>
-</header>
+  </header>
+);
 ```
 
 하지만, 표현식을 시작하는 [`<header>`](/ko/docs/Web/HTML/Element/header) 태그가 클로징 태그와 상응하는 위치에 들여쓰기가 되어있지 않기 때문에 이 코드는 살짝 이상해 보입니다.
@@ -79,8 +80,10 @@ const header = <header>
 브라우저는 도움 없이는 JSX를 읽을 수 없습니다. ([Babel](https://babeljs.io/)이나 [Parcel](https://parceljs.org/)과 같은 툴을 사용하여 컴파일할 때 header 표현식은 다음과 같이 보일 것입니다.
 
 ```js
-const header = React.createElement("header", null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -181,9 +184,9 @@ React에서, **컴포넌트**(**component**)는 앱의 일부를 렌더링하는
 `src/App.js`를 열어봅시다. 이 파일은 첫번째 컴포넌트 `App`과 몇 줄의 코드를 포함하고 있습니다.
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -197,8 +200,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -215,9 +217,9 @@ export default App;
 상단의 `import` 문은 `App.js`가 다른 곳에 정의된 코드들을 사용할 수 있게 해줍니다. 이 명령문들을 자세히 들여다봅시다.
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 ```
 
 첫 번째 명령문은 React 라이브러리를 불러옵니다. React가 우리가 작성한 JSX를 `React.createElement()`로 변환하기 때문에, 모든 React 컴포넌트들은 반드시 `React` 모듈을 불러와야 합니다. 이 단계를 건너뛰면 애플리케이션은 오류를 발생시킬 겁니다.
@@ -226,7 +228,7 @@ import './App.css';
 
 `React` 모듈을 불러올 때는 경로나 익스텐션을 쓰지 않습니다. 이것들은 로컬 파일이 아니라, `package.json`의 의존성 목록에 포함되어 있습니다. 로컬과 이들의 구분을 꼭 주의하세요!
 
-세 번째 명령문은 `App` 컴포넌트에 관련된 CSS를 불러옵니다. 어떤 변수 이름이나 `from`  지시가 없다는 것을 주목해주세요. 이 특별한 import 구문은 JavaScript 모듈 구문이 아니라 웹팩(Webpack)으로부터 온 것입니다. 웹팩은 create-react-app이 우리의 모든 JavaScript 파일을 함께 번들하고 브라우저에 제공하기 위해 사용하는 도구입니다.
+세 번째 명령문은 `App` 컴포넌트에 관련된 CSS를 불러옵니다. 어떤 변수 이름이나 `from` 지시가 없다는 것을 주목해주세요. 이 특별한 import 구문은 JavaScript 모듈 구문이 아니라 웹팩(Webpack)으로부터 온 것입니다. 웹팩은 create-react-app이 우리의 모든 JavaScript 파일을 함께 번들하고 브라우저에 제공하기 위해 사용하는 도구입니다.
 
 ### `App` 컴포넌트
 
@@ -247,8 +249,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -271,9 +272,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -289,17 +288,17 @@ function App() {
 `src/index.js`를 열어봅시다. `App` 컴포넌트가 사용된 곳이기 때문입니다. 이 파일은 앱의 진입점이고, 초기에는 이렇게 생겼습니다.
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
 
 // If you want your app to work offline and load faster, you can change
@@ -324,12 +323,12 @@ serviceWorker.unregister();
 최종적인 `index.js`는 다음과 같을 것입니다:
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## 변수와 props
@@ -355,9 +354,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -373,9 +370,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, {subject}!
-        </p>
+        <p>Hello, {subject}!</p>
       </header>
     </div>
   );
@@ -395,7 +390,7 @@ function App() {
 `<App />` 컴포넌트 호출에 `subject`의 prop를 `Clarice`라는 값으로 추가해봅시다. 이제 코드는 다음과 같을 것입니다:
 
 ```js
-ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
+ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
 ```
 
 `App.js`로 돌아가서, App 함수를 다시 들여다봅시다. 간결함을 위해 `return` 문으로 요약하면 다음과 같이 읽어볼 수 있습니다:

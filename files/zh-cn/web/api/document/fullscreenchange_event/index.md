@@ -53,7 +53,7 @@ function fullscreenchanged(event) {
   // 如果有元素处于全屏模式，则 document.fullscreenElement 将指向该元素。如果没有元素处于全屏模式，则该属性的值为 null。
   if (document.fullscreenElement) {
     console.log(
-      `Element: ${document.fullscreenElement.id} entered fullscreen mode.`
+      `Element: ${document.fullscreenElement.id} entered fullscreen mode.`,
     );
   } else {
     console.log("Leaving fullscreen mode.");
@@ -89,5 +89,5 @@ document
 
 - {{domxref("Document/fullscreenerror_event", "fullscreenerror")}}
 - {{domxref("Element")}}：{{domxref("Element/fullscreenchange_event", "fullscreenchange")}} 事件
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
-- [Fullscreen API 指南](/ja/docs/Web/API/Fullscreen_API/Guide)
+- [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)
+- [Fullscreen API 指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)

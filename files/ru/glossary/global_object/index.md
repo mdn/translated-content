@@ -1,9 +1,9 @@
 ---
 title: Global object
 slug: Glossary/Global_object
-translation_of: Glossary/Global_object
-original_slug: Глоссарий/Global_object
 ---
+
+{{GlossarySidebar}}
 
 Глобальный объект - это {{glossary("object","объект")}}, который всегда существует в {{glossary("global scope","глобальной области видимости")}}.
 

@@ -1,7 +1,6 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/substring
 ---
 
 {{JSRef("Objetos_globales", "String")}}
@@ -45,20 +44,20 @@ El siguiente ejemplo usa `substring` para mostrar caracteres de la cadena "`Mozi
 var cualquierCadena = "Mozilla";
 
 // Muestra "Moz"
-print(cualquierCadena.substring(0,3));
-print(cualquierCadena.substring(3,0));
+print(cualquierCadena.substring(0, 3));
+print(cualquierCadena.substring(3, 0));
 
 // Muestra "lla"
-print(cualquierCadena.substring(4,7));
-print(cualquierCadena.substring(7,4));
+print(cualquierCadena.substring(4, 7));
+print(cualquierCadena.substring(7, 4));
 
 // Muestra "Mozill"
-print(cualquierCadena.substring(0,6));
-print(cualquierCadena.substring(6,0));
+print(cualquierCadena.substring(0, 6));
+print(cualquierCadena.substring(6, 0));
 
 // Muestra "Mozilla"
-print(cualquierCadena.substring(0,7));
-print(cualquierCadena.substring(0,10));
+print(cualquierCadena.substring(0, 7));
+print(cualquierCadena.substring(0, 10));
 ```
 
 ### Ejemplo: Reemplazar una subcadena dentro de una cadena
@@ -67,14 +66,17 @@ El siguiente ejemplo reemplaza una subcadena dentro de una cadena. Reemplazará 
 
 ```js
 function reemplazarCadena(cadenaVieja, cadenaNueva, cadenaCompleta) {
-// Reemplaza cadenaVieja por cadenaNueva en cadenaCompleta
+  // Reemplaza cadenaVieja por cadenaNueva en cadenaCompleta
 
-   for (var i = 0; i < cadenaCompleta.length; i++) {
-      if (cadenaCompleta.substring(i, i + cadenaVieja.length) == cadenaVieja) {
-         cadenaCompleta= cadenaCompleta.substring(0, i) + cadenaNueva + cadenaCompleta.substring(i + cadenaVieja.length, cadenaCompleta.length);
-      }
-   }
-   return cadenaCompleta;
+  for (var i = 0; i < cadenaCompleta.length; i++) {
+    if (cadenaCompleta.substring(i, i + cadenaVieja.length) == cadenaVieja) {
+      cadenaCompleta =
+        cadenaCompleta.substring(0, i) +
+        cadenaNueva +
+        cadenaCompleta.substring(i + cadenaVieja.length, cadenaCompleta.length);
+    }
+  }
+  return cadenaCompleta;
 }
 
 reemplazarCadena("Mundo", "Web", "Bravo Nuevo Mundo");

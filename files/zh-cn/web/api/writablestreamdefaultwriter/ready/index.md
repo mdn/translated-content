@@ -20,31 +20,31 @@ function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   var defaultWriter = writableStream.getWriter();
   var encoder = new TextEncoder();
-  var encoded = encoder.encode(message, {stream: true});
-  encoded.forEach(function(chunk) {
+  var encoded = encoder.encode(message, { stream: true });
+  encoded.forEach(function (chunk) {
     // Make sure the stream and its writer are able to
     //   receive data.
-    defaultWriter.ready
-    .then(function() {
-      defaultWriter.write(chunk)
-      .then(function() {
-        console.log("Chunk written to sink.");
-      })
-      .catch(function(err) {
-        console.log("Chunk error: " + err);
-      });
+    defaultWriter.ready.then(function () {
+      defaultWriter
+        .write(chunk)
+        .then(function () {
+          console.log("Chunk written to sink.");
+        })
+        .catch(function (err) {
+          console.log("Chunk error: " + err);
+        });
     });
     // Call ready again to ensure that all chunks are written
     //   before closing the writer.
-    defaultWriter.ready
-    .then(function() {
-      defaultWriter.close()
-      .then(function() {
-        console.log("All chunks written");
-      })
-      .catch(function(err) {
-        console.log("Stream error: " + err);
-      });
+    defaultWriter.ready.then(function () {
+      defaultWriter
+        .close()
+        .then(function () {
+          console.log("All chunks written");
+        })
+        .catch(function (err) {
+          console.log("Stream error: " + err);
+        });
     });
   });
 }

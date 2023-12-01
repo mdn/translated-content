@@ -1,9 +1,9 @@
 ---
-title: Example 1
+title: 示例 1
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 ---
 
-这是第一个[如果构建自定义表单小部件](/zh-CN/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets)的代码解释事例。
+这是第一个[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)的代码解释事例。
 
 ## 基本状态
 
@@ -25,9 +25,9 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 ### CSS
 
 ```css
-/* --------------- */
-/* Required Styles */
-/* --------------- */
+/*--------- */
+/* 所需的样式 */
+/* -------- */
 
 .select {
   position: relative;
@@ -51,15 +51,14 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
   visibility: hidden;
 }
 
-/* ------------ */
-/* Fancy Styles */
-/* ------------ */
+/* ------- */
+/* 美化样式 */
+/* ------- */
 
 .select {
   font-size: 0.625em; /* 10px */
   font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -71,7 +70,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
   box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -85,7 +83,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -96,7 +94,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 
   padding-top: 0.1em;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   text-align: center;
@@ -122,7 +119,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 
   box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   min-width: 100%;
@@ -141,7 +137,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 }
 ```
 
-### 结果
+### 基本状态结果
 
 {{ EmbedLiveSample('基本状态', 120, 130) }}
 
@@ -165,9 +161,9 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 ### CSS
 
 ```css
-/* --------------- */
-/* Required Styles */
-/* --------------- */
+/*--------- */
+/* 所需的样式 */
+/* -------- */
 
 .select {
   position: relative;
@@ -191,15 +187,14 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
   visibility: hidden;
 }
 
-/* ------------ */
-/* Fancy Styles */
-/* ------------ */
+/* ------- */
+/* 美化样式 */
+/* ------- */
 
 .select {
   font-size: 0.625em; /* 10px */
   font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -211,7 +206,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
   box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -225,7 +219,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -236,7 +230,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 
   padding-top: 0.1em;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   text-align: center;
@@ -262,7 +255,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 
   box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   min-width: 100%;
@@ -281,7 +273,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 }
 ```
 
-### 结果
+### 活动状态结果
 
 {{ EmbedLiveSample('活动状态', 120, 130) }}
 
@@ -305,9 +297,9 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 ### CSS
 
 ```css
-/* --------------- */
-/* Required Styles */
-/* --------------- */
+/*--------- */
+/* 所需的样式 */
+/* -------- */
 
 .select {
   position: relative;
@@ -331,15 +323,14 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
   visibility: hidden;
 }
 
-/* ------------ */
-/* Fancy Styles */
-/* ------------ */
+/* ------- */
+/* 美化样式 */
+/* ------- */
 
 .select {
   font-size: 0.625em; /* 10px */
   font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -351,7 +342,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
   box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -365,7 +355,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -376,7 +366,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 
   padding-top: 0.1em;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   text-align: center;
@@ -402,7 +391,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 
   box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   min-width: 100%;
@@ -421,6 +409,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 }
 ```
 
-### 结果
+### 展开状态结果
 
 {{ EmbedLiveSample('展开状态', 120, 130) }}

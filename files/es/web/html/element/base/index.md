@@ -1,7 +1,6 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-original_slug: Web/HTML/Elemento/base
 ---
 
 {{HTMLSidebar}}

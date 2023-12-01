@@ -11,8 +11,8 @@ slug: Web/API/IDBFactory/open
 
 1. 指定数据库已经存在时：
 
-    - 等待 {{domxref("versionchange")}} 操作完成。
-    - 如果数据库已计划删除，那等着删除完成。
+   - 等待 {{domxref("versionchange")}} 操作完成。
+   - 如果数据库已计划删除，那等着删除完成。
 
 2. 如果已有数据库版本高于给定的 `version`，中止操作并返回类型为 `VersionError` 的 `DOMError`。
 3. 如果已有数据库版本低于给定的 `version`，触发一个 `versionchange` 操作。
@@ -48,7 +48,10 @@ var request = window.indexedDB.open("toDoList", 4);
 For the experimental version with `options` (see below):
 
 ```js
-var request = window.indexedDB.open("toDoList", {version: 4, storage: "temporary"});
+var request = window.indexedDB.open("toDoList", {
+  version: 4,
+  storage: "temporary",
+});
 ```
 
 ## 参数

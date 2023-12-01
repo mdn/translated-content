@@ -1,7 +1,6 @@
 ---
 title: scroll-margin-left
 slug: Web/CSS/scroll-margin-left
-translation_of: Web/CSS/scroll-margin-left
 ---
 
 {{CSSRef}}

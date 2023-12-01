@@ -1,7 +1,6 @@
 ---
 title: noscript
 slug: Web/HTML/Element/noscript
-original_slug: Web/HTML/Elemento/noscript
 ---
 
 ### Definición

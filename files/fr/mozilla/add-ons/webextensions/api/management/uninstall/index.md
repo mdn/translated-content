@@ -1,7 +1,6 @@
 ---
 title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 ---
 
 {{AddonSidebar()}}

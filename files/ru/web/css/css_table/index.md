@@ -1,12 +1,6 @@
 ---
 title: CSS Table
 slug: Web/CSS/CSS_table
-tags:
-  - CSS
-  - CSS Reference
-  - CSS Table
-  - Overview
-translation_of: Web/CSS/CSS_Table
 ---
 
 {{CSSRef}}
@@ -30,6 +24,4 @@ _Нет._
 
 ## Спецификации
 
-| Specification                                    | Status                   | Comment            |
-| ------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | Initial definition |
+{{Specifications}}

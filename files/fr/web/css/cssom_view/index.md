@@ -1,7 +1,6 @@
 ---
 title: CSSOM View
 slug: Web/CSS/CSSOM_view
-translation_of: Web/CSS/CSSOM_View
 ---
 
 {{CSSRef}}

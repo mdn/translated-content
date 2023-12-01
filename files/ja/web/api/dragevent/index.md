@@ -1,6 +1,8 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
+l10n:
+  sourceCommit: f45409ba2169ff05e433d21aa4ee0424079916b8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -11,9 +13,9 @@ slug: Web/API/DragEvent
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
   - : ドラッグ＆ドロップ操作で動かされているデータです。
 
 ## コンストラクター
@@ -40,23 +42,6 @@ slug: Web/API/DragEvent
 - {{domxref("HTMLElement/drop_event", "drop")}}
   - : このイベントは、要素や選択テキストが有効なドロップ先にドロップされたときに発生します。
 
-## GlobalEventHandlers
-
-- {{domxref('GlobalEventHandlers.ondrag')}}
-  - : {{domxref("HTMLElement/drag_event", "drag")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
-- {{domxref('GlobalEventHandlers.ondragend')}}
-  - : {{domxref("HTMLElement/dragend_event", "dragend")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
-- {{domxref('GlobalEventHandlers.ondragenter')}}
-  - : {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
-- {{domxref('GlobalEventHandlers.ondragleave')}}
-  - : {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
-- {{domxref('GlobalEventHandlers.ondragover')}}
-  - : {{domxref("HTMLElement/dragover_event", "dragover")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
-- {{domxref('GlobalEventHandlers.ondragstart')}}
-  - : {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
-- {{domxref('GlobalEventHandlers.ondrop')}}
-  - : {{domxref("HTMLElement/drop_event", "drop")}} イベントの{{domxref('GlobalEventHandlers','グローバルイベントハンドラー', "", 1)}}です。
-
 ## 例
 
 各プロパティ、コンストラクター、イベントタイプおよびグローバルイベントハンドラーの例は、それぞれのリファレンスページに掲載しています。
@@ -74,5 +59,4 @@ slug: Web/API/DragEvent
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [推奨されるドラッグの種類](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数のアイテムのドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

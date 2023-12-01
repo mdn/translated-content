@@ -1,7 +1,6 @@
 ---
 title: runtime.getPlatformInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
 ---
 
 {{AddonSidebar()}}

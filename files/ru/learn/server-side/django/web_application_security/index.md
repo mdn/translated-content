@@ -1,7 +1,6 @@
 ---
 title: Безопасность веб-приложения Django
 slug: Learn/Server-side/Django/web_application_security
-translation_of: Learn/Server-side/Django/web_application_security
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}

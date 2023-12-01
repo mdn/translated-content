@@ -1,8 +1,9 @@
 ---
 title: Contexte d'application
 slug: Glossary/Application_context
-translation_of: Glossary/application_context
 ---
+
+{{GlossarySidebar}}
 
 Un **contexte d'application** est un [contexte de navigation](/fr/docs/Glossaire/Browsing_context) de haut niveau lié à un [manifeste](/fr/docs/Web/Manifest).
 

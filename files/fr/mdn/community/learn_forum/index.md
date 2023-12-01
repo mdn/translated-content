@@ -1,7 +1,6 @@
 ---
 title: Aider les débutants à apprendre sur MDN !
 slug: MDN/Community/Learn_forum
-translation_of: MDN/Contribute/Help_beginners
 ---
 
 {{MDNSidebar}}

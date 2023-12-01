@@ -1,8 +1,6 @@
 ---
 title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 
 {{WebAssemblySidebar}}
@@ -46,9 +44,7 @@ fetch("simple.wasm")
 
 ## Характеристики
 
-| Спецификация                                                       | Статус                      | Коммент                             |
-| ------------------------------------------------------------------ | --------------------------- | ----------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblycompile', 'compile()')}} | {{Spec2('WebAssembly JS')}} | Первоначальное определение проекта. |
+{{Specifications}}
 
 ## Совместимость с браузером
 

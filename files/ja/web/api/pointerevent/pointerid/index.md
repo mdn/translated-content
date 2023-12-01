@@ -27,7 +27,7 @@ target.addEventListener(
     // イベントの ID と比較し、それに応じて処理する
     if (id === event.pointerId) process_event(event);
   },
-  false
+  false,
 );
 ```
 

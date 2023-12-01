@@ -1,7 +1,6 @@
 ---
 title: Пути (paths)
 slug: Web/SVG/Tutorial/Paths
-translation_of: Web/SVG/Tutorial/Paths
 ---
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

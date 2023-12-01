@@ -1,7 +1,6 @@
 ---
 title: "-moz-box-pack"
 slug: Web/CSS/box-pack
-original_slug: Web/CSS/-moz-box-pack
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 ---
 
 {{JSRef}}
@@ -38,13 +37,13 @@ On notera que cette méthode permet de créer un nouvelle vue sur le tampon (_bu
 ```js
 var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+uint8.set([1, 2, 3]);
 
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 
-var sub = uint8.subarray(0,4);
+var sub = uint8.subarray(0, 4);
 
-console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
+console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
 ```
 
 ## Spécifications

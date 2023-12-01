@@ -1,7 +1,6 @@
 ---
 title: DOMRect
 slug: Web/API/DOMRect
-translation_of: Web/API/DOMRect
 ---
 
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}

@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`getUTCDate()`** renvoie le jour du mois pour la date renseignée 
 ## Syntaxe
 
 ```js
-dateObj.getUTCDate()
+dateObj.getUTCDate();
 ```
 
 ### Valeur de retour

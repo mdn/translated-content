@@ -1,12 +1,6 @@
 ---
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
 
 {{JSRef}}
@@ -41,20 +35,23 @@ Proxy.revocable(target, handler);
 ## Примеры
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return "[[" + name + "]]";
-  }
-});
+var revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
 var proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();
 
 console.log(proxy.foo); // Вызвано исключение TypeError
-proxy.foo = 1           // TypeError снова
-delete proxy.foo;       // Всё ещё TypeError
-typeof proxy            // "object", typeof не вызывает никаких proxy-перехватчиков событий
+proxy.foo = 1; // TypeError снова
+delete proxy.foo; // Всё ещё TypeError
+typeof proxy; // "object", typeof не вызывает никаких proxy-перехватчиков событий
 ```
 
 ## Спецификации

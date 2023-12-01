@@ -1,7 +1,6 @@
 ---
 title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 ---
 
 {{AddonSidebar}}

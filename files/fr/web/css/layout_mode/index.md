@@ -1,7 +1,6 @@
 ---
 title: Mode de mise en page
 slug: Web/CSS/Layout_mode
-translation_of: Web/CSS/Layout_mode
 ---
 
 {{CSSRef}}

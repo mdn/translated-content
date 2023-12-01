@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
 
 {{JSRef}}
@@ -75,7 +74,7 @@ console.table(nums);
 Le code qui suit ajoute trois valeurs à un tableau&nbsp;:
 
 ```js
-const alpha = ['a', 'b', 'c'];
+const alpha = ["a", "b", "c"];
 
 const alphanumerique = alpha.concat(1, [2, 3]);
 

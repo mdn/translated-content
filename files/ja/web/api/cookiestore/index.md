@@ -48,7 +48,7 @@ cookieStore
     },
     (reason) => {
       console.error("It failed: ", reason);
-    }
+    },
   );
 ```
 

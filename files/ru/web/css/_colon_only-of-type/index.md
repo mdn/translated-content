@@ -1,10 +1,6 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - Псевдоклассы
-translation_of: Web/CSS/:only-of-type
 ---
 
 {{CSSRef}}
@@ -34,7 +30,8 @@ p:only-of-type {
   <div>Я <code>div</code> №1.</div>
   <p>Я тут единственный <code>p</code> элемент.</p>
   <div>Я <code>div</code> №2.</div>
-  <div>Я <code>div</code> №3.
+  <div>
+    Я <code>div</code> №3.
     <i>Я единственный потомок типа <code>i</code>.</i>
     <em>Я <code>em</code> №1.</em>
     <em>Я <code>em</code> №2.</em>

@@ -1,8 +1,6 @@
 ---
 title: NavigatorID.product
 slug: orphaned/Web/API/NavigatorID/product
-translation_of: Web/API/NavigatorID/product
-original_slug: Web/API/NavigatorID/product
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
@@ -44,13 +42,11 @@ function prod() {
 
 ## Спецификации
 
-| Спецификация                                                                                         | Статус                           | Комментарий          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-product', 'NavigatorID.product')}} | {{Spec2('HTML WHATWG')}} | Действующее описание |
+{{Specifications}}
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.product")}}
+{{Compat}}
 
 ## Смотрите также
 

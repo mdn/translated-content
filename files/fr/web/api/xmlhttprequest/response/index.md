@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
-translation_of: Web/API/XMLHttpRequest/response
 ---
 
 {{APIRef('XMLHttpRequest')}}

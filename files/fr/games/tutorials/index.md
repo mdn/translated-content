@@ -1,7 +1,6 @@
 ---
 title: Workflows for different game types
 slug: Games/Tutorials
-translation_of: Games/Tutorials
 ---
 
 {{GamesSidebar}}

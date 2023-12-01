@@ -1,13 +1,6 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 
 {{JSRef("Global_Objects", "Object")}}

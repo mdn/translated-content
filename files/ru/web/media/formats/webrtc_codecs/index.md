@@ -1,10 +1,6 @@
 ---
 title: Кодеки, используемые WebRTC
 slug: Web/Media/Formats/WebRTC_codecs
-tags:
-  - Кодеки WebRTC
-translation_of: Web/Media/Formats/WebRTC_codecs
-original_slug: Web/Media/Formats/WebRTC_кодеки
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Media")}}

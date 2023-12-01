@@ -25,10 +25,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 
 ```js
 function getRoot1_2() {
-   return Math.SQRT1_2
+  return Math.SQRT1_2;
 }
 
-getRoot1_2() // 0.7071067811865476
+getRoot1_2(); // 0.7071067811865476
 ```
 
 ## 规范
@@ -39,6 +39,7 @@ getRoot1_2() // 0.7071067811865476
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

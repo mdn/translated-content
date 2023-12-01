@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`getUint8()`** permet de lire un entier non-signé sur 8 bits à l
 ## Syntaxe
 
 ```js
-dataview.getUint8(positionOctet)
+dataview.getUint8(positionOctet);
 ```
 
 ### Paramètres

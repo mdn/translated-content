@@ -10,9 +10,9 @@ slug: Web/HTTP/Headers/Retry-After
 - 当与 {{HTTPStatus(503)}} (Service Unavailable，当前服务不存在) 响应一起发送的时候，表示服务下线的预期时长。
 - 当与重定向响应一起发送的时候，比如 {{HTTPStatus(301)}} (Moved Permanently，永久迁移)，表示用户代理在发送重定向请求之前需要等待的最短时间。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

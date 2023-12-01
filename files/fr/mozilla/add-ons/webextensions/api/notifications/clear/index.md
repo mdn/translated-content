@@ -1,7 +1,6 @@
 ---
 title: notifications.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/clear
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/clear
 ---
 
 {{AddonSidebar()}}

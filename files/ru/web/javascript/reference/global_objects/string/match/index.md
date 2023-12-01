@@ -1,15 +1,8 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка
@@ -50,7 +43,7 @@ str.match(regexp)
 В следующем примере метод `match()` используется для поиска слова `'Глава'`, за которым следуют 1 или более цифр, за которыми следуют 0 или более раз группы из точки и цифры. Регулярное выражение включает флаг `i`, так что регистр букв игнорируется.
 
 ```js
-var str = 'Смотри главу 3.4.5.1 для дополнительной информации';
+var str = "Смотри главу 3.4.5.1 для дополнительной информации";
 var re = /смотри (главу \d+(\.\d)*)/i;
 var found = str.match(re);
 
@@ -75,7 +68,7 @@ console.log(found);
 Следующий пример демонстрирует использование флагов глобального поиска и игнорирования регистра символов вместе с методом `match()`. Возвращаются все буквы от А до Д и от а до д, каждая в своём элементе массива.
 
 ```js
-var str = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя';
+var str = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя";
 var regexp = /[А-Д]/gi;
 var matches_array = str.match(regexp);
 

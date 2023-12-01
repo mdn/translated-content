@@ -1,7 +1,6 @@
 ---
 title: IDBRequest.onsuccess
 slug: Web/API/IDBRequest/success_event
-translation_of: Web/API/IDBRequest/onsuccess
 ---
 
 {{ APIRef("IndexedDB") }}

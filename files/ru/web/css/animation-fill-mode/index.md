@@ -1,12 +1,8 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-tags:
-  - CSS
-  - CSS-анимации
-  - CSS-свойства
-translation_of: Web/CSS/animation-fill-mode
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Описание
@@ -35,18 +31,18 @@ animation-fill-mode: both, forwards, none;
   - : Стили анимации не будут применены к элементу до и после её выполнения.
 - `forwards`
   - | : По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}: | `animation-direction` | `animation-iteration-count` | последний ключевой кадр |
-    | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------------- | ----------------------- |
-    | `normal`                                                                                                                                                                                                        | любое                 | `100%` или `to`             |
-    | `reverse`                                                                                                                                                                                                       | любое                 | `0%` или `from`             |
-    | `alternate`                                                                                                                                                                                                     | чётное                | `0%` или `from`             |
-    | `alternate`                                                                                                                                                                                                     | нечётное              | `100%` или `to`             |
-    | `alternate-reverse`                                                                                                                                                                                             | чётное                | `100%` или `to`             |
-    | `alternate-reverse`                                                                                                                                                                                             | нечётное              | `0%` или `from`             |
+    | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------------- | ----------------------- |
+    | `normal`                                                                                                                                                                                  | любое                 | `100%` или `to`             |
+    | `reverse`                                                                                                                                                                                 | любое                 | `0%` или `from`             |
+    | `alternate`                                                                                                                                                                               | чётное                | `0%` или `from`             |
+    | `alternate`                                                                                                                                                                               | нечётное              | `100%` или `to`             |
+    | `alternate-reverse`                                                                                                                                                                       | чётное                | `100%` или `to`             |
+    | `alternate-reverse`                                                                                                                                                                       | нечётное              | `0%` или `from`             |
 - `backwards`
   - | : Элемент сохранит стиль первого [ключевого кадра](/ru/docs/CSS/@keyframes) на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}: | `animation-direction` | первый ключевой кадр |
-    | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------- |
-    | `normal` или `alternate`                                                                                                                                                                                                              | `0%` или `from`       |
-    | `reverse` или `alternate-reverse`                                                                                                                                                                                                     | `100%` или `to`      |
+    | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------- |
+    | `normal` или `alternate`                                                                                                                                                                                          | `0%` или `from`       |
+    | `reverse` или `alternate-reverse`                                                                                                                                                                                 | `100%` или `to`       |
 - `both`
   - : Анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно.
 
@@ -77,26 +73,34 @@ animation-fill-mode: both, forwards, none;
   font-family: sans-serif;
 }
 @keyframes grow {
-    0% { font-size: 0 }
-    100% { font-size: 40px }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 @-webkit-keyframes grow {
-    0% { font-size: 0 }
-    100% { font-size: 40px }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 .demo:hover .grows {
-    animation-name: grow;
-    animation-duration: 3s;
-    -webkit-animation-name: grow;
-    -webkit-animation-duration: 3s;
+  animation-name: grow;
+  animation-duration: 3s;
+  -webkit-animation-name: grow;
+  -webkit-animation-duration: 3s;
 }
 .demo:hover .growsandstays {
-    animation-name: grow;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    -webkit-animation-name: grow;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-fill-mode: forwards;
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: grow;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: i18n.LanguageCode
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
 ---
 
 {{AddonSidebar()}}

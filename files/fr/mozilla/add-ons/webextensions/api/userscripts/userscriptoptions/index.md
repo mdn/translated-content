@@ -1,7 +1,6 @@
 ---
 title: UserScripts.UserScriptOptions
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
 ---
 
 {{AddonSidebar}}

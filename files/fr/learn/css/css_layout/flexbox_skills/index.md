@@ -1,7 +1,6 @@
 ---
 title: "Testez vos compétences : Flexbox"
 slug: Learn/CSS/CSS_layout/Flexbox_skills
-translation_of: Learn/CSS/CSS_layout/Flexbox_skills
 ---
 
 {{LearnSidebar}}

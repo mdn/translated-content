@@ -1,7 +1,6 @@
 ---
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toString
 ---
 
 {{JSRef("Objetos_globales", "Number")}}
@@ -40,10 +39,10 @@ var howMany = 10;
 
 alert("howMany.toString() is " + howMany.toString()); // displays "10"
 
-alert("45 .toString() is " + 45 .toString()); //displays "45"
+alert("45 .toString() is " + (45).toString()); //displays "45"
 
 var x = 7;
-alert(x.toString(2))      // Displays "111"
+alert(x.toString(2)); // Displays "111"
 ```
 
 ## Vea También

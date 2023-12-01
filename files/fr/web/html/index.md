@@ -1,7 +1,6 @@
 ---
 title: HTML (HyperText Markup Language)
 slug: Web/HTML
-translation_of: Web/HTML
 ---
 
 {{HTMLSidebar}}

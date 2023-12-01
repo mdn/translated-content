@@ -12,4 +12,4 @@ slug: Glossary/URI
 ### 一般常識篇
 
 - [URI](https://zh.wikipedia.org/wiki/URI) on Wikipedia
-- [RFC 3986 on URI](http://tools.ietf.org/html/rfc3986)
+- [RFC 3986 on URI](https://tools.ietf.org/html/rfc3986)

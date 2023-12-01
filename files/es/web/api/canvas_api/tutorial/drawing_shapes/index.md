@@ -1,7 +1,6 @@
 ---
 title: Dibujando formas con canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-original_slug: Web/API/Canvas_API/Tutorial/Dibujando_formas
 l10n:
   sourceCommit: 411e3bb536f858a9d58600b4017979c79b2a4408
 ---

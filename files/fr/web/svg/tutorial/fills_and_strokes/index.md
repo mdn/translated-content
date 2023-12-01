@@ -1,7 +1,6 @@
 ---
 title: Remplissages et contours
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Paths", "Web/SVG/Tutoriel/Gradients") }}

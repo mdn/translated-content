@@ -1,8 +1,9 @@
 ---
 title: Immuable
 slug: Glossary/Immutable
-translation_of: Glossary/Immutable
 ---
+
+{{GlossarySidebar}}
 
 Un {{glossary("Object","objet")}} immuable est un objet dont le contenu ne peut pas être modifié.
 Un objet peut être immuable pour diverses raisons, par exemple :

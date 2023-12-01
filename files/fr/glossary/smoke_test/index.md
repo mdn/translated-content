@@ -1,8 +1,9 @@
 ---
 title: Test de fumée
 slug: Glossary/Smoke_Test
-translation_of: Glossary/Smoke_Test
 ---
+
+{{GlossarySidebar}}
 
 Un test de fumée (_Smoke test_) consiste en des tests fonctionnels ou unitaires de fonctions logicielles critiques. Les tests de fumée viennent avant d'autres tests approfondis.
 

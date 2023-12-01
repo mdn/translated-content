@@ -2,7 +2,6 @@
 title: "Element: pointerdown イベント"
 short-title: pointerdown
 slug: Web/API/Element/pointerdown_event
-original_slug: Web/API/Document/pointerdown_event
 l10n:
   sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---

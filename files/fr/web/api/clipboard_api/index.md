@@ -1,7 +1,6 @@
 ---
 title: API Clipboard
 slug: Web/API/Clipboard_API
-translation_of: Web/API/Clipboard_API
 ---
 
 {{DefaultAPISidebar("Clipboard API")}}

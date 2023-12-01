@@ -1,7 +1,6 @@
 ---
 title: browserSettings.openSearchResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
 ---
 
 {{AddonSidebar()}}

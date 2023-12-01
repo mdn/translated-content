@@ -1,7 +1,6 @@
 ---
 title: <input type="datetime">
 slug: Web/HTML/Element/input/datetime-local
-original_slug: Web/HTML/Element/input/datetime
 ---
 
 _El HTML_ `<input type="datetime">` es un control para ingresar tiempo y fecha (hora, minuto, segundo y fracción de segundo) basado en la zona horaria UTC .

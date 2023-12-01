@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`getHours()`** renvoie l'heure pour la date renseignée, d'après 
 ## Syntaxe
 
 ```js
-dateObj.getHours()
+dateObj.getHours();
 ```
 
 ### Valeur de retour

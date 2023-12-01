@@ -1,7 +1,6 @@
 ---
 title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
 
 {{AddonSidebar}}

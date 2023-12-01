@@ -1,7 +1,6 @@
 ---
 title: "<title> : l'élément de titre du document"
 slug: Web/HTML/Element/title
-translation_of: Web/HTML/Element/title
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: "<body>: El elemento body del documento"
 slug: Web/HTML/Element/body
-original_slug: Web/HTML/Elemento/body
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Changements dans Gecko 1.9 affectant les sites Web
 slug: Mozilla/Firefox/Releases/3/Site_compatibility
-translation_of: Mozilla/Firefox/Releases/3/Site_compatibility
 ---
 
 {{FirefoxSidebar}}

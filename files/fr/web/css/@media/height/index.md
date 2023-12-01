@@ -1,7 +1,6 @@
 ---
 title: height
 slug: Web/CSS/@media/height
-translation_of: Web/CSS/@media/height
 ---
 
 {{CSSRef}}

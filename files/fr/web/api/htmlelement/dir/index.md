@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
-translation_of: Web/API/HTMLElement/dir
 ---
 
 {{ApiRef("HTML DOM")}}

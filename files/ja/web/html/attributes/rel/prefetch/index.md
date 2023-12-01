@@ -1,7 +1,6 @@
 ---
 title: rel=prefetch
 slug: Web/HTML/Attributes/rel/prefetch
-original_slug: Web/HTML/Link_types/prefetch
 l10n:
   sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---

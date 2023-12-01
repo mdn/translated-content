@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`reverse()`** transpose les éléments d'un tableau&nbsp;: le prem
 ## Syntaxe
 
 ```js
-arr.reverse()
+arr.reverse();
 ```
 
 ### Valeur de retour
@@ -36,7 +35,7 @@ L'exemple qui suit crée un tableau `monArray`, qui contient trois éléments, p
 var monArray = ["un", "deux", "trois"];
 monArray.reverse();
 
-console.log(monArray) // ["trois", "deux", "un"]
+console.log(monArray); // ["trois", "deux", "un"]
 ```
 
 ### Inverser l'ordre des éléments d'un objet semblable à un tableau
@@ -44,7 +43,7 @@ console.log(monArray) // ["trois", "deux", "un"]
 Dans l'exemple suivant, on crée un objet semblable à un tableau `a` qui contient trois éléments et une propriété `length`. On appelle ensuite `reverse()` grâce à `call()` sur cet objet pour inverser ses éléments :
 
 ```js
-const a = {0: 1, 1: 2, 2: 3, length: 3};
+const a = { 0: 1, 1: 2, 2: 3, length: 3 };
 
 console.log(a); // {0: 1, 1: 2, 2: 3, length: 3}
 

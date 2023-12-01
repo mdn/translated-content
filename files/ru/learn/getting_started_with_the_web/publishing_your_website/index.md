@@ -1,17 +1,6 @@
 ---
 title: Публикация вашего веб-сайта
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - FTP
-  - GitHub
-  - Google App Engine
-  - Веб
-  - Веб сервер
-  - Изучение
-  - Начинающий
-  - Публикация
-  - Хостинг
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}

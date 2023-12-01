@@ -1,7 +1,6 @@
 ---
 title: element.nextSibling
 slug: Web/API/Node/nextSibling
-translation_of: Web/API/Node/nextSibling
 ---
 
 {{APIRef("DOM")}}

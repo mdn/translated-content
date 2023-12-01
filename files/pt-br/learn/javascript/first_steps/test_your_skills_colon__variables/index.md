@@ -1,7 +1,6 @@
 ---
 title: "Teste suas habilidades: variáveis"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
-original_slug: Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis
 ---
 
 {{learnsidebar}}
@@ -18,9 +17,9 @@ O objetivo deste teste de habilidade é avaliar se você entendeu nosso artigo [
 
 Nesta tarefa, queremos que você:
 
-- Declare uma variável chamada `meuNome`.
-- Inicialize `meuNome` com um valor adequado, em uma linha separada (você pode usar seu nome real ou qualquer outra coisa).
-- Declare uma variável chamada `minhaIdade` e inicialize-a com um valor, na mesma linha.
+- Declare uma variável chamada `myName`.
+- Inicialize `myName` com um valor adequado, em uma linha separada (você pode usar seu nome real ou qualquer outra coisa).
+- Declare uma variável chamada `myAge` e inicialize-a com um valor, na mesma linha.
 
 Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
@@ -30,7 +29,7 @@ Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
 ## Variáveis 2
 
-Nesta tarefa, você precisa adicionar uma nova linha para corrigir o valor armazenado na variável `meuNome` existente para seu próprio nome.
+Nesta tarefa, você precisa adicionar uma nova linha para corrigir o valor armazenado na variável `myName` existente para seu próprio nome.
 
 Tente atualizar o código ativo abaixo para recriar o exemplo final:
 

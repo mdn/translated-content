@@ -1,7 +1,6 @@
 ---
 title: Seleção
 slug: Web/API/Selection
-original_slug: Web/API/Seleção
 ---
 
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
@@ -82,7 +81,7 @@ Normalmente é apenas um intervalo, acessado da seguinte forma:
 
 ```js
 var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);
+var range = selObj.getRangeAt(0);
 ```
 
 - `selObj` é um objeto selection
@@ -141,14 +140,11 @@ Outras palavras chaves usadas nesta seção.
 
 ## Especificações
 
-| Specification                                                                            | Status                               | Comment                                                                                                                              |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("Selection API", "#selection-interface", "Seleção")}} | {{Spec2("Selection API")}} | A especificação da API de Seleção é baseada na especificação da API de edição HTML e focada na funcionalidade relacionada à seleção. |
-| {{SpecName("HTML Editing", "#selection", "Seleção")}}                 | {{Spec2("HTML Editing")}}     | Definição incial (antiga).                                                                                                           |
+{{Specifications}}
 
-## Compatibilidade de navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.Selection")}}
+{{Compat}}
 
 ## Veja também
 
@@ -156,9 +152,3 @@ Outras palavras chaves usadas nesta seção.
 - Selection-related events: {{Event("selectionchange")}} and {{Event("selectstart")}}
 - HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
 - {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus()")}}, and {{DOMxRef("HTMLElement.blur()")}}
-
-## Notas da Gecko
-
-- Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in `nsISelectionPrivate`.
-- Mozilla source code: [`Selection.webidl`](https://searchfox.org/mozilla-central/source/dom/webidl/Selection.webidl)
-- {{DOMxRef("Selection.selectionLanguageChange()")}} used to be exposed to the web content until Firefox 29

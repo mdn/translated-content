@@ -28,9 +28,9 @@ disconnect()
 ## 示例
 
 ```js
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   resizeObserver.disconnect();
-})
+});
 ```
 
 ## 规范

@@ -1,7 +1,6 @@
 ---
 title: À propos du bloc conteneur
 slug: Web/CSS/Containing_block
-translation_of: Web/CSS/Containing_block
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
-translation_of: Web/HTTP/Status/508
 ---
 
 {{HTTPSidebar}}

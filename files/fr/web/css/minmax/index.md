@@ -1,7 +1,6 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-translation_of: Web/CSS/minmax()
 ---
 
 {{CSSRef}}

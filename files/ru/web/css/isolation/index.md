@@ -1,12 +1,8 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-tags:
-  - Контекст наложения
-  - Очерёдность
-  - Порядок отрисовки
-translation_of: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`isolation`** определяет должен ли элемент создавать новый [контекст наложения](/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) {{glossary("stacking context")}}.
@@ -56,7 +52,7 @@ isolation: unset;
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;

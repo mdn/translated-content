@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
-translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
 
 {{APIRef("WebRTC")}}Свойство только для чтения **`canTrickleIceCandidates`** , объекта **{{domxref("RTCPeerConnection")}}**, возвращает значение типа {{jsxref("Boolean")}} , которое указывает на то, может ли удалённый пир принимать кандидаты, согласно спецификации [trickled ICE candidates](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice).

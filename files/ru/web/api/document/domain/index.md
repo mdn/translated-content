@@ -1,16 +1,6 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - Domain
-  - HTML DOM
-  - Property
-  - Same Origin
-  - Same Origin Policy
-  - iframe
-translation_of: Web/API/Document/domain
 ---
 
 {{ApiRef}}
@@ -65,7 +55,7 @@ if (document.domain == badDomain) {
 
 ## Замечания
 
-Свойство возвращает `null` если домен документа не может быть идентифицирован, хотя теперь это изменилось с Firefox 62 - смотри обсуждение в {{bug(819475)}}.
+Свойство возвращает `null` если домен документа не может быть идентифицирован, хотя теперь это изменилось с Firefox 62 - смотри обсуждение в [Firefox bug 819475](https://bugzil.la/819475).
 
 Mozilla позволит вам установить его в супердомен текущего значения, ограниченный его [базовым доменом](/ru/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29). Например, на developer.mozilla.org возможно установить его как "mozilla.org" но не как "mozilla.com" или "org".
 
@@ -75,10 +65,7 @@ Mozilla отличает свойство `document.domain`, которое ни
 
 ## Спецификации
 
-| **Спецификация**                                                                                                                 | **Статус**                       | **Комментарий** |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------- |
-| {{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML WHATWG')}} |                 |
-| {{SpecName('HTML 5.2','browsers.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML 5.2')}}     |                 |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

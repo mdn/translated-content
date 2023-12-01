@@ -1,7 +1,6 @@
 ---
 title: Finitions
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
 {{GamesSidebar}}

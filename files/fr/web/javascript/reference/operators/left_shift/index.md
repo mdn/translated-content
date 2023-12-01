@@ -12,7 +12,7 @@ L'opérateur de **décalage binaire à gauche (`<<`)** décale la séquence de b
 ## Syntaxe
 
 ```js
-a << b
+a << b;
 ```
 
 ## Description

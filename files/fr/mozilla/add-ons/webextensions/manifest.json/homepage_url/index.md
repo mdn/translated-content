@@ -1,7 +1,6 @@
 ---
 title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 ---
 
 {{AddonSidebar}}

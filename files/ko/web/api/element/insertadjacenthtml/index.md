@@ -19,6 +19,7 @@ insertAdjacentHTML(position, text)
 ### 매개변수
 
 - `position`
+
   - : 요소와 상대적인 위치를 나타내는 문자열입니다. 다음 문자열 중 하나여야 합니다.
 
     - `"beforebegin"`
@@ -107,7 +108,7 @@ insert.addEventListener("click", () => {
   const positionSelect = document.querySelector("#position");
   subject.insertAdjacentHTML(
     positionSelect.value,
-    "<strong>inserted text</strong>"
+    "<strong>inserted text</strong>",
   );
 });
 const reset = document.querySelector("#reset");

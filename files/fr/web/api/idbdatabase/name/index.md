@@ -1,7 +1,6 @@
 ---
 title: IDBDatabase.name
 slug: Web/API/IDBDatabase/name
-translation_of: Web/API/IDBDatabase/name
 ---
 
 {{APIRef("IndexedDB")}}

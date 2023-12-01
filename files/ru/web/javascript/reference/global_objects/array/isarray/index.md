@@ -1,15 +1,6 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
 
 {{JSRef("Global_Objects", "Array")}}
@@ -64,13 +55,13 @@ Array.isArray({ __proto__: Array.prototype });
 Когда проверяем экземпляр `Array`, `Array.isArray` предпочтительней, чем `instanceof`, потому что он работает и с `iframes`.
 
 ```js
-var iframe = document.createElement('iframe');
+var iframe = document.createElement("iframe");
 document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length-1].Array;
-var arr = new xArray(1,2,3); // [1,2,3]
+xArray = window.frames[window.frames.length - 1].Array;
+var arr = new xArray(1, 2, 3); // [1,2,3]
 
 // Correctly checking for Array
-Array.isArray(arr);  // true
+Array.isArray(arr); // true
 // Considered harmful, because doesn't work through iframes
 arr instanceof Array; // false
 ```
@@ -81,8 +72,8 @@ arr instanceof Array; // false
 
 ```js
 if (!Array.isArray) {
-  Array.isArray = function(arg) {
-    return Object.prototype.toString.call(arg) === '[object Array]';
+  Array.isArray = function (arg) {
+    return Object.prototype.toString.call(arg) === "[object Array]";
   };
 }
 ```

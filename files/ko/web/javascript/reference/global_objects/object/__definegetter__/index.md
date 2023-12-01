@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ## 문법
 
 ```js
-    obj.__defineGetter__(prop, func)
+obj.__defineGetter__(prop, func);
 ```
 
 ### 인자
@@ -39,22 +39,27 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 // Non-standard and deprecated way
 
 var o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__("gimmeFive", function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
-
 
 // Standard-compliant ways
 
 // Using the get operator
-var o = { get gimmeFive() { return 5; } };
+var o = {
+  get gimmeFive() {
+    return 5;
+  },
+};
 console.log(o.gimmeFive); // 5
 
 // Using Object.defineProperty
 var o = {};
-Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+Object.defineProperty(o, "gimmeFive", {
+  get: function () {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```

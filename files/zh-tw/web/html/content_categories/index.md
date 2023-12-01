@@ -1,7 +1,6 @@
 ---
 title: 內容類型
 slug: Web/HTML/Content_categories
-original_slug: Web/Guide/HTML/Content_categories
 ---
 
 {{HTMLSidebar}}

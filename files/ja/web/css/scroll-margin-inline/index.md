@@ -19,7 +19,7 @@ slug: Web/CSS/scroll-margin-inline
 ```css
 /* <length> 値 */
 scroll-margin-inline: 10px;
-scroll-margin-inline: 1em .5em ;
+scroll-margin-inline: 1em 0.5em;
 
 /* グローバル値 */
 scroll-margin-inline: inherit;

@@ -1,7 +1,6 @@
 ---
 title: Quel sera l'aspect de votre site web ?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
 
 {{LearnSidebar}}

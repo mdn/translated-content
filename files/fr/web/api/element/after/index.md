@@ -1,7 +1,6 @@
 ---
 title: Element.after()
 slug: Web/API/Element/after
-translation_of: Web/API/Element/after
 ---
 
 {{APIRef("DOM")}}

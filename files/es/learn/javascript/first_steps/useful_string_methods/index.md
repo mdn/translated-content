@@ -23,14 +23,14 @@ Tu variable se convierte en una instancia del objeto cadena y, como resultado, t
 
 **Ahora, antes de que tu cerebro comience a derretirse, ¡no te preocupes!** Realmente no necesitas saber acerca de la mayoría de estos principios en tu viaje de aprendizaje. Pero hay algunos que posiblemente utilizarás con bastante frecuencia así como veremos aquí.
 
-Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamos uno (también puedes [abrir esta consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una ventana o pestaña por separado, o si prefieres usar la [consola de desarrolladores del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools)).
+Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamos uno (también puedes [abrir esta consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una ventana o pestaña por separado, o si prefieres usar la [consola de desarrolladores del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)).
 
 ```html hidden
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>JavaScript console</title>
+    <title>Consola JavaScript</title>
     <style>
       * {
         box-sizing: border-box;
@@ -109,7 +109,7 @@ Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamo
       var outputPara = document.createElement("p");
 
       outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
+      outputPara.textContent = "Resultado: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
@@ -175,7 +175,7 @@ El largo de "mozilla" es 7, pero es porque el contador comienza en 0, la posici�
 
    ```js
    if (browserType.indexOf("mozilla") !== -1) {
-     // do stuff with the string
+     // hacer cosas con la cadena
    }
    ```
 
@@ -204,7 +204,7 @@ Los métodos de cadena {{jsxref("String.prototype.toLowerCase()", "toLowerCase()
 Intentemos ingresar las siguentes líneas para ver que sucede:
 
 ```js
-let radData = "My NaMe Is MuD";
+let radData = "Mi NoMbRe Es MuD";
 radData.toLowerCase();
 radData.toUpperCase();
 ```
@@ -225,7 +225,7 @@ Ten en cuenta que para obtener realmente el valor actualizado reflejado en la va
 
 En esta sección, conseguiremos que intentes escribir algún código de manipulación de cadenas. En cada ejercicio a continuación, tenemos una matríz de cadenas y un bucle que procesa cada valor en la matríz y lo muestra en una lista con viñetas. No es necesario que comprendas matrices y bucles en este mismo momento — estos se explicarán en futuros artículos. Todo lo que necesitas hacer en cada caso es escribir el código que dará de salida a las cadenas en el formato que las queremos.
 
-Cada ejemplo viene con un botón de "Reset" , Que puedes utilizar para reestablecer el código si cometes un error y no puedes hacerlo funcionar nuevamente, y un botón "Show solution" que puedes presionar para ver una posible respuesta si te encuentras realmente atorado.
+Cada ejemplo viene con un botón de "Restablecer" , Que puedes utilizar para reestablecer el código si cometes un error y no puedes hacerlo funcionar nuevamente, y un botón "Mostrar solución" que puedes presionar para ver una posible respuesta si te encuentras realmente atorado.
 
 ### Filtrado de mensajes de saludo
 
@@ -236,30 +236,31 @@ En el primer ejercicio, comenzamos de manera simple — tenemos una matríz de m
 3. Sugerencia: En este caso, probablemente sea más útil comprobar si la llamada al método _no es_ igual a un determinado resultado.
 
 ```html hidden
-<h2>Live output</h2>
+<h2>Salida en vivo</h2>
 
 <div class="output" style="min-height: 125px;">
   <ul></ul>
 </div>
 
-<h2>Editable code</h2>
+<h2>Código editable</h2>
 <p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+  Presione Esc para alejar el foco del área de código (Tab inserta un carácter
+  de tabulación).
 </p>
 
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
-var greetings = ['Happy Birthday!',
-                 'Merry Christmas my love',
-                 'A happy Christmas to all the family',
-                 'You\'re all I want for Christmas',
-                 'Get well soon'];
+var greetings = ['¡Feliz cumpleaños!',
+                 'Feliz navidad mi amor',
+                 'Una feliz navidad a toda la familia',
+                 'Eres todo lo que quiero para Navidad',
+                 'Que te mejores pronto'];
 
 for (var i = 0; i < greetings.length; i++) {
   var input = greetings[i];
-  // Your conditional test needs to go inside the parentheses
-  // in the line below, replacing what's currently there
+  // Su prueba condicional debe ir dentro del paréntesis
+  // en la línea siguiente, reemplazando lo que hay actualmente
   if (greetings[i]) {
     var result = input;
     var listItem = document.createElement('li');
@@ -270,8 +271,8 @@ for (var i = 0; i < greetings.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
@@ -312,30 +313,30 @@ reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = "Show solution";
+  solution.value = "Mostrar solución";
   updateCode();
 });
 
 solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
+  if (solution.value === "Mostrar solución") {
     textarea.value = solutionEntry;
-    solution.value = "Hide solution";
+    solution.value = "Ocultar solución";
   } else {
     textarea.value = userEntry;
-    solution.value = "Show solution";
+    solution.value = "Mostrar solución";
   }
   updateCode();
 });
 
 var jsSolution =
-  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar greetings = ['Happy Birthday!',\n 'Merry Christmas my love',\n 'A happy Christmas to all the family',\n 'You\\'re all I want for Christmas',\n 'Get well soon'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf('Christmas') !== -1) {\n var result = input;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}";
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar greetings = ['¡Feliz cumpleaños!',\n 'Feliz navidad mi amor',\n 'Una feliz navidad a toda la familia',\n 'Eres todo lo que quiero para Navidad.',\n 'Que te mejores pronto'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf('Christmas') !== -1) {\n var result = input;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}";
 var solutionEntry = jsSolution;
 
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// detener la tecla de tabulación fuera del área de texto y
+// hacer que escriba una tabulación en la posición del cursor
 
 textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
@@ -365,12 +366,12 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// Actualice el código de usuario guardado cada vez que el usuario actualice el código de área de texto
 
 textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no la solución, para que esa solución no se guarde sobre el código de usuario.
+  if (solution.value === "Mostrar solución") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -394,15 +395,16 @@ En este ejercicio tenemos los nombres de las ciudades del Reino Unido, Pero las 
 > **Nota:** Una pista — los parámetros de los métodos de cadena no tienen que ser literales de cadenas; también pueden ser variables, o incluso variables con un método invocados en ellas.
 
 ```html hidden
-<h2>Live output</h2>
+<h2>Salida en vivo</h2>
 
 <div class="output" style="min-height: 125px;">
   <ul></ul>
 </div>
 
-<h2>Editable code</h2>
+<h2>Código editable</h2>
 <p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+  Presione Esc para alejar el foco del área de código (Tab inserta un carácter
+  de tabulación).
 </p>
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
@@ -411,7 +413,7 @@ list.innerHTML = '';
 var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 for(var i = 0; i < cities.length; i++) {
   var input = cities[i];
-  // write your code just below here
+  // escribe tu código justo debajo aquí
 
   var result = input;
   var listItem = document.createElement('li');
@@ -421,8 +423,8 @@ for(var i = 0; i < cities.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
@@ -463,17 +465,17 @@ reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = "Show solution";
+  solution.value = "Mostrar solución";
   updateCode();
 });
 
 solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
+  if (solution.value === "Mostrar solución") {
     textarea.value = solutionEntry;
-    solution.value = "Hide solution";
+    solution.value = "Ocultar solución";
   } else {
     textarea.value = userEntry;
-    solution.value = "Show solution";
+    solution.value = "Mostrar solución";
   }
   updateCode();
 });
@@ -485,8 +487,8 @@ var solutionEntry = jsSolution;
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// detener la tecla de tabulación fuera del área de texto y
+// hacer que escriba una tabulación en la posición del cursor
 
 textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
@@ -516,12 +518,12 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// Actualice el código de usuario guardado cada vez que el usuario actualice el código de área de texto
 
 textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no la solución, para que esa solución no se guarde sobre el código de usuario.
+  if (solution.value === "Mostrar solución") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -556,15 +558,16 @@ Recomendamos hacerlo así:
 5. Cambia el valor de la variable de `result` a igual a la cadena final, no a `input`.
 
 ```html hidden
-<h2>Live output</h2>
+<h2>Salida en vivo</h2>
 
 <div class="output" style="min-height: 125px;">
   <ul></ul>
 </div>
 
-<h2>Editable code</h2>
+<h2>Código editable</h2>
 <p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+  Presione Esc para alejar el foco del área de código (Tab inserta un carácter
+  de tabulación).
 </p>
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
@@ -578,7 +581,7 @@ var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
 
 for (var i = 0; i < stations.length; i++) {
   var input = stations[i];
-  // write your code just below here
+  // escribe tu código justo debajo aquí
 
   var result = input;
   var listItem = document.createElement('li');
@@ -588,8 +591,8 @@ for (var i = 0; i < stations.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="Restablecer" />
+  <input id="solution" type="button" value="Mostrar solución" />
 </div>
 ```
 
@@ -630,17 +633,17 @@ reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = "Show solution";
+  solution.value = "Mostrar solución";
   updateCode();
 });
 
 solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
+  if (solution.value === "Mostrar solución") {
     textarea.value = solutionEntry;
-    solution.value = "Hide solution";
+    solution.value = "Ocultar solución";
   } else {
     textarea.value = userEntry;
-    solution.value = "Show solution";
+    solution.value = "Mostrar solución";
   }
   updateCode();
 });
@@ -652,8 +655,8 @@ var solutionEntry = jsSolution;
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// detener la tecla de tabulación fuera del área de texto y
+// hacer que escriba una tabulación en la posición del cursor
 
 textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
@@ -683,12 +686,12 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// Actualice el código de usuario guardado cada vez que el usuario actualice el código de área de texto
 
 textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
+  // Solo queremos guardar el estado cuando se muestra el código de usuario,
+  // no la solución, para que esa solución no se guarde sobre el código de usuario.
+  if (solution.value === "Mostrar solución") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

@@ -1,8 +1,9 @@
 ---
 title: Elementos en bloque
 slug: Glossary/Block-level_content
-original_slug: Web/HTML/Block-level_elements
 ---
+
+{{GlossarySidebar}}
 
 Los elementos, en HTML (lenguaje de marcas de hipertexto - **Hypertext Markup Language**) usualmente son elementos "en bloque" o [elementos "en línea"](/es/docs/Web/HTML/Elementos_en_línea). Un elemento en bloque ocupa todo el espacio de su elemento padre (contenedor), creando así un "bloque". Este artículo ayuda a explicar lo que esto significa.
 

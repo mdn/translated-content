@@ -1,7 +1,6 @@
 ---
 title: PerformanceElementTiming.naturalWidth
 slug: Web/API/PerformanceElementTiming/naturalWidth
-translation_of: Web/API/PerformanceElementTiming/naturalWidth
 ---
 
 {{APIRef("Element Timing API")}}

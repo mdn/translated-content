@@ -1,7 +1,6 @@
 ---
 title: Document.evaluate()
 slug: Web/API/Document/evaluate
-translation_of: Web/API/Document/evaluate
 ---
 
 {{ ApiRef("DOM") }}
@@ -29,7 +28,13 @@ var xpathResult = document.evaluate(
 ## Пример
 
 ```js
-var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+var headings = document.evaluate(
+  "/html/body//h2",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 /* Найти в документе все элементы h2
  * В качестве результата будет получен узловой итератор. */
 var thisHeading = headings.iterateNext();

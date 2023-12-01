@@ -1,7 +1,6 @@
 ---
 title: Animations avancées
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
-translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Animations_basiques", "Tutoriel_canvas/Pixel_manipulation_with_canvas")}}

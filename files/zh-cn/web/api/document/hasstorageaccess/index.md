@@ -26,7 +26,7 @@ If the promise gets resolved and a user gesture event was being processed when t
 ## Examples
 
 ```js
-document.hasStorageAccess().then(hasAccess => {
+document.hasStorageAccess().then((hasAccess) => {
   if (hasAccess) {
     // storage access has been granted already.
   } else {

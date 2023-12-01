@@ -1,7 +1,6 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-translation_of: Web/CSS/basic-shape
 ---
 
 {{CSSRef}}

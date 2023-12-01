@@ -29,17 +29,20 @@ caches.has(cacheName).then(function(boolean) {
 在下面的例子中首先检测是否有名为 v1 的缓存存在，如果存在我们会向其添加内容，，如果不存在我们会做些对应的初始化动作。
 
 ```js
-caches.has('v1').then(function(hasCache) {
-  if (!hasCache) {
-    someCacheSetupfunction();
-  } else {
-    caches.open('v1').then(function(cache) {
-      return cache.addAll(myAssets);
-    });
-  }
-}).catch(function() {
-  // 处理异常
-});
+caches
+  .has("v1")
+  .then(function (hasCache) {
+    if (!hasCache) {
+      someCacheSetupfunction();
+    } else {
+      caches.open("v1").then(function (cache) {
+        return cache.addAll(myAssets);
+      });
+    }
+  })
+  .catch(function () {
+    // 处理异常
+  });
 ```
 
 ## 规范

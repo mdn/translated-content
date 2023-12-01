@@ -1,7 +1,6 @@
 ---
 title: link ロールの使用
 slug: Web/Accessibility/ARIA/Roles/link_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 ---
 
 ### 説明

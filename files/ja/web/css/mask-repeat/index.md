@@ -23,8 +23,13 @@ mask-repeat: round space;
 mask-repeat: no-repeat round;
 
 /* 複数の値 */
-mask-repeat: space round, no-repeat;
-mask-repeat: round repeat, space, repeat-x;
+mask-repeat:
+  space round,
+  no-repeat;
+mask-repeat:
+  round repeat,
+  space,
+  repeat-x;
 
 /* グローバル値 */
 mask-repeat: inherit;
@@ -131,7 +136,7 @@ mask-repeat: unset;
 
 ```css
 .examplethree {
-  mask-image: url('mask1.png'), url('mask2.png');
+  mask-image: url("mask1.png"), url("mask2.png");
   mask-repeat: repeat-x, repeat-y;
 }
 ```

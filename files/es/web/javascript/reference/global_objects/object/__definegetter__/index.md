@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/__defineGetter__
 ---
 
 {{JSRef}}
@@ -35,22 +34,27 @@ The `__defineGetter__` allows a {{jsxref("Operators/get", "getter", "", 1)}} to 
 // Forma no-estándar y obsoleta
 
 var o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__("gimmeFive", function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
-
 
 // Formas compatibles con el estándar
 
 // Usando el operador get
-var o = { get gimmeFive() { return 5; } };
+var o = {
+  get gimmeFive() {
+    return 5;
+  },
+};
 console.log(o.gimmeFive); // 5
 
 // Usando Object.defineProperty
 var o = {};
-Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+Object.defineProperty(o, "gimmeFive", {
+  get: function () {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```

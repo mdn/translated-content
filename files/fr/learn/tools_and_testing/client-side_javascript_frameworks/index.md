@@ -1,7 +1,6 @@
 ---
 title: Comprendre les frameworks JavaScript côté client
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 
 {{LearnSidebar}}

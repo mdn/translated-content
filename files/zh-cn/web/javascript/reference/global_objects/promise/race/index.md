@@ -118,7 +118,7 @@ setTimeout(() => {
   console.log(foreverPendingPromise);
 });
 
-// 按顺序打印:
+// 按顺序打印：
 // Promise { <state>: "pending" }
 // 堆栈现在为空
 // Promise { <state>: "pending" }
@@ -178,8 +178,7 @@ function promiseState(promise) {
   const pendingState = { status: "待定" };
 
   return Promise.race([promise, pendingState]).then(
-    (value) =>
-      value === pendingState ? value : { status: "已兑现", value },
+    (value) => (value === pendingState ? value : { status: "已兑现", value }),
     (reason) => ({ status: "已拒绝", reason }),
   );
 }

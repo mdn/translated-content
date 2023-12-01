@@ -1,7 +1,6 @@
 ---
 title: dl
 slug: Web/HTML/Element/dl
-original_slug: Web/HTML/Elemento/dl
 ---
 
 {{HTMLSidebar}}

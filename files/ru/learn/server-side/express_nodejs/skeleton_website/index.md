@@ -1,7 +1,6 @@
 ---
 title: "Учебник Express часть 2: Создание скелета сайта"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
-translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 
 {{LearnSidebar}}

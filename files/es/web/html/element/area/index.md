@@ -1,7 +1,6 @@
 ---
 title: area
 slug: Web/HTML/Element/area
-original_slug: Web/HTML/Elemento/area
 ---
 
 ### Definición

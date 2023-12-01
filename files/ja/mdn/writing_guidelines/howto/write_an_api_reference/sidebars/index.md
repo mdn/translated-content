@@ -1,7 +1,6 @@
 ---
 title: API リファレンスサイドバー
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
-original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---

@@ -1,7 +1,6 @@
 ---
 title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: PerformanceNavigation.redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
-translation_of: Web/API/PerformanceNavigation/redirectCount
 ---
 
 {{APIRef("Navigation Timing")}}

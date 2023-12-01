@@ -1,7 +1,6 @@
 ---
 title: tokenize
 slug: Web/EXSLT/str/tokenize
-translation_of: Web/EXSLT/str/tokenize
 ---
 
 {{ XsltRef() }}

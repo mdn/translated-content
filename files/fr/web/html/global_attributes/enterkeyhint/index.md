@@ -1,7 +1,6 @@
 ---
 title: enterkeyhint
 slug: Web/HTML/Global_attributes/enterkeyhint
-translation_of: Web/HTML/Global_attributes/enterkeyhint
 ---
 
 {{HTMLSidebar("Global_attributes")}}

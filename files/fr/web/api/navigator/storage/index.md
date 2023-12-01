@@ -1,7 +1,6 @@
 ---
 title: Navigator.storage
 slug: Web/API/Navigator/storage
-translation_of: Web/API/Navigator/storage
 ---
 
 {{securecontext_header}}{{APIRef("Storage")}}

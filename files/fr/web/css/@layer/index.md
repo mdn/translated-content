@@ -1,7 +1,6 @@
 ---
 title: "@layer"
 slug: Web/CSS/@layer
-translation_of: Web/CSS/@layer
 ---
 
 {{CSSRef}}

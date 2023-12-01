@@ -1,8 +1,9 @@
 ---
 title: Codec
 slug: Glossary/Codec
-translation_of: Glossary/Codec
 ---
+
+{{GlossarySidebar}}
 
 Un _codec_ (terme formé à partir de "**_co_**deur-**_déc_**odeur") est un programme informatique qui code et décode un flux de données.
 

@@ -1,7 +1,6 @@
 ---
 title: circle()
 slug: Web/CSS/basic-shape/circle
-original_slug: Web/CSS/basic-shape/circle()
 ---
 
 {{CSSRef}}

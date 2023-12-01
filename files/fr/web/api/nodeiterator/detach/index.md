@@ -1,7 +1,6 @@
 ---
 title: NodeIterator.detach()
 slug: Web/API/NodeIterator/detach
-translation_of: Web/API/NodeIterator/detach
 ---
 
 {{APIRef("DOM")}}{{deprecated_header}}

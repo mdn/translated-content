@@ -1,7 +1,6 @@
 ---
 title: DOMStringList
 slug: Web/API/DOMStringList
-translation_of: Web/API/DOMStringList
 ---
 
 {{APIRef("DOM")}}

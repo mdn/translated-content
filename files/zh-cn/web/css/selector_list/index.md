@@ -44,7 +44,12 @@ div {
 此示例显示了将选择器编组进一个以逗号分隔的单行列表。
 
 ```css
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: helvetica;
 }
 ```
@@ -85,7 +90,9 @@ h3 {
 ```
 
 ```css
-h1, h2:invalid-pseudo, h3 {
+h1,
+h2:invalid-pseudo,
+h3 {
   font-family: sans-serif;
 }
 ```

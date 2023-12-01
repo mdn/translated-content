@@ -1,7 +1,6 @@
 ---
 title: Firefox 6 pour les développeurs
 slug: Mozilla/Firefox/Releases/6
-translation_of: Mozilla/Firefox/Releases/6
 ---
 
 1. Notes de versions pour développeurs

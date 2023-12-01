@@ -1,7 +1,6 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Element/input/time
-translation_of: Web/HTML/Element/input/time
 ---
 
 {{HTMLSidebar}}

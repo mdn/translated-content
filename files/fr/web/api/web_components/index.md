@@ -1,7 +1,6 @@
 ---
 title: Web Components (composants web)
 slug: Web/API/Web_components
-translation_of: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}

@@ -1,7 +1,6 @@
 ---
 title: ":in-range"
 slug: Web/CSS/:in-range
-translation_of: Web/CSS/:in-range
 ---
 
 {{CSSRef}}

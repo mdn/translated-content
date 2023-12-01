@@ -1,8 +1,9 @@
 ---
 title: Déni de service distribué
 slug: Glossary/Distributed_Denial_of_Service
-translation_of: Glossary/Distributed_Denial_of_Service
 ---
+
+{{GlossarySidebar}}
 
 Un déni de service distribué (DDoS, Distributed Denial-of-Service) est une attaque dans laquelle de nombreux systèmes sont compromis et réunis pour attaquer une seule cible, afin de submerger les ressources du serveur et de bloquer les utilisateurs légitimes.
 

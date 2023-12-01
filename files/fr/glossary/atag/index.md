@@ -1,8 +1,9 @@
 ---
 title: ATAG
 slug: Glossary/ATAG
-translation_of: Glossary/ATAG
 ---
+
+{{GlossarySidebar}}
 
 _Authoring Tool Accessibility Guidelines_ (ATAG) est une recommandation {{Glossary("W3C")}} pour construire des outils de création-accessibilité qui produisent des contenus accessibles.
 

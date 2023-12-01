@@ -1,8 +1,9 @@
 ---
 title: Expando
 slug: Glossary/Expando
-translation_of: Glossary/Expando
 ---
+
+{{GlossarySidebar}}
 
 Les propriétés expando sont des propriétés ajoutées aux nœuds {{glossary("DOM")}} en {{glossary("JavaScript")}} mais qui ne figurent pas dans la spécification DOM des {{glossary("Object","objets")}} :
 

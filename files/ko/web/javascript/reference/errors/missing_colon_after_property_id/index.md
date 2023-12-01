@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing : after property id'
+title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
 
@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 [객체 초기자](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer) 구문으로 객체를 만들 때 콜론(`:`)은 객체의 속성을 키와 값으로 분리합니다.
 
 ```js
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 ```
 
 ## 예제
@@ -38,12 +38,12 @@ var obj = { propertyKey = 'value' };
 콜론을 사용하거나 객체를 생성한 뒤에 대괄호를 사용하여 새로운 속성을 할당하는 것이 바릅니다.
 
 ```js example-good
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 
 // 또는
 
-var obj = { };
-obj['propertyKey'] = 'value';
+var obj = {};
+obj["propertyKey"] = "value";
 ```
 
 ### 빈 속성
@@ -73,7 +73,7 @@ var obj = { 'b'+'ar': 'foo' };
 식에 대괄호를 넣으세요 `[]`:
 
 ```js example-good
-var obj = { ['b'+'ar']: 'foo' };
+var obj = { ["b" + "ar"]: "foo" };
 ```
 
 ## 같이 보기

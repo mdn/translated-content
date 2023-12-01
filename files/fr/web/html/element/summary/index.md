@@ -1,7 +1,6 @@
 ---
 title: "<summary> : l'élément de révélation d'un résumé"
 slug: Web/HTML/Element/summary
-translation_of: Web/HTML/Element/summary
 ---
 
 {{HTMLSidebar}}

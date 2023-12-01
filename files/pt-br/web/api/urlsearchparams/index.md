@@ -10,8 +10,10 @@ A interface **`URLSearchParams`** define métodos utilitários para trabalhar co
 Um objeto que implementa `URLSearchParams` pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} para iterar sobre pares chave/valor na mesma ordem em que elas aparecem nos parâmetros, por exemplo as linhas a seguir são equivalentes:
 
 ```js
-for (const [key, value] of mySearchParams) {}
-for (const [key, value] of mySearchParams.entries()) {}
+for (const [key, value] of mySearchParams) {
+}
+for (const [key, value] of mySearchParams.entries()) {
+}
 ```
 
 {{AvailableInWorkers}}
@@ -52,46 +54,46 @@ for (const [key, value] of mySearchParams.entries()) {}
 ## Exemplos
 
 ```js
-const paramsString = 'q=URLUtils.searchParams&topic=api';
+const paramsString = "q=URLUtils.searchParams&topic=api";
 const searchParams = new URLSearchParams(paramsString);
 
 // Iterando os parâmetros de pesquisa
 for (const p of searchParams) {
-console.log(p);
+  console.log(p);
 }
 
-console.log(searchParams.has('topic'));               // true
-console.log(searchParams.get('topic') === "api");     // true
-console.log(searchParams.getAll('topic'));            // ["api"]
-console.log(searchParams.get('foo') === null);        // true
-console.log(searchParams.append('topic', 'webdev'));
-console.log(searchParams.toString());                 // "q=URLUtils.searchParams&topic=api&topic=webdev"
-console.log(searchParams.set('topic', 'More webdev'));
-console.log(searchParams.toString());                 // "q=URLUtils.searchParams&topic=More+webdev"
-console.log(searchParams.delete('topic'));
-console.log(searchParams.toString());                 // "q=URLUtils.searchParams"
+console.log(searchParams.has("topic")); // true
+console.log(searchParams.get("topic") === "api"); // true
+console.log(searchParams.getAll("topic")); // ["api"]
+console.log(searchParams.get("foo") === null); // true
+console.log(searchParams.append("topic", "webdev"));
+console.log(searchParams.toString()); // "q=URLUtils.searchParams&topic=api&topic=webdev"
+console.log(searchParams.set("topic", "More webdev"));
+console.log(searchParams.toString()); // "q=URLUtils.searchParams&topic=More+webdev"
+console.log(searchParams.delete("topic"));
+console.log(searchParams.toString()); // "q=URLUtils.searchParams"
 ```
 
 ```js
 // Os parâmetros de pesquisa também podem ser objetos
-const paramsObj = {foo: 'bar', baz: 'bar'};
+const paramsObj = { foo: "bar", baz: "bar" };
 const searchParams = new URLSearchParams(paramsObj);
 
-console.log(searchParams.toString());                 // "foo=bar&baz=bar"
-console.log(searchParams.has('foo'));                 // true
-console.log(searchParams.get('foo'));                 // "bar"
+console.log(searchParams.toString()); // "foo=bar&baz=bar"
+console.log(searchParams.has("foo")); // true
+console.log(searchParams.get("foo")); // "bar"
 ```
 
 ### Parâmetros de pesquisa duplicados
 
 ```js
-const paramStr = 'foo=bar&foo=baz';
+const paramStr = "foo=bar&foo=baz";
 const searchParams = new URLSearchParams(paramStr);
 
-console.log(searchParams.toString());                 // "foo=bar&foo=baz"
-console.log(searchParams.has('foo'));                 // true
-console.log(searchParams.get('foo'));                 // bar, somente o primeiro valor
-console.log(searchParams.getAll('foo'));              // ["bar", "baz"]
+console.log(searchParams.toString()); // "foo=bar&foo=baz"
+console.log(searchParams.has("foo")); // true
+console.log(searchParams.get("foo")); // bar, somente o primeiro valor
+console.log(searchParams.getAll("foo")); // ["bar", "baz"]
 ```
 
 ### Sem análise de URL
@@ -99,22 +101,22 @@ console.log(searchParams.getAll('foo'));              // ["bar", "baz"]
 O construtor `URLSearchParams` _não_ analisa URLs completas. No entanto, ele retirará um `?` inicial inicial de uma string, se presente.
 
 ```js
-const paramsString1 = 'http://example.com/search?query=%40';
+const paramsString1 = "http://example.com/search?query=%40";
 const searchParams1 = new URLSearchParams(paramsString1);
 
-console.log(searchParams1.has('query')); // false
-console.log(searchParams1.has('http://example.com/search?query')); // true
+console.log(searchParams1.has("query")); // false
+console.log(searchParams1.has("http://example.com/search?query")); // true
 
-console.log(searchParams1.get('query')); // null
-console.log(searchParams1.get('http://example.com/search?query')); // "@" (equivalente a decodeURIComponent('%40'))
+console.log(searchParams1.get("query")); // null
+console.log(searchParams1.get("http://example.com/search?query")); // "@" (equivalente a decodeURIComponent('%40'))
 
-const paramsString2 = '?query=value';
+const paramsString2 = "?query=value";
 const searchParams2 = new URLSearchParams(paramsString2);
-console.log(searchParams2.has('query')); // true
+console.log(searchParams2.has("query")); // true
 
-const url = new URL('http://example.com/search?query=%40');
+const url = new URL("http://example.com/search?query=%40");
 const searchParams3 = new URLSearchParams(url.search);
-console.log(searchParams3.has('query')); // true
+console.log(searchParams3.has("query")); // true
 ```
 
 ### Preservando os sinais de adição
@@ -122,11 +124,11 @@ console.log(searchParams3.has('query')); // true
 O construtor `URLSearchParams` interpreta sinais de adição (`+`) como espaços, o que pode causar problemas.
 
 ```js
-const rawData = '\x13à\x17@\x1F\x80';
+const rawData = "\x13à\x17@\x1F\x80";
 const base64Data = btoa(rawData); // 'E+AXQB+A'
 
 const searchParams = new URLSearchParams(`bin=${base64Data}`); // 'bin=E+AXQB+A'
-const binQuery = searchParams.get('bin'); // 'E AXQB A', '+' são substituídos por espaços
+const binQuery = searchParams.get("bin"); // 'E AXQB A', '+' são substituídos por espaços
 
 console.log(atob(binQuery) === rawData); // false
 ```
@@ -134,12 +136,12 @@ console.log(atob(binQuery) === rawData); // false
 Você pode evitar isso codificando os dados com o {{jsxref("encodeURIComponent", "encodeURIComponent()")}}.
 
 ```js
-const rawData = '\x13à\x17@\x1F\x80';
+const rawData = "\x13à\x17@\x1F\x80";
 const base64Data = btoa(rawData); // 'E+AXQB+A'
 const encodedBase64Data = encodeURIComponent(base64Data); // 'E%2BAXQB%2BA'
 
 const searchParams = new URLSearchParams(`bin=${encodedBase64Data}`); // 'bin=E%2BAXQB%2BA'
-const binQuery = searchParams.get('bin'); // 'E+AXQB+A'
+const binQuery = searchParams.get("bin"); // 'E+AXQB+A'
 
 console.log(atob(binQuery) === rawData); // true
 ```
@@ -149,10 +151,10 @@ console.log(atob(binQuery) === rawData); // true
 `URLSearchParams` não distingue entre parâmetros com nada após o `=` e um parâmetro que não possui um `=`.
 
 ```js
-const emptyVal = new URLSearchParams('foo=&bar=baz');
-console.log(emptyVal.get('foo')); // retorna ''
-const noEquals = new URLSearchParams('foo&bar=baz');
-console.log(noEquals.get('foo')); // também retorna ''
+const emptyVal = new URLSearchParams("foo=&bar=baz");
+console.log(emptyVal.get("foo")); // retorna ''
+const noEquals = new URLSearchParams("foo&bar=baz");
+console.log(noEquals.get("foo")); // também retorna ''
 console.log(noEquals.toString()); // 'foo=&bar=baz'
 ```
 
@@ -160,7 +162,7 @@ console.log(noEquals.toString()); // 'foo=&bar=baz'
 
 {{Specifications}}
 
-## Compatibilidade de browser
+## Compatibilidade com navegadores
 
 {{Compat}}
 

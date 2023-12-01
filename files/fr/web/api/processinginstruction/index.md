@@ -1,7 +1,6 @@
 ---
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
-translation_of: Web/API/ProcessingInstruction
 ---
 
 {{APIRef("DOM")}}

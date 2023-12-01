@@ -1,5 +1,5 @@
 ---
-title: '::first-letter (:first-letter)'
+title: "::first-letter (:first-letter)"
 slug: Web/CSS/::first-letter
 ---
 
@@ -47,7 +47,8 @@ p::first-letter {
 ```css
 /* 使每段开头的第一个字母变红变大 */
 
-p::first-letter {  /* 使用:first 来兼容 IE8- */
+p::first-letter {
+  /* 使用:first 来兼容 IE8- */
   color: red;
   font-size: 130%;
 }

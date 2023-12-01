@@ -1,7 +1,8 @@
 ---
-title: ':not()'
+title: ":not()"
 slug: Web/CSS/:not
 ---
+
 {{ CSSRef() }}
 
 부정(**negation**) [CSS 가상 클래스](/ko/docs/Web/CSS/Pseudo-classes) `:not(X)`는 인수로 간단한 선택자(selector) *X*를 취하는 기능 표기법입니다. 인수로 표시되지 않은 요소와 일치합니다. *X*는 다른 부정 선택자를 포함해서는 안 됩니다.
@@ -21,8 +22,12 @@ slug: Web/CSS/:not
 ## 예제
 
 ```css
-p:not(.classy) { color: red; }
-body :not(p) { color: green; }
+p:not(.classy) {
+  color: red;
+}
+body :not(p) {
+  color: green;
+}
 ```
 
 위의 CSS 및 아래 HTML이 주어진다면...
@@ -30,7 +35,7 @@ body :not(p) { color: green; }
 ```html
 <p>Some text.</p>
 <p class="classy">Some other text.</p>
-<span>One more text<span>
+<span>One more text<span></span></span>
 ```
 
 이 같은 출력을 얻습니다:

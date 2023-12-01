@@ -26,10 +26,10 @@ join(separator)
 ## 示例
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
-uint8.join();      // '1,2,3'
-uint8.join(' / '); // '1 / 2 / 3'
-uint8.join('');    // '123'
+var uint8 = new Uint8Array([1, 2, 3]);
+uint8.join(); // '1,2,3'
+uint8.join(" / "); // '1 / 2 / 3'
+uint8.join(""); // '123'
 ```
 
 ## Polyfill
@@ -39,8 +39,8 @@ uint8.join('');    // '123'
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
 if (!Uint8Array.prototype.join) {
-  Object.defineProperty(Uint8Array.prototype, 'join', {
-    value: Array.prototype.join
+  Object.defineProperty(Uint8Array.prototype, "join", {
+    value: Array.prototype.join,
   });
 }
 ```

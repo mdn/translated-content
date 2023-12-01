@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 
 ## 语法
 
-```plain
+```js-nolint
 new Proxy(target, handler)
 ```
 
@@ -67,22 +67,22 @@ new Proxy(target, handler)
 ```js
 const target = {
   notProxied: "original value",
-  proxied: "original value"
+  proxied: "original value",
 };
 
 const handler = {
-  get: function(target, prop, receiver) {
+  get: function (target, prop, receiver) {
     if (prop === "proxied") {
       return "replaced value";
     }
     return Reflect.get(...arguments);
-  }
+  },
 };
 
 const proxy = new Proxy(target, handler);
 
 console.log(proxy.notProxied); // "original value"
-console.log(proxy.proxied);    // "replaced value"
+console.log(proxy.proxied); // "replaced value"
 ```
 
 ## 规范
@@ -93,7 +93,7 @@ console.log(proxy.proxied);    // "replaced value"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`Proxy` and `Reflect` in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Meta_programming)
-- {{jsxref("Global_Objects/Reflect", "Reflect")}}
+- [元编程](/zh-CN/docs/Web/JavaScript/Guide/Meta_programming)指南
+- {{jsxref("Reflect")}}

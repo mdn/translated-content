@@ -123,7 +123,9 @@ slug: Web/CSS/system-color
 .button {
   border: 0;
   padding: 10px;
-  box-shadow: -2px -2px 5px gray, 2px 2px 5px gray;
+  box-shadow:
+    -2px -2px 5px gray,
+    2px 2px 5px gray;
 }
 
 @media (forced-colors: active) {

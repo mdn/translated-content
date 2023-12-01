@@ -60,11 +60,11 @@ slug: Web/CSS/Layout_cookbook/Card
 
 #### grid-template-columns
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 #### grid-template-rows
 
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 ## 関連情報
 

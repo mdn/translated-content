@@ -1,7 +1,6 @@
 ---
 title: PushManager.supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings_static
-original_slug: Web/API/PushManager/supportedContentEncodings
 ---
 
 {{SeeCompatTable}}{{APIRef("Push API")}}

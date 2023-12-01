@@ -1,12 +1,9 @@
 ---
 title: Колбэк-функция
 slug: Glossary/Callback_function
-tags:
-  - Callback
-  - Колбэк-функция
-translation_of: Glossary/Callback_function
-original_slug: Глоссарий/функция_обратного_вызова
 ---
+
+{{GlossarySidebar}}
 
 Колбэк-функция (или обратный вызов) - это функция, переданная в другую функцию в качестве аргумента, которая затем вызывается по завершению какого-либо действия.
 

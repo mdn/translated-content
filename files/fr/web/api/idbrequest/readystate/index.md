@@ -1,7 +1,6 @@
 ---
 title: IDBRequest.readyState
 slug: Web/API/IDBRequest/readyState
-translation_of: Web/API/IDBRequest/readyState
 ---
 
 {{APIRef("IndexedDB")}}

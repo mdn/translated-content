@@ -1,7 +1,6 @@
 ---
 title: "MediaRecorder: stop イベント"
 slug: Web/API/MediaRecorder/stop_event
-original_slug: Web/API/MediaRecorder/onstop
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
@@ -30,17 +29,17 @@ onstop = (event) => {};
 mediaRecorder.onstop = (e) => {
   console.log("MediaRecorder.stop() 呼び出し後に利用可能なデータ。");
 
-  const audio = document.createElement('audio');
+  const audio = document.createElement("audio");
   audio.controls = true;
-  const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
   const audioURL = window.URL.createObjectURL(blob);
   audio.src = audioURL;
   console.log("レコーダー停止");
-}
+};
 
 mediaRecorder.ondataavailable = (e) => {
   chunks.push(e.data);
-}
+};
 ```
 
 ## 仕様書

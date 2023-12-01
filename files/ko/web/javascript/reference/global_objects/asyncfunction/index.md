@@ -5,12 +5,12 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 
 {{JSRef}}
 
-**`AsyncFunction`** 생성자는 새로운 {{jsxref("Statements/async_function", "async function")}} 객체를 만든다. 자바스크립트에서 모든 비동기 함수는 사실상 AsyncFunction 객체이다.
+**`AsyncFunction`** 생성자는 새로운 {{jsxref("Statements/async_function", "async function")}} 객체를 만든다. JavaScript에서 모든 비동기 함수는 사실상 AsyncFunction 객체이다.
 
 `AsyncFunction`이 전역변수가 아님에 주의한다. 다음코드를 보면 알 수 있다.
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+Object.getPrototypeOf(async function () {}).constructor;
 ```
 
 ## 문법
@@ -22,9 +22,9 @@ Object.getPrototypeOf(async function(){}).constructor
 ### 파라미터
 
 - `arg1, arg2, ... argN`
-  - : 인수의 이름들은 함수내에서 사용되는 이름이다. 이름은 자바스크립트 식별자 로 유용한 문자열이거나 컴마로 구분된 문자열 목록이어야 한다. 예를들면 "x","theValue",or"a,b"와 같다.
+  - : 인수의 이름들은 함수내에서 사용되는 이름이다. 이름은 JavaScript 식별자 로 유용한 문자열이거나 컴마로 구분된 문자열 목록이어야 한다. 예를들면 "x","theValue",or"a,b"와 같다.
 - `functionBody`
-  - : 함수 정의를 구성하는 자바스크립트 명령문들로 구성된 문자열.
+  - : 함수 정의를 구성하는 JavaScript트 명령문들로 구성된 문자열.
 
 ## 상세설명
 
@@ -58,23 +58,25 @@ AsyncFunction 생성자를 통해 만들어진 {{jsxref("Statements/async_functi
 ### `AsyncFunction` 생성자를 통한 비동기 함수 만들기
 
 ```js
-    function resolveAfter2Seconds(x) {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          resolve(x);
-        }, 2000);
-      });
-    }
+function resolveAfter2Seconds(x) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(x);
+    }, 2000);
+  });
+}
 
-    let AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+let AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-    let a = new AsyncFunction('a',
-                              'b',
-                              'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+let a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);",
+);
 
-    a(10, 20).then(v => {
-      console.log(v); // 4초 후에 30을 출력
-    });
+a(10, 20).then((v) => {
+  console.log(v); // 4초 후에 30을 출력
+});
 ```
 
 ## 명세서

@@ -1,7 +1,6 @@
 ---
 title: pageAction.isShown()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
 ---
 
 {{AddonSidebar()}}

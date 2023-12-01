@@ -1,7 +1,6 @@
 ---
 title: element.setAttributeNS
 slug: Web/API/Element/setAttributeNS
-translation_of: Web/API/Element/setAttributeNS
 ---
 
 {{ APIRef("DOM") }}

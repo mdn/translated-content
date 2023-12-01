@@ -1,13 +1,8 @@
 ---
-title: ':checked'
+title: ":checked"
 slug: Web/CSS/:checked
-tags:
-  - CSS
-  - Макет
-  - Псевдоклассы
-  - Руководство
-translation_of: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
 CSS [псевдоклассы](/ru/docs/Web/CSS/Псевдо-классы) **`:checked`** CSS находит любые элементы **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) или **option** ({{ HTMLElement("option") }} внутри {{ HTMLElement("select") }}), которые выбраны или включены. Пользователь может изменить это состояние, нажав на элемент, или выбрав другое значение, в этом случае `:checked` повторно не применится к элементу, а сохранится.
@@ -71,67 +66,101 @@ option:checked {
 ```html
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>Расширяемые элементы</title>
-<style>
-#expand-btn {
-    margin: 0 3px;
-    display: inline-block;
-    font: 12px / 13px "Lucida Grande", sans-serif;
-    text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
-    padding: 3px 6px;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    background-color: #969696;
-    cursor: default;
-    border-radius: 3px;
-    box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
-}
+  <head>
+    <meta charset="utf-8" />
+    <title>Расширяемые элементы</title>
+    <style>
+      #expand-btn {
+        margin: 0 3px;
+        display: inline-block;
+        font:
+          12px / 13px "Lucida Grande",
+          sans-serif;
+        text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+        padding: 3px 6px;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        background-color: #969696;
+        cursor: default;
+        border-radius: 3px;
+        box-shadow:
+          rgba(255, 255, 255, 0.4) 0 1px,
+          inset 0 20px 20px -10px white;
+      }
 
-#isexpanded:checked ~ #expand-btn, #isexpanded:checked ~ * #expand-btn {
-    background: #B5B5B5;
-    box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
-}
+      #isexpanded:checked ~ #expand-btn,
+      #isexpanded:checked ~ * #expand-btn {
+        background: #b5b5b5;
+        box-shadow:
+          inset rgba(0, 0, 0, 0.4) 0 -5px 12px,
+          inset rgba(0, 0, 0, 1) 0 1px 3px,
+          rgba(255, 255, 255, 0.4) 0 1px;
+      }
 
-#isexpanded, .expandable {
-    display: none;
-}
+      #isexpanded,
+      .expandable {
+        display: none;
+      }
 
-#isexpanded:checked ~ * tr.expandable {
-    display: table-row;
-    background: #cccccc;
+      #isexpanded:checked ~ * tr.expandable {
+        display: table-row;
+        background: #cccccc;
+      }
 
-}
+      #isexpanded:checked ~ p.expandable,
+      #isexpanded:checked ~ * p.expandable {
+        display: block;
+        background: #cccccc;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="isexpanded" />
 
-#isexpanded:checked ~ p.expandable, #isexpanded:checked ~ * p.expandable {
-    display: block;
-    background: #cccccc;
-}
-</style>
-</head>
-<body>
+    <h1>Расширяемые элементы</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Колонка #1</th>
+          <th>Колонка #2</th>
+          <th>Колонка #3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="expandable">
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+        </tr>
+        <tr>
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+        </tr>
+        <tr>
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+        </tr>
+        <tr class="expandable">
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+        </tr>
+        <tr class="expandable">
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+          <td>[текст ячейки]</td>
+        </tr>
+      </tbody>
+    </table>
 
-<input type="checkbox" id="isexpanded" />
-
-<h1>Расширяемые элементы</h1>
-<table>
-    <thead>
-        <tr><th>Колонка #1</th><th>Колонка #2</th><th>Колонка #3</th></tr>
-    </thead>
-    <tbody>
-        <tr class="expandable"><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
-        <tr><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
-        <tr><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
-        <tr class="expandable"><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
-        <tr class="expandable"><td>[текст ячейки]</td><td>[текст ячейки]</td><td>[текст ячейки]</td></tr>
-    </tbody>
-</table>
-
-<p>[какой-то текст примера]</p>
-<p><label for="isexpanded" id="expand-btn">Показать скрытые элементы</label></p>
-<p class="expandable">[другой текст для примера]</p>
-<p>[какой-то текст примера]</p>
-</body>
+    <p>[какой-то текст примера]</p>
+    <p>
+      <label for="isexpanded" id="expand-btn">Показать скрытые элементы</label>
+    </p>
+    <p class="expandable">[другой текст для примера]</p>
+    <p>[какой-то текст примера]</p>
+  </body>
 </html>
 ```
 

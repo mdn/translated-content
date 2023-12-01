@@ -57,7 +57,7 @@ PATCH /file.txt HTTP/1.1
 
 ### Requisição
 
-```html
+```http
 PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
@@ -71,7 +71,7 @@ Content-Length: 100
 
 Uma resposta sucedida é indicada pelo _status_ de resposta {{HTTPStatus("204")}}, visto que a resposta não carrega um corpo de mensagem.
 
-```
+```http
 HTTP/1.1 204 No Content
 Content-Location: /arquivo.txt
 ETag: "e0023aa4f"
@@ -79,8 +79,8 @@ ETag: "e0023aa4f"
 
 ## Especificações
 
-| Especificação                    | Título                |
-| -------------------------------- | --------------------- |
+| Especificação            | Título                |
+| ------------------------ | --------------------- |
 | {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
 
 ## Veja também

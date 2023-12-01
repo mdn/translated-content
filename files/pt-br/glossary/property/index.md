@@ -1,8 +1,9 @@
 ---
 title: Propriedade
 slug: Glossary/Property
-original_slug: Glossario/property
 ---
+
+{{GlossarySidebar}}
 
 O termo **propriedade** **(property)** pode ter diversos siginificados depenedendo do contexto. Ele pode se referir a:
 

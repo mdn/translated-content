@@ -1,7 +1,6 @@
 ---
 title: Conceptos Básicos de flexbox
 slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox
 ---
 
 {{CSSRef}}

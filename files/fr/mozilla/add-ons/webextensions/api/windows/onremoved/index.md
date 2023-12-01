@@ -1,7 +1,6 @@
 ---
 title: windows.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 ---
 
 {{AddonSidebar()}}

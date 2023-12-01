@@ -112,13 +112,13 @@ class Polygon {
   }
   // Method
   *getSides() {
-    for(const side of this.sides){
+    for (const side of this.sides) {
       yield side;
     }
   }
 }
 
-const pentagon = new Polygon(1,2,3,4,5);
+const pentagon = new Polygon(1, 2, 3, 4, 5);
 
 console.log([...pentagon.getSides()]); // [1,2,3,4,5]
 ```
@@ -146,11 +146,11 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 p1.displayName; // undefined
-p1.distance;    // undefined
+p1.distance; // undefined
 p2.displayName; // undefined
-p2.distance;    // undefined
+p2.distance; // undefined
 
-console.log(Point.displayName);      // "Point"
+console.log(Point.displayName); // "Point"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 ```
 
@@ -173,7 +173,7 @@ obj.speak(); // Animal オブジェクト
 let speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 let eat = Animal.eat;
 eat(); // undefined
 ```
@@ -181,15 +181,15 @@ eat(); // undefined
 上のコードを従来の関数ベースの構文を使って書くと、非 Strict モードでは、最初の `this` の値をもとにして、メソッド呼び出しの中で自動的に結び付けられます。最初の値が `undefined` の場合、`this` にはグローバルオブジェクトが入ります。 Strict モードでは自動結び付けは行われません。`this` の値はそのまま渡されます。
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.speak = function() {
+Animal.prototype.speak = function () {
   return this;
-}
+};
 
-Animal.eat = function() {
+Animal.eat = function () {
   return this;
-}
+};
 
 let obj = new Animal();
 let speak = obj.speak;
@@ -283,7 +283,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Mitzie');
+let d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 ```
 
@@ -292,13 +292,13 @@ d.speak(); // Mitzie barks.
 従来の関数ベースの「クラス」も拡張できます。
 
 ```js
-function Animal (name) {
+function Animal(name) {
   this.name = name;
 }
 
 Animal.prototype.speak = function () {
   console.log(`${this.name} makes a noise.`);
-}
+};
 
 class Dog extends Animal {
   speak() {
@@ -306,7 +306,7 @@ class Dog extends Animal {
   }
 }
 
-let d = new Dog('Mitzie');
+let d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 
 // 同様のメソッドは、子のメソッドが親のメソッドよりも優先されます。
@@ -318,7 +318,7 @@ d.speak(); // Mitzie barks.
 const Animal = {
   speak() {
     console.log(`${this.name} makes a noise.`);
-  }
+  },
 };
 
 class Dog {
@@ -330,7 +330,7 @@ class Dog {
 // このコードが無いと、speak() を実行した時に TypeError になります。
 Object.setPrototypeOf(Dog.prototype, Animal);
 
-let d = new Dog('Mitzie');
+let d = new Dog("Mitzie");
 d.speak(); // Mitzie makes a noise.
 ```
 
@@ -343,14 +343,16 @@ Array の派生クラスである `MyArray` の中で {{jsxref("Array")}} オブ
 ```js
 class MyArray extends Array {
   // species を親の Array コンストラクターで上書きする
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 
-let a = new MyArray(1,2,3);
-let mapped = a.map(x => x * x);
+let a = new MyArray(1, 2, 3);
+let mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## `super` でスーパークラスを呼び出す
@@ -375,7 +377,7 @@ class Lion extends Cat {
   }
 }
 
-let l = new Lion('Fuzzy');
+let l = new Lion("Fuzzy");
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
@@ -388,20 +390,22 @@ l.speak();
 ECMAScript では、スーパークラスをインプットとして、そしてスーパークラスを継承した派生クラスをアウトプットとする関数をミックスインで実装できます。
 
 ```js
-let calculatorMixin = Base => class extends Base {
-  calc() { }
-};
+let calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-let randomizerMixin = Base => class extends Base {
-  randomize() { }
-};
+let randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 ミックスインを使用したクラスを次のように記述することもできます。
 
 ```js
-class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 ```
 
 ## クラス定義の再実行
@@ -424,8 +428,7 @@ Firefox のウェブコンソール（**メニュー** > **ウェブ開発** > *
 - {{jsxref("Statements/class", "クラス宣言", "", "true")}}
 - {{jsxref("Operators/class", "クラス式", "", "true")}}
 - {{jsxref("Classes/Public_class_fields", "パブリッククラスフィールド", "", "true")}}
-- {{jsxref("Classes/Private_class_fields", "プライベートクラスフィールド
-", "", "true")}}
+- {{jsxref("Classes/Private_class_fields", "プライベートクラスフィールド", "", "true")}}
 - {{jsxref("Operators/super", "super")}}
 - [ブログ記事: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
 - [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)

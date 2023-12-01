@@ -2,7 +2,7 @@
 title: HTML 属性リファレンス
 slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: 076a9f924e4619b4f5129c2ec7440420d05b5ec5
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Attributes")}}
@@ -72,7 +72,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#attr-allow">allow</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/iframe#allow">allow</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>iframe の機能ポリシーを指定します。</td>
@@ -125,7 +125,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -211,13 +210,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       <td>
         <a href="https://w3c.github.io/html-media-capture/#the-capture-attribute">Media Capture 仕様書</a>から、キャプチャできる新しいファイルを指定します。
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Element/keygen#attr-challenge">challenge</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>公開鍵とともに送信するチャレンジ文字列</td>
     </tr>
     <tr>
       <td>
@@ -404,7 +396,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/img#attr-decoding">decoding</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/img#decoding">decoding</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>画像をデコードする推奨の方法を示します。</td>
@@ -456,7 +448,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -522,7 +513,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -696,7 +686,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/img#attr-intrinsicsize"><code>intrinsicsize</code></a>
+        <a href="/ja/docs/Web/HTML/Element/img#intrinsicsize"><code>intrinsicsize</code></a>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("img") }}</td>
@@ -718,7 +708,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/img#attr-ismap">ismap</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/img#ismap">ismap</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>画像がサーバーサイドイメージマップの一部であることを示します。</td>
@@ -731,13 +721,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Element/keygen#attr-keytype">keytype</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>生成する鍵の種類を指定します。</td>
     </tr>
     <tr>
       <td>
@@ -922,7 +905,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},
@@ -1098,7 +1080,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/iframe#sandbox">sandbox</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>
@@ -1204,7 +1186,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#attr-srcdoc">srcdoc</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/iframe#srcdoc">srcdoc</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td></td>

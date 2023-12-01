@@ -1,7 +1,6 @@
 ---
 title: call-template
 slug: Web/XSLT/Element/call-template
-translation_of: Web/XSLT/Element/call-template
 ---
 
 {{ XsltRef() }}

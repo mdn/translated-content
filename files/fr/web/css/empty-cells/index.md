@@ -1,7 +1,6 @@
 ---
 title: empty-cells
 slug: Web/CSS/empty-cells
-translation_of: Web/CSS/empty-cells
 ---
 
 {{CSSRef}}

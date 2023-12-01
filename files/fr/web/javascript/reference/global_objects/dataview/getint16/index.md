@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.getInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 ---
 
 {{JSRef}}

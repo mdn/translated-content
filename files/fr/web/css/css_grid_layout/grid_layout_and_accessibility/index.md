@@ -1,7 +1,6 @@
 ---
 title: Les grilles CSS et l'accessibilité
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Introdução ao DOM
 slug: Web/API/Document_Object_Model/Introduction
-original_slug: DOM/Referencia_do_DOM/Introdução
 ---
 
 O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Neste guia, apresentaremos brevemente o DOM. Veremos como o DOM representa um documento {{Glossary ("HTML")}} ou {{Glossary ("XML")}} na memória e como você usa APIs para criar aplicativos e conteúdo da Web.
@@ -56,7 +55,7 @@ Quando você cria um script - seja embutido em um elemento(tag) `<script>` ou in
 O JavaScript a seguir exibirá um alerta quando o documento for carregado (e quando todo o DOM estiver disponível para uso):
 
 ```html
-<body onload="window.alert('Welcome to my home page!');">
+<body onload="window.alert('Welcome to my home page!');"></body>
 ```
 
 Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse elemento e, em seguida, adiciona o `H1` à árvore deste documento:
@@ -65,19 +64,17 @@ Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse ele
 <html>
   <head>
     <script>
-       // run this function when the document is loaded
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         var heading = document.createElement("h1");
-         var heading_text = document.createTextNode("Big Head!");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // run this function when the document is loaded
+      window.onload = function () {
+        // create a couple of elements in an otherwise empty HTML page
+        var heading = document.createElement("h1");
+        var heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -243,35 +240,47 @@ Você pode usar essa página teste ou criar uma similar para testar as interface
   <head>
     <title>Testes DOM</title>
     <script type="application/javascript">
-    function setBodyAttr(attr, value){
-      if (document.body) eval('document.body.'+attr+'="'+value+'"');
-      else notSupported();
-    }
+      function setBodyAttr(attr, value) {
+        if (document.body) eval("document.body." + attr + '="' + value + '"');
+        else notSupported();
+      }
     </script>
   </head>
   <body>
     <div style="margin: .5in; height: 400;">
-      <p><b><tt>text</tt></b></p>
+      <p>
+        <b><tt>text</tt></b>
+      </p>
       <form>
-        <select onChange="setBodyAttr('text',
+        <select
+          onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);">
-          <option value="black">preto
-          <option value="darkblue">azul escuro
+          <option value="black">preto</option>
+          <option value="darkblue">azul escuro</option>
         </select>
-        <p><b><tt>bgColor</tt></b></p>
-        <select onChange="setBodyAttr('bgColor',
+        <p>
+          <b><tt>bgColor</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);">
-          <option value="white">branco
-          <option value="lightgrey">cinza
+          <option value="white">branco</option>
+          <option value="lightgrey">cinza</option>
         </select>
-        <p><b><tt>link</tt></b></p>
-        <select onChange="setBodyAttr('link',
+        <p>
+          <b><tt>link</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);">
-          <option value="blue">azul
-          <option value="green">verde
-        </select>  <small>
-        <a href="http://algum.website.tld/pagina.html" id="amostra">
-        (link)</a></small><br>
+          <option value="blue">azul</option>
+          <option value="green">verde</option>
+        </select>
+        <small>
+          <a href="http://algum.website.tld/pagina.html" id="amostra">
+            (link)</a
+          ></small
+        ><br />
       </form>
       <form>
         <input type="button" value="version" onclick="ver()" />
@@ -285,7 +294,7 @@ Para testar várias interfaces numa única página - por exemplo, um conjunto de
 
 Figura 0.1 Página de Teste DOM
 
-![Image:DOM_Ref_Introduction_to_the_DOM.gif](/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
+![Image:DOM_Ref_Introduction_to_the_DOM.gif](dom_ref_introduction_to_the_dom.gif)
 
 Nesse exemplo, os menus drop-down atualizam dinamicamente os aspectos acessáveis pelo DOM na página web como o fundo (`bgColor`), a cor dos hiperlinks (`aLink`), e a cor do texto (`text`). Porém, ao desenhar suas páginas de teste, testar as interfaces conforme for lendo sobre elas é uma parte importante para aprender a usar o DOM de forma efetiva.
 

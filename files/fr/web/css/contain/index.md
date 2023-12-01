@@ -1,7 +1,6 @@
 ---
 title: contain
 slug: Web/CSS/contain
-translation_of: Web/CSS/contain
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

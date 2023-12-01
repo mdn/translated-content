@@ -1,7 +1,6 @@
 ---
 title: HTMLFrameSetElement
 slug: Web/API/HTMLFrameSetElement
-translation_of: Web/API/HTMLFrameSetElement
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}

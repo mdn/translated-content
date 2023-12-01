@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.button
+title: "MouseEvent: button プロパティ"
+short-title: button
 slug: Web/API/MouseEvent/button
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
@@ -36,30 +37,32 @@ l10n:
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">マウスでここをクリックしてください…</button>
+<button id="button" oncontextmenu="event.preventDefault();">
+  マウスでここをクリックしてください…
+</button>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let button = document.querySelector('#button');
-button.addEventListener('mouseup', (e) => {
-  let log = document.querySelector('#log');
+let button = document.querySelector("#button");
+button.addEventListener("mouseup", (e) => {
+  let log = document.querySelector("#log");
   switch (e.button) {
     case 0:
-      log.textContent = '左ボタンがクリックされました。';
+      log.textContent = "左ボタンがクリックされました。";
       break;
     case 1:
-      log.textContent = '中央ボタンがクリックされました。';
+      log.textContent = "中央ボタンがクリックされました。";
       break;
     case 2:
-      log.textContent = '右ボタンがクリックされました。';
+      log.textContent = "右ボタンがクリックされました。";
       break;
     default:
       log.textContent = `不明なボタンコード: ${e.button}`;
   }
-}
+});
 ```
 
 ### 結果

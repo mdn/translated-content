@@ -1,7 +1,6 @@
 ---
 title: tabs.moveInSuccession()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 ---
 
 {{AddonSidebar()}}

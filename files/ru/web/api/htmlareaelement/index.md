@@ -1,8 +1,8 @@
 ---
 title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
-translation_of: Web/API/HTMLAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAreaElement`** интерфейс предоставляющий специальные свойства и методы (помимо тех, постоянных объектов {{domxref("HTMLElement")}} интерфейса, также доступных ему по наследству) для манипуляции расположением и представлением пространством элементов.

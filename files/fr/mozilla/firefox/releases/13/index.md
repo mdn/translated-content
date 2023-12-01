@@ -1,7 +1,6 @@
 ---
 title: Firefox 13 pour les développeurs
 slug: Mozilla/Firefox/Releases/13
-translation_of: Mozilla/Firefox/Releases/13
 ---
 
 {{FirefoxSidebar}}

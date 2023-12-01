@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 
 ## 逻辑属性与物理属性及逻辑值与物理值
 
-CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bottom。当使用绝对位置来定位项目时，就要使项目围绕上用物理关键字描述的偏移量。在下面的代码片断中，项目被定位到距容器顶部 20 像素，并且距容器左侧 30 像素：
+CSS 中布满了**物理**位置的关键字——left 和 right，top 和 bottom。当使用绝对位置来定位项目时，就要使项目围绕上用物理关键字描述的偏移量。在下面的代码片断中，项目被定位到距容器顶部 20 像素，并且距容器左侧 30 像素：
 
 ```css
 .container {
@@ -62,24 +62,28 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 - `sideways-rl`
 - `sideways-lr`
 
-属性值 `horizontal-tb` 是 web 上显示文本的默认效果，也就是你现在正在阅读的这篇文章的方向，其他的属性值将会改变文字的流动方向，能匹配世界各地不同的书写模式，这些细节你都可以在 [Jen 的文章](https://24ways.org/2016/css-writing-modes/)中看到。下面用两个段落展示一个简单的例子，第一个段落使用默认的 `horizontal-tb`，第二个段落使用 `vertical-rl`，这种模式下文本仍然从左到右排列，不过文本的方向却是垂直的 —— 现在行内文本是从页面的顶部到底部向下流动的。
+属性值 `horizontal-tb` 是 web 上显示文本的默认效果，也就是你现在正在阅读的这篇文章的方向，其他的属性值将会改变文字的流动方向，能匹配世界各地不同的书写模式，这些细节你都可以在 [Jen 的文章](https://24ways.org/2016/css-writing-modes/)中看到。下面用两个段落展示一个简单的例子，第一个段落使用默认的 `horizontal-tb`，第二个段落使用 `vertical-rl`，这种模式下文本仍然从左到右排列，不过文本的方向却是垂直的——现在行内文本是从页面的顶部到底部向下流动的。
 
 ```css hidden
 .wrapper > p {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    margin: 1em;
-    color: #d9480f;
-    max-width: 300px;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  margin: 1em;
+  color: #d9480f;
+  max-width: 300px;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <p style="writing-mode: horizontal-tb">I have writing mode set to the default <code>horizontal-tb</code></p>
-  <p style="writing-mode: vertical-rl">I have writing mode set to <code>vertical-rl</code></p>
+  <p style="writing-mode: horizontal-tb">
+    I have writing mode set to the default <code>horizontal-tb</code>
+  </p>
+  <p style="writing-mode: vertical-rl">
+    I have writing mode set to <code>vertical-rl</code>
+  </p>
 </div>
 ```
 
@@ -94,20 +98,22 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 下面例子是一个二行三列的网格，也就是说有三个沿着块轴方向的轨道。在默认的书写模式下，网格自动定位项目的流向，是从左上开始，向右延伸，填满行内轴方向的三个格子，然后转到下一行，创建一个新的行轨道，继续定位更多的项目：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -137,20 +143,22 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 如果给网格容器加上 `writing-mode: vertical-lr` 属性，就可以看到块轴和行内轴都转到不同的方向了，块轴从左到右地穿过页面，行内轴则从上到下到流动。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -185,20 +193,22 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 在下面的例子中，网格被设置了 `writing-mode: vertical-lr` 属性，我们将使用对齐属性来对齐项目。`start` 和 `end` 属性值仍然像在默认的书写模式下那样保留着它们的逻辑，但却已经不是 left 和 right，top 和 bottom 所能够表示的了。只要我们把网格翻转到一边，就会发生这种情况：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -212,21 +222,21 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 }
 
 .item1 {
-    grid-column: 1 / 4;
-    align-self: start;
+  grid-column: 1 / 4;
+  align-self: start;
 }
 
 .item2 {
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-    align-self: start;
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  align-self: start;
 }
 
 .item3 {
-    grid-column: 3;
-    grid-row: 2 / 4;
-    align-self: end;
-    justify-self: end;
+  grid-column: 3;
+  grid-row: 2 / 4;
+  align-self: end;
+  justify-self: end;
 }
 ```
 
@@ -259,20 +269,22 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 - Item 3 从列的第 1 条线开始，跨越到列的第 3 条线。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -284,23 +296,23 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
   grid-gap: 10px;
 }
 .item1 {
-    grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
-    grid-column: -1 / -3;
+  grid-column: -1 / -3;
 }
 .item3 {
-    grid-column: 1 / 3;
-    grid-row: 2;
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('从左到右文本的基于网格线的定位', '500', '330') }}
@@ -310,20 +322,22 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 如果现在为网格容器增加一个 {{cssxref("direction")}} 属性，属性值为 `rtl`，那么 第 1 条线就变到了网格的右侧，而第 -1 条线则变到左侧。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -336,23 +350,23 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
   grid-gap: 10px;
 }
 .item1 {
-    grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
-    grid-column: -1 / -3;
+  grid-column: -1 / -3;
 }
 .item3 {
-    grid-column: 1 / 3;
-    grid-row: 2;
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('从右到左文本的基于网格线的定位', '500', '330') }}
@@ -385,41 +399,59 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 
 ```css
 .wrapper {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr auto;
-    font: 1em Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr auto;
+  font:
+    1em Helvetica,
+    Arial,
+    sans-serif;
 }
 .wrapper nav {
-    writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
 .wrapper ul {
-    list-style: none;
-    margin: 0;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
 }
 .wrapper a {
-    text-decoration: none;
+  text-decoration: none;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="content">
-            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+  <div class="content">
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
+      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
+      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
+      bean chickweed potato bell pepper artichoke.
+    </p>
 
-<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">Link 1</a></li>
-                <li><a href="">Link 2</a></li>
-                <li><a href="">Link 3</a></li>
-            </ul>
-        </nav>
-    </div>
+    <p>
+      Nori grape silver beet broccoli kombu beet greens fava bean potato
+      quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
+      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
+      chicory celtuce parsley jícama salsify.
+    </p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="">Link 1</a></li>
+      <li><a href="">Link 2</a></li>
+      <li><a href="">Link 3</a></li>
+    </ul>
+  </nav>
+</div>
 ```
 
 {{ EmbedLiveSample('书写模式与网格布局的结合', '500', '330') }}

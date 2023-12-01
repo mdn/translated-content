@@ -41,7 +41,7 @@ let result = classes.contains("c");
 if (result) {
   span.textContent = "The classList contains 'c'";
 } else {
-   span.textContent = "The classList does not contain 'c'";
+  span.textContent = "The classList does not contain 'c'";
 }
 ```
 

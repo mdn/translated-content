@@ -1,12 +1,6 @@
 ---
 title: Использование URL значений для свойства cursor
 slug: conflicting/Web/CSS/cursor
-tags:
-  - CSS
-  - Gecko
-  - Справка
-  - справочник
-translation_of: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 original_slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 ---
 

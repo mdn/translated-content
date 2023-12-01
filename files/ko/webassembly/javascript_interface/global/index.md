@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 ---
 
 {{WebAssemblySidebar}}

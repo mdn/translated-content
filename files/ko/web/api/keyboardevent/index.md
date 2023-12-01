@@ -110,6 +110,7 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
   - : 키 이벤트가 `compositionstart`이후에 그리고 `compositionend` 이전에 발생했다면 `true` 를 반환합니다.
 
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
+
   - : 이벤트가 일어난 키의 키 값을 나타내는 문자열을 반환합니다.
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}

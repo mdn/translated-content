@@ -1,7 +1,6 @@
 ---
 title: アイコンが表示されない
 slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
-original_slug: Web/Compatibility_FAQ/No_Icon_Shown.html
 ---
 
 ## 概要

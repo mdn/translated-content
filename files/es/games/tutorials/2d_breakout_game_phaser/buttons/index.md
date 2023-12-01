@@ -1,7 +1,6 @@
 ---
 title: Botones
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
-original_slug: Games/Tutorials/2D_breakout_game_Phaser/Botones
 ---
 
 {{GamesSidebar}}

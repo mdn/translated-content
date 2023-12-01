@@ -1,8 +1,9 @@
 ---
 title: Cellule de grille
 slug: Glossary/Grid_Cell
-translation_of: Glossary/Grid_Cell
 ---
+
+{{GlossarySidebar}}
 
 Dans une [Grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), une **cellule de grille** est la plus petite unité de la grille CSS. Elle est un espace entre 4 intersections {{glossary("grid lines","lignes de grille")}} et conceptuellement assimilable à une cellule de tableau.
 

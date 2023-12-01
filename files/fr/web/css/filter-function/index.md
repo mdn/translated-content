@@ -1,7 +1,6 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-translation_of: Web/CSS/filter-function
 ---
 
 {{CSSRef}}

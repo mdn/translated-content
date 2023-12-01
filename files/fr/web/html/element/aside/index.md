@@ -1,7 +1,6 @@
 ---
 title: "<aside> : l'élément aparté"
 slug: Web/HTML/Element/aside
-translation_of: Web/HTML/Element/aside
 ---
 
 {{HTMLSidebar}}

@@ -1,8 +1,9 @@
 ---
 title: Jeu de caractères
 slug: Glossary/Character_set
-translation_of: Glossary/character_set
 ---
+
+{{GlossarySidebar}}
 
 Un **jeu de caractères** est un système d'encodage qui permet aux ordinateurs de savoir comment interpréter les [caractères](/fr/docs/Glossary/Character), comme les lettres, les nombres, les signes de ponctuation, les espaces.
 

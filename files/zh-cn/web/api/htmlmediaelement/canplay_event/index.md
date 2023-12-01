@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: canplay'
+title: "HTMLMediaElement: canplay"
 slug: Web/API/HTMLMediaElement/canplay_event
 ---
 
@@ -43,20 +43,20 @@ slug: Web/API/HTMLMediaElement/canplay_event
 使用 `addEventListener()`：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplay', (event) => {
-  console.log('Video can start, but not sure it will play through.');
+video.addEventListener("canplay", (event) => {
+  console.log("Video can start, but not sure it will play through.");
 });
 ```
 
 使用 `oncanplay` 事件处理器属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.oncanplay = (event) => {
-  console.log('Video can start, but not sure it will play through.');
+  console.log("Video can start, but not sure it will play through.");
 };
 ```
 

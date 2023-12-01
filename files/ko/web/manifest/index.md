@@ -2,6 +2,7 @@
 title: Web app manifests
 slug: Web/Manifest
 ---
+
 {{QuickLinksWithSubpages("/ko/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 **웹 앱 매니페스트**(Web app manifest)는 프로그레시브 웹 앱(PWA)라고 칭하는 웹 기술 모음집의 일부로서, 앱 스토어를 거치지 않고 장치의 홈 화면에 설치할 수 있는 웹사이트를 구성합니다. 단순한 홈 화면 링크/북마크를 통한 일반적인 웹 앱과 달리, PWA는 사전 다운로드를 통해 오프라인에서도 동작하며 일반적인 [Web API](/ko/docs/Web/API)도 사용할 수 있습니다.
@@ -12,7 +13,7 @@ slug: Web/Manifest
 
 웹 앱 매니페스트는 다음의 키를 포함할 수 있습니다. 각각의 링크를 클릭해 더 많은 정보를 알아보세요.
 
-{{ListSubpages("/en-US/docs/Web/Manifest")}}
+{{ListSubpages("/ko/docs/Web/Manifest")}}
 
 ## 예제
 
@@ -24,35 +25,44 @@ slug: Web/Manifest
   "display": "standalone",
   "background_color": "#fff",
   "description": "A simply readable Hacker News app.",
-  "icons": [{
-    "src": "images/touch/homescreen48.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen72.png",
-    "sizes": "72x72",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen96.png",
-    "sizes": "96x96",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen168.png",
-    "sizes": "168x168",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }],
-  "related_applications": [{
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
-  }]
+  "icons": [
+    {
+      "src": "images/touch/homescreen48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+    }
+  ]
 }
 ```
 
@@ -61,7 +71,7 @@ slug: Web/Manifest
 웹 앱 매니페스트는 HTML 페이지 {{HTMLElement("head")}} 요소 내의 {{HTMLElement("link")}} 요소를 사용해 연결합니다.
 
 ```html
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="manifest" href="/manifest.webmanifest" />
 ```
 
 > **참고:** `.webmanifest` 확장자는 명세의 [Media type registration](https://w3c.github.io/manifest/#media-type-registration) 구획에 정의(매니페스트 파일의 응답은 `Content-Type: application/manifest+json`을 반환해야 함)되어 있습니다. 브라우저는 `.json`과 같은 기타 적절한 확장자도 지원합니다. (`Content-Type: application/json`).

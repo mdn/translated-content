@@ -1,8 +1,9 @@
 ---
 title: Entité
 slug: Glossary/Entity
-translation_of: Glossary/Entity
 ---
+
+{{GlossarySidebar}}
 
 Une **entité** {{glossary("HTML")}} est une chaîne de texte _(string)_ qui commence par (`&)` et se termine avec `(;)`. Les entités sont fréquemment utilisées pour afficher des caractères réservés (qui seraient autrement interprétés comme du code HTML) et des caractères invisibles (comme des espaces insécables). Vous pouvez également les utiliser à la place d'autres caractères difficiles à taper avec un clavier standard.
 

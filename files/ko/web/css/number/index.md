@@ -2,6 +2,7 @@
 title: <number>
 slug: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 **`<number>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 숫자, 즉 정수 또는 실수를 표현합니다.

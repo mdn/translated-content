@@ -1,7 +1,6 @@
 ---
 title: tabs.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/reload
 ---
 
 {{AddonSidebar()}}

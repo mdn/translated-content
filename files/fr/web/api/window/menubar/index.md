@@ -1,7 +1,6 @@
 ---
 title: Window.menubar
 slug: Web/API/Window/menubar
-translation_of: Web/API/Window/menubar
 ---
 
 {{ APIRef() }}

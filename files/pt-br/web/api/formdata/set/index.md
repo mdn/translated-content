@@ -42,19 +42,17 @@ var formData = new FormData(); // Currently empty
 Você pode adicionar os pares chave/valor usando (domxref("FormData.set")}}:
 
 ```js
-formData.set('username', 'Chris');
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+formData.set("username", "Chris");
+formData.set("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                               | Comentário |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}} | {{Spec2('XMLHttpRequest')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.set")}}
+{{Compat}}
 
 ## Ver também
 

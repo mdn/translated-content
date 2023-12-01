@@ -1,7 +1,6 @@
 ---
 title: omnibox.OnInputEnteredDisposition
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
 ---
 
 {{AddonSidebar()}}

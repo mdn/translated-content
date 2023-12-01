@@ -2,6 +2,7 @@
 title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
+
 {{AddonSidebar}}
 
 확장앱은 배포 및 설치를 위해 패키징 된 파일 모음으로 구성됩니다. 이 아티클은 확장앱에 있을 수 있는 파일들을 빠르게 살펴봅니다.
@@ -15,7 +16,7 @@ manifest.json 파일은 모든 확장앱이 가져야하는 유일한 파일입�
 - [Background pages](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts): (브라우저 창의 수명과 독립적으로) 오랜 시간 실행되는 로직 구현.
 - 확장앱의 아이콘 및 기타 버튼들.
 - [사이드바, 팝업, 옵션 페이지](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): UI 컴포넌트를 제공하는 HTML 파일들
-- [컨텐츠 스크립트](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): 웹페이지에 주입할 자바스크립트 파일
+- [컨텐츠 스크립트](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): 웹페이지에 주입할 JavaScript 파일
 
 ![](webextension-anatomy.png)
 

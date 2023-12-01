@@ -1,7 +1,6 @@
 ---
 title: Publier votre site web
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}

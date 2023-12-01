@@ -1,7 +1,6 @@
 ---
 title: ":-moz-handler-crashed"
 slug: Web/CSS/:-moz-handler-crashed
-translation_of: Web/CSS/:-moz-handler-crashed
 ---
 
 {{Non-standard_header}}{{CSSRef}}

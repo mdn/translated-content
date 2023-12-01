@@ -1,7 +1,6 @@
 ---
 title: Développeur web front-end
 slug: Learn/Front-end_web_developer
-translation_of: Learn/Front-end_web_developer
 ---
 
 {{learnsidebar}}

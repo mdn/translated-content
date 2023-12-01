@@ -1,13 +1,6 @@
 ---
 title: URL.hash
 slug: Web/API/URL/hash
-tags:
-  - API
-  - URL API
-  - URL
-  - Property
-  - Reference
-translation_of: Web/API/URL/hash
 ---
 
 {{ APIRef("URL API") }}
@@ -23,8 +16,8 @@ translation_of: Web/API/URL/hash
 ## Синтаксис
 
 ```js
-const string = url.hash
-url.hash = newHash
+const string = url.hash;
+url.hash = newHash;
 ```
 
 ### Значение
@@ -34,7 +27,9 @@ url.hash = newHash
 ## Примеры
 
 ```js
-const url = new URL('https://developer.mozilla.org/ru/docs/Web/API/URL/href#Examples');
+const url = new URL(
+  "https://developer.mozilla.org/ru/docs/Web/API/URL/href#Examples",
+);
 console.log(url.hash); // Выведет: '#Examples'
 ```
 

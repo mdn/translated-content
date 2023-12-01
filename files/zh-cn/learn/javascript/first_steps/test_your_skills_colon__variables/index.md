@@ -1,6 +1,6 @@
 ---
-title: "技能测试：变量"
-slug: "Learn/JavaScript/First_steps/Test_your_skills:_variables"
+title: 技能测试：变量
+slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 ---
 
 {{learnsidebar}}

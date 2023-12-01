@@ -2,6 +2,7 @@
 title: AudioNode
 slug: Web/API/AudioNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioNode`** 인터페이스는 오디오 프로세싱 모듈을 나타내기 위한 포괄적인 인터페이스입니다.

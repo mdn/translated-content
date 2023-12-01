@@ -1,7 +1,6 @@
 ---
 title: Manipuler des données JSON
 slug: Learn/JavaScript/Objects/JSON
-translation_of: Learn/JavaScript/Objects/JSON
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

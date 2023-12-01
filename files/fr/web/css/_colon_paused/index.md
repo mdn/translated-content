@@ -1,7 +1,6 @@
 ---
 title: ":paused"
 slug: Web/CSS/:paused
-translation_of: Web/CSS/:paused
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

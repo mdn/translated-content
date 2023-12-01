@@ -18,37 +18,39 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 ![在开发者工具中突出显示的网格](3_hilighted_grid.png)
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, 100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -60,10 +62,10 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 ```
 
@@ -72,59 +74,61 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 在逐个定义元素后，我们把所有 4 个元素都填充到了网格中。注意，我们可以留空一些单元格。网格布局的一个优势是：无需给元素周围加上 margin 来阻止文档流自动填补空白，就能实现设计中的留白区域。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 3;
-   grid-row-start: 1;
-   grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
-   grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 ```
 
@@ -135,51 +139,53 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 我们用了不少代码定位每个元素，你应该不会惊讶有[简写](/zh-CN/docs/Web/CSS/Shorthand_properties)。{{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 属性可以合并为 {{cssxref("grid-column")}}、{{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 则合并为 {{cssxref("grid-row")}}。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 / 2;
-   grid-row: 1 / 4;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 / 4;
-   grid-row: 1 / 3;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 / 3;
-   grid-row: 1 /  2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
 }
 ```
 
@@ -194,54 +200,56 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 我们最初的示例的普通写法会是这样：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
 }
 ```
 
@@ -252,51 +260,53 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 当省略了跨越一个轨道的元素的斜杠和第二个值，我们的简写则会是这样：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 ;
-   grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 ;
-   grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 ;
-   grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 ```
 
@@ -312,47 +322,49 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 - grid-column-end
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
-   grid-area: 1 / 3 / 3 / 4;
+  grid-area: 1 / 3 / 3 / 4;
 }
 .box3 {
-   grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 2 / 2 / 3;
 }
 .box4 {
-   grid-area: 3 / 2 / 4 / 4;
+  grid-area: 3 / 2 / 4 / 4;
 }
 ```
 
@@ -376,59 +388,61 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 下面这个示例中，我们通过从右端和底端开始定义布局，把之前的示例的布局翻转了。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: -1;
-   grid-column-end: -2;
-   grid-row-start: -1;
-   grid-row-end: -4;
+  grid-column-start: -1;
+  grid-column-end: -2;
+  grid-row-start: -1;
+  grid-row-end: -4;
 }
 .box2 {
-   grid-column-start: -3;
-   grid-column-end: -4;
-   grid-row-start: -1;
-   grid-row-end: -3;
+  grid-column-start: -3;
+  grid-column-end: -4;
+  grid-row-start: -1;
+  grid-row-end: -3;
 }
 .box3 {
-   grid-column-start: -2;
-   grid-column-end: -3;
-   grid-row-start: -1;
-   grid-row-end: -2;
+  grid-column-start: -2;
+  grid-column-end: -3;
+  grid-row-start: -1;
+  grid-row-end: -2;
 }
 .box4 {
-   grid-column-start: -2;
-   grid-column-end: -4;
-   grid-row-start: -3;
-   grid-row-end: -4;
+  grid-column-start: -2;
+  grid-column-end: -4;
+  grid-row-start: -3;
+  grid-row-end: -4;
 }
 ```
 
@@ -440,7 +454,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ```css
 .item {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 ```
 
@@ -455,58 +469,60 @@ CSS 网格规范加入了用 {{cssxref("column-gap")}} 和 {{cssxref("row-gap")}
 间距只出现在网格轨道与轨道之间，它们并不会出现在网格容器的四周。通过在网格容器上定义这些属性，我们给上例加上了间距：
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-    grid-column: 1 ;
-    grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-    grid-column: 3 ;
-    grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-    grid-column: 2 ;
-    grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-    grid-column: 2 / 4;
-    grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    column-gap: 20px;
-    row-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  column-gap: 20px;
+  row-gap: 1em;
 }
 ```
 
@@ -518,10 +534,10 @@ CSS 网格规范加入了用 {{cssxref("column-gap")}} 和 {{cssxref("row-gap")}
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    gap: 1em 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  gap: 1em 20px;
 }
 ```
 
@@ -532,51 +548,53 @@ CSS 网格规范加入了用 {{cssxref("column-gap")}} 和 {{cssxref("row-gap")}
 除了”起始线与结束线“的定位方法，你还可以使用”起始线与跨越轨道数量“的定位方法
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-    grid-column: 1;
-    grid-row: 1 / span 3;
+  grid-column: 1;
+  grid-row: 1 / span 3;
 }
 .box2 {
-    grid-column: 3;
-    grid-row: 1 / span 2;
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 .box3 {
-    grid-column: 2;
-    grid-row: 1;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-    grid-column: 2 / span 2;
-    grid-row: 3;
+  grid-column: 2 / span 2;
+  grid-row: 3;
 }
 ```
 
@@ -586,9 +604,9 @@ CSS 网格规范加入了用 {{cssxref("column-gap")}} 和 {{cssxref("row-gap")}
 
 ```css
 .box1 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 3;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 3;
 }
 ```
 
@@ -596,9 +614,9 @@ CSS 网格规范加入了用 {{cssxref("column-gap")}} 和 {{cssxref("row-gap")}
 
 ```css
 .box1 {
-    grid-column-start: 1;
-    grid-row-start: span 3;
-    grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: span 3;
+  grid-row-end: 4;
 }
 ```
 

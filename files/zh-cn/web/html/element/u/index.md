@@ -42,7 +42,7 @@ slug: Web/HTML/Element/u
 
 要提供文本注释（与使用 `<u>` 创建的非文本注释相对），请使用 {{HTMLElement("ruby")}} 元素。
 
-要在没有任何语义含义的情况下应用下划线外观，请使用 {{cssxref("text-decoration")}} 属性的 `underline` 属性值 。
+要在没有任何语义含义的情况下应用下划线外观，请使用 {{cssxref("text-decoration")}} 属性的 `underline` 属性值。
 
 ## 示例
 
@@ -86,7 +86,7 @@ u.spelling {
 
 ```html
 <span class="underline">今日特供</span>
-<br>
+<br />
 胡萝卜鸡丁面
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: "CSP: trusted-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
-translation_of: Web/HTTP/Headers/Content-Security-Policy/trusted-types
 ---
 
 {{HTTPSidebar}}

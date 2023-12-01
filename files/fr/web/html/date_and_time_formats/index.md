@@ -1,7 +1,6 @@
 ---
 title: Formats de date et d'heure utilisés en HTML
 slug: Web/HTML/Date_and_time_formats
-translation_of: Web/HTML/Date_and_time_formats
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
 
 {{AddonSidebar}}

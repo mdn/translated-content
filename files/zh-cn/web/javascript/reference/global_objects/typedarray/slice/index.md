@@ -39,11 +39,11 @@ slice(start, end)
 ### 返回已存在类型数组的一部分片段
 
 ```js
-const uint8 = new Uint8Array([1,2,3]);
-uint8.slice(1);   // Uint8Array [ 2, 3 ]
-uint8.slice(2);   // Uint8Array [ 3 ]
-uint8.slice(-2);  // Uint8Array [ 2, 3 ]
-uint8.slice(0,1); // Uint8Array [ 1 ]
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.slice(1); // Uint8Array [ 2, 3 ]
+uint8.slice(2); // Uint8Array [ 3 ]
+uint8.slice(-2); // Uint8Array [ 2, 3 ]
+uint8.slice(0, 1); // Uint8Array [ 1 ]
 ```
 
 ## Polyfill

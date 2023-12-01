@@ -1,7 +1,6 @@
 ---
 title: Herança em JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}

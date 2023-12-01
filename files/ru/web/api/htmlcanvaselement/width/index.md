@@ -1,13 +1,8 @@
 ---
 title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Свойство
-translation_of: Web/API/HTMLCanvasElement/width
 ---
+
 {{APIRef("Canvas API")}}
 
 Свойство **`HTMLCanvasElement.width`** — это положительное
@@ -34,7 +29,7 @@ canvas.width = pxl;
 Вы можете получить ширину холста следующим образом:
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 console.log(canvas.width); // 300
 ```
 

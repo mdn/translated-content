@@ -1,7 +1,6 @@
 ---
 title: Composer le HTML avec les CSS
 slug: Learn/CSS
-translation_of: Learn/CSS
 ---
 
 {{LearnSidebar}}

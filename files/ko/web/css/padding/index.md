@@ -82,21 +82,24 @@ h3 {
 ### 더 많은 예제
 
 ```css
-padding: 5%;                /* 모두 5% */
+padding: 5%; /* 모두 5% */
 
-padding: 10px;              /* 모두 10px */
+padding: 10px; /* 모두 10px */
 
-padding: 10px 20px;         /* 상하: 10px */
-                            /* 좌우: 20px */
+padding: 10px 20px;
+/* 상하: 10px */
+/* 좌우: 20px */
 
-padding: 10px 3% 20px;      /* 상: 10px */
-                            /* 좌우: 3% */
-                            /* 하: 20px */
+padding: 10px 3% 20px;
+/* 상: 10px */
+/* 좌우: 3% */
+/* 하: 20px */
 
-padding: 1em 3px 30px 5px;  /* 상:  1em */
-                            /* 우:  3px */
-                            /* 하: 30px */
-                            /* 좌:  5px */
+padding: 1em 3px 30px 5px;
+/* 상:  1em */
+/* 우:  3px */
+/* 하: 30px */
+/* 좌:  5px */
 ```
 
 ## 명세

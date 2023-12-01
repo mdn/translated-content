@@ -1,7 +1,6 @@
 ---
 title: blur()
 slug: Web/CSS/filter-function/blur
-original_slug: Web/CSS/filter-function/blur()
 ---
 
 {{cssref}}

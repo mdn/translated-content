@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 多重背景
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-original_slug: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: browsingData.removeLocalStorage()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
 ---
 
 {{AddonSidebar()}}

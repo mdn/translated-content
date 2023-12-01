@@ -1,7 +1,6 @@
 ---
 title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
-translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: element.onscroll
 slug: Web/API/Element/scroll_event
-translation_of: Web/API/GlobalEventHandlers/onscroll
 ---
 
 {{ ApiRef() }}

@@ -1,7 +1,6 @@
 ---
 title: Tutorial Canvas
 slug: Web/API/Canvas_API/Tutorial
-original_slug: Web/Guide/HTML/Canvas_tutorial
 ---
 
 [**`<canvas>`**](/es/docs/HTML/Canvas) es un elemento [HTML](/es/docs/HTML) el cual puede ser usado para dibujar gráficos usando scripts (normalmente [JavaScript](/es/docs/JavaScript)). Este puede, por ejemplo, ser usado para dibujar gráficos, realizar composición de fotos o simples (y [no tan simples](/es/docs/HTML/Canvas/A_Basic_RayCaster)) animaciones.

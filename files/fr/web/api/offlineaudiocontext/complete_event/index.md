@@ -1,7 +1,6 @@
 ---
 title: complete
 slug: Web/API/OfflineAudioContext/complete_event
-translation_of: Web/API/OfflineAudioContext/complete_event
 ---
 
 L'événement **complete** est déclenché lorsque le rendu d'un {{domxref("OfflineAudioContext")}} est terminé.

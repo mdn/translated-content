@@ -1,7 +1,6 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-translation_of: Web/CSS/frequency
 ---
 
 {{CSSRef}}

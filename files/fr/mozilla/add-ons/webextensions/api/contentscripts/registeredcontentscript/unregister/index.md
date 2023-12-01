@@ -1,9 +1,6 @@
 ---
 title: contentScripts.RegisteredContentScript.unregister()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
-translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
+slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
 ---
 
 {{AddonSidebar()}}Annule l'inscription des scripts de contenu représentés par cet objet `RegisteredContentScript`.

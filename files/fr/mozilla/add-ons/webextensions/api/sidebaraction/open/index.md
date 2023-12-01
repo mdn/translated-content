@@ -1,7 +1,6 @@
 ---
 title: sidebarAction.open()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/open
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/open
 ---
 
 {{AddonSidebar()}}Ouvrez la barre latérale dans la fenêtre active.

@@ -1,7 +1,6 @@
 ---
 title: Créer des formes à partir des boîtes
 slug: Web/CSS/CSS_shapes/From_box_values
-translation_of: Web/CSS/CSS_Shapes/From_box_values
 ---
 
 {{CSSRef}}

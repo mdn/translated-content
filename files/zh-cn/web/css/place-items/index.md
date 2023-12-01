@@ -195,15 +195,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.placeItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -212,7 +212,7 @@ display.addEventListener('change', function (evt) {
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: center; /* You can change this value by selecting another option in the list */
   background-color: #8c8c8c;

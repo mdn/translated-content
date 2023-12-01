@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 ---
 
 {{AddonSidebar()}}

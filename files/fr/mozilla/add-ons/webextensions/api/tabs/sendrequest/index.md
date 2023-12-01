@@ -1,7 +1,6 @@
 ---
 title: tabs.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
 ---
 
 {{AddonSidebar()}}

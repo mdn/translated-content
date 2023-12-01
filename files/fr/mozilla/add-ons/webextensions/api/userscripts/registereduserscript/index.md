@@ -1,7 +1,6 @@
 ---
 title: userScripts.RegisteredUserScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript
 ---
 
 {{AddonSidebar()}}

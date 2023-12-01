@@ -10,14 +10,14 @@ slug: Web/API/Document/links
 ## Syntax
 
 ```js
-nodeList = document.links
+nodeList = document.links;
 ```
 
 ## Example
 
 ```js
 var links = document.links;
-for(var i = 0; i < links.length; i++) {
+for (var i = 0; i < links.length; i++) {
   var linkHref = document.createTextNode(links[i].href);
   var lineBreak = document.createElement("br");
   document.body.appendChild(linkHref);

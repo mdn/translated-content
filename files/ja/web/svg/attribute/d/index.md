@@ -12,12 +12,18 @@ slug: Web/SVG/Attribute/d
 ３つの要素がこの属性を有します： {{SVGElement("path")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red"
+  <path
+    fill="none"
+    stroke="red"
     d="M 10,30
        A 20,20 0,0,1 50,30
        A 20,20 0,0,1 90,30
@@ -94,12 +100,18 @@ SVG では、6 つのタイプのパスコマンドを定義しており、全�
 #### 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red"
+  <path
+    fill="none"
+    stroke="red"
     d="M 10,10 h 10
        m  0,10 h 10
        m  0,10 h 10
@@ -132,21 +144,29 @@ html,body,svg { height:100% }
 #### 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <!-- 絶対座標でのLineToコマンド -->
-  <path fill="none" stroke="red"
-        d="M 10,10
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,10
            L 90,90
            V 10
            H 50" />
 
   <!-- 相対座標でのLineToコマンド -->
-  <path fill="none" stroke="red"
-        d="M 110,10
+  <path
+    fill="none"
+    stroke="red"
+    d="M 110,10
            l 80,80
            v -80
            h -40" />
@@ -157,7 +177,7 @@ html,body,svg { height:100% }
 
 ### 3 次ベジエ曲線
 
-*3 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)* は 4 点で定義される滑らかな曲線です:
+_3 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)_ は 4 点で定義される滑らかな曲線です:
 
 - _開始位置 (現在位置)_
   - : (Po = {xo, yo})
@@ -261,45 +281,60 @@ html,body,svg { height:100% }
 #### 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<svg
+  viewBox="0 0 200 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- 絶対座標での3次ベジエ曲線 -->
-  <path fill="none" stroke="red"
-        d="M 10,90
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,90
            C 30,90 25,10 50,10
            S 70,90 90,90" />
 
   <!-- 相対座標での3次ベジエ曲線 -->
-  <path fill="none" stroke="red"
-        d="M 110,90
+  <path
+    fill="none"
+    stroke="red"
+    d="M 110,90
            c 20,0 15,-80 40,-80
            s 20,80 40,80" />
 
   <!-- 曲線の頂点と制御点の明示 -->
   <g id="ControlPoints">
-
     <!-- 1つ目の3次コマンドへの制御点 -->
     <line x1="10" y1="90" x2="30" y2="90" stroke="lightgrey" />
-    <circle cx="30" cy="90" r="1.5"/>
+    <circle cx="30" cy="90" r="1.5" />
 
     <line x1="50" y1="10" x2="25" y2="10" stroke="lightgrey" />
-    <circle cx="25" cy="10" r="1.5"/>
+    <circle cx="25" cy="10" r="1.5" />
 
     <!-- 2つめの円滑化制御点 (1つ目は暗黙的) -->
-    <line x1="50" y1="10" x2="75" y2="10" stroke="lightgrey" stroke-dasharray="2" />
-    <circle cx="75" cy="10" r="1.5" fill="lightgrey"/>
+    <line
+      x1="50"
+      y1="10"
+      x2="75"
+      y2="10"
+      stroke="lightgrey"
+      stroke-dasharray="2" />
+    <circle cx="75" cy="10" r="1.5" fill="lightgrey" />
 
     <line x1="90" y1="90" x2="70" y2="90" stroke="lightgrey" />
     <circle cx="70" cy="90" r="1.5" />
 
     <!-- 曲線上の頂点 -->
-    <circle cx="10" cy="90" r="1.5"/>
-    <circle cx="50" cy="10" r="1.5"/>
-    <circle cx="90" cy="90" r="1.5"/>
+    <circle cx="10" cy="90" r="1.5" />
+    <circle cx="50" cy="10" r="1.5" />
+    <circle cx="90" cy="90" r="1.5" />
   </g>
   <use xlink:href="#ControlPoints" x="100" />
 </svg>
@@ -309,7 +344,7 @@ html,body,svg { height:100% }
 
 ### 2 次ベジエ曲線
 
-*2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)* は 3 点で定義される滑らかな曲線です:
+_2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)_ は 3 点で定義される滑らかな曲線です:
 
 - _開始座標(現在位置)_
   - : Po = {xo, yo}
@@ -412,15 +447,23 @@ html,body,svg { height:100% }
 #### 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<svg
+  viewBox="0 0 200 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- 暗黙的な繰り返しによる2次ベジエ曲線 -->
-  <path fill="none" stroke="red"
-        d="M 10,50
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,50
            Q 25,25 40,50
            t 30,0 30,0 30,0 30,0 30,0" />
 
@@ -430,23 +473,31 @@ html,body,svg { height:100% }
     <circle cx="25" cy="25" r="1.5" />
 
     <!-- 曲線上の頂点 -->
-    <circle cx="10" cy="50" r="1.5"/>
-    <circle cx="40" cy="50" r="1.5"/>
+    <circle cx="10" cy="50" r="1.5" />
+    <circle cx="40" cy="50" r="1.5" />
 
     <g id="SmoothQuadraticDown">
-      <polyline points="40,50 55,75 70,50" stroke="rgba(0,0,0,.2)" stroke-dasharray="2" fill="none" />
+      <polyline
+        points="40,50 55,75 70,50"
+        stroke="rgba(0,0,0,.2)"
+        stroke-dasharray="2"
+        fill="none" />
       <circle cx="55" cy="75" r="1.5" fill="lightgrey" />
       <circle cx="70" cy="50" r="1.5" />
     </g>
 
     <g id="SmoothQuadraticUp">
-      <polyline points="70,50 85,25 100,50" stroke="rgba(0,0,0,.2)" stroke-dasharray="2" fill="none" />
+      <polyline
+        points="70,50 85,25 100,50"
+        stroke="rgba(0,0,0,.2)"
+        stroke-dasharray="2"
+        fill="none" />
       <circle cx="85" cy="25" r="1.5" fill="lightgrey" />
       <circle cx="100" cy="50" r="1.5" />
     </g>
 
     <use xlink:href="#SmoothQuadraticDown" x="60" />
-    <use xlink:href="#SmoothQuadraticUp"   x="60" />
+    <use xlink:href="#SmoothQuadraticUp" x="60" />
     <use xlink:href="#SmoothQuadraticDown" x="120" />
   </g>
 </svg>
@@ -541,27 +592,38 @@ html,body,svg { height:100% }
 #### 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-
   <!-- 円弧への２つのフラグの効果により各円弧が描画される -->
-  <path fill="none" stroke="red"
-        d="M 6,10
+  <path
+    fill="none"
+    stroke="red"
+    d="M 6,10
            A 6 4 10 1 0 14,10" />
 
-  <path fill="none" stroke="lime"
-        d="M 6,10
+  <path
+    fill="none"
+    stroke="lime"
+    d="M 6,10
            A 6 4 10 1 1 14,10" />
 
-  <path fill="none" stroke="purple"
-        d="M 6,10
+  <path
+    fill="none"
+    stroke="purple"
+    d="M 6,10
            A 6 4 10 0 1 14,10" />
 
-  <path fill="none" stroke="pink"
-        d="M 6,10
+  <path
+    fill="none"
+    stroke="pink"
+    d="M 6,10
            A 6 4 10 0 0 14,10" />
 </svg>
 ```
@@ -576,39 +638,45 @@ html,body,svg { height:100% }
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Z, z     |            | パスの最終位置とその初期位置とを接続することで、現在のサブパスを閉じます。もし、2 つの点が異なる座標の場合は、2 点間に直線が描かれます。 |
 
-> **メモ:** **ノート:***ClosePath*によって生じる形状は、他のコマンドを用いて初期位置へ線を描いて閉じた場合とは異なる場合があります。これは、描線の終端が互いに接続されるためです ({{SVGAttr('stroke-linejoin')}} 設定)を参照のこと。 単に同じ座標に配置されるわけではありません。
+> **メモ:** *ClosePath*によって生じる形状は、他のコマンドを用いて初期位置へ線を描いて閉じた場合とは異なる場合があります。これは、描線の終端が互いに接続されるためです ({{SVGAttr('stroke-linejoin')}} 設定)を参照のこと。 単に同じ座標に配置されるわけではありません。
 
 #### 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 -1 30 11" xmlns="http://www.w3.org/2000/svg">
-
   <!--
   初期位置と異なる終端位置による
   パスで描かれる開いた形状
   -->
-  <path stroke="red"
-        d="M 5,1
+  <path
+    stroke="red"
+    d="M 5,1
            l -4,8 8,0" />
 
   <!--
   初期位置と一致する終端位置による
   パスで描かれる開いた形状
   -->
-  <path stroke="red"
-        d="M 15,1
+  <path
+    stroke="red"
+    d="M 15,1
            l -4,8 8,0 -4,-8" />
 
   <!--
   初期位置と異なる終端位置による
   パスで描かれる閉じた形状
   -->
-  <path stroke="red"
-        d="M 25,1
+  <path
+    stroke="red"
+    d="M 25,1
            l -4,8 8,0
            z" />
 </svg>

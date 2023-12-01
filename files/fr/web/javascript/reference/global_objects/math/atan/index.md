@@ -1,7 +1,6 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
 ---
 
 {{JSRef}}
@@ -15,7 +14,7 @@ La fonction **`Math.atan()`** renvoie l'arc tangente d'un nombre exprimée en ra
 ## Syntaxe
 
 ```js
-Math.atan(x)
+Math.atan(x);
 ```
 
 ### Paramètres
@@ -38,8 +37,8 @@ La méthode `Math.atan()` renvoie une valeur numérique comprise entre <math><se
 ### Utiliser `Math.atan()`
 
 ```js
-Math.atan(1);  // 0.7853981633974483
-Math.atan(0);  // 0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
 Math.atan(-0); // -0
 
 Math.atan(Infinity); // 1.5707963267948966

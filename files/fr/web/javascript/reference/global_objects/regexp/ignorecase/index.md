@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: element.hasChildNodes
 slug: Web/API/Node/hasChildNodes
-translation_of: Web/API/Node/hasChildNodes
 ---
 
 {{APIRef("DOM")}}

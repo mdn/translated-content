@@ -1,9 +1,8 @@
 ---
 title: scale3d()
 slug: Web/CSS/transform-function/scale3d
-translation_of: Web/CSS/transform-function/scale3d()
-original_slug: Web/CSS/transform-function/scale3d()
 ---
+
 {{CSSRef}}
 
 `scale3d()` CSS функция изменяет размер элемента. Благодаря величине масштабирования определённой вектором, может изменять различные размеры в разных масштабах.

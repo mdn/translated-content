@@ -1,7 +1,6 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
-translation_of: Web/CSS/text-indent
 ---
 
 {{CSSRef}}

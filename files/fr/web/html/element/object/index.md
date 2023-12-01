@@ -1,7 +1,6 @@
 ---
 title: <object>
 slug: Web/HTML/Element/object
-translation_of: Web/HTML/Element/object
 ---
 
 {{HTMLSidebar}}

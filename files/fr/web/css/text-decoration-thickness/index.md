@@ -1,7 +1,6 @@
 ---
 title: text-decoration-thickness
 slug: Web/CSS/text-decoration-thickness
-translation_of: Web/CSS/text-decoration-thickness
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.root
 slug: Web/API/TreeWalker/root
-translation_of: Web/API/TreeWalker/root
 ---
 
 {{ APIRef("DOM") }}

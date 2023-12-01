@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.minDecibels
 slug: Web/API/AnalyserNode/minDecibels
-translation_of: Web/API/AnalyserNode/minDecibels
 ---
 
 {{ APIRef("Web Audio API") }}

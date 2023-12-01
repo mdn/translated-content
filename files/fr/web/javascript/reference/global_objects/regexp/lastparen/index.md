@@ -1,7 +1,6 @@
 ---
 title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -11,8 +10,8 @@ La propriété **`lastParen`** est une propriété statique accessible en lectur
 ## Syntaxe
 
 ```js
-RegExp.lastParen
-RegExp['$+']
+RegExp.lastParen;
+RegExp["$+"];
 ```
 
 ## Description
@@ -31,7 +30,7 @@ Cet alias ne peut pas être utilisé avec la notation utilisant le point pour l'
 var re = /(coucou)/g;
 re.test("coucou toi !");
 RegExp.lastParen; // "coucou"
-RegExp['$+'];     // "coucou"
+RegExp["$+"]; // "coucou"
 ```
 
 ## Spécifications

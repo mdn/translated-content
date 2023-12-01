@@ -1,7 +1,6 @@
 ---
 title: "Форма для создания\_BookInstance"
 slug: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 ---
 
 В этой статье показано, как определить страницу / форму для создания объектов `BookInstance`. Это очень похоже на форму, которую мы использовали для создания объектов `Book`.

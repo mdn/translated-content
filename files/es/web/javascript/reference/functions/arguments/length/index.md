@@ -1,7 +1,6 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-original_slug: Web/JavaScript/Referencia/Funciones/arguments/length
 ---
 
 {{jsSidebar("Functions")}}

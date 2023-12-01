@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 
 ## 语法
 
-```js
-dateObj.getMilliseconds()
+```js-nolint
+getMilliseconds()
 ```
 
 ### 参数
@@ -43,7 +43,7 @@ ms = Today.getMilliseconds();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCMilliseconds()")}}
 - {{jsxref("Date.prototype.setMilliseconds()")}}

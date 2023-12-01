@@ -1,7 +1,6 @@
 ---
 title: saturate()
 slug: Web/CSS/filter-function/saturate
-translation_of: Web/CSS/filter-function/saturate()
 ---
 
 {{CSSRef}}

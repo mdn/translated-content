@@ -1,7 +1,6 @@
 ---
 title: shape-outside
 slug: Web/CSS/shape-outside
-translation_of: Web/CSS/shape-outside
 ---
 
 {{CSSRef}}

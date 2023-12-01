@@ -1,7 +1,6 @@
 ---
 title: "-webkit-text-security"
 slug: Web/CSS/-webkit-text-security
-translation_of: Web/CSS/-webkit-text-security
 ---
 
 {{CSSRef}} {{Non-standard_header}}

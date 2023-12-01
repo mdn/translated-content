@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onTabReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
 ---
 
 {{AddonSidebar()}}

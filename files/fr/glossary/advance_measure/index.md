@@ -1,8 +1,9 @@
 ---
 title: Chasse
 slug: Glossary/Advance_measure
-translation_of: Glossary/advance_measure
 ---
+
+{{GlossarySidebar}}
 
 La **chasse** (ou **avance**) est l'espace total occupé par le glyphe, horizontalement ou verticalement, selon la direction d'écriture actuelle. Elle est égale à la distance parcourue par le curseur, placé directement devant puis décalé derrière le caractère.
 

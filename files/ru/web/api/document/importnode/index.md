@@ -1,7 +1,6 @@
 ---
 title: Document.importNode()
 slug: Web/API/Document/importNode
-translation_of: Web/API/Document/importNode
 ---
 
 {{APIRef("DOM")}}
@@ -50,10 +49,7 @@ Firefox doesn't currently enforce this rule (it did for a while during the devel
 
 ## Specifications
 
-| Specification                                                                                                        | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-document-importnode", "document.importNode()")}}             | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM2 Core", "core.html#Core-Document-importNode", "document.importNode()")}} | {{Spec2("DOM2 Core")}}     | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

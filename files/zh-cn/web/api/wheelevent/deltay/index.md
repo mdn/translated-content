@@ -16,7 +16,10 @@ var dY = event.deltaY;
 ## 例子
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaY": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaY: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaY);
 ```

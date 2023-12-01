@@ -1,13 +1,6 @@
 ---
 title: ключ icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
-tags:
-  - Icons
-  - WebExtensions
-  - Веб-расширение
-  - Дополнения
-  - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
 
 {{AddonSidebar}}

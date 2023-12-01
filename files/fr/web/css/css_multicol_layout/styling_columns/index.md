@@ -1,7 +1,6 @@
 ---
 title: Mettre en forme les colonnes
 slug: Web/CSS/CSS_multicol_layout/Styling_columns
-translation_of: Web/CSS/CSS_Columns/Styling_Columns
 ---
 
 {{CSSRef}}

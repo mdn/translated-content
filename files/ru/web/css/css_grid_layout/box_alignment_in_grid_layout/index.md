@@ -1,8 +1,6 @@
 ---
 title: Выравнивание блоков в CSS разметке Grid
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
-translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
 
 Если вы знакомы с [flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout), вы уже столкнулись с тем, как гибкие элементы могут быть правильно выровнены внутри контейнера flex. Эти свойства выравнивания, которые мы впервые встретили в спецификации flexbox, были перенесены в новую спецификацию под названием [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Эта спецификация содержит подробную информацию о том, как выравнивание должно работать во всех различных методах компоновки.
@@ -40,20 +38,22 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 - `last baseline`
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -102,20 +102,22 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 В следующем примере я использую свойство `align-self`, чтобы продемонстрировать различные значения выравнивания. В первой области отображается поведение по умолчанию для выравнивания, которое должно растягиваться. Второй элемент имеет значение самоограничения `start`, третий `end` и четвёртый `center`.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -184,20 +186,22 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 Опять же, значение по умолчанию `stretch`, за исключением элементов с внутренним соотношением сторон. Это означает, что по умолчанию элементы сетки будут покрывать их площадь сетки, если вы не измените её, установив выравнивание. Первый элемент в примере демонстрирует это выравнивание по умолчанию:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -250,20 +254,22 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 Объединив свойства align и justify, мы можем легко центрировать элемент внутри области сетки.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -286,7 +292,7 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 
 ```html
 <div class="wrapper">
- <div class="item1">Item 1</div>
+  <div class="item1">Item 1</div>
 </div>
 ```
 
@@ -313,20 +319,22 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 Свойство `align-content` применяется к контейнеру сетки, поскольку оно работает на всей сетке. Поведение по умолчанию в макете сетки `start`, поэтому наши дорожки сетки находятся в верхнем левом углу сетки, выровнены по отношению к стартовым линиям сетки:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -334,7 +342,7 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -371,20 +379,22 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 Если я добавлю `align-conten` в мой контейнер со значением `end`, все треки перейдут в конечную строку контейнера сетки в размерности блока:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -392,7 +402,7 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -430,20 +440,22 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 Мы также можем использовать значения для этого свойства, которые могут быть знакомы с flexbox; значения пространственного распределения `space-between`, `space-around` и `space-evenly`. Если мы обновим {{cssxref ("align-content")}} до `space-between`, вы увидите как выглядят элементы на нашем пространстве grid:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -451,7 +463,7 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -499,20 +511,22 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 Используя тот же пример, я устанавливаю {{cssxref ("justify-content")}} `space-around`. Это снова вызывает дорожки, которые охватывают более одного столбца, чтобы получить дополнительное пространство:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -520,7 +534,7 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -563,20 +577,22 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 В следующем примере я дал элементу 1 левое поле `auto`. Вы можете увидеть, как содержимое теперь переместится в правую часть области, поскольку автоматическая маржа занимает оставшееся пространство после того, как было назначено место для содержимого этого элемента:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -584,7 +600,7 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;

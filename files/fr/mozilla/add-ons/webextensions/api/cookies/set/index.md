@@ -1,7 +1,6 @@
 ---
 title: cookies.set()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/set
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/set
 ---
 
 {{AddonSidebar()}}

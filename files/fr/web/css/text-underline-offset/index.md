@@ -1,7 +1,6 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
-translation_of: Web/CSS/text-underline-offset
 ---
 
 {{CSSRef}}

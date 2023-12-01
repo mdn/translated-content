@@ -1,7 +1,6 @@
 ---
 title: ボールを動かす
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
 {{GamesSidebar}}

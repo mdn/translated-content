@@ -2,6 +2,7 @@
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("MediaDevices")}}의 **`enumerateDevices()`** 메서드는 사용(또는 접근)이 가능한 미디어 입력장치나 출력장치들의 리스트를 가져옵니다. 예를 들면 마이크, 카메라, 헤드셋 등의 미디어 입/출력 장치 리스트를 불러오는 것 이죠. 이 메서드는 {{domxref("Promise")}}를 반환하는데, 이 Promise가 resolve되면 장치(device)정보가 들어있는 {{domxref("MediaDeviceInfo")}} 배열(array)을 확인할 수 있습니다.
@@ -30,16 +31,18 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
 
 // 카메라와 마이크 리스트
 
-navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
-    console.log(device.kind + ": " + device.label +
-                " id = " + device.deviceId);
+navigator.mediaDevices
+  .enumerateDevices()
+  .then(function (devices) {
+    devices.forEach(function (device) {
+      console.log(
+        device.kind + ": " + device.label + " id = " + device.deviceId,
+      );
+    });
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
   });
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
 ```
 
 위 코드를 실행하면 아래와 같은 결과를 볼 수 있을 것입니다.:

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 ## 構文
 
 ```js
-Object.assign(target, ...sources)
+Object.assign(target, ...sources);
 ```
 
 ### 引数
@@ -45,13 +45,14 @@ Object.assign(target, ...sources)
 この[ポリフィル](/ja/docs/Glossary/Polyfill)は、 ES5 にシンボルがないため、シンボルのプロパティに対応していません。
 
 ```js
-if (typeof Object.assign !== 'function') {
+if (typeof Object.assign !== "function") {
   // Must be writable: true, enumerable: false, configurable: true
   Object.defineProperty(Object, "assign", {
-    value: function assign(target, varArgs) { // .length of function is 2
-      'use strict';
+    value: function assign(target, varArgs) {
+      // .length of function is 2
+      "use strict";
       if (target === null || target === undefined) {
-        throw new TypeError('Cannot convert undefined or null to object');
+        throw new TypeError("Cannot convert undefined or null to object");
       }
 
       var to = Object(target);
@@ -71,7 +72,7 @@ if (typeof Object.assign !== 'function') {
       return to;
     },
     writable: true,
-    configurable: true
+    configurable: true,
   });
 }
 ```
@@ -94,9 +95,9 @@ console.log(copy); // { a: 1 }
 
 ```js
 function test() {
-  'use strict';
+  "use strict";
 
-  let obj1 = { a: 0 , b: { c: 0}};
+  let obj1 = { a: 0, b: { c: 0 } };
   let obj2 = Object.assign({}, obj1);
   console.log(JSON.stringify(obj2)); // { "a": 0, "b": { "c": 0}}
 
@@ -113,7 +114,7 @@ function test() {
   console.log(JSON.stringify(obj2)); // { "a": 2, "b": { "c": 3}}
 
   // Deep Clone
-  obj1 = { a: 0 , b: { c: 0}};
+  obj1 = { a: 0, b: { c: 0 } };
   let obj3 = JSON.parse(JSON.stringify(obj1));
   obj1.a = 4;
   obj1.b.c = 4;
@@ -132,7 +133,7 @@ const o3 = { c: 3 };
 
 const obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, コピー先オブジェクト自体が変化する。
+console.log(o1); // { a: 1, b: 2, c: 3 }, コピー先オブジェクト自体が変化する。
 ```
 
 ### 同じプロパティを持つオブジェクトのマージ
@@ -152,7 +153,7 @@ console.log(obj); // { a: 1, b: 2, c: 3 }
 
 ```js
 const o1 = { a: 1 };
-const o2 = { [Symbol('foo')]: 2 };
+const o2 = { [Symbol("foo")]: 2 };
 
 const obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
@@ -162,15 +163,19 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
 ### プロトタイプチェーン上のプロパティと列挙可能ではないプロパティはコピー不可
 
 ```js
-const obj = Object.create({ foo: 1 }, { // foo is on obj's prototype chain.
-  bar: {
-    value: 2  // bar は列挙可能なプロパティではない。
+const obj = Object.create(
+  { foo: 1 },
+  {
+    // foo is on obj's prototype chain.
+    bar: {
+      value: 2, // bar は列挙可能なプロパティではない。
+    },
+    baz: {
+      value: 3,
+      enumerable: true, // baz は直接所有で列挙可能なプロパティ。
+    },
   },
-  baz: {
-    value: 3,
-    enumerable: true  // baz は直接所有で列挙可能なプロパティ。
-  }
-});
+);
 
 const copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
@@ -179,10 +184,10 @@ console.log(copy); // { baz: 3 }
 ### プリミティブはオブジェクトでラップされる
 
 ```js
-const v1 = 'abc';
+const v1 = "abc";
 const v2 = true;
 const v3 = 10;
-const v4 = Symbol('foo');
+const v4 = Symbol("foo");
 
 const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // プリミティブ値はラップされ、 null と undefined は無視される
@@ -193,20 +198,20 @@ console.log(obj); // { "0": "a", "1": "b", "2": "c" }
 ### 例外が発生すると実行中のコピー作業が中断される
 
 ```js
-const target = Object.defineProperty({}, 'foo', {
+const target = Object.defineProperty({}, "foo", {
   value: 1,
-  writable: false
+  writable: false,
 }); // target.foo is a read-only property
 
 Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" is read-only
 // target.foo に代入しようとすると、この例外が発生する
 
-console.log(target.bar);  // 2, 一番目のコピー元オブジェクトはコピーされている
+console.log(target.bar); // 2, 一番目のコピー元オブジェクトはコピーされている
 console.log(target.foo2); // 3, 二番目のコピー元の最初のプロパティもコピーされている
-console.log(target.foo);  // 1, ここで例外が発生
+console.log(target.foo); // 1, ここで例外が発生
 console.log(target.foo3); // undefined, assign メソッドが終了したので foo3 はコピーされない
-console.log(target.baz);  // undefined, 三番目のコピー元もコピーされない
+console.log(target.baz); // undefined, 三番目のコピー元もコピーされない
 ```
 
 ### アクセサーのコピー
@@ -216,7 +221,7 @@ const obj = {
   foo: 1,
   get bar() {
     return 2;
-  }
+  },
 };
 
 let copy = Object.assign({}, obj);
@@ -226,14 +231,14 @@ console.log(copy);
 
 // 記述子を完全にコピーする代入関数
 function completeAssign(target, ...sources) {
-  sources.forEach(source => {
+  sources.forEach((source) => {
     let descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
 
     // 既定では、 Object.assign は列挙可能なシンボルもコピーする
-    Object.getOwnPropertySymbols(source).forEach(sym => {
+    Object.getOwnPropertySymbols(source).forEach((sym) => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;

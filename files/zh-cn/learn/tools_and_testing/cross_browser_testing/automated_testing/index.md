@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，以及对<a
           href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
@@ -375,7 +375,7 @@ exports.watch = watch;
    [![Mark as bug](mark-as-bug-2.png)](https://web.archive.org/web/20210608014707if_/https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
    如果你注意到用户界面的问题，那么你可以用截图按钮捕捉虚拟机的截图，与你的同事分享。你还可以通过点击测试会话中的录音机按钮来录制你的测试会话的视频。
 4. 有了内置的图像编辑器，在推送给同事之前，可以以问题所在之处标记你的屏幕截图。![强调问题所在](mark-as-bug-3.png)
-5. 使用“标记为bug”的按钮，你可以将 bug 推送到许多第三方工具，如 Jira、Asana、Trello 等。这样，你就可以直接从 LambdaTest 的测试会话中记录一个 bug 到你的项目管理实例中。查看所有的[第三方 LambdaTest 集成](https://www.lambdatest.com/integrations)。
+5. 使用“标记为 bug”的按钮，你可以将 bug 推送到许多第三方工具，如 Jira、Asana、Trello 等。这样，你就可以直接从 LambdaTest 的测试会话中记录一个 bug 到你的项目管理实例中。查看所有的[第三方 LambdaTest 集成](https://www.lambdatest.com/integrations)。
 
 > **备注：** 所有在测试会话中捕获的视频和图像都被捕获在 LambdaTest 的图库、测试日志和问题跟踪器中。
 

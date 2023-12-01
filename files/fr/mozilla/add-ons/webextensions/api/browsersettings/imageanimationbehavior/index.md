@@ -1,7 +1,6 @@
 ---
 title: browserSettings.imageAnimationBehavior
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior
 ---
 
 {{AddonSidebar()}}

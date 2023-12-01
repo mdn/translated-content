@@ -1,7 +1,6 @@
 ---
 title: Objets avec média
 slug: Web/CSS/Layout_cookbook/Media_objects
-translation_of: Web/CSS/Layout_cookbook/Media_objects
 ---
 
 {{CSSRef}}

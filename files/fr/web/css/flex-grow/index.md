@@ -1,7 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-translation_of: Web/CSS/flex-grow
 ---
 
 {{CSSRef}}

@@ -21,10 +21,10 @@ selection = window.getSelection();
 
 ```js
 function foo() {
-    var selObj = window.getSelection();
-    alert(selObj);
-    var selRange = selObj.getRangeAt(0);
-    // do stuff with the range
+  var selObj = window.getSelection();
+  alert(selObj);
+  var selRange = selObj.getRangeAt(0);
+  // do stuff with the range
 }
 ```
 
@@ -34,7 +34,7 @@ function foo() {
 
 JavaScript에서 문자열을 인자로 받는 함수({{ Domxref("window.alert()") }} 나 {{ Domxref("document.write()") }} 같은)에 객체를 전달하면 해당 객체의 {{jsxref("Object.toString", "toString()")}} 메소드를 호출하고 그 결과를 호출한 함수로 전달합니다. 이를 통해서 실제로는 속성과 메소드를 갖는 문자열이 아닌 일반적인 객체라 하더라도 문자열을 인자로 받는 함수의 인자로 사용할 때에는 객체를 문자열인 것처럼 전달할 수 있습니다.
 
-위 예제에서 selObj를 {{domxref("window.alert()")}}의 인자로 전달하면 `selObj.toString()`가 자동적으로 호출됩니다. 하지만, selObj에 대해서 [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) 나 [`substr`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr) 같은 JavaScript [String](/ko/docs/Web/JavaScript/Reference/Global_Objects/String)의 속성이나 메소드를 사용하면 객체에 그러한 속성이나 메소드가 없기 때문에 에러나 예상치 못한 결과가 발생합니다. `Selection` 객체를 문자열로 사용하려면 다음처럼 직접 `toString()` 메소드를 호출해야 합니다:
+위 예제에서 selObj를 {{domxref("window.alert()")}}의 인자로 전달하면 `selObj.toString()`가 자동적으로 호출됩니다. 하지만, selObj에 대해서 [`length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length) 나 [`substr`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substr) 같은 JavaScript [String](/ko/docs/Web/JavaScript/Reference/Global_Objects/String)의 속성이나 메소드를 사용하면 객체에 그러한 속성이나 메소드가 없기 때문에 에러나 예상치 못한 결과가 발생합니다. `Selection` 객체를 문자열로 사용하려면 다음처럼 직접 `toString()` 메소드를 호출해야 합니다:
 
 <pre class="brush:js;gutter:false;">var selectedText = selObj.toString();</pre>
 

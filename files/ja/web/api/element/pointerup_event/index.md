@@ -1,7 +1,6 @@
 ---
 title: "Element: pointerup イベント"
 slug: Web/API/Element/pointerup_event
-original_slug: Web/API/Document/pointerup_event
 l10n:
   sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
 ---

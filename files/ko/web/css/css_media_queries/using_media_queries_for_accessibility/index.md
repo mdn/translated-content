@@ -1,7 +1,6 @@
 ---
 title: 접근성을 위한 미디어 쿼리 사용하기
 slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
-original_slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 ---
 
 **미디어쿼리**(**Media Queries**)는 장애를 가진 사용자가 웹사이트를 더 쉽게 이해할 수 있도록 도울 수 있습니다.
@@ -74,9 +73,13 @@ original_slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
   /* 모든 고대비 모드에 대한 스타일 규칙입니다 */
 }
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div {
+    background-image: url("image-bw.png");
+  }
 }
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div {
+    background-image: url("image-wb.png");
+  }
 }
 ```

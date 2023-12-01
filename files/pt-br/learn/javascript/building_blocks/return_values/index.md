@@ -1,7 +1,6 @@
 ---
 title: Valores de retorno de função
 slug: Learn/JavaScript/Building_blocks/Return_values
-original_slug: Aprender/JavaScript/Elementos_construtivos/Return_values
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

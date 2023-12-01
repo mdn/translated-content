@@ -1,11 +1,6 @@
 ---
 title: void operator
 slug: Web/JavaScript/Reference/Operators/void
-tags:
-  - JavaScript
-  - Операторы
-  - Унарные
-translation_of: Web/JavaScript/Reference/Operators/void
 ---
 
 {{jsSidebar("Operators")}}
@@ -29,18 +24,18 @@ void expression
 С оператором void можно использовать самовызывающиеся функции.
 
 ```js
-void function iife() {
-    var bar = function () {};
-    var baz = function () {};
-    var foo = function () {
-        bar();
-        baz();
-     };
-    var biz = function () {};
+void (function iife() {
+  var bar = function () {};
+  var baz = function () {};
+  var foo = function () {
+    bar();
+    baz();
+  };
+  var biz = function () {};
 
-    foo();
-    biz();
-}();
+  foo();
+  biz();
+})();
 ```
 
 ## JavaScript URIs
@@ -48,9 +43,7 @@ void function iife() {
 Когда браузер переходит по `javascript: URI`, он вычисляет код в `URI` и заменяет содержание страницы возвращённым значением, если оно не равно {{jsxref("Global_Objects/undefined", "undefined")}}. Можно воспользоваться оператором `void` для возврата {{jsxref("Global_Objects/undefined", "undefined")}}. Например:
 
 ```html
-<a href="javascript:void(0);">
-  Click here to do nothing
-</a>
+<a href="javascript:void(0);">Click here to do nothing</a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   Click here for green background

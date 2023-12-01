@@ -1,7 +1,6 @@
 ---
 title: device-height
 slug: Web/CSS/@media/device-height
-translation_of: Web/CSS/@media/device-height
 ---
 
 {{CSSRef}}{{deprecated_header}}

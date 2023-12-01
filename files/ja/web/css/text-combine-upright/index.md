@@ -7,8 +7,7 @@ slug: Web/CSS/text-combine-upright
 
 **`text-combine-upright`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一文字分の空間に挿入する文字の組み合わせを設定します。組み合わせたテキストが 1em の幅より広い場合、ユーザーエージェントはコンテンツを 1em の幅に収めなければなりません。合成結果は、レイアウトおよび装飾においてグリフ一文字として扱われます。このプロパティは、縦書きモードでのみ効果があります。
 
-<!-- markdownlint-disable-next-line MD033 -->
-これは、日本語の縦中横、中国語の <span lang="zh-CN">直書橫向</span> として知られる効果をもたらすために使用されます。
+これは、日本語の縦中横、中国語の <i lang="zh-CN">直書橫向</i> として知られる効果をもたらすために使用されます。
 
 ```css
 /* キーワード値 */
@@ -16,8 +15,8 @@ text-combine-upright: none;
 text-combine-upright: all;
 
 /* Digits 値 */
-text-combine-upright: digits;     /* 2 桁の数字を垂直テキスト内に水平に収めます */
-text-combine-upright: digits 4;   /* 4 桁までの数字を垂直テキスト内に水平に収めます */
+text-combine-upright: digits; /* 2 桁の数字を垂直テキスト内に水平に収めます */
+text-combine-upright: digits 4; /* 4 桁までの数字を垂直テキスト内に水平に収めます */
 
 /* グローバル値 */
 text-combine-upright: inherit;
@@ -78,16 +77,24 @@ all の値は、水平テキストにするすべての部分にマークアッ�
 #### HTML
 
 ```html
-<p lang="zh-Hant">民國<span class="num">105</span
->年<span class="num">4</span
->月<span class="num">29</span>日</p>
+<p lang="zh-Hant">
+  民國<span class="num">105</span>年<span class="num">4</span>月<span
+    class="num"
+    >29</span
+  >日
+</p>
 ```
 
 #### CSS
 
 ```css
-html { writing-mode: vertical-rl; font: 24px serif }
-.num { text-combine-upright: all }
+html {
+  writing-mode: vertical-rl;
+  font: 24px serif;
+}
+.num {
+  text-combine-upright: all;
+}
 ```
 
 #### 結果

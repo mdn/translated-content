@@ -1,7 +1,6 @@
 ---
 title: Extensions CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
-translation_of: Web/CSS/Mozilla_Extensions
 ---
 
 {{CSSRef}}

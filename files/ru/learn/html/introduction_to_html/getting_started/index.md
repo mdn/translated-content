@@ -1,19 +1,6 @@
 ---
 title: Начало работы с HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Guide
-  - HTML
-  - Атрибуты
-  - Для начинающих
-  - Комментарии
-  - Пробелы
-  - Программирование
-  - Руководство
-  - Урок
-  - элементы
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
-original_slug: Learn/HTML/Введение_в_HTML/Начало_работы
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}
@@ -446,10 +433,10 @@ textarea.onkeyup = function () {
 
 В этой статье вы заметите, что все атрибуты заключены в двойные кавычки. Однако, вы можете видеть одинарные кавычки в HTML документах других людей. Это исключительно дело вкуса, и вы можете свободно выбирать, какие из них предпочитаете. Обе следующие строки эквивалентны:
 
-```html
+```html-nolint
 <a href="http://www.example.com">Ссылка к моему примеру.</a>
 
-<a href="http://www.example.com">Ссылка к моему примеру.</a>
+<a href='http://www.example.com'>Ссылка к моему примеру.</a>
 ```
 
 Однако вы должны убедиться, что не смешиваете их вместе. Следующее будет неверным!

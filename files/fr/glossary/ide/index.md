@@ -1,8 +1,9 @@
 ---
 title: EDI
 slug: Glossary/IDE
-translation_of: Glossary/IDE
 ---
+
+{{GlossarySidebar}}
 
 Un Environnement de Développement Intégré (**EDI**) ou Environnement de Développement Interactif est une application logicielle qui fournit des facilités complètes aux programmeurs pour le développemet de logiciels. Un EDI est constitué normalement d'un éditeur de code source, d'outils pour automatiser la compilation et d'un débogueur.
 

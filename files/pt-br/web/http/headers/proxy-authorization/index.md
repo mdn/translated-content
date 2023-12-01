@@ -47,10 +47,10 @@ Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ## Especificações
 
-| Especificação                                                | Título                                 |
-| ------------------------------------------------------------ | -------------------------------------- |
+| Especificação                                 | Título                                 |
+| --------------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Proxy-Authorization", "4.4")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                         | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                               | The 'Basic' HTTP Authentication Scheme |
 
 ## Veja também
 

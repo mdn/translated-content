@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Workers API")}}
 
-name`** は {{domxref("SharedWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、 {{domxref("SharedWorker")}} が作成されたときに（任意で）指定された名前を返します。これは {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターが {{domxref("SharedWorkerGlobalScope")}} への参照を取得するために渡すことができる名前になります。
+**`name`** は {{domxref("SharedWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、 {{domxref("SharedWorker")}} が作成されたときに（任意で）指定された名前を返します。これは {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターが {{domxref("SharedWorkerGlobalScope")}} への参照を取得するために渡すことができる名前になります。
 
 ## 値
 
@@ -18,13 +18,13 @@ name`** は {{domxref("SharedWorkerGlobalScope")}} インターフェイスの�
 共有ワーカーが `name` オプションを持つコンストラクターで作成された場合。
 
 ```js
-const myWorker = new SharedWorker("worker.js", { name : "mySharedWorker" });
+const myWorker = new SharedWorker("worker.js", { name: "mySharedWorker" });
 ```
 
 これで {{domxref("SharedWorkerGlobalScope")}} は "mySharedWorker" という名前になり、次のように実行すると返すことができます。
 
 ```js
-self.name
+self.name;
 ```
 
 共有ワーカーの中で実行してください。

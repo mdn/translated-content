@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: input 이벤트'
+title: "HTMLElement: input 이벤트"
 short-title: input
 slug: Web/API/HTMLElement/input_event
 l10n:
@@ -39,17 +39,17 @@ oninput = (event) => {};
 ### HTML
 
 ```html
-<input placeholder="텍스트 입력" name="name"/>
+<input placeholder="텍스트 입력" name="name" />
 <p id="values"></p>
 ```
 
 ### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('values');
+const input = document.querySelector("input");
+const log = document.getElementById("values");
 
-input.addEventListener('input', updateValue);
+input.addEventListener("input", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

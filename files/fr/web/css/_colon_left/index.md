@@ -1,7 +1,6 @@
 ---
 title: ":left"
 slug: Web/CSS/:left
-translation_of: Web/CSS/:left
 ---
 
 {{CSSRef}}

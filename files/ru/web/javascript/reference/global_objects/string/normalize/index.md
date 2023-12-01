@@ -1,16 +1,8 @@
 ---
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка
@@ -57,41 +49,41 @@ str.normalize([form])
 ### Пример: использование метода `normalize()`
 
 ```js
-let valueStr = ['h', 'ĥ', 'æ', 'ae', 'g', 'ġ'],
-    normArr = valueStr.map(function (text) {
-        return text.normalize(); // (по умолчанию 'NFC') normArr (после сортировки) -> [ae, g, h, æ, ġ, ĥ]
-        //return text.normalize('NFD'); // normArr (после сортировки) -> [ae, g, ġ, h, ĥ, æ]
-        //return text.normalize('NFKC'); // normArr (после сортировки) -> [ae, g, h, æ, ġ, ĥ]
-        //return text.normalize('NFKD'); // normArr (после сортировки) -> [ae, g, ġ, h, ĥ, æ]
-    });
+let valueStr = ["h", "ĥ", "æ", "ae", "g", "ġ"],
+  normArr = valueStr.map(function (text) {
+    return text.normalize(); // (по умолчанию 'NFC') normArr (после сортировки) -> [ae, g, h, æ, ġ, ĥ]
+    //return text.normalize('NFD'); // normArr (после сортировки) -> [ae, g, ġ, h, ĥ, æ]
+    //return text.normalize('NFKC'); // normArr (после сортировки) -> [ae, g, h, æ, ġ, ĥ]
+    //return text.normalize('NFKD'); // normArr (после сортировки) -> [ae, g, ġ, h, ĥ, æ]
+  });
 
 //После приведение строк в нормальную форму, мы можем провести сортировку, массива:
-normArr.sort(function (f,s) {
-    if (f < s) {
-        return -1;
-    } else if (f === s) {
-        return 0;
-    } else {
-        return 1;
-    }
+normArr.sort(function (f, s) {
+  if (f < s) {
+    return -1;
+  } else if (f === s) {
+    return 0;
+  } else {
+    return 1;
+  }
 });
 
 //Приведение к нормальной форме можно выполнить во время сортировки. Нормализацию при этом можно выполнять с помощью разных форм нормализации
-let valueStrNorm = ['h', 's', 'ĥ', 'æ', 'ș', 'ae', 'g', 'ġ'];
+let valueStrNorm = ["h", "s", "ĥ", "æ", "ș", "ae", "g", "ġ"];
 valueStrNorm.sort(function (first, second) {
-    let fN = first.normalize(),
-        sN = second.normalize('NFKC');
+  let fN = first.normalize(),
+    sN = second.normalize("NFKC");
 
-    if (fN < sN) {
-        return -1;
-    } else if (fN === sN) {
-        return 0;
-    } else {
-        return 1;
-    }
+  if (fN < sN) {
+    return -1;
+  } else if (fN === sN) {
+    return 0;
+  } else {
+    return 1;
+  }
 });
 
-valueStrNorm.join(', ');//-> ae, g, h, s, æ, ġ, ĥ, ș
+valueStrNorm.join(", "); //-> ae, g, h, s, æ, ġ, ĥ, ș
 ```
 
 ## Спецификации

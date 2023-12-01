@@ -1,11 +1,6 @@
 ---
 title: screenshots
 slug: Web/Manifest/screenshots
-tags:
-  - Manifest
-  - Screenshots
-  - Web
-translation_of: Web/Manifest/screenshots
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}

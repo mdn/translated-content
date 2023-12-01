@@ -1,7 +1,6 @@
 ---
 title: Math (math)
 slug: Web/EXSLT/math
-translation_of: Web/EXSLT/math
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}

@@ -1,7 +1,6 @@
 ---
 title: pkcs11.getModuleSlots()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
-translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
 ---
 
 {{AddonSidebar()}}

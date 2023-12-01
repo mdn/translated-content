@@ -1,15 +1,6 @@
 ---
 title: "Руководство часть 9: Работа с формами"
 slug: Learn/Server-side/Django/Forms
-tags:
-  - HTML
-  - django
-  - Для начинающих
-  - Руководство
-  - Серверная сторона
-  - Формы
-  - Формы Django
-translation_of: Learn/Server-side/Django/Forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}

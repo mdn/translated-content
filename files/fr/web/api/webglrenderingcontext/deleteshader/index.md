@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.deleteShader()
 slug: Web/API/WebGLRenderingContext/deleteShader
-translation_of: Web/API/WebGLRenderingContext/deleteShader
 ---
 
 {{APIRef("WebGL")}}

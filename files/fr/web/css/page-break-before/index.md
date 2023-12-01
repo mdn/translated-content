@@ -1,7 +1,6 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
-translation_of: Web/CSS/page-break-before
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
-translation_of: Web/CSS/:-moz-broken
 ---
 
 {{Non-standard_header}}{{CSSRef}}

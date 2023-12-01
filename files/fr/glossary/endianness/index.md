@@ -1,8 +1,9 @@
 ---
 title: Endianness
 slug: Glossary/Endianness
-translation_of: Glossary/Endianness
 ---
+
+{{GlossarySidebar}}
 
 "Endian" et "endianness" (ou "ordre des octets") désigne la manière dont les ordinateurs organisent les octets pour constituer des nombres.
 

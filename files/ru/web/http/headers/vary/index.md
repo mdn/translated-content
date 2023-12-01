@@ -1,9 +1,8 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
-translation_of: Web/HTTP/Headers/Vary
-original_slug: Web/HTTP/Заголовки/Vary
 ---
+
 {{HTTPSidebar}}
 
 Заголовок ответа **`Vary`** определяет, как сопоставить будущие заголовки запроса, чтобы решить, можно ли использовать кешированный ответ, а не запрашивать новый с исходного сервера. Он используется сервером для указания того, какие заголовки он использовал при выборе представления ресурса в [алгоритме согласования](/ru/docs/Web/HTTP/Content_negotiation) контента.
@@ -49,8 +48,8 @@ Vary: User-Agent
 
 ## Specifications
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Specification                    | Title                                                         |
+| -------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Browser compatibility

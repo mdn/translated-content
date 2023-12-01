@@ -1,7 +1,6 @@
 ---
 title: min-inline-size
 slug: Web/CSS/min-inline-size
-translation_of: Web/CSS/min-inline-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
