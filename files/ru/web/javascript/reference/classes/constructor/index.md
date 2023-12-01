@@ -122,7 +122,7 @@ class Square extends Polygon {
     super(length, length);
     // Примечание: В производном классе, super() должен вызываться перед тем, как
     // вы сможете использовать 'this'. Иначе будет сгенерировано исключение reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {

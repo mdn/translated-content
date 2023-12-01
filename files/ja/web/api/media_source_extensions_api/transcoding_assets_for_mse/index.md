@@ -40,8 +40,8 @@ MSE を使用する場合、次のツールが必要です。
 ブラウザーが特定のコンテナをサポートしているかどうかを確認するには、次のように MIME タイプの文字列を {{domxref("MediaSource.isTypeSupported")}} メソッドに渡します。
 
 ```js
-MediaSource.isTypeSupported('audio/mp3'); // false
-MediaSource.isTypeSupported('video/mp4'); // true
+MediaSource.isTypeSupported("audio/mp3"); // false
+MediaSource.isTypeSupported("video/mp4"); // true
 MediaSource.isTypeSupported('video/mp4; codecs="avc1.4D4028, mp4a.40.2"'); // true
 ```
 

@@ -1,8 +1,9 @@
 ---
-title: AbortController()
+title: "AbortController: AbortController() コンストラクター"
+short-title: AbortController()
 slug: Web/API/AbortController/AbortController
 l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{APIRef("DOM")}}
@@ -23,9 +24,9 @@ new AbortController()
 
 次のコードでは、動画のダウンロードを[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して行おうとします。
 
-最初に {{domxref("AbortController.AbortController", "AbortController()")}} コンストラクターを使用してコントローラーを作成し、関連する {{domxref("AbortSignal")}} オブジェクトへの参照を {{domxref("AbortController.signal")}} プロパティを使用して取り込みます。
+最初に {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使用してコントローラーを作成し、関連する {{domxref("AbortSignal")}} オブジェクトへの参照を {{domxref("AbortController.signal")}} プロパティを使用して取り込みます。
 
-[フェッチリクエスト](/ja/docs/Web/API/fetch)が開始されると、 `AbortSignal` をリクエストのオプションオブジェクト（下記の `{signal}`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxref("AbortController.abort()")}} を呼び出すことでフェッチを中断できるようになります。
+[フェッチリクエスト](/ja/docs/Web/API/fetch)が開始されると、 `AbortSignal` をリクエストのオプションオブジェクト（下記の `{ signal }`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxref("AbortController.abort()")}} を呼び出すことでフェッチを中断できるようになります。
 
 ```js
 const controller = new AbortController();

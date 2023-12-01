@@ -11,19 +11,19 @@ HTML-элемент **`<details>`** используется для раскры
 
 {{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), sectioning root, interactive content, palpable content.      |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                          | One {{HTMLElement("summary")}} element followed by [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content). |
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), sectioning root, interactive content, palpable content. |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                          | One {{HTMLElement("summary")}} element followed by [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).      |
 | Tag omission                                               | {{no_tag_omission}}                                                                                                        |
-| Permitted parents                                          | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).                                     |
-| Permitted ARIA roles                                       | None                                                                                                                            |
-| DOM interface                                              | {{domxref("HTMLDetailsElement")}}                                                                                    |
+| Permitted parents                                          | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).                                |
+| Permitted ARIA roles                                       | None                                                                                                                       |
+| DOM interface                                              | {{domxref("HTMLDetailsElement")}}                                                                                          |
 
 ## Атрибуты
 
 Элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("open")}}
+- `open`
   - : Данный логический атрибут указывает, будет ли дополнительная информация отображаться пользователю при загрузке страницы. По умолчанию установлено значение false, поэтому дополнительная информация будет скрыта.
 
 ## Пример
@@ -70,17 +70,17 @@ summary {
   display: block;
 }
 
-  summary::-webkit-details-marker {
+summary::-webkit-details-marker {
   display: none;
 }
 
 summary::before {
-  content: '\25B6';
+  content: "\25B6";
   padding-right: 0.5em;
 }
 
 details[open] > summary::before {
-  content: '\25BC';
+  content: "\25BC";
 }
 ```
 
@@ -90,10 +90,7 @@ details[open] > summary::before {
 
 ## Specifications
 
-| Specification                                                                                                | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#the-details-element', '&lt;details&gt;')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5.1', 'semantics.html#the-details-element', '&lt;details&gt;')}} | {{Spec2('HTML5.1')}}     | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

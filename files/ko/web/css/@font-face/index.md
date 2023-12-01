@@ -2,6 +2,7 @@
 title: "@font-face"
 slug: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 ## 요약(Summary)
@@ -63,9 +64,8 @@ slug: Web/CSS/@font-face
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-  local("HelveticaNeue-Bold"),
-  url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```

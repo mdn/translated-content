@@ -20,6 +20,7 @@ replaceAll(pattern, replacement)
 ## 매개변수
 
 - `pattern`
+
   - : 문자열이거나 {{jsxref("Symbol/replace", "Symbol.replace")}} 메서드가 있는 객체일 수 있습니다. 일반적인 예로 [정규식](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp)이 있습니다. `Symbol.replace` 메서드가 없는 모든 값은 문자열로 강제 변환됩니다.
 
     `pattern`[이 정규식](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/includes)이면 전역(`g`) 플래그가 설정되어 있어야 합니다. 그렇지 않으면 {{jsxref("TypeError")}}가 발생합니다.

@@ -40,18 +40,22 @@ Math.sinh(1); // 1.1752011936438014
 Этот метод может эмулироваться при помощи двух вызовов метода {{jsxref("Math.exp()")}}:
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  return (Math.exp(x) - Math.exp(-x)) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    return (Math.exp(x) - Math.exp(-x)) / 2;
+  };
 ```
 
 либо при помощи только одного вызова метода {{jsxref("Math.exp()")}}:
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  var y = Math.exp(x);
-  return (y - 1 / y) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y - 1 / y) / 2;
+  };
 ```
 
 ## Спецификации

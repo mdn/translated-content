@@ -13,18 +13,18 @@ slug: WebAssembly/C_to_Wasm
 
 ### 所需条件
 
-你需要将下列工具安装在您的电脑上，首先让我们确认下都有哪些。
+你需要将下列工具安装在你的电脑上，首先让我们确认下都有哪些。
 
-- [Git](https://git-scm.com/) — Linux 和 macOS 的机器一般已经预装了，在 Windows 下您可以从这里下载 [Git for Windows installer](https://git-scm.com/download/win)。
+- [Git](https://git-scm.com/) — Linux 和 macOS 的机器一般已经预装了，在 Windows 下你可以从这里下载 [Git for Windows installer](https://git-scm.com/download/win)。
 - CMake — 在 Linux 或者 macOS 上，使用类似 apt-get 或 [brew](http://brew.sh/) 这样的包管理器来安装它，请确保依赖以及路径是否正确。在 Windows 上，使用 [CMake installer](https://cmake.org/download/)。
 - 主系统编译器 — 在 Linux 下，[安装 GCC](http://askubuntu.com/questions/154402/install-gcc-on-ubuntu-12-04-lts)。在 macOS 下，[安装 Xcode](https://itunes.apple.com/us/app/xcode/id497799835)。在 Windows 下，安装 [Visual Studio Community 2015 with Update 3 or newer](https://www.microsoft.com/zh-CN/download/details.aspx?id=48146)。
 - Python 2.7.x — On Linux and macOS, this is most likely provided out of the box. 从 [初学者指南](https://wiki.python.org/moin/BeginnersGuide/Downloadhere) 获取帮助。在 Windows 上，从 [Python 主页](https://www.python.org/downloads/)获取安装包。
 
-> **备注：** 在 Windows 下您可能需要[pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/)，为了降低安装 pywin32 可能遇到的错误，请使用管理员权限在 cmd 内运行安装程序。
+> **备注：** 在 Windows 下你可能需要 [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/)，为了降低安装 pywin32 可能遇到的错误，请使用管理员权限在 cmd 内运行安装程序。
 
 ### 编译 Emscripten
 
-接下来，您需要通过源码自己编译一个 Emscripten。运行下列命令来自动化地使用 Emscripten SDK。(在你想保存 Emscripten 的文件夹下运行)。
+接下来，你需要通过源码自己编译一个 Emscripten。运行下列命令来自动化地使用 Emscripten SDK。(在你想保存 Emscripten 的文件夹下运行)。
 
 ```bash
 git clone https://github.com/juj/emsdk.git
@@ -50,9 +50,9 @@ emsdk activate --global --build=Release sdk-incoming-64bit binaryen-master-64bit
 
 安装过程可以会花上一点时间，是时候去休息一下。安装程序会设置所有 Emscripten 运行所需要的环境变量。
 
-> **备注：** global 标识会让 PATH 变量在全局被设置，所以接下来所打开的终端或者命令行窗口都会被设置。如果您仅仅想让 Emscripten 在当前窗口生效，就删掉这个标识。
+> **备注：** global 标识会让 PATH 变量在全局被设置，所以接下来所打开的终端或者命令行窗口都会被设置。如果你仅仅想让 Emscripten 在当前窗口生效，就删掉这个标识。
 
-> **备注：** 每当您想要使用 Emscripten 时，尝试从远程更新最新的 emscripten 代码是个很好的习惯（运行 git pull）。如果有更新，重新执行 install 和 activate 命令。这样就可以确保您使用的 Emscripten 一直保持最新。
+> **备注：** 每当你想要使用 Emscripten 时，尝试从远程更新最新的 emscripten 代码是个很好的习惯（运行 git pull）。如果有更新，重新执行 install 和 activate 命令。这样就可以确保你使用的 Emscripten 一直保持最新。
 
 现在让我们进入 emsdk 文件夹，输入以下命令来让你进入接下来的流程，编译一个样例 C 程序到 asm.js 或者 wasm。
 
@@ -95,10 +95,10 @@ emsdk_env.bat
 
 下面列出了我们命令中选项的细节：
 
-- `-s WASM=1` — 指定我们想要的 wasm 输出形式。如果我们不指定这个选项，Emscripten 默认将只会生成[asm.js](http://asmjs.org/)。
+- `-s WASM=1` — 指定我们想要的 wasm 输出形式。如果我们不指定这个选项，Emscripten 默认将只会生成 [asm.js](http://asmjs.org/)。
 - `-o hello.html` — 指定这个选项将会生成 HTML 页面来运行我们的代码，并且会生成 wasm 模块，以及编译和实例化 wasm 模块所需要的“胶水”js 代码，这样我们就可以直接在 web 环境中使用了。
 
-这个时候在您的源码文件夹应该有下列文件：
+这个时候在你的源码文件夹应该有下列文件：
 
 - `hello.wasm` 二进制的 wasm 模块代码
 - `hello.js` 一个包含了用来在原生 C 函数和 JavaScript/wasm 之间转换的胶水代码的 JavaScript 文件
@@ -108,9 +108,9 @@ emsdk_env.bat
 
 现在使用一个支持 WebAssembly 的浏览器，加载生成的 `hello.html`。自从 Firefox 版本 52、Chrome 版本 57 和 Opera 版本 44 开始，已经默认启用了 WebAssembly。
 
-> **备注：** 如果你试图直接从本地硬盘打开生成的 HTML 文件（`hello.html`）（例如 `file://your_path/hello.html`），你会得到一个错误信息，大意是 _`both async and sync fetching of the wasm failed`_。 你需要通过 HTTP 服务器（`http://`）运行你的 HTML 文件——参见[如何设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)获取更多信息。
+> **备注：** 如果你试图直接从本地硬盘打开生成的 HTML 文件（`hello.html`）（例如 `file://your_path/hello.html`），你会得到一个错误信息，大意是 _`both async and sync fetching of the wasm failed`_。你需要通过 HTTP 服务器（`http://`）运行你的 HTML 文件——参见[如何设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)获取更多信息。
 
-如果一切顺利，你应该可以在页面上的 Emscripten 控制台和浏览器控制台中看到 "Hello World" 的输出。
+如果一切顺利，你应该可以在页面上的 Emscripten 控制台和浏览器控制台中看到“Hello World”的输出。
 
 恭喜！你已经成功将 C 代码编译成 JavaScript 并且在浏览器中执行了！
 
@@ -144,7 +144,7 @@ emsdk_env.bat
    这次使用的选项略有不同：
 
    - 我们使用了 `-o hello2.html`，这意味编译器将仍然输出 js 胶水代码 和 html 文件。
-   - 我们还使用了 `--shell-file html_template/shell_minimal.html`，这指定了您要运行的例子使用 HTML 页面模板。
+   - 我们还使用了 `--shell-file html_template/shell_minimal.html`，这指定了你要运行的例子使用 HTML 页面模板。
 
 4. 下面让我们来运行这个例子。上面的命令已经生成了 hello2.html，内容和我们使用的模板非常相像，只不过多加了一些 js 胶水和加载 wasm 文件的代码。在浏览器中打开它，你会看到与上一个例子相同的输出。
 

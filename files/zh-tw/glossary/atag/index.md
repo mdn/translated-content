@@ -15,5 +15,5 @@ ATAG (編輯工具可訪問性{{glossary("Accessibility")}}指南)是一個{{Glo
 
 ### 技術參考
 
-- [編輯工具可訪問性指南 (ATAG) 概覽](http://www.w3.org/WAI/intro/atag.php)
-- [ATAG 2.0 建議](http://www.w3.org/TR/ATAG20/)
+- [編輯工具可訪問性指南 (ATAG) 概覽](https://www.w3.org/WAI/intro/atag.php)
+- [ATAG 2.0 建議](https://www.w3.org/TR/ATAG20/)

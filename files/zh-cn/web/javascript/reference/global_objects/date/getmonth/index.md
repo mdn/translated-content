@@ -44,7 +44,7 @@ console.log(month); // 11
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCMonth()")}}
 - {{jsxref("Date.prototype.setMonth()")}}

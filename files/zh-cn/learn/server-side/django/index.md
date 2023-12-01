@@ -5,15 +5,15 @@ slug: Learn/Server-side/Django
 
 {{LearnSidebar}}
 
-Django 是使用 Python 语言编写的一个广受欢迎且功能完整的服务器端网站框架。本模块将为您展示为什么 Django 能够成为一个广受欢迎的服务器端框架，如何设置开发环境，以及如何开始创建你自己的网络应用。
+Django 是使用 Python 语言编写的一个广受欢迎且功能完整的服务器端网站框架。本模块将为你展示为什么 Django 能够成为一个广受欢迎的服务器端框架，如何设置开发环境，以及如何开始创建你自己的网络应用。
 
-## 先决条件
+## 前提
 
-开始学习本模块并不需要任何 Django 知识。但您要理解什么是服务器端网络编程、什么是网络框架，最好能够阅读我们的[服务端网站编程的第一步](/zh-CN/docs/Learn/Server-side/First_steps)模块。
+开始学习本模块并不需要任何 Django 知识。但你要理解什么是服务器端网络编程、什么是网络框架，最好能够阅读我们的[服务端网站编程的第一步](/zh-CN/docs/Learn/Server-side/First_steps)模块。
 
 最好能有基本的编程概念并了解 [Python](/zh-CN/docs/Glossary/Python) 语言，但其并不是理解本教程的核心概念的必然条件。
 
-> **备注：** 对于初学者来说，Python 是最容易阅读和理解的编程语言之一。也就是说，如果您想更好的理解本教程，网上有很多免费书籍及免费教程可供参考学习（建议初学者查看 Python 官网的 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) 教程）。
+> **备注：** 对于初学者来说，Python 是最容易阅读和理解的编程语言之一。也就是说，如果你想更好的理解本教程，网上有很多免费书籍及免费教程可供参考学习（建议初学者查看 Python 官网的 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) 教程）。
 
 ## 指南
 

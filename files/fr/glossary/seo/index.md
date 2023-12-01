@@ -3,6 +3,8 @@ title: SEO
 slug: Glossary/SEO
 ---
 
+{{GlossarySidebar}}
+
 **SEO** (Search Engine Optimization ou, en français, _Optimisation pour les moteurs de recherche_) est le processus permettant de rendre un site web plus visible dans les résultats de recherche, également appelé amélioration des classements de recherche.
 
 Les moteurs de recherche explorent le web, suivant les liens de page en page, et indexent le contenu trouvé. Lorsque vous effectuez une recherche, le moteur de recherche affiche le contenu indexé. Les parcours suivent des règles. Si vous suivez ces mêmes règles de près lors du référencement d'un site web, vous donnez au site les meilleures chances d'apparaître parmi les premiers résultats, augmentant le trafic et éventuellement les revenus (pour le commerce électronique et les publicités).

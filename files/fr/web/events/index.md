@@ -1246,7 +1246,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [cut](/fr/docs/Web/API/Window/cut_event)
   - [devicemotion](/fr/docs/Web/API/Window/devicemotion_event)
   - [deviceorientation](/fr/docs/Web/API/Window/deviceorientation_event)
-  - [DOMContentLoaded](/fr/docs/Web/API/Window/DOMContentLoaded_event)
+  - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
   - [error](/fr/docs/Web/API/Window/error_event)
   - [focus](/fr/docs/Web/API/Window/focus_event)
   - [gamepadconnected](/fr/docs/Web/API/Window/gamepadconnected_event)

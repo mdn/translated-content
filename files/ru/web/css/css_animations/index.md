@@ -35,13 +35,11 @@ slug: Web/CSS/CSS_animations
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations') }} | {{ Spec2('CSS3 Animations') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## See also
 

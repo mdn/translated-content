@@ -59,7 +59,7 @@ if (done is true) {
 
 ```js example-good
 if (done === true) {
- console.log("мы сделали!");
+  console.log("мы сделали!");
 }
 ```
 

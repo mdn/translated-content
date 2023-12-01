@@ -24,7 +24,7 @@ l10n:
   </tbody>
 </table>
 
-このモジュールの最初の記事では、プログラム中に長時間実行する同期タスクがある場合に何が起こるかを見ました。ウィンドウ全体が全く反応しなくなるのです。これは、プログラムが「シングルスレッド」であることが根本的な原因です。スレッドとは、プログラムが従うことで、一連の命令である。プログラムは単一のスレッドで構成されているので、一度に一つのことしかできません。つまり、長く続く同期呼び出しが返されるのを待っていると、他のことは何もできないのです。
+このモジュールの最初の記事では、プログラム中に長時間実行する同期タスクがある場合に何が起こるかを見ました。ウィンドウ全体が全く反応しなくなるのです。これは、プログラムが「シングルスレッド」であることが根本的な原因です。スレッドとは、プログラムが従う一連の命令です。プログラムは単一のスレッドで構成されているので、一度に一つのことしかできません。つまり、長く続く同期呼び出しが返されるのを待っていると、他のことは何もできないのです。
 
 ワーカーを使えば、あるタスクを異なるスレッドで実行することができるので、タスクを開始してから、他の処理（ユーザー操作の処理など）を続行することができます。
 
@@ -75,9 +75,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${quota} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${quota} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -160,9 +159,8 @@ document.querySelector("#generate").addEventListener("click", () => {
 // データから受け取った生成された素数の個数を含むユーザーへの
 // メッセージで出力ボックスを更新します。
 worker.addEventListener("message", (message) => {
-  document.querySelector(
-    "#output",
-  ).textContent = `${message.data} 個の素数を生成しました。`;
+  document.querySelector("#output").textContent =
+    `${message.data} 個の素数を生成しました。`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {

@@ -15,7 +15,7 @@ slug: Web/API/VRDisplay/requestAnimationFrame
 ## 構文
 
 ```js
-requestAnimationFrame(callback)
+requestAnimationFrame(callback);
 ```
 
 ### 引数

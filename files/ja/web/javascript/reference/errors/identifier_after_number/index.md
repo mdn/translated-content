@@ -45,7 +45,7 @@ alert(1.foo);
 数値始まりにならないように、変数名を変更する必要があります。
 
 ```js example-good
-var life1 = 'foo';
+var life1 = "foo";
 var foo = life1;
 ```
 

@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.buttons
+title: "MouseEvent: buttons プロパティ"
+short-title: buttons
 slug: Web/API/MouseEvent/buttons
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
@@ -43,17 +44,17 @@ l10n:
 ### JavaScript
 
 ```js
-let log = document.createTextNode('?');   // let log = new Text('?');
+let log = document.createTextNode("?"); // let log = new Text('?');
 
 function logButtons(e) {
-  log.data = `${e.buttons} (${e.type})`;  // log.nodeValue= `${e.buttons} (${e.type})`;
+  log.data = `${e.buttons} (${e.type})`; // log.nodeValue= `${e.buttons} (${e.type})`;
 }
 
-document.addEventListener('mouseup', logButtons);
-document.addEventListener('mousedown', logButtons);
+document.addEventListener("mouseup", logButtons);
+document.addEventListener("mousedown", logButtons);
 // document.addEventListener('mousemove', logButtons);
 
-document.querySelector('#log').appendChild(log)
+document.querySelector("#log").appendChild(log);
 ```
 
 ### 結果

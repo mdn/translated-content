@@ -43,7 +43,8 @@ SubtleCrypto の [`digest()`](/ja/docs/Web/API/SubtleCrypto/digest) メソッド
 <h3>ファイルを SHA256 でハッシュ化するデモ</h3>
 
 <label
-  >ハッシュ化するファイルを選択 (複数可) <input type="file" id="file" name="file" multiple
+  >ハッシュ化するファイルを選択 (複数可)
+  <input type="file" id="file" name="file" multiple
 /></label>
 <output style="display:block;font-family:monospace;"></output>
 ```
@@ -138,7 +139,8 @@ Git は、SHA1 ハッシュを 2 通りの興味深い使い方をする、素�
 <h3>Git がファイルに SHA1 をどのように使っているかのデモ</h3>
 
 <label
-  >ハッシュ化するファイルを選択 (複数可) <input type="file" id="file" name="file" multiple
+  >ハッシュ化するファイルを選択 (複数可)
+  <input type="file" id="file" name="file" multiple
 /></label>
 
 <output style="display:block;font-family:monospace;"></output>

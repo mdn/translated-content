@@ -10,7 +10,7 @@ slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 <table>
  <tbody>
   <tr>
-   <th scope="row">预备知识：</th>
+   <th scope="row">前提：</th>
    <td>阅读并掌握以下文章的内容：<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>、<a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">“头”里有什么？HTML 元信息</a>、<a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理初步</a>、<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">创建超链接</a>和<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">高级文字格式</a>。</td>
   </tr>
   <tr>

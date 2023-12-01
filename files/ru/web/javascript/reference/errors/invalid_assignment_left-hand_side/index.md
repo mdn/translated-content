@@ -2,6 +2,7 @@
 title: "ReferenceError: invalid assignment left-hand side"
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -36,12 +37,10 @@ var str = 'Привет, '
 
 ```js example-good
 if (Math.PI == 3 || Math.PI == 4) {
-  console.log('исключено!');
+  console.log("исключено!");
 }
 
-var str = 'Привет '
-+ 'с другой '
-+ 'стороны!';
+var str = "Привет " + "с другой " + "стороны!";
 ```
 
 ## Смотрите также

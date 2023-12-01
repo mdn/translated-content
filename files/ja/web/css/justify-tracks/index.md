@@ -16,7 +16,7 @@ slug: Web/CSS/justify-tracks
 justify-tracks: start;
 justify-tracks: space-between;
 justify-tracks: center;
-justify-tracks: start,center,end;
+justify-tracks: start, center, end;
 
 /* グローバル値 */
 justify-tracks: inherit;

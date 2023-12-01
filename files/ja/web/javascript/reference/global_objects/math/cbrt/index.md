@@ -67,7 +67,7 @@ Math.cbrt(2); // 1.2599210498948732
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.cbrt")}}
+{{Compat}}
 
 ## 関連情報
 

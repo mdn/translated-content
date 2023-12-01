@@ -3,16 +3,16 @@ title: 盒模型
 slug: Learn/CSS/Building_blocks/The_box_model
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 在 CSS 中，所有的元素都被一个个的“盒子（box）”包围着，理解这些“盒子”的基本原理，是我们使用 CSS 实现准确布局、处理元素排列的关键。
 
-本文围绕“盒模型”为主题展开。旨在于完成学习后，您能够在“理解盒装模型原理”的基础上，完成更加复杂的布局任务。
+本文围绕“盒模型”为主题展开。旨在于完成学习后，你能够在“理解盒装模型原理”的基础上，完成更加复杂的布局任务。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识（Prerequisites）:</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           基本的计算机知识，<a
@@ -30,7 +30,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
       </td>
     </tr>
     <tr>
-      <th scope="row">学习目标（Objective）:</th>
+      <th scope="row">目标：</th>
       <td>
         学习盒模型的基本理论，了解盒装模型的工作原理，了解盒模型与替代模型的区别以及如何进行切换。
       </td>
@@ -40,7 +40,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
 
 ## 块级盒子（Block box）和 内联盒子（Inline box）
 
-在 CSS 中我们广泛地使用两种“盒子” —— **块级盒子** (**block box**) 和 **内联盒子** (**inline box**)。这两种盒子会在**页面流**（page flow）和元素之间的关系方面表现出不同的行为：
+在 CSS 中我们广泛地使用两种“盒子”——**块级盒子**（block box）和**内联盒子**（inline box）。这两种盒子会在**页面流**（page flow）和元素之间的关系方面表现出不同的行为：
 
 一个被定义成块级的（block）盒子会表现出以下行为：
 
@@ -68,19 +68,19 @@ slug: Learn/CSS/Building_blocks/The_box_model
 
 同样盒模型还有内部显示类型，它决定了盒子内部元素是如何布局的。默认情况下是按照 **[正常文档流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow) **布局，也意味着它们和其他块元素以及内联元素一样 (如上所述).
 
-但是，我们可以通过使用类似 `flex` 的 `display` 属性值来更改内部显示类型。如果设置 `display: flex`，在一个元素上，外部显示类型是 `block`，但是内部显示类型修改为 `flex`。该盒子的所有直接子元素都会成为 flex 元素，会根据[弹性盒子（Flexbox）](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)规则进行布局，稍后您将了解这些规则。
+但是，我们可以通过使用类似 `flex` 的 `display` 属性值来更改内部显示类型。如果设置 `display: flex`，在一个元素上，外部显示类型是 `block`，但是内部显示类型修改为 `flex`。该盒子的所有直接子元素都会成为 flex 元素，会根据[弹性盒子（Flexbox）](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)规则进行布局，稍后你将了解这些规则。
 
 > **备注：** 想要了解更多有关显示值以及盒子在块和内联布局中的工作原理，请参阅[常规流中的块和内联布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)。
 
 当你进一步了解 css 布局的更多细节的时候，你会了解到 `flex`，和其他内部显示类型会用到的值，例如 [`grid`](/zh-CN/docs/Learn/CSS/CSS_layout/Grids) 。
 
-块级和内联布局是 web 上默认的行为 —— 正如上面所述，它有时候被称为 _正常文档流_，因为如果没有其他说明，我们的盒子布局默认是块级或者内联。
+块级和内联布局是 web 上默认的行为——正如上面所述，它有时候被称为 _正常文档流_，因为如果没有其他说明，我们的盒子布局默认是块级或者内联。
 
 ## 不同显示类型的例子
 
 让我们继续看看别的例子。下面三个 html 元素，都有一个外部显示类型 `block`。第一个是一个段落，在 CSS 中加了边框。浏览器把它渲染成一个块级盒子，所以段落从新的一行开始，而且宽度占满一行。
 
-第二个是一个列表，布局属性是 `display: flex`。将在容器中建立一个 flex 布局，但是每个列表是一个块级元素 —— 像段落一样 —— 会充满整个容器的宽度并且换行。
+第二个是一个列表，布局属性是 `display: flex`。将在容器中建立一个 flex 布局，但是每个列表是一个块级元素——像段落一样——会充满整个容器的宽度并且换行。
 
 下面有个块级段落，里面有两个 `<span>` 元素。正常情况下是 `inline`，但是其中一个加了 block 类，设置属性 `display: block`。
 
@@ -102,7 +102,7 @@ slug: Learn/CSS/Building_blocks/The_box_model
 
 ## 什么是 CSS 盒模型？
 
-完整的 CSS 盒模型应用于块级盒子，内联盒子只使用盒模型中定义的部分内容。模型定义了盒的每个部分 —— margin, border, padding, and content —— 合在一起就可以创建我们在页面上看到的内容。为了增加一些额外的复杂性，有一个标准的和替代（IE）的盒模型。
+完整的 CSS 盒模型应用于块级盒子，内联盒子只使用盒模型中定义的部分内容。模型定义了盒的每个部分——margin、border、padding 和 content——合在一起就可以创建我们在页面上看到的内容。为了增加一些额外的复杂性，有一个标准的和替代（IE）的盒模型。
 
 ### 盒模型的各个部分
 
@@ -137,7 +137,7 @@ CSS 中组成一个块级盒子需要：
 
 ![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
 
-> **备注：** margin 不计入实际大小 —— 当然，它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止 —— 不会延伸到 margin。
+> **备注：** margin 不计入实际大小——当然，它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止——不会延伸到 margin。
 
 ### 替代（IE）盒模型
 
@@ -145,7 +145,7 @@ CSS 中组成一个块级盒子需要：
 
 ![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
 
-默认浏览器会使用标准模型。如果需要使用替代模型，您可以通过为其设置 `box-sizing: border-box` 来实现。这样就可以告诉浏览器使用 `border-box` 来定义区域，从而设定您想要的大小。
+默认浏览器会使用标准模型。如果需要使用替代模型，你可以通过为其设置 `box-sizing: border-box` 来实现。这样就可以告诉浏览器使用 `border-box` 来定义区域，从而设定你想要的大小。
 
 ```css
 .box {
@@ -166,7 +166,7 @@ html {
 }
 ```
 
-> **备注：** 一个有趣的历史记录 ——Internet Explorer 默认使用替代盒模型，没有可用的机制来切换。（译者注：IE8+ 支持使用 `box-sizing` 进行切换）
+> **备注：** 一个有趣的历史记录——Internet Explorer 默认使用替代盒模型，没有可用的机制来切换。（译者注：IE8+ 支持使用 `box-sizing` 进行切换）
 
 ## 玩转盒模型
 
@@ -186,7 +186,7 @@ html {
 
 ## 外边距，内边距，边框
 
-您已经在上面的示例中看到了{{cssxref("margin")}}、{{cssxref("padding")}}和{{cssxref("border")}}属性。该示例中使用的是属性的**简写**，允许我们一次设置盒子的四个边。这些简写等价于分别控制盒子的不同边的普通写法。
+你已经在上面的示例中看到了{{cssxref("margin")}}、{{cssxref("padding")}}和{{cssxref("border")}}属性。该示例中使用的是属性的**简写**，允许我们一次设置盒子的四个边。这些简写等价于分别控制盒子的不同边的普通写法。
 
 接下来，我们更详细地研究这些属性：
 
@@ -211,7 +211,7 @@ html {
 
 在下面的例子中，我们有两个段落。顶部段落的页 `margin-bottom`为 50px。第二段的`margin-top` 为 30px。因为外边距折叠的概念，所以框之间的实际外边距是 50px，而不是两个外边距的总和。
 
-**您可以通过将第 2 段的 `margin-top` 设置为 0 来测试它。两个段落之间的可见边距不会改变——它保留了第一个段落 `margin-bottom`设置的 50 像素。**
+**你可以通过将第 2 段的 `margin-top` 设置为 0 来测试它。两个段落之间的可见边距不会改变——它保留了第一个段落 `margin-bottom`设置的 50 像素。**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 800)}}
 
@@ -219,7 +219,7 @@ html {
 
 ### 边框
 
-边框是在边距和填充框之间绘制的。如果您正在使用标准的盒模型，边框的大小将添加到框的宽度和高度。如果您使用的是替代盒模型，那么边框的大小会使内容框更小，因为它会占用一些可用的宽度和高度。
+边框是在边距和填充框之间绘制的。如果你正在使用标准的盒模型，边框的大小将添加到框的宽度和高度。如果你使用的是替代盒模型，那么边框的大小会使内容框更小，因为它会占用一些可用的宽度和高度。
 
 为边框设置样式时，有大量的属性可以使用——有四个边框，每个边框都有样式、宽度和颜色，我们可能需要对它们进行操作。
 
@@ -253,13 +253,13 @@ html {
 - {{cssxref("border-left-style")}}
 - {{cssxref("border-left-color")}}
 
-**设置边框的颜色、样式或宽度，可以使用最细粒度的普通属性或者简写属性。在下面的示例中，我们使用了各种普通属性或者简写属性来创建边框。尝试一下不同的属性，以检查您是否理解它们是如何工作的。MDN 中的边框属性页面为您提供可用的不同边框样式的信息。**
+**设置边框的颜色、样式或宽度，可以使用最细粒度的普通属性或者简写属性。在下面的示例中，我们使用了各种普通属性或者简写属性来创建边框。尝试一下不同的属性，以检查你是否理解它们是如何工作的。MDN 中的边框属性页面为你提供可用的不同边框样式的信息。**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 1000)}}
 
 ### 内边距
 
-内边距位于边框和内容区域之间。与外边距不同，您不能有负数量的内边距，所以值必须是 0 或正的值。应用于元素的任何背景都将显示在内边距后面，内边距通常用于将内容推离边框。
+内边距位于边框和内容区域之间。与外边距不同，你不能有负数量的内边距，所以值必须是 0 或正的值。应用于元素的任何背景都将显示在内边距后面，内边距通常用于将内容推离边框。
 
 我们可以使用{{cssxref("padding")}}简写属性控制元素所有边，或者每边单独使用等价的普通属性：
 
@@ -268,9 +268,9 @@ html {
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
 
-**如果在下面的示例中更改类`.box`的内边距值，您可以看到，这将更改文本开始的位置。**
+**如果在下面的示例中更改类`.box`的内边距值，你可以看到，这将更改文本开始的位置。**
 
-**您还可以更改类`.container`的内边距，这将在容器和方框之间留出空间。任何元素上的内边距都可以更改，并在其边界和元素内部的任何内容之间留出空间。**
+**你还可以更改类`.container`的内边距，这将在容器和方框之间留出空间。任何元素上的内边距都可以更改，并在其边界和元素内部的任何内容之间留出空间。**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 800)}}
 
@@ -284,7 +284,7 @@ html {
 
 ## 使用 display: inline-block
 
-display 有一个特殊的值，它在内联和块之间提供了一个中间状态。这对于以下情况非常有用：您不希望一个项切换到新行，但希望它可以设定宽度和高度，并避免上面看到的重叠。
+display 有一个特殊的值，它在内联和块之间提供了一个中间状态。这对于以下情况非常有用：你不希望一个项切换到新行，但希望它可以设定宽度和高度，并避免上面看到的重叠。
 
 一个元素使用 `display: inline-block`，实现我们需要的块级的部分效果：
 
@@ -297,7 +297,7 @@ display 有一个特殊的值，它在内联和块之间提供了一个中间状
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}}
 
-当您想要通过添加内边距使链接具有更大的命中区域时，这是很有用的。`<a>` 是像 `<span>` 一样的内联元素；你可以使用 `display: inline-block` 来设置内边距，让用户更容易点击链接。
+当你想要通过添加内边距使链接具有更大的命中区域时，这是很有用的。`<a>` 是像 `<span>` 一样的内联元素；你可以使用 `display: inline-block` 来设置内边距，让用户更容易点击链接。
 
 这种情况在导航栏中很常见。下面的导航使用 flexbox 显示在一行中，我们为 `<a>` 元素添加了内边距，因为我们希望能够在 `<a>` 在鼠标移动到上面时改变背景色。内边距似乎覆盖了 `<ul>` 元素上的边框。这是因为 `<a>` 是一个内联元素。
 
@@ -311,4 +311,4 @@ display 有一个特殊的值，它在内联和块之间提供了一个中间状
 
 在下一节课中，我们将看看如何使用[背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)来使你的普通盒子看起来更有趣。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}

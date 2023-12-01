@@ -2,6 +2,7 @@
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
 ---
+
 {{jsSidebar("Objects")}} {{deprecated_header()}}
 
 ## Описание
@@ -30,9 +31,9 @@ unescape(str)
 ## Примеры
 
 ```js
-unescape("abc123");     // "abc123"
-unescape("%E4%F6%FC");  // "äöü"
-unescape("%u0107");     // "ć"
+unescape("abc123"); // "abc123"
+unescape("%E4%F6%FC"); // "äöü"
+unescape("%u0107"); // "ć"
 ```
 
 ## Спецификации

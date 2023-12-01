@@ -2,6 +2,7 @@
 title: HTML
 slug: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML** (HyperText Markup Language — «язык гипертекстовой разметки») — самый базовый строительный блок {{glossary("World Wide Web", "Веба")}}. Он определяет содержание и структуру веб-контента. Другие технологии, помимо HTML, обычно используются для описания внешнего вида/представления ([CSS](/ru/docs/Web/CSS)) или функциональности/поведения ([JavaScript](/ru/docs/Web/JavaScript)) веб-страницы.

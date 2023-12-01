@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/data-*
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
-
 모든 사용자 지정 데이터는 해당 데이터를 지정한 요소의 {{domxref("HTMLElement")}} 인터페이스, {{domxref("HTMLElement.dataset", "dataset")}} 속성을 통해 사용할 수 있습니다. `data-*`의 `*`은 [XML 이름 생성 규칙](https://www.w3.org/TR/REC-xml/#NT-Name)을 따르는 모든 이름으로 대체할 수 있습니다.
 
 - 대소문자 여부에 상관없이 `xml`로 시작하면 안 됩니다.

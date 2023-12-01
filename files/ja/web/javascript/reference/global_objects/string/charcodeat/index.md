@@ -1,42 +1,38 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
+l10n:
+  sourceCommit: a49d60648404407784b04ff5ff7e16a6a8d1ac25
 ---
 
 {{JSRef}}
 
-**`charCodeAt()`** メソッドは、指定された位置にある UTF-16 コードユニットを表す `0` から `65535` までの整数を返します。
+**`charCodeAt()`** メソッドは、指定された位置にある UTF-16 コード単位を表す `0` から `65535` までの整数を返します。
+
+`charCodeAt()` は常に [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして文字列をインデックスするので、孤立サロゲートを返すかもしれません。コードポイント値全体を取得したい場合は、 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}} を使用してください。
 
 {{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
 
-単一の UTF-16 コードユニットで表現可能なコードポイントであれば、 UTF-16 コードユニットは Unicode コードポイントと一致します。 Unicode コードポイントが単一の UTF-16 コードユニットで表現できない場合 (値が `0xFFFF` を超える場合)、返されるコードユニットはそのコードポイントの*サロゲートペアの最初の部分*になります。コードポイント値全体を取得したい場合は、 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}} を使用してください。
-
 ## 構文
 
-```
-str.charCodeAt(index)
+```js-nolint
+charCodeAt(index)
 ```
 
 ### 引数
 
 - `index`
-  - : 整数で、 `0` 以上、文字列の `length` 未満の値です。 `index` が数値でない場合は、既定で `0` になります。
+  - : 返す文字の 0 基点のインデックスです。[整数に変換され](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)、`undefined` は 0 に変換されます。
 
 ### 返値
 
-与えられた `index` の位置にあるコードポイント値を表す数値です。 `index` の位置に要素がない場合は {{jsxref("Global_Objects/NaN", "NaN")}} を返します。
+`0` から `65535` までの整数を返します。これは `index` で指定された位置の UTF-16 コード単位の値を表します。`index` が `0` ～ `str.length - 1` の範囲外であった場合、`charCodeAt()` は {{jsxref("NaN")}} を返します。
 
 ## 解説
 
-Unicode コードポイントの範囲は、 `0` から `1114111` (`0x10FFFF`) です。最初の 128 の Unicode コードポイントは、 ASCII 文字エンコーディングに直接対応しています。 (Unicode についての詳細は、[Java Script ガイド](/ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode)を参照してください。)
+文字列の中の文字は、左から右に向けてインデックス付けされています。最初の文字の添字は `0` であり、最後の文字の添字は `str` という名前の文字列であれば `str.length - 1` です。
 
-> **メモ:** `charCodeAt()` は常に `65536` より小さい値を返すことに注意してください。これは、より高いコードポイントは、実際の文字を含むように使用されている (下の値) の "代理" 擬似文字のペアで表されているためです。
->
-> これにより、 `65536` 以上の値の個々の文字について完全な文字を検証したり再現したりするためには、 `charCodeAt(i)` だけではなく、 `charCodeAt(i+1)` (2 文字の文字列を検証/再現する場合) か `codePointAt(i)` を代わりに使用する必要があります。下記の例 2 と 3 を見てください。
-
-与えられたインデックスが 0 と文字列の長さの間にない場合、`charCodeAt()` は {{jsxref("Global_Objects/NaN", "NaN")}} を返します。
-
-後方互換: (JavaScript 1.2 などの) 過去のバージョンでは、 `charCodeAt()` メソッドは、与えられた位置の文字の ISO-Latin-1 コードセットの値を示す数を返します。 ISO-Latin-1 コードセットの範囲は 0 から 255 です。最初の 0 から 127 までは ASCII 文字セットに直接対応しています。
+Unicode のコードポイントは `0` から `1114111` (`0x10FFFF`) までの範囲です。`charCodeAt()` は常に `65536` より小さい値を返しますが、これは上位のコードポイントは 16 ビットのサロゲート擬似文字のペアによって表されているからです。したがって、`65535` より大きい値を持つ完全な文字を取得するには、`charCodeAt(i)` だけでなく `charCodeAt(i + 1)` も取得するか（2 つの文字を持つ文字列を操作する場合と同じです）、または {{jsxref("String/codePointAt", "codePointAt(i)")}} を使用する必要があります。Unicode に関する情報は[UTF-16 文字、Unicode コードポイント、書記素クラスター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)を参照してください。
 
 ## 例
 
@@ -45,85 +41,45 @@ Unicode コードポイントの範囲は、 `0` から `1114111` (`0x10FFFF`) �
 以下の例では、 Unicode 文字の A である `65` を返します。
 
 ```js
-'ABC'.charCodeAt(0)  // returns 65
+"ABC".charCodeAt(0); // returns 65
 ```
 
-### 基本多言語面以外の文字が文字列の前方に存在するかどうか不明な場合に扱えるように charCodeAt() を修正
-
-このバージョンは、指定された位置の前に BMP 以外の文字が存在するかどうかが不明な場合に、 for ループなどで使用されることがあります。
+`charCodeAt()` は妥当な Unicode 文字ではない、孤立サロゲートを返す可能性があります。
 
 ```js
-function fixedCharCodeAt(str, idx) {
-  // ex. fixedCharCodeAt('\uD800\uDC00', 0); // 65536
-  // ex. fixedCharCodeAt('\uD800\uDC00', 1); // false
-  idx = idx || 0;
-  var code = str.charCodeAt(idx);
-  var hi, low;
-
-  // High surrogate (could change last hex to 0xDB7F
-  // to treat high private surrogates
-  // as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    hi = code;
-    low = str.charCodeAt(idx + 1);
-    if (isNaN(low)) {
-      throw 'High surrogate not followed by ' +
-        'low surrogate in fixedCharCodeAt()';
-    }
-    return (
-      (hi - 0xD800) * 0x400) +
-      (low - 0xDC00) + 0x10000;
-  }
-  if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
-    // We return false to allow loops to skip
-    // this iteration since should have already handled
-    // high surrogate above in the previous iteration
-    return false;
-    // hi = str.charCodeAt(idx - 1);
-    // low = code;
-    // return ((hi - 0xD800) * 0x400) +
-    //   (low - 0xDC00) + 0x10000;
-  }
-  return code;
-}
+const str = "𠮷𠮾";
+console.log(str.charAt(0)); // 55362、または d842、これは妥当な Unicode 文字ではない
+console.log(str.charAt(1)); // 57271、または dfb7、これは妥当な Unicode 文字ではない
 ```
 
-### 文字列の前方に基本多言語面以外の文字が存在することが分かっている場合に扱えるように charCodeAt() を修正
+指定された位置の完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} を使用してください。
 
 ```js
-function knownCharCodeAt(str, idx) {
-  str += '';
-  var code,
-      end = str.length;
+const str = "𠮷𠮾";
+console.log(str.codePointAt(0)); // 134071
+```
 
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
-      idx++;
-    }
-    else {
-      break;
-    }
-  }
+> **メモ:** `charCodeAt()` を使用して `codePointAt()` を再実装することは避けてください。孤立サロゲートの検出とそのペアリングは複雑で、文字列の内部表現を直接使用する組み込み API の方がパフォーマンスが高いかもしれません。必要であれば、`codePointAt()` のポリフィルをインストールしてください。
 
-  if (idx >= end || idx < 0) {
-    return NaN;
-  }
+以下は [Unicode FAQ](https://unicode.org/faq/utf_bom.html#utf16-3) から引用した、UTF-16 コードユニットのペアを Unicode コードポイントに変換する可能なアルゴリズムです。
 
-  code = str.charCodeAt(idx);
+```js
+// constants
+const LEAD_OFFSET = 0xd800 - (0x10000 >> 10);
+const SURROGATE_OFFSET = 0x10000 - (0xd800 << 10) - 0xdc00;
 
-  var hi, low;
-  if (0xD800 <= code && code <= 0xDBFF) {
-    hi = code;
-    low = str.charCodeAt(idx + 1);
-    // Go one further, since one of the "characters"
-    // is part of a surrogate pair
-    return ((hi - 0xD800) * 0x400) +
-      (low - 0xDC00) + 0x10000;
-  }
-  return code;
+function utf16ToUnicode(lead, trail) {
+  return (lead << 10) + trail + SURROGATE_OFFSET;
 }
+function unicodeToUTF16(codePoint) {
+  const lead = LEAD_OFFSET + (codePoint >> 10);
+  const trail = 0xdc00 + (codePoint & 0x3ff);
+  return [lead, trail];
+}
+
+const str = "𠮷";
+console.log(utf16ToUnicode(str.charCodeAt(0), str.charCodeAt(1))); // 134071
+console.log(str.codePointAt(0)); // 134071
 ```
 
 ## 仕様書
@@ -132,7 +88,7 @@ function knownCharCodeAt(str, idx) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.charCodeAt")}}
+{{Compat}}
 
 ## 関連情報
 

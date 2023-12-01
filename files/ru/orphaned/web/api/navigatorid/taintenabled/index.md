@@ -24,13 +24,11 @@ alert(window.navigator.taintEnabled());
 
 ## Спецификации
 
-| Спецификация                                                                                                                             | Статус                           | Комментарий          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-navigator-taintEnabled', 'NavigatorID.taintEnabled')}} | {{Spec2('HTML WHATWG')}} | Изначальное описание |
+{{Specifications}}
 
 ## Доступность в браузере
 
-{{Compat("api.NavigatorID.taintEnabled")}}
+{{Compat}}
 
 ## Смотрите также
 

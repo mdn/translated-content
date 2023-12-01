@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 
 最大化兼容浏览器扩展意味着至少在两个不同的浏览器上兼容同一个扩展。本文探讨了在创建跨浏览器扩展时所面临的六个主要挑战，并在每种情况下提出了如何应对这些挑战。
 
-本文不讨论为 Safari 构建浏览器扩展。您可以通过 Safari 扩展共享一些资源，比如图片和 HTML 内容。然而，如果您要进行 JavaScript 部分的编程则需要作为一个单独的开发项目进行，除非您希望创建自己的 polyfill。
+本文不讨论为 Safari 构建浏览器扩展。你可以通过 Safari 扩展共享一些资源，比如图片和 HTML 内容。然而，如果你要进行 JavaScript 部分的编程则需要作为一个单独的开发项目进行，除非你希望创建自己的 polyfill。
 
 ## 跨平台扩展的开发障碍
 
@@ -69,7 +69,7 @@ Firefox 还支持 `chrome.*` 命名空间中的 callbacks 风格的 API，这主
 }
 ```
 
-您的目标是确保在任何其他扩展脚本执行 `browser.*` API 前执行 polyfill。
+你的目标是确保在任何其他扩展脚本执行 `browser.*` API 前执行 polyfill。
 
 > **备注：** 关于如何使用模块打包器使用 polyfill 的更多细节和信息，请参阅 [GitHub 上的项目自述文件](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)。
 
@@ -89,11 +89,11 @@ Firefox 还支持 `chrome.*` 命名空间中的 callbacks 风格的 API，这主
 
 解决这些差异的一个简单方法是将扩展中使用的函数限制在没有 API 差异的函数范围内。在实践中，对于大多数扩展，这种方法可能限制性太强。
 
-相反，如果 API 之间存在差异，则应该提供替代实现或降级功能。(请记住：您可能还需要这样考虑同一浏览器的不同版本之间的 API 支持差异。)
+相反，如果 API 之间存在差异，则应该提供替代实现或降级功能。(请记住：你可能还需要这样考虑同一浏览器的不同版本之间的 API 支持差异。)
 
-使用运行时检查函数特性的可用性是实现备选或降级功能的推荐方法。执行运行时检查的好处是，如果函数是可用的，您不需要更新和重新分发扩展来使用它。
+使用运行时检查函数特性的可用性是实现备选或降级功能的推荐方法。执行运行时检查的好处是，如果函数是可用的，你不需要更新和重新分发扩展来使用它。
 
-下面的代码使您能够执行运行时检查：
+下面的代码使你能够执行运行时检查：
 
 ```js
 if (typeof <function> === "function") {
@@ -126,7 +126,7 @@ if (typeof <function> === "function") {
 
 这四种主要浏览器都维护有浏览器扩展商店。每个商店还对扩展进行审核，以检查安全漏洞。
 
-因此，您需要为每个商店分别添加和更新扩展。在某些情况下，您可以使用脚本上传扩展。
+因此，你需要为每个商店分别添加和更新扩展。在某些情况下，你可以使用脚本上传扩展。
 
 下表总结了每个商店的做法和特点：
 
@@ -188,7 +188,7 @@ if (typeof <function> === "function") {
 
 #### 扩展命名
 
-Microsoft 要求扩展具有唯一的名称，并通过 Windows Dev Center 为扩展声明一个或多个名称。因此，即使您不打算立即支持 Edge，为微软保留一个扩展名可能是最谨慎的做法。
+Microsoft 要求扩展具有唯一的名称，并通过 Windows Dev Center 为扩展声明一个或多个名称。因此，即使你不打算立即支持 Edge，为微软保留一个扩展名可能是最谨慎的做法。
 
 #### 版本号指定
 
@@ -204,10 +204,10 @@ Firefox 和 Chrome 商店要求每个上传的扩展发布包都有一个单独�
 
 ## 总结
 
-在进行跨平台扩展开发时，可以通过对标 Firefox 和使用 [WebExtension API Polyfill](https://github.com/mozilla/webextension-polyfill/) 来解决扩展 API 之间的根本差异。遵循这种方法，您将在使用与提议的 WebExtension API 标准紧密结合的 API 特性中受益，并使用 promises 来简单的处理异步事件。
+在进行跨平台扩展开发时，可以通过对标 Firefox 和使用 [WebExtension API Polyfill](https://github.com/mozilla/webextension-polyfill/) 来解决扩展 API 之间的根本差异。遵循这种方法，你将在使用与提议的 WebExtension API 标准紧密结合的 API 特性中受益，并使用 promises 来简单的处理异步事件。
 
-跨平台工作的主要重点可能是处理主要浏览器支持的 API 特性之间的差异。创建你的 `manifest.json` 文件应该是相对简单的，你可以手动完成。然后，您将需要考虑扩展包中的打包差异，以及提交到每个扩展商店的过程差异。
+跨平台工作的主要重点可能是处理主要浏览器支持的 API 特性之间的差异。创建你的 `manifest.json` 文件应该是相对简单的，你可以手动完成。然后，你将需要考虑扩展包中的打包差异，以及提交到每个扩展商店的过程差异。
 
-您同时可以使用 [browser-extension-template](https://github.com/notlmn/browser-extension-template) 用于快速设置、生成和发布浏览器扩展项目。
+你同时可以使用 [browser-extension-template](https://github.com/notlmn/browser-extension-template) 用于快速设置、生成和发布浏览器扩展项目。
 
-根据本文中的建议，您现在应该能够创建一个在四种主要浏览器上都运行良好的扩展程序，使您能够将扩展功能交付给更多的人。
+根据本文中的建议，你现在应该能够创建一个在四种主要浏览器上都运行良好的扩展程序，使你能够将扩展功能交付给更多的人。

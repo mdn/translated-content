@@ -12,13 +12,13 @@ slug: Learn/CSS/Styling_text/Fundamentals
     <tr>
       <th scope="row">전제조건</th>
       <td>
-        Basic computer literacy, HTML basics (study
+        기본적인 컴퓨터의 이해, HTML 기본 (
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), CSS basics (study
+          >HTML 소개</a
+        > 둘러보기), CSS 기본 (study
         <a href="/ko/docs/Learn/CSS/Introduction_to_CSS"
-          >Introduction to CSS</a
-        >).
+          >CSS 소개</a
+        > 둘러보기).
       </td>
     </tr>
     <tr>
@@ -37,16 +37,16 @@ HTML 및 CSS 를 사용한 작업에서 이미 경험한 것처럼 요소 내부
 
 > **참고:** 위의 단락으로 인해 혼동을 느끼게 되더라도 상관없이 — go back and review our [박스 모델](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model) 기사를 검토하여, 박스 모델 이론을 정리하십시오.
 
-텍스트 스타일을 지정하는 데 사용되는 CSS 속성은 일반적으로 두 가지 카테고리로 분류되며, 이 기사에서는 별도로 살펴보겠습니다.properties used to style text generally fall into two categories, which we'll look at separately in this article:
+텍스트 스타일을 지정하는 데 사용되는 CSS 속성은 일반적으로 두 가지 카테고리로 분류되며, 이 기사에서는 별도로 살펴보겠습니다.
 
 - **글꼴 스타일**: 텍스트에 적용되는 글꼴에 영향을 주고, 적용되는 글꼴, 크기, 굵기, 이탤릭체 등에 영향을 주는 속성입니다.
 - **텍스트 레이아웃 스타일**: 텍스트의 간격 및 기타 레이아웃 기능에 영향을 주는 속성으로, 예를 들어 선 과 문자 사이의 간격 및 내용 박스 내에서 텍스트가 정렬되는 방식을 조작할 수 있습니다.
 
-> **참고:** 요소 내부의 텍스트는 모두 하나의 단일 entity 로 영향을 받습니다. 텍스트의 하위 섹션은 적절한 요소 (예: {{htmlelement("span")}} 또는 {{htmlelement("strong")}}) 으로 감싸거나, or use a text-specific pseudo-element like [::first-letter](/ko/docs/Web/CSS/::first-letter) (요소 텍스트의 첫 번째 문자 선택), [::first-line](/ko/docs/Web/CSS/::first-line) (요소 텍스트의 첫 번째 행 선택) 또는 [::selection](/ko/docs/Web/CSS/::selection) (커서로 현재 강조 표시된 텍스트 선택) 과 같은 텍스트 특정 pseudo-element 를 사용하십시오.
+> **참고:** 요소 내부의 텍스트는 모두 하나의 단일 entity 로 영향을 받습니다. 텍스트의 하위 섹션은 적절한 요소 (예: {{htmlelement("span")}} 또는 {{htmlelement("strong")}}) 으로 감싸거나, 또는 [::first-letter](/ko/docs/Web/CSS/::first-letter)와 같은 텍스트 관련 의사 요소를 사용하십시오.(요소 텍스트의 첫 번째 문자 선택), [::first-line](/ko/docs/Web/CSS/::first-line) (요소 텍스트의 첫 번째 행 선택) 또는 [::selection](/ko/docs/Web/CSS/::selection) (커서로 현재 강조 표시된 텍스트 선택) 과 같은 텍스트 특정 의사 요소를 사용하십시오.
 
 ## 글꼴
 
-글꼴 스타일링의 속성을 살펴보도록 하겠습니다. 이 예에서는 동일한 HTML 샘플에 몇 가지 다른 CSS 속성을 적용합니다:
+글꼴 스타일링의 속성을 살펴보도록 하겠습니다. 이 예에서는 동일한 HTML 샘플에 몇 가지 다른 CSS 속성을 적용합니다.
 
 ```html
 <h1>Tommy the cat</h1>
@@ -68,7 +68,7 @@ HTML 및 CSS 를 사용한 작업에서 이미 경험한 것처럼 요소 내부
 
 {{cssxref("color")}} 속성은 선택한 요소의 전경 내용의 색상을 설정합니다 (일반적으로 텍스트이지만, {{cssxref("text-decoration")}} 속성을 사용하여 텍스트에 배치되는 밑줄이나 오버라인과 같은 몇 가지 다른 것도 포함할 수 있습니다.
 
-`color` 은 모든 [CSS 색상 단위](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors) 를 사용할 수 있습니다. 예를 들면 다음과 같습니다:
+`color` 은 모든 [CSS 색상 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors) 를 사용할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```css
 p {
@@ -76,7 +76,7 @@ p {
 }
 ```
 
-이렇게하면 다음과 같이 표준 브라우저 기본값이 검은색이 아닌 빨간색으로 표시됩니다:
+이렇게 하면 다음과 같이 표준 브라우저 기본값이 검은색이 아닌 빨간색으로 표시됩니다.
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -96,7 +96,7 @@ p {
 
 ### 글꼴 종류
 
-텍스트에 다른 글꼴을 설정하려면, {{cssxref("font-family")}} 속성을 사용하여 브라우저에서 선택한 요소에 적용할 글꼴 (또는 글꼴 목록) 을 지정할 수 있습니다. 브라우저는 웹 사이트에 액세스하는 컴퓨터에서 글꼴을 사용할 수 있는 경우에만 글꼴을 적용합니다; 그렇지 않으면, 브라우저 [default font](#default_fonts) 만 사용합니다. 간단한 예는 다음과 같습니다:
+텍스트에 다른 글꼴을 설정하려면, {{cssxref("font-family")}} 속성을 사용하여 브라우저에서 선택한 요소에 적용할 글꼴 (또는 글꼴 목록) 을 지정할 수 있습니다. 브라우저는 웹 사이트에 액세스하는 컴퓨터에서 글꼴을 사용할 수 있는 경우에만 글꼴을 적용합니다. 그렇지 않으면, 브라우저 [default font](#기본_글꼴) 만 사용합니다. 간단한 예는 다음과 같습니다.
 
 ```css
 p {
@@ -104,7 +104,7 @@ p {
 }
 ```
 
-이렇게하면 페이지의 모든 단락이 임의의 컴퓨터에 있는 arial 글꼴을 채택하게 됩니다.
+이렇게 하면 페이지의 모든 단락이 임의의 컴퓨터에 있는 `arial` 글꼴을 채택하게 됩니다.
 
 #### 웹 안전 글꼴
 
@@ -123,27 +123,27 @@ p {
 | Trebuchet MS    | sans-serif | You should be careful with using this font — it isn't widely available on mobile OSes.                                                                                                                                                            |
 | Verdana         | sans-serif |                                                                                                                                                                                                                                                   |
 
-> **참고:** Among various resources, the [cssfontstack.com](http://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
+> **참고:** 다양한 리소스 중에서 [cssfontstack.com](http://www.cssfontstack.com/) 웹 사이트는 Windows 및 macOS 운영 체제에서 사용할 수 있는 웹 안전 글꼴 목록을 유지하며, 이를 통해 사용하기에 안전하다고 생각하는 글꼴을 결정하는 데 도움이 될 수 있습니다.
 
-> **참고:** There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will be discussing this in a separate article later on in the module.
+> **참고:** 웹 페이지와 함께 사용자 지정 글꼴을 다운로드하여 원하는 방식으로 글꼴 사용을 사용자 지정할 수 있는 방법이 있습니다. **웹 글꼴**. 이것은 조금 더 복잡하며 이 모듈의 뒷부분에 있는 별도의 문서에서 이에 대해 논의할 것입니다.
 
 #### 기본 글꼴
 
 CSS 는 글꼴의 일반적인 다섯 가지 이름: `serif`, `sans-serif`, `monospace`, `cursive` 및 `fantasy` 를 정의합니다. 이러한 일반 이름을 사용할 때 사용되는 정확한 글꼴은 각 브라우저에 달려 있으며, 실행중인 운영체제에 따라 다를 수 있습니다. 브라우저가 최소한 적합한 글꼴을 제공하기 위해 최선을 다하는 최악의 시나리오를 나타나냅니다. `serif`, `sans-serif` 및 `monospace` 는 상당히 예측가능하며 합리적인 무언가를 제공해야 합니다. 반면에 , `cursive` 및 `fantasy` 는 예측하기 어렵기 때문에, 테스트할 때 신중하게 사용하는 것이 좋습니다.
 
-5 개의 이름은 다음과 같이 정의됩니다:
+5개의 이름은 다음과 같이 정의됩니다.
 
-| 용어         | 정의                                                                                                              | 예제                |
-| ------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------- |
-| `serif`      | serifs 가 있는 글꼴 (the flourishes and other small details you see at the ends of the strokes in some typefaces) | My big red elephant |
-| `sans-serif` | serifs 가 없는 글꼴.                                                                                              | My big red elephant |
-| `monospace`  | 모든 문자의 너비가 같은 글꼴로, 일반적으로 코드 목록에 사용됩니다.                                                | My big red elephant |
-| `cursive`    | Fonts that are intended to emulate handwriting, with flowing, connected strokes.                                  | My big red elephant |
-| `fantasy`    | 장식용 글꼴.                                                                                                      | My big red elephant |
+| 용어         | 정의                                                                             | 예제                |
+| ------------ | -------------------------------------------------------------------------------- | ------------------- |
+| `serif`      | serifs 가 있는 글꼴 (일부 서체에서 획 끝에 표시되는 번창 및 기타 작은 세부 사항) | My big red elephant |
+| `sans-serif` | serifs 가 없는 글꼴.                                                             | My big red elephant |
+| `monospace`  | 모든 문자의 너비가 같은 글꼴로, 일반적으로 코드 목록에 사용됩니다.               | My big red elephant |
+| `cursive`    | 흐르고 연결된 획을 사용하여 손글씨를 에뮬레이션하기 위한 글꼴입니다.             | My big red elephant |
+| `fantasy`    | 장식용 글꼴.                                                                     | My big red elephant |
 
-#### Font stacks
+#### 글꼴 스택
 
-웹 페이지에서 글꼴의 사용가능 여부를 보장할 수 없으므로 (어똔 이유로 웹 글꼴이 실패할 수 있음) 브라우저에서 선택할 수 있는 **글꼴 스택 (font stack)** 을 제공할 수 있습니다. 여기에는 여러 글꼴 이름으로 구성된 `font-family` 값이 포함됩니다. 예제:
+웹 페이지에서 글꼴의 사용가능 여부를 보장할 수 없으므로 (어떤 이유로 웹 글꼴이 실패할 수 있음) 브라우저에서 선택할 수 있는 **글꼴 스택(font stack)** 을 제공할 수 있습니다. 여기에는 여러 글꼴 이름으로 구성된 `font-family` 값이 포함됩니다. 예제는 다음과 같습니다.
 
 ```css
 p {
@@ -153,13 +153,13 @@ p {
 
 이 경우, 브라우저는 목록 시작 부분에서 시작하여 해당 글꼴이 시스템에서 사용 가능한지 확인합니다. 이 글꼴이 있으면, 해당 글꼴이 선택한 요소에 적용됩니다. 그렇지 않으면, 다음 글꼴로 이동합니다.
 
-나열된 글꼴 중 사용 가능한 글꼴이 없는 경우, 브라우저가 최소한 대략 비슷한 것을 제공할 수 있도록 스택 끝에 적절한 일반 글꼴 이름을 제공하는 것이 좋습니다.이 점을 강조하기 위해 다른 옵션 — 일반적으로 Time New Roman — 을 사용할 수 없는 경우 단락에 기본 serif 글꼴이 제공됩니다. 이는 san-serif 글꼴에 적합하지 않습니다!
+나열된 글꼴 중 사용 가능한 글꼴이 없는 경우, 브라우저가 최소한 대략 비슷한 것을 제공할 수 있도록 스택 끝에 적절한 일반 글꼴 이름을 제공하는 것이 좋습니다. 이 점을 강조하기 위해 다른 옵션을 사용할 수 없는 경우 단락에 브라우저의 기본 serif 글꼴이 지정됩니다. 일반적으로 Times New Roman은 sans-serif 글꼴에 적합하지 않습니다!
 
 > **참고:** `Trebuchet MS` 와 같이 둘 이상의 단어가 있는 글꼴 이름은 따옴표로 묶어야합니다, 예를 들면 `"Trebuchet MS"`.
 
 #### font-family 예제
 
-단락에 sans-serif 글꼴을 제공하여 이전 예제에 추가하겠습니다:
+단락에 sans-serif 글꼴을 제공하여 이전 예제에 추가하겠습니다.
 
 ```css
 p {
@@ -168,7 +168,7 @@ p {
 }
 ```
 
-결과는 다음과 같습니다:
+결과는 다음과 같습니다.
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -188,15 +188,15 @@ p {
 
 ### 글꼴 크기
 
-In our previous module's [CSS values and units](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) article, we reviewed [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size). Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages)), however the most common units you'll use to size text are:
+이전 모듈의 [CSS 값 및 단위](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) 기사에서 [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 검토했습니다. 글꼴 크기({{cssxref("font-size")}} 속성으로 설정)는 이러한 대부분의 단위(및 [백분율](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages)과 같은 기타 단위)로 측정된 값을 가질 수 있지만 텍스트 크기를 조정하는 데 사용하는 가장 일반적인 단위는 다음과 같습니다.
 
-- `px` (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.
-- `em`s: 1em is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element.) This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em`s to size everything, not just text. You can have an entire website sized using ems, which makes maintenance easy.
-- `rem`s: These work just like `em`s, except that 1`rem` is equal to the font size set on the root element of the document (i.e. {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier, but unfortunately `rem`s are not supported in Internet Explorer 8 and below. If you need to support older browsers with your project, you can either stick to using `em`s or `px`, or use a {{glossary("polyfill")}} such as [REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill).
+- `px` (픽셀): 원하는 텍스트 높이의 픽셀 수입니다. 이것은 절대 단위입니다. 거의 모든 상황에서 페이지의 글꼴에 대해 동일한 최종 계산 값을 생성합니다.
+- `em`s: 1em은 우리가 스타일링하고 있는 현재 요소의 부모 요소에 설정된 글꼴 크기와 같습니다(더 구체적으로는 부모 요소 안에 포함된 대문자 M의 너비). 서로 다른 글꼴 크기가 설정된 많은 중첩 요소가 있지만 아래에서 볼 수 있듯이 실행 가능합니다. 왜 귀찮게 할까요? 익숙해지면 매우 자연스럽고 `em`s를 사용하여 텍스트뿐만 아니라 모든 크기를 조정할 수 있습니다. ems를 사용하여 전체 웹 사이트 크기를 조정할 수 있으므로 유지 관리가 쉽습니다.
+- `rem`s: 1`rem`이 부모 요소가 아닌 문서의 루트 요소(예: {{htmlelement("html")}})에 설정된 글꼴 크기와 같다는 점을 제외하면 `em`s와 동일하게 작동합니다. 이렇게 하면 수학 계산을 통해 글꼴 크기를 훨씬 쉽게 계산할 수 있지만 불행하게도 Internet Explorer 8 이하에서는 `rem`이 지원되지 않습니다. 프로젝트에서 이전 브라우저를 지원해야 하는 경우 `em`s 또는 `px`를 계속 사용하거나 [REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill)과 같은 {{glossary("polyfill")}}을 사용할 수 있습니다.
 
-The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the `font-size` of which is set to 16px as standard across browsers. Any paragraph (or other element that doesn't have a different size set by the browser) inside the root element will have a final size of 16px. Other elements may have different default sizes, for example an {{htmlelement("h1")}} element has a size of 2ems set by default, so will have a final size of 32px.
+요소의 `font-size`는 해당 요소의 상위 요소에서 상속됩니다. 이 모든 것은 전체 문서의 루트 요소인 {{htmlelement("html")}}에서 시작합니다. 이 요소의 `font-size`는 모든 브라우저에서 표준으로 16px로 설정됩니다. 루트 요소 내부의 모든 단락(또는 브라우저에서 다른 크기를 설정하지 않은 다른 요소)의 최종 크기는 16px입니다. 다른 요소는 기본 크기가 다를 수 있습니다. 예를 들어 {{htmlelement("h1")}} 요소의 크기는 기본적으로 2ems로 설정되어 있으므로 최종 크기는 32px입니다.
 
-Things become more tricky when you start altering the font size of nested elements. For example, if you had an {{htmlelement("article")}} element in your page, and set its font-size to `1.5em`s (which would compute to 24px final size), and then wanted the paragraphs inside the `<article>` elements to have a computed font size of 20px, what em value would you use?
+중첩된 요소의 글꼴 크기를 변경하기 시작하면 상황이 더 까다로워집니다. 예를 들어 페이지에 {{htmlelement("article")}} 요소가 있고 글꼴 크기를 `1.5em`s(24px 최종 크기로 계산됨)로 설정한 다음 `<article>` 요소 내부의 단락에 계산된 글꼴을 지정하려는 경우 크기가 20px이면 어떤 em 값을 사용하시겠습니까?
 
 ```html
 <!-- document base font-size is 16px -->
@@ -207,13 +207,13 @@ Things become more tricky when you start altering the font size of nested elemen
 </article>
 ```
 
-You would need to set its em value to 20/24, or `0.83333333em`s. The maths can be complicated, so you need to be careful about how you style things. It is best to use rems where you can, to keep things simple, and avoid setting the font-size of container elements where possible.
+`em` 값을 20/24 또는 0.83333333`em`로 설정해야 합니다. 수학은 복잡할 수 있으므로 스타일을 지정하는 방법에 주의해야 합니다. 가능한 한 `rem`을 사용하여 작업을 단순하게 유지하고 가능한 경우 컨테이너 요소의 `font-size`를 설정하지 않는 것이 가장 좋습니다.
 
-#### A simple sizing example
+#### 간단한 사이즈 예시
 
-When sizing your text, it is usually a good idea to set the base `font-size` of the document to 10px, so that then the maths is a lot easier to work out — required (r)em values are then the pixel font size divided by 10, not 16. After doing that, you can easily size the different types of text in your document to what you want. It is a good idea to list all your `font-size` rulesets in a designated area in your stylesheet, so they are easy to find.
+텍스트 크기를 조정할 때 일반적으로 문서의 기본 `font-size`를 10px로 설정하는 것이 좋습니다. 그러면 계산이 훨씬 쉬워집니다. 필요한 (r)em 값은 픽셀 글꼴 크기로 나뉩니다. 16이 아닌 10으로. 그런 다음 문서의 다양한 유형의 텍스트를 원하는 크기로 쉽게 조정할 수 있습니다. 스타일시트의 지정된 영역에 모든 `font-size` 규칙들을 나열하여 쉽게 찾을 수 있도록 하는 것이 좋습니다.
 
-Our new result is like so:
+우리의 새로운 결과는 다음과 같습니다.
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -247,42 +247,42 @@ p {
 
 {{ EmbedLiveSample('A_simple_sizing_example', '100%', 220) }}
 
-### Font style, font weight, text transform, and text decoration
+### 글꼴 스타일, 글꼴 두께, 텍스트 변형 및 텍스트 장식
 
-CSS provides four common properties to alter the visual weight/emphasis of text:
+CSS는 텍스트의 시각적 무게/강조를 변경하는 네 가지 공통 속성을 제공합니다.
 
-- {{cssxref("font-style")}}: Used to turn italic text on and off. Possible values are as follows (you'll rarely use this, unless you want to turn some italic styling off for some reason):
+- {{cssxref("font-style")}}: 이탤릭체 텍스트를 켜고 끄는 데 사용됩니다. 가능한 값은 다음과 같습니다(어떤 이유로 이탤릭체 스타일을 끄고 싶지 않는 한 이것을 거의 사용하지 않을 것입니다).
 
-  - `normal`: Sets the text to the normal font (turns existing italics off.)
-  - `italic`: Sets the text to use the _italic version of the font_ if available; if not available, it will simulate italics with oblique instead.
-  - `oblique`: Sets the text to use a simulated version of an italic font, created by slanting the normal version.
+  - `normal`: 텍스트를 일반 글꼴로 설정합니다(기존 이탤릭체를 끕니다.)
+  - `italic`: 사용 가능한 경우 글꼴의 기울임꼴 버전을 사용하도록 텍스트를 설정합니다. 사용할 수 없는 경우 기울임꼴 대신 기울임꼴을 시뮬레이트합니다.
+  - `oblique`: 일반 버전을 기울여 만든 이탤릭체 글꼴의 시뮬레이션 버전을 사용하도록 텍스트를 설정합니다.
 
-- {{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), but realistically you'll rarely use any of them except for `normal` and `bold`:
+- {{cssxref("font-weight")}}: 텍스트의 굵기를 설정합니다. 사용 가능한 글꼴 변형이 많은 경우(예: -light, -normal, -bold, -extrabold, -black 등) 많은 값을 사용할 수 있지만 현실적으로 `normal` 및 `bold`를 제외하고는 거의 사용하지 않습니다.
 
-  - `normal`, `bold`: Normal and **bold** font weight
-  - `lighter`, `bolder`: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.
-  - `100`–`900`: Numeric boldness values that provide finer grained control than the above keywords, if needed.
+  - `normal`, `bold`: 일반 및 **굵은** 글꼴 두께
+  - `lighter`, `bolder`: 현재 요소의 굵기를 부모 요소의 굵기보다 한 단계 더 가볍거나 무겁게 설정합니다.
+  - `100`–`900`: 필요한 경우 위의 키워드보다 더 세분화된 제어를 제공하는 숫자 굵기 값입니다.
 
-- {{cssxref("text-transform")}}: Allows you to set your font to be transformed. Values include:
+- {{cssxref("text-transform")}}: 글꼴을 변환하도록 설정할 수 있습니다. 값은 다음과 같습니다.
 
-  - `none`: Prevents any transformation.
-  - `uppercase`: Transforms all text to capitals.
-  - `lowercase`: Transforms all text to lower case.
-  - `capitalize`: Transforms all words to have the first letter capitalized.
-  - `full-width`: Transforms all glyphs to be written inside a fixed-width square, similar to a monospace font, allowing aligning of e.g. latin characters along with asian language glyphs (like Chinese, Japanese, Korean.)
+  - `none`: 변형을 방지합니다.
+  - `uppercase`: 모든 텍스트를 대문자로 변환합니다.
+  - `lowercase`: 모든 텍스트를 소문자로 변환합니다.
+  - `capitalize`: 첫 글자를 대문자로 모든 단어를 변환합니다.
+  - `full-width`: 모노스페이스 글꼴과 유사한 고정 너비 사각형 안에 작성되도록 모든 글리프를 변환하여 예를 들어 정렬할 수 있습니다. 라틴 문자와 아시아 언어 글리프(예: 중국어, 일본어, 한국어)
 
-- {{cssxref("text-decoration")}}: Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them.) Available values are:
+- {{cssxref("text-decoration")}}: 글꼴에 대한 텍스트 장식을 설정/해제합니다.(주로 링크 스타일을 지정할 때 링크의 기본 밑줄을 설정 해제하는 데 사용합니다.) 사용 가능한 값은 다음과 같습니다.
 
-  - `none`: Unsets any text decorations already present.
-  - `underline`: **Underlines the text**.
-  - `overline`: Gives the text an overline.
-  - `line-through`: Puts a ~~strikethrough over the text~~.
+  - `none`: 이미 존재하는 모든 텍스트 장식을 해제합니다.
+  - `underline`: **텍스트에 밑줄을 긋습니다.**
+  - `overline`: 텍스트에 오버라인을 제공합니다.
+  - `line-through`: ~~텍스트 위에 취소선~~을 그립니다.
 
-  You should note that {{cssxref("text-decoration")}} can accept multiple values at once, if you want to add multiple decorations simultaneously, for example `text-decoration: underline overline`. Also note that {{cssxref("text-decoration")}} is a shorthand property for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-color")}}. You can use combinations of these property values to create interesting effects, for example `text-decoration: line-through red wavy`.
+  예를 들어 `text-decoration: underline overline`과 같이 여러 장식을 동시에 추가하려는 경우 {{cssxref("text-decoration")}}은 한 번에 여러 값을 허용할 수 있습니다. 또한 {{cssxref("text-decoration")}}은 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} 및 {{cssxref("text-decoration-color")}}의 속기 속성입니다. 이러한 속성 값의 조합을 사용하여 재미있는 효과를 만들 수 있습니다(예: `text-decoration: line-through red wavy`).
 
-Let's look at adding a couple of these properties to our example:
+예제에 이러한 속성 몇 가지를 추가하는 방법을 살펴보겠습니다.
 
-Our new result is like so:
+우리의 새로운 결과는 다음과 같습니다.
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -321,26 +321,26 @@ p {
 
 {{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 220) }}
 
-### Text drop shadows
+### 텍스트 그림자
 
-You can apply drop shadows to your text using the {{cssxref("text-shadow")}} property. This takes up to four values, as shown in the example below:
+{{cssxref("text-shadow")}} 속성을 사용하여 텍스트에 그림자를 적용할 수 있습니다. 아래 예와 같이 최대 4개의 값을 사용합니다.
 
 ```css
 text-shadow: 4px 4px 5px red;
 ```
 
-The four properties are as follows:
+네 가지 속성은 다음과 같습니다.
 
-1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size), but you'll most commonly use px. This value has to be included.
-2. The vertical offset of the shadow from the original text; behaves basically just like the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
-3. The blur radius — a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
-4. The base color of the shadow, which can take any [CSS color unit](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). If not included, it defaults to `black`.
+1. 원본 텍스트에서 그림자의 수평 오프셋 — 사용 가능한 대부분의 CSS [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있지만 가장 일반적으로 px를 사용합니다. 이 값이 포함되어야 합니다.
+2. 원본 텍스트에서 그림자의 수직 오프셋. 그림자를 왼쪽/오른쪽이 아닌 위/아래로 이동한다는 점을 제외하면 기본적으로 수평 오프셋과 동일하게 동작합니다. 이 값이 포함되어야 합니다.
+3. 흐림 반경 - 값이 높을수록 그림자가 더 넓게 분산됩니다. 이 값이 포함되지 않은 경우 기본값은 0이며 이는 흐림이 없음을 의미합니다. 사용 가능한 대부분의 CSS [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있습니다.
+4. 모든 CSS [색상 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)를 사용할 수 있는 그림자의 기본 색상입니다. 포함되지 않은 경우 기본적으로 `black`입니다.
 
-> **참고:** Positive offset values move the shadow right and down, but you can also use negative offset values to move the shadow left and up, for example `-1px -1px`.
+> **참고:** 양수 오프셋 값은 그림자를 오른쪽과 아래로 이동하지만 음수 오프셋 값을 사용하여 그림자를 왼쪽과 위쪽으로 이동할 수도 있습니다(예: `-1px -1px`).
 
-#### Multiple shadows
+#### 여러 그림자
 
-You can apply multiple shadows to the same text by including multiple shadow values separated by commas, for example:
+쉼표로 구분된 여러 그림자 값을 포함하여 동일한 텍스트에 여러 그림자를 적용할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```css
 text-shadow:
@@ -350,7 +350,7 @@ text-shadow:
   0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
-If we applied this to the {{htmlelement("h1")}} element in our Tommy the cat example, we'd end up with this:
+고양이 Tommy 예제의 {{htmlelement("h1")}} 요소에 이것을 적용하면 다음과 같이 됩니다.
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -394,22 +394,22 @@ p {
 
 {{ EmbedLiveSample('Multiple_shadows', '100%', 220) }}
 
-> **참고:** You can see more interesting examples of `text-shadow` usage in the Sitepoint article [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/).
+> **참고:** Sitepoint 문서 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/)에서 `text-shadow` 사용에 대한 더 흥미로운 예를 볼 수 있습니다.
 
 ## 텍스트 레이아웃
 
-With basic font properties out the way, let's now have a look at properties we can use to affect text layout.
+기본 글꼴 속성을 살펴보았으니 이제 텍스트 레이아웃에 영향을 주는 데 사용할 수 있는 속성을 살펴보겠습니다.
 
 ### 텍스트 정렬
 
-The {{cssxref("text-align")}} property is used to control how text is aligned within its containing content box. The available values are as follows, and work in pretty much the same way as they do in a regular word processor application:
+{{cssxref("text-align")}} 속성은 포함하는 콘텐츠 상자 내에서 텍스트 정렬 방법을 제어하는 ​​데 사용됩니다. 사용 가능한 값은 다음과 같으며 일반 워드 프로세서 응용 프로그램에서와 거의 동일한 방식으로 작동합니다.
 
-- `left`: Left justifies the text.
-- `right`: Right justifies the text.
-- `center`: Centers the text.
-- `justify`: Makes the text spread out, varying the gaps in between the words so that all lines of text are the same width. You need to use this carefully — it can look terrible, especially when applied to a paragraph with lots of long words in it. If you are going to use this, you should also think about using something else along with it, such as {{cssxref("hyphens")}}, to break some of the longer words across lines.
+- `left`: 텍스트를 왼쪽으로 정렬합니다.
+- `right`: 텍스트를 오른쪽 정렬합니다.
+- `center`: 텍스트를 중앙에 맞춥니다.
+- `justify`: 모든 텍스트 줄이 동일한 너비가 되도록 단어 사이의 간격을 다양하게 조정하여 텍스트를 펼치십시오. 이것은 신중하게 사용해야 합니다. 특히 긴 단어가 많은 단락에 적용할 때 끔찍해 보일 수 있습니다. 이것을 사용하려는 경우 {{cssxref("hyphens")}}과 같은 다른 것을 함께 사용하여 더 긴 단어 중 일부를 여러 줄로 나누는 것도 고려해야 합니다.
 
-If we applied `text-align: center;` to the {{htmlelement("h1")}} in our example, we'd end up with this:
+`text-align: center;`를 적용한 경우; 예에서 {{htmlelement("h1")}}에 다음과 같이 끝납니다.
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -454,15 +454,15 @@ p {
 
 {{ EmbedLiveSample('Text_alignment', '100%', 220) }}
 
-### Line height
+### 선 높이
 
-The {{cssxref("line-height")}} property sets the height of each line of text — this can take most [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size), but can also take a unitless value, which acts as a multiplier and is generally considered the best option — the {{cssxref("font-size")}} is multiplied to get the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart; the recommended line height is around 1.5–2 (double spaced.) So to set our lines of text to 1.5 times the height of the font, you'd use this:
+{{cssxref("line-height")}} 속성은 각 텍스트 줄의 높이를 설정합니다. 이 속성은 대부분의 [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있지만 승수 역할을 하고 일반적으로 최상의 옵션으로 간주되는 단위 없는 값을 사용할 수도 있습니다. {{cssxref("font-size")}}를 곱하여 `line-height`를 얻습니다. 본문 텍스트는 일반적으로 줄 간격이 떨어져 있을 때 더 보기 좋고 읽기 쉽습니다. 권장 줄 높이는 약 1.5–2(두 배 간격)입니다. 따라서 텍스트 줄을 글꼴 높이의 1.5배로 설정하려면 다음을 사용합니다.
 
 ```css
 line-height: 1.5;
 ```
 
-Applying this to the {{htmlelement("p")}} elements in our example would give us this result:
+이것을 예제의 {{htmlelement("p")}} 요소에 적용하면 다음과 같은 결과가 나타납니다.
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -508,11 +508,11 @@ p {
 
 {{ EmbedLiveSample('Line_height', '100%', 250) }}
 
-### Letter and word spacing
+### 문자 및 단어 간격
 
-The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to get a certain look, or to improve the legibility of a particularly dense font. They can take most [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
+{{cssxref("letter-spacing")}} 및 {{cssxref("word-spacing")}} 속성을 사용하면 텍스트에서 문자와 단어 사이의 간격을 설정할 수 있습니다. 자주 사용하지는 않지만 특정 모양을 얻거나 특히 조밀한 글꼴의 가독성을 향상시키는 용도를 찾을 수 있습니다. 대부분의 [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있습니다.
 
-So as an example, if we applied the following to the first line of the {{htmlelement("p")}} elements in our example:
+예를 들어, 예제에서 {{htmlelement("p")}} 요소의 첫 번째 줄에 다음을 적용한 경우입니다.
 
 ```css
 p::first-line {
@@ -521,7 +521,7 @@ p::first-line {
 }
 ```
 
-We'd get the following:
+우리는 다음을 얻습니다.
 
 ```html hidden
 <h1>Tommy the cat</h1>
@@ -574,47 +574,47 @@ p {
 
 ### 볼 가치가 있는 다른 속성들
 
-The above properties give you an idea of how to start styling text on a webpage, but there are many more properties you could use. We just wanted to cover the most important ones here. Once you've become used to using the above, you should also explore the following:
+위의 속성은 웹 페이지에서 텍스트 스타일 지정을 시작하는 방법에 대한 아이디어를 제공하지만 사용할 수 있는 더 많은 속성이 있습니다. 우리는 여기서 가장 중요한 것들을 다루고 싶었습니다. 위의 사용에 익숙해지면 다음 사항도 탐색해야 합니다.
 
-Font styles:
+글꼴 스타일:
 
-- {{cssxref("font-variant")}}: Switch between small caps and normal font alternatives.
-- {{cssxref("font-kerning")}}: Switch font kerning options on and off.
-- {{cssxref("font-feature-settings")}}: Switch various [OpenType](https://en.wikipedia.org/wiki/OpenType) font features on and off.
-- {{cssxref("font-variant-alternates")}}: Control the use of alternate glyphs for a given font-face.
-- {{cssxref("font-variant-caps")}}: Control the use of alternate capital glyphs.
-- {{cssxref("font-variant-east-asian")}}: Control the usage of alternate glyphs for East Asian scripts, like Japanese and Chinese.
-- {{cssxref("font-variant-ligatures")}}: Control which ligatures and contextual forms are used in text.
-- {{cssxref("font-variant-numeric")}}: Control the usage of alternate glyphs for numbers, fractions, and ordinal markers.
-- {{cssxref("font-variant-position")}}: Control the usage of alternate glyphs of smaller sizes positioned as superscript or subscript.
-- {{cssxref("font-size-adjust")}}: Adjust the visual size of the font independently of its actual font size.
-- {{cssxref("font-stretch")}}: Switch between possible alternative stretched versions of a given font.
-- {{cssxref("text-underline-position")}}: Specify the position of underlines set using the `text-decoration-line` property `underline` value.
-- {{cssxref("text-rendering")}}: Try to perform some text rendering optimization.
+- {{cssxref("font-variant")}}: 작은 대문자와 일반 글꼴 대체 사이를 전환합니다.
+- {{cssxref("font-kerning")}}: 글꼴 커닝 옵션을 켜거나 끕니다.
+- {{cssxref("font-feature-settings")}}: 다양한 [OpenType](https://en.wikipedia.org/wiki/OpenType) 글꼴 기능을 켜거나 끕니다.
+- {{cssxref("font-variant-alternates")}}: 지정된 글꼴에 대한 대체 글리프 사용을 제어합니다.
+- {{cssxref("font-variant-caps")}}: 대체 대문자 글리프의 사용을 제어합니다.
+- {{cssxref("font-variant-east-asian")}}: 일본어 및 중국어와 같은 동아시아 스크립트의 대체 글리프 사용을 제어합니다.
+- {{cssxref("font-variant-ligatures")}}: 텍스트에서 사용되는 합자 및 상황별 형식을 제어합니다.
+- {{cssxref("font-variant-numeric")}}: 숫자, 분수 및 서수 마커에 대한 대체 글리프의 사용을 제어합니다.
+- {{cssxref("font-variant-position")}}: 위 첨자 또는 아래 첨자로 배치된 더 작은 크기의 대체 글리프 사용을 제어합니다.
+- {{cssxref("font-size-adjust")}}: 실제 글꼴 크기와 독립적으로 글꼴의 시각적 크기를 조정합니다.
+- {{cssxref("font-stretch")}}: 주어진 글꼴의 가능한 대체 확장 버전 간에 전환합니다.
+- {{cssxref("text-underline-position")}}: `text-decoration-line` 속성 `underline` 값을 사용하여 설정된 밑줄의 위치를 ​​지정합니다.
+- {{cssxref("text-rendering")}}: 일부 텍스트 렌더링 최적화를 수행해 보십시오.
 
-Text layout styles
+텍스트 레이아웃 스타일
 
-- {{cssxref("text-indent")}}: Specify how much horizontal space should be left before the beginning of the first line of the text content.
-- {{cssxref("text-overflow")}}: Define how overflowed content that is not displayed is signaled to users.
-- {{cssxref("white-space")}}: Define how whitespace and associated line breaks inside the element are handled.
-- {{cssxref("word-break")}}: Specify whether to break lines within words.
-- {{cssxref("direction")}}: Define the text direction (This depends on the language and usually it's better to let HTML handle that part as it is tied to the text content.)
-- {{cssxref("hyphens")}}: Switch on and off hyphenation for supported languages.
-- {{cssxref("line-break")}}: Relax or strengthen line breaking for Asian languages.
-- {{cssxref("text-align-last")}}: Define how the last line of a block or a line, right before a forced line break, is aligned.
-- {{cssxref("text-orientation")}}: Define the orientation of the text in a line.
-- {{cssxref("word-wrap")}}: Specify whether or not the browser may break lines within words in order to prevent overflow.
-- {{cssxref("writing-mode")}}: Define whether lines of text are laid out horizontally or vertically and the direction in which subsequent lines flow.
+- {{cssxref("text-indent")}}: 텍스트 콘텐츠의 첫 번째 줄이 시작되기 전에 얼마만큼의 수평 공간을 남겨야 하는지 지정합니다.
+- {{cssxref("text-overflow")}}: 표시되지 않은 오버플로된 콘텐츠를 사용자에게 알리는 방법을 정의합니다.
+- {{cssxref("white-space")}}: 요소 내부의 공백 및 관련 줄 바꿈을 처리하는 방법을 정의합니다.
+- {{cssxref("word-break")}}: 단어 내에서 줄 바꿈 여부를 지정합니다.
+- {{cssxref("direction")}}: 텍스트 방향을 정의합니다(이는 언어에 따라 다르며 일반적으로 HTML이 텍스트 콘텐츠에 연결된 부분을 처리하도록 하는 것이 좋습니다.)
+- {{cssxref("hyphens")}}: 지원되는 언어에 대해 하이픈 연결을 켜거나 끕니다.
+- {{cssxref("line-break")}}: 아시아 언어의 경우 줄 바꿈을 완화하거나 강화합니다.
+- {{cssxref("text-align-last")}}: 강제 줄 바꿈 직전 블록 또는 줄의 마지막 줄을 정렬하는 방법을 정의합니다.
+- {{cssxref("text-orientation")}}: 라인의 텍스트 방향을 정의합니다.
+- {{cssxref("word-wrap")}}: 오버플로를 방지하기 위해 브라우저가 단어 내에서 줄을 끊을 수 있는지 여부를 지정합니다.
+- {{cssxref("writing-mode")}}: 텍스트 라인이 수평 또는 수직으로 배치되는지 여부와 후속 라인이 흐르는 방향을 정의합니다.
 
 ## 글꼴 약식 (shorthand)
 
-Many font properties can also be set through the shorthand property {{cssxref("font")}}. These are written in the following order: {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, and {{cssxref("font-family")}}.
+많은 글꼴 속성은 단축 속성 {{cssxref("font")}}을 통해 설정할 수도 있습니다. 이들은 다음 순서로 작성됩니다: {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}) 및 {{cssxref("font-family")}}입니다.
 
-Among all those properties, only `font-size` and `font-family` are required when using the `font` shorthand property.
+이러한 모든 속성 중 `font` 속기 속성을 사용할 때 `font-size` 및 `font-family`만 필요합니다.
 
-A forward slash has to be put in between the {{cssxref("font-size")}} and {{cssxref("line-height")}} properties.
+{{cssxref("font-size")}}와 {{cssxref("line-height")}} 속성 사이에 슬래시를 넣어야 합니다.
 
-A full example would look like this:
+전체 예는 다음과 같습니다.
 
 ```css
 font:
@@ -623,11 +623,11 @@ font:
   sans-serif;
 ```
 
-## Active learning: Playing with styling text
+## 능동적 학습: 스타일 지정 텍스트로 놀기
 
-In this active learning session, we don't have any specific exercises for you to do: we'd just like you to have a good play with some font/text layout properties, and see what you can produce! You can either do this using offline HTML/CSS files, or enter your code into the live editable example below.
+이 활성 학습 세션에서는 수행할 특정 연습이 없습니다. 일부 글꼴/텍스트 레이아웃 속성을 잘 활용하고 무엇을 생성할 수 있는지 확인하기를 바랍니다! 오프라인 HTML/CSS 파일을 사용하여 이 작업을 수행하거나 아래의 라이브 편집 가능한 예에 코드를 입력할 수 있습니다.
 
-If you make a mistake, you can always reset it using the _Reset_ button.
+실수한 경우 재설정 버튼을 사용하여 언제든지 재설정할 수 있습니다.
 
 ```html hidden
 <div
@@ -695,8 +695,8 @@ window.addEventListener("load", drawOutput);
 
 {{ EmbedLiveSample('Playable_code', 700, 800) }}
 
-## Summary
+## 요약
 
-We hoped you enjoyed playing with text in this article! The next article will give you all you need to know about styling HTML lists.
+이 기사에서 텍스트를 가지고 노는 것이 즐거웠기를 바랍니다! 다음 기사에서는 HTML 목록 스타일 지정에 대해 알아야 할 모든 정보를 제공합니다.
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}

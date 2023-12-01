@@ -50,9 +50,10 @@ border-left-color: unset;
 
 ```html
 <div class="mybox">
-  <p>これは周囲に境界線があるボックスです。
-     なお、ボックスのその辺が
-     <span class="redtext">赤</span>になっています。</p>
+  <p>
+    これは周囲に境界線があるボックスです。 なお、ボックスのその辺が
+    <span class="redtext">赤</span>になっています。
+  </p>
 </div>
 ```
 
@@ -60,13 +61,13 @@ border-left-color: unset;
 
 ```css
 .mybox {
-    border: solid 0.3em gold;
-    border-left-color: red;
-    width: auto;
+  border: solid 0.3em gold;
+  border-left-color: red;
+  width: auto;
 }
 
 .redtext {
-    color: red;
+  color: red;
 }
 ```
 

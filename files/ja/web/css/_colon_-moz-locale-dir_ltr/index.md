@@ -13,8 +13,8 @@ slug: Web/CSS/:-moz-locale-dir_ltr
 
 ## 構文
 
-```css
-:-moz-locale-dir(ltr)
+```css-nolint
+:-moz-locale-dir(ltr) {}
 ```
 
 ## 例

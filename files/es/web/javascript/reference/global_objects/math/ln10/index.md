@@ -23,7 +23,7 @@ La función siguiente devuelve el logaritmo natural de 10:
 
 ```js
 function getNatLog10() {
-   return Math.LN10
+  return Math.LN10;
 }
 
 getNatLog10(); // 2.302585092994046

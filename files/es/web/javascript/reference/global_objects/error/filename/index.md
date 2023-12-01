@@ -16,7 +16,7 @@ Esta propiedad no estándar contiene la ruta al archivo que generó este error. 
 ### Usar `fileName`
 
 ```js
-var e = new Error('No se pudo procesar la entrada');
+var e = new Error("No se pudo procesar la entrada");
 throw e;
 // e.fileName podría verse como "file:///C:/ejemplo.html"
 ```

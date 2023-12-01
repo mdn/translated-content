@@ -2,6 +2,7 @@
 title: Раздельная навигация
 slug: Web/CSS/Layout_cookbook/Split_Navigation
 ---
+
 {{CSSRef}}
 
 Навигационный паттерн, в котором один или более элементов отделены от остальных элементов навигации.
@@ -32,7 +33,7 @@ The various layout methods have different browser support. See the charts below 
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Смотрите также
 

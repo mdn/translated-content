@@ -58,7 +58,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
   - : Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.
 - {{CSP("object-src")}}
 
-  - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}} elements.
+  - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
     Elements controlled by `object-src` are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes `sandbox` or `allow` for `<iframe>`). Therefore it is **recommended** to restrict this fetch-directive (e.g. explicitly set `object-src 'none'` if possible).
 
@@ -93,7 +93,7 @@ Navigation directives govern to which location a user can navigate to or submit 
 - {{CSP("form-action")}}
   - : Restricts the URLs which can be used as the target of a form submissions from a given context.
 - {{CSP("frame-ancestors")}}
-  - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
+  - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 - {{CSP("navigate-to")}} {{experimental_inline}}
   - : Restricts the URLs to which a document can navigate by any means (a, form, window\.location, window\.open, etc.)
 

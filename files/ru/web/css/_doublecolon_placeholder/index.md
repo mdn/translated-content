@@ -2,6 +2,7 @@
 title: "::placeholder"
 slug: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::placeholder`** представляет собой [текст placeholder](/ru/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute) в {{HTMLElement("input")}} или {{HTMLElement("textarea")}} элементах.
@@ -28,7 +29,7 @@ slug: Web/CSS/::placeholder
 #### HTML
 
 ```html
-<input placeholder="Введите что-нибудь!">
+<input placeholder="Введите что-нибудь!" />
 ```
 
 #### CSS
@@ -50,7 +51,7 @@ input::placeholder {
 #### HTML
 
 ```html
-<input placeholder="Введите что-нибудь...">
+<input placeholder="Введите что-нибудь..." />
 ```
 
 #### CSS
@@ -92,7 +93,11 @@ input::placeholder {
 ```html
 <label for="user-email">Ваш email адрес</label>
 <span id="user-email-hint" class="input-hint">Пример: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)

@@ -37,7 +37,7 @@ CSS 中的 transition 和 animation 都可以用于编写动画，它们都有�
 1. 在地址栏中，输入 _about:config_，点击 `I'll be careful, I promise!` 按钮，以进入配置屏幕。
    ![](pic1.png)
 2. 在搜索栏中搜索 `layers.acceleration.draw-fps` 首选项。
-3. 双击该条目将值设置为 `true`。现在您可以在 Firefox 窗口的左上角看到三个紫色的框。第一个框代表 FPS。
+3. 双击该条目将值设置为 `true`。现在你可以在 Firefox 窗口的左上角看到三个紫色的框。第一个框代表 FPS。
    ![](pic2.png)
 
 ### 运行性能测试

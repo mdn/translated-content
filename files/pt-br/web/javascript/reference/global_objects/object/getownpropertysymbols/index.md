@@ -12,7 +12,7 @@ O **`Object.getOwnPropertySymbols()`** método retorna uma array com todas propr
 ## Sintaxe
 
 ```js
-Object.getOwnPropertySymbols(obj)
+Object.getOwnPropertySymbols(obj);
 ```
 
 ### Parâmetro
@@ -36,28 +36,26 @@ Como todos os objetos não possuem símbolos próprios inicialmente, o `Object.g
 
 ```js
 var obj = {};
-var a = Symbol('a');
-var b = Symbol.for('b');
+var a = Symbol("a");
+var b = Symbol.for("b");
 
-obj[a] = 'localSymbol';
-obj[b] = 'globalSymbol';
+obj[a] = "localSymbol";
+obj[b] = "globalSymbol";
 
 var objectSymbols = Object.getOwnPropertySymbols(obj);
 
 console.log(objectSymbols.length); // retorno esperado 2
-console.log(objectSymbols);        // retorno esperado (2) [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]);     // retorno esperado Symbol(a)
+console.log(objectSymbols); // retorno esperado (2) [Symbol(a), Symbol(b)]
+console.log(objectSymbols[0]); // retorno esperado Symbol(a)
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
+{{Compat}}
 
 ## Veja também
 

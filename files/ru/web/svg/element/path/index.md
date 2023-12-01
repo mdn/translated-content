@@ -2,25 +2,33 @@
 title: <path>
 slug: Web/SVG/Element/path
 ---
+
 {{SVGRef}}
 
 Элемент **`<path>`** является общим элементом для описания фигуры. Все базовые фигуры могут быть созданы с помощью элемента path.
 
+## Пример
+
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10,30
+  <path
+    d="M 10,30
            A 20,20 0,0,1 50,30
            A 20,20 0,0,1 90,30
            Q 90,60 50,90
-           Q 10,60 10,30 z"/>
+           Q 10,60 10,30 z" />
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{EmbedLiveSample("Пример", 100, 100)}}
 
 ## Атрибуты
 
@@ -33,7 +41,7 @@ html,body,svg { height:100% }
 
 ### Глобальные атрибуты
 
-- [Атрибуты ядра](/docs/Web/SVG/Attribute/Core)
+- [Атрибуты ядра](/ru/docs/Web/SVG/Attribute/Core)
   - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Атрибуты стиля](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}

@@ -56,13 +56,11 @@ console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
 
 ## Especificações
 
-| Especificação                                                                      |
-| ---------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setMonth")}}
+{{Compat}}
 
 ## Veja também
 

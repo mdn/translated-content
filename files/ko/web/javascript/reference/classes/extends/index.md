@@ -2,6 +2,7 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 ---
+
 {{jsSidebar("Classes")}}
 
 **`extends`** 키워드는 클래스를 다른 클래스의 자식으로 만들기 위해 [class 선언](/ko/docs/Web/JavaScript/Reference/Statements/class) 또는 [class 식](/ko/docs/Web/JavaScript/Reference/Operators/class)에 사용됩니다.
@@ -34,7 +35,7 @@ class Square extends Polygon {
     super(length, length);
     // 주의: 파생 클래스에서, super()가 먼저 호출되어야 'this'를
     // 사용할 수 있습니다. 이를 빼먹으면 참조 오류가 발생합니다.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -58,8 +59,23 @@ class myDate extends Date {
   }
 
   getFormattedDate() {
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    return this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear();
+    var months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return (
+      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    );
   }
 }
 ```
@@ -74,7 +90,7 @@ class nullExtends extends null {
 }
 
 Object.getPrototypeOf(nullExtends); // Function.prototype
-Object.getPrototypeOf(nullExtends.prototype) // null
+Object.getPrototypeOf(nullExtends.prototype); // null
 ```
 
 ## 명세서

@@ -27,9 +27,9 @@ path([<'fill-rule'>,]?<string>)
 
 - `<'fill-rule'>`
   - : パス内の塗りつぶしルールです。
-      指定可能な値は `nonzero` または `evenodd` です。
-      既定値は `nonzero` です。
-      詳細は[塗りつぶしルール](/ja/docs/Web/SVG/Attribute/fill-rule)を参照してください。
+    指定可能な値は `nonzero` または `evenodd` です。
+    既定値は `nonzero` です。
+    詳細は[塗りつぶしルール](/ja/docs/Web/SVG/Attribute/fill-rule)を参照してください。
 - `<string>`
   - : 文字列で、[SVG パス](/ja/docs/Web/SVG/Element/path)を定義する[データ文字列](/ja/docs/Web/SVG/Attribute/d)です。
 
@@ -57,11 +57,15 @@ path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 #### CSS
 
 ```css
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 
 /* This path is displayed on hover*/
 #svg_css_ex1:hover path {
-  d: path("M20,80 L50,20 L80,80")
+  d: path("M20,80 L50,20 L80,80");
 }
 ```
 
@@ -69,7 +73,7 @@ html,body,svg { height:100% }
 
 ```html
 <svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
- <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
+  <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
 </svg>
 ```
 

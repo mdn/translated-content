@@ -260,7 +260,7 @@ WEBVTT
 これを HTML メディアの再生と一緒に表示するには、以下を行う必要があります。
 
 1. 適切な場所に `.vtt` ファイルとして保存します。
-2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/en-US/docs/Web/HTML/Element/track#label) を追加して、読み手が検索している言語を識別しやすくします。
+2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/ja/docs/Web/HTML/Element/track#label) を追加して、読み手が検索している言語を識別しやすくします。
 
 ここに例があります。
 

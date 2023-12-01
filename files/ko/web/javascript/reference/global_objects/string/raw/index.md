@@ -2,6 +2,7 @@
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
+
 {{JSRef}}
 
 `String.raw()`메서드는 [템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals)의 태그 함수입니다.
@@ -13,9 +14,9 @@ slug: Web/JavaScript/Reference/Global_Objects/String/raw
 ## 구문
 
 ```js
-String.raw(callSite, ...substitutions)
+String.raw(callSite, ...substitutions);
 
-String.raw`templateString`
+String.raw`templateString`;
 ```
 
 ### 매개변수
@@ -39,7 +40,7 @@ String.raw`templateString`
 ## 설명
 
 `String.raw()`의 경우 보통 템플릿 리터럴과 많이 사용하고, 첫번째 구문의 경우 잘 사용되지 않습니다.
-왜냐하면 자바스크립트 엔진이 당신을 위해서 자동으로 적절한 인수로 호출해주기 때문입니다. ( 다른 [태그 메서드](/ko/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals) 들과 마찬가지로).
+왜냐하면 JavaScript 엔진이 당신을 위해서 자동으로 적절한 인수로 호출해주기 때문입니다. ( 다른 [태그 메서드](/ko/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals) 들과 마찬가지로).
 
 `String.raw()`은 템플릿 리터럴의 유일한 내장 함수입니다. 기본 템플릿 기능과 동일하게 작동하며 연결을 수행합니다. JavaScript 코드를 사용하여 다시 구현할 수도 있습니다.
 
@@ -48,7 +49,7 @@ String.raw`templateString`
 ### String.raw() 사용
 
 ```js
-String.raw`Hi\n${2+3}!`;
+String.raw`Hi\n${2 + 3}!`;
 // 'Hi\\n5!', the character after 'Hi'
 // is not a newline character,
 // '\' and 'n' are two characters.
@@ -61,15 +62,19 @@ String.raw`Hi\u000A!`;
 // You can confirm this by checking the .length property
 // of the string.
 
-let name = 'Bob';
+let name = "Bob";
 String.raw`Hi\n${name}!`;
 // 'Hi\\nBob!', substitutions are processed.
 
 // Normally you would not call String.raw() as a function,
 // but to simulate `foo${2 + 3}bar${'Java' + 'Script'}baz` you can do:
-String.raw({
-  raw: ['foo', 'bar', 'baz']
-}, 2 + 3, 'Java' + 'Script'); // 'foo5barJavaScriptbaz'
+String.raw(
+  {
+    raw: ["foo", "bar", "baz"],
+  },
+  2 + 3,
+  "Java" + "Script",
+); // 'foo5barJavaScriptbaz'
 // Notice the first argument is an object with a 'raw' property,
 // whose value is an iterable representing the separated strings
 // in the template literal.
@@ -79,7 +84,7 @@ String.raw({
 // For example, 'test' is treated as ['t', 'e', 's', 't'].
 // The following is equivalent to
 // `t${0}e${1}s${2}t`:
-String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
+String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 ```
 
 ## 명세

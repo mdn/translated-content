@@ -2,6 +2,7 @@
 title: list-style-image
 slug: Web/CSS/list-style-image
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`list-style-image`** устанавливает изображение, используемое в качестве маркера списка.
@@ -19,7 +20,7 @@ slug: Web/CSS/list-style-image
 list-style-image: none;
 
 /* <url> значения */
-list-style-image: url('starsolid.gif');
+list-style-image: url("starsolid.gif");
 
 /* Глобальные значения */
 list-style-image: inherit;

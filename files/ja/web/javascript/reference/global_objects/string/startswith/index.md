@@ -1,6 +1,8 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
+l10n:
+  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
 {{JSRef}}
@@ -11,54 +13,42 @@ slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 
 ## 構文
 
-```
-str.startsWith(searchString[, position])
+```js-nolint
+startsWith(searchString)
+startsWith(searchString, position)
 ```
 
 ### 引数
 
 - `searchString`
-  - : 文字列の先頭で検索される文字の集合です。
+  - : `str` の先頭で検索される文字の集合です。[正規表現](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)にすることはできません。正規表現ではない値はすべて[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`startsWith()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
 - `position` {{optional_inline}}
-  - : `searchString` を検索し始めるこの文字列の中の位置です。既定値は `0` です。
+  - : `searchString` が見つかると期待される開始位置（`searchString` の先頭の文字のインデックス）です。既定値は `0` です。
 
 ### 返値
 
-文字列が指定された文字列で始まる場合は **`true`**、それ以外の場合は **`false`** です。
+文字列が指定された文字列で始まる場合、`searchString` が空文字列の場合は **`true`**、それ以外の場合は **`false`** です。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : `searchString` が[正規表現](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)であった場合。
 
 ## 解説
 
-文字列が特定の文字列で始まるかどうかを判断できます。(英文字の)大文字・小文字は区別されます。
+文字列が特定の文字列で終わるかどうかを判断できます。このメソッドでは（英文字の）大文字小文字は区別されます。
 
 ## 例
 
 ### startsWith() の使用
 
 ```js
-//startswith
-let str = 'To be, or not to be, that is the question.'
+const str = "To be, or not to be, that is the question.";
 
-console.log(str.startsWith('To be'))          // true
-console.log(str.startsWith('not to be'))      // false
-console.log(str.startsWith('not to be', 10))  // true
+console.log(str.startsWith("To be")); // true
+console.log(str.startsWith("not to be")); // false
+console.log(str.startsWith("not to be", 10)); // true
 ```
-
-## ポリフィル
-
-このメソッドは ECMAScript 2015 で追加されました。すべての JavaScript の実装でまだ利用可能ではないかもしれません。しかしながら、次のコードで`String.prototype.startsWith()`をエミュレートできます。
-
-```js
-if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, rawPos) {
-            var pos = rawPos > 0 ? rawPos|0 : 0;
-            return this.substring(pos, pos + search.length) === search;
-        }
-    });
-}
-```
-
-少々重いですがより強力 (ES2015 に完全準拠) な互換実装を [Mathias Bynens が GitHub](https://github.com/mathiasbynens/String.prototype.startsWith) で公開しています。
 
 ## 仕様書
 
@@ -66,10 +56,11 @@ if (!String.prototype.startsWith) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.startsWith")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`String.prototype.startsWith` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.endsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

@@ -30,8 +30,8 @@ l10n:
 ### JS コンテンツ
 
 ```js
-const myImage = document.querySelector('.my-image');
-fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg')
+const myImage = document.querySelector(".my-image");
+fetch("https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg")
   .then((response) => {
     console.log(response.bodyUsed);
     const res = response.blob();

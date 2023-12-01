@@ -1,7 +1,6 @@
 ---
-title: 'Document: dragstart event'
+title: "Document: dragstart event"
 slug: conflicting/Web/API/HTMLElement/dragstart_event
-translation_of: Web/API/Document/dragstart_event
 original_slug: Web/API/Document/dragstart_event
 ---
 Событие dragstart вызывается, когда пользователь начинает перетаскивать выделенный элемент или текст.

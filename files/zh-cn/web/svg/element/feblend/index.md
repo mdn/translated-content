@@ -29,7 +29,7 @@ slug: Web/SVG/Element/feBlend
 
 ## DOM 接口
 
-该元素实现了[`SVGFEBlendElement`](/zh-CN/DOM/SVGFEBlendElement)接口。
+该元素实现了 [`SVGFEBlendElement`](/zh-CN/DOM/SVGFEBlendElement) 接口。
 
 ## 示例
 

@@ -11,7 +11,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 ## 基礎
 
-維持整份文件的一致性是各大文件發表風格指南的基礎。以下段落將會列出這些基礎概念來協助您。
+維持整份文件的一致性是各大文件發表風格指南的基礎。以下段落將會列出這些基礎概念來協助你。
 
 ### 頁面標題
 
@@ -39,9 +39,9 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 以 [JavaScript](/zh-TW/docs/Web/JavaScript) 指南為例，它的結構如下：
 
 - [JavaScript/指南](/zh-TW/docs/Web/JavaScript/Guide) ——主內容表頁面
-- [JavaScript/指南/JavaScript 概述](/zh-TW/docs/Web/JavaScript/Guide/JavaScript_Overview)
-- [JavaScript/指南/函數](/zh-TW/docs/JavaScript/Guide/Functions)
-- [JavaScript/指南/物件模型細節](/zh-TW/docs/JavaScript/Guide/Details_of_the_Object_Model)
+- [JavaScript/指南/JavaScript 概述](/zh-TW/docs/Web/JavaScript/Guide/Introduction)
+- [JavaScript/指南/函數](/zh-TW/docs/Web/JavaScript/Guide/Functions)
+- [JavaScript/指南/物件模型細節](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 請儘量避免將你的文章放在頂層，不然會拖慢網站的下載速度，降低網站導覽和搜索的效率。
 

@@ -5,30 +5,32 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 
 {{JSRef}} {{deprecated_header}}
 
-fixed() 方法创建了一个 \<tt> 标签元素将字符串包裹起来，从而让这个字符串里面的内容具有固定间距。
+{{jsxref("String")}} 值的 **`fixed()`** 方法创建一个 {{HTMLElement("tt")}} 元素字符串，其中嵌入了调用的字符串（`<tt>str</tt>`），这会导致该字符串以等宽字体显示。
+
+> **备注：** 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
 
 ## 语法
 
-```plain
-str.fixed()
+```js-nolint
+fixed()
 ```
+
+### 参数
+
+无。
 
 ### 返回值
 
-返回一个表示 {{HTMLElement("tt")}} HTML 元素的字符串。
+一个以 `<tt>` 开始标签开头的字符串，接着是文本 `str`，然后是 `</tt>` 结束标签。
 
-## 描述
-
-`fixed()` 方法将一个字符串包裹在\<tt>\</tt>标签中，比如：`"<tt>str</tt>"`.
-
-## 举例
+## 示例
 
 ### 使用 fixed()
 
-下面的示例代码使用这个 fixed 方法来改变字符串的格式：
+以下示例使用 `fixed` 方法来更改字符串的格式：
 
 ```js
-var worldString = "Hello, world";
+const worldString = "Hello, world";
 console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
 ```
 
@@ -40,8 +42,9 @@ console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `String.prototype.fixed` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.bold()")}}
 - {{jsxref("String.prototype.italics()")}}
 - {{jsxref("String.prototype.strike()")}}

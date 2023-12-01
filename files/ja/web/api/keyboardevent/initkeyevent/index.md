@@ -1,8 +1,9 @@
 ---
-title: KeyboardEvent.initKeyEvent()
+title: "KeyboardEvent: initKeyEvent() メソッド"
+short-title: initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 l10n:
-  sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("UI Events")}}
@@ -54,20 +55,22 @@ initKeyEvent (type, bubbles, cancelable, view,
 ## 例
 
 ```js
-const event = document.createEvent('KeyboardEvent'); // create a key event
+const event = document.createEvent("KeyboardEvent"); // create a key event
 // define the event
-event.initKeyEvent("keypress",       // typeArg,
-                   true,             // canBubbleArg,
-                   true,             // cancelableArg,
-                   null,             // viewArg, Specifies UIEvent.view. This value may be null.
-                   false,            // ctrlKeyArg,
-                   false,            // altKeyArg,
-                   false,            // shiftKeyArg,
-                   false,            // metaKeyArg,
-                    9,               // keyCodeArg,
-                    0);              // charCodeArg);
+event.initKeyEvent(
+  "keypress", // typeArg,
+  true, // canBubbleArg,
+  true, // cancelableArg,
+  null, // viewArg, Specifies UIEvent.view. This value may be null.
+  false, // ctrlKeyArg,
+  false, // altKeyArg,
+  false, // shiftKeyArg,
+  false, // metaKeyArg,
+  9, // keyCodeArg,
+  0,
+); // charCodeArg);
 
-document.getElementById('blah').dispatchEvent(event);
+document.getElementById("blah").dispatchEvent(event);
 ```
 
 ## 仕様書

@@ -29,7 +29,7 @@ onupdatefound = (event) => {};
 const registration = await navigator.serviceWorker.getRegistration();
 if (registration) {
   registration.addEventListener("updatefound", () => {
-    console.log('サービスワーカーの更新版が見つかりました。');
+    console.log("サービスワーカーの更新版が見つかりました。");
   });
 }
 ```

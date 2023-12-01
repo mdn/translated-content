@@ -18,9 +18,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('vrdisplayactivate', (event) => { });
+addEventListener("vrdisplayactivate", (event) => {});
 
-onvrdisplayactivate = (event) => { };
+onvrdisplayactivate = (event) => {};
 ```
 
 ## イベント型
@@ -43,8 +43,8 @@ _`VRDisplayEvent` は親オブジェクトである {{domxref("Event")}} から�
 `vrdisplayactivate` イベントは [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
 
 ```js
-window.addEventListener('vrdisplayactivate', () => {
-  info.textContent = 'Display activated.';
+window.addEventListener("vrdisplayactivate", () => {
+  info.textContent = "Display activated.";
   reportDisplays();
 });
 ```
@@ -53,7 +53,7 @@ window.addEventListener('vrdisplayactivate', () => {
 
 ```js
 window.onvrdisplayactivate = () => {
-  info.textContent = 'Display activated.';
+  info.textContent = "Display activated.";
   reportDisplays();
 };
 ```

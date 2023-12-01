@@ -5,7 +5,7 @@ slug: Web/API/Window/unload_event
 
 {{APIRef}}
 
-当文档或一个子资源正在被卸载时，触发 **unload**事件。
+当文档或一个子资源正在被卸载时，触发 **`unload`** 事件。
 
 <table class="properties">
   <tbody>
@@ -88,7 +88,7 @@ slug: Web/API/Window/unload_event
 </html>
 ```
 
-当父 iframe 被卸载，事件将按`console.log()` 消息描述的顺序触发。
+当父 iframe 被卸载，事件将按 `console.log()` 消息描述的顺序触发。
 
 ## 规范
 
@@ -100,5 +100,5 @@ slug: Web/API/Window/unload_event
 
 ## 参见
 
-- 相关事件： {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}
+- 相关事件：{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}、{{domxref("Document/readystatechange_event", "readystatechange")}}、{{domxref("Window/load_event", "load")}}
 - [Unloading Documents — unload a document](https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents)

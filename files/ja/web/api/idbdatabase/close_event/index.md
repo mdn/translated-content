@@ -16,8 +16,8 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('close', (event) => { });
-onclose = (event) => { };
+addEventListener("close", (event) => {});
+onclose = (event) => {};
 ```
 
 ## イベント型
@@ -30,29 +30,29 @@ onclose = (event) => { };
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open('toDoList', 4);
+const dBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 dBOpenRequest.onsuccess = (event) => {
-
   const db = dBOpenRequest.result;
-  db.addEventListener('close', () => {
-    console.log('データベースへの接続が閉じられました');
+  db.addEventListener("close", () => {
+    console.log("データベースへの接続が閉じられました");
   });
-
 };
 ```
 
@@ -60,29 +60,29 @@ dBOpenRequest.onsuccess = (event) => {
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open('toDoList', 4);
+const dBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 dBOpenRequest.onsuccess = (event) => {
-
   const db = dBOpenRequest.result;
   db.onclose = () => {
-    console.log('データベースへの接続が閉じられました');
+    console.log("データベースへの接続が閉じられました");
   };
-
 };
 ```
 

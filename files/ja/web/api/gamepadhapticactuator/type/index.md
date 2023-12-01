@@ -29,7 +29,7 @@ TBC
 
 ## ブラウザーの互換性
 
-{{Compat("api.GamepadHapticActuator.type")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -33,12 +33,12 @@ Por exemplo:
 
 ```html
 <div spellcheck="true">
-  <label>Escreva algo: </label><input type="text" size="50">
-  <br>
-  <label>Escreva outra coisa: </label><input type="text" size="50">
+  <label>Escreva algo: </label><input type="text" size="50" />
+  <br />
+  <label>Escreva outra coisa: </label><input type="text" size="50" />
 </div>
-<br>
-<label>Mais alguma coisa: </label><input type="text" size="50">
+<br />
+<label>Mais alguma coisa: </label><input type="text" size="50" />
 ```
 
 Neste exemplo HTML acima, os dois primeiros campos de texto terão a verificação ortográfica e o terceiro não terá.
@@ -51,13 +51,13 @@ Por exemplo:
 
 ```html
 <html lang="pt-BR">
-<body>
-  <textarea></textarea>
-  <textarea lang="en"></textarea>
-  <div lang="ru">
+  <body>
     <textarea></textarea>
-  </div>
-</body>
+    <textarea lang="en"></textarea>
+    <div lang="ru">
+      <textarea></textarea>
+    </div>
+  </body>
 </html>
 ```
 

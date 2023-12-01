@@ -19,7 +19,7 @@ slug: Web/HTTP/Status/503
 503 Service Unavailable
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

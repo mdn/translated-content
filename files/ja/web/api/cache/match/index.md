@@ -1,8 +1,9 @@
 ---
-title: Cache.match()
+title: "Cache: match() メソッド"
+short-title: match()
 slug: Web/API/Cache/match
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Service Workers API")}}
@@ -57,7 +58,7 @@ self.addEventListener("fetch", (event) => {
         return caches
           .open(OFFLINE_CACHE)
           .then((cache) => cache.match(OFFLINE_URL));
-      })
+      }),
     );
   }
 });

@@ -18,9 +18,11 @@ function doSomething() {}
 
 alert(doSomething.displayName); // "undefined"
 
-var popup = function(content) { alert(content); };
+var popup = function (content) {
+  alert(content);
+};
 
-popup.displayName = 'Показать всплывающее окно';
+popup.displayName = "Показать всплывающее окно";
 
 alert(popup.displayName); // "Показать всплывающее окно"
 ```
@@ -29,14 +31,18 @@ alert(popup.displayName); // "Показать всплывающее окно"
 
 ```js
 var object = {
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-object.someMethod.displayName = 'someMethod';
+object.someMethod.displayName = "someMethod";
 
 alert(object.someMethod.displayName); // выведет "someMethod"
 
-try { someMethod } catch(e) { alert(e); }
+try {
+  someMethod;
+} catch (e) {
+  alert(e);
+}
 // ReferenceError: someMethod is not defined
 ```
 
@@ -45,14 +51,14 @@ try { someMethod } catch(e) { alert(e); }
 ```js
 var object = {
   // анонимная функция
-  someMethod: function(value) {
-    this.displayName = 'someMethod (' + value + ')';
-  }
+  someMethod: function (value) {
+    this.displayName = "someMethod (" + value + ")";
+  },
 };
 
 alert(object.someMethod.displayName); // "undefined"
 
-object.someMethod('123')
+object.someMethod("123");
 alert(object.someMethod.displayName); // "someMethod (123)"
 ```
 
@@ -63,10 +69,10 @@ alert(object.someMethod.displayName); // "someMethod (123)"
 Введя следующий пример в консоль, вы должны увидеть что-то вроде "`function Моя функция()`":
 
 ```js
-var a = function() {};
-a.displayName = 'Моя функция';
+var a = function () {};
+a.displayName = "Моя функция";
 
-a
+a;
 ```
 
 ## Спецификации

@@ -1,43 +1,47 @@
 ---
 title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
+l10n:
+  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
 {{JSRef}}
 
-**`hasIndices`** プロパティは、その正規表現で "`d`" フラグが使用されたかどうかを示します。 `hasIndices` はそれぞれの正規表現インスタンスの読み取り専用プロパティです。
+**`hasIndices`** は {{jsxref("RegExp")}} インスタンスのプロパティで、その正規表現で `d` フラグが使用されたかどうかを示します。
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
 
-{{JS_Property_Attributes(0, 0, 1)}}
-
 ## 解説
 
-`hasIndices` の値は論理型であり、 "`d`" フラグが使用された場合は `true` になります。それ以外の場合は `false` になります。 "`d`" フラグは正規表現による一致の結果に、各キャプチャグループの部分文字列の開始と終了の位置を含めることを示します。
+`RegExp.prototype.hasIndices` の値は `d` フラグが使用されている場合に `true` となり、そうでない場合は `false` となります。`d` フラグは、正規表現の照合結果に各キャプチャグループの部分文字列の開始と終了のインデックスを含めることを示します。これは正規表現の解釈や照合の動作を変更するものではなく、照合結果に追加情報を与えるだけです。
 
-このプロパティを直接変更することはできません。
+このフラグは、主に [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) の返値に影響します。`d` フラグが存在する場合、`exec()` によって返される配列は、`exec()` メソッドの[返値](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#返値)に記述されているように、追加の `indices` プロパティを持ちます。他のすべての正規表現関連のメソッド（{{jsxref("String.prototype.match()")}} など）は、内部的に `exec()` を呼び出すので、正規表現に `d` フラグがある場合、インデックスも返します。
+
+`hasIndices` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
 
 ## 例
 
-### `hasIndices` の使用
+[グループと後方参照 > グループと一致結果の添字の使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#グループと一致結果の添字の使用)に詳しい使用例があります。
+
+### hasIndices の使用
 
 ```js
-const str1 = 'foo bar foo';
+const str1 = "foo bar foo";
 
-const regex1 = new RegExp('foo', 'gd');
+const regex1 = /foo/dg;
 
-console.log(regex1.hasIndices); // 出力: true
+console.log(regex1.hasIndices); // true
 
-console.log(regex1.exec(str1).indices[0]); // 出力: Array [0, 3]
-console.log(regex1.exec(str1).indices[0]); // 出力: Array [8, 11]
+console.log(regex1.exec(str1).indices[0]); // [0, 3]
+console.log(regex1.exec(str1).indices[0]); // [8, 11]
 
-const str2 = 'foo bar foo';
+const str2 = "foo bar foo";
 
-const regex2 = new RegExp('foo');
+const regex2 = /foo/;
 
-console.log(regex2.hasIndices); // 出力: false
+console.log(regex2.hasIndices); // false
 
-console.log(regex2.exec(str2).indices); // 出力: undefined
+console.log(regex2.exec(str2).indices); // undefined
 ```
 
 ## 仕様書
@@ -50,7 +54,7 @@ console.log(regex2.exec(str2).indices); // 出力: undefined
 
 ## 関連情報
 
-- {{JSxRef("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.exec()")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}

@@ -12,7 +12,7 @@ slug: Web/API/BaseAudioContext/createConstantSource
 ## 構文
 
 ```js
-createConstantSource()
+createConstantSource();
 ```
 
 ### 引数

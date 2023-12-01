@@ -35,16 +35,16 @@ slug: Web/API/Window/languagechange_event
 `languagechange` は {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
 
 ```js
-window.addEventListener('languagechange', function() {
-  console.log('languagechange event detected!');
+window.addEventListener("languagechange", function () {
+  console.log("languagechange event detected!");
 });
 ```
 
 または、 {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} イベントハンドラープロパティを使用することもできます。
 
 ```js
-window.onlanguagechange = function(event) {
-  console.log('languagechange event detected!');
+window.onlanguagechange = function (event) {
+  console.log("languagechange event detected!");
 };
 ```
 
@@ -54,7 +54,7 @@ window.onlanguagechange = function(event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.languagechange_event")}}
+{{Compat}}
 
 ## 関連情報
 

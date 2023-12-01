@@ -20,10 +20,10 @@ l10n:
 ```js
 let db;
 function openDB() {
- const DBOpenRequest = window.indexedDB.open('toDoList');
- DBOpenRequest.onsuccess = (e) => {
-   db = DBOpenRequest.result;
- }
+  const DBOpenRequest = window.indexedDB.open("toDoList");
+  DBOpenRequest.onsuccess = (e) => {
+    db = DBOpenRequest.result;
+  };
 }
 ```
 

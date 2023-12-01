@@ -48,8 +48,12 @@ padding-bottom: unset;
 ## 예제
 
 ```css
-.content { padding-bottom: 5%; }
-.sidebox { padding-bottom: 10px; }
+.content {
+  padding-bottom: 5%;
+}
+.sidebox {
+  padding-bottom: 10px;
+}
 ```
 
 ## 명세

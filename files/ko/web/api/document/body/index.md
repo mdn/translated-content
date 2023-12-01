@@ -33,7 +33,7 @@ alert(document.body.id); // "newBodyElement"
 
 `body` 속성에 새로운 값을 설정할 수 있긴 하지만, 문서에 새로운 본문을 설정하는건 `<body>` 요소가 가지고 있던 모든 자식을 제거하는 것과 같습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

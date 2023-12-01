@@ -113,7 +113,7 @@ function notifyMe() {
   }
 
   // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
@@ -138,24 +138,22 @@ Notification.requestPermission();
 Em seguida executar um simples `spawnNotification()` quando queremos disparar uma notificação — este é passado argumentos para especificar o, ícone corpo e título que queremos, então ele cria as opções necessárias objeto e dispara a notificação usando o construtor {{domxref("Notification.Notification","Notification()")}}.
 
 ```js
-function spawnNotification(corpo,icone,titulo) {
+function spawnNotification(corpo, icone, titulo) {
   var opcoes = {
-      body: corpo,
-      icon: icone
-  }
-  var n = new Notification(titulo,opcoes);
+    body: corpo,
+    icon: icone,
+  };
+  var n = new Notification(titulo, opcoes);
 }
 ```
 
 ## Especificações
 
-| Especificação                                | Estado                                   | Comentário      |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Veja também
 

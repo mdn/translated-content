@@ -8,10 +8,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 El método **`Array.isArray()`** determina si el valor pasado es un {{jsxref("Array")}}.
 
 ```js
-Array.isArray([1, 2, 3]);  // true
-Array.isArray({foo: 123}); // false
-Array.isArray('foobar');   // false
-Array.isArray(undefined);  // false
+Array.isArray([1, 2, 3]); // true
+Array.isArray({ foo: 123 }); // false
+Array.isArray("foobar"); // false
+Array.isArray(undefined); // false
 ```
 
 ## Sintaxis
@@ -42,7 +42,7 @@ Vea el artículo ["Determining with absolute accuracy whether or not a JavaScrip
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
-Array.isArray(new Array('a', 'b', 'c', 'd'));
+Array.isArray(new Array("a", "b", "c", "d"));
 Array.isArray(new Array(3));
 // Hecho poco conocido: Array.prototype es también un array:
 Array.isArray(Array.prototype);
@@ -53,7 +53,7 @@ Array.isArray({});
 Array.isArray(null);
 Array.isArray(undefined);
 Array.isArray(17);
-Array.isArray('Array');
+Array.isArray("Array");
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray({ __proto__: Array.prototype });
@@ -64,13 +64,13 @@ Array.isArray({ __proto__: Array.prototype });
 Al comprobar una instancia `Array`, `Array.isArray` es más recomendado que `instanceof` porque funciona a través de `iframes`.
 
 ```js
-var iframe = document.createElement('iframe');
+var iframe = document.createElement("iframe");
 document.body.appendChild(iframe);
 xArray = window.frames[window.frames.length - 1].Array;
-var arr = new xArray(1,2,3); // [1,2,3]
+var arr = new xArray(1, 2, 3); // [1,2,3]
 
 // Comprobando correctamente un Array
-Array.isArray(arr);  // true
+Array.isArray(arr); // true
 // Considerado peligroso, porque no funciona a través de iframes
 arr instanceof Array; // false
 ```
@@ -81,8 +81,8 @@ Ejecutar el siguiente código antes de cualquier otro código creará un `Array.
 
 ```js
 if (!Array.isArray) {
-  Array.isArray = function(arg) {
-    return Object.prototype.toString.call(arg) === '[object Array]';
+  Array.isArray = function (arg) {
+    return Object.prototype.toString.call(arg) === "[object Array]";
   };
 }
 ```

@@ -37,32 +37,27 @@ In the following example, the layers' stacking order is rearranged using `z-inde
 ```html
 <div id="abs1">
   <b>DIV #1</b>
-  <br />position: absolute;
-  <br />z-index: 5;
+  <br />position: absolute; <br />z-index: 5;
 </div>
 
 <div id="rel1">
   <b>DIV #2</b>
-  <br />position: relative;
-  <br />z-index: 3;
+  <br />position: relative; <br />z-index: 3;
 </div>
 
 <div id="rel2">
   <b>DIV #3</b>
-  <br />position: relative;
-  <br />z-index: 2;
+  <br />position: relative; <br />z-index: 2;
 </div>
 
 <div id="abs2">
   <b>DIV #4</b>
-  <br />position: absolute;
-  <br />z-index: 1;
+  <br />position: absolute; <br />z-index: 1;
 </div>
 
 <div id="sta1">
   <b>DIV #5</b>
-  <br />no positioning
-  <br />z-index: 8;
+  <br />no positioning <br />z-index: 8;
 </div>
 ```
 

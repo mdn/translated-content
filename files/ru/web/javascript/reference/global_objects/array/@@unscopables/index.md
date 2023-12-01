@@ -29,7 +29,7 @@ arr[Symbol.unscopables]
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('что-то');
+  keys.push("что-то");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);

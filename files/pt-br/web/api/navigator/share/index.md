@@ -16,6 +16,7 @@ var sharePromise = navigator.share(data);
 ### Parâmetros
 
 - `data`
+
   - : Um objeto que contém dados para compartilhar. Pelo menos um dos seguintes campos deve ser especificado. As opções disponíveis são:
 
     - `url`: Um {{domxref ("USVString")}} representando uma URL a ser compartilhada.
@@ -32,34 +33,32 @@ Em nosso teste de [compartilhamento na Web](https://mdn.github.io/dom-examples/w
 
 ```js
 const shareData = {
-  title: 'MDN',
-  text: 'Aprenda desenvolvimento web no MDN!',
-  url: 'https://developer.mozilla.org',
-}
+  title: "MDN",
+  text: "Aprenda desenvolvimento web no MDN!",
+  url: "https://developer.mozilla.org",
+};
 
-const btn = document.querySelector('button');
-const resultPara = document.querySelector('.result');
+const btn = document.querySelector("button");
+const resultPara = document.querySelector(".result");
 
 // Deve ser acionado algum tipo de "ativação do usuário"
-btn.addEventListener('click', async () => {
+btn.addEventListener("click", async () => {
   try {
-    await navigator.share(shareData)
-  } catch(err) {
-    resultPara.textContent = 'Error: ' + e
+    await navigator.share(shareData);
+  } catch (err) {
+    resultPara.textContent = "Error: " + e;
   }
-  resultPara.textContent = 'MDN compartilhado com sucesso!'
+  resultPara.textContent = "MDN compartilhado com sucesso!";
 });
 ```
 
 ## Especificações
 
-| Especificação                                                            | Status                               | Comment |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Share API','#share-method','share()')}} | {{Spec2('Web Share API')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Navigator.share")}}
+{{Compat}}
 
 ## Veja também
 

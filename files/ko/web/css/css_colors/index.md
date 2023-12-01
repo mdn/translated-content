@@ -33,10 +33,6 @@ slug: Web/CSS/CSS_colors
 
 {{Specifications}}
 
-## 브라우저 호환성
-
-{{Compat}}
-
 ## 같이 보기
 
 - 다른 사양의 일부 색상 관련 속성 : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

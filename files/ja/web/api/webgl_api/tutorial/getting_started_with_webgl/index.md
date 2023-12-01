@@ -11,7 +11,7 @@ WebGL のプログラムは JavaScript で記述する制御コードと、コ�
 
 この記事では、 WebGL の基礎を紹介します。ここでは、三次元グラフィックスに関する数学的な知識を理解していることを前提とします。よって、 OpenGL そのものの説明は行いません。
 
-このチュートリアルで使用するコード例は、[GitHub の webgl-examples リポジトリー](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial)で確認できます。
+このチュートリアルで使用するコード例は、[GitHub の webgl-examples リポジトリー](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial)で確認できます。
 
 この一連の記事が WebGL 自体を紹介していることに注意してください。ただし [THREE.js](https://threejs.org/) など、 WebGL の機能をカプセル化する多くのフレームワークが利用でき、三次元アプリケーションとゲームを簡単に構築することが可能です。
 
@@ -40,7 +40,9 @@ function main() {
 
   // WebGL が使用可能で動作している場合にのみ続行します
   if (gl === null) {
-    alert("WebGL を初期化できません。ブラウザーまたはマシンが対応していない可能性があります。");
+    alert(
+      "WebGL を初期化できません。ブラウザーまたはマシンが対応していない可能性があります。",
+    );
     return;
   }
 
@@ -61,9 +63,9 @@ window.onload = main;
 
 この時点で、 WebGL コンテキストが正常に初期化されるのに十分なコードがあり、コンテンツを受信する準備ができて待機している大きな黒い空のボックスになります。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[コードを確認する](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1) | [新しいページでデモを開く](https://mdn.github.io/webgl-examples/tutorial/sample1/)
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## 関連情報
 

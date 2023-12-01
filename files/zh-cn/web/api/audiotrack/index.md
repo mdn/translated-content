@@ -24,14 +24,14 @@ slug: Web/API/AudioTrack
 
 ## 使用说明
 
-要获取`AudioTrack`给定媒体元素，请使用元素的{{domxref("HTMLMediaElement.audioTracks","audioTracks")}}属性，该属性返回{{domxref("AudioTrackList")}}对象，您可以从中获取媒体中包含的各个曲目：
+要获取`AudioTrack`给定媒体元素，请使用元素的{{domxref("HTMLMediaElement.audioTracks","audioTracks")}}属性，该属性返回{{domxref("AudioTrackList")}}对象，你可以从中获取媒体中包含的各个曲目：
 
 ```js
 var el = document.querySelector("video");
 var tracks = el.audioTracks;
 ```
 
-然后，您可以使用数组语法或{{jsxref("Array.forEach","forEach()")}}等函数访问媒体的各个轨道。
+然后，你可以使用数组语法或{{jsxref("Array.forEach","forEach()")}}等函数访问媒体的各个轨道。
 
 第一个示例获取媒体上的第一个音轨：
 

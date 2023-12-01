@@ -19,7 +19,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         进一步了解
         WAI-ARIA，明白他如何提供有效的语义，以便接下来在有需要的时候提供无障碍优化。
@@ -84,7 +84,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 1. 文章到现在，可以看得出浏览器端对于无障碍的支持做的很好。 [caniuse.com](http://caniuse.com/#feat=wai-aria) 这一网站显示全球浏览器支持 WAI-ARIA 的比率达到了 88%。
 2. 屏幕阅读器支持无障碍特性反而没达到这个水平，但是主流的屏幕阅读器做到了。你可以通过查看 Powermapper 来了解支持级别 [WAI-ARIA Screen reader compatibility](http://www.powermapper.com/tests/screen-readers/aria/) 。
 
-我们目的不是详细介绍所有的 WAI-ARIA 特性，以及它大部分支持的细节。相反，介绍最主要的 WAI-ARIA 功能。我们没有提到的任何支持细节，您可以假定该特性得到了良好的支持。我们将清楚地介绍例外情况。
+我们目的不是详细介绍所有的 WAI-ARIA 特性，以及它大部分支持的细节。相反，介绍最主要的 WAI-ARIA 功能。我们没有提到的任何支持细节，你可以假定该特性得到了良好的支持。我们将清楚地介绍例外情况。
 
 > **备注：** 一些 JavaScript 库支持 WAI-ARIA，意味着生成 UI 界面时，例如复杂的表单控件，他们会添加 ARIA 属性来优化它的无障碍特性。如果你再找一些第三方 JavaScript 解决方案来进行快速的 UI 开发，当你做选择的时候，必须重视 UI 小部件的无障碍。一个良好的例子就是 jQuery UI (请看 [About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/) 还有 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html)。
 
@@ -197,7 +197,7 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 
 问题在于现代 Web 应用程序通常不仅仅是静态文本——它们往往有很多动态更新内容，即通过 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)，[Fetch](/zh-CN/docs/Web/API/Fetch_API) 或[DOM API](/zh-CN/docs/Web/API/Document_Object_Model) 等机制重新加载整个页面的内容。这些有时被称为**实时区域**。
 
-我们来看一个小例子—— [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html))。在这个例子我们哟一个小的随机引用块：
+我们来看一个小例子——[aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html)（[在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)）。在这个例子我们引用一个小的随机引用块：
 
 ```html
 <section>
@@ -216,7 +216,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 这当然是可行的，但是对于无障碍可不友善——这种内容变化是不会被屏幕阅读器察觉到的，所以用户不会发现发生了什么。这是一个简单的例子，但你可以想象一下：如果你开发的一个复杂 UI 而且内容频繁变化的应用，例如聊天室，或者一个策略游戏的界面，或者一个实时更新的购物车展示。如果没有某种方式提示用户有内容更新，那就不可能以任何有效的方式来使用应用。
 
-幸运的是，WAI-ARIA 提供了一种有效的机制来发起提示 —— [`aria-live`](https://www.w3.org/TR/wai-aria-1.1/#aria-live)。将此应用于元素会让屏幕阅读器读出更新的内容。读取内容的紧急程度取决于属性值：
+幸运的是，WAI-ARIA 提供了一种有效的机制来发起提示——[`aria-live`](https://www.w3.org/TR/wai-aria-1.1/#aria-live)。将此应用于元素会让屏幕阅读器读出更新的内容。读取内容的紧急程度取决于属性值：
 
 - `off`: 默认值，更新不会提醒。
 - `polite`: 只有用户空闲的情况下提醒。
@@ -235,7 +235,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 > **备注：** 当你用 `file://` 协议头来发 `XMLHttpRequest` 大部分浏览器会抛出 security exception。所以你可能要设置一个 web 服务器来作为请求源，例如，[使用 GitHub](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或者设置一个本地服务器 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
-这里有一个附加的考虑—— 只读取更新的文本位。如果我们总是读出标题可能会很好，这样用户就可以记住正在读出的内容。为了能做到这个，我们增加了 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 给 section。再次更新 `<section>`，像这样：
+这里有一个附加的考虑——只读取更新的文本位。如果我们总是读出标题可能会很好，这样用户就可以记住正在读出的内容。为了能做到这个，我们增加了 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 给 section。再次更新 `<section>`，像这样：
 
 ```html
 <section aria-live="assertive" aria-atomic="true"></section>
@@ -251,7 +251,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 正如上下文中其他几处讨论的，HTML 在无障碍方面的关键优势之一是按钮，表单控件和链接等功能的内置键盘无障碍。平时你可以使用 Tab 键在控件之间移动，使用 Enter / Return 键选择或激活控件，偶尔也可以根据需要使用其他控件（例如上下光标在`<select>` 框中的选项之间移动）。
 
-但是在一些时候，你最终还是得编写代码去使用非语义元素作为按钮（或其他类型的控件），或者使用可聚焦控件来达到错误的目的。您可能正在尝试修复一些您之前的错误代码，或者您可能正在构建某种需要它的复杂小部件。
+但是在一些时候，你最终还是得编写代码去使用非语义元素作为按钮（或其他类型的控件），或者使用可聚焦控件来达到错误的目的。你可能正在尝试修复一些你之前的错误代码，或者你可能正在构建某种需要它的复杂小部件。
 
 在让不可聚焦代码可聚焦这一方面，WAI-ARIA 用一些新的值来扩展了`tabindex` 的属性：
 
@@ -267,7 +267,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 #### 表单验证和错误显示
 
-首先，让我们在此访问之前的文章（重读 [Keeping it unobtrusive](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)）。在本节的最后，我们展示了当您尝试提交表单时，如果存在验证错误，我们在错误消息框中包含了一些 ARIA 属性：
+首先，让我们在此访问之前的文章（重读 [Keeping it unobtrusive](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)）。在本节的最后，我们展示了当你尝试提交表单时，如果存在验证错误，我们在错误消息框中包含了一些 ARIA 属性：
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
@@ -355,7 +355,7 @@ function toggleMusician(bool) {
 </div>
 ```
 
-这时候再用屏幕阅读器，这次你会听到短语 "Click me!, button" ——舒服了。
+这时候再用屏幕阅读器，这次你会听到短语“Click me!, button”——舒服了。
 
 > **备注：** 别忘了无论如何用正确的语义化元素是最佳选择。如果你想创建一个按钮，你可用 {{htmlelement("button")}} 元素，你应该用 {{htmlelement("button")}} 元素！
 
@@ -365,9 +365,9 @@ function toggleMusician(bool) {
 
 让我们来看看我们自己的一个例子。我们将返回到我们简单的绝对定位选项卡界面（请参阅我们的 CSS 和 JavaScript 无障碍的文章的 [Hiding things](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) 段落），你可以在 [Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中找到它（[源码地址](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）。
 
-这个例子在键盘无障碍方面运行良好 —— 你可以愉快地在不同选项卡之间进行 tab 并选择它们然后显示选项卡内容。它也是相当容易访问的 —— 你可以滚动浏览内容并使用标题进行导航，即使你无法看到屏幕上发生的事情。然而，内容并不明显 —— 屏幕阅读器目前将内容报告为链接列表，以及一些内容包含三个标题。它不会让你知道内容之间的关系。为用户提供有关内容结构的更多线索总是好的。
+这个例子在键盘无障碍方面运行良好——你可以愉快地在不同选项卡之间进行 tab 并选择它们然后显示选项卡内容。它也是相当容易访问的——你可以滚动浏览内容并使用标题进行导航，即使你无法看到屏幕上发生的事情。然而，内容并不明显——屏幕阅读器目前将内容报告为链接列表，以及一些内容包含三个标题。它不会让你知道内容之间的关系。为用户提供有关内容结构的更多线索总是好的。
 
-为了优化它，我们创建了一个新的例子，名为： [aria-tabbed-info-box.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-tabbed-info-box.html) ([看在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). 我们更新了选项卡式界面的结构，如下所示：
+为了优化它，我们创建了一个新的示例，名为 [`aria-tabbed-info-box.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-tabbed-info-box.html)（[查看在线运行的实例](http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)）。我们更新了选项卡式界面的结构，如下所示：
 
 ```html
 <ul role="tablist">
@@ -406,7 +406,7 @@ function toggleMusician(bool) {
 </div>
 ```
 
-> **备注：** 这里最明显的变化是我们删除了最初在示例中出现的链接，并且只使用了列表项作为选项卡 - 这样做是因为它使屏幕阅读器用户不那么容易混淆（链接并不会跳转，它们只更改视图），它允许 大小修改/位置变化 一类的 feature 更好地工作 —— 当这些被放在链接上时，浏览器始终报告"1 of 1"，而不是"1 of 3 "，"2 of 3"等
+> **备注：** 这里最明显的变化是我们删除了最初在示例中出现的链接，并且只使用了列表项作为选项卡——这样做是因为它使屏幕阅读器用户不那么容易混淆（链接并不会跳转，它们只更改视图），它允许大小修改/位置变化一类的特性更好地工作——当这些被放在链接上时，浏览器始终报告“1 of 1”，而不是“1 of 3”、“2 of 3”等。
 
 以下刚刚用上的新特性：
 
@@ -414,7 +414,7 @@ function toggleMusician(bool) {
 - [`aria-selected`](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) — 定义了 tab 当前正在被选中。和 tabs 被用户选中不同，这种值一般是由 JavaScript 修改。
 - [`aria-hidden`](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden) — 对屏幕阅读器隐藏一些元素，和 tabs 被用户选中不同，这种值一般是由 JavaScript 修改。
 - `tabindex="0"` — 当我们删除链接时，我们需要为列表项提供此属性，以便为其提供键盘焦点。（为没有 tabindex 特性的元素也提供 tabindex 特性）
-- [`aria-setsize`](https://www.w3.org/TR/wai-aria-1.1/#aria-setsize) — 此属性允许您指定屏幕阅读器元素是某个系列的一部分，以及该系列具有多少项。
+- [`aria-setsize`](https://www.w3.org/TR/wai-aria-1.1/#aria-setsize) — 此属性允许你指定屏幕阅读器元素是某个系列的一部分，以及该系列具有多少项。
 - [`aria-posinset`](https://www.w3.org/TR/wai-aria-1.1/#aria-posinset) — 这个属性允许你设置一个元素在一个系列中的位置，随着 `aria-setsize`，他告诉屏幕阅读器（用于设置文件目录树视图）足够的信息去告诉你现在在 item "1 of 3" 位置等。大部分情况下，浏览器是可以从 DOM 层次结构中推断出这些信息，但它肯定有助于提供更多线索。
 
 在我们的测试中，这个新结构确实有助于改善整体情况。这些选项卡现在被识别为选项卡（例如，屏幕阅读器说出「选项卡」），所选选项卡由“选择”表示，并使用选项卡名称读出，屏幕阅读器还会告诉你当前所在的选项卡编号。此外，由于`aria-hidden` 设置（只有非隐藏的选项卡有 `aria-hidden="false"` 设置），非隐藏内容是唯一可以向下导航的内容，这意味着所选内容更容易找到。

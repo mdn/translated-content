@@ -39,10 +39,10 @@ var howMany = 10;
 
 alert("howMany.toString() is " + howMany.toString()); // displays "10"
 
-alert("45 .toString() is " + 45 .toString()); //displays "45"
+alert("45 .toString() is " + (45).toString()); //displays "45"
 
 var x = 7;
-alert(x.toString(2))      // Displays "111"
+alert(x.toString(2)); // Displays "111"
 ```
 
 ## Vea También

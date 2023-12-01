@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/class
 
 {{jsSidebar("Operators")}}
 
-**`class`** 关键字可用于在表达式中定义类。 类似于[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)，类表达式可以是命名的，也可以是匿名的。如果命名，则类的名称只能在类体内部才能访问到。
+**`class`** 关键字可用于在表达式中定义类。类似于[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)，类表达式可以是命名的，也可以是匿名的。如果命名，则类的名称只能在类体内部才能访问到。
 
 {{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
 

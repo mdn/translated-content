@@ -124,10 +124,10 @@ CSS は要素に `style` 属性を用いることで、インラインで挿入�
 スタイルをこのような領域に移すと、大きな要素グループでのプロパティの調整が容易になります。ロールオーバー効果を作るための **`:hover` 擬似クラス** などを用いることもできます。
 
 ```css
- #MyRect:hover {
-   stroke: black;
-   fill: blue;
- }
+#MyRect:hover {
+  stroke: black;
+  fill: blue;
+}
 ```
 
 CSS 規則を外部スタイルシートで指定するのに、[ふつうの XML スタイルシート構文](https://www.w3.org/TR/xml-stylesheet/)を使用することもできます。

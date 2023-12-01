@@ -7,7 +7,7 @@ slug: Web/Manifest
 
 Web App manifest 是一個 JSON 格式的文件，它提供了應用程式相關的資訊（像是名稱、作者、圖示、描述）。 manifest 的功用是將 Web 應用程式安裝到設備的主畫面，為使用者提供更快速的訪問和更豐富的體驗。
 
-Web App manifests 是屬於 [progressive web apps](/zh-TW/docs/Web/Apps/Progressive) 的 Web 技術系列的一部分， 這是一個能不透過 App 商店就能被安裝到設備主畫面的 Web 應用程式，伴隨著其他功能，比如離線使用和通知的接收發送。
+Web App manifests 是屬於 [progressive web apps](/zh-TW/docs/Web/Progressive_web_apps) 的 Web 技術系列的一部分， 這是一個能不透過 App 商店就能被安裝到設備主畫面的 Web 應用程式，伴隨著其他功能，比如離線使用和通知的接收發送。
 
 ## 部署 manifest
 
@@ -126,7 +126,7 @@ Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/
 | `minimal-ui` | 這看起來和感覺上就像是獨立應用程式一樣，但將有控制導覽列 UI 元素的最小設置，元素會因瀏覽器而不同。                                                                             | `browser`         |
 | `browser`    | 預設值。 應用程式如常規般地被開啟於瀏覽器分頁或新視窗，依瀏覽器與平台而不同。                                                                                                  | (None)            |
 
-> **備註：** 您能根據顯示模式選擇性地將 CSS [display-mode](/docs/Web/CSS/@media/display-mode) media 功能運用於您的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。
+> **備註：** 你能根據顯示模式選擇性地將 CSS [display-mode](/docs/Web/CSS/@media/display-mode) media 功能運用於你的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。
 
 ### `icons`
 

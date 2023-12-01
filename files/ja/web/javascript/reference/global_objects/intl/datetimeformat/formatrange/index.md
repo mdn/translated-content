@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
 ## 構文
 
 ```js
-formatRange(startDate, endDate)
+formatRange(startDate, endDate);
 ```
 
 ## 例
@@ -31,11 +31,11 @@ let date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
 // > 'Sat, 20 Jan 2007 10:00:00 GMT'
 
 let fmt1 = new Intl.DateTimeFormat("en", {
-    year: '2-digit',
-    month: 'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric'
+  year: "2-digit",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
 });
 console.log(fmt1.format(date1));
 console.log(fmt1.formatRange(date1, date2));
@@ -45,9 +45,9 @@ console.log(fmt1.formatRange(date1, date3));
 // > '1/10/07, 10:00 AM – 1/20/07, 10:00 AM'
 
 let fmt2 = new Intl.DateTimeFormat("en", {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
+  year: "numeric",
+  month: "short",
+  day: "numeric",
 });
 console.log(fmt2.format(date1));
 console.log(fmt2.formatRange(date1, date2));

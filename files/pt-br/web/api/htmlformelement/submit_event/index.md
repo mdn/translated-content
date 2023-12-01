@@ -57,9 +57,9 @@ function logSubmit(event) {
   event.preventDefault();
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("submit", logSubmit);
 ```
 
 ### Resultado
@@ -70,7 +70,7 @@ form.addEventListener('submit', logSubmit);
 
 {{Specifications}}
 
-## Compatibilidade com os navegadores
+## Compatibilidade com navegadores
 
 {{Compat}}
 

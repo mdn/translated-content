@@ -31,12 +31,12 @@ n.constructor === Number; // true
 El siguiente ejemplo crea un prototipo, `Tree`, y un objeto de este tipo, `theTree`. El ejemplo muestra entonces la propiedad `constructor` para el objeto `theTree`.
 
 ```js
-function Tree (name) {
-   this.name = name;
+function Tree(name) {
+  this.name = name;
 }
 
-var theTree = new Tree( "Redwood" );
-console.log( "theTree.constructor is " + theTree.constructor );
+var theTree = new Tree("Redwood");
+console.log("theTree.constructor is " + theTree.constructor);
 ```
 
 Este ejemplo muestra la siguiente salida:
@@ -52,34 +52,38 @@ theTree.constructor is function Tree (name) {
 El siguiente ejemplo demuestra como modificar el valor del constructor de objetos genéricos. Solo `true`, `1` y `"test"` no serán afectados ya que ellos tienen constructores nativos de solo lectura. Este ejemplo demuestra que no siempre es seguro confiar en la propiedad constructor de un objeto.
 
 ```js
-function Type () {}
+function Type() {}
 
 var types = [
-    new Array(),
-    [],
-    new Boolean(),
-    true,             // no cambia
-    new Date(),
-    new Error(),
-    new Function(),
-    function () {},
-    Math,
-    new Number(),
-    1,                // no cambia
-    new Object(),
-    {},
-    new RegExp(),
-    /(?:)/,
-    new String(),
-    "test"            // no cambia
+  new Array(),
+  [],
+  new Boolean(),
+  true, // no cambia
+  new Date(),
+  new Error(),
+  new Function(),
+  function () {},
+  Math,
+  new Number(),
+  1, // no cambia
+  new Object(),
+  {},
+  new RegExp(),
+  /(?:)/,
+  new String(),
+  "test", // no cambia
 ];
 
-for( var i = 0; i < types.length; i++ ) {
-    types[i].constructor = Type;
-    types[i] = [ types[i].constructor, types[i] instanceof Type, types[i].toString() ];
+for (var i = 0; i < types.length; i++) {
+  types[i].constructor = Type;
+  types[i] = [
+    types[i].constructor,
+    types[i] instanceof Type,
+    types[i].toString(),
+  ];
 }
 
-console.log( types.join( "\n" ) );
+console.log(types.join("\n"));
 ```
 
 ## Especificaciones

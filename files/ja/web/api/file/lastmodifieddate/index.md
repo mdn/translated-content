@@ -21,9 +21,7 @@ l10n:
 const fileInput = document.getElementById("myfileinput");
 
 for (const file of fileInput.files) {
-  console.log(
-    `${file.name} の最終更新日は ${file.lastModifiedDate}`,
-  );
+  console.log(`${file.name} の最終更新日は ${file.lastModifiedDate}`);
 }
 ```
 

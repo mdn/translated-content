@@ -72,8 +72,14 @@ float: unset;
 ### CSS
 
 ```css
-div { border: solid red;  max-width: 70ex; }
-h4  { float: left;  margin: 0; }
+div {
+  border: solid red;
+  max-width: 70ex;
+}
+h4 {
+  float: left;
+  margin: 0;
+}
 ```
 
 ### HTML
@@ -81,10 +87,9 @@ h4  { float: left;  margin: 0; }
 ```html
 <div>
   <h4>HELLO!</h4>
-  This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text. This is some text.
 </div>
 ```
 
@@ -105,7 +110,9 @@ h4  { float: left;  margin: 0; }
 이 예제에서 float을 지우는 가장 간단한 방법은 우리가 왼쪽으로 정렬되는 지 확인하고 싶은 새 머릿글에 {{Cssxref("clear")}} 속성을 추가하는 것입니다:
 
 ```css
-h2.secondHeading { clear: both; }
+h2.secondHeading {
+  clear: both;
+}
 ```
 
 그러나, 이 방법은 우리가 머릿글이 가로로 옆에 계속 보이기를 원하는 같은 블록 형식 문맥([block formatting context](/ko/docs/Web/Guide/CSS/Block_formatting_context)) 내에 다른 요소가 없을 때만 동작합니다. 우리 `h2` 좌우로 부동되는 사이드바(sidebar)인 형제(sibling)가 있다면, `clear` 사용은 강제로 머릿글이 두 사이드바 아래로 나타나게 하고 이는 아마 우리가 원하는 게 아닙니다.
@@ -113,7 +120,10 @@ h2.secondHeading { clear: both; }
 그들 아래 요소의 float을 지우는 게 선택사항이 아니라면, 다른 방법(approach)은 부동 요소가 담긴 컨테이너의 블록 형식 문맥을 제한하는 겁니다. 다시 위 예제를 참조하면, 빨간 박스 셋은 모두 `p` 요소 내에 있는 걸로 보입니다. 우리는 박스를 포함하도록 늘어나지만, 그 하단 밖(밑)으로 사라지지 않게 `hidden` 혹은 `auto` 로 p의 {{Cssxref("overflow")}} 속성을 설정할 수 있습니다:
 
 ```css
-p.withRedBoxes { overflow: hidden; height: auto; }
+p.withRedBoxes {
+  overflow: hidden;
+  height: auto;
+}
 ```
 
 > **참고:** **주의:** `overflow` 를 `scroll` 로 설정하면 부동된 모든 자식(child) 요소도 포함합니다. 하지만 스크롤바가 콘텐츠의 높이에 상관없이 보입니다. 그 컨테이너가 콘텐츠를 수용하기 위해 늘어야(grow) 함을 나타내는 기본(default)임에도 불구하고, 여기에서 우리는 `height` 를 `auto` 로 설정하고 있습니다.

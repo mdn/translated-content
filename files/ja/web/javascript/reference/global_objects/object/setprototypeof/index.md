@@ -193,7 +193,7 @@ if (!Object.setPrototypeOf) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.setPrototypeOf")}}
+{{Compat}}
 
 ## 関連情報
 

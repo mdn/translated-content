@@ -5,21 +5,21 @@ slug: Learn/Forms
 
 {{LearnSidebar}}
 
-这个模块提供了一系列帮助您掌握 web 表单的文章。web 表单是与用户交互的强大工具，它们经常用于收集用户的数据，或允许他们控制用户界面。然而，由于历史和技术上的原因，如何充分发挥它们的潜力并不总是显而易见的。在下方列出的文章中，我们将介绍 Web 表单的各个方面：HTML 结构、样式、验证表单数据，以及提交数据到服务器。
+这个模块提供了一系列帮助你掌握 web 表单的文章。web 表单是与用户交互的强大工具，它们经常用于收集用户的数据，或允许他们控制用户界面。然而，由于历史和技术上的原因，如何充分发挥它们的潜力并不总是显而易见的。在下方列出的文章中，我们将介绍 Web 表单的各个方面：HTML 结构、样式、验证表单数据，以及提交数据到服务器。
 
 > **标注：**
 >
 > #### 想成为一名前端网页开发者？
 >
-> 我们整理了一个课程，其中包含您实现目标所需的所有基本内容。
+> 我们整理了一个课程，其中包含你实现目标所需的所有基本内容。
 >
 > [**开始使用**](/zh-CN/docs/Learn/Front-end_web_developer)
 
-## 预备知识
+## 前提
 
-在开始这个模块之前，您至少应该熟悉[对 HTML 的介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)系列。此时此刻，您应该会发现[基本指南](#基本指南)很容易理解，并且能够使用我们的[原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)指南。
+在开始这个模块之前，你至少应该熟悉[对 HTML 的介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)系列。此时此刻，你应该会发现[基本指南](#基本指南)很容易理解，并且能够使用我们的[原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)指南。
 
-然而，掌握表单需要的不仅仅是 HTML 知识——你还需要学习一些特定的技术来设置表单控件的样式，并且需要一些编码知识来处理诸如验证和创建自定义表单控件之类的事情。因此，在您查看下面列出的其他部分之前，我们建议你先离开，并学习一些 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
+然而，掌握表单需要的不仅仅是 HTML 知识——你还需要学习一些特定的技术来设置表单控件的样式，并且需要一些编码知识来处理诸如验证和创建自定义表单控件之类的事情。因此，在你查看下面列出的其他部分之前，我们建议你先离开，并学习一些 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
 
 以上内容明确地说明了为什么我们将 web 表单独立放在一个模块中，而不是将其与 HTML、CSS 和 JavaScript 这些模块放在一起——表单元素比绝大多数其他的 HTML 元素都要复杂，并且它们还需要与相关的 CSS 和 JavaScript 技术紧密集合才能充分利用它们。
 
@@ -64,7 +64,7 @@ slug: Learn/Forms
 - [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
   - : 在某些情况下，可能出于样式或功能的原因，原生表单部件无法提供你所需要的东西。在这种情况下，你可能需要使用原生 HTML 构建自己的表单小部件。本文将讲述一个实例，说明你将如何做到这一点，以及在实际操作时需要注意的事项。
 - [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过定制的 JavaScript 发送它，而不是标准的表单提交。它还说明了为什么要这么做，以及这样做的意义。（请参阅[使用 FormData 对象](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)。）
+  - : 本文将讨论如何使用表单来构建 HTTP 请求，并通过定制的 JavaScript 发送它，而不是标准的表单提交。它还说明了为什么要这么做，以及这样做的意义。（请参阅[使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)。）
 - [表单控件的 CSS 属性兼容性表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
   - : 最后一篇文章提供了一个方便的参考，以确定 CSS 属性与表单元素的兼容性关系。
 

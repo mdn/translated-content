@@ -14,18 +14,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ### Пример: использование `lineNumber`
 
 ```js
-var e = new Error('Невозможно разобрать входные данные');
+var e = new Error("Невозможно разобрать входные данные");
 throw e;
-console.log(e.lineNumber) // 2
+console.log(e.lineNumber); // 2
 ```
 
 ### Пример: альтернативный пример с использованием события `error`
 
 ```js
-window.addEventListener('error', function(e) {
+window.addEventListener("error", function (e) {
   console.log(e.lineno); // 5
 });
-var e = new Error('Невозможно разобрать входные данные');
+var e = new Error("Невозможно разобрать входные данные");
 throw e;
 ```
 

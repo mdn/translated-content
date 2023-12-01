@@ -10,7 +10,7 @@ slug: Learn/CSS/Styling_text/Fundamentals
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的电脑操作，HTML 基础 (学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -22,7 +22,7 @@ slug: Learn/CSS/Styling_text/Fundamentals
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>了解在网页上设计文本所需的基本属性和技术。</td>
     </tr>
   </tbody>
@@ -155,7 +155,7 @@ p {
     <tr>
       <td>Trebuchet MS</td>
       <td>sans-serif</td>
-      <td>您应该小心使用这种字体——它在移动操作系统上并不广泛。</td>
+      <td>你应该小心使用这种字体——它在移动操作系统上并不广泛。</td>
     </tr>
     <tr>
       <td>Verdana</td>
@@ -456,7 +456,7 @@ text-shadow: 4px 4px 5px red;
 
 #### 多种阴影
 
-您可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本，例如：
+你可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本，例如：
 
 ```css
 text-shadow:

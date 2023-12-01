@@ -34,17 +34,17 @@ pause.onclick = () => {
     mediaRecorder.resume();
     // 記録を再開
   }
-}
+};
 
 mediaRecorder.onpause = () => {
   // 記録の一時停止に
   // 応答して何かをする
-}
+};
 
 mediaRecorder.onresume = () => {
   // 記録の再開に
   // 応答して何かをする
-}
+};
 ```
 
 ## インスタンスプロパティ

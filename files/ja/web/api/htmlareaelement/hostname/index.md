@@ -23,7 +23,7 @@ l10n:
     id="area1"
     shape="rect"
     coords="184,6,253,27"
-    href="/en-US/docs/HTMLAreaElement"
+    href="/ja/docs/HTMLAreaElement"
     target="_blank"
     alt="Mozilla" />
   <area

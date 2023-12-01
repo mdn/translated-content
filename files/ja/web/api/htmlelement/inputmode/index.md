@@ -31,7 +31,7 @@ l10n:
   - : 検索入力に最適化された仮想キーボードです。
     例えば、[リターン/送信キー](https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute)は「検索」と表示されているかもしれません。
 - `tel`
-  - : 電話機のキーパッド入力で、0 ～ 9 の数字、アスタリスク (<kbd>*</kbd>)、ナンバー (<kbd>#</kbd>) キーを含めるために使用します。
+  - : 電話機のキーパッド入力で、0 ～ 9 の数字、アスタリスク (<kbd>\*</kbd>)、ナンバー (<kbd>#</kbd>) キーを含めるために使用します。
 - `text`
   - : ユーザーの現在のロケールに対応した標準入力キーボードです。
 - `url`

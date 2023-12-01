@@ -159,11 +159,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 ```html
 <form>
   <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="サイトを検索..." />
+    <input type="search" id="mySearch" name="q" placeholder="サイトを検索..." />
     <button>検索</button>
   </div>
 </form>

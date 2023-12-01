@@ -5,7 +5,7 @@ slug: Web/CSS/::part
 
 {{CSSRef}}
 
-**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つ[シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内の要素を表します。
+**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つ[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内の要素を表します。
 
 ```css
 custom-element::part(foo) {
@@ -23,18 +23,20 @@ custom-element::part(foo) {
 
 ```html
 <template id="tabbed-custom-element">
-<style type="text/css">
-*, ::before, ::after {
-  box-sizing: border-box;
-  padding: 1rem;
-}
-:host {
-  display: flex;
-}
-</style>
-<div part="tab active">Tab 1</div>
-<div part="tab">Tab 2</div>
-<div part="tab">Tab 3</div>
+  <style type="text/css">
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+      padding: 1rem;
+    }
+    :host {
+      display: flex;
+    }
+  </style>
+  <div part="tab active">Tab 1</div>
+  <div part="tab">Tab 2</div>
+  <div part="tab">Tab 3</div>
 </template>
 
 <tabbed-custom-element></tabbed-custom-element>
@@ -74,13 +76,16 @@ tabbed-custom-element::part(active) {
 
 ```js
 let template = document.querySelector("#tabbed-custom-element");
-globalThis.customElements.define(template.id, class extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(template.content);
-  }
-});
+globalThis.customElements.define(
+  template.id,
+  class extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({ mode: "open" });
+      this.shadowRoot.appendChild(template.content);
+    }
+  },
+);
 ```
 
 ### 結果

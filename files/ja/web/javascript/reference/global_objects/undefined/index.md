@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 ## 構文
 
 ```js
-undefined
+undefined;
 ```
 
 ## 解説
@@ -31,15 +31,15 @@ undefined
 > //こんなことはしないこと！
 >
 > // "foo string" をログ出力する
-> (function() {
->   var undefined = 'foo';
+> (function () {
+>   var undefined = "foo";
 >   console.log(undefined, typeof undefined);
 > })();
 >
 > // "foo string" をログ出力する
-> (function(undefined) {
+> (function (undefined) {
 >   console.log(undefined, typeof undefined);
-> })('foo');
+> })("foo");
 > ```
 
 ## 例
@@ -52,8 +52,7 @@ undefined
 var x;
 if (x === undefined) {
   // ここの文は実行される
-}
-else {
+} else {
   // ここの文は実行されない
 }
 ```
@@ -68,8 +67,8 @@ else {
 
 ```js
 var x;
-if (typeof x === 'undefined') {
-   // ここの文は実行される
+if (typeof x === "undefined") {
+  // ここの文は実行される
 }
 ```
 
@@ -77,12 +76,13 @@ if (typeof x === 'undefined') {
 
 ```js
 // 直前まで x は宣言されていない
-if (typeof x === 'undefined') { // エラーなしで true と評価される
-   // ここの文は実行される
+if (typeof x === "undefined") {
+  // エラーなしで true と評価される
+  // ここの文は実行される
 }
 
-if (x === undefined) { // ReferenceError が発生
-
+if (x === undefined) {
+  // ReferenceError が発生
 }
 ```
 
@@ -91,7 +91,7 @@ if (x === undefined) { // ReferenceError が発生
 グローバルスコープは{{jsxref("globalThis", "グローバルオブジェクト", "", 1)}}に結びつけられているので、グローバルコンテキストに変数が存在するかどうかのチェックは、<em>グローバルオブジェクト</em>にプロパティが存在することを、 {{jsxref("Operators/in", "in")}} 演算子を使用してチェックすることで行うことができます。
 
 ```js
-if ('x' in window) {
+if ("x" in window) {
   // x がグローバルに定義されている場合のみ、ここの文を実行
 }
 ```

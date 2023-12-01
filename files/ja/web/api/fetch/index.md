@@ -1,8 +1,9 @@
 ---
-title: fetch()
+title: fetch() グローバル関数
+short-title: fetch()
 slug: Web/API/fetch
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: bb75692ff9b82320169ed3f27fcc5136c86b8d21
 ---
 
 {{APIRef("Fetch API")}}
@@ -40,14 +41,22 @@ fetch(resource, options)
   - : リクエストに適用したいカスタム設定を含むオブジェクト。可能なオプションは以下の通りです。
 
     - `method`
-      - : リクエストするメソッド、`GET`、`POST` など。なお、 {{httpheader("Origin")}} ヘッダーは {{HTTPMethod("HEAD")}} または {{HTTPMethod("GET")}} メソッドの読み取りリクエストでは設定されません。
+      - : リクエストするメソッド、`"GET"`、`"POST"` など。既定値は `"GET"` です。
+        なお、 {{httpheader("Origin")}} ヘッダーは {{HTTPMethod("HEAD")}} または {{HTTPMethod("GET")}} メソッドの読み取りリクエストでは設定されません。
         (この動作は Firefox 65 で修正されました。 [Firefox バグ 1508661](https://bugzil.la/1508661) を参照)
+        [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) のメソッドのいずれかと大文字小文字を区別せずに照合する文字列は、自動的に大文字になります。
+        （`PATCH` のような）カスタムメソッドを使用したい場合は、自分で大文字にする必要があります。
     - `headers`
-      - : リクエストに追加したいヘッダーで、 {{domxref("Headers")}} オブジェクトまたは {{jsxref("String")}} 値を持つオブジェクトリテラルで指定してください。なお、[一部の名前は禁止されています](/ja/docs/Glossary/Forbidden_header_name)。
+
+      - : リクエストに追加したいヘッダーで、 {{domxref("Headers")}} オブジェクトまたは {{jsxref("String")}} 値を持つオブジェクトリテラルで指定してください。
+        なお、[一部の名前は禁止されています](/ja/docs/Glossary/Forbidden_header_name)。
+
+        > **メモ:** HTTP の [`Authorization`](/ja/docs/Web/HTTP/Headers/Authorization) ヘッダーがリクエストに追加される場合がありますが、そのリクエストがオリジン間でリダイレクトされた場合は削除されます。
+
     - `body`
       - : リクエストに追加したい本体です。これには {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 文字列オブジェクトまたはリテラル、 {{domxref("ReadableStream")}} オブジェクトなどが使用できます。これは最新の利用可能状況で、まだ実験的なものです。[互換性情報](/ja/docs/Web/API/Request#ブラウザーの互換性)を調べて、あなたがこれを使用できるかどうかを確認してください。メソッドが `GET` や `HEAD` の場合は使用できないので注意してください。
     - `mode`
-      - : リクエストで使用するモードです。例: `cors`, `no-cors`, `same-origin`
+      - : リクエストで使用する[モード](/ja/docs/Web/API/Request/mode)です。例えば `cors`、`no-cors`、`same-origin` などです。
     - `credentials`
 
       - : ブラウザーが資格情報を使用して何を行うか（[クッキー](/ja/docs/Web/HTTP/Cookies)、 [HTTP 認証](/ja/docs/Web/HTTP/Authentication)項目、 TLS クライアント証明書）を制御します。以下の文字列のうちの何れかでなければなりません。
@@ -68,10 +77,14 @@ fetch(resource, options)
 
       - : リダイレクトレスポンスを取り扱う方法を示します。
 
-        - `follow`: 自動的にリダイレクトに従います。他の方法が指定されていない限り、リダイレクトモードは `follow` に設定されます。
-        - `error`: リダイレクトが発生した場合は、エラーで中止します。
-        - `manual`: 呼び出し側は、レスポンスを別のコンテキストで処理する予定です。
-          詳しくは [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) を参照してください。
+        - `follow`
+          - : 自動的にリダイレクトを行います。他の方法が指定されていない限り、リダイレクトモードは `follow` に設定されます。
+        - `error`
+          - : リダイレクトが発生した場合は、エラーで中止します。
+        - `manual`
+          - : 呼び出し側は、レスポンスを別のコンテキストで処理する予定です。
+            詳しくは [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode) を参照してください。
+
     - `referrer`
       - : 文字列で、リクエストのリファラーを指定します。これは同じオリジンの URL、 `about:client`、空文字列のいずれかを取ることができます。
     - `referrerPolicy`
@@ -79,9 +92,17 @@ fetch(resource, options)
     - `integrity`
       - : リクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します（`sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=` など）。
     - `keepalive`
-      - : `keepalive` オプションは、ページの終了後のリクエストを許可するのに使用されます。`keepalive` フラグつきのフェッチは {{domxref("Navigator.sendBeacon()")}} API の置き換えです。
+      - : `keepalive` オプションは、ページの終了後のリクエストを許可するのに使用されます。 `keepalive` フラグつきのフェッチは {{domxref("Navigator.sendBeacon()")}} API の置き換えです。
     - `signal`
       - : {{domxref("AbortSignal")}} オブジェクトのインスタンスです。つまり {{domxref("AbortController")}} 経由でフェッチリクエストと通信したり望む場合には中止したりできます。
+    - `priority`
+      - : 同じ種類の他のリクエストに対する、この読み込みリクエストの優先度を指定します。以下の文字列のいずれかでなければなりません。
+        - `high`
+          - : 同じ種類の他のリクエストに対する優先度の高いフェッチリクエスト。
+        - `low`
+          - : 同じ種類の他のリクエストと相対した、優先度の低いフェッチリクエスト。
+        - `auto`
+          - : 同じ種類の他のリクエストに対するフェッチリクエストの優先度を自動的に決定します（既定値）。
 
 ### 返値
 
@@ -222,9 +243,9 @@ fetch('https://example.com/', {
 [Fetch Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request)（[Fetch Request のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request/)を参照）では、 {{domxref("Request")}} オブジェクトを関連するコンストラクターで作成しています。その後で `fetch()` を呼び出して取得しています。画像を読み取っているため、レスポンスで {{domxref("Response.blob()")}} を実行して正しい MIME タイプを指定して正しく扱われるようにし、オブジェクト URL を作成して {{htmlelement("img")}} 要素に追加して表示させています。
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => {
@@ -242,45 +263,44 @@ fetch(myRequest)
 [Fetch with init then Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request/index.html)（[Fetch Request init のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)) では上記の内容に加えて、`fetch()` を呼び出すとき、初期化オブジェクト `init` を渡しています。
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
 const myHeaders = new Headers();
-myHeaders.append('Accept', 'image/jpeg');
+myHeaders.append("Accept", "image/jpeg");
 
 const myInit = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest, myInit)
-  .then((response) => {
-    // …
-  });
+fetch(myRequest, myInit).then((response) => {
+  // …
+});
 ```
 
 同様に `init` オブジェクトを `Request` コンストラクターに渡しても、同じ効果が得られます。
 
 ```js
-const myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request("flowers.jpg", myInit);
 ```
 
 `init` の `headers` でオブジェクトリテラルを使用することもできます。
 
 ```js
 const myInit = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'Accept': 'image/jpeg',
+    Accept: "image/jpeg",
   },
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request("flowers.jpg", myInit);
 ```
 
 ## 仕様書

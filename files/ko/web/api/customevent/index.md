@@ -30,7 +30,7 @@ slug: Web/API/CustomEvent
 - {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
   - : `CustomEvent` 객체를 초기화합니다. 이미 발송한 이벤트에서는 아무 동작도 하지 않습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

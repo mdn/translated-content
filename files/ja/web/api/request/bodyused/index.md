@@ -16,9 +16,9 @@ l10n:
 ## 例
 
 ```js
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: 'Hello world'
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: "Hello world",
 });
 
 request.bodyUsed; // false

@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_next
 
 {{AddonSidebar}}
 
-现在你可以将你对浏览器扩展的想法变成现实了。在开始这个过程之前 ，值得了解一些有助于使其顺利进行的事情。
+现在你可以将你对浏览器扩展的想法变成现实了。在开始这个过程之前，值得了解一些有助于使其顺利进行的事情。
 
 你可以在[扩展工坊](https://extensionworkshop.com)上找到更多本页讨论的相关内容，这是一个致力于帮助编写、测试、发布和分发 Firefox 扩展的网站。
 

@@ -36,7 +36,7 @@ l10n:
 次のコードスニペットは、要素の `style` プロパティで取得した値と、HTML 属性で設定された一連のスタイルの関係を示します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <body style="font-weight:bold">
     <div style="border-top: 1px solid blue; color:red" id="elt">

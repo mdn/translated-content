@@ -29,16 +29,10 @@ if (topPos > 10) {
 }
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsettop', 'offsetTop')}} | {{Spec2('CSSOM View')}} |            |
+{{Specifications}}
 
-## Compatibilidade do navegador
+## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.offsetTop")}}
-
-Em conformidade com a especificação, essa propriedade retornará `null` no Webkit se o elemento não estiver sendo exibido (o `style.display` desse elemento ou ancestral estiver como `"none"`) ou se o `style.position` do elemento estiver setado como `"fixed"`.
-
-Essa propriedade retornará `null` no Internet Explorer (9) se o `style.position` do elemento estiver setado como `"fixed"`. (Ter `display:none` não afeta esse browser.)
+{{Compat}}

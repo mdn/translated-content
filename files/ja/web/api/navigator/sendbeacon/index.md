@@ -71,7 +71,7 @@ window.addEventListener("unload", function logData() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Navigator.sendBeacon")}}
+{{Compat}}
 
 ## 関連情報
 

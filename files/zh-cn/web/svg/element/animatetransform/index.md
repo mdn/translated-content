@@ -35,8 +35,6 @@ slug: Web/SVG/Element/animateTransform
 </svg>
 ```
 
-**示例输出**
-
 {{ EmbedLiveSample('示例','120','120') }}
 
 ## 属性
@@ -60,6 +58,6 @@ slug: Web/SVG/Element/animateTransform
 - {{ SVGAttr("to") }}
 - {{ SVGAttr("type") }}
 
-## DOM Interface
+## DOM 接口
 
-该元素实现了[`SVGAnimateTransformElement`](/zh-CN/docs/DOM/SVGAnimateTransformElement)接口。
+该元素实现了 [`SVGAnimateTransformElement`](/zh-CN/docs/DOM/SVGAnimateTransformElement) 接口。

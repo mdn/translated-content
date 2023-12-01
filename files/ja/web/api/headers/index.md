@@ -60,23 +60,21 @@ l10n:
 ```js
 const myHeaders = new Headers();
 
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.get('Content-Type') // 'text/xml' を返す。
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.get("Content-Type"); // 'text/xml' を返す。
 ```
 
 同じことがコンストラクターにオブジェクトリテラルか配列リテラルの配列リテラルを渡すことでできます。
 
 ```js
 let myHeaders = new Headers({
-    'Content-Type': 'text/xml'
+  "Content-Type": "text/xml",
 });
 
 // or, using an array of arrays:
-myHeaders = new Headers([
-    ['Content-Type', 'text/xml']
-]);
+myHeaders = new Headers([["Content-Type", "text/xml"]]);
 
-myHeaders.get('Content-Type') // should return 'text/xml'
+myHeaders.get("Content-Type"); // should return 'text/xml'
 ```
 
 ## 仕様書

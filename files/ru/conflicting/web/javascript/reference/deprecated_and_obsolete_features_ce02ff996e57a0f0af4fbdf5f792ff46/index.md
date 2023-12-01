@@ -1,11 +1,6 @@
 ---
-title: 'Предупреждение: затворы выражения являются устаревшими'
-slug: >-
-  conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_ce02ff996e57a0f0af4fbdf5f792ff46
-tags:
-  - JavaScript
-  - Warning
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
+title: "Предупреждение: затворы выражения являются устаревшими"
+slug: conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_ce02ff996e57a0f0af4fbdf5f792ff46
 original_slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 ---
 
@@ -23,7 +18,7 @@ Warning: замыкания выражений являются устаревш
 
 ## Что пошло не так?
 
-Нестандартный синтаксис закрытия выражений (сокращённый синтаксис функций) устарел и больше не должен использоваться. Этот синтаксис будет полностью удалён в Этот синтаксис будет полностью удалён в {{bug(1083458)}} а скрипты с его помощью {{jsxref("SyntaxError")}} затем.
+Нестандартный синтаксис закрытия выражений (сокращённый синтаксис функций) устарел и больше не должен использоваться. Этот синтаксис будет полностью удалён в Этот синтаксис будет полностью удалён в [Firefox bug 1083458](https://bugzil.la/1083458) а скрипты с его помощью {{jsxref("SyntaxError")}} затем.
 
 ## Примеры
 

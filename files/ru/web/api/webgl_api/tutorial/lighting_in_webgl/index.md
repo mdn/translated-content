@@ -137,7 +137,7 @@ slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 Сначала обновим вершинный шейдер, чтобы он рассчитывал значение освещения для каждой вершины на основе окружающего и направленного света. Посмотрим на код:
 
 ```js
-  const vsSource = `
+const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec3 aVertexNormal;
     attribute vec2 aTextureCoord;
@@ -215,9 +215,9 @@ const programInfo = {
 
 И это всё!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-[Посмотреть код примера полностью](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Открыть демо в новом окне](http://mdn.github.io/webgl-examples/tutorial/sample7/)
+[Посмотреть код примера полностью](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [Открыть демо в новом окне](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## Самостоятельные упражнения
 

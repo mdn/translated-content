@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         JavaScript 基础（见
         <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a
@@ -276,7 +276,7 @@ ctx.fill();
 
 #### 画圆
 
-下面来看可在画布中绘制圆的方法—— {{domxref("CanvasRenderingContext2D.arc", "arc()")}} ，通过连续的点来绘制整个圆或者弧（arc，即局部的圆）。
+下面来看可在画布中绘制圆的方法——{{domxref("CanvasRenderingContext2D.arc", "arc()")}}，通过连续的点来绘制整个圆或者弧（arc，即局部的圆）。
 
 1. 在代码中添加以下几行，以向画布中添加一条弧。
 

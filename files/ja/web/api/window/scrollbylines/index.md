@@ -10,7 +10,7 @@ slug: Web/API/Window/scrollByLines
 ## 構文
 
 ```js
-window.scrollByLines(lines)
+window.scrollByLines(lines);
 ```
 
 ### 引数
@@ -33,7 +33,7 @@ window.scrollByLines(lines)
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollByLines")}}
+{{Compat}}
 
 ## 関連情報
 

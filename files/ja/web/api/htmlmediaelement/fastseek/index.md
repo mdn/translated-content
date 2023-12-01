@@ -47,4 +47,4 @@ myVideo.fastSeek(20);
 ## 関連情報
 
 - [HTMLMediaElement.currentTime](/ja/docs/Web/API/HTMLMediaElement/currentTime):
- 精度を犠牲にすることなくシークを行う
+  精度を犠牲にすることなくシークを行う

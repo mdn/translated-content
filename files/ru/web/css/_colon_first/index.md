@@ -47,7 +47,7 @@ p {
 ```js
 document.querySelector("button").onclick = function () {
   window.print();
-}
+};
 ```
 
 ### Результат

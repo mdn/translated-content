@@ -58,7 +58,7 @@ empty-cells: unset;
     <td></td>
   </tr>
 </table>
-<br>
+<br />
 <table class="table_2">
   <tr>
     <td>Moe</td>

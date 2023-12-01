@@ -1,6 +1,8 @@
 ---
-title: "HTML attribute: step"
+title: "HTML 属性: step"
 slug: Web/HTML/Attributes/step
+l10n:
+  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
 ---
 
 {{HTMLSidebar}}
@@ -89,7 +91,7 @@ input:invalid {
 それから入力欄の最小値を 7.2 と定義し、 step 属性は省略しているので、既定値が 1 になります。
 
 ```html
-<input id="myNumber" name="myNumber" type="number" step="2" min="1.2">
+<input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
 ```
 
 有効な値は、 `1.2`, `3.2`, `5.2`, `7.2`, `9.2`, `11.2` などになります。整数や .2 が付く偶数は無効です。無効な値である場合、対応しているブラウザーは値が無効であることを表示します。数値スピナーがある場合は、 `1.2` 以上の有効な浮動小数点以下の値のみ表示されます。
@@ -98,7 +100,7 @@ input:invalid {
 
 > **メモ:** ユーザーが入力したデータが刻みの設定に従っていない場合、制約検証では無効とみなされ、 {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}} の擬似クラスに一致します。
 
-詳しくは[クライアント側制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)と {{domxref("ValidityState.stepMismatch", "stepMismatch")}} を参照してください。
+詳しくは[クライアント側制約検証](/ja/docs/Web/HTML/Constraint_validation)と {{domxref("ValidityState.stepMismatch", "stepMismatch")}} を参照してください。
 
 ## アクセシビリティの考慮
 
@@ -116,8 +118,8 @@ input:invalid {
 
 - [`max`](/ja/docs/Web/HTML/Attributes/max)
 - [`min`](/ja/docs/Web/HTML/Attributes/min)
-- [制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
-- [制約検証 API](/ja/docs/Web/API/Constraint_validation)
+- [制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [制約検証 API](/ja/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.stepMismatch')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

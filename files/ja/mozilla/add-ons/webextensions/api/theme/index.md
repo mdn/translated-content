@@ -32,6 +32,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/theme
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.theme")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

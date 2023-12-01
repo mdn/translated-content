@@ -14,7 +14,7 @@ slug: Web/API/VRDisplay/submitFrame
 ## 構文
 
 ```js
-submitFrame()
+submitFrame();
 ```
 
 ### 引数

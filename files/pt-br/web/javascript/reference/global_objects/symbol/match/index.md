@@ -39,13 +39,11 @@ re[Symbol.match] = false;
 
 ## Especificações
 
-| Especificação                                                |
-| ------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.match")}}
+{{Compat}}
 
 ## Veja também
 

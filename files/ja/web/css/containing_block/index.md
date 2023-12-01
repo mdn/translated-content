@@ -33,10 +33,10 @@ slug: Web/CSS/Containing_block
 3. `position` プロパティが **`fixed`** の場合、包含ブロックは{{glossary("viewport", "ビューポート")}} (連続的なメディアの場合) またはページ領域 (ページメディアの場合) によって確立されます。
 4. `position` プロパティが **`absolute`** または **`fixed`** の場合、包含ブロックは以下の条件を持った直近の祖先要素における<em>パディングボックス</em>の辺によって構成されることがあります。
 
-    1. {{cssxref("transform")}} または {{cssxref("perspective")}} の値が `none` 以外である
-    2. {{cssxref("will-change")}} の値が `transform` または `perspective` である
-    3. {{cssxref("filter")}} の値が `none` 以外、または `will-change` の値が `filter` の場合 (Firefox のみで動作)。
-    4. {{cssxref("contain")}} の値が `paint` の場合 (例 `contain: paint;`)
+   1. {{cssxref("transform")}} または {{cssxref("perspective")}} の値が `none` 以外である
+   2. {{cssxref("will-change")}} の値が `transform` または `perspective` である
+   3. {{cssxref("filter")}} の値が `none` 以外、または `will-change` の値が `filter` の場合 (Firefox のみで動作)。
+   4. {{cssxref("contain")}} の値が `paint` の場合 (例 `contain: paint;`)
 
 > **メモ:** ルート要素 ({{HTMLElement("html")}}) が包含ブロックである場合、**初期包含ブロック**と呼ばれる矩形になります。これはビューポート (連続的なメディアの場合) またはページ領域 (ページメディアの場合) の寸法を持ちます。
 
@@ -86,10 +86,10 @@ section {
 }
 
 p {
-  width: 50%;   /* == 400px * .5 = 200px */
-  height: 25%;  /* == 160px * .25 = 40px */
-  margin: 5%;   /* == 400px * .05 = 20px */
-  padding: 5%;  /* == 400px * .05 = 20px */
+  width: 50%; /* == 400px * .5 = 200px */
+  height: 25%; /* == 160px * .25 = 40px */
+  margin: 5%; /* == 400px * .05 = 20px */
+  padding: 5%; /* == 400px * .05 = 20px */
   background: cyan;
 }
 ```
@@ -119,8 +119,8 @@ section {
 }
 
 p {
-  width: 50%;     /* == half the body's width */
-  height: 200px;  /* Note: a percentage would be 0 */
+  width: 50%; /* == half the body's width */
+  height: 200px; /* Note: a percentage would be 0 */
   background: cyan;
 }
 ```
@@ -156,10 +156,10 @@ section {
 
 p {
   position: absolute;
-  width: 50%;   /* == (400px + 20px + 20px) * .5 = 220px */
-  height: 25%;  /* == (160px + 30px + 30px) * .25 = 55px */
-  margin: 5%;   /* == (400px + 20px + 20px) * .05 = 22px */
-  padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
+  width: 50%; /* == (400px + 20px + 20px) * .5 = 220px */
+  height: 25%; /* == (160px + 30px + 30px) * .25 = 55px */
+  margin: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
+  padding: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
   background: cyan;
 }
 ```
@@ -193,10 +193,10 @@ section {
 
 p {
   position: fixed;
-  width: 50%;   /* == (50vw - (width of vertical scrollbar)) */
-  height: 50%;  /* == (50vh - (height of horizontal scrollbar)) */
-  margin: 5%;   /* == (5vw - (width of vertical scrollbar)) */
-  padding: 5%;  /* == (5vw - (width of vertical scrollbar)) */
+  width: 50%; /* == (50vw - (width of vertical scrollbar)) */
+  height: 50%; /* == (50vh - (height of horizontal scrollbar)) */
+  margin: 5%; /* == (5vw - (width of vertical scrollbar)) */
+  padding: 5%; /* == (5vw - (width of vertical scrollbar)) */
   background: cyan;
 }
 ```
@@ -231,10 +231,10 @@ p {
   position: absolute;
   left: 80px;
   top: 30px;
-  width: 50%;   /* == 200px */
-  height: 25%;  /* == 40px */
-  margin: 5%;   /* == 20px */
-  padding: 5%;  /* == 20px */
+  width: 50%; /* == 200px */
+  height: 25%; /* == 40px */
+  margin: 5%; /* == 20px */
+  padding: 5%; /* == 20px */
   background: cyan;
 }
 ```

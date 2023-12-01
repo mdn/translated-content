@@ -64,13 +64,11 @@ add(10).then((v) => {
 
 ## Especificações
 
-| Especificação                                                                | Status               | Comentário                   |
-| ---------------------------------------------------------------------------- | -------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.async_function")}}
+{{Compat}}
 
 ## Veja também
 

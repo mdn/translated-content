@@ -18,25 +18,30 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 このマークアップは、ヘッダー、フッター、メインコンテンツ、ナビゲーション、サイドバー、そして広告を掲載するためのブロックの要素を内部に持つコンテナーです。
 
 ```css hidden
-* {box-sizing: border-box;}
-  .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-    font: 1.2em Helvetica, arial, sans-serif;
-  }
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-  .wrapper > * {
-    border: 2px solid #f08c00;
-    background-color: #ffec99;
-    border-radius: 5px;
-    padding: 10px;
-  }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
@@ -51,7 +56,11 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
   </nav>
   <article class="content">
     <h1>メイン記事領域</h1>
-    <p>このレイアウトでは、幅が 500 ピクセル以下の画面では、領域をソース順に表示します。グリッドとグリッド上のアイテムの配置を再定義することで、2 列レイアウト、3 列レイアウトへと変化していきます。</p>
+    <p>
+      このレイアウトでは、幅が 500
+      ピクセル以下の画面では、領域をソース順に表示します。グリッドとグリッド上のアイテムの配置を再定義することで、2
+      列レイアウト、3 列レイアウトへと変化していきます。
+    </p>
   </article>
   <aside class="side">サイドバー</aside>
   <div class="ad">広告</div>
@@ -82,7 +91,7 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 }
 ```
 
-これでレイアウトは作成されませんが、アイテムに名前がついたので、それを使ってレイアウトを作成することができます。 メディアクエリーを使用せずに、これからモバイル幅用のレイアウトを設定します。ここでは、 *[グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)* のガイドに記載されているように、ソースと表示の間に断絶が生じないように、すべてをソース順にしています。列や行のトラックは定義していませんが、このレイアウトでは 1 つの列が指示されており、行は暗黙のグリッド内の各アイテムに必要に応じて作成されます。
+これでレイアウトは作成されませんが、アイテムに名前がついたので、それを使ってレイアウトを作成することができます。 メディアクエリーを使用せずに、これからモバイル幅用のレイアウトを設定します。ここでは、 _[グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_ のガイドに記載されているように、ソースと表示の間に断絶が生じないように、すべてをソース順にしています。列や行のトラックは定義していませんが、このレイアウトでは 1 つの列が指示されており、行は暗黙のグリッド内の各アイテムに必要に応じて作成されます。
 
 ```css
 .wrapper {
@@ -129,11 +138,11 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
       "header header  header"
       "nav    content sidebar"
       "nav    content ad"
-      "footer footer  footer"
-   }
-   nav ul {
-     flex-direction: column;
-   }
+      "footer footer  footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
 ```
 
@@ -153,7 +162,10 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 .wrapper > * {
   border: 2px solid #f08c00;
@@ -175,10 +187,18 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 
 ```html
 <div class="wrapper">
-  <div class="item1">列 1 の線を先頭として、 3 列のトラックにまたがります。</div>
-  <div class="item2">列 6 の線を先頭として、 4 列、2 行のトラックにまたがります。</div>
-  <div class="item3">列 2、行 2 の線を先頭として、 3 列のトラックにまたがります。</div>
-  <div class="item4">列 3 の線を先頭として、グリッドの末尾までまたがります (-1)。</div>
+  <div class="item1">
+    列 1 の線を先頭として、 3 列のトラックにまたがります。
+  </div>
+  <div class="item2">
+    列 6 の線を先頭として、 4 列、2 行のトラックにまたがります。
+  </div>
+  <div class="item3">
+    列 2、行 2 の線を先頭として、 3 列のトラックにまたがります。
+  </div>
+  <div class="item4">
+    列 3 の線を先頭として、グリッドの末尾までまたがります (-1)。
+  </div>
 </div>
 ```
 
@@ -189,7 +209,7 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
   grid-column: col-start / span 3;
 }
 .item2 {
-  grid-column: col-start 6 / span 4 ;
+  grid-column: col-start 6 / span 4;
   grid-row: 1 / 3;
 }
 .item3 {
@@ -217,28 +237,33 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 このレイアウト方法が実際にどのように機能するかを確認するために、 {{cssxref("grid-template-areas")}} で作成したのと同じレイアウトを、今度は 12 列のグリッドシステムを使って作成してみましょう。ここでは、グリッドテンプレート領域の例で使用したのと同じマークアップで始めます。
 
 ```css hidden
-* {box-sizing: border-box;}
-  .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-    font: 1.2em Helvetica, arial, sans-serif;
-  }
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-  .wrapper > * {
-    border: 2px solid #f08c00;
-    background-color: #ffec99;
-    border-radius: 5px;
-    padding: 10px;
-  }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
-```html
+```html-nolint
 <div class="wrapper">
   <header class="main-head">ヘッダー</header>
   <nav class="main-nav">
@@ -250,7 +275,9 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
   </nav>
   <article class="content">
     <h1>メイン記事領域</h1>
-    <p>このレイアウトでは、幅が 500 ピクセル以下の画面では、領域をソース順に表示します。グリッドとグリッド上のアイテムの配置を再定義することで、2 列レイアウト、3 列レイアウトへと変化していきます。</p>
+    <p>
+      このレイアウトでは、幅が 500 ピクセル以下の画面では、領域をソース順に表示します。グリッドとグリッド上のアイテムの配置を再定義することで、2 列レイアウト、3 列レイアウトへと変化していきます。
+    </p>
   </article>
   <aside class="side">サイドバー</aside>
   <div class="ad">広告</div>
@@ -292,7 +319,8 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
     grid-column: col-start / span 3;
     grid-row: 4;
   }
-  .content, .main-footer {
+  .content,
+  .main-footer {
     grid-column: col-start 4 / span 9;
   }
   nav ul {
@@ -399,23 +427,32 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 ```
 
 ここでは、列数の自由度が高いグリッドを作成します。 200 ピクセル以下にならないようにして、残った空間を均等に分け合うようにして、常に同じ幅の列トラックを得るようにします。これを実現するには、トラックのサイズ調整のための反復記法で、`minmax()` 関数を使用します。
@@ -426,7 +463,7 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
   margin: 2em;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
@@ -478,10 +515,12 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
   </li>
   <li class="wide">
     <h2>アイテム 3</h2>
-    <div class="body"><p>このアイテムのコンテンツがここに来ます。</p>
+    <div class="body">
+      <p>このアイテムのコンテンツがここに来ます。</p>
       <p>こちらは他のアイテムよりも文字数が多いです。</p>
       <p>はるかにたくさん</p>
-      <p>何か違うことができるのでは？</p></div>
+      <p>何か違うことができるのでは？</p>
+    </div>
     <div class="cta"><a href="">コールトゥアクション</a></div>
   </li>
   <li>
@@ -498,23 +537,32 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 
 .listing li {
   border: 1px solid #ffe066;
@@ -540,7 +588,7 @@ slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
   display: grid;
   gap: 20px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .listing .wide {
   grid-column-end: span 2;

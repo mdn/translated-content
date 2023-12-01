@@ -2,6 +2,7 @@
 title: backface-visibility
 slug: Web/CSS/backface-visibility
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`backface-visibility`** 속성은 요소의 뒷면이 사용자를 향할 때 보여야 하는지 지정합니다.
@@ -67,9 +68,8 @@ backface-visibility: unset;
         </div>
       </div>
       <p>
-        Since all faces are partially transparent,
-        the back faces (2, 4, 5) are visible
-        through the front faces (1, 3, 6).
+        Since all faces are partially transparent, the back faces (2, 4, 5) are
+        visible through the front faces (1, 3, 6).
       </p>
     </td>
     <td>
@@ -83,10 +83,7 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>
-        The three back faces (2, 4, 5) are
-        hidden.
-      </p>
+      <p>The three back faces (2, 4, 5) are hidden.</p>
     </td>
   </tr>
 </table>
@@ -167,8 +164,10 @@ backface-visibility: unset;
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;

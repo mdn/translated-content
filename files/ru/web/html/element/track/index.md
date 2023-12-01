@@ -11,20 +11,20 @@ slug: Web/HTML/Element/track
 
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                                                                                                             |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                            | Нет, это {{Glossary("empty element", "пустой элемент")}}.                                                                                                      |
+| Допустимое содержимое                                            | Нет, это {{Glossary("empty element", "пустой элемент")}}.                                                                                                                                       |
 | Пропуск тегов                                                    | Так как это пустой элемент, то открывающий тег обязателен, закрывающего не должно быть.                                                                                                         |
 | Неявная ARIA-роль                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                          |
 | Допустимые родители                                              | Медиа элемент, перед любым [потоковым контентом](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82). |
 | Допустимые ARIA-роли                                             | Нет                                                                                                                                                                                             |
-| DOM интерфейс                                                    | {{domxref("HTMLTrackElement")}}                                                                                                                                                        |
+| DOM интерфейс                                                    | {{domxref("HTMLTrackElement")}}                                                                                                                                                                 |
 
 ## Атрибуты
 
 Этот элемент использует [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-- {{htmlattrdef("default")}}
+- `default`
   - : Этот атрибут указывает, что дорожка должна быть включена, если пользовательские настройки не указывают, что другая дорожка является более подходящей. Может использоваться только для одного элемента `track` в элементе мультимедиа.
-- {{htmlattrdef("kind")}}
+- `kind`
 
   - : Как текстовый трек должен быть использован. Если значение опущено, тип по умолчанию — `subtitles` (субтитры). Если атрибут отсутствует, будет использоваться `subtitles`. Если атрибут содержит недопустимое значение, оно принимает значение `metadata`. (Версии Chrome ранее 52 рассматривали недопустимое значение как `subtitles`.) Допускаются следующие ключевые слова:
 
@@ -52,11 +52,11 @@ slug: Web/HTML/Element/track
 
       - Данные, используемые скриптами. Не видны пользователю.
 
-- {{htmlattrdef("label")}}
+- `label`
   - : Видимый пользователю заголовок текстовой дорожки, который используется браузером при выводе списка доступных текстовых дорожек.
-- {{htmlattrdef("src")}}
+- `src`
   - : Адрес файла текстовой дорожки (`.vtt` файл). Должен быть действительным URL. Этот атрибут должен быть указан, а его значение URL должно иметь то же происхождение, что и документ — исключая случаи, когда родительский {{HTMLElement("audio")}} или {{HTMLElement("video")}} данного `track` элемента имеет атрибут [`crossorigin`](/ru/docs/Web/HTML/CORS_settings_attributes).
-- {{htmlattrdef("srclang")}}
+- `srclang`
   - : Язык текстовых данных трека. Это должен быть валидный [BCP 47](https://r12a.github.io/app-subtags/) языковой тег (см. также [языковые тэги в HTML и XML)](https://www.w3.org/International/articles/language-tags/). Если для атрибута `kind` установлено значение `subtitles`, должен быть определён атрибут `srclang`.
 
 ## Примечания по использованию
@@ -75,24 +75,20 @@ slug: Web/HTML/Element/track
 
 ```html
 <video controls poster="/images/sample.gif">
-   <source src="sample.mp4" type="video/mp4">
-   <source src="sample.ogv" type="video/ogv">
-   <track kind="captions" src="sampleCaptions.vtt" srclang="en">
-   <track kind="descriptions"
-     src="sampleDescriptions.vtt" srclang="en">
-   <track kind="chapters" src="sampleChapters.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
-   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
-   <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
-   <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
-   <track kind="metadata" src="keyStage1.vtt" srclang="en"
-     label="Key Stage 1">
-   <track kind="metadata" src="keyStage2.vtt" srclang="en"
-     label="Key Stage 2">
-   <track kind="metadata" src="keyStage3.vtt" srclang="en"
-     label="Key Stage 3">
-   <!-- Fallback -->
-   ...
+  <source src="sample.mp4" type="video/mp4" />
+  <source src="sample.ogv" type="video/ogv" />
+  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
+  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
+  <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
+  <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
+  <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja" />
+  <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz" />
+  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
+  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
+  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
+  <!-- Fallback -->
+  ...
 </video>
 ```
 

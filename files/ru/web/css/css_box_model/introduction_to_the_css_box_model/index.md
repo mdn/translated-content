@@ -29,13 +29,6 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 Для элементов с {{ cssxref("display") }}`: inline` (или `inline-block, inline-table`) на занимаемое по высоте место также влияет значение свойства {{ cssxref('line-height') }}.
 
-## Стандарты
-
-| Стандарт                                                                       | Статус                       | Примечание                                                 |
-| ------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------- |
-| [CSS Level 2 (revision 1)](http://www.w3.org/TR/CSS21/box.html#box-dimensions) | {{ Spec2('CSS2.1') }} | Though more precisely worded, there is no practical change |
-| [CSS Level 1](http://www.w3.org/TR/REC-CSS1/#formatting-model)                 | {{ Spec2('CSS1') }}     |                                                            |
-
 ## Смотрите также
 
 - [Справочник по CSS](/ru/CSS/CSS_Reference)

@@ -77,7 +77,7 @@ function drop(dropevent) {
 
 {{EmbedLiveSample('예제', 600) }}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

@@ -131,11 +131,11 @@ slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
           <li>Выполнена.</li>
           <li>
             Не полностью соблюдает &#x3C;svg:use> каскадные правила
-            ({{Bug(265894)}}).
+            ([Firefox bug 265894](https://bugzil.la/265894)).
           </li>
           <li>
             Не передаёт события в дерево SVGElementInstance
-            ({{Bug(265895)}}).
+            ([Firefox bug 265895](https://bugzil.la/265895)).
           </li>
         </ul>
       </td>
@@ -364,7 +364,7 @@ slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
         <ul>
           <li>
             Эта функция, представленная в раннем проекте спецификации, была
-            удалена из неё и поэтому не реализована ({{Bug(273171)}}).
+            удалена из неё и поэтому не реализована ([Firefox bug 273171](https://bugzil.la/273171)).
           </li>
         </ul>
       </td>
@@ -394,7 +394,7 @@ slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
         <ul>
           <li>
             Реализовано как <code>tspans</code>, никаких функций шрифта, как у
-            Gecko 2.0 ({{Bug(456286)}}, {{Bug(571808)}}).
+            Gecko 2.0 ([Firefox bug 456286](https://bugzil.la/456286), [Firefox bug 571808](https://bugzil.la/571808)).
           </li>
         </ul>
       </td>
@@ -469,7 +469,7 @@ slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
       </td>
       <td>
         <ul>
-          <li>Не выполнена ({{Bug(427713)}}).</li>
+          <li>Не выполнена ([Firefox bug 427713](https://bugzil.la/427713)).</li>
         </ul>
       </td>
     </tr>
@@ -725,7 +725,7 @@ slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
         <ul>
           <li>Выполнена.</li>
           <li>
-            Фрагменты документа ({{bug(455986)}}) не поддерживаются в
+            Фрагменты документа ([Firefox bug 455986](https://bugzil.la/455986)) не поддерживаются в
             &#x3C;svg:feImage>.
           </li>
         </ul>
@@ -915,7 +915,7 @@ slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
       </td>
       <td>
         <ul>
-          <li>Не выполнена ({{Bug(177193)}}).</li>
+          <li>Не выполнена ([Firefox bug 177193](https://bugzil.la/177193)).</li>
         </ul>
       </td>
     </tr>
@@ -952,7 +952,7 @@ slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
       <td>
         <ul>
           <li>
-            Выполнено в Gecko 15.0 ({{Bug(512525)}}).
+            Выполнено в Gecko 15.0 ([Firefox bug 512525](https://bugzil.la/512525)).
           </li>
         </ul>
       </td>
@@ -1038,7 +1038,7 @@ slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
       </td>
       <td>
         <ul>
-          <li>Не выполнена ({{Bug(436296)}}).</li>
+          <li>Не выполнена ([Firefox bug 436296](https://bugzil.la/436296)).</li>
         </ul>
       </td>
     </tr>
@@ -1067,7 +1067,7 @@ slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
       </td>
       <td>
         <ul>
-          <li>Не выполнена ({{Bug(119490)}}).</li>
+          <li>Не выполнена ([Firefox bug 119490](https://bugzil.la/119490)).</li>
         </ul>
       </td>
     </tr>

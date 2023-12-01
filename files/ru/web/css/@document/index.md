@@ -2,12 +2,14 @@
 title: "@document"
 slug: Web/CSS/@document
 ---
+
 {{SeeCompatTable}}
 
 **`@document`** [CSS](/ru/docs/Web/CSS) [at-rule](/ru/docs/Web/CSS/At-rule) ограничивает правила стиля, содержащиеся в нем, на основе URL-адреса документа. Он разработан в основном для пользовательских таблиц стилей, хотя он также может использоваться в авторских таблицах стилей.
 
 ```css
-@document url("https://www.example.com/") {
+@document url("https://www.example.com/")
+{
   h1 {
     color: green;
   }
@@ -28,7 +30,7 @@ slug: Web/CSS/@document
 
 Экранированные значения, предоставляемые функции `regexp()` также должны быть экранированы из CSS. Например, `.` (период) соответствует любому символу в регулярных выражениях. Чтобы соответствовать буквальному периоду, вам сначала нужно избежать этого, используя правила регулярных выражений (`\.`), А затем убежать от этой строки с помощью правил CSS (`\\.`).
 
-> **Примечание:** Существует версия -moz-prefixed этого свойства — `@-moz-document`. Это было ограничено использованием только в пользовательских и UA-листах в Firefox 59 в Nightly and Beta - эксперименте, предназначенном для смягчения потенциальных атак с помощью CSS-инъекций ({{bug(1035091)}}).
+> **Примечание:** Существует версия -moz-prefixed этого свойства — `@-moz-document`. Это было ограничено использованием только в пользовательских и UA-листах в Firefox 59 в Nightly and Beta - эксперименте, предназначенном для смягчения потенциальных атак с помощью CSS-инъекций ([Firefox bug 1035091](https://bugzil.la/1035091)).
 
 ### Формальный синтаксис
 
@@ -62,7 +64,7 @@ slug: Web/CSS/@document
 
 ## Specifications
 
-[Initially](http://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in {{SpecName('CSS3 Conditional')}}, `@document` has been [postponed](http://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4.
+[Initially](http://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in [CSS Conditional Rules Module Level 3](https://drafts.csswg.org/css-conditional-3/), `@document` has been [postponed](http://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4.
 
 ## Browser compatibility
 

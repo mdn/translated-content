@@ -46,7 +46,7 @@ p:nth-of-type(4n) {
 
 ```css
 /* Нечётные параграфы */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 

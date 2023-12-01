@@ -29,12 +29,14 @@ document.getElementById("button").addEventListener(function () {
 }, false);
 ```
 
-## Поддержка браузерами
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 {{ domxref("window.setImmediate") }}
-
-{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}

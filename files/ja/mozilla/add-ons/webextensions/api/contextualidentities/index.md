@@ -52,6 +52,6 @@ Contextual identities は現在その他のブラウザーではサポートさ�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.contextualIdentities")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

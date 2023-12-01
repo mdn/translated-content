@@ -20,11 +20,11 @@ A função acessora set para `size` é `undefined`; você não poderá alterar e
 
 ```js
 var myMap = new Map();
-myMap.set('a', 'alpha');
-myMap.set('b', 'beta');
-myMap.set('g', 'gamma');
+myMap.set("a", "alpha");
+myMap.set("b", "beta");
+myMap.set("g", "gamma");
 
-myMap.size // 3
+myMap.size; // 3
 ```
 
 ## Especificações

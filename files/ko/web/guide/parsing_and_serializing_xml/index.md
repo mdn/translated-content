@@ -28,7 +28,7 @@ dump(
 );
 ```
 
-### 자바스크립트 객체 트리를 시작점으로 하여 XML 문서를 생성(JXON)
+### JavaScript 객체 트리를 시작점으로 하여 XML 문서를 생성(JXON)
 
 [JXON 역(reverse) 알고리즘](/en/JXON#Reverse_Algorithms)을 참고하세요.
 
@@ -79,7 +79,7 @@ var sXML = oSerializer.serializeToString(doc);
 
 #### DOM 트리를 문자열로 "예쁘게(pretty)" 직렬화
 
-`XMLSerializer와` [E4X](/en/E4X)를 사용하면 DOM 트리를 [예쁘게 출력(pretty print](http://en.wikipedia.org/wiki/Pretty-print)) 할 수 있습니다. 우선, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree) 글을 참고하여 DOM 트리를 생성합니다. 혹은 {{ domxref("XMLHttpRequest") }}를 통해 DOM 트리를 뽑아내는 방법도 있습니다. 아래 코드에서 변수 `doc`는 DOM 트리를 가지고 있습니다.
+`XMLSerializer와` [E4X](/en/E4X)를 사용하면 DOM 트리를 [예쁘게 출력(pretty print](http://en.wikipedia.org/wiki/Pretty-print) 할 수 있습니다. 우선, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree) 글을 참고하여 DOM 트리를 생성합니다. 혹은 {{ domxref("XMLHttpRequest") }}를 통해 DOM 트리를 뽑아내는 방법도 있습니다. 아래 코드에서 변수 `doc`는 DOM 트리를 가지고 있습니다.
 
 ```js
 var oSerializer = new XMLSerializer();
@@ -100,15 +100,15 @@ var sPrettyXML = XML(oSerializer.serializeToString(doc)).toXMLString();
 <content>This is the content</content>
 ```
 
-### DOM 트리를 자바스크립트 객체 트리로 직렬화 (JXON)
+### DOM 트리를 JavaScript 객체 트리로 직렬화 (JXON)
 
-[JXON](/en/JXON) (lossless **J**avaScript **X**ML **O**bject **N**otation, 무손실 자바스크립트 XML 객체 표기법)은 XML을 사용하여 자바스크립트 객체를 표현하는 방법입니다. XML 문서의 일부분만 나오게 하고 싶다면, 문서 전체를 JSON으로 변환하지 말고 [XPath](/en/XPath)를 사용하세요! 이 외의 상황이라면 [JSON에 관한 글](/en/JXON)을 참조하세요.
+[JXON](/en/JXON) (lossless **J**avaScript **X**ML **O**bject **N**otation, 무손실 JavaScript XML 객체 표기법)은 XML을 사용하여 JavaScript 객체를 표현하는 방법입니다. XML 문서의 일부분만 나오게 하고 싶다면, 문서 전체를 JSON으로 변환하지 말고 [XPath](/en/XPath)를 사용하세요! 이 외의 상황이라면 [JSON에 관한 글](/en/JXON)을 참조하세요.
 
 ### DOM 트리를 파일로 직렬화
 
 먼저, [DOM 트리 생성법](/en/How_to_create_a_DOM_tree) 글에 나와 있는 대로 DOM 트리를 생성하세요. 만약 {{ domxref("XMLHttpRequest") }}를 사용하여 이미 DOM 트리가 존재한다면 이 절의 마지막 부분으로 건너 뛰십시오.
 
-이제 DOM 트리인 `doc`를 파일로 직렬화 해봅시다. 파일에 대해 더 알아보고 싶다면, [모질라에서 파일 사용과 관련하여](/en/Code_snippets/File_I//O)를 참조하세요.
+이제 DOM 트리인 `doc`를 파일로 직렬화 해봅시다. 파일에 대해 더 알아보고 싶다면, [Mozilla에서 파일 사용과 관련하여](/en/Code_snippets/File_I//O)를 참조하세요.
 
 ```js
 var oFOStream = Components.classes[

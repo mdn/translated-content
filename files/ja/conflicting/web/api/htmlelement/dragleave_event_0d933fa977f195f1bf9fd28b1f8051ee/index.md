@@ -1,7 +1,6 @@
 ---
-title: 'Document: dragleave イベント'
-slug: >-
-  conflicting/Web/API/HTMLElement/dragleave_event_0d933fa977f195f1bf9fd28b1f8051ee
+title: "Document: dragleave イベント"
+slug: conflicting/Web/API/HTMLElement/dragleave_event_0d933fa977f195f1bf9fd28b1f8051ee
 original_slug: Web/API/Document/dragleave_event
 ---
 

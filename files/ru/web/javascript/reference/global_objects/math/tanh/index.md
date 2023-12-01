@@ -31,9 +31,9 @@ Math.tanh(x)
 ### Пример: использование метода `Math.tanh()`
 
 ```js
-Math.tanh(0);        // 0
+Math.tanh(0); // 0
 Math.tanh(Infinity); // 1
-Math.tanh(1);        // 0.7615941559557649
+Math.tanh(1); // 0.7615941559557649
 ```
 
 ## Полифил
@@ -41,30 +41,34 @@ Math.tanh(1);        // 0.7615941559557649
 Этот метод может эмулироваться при помощи двух вызовов метода {{jsxref("Math.exp()")}}:
 
 ```js
-Math.tanh = Math.tanh || function(x) {
-  if (x === Infinity) {
-    return 1;
-  } else if (x === -Infinity) {
-    return -1;
-  } else {
-    return (Math.exp(x) - Math.exp(-x)) / (Math.exp(x) + Math.exp(-x));
-  }
-}
+Math.tanh =
+  Math.tanh ||
+  function (x) {
+    if (x === Infinity) {
+      return 1;
+    } else if (x === -Infinity) {
+      return -1;
+    } else {
+      return (Math.exp(x) - Math.exp(-x)) / (Math.exp(x) + Math.exp(-x));
+    }
+  };
 ```
 
 либо при помощи только одного вызова метода {{jsxref("Math.exp()")}}:
 
 ```js
-Math.tanh = Math.tanh || function(x) {
-  if (x === Infinity) {
-    return 1;
-  } else if (x === -Infinity) {
-    return -1;
-  } else {
-    var y = Math.exp(2 * x);
-    return (y - 1) / (y + 1);
-  }
-}
+Math.tanh =
+  Math.tanh ||
+  function (x) {
+    if (x === Infinity) {
+      return 1;
+    } else if (x === -Infinity) {
+      return -1;
+    } else {
+      var y = Math.exp(2 * x);
+      return (y - 1) / (y + 1);
+    }
+  };
 ```
 
 ## Спецификации

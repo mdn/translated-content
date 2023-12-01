@@ -96,13 +96,13 @@ HTTP/1.1 では、曖昧な点が明確にされ、多くの改良が加えら�
 すべて単一の接続で行われる典型的なリクエストの流れは、次のようなものになりました。
 
 ```http
-GET /en-US/docs/Glossary/Simple_header HTTP/1.1
+GET /ja/docs/Glossary/Simple_header HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/ja/docs/Glossary/Simple_header
 
 200 OK
 Connection: Keep-Alive
@@ -124,7 +124,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/ja/docs/Glossary/Simple_header
 
 200 OK
 Age: 9578461
@@ -149,7 +149,7 @@ HTTP の拡張性により、新しいヘッダーやメソッドを簡単に作
 
 HTTP の最大の変化が、1994 年末に起こりました。コンピューターサービス会社の Netscape Communications は、HTTP を基本的な TCP/IP スタック上で送信する代わりに、その上にさらに暗号化された送信レイヤーを作成したのです。SSL です。SSL 1.0 は一般にリリースされることはなかったのですが、SSL 2.0 とその後継の SSL 3.0 によって、電子商取引のウェブサイトを作成することができるようになりました。そのために、サーバーとクライアントの間でやり取りされるメッセージを暗号化し、その真正性を保証していました。SSL はやがて標準化され、TLS となりました。
 
-同じ時期んび、暗号化されたトランスポート層が必要であることが明らかになりました。ウェブはもはやほとんど学術的なネットワークではなく、広告主や不特定多数の個人、犯罪者が使用可能な限りの個人データを奪い合うジャングルと化していたのです。HTTP で構築されたアプリケーションがより強力になり、アドレス帳、電子メール、ユーザーの位置情報などの個人情報に使用されるようになると、TLS は電子商取引以外のの用途でも必要とされるようになりました。
+同じ時期に、暗号化されたトランスポート層が必要であることが明らかになりました。ウェブはもはやほとんど学術的なネットワークではなく、広告主や不特定多数の個人、犯罪者が使用可能な限りの個人データを奪い合うジャングルと化していたのです。HTTP で構築されたアプリケーションがより強力になり、アドレス帳、電子メール、ユーザーの位置情報などの個人情報に使用されるようになると、TLS は電子商取引以外のの用途でも必要とされるようになりました。
 
 ### 複雑なアプリケーションのために HTTP を使用する
 

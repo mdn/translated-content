@@ -18,9 +18,11 @@ l10n:
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director:
+  <span
+    >Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span>
+    (born August 16, 1954)</span
+  >
   <span itemprop="genre">Science fiction</span>
   <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
     Trailer
@@ -186,8 +188,11 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 
 ```html
 <div itemscope>
-  <span itemprop="favorite-color
-    favorite-fruit">orange</span>
+  <span
+    itemprop="favorite-color
+    favorite-fruit"
+    >orange</span
+  >
 </div>
 ```
 

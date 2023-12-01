@@ -12,7 +12,7 @@ slug: Web/API/BaseAudioContext/createConvolver
 ## 構文
 
 ```js
-createConvolver()
+createConvolver();
 ```
 
 ### 引数

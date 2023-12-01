@@ -2,6 +2,7 @@
 title: opacity
 slug: Web/CSS/opacity
 ---
+
 {{CSSRef}}
 
 **`opacity`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 불투명도를 설정합니다. 불투명도는 요소 뒤쪽 콘텐츠가 숨겨지는 정도로, 투명도의 반대입니다.
@@ -41,7 +42,9 @@ background: rgba(0, 0, 0, 0.4);
 ### 기본 예제
 
 ```css
-div { background-color: yellow; }
+div {
+  background-color: yellow;
+}
 .light {
   opacity: 0.2; /* 배경 위로 겨우 볼 수 있음 */
 }
@@ -76,9 +79,12 @@ img.opacity:hover {
 ```
 
 ```html
-<img src="https://developer.mozilla.org/mdn-social-share.png"
-  alt="MDN logo" width="128" height="146"
-  class="opacity">
+<img
+  src="https://developer.mozilla.org/mdn-social-share.png"
+  alt="MDN logo"
+  width="128"
+  height="146"
+  class="opacity" />
 ```
 
 {{EmbedLiveSample('hover_시_다른_불투명도_적용', '150', '175')}}

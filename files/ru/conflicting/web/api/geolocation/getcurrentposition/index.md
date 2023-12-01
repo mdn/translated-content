@@ -1,7 +1,6 @@
 ---
 title: PositionOptions
 slug: conflicting/Web/API/Geolocation/getCurrentPosition
-translation_of: Web/API/PositionOptions
 original_slug: Web/API/PositionOptions
 ---
 
@@ -30,7 +29,7 @@ _Интерфейс `PositionOptions` не наследует никаких д�
 
 ## Совместимость с браузерами
 
-{{Compat("api.PositionOptions")}}
+{{Compat}}
 
 ## Также можно посмотреть
 

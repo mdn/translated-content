@@ -26,10 +26,10 @@ l10n:
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 // If specified, responseType must be empty string or "text"
-xhr.responseType = 'text';
+xhr.responseType = "text";
 
 xhr.onload = () => {
   if (xhr.readyState === xhr.DONE) {

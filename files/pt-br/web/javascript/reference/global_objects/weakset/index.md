@@ -65,14 +65,11 @@ ws.has(window); // false, window foi removido
 
 ## Especificações
 
-| Especificação                                              | Status               | Comentário        |
-| ---------------------------------------------------------- | -------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-weakset-objects', 'WeakSet')}}     | {{Spec2('ES6')}}     | Definição inicial |
-| {{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatilidade de Browser
 
-{{Compat("javascript.builtins.WeakSet")}}
+{{Compat}}
 
 ## Veja também
 

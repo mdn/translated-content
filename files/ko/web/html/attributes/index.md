@@ -697,7 +697,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     </tr>
     <tr>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/img#attr-intrinsicsize"
+        <a href="/ko/docs/Web/HTML/Element/img#intrinsicsize"
           ><code>intrinsicsize</code></a
         >
         {{deprecated_inline}}

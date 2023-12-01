@@ -42,7 +42,7 @@ _{{DOMxRef("Document")}} 인터페이스는 full-screen mode가 지원되고 사
 
 _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode와 window mode간에 변경하는 과정에서 오류가 발생하는 것을 감지하는데 사용할 수 있는 두 가지 이벤트를 정의합니다. 이러한 이벤트에 대한 이벤트 핸들러는 {{DOMxRef("Document")}} 와{{DOMxRef("Element")}} 인터페이스 에서 사용할 수 있습니다._
 
-> **참고:** **주의:** 이러한 이벤트 핸들러 속성(property)은 HTML 컨텐트 속성(attribute)으로 사용할 수 없습니다. 즉, HTML 컨텐트에서 {{Event("fullscreenchange")}} 및 {{Event("fullscreenerror")}} 이벤트를 지정할 수 없습니다. 자바스크립트 코드로 추가해야만 합니다.
+> **참고:** **주의:** 이러한 이벤트 핸들러 속성(property)은 HTML 컨텐트 속성(attribute)으로 사용할 수 없습니다. 즉, HTML 컨텐트에서 {{Event("fullscreenchange")}} 및 {{Event("fullscreenerror")}} 이벤트를 지정할 수 없습니다. JavaScript 코드로 추가해야만 합니다.
 
 #### Event handlers on documents
 
@@ -147,4 +147,4 @@ full-screen mode가 이미 활성화 된 경우(`fullscreenElement` 가 `null`�
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/ko/docs/Web/HTML/Element/iframe#allowfullscreen)

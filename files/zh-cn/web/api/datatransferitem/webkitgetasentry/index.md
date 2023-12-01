@@ -105,7 +105,7 @@ function scanFiles(item, container) {
 }
 ```
 
-`scanFiles()`首先创建一个新[`<li>`](/zh-CN/docs/Web/HTML/Element/li)元素来表示正在扫描的项目，将项目的名称作为文本内容插入其中，然后将其附加到容器中。容器在此示例中始终是列表元素，您很快就会看到。
+`scanFiles()`首先创建一个新[`<li>`](/zh-CN/docs/Web/HTML/Element/li)元素来表示正在扫描的项目，将项目的名称作为文本内容插入其中，然后将其附加到容器中。容器在此示例中始终是列表元素，你很快就会看到。
 
 一旦当前项目在列表中，[`isDirectory`](/zh-CN/docs/Web/API/FileSystemEntry/isDirectory)就会检查项目的属性。如果该项目是目录，我们需要递归到该目录。第一步是创建一个[`FileSystemDirectoryReader`](/zh-CN/docs/Web/API/FileSystemDirectoryReader)to 来处理获取目录的内容。这是通过调用 item 的[`createReader()`](/zh-CN/docs/Web/API/FileSystemDirectoryEntry/createReader)方法完成的。然后[`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)创建一个 new 并将其附加到父列表; 这将包含列表层次结构中下一级别的目录内容。
 

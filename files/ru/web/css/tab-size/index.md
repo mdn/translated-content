@@ -2,6 +2,7 @@
 title: tab-size
 slug: Web/CSS/tab-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 CSS-свойство **`tab-size`** используется для настройки ширины символа табуляции (`U+0009`).

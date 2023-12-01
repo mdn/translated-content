@@ -7,15 +7,21 @@ slug: Web/SVG/Element/use
 
 Элемент **`<use>`** берёт элементы из SVG-документа и дублирует их где-то ещё.
 
+## Пример
+
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
-  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/>
-  <use href="#myCircle" x="10" fill="blue"/>
-  <use href="#myCircle" x="20" fill="white" stroke="red"/>
+  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue" />
+  <use href="#myCircle" x="10" fill="blue" />
+  <use href="#myCircle" x="20" fill="white" stroke="red" />
   <!--
   В данном случае атрибут stroke="red" будет игнорироваться, так как
   ранее он был задан непосредственно для фигуры круга с id "myCircle".
@@ -26,13 +32,13 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, 100)}}
+{{EmbedLiveSample("Пример", 100, 100)}}
 
 Эффект такой же, как если бы элементы были полностью склонированы в DOM, а затем расположены в месте, где находится элемент `use`, подобно элементам `<template>` в HTML 5.
 
 Большинство атрибутов `use` **не** переопределяют те, что уже заданы у элемента, на который `use` ссылается. (Это отличается от того, как атрибуты CSS-стилей, переопределяют те, что были заданы раньше в каскаде). **Только** атрибуты {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} и {{SVGAttr("href")}} элемента `use` будут переопределять те, что были заданы у элемента, на который `use` ссылается. Однако к элементу `use` будут применены любые другие атрибуты, не заданные у элемента, на который `use` ссылается.
 
-Поскольку клонированные элементы не отображаются, нужно соблюдать осторожность при использовании [CSS](/ru/docs/Web/CSS) для стилизации элемента `use` и его клонированных потомков. Нет гарантии, что CSS-свойства будут унаследованы клонированным DOM, пока вы явно не зададите им использование [CSS-наследования](/ru/docs/Web/CSS/inheritance).
+Поскольку клонированные элементы не отображаются, нужно соблюдать осторожность при использовании [CSS](/ru/docs/Web/CSS) для стилизации элемента `use` и его клонированных потомков. Нет гарантии, что CSS-свойства будут унаследованы клонированным DOM, пока вы явно не зададите им использование [CSS-наследования](/ru/docs/Web/CSS/Inheritance).
 
 По соображениям безопасности, браузеры могут применять [правило ограничения домена](/ru/docs/Web/Security/Same-origin_policy) для элементов `use` и могут отказаться загружать URL другого источника в атрибуте {{SVGAttr("href")}}.
 
@@ -44,7 +50,7 @@ html,body,svg { height:100% }
   - : Ссылка на элемент/фрагмент, который нужно продублировать.
     _Тип значения_: [**\<URL>**](/docs/Web/SVG/Content_type#URL) ; _Значение по умолчанию_: `none`; _Анимируется_: **да**
 - {{SVGAttr("xlink:href")}}
-  - : {{Deprecated_Header("SVG2")}}[\<IRI>](/en/SVG/Content_type#IRI)-ссылка на элемент/фрагмент, который нужно продублировать.
+  - : {{Deprecated_Header("SVG2")}}[\<IRI>](/ru/docs/Web/SVG#iri)-ссылка на элемент/фрагмент, который нужно продублировать.
     _Тип значения_: [**\<IRI>**](/docs/Web/SVG/Content_type#IRI) ; _Значение по умолчанию_: `none`; _Анимируется_: **да**
 - {{SVGAttr("x")}}
   - : Координата "x" элемента `use`.
@@ -63,7 +69,7 @@ html,body,svg { height:100% }
 
 ### Глобальные атрибуты
 
-- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+- [Core Attributes](/ru/docs/Web/SVG/Attribute/Core)
   - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
@@ -84,10 +90,7 @@ html,body,svg { height:100% }
 
 ## Спецификации
 
-| Specification                                                                        | Status                   | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}     | {{Spec2('SVG2')}} |                    |
-| {{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Браузерная совместимость
 

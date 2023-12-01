@@ -2,6 +2,7 @@
 title: image-rendering
 slug: Web/CSS/image-rendering
 ---
+
 {{CSSRef}}
 
 **`image-rendering`** [CSS](/ko/docs/Web/CSS) 프로퍼티는 브라우저의 이미지 스케일링 방식에 대한 힌트를 제공합니다. 이 프로퍼티는 엘리먼트 자신에게 적용시킵니다. 스케일링(크기변경)이 안 된 이미지에게는 적용되지 않습니다.
@@ -28,7 +29,7 @@ image-rendering: unset;
 
 - **`auto`**
   - : 기본값입니다.
-    이미지의 스케일링 알고리즘은 이미지를 최대치로 활용해서 나타냅니다. 특히, 스케일링 알고리즘은 이중선형보간법같은 알고리즘이 보기에 괜찮은 "부드러운"색상을 나타냅니다. 사진같은 종류의 것들을 위해 GEcko엔진 1.9버전(파이어폭스 3.0) 에서는 이중선형 리샘플링(고품질) 을 사용해왔습니다.
+    이미지의 스케일링 알고리즘은 이미지를 최대치로 활용해서 나타냅니다. 특히, 스케일링 알고리즘은 이중선형보간법같은 알고리즘이 보기에 괜찮은 "부드러운"색상을 나타냅니다. 사진같은 종류의 것들을 위해 GEcko엔진 1.9버전(Firefox 3.0) 에서는 이중선형 리샘플링(고품질) 을 사용해왔습니다.
 - **`crisp-edges`**
   - : 이미지 스케일링 알고리즘은 반드시 색상대조와 이미지의 표준을 맞게 보존해야 합니다. 그리고 smooth 하지 못한 색상 혹은 이미지의 흐림효과 또한 알고리즘 공정에 있어야합니다. 이 속성은 픽셀아트같은 의도되어 만들어진 이미지들에게 필요합니다.
 - **`pixelated`**
@@ -45,23 +46,24 @@ image-rendering: unset;
 ```css
 /* applies to GIF and PNG images; avoids blurry edges */
 
-img[src$=".gif"], img[src$=".png"] {
-                   image-rendering: -moz-crisp-edges;         /* Firefox */
-                   image-rendering:   -o-crisp-edges;         /* Opera */
-                   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-                   image-rendering: crisp-edges;
-                   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-                 }
+img[src$=".gif"],
+img[src$=".png"] {
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
 ```
 
 ```css
 div {
-        background: url(chessboard.gif) no-repeat 50% 50%;
-        image-rendering: -moz-crisp-edges;         /* Firefox */
-        image-rendering:   -o-crisp-edges;         /* Opera */
-        image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-        image-rendering: crisp-edges;
-        -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  background: url(chessboard.gif) no-repeat 50% 50%;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
 }
 ```
 

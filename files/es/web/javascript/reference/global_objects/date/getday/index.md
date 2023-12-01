@@ -28,7 +28,7 @@ El valor devuelto por `getDay()` es un entero correspondiente al día de la sema
 La segunda sentencia asigna el valor 1 a `weekday`, basado en el valor del objeto Xmas95 {{jsxref("Date")}}. December 25, 1995, que corresponde a Lunes.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1

@@ -30,12 +30,12 @@ entries()
 ```js
 // Headers テストオブジェクトを作成
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // キーと値のペアを表示
 for (const pair of myHeaders.entries()) {
-   console.log(`${pair[0]}: ${pair[1]}`);
+  console.log(`${pair[0]}: ${pair[1]}`);
 }
 ```
 

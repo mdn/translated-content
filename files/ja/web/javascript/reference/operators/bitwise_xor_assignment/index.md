@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 ## 構文
 
 ```js
-x ^= y // x = x ^ y
+x ^= y; // x = x ^ y
 ```
 
 ## 例
@@ -20,14 +20,14 @@ x ^= y // x = x ^ y
 ### ビット排他的論理和代入の使用
 
 ```js
-let a = 5;      // 00000000000000000000000000000101
-a ^= 3;         // 00000000000000000000000000000011
+let a = 5; // 00000000000000000000000000000101
+a ^= 3; // 00000000000000000000000000000011
 
 console.log(a); // 00000000000000000000000000000110
 // 6
 
-let b = 5;      // 00000000000000000000000000000101
-b ^= 0;         // 00000000000000000000000000000000
+let b = 5; // 00000000000000000000000000000101
+b ^= 0; // 00000000000000000000000000000000
 
 console.log(b); // 00000000000000000000000000000101
 // 5
@@ -43,5 +43,5 @@ console.log(b); // 00000000000000000000000000000101
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
 - [ビット排他的論理和演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)

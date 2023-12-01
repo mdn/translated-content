@@ -120,7 +120,10 @@ As another example, the following media query:
 The `only` keyword prevents older browsers that do not support media queries with media features from applying the given styles. _It has no effect on modern browsers._
 
 ```html
-<link rel="stylesheet" media="only screen and (color)" href="modern-styles.css" />
+<link
+  rel="stylesheet"
+  media="only screen and (color)"
+  href="modern-styles.css" />
 ```
 
 ## Смотрите также

@@ -5,38 +5,162 @@ slug: Web/Media/Formats/Image_types
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
-在本指南中，我们将介绍网页浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助您为您的网站选择最合适的图像格式。
+在本指南中，我们将介绍 web 浏览器普遍支持的图像文件类型，并提供一些关于它们的信息与见解，帮助你为你的网站选择最合适的图像格式。
 
 ## 常见图像文件类型
 
-世界上有非常多的图像文件格式。下面列举了网页上常用的格式，其中 BMP 由于浏览器支持限制而不被推荐，通常应该避免在网页内容中使用。
+下面列出了网络上最常用的图像文件格式。
 
-| 缩写                                                 | 文件格式                                                   | MIME 类型       | 文件拓展名                                 | 浏览器兼容性                                            |
-| ---------------------------------------------------- | ---------------------------------------------------------- | --------------- | ------------------------------------------ | ------------------------------------------------------- |
-| [APNG](#apng_animated_portable_network_graphics)     | Animated Portable Network Graphics **动态便携式网络图像**  | `image/apng`    | `.apng`                                    | Chrome, Edge, Firefox, Opera, Safari                    |
-| [AVIF](#avif)                                        | AV1 Image File Format AV1 图像文件格式                     | `image/avif`    | `.avif`                                    | Chrome, Opera, Firefox (feature flag)                   |
-| [BMP](#bmp_bitmap_file)                              | Bitmap file **位图**文件                                   | `image/bmp`     | `.bmp`                                     | Chrome, Edge, Firefox, Internet Explorer, Opera, Safari |
-| [GIF](#gif_graphics_interchange_format)              | Graphics Interchange Format 图像互换格式                   | `image/gif`     | `.gif`                                     | Chrome, Edge, Firefox, Internet Explorer, Opera, Safari |
-| [ICO](#ico_microsoft_windows_icon)                   | Microsoft Icon 微软图标                                    | `image/x-icon`  | `.ico`, `.cur`                             | Chrome, Edge, Firefox, Internet Explorer, Opera, Safari |
-| [JPEG](#jpeg_joint_photographic_experts_group_image) | Joint Photographic Expert Group image 联合影像专家小组图像 | `image/jpeg`    | `.jpg`, `.jpeg`, `.jfif`, `.pjpeg`, `.pjp` | Chrome, Edge, Firefox, Internet Explorer, Opera, Safari |
-| [PNG](#png_portable_network_graphics)                | Portable Network Graphics **便携式网络图像**               | `image/png`     | `.png`                                     | Chrome, Edge, Firefox, Internet Explorer, Opera, Safari |
-| [SVG](#svg_scalable_vector_graphics)                 | Scalable Vector Graphics **可缩放矢量图形**                | `image/svg+xml` | `.svg`                                     | Chrome, Edge, Firefox, Internet Explorer, Opera, Safari |
-| [TIFF](#tiff_tagged_image_file_format)               | Tagged Image File Format 标签图像文件格式                  | `image/tiff`    | `.tif`, `.tiff`                            | Safari                                                  |
-| [WebP](#webp_image)                                  | Web Picture format 万维网图像格式                          | `image/webp`    | `.webp`                                    | Chrome, Edge, Firefox, Opera, Safari                    |
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row">缩写</th>
+      <th scope="row">文件格式</th>
+      <th scope="col">MIME 类型</th>
+      <th scope="col">文件扩展名</th>
+      <th scope="col">摘要</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="#apng（动态可移植网络图形）">APNG</a>
+      </th>
+      <th scope="row">动态可移植网络图形</th>
+      <td><code>image/apng</code></td>
+      <td><code>.apng</code></td>
+      <td>
+        是无损动画序列的良好选择（GIF 性能较差）。AVIF 和 WebP 性能更好，但浏览器支持较少。<br />
+        <strong>以下浏览器支持</strong>：Chrome、Edge、Firefox、Opera、Safari。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#avif_图像">AVIF</a></th>
+      <th scope="row">AV1 图像档案格式</th>
+      <td><code>image/avif</code></td>
+      <td><code>.avif</code></td>
+      <td>
+        <p>
+          由于其性能高，且无需版税，是图像和动画图像的理想选择。与 PNG 或 JPEG 相比，它的压缩效果更好，支持更高的色深、动画帧、透明度等。请注意，在使用 AVIF 时，应包含浏览器支持更好的回退格式（也就是说，要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> 元素）。<br />
+          <strong>以下浏览器支持</strong>：Chrome、Firefox（只支持静态图，动态图尚未实现）、Opera、Safari。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#gif（图像互换格式）">GIF</a></th>
+      <th scope="row">图像互换格式</th>
+      <td><code>image/gif</code></td>
+      <td><code>.gif</code></td>
+      <td>
+        是简单图像和动画的不错选择。无损<em>和</em>有索引的静态图像首选 PNG，动画序列可考虑 WebP、AVIF 或 APNG。<br />
+        <strong>以下浏览器支持</strong>：Chrome、Edge、Firefox、IE、Opera、Safari。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <a href="#jpeg（联合图像专家小组图像）">JPEG</a>
+      </th>
+      <th scope="row">联合图像专家小组图像</th>
+      <td><code>image/jpeg</code></td>
+      <td>
+        <code>.jpg</code>、<code>.jpeg</code>、<code>.jfif</code>、<code>.pjpeg</code>、<code>.pjp</code>
+      </td>
+      <td>
+        <p>
+          静态图像有损压缩的理想选择（目前最流行）。如果需要更精确地再现图像，则首选 PNG；如果需要更好的再现效果和更高的压缩率，则首选 WebP/AVIF。<br />
+          <strong>以下浏览器支持</strong>：Chrome、Edge、Firefox、IE、Opera、Safari。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#png（便携式网络图形）">PNG</a></th>
+      <th scope="row">便携式网络图形</th>
+      <td><code>image/png</code></td>
+      <td><code>.png</code></td>
+      <td>
+        <p>
+          与 JPEG 相比，PNG 能更精确地再现源图像，或在需要透明的情况下更受青睐。WebP/AVIF 可提供更好的压缩和再现效果，但浏览器的支持比较有限。<br />
+          <strong>以下浏览器支持</strong>：Chrome、Edge、Firefox、IE、Opera、Safari。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#svg（可缩放矢量图形）">SVG</a></th>
+      <th scope="row">可缩放矢量图形</th>
+      <td><code>image/svg+xml</code></td>
+      <td><code>.svg</code></td>
+      <td>
+        矢量图像格式；适用于用户界面元素、图标、图表等，必须以不同尺寸精确绘制。<br />
+        <strong>以下浏览器支持</strong>：Chrome、Edge、Firefox、IE、Opera、Safari。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#webp_图像">WebP</a></th>
+      <th scope="row">Web 图像格式</th>
+      <td><code>image/webp</code></td>
+      <td><code>.webp</code></td>
+      <td>
+        是静止图像和动画图像的绝佳选择。WebP 的压缩效果比 PNG 或 JPEG 好得多，而且支持更高的色深、动画帧和透明度等。AVIF 的压缩效果稍好，但在浏览器中的支持度不高，而且不支持渐进式渲染。<br />
+        <strong>以下浏览器支持</strong>：Chrome、Edge、Firefox、Opera、Safari。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-每一种格式缩写都有一个详细说明，其功能以及详细的浏览器兼容信息，包括哪个版本引入支持以及以后可能会引入的特殊功能。
+> **备注：** 与 WebP 和 AVIF 等较新的格式相比，PNG、JPEG 和 GIF 等较老的格式性能较差，但却能获得更广泛的“历史”浏览器支持。较新的图像格式越来越受欢迎，因为不支持这些格式的浏览器变得越来越无关紧要（即市场份额几乎为零）。
 
-## 图像文件格式详介
+下面列出了 web 上出现的图像格式，但 web 内容应避免使用这些格式（通常是因为这些格式没有广泛的浏览器支持，或者有更好的替代格式）。
 
-The following sections provide a brief overview of each of the image file types supported by web browsers.
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row">缩写</th>
+      <th scope="row">文件格式</th>
+      <th scope="col">MIME 类型</th>
+      <th scope="col">文件扩展名</th>
+      <th scope="col">支持的浏览器</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="#bmp（位图文件）">BMP</a></th>
+      <th scope="row">位图文件</th>
+      <td><code>image/bmp</code></td>
+      <td><code>.bmp</code></td>
+      <td>Chrome、Edge、Firefox、IE、Opera、Safari</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#ico（Microsoft_Windows_图标）">ICO</a></th>
+      <th scope="row">Microsoft 图标</th>
+      <td><code>image/x-icon</code></td>
+      <td><code>.ico</code>、<code>.cur</code></td>
+      <td>Chrome、Edge、Firefox、IE、Opera、Safari</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#tiff（标签图像文件格式）">TIFF</a></th>
+      <th scope="row">标签图像文件格式</th>
+      <td><code>image/tiff</code></td>
+      <td><code>.tif</code>、<code>.tiff</code></td>
+      <td>Safari</td>
+    </tr>
+  </tbody>
+</table>
 
-In the tables below, the term **bits per component** refers to the number of bits used to represent each color component. For example, an RGB color depth of 8 indicates that each of the red, green, and blue components are represented by an 8-bit value. **Bit depth**, on the other hand, is the total number of bits used to represent each pixel in memory.
+> **备注：** 每种图像格式的缩写可链接到有关该格式的较长描述、其功能和详细的浏览器兼容性信息（包括哪些版本引入了支持以及后来可能引入的特定特殊功能）。
 
-### <a id="APNG" name="APNG">APNG</a> (Animated Portable Network Graphics)
+> **备注：** Safari 11.1 新增了使用视频格式替代 gif 动画的功能，而其他浏览器没有添加这方面的支持。详见 [Chromium bug](https://crbug.com/791658) 和 [Firefox bug](https://bugzil.la/895131) 以了解更多信息。
 
-APNG is a file format first introduced by Mozilla which extends the [PNG](#png_portable_network_graphics) standard to add support for animated images. Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of [color depths](https://zh.wikipedia.org/wiki/color_depth), whereas animated GIF supports only 8-bit [indexed color](https://zh.wikipedia.org/wiki/indexed_color).
+## 图像文件类型详介
 
-APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity [throbbers](https://zh.wikipedia.org/wiki/throbber), and other animated sequences. For example, APNG is [one of the formats supported when creating animated stickers](https://developer.apple.com/stickers/) for Apple's iMessage application (and the Messages application on iOS). They're also commonly used for the animated portions of web browsers' user interfaces.
+下文将简要介绍 web 浏览器支持的每种图像文件类型。
+
+在下表中，**每分量比特**是指用于表示每种色彩分量的比特数。例如，RGB 颜色深度为 8 表示红、绿、蓝三原色各用 8 位数值表示。另一方面，**比特深度**是指用于表示内存中每个像素的总比特数。
+
+### APNG（动态可移植网络图形）
+
+APNG 是 Mozilla 首次推出的一种文件格式，它扩展了 [PNG](#png（便携式网络图形）) 标准，增加了对动画图像的支持。在概念上，APNG 与已经使用了几十年的动画 GIF 格式相似，但 APNG 的功能更强，它支持多种[颜色深度](https://zh.wikipedia.org/wiki/色彩深度)，而动画 GIF 只支持 8 位[索引颜色](https://zh.wikipedia.org/wiki/索引顏色)。
+
+APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指示器、活动[加载器](https://en.wikipedia.org/wiki/throbber)和其他动画序列。例如，APNG 是苹果 iMessage 应用程序（和 iOS 上的“信息”应用程序）[创建动画贴纸时支持的格式之一](https://developer.apple.com/stickers/)。它们也常用于 web 浏览器用户界面的动画部分。
 
 <table class="standard-table">
   <tbody>
@@ -58,11 +182,11 @@ APNG is ideal for basic animations that do not need to synchronize to other acti
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
-      <td>Chrome 59, Edge 12, Firefox 3, Opera 46, Safari 8</td>
+      <td>Chrome 59、Edge 12、Firefox 3、Opera 46、Safari 8</td>
     </tr>
     <tr>
       <th scope="row">最高分辨率</th>
-      <td>2,147,483,647×2,147,483,647 pixels</td>
+      <td>2,147,483,647×2,147,483,647 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -71,57 +195,46 @@ APNG is ideal for basic animations that do not need to synchronize to other acti
           <thead>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
-              <td>1, 2, 4, 8, and 16</td>
+              <th scope="row">灰度</th>
+              <td>1、2、4、8 和 16</td>
               <td>
-                Each pixel consists of a single <em>D</em>-bit value indicating
-                the brightness of the greyscale pixel.
+                每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
-              <td>8 and 16</td>
+              <th scope="row">真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by three <em>D</em>-bit values
-                indicating the level of the red, green, and blue color
-                components.
+                每个像素由三个 <em>D</em> 位值表示，分别代表红、绿、蓝三色的色阶。
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
-              <td>1, 2, 4, and 8</td>
+              <th scope="row">索引颜色</th>
+              <td>1、2、4 和 8</td>
               <td>
-                Each pixel is a <em>D</em>-bit value indicating an index into a
-                color palette which is contained within a
-                <code
+                每个像素都是一个 <em>D</em> 位值，表示调色板的索引，调色板包含在 APNG 文件的 <code
                   ><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code
-                >
-                chunk in the APNG file; the colors in the palette all use an
-                8-bit depth.
+                > 块中；调色板中的颜色都使用 8 位深度。
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
-              <td>8 and 16</td>
+              <th scope="row">带有透明度的灰度值</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by two <em>D</em>-bit values: the
-                intensity of the greyscale pixel and an alpha sample, indicating
-                how opaque the pixel is.
+                每个像素由两个 <em>D</em> 位值表示：灰度像素的强度和表示像素不透明程度的 alpha 样本。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
-              <td>8 and 16</td>
+              <th scope="row">带有透明度的真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is comprised of four <em>D</em>-pixel color
-                components: red, green, blue, and the alpha sample indicating
-                how opaque the pixel is.
+                每个像素由四个 <em>D</em> 像素颜色成分组成：红色、绿色、蓝色和表示像素不透明程度的 alpha 样本。
               </td>
             </tr>
           </tbody>
@@ -130,33 +243,121 @@ APNG is ideal for basic animations that do not need to synchronize to other acti
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless</td>
+      <td>无损</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
-        Free and open under the
-        <a href="http://creativecommons.org/licenses/by-sa/3.0/"
-          >Creative Commons Attribution-ShareAlike license</a
-        >
-        (<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)
-        version 3.0 or later.
+        根据<a href="http://creativecommons.org/licenses/by-sa/3.0/">创作共用署名-相同方式共享许可</a>（<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>）3.0 或更高版本免费开放。
       </td>
     </tr>
   </tbody>
 </table>
 
-### <a id="BMP" name="BMP">BMP</a> (Bitmap file)
+### AVIF 图像
 
-The **BMP** (**Bitmap image**) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.
+AV1 图像文件格式（AVIF）是一种功能强大、开源、免版税的文件格式，它在高效图像文件格式（HEIF）容器中对 AV1 比特流进行编码。
 
-> **警告：** You should typically avoid using BMP for web site content, as it's not a generally-accepted use of the format.
+> **备注：** AVIF 有可能成为在 web 内容中共享图像的“下一件大事”。它具有最先进的特性和性能，却没有阻碍同类替代产品发展的复杂许可和专利使用费的束缚。
 
-BMP theoretically supports a variety of internal data representations. The simplest, and most commonly used, form of BMP file is an uncompressed raster image, with each pixel occupying 3 bytes representing its red, green, and blue components, and each row padded with `0x00` bytes to a multiple of 4 bytes wide.
+AV1 是一种编码格式，最初设计用于在互联网上传输视频。该格式得益于近年来视频编码技术的长足进步，并有可能受益于对硬件渲染的相关支持。不过，在某些情况下它也有缺点，因为视频和图像编码有一些不同的要求。
 
-While other data representations are defined in the specification, they are not widely used and often completely unimplemented. These features include: support for different bit depths, indexed color, alpha channels, and different pixel orders (by default, BMP is written from bottom-left corner toward the right and top, rather than from the top-left corner toward the right and bottom).
+该格式可以提供：
 
-Theoretically, several compression algorithms are supported, and the image data can also be stored in [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format within the BMP file.
+- 与 JPG 和 PNG 相比，在视觉上相似的压缩水平下，有损压缩效果极佳（例如，有损 AVIF 图像比 JPEG 图像小 50%）。
+- 一般来说，AVIF 比 WebP 有更好的压缩效果。对于相同的 JPG 图像集，中值压缩率为 50%，而 WebP 为 30%（资料来源：[AVIF 与 WebP 的对比](https://www.ctrl.blog/entry/webp-avif-comparison.html)（CTRL 博客））。
+- 无损压缩。
+- 动画/多图像存储（类似于 GIF 动画，但压缩效果更好）
+- 支持 Alpha 通道（即透明）。
+- _高动态范围（HDR）_：支持存储图像，使图像最亮和最暗部分之间的对比度更大。
+- 宽色域：支持包含更大色彩范围的图像。
+
+AVIF 不支持渐进式渲染，因此文件必须完全下载后才能显示。这通常对真实世界的用户体验影响不大，因为 AVIF 文件比同等的 JPEG 或 PNG 文件小得多，因此下载和显示的速度也快得多。文件大小越大，影响就越大，因此应考虑使用支持渐进式渲染的格式。
+
+Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，但不支持动画），但 Edge 和 IE 不支持。由于支持尚不全面（而且没有什么历史深度），应使用 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)（或其他方法）提供 [WebP](#webp_图像)、[JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的回退。
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">MIME 类型</th>
+      <td><code>image/avif</code></td>
+    </tr>
+    <tr>
+      <th scope="row">文件扩展名</th>
+      <td><code>.avif</code></td>
+    </tr>
+    <tr>
+      <th scope="row">规范</th>
+      <td>
+        <p>
+          <a href="https://aomediacodec.github.io/av1-avif/"
+            >AV1 图像文件格式（AVIF）</a
+          >
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">浏览器兼容性</th>
+      <td>
+        Chrome 85、Opera 71、Firefox 93 和 Safari 16.1
+        <ul>
+          <li>
+            Firefox 93 支持静态图像，色彩空间支持全色和有限范围色彩，图像变换支持镜像和旋转。偏好设置 <a href="/zh-CN/docs/Mozilla/Firefox/Experimental_features#avif_严格合规性">image.avif.compliance_strictness</a> 可用于调整符合规范的严格程度。不支持动态图像。
+          </li>
+          <li>
+            Firefox 77~92 版本需要将首选项 <code>image.avif.enable</code> 设置为 <code>true</code>。更早期版本仅提供基本支持。
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">最大尺寸</th>
+      <td>2,147,483,647×2,147,483,647 像素</td>
+    </tr>
+    <tr>
+      <th scope="row">支持的颜色模式</th>
+      <td>
+        <p>
+          <a href="https://aomediacodec.github.io/av1-spec/av1-spec.pdf">AV1 比特流 &#x26; 解码过程规范</a>，第 6.4.2 节中提供了色彩模式支持信息：颜色配置语义。
+        </p>
+        <p>不完全的摘要：</p>
+        <ul>
+          <li>颜色模式：YUV444、YUV422、YUV420</li>
+          <li>灰度支持：YUV400</li>
+          <li>位数：8/10/12-bit</li>
+          <li>透明度支持</li>
+          <li>ICC 配置项支持</li>
+          <li>
+            NCLX 支持：sRGB、linear sRGB、linear Rec2020、PQ Rec2020、HLG Rec2020、PQ P3、HLG P3 等
+          </li>
+          <li>Tiling 支持</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">压缩</th>
+      <td>有损压缩和无损压缩</td>
+    </tr>
+    <tr>
+      <th scope="row">许可</th>
+      <td>
+        免版税。有关许可信息，请访问<a href="https://aomedia.org/license/">版权页面</a>。
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### BMP（位图文件）
+
+**BMP**（**位图图像**）文件类型在 Windows 计算机上最为常见，一般只用于 web 应用程序和内容中的特殊情况。
+
+> **警告：** 网站内容通常应避免使用 BMP 文件。最常见的 BMP 文件格式将数据表示为未压缩的光栅图像，与 png 或 jpg 图像类型相比，文件大小较大。目前有更高效的 BMP 格式，但并未广泛使用，web 浏览器也很少支持。
+
+BMP 理论上支持多种内部数据表示。最简单也是最常用的 BMP 文件形式是一种未压缩的光栅图像，每个像素占 3 个字节，分别代表其红、绿、蓝三部分，每行用 `0x00` 字节填充，宽度为 4 字节的倍数。
+
+虽然规范中定义了其他数据表示方式，但它们并没有被广泛使用，通常完全没有实现。这些功能包括：支持不同的位深度、索引颜色、alpha 通道和不同的像素顺序（默认情况下，BMP 从左下角向右上角写入，而不是从左上角向右下角写入）。
+
+从理论上讲，BMP 文件支持多种压缩算法，图像数据也可以使用 [JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式存储。
 
 <table class="standard-table">
   <tbody>
@@ -165,32 +366,25 @@ Theoretically, several compression algorithms are supported, and the image data 
       <td><code>image/bmp</code></td>
     </tr>
     <tr>
-      <th scope="row">文件拓展名</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.bmp</code></td>
     </tr>
     <tr>
       <th scope="row">规范</th>
       <td>
-        No specification; however, Microsoft provides general documentation of
-        the format at
-        <a
-          href="https://docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage"
-          >docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage</a
-        >
+        没有规范；不过，微软在 <a href="https://learn.microsoft.com/zh-cn/windows/win32/gdi/bitmap-storage">learn.microsoft.com/zh-cn/windows/win32/gdi/bitmap-storage</a> 提供了格式的通用文档。
       </td>
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and
-        Safari
+        Chrome、Edge、Firefox、Internet Explorer、Opera 和 Safari 的所有版本。
       </td>
     </tr>
     <tr>
-      <th scope="row">最高分辨率</th>
+      <th scope="row">最大尺寸</th>
       <td>
-        Either 32,767×32,767 or 2,147,483,647×2,147,483,647 pixels, depending on
-        the format version
+        32,767×32,767 像素或 2,147,483,647×2,147,483,647 像素，取决于格式版本
       </td>
     </tr>
     <tr>
@@ -200,47 +394,42 @@ Theoretically, several compression algorithms are supported, and the image data 
           <thead>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td>1</td>
               <td>
-                Each bit represents a single pixel, which can be either black or
-                white.
+                每个比特代表一个像素，可以是黑色或白色。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
-              <td>8 and 16</td>
+              <th scope="row">真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by three values representing the red,
-                green, and blue color components; each is <em>D</em> bits.
+                每个像素由三个值表示，分别代表红色、绿色和蓝色，每个值为 <em>D</em> 位。
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
-              <td>2, 4, and 8</td>
+              <th scope="row">索引颜色</th>
+              <td>2、4 和 8</td>
               <td>
-                Each pixel is represented by a value which is one 2, 4, or 8
-                bits, serving as an index into the color table.
+                每个像素由一个 2、4 或 8 位的值表示，作为色彩表的索引。
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>BMP has no distinct grayscale format.</td>
+              <td>BMP 没有明显的灰度格式。</td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
-              <td>8 and 16</td>
+              <th scope="row">带有透明度的真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by four values representing the red,
-                green, blue, and alpha color components; each is
-                <em>D</em> bits.
+                每个像素由四个值表示，分别代表红、绿、蓝和 alpha 颜色成分；每个值为 <em>D</em> 位。
               </td>
             </tr>
           </tbody>
@@ -250,41 +439,33 @@ Theoretically, several compression algorithms are supported, and the image data 
     <tr>
       <th scope="row">压缩</th>
       <td>
-        Several compression methods are supported, including lossy or lossless
-        algorithms
+        支持多种压缩方法，包括有损或无损算法
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
-        Covered by the
-        <a
-          href="https://docs.microsoft.com/en-us/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc"
-          >Microsoft Open Specification Promise</a
-        >; while Microsoft holds patents against BMP, they have published a
-        promise not to assert its patent rights as long as specific conditions
-        are met. This is not the same as a license, however. BMP is included
-        under the Windows Metafile Format (<code>.wmf</code>).
+        由 <a href="https://docs.microsoft.com/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a> 记载，虽然微软拥有针对 BMP 的专利，但他们已公布了一项承诺，只要满足特定条件，他们就不会主张其专利权。但这并不等同于许可。BMP 包含在 Windows 元文件格式（<code>.wmf</code>）中。
       </td>
     </tr>
   </tbody>
 </table>
 
-### <a id="GIF" name="GIF">GIF</a> (Graphics Interchange Format)
+### GIF（图像互换格式）
 
-In 1987, the CompuServe online service provider introduced the **[GIF](https://zh.wikipedia.org/wiki/GIF)** (**Graphics Interchange Format**) image file format to provide a compressed graphics format that all members of their service would be able to use. GIF uses the [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/Lempel-Ziv-Welch) (LZW) algorithm to losslessly compress 8-bit indexed color graphics. GIF was one of the first two graphics formats supported by {{Glossary("HTML")}}, along with [XBM](#xbm_x_window_system_bitmap_file).
+1987 年，CompuServe 在线服务提供商推出了 **[GIF](https://zh.wikipedia.org/wiki/GIF)**（**图像互换格式**）图像文件格式，为其服务的所有成员提供一种可使用的压缩图形格式。GIF 使用 [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/LZW)（LZW）算法对 8 位索引彩色图形进行无损压缩。GIF 和 [XBM](#xbm_x_window_系统位图文件) 是 {{Glossary("HTML")}} 最早支持的两种图形格式之一。
 
-Each pixel in a GIF is represented by a single 8-bit value serving as an index into a palette of 24-bit colors (8 bits each of red, green, and blue). The length of a color table is always a power of 2 (that is, each palette has 2, 4, 8, 16, 32, 64, or 256 entries). To simulate more than 255 or 256 colors, [dithering](https://zh.wikipedia.org/wiki/dithering) is generally used. It is [technically possible](https://gif.ski/) to tile multiple image blocks, each with its own color palette, to create truecolor images, but in practice this is rarely done.
+GIF 中的每个像素都由一个 8 位值表示，作为 24 位颜色（红、绿、蓝各 8 位）调色板的索引。颜色表的长度总是 2 的幂次（即每个调色板有 2、4、8、16、32、64 或 256 个条目）。要模拟 255 或 256 色以上的颜色，一般使用[抖动](<https://zh.wikipedia.org/wiki/抖動_(數位訊號處理)>)。[技术上可以](https://gif.ski/)对多个图像块进行平铺，每个图像块都有自己的调色板，以创建真彩色图像，但在实践中很少这样做。
 
-Pixels are opaque, unless a specific color index is designated as transparent, in which case pixels colored that value are entirely transparent.
+像素是不透明的，除非特定的颜色指数被指定为透明，在这种情况下，染上该值的像素是完全透明的。
 
-GIF supports simple animation, in which following an initial full-size frame, a series of images reflecting the parts of the image that change with each frame are provided.
+GIF 支持简单的动画，即在最初的全尺寸帧之后，提供一系列反映每帧图像变化部分的图像。
 
-GIF has been extremely popular for decades, due to its simplicity and compatibility. Its animation support caused a resurgence in its popularity in the social media era, when animated GIFs began to be widely used for short "videos", memes, and other simple animation sequences.
+几十年来，GIF 因其简洁性和兼容性而广受欢迎。在社交媒体时代，GIF 动画开始被广泛用于制作短“视频”、备忘录和其他简单的动画序列。
 
-Another popular feature of GIF is support for [interlacing](<https://zh.wikipedia.org/wiki/Interlacing_(bitmaps)>), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality. This is particularly useful when network connections are slow.
+GIF 的另一个流行特性是支持[隔行扫描](<https://en.wikipedia.org/wiki/Interlacing_(bitmaps)>)，即像素行的存储顺序会被打乱，因此部分接收的文件可以较低的质量显示。这在网络连接速度较慢时尤其有用。
 
-GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering. Typically, modern content should use [PNG](#png_portable_network_graphics) for lossless _and_ indexed still images, and should consider using [APNG](#apng_animated_portable_network_graphics) for lossless animation sequences.
+GIF 是简单图像和动画的不错选择，不过将全彩图像转换为 GIF 可能会导致不理想的抖动。通常情况下，现代内容应使用 [PNG](#png（便携式网络图形）) 制作无损*和*索引静态图像，并应考虑使用 [APNG](#apng（动态可移植网络图形）) 制作无损动画序列。
 
 <table class="standard-table">
   <tbody>
@@ -293,29 +474,24 @@ GIF is a good choice for simple images and animations, although converting full 
       <td><code>image/gif</code></td>
     </tr>
     <tr>
-      <th scope="row">文件拓展名</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.gif</code></td>
     </tr>
     <tr>
       <th scope="row">规范</th>
       <td>
-        <a href="https://www.w3.org/Graphics/GIF/spec-gif87.txt"
-          >GIF87a specification</a
-        ><br /><a href="https://www.w3.org/Graphics/GIF/spec-gif89a.txt"
-          >GIF89a specification</a
-        >
+        <a href="https://www.w3.org/Graphics/GIF/spec-gif87.txt">GIF87a 规范</a><br /><a href="https://www.w3.org/Graphics/GIF/spec-gif89a.txt">GIF89a 规范</a>
       </td>
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and
-        Safari
+        Chrome、Edge、Firefox、Internet Explorer、Opera 和 Safari 浏览器的所有版本
       </td>
     </tr>
     <tr>
-      <th scope="row">最高分辨率</th>
-      <td>65,536×65,536 pixels</td>
+      <th scope="row">最大尺寸</th>
+      <td>65,536×65,536 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -324,38 +500,37 @@ GIF is a good choice for simple images and animations, although converting full 
           <thead>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td><em>n/a</em></td>
-              <td>GIF does not include a dedicated greyscale format.</td>
+              <td>GIF 不包括专用的灰度格式。</td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td><em>n/a</em></td>
-              <td>GIF does not support true color pixels.</td>
+              <td>GIF 不支持真彩色像素。</td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td>8</td>
               <td>
-                Each color in a GIF palette is defined as 8 bits each of red,
-                green, and blue (24 total bits per pixel).
+                GIF 调色板中的每种颜色定义为红、绿、蓝各 8 位（每个像素共 24 位）。
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>GIF does not provide a dedicated greyscale format.</td>
+              <td>GIF 不提供专用的灰度格式。</td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>GIF does not support true color pixels.</td>
+              <td>GIF 不支持真彩色像素。</td>
             </tr>
           </tbody>
         </table>
@@ -363,38 +538,35 @@ GIF is a good choice for simple images and animations, although converting full 
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless (LZW)</td>
+      <td>无损 (LZW)</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
-        While the GIF format itself is open, the LZW compression algorithm was
-        covered by patents until the early 2000s. As of July 7, 2004, all
-        relevant patents have expired and the GIF format may be used freely
+        虽然 GIF 格式本身是开放的，但 LZW 压缩算法在本世纪初之前一直受专利保护。截至 2004 年 7 月 7 日，所有相关专利都已过期，GIF 格式可以自由使用。
       </td>
     </tr>
   </tbody>
 </table>
 
-### <a id="ICO" name="ICO">ICO</a> (Microsoft Windows icon)
+### ICO（Microsoft Windows 图标）
 
-The ICO (Microsoft Windows icon) file format was designed by Microsoft for desktop icons of Windows systems. However, early versions of Internet Explorer introduced the ability for a web site to provide a ICO file named `favicon.ico` in a web site's root directory to specify a **[favicon](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
+ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌面图标而设计的。不过，早期版本的 Internet Explorer 允许网站在其根目录中提供名为 `favicon.ico` 的 ICO 文件，以指定一个 **[favicon](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#在你的站点增加自定义图标)**——一个显示在收藏夹菜单和其他对网站图标有用的地方的图标。
 
-An ICO file can contain multiple icons, and begins with a directory listing details about each. Following the directory comes the data for the icons. Each icon's data can be either a [BMP](#bmp_bitmap_file) image without the file header, or a complete [PNG](#png_portable_network_graphics) image (including the file header). If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
+一个 ICO 文件可以包含多个图标，文件开头有一个目录，列出每个图标的详细信息。目录之后是图标的数据。每个图标的数据既可以是不带文件头的 [BMP](#bmp（位图文件）) 图像，也可以是完整的 [PNG](#png（便携式网络图形）) 图像（包括文件头）。如果使用 ICO 文件，则应使用 BMP 格式，因为直到 Windows Vista 才添加了对 ICO 文件内的 PNG 的支持，而且这种支持可能并不完善。
 
-> **警告：** ICO files _should not_ be used in web content. Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标).
+> **警告：** ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标)所述，它们作为网站图标的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
 
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">MIME 类型</th>
       <td>
-        <code>image/vnd.microsoft.icon</code> (official),
-        <code>image/x-icon</code> (used by Microsoft)
+        <code>image/vnd.microsoft.icon</code>（官方格式），<code>image/x-icon</code>（由 Microsoft 使用）
       </td>
     </tr>
     <tr>
-      <th scope="row">文件拓展名</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.ico</code></td>
     </tr>
     <tr>
@@ -404,123 +576,104 @@ An ICO file can contain multiple icons, and begins with a directory listing deta
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and
-        Safari
+        Chrome、Edge、Firefox、Internet Explorer、Opera 和 Safari 浏览器的所有版本
       </td>
     </tr>
     <tr>
-      <th scope="row">最高分辨率</th>
-      <td>256×256 pixels</td>
+      <th scope="row">最大尺寸</th>
+      <td>256×256 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
       <td>
         <table class="standard-table">
           <caption>
-            Icons in BMP format
+            BMP 格式的图标
           </caption>
           <tbody>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td>1</td>
               <td>
-                Each bit represents a single pixel, which can be either black or
-                white.
+                每个比特代表一个像素，可以是黑色或白色。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
-              <td>8 and 16</td>
+              <th scope="row">真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by three values representing the red,
-                green, and blue color components; each is <em>D</em> bits.
+                每个像素由三个值表示，分别代表红色、绿色和蓝色，每个值为 <em>D</em> 位。
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
-              <td>2, 4, and 8</td>
+              <th scope="row">索引颜色</th>
+              <td>2、4 和 8</td>
               <td>
-                Each pixel is represented by a value which is one 2, 4, or 8
-                bits, serving as an index into the color table.
+                每个像素由一个 2、4 或 8 位的值表示，作为色彩表的索引。
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>BMP has no distinct grayscale format.</td>
+              <td>BMP 没有明显的灰度格式。</td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
-              <td>8 and 16</td>
+              <th scope="row">带有透明度的真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by four values representing the red,
-                green, blue, and alpha color components; each is
-                <em>D</em> bits.
+                BMP 没有明显的灰度格式。每个像素由四个值表示，分别代表红、绿、蓝和 Alpha 颜色分量；每个值为 <em>D</em> 位。
               </td>
             </tr>
           </tbody>
         </table>
         <table class="standard-table">
           <caption>
-            Icons in PNG format
+            PNG 格式的图标
           </caption>
           <tbody>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
             <tr>
-              <th scope="row">Greyscale</th>
-              <td>1, 2, 4, 8, and 16</td>
+              <th scope="row">灰度</th>
+              <td>1、2、4、8 和 16</td>
               <td>
-                Each pixel consists of a single <em>D</em>-bit value indicating
-                the brightness of the greyscale pixel.
+                每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
-              <td>8 and 16</td>
+              <th scope="row">真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by three <em>D</em>-bit values
-                indicating the level of the red, green, and blue color
-                components.
+                每个像素由三个<em>D</em>位值表示，分别代表红、绿、蓝三色的色阶。
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
-              <td>1, 2, 4, and 8</td>
+              <th scope="row">索引颜色</th>
+              <td>1、2、4 和 8</td>
               <td>
-                Each pixel is a <em>D</em>-bit value indicating an index into a
-                color palette which is contained within a
-                <code
-                  ><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code
-                >
-                chunk in the APNG file; the colors in the palette all use an
-                8-bit depth.
+                每个像素都是一个 <em>D</em> 位值，表示调色板的索引，调色板包含在 APNG 文件的 <code><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code> 块中；调色板中的颜色都使用 8 位深度。
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
-              <td>8 and 16</td>
+              <th scope="row">带有灰度的真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by two <em>D</em>-bit values: the
-                intensity of the greyscale pixel and an alpha sample, indicating
-                how opaque the pixel is.
+                每个像素由两个 <em>D</em> 位值表示：灰度像素的强度和表示像素不透明程度的 Alpha 样本。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
-              <td>8 and 16</td>
+              <th scope="row">带有透明度的真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is comprised of four <em>D</em>-pixel color
-                components: red, green, blue, and the alpha sample indicating
-                how opaque the pixel is.
+                每个像素由四个 <em>D</em> 像素颜色成分组成：红色、绿色、蓝色和表示像素不透明程度的 alpha 样本。
               </td>
             </tr>
           </tbody>
@@ -530,22 +683,21 @@ An ICO file can contain multiple icons, and begins with a directory listing deta
     <tr>
       <th scope="row">压缩</th>
       <td>
-        BMP-format icons nearly always use lossless compression, but lossy
-        methods are available. PNG icons are always compressed losslessly.
+        BMP 格式的图标几乎总是使用无损压缩，但也有有损压缩方法。PNG 图标始终使用无损压缩。
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>—</td>
     </tr>
   </tbody>
 </table>
 
-### <a id="JPEG" name="JPEG">JPEG</a> (Joint Photographic Experts Group image)
+### JPEG（联合图像专家小组图像）
 
-The {{Glossary("JPEG")}} (typically pronounced "**jay-peg**") image format is currently the most widely used lossy compression format for still images. It's particulary useful for photographs; applying lossy compression to content requiring sharpness, like diagrams or charts, can produce unsatisfactory results.
+{{Glossary("JPEG")}}（通常发音为“**jay-peg**”）图像格式是目前最广泛使用的静态图像有损压缩格式。它尤其适用于照片；将有损压缩应用于需要清晰度的内容，如图表，可能会产生令人不满意的效果。
 
-JPEG is actually a data format for compressed photos, rather than a file type. The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes the format of the files we think of as "JPEG" images.
+JPEG 实际上是一种压缩照片的数据格式，而不是一种文件类型。JFIF（**J**PEG **F**ile **I**nterchange **F**format）规范描述了我们认为的“JPEG”图像的文件格式。
 
 <table class="standard-table">
   <tbody>
@@ -554,10 +706,9 @@ JPEG is actually a data format for compressed photos, rather than a file type. T
       <td><code>image/jpeg</code></td>
     </tr>
     <tr>
-      <th scope="row">文件拓展名</th>
+      <th scope="row">文件扩展名</th>
       <td>
-        <code>.jpg</code>, <code>.jpeg</code>, <code>.jpe</code>,
-        <code>.jif</code>, <code>.jfif</code>
+        <code>.jpg</code>、<code>.jpeg</code>、<code>.jpe</code>、<code>.jif</code>、<code>.jfif</code>
       </td>
     </tr>
     <tr>
@@ -567,13 +718,12 @@ JPEG is actually a data format for compressed photos, rather than a file type. T
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and
-        Safari
+        Chrome、Edge、Firefox、Internet Explorer、Opera 和 Safari 浏览器的所有版本
       </td>
     </tr>
     <tr>
-      <th scope="row">最高分辨率</th>
-      <td>65,535×65,535 pixels</td>
+      <th scope="row">最大尺寸</th>
+      <td>65,535×65,535 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -582,38 +732,37 @@ JPEG is actually a data format for compressed photos, rather than a file type. T
           <thead>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td><em>n/a</em></td>
-              <td>JPEG has no distinct greyscale mode.</td>
+              <td>使用单 Luma 通道（Y）可支持真正的灰度。</td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td>8</td>
               <td>
-                Each pixel is described by the red, blue, and green color
-                components, each of which is 8 bits.
+                每个像素由红、蓝、绿三种颜色分量描述，每种颜色分量为 8 位。
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">索引颜色</th>
               <td><em>n/a</em></td>
-              <td>JPEG does not offer an indexed color mode.</td>
+              <td>JPEG 不提供索引颜色模式。</td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>JPEG does not support an alpha channel.</td>
+              <td>JPEG 不支持透明度通道。</td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td><em>n/a</em></td>
-              <td>JPEG does not support an alpha channel.</td>
+              <td>JPEG 不支持透明度通道。</td>
             </tr>
           </tbody>
         </table>
@@ -622,24 +771,21 @@ JPEG is actually a data format for compressed photos, rather than a file type. T
     <tr>
       <th scope="row">压缩</th>
       <td>
-        Lossy; based on the
-        <a href="https://zh.wikipedia.org/wiki/discrete_cosine_transform"
-          >discrete cosine transform</a
-        >
+        有损；基于<a href="https://en.wikipedia.org/wiki/Discrete_cosine_transform">离散余弦变换</a>
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
-      <td>As of October 27, 2006, all United States patents have expired.</td>
+      <th scope="row">许可</th>
+      <td>截至 2006 年 10 月 27 日，所有美国专利均已过期。</td>
     </tr>
   </tbody>
 </table>
 
-### <a id="PNG" name="PNG">PNG</a> (Portable Network Graphics)
+### PNG（便携式网络图形）
 
-The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless or lossy compression to provide more efficient compression, and supports higher color depths than [GIF](#gif_graphics_interchange_format), as well as full alpha transparency support.
+{{Glossary("PNG")}}（读作“**ping**”）图像格式使用无损压缩，同时支持比 [GIF](#gif（图像互换格式）) 更高的颜色深度，效率更高，并具有完全支持 alpha 透明度的特点。
 
-PNG is widely supported, with all major browsers offering full support for its features. Internet Explorer, which introduced PNG support in versions 4–5, did not fully support it until IE 9, and had many infamous bugs for many of the intervening years, including in the once-omnipresent Internet Explorer 6. This slowed PNG adoption, but it is now commonly used, especially when precise reproduction of the source image is needed.
+PNG 受广泛支持，所有主要浏览器都完全支持其特性。Internet Explorer 在第 4-5 版中引入了对 PNG 的支持，但直到 IE 9 才完全支持该特性，并且在其间的许多年里出现了许多臭名昭著的错误，包括在曾经风靡一时的 Internet Explorer 6 中。这减缓了 PNG 的应用，但现在它已被普遍使用，尤其是在需要精确复制源图像时。
 
 <table class="standard-table">
   <tbody>
@@ -648,7 +794,7 @@ PNG is widely supported, with all major browsers offering full support for its f
       <td><code>image/png</code></td>
     </tr>
     <tr>
-      <th scope="row">文件拓展名</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.png</code></td>
     </tr>
     <tr>
@@ -661,7 +807,7 @@ PNG is widely supported, with all major browsers offering full support for its f
         <table class="standard-table">
           <thead>
             <tr>
-              <th scope="row">Feature</th>
+              <th scope="row">特性</th>
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
@@ -672,57 +818,57 @@ PNG is widely supported, with all major browsers offering full support for its f
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Basic support</th>
+              <th scope="row">基本支持</th>
               <td>1</td>
               <td>12</td>
               <td>1</td>
               <td>5</td>
-              <td>3.5.1 (Presto)<br />15 (Blink)</td>
+              <td>3.5.1（Presto）<br />15（Blink）</td>
               <td>1</td>
             </tr>
             <tr>
-              <th scope="row">Alpha channel</th>
+              <th scope="row">Alpha 通道</th>
               <td>1</td>
               <td>12</td>
               <td>1</td>
               <td>5</td>
-              <td>6 (Presto)<br />All (Blink)</td>
+              <td>6（Presto）<br />所有（Blink）</td>
               <td>1</td>
             </tr>
             <tr>
-              <th scope="row">Gamma correction</th>
-              <td>no</td>
-              <td>yes</td>
+              <th scope="row">伽玛校正</th>
+              <td>否</td>
+              <td>是</td>
               <td>1</td>
               <td>8</td>
               <td>1</td>
-              <td>broken</td>
+              <td>损坏的</td>
             </tr>
             <tr>
-              <th scope="row">Color correction</th>
-              <td>no</td>
-              <td>yes</td>
+              <th scope="row">颜色校正</th>
+              <td>否</td>
+              <td>是</td>
               <td>3</td>
               <td>9</td>
-              <td>no</td>
-              <td>no</td>
+              <td>否</td>
+              <td>否</td>
             </tr>
             <tr>
-              <th scope="row">Interlacing</th>
-              <td>no</td>
+              <th scope="row">插帧</th>
+              <td>否</td>
               <td>?</td>
               <td>1</td>
-              <td>broken</td>
+              <td>损坏的</td>
               <td>3.5.1</td>
-              <td>no</td>
+              <td>否</td>
             </tr>
           </tbody>
         </table>
       </td>
     </tr>
     <tr>
-      <th scope="row">最高分辨率</th>
-      <td>2,147,483,647×2,147,483,647 pixels</td>
+      <th scope="row">最大尺寸</th>
+      <td>2,147,483,647×2,147,483,647 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -731,57 +877,47 @@ PNG is widely supported, with all major browsers offering full support for its f
           <thead>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
-              <td>1, 2, 4, 8, and 16</td>
+              <th scope="row">灰度</th>
+              <td>1、2、4、8 和 16</td>
               <td>
-                Each pixel consists of a single <em>D</em>-bit value indicating
-                the brightness of the greyscale pixel.
+                每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
-              <td>8 and 16</td>
+              <th scope="row">真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by three <em>D</em>-bit values
-                indicating the level of the red, green, and blue color
-                components.
+                每个像素由三个<em>D</em>位值表示，分别代表红、绿、蓝三色的色阶。
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
-              <td>1, 2, 4, and 8</td>
+            <tr>
+              <th scope="row">索引颜色</th>
+              <td>1、2、4 和 8</td>
               <td>
-                Each pixel is a <em>D</em>-bit value indicating an index into a
-                color palette which is contained within a
-                <code
+                每个像素都是一个 <em>D</em> 位值，表示调色板的索引，调色板包含在 APNG 文件的 <code
                   ><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code
-                >
-                chunk in the APNG file; the colors in the palette all use an
-                8-bit depth.
+                > 块中；调色板中的颜色都使用 8 位深度。
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
-              <td>8 and 16</td>
+              <th scope="row">带有灰度的真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is represented by two <em>D</em>-bit values: the
-                intensity of the greyscale pixel and an alpha sample, indicating
-                how opaque the pixel is.
+                每个像素由两个 <em>D</em> 位值表示：灰度像素的强度和表示像素不透明程度的 Alpha 样本。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
-              <td>8 and 16</td>
+              <th scope="row">带有透明度的真彩色</th>
+              <td>8 和 16</td>
               <td>
-                Each pixel is comprised of four <em>D</em>-pixel color
-                components: red, green, blue, and the alpha sample indicating
-                how opaque the pixel is.
+                每个像素由四个 <em>D</em> 像素颜色成分组成：红色、绿色、蓝色和表示像素不透明程度的 alpha 样本。
               </td>
             </tr>
           </tbody>
@@ -790,40 +926,23 @@ PNG is widely supported, with all major browsers offering full support for its f
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless, optionally indexed color like GIF</td>
+      <td>无损，可选择索引颜色，如 GIF</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
-        ©2003 <a href="https://www.w3.org/">W3C</a><sup>®</sup> (<a
-          href="http://www.lcs.mit.edu/"
-          >MIT</a
-        >, <a href="http://www.ercim.org/">ERCIM</a>,
-        <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
-        <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer"
-          >liability</a
-        >,
-        <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks"
-          >trademark</a
-        >,
-        <a href="http://www.w3.org/Consortium/Legal/copyright-documents"
-          >document use</a
-        >
-        and
-        <a href="http://www.w3.org/Consortium/Legal/copyright-software"
-          >software licensing</a
-        >
-        rules apply. No known royalty-bearing patents.
+        ©2003 <a href="https://www.w3.org/">W3C</a>（<a href="http://www.lcs.mit.edu/">MIT</a>、<a href="http://www.ercim.org/">ERCIM</a>、<a href="https://www.keio.ac.jp/">Keio</a>)，保留所有权利。W3C
+        <a href="https://www.w3.org/policies/#disclaimers">免责声明</a>、<a href="https://www.w3.org/policies/#trademarks">商标</a>、<a href="https://www.w3.org/copyright/document-license/">文档使用</a>和<a href="https://www.w3.org/copyright/software-license/">软件授权</a>适用。没有已知的专利使用费。
       </td>
     </tr>
   </tbody>
 </table>
 
-### <a id="SVG" name="SVG">SVG</a> (Scalable Vector Graphics)
+### SVG（可缩放矢量图形）
 
-SVG is an [XML](/zh-CN/docs/Glossary/XML)-based [vector graphics](https://zh.wikipedia.org/wiki/vector_graphics) format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth. SVG files are ideal for diagrams, icons, and other images which can be accurately drawn at any size. As such, SVG is popular for user interface elements in modern Web design.
+SVG 是一种基于 [XML](/zh-CN/docs/Glossary/XML) 的[矢量图形](https://zh.wikipedia.org/wiki/矢量图形)格式，它将图像的内容指定为一系列绘图命令，这些命令可以创建形状、线条、应用颜色、滤镜等。SVG 文件非常适合用于图表、图标和其他可精确绘制任何尺寸的图像。因此，SVG 在现代网页设计的用户界面元素中很受欢迎。
 
-SVG files are text files containing source code that, when interpreted, draws the desired image. For instance, this example defines an drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
+SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像。例如，此示例定义了一个初始大小为 100 x 100 单位的绘图区域，其中包含一条斜穿方框的线：
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -831,12 +950,12 @@ SVG files are text files containing source code that, when interpreted, draws th
 </svg>
 ```
 
-SVG can be used in web content in two ways:
+在网页内容中使用 SVG 有两种方式：
 
-1. You can directly write the {{HTMLElement("svg")}} element within the HTML, containing [SVG elements](/zh-CN/docs/Web/SVG/Element) to draw the image.
-2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
+1. 你可以直接在 HTML 中写入 {{SVGElement("svg")}} 元素，包含 [SVG 元素](/zh-CN/docs/Web/SVG/Element)来绘制图像。
+2. 你可以在任何可以使用其他图像类型的地方显示 SVG 图像，包括使用 {{HTMLElement("img")}} 和 {{HTMLElement("picture")}} 元素、{{cssxref("background-image")}} CSS 属性等。
 
-SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size. It's not generally useful for strictly bitmap or photographic images, although it is possible to include bitmap images within an SVG.
+对于可以使用一系列绘图命令来表示的图像来说，SVG 是一个理想的选择，尤其是当图像的渲染尺寸未知或可能变化时，因为 SVG 可以平滑地缩放到所需的尺寸。对于严格意义上的位图或照片图像，SVG 通常并不适用，尽管可以在 SVG 中包含位图图像。
 
 <table class="standard-table">
   <tbody>
@@ -845,7 +964,7 @@ SVG is an ideal choice for images which can be represented using a series of dra
       <td><code>image/svg+xml</code></td>
     </tr>
     <tr>
-      <th scope="row">文件拓展名</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.svg</code></td>
     </tr>
     <tr>
@@ -858,7 +977,7 @@ SVG is an ideal choice for images which can be represented using a series of dra
         <table class="standard-table">
           <thead>
             <tr>
-              <th scope="row">Feature</th>
+              <th scope="row">特性</th>
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
@@ -869,23 +988,23 @@ SVG is an ideal choice for images which can be represented using a series of dra
           </thead>
           <tbody>
             <tr>
-              <th scope="row">SVG support</th>
+              <th scope="row">SVG 支持</th>
               <td>4</td>
               <td>12</td>
               <td>3</td>
               <td>9</td>
-              <td>10 (Presto)<br />15 (Blink)</td>
+              <td>10（Presto）<br />15（Blink）</td>
               <td>3.2</td>
             </tr>
             <tr>
               <th scope="row">
-                SVG as image ({{HTMLElement("img")}} etc)
+                SVG 作为图像（{{HTMLElement("img")}} 等）
               </th>
               <td>28</td>
               <td>12</td>
               <td>4</td>
               <td>9</td>
-              <td>10 (Presto)<br />15 (Blink)</td>
+              <td>10（Presto）<br />15（Blink）</td>
               <td>9</td>
             </tr>
           </tbody>
@@ -893,75 +1012,57 @@ SVG is an ideal choice for images which can be represented using a series of dra
       </td>
     </tr>
     <tr>
-      <th scope="row">最高分辨率</th>
+      <th scope="row">最大尺寸</th>
       <td>无限制</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
       <td>
-        Colors in SVG are specified using
-        <a href="/zh-CN/docs/Web/CSS/color_value">CSS color syntax</a>.
+        SVG 中的颜色是使用 <a href="/zh-CN/docs/Web/CSS/color_value">CSS 颜色语法</a>指定的。
       </td>
     </tr>
     <tr>
       <th scope="row">压缩</th>
       <td>
-        SVG source may be compressed during transit using
-        <a href="/zh-CN/docs/Web/HTTP/Compression">HTTP compression</a>
-        techniques, or on disk as an <code>.svgz</code> file.
+        SVG 源可以在传输过程中使用 <a href="/zh-CN/docs/Web/HTTP/Compression">HTTP 压缩技术</a>进行压缩，也可以在磁盘上以 <code>.svgz</code> 文件的形式进行压缩。
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
-        ©2018 <a href="https://www.w3.org/">W3C</a><sup>®</sup> (<a
+        ©2018 <a href="https://www.w3.org/">W3C</a>（<a
           href="http://www.lcs.mit.edu/"
           >MIT</a
-        >, <a href="http://www.ercim.org/">ERCIM</a>,
-        <a href="http://www.keio.ac.jp/">Keio</a>,
-        <a href="http://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C
-        <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer"
-          >liability</a
-        >,
-        <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks"
-          >trademark</a
-        >,
-        <a href="http://www.w3.org/Consortium/Legal/copyright-documents"
-          >document use</a
-        >
-        and
-        <a href="http://www.w3.org/Consortium/Legal/copyright-software"
-          >software licensing</a
-        >
-        rules apply. No known royalty-bearing patents.
+        >、<a href="http://www.ercim.org/">ERCIM</a>、<a href="https://www.keio.ac.jp/">Keio</a>、<a href="https://ev.buaa.edu.cn/">Beihang</a>），保留所有权利。W3C
+        <a href="https://www.w3.org/policies/#disclaimers">责任</a>、<a href="https://www.w3.org/policies/#trademarks">商标</a>、<a href="https://www.w3.org/copyright/document-license/">文档使用</a>和<a href="https://www.w3.org/copyright/software-license/">软件授权</a>适用。没有已知的专利使用费。
       </td>
     </tr>
   </tbody>
 </table>
 
-### <a id="TIFF" name="TIFF">TIFF</a> (Tagged Image File Format)
+### TIFF（标签图像文件格式）
 
-[TIFF](https://zh.wikipedia.org/wiki/TIFF) is a raster graphics file format which was created to store scanned photos, although it can be any kind of image. It is a somewhat "heavy" format, in that TIFF files have a tendency to be larger than images in other formats. This is because of the metadata often included, as well as the fact that most TIFF images are either uncompressed or use compression algorithms that still leave fairly large files after compression.
+[TIFF](https://zh.wikipedia.org/wiki/TIFF) 是一种光栅图形文件格式，用于存储扫描照片，但也可以是任何类型的图像。这是一种有点“重”的格式，因为 TIFF 文件往往比其他格式的图像要大。这是因为通常包含元数据，而且大多数 TIFF 图像要么未经压缩，要么使用压缩算法，压缩后的文件仍然相当大。
 
-TIFF supports a variety of compression methods, but the most commonly used are the CCITT Group 4 (and, for older fax systems, Group 3) compression systems used for by fax software, as well as LZW and lossy JPEG compression.
+TIFF 支持多种压缩方法，但最常用的是传真软件使用的 CCITT 第 4 组（对于较早的传真系统，则为第 3 组）压缩系统，以及 LZW 和有损 JPEG 压缩。
 
-Every value in a TIFF file is specified using its **tag** (indicating what kind of information it is, such as the width of the image) and its **type** (indicating the format the data is stored in), followed by the length of the array of values to assign to that tag (all properties are stored in arrays, even for single values). This allows different data types to be used for the same properties. For example, the width of an image, `ImageWidth`, is stored using tag `0x0100`, and is a one-entry array. By specifying type 3 (`SHORT`), the value of `ImageWidth` is stored as a 16-bit value:
+TIFF 文件中的每个值都使用其**标签**（表示信息的类型，如图像的宽度）和**类型**（表示数据的存储格式）来指定，然后是要分配给该标签的数组值的长度（所有属性都存储在数组中，即使是单个值）。这样，相同的属性就可以使用不同的数据类型。例如，图像的宽度 `ImageWidth` 使用标签 `0x0100` 存储，是一个单项数组。通过指定类型 3（`SHORT`），`ImageWidth` 的值将存储为 16 位值：
 
-| Tag                     | Type               | Size                   | Value                 |
-| ----------------------- | ------------------ | ---------------------- | --------------------- |
-| `0x0100` (`ImageWidth`) | `0x0003` (`SHORT`) | `0x00000001` (1 entry) | `0x0280` (640 pixels) |
+| 标签                     | 类型                | 大小                     | 值                   |
+| ------------------------ | ------------------- | ------------------------ | -------------------- |
+| `0x0100`（`ImageWidth`） | `0x0003`（`SHORT`） | `0x00000001`（1 个条目） | `0x0280`（640 像素） |
 
-Specifying type 4 (`LONG`) stores the width as a 32-bit value:
+指定类型 4（`LONG`）可将宽度存储为 32 位值：
 
-| Tag                     | Type              | Size                   | Value                     |
-| ----------------------- | ----------------- | ---------------------- | ------------------------- |
-| `0x0100` (`ImageWidth`) | `0x0004` (`LONG`) | `0x00000001` (1 entry) | `0x00000280` (640 pixels) |
+| 标签                     | 类型               | 大小                     | 值                       |
+| ------------------------ | ------------------ | ------------------------ | ------------------------ |
+| `0x0100`（`ImageWidth`） | `0x0004`（`LONG`） | `0x00000001`（1 个条目） | `0x00000280`（640 像素） |
 
-A single TIFF file can contain multiple images; this may be used to represent multi-page documents, for example (such as a multi-page scanned document, or a received fax). However, software reading TIFF files is only required to support the first image.
+单个 TIFF 文件可包含多个图像；例如，可用于表示多页文件（如多页扫描文件或收到的传真）。不过，读取 TIFF 文件的软件只需支持第一个图像。
 
-TIFF supports a variety of color spaces, not just RGB. These include CMYK, YCbCr, and others, making TIFF a good choice for storing images intended for print, film, or television media.
+TIFF 不仅支持 RGB，还支持多种色彩空间。这些空间包括 CMYK、YCbCr 等，这使得 TIFF 成为存储用于印刷、电影或电视媒体的图像的良好选择。
 
-Long ago, some browsers supported TIFF images in web content; today, however, you need to use special libraries or browser add-ons to do so. As such, TIFF files are not useful within the context of web content, _but_ it's common to provide downloadable TIFF files when distributing photos and other artwork intended for precision editing or printing.
+很久以前，一些浏览器支持在网页内容中使用 TIFF 图像；但如今，你需要使用特殊的库或浏览器插件才能做到这一点。因此，TIFF 文件在网页内容中并不实用，但在分发照片和其他用于精确编辑或打印的艺术品时，提供可下载的 TIFF 文件是很常见的。
 
 <table class="standard-table">
   <tbody>
@@ -970,27 +1071,25 @@ Long ago, some browsers supported TIFF images in web content; today, however, yo
       <td><code>image/tiff</code></td>
     </tr>
     <tr>
-      <th scope="row">文件拓展名</th>
-      <td><code>.tif</code>, <code>.tiff</code></td>
+      <th scope="row">文件扩展名</th>
+      <td><code>.tif</code>、<code>.tiff</code></td>
     </tr>
     <tr>
       <th scope="row">规范</th>
       <td>
-        <a href="https://www.adobe.io/open/standards/TIFF.html"
-          >adobe.io/open/standards/TIFF.html</a
-        >
+        <a href="https://www.adobe.com/devnet-apps/photoshop/fileformatashtml"
+          >https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577413_pgfId-1035272</a>
       </td>
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
       <td>
-        No browsers integrate support for TIFF; its value is as a download
-        format
+        没有浏览器集成对 TIFF 的支持；其价值在于作为一种下载格式
       </td>
     </tr>
     <tr>
-      <th scope="row">最高分辨率</th>
-      <td>4,294,967,295×4,294,967,295 pixels (theoretical)</td>
+      <th scope="row">最大尺寸</th>
+      <td>4,294,967,295×4,294,967,295 像素（理论值）</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
@@ -999,68 +1098,49 @@ Long ago, some browsers supported TIFF images in web content; today, however, yo
           <tbody>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component (<em>D</em>)</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
             <tr>
               <th scope="row">Bilevel</th>
               <td>1</td>
               <td>
-                A bilevel TIFF stores 8 bits in each byte, one bit per pixel.
-                The <code>PhotometricInterpretation</code> field specifies which
-                of 0 and 1 are black and which is white.
+                双字节 TIFF 每个字节存储 8 位，每个像素一位。<code>PhotometricInterpretation</code> 字段指定 0 和 1 中哪个是黑色，哪个是白色。
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale</th>
-              <td>4 and 8</td>
+              <th scope="row">灰度</th>
+              <td>4 和 8</td>
               <td>
-                Each pixel consists of a single <em>D</em>-bit value indicating
-                the brightness of the greyscale pixel.
+                每个像素由一个 <em>D</em> 位值组成，表示灰度像素的亮度。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
+              <th scope="row">真彩色</th>
               <td>8</td>
               <td>
-                All true color RGB images are stored using 8-bits each of red,
-                green, and blue.
+                所有真彩色 RGB 图像都使用红、绿、蓝各 8 位来存储。
               </td>
             </tr>
             <tr>
-              <th scope="row">Indexed color</th>
-              <td>4 and 8</td>
+              <th scope="row">索引颜色</th>
+              <td>4 和 8</td>
               <td>
-                Each pixel is an index into a <code>ColorMap</code> record,
-                which defines the colors used in the image. The color map lists
-                all of the red values, then all of the green values, then all of
-                the blue values (rather than <code>rgb, rgb, rgb...</code>).
+                每个像素都是 <code>ColorMap</code> 记录的索引，该记录定义了图像中使用的颜色。颜色地图列出了所有红色值，然后是所有绿色值，最后是所有蓝色值（而不是 <code>rgb, rgb, rgb…</code>）。
               </td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
-              <td>4 and 8</td>
+              <th scope="row">带有灰度的真彩色</th>
+              <td>4 和 8</td>
               <td>
-                Alpha information is added by specifying that there are more
-                than 3 samples per pixel in the
-                <code>SamplesPerPixel</code> field, and indicating the type of
-                alpha (1 for an associated, pre-multiplied alpha component, and
-                2 for unassociated alpha (a separate matte); however, alpha
-                channels are rarely used in TIFF files and may be unsupported by
-                the user's software.
+                通过在 <code>SamplesPerPixel</code> 字段中指定每个像素有 3 个以上的采样点，并指明 Alpha 类型（1 表示关联的、预乘的 Alpha 分量，2 表示非关联的 Alpha（单独的哑光）），可以添加 Alpha 信息；但是，TIFF 文件中很少使用 Alpha 通道，用户的软件可能也不支持。
               </td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有透明度的真彩色</th>
               <td>8</td>
               <td>
-                Alpha information is added by specifying that there are more
-                than 3 samples per pixel in the
-                <code>SamplesPerPixel</code> field, and indicating the type of
-                alpha (1 for an associated, pre-multiplied alpha component, and
-                2 for unassociated alpha (a separate matte); however, alpha
-                channels are rarely used in TIFF files and may be unsupported by
-                the user's software.
+                通过在 <code>SamplesPerPixel</code> 字段中指定每个像素有 3 个以上的采样点，并指明 Alpha 类型（1 表示关联的、预乘的 Alpha 分量，2 表示非关联的 Alpha（单独的哑光）），可以添加 Alpha 信息；但是，TIFF 文件中很少使用 Alpha 通道，用户的软件可能也不支持。
               </td>
             </tr>
           </tbody>
@@ -1070,27 +1150,25 @@ Long ago, some browsers supported TIFF images in web content; today, however, yo
     <tr>
       <th scope="row">压缩</th>
       <td>
-        Most TIFF files are uncompressed, but lossless PackBits and LZW
-        compression are supported, as is lossy JPEG compression.
+        大多数 TIFF 文件未经压缩，但支持无损 PackBits 和 LZW 压缩，以及有损 JPEG 压缩。
       </td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
+      <th scope="row">许可</th>
       <td>
-        No license required (aside from any associated with libraries you might
-        use); all known patents have expired.
+        无需许可证（除了与你可能使用的库相关的许可证）；所有已知专利均已过期。
       </td>
     </tr>
   </tbody>
 </table>
 
-### <a id="WebP" name="WebP">WebP image</a>
+### WebP 图像
 
-WebP supports lossy compression via predictive coding based on the VP8 video codec, and lossless compression that uses substitutions for repeating data. Lossy WebP images average 25–35% smaller than JPEG images of visually similar compression levels. Lossless WebP images are typically 26% smaller than the same images in PNG format.
+WebP 支持通过基于 VP8 视频编解码器的预测编码进行有损压缩，以及通过替换重复数据进行无损压缩。有损 WebP 图像比视觉上压缩级别相似的 JPEG 图像平均小 25-35%。无损 WebP 图像通常比 PNG 格式的相同图像小 26%。
 
-WebP also supports animation: in a lossy WebP file, the image data is represented by a VP8 bitstream, which may contain multiple frames. Lossless WebP holds the `ANIM` chunk, which describes the animation, and the `ANMF` chunk, which represents a frame of an animation sequence. Looping is supported.
+WebP 还支持动画：在有损 WebP 文件中，图像数据由 VP8 比特流表示，其中可能包含多个帧。无损 WebP 包含描述动画的 `ANIM` 块和表示动画序列一帧的 `ANMF` 块。支持循环播放。
 
-WebP now has broad support in the latest versions of major web browsers, although it does not have deep historical support. Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format, such as with [the `<picture>` element](/zh-CN/docs/Web/HTML/Element/picture).
+WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但还没有深入的历史支持。需要提供 [JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的回退，例如 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)。
 
 <table class="standard-table">
   <tbody>
@@ -1099,20 +1177,14 @@ WebP now has broad support in the latest versions of major web browsers, althoug
       <td><code>image/webp</code></td>
     </tr>
     <tr>
-      <th scope="row">文件拓展名</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.webp</code></td>
     </tr>
     <tr>
       <th scope="row">规范</th>
       <td>
         <p>
-          <a href="https://developers.google.com/speed/webp/docs/riff_container"
-            >RIFF Container Specification</a
-          ><br />{{RFC(6386, "VP8 Data Format and Decoding Guide")}}
-          (lossy encoding)<br /><a
-            href="https://developers.google.com/speed/webp/docs/webp_lossless_bitstream_specification"
-            >WebP Lossless Bitstream Specification</a
-          >
+          <a href="https://developers.google.com/speed/webp/docs/riff_container">RIFF 容器规范</a><br />{{RFC(6386, "VP8 Data Format and Decoding Guide")}}（有损压缩）<br /><a href="https://developers.google.com/speed/webp/docs/webp_lossless_bitstream_specification">WebP 无损比特流规范</a>
         </p>
       </td>
     </tr>
@@ -1122,7 +1194,7 @@ WebP now has broad support in the latest versions of major web browsers, althoug
         <table class="standard-table">
           <tbody>
             <tr>
-              <th scope="row">Feature</th>
+              <th scope="row">特性</th>
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
@@ -1131,66 +1203,67 @@ WebP now has broad support in the latest versions of major web browsers, althoug
               <th scope="col">Safari</th>
             </tr>
             <tr>
-              <th scope="row">Lossy WebP support</th>
+              <th scope="row">有损 WebP 支持</th>
               <td>17</td>
               <td>18</td>
               <td>65</td>
               <td>no</td>
-              <td>11.10 (Presto)<br />15 (Blink)</td>
-              <td>no</td>
+              <td>11.10（Presto）<br />15（Blink）</td>
+              <td>14</td>
             </tr>
             <tr>
-              <th scope="row">Lossless WebP</th>
-              <td>23<br />25 on Android</td>
+              <th scope="row">无损 WebP</th>
+              <td>Android 23<br />25</td>
               <td>18</td>
               <td>65</td>
-              <td>no</td>
-              <td>12.10 (Presto)<br />15 (Blink)</td>
-              <td>no</td>
+              <td>否</td>
+              <td>12.10（Presto）<br />15（Blink）</td>
+              <td>14</td>
             </tr>
             <tr>
-              <th scope="row">动画</th>
+              <th scope="row">动画/th>
               <td>32</td>
               <td>18</td>
               <td>65</td>
-              <td>no</td>
-              <td>19 (Blink)</td>
-              <td>no</td>
+              <td>否</td>
+              <td>19（Blink）</td>
+              <td>14</td>
             </tr>
           </tbody>
         </table>
+        <p>WebP 还可用于从 Firefox 96 和 Chrome 50 的画布中<em>导出</em>图像。（参见 <a href="/zh-CN/docs/Web/API/HTMLCanvasElement/toBlob#浏览器兼容性"><code>HTMLCanvasElement.toBlob()</code></a> 以获取更详细的支持情况）</p>
       </td>
     </tr>
     <tr>
-      <th scope="row">最高分辨率</th>
-      <td>16,383×16,383 pixels</td>
+      <th scope="row">最大尺寸</th>
+      <td>16,383×16,383 像素</td>
     </tr>
     <tr>
       <th scope="row">支持的颜色模式</th>
       <td>
-        Lossy WebP stores the image in 8-bit Y'CbCr 4:2:0 (YUV420) format.
-        Lossless WebP uses 8-bit ARGB color, with each component taking 8 bits
-        for a total of 32 bits per pixel.
+        有损 WebP 以 8 位 Y'CbCr 4:2:0 (YUV420) 格式存储图像。无损 WebP 使用 8 位 ARGB 颜色，每个分量 8 位，每个像素共 32 位。
       </td>
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless (Huffman, LZ77, or color cache codes) or lossy (VP8).</td>
+      <td>无损（Huffman、LZ77 或 color cache codes）或有损（VP8）</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
-      <td>No license required; source code is openly available.</td>
+      <th scope="row">许可</th>
+      <td>无需许可证；源代码可公开获取。</td>
     </tr>
   </tbody>
 </table>
 
-### <a id="XBM" name="XBM">XBM</a> (X Window System Bitmap file)
+> **备注：** 在 macOS 版 Safari 上，WebP 支持取决于 Safari 和 macOS 的版本。你需要 Safari 14 或更高版本，以及 macOS Big Sur (11) 或更高版本。
 
-XBM (X Bitmap) files were the first to be supported on the Web, but are no longer used and should be avoided, as their format has potential security concerns. Modern browsers have not supported XBM files in many years, but when dealing with older content, you may find some still around.
+### XBM（X Window 系统位图文件）
 
-XBM uses a snippet of C code to represent the contents of the image as an array of bytes. Each image consists of 2 to 4 `#define` directives, providing the width and height of the bitmap (and optionally the hotspot, if the image is designed as a cursor), followed by an array of `unsigned char`, where each value contains 8 1-bit monochrome pixels.
+XBM（X 位图）文件是网络上最早支持的文件，但现在已不再使用，应避免使用，因为其格式存在潜在的安全隐患。现代浏览器多年来一直不支持 XBM 文件，但在处理旧内容时，你可能会发现其中一些仍然存在。
 
-The image must be a multiple of 8 pixels wide. For example, the following code represents an XBM image which is 8 pixels by 8 pixels, with those pixels in a black-and-white checkerboard pattern:
+XBM 使用一段 C 代码将图像内容表示为一个字节数组。每个图像由 2 到 4 个 `#define` 指令组成，提供位图的宽度和高度（如果图像设计为光标，还可选择热点），后面是一个 `unsigned char` 数组，其中每个值包含 8 个 1 位单色像素。
+
+图像宽度必须是 8 像素的倍数。例如，以下代码表示一幅 8 像素乘 8 像素的 XBM 图像，这些像素呈黑白棋盘图案：
 
 ```cpp
 #define square8_width 8
@@ -1204,22 +1277,22 @@ static unsigned char square8_bits[] = {
   <tbody>
     <tr>
       <th scope="row">MIME 类型</th>
-      <td><code>image/xbm</code>, <code>image-xbitmap</code></td>
+      <td><code>image/xbm</code>、<code>image-xbitmap</code></td>
     </tr>
     <tr>
-      <th scope="row">文件拓展名</th>
+      <th scope="row">文件扩展名</th>
       <td><code>.xbm</code></td>
     </tr>
     <tr>
       <th scope="row">规范</th>
-      <td>None</td>
+      <td>无</td>
     </tr>
     <tr>
       <th scope="row">浏览器兼容性</th>
-      <td>Firefox 1–3.5, Internet Explorer 1–5</td>
+      <td>Firefox 1–3.5 和 Internet Explorer 1–5</td>
     </tr>
     <tr>
-      <th scope="row">最高分辨率</th>
+      <th scope="row">最大尺寸</th>
       <td>无限制</td>
     </tr>
     <tr>
@@ -1229,33 +1302,33 @@ static unsigned char square8_bits[] = {
           <thead>
             <tr>
               <th scope="row">颜色模式</th>
-              <th scope="col">Bits per component</th>
+              <th scope="col">每分量比特（<em>D</em>）</th>
               <th scope="col">描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Greyscale</th>
+              <th scope="row">灰度</th>
               <td>1</td>
-              <td>Each byte contains eight 1-bit pixels.</td>
+              <td>每个字节包含 8 个 1 位像素。</td>
             </tr>
             <tr>
-              <th scope="row">True color</th>
-              <td><em>n/a</em></td>
-              <td><em>n/a</em></td>
-            </tr>
-            <tr>
-              <th scope="row">Indexed color</th>
+              <th scope="row">真彩色</th>
               <td><em>n/a</em></td>
               <td><em>n/a</em></td>
             </tr>
             <tr>
-              <th scope="row">Greyscale with alpha</th>
+              <th scope="row">索引颜色</th>
               <td><em>n/a</em></td>
               <td><em>n/a</em></td>
             </tr>
             <tr>
-              <th scope="row">True color with alpha</th>
+              <th scope="row">带有灰度的真彩色</th>
+              <td><em>n/a</em></td>
+              <td><em>n/a</em></td>
+            </tr>
+            <tr>
+              <th scope="row">带有透明度的真彩色</th>
               <td><em>n/a</em></td>
               <td><em>n/a</em></td>
             </tr>
@@ -1265,80 +1338,116 @@ static unsigned char square8_bits[] = {
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>Lossless</td>
+      <td>无损</td>
     </tr>
     <tr>
-      <th scope="row">授权</th>
-      <td>Open source</td>
+      <th scope="row">许可</th>
+      <td>开源</td>
     </tr>
   </tbody>
 </table>
 
 ## 选择合适的图像格式
 
-Picking the best image format for your needs is likely easier than video formats, as there are fewer options with broad support, and each tends to have a specific set of use-cases.
+选择最适合你的需求的图像格式可能比视频格式更容易，因为支持广泛的选择较少，而且每种格式往往都有一套特定的用例。
 
-### Photographs
+### 照片
 
-Photographs typically fare well with lossy compression (depending on the encoder's configuration). This makes [JPEG](#jpeg_joint_photographic_experts_group_image) and [WebP](#webp_image) good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression. To maximize quality and minimize download time, consider providing both [using a fallback](#提供后备图像) with WebP as the first choice and JPEG as the second. Otherwise, JPEG is the safe choice for compatibility.
+有损压缩（取决于编码器的配置）通常能很好地压缩照片。这使得 [JPEG](#jpeg（联合图像专家小组图像）) 和 [WebP](#webp_图像) 成为照片的不错选择，JPEG 的兼容性更好，但 WebP 的压缩效果可能更好。为了最大限度地提高质量和减少下载时间，可以考虑同时提供这两种格式的[回退图像](#提供回退图像)，WebP 是首选，JPEG 是次选。否则，为了兼容性，JPEG 是安全的选择。
 
-| Best choice  | Fallback |
-| ------------ | -------- |
-| WebP or JPEG | JPEG     |
+<table class="standard-table" style="max-width: 42rem">
+  <thead>
+    <tr>
+      <th scope="col" style="width: 50%">最佳选择</th>
+      <th scope="col">回退方案</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WebP 或 JPEG</td>
+      <td>JPEG</td>
+    </tr>
+  </tbody>
+</table>
 
-### Icons
+### 图标
 
-For smaller images such as icons, use a lossless format to avoid loss of detail in a size-constrained image. While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a [fallback](#提供后备图像). If your image contains fewer than 256 colors, GIF is an option, although PNG often compresses even smaller with its indexed compression option (PNG-8).
+对于图标等较小的图像，应使用无损格式，以避免在大小受限的图像中丢失细节。虽然无损 WebP 是实现这一目的的理想选择，但其支持尚未普及，因此 PNG 是更好的选择，除非你提供[回退选项](#提供回退图像)。如果图像包含的颜色少于 256 种，GIF 也是一种选择，不过 PNG 通过其索引压缩选项（PNG-8）通常可以压缩得更小。
 
-If the icon can be represented using vector graphics, consider [SVG](#svg_scalable_vector_graphics), since it scales across various resolutions and sizes, so it's perfect for responsive design. Although SVG support is good, it may be worth offering a PNG fallback for older browsers.
+如果图标可以用矢量图形表示，可以考虑使用 [SVG](#svg（可缩放矢量图形）)，因为它可以在各种分辨率和尺寸下缩放，非常适合响应式设计。虽然 SVG 支持良好，但仍值得为旧版浏览器提供 PNG 回退功能。
 
-| Best choice                | Fallback |
-| -------------------------- | -------- |
-| SVG, Lossless WebP, or PNG | PNG      |
+<table class="standard-table" style="max-width: 42rem">
+  <thead>
+    <tr>
+      <th scope="col" style="width: 50%">最佳选择</th>
+      <th scope="col">回退方案</th>
+    </tr>
+    <tr>
+      <td>SVG、无损 WebP 或 PNG</td>
+      <td>PNG</td>
+    </tr>
+  </thead>
+</table>
 
-### Screenshots
+### 截图
 
-Unless you're willing to compromise on quality, you should use a lossless format for screenshots. This is particularly important if there's any text in your screenshot, as text easily becomes fuzzy and unclear under lossy compression.
+除非你愿意在质量上妥协，否则应该使用无损格式截图。如果截图中有文字，这一点尤为重要，因为在有损压缩的情况下，文字很容易变得模糊不清。
 
-PNG is probably your best bet, but lossless WebP is arguably going to be better compressed.
+PNG 可能是最好的选择，但无损 WebP 的压缩效果可能更好。
 
-| Best choice                                                          | Fallback                                               |
-| -------------------------------------------------------------------- | ------------------------------------------------------ |
-| Lossless WebP or PNG; JPEG if compression artifacts aren't a concern | PNG or JPEG; GIF for screenshots with low color counts |
+<table class="standard-table" style="max-width: 42rem">
+  <thead>
+    <tr>
+      <th scope="col" style="width: 50%">最佳选择</th>
+      <th scope="col">回退方案</th>
+    </tr>
+    <tr>
+      <td>
+        无损 WebP 或 PNG；<br />如果不担心压缩伪影，则使用 JPEG 文件
+      </td>
+      <td>PNG 或 JPEG；<br />GIF 用于颜色数较少的屏幕截图</td>
+    </tr>
+  </thead>
+</table>
 
-### Diagrams, drawings, and charts
+### 示意图、绘图和图表
 
-For any image that can be represented using vector graphics, SVG is the best choice. Otherwise, you should use a lossless format like PNG. If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the compression level to avoid causing text or other shapes to become fuzzy or unclear.
+对于任何可以使用矢量图形表示的图像，SVG 都是最佳选择。否则，应使用 PNG 等无损格式。如果选择有损格式（如 JPEG 或有损 WebP），请仔细权衡压缩级别，以避免导致文本或其他图形变得模糊或不清晰。
 
-| Best choice                          | Fallback                              |
-| ------------------------------------ | ------------------------------------- |
-| [SVG](#svg_scalable_vector_graphics) | [PNG](#png_portable_network_graphics) |
+<table class="standard-table" style="max-width: 42rem">
+  <thead>
+    <tr>
+      <th scope="col" style="width: 50%">最佳选择</th>
+      <th scope="col">回退方案</th>
+    </tr>
+    <tr>
+      <td><a href="#svg（可缩放矢量图形）">SVG</a></td>
+      <td><a href="#png（便携式网络图形）">PNG</a></td>
+    </tr>
+  </thead>
+</table>
 
-## 提供后备图像
+## 提供回退图像
 
-While the standard HTML {{HTMLElement("img")}} element doesn't support compatibility fallbacks for images, the {{HTMLElement("picture")}} element does. `<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/zh-CN/docs/Web/CSS/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
+虽然标准 HTML {{HTMLElement("img")}} 元素不支持图片的兼容性回退，但 {{HTMLElement("picture")}} 元素支持。`<picture>` 被用作多个 {{HTMLElement("source")}} 元素的包装器，每个元素都指定了不同格式或不同[媒体条件](/zh-CN/docs/Web/CSS/@media)下的图像版本，以及一个 `<img>` 元素，该元素定义了图像的显示位置以及默认或“最兼容”版本的回退。
 
-For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a PNG or GIF of the diagram, you would do something like this:
+例如，如果要显示一个最好使用 SVG 显示的图表，但希望提供一个 PNG 或 GIF 图表的回退选项，可以这样做：
 
 ```html
 <picture>
   <source srcset="diagram.svg" type="image/svg+xml" />
   <source srcset="diagram.png" type="image/png" />
-  <img
-    src="diagram.gif"
-    width="620"
-    height="540"
-    alt="Diagram showing the data channels" />
+  <img src="diagram.gif" width="620" height="540" alt="数据通道示意图" />
 </picture>
 ```
 
-You can specify as many `<source>`s as you wish, though typically 2 or 3 is all you need.
+你可以指定任意数量的 `<source>`，但通常 2 或 3 个就足够了。
 
 ## 参见
 
-- [Guide to media types and formats](/zh-CN/docs/Web/Media/Formats)
-- [Web media technologies](/zh-CN/docs/Web/Media)
-- [Guide to video codecs used on the web](/zh-CN/docs/Web/Media/Formats/Video_codecs)
-- The {{Glossary("HTML")}} {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements
-- The CSS {{cssxref("background-image")}} property
-- The {{domxref("Image()")}} constructor and the {{domxref("HTMLImageElement")}} interface
+- [媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
+- [Web 媒体技术](/zh-CN/docs/Web/Media)
+- [web 视频编解码器指南](/zh-CN/docs/Web/Media/Formats/Video_codecs)
+- {{Glossary("HTML")}} {{HTMLElement("img")}} 和 {{HTMLElement("picture")}} 元素
+- CSS {{cssxref("background-image")}} 属性
+- {{domxref("HTMLImageElement.Image()", "Image()")}} 构造函数和 {{domxref("HTMLImageElement")}} 接口

@@ -3,14 +3,14 @@ title: 什么文本编辑器比较好用？
 slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
 在这篇文章中我们强调了关于 web 开发者安装文本编辑器的一些考虑事项。
 
 <table class="learn-box nostripe standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         你应该已经知晓了<a
           href="/zh-CN/docs/Learn/Common_questions/What_software_do_I_need">为了建立一个网站所需的各种软件</a
@@ -446,13 +446,13 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 
 ### 安装并设置
 
-安装文本编辑器通常很简单。方法根据您的平台而有所不同，但都不难：
+安装文本编辑器通常很简单。方法根据你的平台而有所不同，但都不难：
 
 - **Windows** 开发人员会给你一个 `.exe` 或 `.msi` 文件。也有时候，软件为自带的压缩归档格式 `.zip`、`.7z` 或 `.rar`，在这种情况下，你需要安装其他程序来提取压缩文件的内容。Windows 默认情况下支持 `.zip`。
 - **Mac** 在编辑器的网站上，可以下载一个 `.dmg` 文件。也可以直接在 Apple Store 找到一些文本编辑器，安装过程更简单。
-- **Linux** 在最受欢迎的发行版中，您可以从图形包管理器（Ubuntu Software Center、mintInstall、GNOME Software 等）开始。你通常可以发现一个预先包装软件的 `.deb` 或 `.rpm` 文件，但大多数时候你将使用你的发行版系统的存储库服务器，或者在最坏的情况下，从源代码编译编辑器。花时间仔细检查文本编辑器网站上的安装说明。
+- **Linux** 在最受欢迎的发行版中，你可以从图形包管理器（Ubuntu Software Center、mintInstall、GNOME Software 等）开始。你通常可以发现一个预先包装软件的 `.deb` 或 `.rpm` 文件，但大多数时候你将使用你的发行版系统的存储库服务器，或者在最坏的情况下，从源代码编译编辑器。花时间仔细检查文本编辑器网站上的安装说明。
 
-当安装新的文本编辑器时，你的操作系统可能会继续使用其默认编辑器打开文本文件，直到更改[文件关联](https://zh.wikipedia.org/zh-cn/文件关联)。这些说明将帮助您在指定操作系统中双击打开文件时选定首选编辑器：
+当安装新的文本编辑器时，你的操作系统可能会继续使用其默认编辑器打开文本文件，直到更改[文件关联](https://zh.wikipedia.org/zh-cn/文件关联)。这些说明将帮助你在指定操作系统中双击打开文件时选定首选编辑器：
 
 - Windows
 
@@ -469,4 +469,4 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 
 ## 下一步
 
-现在你已经选择了一个合适的文本编辑器，可以花一些时间来搭建[基本工作环境](/zh-CN/docs/Learn/Common_questions/set_up_a_local_testing_server)，或者，如果想立即使用它，可以写下[你的第一个网页](/zh-CN/docs/Learn/Getting_started_with_the_web)。
+现在你已经选择了一个合适的文本编辑器，可以花一些时间来搭建[基本工作环境](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)，或者，如果想立即使用它，可以写下[你的第一个网页](/zh-CN/docs/Learn/Getting_started_with_the_web)。

@@ -294,9 +294,9 @@ console.log(doubledPositiveNumbers); // [12, 4]
 /**
  * 链接一系列 Promise 处理程序。
  *
- * @param {array} arr ——一个 Promise 处理程序列表，每个处理程序接收前一个处理程序解决的结果并返回另一个 Promise。
- * @param {*} input ——开始调用 Promise 链的初始值
- * @return {Object} ——由一系列 Promise 链接而成的 Promise
+ * @param {array} arr——一个 Promise 处理程序列表，每个处理程序接收前一个处理程序解决的结果并返回另一个 Promise。
+ * @param {*} input——开始调用 Promise 链的初始值
+ * @return {Object}——由一系列 Promise 链接而成的 Promise
  */
 function runPromiseInSequence(arr, input) {
   return arr.reduce(
@@ -399,10 +399,10 @@ console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 - [`core-js` 中 `Array.prototype.reduce` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
-- {{jsxref("Array.prototype.group()")}}
-- {{jsxref("Array.prototype.groupToMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}
 - {{jsxref("TypedArray.prototype.reduce()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

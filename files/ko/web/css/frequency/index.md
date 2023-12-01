@@ -2,6 +2,7 @@
 title: <frequency>
 slug: Web/CSS/frequency
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`<frequency>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 목소리의 높낮이 등 주파수를 나타냅니다. 현재 어떤 CSS 속성도 `<frequency>`를 사용하지 않습니다.

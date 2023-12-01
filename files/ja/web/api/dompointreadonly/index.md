@@ -25,7 +25,7 @@ const point3DPerspective = new DOMPointReadOnly(100, 100, 100, 1.0);
 もう一つの選択肢は、静的な {{domxref("DOMPointReadOnly.fromPoint()")}} メソッドを使用する方法です。
 
 ```js
-const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50, w: 1.0});
+const point = DOMPointReadOnly.fromPoint({ x: 100, y: 100, z: 50, w: 1.0 });
 ```
 
 ## コンストラクター

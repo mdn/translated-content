@@ -63,9 +63,9 @@ HTML の文字列をパースした結果は、それが挿入されるコンテ
 `script` 要素はデフォルトのサニタイザーで許可されていないため alert は削除されます。
 
 ```js
-const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // サニタイズされていない文字列
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def"; // サニタイズされていない文字列
 
-const sanitizer = new Sanitizer();  // デフォルトのサニタイザー
+const sanitizer = new Sanitizer(); // デフォルトのサニタイザー
 
 // id が "target" の要素を取得し、サニタイズした文字列をセットする
 const target = document.getElementById("target");
@@ -80,8 +80,8 @@ console.log(target.innerHTML);
 以下の例では {{domxref("Sanitizer.sanitizeFor()")}} メソッドを使用して同じサニタイズ処理を行い、後で返された要素を `<div>` 要素に挿入することを意図しています。
 
 ```js
-const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // サニタイズされていない文字列
-const sanitizer = new Sanitizer();  // デフォルトのサニタイザー
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def"; // サニタイズされていない文字列
+const sanitizer = new Sanitizer(); // デフォルトのサニタイザー
 
 // 文字列をサニタイズする
 const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
@@ -90,7 +90,7 @@ const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
 //We can verify the returned element type, and view sanitized HTML in string form:
 console.log(sanitizedDiv instanceof HTMLDivElement);
 // true
-console.log(sanitizedDiv.innerHTML)
+console.log(sanitizedDiv.innerHTML);
 // "abc  def"
 
 // その後に処理をする…
@@ -104,7 +104,10 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 >
 > ```js
 > const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
-> const sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
+> const sanitizedString = new Sanitizer().sanitizeFor(
+>   "div",
+>   unsanitized_string,
+> ).innerHTML;
 > ```
 
 ### フレームのサニタイズ
@@ -112,10 +115,10 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 id が `userFrame` である {{HTMLElement("iframe")}} からのデータをサニタイズします。
 
 ```js
-const sanitizer = new Sanitizer();  // デフォルトのサニタイザー
+const sanitizer = new Sanitizer(); // デフォルトのサニタイザー
 
 // frame の要素とその document オブジェクトを取得する
-const frame_element = document.getElementById("userFrame")
+const frame_element = document.getElementById("userFrame");
 const unsanitized_frame_tree = frame_element.contentWindow.document;
 
 // ドキュメントツリーをサニタイズし、frame を更新する

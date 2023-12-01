@@ -78,4 +78,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.protocol_handlers")}}
+{{Compat}}

@@ -28,13 +28,13 @@ La propiedad static `String.length` devuelve 1.
 ### Uso Básico
 
 ```js
-var x = 'Mozilla';
-var empty = '';
+var x = "Mozilla";
+var empty = "";
 
-console.log('Mozilla is ' + x.length + ' code units long');
+console.log("Mozilla is " + x.length + " code units long");
 /* "Mozilla is 7 code units long" */
 
-console.log('The empty string has a length of ' + empty.length);
+console.log("The empty string has a length of " + empty.length);
 /* "The empty string has a length of 0" */
 ```
 

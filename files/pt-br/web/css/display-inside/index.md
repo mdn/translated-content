@@ -58,18 +58,18 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -81,27 +81,27 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
 
 ### Suporte a vários valores de palavras-chave
 
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
+{{Compat}}
 
 ### Suporte de fluxo-raiz
 
-{{Compat("css.properties.display.flow-root", 10)}}
+{{Compat}}
 
 ### Suporte de tabela
 
-{{Compat("css.properties.display.table_values", 10)}}
+{{Compat}}
 
 ### Suporte de grade
 
-{{Compat("css.properties.display.grid", 10)}}
+{{Compat}}
 
 ### Suporte de flex
 
-{{Compat("css.properties.display.flex", 10)}}
+{{Compat}}
 
 ### Suporte de ruby
 
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## Veja também
 

@@ -45,7 +45,7 @@ browser.bookmarks.onCreated.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onCreated")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

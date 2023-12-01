@@ -97,7 +97,7 @@ display: unset;
 
 ```css
 .container {
-    display: inline flex;
+  display: inline flex;
 }
 ```
 
@@ -105,7 +105,7 @@ display: unset;
 
 ```css
 .container {
-    display: inline-flex;
+  display: inline-flex;
 }
 ```
 

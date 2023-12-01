@@ -12,7 +12,7 @@ El método **`Object.getOwnPropertyDescriptors()`** regresa todos los descriptor
 ## Sintáxis
 
 ```js
-Object.getOwnPropertyDescriptors(obj)
+Object.getOwnPropertyDescriptors(obj);
 ```
 
 ### Parámetros
@@ -52,7 +52,7 @@ Mientras el método {{jsxref("Object.assign()")}} solo copiará las propiedades 
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -66,12 +66,9 @@ superclass.prototype = {
   // Define tus métodos y propiedades aquí
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define tus métodos y propiedades aquí
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define tus métodos y propiedades aquí
+});
 ```
 
 ## Especificaciones

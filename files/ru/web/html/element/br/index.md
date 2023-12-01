@@ -19,7 +19,7 @@ slug: Web/HTML/Element/br
 
 ### Устаревшие атрибуты
 
-- {{htmlattrdef("clear")}}
+- `clear`
 
   - : Определяет, где начинается следующая строка после перевода строки.
 
@@ -36,11 +36,11 @@ slug: Web/HTML/Element/br
 В следующем примере мы используем элемент `<br>` для разрыва линий в почтовом адресе:
 
 ```html
-Mozilla<br>
-331 E. Evelyn Avenue<br>
-Mountain View, CA<br>
-94041<br>
-USA<br>
+Mozilla<br />
+331 E. Evelyn Avenue<br />
+Mountain View, CA<br />
+94041<br />
+USA<br />
 ```
 
 Результат будет выглядеть так:

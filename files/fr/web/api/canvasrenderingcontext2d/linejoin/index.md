@@ -102,4 +102,4 @@ for (let i = 0; i < lineJoin.length; i++) {
 - L'interface définissant cette propriété: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineCap")}}
 - {{domxref("CanvasRenderingContext2D.lineWidth")}}
-- [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- [Ajout de styles et de couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

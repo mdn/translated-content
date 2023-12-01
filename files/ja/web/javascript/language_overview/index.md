@@ -52,10 +52,10 @@ JavaScript はマルチパラダイムの動的言語であり、型や演算子
 
 ECMAScript には 2 つの組み込み数値型があります。 **Number** と **BigInt** です。
 
-Number 型は[IEEE 754 倍精度 64 ビットバイナリー値](https://ja.wikipedia.org/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0) (-(253 − 1) と 253 − 1 の間の数) です。そして、この記事や他の MDN の記事で「整数」という場合は、ふつう Number 値を使った整数の*表現*を意味しています。しかし、このような Number 値は本物の整数ではないので、少し注意が必要です。以下の例を見てください。
+Number 型は[IEEE 754 倍精度 64 ビットバイナリー値](https://ja.wikipedia.org/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0) (-(2<sup>53</sup> − 1) と 2<sup>53</sup> − 1 の間の数) です。そして、この記事や他の MDN の記事で「整数」という場合は、ふつう Number 値を使った整数の*表現*を意味しています。しかし、このような Number 値は本物の整数ではないので、少し注意が必要です。以下の例を見てください。
 
 ```js
-console.log(3 / 2);             // 1.5, 1 ではない
+console.log(3 / 2); // 1.5, 1 ではない
 console.log(Math.floor(3 / 2)); // 1
 ```
 
@@ -69,7 +69,7 @@ console.log(Math.floor(3 / 2)); // 1
 
 実のところ、整数値は 32 ビット整数として扱われます。また一部の実装では、32 ビット整数値ではなく Number で有効な命令の実行を求められるまでの間、32 ビット整数値として保存します。これはビット演算を行う際に重要なことです。
 
-標準的な[算術演算子](/ja/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)に対応しています。例えば、足し算、引き算、モジュロ (剰余) などです。さらに、これは前に言及していなかったのですが、より高度な数学関数や定数を扱う {{jsxref("Math")}} という組み込みオブジェクトもあります。
+標準的な[算術演算子](/ja/docs/Web/JavaScript/Reference/Operators#算術演算子)に対応しています。例えば、足し算、引き算、モジュロ (剰余) などです。さらに、これは前に言及していなかったのですが、より高度な数学関数や定数を扱う {{jsxref("Math")}} という組み込みオブジェクトもあります。
 
 ```js
 Math.sin(3.5);
@@ -79,15 +79,15 @@ var circumference = 2 * Math.PI * r;
 組み込みの {{jsxref("Global_Objects/parseInt", "parseInt()")}} 関数を使うことで、文字列を整数に変換することができます。この関数は省略可能な第 2 引数として変換の基数を取りますが、この引数を常に指定してください。
 
 ```js
-parseInt('123', 10); // 123
-parseInt('010', 10); // 10
+parseInt("123", 10); // 123
+parseInt("010", 10); // 10
 ```
 
 古いブラウザーでは、 "0" から始まる文字列を 8 進数 (基数 8) とみなしますが、これは 2013 年以降のブラウザーにはあてはまりません。文字列の書式を理解していなければ、古いブラウザーは驚くような結果になることがあります。
 
 ```js
-parseInt('010');  //  8
-parseInt('0x10'); // 16
+parseInt("010"); // 8
+parseInt("0x10"); // 16
 ```
 
 この例では、{{jsxref("Global_Objects/parseInt", "parseInt()")}} が最初の文字列を先頭の 0 から 8 進数として、また 2 番目の文字列を先頭の "0x" から 16 進数として扱われたことがわかります。_16 進数表記は現在も有効です_。8 進数のみ削除されました。
@@ -95,7 +95,7 @@ parseInt('0x10'); // 16
 もし 2 進数を整数に変換したいなら、単純に基数を変えましょう。
 
 ```js
-parseInt('11', 2); // 3
+parseInt("11", 2); // 3
 ```
 
 同様に浮動小数点数への変換を行う、組み込みの {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 関数があります。 {{jsxref("Global_Objects/parseInt", "parseInt()")}} と異なり、 `parseFloat()` では基数は常に 10 が用いられます。
@@ -103,15 +103,15 @@ parseInt('11', 2); // 3
 また、単項演算子 `+` を使って値を数値に変換することもできます。
 
 ```js
-+ '42';   // 42
-+ '010';  // 10
-+ '0x10'; // 16
++"42"; // 42
++"010"; // 10
++"0x10"; // 16
 ```
 
 もし文字列が数値でない場合、 {{jsxref("NaN")}} (非数、"Not a Number" の略) と呼ばれる特別な値が返されます。
 
 ```js
-parseInt('hello', 10); // NaN
+parseInt("hello", 10); // NaN
 ```
 
 `NaN` には毒性があります。これを算術演算に入力として与えても、その結果は同様に `NaN` になるのです。
@@ -124,29 +124,29 @@ NaN + 5; // NaN
 
 ```js
 Number.isNaN(NaN); // true
-Number.isNaN('hello'); // false
-Number.isNaN('1'); // false
+Number.isNaN("hello"); // false
+Number.isNaN("1"); // false
 Number.isNaN(undefined); // false
 Number.isNaN({}); // false
-Number.isNaN([1]) // false
-Number.isNaN([1,2]) // false
+Number.isNaN([1]); // false
+Number.isNaN([1, 2]); // false
 ```
 
 しかし、 `NaN` であるかどうかをグローバル関数の {{jsxref("Global_Objects/isNaN", "isNaN()")}} で確認しないでください。[これは直感的でない動作](/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior)をします。
 
 ```js
-isNaN('hello'); // true
-isNaN('1'); // false
+isNaN("hello"); // true
+isNaN("1"); // false
 isNaN(undefined); // true
 isNaN({}); // true
-isNaN([1]) // false
-isNaN([1,2]) // true
+isNaN([1]); // false
+isNaN([1, 2]); // true
 ```
 
 JavaScript はまた、特別な値 {{jsxref("Infinity")}} と `-Infinity` を持っています。
 
 ```js
- 1 / 0; //  Infinity
+1 / 0; // Infinity
 -1 / 0; // -Infinity
 ```
 
@@ -169,15 +169,15 @@ JavaScript における文字列は、[Unicode 文字](/ja/docs/Web/JavaScript/G
 文字列の長さ (コード単位) を知るには、その文字列の [`length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length) プロパティにアクセスしましょう。
 
 ```js
-'hello'.length; // 5
+"hello".length; // 5
 ```
 
 ここで初めて JavaScript のオブジェクトに触れました。文字列を{{jsxref("Object", "オブジェクト", "", 1)}}のように使うことができることには、既に触れましたっけ？文字列にも{{jsxref("String", "メソッド", "#instance_methods", 1)}}があり、文字列を操作したり、文字列に関する情報にアクセスしたりすることができます。
 
 ```js
-'hello'.charAt(0); // "h"
-'hello, world'.replace('world', 'mars'); // "hello, mars"
-'hello'.toUpperCase(); // "HELLO"
+"hello".charAt(0); // "h"
+"hello, world".replace("world", "mars"); // "hello, mars"
+"hello".toUpperCase(); // "HELLO"
 ```
 
 ## その他の型
@@ -192,7 +192,7 @@ JavaScript は `true` と `false` (これらはともにキーワードです) �
 `Boolean()` 関数を使うことで、明示的にこの変換を行うことができます。
 
 ```js
-Boolean('');  // false
+Boolean(""); // false
 Boolean(234); // true
 ```
 
@@ -208,7 +208,7 @@ JavaScript では、新しい変数を宣言するのに [`let`](/ja/docs/Web/Ja
 
 ```js
 let a;
-let name = 'Simon';
+let name = "Simon";
 ```
 
 以下の例は、**`let`** で宣言した変数のスコープを示しています。
@@ -234,7 +234,7 @@ Pi = 1; // 定数の変数は変更できないため、エラーが発生しま
 
 ```js
 var a;
-var name = 'Simon';
+var name = "Simon";
 ```
 
 以下の例は、 **`var`** で宣言した変数のスコープを示しています。
@@ -267,14 +267,14 @@ x = x + 5;
 [`+` 演算子](/ja/docs/Web/JavaScript/Reference/Operators#addition)は文字列の結合も行います。
 
 ```js
-'hello' + ' world'; // "hello world"
+"hello" + " world"; // "hello world"
 ```
 
 文字列を数字 (や他の値) に足すと、すべてのものが最初に文字列に変換されます。このことはミスを誘うかもしれません。
 
 ```js
-'3' + 4 + 5;  // "345"
- 3 + 4 + '5'; // "75"
+"3" + 4 + 5; // "345"
+3 + 4 + "5"; // "75"
 ```
 
 空文字列を足すのは、何かを文字列に変換する便利な方法です。
@@ -282,15 +282,15 @@ x = x + 5;
 JavaScript における [比較](/ja/docs/Web/JavaScript/Reference/Operators) は、`<` や `>`、`<=`、`>=` を使って行うことができます。これらは文字列と数値のどちらでも機能します。等価性はちょっと明快ではありません。二重イコール演算子は、異なる型を与えると型強制を行います。これは時に面白い結果を返します。
 
 ```js
-123 == '123'; // true
+123 == "123"; // true
 1 == true; // true
 ```
 
 型強制を防いで厳密な比較を行うようにする場合は、三重イコール演算子を使います。
 
 ```js
-123 === '123'; // false
-1 === true;    // false
+123 === "123"; // false
+1 === true; // false
 ```
 
 `!=` と `!==` 演算子もあります。
@@ -302,15 +302,15 @@ JavaScript は [ビット演算子](/ja/docs/Web/JavaScript/Reference/Operators)
 JavaScript は C 言語ファミリーの他の言語とよく似た制御構造セットを持っています。条件文は `if` と `else` でサポートされています。必要ならこれらを連鎖させることもできます。
 
 ```js
-var name = 'kittens';
-if (name === 'puppies') {
-  name += ' woof';
-} else if (name === 'kittens') {
-  name += ' meow';
+var name = "kittens";
+if (name === "puppies") {
+  name += " woof";
+} else if (name === "kittens") {
+  name += " meow";
 } else {
-  name += '!';
+  name += "!";
 }
-name === 'kittens meow';
+name === "kittens meow";
 ```
 
 JavaScript は `while` ループと `do-while` ループを持っています。1 つ目は普通のループ処理に適しており、2 つ目はループの本体が少なくとも 1 回は実行されるようにしたいときのループです。
@@ -365,17 +365,17 @@ var name = cachedName || (cachedName = getName());
 JavaScript は条件による式のための三項演算子を持っています。
 
 ```js
-var allowed = (age > 18) ? 'yes' : 'no';
+var allowed = age > 18 ? "yes" : "no";
 ```
 
 `switch` 文はある数値や文字列を元にした複数分岐に使われます。
 
 ```js
 switch (action) {
-  case 'draw':
+  case "draw":
     drawIt();
     break;
-  case 'eat':
+  case "eat":
     eatIt();
     break;
   default:
@@ -440,12 +440,12 @@ var obj = {};
 
 ```js
 var obj = {
-  name: 'Carrot',
-  _for: 'Max', // 'for' は予約語であるため、代わりに '_for' を使用します
+  name: "Carrot",
+  _for: "Max", // 'for' は予約語であるため、代わりに '_for' を使用します
   details: {
-    color: 'orange',
-    size: 12
-  }
+    color: "orange",
+    size: 12,
+  },
 };
 ```
 
@@ -453,7 +453,7 @@ var obj = {
 
 ```js
 obj.details.color; // orange
-obj['details']['size']; // 12
+obj["details"]["size"]; // 12
 ```
 
 以下の例ではオブジェクトのプロトタイプ (`Person`) と、プロトタイプのインスタンス (`you`) を生成しています。
@@ -465,7 +465,7 @@ function Person(name, age) {
 }
 
 // オブジェクトを定義する
-var you = new Person('You', 24);
+var you = new Person("You", 24);
 // "You" という名前で、年齢が 24 歳の新たな Person を作成しました
 ```
 
@@ -473,7 +473,7 @@ var you = new Person('You', 24);
 
 ```js
 // ドット記法
-obj.name = 'Simon';
+obj.name = "Simon";
 var name = obj.name;
 ```
 
@@ -481,18 +481,18 @@ var name = obj.name;
 
 ```js
 // ブラケット記法
-obj['name'] = 'Simon';
-var name = obj['name'];
+obj["name"] = "Simon";
+var name = obj["name"];
 // 変数をキー定義に使用できる
-var user = prompt('what is your key?')
-obj[user] = prompt('what is its value?')
+var user = prompt("what is your key?");
+obj[user] = prompt("what is its value?");
 ```
 
 これらもまた意味的に等価です。2 つ目の方法はプロパティの名前を文字列として与えるという利点があり、つまりその名前を実行時に計算できることを意味します。ただ、この方法を用いると JavaScript エンジンや minifier による最適化が適用されなくなります。またこの方法は、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) と同じ名前のプロパティを設定したり取得したりするのに使うことができます。
 
 ```js
-obj.for = 'Simon'; // 構文エラー。'for' が予約語であるため
-obj['for'] = 'Simon'; // うまく動きます
+obj.for = "Simon"; // 構文エラー。'for' が予約語であるため
+obj["for"] = "Simon"; // うまく動きます
 ```
 
 > **メモ:** ECMAScript 第 5 版より、予約語をオブジェクトのプロパティ名として「そのまま」使用できます。つまりオブジェクトリテラルの定義時に引用符で「括る」必要はありません。 ES5 の[仕様](https://es5.github.io/#x7.6.1)を確認してください。
@@ -509,24 +509,24 @@ JavaScript における配列は、実はオブジェクトの特殊型です。
 
 ```js
 var a = new Array();
-a[0] = 'dog';
-a[1] = 'cat';
-a[2] = 'hen';
+a[0] = "dog";
+a[1] = "cat";
+a[2] = "hen";
 a.length; // 3
 ```
 
 より便利な書き方は配列リテラルを使うことです。
 
 ```js
-var a = ['dog', 'cat', 'hen'];
+var a = ["dog", "cat", "hen"];
 a.length; // 3
 ```
 
 `array.length` は必ずしも配列中の要素の数ではないことに注意してください。以下の例を考えてみましょう。
 
 ```js
-var a = ['dog', 'cat', 'hen'];
-a[100] = 'fox';
+var a = ["dog", "cat", "hen"];
+a[100] = "fox";
 a.length; // 101
 ```
 
@@ -559,7 +559,7 @@ for (const currentValue of a) {
 配列を繰り返すもうひとつの方法が、 ECMAScript 5 で追加された [`forEach()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) です。
 
 ```js
-['dog', 'cat', 'hen'].forEach(function(currentValue, index, array) {
+["dog", "cat", "hen"].forEach(function (currentValue, index, array) {
   // currentValue (現在の値) または array[index] について何かする
 });
 ```
@@ -701,7 +701,7 @@ function() {
 しかし、このような無名関数は単独では役に立ちません。 — 名前がなければ、その関数を呼び出す方法がないからです。そのため、実際には、無名関数は他の関数の引数として使われたり、関数を呼び出すために使用することができる変数に直接代入して呼び出し可能にしたりするのが一般的です。
 
 ```js
-var avg = function() {
+var avg = function () {
   var sum = 0;
   for (var i = 0, j = arguments.length; i < j; i++) {
     sum += arguments[i];
@@ -715,7 +715,7 @@ var avg = function() {
 しかし、変数に代入したり、他の関数の引数として渡されたりしなくても、無名関数が役に立つ方法があります。 JavaScript には、 1 つの式で関数の宣言と起動を同時に行う仕組みがあります。これは [IIFE (Immediately invoked function expression)](/ja/docs/Glossary/IIFE) と呼ばれ、無名関数で使用する場合の構文は次のようになります。
 
 ```js
-(function() {
+(function () {
   // …
 })();
 ```
@@ -728,11 +728,12 @@ JavaScript では関数を再帰的に呼び出すことができます。これ
 
 ```js
 function countChars(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
     count += countChars(child);
   }
   return count;
@@ -743,11 +744,12 @@ function countChars(elm) {
 
 ```js
 var charsInBody = (function counter(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
     count += counter(child);
   }
   return count;
@@ -768,17 +770,17 @@ JavaScript の関数自体が (他のものすべてと同様に) オブジェ�
 function makePerson(first, last) {
   return {
     first: first,
-    last: last
+    last: last,
   };
 }
 function personFullName(person) {
-  return person.first + ' ' + person.last;
+  return person.first + " " + person.last;
 }
 function personFullNameReversed(person) {
-  return person.last + ', ' + person.first;
+  return person.last + ", " + person.first;
 }
 
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 personFullName(s); // "Simon Willison"
 personFullNameReversed(s); // "Willison, Simon"
 ```
@@ -790,16 +792,16 @@ function makePerson(first, last) {
   return {
     first: first,
     last: last,
-    fullName: function() {
-      return this.first + ' ' + this.last;
+    fullName: function () {
+      return this.first + " " + this.last;
     },
-    fullNameReversed: function() {
-      return this.last + ', ' + this.first;
-    }
+    fullNameReversed: function () {
+      return this.last + ", " + this.first;
+    },
   };
 }
 
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
 ```
@@ -809,7 +811,7 @@ s.fullNameReversed(); // "Willison, Simon"
 `this` は次のように、失敗の原因になることがよくありますので注意してください。
 
 ```js
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 var fullName = s.fullName;
 fullName(); // undefined undefined
 ```
@@ -822,14 +824,14 @@ fullName(); // undefined undefined
 function Person(first, last) {
   this.first = first;
   this.last = last;
-  this.fullName = function() {
-    return this.first + ' ' + this.last;
+  this.fullName = function () {
+    return this.first + " " + this.last;
   };
-  this.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
+  this.fullNameReversed = function () {
+    return this.last + ", " + this.first;
   };
 }
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 ```
 
 もう 1 つのキーワード [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) が出てきました。 `new` は `this` と強い関連があります。これは新しい空のオブジェクトを作り、 `this` にその新しいオブジェクトを設定して、後に続く関数を呼びます。`this` に指定された関数は値を返しているのではなく、単に `this` オブジェクトを変更していることに注意してください。 `this` オブジェクトを呼び出し元に返しているのは `new` です。`new` によって呼ばれるよう設計された関数は、コンストラクター関数と呼ばれます。一般的には、これらの関数の先頭を大文字にして、 `new` で呼び出すように注意します。
@@ -840,10 +842,10 @@ person オブジェクトはだいぶ良くなりましたが、まだ改善の�
 
 ```js
 function personFullName() {
-  return this.first + ' ' + this.last;
+  return this.first + " " + this.last;
 }
 function personFullNameReversed() {
-  return this.last + ', ' + this.first;
+  return this.last + ", " + this.first;
 }
 function Person(first, last) {
   this.first = first;
@@ -860,11 +862,11 @@ function Person(first, last) {
   this.first = first;
   this.last = last;
 }
-Person.prototype.fullName = function() {
-  return this.first + ' ' + this.last;
+Person.prototype.fullName = function () {
+  return this.first + " " + this.last;
 };
-Person.prototype.fullNameReversed = function() {
-  return this.last + ', ' + this.first;
+Person.prototype.fullNameReversed = function () {
+  return this.last + ", " + this.first;
 };
 ```
 
@@ -873,10 +875,10 @@ Person.prototype.fullNameReversed = function() {
 これはとても強力です。 JavaScript では、プログラム上でいつでもどれかのプロトタイプを変更することができます。ということは、実行時に既存のオブジェクトに対して追加のメソッドを加えることができるのです。
 
 ```js
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 s.firstNameCaps(); // TypeError on line 1: s.firstNameCaps is not a function
 
-Person.prototype.firstNameCaps = function() {
+Person.prototype.firstNameCaps = function () {
   return this.first.toUpperCase();
 };
 s.firstNameCaps(); // "SIMON"
@@ -885,11 +887,11 @@ s.firstNameCaps(); // "SIMON"
 興味深いことに、JavaScript の組み込みオブジェクトのプロトタイプにも差し込むことができます。`String` オブジェクトに文字列を逆さにして返すメソッドを加えてみましょう。
 
 ```js
-var s = 'Simon';
+var s = "Simon";
 s.reversed(); // TypeError on line 1: s.reversed is not a function
 
-String.prototype.reversed = function() {
-  var r = '';
+String.prototype.reversed = function () {
+  var r = "";
   for (var i = this.length - 1; i >= 0; i--) {
     r += this[i];
   }
@@ -902,18 +904,18 @@ s.reversed(); // nomiS
 私たちの新しいメソッドは文字列リテラル上でさえも動きます!
 
 ```js
-'This can now be reversed'.reversed(); // desrever eb won nac sihT
+"This can now be reversed".reversed(); // desrever eb won nac sihT
 ```
 
 前述の通り、プロトタイプはチェーンの一部を構成します。チェーンの根は `Object.prototype` であり、 `toString()` メソッドを含んでいます。これはオブジェクトを文字列で表そうとするときに呼ばれるメソッドです。これは `Person` オブジェクトをデバッグするときに役立ちます。
 
 ```js
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 s.toString(); // [object Object]
 
-Person.prototype.toString = function() {
-  return '<Person: ' + this.fullName() + '>';
-}
+Person.prototype.toString = function () {
+  return "<Person: " + this.fullName() + ">";
+};
 
 s.toString(); // "<Person: Simon Willison>"
 ```
@@ -933,11 +935,11 @@ function trivialNew(constructor, ...args) {
 以下の 2 つの呼び出しはほぼ等価です。
 
 ```js
-var bill = trivialNew(Person, 'William', 'Orange');
+var bill = trivialNew(Person, "William", "Orange");
 ```
 
 ```js
-var bill = new Person('William', 'Orange');
+var bill = new Person("William", "Orange");
 ```
 
 `apply()` には [`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call) という姉妹関数があります。 `this` を設定できる点は同じですが、引数に配列ではなく展開された値のリストをとります。
@@ -946,7 +948,7 @@ var bill = new Person('William', 'Orange');
 function lastNameCaps() {
   return this.last.toUpperCase();
 }
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
 // 上記の文は以下と等価:
 s.lastNameCaps = lastNameCaps;
@@ -979,7 +981,7 @@ function parentFunc() {
 
 ```js
 function makeAdder(a) {
-  return function(b) {
+  return function (b) {
     return a + b;
   };
 }

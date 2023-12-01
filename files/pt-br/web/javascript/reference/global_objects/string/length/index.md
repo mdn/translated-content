@@ -28,13 +28,15 @@ A propriedade estática `String.length` retorna o valor `1`.
 ### Uso básico
 
 ```js
-var x = 'Mozilla';
-var empty = '';
+var x = "Mozilla";
+var empty = "";
 
-console.log('Mozilla possui ' + x.length + ' unidades de código de comprimento');
+console.log(
+  "Mozilla possui " + x.length + " unidades de código de comprimento",
+);
 /* "Mozilla possui 7 unidades de código de comprimento" */
 
-console.log('A string vazia possui um comprimento de ' + empty.length);
+console.log("A string vazia possui um comprimento de " + empty.length);
 /* "A string vazia possui um comprimento de 0" */
 ```
 
@@ -53,17 +55,13 @@ console.log(myString.length);
 // retorna 10
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                                                | Estado                   | Comentários                                        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}     | Definição inicial. Implementada no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}                                     | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.length")}}
+{{Compat}}
 
 ## Veja também
 

@@ -30,8 +30,8 @@ Math.expm1(x)
 
 ```js
 Math.expm1(-1); // -0.6321205588285577
-Math.expm1(0);  // 0
-Math.expm1(1);  // 1.718281828459045
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
 ```
 
 ## Полифил
@@ -39,9 +39,11 @@ Math.expm1(1);  // 1.718281828459045
 Этот метод может эмулироваться при помощи метода {{jsxref("Math.exp()")}}:
 
 ```js
-Math.expm1 = Math.expm1 || function(x) {
-  return Math.exp(x) - 1;
-};
+Math.expm1 =
+  Math.expm1 ||
+  function (x) {
+    return Math.exp(x) - 1;
+  };
 ```
 
 ## Спецификации

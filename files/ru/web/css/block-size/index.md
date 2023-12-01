@@ -2,6 +2,7 @@
 title: block-size
 slug: Web/CSS/block-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Свойство **`block-size`** [CSS](/ru/docs/Web/CSS) задаёт горизонтальный и вертикальный размер блока элемента, в зависимости от режима его записи (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от значения свойства {{cssxref("writing-mode")}}.
@@ -33,32 +34,27 @@ block-size: unset;
 
 `{{cssinfo}}`
 
-## `Синтаксис`
+## Синтаксис
 
-### `Значения`
+### Значения
 
-`Свойство block-size принимает те же значения, что и свойства {{cssxref("width")}}, {{cssxref("height")}}`
+Свойство block-size принимает те же значения, что и свойства {{cssxref("width")}}, {{cssxref("height")}}
 
-### `Формальный синтаксис`
-
-```
+### Формальный синтаксис
 
 {{csssyntax}}
-```
 
-## `Пример`
+## Пример
 
-### `HTML`
+### HTML
 
 ```html
-
 <p class="exampleText">Example text</p>
 ```
 
-### `CSS`
+### CSS
 
 ```css
-
 .exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
@@ -66,19 +62,17 @@ block-size: unset;
 }
 ```
 
-`{{EmbedLiveSample("Пример")}}`
+{{EmbedLiveSample("Пример")}}
 
-## `Спецификация`
+## Спецификация
 
-| `Specification`                                                                                                    | `Status`                                           | `Comment`            |
-| ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- | -------------------- |
-| `{{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}}` | `{{Spec2("CSS Logical Properties")}}` | `Initial definition` |
+{{Specifications}}
 
-## `Совместимость с браузерами`
+## Совместимость с браузерами
 
-`{{Compat}}`
+{{Compat}}
 
-## `Смотрите также`
+## Смотрите также
 
-- `Отображаемые физические свойства: {{cssxref("width")}} and {{cssxref("height")}}`
-- `{{cssxref("writing-mode")}}`
+- Отображаемые физические свойства: {{cssxref("width")}} and {{cssxref("height")}}
+- {{cssxref("writing-mode")}}

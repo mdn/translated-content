@@ -50,7 +50,7 @@ addEventListener("fetch", (event) => {
         msg: "私はあなたからフェッチされましたよ！",
         url: event.request.url,
       });
-    })()
+    })(),
   );
 });
 ```

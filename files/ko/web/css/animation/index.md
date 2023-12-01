@@ -35,7 +35,9 @@ animation: 3s ease-in 1s 2 reverse both paused slidein;
 animation: 3s linear 1s slidein;
 
 /* 애니메이션 두 개 */
-animation: 3s linear slidein, 3s ease-out 5s slideout;
+animation:
+  3s linear slidein,
+  3s ease-out 5s slideout;
 ```
 
 `animation` 속성은 쉼표로 구분된 하나 이상의 단일 애니메이션으로 지정됩니다.
@@ -88,7 +90,7 @@ animation: 3s linear slidein, 3s ease-out 5s slideout;
 - [움직임 민감성을 위한 더 안전한 웹 애니메이션 설계 · A List Apart 기사](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [움직임 감소 미디어 쿼리 소개 | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [반응형 움직임 디자인 | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN WCAG 이해하기, 가이드라인 2.2 설명](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN WCAG 이해하기, 가이드라인 2.2 설명](/ko/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Success Criterion 2.2.2 이해하기 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 형식 정의
@@ -207,8 +209,9 @@ animation: 3s linear slidein, 3s ease-out 5s slideout;
   height: 100vh;
   aspect-ratio: 1 / 1;
   /* 여러 애니메이션은 쉼표로 구분되고, 각 애니메이션의 매개변수는 독립적으로 설정됩니다. */
-  animation: 4s linear 0s infinite alternate rise, 24s linear 0s infinite
-      psychedelic;
+  animation:
+    4s linear 0s infinite alternate rise,
+    24s linear 0s infinite psychedelic;
 }
 
 @keyframes rise {
@@ -258,8 +261,9 @@ animation: 3s linear slidein, 3s ease-out 5s slideout;
     이전에 선언된 애니메이션 속성을 재정의합니다.
   */
   /* bounce는 rise가 설정한 transform을 '덮어쓰므로' 태양은 수평으로만 움직입니다. */
-  animation: 4s linear 0s infinite alternate rise, 4s linear 0s infinite
-      alternate bounce;
+  animation:
+    4s linear 0s infinite alternate rise,
+    4s linear 0s infinite alternate bounce;
 }
 
 @keyframes rise {

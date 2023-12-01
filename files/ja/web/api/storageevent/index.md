@@ -1,66 +1,45 @@
 ---
 title: StorageEvent
 slug: Web/API/StorageEvent
+l10n:
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
 {{APIRef("Web Storage API")}}
 
-`StorageEvent` は、保存領域が変更されたときに window へ送信されます。
+**`StorageEvent`** インターフェイスは {{domxref("Window/storage_event", "storage")}} イベントによって実装され、ウィンドウがアクセスするストレージ領域が他の文書のコンテキスト内で変更されたときにウィンドウに送られます。
 
-> **メモ:** Gecko 2.0 より前にもこのイベントは存在していましたが、仕様書に合致していませんでした。古いイベント形式は `nsIDOMStorageEventObsolete` インターフェイスで表します。
+{{InheritanceDiagram}}
 
-## メソッドの概要
+## コンストラクター
 
-| `void initStorageEvent(in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in DOMString keyArg, in DOMString oldValueArg, in DOMString newValueArg, in DOMString urlArg, in nsIDOMStorage storageAreaArg);` |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+- {{domxref("StorageEvent.StorageEvent()", "StorageEvent()")}}
+  - : 新しく構築された `StorageEvent` オブジェクトを返します。
 
-## 属性
+## インスタンスプロパティ
 
-| 属性          | 型                               | 説明                                                                                                                                                                          |
-| ------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `key`         | {{domxref("DOMString")}} | 変更されたキーを表します。storage の `clear()` メソッドで変更された場合は、`key` 属性が `null` になります。**読み取り専用です。**                                             |
-| `newValue`    | {{domxref("DOMString")}} | `key` の新しい値です。storage の `clear()` メソッドで変更された場合や `key` がストレージから削除された場合は、`newValue` 属性が `null` になります。**読み取り専用です。**         |
-| `oldValue`    | {{domxref("DOMString")}} | `key` の元の値です。storage の `clear()` メソッドで変更された場合や `key` が新たに追加されたため以前の値がない場合は、`oldValue` 属性が `null` になります。**読み取り専用です。** |
-| `storageArea` | `nsIDOMStorage`                  | 影響を受けた Storage オブジェクトを表します。**読み取り専用です。**                                                                                                           |
-| `url`         | {{domxref("DOMString")}} | `key` が変更されたドキュメントの URL です。**読み取り専用です。**                                                                                                             |
+_以下の挙げたプロパティに加え、このインターフェイスは親インターフェイスである {{domxref("Event")}} から継承したプロパティがあります。_
 
-## メソッド
+- {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
+  - : 変更されたキーを表す文字列を返します。
+    `key` 属性は、ストレージの`clear()` メソッドで変更された場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になります。
+- {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
+  - : `key` の新しい値を文字列で返します。
+    ストレージの `clear()` メソッドによって変更された場合、または `key` がストレージから除去された場合、この値は `null` となります。
+- {{domxref("StorageEvent.oldValue", "oldValue")}} {{ReadOnlyInline}}
+  - : `key` の元の値を文字列で返します。
+    この値は `key` が新しく追加された場合で、前回の値がない場合は `null` となります。
+- {{domxref("StorageEvent.storageArea", "storageArea")}} {{ReadOnlyInline}}
+  - : 影響を受けたストレージを表す {{DOMxRef("Storage")}} オブジェクトを返します。
+- {{domxref("StorageEvent.url", "url")}} {{ReadOnlyInline}}
+  - : `key` が変更された文書の URL を文字列で返します。
 
-### initStorageEvent()
+## インスタンスメソッド
 
-DOM イベントインターフェイス内の同様の名前のメソッドに似た方法で、イベントを初期化します。
+_以下の挙げたメソッドに加え、このインターフェイスは親インターフェイスである {{domxref("Event")}} から継承したメソッドがあります。_
 
-```js
-void initStorageEvent(
-  in DOMString typeArg,
-  in boolean canBubbleArg,
-  in boolean cancelableArg,
-  in DOMString keyArg,
-  in DOMString oldValueArg,
-  in DOMString newValueArg,
-  in DOMString urlArg,
-  in nsIDOMStorage storageAreaArg
-);
-```
-
-#### 引数
-
-- `typeArg`
-  - : イベントの名称。
-- `canBubbleArg`
-  - : イベントが DOM 内でバブリングするか否かを示す論理値。
-- `cancelableArg`
-  - : イベントがキャンセル可能であるかを示す論理値。
-- `keyArg`
-  - : イベントの結果として、値が変化したキー。
-- `oldValueArg`
-  - : キーに対する以前の値。
-- `newValueArg`
-  - : キーに対する新しい値。
-- `urlArg`
-  - : 値を変化させたドキュメントの URL。
-- `storageAreaArg`
-  - : イベントが発生したストレージエリアを表す DOM {{domxref("Storage")}} オブジェクト。
+- {{domxref("StorageEvent.initStorageEvent", "initStorageEvent()")}} {{deprecated_inline}}
+  - : DOM の Event インターフェイスにおける同様の名前の {{domxref("Event.initEvent", "initEvent()")}} メソッドに類似した方法でイベントを初期化します。代わりにコンストラクターを使用してください。
 
 ## 仕様書
 

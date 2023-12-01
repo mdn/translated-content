@@ -16,9 +16,9 @@ l10n:
 ## 例
 
 ```js
-// <area id="myArea" href="/en-US/docs/HTMLAreaElement"> 要素が文書にあったとします
+// <area id="myArea" href="/ja/docs/HTMLAreaElement"> 要素が文書にあったとします
 const area = document.getElementById("myArea");
-area.pathname; // '/en-US/docs/HTMLAreaElement' を返す
+area.pathname; // '/ja/docs/HTMLAreaElement' を返す
 ```
 
 ## 仕様書

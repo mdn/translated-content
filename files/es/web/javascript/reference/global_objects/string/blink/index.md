@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/blink
 
 ## Resumen
 
-Causa que una cadena parpadee como si estuviese en una etiqueta {{HTMLElement("blink")}}.
+Causa que una cadena parpadee como si estuviese en una etiqueta `<blink>`.
 
 ## Sintaxis
 
@@ -28,12 +28,12 @@ Usa el método `blink` para formatear y mostrar una cadena en un documento.
 El siguiente ejemplo usa métodos de `string` para cambiar el formateado de una cadena:
 
 ```js
-var cadenaMundo="¡Hola mundo!"
+var cadenaMundo = "¡Hola mundo!";
 
-console.log(cadenaMundo.blink())
-console.log(cadenaMundo.bold())
-console.log(cadenaMundo.italics())
-console.log(cadenaMundo.strike())
+console.log(cadenaMundo.blink());
+console.log(cadenaMundo.bold());
+console.log(cadenaMundo.italics());
+console.log(cadenaMundo.strike());
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:

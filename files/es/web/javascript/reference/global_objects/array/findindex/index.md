@@ -83,7 +83,7 @@ El siguiente ejemplo encuentra el índice de una fruta utilizando funciones flec
 ```js
 const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
 
-const index = fruits.findIndex(fruit => fruit === "blueberries");
+const index = fruits.findIndex((fruit) => fruit === "blueberries");
 
 console.log(index); // 3
 console.log(fruits[index]); // blueberries
@@ -94,9 +94,9 @@ console.log(fruits[index]); // blueberries
 ```js
 // https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
 if (!Array.prototype.findIndex) {
-  Object.defineProperty(Array.prototype, 'findIndex', {
-    value: function(predicate) {
-     // 1. Let O be ? ToObject(this value).
+  Object.defineProperty(Array.prototype, "findIndex", {
+    value: function (predicate) {
+      // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
       }
@@ -107,8 +107,8 @@ if (!Array.prototype.findIndex) {
       var len = o.length >>> 0;
 
       // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== 'function') {
-        throw new TypeError('predicate must be a function');
+      if (typeof predicate !== "function") {
+        throw new TypeError("predicate must be a function");
       }
 
       // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -135,7 +135,7 @@ if (!Array.prototype.findIndex) {
       return -1;
     },
     configurable: true,
-    writable: true
+    writable: true,
   });
 }
 ```

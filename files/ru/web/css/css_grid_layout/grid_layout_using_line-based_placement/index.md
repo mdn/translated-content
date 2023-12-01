@@ -16,37 +16,39 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 ![Подсветка нашей грид разметки в инструментах разработчка.](3_hilighted_grid.png)
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, 100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -58,10 +60,10 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 ```
 
@@ -70,53 +72,55 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 Задавая адреса для каждого элемента по отдельности, мы можем разместить все наши четыре элемента по колонкам и строкам. Заметьте, что при желании можно оставить ячейки пустыми. Одна из самых приятных вещей при работе с Grid Layout - возможность создавать негативное пространство (пустые области в макете) без кувырков через голову и прочих хаков.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box2 {
-   grid-column-start: 3;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 3;
-   grid-row-start: 1;
-   grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
-   grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 ```
 
@@ -127,51 +131,53 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 Мы написали много кода, чтобы разместить каждый элемент. Неудивительно, что существует [краткая форма записи свойств](/ru/docs/Web/CSS/Shorthand_properties). {{cssxref("grid-column-start")}} и {{cssxref("grid-column-end")}} могут быть объединены в одном {{cssxref("grid-column")}}, а {{cssxref("grid-row-start")}} и {{cssxref("grid-row-end")}} - в {{cssxref("grid-row")}}.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 / 2;
-   grid-row: 1 / 4;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 / 4;
-   grid-row: 1 / 3;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 / 3;
-   grid-row: 1 /  2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
 }
 ```
 
@@ -182,54 +188,56 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 В примерах выше мы задавали конечную линию для строки и колонки, чтобы продемонстрировать работу свойств, однако, если элемент занимает только один трек, вы можете опустить значение `grid-column-end` или `grid-row-end`. Грид по умолчанию размещает элемент таким образом, чтобы он занимал всего один трек. Это значит, что длинная запись свойств в нашем первоначальном примере может выглядеть вот так:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
 }
 ```
 
@@ -238,51 +246,53 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 Поэтому, если мы хотим, чтобы элементы занимали только один трек, наша сокращённая запись будет выглядеть вот так, без слеша и без второго значения:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 ;
-   grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 ;
-   grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 ;
-   grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 ```
 
@@ -298,47 +308,49 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 - grid-column-end
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
-   grid-area: 1 / 3 / 3 / 4;
+  grid-area: 1 / 3 / 3 / 4;
 }
 .box3 {
-   grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 2 / 2 / 3;
 }
 .box4 {
-   grid-area: 3 / 2 / 4 / 4;
+  grid-area: 3 / 2 / 4 / 4;
 }
 ```
 
@@ -362,59 +374,61 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 В примере ниже мы "перевернули" определение нашего грида, при размещении элементов задавая линии с конца, то есть, от правого и нижнего краёв.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: -1;
-   grid-column-end: -2;
-   grid-row-start: -1;
-   grid-row-end: -4;
+  grid-column-start: -1;
+  grid-column-end: -2;
+  grid-row-start: -1;
+  grid-row-end: -4;
 }
 .box2 {
-   grid-column-start: -3;
-   grid-column-end: -4;
-   grid-row-start: -1;
-   grid-row-end: -3;
+  grid-column-start: -3;
+  grid-column-end: -4;
+  grid-row-start: -1;
+  grid-row-end: -3;
 }
 .box3 {
-   grid-column-start: -2;
-   grid-column-end: -3;
-   grid-row-start: -1;
-   grid-row-end: -2;
+  grid-column-start: -2;
+  grid-column-end: -3;
+  grid-row-start: -1;
+  grid-row-end: -2;
 }
 .box4 {
-   grid-column-start: -2;
-   grid-column-end: -4;
-   grid-row-start: -3;
-   grid-row-end: -4;
+  grid-column-start: -2;
+  grid-column-end: -4;
+  grid-row-start: -3;
+  grid-row-end: -4;
 }
 ```
 
@@ -437,58 +451,60 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 Зазоры появляются только между треками и не добавляют пространство сверху, снизу, справа или слева грид-контейнеру. Мы можем добавить зазоры в предыдущий пример, дописав эти свойства грид-контейнеру.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 ;
-   grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 ;
-   grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 ;
-   grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 .wrapper {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
-     grid-column-gap: 20px;
-     grid-row-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-column-gap: 20px;
+  grid-row-gap: 1em;
 }
 ```
 
@@ -500,10 +516,10 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ```css
 .wrapper {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
-     grid-gap: 1em 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 1em 20px;
 }
 ```
 
@@ -514,32 +530,34 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 В дополнение к возможности обращаться к начальной и конечной линии по их номерам вы можете задать номер начальной линии, а после - количество треков, которые должен занять элемент.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -549,16 +567,16 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
   grid-row: 1 / span 3;
 }
 .box2 {
-   grid-column: 3;
-   grid-row: 1 / span 2;
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 .box3 {
-   grid-column: 2;
-   grid-row: 1;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / span 2;
-   grid-row: 3;
+  grid-column: 2 / span 2;
+  grid-row: 3;
 }
 ```
 
@@ -568,9 +586,9 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-row-start: 1;
-   grid-row-end: span 3;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 3;
 }
 ```
 
@@ -578,9 +596,9 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-row-start: span 3;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: span 3;
+  grid-row-end: 4;
 }
 ```
 

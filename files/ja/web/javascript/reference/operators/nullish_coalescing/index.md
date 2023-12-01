@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 
 これは[論理 OR 演算子 (`||`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR) の特殊形と見なすことができます。そちらは左辺の値が `null` や `undefined` だけでなく、何らかの{{Glossary("falsy", "偽値")}}であった場合に右辺値を返すものです。つまり、 `||` を使って別の変数 `foo` に何らかの既定値を与える場合、一部の偽値（例えば `''` や `0`）を使用可能とみなすと、予想外の動作に遭遇することがあります。詳しい例は以下を参照してください。
 
-Null 合体演算子は[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)が下から 5 番目で、 `||` のすぐ下、[条件（三項）演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)のすぐ上とします。
+Null 合体演算子は[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)が下から 5 番目で、 `||` のすぐ下、[条件（三項）演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)のすぐ上とします。
 
 {{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
 

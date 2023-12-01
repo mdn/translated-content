@@ -31,7 +31,7 @@ var v = "Hi!  I'm a strict mode script!";
 
 这种语法存在陷阱，有一个[大型网站](https://bugzilla.mozilla.org/show_bug.cgi?id=627531)已经被它[坑倒](https://bugzilla.mozilla.org/show_bug.cgi?id=579119)了：不能盲目地合并冲突代码。试想合并一个严格模式的脚本和一个非严格模式的脚本：合并后的脚本代码看起来是严格模式。反之亦然：非严格合并严格看起来是非严格的。合并均为严格模式的脚本或均为非严格模式的都没问题，只有在合并严格模式与非严格模式有可能有问题。建议按一个个函数去开启严格模式（至少在学习的过渡期要这样做）.
 
-您也可以将整个脚本的内容用一个函数包括起来，然后在这个外部函数中使用严格模式。这样做就可以消除合并的问题，但是这就意味着您必须要在函数作用域外声明一个全局变量。
+你也可以将整个脚本的内容用一个函数包括起来，然后在这个外部函数中使用严格模式。这样做就可以消除合并的问题，但是这就意味着你必须要在函数作用域外声明一个全局变量。
 
 ### 为函数开启严格模式
 
@@ -349,13 +349,7 @@ function baz() {
 
 主流浏览器现在实现了严格模式。但是不要盲目地依赖它，因为市场上仍然有大量的浏览器版本只部分支持严格模式或者根本就不支持（比如 IE10 之前的版本）。*严格模式改变了语义。*依赖这些改变可能会导致没有实现严格模式的浏览器中出现问题或者错误。谨慎地使用严格模式，通过检测相关代码的功能保证严格模式不出问题。最后，记得*在支持或者不支持严格模式的浏览器中测试你的代码*。如果你只在不支持严格模式的浏览器中测试，那么在支持的浏览器中就很有可能出问题，反之亦然。
 
-## 相关链接
+## 参见
 
-- [Where's Walden? » New ES5 strict mode support: now with poison pills!](http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
-- [Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
-- [Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
-- [JavaScript "use strict" tutorial for beginners.](http://qnimate.com/javascript-strict-mode-in-nutshell/)
-- [John Resig - ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
-- [ECMA-262-5 in detail. Chapter 2. Strict Mode.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
-- [Strict mode compatibility table](http://kangax.github.com/es5-compat-table/strict-mode/)
-- [Transitioning to strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)

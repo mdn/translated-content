@@ -30,10 +30,10 @@ new Error([message[, fileName[, lineNumber]]])
 
 ```js
 // これは...
-const x = Error('関数呼び出しによって生成されました。')
+const x = Error("関数呼び出しによって生成されました。");
 
 // ...これと同じ機能です。
-const y = new Error('"new" キーワードによって生成されました。')
+const y = new Error('"new" キーワードによって生成されました。');
 ```
 
 ## 仕様書
@@ -42,7 +42,7 @@ const y = new Error('"new" キーワードによって生成されました。')
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Error.Error")}}
+{{Compat}}
 
 ## 関連情報
 

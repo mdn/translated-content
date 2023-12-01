@@ -57,12 +57,16 @@ Google、Microsoft、Yahoo! のような主要な検索エンジンの管理者�
 
 ```html
 <div itemscope itemtype="https://schema.org/SoftwareApplication">
-  <span itemprop="name">Angry Birds</span> -
+  <span itemprop="name">Angry Birds</span> - REQUIRES
+  <span itemprop="operatingSystem">ANDROID</span><br />
+  <link
+    itemprop="applicationCategory"
+    href="https://schema.org/GameApplication" />
 
-  REQUIRES <span itemprop="operatingSystem">ANDROID</span><br>
-  <link itemprop="applicationCategory" href="https://schema.org/GameApplication"/>
-
-  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+  <div
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="https://schema.org/AggregateRating">
     RATING:
     <span itemprop="ratingValue">4.6</span> (
     <span itemprop="ratingCount">8864</span> ratings )

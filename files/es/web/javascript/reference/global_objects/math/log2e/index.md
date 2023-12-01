@@ -23,7 +23,7 @@ La función siguiente devuelve el base 2 del logaritmo natural del `E`:
 
 ```js
 function getLog2e() {
-   return Math.LOG2E
+  return Math.LOG2E;
 }
 ```
 

@@ -42,7 +42,7 @@ document.body.innerHTML = miCadena.anchor("ancla_contenidos");
 obtendrá el siguiente HTML:
 
 ```html
-<a name="ancla_contenidos">Tabla de Contenidos</A>
+<a name="ancla_contenidos">Tabla de Contenidos</a>
 ```
 
 ### Vea También

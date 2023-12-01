@@ -1,11 +1,11 @@
 ---
-title: 创建您自己的函数
+title: 创建你自己的函数
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
-我们在之前的文章里大多学的是理论，这篇文章将提供一个练习的机会——您将练习构建一些您自己风格的函数。在练习过程中，我们也会解释一些针对函数的更深层的实用细节。
+我们在之前的文章里大多学的是理论，这篇文章将提供一个练习的机会——你将练习构建一些你自己风格的函数。在练习过程中，我们也会解释一些针对函数的更深层的实用细节。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -35,9 +35,9 @@ slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 alert("This is a message");
 ```
 
-这个函数只带有一个参数——在 alert box 中展示的字符串。您可以尝试改变字符串来改变消息。
+这个函数只带有一个参数——在 alert box 中展示的字符串。你可以尝试改变字符串来改变消息。
 
-这个`alert()`函数不是很好的：您可以`alert()`出这条信息，但是您不能很容易的表达其他内容，例如颜色，图标或者是其他东西。接下来我们将会构建一个更有趣的函数。
+这个`alert()`函数不是很好的：你可以`alert()`出这条信息，但是你不能很容易的表达其他内容，例如颜色，图标或者是其他东西。接下来我们将会构建一个更有趣的函数。
 
 > **备注：** 这个例子能够在现代浏览器上很好的工作，但是这个风格在老的浏览器上并没那么有趣。我们建议你实现这个例子时在现代浏览器上，例如 Firefox，Opera 或者 Chrome 浏览器。
 
@@ -47,7 +47,7 @@ alert("This is a message");
 
 > **备注：** 对于函数命名约定，应遵循与[变量命名约定](/zh-CN/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)相同的规则。这很好，尽你所能理解它们之间的区别 - 函数名称后带有括号，而变量则没有。
 
-1. 我们希望您首先访问[function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html)文件并创建一个本地拷贝。您将会看到这个 HTML 很简单 — 我们的 body 块仅包含一个按钮。我们还提供了一些基本的 CSS 来装饰自定义消息框，以及一个用于放置 JavaScript 代码的{{htmlelement("script")}}元素。
+1. 我们希望你首先访问[function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html)文件并创建一个本地拷贝。你将会看到这个 HTML 很简单 — 我们的 body 块仅包含一个按钮。我们还提供了一些基本的 CSS 来装饰自定义消息框，以及一个用于放置 JavaScript 代码的{{htmlelement("script")}}元素。
 2. 接下来，将下面的代码添加至 `<script>` 元素中：
 
    ```js
@@ -285,9 +285,9 @@ btn.onclick = displayMessage();
 
 > **备注：** 如果你写这个例子遇到了困难，在这里查看免费的代码 [完整版本的代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) (或者[在线运行的完整代码](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)), 也可以向我们寻求帮助。
 
-## 测试你的技能！
+## 技能测试！
 
-你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[测试你的技能：函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
+你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[技能测试：函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
 
 ## 结论
 

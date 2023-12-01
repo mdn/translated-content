@@ -2,6 +2,7 @@
 title: <transform-function>
 slug: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`<transform-function>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 요소의 외형에 영향을 주는 변형을 나타냅니다. 변형 함수는 2D 또는 3D 공간 내에서 요소를 회전하고, 크기를 바꾸고, 왜곡하고, 이동할 수 있습니다. {{cssxref("transform")}} 속성에서 사용합니다.

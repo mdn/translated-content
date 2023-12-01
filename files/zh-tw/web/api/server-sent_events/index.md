@@ -14,9 +14,9 @@ slug: Web/API/Server-sent_events
 
 ## 工具
 
-- Remy Sharp’s [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
-- Yaffle’s [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron’s [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
+- Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
+- Rick Waldron's [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
 
 ## 相關主題
 

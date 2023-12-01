@@ -2,12 +2,19 @@
 title: <polygon>
 slug: Web/SVG/Element/polygon
 ---
+
 {{SVGRef}}
 
 Элемент **`<polygon>`** описывает замкнутую фигуру, состоящую из набора последовательно соединённых между собой прямых линий. Для создания незамкнутых фигур используется элемент {{SVGElement("polyline")}}.
 
+## Пример
+
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -16,12 +23,11 @@ html,body,svg { height:100% }
   <polygon points="0,100 50,25 50,75 100,0" />
 
   <!-- Example of the same polygon shape with stroke and no fill -->
-  <polygon points="100,100 150,25 150,75 200,0"
-            fill="none" stroke="black" />
+  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, 100)}}
+{{EmbedLiveSample("Пример", 100, 100)}}
 
 ## Атрибуты
 
@@ -34,7 +40,7 @@ html,body,svg { height:100% }
 
 ### Global attributes
 
-- [Основные атрибуты](/docs/Web/SVG/Attribute/Core)
+- [Основные атрибуты](/ru/docs/Web/SVG/Attribute/Core)
   - : Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Атрибуты стилизации](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}

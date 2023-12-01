@@ -35,12 +35,12 @@ regexObj.test(str)
 Следующий пример печатает сообщение, в зависимости от того, была ли проверка успешной:
 
 ```js
-function testinput(re, str){
+function testinput(re, str) {
   var midstring;
   if (re.test(str)) {
-    midstring = ' содержит ';
+    midstring = " содержит ";
   } else {
-    midstring = ' не содержит ';
+    midstring = " не содержит ";
   }
   console.log(str + midstring + re.source);
 }

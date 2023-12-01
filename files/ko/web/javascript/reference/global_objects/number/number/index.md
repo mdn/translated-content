@@ -23,8 +23,8 @@ new Number(value);
 ### Number 객체 만들기
 
 ```js
-const a = new Number('123'); // a === 123 은 거짓
-const b = Number('123'); // b === 123 은 참
+const a = new Number("123"); // a === 123 은 거짓
+const b = Number("123"); // b === 123 은 참
 a instanceof Number; // 참
 b instanceof Number; // 참
 ```

@@ -21,22 +21,22 @@ El operador de agrupación consiste en un par de paréntesis alrededor de la exp
 
 Sobrescribir la precedencia de operadores aritméticos por defecto para que se evalúe primero la adición y luego la multiplicación.
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
 
 // precedencia por defecto
-a + b * c     // 7
+a + b * c; // 7
 // es evaluada por defecto como:
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // ahora se sobrescribe la precedencia
 // para que la adición se evalúe antes que la multiplicación
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // que es equivalente a:
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ## Especificaciones

@@ -49,7 +49,7 @@ const myWorker = new Worker("worker.js");
 
 ### 专用 worker 中消息的接收和发送
 
-你可以通过 {{domxref("Worker.postMessage", "postMessage()")}} 方法和 {{domxref("Worker.onmessage", "onmessage")}} 事件处理函数触发 worker 的方法。当你想要向一个 worker 发送消息时，你只需要这样做（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/worker.js)）：
+你可以通过 {{domxref("Worker.postMessage", "postMessage()")}} 方法和 {{domxref("Worker.onmessage", "onmessage")}} 事件处理函数触发 worker 的方法。当你想要向一个 worker 发送消息时，你只需要这样做（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
 
 ```js
 first.onchange = () => {
@@ -292,7 +292,7 @@ onmessage = (event) => {
 };
 ```
 
-[结构化克隆](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)算法可以接收 JSON 数据以及一些 JSON 不能表示的数据——比如循环引用。
+[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)算法可以接收 JSON 数据以及一些 JSON 不能表示的数据——比如循环引用。
 
 ### 传递数据的例子
 
@@ -542,12 +542,12 @@ onmessage = (event) => {
 
 ```js
 const queryableFunctions = {
-  // 示例1：得到两个数字的差值：
+  // 示例 1：得到两个数字的差值：
   getDifference(minuend, subtrahend) {
     reply("printStuff", minuend - subtrahend);
   },
 
-  // 示例2：等待三秒
+  // 示例 2：等待三秒
   waitSomeTime() {
     setTimeout(() => {
       reply("doAlert", 3, "seconds");
@@ -640,7 +640,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
     <script>
       // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
 
-      // 过去存在 blob builder，但现在我们使用Blob
+      // 过去存在 blob builder，但现在我们使用 Blob
       const blob = new Blob(
         Array.prototype.map.call(
           document.querySelectorAll("script[type='text\/js-worker']"),

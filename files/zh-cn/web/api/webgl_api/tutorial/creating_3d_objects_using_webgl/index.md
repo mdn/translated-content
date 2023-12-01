@@ -189,7 +189,7 @@ let cubeRotation = 0.0;
 function drawScene(gl, programInfo, buffers, cubeRotation) {
 ```
 
-> **备注：** 在 `drawScene()` 函数中， 用下面代码替换之前的 `mat4.rotate` 函数：
+> **备注：** 在 `drawScene()` 函数中，用下面代码替换之前的 `mat4.rotate` 函数：
 
 ```js
 mat4.rotate(

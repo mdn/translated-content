@@ -186,13 +186,11 @@ td {
 
 ## Especificações
 
-| Especificação                                                                           | Status                       | Comentário        |
-| --------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('CSS3 Transforms', '#backface-visibility-property', 'backface-visibility')}} | {{Spec2('CSS3 Transforms')}} | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## Veja também
 
