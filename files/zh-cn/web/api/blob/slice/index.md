@@ -23,7 +23,7 @@ slice(start, end, contentType)
 - `end` {{ optional_inline() }}
   - : 这个参数代表 {{domxref("Blob")}} 里的第一个*不会*被拷贝进新的 {{domxref("Blob")}} 的字节的索引（换句话说，这个索引的字节不会被拷贝）。如果你传入了一个负数，那么这个偏移量将会从数据的末尾从后到前开始计算。举例来说，-10 将会是 {{domxref("Blob")}} 的倒数第十个字节。它的默认值就是它的原始长度 `size`。
 - `contentType` {{ optional_inline() }}
-  - : 给新的 {{domxref("Blob")}} 赋予一个新的文档类型。这将会把它的 `type` 属性设为被传入的值。它的默认值是一个空的字符串。
+  - : 给新的 {{domxref("Blob")}} 赋予一个新的内容类型。这将会把它的 `type` 属性设为被传入的值。它的默认值是一个空字符串。
 
 ### 返回值
 
