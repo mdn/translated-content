@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Device Orientation Events")}}
 
-디바이스 방향 이벤트는 [디바이스의 물리적 방향을 감지](/ko/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_motion_events)할 수 있을 뿐만 아니라, [디바이스의 동작을 감지](/ko/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_motion_events)햘 수 있는 이벤트입니다.
+디바이스 방향 이벤트는 [디바이스의 물리적 방향을 감지](/ko/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_orientation_events)할 수 있을 뿐만 아니라, [디바이스의 동작을 감지](/ko/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_motion_events)햘 수 있는 이벤트입니다.
 
 ## 개념 및 사용법
 
