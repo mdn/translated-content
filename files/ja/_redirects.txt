@@ -2624,7 +2624,7 @@
 /ja/docs/Web/API/AudioTrackList/onaddtrack	/ja/docs/Web/API/AudioTrackList/addtrack_event
 /ja/docs/Web/API/AudioTrackList/onchange	/ja/docs/Web/API/AudioTrackList/change_event
 /ja/docs/Web/API/AudioTrackList/onremovetrack	/ja/docs/Web/API/AudioTrackList/removetrack_event
-/ja/docs/Web/API/AudioWorkletProcessor/parameterDescriptors	/ja/docs/conflicting/Web/API/AudioWorkletProcessor
+/ja/docs/Web/API/AudioWorkletProcessor/parameterDescriptors	/ja/docs/Web/API/AudioWorkletProcessor
 /ja/docs/Web/API/BarcodeDetector/getSupportedFormats	/ja/docs/Web/API/BarcodeDetector/getSupportedFormats_static
 /ja/docs/Web/API/BaseAudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/statechange_event
 /ja/docs/Web/API/BlobBuilder	/ja/docs/Web/API/Blob
@@ -3880,7 +3880,7 @@
 /ja/docs/Web/Guide/AJAX/Community	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /ja/docs/Web/Guide/AJAX/Getting_Started	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /ja/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support	/ja/docs/Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
-/ja/docs/Web/Guide/API	/ja/docs/conflicting/Web/API
+/ja/docs/Web/Guide/API	/ja/docs/Web/API
 /ja/docs/Web/Guide/API/Gamepad	/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /ja/docs/Web/Guide/API/Vibration	/ja/docs/Web/API/Vibration_API
 /ja/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/ja/docs/Web/Guide/Audio_and_video_delivery
@@ -3967,7 +3967,7 @@
 /ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/Guide/HTML/XHTML	/ja/docs/Glossary/XHTML
 /ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
-/ja/docs/Web/Guide/Introduction_to_Web_development	/ja/docs/conflicting/Learn
+/ja/docs/Web/Guide/Introduction_to_Web_development	/ja/docs/Learn
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ja/docs/Web/Guide/Mobile/Separate_sites	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
@@ -4657,7 +4657,7 @@
 /ja/docs/Web_Developer_Extension_(external)	https://addons.mozilla.org/ja/firefox/addon/60
 /ja/docs/Web_Development	/ja/docs/Web/Guide
 /ja/docs/Web_Development/Historical_artifacts_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
-/ja/docs/Web_Development/Introduction_to_Web_development	/ja/docs/conflicting/Learn
+/ja/docs/Web_Development/Introduction_to_Web_development	/ja/docs/Learn
 /ja/docs/Web_Development/Mobile	/ja/docs/Web/Guide/Mobile
 /ja/docs/Web_Development/Mobile/Responsive_design	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web_Development/Writing_forward-compatible_websites	/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
