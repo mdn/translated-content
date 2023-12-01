@@ -1,6 +1,7 @@
 ---
 title: Web 开发介绍
-slug: Web/Guide/Introduction_to_Web_development
+slug: conflicting/Learn
+original_slug: Web/Guide/Introduction_to_Web_development
 ---
 
 <section id="Quick_links">

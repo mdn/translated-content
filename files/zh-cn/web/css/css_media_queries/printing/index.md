@@ -1,6 +1,7 @@
 ---
 title: 打印
-slug: Web/Guide/Printing
+slug: Web/CSS/CSS_media_queries/Printing
+original_slug: Web/Guide/Printing
 ---
 
 <section id="Quick_links">

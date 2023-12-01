@@ -1,6 +1,7 @@
 ---
 title: Web 开放字体格式（WOFF）
-slug: Web/Guide/WOFF
+slug: Web/CSS/CSS_fonts/WOFF
+original_slug: Web/Guide/WOFF
 ---
 
 <section id="Quick_links">
