@@ -13,7 +13,7 @@ l10n:
 
 ## 描述
 
-`RegExp.prototype.flags` 具有一个字符串值。`flags` 属性中的标志按字母顺序排列（从左到右，例如 `"dgimsuvy"`）。它实际上调用了其他标志访问器并逐个连接这些结果。
+`RegExp.prototype.flags` 具有一个字符串值。`flags` 属性中的标志按字母顺序排列（从左到右，例如 `"dgimsuvy"`）。它实际上调用了其他标志访问器（如 [`hasIndices`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices)、[`global`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) 等）并逐个连接这些结果。
 
 所有内置函数都是读取 `flags` 属性，而不是读取单独的标志访问器。
 
