@@ -58,8 +58,6 @@ slug: Web/SVG/Attribute/keyTimes
 </svg>
 ```
 
-**Демонстрация**
-
 {{ EmbedLiveSample('Пример','120','120') }}
 
 ## Элементы

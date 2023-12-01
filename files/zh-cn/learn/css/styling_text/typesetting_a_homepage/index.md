@@ -35,7 +35,7 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 
 字体：
 
-- 首先，下载一些免费的字体。因为这是一所大学，字体应该严肃，正式，给人信任的感觉 —— 主体使用 serif 字体，对标题结合使用 sans-serif 或者 slab serif 会是不错的选择。
+- 首先，下载一些免费的字体。因为这是一所大学，字体应该严肃，正式，给人信任的感觉——主体使用 serif 字体，对标题结合使用 sans-serif 或者 slab serif 会是不错的选择。
 - 使用合适的服务对着两种字体生成无死角的`@font-face`代码。
 - 将你的 body 字体应用到 body，heading 字体应用到 heading。
 

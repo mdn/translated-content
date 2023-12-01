@@ -422,6 +422,6 @@ export default App;
 
 ## まとめ
 
-この記事では、アプリをコンポーネントにうまく分割し、それらを効率的にレンダリングする方法について、詳しく説明しました。今回は、アプリをコンポーネントにうまく分割し、それらを効率的にレンダリングする方法について詳しく説明しました。さて、次は React でイベントを処理する方法を見て、いくつかのインタラクティブ機能を追加していきます。
+この記事では、アプリをコンポーネントにうまく分割し、それらを効率的にレンダリングする方法について、詳しく説明しました。さて、次は React でイベントを処理する方法を見て、いくつかのインタラクティブ機能を追加していきます。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

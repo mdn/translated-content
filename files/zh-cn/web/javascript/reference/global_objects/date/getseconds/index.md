@@ -42,7 +42,7 @@ var secs = Xmas95.getSeconds();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCSeconds()")}}
 - {{jsxref("Date.prototype.setSeconds()")}}

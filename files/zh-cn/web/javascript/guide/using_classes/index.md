@@ -624,7 +624,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-有一些事情需要注意。首先，在构造器中，我们调用了 `super(r, g, b)`。在访问 `this` 之前，必须调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)，这是 JavaScript 的要求。`super()` 调用父类的构造函数来初始化 `this`——这里大致相当于 `this = new Color(r, g, b)`。`super()` 之前也可以有代码，但你不能在 `super()` 之前访问 `this` —— JavaScript 会阻止你访问未初始化的 `this`。
+有一些事情需要注意。首先，在构造器中，我们调用了 `super(r, g, b)`。在访问 `this` 之前，必须调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)，这是 JavaScript 的要求。`super()` 调用父类的构造函数来初始化 `this`——这里大致相当于 `this = new Color(r, g, b)`。`super()` 之前也可以有代码，但你不能在 `super()` 之前访问 `this`——JavaScript 会阻止你访问未初始化的 `this`。
 
 在父类完成对 `this` 的修改后，派生类才可以对其进行自己的逻辑。这里我们添加了一个名为 `#alpha` 的私有字段，并提供了一对 getter/setter 来与之交互。
 
