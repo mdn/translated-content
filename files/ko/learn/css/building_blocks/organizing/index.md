@@ -53,16 +53,16 @@ page-type: learn-module-chapter
 
 항상 따르는 일련의 규칙이 있다면 CSS를 작성할 때 일부 결정이 되어 있기 때문에 필요한 정신적 오버헤드의 양이 줄어듭니다.
 
-### Formatting readable CSS
+### 읽기 쉬운 CSS 포맷팅하기
 
-There are a couple of ways you will see CSS formatted. Some developers put all of the rules onto a single line, like so:
+CSS가 포맷팅되는 몇 가지 방법들이 있습니다. 어떤 개발자들은 다음과 같이 모든 규칙을 한 줄에 붙입니다.
 
 ```css-nolint
 .box {background-color: #567895; }
 h2 {background-color: black; color: white; }
 ```
 
-Other developers prefer to break everything onto a new line:
+다른 개발자들은 모든 것을 새로운 라인으로 쪼개는 것을 선호합니다.
 
 ```css
 .box {
@@ -75,7 +75,7 @@ h2 {
 }
 ```
 
-CSS doesn't mind which one you use. We personally find it is more readable to have each property and value pair on a new line.
+CSS는 어는 것을 사용하든 상관하지 않습니다. 우리는 각 속성과 값의 쌍을 새로운 줄에 위치시키는 것이 더 읽기 쉽다고 생각합니다.
 
 ### Comment your CSS
 
