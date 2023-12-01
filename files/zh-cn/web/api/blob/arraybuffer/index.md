@@ -19,7 +19,7 @@ arrayBuffer()
 
 ### 返回值
 
-返回一个 promise 对象，在 resolved 状态中以二进制的形式包含 blob 中的数据，并呈现在 {{domxref("ArrayBuffer")}} 中。
+一个 promise，会兑现为一个包含 blob 数据（以二进制形式）的 {{jsxref("ArrayBuffer")}}。
 
 ### 异常
 
