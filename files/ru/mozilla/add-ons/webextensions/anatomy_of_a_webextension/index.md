@@ -47,7 +47,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 Вместо указания несколько фоновых сценариев вы можете указать фоновую страницу, которая так же преимущества поддержки ES6 модулей:
 
-**manifest.json**
+**manifest.json:**
 
 ```json
 // manifest.json
@@ -57,7 +57,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 }
 ```
 
-**background-page.html**
+**background-page.html:**
 
 ```html
 <!doctype html>

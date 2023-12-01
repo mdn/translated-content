@@ -26,28 +26,28 @@ slug: Mozilla/Firefox/Releases/32
 
 ### CSS
 
-- {{domxref("mix-blend-mode")}} включено по умолчанию ({{Bug(952643)}}).
-- `position:sticky` включено по умолчанию в Release сборках (раньше было только в Nightly и Aurora) ({{Bug(916315)}}).
-- реализовано box-decoration-break: Левая/правая часть box-shadow должна быть отрисована только на первом/последнем элементе inline контейнера ({{Bug(613659)}}).
-- Реализация flex-grow/flex-shrink для преобразования между нулевыми и не нулевыми значениями ({{Bug(996945)}}).
+- {{domxref("mix-blend-mode")}} включено по умолчанию ([Firefox bug 952643](https://bugzil.la/952643)).
+- `position:sticky` включено по умолчанию в Release сборках (раньше было только в Nightly и Aurora) ([Firefox bug 916315](https://bugzil.la/916315)).
+- реализовано box-decoration-break: Левая/правая часть box-shadow должна быть отрисована только на первом/последнем элементе inline контейнера ([Firefox bug 613659](https://bugzil.la/613659)).
+- Реализация flex-grow/flex-shrink для преобразования между нулевыми и не нулевыми значениями ([Firefox bug 996945](https://bugzil.la/996945)).
 
 ### HTML
 
-- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Element/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ({{Bug(870021)}}).
+- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Element/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ([Firefox bug 870021](https://bugzil.la/870021)).
 
 ### JavaScript
 
 - Реализованы новые встроенные методы ECMAScript 6:
 
-  - {{jsxref("Array.from()")}} ({{bug(904723)}})
+  - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723))
   - {{jsxref("Array.prototype.copyWithin()")}}
   - {{jsxref("Number.isSafeInteger()")}}
 
 ### Интерфейсы/APIs/DOM
 
-- Реализованы свойство {{domxref("NavigatorLanguage.languages", "navigator.languages")}} и событие {{event("languagechange")}} ({{Bug(889335)}}).
-- В методы {{domxref("KeyboardEvent.getModifierState")}}() и {{domxref("MouseEvent.getModifierState")}}() добавлена поддержка виртуального модификатора `Accel` ({{Bug(1009388)}}).
-- Добавлена экспериментальная реализация свойства {{domxref("KeyboardEvent.code")}}: она отключена в Release сборках ({{Bug(865649)}}).
+- Реализованы свойство {{domxref("NavigatorLanguage.languages", "navigator.languages")}} и событие {{event("languagechange")}} ([Firefox bug 889335](https://bugzil.la/889335)).
+- В методы {{domxref("KeyboardEvent.getModifierState")}}() и {{domxref("MouseEvent.getModifierState")}}() добавлена поддержка виртуального модификатора `Accel` ([Firefox bug 1009388](https://bugzil.la/1009388)).
+- Добавлена экспериментальная реализация свойства {{domxref("KeyboardEvent.code")}}: она отключена в Release сборках ([Firefox bug 865649](https://bugzil.la/865649)).
 
 ### MathML
 

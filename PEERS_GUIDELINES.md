@@ -46,10 +46,11 @@ The review teams for each locale are:
   - [yujo11](https://github.com/yujo11)
   - [hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the [yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru) team, which consists of:
+  - [leon-win](https://github.com/leon-win)
+  - [sashasushko](https://github.com/sashasushko)
+  - [Saionaro](https://github.com/Saionaro)
   - [yanaklose](https://github.com/yanaklose)
   - [myshov](https://github.com/myshov)
-  - [Saionaro](https://github.com/Saionaro)
-  - [sashasushko](https://github.com/sashasushko)
   - [lex111](https://github.com/lex111)
 - Chinese (`zh-CN` and `zh-TW`) content — the [yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh) team, which consists of:
   - [t7yang](https://github.com/t7yang)
