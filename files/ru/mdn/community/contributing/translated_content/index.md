@@ -13,7 +13,7 @@ slug: MDN/Community/Contributing/Translated_content
 
 Если вы хотите внести свой вклад в одну из существующих активных локалей, посетите [репозиторий mdn/translated-content на GitHub](https://github.com/mdn/translated-content). Этот репозиторий содержит все локализованные документы для всех активных локалей, а также систему отслеживания проблем. Мы рекомендуем сначала прочитать [руководство по переводу](https://github.com/mdn/translated-content/tree/main/docs).
 
-Если вам нужна помощь или у вас есть вопросы, свяжитесь с кем-нибудь из активных участников сообществ, перечисленных ниже, или [с нами](/en-US/docs/MDN/Community/Communication_channels).
+Если вам нужна помощь или у вас есть вопросы, свяжитесь с кем-нибудь из активных участников сообществ, перечисленных ниже, или [с нами](/ru/docs/MDN/Community/Communication_channels).
 
 ## Активные локали
 
@@ -57,4 +57,4 @@ slug: MDN/Community/Contributing/Translated_content
 - [MDN localization update, February 2021](https://hacks.mozilla.org/2021/02/mdn-localization-update-february-2021/) — последняя версия локализации на MDN
 - [An update on MDN Web Docs' localization strategy](https://hacks.mozilla.org/2020/12/an-update-on-mdn-web-docs-localization-strategy/) — обновлённая стратегия локализации на основе отзывов сообщества
 - [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — подробнее о преимуществах новой платформы и обосновании изменений в системе локализации
-- [MDN communication channels](/en-US/docs/MDN/Community/Communication_channels)
+- [MDN communication channels](/ru/docs/MDN/Community/Communication_channels)
