@@ -37,15 +37,15 @@ page-type: learn-module-chapter
   </tbody>
 </table>
 
-## Tips to keep your CSS tidy
+## CSS를 깔끔하게 유지하는 팁
 
-Here are some general suggestions for ways to keep your stylesheets organized and tidy.
+다음은 스타일시트를 정리하고 깔끔하게 유지하는 방법에 대한 몇 가지 제안입니다.
 
-### Does your project have a coding style guide?
+### 프로젝트에 코딩 스타일 가이드가 있다면?
 
-If you are working with a team on an existing project, the first thing to check is whether the project has an existing style guide for CSS. The team style guide should always win over your own personal preferences. There often isn't a right or wrong way to do things, but consistency is important.
+기존의 프로젝트에서 팀과 함께 작업하는 경우, 프로젝트에 CSS를 위한 기존 스타일 가이드가 있는지 확인하는 것이 먼저입니다. 팀 스타일 가이드는 항상 자신의 개인적 선호보다 우선되야 합니다. 일을 하는 데에 옳거나 틀린 방법은 거의 없지만, 일관성이 중요합니다.
 
-For example, have a look at the [CSS guidelines for MDN code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS).
+예를 들어, [CSS guidelines for MDN code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)를 살펴보세요.
 
 ### Keep it consistent
 
