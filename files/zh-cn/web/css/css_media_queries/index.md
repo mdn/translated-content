@@ -44,8 +44,10 @@ l10n:
   - : 介绍媒体查询及其语法，以及用于构造媒体查询表达式的运算符和媒体特性。
 - [通过编程方式使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
   - : 描述如何在 JavaScript 代码中使用媒体查询来确定设备的状态，以及设置在媒体查询结果发生更改时（例如，当用户旋转屏幕或调整浏览器大小时）通知代码的监听器。
-- [使用媒体查询增强无障碍](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility))
+- [使用媒体查询增强无障碍](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
   - : 了解媒体查询如何帮助用户更好地了解你的网站。
+- [打印](/zh-CN/docs/Web/CSS/CSS_media_queries/Printing)
+  - : 帮助改进 Web 内容打印输出的技巧和技术。
 
 ## 规范
 

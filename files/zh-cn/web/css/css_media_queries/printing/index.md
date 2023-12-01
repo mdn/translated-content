@@ -1,12 +1,7 @@
 ---
 title: 打印
 slug: Web/CSS/CSS_media_queries/Printing
-original_slug: Web/Guide/Printing
 ---
-
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
-</section>
 
 有时，你的网站或应用程序可能希望改善用户在打印内容时的体验。有几种可能的情况：
 
@@ -25,7 +20,7 @@ original_slug: Web/Guide/Printing
 <link href="/path/to/print.css" media="print" rel="stylesheet" />
 ```
 
-## 使用媒体查询改善布局
+## 使用媒体查询和 @page 改善布局
 
 你可以使用 CSS {{cssxref("@media")}} at 规则为网页设置打印在纸上和显示在屏幕上时的不同外观。`print` 选项可以设置打印内容时使用的样式。
 
@@ -41,6 +36,8 @@ original_slug: Web/Guide/Printing
   }
 }
 ```
+
+你还可以使用 {{cssxref("@page")}} at 规则修改打印页面的外观，包括页面的尺寸、方向和边距。`@page` at 规则可用于定位打印输出中的所有页面或页面的特定子集。
 
 ## 检测打印请求
 
@@ -96,3 +93,4 @@ document.getElementById("print_external").addEventListener("click", () => {
 - {{ domxref("window.afterprint_event", "afterprint") }} 事件
 - [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("@media")}}
+- [CSS 分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)模块
