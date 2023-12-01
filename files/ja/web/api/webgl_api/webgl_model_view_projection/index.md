@@ -534,7 +534,7 @@ w = (4 + 1) * scaleFactor;
 
 このデモでは、 `computeSimpleProjectionMatrix()` メソッドが追加されています。これは `draw()` メソッドの中で呼び出され、スケール係数が渡されます。結果は前回の例と同じになるはずです。
 
-```js
+```js-nolint
 CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
   this.transforms.projection = [
 		1, 0, 0, 0,
