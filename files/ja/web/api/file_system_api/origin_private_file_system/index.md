@@ -1,8 +1,8 @@
 ---
 title: オリジンプライベートファイルシステム
 slug: Web/API/File_System_API/Origin_private_file_system
-page-type: guide
-browser-compat: api.StorageManager.getDirectory
+l10n:
+  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}
