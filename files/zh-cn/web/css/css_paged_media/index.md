@@ -1,5 +1,5 @@
 ---
-title: Paged media
+title: CSS 分页媒体
 slug: Web/CSS/CSS_paged_media
 l10n:
   sourceCommit: d303345cabd0cd9ab33fdfe51957479c8fb35424
