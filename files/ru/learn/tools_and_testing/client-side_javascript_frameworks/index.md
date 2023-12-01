@@ -34,7 +34,7 @@ JavaScript-фреймворки являются неотъемлемой час
 > We have put together a course that includes all the essential information you need to
 > work towards your goal.
 >
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
+> [**Get started**](/ru/docs/Learn/Front-end_web_developer)
 
 ## Вводные руководства
 
