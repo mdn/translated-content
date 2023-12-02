@@ -1,6 +1,8 @@
 ---
 title: Blob：text() 方法
 slug: Web/API/Blob/text
+l10n:
+  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
 ---
 
 {{APIRef("File API")}}
@@ -23,7 +25,7 @@ text()
 
 ## 使用说明
 
-{{domxref("FileReader")}} 的 {{domxref("FileReader.readAsText", "readAsText()")}} 方法是一个与之类似的方法，它对 `Blob` 和 {{domxref("File")}} 对象都适用。下面是两个主要的不同之处：
+{{domxref("FileReader")}} 的 {{domxref("FileReader.readAsText", "readAsText()")}} 方法是一个与之类似的更老的方法，它对 `Blob` 和 {{domxref("File")}} 对象都适用。下面是两个主要的不同之处：
 
 - `Blob.text()` 返回一个 promise 对象，而 `FileReader.readAsText()` 是一个基于事件的 API。
 - `Blob.text()` 总是使用 UTF-8 进行编码，而 `FileReader.readAsText()` 可以使用不同编码方式，取决于 blob 的类型和一个指定的编码名称。
