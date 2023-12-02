@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-大多数 [HTML](/zh-CN/docs/Web/HTML) 元素都属于一个或多个内容类别——这些类别对具有共同特征的元素进行分组。这是一个松散的分组（它实际上并没有在这些类别的元素之间建立关系），但它们有助于定义和描述这些类别的共同行为及其相关规则，特别是在你遇到它们的复杂细节时。元素也有可能不属于其中的*任何*类别。
+大多数 [HTML](/zh-CN/docs/Web/HTML) 元素都属于一个或多个**内容类别**——这些类别对具有共同特征的元素进行分组。这是一个松散的分组（它实际上并没有在这些类别的元素之间建立关系），但它们有助于定义和描述这些类别的共同行为及其相关规则，特别是在你遇到它们的复杂细节时。元素也有可能不属于其中的*任何*类别。
 
 以下是三种类型的内容分类：
 
@@ -116,10 +116,10 @@ l10n:
 
 属于此类的少数其他元素，但仅限于以下特殊情况：
 
-- {{HTMLElement("area")}}，仅限于它作为 {{HTMLElement("map")}} 的子节点的情形
-- {{HTMLElement("link")}}，仅限于 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性存在的情形
-- {{HTMLElement("meta")}}，仅限于 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性存在的情形
-- {{HTMLElement("style")}}，仅限于 `scoped` {{deprecated_inline}} 属性存在的情形
+- {{HTMLElement("area")}}，当它为 {{HTMLElement("map")}} 元素的子元素时
+- {{HTMLElement("link")}}，若存在 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性
+- {{HTMLElement("meta")}}，若存在 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性
+- {{HTMLElement("style")}}，若存在 `scoped` {{deprecated_inline}} 属性
 
 ### 分段内容
 
@@ -200,9 +200,9 @@ l10n:
 - {{HTMLElement("area")}}，当它为 {{HTMLElement("map")}} 元素的子元素时
 - {{HTMLElement("del")}}，当它仅包含短语内容时
 - {{HTMLElement("ins")}}，当它仅包含短语内容时
-- {{HTMLElement("link")}}，仅限于 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性存在的情形
+- {{HTMLElement("link")}}，若存在 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性
 - {{HTMLElement("map")}}，当它仅包含短语内容时
-- {{HTMLElement("meta")}}，仅限于 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性存在的情形
+- {{HTMLElement("meta")}}，若存在 [itemprop](/zh-CN/docs/Web/HTML/Global_attributes/itemprop) 属性
 
 ### 嵌入内容
 
@@ -221,7 +221,7 @@ l10n:
 
 ### 交互内容
 
-交互式内容（Interactive content）是流式内容的一个子集，包含为用户交互而特别设计的元素。属于此类的元素有：
+交互内容（Interactive content）是流式内容的一个子集，包含为用户交互而特别设计的元素。属于此类的元素有：
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("details")}}
@@ -233,12 +233,12 @@ l10n:
 
 一些其他的元素也属于这个分类，但仅限于以下特殊情况：
 
-- {{HTMLElement("a")}}，若 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性存在
-- {{HTMLElement("audio")}}，若 [`controls`](/zh-CN/docs/Web/HTML/Element/audio#controls) 属性存在
-- {{HTMLElement("img")}}，若 [`usemap`](/zh-CN/docs/Web/HTML/Element/img#usemap) 属性存在
+- {{HTMLElement("a")}}，若存在 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性
+- {{HTMLElement("audio")}}，若存在 [`controls`](/zh-CN/docs/Web/HTML/Element/audio#controls) 属性
+- {{HTMLElement("img")}}，若存在 [`usemap`](/zh-CN/docs/Web/HTML/Element/img#usemap) 属性
 - {{HTMLElement("input")}}，若 [type](/zh-CN/docs/Web/HTML/Element/input#type) 属性不处于隐藏（hidden）状态
-- {{HTMLElement("object")}}，若 [`usemap`](/zh-CN/docs/Web/HTML/Element/object#usemap) 属性存在
-- {{HTMLElement("video")}}，若 [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls) 属性存在
+- {{HTMLElement("object")}}，若存在 [`usemap`](/zh-CN/docs/Web/HTML/Element/object#usemap) 属性
+- {{HTMLElement("video")}}，若存在 [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls) 属性
 
 ### 可感知内容
 
@@ -285,7 +285,7 @@ l10n:
 
 ## 透明内容模型
 
-如果一个元素拥有透明内容模型（Transparent content model），即使将透明内容移除并使用子元素取代，其内容也必须构成有效的 HTML5。
+如果一个元素拥有透明内容（Transparent content）模型，即使将透明内容移除并使用子元素取代，其内容也必须构成有效的 HTML5。
 
 例如，{{HTMLElement("del")}} 和 {{HTMLELement("ins")}} 是透明的：
 
