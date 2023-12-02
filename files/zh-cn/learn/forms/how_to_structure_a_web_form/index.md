@@ -159,7 +159,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;你可�
 
 > **备注：** 你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在 VoiceOver 上测试的（NVDA 的行为也类似）。我们也乐于听听你的试验结果。
 
-> **备注：** 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。不要运行 2 个或 3 个未注释版本的示例—— 如果你有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
+> **备注：** 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html)（你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)）。不要运行 2 个或 3 个未注释版本的示例——如果你有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
 
 ## 用于表单的通用 HTML 结构
 
