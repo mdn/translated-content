@@ -78,7 +78,7 @@ Une autre façon pour créer une couche de cascade consiste à utiliser [`@impor
 > **Attention :** La règle @ `@import` doit précéder tous les autres types de règles, à l'exception des règles `@charset`.
 
 ```css
-@import "theme.css" layer(utilities);
+@import "theme.css" layer("utilities");
 ```
 
 ### Couches imbriquées
