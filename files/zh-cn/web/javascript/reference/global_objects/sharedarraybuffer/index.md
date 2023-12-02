@@ -78,13 +78,13 @@ if (crossOriginIsolated) {
 
 WebAssembly Thread 提案还定义了一套新的[原子](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses)指令。就像 `SharedArrayBuffer` 及其方法始终可用（并且只有在设置了新标头的情况下，才允许线程间共享）一样，WebAssembly 原子指令也是始终可用的。
 
-### 增长 SharedArrayBuffer
+### 增大 SharedArrayBuffer
 
-`SharedArrayBuffer` 对象可以通过在调用 {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} 时包含 `maxByteLength` 选项来使其可增长。你可以通过访问 `SharedArrayBuffer` 的 {{jsxref("SharedArrayBuffer/growable", "growable")}} 和 {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} 属性来分别查询其是否可增长以及其最大大小。你还可以通过调用 {{jsxref("SharedArrayBuffer/grow", "grow()")}} 为一个可增长的 `SharedArrayBuffer` 分配新的大小。新字节被初始化为 0。
+`SharedArrayBuffer` 对象可以通过在调用 {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} 时包含 `maxByteLength` 选项来使其可增大。你可以通过访问 `SharedArrayBuffer` 的 {{jsxref("SharedArrayBuffer/growable", "growable")}} 和 {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} 属性来分别查询其是否可增大以及其最大大小。你还可以通过调用 {{jsxref("SharedArrayBuffer/grow", "grow()")}} 为一个可增大的 `SharedArrayBuffer` 分配新的大小。新字节被初始化为 0。
 
-这些特性令增长 `SharedArrayBuffer` 更为高效——否则，你必须创建一个新大小的缓冲区副本。它还使得 JavaScript 在这方面与 WebAssembly 保持一致（Wasm 线性内存可以通过 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 调整大小）。
+这些特性令增大 `SharedArrayBuffer` 更为高效——否则，你必须创建一个新大小的缓冲区副本。它还使得 JavaScript 在这方面与 WebAssembly 保持一致（Wasm 线性内存可以通过 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 调整大小）。
 
-出于安全原因，`SharedArrayBuffer` 的大小无法缩小，只能增长。
+出于安全原因，`SharedArrayBuffer` 的大小无法缩小，只能增大。
 
 ## 构造函数
 
@@ -101,20 +101,20 @@ WebAssembly Thread 提案还定义了一套新的[原子](https://github.com/Web
 属性定义于 `SharedArrayBuffer.prototype` 并且被所有 `SharedArrayBuffer` 实例所共享。
 
 - {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
-  - : 数组大小，以字节为单位。在构造数组时被确定，并且只能在可增长的 `SharedArrayBuffer`上通过 {{jsxref("SharedArrayBuffer.prototype.grow()")}} 方法来改变。
+  - : 数组大小，以字节为单位。在构造数组时被确定，并且只能在可增大的 `SharedArrayBuffer`上通过 {{jsxref("SharedArrayBuffer.prototype.grow()")}} 方法来改变。
 - {{jsxref("Object/constructor", "SharedArrayBuffer.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `SharedArrayBuffer` 实例，其初始值为 {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}} 构造函数。
 - {{jsxref("SharedArrayBuffer.prototype.growable")}}
-  - : 只读。如果当前 `SharedArrayBuffer` 可以增长，则返回 `true`，否则返回 `false`。
+  - : 只读。如果当前 `SharedArrayBuffer` 可以增大，则返回 `true`，否则返回 `false`。
 - {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}
-  - : 当前 `SharedArrayBuffer` 可以增长的最大长度，只读，以字节为单位。在构造数组时确定且无法更改。
+  - : 当前 `SharedArrayBuffer` 可以增大的最大长度，只读，以字节为单位。在构造数组时确定且无法更改。
 - `SharedArrayBuffer.prototype[@@toStringTag]`
   - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"SharedArrayBuffer"`。它被用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 
 - {{jsxref("SharedArrayBuffer.prototype.grow()")}}
-  - : 增长当前 `SharedArrayBuffer` 到指定大小，以字节为单位。
+  - : 增大当前 `SharedArrayBuffer` 到指定大小，以字节为单位。
 - {{jsxref("SharedArrayBuffer.prototype.slice()")}}
   - : 返回一个新的 `SharedArrayBuffer`，其内容是当前 `SharedArrayBuffer` 从 `begin`（含）到 `end`（不含）的字节的副本。如果 `begin` 或 `end` 为负，则它是从数组的末尾开始的索引，而不是数组的开头。
 
