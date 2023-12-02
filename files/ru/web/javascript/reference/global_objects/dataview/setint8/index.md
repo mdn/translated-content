@@ -52,7 +52,7 @@ dataview.getInt8(0); // 3
 
 ## Смотрите также
 
-- [Типизированные массивы JavaScript](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
+- [Типизированные массивы в JavaScript](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("Int8Array")}}
