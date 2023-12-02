@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
 
 {{JSRef}}
 
-Метод **`setInt32()`** сохраняет 32-битное целое значение в 4 байтах, смещенном на указанное число от начала `DataView`.
+Метод **`setInt32()`** экземпляров {{jsxref("DataView")}} принимает число и сохраняет его в форме 32-битного целого числа со знаком в 4 байтах начиная с определённого в этом `DataView` смещении. Ограничений по выравниванию нет, многобайтовые значения могут храниться с любым смещением в пределах границ.
 
 {{EmbedInteractiveExample("pages/js/dataview-setint32.html")}}
 
@@ -19,32 +19,30 @@ setInt32(byteOffset, value, littleEndian)
 ### Параметры
 
 - `byteOffset`
-  - : Смещение в байтах от начала до этого значения, где будут храниться данные.
+  - : Смещение в байтах от начала `DataView`, в котором будут храниться данные.
 - `value`
-  - : Устанавливаемое значение.
+  - : Устанавливаемое значение. На данный момент значение кодируется в байтах.
 - `littleEndian` {{optional_inline}}
-  - : Указывает, сохранять ли 32-bit целое в
-    {{Glossary("Endianness", "little- or big-endian")}} формате. Если значение `false` или
-    `undefined`, записывает значение big-endian.
+  - : Указывает, в каком формате сохранять данные — [с прямым или обратным порядком байтов](/ru/docs/Glossary/Endianness) ("big-endian" или "little-endian"). Если `false` или `undefined`, значение записывается с прямым порядком байтов ("big-endian").
 
 ### Возвращаемое значение
 
 {{jsxref("undefined")}}.
 
-### Возвращаемые ошибки
+### Исключения
 
 - {{jsxref("RangeError")}}
-  - : Выдается, если `byteOffset` установлен так, что он храниться за пределами представления.
+  - : Возникает, если `byteOffset` выходит за пределы `DataView`.
 
 ## Примеры
 
-### Использование метода `setInt32`
+### Использование setInt32()
 
 ```js
-const buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(10);
 const dataview = new DataView(buffer);
-dataview.setInt32(1, 3);
-dataview.getInt32(1); // 3
+dataview.setInt32(0, 3);
+dataview.getInt32(1); // 768
 ```
 
 ## Спецификации
@@ -57,5 +55,7 @@ dataview.getInt32(1); // 3
 
 ## Смотрите также
 
+- [Типизированные массивы в JavaScript](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Int32Array")}}
