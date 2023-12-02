@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`SharedArrayBuffer`** 对象用来表示一个通用的原始二进制数据缓冲区，类似于 {{jsxref("ArrayBuffer")}} 对象，但它可以用来在共享内存上创建视图。与可传输的 `ArrayBuffer` 不同，`SharedArrayBuffer` 不是[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。
+**`SharedArrayBuffer`** 对象用来表示一个通用的原始二进制数据缓冲区，类似于 {{jsxref("ArrayBuffer")}} 对象，但它可以用来在共享内存上创建视图。与可转移的 `ArrayBuffer` 不同，`SharedArrayBuffer` 不是[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。
 
 ## 描述
 
