@@ -1,6 +1,8 @@
 ---
 title: Écrire et référencer une entrée de glossaire
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
+l10n:
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
@@ -11,7 +13,7 @@ Le glossaire ne sera potentiellement jamais complet, car le Web est en perpétue
 
 Contribuer au glossaire est une façon simple de rendre le Web plus compréhensible pour tout le monde. Il n'est pas nécessaire d'avoir des compétences techniques approfondies pour le faire. Les entrées du glossaire sont conçues pour être simples et concises.
 
-> **Note :** La suite de cet article explique comment créer une entrée du glossaire. Toutefois, la structure du contenu de MDN utilise le contenu anglophone comme référence. Aussi, toute page devra d'abord être créée en anglais avant d'être localisée en français. Vous pouvez également aider à la traduction du glossaire en français, voir [Localiser MDN](/fr/docs/MDN/Contribute/Localize).
+> **Note :** La suite de cet article explique comment créer une entrée du glossaire. Toutefois, la structure du contenu de MDN utilise le contenu anglophone comme référence. Aussi, toute page devra d'abord être créée en anglais avant d'être localisée en français. Vous pouvez également aider à la traduction du glossaire en français, voir [Localiser MDN](/fr/docs/MDN/Community/Contributing/Translated_content).
 
 ## Comment rédiger une entrée
 
@@ -27,7 +29,7 @@ Pour toute page du glossaire, le premier paragraphe consiste en une description 
 
 #### Rédiger une bonne entrée dans le glossaire
 
-Ajoutez quelques paragraphes si nécessaire, mais attention au risque d'écrire un article complet. Un article complet est intéressant mais n'a pas sa place dans le glossaire. Si vous n'êtes pas certaine ou certain de l'emplacement de votre page, n'hésitez pas à [nous contacter pour en discuter](/fr/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+Ajoutez quelques paragraphes si nécessaire, mais attention au risque d'écrire un article complet. Un article complet est intéressant mais n'a pas sa place dans le glossaire. Si vous n'êtes pas certaine ou certain de l'emplacement de votre page, n'hésitez pas à [nous contacter pour en discuter](/fr/docs/MDN/Community/Discussions).
 
 Voici quelques lignes directrices à garder à l'esprit pour écrire une bonne entrée de glossaire&nbsp;:
 
@@ -37,12 +39,12 @@ Voici quelques lignes directrices à garder à l'esprit pour écrire une bonne e
 
 ### Ajouter des liens
 
-Une entrée du glossaire devrait toujours finir par une section _En savoir plus_. Dans cette section, on devrait trouver des liens qui aident la lectrice ou le lecteur à aller plus loin en découvrant plus de détails, ou en apprenant à utiliser la technologie associée.
+Une entrée du glossaire devrait toujours finir par une section _Voir aussi_. Dans cette section, on devrait trouver des liens qui aident la lectrice ou le lecteur à aller plus loin en découvrant plus de détails, ou en apprenant à utiliser la technologie associée.
 
 Une bonne pratique consiste à organiser ces liens en trois groupes&nbsp;:
 
 - Connaissances générales
-  - : Ces liens fournissent des informations généralistes à propos du terme ou du sujet. Il peut par exemple s'agir d'un lien vers une page [Wikipédia](https://www.wikipedia.org/) correspondante.
+  - : Ces liens fournissent des informations généralistes à propos du terme ou du sujet. Il peut par exemple s'agir d'un lien vers une page [Wikipédia](https://fr.wikipedia.org/) correspondante.
 - Référence technique
   - : Ces liens fournissent des ressources avec des informations techniques détaillées, sur MDN ou d'autres sites.
 - En apprendre plus

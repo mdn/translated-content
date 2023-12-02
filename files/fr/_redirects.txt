@@ -1729,6 +1729,7 @@
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
 /fr/docs/Glossary/Descriptor_(CSS)	/fr/docs/Glossary/CSS_Descriptor
 /fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
+/fr/docs/Glossary/First_interactive	/fr/docs/Glossary/First_CPU_idle
 /fr/docs/Glossary/Grid_Rows	/fr/docs/Glossary/Grid_Row
 /fr/docs/Glossary/I18N	/fr/docs/Glossary/Internationalization
 /fr/docs/Glossary/Index	/fr/docs/Glossary
@@ -6408,6 +6409,7 @@
 /fr/docs/conflicting/Glossary/DOM	/fr/docs/Glossary/DOM
 /fr/docs/conflicting/Glossary/Doctype	/fr/docs/Glossary/Doctype
 /fr/docs/conflicting/Glossary/Firefox_OS	/fr/docs/Glossary/Firefox_OS
+/fr/docs/conflicting/Glossary/First_CPU_idle	/fr/docs/Glossary/First_CPU_idle
 /fr/docs/conflicting/Glossary/Internationalization	/fr/docs/Glossary/Internationalization
 /fr/docs/conflicting/Glossary/Object_reference	/fr/docs/Glossary/Object_reference
 /fr/docs/conflicting/Glossary/TCP	/fr/docs/Glossary/TCP

@@ -23,7 +23,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_st
           >的基本知識。
         </p>
         <p>
-          React使用稱為JSX（JavaScript和XML）的HTML-in-JavaScript語法。熟悉HTML和JavaScript將幫助您學習JSX，並更好地確定應用程式內的錯誤是與JavaScript有關還是與React更具體的領域有關。
+          React使用稱為JSX（JavaScript和XML）的HTML-in-JavaScript語法。熟悉HTML和JavaScript將幫助你學習JSX，並更好地確定應用程式內的錯誤是與JavaScript有關還是與React更具體的領域有關。
         </p>
       </td>
     </tr>
@@ -139,7 +139,7 @@ npx create-react-app moz-todo-react
 - 建立定義基本應用程式架構的文件和目錄結構。
 - 如果你的電腦已有安裝 git 版控，則將該資料夾目錄初始化為 git 存儲庫。
 
-> **備註：** 如果您已有安裝 yarn 套件管理器，`create-react-app`默認將使用它而不是使用 npm。如果你已安裝 yarn 和 npm 兩個套件管理器並且堅持繼續使用 npm，當你要執行`create-react-app`指令時，你可以添加指令`--use-npm`
+> **備註：** 如果你已有安裝 yarn 套件管理器，`create-react-app`默認將使用它而不是使用 npm。如果你已安裝 yarn 和 npm 兩個套件管理器並且堅持繼續使用 npm，當你要執行`create-react-app`指令時，你可以添加指令`--use-npm`
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm

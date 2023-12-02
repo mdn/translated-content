@@ -695,7 +695,6 @@
 /es/docs/HTML/Elemento/abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/HTML/Elemento/acronym	/es/docs/Web/HTML/Element/acronym
 /es/docs/HTML/Elemento/address	/es/docs/Web/HTML/Element/address
-/es/docs/HTML/Elemento/applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/HTML/Elemento/area	/es/docs/Web/HTML/Element/area
 /es/docs/HTML/Elemento/article	/es/docs/Web/HTML/Element/article
 /es/docs/HTML/Elemento/aside	/es/docs/Web/HTML/Element/aside
@@ -746,7 +745,6 @@
 /es/docs/HTML/Elemento/input	/es/docs/Web/HTML/Element/input
 /es/docs/HTML/Elemento/ins	/es/docs/Web/HTML/Element/ins
 /es/docs/HTML/Elemento/kbd	/es/docs/Web/HTML/Element/kbd
-/es/docs/HTML/Elemento/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/HTML/Elemento/label	/es/docs/Web/HTML/Element/label
 /es/docs/HTML/Elemento/legend	/es/docs/Web/HTML/Element/legend
 /es/docs/HTML/Elemento/li	/es/docs/Web/HTML/Element/li
@@ -791,7 +789,6 @@
 /es/docs/HTML:Elemento:abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/HTML:Elemento:acronym	/es/docs/Web/HTML/Element/acronym
 /es/docs/HTML:Elemento:address	/es/docs/Web/HTML/Element/address
-/es/docs/HTML:Elemento:applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/HTML:Elemento:area	/es/docs/Web/HTML/Element/area
 /es/docs/HTML:Elemento:b	/es/docs/Web/HTML/Element/b
 /es/docs/HTML:Elemento:base	/es/docs/Web/HTML/Element/base
@@ -1270,8 +1267,6 @@
 /es/docs/Mejoras_SVG_en_Firefox_3	/es/docs/Mozilla/Firefox/Releases/3/SVG_improvements
 /es/docs/Mejoras_XUL_en_Firefox_3	/es/docs/Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
 /es/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension	/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-/es/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/es/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
-/es/docs/Mozilla/Add-ons/WebExtensions/Prerequisitos	/es/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /es/docs/Mozilla/Add-ons/WebExtensions/Que_son_las_WebExtensions	/es/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 /es/docs/Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension	/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/Tutorial	/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
@@ -1518,7 +1513,6 @@
 /es/docs/SVG	/es/docs/Web/SVG
 /es/docs/SVG/Tutorial	/es/docs/Web/SVG/Tutorial
 /es/docs/SVG/Tutorial/Getting_Started	/es/docs/Web/SVG/Tutorial/Getting_Started
-/es/docs/SVG_en_Firefox	/es/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Seguridad_en_Firefox_2	/es/docs/Mozilla/Firefox/Releases/2/Security_changes
 /es/docs/Server-sent_events	/es/docs/Web/API/Server-sent_events
 /es/docs/Server-sent_events/utilizando_server_sent_events_sse	/es/docs/Web/API/Server-sent_events/Using_server-sent_events
@@ -1609,7 +1603,6 @@
 /es/docs/Web/API/BlobBuilder	/es/docs/web/api/blob
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
 /es/docs/Web/API/CanvasImageSource	/es/docs/web/api/canvasrenderingcontext2d
-/es/docs/Web/API/Canvas_API/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /es/docs/Web/API/Console/tabla	/es/docs/Web/API/console/table_static
@@ -1962,6 +1955,7 @@
 /es/docs/Web/Guide/AJAX/Comunidad	/es/docs/conflicting/Web/Guide/AJAX
 /es/docs/Web/Guide/AJAX/Getting_Started	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /es/docs/Web/Guide/AJAX/Primeros_Pasos	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
+/es/docs/Web/Guide/API	/es/docs/conflicting/Web/API
 /es/docs/Web/Guide/API/Vibration	/es/docs/Web/API/Vibration_API
 /es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/conflicting/Web/API/WebRTC_API
 /es/docs/Web/Guide/CSS	/es/docs/Learn/CSS
@@ -2012,19 +2006,14 @@
 /es/docs/Web/HTML/Atributos_Globales/tabindex	/es/docs/Web/HTML/Global_attributes/tabindex
 /es/docs/Web/HTML/Atributos_Globales/title	/es/docs/Web/HTML/Global_attributes/title
 /es/docs/Web/HTML/Atributos_Globales/translate	/es/docs/Web/HTML/Global_attributes/translate
-/es/docs/Web/HTML/Atributos_Globales/x-ms-acceleratorkey	/es/docs/orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /es/docs/Web/HTML/Atributos_de_configuracion_CORS	/es/docs/Web/HTML/Attributes/crossorigin
 /es/docs/Web/HTML/Block-level_elements	/es/docs/Glossary/Block-level_content
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
-/es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
-/es/docs/Web/HTML/Element/applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Element/bgsound	/es/docs/Web/HTML/Element/audio
-/es/docs/Web/HTML/Element/blink	/es/docs/orphaned/Web/HTML/Element/blink
 /es/docs/Web/HTML/Element/content	/es/docs/Web/HTML/element/slot
 /es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
-/es/docs/Web/HTML/Element/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/Elementos_títulos	/es/docs/Web/HTML/Element/Heading_Elements
@@ -2033,7 +2022,6 @@
 /es/docs/Web/HTML/Elemento/abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/Web/HTML/Elemento/acronym	/es/docs/Web/HTML/Element/acronym
 /es/docs/Web/HTML/Elemento/address	/es/docs/Web/HTML/Element/address
-/es/docs/Web/HTML/Elemento/applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/Web/HTML/Elemento/area	/es/docs/Web/HTML/Element/area
 /es/docs/Web/HTML/Elemento/article	/es/docs/Web/HTML/Element/article
 /es/docs/Web/HTML/Elemento/aside	/es/docs/Web/HTML/Element/aside
@@ -2045,7 +2033,6 @@
 /es/docs/Web/HTML/Elemento/bdo	/es/docs/Web/HTML/Element/bdo
 /es/docs/Web/HTML/Elemento/bgsound	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/big	/es/docs/Web/HTML/Element/big
-/es/docs/Web/HTML/Elemento/blink	/es/docs/orphaned/Web/HTML/Element/blink
 /es/docs/Web/HTML/Elemento/blockquote	/es/docs/Web/HTML/Element/blockquote
 /es/docs/Web/HTML/Elemento/body	/es/docs/Web/HTML/Element/body
 /es/docs/Web/HTML/Elemento/br	/es/docs/Web/HTML/Element/br
@@ -2108,7 +2095,6 @@
 /es/docs/Web/HTML/Elemento/input/text	/es/docs/Web/HTML/Element/input/text
 /es/docs/Web/HTML/Elemento/ins	/es/docs/Web/HTML/Element/ins
 /es/docs/Web/HTML/Elemento/kbd	/es/docs/Web/HTML/Element/kbd
-/es/docs/Web/HTML/Elemento/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/Web/HTML/Elemento/label	/es/docs/Web/HTML/Element/label
 /es/docs/Web/HTML/Elemento/legend	/es/docs/Web/HTML/Element/legend
 /es/docs/Web/HTML/Elemento/li	/es/docs/Web/HTML/Element/li
@@ -2167,7 +2153,6 @@
 /es/docs/Web/HTML/Elemento/xmp	/es/docs/Web/HTML/Element/xmp
 /es/docs/Web/HTML/Elementos_en_línea	/es/docs/orphaned/Web/HTML/Inline_elements
 /es/docs/Web/HTML/Gestión_del_foco_en_HTML	/es/docs/Web/API/Document/hasFocus
-/es/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey	/es/docs/orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /es/docs/Web/HTML/Imagen_con_CORS_habilitado	/es/docs/Web/HTML/CORS_enabled_image
 /es/docs/Web/HTML/Index	/es/docs/Web/HTML
 /es/docs/Web/HTML/Inline_elements	/es/docs/orphaned/Web/HTML/Inline_elements
@@ -2785,7 +2770,6 @@
 /es/docs/Web/Reference/Events/wheel	/es/docs/Web/API/Element/wheel_event
 /es/docs/Web/SVG/Element/glifo	/es/docs/Web/SVG/Element/glyph
 /es/docs/Web/SVG/Index	/es/docs/Web/SVG
-/es/docs/Web/SVG/SVG_1.1_Support_in_Firefox	/es/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Web/SVG/Tutorial/Introducción	/es/docs/Web/SVG/Tutorial/Introduction
 /es/docs/Web/Security/Same-origin_politica	/es/docs/Web/Security/Same-origin_policy
 /es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion

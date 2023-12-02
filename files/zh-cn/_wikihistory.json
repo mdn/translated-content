@@ -15485,14 +15485,6 @@
     "modified": "2019-03-23T23:10:28.668Z",
     "contributors": ["teoli", "AlexChao"]
   },
-  "Web/API/Window/pageXOffset": {
-    "modified": "2019-03-23T22:24:38.179Z",
-    "contributors": ["Ende93"]
-  },
-  "Web/API/Window/pageYOffset": {
-    "modified": "2019-08-28T13:19:48.429Z",
-    "contributors": ["Bayes", "Ende93"]
-  },
   "Web/API/Window/pagehide_event": {
     "modified": "2020-11-12T00:42:52.516Z",
     "contributors": ["xgqfrms"]
@@ -17541,6 +17533,10 @@
   "Web/CSS/CSS_fonts/Variable_fonts_guide": {
     "modified": "2020-09-10T07:44:15.006Z",
     "contributors": ["CelestialPhineas", "nicelanlan", "ldwformat"]
+  },
+  "Web/CSS/CSS_fonts/WOFF": {
+    "modified": "2020-10-15T21:07:54.753Z",
+    "contributors": ["zhangchen", "MingxunBai", "fscholz", "ziyunfei"]
   },
   "Web/CSS/CSS_fragmentation": {
     "modified": "2019-12-03T13:06:14.108Z",
@@ -20932,10 +20928,6 @@
       "ethertank"
     ]
   },
-  "Web/Guide/API": {
-    "modified": "2019-03-23T23:17:06.067Z",
-    "contributors": ["RainSlide", "Sheppy"]
-  },
   "Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
     "modified": "2020-10-27T07:00:04.677Z",
     "contributors": ["ICLOUDIRIS", "FranzList"]
@@ -21015,10 +21007,6 @@
     "modified": "2020-11-21T05:08:58.458Z",
     "contributors": ["xusy", "bingoYB", "cutefcc", "sunfeel", "xgqfrms"]
   },
-  "Web/Guide/Introduction_to_Web_development": {
-    "modified": "2019-03-24T00:00:33.366Z",
-    "contributors": ["ziyunfei", "fantasticfears"]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T23:20:37.061Z",
     "contributors": [
@@ -21049,10 +21037,6 @@
       "DAVINDAI",
       "ziyunfei"
     ]
-  },
-  "Web/Guide/WOFF": {
-    "modified": "2020-10-15T21:07:54.753Z",
-    "contributors": ["zhangchen", "MingxunBai", "fscholz", "ziyunfei"]
   },
   "Web/HTML": {
     "modified": "2020-05-18T02:45:10.401Z",
