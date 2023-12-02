@@ -11,7 +11,7 @@ l10n:
 
 ## 描述
 
-要在集群中的一个代理（agent，可以是网页的主程序或其任意一个 web worker）与另一个代理之间使用 `ShareArrayBuffer` 共享内存，需要使用 [`postMessage`](/zh-CN/docs/Web/API/Worker/postMessage) 和 [结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
+要在集群中的一个代理（agent，可以是网页的主程序或其任意一个 web worker）与另一个代理之间使用 `ShareArrayBuffer` 共享内存，需要使用 [`postMessage`](/zh-CN/docs/Web/API/Worker/postMessage) 和[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
 
 结构化克隆算法接受 `SharedArrayBuffer` 对象和映射到 `SharedArrayBuffer` 对象的类型化数组。在这两种情况下， `SharedArrayBuffer` 对象会被传输给接收者，从而在接收代理中产生一个新的、私有的 `SharedArrayBuffer` 对象（就像 {{jsxref("ArrayBuffer")}} 一样）。但是，两个 `SharedArrayBuffer` 对象指向的共享数据块其实是同一个数据块，一个代理中对数据块的修改最终会将在另一个代理中可见。
 
@@ -34,7 +34,7 @@ worker.postMessage(sab);
 
 作为基本要求，你的文档需要处于一个[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中。
 
-对于顶级文档，需要设置两个头来实现你网站的跨域隔离：
+对于顶级文档，需要设置两个标头来实现你网站的跨源隔离：
 
 - [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 设置为 `same-origin`（来保护你的源站点免受攻击）
 - [`Cross-Origin-Embedder-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) 设置为 `require-corp` 或 `credentialless`（保护受害者免受你的源站点的影响）
@@ -44,7 +44,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-为了验证跨域隔离是否生效，你可以测试 `window` 和 `worker` 上下文中是否存在 [`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated) 属性：
+为了验证跨源隔离是否生效，你可以测试窗口和 worker 线程上下文中是否存在 [`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated) 属性：
 
 ```js
 const myWorker = new Worker("worker.js");
@@ -58,25 +58,25 @@ if (crossOriginIsolated) {
 }
 ```
 
-在设置了这两个头后，`postMessage()` 不再为 `SharedArrayBuffer` 对象抛出错误，因此，跨线程共享内存现在可用。
+在设置了这两个标头后，`postMessage()` 不再为 `SharedArrayBuffer` 对象抛出错误，因此，跨线程共享内存现在可用。
 
-嵌套文档和专用 worker 线程也需要设置 [`Cross-Origin-Embedder-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) 头为同样的值。对于同源嵌套文档和子资源，不需要进行任何其他更改。同站（但跨域）嵌套文档和子资源需要设置 [`Cross-Origin-Resource-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) 头为 `same-site`。而它们的跨域（和跨站点）的对应部分也需要设置同样的头为 `cross-origin`。请注意，将 [`Cross-Origin-Resource-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) 头设置为除 `same-origin` 之外的任何值，都会使资源暴露于潜在的攻击中，比如[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)。
+嵌套文档和专用 worker 线程也需要将 [`Cross-Origin-Embedder-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) 标头设置为同样的值。对于同源嵌套文档和子资源，不需要进行任何其他更改。同站（但跨源）嵌套文档和子资源需要将 [`Cross-Origin-Resource-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) 标头设置为 `same-site`。而它们的跨源（和跨站点）的对应部分也需要将同样的标头设置为 `cross-origin`。请注意，将 [`Cross-Origin-Resource-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) 标头设置为除 `same-origin` 之外的任何值，都会使资源暴露于潜在的攻击中，比如[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)。
 
-请注意，[`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 头部会限制你对弹出窗口引用的保留能力。两个顶级窗口上下文之间的直接访问基本上只在它们同源且携带相同的两个头及和对应值时才可行。
+请注意，[`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 标头会限制你对弹出窗口引用的保留能力。两个顶级窗口上下文之间的直接访问基本上只在它们同源且携带相同的两个标头（且具有相同的值）时才可行。
 
 ### API 可用性
 
 根据是否采取了上述安全措施，各类内存共享 API 具有不同的可用性：
 
 - `Atomics` 对象总是可用的。
-- `SharedArrayBuffer` 对象在原则上始终可用，但遗憾的是，除非设置了前面提到的两个头，否则其在全局对象上的构造函数是隐藏的，这是为了兼容 web 内容。这个限制有望在未来被移除。尽管如此，仍然可以用 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) 来获取实例。
-- 除非设置了上文提到的两个头，否则各种 `postMessage()` 的 API 在处理 `SharedArrayBuffer` 对象时会抛出异常。如果正确设置了这两个头，`Window` 对象和专用 worker 线程上的 `postMessage()` 都可以正常工作，并允许跨线程共享内存。
+- `SharedArrayBuffer` 对象在原则上始终可用，但遗憾的是，除非设置了前面提到的两个标头，否则其在全局对象上的构造函数是隐藏的，这是为了兼容 web 内容。这个限制有望在未来被移除。尽管如此，仍然可以用 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) 来获取实例。
+- 除非设置了上文提到的两个标头，否则各种 `postMessage()` 的 API 在处理 `SharedArrayBuffer` 对象时会抛出异常。如果正确设置了这两个标头，`Window` 对象和专用 worker 线程上的 `postMessage()` 都可以正常工作，并允许跨线程共享内存。
 
 ### WebAssembly 共享内存
 
 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) 对象可以通过设置 [`shared`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/Memory#shared) 构造函数标志来创建。当这个标志设置为 `true` 时，构造出的 `Memory` 对象就像 `SharedArrayBuffer` 一样，可以通过 `postMessage()` 在 worker 线程之间共享，而且 `Memory` 对象的后备 [`buffer`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/buffer) 是一个 `SharedArrayBuffer`。因此，上述关于在 worker 线程间共享 SharedArrayBuffer 的要求同样适用于共享 `WebAssembly.Memory`。
 
-WebAssembly Threads 提案还定义了一套新的[原子](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses)指令。就像 `SharedArrayBuffer` 及其方法始终可用（并且只有在设置了新头部的情况下，才允许线程间共享）一样，WebAssembly 原子指令也是始终可用的。
+WebAssembly Thread 提案还定义了一套新的[原子](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses)指令。就像 `SharedArrayBuffer` 及其方法始终可用（并且只有在设置了新标头的情况下，才允许线程间共享）一样，WebAssembly 原子指令也是始终可用的。
 
 ### 增长 SharedArrayBuffer
 
@@ -159,11 +159,11 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)
-- [共享内存——简明教程](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)在 TC39 ecmascript-sharedmem 提案中
-- [JavaScript's 新并发方法的初体验](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) 在 hacks.mozilla.org（2016）
-- [COOP 和 COEP 的解释](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit) 由 Chrome 团队撰写（2020）
+- [共享内存——简明教程](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)，TC39 ecmascript-sharedmem 提案
+- [JavaScript's 新并发方法的初体验](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)，hacks.mozilla.org（2016）
+- [COOP 和 COEP 的解释](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit)，由 Chrome 团队撰写（2020）
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}
 - [`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated)
-- [Android Chrome 88 和桌面版 Chrome 92 中的 SharedArrayBuffer 更新](https://developer.chrome.com/blog/enabling-shared-array-buffer/) 在 developer.chrome.com（2021）
+- [Android Chrome 88 和桌面版 Chrome 92 中的 SharedArrayBuffer 更新](https://developer.chrome.com/blog/enabling-shared-array-buffer/)，developer.chrome.com（2021）
