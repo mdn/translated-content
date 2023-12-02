@@ -45,4 +45,3 @@ const blob = new Blob(array, { type: "text/html" }); // 得到 blob
 ## 浏览器兼容性
 
 {{Compat}}
-
