@@ -17,7 +17,7 @@ l10n:
 
 > **备注：** 对这些内容类别及其功能的更详细的讨论超出了本文的范围；如果你向了解这些内容，请阅读 [HTML 规范的相关部分](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)。
 
-[![显示各种内容类别相互之间是如何关联的维恩图。后面的部分以文本形式解释这些关系。](content_categories_venn.png)](/zh-CN/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
+[![显示各种内容类别相互之间是如何关联的维恩图。后面的部分以文本形式解释这些关系。](content_categories_venn.png)](/zh-CN/docs/Web/HTML/Content_categories/content_categories_venn.png)
 
 ## 主内容分类
 
