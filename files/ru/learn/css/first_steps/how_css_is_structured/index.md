@@ -558,11 +558,3 @@ padding- left: 10px;
 Полезно знать, как браузер делает из HTML и CSS готовую страницу, поэтом следующая ваша статья — [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works) — мы рассмотрим этот процесс.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## В этом модуле
-
-1. [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/%D0%A7%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5_CSS)
-2. [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
-3. [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/%D0%9A%D0%B0%D0%BA_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD_CSS)
-4. [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Использование ваших новых знаний](/ru/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

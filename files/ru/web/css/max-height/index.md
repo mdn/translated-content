@@ -14,18 +14,18 @@ slug: Web/CSS/max-height
 ## Синтаксис
 
 ```css
-/* <length> значения */
-max-height: 3.5em;
-
-/* <percentage> значения */
-max-height: 75%;
-
-/* Значения-ключевые слова */
+/* Ключевые слова */
 max-height: none;
 max-height: max-content;
 max-height: min-content;
 max-height: fit-content;
 max-height: fill-available;
+
+/* Значения длины */
+max-height: 3.5em;
+
+/* <percentage> значения */
+max-height: 75%;
 
 /* Глобальные значения */
 max-height: inherit;

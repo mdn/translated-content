@@ -293,24 +293,3 @@ background-position:
 В следующем уроке мы узнаем, как Режим написания вашего документа взаимодействует с вашим CSS. Что происходит, если текст не перетекает слева направо?
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
-
-## В этом модуле
-
-1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/Селекторы)
-
-   - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors)
-   - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/Селекторы/Attribute_selectors)
-   - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements)
-   - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/Селекторы/Combinators)
-
-3. [Модель коробки](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Изменение направления текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Перекрытие содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Значения свойств CSS](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Изменение размеров в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Изображения, формы и прочие медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Организация CSS-кода](/ru/docs/Learn/CSS/Building_blocks/Organizing)

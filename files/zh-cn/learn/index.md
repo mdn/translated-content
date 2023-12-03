@@ -45,7 +45,7 @@ slug: Learn
 - [JavaScript - 动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
   - : JavaScript 是用于向网页添加动态功能的脚本语言。该专题涵盖有关编写和理解 JavaScript 代码所需的所有重点。
 - [Web 表单 - 操作用户数据](/zh-CN/docs/Learn/Forms)
-  - : Web 表单是用于进行用户交互的强大工具 —— 其常用于收集用户数据和控制用户界面。该专题将对 Web 表单的结构、样式、交互要点进行介绍。
+  - : Web 表单是用于进行用户交互的强大工具——其常用于收集用户数据和控制用户界面。该专题将对 Web 表单的结构、样式、交互要点进行介绍。
 - [无障碍 - 让每个人都能畅游网络](/zh-CN/docs/Learn/Accessibility)
   - : “无障碍”（Accessibility）是开发人员对让更多的人能够不受残疾、设备、地区等因素的限制访问 Web 内容做出的努力。该专题包含一切所需了解的信息。
 - [Web 性能优化 - 让网站更快做出响应](/zh-CN/docs/Learn/Performance)
