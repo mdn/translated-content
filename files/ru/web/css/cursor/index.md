@@ -16,7 +16,6 @@ CSS-свойство `cursor` устанавливает курсор мыши, 
 
 ```css
 /* Ключевые слова */
-cursor: pointer;
 cursor: auto;
 cursor: pointer;
 /* … */
