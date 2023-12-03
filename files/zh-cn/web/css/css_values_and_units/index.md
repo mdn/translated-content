@@ -14,7 +14,7 @@ slug: Web/CSS/CSS_Values_and_Units
 - {{cssxref("&lt;string&gt;")}}
 - {{cssxref("&lt;url&gt;")}}
 
-文本数据类型要么是 `<string>`，要么是一系列字符的合集，或者是 `<ident>` —— 一个实质上是不带引号的字符串的"CSS 标识符"。一个 `<string>` 必须被单引号或者双引号所包围。CSS 标识符，在标准中所列出的 `<ident>` 或者 `<custom-ident>` 则必须不带引号。
+文本数据类型要么是 `<string>`，要么是一系列字符的合集，或者是 `<ident>`——一个实质上是不带引号的字符串的"CSS 标识符"。一个 `<string>` 必须被单引号或者双引号所包围。CSS 标识符，在标准中所列出的 `<ident>` 或者 `<custom-ident>` 则必须不带引号。
 
 在 CSS 标准中，属性的值可以由 Web 开发者指定，例如关键帧动画（keyframe animations），字体的名称（font-family names），或者是被列为 {{cssxref("&lt;custom-ident&gt;")}} 和 / 或 {{cssxref("&lt;string&gt;")}} 的栅格区域（grid-areas）。
 
