@@ -1,6 +1,7 @@
 ---
 title: Web 图形开发
-slug: Web/Guide/Graphics
+slug: conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+original_slug: Web/Guide/Graphics
 ---
 
 <section id="Quick_links">
