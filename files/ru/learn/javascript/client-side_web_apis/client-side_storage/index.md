@@ -764,13 +764,3 @@ self.addEventListener("fetch", function (e) {
 - [Service worker API](/ru/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## В этом модуле
-
-- [Introduction to web APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

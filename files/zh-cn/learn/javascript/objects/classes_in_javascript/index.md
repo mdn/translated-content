@@ -201,9 +201,9 @@ myExample.somePublicMethod(); // 'You called me?'
 myExample.#somePrivateMethod(); // SyntaxError
 ```
 
-## 测试你的技能！
+## 技能测试！
 
-你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[测试你的技能：面向对象的 JavaScript](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript)。
+你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：面向对象的 JavaScript](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript)。
 
 ## 总结
 

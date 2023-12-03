@@ -19,7 +19,7 @@ slug: Web/CSS/grid-column
 ## Syntax
 
 ```css
-/* Значения с ключевыми словами */
+/* Ключевые слова */
 grid-column: auto;
 grid-column: auto / auto;
 
