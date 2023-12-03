@@ -196,7 +196,7 @@ async function populate() {
 
 > **备注：**`fetch()` API 是**异步**的。我们将在[下一个模块](/zh-CN/docs/Learn/JavaScript/Asynchronous)中详细了解有关异步函数的知识，但现在我们只需知道需要在使用 fetch API 的函数名称之前添加 {{jsxref("Statements/async_function", "async")}} 关键字，并在任何异步函数的调用之前添加 {{jsxref("Operators/await", "await")}} 关键字。
 
-在这一切之后，`superHeroes` 变量将包含基于 JSON 的 JavaScript 对象。然后，我们将该对象传递给两个函数调用 —— 第一个函数用正确的数据填充 `<header>`，而第二个函数为团队中的每个英雄创建一个信息卡，并将其插入到 `<section>` 中。
+在这一切之后，`superHeroes` 变量将包含基于 JSON 的 JavaScript 对象。然后，我们将该对象传递给两个函数调用——第一个函数用正确的数据填充 `<header>`，而第二个函数为团队中的每个英雄创建一个信息卡，并将其插入到 `<section>` 中。
 
 ### 填充 header
 
@@ -322,9 +322,9 @@ myString;
 
 这儿我们创建了一个 JavaScript 对象，接着检查了它包含了什么，然后用 `stringify()` 将它转换成 JSON 字符串，最后保存返回值作为变量并再一次检查。
 
-## 测试你的技能！
+## 技能测试！
 
-你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息——请参阅[测试你的技能：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
+你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息——请参阅[技能测试：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
 
 ## 总结
 

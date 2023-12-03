@@ -20,7 +20,7 @@ _继承 {{domxref("HTMLElement")}}的属性。_
 
 ## 方法
 
-_没有明确的方法；可从父项继承—— {{domxref("HTMLElement")}}。_
+_没有明确的方法；可从父项继承——{{domxref("HTMLElement")}}。_
 
 ## 规范
 

@@ -39,10 +39,6 @@ _Наследует свойства родителя,_ _{{domxref("AudioNode")}
 
 _Наследует методы родителя,_ _{{domxref("AudioNode")}}_.
 
-## Пример
-
-{{page("/ru/docs/Web/API/AudioContext.createMediaElementSource","Example")}}
-
 ## Спецификация
 
 {{Specifications}}
