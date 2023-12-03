@@ -246,7 +246,7 @@ l10n:
 
 ### 表单相关内容
 
-表单相关内容（Form-associated content）是流程内容的一个子集，包括有表单所有者（通过 **form** 属性暴露）的元素，可以在预期有流式内容的地方使用。表单所有者要么是容纳这些元素的 {{HTMLElement("form")}} 元素，要么是在 **form** 属性中指定其 id 的元素。
+表单相关内容（Form-associated content）是流式内容的一个子集，包括有表单所有者（通过 **form** 属性暴露）的元素，可以在预期有流式内容的地方使用。表单所有者要么是容纳这些元素的 {{HTMLElement("form")}} 元素，要么是在 **form** 属性中指定其 id 的元素。
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
