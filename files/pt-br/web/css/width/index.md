@@ -169,7 +169,7 @@ p.minblue {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.width")}}
+{{Compat}}
 
 ## Veja também
 

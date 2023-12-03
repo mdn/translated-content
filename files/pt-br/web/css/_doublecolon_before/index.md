@@ -198,7 +198,7 @@ Embora as correções posicionadas e fixadas no Firefox 3.5 não permitam que o 
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.before")}}
+{{Compat}}
 
 ## See also
 

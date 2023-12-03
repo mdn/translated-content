@@ -29,7 +29,7 @@ browser.bookmarks.get(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.get")}}
+{{Compat}}
 
 ## 使用例
 

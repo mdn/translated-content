@@ -127,4 +127,4 @@ slug: Web/API/MutationRecord
 
 ## ブラウザーの互換性
 
-{{Compat("api.MutationRecord")}}
+{{Compat}}

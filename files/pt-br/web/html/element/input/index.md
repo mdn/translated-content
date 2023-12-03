@@ -271,7 +271,7 @@ Você pode usar o atributo [`mozactionhint`](/pt-BR/docs/Web/HTML/Element/input#
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input")}}
+{{Compat}}
 
 ## Veja também
 

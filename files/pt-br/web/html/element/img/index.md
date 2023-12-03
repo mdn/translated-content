@@ -200,7 +200,7 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 ## Compatibilidade dos navegadores
 
-{{Compat("html.elements.img")}}
+{{Compat}}
 
 ## Veja também
 

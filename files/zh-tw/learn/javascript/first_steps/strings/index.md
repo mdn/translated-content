@@ -5,7 +5,7 @@ slug: Learn/JavaScript/First_steps/Strings
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-接下來我們將把注意力轉向字串——這就是程式設計中調用的文字片段。在本文中，我們將介紹在學習 JavaScript 時您應該了解所有有關字串的常見事項，例如建立字串，跳脫字串中的引號以及將字串連接在一起。
+接下來我們將把注意力轉向字串——這就是程式設計中調用的文字片段。在本文中，我們將介紹在學習 JavaScript 時你應該了解所有有關字串的常見事項，例如建立字串，跳脫字串中的引號以及將字串連接在一起。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -383,7 +383,7 @@ I gave it a score of ${(score / highestScore) * 100}%.`;
 
 來我們的[Template literals](/zh-TW/docs/Web/JavaScript/Reference/Template_literals) 相關頁面看看更多的範例與進階的特色細節。
 
-## 測試您的技能！
+## 測試你的技能！
 
 你已到達文章的結尾了，但你能記得最重要的資訊嗎?
 在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 — [Test your skills: Strings](/zh-TW/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). 記住，接下來的文章也需要這些知識，所以你可能想先看看。

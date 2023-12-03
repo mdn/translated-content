@@ -3,21 +3,28 @@ title: Selector (CSS)
 slug: Glossary/CSS_Selector
 ---
 
-O **seletor CSS** é parte da regra do CSS que lhe permite selecionar qual elemento(s) vai receber o estilo pela regra. Por exemplo:
+{{GlossarySidebar}}
 
+O **seletor CSS** é parte da regra do CSS que lhe permite selecionar qual elemento(s) vai receber o estilo pela regra.
+
+## Exemplos
+
+### HTML
+
+```html
+<div>Eu estou dentro do elemento.</div>
+<p>Eu estou dentro de um elemento de parágrafo.</p>
 ```
-***HTML***
-<div> Eu estou dentro do elemento. </div>
-<p> Eu estou dentro de um elemento de parágrafo. </p>
 
+### CSS
 
-***CSS***
+```css
 div {
- color: green;
+  color: green;
 }
 
 p {
- color: red;
+  color: red;
 }
 ```
 
@@ -50,4 +57,4 @@ Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando
 
 ### Referência técnica
 
-{{SpecName("CSS3 Selectors")}}
+[Selectors Level 3](https://drafts.csswg.org/selectors-3/)

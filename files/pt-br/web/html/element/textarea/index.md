@@ -224,17 +224,13 @@ I am a readonly textarea</textarea
   </tbody>
 </table>
 
-## Especificacões
+## Especificações
 
-| Specificação                                                                       | Status                   | Comentário |
-| ---------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.7', '&lt;textarea&gt;')}}         | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.textarea")}}
+{{Compat}}
 
 ## Veja também
 

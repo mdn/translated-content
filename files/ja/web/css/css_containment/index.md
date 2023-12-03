@@ -128,9 +128,9 @@ contain: strict style;
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.contain")}}
+{{Compat}}
 
-{{Compat("css.properties.content-visibility")}}
+{{Compat}}
 
 ## 外部リソース
 

@@ -166,7 +166,7 @@ class Student extends Person {
 }
 ```
 
-在这个类的声明中，`#year` 是一个[私有数据属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)。我们可以构造一个 `Student` 对象，然后在内部使用 `#year`，但如果在类的外部尝试访问 `#year`，浏览器将会抛出错误：
+在这个类的声明中，`#year` 是一个[私有数据属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。我们可以构造一个 `Student` 对象，然后在内部使用 `#year`，但如果在类的外部尝试访问 `#year`，浏览器将会抛出错误：
 
 ```js
 const summers = new Student("Summers", 2);
@@ -201,9 +201,9 @@ myExample.somePublicMethod(); // 'You called me?'
 myExample.#somePrivateMethod(); // SyntaxError
 ```
 
-## 测试你的技能！
+## 技能测试！
 
-你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[测试你的技能：面向对象的 JavaScript](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript)。
+你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：面向对象的 JavaScript](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript)。
 
 ## 总结
 

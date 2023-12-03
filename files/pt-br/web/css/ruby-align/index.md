@@ -134,7 +134,7 @@ Isso dará o seguinte resultado:
 
 ## Compatilibade de Navegador
 
-{{Compat("css.properties.ruby-align")}}
+{{Compat}}
 
 ## Veja também
 

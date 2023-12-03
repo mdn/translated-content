@@ -45,6 +45,6 @@ alert(foo.toString());         // 显示 "/bar/g"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.toString()")}}

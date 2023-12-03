@@ -29,13 +29,9 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 
 - [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript)
   - : 无论是完全的初学者，还是希望提升你的技能，这里都是好的开始。
-- [AJAX](/zh-CN/docs/Web/Guide/AJAX)
-  - : AJAX 是一组技术的统称术语，它们允许 Web 应用程序对用户界面进行快速，增量式的更新，而无需重新加载整个页面。这使得 Web 应用程序运行更快，更能响应用户的操作。
 
 ## 媒体
 
-- [Web 图形开发](/zh-CN/docs/Web/Guide/Graphics)
-  - : 现代 Web 站点和应用通常需要展示复杂的图片。
 - [音视频传输](/zh-CN/docs/Web/Guide/Audio_and_video_delivery)
   - : 我们可以通过多种方式在 Web 上传递音频和视频，从“静态”媒体文件到自适应实时流。本文旨在作为探索基于网络的媒体的各种传输机制以及与流行浏览器的兼容性的起点。
 - [音视频操作](/zh-CN/docs/Web/Guide/Audio_and_video_manipulation)
@@ -64,7 +60,7 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 
 - [可变字体指南](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : 了解如何在你的设计中使用可变字体。
-- [网络开放字体格式（The Web Open Font Format，简称 WOFF）](/zh-CN/docs/Web/Guide/WOFF)
+- [网络开放字体格式（WOFF）](/zh-CN/docs/Web/CSS/CSS_fonts/WOFF)
   - : WOFF（网络开放字体格式）是在网络上开放给任何人免费使用的字体文件格式。
 
 ## 用户界面开发

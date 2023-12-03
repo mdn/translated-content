@@ -69,7 +69,7 @@ li li {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.descendant")}}
+{{Compat}}
 
 ## Veja também
 

@@ -105,7 +105,7 @@ value2
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Content-Disposition")}}
+{{Compat}}
 
 ## 互換性の注意
 

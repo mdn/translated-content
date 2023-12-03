@@ -157,7 +157,7 @@ Todos los sistemas operativos de escritorio traen un editor de texto básico. Es
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>
@@ -238,7 +238,7 @@ Subir archivos a un sitio web es un paso muy importante mientras se crea un siti
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td>
         <ul>
           <li><a href="https://shiftedit.net/">ShiftEdit</a> (Todos los SO)</li>

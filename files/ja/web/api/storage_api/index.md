@@ -80,7 +80,7 @@ navigator.storage.estimate().then((estimate) => {
 
 ### `StorageManager`
 
-{{Compat("api.StorageManager")}}
+{{Compat}}
 
 ## 関連情報
 

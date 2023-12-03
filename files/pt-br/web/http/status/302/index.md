@@ -25,7 +25,7 @@ Em casos onde você deseja que o método utilizado altere para {{HTTPMethod("GET
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.302")}}
+{{Compat}}
 
 ## Veja também
 

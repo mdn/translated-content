@@ -52,7 +52,7 @@ if (statesUS.length > 50) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.length")}}
+{{Compat}}
 
 ## Veja também
 

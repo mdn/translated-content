@@ -5,6 +5,8 @@ l10n:
   sourceCommit: af32ed24e243178cd060769b7c707afcc271f9f6
 ---
 
+{{GlossarySidebar}}
+
 **空要素 (void element)** とは HTML における{{Glossary("element", "要素")}}のうち、子ノード（すなわち子要素およびテキストノード）を**持つことができない**ものを指します。空要素には開始タグしかありません。空要素では終了タグを指定することができません。
 
 また HTML においては、空要素に終了タグを置くことはできません。例えば、 `<input type="text"></input>` は不正な HTML です。一方、 SVG や MathML の要素で子ノードを保有することができないものは、開始タグ内で XML 自己完結型タグ構文を置く代わりに終了タグを使用することができます。
@@ -23,7 +25,6 @@ HTML には以下の空要素が存在します。
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}(HTML 5.2 の草案で削除されました)
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
 - {{HTMLElement("param")}}

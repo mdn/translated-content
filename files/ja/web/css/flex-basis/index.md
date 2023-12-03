@@ -1,6 +1,8 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
+l10n:
+  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
 {{CSSRef}}
@@ -13,7 +15,7 @@ slug: Web/CSS/flex-basis
 
 このデモでは、最初のアイテムの `flex-basis` を変更します。そして、その `flex-basis` を基準にして伸長したり縮小したりします。つまり、例えば最初のアイテムの `flex-basis` が `200px` の場合、最初は 200px で表示されますが、他のアイテムが最低でも `min-content` の大きさであることを考慮して、利用可能な空間に合わせて縮小されます。
 
-下記の図は、Firefox の [Flexbox インスペクター](/ja/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts)がアイテムがどのような寸法になるのかを理解するのに役立つことを示しています。
+下記の図は、 Firefox の [Flexbox インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html)がアイテムがどのような寸法になるのかを理解するのに役立つことを示しています。
 
 ![Firefox の Flexbox インスペクターでは、アイテムが縮小された後のサイズが表示されます。](firefox-flex-basis.png)
 
@@ -25,21 +27,22 @@ slug: Web/CSS/flex-basis
 /* 幅を指定する */
 flex-basis: 10em;
 flex-basis: 3px;
+flex-basis: 50%;
 flex-basis: auto;
 
 /* 固有のサイズ指定キーワード */
-flex-basis: fill;
 flex-basis: max-content;
 flex-basis: min-content;
 flex-basis: fit-content;
 
-/* フレックスアイテムの内容物に基づいて自動設定する */
+/* フレックスアイテムの内容に基づいて自動設定する */
 flex-basis: content;
 
 /* グローバル値 */
 flex-basis: inherit;
 flex-basis: initial;
 flex-basis: revert;
+flex-basis: revert-layer;
 flex-basis: unset;
 ```
 
@@ -48,12 +51,20 @@ flex-basis: unset;
 ### 値
 
 - `<'width'>`
-  - : 絶対的な {{cssxref("&lt;length&gt;")}}、親のフレックスコンテナーの主軸方向の寸法に対する {{cssxref("&lt;percentage&gt;")}}、あるいは `auto` キーワードで定義します。負の値は無効です。既定値は `auto` です。
+
+  - : 以下の単位のいずれかです。
+    - {{cssxref("&lt;length&gt;")}} は絶対的な値を設定します。
+    - {{cssxref("&lt;percentage&gt;")}} は包含ブロックのコンテンツ領域の幅または高さに対する割合を設定します。
+    - `auto` は横書きモードでは [width](https://drafts.csswg.org/css2/#the-width-property) の値、縦書きモードでは [height](https://drafts.csswg.org/css2/#the-height-property) の値を使用します。対応する値も `auto` であった場合、代わりに `content` の値が使用されます。
+    - `max-content` は幅の内在的な推奨値を設定します。
+    - `min-content` は幅の内在的な最小値を設定します。
+    - `fit-content` は、現在の要素のコンテンツに基づいて計算された、 `min-content` と `max-content` の値で囲まれた、包含ブロックのコンテンツ領域の使用可能な最大サイズを設定します。
+
 - `content`
 
   - : フレックスアイテムの内容物に基づいて、自動的に大きさを決めます。
 
-    > **メモ:** この値は Flexible Box Layout の初期リリースでは定義されていませんでしたので、古い実装では対応していない場合があります。主軸方向の寸法 ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) または [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) を `auto` にするのと合わせて `auto` を使用することで、同等の効果を得られます。
+    > **メモ:** この値はフレックスボックスレイアウトの初期リリースでは定義されていませんでしたので、古い実装では対応していない場合があります。主軸方向の寸法 ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) または [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) を `auto` にするのと合わせて `auto` を使用することで、同等の効果を得られます。
     >
     > - もともと、`flex-basis:auto` は「自身の `width` または `height` プロパティを参照する」という意味でした。
     > - その後 `flex-basis:auto` の意味が自動拡大縮小設定に変わり、また「自身の `width` または `height` プロパティを参照する」キーワードとして "main-size" を導入しました。これは [Firefox バグ 1032922](https://bugzil.la/1032922) で実装しました。
@@ -69,7 +80,9 @@ flex-basis: unset;
 
 ## 例
 
-<h3 id="Setting_flex_item_initial_sizes">フレックスアイテムの初期の寸法の設定</h3>
+### フレックスアイテムの初期の寸法の設定
+
+`flex-basis` の様々な値を設定した例です。
 
 #### HTML
 
@@ -110,7 +123,7 @@ flex-basis: unset;
   position: relative;
 }
 
-.flex:after {
+.flex::after {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -125,7 +138,7 @@ flex-basis: unset;
   flex-basis: auto;
 }
 
-.flex1:after {
+.flex1::after {
   content: "auto";
 }
 
@@ -133,7 +146,7 @@ flex-basis: unset;
   flex-basis: max-content;
 }
 
-.flex2:after {
+.flex2::after {
   content: "max-content";
 }
 
@@ -141,7 +154,7 @@ flex-basis: unset;
   flex-basis: min-content;
 }
 
-.flex3:after {
+.flex3::after {
   content: "min-content";
 }
 
@@ -149,7 +162,7 @@ flex-basis: unset;
   flex-basis: fit-content;
 }
 
-.flex4:after {
+.flex4::after {
   content: "fit-content";
 }
 
@@ -157,16 +170,8 @@ flex-basis: unset;
   flex-basis: content;
 }
 
-.flex5:after {
+.flex5::after {
   content: "content";
-}
-
-.flex6 {
-  flex-basis: fill;
-}
-
-.flex6:after {
-  content: "fill";
 }
 ```
 
@@ -184,6 +189,6 @@ flex-basis: unset;
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの主軸方向における比率の制御](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスアイテムの主軸方向における比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
 - {{cssxref("width")}}

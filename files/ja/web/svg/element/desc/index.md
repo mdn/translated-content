@@ -35,7 +35,7 @@ _なし_
 
 ## ブラウザー互換性
 
-{{Compat("svg.elements.desc")}}
+{{Compat}}
 
 ## 関連情報
 

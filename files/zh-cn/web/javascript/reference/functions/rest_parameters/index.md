@@ -137,12 +137,11 @@ console.log(sortArguments(5, 3, 7, 1)); // shows 1, 3, 5, 7
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Spread operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
-- [Arguments object](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Array](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
-- [Destructuring assignment](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)参考
+- [展开语法（`...`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Array")}}

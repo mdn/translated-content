@@ -160,7 +160,7 @@ This will log a message containing 'hello world!'.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp.exec")}}
+{{Compat}}
 
 ## Veja também
 

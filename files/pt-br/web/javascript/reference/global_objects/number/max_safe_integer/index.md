@@ -51,7 +51,7 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 2
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.MAX_SAFE_INTEGER")}}
+{{Compat}}
 
 ## Veja também
 

@@ -53,7 +53,7 @@ Cette catégorie comprend les personnes aveugles, malvoyantes, daltoniennes, etc
 
 - Certains, comme [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) et [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows), sont payants.
 - D'autres, comme [NVDA](http://www.nvaccess.org/) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome, Windows et Mac OS X), et [Orca](https://wiki.gnome.org/Projects/Orca) (Linux) sont gratuits.
-- Certains sont intégrés au système d'exploitation, comme [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X et iOS), [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows), [ChromeVox](http://www.chromevox.com/) (sur Chrome OS), et [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Certains sont intégrés au système d'exploitation, comme [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X et iOS), [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows), [ChromeVox](http://www.chromevox.com/) (sur ChromeOS), et [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 Il est conseillé de se familiariser avec les lecteurs d'écran ; vous devriez installer un lecteur d'écran et expérimenter avec pour comprendre comment il marche. Lisez notre [Guide pour tester les lecteurs d'écrans sur différents navigateurs (en)](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) pour avoir plus d'information sur leur utilisation. La vidéo ci-dessous (en anglais) vous donne un bref aperçu de l'experience.
 

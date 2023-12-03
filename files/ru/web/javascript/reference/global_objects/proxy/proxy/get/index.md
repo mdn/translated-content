@@ -99,7 +99,7 @@ p.a; // TypeError is thrown
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.builtins.Proxy.handler.get")}}
+{{Compat}}
 
 ## Смотрите также
 

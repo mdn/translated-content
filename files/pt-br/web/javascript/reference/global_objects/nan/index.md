@@ -42,7 +42,7 @@ isNaN(Number.NaN); // verdadeiro
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.NaN")}}
+{{Compat}}
 
 ## Veja também
 

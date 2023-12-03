@@ -55,7 +55,7 @@ slug: Web/SVG/Element/rect
 
 ## ブラウザー互換性
 
-{{Compat("svg.elements.rect")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -73,7 +73,7 @@ The concert took place on May 15.
 
 ## Compatibilidade
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## Veja também
 

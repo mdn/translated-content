@@ -19,11 +19,11 @@ slug: Web/JavaScript/Guide/Modules
 
 ### import
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ### export
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Пример использования модулей
 

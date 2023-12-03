@@ -40,7 +40,7 @@ console.log(
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.length")}}
+{{Compat}}
 
 ## Veja tambem
 
