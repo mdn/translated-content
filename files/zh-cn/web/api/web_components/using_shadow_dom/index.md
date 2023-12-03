@@ -215,7 +215,7 @@ span {
 
 ### 可构造样式表
 
-要使用可构造样式表样式化影子 DOM 中的页面元素，我们可以：
+要使用可构造样式表为影子 DOM 中的页面元素设置样式，我们可以：
 
 1. 创建一个空的 {{domxref("CSSStyleSheet")}} 对象
 2. 使用 {{domxref("CSSStyleSheet.replace()")}} 或 {{domxref("CSSStyleSheet.replaceSync()")}} 设置其内容
