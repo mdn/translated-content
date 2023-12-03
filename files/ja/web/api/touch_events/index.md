@@ -2,7 +2,7 @@
 title: タッチイベント
 slug: Web/API/Touch_events
 l10n:
-  sourceCommit: 8318078e0cf65cd4d56e80376c03019dcb292dc1
+  sourceCommit: 750b70f86efe419fc345c6b4b5266cbfb62322d4
 ---
 
 {{DefaultAPISidebar("Touch Events")}}
@@ -11,7 +11,7 @@ l10n:
 
 タッチイベントのインターフェイスは、2 本の指によるジェスチャーなどアプリケーション固有のマルチタッチ操作に対応するために使用できる、比較的低レベルの API です。マルチタッチ操作は、1 本の指（またはスタイラス）が始めにタッチ面へタッチしたときから始まります。その後に他の指をタッチすることができ、さらに任意でタッチ面上で動かします。指をタッチ面から離すと、操作が終了します。操作している間、アプリケーションは開始・移動・終了の各段階中にタッチイベントを受け取ります。
 
-タッチイベントはマウスイベントに似ていますが、タッチ面上の異なる場所で同時に発生するタッチに対応することが異なります。{{domxref("TouchEvent")}} インターフェイスは、現在アクティブなすべてのタッチ点を包含します。{{domxref("Touch")}} インターフェイスはひとつのタッチ点を表し、ブラウザのビューポートを基準にしたタッチ個所の位置などの情報を含みます。
+タッチイベントはマウスイベントに似ていますが、タッチ面上の異なる場所で同時に発生するタッチに対応することが異なります。 {{domxref("TouchEvent")}} インターフェイスは、現在アクティブなすべてのタッチ点を包含します。 {{domxref("Touch")}} インターフェイスはひとつのタッチ点を表し、ブラウザーのビューポートを基準にしたタッチ個所の位置などの情報を含みます。
 
 ## 定義
 
@@ -31,15 +31,15 @@ l10n:
 
 ## 例
 
-ここでは一度に複数のタッチ点を取得しており、ユーザーが一度に複数の指で {{HTMLElement("canvas")}} に描くことができるようになっています。このサンプルはタッチイベントに対応するブラウザーのみで動作します。
+ここでは一度に複数のタッチ点を取得しており、ユーザーが一度に複数の指で {{HTMLElement("canvas")}} に描くことができるようになっています。このサンプルはタッチイベントに対応しているブラウザーのみで動作します。
 
-> **メモ:** ここからはタッチ面への接触を表すときに "指" という表現を使用しますが、当然ながらスタイラスなど他の接触法も使用できます。
+> **メモ:** ここからはタッチ面への接触を表すときに「指」という表現を使用しますが、当然ながらスタイラスなど他の接触法も使用できます。
 
 ### キャンバスの作成
 
 ```html
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
-  Your browser does not support canvas element.
+  このブラウザーは canvas 要素に対応していません。
 </canvas>
 <br />
 Log:
@@ -96,7 +96,7 @@ function handleStart(evt) {
     const color = colorForTouch(touches[i]);
     log(`color of touch with id ${touches[i].identifier} = ${color}`);
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
+    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // 最初に円を描く
     ctx.fillStyle = color;
     ctx.fill();
   }
@@ -234,9 +234,9 @@ function copyTouch({ identifier, pageX, pageY }) {
 }
 ```
 
-#### 継続中のタッチを発見
+#### 継続中のタッチを見つける
 
-以下の `ongoingTouchIndexById()` 関数は、指定した識別にマッチするタッチを見つけるために配列 `ongoingTouches` を探索して、そのタッチの配列内における添字を返します。
+以下の `ongoingTouchIndexById()` 関数は、指定した識別子に一致するタッチを見つけるために配列 `ongoingTouches` を探索して、そのタッチの配列内におけるインデックスを返します。
 
 ```js
 function ongoingTouchIndexById(idToFind) {
@@ -247,11 +247,11 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1; // not found
+  return -1; // 見つからない
 }
 ```
 
-#### 何を行っているか表示する
+#### 何を行っているか表示
 
 ```js
 function log(msg) {
