@@ -86,7 +86,6 @@
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
 /ru/docs/Glossary/Bootstrap	/ru/docs/orphaned/Glossary/Bootstrap
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
-/ru/docs/Glossary/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
 /ru/docs/Glossary/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Glossary/Round_Trip_Time_(RTT)	/ru/docs/Glossary/Round_Trip_Time
@@ -1034,7 +1033,6 @@
 /ru/docs/Словарь/DOS_attack	/ru/docs/Glossary/DOS_attack
 /ru/docs/Словарь/Doctype	/ru/docs/Glossary/Doctype
 /ru/docs/Словарь/Domain_name	/ru/docs/Glossary/Domain_name
-/ru/docs/Словарь/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Словарь/ECMA	/ru/docs/Glossary/ECMA
 /ru/docs/Словарь/ECMAScript	/ru/docs/Glossary/ECMAScript
 /ru/docs/Словарь/Empty_element	/ru/docs/Glossary/Void_element
