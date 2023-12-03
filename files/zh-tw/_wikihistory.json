@@ -4123,9 +4123,5 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
-  },
-  "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
-    "modified": "2019-04-23T04:21:07.806Z",
-    "contributors": ["jackblackevo", "pytseng"]
   }
 }
