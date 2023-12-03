@@ -55,7 +55,9 @@ l10n:
     id="email"
     aria-invalid="true"
     aria-errormessage="err1" />
-  <span id="err1" class="errormessage">有効なメールアドレスを入力してください</span>
+  <span id="err1" class="errormessage"
+    >有効なメールアドレスを入力してください</span
+  >
 </p>
 ```
 
