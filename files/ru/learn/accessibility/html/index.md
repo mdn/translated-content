@@ -512,13 +512,3 @@ HTML5 содержит два новых элемента — {{htmlelement("fig
 Теперь вы должны хорошо разбираться в написании доступного HTML для большинства случаев. Наша статья про основы WAI-ARIA также заполнит пробелы в знаниях, но эта статья посвящена основам. Далее мы рассмотрим CSS и JavaScript, и как хорошо или плохое их использование влияет на доступность.
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## В этом модуле
-
-- [Что такое доступность?](/ru/docs/Learn/Доступность/What_is_accessibility)
-- [HTML: Хорошая основа для доступности](/ru/docs/Learn/Accessibility/HTML)
-- [CSS и JavaScript доступность - лучшие практики](/ru/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Основы WAI-ARIA](/ru/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Доступность мультимедиа](/ru/docs/Learn/Accessibility/Multimedia)
-- [Мобильная доступность](/ru/docs/Learn/Accessibility/Mobile)
-- [Устранение проблем доступности](/ru/docs/Learn/Accessibility/Accessibility_troubleshooting)

@@ -32,8 +32,8 @@ slug: Web/HTML/Content_categories
 Несколько других элементов, которые тоже принадлежат к этому типу, но требуют определённых условий:
 
 - {{HTMLElement("area")}}, только внутри элемента {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
+- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
 - {{HTMLElement("style")}}, при наличии атрибута [`scoped`](/ru/docs/Web/HTML/Element/style#scoped)
 
 ### Секционный контент
@@ -66,9 +66,9 @@ slug: Web/HTML/Content_categories
 - {{HTMLElement("area")}}, только внутри элемента {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, если содержит в себе только фразовый контент
 - {{HTMLElement("ins")}}, если содержит в себе только фразовый контент
-- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
 - {{HTMLElement("map")}}, если содержит в себе только фразовый контент
-- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
 
 ### Встроенный контент
 

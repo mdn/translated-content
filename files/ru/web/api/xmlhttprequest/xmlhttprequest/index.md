@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest/XMLHttpRequest
 
 Конструктор **`XMLHttpRequest()`** создаёт новый объект {{domxref("XMLHttpRequest")}}.
 
-Для получения подробной информации о том, как использовать `XMLHttpRequest`, см. [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
+Для получения подробной информации о том, как использовать `XMLHttpRequest`, см. [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 ## Синтаксис
 
@@ -44,5 +44,5 @@ const request = new XMLHttpRequest(paramsDictionary);
 
 ## Смотрите также
 
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [HTML в XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

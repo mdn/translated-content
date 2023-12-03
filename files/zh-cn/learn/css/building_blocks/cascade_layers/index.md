@@ -405,9 +405,9 @@ body {
 
 对于重要样式，分层样式优先于未分层样式，并且早期声明的层中的重要样式优先于后来声明的层。在这个例子中，嵌套层的创建顺序是 `components.narrow`，然后是 `components.wide`，所以 `components.narrow` 中的重要样式优先于 `components.wide` 中的重要样式，这意味着 `sans-serif` 获胜。
 
-## 测试你的技能！
+## 技能测试！
 
-你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[测试你的技能：层叠—任务 2](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_tasks#任务_2)。
+你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[技能测试：层叠—任务 2](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_tasks#任务_2)。
 
 ## 总结
 

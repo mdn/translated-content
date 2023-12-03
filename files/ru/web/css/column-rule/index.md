@@ -21,7 +21,7 @@ column-rule: solid 8px;
 column-rule: solid blue;
 column-rule: thick inset blue;
 
-/* глобальные значения */
+/* Глобальные значения */
 column-rule: inherit;
 column-rule: initial;
 column-rule: unset;
