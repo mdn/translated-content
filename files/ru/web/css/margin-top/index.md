@@ -14,15 +14,15 @@ slug: Web/CSS/margin-top
 ## Синтаксис
 
 ```css
-/* значения <length> */
+/* Ключевые слова */ 
+margin-top: auto;
+
+/* Значения длины */
 margin-top: 10px; /* абсолютное значение */
 margin-top: 1em; /* относительно размера текста */
 margin-top: 5%; /* относительно ширины ближайшего контейнера */
 
-/* ключевые слова */
-margin-top: auto;
-
-/* глобальные значения */
+/* Глобальные значения */
 margin-top: inherit;
 margin-top: initial;
 margin-top: unset;

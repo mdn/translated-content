@@ -12,7 +12,7 @@ slug: Web/CSS/letter-spacing
 ## Синтаксис
 
 ```css
-/* Значения - ключевые слова */
+/* Ключевые слова */
 letter-spacing: normal;
 
 /* Значения <length> */

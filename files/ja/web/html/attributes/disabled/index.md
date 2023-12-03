@@ -15,7 +15,7 @@ l10n:
 
 フォームコントロールに `disabled` 属性が指定された場合、その要素とフォームコントロールの子孫は制約検証が行われません。多くの場合、ブラウザーはそのようなコントロールをグレーアウトし、マウスクリックやフォーカス関連のイベントなどの閲覧イベントを受け取りません。
 
-`disabled` 属性は、 {{ HTMLElement("button") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("input")}} が対応しています。
+`disabled` 属性は、 {{ HTMLElement("button") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("input")}} が対応しています。
 
 論理属性の disabled は、ユーザーがコントロールやその子孫のコントロールと対話できないことを示します。この属性が指定されていない場合、コントロールは、例えば `fieldset` のような包含要素からその設定を継承します。 `disabled` 属性が設定されている包含要素がなく、コントロール自体がこの属性を持っていない場合、コントロールは有効になります。 {{ HTMLElement("optgroup") }}上で宣言された場合、 select は（特に無効化されていない限り）操作可能になりますが、オプショングループの項目はどれも選択不可能になります。
 

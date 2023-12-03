@@ -657,9 +657,9 @@ body {
 
 {{EmbedLiveSample('display_flow-root', '100%', 600)}}
 
-## 纸上得来终觉浅！
+## 技能测试！
 
-你已经读完了这一篇文章，但是你还记得几成呢？在继续阅读之前你可以在这里找到一些测试来检验一下：[测试你的技能：浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats_skills).
+你已经读完了这一篇文章，但是你还记得几成呢？在继续阅读之前你可以在这里找到一些测试来检验一下：[技能测试：浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats_skills)。
 
 ## 总结
 

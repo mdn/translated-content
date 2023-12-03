@@ -1603,7 +1603,6 @@
 /es/docs/Web/API/BlobBuilder	/es/docs/web/api/blob
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
 /es/docs/Web/API/CanvasImageSource	/es/docs/web/api/canvasrenderingcontext2d
-/es/docs/Web/API/Canvas_API/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /es/docs/Web/API/Console/tabla	/es/docs/Web/API/console/table_static
@@ -1956,6 +1955,7 @@
 /es/docs/Web/Guide/AJAX/Comunidad	/es/docs/conflicting/Web/Guide/AJAX
 /es/docs/Web/Guide/AJAX/Getting_Started	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /es/docs/Web/Guide/AJAX/Primeros_Pasos	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
+/es/docs/Web/Guide/API	/es/docs/conflicting/Web/API
 /es/docs/Web/Guide/API/Vibration	/es/docs/Web/API/Vibration_API
 /es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/conflicting/Web/API/WebRTC_API
 /es/docs/Web/Guide/CSS	/es/docs/Learn/CSS
@@ -2009,7 +2009,6 @@
 /es/docs/Web/HTML/Atributos_de_configuracion_CORS	/es/docs/Web/HTML/Attributes/crossorigin
 /es/docs/Web/HTML/Block-level_elements	/es/docs/Glossary/Block-level_content
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
-/es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Element/bgsound	/es/docs/Web/HTML/Element/audio

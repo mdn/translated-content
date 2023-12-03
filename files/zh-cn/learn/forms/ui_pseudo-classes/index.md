@@ -603,7 +603,7 @@ input[type="radio"]:indeterminate {
 - {{cssxref(":blank")}} 伪类可以选择空表单控件。{{cssxref(":empty")}} 也匹配没有子元素的元素，如 {{HTMLElement("input")}}，但它更普遍——它也匹配其他{{glossary("void element", "空元素")}}，如 {{HTMLElement("br")}} 和 {{HTMLElement("hr")}}。`:empty` 有合理的浏览器支持；`:blank` 伪类的规范还没有完成，所以它还不被任何浏览器支持。
 - [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo) 伪类，如果支持，将类似于 {{cssxref(":invalid")}}，但有更好的用户体验。如果输入收到焦点时值是有效的，当用户输入数据时，如果值暂时无效，该元素可能会匹配 `:invalid`，但只有当该元素失去焦点时才会匹配 `:user-invalid`。如果该值最初是无效的，它将在整个焦点持续期间同时匹配 `:invalid` 和 `:user-invalid`。与 `:invalid` 类似，如果该值确实变得有效，它将停止匹配 `:user-invalid`。
 
-## 测试你的技能！
+## 技能测试！
 
 你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：进阶样式](/zh-CN/docs/Learn/Forms/Test_your_skills:_Advanced_styling).
 

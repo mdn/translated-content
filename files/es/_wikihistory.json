@@ -15049,10 +15049,6 @@
     "modified": "2020-10-15T22:29:20.361Z",
     "contributors": ["camsa"]
   },
-  "orphaned/Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-03-19T08:57:21.057Z",
-    "contributors": ["AzazelN28", "Fandres91", "dkocho4", "preteric"]
-  },
   "orphaned/Web/API/ChildNode": {
     "modified": "2019-03-29T14:12:39.589Z",
     "contributors": ["jpmedley"]
@@ -15298,10 +15294,6 @@
       "pierre_alfonso",
       "jesanchez"
     ]
-  },
-  "orphaned/Web/HTML/Element/blink": {
-    "modified": "2019-10-10T16:37:40.291Z",
-    "contributors": ["teoli", "jcr4"]
   },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-10-05T04:48:52.506Z",
