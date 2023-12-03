@@ -1,7 +1,6 @@
 ---
 title: Использование XMLHttpRequest
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
-original_slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -27,7 +26,7 @@ req.send();
 
 Запрос, сделанный посредством `XMLHttpRequest`, может загружать данные синхронно или асинхронно. Тип запроса определяется опциональным `async` аргументом (третий по счёту) метода {{domxref("XMLHttpRequest.open()")}}. Если он равен `true` или не задан, запрос выполнится асинхронно, в противном случае — синхронно.
 
-В чем разница между двумя типами запросов, а так же примеры использования, вы можете найти [в статье с подробным описанием синхронных и асинхронных запросов](/ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). По возможности избегайте синхронных запросов, они блокируют взаимодействие пользователя с сайтом.
+В чем разница между двумя типами запросов, а так же примеры использования, вы можете найти [в статье с подробным описанием синхронных и асинхронных запросов](/ru/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests). По возможности избегайте синхронных запросов, они блокируют взаимодействие пользователя с сайтом.
 
 > **Обратите внимание:** Название `XMLHttpRequest` не означает, что вы можете передавать только XML документы. **"XML"** в названии остался из времён, когда основным форматом для обмена информацией был XML.
 
@@ -335,8 +334,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
             ? this.contentType === "multipart\/form-data"
               ? 3
               : this.contentType === "text\/plain"
-                ? 2
-                : 1
+              ? 2
+              : 1
             : 0;
           this.receiver = target.action;
           this.status = 0;
