@@ -832,10 +832,6 @@ req.send(null);
 
 Если в завершение XMLHttpRequest вы получаете `status=0` и `statusText=null` – это означает, что запрос не был разрешен к выполнению. Его статус остался [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). Частая причина, что указанный [`XMLHttpRequest` origin](https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-origin) (во время создания XMLHttpRequest) был изменён в следствии вызова `open()`. Такое может произойти, например, когда есть XMLHttpRequest, который запускается при событии onunload окна. XMLHttpRequest создается, когда окно, которое должно быть закрыто, всё ещё существует, но отправка запроса (другими словами, вызов `open()`) происходит, когда это окно уже потеряло свой фокус, а другое – получило. Наиболее эффективный способ избежать этой проблемы - установить слушателя на событие нового окна {{domxref("Element/DOMActivate_event", "DOMActivate")}}, которое устанавливается, как только у закрытого окна срабатывает событие {{domxref("Window/unload_event", "unload")}}.
 
-## Воркеры
-
-Установка `overrideMimeType` не работает с {{domxref("Worker")}}. Это баг – [Firefox bug 678057](https://bugzil.la/678057). В разных браузерах поведение может отличаться.
-
 ## Спецификации
 
 {{Specifications}}
@@ -846,9 +842,8 @@ req.send(null);
 
 ## Смотрите также
 
-- [AJAX. С чего начать](/ru/docs/Web/Guide/AJAX/Getting_Started)
-- [HTML in XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-- [HTTP access control](/ru/docs/Web/HTTP/CORS)
+- [Использование Fetch API](/ru/docs/Web/API/Fetch_API/Using_Fetch)
+- [HTML в XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- [Контроль доступа в HTTP](/ru/docs/Web/HTTP/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
 - [Объект `XMLHttpRequest`: спецификация WHATWG](https://xhr.spec.whatwg.org/)
