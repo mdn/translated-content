@@ -1,6 +1,8 @@
 ---
 title: "navigator: свойство platform"
 slug: Web/API/Navigator/platform
+l10n:
+  sourceCommit: 1238ffad886924b20549d0cf3adca735cb0d074f
 ---
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
