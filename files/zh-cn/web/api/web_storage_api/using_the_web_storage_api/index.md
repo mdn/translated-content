@@ -7,7 +7,7 @@ Web Storage API 提供了存储机制，通过该机制，浏览器可以安全�
 
 ## 基本概念
 
-存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。您可以像访问对象一样访问这些值，或者使用 {{domxref("Storage.getItem()")}} 和 {{domxref("Storage.setItem()")}} 方法。这三行都设置了（相同的）colorSetting 条目：
+存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。你可以像访问对象一样访问这些值，或者使用 {{domxref("Storage.getItem()")}} 和 {{domxref("Storage.setItem()")}} 方法。这三行都设置了（相同的）colorSetting 条目：
 
 ```js
 localStorage.colorSetting = "#a4509b";
@@ -20,7 +20,7 @@ Web Storage 包含如下两种机制：
 - `sessionStorage` 为每一个给定的源（given origin）维持一个独立的存储区域，该存储区域在页面会话期间可用（即只要浏览器处于打开状态，包括页面重新加载和恢复）。
 - `localStorage` 同样的功能，但是在浏览器关闭，然后重新打开后数据仍然存在。
 
-这两种机制是通过 {{domxref("Window.sessionStorage")}} 和 {{domxref("Window.localStorage")}} 属性使用（更确切的说，在支持的浏览器中 `Window` 对象实现了 `WindowLocalStorage` 和 `WindowSessionStorage` 对象并挂在其 `localStorage` 和 `sessionStorage` 属性下）—— 调用其中任一对象会创建 {{domxref("Storage")}} 对象，通过 {{domxref("Storage")}} 对象，可以设置、获取和移除数据项。对于每个源（origin）`sessionStorage` 和 `localStorage` 使用不同的 Storage 对象——独立运行和控制。
+这两种机制是通过 {{domxref("Window.sessionStorage")}} 和 {{domxref("Window.localStorage")}} 属性使用（更确切的说，在支持的浏览器中 `Window` 对象实现了 `WindowLocalStorage` 和 `WindowSessionStorage` 对象并挂在其 `localStorage` 和 `sessionStorage` 属性下）——调用其中任一对象会创建 {{domxref("Storage")}} 对象，通过 {{domxref("Storage")}} 对象，可以设置、获取和移除数据项。对于每个源（origin）`sessionStorage` 和 `localStorage` 使用不同的 Storage 对象——独立运行和控制。
 
 例如，在文档中调用 `localStorage` 将会返回一个 {{domxref("Storage")}} 对象；调用 `sessionStorage` 返回一个不同的 {{domxref("Storage")}} 对象。可以使用相同的方式操作这些对象，但是操作是独立的。
 
@@ -65,7 +65,7 @@ function storageAvailable(type) {
 }
 ```
 
-这是您将如何使用它：
+这是你将如何使用它：
 
 ```js
 if (storageAvailable("localStorage")) {
@@ -75,7 +75,7 @@ if (storageAvailable("localStorage")) {
 }
 ```
 
-您可以通过调用 `storageAvailable('sessionStorage')` 来测试 sessionStorage。
+你可以通过调用 `storageAvailable('sessionStorage')` 来测试 sessionStorage。
 
 请参阅此处，[brief history of feature-detecting localStorage](https://gist.github.com/paulirish/5558557).。
 

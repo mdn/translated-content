@@ -16,13 +16,13 @@ slug: Web/CSS/margin-bottom
 ## Синтаксис
 
 ```css
-/* числовые значения */
+/* Ключевые слова */
+margin-bottom: auto;
+
+/* Числовые значения */
 margin-bottom: 10px; /* Абсолютная длина */
 margin-bottom: 1em; /* относительно размера текста */
 margin-bottom: 5%; /* относительно длины родительского блока */
-
-/* Значения-ключевые слова */
-margin-bottom: auto;
 
 /* Глобальные значения */
 margin-bottom: inherit;

@@ -60,7 +60,7 @@ regex2.test(".\nfoo"); // true - 索引 2 是行的开始
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("RegExp.lastIndex")}}
 - {{jsxref("RegExp.prototype.global")}}

@@ -10,7 +10,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基础计算机能力，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -84,7 +84,7 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ![Diagram conceptualizing the contents of a media file at the track level.](containersandtracks.png)
 
-为了编解码器（codec）编码媒体，容器中的音频和视频轨道以适合的格式保存。音频轨道和视频轨道使用不同的格式。每个音频轨道都使用[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)进行编码，而视频轨道则使用（您可能已经猜到了）[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)进行编码。如前所述，不同的浏览器支持不同的视频和音频格式，以及不同的容器格式（如 MP3、MP4 和 WebM，这些格式又可以包含不同类型的视频和音频）。
+为了编解码器（codec）编码媒体，容器中的音频和视频轨道以适合的格式保存。音频轨道和视频轨道使用不同的格式。每个音频轨道都使用[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)进行编码，而视频轨道则使用（你可能已经猜到了）[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)进行编码。如前所述，不同的浏览器支持不同的视频和音频格式，以及不同的容器格式（如 MP3、MP4 和 WebM，这些格式又可以包含不同类型的视频和音频）。
 
 例如：
 
@@ -282,7 +282,7 @@ WEBVTT
 
 > **备注：** 文本轨道会使你的网站更容易被搜索引擎抓取到（{{glossary("SEO")}}），由于搜索引擎的文本抓取能力非常强大，使用文本轨道甚至可以让搜索引擎通过视频的内容直接链接。
 
-## 实践学习：在你的网站上嵌入你自己的视频或音频。
+## 实践学习：在你的网站上嵌入你自己的视频或音频
 
 在这个实践学习当中，我们希望你能够走出去，并且记录一些你自己的视频或者音频 — 如今，大多数手机都能够非常方便的记录视频或者音频，并且你可以将他们上传到你的电脑上面，你可以使用这些功能来记录你的视频或音频。在这时候，你可能需要做一些格式转换，如果是视频的话，你需要将它们转化为 WebM 或者 MP4，如果是音频的话，你需要将它们转化为 MP3 或者 Ogg。不过你并不需要担心，有许多的程序都能够帮你解决这些问题，例如 [Miro Video Converter](http://www.mirovideoconverter.com/) 和 [Audacity](https://sourceforge.net/projects/audacity/)。我们非常希望你能够亲自动手实现它。
 
@@ -298,9 +298,9 @@ WEBVTT
 
 另外，你可以尝试研究一下文本音轨，试着为你的视频添加一些字幕。
 
-## 测试你的技能！
+## 技能测试！
 
-恭喜你，你已经完成了这篇教程的学习，但你是否还记得教程里最重要的内容呢？在继续之前，你可以通过一些测试来验证你是否已经掌握了这些内容，请参见[测试你的技能：内嵌多媒体](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding)。需要注意倒是，这个测试中的第三个问题可能会需要一些之后讲到的技术，所以我们建议你尝试之前阅读一下[下一篇教程](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/其他嵌入技术)。
+恭喜你，你已经完成了这篇教程的学习，但你是否还记得教程里最重要的内容呢？在继续之前，你可以通过一些测试来验证你是否已经掌握了这些内容，请参见[技能测试：内嵌多媒体](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding)。需要注意，这个测试中的第三个问题可能会需要一些之后讲到的技术，所以我们建议你尝试之前阅读一下[下一篇教程](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)。
 
 ## 总结
 

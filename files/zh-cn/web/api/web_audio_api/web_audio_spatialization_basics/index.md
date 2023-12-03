@@ -453,6 +453,6 @@ moveControls.forEach(function (el) {
 
 > **备注：** 音频空间化在不同浏览器中的听起来略有不同。panner 节点在底层做了一些非常复杂的数学运算；这里有 [许多测试](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true)，因此你可以跟踪不同平台上此节点的内部工作状态。
 
-再次，您可以在 [这里查看最终的演示](https://mdn.github.io/webaudio-examples/spatialization/)，同时[最终的源代码在这里](https://github.com/mdn/webaudio-examples/tree/master/spatialization)。还有一个 [Codepen 的演示](https://codepen.io/Rumyra/pen/MqayoK?editors=0100)。
+再次，你可以在 [这里查看最终的演示](https://mdn.github.io/webaudio-examples/spatialization/)，同时[最终的源代码在这里](https://github.com/mdn/webaudio-examples/tree/master/spatialization)。还有一个 [Codepen 的演示](https://codepen.io/Rumyra/pen/MqayoK?editors=0100)。
 
 如果你正在使用 3D 游戏和/或 WebXR，最好利用 3D 库来创建此类功能，而不是尝试从最初的规则完成所有这些操作。我们在本文中提出了自己的想法，让你了解它是如何工作的，但是通过利用别人在你之前所做的工作，你将节省大量时间。

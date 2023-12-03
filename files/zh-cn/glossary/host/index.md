@@ -9,8 +9,6 @@ slug: Glossary/Host
 
 主机不需要具有一个硬件上的实体，它可以由虚拟机产生。由虚拟机产生的主机也叫作“虚拟主机”。
 
-## 了解更多
-
-### 基本知识
+## 参见
 
 - [Host (network)](<https://zh.wikipedia.org/wiki/Host_(network)>) on Wikipedia

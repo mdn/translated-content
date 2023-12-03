@@ -5,7 +5,7 @@ slug: Web/API/WebSockets_API
 
 {{DefaultAPISidebar("Websockets API")}}
 
-**WebSockets** 是一种先进的技术。它可以在用户的浏览器和服务器之间打开交互式通信会话。使用此 API，您可以向服务器发送消息并接收事件驱动的响应，而无需通过轮询服务器的方式以获得响应。
+**WebSockets** 是一种先进的技术。它可以在用户的浏览器和服务器之间打开交互式通信会话。使用此 API，你可以向服务器发送消息并接收事件驱动的响应，而无需通过轮询服务器的方式以获得响应。
 
 ## 接口
 
@@ -32,11 +32,6 @@ slug: Web/API/WebSockets_API
 - [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional): 易于使用异步 RPC 库，通过单个 WebSocket 或 RTCDataChannel (WebRTC) 连接支持双向调用。TCP / SCTP /等。客户端和服务器可以各自承载自己的 JSONRPC 和服务器端点。
 - [rpc-websockets](https://github.com/elpheria/rpc-websockets): JSON-RPC 2.0 在 websocket 上实现 Node.js 和 JavaScript。
 
-## 相关话题
-
-- [AJAX](/zh-CN/docs/Web/Guide/AJAX)
-- [JavaScript](/zh-CN/docs/Web/JavaScript)
-
 ## 规范
 
 {{Specifications}}
@@ -47,6 +42,6 @@ slug: Web/API/WebSockets_API
 
 ## 参见
 
-- [RFC 6455 — The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
-- [WebSocket API Specification](https://www.w3.org/TR/websockets/)
-- [Server-Sent Events](/zh-CN/docs/Web/API/Server-sent_events)
+- [RFC 6455——WebSocket 协议](https://tools.ietf.org/html/rfc6455)
+- [WebSocket API 规范](https://websockets.spec.whatwg.org/)
+- [服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events)

@@ -64,4 +64,4 @@ _`Performance` インターフェイスはメソッドを継承しません。_
 
 ## ブラウザーの互換性
 
-{{Compat("api.Performance")}}
+{{Compat}}

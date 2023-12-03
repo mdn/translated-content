@@ -1,45 +1,43 @@
 ---
 title: ":nth-of-type"
 slug: Web/CSS/:nth-of-type
+l10n:
+  sourceCommit: f22e72998f4e8f48b18ef358521bfc9ad1ae9446
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** correspond à des éléments d'un type donné, en fonction de leur position au sein d'un groupe de frères et sœurs.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-of-type()`** permet de cibler les éléments selon leur position parmi les voisins du même type (les mêmes noms de balise).
 
-```css
-/* Sélectionne chaque élément de type <p> dont
-la position parmi l'ensemble des éléments de type <p>
-descendants directement du même élément parent,
-est un multiple de 4. */
-p:nth-of-type(4n) {
-  color: lime;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
 
 ## Syntaxe
 
 La pseudo-classe `nth-of-type` ne prend qu'un argument qui représente le motif de répétition pour les éléments ciblés.
 
-Pour une explication plus détaillée de sa syntaxe voir {{Cssxref(":nth-child")}}
+Voir [`:nth-child`](/fr/docs/Web/CSS/:nth-child) pour une explication plus détaillée de sa syntaxe.
 
-### Syntaxe formelle
-
-{{csssyntax}}
+```css-nolint
+:nth-of-type(<an-plus-b> | even | odd) {
+  /* ... */
+}
+```
 
 ## Exemples
 
-Dans cet exemple nous allons colorer un paragrapher sur deux avec des couleurs différentes et mettre le premier paragraphe en gras
+### Exemple simple
 
-### HTML
+Dans cet exemple nous allons colorer un paragraphe sur deux avec des couleurs différentes et mettre le premier paragraphe en gras.
+
+#### HTML
 
 ```html
 <div>
   <div>Cet élément n'est pas compté.</div>
   <p>1er paragraphe.</p>
-  <p>2e paragraphe.</p>
+  <p class="fancy">2e paragraphe.</p>
   <div>Cet élément n'est pas compté.</div>
-  <p>3e paragraphe.</p>
+  <p class="fancy">3e paragraphe.</p>
   <p>4e paragraphe.</p>
 </div>
 ```
@@ -61,11 +59,17 @@ p:nth-of-type(2n) {
 p:nth-of-type(1) {
   font-weight: bold;
 }
+
+/* Cela ciblera le 3e paragraphe, car on cible les éléments impairs (2n+1) et qui ont la classe fancy.
+Le deuxième paragraphe a bien la classe fancy, mais n'est pas ciblé, car pair (et non :nth-of-type(2n+1)) */
+p.fancy:nth-of-type(2n + 1) {
+  text-decoration: underline;
+}
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples','250','200')}}
+{{EmbedLiveSample('','250','250')}}
 
 ## Spécifications
 
@@ -77,5 +81,5 @@ p:nth-of-type(1) {
 
 ## Voir aussi
 
-- {{cssxref(":nth-child")}}
-- {{cssxref(":nth-last-of-type")}}
+- [`:nth-child`](/fr/docs/Web/CSS/:nth-child)
+- [`:nth-last-of-type`](/fr/docs/Web/CSS/:nth-last-of-type)

@@ -48,11 +48,11 @@ slug: Learn/Forms/Styling_web_forms
 
 ## 基本样式美化
 
-为了使用 CSS 美化容易被美化的元素，你并不会碰到任何困难，因为它们的大部分行为同其他 HTML 元素差不多。但是，每个浏览器的用户代理样式表可能会有点不一致，所以有一些技巧可以帮助您更轻松地设计它们。
+为了使用 CSS 美化容易被美化的元素，你并不会碰到任何困难，因为它们的大部分行为同其他 HTML 元素差不多。但是，每个浏览器的用户代理样式表可能会有点不一致，所以有一些技巧可以帮助你更轻松地设计它们。
 
 ### Search 字段
 
-搜索框是唯一一种应用 CSS 样式有点棘手的文本字段。在基于 WebKit 的浏览器（Chrome，Safari 等）上，您必须使用`-webkit-appearance`专有属性来调整它。我们在文章中进一步讨论这个属性：[HTML 表单的高级样式](/zh-CN/docs/Advanced_styling_for_HTML_forms)。
+搜索框是唯一一种应用 CSS 样式有点棘手的文本字段。在基于 WebKit 的浏览器（Chrome，Safari 等）上，你必须使用`-webkit-appearance`专有属性来调整它。我们在文章中进一步讨论这个属性：[HTML 表单的高级样式](/zh-CN/docs/Advanced_styling_for_HTML_forms)。
 
 #### Example
 
@@ -93,11 +93,11 @@ textarea {
 
 ![This is a screenshot of the main form widgets on Firefox on Mac OSX, with and without font harmonization](/files/4157/font-firefox-macos.png)
 
-关于使用系统默认样式的表单还是使用设计用于匹配内容的自定义样式表单，有很多争议。作为网站或 Web 应用程序的设计者，您可以自己做出决定。
+关于使用系统默认样式的表单还是使用设计用于匹配内容的自定义样式表单，有很多争议。作为网站或 Web 应用程序的设计者，你可以自己做出决定。
 
 ### 盒子模型
 
-所有文本字段都完全支持与 CSS 盒模型相关的每个属性 ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, 和 {{cssxref("border")}})。但是，像以前一样，浏览器在显示这些小部件时依赖于系统默认的样式。您需要定义如何将其融入到您的内容中。如果你既想保持小部件的原生外观和感觉，又想给他们一个一致的尺寸，那么你会遇到一些困难 (如果你想保持组件的原生观感，又想给它们一致的大小，你会面临一些困难)。
+所有文本字段都完全支持与 CSS 盒模型相关的每个属性 ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, 和 {{cssxref("border")}})。但是，像以前一样，浏览器在显示这些小部件时依赖于系统默认的样式。你需要定义如何将其融入到你的内容中。如果你既想保持小部件的原生外观和感觉，又想给他们一个一致的尺寸，那么你会遇到一些困难 (如果你想保持组件的原生观感，又想给它们一致的大小，你会面临一些困难)。
 
 **这是因为每个小部件都有自己的边框，填充和边距的规则。** 所以如果你想给几个不同的小部件相同的大小，你必须使用{{cssxref("box-sizing")}} 属性：
 
@@ -121,7 +121,7 @@ button {
 
 ### 定位（Positioning）
 
-HTML 表单部件的定位通常不是问题; 但是，您应该特别注意两点：
+HTML 表单部件的定位通常不是问题; 但是，你应该特别注意两点：
 
 #### legend
 
@@ -203,7 +203,7 @@ HTML 只比我们在 [the first article of this guide](/zh-CN/docs/HTML/Forms/My
 
 1. 明信片的[背景](/files/4151/background.jpg)——下载这幅图片，把它和你的 HTML 文件保存在相同目录下。
 2. 打字机字体：[源自 fontsquirrel.com 的 "Secret Typewriter“字体](http://www.fontsquirrel.com/fonts/Secret-Typewriter)——将 TTF 文件下载到和上面相同的文件夹里。
-3. 手绘字体：[源自 fontsquirrel.com 的 The "Journal" 字体](http://www.fontsquirrel.com/fonts/Journal) —— 将 TTF 文件下载到和上面相同的文件夹里。
+3. 手绘字体：[源自 fontsquirrel.com 的 The "Journal" 字体](http://www.fontsquirrel.com/fonts/Journal)——将 TTF 文件下载到和上面相同的文件夹里。
 
 在你开始之前需要对字体做一些处理：
 
@@ -393,7 +393,7 @@ button:focus {
 
 瞧！
 
-> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它 —— 查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
+> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它——查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
 
 ## 总结
 

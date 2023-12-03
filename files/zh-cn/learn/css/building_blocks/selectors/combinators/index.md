@@ -3,7 +3,7 @@ title: 关系选择器
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}
 
 我们要了解的最后一种选择器被命名为关系选择器（Combinator），这是因为它们在其他选择器之间和其他选择器与文档内容的位置之间建立了一种有用的关系的缘故。
 
@@ -97,12 +97,12 @@ ul > li[class="a"] {
 
 建立简单的一个类，然后把它应用到有需求的元素上，经常会是更好的做法。不过话说回来，如果你需要让你的文档变换一下样式，但是没法编辑 HTML（也许是因为它由 CMS 生成）的话，你的关系选择器的知识会派上用场。
 
-## 小试牛刀！
+## 技能测试！
 
-我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[小试牛刀：选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks)。
+我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks)。
 
 ## 继续学习
 
-这是我们选择器这节课的最后一节了。下面我们将会继续前进，学习 CSS 的另一个重要部分——[CSS 盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)。
+这是我们选择器这节课的最后一节了。下面我们将会继续前进，学习 CSS 的另一个重要部分——[层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}

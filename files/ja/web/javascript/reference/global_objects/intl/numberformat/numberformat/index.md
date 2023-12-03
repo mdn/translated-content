@@ -235,7 +235,7 @@ new Intl.NumberFormat("bn", {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat.NumberFormat")}}
+{{Compat}}
 
 ## 関連情報
 

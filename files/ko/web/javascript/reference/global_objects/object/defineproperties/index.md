@@ -33,7 +33,7 @@ Object.defineProperties(obj, props);
     **기본값은 `false`이다.**
     데이터 서술자의 경우 다음 키를 추가로 포함할 수 있다:
 - `value`
-  - : 이 속성에 설정할 값. 올바른 자바스크립트 값(숫자, 객체, 함수 등)이면 무엇이든 설정할 수 있다.
+  - : 이 속성에 설정할 값. 올바른 JavaScript 값(숫자, 객체, 함수 등)이면 무엇이든 설정할 수 있다.
     **기본값은 {{jsxref("undefined")}}이다.**
 - `writable`
   - : `true`일 경우 이 속성에 설정된 값을 {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 수정할 수 있다.
@@ -73,7 +73,7 @@ Object.defineProperties(obj, {
 
 ## 폴리필
 
-모든 이름과 속성이 원래 값을 가리키는 깨끗한 실행 환경에서 `Object.defineProperties`는 다음 자바스크립트 재구현과 거의 완벽하게 똑같이(`isCallable`의 주석에 주목) 실행된다.
+모든 이름과 속성이 원래 값을 가리키는 깨끗한 실행 환경에서 `Object.defineProperties`는 다음 JavaScript 재구현과 거의 완벽하게 똑같이(`isCallable`의 주석에 주목) 실행된다.
 
 ```js
 function defineProperties(obj, properties) {

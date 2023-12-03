@@ -28,7 +28,7 @@ text-shadow: white 2px 5px;
 /* Используем значения по умолчанию для цвета и радиуса-размытия */
 text-shadow: 5px 10px;
 
-/* Значения принятые глобально */
+/* Глобальные значения */
 text-shadow: inherit;
 text-shadow: initial;
 text-shadow: unset;
@@ -100,10 +100,7 @@ text-shadow: unset;
 
 ## Спецификации
 
-| Specification                                                       | Status                            | Comment                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow')}}  | {{Spec2('CSS3 Transitions')}}     | Определяет `text-shadow` как анимируемую.                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow')}} | {{Spec2('CSS3 Text Decoration')}} | Свойство CSS `text-shadow` было [ошибочно определено в CSS2](http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) и удалено из CSS2 (Level 1). Спецификация The CSS Text Module Level 3 исправила синтаксис. Позже оно было перемещено в [CSS Text Decoration Module Level 3](https://www.w3.org/TR/css-text-decor-3/). |
+{{Specifications}}
 
 {{cssinfo}}
 
@@ -113,7 +110,7 @@ text-shadow: unset;
 
 ### Примечание Quantum CSS
 
-- В движке Gecko есть программная ошибка в результате которой метод перехода ({{cssxref("transition")}}) не будет производить переход от элемента со свойством `text-shadow` с заданным цветом к элементу со свойством `text-shadow` без заданного цвета ({{bug(726550)}}). Данная ошибка была исправлена в параллельной ветке движка CSS для Firefox (так же известном как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), выпуск которого запланирован уже в версии Firefox 57).
+- В движке Gecko есть программная ошибка в результате которой метод перехода ({{cssxref("transition")}}) не будет производить переход от элемента со свойством `text-shadow` с заданным цветом к элементу со свойством `text-shadow` без заданного цвета ([Firefox bug 726550](https://bugzil.la/726550)). Данная ошибка была исправлена в параллельной ветке движка CSS для Firefox (так же известном как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), выпуск которого запланирован уже в версии Firefox 57).
 
 ## Также смотрите
 

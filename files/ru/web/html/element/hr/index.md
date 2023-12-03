@@ -24,15 +24,15 @@ Historically, this has been presented as a horizontal rule or line. While it may
 
 This element's attributes include the [global attributes](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : Задаёт правило выравнивания.По умолчанию значение выставлено как **left**
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : Задаёт цвет линии
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : Sets the rule to have no shading.
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : Устанавливает высоту в px
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : Задаёт длину линии в px либо в %
 
 ## Example
@@ -59,11 +59,7 @@ This element's attributes include the [global attributes](/ru/docs/Web/HTML/Glob
 
 ## Specifications
 
-| Specification                                                                   | Status                   | Comment                                                               |
-| ------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hr-element', '&lt;hr&gt;')}}      | {{Spec2('HTML WHATWG')}} | Definition of the `<hr>` element                                      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}} | {{Spec2('HTML5 W3C')}}   |                                                                       |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}          | {{Spec2('HTML4.01')}}    | The `align`, `noshade`, `size`, and `width` attributes are deprecated |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -5,13 +5,13 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 
 {{jsSidebar("Objects")}}
 
-**`isNaN()`** 函数用来确定一个值是否为{{jsxref("NaN")}} 。注：`isNaN`函数内包含一些非常有趣的[规则](#Description)；你也可以使用 ECMAScript 2015 中定义的 {{jsxref("Number.isNaN()")}} 来判断。
+**`isNaN()`** 函数用来确定一个值是否为 {{jsxref("NaN")}} 。注：`isNaN` 函数内包含一些非常有趣的[规则](#描述)；你也可以使用 ECMAScript 2015 中定义的 {{jsxref("Number.isNaN()")}} 来判断。
 
 {{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 isNaN(value)
 ```
 
@@ -34,7 +34,7 @@ isNaN(value)
 
 当算术运算返回一个未定义的或无法表示的值时，`NaN`就产生了。但是，`NaN`并不一定用于表示某些值超出表示范围的情况。将某些不能强制转换为数值的非数值转换为数值的时候，也会得到`NaN`。
 
-例如，0 除以 0 会返回`NaN` —— 但是其他数除以 0 则不会返回`NaN`。
+例如，0 除以 0 会返回 `NaN`——但是其他数除以 0 则不会返回 `NaN`。
 
 ### 令人费解的怪异行为
 
@@ -155,7 +155,7 @@ isNaN() == isNaN(Number()); // false, because isNaN() == true and Number() == 0
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("NaN")}}
 - {{jsxref("Number.isNaN()")}}

@@ -12,7 +12,7 @@ slug: Mozilla/Firefox/Releases/3
 #### 对网站和程序开发者
 
 - [更新 WEB 应用以适应 Firefox 3](/zh-CN/%E6%9B%B4%E6%96%B0WEB%E5%BA%94%E7%94%A8%E4%BB%A5%E9%80%82%E5%BA%94Firefox_3)
-  - : 提供了您用于更新 WEB 应用以受益于 Firefox 3 新特性所需的信息。
+  - : 提供了你用于更新 WEB 应用以受益于 Firefox 3 新特性所需的信息。
 - [上线与离线事件](/zh-CN/%E4%B8%8A%E7%BA%BF%E4%B8%8E%E7%A6%BB%E7%BA%BF%E4%BA%8B%E4%BB%B6)
   - : Firefox 3 支持 WHATWG 的上线与离线事件，基于这一特性，程序可以检测当前是否有可用的互联网联接以及何时上线或下线。
 - [跨域的 XMLHttpRequest 请求](/zh-CN/%E8%B7%A8%E5%9F%9F%E7%9A%84XMLHttpRequest%E8%AF%B7%E6%B1%82)
@@ -22,7 +22,7 @@ slug: Mozilla/Firefox/Releases/3
 - [基于 web 的协议处理](/zh-CN/DOM/window.navigator.registerProtocolHandler)
   - : 你现在可以使用 `navigator.registerProtocolHandler()` 方法注册 web 应用
 - [在画布（canvas）中“绘”出文字](/zh-CN/%E5%9C%A8%E7%94%BB%E7%94%BB%E5%B8%83%EF%BC%88canvas%EF%BC%89%E4%B8%AD%E2%80%9C%E7%BB%98%E2%80%9D%E5%87%BA%E6%96%87%E5%AD%97)
-  - : 您可以使用 Firefox 3 支持的非标准 API 在 canvas 上绘制文字。
+  - : 你可以使用 Firefox 3 支持的非标准 API 在 canvas 上绘制文字。
 - [支持画布变换](/zh-CN/Canvas_tutorial/Transformations#Transforms)
   - : Firefox 现在的 canvas 支持 `transform()` 和 `setTransform()` 方法。
 - [使用微格式](/zh-CN/%E4%BD%BF%E7%94%A8%E5%BE%AE%E6%A0%BC%E5%BC%8F)
@@ -50,7 +50,7 @@ slug: Mozilla/Firefox/Releases/3
 
 #### 对 XUL 和扩展插件的开发者
 
-提供了你需要做的事情的向导，更新您的 Firefox 3 扩展。
+提供了你需要做的事情的向导，更新你的 Firefox 3 扩展。
 
 - [更新扩展以兼容 Firefox 3](/zh-CN/%E6%9B%B4%E6%96%B0%E6%89%A9%E5%B1%95%E4%BB%A5%E5%85%BC%E5%AE%B9Firefox_3)
   - : FUEL 使扩展开发者完成更有成效，更精悍的 XPCOM 规范代码并获得一些 "模式" JavaScript 思想。
@@ -59,7 +59,7 @@ slug: Mozilla/Firefox/Releases/3
 - [Firefox 3 的模板](/zh-CN/Templates_in_Firefox_3)
   - : Firefox 3 的模板已显着改善。关键的改进是，允许使用自定义查询处理器，除数据源之外还可以使用 RDF。
 - [嵌入的 XBL 绑定](/zh-CN/XBL/XBL_1.0_Reference/Elements#binding)
-  - : 现在，您可以使用 data: 网络协议直接嵌入 XBL 绑定，而不是在单独的 XML 文件中使用他们。
+  - : 现在，你可以使用 data: 网络协议直接嵌入 XBL 绑定，而不是在单独的 XML 文件中使用他们。
 - [本地化扩展描述](/zh-CN/Localizing_extension_descriptions)
   - : 这可让本地化的详细信息在附加组件被下载时或被禁用即时生效。
 - [可靠更新](/zh-CN/Extension_Versioning,_Update_and_Compatibility#Securing_Updates)
@@ -99,7 +99,7 @@ slug: Mozilla/Firefox/Releases/3
 - **断点下载。** 现在可以在重启浏览器或重新获得网络连接时继续尚未完成的下载任务。
 - **全屏缩放。** 今后，你可以使用菜单或快捷键，可以缩放整个网页的内容——这个比例取决除了文字排版，还取决于更合适的图片排版。
 - **标签滚动和快捷菜单。** 通过新的标签滚动和标签快捷菜单可以更容易的定位标签。
-- **保存您当前的浏览内容。** 当你退出 Firefox 3 时，Firefox 3 会提示你是否保存当前标签。
+- **保存你当前的浏览内容。** 当你退出 Firefox 3 时，Firefox 3 会提示你是否保存当前标签。
 - **优化的标签打开方式。** 在标签中打开一个书签文件夹时，会创建一个新标签二不是覆盖现有的。
 - **轻松更改搜索引挚工具框的大小和位置。** 你可以简单的通过一个拖动鼠标改变搜索引擎工具栏和地址栏的分布。
 - **改进了文本选择。** 使用 Crtl (Macintosh 的 Command) 键选择多块文本。双击可以选中个词（中文为一句）三击选中一段。
@@ -115,14 +115,14 @@ slug: Mozilla/Firefox/Releases/3
 - **基于 Web 的协议处理。** 网络应用，比如你最喜欢的电子邮件提供商可以代替本地邮件应用来处理 `mailto:` 链接。对于其他也提供相似的支持。 (注意网络应用需要向火狐注册)
 - **易于使用的下载。** 一个新的引用界面提供高级选项来配置对不同文件类型及协议策略的处理方案。
 - **改进的浏览器外观。** 新的图形及字体处理方案使网页在你的屏幕上显示的更漂亮。包括清晰的文字渲染、连体字、复杂文字的更好支持。另外 Mac 及 Linux (Gnome) 用户会发现 Firefox 感觉起来更像他们本地的应用或平台一样。
-- **支持颜色设置。** 通过设置 在 `about:config` 的 `gfx.color_management.enabled` 优先级，您可以要求 Firefox 的按照新的配置文件中对图像的颜色进行调整，以符合您电脑的显示器。
-- **支持离线浏览。**即使您没有 Internet 连接，Web 应用程序仍可使用。
+- **支持颜色设置。** 通过设置 在 `about:config` 的 `gfx.color_management.enabled` 优先级，你可以要求 Firefox 的按照新的配置文件中对图像的颜色进行调整，以符合你电脑的显示器。
+- **支持离线浏览。**即使你没有 Internet 连接，Web 应用程序仍可使用。
 
 #### 安全和隐私
 
-- **一键网站信息。** 想知道更多关于您所访问网站的信息？点击该网站的图标，在地址栏中看看是谁拥有它。信息更易理解。
+- **一键网站信息。** 想知道更多关于你所访问网站的信息？点击该网站的图标，在地址栏中看看是谁拥有它。信息更易理解。
 - **恶意软件防护。**如果你访问了一个已知的安装病毒，间谍软件，木马，或其他危险软件（也称为恶意软件）的网站 Firefox 3 会警告你。你可以[点这里](https://www.mozilla.com/firefox/its-an-attack.html)看看警告是怎样的。
-- **伪造网站保护加强。** 现在，当您访问的网站被怀疑是伪造时，会出现一个特殊的网页。[点击这里](https://www.mozilla.com/firefox/its-a-trap.html)看看是什么样子。
+- **伪造网站保护加强。** 现在，当你访问的网站被怀疑是伪造时，会出现一个特殊的网页。[点击这里](https://www.mozilla.com/firefox/its-a-trap.html)看看是什么样子。
 
 - **更容易理解的 SSL 错误**。遇到无效的 SSL 证书时会包含清楚的错误描述，使其更易于理解是哪里发生了问题。
 - **过期附件组件防护。** 现在 Firefox 3 的自动检查插件和插件版本并禁用过时的，不安全的版本。
@@ -132,7 +132,7 @@ slug: Mozilla/Firefox/Releases/3
 
 #### 性能
 
-- **可靠性。**Firefox 3 使用安全的数据库格式保存书签，历史记录，cookies，及偏好。这意味着，即使系统崩溃，您的数据也免受损失。
+- **可靠性。**Firefox 3 使用安全的数据库格式保存书签，历史记录，cookies，及偏好。这意味着，即使系统崩溃，你的数据也免受损失。
 - **速度。** Firefox 3 有了较大的性能提升，完全取代了部分软件：包括图形屏幕处理，以及页面布局工作的处理等。
 - **更少的内存占用。** Firefox 3 的内存使用比以往任何时候都有效，有超过 300 个内存“泄漏”漏洞得以修复，以及可帮助自动查找和处置泄漏内存的新功能被添加进来。
 

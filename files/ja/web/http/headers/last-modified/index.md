@@ -69,7 +69,7 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Last-Modified")}}
+{{Compat}}
 
 ## 関連情報
 

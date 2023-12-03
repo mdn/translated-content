@@ -16,7 +16,7 @@ for ([initialExpression]; [condition]; [incrementExpression]) statement;
 3. 執行 `statement`。若要執行多個語句，就使用區塊語法（`{ ... }`）把這些語句群組化。
 4. 執行更新表達式 `incrementExpression`，並回到第 2 步驟。
 
-**範例**
+## 範例
 
 以下函數內含 `for` 語法，計數至下拉式選單的已選擇選項的數目為止（Select 物件允許複選）。`for` 語法宣告變數 `i` 並以 0 初始化。他會檢驗 `i` 是否小於 `Select` 物件的選項數目，持續執行 `if` 語句，並在每一次循環之後以 1 遞增 `i`。
 

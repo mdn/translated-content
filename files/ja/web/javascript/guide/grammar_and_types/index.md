@@ -709,7 +709,7 @@ console.log(str); // この文字列は複数行にわたって分解されま�
 - [制御フローとエラー処理](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [ループと反復処理](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [関数](/ja/docs/Web/JavaScript/Guide/Functions)
-- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 次章では、制御フローの構造とエラー処理について見ていきます。
 

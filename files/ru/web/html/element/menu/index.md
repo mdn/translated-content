@@ -20,10 +20,10 @@ slug: Web/HTML/Element/menu
 
 К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("label")}} {{Deprecated_inline}}
+- `label` {{Deprecated_inline}}
   - : The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.
-- {{HTMLAttrDef("type")}}
-  - : This attribute indicates the kind of menu being declared, and can be one of two values.\* `context` {{Deprecated_inline}} : Indicates the _popup menu_ state, which represents a group of commands activated through another element. This might be as a button menu referenced by a [`menu`](/ru/docs/Web/HTML/Element/button#menu) attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a [`contextmenu`](/ru/docs/HTML/Global_attributes#attr-contextmenu) attribute. This value is the default if the attribute is missing and the parent element is also a `<menu>` element.
+- `type`
+  - : This attribute indicates the kind of menu being declared, and can be one of two values.\* `context` {{Deprecated_inline}} : Indicates the _popup menu_ state, which represents a group of commands activated through another element. This might be as a button menu referenced by a [`menu`](/ru/docs/Web/HTML/Element/button#menu) attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a [`contextmenu`](/ru/docs/Web/HTML/Global_attributes#contextmenu) attribute. This value is the default if the attribute is missing and the parent element is also a `<menu>` element.
     - `toolbar`: Indicates the _toolbar_ state, which represents a toolbar consisting of a series of commands for user interaction. This might be in the form of an unordered list of {{HTMLElement("li")}} elements, or, if the element has no `<li>` element children, [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content) describing available commands. This value is the default if the attribute is missing.
 
 ## Примечания по использованию
@@ -130,10 +130,7 @@ div {
 
 ## Specifications
 
-| Specification                                                                         | Status                   | Comment                                                 |
-| ------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML WHATWG")}} | No change from latest snapshot, {{SpecName("HTML5.3")}} |
-| {{SpecName("HTML5.1", "interactive-elements.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML5.1")}}     |                                                         |
+{{Specifications}}
 
 ## Browser compatibility
 

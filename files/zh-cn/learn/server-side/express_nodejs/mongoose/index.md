@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/mongoose
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
           >Express 教程 2: 创建站点骨架</a
@@ -105,7 +105,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 ### 安装 Mongoose 和 MongoDB
 
-Mongoose 像任何其他依赖项一样，使用 NPM 将其安装在您的项目（**package.json**）中。请在项目文件夹中运行下面的命令以完成安装：
+Mongoose 像任何其他依赖项一样，使用 NPM 将其安装在你的项目（**package.json**）中。请在项目文件夹中运行下面的命令以完成安装：
 
 ```bash
 npm install mongoose
@@ -386,7 +386,7 @@ Athlete.find()
 
 查询还能做更多。请参阅 [查询](http://mongoosejs.com/docs/queries.html)（Mongoose 英文文档）。
 
-#### 文档间协同 —— population
+#### 文档间协同——population
 
 可以使用 `ObjectId` 模式字段来创建两个文档/模型实例间一对一的引用，（一组 `ObjectIds` 可创建一对多的引用）。该字段存储相关模型的 id。如果需要相关文档的实际内容，可以在查询中使用 [`populate()`](http://mongoosejs.com/docs/api.html#query_Query-populate) 方法，将 id 替换为实际数据。
 
@@ -684,7 +684,7 @@ BookInstanceSchema.virtual("url").get(function () {
   return "/catalog/bookinstance/" + this._id;
 });
 
-// 导出 BookInstancec 模型
+// 导出 BookInstance 模型
 module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 ```
 

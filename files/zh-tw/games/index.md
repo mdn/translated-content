@@ -51,7 +51,7 @@ slug: Games
   - : Tutorials and articles about game development in general.
 - [HTML5 Gamedev Starter](http://html5devstarter.enclavegames.com/)
   - : Starter for the new game developers, a curated list of links to various, useful resources around the web.
-- [js13kGames](http://js13kgames.com/)
+- [js13kGames](https://js13kgames.com/)
   - : JavaScript coding competition for HTML5 game developers with the file size limit set to 13 kilobytes. All the submitted games are available in a readable form on GitHub.
 - [Mozilla Hacks blog](https://hacks.mozilla.org/category/games/)
   - : Games category on the Mozilla Hacks blog containing interesting gamedev related articles.

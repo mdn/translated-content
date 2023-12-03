@@ -52,14 +52,11 @@ regex2.test(".\nfoo"); // true - índice 2 é o início da linha
 
 ## Especificações
 
-| Especificação                                                                          | Estado               | Comentário         |
-| -------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp.sticky")}}
+{{Compat}}
 
 ## Veja também
 

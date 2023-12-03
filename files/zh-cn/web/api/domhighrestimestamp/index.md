@@ -60,7 +60,7 @@ _这个类型没有方法。_
 
 ## 用法说明
 
-您可以通过调用 {{domxref("performance")}} 的 {{domxref("performance.now", "now()")}} 方法来获取当前的时间戳的值（自创建上下文以来经过的时间）。此方法在 {{domxref("Window")}} 和 {{domxref("Worker")}} 上下文中均可用。
+你可以通过调用 {{domxref("performance")}} 的 {{domxref("performance.now", "now()")}} 方法来获取当前的时间戳的值（自创建上下文以来经过的时间）。此方法在 {{domxref("Window")}} 和 {{domxref("Worker")}} 上下文中均可用。
 
 ## 示例
 

@@ -75,4 +75,4 @@ slug: Web/SVG/Element/textPath
 
 ## DOM 接口
 
-该元素实现了[`SVGTextPathElement`](/zh-CN/DOM/SVGTextPathElement)接口。
+该元素实现了 [`SVGTextPathElement`](/zh-CN/DOM/SVGTextPathElement) 接口。

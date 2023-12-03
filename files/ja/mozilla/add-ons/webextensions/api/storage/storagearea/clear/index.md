@@ -27,7 +27,7 @@ var clearing = browser.storage.<storageType>.clear()
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageArea.clear")}}
+{{Compat}}
 
 ## 例
 

@@ -106,7 +106,7 @@ if (!Math.fround)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.fround")}}
+{{Compat}}
 
 ## 関連情報
 

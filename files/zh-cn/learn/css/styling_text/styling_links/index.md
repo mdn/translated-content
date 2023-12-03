@@ -12,7 +12,7 @@ slug: Learn/CSS/Styling_text/Styling_links
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">学习本章节的前提：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机使用能力，HTML 基础 (学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -27,7 +27,7 @@ slug: Learn/CSS/Styling_text/Styling_links
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>
         学习如何将样式应用到链接状态，以及如何使用链接实现常见的 UI
         功能，比如导航菜单。
@@ -377,7 +377,7 @@ a[href*="http"] {
 
 最后，我们在链接上设置 {{cssxref("padding-right")}} ，为背景图片留出空间，这样就不会让它和文本重叠了。
 
-最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的[HTML 链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) ，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/Learn/CSS/Introduction_to_CSS/Selectors#Attribute_selectors)——`a[href*="http"]` ——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性，且属性的值包含 "http" 的 {{htmlelement("a")}}的元素。
+最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的 [HTML 链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors#标签属性选择器)——`a[href*="http"]`——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性，且属性的值包含“http”的 {{htmlelement("a")}} 的元素。
 
 就这样啦，尝试重新审视上面的动手练习部分，尝试这种新技术！
 

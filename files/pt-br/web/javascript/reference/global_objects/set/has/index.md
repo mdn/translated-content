@@ -48,14 +48,11 @@ set1.add({ key1: 1 }); // agora set1 contém 2 registros
 
 ## Especificações
 
-| Especificação                                                          | Status               | Comentário         |
-| ---------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-set.prototype.has', 'Set.prototype.has')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Set.has")}}
+{{Compat}}
 
 ## Veja também
 

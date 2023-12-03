@@ -15,7 +15,7 @@ sab.byteLength
 
 ## 描述
 
-`byteLength`属性是一个访问者属性，其 set 访问者函数为 `undefined`，这意味着您只能读取此属性。该值在构造共享数组时建立，并且无法更改。
+`byteLength`属性是一个访问者属性，其 set 访问者函数为 `undefined`，这意味着你只能读取此属性。该值在构造共享数组时建立，并且无法更改。
 
 ## 示例
 
@@ -32,6 +32,6 @@ sab.byteLength; // 1024
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("SharedArrayBuffer")}}

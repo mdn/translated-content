@@ -43,14 +43,11 @@ wm.set(obj, "baz");
 
 ## Especificações
 
-| Specification                                                                  | Status               | Comment             |
-| ------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.set")}}
+{{Compat}}
 
 ## Notas específicas ao Firefox
 

@@ -1,6 +1,8 @@
 ---
 title: "<track>: 埋め込みテキストトラック要素"
 slug: Web/HTML/Element/track
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}

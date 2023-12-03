@@ -42,7 +42,7 @@ slug: Web/HTML/Element/video
 - `disablepictureinpicture` {{experimental_inline}}
   - : 防止浏览器显示画中画上下文菜单或在某些情况下自动请求画中画模式。该属性可以禁用 `video` 元素的画中画特性，右键菜单中的“画中画”选项会被禁用
 - `disableRemotePlayback` {{experimental_inline}}
-  - : 布尔属性，用于在使用有线（HDMI、DVI 等）和无线技术（Miracast、Chromecast、DLNA、AirPlay 等）连接设备时，禁用远程播放功能。在 Safari 中，您可以使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作为兜底方案。
+  - : 布尔属性，用于在使用有线（HDMI、DVI 等）和无线技术（Miracast、Chromecast、DLNA、AirPlay 等）连接设备时，禁用远程播放功能。在 Safari 中，你可以使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作为兜底方案。
 - `height`
   - : 视频显示区域的高度，单位是 [CSS 像素](https://drafts.csswg.org/css-values/#px)（仅限绝对值；[不支持百分比](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)）。
 - `loop`
@@ -124,7 +124,7 @@ slug: Web/HTML/Element/video
 ```html
 <!-- Simple video example -->
 <video src="videofile.ogg" autoplay poster="posterimage.jpg">
-  抱歉，您的浏览器不支持内嵌视频，不过不用担心，你可以
+  抱歉，你的浏览器不支持内嵌视频，不过不用担心，你可以
   <a href="videofile.ogg">下载</a>
   并用你喜欢的播放器观看！
 </video>

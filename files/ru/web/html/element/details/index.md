@@ -23,7 +23,7 @@ HTML-элемент **`<details>`** используется для раскры
 
 Элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("open")}}
+- `open`
   - : Данный логический атрибут указывает, будет ли дополнительная информация отображаться пользователю при загрузке страницы. По умолчанию установлено значение false, поэтому дополнительная информация будет скрыта.
 
 ## Пример
@@ -90,10 +90,7 @@ details[open] > summary::before {
 
 ## Specifications
 
-| Specification                                                                    | Status                   | Comment            |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#the-details-element', '&lt;details&gt;')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5.1', 'semantics.html#the-details-element', '&lt;details&gt;')}} | {{Spec2('HTML5.1')}}     | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

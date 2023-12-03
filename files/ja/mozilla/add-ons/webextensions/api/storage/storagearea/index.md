@@ -26,7 +26,7 @@ StorageArea はオブジェクト型です。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageArea")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

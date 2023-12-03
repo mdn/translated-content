@@ -3,11 +3,13 @@ title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
 ---
 
-{{DefaultAPISidebar("MediaStream Recording")}}**MediaStream Recording API** 有时简称为*Media Recording API* 或者 _MediaRecorder API_, 与 [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API) 和 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 密切相关。MediaStream Recording API 使得捕获通过 {{domxref("MediaStream")}} 或者{{domxref("HTMLMediaElement")}} 对象产生的用于分析、加工或者保存到硬盘的数据成为可能。它也非常容易让人们使用。
+{{DefaultAPISidebar("MediaStream Recording")}}
+
+**MediaStream Recording API** 有时简称为 _Media Recording API_ 或者 _MediaRecorder API_，与[媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) 和 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 密切相关。MediaStream Recording API 使得捕获通过 {{domxref("MediaStream")}} 或者{{domxref("HTMLMediaElement")}} 对象产生的用于分析、加工或者保存到硬盘的数据成为可能。它也非常容易让人们使用。
 
 ## 基本概念
 
-MediaStream Recording API 由一个主接口{{domxref("MediaRecorder")}}组成，这个接口负责的所有工作是从{{domxref("MediaStream")}}获取数据并将其传递给你进行处理。数据通过一系列 {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} 事件传递，这些数据已经成为你创建 `MediaRecorder` 时所声明的格式。然后，您可以进一步处理数据，或者根据需要将其写入文件。
+MediaStream Recording API 由一个主接口{{domxref("MediaRecorder")}}组成，这个接口负责的所有工作是从{{domxref("MediaStream")}}获取数据并将其传递给你进行处理。数据通过一系列 {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} 事件传递，这些数据已经成为你创建 `MediaRecorder` 时所声明的格式。然后，你可以进一步处理数据，或者根据需要将其写入文件。
 
 ### 录制过程概述
 
@@ -80,7 +82,7 @@ setTimeout((event) => {
 
 ### 检查潜在的输入源
 
-如果你的目标是记录摄像头或麦克风输入，您可能希望在构建 `MediaRecorder` 之前检查可用的输入设备。这时，你需要调用 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} 来得到可使用的媒体设备。你可以检查此列表，发现潜在的设备，甚至在有需要的时候过滤掉设备。
+如果你的目标是记录摄像头或麦克风输入，你可能希望在构建 `MediaRecorder` 之前检查可用的输入设备。这时，你需要调用 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} 来得到可使用的媒体设备。你可以检查此列表，发现潜在的设备，甚至在有需要的时候过滤掉设备。
 
 在这块代码中，`enumerateDevices()` 被用来检查可利用的设备，找到那些音频输入设备，创建{{HTMLElement("option")}} 元素，之后添加到{{HTMLElement("select")}}元素，代表输入源选择器 .
 

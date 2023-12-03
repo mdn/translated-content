@@ -3,6 +3,8 @@ title: Parent object (親オブジェクト)
 slug: Glossary/Parent_object
 ---
 
+{{GlossarySidebar}}
+
 指定された {{glossary("property", "プロパティ")}} や {{glossary("method", "メソッド")}} が所属している {{glossary("object", "オブジェクト")}}。
 
 ## 関連項目

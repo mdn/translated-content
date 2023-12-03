@@ -11,7 +11,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"

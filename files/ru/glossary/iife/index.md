@@ -3,6 +3,8 @@ title: IIFE
 slug: Glossary/IIFE
 ---
 
+{{GlossarySidebar}}
+
 **IIFE** (Immediately Invoked Function Expression) это {{glossary("JavaScript")}} {{glossary("функция")}}, которая выполняется сразу же после того, как она была определена.
 
 ```

@@ -79,14 +79,11 @@ console.log(it.next()); // throws StopIteration (Como o generator está fechado)
 
 ## Especificações
 
-| Especificações                                                         | Status               | Comentário        |
-| ---------------------------------------------------------------------- | -------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-generator-objects', 'Generator objects')}}     | {{Spec2('ES6')}}     | Definição Inicial |
-| {{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Generator")}}
+{{Compat}}
 
 ## Veja Também
 

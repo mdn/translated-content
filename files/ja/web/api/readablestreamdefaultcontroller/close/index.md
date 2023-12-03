@@ -1,31 +1,34 @@
 ---
-title: ReadableStreamDefaultController.close()
+title: "ReadableStreamDefaultController: close() メソッド"
+short-title: close()
 slug: Web/API/ReadableStreamDefaultController/close
+l10n:
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStreamDefaultController")}} インターフェイスの **`close()`** メソッドは、関連するストリームを閉じます。
+**`close()`** は {{domxref("ReadableStreamDefaultController")}} インターフェイスのメソッドで、関連するストリームを閉じます。
 
-リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。 ストリームを完全に取り除き、キューに入れられたチャンクを破棄する場合は、{{domxref("ReadableStream.cancel()")}} または {{domxref("ReadableStreamDefaultReader.cancel()")}} を使用します。
+リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。 ストリームを完全に取り除き、キューに入れられたチャンクを破棄する場合は、{{domxref("ReadableStream.cancel()")}} または {{domxref("ReadableStreamDefaultReader.cancel()")}} を使用してください。
 
 ## 構文
 
-```
-readableStreamDefaultController.close();
+```js-nolint
+close()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-`undefined`。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : ソースオブジェクトは `ReadableStreamDefaultController` ではありません。
 
 ## 例
@@ -35,6 +38,7 @@ readableStreamDefaultController.close();
 ボタンが押されると、生成を停止し、{{domxref("ReadableStreamDefaultController.close()")}} を使用してストリームを閉じ、ストリームからデータを読み取る別の関数を実行します。
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
@@ -49,7 +53,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
@@ -66,10 +70,15 @@ const stream = new ReadableStream({
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableStreamDefaultController.close")}}
+{{Compat}}
+
+## 関連情報
+
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

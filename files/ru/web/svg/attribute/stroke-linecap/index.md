@@ -11,6 +11,8 @@ slug: Web/SVG/Attribute/stroke-linecap
 
 В качестве атрибута представления он может применяться к любому элементу, но он влияет только на следующие семь элементов: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -38,7 +40,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## Нотации
 

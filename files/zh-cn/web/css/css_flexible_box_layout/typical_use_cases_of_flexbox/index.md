@@ -59,7 +59,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 
 不管你使用的是弹性盒还是网格来进行布局，这些布局方式都只对弹性盒容器或者网格容器的（直接）子元素生效。这也意味着即使你的 `content` 长度不定，组件在高度上仍会充满整个弹性盒容器或者网格容器。但任何使用常规块布局的方法都会导致 `content` 内容较少时 `footer` 上升到 `content` 下方而不是容器的底部。![Two card components showing that the internals of the component do not stretch with the wrapper.](flex-cards.png)
 
-弹性盒就能解决常规块布局的问题。我们创建一个弹性盒容器，并启用 {{cssxref("flex-direction")}}`: column` 。之后我们在 `content` 部分启用 `flex: 1` —— `flex: 1 1 0` 的缩略形式，这个元素就可以在 `flex-basis` 为零的基础上伸缩。因为这是唯一一个可以延伸的元素，它会占据所有在弹性盒容器中可以占据的空间，同时将 `footer` 推至底部。如果你移除例子里的属性 `flex` 你就会看见 `footer` 回到 `content` 底部。
+弹性盒就能解决常规块布局的问题。我们创建一个弹性盒容器，并启用 {{cssxref("flex-direction")}}`: column` 。之后我们在 `content` 部分启用 `flex: 1`——`flex: 1 1 0` 的缩略形式，这个元素就可以在 `flex-basis` 为零的基础上伸缩。因为这是唯一一个可以延伸的元素，它会占据所有在弹性盒容器中可以占据的空间，同时将 `footer` 推至底部。如果你移除例子里的属性 `flex` 你就会看见 `footer` 回到 `content` 底部。
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/cards.html", '100%', 800)}}
 
@@ -69,7 +69,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 
 这种模式随处可见，用于评论、以及其他需要显示图片和描述的地方。使用 flexbox 可以允许包含图片的媒体对象部分从图片中获取其尺寸调整信息，并对媒体对象的主体进行弹性布局，以占用剩余空间。
 
-在下面的实例中，您可以看到我们的媒体对象。使用对齐属性来将交叉轴上的元素对齐到`flex-start`，然后为`.content` flex 元素设置为`flex: 1`。与上面的列布局卡片模式一样，启用`flex: 1`表示此部分卡片可以延伸。
+在下面的实例中，你可以看到我们的媒体对象。使用对齐属性来将交叉轴上的元素对齐到`flex-start`，然后为`.content` flex 元素设置为`flex: 1`。与上面的列布局卡片模式一样，启用`flex: 1`表示此部分卡片可以延伸。
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/media.html", '100%', 600)}}
 

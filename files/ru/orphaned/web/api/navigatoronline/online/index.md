@@ -51,7 +51,7 @@ window.addEventListener("online", function(e) {alert("online");})
 
 ## Совместимость в браузерах
 
-{{Compat("api.NavigatorOnLine.onLine")}}
+{{Compat}}
 
 ## Примечание
 

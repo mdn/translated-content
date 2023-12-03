@@ -93,7 +93,7 @@ document.getElementById("output").innerHTML =
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [`element.querySelectorAll`](/zh-CN/docs/DOM/Element.querySelectorAll)
 - [`document.querySelector`](/zh-CN/docs/DOM/Document.querySelector)

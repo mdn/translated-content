@@ -48,7 +48,7 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 | Windows   | [Notepad](http://en.wikipedia.org/wiki/Notepad_%28software%29)                                                                                                                                                                             | [Notepad++](http://notepad-plus-plus.org/)[Visual Studio Code](https://www.visualstudio.com/)[Web Storm](https://www.jetbrains.com/webstorm/)[Brackets](http://brackets.io/)[ShiftEdit](https://shiftedit.net/) |
 | Mac OS    | [TextEdit](http://en.wikipedia.org/wiki/TextEdit)                                                                                                                                                                                          | [TextWrangler](http://www.barebones.com/products/textwrangler/)[Visual Studio Code](https://www.visualstudio.com/)[Brackets](http://brackets.io/)[ShiftEdit](https://shiftedit.net/)                            |
 | Linux     | [Vi](http://en.wikipedia.org/wiki/Vi) (All UNIX) [GEdit](http://en.wikipedia.org/wiki/Gedit) (Gnome) [Kate](http://en.wikipedia.org/wiki/Kate_%28text_editor%29) (KDE) [LeafPad](<http://en.wikipedia.org/wiki/Kate_(text_editor)>) (Xfce) | [Emacs](http://www.gnu.org/software/emacs/) [Vim](http://www.vim.org/)[Visual Studio Code](https://www.visualstudio.com/)[Brackets](http://brackets.io/)[ShiftEdit](https://shiftedit.net/)                     |
-| Chrome OS |                                                                                                                                                                                                                                            | [ShiftEdit](https://shiftedit.net/)                                                                                                                                                                             |
+| ChromeOS  |                                                                                                                                                                                                                                            | [ShiftEdit](https://shiftedit.net/)                                                                                                                                                                             |
 
 이것은 하나의 고급 텍스트 에디터의 스크린샷입니다:
 
@@ -96,7 +96,7 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
       <td><a href="http://cyberduck.de/">Cyberduck</a></td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td><a href="https://shiftedit.net/">ShiftEdit</a> (All OS)</td>
       <td colspan="1"></td>
     </tr>
@@ -107,14 +107,14 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 
 알다시피, 웹사이트를 보기 위해 웹 브라우저가 필요합니다. 개인적인 사용을 위한 [수 십개](http://en.wikipedia.org/wiki/List_of_web_browsers)의 브라우저 선택권이 있습니다. 그러나, 웹 사이트를 개발할 때, 대부분의 사람들이 당신의 사이트를 잘 이용하기 위해서는 다음의 주요 브라우저에서 테스트해야합니다.
 
-- [Mozilla Firefox(파이어폭스)](https://www.mozilla.org/en-US/firefox/new/)
+- [Mozilla Firefox(Firefox)](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome(크롬)](https://www.google.fr/chrome/browser/)
 - [Microsoft Internet Explorer(인터넷 익스플로러)](http://windows.microsoft.com/en-US/internet-explorer/download-ie)
 - [Apple Safari(사파리)](http://www.apple.com/safari/)
 
 만약 당신이 기술적인 플랫폼이나 국가 등 특정한 그룹을 목적으로 한다면, [Opera](http://www.opera.com/), [Konqueror](http://www.konqueror.org/), [UC Browser](http://www.ucweb.com/ucbrowser/) 같은 추가적인 브라우저도 테스트해야할 지도 모릅니다.
 
-그러나 몇몇의 브라우저는 특정한 운영체제에서만 동작하기 때문에 테스트하는 것이 복잡합니다. 애플의 사파리는 iOS와 Max OS 에서만 동작하는 반면에, 인터넷 익스플로러는 윈도우에서만 동작합니다. [Browsershots](http://browsershots.org/)나 [Browserstack](http://www.browserstack.com/) 같은 서비스를 이용하는 것이 좋습니다. Browsershots은 다양한 브라우저에서 볼 때, 웹사이트의 스크린샷을 제공합니다. Browserstack은 사실 당신에게 가상머신에서 완전한 원거리 접근을 가능하게 해줍니다. 그래서 당신은 대부분의 공통 환경에서 사이트를 테스트할 수 있습니다. 그렇지 않으면, 당신 자신의 가상 머신을 설치하면 됩니다. 하지만 이것은 약간의 전문지식이 필요한 작업입니다. (만약 당신이 이런 길을 가고자 한다면, 마이크로소프트에서는 [modern.ie](https://modern.ie).에서 사용 준비가 완료된 가상 머신이 포함된 개발자를 위한 툴들을 가지고 있습니다.)
+그러나 몇몇의 브라우저는 특정한 운영체제에서만 동작하기 때문에 테스트하는 것이 복잡합니다. 애플의 Safari는 iOS와 Max OS 에서만 동작하는 반면에, 인터넷 익스플로러는 윈도우에서만 동작합니다. [Browsershots](http://browsershots.org/)나 [Browserstack](http://www.browserstack.com/) 같은 서비스를 이용하는 것이 좋습니다. Browsershots은 다양한 브라우저에서 볼 때, 웹사이트의 스크린샷을 제공합니다. Browserstack은 사실 당신에게 가상머신에서 완전한 원거리 접근을 가능하게 해줍니다. 그래서 당신은 대부분의 공통 환경에서 사이트를 테스트할 수 있습니다. 그렇지 않으면, 당신 자신의 가상 머신을 설치하면 됩니다. 하지만 이것은 약간의 전문지식이 필요한 작업입니다. (만약 당신이 이런 길을 가고자 한다면, 마이크로소프트에서는 [modern.ie](https://modern.ie).에서 사용 준비가 완료된 가상 머신이 포함된 개발자를 위한 툴들을 가지고 있습니다.)
 
 물론, 실제 장치에서 몇 번의 테스트를 해봐야한다. 특히, 실제 모바일 장치에서는. 모바일 장치 시뮬레이션은 새롭고, 진화하고 있는 기술이고 데스트탑 시뮬레이션보다 신뢰가 떨어진다. 물론, 모바일 장치는 돈이 든다. 그래서 우리는[Open Device Lab initiative](http://opendevicelab.com/)에서 보는 것을 제안한다. 당신이 너무 많은 소비없이 많은 플랫폼을 테스트하고 싶다면, 장치를 공유할 수 있다.
 

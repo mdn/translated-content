@@ -65,7 +65,7 @@ var creating = browser.tabs.create(
 
 ## ブラウザー互換状況
 
-{{Compat("webextensions.api.tabs.create", 10)}}
+{{Compat}}
 
 ## 例
 

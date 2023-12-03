@@ -327,7 +327,7 @@ d.speak(); // Mitzie makes a noise.
 
 你可能希望在派生数组类 *`MyArray` *中返回 {{jsxref("Array")}}对象。这种 species 方式允许你覆盖默认的构造函数。
 
-例如，当使用像{{jsxref("Array.map", "map()")}}返回默认构造函数的方法时，您希望这些方法返回一个父`Array`对象，而不是`MyArray`对象。{{jsxref("Symbol.species")}} 符号可以让你这样做：
+例如，当使用像{{jsxref("Array.map", "map()")}}返回默认构造函数的方法时，你希望这些方法返回一个父`Array`对象，而不是`MyArray`对象。{{jsxref("Symbol.species")}} 符号可以让你这样做：
 
 ```js
 class MyArray extends Array {
@@ -405,15 +405,15 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 
 无法重新定义类。尝试这样做会产生一个 `SyntaxError`.
 
-如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 [Firefox bug 1428672](https://bugzil.la/1428672).) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
+如果你正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且你两次“运行”具有相同名称的类的定义，你将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 [Firefox bug 1428672](https://bugzil.la/1428672).) 在 Chrome 开发者工具中执行类似的操作会给你一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
 ## 参见
 
-- {{jsxref("Functions", "Functions", "", "true")}}
-- {{jsxref("Statements/class", "class declaration", "", "true")}}
-- {{jsxref("Operators/class", "class expression", "", "true")}}
-- {{jsxref("Classes/Public_class_fields", "Public class fields", "", "true")}}
-- {{jsxref("Classes/Private_class_fields", "Private class fields", "", "true")}}
+- {{jsxref("Functions", "函数", "", "true")}}
+- {{jsxref("Statements/class", "类声明", "", "true")}}
+- {{jsxref("Operators/class", "类表达式", "", "true")}}
+- {{jsxref("Classes/Public_class_fields", "公有类字段", "", "true")}}
+- {{jsxref("Classes/Private_properties", "私有属性", "", "true")}}
 - {{jsxref("Operators/super", "super")}}
 - [Blog post: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
 - [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)

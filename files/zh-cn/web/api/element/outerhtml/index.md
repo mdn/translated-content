@@ -101,7 +101,7 @@ console.log(p.nodeName);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - MSDN: [outerHTML 属性](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)
 - [You Don't Need jQuery](http://youmightnotneedjquery.com/)

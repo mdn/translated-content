@@ -40,13 +40,11 @@ Para mais exemplos, veja <https://resourcepolicy.fyi/>.
 
 ## Especificações
 
-| Especificação                                                 | Status                                                     | Comentários       |
-| ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
-| {{SpecName("Fetch", '#cross-origin-resource-policy-header')}} | {{Spec2("Fetch", '#cross-origin-resource-policy-header')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Cross-Origin-Resource-Policy")}}
+{{Compat}}
 
 ## Veja também
 

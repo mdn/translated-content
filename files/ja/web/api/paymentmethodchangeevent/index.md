@@ -31,4 +31,4 @@ _このインターフェイスは {{domxref("PaymentRequestUpdateEvent")}} か�
 
 ## ブラウザーの互換性
 
-{{Compat("api.PaymentMethodChangeEvent")}}
+{{Compat}}

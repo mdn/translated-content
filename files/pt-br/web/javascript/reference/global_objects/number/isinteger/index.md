@@ -62,14 +62,11 @@ Number.isInteger =
 
 ## Especificações
 
-| Especificação                                                        | Status               | Comentário         |
-| -------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-number.isinteger', 'Number.isInteger')}}     | {{Spec2('ES6')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.isInteger")}}
+{{Compat}}
 
 ## Ver tabém
 

@@ -16,11 +16,11 @@ slug: Web/CSS/scroll-behavior
 ## Синтаксис
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
-/* Глобальные свойства */
+/* Глобальные значения */
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: unset;
@@ -95,9 +95,7 @@ scroll-page {
 
 ## Характеристики
 
-| Характеристика                                                            | Статус                  | Комментарий           |
-| ------------------------------------------------------------------------- | ----------------------- | --------------------- |
-| {{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}} | {{Spec2('CSSOM View')}} | Initial specification |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

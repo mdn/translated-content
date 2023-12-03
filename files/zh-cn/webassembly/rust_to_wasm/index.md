@@ -11,8 +11,8 @@ slug: WebAssembly/Rust_to_Wasm
 
 Rust 和 WebAssembly 有两大主要用例：
 
-- 构建完整应用 —— 整个 Web 应用都基于 Rust 开发！
-- 构建应用的组成部分 —— 在现存的 JavaScript 前端中使用 Rust。
+- 构建完整应用——整个 Web 应用都基于 Rust 开发！
+- 构建应用的组成部分——在现存的 JavaScript 前端中使用 Rust。
 
 目前，Rust 团队正专注于第二种用例，因此我们也将着重介绍它。对于第一种用例，可以参阅 [`yew`](https://github.com/DenisKolodin/yew) 这类项目。
 
@@ -155,7 +155,7 @@ extern {
 
 你可能会疑惑这个函数是什么，你的疑惑可能是正确的：这是 [the `alert` function provided by JavaScript](/zh-CN/docs/Web/API/Window/alert)！我们将在下一节中调用这个函数。
 
-当你想调用新的 JavaScript 函数时，你可以在这里写他们，`wasm-bindgen` 将负责为您设置一切。并非一切都得到支持，但我们正在努力！如果缺少某些内容，请 [file bugs](https://github.com/rustwasm/wasm-bindgen/issues/new) 。
+当你想调用新的 JavaScript 函数时，你可以在这里写他们，`wasm-bindgen` 将负责为你设置一切。并非一切都得到支持，但我们正在努力！如果缺少某些内容，请 [file bugs](https://github.com/rustwasm/wasm-bindgen/issues/new) 。
 
 #### 编写能够在 JavaScript 中调用的 Rust 函数
 
@@ -174,7 +174,7 @@ pub fn greet(name: &str) {
 
 `format!` 在这里有两个参数，一个格式化字符串和一个要填入的变量。格式化字符串是 `"Hello, {}!"` 部分。它可以包含一个或多个 `{}`，变量将会被填入其中。传递的变量是 `name`，也就是这个函数的参数。所以当我们调用 `greet("Steve")`时我们就能看到 `"Hello, Steve!"`。
 
-这个传递到了 `alert()`，所以当我们调用这个函数时，我们应该能看到他谈弹出了一个带有 "Hello, Steve!" 的消息框。
+上述字符串被传递到了 `alert()`，所以当我们调用这个函数时，我们应该能看到一个消息框弹出，其中的内容为“Hello, Steve!”。
 
 我们的库写完了，是时候构建它了。
 
@@ -267,7 +267,7 @@ cd site
 }
 ```
 
-请注意，您需要在依赖项部分的 `@` 之后填写自己的用户名。
+请注意，你需要在依赖项部分的 `@` 之后填写自己的用户名。
 
 接下来，我们需要配置 Webpack。创建 `webpack.config.js` 并输入：
 
@@ -307,7 +307,7 @@ js.then((js) => {
 });
 ```
 
-请注意，您需要再次填写您的 npm 用户名。
+请注意，你需要再次填写你的 npm 用户名。
 
 这将从`node_modules`文件夹导入我们的模块。这不是最佳做法，但这里只做一个演示，因此暂时就这样用。加载后，它将从该模块调用`greet`函数，并传入字符串“WebAssembly”参数。注意这里看上去没有什么特别的，但是我们正在调用 Rust 代码！就 JavaScript 代码所知，这只是一个普通模块。
 

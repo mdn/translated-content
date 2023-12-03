@@ -65,7 +65,7 @@ slug: Web/HTML/Element/time
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : 요소의 시간 또는 날짜 값. 아래에서 설명하는 형식 중 하나여야 합니다.
 
 ## 사용 일람

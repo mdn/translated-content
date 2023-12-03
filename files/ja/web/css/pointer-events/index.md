@@ -122,7 +122,7 @@ a[href="http://example.com"]
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.pointer-events")}}
+{{Compat}}
 
 ## 関連情報
 

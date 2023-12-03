@@ -3,7 +3,7 @@ title: Repo (リポジトリ)
 slug: Glossary/Repo
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Glossary")}}
+{{GlossarySidebar}}
 
 {{Glossary("Git")}}、{{Glossary("SVN")}}のようなバージョン管理システムでは、リポジトリ(repo)とはアプリケーションのソースコードと、さまざまなメタデータが一緒にホスティングされる場所です。
 

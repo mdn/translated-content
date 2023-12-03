@@ -92,20 +92,13 @@ La sintaxis de cada capa es la siguiente:
 
 Tomando una declaración válida, la propiedad `background` inicia las propiedades individuales a sus valores iniciales para después asignarles los valores especificadas explícitamente en la declaración. No hay que definir un valor por cada propiedad individual, se cambia solo las que necesitamos en relación al valor por defecto.
 
-## Especificaciones
+### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#background)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/colors.html#propdef-background)
-- [CSS 3](http://www.w3.org/TR/2005/WD-css3-background-20050216/#the-background)
+{{Specifications}}
 
-## Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Mínima versión |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ## Ver también
 

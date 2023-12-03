@@ -50,7 +50,7 @@ Navigational upgrades to third-party resources brings a significantly higher pot
 
 ### Finding insecure requests
 
-通过 {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP 头部和 {{CSP("report-uri")}} 指令，您可以设置执行策略和报告策略，如下所示：
+通过 {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP 头部和 {{CSP("report-uri")}} 指令，你可以设置执行策略和报告策略，如下所示：
 
 ```plain
 Content-Security-Policy: upgrade-insecure-requests; default-src https:

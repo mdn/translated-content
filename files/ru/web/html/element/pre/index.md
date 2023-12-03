@@ -22,11 +22,11 @@ slug: Web/HTML/Element/pre
 
 Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cols")}} {{non-standard_inline}}
+- `cols` {{non-standard_inline}}
   - : Содержит _предпочтительное_ количество символов, которое должна иметь строка. Это был нестандартный синоним [`width`](/ru/docs/Web/HTML/Element/pre#width). Чтобы добиться такого эффекта, используйте CSS {{Cssxref("width")}}.
-- {{htmlattrdef("width")}}
+- `width`
   - : Содержит _предпочтительное_ количество символов, которое должна иметь строка. Хотя технически он все ещё реализован, этот атрибут не имеет визуального эффекта; чтобы достичь такого эффекта, используйте CSS {{Cssxref("width")}}.
-- {{htmlattrdef("wrap")}} {{non-standard_inline}}
+- `wrap` {{non-standard_inline}}
   - : Подсказка, указывающая, как должен происходить перенос. В современных браузерах этот атрибут игнорируется, и никакого визуального эффекта не приводит; чтобы достичь такого эффекта, используйте CSS {{Cssxref("white-space")}}.
 
 ## Пример
@@ -80,11 +80,7 @@ body {
 
 ## Характеристики
 
-| Спецификация                                                                      | Статус                   | Комментарий                                          |
-| --------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-pre-element', '&lt;pre&gt;')}}      | {{Spec2('HTML WHATWG')}} | No significant change from {{SpecName("HTML5 W3C")}} |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML5 W3C')}}   | No significant change from {{SpecName("HTML4.01")}}  |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;pre&gt;')}}               | {{Spec2('HTML4.01')}}    | Deprecated the `cols` attribute                      |
+{{Specifications}}
 
 ## Совместимость браузера
 

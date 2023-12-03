@@ -1,8 +1,9 @@
 ---
-title: KeyboardEvent.initKeyEvent()
+title: "KeyboardEvent: initKeyEvent() メソッド"
+short-title: initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 l10n:
-  sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("UI Events")}}

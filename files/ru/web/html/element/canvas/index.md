@@ -18,11 +18,11 @@ slug: Web/HTML/Element/canvas
 
 Этот элемент включает [global attributes](/ru/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("height")}}
+- `height`
   - : Высота в координатном пространстве в CSS пикселях. По умолчанию 150.
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}}
+- `moz-opaque` {{non-standard_inline}}
   - : Дай холсту знать будет ли фактором или нет полупрозрачность. Если холст знает что нет полупрозрачности, производительность рисования может быть оптимизирована.
-- {{htmlattrdef("width")}}
+- `width`
   - : Ширина в координатном пространстве в CSS пикселях. По умолчанию 300.
 
 ## Описание

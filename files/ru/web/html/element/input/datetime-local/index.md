@@ -522,10 +522,7 @@ daySelect.onchange = function () {
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                   | Comments |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html##local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}  | {{Spec2('HTML5 W3C')}}   |          |
+{{Specifications}}
 
 ## Browser compatibility
 

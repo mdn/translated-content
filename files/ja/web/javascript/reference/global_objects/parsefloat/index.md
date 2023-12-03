@@ -84,7 +84,7 @@ parseFloat("900719925474099267n");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.parseFloat")}}
+{{Compat}}
 
 ## 関連情報
 

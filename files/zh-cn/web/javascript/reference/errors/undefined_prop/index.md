@@ -36,7 +36,7 @@ foo.bar; // ReferenceError: reference to undefined property "bar"
 
 ### 无效的
 
-为了避免错误，您需要向对象添加 `bar` 的定义或在尝试访问 `bar` 属性之前检查 `bar` 属性的存在；一种检查的方式是使用 {{jsxref("Object.prototype.hasOwnProperty()")}} 方法。如下所示：
+为了避免错误，你需要向对象添加 `bar` 的定义或在尝试访问 `bar` 属性之前检查 `bar` 属性的存在；一种检查的方式是使用 {{jsxref("Object.prototype.hasOwnProperty()")}} 方法。如下所示：
 
 ```js example-good
 "use strict";

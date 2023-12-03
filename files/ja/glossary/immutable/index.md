@@ -3,6 +3,8 @@ title: Immutable (イミュータブル)
 slug: Glossary/Immutable
 ---
 
+{{GlossarySidebar}}
+
 イミュータブル（不変）{{glossary("object","オブジェクト")}}とは、内容を変更できないオブジェクトのことです。
 オブジェクトは、さまざまな理由でイミュータブルである可能性があります。
 

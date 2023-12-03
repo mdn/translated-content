@@ -1,26 +1,23 @@
 ---
-title: Navigator.permissions
+title: "Navigator: permissions プロパティ"
+short-title: permissions
 slug: Web/API/Navigator/permissions
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
-**`Navigator.permissions`** 読み取り専用プロパティは、[Permissions API](/ja/docs/Web/API/Permissions_API) の対象となる API のパーミッションの状態を照会および更新するために使用できる {{domxref("Permissions")}} オブジェクトを返します。
-
-## 構文
-
-```
-permissionsObj = globalObj.navigator.permissions
-```
+**`Navigator.permissions`** は読み取り専用プロパティで、[権限 API](/ja/docs/Web/API/Permissions_API) の対象となる API のパーミッションの状態を照会および更新するために使用できる {{domxref("Permissions")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("Permissions")}} オブジェクト。
+{{domxref("Permissions")}} オブジェクトです。
 
 ## 例
 
 ```js
-navigator.permissions.query({ name: "geolocation" }).then(function (result) {
+navigator.permissions.query({ name: "geolocation" }).then((result) => {
   if (result.state === "granted") {
     showMap();
   } else if (result.state === "prompt") {
@@ -36,9 +33,9 @@ navigator.permissions.query({ name: "geolocation" }).then(function (result) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Navigator.permissions")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Permissions API](/ja/docs/Web/API/Permissions_API)
+- [権限 API](/ja/docs/Web/API/Permissions_API)
 - {{domxref("Navigator")}}

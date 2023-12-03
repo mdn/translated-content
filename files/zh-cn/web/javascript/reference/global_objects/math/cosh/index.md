@@ -65,10 +65,11 @@ Math.cosh =
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Math.acosh()")}} {{experimental_inline}}
-- {{jsxref("Math.asinh()")}} {{experimental_inline}}
-- {{jsxref("Math.atanh()")}} {{experimental_inline}}
-- {{jsxref("Math.sinh()")}} {{experimental_inline}}
-- {{jsxref("Math.tanh()")}} {{experimental_inline}}
+- [`core-js` 中 `Math.cosh` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.sinh()")}}
+- {{jsxref("Math.tanh()")}}

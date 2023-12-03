@@ -14,7 +14,7 @@ slug: Web/CSS/backface-visibility
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 backface-visibility: visible;
 backface-visibility: hidden;
 
@@ -175,9 +175,7 @@ td {
 
 ## Спецификации
 
-| Спецификация                                                                            | Статус                        | Комментарий                 |
-| --------------------------------------------------------------------------------------- | ----------------------------- | --------------------------- |
-| {{SpecName('CSS Transforms 2', '#propdef-backface-visibility', 'backface-visibility')}} | {{Spec2('CSS Transforms 2')}} | Первоначальное определение. |
+{{Specifications}}
 
 {{cssinfo}}
 

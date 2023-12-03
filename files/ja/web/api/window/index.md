@@ -47,7 +47,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window.console")}} {{ReadOnlyInline}}
   - : ブラウザーのデバッグコンソールへアクセスするための console オブジェクトへの参照を返します。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : {{domxref("CustomElementRegistry")}} オブジェクトへの参照を返します。これは新しい[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)の登録や、以前に登録したカスタム要素の情報を取得するために使用できます。
+  - : {{domxref("CustomElementRegistry")}} オブジェクトへの参照を返します。これは新しい[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)の登録や、以前に登録したカスタム要素の情報を取得するために使用できます。
 - {{domxref("crypto_property", "Window.crypto")}} {{readOnlyInline}}
   - : ブラウザーの crypto オブジェクトを返します。
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}

@@ -5,7 +5,7 @@ slug: Web/API/Window/customElements
 
 {{APIRef}}
 
-La propriété en lecture seule `customElements` de l'interface {{domxref("Window")}} renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux [éléments personnalisés](/fr-FR/docs/Web/Web_Components/Using_custom_elements) et obtenir des informations sur des éléments personnalisés enregistrés.
+La propriété en lecture seule `customElements` de l'interface {{domxref("Window")}} renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux [éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) et obtenir des informations sur des éléments personnalisés enregistrés.
 
 ## Syntaxe
 

@@ -129,13 +129,11 @@ Each shadow in the list (treating `none` as a 0-length list) is interpolated via
 
 ## Specifications
 
-| Specification                                                 | Status                        | Comment            |
-| ------------------------------------------------------------- | ----------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}} | {{Spec2('CSS3 Backgrounds')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.box-shadow")}}
+{{Compat}}
 
 ## See also
 

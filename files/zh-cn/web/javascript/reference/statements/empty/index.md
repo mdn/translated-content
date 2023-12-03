@@ -61,6 +61,6 @@ else
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/block", "块语句")}}

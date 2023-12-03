@@ -31,7 +31,7 @@ slug: Web/SVG/Element/feMorphology
 
 ## DOM 接口
 
-该元素实现了[`SVGFEMorphologyElement`](/zh-CN/DOM/SVGFEMorphologyElement)接口。
+该元素实现了 [`SVGFEMorphologyElement`](/zh-CN/DOM/SVGFEMorphologyElement) 接口。
 
 ## 参见
 

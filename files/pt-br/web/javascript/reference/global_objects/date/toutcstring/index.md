@@ -48,13 +48,11 @@ let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 
 ## Especificações
 
-| Especificação                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toUTCString")}}
+{{Compat}}
 
 ## Veja também
 

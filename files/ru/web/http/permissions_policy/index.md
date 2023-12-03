@@ -18,7 +18,7 @@ Feature Policy позволяет веб-разработчику выбороч
 - Изменить поведение автозапуска видео на мобильных устройствах.
 - Ограничить доступ сайта к камере и микрофону.
 - Разрешить использование API полноэкранного режима в iframe.
-- Блокировать использование устаревших API, например [synchronous XHR](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) and {{domxref("document.write()")}}.
+- Блокировать использование устаревших API, например [synchronous XHR](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest) and {{domxref("document.write()")}}.
 - Проверять соответствие размера изображений размерам области просмотра.
 
 ## Concepts and usage
@@ -102,13 +102,11 @@ The features include:
 
 ## Specifications
 
-| Specification                                                                       | Status                      | Comment                                                                                                                                                                                 |
-| ----------------------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Feature Policy','#feature-policy-http-header-field','Feature-Policy')}} | {{Spec2('Feature Policy')}} | Initial definition. Defines the {{httpheader('Feature-Policy')}} header. Directives are defined in the specs for the features they control. See individual directive pages for details. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat}}
 
 ## See also
 

@@ -45,7 +45,7 @@ DBOpenRequest.onsuccess = function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBDatabase.version")}}
+{{Compat}}
 
 ## 関連情報
 

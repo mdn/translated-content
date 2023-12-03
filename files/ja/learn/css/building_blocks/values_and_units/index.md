@@ -288,7 +288,7 @@ RGB に RGBA があるように、HSL には同様な HSLA があり、アルフ
 
 上記の例を通じて、キーワードが値として使われる場所を見てきました (例えば、`<color>` キーワードの例として `red`, `black`, `rebeccapurple`, `goldenrod`)。このキーワードをより正確に述べると、CSS が理解できる特別な値の _識別子_ です。このためそれは引用符で囲まれておらず、文字列として扱われません。
 
-CSS で文字列が使われる場所もあります、例えば、[生成されたコンテンツを指定するとき](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#before%E3%81%8A%E3%82%88%E3%81%B3_after%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E7%94%9F%E6%88%90)です。この場合、値は文字列を示すようクォートで囲まれます。下記の例ではクォートで囲まれていない color キーワードと生成されたコンテンツ文字列を一緒に使っています。
+CSS で文字列が使われる場所もあります、例えば、[生成されたコンテンツを指定するとき](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#before_および_after_を使用したコンテンツの生成)です。この場合、値は文字列を示すようクォートで囲まれます。下記の例ではクォートで囲まれていない color キーワードと生成されたコンテンツ文字列を一緒に使っています。
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
 
@@ -302,7 +302,7 @@ CSS で文字列が使われる場所もあります、例えば、[生成され
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 450)}}
 
-## スキルをテストしましょう!
+## スキルテスト
 
 この記事では多くをカバーしましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — [Test your skills: Values and unit](/ja/docs/Learn/CSS/Building_blocks/Values_tasks) を見てください。
 

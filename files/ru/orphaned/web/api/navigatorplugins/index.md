@@ -25,13 +25,11 @@ slug: orphaned/Web/API/NavigatorPlugins
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                           | Комментарий           |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName('HTML WHATWG', '#navigatorplugins', 'NavigatorPlugins')}} | {{Spec2('HTML WHATWG')}} | Начальное определение |
+{{Specifications}}
 
 ## Доступность в браузерах
 
-{{Compat("api.NavigatorPlugins")}}
+{{Compat}}
 
 ## Смотрите также
 

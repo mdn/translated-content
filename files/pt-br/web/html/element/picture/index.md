@@ -85,13 +85,11 @@ O atributo `type` lhe permite especificar um tipo MIME para o(s) recurso(s) forn
 
 ## Especificações
 
-| Specification                                                                              | Status                   | Comment            |
-| ------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element','&lt;picture&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## Veja também
 

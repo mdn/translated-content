@@ -7,8 +7,6 @@ slug: Web/CSS/:focus-visible
 
 Этот селектор полезен для предоставления другого индикатора фокуса, основанного на модальности ввода пользователя (мышь против клавиатуры).
 
-Обратите внимание, что Firefox поддерживает аналогичную функциональность через старый псевдокласс с префиксом `:-moz-focusring`.
-
 ## Синтаксис
 
 {{CSSSyntax}}
@@ -101,9 +99,7 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 ## Specifications
 
-| Specification                                                                 | Status                      | Comment             |
-| ----------------------------------------------------------------------------- | --------------------------- | ------------------- |
-| {{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}} | {{Spec2("CSS4 Selectors")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
