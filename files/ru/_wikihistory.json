@@ -9836,22 +9836,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/AJAX": {
-    "modified": "2020-03-06T17:23:15.361Z",
-    "contributors": [
-      "bulatDev",
-      "korjjik87",
-      "chrisdavidmills",
-      "Sky_Fox",
-      "Megapotz",
-      "Kavkazsk",
-      "Summit677",
-      "Kwinto",
-      "Dionys",
-      "Woodroof",
-      "Zhuravlik"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-09-11T09:35:03.457Z",
     "contributors": ["SphinxKnight", "BychekRU", "Sheppy"]
@@ -16067,10 +16051,6 @@
     "modified": "2019-03-23T23:17:01.096Z",
     "contributors": ["Norville", "LunaticRL"]
   },
-  "conflicting/Glossary/First_CPU_idle": {
-    "modified": "2019-11-20T05:51:30.233Z",
-    "contributors": ["Antosik"]
-  },
   "conflicting/Learn/CSS": {
     "modified": "2019-09-11T09:43:50.277Z",
     "contributors": [
@@ -16426,74 +16406,17 @@
     "modified": "2019-03-23T22:57:21.133Z",
     "contributors": ["Aleksej"]
   },
-  "conflicting/Web/CSS": {
-    "modified": "2020-05-13T06:10:35.795Z",
-    "contributors": ["mandalorian7117", "cvrebert"]
-  },
   "conflicting/Web/CSS/:focus-visible": {
     "modified": "2019-03-23T22:37:34.919Z",
     "contributors": ["teoli", "DVV", "andreww2012"]
-  },
-  "conflicting/Web/CSS/:is": {
-    "modified": "2019-03-23T22:39:12.816Z",
-    "contributors": ["BychekRU", "JhonyLe"]
-  },
-  "conflicting/Web/CSS/@viewport": {
-    "modified": "2019-03-23T22:21:08.056Z",
-    "contributors": ["Hydrock"]
-  },
-  "conflicting/Web/CSS/CSS_Basic_User_Interface": {
-    "modified": "2019-03-23T22:05:55.155Z",
-    "contributors": ["SphinxKnight", "ExE-Boss", "mfluehr"]
-  },
-  "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {
-    "modified": "2019-09-25T09:43:14.453Z",
-    "contributors": [
-      "RomanBush",
-      "billlater",
-      "KadirTopal",
-      "DmitriyPoltavskiy",
-      "MrDaedra",
-      "antenko",
-      "dixiony",
-      "SKaznadei",
-      "iamale"
-    ]
   },
   "conflicting/Web/CSS/CSS_Fonts": {
     "modified": "2019-03-23T22:43:41.613Z",
     "contributors": ["AlexAlex"]
   },
-  "conflicting/Web/CSS/cursor": {
-    "modified": "2019-03-23T22:05:55.809Z",
-    "contributors": ["SphinxKnight", "ExE-Boss", "Cheg"]
-  },
-  "conflicting/Web/CSS/gap": {
-    "modified": "2020-10-15T22:05:04.554Z",
-    "contributors": ["oxmap", "slychai85"]
-  },
-  "conflicting/Web/CSS/url()": {
-    "modified": "2020-04-29T08:14:17.353Z",
-    "contributors": ["podocenov"]
-  },
-  "conflicting/Web/CSS/url()_168028c4e5edd9e19c061adb4b604d4f": {
-    "modified": "2020-10-15T22:16:56.689Z",
-    "contributors": ["opereverzeva", "AliaksandrZahorski"]
-  },
   "conflicting/Web/Guide": {
     "modified": "2019-03-24T00:00:53.915Z",
     "contributors": ["Dionys"]
-  },
-  "conflicting/Web/Guide/AJAX": {
-    "modified": "2019-03-24T00:01:49.926Z",
-    "contributors": [
-      "DanilaH",
-      "chrisdavidmills",
-      "Megapotz",
-      "Apparition",
-      "Square",
-      "Kwinto"
-    ]
   },
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:27:06.077Z",
@@ -16886,14 +16809,6 @@
   "conflicting/Web/Web_Components": {
     "modified": "2019-03-18T21:40:10.986Z",
     "contributors": ["PaulineNemchak"]
-  },
-  "orphaned/Glossary/Bootstrap": {
-    "modified": "2020-10-30T10:23:10.825Z",
-    "contributors": ["ksam"]
-  },
-  "orphaned/Glossary/Dynamic_programming_language": {
-    "modified": "2019-03-23T22:22:41.086Z",
-    "contributors": ["pust0ta", "thecodecreator"]
   },
   "orphaned/Glossary/Polifill": {
     "modified": "2019-03-23T22:18:26.835Z",
@@ -17357,10 +17272,6 @@
     "modified": "2020-11-18T14:46:25.201Z",
     "contributors": ["chrisdavidmills", "YozhEzhi", "arcady-zherdev"]
   },
-  "orphaned/Web/Guide/AJAX/С_чего_начать?": {
-    "modified": "2019-01-16T16:10:29.921Z",
-    "contributors": ["chrisdavidmills", "Sheppy", "Nikol"]
-  },
   "orphaned/Web/Guide/Events": {
     "modified": "2020-08-20T10:40:53.452Z",
     "contributors": ["bogpok", "Llorephie", "Tihoem", "Jeremie"]
@@ -17438,10 +17349,6 @@
   "orphaned/Web/Guide/Unicode_Bidrectional_Text_Algorithm": {
     "modified": "2020-09-02T08:30:27.156Z",
     "contributors": ["bogpok"]
-  },
-  "orphaned/Web/HTML/Element/applet": {
-    "modified": "2019-03-23T22:06:37.540Z",
-    "contributors": ["mars485"]
   },
   "orphaned/Web/HTML/Element/element": {
     "modified": "2019-03-23T22:16:19.667Z",
@@ -17612,10 +17519,6 @@
   "orphaned/Web/SVG/Attribute/onload": {
     "modified": "2019-01-16T20:23:16.915Z",
     "contributors": ["maxportnyagin"]
-  },
-  "orphaned/Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-18T21:33:59.744Z",
-    "contributors": ["warsan"]
   },
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2019-03-18T20:42:08.077Z",
