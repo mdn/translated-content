@@ -223,7 +223,7 @@ span {
 
 在 `CSSStyleSheet` 中定义的规则将局限在影子 DOM 树的内部，以及我们将其分配到的任何其它 DOM 树。
 
-这里，同样是包含 host 和一个 `<span>` 的 HTML：
+这里，同样是包含宿主（host）和一个 `<span>` 的 HTML：
 
 ```html
 <div id="host"></div>
