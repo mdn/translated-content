@@ -2311,6 +2311,7 @@
 /zh-CN/docs/Web/Guide/CSS/媒体查询	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /zh-CN/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
 /zh-CN/docs/Web/Guide/Events/Touch_events	/zh-CN/docs/Web/API/Touch_events
+/zh-CN/docs/Web/Guide/Graphics	/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /zh-CN/docs/Web/Guide/HTML	/zh-CN/docs/Learn/HTML
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
