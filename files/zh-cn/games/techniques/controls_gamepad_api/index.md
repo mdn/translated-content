@@ -27,7 +27,7 @@ slug: Games/Techniques/Controls_Gamepad_API
 
 第二个隐藏的“改变”的实现是可以从单纯静态的冰箱改变成涡轮驱动、射击和吞食的机器能力。当你连接控制器后，游戏会有很明显的改变 (饥饿冰箱会变成超级涡轮的饥饿冰箱) 并且你可以使用 Gamepad API 来控制装甲冰箱。你需要击落食物但是你仍然需要找到冰箱目前想吃的食物，否则你会失去能量。
 
-游戏封装了两种截然不同的“变化”(change) ——好食物对坏食物，与移动端对桌面端。
+游戏封装了两种截然不同的“变化”（change）——好食物对坏食物，与移动端对桌面端。
 
 ## 示例
 
@@ -214,11 +214,11 @@ if (gamepadAPI.axesStatus[0].x > 0.5) {
 
 ## 规范更新
 
-经过长达一年多的规范化，W3C Gamepaf API 于 2015 年 4 月更新了规范 ([查看最新信息](https://w3c.github.io/gamepad/))。更新的改动并不是很大，但是我们最好了解一下到底更新了些什么—— 以下为更新。
+经过长达一年多的规范化，W3C Gamepaf API 于 2015 年 4 月更新了规范 ([查看最新信息](https://w3c.github.io/gamepad/))。更新的改动并不是很大，但是我们最好了解一下到底更新了些什么——以下为更新。
 
 ### 获取控制器
 
-{{domxref("Naviagator.getGamepads()")}} 方法已用[更长的说明和示例代码](https://w3c.github.io/gamepad/#navigator-interface-extension)更新。现在控制器数组的长度必须为 `n+1` ( `n` 是已连接设备的数量) —— 当设备连接且其有索引 1，数组长度为 2，那么它将会是这样： `[null, [object Gamepad]]`。如果设备被断开或不可用的话，值将被设为 `null`。
+{{domxref("Naviagator.getGamepads()")}} 方法已用[更长的说明和示例代码](https://w3c.github.io/gamepad/#navigator-interface-extension)更新。现在控制器数组的长度必须为 `n+1`（`n` 是已连接设备的数量）——当设备连接且其有索引 1，数组长度为 2，那么它将会是这样：`[null, [object Gamepad]]`。如果设备被断开或不可用的话，值将被设为 `null`。
 
 ### 映射标准
 

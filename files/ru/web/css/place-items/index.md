@@ -19,7 +19,7 @@ slug: Web/CSS/place-items
 ## Синтаксис
 
 ```css
-/* Значения в виде ключевых слов */
+/* Ключевые слова */
 place-items: center;
 place-items: normal start;
 
