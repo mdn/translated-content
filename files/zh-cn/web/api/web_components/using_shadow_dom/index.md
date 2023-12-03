@@ -1,6 +1,8 @@
 ---
 title: 使用影子 DOM
 slug: Web/API/Web_components/Using_shadow_DOM
+l10n:
+  sourceCommit: 4cc4cc8b3a6ff7889ac62b52e035bb4c174b31b4
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -23,8 +25,8 @@ slug: Web/API/Web_components/Using_shadow_DOM
     <section>
       <img src="dinosaur.png" alt="一个红色的霸王龙。" />
       <p>
-        这里我们将添加链接到
-        <a href="https://www.mozilla.org/">Mozilla 主页</a>
+        这里我们将添加一个到
+        <a href="https://www.mozilla.org/">Mozilla 主页</a>的链接
       </p>
     </section>
   </body>
@@ -43,7 +45,7 @@ slug: Web/API/Web_components/Using_shadow_DOM
         - SECTION
             - IMG src="dinosaur.png" alt="一个红色的霸王龙。"
             - P
-                - #text: 这里我们将添加链接到
+                - #text: 这里我们将添加一个到
                 - A href="https://www.mozilla.org/"
                 - #text: Mozilla 主页
                 - #text: 的链接
@@ -166,7 +168,7 @@ reload.addEventListener("click", () => document.location.reload());
 
 这次，页面中运行的 JavaScript 可以访问影子 DOM 内部：
 
-{{EmbedLiveSample("Element.shadowRoot 和 \"mode\" 选项")}}
+{{EmbedLiveSample("Element.shadowRoot 和“mode”选项")}}
 
 使用 `{mode: "open"}` 参数为页面提供一种破坏影子 DOM 封装的方法。如果你不希望给页面这个能力，传递 `{mode: "closed"}` 作为替代，此时 `shadowRoot` 返回 `null`。
 
@@ -209,7 +211,7 @@ span {
 在这个部分，我们将看到两种不同的方法来在影子 DOM 树中应用样式：
 
 - [_编程式_](#可构造样式表)，通过构建一个 {{domxref("CSSStyleSheet")}} 对象并将其附加到影子根。
-- [_声明式_](#在_template_声明中添加_style_元素), 通过在一个 {{htmlelement("template")}} 元素的声明中添加一个 {{htmlelement("style")}} 元素。
+- [_声明式_](#在_template_声明中添加_style_元素)，通过在一个 {{htmlelement("template")}} 元素的声明中添加一个 {{htmlelement("style")}} 元素。
 
 在这两种情况下，影子 DOM 树中定义的样式局限在该树内，所以就像页面样式就像不会影响影子 DOM 中的元素一样，影子 DOM 样式也不会影响页面中其它元素的样式。
 
@@ -347,10 +349,10 @@ customElements.define("filled-circle", FilledCircle);
 - {{domxref("CSSStyleSheet.replace()")}}
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{HTMLelement("template")}}
-- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping) 模块
+- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
 - {{CSSXref(":host")}}
 - {{CSSXref(":host_function", ":host()")}}
 - {{CSSXref(":host-context", ":host-context()")}}
 - {{CSSXref("::slotted", "::slotted()")}}
-- [CSS 影子部件](/zh-CN/docs/Web/CSS/CSS_shadow_parts) 模块
+- [CSS 影子部件](/zh-CN/docs/Web/CSS/CSS_shadow_parts)模块
 - {{CSSXref("::part")}}
