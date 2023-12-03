@@ -36,4 +36,4 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ## Смотрите также
 
-[Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+[Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

@@ -292,7 +292,7 @@ Finally, we {{domxref("CanvasRenderingContext2D.restore","restore()")}} the canv
 
 ### Fullscreen 全屏控制
 
-The VR effect is much more effective if you set your app runnning in [fullscreen mode](/zh-CN/docs/Web/Guide/API/DOM/Using_full_screen_mode) — this generally means setting your {{htmlelement("canvas")}} element to fullscreen when a specific event occurs — such as double-clicking the display or pressing a specific button.
+The VR effect is much more effective if you set your app runnning in [fullscreen mode](/zh-CN/docs/Web/API/Fullscreen_API) — this generally means setting your {{htmlelement("canvas")}} element to fullscreen when a specific event occurs — such as double-clicking the display or pressing a specific button.
 
 In this case I have just kept things simple, running a `fullScreen()` function when the canvas is clicked:
 

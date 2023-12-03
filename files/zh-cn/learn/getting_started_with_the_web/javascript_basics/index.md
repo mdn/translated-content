@@ -17,9 +17,9 @@ JavaScript 的应用场合极其广泛，简单到幻灯片、照片库、浮动
 
 JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心编写了大量实用工具，可以使 开发工作事半功倍。其中包括：
 
-- 浏览器应用程序接口（{{Glossary("API","API")}}）—— 浏览器内置的 API 提供了丰富的功能，比如：动态创建 HTML 和设置 CSS 样式、从用户的摄像头采集处理视频流、生成 3D 图像与音频样本等等。
-- 第三方 API —— 让开发者可以在自己的站点中整合其他内容提供者（Twitter、Facebook 等）提供的功能。
-- 第三方框架和库 —— 用来快速构建网站和应用。
+- 浏览器应用程序接口（{{Glossary("API","API")}}）——浏览器内置的 API 提供了丰富的功能，比如：动态创建 HTML 和设置 CSS 样式、从用户的摄像头采集处理视频流、生成 3D 图像与音频样本等等。
+- 第三方 API——让开发者可以在自己的站点中整合其他内容提供者（Twitter、Facebook 等）提供的功能。
+- 第三方框架和库——用来快速构建网站和应用。
 
 本节是一篇 JavaScript 简介，因此这个阶段不会对 JavaScript 语言和上述工具做过多的介绍。之后可以到 [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript) 和 MDN 的其他地方学习更多细节。
 
@@ -27,7 +27,7 @@ JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心
 
 ## “Hello World!”示例
 
-读到这里你一定很激动，诚然 —— JavaScript 是最振奋人心的 Web 技术之一，而且在娴熟驾驭之后，你的网站在功能和创新力上将达到一个新的维度。
+读到这里你一定很激动，诚然——JavaScript 是最振奋人心的 Web 技术之一，而且在娴熟驾驭之后，你的网站在功能和创新力上将达到一个新的维度。
 
 然而，JavaScript 比 HTML 和 CSS 学习起来更加复杂一点，所以必须一步一个脚印地学习。首先，来看看如何在页面中添加一些基本的 JavaScript 脚本来建造一个“Hello world!”示例（[一切始于 Hello World](https://zh.wikipedia.org/wiki/Hello_World)）。
 

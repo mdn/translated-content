@@ -203,7 +203,7 @@ HTML 只比我们在 [the first article of this guide](/zh-CN/docs/HTML/Forms/My
 
 1. 明信片的[背景](/files/4151/background.jpg)——下载这幅图片，把它和你的 HTML 文件保存在相同目录下。
 2. 打字机字体：[源自 fontsquirrel.com 的 "Secret Typewriter“字体](http://www.fontsquirrel.com/fonts/Secret-Typewriter)——将 TTF 文件下载到和上面相同的文件夹里。
-3. 手绘字体：[源自 fontsquirrel.com 的 The "Journal" 字体](http://www.fontsquirrel.com/fonts/Journal) —— 将 TTF 文件下载到和上面相同的文件夹里。
+3. 手绘字体：[源自 fontsquirrel.com 的 The "Journal" 字体](http://www.fontsquirrel.com/fonts/Journal)——将 TTF 文件下载到和上面相同的文件夹里。
 
 在你开始之前需要对字体做一些处理：
 
@@ -393,7 +393,7 @@ button:focus {
 
 瞧！
 
-> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它 —— 查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
+> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它——查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
 
 ## 总结
 
