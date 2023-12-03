@@ -58,9 +58,7 @@ slug: Web/SVG/Attribute/stroke-linecap
 </svg>
 ```
 
-**Live sample**
-
-{{ EmbedLiveSample('Example','120','120') }}
+{{ EmbedLiveSample('例','120','120') }}
 
 ## 要素
 
