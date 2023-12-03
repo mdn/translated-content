@@ -1,7 +1,6 @@
 ---
 title: Синхронные и асинхронные запросы
 slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
-original_slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
 
 `XMLHttpRequest` поддерживает как синхронные, так и асинхронные запросы. В основном предпочтительно использовать асинхронные запросы вместо синхронных из-за соображений производительности.
@@ -234,9 +233,7 @@ function logData() {
 }
 ```
 
-## See also
+## Смотрите также
 
-- [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest)
-- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [AJAX](/ru/docs/Web/Guide/AJAX)
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [`navigator.sendBeacon`](/ru/docs/Web/API/Navigator/sendBeacon)

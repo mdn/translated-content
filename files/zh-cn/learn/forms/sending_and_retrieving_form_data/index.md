@@ -54,7 +54,7 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下:�
 
 这个属性定义了发送数据要去的位置。它的值必须是一个有效的 URL。如果没有提供此属性，则数据将被发送到包含这个表单的页面的 URL。
 
-在这个例子中，数据被发送到一个绝对 URL —— `http://foo.com`：
+在这个例子中，数据被发送到一个绝对 URL——`http://foo.com`：
 
 ```html
 <form action="http://foo.com">…</form>
@@ -161,7 +161,7 @@ say=Hi&to=Mom
 
 `Content-Length`数据头表示主体的大小，`Content-Type`数据头表示发送到服务器的资源类型。稍后我们将讨论这些标头。
 
-> **备注：** 你可以在 GitHub 上看到本例—— 见 [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
+> **备注：** 你可以在 GitHub 上看到本例——见 [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html)（[预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)）。
 
 #### 查看 HTTP 请求
 

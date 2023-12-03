@@ -230,15 +230,3 @@ console.log(output);
 Итак, это основы строк, используемых в JavaScript. В следующей статье мы рассмотрим некоторые из встроенных методов, доступных для строк в JavaScript и то, как мы можем использовать их для управления нашими строками только в той форме, в которой мы хотим.
 
 {{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Math", "Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги")}}
-
-## В этом модуле
-
-- [Что такое JavaScript?](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Первое погружение в JavaScript](/ru/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [Что пошло не так? Устранение ошибок JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Переменные - место хранения необходимой информации](/ru/docs/Learn/JavaScript/First_steps/Variables)
-- [Базовая математика в JavaScript — числа и операторы](/ru/docs/Learn/JavaScript/First_steps/Math)
-- [Работа с текстом — строки в JavaScript](/ru/docs/Learn/JavaScript/First_steps/Strings)
-- [Полезные методы для строк](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Массивы](/ru/docs/Learn/JavaScript/First_steps/Arrays)
-- [Генератор глупых историй](/ru/docs/Learn/JavaScript/First_steps/Silly_story_generator)

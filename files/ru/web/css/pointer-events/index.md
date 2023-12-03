@@ -16,17 +16,17 @@ CSS-свойство **`pointer-events`** позволяет контролир�
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 pointer-events: auto;
 pointer-events: none;
-pointer-events: visiblePainted; /* только SVG */
-pointer-events: visibleFill; /* только SVG */
-pointer-events: visibleStroke; /* только SVG */
-pointer-events: visible; /* только SVG */
-pointer-events: painted; /* только SVG */
-pointer-events: fill; /* только SVG */
-pointer-events: stroke; /* только SVG */
-pointer-events: all; /* только SVG */
+pointer-events: visiblePainted; /* только для SVG */
+pointer-events: visibleFill; /* только для SVG */
+pointer-events: visibleStroke; /* только для SVG */
+pointer-events: visible; /* только для SVG */
+pointer-events: painted; /* только для SVG */
+pointer-events: fill; /* только для SVG */
+pointer-events: stroke; /* только для SVG */
+pointer-events: all; /* только для SVG */
 
 /* Глобальные значения */
 pointer-events: inherit;
