@@ -294,9 +294,9 @@ caption {
 - 使用斑马线来让其他行更容易阅读。
 - 使用 {{cssxref("text-align")}}直线对齐你的{{htmlelement("th")}}和{{htmlelement("td")}}文本，使内容更整洁、更易于跟随。
 
-## 小试牛刀！
+## 技能测试！
 
-我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？你能找到些更进一步的测试，在你继续之前，想要验证你已经吸收了这些信息的话，请见[Test your skills: tables](/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks)。
+我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？你能找到些更进一步的测试，在你继续之前，想要验证你已经吸收了这些信息的话，请见[技能测试：表格](/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks)。
 
 ## 总结
 

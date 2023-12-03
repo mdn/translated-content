@@ -299,14 +299,3 @@ Modernizr.fetch
 Далее мы начнём изучать автоматизированное тестирование.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## В этом модуле
-
-- [Введение в кросс-браузерное тестирование](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Стратегии проведения тестирования](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Решение распространённых проблем HTML и CSS](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Решение распространённых проблем JavaScript](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Решение распространённых проблем доступности](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Реализация функции обнаружения](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Введение в автоматизированное тестирование](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Настройка собственной среды автоматизации тестирования](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

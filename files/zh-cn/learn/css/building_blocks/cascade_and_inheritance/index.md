@@ -258,9 +258,9 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 如果你修改示例中 CSS 的第一行为 `@layer secondLayer, firstLayer;`，就会修改层声明的顺序，所有 `firstLayer` 中的 important 样式会被 `secondLayer` 中的冲突值覆盖。
 
-## 测试你的技能？
+## 技能测试！
 
-你已经阅读到了本文的末尾，但你记住最重要的内容了吗？在进一步学习之前，你可以寻找一些深入的测验来验证你是否掌握了这些信息，参见[测试你的技能：层叠](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_tasks)。
+你已经阅读到了本文的末尾，但你记住最重要的内容了吗？在进一步学习之前，你可以寻找一些深入的测验来验证你是否掌握了这些信息，参见[技能测试：层叠](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_tasks)。
 
 ## 总结
 
