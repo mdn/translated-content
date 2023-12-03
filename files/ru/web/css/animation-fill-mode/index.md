@@ -14,6 +14,7 @@ slug: Web/CSS/animation-fill-mode
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
 animation-fill-mode: none;
 animation-fill-mode: forwards;
 animation-fill-mode: backwards;

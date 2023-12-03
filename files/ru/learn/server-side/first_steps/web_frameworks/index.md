@@ -260,10 +260,3 @@ ASP.NET используется Microsoft, Xbox.com, Stack Overflow и мног
 Для следующей статьи в этом модуле мы немного изменим направление и рассмотрим веб-безопасность.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## В этом модуле
-
-- [Introduction to the server side](/ru/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/ru/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/ru/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/ru/docs/Learn/Server-side/First_steps/Website_security)

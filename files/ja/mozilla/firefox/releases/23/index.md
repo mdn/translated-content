@@ -20,7 +20,7 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 
 ### HTML
 
-- {{HTMLElement("blink")}} 要素のサポートを完全に廃止しました。`<blink>` タグは {{domxref("HTMLUnknownElement")}} インターフェイスを実装します ([Firefox バグ 857820](https://bugzil.la/857820))。
+- `<blink>` 要素のサポートを完全に廃止しました。`<blink>` タグは {{domxref("HTMLUnknownElement")}} インターフェイスを実装します ([Firefox バグ 857820](https://bugzil.la/857820))。
 - {{HTMLElement("input")}} 要素の `range` ステート (`<input type="range">`) を、デフォルトで有効にしました ([Firefox バグ 841950](https://bugzil.la/841950))。
 
 ### JavaScript

@@ -12,7 +12,7 @@ slug: Web/CSS/clip-path
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 clip-path: none;
 
 /* Значения <clip-source> */
