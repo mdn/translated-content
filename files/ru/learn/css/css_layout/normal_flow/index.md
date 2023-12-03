@@ -86,16 +86,3 @@ span {
 Теперь, когда вы поняли нормальный поток и как браузер выкладывает содержимое по умолчанию, двигаемся дальше, чтобы понять как это изменить для создания макета согласно вашему дизайну.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## В этом модуле
-
-- [Введение в CSS layout](/ru/docs/Learn/CSS/CSS_layout/Introduction)
-- [Базовый поток](/ru/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Сетка(Grid)](/ru/docs/Learn/CSS/CSS_layout/Grids)
-- [Поплавки](</ru/docs/Learn/CSS/CSS_layout/Потоки (Floats)>)
-- [Позиционирование(Positioning)](/ru/docs/Learn/CSS/CSS_layout/Positioning)
-- [Макет с несколькими столбцами](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Методы устаревших макетов](/ru/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Поддержка старых браузеров](/ru/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Фундаментальная оценка понимания макета](/ru/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

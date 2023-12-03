@@ -19,7 +19,7 @@ l10n:
 ## メソッド
 
 - {{domxref("Storage.key()")}}
-  - : 数値 `n`` を渡すと、ストレージ内で n 番目のキーの名称を返します。
+  - : 数値 n を渡すと、ストレージ内で n 番目のキーの名称を返します。
 - {{domxref("Storage.getItem()")}}
   - : キーの名称を渡すと、キーに対する値を返します。
 - {{domxref("Storage.setItem()")}}

@@ -58,9 +58,3 @@ slug: Learn/HTML/Tables/Structuring_planet_data
    - Ссылка на актуальную задачу или страницу оценки, чтобы мы могли найти вопрос, с которым вам нужно помочь.
 
 {{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## В этом модуле
-
-- [HTML table basics](/ru/docs/Learn/HTML/Tables/Basics)
-- [HTML table advanced features and accessibility](/ru/docs/Learn/HTML/Tables/Advanced)
-- [Structuring planet data](/ru/docs/Learn/HTML/Tables/Structuring_planet_data)

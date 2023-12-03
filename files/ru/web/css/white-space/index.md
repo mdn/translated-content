@@ -10,7 +10,7 @@ slug: Web/CSS/white-space
 ## Сводка
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;

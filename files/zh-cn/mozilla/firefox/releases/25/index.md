@@ -27,7 +27,7 @@ slug: Mozilla/Firefox/Releases/25
 - 实现了 `Map.prototype.forEach()` 和 `Set.prototype.forEach()` 方法 ([Firefox bug 866847](https://bugzil.la/866847))
 - 实现了更多的数学函数：`Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.hypot()`, `Math.trunc()`, `Math.sign()` 以及 `Math.cbrt()` ([Firefox bug 894026](https://bugzil.la/894026)).
 - 实现了八进制整数字面量写法 (比如`0o777`) 和二进制整数字面量写法 (比如`0b111`) ([Firefox bug 717379](https://bugzil.la/717379)).
-- 实现了 ECMAScript 国际化 API —— ECMA 402 ([Firefox bug 853301](https://bugzil.la/853301))
+- 实现了 ECMAScript 国际化 API——ECMA 402（[Firefox bug 853301](https://bugzil.la/853301)）
 
 ### DOM
 
