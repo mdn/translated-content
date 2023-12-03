@@ -18,7 +18,7 @@ Feature Policy позволяет веб-разработчику выбороч
 - Изменить поведение автозапуска видео на мобильных устройствах.
 - Ограничить доступ сайта к камере и микрофону.
 - Разрешить использование API полноэкранного режима в iframe.
-- Блокировать использование устаревших API, например [synchronous XHR](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) and {{domxref("document.write()")}}.
+- Блокировать использование устаревших API, например [synchronous XHR](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest) and {{domxref("document.write()")}}.
 - Проверять соответствие размера изображений размерам области просмотра.
 
 ## Concepts and usage

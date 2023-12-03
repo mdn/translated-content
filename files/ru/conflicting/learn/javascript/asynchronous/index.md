@@ -622,12 +622,3 @@ if (posX > width/2) {
 Вот и все — все основы асинхронных циклов и интервалов рассмотрены в статье. Вы найдёте эти методы полезными во многих ситуациях, но постарайтесь не злоупотреблять ими! Поскольку они по-прежнему выполняются в основном потоке, тяжёлые и интенсивные колбэки (особенно те, которые управляют DOM) могут действительно замедлить страницу, если вы не будете осторожны.
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## В этом модуле
-
-- [Основные понятия асинхронного программирования](/ru/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Введение в асинхронный JavaScript](/ru/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Объединённый асинхронный JavaScript: Таймауты и интервалы](/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Graceful asynchronous programming with Promises](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Сделайте асинхронное программирование легче с async и await](/ru/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/ru/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

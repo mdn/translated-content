@@ -74,7 +74,7 @@ f2() === undefined; // true
 
 Для того, чтобы при вызове функции установить `this` в определённое значение, используйте {{jsxref('Function.prototype.call()', 'call()')}} или {{jsxref('Function.prototype.apply()', 'apply()')}}, как в следующих примерах.
 
-**Пример 1**
+### Пример 1
 
 ```js
 // В качестве первого аргумента методов call или apply может быть передан объект,
@@ -93,7 +93,7 @@ whatsThis.call(obj); // 'Custom'
 whatsThis.apply(obj); // 'Custom'
 ```
 
-**Пример 2**
+### Пример 2
 
 ```js
 function add(c, d) {

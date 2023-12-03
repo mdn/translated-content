@@ -493,7 +493,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 <p id="dino-label">The Mozilla red Tyrannosaurus ...</p>
 ```
 
-在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果你想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“`alt`”不可能实现的。
+在这种情况下，我们不使用“alt”属性——相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果你想将相同的文本用作多个图像的标签，这是特别有用的——这是使用“`alt`”不可能实现的。
 
 > **备注：** “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
 

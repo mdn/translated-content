@@ -17,8 +17,6 @@ slug: Web/SVG/Attribute/cx
 | Анимируемый                | Да                                                                                                                                                                                                                                                                                                                                                   |
 | Нормативные документы (en) | [SVG 1.1 (2nd Edition): The circle element](http://www.w3.org/TR/SVG/shapes.html#CircleElementCXAttribute) [SVG 1.1 (2nd Edition): The ellipse element](http://www.w3.org/TR/SVG/shapes.html#EllipseElementCXAttribute) [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
 
-{{ page("/ru/docs/Web/SVG/Content_type","Coordinate") }}
-
 ## Пример
 
 ```xml
