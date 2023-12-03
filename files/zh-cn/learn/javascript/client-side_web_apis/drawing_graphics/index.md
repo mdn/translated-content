@@ -276,7 +276,7 @@ ctx.fill();
 
 #### 画圆
 
-下面来看可在画布中绘制圆的方法—— {{domxref("CanvasRenderingContext2D.arc", "arc()")}} ，通过连续的点来绘制整个圆或者弧（arc，即局部的圆）。
+下面来看可在画布中绘制圆的方法——{{domxref("CanvasRenderingContext2D.arc", "arc()")}}，通过连续的点来绘制整个圆或者弧（arc，即局部的圆）。
 
 1. 在代码中添加以下几行，以向画布中添加一条弧。
 

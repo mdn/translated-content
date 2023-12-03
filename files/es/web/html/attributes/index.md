@@ -38,12 +38,12 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>align</code></td>
-      <td>{{ HTMLElement("applet") }}, {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}</td>
+      <td>{{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}</td>
       <td>Especifica el alineamiento horizontal del elemento.</td>
      </tr>
      <tr>
       <td><code>alt</code></td>
-      <td>{{ HTMLElement("applet") }}, {{ HTMLElement("area") }}, {{ HTMLElement("img") }}, {{ HTMLElement("input") }}</td>
+      <td>{{ HTMLElement("area") }}, {{ HTMLElement("img") }}, {{ HTMLElement("input") }}</td>
       <td>Texto alternativo en caso de que la imagen no se pueda mostrar.</td>
      </tr>
      <tr>
@@ -115,16 +115,6 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
       <td><code>class</code></td>
       <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Usualmente empleado con CSS para aplicar estilos a elementos con propiedades en comun.</td>
-     </tr>
-     <tr>
-      <td><code>code</code></td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>Especifica la URL del archivo de tipo applet a ser cargado y ejecutado.</td>
-     </tr>
-     <tr>
-      <td><code>codebase</code></td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>Este atributo contiene la URL absoluta o relativa del directorio donde los archivos de applets (.class) referenciados en el codigo se encuentran almacenados.</td>
      </tr>
      <tr>
       <td><code>color</code></td>

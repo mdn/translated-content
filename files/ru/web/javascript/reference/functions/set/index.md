@@ -102,7 +102,7 @@ console.log(obj.baz); // "baz"
 
 {{Specifications}}
 
-**Совместимость с браузерами**
+## Совместимость с браузерами
 
 {{Compat}}
 
