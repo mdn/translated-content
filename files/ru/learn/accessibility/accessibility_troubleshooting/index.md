@@ -68,13 +68,3 @@ Can you list two more ideas for improvements that would make the website more ac
 If you are following this assessment as part of an organized course, you should be able to give your work to your teacher/mentor for marking. If you are self-learning, then you can get the marking guide fairly easily by asking on the [discussion thread for this exercise](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691), or in the [#mdn](irc://irc.mozilla.org/mdn) IRC channel on [Mozilla IRC](https://wiki.mozilla.org/IRC). Try the exercise first — there is nothing to be gained by cheating!
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## В этом модуле
-
-- [Что такое доступность?](/ru/docs/Learn/Доступность/What_is_accessibility)
-- [HTML: Хорошая основа для доступности](/ru/docs/Learn/Accessibility/HTML)
-- [CSS и JavaScript доступность - лучшие практики](/ru/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Основы WAI-ARIA](/ru/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Доступность мультимедиа](/ru/docs/Learn/Accessibility/Multimedia)
-- [Мобильная доступность](/ru/docs/Learn/Accessibility/Mobile)
-- [Устранение проблем доступности](/ru/docs/Learn/Accessibility/Accessibility_troubleshooting)
