@@ -1,6 +1,8 @@
 ---
 title: Document.applets
 slug: Web/API/Document/applets
+l10n:
+  sourceCommit: a468a537c0234a3035951e80af76715e1c36c8f7
 ---
 
 {{APIRef("DOM")}} {{Deprecated_Header}}
