@@ -20319,10 +20319,6 @@
     "modified": "2019-03-23T23:30:43.615Z",
     "contributors": ["teoli", "ethertank"]
   },
-  "Web/Guide/Graphics": {
-    "modified": "2019-10-11T10:49:15.066Z",
-    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "Marsf"]
-  },
   "Web/Guide/Houdini": {
     "modified": "2020-07-24T06:19:03.585Z",
     "contributors": ["Wind1808"]
@@ -30165,6 +30161,10 @@
   "WebAssembly/existing_C_to_Wasm": {
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
+  },
+  "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
+    "modified": "2019-10-11T10:49:15.066Z",
+    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "Marsf"]
   },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
     "modified": "2020-08-12T11:49:11.332Z",
