@@ -9836,22 +9836,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/AJAX": {
-    "modified": "2020-03-06T17:23:15.361Z",
-    "contributors": [
-      "bulatDev",
-      "korjjik87",
-      "chrisdavidmills",
-      "Sky_Fox",
-      "Megapotz",
-      "Kavkazsk",
-      "Summit677",
-      "Kwinto",
-      "Dionys",
-      "Woodroof",
-      "Zhuravlik"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-09-11T09:35:03.457Z",
     "contributors": ["SphinxKnight", "BychekRU", "Sheppy"]
@@ -16434,17 +16418,6 @@
     "modified": "2019-03-24T00:00:53.915Z",
     "contributors": ["Dionys"]
   },
-  "conflicting/Web/Guide/AJAX": {
-    "modified": "2019-03-24T00:01:49.926Z",
-    "contributors": [
-      "DanilaH",
-      "chrisdavidmills",
-      "Megapotz",
-      "Apparition",
-      "Square",
-      "Kwinto"
-    ]
-  },
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:27:06.077Z",
     "contributors": ["wbamberg"]
@@ -17302,10 +17275,6 @@
   "orphaned/Web/CSS/repeating-linear-gradient()": {
     "modified": "2020-11-18T14:46:25.201Z",
     "contributors": ["chrisdavidmills", "YozhEzhi", "arcady-zherdev"]
-  },
-  "orphaned/Web/Guide/AJAX/С_чего_начать?": {
-    "modified": "2019-01-16T16:10:29.921Z",
-    "contributors": ["chrisdavidmills", "Sheppy", "Nikol"]
   },
   "orphaned/Web/Guide/Events": {
     "modified": "2020-08-20T10:40:53.452Z",
