@@ -53,7 +53,7 @@ page-type: learn-module-chapter
 
 항상 따르는 일련의 규칙이 있다면 CSS를 작성할 때 일부 결정이 되어 있기 때문에 필요한 정신적 오버헤드의 양이 줄어듭니다.
 
-### 읽기 쉬운 CSS 포맷팅하기
+### 읽기 쉬운 CSS로 포맷팅하세요
 
 CSS가 포맷팅되는 몇 가지 방법들이 있습니다. 어떤 개발자들은 다음과 같이 모든 규칙을 한 줄에 붙입니다.
 
@@ -77,16 +77,16 @@ h2 {
 
 CSS는 어는 것을 사용하든 상관하지 않습니다. 우리는 각 속성과 값의 쌍을 새로운 줄에 위치시키는 것이 더 읽기 쉽다고 생각합니다.
 
-### Comment your CSS
+### CSS에 주석을 다세요
 
-Adding comments to your CSS will help any future developer work with your CSS file, but will also help you when you come back to the project after a break.
+CSS에 주석을 달면 향후 아무 개발자들이 해당 CSS 파일을 작업하는 데 도움이 될 뿐만 아니라 휴식 후 프로젝트에 복귀할 때 도움이 됩니다.
 
 ```css
 /* This is a CSS comment
 It can be broken onto multiple lines. */
 ```
 
-A good tip is to add a block of comments between logical sections in your stylesheet too, to help locate different sections quickly when scanning it, or even to give you something to search for to jump right into that part of the CSS. If you use a string that won't appear in the code, you can jump from section to section by searching for it — below we have used `||`.
+스캐냉 시 다른 섹션을 빠르게 찾도록 도와주거나, CSS의 해당 부분으로 바로 점프할 수 있도록 스타일시트의 논리 섹션 사이에 주석블록을 추가하는 것은 좋은 팁입니다. 코드에 나타나지 않는 문자열(주석블록)을 사용하는 경우 검색을 통해 섹션에서 섹션으로 점프할 수 있습니다. 아래는 `||` 를 사용했습니다.
 
 ```css
 /* || General styles */
@@ -102,9 +102,9 @@ A good tip is to add a block of comments between logical sections in your styles
 /* … */
 ```
 
-You don't need to comment every single thing in your CSS, as much of it will be self-explanatory. What you should comment are the things where you made a particular decision for a reason.
+CSS의 대부분이 자명할 것이기 때문에 CSS의 모든 것에 각각 주석을 달 필요는 없습니다. 주석을 달아야하는 것들은 어떤 이유로 특별한 결정을 내린 것들입니다.
 
-You may have used a CSS property in a specific way to get around older browser incompatibilities, for example:
+다음과 같은 특정한 방법으로 CSS 속성을 사용하여 이전 브라우저 호환성을 방지할 수 있습니다. 예를 들면 다음과 같습니다. 
 
 ```css
 .box {
@@ -113,7 +113,7 @@ You may have used a CSS property in a specific way to get around older browser i
 }
 ```
 
-Perhaps you followed a tutorial to achieve something, and the CSS isn't very self-explanatory or recognizable. In that case, you could add the URL of the tutorial to the comments. You will thank yourself when you come back to this project in a year or so and can vaguely remember that there was a great tutorial about that thing, but can't recall where it's from.
+아마도 무언가를 만들기 위해 자습서를 따랐을 것이고, 그 CSS는 매우 자명적이거나 알아챌만 하지는 않을 것입니다. 그런 경우, 자습서의 URL을 주석에 추가할 수 있습니다. 1년이나 그 후에 프로젝트로 돌아갔을 때, 스스로 감사하게 될 것이고, 어렴풋이 그 프로젝트에 관련한 좋은 자습서가 있음을 기억하지만 어디에서 났는지 기억할 수 없을 겁니다.
 
 ### Create logical sections in your stylesheet
 
