@@ -311,17 +311,3 @@ SQL -вброс представляет собой тип атак, при ко
 - [Веб-безопасность от Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
 {{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
-
-## В этом модуле
-
-- [Ваша первая HTML-форма](/ru/docs/Learn/Forms/Your_first_form)
-- [Как структурировать HTML-форму](/ru/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Предопределённые виджеты](/ru/docs/Learn/Forms/Basic_native_form_controls)
-- [Отправка данных формы](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Валидация данных формы](/ru/docs/Learn/Forms/Form_validation)
-- [Как создавать кастомные виджеты](/ru/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Отправка форм с помощью JavaScript](/ru/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [HTML-формы в старых версиях браузеров](/ru/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Стилизация HTML-форм](/ru/docs/Learn/Forms/Styling_web_forms)
-- [Продвинутая стилизация для HTML-форм](/ru/docs/Learn/Forms/Advanced_form_styling)
-- [Таблица совместимости свойств виджетов форм](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
