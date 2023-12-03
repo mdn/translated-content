@@ -433,12 +433,3 @@ han.greeting().then(console.log);
 Вот пожалуй и все — `async`/`await` позволяют писать асинхронный код, который легче читать и поддерживать. Даже учитывая, что поддержка со стороны браузеров несколько хуже, чем у `promise.then`, всё же стоит обратить на него внимание.
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
-
-## В этом модуле
-
-- [General asynchronous programming concepts](/ru/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Introducing asynchronous JavaScript](/ru/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Cooperative asynchronous JavaScript: Timeouts and intervals](/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Graceful asynchronous programming with Promises](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Making asynchronous programming easier with async and await](/ru/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/ru/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

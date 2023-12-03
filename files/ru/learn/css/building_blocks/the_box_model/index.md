@@ -287,24 +287,3 @@ html {
 В следующем уроке мы рассмотрим, как можно использовать [фон и рамки](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders), чтобы сделать ваши простые блоки более интересными.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## В этом модуле
-
-1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/Selectors)
-
-   - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-   - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-   - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-   - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [Блочная модель](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Фон и рамки](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Обработка разных направлений текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Переполнение содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Значения и единицы измерения](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Изменение размеров в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Элементы изображений, форм и медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Организация вашего CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)[](/ru/docs/Learn/CSS/Building_blocks/Organizing)

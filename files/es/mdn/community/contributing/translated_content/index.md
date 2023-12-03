@@ -43,7 +43,7 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 ### Ruso (ru)
 
 - Discusiones: [Matrix (canal #mdn-l10n-ru)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Colaboradores actuales: [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Colaboradores actuales: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
 ### Español (es)
 
