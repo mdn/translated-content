@@ -74,12 +74,3 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 Если вы выполняете это задание как часть организованного курса вам следует передать вашу работу учителю/наставнику для оценки. Если вы обучаетесь самостоятельно, то вы легко можете получить отметку [в ветке форума этого упражнения](https://discourse.mozilla.org/t/mozilla-splash-page-assessment/24679), либо в IRC канале [#mdn](irc://irc.mozilla.org/mdn) на [Mozilla IRC](https://wiki.mozilla.org/IRC). Сначала попробуйте выполнить упражнение - жульничеством ничего не добиться!
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## В этом модуле
-
-- [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Видео и аудио контент](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [От \<object> до \<iframe> — другие технологии встраивания](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Добавление векторной графики в Web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Отзывчивые изображения](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Сайт-визитка Mozilla](/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

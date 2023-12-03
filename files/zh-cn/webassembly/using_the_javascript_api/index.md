@@ -30,7 +30,7 @@ slug: WebAssembly/Using_the_JavaScript_API
            call $i))
    ```
 
-5. 在第二行，你将看到导入有一个两级命名空间 —— 内部函数 `$i` 是从 imports.imported_func 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。创建一个 `<script></script>` 节点在你的 HTML 文件中，并且添加下面的代码：
+5. 在第二行，你将看到导入有一个两级命名空间——内部函数 `$i` 是从 imports.imported_func 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。创建一个 `<script></script>` 节点在你的 HTML 文件中，并且添加下面的代码：
 
    ```js
    var importObject = {
@@ -77,7 +77,7 @@ fetch("simple.wasm")
 
 > **备注：** WebAssembly 在 Firefox 52+ 和 Chrome 57+/latest Opera 是默认支持的 (你也可以运行 wasm 代码 在 Firefox 47+ 通过将 _about:config_ 中的 `javascript.options.wasm` flag 设置为 enabling , 或者在 Chrome (51+) 以及 Opera (38+) 通过访问 _chrome://flags_ 并且将 _Experimental WebAssembly_ flag 设置为 enabling.)
 
-这是一个冗长的，令人费解的例子并且实现了很少的功能，但它确实有助于说明这是可能的 —— 在 Web 应用中与 JavaScript 一起使用 WebAssembly 代码。正如我们一直说的，WebAssembly 并不旨在替代 JavaScript; 两者可以一起工作，借鉴对方的优势。
+这是一个冗长的，令人费解的例子并且实现了很少的功能，但它确实有助于说明这是可能的——在 Web 应用中与 JavaScript 一起使用 WebAssembly 代码。正如我们一直说的，WebAssembly 并不旨在替代 JavaScript; 两者可以一起工作，借鉴对方的优势。
 
 ### 在开发者工具查看 wasm
 
@@ -91,7 +91,7 @@ fetch("simple.wasm")
 
 在 WebAssembly 的底层内存模型中，内存被表示为称为 [线性内存](http://webassembly.org/docs/semantics/#linear-memory) 的无类型字节的连续范围，通过模块中的[加载和存储指令](http://webassembly.org/docs/semantics/#linear-memory-accesses)读取和写入。在这个内存模型中，任何加载或存储都可以访问整个线性存储器中的任何字节，这是忠实地表示 C/C++ 概念（如指针）所必需的。
 
-然后，和原生 C/C++ 程序不同的是可用内存范围跨越整个进程，特定 WebAssembly 实例可访问的内存被限制在由 WebAssembly Memory 对象包含的一个特定的 —— 可能非常小的范围内。
+然后，和原生 C/C++ 程序不同的是可用内存范围跨越整个进程，特定 WebAssembly 实例可访问的内存被限制在由 WebAssembly Memory 对象包含的一个特定的——可能非常小的范围内。
 
 在 JavaScript 中，内存实例可以被认为是可调整大小的 ArrayBuffer，就像 ArrayBuffers 一样，一个 Web 应用程序可以创建许多独立的内存对象。你可以使用 {{jsxref("WebAssembly.Memory()")}} 构造函数创建一个，它将参数作为初始大小和（可选）最大大小）。
 
@@ -104,7 +104,7 @@ fetch("simple.wasm")
    var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
    ```
 
-   初始和最大的单位是 WebAssembly pages ——这些页面的大小固定为 64KB。这意味着上述内存实例的初始大小为 640KB，最大大小为 6.4MB。
+   初始和最大的单位是 WebAssembly pages——这些页面的大小固定为 64KB。这意味着上述内存实例的初始大小为 640KB，最大大小为 6.4MB。
 
    WebAssembly 内存通过简单地提供一个返回 ArrayBuffer 的缓冲区 getter / setter 来显示它的字节。例如，要直接将 42 写入线性内存的第一个单词，你可以这样做：
 
@@ -118,7 +118,7 @@ fetch("simple.wasm")
    new Uint32Array(memory.buffer)[0];
    ```
 
-3. 现在尝试这个演示 —— 保存目前为止添加的内容，将其加载到浏览器中，然后尝试在 JavaScript 控制台中输入上述两行。
+3. 现在尝试这个演示——保存目前为止添加的内容，将其加载到浏览器中，然后尝试在 JavaScript 控制台中输入上述两行。
 
 ### 增加内存
 

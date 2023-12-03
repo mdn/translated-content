@@ -32,7 +32,7 @@ function mouseMoveHandler(e) {
 }
 ```
 
-在这个函数中，我们首先计算 `relativeX` 的值，它等于鼠标在视窗中的水平位置 (`e.clientX`) 减去 canvas 元素左边框到视窗左边框的距离 (`canvas.offsetLeft`) —— 这就得到了 canvas 元素左边框到鼠标的距离。若这个值大于零，且小于 canvas 的宽度，说明鼠标指针落在 canvas 边界内，这时就把 `paddleX` （等于球板左边缘的坐标）设为 `relativeX` 减速去球板宽度的一半。这样就确保位移是相对于球板中心进行的。
+在这个函数中，我们首先计算 `relativeX` 的值，它等于鼠标在视窗中的水平位置（`e.clientX`）减去 canvas 元素左边框到视窗左边框的距离（`canvas.offsetLeft`）——这就得到了 canvas 元素左边框到鼠标的距离。若这个值大于零，且小于 canvas 的宽度，说明鼠标指针落在 canvas 边界内，这时就把 `paddleX` （等于球板左边缘的坐标）设为 `relativeX` 减速去球板宽度的一半。这样就确保位移是相对于球板中心进行的。
 
 现在球板将跟随鼠标指针。不过由于我们将球板移动限制在 canvas 大小范围内，它不会从两边完全消失。
 

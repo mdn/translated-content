@@ -1,5 +1,5 @@
 ---
-title: 测试技能：表格
+title: 技能测试：表格
 slug: Learn/CSS/Building_blocks/Tables_tasks
 ---
 

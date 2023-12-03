@@ -16,7 +16,7 @@ slug: Web/CSS/background-repeat
 ## Синтаксис
 
 ```css
-/*Ключевые значения*/
+/* Ключевые слова */
 background-repeat: repeat-x;
 background-repeat: repeat-y;
 background-repeat: repeat;
