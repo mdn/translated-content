@@ -12,7 +12,7 @@ original_slug: Web/API/Window/DOMContentLoaded_event
 
 ## Ускорение работы
 
-Если вы хотите чтобы DOM был пройден парсером насколько возможно быстро, сразу после запроса пользователем страницы, вы можете попробовать выполнять [JavaScript асинхронно](/ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) и [оптимизировать загрузку таблиц стилей](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) которые обычно замедляют загрузку документа поскольку загружаясь одновременно "крадут" трафик у основного документа.
+Если вы хотите чтобы DOM был пройден парсером насколько возможно быстро, сразу после запроса пользователем страницы, вы можете попробовать выполнять [JavaScript асинхронно](/ru/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) и [оптимизировать загрузку таблиц стилей](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) которые обычно замедляют загрузку документа поскольку загружаясь одновременно "крадут" трафик у основного документа.
 
 ## Основная информация
 
