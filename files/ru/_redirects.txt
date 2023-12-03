@@ -612,8 +612,7 @@
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_генератор	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Множественные_фоны	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ru/docs/conflicting/Web/CSS/cursor
-/ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
+/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ru/docs/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Color	/ru/docs/Web/CSS/CSS_colors
 /ru/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
@@ -635,7 +634,6 @@
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 /ru/docs/Web/CSS/CSS_Ruby	/ru/docs/Web/CSS/CSS_ruby_layout
-/ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_selectors
