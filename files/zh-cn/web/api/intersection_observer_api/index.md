@@ -578,7 +578,7 @@ function handleIntersect(entries, observer) {
 }
 ```
 
-对于 `entries` 列表中的每个 {{domxref("IntersectionObserverEntry")}}，我们都会查看该条目中的 {{{domxref("IntersectionObserverEntry.intersectionRadio", "intersectionRatio"}} 是否上升，如果是，我们就将目标的 {{cssxref("background-color")}} 设置为 `increasingColor` 中的字符串（记住，是 `"rgba(40, 40, 190, ratio)"`），并用条目的 `intersectionRatio` 替换“ratio”。结果是：不仅颜色发生了变化，目标元素的透明度也发生了变化；随着交集比率的降低，背景色的 alpha 值也会随之降低，从而使元素更加透明。
+对于 `entries` 列表中的每个 {{domxref("IntersectionObserverEntry")}}，我们都会查看该条目中的 {{domxref("IntersectionObserverEntry.intersectionRadio", "intersectionRatio")}} 是否上升，如果是，我们就将目标的 {{cssxref("background-color")}} 设置为 `increasingColor` 中的字符串（记住，是 `"rgba(40, 40, 190, ratio)"`），并用条目的 `intersectionRatio` 替换“ratio”。结果是：不仅颜色发生了变化，目标元素的透明度也发生了变化；随着交集比率的降低，背景色的 alpha 值也会随之降低，从而使元素更加透明。
 
 同样，如果 `intersectionRatio` 正在下降，我们就会使用字符串 `decreasingColor`，并在设置目标元素的 `background-color` 之前用 `intersectionRatio` 替换其中的“ratio”。
 
