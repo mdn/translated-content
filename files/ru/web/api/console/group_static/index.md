@@ -64,6 +64,6 @@ console.log("Back to the outer level");
 
 - {{domxref("console/groupEnd_static", "console.groupEnd()")}}
 - {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
-- [Документация Microsoft Edge о `console.group()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#group)
-- [Документация Node.JS о `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
-- [Документация Google Chrome о `console.group()`](https://developer.chrome.com/docs/devtools/console/api/#group)
+- [Документация Microsoft Edge: `console.group()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#group)
+- [Документация Node.JS: `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
+- [Документация Google Chrome: `console.group()`](https://developer.chrome.com/docs/devtools/console/api/#group)
