@@ -160,7 +160,7 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)
 - [共享内存——简明教程](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)，TC39 ecmascript-sharedmem 提案
-- [JavaScript's 新并发方法的初体验](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)，hacks.mozilla.org（2016）
+- [JavaScript 新并发原语的初体验](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)，hacks.mozilla.org（2016）
 - [COOP 和 COEP 的解释](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit)，由 Chrome 团队撰写（2020）
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
