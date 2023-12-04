@@ -49,7 +49,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 Используйте `stroke-linejoin`, чтобы определить, как соединять обводку двух сегментов линии.
 
-![](svg_stroke_linejoin_example)
+![](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
