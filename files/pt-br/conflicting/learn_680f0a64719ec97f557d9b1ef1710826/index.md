@@ -1,6 +1,7 @@
 ---
 title: Introdução ao Desenvolvimento Web
-slug: Web/Guide/Introduction_to_Web_development
+slug: conflicting/Learn_680f0a64719ec97f557d9b1ef1710826
+original_slug: Web/Guide/Introduction_to_Web_development
 ---
 
 Se você está apenas começando com o desenvolvimento Web ou expandindo seus horizontes em novos domínios da espetacular Web, os links aqui devem ajudá-lo a começar.
