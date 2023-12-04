@@ -13,7 +13,7 @@ slug: Web/HTML/Content_categories
 
 > **Примечание:** Более подробное обсуждение данных категорий контента и их сравнительных особенностей выходит за рамки данной статьи; можно обратиться к [соответствующим разделам спецификации HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content) (на английском).
 
-[![Content_categories_venn.png](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png)
+![Диаграмма Венна, показывающая, как взаимодействуют различные категории контента.](content_categories_venn.png)
 
 ## Основные категории контента
 

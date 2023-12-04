@@ -26,7 +26,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 Кроме цветовых свойств обводки, есть несколько атрибутов, управляющих способом обводки.
 
-![](/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png)
+![](svg_stroke_linecap_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -49,7 +49,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 Используйте `stroke-linejoin`, чтобы определить, как соединять обводку двух сегментов линии.
 
-![](/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png)
+![](svg_stroke_linejoin_example)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -73,7 +73,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 Наконец, вы можете использовать пунктирные линии в обводке, определив атрибут `stroke-dasharray`.
 
-![](/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png)
+![](svg_stroke_dasharray_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
