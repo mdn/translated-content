@@ -21,7 +21,6 @@ slug: Glossary/Void_element
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}(Удалён в HTML 5.2 Draft)
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
 - {{HTMLElement("param")}}
