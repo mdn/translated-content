@@ -38,7 +38,7 @@ CSS allows this by associating conditions with declarations blocks. Each (valid)
 
 ![](ruleset.png)
 
-As an element of the page may be matched by several selectors, and therefore by several rules eventually containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) algorithm.
+As an element of the page may be matched by several selectors, and therefore by several rules eventually containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) algorithm.
 
 > **Примечание:** It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
 >
