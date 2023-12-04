@@ -16814,10 +16814,6 @@
     "modified": "2019-03-23T22:18:26.835Z",
     "contributors": ["pk.prog"]
   },
-  "orphaned/Glossary/jQuery": {
-    "modified": "2020-11-17T03:47:58.520Z",
-    "contributors": ["SphinxKnight", "annamolodcova1909", "Sparks"]
-  },
   "orphaned/Learn/HTML/Forms/HTML5_updates": {
     "modified": "2019-03-23T22:35:16.060Z",
     "contributors": ["Morjodrom", "AgRuN1", "ruslan_g02"]
@@ -17014,10 +17010,6 @@
   "orphaned/Mozilla/Add-ons/WebExtensions/Debugging": {
     "modified": "2019-03-29T04:27:38.888Z",
     "contributors": ["karr1d"]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-18T21:06:53.326Z",
-    "contributors": ["gladisihor"]
   },
   "orphaned/Toolkit_API": {
     "modified": "2019-01-16T14:44:25.079Z",

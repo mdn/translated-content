@@ -23,7 +23,7 @@ Cada elemento container ou elementos gráficos em um desenho SVG podem fornecer 
 
 ### Atributos específicos
 
-_Não existe especificação de atributos_
+_Não existe especificação de atributos._
 
 ## Interface DOM
 
