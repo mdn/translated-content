@@ -20,7 +20,7 @@ Date.parse(dateString)
 ### Параметры
 
 - `dateString`
-  - : Строка в формате [date time string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format). См. указанный источник для получения информации об использовании различных форматов.
+  - : Строка в формате [date time string](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format). См. указанный источник для получения информации об использовании различных форматов.
 
 ### Возвращаемое значение
 
