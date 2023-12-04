@@ -8,6 +8,7 @@ l10n:
 {{APIRef("Window Management API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 {{domxref("Window")}} インターフェイスの **`getScreenDetails()`** メソッドは、ユーザーのデバイスで利用できるすべての画面の詳細を表す {{domxref("ScreenDetails")}} オブジェクトインスタンスで満たされる {{domxref("Promise")}} を返します。
+
 ## 構文
 
 ```js-nolint
