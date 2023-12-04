@@ -86,7 +86,7 @@ CSS에 주석을 달면 향후 아무 개발자들이 해당 CSS 파일을 작�
 It can be broken onto multiple lines. */
 ```
 
-스캐냉 시 다른 섹션을 빠르게 찾도록 도와주거나, CSS의 해당 부분으로 바로 점프할 수 있도록 스타일시트의 논리 섹션 사이에 주석블록을 추가하는 것은 좋은 팁입니다. 코드에 나타나지 않는 문자열(주석블록)을 사용하는 경우 검색을 통해 섹션에서 섹션으로 점프할 수 있습니다. 아래는 `||` 를 사용했습니다.
+스캐냉 시 다른 구획을 빠르게 찾도록 도와주거나, CSS의 해당 부분으로 바로 점프할 수 있도록 스타일시트의 논리 구획 사이에 주석블록을 추가하는 것은 좋은 팁입니다. 코드에 나타나지 않는 문자열(주석블록)을 사용하는 경우 검색을 통해 구획에서 구획으로 점프할 수 있습니다. 아래는 `||` 를 사용했습니다.
 
 ```css
 /* || General styles */
@@ -115,18 +115,18 @@ CSS의 대부분이 자명할 것이기 때문에 CSS의 모든 것에 각각 �
 
 아마도 무언가를 만들기 위해 자습서를 따랐을 것이고, 그 CSS는 매우 자명적이거나 알아챌만 하지는 않을 것입니다. 그런 경우, 자습서의 URL을 주석에 추가할 수 있습니다. 1년이나 그 후에 프로젝트로 돌아갔을 때, 스스로 감사하게 될 것이고, 어렴풋이 그 프로젝트에 관련한 좋은 자습서가 있음을 기억하지만 어디에서 났는지 기억할 수 없을 겁니다.
 
-### Create logical sections in your stylesheet
+### 스타일시트에 논리 섹션을 작성하세요
 
-It is a good idea to have all of the common styling first in the stylesheet. This means all of the styles which will generally apply unless you do something special with that element. You will typically have rules set up for:
+스타일시트에 일반적인 스타일링을 먼저 넣는 것이 좋습니다. 이것은 그 요소로 특별한 것을 하지 않는 이상 일반적으로 적용되는 모든 스타일을 의미합니다. 일반적으로 다음을 위한 규칙을 세울 것입니다.
 
 - `body`
 - `p`
 - `h1`, `h2`, `h3`, `h4`, `h5`
 - `ul` and `ol`
-- The `table` properties
+- `table` 속성들
 - Links
 
-In this section of the stylesheet we are providing default styling for the type on the site, setting up a default style for data tables and lists and so on.
+스타일시트의 이 섹션에서는 데이터 테이블 및 리스트에 대한 기본 스타일을 설정하는 등 사이트의 유형에 대한 기본 스타일을 제공합니다.
 
 ```css
 /* || GENERAL STYLES */
@@ -151,7 +151,7 @@ blockquote {
 }
 ```
 
-After this section, we could define a few utility classes, for example, a class that removes the default list style for lists we're going to display as flex items or in some other way. If you have a few styling choices you know you will want to apply to lots of different elements, they can be put in this section.
+이 구획 이후, 몇 가지 유틸리티 클래스를 정의할 수 있습니다. 예를 들어, 플렉스 아이템이나 다른 방법으로 표시할 리스트의 기본 리스트 스타일을 제거하는 클래스가 있습니다. 다양한 요소에 적용하고 싶은 스타일링 옵션이 몇 가지 있다면, 이 구획에 넣을 수 있습니다. 
 
 ```css
 /* || UTILITIES */
@@ -165,7 +165,7 @@ After this section, we could define a few utility classes, for example, a class 
 /* … */
 ```
 
-Then we can add everything that is used sitewide. That might be things like the basic page layout, the header, navigation styling, and so on.
+그러면 사이트 전체에서 사용되는 모든 것을 추가할 수 있습니다. 기본 페이지 레이아웃, 헤더, 네비게이션 스타일링 등이 될 수 있습니다.
 
 ```css
 /* || SITEWIDE */
@@ -179,7 +179,7 @@ Then we can add everything that is used sitewide. That might be things like the 
 }
 ```
 
-Finally, we will include CSS for specific things, broken down by the context, page, or even component in which they are used.
+마지막으로, 컨텍스트, 페이지 또는 사용되는 구성 요소에 따라 세분화된 특정 항목에 대한 CSS를 포함할 것입니다.
 
 ```css
 /* || STORE PAGES */
@@ -193,7 +193,7 @@ Finally, we will include CSS for specific things, broken down by the context, pa
 }
 ```
 
-By ordering things in this way, we at least have an idea in which part of the stylesheet we will be looking for something that we want to change.
+이 방식으로 정리하면, 적어도 스타일 시트의 어느 부분에서 바꾸고 싶은 것을 찾을지에 대한 생각을 가질 수 있습니다.
 
 ### Avoid overly-specific selectors
 
