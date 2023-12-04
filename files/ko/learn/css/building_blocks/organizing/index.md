@@ -86,7 +86,7 @@ CSS에 주석을 달면 향후 아무 개발자들이 해당 CSS 파일을 작�
 It can be broken onto multiple lines. */
 ```
 
-스캐냉 시 다른 구획을 빠르게 찾도록 도와주거나, CSS의 해당 부분으로 바로 점프할 수 있도록 스타일시트의 논리 구획 사이에 주석블록을 추가하는 것은 좋은 팁입니다. 코드에 나타나지 않는 문자열(주석블록)을 사용하는 경우 검색을 통해 구획에서 구획으로 점프할 수 있습니다. 아래는 `||` 를 사용했습니다.
+스캐닝 시 다른 섹션을 빠르게 찾도록 도와주거나, CSS의 해당 부분으로 바로 점프할 수 있도록 스타일시트의 논리 섹션 사이에 주석블록을 추가하는 것은 좋은 팁입니다. 코드에 나타나지 않는 문자열(주석블록)을 사용하는 경우 검색을 통해 섹션에서 섹션으로 점프할 수 있습니다. 아래는 `||` 를 사용했습니다.
 
 ```css
 /* || General styles */
@@ -151,7 +151,7 @@ blockquote {
 }
 ```
 
-이 구획 이후, 몇 가지 유틸리티 클래스를 정의할 수 있습니다. 예를 들어, 플렉스 아이템이나 다른 방법으로 표시할 리스트의 기본 리스트 스타일을 제거하는 클래스가 있습니다. 다양한 요소에 적용하고 싶은 스타일링 옵션이 몇 가지 있다면, 이 구획에 넣을 수 있습니다. 
+이 섹션 이후, 몇 가지 유틸리티 클래스를 정의할 수 있습니다. 예를 들어, 플렉스 아이템이나 다른 방법으로 표시할 리스트의 기본 리스트 스타일을 제거하는 클래스가 있습니다. 다양한 요소에 적용하고 싶은 스타일링 옵션이 몇 가지 있다면, 이 섹션에 넣을 수 있습니다. 
 
 ```css
 /* || UTILITIES */
@@ -195,9 +195,9 @@ blockquote {
 
 이 방식으로 정리하면, 적어도 스타일 시트의 어느 부분에서 바꾸고 싶은 것을 찾을지에 대한 생각을 가질 수 있습니다.
 
-### Avoid overly-specific selectors
+### 지나치게 특정한 셀렉터를 자제하세요
 
-If you create very specific selectors, you will often find that you need to duplicate chunks of your CSS to apply the same rules to another element. For example, you might have something like the below selector, which applies the rule to a `<p>` with a class of `box` inside an `<article>` with a class of `main`.
+매우 구체적인 선택자를 만들게 되면, 종종 같은 규칙을 다른 요소에 적용하기 위해 CSS의 일부를 복제헤야 하는 상황을 겪게 될 것입니다. 예를 들어, 아래와 같은 선택자가 있을 수 있는데, 이는 `main` 클래스를 가진 `<article>` 내부의 `box` 클래스를 가진 `<p>`에 규칙을 적용합니다.
 
 ```css
 article.main p.box {
@@ -205,7 +205,7 @@ article.main p.box {
 }
 ```
 
-If you then wanted to apply the same rules to something outside of `main`, or to something other than a `<p>`, you would have to add another selector to these rules or create a whole new ruleset. Instead, you could use the selector `.box` to apply your rule to any element that has the class `box`:
+`main`이외의 것에, 또는 `<p>`가 아닌 다른 것에 같은 규칙을 적용하고 싶다면, 이러한 규칙에 다른 셀렉터를 추가하거나 완전히 새로운 규칙 집합을 만들어야 합니다. 대신에, 선택자 `.box`를 사용하여 `box` 클래스를 가진 어떤 요소에든 적용할 수 있습니다.
 
 ```css
 .box {
@@ -213,7 +213,7 @@ If you then wanted to apply the same rules to something outside of `main`, or to
 }
 ```
 
-There will be times when making something more specific makes sense; however, this will generally be an exception rather than usual practice.
+때때로 무언가를 더 구체적으로 만드는 경우도 있을 것입니다. 그러나, 이는 일반적으로 보통의 경우가 아닌 예외적인 상황입니다.
 
 ### Break large stylesheets into multiple smaller ones
 
