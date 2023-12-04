@@ -344,7 +344,7 @@ const intersectionCallback = (entries) => {
 
 ### HTML
 
-这个示例的 HTML 代码非常简短，主要元素是我们要针对的方框（其 ID 为 `"box"`），以及方框中的一些内容。
+这个示例的 HTML 代码非常简短，主要元素是我们要针对的盒子（其 ID 为 `"box"`），以及盒子中的一些内容。
 
 ```html
 <div id="box">
