@@ -16806,21 +16806,13 @@
     "modified": "2019-03-18T20:52:07.177Z",
     "contributors": ["chrisdavidmills", "ruslan_g02"]
   },
-  "orphaned/Glossary/Bootstrap": {
-    "modified": "2020-10-30T10:23:10.825Z",
-    "contributors": ["ksam"]
-  },
-  "orphaned/Glossary/Dynamic_programming_language": {
-    "modified": "2019-03-23T22:22:41.086Z",
-    "contributors": ["pust0ta", "thecodecreator"]
+  "conflicting/Web/Web_Components": {
+    "modified": "2019-03-18T21:40:10.986Z",
+    "contributors": ["PaulineNemchak"]
   },
   "orphaned/Glossary/Polifill": {
     "modified": "2019-03-23T22:18:26.835Z",
     "contributors": ["pk.prog"]
-  },
-  "orphaned/Glossary/jQuery": {
-    "modified": "2020-11-17T03:47:58.520Z",
-    "contributors": ["SphinxKnight", "annamolodcova1909", "Sparks"]
   },
   "orphaned/Learn/HTML/Forms/HTML5_updates": {
     "modified": "2019-03-23T22:35:16.060Z",
@@ -17018,10 +17010,6 @@
   "orphaned/Mozilla/Add-ons/WebExtensions/Debugging": {
     "modified": "2019-03-29T04:27:38.888Z",
     "contributors": ["karr1d"]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-18T21:06:53.326Z",
-    "contributors": ["gladisihor"]
   },
   "orphaned/Toolkit_API": {
     "modified": "2019-01-16T14:44:25.079Z",
@@ -17354,10 +17342,6 @@
     "modified": "2020-09-02T08:30:27.156Z",
     "contributors": ["bogpok"]
   },
-  "orphaned/Web/HTML/Element/applet": {
-    "modified": "2019-03-23T22:06:37.540Z",
-    "contributors": ["mars485"]
-  },
   "orphaned/Web/HTML/Element/element": {
     "modified": "2019-03-23T22:16:19.667Z",
     "contributors": ["SphinxKnight"]
@@ -17527,10 +17511,6 @@
   "orphaned/Web/SVG/Attribute/onload": {
     "modified": "2019-01-16T20:23:16.915Z",
     "contributors": ["maxportnyagin"]
-  },
-  "orphaned/Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-18T21:33:59.744Z",
-    "contributors": ["warsan"]
   },
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2019-03-18T20:42:08.077Z",

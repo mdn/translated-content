@@ -84,15 +84,12 @@
 /ru/docs/Glossary/404	/ru/docs/conflicting/Web/HTTP/Status/404
 /ru/docs/Glossary/502	/ru/docs/conflicting/Web/HTTP/Status/502
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
-/ru/docs/Glossary/Bootstrap	/ru/docs/orphaned/Glossary/Bootstrap
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
-/ru/docs/Glossary/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
 /ru/docs/Glossary/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Glossary/Round_Trip_Time_(RTT)	/ru/docs/Glossary/Round_Trip_Time
 /ru/docs/Glossary/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Glossary/XHR_(XMLHttpRequest)	/ru/docs/Glossary/XMLHttpRequest
-/ru/docs/Glossary/jQuery	/ru/docs/orphaned/Glossary/jQuery
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Void_element
 /ru/docs/HTML	/ru/docs/Web/HTML
 /ru/docs/HTML/Canvas	/ru/docs/Web/API/Canvas_API
@@ -319,7 +316,6 @@
 /ru/docs/MDN/Tools/Unsupported_GET_API	/ru/docs/conflicting/MDN
 /ru/docs/MDN/Yari	/ru/docs/orphaned/MDN/Yari
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
-/ru/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/ru/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
@@ -724,7 +720,6 @@
 /ru/docs/Web/HTML/Canvas	/ru/docs/Web/API/Canvas_API
 /ru/docs/Web/HTML/Canvas/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
 /ru/docs/Web/HTML/Element/Input/datetime	/ru/docs/conflicting/Web/HTML/Element/input/datetime-local
-/ru/docs/Web/HTML/Element/applet	/ru/docs/orphaned/Web/HTML/Element/applet
 /ru/docs/Web/HTML/Element/video/seeking_event	/ru/docs/Web/API/HTMLMediaElement/seeking_event
 /ru/docs/Web/HTML/Element/кнопка	/ru/docs/Web/HTML/Element/button
 /ru/docs/Web/HTML/Element/ссылка	/ru/docs/Web/HTML/Element/link
@@ -929,7 +924,6 @@
 /ru/docs/Web/Performance/Основы	/ru/docs/Web/Performance/Fundamentals
 /ru/docs/Web/Performance/Производительность_анимации	/ru/docs/Web/Performance/Animation_performance_and_frame_rate
 /ru/docs/Web/Progressive_web_apps/Installable_PWAs	/ru/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-/ru/docs/Web/SVG/SVG_1.1_Support_in_Firefox	/ru/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /ru/docs/Web/SVG/Tutorial/Базовые_Преобразования	/ru/docs/Web/SVG/Tutorial/Basic_Transformations
 /ru/docs/Web/SVG/Tutorial/Введение	/ru/docs/Web/SVG/Tutorial/Introduction
 /ru/docs/Web/SVG/Tutorial/Основные_Фигуры	/ru/docs/Web/SVG/Tutorial/Basic_Shapes
@@ -1003,7 +997,6 @@
 /ru/docs/Словарь/BigInt	/ru/docs/Glossary/BigInt
 /ru/docs/Словарь/Blink	/ru/docs/Glossary/Blink
 /ru/docs/Словарь/Boolean	/ru/docs/Glossary/Boolean
-/ru/docs/Словарь/Bootstrap	/ru/docs/orphaned/Glossary/Bootstrap
 /ru/docs/Словарь/Browser	/ru/docs/Glossary/Browser
 /ru/docs/Словарь/Browsing_context	/ru/docs/Glossary/Browsing_context
 /ru/docs/Словарь/Bézier_curve	/ru/docs/Glossary/Bezier_curve
@@ -1035,7 +1028,6 @@
 /ru/docs/Словарь/DOS_attack	/ru/docs/Glossary/DOS_attack
 /ru/docs/Словарь/Doctype	/ru/docs/Glossary/Doctype
 /ru/docs/Словарь/Domain_name	/ru/docs/Glossary/Domain_name
-/ru/docs/Словарь/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Словарь/ECMA	/ru/docs/Glossary/ECMA
 /ru/docs/Словарь/ECMAScript	/ru/docs/Glossary/ECMAScript
 /ru/docs/Словарь/Empty_element	/ru/docs/Glossary/Void_element
@@ -1146,7 +1138,6 @@
 /ru/docs/Словарь/first_meaningful_paint	/ru/docs/Glossary/First_meaningful_paint
 /ru/docs/Словарь/global_variable	/ru/docs/Glossary/Global_variable
 /ru/docs/Словарь/https	/ru/docs/Glossary/HTTPS
-/ru/docs/Словарь/jQuery	/ru/docs/orphaned/Glossary/jQuery
 /ru/docs/Словарь/jpeg	/ru/docs/Glossary/JPEG
 /ru/docs/Словарь/loop	/ru/docs/Glossary/Loop
 /ru/docs/Словарь/origin	/ru/docs/Glossary/Origin

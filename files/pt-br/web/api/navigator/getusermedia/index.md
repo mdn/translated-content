@@ -15,7 +15,7 @@ Se o usuário der permissão, a MediaStream (o _track_ do video e/ou audio) , é
 navigator.getUserMedia ( permissoes, callbackSucesso, callbackErro );
 ```
 
-**Exemplo**
+## Exemplo
 
 Este é um exemplo de uso da função getUserMedia() com prefixos específicos dos navegadores.
 
