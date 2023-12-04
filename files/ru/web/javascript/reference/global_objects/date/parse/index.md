@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 Метод **`Date.parse()`** разбирает строковое представление даты и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.
 
-В явном виде поддерживается только формат [date time string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format). Другие форматы определяются реализацией и могут работать не во всех браузерах. Если необходимо обеспечить работу с большим количеством различных форматов, можно воспользоваться библиотекой.
+В явном виде поддерживается только формат [date time string](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format). Другие форматы определяются реализацией и могут работать не во всех браузерах. Если необходимо обеспечить работу с большим количеством различных форматов, можно воспользоваться библиотекой.
 
 {{EmbedInteractiveExample("pages/js/date-parse.html")}}
 
