@@ -1,6 +1,7 @@
 ---
 title: Gráficas en la web
-slug: Web/Guide/Graphics
+slug: conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+original_slug: Web/Guide/Graphics
 ---
 
 Los sitios web modernos a menudo necesitan aplicaciones para presentar y/o visualizar gráficos . Se
