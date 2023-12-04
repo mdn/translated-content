@@ -1486,6 +1486,17 @@
     "modified": "2020-09-30T03:03:23.191Z",
     "contributors": ["SphinxKnight", "Paulo_Rezende"]
   },
+  "Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
+    "modified": "2019-04-26T09:51:09.814Z",
+    "contributors": [
+      "helton-mori-dev",
+      "chrisdavidmills",
+      "Wanderleymuniz",
+      "flaviomicheletti",
+      "gigantebsb",
+      "PedroFelipe"
+    ]
+  },
   "Learn/JavaScript/Client-side_web_APIs/Introduction": {
     "modified": "2020-11-04T14:49:24.547Z",
     "contributors": [
@@ -3375,7 +3386,7 @@
       "sistematico"
     ]
   },
-  "Web/API/History_API/Example": {
+  "Web/API/History_API/Working_with_the_History_API": {
     "modified": "2019-03-18T21:40:08.609Z",
     "contributors": ["oidanieljunior"]
   },
@@ -4683,6 +4694,10 @@
     "modified": "2019-03-23T22:21:43.734Z",
     "contributors": ["dinaldojr"]
   },
+  "Web/CSS/CSS_media_queries/Printing": {
+    "modified": "2020-08-18T10:16:18.081Z",
+    "contributors": ["Eder_Duarte", "maatheusgouveia"]
+  },
   "Web/CSS/CSS_media_queries/Using_media_queries": {
     "modified": "2019-03-23T23:04:07.760Z",
     "contributors": [
@@ -5432,25 +5447,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/AJAX": {
-    "modified": "2019-04-26T09:51:09.814Z",
-    "contributors": [
-      "helton-mori-dev",
-      "chrisdavidmills",
-      "Wanderleymuniz",
-      "flaviomicheletti",
-      "gigantebsb",
-      "PedroFelipe"
-    ]
-  },
-  "Web/Guide/Graphics": {
-    "modified": "2019-03-23T23:24:23.146Z",
-    "contributors": ["julio-elipse", "MarceloBRN", "LucasPrado", "MatCAlv"]
-  },
-  "Web/Guide/Introduction_to_Web_development": {
-    "modified": "2019-07-28T16:57:13.368Z",
-    "contributors": ["rvenson"]
-  },
   "Web/Guide/Mobile": {
     "modified": "2020-04-05T18:24:36.523Z",
     "contributors": ["guidiasz", "michelsouza"]
@@ -5458,10 +5454,6 @@
   "Web/Guide/Performance": {
     "modified": "2019-03-18T20:49:01.451Z",
     "contributors": ["ssamuel645", "KelviDalmazo"]
-  },
-  "Web/Guide/Printing": {
-    "modified": "2020-08-18T10:16:18.081Z",
-    "contributors": ["Eder_Duarte", "maatheusgouveia"]
   },
   "Web/HTML": {
     "modified": "2019-09-10T15:24:16.025Z",
@@ -10398,6 +10390,10 @@
     "modified": "2019-03-23T22:59:16.068Z",
     "contributors": ["rogeralbinoi"]
   },
+  "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
+    "modified": "2019-03-23T23:24:23.146Z",
+    "contributors": ["julio-elipse", "MarceloBRN", "LucasPrado", "MatCAlv"]
+  },
   "conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content": {
     "modified": "2019-03-23T23:39:05.441Z",
     "contributors": [
@@ -10465,6 +10461,10 @@
   "conflicting/Learn/Server-side/Express_Nodejs/Displaying_data": {
     "modified": "2020-07-16T22:38:33.142Z",
     "contributors": ["caiollavos"]
+  },
+  "conflicting/Learn_680f0a64719ec97f557d9b1ef1710826": {
+    "modified": "2019-07-28T16:57:13.368Z",
+    "contributors": ["rvenson"]
   },
   "conflicting/MDN/Contribute": {
     "modified": "2019-01-16T19:17:27.272Z",

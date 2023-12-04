@@ -1,6 +1,7 @@
 ---
 title: AJAX
-slug: Web/Guide/AJAX
+slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
+original_slug: Web/Guide/AJAX
 ---
 
 **[Primeiros passos](/pt-BR/docs/AJAX/Getting_Started)** Uma introdução ao AJAX.

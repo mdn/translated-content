@@ -1,6 +1,7 @@
 ---
 title: Printing
-slug: Web/Guide/Printing
+slug: Web/CSS/CSS_media_queries/Printing
+original_slug: Web/Guide/Printing
 ---
 
 Pode haver momentos em que seu site ou aplicação queira melhorar a experiência do usuário quando imprime um conteúdo. Existem diversos cenários possíveis:

@@ -1,6 +1,7 @@
 ---
 title: Exemplo de navegação Ajax
-slug: Web/API/History_API/Example
+slug: Web/API/History_API/Working_with_the_History_API
+original_slug: Web/API/History_API/Example
 ---
 
 Esse é um exemplo de um web site em AJAX web site composto por apenas três páginas (_first_page.php_, _second_page.php_ e _third_page.php_). Para ver como funciona, crie os arquivos a seguir (ou _git clone_ [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
