@@ -53,7 +53,7 @@ const sab = new SharedArrayBuffer(1024);
 
 ### 增大可增大的 SharedArrayBuffer
 
-在这个示例中，我们创建了一个 8 字节的缓冲区，其可增大的最大长度为 16 字节，然后 {{jsxref("SharedArrayBuffer/grow", "grow()")}} 它到 12 字节：
+在这个示例中，我们创建了一个 8 字节的缓冲区，其可增大到的最大长度为 16 字节，然后 {{jsxref("SharedArrayBuffer/grow", "grow()")}} 它到 12 字节：
 
 ```js
 const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
@@ -61,7 +61,7 @@ const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
 buffer.grow(12);
 ```
 
-> **备注：** 推荐设置 `maxByteLength` 为使用场景下最低的大小，不要超过 `1073741824`（1GB）以减少内存溢出风险。
+> **备注：** 推荐设置 `maxByteLength` 为使用场景下最低的大小，不要超过 `1073741824`（1GB）以减小内存溢出风险。
 
 ## 规范
 
