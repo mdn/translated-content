@@ -8509,10 +8509,6 @@
     "modified": "2019-03-23T22:10:22.365Z",
     "contributors": ["FenixAlive"]
   },
-  "Web/Guide/Performance": {
-    "modified": "2019-03-23T23:21:17.984Z",
-    "contributors": ["DeiberChacon", "Sheppy"]
-  },
   "Web/HTML": {
     "modified": "2020-12-10T12:38:08.697Z",
     "contributors": [
@@ -14566,6 +14562,10 @@
   "conflicting/Web/OpenSearch": {
     "modified": "2019-01-16T15:27:59.157Z",
     "contributors": ["Mgjbot", "Superruzafa", "Lesmo sft", "Nukeador"]
+  },
+  "conflicting/Web/Performance": {
+    "modified": "2019-03-23T23:21:17.984Z",
+    "contributors": ["DeiberChacon", "Sheppy"]
   },
   "conflicting/Web/Progressive_web_apps": {
     "modified": "2019-03-23T23:32:50.922Z",
