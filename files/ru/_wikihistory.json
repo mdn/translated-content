@@ -16956,33 +16956,6 @@
     "modified": "2020-09-30T12:57:23.196Z",
     "contributors": ["chrisdavidmills", "fuggy"]
   },
-  "orphaned/MDN/Tools": {
-    "modified": "2020-09-30T16:54:08.506Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "pk.prog", "warsan"]
-  },
-  "orphaned/MDN/Tools/Feeds": {
-    "modified": "2019-03-23T23:07:09.701Z",
-    "contributors": ["wbamberg", "Mingun"]
-  },
-  "orphaned/MDN/Tools/Page_deletion": {
-    "modified": "2019-01-16T19:44:31.713Z",
-    "contributors": ["wbamberg", "Mingun"]
-  },
-  "orphaned/MDN/Tools/Page_watching": {
-    "modified": "2020-09-30T16:54:08.639Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "warsan",
-      "Jasum",
-      "Liubava77",
-      "lavr1986uxa"
-    ]
-  },
-  "orphaned/MDN/Tools/Search": {
-    "modified": "2019-03-23T23:07:10.929Z",
-    "contributors": ["wbamberg", "Mingun"]
-  },
   "orphaned/Mozilla/Add-ons/WebExtensions/Debugging": {
     "modified": "2019-03-29T04:27:38.888Z",
     "contributors": ["karr1d"]
