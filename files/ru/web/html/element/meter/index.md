@@ -41,7 +41,7 @@ slug: Web/HTML/Element/meter
 
 ### Простой пример
 
-#### HTML content
+#### HTML
 
 ```html
 <p>
@@ -49,19 +49,19 @@ slug: Web/HTML/Element/meter
 </p>
 ```
 
-#### Output
+#### Результат
 
 {{EmbedLiveSample("Простой_пример", 300, 60)}}
 
-В Google Chrome, результат будет выглядеть так:
+В Google Chrome, результат будет выглядеть приблизительно так:
 
-![meter1.png](/@api/deki/files/4940/=meter1.png)
+![](screen_shot_2020-10-12_at_10.10.53_pm.png)
 
-### Пример с High и Low диапазоном
+### Пример с диапазоном
 
 Обратите внимание, что в этом примере атрибут **min** опущен; это разрешено, так как по умолчанию он будет равен 0.
 
-#### HTML content
+#### HTML
 
 ```html
 <p>
@@ -69,13 +69,13 @@ slug: Web/HTML/Element/meter
 </p>
 ```
 
-#### Output
+#### Результат
 
 {{EmbedLiveSample("Пример_с_High_и_Low_диапазоном", 300, 60)}}
 
-В Google Chrome, результат будет выглядеть так:
+В Google Chrome, результат будет выглядеть приблизительно так:
 
-![meter2.png](/@api/deki/files/4941/=meter2.png)
+![](screen_shot_2020-10-12_at_10.11.52_pm.png)
 
 ## Спецификации
 
