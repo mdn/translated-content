@@ -516,7 +516,10 @@ HTML は次のようになります。
       src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
       type="video/webm" />
     <p>
-      お使いのブラウザーは HTML 動画に対応していません。代わりに<a href="rabbit320.mp4">動画へのリンク</a>をご利用ください。
+      お使いのブラウザーは HTML 動画に対応していません。代わりに<a
+        href="rabbit320.mp4"
+        >動画へのリンク</a
+      >をご利用ください。
     </p>
   </video>
 </div>
