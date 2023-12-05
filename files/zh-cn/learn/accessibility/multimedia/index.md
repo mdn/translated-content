@@ -221,7 +221,7 @@ player.ontimeupdate = () => {
 
 #### 阅读延伸
 
-这为你提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能 (包括旧版浏览器的 Flash 回退) 的详细信息，请参阅：
+这为你提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能（包括旧版浏览器的 Flash 回退）的详细信息，请参阅：
 
 - [Audio and video delivery](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)
 - [Video player styling basics](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
