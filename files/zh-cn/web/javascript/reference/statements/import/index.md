@@ -1,8 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-page-type: javascript-statement
-browser-compat: javascript.statements.import
 ---
 
 {{jsSidebar("Statements")}}
@@ -17,7 +15,7 @@ browser-compat: javascript.statements.import
 
 ## 语法
 
-```js
+```js-nolint
 import defaultExport from "module-name";
 import * as name from "module-name";
 import { export1 } from "module-name";
