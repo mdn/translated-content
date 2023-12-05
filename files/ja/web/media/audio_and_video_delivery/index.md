@@ -1,8 +1,7 @@
 ---
 title: 音声と動画の配信
-slug: Web/Guide/Audio_and_video_delivery
-l10n:
-  sourceCommit: 4b4bb8dea94f7264a841e0eecb0dcc919236459d
+slug: Web/Media/Audio_and_video_delivery
+original_slug: Web/Guide/Audio_and_video_delivery
 ---
 
 静的な」メディアファイルからアダプティブなライブストリームまで、さまざまな方法で音声と動画をウェブ上に配信することができます。この記事は、ウェブベースのメディアの様々な配信メカニズムや、一般的なブラウザーへの互換性を探るための出発点として意図されています。
