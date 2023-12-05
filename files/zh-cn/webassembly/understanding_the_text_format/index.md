@@ -351,8 +351,8 @@ fetchAndInstantiate("logger2.wasm", importObject).then(function (instance) {
 为了了解为什么表格是必须的，我们首先需要观察前面看到的 call 指令，它接受一个静态函数索引，并且只调用了一个函数——但是，如果被调用者是一个运行时值呢？
 
 - 在 JavaScript 中，我们总是看到：函数是一等值。
-- 在 C/C++中，我们看到了函数指针。
-- 在 C++中，我们看到了虚函数。
+- 在 C/C++ 中，我们看到了函数指针。
+- 在 C++ 中，我们看到了虚函数。
 
 WebAssembly 需要一种做到这一点的调用指令，因此，我们有了接受一个动态函数操作数的 call_indirect 指令。问题是，在 WebAssembly 中，当前操作数的仅有的类型是 i32/i64/f32/f64。
 
