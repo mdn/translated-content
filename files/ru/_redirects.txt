@@ -292,12 +292,11 @@
 /ru/docs/MDN/Contribute/Creating_and_editing_pages	/ru/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ru/docs/MDN/Contribute/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Contribute/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
-/ru/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	/ru/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
+/ru/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /ru/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/ru/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ru/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ru/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ru/docs/MDN/Contribute/Howto/Report_a_problem	/ru/docs/MDN/Community/Issues
 /ru/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ru/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-/ru/docs/MDN/Contribute/Howto/Добавить_или_обновить_данные_о_браузерной_совместимости	/ru/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 /ru/docs/MDN/Contribute/Open_source_etiquette	/ru/docs/MDN/Community/Open_source_etiquette
 /ru/docs/MDN/Contribute/Процессы	/ru/docs/MDN/Contribute/Processes
 /ru/docs/MDN/Feedback	/ru/docs/MDN/Community
