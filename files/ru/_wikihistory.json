@@ -16153,25 +16153,9 @@
     "modified": "2020-07-16T22:38:33.391Z",
     "contributors": ["mikemoll", "alxatr"]
   },
-  "conflicting/MDN": {
-    "modified": "2020-11-05T06:23:08.678Z",
-    "contributors": ["ksam"]
-  },
-  "conflicting/MDN/Contribute": {
-    "modified": "2019-01-16T19:24:18.760Z",
-    "contributors": ["wbamberg", "Devengineer", "uleming"]
-  },
   "conflicting/MDN/Tools": {
     "modified": "2019-01-16T19:44:47.259Z",
     "contributors": ["wbamberg", "Mingun"]
-  },
-  "conflicting/MDN/Writing_guidelines": {
-    "modified": "2020-11-02T10:17:56.940Z",
-    "contributors": ["ksam"]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures/Live_samples": {
-    "modified": "2019-03-18T20:31:43.828Z",
-    "contributors": ["MuradAz"]
   },
   "conflicting/Mozilla/Add-ons": {
     "modified": "2019-03-23T23:58:39.567Z",
