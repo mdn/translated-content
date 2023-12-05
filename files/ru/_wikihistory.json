@@ -17279,10 +17279,6 @@
     "modified": "2020-12-14T08:44:06.511Z",
     "contributors": ["azahw935", "bogpok"]
   },
-  "orphaned/Web/Guide/Unicode_Bidrectional_Text_Algorithm": {
-    "modified": "2020-09-02T08:30:27.156Z",
-    "contributors": ["bogpok"]
-  },
   "orphaned/Web/HTML/Element/element": {
     "modified": "2019-03-23T22:16:19.667Z",
     "contributors": ["SphinxKnight"]

@@ -697,7 +697,6 @@
 /ru/docs/Web/Guide/HTML/Introduction	/ru/docs/Learn/HTML/Introduction_to_HTML
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn/HTML/Howto/Use_data_attributes
-/ru/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm	/ru/docs/orphaned/Web/Guide/Unicode_Bidrectional_Text_Algorithm
 /ru/docs/Web/Guide/Графика	/ru/docs/Web/Guide/Graphics
 /ru/docs/Web/Guide/Производительность	/ru/docs/Web/Guide/Performance
 /ru/docs/Web/HTML/Applying_color	/ru/docs/Web/CSS/CSS_colors/Applying_color
