@@ -30465,10 +30465,6 @@
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
   },
-  "conflicting/Web/Performance": {
-    "modified": "2019-06-08T03:16:25.641Z",
-    "contributors": ["silverskyvicto"]
-  },
   "conflicting/Web/Security/Certificate_Transparency": {
     "modified": "2020-10-15T21:36:10.884Z",
     "contributors": ["mfuji09", "silverskyvicto", "hashedhyphen", "clariroid"]
