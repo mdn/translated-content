@@ -17317,10 +17317,6 @@
     "modified": "2019-03-24T00:13:23.720Z",
     "contributors": ["teoli", "danielgn96"]
   },
-  "orphaned/Web/JavaScript/Reference/Errors/Dead_object": {
-    "modified": "2020-03-12T19:48:38.148Z",
-    "contributors": ["MakarovDs777"]
-  },
   "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
     "modified": "2020-03-12T19:48:42.436Z",
     "contributors": ["fuggy", "MakarovDs777"]
