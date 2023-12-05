@@ -6427,10 +6427,6 @@
     "modified": "2020-10-15T21:36:11.883Z",
     "contributors": ["alattalatta", "azunyan3"]
   },
-  "Web/HTML/Element/keygen": {
-    "modified": "2020-10-15T21:35:22.565Z",
-    "contributors": ["alattalatta", "azunyan3"]
-  },
   "Web/HTML/Element/label": {
     "modified": "2020-10-15T21:35:24.111Z",
     "contributors": [
