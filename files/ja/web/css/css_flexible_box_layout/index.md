@@ -1,11 +1,13 @@
 ---
 title: CSS フレックスボックスレイアウト
 slug: Web/CSS/CSS_flexible_box_layout
+l10n:
+  sourceCommit: 621c7978886787ca66bc5e90e457cf1466e58d35
 ---
 
 {{CSSRef}}
 
-**CSS フレックスボックスレイアウト** (CSS Flexible Box Layout) は [CSS](/ja/docs/Web/CSS) のモジュールの一つで、ユーザーインターフェイスの設計に最適化された CSS ボックスモデルと、一次元のアイテムのレイアウトを定義します。フレックスレイアウトモデルでは、フレックスコンテナーの子は任意の方向にレイアウトすることができ、また使われていない空間を埋めるために伸長したり、あるいは親のあふれることを避けるために収縮したりと、そのサイズを「伸縮」することができます。子の水平方向と垂直方向の両方の整列を、容易に操作することが可能です。
+**CSS フレックスボックスレイアウト** (CSS Flexible Box Layout) は、ユーザーインターフェイスの設計に最適化された CSS ボックスモデルと、一次元のアイテムのレイアウトを定義します。フレックスレイアウトモデルでは、フレックスコンテナーの子は任意の方向にレイアウトすることができ、また使われていない空間を埋めるために伸長したり、あるいは親のあふれることを避けるために収縮したりと、そのサイズを「伸縮」することができます。子の水平方向と垂直方向の両方の整列を、容易に操作することが可能です。
 
 ## 基本的な例
 
@@ -15,7 +17,7 @@ slug: Web/CSS/CSS_flexible_box_layout
 
 ## リファレンス
 
-## CSS プロパティ
+### プロパティ
 
 - {{cssxref("flex")}}
 - {{cssxref("flex-basis")}}
@@ -40,33 +42,22 @@ slug: Web/CSS/CSS_flexible_box_layout
 - {{cssxref("column-gap")}}
 - {{cssxref("gap")}}
 
-### 用語集の項目
-
-- {{Glossary("Flexbox", "フレックスボックス", 1)}}
-- {{Glossary("Flex Container", "フレックスコンテナー", 1)}}
-- {{Glossary("Flex Item", "フレックスアイテム", 1)}}
-- {{Glossary("Main Axis", "主軸", 1)}}
-- {{Glossary("Cross Axis", "交差軸", 1)}}
-- {{Glossary("Flex", "フレックス", 1)}}
-
 ## ガイド
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - : フレックスボックスの機能の概要
-- [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
+- [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
   - : フレックスボックスが他のレイアウト方法や他の CSS 仕様書とどのように関係しているか
-- [フレックスコンテナーにおけるアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
   - : ボックス配置プロパティがどのようにフレックスボックスに働くか
-- [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
+- [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
   - : アイテムの順序や向きを変更する様々な方法を説明し、その上での潜在的な問題を紹介します。
-- [主軸に沿ったフレックスアイテムの比率の操作](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
   - : flex-grow, flex-shrink, flex-basis の各プロパティについての説明です。
-- [フレックスアイテムの折り返しのマスター](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
+- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
   - : 複数行のフレックスコンテナーを作成する方法と、それらの行内でのアイテムの表示方法の制御。
-- [典型的なフレックスボックスの用途](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
+- [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : 典型的なフレックスボックスの用途の一般的なデザインパターン。
-- [フレックスボックスの後方互換性](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-  - : フレックスボックスのブラウザーの互換性状況、相互運用性の問題、古いブラウザーと古い仕様書のバージョンの対応
 
 ## 仕様書
 
@@ -74,5 +65,10 @@ slug: Web/CSS/CSS_flexible_box_layout
 
 ## 関連情報
 
-- [Flexbugs](https://github.com/philipwalton/flexbugs)
-  - : コミュニティによって整理されているフレックスボックスに関するブラウザーのバグと回避方法の一覧
+- 用語集の項目:
+  - {{Glossary("Flexbox", "フレックスボックス", 1)}}
+  - {{Glossary("Flex Container", "フレックスコンテナー", 1)}}
+  - {{Glossary("Flex Item", "フレックスアイテム", 1)}}
+  - {{Glossary("Main Axis", "主軸", 1)}}
+  - {{Glossary("Cross Axis", "交差軸", 1)}}
+  - {{Glossary("Flex", "フレックス", 1)}}
