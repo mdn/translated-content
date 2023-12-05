@@ -1,10 +1,11 @@
 ---
 title: Web Audio playbackRate explained
 slug: Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained
-original_slug: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
 ---
 
-html 元素“audio”和“video”的`playbackRate` 属性允许我们改变一段正在播放的网页音频或者视频的速度，或速率。本文详细解释了 `playbackRate` 。
+{{QuickLinksWithSubPages("/zh-CN/docs/Web/Media")}}
+
+html 元素“audio”和“video”的 `playbackRate` 属性允许我们改变一段正在播放的网页音频或者视频的速度，或速率。本文详细解释了 `playbackRate`。
 
 ## playbackRate 基础
 
@@ -16,7 +17,7 @@ myAudio.setAttribute("src", "audiofile.mp3");
 myAudio.playbackRate = 0.5;
 ```
 
-在此我们创建了一个 html 元素“audio”，以我们选择的一个文件设置它的 `src` 。然后我们把 `playbackRate` 设为 0.5，这代表一半的正常播放速度（ `playbackRate` 是对原始速率的一个乘数）。
+在此我们创建了一个 html 元素“audio”，以我们选择的一个文件设置它的 `src`。然后我们把 `playbackRate` 设为 0.5，这代表一半的正常播放速度（`playbackRate` 是对原始速率的一个乘数）。
 
 ## 一个完整示例
 
@@ -91,7 +92,7 @@ window.onload = function () {
 - 当媒体源文件被替换时，Firefox 会触发 `ratechange` 事件。
 - 在 iOS 7 中你只能在媒体暂停的时候影响`playbackRate`值（不是它播放的时候）。
 
-## 请参阅
+## 参见
 
 - [Hyperaudio's Playback Rate Test](http://hyperaud.io/lab/pbr-test/)
 - [HTMLMediaElement reference](/zh-CN/docs/Web/API/HTMLMediaElement)

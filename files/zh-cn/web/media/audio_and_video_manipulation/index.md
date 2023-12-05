@@ -1,12 +1,9 @@
 ---
 title: 音频与视频处理
 slug: Web/Media/Audio_and_video_manipulation
-original_slug: Web/Guide/Audio_and_video_manipulation
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
-</section>
+{{QuickLinksWithSubPages("/zh-CN/docs/Web/Media")}}
 
 Web 的迷人之处在于你可以结合各种技术创造出新的形式。拥有浏览器中的原生音频和视频意味着我们可在像 {{htmlelement("canvas")}}、[WebGL](/zh-CN/docs/Web/API/WebGL_API) 或 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等技术的辅助下使用这类数据流，例如：为音频添加混响和压缩效果，或为视频添加灰度/暗色滤镜。本文将为你提供相关的参考。
 
