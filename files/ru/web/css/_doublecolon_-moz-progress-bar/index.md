@@ -37,10 +37,6 @@ slug: Web/CSS/::-moz-progress-bar
 
 {{EmbedLiveSample('Примеры')}}
 
-Первый бар сверху должен выглядеть так:
-
-![Custom styled progress bar](/@api/deki/files/5387/=redbar.png)
-
 ## Смотрите также
 
 - {{HTMLElement("progress")}}

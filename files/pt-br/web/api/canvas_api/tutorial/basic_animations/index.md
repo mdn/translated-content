@@ -330,7 +330,7 @@ Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a larg
 <canvas id="canvas" width="800" height="200"></canvas>
 ```
 
-**Live sample**
+##### Live sample
 
 {{EmbedLiveSample("A_looping_panorama", "830", "230")}}
 
