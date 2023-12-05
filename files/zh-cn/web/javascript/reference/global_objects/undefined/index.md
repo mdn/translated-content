@@ -114,7 +114,7 @@ if (x === void 0) {
 
 // 没有声明 y
 if (y === void 0) {
-  // 抛出一个 RenferenceError 错误 (与 `typeof` 相比)
+  // 抛出一个 RenferenceError 错误（与 `typeof` 相比）
 }
 ```
 
