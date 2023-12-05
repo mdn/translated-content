@@ -1,6 +1,9 @@
 ---
 title: 向 HTML 视频中添加字幕
-slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+slug: >-
+  Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+original_slug: >-
+  Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
 
 {{QuickLinksWithSubPages("/zh-CN/docs/Web/Guide/Audio_and_video_delivery")}}

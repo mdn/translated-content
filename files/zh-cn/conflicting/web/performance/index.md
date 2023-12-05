@@ -1,6 +1,7 @@
 ---
 title: 优化和性能
-slug: Web/Guide/Performance
+slug: conflicting/Web/Performance
+original_slug: Web/Guide/Performance
 ---
 
 <section id="Quick_links">

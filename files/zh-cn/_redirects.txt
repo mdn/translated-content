@@ -2033,8 +2033,8 @@
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden
 /zh-CN/docs/Web/Accessibility/ARIA/forms	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Accessibility/ARIA/forms/alerts	/zh-CN/docs/Web/Accessibility/ARIA
-/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
-/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
+/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained
+/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 /zh-CN/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance	/zh-CN/docs/Web/Performance/Optimizing_startup_performance
 /zh-CN/docs/Web/Apps/Progressive	/zh-CN/docs/Web/Progressive_web_apps
 /zh-CN/docs/Web/Apps/Progressive/App_structure	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
@@ -2283,6 +2283,11 @@
 /zh-CN/docs/Web/Guide/API	/zh-CN/docs/Web/API
 /zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm	/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 /zh-CN/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
+/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/zh-CN/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
+/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained
+/zh-CN/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
+/zh-CN/docs/Web/Guide/Audio_and_video_manipulation	/zh-CN/docs/Web/Media/Audio_and_video_manipulation
 /zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn/CSS
 /zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites	/zh-CN/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_lists/Consistent_list_indentation
@@ -2340,6 +2345,7 @@
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
 /zh-CN/docs/Web/Guide/Introduction_to_Web_development	/zh-CN/docs/Learn
+/zh-CN/docs/Web/Guide/Performance	/zh-CN/docs/conflicting/Web/Performance
 /zh-CN/docs/Web/Guide/Performance/Using_web_workers	/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers
 /zh-CN/docs/Web/Guide/Printing	/zh-CN/docs/Web/CSS/CSS_media_queries/Printing
 /zh-CN/docs/Web/Guide/Using_FormData_Objects	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects

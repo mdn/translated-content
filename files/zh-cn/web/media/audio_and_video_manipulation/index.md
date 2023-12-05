@@ -1,6 +1,7 @@
 ---
 title: 音频与视频处理
-slug: Web/Guide/Audio_and_video_manipulation
+slug: Web/Media/Audio_and_video_manipulation
+original_slug: Web/Guide/Audio_and_video_manipulation
 ---
 
 <section id="Quick_links">
