@@ -36,7 +36,7 @@ l10n:
 >   - : El final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`). Se formateará como `Web/CSS/:NameOfTheSelector`.
 >     Por ejemplo, el slug del selector [`:hover`](/es/docs/Web/CSS/:hover) es `Web/CSS/:hover`.
 > - **page-type**
->   - : El valor de `page-type' para las propiedades CSS puede ser `css-selector`, `css-pseudo-class`o`css-pseudo-element`, dependiendo de si el selector es un [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes), un [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements), un [combinador](/es/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), o un [selector básico](/es/docs/Web/CSS/CSS_selectors/Selector_structure#basic_selectors).
+>   - : El valor de `page-type` para las propiedades CSS puede ser `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es un [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes), un [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements), un [combinador](/es/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), o un [selector básico](/es/docs/Web/CSS/CSS_selectors/Selector_structure#basic_selectors).
 > - **status**
 >   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**obsoleto**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
 > - **browser-compat**
@@ -82,9 +82,9 @@ El párrafo de resumen: comience nombrando el selector y diciendo lo que hace. I
 
 ## Sintaxis
 
-`\{CSSSyntax}}`
+`\{{CSSSyntax}}`
 
-_Para usar esta macro, elimine las comillas inveritdas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
 
 ## Ejemplos
 
@@ -133,13 +133,13 @@ Elimine esta sección si no hay una lista.
 
 `\{{Specifications}}`
 
-_Para usar esta macro, elimine las comillas inveritdas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
 
 ## Compatibilidad con los navegadores
 
 `\{{Compat}}`
 
-_Para usar esta macro, elimine las comillas inveritdas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
 
 ## Veáse también
 
