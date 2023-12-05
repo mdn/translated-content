@@ -1309,6 +1309,7 @@
 /ja/docs/Games/Examples	/ja/docs/orphaned/Games/Examples
 /ja/docs/Games/Index	/ja/docs/Games
 /ja/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/ja/docs/Games/Introduction_to_HTML5_Game_Development
+/ja/docs/Games/Techniques/3D_on_the_web/WebVR	/ja/docs/Games/Techniques/3D_on_the_web/WebXR
 /ja/docs/Games/Workflows	/ja/docs/Games/Tutorials
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
@@ -3506,11 +3507,11 @@
 /ja/docs/Web/Accessibility/Community	/ja/docs/Web/Accessibility
 /ja/docs/Web/Accessibility/FAQ	/ja/docs/Web/Accessibility
 /ja/docs/Web/Accessibility/Index	/ja/docs/Web/Accessibility
-/ja/docs/Web/Apps/Build/Manipulating_media	/ja/docs/Web/Guide/Audio_and_video_delivery
-/ja/docs/Web/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video	/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
-/ja/docs/Web/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video	/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-/ja/docs/Web/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources	/ja/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
-/ja/docs/Web/Apps/Developing/Audio_and_video_manipulation	/ja/docs/Web/Guide/Audio_and_video_manipulation
+/ja/docs/Web/Apps/Build/Manipulating_media	/ja/docs/Web/Media/Audio_and_video_delivery
+/ja/docs/Web/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video	/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+/ja/docs/Web/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video	/ja/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
+/ja/docs/Web/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources	/ja/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
+/ja/docs/Web/Apps/Developing/Audio_and_video_manipulation	/ja/docs/Web/Media/Audio_and_video_manipulation
 /ja/docs/Web/Apps/Progressive	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Apps/Progressive/Add_to_home_screen	/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /ja/docs/Web/Apps/Progressive/App_structure	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
@@ -3883,7 +3884,12 @@
 /ja/docs/Web/Guide/API	/ja/docs/Web/API
 /ja/docs/Web/Guide/API/Gamepad	/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /ja/docs/Web/Guide/API/Vibration	/ja/docs/Web/API/Vibration_API
-/ja/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/ja/docs/Web/Guide/Audio_and_video_delivery
+/ja/docs/Web/Guide/Audio_and_video_delivery	/ja/docs/Web/Media/Audio_and_video_delivery
+/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+/ja/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/ja/docs/Web/Media/Audio_and_video_delivery
+/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/ja/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
+/ja/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources	/ja/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
+/ja/docs/Web/Guide/Audio_and_video_manipulation	/ja/docs/Web/Media/Audio_and_video_manipulation
 /ja/docs/Web/Guide/CSS	/ja/docs/Learn/CSS
 /ja/docs/Web/Guide/CSS/Counters	/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
 /ja/docs/Web/Guide/CSS/Flexible_boxes	/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
@@ -3971,6 +3977,7 @@
 /ja/docs/Web/Guide/Introduction_to_Web_development	/ja/docs/Learn
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ja/docs/Web/Guide/Mobile/Separate_sites	/ja/docs/Web/Progressive_web_apps
+/ja/docs/Web/Guide/Performance	/ja/docs/conflicting/Web/Performance
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/Printing	/ja/docs/Web/CSS/CSS_media_queries/Printing
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
