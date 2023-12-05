@@ -48,7 +48,7 @@ slug: Learn/Accessibility/Multimedia
 
 ## 可访问的音频和视频控件
 
-基于 Web 的音频/视频执行控件不应该成为问题,对吗?让我们来调查一下。
+基于 Web 的音频/视频执行控件不应该成为问题，对吗？让我们来调查一下。
 
 ### 本地 HTML5 控件的问题
 
@@ -221,7 +221,7 @@ player.ontimeupdate = () => {
 
 #### 阅读延伸
 
-这为你提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能(包括旧版浏览器的 Flash 回退) 的详细信息，请参阅：
+这为你提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能 (包括旧版浏览器的 Flash 回退) 的详细信息，请参阅：
 
 - [Audio and video delivery](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)
 - [Video player styling basics](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
@@ -269,7 +269,7 @@ player.ontimeupdate = () => {
 
 ![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](closed-captions.png)
 
-许多国家/地区提供以英语为母语的字幕的英语电影,例如,DVD 上通常提供不同的语言字幕
+许多国家/地区提供以英语为母语的字幕的英语电影，例如，DVD 上通常提供不同的语言字幕
 
 ![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](subtitles_german.png)
 

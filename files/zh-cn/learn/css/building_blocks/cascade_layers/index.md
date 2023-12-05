@@ -286,7 +286,7 @@ body {
 
 第二行将 `narrowtheme.css` 导入 `narrow` 层，`narrow` 是 `components` 的子层。嵌套的 `components.narrow` 会作为 `components` 层中的最后一个层创建，除非 `components-lib.css` 已经包含一个 `narrow` 层，在这种情况下，`narrowtheme.css` 的内容会被附加到 `components.narrow` 嵌套层。可以使用 `components.<layerName>` 模式向 `components` 层添加更多命名嵌套层。如前所述，可以创建未命名层，但随后无法访问它们。
 
-让我们看另一个例子，其中我们使用以下语句[将 `layers1.css`导入一个具名层](#用于具名层和匿名层的_layer_块_at_规则)：
+让我们看另一个例子，其中我们使用以下语句[将 `layers1.css` 导入一个具名层](#用于具名层和匿名层的_layer_块_at_规则)：
 
 ```css
 @import url(layers1.css) layer(example);

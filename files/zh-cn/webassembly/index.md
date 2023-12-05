@@ -19,8 +19,8 @@ WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使�
 
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts)
   - : 通过阅读 WebAssembly 后面的高层概念开始——也就是说，它为什么如此有用，它是如何适应网络平台的（以及其他）和如何使用它。
-- [从 C/C++编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)
-  - : 当你使用 C/C++编写了代码后，你可以使用诸如 Emscripten 的工具把它编译为.wasm 文件。让我们看看这是如何工作的。
+- [从 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)
+  - : 当你使用 C/C++ 编写了代码后，你可以使用诸如 Emscripten 的工具把它编译为.wasm 文件。让我们看看这是如何工作的。
 - [加载运行 WebAssembly 代码](/zh-CN/docs/WebAssembly/Loading_and_running)
   - : 本文介绍如何通过把 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 或者 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest) API 与 [WebAssembly JavaScript](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) API 结合在一起来获取、编译和实例化.wasm 文件。
 - [缓存编译后的 WebAssembly 模块](/zh-CN/docs/WebAssembly/Caching_modules)
