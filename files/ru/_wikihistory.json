@@ -16153,26 +16153,6 @@
     "modified": "2020-07-16T22:38:33.391Z",
     "contributors": ["mikemoll", "alxatr"]
   },
-  "conflicting/MDN": {
-    "modified": "2020-11-05T06:23:08.678Z",
-    "contributors": ["ksam"]
-  },
-  "conflicting/MDN/Contribute": {
-    "modified": "2019-01-16T19:24:18.760Z",
-    "contributors": ["wbamberg", "Devengineer", "uleming"]
-  },
-  "conflicting/MDN/Tools": {
-    "modified": "2019-01-16T19:44:47.259Z",
-    "contributors": ["wbamberg", "Mingun"]
-  },
-  "conflicting/MDN/Writing_guidelines": {
-    "modified": "2020-11-02T10:17:56.940Z",
-    "contributors": ["ksam"]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures/Live_samples": {
-    "modified": "2019-03-18T20:31:43.828Z",
-    "contributors": ["MuradAz"]
-  },
   "conflicting/Mozilla/Add-ons": {
     "modified": "2019-03-23T23:58:39.567Z",
     "contributors": ["topskill", "fscholz", "iliacmd"]
@@ -16975,37 +16955,6 @@
   "orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo": {
     "modified": "2020-09-30T12:57:23.196Z",
     "contributors": ["chrisdavidmills", "fuggy"]
-  },
-  "orphaned/MDN/Tools": {
-    "modified": "2020-09-30T16:54:08.506Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "pk.prog", "warsan"]
-  },
-  "orphaned/MDN/Tools/Feeds": {
-    "modified": "2019-03-23T23:07:09.701Z",
-    "contributors": ["wbamberg", "Mingun"]
-  },
-  "orphaned/MDN/Tools/Page_deletion": {
-    "modified": "2019-01-16T19:44:31.713Z",
-    "contributors": ["wbamberg", "Mingun"]
-  },
-  "orphaned/MDN/Tools/Page_watching": {
-    "modified": "2020-09-30T16:54:08.639Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "warsan",
-      "Jasum",
-      "Liubava77",
-      "lavr1986uxa"
-    ]
-  },
-  "orphaned/MDN/Tools/Search": {
-    "modified": "2019-03-23T23:07:10.929Z",
-    "contributors": ["wbamberg", "Mingun"]
-  },
-  "orphaned/MDN/Yari": {
-    "modified": "2019-09-09T15:51:19.091Z",
-    "contributors": ["SphinxKnight", "wbamberg", "BychekRU", "FRiMN"]
   },
   "orphaned/Mozilla/Add-ons/WebExtensions/Debugging": {
     "modified": "2019-03-29T04:27:38.888Z",

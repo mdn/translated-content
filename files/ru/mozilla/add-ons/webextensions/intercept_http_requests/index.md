@@ -40,7 +40,7 @@ slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 
 ```js
 function logURL(requestDetails) {
-  console.log("Loading: " + requestDetails.url);
+  console.log("Загрузка: " + requestDetails.url);
 }
 
 browser.webRequest.onBeforeRequest.addListener(logURL, {
@@ -50,7 +50,7 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
 
 Здесь мы используем {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} для вызова функции `logURL()` перед началом запроса. Функция `logURL()` берёт URL запроса из объекта event и выводит в консоль браузера. [Шаблон](/en-US/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` означает, что мы будем перехватывать HTTP запросы ко всем URL.
 
-Для проверки [проинсталлируйте WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [откройте консоль браузера](/ru/docs/Tools/Browser_Console) и откройте какую-нибудь веб-страницу. В консоли вы должны увидеть URL для каждого ресурса, который запрашивает браузер:
+Для проверки [установите WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [откройте консоль браузера](/ru/docs/Tools/Browser_Console) и откройте какую-нибудь веб-страницу. В консоли вы должны увидеть URL для каждого ресурса, который запрашивает браузер:
 
 {{EmbedYouTube("X3rMgkRkB1Q")}}
 
@@ -68,7 +68,7 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "https://mdn.mozillademos.org"
+    "https://developer.mozilla.org/"
   ],
 
   "background": {
@@ -82,7 +82,7 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
 Затем замените «background.js» следующим образом:
 
 ```js
-var pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://developer.mozilla.org/*";
 
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
