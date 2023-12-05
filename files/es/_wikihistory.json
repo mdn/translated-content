@@ -8501,18 +8501,6 @@
     "modified": "2019-03-23T22:32:27.340Z",
     "contributors": ["Enesimus", "javichito"]
   },
-  "Web/Guide/Graphics": {
-    "modified": "2020-05-19T14:31:25.384Z",
-    "contributors": [
-      ".bkjop0",
-      "lassergraf",
-      "CarlosEduardoEncinas",
-      "pescadito.2007",
-      "rogeliomtx",
-      "CarlosQuijano",
-      "lalo2013"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T22:48:50.706Z",
     "contributors": ["miguelsp"]
@@ -13923,6 +13911,18 @@
   "conflicting/Learn/HTML/Introduction_to_HTML/Getting_started": {
     "modified": "2019-03-23T23:53:31.079Z",
     "contributors": ["teoli", "Mgjbot", "Jorolo"]
+  },
+  "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
+    "modified": "2020-05-19T14:31:25.384Z",
+    "contributors": [
+      ".bkjop0",
+      "lassergraf",
+      "CarlosEduardoEncinas",
+      "pescadito.2007",
+      "rogeliomtx",
+      "CarlosQuijano",
+      "lalo2013"
+    ]
   },
   "conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content": {
     "modified": "2019-10-10T16:52:54.661Z",
