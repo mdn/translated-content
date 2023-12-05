@@ -28,8 +28,6 @@ slug: Web/CSS/CSS_animations
 
 ## Guides
 
-- [Как определить, поддерживаются ли CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-  - : Описаны техники определения того, поддерживает ли браузер CSS-анимации.
 - [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy)
   - : Пошаговое руководство по созданию анимаций с помощью CSS. Статья описывает все касающиеся анимации CSS-свойства и @-правила и объясняет, как они взаимодействуют друг с другом.
 
