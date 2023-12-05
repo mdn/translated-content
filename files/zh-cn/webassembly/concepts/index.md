@@ -113,7 +113,7 @@ JavaScript 胶水代码并不是像你想象的那么简单。首先，Emscripte
 
 修改 Emscripten 的输出文件并将其转换为需要的 web app 是很容易的。
 
-你可以在 [emscripten.org](http://emscripten.org)找到关于 Emscripten 的完整文档以及在 [Compiling from C/C++ to WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)找到一个实现工具链并交叉编译你自己的 C/C++ 应用程序为 wasm 的指南。
+你可以在 [emscripten.org](http://emscripten.org) 找到关于 Emscripten 的完整文档以及在[将 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm) 找到一个实现工具链并交叉编译你自己的 C/C++ 应用程序为 wasm 的指南。
 
 ### 直接编写 WebAssembly 代码
 
