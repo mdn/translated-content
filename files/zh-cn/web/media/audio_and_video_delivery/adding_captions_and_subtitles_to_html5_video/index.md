@@ -1,9 +1,9 @@
 ---
 title: 向 HTML 视频中添加字幕
-slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
 
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Guide/Audio_and_video_delivery")}}
+{{QuickLinksWithSubPages("/zh-CN/docs/Web/Media")}}
 
 在其他文章中我们学会了如何使用 {{ domxref("HTMLMediaElement") }} 和 {{ domxref("Window.fullScreen") }} API [搭建一个跨浏览器的视频播放器](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)以及如何给视频播放器[添加样式](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)。本文将介绍如何用 {{ domxref("WebVTT_API","WebVTT 格式") }}和 {{ htmlelement("track") }} 元素为视频添加字幕。
 
