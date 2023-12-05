@@ -1977,6 +1977,7 @@
 /es/docs/Web/Guide/HTML/Introduction_alhtml	/es/docs/Learn/HTML/Introduction_to_HTML
 /es/docs/Web/Guide/HTML/categorias_de_contenido	/es/docs/Web/HTML/Content_categories
 /es/docs/Web/Guide/Movil	/es/docs/Web/Guide/Mobile
+/es/docs/Web/Guide/Performance	/es/docs/conflicting/Web/Performance
 /es/docs/Web/Guide/Performance/Usando_web_workers	/es/docs/Web/API/Web_Workers_API/Using_web_workers
 /es/docs/Web/Guide/Usando_Objetos_FormData	/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /es/docs/Web/HTML/Atributos	/es/docs/Web/HTML/Attributes
