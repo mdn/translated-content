@@ -129,7 +129,7 @@ WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによ
 
 ### 高度なチュートリアル
 
-- [WebGL model view projection](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
+- [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
   - : 3D オブジェクトビューを表現するためによく使用する 3 つの主要な行列 (モデル行列、ビュー行列、プロジェクション行列) について、詳しく説明します
 - [Matrix math for the web](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
   - : 3D 変換行列がどのように働くか、およびウェブ (WebGL の演算や、CSS 座標変換) でどのように使用できるかのガイドです

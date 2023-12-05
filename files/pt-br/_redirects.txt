@@ -4,7 +4,7 @@
 #    yarn content add-redirect <fromURL> <toURL>
 #
 # FROM-URL	TO-URL
-/pt-BR/docs/AJAX	/pt-BR/docs/Web/Guide/AJAX
+/pt-BR/docs/AJAX	/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /pt-BR/docs/AJAX/Getting_Started	/pt-BR/docs/conflicting/Web/Guide/AJAX
 /pt-BR/docs/API_Web_Audio	/pt-BR/docs/Web/API/Web_Audio_API
 /pt-BR/docs/Aprender	/pt-BR/docs/Learn
@@ -585,7 +585,8 @@
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
 /pt-BR/docs/Web/API/HTMLContentElement/getDistributedNodes	/pt-BR/docs/Web/API/HTMLSlotElement
 /pt-BR/docs/Web/API/HTMLContentElement/select	/pt-BR/docs/conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
-/pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
+/pt-BR/docs/Web/API/History_API/Example	/pt-BR/docs/Web/API/History_API/Working_with_the_History_API
+/pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Working_with_the_History_API
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /pt-BR/docs/Web/API/Navigation_timing_API	/pt-BR/docs/Web/API/Performance_API/Navigation_timing
 /pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/getBattery
@@ -748,12 +749,14 @@
 /pt-BR/docs/Web/Events/readystatechange	/pt-BR/docs/Web/API/Document/readystatechange_event
 /pt-BR/docs/Web/Events/resize	/pt-BR/docs/Web/API/Window/resize_event
 /pt-BR/docs/Web/Events/touchstart	/pt-BR/docs/Web/API/Element/touchstart_event
+/pt-BR/docs/Web/Guide/AJAX	/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /pt-BR/docs/Web/Guide/AJAX/Getting_Started	/pt-BR/docs/conflicting/Web/Guide/AJAX
 /pt-BR/docs/Web/Guide/CSS/CSS_Media_queries	/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /pt-BR/docs/Web/Guide/CSS/Scaling_background_images	/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /pt-BR/docs/Web/Guide/CSS/Understanding_z_index	/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /pt-BR/docs/Web/Guide/Events/Touch_events	/pt-BR/docs/Web/API/Touch_events
-/pt-BR/docs/Web/Guide/Gráficos	/pt-BR/docs/Web/Guide/Graphics
+/pt-BR/docs/Web/Guide/Graphics	/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+/pt-BR/docs/Web/Guide/Gráficos	/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial	/pt-BR/docs/Web/API/Canvas_API/Tutorial
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
@@ -776,7 +779,9 @@
 /pt-BR/docs/Web/Guide/HTML/Forms/Meu_primeiro_formulario_HTML	/pt-BR/docs/Learn/Forms/Your_first_form
 /pt-BR/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data
 /pt-BR/docs/Web/Guide/HTML/Using_data_attributes	/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes
-/pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/Web/Guide/Introduction_to_Web_development
+/pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/conflicting/Learn_680f0a64719ec97f557d9b1ef1710826
+/pt-BR/docs/Web/Guide/Introduction_to_Web_development	/pt-BR/docs/conflicting/Learn_680f0a64719ec97f557d9b1ef1710826
+/pt-BR/docs/Web/Guide/Printing	/pt-BR/docs/Web/CSS/CSS_media_queries/Printing
 /pt-BR/docs/Web/HTML/Applying_color	/pt-BR/docs/Web/CSS/CSS_colors/Applying_color
 /pt-BR/docs/Web/HTML/Block-level_elements	/pt-BR/docs/Glossary/Block-level_content
 /pt-BR/docs/Web/HTML/CORS_imagens_habilitadas	/pt-BR/docs/Web/HTML/CORS_enabled_image

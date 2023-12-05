@@ -44,7 +44,7 @@ A especificação do SVG permite que objetos gráficos sejam definidos para reus
 
 ### Atributos específicos
 
-_Não existem atributos específicos_
+_Não existem atributos específicos._
 
 ## DOM Interface
 
