@@ -37,7 +37,7 @@ every(callbackFn, thisArg)
 
 `callback` 以三个参数调用：元素的值，元素索引，以及要遍历的数组对象。
 
-如果将`thisArg`参数提供给`every`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的 `this` 值的一般规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)来决定。
+如果将 `thisArg` 参数提供给 `every`，它会在调用时传递给 `callback`，作为它的 `this` 值。否则，会传递 `undefined` 作为它的 `this` 值。`callback` 最终观测到的 `this` 值由[用于决定函数可见的 `this` 值的一般规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)来决定。
 
 `every` 不修改在其上调用的类型化数组。
 
