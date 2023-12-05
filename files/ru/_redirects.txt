@@ -586,7 +586,6 @@
 /ru/docs/Web/CSS/@viewport/zoom	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/Adjacent_sibling_combinator	/ru/docs/Web/CSS/Next-sibling_combinator
 /ru/docs/Web/CSS/Adjacent_sibling_selectors	/ru/docs/Web/CSS/Next-sibling_combinator
-/ru/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/ru/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy	/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
