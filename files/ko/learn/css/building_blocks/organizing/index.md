@@ -215,13 +215,13 @@ article.main p.box {
 
 때때로 무언가를 더 구체적으로 만드는 경우도 있을 것입니다. 그러나, 이는 일반적으로 보통의 경우가 아닌 예외적인 상황입니다.
 
-### Break large stylesheets into multiple smaller ones
+### 큰 스타일시트를 여러 개의 작은 스타일 시트로 분할하세요
 
-In cases where you have very different styles for distinct parts of the site, you might want to have one stylesheet that includes all the global rules, as well as some smaller stylesheets that include the specific rules needed for those sections. You can link to multiple stylesheets from one page, and the normal rules of the cascade apply, with rules in stylesheets linked later coming after rules in stylesheets linked earlier.
+사이트의 다른 부분에 대해 전혀 다른 스타일을 하고 있는 경우, 모든 전역 규칙을 포함하는 하나의 스타일시트와 그 섹션에 필요한 특정 규칙을 포함하는 몇 개의 작은 스타일시트를 만들고 싶을 수 있습니다. 이 때 한 페이지에서 여러 스타일시트를 연결할 수 있고, 일반적인 종속의 규칙이 적용되며, 이후에 연결된 스타일시트의 규칙이 먼저 연결된 스타일시트의 규칙 다음으로 적용됩니다. 
 
-For example, we might have an online store as part of the site, with a lot of CSS used only for styling the product listings and forms needed for the store. It would make sense to have those things in a different stylesheet, only linked to on store pages.
+예를 들어, 사이트의 일부로 온라인 스토어가 있을 수 있는데, 스토어에 필요한 제품 목록과 양식을 꾸미기 위해 사용되는 CSS가 많을 수 있습니다. 그런 것들을 다른 스타일시트에 넣고, 스토어 페이지에서만 연결하는 것이 타당할 것입니다.
 
-This can make it easier to keep your CSS organized, and also means that if multiple people are working on the CSS, you will have fewer situations where two people need to work on the same stylesheet at once, leading to conflicts in source control.
+이렇게 하면 CSS를 정리하는 것이 더 쉬워질 수 있고, 또한 여러 사람이 CSS 작업을 할 경우, 동일한 스타일시트에 대해 동시에 작업해야 하는 상황이 줄어들어 소스 제어에서 충돌이 발생하는 경우를 줄일 수 있습니다.
 
 ## Other tools that can help
 
