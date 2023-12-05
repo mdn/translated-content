@@ -3,7 +3,7 @@ title: "WebGLRenderingContext: bindBuffer() メソッド"
 short-title: bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 l10n:
-  sourceCommit: 621c7978886787ca66bc5e90e457cf1466e58d35
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
