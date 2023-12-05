@@ -807,7 +807,6 @@
 /ru/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_3720fcfc8cf309ee8f3b5f3474dc9e12
 /ru/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_ce02ff996e57a0f0af4fbdf5f792ff46
 /ru/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_9896c9277d53005e5ad73315265daed1
-/ru/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 /ru/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Missing_formal_parameter
 /ru/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ru/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /ru/docs/Web/JavaScript/Reference/Errors/Var_hides_argument	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
