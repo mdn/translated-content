@@ -809,8 +809,6 @@
 /ru/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_9896c9277d53005e5ad73315265daed1
 /ru/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Missing_formal_parameter
 /ru/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ru/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
-/ru/docs/Web/JavaScript/Reference/Errors/Var_hides_argument	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
-/ru/docs/Web/JavaScript/Reference/Errors/Переменные_скрывают_аргумент	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
 /ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов	/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Array/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
