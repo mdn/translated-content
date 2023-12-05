@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/import
 
 {{jsSidebar("Statements")}}
 
-静态的 **`import`** 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}}，导入的模块都运行在严格模式下。在浏览器中，`import` 语句只能在声明了 `type="module"` 的 `script` 的标签中使用。
+静态 **`import`** 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}}，导入的模块都运行在严格模式下。在浏览器中，`import` 语句只能在声明了 `type="module"` 的 `script` 的标签中使用。
 
 此外，还有一个类似函数的动态 `import()`，它不需要依赖 `type="module"` 的 script 标签。
 
@@ -13,20 +13,20 @@ slug: Web/JavaScript/Reference/Statements/import
 
 在你希望按照一定的条件或者按需加载模块的时候，动态 `import()` 是非常有用的。而静态型的 `import` 是初始化加载依赖项的最优选择，使用静态 `import` 更容易从代码静态分析工具和 [tree shaking](/zh-CN/docs/Glossary/Tree_shaking) 中受益。
 
-语法
+## 语法
 
-```js
+```js-nolint
 import defaultExport from "module-name";
 import * as name from "module-name";
-import { export } from "module-name";
-import { export as alias } from "module-name";
-import { export1 , export2 } from "module-name";
-import { foo , bar } from "module-name/path/to/specific/un-exported/file";
-import { export1 , export2 as alias2 , [...] } from "module-name";
-import defaultExport, { export [ , [...] ] } from "module-name";
+import { export1 } from "module-name";
+import { export1 as alias1 } from "module-name";
+import { default as alias } from "module-name";
+import { export1, export2 } from "module-name";
+import { export1, export2 as alias2, /* … */ } from "module-name";
+import { "string name" as alias } from "module-name";
+import defaultExport, { export1, /* … */ } from "module-name";
 import defaultExport, * as name from "module-name";
 import "module-name";
-var promise = import("module-name");//这是一个处于第三阶段的提案。
 ```
 
 - `defaultExport`
@@ -35,10 +35,10 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
   - : 要导入的模块。访问修饰符与主机相关。其通常是包含目标模块的 `.js` 文件的相对或绝对路径名。在 Node 中，通常在引用 `node_modules` 中的包时使用不添加扩展名的导入。某些特定的打包工具可能允许不添加扩展名的导入模块方式，请检查你的环境以确定导入方式。模块名只允许单引号和双引号的字符串。
 - `name`
   - : 导入模块对象整体的别名，在引用导入模块时，它将作为一个命名空间来使用。
-- `export, exportN`
+- `exportN`
   - : 被导入模块的导出接口的名称。
-- `alias, aliasN`
-  - : 将引用指定的导入的名称。
+- `aliasN`
+  - : 将引用指定的导入的名称。必须是有效的 JavaScript 标识符。
 
 ## 描述
 
