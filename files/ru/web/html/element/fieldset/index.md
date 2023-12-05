@@ -102,7 +102,6 @@ slug: Web/HTML/Element/fieldset
   - {{HTMLElement("optgroup")}}
   - {{HTMLElement("option")}}
   - {{HTMLElement("textarea")}}
-  - {{HTMLElement("keygen")}}
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("progress")}}
