@@ -37,7 +37,7 @@ O seguinte trecho de código demonstra a utilização da tag SVG `<title>`.
 
 ### Atributos específicos
 
-_Não existem atributos específicos_
+_Não existem atributos específicos._
 
 ## Interface DOM
 
