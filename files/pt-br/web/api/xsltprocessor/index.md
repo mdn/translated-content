@@ -12,7 +12,7 @@ The XSLT file has a parameter called `myOrder` that JavaScript sets to change th
 
 Once the transformation is complete, the result is appened to the document, as shown in this example.
 
-**Figure 7 : Sorting based on div contentview example**
+**Figure 7 : Sorting based on div contentview example.**
 
 ```js
 // XHTML Fragment:
