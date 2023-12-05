@@ -16153,10 +16153,6 @@
     "modified": "2020-07-16T22:38:33.391Z",
     "contributors": ["mikemoll", "alxatr"]
   },
-  "conflicting/MDN/Tools": {
-    "modified": "2019-01-16T19:44:47.259Z",
-    "contributors": ["wbamberg", "Mingun"]
-  },
   "conflicting/Mozilla/Add-ons": {
     "modified": "2019-03-23T23:58:39.567Z",
     "contributors": ["topskill", "fscholz", "iliacmd"]

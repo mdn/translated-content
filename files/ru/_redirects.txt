@@ -306,8 +306,6 @@
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
 /ru/docs/MDN/Tools	/ru/docs/orphaned/MDN/Tools
 /ru/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
-/ru/docs/MDN/Tools/URL-suffix	/ru/docs/conflicting/MDN
-/ru/docs/MDN/Tools/Unsupported_GET_API	/ru/docs/conflicting/MDN
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
 /ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
