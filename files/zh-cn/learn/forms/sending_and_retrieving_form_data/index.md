@@ -38,7 +38,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 
 ### 客户端/服务器体系结构
 
-web 基于非常基本的客户端/服务器体系结构，可以总结如下：客户端（通常是 web 浏览器) 向服务器发送请求 (大多数情况下是 [Apache](https://httpd.apache.org/)、[Nginx](http://nginx.com/)、[IIS](http://www.iis.net/)、[Tomcat](http://tomcat.apache.org/) 等 web 服务器），使用 [HTTP 协议](/zh-CN/docs/HTTP)。服务器使用相同的协议来回答请求。
+web 基于非常基本的客户端/服务器体系结构，可以总结如下：客户端（通常是 web 浏览器）向服务器发送请求 (大多数情况下是 [Apache](https://httpd.apache.org/)、[Nginx](http://nginx.com/)、[IIS](http://www.iis.net/)、[Tomcat](http://tomcat.apache.org/) 等 web 服务器），使用 [HTTP 协议](/zh-CN/docs/HTTP)。服务器使用相同的协议来回答请求。
 
 ![A basic schema of the Web client/server architecture](client-server.png)
 
