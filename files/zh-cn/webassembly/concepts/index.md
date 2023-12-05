@@ -105,7 +105,7 @@ Emscripten 工具能够将一段 C/C++ 代码，编译出：
 
 > **备注：** 计划将来[允许 WebAssembly 直接调用 Web API](https://github.com/WebAssembly/gc/blob/master/README.md)。
 
-JavaScript 胶水代码并不是像你想象的那么简单。首先，Emscripten 实现了流行的 C/C++ 库，比如， [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer)、 [OpenGL](https://en.wikipedia.org/wiki/OpenGL)、 [OpenAL](https://en.wikipedia.org/wiki/OpenAL)以及部分 [POSIX](https://en.wikipedia.org/wiki/POSIX)。这些库以 Web API 的形式实现，并且每个库需要一个 JavaScript 胶水代码来连接 WebAssembly 和低层的 Web API。
+JavaScript 胶水代码并不是像你想象的那么简单。首先，Emscripten 实现了流行的 C/C++ 库，比如，[SDL](https://zh.wikipedia.org/wiki/SDL)、[OpenGL](https://zh.wikipedia.org/wiki/OpenGL)、[OpenAL](https://zh.wikipedia.org/wiki/OpenAL) 以及部分 [POSIX](https://zh.wikipedia.org/wiki/可移植操作系统接口)。这些库以 Web API 的形式实现，并且每个库需要一个 JavaScript 胶水代码来连接 WebAssembly 和低层的 Web API。
 
 因此，部分胶水代码实现了 C/C++ 代码使用的库的功能。而且，胶水代码还包括调用前面提到的 WebAssembly 的 JavaScript API 来获取、加载和运行.wasm 文件的逻辑。
 
