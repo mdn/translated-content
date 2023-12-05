@@ -16,7 +16,7 @@ slug: Web/CSS/list-style-image
 ## Синтаксис
 
 ```css
-/* Значение ключевым словом */
+/* Ключевые слова */
 list-style-image: none;
 
 /* <url> значения */

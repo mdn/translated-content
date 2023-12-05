@@ -112,7 +112,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 本质上，关键在于在图片无法被看见时也提供一个可用的体验，这确保了所有人都不会错失一部分内容。尝试在浏览器中使图片不可见然后看看网页变成什么样了，你会很快意识到在图片无法显示时备选文本能帮上多大忙。
 
-> **备注：** 想知道更多，可以看我们的[备选文本](/zh-CN/docs/Learn/Accessibility/HTML#文本替代品)指南
+> **备注：** 想知道更多，可以看我们的[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)指南
 
 ### 宽度和高度
 

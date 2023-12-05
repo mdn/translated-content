@@ -4,9 +4,7 @@
 #    yarn content add-redirect <fromURL> <toURL>
 #
 # FROM-URL	TO-URL
-/ru/docs/AJAX	/ru/docs/Web/Guide/AJAX
-/ru/docs/AJAX/С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
-/ru/docs/AJAX:С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
+/ru/docs/AJAX	/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /ru/docs/Accessibility	/ru/docs/Web/Accessibility
 /ru/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/ru/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 /ru/docs/Apps/Progressive	/ru/docs/Web/Progressive_web_apps
@@ -86,15 +84,12 @@
 /ru/docs/Glossary/404	/ru/docs/conflicting/Web/HTTP/Status/404
 /ru/docs/Glossary/502	/ru/docs/conflicting/Web/HTTP/Status/502
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
-/ru/docs/Glossary/Bootstrap	/ru/docs/orphaned/Glossary/Bootstrap
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
-/ru/docs/Glossary/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
-/ru/docs/Glossary/First_interactive	/ru/docs/conflicting/Glossary/First_CPU_idle
+/ru/docs/Glossary/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Glossary/Round_Trip_Time_(RTT)	/ru/docs/Glossary/Round_Trip_Time
 /ru/docs/Glossary/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Glossary/XHR_(XMLHttpRequest)	/ru/docs/Glossary/XMLHttpRequest
-/ru/docs/Glossary/jQuery	/ru/docs/orphaned/Glossary/jQuery
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Void_element
 /ru/docs/HTML	/ru/docs/Web/HTML
 /ru/docs/HTML/Canvas	/ru/docs/Web/API/Canvas_API
@@ -297,31 +292,17 @@
 /ru/docs/MDN/Contribute/Creating_and_editing_pages	/ru/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ru/docs/MDN/Contribute/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Contribute/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
-/ru/docs/MDN/Contribute/Howto	/ru/docs/conflicting/MDN/Contribute
-/ru/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	/ru/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
+/ru/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /ru/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/ru/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/ru/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ru/docs/conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
 /ru/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ru/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ru/docs/MDN/Contribute/Howto/Report_a_problem	/ru/docs/MDN/Community/Issues
 /ru/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ru/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-/ru/docs/MDN/Contribute/Howto/Добавить_или_обновить_данные_о_браузерной_совместимости	/ru/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
-/ru/docs/MDN/Contribute/Howto/Создай_интерактивное_упражнение_для_помощи_в_изучении_веба	/ru/docs/conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
 /ru/docs/MDN/Contribute/Open_source_etiquette	/ru/docs/MDN/Community/Open_source_etiquette
-/ru/docs/MDN/Contribute/Tools	/ru/docs/orphaned/MDN/Tools
 /ru/docs/MDN/Contribute/Процессы	/ru/docs/MDN/Contribute/Processes
 /ru/docs/MDN/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
-/ru/docs/MDN/Guidelines	/ru/docs/conflicting/MDN/Writing_guidelines
-/ru/docs/MDN/Kuma	/ru/docs/orphaned/MDN/Yari
-/ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
-/ru/docs/MDN/Tools	/ru/docs/orphaned/MDN/Tools
-/ru/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
-/ru/docs/MDN/Tools/URL-suffix	/ru/docs/conflicting/MDN
-/ru/docs/MDN/Tools/Unsupported_GET_API	/ru/docs/conflicting/MDN
-/ru/docs/MDN/Yari	/ru/docs/orphaned/MDN/Yari
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
-/ru/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/ru/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
@@ -612,8 +593,7 @@
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_генератор	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Множественные_фоны	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ru/docs/conflicting/Web/CSS/cursor
-/ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
+/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ru/docs/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Color	/ru/docs/Web/CSS/CSS_colors
 /ru/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
@@ -635,7 +615,6 @@
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 /ru/docs/Web/CSS/CSS_Ruby	/ru/docs/Web/CSS/CSS_ruby_layout
-/ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_selectors
@@ -696,8 +675,7 @@
 /ru/docs/Web/Events/transitionend	/ru/docs/Web/API/Element/transitionend_event
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
-/ru/docs/Web/Guide/AJAX/Getting_Started	/ru/docs/conflicting/Web/Guide/AJAX
-/ru/docs/Web/Guide/AJAX/С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
+/ru/docs/Web/Guide/AJAX	/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /ru/docs/Web/Guide/CSS/Getting_started/SVG_и_CSS	/ru/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ru/docs/Web/Guide/CSS/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ru/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
@@ -729,7 +707,6 @@
 /ru/docs/Web/HTML/Canvas	/ru/docs/Web/API/Canvas_API
 /ru/docs/Web/HTML/Canvas/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
 /ru/docs/Web/HTML/Element/Input/datetime	/ru/docs/conflicting/Web/HTML/Element/input/datetime-local
-/ru/docs/Web/HTML/Element/applet	/ru/docs/orphaned/Web/HTML/Element/applet
 /ru/docs/Web/HTML/Element/video/seeking_event	/ru/docs/Web/API/HTMLMediaElement/seeking_event
 /ru/docs/Web/HTML/Element/кнопка	/ru/docs/Web/HTML/Element/button
 /ru/docs/Web/HTML/Element/ссылка	/ru/docs/Web/HTML/Element/link
@@ -934,7 +911,6 @@
 /ru/docs/Web/Performance/Основы	/ru/docs/Web/Performance/Fundamentals
 /ru/docs/Web/Performance/Производительность_анимации	/ru/docs/Web/Performance/Animation_performance_and_frame_rate
 /ru/docs/Web/Progressive_web_apps/Installable_PWAs	/ru/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-/ru/docs/Web/SVG/SVG_1.1_Support_in_Firefox	/ru/docs/orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
 /ru/docs/Web/SVG/Tutorial/Базовые_Преобразования	/ru/docs/Web/SVG/Tutorial/Basic_Transformations
 /ru/docs/Web/SVG/Tutorial/Введение	/ru/docs/Web/SVG/Tutorial/Introduction
 /ru/docs/Web/SVG/Tutorial/Основные_Фигуры	/ru/docs/Web/SVG/Tutorial/Basic_Shapes
@@ -966,7 +942,6 @@
 /ru/docs/Web/WebGL/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ru/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ru/docs/Web/Web_Components	/ru/docs/Web/API/Web_components
-/ru/docs/Web/Web_Components/HTML_Imports	/ru/docs/conflicting/Web/Web_Components
 /ru/docs/Web/Web_Components/Using_custom_elements	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
@@ -977,6 +952,7 @@
 /ru/docs/XHTML	/ru/docs/Glossary/XHTML
 /ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
+/ru/docs/conflicting/Glossary/First_CPU_idle	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/conflicting/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ru/docs/en	/en-US/
 /ru/docs/Заглавная_страница	/ru/docs/Web
@@ -1008,7 +984,6 @@
 /ru/docs/Словарь/BigInt	/ru/docs/Glossary/BigInt
 /ru/docs/Словарь/Blink	/ru/docs/Glossary/Blink
 /ru/docs/Словарь/Boolean	/ru/docs/Glossary/Boolean
-/ru/docs/Словарь/Bootstrap	/ru/docs/orphaned/Glossary/Bootstrap
 /ru/docs/Словарь/Browser	/ru/docs/Glossary/Browser
 /ru/docs/Словарь/Browsing_context	/ru/docs/Glossary/Browsing_context
 /ru/docs/Словарь/Bézier_curve	/ru/docs/Glossary/Bezier_curve
@@ -1040,7 +1015,6 @@
 /ru/docs/Словарь/DOS_attack	/ru/docs/Glossary/DOS_attack
 /ru/docs/Словарь/Doctype	/ru/docs/Glossary/Doctype
 /ru/docs/Словарь/Domain_name	/ru/docs/Glossary/Domain_name
-/ru/docs/Словарь/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Словарь/ECMA	/ru/docs/Glossary/ECMA
 /ru/docs/Словарь/ECMAScript	/ru/docs/Glossary/ECMAScript
 /ru/docs/Словарь/Empty_element	/ru/docs/Glossary/Void_element
@@ -1054,7 +1028,7 @@
 /ru/docs/Словарь/First_CPU_idle	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Словарь/First_contentful_paint	/ru/docs/Glossary/First_contentful_paint
 /ru/docs/Словарь/First_input_delay	/ru/docs/Glossary/First_input_delay
-/ru/docs/Словарь/First_interactive	/ru/docs/conflicting/Glossary/First_CPU_idle
+/ru/docs/Словарь/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Словарь/First_paint	/ru/docs/Glossary/First_paint
 /ru/docs/Словарь/Flex_Item	/ru/docs/Glossary/Flex_Item
 /ru/docs/Словарь/Flexbox	/ru/docs/Glossary/Flexbox
@@ -1151,7 +1125,6 @@
 /ru/docs/Словарь/first_meaningful_paint	/ru/docs/Glossary/First_meaningful_paint
 /ru/docs/Словарь/global_variable	/ru/docs/Glossary/Global_variable
 /ru/docs/Словарь/https	/ru/docs/Glossary/HTTPS
-/ru/docs/Словарь/jQuery	/ru/docs/orphaned/Glossary/jQuery
 /ru/docs/Словарь/jpeg	/ru/docs/Glossary/JPEG
 /ru/docs/Словарь/loop	/ru/docs/Glossary/Loop
 /ru/docs/Словарь/origin	/ru/docs/Glossary/Origin
