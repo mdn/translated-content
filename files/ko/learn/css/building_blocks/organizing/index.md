@@ -197,7 +197,7 @@ blockquote {
 
 ### 지나치게 특정한 셀렉터를 자제하세요
 
-매우 구체적인 선택자를 만들게 되면, 종종 같은 규칙을 다른 요소에 적용하기 위해 CSS의 일부를 복제헤야 하는 상황을 겪게 될 것입니다. 예를 들어, 아래와 같은 선택자가 있을 수 있는데, 이는 `main` 클래스를 가진 `<article>` 내부의 `box` 클래스를 가진 `<p>`에 규칙을 적용합니다.
+매우 구체적인 셀렉터를 만들게 되면, 종종 같은 규칙을 다른 요소에 적용하기 위해 CSS의 일부를 복제헤야 하는 상황을 겪게 될 것입니다. 예를 들어, 아래와 같은 셀렉터가 있을 수 있는데, 이는 `main` 클래스를 가진 `<article>` 내부의 `box` 클래스를 가진 `<p>`에 규칙을 적용합니다.
 
 ```css
 article.main p.box {
@@ -205,7 +205,7 @@ article.main p.box {
 }
 ```
 
-`main`이외의 것에, 또는 `<p>`가 아닌 다른 것에 같은 규칙을 적용하고 싶다면, 이러한 규칙에 다른 셀렉터를 추가하거나 완전히 새로운 규칙 집합을 만들어야 합니다. 대신에, 선택자 `.box`를 사용하여 `box` 클래스를 가진 어떤 요소에든 적용할 수 있습니다.
+`main`이외의 것에, 또는 `<p>`가 아닌 다른 것에 같은 규칙을 적용하고 싶다면, 이러한 규칙에 다른 셀렉터를 추가하거나 완전히 새로운 규칙 집합을 만들어야 합니다. 대신에, 셀렉터 `.box`를 사용하여 `box` 클래스를 가진 어떤 요소에든 적용할 수 있습니다.
 
 ```css
 .box {
@@ -223,15 +223,15 @@ article.main p.box {
 
 이렇게 하면 CSS를 정리하는 것이 더 쉬워질 수 있고, 또한 여러 사람이 CSS 작업을 할 경우, 동일한 스타일시트에 대해 동시에 작업해야 하는 상황이 줄어들어 소스 제어에서 충돌이 발생하는 경우를 줄일 수 있습니다.
 
-## Other tools that can help
+## 도움이 될 수 있는 다른 도구
 
-CSS itself doesn't have much in the way of in-built organization; therefore, the level of consistency in your CSS will largely depend on you. The web community has developed various tools and approaches that can help you to manage larger CSS projects. Since you are likely to come across these aids when working with other people, and since they are often of help generally, we've included a short guide to some of them.
+CSS 자체에는 내장된 조직성이 크게 없으므로, CSS 일관성 수준은 대부분 당신에게 달려 있습니다. 웹 커뮤니티는 더 큰 CSS 프로젝트를 관리하는 데 도움이 될 수 있는 다양한 도구와 접근법을 개발했습니다. 다른 사람들과 함께 작업할 때 이런 보조 도구들을 자주 만날 것이며, 일반적으로 많은 도움이 되므로, 이 중 일부에 대한 간략한 안내서를 포함했습니다.
 
-### CSS methodologies
+### CSS 방법론
 
-Instead of needing to come up with your own rules for writing CSS, you may benefit from adopting one of the approaches already designed by the community and tested across many projects. These methodologies are essentially CSS coding guides that take a very structured approach to writing and organizing CSS. Typically they tend to render CSS more verbosely than you might have if you wrote and optimized every selector to a custom set of rules for that project.
+CSS 작성 규칙을 스스로 만들어야 하는 대신, 커뮤니티에서 이미 설계하고 다수의 프로젝트에서 테스트한 접근법 중 하나를 채택하면 도움이 될 수 있습니다. 이러한 방법론들은 기본적으로 CSS 코딩 안내서로, CSS를 작성하고 정리하는 데 매우 체계적인 접근법을 취합니다. 일반적으로 이들은 프로젝트에 대한 사용자 정의 규칙 세트에 맞춰 모든 셀렉터를 작성하고 최적화하는 것보다 CSS를 더 상세하게 표현하는 경향이 있습니다.
 
-However, you do gain a lot of structure by adopting one. Since many of these systems are widely used, other developers are more likely to understand the approach you are using and be able to write their own CSS in the same way, rather than having to work out your own personal methodology from scratch.
+그러나, 하나를 채택함으로써 많은 구조를 얻을 수 있습니다. 이러한 시스템들 중 많은 것들이 널리 사용되고 있기 때문에, 다른 개발자들이 당신이 사용하고 있는 접근법을 이해하고, 자신의 CSS를 같은 방식으로 작성할 가능성이 높아집니다. 즉, 당신의 개인적인 방법론을 처음부터 파악해야 하는 대신에 말입니다.
 
 #### OOCSS
 
