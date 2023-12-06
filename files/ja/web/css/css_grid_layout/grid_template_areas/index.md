@@ -361,7 +361,7 @@ l10n:
 }
 ```
 
-```html
+```html-nolint
 <div class="media">
   <div class="image"></div>
   <div class="text">
