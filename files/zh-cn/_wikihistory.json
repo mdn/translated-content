@@ -20989,10 +20989,6 @@
       "ziyunfei"
     ]
   },
-  "Web/Guide/Parsing_and_serializing_XML": {
-    "modified": "2019-08-12T08:51:44.801Z",
-    "contributors": ["RainSlide", "haaling"]
-  },
   "Web/HTML": {
     "modified": "2020-05-18T02:45:10.401Z",
     "contributors": [
@@ -32533,6 +32529,10 @@
   "Web/XML": {
     "modified": "2019-09-25T00:01:50.050Z",
     "contributors": ["amalia77", "ExE-Boss"]
+  },
+  "Web/XML/Parsing_and_serializing_XML": {
+    "modified": "2019-08-12T08:51:44.801Z",
+    "contributors": ["RainSlide", "haaling"]
   },
   "Web/XML/XML_introduction": {
     "modified": "2020-03-04T03:08:47.854Z",
