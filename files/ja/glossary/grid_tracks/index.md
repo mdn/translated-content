@@ -11,7 +11,7 @@ l10n:
 
 次の画像は、グリッドにおける最初の行トラックを表しています。
 
-![Diagram showing a grid track.](1_grid_track.png)
+![グリッドトラックを示す図。](1_grid_track.png)
 
 ## 明示的グリッドにおけるトラックの大きさ
 
@@ -66,7 +66,7 @@ l10n:
 
 ## 関連情報
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS グリッドレイアウト仕様書におけるグリッドトラックの定義](https://drafts.csswg.org/css-grid/#grid-track-concept)
 - プロパティリファレンス
 
