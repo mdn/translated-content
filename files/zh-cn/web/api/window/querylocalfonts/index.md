@@ -9,7 +9,7 @@ l10n:
 
 **`window.queryLocalFonts()`** 方法返回一个兑现一个表示本地可用字体的 {{domxref("FontData")}} 对象数组的 {{jsxref("Promise")}}。
 
-要使用此方法，用户必须授予访问 `local-fonts` 权限（可以通过 {{domxref("Permissions API", "", "", "nocode")}} 查询权限状态）。此外，此功能可能会被你服务器上设置的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
+要使用此方法，用户必须同意授予 `local-fonts` 权限（可以通过 {{domxref("Permissions API", "", "", "nocode")}} 查询权限状态）。此外，此功能可能会被服务器上设置的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
 
 ## 语法
 
@@ -73,9 +73,9 @@ async function returnSpecificFonts() {
 }
 ```
 
-### 访问低级数据
+### 访问底层数据
 
-{{domxref("FontData.blob", "blob()")}} 方法提供对低级 [SFNT](https://en.wikipedia.org/wiki/SFNT) 数据的访问——这是一种可以包含其他字体格式的字体文件格式，例如 PostScript、TrueType、OpenType 或 Web 开放字体格式 (WOFF)。
+{{domxref("FontData.blob", "blob()")}} 方法提供对底层 [SFNT](https://zh.wikipedia.org/wiki/SFNT) 数据的访问——这是一种可以包含其他字体格式的字体文件格式，例如 PostScript、TrueType、OpenType 或 Web 开放字体格式（WOFF）。
 
 ```js
 async function computeOutlineFormat() {
@@ -87,7 +87,7 @@ async function computeOutlineFormat() {
       // `blob()` 方法返回一个包含有效且完整的 SFNT 包装字体数据的 Blob。
       const sfnt = await fontData.blob();
       // 仅裁剪出我们需要的字节部分：前 4 个字节是 SFNT 版本信息。
-      // 标准：https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
+      // 规范：https://learn.microsoft.com/zh-cn/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
       let outlineFormat = "UNKNOWN";
