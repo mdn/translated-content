@@ -5,7 +5,7 @@ slug: Web/CSS/minmax
 
 {{CSSRef}}
 
-**`minmax()`** は [CSS](/ja/docs/Web/CSS) の関数で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)で使用されます。
+**`minmax()`** は [CSS](/ja/docs/Web/CSS) の関数で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)で使用されます。
 
 {{EmbedInteractiveExample("pages/css/function-minmax.html")}}
 
@@ -118,6 +118,6 @@ _min_ および _max_ の 2 つの引数を取る関数です。
 
 ## 関連情報
 
-- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - minmax() によるトラックの寸法制御](</ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#トラックのサイズ指定と_minmax()>)
-- [CSS グリッドと論理的な値と書字方向](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
+- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - minmax() によるトラックの寸法制御](</ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#トラックのサイズ指定と_minmax()>)
+- [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - 動画チュートリアル: _[Introducing minmax()](https://gridbyexample.com/video/series-minmax/)_

@@ -5,7 +5,7 @@ slug: Web/CSS/display
 
 {{CSSRef}}
 
-**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロック要素とインライン要素](/ja/docs/Web/CSS/CSS_Flow_Layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)、[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などを設定します。
+**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロック要素とインライン要素](/ja/docs/Web/CSS/CSS_Flow_Layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)、[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などを設定します。
 
 正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。個々の仕様書については、[この文書の最後にある表](#仕様書)を参照してください。
 
@@ -89,7 +89,7 @@ display: unset;
     - `flex`
       - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)に従ってレイアウトします。
     - `grid`
-      - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)に従ってレイアウトします。
+      - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)に従ってレイアウトします。
     - `ruby` {{Experimental_Inline}}
       - : 要素は、インライン要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
@@ -242,17 +242,17 @@ display: unset;
 
 ### display: grid
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [線に基づく配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [グリッドと論理的な値と書字方向](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
-- [CSS グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## アクセシビリティの考慮
 
