@@ -32,7 +32,7 @@ l10n:
 > - **title**
 >   - : Título que se muestra en la parte superior de la página.
 >     Formatear como _NameOfTheParentInterface_**.**_NameOfTheProperty_.
->     Por ejemplo, la propiedad [`capabilities`](/es/docs/Web/API/VRDisplay/capabilities) de la interfaz [`VRDisplay`](/es/docs/Web/API/VRDisplay) tiene su `title` es`VRDisplay.capabilities`.
+>     Por ejemplo, la propiedad [`capabilities`](/es/docs/Web/API/VRDisplay/capabilities) de la interfaz [`VRDisplay`](/es/docs/Web/API/VRDisplay) su `title` es `VRDisplay.capabilities`.
 > - **slug**
 >
 >   - : El final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`.
@@ -41,7 +41,7 @@ l10n:
 >     Si la propiedad es estática, entonces el slug debe tener un sufijo `_static`, como: `Web/API/NameOfTheParentInterface/NameOfTheProperty_static`. Esto nos permite admitir propiedades de instancia y estáticas que tienen el mismo nombre.
 >
 > - **page-type**
->   - : La clave `page-type` para las propiedades Web/API es `web-api-instance-property' (por ejemplo, propiedades) o `web-api-static-property` (para propiedades estáticas).
+>   - : La clave `page-type` para las propiedades Web/API es `web-api-instance-property` (por ejemplo, propiedades) o `web-api-static-property` (para propiedades estáticas).
 > - **status**
 >   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**obsoleto**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
 > - **browser-compat**
@@ -128,13 +128,13 @@ Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Wr
 
 `\{{Specifications}}`
 
-_Para usar esta macro, elimine las comillas inveritdas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
 
 ## Compatibilidad con los navegadores
 
 `\{{Compat}}`
 
-_Para usar esta macro, elimine las comillas inveritdas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
 
 ## Veáse también
 
