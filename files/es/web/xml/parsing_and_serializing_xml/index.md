@@ -1,7 +1,5 @@
 ---
-title: >-
-  Convertir código a cadena de texto (serializing) y visceversa (parsing) a un 
-  XML
+title: Convertir código a cadena de texto (serializing) y visceversa (parsing) a un  XML
 slug: Web/XML/Parsing_and_serializing_XML
 original_slug: Web/Guide/Parsing_and_serializing_XML
 ---
