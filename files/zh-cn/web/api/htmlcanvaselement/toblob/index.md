@@ -139,7 +139,7 @@ function blobCallback(iconName) {
           console.log("successfully wrote file");
         },
         () => {
-          console.log("failure writing file");
+          console.log("写入文件失败");
         },
       );
     };
