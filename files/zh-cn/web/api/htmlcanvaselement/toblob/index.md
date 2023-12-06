@@ -91,7 +91,7 @@ ctx.fill();
 function blobCallback(iconName) {
   return (b) => {
     const a = document.createElement("a");
-    a.textContent = "Download";
+    a.textContent = "下载";
     document.body.appendChild(a);
     a.style.display = "block";
     a.download = `${iconName}.ico`;
