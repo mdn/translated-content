@@ -29,7 +29,7 @@ l10n:
 交叉观察器 API 允许你配置一个回调函数，当以下情况发生时会被调用：
 
 - **目标**元素与设备视口或指定元素相交。在交叉观察器 API 中，指定元素被称为**根元素**或**根**。
-- 观察者（Observer）第一次监听观察目标元素。
+- 观察器（Observer）第一次监听观察目标元素。
 
 通常情况下，需要观察目标元素最近的可滚动祖先的交集变化，如果目标元素不是可滚动元素的后代，则需要观察设备视口的交集变化。要观察相对于设备视口的交集，请为 `root` 选项指定 `null`。请继续阅读有关交叉观察器选项的更详细说明。
 
@@ -72,11 +72,11 @@ let observer = new IntersectionObserver(callback, options);
 let target = document.querySelector("#listItem");
 observer.observe(target);
 
-// 我们为观察者设置的回调将在第一次执行，
-// 它将等待我们为观察者分配目标（即使目标当前不可见）
+// 我们为观察器设置的回调将在第一次执行，
+// 它将等待我们为观察器分配目标（即使目标当前不可见）
 ```
 
-每当目标满足该 `IntersectionObserver` 指定的 threshold 值，回调被调用。回调接收 {{domxref("IntersectionObserverEntry")}} 对象和观察者的列表：
+每当目标满足该 `IntersectionObserver` 指定的 threshold 值，回调被调用。回调接收 {{domxref("IntersectionObserverEntry")}} 对象和观察器的列表：
 
 ```js
 let callback = (entries, observer) => {
@@ -119,7 +119,7 @@ let callback = (entries, observer) => {
 
 #### 阈值
 
-交叉观察器 API 使用**阈值**，而不是报告目标元素可见度的每一个微小变化。创建观察者时，可以提供一个或多个数值，代表目标元素可见度的百分比。然后，API 只报告超过这些阈值的可见性变化。
+交叉观察器 API 使用**阈值**，而不是报告目标元素可见度的每一个微小变化。创建观察器时，可以提供一个或多个数值，代表目标元素可见度的百分比。然后，API 只报告超过这些阈值的可见性变化。
 
 例如，如果希望每次目标元素的可见度向后或向前越过每个 25% 的标记时都能得到通知，可以在创建观察者时指定数组 \[0,0.25,0.5,0.75,1] 作为阈值列表。
 
