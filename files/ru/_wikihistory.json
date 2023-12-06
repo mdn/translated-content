@@ -17177,18 +17177,6 @@
     "modified": "2020-04-09T14:17:18.919Z",
     "contributors": ["Drrragonica", "b0rique", "kenrick95"]
   },
-  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
-    "modified": "2019-09-05T14:23:53.718Z",
-    "contributors": ["opereverzeva"]
-  },
-  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
-    "modified": "2019-08-16T05:54:48.136Z",
-    "contributors": ["niktariy", "andreyshedko", "kesha.ohrimenko"]
-  },
-  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute": {
-    "modified": "2019-03-18T21:20:26.038Z",
-    "contributors": ["michael_v92"]
-  },
   "orphaned/Web/CSS/image-set()": {
     "modified": "2020-11-16T08:54:13.901Z",
     "contributors": ["chrisdavidmills", "justredpaul"]
