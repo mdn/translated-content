@@ -136,7 +136,7 @@ function blobCallback(iconName) {
       });
       promise.then(
         () => {
-          console.log("successfully wrote file");
+          console.log("写入文件成功");
         },
         () => {
           console.log("写入文件失败");
