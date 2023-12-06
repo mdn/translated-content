@@ -1,6 +1,7 @@
 ---
 title: 解析或序列化 XML
-slug: Web/Guide/Parsing_and_serializing_XML
+slug: Web/XML/Parsing_and_serializing_XML
+original_slug: Web/Guide/Parsing_and_serializing_XML
 ---
 
 <section id="Quick_links">
