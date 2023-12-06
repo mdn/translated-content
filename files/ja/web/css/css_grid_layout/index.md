@@ -81,7 +81,7 @@ l10n:
 }
 ```
 
-{{EmbedLiveSample("Basic_example", "100%", "460")}}
+{{EmbedLiveSample("基本的な例", "100%", "460")}}
 
 ## リファレンス
 
