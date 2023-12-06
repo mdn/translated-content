@@ -227,17 +227,17 @@ article.main p.box {
 
 CSS 자체에는 내장된 조직성이 크게 없으므로, CSS 일관성 수준은 대부분 당신에게 달려 있습니다. 웹 커뮤니티는 더 큰 CSS 프로젝트를 관리하는 데 도움이 될 수 있는 다양한 도구와 접근법을 개발했습니다. 다른 사람들과 함께 작업할 때 이런 보조 도구들을 자주 만날 것이며, 일반적으로 많은 도움이 되므로, 이 중 일부에 대한 간략한 안내서를 포함했습니다.
 
-### CSS 방법론
+### CSS 방법론들
 
 CSS 작성 규칙을 스스로 만들어야 하는 대신, 커뮤니티에서 이미 설계하고 다수의 프로젝트에서 테스트한 접근법 중 하나를 채택하면 도움이 될 수 있습니다. 이러한 방법론들은 기본적으로 CSS 코딩 안내서로, CSS를 작성하고 정리하는 데 매우 체계적인 접근법을 취합니다. 일반적으로 이들은 프로젝트에 대한 사용자 정의 규칙 세트에 맞춰 모든 셀렉터를 작성하고 최적화하는 것보다 CSS를 더 상세하게 표현하는 경향이 있습니다.
 
 그러나, 하나를 채택함으로써 많은 구조를 얻을 수 있습니다. 이러한 시스템들 중 많은 것들이 널리 사용되고 있기 때문에, 다른 개발자들이 당신이 사용하고 있는 접근법을 이해하고, 자신의 CSS를 같은 방식으로 작성할 가능성이 높아집니다. 즉, 당신의 개인적인 방법론을 처음부터 파악해야 하는 대신에 말입니다.
 
-#### OOCSS
+#### OOCSS(객체지향 CSS)
 
-Most of the approaches you will encounter owe something to the concept of Object Oriented CSS (OOCSS), an approach made popular by [the work of Nicole Sullivan](https://github.com/stubbornella/oocss/wiki). The basic idea of OOCSS is to separate your CSS into reusable objects, which can be used anywhere you need on your site. The standard example of OOCSS is the pattern described as [The Media Object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects). This is a pattern with a fixed size image, video or other element on one side, and flexible content on the other. It's a pattern we see all over websites for comments, listings, and so on.
+당신이 마주칠 대부분의 접근법들은 객체 지향 CSS(OOCSS)라는 개념에 어느 정도 기여합니다. 이 접근법은 [Nicole Sullivan의 작업](https://github.com/stubbornella/oocss/wiki)으로 인해 인기를 얻었습니다. OOCSS의 기본 아이디어는 CSS를 재사용 가능한 객체로 분리하고, 이를 웹사이트의 필요한 어디에서나 사용하는 것입니다. OOCSS의 표준 예시는 [The Media Object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)로 설명된 패턴입니다. 이는 한쪽에 고정 크기의 이미지, 비디오 또는 다른 요소와, 다른 한쪽에 유연한 콘텐츠가 있는 패턴입니다. 이는 댓글, 목록 등 웹사이트 곳곳에서 볼 수 있는 패턴입니다.
 
-If you are not taking an OOCSS approach you might create a custom CSS for the different places this pattern is used, for example, by creating two classes, one called `comment` with a bunch of rules for the component parts, and another called `list-item` with almost the same rules as the `comment` class except for some tiny differences. The differences between these two components are the list-item has a bottom border, and images in comments have a border whereas list-item images do not.
+OOCSS 접근법을 사용하지 않는다면, 이 패턴이 사용되는 다양한 곳에 대해 사용자 정의의 CSS를 만들 수 있습니다. 예를 들어, 컴포넌트 부분에 대한 여러 규칙이 있는 `comment` 클래스와 `comment` 클래스와 거의 동일한 규칙을 가진 `list-item`이라는 또 다른 클래스를 만들 수 있습니다. 이 두 컴포넌트 간의 차이점은 list-item에는 하단 테두리가 있고, comment의 이미지에는 테두리가 있으나 list-item의 이미지에는 테두리가 없다는 것입니다.
 
 ```css
 .comment {
