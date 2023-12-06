@@ -60,4 +60,4 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 ## MDN の関連資料
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

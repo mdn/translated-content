@@ -152,5 +152,5 @@ column-gap: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{CSSxRef("row-gap")}}, {{CSSxRef("gap")}}
-- グリッドレイアウトのガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)
+- グリッドレイアウトのガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)
 - 段組みレイアウトのガイド: [段組みのスタイル付け](/ja/docs/Web/CSS/CSS_Columns/Styling_Columns)

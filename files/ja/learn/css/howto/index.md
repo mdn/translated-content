@@ -52,7 +52,7 @@ l10n:
 
 - [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [CSS 段組みレイアウトの使用](/ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
-- [CSS グリッドレイアウトの使用](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS 生成コンテンツ](/ja/docs/Learn/CSS/Howto/Generated_content)
 
 > **メモ:** [CSS レイアウトの問題解決](/ja/docs/Web/CSS/Layout_cookbook)に向けた料理帳があり、良くあるレイアウトのタスクの完全に動作する例と説明が付いています。
