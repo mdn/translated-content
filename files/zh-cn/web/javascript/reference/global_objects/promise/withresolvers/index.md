@@ -28,7 +28,7 @@ Promise.withResolvers()
 - `resolve`
   - : 一个函数，用于解决该 Promise。关于其语义，请参阅 {{jsxref("Promise/Promise", "Promise()")}} 构造函数。
 - `reject`
-  - : 一个函数，用于拒接该 Promise。关于其语义，请参阅 {{jsxref("Promise/Promise", "Promise()")}} 构造函数。
+  - : 一个函数，用于拒绝该 Promise。关于其语义，请参阅 {{jsxref("Promise/Promise", "Promise()")}} 构造函数。
 
 ## 描述
 
@@ -101,7 +101,7 @@ resolve("hello");
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [`core-js` 中 `Promise.withResolvers` 的 polyfill](https://github.com/zloirock/core-js#promisewithresolvers)
 - [使用 promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)指南
