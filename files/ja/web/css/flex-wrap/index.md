@@ -9,7 +9,7 @@ slug: Web/CSS/flex-wrap
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-他のプロパティや詳細情報については [CSS フレックスボックスの使用](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)をご覧ください。
+他のプロパティや詳細情報については [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)をご覧ください。
 
 ## 構文
 
@@ -134,4 +134,4 @@ flex-wrap: unset;
 ## 関連情報
 
 - CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの折り返しのマスター](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- CSS フレックスボックスガイド: _[フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_

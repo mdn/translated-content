@@ -50,7 +50,7 @@ l10n:
 
 ### レイアウトガイド
 
-- [CSS フレックスボックスの使用](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [CSS 段組みレイアウトの使用](/ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
 - [CSS グリッドレイアウトの使用](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
 - [CSS 生成コンテンツ](/ja/docs/Learn/CSS/Howto/Generated_content)
