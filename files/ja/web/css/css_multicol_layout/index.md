@@ -61,5 +61,5 @@ slug: Web/CSS/CSS_multicol_layout
 
 他の CSS レイアウト技術には以下のようなものがあります。
 
-- [CSS フレキシブルボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) (CSS フレックスボックス)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (CSS フレックスボックス)
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)

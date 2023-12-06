@@ -33,7 +33,7 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 - {{Cssxref(":defined")}} 疑似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
 - [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#The_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
 - [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
-- Firefox で [CSS Flexible Box レイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - {{cssxref("offset-path")}} の `path()` 関数を実装しました ([Firefox バグ 1429298](https://bugzil.la/1429298))。
 - [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - `offset-*` プロパティを {{cssxref("inset-block-start")}}、{{cssxref("inset-block-end")}}、{{cssxref("inset-inline-start")}}、{{cssxref("inset-inline-end")}} に改名しました ([Firefox バグ 1464782](https://bugzil.la/1464782))。

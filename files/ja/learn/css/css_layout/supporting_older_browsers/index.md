@@ -200,7 +200,7 @@ CSS グリッド仕様は、当初 Internet Explorer 10 で試作されました
 ## 関連情報
 
 - [CSS での機能クエリの使用](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)（英語）
-- [フレックスボックスの後方互換性](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [フレックスボックスの後方互換性](/ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
 - [CSS グリッドを使用する: グリッドなしでブラウザーをサポートする](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)（英語）
 - [IE10 および IE11 バージョンのグリッドを使用するチュートリアル](https://24ways.org/2012/css3-grid-layout/)（英語）
