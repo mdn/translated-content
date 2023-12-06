@@ -69,7 +69,7 @@ canvas.toBlob(
   },
   "image/jpeg",
   0.95,
-); // JPEG at 95% quality
+); // JPEG，95% 图像质量
 ```
 
 ### 将 canvas 转换为 ico（仅限 Mozilla）
