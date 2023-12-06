@@ -39,16 +39,16 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 
 ## API 接口
 
-- [表单数据对象](/zh-CN/docs/Web/Guide/Using_FormData_Objects)
-  - : [`FormData`](/zh-CN/DOM/XMLHttpRequest/FormData) 对象允许你配置一组键值对并通过 `XMLHttpRequest` 发送它们。虽然它主要用来发送表单数据，但它也可以独立地用于传输其他带键值的数据。若将表单的编码类型设置为“multipart/form-data”，则传输的格式与表单的 `submit()` 方法用于发送数据的格式相同。
+- [表单数据对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+  - : [`FormData`](/zh-CN/docs/Web/API/FormData) 对象允许你配置一组键值对并通过 `XMLHttpRequest` 发送它们。虽然它主要用来发送表单数据，但它也可以独立地用于传输其他带键值的数据。若将表单的编码类型设置为“multipart/form-data”，则传输的格式与表单的 `submit()` 方法用于发送数据的格式相同。
 - [渐进式 Web 应用](/zh-CN/docs/Web/Progressive_web_apps)
   - : 渐进式 Web 应用（PWA）通过使用现代 Web API 和传统的渐进式策略来开发跨平台的 Web 应用程序。这些应用程序可以在任何设备上运行并提供接近原生应用程序的体验。这是一些教程来告诉你一些你需要知道的关于 PWA 的知识。
-- [XML 解析和序列化](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XML 解析和序列化](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML)
   - : Web 平台提供了解析和序列化 XML 的不同方法，每种方法都有其优点和缺点。
 
 ## 性能
 
-- [优化和性能](/zh-CN/docs/Web/Web/Performance)
+- [优化和性能](/zh-CN/docs/Web/Performance)
   - : 在开发现代网络站点及应用时，使内容加载迅速高效很重要。这篇文章将会帮助你在桌面系统和手持设备上都可以提高效率。
 
 ## 移动 Web 开发
