@@ -36,7 +36,7 @@ w 成分を点に追加した後、行列と点がどのようにきれいに並
 [4, 3, 2, 1] // Point at [x, y, z, w]
 ```
 
-`w` 成分には、この記事の範囲外のいくつかの追加の用途があります。 [WebGL モデルビュー投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)に関する記事を調べて、どのように役立つかを覗いてみてください。
+`w` 成分には、この記事の範囲外のいくつかの追加の用途があります。 [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)に関する記事を調べて、どのように役立つかを覗いてみてください。
 
 ### 行列と点の乗算
 

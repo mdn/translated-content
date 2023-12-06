@@ -1,5 +1,5 @@
 ---
-title: 测试你的技能：网格布局
+title: 技能测试：网格布局
 slug: Learn/CSS/CSS_layout/Grid_skills
 ---
 

@@ -13,7 +13,7 @@ IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据
 
 ## 关键概念和用法
 
-IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。然而，不像 RDBMS 使用固定列表，IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许你存储和检索用**键**索引的对象；可以存储[结构化克隆算法](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)支持的任何对象。你只需要指定数据库模式，打开与数据库的连接，然后检索和更新一系列**事务**。
+IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。然而，不像 RDBMS 使用固定列表，IndexedDB 是一个基于 JavaScript 的面向对象数据库。IndexedDB 允许你存储和检索用**键**索引的对象；可以存储[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)支持的任何对象。你只需要指定数据库模式，打开与数据库的连接，然后检索和更新一系列**事务**。
 
 - 阅读更多关于 [IndexedDB 背后的概念](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB)。
 - 从[使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB) 指南的第一准则中学习异步使用 IndexedDB。
@@ -21,9 +21,9 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。�
 
 > **备注：** 正如大多数的 web 储存解决方案一样，IndexedDB 也遵守[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。因此当你在某个域名下操作储存数据的时候，你不能操作其他域名下的数据。
 
-### 同步和异步（Synchronous、asynchronous）
+### 同步和异步
 
-使用 IndexedDB 执行的操作是异步执行的，以免阻塞应用程序。IndexedDB 最初包括同步和异步 API。同步 API 仅用于 [Web Workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)，且已从规范中移除，因为尚不清晰是否需要。但如果 Web 开发人员有足够的需求，可以重新引入同步 API。
+使用 IndexedDB 执行的操作是异步执行的，以免阻塞应用程序。
 
 ### 储存限制和回收标准
 

@@ -3,6 +3,8 @@ title: Polyfill (ポリフィル)
 slug: Glossary/Polyfill
 ---
 
+{{GlossarySidebar}}
+
 ポリフィルとは、最近の機能をサポートしていない古いブラウザーで、その機能を使えるようにするためのコードです。大抵はウェブ上の JavaScript です。
 
 例えば、ポリフィルを使用して、独自の IE フィルターを使用して IE7 の {{cssxref("text-shadow")}} の機能を模倣したり、 JavaScript を使用して rem の単位やメディアクエリーを模倣して、適切なスタイル付けを動的に調整したり、その他の必要な機能を提供したりすることができます。

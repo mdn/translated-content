@@ -1316,7 +1316,7 @@
 /zh-CN/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /zh-CN/docs/Updating_extensions_for_Firefox_3	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /zh-CN/docs/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
-/zh-CN/docs/WOFF	/zh-CN/docs/Web/Guide/WOFF
+/zh-CN/docs/WOFF	/zh-CN/docs/Web/CSS/CSS_fonts/WOFF
 /zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /zh-CN/docs/Web/API/AbortSignal/abort	/zh-CN/docs/Web/API/AbortSignal/abort_static
 /zh-CN/docs/Web/API/AbortSignal/onabort	/zh-CN/docs/Web/API/AbortSignal/abort_event
@@ -1869,6 +1869,8 @@
 /zh-CN/docs/Web/API/Window/onresize	/zh-CN/docs/Web/API/Window/resize_event
 /zh-CN/docs/Web/API/Window/onunload	/zh-CN/docs/Web/API/Window/unload_event
 /zh-CN/docs/Web/API/Window/openDialog	/zh-CN/docs/Web/API/Window
+/zh-CN/docs/Web/API/Window/pageXOffset	/zh-CN/docs/Web/API/Window/scrollX
+/zh-CN/docs/Web/API/Window/pageYOffset	/zh-CN/docs/Web/API/Window/scrollY
 /zh-CN/docs/Web/API/Window/performance	/zh-CN/docs/Web/API/performance_property
 /zh-CN/docs/Web/API/Window/setInterval	/zh-CN/docs/Web/API/setInterval
 /zh-CN/docs/Web/API/Window/setTimeout	/zh-CN/docs/Web/API/setTimeout
@@ -2031,8 +2033,8 @@
 /zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/使用aria-hidden属性	/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden
 /zh-CN/docs/Web/Accessibility/ARIA/forms	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Accessibility/ARIA/forms/alerts	/zh-CN/docs/Web/Accessibility/ARIA
-/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
-/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
+/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained
+/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 /zh-CN/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance	/zh-CN/docs/Web/Performance/Optimizing_startup_performance
 /zh-CN/docs/Web/Apps/Progressive	/zh-CN/docs/Web/Progressive_web_apps
 /zh-CN/docs/Web/Apps/Progressive/App_structure	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
@@ -2278,8 +2280,14 @@
 /zh-CN/docs/Web/Events/进度条	/zh-CN/docs/Web/API/XMLHttpRequest/progress_event
 /zh-CN/docs/Web/Guide/AJAX	/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /zh-CN/docs/Web/Guide/AJAX/Getting_Started	/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/zh-CN/docs/Web/Guide/API	/zh-CN/docs/Web/API
 /zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm	/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 /zh-CN/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
+/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/zh-CN/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
+/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained
+/zh-CN/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
+/zh-CN/docs/Web/Guide/Audio_and_video_manipulation	/zh-CN/docs/Web/Media/Audio_and_video_manipulation
 /zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn/CSS
 /zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites	/zh-CN/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_lists/Consistent_list_indentation
@@ -2308,6 +2316,7 @@
 /zh-CN/docs/Web/Guide/CSS/媒体查询	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /zh-CN/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
 /zh-CN/docs/Web/Guide/Events/Touch_events	/zh-CN/docs/Web/API/Touch_events
+/zh-CN/docs/Web/Guide/Graphics	/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /zh-CN/docs/Web/Guide/HTML	/zh-CN/docs/Learn/HTML
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
@@ -2335,8 +2344,13 @@
 /zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
+/zh-CN/docs/Web/Guide/Introduction_to_Web_development	/zh-CN/docs/Learn
+/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML	/zh-CN/docs/Web/XML/Parsing_and_serializing_XML
+/zh-CN/docs/Web/Guide/Performance	/zh-CN/docs/Web/Performance
 /zh-CN/docs/Web/Guide/Performance/Using_web_workers	/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers
+/zh-CN/docs/Web/Guide/Printing	/zh-CN/docs/Web/CSS/CSS_media_queries/Printing
 /zh-CN/docs/Web/Guide/Using_FormData_Objects	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
+/zh-CN/docs/Web/Guide/WOFF	/zh-CN/docs/Web/CSS/CSS_fonts/WOFF
 /zh-CN/docs/Web/HTML/Applying_color	/zh-CN/docs/Web/CSS/CSS_colors/Applying_color
 /zh-CN/docs/Web/HTML/Attributes/自动完成属性	/zh-CN/docs/Web/HTML/Attributes/autocomplete
 /zh-CN/docs/Web/HTML/Block-level_elements	/zh-CN/docs/Glossary/Block-level_content
@@ -2707,8 +2721,8 @@
 /zh-CN/docs/WebGuide/API/File_System/Introduction	/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /zh-CN/docs/WebRTC/navigator.getUserMedia	/zh-CN/docs/Web/API/Navigator/getUserMedia
 /zh-CN/docs/WebRTC/介绍	/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime
-/zh-CN/docs/Web_Development/Introduction_to_Web_development	/zh-CN/docs/Web/Guide/Introduction_to_Web_development
-/zh-CN/docs/Web_Development/Web开发介绍	/zh-CN/docs/Web/Guide/Introduction_to_Web_development
+/zh-CN/docs/Web_Development/Introduction_to_Web_development	/zh-CN/docs/Learn
+/zh-CN/docs/Web_Development/Web开发介绍	/zh-CN/docs/Learn
 /zh-CN/docs/XHTML	/zh-CN/docs/Glossary/XHTML
 /zh-CN/docs/XMLSerializer	/zh-CN/docs/Web/API/XMLSerializer
 /zh-CN/docs/XMLSerializer-840092-dup	/zh-CN/docs/Web/API/XMLSerializer

@@ -5,7 +5,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-在一开始时，Web 仅有文本，那真的是很无趣。幸运的是，没过多久网页上就能嵌入图片和其他有趣的内容了。虽然还有许多其他类型的多媒体，但是从地位比较低的{{htmlelement("img")}}元素开始是符合逻辑的，它常常被用来在网页中嵌入一张简单的图片。在这篇文章中，我们将看到怎样深入的使用它，包括基本的用{{htmlelement("figure")}}来添加说明文字，以及怎样把它和 CSS 背景图片链接起来。
+在一开始时，Web 仅有文本，那真的是很无趣。幸运的是，没过多久网页上就能嵌入图片和其他有趣的内容了。虽然还有许多其他类型的多媒体，但是从地位比较低的 {{htmlelement("img")}} 元素开始是符合逻辑的，它常常被用来在网页中嵌入一张简单的图片。在这篇文章中，我们将看到怎样深入的使用它，包括基本的用 {{htmlelement("figure")}} 来添加说明文字，以及怎样把它和 CSS 背景图片链接起来。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -25,7 +25,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
       </td>
     </tr>
     <tr>
-      <th scope="row">学习目标：</th>
+      <th scope="row">目标：</th>
       <td>
         学习如何在 HTML 页面插入简单的图片，为图片添加简单的说明，以及 CSS
         背景图片与 HTML 图片的关系。
@@ -36,9 +36,9 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 ## 怎样将一幅图片放到网页上？
 
-我们可以用{{htmlelement("img")}} 元素来把图片放到网页上。它是一个空元素（它不需要包含文本内容或闭合标签），最少只需要一个 `src` （一般读作其全称 *source）*来使其生效。`src` 属性包含了指向我们想要引入的图片的路径，可以是相对路径或绝对 URL，就像 {{htmlelement("a")}} 元素的 `href` 属性一样。
+我们可以用 {{htmlelement("img")}} 元素来把图片放到网页上。它是一个空元素（它不需要包含文本内容或闭合标签），最少只需要一个 `src` （一般读作其全称 _source_）来使其生效。`src` 属性包含了指向我们想要引入的图片的路径，可以是相对路径或绝对 URL，就像 {{htmlelement("a")}} 元素的 `href` 属性一样。
 
-> **备注：** 在继续之前，你应该阅读[快速入门 URL 和路径](</zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门>) 来复习一下相对和绝对 URL。
+> **备注：** 在继续之前，你应该阅读[快速入门 URL 和路径](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#统一资源定位符（url）与路径（path）快速入门) 来复习一下相对和绝对 URL。
 
 举个例子来看，如果你有一幅文件名为 `dinosaur.jpg` 的图片，且它与你的 HTML 页面存放在相同路径下，那么你可以这样嵌入它：
 
@@ -46,7 +46,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <img src="dinosaur.jpg" />
 ```
 
-如果这张图片存储在和 HTML 页面同路径的 `images` 文件夹下（这也是 Google 推荐的做法，利于{{glossary("SEO")}}/索引），那么你可以采用如下形式：
+如果这张图片存储在和 HTML 页面同路径的 `images` 文件夹下（这也是 Google 推荐的做法，利于 {{glossary("SEO")}}/索引），那么你可以采用如下形式：
 
 ```html
 <img src="images/dinosaur.jpg" />
@@ -76,13 +76,13 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 ![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
 
-> **备注：** 像{{htmlelement("img")}}和{{htmlelement("video")}}这样的元素有时被称之为**替换元素**，因为这样的元素的内容和尺寸由外部资源（像是一个图片或视频文件）所定义，而不是元素自身。
+> **备注：** 像 {{htmlelement("img")}} 和 {{htmlelement("video")}} 这样的元素有时被称之为**替换元素**，因为这样的元素的内容和尺寸由外部资源（像是一个图片或视频文件）所定义，而不是元素自身。
 
-> **备注：** 你可以在[GitHub 上的这个网页](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)看到这个例子的运行结果（也可以看到[源码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
+> **备注：** 你可以在 [GitHub 上的这个网页](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)看到这个例子的运行结果（也可以看到[源码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
 
 ### 备选文本
 
-下一个我们讨论的属性是 `alt` ，它的值应该是对图片的文字描述，用于在图片无法显示或不能被看到的情况。例如，上面的例子可以做如下改进：
+下一个我们讨论的属性是 `alt`，它的值应该是对图片的文字描述，用于在图片无法显示或不能被看到的情况。例如，上面的例子可以做如下改进：
 
 ```html
 <img
@@ -91,28 +91,28 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
           it has a large head with long sharp teeth" />
 ```
 
-测试`alt` 属性最简单的方式就是故意拼错图片文件名，这样浏览器就无法找到该图片从而显示备选的文本。如果我们将上例的图片文件名改为 `dinosooooor.jpg`，浏览器就不能显示图片，而显示：
+测试 `alt` 属性最简单的方式就是故意拼错图片文件名，这样浏览器就无法找到该图片从而显示备选的文本。如果我们将上例的图片文件名改为 `dinosooooor.jpg`，浏览器就不能显示图片，而显示：
 
 ![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
 
 那么，为什么我们需要备选文本呢？它可以派上用场的原因有很多：
 
-- 用户有视力障碍，通过[屏幕阅读器](https://zh.wikipedia.org/wiki/%E8%9E%A2%E5%B9%95%E9%96%B1%E8%AE%80%E5%99%A8)来浏览网页。事实上，给图片一个备选的描述文本对大多数用户都是很有用的。
+- 用户有视力障碍，通过[屏幕阅读器](https://zh.wikipedia.org/wiki/螢幕閱讀器)来浏览网页。事实上，给图片一个备选的描述文本对大多数用户都是很有用的。
 - 就像上面所说的，你也许会把图片的路径或文件名拼错。
-- 浏览器不支持该图片类型。某些用户仍在使用纯文本的浏览器，例如 [Lynx](https://en.wikipedia.org/wiki/Lynx_%28web_browser%29)，这些浏览器会把图片替换为描述文本。
+- 浏览器不支持该图片类型。某些用户仍在使用纯文本的浏览器，例如 [Lynx](https://zh.wikipedia.org/wiki/Lynx)，这些浏览器会把图片替换为描述文本。
 - 你会想提供一些文字描述来给搜索引擎使用，例如搜索引擎可能会将图片的文字描述和查询条件进行匹配。
 - 用户关闭的图片显示以减少数据的传输，这在手机上是十分普遍的，并且在一些国家带宽有限且昂贵。
 
 你到底应该在 `alt` 里写点什么呢？这首先取决于为什么这张图片会在这儿，换句话说，如果这张图片没显示出来，会少了什么：
 
-- **装饰：** 如果图片只是用于装饰，而不是内容的一部分，可以写一个空的`alt=""` 。例如，屏幕阅读器不会浪费时间对用户读出不是核心需要的内容。实际上装饰性图片就不应该放在 HTML 文件里， [CSS 背景图片](#css_背景图片)才应该用于插入装饰图片，但如果这种情况无法避免， `alt=""`会是最佳处理方案。
-- **内容：** 如果你的图片提供了重要的信息，就要在`alt`文本中简要的提供相同的信息，甚至更近一步，把这些信息写在主要的文本内容里，这样所有人都能看见。不要写冗余的备选文本（如果在主要文本中将所有的段落都重复两遍，对于没有失明的用户来说多烦啊！），如果在主要文本中已经对图片进行了充分的描述，写`alt=""`就好。
-- **链接：** 如果你把图片嵌套在{{htmlelement("a")}}标签里，来把图片变成链接，那你还必须[提供无障碍的链接文本](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#用清晰的链接措辞。)。在这种情况下，你可以写在同一个\<a>元素里，或者写在图片的`alt`属性里，随你喜欢。
-- **文本：** 你不应该将文本放到图像里。例如，如果你的主标题需要有阴影，你可以[用 CSS](/zh-CN/docs/Web/CSS/text-shadow)来达到这个目的，而不是把文本放到图片里。如果真的必须这么做，那就把文本也放到`alt`里。
+- **装饰**：如果图片只是用于装饰，而不是内容的一部分，可以写一个空的 `alt=""`。例如，屏幕阅读器不会浪费时间对用户读出不是核心需要的内容。实际上装饰性图片就不应该放在 HTML 文件里，[CSS 背景图片](#css_背景图片)才应该用于插入装饰图片，但如果这种情况无法避免，`alt=""` 会是最佳处理方案。
+- **内容**：如果你的图片提供了重要的信息，就要在 `alt` 文本中简要的提供相同的信息，甚至更近一步，把这些信息写在主要的文本内容里，这样所有人都能看见。不要写冗余的备选文本（如果在主要文本中将所有的段落都重复两遍，对于没有失明的用户来说多烦啊！），如果在主要文本中已经对图片进行了充分的描述，写 `alt=""` 就好。
+- **链接**：如果你把图片嵌套在 {{htmlelement("a")}} 标签里，来把图片变成链接，那你还必须[提供无障碍的链接文本](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用清晰的链接措辞)。在这种情况下，你可以写在同一个 \<a> 元素里，或者写在图片的 `alt` 属性里，随你喜欢。
+- **文本**：你不应该将文本放到图像里。例如，如果你的主标题需要有阴影，你可以[用 CSS](/zh-CN/docs/Web/CSS/text-shadow) 来达到这个目的，而不是把文本放到图片里。如果真的必须这么做，那就把文本也放到 `alt` 里。
 
 本质上，关键在于在图片无法被看见时也提供一个可用的体验，这确保了所有人都不会错失一部分内容。尝试在浏览器中使图片不可见然后看看网页变成什么样了，你会很快意识到在图片无法显示时备选文本能帮上多大忙。
 
-> **备注：** 想知道更多，可以看我们的[备选文本](/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81)指南
+> **备注：** 想知道更多，可以看我们的[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)指南
 
 ### 宽度和高度
 
@@ -132,11 +132,11 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 这是一件好事情——这使得页面加载的更快速更流畅。
 
-然而，你不应该使用 HTML 属性来改变图片的大小。如果你把尺寸设定的太大，最终图片看起来会模糊；如果太小，会在下载远远大于你需要的图片时浪费带宽。如果你没有保持正确的[宽高比](<https://zh.wikipedia.org/wiki/%E9%95%B7%E5%AF%AC%E6%AF%94_(%E5%BD%B1%E5%83%8F)>)，图片可能看起来会扭曲。在把图片放到你的网站页面之前，你应该使用图形编辑器使图片的尺寸正确。
+然而，你不应该使用 HTML 属性来改变图片的大小。如果你把尺寸设定的太大，最终图片看起来会模糊；如果太小，会在下载远远大于你需要的图片时浪费带宽。如果你没有保持正确的[宽高比](<https://zh.wikipedia.org/wiki/長寬比_(影像)>)，图片可能看起来会扭曲。在把图片放到你的网站页面之前，你应该使用图形编辑器使图片的尺寸正确。
 
-> **备注：** 如果你需要改变图片的尺寸，你应该使用[CSS](/zh-CN/docs/Learn/CSS)而不是 HTML。
+> **备注：** 如果你需要改变图片的尺寸，你应该使用 [CSS](/zh-CN/docs/Learn/CSS) 而不是 HTML。
 
-### Image titles 图片标题
+### 图像标题
 
 类似于[超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用_title_属性添加支持信息)，你可以给图片增加 `title` 属性来提供需要更进一步的支持信息。在我们的例子中，可以这样做：
 
@@ -155,11 +155,11 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 图片标题并不必须要包含有意义的信息，通常来说，将这样的支持信息放到主要文本中而不是附着于图片会更好。不过，在有些环境中这样做更有用，比如当没有空间显示提示时，也就是在图片栏中。
 
-然而，这并不是推荐的——title 有很多易访问性问题，主要是基于这样一个事实，即屏幕阅读器的支持是不可预测的，大多数浏览器都不会显示它，除非你在鼠标悬停时（例如：title 无法访问键盘用户），如果你对更多的信息感兴趣，阅读[The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
+然而，这并不是推荐的——标题有很多易访问性问题，主要是基于这样一个事实，即屏幕阅读器的支持是不可预测的，大多数浏览器都不会显示它，除非你在鼠标悬停时（例如：title 无法访问键盘用户），如果你对更多的信息感兴趣，阅读[The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
 
 ### 动手练习：嵌入一张图片
 
-好，轮到你了！在这个动手练习中，我们希望你可以做一个简单的嵌入图片练习。你有一个基本的 {{htmlelement("img")}} 标签; 我们希望你可以把下面这个 URL 所指向的图片嵌入到 HTML 中：
+好，轮到你了！在这个动手练习中，我们希望你可以做一个简单的嵌入图片练习。你有一个基本的 {{htmlelement("img")}} 标签；我们希望你可以把下面这个 URL 所指向的图片嵌入到 HTML 中：
 
 ```
 https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
@@ -316,7 +316,7 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 </div>
 ```
 
-这是可以的， {{htmlelement("p")}} 中包含了你需要的内容，以及方便使用 CSS 的一种很好的风格。但是这里有一个问题，从语义的角度上来讲，{{htmlelement("img")}} 和 {{htmlelement("p")}} 并没有什么联系，这会给使用屏幕阅读的人造成问题，比如当你有 50 张图片和其搭配的 50 段说明文字，那么一段说明文字是和哪张图片有关联的呢？
+这是可以的，{{htmlelement("p")}} 中包含了你需要的内容，以及方便使用 CSS 的一种很好的风格。但是这里有一个问题，从语义的角度上来讲，{{htmlelement("img")}} 和 {{htmlelement("p")}} 并没有什么联系，这会给使用屏幕阅读的人造成问题，比如当你有 50 张图片和其搭配的 50 段说明文字，那么一段说明文字是和哪张图片有关联的呢？
 
 有一个更好的做法是使用 HTML5 的 {{htmlelement("figure")}} 和 {{htmlelement("figcaption")}} 元素，它正是为此而被创造出来的：为图片提供一个语义容器，在标题和图片之间建立清晰的关联。我们之前的例子可以重写为：
 

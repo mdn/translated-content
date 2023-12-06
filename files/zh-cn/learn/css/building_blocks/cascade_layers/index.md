@@ -286,7 +286,7 @@ body {
 
 第二行将 `narrowtheme.css` 导入 `narrow` 层，`narrow` 是 `components` 的子层。嵌套的 `components.narrow` 会作为 `components` 层中的最后一个层创建，除非 `components-lib.css` 已经包含一个 `narrow` 层，在这种情况下，`narrowtheme.css` 的内容会被附加到 `components.narrow` 嵌套层。可以使用 `components.<layerName>` 模式向 `components` 层添加更多命名嵌套层。如前所述，可以创建未命名层，但随后无法访问它们。
 
-让我们看另一个例子，其中我们使用以下语句[将 `layers1.css`导入一个具名层](#用于具名层和匿名层的_layer_块_at_规则)：
+让我们看另一个例子，其中我们使用以下语句[将 `layers1.css` 导入一个具名层](#用于具名层和匿名层的_layer_块_at_规则)：
 
 ```css
 @import url(layers1.css) layer(example);
@@ -405,9 +405,9 @@ body {
 
 对于重要样式，分层样式优先于未分层样式，并且早期声明的层中的重要样式优先于后来声明的层。在这个例子中，嵌套层的创建顺序是 `components.narrow`，然后是 `components.wide`，所以 `components.narrow` 中的重要样式优先于 `components.wide` 中的重要样式，这意味着 `sans-serif` 获胜。
 
-## 测试你的技能！
+## 技能测试！
 
-你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[测试你的技能：层叠—任务 2](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_tasks#任务_2)。
+你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[技能测试：层叠—任务 2](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_tasks#任务_2)。
 
 ## 总结
 

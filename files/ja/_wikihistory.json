@@ -72,7 +72,7 @@
     "modified": "2020-11-01T15:05:53.088Z",
     "contributors": ["Wind1808"]
   },
-  "Games/Techniques/3D_on_the_web/WebVR": {
+  "Games/Techniques/3D_on_the_web/WebXR": {
     "modified": "2020-10-30T13:44:18.639Z",
     "contributors": ["Wind1808", "wbamberg", "lv7777"]
   },
@@ -3646,6 +3646,10 @@
       "Uemmra3",
       "fuzz139"
     ]
+  },
+  "Learn/Tools_and_testing/Cross_browser_testing/JavaScript": {
+    "modified": "2019-03-24T00:13:14.456Z",
+    "contributors": ["kohei.yoshino", "yyss"]
   },
   "Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies": {
     "modified": "2020-07-16T22:39:07.309Z",
@@ -16477,6 +16481,18 @@
     "modified": "2020-09-25T11:49:11.515Z",
     "contributors": ["mfuji09", "silverskyvicto"]
   },
+  "Web/CSS/CSS_fonts/WOFF": {
+    "modified": "2020-10-15T21:07:56.108Z",
+    "contributors": [
+      "YujiSoftware",
+      "xl1",
+      "yyss",
+      "fscholz",
+      "ethertank",
+      "ziyunfei",
+      "Marsf"
+    ]
+  },
   "Web/CSS/CSS_fragmentation": {
     "modified": "2019-03-18T21:34:51.102Z",
     "contributors": ["mfuji09"]
@@ -16582,6 +16598,10 @@
   "Web/CSS/CSS_masking": {
     "modified": "2020-10-15T21:54:38.952Z",
     "contributors": ["mfuji09", "dskmori"]
+  },
+  "Web/CSS/CSS_media_queries/Printing": {
+    "modified": "2020-01-12T12:37:57.185Z",
+    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "Web/CSS/CSS_media_queries/Testing_media_queries": {
     "modified": "2020-10-15T21:07:28.863Z",
@@ -20265,30 +20285,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/API": {
-    "modified": "2019-11-24T06:54:13.469Z",
-    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "Sheppy"]
-  },
-  "Web/Guide/Audio_and_video_delivery": {
-    "modified": "2019-04-07T08:59:12.823Z",
-    "contributors": ["silverskyvicto", "chrisdavidmills", "stingray"]
-  },
-  "Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
-    "modified": "2019-03-18T20:51:43.948Z",
-    "contributors": ["chrisdavidmills", "mfuji09", "sota.yamashita"]
-  },
-  "Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video": {
-    "modified": "2019-03-18T20:51:43.342Z",
-    "contributors": ["chrisdavidmills", "mfuji09"]
-  },
-  "Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources": {
-    "modified": "2019-03-18T20:51:43.634Z",
-    "contributors": ["chrisdavidmills", "mfuji09", "niusounds"]
-  },
-  "Web/Guide/Audio_and_video_manipulation": {
-    "modified": "2020-09-02T12:21:21.163Z",
-    "contributors": ["mfuji09", "chrisdavidmills", "chikoski"]
-  },
   "Web/Guide/CSS/Block_formatting_context": {
     "modified": "2019-10-20T13:29:22.992Z",
     "contributors": [
@@ -20303,24 +20299,9 @@
     "modified": "2019-03-23T23:30:43.615Z",
     "contributors": ["teoli", "ethertank"]
   },
-  "Web/Guide/Graphics": {
-    "modified": "2019-10-11T10:49:15.066Z",
-    "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "Marsf"]
-  },
   "Web/Guide/Houdini": {
     "modified": "2020-07-24T06:19:03.585Z",
     "contributors": ["Wind1808"]
-  },
-  "Web/Guide/Introduction_to_Web_development": {
-    "modified": "2020-05-04T12:39:54.645Z",
-    "contributors": [
-      "Uemmra3",
-      "silverskyvicto",
-      "mfuji09",
-      "SphinxKnight",
-      "nonki777",
-      "Yuuki Takahashi"
-    ]
   },
   "Web/Guide/Mobile": {
     "modified": "2020-03-07T14:24:28.388Z",
@@ -20338,33 +20319,9 @@
     "modified": "2020-09-14T07:46:26.734Z",
     "contributors": ["Marsf", "mfuji09", "silverskyvicto", "kmaglione", "Shoot"]
   },
-  "Web/Guide/Performance": {
-    "modified": "2019-06-08T03:16:25.641Z",
-    "contributors": ["silverskyvicto"]
-  },
-  "Web/Guide/Printing": {
-    "modified": "2020-01-12T12:37:57.185Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "Web/Guide/User_input_methods": {
     "modified": "2020-07-22T12:39:35.178Z",
     "contributors": ["mfuji09", "silverskyvicto"]
-  },
-  "Web/Guide/WOFF": {
-    "modified": "2020-10-15T21:07:56.108Z",
-    "contributors": [
-      "YujiSoftware",
-      "xl1",
-      "yyss",
-      "fscholz",
-      "ethertank",
-      "ziyunfei",
-      "Marsf"
-    ]
-  },
-  "Web/Guide/Writing_forward-compatible_websites": {
-    "modified": "2019-03-24T00:13:14.456Z",
-    "contributors": ["kohei.yoshino", "yyss"]
   },
   "Web/HTML": {
     "modified": "2020-12-14T11:33:50.265Z",
@@ -28943,6 +28900,26 @@
       "Suuzuukii"
     ]
   },
+  "Web/Media/Audio_and_video_delivery": {
+    "modified": "2019-04-07T08:59:12.823Z",
+    "contributors": ["silverskyvicto", "chrisdavidmills", "stingray"]
+  },
+  "Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
+    "modified": "2019-03-18T20:51:43.948Z",
+    "contributors": ["chrisdavidmills", "mfuji09", "sota.yamashita"]
+  },
+  "Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video": {
+    "modified": "2019-03-18T20:51:43.342Z",
+    "contributors": ["chrisdavidmills", "mfuji09"]
+  },
+  "Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources": {
+    "modified": "2019-03-18T20:51:43.634Z",
+    "contributors": ["chrisdavidmills", "mfuji09", "niusounds"]
+  },
+  "Web/Media/Audio_and_video_manipulation": {
+    "modified": "2020-09-02T12:21:21.163Z",
+    "contributors": ["mfuji09", "chrisdavidmills", "chikoski"]
+  },
   "Web/Media/Autoplay_guide": {
     "modified": "2019-04-28T02:00:15.544Z",
     "contributors": ["Wind1808"]
@@ -30181,10 +30158,6 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Glossary/Scroll_container": {
-    "modified": "2019-03-18T20:53:07.981Z",
-    "contributors": ["mfuji09"]
-  },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
     "modified": "2020-08-12T11:49:11.332Z",
     "contributors": [
@@ -30358,34 +30331,6 @@
     "modified": "2019-04-26T23:54:27.353Z",
     "contributors": ["mfuji09"]
   },
-  "conflicting/Web/API/HTMLElement/drag_event_b6e067958f5eb7e5b6c19e73c98fc256": {
-    "modified": "2020-10-15T22:07:20.059Z",
-    "contributors": ["mfuji09", "fscholz", "8845musign"]
-  },
-  "conflicting/Web/API/HTMLElement/dragend_event_2823bae8fed3efe03a09d01597d1cde8": {
-    "modified": "2020-10-15T22:15:37.865Z",
-    "contributors": ["silverskyvicto", "mfuji09"]
-  },
-  "conflicting/Web/API/HTMLElement/dragenter_event_2dcc7160dcc0241687dce4442238bbf3": {
-    "modified": "2020-10-15T22:15:36.335Z",
-    "contributors": ["silverskyvicto", "mfuji09"]
-  },
-  "conflicting/Web/API/HTMLElement/dragleave_event_0d933fa977f195f1bf9fd28b1f8051ee": {
-    "modified": "2020-10-15T22:15:36.338Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/HTMLElement/dragover_event_6ef4663f0003f0c263a08969c008baf7": {
-    "modified": "2020-10-15T22:15:36.096Z",
-    "contributors": ["silverskyvicto", "mfuji09"]
-  },
-  "conflicting/Web/API/HTMLElement/dragstart_event_be9da5ef68a2920309b168752ea03d20": {
-    "modified": "2020-10-15T22:15:36.359Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Web/API/HTMLElement/drop_event_21b7ebf04561093fe90276329e9bddff": {
-    "modified": "2020-10-15T22:11:44.847Z",
-    "contributors": ["silverskyvicto", "mfuji09", "fscholz"]
-  },
   "conflicting/Web/API/HTMLInputElement": {
     "modified": "2019-03-23T22:27:32.009Z",
     "contributors": ["MakeNowJust"]
@@ -30393,10 +30338,6 @@
   "conflicting/Web/API/HTMLMediaElement/error_event": {
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/History_API/Working_with_the_History_API": {
-    "modified": "2020-02-15T02:40:44.391Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
@@ -30571,10 +30512,6 @@
     "modified": "2020-10-15T22:28:00.883Z",
     "contributors": ["mfuji09"]
   },
-  "orphaned/Web/API/HTMLDialogElement/cancel_event": {
-    "modified": "2020-10-15T22:28:07.370Z",
-    "contributors": ["mfuji09"]
-  },
   "orphaned/Web/API/HTMLElement/contextMenu": {
     "modified": "2020-10-15T22:22:28.350Z",
     "contributors": ["Wind1808"]
@@ -30582,17 +30519,6 @@
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
-  },
-  "orphaned/Web/API/Window/applicationCache": {
-    "modified": "2019-03-18T21:25:20.909Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Mgjbot",
-      "Kohei"
-    ]
   },
   "orphaned/Web/API/XSLTProcessor/Browser_Differences": {
     "modified": "2020-04-13T14:01:47.252Z",

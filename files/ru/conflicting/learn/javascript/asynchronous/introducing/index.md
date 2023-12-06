@@ -163,12 +163,3 @@ Main thread: Task A                   Task B
 ## Заключение
 
 При проектировании современных программ все больше используется асинхронное программирование, чтобы программа имела возможность выполнять несколько операций в конкретный момент времени. Как только вы начнёте использовать новые, более мощные возможности API, вы обнаружите множество ситуаций, где решить нужную задачу можно только асинхронно. Раньше было сложно писать асинхронный код. До сих пор, нужно время, чтобы привыкнуть к такому подходу, но процесс стал намного легче. Далее, в этом разделе, мы будем глубже исследовать вопрос, когда же асинхронный код необходим и как спроектировать программу, чтобы избежать проблем, описанных выше.
-
-## В этом модуле
-
-- [General asynchronous programming concepts](/ru/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Introducing asynchronous JavaScript](/ru/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Cooperative asynchronous JavaScript: Timeouts and intervals](/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Graceful asynchronous programming with Promises](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Making asynchronous programming easier with async and await](/ru/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/ru/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

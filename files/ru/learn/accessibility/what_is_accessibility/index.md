@@ -148,13 +148,3 @@ slug: Learn/Accessibility/What_is_accessibility
 Эта статья должна была дать вам полезный обзор специальных возможностей, показать, почему это так важно, и посмотреть, как вы можете вписать его в свой рабочий процесс. Теперь у вас также должна быть жажда узнать о деталях реализации, которые помогут сделать сайты доступными, и мы начнём с этого в следующем разделе, рассматривая, почему HTML является хорошей основой для доступности.
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
-
-## В этом модуле
-
-- [Что такое доступность?](/ru/docs/Learn/Доступность/What_is_accessibility)
-- [HTML: Хорошая основа для доступности](/ru/docs/Learn/Accessibility/HTML)
-- [CSS и JavaScript доступность - лучшие практики](/ru/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Основы WAI-ARIA](/ru/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Доступность мультимедиа](/ru/docs/Learn/Accessibility/Multimedia)
-- [Мобильная доступность](/ru/docs/Learn/Accessibility/Mobile)
-- [Устранение проблем доступности](/ru/docs/Learn/Accessibility/Accessibility_troubleshooting)

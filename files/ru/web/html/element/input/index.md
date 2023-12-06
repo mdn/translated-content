@@ -211,18 +211,6 @@ Note, however, that this is not standard and will not have an effect on other br
 </form>
 ```
 
-### Using mozactionhint on Firefox mobile
-
-You can use the [`mozactionhint`](/ru/docs/Web/HTML/Element/input#mozactionhint) attribute to specify the text for the label of the enter key on the virtual keyboard when your form is rendered on Firefox mobile. For example, to have a "Next" label, you can do this:
-
-```html
-<input type="text" mozactionhint="next" name="sometext" />
-```
-
-The result is:
-
-[![mozactionhint.png](/@api/deki/files/4970/=mozactionhint.png?size=webview)](/@api/deki/files/4970/=mozactionhint.png)
-
 ## Specifications
 
 {{Specifications}}
@@ -239,9 +227,9 @@ The result is:
 
 \[4] `datetime` был удалён из спецификации и браузеров в пользу `datetime-local`.
 
-\[5] См {{bug(1355389)}}
+\[5] См [Firefox bug 1355389](https://bugzil.la/1355389)
 
-\[6] Ещё не имплементировано. Наблюдать: {{bug("888320")}} и [TPE DOM/Date time input types](https://wiki.mozilla.org/TPE_DOM/Date_time_input_types).
+\[6] Ещё не имплементировано. Наблюдать: [Firefox bug 888320](https://bugzil.la/888320) и [TPE DOM/Date time input types](https://wiki.mozilla.org/TPE_DOM/Date_time_input_types).
 
 ### Gecko notes
 
@@ -255,5 +243,5 @@ Firefox for Android also sets a default {{ cssxref("border") }} on all `<input t
 
 ## See also
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)
