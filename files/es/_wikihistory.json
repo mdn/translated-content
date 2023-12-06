@@ -8505,10 +8505,6 @@
     "modified": "2019-03-23T22:48:50.706Z",
     "contributors": ["miguelsp"]
   },
-  "Web/Guide/Parsing_and_serializing_XML": {
-    "modified": "2019-03-23T22:10:22.365Z",
-    "contributors": ["FenixAlive"]
-  },
   "Web/HTML": {
     "modified": "2020-12-10T12:38:08.697Z",
     "contributors": [
@@ -13533,6 +13529,10 @@
       "CarlosQuijano",
       "diegogaysaez"
     ]
+  },
+  "Web/XML/Parsing_and_serializing_XML": {
+    "modified": "2019-03-23T22:10:22.365Z",
+    "contributors": ["FenixAlive"]
   },
   "Web/XML/XML_introduction": {
     "modified": "2019-07-25T12:38:17.842Z",
