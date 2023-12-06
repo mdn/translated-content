@@ -51,7 +51,7 @@ canvas.toBlob((blob) => {
   const url = URL.createObjectURL(blob);
 
   newImg.onload = () => {
-    // no longer need to read the blob so it's revoked
+    // 不再需要读取该 blob，因此释放该对象
     URL.revokeObjectURL(url);
   };
 
