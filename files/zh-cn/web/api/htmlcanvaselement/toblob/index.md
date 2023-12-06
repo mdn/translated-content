@@ -125,7 +125,7 @@ function blobCallback(iconName) {
   return (b) => {
     const r = new FileReader();
     r.onloadend = () => {
-      // r.result contains the ArrayBuffer.
+      // r.result 包含了该 ArrayBuffer。
       Cu.import("resource://gre/modules/osfile.jsm");
       const writePath = OS.Path.join(
         OS.Constants.Path.desktopDir,
