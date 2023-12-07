@@ -1,6 +1,8 @@
 ---
 title: flex
 slug: Web/CSS/flex
+l10n:
+  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
 {{CSSRef}}
@@ -25,7 +27,8 @@ flex: auto;
 flex: initial;
 flex: none;
 
-/* 単位がない数値を 1 つ指定: flex-grow */
+/* 単位がない数値を 1 つ指定: flex-grow
+この場合 flex-basis は 0 と等しくなる*/
 flex: 2;
 
 /* 幅または高さを 1 つ指定: flex-basis */
@@ -46,6 +49,7 @@ flex: 2 2 10%;
 flex: inherit;
 flex: initial;
 flex: revert;
+flex: revert-layer;
 flex: unset;
 ```
 
@@ -53,25 +57,24 @@ flex: unset;
 
 - **値 1 つの構文:** 値は以下のうちの 1 つです。
 
-  - `<number>`: この場合は `flex: <number> 1 0` と解釈されます。[`<flex-shrink>`](#flex-shrink) の値は 1 と想定され、[`<flex-basis>`](#flex-basis) の値は `0` と想定されます。
-  - キーワード: `none`, `auto`, `initial` のいずれか。
+  - {{cssxref("&lt;flex-grow&gt;")}} として有効な値の場合、一括指定は `flex: <flex-grow> 1 0` と展開されます。
+  - {{cssxref("&lt;flex-basis&gt;")}} として有効な値の場合、一括指定は `flex: 1 1 <flex-basis>` と展開されます。
+  - キーワード `none` またはグローバルキーワードのいずれか。
 
 - **値 2 つの構文:**
 
-  - 1 つ目は次の値でなければなりません。
+  - 1 つ目は {{cssxref("flex-grow")}} として有効な値でなければなりません。
 
-    - {{cssxref("&lt;number&gt;")}} であり、`<flex-grow>` として解釈される。
+  - 2 つ目は以下のいずれかの値でなければなりません。
 
-  - 2 つ目は次の値でなければなりません。
-
-    - {{cssxref("&lt;number&gt;")}}: `<flex-shrink>` として解釈される。
-    - {{cssxref("width")}} として有効な値: `<flex-basis>` として解釈される。
+    - {{cssxref("flex-shrink")}} として有効な値の場合、一括指定は `flex: <flex-grow> <flex-shrink> 0` と展開されます。
+    - {{cssxref("flex-basis")}} として有効な値の場合、一括指定は `flex: <flex-grow> 1 <flex-basis>` と展開されます。
 
 - **値 3 つの構文:** 値は以下の順序でなければなりません。
 
-  1. {{cssxref("&lt;number&gt;")}} で `<flex-grow>` として解釈される。
-  2. {{cssxref("&lt;number&gt;")}} で `<flex-shrink>` として解釈される。
-  3. {{cssxref("width")}} として有効な値で、`<flex-basis>` として解釈される。
+  1. {{cssxref("flex-grow")}} として有効な値。
+  2. {{cssxref("flex-shrink")}} として有効な値。
+  3. {{cssxref("flex-basis")}} として有効な値。
 
 ### 値
 
@@ -88,9 +91,9 @@ flex: unset;
 - `<'flex-basis'>`
   - : フレックスアイテムの {{cssxref("flex-basis")}} を定義します。希望サイズが `0` ならば、自由度として解釈されないように単位をつけなければなりません。省略時の既定値は `0` です。 (初期値は `auto`)
 
-<h2 id="Description">解説</h2>
+## 解説
 
-多くの場合、 `flex` には `auto`, `initial`, `none`, または単位のない正の数を設定してください。これらの値の効果を確認するには、以下のフレックスコンテナーの大きさを変更してみてください。
+多くの場合、 `flex` には `auto`, `initial`, `none`, または単位のない正の数を設定します。これらの値の効果を確認するには、以下のフレックスコンテナーの大きさを変更してみてください。
 
 ```html hidden
 <div class="flex-container">
@@ -173,7 +176,7 @@ flex: unset;
 }
 ```
 
-{{EmbedLiveSample("Description", 1200, 400, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Description", 1200, 400)}}
 
 既定ではフレックスアイテムは内容物の最小の寸法よりも収縮することはありません。これを変更するには、 {{cssxref("min-width")}} または {{cssxref("min-height")}} を設定してください。
 
@@ -187,14 +190,16 @@ flex: unset;
 
 ## 例
 
-<h3 id="Setting_flex_auto">flex: auto の設定</h3>
+### flex: auto の設定
+
+この例では、 `flex: auto` を持つフレックスアイテムがコンテナー内の余白を吸収するように成長する様子を示しています。
 
 #### HTML
 
 ```html
 <div id="flex-container">
-  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
-  <div class="raw-item" id="raw">Raw box</div>
+  <div id="flex-auto">flex: auto (click to toggle raw box)</div>
+  <div id="flex-initial">flex: initial</div>
 </div>
 ```
 
@@ -203,43 +208,44 @@ flex: unset;
 ```css
 #flex-container {
   display: flex;
-  flex-direction: row;
-}
-
-#flex-container > .flex-item {
-  flex: auto;
-}
-
-#flex-container > .raw-item {
-  width: 5rem;
-}
-```
-
-```js hidden
-var flex = document.getElementById("flex");
-var raw = document.getElementById("raw");
-flex.addEventListener("click", function () {
-  raw.style.display = raw.style.display == "none" ? "block" : "none";
-});
-```
-
-```css hidden
-#flex-container {
-  width: 100%;
   font-family: Consolas, Arial, sans-serif;
 }
 
 #flex-container > div {
-  border: 1px solid #f00;
   padding: 1rem;
 }
 
-#flex-container > .raw-item {
+#flex-auto {
+  flex: auto;
+  border: 1px solid #f00;
+}
+
+#flex-initial {
   border: 1px solid #000;
 }
 ```
 
+#### JavaScript
+
+```js
+const flexAuto = document.getElementById("flex-auto");
+const flexInitial = document.getElementById("flex-initial");
+flexAuto.addEventListener("click", () => {
+  flexInitial.style.display =
+    flexInitial.style.display === "none" ? "block" : "none";
+});
+```
+
 #### 結果
+
+このフレックスコンテナーには 2 つのフレックスアイテムがあります。
+
+- "flex: auto" は `flex` の値が [`auto`](auto) です。
+- "flex: initial" は `flex` の値が [`initial`](#initial) です。
+
+"flex: initial" のアイテムは、要求されるだけの幅を取りますが、それ以上空間を取るために伸長されることはありません。残りの空間はすべて "flex: auto" が占めます。
+
+"flex: auto" をクリックすると、 "flex: initial" の {{cssxref("display")}} プロパティが `none` に設定され、レイアウトから除去されます。 "flex: auto" のアイテムが伸長され、コンテナー内で利用可能な空間をすべて占めます。
 
 {{EmbedLiveSample('Setting_flex_auto','100%','100')}}
 
