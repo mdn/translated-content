@@ -129,7 +129,6 @@ l10n:
 
 </details>
 
-
 ## 描述
 
 @page 规则定义了页面盒子的属性。可以通过 CSS 对象模型接口 {{domxref("CSSPageRule")}} 访问 `@page` at 规则。
