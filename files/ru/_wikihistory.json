@@ -16183,10 +16183,6 @@
     "modified": "2020-10-15T21:39:04.221Z",
     "contributors": ["boxa6", "ows-nightwolf"]
   },
-  "conflicting/Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-03-23T23:52:15.954Z",
-    "contributors": ["warsan", "Chernetsky"]
-  },
   "conflicting/Web/API/Crypto/getRandomValues": {
     "modified": "2019-07-04T02:33:27.227Z",
     "contributors": ["freezer278", "Jeremie"]
@@ -16999,10 +16995,6 @@
   "orphaned/Web/API/Body/json": {
     "modified": "2020-10-15T22:06:25.317Z",
     "contributors": ["dasha_hshr"]
-  },
-  "orphaned/Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-09-18T08:14:03.985Z",
-    "contributors": ["post032"]
   },
   "orphaned/Web/API/ChildNode": {
     "modified": "2019-03-23T22:51:21.900Z",
