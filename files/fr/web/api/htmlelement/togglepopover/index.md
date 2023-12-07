@@ -51,7 +51,8 @@ Le premier élément fournis les instructions sur la façon d'invoquer le popup,
 
 ```html
 <p id="instructions">
-  Appuyez sur "h" pour afficher/masquer une fenêtre d'aide (sélectionnez d'abord la fenêtre de l'exemple).
+  Appuyez sur "h" pour afficher/masquer une fenêtre d'aide (sélectionnez d'abord
+  la fenêtre de l'exemple).
 </p>
 ```
 

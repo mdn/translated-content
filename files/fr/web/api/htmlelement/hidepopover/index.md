@@ -41,14 +41,18 @@ D'abord, un peu de HTML :
 <div id="mypopover">
   <h2>Aide !</h2>
 
-  <p>Vous pouvez utiliser les commandes suivantes pour contrôler l'application</p>
+  <p>
+    Vous pouvez utiliser les commandes suivantes pour contrôler l'application
+  </p>
 
   <ul>
     <li>Appuyez sur <ins>C</ins> pour commander du fromage</li>
     <li>Appuyez sur <ins>T</ins> pour commander du tofu</li>
     <li>Appuyez sur <ins>B</ins> pour commander du bacon</li>
     <hr />
-    <li>Dites "Service" pour appeler le robot serveur et passer votre commande</li>
+    <li>
+      Dites "Service" pour appeler le robot serveur et passer votre commande
+    </li>
     <li>Dites "Éjection" pour activer le siège éjectable</li>
   </ul>
 </div>

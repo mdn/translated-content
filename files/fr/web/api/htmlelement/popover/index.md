@@ -17,10 +17,10 @@ Elle reflète la valeur de l'attribut HTML global {{htmlattrdef("popover")}}.
 Une valeur énumérée ; les valeurs possibles sont :
 
 - `"auto"` : Dans l'[état automatique](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère) :
-  - Le popover peut être « _Light Dismiss_ » — cela signifie que vous pouvez masquer le popover en cliquant en dehors ou en appuyant sur la touche <kbd>Esc</kbd>.
+  - Le popover peut être « _Light Dismiss_ » — cela signifie que vous pouvez masquer le popover en cliquant en dehors ou en appuyant sur la touche <kbd>Esc</kbd>.
   - Habituellement, un seul popover peut être affiché à la fois — afficher un deuxième popover quand un est déjà affiché masquera le premier. Les popovers automatiques imbriqués sont la seul exception à cette règle. Voir [Popovers imbriqués](/fr/docs/Web/API/Popover_API/Using#popover_imbriqués) pour plus de détails.
 - `"manual"` : Dans l'[état manuel](/fr/docs/Web/API/Popover_API/Using#utiliser_l_état_manuel) :
-  - Le popover ne peut pas être « _Light Dismiss_ », bien que les boutons déclaratifs d'affichage/masquage/basculement fonctionneront toujours.
+  - Le popover ne peut pas être « _Light Dismiss_ », bien que les boutons déclaratifs d'affichage/masquage/basculement fonctionneront toujours.
   - Plusieurs popovers indépendants peuvent être affichés en même temps.
 
 ## Exemples

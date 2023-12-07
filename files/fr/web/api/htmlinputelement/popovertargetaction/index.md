@@ -10,7 +10,7 @@ browser-compat: api.HTMLInputElement.popoverTargetAction
 
 La propriété **`popoverTargetAction`** de l'interface {{domxref("HTMLInputElement")}} permet de lire et définit l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur un élément popover contrôlé par {{htmlelement("input")}} avec l'attribut `type="button"`.
 
-Elle reflète la valeur de l'attribut HTML [`popovertargetaction`](/en-US/docs/Web/HTML/Element/input#popovertargetaction).
+Elle reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Element/input#popovertargetaction).
 
 ## Valeur
 
@@ -60,7 +60,7 @@ if (supportsPopover()) {
   // Définit l'élément <div> comme étant un popover automatique
   popover.popover = "auto";
   // Définit le bouton comme étant le contrôle du popover
- toggleBtn.popoverTargetElement = popover;
+  toggleBtn.popoverTargetElement = popover;
 
   // Définit que le bouton peut afficher/masquer le popover
   toggleBtn.popoverTargetAction = "toggle";
@@ -82,7 +82,7 @@ Le popover `"auto"` peut également être « _Light Dismissed_ » en cliquant en
 
 Cet exemple montre comment utiliser les valeurs `"show"` et `"hide"` de l'attribut `popoverTargetAction`.
 
-Le code est quasiment identique à l'exemple précédent, sauf qu'il y a deux `<button>` et que le popover est définis avec la valeur [`"manual"`](/en-US/docs/Web/API/Popover_API/Using#utiliser_l_état_manuel).
+Le code est quasiment identique à l'exemple précédent, sauf qu'il y a deux `<button>` et que le popover est définis avec la valeur [`"manual"`](/fr/docs/Web/API/Popover_API/Using#utiliser_l_état_manuel).
 Un popover `manual` doit être fermé explicitement et ne peut pas être « _Light Dismissed_ » par un clique hors du popover.
 
 ```html
@@ -134,4 +134,4 @@ Le popover peut être affiché en cliquant sur le bouton « _Afficher le popover
 
 ## See also
 
-- [L'API Popover](/en-US/docs/Web/API/Popover_API)
+- [L'API Popover](/fr/docs/Web/API/Popover_API)

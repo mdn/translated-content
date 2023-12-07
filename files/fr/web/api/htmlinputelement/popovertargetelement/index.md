@@ -27,7 +27,7 @@ Tout d'abord, nous définissons un élément HTML `<input type="button">` que no
 Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/input#popovertargetaction) sur le `<input type="button">` ou l'attribut {{htmlattrdef("popover")}} sur le `<div>`, car nous le ferons de manière programmatique.
 
 ```html
-<<input id="toggleBtn"  type="button" value="Afficher/masquer le popover" />
+<<input id="toggleBtn" type="button" value="Afficher/masquer le popover" />
 <div id="mypopover">Ceci est le contenu du popover !</div>
 ```
 

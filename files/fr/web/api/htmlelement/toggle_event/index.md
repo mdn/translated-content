@@ -48,7 +48,7 @@ popover.addEventListener("toggle", (event) => {
 });
 ```
 
-### Une note sur l’agrégation des événements de basculement
+### Une note sur l'agrégation des événements de basculement
 
 Il convient de souligner que les événements `toggle` sont agrégés, ce qui signifie que si plusieurs événements `toggle` sont déclenchés avant que la boucle d'événements ait eu la possibilité de s'exécuter, un seul événement sera déclenché.
 
