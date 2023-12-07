@@ -450,7 +450,7 @@ In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-Те же правила применимы к [`setTimeout()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), [`setInterval()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setInterval), и [`Function()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function).
+Те же правила применимы к [`setTimeout()`](/ru/docs/Web/API/setTimeout), [`setInterval()`](/ru/docs/Web/API/setInterval), и [`Function()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
 > **Предупреждение:** Будьте очень осторожны, запуская код в контексте страничного скрипта. Окружение страничного скрипта может контролироваться потенциально зловредным веб-страницей, которая может переопределить объекты, с которыми вы взаимодействуете, так что их поведение станет совершенно непредсказуемым:
 >
