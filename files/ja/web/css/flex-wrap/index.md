@@ -1,9 +1,11 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
+l10n:
+  sourceCommit: 1a07a1f7f623d94a8454414d1a4df9add04ddd5e
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
 **`flex-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。
 
@@ -49,7 +51,7 @@ flex-wrap: unset;
 
 ## 例
 
-<h3 id="Setting_flex_container_wrap_values">フレックスコンテナーの wrap 値の設定</h3>
+### フレックスコンテナーの wrap 値の設定
 
 #### HTML
 
@@ -121,7 +123,7 @@ flex-wrap: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting flex container wrap values', '', '700') }}
+{{ EmbedLiveSample('フレックスコンテナーの_wrap_値の設定', '', '700') }}
 
 ## 仕様書
 
@@ -133,5 +135,6 @@ flex-wrap: unset;
 
 ## 関連情報
 
+- {{CSSXRef("flex-flow")}} は `flex-wrap` および {{CSSXRef("flex-direction")}} プロパティの一括指定プロパティです。
 - CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS フレックスボックスガイド: _[フレックスアイテムの折り返しのマスター](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
