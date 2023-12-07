@@ -1,17 +1,14 @@
 ---
-title: HTMLButtonElement.labels
+title: "HTMLButtonElement: propriété labels"
+short-title: labels
 slug: Web/API/HTMLButtonElement/labels
+page-type: web-api-instance-property
+browser-compat: api.HTMLButtonElement.labels
 ---
 
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("button")}} (_bouton_).
-
-## Syntaxe
-
-```js
-var labelElements = button.labels;
-```
 
 ### Valeur de retour
 
@@ -32,8 +29,8 @@ Une {{domxref("NodeList")}} contenant les éléments `<label>` associés avec l'
 ```js
 window.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("test");
-  for (var i = 0; i < button.labels.length; i++) {
-    console.log(button.labels[i].textContent); // "Label 1" et "Label 2"
+  for (const label of button.labels) {
+    console.log(label.textContent); // "Label 1" et "Label 2"
   }
 });
 ```
