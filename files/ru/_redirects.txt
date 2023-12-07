@@ -415,7 +415,6 @@
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/File/Using_files_from_web_applications	/ru/docs/Web/API/File_API/Using_files_from_web_applications
 /ru/docs/Web/API/File/fileName	/ru/docs/conflicting/Web/API/File/name
-/ru/docs/Web/API/File/getAsDataURL	/ru/docs/orphaned/Web/API/File/getAsDataURL
 /ru/docs/Web/API/FileReader/onabort	/ru/docs/Web/API/FileReader/abort_event
 /ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /ru/docs/Web/API/FormData/Using_FormData_Objects	/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects

@@ -17026,10 +17026,6 @@
       "surrsoft"
     ]
   },
-  "orphaned/Web/API/File/getAsDataURL": {
-    "modified": "2019-03-23T22:18:17.148Z",
-    "contributors": ["tregubovand"]
-  },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
     "modified": "2019-03-23T22:27:08.817Z",
     "contributors": ["teoli"]
