@@ -130,7 +130,7 @@ gods.forEach(function (eachName, index) {
 
 ## Промисы
 
-Промисы — новый стиль написания асинхронного кода, который используется в современных Web API. Хорошим примером является [`fetch()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch) API, который современнее и эффективнее чем {{domxref("XMLHttpRequest")}}. Посмотрим на краткий пример, из нашей статьи [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data):
+Промисы — новый стиль написания асинхронного кода, который используется в современных Web API. Хорошим примером является [`fetch()`](/ru/docs/Web/API/fetch) API, который современнее и эффективнее чем {{domxref("XMLHttpRequest")}}. Посмотрим на краткий пример, из нашей статьи [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data):
 
 ```js
 fetch("products.json")

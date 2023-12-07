@@ -300,7 +300,7 @@ fetch(url)
   });
 ```
 
-Here we run the request by passing our `url` variable to [`fetch()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch), convert the response body to JSON using the [`json()`](/ru/docs/Web/API/Body/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI.
+Here we run the request by passing our `url` variable to [`fetch()`](/ru/docs/Web/API/fetch), convert the response body to JSON using the [`json()`](/ru/docs/Web/API/Body/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI.
 
 ### Displaying the data
 

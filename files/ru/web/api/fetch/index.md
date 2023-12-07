@@ -1,15 +1,13 @@
 ---
-title: WindowOrWorkerGlobalScope.fetch()
+title: Глобальная функция fetch()
 slug: Web/API/fetch
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-Метод **`fetch()`** , относящийся к миксину {{domxref("WindowOrWorkerGlobalScope")}}, запускает процесс извлечения ресурса из сети. Возвращает promise, содержащий {{domxref("Response")}} объект (ответ на запрос).
+Глобальный метод **`fetch()`** запускает процесс извлечения ресурса из сети. Возвращает promise, содержащий {{domxref("Response")}} объект (ответ на запрос).
 
-`WorkerOrGlobalScope` относится к {{domxref("Window")}} и {{domxref("WorkerGlobalScope")}} сразу. Это означает, что метод `fetch()` доступен практически в любом контексте, в котором бы вы не захотели получить ресурсы.
-
-Промис {{domxref("WindowOrWorkerGlobalScope.fetch","Fetch()")}} завершается {{jsxref("TypeError")}}, если возникает сетевая ошибка, хотя обычно это означает проблему с доступами или аналогичную ей. Для успешного завершения `fetch()` достаточно удостовериться в том, что промис выполнен и что свойство {{domxref("Response.ok")}} имеет значение `true`. HTTP статус 404 не является сетевой ошибкой.
+Промис {{domxref("fetch()")}} завершается {{jsxref("TypeError")}}, если возникает сетевая ошибка, хотя обычно это означает проблему с доступами или аналогичную ей. Для успешного завершения `fetch()` достаточно удостовериться в том, что промис выполнен и что свойство {{domxref("Response.ok")}} имеет значение `true`. HTTP статус 404 не является сетевой ошибкой.
 
 Метод `fetch()` контролируется директивой `connect-src` directive of [Content Security Policy](/ru/docs/Security/CSP/CSP_policy_directives) (политика безопасности контента), а не директивой ресурсов, которые извлекает.
 
