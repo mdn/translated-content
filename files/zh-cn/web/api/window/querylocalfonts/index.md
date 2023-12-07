@@ -33,7 +33,7 @@ queryLocalFonts(options)
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 首次调用该方法后，当浏览器出现权限提示时，用户选择拒绝授予此功能的权限。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 此功能的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止，或者不是缘于用户交互（例如按下按钮）调用或当前的 {{glossary("origin")}} 是一个不透明的来源。
+  - : 此特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止，或者不是通过用户交互（如按下按钮）调用此特性，或当前的{{glossary("origin", "源")}}不透明。
 
 ## 示例
 
@@ -84,7 +84,7 @@ async function computeOutlineFormat() {
       postscriptNames: ["ComicSansMS"],
     });
     for (const fontData of availableFonts) {
-      // `blob()` 方法返回一个包含有效且完整的 SFNT 包装字体数据的 Blob。
+      // `blob()` 方法返回一个包含有效且完整的 SFNT 封装字体数据的 Blob。
       const sfnt = await fontData.blob();
       // 仅裁剪出我们需要的字节部分：前 4 个字节是 SFNT 版本信息。
       // 规范：https://learn.microsoft.com/zh-cn/typography/opentype/spec/otff#organization-of-an-opentype-font
