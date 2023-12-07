@@ -398,7 +398,6 @@
 /ru/docs/Web/API/Document/defaultView/popstate_event	/ru/docs/Web/API/Window/popstate_event
 /ru/docs/Web/API/Document/defaultView/resize_event	/ru/docs/Web/API/Window/resize_event
 /ru/docs/Web/API/Document/defaultView/storage_event	/ru/docs/Web/API/Window/storage_event
-/ru/docs/Web/API/Document/documentURIObject	/ru/docs/orphaned/Web/API/Document/documentURIObject
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
 /ru/docs/Web/API/Document/dragstart_event	/ru/docs/conflicting/Web/API/HTMLElement/dragstart_event
 /ru/docs/Web/API/Document/height	/ru/docs/conflicting/Web/API/Element/clientHeight
