@@ -1,6 +1,8 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
+l10n:
+  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
 {{CSSRef}}
@@ -39,6 +41,7 @@ flex-flow: column-reverse wrap-reverse;
 flex-flow: inherit;
 flex-flow: initial;
 flex-flow: revert;
+flex-flow: revert-layer;
 flex-flow: unset;
 ```
 
