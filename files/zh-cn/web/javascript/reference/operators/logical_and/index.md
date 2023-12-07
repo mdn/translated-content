@@ -64,7 +64,7 @@ function B() {
   return true;
 }
 console.log(A() && B());
-// 由于调用了 A 函数，故会输出 "called A" 到控制台，
+// 由于调用了 A 函数，故会输出 "调用了 A" 到控制台，
 // && 求值结果为 false（A 函数返回 false），然后输出 false 到控制台；
 // 与运算符在这里短路，忽略了 B 函数
 ```
