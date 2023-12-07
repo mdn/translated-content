@@ -265,39 +265,42 @@ Sur cette page, vous trouverez des informations sur les attributs communs à l'e
 
 Les éléments `<input>` peuvent utiliser les [attributs universels](/fr/docs/Web/HTML/Global_attributes) et les attributs suivants&nbsp;:
 
-| Attribut                            | Type(s)                                    | Description                                                                                                                           |
-| ----------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [`accept`](#accept)                 | `file`                                     | Une indication quant au type de fichier attendu pour l'<i lang="en">upload</i>                                                        |
-| [`alt`](#alt)                       | `image`                                    | Un texte alternatif à l'image, nécessaire pour une accessibilité correcte                                                             |
-| [`autocomplete`](#autocomplete)     | tous                                       | Une indication pour le remplissage automatique du formulaire                                                                          |
-| [`capture`](#capture)               | `file`                                     | La méthode de capture du média pour l'upload du fichier                                                                               |
-| [`checked`](#checked)               | `radio`, `checkbox`                        | Indique si l'option est sélectionnée ou si la case est cochée                                                                         |
-| [`dirname`](#dirname)               | `text`, `search`                           | Le nom du champ de formulaire à utiliser pour envoyer le sens d'écriture de l'élément à l'envoi du formulaire                         |
-| [`disabled`](#disabled)             | tous                                       | Indique si le contrôle est désactivé                                                                                                  |
-| [`form`](#form)                     | tous                                       | Associe un contrôle à un élément de formulaire                                                                                        |
-| [`formaction`](#formaction)         | `image`, `submit`                          | L'URL à utiliser pour l'envoi du formulaire                                                                                           |
-| [`formenctype`](#formenctype)       | `image`, `submit`                          | L'encodage des données à utiliser pour l'envoi du formulaire                                                                          |
-| [`formmethod`](#formmethod)         | `image`, `submit`                          | La méthode HTTP à utiliser pour envoyer le formulaire                                                                                 |
-| [`formnovalidate`](#formnovalidate) | `image`, `submit`                          | Surcharge la validation du contrôle dictée par le formulaire pour l'envoi de ce dernier                                               |
-| [`formtarget`](#formtarget)         | `image`, `submit`                          | Le contexte de navigation à utiliser pour l'envoi du formulaire                                                                       |
-| [`height`](#height)                 | `image`                                    | Analogue à l'attribut `height` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), la hauteur de l'image                           |
-| [`list`](#list)                     | presque tous                               | La valeur de l'attribut `id` de l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournissant les options d'autocomplétion |
-| [`max`](#max)                       | types numériques                           | La valeur maximale                                                                                                                    |
-| [`maxlength`](#maxlength)           | `password`, `search`, `tel`, `text`, `url` | La longueur maximale (en nombre de caractères) de l'attribut `value`                                                                  |
-| [`min`](#min)                       | types numériques                           | La valeur minimale                                                                                                                    |
-| [`minlength`](#minlength)           | `password`, `search`, `tel`, `text`, `url` | La longueur minimale (en nombre de caractères) de l'attribut `value`                                                                  |
-| [`multiple`](#multiple)             | `email`, `file`                            | Un booléen indiquant si plusieurs valeurs sont acceptées                                                                              |
-| [`name`](#name)                     | tous                                       | Le nom associé au contrôle et qui est envoyé avec le formulaire associé à la valeur sous la forme d'une paire nom/valeur              |
-| [`pattern`](#pattern)               | `password`, `text`, `tel`                  | Un motif que la valeur doit respecter afin d'être valide                                                                              |
-| [`placeholder`](#placeholder)       | `password`, `search`, `tel`, `text`, `url` | Un texte qui apparaît dans le contrôle lorsqu'aucune valeur n'y est écrite                                                            |
-| [`readonly`](#readonly)             | presque tous                               | Un booléen indiquant que la valeur n'est pas éditable                                                                                 |
-| [`required`](#required)             | presque tous                               | Un booléen indiquant que la valeur est requise ou que le contrôle doit être coché avant de pouvoir envoyer le formulaire              |
-| [`size`](#size)                     | `email`, `password`, `tel`, `text`, `url`  | La taille du contrôle                                                                                                                 |
-| [`src`](#src)                       | `image`                                    | Analogue à l'attribut `src` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), indique l'emplacement de l'image                   |
-| [`step`](#step)                     | types numériques                           | Un incrément pour les valeurs valides                                                                                                 |
-| [`type`](#type)                     | tous                                       | Le type de contrôle de formulaire                                                                                                     |
-| [`value`](#value)                   | tous                                       | La valeur initiale du contrôle                                                                                                        |
-| [`width`](#width)                   | `image`                                    | Analogue à l'attribut `width` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), la largeur de l'image                            |
+| Attribut                                      | Type(s)                                                                  | Description                                                                                                                           |
+| --------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| [`accept`](#accept)                           | `file`                                                                   | Une indication quant au type de fichier attendu pour l'<i lang="en">upload</i>                                                        |
+| [`alt`](#alt)                                 | `image`                                                                  | Un texte alternatif à l'image, nécessaire pour une accessibilité correcte                                                             |
+| [`autocapitalize`](#autocapitalize)           | tous sauf `url`, `email` et `password`                                   | Contrôle la mise en majuscule automatique du text saisie.                                                                             |
+| [`autocomplete`](#autocomplete)               | tous sauf `checkbox`, `radio` et les boutons                             | Une indication pour le remplissage automatique du formulaire                                                                          |
+| [`capture`](#capture)                         | `file`                                                                   | La méthode de capture du média pour l'upload du fichier                                                                               |
+| [`checked`](#checked)                         | `radio`, `checkbox`                                                      | Indique si l'option est sélectionnée ou si la case est cochée                                                                         |
+| [`dirname`](#dirname)                         | `hidden`, `text`, `search`, `url`, `tel`, `email`                        | Le nom du champ de formulaire à utiliser pour envoyer le sens d'écriture de l'élément à l'envoi du formulaire                         |
+| [`disabled`](#disabled)                       | tous                                                                     | Indique si le contrôle est désactivé                                                                                                  |
+| [`form`](#form)                               | tous                                                                     | Associe un contrôle à un élément de formulaire                                                                                        |
+| [`formaction`](#formaction)                   | `image`, `submit`                                                        | L'URL à utiliser pour l'envoi du formulaire                                                                                           |
+| [`formenctype`](#formenctype)                 | `image`, `submit`                                                        | L'encodage des données à utiliser pour l'envoi du formulaire                                                                          |
+| [`formmethod`](#formmethod)                   | `image`, `submit`                                                        | La méthode HTTP à utiliser pour envoyer le formulaire                                                                                 |
+| [`formnovalidate`](#formnovalidate)           | `image`, `submit`                                                        | Surcharge la validation du contrôle dictée par le formulaire pour l'envoi de ce dernier                                               |
+| [`formtarget`](#formtarget)                   | `image`, `submit`                                                        | Le contexte de navigation à utiliser pour l'envoi du formulaire                                                                       |
+| [`height`](#height)                           | `image`                                                                  | Analogue à l'attribut `height` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), la hauteur de l'image                           |
+| [`list`](#list)                               | tous sauf `hidden`, `password`, `checkbox`, `radio` et les boutons       | La valeur de l'attribut `id` de l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournissant les options d'autocomplétion |
+| [`max`](#max)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`     | La valeur maximale                                                                                                                    |
+| [`maxlength`](#maxlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                      | La longueur maximale (en nombre de caractères) de l'attribut `value`                                                                  |
+| [`min`](#min)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`     | La valeur minimale                                                                                                                    |
+| [`minlength`](#minlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                      | La longueur minimale (en nombre de caractères) de l'attribut `value`                                                                  |
+| [`multiple`](#multiple)                       | `email`, `file`                                                          | Un booléen indiquant si plusieurs valeurs sont acceptées                                                                              |
+| [`name`](#name)                               | tous                                                                     | Le nom associé au contrôle et qui est envoyé avec le formulaire associé à la valeur sous la forme d'une paire nom/valeur              |
+| [`pattern`](#pattern)                         | `text`, `search`, `url`, `tel`, `email`, `password`                      | Un motif que la valeur doit respecter afin d'être valide                                                                              |
+| [`placeholder`](#placeholder)                 | `text`, `search`, `url`, `tel`, `email`, `password`, `number`            | Un texte qui apparaît dans le contrôle lorsqu'aucune valeur n'y est écrite                                                            |
+| [`popovertarget`](#popovertarget)             | `button`                                                                 | Définis un `<input type="button">` en tant que contrôle pour un élément popover                                                       |
+| [`popovertargetaction`](#popovertargetaction) | `button`                                                                 | Définis l'action que le popover va devoir accomplir                                                                                   |
+| [`readonly`](#readonly)                       | tous sauf `hidden`, `range`, `color`, `checkbox`, `radio` et les boutons | Un booléen indiquant que la valeur n'est pas éditable                                                                                 |
+| [`required`](#required)                       | tous sauf `hidden`, `range`, `color` et les boutons                      | Un booléen indiquant que la valeur est requise ou que le contrôle doit être coché avant de pouvoir envoyer le formulaire              |
+| [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                      | La taille du contrôle                                                                                                                 |
+| [`src`](#src)                                 | `image`                                                                  | Analogue à l'attribut `src` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), indique l'emplacement de l'image                   |
+| [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`     | Un incrément pour les valeurs valides                                                                                                 |
+| [`type`](#type)                               | tous                                                                     | Le type de contrôle de formulaire                                                                                                     |
+| [`value`](#value)                             | tous sauf `image`                                                        | La valeur initiale du contrôle                                                                                                        |
+| [`width`](#width)                             | `image`                                                                  | Analogue à l'attribut `width` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), la largeur de l'image                            |
 
 Certains attributs non-standard supplémentaires sont listés après les descriptions des attributs standard.
 
@@ -307,6 +310,8 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
   - : Uniquement valide pour le type `file`, cet attribut définit les types de fichiers qui peuvent être sélectionnés. Voir la page détaillée sur [`<input type="file">`](/fr/docs/Web/HTML/Element/Input/file).
 - `alt`
   - : Uniquement valide pour le type `image`, cet attribut fournit un texte alternatif à l'image qui est affiché lorsque l'attribut [`src`](#src) de l'image est absent ou que le chargement de l'image a échoué. Voir la page détaillée sur [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
+- `autocapitalize`
+  - : Controle si le texte saisie doit être automatiquement mis en majuscule et, le cas échéant, de quel manière. Voir la page de l'attribut global [`autocapitalize`](/fr/docs/Web/HTML/Global_attributes/autocapitalize) pour plus d'informations.
 - [`autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete)
   - : **Cet attribut n'est pas booléen&nbsp;!** Il prend comme valeur une chaîne de caractères dont les valeurs sont séparées par des espaces qui décrivent, le cas échéant, le type de fonctionnalité à fournir pour l'autocomplétion du champ. Généralement, l'implémentation de l'autocomplétion repose sur les valeurs précédemment saisies dans le même champ, mais le navigateur peut implémenter une forme d'autocomplétion plus avancée (par exemple intégrer la liste des contacts connue de l'appareil pour autocompléter les champs `email`). Voir [la page sur cet attribut](/fr/docs/Web/HTML/Attributes/autocomplete#valeurs) pour les valeurs autorisées. Cet attribut est valide pour les types de champ `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, et `password`. Il n'a pas d'effet pour les types de champs qui ne renvoient pas de données numériques ou text et est donc valide pour tous les types de champs à l'exception de `checkbox`, `radio`, `file`, ou des types de bouton. Voir [la page de l'attribut HTML `autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete) pour plus d'informations, y compris sur la sécurité des mots de passe et sur la façon dont `autocomplete` s'applique légèrement différemment pour les champs de type `hidden`.
 - `autofocus`
@@ -469,6 +474,21 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
   - : Cet attribut est une chaîne de caractères qui fournit une brève indication quant au type d'information attendu dans le champ. Sa valeur devrait être un mot ou une courte phrase qui indique le type de données attendu plutôt qu'une explication ou une consigne. Le texte de cet attribut _ne doit pas_ inclure de retour chariot ou de saut de ligne. Ainsi, si un champ est destiné à la saisie d'un prénom et que le libellé est «&nbsp;Prénom&nbsp;», une valeur appropriée pour cet attribut pourra être `"ex. Mustafa"`.
 
     > **Note :** Sur le plan sémantique, l'attribut `placeholder` n'est pas aussi utile que d'autres méthodes pour expliquer le formulaire. Il peut aussi causer certains problèmes inattendus avec le contenu. Voir [les libellés](#libellés) pour plus d'informations.
+
+- `popovertarget`
+
+  - : Transforme un élément `<input type="button">` en un contrôleur de popover ; Il prend comme valeur l'`id` de l'élément popover à contrôler. Voir la page de {{domxref("Popover API", "L'API Popover", "", "nocode")}} pour plus d'informations.
+
+- `popovertargetaction`
+
+  - : Définis l'action à accomplir sur l'élément popover quand l'element `<input tyep="button">` est activé. Les valeurs possibles sont&nbsp;:
+
+    - `"hide"`
+      - : Le bouton va masquer un popover affiché. Si vous essayez de masquer un popover déjà masqué, aucune action ne sera effectuée.
+    - `"show"`
+      - : Le bouton va afficher un popover masqué. Si vous essayez d'afficher un popover déjà affiché, aucune action ne sera effectuée.
+    - `"toggle"`
+      - : Le bouton va basculer un popover entre les états affiché et masqué. Si le popover est masqué, il sera affiché ; si le popover est affiché, il sera masqué. Si `popovertargetaction` est omis, `"toggle"` est l'action par défaut qui sera effectuée par le bouton de contrôle.
 
 - `readonly`
 
