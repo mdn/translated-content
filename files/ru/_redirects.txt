@@ -517,14 +517,6 @@
 /ru/docs/Web/API/WindowEventHandlers/onhashchange	/ru/docs/conflicting/Web/API/Window/hashchange_event
 /ru/docs/Web/API/WindowEventHandlers/onpopstate	/ru/docs/conflicting/Web/API/Window/popstate_event
 /ru/docs/Web/API/WindowEventHandlers/onunload	/ru/docs/Web/API/Window/unload_event
-/ru/docs/Web/API/WindowOrWorkerGlobalScope	/ru/docs/orphaned/Web/API/WindowOrWorkerGlobalScope
-/ru/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ru/docs/Web/API/atob
-/ru/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ru/docs/Web/API/btoa
-/ru/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ru/docs/Web/API/caches
-/ru/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/ru/docs/Web/API/clearTimeout
-/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/ru/docs/Web/API/fetch
-/ru/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/ru/docs/Web/API/setInterval
-/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/WindowTimers.setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/WindowTimers/setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/Worker/onmessage	/ru/docs/Web/API/Worker/message_event

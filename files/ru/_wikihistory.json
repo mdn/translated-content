@@ -16356,14 +16356,6 @@
     "modified": "2020-10-15T21:34:09.985Z",
     "contributors": ["hisbvdis", "stary71", "alexismaster"]
   },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T22:50:51.451Z",
-    "contributors": ["teoli"]
-  },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a": {
-    "modified": "2019-03-23T23:01:38.088Z",
-    "contributors": ["fscholz"]
-  },
   "conflicting/Web/API/XMLHttpRequest": {
     "modified": "2019-03-24T00:11:01.706Z",
     "contributors": [
@@ -17152,10 +17144,6 @@
   "orphaned/Web/API/Window/onpaint": {
     "modified": "2019-03-23T22:08:47.903Z",
     "contributors": ["peshkov3"]
-  },
-  "orphaned/Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2020-04-09T14:17:18.919Z",
-    "contributors": ["Drrragonica", "b0rique", "kenrick95"]
   },
   "orphaned/Web/CSS/image-set()": {
     "modified": "2020-11-16T08:54:13.901Z",
