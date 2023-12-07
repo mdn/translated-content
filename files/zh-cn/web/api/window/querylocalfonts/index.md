@@ -101,7 +101,7 @@ async function computeOutlineFormat() {
           outlineFormat = "cff";
           break;
       }
-      console.log("Outline format:", outlineFormat);
+      console.log("矢量字体格式：", outlineFormat);
     }
   } catch (err) {
     console.error(err.name, err.message);
