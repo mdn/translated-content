@@ -17043,10 +17043,6 @@
       "FlowerDeLuce"
     ]
   },
-  "orphaned/Web/API/HTMLOrForeignElement/nonce": {
-    "modified": "2020-10-15T22:22:30.878Z",
-    "contributors": ["ellizii"]
-  },
   "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
     "modified": "2019-03-18T21:11:41.012Z",
     "contributors": ["DianaGalter", "Tanya_Agisheva"]
