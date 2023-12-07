@@ -11,7 +11,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_contr
 
 공이 계속해서 벽을 튕기며 이동하는 모습을 볼 수 있지만, 현재로서는 그것을 컨트롤 할 방법이 없습니다. 컨트롤 할 수 없으면 게임이 아니죠! paddle을 컨트롤 할 수 있는 몇가지 상호작용을 추가해 봅시다.
 
-**공을 치기 위한 paddle 정의**
+## 공을 치기 위한 paddle 정의
 
 먼저, 우리는 공을 치기 위한 paddle이 필요합니다. 이를 위해 몇가지 변수들을 정의합시다. 코드 상단에 다른 변수들과 함께 아래 변수들을 추가하세요:
 
@@ -33,7 +33,7 @@ function drawPaddle() {
 }
 ```
 
-**유저의 paddle 컨트롤**
+## 유저의 paddle 컨트롤
 
 paddle은 우리가 원하는 곳 어디든 그릴 수 있지만, 사용자의 컨트롤에 반응해야 합니다. — 키보드 컨트롤을 구현합시다. 다음 내용이 필요합니다.:
 
