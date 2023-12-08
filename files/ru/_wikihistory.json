@@ -16406,10 +16406,6 @@
     "modified": "2019-03-23T23:04:20.797Z",
     "contributors": ["sivashev", "Aleksej", "Tihoem"]
   },
-  "conflicting/Web/HTTP/Status/502": {
-    "modified": "2019-03-18T21:41:50.347Z",
-    "contributors": ["gadjetron"]
-  },
   "conflicting/Web/JavaScript": {
     "modified": "2020-03-12T19:40:51.750Z",
     "contributors": ["BychekRU", "IgorGilyazov"]
