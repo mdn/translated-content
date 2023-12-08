@@ -82,13 +82,13 @@ observer.observe(target);
 let callback = (entries, observer) => {
   entries.forEach((entry) => {
     // 每个条目描述一个目标元素观测点的交叉变化：
-    // entry.boundingClientRect
-    // entry.intersectionRatio
-    // entry.intersectionRect
-    // entry.isIntersecting
-    // entry.rootBounds
-    // entry.target
-    // entry.time
+    //   entry.boundingClientRect
+    //   entry.intersectionRatio
+    //   entry.intersectionRect
+    //   entry.isIntersecting
+    //   entry.rootBounds
+    //   entry.target
+    //   entry.time
   });
 };
 ```
