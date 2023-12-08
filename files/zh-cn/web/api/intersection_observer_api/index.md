@@ -55,14 +55,14 @@ let observer = new IntersectionObserver(callback, options);
 
 #### IntersectionObserver 选项
 
-传递到 {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 构造函数的 `options` 对象，可以控制在什么情况下调用观察者的回调。它有以下字段：
+传递到 {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 构造函数的 `options` 对象，可以控制在什么情况下调用观察器的回调。它有以下字段：
 
 - `root`
   - : 用作视口的元素，用于检查目标的可见性。必须是目标的祖先。如果未指定或为 `null`，则默认为浏览器视口。
 - `rootMargin`
   - : 根周围的边距。其值可以类似于 CSS {{cssxref("margin")}} 属性，例如 `"10px 20px 30px 40px"`（上、右、下、左）。这些值可以是百分比。在计算交叉点之前，这组值用于增大或缩小根元素边框的每一侧。默认值为全零。
 - `threshold`
-  - : 一个数字或一个数字数组，表示目标可见度达到多少百分比时，观察者的回调就应该执行。如果只想在能见度超过 50% 时检测，可以使用 0.5 的值。如果希望每次能见度超过 25% 时都执行回调，则需要指定数组 \[0,0.25,0.5,0.75,1]。默认值为 0（这意味着只要有一个像素可见，回调就会运行）。值为 1.0 意味着在每个像素都可见之前，阈值不会被认为已通过。
+  - : 一个数字或一个数字数组，表示目标可见度达到多少百分比时，观察器的回调就应该执行。如果只想在能见度超过 50% 时检测，可以使用 0.5 的值。如果希望每次能见度超过 25% 时都执行回调，则需要指定数组 \[0, 0.25, 0.5, 0.75, 1]。默认值为 0（这意味着只要有一个像素可见，回调就会运行）。值为 1.0 意味着在每个像素都可见之前，阈值不会被认为已通过。
 
 #### 定位要观察的元素
 
@@ -76,7 +76,7 @@ observer.observe(target);
 // 它将等待我们为观察器分配目标（即使目标当前不可见）
 ```
 
-每当目标满足该 `IntersectionObserver` 指定的 threshold 值，回调被调用。回调接收 {{domxref("IntersectionObserverEntry")}} 对象和观察器的列表：
+每当目标满足该 `IntersectionObserver` 指定的阈值（threshold），回调被调用。回调接收 {{domxref("IntersectionObserverEntry")}} 对象和观察器的列表：
 
 ```js
 let callback = (entries, observer) => {
@@ -121,15 +121,15 @@ let callback = (entries, observer) => {
 
 交叉观察器 API 使用**阈值**，而不是报告目标元素可见度的每一个微小变化。创建观察器时，可以提供一个或多个数值，代表目标元素可见度的百分比。然后，API 只报告超过这些阈值的可见性变化。
 
-例如，如果希望每次目标元素的可见度向后或向前越过每个 25% 的标记时都能得到通知，可以在创建观察者时指定数组 \[0,0.25,0.5,0.75,1] 作为阈值列表。
+例如，如果希望每次目标元素的可见度向后或向前越过每个 25% 的标记时都能得到通知，可以在创建观察器时指定数组 \[0, 0.25, 0.5, 0.75, 1] 作为阈值列表。
 
 调用回调时，系统会接收一个 `IntersectionObserverEntry` 对象列表，每个观察到的目标都会有一个对象，这些目标与根相交的程度发生了变化，使得暴露量在任一方向上都超过了某个阈值。
 
-通过查看条目的 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 属性，可以了解目标当前是否与根相交；如果其值为 `true`，则表示目标至少与根元素或文档部分相交。这样就可以确定该条目是代表元素从相交到不再相交的过渡，还是代表从不相交到相交的过渡。
+通过查看条目的 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 属性，可以了解目标*当前*是否与根相交；如果其值为 `true`，则表示目标至少与根元素或文档部分相交。这样就可以确定该条目是代表元素从相交到不再相交的过渡，还是代表从不相交到相交的过渡。
 
-请注意，可能不存在相交矩形，如果交集正好沿着两者之间的边界，或者 {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} 的面积为零。这种目标和根共享边界线的状态不足以被视为过渡到相交状态。
+请注意，可能存在零相交矩形，如果交集正好沿着两者之间的边界，或者 {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} 的面积为零。这种目标和根共享边界线的状态不足以被视为过渡到相交状态。
 
-为了让我们感受下阈值是如何工作的，尝试滚动以下的盒子，每一个带颜色盒子的四个边角都会展示自身在根元素中的可见程度百分比，所以在你滚动根元素的时候你将会看到四个边角的数值一直在发生变化。每一个盒子都有不同的阈值：
+要感受阈值是如何工作的，请尝试滚动下面的盒子，每一个带颜色盒子的四个边角都会展示自身在根元素中的可见程度百分比，所以在你滚动根元素的时候你将会看到四个边角的数值一直在发生变化。每一个盒子都有不同的阈值：
 
 - 第一个盒子为每个可见度百分点设置了一个阈值；也就是说，{{domxref("IntersectionObserver.thresholds")}} 数组为 `[0.00, 0.01, 0.02, /*...,*/ 0.99, 1.00]`。
 - 第二个盒子只有一个阈值，位于 50% 刻度处。
@@ -334,7 +334,7 @@ const intersectionCallback = (entries) => {
 ## 接口
 
 - {{domxref("IntersectionObserver")}}
-  - : 交叉观察器 API 的主要接口。它提供了创建和管理观察者的方法，观察者可以针对相同的交叉点配置观察任意数量的目标元素。每个观察者都可以异步观察一个或多个目标元素与共享的祖先元素或其顶层 {{domxref("Document")}} 的{{Glossary('viewport', '视口')}}之间的交集变化。祖先或视口被称为**根**。
+  - : 交叉观察器 API 的主要接口。它提供了创建和管理观察器的方法，观察器可以针对相同的交叉点配置观察任意数量的目标元素。每个观察器都可以异步观察一个或多个目标元素与共享的祖先元素或其顶层 {{domxref("Document")}} 的{{Glossary('viewport', '视口')}}之间的交集变化。祖先或视口被称为**根**。
 - {{domxref("IntersectionObserverEntry")}}
   - : 描述目标元素与其根容器在特定过渡时刻的交集。这种类型的对象只能通过两种方式获得：作为 `IntersectionObserver` 回调的输入，或通过调用 {{domxref("IntersectionObserver.takeRecords()")}} 获得。
 
@@ -392,7 +392,7 @@ const intersectionCallback = (entries) => {
 
 #### 初始设置
 
-首先，声明一些变量并安装观察器。
+首先，声明一些变量并设置观察器。
 
 ```js
 const numSteps = 20.0;
@@ -425,7 +425,7 @@ window.addEventListener(
 - `decreasingColor`
   - : 同样，这也是一个字符串，它定义了当可见度比率降低时我们将应用的颜色。
 
-我们调用 {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} 开始监听 {{domxref("Window/load_event", "load")}} 事件；页面加载完成后，我们使用 {{domxref("Document. querySelector", "querySelector()")}} 获取 ID 为 `"box"` 的元素引用，然后调用我们稍后将创建的 `createObserver()` 方法来处理交叉观察器的构建和安装。
+我们调用 {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} 开始监听 {{domxref("Window/load_event", "load")}} 事件；页面加载完成后，我们使用 {{domxref("Document.querySelector", "querySelector()")}} 获取 ID 为 `"box"` 的元素引用，然后调用我们稍后将创建的 `createObserver()` 方法来处理交叉观察器的构建和设置。
 
 #### 创建交叉观察器
 
@@ -446,7 +446,7 @@ function createObserver() {
 }
 ```
 
-首先要设置一个包含观察器设置的 `options` 对象。我们希望观察目标元素相对于文档视口的可见性变化，因此 `root` 为 `null`。我们不需要边距，因此边距偏移量 `rootMargin` 被指定为“0px”。这将导致观察者在不增加（或减少）空间的情况下观察目标元素边界与视口边界之间交点的变化。
+首先要设置一个包含观察器设置的 `options` 对象。我们希望观察目标元素相对于文档视口的可见性变化，因此 `root` 为 `null`。我们不需要边距，因此边距偏移量 `rootMargin` 被指定为“0px”。这将导致观察器在不增加（或减少）空间的情况下观察目标元素边界与视口边界之间交点的变化。
 
 可见度比率阈值列表 `threshold` 由函数 `buildThresholdList()` 构建。在本例中，阈值列表是通过编程构建的，因为阈值有很多，而且数量是可以调整的。
 
@@ -578,7 +578,7 @@ function handleIntersect(entries, observer) {
 }
 ```
 
-对于 `entries` 列表中的每个 {{domxref("IntersectionObserverEntry")}}，我们都会查看该条目中的 {{domxref("IntersectionObserverEntry.intersectionRadio", "intersectionRatio")}} 是否上升，如果是，我们就将目标的 {{cssxref("background-color")}} 设置为 `increasingColor` 中的字符串（记住，是 `"rgba(40, 40, 190, ratio)"`），并用条目的 `intersectionRatio` 替换“ratio”。结果是：不仅颜色发生了变化，目标元素的透明度也发生了变化；随着交集比率的降低，背景色的 alpha 值也会随之降低，从而使元素更加透明。
+对于 `entries` 列表中的每个 {{domxref("IntersectionObserverEntry")}}，我们都会查看该条目中的 {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} 是否上升，如果是，我们就将目标的 {{cssxref("background-color")}} 设置为 `increasingColor` 中的字符串（记住，是 `"rgba(40, 40, 190, ratio)"`），并用条目的 `intersectionRatio` 替换“ratio”。结果是：不仅颜色发生了变化，目标元素的透明度也发生了变化；随着交集比率的降低，背景色的 alpha 值也会随之降低，从而使元素更加透明。
 
 同样，如果 `intersectionRatio` 正在下降，我们就会使用字符串 `decreasingColor`，并在设置目标元素的 `background-color` 之前用 `intersectionRatio` 替换其中的“ratio”。
 
