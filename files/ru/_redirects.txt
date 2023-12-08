@@ -674,7 +674,6 @@
 /ru/docs/Web/Guide/HTML/Content_categories	/ru/docs/Web/HTML/Content_categories
 /ru/docs/Web/Guide/HTML/Drag_and_drop	/ru/docs/Web/API/HTML_Drag_and_Drop_API
 /ru/docs/Web/Guide/HTML/Drag_and_drop/Drag_operations	/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
-/ru/docs/Web/Guide/HTML/Editable_content	/ru/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /ru/docs/Web/Guide/HTML/Forms	/ru/docs/Learn/Forms
 /ru/docs/Web/Guide/HTML/Introduction	/ru/docs/Learn/HTML/Introduction_to_HTML
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
