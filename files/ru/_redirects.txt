@@ -499,7 +499,6 @@
 /ru/docs/Web/API/WebGL_API/Tutorial/Создание_3D_объектов_с_помощью_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /ru/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ru/docs/Web/API/WebRTC_API/Taking_still_photos	/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-/ru/docs/Web/API/WebRTC_API/adapter.js	/ru/docs/orphaned/Web/API/WebRTC_API/adapter.js
 /ru/docs/Web/API/WebRTC_API/протоколы	/ru/docs/Web/API/WebRTC_API/Protocols
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/DOMContentLoaded_event	/ru/docs/conflicting/Web/API/Document/DOMContentLoaded_event
