@@ -9,7 +9,7 @@ l10n:
 
 **`SharedArrayBuffer[@@species]`** 静态访问器属性返回用于构造 `SharedArrayBuffer` 方法返回值的构造函数。
 
-> **警告：** `@@species` 的存在允许任意代码的执行，这可能导致安全漏洞。它还使某些优化变得更加困难。引擎实现者正在[调查是否要移除此功能](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能，请避免依赖它。
+> **警告：** `@@species` 的存在允许任意代码的执行，这可能导致安全漏洞。它还使某些优化变得更加困难。引擎实现者正在[调查是否要移除此特性](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能，请避免依赖它。
 
 ## 语法
 
@@ -41,7 +41,7 @@ class SubArrayBuffer extends SharedArrayBuffer {}
 SubArrayBuffer[Symbol.species] === SharedArrayBuffer; // true
 ```
 
-当不改变已存在数组、而是返回新数组缓冲区实例的数组缓冲区方法（例如，[`slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)）被调用时，该数组的 `constructor[@@species]` 会被访问。返回的构造函数将被用于构造该数组缓冲区方法的返回值。
+在调用不会更改现有数组，而是返回一个新的数组缓冲实例的方法（例如，[`slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)）时，该数组的 `constructor[@@species]` 会被访问。返回的构造函数将被用于构造该数组缓冲区方法的返回值。
 
 ## 示例
 
