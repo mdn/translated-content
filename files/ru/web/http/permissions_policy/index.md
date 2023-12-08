@@ -40,8 +40,6 @@ Feature Policy provides two ways to specify policies to control features:
 
 The primary difference between the HTTP header and the `allow` attribute is that the allow attribute only controls features within an iframe. The header controls features in the response and any embedded content within the page.
 
-For more details see [Using Feature Policy](/ru/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
-
 ## Types of policy-controlled features
 
 Though Feature Policy provides control of multiple features using a consistent syntax, the behavior of policy controlled features varies and depends on several factors.
@@ -110,7 +108,6 @@ The features include:
 
 ## See also
 
-- [Using Feature Policy](/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes
 - [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)

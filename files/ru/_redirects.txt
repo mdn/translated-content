@@ -712,7 +712,6 @@
 /ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web_RU	/ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Полный_список_типов_MIME	/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /ru/docs/Web/HTTP/Feature_Policy	/ru/docs/Web/HTTP/Permissions_Policy
-/ru/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy	/ru/docs/orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy
 /ru/docs/Web/HTTP/Response_codes	/ru/docs/Web/HTTP/Status
 /ru/docs/Web/HTTP/Авторизация	/ru/docs/Web/HTTP/Authentication
 /ru/docs/Web/HTTP/Заголовки	/ru/docs/Web/HTTP/Headers
