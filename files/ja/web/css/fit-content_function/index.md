@@ -48,7 +48,7 @@ fit-content(40%)
 
 #### HTML
 
-```html
+```html-nolint
 <div id="container">
   <div>コンテンツの幅のアイテム。</div>
   <div>
