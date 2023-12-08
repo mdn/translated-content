@@ -17047,18 +17047,6 @@
     "modified": "2019-03-23T22:18:51.568Z",
     "contributors": ["sosnovskyas"]
   },
-  "orphaned/Web/API/NavigatorLanguage": {
-    "modified": "2019-03-23T22:54:36.204Z",
-    "contributors": ["AlexAlex"]
-  },
-  "orphaned/Web/API/NavigatorLanguage/language": {
-    "modified": "2020-05-02T05:07:32.288Z",
-    "contributors": ["leshkin", "AlexAlex"]
-  },
-  "orphaned/Web/API/NavigatorLanguage/languages": {
-    "modified": "2019-03-23T22:54:22.153Z",
-    "contributors": ["AlexAlex"]
-  },
   "orphaned/Web/API/NavigatorOnLine": {
     "modified": "2019-03-23T22:54:40.457Z",
     "contributors": ["AlexAlex"]
