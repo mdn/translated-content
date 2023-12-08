@@ -17047,10 +17047,6 @@
     "modified": "2019-03-23T22:18:51.568Z",
     "contributors": ["sosnovskyas"]
   },
-  "orphaned/Web/API/NavigatorPlugins": {
-    "modified": "2019-03-23T22:54:31.545Z",
-    "contributors": ["AlexAlex"]
-  },
   "orphaned/Web/API/Node/getUserData": {
     "modified": "2019-03-23T22:53:29.815Z",
     "contributors": ["AlexAlex"]
