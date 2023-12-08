@@ -35,8 +35,8 @@ _Не наследует свойства._
   - : Возвращает массив {{domxref("DOMString")}}, представляющий собой языки, известные пользователю, в порядке предпочтения.
 - {{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}
   - : Возвращает {{domxref("MimeTypeArray")}} листинг MIME типов, поддерживаемых браузером.
-- {{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}
-  - : Возвращает {{domxref("Boolean")}}, показывающий работает ли браузер в сети.
+- {{domxref("Navigator.onLine")}} {{readonlyInline}}
+  - : Возвращает булево значение, показывающее имеет ли браузер подключение к сети.
 - {{domxref("Navigator.oscpu")}}
   - : Возвращает строку, показывающую имеющуюся операционную систему.
 - {{domxref("Navigator.platform")}} {{readonlyInline}}{{experimental_inline}}
