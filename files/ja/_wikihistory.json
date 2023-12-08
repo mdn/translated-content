@@ -2717,6 +2717,10 @@
     "modified": "2020-12-12T07:45:27.662Z",
     "contributors": ["wlt", "mfuji09", "Uemmra3"]
   },
+  "Learn/Forms/User_input_methods": {
+    "modified": "2020-07-22T12:39:35.178Z",
+    "contributors": ["mfuji09", "silverskyvicto"]
+  },
   "Learn/Forms/Your_first_form": {
     "modified": "2020-12-02T12:12:26.573Z",
     "contributors": ["hamasaki", "mfuji09", "silverskyvicto"]
@@ -20315,14 +20319,6 @@
     "modified": "2019-04-16T23:59:54.980Z",
     "contributors": ["Uemmra3", "Wind1808"]
   },
-  "Web/Guide/Parsing_and_serializing_XML": {
-    "modified": "2020-09-14T07:46:26.734Z",
-    "contributors": ["Marsf", "mfuji09", "silverskyvicto", "kmaglione", "Shoot"]
-  },
-  "Web/Guide/User_input_methods": {
-    "modified": "2020-07-22T12:39:35.178Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "Web/HTML": {
     "modified": "2020-12-14T11:33:50.265Z",
     "contributors": [
@@ -29604,6 +29600,10 @@
   "Web/XML": {
     "modified": "2019-03-23T23:50:12.624Z",
     "contributors": ["ExE-Boss"]
+  },
+  "Web/XML/Parsing_and_serializing_XML": {
+    "modified": "2020-09-14T07:46:26.734Z",
+    "contributors": ["Marsf", "mfuji09", "silverskyvicto", "kmaglione", "Shoot"]
   },
   "Web/XML/XML_introduction": {
     "modified": "2019-05-01T21:52:56.542Z",

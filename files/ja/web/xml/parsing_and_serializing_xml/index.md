@@ -1,8 +1,7 @@
 ---
 title: XML のパースとシリアライズ
-slug: Web/Guide/Parsing_and_serializing_XML
-l10n:
-  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+slug: Web/XML/Parsing_and_serializing_XML
+original_slug: Web/Guide/Parsing_and_serializing_XML
 ---
 
 <section id="Quick_links">
