@@ -24,7 +24,7 @@ Date.parse(dateString)
 
 ### Возвращаемое значение
 
-Число, представляющее [timestamp](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) заданной даты. Если `dateString` не удается преобразовать в правильную дату, то возвращается {{jsxref("NaN")}}.
+Число, представляющее [временную метку](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) (англ. _timestamp_) заданной даты. Если `dateString` не удается преобразовать в правильную дату, то возвращается {{jsxref("NaN")}}.
 
 ## Описание
 
