@@ -27,8 +27,8 @@ _Не наследует свойства._
   - : Предоставляет {{domxref ("Connection")}} с информацией о сетевом подключении устройства.
 - {{domxref("NavigatorGeolocation.geolocation")}} {{readonlyInline}}
   - : Возвращает {{domxref("Geolocation")}} объект, позволяющий получить доступ к местоположению устройства.
-- {{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}{{experimental_inline}}
-  - : Возвращает {{domxref("Boolean")}} флаг, показывающий включён ли в браузере java или нет.
+- {{domxref("Navigator.javaEnabled()")}} {{Deprecated_Inline}}
+  - : Возвращает всегда `false`.
 - {{domxref("Navigator.language")}} {{readonlyInline}}
   - : Возвращает {{domxref ("DOMString")}}, представляющий предпочитаемый пользователем язык, как правило это язык пользовательского интерфейса браузера. Значение `null` возвращается, когда язык неизвестен.
 - {{domxref("Navigator.languages")}} {{readonlyInline}}
