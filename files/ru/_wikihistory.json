@@ -17051,10 +17051,6 @@
     "modified": "2019-03-23T22:54:36.204Z",
     "contributors": ["AlexAlex"]
   },
-  "orphaned/Web/API/NavigatorLanguage/language": {
-    "modified": "2020-05-02T05:07:32.288Z",
-    "contributors": ["leshkin", "AlexAlex"]
-  },
   "orphaned/Web/API/NavigatorLanguage/languages": {
     "modified": "2019-03-23T22:54:22.153Z",
     "contributors": ["AlexAlex"]
