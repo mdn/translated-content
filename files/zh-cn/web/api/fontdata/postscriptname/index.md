@@ -1,20 +1,17 @@
 ---
-title: "FontData: postscriptName property"
-short-title: postscriptName
+title: FontData：postscriptName 属性
 slug: Web/API/FontData/postscriptName
-page-type: web-api-instance-property
-status:
-  - experimental
-browser-compat: api.FontData.postscriptName
+l10n:
+  sourceCommit: 372bd292256cc90f4a99413bd4e3613e271e5275
 ---
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
-The **`postscriptName`** read-only property of the {{domxref("FontData")}} interface returns the PostScript name of the font face.
+{{domxref("FontData")}} 接口的 **`postscriptName`** 只读属性返回字体的 PostScript 名称。
 
-This is the name used to uniquely identify the PostScript font, and is generally an unbroken sequence of characters that includes the font's name and style.
+这是用于唯一标识字体的 PostScript 名称，通常是包含字体名称和样式的完整字符序列。
 
-Examples include:
+示例包括：
 
 - AppleSDGothicNeo-UltraLight
 - Arial-Black
@@ -22,13 +19,13 @@ Examples include:
 - Katari-MediumItalic
 - YuMin_36pKn-Extrabold
 
-## Value
+## 值
 
-A string.
+一个字符串。
 
-## Examples
+## 示例
 
-The following snippet will query for all available fonts, and log metadata. This could be used, for example, to populate a font-picker control.
+以下代码片段将查询所有可用的字体并打印元数据。例如，这可以用于填充字体选择器控件。
 
 ```js
 async function logFontData() {
@@ -46,15 +43,15 @@ async function logFontData() {
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+- [使用带有本地字体的高级排版](https://developer.chrome.com/articles/local-fonts/)
 - {{cssxref("@font-face")}}

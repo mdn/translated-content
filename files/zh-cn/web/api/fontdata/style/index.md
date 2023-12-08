@@ -1,20 +1,17 @@
 ---
-title: "FontData: style property"
-short-title: style
+title: FontData：style 属性
 slug: Web/API/FontData/style
-page-type: web-api-instance-property
-status:
-  - experimental
-browser-compat: api.FontData.style
+l10n:
+  sourceCommit: 372bd292256cc90f4a99413bd4e3613e271e5275
 ---
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
-The **`style`** read-only property of the {{domxref("FontData")}} interface returns the style of the font face.
+{{domxref("FontData")}} 接口的 **`style`** 只读属性返回字体的样式。
 
-This is the value used to select the style of the font you want to use, for example inside the {{cssxref("font-style")}} property.
+这是用于选择要使用的字体样式的值，例如在 {{cssxref("font-style")}} 属性内。
 
-Examples include:
+示例包括：
 
 - UltraLight
 - Regular
@@ -22,13 +19,13 @@ Examples include:
 - Medium Italic
 - Extrabold
 
-## Value
+## 值
 
-A string.
+一个字符串。
 
-## Examples
+## 示例
 
-The following snippet will query for all available fonts, and log metadata. This could be used, for example, to populate a font-picker control.
+以下代码片段将查询所有可用的字体并打印元数据。例如，这可以用于填充字体选择器控件。
 
 ```js
 async function logFontData() {
@@ -46,15 +43,15 @@ async function logFontData() {
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+- [使用带有本地字体的高级排版](https://developer.chrome.com/articles/local-fonts/)
 - {{cssxref("@font-face")}}

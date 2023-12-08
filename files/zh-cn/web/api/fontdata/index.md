@@ -1,39 +1,37 @@
 ---
 title: FontData
 slug: Web/API/FontData
-page-type: web-api-interface
-status:
-  - experimental
-browser-compat: api.FontData
+l10n:
+  sourceCommit: 372bd292256cc90f4a99413bd4e3613e271e5275
 ---
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
-The **`FontData`** interface of the {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}} represents a single local font face.
+{{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}} 的 **`FontData`** 接口表示单个本地字体。
 
-## Instance properties
+## 实例属性
 
 - {{domxref('FontData.family')}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the family of the font face.
+  - : 返回字体的字体族。
 - {{domxref('FontData.fullName')}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the full name of the font face.
+  - : 返回字体的全名。
 - {{domxref('FontData.postscriptName')}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the PostScript name of the font face.
+  - : 返回字体的 PostScript 名称。
 - {{domxref('FontData.style')}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the style of the font face.
+  - : 返回字体的样式。
 
-## Instance methods
+## 实例方法
 
 - {{domxref('FontData.blob()')}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("Blob")}} containing the raw bytes of the underlying font file.
+  - : 返回一个兑现包含底层字体文件的原始字节的 {{domxref("Blob")}} 的 {{jsxref("Promise")}}。
 
-## Examples
+## 示例
 
-For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/).
+有关实时演示，请参阅[字体选择演示](https://local-font-access.glitch.me/demo/)。
 
-### Font enumeration
+### 字体枚举
 
-The following snippet will query for all available fonts, and log metadata. This could be used, for example, to populate a font-picker control.
+以下代码片段将查询所有可用的字体并打印元数据。例如，这可以用于填充字体选择器控件。
 
 ```js
 async function logFontData() {
@@ -51,9 +49,9 @@ async function logFontData() {
 }
 ```
 
-### Accessing low-level data
+### 访问底层数据
 
-The {{domxref("FontData.blob", "blob()")}} method provides access to low-level [SFNT](https://en.wikipedia.org/wiki/SFNT) data — this is a font file format that can contain other font formats, such as PostScript, TrueType, OpenType, or Web Open Font Format (WOFF).
+{{domxref("FontData.blob", "blob()")}} 方法提供对底层 [SFNT](https://zh.wikipedia.org/wiki/SFNT) 数据的访问——这是一种可以包含其他字体格式的字体文件格式，例如 PostScript、TrueType、OpenType 或 Web 开放字体格式（WOFF）。
 
 ```js
 async function computeOutlineFormat() {
@@ -62,12 +60,10 @@ async function computeOutlineFormat() {
       postscriptNames: ["ComicSansMS"],
     });
     for (const fontData of availableFonts) {
-      // `blob()` returns a Blob containing valid and complete
-      // SFNT-wrapped font data.
+      // `blob()` 方法返回一个包含有效且完整的 SFNT 包装字体数据的 Blob。
       const sfnt = await fontData.blob();
-      // Slice out only the bytes we need: the first 4 bytes are the SFNT
-      // version info.
-      // Spec: https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
+      // 仅裁剪出我们需要的字节部分：前 4 个字节是 SFNT 版本信息。
+      // 规范：https://learn.microsoft.com/zh-cn/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
       let outlineFormat = "UNKNOWN";
@@ -81,7 +77,7 @@ async function computeOutlineFormat() {
           outlineFormat = "cff";
           break;
       }
-      console.log("Outline format:", outlineFormat);
+      console.log("矢量字体格式：", outlineFormat);
     }
   } catch (err) {
     console.error(err.name, err.message);
@@ -89,15 +85,15 @@ async function computeOutlineFormat() {
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+- [使用带有本地字体的高级排版](https://developer.chrome.com/articles/local-fonts/)
 - {{cssxref("@font-face")}}

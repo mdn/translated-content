@@ -1,34 +1,31 @@
 ---
-title: "FontData: blob() method"
-short-title: blob()
+title: FontData：blob() 方法
 slug: Web/API/FontData/blob
-page-type: web-api-instance-method
-status:
-  - experimental
-browser-compat: api.FontData.blob
+l10n:
+  sourceCommit: 372bd292256cc90f4a99413bd4e3613e271e5275
 ---
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
-The **`blob()`** method of the {{domxref("FontData")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("Blob")}} containing the raw bytes of the underlying font file.
+{{domxref("FontData")}} 接口的 **`blob()`** 方法返回一个兑现包含底层字体文件的原始字节的 {{domxref("Blob")}} 的 {{jsxref("Promise")}}。
 
-## Syntax
+## 语法
 
 ```js-nolint
 blob()
 ```
 
-### Parameters
+### 参数
 
-None.
+无。
 
-### Return value
+### 返回值
 
-A {{jsxref("Promise")}} that fulfills with a {{domxref("Blob")}} containing the raw bytes of the underlying font file.
+一个兑现包含底层字体文件的原始字节的 {{domxref("Blob")}} 的 {{jsxref("Promise")}}。
 
-## Examples
+## 示例
 
-The `blob()` method provides access to low-level [SFNT](https://en.wikipedia.org/wiki/SFNT) data — this is a font file format that can contain other font formats, such as PostScript, TrueType, OpenType, or Web Open Font Format (WOFF).
+{{domxref("FontData.blob", "blob()")}} 方法提供对底层 [SFNT](https://zh.wikipedia.org/wiki/SFNT) 数据的访问——这是一种可以包含其他字体格式的字体文件格式，例如 PostScript、TrueType、OpenType 或 Web 开放字体格式（WOFF）。
 
 ```js
 async function computeOutlineFormat() {
@@ -37,12 +34,10 @@ async function computeOutlineFormat() {
       postscriptNames: ["ComicSansMS"],
     });
     for (const fontData of availableFonts) {
-      // `blob()` returns a Blob containing valid and complete
-      // SFNT-wrapped font data.
+      // `blob()` 方法返回一个包含有效且完整的 SFNT 包装字体数据的 Blob。
       const sfnt = await fontData.blob();
-      // Slice out only the bytes we need: the first 4 bytes are the SFNT
-      // version info.
-      // Spec: https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
+      // 仅裁剪出我们需要的字节部分：前 4 个字节是 SFNT 版本信息。
+      // 规范：https://learn.microsoft.com/zh-cn/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
       let outlineFormat = "UNKNOWN";
@@ -56,7 +51,7 @@ async function computeOutlineFormat() {
           outlineFormat = "cff";
           break;
       }
-      console.log("Outline format:", outlineFormat);
+      console.log("矢量字体格式：", outlineFormat);
     }
   } catch (err) {
     console.error(err.name, err.message);
@@ -64,15 +59,15 @@ async function computeOutlineFormat() {
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+- [使用带有本地字体的高级排版](https://developer.chrome.com/articles/local-fonts/)
 - {{cssxref("@font-face")}}
