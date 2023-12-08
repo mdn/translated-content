@@ -60,7 +60,7 @@ _min_ および _max_ の 2 つの引数を取る関数です。
   - : グリッドトラックを占めるグリッドアイテムの min-content の貢献度の最大値を表します。
 - `auto`
   - : `min` として使用した場合、グリッドトラックを占めるグリッドアイテムの最大最小サイズ（{{cssxref("min-width")}}/{{cssxref("min-height")}} で指定）を表します。
-  `max` として使用した場合は、 `max-content` と同じです。ただし、 `max-content` とは異なり、 `normal` や `stretch` のように {{cssxref("align-content")}} や {{cssxref("justify-content")}} プロパティ値によるトラックの拡張が可能です。
+    `max` として使用した場合は、 `max-content` と同じです。ただし、 `max-content` とは異なり、 `normal` や `stretch` のように {{cssxref("align-content")}} や {{cssxref("justify-content")}} プロパティ値によるトラックの拡張が可能です。
 
 ### 形式文法
 
