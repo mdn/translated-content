@@ -1,15 +1,17 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
+l10n:
+  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
 {{CSSRef}}
 
-**`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、指定された寸法を `min(max-content, max(min-content, 引数))` の式に従って有効な範囲の寸法に収めます。
+**`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、指定された寸法を `min(最小サイズ, max(最小サイズ, 引数))` の式に従って有効な範囲の寸法に収めます。
 
 {{EmbedInteractiveExample("pages/css/function-fit-content.html")}}
 
-この関数は [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)のプロパティにおいて、トラックの寸法を `max-content` で定義された最大寸法と `auto` で定義された最小寸法との間で、 `auto` と似た方法 (すなわち [`minmax(auto, max-content)`](</ja/docs/Web/CSS/minmax()>)) で計算しますが、 `auto` の最小値よりも大きい場合は*引数*がトラックの寸法になるという点が異なります。
+この関数は [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のプロパティにおいて、トラックの寸法を `max-content` で定義された最大寸法と `auto` で定義された最小寸法との間で、 `auto` と似た方法（すなわち [`minmax(auto, max-content)`](/ja/docs/Web/CSS/minmax)）で計算しますが、 `auto` の最小値よりも大きい場合は*引数*がトラックの寸法になるという点が異なります。
 
 `max-content` および `auto` キーワードについての詳細は、 {{cssxref("grid-template-columns")}} ページを参照してください。
 
@@ -33,7 +35,7 @@ fit-content(40%)
 ### 値
 
 - {{cssxref("&lt;length&gt;")}}
-  - : 絶対的な長さ。
+  - : 絶対的な長さです。
 - {{cssxref("&lt;percentage&gt;")}}
 
   - : 指定された軸で有効な空間に対する相対的なパーセント値です。
@@ -42,18 +44,17 @@ fit-content(40%)
 
 ## 例
 
-<h3 id="Sizing_grid_columns_with_fit-content">グリッドカラムの大きさを fit-content で指定</h3>
+### グリッドカラムの大きさを fit-content で指定
 
 #### HTML
 
 ```html
 <div id="container">
-  Item as wide as the content.
+  <div>コンテンツの幅のアイテム。</div>
   <div>
-    Item with more text in it. Because the contents of it are wider than the
-    maximum width, it is clamped at 300 pixels.
+    テキストが多いアイテムです。コンテンツが最大幅より広いため、 300 ピクセルで固定されています。
   </div>
-  Flexible item
+  <div>柔軟なアイテム</div>
 </div>
 ```
 
@@ -79,19 +80,13 @@ fit-content(40%)
 
 #### 結果
 
-{{EmbedLiveSample("Sizing_grid_columns_with_fit-content", "100%", 200)}}
+{{EmbedLiveSample("グリッドカラムの大きさを_fit-content_で指定", "100%", 200)}}
 
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
-
-### width (および他の大きさのプロパティ) での対応
-
-{{Compat}}
-
-### グリッドレイアウトでの対応
 
 {{Compat}}
 
