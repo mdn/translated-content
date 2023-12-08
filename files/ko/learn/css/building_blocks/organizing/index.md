@@ -264,7 +264,7 @@ OOCSS 접근법을 사용하지 않는다면, 이 패턴이 사용되는 다양�
 }
 ```
 
-In OOCSS, you would create one pattern called `media` that would have all of the common CSS for both patterns — a base class for things that are generally the shape of the media object. Then we'd add an additional class to deal with those tiny differences, thus extending that styling in specific ways.
+OOCSS에서는 `media`라는 패턴을 만들어 두 패턴에 공통적인 모든 CSS를 가지게 할 것입니다. 즉, 미디어 객체의 일반적인 형태에 대한 기본 클래스를 만드는 것입니다. 그런 다음에는 그 작은 차이점을 위해 추가적인 클래스를 추가하여 특정한 방식으로 스타일을 확장하게 됩니다.
 
 ```css
 .media {
@@ -285,7 +285,7 @@ In OOCSS, you would create one pattern called `media` that would have all of the
 }
 ```
 
-In your HTML, the comment would need both the `media` and `comment` classes applied:
+아래 HTML에서 `media`와 `comment` 클래스 모두에 적용됩니다.
 
 ```html
 <div class="media comment">
@@ -294,7 +294,7 @@ In your HTML, the comment would need both the `media` and `comment` classes appl
 </div>
 ```
 
-The list-item would have `media` and `list-item` applied:
+list-item에는 `media`와 `list-item`이 적용됩니다.
 
 ```html
 <ul>
@@ -305,11 +305,11 @@ The list-item would have `media` and `list-item` applied:
 </ul>
 ```
 
-The work that Nicole Sullivan did in describing this approach and promoting it means that even people who are not strictly following an OOCSS approach today will generally be reusing CSS in this way — it has entered our understanding as a good way to approach things in general.
+Nicole Sullivan이 이러한 접근법을 설명하고 홍보하는 데 있어 한 일은, 오늘날 엄격하게 OOCSS 접근법을 따르지 않는 사람들조차도 일반적으로 이런 방식으로 CSS를 재사용하게 만들었습니다. 이는 일반적으로 사물에 접근하는 좋은 방법으로 우리의 이해에 들어왔습니다.
 
 #### BEM
 
-BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity such as a button, menu, or logo. An element is something like a list item or a title that is tied to the block it is in. A modifier is a flag on a block or element that changes the styling or behavior. You will be able to recognize code that uses BEM due to the extensive use of dashes and underscores in the CSS classes. For example, look at the classes applied to this HTML from the page about [BEM Naming conventions](http://getbem.com/naming/):
+BEM은 Block Element Modifier를 의미합니다. BEM에서 블록은 버튼, 메뉴, 로고와 같은 독립적인 개체를 의미합니다. 수정자는 스타일이나 동작을 변경하는 블록이나 요소에 대한 플래그입니다. CSS 클래스에서 대시와 언더스코어의 광범위한 사용 때문에 BEM을 사용하는 코드를 인식할 수 있습니다. 예를 들어, [BEM 명명 규칙](http://getbem.com/naming/)에 대한 페이지에서 이 HTML에 적용된 클래스를 확인해보세요.
 
 ```html
 <form class="form form--theme-xmas form--simple">
@@ -323,11 +323,11 @@ BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity su
 </form>
 ```
 
-The additional classes are similar to those used in the OOCSS example; however, they use the strict naming conventions of BEM.
+추가적인 클래스들은 OOCSS 예제에서 사용한 것과 유사하지만, BEM의 엄격한 명명 규칙을 사용합니다.
 
-BEM is widely used in larger web projects and many people write their CSS in this way. It is likely that you will come across examples, even in tutorials, that use BEM syntax, without mentioning why the CSS is structured in such a way.
+BEM은 대규모 웹 프로젝트에서 널리 사용되며, 많은 사람들이 이런 방식으로 CSS를 작성합니다. 왜 CSS가 이런 방식으로 구조화되었는지 언급하지 않고 BEM 문법을 사용하는 예제를, 심지어 안내서에서도 마주칠 가능성이 높습니다.
 
-Read more about this system [BEM 101](https://css-tricks.com/bem-101/) on CSS Tricks.
+CSS Tricks에서 [BEM 101](https://css-tricks.com/bem-101/) 이 시스템에 대해 더 자세히 알아보세요.
 
 #### Other common systems
 
