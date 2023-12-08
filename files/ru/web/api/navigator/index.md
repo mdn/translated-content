@@ -29,9 +29,9 @@ _Не наследует свойства._
   - : Возвращает {{domxref("Geolocation")}} объект, позволяющий получить доступ к местоположению устройства.
 - {{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}{{experimental_inline}}
   - : Возвращает {{domxref("Boolean")}} флаг, показывающий включён ли в браузере java или нет.
-- {{domxref("NavigatorLanguage.language")}} {{readonlyInline}}
+- {{domxref("Navigator.language")}} {{readonlyInline}}
   - : Возвращает {{domxref ("DOMString")}}, представляющий предпочитаемый пользователем язык, как правило это язык пользовательского интерфейса браузера. Значение `null` возвращается, когда язык неизвестен.
-- {{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}
+- {{domxref("Navigator.languages")}} {{readonlyInline}}
   - : Возвращает массив {{domxref("DOMString")}}, представляющий собой языки, известные пользователю, в порядке предпочтения.
 - {{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}
   - : Возвращает {{domxref("MimeTypeArray")}} листинг MIME типов, поддерживаемых браузером.
