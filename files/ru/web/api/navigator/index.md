@@ -33,7 +33,7 @@ _Не наследует свойства._
   - : Возвращает {{domxref ("DOMString")}}, представляющий предпочитаемый пользователем язык, как правило это язык пользовательского интерфейса браузера. Значение `null` возвращается, когда язык неизвестен.
 - {{domxref("Navigator.languages")}} {{readonlyInline}}
   - : Возвращает массив {{domxref("DOMString")}}, представляющий собой языки, известные пользователю, в порядке предпочтения.
-- {{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}
+- {{domxref("Navigator.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}
   - : Возвращает {{domxref("MimeTypeArray")}} листинг MIME типов, поддерживаемых браузером.
 - {{domxref("Navigator.onLine")}} {{readonlyInline}}
   - : Возвращает булево значение, показывающее имеет ли браузер подключение к сети.
@@ -41,7 +41,7 @@ _Не наследует свойства._
   - : Возвращает строку, показывающую имеющуюся операционную систему.
 - {{domxref("Navigator.platform")}} {{readonlyInline}}{{experimental_inline}}
   - : Возвращает строку, показывающую платформу браузера. Не полагайтесь на эту функцию, чтобы получить нужное значение.
-- {{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}
+- {{domxref("Navigator.plugins")}} {{readonlyInline}}{{experimental_inline}}
   - : Возвращает {{domxref("PluginArray")}} листинг плагинов, установленных в браузере.
 - {{domxref("Navigator.product")}} {{readonlyInline}} {{experimental_inline}}
   - : Всегда возвращает `'Gecko'`, в любом браузере. Это свойство сохраняется только для целей совместимости.

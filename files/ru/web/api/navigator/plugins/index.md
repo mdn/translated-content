@@ -1,9 +1,9 @@
 ---
-title: NavigatorPlugins.plugins
-slug: orphaned/Web/API/NavigatorPlugins/plugins
+title: "Navigator: свойство plugins"
+slug: Web/API/Navigator/plugins
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 Возвращает объект {{domxref("PluginArray")}}, список плагинов установленных в приложении.
 
@@ -21,40 +21,11 @@ var plugins = navigator.plugins;
 
 ## Примеры
 
-Следующий пример функции возвращает версию Flash.
-
-```
-function getFlashVersion() {
-  var flash = navigator.plugins['Shockwave Flash'];
-  if (flash === undefined) {
-    // flash is not present
-    return undefined;
-  }
-  return flash.version;
-}
-```
-
-Следующий пример выводит информацию об установленном(ых) плагине (ах) для документа высокого уровня.
+Этот код показывает, как можно проверить возможность отображения PDF-файлов:
 
 ```js
-var L = navigator.plugins.length;
-
-document.write(
-  L.toString() + " Plugin(s)<br>" +
-  "Name | Filename | description<br>"
-);
-
-for(var i = 0; i < L; i++) {
-  document.write(
-    navigator.plugins[i].name +
-    " | " +
-    navigator.plugins[i].filename +
-    " | " +
-    navigator.plugins[i].description +
-    " | " +
-    navigator.plugins[i].version +
-    "<br>"
-  );
+if ("PDF Viewer" in navigator.plugins) {
+  // браузер поддерживает просмотр PDF-файлов
 }
 ```
 
@@ -62,6 +33,10 @@ for(var i = 0; i < L; i++) {
 
 {{domxref("Plugin")}} объект, предоставляет небольшой интерфейс для получения информации о различных плагинах, установленных в вашем браузере. Список плагинов также доступен если ввести `about:plugins` в адресную строку браузера.
 
-## Спецификация
+## Спецификации
 
-_Не определено ни к какой спецификации._
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
