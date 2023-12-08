@@ -1,11 +1,9 @@
 ---
-title: NavigatorPlugins.mimeTypes
-slug: orphaned/Web/API/NavigatorPlugins/mimeTypes
+title: "Navigator: свойство mimeTypes"
+slug: Web/API/Navigator/mimeTypes
 ---
 
-{{ ApiRef("HTML DOM") }}
-
-## Резюме
+{{ ApiRef("HTML DOM") }}{{deprecated_header}}
 
 Возвращает объект {{domxref("MimeTypeArray")}}, который содержит список объектов {{domxref("MimeType")}}, представляющий собой MIME-типы, известные браузеру.
 
@@ -21,11 +19,11 @@ mimeTypes = navigator.mimeTypes;
 
 ```js
 function isJavaPresent() {
-  return 'application/x-java-applet' in navigator.mimeTypes;
+  return "application/x-java-applet" in navigator.mimeTypes;
 }
 
 function getJavaPluginDescription() {
-  var mimetype = navigator.mimeTypes['application/x-java-applet'];
+  var mimetype = navigator.mimeTypes["application/x-java-applet"];
   if (mimetype === undefined) {
     // no Java plugin present
     return undefined;
@@ -34,6 +32,10 @@ function getJavaPluginDescription() {
 }
 ```
 
-## Спецификация
+## Спецификации
 
-_Не является частью какой-либо спецификации._
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
