@@ -1,52 +1,52 @@
 ---
 title: Object.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
-page-type: javascript-static-method
-browser-compat: javascript.builtins.Object.groupBy
+l10n:
+  sourceCommit: f15b8d5828c480af144a9b8f88b2724e2997f571
 ---
 
 {{JSRef}}
 
-> **Note:** In some versions of some browsers, this method was implemented as the method `Array.prototype.group()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
+> **メモ:** 一部のブラウザーのあるバージョンでは、このメソッドは `Array.prototype.group()` というメソッドとして実装されていました。ウェブの互換性の問題により、現在は静的メソッドとして実装されています。詳細は[ブラウザーの互換性](#ブラウザーの互換性)を確認してください。
 
-The **`Object.groupBy()`** static method groups the elements of a given iterable according to the string values returned by a provided callback function. The returned object has separate properties for each group, containing arrays with the elements in the group.
+**`Object.groupBy()`** 静的メソッドは、指定されたコールバック関数によって返された文字列値に従って、指定された反復可能な要素をグループ化します。返されるオブジェクトには、グループごとに個別のプロパティがあり、グループ内の要素を含む配列が格納されます。
 
-This method should be used when group names can be represented by strings. If you need to group elements using a key that is some arbitrary value, use {{jsxref("Map.groupBy()")}} instead.
+このメソッドは、グループ名が文字列で表現できる場合に使用します。任意の値をキーとして要素をグループ化する必要がある場合は、代わりに {{jsxref("Map.groupBy()")}} を使用してください。
 
 <!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
 
-## Syntax
+## 構文
 
 ```js-nolint
 Object.groupBy(items, callbackFn)
 ```
 
-### Parameters
+### 引数
 
 - `items`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) whose elements will be grouped.
+  - : 要素がグループ化される[反復可能な要素](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)（{{jsxref("Array")}} など）。
 - `callbackFn`
-  - : A function to execute for each element in the iterable. It should return a value that can get coerced into a property key (string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) indicating the group of the current element. The function is called with the following arguments:
+  - : 反復可能な各要素に対して実行される関数。これは、現在の要素のグループを示すプロパティのキー（文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)）に変換できる値を返す必要があります。この関数は以下の引数で呼び出されます。
     - `element`
-      - : The current element being processed.
+      - : 現在処理中の要素。
     - `index`
-      - : The index of the current element being processed.
+      - : 現在処理中の要素のインデックス。
 
-### Return value
+### 返値
 
-A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) with properties for all groups, each assigned to an array containing the elements of the associated group.
+すべてのグループのプロパティを持つ [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) で、それぞれに関連するグループの要素を含む配列が割り当てられたものです。
 
-## Description
+## 解説
 
-`Object.groupBy()` calls a provided `callbackFn` function once for each element in an iterable. The callback function should return a string or symbol (values that are neither type are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)) indicating the group of the associated element. The values returned by `callbackFn` are used as keys for the object returned by `Map.groupBy()`. Each key has an associated array containing all the elements for which the callback returned the same value.
+`Object.groupBy()` は、指定された `callbackFn` 関数を反復可能な要素ごとに 1 回呼び出します。コールバック関数は、関連付けられた要素のグループを示す文字列またはシンボル（どちらの型でもない値は[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)されます）を返す必要があります。`callbackFn` が返す値は、`Map.groupBy()` が返すオブジェクトのキーとして使用されます。各キーには、コールバックが同じ値を返したすべての要素を含む連想配列があります。
 
-The elements in the returned object and the original iterable are the same (not {{Glossary("deep copy", "deep copies")}}). Changing the internal structure of the elements will be reflected in both the original iterable and the returned object.
+返されたオブジェクトの要素と元の反復可能な要素は同じです（{{Glossary("deep copy", "ディープコピー")}}ではありません）。要素の内部構造を変更すると、反復可能な要素と返されたオブジェクトの両方に反映されます。
 
-## Examples
+## 例
 
-### Using Object.groupBy()
+### Object.groupBy() の使用
 
-First we define an array containing objects representing an inventory of different foodstuffs. Each food has a `type` and a `quantity`.
+最初に、さまざまな食品の在庫を表すオブジェクトを含む配列を定義します。 それぞれの食品は `type` （種類）と `quantity` （量）を保有しています。
 
 ```js
 const inventory = [
@@ -58,12 +58,12 @@ const inventory = [
 ];
 ```
 
-The code below groups the elements by the value of their `type` property.
+以下のコードでは、`type` プロパティの値によって要素をグループ化します。
 
 ```js
 const result = Object.groupBy(inventory, ({ type }) => type);
 
-/* Result is:
+/* 結果:
 {
   vegetables: [
     { name: 'asparagus', type: 'vegetables', quantity: 5 },
@@ -80,10 +80,9 @@ const result = Object.groupBy(inventory, ({ type }) => type);
 */
 ```
 
-The arrow function just returns the `type` of each array element each time it is called. Note that the function argument `{ type }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter). This unpacks the `type` property of an object passed as a parameter, and assigns it to a variable named `type` in the body of the function.
-This is a very succinct way to access the relevant values of elements within a function.
+このアロー関数は、呼び出されるたびに配列のそれぞれの要素の 型 を返すだけです。 関数の引数 { type } は、[関数の引数に対するオブジェクトの分割構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。 これは、引数として渡されたオブジェクトの `type` プロパティを展開し、関数本体の `type` という名前の変数に代入します。 これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
 
-We can also create groups inferred from values in one or more properties of the elements. Below is a very similar example that puts the items into `ok` or `restock` groups based on the value of the `quantity` field.
+また、要素の 1 つまたは複数のプロパティの値から推測されるグループを作成することもできます。 以下は、`quantity` フィールドの値に基づいて、項目を `ok` または `restock` グループに入れる、とても似たような例です。
 
 ```js
 function myCallback({ quantity }) {
@@ -92,7 +91,7 @@ function myCallback({ quantity }) {
 
 const result2 = Object.groupBy(inventory, myCallback);
 
-/* Result is:
+/* 結果:
 {
   restock: [
     { name: "asparagus", type: "vegetables", quantity: 5 },
@@ -107,18 +106,18 @@ const result2 = Object.groupBy(inventory, myCallback);
 */
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Polyfill of `Object.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- [`Object.groupBy` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-grouping)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Object.fromEntries()")}}
 - {{jsxref("Map.groupBy()")}}
