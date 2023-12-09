@@ -373,7 +373,6 @@ $: {
      todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }];
      newTodoName = "";
    }
-
 ## 通过状态筛选待办事项
 
 在本文的最后，让我们实现通过状态筛选待办事项的功能。我们将创建一个变量来保存当前的筛选器，并且编写一个辅助函数来返回经过筛选的待办事项。
