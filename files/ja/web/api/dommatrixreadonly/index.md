@@ -14,7 +14,7 @@ l10n:
 ## コンストラクター
 
 - {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}}
-  - : Creates a new `DOMMatrixReadOnly` object.
+  - : 新しい `DOMMatrixReadOnly` オブジェクトを作成します。
 
 ## インスタンスプロパティ
 
