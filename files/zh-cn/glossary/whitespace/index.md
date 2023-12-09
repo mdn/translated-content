@@ -17,7 +17,7 @@ l10n:
 
 ## 在 JavaScript 中
 
-[ECMAScript 语言规范](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)将这几个 Unicode 码点定义为“空白字符”：U+0009 CHARCHTER TABULATION（\<TAB>）、U+000B LINE TABULATION（\<VT>）、U+000C FORM FEED（\<FF>）、U+0020 SPACE（\<SP>）、U+00A0 NO-BREAK SPACE（\<NBSP>）、U+FEFF ZERO WIDTH NO-BREAK SPACE（\<ZWNBSP>），以及任何其他 Unicode“Space_Separator”码点（\<USP>）。
+[ECMAScript 语言规范](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)将这几个 Unicode 码点定义为“空白字符”：U+0009 CHARCHTER TABULATION（\<TAB>）、U+000B LINE TABULATION（\<VT>）、U+000C FORM FEED（\<FF>）、U+0020 SPACE（\<SP>）、U+00A0 NO-BREAK SPACE（\<NBSP>）、U+FEFF ZERO WIDTH NO-BREAK SPACE（\<ZWNBSP>），以及任何其他 Unicode“Space_Separator”码位（\<USP>）。
 
 ## 参见
 
