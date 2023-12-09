@@ -3,7 +3,7 @@ title: Введение в асинхронный JavaScript
 slug: Learn/JavaScript/Asynchronous/Introducing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
 В этой статье мы кратко остановимся на проблемах, связанных с синхронным Javascript, а также ознакомимся с несколькими асинхронными методами, демонстрирующими как они могут помочь нам подобные проблемы решить.
 
@@ -38,7 +38,7 @@ btn.addEventListener("click", () => {
    3. Затем добавляем в абзац текст.
    4. В конце добавляем созданный абзац в тело документа.
 
-Пока выполняется каждая операция, ничего больше не может произойти — обработка (отображение) документа приостановлена. Так происходит, как было сказано [в предыдущей статье](/ru/docs/Learn/JavaScript/Asynchronous/Introducing), потому что [JavaScript является однопоточным](/ru/docs/Learn/JavaScript/Asynchronous/Concepts#JavaScript_%D0%BE%D0%B4%D0%BD%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B9). В каждый момент времени может выполняться только одна команда, обрабатываемая в единственном — главном потоке. Все остальные действия блокируются до окончания выполнения текущей команды.
+Пока выполняется каждая операция, ничего больше не может произойти — обработка (отображение) документа приостановлена. Так происходит, потому что JavaScript является однопоточным. В каждый момент времени может выполняться только одна команда, обрабатываемая в единственном — главном потоке. Все остальные действия блокируются до окончания выполнения текущей команды.
 
 Так и в примере выше: после нажатия кнопки абзац не сможет появиться пока не будет нажата кнопка OK в окне сообщения. Попробуйте сами:
 
@@ -256,4 +256,4 @@ TypeError: image is undefined; can't access its "src" property
 
 Если мы выполняем операцию, которая требует времени, например, запрос к базе данных и использование полученных результатов для заполнения шаблонов, лучше вытолкнуть это из основного потока и выполнить задачу асинхронно. Со временем вы узнаете, когда имеет смысл выбирать асинхронную технику вместо синхронной.
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
