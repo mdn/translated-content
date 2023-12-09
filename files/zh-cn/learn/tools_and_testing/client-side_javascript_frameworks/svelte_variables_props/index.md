@@ -123,7 +123,6 @@ HTML 没有表达逻辑的方式（像是条件和循环）。但 Svelte 做到�
 2. 回到应用程序，你会看到这样的画面：
 
    ![使用 each 块创建非常简单的待办事项输出](01-each-block.png)
-   
 3. 现在我们已经看到这是有效的，接下来让我们使用 `{#each}` 指令的每个循环生成一个完整的待办事项并在其中嵌入来自 `todos` 数组中的信息：`id`、`name` 和 `completed`。将现有的 `<ul>` 区块替换为以下内容：
 
    ```svelte
@@ -221,7 +220,7 @@ HTML 没有表达逻辑的方式（像是条件和循环）。但 Svelte 做到�
    }
    ```
 
-3. 我们将通过_Delete_按钮来调用它。更新 `click` 事件，如下：
+3. 我们将通过*Delete*按钮来调用它。更新 `click` 事件，如下：
 
    ```svelte
    <button type="button" class="btn btn__danger"
@@ -235,7 +234,7 @@ HTML 没有表达逻辑的方式（像是条件和循环）。但 Svelte 做到�
 
    在这种情况下，你必须指定 `on:click={() => removeTodo(todo)}` 作为处理器。如果 `removeTodo()` 没有接收参数，你可以使用 `on:event={removeTodo}`，但不能使用 `on:event={removeTodo()}`。这不是 Svelte 中的特殊语法——在这里我们只是使用常规的 JavaScript [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
-这是不错的进展——现在我们可以删除任务了。当待办事项的_Delete_按钮被按下时，相关的待办事项将从 `todos` 数组中移除，并更新用户界面以不再显示它。此外，我们现在可以勾选复选框，相关待办事项的已完成状态将在 `todos` 数组中被更新。
+这是不错的进展——现在我们可以删除任务了。当待办事项的*Delete*按钮被按下时，相关的待办事项将从 `todos` 数组中移除，并更新用户界面以不再显示它。此外，我们现在可以勾选复选框，相关待办事项的已完成状态将在 `todos` 数组中被更新。
 
 然而，“x out of y items completed”标头并未被更新。继续阅读以了解为什么会出现这种情况以及我们如何解决它。
 
@@ -308,7 +307,7 @@ Svelte 编译器在幕后会解析和分析我们的代码以生成依赖树，�
    $: console.log("newTodoName: ", newTodoName);
    ```
 
-   > **备注：** 你可能已经注意到，响应式语句不仅限于变量声明。你可以在 `$:` 符号后面放上_任何_ JavaScript 语句。
+   > **备注：** 你可能已经注意到，响应式语句不仅限于变量声明。你可以在 `$:` 符号后面放上*任何* JavaScript 语句。
 
 4. 现在试着回到 `localhost:5042`，按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> 打开浏览器控制台，并在输入框中输入一些内容。你应该能看到你的输入被记录下来。此时，你可以根据需要删除响应式 `console.log()`。
 5. 接下来，我们将创建一个函数来添加新的待办事项——`addTodo()`——它会将一个新的 `todo` 对象添加到 `todos` 数组中。将此函数添加到 `src/components/Todos.svelte` 的 `<script>` 区块的底部：
