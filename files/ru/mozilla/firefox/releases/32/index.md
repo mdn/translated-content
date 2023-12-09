@@ -45,7 +45,7 @@ slug: Mozilla/Firefox/Releases/32
 
 ### Интерфейсы/APIs/DOM
 
-- Реализованы свойство {{domxref("NavigatorLanguage.languages", "navigator.languages")}} и событие {{event("languagechange")}} ([Firefox bug 889335](https://bugzil.la/889335)).
+- Реализованы свойство {{domxref("navigator.languages")}} и событие {{event("languagechange")}} ([Firefox bug 889335](https://bugzil.la/889335)).
 - В методы {{domxref("KeyboardEvent.getModifierState")}}() и {{domxref("MouseEvent.getModifierState")}}() добавлена поддержка виртуального модификатора `Accel` ([Firefox bug 1009388](https://bugzil.la/1009388)).
 - Добавлена экспериментальная реализация свойства {{domxref("KeyboardEvent.code")}}: она отключена в Release сборках ([Firefox bug 865649](https://bugzil.la/865649)).
 

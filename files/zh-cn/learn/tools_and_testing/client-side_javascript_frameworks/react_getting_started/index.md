@@ -77,12 +77,10 @@ const header = (
 
 > **备注：** 上一个代码段中的括号并非 JSX 的一部分，它对你的应用程序没有任何影响，括号只是用来向你（和你的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
 >
-> ```js
-> const header = (
->   <header>
->     <h1>Mozilla Developer Network</h1>
->   </header>
-> );
+> ```jsx-nolint
+> const header = <header>
+>   <h1>Mozilla Developer Network</h1>
+> </header>;
 > ```
 >
 > 这看起来多少有点不适感，因为表达式前面的 [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 标记没有缩进与其对应的结束标记相同的位置。
