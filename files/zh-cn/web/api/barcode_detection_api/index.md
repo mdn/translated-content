@@ -1,55 +1,41 @@
 ---
 title: Barcode Detection API
 slug: Web/API/Barcode_Detection_API
-page-type: web-api-overview
-status:
-  - experimental
-browser-compat: api.BarcodeDetector
+l10n:
+  sourceCommit: 37299890c7fe7e4d92c1a86a5fa264afc13467e8
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-The Barcode Detection API detects linear and two-dimensional barcodes in images.
+Barcode Detection API 可用于检测图像中的条形码和二维码。
 
-## Concepts and usage
+## 概念和用法
 
-Support for barcode recognition within web apps unlocks a variety of use cases through supported barcode formats. QR codes can be used for online payments, web navigation or establishing social media connections, Aztec codes can be used to scan boarding passes and shopping apps can use EAN or UPC barcodes to compare prices of physical items.
+Web 应用程序中对条形码识别的支持通过支持的各种条形码格式解锁了各种用例。二维码可用于在线支付、网络导航或建立社交媒体连接，Aztec 码可用于扫描登机牌，购物应用程序可使用 EAN 或 UPC 条形码来比较实物商品的价格。
 
-Detection is achieved through the {{domxref('BarcodeDetector.detect()','detect()')}} method, which takes an image object; it can be one of these objects:
-a {{domxref("HTMLImageElement")}},
-a {{domxref("SVGImageElement")}},
-a {{domxref("HTMLVideoElement")}},
-a {{domxref("HTMLCanvasElement")}},
-an {{domxref("ImageBitmap")}},
-an {{domxref("OffscreenCanvas")}},
-a {{domxref("VideoFrame")}},
-a {{domxref('Blob')}},
-or an {{domxref('ImageData')}}.
-Optional parameters can be passed to the {{domxref('BarcodeDetector')}} constructor to provide hints on which barcode formats to detect.
+检测是通过 {{domxref('BarcodeDetector.detect()','detect()')}} 方法实现的，该方法接受一个图像对象；它可以是以下对象之一：一个 {{domxref("HTMLImageElement")}}、一个 {{domxref("SVGImageElement")}}、一个 {{domxref("HTMLVideoElement")}}、一个 {{domxref("HTMLCanvasElement")}}、一个 {{domxref("ImageBitmap")}}、一个 {{domxref("OffscreenCanvas")}}、一个 {{domxref("VideoFrame")}}、一个 {{domxref('Blob')}}、或一个 {{domxref('ImageData')}}。可以将可选参数传递给 {{domxref('BarcodeDetector')}} 构造函数，以提供有关要检测的条形码格式的提示。
 
-### Supported barcode formats
+### 支持的条形码格式
 
-The Barcode Detection API supports the following barcode formats:
+Barcode Detection API 支持以下条形码格式：
 
 <table class="no-markdown">
   <thead>
     <tr>
-      <th>Format</th>
-      <th>Description</th>
-      <th>Image</th>
+      <th>格式</th>
+      <th>描述</th>
+      <th>图像</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>aztec</td>
       <td>
-        A square two-dimensional matrix following iso24778 and with a square
-        bullseye pattern at their center, thus resembling an Aztec pyramid. Does
-        not require a surrounding blank zone.
+        一种遵循 iso24778 的方形二维矩阵，中心有方形牛眼图案，类似于阿兹特克金字塔。不需要周围的空白区域。
       </td>
       <td>
         <img
-          alt="A sample image of an Aztec barcode. A square with smaller black and white squares inside"
+          alt="一个 aztec 条形码的示例图像。一个里面有较小的黑色和白色正方形的正方形"
           src="aztec.gif"
         />
       </td>
@@ -57,13 +43,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>code_128</td>
       <td>
-        A linear (one-dimensional), bidirectionally-decodable, self-checking
-        barcode following iso15417 and able to encode all 128 characters of
-        {{Glossary("ASCII")}} (hence the naming).
+        一种线性（一维）、双向可解码、可自检的条形码，遵循 iso15417 标准，能够对 {{Glossary("ASCII")}} 的所有 128 个字符进行编码（因此而得名）。
       </td>
       <td>
         <img
-          alt="An image of a code-128 barcode. A horizontal distribution of vertical black and white lines"
+          alt="一个 code-128 条形码的图像。一个垂直黑白线的水平布局图案"
           src="code-128.gif"
         />
       </td>
@@ -71,12 +55,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>code_39</td>
       <td>
-        A linear (one-dimensional), self-checking barcode following iso16388. It
-        is a discrete and variable-length barcode type.
+        一种遵循 iso16388 的线性（一维）可自检的条形码。它是一种离散且可变长度的条形码类型。
       </td>
       <td>
         <img
-          alt="An image of a code-39 barcode. A horizontal distribution of vertical black and white lines"
+          alt="一个 code-39 条形码的图像。一个垂直黑白线的水平布局图案"
           src="code-39.png"
         />
       </td>
@@ -84,14 +67,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>code_93</td>
       <td>
-        A linear, continuous symbology with a variable length following bc5. It
-        offers a larger information density than Code 128 and the visually
-        similar Code 39. Code 93 is used primarily by Canada Post to encode
-        supplementary delivery information.
+        一种 BC5 之后的可变长度的线性连续符号系统。它提供比 Code 128 和视觉上相似的 Code 39 更大的信息密度。Code 93 主要由加拿大邮政用来对补充的投递信息进行编码。
       </td>
       <td>
         <img
-          alt="An image of a code 93 format barcode. A horizontal distribution of white and black horizontal lines"
+          alt="一个 code 93 条形码的图像。一个垂直黑白线的水平布局图案"
           src="code-93.png"
         />
       </td>
@@ -99,11 +79,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>codabar</td>
       <td>
-        A linear barcode representing characters 0-9, A-D and symbols - . $ / +
+        一种表示字符 0-9、A-D 和符号 - $ / + 的线性条形码。
       </td>
       <td>
         <img
-          alt="An image of a codabar format barcode. A horizontal distribution of black and white vertical lines"
+          alt="一个 codabar 格式条形码的图像。一个黑白垂直线的水平布局团"
           src="codabar.png"
         />
       </td>
@@ -111,13 +91,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>data_matrix</td>
       <td>
-        An orientation-independent two-dimensional barcode composed of black and
-        white modules arranged in either a square or rectangular pattern
-        following iso16022.
+        一种与方向无关的二维码，由按照 ISO16022 标准排列成正方形或矩形图案的黑白模块组成。
       </td>
       <td>
         <img
-          alt="An example of a data matrix barcode. A square filled with smaller black and white squares"
+          alt="一个数据矩阵条形码的示例。一个由较小的黑色和白色方块填充的正方形"
           src="data-matrix.png"
         />
       </td>
@@ -125,21 +103,21 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>ean_13</td>
       <td>
-        A linear barcode based on the UPC-A standard and defined in iso15420.
+        一种基于 UPC-A 标准并在 iso15420 中定义的线性条形码。
       </td>
       <td>
         <img
-          alt="An image of an EAN-13 format barcode. A horizontal distribution of white and black lines"
+          alt="一个 EAN-13 格式条形码的图像。一个白色和黑色线条的水平布局的图案"
           src="ean-13.png"
         />
       </td>
     </tr>
     <tr>
       <td>ean_8</td>
-      <td>A linear barcode defined in iso15420 and derived from EAN-13.</td>
+      <td>一种在 ISO15420 中定义并源自 EAN-13 的线性条形码。</td>
       <td>
         <img
-          alt="An image of an EAN-8 format barcode. A horizontal distribution of vertical black and white lines"
+          alt="一个 EAN-8 格式条形码的图像。一个垂直黑白线的水平布局的图案"
           src="ean-8.png"
         />
       </td>
@@ -147,12 +125,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>itf</td>
       <td>
-        A continuous, self-checking, bidirectionally decodable barcode. It will
-        always encode 14 digits.
+        一种连续、自检、双向可解码的条形码。它始终编码 14 位数字。
       </td>
       <td>
         <img
-          alt="An image of an ITF Barcode. A horizontal distribution of white and black lines"
+          alt="一个 ITF 条形码的图像。一个白色和黑色线条的水平布局图案"
           src="ift.png"
         />
       </td>
@@ -160,13 +137,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>pdf417</td>
       <td>
-        A continuous two-dimensional barcode symbology format with multiple rows
-        and columns. It's bi-directionally decodable and uses the iso15438
-        standard.
+        一种具有多行和多列的连续二维条形码符号格式。它可双向解码并且使用 iso15438 标准。
       </td>
       <td>
         <img
-          alt="An example of a pdf417 barcode format. A rectangle of smaller black and white squares"
+          alt="一个 pdf417 条形码格式的示例。一个由较小的黑白正方形组成的矩形"
           src="pdf417.png"
         />
       </td>
@@ -174,12 +149,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>qr_code</td>
       <td>
-        A two-dimensional barcode that uses the iso18004 standard. The
-        information encoded can be text, URL or other data.
+        一种采用 iso18004 标准的二维条形码。编码的信息可以是文本、URL 或其他数据。
       </td>
       <td>
         <img
-          alt="An example of a QR code. A square of smaller black and white squares"
+          alt="一个二维码的示例。一个由较小的黑色和白色正方形组成的正方形"
           src="qr-code.png"
         />
       </td>
@@ -187,17 +161,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>upc_a</td>
       <td>
-        One of the most common linear barcode types and is widely applied to
-        retail in the United States. Defined in iso15420, it represents digits
-        by strips of bars and spaces, each digit being associated to a unique
-        pattern of 2 bars and 2 spaces, both of variable width. UPC-A can encode
-        12 digits that are uniquely assigned to each trade item, and it's
-        technically a subset of EAN-13 (UPC-A codes are represented in EAN-13
-        with the first character set to 0).
+        最常见的线性条形码类型之一，广泛应用于美国的零售业。 在 iso15420 中定义，它通过条带和空格来表示数字，每个数字都与 2 个条块和 2 个空格的独特模式相关联，两者的宽度都是可变的。UPC-A 可以编码唯一分配给每个项目的 12 位数字，从技术上讲，它是 EAN-13 的子集（UPC-A 代码在 EAN-13 中表示，第一个字符设置为 0）。
       </td>
       <td>
         <img
-          alt="An image of a upc-a barcode. A rectangle of black and white vertical lines with numbers underneath"
+          alt="一个 upc-a 条形码的图像。一个由黑白垂直线组成且下方有数字的矩形"
           src="upc-a.png"
         />
       </td>
@@ -205,12 +173,11 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>upc_e</td>
       <td>
-        A variation of UPC-A defined in iso15420, compressing out unnecessary
-        zeros for a more compact barcode.
+        一种 iso15420 中定义的 UPC-A 的变体，压缩掉不必要的零以获得更紧凑的条形码。
       </td>
       <td>
         <img
-          alt="An image of a upc-e barcode. A rectangle of black and white vertical lines"
+          alt="一个 upc-e 条形码的图像。一个由黑白垂直线组成的矩形"
           src="upc-e.png"
         />
       </td>
@@ -218,55 +185,54 @@ The Barcode Detection API supports the following barcode formats:
     <tr>
       <td>unknown</td>
       <td>
-        This value is used by the platform to signify that it does not know or
-        specify which barcode format is being detected or supported.
+        平台使用此值来表示它不知道或指定目前正在检测或支持哪种条形码格式。
       </td>
       <td></td>
     </tr>
   </tbody>
 </table>
 
-You can check for formats supported by the user agent via the {{domxref('BarcodeDetector/getSupportedFormats_static','getSupportedFormats()')}} method.
+你可以通过 {{domxref('BarcodeDetector/getSupportedFormats_static','getSupportedFormats()')}} 方法检查用户代理支持识别的格式。
 
-## Interfaces
+## 接口
 
 - {{domxref("BarcodeDetector")}} {{Experimental_Inline}}
-  - : The **`BarcodeDetector`** interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
+  - : Barcode Detection API 的 **`BarcodeDetector`** 接口允许检测图像中的条形码和二维码。
 
-## Examples
+## 示例
 
-### Creating A Detector
+### 创建检测器
 
-This example tests for browser compatibility and creates a new barcode detector object, with specified supported formats.
+此示例测试浏览器兼容性并使用指定的支持格式创建新的条形码检测器对象。
 
 ```js
-// check compatibility
+// 检查兼容性
 if (!("BarcodeDetector" in globalThis)) {
-  console.log("Barcode Detector is not supported by this browser.");
+  console.log("此浏览器不支持条形码检测器。");
 } else {
-  console.log("Barcode Detector supported!");
+  console.log("条形码检测器是支持的！");
 
-  // create new detector
+  // 创建新检测器
   const barcodeDetector = new BarcodeDetector({
     formats: ["code_39", "codabar", "ean_13"],
   });
 }
 ```
 
-### Getting Supported Formats
+### 获取支持的格式
 
-The following example calls the `getSupportedFormats()` method and logs the results to the console.
+以下示例调用 `getSupportedFormats()` 方法并将结果记录到控制台。
 
 ```js
-// check supported types
+// 检查支持的类型
 BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
   supportedFormats.forEach((format) => console.log(format));
 });
 ```
 
-### Detect Barcodes
+### 检测条形码
 
-This example uses the `detect()` method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.
+此示例使用 `detect()` 方法来检测给定图像中的条形码。识别结果被迭代并且条形码数据被记录到控制台。
 
 ```js
 barcodeDetector
@@ -279,15 +245,15 @@ barcodeDetector
   });
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://developer.chrome.com/articles/shape-detection/#barcodedetector)
+- [barcodefaq.com：包含有关不同条形码和不同类型示例的信息的网站。](https://www.barcodefaq.com/)
+- [Shape Detection API：一张图片胜过一千个单词、人脸和条形码](https://developer.chrome.com/articles/shape-detection/#barcodedetector)
