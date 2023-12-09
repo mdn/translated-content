@@ -123,6 +123,7 @@ HTML 没有表达逻辑的方式（像是条件和循环）。但 Svelte 做到�
 2. 回到应用程序，你会看到这样的画面：
 
    ![使用 each 块创建非常简单的待办事项输出](01-each-block.png)
+
 3. 现在我们已经看到这是有效的，接下来让我们使用 `{#each}` 指令的每个循环生成一个完整的待办事项并在其中嵌入来自 `todos` 数组中的信息：`id`、`name` 和 `completed`。将现有的 `<ul>` 区块替换为以下内容：
 
    ```svelte
@@ -365,14 +366,13 @@ $: {
 
 2. Svelte 是如何做到这一点的？编译器会解析整个响应式陈述并检测到它依赖于 `totalTodos` 变量和 `todos` 数组。所以每当它们中任何一个被修改时，都会重新评估代码并相应地更新 `newTodoId`。
 
-让我们在 `addTodo()` 函数中使用它。更新它如下：
+   让我们在 `addTodo()` 函数中使用它。更新它如下：
 
-```js
-function addTodo() {
-  todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }];
-  newTodoName = "";
-}
-```
+   ```js
+   function addTodo() {
+     todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }];
+     newTodoName = "";
+   }
 
 ## 通过状态筛选待办事项
 
