@@ -114,7 +114,7 @@ h3 {
 
 ## Compatibilidade
 
-{{Compat("css.properties.padding")}}
+{{Compat}}
 
 ## Veja também
 

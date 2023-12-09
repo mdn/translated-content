@@ -129,7 +129,7 @@ console.log(
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat")}}
+{{Compat}}
 
 ## 関連情報
 

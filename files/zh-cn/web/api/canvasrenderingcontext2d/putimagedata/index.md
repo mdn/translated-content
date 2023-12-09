@@ -16,10 +16,8 @@ void ctx.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight
 
 ### 参数
 
-**imageData**
-
-{{domxref("ImageData")}} ，包含像素值的数组对象。
-
+- `imageData`
+  - : {{domxref("ImageData")}}，包含像素值的数组对象。
 - `dx`
   - : 源图像数据在目标画布中的位置偏移量（x 轴方向的偏移量）。
 - `dy`

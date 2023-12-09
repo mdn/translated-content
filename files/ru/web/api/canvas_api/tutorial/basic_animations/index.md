@@ -315,8 +315,6 @@ function draw() {
 
 ## Другие примеры
 
-- [A basic ray-caster](/ru/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : Хороший пример того, как сделать управляемую анимацию с клавиатуры.
 - [Advanced animations](/ru/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : Мы рассмотрим некоторые продвинутые методы анимации и физику в следующей главе.
 

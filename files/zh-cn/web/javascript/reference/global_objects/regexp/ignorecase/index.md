@@ -35,7 +35,7 @@ console.log(regex.ignoreCase); // true
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("RegExp.prototype.global")}}
 - {{jsxref("RegExp.prototype.lastIndex")}}

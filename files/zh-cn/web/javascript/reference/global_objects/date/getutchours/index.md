@@ -42,7 +42,7 @@ var hours = today.getUTCHours();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getHours()")}}
 - {{jsxref("Date.prototype.setUTCHours()")}}

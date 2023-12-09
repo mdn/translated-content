@@ -95,7 +95,7 @@ Uma boa ideia é usar o atributo **class** para identificar porque esse elemento
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.i")}}
+{{Compat}}
 
 ## Ver também
 

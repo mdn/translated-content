@@ -37,7 +37,7 @@ O seguinte trecho de código demonstra a utilização da tag SVG `<title>`.
 
 ### Atributos específicos
 
-_Não existem atributos específicos_
+_Não existem atributos específicos._
 
 ## Interface DOM
 
@@ -45,7 +45,7 @@ Este elemento implementa a interface do [`SVGTitleElement`](/pt-BR/DOM/SVGTitleE
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.title")}}
+{{Compat}}
 
 ## Veja também
 

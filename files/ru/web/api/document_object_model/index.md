@@ -106,7 +106,6 @@ DOM чаще всего используется в JavaScript, но не явл
 - {{domxref("HTMLIFrameElement")}}
 - {{domxref("HTMLImageElement")}}
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLKeygenElement")}}
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLLegendElement")}}
 - {{domxref("HTMLLIElement")}}
@@ -167,7 +166,6 @@ DOM чаще всего используется в JavaScript, но не явл
 
 ### Устаревшие HTML интерфейсы
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG интерфейсы

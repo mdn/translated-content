@@ -64,7 +64,7 @@ Bitwise XORing any number `x` with `0` yields `x`.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.bitwise_xor")}}
+{{Compat}}
 
 ## Leia também
 

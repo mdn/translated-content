@@ -30,7 +30,7 @@ Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
 ## Примеры
 
 Следующий пример (см. Нашу демонстрацию [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) на GitHub и [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)) напрямую передаёт модуль .wasm из исходника, затем компилирует его в объект {{jsxref("WebAssembly.Module")}}.
-Поскольку функция `compileStreaming()` принимает промис для объекта {{domxref("Response")}}, вы можете напрямую передать ему вызов {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, и он передаст ответ в выполняемую функцию.
+Поскольку функция `compileStreaming()` принимает промис для объекта {{domxref("Response")}}, вы можете напрямую передать ему вызов {{domxref("fetch()")}}, и он передаст ответ в выполняемую функцию.
 
 ```js
 var importObject = { imports: { imported_func: (arg) => console.log(arg) } };

@@ -57,7 +57,7 @@ console.log(generator.next().value); // 2
 
 ## ブラウザー実装状況
 
-{{Compat("javascript.builtins.Generator")}}
+{{Compat}}
 
 ## 関連情報
 

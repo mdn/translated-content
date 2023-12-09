@@ -60,8 +60,8 @@ formElem.onformdata = (e) => {
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [`formdata` event](/zh-CN/docs/Web/API/HTMLFormElement/formdata_event)
+- [`formdata` 事件](/zh-CN/docs/Web/API/HTMLFormElement/formdata_event)
 - {{domxref("FormDataEvent")}}
-- [Using FormData Objects](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)

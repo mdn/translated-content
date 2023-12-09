@@ -19,7 +19,7 @@ JavaScript や CSS がどの時点でタブに挿入されるか。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.extensionTypes.RunAt")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

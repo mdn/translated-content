@@ -14,17 +14,17 @@ slug: Web/CSS/min-height
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
+min-height: max-content;
+min-height: min-content;
+min-height: fit-content;
+min-height: fill-available;
+
 /* <length> значения */
 min-height: 3.5em;
 
 /* <percentage> значения */
 min-height: 10%;
-
-/* Значения-ключевые слова */
-min-height: max-content;
-min-height: min-content;
-min-height: fit-content;
-min-height: fill-available;
 
 /* Глобальные значения */
 min-height: inherit;

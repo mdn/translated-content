@@ -80,7 +80,7 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.
 
 ## 一个小框架：一个完整支持 unicode 的 cookie 读取/写入器
 
-作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和[`Storage 对象`](/zh-CN/docs/Web/Guide/API/DOM/Storage#Storage)部分`一致的`对象（docCookies），简化`document.cookie` 的获取方法。它提供完全的 Unicode 支持。
+作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和 [`Storage` 对象](/zh-CN/docs/Web/API/Storage)部分一致的对象（docCookies），简化 `document.cookie` 的获取方法。它提供完全的 Unicode 支持。
 
 ```js
 /*\

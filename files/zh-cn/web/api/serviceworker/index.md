@@ -80,9 +80,8 @@ if ("serviceWorker" in navigator) {
 
 ## 参见
 
-- [ServiceWorker 烹饪书](https://github.com/mdn/serviceworker-cookbook)
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service worker 基础代码示例](https://github.com/mdn/sw-test)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service worker 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [使用 web worker](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

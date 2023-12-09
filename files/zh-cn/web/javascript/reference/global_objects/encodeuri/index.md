@@ -69,7 +69,7 @@ function fixedEncodeURI(str) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("decodeURI")}}
 - {{jsxref("encodeURIComponent")}}

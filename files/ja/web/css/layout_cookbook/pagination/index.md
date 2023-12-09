@@ -59,11 +59,11 @@ _align-items を含む以下の例のように、使用したキー・プロパ�
 
 #### justify-content
 
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 #### フレックスレイアウトにおける column-gap
 
-{{Compat("css.properties.column-gap.flex_context")}}
+{{Compat}}
 
 ## 関連情報
 

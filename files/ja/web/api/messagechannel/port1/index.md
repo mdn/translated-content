@@ -48,7 +48,7 @@ function handleMessage(e) {
 
 ## ブラウザーの対応
 
-{{Compat("api.MessageChannel.port1")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -45,4 +45,4 @@ onde :
 
 ## Compatibilidade de navegadores
 
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

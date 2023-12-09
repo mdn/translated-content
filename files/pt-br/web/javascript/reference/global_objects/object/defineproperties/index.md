@@ -133,7 +133,7 @@ function defineProperties(obj, properties) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.defineProperties")}}
+{{Compat}}
 
 ## Veja também
 

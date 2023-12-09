@@ -52,7 +52,7 @@ numbers.sort(compareNumbers);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.TypedArray.sort")}}
+{{Compat}}
 
 ## Ver também
 

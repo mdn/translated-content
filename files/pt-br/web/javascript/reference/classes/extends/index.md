@@ -97,7 +97,7 @@ Object.getPrototypeOf(nullExtends.prototype); // null
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.classes.extends")}}
+{{Compat}}
 
 ## Ver também
 

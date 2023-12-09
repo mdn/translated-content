@@ -57,6 +57,6 @@ wat2wasm simple.wat -v
 ## 另见
 
 - [理解 WebAssembly 文本格式](/zh-CN/docs/WebAssembly/Understanding_the_text_format)——详细解释文本格式语法。
-- [从 C/C++编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)——诸如 Binaryen/Emscripten 的工具不但把你的代码编译为 wasm 而且创建必要的用来在一个 JavaScript 上下文中运行模块的 API 代码。关于如何使用它们，可以探究更多内容。
+- [从 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)——诸如 Binaryen/Emscripten 的工具不但把你的代码编译为 wasm 而且创建必要的用来在一个 JavaScript 上下文中运行模块的 API 代码。关于如何使用它们，可以探究更多内容。
 - 使用 WebAssembly 的 JavaScript API——如果你想探究关于 WebAssembly API 代码是如何工作的更多内容，可以阅读这篇文章。
 - [文本格式](https://github.com/WebAssembly/design/blob/master/TextFormat.md)——在 WebAssembly 的 GitHub 仓库上面关于文本格式的更多解释。

@@ -96,7 +96,7 @@ regex.test("foobar"); //false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.test")}}
+{{Compat}}
 
 ## 関連情報
 

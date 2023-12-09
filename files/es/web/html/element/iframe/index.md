@@ -5,7 +5,7 @@ slug: Web/HTML/Element/iframe
 
 {{HTMLSidebar}}
 
-El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.
+El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("browsing context", "contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.
 
 {{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
 
@@ -70,7 +70,7 @@ Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API
 
 Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-- En el atributo `target` de los elementos {{HTMLElement("a")}}, {{HTMLElement("from")}} y {{HTMLElement("base")}}.
+- En el atributo `target` de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
 - En el atributo `formtarget` de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
 - En el parámetro `windowName` en el método {{domxref("Window.open()","window.open()")}}.
 
@@ -106,7 +106,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
   - : Nombre objetivo para el contexto de navegación incrustado. Se puede utilizar:
 
-    - En el atributo target de los elementos {{HTMLElement("a")}}, {{HTMLElement("from")}} y {{HTMLElement("base")}}.
+    - En el atributo target de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
     - En el atributo formtarget de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
     - En el parámetro windowName en el método {{domxref("Window.open()","window.open()")}}.
 

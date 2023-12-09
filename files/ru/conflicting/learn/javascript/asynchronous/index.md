@@ -33,9 +33,9 @@ original_slug: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 
 Эти функции:
 
-- [`setTimeout()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+- [`setTimeout()`](/ru/docs/Web/API/setTimeout)
   - : Выполняет указанный блок кода один раз по истечении указанного времени
-- [`setInterval()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+- [`setInterval()`](/ru/docs/Web/API/setInterval)
   - : Выполняет указанный блок кода несколько раз с определённым интервалом между каждым вызовом.
 - [`requestAnimationFrame()`](/ru/docs/Web/API/window/requestAnimationFrame)
   - : Современная версия setInterval (). Выполняют указанный блок кода перед тем, как браузер в следующий раз перерисовывает отображение, позволяя запускать анимацию с подходящей частотой кадров независимо от среды, в которой она выполняется.
@@ -106,7 +106,7 @@ let myGreeting = setTimeout(sayHi, 2000, 'Mr. Universe');
 
 ### Очистка таймаутов
 
-Наконец, если был создан тайм-аут, вы можете отменить его до истечения указанного времени, вызвав [`clearTimeout()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout), передав ему идентификатор вызова `setTimeout()` в качестве параметра. Итак, чтобы отменить указанный выше тайм-аут, вы должны сделать следующее:
+Наконец, если был создан тайм-аут, вы можете отменить его до истечения указанного времени, вызвав [`clearTimeout()`](/ru/docs/Web/API/clearTimeout), передав ему идентификатор вызова `setTimeout()` в качестве параметра. Итак, чтобы отменить указанный выше тайм-аут, вы должны сделать следующее:
 
 ```js
 clearTimeout(myGreeting);
@@ -118,7 +118,7 @@ clearTimeout(myGreeting);
 
 `setTimeout ()` отлично работает, когда вам нужно один раз запустить код по истечении заданного периода времени. Но что происходит, когда вам нужно запускать код снова и снова - например, в случае анимации?
 
-Здесь пригодится [setInterval()](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) . Работает очень похоже на setTimeout (), за исключением того, что функция, которую вы передаёте в качестве первого параметра, выполняется повторно не менее чем за количество миллисекунд, заданных вторым параметром. Вы также можете передать любые параметры, необходимые для выполняемой функции, в качестве последующих параметров вызова setInterval ().
+Здесь пригодится [setInterval()](/ru/docs/Web/API/setInterval) . Работает очень похоже на setTimeout (), за исключением того, что функция, которую вы передаёте в качестве первого параметра, выполняется повторно не менее чем за количество миллисекунд, заданных вторым параметром. Вы также можете передать любые параметры, необходимые для выполняемой функции, в качестве последующих параметров вызова setInterval ().
 
 Давайте посмотрим на пример. Следующая функция создаёт новый объект [`Date()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date), с помощью [`toLocaleTimeString()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString) извлекает из него строку с временем и отображает её в пользовательском интерфейсе. Затем он запускает функцию один раз в секунду с помощью `setInterval()`, создавая эффект цифровых часов, которые обновляются раз в секунду ([реальный пример](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), и [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html)):
 
@@ -622,12 +622,3 @@ if (posX > width/2) {
 Вот и все — все основы асинхронных циклов и интервалов рассмотрены в статье. Вы найдёте эти методы полезными во многих ситуациях, но постарайтесь не злоупотреблять ими! Поскольку они по-прежнему выполняются в основном потоке, тяжёлые и интенсивные колбэки (особенно те, которые управляют DOM) могут действительно замедлить страницу, если вы не будете осторожны.
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## В этом модуле
-
-- [Основные понятия асинхронного программирования](/ru/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Введение в асинхронный JavaScript](/ru/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Объединённый асинхронный JavaScript: Таймауты и интервалы](/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Graceful asynchronous programming with Promises](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Сделайте асинхронное программирование легче с async и await](/ru/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/ru/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

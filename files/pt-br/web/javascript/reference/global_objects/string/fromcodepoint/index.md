@@ -132,7 +132,7 @@ if (!String.fromCodePoint) {
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.fromCodePoint")}}
+{{Compat}}
 
 ## Veja também
 

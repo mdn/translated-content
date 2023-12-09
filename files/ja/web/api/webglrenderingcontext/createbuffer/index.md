@@ -37,7 +37,7 @@ var buffer = gl.createBuffer();
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.createBuffer")}}
+{{Compat}}
 
 ## 関連項目
 

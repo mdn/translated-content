@@ -74,7 +74,7 @@ f2() === undefined; // true
 
 `this`의 값을 한 문맥에서 다른 문맥으로 넘기려면 다음 예시와 같이 {{jsxref("Function.prototype.call()", "call()")}}이나 {{jsxref("Function.prototype.apply", "apply()")}}를 사용하세요.
 
-**예시 1**
+### 예시 1
 
 ```js
 // call 또는 apply의 첫 번째 인자로 객체가 전달될 수 있으며 this가 그 객체에 묶임
@@ -92,7 +92,7 @@ whatsThis.call(obj); // this는 'Custom'. 함수 내에서 obj로 설정한다.
 whatsThis.apply(obj); // this는 'Custom'. 함수 내에서 obj로 설정한다.
 ```
 
-**예시 2**
+### 예시 2
 
 ```js
 function add(c, d) {

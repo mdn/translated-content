@@ -89,12 +89,12 @@ elements.map(({ length: lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
 
 ```js
 function Person() {
-  // Person() 构造函数定义 `this`作为它自己的实例。
+  // Person() 构造函数定义 `this` 作为它自己的实例。
   this.age = 0;
 
   setInterval(function growUp() {
-    // 在非严格模式，growUp() 函数定义 `this`作为全局对象，
-    // 与在 Person() 构造函数中定义的 `this`并不相同。
+    // 在非严格模式，growUp() 函数定义 `this` 作为全局对象，
+    // 与在 Person() 构造函数中定义的 `this` 并不相同。
     this.age++;
   }, 1000);
 }
@@ -110,7 +110,7 @@ function Person() {
   that.age = 0;
 
   setInterval(function growUp() {
-    // 回调引用的是`that`变量，其值是预期的对象。
+    // 回调引用的是 `that` 变量，其值是预期的对象。
     that.age++;
   }, 1000);
 }
@@ -481,6 +481,6 @@ fact(5); // 120
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

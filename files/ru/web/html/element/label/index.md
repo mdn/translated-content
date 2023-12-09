@@ -19,10 +19,10 @@ slug: Web/HTML/Element/label
 
 Элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("for")}}
+- `for`
   - : ID [labelable](/ru/docs/Web/Guide/HTML/Content_categories#Form_labelable)-элемента, который находится в том же документе, что и элемент label. Первый такой элемент в документе, ID которого совпадает со значением атрибута `for`, становится `labeled-*` контролом для данного `label`.
     > **Примечание:** Элемент _label_ может иметь как атрибут _for_, так и отдельный элемент управления, если атрибут _for_ указывает на содержащийся элемент управления.
-- {{htmlattrdef("form")}}
+- `form`
   - : Элемент формы, с которым связан label (его владелец формы). Если указано, значением атрибута является идентификатор элемента {{HTMLElement ("form")}} в том же документе. Это позволяет размещать элементы label в любом месте документа, а не только как потомки их элементов формы.
     > **Примечание:** Этот атрибут содержимого был удалён из спецификации HTML 28 апреля 2016 г. Однако сценарии по-прежнему имеют доступ только для чтения {{domxref ("HTMLLabelElement.form")}}; он возвращает форму, членом которой является связанный элемент управления label, или значение NULL, если label не связана с элементом управления или элемент управления не является частью формы.
 
@@ -59,4 +59,4 @@ slug: Web/HTML/Element/label
 
 ## See also
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

@@ -443,7 +443,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 > **备注：** 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced) 文章。
 
-## 文本替代品
+## 替代文本
 
 尽管文本内容本身是可访问的，但对于多媒体内容而言也不一定是这样 - 图像/视频内容不能被视觉障碍人士看到，并且听觉障碍人士不能听到音频内容。稍后我们将在可访问多媒体文章中详细介绍视频和音频内容，但对于本文，我们将探讨低微（humble）的 `{{htmlelement("img")}}` 元素的无障碍。
 
@@ -493,7 +493,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 <p id="dino-label">The Mozilla red Tyrannosaurus ...</p>
 ```
 
-在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果你想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“`alt`”不可能实现的。
+在这种情况下，我们不使用“alt”属性——相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果你想将相同的文本用作多个图像的标签，这是特别有用的——这是使用“`alt`”不可能实现的。
 
 > **备注：** “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
 

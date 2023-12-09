@@ -11,8 +11,8 @@ slug: WebAssembly/Rust_to_Wasm
 
 Rust 和 WebAssembly 有两大主要用例：
 
-- 构建完整应用 —— 整个 Web 应用都基于 Rust 开发！
-- 构建应用的组成部分 —— 在现存的 JavaScript 前端中使用 Rust。
+- 构建完整应用——整个 Web 应用都基于 Rust 开发！
+- 构建应用的组成部分——在现存的 JavaScript 前端中使用 Rust。
 
 目前，Rust 团队正专注于第二种用例，因此我们也将着重介绍它。对于第一种用例，可以参阅 [`yew`](https://github.com/DenisKolodin/yew) 这类项目。
 
@@ -174,7 +174,7 @@ pub fn greet(name: &str) {
 
 `format!` 在这里有两个参数，一个格式化字符串和一个要填入的变量。格式化字符串是 `"Hello, {}!"` 部分。它可以包含一个或多个 `{}`，变量将会被填入其中。传递的变量是 `name`，也就是这个函数的参数。所以当我们调用 `greet("Steve")`时我们就能看到 `"Hello, Steve!"`。
 
-这个传递到了 `alert()`，所以当我们调用这个函数时，我们应该能看到他谈弹出了一个带有 "Hello, Steve!" 的消息框。
+上述字符串被传递到了 `alert()`，所以当我们调用这个函数时，我们应该能看到一个消息框弹出，其中的内容为“Hello, Steve!”。
 
 我们的库写完了，是时候构建它了。
 

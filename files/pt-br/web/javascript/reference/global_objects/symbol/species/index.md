@@ -41,7 +41,7 @@ console.log(mapped instanceof Array); // true
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.species")}}
+{{Compat}}
 
 ## Veja também
 

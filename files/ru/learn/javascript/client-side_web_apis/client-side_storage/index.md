@@ -581,7 +581,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
    }
    ```
 
-3. The following snippet is taken from inside `fetchVideoFromNetwork()` — here we fetch MP4 and WebM versions of the video using two separate {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}} requests. We then use the {{domxref("blob()", "Body.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.
+3. The following snippet is taken from inside `fetchVideoFromNetwork()` — here we fetch MP4 and WebM versions of the video using two separate {{domxref("fetch()")}} requests. We then use the {{domxref("blob()", "Body.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.
 
    We have a problem here though — these two requests are both asynchronous, but we only want to try to display or store the video when both promises have fulfilled. Fortunately there is a built-in method that handles such a problem — {{jsxref("Promise.all()")}}. This takes one argument — references to all the individual promises you want to check for fulfillment placed in an array — and is itself promise-based.
 
@@ -727,7 +727,7 @@ self.addEventListener("install", function (e) {
 
 Внутри блока мы используем {{domxref("CacheStorage.match()")}} чтобы проверить, можно ли найти соответствующий запрос (т.е. совпадение по URL) в кеше. Промис возвращает найденный ответ или `undefined`, если ничего не нашлось.
 
-Если совпадение нашлось, то просто возвращаем его как особый ответ. В противном случае, используем [fetch()](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch) для запроса ресурса из сети.
+Если совпадение нашлось, то просто возвращаем его как особый ответ. В противном случае, используем [fetch()](/ru/docs/Web/API/fetch) для запроса ресурса из сети.
 
 ```js
 self.addEventListener("fetch", function (e) {
@@ -764,13 +764,3 @@ self.addEventListener("fetch", function (e) {
 - [Service worker API](/ru/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## В этом модуле
-
-- [Introduction to web APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
