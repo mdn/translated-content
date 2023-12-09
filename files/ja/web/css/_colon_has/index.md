@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-`:has()` は CSS の[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、引数として渡される[相対セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#相対セレクター)のいずれかが、その要素から辿ってアンカーとして少なくとも一つの要素とマッチする場合に、その要素を表します。この疑似クラスは、[相対セレクターリスト](/ja/docs/Web/CSS/Selector_list#寛容な相対セレクターリスト)を引数として取ることで、参照している要素に関して親要素や前の兄弟要素を選択する方法を提供します。
+**`:has()`** は CSS の[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、引数として渡される[相対セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#相対セレクター)のいずれかが、その要素から辿ってアンカーとして少なくとも一つの要素とマッチする場合に、その要素を表します。この疑似クラスは、[相対セレクターリスト](/ja/docs/Web/CSS/Selector_list#寛容な相対セレクターリスト)を引数として取ることで、参照している要素に関して親要素や前の兄弟要素を選択する方法を提供します。
 
 ```css
 /* 直後に p 要素があるような h1 要素に対して、スタイルを適用します */
