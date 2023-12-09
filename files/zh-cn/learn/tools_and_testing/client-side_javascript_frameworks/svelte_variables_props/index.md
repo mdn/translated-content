@@ -333,11 +333,11 @@ Svelte 编译器在幕后会解析和分析我们的代码以生成依赖树，�
 7. 假设你现在尝试添加新的待办事项，新的待办事项将被添加到待办事项数组中，但我们的用户界面不会更新。在 Svelte 中，[响应性是由指定操作来触发的](https://svelte.dev/docs#2_Assignments_are_reactive)。这意味着尽管 `addTodo()` 函数被执行，元素被新增到 `todos` 数组中，但 Svelte 不会检测到 push 方法修改了数组，所以它也不会刷新任务 `<ul>`。
 
    要解决这个问题，只需要将 `todos = todos` 添加到 `addTodo()` 函数的末尾，但在函数末尾包含它似乎很奇怪。相反，我们将移除 `push()` 方法并使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)来达到相同的结果：我们将为 `todos` 数组指定一个等于 `todos` 数组加上新对象的数值。
-   
+
    > **备注：** 数组（`Array`）有几个修改操作：[`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)、[`pop()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)、[`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)、[`shift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)、[`unshift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)、[`reverse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 和 [`sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。使用它们常常会导致难以追踪的副作用和错误。通过使用展开语法而不是 `push()`，我们可以避免改变数组本身，这被认为是一种良好的做法。
-   
+
    更新你的 `addTodo()` 函数如下：
-   
+
    ```js
    function addTodo() {
      todos = [...todos, { id: 999, name: newTodoName, completed: false }];
@@ -361,7 +361,7 @@ Svelte 编译器在幕后会解析和分析我们的代码以生成依赖树，�
      }
    }
    ```
-   
+
    > **备注：** 如你所见，响应式陈述不仅限于单行。以下代码也可以生效，但可读性较差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
 2. Svelte 是如何做到这一点的？编译器会解析整个响应式陈述并检测到它依赖于 `totalTodos` 变量和 `todos` 数组。所以每当它们中任何一个被修改时，都会重新评估代码并相应地更新 `newTodoId`。
