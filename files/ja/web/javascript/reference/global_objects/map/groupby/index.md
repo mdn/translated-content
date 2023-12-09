@@ -1,58 +1,58 @@
 ---
 title: Map.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
-page-type: javascript-static-method
-browser-compat: javascript.builtins.Map.groupBy
+l10n:
+  sourceCommit: c607c483fe079c61de5e32fba1a6cce61896e97d
 ---
 
 {{JSRef}}
 
-> **Note:** In some versions of some browsers, this method was implemented as the method `Array.prototype.groupToMap()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
+> **メモ:** 一部のブラウザーのあるバージョンでは、このメソッドは `Array.prototype.groupToMap()` というメソッドとして実装されていました。ウェブの互換性の問題により、現在は静的メソッドとして実装されています。詳細は[ブラウザーの互換性](#ブラウザーの互換性)を確認してください
 
-The **`Map.groupBy()`** static method groups the elements of a given iterable using the values returned by a provided callback function. The final returned {{jsxref("Map")}} uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
+**Map.groupBy()** 静的メソッドは、指定されたコールバック関数によって返された値を使用して、指定された反復可能な要素をグループ化します。最終的に返される {{jsxref("Map")}} は、テスト関数からの一意な値をキーとして使用し、各グループの要素の配列を取得するために使用できます。
 
-The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time. If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Object.groupBy()")}}.
+このメソッドは主に、あるオブジェクトに関連する要素をグループ化するときに便利で、特にそのオブジェクトが時間の経過とともに変化する可能性がある場合に便利です。オブジェクトが不変である場合は、代わりに文字列を使用してそれを表現し、{{jsxref("Object.groupBy()")}} で要素をグループ化することができます。
 
 {{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
 
-## Syntax
+## 構文
 
 ```js-nolint
 Map.groupBy(items, callbackFn)
 ```
 
-### Parameters
+### 引数
 
 - `items`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) whose elements will be grouped.
+  - : 要素がグループ化される[反復可能な要素](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)（{{jsxref("Array")}} など）。
 - `callbackFn`
-  - : A function to execute for each element in the iterable. It should return a value ({{Glossary("object")}} or {{Glossary("primitive")}}) indicating the group of the current element. The function is called with the following arguments:
+  - : 反復可能な各要素に対して実行される関数。これは、現在の要素のグループを示す値（オブジェクトまたはプリミティブ）を返す必要があります。この関数は以下の引数で呼び出されます。
     - `element`
-      - : The current element being processed.
+      - : 現在処理中の要素。
     - `index`
-      - : The index of the current element being processed.
+      - : 現在処理中の要素のインデックス。
 
-### Return value
+### 返値
 
-A {{jsxref("Map")}} object with keys for each group, each assigned to an array containing the elements of the associated group.
+各グループのキーを持つ {{jsxref("Map")}} オブジェクトで、それぞれに関連するグループの要素を含む配列が割り当てられたものです。
 
-## Description
+## 解説
 
-`Map.groupBy()` calls a provided `callbackFn` function once for each element in an iterable. The callback function should return a value indicating the group of the associated element. The values returned by `callbackFn` are used as keys for the {{jsxref("Map")}} returned by `Map.groupBy()`. Each key has an associated array containing all the elements for which the callback returned the same value.
+`Map.groupBy()` は、指定された `callbackFn` 関数を反復可能な要素ごとに 1 回呼び出します。コールバック関数は、関連付けられた要素のグループを示す値を返す必要があります。`callbackFn` が返す値は、`Map.groupBy()` が返す {{jsxref("Map")}} のキーとして使用されます。各キーには、コールバックが同じ値を返したすべての要素を含む関連配列があります。
 
-The elements in the returned {{jsxref("Map")}} and the original iterable are the same (not {{Glossary("deep copy", "deep copies")}}). Changing the internal structure of the elements will be reflected in both the original iterable and the returned {{jsxref("Map")}}.
+返された {{jsxref("Map")}} と元の反復可能な要素は同じです（{{Glossary("deep copy", "ディープコピー")}}ではありません）。要素の内部構造を変更すると、元の反復可能な要素と返された {{jsxref("Map")}} の両方に反映されます。
 
-This method is useful when you need to group information that is related to a particular object that might potentially change over time. This is because even if the object is modified, it will continue to work as a key to the returned `Map`. If you instead create a string representation for the object and use that as a grouping key in {{jsxref("Object.groupBy()")}}, you must maintain the mapping between the original object and its representation as the object changes.
+このメソッドは、時間の経過とともに変更される可能性のある特定のオブジェクトに関連する情報をグループ化する必要がある場合に便利です。オブジェクトが変更されても、返される `Map` のキーとして機能し続けるからです。代わりにオブジェクトの文字列表現を作成し、それを {{jsxref("Object.groupBy()")}} のグループ化キーとして使用する場合は、オブジェクトが変更されても元のオブジェクトとその表現との間のマッピングを維持する必要があります。
 
-> **Note:** To access the groups in the returned `Map`, you must use the same object that was originally used as a key in the `Map` (although you may modify its properties). You can't use another object that just happens to have the same name and properties.
+> **メモ:** 返された `Map` のグループにアクセスするには、`Map` のキーとして元々使用されていたのと同じオブジェクトを使用する必要があります（ただし、そのオブジェクトのプロパティを変更することはできます）。たまたま同じ名前とプロパティを持つ別のオブジェクトを使うことはできません。
 
-`Map.groupBy` does not read the value of `this`. It can be called on any object and a new {{jsxref("Map")}} instance will be returned.
+`Map.groupBy` は `this` の値を読みません。どんなオブジェクトでも呼び出すことができ、新しい {{jsxref("Map")}} インスタンスが返されます。
 
-## Examples
+## 例
 
-### Using Map.groupBy()
+### Map.groupBy() の使用
 
-First we define an array containing objects representing an inventory of different foodstuffs. Each food has a `type` and a `quantity`.
+最初に、さまざまな食品の在庫を表すオブジェクトを含む配列を定義します。 それぞれの食品は `type` （種類）と `quantity` （量）を保有しています。
 
 ```js
 const inventory = [
@@ -64,7 +64,7 @@ const inventory = [
 ];
 ```
 
-The code below uses `Map.groupBy()` with an arrow function that returns the object keys named `restock` or `sufficient`, depending on whether the element has `quantity < 6`. The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
+以下のコードでは、`Map.groupBy()` とアロー関数を使用しています。この関数は、要素が `quantity < 6` であるかどうかに応じて、`restock` または `enough` というオブジェクトであるキーを返します。返された `result` オブジェクトは `Map` なので、配列を取得するためにキーで `get()` を呼び出す必要があります。
 
 ```js
 const restock = { restock: true };
@@ -76,33 +76,33 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-Note that the function argument `{ quantity }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter). This unpacks the `quantity` property of an object passed as a parameter, and assigns it to a variable named `quantity` in the body of the function. This is a very succinct way to access the relevant values of elements within a function.
+関数の引数 `{ quantity }` は、[関数の引数に対するオブジェクトの分割構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。これは、引数として渡されたオブジェクトの `quantity` プロパティを展開し、関数本体の `quantity` という変数に代入します。これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
 
-The key to a `Map` can be modified and still used. However you can't recreate the key and still use it. For this reason it is important that anything that needs to use the map keeps a reference to its keys.
+キーである `Map` は内容を変更しても使用し続けることができます。しかし、キーを再作成して使用することはできません。このため、`Map` を使用する必要があるものは、そのキーへの参照を保持し続けることが重要です。
 
 ```js
-// The key can be modified and still used
+// キーの内容を変更しても使用し続けられます
 restock["fast"] = true;
 console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 
-// A new key can't be used, even if it has the same structure!
+// 新しいキーは、たとえ同じ構造の map であっても使用できません
 const restock2 = { restock: true };
 console.log(result.get(restock2)); // undefined
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Polyfill of `Map.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- [`Map.groupBy` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-grouping)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Map/Map", "Map()")}}
 - {{jsxref("Object.groupBy()")}}
