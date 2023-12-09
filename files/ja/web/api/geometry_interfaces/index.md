@@ -1,7 +1,6 @@
 ---
 title: 幾何インターフェイス
 slug: Web/API/Geometry_interfaces
-page-type: web-api-overview
 l10n:
   sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
