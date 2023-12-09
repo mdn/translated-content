@@ -46,6 +46,7 @@ l10n:
     - メディアファイルの一部を示すメディアフラグメント
     - 電話番号を示す `tel:` URL
     - メールアドレスを示す `mailto:` URL
+    - SMS テキストメッセージを示す `sms:` URL
     - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
 
 - `hreflang`
@@ -112,7 +113,7 @@ l10n:
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com"> Mozilla </a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
 #### 結果
@@ -231,6 +232,7 @@ a {
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 c.fillStyle = "hotpink";
+let isDrawing;
 
 function draw(x, y) {
   if (isDrawing) {
@@ -326,7 +328,7 @@ document
 #### HTML 以外のリソースへのリンク
 
 ```html
-<a href="2017-annual-report.ppt"> 2017 年次レポート (PowerPoint) </a>
+<a href="2017-annual-report.ppt">2017 年次レポート (PowerPoint)</a>
 ```
 
 リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Element/img#alt)を確実に入れてください。
@@ -362,8 +364,8 @@ document
 
   <header>…</header>
 
-  <main id="content"></main>
   <!-- スキップリンクがたどり着く位置 -->
+  <main id="content"></main>
 </body>
 ```
 
@@ -462,9 +464,6 @@ document
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >を受け入れるすべての要素、または
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素、ただし他の <code>&#x3C;a></code> 要素でないもの。
@@ -475,8 +474,7 @@ document
       <td>
         <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> （<code>href</code> 属性がある場合）、
         それ以外は
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
