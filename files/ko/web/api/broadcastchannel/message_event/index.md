@@ -24,6 +24,7 @@ onmessage = (event) => { }
 {{InheritanceDiagram("MessageEvent")}}
 
 ## 이벤트 속성
+
 아래 나열된 속성 외에도, 부모 인터페이스인 {{domxref("Event")}}의 속성들을 사용할 수 있습니다.
 
 - {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
