@@ -23,7 +23,7 @@ l10n:
 ## 实例方法
 
 - {{domxref('FontData.blob()')}} {{Experimental_Inline}}
-  - : 返回一个兑现包含底层字体文件的原始字节的 {{domxref("Blob")}} 的 {{jsxref("Promise")}}。
+  - : 返回一个会兑现包含底层字体文件的原始字节的 {{domxref("Blob")}} 的 {{jsxref("Promise")}}。
 
 ## 示例
 
