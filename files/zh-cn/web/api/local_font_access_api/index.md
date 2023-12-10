@@ -2,7 +2,7 @@
 title: Local Font Access API
 slug: Web/API/Local_Font_Access_API
 l10n:
-  sourceCommit: a3c8e936784a6dc4a5c7884ec97164e4e055a5ea
+  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Local Font Access API")}}
@@ -97,7 +97,7 @@ async function computeOutlineFormat() {
           outlineFormat = "cff";
           break;
       }
-      console.log("Outline format:", outlineFormat);
+      console.log("矢量字体格式：", outlineFormat);
     }
   } catch (err) {
     console.error(err.name, err.message);
@@ -115,6 +115,6 @@ async function computeOutlineFormat() {
 
 ## 参见
 
-- [使用带有本地字体的高级排版](https://developer.chrome.com/articles/local-fonts/)
+- [使用带有本地字体的高级排版](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}
 - {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)指令

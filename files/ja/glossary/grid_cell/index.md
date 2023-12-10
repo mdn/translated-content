@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)における CSS グリッドの最小単位が**グリッドセル**です。 4 つの交差する {{glossary("grid lines", "グリッド線")}} に囲まれた領域のことで、表におけるセルと考え方はほぼ同じです。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)における CSS グリッドの最小単位が**グリッドセル**です。 4 つの交差する {{glossary("grid lines", "グリッド線")}} に囲まれた領域のことで、表におけるセルと考え方はほぼ同じです。
 
 ![Diagram showing an individual cell on the grid.](1_grid_cell.png)
 
@@ -68,5 +68,5 @@ l10n:
 
 ### さらに詳しい説明
 
-- CSS グリッドレイアウトガイド: [グリッドレイアウトの基本コンセプト](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- CSS グリッドレイアウトガイド: [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS グリッドレイアウト仕様におけるグリッドセルの定義](https://drafts.csswg.org/css-grid/#grid-track-concept)

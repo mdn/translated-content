@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**ガター** もしくはアレーはコンテンツトラック間のスペースです。[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)で {{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティを使うとガターが作成されます。
+**ガター** もしくはアレーはコンテンツトラック間のスペースです。[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)で {{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティを使うとガターが作成されます。
 
 ## 例
 
@@ -57,7 +57,7 @@ l10n:
 
 グリッドのサイズ決定においては、ガターによる隙間は通常のグリッドトラックのように扱われますが、隙間の中には何も配置できません。隙間の分だけその場所のグリッドラインのサイズが増えるように振る舞うため、そのラインの後のグリッドアイテムは隙間の後から始まるように配置されます。
 
-トラックに余白を作るのは grid-gap プロパティだけではありません。マージン、パディング、[ボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)のスペース分配プロパティなどいずれも視覚上の隙間を作ります。したがって、これらの方法で追加の余白は一切作らないデザインをしていない限り、grid-gap プロパティと「ガターサイズ」が一致するようには見えません。
+トラックに余白を作るのは grid-gap プロパティだけではありません。マージン、パディング、[ボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)のスペース分配プロパティなどいずれも視覚上の隙間を作ります。したがって、これらの方法で追加の余白は一切作らないデザインをしていない限り、grid-gap プロパティと「ガターサイズ」が一致するようには見えません。
 
 ## 関連情報
 
@@ -69,5 +69,5 @@ l10n:
 
 ### より詳しい説明
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
 - [CSS グリッドレイアウト仕様におけるガターの定義](https://drafts.csswg.org/css-grid/#gutters)
