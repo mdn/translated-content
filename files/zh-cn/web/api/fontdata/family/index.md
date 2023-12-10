@@ -2,7 +2,7 @@
 title: FontData：family 属性
 slug: Web/API/FontData/family
 l10n:
-  sourceCommit: 372bd292256cc90f4a99413bd4e3613e271e5275
+  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
