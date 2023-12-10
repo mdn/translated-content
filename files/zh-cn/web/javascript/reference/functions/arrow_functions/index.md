@@ -74,7 +74,7 @@ async (param1, param2, ...paramN) => {
   return a + 100;
 };
 
-// 2. 移除代表函数体的大括号和“return"”——返回值是隐含的
+// 2. 移除代表函数体的大括号和“return”——返回值是隐含的
 (a) => a + 100;
 
 // 3. 移除参数周围的括号
@@ -122,7 +122,7 @@ const b = 2;
 };
 ```
 
-箭头函数总是未命名的。如果箭头函数需要调用自身，请使用已命名的函数表达式。也可以将箭头函数赋值给一个变量，这样它就有了名字。
+箭头函数总是未命名的。如果箭头函数需要调用自身，请使用具名函数表达式。也可以将箭头函数赋值给一个变量，这样它就有了名字。
 
 ```js
 // 传统函数
@@ -268,9 +268,9 @@ function foo(n) {
 foo(1); // 11
 ```
 
-### 不能用作构造器
+### 不能用作构造函数
 
-箭头函数不能用作构造器，当使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用时会出错。它们也没有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。
+箭头函数不能用作构造函数，当使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用时会出错。它们也没有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。
 
 ```js
 const Foo = () => {};
