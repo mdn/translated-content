@@ -3941,7 +3941,7 @@
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage	/ja/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Finale	/ja/docs/Web/API/Canvas_API/Tutorial/Finale
-/ja/docs/Web/Guide/HTML/Canvas_tutorial/Hit_regions_and_accessibility	/ja/docs/orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
+/ja/docs/Web/Guide/HTML/Canvas_tutorial/Hit_regions_and_accessibility	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/ja/docs/Web/API/Canvas_API/Tutorial/Transformations
