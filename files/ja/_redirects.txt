@@ -2282,7 +2282,6 @@
 /ja/docs/NPAPI/Constants	/ja/docs/Glossary/Plugin
 /ja/docs/NPAPI:Constants	/ja/docs/Glossary/Plugin
 /ja/docs/Namespace	/ja/docs/Glossary/Namespace
-/ja/docs/New_in_JavaScript_1.8	/ja/docs/orphaned/New_in_JavaScript_1.8
 /ja/docs/Node.isSupported	/ja/docs/Web/API/Node
 /ja/docs/Notable_bugs_fixed_in_Firefox_3	/ja/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 /ja/docs/Notification_object	/ja/docs/Web/API/Notification
