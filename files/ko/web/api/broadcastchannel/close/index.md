@@ -1,5 +1,5 @@
 ---
-title: "BroadcastChannel.close()"
+title: BroadcastChannel.close()
 short-title: close()
 slug: Web/API/BroadcastChannel/close
 page-type: web-api-instance-method
