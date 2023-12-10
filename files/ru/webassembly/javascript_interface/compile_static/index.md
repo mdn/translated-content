@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.compile()
-slug: WebAssembly/JavaScript_interface/compile
+slug: WebAssembly/JavaScript_interface/compile_static
+original_slug: WebAssembly/JavaScript_interface/compile
 ---
 
 {{WebAssemblySidebar}}

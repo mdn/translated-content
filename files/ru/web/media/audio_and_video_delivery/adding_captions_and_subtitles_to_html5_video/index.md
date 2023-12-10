@@ -1,6 +1,9 @@
 ---
 title: Adding captions and subtitles to HTML5 video
-slug: Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+slug: >-
+  Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+original_slug: >-
+  Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
 
 > В других статьях мы рассмотрели как [создать cross browser видео плеер](/en-US/Apps/Build/Manipulating_media/cross_browser_video_player) используя {{ domxref("HTMLMediaElement") }} и {{ domxref("Window.fullScreen") }} APIs, а так-же как [стилизовать плеер](/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics). В этой статье мы возьмём тот же плеер и покажем как добавить подписи и субтитры, используя {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} и {{ htmlelement("track") }} элемент.

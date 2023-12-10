@@ -1,6 +1,7 @@
 ---
 title: Уроки по Web API
-slug: Web/Guide/API
+slug: conflicting/Web/API
+original_slug: Web/Guide/API
 ---
 
 Здесь вы найдёте ссылки на каждое руководство и объяснение каждого API, составляющего архитектуру веб-разработки.

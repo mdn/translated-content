@@ -1663,6 +1663,10 @@
     "modified": "2020-07-16T22:21:32.230Z",
     "contributors": ["8nabo"]
   },
+  "Learn/Forms/User_input_methods": {
+    "modified": "2020-09-02T11:05:36.300Z",
+    "contributors": ["bogpok"]
+  },
   "Learn/Front-end_web_developer": {
     "modified": "2020-10-26T19:26:16.101Z",
     "contributors": ["Villian79", "bogpok", "Menma"]
@@ -7362,10 +7366,6 @@
     "modified": "2020-10-15T22:12:17.873Z",
     "contributors": ["Mitrr", "ShantyHoz"]
   },
-  "Web/API/Window/pageYOffset": {
-    "modified": "2020-10-15T22:28:25.886Z",
-    "contributors": ["anima-dev"]
-  },
   "Web/API/Window/parent": {
     "modified": "2019-03-23T22:52:14.067Z",
     "contributors": ["skip405", "olehrgf"]
@@ -8398,6 +8398,10 @@
   "Web/CSS/CSS_fonts": {
     "modified": "2020-10-10T08:59:00.093Z",
     "contributors": ["StanEffy"]
+  },
+  "Web/CSS/CSS_fonts/WOFF": {
+    "modified": "2020-10-15T22:33:54.379Z",
+    "contributors": ["bogpok"]
   },
   "Web/CSS/CSS_grid_layout": {
     "modified": "2020-04-17T02:22:53.979Z",
@@ -9836,22 +9840,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/API": {
-    "modified": "2019-09-11T09:35:03.457Z",
-    "contributors": ["SphinxKnight", "BychekRU", "Sheppy"]
-  },
-  "Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
-    "modified": "2019-03-18T20:51:42.020Z",
-    "contributors": ["chrisdavidmills", "egorovsa", "faafaafuu"]
-  },
-  "Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges": {
-    "modified": "2019-03-18T20:51:42.284Z",
-    "contributors": ["chrisdavidmills", "makcc666", "BaNru", "wcoder"]
-  },
-  "Web/Guide/Audio_and_video_manipulation": {
-    "modified": "2020-08-20T10:18:57.056Z",
-    "contributors": ["bogpok"]
-  },
   "Web/Guide/CSS/Block_formatting_context": {
     "modified": "2019-10-04T09:05:37.001Z",
     "contributors": [
@@ -9865,37 +9853,9 @@
       "akhabibullina"
     ]
   },
-  "Web/Guide/Graphics": {
-    "modified": "2019-03-23T23:24:59.485Z",
-    "contributors": [
-      "theykillimmortal",
-      "McBurns",
-      "DinarGataullin",
-      "emil4",
-      "Bonerdelli",
-      "uleming",
-      "nedimaon"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2020-02-07T13:05:09.003Z",
     "contributors": ["McBurns", "VDyrda"]
-  },
-  "Web/Guide/Parsing_and_serializing_XML": {
-    "modified": "2020-10-11T12:29:17.772Z",
-    "contributors": ["Akhat", "bogpok"]
-  },
-  "Web/Guide/Performance": {
-    "modified": "2020-08-20T11:16:04.965Z",
-    "contributors": ["bogpok"]
-  },
-  "Web/Guide/User_input_methods": {
-    "modified": "2020-09-02T11:05:36.300Z",
-    "contributors": ["bogpok"]
-  },
-  "Web/Guide/WOFF": {
-    "modified": "2020-10-15T22:33:54.379Z",
-    "contributors": ["bogpok"]
   },
   "Web/HTML": {
     "modified": "2020-05-09T08:33:52.357Z",
@@ -15411,6 +15371,18 @@
     "modified": "2020-12-10T17:21:25.592Z",
     "contributors": ["d0rj", "bsergey", "humantom88"]
   },
+  "Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
+    "modified": "2019-03-18T20:51:42.020Z",
+    "contributors": ["chrisdavidmills", "egorovsa", "faafaafuu"]
+  },
+  "Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges": {
+    "modified": "2019-03-18T20:51:42.284Z",
+    "contributors": ["chrisdavidmills", "makcc666", "BaNru", "wcoder"]
+  },
+  "Web/Media/Audio_and_video_manipulation": {
+    "modified": "2020-08-20T10:18:57.056Z",
+    "contributors": ["bogpok"]
+  },
   "Web/Media/Formats/WebRTC_codecs": {
     "modified": "2020-11-27T19:05:43.474Z",
     "contributors": ["nikolaifedorov", "mechtool"]
@@ -15975,6 +15947,10 @@
   "Web/XML": {
     "modified": "2019-03-24T13:24:33.354Z"
   },
+  "Web/XML/Parsing_and_serializing_XML": {
+    "modified": "2020-10-11T12:29:17.772Z",
+    "contributors": ["Akhat", "bogpok"]
+  },
   "Web/XML/XML_introduction": {
     "modified": "2019-03-25T08:08:08.506Z",
     "contributors": ["boxa6"]
@@ -16017,12 +15993,12 @@
     "modified": "2020-10-15T22:28:03.728Z",
     "contributors": ["amuzalevskiy"]
   },
-  "WebAssembly/JavaScript_interface/compile": {
-    "modified": "2020-10-15T22:05:22.747Z",
+  "WebAssembly/JavaScript_interface/compileStreaming_static": {
+    "modified": "2020-10-15T22:05:24.687Z",
     "contributors": ["warsan"]
   },
-  "WebAssembly/JavaScript_interface/compileStreaming": {
-    "modified": "2020-10-15T22:05:24.687Z",
+  "WebAssembly/JavaScript_interface/compile_static": {
+    "modified": "2020-10-15T22:05:22.747Z",
     "contributors": ["warsan"]
   },
   "WebAssembly/Loading_and_running": {
@@ -16101,6 +16077,18 @@
     "modified": "2019-03-23T22:31:35.056Z",
     "contributors": ["DKas", "TuchaNK"]
   },
+  "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
+    "modified": "2019-03-23T23:24:59.485Z",
+    "contributors": [
+      "theykillimmortal",
+      "McBurns",
+      "DinarGataullin",
+      "emil4",
+      "Bonerdelli",
+      "uleming",
+      "nedimaon"
+    ]
+  },
   "conflicting/Learn/JavaScript/Objects": {
     "modified": "2019-06-04T15:16:30.349Z",
     "contributors": [
@@ -16158,14 +16146,8 @@
     "contributors": ["wbamberg", "CamelFoe"]
   },
   "conflicting/Web/API": {
-    "modified": "2019-03-25T10:51:55.253Z",
-    "contributors": [
-      "boxa6",
-      "andreybakhishev",
-      "wbamberg",
-      "fscholz",
-      "Cyemka"
-    ]
+    "modified": "2019-09-11T09:35:03.457Z",
+    "contributors": ["SphinxKnight", "BychekRU", "Sheppy"]
   },
   "conflicting/Web/API/AbortSignal/abort_event": {
     "modified": "2020-10-15T22:16:51.482Z",
@@ -16347,6 +16329,10 @@
   "conflicting/Web/API/Window/popstate_event": {
     "modified": "2020-10-15T21:34:09.985Z",
     "contributors": ["hisbvdis", "stary71", "alexismaster"]
+  },
+  "conflicting/Web/API/Window/scrollY": {
+    "modified": "2020-10-15T22:28:25.886Z",
+    "contributors": ["anima-dev"]
   },
   "conflicting/Web/API/XMLHttpRequest": {
     "modified": "2019-03-24T00:11:01.706Z",
@@ -16741,6 +16727,10 @@
   "conflicting/Web/Media/Formats": {
     "modified": "2019-03-23T22:40:43.218Z",
     "contributors": ["SedovDP", "a-goodwin", "PPerminov", "MuradAz"]
+  },
+  "conflicting/Web/Performance": {
+    "modified": "2020-08-20T11:16:04.965Z",
+    "contributors": ["bogpok"]
   },
   "conflicting/Web/Progressive_web_apps": {
     "modified": "2019-03-23T23:27:07.759Z",

@@ -1,6 +1,7 @@
 ---
 title: Ввод пользователя и управление
-slug: Web/Guide/User_input_methods
+slug: Learn/Forms/User_input_methods
+original_slug: Web/Guide/User_input_methods
 ---
 
 Это руководство содержит рекомендации по обработке пользовательского ввода
@@ -123,7 +124,7 @@ Here is an example that allows a section of content to be dragged.
 <div
   draggable="true"
   ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-  This text <strong>may</strong> be dragged.  
+  This text <strong>may</strong> be dragged.
 </div>
 ```
 

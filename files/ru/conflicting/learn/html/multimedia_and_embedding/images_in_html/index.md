@@ -1,6 +1,7 @@
 ---
 title: Графика для Web
-slug: Web/Guide/Graphics
+slug: conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+original_slug: Web/Guide/Graphics
 ---
 
 Современным веб-сайтам и веб-приложениям часто требуется отображать графику. Статические изображения легко отобразить с помощью элемента {{HTMLElement("img")}}, или с помощью CSS-свойства {{cssxref("background-image")}}. Часто требуется создавать графику на лету, или модифицировать её каким-либо образом после. Как это проделать можно узнать в следующих статьях.
