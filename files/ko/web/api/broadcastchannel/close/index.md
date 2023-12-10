@@ -2,8 +2,6 @@
 title: BroadcastChannel.close()
 short-title: close()
 slug: Web/API/BroadcastChannel/close
-page-type: web-api-instance-method
-browser-compat: api.BroadcastChannel.close
 ---
 
 {{APIRef("BroadCastChannel API")}}
