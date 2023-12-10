@@ -7,7 +7,7 @@ slug: Web/API/Response
 
 Интерфейс **`Response`** из [Fetch API](/ru/docs/Web/API/Fetch_API) представляет собой ответ на запрос.
 
-Вы можете создать новый экземпляр объекта `Response` используя конструктор {{domxref("Response.Response()")}}, но скорее всего вы столкнётесь с объектом `Response`, как результат какой-нибудь API операции — например, service worker {{domxref("Fetchevent.respondWith")}}, или {{domxref("WindowOrWorkerGlobalScope.fetch()")}}.
+Вы можете создать новый экземпляр объекта `Response` используя конструктор {{domxref("Response.Response()")}}, но скорее всего вы столкнётесь с объектом `Response`, как результат какой-нибудь API операции — например, service worker {{domxref("Fetchevent.respondWith")}}, или {{domxref("fetch()")}}.
 
 ## Конструктор
 

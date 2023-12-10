@@ -7,7 +7,7 @@ slug: Web/CSS/masonry-auto-flow
 
 {{SeeCompatTable}}
 
-**`masonry-auto-flow`** は CSS のプロパティで、[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)において[組積](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)を使用する際のアイテムの配置方法を変更します。
+**`masonry-auto-flow`** は CSS のプロパティで、[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)において[組積](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)を使用する際のアイテムの配置方法を変更します。
 
 ## 構文
 

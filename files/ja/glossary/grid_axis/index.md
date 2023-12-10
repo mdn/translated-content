@@ -23,6 +23,6 @@ CSS では、ブロックもしくは行の軸がテキストのブロックを�
 
 ## 関連情報
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本コンセプト](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトに於けるボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- CSS グリッドレイアウトガイド: _[グリッドと論理的な値と書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)_
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- CSS グリッドレイアウトガイド: _[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)_

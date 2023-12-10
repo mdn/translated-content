@@ -7,19 +7,24 @@
 name: PR Test
 
 on:
-  pull_request:
+  # The `GITHUB_TOKEN` in workflows triggered by the `pull_request_target` event
+  # is granted read/write repository access.
+  # Please pay attention to limit the permissions of each job!
+  # https://docs.github.com/actions/using-jobs/assigning-permissions-to-jobs
+  pull_request_target:
     branches:
       - main
-    paths:
-      - .nvmrc
-      - ".github/workflows/pr-test.yml"
-      - "files/**"
 
 jobs:
   tests:
     # do not run on PRs in forks
     if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
+    # Set the permissions to `read-all`, preventing the workflow from
+    # any accidental write access to the repository.
+    permissions: read-all
+    outputs:
+      has_assets: ${{ steps.build-content.outputs.has_assets }}
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -30,35 +35,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        # Needed otherswise it will check out a merge commit which means
-        # you can't get a `git diff` for this PR compared to its base.
-        # with:
-        #   ref: ${{ github.event.pull_request.head.sha }}
-
-      - uses: actions/checkout@v4
         with:
-          repository: mdn/content
-          path: mdn/content
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: ".nvmrc"
-          cache: "yarn"
-          cache-dependency-path: mdn/content/yarn.lock
-
-      - name: Install all yarn packages
-        working-directory: ${{ github.workspace }}/mdn/content
-        run: |
-          yarn --frozen-lockfile
-        env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ref: "${{ env.HEAD_SHA }}"
 
       - name: Get changed files
         run: |
           # Use the GitHub API to get the list of changed files
-          # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
           DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
@@ -73,7 +56,30 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - uses: actions/checkout@v4
+        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        with:
+          repository: mdn/content
+          path: mdn/content
+
+      - name: Setup Node.js environment
+        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+          cache-dependency-path: mdn/content/yarn.lock
+
+      - name: Install all yarn packages
+        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        working-directory: ${{ github.workspace }}/mdn/content
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build changed content
+        id: build-content
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
@@ -81,7 +87,7 @@ jobs:
 
           # This is so that if there's a single 'unsafe_html' flaw, it
           # completely fails the build.
-          # But all other flaws should be 'warn' so that we can include
+          # But all other flaws should be 'warn', so that we can include
           # information about the flaws when we analyze the built PR.
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
 
@@ -94,7 +100,7 @@ jobs:
           BUILD_LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
           BUILD_LEGACY_LIVE_SAMPLES_BASE_URL: https://live-samples.mdn.allizom.net
 
-          # In these builds we never care for or need the ability to sign in.
+          # In these builds, we never care for or need the ability to sign in.
           # This environment variable will disable that functionality entirely.
           REACT_APP_DISABLE_AUTH: true
 
@@ -112,20 +118,20 @@ jobs:
           # the BUILD_OUT_ROOT and CONTENT_ROOT env vars.
           node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF_CONTENT }}
 
-          echo "Disk usage size of build/"
+          echo "Disk usage size of build"
           du -sh ${{ env.BUILD_OUT_ROOT }}
 
           # Save the PR number into the build
           echo ${{ github.event.number }} > ${{ env.BUILD_OUT_ROOT }}/NR
 
-      - name: Download the diff file
-        if: ${{ env.GIT_DIFF_CONTENT }}
-        run: |
-          # Save the raw diff blob and store that inside the ./build/
+          # Download the raw diff blob and store that inside the build
           # directory.
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O ${{ env.BUILD_OUT_ROOT }}/DIFF
+
+          # Set the output variable so the next job could skip if there are no assets
+          echo "has_assets=true" >> "$GITHUB_OUTPUT"
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
@@ -151,3 +157,13 @@ jobs:
           echo ${{ env.GIT_DIFF_FILES }}
 
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
+
+  review:
+    needs: tests
+    if: ${{ needs.tests.outputs.has_assets }}
+    # write permissions are required to create a comment in the corresponding PR
+    permissions: write-all
+    uses: ./.github/workflows/pr-review-companion.yml
+    # inherit the secrets from the parent workflow
+    # https://docs.github.com/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
+    secrets: inherit

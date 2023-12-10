@@ -7,7 +7,7 @@ slug: Web/CSS/align-tracks
 
 {{SeeCompatTable}}
 
-**`align-tracks`** は CSS のプロパティで、ブロック軸が[組積](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)であるグリッドコンテナーの組積軸の配置を設定します。
+**`align-tracks`** は CSS のプロパティで、ブロック軸が[組積](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)であるグリッドコンテナーの組積軸の配置を設定します。
 
 ## 構文
 

@@ -68,5 +68,5 @@ l10n:
 
 ### 参考資料
 
-- CSS グリッドレイアウトガイド: [グリッドレイアウトの基本コンセプト](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- CSS グリッドレイアウトガイド: [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS グリッドレイアウト仕様におけるグリッドセルの定義](https://drafts.csswg.org/css-grid/#grid-track-concept)

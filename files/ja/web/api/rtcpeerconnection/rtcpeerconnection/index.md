@@ -104,8 +104,6 @@ new RTCPeerConnection(configuration);
 
 資格情報を提供しない場合、新しい資格情報が自動的に生成されます。自分で資格情報を用意することの明らかな利点は、 ID キーの継続性です。次回以降の呼び出しに同じ資格情報を使用すると、リモートピアーは同じ呼び出し元であることを指示することができます。また、新しい鍵を生成するコストもかかりません。
 
-**<<<--- add link to information about identity --->>>**
-
 ## 仕様書
 
 {{Specifications}}
