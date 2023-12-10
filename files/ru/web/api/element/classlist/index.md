@@ -1,6 +1,8 @@
 ---
 title: "Element: свойство classList"
 slug: Web/API/Element/classList
+l10n:
+  sourceCommit: 1b22d649b27f7b9359388cb57fc0075559e32584
 ---
 
 {{APIRef("DOM")}}
