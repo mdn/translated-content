@@ -1,6 +1,7 @@
 ---
 title: Обработка аудио и видео
-slug: Web/Guide/Audio_and_video_manipulation
+slug: Web/Media/Audio_and_video_manipulation
+original_slug: Web/Guide/Audio_and_video_manipulation
 ---
 
 Веб-технологии примечательны тем, что они позволяют использовать различные инструменты в совокупности. Например, можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmlelement("canvas")}}, [WebGL](/ru/docs/Web/WebGL) или [Web Audio API](/ru/docs/Web/API/Web_Audio_API): напрямую изменять аудио и видео, т.е. добавлять эффекты к аудио (реверберацию, компрессор), или к видео (фильтры ч/б, сепия и т.д.). В этой статье рассказывается о том, как это сделать.

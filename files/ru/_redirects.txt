@@ -502,6 +502,7 @@
 /ru/docs/Web/API/Window/ondeviceorientation	/ru/docs/conflicting/Web/API/Window/deviceorientation_event
 /ru/docs/Web/API/Window/ongamepadconnected	/ru/docs/conflicting/Web/API/Window/gamepadconnected_event
 /ru/docs/Web/API/Window/ongamepaddisconnected	/ru/docs/conflicting/Web/API/Window/gamepaddisconnected_event
+/ru/docs/Web/API/Window/pageYOffset	/ru/docs/conflicting/Web/API/Window/scrollY
 /ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
 /ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
@@ -545,8 +546,8 @@
 /ru/docs/Web/API/document.querySelector	/ru/docs/Web/API/Document/querySelector
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
-/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
-/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
+/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 /ru/docs/Web/CSS/:-moz-focusring	/ru/docs/Web/CSS/:focus-visible
 /ru/docs/Web/CSS/:blank	/ru/docs/Web/CSS/:-moz-only-whitespace
 /ru/docs/Web/CSS/:host()	/ru/docs/Web/CSS/:host_function
@@ -654,6 +655,10 @@
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
 /ru/docs/Web/Guide/AJAX	/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/ru/docs/Web/Guide/API	/ru/docs/conflicting/Web/API
+/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
+/ru/docs/Web/Guide/Audio_and_video_manipulation	/ru/docs/Web/Media/Audio_and_video_manipulation
 /ru/docs/Web/Guide/CSS/Getting_started/SVG_и_CSS	/ru/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ru/docs/Web/Guide/CSS/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ru/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
@@ -661,6 +666,7 @@
 /ru/docs/Web/Guide/CSS/Using_multi-column_layouts	/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ru/docs/Web/Guide/CSS/Visual_formatting_model	/ru/docs/Web/CSS/Visual_formatting_model
 /ru/docs/Web/Guide/CSS/ispolzovanie_css_animatciy	/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations
+/ru/docs/Web/Guide/Graphics	/ru/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /ru/docs/Web/Guide/HTML	/ru/docs/Learn/HTML
 /ru/docs/Web/Guide/HTML/Canvas_tutorial	/ru/docs/Web/API/Canvas_API/Tutorial
 /ru/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage	/ru/docs/Web/API/Canvas_API/Tutorial/Basic_usage
@@ -675,8 +681,12 @@
 /ru/docs/Web/Guide/HTML/Introduction	/ru/docs/Learn/HTML/Introduction_to_HTML
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn/HTML/Howto/Use_data_attributes
-/ru/docs/Web/Guide/Графика	/ru/docs/Web/Guide/Graphics
-/ru/docs/Web/Guide/Производительность	/ru/docs/Web/Guide/Performance
+/ru/docs/Web/Guide/Parsing_and_serializing_XML	/ru/docs/Web/XML/Parsing_and_serializing_XML
+/ru/docs/Web/Guide/Performance	/ru/docs/conflicting/Web/Performance
+/ru/docs/Web/Guide/User_input_methods	/ru/docs/Learn/Forms/User_input_methods
+/ru/docs/Web/Guide/WOFF	/ru/docs/Web/CSS/CSS_fonts/WOFF
+/ru/docs/Web/Guide/Графика	/ru/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+/ru/docs/Web/Guide/Производительность	/ru/docs/conflicting/Web/Performance
 /ru/docs/Web/HTML/Applying_color	/ru/docs/Web/CSS/CSS_colors/Applying_color
 /ru/docs/Web/HTML/Block-level_elements	/ru/docs/Glossary/Block-level_content
 /ru/docs/Web/HTML/CORS_settings_attributes	/ru/docs/Web/HTML/Attributes/crossorigin
@@ -817,8 +827,8 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/ru/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/ru/docs/WebAssembly/JavaScript_interface
 /ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table	/ru/docs/WebAssembly/JavaScript_interface/Table
-/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile	/ru/docs/WebAssembly/JavaScript_interface/compile
-/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming	/ru/docs/WebAssembly/JavaScript_interface/compileStreaming
+/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile	/ru/docs/WebAssembly/JavaScript_interface/compile_static
+/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming	/ru/docs/WebAssembly/JavaScript_interface/compileStreaming_static
 /ru/docs/Web/JavaScript/Reference/Global_Objects/null	/ru/docs/Web/JavaScript/Reference/Operators/null
 /ru/docs/Web/JavaScript/Reference/Global_Objects/uneval	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects
 /ru/docs/Web/JavaScript/Reference/Methods_Index	/ru/docs/Web/JavaScript/Reference
@@ -913,6 +923,8 @@
 /ru/docs/Web/Web_Components/Using_custom_elements	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
+/ru/docs/WebAssembly/JavaScript_interface/compile	/ru/docs/WebAssembly/JavaScript_interface/compile_static
+/ru/docs/WebAssembly/JavaScript_interface/compileStreaming	/ru/docs/WebAssembly/JavaScript_interface/compileStreaming_static
 /ru/docs/WebGL	/ru/docs/Web/API/WebGL_API
 /ru/docs/WebGL/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ru/docs/WebSockets	/ru/docs/Web/API/WebSockets_API
