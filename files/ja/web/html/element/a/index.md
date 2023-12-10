@@ -474,7 +474,7 @@ document
       <td>
         <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> （<code>href</code> 属性がある場合）、
         それ以外は
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
