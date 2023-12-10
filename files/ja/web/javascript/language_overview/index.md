@@ -185,7 +185,7 @@ console.log(obj); // { a: 1 }
 
 値を割り当てずに変数を宣言した場合、その値は `undefined` となります。初期化子なしで `const` 変数を宣言することはできません。
 
-let` と `const` で宣言された変数は、定義したスコープ全体で存在しますが、実際の宣言行の前には[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン)と呼ばれる領域で存在します。これは他の言語には見られない、変数の影ともいえる興味深い作用が発生します。
+`let` と `const` で宣言された変数は、定義したスコープ全体で存在しますが、実際の宣言行の前には[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン)と呼ばれる領域で存在します。これは他の言語には見られない、変数の影ともいえる興味深い作用が発生します。
 
 ```js
 function foo(x, condition) {
