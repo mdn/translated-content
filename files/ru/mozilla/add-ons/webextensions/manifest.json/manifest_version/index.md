@@ -17,19 +17,19 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
     </tr>
     <tr>
       <th scope="row">Пример</th>
-      <td><pre class="brush: json">"manifest_version": 2</pre></td>
+      <td><pre class="brush: json">"manifest_version": 3</pre></td>
     </tr>
   </tbody>
 </table>
 
 Этот ключ определяет версию файла "manifest.json", использующуюся в этом дополнении.
 
-В настоящее время всегда должен быть 2
+В настоящее время всегда должен быть 3
 
 ## Пример
 
 ```json
-"manifest_version": 2
+"manifest_version": 3
 ```
 
 ## Совместимость с браузерами
