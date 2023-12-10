@@ -115,6 +115,6 @@ async function computeOutlineFormat() {
 
 ## 参见
 
-- [使用带有本地字体的高级排版](https://developer.chrome.com/articles/local-fonts/)
+- [使用带有本地字体的高级排版](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}
 - {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)指令
