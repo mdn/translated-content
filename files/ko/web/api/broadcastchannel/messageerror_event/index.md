@@ -80,4 +80,4 @@ channel.onmessageerror = (event) => {
 
 ## 같이 보기
 
-- 연관된 이벤트: [`message`](/en-US/docs/Web/API/BroadcastChannel/message_event)
+- 연관된 이벤트: [`message`](/ko/docs/Web/API/BroadcastChannel/message_event)
