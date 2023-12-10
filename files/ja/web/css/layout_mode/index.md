@@ -13,7 +13,7 @@ slug: Web/CSS/Layout_mode
 - [_位置指定レイアウト_](/ja/docs/Web/CSS/CSS_Positioning)は、他要素とほとんど相互作用のない位置指定要素のためのものです。
 - [_段組みレイアウト_](/ja/docs/Web/CSS/CSS_Columns)は、新聞のように複数の段でコンテンツをレイアウトするためのものです。
 - [_フレックスボックスレイアウト_](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)は、滑らかに大きさが変更できる複雑なページのレイアウトに使われます。
-- [_グリッドレイアウト_](/ja/docs/Web/CSS/CSS_Grid_Layout)は、固定グリッドを基準にした要素配置に使われます。
+- [_グリッドレイアウト_](/ja/docs/Web/CSS/CSS_grid_layout)は、固定グリッドを基準にした要素配置に使われます。
 
 > **メモ:** レイアウトモードによって、使える [CSS プロパティ](/ja/docs/Web/CSS/Reference)に制限があります。多くは 1 つか 2 つのレイアウトモードで用いられ、別のレイアウトモードに関わる要素に設定しても効果がありません。
 

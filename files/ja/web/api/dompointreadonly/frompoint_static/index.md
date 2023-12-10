@@ -44,7 +44,7 @@ fromPoint(sourcePoint);
 const point2D = DOMPointReadOnly.fromPoint({ x: 25, y: 25 });
 ```
 
-### 既存の点を使用して三次元の点を作成します。
+### 既存の点を使用して三次元の点を作成します
 
 この例では、 {{domxref("DOMPoint")}} を用いて、 {{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}} 型の点 `origPoint` を作成しています。そして、その点は `fromPoint()` の入力として使用され、新しい点 `newPoint` を作成します。
 

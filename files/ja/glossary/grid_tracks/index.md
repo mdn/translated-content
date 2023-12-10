@@ -66,7 +66,7 @@ l10n:
 
 ## 関連情報
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS グリッドレイアウト仕様書におけるグリッドトラックの定義](https://drafts.csswg.org/css-grid/#grid-track-concept)
 - プロパティリファレンス
 

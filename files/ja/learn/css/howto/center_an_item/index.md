@@ -11,7 +11,7 @@ l10n:
 
 ## ボックスの中央揃え
 
-CSS を使用して、あるボックスを別のボックスの中に配置するには、親コンテナーで [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)プロパティを使用する必要があります。これらの配置プロパティは、ブロックやインラインレイアウトにおいてはブラウザーがまだ対応していないので、配置を使用する機能を有効にするためには、親コンテナーを[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)または[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)にする必要があります。
+CSS を使用して、あるボックスを別のボックスの中に配置するには、親コンテナーで [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)プロパティを使用する必要があります。これらの配置プロパティは、ブロックやインラインレイアウトにおいてはブラウザーがまだ対応していないので、配置を使用する機能を有効にするためには、親コンテナーを[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)または[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)にする必要があります。
 
 下記の例では、親コンテナーに `display: flex` を指定し、水平方向に配置するために {{cssxref("justify-content")}} を center に、垂直方向に配置するために {{cssxref("align-items")}} を center に設定しています。
 

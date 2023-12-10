@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**Grid 線**は [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)を用いて明示的グリッドとして {{glossary("Grid tracks", "トラック")}} を定義すると作成されます。
+**Grid 線**は [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)を用いて明示的グリッドとして {{glossary("Grid tracks", "トラック")}} を定義すると作成されます。
 
 ## 例
 
@@ -175,8 +175,8 @@ l10n:
 
 ### より詳しい説明
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本コンセプト](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- CSS グリッドレイアウトガイド: _[線指定による CSS グリッド位置指定](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- CSS グリッドレイアウトガイド: _[名前付きグリッド線によるレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)_
-- CSS グリッドレイアウトガイド: _[CSS グリッドと論理的な値と書字方向](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)_
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- CSS グリッドレイアウトガイド: _[線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- CSS グリッドレイアウトガイド: _[名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)_
+- CSS グリッドレイアウトガイド: _[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)_
 - [CSS グリッドレイアウト仕様におけるグリッド線の定義](https://drafts.csswg.org/css-grid/#grid-line-concept)

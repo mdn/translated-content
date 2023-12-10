@@ -2300,7 +2300,7 @@
 /ja/docs/Offline_resources_in_Firefox/Using_audio_and_video_in_Firefox	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Online_and_offline_events	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
-/ja/docs/Parsing_and_serializing_XML	/ja/docs/Web/Guide/Parsing_and_serializing_XML
+/ja/docs/Parsing_and_serializing_XML	/ja/docs/Web/XML/Parsing_and_serializing_XML
 /ja/docs/Plugins/Guide/Constants	/ja/docs/Glossary/Plugin
 /ja/docs/Property_compatibility_table_for_form_widgets	/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /ja/docs/Quirks_Mode_and_Standards_Mode	/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
@@ -3977,10 +3977,12 @@
 /ja/docs/Web/Guide/Introduction_to_Web_development	/ja/docs/Learn
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ja/docs/Web/Guide/Mobile/Separate_sites	/ja/docs/Web/Progressive_web_apps
+/ja/docs/Web/Guide/Parsing_and_serializing_XML	/ja/docs/Web/XML/Parsing_and_serializing_XML
 /ja/docs/Web/Guide/Performance	/ja/docs/Web/Performance
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/Printing	/ja/docs/Web/CSS/CSS_media_queries/Printing
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
+/ja/docs/Web/Guide/User_input_methods	/ja/docs/Learn/Forms/User_input_methods
 /ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /ja/docs/Web/Guide/WOFF	/ja/docs/Web/CSS/CSS_fonts/WOFF
 /ja/docs/Web/Guide/Writing_forward-compatible_websites	/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
