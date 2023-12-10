@@ -7,7 +7,7 @@ browser-compat: api.BroadcastChannel
 
 {{APIRef("Broadcast Channel API")}}
 
-**`BroadcastChannel`** 인터페이스는 지정된 {{glossary("origin", "출처")}}의 모든 {{glossary("browsing context", "브라우징 맥락들")}}이 구독할 수 있는 명명된 채널을 나타냅니다. 이 인터페이스를 사용해 동일한 출처의 서로 다른 문서(창, 탭, 프레임 또는 iframe)간에 통신할 수 있습니다. 메시지는 메시지를 전송한 객체를 제외하고, 채널을 수신하는 모든 `BroadcastChannel` 객체에서 실행되는 {{domxref("BroadcastChannel/message_event", "message")}} 이벤트를 통해 전달됩니다. 
+**`BroadcastChannel`** 인터페이스는 지정된 {{glossary("origin", "출처")}}의 모든 {{glossary("browsing context", "브라우징 맥락들")}}이 구독할 수 있는 명명된 채널을 나타냅니다. 이 인터페이스를 사용해 동일한 출처의 서로 다른 문서(창, 탭, 프레임 또는 iframe)간에 통신할 수 있습니다. 메시지는 메시지를 전송한 객체를 제외하고, 채널을 수신하는 모든 `BroadcastChannel` 객체에서 실행되는 {{domxref("BroadcastChannel/message_event", "message")}} 이벤트를 통해 전달됩니다.
 
 {{AvailableInWorkers}}
 
