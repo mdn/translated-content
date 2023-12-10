@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
-{{domxref("FontData")}} 接口的 **`blob()`** 方法返回一个兑现包含底层字体文件的原始字节的 {{domxref("Blob")}} 的 {{jsxref("Promise")}}。
+{{domxref("FontData")}} 接口的 **`blob()`** 方法返回一个会兑现包含底层字体文件的原始字节的 {{domxref("Blob")}} 的 {{jsxref("Promise")}}。
 
 ## 语法
 
@@ -21,11 +21,11 @@ blob()
 
 ### 返回值
 
-一个兑现包含底层字体文件的原始字节的 {{domxref("Blob")}} 的 {{jsxref("Promise")}}。
+一个会兑现包含底层字体文件的原始字节的 {{domxref("Blob")}} 的 {{jsxref("Promise")}}。
 
 ## 示例
 
-{{domxref("FontData.blob", "blob()")}} 方法提供对底层 [SFNT](https://zh.wikipedia.org/wiki/SFNT) 数据的访问——这是一种可以包含其他字体格式的字体文件格式，例如 PostScript、TrueType、OpenType 或 Web 开放字体格式（WOFF）。
+`blob()` 方法提供对底层 [SFNT](https://zh.wikipedia.org/wiki/SFNT) 数据的访问——这是一种可以包含其他字体格式的字体文件格式，例如 PostScript、TrueType、OpenType 或 Web 开放字体格式（WOFF）。
 
 ```js
 async function computeOutlineFormat() {
