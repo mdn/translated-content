@@ -42,7 +42,7 @@ onmessageerror = (event) => { }
 
 ## 예제
 
-이 코드는 메시지와 에러를 수신하기 위해 [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener)를 사용합니다.
+이 코드는 메시지와 에러를 수신하기 위해 [`addEventListener`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용합니다.
 
 ```js
 const channel = new BroadcastChannel("example-channel");
