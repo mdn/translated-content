@@ -2,8 +2,6 @@
 title: BroadcastChannel()
 short-title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
-page-type: web-api-constructor
-browser-compat: api.BroadcastChannel.BroadcastChannel
 ---
 
 {{APIRef("BroadCastChannel API")}}
