@@ -1,8 +1,6 @@
 ---
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
-page-type: web-api-interface
-browser-compat: api.BroadcastChannel
 ---
 
 {{APIRef("Broadcast Channel API")}}
