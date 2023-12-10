@@ -781,6 +781,7 @@
 /pt-BR/docs/Web/Guide/HTML/Using_data_attributes	/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes
 /pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/conflicting/Learn_680f0a64719ec97f557d9b1ef1710826
 /pt-BR/docs/Web/Guide/Introduction_to_Web_development	/pt-BR/docs/conflicting/Learn_680f0a64719ec97f557d9b1ef1710826
+/pt-BR/docs/Web/Guide/Performance	/pt-BR/docs/Web/Performance
 /pt-BR/docs/Web/Guide/Printing	/pt-BR/docs/Web/CSS/CSS_media_queries/Printing
 /pt-BR/docs/Web/HTML/Applying_color	/pt-BR/docs/Web/CSS/CSS_colors/Applying_color
 /pt-BR/docs/Web/HTML/Block-level_elements	/pt-BR/docs/Glossary/Block-level_content
