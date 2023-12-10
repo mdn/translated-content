@@ -8,7 +8,6 @@ browser-compat: api.BroadcastChannel.BroadcastChannel
 
 {{APIRef("BroadCastChannel API")}}
 
-
 **`BroadcastChannel()`** 생성자는 새 {{domxref("BroadcastChannel")}}을 생성하고 이를 채널에 연결합니다.
 
 {{AvailableInWorkers}}
