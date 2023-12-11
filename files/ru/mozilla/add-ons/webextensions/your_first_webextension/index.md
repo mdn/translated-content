@@ -1,6 +1,8 @@
 ---
 title: Ваше первое расширение
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+l10n:
+  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
 {{AddonSidebar}}
