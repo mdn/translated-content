@@ -17,7 +17,7 @@ l10n:
 
 ### 使用 growable
 
-在这个示例中，我们创建一个 8 字节缓冲区，该缓冲区可调整大小到的最大长度是 16 字节，然后检查其 {{jsxref("SharedArrayBuffer/growable", "growable")}} 属性，如果 `growable` 返回 `true`，则增大它：
+在这个示例中，我们创建一个 8 字节缓冲区，该缓冲区可调整大小到的最大长度是 16 字节，然后检查其 `growable` 属性，如果 `growable` 返回 `true`，则增大它：
 
 ```js
 const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });

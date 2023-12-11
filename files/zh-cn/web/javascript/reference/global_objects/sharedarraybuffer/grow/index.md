@@ -33,7 +33,7 @@ grow(newLength)
 
 ## 描述
 
-`grow()` 方将 `SharedArrayBuffer` 增大到 `newLength` 参数指定的大小，前提是 `SharedArrayBuffer` 是[可调整大小的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable)，并且新的大小小于等于当前 `SharedArrayBuffer` 的 {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}}。新字节被初始化为 0。
+`grow()` 方将 `SharedArrayBuffer` 增大到 `newLength` 参数指定的大小，前提是 `SharedArrayBuffer` 是[可增大的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable)，并且新的大小小于等于当前 `SharedArrayBuffer` 的 {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}}。新字节被初始化为 0。
 
 ## 示例
 
