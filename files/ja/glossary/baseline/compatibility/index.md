@@ -1,5 +1,5 @@
 ---
-title: Baseline (compatibility)
+title: Baseline (互換性)
 slug: Glossary/Baseline/Compatibility
 l10n:
   sourceCommit: d14b5a927958ec1ab9737f2f9fce0761a4c95c75
