@@ -27,6 +27,8 @@ text-emphasis-postition: revert;
 text-emphasis-position: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
+
 ## 構文
 
 ### 値

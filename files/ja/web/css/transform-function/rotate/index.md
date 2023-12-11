@@ -7,6 +7,8 @@ slug: Web/CSS/transform-function/rotate
 
 **`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
+{{EmbedInteractiveExample("pages/css/function-rotate.html")}}
+
 要素が回転する中心となる特定の点 — 前述 — は、**変形原点**とも呼ばれます。既定では要素の中央ですが、 {{ cssxref("transform-origin") }} プロパティを使用して独自の変形原点を設定することができます。
 
 ## 構文

@@ -7,6 +7,8 @@ slug: Web/CSS/scroll-margin-inline
 
 `scroll-margin-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、インライン方向のスクロールマージンを設定します。
 
+{{EmbedInteractiveExample("pages/css/scroll-margin-inline.html")}}
+
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。

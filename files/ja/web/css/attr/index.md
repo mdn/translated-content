@@ -26,6 +26,8 @@ attr(data-width px, inherit);
 attr(data-something, "default");
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
+
 ## 構文
 
 ### 値

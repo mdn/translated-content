@@ -13,6 +13,8 @@ slug: Web/CSS/@layer
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+
 ## 構文
 
 `@layer` アットルールは、 3 つの方法のうちの 1 つでカスケードレイヤーを作成するために使用されます。 1 つ目は、上記の例のように、そのレイヤーの CSS ルールを内部に持つブロックのアットルールを作成する方法です。

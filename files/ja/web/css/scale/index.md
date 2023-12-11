@@ -32,6 +32,8 @@ scale: revert;
 scale: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/scale.html")}}
+
 ### 値
 
 - 1 つの数値

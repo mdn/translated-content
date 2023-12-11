@@ -14,6 +14,8 @@ input:valid {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-valid.html", "tabbed-shorter")}}
+
 この擬似クラスは、入力値が正しい入力欄をユーザーに強調表示するのに便利です。
 
 ## 構文

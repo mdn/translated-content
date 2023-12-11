@@ -19,6 +19,8 @@ slug: Web/CSS/:host_function
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host_function.html", "tabbed-shorter")}}
+
 ## 構文
 
 ```

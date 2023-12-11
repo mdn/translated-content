@@ -29,6 +29,8 @@ inset: revert;
 inset: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/inset.html")}}
+
 ## 構文
 
 ### 値
