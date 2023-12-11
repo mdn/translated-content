@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("BroadCastChannel API")}}
 
-**`BroadcastChannel.postMessage()`** 는 모든 종류의 {{jsxref("Object")}}가 될 수 있는 메세지를 동일한 {{glossary("origin", "출처")}}를 가진 모든 {{glossary("browsing context", "브라우징 맥락")}}의 각 처리기에게 보냅니다. 메세지는 채널에 바인딩된 각 {{domxref("BroadcastChannel")}}을 대상으로 하는 ['message'](/ko/docs/Web/API/BroadcastChannel/message_event) 이벤트로 전송됩니다.
+**`BroadcastChannel.postMessage()`** 는 모든 종류의 {{jsxref("Object")}}가 될 수 있는 메세지를 동일한 {{glossary("origin", "출처")}}를 가진 모든 {{glossary("browsing context", "브라우징 맥락")}}의 각 수신기에 보냅니다. 메세지는 채널에 바인딩된 각 {{domxref("BroadcastChannel")}}을 대상으로 하는 ['message'](/ko/docs/Web/API/BroadcastChannel/message_event) 이벤트로 전송됩니다.
 
 {{AvailableInWorkers}}
 
