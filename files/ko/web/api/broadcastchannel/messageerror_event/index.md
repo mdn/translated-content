@@ -2,6 +2,8 @@
 title: "BroadcastChannel: messageerror event"
 short-title: messageerror
 slug: Web/API/BroadcastChannel/messageerror_event
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}

@@ -2,6 +2,8 @@
 title: BroadcastChannel.close()
 short-title: close()
 slug: Web/API/BroadcastChannel/close
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("BroadCastChannel API")}}

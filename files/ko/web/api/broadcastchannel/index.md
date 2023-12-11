@@ -1,6 +1,8 @@
 ---
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
+l10n:
+  sourceCommit: 15d7838061736509d08d642611bd26c1251c0500
 ---
 
 {{APIRef("Broadcast Channel API")}}

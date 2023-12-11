@@ -2,6 +2,8 @@
 title: "BroadcastChannel: message event"
 short-title: message
 slug: Web/API/BroadcastChannel/message_event
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}

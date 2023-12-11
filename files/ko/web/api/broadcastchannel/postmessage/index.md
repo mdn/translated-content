@@ -2,6 +2,8 @@
 title: BroadcastChannel.postMessage()
 short-title: postMessage()
 slug: Web/API/BroadcastChannel/postMessage
+l10n:
+  sourceCommit: f7c2472a909cdfbc490f790e8f5f493b04238c2e
 ---
 
 {{APIRef("BroadCastChannel API")}}
