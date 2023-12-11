@@ -9,7 +9,7 @@ l10n:
 
 本文主要介绍 HTML 中使用 CSS 颜色的各种方法。
 
-色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element) 添加颜色，以创建所需的外观。
+色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element)添加颜色，以创建所需的外观。
 
 我们将会谈及添加颜色所需要的大部分内容，包括[一系列可以着色的元素与相关的 CSS 属性](#可设置颜色的内容)，[如何描述颜色](#如何描述颜色)，以及[在样式表与脚本中使用颜色的方法](#使用颜色)。同时我们还会了解如何[让用户选择颜色](#让用户选择颜色)。
 
@@ -64,7 +64,7 @@ l10n:
 - {{cssxref("border-block-start-color")}} 和 {{cssxref("border-block-end-color")}}
   - : 通过这些属性，你可以设置用于绘制边框的颜色，这些颜色最靠近边框所包围的区块的起始和结束位置。在从左到右的书写模式下（如英文的书写方式），块向的起始边框是上边缘，结束边框是下边缘。这与行向开始和结束不同，行向开始和结束是左右边缘（对应于方框中每行文本的开始和结束位置）。
 - {{cssxref("border-inline-start-color")}} 和 {{cssxref("border-inline-end-color")}}
-  - : 通过这些选项，您可以为最靠近方框内文本行开头和结尾的边框边缘着色。至于是哪一边，取决于 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性，它们通常（但不总是）用于根据显示语言调整文本方向。例如，如果盒子的文本是从右到左显示的，那么 `border-inline-start-color` 就会应用到边框的右侧。
+  - : 通过这些选项，你可以为最靠近方框内文本行开头和结尾的边框边缘着色。至于是哪一边，取决于 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性，它们通常（但不总是）用于根据显示语言调整文本方向。例如，如果盒子的文本是从右到左显示的，那么 `border-inline-start-color` 就会应用到边框的右侧。
 
 ### 其他使用颜色的方式
 
