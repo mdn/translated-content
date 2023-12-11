@@ -409,12 +409,12 @@ l10n:
 }
 ```
 
-```html
+```html-nolint
 <div class="media flipped">
   <div class="image"></div>
   <div class="text">
-    これはメディアオブジェクトの例です。 grid-template-areas
-    を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
+    これはメディアオブジェクトの例です。
+    grid-template-areas を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
   </div>
 </div>
 ```
