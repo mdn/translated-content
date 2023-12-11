@@ -15,7 +15,7 @@ l10n:
 
 웹이 발전함에 따라 사용자에게 보내지는 에셋의 수와 크기가 크게 증가했습니다. 2011년과 2019년 사이에 리소스 무게의 중앙값은 데스크톱의 경우 **\~100KB** 에서 **\~400KB**로, 모바일의 경우 **\~50KB**에서 **\~350KB**로 증가했습니다. 반면 이미지 크기는 테스크톱의 경우 **\~250KB** 에서 **\~900KB**로, 모바일의 경우 **\~100KB** 에서 **\~850KB**로 증가했습니다.
 
-이 문제를 해결하기 위해 사용할 수 있는 방법 중 하나는 첫 번째 렌더링이 발생하는데 중요하지 않은 리소스를 지연 로딩하여 [중요 렌더링 경로](/ko/docs/Web/Performance/Critical_rendering_path) 길이를 단축시키는 것입니다. 실제적인 예제로는 카트 페이지/섹션으로 연결하는 링크가 있는 전자 상거래 사이트의 홈페이지에 방문했을 때 **해당 페이지로 이동할 때까지** 카트 페이지의 리소스(예를 들어 JavaScript, CSS, 이미지)가 다운로드되지 않는 경우를 들 수 있습니다.
+이 문제를 해결하기 위해 사용할 수 있는 방법 중 하나는 첫 번째 렌더링이 발생하는데 중요하지 않은 리소스를 지연 로딩하여 [중요 렌더링 경로](/ko/docs/Web/Performance/Critical_rendering_path) 길이를 단축시키는 것입니다. 실제적인 예제로는 장바구니 페이지/섹션으로 연결하는 링크가 있는 전자 상거래 사이트의 홈페이지에 방문했을 때, **해당 페이지로 이동할 때까지** 장바구니 페이지의 리소스(예를 들어 JavaScript, CSS, 이미지)가 다운로드되지 않는 경우를 들 수 있습니다.
 
 ## 전략
 
@@ -54,7 +54,7 @@ JavaScript, CSS, HTML을 더 작은 덩어리로 분할할 수 있습니다. 이
 
 기본 동작을 재정의하고 `<link rel="preload">`, [CSS 폰트 표시 속성](/ko/docs/Web/CSS/@font-face/font-display) 및 [폰트 로딩 API](/ko/docs/Web/API/CSS_Font_Loading_API)를 사용하여 웹 폰트 리소스를 미리 로드할 수 있습니다.
 
-같이 보기: [[Element Link](/ko/docs/Web/HTML/Element/link)]
+같이 보기: [Element Link](/ko/docs/Web/HTML/Element/link)
 
 ### 이미지 및 iframes
 
@@ -77,12 +77,12 @@ JavaScript, CSS, HTML을 더 작은 덩어리로 분할할 수 있습니다. 이
 
 [Intersection Observers](/ko/docs/Web/API/IntersectionObserver)는 관찰된 요소가 브라우저의 뷰포트에 들어오고 나가는 시점을 사용자가 알 수 있도록 해줍니다.
 
-#### 이벤트 핸들러
+#### 이벤트 처리기
 
 브라우저 호환성이 중요한 경우 몇 가지 옵션이 있습니다.
 
 - [polyfill intersection observer](https://github.com/w3c/IntersectionObserver)
-- 특정 요소가 뷰포트에 있는지 확인하기 위해 스크롤, 크기 조정 또는 방향 변경 이벤트 핸들러로 대체합니다.
+- 특정 요소가 뷰포트에 있는지 확인하기 위해 스크롤, 크기 조정 또는 방향 변경 이벤트 처리기로 대체합니다.
 
 ## 명세서
 
