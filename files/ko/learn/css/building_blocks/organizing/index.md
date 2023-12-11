@@ -329,19 +329,19 @@ BEM은 대규모 웹 프로젝트에서 널리 사용되며, 많은 사람들이
 
 CSS Tricks에서 [BEM 101](https://css-tricks.com/bem-101/) 이 시스템에 대해 더 자세히 알아보세요.
 
-#### Other common systems
+#### 그 밖의 일반적인 시스템들
 
-There are a large number of these systems in use. Other popular approaches include [Scalable and Modular Architecture for CSS (SMACSS)](http://smacss.com/), created by Jonathan Snook, [ITCSS](https://itcss.io/) from Harry Roberts, and [Atomic CSS (ACSS)](https://acss.io/), originally created by Yahoo!. If you come across a project that uses one of these approaches, then the advantage is that you will be able to search and find many articles and guides to help you understand how to code in the same style.
+많은 수의 이 시스템들이 사용되고 있습니다. 다른 유명한 접근법으로는 Jonathan Snook가 만든 [확장 가능 및 모듈식 구조의(Scalable and Modular Architecture for) CSS(SMACSS)](http://smacss.com/), Harry Roberts의 [ITCSS](https://itcss.io/), 그리고 원래 야후가 만든 [Atomic CSS(ACSS)](https://acss.io/)가 있습니다. 이러한 접근법 중 하나를 사용하는 프로젝트를 만나게 되면, 많은 글과 안내서를 검색하여 같은 스타일로 코딩하는 방법을 이해하는 데 도움을 받을 수 있다는 장점이 있습니다.
 
-The disadvantage of using such a system is that they can seem overly complex, especially for smaller projects.
+하지만 특히 소규모 프로젝트들에서 이러한 시스템을 사용하면 과도하게 복잡해 보일 수 있다는 단점이 있습니다.
 
-### Build systems for CSS
+### CSS를 위한 시스템 구성하기
 
-Another way to organize CSS is to take advantage of some of the tooling that is available for front-end developers, which allows you to take a slightly more programmatic approach to writing CSS. There are a number of tools, which we refer to as _pre-processors_ and _post-processors_. A pre-processor runs over your raw files and turns them into a stylesheet, whereas a post-processor takes your finished stylesheet and does something to it — perhaps to optimize it in order that it will load faster.
+CSS를 구성하는 또 다른 방법은 프론트엔드 개발자를 위한 도구를 활용하여 CSS를 작성하는 데 조금 더 프로그래밍적인 접근을 취하는 것입니다. 이러한 도구들은 전처리 도구(pre-processors)와 후처리 도구(post-processors)로 불립니다. 전처리 장치는 원시 파일을 처리하여 스타일시트로 변환하는 반면, 후처리 장치는 완성된 스타일시트를 가져와서 무언가를 수행합니다. 후처리의 예로 더 빠르게 로드하기 위해 최적화하는 것일 수 있습니다.
 
-Using any of these tools will require that your development environment be able to run the scripts that do the pre- and post-processing. Many code editors can do this for you, or you can install command line tools to help.
+이러한 도구들을 사용하려면 개발 환경이 전처리 도구와 후처리 도구를 실행할 수 있어야 합니다. 많은 코드 에디터가 이 이 작업을 수행해줄 수 있고, 또는 커맨드 라인 도구를 설치하여 도움을 받을 수 있습니다.
 
-The most popular pre-processor is [Sass](https://sass-lang.com/). This is not a Sass tutorial, so I will briefly explain a couple of the things that Sass can do, which are really helpful in terms of organization even if you don't use any of the other Sass features. If you want to learn a lot more about Sass, start with the [Sass basics](https://sass-lang.com/guide) article, then move on to their other documentation.
+가장 유명한 전처리 도구는 [Sass](https://sass-lang.com/)입니다. 이것은 Sass 자습서가 아니므로, Sass가 할 수 있는 몇 가지를 간단히 설명하겠습니다. 이들은 다른 Sass 기능을 사용하지 않더라도 구성하는, 조직성 측면에서 매우 도움이 됩니다. Sass에 대해 더 많이 알고 싶다면, [Sass 기초](https://sass-lang.com/guide) 문서로 시작한 다음 다른 문서를 참조하시기 바랍니다.
 
 #### Defining variables
 
