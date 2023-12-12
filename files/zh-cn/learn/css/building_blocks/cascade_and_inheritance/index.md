@@ -1,5 +1,5 @@
 ---
-title: 层叠与继承
+title: 层叠、优先级与继承
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 

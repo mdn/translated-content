@@ -1,11 +1,13 @@
 ---
 title: グリッドテンプレート領域
 slug: Web/CSS/CSS_grid_layout/Grid_template_areas
+l10n:
+  sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
 ---
 
 {{CSSRef}}
 
-[前回のガイド](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)では、グリッド線と、その線に対してアイテムを位置指定する方法をご紹介しました。CSS グリッドレイアウトでは、常に線が存在しており、グリッド上にアイテムを位置指定することを簡単にしています。しかし、グリッド上のアイテムを位置指定する別の方法があります。この方法は、単独で使用することも、線を使った位置指定と組み合わせて使用することもできます。この方法では、名前の付いたテンプレート領域を使ってアイテムを位置指定しますが、その方法を具体的に説明します。この方法を「アスキーアート方式のグリッドレイアウト」と呼んでいるのも、すぐにお分かりいただけるでしょう。
+[前回のガイド](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)では、グリッド線と、その線に対してアイテムを位置指定する方法をご紹介しました。CSS グリッドレイアウトでは、常に線が存在しており、グリッド上にアイテムを位置指定することを簡単にしています。しかし、グリッド上のアイテムを位置指定する別の方法があります。この方法は、単独で使用することも、線を使った位置指定と組み合わせて使用することもできます。この方法では、名前の付いたテンプレート領域を使ってアイテムを位置指定しますが、その方法を具体的に説明します。この方法を「アスキーアート方式のグリッドレイアウト」と呼んでいるのも、すぐにお分かりいただけるでしょう。
 
 ## グリッド領域に名前を付ける
 
@@ -137,7 +139,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 }
 ```
 
-```css
+```css-nolint
 .wrapper {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -160,7 +162,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 
 {{ EmbedLiveSample('Leaving_a_grid_cell_empty', '300', '330') }}
 
-レイアウトをきれいにするために、複数の `.` 文字を使うことができます。ピリオドの間に空白がない限り、1 つのセルとしてカウントされます。複雑なレイアウトの場合、行と列をきれいに整列させることにはメリットがあります。つまり、このレイアウトがどのようなものであるかを、CSS の中で実際に確認することができるのです。
+レイアウトをきれいにするために、複数の `.` 文字を使うことができます。ピリオドの間に 1 つ以上のホワイトスペースがない限り、1 つのセルとしてカウントされます。複雑なレイアウトの場合、行と列をきれいに整列させることにはメリットがあります。つまり、このレイアウトがどのようなものであるかを、CSS の中で実際に確認することができるのです。
 
 ## 複数のセルにまたがらせる
 
@@ -205,7 +207,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 }
 ```
 
-```css
+```css-nolint
 .wrapper {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -286,9 +288,9 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 }
 ```
 
-その後、メディアクエリーの中でレイアウトを再定義して、2 列のレイアウトにしたり、さらに広い空間が必要な場合は 3 列のレイアウトにすることもできます。広いレイアウトでは、9 列のトラックグリッドを維持し、`grid-template-areas` を使用してアイテムを配置する場所を再定義します。
+その後、メディアクエリーの中でレイアウトを再定義して、2 列のレイアウトにしたり、さらに広い空間が必要な場合は 3 列のレイアウトにすることもできます。広いレイアウトでは、9 列のトラックグリッドを維持し、 `grid-template-areas` を使用してアイテムを配置する場所を再定義します。
 
-```css
+```css-nolint
 @media (min-width: 500px) {
   .wrapper {
     grid-template-columns: repeat(9, 1fr);
@@ -342,8 +344,6 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
   border-radius: 5px;
   background-color: #fff4e6;
   max-width: 400px;
-}
-.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "img content";
@@ -365,7 +365,8 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 <div class="media">
   <div class="image"></div>
   <div class="text">
-    これはメディアオブジェクトの例です。 grid-template-areas を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
+    これはメディアオブジェクトの例です。
+    grid-template-areas を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
   </div>
 </div>
 ```
@@ -374,7 +375,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 
 ### ボックスの反対側に画像を表示する
 
-画像付きのボックスを逆に表示させたい場合もあるでしょう。そのためには、グリッドを再定義して `1fr` トラックを最後に置き、{{cssxref("grid-template-areas")}} の値を反転させます。
+画像付きのボックスを逆に表示させたい場合もあるでしょう。そのためには、グリッドを再定義して `1fr` トラックを最後に置き、 {{cssxref("grid-template-areas")}} の値を反転させます。
 
 ```css
 * {
@@ -386,8 +387,6 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
   border-radius: 5px;
   background-color: #fff4e6;
   max-width: 400px;
-}
-.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "img content";
@@ -410,12 +409,12 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 }
 ```
 
-```html
+```html-nolint
 <div class="media flipped">
   <div class="image"></div>
   <div class="text">
     これはメディアオブジェクトの例です。
-    grid-template-areasを使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
+    grid-template-areas を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
   </div>
 </div>
 ```

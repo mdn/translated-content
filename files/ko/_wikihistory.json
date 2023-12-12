@@ -6086,14 +6086,6 @@
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2019-04-17T05:03:01.108Z"
   },
-  "Web/Guide/Graphics": {
-    "modified": "2020-02-15T07:39:57.101Z",
-    "contributors": ["Netaras", "hyeonseok", "narae_lee"]
-  },
-  "Web/Guide/Parsing_and_serializing_XML": {
-    "modified": "2019-03-23T22:16:47.020Z",
-    "contributors": ["young-gratia"]
-  },
   "Web/HTML": {
     "modified": "2020-02-08T07:58:05.821Z",
     "contributors": [
@@ -10339,6 +10331,10 @@
     "modified": "2019-08-24T00:48:34.627Z",
     "contributors": ["oinochoe", "ExE-Boss"]
   },
+  "Web/XML/Parsing_and_serializing_XML": {
+    "modified": "2019-03-23T22:16:47.020Z",
+    "contributors": ["young-gratia"]
+  },
   "Web/XML/XML_introduction": {
     "modified": "2019-05-01T21:53:36.067Z",
     "contributors": ["ExE-Boss", "teoli", "Sebuls"]
@@ -10726,23 +10722,23 @@
     "modified": "2020-10-15T22:07:58.705Z",
     "contributors": ["limkukhyun"]
   },
-  "WebAssembly/JavaScript_interface/compile": {
+  "WebAssembly/JavaScript_interface/compileStreaming_static": {
     "modified": "2020-10-15T22:07:56.654Z",
     "contributors": ["limkukhyun"]
   },
-  "WebAssembly/JavaScript_interface/compileStreaming": {
+  "WebAssembly/JavaScript_interface/compile_static": {
     "modified": "2020-10-15T22:07:56.654Z",
     "contributors": ["limkukhyun"]
   },
-  "WebAssembly/JavaScript_interface/instantiate": {
-    "modified": "2020-10-15T22:07:57.168Z",
-    "contributors": ["fnwinter", "limkukhyun"]
-  },
-  "WebAssembly/JavaScript_interface/instantiateStreaming": {
+  "WebAssembly/JavaScript_interface/instantiateStreaming_static": {
     "modified": "2020-10-15T22:08:08.189Z",
     "contributors": ["limkukhyun"]
   },
-  "WebAssembly/JavaScript_interface/validate": {
+  "WebAssembly/JavaScript_interface/instantiate_static": {
+    "modified": "2020-10-15T22:07:57.168Z",
+    "contributors": ["fnwinter", "limkukhyun"]
+  },
+  "WebAssembly/JavaScript_interface/validate_static": {
     "modified": "2020-10-15T22:08:00.982Z",
     "contributors": ["limkukhyun"]
   },
@@ -10769,6 +10765,10 @@
   "WebAssembly/existing_C_to_Wasm": {
     "modified": "2019-03-18T21:28:25.734Z",
     "contributors": ["limkukhyun"]
+  },
+  "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
+    "modified": "2020-02-15T07:39:57.101Z",
+    "contributors": ["Netaras", "hyeonseok", "narae_lee"]
   },
   "conflicting/Web/API/XSLTProcessor": {
     "modified": "2019-03-23T23:42:13.222Z",
