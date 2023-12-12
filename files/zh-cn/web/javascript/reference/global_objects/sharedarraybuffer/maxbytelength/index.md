@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("SharedArrayBuffer")}} 实例的 **`maxByteLength`** 访问器属性返回当前 `SharedArrayBuffer` 可以增大到的最大长度（以字节为单位。
+{{jsxref("SharedArrayBuffer")}} 实例的 **`maxByteLength`** 访问器属性返回当前 `SharedArrayBuffer` 可以增大到的最大长度（以字节为单位）。
 
 ## 描述
 
@@ -19,7 +19,7 @@ l10n:
 
 ### 使用 maxByteLength
 
-在这个示例中，我们创建一个 8 字节缓冲区，该缓冲区可调整大小到的最大长度是 16 字节，然后返回其 `maxByteLength`：
+在这个示例中，我们创建一个 8 字节缓冲区，该缓冲区可调整到的最大长度是 16 字节，然后返回其 `maxByteLength`：
 
 ```js
 const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
