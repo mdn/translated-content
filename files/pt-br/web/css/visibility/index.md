@@ -131,4 +131,4 @@ td {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.visibility")}}
+{{Compat}}

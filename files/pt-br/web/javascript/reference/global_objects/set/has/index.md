@@ -52,7 +52,7 @@ set1.add({ key1: 1 }); // agora set1 contém 2 registros
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Set.has")}}
+{{Compat}}
 
 ## Veja também
 

@@ -43,7 +43,7 @@ Este elemento implementa a interface [`SVGLinearGradientElement`](/pt-BR/DOM/SVG
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.linearGradient")}}
+{{Compat}}
 
 ## Veja também
 

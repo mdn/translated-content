@@ -63,19 +63,19 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 | [`min`](#min)   | Минимально возможная дата для установки                                                          |
 | [`step`](#step) | Шаг (в днях), с которым будет изменяться дата при нажатии кнопок вниз или вверх данного элемента |
 
-### {{htmlattrdef("max")}}
+### `max`
 
 Максимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более поздней датой, чем дата, указанная в атрибуте [`max`](#max), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). Если в атрибуте `max` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь максимальной даты.
 
 В атрибуте `max` должна быть указана строка с датой, которая больше или равна дате, указанной в атрибуте `min`.
 
-### {{htmlattrdef("min")}}
+### `min`
 
 Минимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более ранней датой, чем дата, указанная в атрибуте [`min`](#min), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). Если в атрибуте `min` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь минимальной даты.
 
 В атрибуте `min` должна быть указана строка с датой, которая меньше или равна дате, указанной в атрибуте `max`.
 
-### {{htmlattrdef("step")}}
+### `step`
 
 {{page("/ru/docs/Web/HTML/Element/input/number", "step-include")}}
 

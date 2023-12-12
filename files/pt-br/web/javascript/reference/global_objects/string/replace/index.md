@@ -242,7 +242,7 @@ O código gera um array de 3 objetos como desejado sem usar uma função de loop
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.replace")}}
+{{Compat}}
 
 ## Veja também
 

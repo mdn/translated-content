@@ -50,7 +50,7 @@ objRef = window.statusbar;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.statusbar")}}
+{{Compat}}
 
 ## 関連情報
 

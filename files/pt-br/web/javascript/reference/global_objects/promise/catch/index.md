@@ -118,7 +118,7 @@ p1.then(function (value) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.catch")}}
+{{Compat}}
 
 ## Veja também
 

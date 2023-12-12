@@ -50,7 +50,7 @@ Lotes de texto incrível.
 
 ### Compatibilidade
 
-{{Compat("html.elements.article")}}
+{{Compat}}
 
 ## Veja também
 

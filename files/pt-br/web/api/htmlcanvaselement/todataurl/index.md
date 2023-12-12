@@ -124,7 +124,7 @@ function removeColors() {
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLCanvasElement.toDataURL")}}
+{{Compat}}
 
 ## Veja também
 

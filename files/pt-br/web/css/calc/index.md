@@ -134,7 +134,7 @@ Isso garante que o tamanho do texto será redimensionado se a página for amplia
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.types.calc")}}
+{{Compat}}
 
 ## Veja também
 

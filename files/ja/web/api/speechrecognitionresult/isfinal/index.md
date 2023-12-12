@@ -43,7 +43,7 @@ recognition.onresult = function (event) {
 
 ## ブラウザー実装状況
 
-{{Compat("api.SpeechRecognitionResult.isFinal")}}
+{{Compat}}
 
 ### Firefox OS 権限
 

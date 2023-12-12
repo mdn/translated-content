@@ -85,7 +85,7 @@ try {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.TypeError")}}
+{{Compat}}
 
 ## Veja também
 

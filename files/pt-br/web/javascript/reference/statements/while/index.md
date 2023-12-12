@@ -48,7 +48,7 @@ Depois de completar a terceira passagem, a condição n < 3 não é mais verdade
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.while")}}
+{{Compat}}
 
 ## Veja Também
 

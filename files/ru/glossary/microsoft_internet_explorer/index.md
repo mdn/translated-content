@@ -3,6 +3,8 @@ title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
 ---
 
+{{GlossarySidebar}}
+
 Internet Explorer (или IE) - это бесплатный графический {{glossary("browser", "браузер")}}, созданный Microsoft для использования внутри компании. {{glossary("Microsoft Edge")}} - на данный момент Windows браузер по умолчанию.
 
 Microsoft впервые выпустила IE в сборке вместе с Windows в 1995 как часть пакета "Microsoft Plus!". Примерно в 2002 году Internet Explorer стал самым используемым браузером в мире, но с тех пор утратил свои популярность, уступив свои позиции Chrome, Firefox, Edge и Safari.

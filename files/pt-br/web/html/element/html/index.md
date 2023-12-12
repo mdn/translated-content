@@ -49,7 +49,7 @@ Desde que o elemento `<html>` seja o primeiro em documento outro que comenta, es
 
 ## Compatibilidade dos navegadores
 
-{{Compat("html.elements.html")}}
+{{Compat}}
 
 ## Veja também
 

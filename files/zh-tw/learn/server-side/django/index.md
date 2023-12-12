@@ -5,15 +5,15 @@ slug: Learn/Server-side/Django
 
 {{LearnSidebar}}
 
-Django 使用 Python 語言編寫，是一個廣受歡迎、且功能完整的服務器端網站框架。本模塊將為您展示，為什麼 Django 能夠成為一個廣受歡迎的服務器端框架，如何設置開發環境，以及如何開始創建你自己的網絡應用。
+Django 使用 Python 語言編寫，是一個廣受歡迎、且功能完整的服務器端網站框架。本模塊將為你展示，為什麼 Django 能夠成為一個廣受歡迎的服務器端框架，如何設置開發環境，以及如何開始創建你自己的網絡應用。
 
 ## 先決條件
 
-開始學習本模塊，並不需要任何 Django 知識. 但您要理解什麼是服務器端網絡編程、什麼是網絡框架，最好能夠閱讀我們的[服務端網站編程的第一步模塊](/zh-TW/docs/Learn/Server-side/First_steps)。
+開始學習本模塊，並不需要任何 Django 知識. 但你要理解什麼是服務器端網絡編程、什麼是網絡框架，最好能夠閱讀我們的[服務端網站編程的第一步模塊](/zh-TW/docs/Learn/Server-side/First_steps)。
 
 最好能有基本的編程概念、並了解 [Python](/zh-TW/docs/Glossary/Python) 語言，但並不是理解本教程的核心概念的必然條件。
 
-> **備註：** 對於初學者來說，Python 是最容易閱讀和理解的編程語言之一。也就是說，如果您想更好的理解本教程，網上有很多免費書籍及免費教程可供參考學習（建議初學者查看 Python 官網的 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) )。
+> **備註：** 對於初學者來說，Python 是最容易閱讀和理解的編程語言之一。也就是說，如果你想更好的理解本教程，網上有很多免費書籍及免費教程可供參考學習（建議初學者查看 Python 官網的 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) )。
 
 ## 指引
 

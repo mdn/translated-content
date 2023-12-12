@@ -29,7 +29,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.runtime.MessageSender")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

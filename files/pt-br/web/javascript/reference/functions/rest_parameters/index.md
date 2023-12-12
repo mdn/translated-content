@@ -102,7 +102,7 @@ a fim de usar o objeto `arguments`, você precisará converte-lo para um array a
 
 ## Compatibilidade
 
-{{Compat("javascript.functions.rest_parameters")}}
+{{Compat}}
 
 ## Veja também
 

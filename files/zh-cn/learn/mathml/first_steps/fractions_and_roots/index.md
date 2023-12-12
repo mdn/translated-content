@@ -222,7 +222,7 @@ checkboxes.forEach((checkbox) => {
 });
 ```
 
-{{ EmbedLiveSample('主动练习：内嵌不同元素', 700, 600, "", "") }}
+{{EmbedLiveSample('主动练习：内嵌不同元素', 700, 600)}}
 
 ## 可伸缩的根号符号
 
@@ -248,9 +248,9 @@ checkboxes.forEach((checkbox) => {
 </math>
 ```
 
-{{ EmbedLiveSample('可伸缩的根号符号', 700, 200, "", "") }}
+{{EmbedLiveSample('可伸缩的根号符号', 700, 200)}}
 
-> **警告：** 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现该拉伸效果，上面的示例依赖于[网络字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。
+> **警告：** 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现该拉伸效果，上面的示例依赖于 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。
 
 ## 无横线的分数
 
@@ -282,7 +282,7 @@ checkboxes.forEach((checkbox) => {
 </math>
 ```
 
-{{ EmbedLiveSample('无横线分式', 700, 200, "", "") }}
+{{EmbedLiveSample('无横线分式', 700, 200)}}
 
 > **备注：** 虽然 `linethickness` 属性可以用于指定任意的线条粗细，但最好保持默认值，该值是根据数学字体中指定的参数计算得出的。
 

@@ -40,7 +40,7 @@ println(d.toTimeString()); // prints 14:39:07 GMT-0600 (PDT)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toDateString()")}}

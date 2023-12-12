@@ -232,7 +232,7 @@ meuSet.size; // 5
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Set")}}
+{{Compat}}
 
 ## Veja também
 

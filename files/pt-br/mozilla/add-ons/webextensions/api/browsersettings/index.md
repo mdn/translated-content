@@ -40,6 +40,6 @@ Para usar esta API você precisa ter a [permissão](/pt-BR/docs/Mozilla/Add-ons/
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.browserSettings")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

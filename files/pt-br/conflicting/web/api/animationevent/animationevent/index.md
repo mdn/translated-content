@@ -46,7 +46,7 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 
 ## Compatibilidade com navegadores
 
-{{Compat()}}
+{{Compat}}
 
 ## See also
 

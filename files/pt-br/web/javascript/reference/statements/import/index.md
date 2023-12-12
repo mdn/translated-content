@@ -161,7 +161,7 @@ export function getUsefulContents(url, callback) {
 }
 ```
 
-**O programa principal: main.js**
+#### O programa principal: main.js
 
 ```js
 import { getUsefulContents } from "/modules/file.js";
@@ -198,7 +198,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ## Veja também
 

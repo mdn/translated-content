@@ -77,7 +77,7 @@ Content-Type: image/jpeg
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Save-Data")}}
+{{Compat}}
 
 ## Veja também
 

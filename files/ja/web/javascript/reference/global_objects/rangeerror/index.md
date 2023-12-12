@@ -83,7 +83,7 @@ try {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RangeError")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -13,7 +13,6 @@ AJAX 允许只更新一个 {{glossary("HTML")}} 页面的部分 {{glossary("DOM"
 
 ## 参见
 
-- [Ajax](/zh-CN/docs/Web/Guide/AJAX)
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [使用 Fetch API](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)

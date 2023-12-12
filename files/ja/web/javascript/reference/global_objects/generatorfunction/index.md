@@ -57,7 +57,7 @@ console.log(iterator.next().value); // 20
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.GeneratorFunction")}}
+{{Compat}}
 
 ## 関連情報
 

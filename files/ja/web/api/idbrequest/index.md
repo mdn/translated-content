@@ -79,7 +79,7 @@ DBOpenRequest.onsuccess = function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBRequest")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -126,7 +126,7 @@ span[data-descr]:hover::after {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.after")}}
+{{Compat}}
 
 ## Veja também
 

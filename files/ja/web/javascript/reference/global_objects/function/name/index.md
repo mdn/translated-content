@@ -215,7 +215,7 @@ o[sym2].name; // ""
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.name")}}
+{{Compat}}
 
 ## 関連情報
 

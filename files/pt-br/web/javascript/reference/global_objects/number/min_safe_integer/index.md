@@ -32,7 +32,7 @@ Number.MIN_SAFE_INTEGER; // -9007199254740991
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}
+{{Compat}}
 
 ## Veja também
 

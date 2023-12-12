@@ -128,7 +128,7 @@ console.log(numberString);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat.formatToParts")}}
+{{Compat}}
 
 ## 関連情報
 

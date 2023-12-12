@@ -81,10 +81,10 @@ var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', '
 var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 ```
 
-语法格式使用的是 [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**) ——你可以在前面的链接中了解更多关于语法格式的规范。不过现在，让我们快速地浏览它：
+语法格式使用的是 [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/)（**JSGF**）——你可以在前面的链接中了解更多关于语法格式的规范。不过现在，让我们快速地浏览它：
 
 - 每一行用分号分隔，和 js 中一样
-- 第一行——`#JSGF V1.0` ——说的是语法使用的格式和版本。这总是需要首先包括在内
+- 第一行——`#JSGF V1.0`——说的是语法使用的格式和版本。这总是需要首先包括在内
 - 第二行表示我们想要识别的`term` 的类型 (这里就是`colors`)。`public` 声明这是一条公共规则，尖括号中的字符串定义需要识别`term` 的名字 (这里就是`color`)，等号后面的是这个`term` 可以被识别和接受的具体值。得注意每一个值如何被一个管道符号分割开的
 - 你可以按照上面的结构，在多行中，想定义多少就定义多少`terms` ，也可以包括相当复杂的语法定义。对于我们这个简单的 demo，就把语法定义的简单些
 
@@ -180,7 +180,7 @@ recognition.onnomatch = function (event) {
 };
 ```
 
-[`SpeechRecognition.onerror`](/zh-CN/docs/Web/API/SpeechRecognition/onerror) 处理的是第二种情况，识别成功了但是有 error 出现—— [`SpeechRecognitionError.error`](/zh-CN/docs/Web/API/SpeechRecognitionError/error) 属性包含的信息就是返回的确切的 error 是什么。
+[`SpeechRecognition.onerror`](/zh-CN/docs/Web/API/SpeechRecognition/onerror) 处理的是第二种情况，识别成功了但是有 error 出现——[`SpeechRecognitionError.error`](/zh-CN/docs/Web/API/SpeechRecognitionError/error) 属性包含的信息就是返回的确切的 error 是什么。
 
 ```js
 recognition.onerror = function (event) {
@@ -196,7 +196,7 @@ Web Speech API 对此有一个主要控制接口——[`SpeechSynthesis`](/zh-CN
 
 ### Demo
 
-为了展示 Web 语音合成的简单使用，我们提供了一个例子—— [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) 。例子是一套表单控件，包括输入需要被合成的文本，设置音调、语速和发出文本时需要的语音。在输入文本之后，按下`Enter`/`Return`键使它播放。
+为了展示 Web 语音合成的简单使用，我们提供了一个例子——[Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) 。例子是一套表单控件，包括输入需要被合成的文本，设置音调、语速和发出文本时需要的语音。在输入文本之后，按下`Enter`/`Return`键使它播放。
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 

@@ -5,6 +5,8 @@ l10n:
   sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
 ---
 
+{{GlossarySidebar}}
+
 {{glossary("cryptography","暗号学")}}では、**復号**とは{{glossary("ciphertext","暗号文")}}を{{glossary("Plaintext","平文")}}に変換することです。
 
 復号は暗号プリミティブであり、{{glossary("cipher","サイファー")}}と呼ばれる暗号アルゴリズムを使用して暗号文メッセージを平文に変換します。 暗号化と同様に、現代のサイファーの復号は、特定のアルゴリズムと{{glossary("key","鍵")}}と呼ばれる秘密を使用して実行されます。 アルゴリズムはしばしば公開されるので、暗号化が安全なままであれば、鍵は秘密にしておく必要があります。

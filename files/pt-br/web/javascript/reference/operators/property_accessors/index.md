@@ -119,7 +119,7 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.property_accessors")}}
+{{Compat}}
 
 ## Veja também
 

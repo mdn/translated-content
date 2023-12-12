@@ -52,7 +52,7 @@ body {
 
 ## Compatibilidade de navegador
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## Veja mais
 

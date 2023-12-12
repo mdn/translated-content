@@ -43,7 +43,7 @@ gl.getParameter(gl.STENCIL_CLEAR_VALUE);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.clearStencil")}}
+{{Compat}}
 
 ## 関連項目
 

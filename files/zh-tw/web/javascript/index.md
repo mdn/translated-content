@@ -36,7 +36,7 @@ JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc3
 ### 中階
 
 - [客戶端 web APIs](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs)
-  - : 在為網站或應用程序編寫客戶端 JavaScript 時，您將很快遇到應用程式介面（API）。 API 是應用程式介面，用於操作運行站點的瀏覽器和操作系統的不同方面，或操縱來自其他網站或服務的資料。 在本單元中，我們將探討 API 是什麼，以及如何使用您在開發工作中經常遇到的一些最常見的 API。
+  - : 在為網站或應用程序編寫客戶端 JavaScript 時，你將很快遇到應用程式介面（API）。 API 是應用程式介面，用於操作運行站點的瀏覽器和操作系統的不同方面，或操縱來自其他網站或服務的資料。 在本單元中，我們將探討 API 是什麼，以及如何使用你在開發工作中經常遇到的一些最常見的 API。
 - [重新介紹 JavaScript](/zh-TW/docs/Web/JavaScript/Language_overview)
   - : 為了那些*以為*他們懂 JavaScript 的人寫的簡介。
 - [JavaScript 資料結構](/zh-TW/docs/Web/JavaScript/Data_structures)
@@ -51,7 +51,7 @@ JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc3
 - [繼承與原型鍊](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : 對於原型繼承的常見的迷思和誤解。
 - [嚴謹模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)
-  - : 嚴謹模式會禁止您使用未初始化過的變數。這樣的限制源自於 ECMAScript 5 的規範，為了提高效率和簡化偵錯。
+  - : 嚴謹模式會禁止你使用未初始化過的變數。這樣的限制源自於 ECMAScript 5 的規範，為了提高效率和簡化偵錯。
 - [JavaScript 型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 類型陣列提供一個存取二進制資料的機制。
 - [記憶體管理](/zh-TW/docs/Web/JavaScript/Memory_management)

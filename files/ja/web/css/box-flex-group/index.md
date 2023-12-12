@@ -60,7 +60,7 @@ article:nth-child(2) {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.box-flex-group")}}
+{{Compat}}
 
 ## 関連情報
 

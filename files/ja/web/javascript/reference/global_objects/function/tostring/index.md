@@ -131,7 +131,7 @@ Object.getOwnPropertyDescriptor({
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.toString")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -69,4 +69,4 @@ WebXR で使用するグラフィックスコンテキストを設定した後�
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.position")}}
+{{Compat}}

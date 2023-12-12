@@ -64,7 +64,7 @@ Math.log2(1024); // 10
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.log2")}}
+{{Compat}}
 
 ## 関連情報
 

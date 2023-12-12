@@ -143,7 +143,7 @@ A saída HTML acima será:
 
 ## Compatibilidede em navegadores
 
-{{Compat("html.elements.ol")}}
+{{Compat}}
 
 ## Veja também
 

@@ -125,7 +125,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -211,13 +210,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       <td>
         <a href="https://w3c.github.io/html-media-capture/#the-capture-attribute">Media Capture 仕様書</a>から、キャプチャできる新しいファイルを指定します。
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Element/keygen#attr-challenge">challenge</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>公開鍵とともに送信するチャレンジ文字列</td>
     </tr>
     <tr>
       <td>
@@ -456,7 +448,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -522,7 +513,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -734,13 +724,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/keygen#attr-keytype">keytype</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>生成する鍵の種類を指定します。</td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/ja/docs/Web/HTML/Element/track#attr-kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
@@ -922,7 +905,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},

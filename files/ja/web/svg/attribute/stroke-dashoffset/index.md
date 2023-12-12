@@ -90,7 +90,7 @@ The offset is usually expressed in user units resolved against the {{SVGAttr('pa
 
 ## Browser compatibility
 
-{{Compat("svg.attributes.presentation.stroke-dashoffset")}}
+{{Compat}}
 
 ## Specification
 

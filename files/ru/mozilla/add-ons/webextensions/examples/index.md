@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/Examples
 
 {{AddonSidebar}}
 
-В целях иллюстрации разработки расширений, мы поддерживаем репозиторий простых демонстрационных расширений по адресу <https://github.com/mdn/webextensions-examples>. Данная статья описывает, как использовать эти примеры, и перечисляет их вместе с API Веб-расширений (WebExtensions API), которые они демонстрируют.
+В целях иллюстрации разработки расширений, мы поддерживаем репозиторий простых демонстрационных расширений по адресу <https://github.com/mdn/webextensions-examples>. Данная статья описывает, как использовать эти примеры, и перечисляет их вместе с WebExtension API, которые они демонстрируют.
 
 Эти примеры работают в Firefox Nightly: большинство из них работает и в более ранних версиях Firefox, но, чтобы удостовериться, проверьте поле [strict_min_version](/en-US/Add-ons/WebExtensions/manifest.json/applications) в файле manifest.json.
 

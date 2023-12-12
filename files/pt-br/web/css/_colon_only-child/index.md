@@ -98,7 +98,7 @@ li:only-child {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.only-child")}}
+{{Compat}}
 
 ## Ver também
 

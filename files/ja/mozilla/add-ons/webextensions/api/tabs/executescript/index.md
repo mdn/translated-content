@@ -132,7 +132,7 @@ executing.then(onExecuted, onError);
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.executeScript")}}
+{{Compat}}
 
 > **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。
 

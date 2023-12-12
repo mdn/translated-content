@@ -84,7 +84,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 
 ## ガイド
 
-- [フレックスボックスでの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 
 ## 外部リソース
 

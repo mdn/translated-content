@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 
 ## 语法
 
-```plain
-gen.return(value)
+```js-nolint
+generatorInstance.return()
+generatorInstance.return(value)
 ```
 
 ### 参数
@@ -68,6 +69,6 @@ g.return(1); // { value: 1, done: true }
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
+- {{jsxref("Statements/function*", "function*")}}

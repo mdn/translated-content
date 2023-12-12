@@ -78,7 +78,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.Tab", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

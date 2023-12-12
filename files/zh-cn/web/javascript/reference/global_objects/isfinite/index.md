@@ -47,7 +47,7 @@ isFinite("0"); // true，在更强壮的 Number.isFinite('0') 中将会得到 fa
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Number.isFinite()")}}
 - {{jsxref("Number.NaN()")}}

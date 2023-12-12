@@ -65,7 +65,7 @@ Math.log1p =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.log1p")}}
+{{Compat}}
 
 ## Veja também
 

@@ -45,7 +45,7 @@ Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Alt-Svc")}}
+{{Compat}}
 
 ## 関連情報
 

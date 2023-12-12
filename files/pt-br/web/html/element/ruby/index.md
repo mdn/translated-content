@@ -39,7 +39,7 @@ Esse elemento somente inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.ruby")}}
+{{Compat}}
 
 ## Veja também
 

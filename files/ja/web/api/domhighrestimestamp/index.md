@@ -40,7 +40,7 @@ slug: Web/API/DOMHighResTimeStamp
 
 ## ブラウザー実装状況
 
-{{Compat("api.DOMHighResTimestamp")}}
+{{Compat}}
 
 ## 関連情報
 

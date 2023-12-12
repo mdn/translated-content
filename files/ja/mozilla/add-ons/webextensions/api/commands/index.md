@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/commands
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.commands")}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}
 
 > **メモ:** この API は Chromium の [`chrome.commands`](https://developer.chrome.com/extensions/commands) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 

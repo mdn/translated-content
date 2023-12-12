@@ -10,7 +10,7 @@ slug: Web/API/Fetch_API/Using_Fetch
 Обратите внимание, `fetch` спецификация отличается от `jQuery.ajax()` в основном в двух пунктах:
 
 - Promise возвращаемый вызовом `fetch()` **не перейдёт в состояние "отклонено" из-за ответа HTTP, который считается ошибкой**, даже если ответ HTTP 404 или 500. Вместо этого, он будет выполнен нормально (с значением false в статусе `ok` ) и будет отклонён только при сбое сети или если что-то помешало запросу выполниться.
-- По умолчанию, `fetch` **не будет отправлять или получать cookie файлы** с сервера, в результате чего запросы будут осуществляться без проверки подлинности, что приведёт к неаутентифицированным запросам, если сайт полагается на проверку пользовательской сессии (для отправки cookie файлов в аргументе [init options](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) должно быть задано значение свойства _credentials_ отличное от значения по умолчанию `omit`).
+- По умолчанию, `fetch` **не будет отправлять или получать cookie файлы** с сервера, в результате чего запросы будут осуществляться без проверки подлинности, что приведёт к неаутентифицированным запросам, если сайт полагается на проверку пользовательской сессии (для отправки cookie файлов в аргументе [init options](/ru/docs/Web/API/fetch#Parameters) должно быть задано значение свойства _credentials_ отличное от значения по умолчанию `omit`).
 
 > **Примечание:** 25 августа 2017 г. в спецификации изменилось значение по умолчанию свойства _credentials_ на `same-origin`. Firefox применяет это изменение с версии 61.0b13.
 
@@ -118,7 +118,7 @@ try {
 
 ## Загрузка файла на сервер
 
-На сервер можно загрузить файл, используя комбинацию HTML-элемента `<input type="file" />`, {{domxref("FormData.FormData","FormData()")}} и {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}.
+На сервер можно загрузить файл, используя комбинацию HTML-элемента `<input type="file" />`, {{domxref("FormData.FormData","FormData()")}} и {{domxref("fetch()")}}.
 
 ```js
 const formData = new FormData();
@@ -141,7 +141,7 @@ try {
 
 ## Загрузка нескольких файлов на сервер
 
-На сервер можно загрузить несколько файлов, используя комбинацию HTML-элемента `<input type="file" multiple />`, {{domxref("FormData.FormData","FormData()")}} и {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}.
+На сервер можно загрузить несколько файлов, используя комбинацию HTML-элемента `<input type="file" multiple />`, {{domxref("FormData.FormData","FormData()")}} и {{domxref("fetch()")}}.
 
 ```js
 const formData = new FormData();
@@ -400,6 +400,6 @@ if (self.fetch) {
 
 СпецификацииSpecification Status Comment [Fetch](https://fetch.spec.whatwg.org/) Живой стандарт Initial definitionСовместимость браузера
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 Смотрите такжеServiceWorker APIHTTP access control (CORS)HTTPFetch polyfillFetch examples on Github`

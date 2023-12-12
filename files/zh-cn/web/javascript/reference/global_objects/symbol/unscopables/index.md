@@ -60,7 +60,7 @@ with (obj) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
-- [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode))
+- [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句（在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中不可用）

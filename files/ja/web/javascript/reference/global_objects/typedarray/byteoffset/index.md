@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`byteOffset`** アクセサープロパティは、 {{jsxref("ArrayBuffer")}} の開始位置からの型付き配列の (バイト単位の) オフセットを表します。
+**`byteOffset`** は {{jsxref("TypedArray")}} インスタンスのアクセサープロパティで、この型付き配列の {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の開始位置からの（バイト単位の）オフセットを返します。
 
 ## 解説
 
@@ -37,5 +37,5 @@ uint8array2.byteOffset; // 3 (as specified when constructing Uint8Array)
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

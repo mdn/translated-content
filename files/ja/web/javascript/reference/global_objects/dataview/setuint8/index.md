@@ -48,7 +48,7 @@ dataview.getUint8(1); // 3
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.setUint8")}}
+{{Compat}}
 
 ## 関連情報
 

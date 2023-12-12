@@ -46,7 +46,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 > **Nota:** Atualmente existe uma diferença na implementação pelos navegadores. Enquanto carrega, no Chrome e no Opera, aparece o conteúdo do recurso em HTML, no Firefox, mostra uma mensagem genérica falando que o conteúdo precisa de um _plug-in_ (veja o [Erro do Firefox 730768](https://bugzil.la/730768)). É recomendado que se use os elementos {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}.
 
-{{Compat("html.elements.embed")}}
+{{Compat}}
 
 ## Veja também
 

@@ -52,7 +52,7 @@ Veja {{ cssxref("orient") }}.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.progress")}}
+{{Compat}}
 
 ## Veja também
 

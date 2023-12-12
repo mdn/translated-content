@@ -47,7 +47,7 @@ ws.add(1);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakSet.add")}}
+{{Compat}}
 
 ## 関連情報
 

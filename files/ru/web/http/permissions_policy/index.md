@@ -18,7 +18,7 @@ Feature Policy позволяет веб-разработчику выбороч
 - Изменить поведение автозапуска видео на мобильных устройствах.
 - Ограничить доступ сайта к камере и микрофону.
 - Разрешить использование API полноэкранного режима в iframe.
-- Блокировать использование устаревших API, например [synchronous XHR](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) and {{domxref("document.write()")}}.
+- Блокировать использование устаревших API, например [synchronous XHR](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest) and {{domxref("document.write()")}}.
 - Проверять соответствие размера изображений размерам области просмотра.
 
 ## Concepts and usage
@@ -39,8 +39,6 @@ Feature Policy provides two ways to specify policies to control features:
 - The {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes.
 
 The primary difference between the HTTP header and the `allow` attribute is that the allow attribute only controls features within an iframe. The header controls features in the response and any embedded content within the page.
-
-For more details see [Using Feature Policy](/ru/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
 
 ## Types of policy-controlled features
 
@@ -106,11 +104,10 @@ The features include:
 
 ## Browser compatibility
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat}}
 
 ## See also
 
-- [Using Feature Policy](/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes
 - [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)

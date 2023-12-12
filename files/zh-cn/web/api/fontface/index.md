@@ -31,21 +31,21 @@ _这个接口不继承任何属性。_
 - {{domxref("FontFace.featureSettings")}}
   - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _features_ 属性，相当于 {{cssxref("@font-face/feature-settings", "feature-settings")}} 。
 - {{domxref("FontFace.status")}} {{readonlyinline}}
-  - : 返回一个表示字体当前状态的可枚举值，它可能是下列之一： `"unloaded"`, `"loading"`, `"loaded"`, `"error"`。
+  - : 返回一个表示字体当前状态的可枚举值，它可能是下列之一：`"unloaded"`、`"loading"`、`"loaded"`、`"error"`。
 - {{domxref("FontFace.loaded")}} {{readonlyinline}}
-  - : 当字体完全加载或加载失败时返回该 `FontFace` 的{{domxref("Promise")}} 。
+  - : 当字体完全加载或加载失败时返回该 `FontFace` 的 {{domxref("Promise")}}。
 
-## Methods
+## 方法
 
-_这个接口不继承任何方法_
+_这个接口不继承任何方法。_
 
 - {{domxref("FontFace.load()")}}
-  - : 加载该字体，返回该字体完全加载或加载失败时的{{domxref("Promise")}} 。
+  - : 加载该字体，返回该字体完全加载或加载失败时的 {{domxref("Promise")}}。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

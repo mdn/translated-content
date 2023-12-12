@@ -11,4 +11,4 @@ EXSLT 共通パッケージは、 XSLT の機能を拡張する基本的な関�
 
 ## ブラウザーの互換性
 
-{{Compat("xslt.exslt.exsl")}}
+{{Compat}}

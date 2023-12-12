@@ -165,7 +165,7 @@ function addData() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBTransaction")}}
+{{Compat}}
 
 ## 関連情報
 

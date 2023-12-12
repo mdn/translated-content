@@ -1,5 +1,8 @@
 {
   "extends": "../../.markdownlint.jsonc",
+  "no-trailing-punctuation": {
+    "punctuation": ".,;:。，"
+  },
   "search-replace": {
     "rules": [
       {

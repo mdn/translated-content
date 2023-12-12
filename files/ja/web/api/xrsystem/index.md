@@ -76,4 +76,4 @@ function onButtonClicked() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRSystem")}}
+{{Compat}}

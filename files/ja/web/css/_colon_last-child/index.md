@@ -53,7 +53,7 @@ p:last-child {
 
 #### 結果
 
-{{EmbedLiveSample('Basic_example', 500, 200)}}
+{{EmbedLiveSample('基本的な例', 500, 200)}}
 
 ### リストのスタイル付け
 
@@ -89,7 +89,7 @@ ul li:last-child {
 
 #### 結果
 
-{{EmbedLiveSample('Styling_a_list')}}
+{{EmbedLiveSample('リストのスタイル付け')}}
 
 ## 仕様書
 

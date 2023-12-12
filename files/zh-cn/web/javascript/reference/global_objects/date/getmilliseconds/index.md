@@ -43,7 +43,7 @@ ms = Today.getMilliseconds();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCMilliseconds()")}}
 - {{jsxref("Date.prototype.setMilliseconds()")}}

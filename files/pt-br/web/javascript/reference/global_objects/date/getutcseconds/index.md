@@ -38,7 +38,7 @@ var seconds = today.getUTCSeconds();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCSeconds")}}
+{{Compat}}
 
 ## Veja também
 

@@ -166,7 +166,7 @@ thing.showPrivate();
 // 1
 ```
 
-这与下面使用了[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)的示例类似：
+这与下面使用了[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)的示例类似：
 
 ```js
 class Thing {

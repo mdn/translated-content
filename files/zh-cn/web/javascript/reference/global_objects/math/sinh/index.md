@@ -53,7 +53,7 @@ function sinh(x) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.acos()")}}
 - {{jsxref("Math.asin()")}}

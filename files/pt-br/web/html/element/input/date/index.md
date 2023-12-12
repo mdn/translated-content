@@ -378,7 +378,7 @@ To create a widget to display a date, use:
 
 ## Navegadores compatíveis
 
-{{Compat("html.elements.input.type_date")}}
+{{Compat}}
 
 ## Veja também
 

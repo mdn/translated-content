@@ -78,7 +78,7 @@ class myDate extends Date {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.classes.extends")}}
+{{Compat}}
 
 ## 関連情報
 

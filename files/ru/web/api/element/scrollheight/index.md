@@ -29,7 +29,7 @@ padding-bottom
 
 **Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-![Image:scrollHeight.png](/@api/deki/files/840/=ScrollHeight.png)
+![](scrollheight.png)
 
 ## Проблемы и решения
 

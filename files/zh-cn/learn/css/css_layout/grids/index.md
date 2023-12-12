@@ -717,9 +717,9 @@ aside {
 
 ![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 
-## 纸上得来终觉浅！
+## 技能测试！
 
-你已经读完了这篇教程，那你记住那些最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试：网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grid_skills).
+你已经读完了这篇教程，那你记住那些最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试：网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grid_skills)。
 
 ## 小结
 

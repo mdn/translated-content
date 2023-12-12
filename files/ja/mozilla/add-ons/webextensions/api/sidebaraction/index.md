@@ -39,7 +39,7 @@ sidebarAction API は Opera の [sidebarAction API](https://dev.opera.com/extens
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.sidebarAction")}}
+{{Compat}}
 
 ## add-ons の例
 

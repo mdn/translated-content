@@ -81,7 +81,7 @@ letter-spacing: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.letter-spacing")}}
+{{Compat}}
 
 ## See also
 

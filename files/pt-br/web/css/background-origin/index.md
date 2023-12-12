@@ -80,7 +80,7 @@ div {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.background-origin")}}
+{{Compat}}
 
 ## Veja também
 

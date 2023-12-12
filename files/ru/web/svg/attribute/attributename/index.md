@@ -9,6 +9,8 @@ slug: Web/SVG/Attribute/attributeName
 
 Четыре элемента используют данный атрибут: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateTransform")}} и {{SVGElement("set")}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -31,7 +33,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("topExample", "400", "250")}}
+{{EmbedLiveSample("Пример", 400, 250)}}
 
 ## Контекст использования
 

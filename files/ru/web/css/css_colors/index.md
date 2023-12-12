@@ -30,15 +30,15 @@ _Нет._
 
 ### `color` property
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
 ### `color-adjust` property
 
-{{Compat("css.properties.color-adjust")}}
+{{Compat}}
 
 ### `opacity` property
 
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Смотрите также
 

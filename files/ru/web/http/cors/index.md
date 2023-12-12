@@ -490,7 +490,7 @@ Examples of this usage can be [found above](#Preflighted_requests).
 
 ## Browser compatibility
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### Compatibility notes
 

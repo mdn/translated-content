@@ -3,6 +3,8 @@ title: W3C
 slug: Glossary/W3C
 ---
 
+{{GlossarySidebar}}
+
 _World Wide Web Consortium_ (W3C) は、{{Glossary("World Wide Web", "ウェブに関する")}}ルールや枠組みを整備する国際団体です。
 
 W3C は 350 を超える加盟組織から成り、加盟組織は連帯してウェブ標準を開発し、ウェブの普及計画を遂行し、ウェブについて話し合うための開かれた場を整備しています。 W3C は業界の各企業に対して同じ W3C の標準を実装するよう働きかけています。

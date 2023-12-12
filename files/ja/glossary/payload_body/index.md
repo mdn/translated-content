@@ -3,6 +3,8 @@ title: Payload body
 slug: Glossary/Payload_body
 ---
 
+{{GlossarySidebar}}
+
 HTTP メッセージの*ペイロード本文*は、HTTP メッセージ本文があれば、その送信時に送られるデータの {{HTTPHeader("Transfer-Encoding","Transfer-Encoding")}} が適用される前の*情報* ("ペイロード") 部分です。 Transfer-Encoding が使用されない限り、 _ペイロード本文_ と _メッセージ本文_ は同じものです。
 
 例えば、このレスポンスではメッセージ本文は "Mozilla Developer Network" というペイロード本文を持っているだけです。

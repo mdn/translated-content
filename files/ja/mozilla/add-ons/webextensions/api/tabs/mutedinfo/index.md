@@ -20,7 +20,7 @@ This object contains a boolean indicating whether the tab is muted, and the reas
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.MutedInfo")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

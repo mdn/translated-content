@@ -52,7 +52,7 @@ browser.browserAction.onClicked.addListener(function () {
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.captureVisibleTab")}}
+{{Compat}}
 
 > **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-captureVisibleTab) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 

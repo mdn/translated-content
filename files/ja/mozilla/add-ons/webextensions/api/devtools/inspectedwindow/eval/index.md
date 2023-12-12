@@ -76,7 +76,7 @@ If an error occurred, element 0 will be `undefined`, and element 1 will contain 
 
 ## ブラウザの対応状況
 
-{{Compat("webextensions.api.devtools.inspectedWindow.eval")}}
+{{Compat}}
 
 ## 例
 

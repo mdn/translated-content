@@ -60,7 +60,7 @@ Math.tanh(1); // 0.7615941559557649
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.tanh")}}
+{{Compat}}
 
 ## 関連情報
 

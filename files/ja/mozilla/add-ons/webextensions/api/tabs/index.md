@@ -148,7 +148,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

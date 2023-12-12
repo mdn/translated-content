@@ -66,7 +66,7 @@ Firefox 55 より前では、引数が二つの場合のルールが異なるこ
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.runtime.sendMessage")}}
+{{Compat}}
 
 ## 使用例
 

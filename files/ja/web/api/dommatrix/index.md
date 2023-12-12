@@ -13,7 +13,7 @@ slug: Web/API/DOMMatrix
 
 ## ブラウザー互換性
 
-{{Compat("api.DOMMatrix")}}
+{{Compat}}
 
 ## 関連情報
 

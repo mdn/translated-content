@@ -46,7 +46,7 @@ DBOpenRequest.onsuccess = function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBDatabase.objectStoreNames")}}
+{{Compat}}
 
 ## 関連情報
 

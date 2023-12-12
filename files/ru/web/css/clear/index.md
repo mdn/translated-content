@@ -29,7 +29,7 @@ slug: Web/CSS/clear
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 clear: none;
 clear: left;
 clear: right;

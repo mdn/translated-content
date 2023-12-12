@@ -35,7 +35,7 @@ browser.bookmarks.onImportEnded.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onImportEnded")}}
+{{Compat}}
 
 ## 使用例
 

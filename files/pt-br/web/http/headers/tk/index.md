@@ -69,7 +69,7 @@ Tk: N
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Tk")}}
+{{Compat}}
 
 ## Veja também
 

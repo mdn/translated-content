@@ -55,7 +55,7 @@ console.log(objectSymbols[0]); // retorno esperado Symbol(a)
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
+{{Compat}}
 
 ## Veja também
 

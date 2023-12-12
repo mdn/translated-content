@@ -55,7 +55,7 @@ Number.isNaN("blabla"); // e.g. este teria sido true com isNaN
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.isNaN")}}
+{{Compat}}
 
 ## Veja também
 

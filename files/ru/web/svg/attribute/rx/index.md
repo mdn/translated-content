@@ -9,6 +9,8 @@ slug: Web/SVG/Attribute/rx
 
 Два элемента используют этот атрибут: {{SVGElement("ellipse")}} и {{SVGElement("rect")}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -29,7 +31,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## ellipse
 

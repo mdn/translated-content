@@ -105,7 +105,7 @@ class StaticMethodCall {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.classes.static")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -42,7 +42,7 @@ var year = today.getFullYear();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getFullYear")}}
+{{Compat}}
 
 ## Veja também
 

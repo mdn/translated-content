@@ -135,11 +135,11 @@ function onMessage(e) {
 
 ### `MessageChannel`
 
-{{Compat("api.MessageChannel", 0)}}
+{{Compat}}
 
 ### `MessagePort`
 
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## 関連情報
 

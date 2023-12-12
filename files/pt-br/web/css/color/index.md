@@ -125,7 +125,7 @@ p {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
 ## Veja também
 

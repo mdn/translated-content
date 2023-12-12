@@ -23,7 +23,7 @@ Para ter uma verificação pelo servidor o cliente deve enviar o header {{HTTPHe
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.100")}}
+{{Compat}}
 
 ## See also
 

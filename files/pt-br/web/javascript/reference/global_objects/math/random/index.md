@@ -75,4 +75,4 @@ function getRandomIntInclusive(min, max) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.random")}}
+{{Compat}}

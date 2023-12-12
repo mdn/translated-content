@@ -88,4 +88,4 @@ When using `scrollbar-color` property with specific color values, authors should
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.scrollbar-color")}}
+{{Compat}}

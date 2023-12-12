@@ -73,7 +73,7 @@ O exemplo acima usa uma conversão de uma _string_ não-padrão que pode não se
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toISOString")}}
+{{Compat}}
 
 ## Veja também
 

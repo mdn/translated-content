@@ -42,7 +42,7 @@ var day = today.getUTCDate();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getDate()")}}
 - {{jsxref("Date.prototype.getUTCDay()")}}

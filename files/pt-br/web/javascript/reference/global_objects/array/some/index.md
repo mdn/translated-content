@@ -110,7 +110,7 @@ if (!Array.prototype.some) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## Veja também
 

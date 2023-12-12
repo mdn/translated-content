@@ -27,7 +27,7 @@ var redirectURL = browser.identity.getRedirectURL();
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.identity.getRedirectURL")}}
+{{Compat}}
 
 ## 例
 

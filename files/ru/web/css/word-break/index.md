@@ -12,15 +12,17 @@ slug: Web/CSS/word-break
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
-word-break: break-word; /* не включено в стандарт */
+word-break: break-word; /* Устаревшее значение */
 
 /* Глобальные значения */
 word-break: inherit;
 word-break: initial;
+word-break: revert;
+word-break: revert-layer;
 word-break: unset;
 ```
 

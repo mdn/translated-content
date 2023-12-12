@@ -86,7 +86,7 @@ p:read-write {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.read-write")}}
+{{Compat}}
 
 ## Veja também
 

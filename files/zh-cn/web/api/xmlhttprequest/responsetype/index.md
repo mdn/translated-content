@@ -28,7 +28,7 @@ XMLHttpRequest.responseType = type;
 - `"blob"`
   - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是一个包含二进制数据的 {{DOMxRef("Blob")}} 对象。
 - `"document"`
-  - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是一个 {{Glossary("HTML")}} {{DOMxRef("Document")}} 或 {{Glossary("XML")}} {{DOMxRef("XMLDocument")}}，根据接收到的数据的 MIME 类型而定。请参阅 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) 中的 HTML，了解有关使用 XHR 获取 HTML 内容的更多信息。
+  - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是一个 {{Glossary("HTML")}} {{DOMxRef("Document")}} 或 {{Glossary("XML")}} {{DOMxRef("XMLDocument")}}，根据接收到的数据的 MIME 类型而定。请参阅 [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)，了解有关使用 XHR 获取 HTML 内容的更多信息。
 - `"json"`
   - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是通过将接收到的数据内容解析为 {{Glossary("JSON")}} 而创建的 JavaScript 对象。
 - `"text"`
@@ -65,7 +65,7 @@ XHR 请求默认是异步的；它们仅通过在调用 {{DOMxRef("XMLHttpReques
 
 ## 参见
 
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 - 响应数据：{{domxref("XMLHttpRequest.response", "response")}}、
   {{domxref("XMLHttpRequest.responseText", "responseText")}} 和 {{domxref("XMLHttpRequest.responseXML", "responseXML")}}

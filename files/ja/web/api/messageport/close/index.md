@@ -49,7 +49,7 @@ channel.port1.close();
 
 ## ブラウザの実装状況
 
-{{Compat("api.MessagePort.close")}}
+{{Compat}}
 
 ## 関連情報
 

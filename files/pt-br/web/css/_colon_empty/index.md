@@ -72,4 +72,4 @@ The text that provides the interactive control's accessible name can be hidden u
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.empty")}}
+{{Compat}}

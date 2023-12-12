@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.devtools.network")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

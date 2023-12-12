@@ -41,7 +41,7 @@ p ~ span {
 
 ## Navegadores compatíveis
 
-{{Compat("css.selectors.general_sibling")}}
+{{Compat}}
 
 ## Veja mais
 

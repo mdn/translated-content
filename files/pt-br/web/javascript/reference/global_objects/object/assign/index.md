@@ -204,7 +204,7 @@ if (!Object.assign) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.assign")}}
+{{Compat}}
 
 ## Veja também
 

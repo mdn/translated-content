@@ -35,7 +35,7 @@ console.log("ALFABETO".toLowerCase()); // 'alfabeto'
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.toLowerCase")}}
+{{Compat}}
 
 ## Veja também
 

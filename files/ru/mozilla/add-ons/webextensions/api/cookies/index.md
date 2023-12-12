@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 {{AddonSidebar}}
 
-Позволяет WebExtensions получить и установить куки ,а также сообщить об их изменении.
+Позволяет расширениям получать и устанавливать куки, а также сообщать об их изменении.
 
 Для использования этого API,вам нужно предоставить доступ [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) в вашем файле [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json),а также [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) для тех сайтов чьи куки вам нужны для доступа.Смотрите [cookie Permissions](/en-US/Add-ons/WebExtensions/API/cookies#Permissions).
 

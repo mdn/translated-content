@@ -211,13 +211,9 @@ An assignment operator assigns a value to its left operand based on the value of
 - {{non-standard_inline}} {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}}
   - : The expression closure syntax is a shorthand for writing simple function.
 
-## Specifications
+## Especificações
 
-| Specification                                                                                   | Status             | Comment                                                                                                          |
-| ----------------------------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                         | Standard           | Definição inicial.                                                                                               |
-| {{SpecName('ES5.1', '#sec-11', 'Expressions')}}                                                 | {{Spec2('ES5.1')}} |                                                                                                                  |
-| {{SpecName('ES6', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}} | {{Spec2('ES6')}}   | Novo: Spread operator, destructuring assignment, `super` keyword, Array comprehensions, Generator comprehensions |
+{{Specifications}}
 
 ## Veja também
 

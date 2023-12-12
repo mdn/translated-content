@@ -118,7 +118,7 @@ function knownCharCodeAt(str, idx) {
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.charCodeAt")}}
+{{Compat}}
 
 ## Veja também
 

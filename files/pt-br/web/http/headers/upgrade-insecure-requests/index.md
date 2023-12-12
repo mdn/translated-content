@@ -49,7 +49,7 @@ Vary: Upgrade-Insecure-Requests
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Upgrade-Insecure-Requests")}}
+{{Compat}}
 
 ## Veja também
 

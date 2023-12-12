@@ -53,7 +53,7 @@ p em:last-of-type {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.last-of-type")}}
+{{Compat}}
 
 ## See also
 

@@ -63,7 +63,7 @@ Math.atanh =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.atanh")}}
+{{Compat}}
 
 ## Veja também
 

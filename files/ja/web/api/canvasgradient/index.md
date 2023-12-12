@@ -24,7 +24,7 @@ _継承されたメソッドはありません。_
 
 ## ブラウザーの対応
 
-{{Compat("api.CanvasGradient")}}
+{{Compat}}
 
 ## 関連情報
 

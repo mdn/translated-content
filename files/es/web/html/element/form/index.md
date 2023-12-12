@@ -120,4 +120,4 @@ Este elemento implementa la interfaz [`HTMLFormElement`](/es/DOM/HTMLFormElement
 
 ## Consulte también
 
-Otros elementos que son usados para crear formularios: {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("input") }},{{ HTMLElement("keygen") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("meter") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("output") }}, {{ HTMLElement("progress") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}.
+Otros elementos que son usados para crear formularios: {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("meter") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("output") }}, {{ HTMLElement("progress") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}.

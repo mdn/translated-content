@@ -91,7 +91,7 @@ Uma regra CSS pode ser definida para o seletor `code` para sobrescrever a fonte 
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.code")}}
+{{Compat}}
 
 ## Veja também
 

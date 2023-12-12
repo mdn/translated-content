@@ -592,7 +592,7 @@ video.onclick = function (e) {
 
 Это все, что вам нужно знать о веб-событиях на этом этапе. Как уже упоминалось, события не являются частью основного JavaScript — они определены в веб-интерфейсах браузера ([Web API](/ru/docs/Web/API)).
 
-Кроме того, важно понимать, что различные контексты, в которых используется JavaScript, обычно имеют разные модели событий — от веб-API до других областей, таких как браузерные WebExtensions и Node.js (серверный JavaScript). Может сейчас вы не особо в этом разбираетесь, но по мере изучения веб-разработки начнёт приходить более ясное понимание тематики.
+Кроме того, важно понимать, что различные контексты, в которых используется JavaScript, обычно имеют разные модели событий — от веб-API до других областей, таких как браузерные расширения и Node.js (серверный JavaScript). Может сейчас вы не особо в этом разбираетесь, но по мере изучения веб-разработки начнёт приходить более ясное понимание тематики.
 
 Если у вас возникли вопросы, попробуйте прочесть статью снова или [обратитесь за помощью к нам](/ru/docs/Learn#Contact_us).
 
@@ -603,13 +603,3 @@ video.onclick = function (e) {
 - [Event reference](/ru/docs/Web/Events)
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
-
-## В этом модуле
-
-- [Принятие решений в вашем коде — условные конструкции](/ru/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Зацикливание кода](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Функции — Переиспользуемые блоки кода](/ru/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Создайте свою собственную функцию](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Возвращаемое значение функции](/ru/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Введение в события](/ru/docs/Learn/JavaScript/Building_blocks/События)
-- [Создание галереи](/ru/docs/Learn/JavaScript/Building_blocks/Image_gallery)

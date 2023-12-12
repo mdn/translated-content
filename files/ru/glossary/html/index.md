@@ -3,6 +3,8 @@ title: HTML
 slug: Glossary/HTML
 ---
 
+{{GlossarySidebar}}
+
 **HTML** (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — язык разметки, определяющий структуру веб-страниц.
 
 ## Краткая история

@@ -59,7 +59,7 @@ slug: Web/HTML/Element/tbody
 
 ### Deprecated attributes
 
-- {{ htmlattrdef("align") }} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
@@ -75,17 +75,17 @@ slug: Web/HTML/Element/tbody
 
     > **Note:** The equivalent `text-align` property for the `align="char"` is not implemented in any browsers yet. See the [`text-align`'s browser compatibility section](/ko/docs/Web/CSS/text-align#Browser_compatibility) for the `&#x3C;string>` value.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : The background color of the table. It is a [6-digit hexadecimal RGB code](/ko/docs/Web/CSS/color_value#RGB_colors), prefixed by a '`#`'. One of the predefined [color kewords](/ko/docs/Web/CSS/color_value#Color_keywords) can also be used.
 
     As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
 
-- {{ htmlattrdef("char") }} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](/ko/docs/Web/HTML/Element/tbody#align) is not set to `char`, this attribute is ignored.
-- {{ htmlattrdef("charoff") }} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
-- {{ htmlattrdef("valign") }} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
 

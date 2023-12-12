@@ -32,6 +32,6 @@ Para usar esta API, uma extensão deve solicitar a [permission](/pt-BR/docs/Mozi
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.theme")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

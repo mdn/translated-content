@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.CreateDetails", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

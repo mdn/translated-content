@@ -78,7 +78,7 @@ svg {
 
 ## ブラウザの互換性
 
-{{Compat("svg.elements.mask")}}
+{{Compat}}
 
 ## あわせて参照
 

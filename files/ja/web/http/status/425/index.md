@@ -21,4 +21,4 @@ HTTP (HyperText Transfer Protocol) の **`425 Too Early`** レスポンスステ
 
 ## ブラウザーの対応
 
-{{Compat("http.status.425")}}
+{{Compat}}

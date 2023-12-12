@@ -129,7 +129,7 @@ console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.localeCompare")}}
+{{Compat}}
 
 ## Veja também
 

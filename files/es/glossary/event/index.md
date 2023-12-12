@@ -3,6 +3,8 @@ title: Evento
 slug: Glossary/Event
 ---
 
+{{GlossarySidebar}}
+
 Los eventos son sucesos generados por elementos del [DOM](/es/docs/Glossary/DOM), que pueden ser manipulados por un código Javascript
 
 ## Saber más

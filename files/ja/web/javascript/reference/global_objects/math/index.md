@@ -160,7 +160,7 @@ random(1, 10);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math")}}
+{{Compat}}
 
 ## 関連情報
 

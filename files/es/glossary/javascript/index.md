@@ -3,6 +3,8 @@ title: JavaScript
 slug: Glossary/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 {{jsSidebar}}
 
 ## Resumen

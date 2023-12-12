@@ -56,7 +56,7 @@ Existem vários outros exemplos de transições CSS incluídas no artigo princip
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## See also
 

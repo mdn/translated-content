@@ -38,7 +38,7 @@ sym === sym.valueOf(); // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.valueOf")}}
+{{Compat}}
 
 ## 関連情報
 

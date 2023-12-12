@@ -14,13 +14,13 @@ slug: Web/CSS/margin-right
 ## Синтаксис
 
 ```css
-/* <lenght> значение */
+/* Ключевые слова */
+margin-right: auto;
+
+/* Значения длины */
 margin-right: 20px; /* абсолютная длина */
 margin-right: 1em; /* относительно размера текста */
 margin-right: 5%; /* относительно ширины родительского блока */
-
-/* Значения-ключевые слова */
-margin-right: auto;
 
 /* Глобальные значения */
 margin-right: inherit;

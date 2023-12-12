@@ -442,11 +442,11 @@ function fileUpload(file) {
 
 _使用二進制數據時，這些程式碼還需要修改。_
 
-## 你也可以參考這些文章
+## 參見
 
 - {{domxref("File")}}
 - {{domxref("FileList")}}
 - {{domxref("FileReader") }}
-- [Using XMLHttpRequest](/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-TW/DOM/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [Using the DOM File API in chrome code](/zh-TW/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - {{domxref("XMLHttpRequest")}}

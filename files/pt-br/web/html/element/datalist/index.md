@@ -44,7 +44,7 @@ Esse código HTML é renderizado assim no Firefox 4:
 
 ## Compatibilidade
 
-{{Compat("html.elements.datalist")}}
+{{Compat}}
 
 ## Polyfill
 

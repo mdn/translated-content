@@ -55,7 +55,7 @@ console.log(objectSymbols[0]); // Symbol(a)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
+{{Compat}}
 
 ## 関連情報
 

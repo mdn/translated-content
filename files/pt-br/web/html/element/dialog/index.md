@@ -136,7 +136,7 @@ Este exemplo abre uma caixa de diálogo contendo um formulário quando o botão 
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.dialog")}}
+{{Compat}}
 
 ## Polyfills
 

@@ -69,7 +69,7 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.If-Range")}}
+{{Compat}}
 
 ## 関連情報
 

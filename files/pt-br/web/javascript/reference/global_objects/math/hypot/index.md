@@ -81,7 +81,7 @@ Math.hypot =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.hypot")}}
+{{Compat}}
 
 ## Ver também
 

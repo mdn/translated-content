@@ -57,7 +57,7 @@ var math = {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.function")}}
+{{Compat}}
 
 ## Veja também
 

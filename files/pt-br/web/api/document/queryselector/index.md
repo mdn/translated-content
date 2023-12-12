@@ -40,7 +40,7 @@ Gera uma exceção `SYNTAX_ERR` se o grupo de seletores utilizado for inválido.
 
 ## Compatibilidade dos navegadores
 
-{{Compat("api.Document.querySelector")}}
+{{Compat}}
 
 ## Especificação
 

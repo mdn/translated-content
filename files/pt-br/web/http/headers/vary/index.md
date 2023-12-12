@@ -54,7 +54,7 @@ Vary: User-Agent
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Vary")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

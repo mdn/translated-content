@@ -69,4 +69,4 @@ if (typeof globalThis.setTimeout !== "function") {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.globalThis")}}
+{{Compat}}

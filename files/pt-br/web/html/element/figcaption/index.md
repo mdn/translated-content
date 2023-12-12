@@ -50,7 +50,7 @@ Por favor, consulte a página {{HTMLElement("figure")}} para visualizar o exempl
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.figcaption")}}
+{{Compat}}
 
 ## Veja também
 

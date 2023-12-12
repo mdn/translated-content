@@ -27,6 +27,6 @@ Não há permissão para a API `contentScripts`, mas uma extensão pode ter a [p
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.contentScripts", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

@@ -73,7 +73,7 @@ if (!Math.asinh)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.asinh")}}
+{{Compat}}
 
 ## 関連情報
 

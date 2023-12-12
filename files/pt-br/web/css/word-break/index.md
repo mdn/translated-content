@@ -109,7 +109,7 @@ word-break: unset;
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.word-break")}}
+{{Compat}}
 
 ## Veja também
 

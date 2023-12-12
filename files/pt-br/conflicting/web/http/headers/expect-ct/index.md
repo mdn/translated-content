@@ -66,7 +66,7 @@ Neste exemplo, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** fix
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Public-Key-Pins")}}
+{{Compat}}
 
 ## Veja também
 

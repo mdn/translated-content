@@ -21,4 +21,4 @@ slug: Web/CSS/CSS_charsets
 
 ### `@charset` ルール
 
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

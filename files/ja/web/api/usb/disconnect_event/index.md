@@ -27,7 +27,7 @@ ondisconnect = (event) => {};
 
 ## イベントプロパティ
 
-_以下に挙げるプロパティに加え､親インターフェイス {{domxref("Event")}} のプロパティも利用できます｡_
+_以下に挙げるプロパティに加え､親インターフェイス {{domxref("Event")}} のプロパティも利用できます。_
 
 - {{domxref("USBConnectionEvent.device", "device")}} {{ReadOnlyInline}}
   - : イベントが発火した対象の {{domxref("USBDevice")}} です｡

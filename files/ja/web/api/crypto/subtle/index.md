@@ -19,7 +19,7 @@ var crypto = crypto.subtle;
 
 ## ブラウザーの実装状況
 
-{{Compat("api.Crypto.subtle")}}
+{{Compat}}
 
 ## 関連情報
 

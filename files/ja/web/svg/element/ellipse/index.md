@@ -70,7 +70,7 @@ svg {
 
 ## ブラウザー実装状況
 
-{{Compat("svg.elements.ellipse")}}
+{{Compat}}
 
 ## 関連情報
 

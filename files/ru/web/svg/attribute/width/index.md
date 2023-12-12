@@ -9,6 +9,8 @@ slug: Web/SVG/Attribute/width
 
 Двадцать пять элементов используют эти атрибуты: {{SVGElement('feBlend')}}, {{SVGElement('feColorMatrix')}}, {{SVGElement('feComponentTransfer')}}, {{SVGElement('feComposite')}}, {{SVGElement('feConvolveMatrix')}}, {{SVGElement('feDiffuseLighting')}}, {{SVGElement('feDisplacementMap')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feFlood')}}, {{SVGElement('feGaussianBlur')}}, {{SVGElement('feImage')}}, {{SVGElement('feMerge')}}, {{SVGElement('feMorphology')}}, {{SVGElement('feOffset')}}, {{SVGElement('feSpecularLighting')}}, {{SVGElement('feTile')}}, {{SVGElement('feTurbulence')}}, {{SVGElement('filter')}}, {{SVGElement('foreignObject')}}, {{SVGElement('image')}}, {{SVGElement('mask')}}, {{SVGElement('pattern')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, and {{SVGElement('use')}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -26,7 +28,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## feBlend
 
