@@ -542,7 +542,7 @@ squareBtn.addEventListener("click", () => {
 
 ## Смотрите также
 
-- [Ипользование JavaScript-модулей в вебе](https://developers.google.com/web/fundamentals/primers/modules#mjs), от Эдди Османи и Матиаса Байненса (англ.)
+- [Использование JavaScript-модулей в вебе](https://developers.google.com/web/fundamentals/primers/modules#mjs), от Эдди Османи и Матиаса Байненса (англ.)
 - [Глубокое погружение в ES-модули в картинках](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), от Лина Кларка на Hacks blog (англ.)
 - [Глубокое погружение в ES-модули в картинках](https://medium.com/web-standards/es-modules-cartoon-dive-71f42c1e851a), перевод на русский язык от «Веб-стандартов»
 - [ES6 в деталях: Модули](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), статья от Джейсона Орендорфа на Hacks blog (англ.)
