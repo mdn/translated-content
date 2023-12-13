@@ -409,7 +409,7 @@ l10n:
 }
 ```
 
-```html
+```html-nolint
 <div class="media flipped">
   <div class="image"></div>
   <div class="text">

@@ -24,6 +24,8 @@ margin-block: revert;
 margin-block: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/margin-block.html")}}
+
 このプロパティは、 {{CSSxRef("margin-top")}} と {{CSSxRef("margin-bottom")}}、または {{CSSxRef("margin-right")}} と {{CSSxRef("margin-left")}} プロパティに、 {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}} で定義された値にしたがって対応します。
 
 ## 構成要素のプロパティ

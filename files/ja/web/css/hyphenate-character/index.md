@@ -9,6 +9,8 @@ slug: Web/CSS/hyphenate-character
 
 自動ハイフネーション、ソフトハイフネーションのどちらでも、指定された hyphenate-character の値に従って表示されます。
 
+{{EmbedInteractiveExample("pages/css/hyphenate-character.html")}}
+
 ## 構文
 
 この値は、ハイフンの代わりに使用する文字列を設定するか、またはユーザーエージェントが現在の書体の慣習に基づいて適切な文字列を選択することを示します（既定値）。

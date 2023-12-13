@@ -11,7 +11,7 @@ l10n:
 
 次の画像は、グリッドにおける最初の行トラックを表しています。
 
-![Diagram showing a grid track.](1_grid_track.png)
+![グリッドトラックを示す図。](1_grid_track.png)
 
 ## 明示的グリッドにおけるトラックの大きさ
 
