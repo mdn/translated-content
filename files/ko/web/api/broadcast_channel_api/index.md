@@ -35,8 +35,6 @@ const bc = new BroadcastChannel("test_channel");
 bc.postMessage("This is a test message.");
 ```
 
-API는 메시지에 어떤 의미도 부여하지 않으므로 어떤 종류의 메시지를 예상하고 그 메시지로 무엇을 할 것인지는 코드에 달려 있습니다.
-
 채널로 전송되는 데이터는 [structured clone 알고리즘](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)을 통해 직렬화됩니다. 즉, 다양한 데이터 객체를 직접 직렬화하지 않고도 안전하게 전송할 수 있습니다.
 
 Broadcast Channel API는 메시지에 어떤 의미도 부여하지 않으므로, 어떤 종류의 메시지가 올 것인지 예상하고 이를 이용해 어떤 동작을 할 것인지는 코드에 달려 있습니다.
