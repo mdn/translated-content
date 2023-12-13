@@ -50,7 +50,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; SameSite=None; Secure
 Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnly
 ```
 
-## 指令
+## 属性
 
 - `<cookie-name>=<cookie-value>`
 
@@ -82,7 +82,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 - `Expires=<date>` {{optional_inline}}
 
-  - : cookie 的最长有效时间，以 HTTP 日期时间戳的形式。参见 {{HTTPHeader("Date")}} 以了解要求的格式。
+  - : 以 HTTP 日期时间戳形式指定的 cookie 的最长有效时间。参见 {{HTTPHeader("Date")}} 以了解要求的格式。
 
     如果没有指定，那么会是一个**会话期 cookie**。会话在客户端被关闭时结束，这意味着会话期 cookie 会在彼时被移除。
 
@@ -91,7 +91,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     如果设置了 `Expires` 日期，其截止时间与*客户端*相关，而非服务器的时间。
 
 - `HttpOnly` {{optional_inline}}
-  - : 阻止 JavaScript 通过 {{domxref("Document.cookie")}} 属性访问 cookie。注意，设置了 `HttpOnly` 的 cookie 在 JavaScript 初始化的请求中仍然会被发送。例如，调用 {{domxref("XMLHttpRequest.send()")}} 或 {{domxref("fetch()")}}。其用于防范跨站脚本攻击（{{Glossary("Cross-site_scripting", "XSS")}}）。
+  - : 阻止 JavaScript 通过 {{domxref("Document.cookie")}} 属性访问 cookie。注意，设置了 `HttpOnly` 的 cookie 仍然会通过 JavaScript 发起的请求发送。例如，调用 {{domxref("XMLHttpRequest.send()")}} 或 {{domxref("fetch()")}}。其用于防范跨站脚本攻击（{{Glossary("Cross-site_scripting", "XSS")}}）。
 - `Max-Age=<number>` {{optional_inline}}
   - : 在 cookie 过期之前需要经过的秒数。秒数为 0 或负值将会使 cookie 立刻过期。假如同时设置了 `Expires` 和 `Max-Age` 属性，那么 `Max-Age` 的优先级更高。
 - `Partitioned` {{optional_inline}}{{experimental_inline}}
@@ -131,7 +131,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
   - : 表示仅当请求通过 `https:` 协议（localhost 不受此限制）发送时才会将该 cookie 发送到服务器，因此其更能够抵抗[中间人](/zh-CN/docs/Glossary/MitM)攻击。
 
-    > **备注：** 不要假设 `Secure` 会阻止所有的对 cookie 中敏感信息（会话密钥、登录信息，等等）的访问。携带这一属性的 cookie 在不设置 `HttpOnly` 属性的情况下仍能从客户端的硬盘或是从 JavaScript 中访问。
+    > **备注：** 不要假设 `Secure` 会阻止所有的对 cookie 中敏感信息（会话密钥、登录信息，等等）的访问。携带这一属性的 cookie 在不设置 `HttpOnly` 属性的情况下仍能从客户端的硬盘或是从 JavaScript 中访问及更改。
     >
     > 非安全站点（`http:`）不能在 cookie 中设置 `Secure` 属性（从 Chrome 52 和 Firefox 52 开始）。当 `Secure` 属性由 localhost 设置时，`https:` 的要求会被忽略（从 Chrome 89 和 Firefox 75 开始）。
 
