@@ -2,7 +2,7 @@
 title: Barcode Detection API
 slug: Web/API/Barcode_Detection_API
 l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+  sourceCommit: 41d343d684f9f6e7199d408b209bcd0e077eb023
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
