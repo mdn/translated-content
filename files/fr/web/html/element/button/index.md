@@ -67,9 +67,11 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
 
 - `popovertarget`
 
+
   - : Transforme un `<button>` en un élément de contrôle d'un popover ; il prend comme valeur l'`id` de l'élément popover à contrôler. Voir la page sur {{domxref("Popover API", "L'API Popover", "", "nocode")}} pour plus de détails.
 
 - `popovertargetaction`
+
 
   - : Définit l'action à effectuer sur l'élément popover cible lorsqu'un bouton est activé. Les valeurs possibles sont :
     - `"hide"`

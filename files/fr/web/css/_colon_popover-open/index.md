@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-La [pseudo-class](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:popover-open`**  représente un élément {{domxref("Popover API", "popover", "", "nocode")}} (c'est-à-dire un élément avec un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover)) qui est dans l'état ouvert. Vous pouvez l'utiliser pour appliquer un style aux éléments de popover uniquement lorsqu'ils sont affichés.
+La [pseudo-class](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:popover-open`** représente un élément {{domxref("Popover API", "popover", "", "nocode")}} (c'est-à-dire un élément avec un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover)) qui est dans l'état ouvert. Vous pouvez l'utiliser pour appliquer un style aux éléments de popover uniquement lorsqu'ils sont affichés.
 
 ## Syntaxe
 
