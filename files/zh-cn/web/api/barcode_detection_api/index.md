@@ -13,7 +13,7 @@ Barcode Detection API 可用于检测图像中的条形码和二维码。
 
 Web 应用程序中对条形码识别的支持通过支持的各种条形码格式解锁了各种用例。二维码可用于在线支付、网络导航或建立社交媒体连接，Aztec 码可用于扫描登机牌，购物应用程序可使用 EAN 或 UPC 条形码来比较实物商品的价格。
 
-检测是通过 {{domxref('BarcodeDetector.detect()','detect()')}} 方法实现的，该方法接受一个图像对象；它可以是以下对象之一：一个 {{domxref("HTMLImageElement")}}、一个 {{domxref("SVGImageElement")}}、一个 {{domxref("HTMLVideoElement")}}、一个 {{domxref("HTMLCanvasElement")}}、一个 {{domxref("ImageBitmap")}}、一个 {{domxref("OffscreenCanvas")}}、一个 {{domxref("VideoFrame")}}、一个 {{domxref('Blob')}}、或一个 {{domxref('ImageData')}}。可以将可选参数传递给 {{domxref('BarcodeDetector')}} 构造函数，以提供有关要检测的条形码格式的提示。
+检测是通过 {{domxref('BarcodeDetector.detect()','detect()')}} 方法实现的，该方法接受一个图像对象；它可以是以下对象之一：{{domxref("HTMLImageElement")}}、{{domxref("SVGImageElement")}}、{{domxref("HTMLVideoElement")}}、{{domxref("HTMLCanvasElement")}}、{{domxref("ImageBitmap")}}、{{domxref("OffscreenCanvas")}}、{{domxref("VideoFrame")}}、{{domxref('Blob')}} 或 {{domxref('ImageData')}}。可以将可选参数传递给 {{domxref('BarcodeDetector')}} 构造函数，以提供有关要检测的条形码格式的提示。
 
 ### 支持的条形码格式
 
@@ -79,7 +79,7 @@ Barcode Detection API 支持以下条形码格式：
     <tr>
       <td>codabar</td>
       <td>
-        一种表示字符 0-9、A-D 和符号 - $ / + 的线性条形码。
+        一种表示字符 0-9、A-D 和符号 - . $ / + 的线性条形码。
       </td>
       <td>
         <img
@@ -185,19 +185,19 @@ Barcode Detection API 支持以下条形码格式：
     <tr>
       <td>unknown</td>
       <td>
-        平台使用此值来表示它不知道或指定目前正在检测或支持哪种条形码格式。
+        平台使用此值来表示它不知道或未指定目前正在检测或支持的条形码格式。
       </td>
       <td></td>
     </tr>
   </tbody>
 </table>
 
-你可以通过 {{domxref('BarcodeDetector/getSupportedFormats_static','getSupportedFormats()')}} 方法检查用户代理支持识别的格式。
+你可以通过 {{domxref('BarcodeDetector/getSupportedFormats_static','getSupportedFormats()')}} 方法检查用户代理支持的格式。
 
 ## 接口
 
 - {{domxref("BarcodeDetector")}} {{Experimental_Inline}}
-  - : Barcode Detection API 的 **`BarcodeDetector`** 接口允许检测图像中的条形码和二维码。
+  - : Barcode Detection API 的 `BarcodeDetector` 接口允许检测图像中的条形码和二维码。
 
 ## 示例
 
