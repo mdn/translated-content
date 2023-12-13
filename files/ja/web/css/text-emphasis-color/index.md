@@ -24,6 +24,8 @@ text-emphasis-color: revert;
 text-emphasis-color: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/text-emphasis-color.html")}}
+
 ## 構文
 
 ### 値

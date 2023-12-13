@@ -26,6 +26,8 @@ inset-inline: revert;
 inset-inline: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/inset-inline.html")}}
+
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。

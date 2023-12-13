@@ -25,6 +25,8 @@ inset-block-end: revert;
 inset-block-end: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/inset-block-end.html")}}
+
 ## 構文
 
 ### 値

@@ -25,6 +25,8 @@ inset-block-start: revert;
 inset-block-start: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/inset-block-start.html")}}
+
 ## 構文
 
 ### 値
