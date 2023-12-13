@@ -41,9 +41,9 @@ Existem três tipos de declarações em JavaScript.
 
 - {{jsxref("Statements/var", "var")}}
   - : Declara uma variável, opcionalmente, inicializando-a com um valor.
-- {{experimental_inline}} {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/let", "let")}}
   - : Declara uma variável local de escopo do bloco, opcionalmente, inicializando-a com um valor.
-- {{experimental_inline}} {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/const", "const")}}
   - : Declara uma constante de escopo de bloco, apenas de leitura.
 
 ### Variáveis
