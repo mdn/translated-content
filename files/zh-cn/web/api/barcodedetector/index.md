@@ -1,71 +1,69 @@
 ---
 title: BarcodeDetector
 slug: Web/API/BarcodeDetector
-page-type: web-api-interface
-status:
-  - experimental
-browser-compat: api.BarcodeDetector
+l10n:
+  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.
+{{domxref('Barcode Detection API')}} 的 **`BarcodeDetector`** 接口允许检测图像中的条形码和二维码。
 
-## Constructors
+## 构造方法
 
 - {{domxref('BarcodeDetector.BarcodeDetector', 'BarcodeDetector.BarcodeDetector()')}} {{Experimental_Inline}}
-  - : Creates and returns a `BarcodeDetector` object, with optional `barcodeDetectorOptions`
+  - : 创建并返回一个 `BarcodeDetector` 对象，带有可选的 `barcodeDetectorOptions` 参数。
 
-## Static methods
+## 静态方法
 
 - {{domxref('BarcodeDetector/getSupportedFormats_static', 'getSupportedFormats()')}} {{Experimental_Inline}}
-  - : Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported [barcode format types](/zh-CN/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
+  - : 返回一个 {{jsxref('Promise')}}，它兑现一个 {{jsxref('Array')}}，包含受支持的[条形码格式类型](/zh-CN/docs/Web/API/Barcode_Detection_API#supported_barcode_formats)。
 
-## Instance methods
+## 实例方法
 
 - {{domxref('BarcodeDetector.detect', 'detect()')}} {{Experimental_Inline}}
 
-  - : Returns a {{jsxref('Promise')}} which fulfills with an array of `detectedBarcode` objects with the following properties:
+  - : 返回一个 {{jsxref('Promise')}}，它兑现一个具有以下属性的 `DetectedBarcode` 对象数组：
 
-    - `boundingBox`: A {{domxref('DOMRectReadOnly')}}, which returns the dimensions of a rectangle representing the extent of a detected barcode, aligned with the image.
-    - `cornerPoints`: The x and y co-ordinates of the four corner points of the detected barcode relative to the image, starting with the top left and working clockwise. This may not be square due to perspective distortions within the image.
-    - `format`: The detected barcode format. (For a full list of formats see the \[landing page])
-    - `rawValue`: A string decoded from the barcode data.
+    - `boundingBox`: 一个 {{domxref('DOMRectReadOnly')}}，返回表示检测到的条形码范围的矩形尺寸，与图像对齐。
+    - `cornerPoints`: 检测到的条形码的四个角点相对于图像的 x 和 y 坐标，从左上角开始顺时针旋转。由于图像内的透视变形，这可能不是方形的。
+    - `format`: 检测到的条形码格式。（有关格式的完整列表，请参阅\[API 概述页面]）
+    - `rawValue`: 一个从条形码数据解码的字符串。
 
-## Examples
+## 示例
 
-### Creating A Detector
+### 创建检测器
 
-This example creates a new barcode detector object, with specified supported formats and tests for browser compatibility.
+此示例测试浏览器兼容性并使用指定的支持格式创建新的条形码检测器对象。
 
 ```js
-// check compatibility
+// 检查兼容性
 if (!("BarcodeDetector" in globalThis)) {
-  console.log("Barcode Detector is not supported by this browser.");
+  console.log("此浏览器不支持条形码检测器。");
 } else {
-  console.log("Barcode Detector supported!");
+  console.log("条形码检测器是支持的！");
 
-  // create new detector
+  // 创建新检测器
   const barcodeDetector = new BarcodeDetector({
     formats: ["code_39", "codabar", "ean_13"],
   });
 }
 ```
 
-### Getting Supported Formats
+### 获取支持的格式
 
-The following example calls the `getSupportFormat()` static method and logs the results to the console.
+以下示例调用 `getSupportedFormats()` 方法并将结果记录到控制台。
 
 ```js
-// check supported types
+// 检查支持的类型
 BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
   supportedFormats.forEach((format) => console.log(format));
 });
 ```
 
-### Detect Barcodes
+### 检测条形码
 
-This example uses the `detect()` method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.
+此示例使用 `detect()` 方法来检测给定图像中的条形码。识别结果被迭代并且条形码数据被记录到控制台。
 
 ```js
 barcodeDetector
@@ -78,15 +76,15 @@ barcodeDetector
   });
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [Accelerated Shape Detection in Images](https://developer.chrome.com/articles/shape-detection/#barcodedetector)
+- [barcodefaq.com：包含有关不同条形码和不同类型示例的信息的网站。](https://www.barcodefaq.com/)
+- [图像中的加速形状检测](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)
