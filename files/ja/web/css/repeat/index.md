@@ -40,8 +40,6 @@ repeat(4, [col-start] fit-content(200px) [col-end])
 repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 ```
 
-{{EmbedInteractiveExample("pages/css/function-repeat.html")}}
-
 ## 構文
 
 ### 値
