@@ -8,9 +8,9 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-La méthode **`hidePopover()`** de l'interface {{domxref("HTMLElement")}} masque un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut {{htmlattrdef("popover")}} valide) en le supprimant du {{glossary("top layer")}} et en le stylisant avec `display: none`.
+La méthode **`hidePopover()`** de l'interface {{domxref("HTMLElement")}} masque un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en le supprimant du {{glossary("top layer")}} et en le stylisant avec `display: none`.
 
-Lorsque `hidePopover()` est appelé sur un élément affiché avec l'attribut {{htmlattrdef("popover")}}, un évènement {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} sera déclenché, suivi du masquage du popover, puis de l'évènement {{domxref("HTMLElement/toggle_event", "toggle")}}. Si l'élément est déjà masqué, une erreur est lancée.
+Lorsque `hidePopover()` est appelé sur un élément affiché avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover), un évènement {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} sera déclenché, suivi du masquage du popover, puis de l'évènement {{domxref("HTMLElement/toggle_event", "toggle")}}. Si l'élément est déjà masqué, une erreur est lancée.
 
 ## Syntaxe
 

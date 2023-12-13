@@ -10,7 +10,7 @@ l10n:
 
 La propriété **`popoverTargetAction`** de l'interface {{domxref("HTMLButtonElement")}} permet de lire et définit l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur un élément popover contrôlé par un bouton.
 
-Elle reflète la valeur de l'attribut HTML {{htmlattrdef("popovertargetaction")}}.
+Elle reflète la valeur de l'attribut HTML [popovertargetaction](/fr/docs/HTML/Element/button#popovertargetaction).
 
 ## Valeur
 

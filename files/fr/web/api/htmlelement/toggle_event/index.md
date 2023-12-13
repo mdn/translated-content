@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-L'événement **`toggle`** de l'interface {{domxref("HTMLElement")}} se déclenche sur un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut {{htmlattrdef("popover")}} valide) juste après qu'il ait été affiché ou masqué.
+L'événement **`toggle`** de l'interface {{domxref("HTMLElement")}} se déclenche sur un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) juste après qu'il ait été affiché ou masqué.
 
 - Si le popover passe de masqué à affiché, la propriété `event.oldState` sera définie sur `closed` et la propriété `event.newState` sera définie sur `open`.
 - Si le popover passe d'affiché à masqué, alors `event.oldState` sera `open` et `event.newState` sera `closed`.

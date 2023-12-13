@@ -8,9 +8,9 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-La méthode **`showPopover()`** de l'interface {{domxref("HTMLElement")}} affiche un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut {{htmlattrdef("popover")}} valide) en l'ajoutant au {{glossary("top layer")}}.
+La méthode **`showPopover()`** de l'interface {{domxref("HTMLElement")}} affiche un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en l'ajoutant au {{glossary("top layer")}}.
 
-Lorsque `showPopover()` est appelé sur un élément avec l'attribut {{htmlattrdef("popover")}} qui est actuellement masqué, un évènement {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} sera déclenché, suivi de l'affichage du popover, puis de l'évènement {{domxref("HTMLElement/toggle_event", "toggle")}}. Si l'élément est déjà visible, une erreur est lancée.
+Lorsque `showPopover()` est appelé sur un élément avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) qui est actuellement masqué, un évènement {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} sera déclenché, suivi de l'affichage du popover, puis de l'évènement {{domxref("HTMLElement/toggle_event", "toggle")}}. Si l'élément est déjà visible, une erreur est lancée.
 
 ## Syntaxe
 

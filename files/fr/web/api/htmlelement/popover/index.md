@@ -10,7 +10,7 @@ l10n:
 
 La propriété **`popover`** de l'interface {{domxref("HTMLElement")}} récupère et définit l'état popover d'un élément via JavaScript (`"auto"` ou `"manual"`), et peut être utilisée pour la détection de fonctionnalités.
 
-Elle reflète la valeur de l'attribut HTML global {{htmlattrdef("popover")}}.
+Elle reflète la valeur de l'attribut HTML global [`popover`](/fr/docs/Web/HTML/Global_attributes/popover).
 
 ## Valeur
 

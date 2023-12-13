@@ -24,7 +24,7 @@ Cet exemple montre l'utilisation de base de l'API popover, en définissant un é
 L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère), de sorte que le popover peut être fermé (« _Light Dismissed_ ») en cliquant en dehors de la zone du popover.
 
 Tout d'abord, nous définissons un élément HTML `<input type="button">` que nous utiliserons pour afficher et masquer le popover, et un `<div>` qui sera le popover.
-Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/input#popovertargetaction) sur le `<input type="button">` ou l'attribut {{htmlattrdef("popover")}} sur le `<div>`, car nous le ferons de manière programmatique.
+Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/input#popovertargetaction) sur le `<input type="button">` ou l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) sur le `<div>`, car nous le ferons de manière programmatique.
 
 ```html
 <<input id="toggleBtn" type="button" value="Afficher/masquer le popover" />

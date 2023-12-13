@@ -326,7 +326,7 @@ Prenons un exemple pour voir ce que ça donne.
 
 #### HTML
 
-Le code HTML comprend un élément {{htmlelement("div")}} transformé en popover avec l'attribut global {{htmlattrdef("popover")}}, et un élément {{htmlelement("button")}} qui contrôle l'affichage du popover avec l'attribut {{htmlattrdef("popovertarget")}}.
+Le code HTML comprend un élément {{htmlelement("div")}} transformé en popover avec l'attribut global [`popover`](/fr/docs/Web/HTML/Global_attributes/popover), et un élément {{htmlelement("button")}} qui contrôle l'affichage du popover avec l'attribut [`popovertarget`](/fr/docs/Web/HTML/Element/input#popovertarget).
 
 ```html
 <button popovertarget="mypopover">Afficher le popover</button>
@@ -434,7 +434,7 @@ Prenons un exemple.
 
 #### HTML
 
-Le code HTML comprend un élément {{htmlelement("div")}} transformé en popover avec l'attribut global {{htmlattrdef("popover")}}, et un élément {{htmlelement("button")}} qui contrôle l'affichage du popover avec l'attribut {{htmlattrdef("popovertarget")}}.
+Le code HTML comprend un élément {{htmlelement("div")}} transformé en popover avec l'attribut global [`popover`](/fr/docs/Web/HTML/Global_attributes/popover), et un élément {{htmlelement("button")}} qui contrôle l'affichage du popover avec l'attribut [`popovertarget`](/fr/docs/Web/HTML/Element/input#popovertarget).
 
 ```html
 <button popovertarget="mypopover">Afficher le popover</button>

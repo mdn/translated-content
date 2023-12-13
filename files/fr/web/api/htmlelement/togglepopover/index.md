@@ -8,9 +8,9 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-La méthode **`togglePopover()`** de l'interface {{domxref("HTMLElement")}} permet de alterner les état d'un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut {{htmlattrdef("popover")}} valide) entre les états masqué et affiché.
+La méthode **`togglePopover()`** de l'interface {{domxref("HTMLElement")}} permet de alterner les état d'un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) entre les états masqué et affiché.
 
-Lorsque `togglePopover()` est appelé sur un élément avec l'attribut {{htmlattrdef("popover")}} :
+Lorsque `togglePopover()` est appelé sur un élément avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) :
 
 1. Un évènement {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} est déclenché.
 2. Le popover alterne entre les états masqué et affiché :
@@ -57,7 +57,7 @@ Le premier élément fournis les instructions sur la façon d'invoquer le popup,
 ```
 
 Nous définissons ensuite un élément `<div>` qui est le popup.
-Le contenu réel n'a pas d'importance, mais notez que nous avons besoin de l'attribut {{htmlattrdef("popover")}} pour faire du `<div>` un popover afin qu'il soit masqué par défaut (ou nous pourrions définir cet élément dans le JavaScript).
+Le contenu réel n'a pas d'importance, mais notez que nous avons besoin de l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) pour faire du `<div>` un popover afin qu'il soit masqué par défaut (ou nous pourrions définir cet élément dans le JavaScript).
 
 ```html
 <div id="help" popover>
