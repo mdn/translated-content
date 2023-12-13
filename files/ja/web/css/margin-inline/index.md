@@ -24,6 +24,8 @@ margin-inline: revert;
 margin-inline: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/margin-inline.html")}}
+
 このプロパティは、 {{CSSxRef("margin-top")}} と {{CSSxRef("margin-bottom")}}、または {{CSSxRef("margin-right")}} と {{CSSxRef("margin-left")}} プロパティに、 {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}} で定義された値にしたがって対応します。
 
 ## 構成要素のプロパティ

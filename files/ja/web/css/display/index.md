@@ -9,6 +9,8 @@ slug: Web/CSS/display
 
 正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。個々の仕様書については、[この文書の最後にある表](#仕様書)を参照してください。
 
+{{EmbedInteractiveExample("pages/css/display.html")}}
+
 ## 構文
 
 `display` プロパティは、キーワード値を使用して指定します。

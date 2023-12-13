@@ -7,6 +7,8 @@ slug: Web/CSS/transform-function/translate
 
 **`translate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を水平方向や垂直方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
+{{EmbedInteractiveExample("pages/css/function-translate.html")}}
+
 ![](translate.png)
 
 この変換は、二次元ベクトルであることが特徴です。それぞれの方向にどれだけ要素が移動するかの座標を定義します。

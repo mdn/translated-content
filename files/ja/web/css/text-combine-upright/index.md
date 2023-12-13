@@ -25,6 +25,8 @@ text-combine-upright: revert;
 text-combine-upright: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/text-combine-upright.html")}}
+
 ## 構文
 
 ### 値

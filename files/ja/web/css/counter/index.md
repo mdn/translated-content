@@ -15,6 +15,8 @@ counter(countername);
 counter(countername, upper-roman)
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/function-counter.html", "tabbed-shorter")}}
+
 [カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)自身には視覚的効果が何もありません。 `counter()` 関数 (および {{cssxref("counters()")}} 関数) は開発者が定義した文字列 (または画像) を返すことでカウンターは利用価値が生まれます。
 
 > **メモ:** `counter()` 関数は CSS プロパティとも併用できますが、 {{CSSxRef("content")}} 以外のプロパティにおける対応は実験的であり、型または単位の引数への対応は限られています。
