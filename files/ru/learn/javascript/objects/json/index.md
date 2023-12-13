@@ -319,7 +319,7 @@ myString;
 
 - [JSON object reference page](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [XMLHttpRequest object reference page](/ru/docs/Web/API/XMLHttpRequest)
-- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [HTTP request methods](/ru/docs/Web/HTTP/Methods)
 - [Official JSON web site with link to ECMA standard](http://json.org)
 

@@ -1,33 +1,38 @@
 ---
-title: Console.dir()
+title: "console: статический метод dir()"
 slug: Web/API/console/dir_static
-original_slug: Web/API/console/dir
+l10n:
+  sourceCommit: ca4eca184b32202ce9fd80b29e1c2a68763b7f92
 ---
 
-{{ APIRef("Console API") }}{{Non-standard_header}}
+{{APIRef("Console API")}}
 
-## Описание
+Статический метод **`console.dir()`** отображает интерактивный список свойств указанного JavaScript объекта. Вывод представлен в виде иерархического списка с возможностью просмотра содержимого дочерних объектов.
 
-Отображает список свойств указанного JavaScript объекта. Вывод представлен в виде иерархического списка с возможностью просмотра содержимого дочерних объектов.
+Другими словами, `console.dir()` предоставляет возможность увидеть в консоли все свойства JavaScript объекта.
 
-Console.dir это способ посмотреть в консоли свойства заданного javascript объекта.
+{{AvailableInWorkers}}
 
-![console-dir.png](/@api/deki/files/6081/=console-dir.png)
+![](console-dir.png)
 
 ## Синтаксис
 
-```
-console.dir(object);
+```js-nolint
+dir(object)
 ```
 
 ## Параметры
 
 - `object`
-  - : JavaScript-объект свойства которого нужно вывести.
+  - : JavaScript-объект, свойства которого нужно вывести.
 
-### Спецификация
+### Возвращаемое значение
 
-[Console Object API](https://github.com/DeveloperToolsWG/console-object/blob/master/api.md#consoledirobject)
+Нет ({{jsxref("undefined")}}).
+
+### Спецификации
+
+{{Specifications}}
 
 ## Совместимость браузеров
 
@@ -35,5 +40,6 @@ console.dir(object);
 
 ## Смотрите также
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [Документация Microsoft Edge: `console.dir()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#dir)
+- [Документация Node.JS: `console.dir()`](https://nodejs.org/docs/latest/api/console.html#consoledirobj-options)
+- [Документация Google Chrome: `console.dir()`](https://developer.chrome.com/docs/devtools/console/api/#dir)

@@ -14,18 +14,18 @@ slug: Web/CSS/max-width
 ## Синтаксис
 
 ```css
-/* <length> значение */
-max-width: 3.5em;
-
-/* <percentage> значение */
-max-width: 75%;
-
-/* Значения-ключевые слова */
+/* Ключевые слова */
 max-width: none;
 max-width: max-content;
 max-width: min-content;
 max-width: fit-content;
 max-width: fill-available;
+
+/* Значения длины */
+max-width: 3.5em;
+
+/* <percentage> значение */
+max-width: 75%;
 
 /* Глобальные значения */
 max-width: inherit;

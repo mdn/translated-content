@@ -10,7 +10,7 @@ l10n:
 **`[@@iterator]()`** は {{jsxref("String")}} 値のメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や{{jsxref("Statements/for...of", "for...of")}}ループ
 文字列値のコードポイントを走査し、それぞれのコードポイントを文字列値として返すイテレーターオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/string-iterator.html")}}
+{{EmbedInteractiveExample("pages/js/string-prototype-@@iterator.html")}}
 
 ## 構文
 

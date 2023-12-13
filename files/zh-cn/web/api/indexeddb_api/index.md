@@ -21,9 +21,9 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。�
 
 > **备注：** 正如大多数的 web 储存解决方案一样，IndexedDB 也遵守[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。因此当你在某个域名下操作储存数据的时候，你不能操作其他域名下的数据。
 
-### 同步和异步（Synchronous、asynchronous）
+### 同步和异步
 
-使用 IndexedDB 执行的操作是异步执行的，以免阻塞应用程序。IndexedDB 最初包括同步和异步 API。同步 API 仅用于 [Web Workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)，且已从规范中移除，因为尚不清晰是否需要。但如果 Web 开发人员有足够的需求，可以重新引入同步 API。
+使用 IndexedDB 执行的操作是异步执行的，以免阻塞应用程序。
 
 ### 储存限制和回收标准
 

@@ -111,7 +111,7 @@ use wasm_bindgen::prelude::*;
 
 パッケージ内で `wasm-bindgen` の機能を使うことになるでしょう。実際、次の節で利用します。
 
-#### JavaScript 内の外部関数を Rust から呼び出す。
+#### JavaScript 内の外部関数を Rust から呼び出す
 
 次の部分は以下のようになっています。
 

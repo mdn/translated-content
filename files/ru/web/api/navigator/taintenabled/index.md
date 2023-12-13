@@ -1,6 +1,8 @@
 ---
 title: "Navigator: метод taintEnabled()"
 slug: Web/API/Navigator/taintEnabled
+l10n:
+  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
 {{APIRef("HTML DOM")}} {{deprecated_header}}

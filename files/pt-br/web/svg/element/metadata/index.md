@@ -21,7 +21,7 @@ Metadados são dados estruturados sobre dados. Metadados que são incluídos com
 
 ### Atributos específicos
 
-_Não existem atributos específicos_
+_Não existem atributos específicos._
 
 ## Interface DOM
 

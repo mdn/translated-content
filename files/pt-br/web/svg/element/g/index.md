@@ -45,7 +45,7 @@ O elemento `g` é um recipiente utilizado para agrupar objetos. Transformações
 
 ### Atributos específicos
 
-_There is no specific attributes_
+_There is no specific attributes._
 
 ## Interface DOM
 

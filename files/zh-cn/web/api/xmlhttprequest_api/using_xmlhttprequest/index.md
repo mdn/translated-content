@@ -37,8 +37,8 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 如果你使用 `XMLHttpRequest` 来获得一个远程的 XML 文档的内容，{{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性将会是一个由 XML 文档解析而来的 DOM 对象，这很难被操作和分析。这里有五种主要的分析 XML 文档的方式：
 
 1. 使用 [XPath](/zh-CN/docs/Web/XPath) 定位到文档的指定部分。
-2. 手动 [解析和序列化 XML](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML) 为字符串或对象。
-3. 使用 [XMLSerializer](/zh-CN/docs/XMLSerializer) 把 DOM 树序列化成字符串或文件。
+2. 手动[解析和序列化 XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML) 为字符串或对象。
+3. 使用 [XMLSerializer](/zh-CN/docs/Web/API/XMLSerializer) 把 DOM 树序列化成字符串或文件。
 4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
 
 > **备注：** 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
@@ -845,30 +845,19 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 });
 ```
 
-如果你想要了解 **_当前页面是否发生了改变，_**请阅读这篇文章：{{domxref("document.lastModified")}}.
+如果你想要了解当前页面是否发生了改变，请阅读这篇文章：{{domxref("document.lastModified")}}。
 
 ## 跨站的 XMLHttpRequest
 
-现代浏览器可以通过执行 WebApps 工作小组通过的 [Access Control for Cross-Site Requests](/zh-CN/docs/Web/HTTP/Access_control_CORS) 标注来支持跨站请求。只要服务器端的配置允许你从你的 Web 应用发送请求，就可以使用 `XMLHttpRequest` 。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
+现代浏览器通过实现[跨源资源共享](/zh-CN/docs/Web/HTTP/CORS)（CORS）标准来支持跨站请求。只要服务器端的配置允许你从你的 Web 应用发送请求，就可以使用 `XMLHttpRequest`。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
 
 ## 绕过缓存
 
-一般地，如果缓存中有相应内容， `XMLHttpRequest` 会试图从缓存中读取内容。绕过缓存的方法见下述代码：
-
-```js
-var req = new XMLHttpRequest();
-req.open("GET", url, false);
-req.channel.loadFlags |= Components.interfaces.nsIRequest.LOAD_BYPASS_CACHE;
-req.send(null);
-```
-
-> **备注：** 这个方法只工作于基于 Gecko 内核的软件，也就是通道属性是 Gecko-specific.
-
-还有一个跨浏览器兼容的方法，就是给 URL 添加时间戳。请确保你酌情地添加了 "?" or "&" 。例如，将：
+有一个跨浏览器兼容的方法，就是给 URL 添加时间戳。请确保你酌情地添加了 "?" or "&" 。例如，将：
 
 ```plain
-http://foo.com/bar.html -> http://foo.com/bar.html?12345
-http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
+http://example.com/bar.html -> http://example.com/bar.html?12345
+http://example.com/bar.html?foobar=baz -> http://example.com/bar.html?foobar=baz&12345
 ```
 
 因为本地缓存都是以 URL 作为索引的，这样就可以使每个请求都是唯一的，也就可以这样来绕开缓存。
@@ -876,23 +865,19 @@ http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
 你也可以用下面的方法自动更改缓存：
 
 ```js
-var oReq = new XMLHttpRequest();
+const req = new XMLHttpRequest();
 
-oReq.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime());
-oReq.send(null);
+req.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime());
+req.send(null);
 ```
 
 ## 安全性
 
-要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 `Access-Control-Allow-Origin` 的 HTTP 头。
+要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 `Access-Control-Allow-Origin` 的 HTTP 标头。
 
 ### XMLHttpRequests 被停止
 
-如果你的 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的返回，这意味着请求无法执行。就是[无法发送](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). 一个可能导致的原因是当 [`XMLHttpRequest` origin](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (创建的 XMLHttpRequest) 改变时，XMLHttpRequest 执行 `open()`.。这种情况是可能发生的，举个例子，我们在一个窗口的`onunload`事件中关闭 XMLHttpRequest，但实际上在即将关闭窗口时，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是`open()`）。最有效的避免这个问题的方法是为新窗口的 {{domxref("Element/DOMActivate_event", "DOMActivate")}} 事件设置一个监听器，一旦窗口关闭，它的[`unload`](/zh-CN/docs/Web/API/Window/unload_event)事件便触发。
-
-## Worker
-
-设置 `overrideMimeType` 后在 {{domxref("Worker")}} 中无法正常工作，详见 [Firefox bug 678057](https://bugzil.la/678057)。其他浏览器也许会以不同的手段处理。
+如果你的 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的返回，这意味着请求无法执行。就是未被发送的（[`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent)）。一个可能导致的原因是在 XMLHttpRequest 在执行 `open()` 时，[`XMLHttpRequest` 的来源](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin)发生了改变。这种情况是可能发生的，例如，我们在一个窗口的 onunload 事件触发时在进行一个 XMLHttpRequest，之前创建的 XMLHttpRequest 仍然在那里，最后当这个窗口失去焦点、另一个窗口获得焦点时，它还是发送了请求（也就是 `open()`）。最有效的避免这个问题的方法是在关闭的窗口触发 {{domxref("Window/unload_event", "unload")}} 事件时为新窗口的 {{domxref("Element/DOMActivate_event", "DOMActivate")}} 事件设置一个监听器。
 
 ## 规范
 

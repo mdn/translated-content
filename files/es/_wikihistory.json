@@ -8501,29 +8501,9 @@
     "modified": "2019-03-23T22:32:27.340Z",
     "contributors": ["Enesimus", "javichito"]
   },
-  "Web/Guide/Graphics": {
-    "modified": "2020-05-19T14:31:25.384Z",
-    "contributors": [
-      ".bkjop0",
-      "lassergraf",
-      "CarlosEduardoEncinas",
-      "pescadito.2007",
-      "rogeliomtx",
-      "CarlosQuijano",
-      "lalo2013"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T22:48:50.706Z",
     "contributors": ["miguelsp"]
-  },
-  "Web/Guide/Parsing_and_serializing_XML": {
-    "modified": "2019-03-23T22:10:22.365Z",
-    "contributors": ["FenixAlive"]
-  },
-  "Web/Guide/Performance": {
-    "modified": "2019-03-23T23:21:17.984Z",
-    "contributors": ["DeiberChacon", "Sheppy"]
   },
   "Web/HTML": {
     "modified": "2020-12-10T12:38:08.697Z",
@@ -13550,6 +13530,10 @@
       "diegogaysaez"
     ]
   },
+  "Web/XML/Parsing_and_serializing_XML": {
+    "modified": "2019-03-23T22:10:22.365Z",
+    "contributors": ["FenixAlive"]
+  },
   "Web/XML/XML_introduction": {
     "modified": "2019-07-25T12:38:17.842Z",
     "contributors": [
@@ -13923,6 +13907,18 @@
   "conflicting/Learn/HTML/Introduction_to_HTML/Getting_started": {
     "modified": "2019-03-23T23:53:31.079Z",
     "contributors": ["teoli", "Mgjbot", "Jorolo"]
+  },
+  "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
+    "modified": "2020-05-19T14:31:25.384Z",
+    "contributors": [
+      ".bkjop0",
+      "lassergraf",
+      "CarlosEduardoEncinas",
+      "pescadito.2007",
+      "rogeliomtx",
+      "CarlosQuijano",
+      "lalo2013"
+    ]
   },
   "conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content": {
     "modified": "2019-10-10T16:52:54.661Z",
@@ -14566,6 +14562,10 @@
   "conflicting/Web/OpenSearch": {
     "modified": "2019-01-16T15:27:59.157Z",
     "contributors": ["Mgjbot", "Superruzafa", "Lesmo sft", "Nukeador"]
+  },
+  "conflicting/Web/Performance": {
+    "modified": "2019-03-23T23:21:17.984Z",
+    "contributors": ["DeiberChacon", "Sheppy"]
   },
   "conflicting/Web/Progressive_web_apps": {
     "modified": "2019-03-23T23:32:50.922Z",

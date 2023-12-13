@@ -58,10 +58,6 @@ requestRemoteChannel(dataChannel.id);
 
 WebRTC 데이터채널은 아웃바운드 데이터에 대해 버퍼링을 제공합니다. 이것은 자동적으로 처리가됩니다. buffer의 사이즈를 컨트롤 할 수 없는 동안 당신은 얼마나 많은 데이터가 현재 버퍼 되어 있는지 배울 수 있고 큐 데이터의 버퍼가 고갈되기 시작할 때 알림을 받도록 선택할 수 도 있습니다. 이것은 메모리 과다사용이나 채널을 완전히 밀어내버리는 것을 없애고 언제나 데이터를 보낼수 있도록 효과적인 루틴을 만들기 쉽게 해줍니다.
 
-**<<\<write more about using bufferedAmount, bufferedAmountLowThreshold, onbufferedamountlow, and bufferedamountlow here>>>**
-
-...
-
 ## 메세지 크기 제한에 대해 이해하기
 
 네트워크를 통하여 전송되는 데이터라면 그 데이터는 반드시 사이즈가 제한됩니다. 기초적인 레벨의 이야기를 하자면, 각각의 네트워크 패킷은 어떠한 값보다 클 수 없습니다. (정확한 숫자는 네트워크와 전송 계층이 사용하고 있는 것에 따라 다릅니다.) 어플리케이션 계층에서는 — 즉 당신의 코드가 돌아가고 있는 WebRTC {{Glossary("user agent", "user agent's")}} — WebRTC가 네트워크의 전송계층위의 최대 패킷사이즈보다 메시지가 더 큰지 확인하는 것을 구현할 수 있습니다.
