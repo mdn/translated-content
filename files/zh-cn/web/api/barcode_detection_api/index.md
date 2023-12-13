@@ -2,7 +2,7 @@
 title: Barcode Detection API
 slug: Web/API/Barcode_Detection_API
 l10n:
-  sourceCommit: 37299890c7fe7e4d92c1a86a5fa264afc13467e8
+  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
@@ -256,4 +256,4 @@ barcodeDetector
 ## 参见
 
 - [barcodefaq.com：包含有关不同条形码和不同类型示例的信息的网站。](https://www.barcodefaq.com/)
-- [Shape Detection API：一张图片胜过一千个单词、人脸和条形码](https://developer.chrome.com/articles/shape-detection/#barcodedetector)
+- [Shape Detection API：一张图片胜过一千个单词、人脸和条形码](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)
