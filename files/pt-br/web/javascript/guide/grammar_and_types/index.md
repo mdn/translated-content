@@ -110,7 +110,7 @@ console.log(n * 32); // a saída para o console será 0.
 
 ### Escopo de variável
 
-Quando você declara uma váriavel fora de qualquer função, ela é chamada de variável _global_, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, é chamada de variável _local_, pois ela está disponível somente dentro dessa função.
+Quando você declara uma variável fora de qualquer função, ela é chamada de variável _global_, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, é chamada de variável _local_, pois ela está disponível somente dentro dessa função.
 
 JavaScript antes do ECMAScript 6 não possuía escopo de [declaração de bloco](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement); pelo contrário, uma variável declarada dentro de um bloco de uma _função_ é uma variável local (ou contexto _global_) do bloco que está inserido a função. Por exemplo o código a seguir exibirá 5, porque o escopo de `x` está na função (ou contexto global) no qual `x` é declarado, não o bloco, que neste caso é a declaração `if`.
 
