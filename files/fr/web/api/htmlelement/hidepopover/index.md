@@ -2,8 +2,8 @@
 title: "HTMLElement: méthode hidePopover()"
 short-title: hidePopover()
 slug: Web/API/HTMLElement/hidePopover
-page-type: web-api-instance-method
-browser-compat: api.HTMLElement.hidePopover
+l10n:
+  sourceCommit: 0df415130c
 ---
 
 {{ APIRef("HTML DOM") }}

@@ -2,8 +2,8 @@
 title: "ToggleEvent: propriété oldState"
 short-title: oldState
 slug: Web/API/ToggleEvent/oldState
-page-type: web-api-instance-property
-browser-compat: api.ToggleEvent.oldState
+l10n:
+  sourceCommit: 0df415130c
 ---
 
 {{APIRef("Popover API")}}

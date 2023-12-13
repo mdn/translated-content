@@ -2,8 +2,8 @@
 title: "HTMLButtonElement: propriété popoverTargetAction"
 short-title: popoverTargetAction
 slug: Web/API/HTMLButtonElement/popoverTargetAction
-page-type: web-api-instance-property
-browser-compat: api.HTMLButtonElement.popoverTargetAction
+l10n:
+  sourceCommit: 0df415130c
 ---
 
 {{APIRef("DOM")}}

@@ -1,9 +1,8 @@
 ---
 title: Using the Popover API
 slug: Web/API/Popover_API/Using
-page-type: guide
-status:
-  - experimental
+l10n:
+  sourceCommit: 3ce863eafe
 ---
 
 {{DefaultAPISidebar("Popover API")}}
@@ -12,7 +11,7 @@ L'**API Popover** est une API expérimentale qui fournit aux développeurs un m�
 
 ## Créer des popovers déclaratif
 
-Dans sa forme la plus simple, un popover est créer en ajoutant l’attribut `popover` à l' élément HTML qui va contenir le contenu du popover. Un `id` est également nécessaire pour pouvoir associer l'élément popover à un élément de contrôle.
+Dans sa forme la plus simple, un popover est créer en ajoutant l'attribut `popover` à l'élément HTML qui va contenir le contenu du popover. Un `id` est également nécessaire pour pouvoir associer l'élément popover à un élément de contrôle.
 
 ```html
 <div id="my-popover" popover>Contenu du popover</div>
@@ -20,7 +19,7 @@ Dans sa forme la plus simple, un popover est créer en ajoutant l’attribut `po
 
 > **Note :** Définir l'attribut `popover` sans valeur est équivalent à définir l'attribut `popover="auto"`.
 
-Ajouter cet attribut masque l'élément dès le chargement de la page comme s'il avait la propriété CSS {{cssxref("display", "display: none")}}. Pour afficher/masquer le popover, il faut utiliser un ou plusieurs bouton de contrôle. Vous pouvez utiliser un élément {{htmlelement("button")}} (ou {{htmlelement("input")}} avec l'attribut `type="button"`) en lui ajoutant l'attribut [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) avec la valeur de l'`id` de l'élément popover à contrôler.
+Ajouter cet attribut masque l'élément dès le chargement de la page comme s'il avait la propriété CSS {{cssxref("display", "display: none")}}. Pour afficher/masquer le popover, il faut utiliser un ou plusieurs bouton de contrôle. Vous pouvez utiliser un élément {{htmlelement("button")}} (ou {{htmlelement("input")}} avec l'attribut `type="button"`) en lui ajoutant l'attribut [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget) avec la valeur de l'`id` de l'élément popover à contrôler.
 
 ```html
 <button popovertarget="mypopover">Actionner le popover</button>
@@ -29,7 +28,7 @@ Ajouter cet attribut masque l'élément dès le chargement de la page comme s'il
 
 Le comportement par défaut de l'élément de contrôle est de basculer l'état du popover entre affiché et masqué.
 
-Vous pouvez modifier ce comportement en utilisant l'attribut [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) avec les valeurs `"show"`, `"hide"` ou `"toggle"`. Par exemple, pour créer des boutons différent qui affichent ou masquent le popover, vous pouvez utiliser le code suivant :
+Vous pouvez modifier ce comportement en utilisant l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction) avec les valeurs `"show"`, `"hide"` ou `"toggle"`. Par exemple, pour créer des boutons différent qui affichent ou masquent le popover, vous pouvez utiliser le code suivant :
 
 ```html
 <button popovertarget="mypopover" popovertargetaction="show">
@@ -45,7 +44,7 @@ Vous pouvez voir ce code en action dans notre [exemple de popover déclaratif](h
 
 > **Note:** Is l'attribut `popovertargetaction` n'est pas défini, sa valeur par défaut sera `"toggle"`.
 
-Quand un popover est affiché, la propriété CSS `display:none` lui est retiré et il est placé dans la [couche supérieure](/en-US/docs/Glossary/Top_layer), de cet manière il sera affiché par dessus les autres éléments de la page.
+Quand un popover est affiché, la propriété CSS `display:none` lui est retiré et il est placé dans la [couche supérieure](/fr/docs/Glossary/Top_layer), de cet manière il sera affiché par dessus les autres éléments de la page.
 
 ## L'état auto, et la "suppression légère"
 
@@ -79,7 +78,7 @@ Vous pouvez voir ce code en action dans notre [exemple de popovers manuels](http
 
 Vous pouvez également afficher des popovers via un API JavaScript.
 
-La propriété {{domxref("HTMLElement.popover")}} permet de connaître ou définir la valeur de l'attribut [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover). Elle peut être utilisée pour créer un popover en JavaScript, ou simplement faire de la détection de fonctionnalité.
+La propriété {{domxref("HTMLElement.popover")}} permet de connaître ou définir la valeur de l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover). Elle peut être utilisée pour créer un popover en JavaScript, ou simplement faire de la détection de fonctionnalité.
 
 ```js
 function supportsPopovers() {
@@ -89,8 +88,8 @@ function supportsPopovers() {
 
 De même :
 
-- {{domxref("HTMLButtonElement.popoverTargetElement")}} et {{domxref("HTMLInputElement.popoverTargetElement")}} permettent de connaître ou définir la valeur de l'attribut [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget), ce qui permet de créer des boutons de contrôle. Notez que la valeur de cette propriété est une référence vers l'élément popover.
-- {{domxref("HTMLButtonElement.popoverTargetAction")}} et {{domxref("HTMLInputElement.popoverTargetAction")}} permettent de connaître ou définir la valeur de l'attribut [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction), ce qui permet de spécifier l'action à effectuer sur l'élément popover contrôlé par le bouton.
+- {{domxref("HTMLButtonElement.popoverTargetElement")}} et {{domxref("HTMLInputElement.popoverTargetElement")}} permettent de connaître ou définir la valeur de l'attribut [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget), ce qui permet de créer des boutons de contrôle. Notez que la valeur de cette propriété est une référence vers l'élément popover.
+- {{domxref("HTMLButtonElement.popoverTargetAction")}} et {{domxref("HTMLInputElement.popoverTargetAction")}} permettent de connaître ou définir la valeur de l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction), ce qui permet de spécifier l'action à effectuer sur l'élément popover contrôlé par le bouton.
 
 En utilisant ces trois propriétés, vous pouvez créer un bouton de contrôle et un élément popover en JavaScript :
 
@@ -231,7 +230,7 @@ Il y a trois façons de créer des popovers imbriqués :
 </div>
 ```
 
-2. En utilisant l'attribut `popovertarget` :
+1. En utilisant l'attribut `popovertarget` :
 
 ```html
 <div popover>
@@ -242,7 +241,7 @@ Il y a trois façons de créer des popovers imbriqués :
 <div id="foo" popover>Enfant</div>
 ```
 
-3. En utilisant l'attribut `anchor` :
+1. En utilisant l'attribut `anchor` :
 
 ```html
 <div popover id="foo">Parent</div>
@@ -331,7 +330,9 @@ Le code HTML comprend un élément {{htmlelement("div")}} transformé en popover
 
 ```html
 <button popovertarget="mypopover">Afficher le popover</button>
-<div popover="auto" id="mypopover">Je suis un Popover! Je devrais être animé.</div>
+<div popover="auto" id="mypopover">
+  Je suis un Popover! Je devrais être animé.
+</div>
 ```
 
 #### CSS
@@ -407,7 +408,7 @@ Comme nous l'avons vu précédement, nous avons également :
 - défini un état de départ pour la `transition` dans un block `@starting-style`.
 - ajouté `display` à la liste des propriétés à transitionner de manière à ce que l'élément animé soit visible (avec `display: block`) pendant toute l'animation. Sans cela, la transition de fermeture ne serait pas visible, le popover disparaîtrait instantanément.
 - ajouté `overlay` à la liste des propriétés à transitionner de manière à ce que l'élément popover reste dans le _{{glossary("top layer")}}_ jusqu'à la fin de l'animation. L'impact de comportement n'est pas nécessairement perceptible pour des animations aussi simple que ce que nous faisons ici. Cependant, dans certain cas plus complexe, le fait d'omettre cette propriété peut avoir pour conséquence de faire disparaitre l'élément avant la fin de l'animation de transition.
-- ajouté `allow-discrete` aux transitions des propriété `display` et `overlay` pour activer les [transitions discrètes](fr/docs/Web/CSS/CSS_animated_properties#discrete) de ces propriétés.
+- ajouté `allow-discrete` aux transitions des propriété `display` et `overlay` pour activer les [transitions discrètes](/fr/docs/Web/CSS/CSS_animated_properties#discrete) de ces propriétés.
 
 Vous noterez que nous avons également défini une transition pour le pseudo-élément {{cssxref("::backdrop")}} qui apparait derrière le popover quand il s'ouvre, provoquant un effet d'assombrissement du contenu de la page.
 
@@ -437,7 +438,9 @@ Le code HTML comprend un élément {{htmlelement("div")}} transformé en popover
 
 ```html
 <button popovertarget="mypopover">Afficher le popover</button>
-<div popover="auto" id="mypopover">Je suis un Popover! Je devrais être animé.</div>
+<div popover="auto" id="mypopover">
+  Je suis un Popover! Je devrais être animé.
+</div>
 ```
 
 #### CSS

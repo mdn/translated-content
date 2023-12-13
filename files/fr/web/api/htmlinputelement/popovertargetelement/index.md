@@ -2,8 +2,8 @@
 title: "HTMLInputElement: propriété popoverTargetElement"
 short-title: popoverTargetElement
 slug: Web/API/HTMLInputElement/popoverTargetElement
-page-type: web-api-instance-property
-browser-compat: api.HTMLInputElement.popoverTargetElement
+l10n:
+  sourceCommit: 0df415130c
 ---
 
 {{ APIRef("DOM") }}

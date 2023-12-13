@@ -2,8 +2,8 @@
 title: "HTMLElement: propriété popover"
 short-title: popover
 slug: Web/API/HTMLElement/popover
-page-type: web-api-instance-property
-browser-compat: api.HTMLElement.popover
+l10n:
+  sourceCommit: 0df415130c
 ---
 
 {{ APIRef("HTML DOM") }}

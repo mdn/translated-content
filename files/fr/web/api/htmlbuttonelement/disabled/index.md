@@ -2,8 +2,8 @@
 title: "HTMLButtonElement: propriété disabled"
 short-title: disabled
 slug: Web/API/HTMLButtonElement/disabled
-page-type: web-api-instance-property
-browser-compat: api.HTMLButtonElement.disabled
+l10n:
+  sourceCommit: a3d9f61a89
 ---
 
 {{APIRef("HTML DOM")}}

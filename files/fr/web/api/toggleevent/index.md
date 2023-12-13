@@ -1,8 +1,8 @@
 ---
 title: ToggleEvent
 slug: Web/API/ToggleEvent
-page-type: web-api-interface
-browser-compat: api.ToggleEvent
+l10n:
+  sourceCommit: 0df415130c
 ---
 
 {{APIRef("UI Events")}}

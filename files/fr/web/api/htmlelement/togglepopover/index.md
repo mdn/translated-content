@@ -2,8 +2,8 @@
 title: "HTMLElement: méthode togglePopover() method"
 short-title: togglePopover()
 slug: Web/API/HTMLElement/togglePopover
-page-type: web-api-instance-method
-browser-compat: api.HTMLElement.togglePopover
+l10n:
+  sourceCommit: 1ae11db23a
 ---
 
 {{ APIRef("HTML DOM") }}

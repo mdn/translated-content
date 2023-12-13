@@ -2,8 +2,8 @@
 title: "ToggleEvent: le constructeur ToggleEvent()"
 short-title: ToggleEvent()
 slug: Web/API/ToggleEvent/ToggleEvent
-page-type: web-api-constructor
-browser-compat: api.ToggleEvent.ToggleEvent
+l10n:
+  sourceCommit: 0df415130c
 ---
 
 {{APIRef("Popover API")}}

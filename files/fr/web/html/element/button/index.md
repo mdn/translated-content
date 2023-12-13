@@ -1,14 +1,13 @@
 ---
 title: "<button> : l'élément représentant un bouton"
-
 slug: Web/HTML/Element/button
-page-type: html-element
-browser-compat: html.elements.button
+l10n:
+  sourceCommit: aa5dfde3e9
 ---
 
 {{HTMLSidebar}}
 
-L'élément [HTML](/en-US/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs/Learn/Forms) ou ouvrir une boite de dialogue.
+L'élément [HTML](/fr/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs/Learn/Forms) ou ouvrir une boite de dialogue.
 
 Par défaut, les boutons HTML sont présentés dans un style ressemblant à la plate-forme d'exécution de [l'agent utilisateur](/fr/docs/Glossary/User_agent), mais vous pouvez modifier l'apparence des boutons avec [CSS](/fr/docs/Web/CSS).
 
@@ -67,9 +66,11 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
   - : Le nom du bouton, soumis en tant que paire avec la `valeur` du bouton comme partie des données du formulaire.
 
 - `popovertarget`
+
   - : Transforme un `<button>` en un élément de contrôle d'un popover ; il prend comme valeur l'`id` de l'élément popover à contrôler. Voir la page sur {{domxref("Popover API", "L'API Popover", "", "nocode")}} pour plus de détails.
 
 - `popovertargetaction`
+
   - : Définit l'action à effectuer sur l'élément popover cible lorsqu'un bouton est activé. Les valeurs possibles sont :
     - `"hide"`
       - : Le bouton masquera l'élément popover cible. Si l'élément popover cible est déjà masqué, rien ne se passera.
@@ -279,7 +280,6 @@ Le clique sur un {{HTMLElement("button")}} ou un {{HTMLElement("input")}} de typ
     </tr>
   </tbody>
 </table>
-
 
 ## Spécifications
 

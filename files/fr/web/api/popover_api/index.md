@@ -1,8 +1,8 @@
 ---
 title: Popover API
 slug: Web/API/Popover_API
-page-type: web-api-overview
-browser-compat: api.HTMLElement.popover
+l10n:
+  sourceCommit: e0d92259b4
 ---
 
 {{DefaultAPISidebar("Popover API")}}

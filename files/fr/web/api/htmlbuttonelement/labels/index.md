@@ -2,8 +2,8 @@
 title: "HTMLButtonElement: propriété labels"
 short-title: labels
 slug: Web/API/HTMLButtonElement/labels
-page-type: web-api-instance-property
-browser-compat: api.HTMLButtonElement.labels
+l10n:
+  sourceCommit: a3d9f61a89
 ---
 
 {{APIRef("DOM")}}

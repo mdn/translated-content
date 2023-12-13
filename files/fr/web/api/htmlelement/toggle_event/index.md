@@ -1,8 +1,8 @@
 ---
 title: "HTMLElement: événement toggle"
 slug: Web/API/HTMLElement/toggle_event
-page-type: web-api-event
-browser-compat: api.HTMLElement.toggle_event
+l10n:
+  sourceCommit: 44cf523714
 ---
 
 {{APIRef}}

@@ -2,8 +2,8 @@
 title: "HTMLElement: méthode showPopover()"
 short-title: showPopover()
 slug: Web/API/HTMLElement/showPopover
-page-type: web-api-instance-method
-browser-compat: api.HTMLElement.showPopover
+l10n:
+  sourceCommit: 0df415130c
 ---
 
 {{ APIRef("HTML DOM") }}
