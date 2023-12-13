@@ -60,7 +60,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     `<cookie-value>` 可以选择包裹在双引号中。支持除了控制字符（ASCII 字符 0 至 31，以及 ASCII 字符 127）、{{glossary("Whitespace", "空白字符")}}、双引号、逗号、分号以及反斜线之外的任意 US-ASCII 字符。
 
-    **编码**：许多实现会对 cookie 值进行 [URL 编码](https://zh.wikipedia.org/wiki/百分号编码)。但是按照 RFC 规范，这不是必须的。不过URL 编码有助于满足 `<cookie-value>` 对允许使用的字符的要求。
+    **编码**：许多实现会对 cookie 值进行 [URL 编码](https://zh.wikipedia.org/wiki/百分号编码)。但是按照 RFC 规范，这不是必须的。不过 URL 编码有助于满足 `<cookie-value>` 对允许使用的字符的要求。
 
     > **备注：** 一些 `<cookie-name>` 具有特殊的语义：
     >
