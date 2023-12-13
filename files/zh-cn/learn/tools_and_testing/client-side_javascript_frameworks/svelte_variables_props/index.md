@@ -15,8 +15,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables
       <td>
         <p>
           推荐你至少熟悉基本的
-          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、
-          <a href="/zh-CN/docs/Learn/CSS">CSS</a> 和
+          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和
           <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>
           等编程语言，并具备<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
@@ -96,13 +95,13 @@ npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
    ```
 
 3. 回到应用程序，你应该会看到和以前一样的“2 out of 3 items completed”信息，但这次的信息来自 `todos` 数组。
-4. 为了证明这一点，回到数组并尝试改变一些待办事项对象的已完成属性值，甚至是新增一个新的待办事项对象。观察信息中的数字是如何恰当地被更新。
+4. 为了证明这一点，回到数组并尝试改变一些待办事项对象的已完成属性值，甚至是新增一个新的待办事项对象。观察信息中的数字是如何被恰当地更新的。
 
 ## 从数据动态地生成待办事项
 
 目前我们显示的待办事项都是静态的。而我们想要遍历 `todos` 数组中的每个项目并为每个任务渲染其标记，让我们马上动手吧。
 
-HTML 没有表达逻辑的方式（像是条件和循环）。但 Svelte 做到了。在这种情况下，我们使用 [`{#each}`](https://svelte.dev/docs#each) 指令来迭代 `todos` 数组。假如有提供第二个参数，将包含当前项目的索引。此外，可以提供一个关键表达式，它将唯一识别每个项目。Svelte 将在数据改变时使用它来区分清单项目，而不是在最后新增或删除项目，所以始终指定关键表达式是一种好的做法。最后，可以提供 `:else` 区块，它将在清单为空时呈现。
+HTML 没有表达逻辑的方式（如条件和循环），但 Svelte 可以做到。在这种情况下，我们使用 [`{#each}`](https://svelte.dev/docs#each) 指令来迭代 `todos` 数组。假如提供了第二个参数，将包含当前项目的索引。此外，可以提供一个键表达式，它将唯一识别每个项目。当数据发生变化时，Svelte 将使用它来更改列表，而不是在末尾添加或删除项目，所以始终指定键表达式是一种好的做法。最后，可以提供 `:else` 区块，它将在列表为空时渲染如此。
 
 试一试吧。
 
@@ -171,7 +170,7 @@ HTML 没有表达逻辑的方式（像是条件和循环）。但 Svelte 做到�
 
    起初这可能会让你觉得有点奇怪。这不像在 JavaScript 模块中使用 `export` 的常见方式！但这就是 Svelte 通过采用赋予有效语法其新用途来“扩展”JavaScript 的做法。在这种情况下，Svelte 使用 `export` 关键字将变量声明标记为属性，这意味着组件的消费者可以访问它。
 
-   你也可以为属性指定默认初始值。如果组件的消费者没有在组件上指定属性时，将使用此默认初始值——或者如果它的初始值未定义——在实例化组件时。
+   你也可以为属性指定默认初始值。如果组件的消费者没有在组件上指定属性，或者在实例化组件时属性的初始值未定义，则会使用该初始值。
 
    因此，通过 `export let todos = []` 我们告诉 Svelte 我们的 `Todos.svelte` 组件将可接受 `todos` 属性，而当省略该属性时，它将被初始化为一个空数组。
 
@@ -192,7 +191,7 @@ HTML 没有表达逻辑的方式（像是条件和循环）。但 Svelte 做到�
    <Todos todos={todos} />
    ```
 
-4. 当属性和变量具有相同名称时，Svelte 允许你仅指定变量作为便捷的捷径，因此我们可以像这样重写最后一行。现在试试吧。
+4. 当属性和变量具有相同名称时，Svelte 允许你仅指定变量作为捷径，因此我们可以像这样重写最后一行。现在试试吧。
 
    ```svelte
    <Todos {todos} />
@@ -237,7 +236,7 @@ HTML 没有表达逻辑的方式（像是条件和循环）。但 Svelte 做到�
 
 这是不错的进展——现在我们可以删除任务了。当待办事项的*Delete*按钮被按下时，相关的待办事项将从 `todos` 数组中移除，并更新用户界面以不再显示它。此外，我们现在可以勾选复选框，相关待办事项的已完成状态将在 `todos` 数组中被更新。
 
-然而，“x out of y items completed”标头并未被更新。继续阅读以了解为什么会出现这种情况以及我们如何解决它。
+然而，“x out of y items completed”标题并未被更新。请继续阅读，了解出现这种情况的原因和解决方法。
 
 ## 待办事项响应性
 
@@ -254,7 +253,7 @@ let completedTodos = todos.filter((todo) => todo.completed).length;
 
 可以通过在前面加上 `$:` 前缀，告诉 Svelte 我们希望 `totalTodos` 和 `completedTodos` 等变量具有响应性。Svelte 将生成代码以在它们依赖的数据发生变化时自动更新它们。
 
-> **备注：** Svelte 使用 `$:` [JavaScript 标记陈述语法](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)来标记响应性陈述。就像用于声明属性的 `export` 关键字一样，这可能看起来有点陌生。但这是 Svelte 利用有效的 JavaScript 语法并赋予其新用途的另一个例子——在这种情况下，意味着“每当任何引用的值发生变化时，就会重新执行此代码”。一旦习惯了，你就无法回头了。
+> **备注：** Svelte 使用 `$:` [JavaScript 标记语句语法](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)来标记响应性语句。就像用于声明属性的 `export` 关键字一样，这可能看起来有点陌生。但这是 Svelte 利用有效的 JavaScript 语法并赋予其新用途的另一个例子——在这种情况下，意味着“每当任何引用的值发生变化时，就会重新执行此代码”。一旦习惯了，你就无法回头了。
 
 更新 `src/components/Todos.svelte` 中的 `totalTodos` 和 `completedTodos` 变量定义，如下：
 
@@ -265,7 +264,7 @@ $: completedTodos = todos.filter((todo) => todo.completed).length;
 
 如果你现在检查你的应用程序，当待办事项完成或被删除时，你将会看到标题的数字被更新。做得好！
 
-Svelte 编译器在幕后会解析和分析我们的代码以生成依赖树，然后它会产生 JavaScript 代码以在其中一个依赖项被更新时，重新评估每个响应性陈述。Svelte 的响应性以非常轻量和高性能的方式来实现，无需使用监听器（listener）、设置器（setter）、获取器（getter）或任何其他复杂的机制。
+在幕后，Svelte 编译器会解析和分析我们的代码，生成依赖关系树，然后生成 JavaScript 代码，以便在依赖关系更新时重新评估每个响应式语句。Svelte 中的响应性是以非常轻量级和高性能的方式实现的，无需使用监听器（listener）、设置器（setter）、获取器（getter）或任何其他复杂机制。
 
 ## 添加新的待办事项
 
@@ -277,7 +276,7 @@ Svelte 编译器在幕后会解析和分析我们的代码以生成依赖树，�
    let newTodoName = "";
    ```
 
-2. 我们将使用 `<input>` 中的值来添加新任务。为此，我们需要将 `newTodoName` 变量绑定到 `todo-0` 输入框，以使 `newTodoName` 变量的值与输入框的 `value` 属性保持同步。我们可以这样做：
+2. 现在，我们将在 `<input>` 中使用此值来添加新任务。为此，我们需要将 `newTodoName` 变量绑定到 `todo-0` 输入框，以使 `newTodoName` 变量的值与输入框的 `value` 属性保持同步。我们可以这样做：
 
    ```svelte
    <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value} />
@@ -347,7 +346,7 @@ Svelte 编译器在幕后会解析和分析我们的代码以生成依赖树，�
 
 ## 给每个待办事项唯一的 ID
 
-如果现在尝试在你的应用程序中添加新的待办事项，你将可以添加新的待办事项并让它出现在用户界面中——一次。但如果你尝试第二次，它将没有效果，并且你将收到一个控制台消息“Error: Cannot have duplicate keys in a keyed each”（错误：不能有重复的键）。看起来我们的待办事项需要唯一 ID。
+如果现在尝试在你的应用程序中添加新的待办事项，你将可以添加新的待办事项并让它出现在用户界面中——一次。但如果你尝试第二次，它将没有效果，并且你将收到一个控制台消息“Error: Cannot have duplicate keys in a keyed each”（错误：不能有重复的键）。我们的待办事项需要唯一 ID。
 
 1. 让我们声明一个由待办事项数量加 1 计算得出的 `newTodoId` 变量并使其具有响应性。将以下代码片段添加到 `<script>` 区块：
 
@@ -364,7 +363,7 @@ Svelte 编译器在幕后会解析和分析我们的代码以生成依赖树，�
 
    > **备注：** 如你所见，响应式陈述不仅限于单行。以下代码也可以生效，但可读性较差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
-2. Svelte 是如何做到这一点的？编译器会解析整个响应式陈述并检测到它依赖于 `totalTodos` 变量和 `todos` 数组。所以每当它们中任何一个被修改时，都会重新评估代码并相应地更新 `newTodoId`。
+2. Svelte 是如何做到这一点的？编译器会解析整个响应式语句并检测到它依赖于 `totalTodos` 变量和 `todos` 数组。所以每当它们中任何一个被修改时，都会重新评估代码并相应地更新 `newTodoId`。
 
    让我们在 `addTodo()` 函数中使用它。更新它如下：
 
@@ -393,7 +392,7 @@ Svelte 编译器在幕后会解析和分析我们的代码以生成依赖树，�
 
    我们使用 `filter` 变量来控制当前的筛选器：_all_、_active_、_completed_。只需将其中一个值赋给筛选器变量，即可使用该筛选器并更新待办事项列表。让我们看看它是如何实现的。
 
-   ``filterTodos()` 函数接收当前的筛选器和待办事项列表，并返回经过筛选的新待办事项数组。
+   `filterTodos()` 函数接收当前的筛选器和待办事项列表，并返回经过筛选的新待办事项数组。
 
 2. 让我们更新筛选器按钮的标记以使其动态化，当用户点击其中一个筛选器按钮时，更新当前的筛选器。更新它如下：
 
@@ -419,11 +418,11 @@ Svelte 编译器在幕后会解析和分析我们的代码以生成依赖树，�
 
    这段标记中发生了几件事情。
 
-   我们通过将 `btn__primary` 类应用于筛选器按钮来显示当前使用的筛选器。为了有条件地将样式类应用于元素上，我们使用 `class:name={value}` 指令。如果值表达式的计算结果为真，那么类名将被应用。你可以将许多不同条件的指令放在同一个元素上。所以当我们写为 `class:btn__primary={filter === 'all'}` 时，如果筛选器（filter）变量等于 all，Svelte 将会应用 `btn__primary` 类。
+   我们通过将 `btn__primary` 类应用于筛选器按钮来显示当前使用的筛选器。为了有条件地将样式类应用于元素上，我们使用 `class:name={value}` 指令。如果值表达式的计算结果为真，那么类名将被应用。你可以将许多不同条件的指令放在同一个元素上。所以当我们写为 `class:btn__primary={filter === 'all'}` 时，如果筛选器（filter）变量的值等于 `'all'`，Svelte 将会应用 `btn__primary` 类。
 
    > **备注：** Svelte 提供了一个便利的快捷方式，允许我们在类与变量名称相同时，可以将 `<div class:active={active}>` 缩短为 `<div class:active>`。
 
-   ``aria-pressed={filter === 'all'}` 也是类似的情况：当在大括号之间传入的 JavaScript 表达式的计算结果为真时，`aria-pressed` 属性将被加入到按钮上。
+   `aria-pressed={filter === 'all'}` 也是类似的情况：当在大括号之间传入的 JavaScript 表达式的计算结果为真值时，`aria-pressed` 属性将被加入到按钮上。
 
    每当我们点击按钮时，我们通过触发 `on:click={() => filter = 'all'}` 来更新筛选器变量。继续阅读以了解 Svelte 响应式将如何处理其余部分。
 
