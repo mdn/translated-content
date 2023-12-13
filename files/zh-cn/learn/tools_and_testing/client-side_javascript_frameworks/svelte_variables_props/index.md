@@ -480,7 +480,7 @@ npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app
 - 使用 `bind:property` 指令绑定 HTML 属性
 - 通过指定操作触发响应式
 - 使用响应式表达式过滤数据
-- 明确定义我们的响应依赖关系
+- 显式定义我们的响应依赖关系
 
 在下一篇文章中，我们将新增更多功能，允许用户编辑待办事项。
 
