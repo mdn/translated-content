@@ -17,7 +17,7 @@ l10n:
 
 ## 可设置颜色的内容
 
-从 HTML 元素层面来看，所有的元素都可设置颜色。但除了元素本身之外，元素中所绘制的事物也可设置颜色，如文本，边框等等。我们将会看到一系列用于设置颜色的 CSS 属性。
+从 HTML 元素层面来看，所有的元素都可设置颜色。但除了元素本身之外，元素中所绘制的事物也可设置颜色，如文本、边框等等。我们将会看到一系列用于设置颜色的 CSS 属性。
 
 在这些设置颜色的 CSS 属性中，最基础的就是 {{cssxref("color")}} 属性和 {{cssxref("background-color")}} 属性了。分别用于设置 HTML 元素内容的前景色和背景色。这两个属性几乎可用于所有的 HTML 元素。
 
@@ -30,7 +30,7 @@ l10n:
 - {{cssxref("background-color")}}
   - : 文本的背景色。
 - {{cssxref("text-shadow")}}
-  - : 配置应用于文字的阴影效果。阴影选项包括阴影的基色（然后根据其他参数将基色模糊并与背景混合）。请参阅[文字阴影](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#文字阴影) 了解更多信息。
+  - : 配置应用于文字的阴影效果。阴影选项包括阴影的基色（然后根据其他参数将基色模糊并与背景混合）。请参阅[文字阴影](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#文字阴影)以了解更多信息。
 - {{cssxref("text-decoration-color")}}
   - : 默认情况下，文本装饰（如下划线、删除线等）使用 `color` 属性作为其颜色。不过，你可以使用 `text-decoration-color` 属性覆盖该行为，并为它们使用不同的颜色。
 - {{cssxref("text-emphasis-color")}}
@@ -42,7 +42,7 @@ l10n:
 
 每个元素都是一个包含某种内容的盒子，除了盒子中的内容外，还有背景和边框。
 
-- [Borders](#边框)
+- [边框](#边框_2)
   - : 请参阅[边框](#边框)一节，了解可用于设置方框边框颜色的 CSS 属性列表。
 - {{cssxref("background-color")}}
   - : 在元素中没有前景内容的区域使用的背景色。
@@ -236,7 +236,7 @@ hwb(90 10% 10% / 0.5)
 hwb(90 10% 10% / 50%)
 ```
 
-### 颜色空间和颜色模型
+### 色彩空间和颜色模型
 
 十六进制、具名颜色和 `rgb()` 函数都使用 [RGB](/zh-CN/docs/Glossary/RGB) 模型，并与 sRGB（`srgb`）色彩空间相关联。你可能会看到“色彩模型”和“色彩空间”交替使用，但这两者之间还是有区别的，值得注意：
 
@@ -245,7 +245,7 @@ hwb(90 10% 10% / 50%)
 
 我们上面使用的 `hsl()` 和 `hwb()` 函数使用的是 sRGB 色彩空间，并且都使用*柱形*模型；这就是为什么 `<hue>` 角度可以让你像在[色轮](/zh-CN/docs/Glossary/Color_wheel)上一样控制颜色的属性。让我们来看看其他可用的色彩空间以及使用它们的原因。
 
-#### CIELAB 和 Oklab 颜色空间
+#### CIELAB 和 Oklab 色彩空间
 
 CIELAB 和 Oklab 色彩空间基于人类视觉实验，代表了人类所能看到的全部色彩范围。这些模型的主要目的在于它们是统一的，因此色彩空间中任意两点之间的给定距离在观察者看来应该是同样不同的。
 
@@ -425,7 +425,7 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 }
 ```
 
-.wrapper "类用于为 {{HTMLElement("div")}} 指定样式，而 {{HTMLElement("div")}} 则封装了我们所有的其他内容。将使用 {{cssxref("width")}} 和 {{cssxref("height")}} 来确定容器的大小，以及其 {{cssxref("margin")}} 和 {{cssxref("padding")}}。
+`.wrapper` 类用于为 {{HTMLElement("div")}} 指定样式，而 {{HTMLElement("div")}} 则封装了我们所有的其他内容。将使用 {{cssxref("width")}} 和 {{cssxref("height")}} 来确定容器的大小，以及其 {{cssxref("margin")}} 和 {{cssxref("padding")}}。
 
 在这里，我们更感兴趣的是使用 {{cssxref("border")}} 属性在元素外边缘建立一个边框。该边框是一条宽 6 像素的实线，颜色为 `mediumturquoise`。
 
@@ -588,7 +588,7 @@ colorPicker.addEventListener(
 
 - [MDN 的取色工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Paletton](https://paletton.com/)
-- [Adobe Color CC 在线色盘](https://color.adobe.com/create/color-wheel)
+- [Adobe Color CC 在线调色盘](https://color.adobe.com/create/color-wheel)
 
 在设计调色板时，请务必记住，除了这些工具通常生成的颜色外，可能还需要添加一些核心中性色，如白色（或近似白色）、黑色（或近似黑色）以及一定数量的灰色。
 
@@ -647,7 +647,7 @@ colorPicker.addEventListener(
 
 有了这些颜色之后，你可能还需要选择适当的中性色。通常的设计做法是尽量找到一个最佳点，既要有足够的对比度，使文字清晰可读，又要有足够的对比度，以免刺眼。在某种程度上很容易走得太远，因此在选定颜色并有使用实例后，一定要征求对颜色的反馈意见。如果对比度太低，文字会被背景冲淡，导致无法阅读；但如果对比度太高，用户可能会觉得网站花哨、不好看。
 
-### 颜色、背景、对比和印刷
+### 颜色、背景、对比度和印刷
 
 在屏幕上看起来不错的内容，在纸上可能会大相径庭。此外，墨水可能很贵，如果用户要打印你的页面，他们不一定需要所有的背景之类的东西来耗费他们宝贵的墨水，因为最重要的是文本本身。大多数浏览器默认情况下都会在打印文档时移除背景图片。
 
