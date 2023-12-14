@@ -365,11 +365,11 @@ CSS로 컴파일되면 최종 스타일시트에 다음과 같은 CSS를 얻게 
 }
 ```
 
-#### Compiling component stylesheets
+#### 구성 요소 스타일시트 컴파일
 
-I mentioned above that one way to organize CSS is to break down stylesheets into smaller stylesheets. When using Sass you can take this to another level and have lots of very small stylesheets — even going as far as having a separate stylesheet for each component. By using the included functionality in Sass (partials), these can all be compiled together into one or a small number of stylesheets to actually link into your website.
+위에서 CSS를 구성하는 한 가지 방법은 스타일시트를 더 작은 스타일시트로 분해하는 것이라고 언급했습니다. Sass를 사용하면 이를 더욱 확장하여 매우 작은 스타일시트를 많이 만들 수 있습니다. 심지어 각 구성 요소에 대한 별도의 스타일시트를 가질 수 있습니다. Sass의 포함된 기능(partials)를 사용하면, 이들을 모두 하나 또는 소수의 스타일시트로 컴파일하여 실제로 웹사이트에 연결할 수 있습니다.
 
-So, for example, with [partials](https://sass-lang.com/documentation/at-rules/use#partials), you could have several style files inside a directory, say `foundation/_code.scss`, `foundation/_lists.scss`, `foundation/_footer.scss`, `foundation/_links.scss`, etc. You could then use the Sass `@use` rule to load them into other stylesheets:
+예를 들어, [partials](https://sass-lang.com/documentation/at-rules/use#partials)를 사용하면 디렉토리 내에 여러 스타일 파일을 가질 수 있습니다. 예를 들어 `foundation/_code.scss`, `foundation/_lists.scss`, `foundation/_footer.scss`, `foundation/_links.scss` 등입니다. 그런 다음 Sass의 @use 규칙을 사용하여 이들을 다른 스타일시트에 로드할 수 있습니다.
 
 ```scss
 // foundation/_index.scss
@@ -379,14 +379,14 @@ So, for example, with [partials](https://sass-lang.com/documentation/at-rules/us
 @use "links";
 ```
 
-If the partials are all loaded into an index file, as implied above, you can then load that entire directory into another stylesheet in one go:
+만약 위에서 언급한 것처럼 그 partials들이 모두 인덱스 파일에 로드되면, 한 번에 전체 디렉토리를 다른 스타일시트에 로드할 수 있습니다.
 
 ```scss
 // style.scss
 @use "foundation";
 ```
 
-> **Note:** A simple way to try out Sass is to use [CodePen](https://codepen.io) — you can enable Sass for your CSS in the Settings for a Pen, and CodePen will then run the Sass parser for you in order that you can see the resulting webpage with regular CSS applied. Sometimes you will find that CSS tutorials have used Sass rather than plain CSS in their CodePen demos, so it is handy to know a little bit about it.
+> **참고:** Sass를 시도해보는 간단한 방법은 [CodePen](https://codepen.io)을 사용하는 것입니다. 펜의 설정에서 CSS에 대한 Sass를 활성화할 수 있고, 그런 다음 CodePen은 일반 CSS가 적용된 결과 웹페이지를 볼 수 있도록 Sass 파서를 실행해줍니다. 때때로 CSS 튜토리얼에서는 CodePen 데모에서 일반 CSS보다 Sass를 사용한 경우가 있으므로, 이에 대해 약간 알고 있는 것이 편리합니다.
 
 #### Post-processing for optimization
 
