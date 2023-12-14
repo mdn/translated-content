@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- 对 `media` 属性的支持被重新引入到 [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素，并扩展到包括 `<audio>` 和 `<video>` 元素。该属性最初是在 Firefox 15 中添加的，但在 Firefox 53 中被删除，当时它的使用仅限于 `<picture>` 中的 `<source>` 元素。随着这个版本的发布，`media` 属性将在 `<audio>`、`<video>` 和 `<picture>` 中的 `<source>` 元素中可用（[Firefox bug 1836128](https://bugzil.la/1836128)）。
+- 对 `media` 属性的支持被重新引入到 [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素，并扩展到包括 `<audio>` 和 `<video>` 元素。该属性最初是在 Firefox 15 中添加的，但在 Firefox 53 中被删除，当时它的使用仅限于 `<picture>` 的 `<source>` 子元素。随着这个版本的发布，`media` 属性将在 `<audio>`、`<video>` 和 `<picture>` 的 `<source>` 子元素上可用（[Firefox bug 1836128](https://bugzil.la/1836128)）。
 
 ### CSS
 
