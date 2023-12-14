@@ -2,7 +2,7 @@
 title: SharedArrayBuffer.prototype.growable
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable
 l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+  sourceCommit: 509fde687ed349da8017a546f9cf094163f24844
 ---
 
 {{JSRef}}
