@@ -17,7 +17,7 @@ l10n:
 
 ### CSS
 
-- 现已支持 {{CSSXref("color_value/light-dark", "light-dark()")}} CSS 颜色函数。这允许在不需要 `prefers-color-scheme` 媒体特性的情况下设置浅色和深色的颜色（[Firefox bug 1856999](https://bugzil.la/1856999)）。
+- 现已支持 {{CSSXref("color_value/light-dark", "light-dark()")}} CSS 颜色值函数。这允许在不需要 `prefers-color-scheme` 媒体特性的情况下设置浅色和深色的颜色（[Firefox bug 1856999](https://bugzil.la/1856999)）。
 - 现已支持 [`lh` 和 `rlh`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#行距单位)行距单位。这允许设置相对于元素的行距属性，例如，将背景装饰与多行文本精确对齐（[Firefox bug 1310170](https://bugzil.la/1310170)）。
 
 #### 移除
@@ -64,7 +64,7 @@ l10n:
 ### API
 
 - 现已支持 {{domxref("PublicKeyCredential")}} 接口的 {{domxref("PublicKeyCredential.authenticatorAttachment", "authenticatorAttachment")}} 属性。这允许 Web 应用程序的客户端和服务器代码根据认证器是设备的一部分还是可以在设备之间漫游来配置自身（参见 [Firefox bug 1810851](https://bugzil.la/1810851)）。
-- 已支持 [Web Authentication API](/zh-CN/docs/Web/API/Web_Authentication_API) 的 [最短 PIN 码长度扩展（`minPinLength`）](/zh-CN/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength)，这允许依赖方服务器在创建/注册期间请求认证器的最短 PIN 码长度（[Firefox bug 1844450](https://bugzil.la/1844450)）。
+- 已支持 [Web Authentication API](/zh-CN/docs/Web/API/Web_Authentication_API) 的[最短 PIN 码长度扩展（`minPinLength`）](/zh-CN/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength)，这允许依赖方服务器在创建/注册期间请求认证器的最短 PIN 码长度（[Firefox bug 1844450](https://bugzil.la/1844450)）。
 - 现已支持 {{domxref("Navigator.userActivation")}} 属性和 {{domxref("UserActivation")}} 接口。它们可用于检查用户是否正在与页面交互，或者自页面加载以来是否已与其进行交互（参见 [Firefox bug 1791079](https://bugzil.la/1791079)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
