@@ -61,7 +61,7 @@ function handleOrientation(event) {
 
 庭にボールがあると考えてください。
 
-```html
+```html-nolint
 <div class="garden">
   <div class="ball"></div>
 </div>
