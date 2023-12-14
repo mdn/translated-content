@@ -31,7 +31,7 @@ if (-Infinity)
 
 ### 논리적 AND 연산자, &&
 
-첫 번째 피연산자가 참인 경우, [논리적 AND 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)는 두 번째 피연산자를 반환합니다.
+첫 번째 피연산자가 참인 경우, [논리적 AND 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Logical_AND)는 두 번째 피연산자를 반환합니다.
 
 ```js
 true && "dog"

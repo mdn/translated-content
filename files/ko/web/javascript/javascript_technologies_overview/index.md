@@ -114,7 +114,7 @@ HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없
 
 비 브라우저용으로 특별히 제작된 일부 엔진이 있습니다.
 
-- [Engine262](https://engine262.js.org/), 자바스크립트로 작성된 자바스크립트 엔진입니다. JavaScript 개발자가 새로운 언어 기능을 탐색하고 명세에서 버그를 찾을 수 있도록 만들어졌습니다.
+- [Engine262](https://engine262.js.org/), JavaScript로 작성된 JavaScript 엔진입니다. JavaScript 개발자가 새로운 언어 기능을 탐색하고 명세에서 버그를 찾을 수 있도록 만들어졌습니다.
 - IoT와 같은 임베디드 시스템에서 사용되는 [Moddable XS](https://www.moddable.com/).
 - [QuickJS](https://bellard.org/quickjs/), 작고 삽입 가능한 JavaScript 엔진입니다.
 - Meta의 [Hermes](https://hermesengine.dev/) 엔진은 [React Native](https://reactnative.dev/docs/hermes)에 최적화된 엔진입니다.
@@ -135,7 +135,7 @@ JavaScript 쉘을 사용하면 웹 페이지를 다시 로드하지 않고도 Ja
 - [Node.js](https://nodejs.org/) - Node.js는 빠르고 확장 가능한 네트워크 애플리케이션을 쉽게 구축할 수 있는 플랫폼입니다.
 - [ShellJS](https://github.com/shelljs/shelljs) - Node.js용 휴대용 Unix 셸 명령입니다.
 
-### 브라우저 기반 자바스크립트 쉘
+### 브라우저 기반 JavaScript 쉘
 
 다음 JavaScript 쉘은 브라우저의 JavaScript 엔진을 통해 코드를 실행합니다.
 
@@ -148,8 +148,8 @@ JavaScript 쉘을 사용하면 웹 페이지를 다시 로드하지 않고도 Ja
 JavaScript 코드 작성 및 디버깅에 유용한 도구입니다.
 
 - [Firefox 개발자 도구](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - : [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [자바스크립트 프로파일러](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [디버거](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 등.
-- [자바스크립트 배우기](https://learnjavascript.online/)
+  - : [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [JavaScript 프로파일러](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [디버거](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 등.
+- [JavaScript 배우기](https://learnjavascript.online/)
   - : 웹 개발자 지망생을 위한 탁월한 리소스 — 자동화된 평가 안내에 따라 짧은 강의와 대화형 테스트를 통해 대화형 환경에서 JavaScript를 학습합니다. 처음 40개 레슨은 무료이며 소액의 일회성 결제로 전체 과정을 수강할 수 있습니다.
 - [TogetherJS](https://togetherjs.com/)
   - : 협업이 쉬워집니다. 사이트에 TogetherJS를 추가하면 사용자가 웹사이트에서 실시간으로 서로 도울 수 있습니다!

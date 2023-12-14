@@ -9,7 +9,7 @@ l10n:
 
 Доступное только для чтения свойство **`uploaded`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает количество успешно переданных байт, изначально `0`.
 
-Если значение этого свойства изменилось, то в связанном объекте {{domxref("BackgroundFetchRegistration")}} происходит событие [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event).
+Если значение этого свойства изменилось, то в связанном объекте {{domxref("BackgroundFetchRegistration")}} происходит событие [progress](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event).
 
 ## Значение
 

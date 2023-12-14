@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.extensionTypes")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

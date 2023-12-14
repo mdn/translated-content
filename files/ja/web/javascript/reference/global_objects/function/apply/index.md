@@ -203,7 +203,7 @@ console.log(myInstance.constructor); // logs 'MyConstructor'
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.apply")}}
+{{Compat}}
 
 ## 関連情報
 

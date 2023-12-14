@@ -65,7 +65,7 @@ navigator.storage.estimate().then(function (estimate) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.StorageManager.estimate")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,6 +1,8 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
@@ -19,7 +21,7 @@ HTTP **`101 Switching Protocols`** 응답 코드는 서버가 전환되는 프�
 
 ## 예제
 
-**`101 Switching Protocols`** 는 [WebSockets](/ko/docs/Web/API/WebSockets_API)와 함께
+전환되는 프로토콜은 [WebSockets](/ko/docs/Web/API/WebSockets_API)와 함께
 사용할 수 있습니다.
 
 ```http
@@ -35,6 +37,6 @@ Connection: Upgrade
 ## 같이 보기
 
 - [프로토콜 업그레이드 메커니즘](/ko/docs/Web/HTTP/Protocol_upgrade_mechanism)
-- [WebSockets](/ko/docs/Web/API/WebSockets_API)
+- [웹소켓](/ko/docs/Web/API/WebSockets_API)
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPStatus("426")}} `Upgrade Required`

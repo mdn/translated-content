@@ -17,7 +17,7 @@ slug: Web/API/AbortController
 ## 属性
 
 - {{domxref("AbortController.signal")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("AbortSignal")}} 对象实例，它可以用来 with/abort 一个 Web（网络）请求。
+  - : 返回一个 {{domxref("AbortSignal")}} 对象实例，可以用它与一个 DOM 请求进行通信或者中止该请求。
 
 ## 方法
 

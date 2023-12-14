@@ -14,7 +14,7 @@ A definição de propriedades CSS para um valor específico é a função princi
 
 Tanto as propriedades como os valores são case-sensitive no CSS. Os pares se separam por dois pontos, '`:`' (`U+003A COLON`), e espaços em branco antes, entre e depois de propriedades e valores, porém os espaços dentro da declaração são ignorados.
 
-![css syntax - declaration.png](/@api/deki/files/6164/=css_syntax_-_declaration.png)
+![css syntax - declaration.png](css_syntax_-_declaration.png)
 
 Existem mais de [100 propriedades diferentes](/pt-BR/CSS/CSS_Reference) no CSS e um número quase infinito de diferentes valores. Nem todos os pares de propriedades e valores são permitidos em cada propriedade define o que são valores válidos. Quando um valor não é válido para uma determinada propriedade, a declaração é considerada inválida e é totalmente ignorada pelo motor do CSS.
 
@@ -22,19 +22,19 @@ Existem mais de [100 propriedades diferentes](/pt-BR/CSS/CSS_Reference) no CSS e
 
 Declarações são agrupadas em **blocos**, que estão delimitados na estrutura com uma chave de abertura, '`{`' (`U+007B LEFT CURLY BRACKET`), e fechadas com outra, '`}`' (`U+007D RIGHT CURLY BRACKET`). Os blocos as vezes podem estar aninhados, a abertura e fechamento de chaves no bloco CSS deve ser realizada.
 
-![css syntax - block.png](/@api/deki/files/6165/=css_syntax_-_block.png)
+![css syntax - block.png](css_syntax_-_block.png)
 
 Esses blocos são chamados de **blocos de declaração** e as declarações dentro deles são separadas por, '`;`' (`U+003B SEMICOLON`). Um bloco de declaração pode não conter nenhuma declaração. Espaços em branco em volta das declarações não são consideradas. Não é necessário que a última declaração possua ponto e vírgula, apesar de ser considerada uma boa prática pois previne o esquecimento de acrescê-la quando for necessário aumentar o bloco.
 
-![css syntax - declarations block.png](/@api/deki/files/6166/=css_syntax_-_declarations_block.png)
+![css syntax - declarations block.png](css_syntax_-_declarations_block.png)
 
-> **Nota:** O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/HTML/Global_attributes#attr-style).
+> **Nota:** O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/HTML/Global_attributes#style).
 
 ## Regras CSS
 
 Se as folhas de estilo pudessem apenas aplicar uma declaração para cada elemento de uma página da web, eles seriam bem limitados. O principal objetivo é aplicar diferentes declarações a diferentes partes do documento.
 
-O CSS associa as condições com os blocos de declaração. Cada bloco (válido) é precedido por um ou mais seletores, separados por vírgula, que são condições selecionando alguns elementos da página. O grupo de seletores é chamado de regra.![css syntax - ruleset.png](/@api/deki/files/6167/=css_syntax_-_ruleset.png)
+O CSS associa as condições com os blocos de declaração. Cada bloco (válido) é precedido por um ou mais seletores, separados por vírgula, que são condições selecionando alguns elementos da página. O grupo de seletores é chamado de regra.![css syntax - ruleset.png](css_syntax_-_ruleset.png)
 
 Um elemento pode ser modificado por diversos seletores, e por isso por diversas regras que potencialmente podem conter diversas propriedades, com diferentes valores, o CSS padrão define aquele que possui a precedência e que será aplicado: esse é o tal algoritmo em [cascata](/pt-BR/docs/Web/CSS/Getting_Started/Cascading_and_inheritance).
 
@@ -48,7 +48,7 @@ Rulesets are the main building blocks of a style sheet, which often consists of 
 
 A **statement** is a building block that begins with any non-space characters and ends at the first closing brace or semi-colon (outside a string, non-escaped and not included into another {}, () or \[] pair).
 
-![css syntax - statements Venn diag.png](/@api/deki/files/6168/=css_syntax_-_statements_Venn_diag.png)
+![css syntax - statements Venn diag.png](css_syntax_-_statements_venn_diag.png)
 
 There are different kinds of statements:
 

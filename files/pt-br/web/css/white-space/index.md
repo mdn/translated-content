@@ -60,14 +60,11 @@ code {
 
 ## Especificações
 
-| Especificação                                                       | Estado                 | Comentário                                   |
-| ------------------------------------------------------------------- | ---------------------- | -------------------------------------------- |
-| {{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}    | {{Spec2('CSS3 Text')}} | Aumenta a precisão dos algoritmos de quebra. |
-| {{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}} | {{Spec2('CSS2.1')}}    | Especificação inicial.                       |
+{{Specifications}}
 
 ## Compatibilidade de Navegadores
 
-{{Compat("css.properties.white-space")}}
+{{Compat}}
 
 \[1] Internet Explorer 5.5+ suporta {{Cssxref("word-wrap")}}`: break-word;`
 O código a seguir permite quebras de linhas dentro de elementos pre:

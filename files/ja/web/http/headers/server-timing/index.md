@@ -63,7 +63,7 @@ Server-Timing: total;dur=123.4
 
 ## ブラウザーの対応
 
-{{Compat("http.headers.Server-Timing")}}
+{{Compat}}
 
 ## 関連情報
 

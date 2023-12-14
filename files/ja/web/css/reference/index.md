@@ -80,9 +80,9 @@ div.menu-bar li:hover > ul {
 
 結合子 (Combinator) は 2 つ以上の単純セレクターの関係、例えば「`A` は `B` の子である」や「`A` は `B` の子孫である」などを確立し、複合セレクターを作成するためのセレクターです。
 
-- [隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+- [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - : `A` と `B` のそれぞれで選択された要素が同じ親を持ち、かつ `B` で選択された要素が `A` で選択された要素の水平的な直後にあることを指定します。
-- [一般兄弟結合子](/ja/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : `A` と `B` のそれぞれで選択された要素が同じ親を共有しており、かつ `A` で選択された要素が `B` の前に — ただし直前である必要はありませんが — 来た場合を指定します。
 - [子結合子](/ja/docs/Web/CSS/Child_combinator) `A > B`
   - : `B` で選択された要素のうち、 `A` で選択された要素の直接の子であるものを指定します。

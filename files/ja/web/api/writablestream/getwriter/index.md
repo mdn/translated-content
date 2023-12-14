@@ -1,8 +1,9 @@
 ---
-title: WritableStream.getWriter()
+title: "WritableStream: getWriter() メソッド"
+short-title: getWriter()
 slug: Web/API/WritableStream/getWriter
 l10n:
-  sourceCommit: c575deb5f1775b532360c612a85b35a5ff9525d9
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}

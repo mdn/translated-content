@@ -7,109 +7,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 Массив (**`Array`**) в JavaScript является глобальным объектом, который используется для создания массивов; которые представляют собой высокоуровневые спископодобные объекты.
 
-**Создание массива**
-
-```js
-var fruits = ["Яблоко", "Банан"];
-
-console.log(fruits.length);
-// 2
-```
-
-**Доступ к элементу массива по индексу**
-
-```js
-var first = fruits[0];
-// Яблоко
-
-var last = fruits[fruits.length - 1];
-// Банан
-```
-
-**Итерирование по массиву**
-
-```js
-fruits.forEach(function (item, index, array) {
-  console.log(item, index);
-});
-// Яблоко 0
-// Банан 1
-```
-
-**Добавление элемента в конец массива**
-
-```js
-var newLength = fruits.push("Апельсин");
-// ["Яблоко", "Банан", "Апельсин"]
-```
-
-**Удаление последнего элемента массива**
-
-```js
-var last = fruits.pop(); // удалим Апельсин (из конца)
-// ["Яблоко", "Банан"];
-```
-
-**Удаление первого элемента массива**
-
-```js
-var first = fruits.shift(); // удалим Яблоко (из начала)
-// ["Банан"];
-```
-
-**Добавление элемента в начало массива**
-
-```js
-var newLength = fruits.unshift("Клубника"); // добавляет в начало
-// ["Клубника", "Банан"];
-```
-
-**Поиск номера элемента в массиве**
-
-```js
-fruits.push("Манго");
-// ["Клубника", "Банан", "Манго"]
-
-var pos = fruits.indexOf("Банан");
-// 1
-```
-
-**Удаление элемента с определённым индексом**
-
-```js
-var removedItem = fruits.splice(pos, 1); // так можно удалить элемент
-
-// ["Клубника", "Манго"]
-```
-
-**Удаление нескольких элементов, начиная с определённого индекса**
-
-```js
-var vegetables = ["Капуста", "Репа", "Редиска", "Морковка"];
-console.log(vegetables);
-// ["Капуста", "Репа", "Редиска", "Морковка"]
-
-var pos = 1,
-  n = 2;
-
-var removedItems = vegetables.splice(pos, n);
-// так можно удалить элементы, n определяет количество элементов для удаления,
-// начиная с позиции(pos) и далее в направлении конца массива.
-
-console.log(vegetables);
-// ["Капуста", "Морковка"] (исходный массив изменён)
-
-console.log(removedItems);
-// ["Репа", "Редиска"]
-```
-
-**Создание копии массива**
-
-```js
-var shallowCopy = fruits.slice(); // так можно создать копию массива
-// ["Клубника", "Манго"]
-```
-
 ## Синтаксис
 
 ```
@@ -134,7 +31,7 @@ new Array(arrayLength)
 Массивы в JavaScript индексируются с нуля: первый элемент массива имеет индекс, равный `0`, а индекс последнего элемента равен значению свойства массива {{jsxref("Array.length", "length")}} минус 1.
 
 ```js
-var arr = ["первый элемент", "второй элемент", "последний элемент"];
+const arr = ["первый элемент", "второй элемент", "последний элемент"];
 console.log(arr[0]); // напечатает 'первый элемент'
 console.log(arr[1]); // напечатает 'второй элемент'
 console.log(arr[arr.length - 1]); // напечатает 'последний элемент'
@@ -149,7 +46,7 @@ console.log(arr.0); // синтаксическая ошибка
 Это не особенность массивов или их свойств. В JavaScript к свойствам, начинающимся с цифры, невозможно обратиться посредством точечной нотации; к ним можно обратиться только с помощью скобочной нотации. Например, если у вас есть объект со свойством, названным `'3d'`, вы сможете обратиться к нему только посредством скобочной нотации. Примеры:
 
 ```js
-var years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+const years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
 console.log(years.0);   // синтаксическая ошибка
 console.log(years[0]);  // работает как положено
 ```
@@ -168,7 +65,7 @@ console.log(years["2"] != years["02"]);
 Аналогично, к свойствам объекта, являющимся зарезервированными словами(!) можно получить доступ только посредством скобочной нотации:
 
 ```js
-var promise = {
+const promise = {
   var: "text",
   array: [1, 2, 3, 4],
 };
@@ -181,7 +78,7 @@ console.log(promise["array"]);
 Свойство массивов {{jsxref("Array.length", "length")}} взаимосвязано с числовыми свойствами. Некоторые встроенные методы массива (например, {{jsxref("Array.join", "join")}}, {{jsxref("Array.slice", "slice")}}, {{jsxref("Array.indexOf", "indexOf")}} и т.д.) учитывают значение свойства `length` при своём вызове. Другие методы (например, {{jsxref("Array.push", "push")}}, {{jsxref("Array.splice", "splice")}} и т.д.) в результате своей работы также обновляют свойство `length` массива.
 
 ```js
-var fruits = [];
+const fruits = [];
 fruits.push("банан", "яблоко", "персик");
 
 console.log(fruits.length); // 3
@@ -224,8 +121,8 @@ console.log(fruits.length); // 2
 // Запоминаются сопоставившиеся символы b и следующий за ними символ d
 // Регистр игнорируется
 
-var myRe = /d(b+)(d)/i;
-var myArray = myRe.exec("cdbBdbsbz");
+const myRe = /d(b+)(d)/i;
+const myArray = myRe.exec("cdbBdbsbz");
 ```
 
 Свойства и элементы, возвращаемые из данного сопоставления, описаны ниже:
@@ -308,46 +205,45 @@ if (Array.every(str, isLetter)) {
 (function () {
   "use strict";
 
-  var i,
-    // Мы могли построить массив методов следующим образом, однако метод
-    //  getOwnPropertyNames() нельзя реализовать на JavaScript:
-    // Object.getOwnPropertyNames(Array).filter(function(methodName) {
-    //   return typeof Array[methodName] === 'function'
-    // });
-    methods = [
-      "join",
-      "reverse",
-      "sort",
-      "push",
-      "pop",
-      "shift",
-      "unshift",
-      "splice",
-      "concat",
-      "slice",
-      "indexOf",
-      "lastIndexOf",
-      "forEach",
-      "map",
-      "reduce",
-      "reduceRight",
-      "filter",
-      "some",
-      "every",
-    ],
-    methodCount = methods.length,
-    assignArrayGeneric = function (methodName) {
-      if (!Array[methodName]) {
-        var method = Array.prototype[methodName];
-        if (typeof method === "function") {
-          Array[methodName] = function () {
-            return method.call.apply(method, arguments);
-          };
-        }
+  // Мы могли построить массив методов следующим образом, однако метод
+  //  getOwnPropertyNames() нельзя реализовать на JavaScript:
+  // Object.getOwnPropertyNames(Array).filter(function(methodName) {
+  //   return typeof Array[methodName] === 'function'
+  // });
+  const methods = [
+    "join",
+    "reverse",
+    "sort",
+    "push",
+    "pop",
+    "shift",
+    "unshift",
+    "splice",
+    "concat",
+    "slice",
+    "indexOf",
+    "lastIndexOf",
+    "forEach",
+    "map",
+    "reduce",
+    "reduceRight",
+    "filter",
+    "some",
+    "every",
+  ];
+  const methodCount = methods.length;
+  const assignArrayGeneric = function (methodName) {
+    if (!Array[methodName]) {
+      const method = Array.prototype[methodName];
+      if (typeof method === "function") {
+        Array[methodName] = function () {
+          return method.call.apply(method, arguments);
+        };
       }
-    };
+    }
+  };
 
-  for (i = 0; i < methodCount; i++) {
+  for (let i = 0; i < methodCount; i++) {
     assignArrayGeneric(methods[i]);
   }
 })();
@@ -360,7 +256,7 @@ if (Array.every(str, isLetter)) {
 Следующий пример создаёт массив `msgArray` с длиной 0, присваивает значения элементам `msgArray[0]` и `msgArray[99]`, что изменяет длину массива на 100.
 
 ```js
-var msgArray = [];
+const msgArray = [];
 msgArray[0] = "Привет";
 msgArray[99] = "мир";
 
@@ -369,12 +265,115 @@ if (msgArray.length === 100) {
 }
 ```
 
+### Создание массива
+
+```js
+const fruits = ["Яблоко", "Банан"];
+
+console.log(fruits.length);
+// 2
+```
+
+### Доступ к элементу массива по индексу
+
+```js
+const first = fruits[0];
+// Яблоко
+
+const last = fruits[fruits.length - 1];
+// Банан
+```
+
+### Итерирование по массиву
+
+```js
+fruits.forEach(function (item, index, array) {
+  console.log(item, index);
+});
+// Яблоко 0
+// Банан 1
+```
+
+### Добавление элемента в конец массива
+
+```js
+const newLength = fruits.push("Апельсин");
+// ["Яблоко", "Банан", "Апельсин"]
+```
+
+### Удаление последнего элемента массива
+
+```js
+const last = fruits.pop(); // удалим Апельсин (из конца)
+// ["Яблоко", "Банан"];
+```
+
+### Удаление первого элемента массива
+
+```js
+const first = fruits.shift(); // удалим Яблоко (из начала)
+// ["Банан"];
+```
+
+### Добавление элемента в начало массива
+
+```js
+const newLength = fruits.unshift("Клубника"); // добавляет в начало
+// ["Клубника", "Банан"];
+```
+
+### Поиск номера элемента в массиве
+
+```js
+fruits.push("Манго");
+// ["Клубника", "Банан", "Манго"]
+
+const pos = fruits.indexOf("Банан");
+// 1
+```
+
+### Удаление элемента с определённым индексом
+
+```js
+const removedItem = fruits.splice(pos, 1); // так можно удалить элемент
+
+// ["Клубника", "Манго"]
+```
+
+### Удаление нескольких элементов, начиная с определённого индекса
+
+```js
+const vegetables = ["Капуста", "Репа", "Редиска", "Морковка"];
+console.log(vegetables);
+// ["Капуста", "Репа", "Редиска", "Морковка"]
+
+const start = 1;
+const deleteCount = 2;
+
+const removedItems = vegetables.splice(start, deleteCount);
+// так можно удалить элементы, deleteCount определяет количество элементов для удаления,
+// начиная с позиции(pos) и далее в направлении конца массива.
+
+console.log(vegetables);
+// ["Капуста", "Морковка"] (исходный массив изменён)
+
+console.log(removedItems);
+// ["Репа", "Редиска"]
+```
+
+### Создание копии массива
+
+```js
+const shallowCopy = fruits.slice(); // так можно создать копию массива
+// ["Клубника", "Манго"]
+```
+
 ### Пример: создание двумерного массива
 
 Следующий код создаёт шахматную доску в виде двумерного массива строк. Затем он перемещает пешку путём копирования символа 'p' в позиции (6,4) на позицию (4,4). Старая позиция (6,4) затирается пустым местом.
 
 ```js
-var board = [
+const board = [
   ["R", "N", "B", "Q", "K", "B", "N", "R"],
   ["P", "P", "P", "P", "P", "P", "P", "P"],
   [" ", " ", " ", " ", " ", " ", " ", " "],

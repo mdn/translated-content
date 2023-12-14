@@ -17,8 +17,6 @@ slug: MDN/At_ten
 
 [了解更多如何为 MDN 做出贡献](/zh-CN/docs/MDN/Contribute)
 
-{{TenthCampaignQuote}}
-
 ## 参见
 
 - [MDN 的历史渊源](/zh-CN/docs/MDN/At_ten/History_of_MDN)

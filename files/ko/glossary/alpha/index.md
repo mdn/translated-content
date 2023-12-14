@@ -19,7 +19,7 @@ l10n:
 
 - [CSS 색상](/ko/docs/Web/CSS/CSS_colors)
 - [CSS 값과 단위 소개](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [이미지 파일 형식 및 형식 안내서](/en-US/docs/Web/Media/Formats/Image_types)
+- [이미지 파일 형식 및 형식 안내서](/ko/docs/Web/Media/Formats/Image_types)
 - [알파 합성](https://en.wikipedia.org/wiki/Alpha_compositing) on Wikipedia
 - [RGBA 색상 모델](https://en.wikipedia.org/wiki/RGBA_color_model) on Wikipedia
 - [채널 (디지털 이미지)](<https://en.wikipedia.org/wiki/Channel_(digital_image)>) on Wikipedia

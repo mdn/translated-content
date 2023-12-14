@@ -74,13 +74,11 @@ var myVar = x.toString(); // atribui uma string em myVar no mesmo formato que es
 
 ## Especificações
 
-| Especificação                                                                      |
-| ---------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toString")}}
+{{Compat}}
 
 ## Veja também
 

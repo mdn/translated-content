@@ -83,7 +83,7 @@ Access-Control-Expose-Headers: *, Authorization
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Expose-Headers")}}
+{{Compat}}
 
 ## 関連情報
 

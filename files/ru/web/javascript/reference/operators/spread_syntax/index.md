@@ -224,12 +224,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ## Specifications
 
-| Specification                                      | Status               | Comment                                                                                                                                                                                                                            |
-| -------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-array-initializer')}}   | {{Spec2('ES2015')}}  | Defined in several sections of the specification: [Array Initializer](http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer), [Argument Lists](http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists) |
-| {{SpecName('ES2018', '#sec-object-initializer')}}  | {{Spec2('ES2018')}}  | Defined in [Object Initializer](http://www.ecma-international.org/ecma-262/9.0/#sec-object-initializer)                                                                                                                            |
-| {{SpecName('ESDraft', '#sec-array-initializer')}}  | {{Spec2('ESDraft')}} | Без изменений.                                                                                                                                                                                                                     |
-| {{SpecName('ESDraft', '#sec-object-initializer')}} | {{Spec2('ESDraft')}} | Без изменений.                                                                                                                                                                                                                     |
+{{Specifications}}
 
 ## Browser compatibility
 

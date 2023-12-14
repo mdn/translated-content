@@ -53,7 +53,7 @@ The following code:
 
 will produce the following:
 
-![example.png](/@api/deki/files/6104/=example.png)
+![example.png](example.png)
 
 ## Especificações
 

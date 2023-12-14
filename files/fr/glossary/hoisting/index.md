@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 5272602a89c279c42e18a0ab3434396fd33808f8
 ---
 
+{{GlossarySidebar}}
+
 En JavaScript, l'anglicisme **<i lang="en">hoisting</i>**, qu'on peut traduire en «&nbsp;remontée&nbsp;» (voire plus littéralement en «&nbsp;hissage&nbsp;») correspond au déplacement de la _déclaration_ de fonctions, variables ou classes en haut de leur portée avant l'exécution du code.
 
 Le hissage/la remontée n'est pas un terme défini de façon normative dans la spécification ECMAScript. La spécification définit un groupe de déclarations comme [_HoistableDeclaration_](https://tc39.es/ecma262/#prod-HoistableDeclaration), mais cela inclut uniquement les déclarations [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function), et [`async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*). La remontée est souvent associée aux déclarations [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var) d'une façon légèrement différente. Généralement, on regroupe les différents comportements suivants sous ce terme&nbsp;:

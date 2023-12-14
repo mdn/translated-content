@@ -9,6 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 
 该属性的初始值与 {{jsxref("Array.prototype.values")}} 属性的初始值是相同的函数对象。
 
+{{EmbedInteractiveExample("pages/js/array-prototype-@@iterator.html")}}
+
 ## 语法
 
 ```js-nolint

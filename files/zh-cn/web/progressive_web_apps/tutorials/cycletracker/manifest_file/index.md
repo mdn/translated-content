@@ -130,7 +130,7 @@ PWA 图标帮助用户识别你的应用程序，使其更具视觉吸引力，�
 }
 ```
 
-所有图标都应该有相同的外观和感觉，以确保用户可以识别你的 PWA。但图标越大，它可以包含的细节就越丰富。尽管所有图标文件都是正方形的，但有些操作系统会以不同的形状渲染图标，裁剪部分区域或“遮挡”图标以适应 UI，或者如果图标不可遮挡则会缩小并居中放置在背景上。[安全区域](/zh-CN/docs/Web/Progressive_web_apps/How_to/Define_app_icons#支持遮挡)，即图标被遮挡为圆形时也会正常渲染的内部 80% 区域。通过将 `purpose` 成员设置为 `maskable`，可以将图标定义为[自适应图标](https://web.dev/maskable-icons/)。
+所有图标都应该有相同的外观和感觉，以确保用户可以识别你的 PWA。但图标越大，它可以包含的细节就越丰富。尽管所有图标文件都是正方形的，但有些操作系统会以不同的形状渲染图标，裁剪部分区域或“遮挡”图标以适应 UI，或者如果图标不可遮挡则会缩小并居中放置在背景上。[安全区域](/zh-CN/docs/Web/Progressive_web_apps/How_to/Define_app_icons#支持遮挡)，即图标被遮挡为圆形时也会正常渲染的内部 80% 区域。通过将 `purpose` 成员设置为 `maskable`，可以将图标定义为[自适应图标](https://web.dev/articles/maskable-icon)。
 
 在 Safari 以及 iOS 和 iPadOS 中，如果通过 {{HTMLElement("link")}} 在 HTML 文档的 {{HTMLElement("head")}} 中包含[非标准的 `apple-touch-icon`](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#在你的站点增加自定义图标)，它们会优先于清单中声明的图标。
 

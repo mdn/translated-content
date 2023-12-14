@@ -63,7 +63,7 @@ var handleOrientationEvent = function (
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.deviceorientation_event")}}
+{{Compat}}
 
 ## 関連情報
 

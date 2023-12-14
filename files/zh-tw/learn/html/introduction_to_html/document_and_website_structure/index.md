@@ -54,7 +54,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 ## 用於構造內容的 HTML
 
-上面顯示的簡單範例並不美觀，但對於說明典型的網站佈局範例來說是非常好的。 有些網站上有更多欄，有些則複雜得多，但是您知道了。 使用正確的 CSS，您幾乎可以使用任何元素來包裹不同的部分，並使其看起來像您想要的樣子，但是如前所述，我們需要遵守語義並將正確的元素用於正確的運行。
+上面顯示的簡單範例並不美觀，但對於說明典型的網站佈局範例來說是非常好的。 有些網站上有更多欄，有些則複雜得多，但是你知道了。 使用正確的 CSS，你幾乎可以使用任何元素來包裹不同的部分，並使其看起來像你想要的樣子，但是如前所述，我們需要遵守語義並將正確的元素用於正確的運行。
 
 這是因為視覺效果並不能說明整個故事。 We use color and font size to draw sighted users' attention to the most useful parts of the content, like the navigation menu and related links, but what about visually impaired people for example, who might not find concepts like "pink" and "large font" very useful?
 

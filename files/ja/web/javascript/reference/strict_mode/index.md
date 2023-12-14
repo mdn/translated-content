@@ -282,7 +282,7 @@ JavaScript の言語仕様では、当初からブロック文の中に関数宣
 
 厳格モードでは [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) および [`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) の奇妙さを低減します。通常のコードではどちらも不思議な動作がかなりあります。 `eval` でバインドを追加や削除したり、バインドする値を変更したり、 `arguments` の添字つきプロパティが名前付き引数の別名になることです。厳格モードでは、 `eval` と `arguments` をキーワードとして扱うことに大きく舵を切りました。
 
-#### eval や arguments にバインドしたり代入したりしないようにする。
+#### eval や arguments にバインドしたり代入したりしないようにする
 
 `eval` および `arguments` という名前に対して言語構文でのバインドや代入を不可にしています。以下のような試みはすべて構文エラーになります。
 

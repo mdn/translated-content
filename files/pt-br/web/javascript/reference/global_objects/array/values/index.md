@@ -41,13 +41,11 @@ console.log(eArr.next().value); // p
 
 ## Especificações
 
-| Especificação                                                                | Status           | Comentário         |
-| ---------------------------------------------------------------------------- | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.values', 'Array.prototype.values')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 

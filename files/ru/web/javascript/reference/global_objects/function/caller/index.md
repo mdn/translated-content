@@ -86,4 +86,4 @@ function myFunc() {
 
 ## Смотрите также
 
-- Ошибка реализации в SpiderMonkey: {{bug(65683)}}
+- Ошибка реализации в SpiderMonkey: [Firefox bug 65683](https://bugzil.la/65683)

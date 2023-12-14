@@ -74,7 +74,7 @@ svg {
 
 ## Browser compatibility
 
-{{Compat("svg.attributes.presentation.stroke-dasharray")}}
+{{Compat}}
 
 ## Specification
 

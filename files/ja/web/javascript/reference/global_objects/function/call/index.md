@@ -150,7 +150,7 @@ display.call(); // undefined の 'sData' のプロパティは読めない
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.call")}}
+{{Compat}}
 
 ## 関連情報
 

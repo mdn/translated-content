@@ -138,11 +138,7 @@ var z = new Uint8ClampedArray(buffer, 1, 4);
 
 ## Specifications
 
-| Specification                                                   | Status                   | Comment                                                                   |
-| --------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Superseded by ECMAScript 6.                                               |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}         | Initial definition in an ECMA standard. Specified that `new` is required. |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     |                                                                           |
+{{Specifications}}
 
 ## Browser compatibility
 

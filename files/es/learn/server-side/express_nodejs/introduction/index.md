@@ -338,7 +338,7 @@ app.get("/", a_middleware_function);
 app.listen(3000);
 ```
 
-> **Nota:** Arriba declaramos la función middleware separadamente y la configuramos como el callback. En nuestra función previous manejadora de ruta declaramos la función callback cuando esta fué usada. En JavaScript, cuealquer aproximación es valida.
+> **Nota:** Arriba declaramos la función middleware separadamente y la configuramos como el callback. En nuestra función previous manejadora de ruta declaramos la función callback cuando esta fué usada. En JavaScript, cualquier aproximación es válida.
 
 La documentación Express tiene mucha mas documentación excelente acerca del uso y escritura de middleware Express.
 

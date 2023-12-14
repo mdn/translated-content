@@ -21,8 +21,6 @@ slug: Web/SVG/Attribute/letter-spacing
 | Анимируется          | Да                                                                                  |
 | Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#LetterSpacingProperty) |
 
-{{ page("/en/SVG/Content_type","Length") }}
-
 ## Элементы
 
 В следующих элементах можно использовать атрибут `letter-spacing`

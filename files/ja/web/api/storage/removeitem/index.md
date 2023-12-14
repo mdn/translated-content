@@ -9,7 +9,7 @@ l10n:
 {{APIRef("Web Storage API")}}
 
 **`removeItem()`** は {{domxref("Storage")}} インターフェイスのメソッドは、キーの名前を渡すと、指定された `Storage` からキーを削除します。
-**`Storage`** は[ウェブストレージ API](/en-US/docs/Web/API/Web_Storage_API) のインターフェイスで、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供します。
+**`Storage`** は[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) のインターフェイスで、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供します。
 
 指定されたキーに関連するアイテムがない場合、このメソッドは何もしません。
 

@@ -31,13 +31,13 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 Веб-стандарты создаются организациями стандартов — институтами, которые приглашают группы людей из различных компаний для согласования того, как технологии должны применяться наиболее эффективным образом в рассматриваемых случаях. Самая известная организация веб-стандартов - W3C. Существуют и другие: [WHATWG](https://whatwg.org/) (ответственны за модернизацию языка html), [ECMA](https://www.ecma-international.org/) (выпускают стандарты языка ECMAScript, на котором построен JavaScript), [Khronos](https://www.khronos.org/) (создают технологии для 3D графики, например WebGL).
 
-### "Open" standards
+### "Открытые" стандарты
 
-One of the key aspects of web standards, which TimBL and the W3C agreed on from the start, is that the web (and web technologies) should be free to both contribute and use, and not encumbered by patents/licensing. Therefore anyone can write the code to build a website for free, and anyone can contribute to the standards creation process, where the specs are written.
+Один из ключевых аспектов веб-стандартов, который TimBL и W3C согласовали с самого начала, заключается в том, что сеть (и веб-технологии) должны быть свободны как для внесения вклада, так и для использования, и не должны быть обременены патентами/лицензированием. Таким образом, любой может бесплатно написать код для создания своего веб-сайта, и любой может внести свой вклад в процесс создания стандартов, в которых прописываются спецификации.
 
-Because web technologies are created openly, in collaboration between many different companies, it means that no one company gets to control them, which is a really good thing. You wouldn't want a single company suddenly deciding to put the entire web behind a paywall, or releasing a new version of HTML that everyone has to buy to continue making web sites, or worse still, just deciding they aren't interested any more and just turning it off.
+Поскольку веб-технологии создаются открыто, в сотрудничестве множества различных компаний, это означает, что ни одна компания не может их контролировать, и это действительно хорошо. Вряд ли бы вам понравилось, если бы какая-то одна компания внезапно решила поставить всю сеть под платный доступ или выпустила новую версию HTML, которую каждый должен купить, чтобы продолжать создавать веб-сайты, или, что еще хуже, в какой-то момент решила, что она больше не заинтересована в технологии HTML и просто отключила бы её.
 
-This allows the web to remain a freely-available public resource.
+Это позволяет интернету оставаться свободно доступным общественным ресурсом.
 
 ### Не разорви сеть
 

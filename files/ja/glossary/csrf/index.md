@@ -3,6 +3,8 @@ title: CSRF
 slug: Glossary/CSRF
 ---
 
+{{GlossarySidebar}}
+
 **CSRF** (クロスサイトリクエストフォージェリー、Cross-Site Request Forgery) は、信頼されたユーザーになりすまし、ウェブサイトに対して不正なコマンドを送信する攻撃です。
 
 例えば、どこかへ移動すると称したリンクの {{glossary("URL")}} 内に、悪意のある引数を含めたりすることで実行されます。

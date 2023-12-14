@@ -3,6 +3,8 @@ title: Serveur
 slug: Glossary/Server
 ---
 
+{{GlossarySidebar}}
+
 Un serveur matériel est un ordinateur partagé sur un réseau qui fournit des services à des clients. Un serveur logiciel est un programme qui fournit des services à des programmes clients.
 
 Les services sont généralement fournis sur des réseaux locaux ou sur des réseaux étendus. Un programme client et un programme serveur se connectent habituellement en s'échangeant des messages codés en utilisant un {{glossary("Protocol","protocole")}}.

@@ -55,7 +55,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 
 ### 将文本转换为大写
 
-以下示例将文本逐块转换为大写。这个示例来自 [Streams—The Definitive Guide](https://web.dev/streams/)，它有关于不同类型流的一些示例。
+以下示例将文本逐块转换为大写。这个示例来自[数据流——权威指南](https://web.dev/articles/streams)，它有关于不同类型流的一些示例。
 
 ```js
 function upperCaseStream() {

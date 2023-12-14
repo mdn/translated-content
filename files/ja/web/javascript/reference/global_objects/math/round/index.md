@@ -48,7 +48,7 @@ Math.round(-20.51); // -21
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.round")}}
+{{Compat}}
 
 ## 関連情報
 

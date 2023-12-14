@@ -62,7 +62,7 @@ try {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.SyntaxError.SyntaxError")}}
+{{Compat}}
 
 ## 関連情報
 

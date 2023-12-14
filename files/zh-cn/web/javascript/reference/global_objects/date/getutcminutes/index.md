@@ -42,7 +42,7 @@ var minutes = today.getUTCMinutes();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getMinutes()")}}
 - {{jsxref("Date.prototype.setUTCMinutes()")}}

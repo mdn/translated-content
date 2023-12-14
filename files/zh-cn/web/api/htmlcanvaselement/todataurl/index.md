@@ -5,9 +5,9 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片展示的 [data URI](/zh-CN/docs/Web/HTTP/data_URIs) 。可以使用 `type` 参数其类型，默认为 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) 格式。图片的分辨率为 96dpi。
+**`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片展示的 [data URI](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)。可以使用 `type` 参数指定其类型，默认为 [PNG](https://zh.wikipedia.org/wiki/PNG) 格式。图片的分辨率为 96dpi。
 
-- 如果画布的高度或宽度是 0，那么会返回字符串“`data:,”`。
+- 如果画布的高度或宽度是 0，那么会返回字符串“`data:,`”。
 - 如果传入的类型非“`image/png`”，但是返回的值以“`data:image/png`”开头，那么该传入的类型是不支持的。
 - Chrome 支持“`image/webp`”类型。
 
@@ -26,7 +26,7 @@ canvas.toDataURL(type, encoderOptions);
 
 ### 返回值
 
-包含 [data URI](/zh-CN/docs/Web/HTTP/data_URIs) 的{{domxref("DOMString")}}。
+包含 [data URI](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的字符串。
 
 ## 示例
 
@@ -128,4 +128,4 @@ function removeColors() {
 ## 参考
 
 - 定义接口，{{domxref("HTMLCanvasElement")}}
-- [HTTP](/zh-CN/docs/Web/HTTP)引用中的[Data URIs](/zh-CN/docs/Web/HTTP/data_URIs)
+- [HTTP](/zh-CN/docs/Web/HTTP) 参考中的 [Data URI](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)

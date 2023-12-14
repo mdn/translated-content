@@ -76,15 +76,11 @@ div {
 
 ## Especificações
 
-| Especificação                                                                   | Status                        | Comentário          |
-| ------------------------------------------------------------------------------- | ----------------------------- | ------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-origin', 'background-origin')}} | {{Spec2('CSS3 Backgrounds')}} | Initial definition. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.background-origin")}}
+{{Compat}}
 
 ## Veja também
 

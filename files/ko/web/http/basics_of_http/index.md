@@ -22,7 +22,7 @@ HTTP는 확장 가능한 프로토콜로 리소스 및 URI(Uniform Resource Iden
 - [데이터 URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
   - : 특정 종류의 URI는 직접 대표하는 리소스를 포함합니다. 데이터 URL은 매우 편리하지만 위험성을 가지고 있습니다.
 - [리소스 URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs) {{Non-standard_Inline}}
-  - : 리소스 URL(`resource` 스키마가 접두사로 붙어있는 URL)은 파이어폭스와 파이어폭스 확장 프로그램들에서 내적으로 리소스를 로드하기 위해서 사용됩니다. 하지만 몇몇 브라우저로 연결할 수 있는 사이트의 정보로도 사용할 수 있습니다.
+  - : 리소스 URL(`resource` 스키마가 접두사로 붙어있는 URL)은 Firefox와 Firefox 확장 프로그램들에서 내적으로 리소스를 로드하기 위해서 사용됩니다. 하지만 몇몇 브라우저로 연결할 수 있는 사이트의 정보로도 사용할 수 있습니다.
 - [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
   - : HTTP/1.0부터는 다양한 타입의 콘텐츠를 전송할 수 있습니다. 이 글에서는 {{HTTPHeader("Content-Type")}} 헤더와 MIME 표준을 사용하여 이를 수행하는 방법을 설명합니다.
 - [www와 비-www URL 중에서 선택하기](/ko/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)

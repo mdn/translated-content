@@ -55,5 +55,5 @@ slug: Web/HTTP
   - : 一个旨在帮助开发人员，系统管理员和安全专业人员安全地配置其站点的项目。
 - [RedBot](https://redbot.org/)
   - : 用于检查与缓存相关的 HTTP 标头的工具。
-- [浏览器的工作原理（2011）](https://web.dev/howbrowserswork/)
+- [浏览器的工作原理（2011）](https://web.dev/articles/howbrowserswork)
   - : 一篇非常全面的关于浏览器内部实现与通过 HTTP 协议的请求流的文章。可以说是所有 Web 开发者的必读内容。

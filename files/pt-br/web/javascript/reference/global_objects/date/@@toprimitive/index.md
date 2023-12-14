@@ -47,13 +47,11 @@ testDate[Symbol.toPrimitive]("default");
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.@@toPrimitive")}}
+{{Compat}}
 
 ## Veja também
 

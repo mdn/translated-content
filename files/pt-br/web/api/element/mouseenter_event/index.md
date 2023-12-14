@@ -9,7 +9,7 @@ O evento `mouseenter` é disparado quando um dispositivo de apontamento (geralme
 
 Similar ao {{event('mouseover')}}, ele se diferencia no fato de que não ocorre a fase [bubble](/pt-BR/docs/Web/API/Event/bubbles) e não é disparado quando o cursor / apontador mover-se do espaço físico de um de seus descendentes para o seu próprio espaço físico.
 
-![mouseenter.png](/@api/deki/files/5908/=mouseenter.png)Um evento `mouseenter` é enviado para cada elemento da hierarquia ao entrar neles. Aqui 4 eventos são enviados aos quatro elementos da hierarquia quando o cursor / apontador chega no Text.![mouseover.png](/@api/deki/files/5909/=mouseover.png)Um único evento `mouseover` é enviado ao elemento de maior profundidade na árvore DOM, a partir do qual ocorre a fase bubble e o mesmo percorre subindo na hierarquia dos elementos até que seja cancelado por um _handler_ ou alcance a raíz da árvore.
+![mouseenter.png](mouseenter.png)Um evento `mouseenter` é enviado para cada elemento da hierarquia ao entrar neles. Aqui 4 eventos são enviados aos quatro elementos da hierarquia quando o cursor / apontador chega no Text.![mouseover.png](mouseover.png)Um único evento `mouseover` é enviado ao elemento de maior profundidade na árvore DOM, a partir do qual ocorre a fase bubble e o mesmo percorre subindo na hierarquia dos elementos até que seja cancelado por um _handler_ ou alcance a raíz da árvore.
 
 De acordo com a profundidade da hierarquia, a quantidade de eventos `mouseenter` disparados pode se tornar muito grande e causar problemas de performance significativos. Nestes casos é melhor escutar por eventos mouseover.
 

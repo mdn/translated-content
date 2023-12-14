@@ -47,7 +47,7 @@ wm.set(obj, "baz");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap.set")}}
+{{Compat}}
 
 ## 関連情報
 

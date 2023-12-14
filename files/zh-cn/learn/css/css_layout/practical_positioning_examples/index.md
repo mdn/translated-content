@@ -41,7 +41,7 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 > **备注：** 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
 
-在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件—— [info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html). 保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
+在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件——[info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html)。保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
 
 ```html
 <section class="info-box">
@@ -427,7 +427,7 @@ aside {
 
 ### 设置选择后的状态
 
-这是最后要添加的一点 CSS ——把这些放到你的 CSS 底部：
+这是最后要添加的一点 CSS——把这些放到你的 CSS 底部：
 
 ```css
 input[type="checkbox"]:checked + aside {
@@ -437,7 +437,7 @@ input[type="checkbox"]:checked + aside {
 
 这里的选择器是复杂的——我们选择与 `<input>` 元素邻接的 `<aside>` 元素，但是仅仅在它被选择时（请注意使用 {{cssxref(":checked")}} 伪类来实现此目的），在这种情况下，我们将 `<aside>` 的 {{cssxref("right")}} 属性设置为 0px，会造成面板再次出现在屏幕上（由于过渡属性会平滑的出现）。再一次点击这个标签会取消选中 checkbox，面板将会跟着再一次消失。
 
-所以你有 ——一个相当巧妙的避免使用 JavaScript 来创建一个切换按钮效果方式。这将在 IE9 及以上版本中起作用（平滑过渡将在 IE10 及更高版本中起作用）。这种效果确实有一些问题 ——这是有点滥用表单元素（它们不是为了这个目的），并且在无障碍方面效果不是很好——标签在默认情况下不可聚焦，并且表单元素的非语义使用可能会导致屏幕朗读器出现问题。JavaScript 和链接或按钮可能更合适，但这样的实验仍然很有趣。
+所以你有——一个相当巧妙的避免使用 JavaScript 来创建一个切换按钮效果方式。这将在 IE9 及以上版本中起作用（平滑过渡将在 IE10 及更高版本中起作用）。这种效果确实有一些问题——这是有点滥用表单元素（它们不是为了这个目的），并且在无障碍方面效果不是很好——标签在默认情况下不可聚焦，并且表单元素的非语义使用可能会导致屏幕朗读器出现问题。JavaScript 和链接或按钮可能更合适，但这样的实验仍然很有趣。
 
 ## 总结
 

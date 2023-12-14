@@ -26,6 +26,8 @@ inset-block: revert;
 inset-block: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/inset-block.html")}}
+
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。

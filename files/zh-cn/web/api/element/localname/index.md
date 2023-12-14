@@ -72,7 +72,7 @@ name = element.localName
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Element.namespaceURI")}}
 - {{domxref("Element.prefix")}}

@@ -48,7 +48,7 @@ _No change._
 - 移除了 `downloads-indicator`, 你应该使用 `downloads-button` 元素来代替。
 - Firefox 不再使用 `chrome://browser/skin/downloads/indicator.css` 样式。
 
-## 相关链接
+## 参见
 
 - [Site Compatibility for Firefox 27](/zh-CN/docs/Mozilla/Firefox/Releases/27/Site_Compatibility)
 

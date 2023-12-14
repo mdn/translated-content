@@ -24,7 +24,7 @@ _継承されたメソッドはありません。_
 
 ## ブラウザ実装状況
 
-{{Compat("api.CanvasPattern")}}
+{{Compat}}
 
 ## 関連項目
 

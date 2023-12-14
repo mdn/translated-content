@@ -67,4 +67,4 @@ svg {
 
 ## ブラウザーの互換性
 
-{{Compat("svg.attributes.events.global.onclick")}}
+{{Compat}}

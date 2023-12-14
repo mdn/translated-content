@@ -46,6 +46,6 @@ Symbol.keyFor(Symbol.iterator); // undefined
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Symbol.prototype.for()")}}

@@ -39,6 +39,4 @@ slug: Web/CSS/CSS_flexible_box_layout
 
 ## Спецификации
 
-| Specification                  | Status                      | Comment             |
-| ------------------------------ | --------------------------- | ------------------- |
-| {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Initial definition. |
+{{Specifications}}

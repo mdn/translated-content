@@ -27,4 +27,4 @@ slug: Web/API/Web_Crypto_API
 
 ### `Crypto`
 
-{{Compat("api.Crypto")}}
+{{Compat}}

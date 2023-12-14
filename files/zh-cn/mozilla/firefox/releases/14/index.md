@@ -72,6 +72,6 @@ _No change._
 
 - Dictionary names are now parsed as full [BCP 47](http://tools.ietf.org/html/bcp47) language tags ([bug 730209](https://bugzilla.mozilla.org/show_bug.cgi?id=730209), [bug 741842](https://bugzilla.mozilla.org/show_bug.cgi?id=741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
 
-## 相关链接
+## 参见
 
 {{Firefox_for_developers('13')}}

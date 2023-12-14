@@ -65,7 +65,7 @@ svg {
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.polygon")}}
+{{Compat}}
 
 ## 関連情報
 

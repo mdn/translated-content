@@ -948,6 +948,21 @@
     "modified": "2020-07-16T22:32:43.326Z",
     "contributors": ["tangerine1202", "nykevinwong", "mubiesam"]
   },
+  "Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
+    "modified": "2019-03-24T00:02:43.850Z",
+    "contributors": [
+      "circlepen",
+      "drinktea28",
+      "jackblackevo",
+      "chrisdavidmills",
+      "ethertank",
+      "fscholz",
+      "happysadman",
+      "Mgjbot",
+      "kourge",
+      "BobChao"
+    ]
+  },
   "Learn/JavaScript/First_steps": {
     "modified": "2020-10-14T02:07:07.650Z",
     "contributors": [
@@ -1272,6 +1287,10 @@
   "Learn/Tools_and_testing/Cross_browser_testing/Automated_testing": {
     "modified": "2020-07-16T22:39:19.937Z",
     "contributors": ["wbamberg", "iigmir", "roycrxtw"]
+  },
+  "Learn/Tools_and_testing/Cross_browser_testing/JavaScript": {
+    "modified": "2019-03-24T00:17:14.604Z",
+    "contributors": ["fscholz", "irvinfly", "Littlebtc", "Sonrisa", "sycheng"]
   },
   "MDN": {
     "modified": "2019-09-10T15:45:39.460Z",
@@ -2368,10 +2387,6 @@
       "natevw"
     ]
   },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2019-03-23T23:25:28.545Z",
-    "contributors": ["jackblackevo", "teoli", "foxbrush"]
-  },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2020-04-01T05:25:46.906Z",
     "contributors": ["ginszme"]
@@ -2392,6 +2407,10 @@
     "modified": "2020-10-15T22:17:19.013Z",
     "contributors": ["willh"]
   },
+  "Web/API/XMLHttpRequest_API/Using_XMLHttpRequest": {
+    "modified": "2019-03-23T23:25:28.545Z",
+    "contributors": ["jackblackevo", "teoli", "foxbrush"]
+  },
   "Web/API/btoa": {
     "modified": "2020-10-15T22:35:15.820Z",
     "contributors": ["evo938evo938"]
@@ -2400,7 +2419,7 @@
     "modified": "2020-10-15T22:03:31.329Z",
     "contributors": ["Syihoy", "porfirion"]
   },
-  "Web/API/console/assert": {
+  "Web/API/console/assert_static": {
     "modified": "2020-10-15T22:03:27.482Z",
     "contributors": ["lin826", "iigmir"]
   },
@@ -2497,6 +2516,10 @@
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-05-11T23:59:37.780Z",
     "contributors": ["wildsky", "iigmir", "1986slayer"]
+  },
+  "Web/CSS/CSS_fonts/WOFF": {
+    "modified": "2019-03-23T23:28:22.570Z",
+    "contributors": ["fscholz", "carl_tw"]
   },
   "Web/CSS/CSS_grid_layout": {
     "modified": "2020-02-01T05:41:13.615Z",
@@ -2687,37 +2710,6 @@
       "ethertank",
       "Sheppy"
     ]
-  },
-  "Web/Guide/AJAX": {
-    "modified": "2019-03-24T00:02:43.850Z",
-    "contributors": [
-      "circlepen",
-      "drinktea28",
-      "jackblackevo",
-      "chrisdavidmills",
-      "ethertank",
-      "fscholz",
-      "happysadman",
-      "Mgjbot",
-      "kourge",
-      "BobChao"
-    ]
-  },
-  "Web/Guide/Graphics": {
-    "modified": "2019-04-23T04:21:07.806Z",
-    "contributors": ["jackblackevo", "pytseng"]
-  },
-  "Web/Guide/Introduction_to_Web_development": {
-    "modified": "2019-04-23T03:25:16.725Z",
-    "contributors": ["jackblackevo", "khhyoshida", "happysadman"]
-  },
-  "Web/Guide/WOFF": {
-    "modified": "2019-03-23T23:28:22.570Z",
-    "contributors": ["fscholz", "carl_tw"]
-  },
-  "Web/Guide/Writing_forward-compatible_websites": {
-    "modified": "2019-03-24T00:17:14.604Z",
-    "contributors": ["fscholz", "irvinfly", "Littlebtc", "Sonrisa", "sycheng"]
   },
   "Web/HTML": {
     "modified": "2020-10-16T05:00:10.652Z",

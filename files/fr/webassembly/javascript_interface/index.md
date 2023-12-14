@@ -22,7 +22,7 @@ L'objet `WebAssembly` est notamment utilisé pour :
 - {{jsxref("WebAssembly.instantiate()")}}
   - : La méthode qu'on utilisera la plupart du temps pour compiler et instancier du code WebAssembly, elle renvoie une promesse qui est résolue en une `Instance` ou en une `Instance` et un `Module`.
 - {{jsxref("WebAssembly.instantiateStreaming()")}}
-  - : Cette méthode peremet de compiler et d'instancier un module WebAssembly à partir d'un flux source (_streamed source_). Elle renvoie à la fois un objet `Module` et sa première `Instance`.
+  - : Cette méthode permet de compiler et d'instancier un module WebAssembly à partir d'un flux source (_streamed source_). Elle renvoie à la fois un objet `Module` et sa première `Instance`.
 - {{jsxref("WebAssembly.compile()")}}
   - : Cette méthode permet de compiler un {{jsxref("WebAssembly.Module")}} à partir de _bytecode_ WebAssembly, l'instanciation doit alors être effectuée dans une autre étape.
 - {{jsxref("WebAssembly.compileStreaming()")}}

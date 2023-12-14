@@ -32,7 +32,7 @@ throw e;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error.prototype.name")}}
 - {{jsxref("Error.prototype.toString()")}}

@@ -45,11 +45,11 @@ Web Storage API предоставляет механизмы, при помощ
 
 ### `Window.localStorage`
 
-{{Compat("api.Window.localStorage")}}
+{{Compat}}
 
 ### `Window.sessionStorage`
 
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Приватный режим/Инкогнито
 

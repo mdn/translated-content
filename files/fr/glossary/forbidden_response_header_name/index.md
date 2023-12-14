@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 818941994eb1765f2196c9b588314b12e7b9f66f
 ---
 
+{{GlossarySidebar}}
+
 Un _nom d'en-tête de réponse interdit_ est un nom d'[en-tête HTTP](/fr/docs/Web/HTTP/Headers) (`Set-Cookie`) qui ne peut pas être modifié par programmation.
 
 ## Voir aussi

@@ -1,8 +1,9 @@
 ---
-title: UIEvent.which
+title: "UIEvent: which プロパティ"
+short-title: which
 slug: Web/API/UIEvent/which
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("UI Events")}}{{Deprecated_Header}}
@@ -34,33 +35,33 @@ l10n:
 ## 例
 
 ```html
-<html lang="en">
+<html lang="ja">
   <head>
-    <title>charCode/keyCode/which example</title>
+    <title>charCode/keyCode/which の例</title>
 
     <script>
       function showKeyPress(evt) {
         alert(
-          `onkeypress handler:\n` +
-            `keyCode property: ${evt.keyCode}\n` +
-            `which property: ${evt.which}\n` +
-            `charCode property: ${evt.charCode}\n` +
-            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`,
+          `onkeypress ハンドラー:\n` +
+            `keyCode プロパティ: ${evt.keyCode}\n` +
+            `which プロパティ: ${evt.which}\n` +
+            `charCode プロパティ: ${evt.charCode}\n` +
+            `押されたキーの文字: ${String.fromCharCode(evt.charCode)}\n`,
         );
       }
 
       function keyDown(evt) {
         alert(
-          `onkeydown handler:\n` +
-            `keyCode property: ${evt.keyCode}\n` +
-            `which property: ${evt.which}\n`,
+          `onkeydown ハンドラー:\n` +
+            `keyCode プロパティ: ${evt.keyCode}\n` +
+            `which プロパティ: ${evt.which}\n`,
         );
       }
     </script>
   </head>
 
   <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
-    <p>Please press any key.</p>
+    <p>何かキーを押してください。</p>
   </body>
 </html>
 ```

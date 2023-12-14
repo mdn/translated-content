@@ -46,7 +46,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 
 ![Two star images zoomed in. The raster one on the left starts to look pixellated, whereas the vector one still looks crisp.](raster-vector-zoomed.png)
 
-> **备注：** 上面的图片实际上都是 PNG 图片 —— 每个例子中左边的图片代表光栅图片，右边的星星代表矢量图。还有，访问 [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 示例来查看真正的例子！
+> **备注：** 上面的图片实际上都是 PNG 图片——每个例子中左边的图片代表光栅图片，右边的星星代表矢量图。还有，访问 [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 示例来查看真正的例子！
 
 此外，矢量图形相较于同样的位图，通常拥有更小的体积，因为它们仅需储存少量的算法，而不是逐个储存每个像素的信息。
 

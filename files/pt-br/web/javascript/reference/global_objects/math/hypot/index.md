@@ -77,14 +77,11 @@ Math.hypot =
 
 ## Especificações
 
-| Specification                                            | Status               | Comment            |
-| -------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-math.hypot', 'Math.hypot')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.hypot")}}
+{{Compat}}
 
 ## Ver também
 

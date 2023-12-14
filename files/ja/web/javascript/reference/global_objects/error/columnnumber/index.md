@@ -23,7 +23,7 @@ console.log(e.columnNumber); // 0
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Error.columnNumber")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,5 +1,5 @@
 ---
-title: 함수
+title: 함수 (function)
 slug: Glossary/Function
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
@@ -7,13 +7,13 @@ l10n:
 
 {{GlossarySidebar}}
 
-**함수**는 다른 코드에서 또는 자신에 의해 호출되거나 함수 레퍼런스를 저장한 {{Glossary("variable", "변수")}}에 의해 호출될 수 있는 코드 조각입니다. 함수가 호출될 때, 함수의 입력으로 {{Glossary("Argument", "인수")}} 가 전달되고 함수는 선택적으로 출력값을 반환할 수 있습니다. 또한 {{glossary("JavaScript")}}에서 함수는 {{glossary("object", "객체")}}이기도 합니다.
+**함수(function)** 는 다른 코드에서 또는 자신에 의해 호출되거나 함수 레퍼런스를 저장한 {{Glossary("variable", "변수")}}에 의해 호출될 수 있는 코드 조각입니다. 함수가 호출될 때, 함수의 입력으로 {{Glossary("Argument", "인수")}} 가 전달되고 함수는 선택적으로 출력값을 반환할 수 있습니다. 또한 {{glossary("JavaScript")}}에서 함수는 {{glossary("object", "객체")}}이기도 합니다.
 
-함수명은 함수 선언문 또는 함수 표현식의 일부로써 선언된 {{Glossary("identifier","식별자")}}입니다. 함수 이름의 {{Glossary("scope","범위")}}는 함수 이름의 선언식 또는 표현식인지에 따라 결정된다.
+함수명은 함수 선언문 또는 함수 표현식의 일부로써 선언된 {{Glossary("identifier","식별자")}}입니다. 함수 이름의 {{Glossary("scope","범위")}}는 함수 이름의 선언식 또는 표현식인지에 따라 결정됩니다.
 
 ### 여러 함수 형식들
 
-**익명 함수**는 함수명이 없는 함수입니다. 함수 표현식만 이름이 없을 수 있으며, 함수 선언식에는 반드시 이름이 있어야합니다.
+**익명 함수**는 함수명이 없는 함수입니다. 함수 표현식만 이름이 없을 수 있으며, 함수 선언식에는 반드시 이름이 있어야 합니다.
 
 ```js
 // 함수 표현식으로 만든 익명 함수
@@ -38,7 +38,7 @@ function foo() {}
 const baz = () => {};
 ```
 
-**내부 함수**는 다른 함수 내부에서 정의된 함수이다(아래 예에서는 `square`). **외부 함수**는 함수를 포함하고 있는 함수이다(아래 예에서는 `addSquares`):
+**내부 함수**는 다른 함수 내부에서 정의된 함수입니다(아래 예에서는 `square`). **외부 함수**는 함수를 포함하고 있는 함수입니다(아래 예에서는 `addSquares`).
 
 ```js
 function addSquares(a, b) {
@@ -94,9 +94,9 @@ function foo() {
 }();
 ```
 
-IIFE에 대해 더 많은 설명이 필요하다면, 위키피디아의 다음 페이지를 확인해 주세요. [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+IIFE에 대해 더 많은 설명이 필요하다면, 위키피디아의 [즉시 실행 함수 표현식(Immediately Invoked Function Expression)](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)을 확인해주세요.
 
 ## 같이 보기
 
-- [Functions](/ko/docs/Web/JavaScript/Guide/Functions)
-- [Arrow Functions](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [함수](/ko/docs/Web/JavaScript/Guide/Functions)
+- [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

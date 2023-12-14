@@ -53,7 +53,7 @@ Math.asin(2); // NaN
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.asin")}}
+{{Compat}}
 
 ## 関連情報
 

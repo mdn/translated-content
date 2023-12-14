@@ -96,7 +96,7 @@ function removeHint() {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.will-change")}}
+{{Compat}}
 
 ## 関連情報
 

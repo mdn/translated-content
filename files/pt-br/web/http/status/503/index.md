@@ -29,7 +29,7 @@ Os cabeçalhos relativos ao armazenamento em cache que são enviados juntamente 
 
 A informação mostrada acima está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.503")}}
+{{Compat}}
 
 ## Veja também
 

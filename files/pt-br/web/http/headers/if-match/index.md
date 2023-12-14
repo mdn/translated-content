@@ -59,7 +59,7 @@ If-Match: *
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.If-Match")}}
+{{Compat}}
 
 ## Veja também
 

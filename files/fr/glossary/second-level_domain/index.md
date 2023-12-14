@@ -3,6 +3,8 @@ title: Domaine de deuxième niveau
 slug: Glossary/Second-level_Domain
 ---
 
+{{GlossarySidebar}}
+
 Un domaine de deuxième niveau ou un SLD (<i lang="en">Second Level Domain</i>) est la partie du nom de domaine qui est hiérarchiquement directement sous un [TLD (<i lang="en">Top Level Domain</i>)](/fr/docs/Glossary/TLD).
 
 Par exemple, dans `mozilla.org`, le SLD est `mozilla` et le TLD est `org`.

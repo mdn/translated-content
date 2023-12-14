@@ -51,4 +51,4 @@ for (let view of pose.view) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.inverse")}}
+{{Compat}}

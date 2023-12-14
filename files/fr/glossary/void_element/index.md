@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 4654b14923a4bad8ca5244b4708c86e7f97ffd2b
 ---
 
+{{GlossarySidebar}}
+
 Un **élément vide** (<i lang="en">void element</i> en anglais) est un [élément](/fr/docs/Glossary/Element) HTML qui **ne peut pas** avoir de nœud enfant (c'est-à-dire des éléments imbriqués ou des nœuds texte). Les éléments vides n'ont qu'une balise ouvrante&nbsp;: les balises fermantes ne doivent pas être indiquées pour ces éléments.
 
 En HTML, un élément vide ne doit pas avoir de balise fermante. Ainsi, `<input type="text"></input>` sera invalide en HTML. En revanche, pour SVG ou MathML, les éléments qui ne peuvent pas avoir de nœuds enfants peuvent utiliser une balise fermante plutôt que la syntaxe auto-fermante XML.

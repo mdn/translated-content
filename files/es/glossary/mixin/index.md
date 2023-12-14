@@ -3,6 +3,8 @@ title: Mixin
 slug: Glossary/Mixin
 ---
 
+{{GlossarySidebar}}
+
 Un _mixin_ es un conjunto coherente de {{glossary("method","métodos")}} y {{glossary("property","propiedades")}} implementadas por otras interfaces y {{glossary("class","clases")}}.
 
 Ejemplo

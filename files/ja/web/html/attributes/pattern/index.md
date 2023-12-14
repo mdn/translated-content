@@ -1,21 +1,27 @@
 ---
-title: "HTML attribute: pattern"
+title: "HTML 属性: pattern"
 slug: Web/HTML/Attributes/pattern
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
 
-**`pattern`** 属性は、フォームコントロールの値が一致すべき[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を指定します。 `null` 以外の値が `pattern` 値によって設定された制約に適合しない場合、 {{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが真になります。
+**`pattern`** 属性は、フォームコントロールの値が一致すべき[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を指定します。`null` 以外の値が `pattern` 値によって設定された制約に適合しない場合、{{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが真になります。
 
-`pattern`属性は {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, {{HTMLElement("input/search", "search")}} の入力型の属性です。
+{{EmbedInteractiveExample("pages/tabbed/attribute-pattern.html", "tabbed-shorter")}}
 
-`pattern`属性は、[制約検証](/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation)を通過させるために、入力の [`value`](/ja/docs/Web/HTML/Element/input#value) が一致するべき正規表現です。これは有効な JavaScript の正規表現でなければならず、 {{jsxref("RegExp")}} 型で使用されたり、 [正規表現ガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で説明されているものと同じものです。通り正規表現をコンパイルする際に `'u'` フラグを指定することで、パターンが ASCII ではなく Unicode コードポイントの並びとして扱われるようになります。パターンテキストの周りには、スラッシュを指定してはいけません。
+## 概要
+
+`pattern` 属性は {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, {{HTMLElement("input/search", "search")}} の入力型の属性です。
+
+`pattern` 属性は、[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過させるために、入力の [`value`](/ja/docs/Web/HTML/Element/input#value) が一致するべき正規表現です。これは有効な JavaScript の正規表現でなければならず、 {{jsxref("RegExp")}} 型で使用されたり、[正規表現ガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で説明されているものと同じものです。正規表現をコンパイルする際に `'u'` フラグが指定されるので、パターンが ASCII ではなく Unicode コードポイントの並びとして扱われるようになります。パターンテキストの周りには、スラッシュを指定してはいけません。
 
 パターンが指定されていないか無効な場合、正規表現は適用されず、この属性は無視されます。
 
 > **メモ:** [`title`](/ja/docs/Web/HTML/Element/input#title) 属性を使用すると、ほとんどのブラウザーがパターンに一致するための要件を説明するためにツールチップとして表示するテキストを指定することができます。説明をツールチップだけに頼っては**いけません**。ユーザービリティについての詳細は以下を参照してください。
 
-pattern 属性に対応している入力型の中には、特に {{HTMLElement("input/email", "email")}} および {{HTMLElement("input/url", "url")}} 入力型のように、一致しなければならない期待値の構文を持っているものがあります。 pattern 属性が存在せず、値がその値型の期待される構文と一致しない場合、 {{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.typeMismatch','typeMismatch')}} プロパティが真になります。
+pattern 属性に対応している入力型の中には、特に {{HTMLElement("input/email", "email")}} および {{HTMLElement("input/url", "url")}} 入力型のように、一致しなければならない期待値の構文を持っているものがあります。 pattern 属性が存在せず、値がその値型の期待される構文と一致しない場合、 {{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.typeMismatch','typeMismatch')}} プロパティが true になります。
 
 ### ユーザービリティ
 
@@ -23,23 +29,27 @@ pattern 属性に対応している入力型の中には、特に {{HTMLElement(
 
 ### 制約検証
 
-入力欄の値が空文字列ではなく、正規表現全体と一致しない場合は、 {{domxref('ValidityState.patternMismatch','patternMismatch')}} が真になります。
-pattern の正規表現は、値に一致したときに、先頭が文字列の先頭に該当し、末尾が文字列の末尾に該当するため、これは JavaScript の正規表現とは少し異なります。 pattern 属性の場合、パターンの先頭に `^(?:` が、末尾に `)$` が指定されているかのように、値の部分ではなく全体に一致します。
+入力の値が空文字列でなく、正規表現全体に一致しない場合、{{domxref('ValidityState')}} オブジェクトの {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが `true` になって報告される制約違反が存在することになります。。
+パターンの正規表現は、値に対して照合されるとき、その始まりが文字列の始まりに、その終わりが文字列の終わりに固定されます。これは、JavaScript の正規表現と少し異なります。pattern 属性の場合、値のどこか一部ではなく値全体に対して照合され、まるでパターンの先頭に `^(?:` が、末尾に `)$` があるかのようになります。
+
+> **メモ:** `pattern` 属性が値なしで指定された場合、その値は暗黙的に空文字列となります。したがって、**空でない**入力欄の `value` は制約に違反することになります。
 
 ## 例
 
-以下ののものを考えてみてください。
+### 電話番号の照合
+
+以下のものを考えてみてください。
 
 ```html
 <p>
-  <label
-    >Enter your phone number in the format (123)456-7890 (<input
+  <label>
+    Enter your phone number in the format (123) - 456 - 7890 (<input
       name="tel1"
       type="tel"
       pattern="[0-9]{3}"
       placeholder="###"
       aria-label="3-digit area code"
-      size="2" />)-
+      size="2" />) -
     <input
       name="tel2"
       type="tel"
@@ -59,7 +69,7 @@ pattern の正規表現は、値に一致したときに、先頭が文字列の
 </p>
 ```
 
-ここでは北米の電話番号を示す 3 つの部分があり、電話番号の 3 つの構成要素すべてを含む暗黙のラベルがありますが、それぞれ 3 桁、3 桁、4 桁で [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性によってそれぞれ設定されています。
+ここでは北米の電話番号を示す 3 つの部分があり、電話番号の 3 つの構成要素すべてを含む暗黙のラベルがありますが、それぞれ 3 桁、3 桁、4 桁で `pattern` 属性によってそれぞれ設定されています。
 
 値が長すぎたり短すぎたり、数字ではない文字が含まれていたりすると、 patternMismatch が true になります。 `true` の場合、要素は CSS の {{cssxref(":invalid")}} 擬似クラスに一致します。
 
@@ -69,7 +79,7 @@ input:invalid {
 }
 ```
 
-{{EmbedLiveSample("example1", 300, 40)}}
+{{EmbedLiveSample("Matching_a_phone_number", 300, 80)}}
 
 代わりに [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) と [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) 属性を用いた場合、 {{domxref('validityState.tooLong')}} または {{domxref('validityState.tooShort')}} が true になります。
 
@@ -115,13 +125,13 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid + span:after {
+input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
 }
 
-input:valid + span:after {
+input:valid + span::after {
   position: absolute;
   content: "✓";
   padding-left: 5px;
@@ -148,6 +158,6 @@ This renders like so:
 
 ## 関連情報
 
-- [Constraint validation](/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [Forms: Data form validation](/ja/docs/Web/Guide/HTML/Forms/Data_form_validation)
-- [Regular Expressions](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [フォーム: データフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)

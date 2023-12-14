@@ -15,29 +15,24 @@ slug: Glossary/Safe/HTTP
 
 安全的请求，不会改变服务端的状态（数据）：
 
-```
+```http
 GET /pageX.html HTTP/1.1
 ```
 
 非安全的请求方式，可能会引起服务端状态的改变：
 
-```
+```http
 POST /pageX.html HTTP/1.1
 ```
 
 一个幂等（idempotent）但是不安全的方法：
 
-```
+```http
 DELETE /idX/delete HTTP/1.1
 ```
 
-## 更多
+## 参见
 
-### 一般了解
-
-- HTTP 规范中的 [安全](https://tools.ietf.org/html/rfc7231#section-4.2.1) 定义。
-
-### 技术规范
-
-- 安全方法的详细解释：{{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}}
-- 非安全方法的详细解释：{{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("POST")}}
+- HTTP 规范中的[安全](https://httpwg.org/specs/rfc9110.html#safe.methods)定义。
+- 安全方法的详细解释：{{HTTPMethod("GET")}}、{{HTTPMethod("HEAD")}}、{{HTTPMethod("OPTIONS")}}
+- 非安全方法的详细解释：{{HTTPMethod("PUT")}}、{{HTTPMethod("DELETE")}}、{{HTTPMethod("POST")}}

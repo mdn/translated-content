@@ -44,7 +44,7 @@ if (parg.childElementCount) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - The {{domxref("Element")}} and {{domxref("ChildNode")}} pure interfaces.
 - Object types implementing this pure interface: {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("DocumentFragment")}}.

@@ -21,11 +21,11 @@ slug: Web/HTML/Element/ol
 
 Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-- {{HTMLAttrDef("reversed")}}
+- `reversed`
   - : Атрибут логического значения (bool) показывает, что предметы указаны по списку в обратном порядке. Пункты в списке будут пронумерованы от большего к меньшему.
-- {{HTMLAttrDef("start")}}
+- `start`
   - : Нумерация начнётся с указанного числа. Арабскими цифрами (1, 2, 3, и т.д.), даже когда нумерация `type` в буквах или Римском исчислении. Например, чтобы начать нумерацию с буквы "г" или Римской "iv", используйте `start="4"`.
-- {{HTMLAttrDef("type")}}
+- `type`
   - : Задаёт тип нумерации:
     - `a` для строчных букв
     - `A` для заглавных букв
@@ -156,5 +156,5 @@ slug: Web/HTML/Element/ol
 
   - свойство {{CSSxRef("list-style")}}, для порядковых показов
   - [CSS счётчики](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), для более сложных вложенных списков
-  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства [compact](/ru/docs/Web/HTML/Element/ol#attr-compact)
+  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства `compact`
   - Свойство [margin](/ru/docs/Web/CSS/margin), для контроля отступа в списке

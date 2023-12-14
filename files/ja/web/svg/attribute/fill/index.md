@@ -230,6 +230,6 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
 
 ## Browser compatibility
 
-{{Compat("svg.attributes.presentation.fill")}}
+{{Compat}}
 
 > **メモ:** For information on using the `context-fill` (and `context-stroke`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.

@@ -35,7 +35,7 @@ toSorted(compareFn)
 
 `compareFn` 引数の情報については {{jsxref("Array/sort", "sort()")}} を参照してください。
 
-[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)が使用された場合、 `toSorted()` メソッドは空のスロットを `undefined` という値があるものとして反復処理します。
+[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)が使用された場合、 `toSorted()` メソッドは空のスロットを `undefined` という値があるものとして反復処理します。
 
 `toSorted()` メソッドは[汎用](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。 `this` の値が `length` プロパティを持っており、整数のキーのプロパティがあることのみを期待します。
 

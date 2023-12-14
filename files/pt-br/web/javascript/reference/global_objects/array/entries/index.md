@@ -40,14 +40,11 @@ for (let e of eArr) {
 
 ## Especificações
 
-| Especificação                                                                      | Status               | Comentário         |
-| ---------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.entries', 'Array.prototype.entries')}}     | {{Spec2('ES6')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## Veja também
 

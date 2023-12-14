@@ -415,12 +415,7 @@ a + b;
 
 ## Especificações
 
-| Specification                                                                          | Status               | Comment                                                              |
-| -------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                    | {{Spec2("ES1")}}     | Definição inicial.                                                   |
-| {{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}                                 | {{Spec2('ES5.1')}}   |                                                                      |
-| {{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}     | {{Spec2('ES6')}}     | Adicionado: números Binarios e Octais, Unicode code point, Templates |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}} | {{Spec2('ESDraft')}} |                                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

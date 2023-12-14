@@ -36,7 +36,7 @@ Não faz parte de nenhum padrão.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toSource")}}
+{{Compat}}
 
 ## Veja também
 

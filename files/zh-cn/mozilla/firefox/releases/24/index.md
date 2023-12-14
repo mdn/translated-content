@@ -19,7 +19,7 @@ slug: Mozilla/Firefox/Releases/24
 
 ### MathML
 
-## 相关链接
+## 参见
 
 - [Firefox 24 Aurora Notes](http://www.mozilla.org/zh-CN/firefox/24.0a2/auroranotes/)
 - [Firefox 24 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_24)

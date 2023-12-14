@@ -2,26 +2,26 @@
 title: WritableStream
 slug: Web/API/WritableStream
 l10n:
-  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
 
 **`WritableStream`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、ストリーミングデータをシンクと呼ばれる宛先に書き込むための標準的な抽象化を提供します。 このオブジェクトには、背圧とキューイングが組み込まれています。
 
-`WritableStream` は{{glossary("Transferable objects","移譲可能オブジェクト")}}です。
+`WritableStream` は[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)です。
 
 ## コンストラクター
 
 - {{domxref("WritableStream.WritableStream", "WritableStream()")}}
   - : 新しい `WritableStream` オブジェクトを作成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("WritableStream.locked")}} {{ReadOnlyInline}}
   - : 論理値で、 `WritableStream` がライターにロックされているかどうかを示します。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("WritableStream.abort()")}}
   - : ストリームを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに入れられた書き込みが破棄されてすぐにエラー状態に移行することを通知します。

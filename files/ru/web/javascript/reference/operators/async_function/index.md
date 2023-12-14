@@ -68,9 +68,7 @@ add(10).then((v) => {
 
 ## Спецификации
 
-| Specification                                                                | Status               | Comment                       |
-| ---------------------------------------------------------------------------- | -------------------- | ----------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
+{{Specifications}}
 
 ## Поддержка браузерами
 

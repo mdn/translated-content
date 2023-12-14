@@ -64,7 +64,7 @@ Referrer-Policy: unsafe-url
 
 ## Integração com HTML
 
-Você também pode colocar política de referência dentro do HTML. Por exemplo, você pode colocar uma política de referência para o documento inteiro com um elemento {{HTMLElement("meta")}} com um [nome](/pt-BR/docs/Web/HTML/Element/meta#attr-name) de `referrer`:
+Você também pode colocar política de referência dentro do HTML. Por exemplo, você pode colocar uma política de referência para o documento inteiro com um elemento {{HTMLElement("meta")}} com um [nome](/pt-BR/docs/Web/HTML/Element/meta#name) de `referrer`:
 
 ```html
 <meta name="referrer" content="origin" />
@@ -209,7 +209,7 @@ No cenário acima, `no-referrer` só será usada se `strict-origin-when-cross-or
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Referrer-Policy")}}
+{{Compat}}
 
 > **Nota:** - Da versão 53 em diante, Gecko possui uma preferência disponível em `about:config` para permitir usuários colocarem a `Referrer-Policy` padrão — `network.http.referer.userControlPolicy`.
 >

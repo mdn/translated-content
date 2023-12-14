@@ -634,7 +634,7 @@ HTTP-заголовки сопровождают обмен данными по 
         Supported by Firefox 4, Firefox 5 for mobile, IE9, and a few major
         companies.
       </td>
-      <td>{{SpecName("Tracking")}}</td>
+      <td><a href="https://www.w3.org/TR/tracking-dnt/">Tracking Preference Expression (DNT)</a></td>
     </tr>
     <tr>
       <td>

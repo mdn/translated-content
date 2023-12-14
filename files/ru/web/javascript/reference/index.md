@@ -11,11 +11,11 @@ l10n:
 
 Язык JavaScript предназначен для использования в какой-либо более крупной среде, будь то браузер, серверные скрипты или что-то подобное. По большей части, этот справочник пытается быть независимым от среды и не ориентирован на среду веб-браузера.
 
-Если вы новичок в JavaScript, начните с [этого](/ru-RU/docs/Web/JavaScript/Guide) раздела. Как только вы твердо усвоите основы, вы можете использовать текущий справочник, чтобы получить более подробную информацию об отдельных объектах и языковых конструкциях.
+Если вы новичок в JavaScript, начните с [этого](/ru/docs/Web/JavaScript/Guide) раздела. Как только вы твердо усвоите основы, вы можете использовать текущий справочник, чтобы получить более подробную информацию об отдельных объектах и языковых конструкциях.
 
 ## Встроенные модули
 
-Эта глава описывает все [стандартные встроенные объекты JavaScript](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects) вместе с их методами и свойствами.
+Эта глава описывает все [стандартные встроенные объекты JavaScript](/ru/docs/Web/JavaScript/Reference/Global_Objects) вместе с их методами и свойствами.
 
 ### Значения свойств
 
@@ -181,12 +181,12 @@ l10n:
 
 ## Выражения и операторы
 
-[JavaScript expressions and operators](/ru-RU/docs/Web/JavaScript/Reference/Operators).
+[JavaScript expressions and operators](/ru/docs/Web/JavaScript/Reference/Operators).
 
 ### Основные выражения
 
 - {{JSxRef("Operators/this", "this")}}
-- [Литералы](/ru-RU/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
+- [Литералы](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
 - {{JSxRef("Global_Objects/Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Operators/function", "function")}}
@@ -291,7 +291,7 @@ l10n:
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
 - {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/ru-RU/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 ### Операторы доходности
 
@@ -308,7 +308,7 @@ l10n:
 
 ## Функции
 
-[JavaScript функции.](/ru-RU/docs/Web/JavaScript/Reference/Functions)
+[JavaScript функции.](/ru/docs/Web/JavaScript/Reference/Functions)
 
 - {{JSXRef("Functions/Arrow_functions", "Стрелочные функции", "", 1)}}
 - {{JSxRef("Functions/Default_parameters", "Стандартные параметры", "", 1)}}
@@ -320,21 +320,21 @@ l10n:
 
 ## Классы
 
-[JavaScript классы.](/ru-RU/docs/Web/JavaScript/Reference/Classes)
+[JavaScript классы.](/ru/docs/Web/JavaScript/Reference/Classes)
 
 - {{JSxRef("Classes/Constructor", "constructor")}}
 - {{JSxRef("Classes/extends", "extends")}}
-- [Особенности приватных классов](/ru-RU/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
-- [Поля открытого класса](/ru-RU/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [Особенности приватных классов](/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Поля открытого класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{JSxRef("Classes/static", "static")}}
-- [Статические блоки инициализации](/ru-RU/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- [Статические блоки инициализации](/ru/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
 ## Дополнительные справочные страницы
 
 - {{JSxRef("Lexical_grammar", "Lexical grammar", "", 1)}}
-- [Типы и структуры данных](/ru-RU/docs/Web/JavaScript/Data_structures)
-- [Протоколы итерации](/ru-RU/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [Конечные запятые](/ru-RU/docs/Web/JavaScript/Reference/Trailing_commas)
-- [Ошибки](/ru-RU/docs/Web/JavaScript/Reference/Errors)
+- [Типы и структуры данных](/ru/docs/Web/JavaScript/Data_structures)
+- [Протоколы итерации](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Конечные запятые](/ru/docs/Web/JavaScript/Reference/Trailing_commas)
+- [Ошибки](/ru/docs/Web/JavaScript/Reference/Errors)
 - {{JSxRef("Strict_mode", "Strict mode", "", 1)}}
 - {{JSxRef("Deprecated_and_obsolete_features", "Deprecated features", "", 1)}}

@@ -226,13 +226,13 @@ function notify(message) {
 
 这个示范代码从 Github 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 示例修改而来。
 
-### Connection-based messaging
+### 基于连接的消息传递
 
 如果你将在一个 content script 和 后台脚本间交换大量的消息，一次性消息会变得笨重而缓慢。所以一个更好的方案是在两个脚本间建立一个长久连接，然后使用该连接交换消息。
 
 每个脚本都有一个 [`runtime.Port`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) 对象用以交换消息。
 
-建立过程：:
+建立过程：
 
 - 在一个脚本中使用 [`runtime.onConnect`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) 监听连接
 - 另一个脚本中调用 [`tabs.connect()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (如果连接 content script) or [`runtime.connect()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (如果连接后台脚本). 这会返回一个 [`runtime.Port`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) 对象。

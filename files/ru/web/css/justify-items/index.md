@@ -20,7 +20,7 @@ slug: Web/CSS/justify-items
 ## Синтаксис
 
 ```css
-/* Основные ключевые слова */
+/* Ключевые слова */
 justify-items: auto;
 justify-items: normal;
 justify-items: stretch;
@@ -110,9 +110,7 @@ justify-items: unset;
 
 ## Спецификации
 
-| Спецификация                                                                  | Статус                          | Комментарий                |
-| ----------------------------------------------------------------------------- | ------------------------------- | -------------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-justify-items", "justify-items")}} | {{Spec2("CSS3 Box Alignment")}} | Первоначальное определение |
+{{Specifications}}
 
 {{CSSInfo}}
 

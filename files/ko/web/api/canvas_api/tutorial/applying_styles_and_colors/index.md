@@ -1,11 +1,15 @@
 ---
 title: 스타일과 색 적용하기
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
+l10n:
+  sourceCommit: 6e0d822711793e8672d2ebfeea779890525f7529
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-[도형 그리기](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게됩니다.
+[도형 그리기](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수 있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게 됩니다.
+
+> **참고:** 캔버스 속 내용은 스크린 리더를 사용하는 유저가 접근할 수 없습니다. 만약 캔버스가 순수히 꾸미는 용으로 사용하는 경우, `<canvas>` 시작 태그에 `role="presentation"`을 넣어줘야 합니다. 그렇지 않다면 캔버스 요소에 설명하는 내용을 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 속성의 값으로 넣거나, 캔버스 태그 안에 대체 내용을 넣어야 합니다. 캔버스 속 내용은 DOM의 일부가 아니지만, 중첩 대체 내용은 일부가 될 수 있습니다.
 
 ## 색상
 
@@ -35,16 +39,20 @@ ctx.fillStyle = "rgba(255, 165, 0, 1)";
 
 이 예제에서 `for` 반복문을 두 번 사용하여 사각형 격자를 그릴 것입니다. 결과는 스크린샷과 같을 것입니다. 결과가 그리 대단한 것은 아닙니다. 각 사각형의 RGB 색상값에서 붉은색과 녹색 값만을 변수 `i`와 `j`를 사용하여 변경합니다. 파란색 채널은 고정된 값입니다. 채널 값들을 변경함으로써, 모든 종류의 팔레트를 생성할 수 있습니다. 단계를 늘리면 Photoshop에서 사용하는 색상 팔레트와 비슷한 모양을 얻을 수 있습니다.
 
-<pre class="brush: js;highlight[5,6]">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &#x3C; 6; i++){
-    for (var j = 0; j &#x3C; 6; j++){
-      ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
-                       Math.floor(255 - 42.5 * j) + ', 0)';
-      ctx.fillRect(j*25,i*25,25,25);
-    }
-  }
-}</pre>
+```js
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.fillStyle =
+        "rgb(" +
+        Math.floor(255 - 42.5 * i) +
+        ", " +
+        Math.floor(255 - 42.5 * j) +
+        ", 0)";
+      ctx.fillRect(j * 25, i * 25, 25, 25);
+}
+```
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
@@ -62,18 +70,24 @@ draw();
 
 이번 예제는 위에 나온 예제와 비슷하지만, `strokeStyle` 속성을 사용하여 윤곽선의 색을 바꿉니다. 사각형 대신, 원을 그리는 `arc()` 메소드를 사용합니다.
 
-<pre class="brush: js;highlight[5,6]">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &#x3C; 6; i++) {
-    for (var j = 0; j &#x3C; 6; j++) {
-      ctx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
-                       Math.floor(255 - 42.5 * j) + ')';
+```js
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.strokeStyle =
+        "rgb(0, " +
+        Math.floor(255 - 42.5 * i) +
+        ", " +
+        Math.floor(255 - 42.5 * j) +
+        ")";
       ctx.beginPath();
       ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
       ctx.stroke();
     }
   }
-}</pre>
+}
+```
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
@@ -113,23 +127,23 @@ ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   // 배경을 그린다
-  ctx.fillStyle = '#FD0';
+  ctx.fillStyle = "#FD0";
   ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = '#6C0';
+  ctx.fillStyle = "#6C0";
   ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = '#09F';
+  ctx.fillStyle = "#09F";
   ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = '#F30';
+  ctx.fillStyle = "#F30";
   ctx.fillRect(75, 75, 75, 75);
-  ctx.fillStyle = '#FFF';
+  ctx.fillStyle = "#FFF";
 
   // 투명값을 설정한다
   ctx.globalAlpha = 0.2;
 
   // 반투명한 원을 그린다
-  for (var i = 0; i &#x3C; 7; i++){
+  for (var i = 0; i < 7; i++) {
     ctx.beginPath();
     ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
     ctx.fill();
@@ -153,23 +167,23 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 배경을 그린다
-  ctx.fillStyle = 'rgb(255,221,0)';
-  ctx.fillRect(0,0,150,37.5);
-  ctx.fillStyle = 'rgb(102,204,0)';
-  ctx.fillRect(0,37.5,150,37.5);
-  ctx.fillStyle = 'rgb(0,153,255)';
-  ctx.fillRect(0,75,150,37.5);
-  ctx.fillStyle = 'rgb(255,51,0)';
-  ctx.fillRect(0,112.5,150,37.5);
+  ctx.fillStyle = "rgb(255,221,0)";
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = "rgb(102,204,0)";
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = "rgb(0,153,255)";
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = "rgb(255,51,0)";
+  ctx.fillRect(0, 112.5, 150, 37.5);
 
   // 반투명한 사각형을 그린다
-  for (var i=0;i&#x3C;10;i++){
-    ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
-    for (var j=0;j&#x3C;4;j++){
-      ctx.fillRect(5+i*14,5+j*37.5,14,27.5)
+  for (var i = 0; i < 10; i++) {
+    ctx.fillStyle = "rgba(255,255,255," + (i + 1) / 10 + ")";
+    for (var j = 0; j < 4; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
   }
 }
@@ -216,8 +230,8 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &#x3C; 10; i++){
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 10; i++) {
     ctx.lineWidth = 1 + i;
     ctx.beginPath();
     ctx.moveTo(5 + i * 14, 5);
@@ -270,11 +284,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineCap = ['butt','round','square'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineCap = ["butt", "round", "square"];
 
   // 안내선을 그린다
-  ctx.strokeStyle = '#09f';
+  ctx.strokeStyle = "#09f";
   ctx.beginPath();
   ctx.moveTo(10, 10);
   ctx.lineTo(140, 10);
@@ -283,13 +297,13 @@ function draw() {
   ctx.stroke();
 
   // 선을 그린다
-  ctx.strokeStyle = 'black';
-  for (var i=0;i&#x3C;lineCap.length;i++){
+  ctx.strokeStyle = "black";
+  for (var i = 0; i < lineCap.length; i++) {
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
     ctx.beginPath();
     ctx.moveTo(25 + i * 50, 10);
-    ctx.lineTo(25 + i * 50,140);
+    ctx.lineTo(25 + i * 50, 140);
     ctx.stroke();
   }
 }
@@ -324,10 +338,10 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineJoin = ['round', 'bevel', 'miter'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineJoin = ["round", "bevel", "miter"];
   ctx.lineWidth = 10;
-  for (var i=0;i&#x3C;lineJoin.length;i++){
+  for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
     ctx.beginPath();
     ctx.moveTo(-5, 5 + i * 40);
@@ -370,33 +384,33 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 캔버스를 비운다
-  ctx.clearRect(0,0,150,150);
+  ctx.clearRect(0, 0, 150, 150);
 
   // 안내선을 그린다
-  ctx.strokeStyle = '#09f';
-  ctx.lineWidth   = 2;
-  ctx.strokeRect(-5,50,160,50);
+  ctx.strokeStyle = "#09f";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(-5, 50, 160, 50);
 
   // 선 스타일을 설정한다
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = "#000";
   ctx.lineWidth = 10;
 
   // 입력 값을 검사한다
-  if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
-    ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+    ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
   } else {
-    alert('Value must be a positive number');
+    alert("Value must be a positive number");
   }
 
   // 선을 그린다
   ctx.beginPath();
-  ctx.moveTo(0,100);
-  for (i=0;i&#x3C;24;i++){
-    var dy = i%2==0 ? 25 : -25 ;
-    ctx.lineTo(Math.pow(i,1.5)*2,75+dy);
+  ctx.moveTo(0, 100);
+  for (i = 0; i < 24; i++) {
+    var dy = i % 2 == 0 ? 25 : -25;
+    ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
   ctx.stroke();
   return false;
@@ -591,6 +605,54 @@ draw();
 
 {{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
 
+### `createConicGradient` 예제
+
+이 예제에서는 서로 다른 두개의 원뿔 (conic) 그레이디언트를 정의할 것입니다. 원뿔 그레이디언트는 원을 만드는 원형 그레이디언트와 다르게 점을 기준으로 원을 그립니다.
+
+```js
+function draw() {
+  const ctx = document.getElementById("canvas").getContext("2d");
+
+  // 그레이디언트를 생성한다
+  const conicGrad1 = ctx.createConicGradient(2, 62, 75);
+  conicGrad1.addColorStop(0, "#A7D30C");
+  conicGrad1.addColorStop(1, "#fff");
+
+  const conicGrad2 = ctx.createConicGradient(0, 187, 75);
+  // 도(degree)에서 라디안으로 변환하기 위해 값에 Math.PI/180 를 곱한다
+  conicGrad2.addColorStop(0, "black");
+  conicGrad2.addColorStop(0.25, "black");
+  conicGrad2.addColorStop(0.25, "white");
+  conicGrad2.addColorStop(0.5, "white");
+  conicGrad2.addColorStop(0.5, "black");
+  conicGrad2.addColorStop(0.75, "black");
+  conicGrad2.addColorStop(0.75, "white");
+  conicGrad2.addColorStop(1, "white");
+
+  // 도형을 그린다
+  ctx.fillStyle = conicGrad1;
+  ctx.fillRect(12, 25, 100, 100);
+  ctx.fillStyle = conicGrad2;
+  ctx.fillRect(137, 25, 100, 100);
+}
+```
+
+```html hidden
+<canvas id="canvas" width="250" height="150" role="presentation">
+  원뿔 그레이디언트
+</canvas>
+```
+
+```js hidden
+draw();
+```
+
+첫 번째 그레이디언트는 첫 번째 직사각형의 중앙에 위치하고 시작할 때 녹색 정지점을 끝에서 흰색 정지점으로 이동합니다. 각도는 2 라디안에서 시작하는데, 이는 남동쪽을 가리키는 시작 / 끝선 이기에 눈에 띕니다.
+
+두 번쨰 그레이디언트는 두 번째 사각형의 중앙에 위치합니다. 이 그레이디언트는 회전할 때마다 검은색에서 흰색으로 번갈아 가며 여러 가지 색상을 표현합니다. 이는 체크 효과를 나타나게 됩니다.
+
+{{EmbedLiveSample("A_createConicGradient_example", "180", "180", "canvas_conicgrad.png")}}
+
 ## 패턴(Patterns)
 
 이전 페이지의 예제 중 하나에서 일련의 루프를 사용하여 이미지 패턴을 만들었습니다. 그러나 훨씬 간단한 메소드 인 createPattern () 메소드가 있습니다.
@@ -639,11 +701,11 @@ function draw() {
 }
 ```
 
-```html
+```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-```js
+```js hidden
 draw();
 ```
 
@@ -714,7 +776,7 @@ draw();
 - `evenodd`
   - : [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) 알고리즘.
 
-In this example we are using the `evenodd` rule.
+이 예제에서는 'evenodd' 규칙을 사용합니다.
 
 ```js
 function draw() {

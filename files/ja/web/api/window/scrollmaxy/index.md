@@ -34,4 +34,4 @@ window.scrollTo(0, maxY);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollMaxY")}}
+{{Compat}}

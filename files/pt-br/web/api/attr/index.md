@@ -83,8 +83,6 @@ Os seguintes métodos foram reprovados:
   - : Este método agora sempre retorna false.
 - `insertBefore()`
   - : Modifique o valor de {{domxref("Attr.value")}} no lugar.
-- `isSupported()`
-  - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
 - `isEqualNode()`
   - : Provavelmente você nunca utilizou isto, então você não se importa que isso vai desaparecer.
 - `normalize()`

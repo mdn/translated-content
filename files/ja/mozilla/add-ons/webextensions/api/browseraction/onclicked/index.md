@@ -39,7 +39,7 @@ browser.browserAction.onClicked.hasListener(listener);
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction.onClicked")}}
+{{Compat}}
 
 ## 例
 

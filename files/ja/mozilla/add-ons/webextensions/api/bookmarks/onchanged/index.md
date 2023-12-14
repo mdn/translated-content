@@ -57,7 +57,7 @@ browser.bookmarks.onChanged.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onChanged")}}
+{{Compat}}
 
 ## 使用例
 

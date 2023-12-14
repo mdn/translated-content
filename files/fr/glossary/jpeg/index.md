@@ -3,6 +3,8 @@ title: JPEG
 slug: Glossary/JPEG
 ---
 
+{{GlossarySidebar}}
+
 **JPEG** (_Joint Photographic Experts Group_) est une méthode de compression avec pertes très utilisée pour les images numériques.
 
 ## Pour en savoir plus

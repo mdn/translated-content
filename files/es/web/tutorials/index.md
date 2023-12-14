@@ -1,154 +1,145 @@
 ---
 title: Tutoriales
 slug: Web/Tutorials
+l10n:
+  sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
 
-Los enlaces de esta página llevan a una gran variedad de tutoriales y material de formación. Tanto si estás en tus comienzos, aprendiendo lo básico, como si eres un veterano en desarrollo web, aquí puedes encontrar recursos que te ayuden a lograr mejores prácticas.
+Los enlaces en esta página conducen a una variedad de tutoriales y materiales de capacitación. Ya sea que esté comenzando, aprendiendo los conceptos básicos o sea un experto en desarrollo web, aquí puede encontrar recursos útiles para las mejores prácticas.
 
-Estos recursos son creados por empresas innovadoras y desarrolladores web que han adoptado los estándares abiertos y las mejores prácticas para el desarrollo web proporcionando o permitiendo traducciones mediante licencias de contenido abierto como Creative Commons.
+Estos recursos son creados por empresas y desarrolladores web con visión de futuro que han adoptado estándares abiertos y mejores prácticas para el desarrollo web y que proporcionan o permiten traducciones, a través de una licencia de contenido abierto como Creative Commons.
 
-## Para principiantes completos de la web
+## Para principiantes en la Web
 
-- [Comenzando con la web](/es/docs/Learn/Getting_started_with_the_web)
-  - : _Comenzando con la web_ es una serie introductoria que te presenta los aspectos prácticos del desarrollo web. Podrás configurar las herramientas que necesites para construir una página web sencilla y publicar tu propio código.
+- [Primeros pasos en la Web](/es/docs/Learn/Getting_started_with_the_web)
+  - : _Primeros pasos en la Web_ es una serie concisa que te presenta los aspectos prácticos del desarrollo web. Configurarás las herramientas que necesitas para construir una sencilla página web y publicar tu propio código.
 
-## Tutoriales de HTML
+## Tutoriales HTML
 
 ### Nivel introductorio
 
-- [Introducción a HTML](http://docs.webplatform.org/wiki/guides/the_basics_of_html) (WebPlatform.org)
-  - : Este módulo establece el escenario, haciendo que te sea común el uso de conceptos importantes y sintaxis, buscando cómo aplicar el HTML al texto, cómo crear hiperenlaces y cómo utilizar el HTML para estructurar una página web.
-- [Estructura básica de una página web](http://reference.sitepoint.com/html/page-structure) (SitePoint)
-  - : Aprende cómo los elementos HTML encajan juntos con un enfoque más amplio.
-- [Elementos fundamentales de HTML según MDN](http://reference.sitepoint.com/html/elements) (SitePoint)
-  - : Es una referencia exhaustiva de los elementos HTML y cómo son soportados por los distintos navegadores.
-- [Tutorial de HTML para principiantes](http://htmldog.com/guides/htmlbeginner/) (HTML Dog)
-  - : Tutorial y ejercicios sobre los fundamentos.
-- [Retos HTML](http://wikiversity.org/wiki/Web_Design/HTML_Challenges) (Wikiversity)
-  - : Acepta los retos para mejorar tus conocimientos sobre HTML (por ejemplo, "¿Debería usar un elemento \<h2> o un elemento \<strong>?") y marca las respuestas correctas.
-- [Manual de referencia MDN de elementos HTML](/es/docs/HTML/Element)
-  - : Una amplia referencia de elementos HTML, así como la forma en que Firefox y otros navegadores los soportan.
+- [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML)
+  - : Este módulo prepara el escenario, acostumbrándolo a conceptos y sintaxis importantes, analizando la aplicación de HTML al texto, cómo crear hipervínculos y cómo usar HTML para estructurar una página web.
+- [Referencia de Elementos HTML](/es/docs/Web/HTML/Element)
+  - : Una referencia completa sobre elementos HTML y cómo los implementan los diferentes navegadores.
+- [Crear una página web sencilla con HTML](https://www.theblogstarter.com/html-for-beginners/)
+  - : Una guía HTML para principiantes que incluye explicaciones de etiquetas comunes, incluidas las etiquetas HTML. También incluye una guía paso a paso para crear una página web básica con ejemplos de código.
+- [Desafíos HTML](https://wikiversity.org/wiki/Web_Design/HTML_Challenges)
+  - : Utilice estos desafíos para perfeccionar sus habilidades HTML (por ejemplo, "¿Debería usar un elemento \<h2> o un elemento \<strong>?"), enfocándose en un marcado significativo.
 
 ### Nivel intermedio
 
-- [Incrustamiento y multimedia](/es/docs/Learn/HTML/Multimedia_and_embedding)
-  - : Este módulo explora cómo usar HTML para incluir multimedia en tus páginas web, incluyendo las diferentes formas en las que pueden incluirse imágenes, y cómo incrustar video, audio o incluso otras páginas web completas.
+- [Multimedia e inserción](/es/docs/Learn/HTML/Multimedia_and_embedding)
+  - : Este módulo explora cómo usar HTML para incluir multimedia en sus páginas web, incluidas las diferentes formas en que se pueden incluir imágenes y cómo incrustar video, audio e incluso otras páginas web completas.
 - [Tablas HTML](/es/docs/Learn/HTML/Tables)
-  - : Representar datos tabulares en una forma comprensible puede ser un desafío, {{glossary("Accessibility", "accessible")}}. Este módulo cubre el marcado de una tabla básica, junto con características más complejas, como la implementación de epígrafes y resúmenes.
+  - : Representar datos tabulares en una página web de una manera {{glossary("Accessibility", "accesible")}} y comprensible puede ser un desafío. Este módulo cubre el marcado básico de tablas, junto con funciones más complejas, como la implementación de subtítulos y resúmenes.
 
 ### Nivel avanzado
 
-- [Consejos para crear páginas HTML que carguen rápidamente](/es/docs/Tips_for_Authoring_Fast-loading_HTML_Pages)
-  - : Optimiza las páginas web para que sean adaptables a los visitantes, reduciendo la carga de tu servidor web y de tu conexión a Internet.
-- [Sumérgete en HTML5](http://diveintohtml5.info/) (Mark Pilgrim)
-  - : Aprende de una selección de características de HTML5, la versión más reciente de las especificaciones HTML.
-- [Tutoriales de HTML5](http://www.html5rocks.com/tutorials/) (HTML5 Rocks)
-  - : Haz una visita guiada por código que usa las características de HTML5.
-- [Semántica en HTML5](http://www.alistapart.com/articles/semanticsinhtml5/) (alistapart.com)
-  - : Aprende marcas con significado, extensibles y compatibles con versiones tanto anteriores como posteriores.
-- [Tutorial sobre Canvas](/es/docs/Canvas_tutorial)
-  - : Aprende cómo dibujar gráficos usando líneas de script y el elemento c*anvas*.
-- [HTML5 Doctor](http://html5doctor.com/)
-  - : Artículos sobre cómo usar HTML5 ahora mismo.
-- [La alegría del audio en HTML5](http://www.elated.com/articles/html5-audio/) (Elated)
-  - : Aprende a utilizar el elemento audio en HTML para incluir sonidos en tus páginas web de forma sencilla. Hay montones de códigos de ejemplos incluidos en este tutorial.
+- [Formularios en HTML](/es/docs/Learn/Forms)
+  - : Los formularios son una parte muy importante de la Web: brindan gran parte de la funcionalidad que necesita para interactuar con sitios web, por ejemplo, registrarse e iniciar sesión, enviar comentarios, comprar productos y más. Este módulo lo ayuda a comenzar a crear las partes del lado del cliente de los formularios.
+- [Consejos para la creación de páginas HTML de carga rápida](/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
+  - : Optimice las páginas web para proporcionar un sitio más receptivo para los visitantes y reducir la carga en su servidor web y conexión a Internet.
 
 ## Tutoriales CSS
 
 ### Nivel introductorio
 
-- [Lo básico en CSS](/es/docs/CSS/Getting_Started)
-  - : Este tutorial te introduce en las hojas de estilo (_Cascading Style Sheets_ o _CSS_). Además, te guiará a través de las características básicas de CCS con ejemplos prácticos que podrás probar por ti mismo en tu propio computador.
-- [Introducción a CSS](/es/docs/Learn/CSS/Introduction_to_CSS)
-  - : Este módulo profundiza en el funcionamiento de CSS, incluidos selectores y propiedades, redacción de reglas CSS, aplicación de CSS a HTML, cómo especificar longitud, color y otras unidades en CSS; cascada y herencia; conceptos básicos de caja y depuración de CSS.
-- [Estilizando cajas](/es/docs/Learn/CSS/Styling_boxes)
-  - : A continuación analizamos las cajas de diseño, uno de los pasos fundamentales para diseñar una página web. En este módulo recapitulamos el modelo de caja y luego observamos los diseños de caja de control estableciendo relleno, bordes y márgenes, estableciendo colores de fondo personalizados, imágenes y otras características, y características extravagantes como sombras y filtros en cajas.
-- [Hojas externas de CSS](http://en.wikiversity.org/wiki/Web_Design/External_CSS) (Wikiversity)
-  - : Aquí aprenderás cómo usar CSS en el HTML desde una hoja de estilo externa (en inglés).
-- [Texto con estilo](/es/docs/Learn/CSS/Styling_text)
-  - : En esta sección repasaremos los fundamentos del estilo de texto, que incluyen la configuración de fuente, negrita e itálicas, el espaciado de líneas y letras, sombras paralelas y otras características de texto. Completaremos el módulo observando la aplicación de fuentes personalizadas en tú página y el diseño de listas y enlaces.
+- [CSS básico](/es/docs/Learn/Getting_started_with_the_web/CSS_basics)
+  - : CSS (Hojas de Estilo en Cascada) es el código que usas para dar estilo a tu página web. CSS Básico te lleva a través de lo que tú necesitas para empezar. Contestará a preguntas del tipo: ¿Cómo hago mi texto rojo o negro? ¿Cómo hago que mi contenido se muestre en tal y tal lugar de la pantalla? ¿Cómo decoro mi página web con imágenes de fondo y colores?
+- [Primeros pasos en CSS](/es/docs/Learn/CSS/First_steps)
+  - : CSS (Cascading Style Sheets - en español Hojas de Estilo en Cascadas) es usado para darle estilo y diseño a las páginas Web — por ejemplo, para cambiar la fuente de letra, color, tamaño y el espaciado de tu contenido; dividir en múltiples columnas, o agregar animaciones y otras propiedades decorativas. Este modulo provee un inicio suave para tu ruta de aprendizaje hacia el dominio de CSS con su funcionamiento básico, como luce su sintaxis, y cómo puedes comenzar a utilizarlo y añadir estilo a HTML.
+- [Bloques de construcción CSS](/es/docs/Learn/CSS/Building_blocks)
+
+  - : Este módulo retoma donde [Primeros pasos en CSS](/es/docs/Learn/CSS/First_steps) finalizó — ahora que estás familiarizado con el lenguaje y su sintaxis, y que tienes algo de experiencia en su uso, es hora de bucear un poco más profundo. Este módulo se centra en el estilo en cascada de css y en el concepto de herencia, también veremos todos los tipos de selectores, unidades, tamaños, estilos de fondo, bordes, debugging y mucho más.
+
+    El objetivo aqui es proveerte de herramientas para que puedas escribir código CSS competentemente y ayudarte a entender lo escencial de la teoría antes de centrarnos en disciplinas más específicas como [text styling](/es/docs/Learn/CSS/Styling_text) y [CSS layout](/es/docs/Learn/CSS/CSS_layout).
+
+- [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
+
+  - : Apunte a elementos HTML, incluso según el estado del elemento, con CSS.
+
+- [Especificidad](/es/docs/Web/CSS/Specificity)
+
+  - : Comprender el algoritmo del navegador para determinar qué declaraciones CSS se aplican a un elemento cuando hay declaraciones compitiendo, con un [cuestionario de especificidad](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
+
+- [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
+  - : El objetivo de este artículo es desarrollar la comprensión de algunos de los conceptos fundamentales de CSS (cascada, especificidad y herencia) que controlan cómo se aplica el CSS al HTML y cómo se resuelven los conflictos.
+
+- [Estilo de texto](/es/docs/Learn/CSS/Styling_text)
+  - : Aquí analizamos los fundamentos del estilo del texto, incluida la configuración de fuente, negrita y cursiva, espaciado entre líneas y letras, sombras paralelas y otras características del texto. Completamos el módulo analizando la aplicación de fuentes personalizadas a su página y el estilo de listas y enlaces.
 - [Preguntas frecuentes sobre CSS](/es/docs/Learn/CSS/Howto/CSS_FAQ)
-  - : Preguntas y respuestas frecuentes para principiantes.
+  - : Preguntas y respuestas comunes para principiantes.
 
-### Nivel Intermedio
+### Nivel intermedio
 
-- [Referencia CSS](/es/docs/CSS/CSS_Reference)
-  - : Referencia completa para CCS con ayuda detallada por Firefox y otros navegadores.
-- [Desafíos CSS](http://en.wikiversity.org/wiki/Web_Design/CSS_challenges)(Wikiversity)
-  - : Reta tus habilidades en CCS, con lo que podrás descubrir aquello que necesita mejorar.
-- [Conceptos intermedios CSS](http://www.html.net/tutorials/css/) (HTML.net)
-  - : Agrupación, pseudo-clases y mucho más.
-- [Posicionamiento 101 CSS](http://www.alistapart.com/articles/css-positioning-101/)(alistapart.com)
-  - : Usando posicionamiento con estándares complacientes y tablas de libre disposición.
-- [Mejora progresivamente con CSS](http://www.alistapart.com/articles/progressiveenhancementwithcss/) (alistapart.com)
-  - : Intégrate mejorando progresivamente tus páginas web con CCS.
-- [Cuadrícula fluida](http://www.alistapart.com/articles/fluidgrids/) (alistapart.com)
-  - : Diseño layouts que redimensiona fluidamente con la ventana del navegador, mientras sigue utilizando una cuadrícula tipográfica.
+- [Diseño CSS](/es/docs/Learn/CSS/CSS_layout)
+  - : Llegados a este punto, hemos examinado los fundamentos básicos de CSS: cómo dar estilo al texto y cómo manipular las cajas que incluyen tu contenido. Llegó el momento de explorar cómo colocar tus cajas en el lugar que elijas con respecto a la ventana principal y el resto de cajas. Hemos cubierto ya los prerrequisitos necesarios, así que vamos a sumergirnos en la maquetación CSS, fijándonos en diferentes configuraciones de visualización, métodos de maquetación tradicionales que implican floats y posicionamiento, así como a nuevas herramientas de maquetación en voga, como flexbox.
+- [Referencia CSS](/es/docs/Web/CSS/Reference)
+  - : Referencia completa a CSS, con detalles sobre el soporte de Firefox y otros navegadores.
+- [Rejillas fluidas](https://alistapart.com/article/fluidgrids/)
+  - : Diseñe diseños que cambien de tamaño con fluidez con la ventana del navegador, sin dejar de utilizar una cuadrícula tipográfica.
+- [Desafíos CSS](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges)
+  - : Pon a prueba tus habilidades de CSS y descubre dónde necesitas más práctica.
 
 ### Nivel avanzado
 
-- [CSS3 en menos de 5 minutos](http://addyosmani.com/blog/css3-screencast/) (Addy Osmani)
-  - : Una rápida introducción a algunas de las características fundamentales introducidas en CSS3.
-- [Usando las Transformaciones CSS](/es/docs/CSS/Using_CSS_transforms)
-  - : Aplica rotación, inclinando escalando y traduce usando CCS.
-- [Transiciones CSS](/es/docs/CSS/Transiciones_de_CSS)
-  - : CSS transiciones, parte del proyecto de la especificación CSS3, proporciona un modo para animar los cambios en las propiedades CSS, en lugar de que los cambios surtan efecto al instante.
-- [Entendiendo las Transiciones CSS3](http://www.alistapart.com/articles/understanding-css3-transitions/) (alistapart.com)
-  - : Comienza usando CSS3 por transiciones eligiendo cuidadosamente las situaciones para utilizarlos.
-- [Guia rápida para implementar Web Fonts con @font-face](http://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)
-  - : La función @font-face de CSS3 te permite utilizar tipografías personalizadas en la web de una forma accesible, manipulable y adaptable.
-- [Usando Media Queries](/es/docs/CSS/Media_queries)
-  - : Como realizar páginas web multiscreen con el uso de CSS y su propiedad @media.
-- [Modelo de cajas con Flexbox](/es/docs/Web/Guide/CSS/Cajas_flexibles)
-  - : Permite distribuir el contenido de la web de forma sencilla y adaptable.
+- [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+  - : Aplique rotación, inclinación, escala y traducción usando CSS.
+- [Transiciones de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+  - : Las transiciones CSS proporcionan una forma de animar los cambios en las propiedades CSS, en lugar de que los cambios surtan efecto instantáneamente.
+- [Tutorial Canvas](/es/docs/Web/API/Canvas_API/Tutorial)
+  - : Aprenda a dibujar gráficos mediante secuencias de comandos utilizando el elemento lienzo (_canvas_).
 
 ## Tutoriales de JavaScript
 
 ### Nivel introductorio
 
-- [Codecademy](http://www.codecademy.com/) (Codecademy)
-  - : Codecademy es la forma más fácil de aprender a programar en JavaScript. Es interactivo, divertido y puedes compartir o hacer código con tus amigos.
-- [Comenzar con JavaScript](/es/docs/JavaScript/Getting_Started)
-  - : ¿Qué es JavaScript y cómo puede ayudarte en el desarrollo web?
-- [Programar – Los fundamentos](http://docs.webplatform.org/wiki/concepts/programming/programming_basics) (WebPlatform.org)
-  - : Fundamentos de programación. Los artículos te indican lo que puedes hacer con JavaScript, las mejores prácticas para utilizarlo y mucho más.
-- [Las mejores prácticas en JavaScript](http://dev.opera.com/articles/view/javascript-best-practices/)[](http://docs.webplatform.org/wiki/tutorials/javascript_best_practices)(WebPlatform.org)
-  - : Aprende algunas de las más evidentes (y no tan evidentes) mejores prácticas cuando escribes en JavaScript.
+- [Primeros pasos con JavaScript](/es/docs/Learn/JavaScript/First_steps)
+  - : En nuestro primer módulo de JavaScript, primero respondemos algunas preguntas fundamentales como "¿qué es JavaScript?", "¿cómo se ve?" y "¿qué puede hacer?", antes de pasar avanzar en la guía por tu primera experiencia práctica de escribir JavaScript. Después de eso, explicaremos en detalle algunos bloques de construcción clave, tal como variables, cadenas, números y arreglos.
+- [Elementos básicos de JavaScript](/es/docs/Learn/JavaScript/Building_blocks)
+  - : En este módulo, continuamos nuestra cobertura de todas las características clave de JavaScript, tornando nuestra atención a tipos de código comúnmente encontrados tales como enunciados condicionales, bucles (loops), funciones, y eventos. Ya has visto estas cosas en este curso, pero solo de pasada aquí lo hablaremos mas explícitamente.
+- [Fundamentos de JavaScript](/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+  - : ¿Qué es JavaScript y cómo puede ayudarte?
+- [Codecademy](https://www.codecademy.com/)
+  - : Codecademy es una manera fácil de aprender a codificar JavaScript. Es interactivo y puedes hacerlo con tus amigos.
+- [freeCodeCamp](https://www.freecodecamp.org/learn)
+  - : freeCodeCamp enseña una variedad de lenguajes y _frameworks_ para el desarrollo web. También cuenta con un [foro](https://forum.freecodecamp.org/), una [estación de radio por Internet](https://coderadio.freecodecamp.org) y un [blog](https://www.freecodecamp.org/news).
 
 ### Nivel intermedio
 
-- [Una reintroducción a JavaScript](/es/docs/A_re-introduction_to_JavaScript)
-  - : Resumen del lenguaje de programación JavaScript enfocado a desarrolladores de nivel intermedio.
-- [JavaScript fluído](http://eloquentjavascript.net/contents.html)
-  - : Una guía completa para metodologías JavaScript intermedias y avanzadas.
-- [Fundamentos de patrones de diseño en JavaScript](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) (Addy Osmani)
-  - : Una introducción a las bases del diseño de patrones en JavaScript.
-- [El lenguaje de programación JavaScript](http://www.yuiblog.com/blog/2007/01/24/video-crockford-tjpl/) (YUI Blog)
-  - : Douglas Crockford explora el lenguaje tal y como es hoy en día y cómo llegó a ser así.
-- [Introducción a JavaScript Orientado a Objetos](/es/docs/Introducci%C3%B3n_a_JavaScript_orientado_a_objetos?redirectlocale=en-US&redirectslug=JavaScript%2FIntroduction_to_Object-Oriented_JavaScript)
-  - : Aprende sobre el modelo de objetos en JavaScript.
+- [Introducción a los objetos JavaScript](/es/docs/Learn/JavaScript/Objects)
+  - : En JavaScript, la mayoría de las cosas son objetos, desde características del núcleo de JavaScript como arrays hasta el explorador APIs construído sobre JavaScript. Incluso puedes crear tus propios objetos para encapsular funciones y variables relacionadas dentro de paquetes eficientes que actúan como prácticos contenedores de datos. La naturaleza de JavaScript basada-en-objetos es importante de entender, si quieres avanzar con tu conocimiento del lenguaje, y por ello hemos hecho este módulo para ayudarte. Aquí enseñamos teoría de objetos y sintaxis en detalle, y luego veremos como crear tus propios objetos.
+- [API web del lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs)
+  - : Cuando se escribe JavaScript para sitios web o aplicaciones del lado del cliente, no pasará mucho tiempo antes de que comience a usar APIs ("Application Programming Interfaces"). Estas son interfaces para manipular diferentes aspectos del navegador y el sistema operativo sobre el cuál se esta ejecutando, o incluso datos de otros sitios web o servicios. En este módulo, vamos a aprender que son las APIs y cómo utilizar algunas de las API más comunes que encuentran al momento de desarrollar.
+- [JavaScript elocuente](https://eloquentjavascript.net/)
+  - : Una guía completa de metodologías JavaScript intermedias y avanzadas.
+- [Hablando JavaScript](https://exploringjs.com/es5/)
+  - : Para programadores que quieran aprender JavaScript de forma rápida y adecuada, y para programadores de JavaScript que quieran profundizar sus habilidades y/o buscar temas específicos.
+- [Patrones de diseño esenciales de JavaScript](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+  - : Una introducción a los patrones de diseño esenciales de JavaScript.
+- [JavaScript.info: el tutorial de JavaScript moderno](https://javascript.info/)
+  - : Parte 1: El lenguaje Parte 2: Trabajar con navegadores.
 
 ### Nivel avanzado
 
-- [Aprender JavaScript avanzado](http://ejohn.org/apps/learn/) (John Resig)
-  - : La guía de John Resig para JavaScript avanzado.
-- [Introducción a DOM en JavaScript](http://www.elated.com/articles/javascript-dom-intro/) (Elated)
-  - : ¿Qué es el Modelo de Objeto de Documento (_Document Object Model_) y para qué es útil? Este artículo te dará una buena introducción a esta característica de JavaScript.
-- [Una API inconveniente: la teoría de DOM](http://yuiblog.com/blog/2006/10/20/video-crockford-domtheory/) (YUI Blog)
-  - : Douglas Crockford explica el Modelo de Objeto de Documento (_Document Object Model_).
-- [JavaScript avanzado](http://yuiblog.com/blog/2006/11/27/video-crockford-advjs/) (YUI Blog)
-  - : Douglas Crockford estudia con detenimiento los patrones de código con los que los programadores de JavaScript pueden elegir al escribir sus aplicaciones.
-- [JavaScript Garden](http://bonsaiden.github.com/JavaScript-Garden/)
-  - : Documentación sobre las partes más extravagantes de JavaScript.
-- [¿Qué framework de JavaScript?](http://www.maestrosdelweb.com/editorial/comparacion-frameworks-javascript/) (Maestrosdelweb)
-  - : Consejos para escoger un framework de JavaScript.
-- [Carga de JavaScript sin bloqueos](http://yuiblog.com/blog/2008/07/22/non-blocking-scripts/) (YUI Blog)
-  - : Consejos para mejorar el rendimiento de bajada de páginas que contienen JavaScript.
-- [Guía de JavaScript](/es/docs/JavaScript/Guide)
-  - : Una guía de JavaScript completa y actualizada frecuentemente para todos los niveles de aprendizaje, desde principiante hasta avanzado.
+- [Guía de JavaScript](/es/docs/Web/JavaScript/Guide)
+  - : Una guía completa y actualizada periódicamente de JavaScript para todos los niveles de aprendizaje, desde principiante hasta avanzado.
+- [No conoces JS](https://github.com/getify/You-Dont-Know-JS)
+  - : Una serie de libros que profundizan en los mecanismos centrales del lenguaje JavaScript.
+- [Jardín de JavaScript](https://github.com/BonsaiDen/JavaScript-Garden)
+  - : Documentación de las partes más extravagantes de JavaScript.
+- [Explorando ES6](https://exploringjs.com/es6/)
+  - : Información confiable y detallada sobre ECMAScript 2015.
+- [Patrones de JavaScript](https://shichuan.github.io/javascript-patterns/)
+  - : Una colección de patrones y antipatrones de JavaScript que cubre patrones de funciones, patrones de jQuery, patrones de complementos de jQuery, patrones de diseño, patrones generales, patrones literales y constructores, patrones de creación de objetos, patrones de reutilización de código, DOM.
+- [Cómo funcionan los navegadores](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+  - : Un artículo de investigación detallado que describe diferentes navegadores modernos, sus motores, representación de páginas, etc.
+- [Vídeos de JavaScript](https://github.com/bolshchikov/js-must-watch)
+  - : Una colección de vídeos de JavaScript para ver.
 
 ### Desarrollo de extensiones
 
-**[Extensiones web](/es/Add-ons/WebExtensions)**
-
-Extensiones Web es un sistema de navegación cruzada para desarrollar complementos del buscador. El sistema es en gran medida compatible con la [API (Interfaz de Programación de Aplicaciones)](https://developer.chrome.com/extensions)respaldada por Google Chrome y Opera. En la mayoría de los casos, las extensiones escritas para estos buscadores pueden funcionar en Firefox o Microsoft Edge con [solo algunos cambios](/es/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). La API es compatible también con el [multiprocesador de Firefox](/es/Firefox/Multiprocess_Firefox).
+- [Extensiones del navegador](/es/docs/Mozilla/Add-ons/WebExtensions)
+  - : WebExtensions es un sistema multi-navegador para desarrollar complementos de navegador. En gran medida, el sistema es compatible con la [API de extensiones](https://developer.chrome.com/docs/extensions/reference/) compatible con Google Chrome y Opera. Las extensiones escritas para estos navegadores se ejecutarán en la mayoría de los casos en Firefox o [Microsoft Edge](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) con [solo algunos cambios](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). La API también es totalmente compatible con [multiproceso Firefox](https://wiki.mozilla.org/Firefox/multiprocess).

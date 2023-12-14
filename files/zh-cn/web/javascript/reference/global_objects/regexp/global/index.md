@@ -35,10 +35,13 @@ console.log(regex.global); // true
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("RegExp.prototype.ignoreCase")}}
 - {{jsxref("RegExp.prototype.lastIndex")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
 - {{jsxref("RegExp.prototype.multiline")}}
 - {{jsxref("RegExp.prototype.source")}}
 - {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}

@@ -74,7 +74,7 @@ Object.isExtensible(1);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.isExtensible")}}
+{{Compat}}
 
 ## 関連情報
 

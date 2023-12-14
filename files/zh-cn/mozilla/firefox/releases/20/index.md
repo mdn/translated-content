@@ -42,7 +42,7 @@ Firefox 20 正式版发布于 2013 年 4 月 2 日。
 
 - 移除了 nsIDOMParserJS 接口[Firefox bug 816410](https://bugzil.la/816410).使用[nsIDOMParser](/zh-CN/docs/nsIDOMParser)来代替。
 
-## 相关链接
+## 参见
 
 - [Firefox 20 Aurora Release Notes](http://www.mozilla.org/zh-CN/firefox/20.0a1/nightlynotes/)
 - [Site Compatibility for Firefox 20](/zh-CN/docs/Site_Compatibility_for_Firefox_20)

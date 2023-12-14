@@ -198,7 +198,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 ### Возможное решение
 
-A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones which will enable their invocation through the [`Function.prototype.call`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
+A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones which will enable their invocation through the [`Function.prototype.call`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers

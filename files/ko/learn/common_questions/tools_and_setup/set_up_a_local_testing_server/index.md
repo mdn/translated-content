@@ -82,7 +82,7 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 ## 서버측 언어를 로컬에서 실행하기
 
-파이썬의 `SimpleHTTPServer (python 2.0) http.server (python 3.0)` 모듈은 유용하기는 하나 파이썬이나 PHP 또는 자바스크립트와 같은 언어로 작성된 코드를 실행하지 못합니다. 이런 코드를 처리하기 위해서는 뭔가가 더 필요합니다 — 정확하게 무엇이 필요한지는 실행하고자 하는 서버측 언어가 무엇인지에 따라 다릅니다. 다음에 몇 가지 사례를 소개합니다:
+파이썬의 `SimpleHTTPServer (python 2.0) http.server (python 3.0)` 모듈은 유용하기는 하나 파이썬이나 PHP 또는 JavaScript와 같은 언어로 작성된 코드를 실행하지 못합니다. 이런 코드를 처리하기 위해서는 뭔가가 더 필요합니다 — 정확하게 무엇이 필요한지는 실행하고자 하는 서버측 언어가 무엇인지에 따라 다릅니다. 다음에 몇 가지 사례를 소개합니다:
 
 - 파이썬으로된 서버측 코드를 실행하기 위해서는 파이썬 웹 프레임워크(Python web framework)를 사용할 필요가 있습니다. [Django Web Framework (Python)](/ko/docs/Learn/Server-side/Django)를 읽어보면 Django framework를 이용하는 법을 알 수 있습니다. [Flask](http://flask.pocoo.org/)는 Djang를 대신할 좋은(조금 더 가벼운) 대안이될 수 있습니다. Flask를 실행하기 위해서는 Python/PIP([install Python/PIP](/ko/docs/Learn/Server-side/Django/development_environment#Installing_Python_3))를 설치하고, `pip3 install flask` 명령으로 Flask를 설치해야 합니다. 이 때부터 파이썬 Flask 예제를 실행할 수 있는데, 예를 들어, `python3 python-example.py`명령을 실행하고 브라우저에서 `localhost:5000`으로 이동하면 됩니다.
 - Node.js (JavaScript)라는 서버측 코드를 실행하기 위해서는 기본 node(raw node)나 그 위에 설치되는 프레임워크를 이용해야 합니다. Express가 좋은 선택이될 수 있습니다 — [Express Web Framework (Node.js/JavaScript)](/ko/docs/Learn/Server-side/Express_Nodejs)를 살펴보시기 바랍니다.

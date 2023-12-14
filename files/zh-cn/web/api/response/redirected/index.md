@@ -65,9 +65,9 @@ fetch("awesome-picture.jpg", { redirect: "error" })
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

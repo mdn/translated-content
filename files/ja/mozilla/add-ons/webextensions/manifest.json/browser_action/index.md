@@ -323,4 +323,4 @@ For a simple, but complete, extension that uses a browser action, see the [walkt
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.browser_action", 10)}}
+{{Compat}}

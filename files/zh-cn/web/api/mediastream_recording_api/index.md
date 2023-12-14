@@ -3,7 +3,9 @@ title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
 ---
 
-{{DefaultAPISidebar("MediaStream Recording")}}**MediaStream Recording API** 有时简称为*Media Recording API* 或者 _MediaRecorder API_, 与 [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API) 和 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 密切相关。MediaStream Recording API 使得捕获通过 {{domxref("MediaStream")}} 或者{{domxref("HTMLMediaElement")}} 对象产生的用于分析、加工或者保存到硬盘的数据成为可能。它也非常容易让人们使用。
+{{DefaultAPISidebar("MediaStream Recording")}}
+
+**MediaStream Recording API** 有时简称为 _Media Recording API_ 或者 _MediaRecorder API_，与[媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) 和 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 密切相关。MediaStream Recording API 使得捕获通过 {{domxref("MediaStream")}} 或者{{domxref("HTMLMediaElement")}} 对象产生的用于分析、加工或者保存到硬盘的数据成为可能。它也非常容易让人们使用。
 
 ## 基本概念
 

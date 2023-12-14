@@ -69,7 +69,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: ${{ env.DIFF_DOCUMENTS }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
@@ -113,6 +113,9 @@ jobs:
           echo "${FM_LINT_LOG}" >> $GITHUB_ENV
           echo "${EOF}" >> $GITHUB_ENV
           echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> $GITHUB_ENV
+
+          echo "Running url locale checker"
+          node ./scripts/check-url-locale.js --fix ${files_to_lint}
 
           echo "Running Prettier"
           yarn prettier -w ${files_to_lint}

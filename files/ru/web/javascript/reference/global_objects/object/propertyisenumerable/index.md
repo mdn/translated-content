@@ -96,11 +96,7 @@ o.propertyIsEnumerable("firstMethod"); // вернёт false
 
 ## Спецификации
 
-| Спецификация                                                                                               | Статус             | Комментарии              |
-| ---------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------ |
-| ECMAScript 3-е издание.                                                                                    | Стандарт           | Изначальное определение. |
-| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                            | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ES6')}}   |                          |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

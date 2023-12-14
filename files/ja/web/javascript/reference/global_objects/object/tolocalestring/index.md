@@ -91,7 +91,7 @@ let frNumber = testNumber.toLocaleString("fr");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.toLocaleString")}}
+{{Compat}}
 
 ## 関連情報
 

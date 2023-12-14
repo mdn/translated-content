@@ -1,11 +1,11 @@
 ---
-title: progress event
+title: progress 事件
 slug: Web/API/XMLHttpRequest/progress_event
 ---
 
 {{APIRef}}
 
-**`progress`**事件会在请求接收到数据的时候被周期性触发。
+**`progress`** 事件会在请求接收到数据的时候被周期性触发。
 
 <table class="properties">
   <tbody>
@@ -32,7 +32,7 @@ slug: Web/API/XMLHttpRequest/progress_event
 
 ## 示例
 
-### Live example
+### 在线示例
 
 #### HTML
 
@@ -118,9 +118,9 @@ xhrButtonAbort.addEventListener("click", () => {
 });
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('在线示例', '100%', '150px') }}
 
 ## 规范
 
@@ -130,7 +130,7 @@ xhrButtonAbort.addEventListener("click", () => {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [Monitoring progress](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}、{{domxref("XMLHttpRequest/load_event", "load")}}、{{domxref("XMLHttpRequest/loadend_event", "loadend")}}、{{domxref("XMLHttpRequest/error_event", "error")}}、{{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [监测进度](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#监测进度)

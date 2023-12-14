@@ -79,14 +79,11 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 ## Especificações
 
-| Especificação                                                | Status                  | Comment        |
-| ------------------------------------------------------------ | ----------------------- | -------------- |
-| {{ SpecName('CSS3 Box', '#overflow1', 'overflow') }}         | {{ Spec2('CSS3 Box') }} | Sem alteração. |
-| {{ SpecName('CSS2.1', 'visufx.html#overflow', 'overflow') }} | {{ Spec2('CSS2.1') }}   |                |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.overflow")}}
+{{Compat}}
 
 ## Veja também
 

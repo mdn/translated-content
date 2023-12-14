@@ -93,4 +93,4 @@ That's why the circles have different x positions, but the same stroke value.
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.use")}}
+{{Compat}}

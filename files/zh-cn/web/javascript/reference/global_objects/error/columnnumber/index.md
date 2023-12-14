@@ -25,7 +25,7 @@ console.log(e.columnNumber); // 0
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}

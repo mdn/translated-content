@@ -124,11 +124,11 @@ l10n:
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >。また、 <code>&#x3C;ul></code> 要素の子に少なくとも 1 個
         {{HTMLElement("li")}} 要素を包含する場合は、<a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ"
+          href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
           >知覚可能コンテンツ</a
         >。
       </td>
@@ -148,7 +148,7 @@ l10n:
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>

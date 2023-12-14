@@ -30,13 +30,7 @@ function potentiallyBuggyCode() {
 
 ## Спецификация
 
-| Спецификация                                                             | Статус               | Комментарии                                             |
-| ------------------------------------------------------------------------ | -------------------- | ------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-debugger-statement', 'Debugger statement')}} | {{Spec2('ESDraft')}} |                                                         |
-| {{SpecName('ES6', '#sec-debugger-statement', 'Debugger statement')}}     | {{Spec2('ES6')}}     |                                                         |
-| {{SpecName('ES5.1', '#sec-12.15', 'Debugger statement')}}                | {{Spec2('ES5.1')}}   | Исходное определение                                    |
-| {{SpecName('ES3', '#sec-7.5.3', 'Debugger statement')}}                  | {{Spec2('ES3')}}     |                                                         |
-| {{SpecName('ES1', '#sec-7.4.3', 'Debugger statement')}}                  | {{Spec2('ES1')}}     | Упоминается только в качестве зарезервированного слова. |
+{{Specifications}}
 
 ## Поддержка браузеров
 

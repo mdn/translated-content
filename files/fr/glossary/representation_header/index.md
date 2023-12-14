@@ -5,6 +5,8 @@ l10n:
   sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
 ---
 
+{{GlossarySidebar}}
+
 Un **en-tête de représentation** est un [en-tête HTTP](/fr/docs/Glossary/HTTP_header) qui décrit la _représentation_ particulière de la ressource envoyée dans un corps de message HTTP.
 
 Les représentations sont différentes formes d'une ressource particulière.

@@ -25,9 +25,7 @@ a=rtpmap:32 MPV/90000
 
 SDP 协议从不会被单独使用，而是依靠 {{Glossary("RTP")}} 和{{Glossary("RTSP")}}等协议.SDP 也作为{{Glossary("WebRTC")}}的组件之一，用于描述一个 session 会话。
 
-## 了解更多
-
-### General knowledge
+## 参见
 
 - [WebRTC protocols](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
 - [Session Description Protocol](https://zh.wikipedia.org/wiki/Session_Description_Protocol) on Wikipedia

@@ -66,10 +66,7 @@ slug: Web/SVG/Element/radialGradient
 
 ## Характеристики
 
-| Спецификация                                                                      | Статус              | Коммент               |
-| --------------------------------------------------------------------------------- | ------------------- | --------------------- |
-| {{SpecName('SVG2', 'pservers.html#RadialGradients', '&lt;radialGradient&gt;')}}   | {{Spec2('SVG2')}}   | Добавлен атрибут `fr` |
-| {{SpecName('SVG1.1', 'pservers.html#RadialGradients', '&lt;radialGradient&gt;')}} | {{Spec2('SVG1.1')}} | Начальное определение |
+{{Specifications}}
 
 ## Совместимость с браузером
 

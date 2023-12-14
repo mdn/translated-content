@@ -48,7 +48,7 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.devicemotion_event")}}
+{{Compat}}
 
 ## 関連情報
 

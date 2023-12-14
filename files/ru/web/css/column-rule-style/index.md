@@ -24,7 +24,7 @@ column-rule-style: ridge;
 column-rule-style: inset;
 column-rule-style: outset;
 
-/* глобальные значения */
+/* Глобальные значения */
 column-rule-style: inherit;
 column-rule-style: initial;
 column-rule-style: unset;

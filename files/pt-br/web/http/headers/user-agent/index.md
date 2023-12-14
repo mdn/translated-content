@@ -126,7 +126,7 @@ Googlebot/2.1 (+http://www.google.com/bot.html)
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.User-Agent")}}
+{{Compat}}
 
 ## Veja também
 

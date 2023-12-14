@@ -251,7 +251,7 @@ barcodeDetector
 
 ## ブラウザーの互換性
 
-{{Compat("api.BarcodeDetector")}}
+{{Compat}}
 
 ## 関連情報
 

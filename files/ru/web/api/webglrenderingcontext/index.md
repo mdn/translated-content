@@ -54,11 +54,8 @@ var gl = canvas.getContext("webgl");
   - : Устанавливает параметры смешивания источника и назначения
 - {{domxref("WebGLRenderingContext.blendEquation()")}}
   - : Уравнение смешивания RGB и уравнение альфа-смешивания сводит к одному уравнению.
-
-**{{domxref("WebGLRenderingContext.blendEquationSeparate()")}}**
-
-Устанавливает уравнение смешивания RGB и уравнение alpha смешивания отдельно.
-
+- {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}
+  - : Устанавливает уравнение смешивания RGB и уравнение альфа-смешивания отдельно.
 - {{domxref("WebGLRenderingContext.blendFunc()")}}
   - : Определяет, какая арифметическая функция используется для смешивания пикселей.
 - {{domxref("WebGLRenderingContext.blendFuncSeparate()")}}

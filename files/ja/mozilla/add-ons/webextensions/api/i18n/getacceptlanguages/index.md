@@ -25,7 +25,7 @@ var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.getAcceptLanguages")}}
+{{Compat}}
 
 ## 例
 

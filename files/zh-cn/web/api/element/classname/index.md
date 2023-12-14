@@ -42,6 +42,6 @@ if (elm.className == "fixed") {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("element.classList")}}

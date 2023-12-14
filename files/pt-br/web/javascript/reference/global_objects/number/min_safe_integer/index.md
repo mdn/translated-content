@@ -28,13 +28,11 @@ Number.MIN_SAFE_INTEGER; // -9007199254740991
 
 ## Especificações
 
-| Especificação                                                                      |
-| ---------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}
+{{Compat}}
 
 ## Veja também
 

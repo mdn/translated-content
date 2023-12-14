@@ -80,7 +80,7 @@ slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 ## 参见
 
 - [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)模块
-- [用 CSS 滚动吸附明确控制滚动](https://web.dev/css-scroll-snap/)（载于 web.dev，2021 年）
+- [用 CSS 滚动吸附明确控制滚动](https://web.dev/articles/css-scroll-snap)（载于 web.dev，2021 年）
 - [实用 CSS 滚动吸附](https://css-tricks.com/practical-css-scroll-snapping/)（载于 CSS-Tricks，2020 年）
 - [CSS 滚动吸附](https://12daysofweb.dev/2022/css-scroll-snap/)（载于 12 Days of Web，2019 年）
 - [滚动吸附示例](https://codepen.io/collection/KpqBGW)（载于 Codepen）

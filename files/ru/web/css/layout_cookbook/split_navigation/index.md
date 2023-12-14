@@ -33,7 +33,7 @@ The various layout methods have different browser support. See the charts below 
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Смотрите также
 

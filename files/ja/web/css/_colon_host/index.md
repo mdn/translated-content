@@ -16,6 +16,8 @@ slug: Web/CSS/:host
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host.html", "tabbed-shorter")}}
+
 ## 構文
 
 ```
@@ -68,6 +70,6 @@ style.textContent =
 
 ## 関連情報
 
-- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
+- [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
 - {{cssxref(":host()")}}
 - {{cssxref(":host-context()")}}

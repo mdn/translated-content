@@ -32,7 +32,7 @@ let gettingItem = browser.storage.<storageType>.get(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageArea.get")}}
+{{Compat}}
 
 ## 例
 

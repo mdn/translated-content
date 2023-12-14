@@ -43,8 +43,6 @@ public static void main(String[] args)
 - 该方法的名称为 `main`。
 - 该方法接受一个类型为 String Array 的参数。它的名是 `args`。
 
-## 了解更多
-
-### `基本知识`
+## 参见
 
 - [Java 内部类型签名](https://zh.wikipedia.org/wiki/Type_signature#Java) 在维基百科上

@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 69df5ac5749504dee7b92d825e913c1a9d0956f1
 ---
 
+{{GlossarySidebar}}
+
 L'_abstraction_ dans le domaine de la [programmation informatique](/fr/docs/Glossary/Computer_programming) permet de réduire la complexité et d'obtenir une conception et une implémentation plus efficaces dans les systèmes logiciels complexes. Elle dissimule les complexités techniques des systèmes derrière des [API](/fr/docs/Glossary/API) plus simples à manipuler.
 
 ## Avantages de l'abstraction de données

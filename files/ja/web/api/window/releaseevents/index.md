@@ -33,4 +33,4 @@ window.releaseEvents(Event.KEYPRESS);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.releaseEvents")}}
+{{Compat}}

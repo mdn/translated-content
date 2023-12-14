@@ -2,7 +2,7 @@
 title: <input type="color">
 slug: Web/HTML/Element/input/color
 l10n:
-  sourceCommit: 7594b50698a76ce79209b159835e615052915723
+  sourceCommit: 1995a9dbe407d9ee41c3b1b50f29e020a85e456a
 ---
 
 {{HTMLSidebar}}
@@ -15,49 +15,9 @@ CSS の色表現には他にも色名、関数表記、アルファ値つきの 
 
 {{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
-      <td>
-        小文字の 16 進数で {{cssxref("&lt;color&gt;")}} を定義する
-         7 文字の文字列
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応する共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> および
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>list</code> および <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## 値
 
-type が `color` の {{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) は、常に 16 進表記で RGB カラーを特定する 7 文字の文字列になります。入力欄には色を大文字でも小文字でも入力することができ、大文字を指定した場合、小文字に変換して格納されます。これ以外の値や、空の値になることはありません。
+{{HTMLElement("input")}} 要素で型が `color` のものの [`value`](/ja/docs/Web/HTML/Element/input#value) は、常に 16 進表記で RGB カラーを特定する 7 文字の文字列になります。入力欄には色を大文字でも小文字でも入力することができ、大文字を指定した場合、小文字に変換して格納されます。これ以外の値や、空の値になることはありません。
 
 > **メモ:** 有効な、不透明な *16 進表現*の RGB カラーではない値を設定した場合は、結果的に `#000000` に設定されます。特に、CSS で標準化されている色名や、CSS 関数を値の設定に使用することはできません。HTML と CSS は別な言語や仕様であることを考慮していただければお分かりでしょう。加えて、アルファチャネルのある色はサポートされていません。`#009900aa` のような 9 文字の 16 進表記で色を設定すると、結果的に `#000000` に設定されます。
 
@@ -67,7 +27,7 @@ type が `color` の入力欄は、対応する属性の数が限られている
 
 ### 既定の色の設定
 
-上記の例で既定値を設定するように変更すると、色の部分があらかじめ既定色で塗りつぶされ、カラーピッカーも（もしあれば）その色が既定になります。
+上記の例で既定値を設定するように変更すると、カラーピッカーがあらかじめ既定色で塗りつぶされ、カラーピッカーも（もしあれば）その色が既定になります。
 
 ```html
 <input type="color" value="#ff0000" />
@@ -101,7 +61,7 @@ function watchColorPicker(event) {
 ブラウザーがカラーピッカーなどを提供している場合、`select()` は何もしません。いずれの状況でもコードが動作するように気をつける必要があります。
 
 ```js
-colorWell.select();
+colorPicker.select();
 ```
 
 ## 検証
@@ -114,13 +74,13 @@ colorWell.select();
 
 ### HTML
 
-HTMLはかなり単純です。数段落の説明的な素材と、 ID が `colorWell` で `color` 型の {{HTMLElement("input")}} があり、これを使用して段落のテキストの色を変更することになります。
+HTMLはかなり単純です。数段落の説明的な素材と、 ID が `color-picker` で `color` 型の {{HTMLElement("input")}} があり、これを使用して段落のテキストの色を変更することになります。
 
 ```html
 <p><code>&lt;input type="color"&gt;</code> コントロールを使用する例です。</p>
 
-<label for="colorWell">色:</label>
-<input type="color" value="#ff0000" id="colorWell" />
+<label for="color-picker">色:</label>
+<input type="color" value="#ff0000" id="color-picker" />
 
 <p>
   カラーピッカーを動かしたときに段落の色が変わるのを見てください。カラーピッカーに変更を加えると、最初の段落の色が、プレビューとして変化します（<code
@@ -136,7 +96,7 @@ HTMLはかなり単純です。数段落の説明的な素材と、 ID が `colo
 まずはいくつかの設定を行います。いくつかの変数を作成し、変数の値をページが最初に読み込まれたとき設定する色にし、ページが完全に読み込まれた時に一度スタートアップ作業を実行させるために {{domxref("Window/load_event", "load")}} ハンドラーを設定します。
 
 ```js
-let colorWell;
+let colorPicker;
 const defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
@@ -148,19 +108,19 @@ window.addEventListener("load", startup, false);
 
 ```js
 function startup() {
-  colorWell = document.querySelector("#colorWell");
-  colorWell.value = defaultColor;
-  colorWell.addEventListener("input", updateFirst, false);
-  colorWell.addEventListener("change", updateAll, false);
-  colorWell.select();
+  colorPicker = document.querySelector("#color-picker");
+  colorPicker.value = defaultColor;
+  colorPicker.addEventListener("input", updateFirst, false);
+  colorPicker.addEventListener("change", updateAll, false);
+  colorPicker.select();
 }
 ```
 
-`colorWell` に取得された `<input>` 要素を格納し、value プロパティに `defaultColor` を代入します。次に、{{domxref("HTMLElement/input_event", "input")}} イベントに `updateFirst()` 関数を、{{domxref("HTMLElement/change_event", "change")}} イベントに `updateAll()` 関数を指定します。これらについては後述します。
+これは color の `<input>` 要素の参照を取得して `colorPicker` という変数に格納し、色入力欄の値を `defaultColor` を設定します。次に、{{domxref("HTMLElement/input_event", "input")}} イベントに `updateFirst()` 関数を、{{domxref("HTMLElement/change_event", "change")}} イベントに `updateAll()` 関数を指定します。これらについては後述します。
 
 最後に {{domxref("HTMLInputElement.select", "select()")}} を呼び出し、色入力のテキストコンテンツを選択します。これはカラーピッカーが提供されていないなどで、テキスト入力欄として表示された場合に利用します。
 
-#### 色の変更に反応させる
+#### 色の変更に応答させる
 
 色の変更に反応する 2 つの関数を与えています。`updateFirst()` 関数は `input` イベントによって呼び出され、文書の最初にある段落要素の色を変えて、入力欄の新しい値と一致させます。 `input` イベントは値を調整する（例えば明るさを増加させるなど）たびに実行されるため、カラーピッカーが使用される毎に繰り返して実行されます。
 
@@ -190,6 +150,51 @@ function updateAll(event) {
 最終的な結果は次のようになります。
 
 {{EmbedLiveSample("Example", 700, 200)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">値</a></strong></td>
+      <td>
+        小文字の 16 進数で {{cssxref("&lt;color&gt;")}} を定義する 7 文字の文字列
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応する共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> および
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>list</code> および <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

@@ -30,7 +30,7 @@ Firefox の場合、ユーザーは `"about:preferences"` の "Sync 設定" オ�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.sync")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

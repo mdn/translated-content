@@ -20,4 +20,4 @@ var syncReg = SyncEvent.registration
 
 ## ブラウザー実装状況
 
-{{Compat("api.SyncEvent.registration")}}
+{{Compat}}

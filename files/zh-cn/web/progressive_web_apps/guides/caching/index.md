@@ -208,4 +208,4 @@ PWA 应该在 service worker 的 {{domxref("ServiceWorkerGlobalScope.activate_ev
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - [存储配额和驱逐标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
 - developer.chrome.com 上的 [service worker 缓存策略](https://developer.chrome.com/docs/workbox/caching-strategies-overview/)（2021）
-- web.dev 上的[离线应用程序开发指南](https://web.dev/offline-cookbook/)（2020）
+- web.dev 上的[离线应用程序开发指南](https://web.dev/articles/offline-cookbook)（2020）

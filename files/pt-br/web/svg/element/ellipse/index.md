@@ -43,7 +43,7 @@ Este elemento implementa a interface do [`SVGEllipseElement`](/pt-BR/DOM/SVGElli
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.ellipse")}}
+{{Compat}}
 
 ## Veja também
 

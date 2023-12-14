@@ -2,6 +2,7 @@
 _githistory.json
 .DS_Store
 .idea
+.vscode
 mdn/content
 yarn-debug.log*
 yarn-error.log*

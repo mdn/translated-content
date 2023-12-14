@@ -55,4 +55,3 @@ history.go(2); // 弹出 "location: http://example.com/example.html?page=3, stat
 
 - {{domxref("window.history")}}
 - [Manipulating the browser history](/zh-CN/docs/Web/API/History_API)
-- [Ajax 导航示例](/zh-CN/docs/Web/API/History_API/Example)

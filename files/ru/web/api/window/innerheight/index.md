@@ -50,7 +50,7 @@ To get the outer height of a window, i.e. the height of the whole browser window
 
 На следующем рисунке показана разница между externalHeight и innerHeight.
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+![Иллюстрация работы innerHeight и outerHeight](firefoxinnervsouterheight2.png)
 
 ## Спецификации
 

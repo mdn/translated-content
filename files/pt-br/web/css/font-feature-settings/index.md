@@ -96,13 +96,11 @@ td.tabular {
 
 ## Especificações
 
-| Especificacão                                                                         | Estado                  | Comment            |
-| ------------------------------------------------------------------------------------- | ----------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#propdef-font-feature-settings', 'font-feature-settings')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.font-feature-settings")}}
+{{Compat}}
 
 ## Veja Também
 

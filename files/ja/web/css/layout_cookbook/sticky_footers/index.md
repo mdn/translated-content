@@ -44,20 +44,20 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 #### grid-template-rows
 
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 #### flex-direction
 
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 #### flex-grow
 
-{{Compat("css.properties.flex-grow")}}
+{{Compat}}
 
 #### flex-shrink
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## MDN の関連資料
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

@@ -60,15 +60,11 @@ while ((i = nomes.shift()) !== undefined) {
 
 ## Especificações
 
-| Especificação                                                              | Estado             | Comentário                                             |
-| -------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
-| ECMAScript 3rd Edition                                                     | Standard           | Implementação inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}            | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}} | {{Spec2('ES6')}}   |                                                        |
+{{Specifications}}
 
 ## Compatibilidade de Browser
 
-{{Compat("javascript.builtins.Array.shift")}}
+{{Compat}}
 
 ## Veja também
 

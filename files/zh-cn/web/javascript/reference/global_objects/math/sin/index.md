@@ -45,7 +45,7 @@ Math.sin(Math.PI / 2); // 1
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.acos()")}}
 - {{jsxref("Math.asin()")}}

@@ -16,7 +16,7 @@ WebRTC 主要由以下几个部分组成：
 - [`RTCDataChannel`](/zh-CN/docs/Web/API/RTCDataChannel)
   - : 用于设置两个浏览器之间的{{Glossary("P2P", "端到端")}} 数据连接。
 
-## 了解更多
+## 参见
 
 - [WebRTC](https://zh.wikipedia.org/wiki/WebRTC) on Wikipedia
 - [Guide to WebRTC on MDN](/zh-CN/docs/Web/API/WebRTC_API)

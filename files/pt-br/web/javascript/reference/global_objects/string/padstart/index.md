@@ -64,14 +64,11 @@ if (!String.prototype.padStart) {
 
 ## Especificações
 
-| Especificação                                                                          | Status               | Comentário                               |
-| -------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.padstart', 'String.prototype.padStart')}} | {{Spec2('ESDraft')}} | Implementação inical no ECMAScript 2017. |
-| {{SpecName('ES8', '#sec-string.prototype.padstart', 'String.prototype.padStart')}}     | {{Spec2('ES8')}}     |                                          |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.padStart")}}
+{{Compat}}
 
 ## Veja também
 

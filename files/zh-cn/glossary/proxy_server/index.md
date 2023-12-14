@@ -12,7 +12,7 @@ slug: Glossary/Proxy_server
 - **正向代理** 指处理到互联网的请求的代理
 - **反向代理** 指处理互联网上的请求并转发到服务器的代理
 
-## 更多资料
+## 参见
 
 - [Proxy servers and tunneling](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling)
 - [Proxy server](https://en.wikipedia.org/wiki/Proxy_server) on Wikipedia

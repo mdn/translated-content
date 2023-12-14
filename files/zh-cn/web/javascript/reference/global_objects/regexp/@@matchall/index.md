@@ -78,7 +78,7 @@ console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{JSxRef("String.prototype.matchAll()")}}
 - {{JSxRef("Symbol.matchAll")}}

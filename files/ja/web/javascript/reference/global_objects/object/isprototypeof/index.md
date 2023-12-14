@@ -73,7 +73,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.isPrototypeOf")}}
+{{Compat}}
 
 ## 関連情報
 

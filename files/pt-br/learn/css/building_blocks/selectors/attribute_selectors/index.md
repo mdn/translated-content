@@ -1,5 +1,5 @@
 ---
-title: Attribute selectors
+title: Seletores de atributo
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 ---
 
@@ -10,26 +10,26 @@ Como você sabe de seu estudo de HTML, os elementos podem ter atributos que forn
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">Pré-requisitos:</th>
       <td>
-        Basic computer literacy,
+        Conhecimentos básicos em informática,
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
-        >, basic knowledge of
+          href="/pt-BR/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >software básico instalado</a
+        >, conhecimentos básicos de
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >working with files</a
-        >, HTML basics (study
+          href="/pt-BR/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >trabalhando com arquivos</a
+        >, Basico de HTML (Estude
         <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), and an idea of how CSS works (study
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+          >Introdução para o HTML</a
+        >), e uma ideia de como CSS funciona (Estude
+        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS primeiros paços</a>.)
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To learn what attribute selectors are and how to use them.</td>
+      <th scope="row">Objetivo:</th>
+      <td>Entender o que são seletores de atributo e como usa-los.</td>
     </tr>
   </tbody>
 </table>
@@ -38,7 +38,7 @@ Como você sabe de seu estudo de HTML, os elementos podem ter atributos que forn
 
 Esses seletores permitem a seleção de um elemento com base na presença de um atributo sozinho (por exemplo, href) ou em várias correspondências diferentes com o valor do atributo.
 
-| Selector         | Example                         | Description                                                                                                                                 |
+| Seletor          | Exemplo                         | Descrição                                                                                                                                   |
 | ---------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `[attr]`         | `a[title]`                      | Corresponde a elementos com um atributo attr (cujo nome é o valor entre colchetes).                                                         |
 | `[attr=value]`   | `a[href="https://example.com"]` | Corresponde a elementos com um atributo attr cujo valor é exatamente value - a string entre aspas.                                          |
@@ -57,7 +57,7 @@ No exemplo abaixo você pode ver esses seletores sendo usados.
 
 Esses seletores permitem uma correspondência mais avançada de substrings dentro do valor do seu atributo. Por exemplo, se você tivesse classes de `box-warning` e `box-error` e quisesse combinar tudo que começou com a string "box-", você poderia usar `[class^="box-"]` para selecionar os dois (ou `[class|="box"]` como descrito abaixo).
 
-| Selector        | Example             | Description                                                                                                      |
+| Seletor         | Exemplo             | Descrição                                                                                                        |
 | --------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `[attr^=value]` | `li[class^="box-"]` | Corresponde a elementos com um atributo attr (cujo nome é o valor entre colchetes), cujo valor começa com valor. |
 | `[attr$=value]` | `li[class$="-box"]` | Corresponde a elementos com um atributo attr cujo valor termina com valor.                                       |
@@ -73,7 +73,7 @@ O próximo exemplo mostra o uso desses seletores:
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 800)}}
 
-## Case-sensitivity
+## Sensibilidade à maiúsculas
 
 Se você deseja combinar valores de atributo sem distinção entre maiúsculas e minúsculas, você pode usar o valor i antes do colchete de fechamento. Este sinalizador informa ao navegador para corresponder caracteres ASCII sem distinção entre maiúsculas e minúsculas. Sem o sinalizador, os valores serão correspondidos de acordo com a distinção entre maiúsculas e minúsculas do idioma do documento - no caso do HTML, será sensível a maiúsculas e minúsculas.
 

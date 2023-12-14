@@ -86,10 +86,7 @@ TypeError: "foo" is not an object  // код ES5
 
 ## Спецификации
 
-| Спецификация                                                                                   | Статус             | Комментарии                                              |
-| ---------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}                      | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}} | {{Spec2('ES6')}}   |                                                          |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

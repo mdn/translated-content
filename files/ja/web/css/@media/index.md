@@ -9,6 +9,8 @@ slug: Web/CSS/@media
 
 > **メモ:** JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
 
+{{EmbedInteractiveExample("pages/tabbed/at-rule-media.html", "tabbed-standard")}}
+
 ## 構文
 
 `@media` アットルールは、コードの最上位に配置したり、他の[条件付きグループアットルール](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中に入れ子にして配置したりすることができます。

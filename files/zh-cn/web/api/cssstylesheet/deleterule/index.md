@@ -25,7 +25,7 @@ stylesheet.deleteRule(index)
  myStyles.deleteRule(0);
 ```
 
-## 相关链接
+### 参见
 
 - [insertRule](/zh-CN/DOM/CSSStyleSheet/insertRule)
 

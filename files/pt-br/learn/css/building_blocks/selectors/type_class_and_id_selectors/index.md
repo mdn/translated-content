@@ -10,7 +10,7 @@ Nesta lição, vamos analisar alguns dos seletores simples, o qual provavelmente
 <table>
   <tbody>
     <tr>
-      <th scope="row">Pré-requistos:</th>
+      <th scope="row">Pré-requisitos:</th>
       <td>Familiaridade básica com uso de computadores,
         <a
           href="/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software"

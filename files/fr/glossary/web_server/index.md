@@ -3,6 +3,8 @@ title: Serveur Web
 slug: Glossary/Web_server
 ---
 
+{{GlossarySidebar}}
+
 Un serveur Web est un logiciel qui s'exécute souvent sur un serveur matériel offrant un service à un utilisateur, généralement appelé client. Un serveur, par contre, est un matériel qui vit dans une pièce remplie d'ordinateurs, communément appelée centre de données.
 
 ## Voir aussi

@@ -5,4 +5,6 @@ l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
+{{GlossarySidebar}}
+
 **Table Grid Box** はキャプションを除く表内のすべてのブロックレベルボックスです。キャプションを含むボックスは [Table Wrapper Box](/ja/docs/Glossary/Table_Wrapper_Box) と呼ばれます。

@@ -41,4 +41,4 @@ if (window.fullScreen) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.fullScreen")}}
+{{Compat}}

@@ -82,7 +82,7 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{DOMxRef("document.createElement()")}}
 - {{DOMxRef("document.createTextNode()")}}

@@ -61,7 +61,7 @@ var y =
 
 ## ブラウザー実装状況
 
-{{Compat("api.Window.scrollX")}}
+{{Compat}}
 
 ## 関連情報
 

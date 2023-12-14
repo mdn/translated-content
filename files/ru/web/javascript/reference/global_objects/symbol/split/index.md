@@ -13,10 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 ## Specifications
 
-| Specification                                                | Status               | Comment             |
-| ------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-symbol.split', 'Symbol.split')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

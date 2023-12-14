@@ -92,6 +92,5 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 ## 参见
 
-- [渲染阻塞 CSS](https://web.dev/critical-rendering-path-render-blocking-css/)
-- [加载和渲染优化](https://web.dev/fast/#optimize-webfonts)
-- [懒加载图片和视频](https://web.dev/fast/#lazy-load-images-and-video)
+- [渲染阻塞 CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
+- [使用延迟加载来提高加载速度](https://web.dev/articles/lazy-loading)

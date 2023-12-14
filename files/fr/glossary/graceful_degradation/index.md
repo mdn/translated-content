@@ -3,6 +3,8 @@ title: Dégradation gracieuse
 slug: Glossary/Graceful_degradation
 ---
 
+{{GlossarySidebar}}
+
 **La dégradation gracieuse** est une philosophie de conception centrée sur la création d'un site / application web moderne qui fonctionnera dans les navigateurs les plus récents, mais qui sera remplacé par un contenu et une fonctionnalité essentiels dans les anciens navigateurs, même moins performant.
 
 [Les Polyfills](/fr/docs/Glossaire/Polyfill) peuvent être utilisés pour intégrer des fonctionnalités manquantes avec JavaScript, mais des alternatives acceptables à des fonctionnalités telles que le style et la mise en page doivent être fournies si possible, par exemple en utilisant la cascade CSS ou le comportement de repli HTML. Quelques bons exemples peuvent être trouvés dans [Traitement des problèmes HTML et CSS courants](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS).

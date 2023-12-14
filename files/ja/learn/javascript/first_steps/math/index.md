@@ -165,7 +165,7 @@ num2 + num1 / 8 + 2;
 
 実際に実行し、結果を見てみてください。
 
-> **メモ:** JavaScript の演算子とその優先順位については[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#演算子の優先順位)で確認することができます。
+> **メモ:** JavaScript の演算子とその優先順位については[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#演算子の優先順位)で確認することができます。
 
 ## インクリメント演算子とデクリメント演算子
 
@@ -235,7 +235,7 @@ let y = 4; // y には 4 が入る
 x *= y; // x は 12 になる
 ```
 
-> **メモ:** もっとたくさんの[代入演算子があります](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)が、とりあえず今は基本的なものだけ知っておけばよいでしょう。
+> **メモ:** もっとたくさんの[代入演算子があります](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)が、とりあえず今は基本的なものだけ知っておけばよいでしょう。
 
 ## アクティブラーニング: Canvas のボックスのサイズを変更する
 
@@ -320,6 +320,6 @@ function updateBtn() {
 
 次の章では文字列と、文字列を JavaScript で操作する方法について見ていきます。
 
-> **メモ:** もし数学が好きで、JavaScript にどう実装されているかをもっと知りたいのであれば、MDN の JavaScript のメインの章に詳細がたくさん載っています。まずは[数値と日付](/ja/docs/Web/JavaScript/Guide/Numbers_and_dates)や[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)辺りの記事から読むのがいいでしょう。
+> **メモ:** もし数学が好きで、JavaScript にどう実装されているかをもっと知りたいのであれば、MDN の JavaScript のメインの章に詳細がたくさん載っています。まずは[数値と日付](/ja/docs/Web/JavaScript/Guide/Numbers_and_dates)や[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)辺りの記事から読むのがいいでしょう。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

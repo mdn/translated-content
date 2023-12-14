@@ -3,6 +3,8 @@ title: Dominant
 slug: Glossary/Dominator
 ---
 
+{{GlossarySidebar}}
+
 En théorie des graphes, le nœud A domine le nœud B si tous les chemins du nœud racine vers B passent par A.
 
 Ce concept est important pour le "{{Glossary("garbage collection","ramasse-miettes")}}" (ou récupérateur de mémoire) car cela signifie que B n'est accessible que par A. Ainsi, si le ramasse-miettes trouve A inaccessible et éligible à la récupération, alors B sera également inaccessible et éligible à la récupération. Donc, les objets que A domine contribuent à la taille retenue de A : c'est-à-dire la quantité totale de mémoire qui pourrait être libérée si A lui-même était libéré.

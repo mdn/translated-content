@@ -3,6 +3,8 @@ title: Asíncrono
 slug: Glossary/Asynchronous
 ---
 
+{{GlossarySidebar}}
+
 El término **asíncrono** se refiere al concepto de que más de una cosa ocurre al mismo tiempo, o múltiples cosas relacionadas ocurren sin esperar a que la previa se haya completado. En informática, la palabra "asíncrono" se usa en los siguientes contextos:
 
 - Redes y comunicaciones

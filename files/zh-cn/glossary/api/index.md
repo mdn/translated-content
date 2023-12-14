@@ -16,12 +16,7 @@ slug: Glossary/API
 - [Twitter APIs](https://dev.twitter.com/overview/api) 能被用于从用户的 twitter 账户获取数据，然后可以在一个网页上展示他们最近的 tweet。
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 能被用于制作一个网页中的动画，例如让网页中的图片移动或旋转。
 
-## 了解更多
-
-### 总体了解
+## 参见
 
 - 维基百科上的 [API](https://zh.wikipedia.org/wiki/Application_programming_interface)
-
-### 技术参考
-
 - [Web API 参考](/zh-CN/docs/Web/API)

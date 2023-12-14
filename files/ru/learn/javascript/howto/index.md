@@ -77,7 +77,7 @@ var myObject = {
 };
 ```
 
-## Basic definitions
+## Основные определения
 
 - [What is JavaScript?](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript#A_high-level_definition)
 - [What is a variable?](/ru/docs/Learn/JavaScript/First_steps/Variables#What_is_a_variable)

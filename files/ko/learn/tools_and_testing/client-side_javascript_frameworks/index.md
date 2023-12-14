@@ -5,7 +5,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 
 {{LearnSidebar}}
 
-자바스크립트 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분으로, 개발자에게 확장 가능한 대화형 웹 응용 프로그램을 구축하기 위한 검증된 도구를 제공합니다. 많은 현대 기업들은 프레임워크를 도구화(tooling)의 표준 부분으로 사용하기때문에, 프론트엔드 개발에는 이제 프레임워크 경험이 필요합니다.
+JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분으로, 개발자에게 확장 가능한 대화형 웹 응용 프로그램을 구축하기 위한 검증된 도구를 제공합니다. 많은 현대 기업들은 프레임워크를 도구화(tooling)의 표준 부분으로 사용하기때문에, 프론트엔드 개발에는 이제 프레임워크 경험이 필요합니다.
 
 프론트엔드 개발자 지망생으로서 프레임워크를 배울 때 시작해야 할 부분을 알기가 어려울 수 있습니다. 선택할 수 있는 프레임워크가 너무 많고, 새로운 프레임워크는 항상 나타나고,대부분 유사한 방식으로 작동하지만 다른 일을 합니다. 때문에 프레임워크를 사용할 때 주의해야 할 몇 가지 사항이 있습니다.
 
@@ -14,7 +14,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 - 왜 프레임워크를 사용해야 하나요? 그들이 어떤 문제를 해결하나요?
 - 프레임워크를 선택할 때 어떤 질문을 해야 하나요? 프레임워크를 사용해야 하나요?
 - 프레임워크에는 어떤 기능이 있나요? 그것들은 일반적으로 어떻게 작동하고, 이러한 기능에 대한 프레임워크에 구현은 어떻게 다른가요?
-- "vanilla" 자바스크립트 또는 HTML과 어떤 관련이 있나요?
+- "vanilla" JavaScript 또는 HTML과 어떤 관련이 있나요?
 
 그 후에, 우리는 몇 가지 다른 프레임워크 선택의 핵심을 다루는 튜토리얼을 제공할 것입니다. 이는 더 심도있게 학습하기에 충분한 맥락과 친숙함을 제공해줄겁니다. 우리는 여러분이 앞으로 나아가 접근성과 같은 웹 플랫폼의 근본적인 모범 사례를 잊지 않는 실용적인 방법으로 프레임워크에 대해 배우고 발전시키기를 바랍니다.
 
@@ -31,9 +31,9 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ## 입문 가이드
 
 - [1. 클라이언트 사이드 프레임워크 소개](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-  - : 우리는 이 영역에 대한 일반적인 개요로 프레임워크를 살펴 볼겁니다. 자바스크립트와 프레임워크의 간략한 역사, 프레임워크가 왜 존재하는지와 그들이 우리에게 무엇을 제공하는지, 학습을 프레임워크를 어떻게 선택할지 생각하는 방법, 클라이언트 사이드 프레임워크에 대한 어떤 대안이 있는지 등이 해당합니다.
+  - : 우리는 이 영역에 대한 일반적인 개요로 프레임워크를 살펴 볼겁니다. JavaScript와 프레임워크의 간략한 역사, 프레임워크가 왜 존재하는지와 그들이 우리에게 무엇을 제공하는지, 학습을 프레임워크를 어떻게 선택할지 생각하는 방법, 클라이언트 사이드 프레임워크에 대한 어떤 대안이 있는지 등이 해당합니다.
 - [2. 프레임워크 주요 기능](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-  - : 각 주요 자바스크립트 프레임워크는 DOM 업데이트, 브라우저 이벤트 처리, 즐거운 개발 경험에 대해 다양한 접근 방식을 갖고 있습니다. 이 글에서는 "4대" 프레임워크의 주요 기능을 살펴보고 프레임워크가 높은 수준에서 작동하는 방식과 프레임워크의 차이점을 살펴봅니다.
+  - : 각 주요 JavaScript 프레임워크는 DOM 업데이트, 브라우저 이벤트 처리, 즐거운 개발 경험에 대해 다양한 접근 방식을 갖고 있습니다. 이 글에서는 "4대" 프레임워크의 주요 기능을 살펴보고 프레임워크가 높은 수준에서 작동하는 방식과 프레임워크의 차이점을 살펴봅니다.
 
 ## 리액트 튜토리얼
 
@@ -67,7 +67,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 - [2. Ember app 구조와 컴포넌트화](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
   - : 이 글에서는 TodoMVC Ember app의 구조를 설계하는 방법에 대해 알아봅니다. HTML을 추가하고, HTML 구조를 컴포넌트로 나눕니다.
 - [3. Ember 상호작용(interactivity): Events, classes, state](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - : 이제 앱에 상호작용하는 기능을 추가하여 새로운 할일(todo) 항목을 추가하고 표시할 수 있습니다. 그 과정에서 Ember 이벤트를 사용하는 방법을 살펴보겠습니다. 상호작용하는 기능을 제어하기 위해 자바스크립트 코드를 포함하는 컴포넌트 클래스를 만들고, 앱의 데이터 상태(state)를 추적하는 서비스를 설정합니다.
+  - : 이제 앱에 상호작용하는 기능을 추가하여 새로운 할일(todo) 항목을 추가하고 표시할 수 있습니다. 그 과정에서 Ember 이벤트를 사용하는 방법을 살펴보겠습니다. 상호작용하는 기능을 제어하기 위해 JavaScript 코드를 포함하는 컴포넌트 클래스를 만들고, 앱의 데이터 상태(state)를 추적하는 서비스를 설정합니다.
 - [4. Ember 상호작용: 푸터 기능, 조건부 렌더링](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
   - : 이제 앱에서 푸터 기능을 시작할 차례입니다. 아직 완료하지 않은 할일(todo) 항목의 수를 카운트하고, 완료된 할일(체크표시한 체크박스)에 스타일을 올바르게 적용합니다. 또한 "Clear completed" 버튼을 연결합니다. 이 과정에서 템플릿에서 조건부 렌더링을 사용하는 방법을 배웁니다.
 - [5. Ember 라우팅](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)

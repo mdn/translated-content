@@ -2,7 +2,7 @@
 title: "CSS: カスケーディングスタイルシート"
 slug: Web/CSS
 l10n:
-  sourceCommit: 13c58b0430c3972566ea2d3a254129c18b1ed800
+  sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
 ---
 
 {{CSSRef}}
@@ -57,15 +57,15 @@ CSS 2.1 以降、仕様の範囲が大幅に拡大し、CSS モジュールご�
   - [言語の構文と書式](/ja/docs/Web/CSS/Syntax)
   - [詳細度](/ja/docs/Web/CSS/Specificity)と[継承](/ja/docs/Web/CSS/Inheritance)と[カスケード](/ja/docs/Web/CSS/Cascade)
   - [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)および[関数記法](/ja/docs/Web/CSS/CSS_Functions)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [包含ブロック](/ja/docs/Web/CSS/Containing_block)
-  - [重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)と[ブロック整形](/ja/docs/Web/Guide/CSS/Block_formatting_context)コンテキスト
+  - [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)と[ブロック整形](/ja/docs/Web/Guide/CSS/Block_formatting_context)コンテキスト
   - [初期値](/ja/docs/Web/CSS/initial_value)、[計算値](/ja/docs/Web/CSS/computed_value)、[使用値](/ja/docs/Web/CSS/used_value)、[実効値](/ja/docs/Web/CSS/actual_value)
   - [CSS 一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
-  - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
-  - [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)
-  - [メディアクエリー](/ja/docs/Web/CSS/Media_Queries)
+  - [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)
+  - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
+  - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
+  - [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
   - [アニメーション](/ja/docs/Web/CSS/animation)
 
 ## 料理帳

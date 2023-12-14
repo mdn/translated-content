@@ -66,7 +66,7 @@ slug: Web/API/PerformanceNavigationTiming
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceNavigationTiming")}}
+{{Compat}}
 
 ## 関連情報
 

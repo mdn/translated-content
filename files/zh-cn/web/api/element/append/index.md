@@ -110,7 +110,7 @@ with (parent) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Element")}} and {{domxref("ChildNode")}}
 - {{domxref("Element.prepend()")}}

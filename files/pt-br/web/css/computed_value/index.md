@@ -24,9 +24,7 @@ The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API returns
 
 ## Especificações
 
-| Especificações                                                          | Status              | Comentário            |
-| ----------------------------------------------------------------------- | ------------------- | --------------------- |
-| {{SpecName("CSS2.1", "cascade.html#computed-value", "computed value")}} | {{Spec2("CSS2.1")}} | Especificação inicial |
+{{Specifications}}
 
 ## Veja também
 

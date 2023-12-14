@@ -53,7 +53,7 @@ function hide(e) {
 }
 ```
 
-## 相关链接
+## 参见
 
 - [Comparison of Event Targets](/zh-CN/DOM/event/Comparison_of_Event_Targets)
 - {{domxref("Event.currentTarget")}}

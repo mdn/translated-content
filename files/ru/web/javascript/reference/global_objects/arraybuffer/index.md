@@ -56,10 +56,7 @@ var view = new Int32Array(buffer);
 
 ## Спецификация
 
-| Specification                                                      | Status                   | Comment                                 |
-| ------------------------------------------------------------------ | ------------------------ | --------------------------------------- |
-| {{SpecName('Typed Array')}}                                        | {{Spec2('Typed Array')}} | Заменён спецификацией ECMAScript 6.     |
-| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} | {{Spec2('ES6')}}         | Первичное определение в ECMA стандарте. |
+{{Specifications}}
 
 ## Таблица совместимости
 

@@ -97,10 +97,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 ## Specifications
 
-| Specification                                                                                   | Status                   | Comment            |
-| ----------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5.1', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}     | {{Spec2('HTML5.1')}}     | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

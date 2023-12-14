@@ -87,7 +87,7 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
 
 ```html
 <script>
-  // 자바스크립트 코드는 여기에 추가하면 됩니다.
+  // JavaScript 코드는 여기에 추가하면 됩니다.
 </script>
 ```
 

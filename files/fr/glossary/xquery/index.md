@@ -3,6 +3,8 @@ title: XQuery
 slug: Glossary/XQuery
 ---
 
+{{GlossarySidebar}}
+
 **XQuery** est un langage informatique pour mettre à jour, récupérer, et effectuer des calculs sur les données de bases de données {{glossary("XML")}}.
 
 ## Voir aussi

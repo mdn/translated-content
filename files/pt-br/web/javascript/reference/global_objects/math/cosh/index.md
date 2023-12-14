@@ -65,13 +65,11 @@ Math.cosh =
 
 ## Especificações
 
-| Especificações                                         |
-| ------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.cosh")}}
+{{Compat}}
 
 ## See also
 

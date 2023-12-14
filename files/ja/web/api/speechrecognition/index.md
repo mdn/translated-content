@@ -121,7 +121,7 @@ recognition.onresult = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition")}}
+{{Compat}}
 
 ## 関連情報
 

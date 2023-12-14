@@ -48,7 +48,7 @@ svg {
 
 ## ブラウザー実装状況
 
-{{Compat("svg.attributes.presentation.fill-opacity")}}
+{{Compat}}
 
 ## 仕様
 

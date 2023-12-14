@@ -96,7 +96,7 @@ if(!("nextElementSibling" in document.documentElement)){
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [`nextSibling`](/zh-CN/DOM/Node.nextSibling)
 - [`childElementCount`](/zh-CN/DOM/Element.childElementCount)

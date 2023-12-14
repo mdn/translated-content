@@ -97,14 +97,11 @@ if (!Array.prototype.findIndex) {
 
 ## Especificações
 
-| Especificação                                                                          | Status               | Comentário         |
-| -------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.findIndex', 'Array.prototype.findIndex')}}     | {{Spec2('ES6')}}     | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.findIndex', 'Array.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.findIndex")}}Veja também
+{{Compat}}Veja também
 
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.indexOf()")}}

@@ -118,13 +118,11 @@ function changeGridAutoFlow() {
 
 ## Especificações
 
-| Especificação                                                          | Status                 | Comentário        |
-| ---------------------------------------------------------------------- | ---------------------- | ----------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-auto-flow", "grid-auto-flow")}} | {{Spec2("CSS3 Grid")}} | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.grid-auto-flow")}}
+{{Compat}}
 
 ## Veja Também
 

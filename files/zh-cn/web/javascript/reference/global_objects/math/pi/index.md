@@ -39,6 +39,6 @@ calculateCircumference(1); // 6.283185307179586
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math")}}

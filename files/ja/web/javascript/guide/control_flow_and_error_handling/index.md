@@ -9,7 +9,7 @@ JavaScript は、特に制御フロー文についてはコンパクトな文の
 
 [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference/Statements)には、この章で紹介する文についての完全な詳細が載っています。また、JavaScript のコードではセミコロン (`;`) 文字で文を区切ります。
 
-あらゆる JavaScript の式は、文でもあります。式に関する詳細については[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)を参照ください。
+あらゆる JavaScript の式は、文でもあります。式に関する詳細については[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)を参照ください。
 
 ## ブロック文
 

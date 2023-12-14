@@ -94,9 +94,7 @@ Produz este resultado:
 
 ## Especificações
 
-| Specification                                                                   | Status              | Comment |
-| ------------------------------------------------------------------------------- | ------------------- | ------- |
-| {{SpecName('CSS2.1', 'generate.html#generate.html#counters', 'counter-reset')}} | {{Spec2('CSS2.1')}} |         |
+{{Specifications}}
 
 ## Veja mais
 

@@ -3,6 +3,8 @@ title: Jeu de caractères
 slug: Glossary/Character_set
 ---
 
+{{GlossarySidebar}}
+
 Un **jeu de caractères** est un système d'encodage qui permet aux ordinateurs de savoir comment interpréter les [caractères](/fr/docs/Glossary/Character), comme les lettres, les nombres, les signes de ponctuation, les espaces.
 
 Au début chaque pays développait son propre jeu de caractères, en raison des spécificités d'usage de chaque langue : les codes Kanji JIS (par exemple Shift-JIS, EUC-JP, etc.) pour le japonais, Big5 pour le Chinois traditionnel, KOI8-R pour le russe. C'est toutefois [Unicode](/fr/docs/Glossary/Unicode) qui devint peu à peu le jeu de caractères le plus accepté, grâce au support linguistique universel qu'il offrait.

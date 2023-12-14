@@ -36,7 +36,7 @@ slug: Web/CSS/ratio
 
 ## ブラウザーの互換性
 
-{{Compat("css.types.ratio")}}
+{{Compat}}
 
 ## 関連情報
 

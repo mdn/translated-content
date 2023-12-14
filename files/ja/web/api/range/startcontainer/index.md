@@ -1,6 +1,9 @@
 ---
-title: Range.startContainer
+title: "Range: startContainer プロパティ"
+short-title: startContainer
 slug: Web/API/Range/startContainer
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{ApiRef("DOM")}}

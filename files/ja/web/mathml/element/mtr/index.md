@@ -34,7 +34,7 @@ MathML の `<mtr>` 要素は表組・行列の行を表します。{{ MathMLElem
 
 ## ブラウザーの互換性
 
-{{Compat("mathml.elements.mtr")}}
+{{Compat}}
 
 ## See also
 

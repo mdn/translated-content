@@ -1,71 +1,19 @@
 ---
-title: "<u>: 非言語的注釈 (下線) 要素"
+title: "<u>: 非言語的注釈（下線）要素"
 slug: Web/HTML/Element/u
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML** の**非言語的注釈要素** (**`<u>`**) は、非言語的に注釈があることを示す方法で表示する行内テキストの区間を示します。これは既定で単純な実線の下線として表示されますが、 CSS を使用して変更することもできます。
+**`<u>`** は [HTML](/ja/docs/Web/HTML) の要素で、非言語的に注釈があることを示す方法で表示する行内テキストの区間を示します。これは既定で単純な実線の下線として表示されますが、 CSS を使用して変更することもできます。
 
 > **警告:** この要素は古いバージョンの HTML で "Underline" (下線) 要素と呼ばれる傾向があり、現在でもそのように誤用されることがあります。テキストに下線を引くのであれば、代わりに CSS の {{cssxref("text-decoration")}} プロパティを `underline` に設定したスタイルを適用してください。
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
 `<u>` を使用するのがどのような場合に適切で、どのような場合に適切でないのかについての詳細は、[使用上の注意](#使用上の注意)を参照してください。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >, 知覚可能コンテンツ
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >を受け入れるすべての要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -75,11 +23,11 @@ slug: Web/HTML/Element/u
 
 他の純粋な整形要素と同様に、以前の HTML の下線 (`<u>`) 要素は HTML 4 で非推奨になりました。しかし `<u>` は、 HTML 5 で新しい意味論的な、何らかの曖昧な注釈が適用されるテキストをマークするという意味で復活しました。
 
-> **メモ:** (既定で下線が引かれる) ハイパーリンクと誤認されるような方法で、 (これも既定で下線が引かれる) `<u>` 要素を使用することは避けるように注意してください。
+> **メモ:** （既定で下線が引かれる）ハイパーリンクと誤認されるような方法で、（これも既定で下線が引かれる）`<u>` 要素を使用することは避けるように注意してください。
 
 ### 用途
 
-`<u>` 要素の有効な用途としては、綴りエラーの通知、中国語の文字列の[固有名詞記号](https://en.wikipedia.org/wiki/proper_name_mark)の記述、その他の形の注釈などがあります。
+`<u>` 要素の有効な用途としては、綴りエラーの通知、中国語の文字列の[固有名詞記号](https://en.wikipedia.org/wiki/Proper_name_mark)の記述、その他の形の注釈などがあります。
 
 単に表現の目的で下線を引いたり、本の題名を記述したりするために `<u>` を使用するべきでは*ありません*。
 
@@ -94,7 +42,7 @@ slug: Web/HTML/Element/u
 - {{HTMLElement("cite")}}: 書籍やその他の出版物の題名をマーク
 - {{HTMLElement("i")}}: 西洋言語のテキストで技術用語、音訳、考え、船名などを記述
 
-(`<u>` で作成された非言語的な注釈に対して) 言語的な注釈を提供する場合は、 {{HTMLElement("ruby")}} 要素を使用してください。
+（`<u>` で作成された非言語的な注釈に対して）言語的な注釈を提供する場合は、 {{HTMLElement("ruby")}} 要素を使用してください。
 
 意味論的な意味なしで下線を引きたい場合は、 {{cssxref("text-decoration")}} プロパティの値 `underline` を使用してください。
 
@@ -168,7 +116,7 @@ Chicken Noodle Soup With Carrots
 
 {{EmbedLiveSample("Using_the_cite_element", 650, 80)}}
 
-##### cit 要素のスタイル付け
+##### cite 要素のスタイル付け
 
 なお、 `<cite>` 要素の既定のスタイルではテキストを斜体で表示します。 CSS を使用して上書きすることができます。
 
@@ -184,6 +132,62 @@ cite {
 ```
 
 {{EmbedLiveSample("Styling_the_cite_element", 650, 80)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >対応するロールなし</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

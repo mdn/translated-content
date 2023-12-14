@@ -52,10 +52,10 @@ objectURL = URL.createObjectURL(object);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [在 web 应用程序中使用文件](/zh-CN/docs/Using_files_from_web_applications)
-- [Using object URLs to display images](/zh-CN/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images)
-- {{domxref("URL.revokeObjectURL()")}}
+- [在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
+- [使用对象 URL 显示图像](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_url_来显示图片)
+- {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

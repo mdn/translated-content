@@ -65,7 +65,7 @@ Este elemento implementa a interface do [`SVGScriptElement`](/pt-BR/DOM/SVGScrip
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.script")}}
+{{Compat}}
 
 ## Veja também
 

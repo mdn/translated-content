@@ -3,6 +3,8 @@ title: Input method editor (インプットメソッドエディター)
 slug: Glossary/Input_method_editor
 ---
 
+{{GlossarySidebar}}
+
 インプットメソッドエディター (IME) は、テキスト入力のための特殊なユーザーインターフェイスを提供するプログラムです。インプットメソッドエディターは多くの場面で使用されています。
 
 - ラテンキーボードを使用した中国語、日本語、韓国語の入力

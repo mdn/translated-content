@@ -19,9 +19,9 @@ JavaScript는 동적 타입이고 정적 타입이 없기 때문에, (Java 또�
 
 ### 속성 상속
 
-자바스크립트 객체는 속성을 저장하는 동적인 "가방"과 (**자기만의 속성**이라고 부릅니다) 프로토타입 객체에 대한 링크를 가집니다. 객체의 어떤 속성에 접근하려할 때, 그 객체 자체 속성 뿐만 아니라 객체의 프로토타입, 그 프로토타입의 프로토타입 등 프로토타입 체인의 종단에 이를 때까지 그 속성을 탐색합니다.
+JavaScript 객체는 속성을 저장하는 동적인 "가방"과 (**자기만의 속성**이라고 부릅니다) 프로토타입 객체에 대한 링크를 가집니다. 객체의 어떤 속성에 접근하려할 때, 그 객체 자체 속성 뿐만 아니라 객체의 프로토타입, 그 프로토타입의 프로토타입 등 프로토타입 체인의 종단에 이를 때까지 그 속성을 탐색합니다.
 
-> **Note:** ECMAScript 표준은 `someObject.[[Prototype]]`을 객체 `someObject`의 프로토타입을 지시하도록 명시하였습니다. `[[Prototype]]` 내부 슬롯은 각각 {{jsxref("Object.getPrototypeOf()")}}과 {{jsxref("Object.setPrototypeOf()")}} 함수로 접근하고 수정할 수 있습니다. 이것은 자바스크립트의 표준은 아니나 많은 브라우저에 구현되어 사실상의 표준이 된 속성 [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)과 동일합니다. 간결함을 유지하고 혼동을 방지하기 위해 표기법에서 `obj.__proto__`를 사용하지 않고, `obj.[[Prototype]]`을 사용합니다. 이것은 `Object.getPrototypeOf(obj)`에 해당합니다.
+> **Note:** ECMAScript 표준은 `someObject.[[Prototype]]`을 객체 `someObject`의 프로토타입을 지시하도록 명시하였습니다. `[[Prototype]]` 내부 슬롯은 각각 {{jsxref("Object.getPrototypeOf()")}}과 {{jsxref("Object.setPrototypeOf()")}} 함수로 접근하고 수정할 수 있습니다. 이것은 JavaScript의 표준은 아니나 많은 브라우저에 구현되어 사실상의 표준이 된 속성 [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)과 동일합니다. 간결함을 유지하고 혼동을 방지하기 위해 표기법에서 `obj.__proto__`를 사용하지 않고, `obj.[[Prototype]]`을 사용합니다. 이것은 `Object.getPrototypeOf(obj)`에 해당합니다.
 >
 > 생성자로 사용될 때 주어진 함수에 의해 생성된 객체의 모든 `인스턴스`에 `[[Prototype]]`이 할당되도록 지정하는 함수의 `func.prototype` 속성과 혼동해서는 안 됩니다. [나중 섹션](#constructors)에서 생성자 함수의 `prototype` 속성에 대해 논의할 것입니다.
 
@@ -319,7 +319,7 @@ Derived.prototype = Object.create(Base.prototype);
 
 뒤에서 어떠한 일이 일어나는지 좀 더 자세히 살펴보겠습니다.
 
-위에서 언급한 것처럼, JavaScript에서 함수는 속성을 가질 수 있습니다. 모든 함수에는 `prototype`이라는 특수한 속성이 있습니다. 아래의 예제 코드는 독립적이라는 것에 유의하세요(아래의 코드 이외에는 웹페이지에 다른 자바스크립트가 없다고 가정해도 문제 없습니다).
+위에서 언급한 것처럼, JavaScript에서 함수는 속성을 가질 수 있습니다. 모든 함수에는 `prototype`이라는 특수한 속성이 있습니다. 아래의 예제 코드는 독립적이라는 것에 유의하세요(아래의 코드 이외에는 웹페이지에 다른 JavaScript가 없다고 가정해도 문제 없습니다).
 
 최적의 실습을 위해, 콘솔을 열고 "console" 탭으로 이동하여 아래의 JavaScript 코드를 복사하여 붙여넣고, 엔터/Return 키를 눌러서 실행하는 것이 좋습니다(콘솔은 대부분 웹 브라우저의 개발자 도구에 포함되어 있습니다. 자세한 내용은 [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), [Chrome DevTools](https://developer.chrome.com/docs/devtools/) 및 [Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)을 참고하세요).
 
@@ -498,7 +498,7 @@ const p = { b: 2, __proto__: o };
 
 ### 생성자 함수를 이용
 
-자바스크립트에서 생성자는 단지 [new 연산자](/en/JavaScript/Reference/Operators/new)를 사용해 함수를 호출하면 된다.
+JavaScript에서 생성자는 단지 [new 연산자](/en/JavaScript/Reference/Operators/new)를 사용해 함수를 호출하면 된다.
 
 ```js
 function Graph() {
@@ -657,7 +657,7 @@ Object.setPrototypeOf(obj, anotherObj);
 
 ### \_\_proto\_\_ 접근자를 사용하는 방법
 
-모든 객체는 [`Object.prototype.__proto__`](//docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 설정자를 상속하며, 이는 기존 객체의 `[[Prototype]]`을 설정하는 데 사용할 수 있습니다(`__proto__` 키가 객체에서 재정의되지 않은 경우).
+모든 객체는 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 설정자를 상속하며, 이는 기존 객체의 `[[Prototype]]`을 설정하는 데 사용할 수 있습니다(`__proto__` 키가 객체에서 재정의되지 않은 경우).
 
 > **경고:** `Object.prototype.__proto__` 접근자는 **비표준**이며 더 이상 사용되지 않습니다. 대신 거의 항상 `Object.setPrototypeOf`를 사용해야 합니다.
 

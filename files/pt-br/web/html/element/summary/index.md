@@ -31,7 +31,7 @@ Veja a página {{ HTMLElement("details") }} para ver exemplos com `<summary>`.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.summary")}}
+{{Compat}}
 
 ## Veja também
 

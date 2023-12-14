@@ -153,13 +153,8 @@ span {
 
 ## Especificações
 
-| Especificações                                                          | Status                        | Comentário                                  |
-| ----------------------------------------------------------------------- | ----------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-weight-prop', 'font-weight')}}          | {{Spec2('CSS3 Fonts')}}       | Sem alterações.                             |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-weight')}}      | {{Spec2('CSS3 Transitions')}} | Permite animação do atributo `font-weight`. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-weight', 'font-weight')}} | {{Spec2('CSS2.1')}}           | Sem alterações.                             |
-| {{SpecName('CSS1', '#font-weight', 'font-weight')}}                     | {{Spec2('CSS1')}}             |                                             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.font-weight")}}
+{{Compat}}

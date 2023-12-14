@@ -38,14 +38,11 @@ wm.get("baz"); // Retorna undefined.
 
 ## Especificações
 
-| Specification                                                                  | Status               | Comment             |
-| ------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.get")}}
+{{Compat}}
 
 ## Ver também
 

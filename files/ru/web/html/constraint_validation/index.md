@@ -371,8 +371,6 @@ window.onload = function () {
 };
 ```
 
-Вы можете посмотреть [живой пример](/@api/deki/files/4744/=constraint.html) валидации индекса.
-
 ### Ограничение размера загружаемого файла
 
 Ещё одним распространённым ограничением является лимит размера загружаемых файлов. Данная проверка на стороне клиента перед отправкой на сервер требует сочетания Constraint Validation API и особенно метода `field.setCustomValidity()` с другим JavaScript API, в данном случае — File API.
@@ -415,8 +413,6 @@ window.onload = function () {
   document.getElementById("FS").onchange = checkFileSize;
 };
 ```
-
-[Живой пример](/@api/deki/files/4745/=fileconstraint.html) валидации ограничения размера файла.
 
 ## Визуальное оформление нарушения ограничений
 

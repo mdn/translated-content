@@ -13,7 +13,7 @@ slug: Web/HTML/Element/picture
 
 `<picture>` 的常见使用场景：
 
-- 艺术指导 (Art direction) —— 针对不同 `media` 条件裁剪或修改图像
+- 艺术指导 (Art direction)——针对不同 `media` 条件裁剪或修改图像
 - 遇到所有浏览器都不支持的特定格式时，提供不同的图像格式
 
 如果要为高 DPI (Retina) 显示提供更高像素密度的图像版本，请在 `<img>` 元素上使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 。这使得浏览器可以在节约流量模式下选择低像素密度版本，且不需要你编写明确的 `media` 条件。

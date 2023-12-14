@@ -48,14 +48,11 @@ for (var v of str) {
 
 ## Especificações
 
-|                                                                                               | Status               | Comment            |
-| --------------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.@@iterator")}}
+{{Compat}}
 
 ## Veja também
 

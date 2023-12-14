@@ -29,7 +29,7 @@ slug: Web/CSS/clear
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 clear: none;
 clear: left;
 clear: right;
@@ -216,13 +216,7 @@ p {
 
 ## Характеристики
 
-| Спецификация                                                              | Статус                              | Коммент                                                 |
-| ------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Добавляет значения `inline-start` и `inline-end`.       |
-| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}              | {{Spec2('CSS2.1')}}                 | Никаких существенных изменений, хотя детали уточняются. |
-| {{SpecName('CSS1', '#clear', 'clear')}}                                   | {{Spec2('CSS1')}}                   | Начальное определение                                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Совместимость с браузером
 

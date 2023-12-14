@@ -13,4 +13,4 @@ l10n:
 
 - [HTML 명세서의 DOCTYPE 정의](https://html.spec.whatwg.org/multipage/syntax.html#the-doctype)
 - [Quirks Mode와 Standards Mode](/ko/docs/Quirks_Mode_and_Standards_Mode)
-- doctype을 리턴하는 자바스크립트 함수인 [Document.doctype](/ko/docs/Web/API/Document/doctype)
+- doctype을 리턴하는 JavaScript 함수인 [Document.doctype](/ko/docs/Web/API/Document/doctype)

@@ -45,7 +45,7 @@ var ext = gl.getExtension("ANGLE_instanced_arrays");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}

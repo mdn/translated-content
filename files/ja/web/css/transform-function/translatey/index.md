@@ -7,6 +7,8 @@ slug: Web/CSS/transform-function/translateY
 
 **`translateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
+{{EmbedInteractiveExample("pages/css/function-translateY.html")}}
+
 ![](translatey.png)
 
 > **メモ:** `translateY(ty)` は `translate(0, ty)` または `translate3d(0, ty, 0)` と等価です。

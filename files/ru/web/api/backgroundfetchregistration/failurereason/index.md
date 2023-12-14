@@ -9,7 +9,7 @@ l10n:
 
 Доступное только для чтения свойство **`failureReason`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает строку, значение которой указывает на причину неудачного выполнения фонового запроса.
 
-Когда значение свойства меняется, то у связанного объекта {{domxref("BackgroundFetchRegistration")}} срабатывает событие [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event).
+Когда значение свойства меняется, то у связанного объекта {{domxref("BackgroundFetchRegistration")}} срабатывает событие [progress](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event).
 
 ## Значение
 

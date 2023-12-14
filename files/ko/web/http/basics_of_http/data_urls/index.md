@@ -34,7 +34,7 @@ data:[<mediatype>][;base64],<data>
 - `data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E`
   - : `<h1>Hello, World!</h1>`인 HTML 문서
 - `data:text/html,%3Cscript%3Ealert%28%27hi%27%29%3B%3C%2Fscript%3E`
-  - : `<script>alert('hi');</script>` 자바스크립트 경고문을 실행하는 HTML 문서입니다. 닫기 스크립트 태그가 필요하다는 것을 기억하세요.
+  - : `<script>alert('hi');</script>` JavaScript 경고문을 실행하는 HTML 문서입니다. 닫기 스크립트 태그가 필요하다는 것을 기억하세요.
 
 ## base64 포맷으로 데이터 인코딩하기
 

@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}{{APIRef("Ink API")}}
 
-**`ink`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、現在の文書の {{domxref("Ink")}} オブジェクトを取得します。これは[インク API](/en-US/docs/Web/API/Ink_API) の機能へのアクセスを提供します。
+**`ink`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、現在の文書の {{domxref("Ink")}} オブジェクトを取得します。これは[インク API](/ja/docs/Web/API/Ink_API) の機能へのアクセスを提供します。
 
 ## 値
 

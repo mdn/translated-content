@@ -868,13 +868,3 @@ do {
 - [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — статья о практическом применении циклов
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
-
-## В этом модуле
-
-- [Принятие решений в вашем коде — условные конструкции](/ru/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Зацикливание кода](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Функции — Переиспользуемые блоки кода](/ru/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Создайте свою собственную функцию](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Возвращаемое значение функции](/ru/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Введение в события](/ru/docs/Learn/JavaScript/Building_blocks/События)
-- [Создание галереи](/ru/docs/Learn/JavaScript/Building_blocks/Image_gallery)

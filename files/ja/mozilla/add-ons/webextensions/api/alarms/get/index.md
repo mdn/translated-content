@@ -29,7 +29,7 @@ browser.alarms.get(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.alarms.get")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

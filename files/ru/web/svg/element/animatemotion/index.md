@@ -77,10 +77,7 @@ slug: Web/SVG/Element/animateMotion
 
 ## Характеристики
 
-| Спецификация                                                                         | Статус                        | Комментарий           |
-| ------------------------------------------------------------------------------------ | ----------------------------- | --------------------- |
-| {{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}   | {{Spec2("SVG Animations 2")}} | Без изменений         |
-| {{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}} | {{Spec2('SVG1.1')}}           | Начальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

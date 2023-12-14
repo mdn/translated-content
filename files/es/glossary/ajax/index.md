@@ -3,6 +3,8 @@ title: AJAX
 slug: Glossary/AJAX
 ---
 
+{{GlossarySidebar}}
+
 AJAX (de las siglas en Inglés **A**synchronous {{glossary("JavaScript")}} **A**nd {{glossary("XML")}} ) es una práctica de programación utilizada para construir páginas web más complejas y dinámicas, utilizando una tecnología conocida como {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}.
 
 Lo que AJAX nos permite hacer, es modificar partes específicas del {{Glossary("DOM")}} de una página {{Glossary("HTML")}} sin la necesidad de refrescar la página entera. AJAX tambien nos permite trabajar asincrónicamente; esto significa que tu código seguirá corriendo mientras esa parte de la página de tu sitio web intenta recargarse (en comparación, una carga síncrona bloquearía tu código hasta que esa parte de la página web terminara de recargarse)

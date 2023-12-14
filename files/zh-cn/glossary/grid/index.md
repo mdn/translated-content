@@ -11,9 +11,7 @@ slug: Glossary/Grid
 
 如果开发者将内容放置在显式网格之外，或者依赖自动布局的话，网格法 (grid algorithm) 将需要创建额外的 row 或者 column、 {{glossary("grid tracks", "tracks")}} 来包含显示网格之外的内容 {{glossary("grid item", "grid items")}}，为此将在隐式网格 (implicit grid) 中创建额外的轨道 (tracks)。_当内容添加到了已定义的 tracks 之外的时候，隐式网格 (implicit grid) 会被自动创建。_
 
-下面的例子创建了一个有两行三列的显式网格*。*由于超过显式网格可容纳的六个条目，_此网格中的第三行将是一个隐式网格行轨道 (implicit grid_ row track)
-
-_（注：在容器 div 上用 row 和 column 定义的网格总数，等于 行数乘以列数 个。比如一个容器 div 定义了 2 行 \* 3 列 = 6 个网格，这 6 个就是显式网格，但是假如里面有 8 个 子 div，多出来那 2 个就叫做隐式网格。）_
+下面的例子创建了一个有两行三列的显式网格。由于超过显式网格可容纳的六个条目，此网格中的第三行将是一个*隐式网格*行轨道（implicit grid row track）。
 
 ## 示例
 
@@ -60,7 +58,7 @@ _（注：在容器 div 上用 row 和 column 定义的网格总数，等于 行
 
 {{ EmbedLiveSample('示例', '500', '330') }}
 
-## 了解更多
+## 参见
 
 ### 属性参考
 

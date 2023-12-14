@@ -65,10 +65,3 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 Поздравляем вас с завершением первого модуля! Теперь вы неплохо разбираетесь в CSS и можете разобраться в таблицах стилей. В следующем модуле, [Как устроен CSS](/ru/docs/Learn/CSS/Building_blocks), мы глубже разберёмся в некоторых аспектах языка.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## В этом модуле
-
-1. [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
-3. [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
-4. [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)

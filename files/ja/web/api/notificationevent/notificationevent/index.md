@@ -34,4 +34,4 @@ var myNotificationEvent = new NotificationEvent(type, init);
 
 ## ブラウザーの互換性
 
-{{Compat("api.NotificationEvent.NotificationEvent")}}
+{{Compat}}

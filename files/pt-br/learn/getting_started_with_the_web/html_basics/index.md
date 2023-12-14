@@ -133,15 +133,14 @@ Essa seção abordará alguns dos elementos HTML essenciais que você usará par
 Os elementos de cabeçalhos permitem especificar que certas partes do seu conteúdo são títulos ou subtítulos. Da mesma forma que um livro tem o título principal e os capítulos possuem títulos e subtítulos, um documento HTML também tem. HTML contém 6 níveis de título, {{htmlelement ("h1")}} - {{htmlelement ("h6")}}, embora você normalmente só use de 3 a 4:
 
 ```html
+<!-- 4 níveis de título -->
 <h1>Meu título principal</h1>
 <h2>Meu título de alto nível</h2>
 <h3>Meu subtítulo</h3>
 <h4>Meu segundo subtítulo</h4>
 ```
 
-Agora, tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
-
-> **Nota:** Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.
+> **Nota:** Qualquer coisa em HTML entre `<!--` e `-->` é um **comentário HTML**. O navegador ignora comentários enquanto renderiza o código. Em outras palavras, eles não são visíveis na página – apenas no código. Os comentários HTML são uma forma de escrever notas úteis sobre seu código ou lógica.
 
 Agora tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
 

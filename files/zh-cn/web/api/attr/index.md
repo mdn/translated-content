@@ -96,8 +96,6 @@ slug: Web/API/Attr
   - : `当前该方法总是返回`false.
 - `insertBefore()`
   - : 通过编辑{{domxref("Attr.value")}}来实现相同效果
-- `isSupported()`
-  - : 这个方法本不应当被在这里使用，所以无须担心其演变
 - `isEqualNode()`
   - : 这个方法本不应当被在这里使用，所以无须担心其演变
 - `normalize()`

@@ -27,7 +27,7 @@ unsigned long 型の数。
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBufferList.length")}}
+{{Compat}}
 
 ## 関連情報
 

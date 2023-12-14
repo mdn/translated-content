@@ -67,12 +67,6 @@ p {
 
 {{EmbedLiveSample('Примеры', 'auto', 350)}}
 
-## Спецификации
-
-| Specification                                                              | Status              | Comment            |
-| -------------------------------------------------------------------------- | ------------------- | ------------------ |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Initial definition |
-
 ## Смотрите также
 
 - [CSS Reference](/ru/docs/Web/CSS/CSS_Reference)

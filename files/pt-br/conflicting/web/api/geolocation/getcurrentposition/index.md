@@ -22,9 +22,7 @@ A interface `PositionOptions` não implementa ou herda nenhum método.
 
 ## Especificações
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('Geolocation', '#positionoptions', 'PositionOptions')}} | {{Spec2('Geolocation')}} | Initial definition |
+{{Specifications}}
 
 ## Navegadores compatíveis
 

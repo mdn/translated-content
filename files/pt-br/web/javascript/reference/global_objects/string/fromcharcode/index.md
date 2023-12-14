@@ -40,20 +40,15 @@ String.fromCharCode(65, 66, 67); // retorna "ABC"
 
 ## Fazendo-o funcionar com valores maiores
 
-Embora os valores Unicode mais comuns possam ser representados com um número de 16 bits (como experado durante a padronização do JavaScript) e o fromCharCode() possa ser usado para retornar um único caracter dos valores mais comuns (por exemplo: valores UCS-2 que são os melhores subconjuntos do UTF-16 com os caractres mais comuns), a fim de resolver TODOS os valores Unicode legais (até 21 bits) o método fromCharCode() sozinho é inadequado. Como os caracteres de ponto de código mais alto usam 2 (valor menor) numeros "substitutos" para formar um único caracter, {{jsxref("String.fromCodePoint()")}} (parte do padrão ES2015) pode ser usado para retornar tal par e ainda representar adequadamente esses caracteres de valores altos.
+Embora os valores Unicode mais comuns possam ser representados com um número de 16 bits (como esperado durante a padronização do JavaScript) e o fromCharCode() possa ser usado para retornar um único caracter dos valores mais comuns (por exemplo: valores UCS-2 que são os melhores subconjuntos do UTF-16 com os caractres mais comuns), a fim de resolver TODOS os valores Unicode legais (até 21 bits) o método fromCharCode() sozinho é inadequado. Como os caracteres de ponto de código mais alto usam 2 (valor menor) numeros "substitutos" para formar um único caracter, {{jsxref("String.fromCodePoint()")}} (parte do padrão ES2015) pode ser usado para retornar tal par e ainda representar adequadamente esses caracteres de valores altos.
 
 ## Especificações
 
-| Especificação                                                               | Status               | Comentário                                         |
-| --------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                         | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}                | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-string.fromcharcodes', 'String.fromCharCode')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.fromCharCode")}}
+{{Compat}}
 
 ## Veja também
 

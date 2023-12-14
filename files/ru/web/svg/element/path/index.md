@@ -7,6 +7,8 @@ slug: Web/SVG/Element/path
 
 Элемент **`<path>`** является общим элементом для описания фигуры. Все базовые фигуры могут быть созданы с помощью элемента path.
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -26,7 +28,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{EmbedLiveSample("Пример", 100, 100)}}
 
 ## Атрибуты
 
@@ -39,7 +41,7 @@ svg {
 
 ### Глобальные атрибуты
 
-- [Атрибуты ядра](/docs/Web/SVG/Attribute/Core)
+- [Атрибуты ядра](/ru/docs/Web/SVG/Attribute/Core)
   - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Атрибуты стиля](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}

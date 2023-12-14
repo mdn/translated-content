@@ -63,9 +63,7 @@ max-block-size: unset;
 
 ## Specification
 
-| Specification                                                                       | Status                              | Comment            |
-| ----------------------------------------------------------------------------------- | ----------------------------------- | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-max-block-size", "max-block-size")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -39,7 +39,7 @@ console.log(mapped instanceof Array); // true
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Map.@@species", "Map[@@species]")}}
 - {{jsxref("Set.@@species", "Set[@@species]")}}

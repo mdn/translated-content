@@ -5,7 +5,7 @@ slug: Learn/JavaScript/First_steps/Variables
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
-앞선 두 수업을 듣고, 자바스크립트에 대해(웹 기술에서 어떻게 사용되는지, 큰 범위에서의 특징) 알아보았다. 이번 수업에서는 기본중에 기본인 자바스크립트의 주된 구성중 하나인 변수가 어떻게 이루어져 있는지 알아볼 것이다.
+앞선 두 수업을 듣고, JavaScript에 대해(웹 기술에서 어떻게 사용되는지, 큰 범위에서의 특징) 알아보았다. 이번 수업에서는 기본중에 기본인 JavaScript의 주된 구성중 하나인 변수가 어떻게 이루어져 있는지 알아볼 것이다.
 
 <table>
   <tbody>
@@ -15,14 +15,14 @@ slug: Learn/JavaScript/First_steps/Variables
     </tr>
     <tr>
       <th scope="row">목표</th>
-      <td>자바스크립트 변수에 대해 익혀보기</td>
+      <td>JavaScript 변수에 대해 익혀보기</td>
     </tr>
   </tbody>
 </table>
 
 ## 필요한 툴
 
-이번 수업에서 컨텐츠에 대한 이해도를 테스트하고자, 코드를 입력하라는 요청을 받게 될 것이다. 만약 데스크탑 브라우저를 사용한다면, 코드를 실행하기 가장 좋은 프로그램은 브라우저의 자바스크립트 콘솔창일 것이다.(도구의 사용법에 대해 알고자 한다면 [What are browser developer tools](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 를 참고하자)
+이번 수업에서 컨텐츠에 대한 이해도를 테스트하고자, 코드를 입력하라는 요청을 받게 될 것이다. 만약 데스크탑 브라우저를 사용한다면, 코드를 실행하기 가장 좋은 프로그램은 브라우저의 JavaScript 콘솔창일 것이다.(도구의 사용법에 대해 알고자 한다면 [What are browser developer tools](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 를 참고하자)
 
 ## 변수란?
 

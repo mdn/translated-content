@@ -193,4 +193,4 @@ API 権限には、拡張機能から使用したい [WebExtension API](/ja/docs
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.permissions")}}
+{{Compat}}

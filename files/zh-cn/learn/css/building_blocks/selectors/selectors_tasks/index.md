@@ -1,5 +1,5 @@
 ---
-title: 测试你的技能：选择器
+title: 技能测试：选择器
 slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 ---
 

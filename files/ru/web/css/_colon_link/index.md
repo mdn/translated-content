@@ -26,13 +26,7 @@ a:link {
 
 ## Спецификации
 
-| Спецификация                                                           | Статус                        | Комментарий                                                                 |
-| ---------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'scripting.html#selector-link', ':link') }} | {{ Spec2('HTML WHATWG') }}    |                                                                             |
-| {{ SpecName('CSS4 Selectors', '#link', ':link') }}                     | {{ Spec2('CSS4 Selectors') }} | Без изменений.                                                              |
-| {{ SpecName('CSS3 Selectors', '#link', ':link') }}                     | {{ Spec2('CSS3 Selectors') }} | Без изменений                                                               |
-| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':link') }} | {{ Spec2('CSS2.1') }}         | Появилось ограничение применять только для элемента {{ HTMLElement("a") }}. |
-| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':link') }}              | {{ Spec2('CSS1') }}           | Изначальное определение.                                                    |
+{{Specifications}}
 
 ## Поддержка браузерами
 

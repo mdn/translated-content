@@ -65,4 +65,4 @@ mask-image: unset;
 ## 参见
 
 - [CSS 中的裁剪和遮罩](https://css-tricks.com/clipping-masking-css/)
-- [使用 CSS 的 mask-image 属性对图像应用效果](https://web.dev/css-masking/)
+- [使用 CSS 的 mask-image 属性对图像应用效果](https://web.dev/articles/css-masking)

@@ -89,8 +89,6 @@ sayHello()();
 
 我们使用双括号 `()()` 来调用 `sayHello()` 返回的函数。
 
-## 了解更多
-
-### 常识
+## 参见
 
 - [First-class functions](https://zh.wikipedia.org/wiki/First-class_functions) 在维基百科

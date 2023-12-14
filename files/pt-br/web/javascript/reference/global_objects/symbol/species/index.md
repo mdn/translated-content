@@ -37,13 +37,11 @@ console.log(mapped instanceof Array); // true
 
 ## Especificações
 
-| Especificação                                                    |
-| ---------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.species")}}
+{{Compat}}
 
 ## Veja também
 

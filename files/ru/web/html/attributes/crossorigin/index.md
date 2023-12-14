@@ -26,10 +26,7 @@ slug: Web/HTML/Attributes/crossorigin
 
 ## Спецификации
 
-| Specification                                                                                           | Status                   | Comment |
-| ------------------------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Поддержка браузерами
 

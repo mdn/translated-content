@@ -121,10 +121,7 @@ img {
 
 ## Технические параметры
 
-| Specification                                                | Status                   | Comment                                        |
-| ------------------------------------------------------------ | ------------------------ | ---------------------------------------------- |
-| {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} | `Добавлены ключевые слова from-image` `и flip` |
-| {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Первоначальное определение                     |
+{{Specifications}}
 
 {{cssinfo}}
 

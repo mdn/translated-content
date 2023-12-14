@@ -78,9 +78,7 @@ function foo() {
 
 如果你想进一步了解 IIFE, 可参考以下的维基百科的页面：[Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 
-## 了解更多
-
-### 技术参考
+## 参见
 
 - [Functions](/zh-CN/docs/Web/JavaScript/Guide/Functions)
 - [Arrow Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

@@ -2,7 +2,7 @@
 title: Firefox 117 for developers
 slug: Mozilla/Firefox/Releases/117
 l10n:
-  sourceCommit: 7c26f7e821b1793de804fb9a7744ebf3fafe0dc3
+  sourceCommit: 062f3961a28054b72c7d406b46867c87208a68b0
 ---
 
 {{FirefoxSidebar}}
@@ -21,8 +21,8 @@ l10n:
 
 - [`math-style`](/ja/docs/Web/CSS/math-style) および [`math-depth`](/ja/docs/Web/CSS/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/font-size#values) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
 
-- [`contain-intrinsic-size: auto none;`](/ja/docs/Web/CSS/contain-intrinsic-size) の構文をサポートしました。これは、可能であれば最後に記憶した要素のサイズを使用しますが、それ以外の場合は `contain-intrinsic-size: none` にフォールバックすることができます。
-  これはグリッドや段組みなど、可変サイズを使用するレイアウトで有益です ([Firefox bug 1835813](https://bugzil.la/1835813))。
+- [`contain-intrinsic-size: auto none`](/ja/docs/Web/CSS/contain-intrinsic-size) の構文をサポートしました。これは、可能であれば最後に記憶した要素のサイズを使用しますが、それ以外の場合は `contain-intrinsic-size: none` にフォールバックすることができます。
+  これはグリッドや段組みのレイアウトで、要素を高さ 0px の代わりに、内容物がないかのようにレイアウトすることに役立ちます ([Firefox bug 1835813](https://bugzil.la/1835813))。
 
 ### JavaScript
 

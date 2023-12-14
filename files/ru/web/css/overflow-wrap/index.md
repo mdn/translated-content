@@ -125,9 +125,7 @@ p {
 
 ## Specifications
 
-| Specification                                                          | Status                   | Comment            |
-| ---------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }} | {{ Spec2('CSS3 Text') }} | Initial definition |
+{{Specifications}}
 
 {{cssinfo}}
 

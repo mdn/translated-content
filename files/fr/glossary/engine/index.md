@@ -3,6 +3,8 @@ title: Moteur
 slug: Glossary/Engine
 ---
 
+{{GlossarySidebar}}
+
 Le moteur {{glossary("JavaScript")}} est un interpréteur qui analyse et exécute un programme JavaScript.
 
 ## Plus d'informations

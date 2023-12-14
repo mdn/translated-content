@@ -23,7 +23,7 @@ str.valueOf();
 
 {{jsxref("String")}} 의 `valueOf()` 메서드는 {{jsxref("String")}} 객체의 원시 값을 문자열 데이터 타입으로 반환 합니다. 이 값은 {{jsxref("String.prototype.toString()")}}.과 동일합니다.
 
-이 메서드는 보통 자바스크립트에 의해 내부적으로 호출되며, 코드에서 명시적으로 사용하지는 않습니다.
+이 메서드는 보통 JavaScript에 의해 내부적으로 호출되며, 코드에서 명시적으로 사용하지는 않습니다.
 
 ## 예제
 

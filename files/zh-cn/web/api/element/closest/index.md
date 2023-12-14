@@ -111,7 +111,7 @@ if (window.Element && !Element.prototype.closest) {
 
 - 当在 Edge 15-18 里使用 `document.createElement(tagName).closest(tagName)` ，如果元素不是第一个（直接地或间接地）连接到上下文对象的话将会返回 `null` ，例如在一般情况下 DOM 中的 [`Document`](/zh-CN/docs/Web/API/Document) 对象。
 
-## 相关链接
+## 参见
 
 - {{domxref("Element")}} 接口。
 - [选择器语法](/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors)

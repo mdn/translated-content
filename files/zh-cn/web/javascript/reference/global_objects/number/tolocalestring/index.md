@@ -5,7 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 {{JSRef}}
 
-**`toLocaleString()`** 方法返回这个数字在特定语言环境下的表示字符串。在使用具有 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 支持的实现时，此方法仅仅简单调用了 `Intl.NumberFormat`。
+{{jsxref("Number")}} 值的 **`toLocaleString()`** 方法返回这个数字特定于语言环境的表示字符串。在具有 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 支持的实现中，此方法仅仅简单调用了 `Intl.NumberFormat`。
+
+当格式化大量数字时，最好创建一个 {{jsxref("Intl.NumberFormat")}} 对象，并使用其提供的 {{jsxref("Intl/NumberFormat/format", "format()")}} 方法。
 
 {{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
 
@@ -21,7 +23,7 @@ toLocaleString(locales, options)
 
 `locales` 和 `options` 参数让应用程序可以指定要进行格式转换的语言，并且定制函数的行为。
 
-在使用具有 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 支持的实现时，这些参数与 [`Intl.NumberFormat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) 构造器的参数相同。不支持 `Intl.NumberFormat` 时，会忽略参数，使得使用的区域设置和返回的字符串格式完全由实现决定。
+在使用具有 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 支持的实现时，这些参数与 [`Intl.NumberFormat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) 构造函数的参数相同。不支持 `Intl.NumberFormat` 时，会忽略参数，使得使用的区域设置和返回的字符串格式完全由实现决定。
 
 - `locales` {{optional_inline}}
 
@@ -33,7 +35,7 @@ toLocaleString(locales, options)
 
   - : 调整输出格式的对象。与 `Intl.NumberFormat()` 构造函数的 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 参数相同。
 
-    在无 `Intl.NumberFormat` 支持的实现中，这个参数是忽略的。
+    在无 `Intl.NumberFormat` 支持的实现中，这个参数是被忽略的。
 
 请查阅 [`Intl.NumberFormat()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)以了解这些参数的详细信息，以及如何使用它们。
 
@@ -42,10 +44,6 @@ toLocaleString(locales, options)
 返回一个语言环境下的表示字符串。
 
 在使用 `Intl.NumberFormat` 的实现中，这与 `new Intl.NumberFormat(locales, options).format(number)` 调用等价。
-
-## 性能
-
-当格式化非常多的数字时，最好创建一个 {{jsxref("Intl.NumberFormat")}} 对象，并且使用其 {{jsxref("Intl/NumberFormat/format", "format")}} 属性提供的方法。
 
 ## 示例
 
@@ -56,38 +54,22 @@ toLocaleString(locales, options)
 ```js
 const number = 3500;
 
-console.log(number.toLocaleString()); // Displays "3,500" if in U.S. English locale
+console.log(number.toLocaleString()); // "3,500"，如果区域设置为美国英语
 ```
 
-### 检查 `locales` 和 `options` 参数的支持
+### 检查 locales 和 options 参数的支持
 
-并不是所有实现都需要支持 ECMA-402 标准（国际化 API）。如果浏览器不支持该标准，则参数 `locales` 和 `options` 参数必须都要忽略掉。可以依靠使用非法参数时规定抛出的 {{jsxref("Global_Objects/RangeError", "RangeError")}} 异常来检测支持的情况：
+`locales` 和 `options` 参数可能不被所有实现支持，因为国际化 API 的支持是可选的，一些系统可能没有必要的数据。对于没有国际化支持的实现，`toLocaleString()` 总是使用系统的区域设置，这可能不是你想要的。因为任何支持 `locales` 和 `options` 参数的实现必须支持 {{jsxref("Intl")}} API，你可以检查后者的存在来确定是否支持：
 
 ```js
 function toLocaleStringSupportsLocales() {
-  const number = 0;
-  try {
-    number.toLocaleString("i");
-  } catch (e) {
-    return e.name === "RangeError";
-  }
-  return false;
-}
-```
-
-早于 ES5.1 的实现中，携带非法参数调用 `toLocaleString` 不需要抛出范围异常。在所有主机环境下，包括那些支持比 ed 5.1 还早的 ECMA-262 的环境，都能有效检测的方法是直接检测 ECMA-402 中的其他特性，它指定 `Number.prototype.toLocaleString` 需要支持地区选项：
-
-```js
-function toLocaleStringSupportsOptions() {
-  return !!(
+  return (
     typeof Intl === "object" &&
-    Intl &&
+    !!Intl &&
     typeof Intl.NumberFormat === "function"
   );
 }
 ```
-
-它测试全局的 `Intl` 对象，检测它不是 `null` 并且有 `NumberFormat` 的方法。
 
 ### 使用 locales
 

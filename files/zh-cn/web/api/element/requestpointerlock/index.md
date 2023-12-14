@@ -23,7 +23,7 @@ instanceOfElement.requestPointerLock();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{ domxref("Document.pointerLockElement") }}
 - {{ domxref("Document.exitPointerLock()") }}

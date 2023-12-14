@@ -18,6 +18,8 @@ aspect-ratio: revert;
 aspect-ratio: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
+
 ### 値
 
 - `auto`

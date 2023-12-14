@@ -114,16 +114,11 @@ function knownCharCodeAt(str, idx) {
 
 ## Especificações
 
-| Especificação                                                                              | Status               | Comentário                                         |
-| ------------------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                        | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.5', 'String.prototype.charCodeAt')}}                      | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.charCodeAt")}}
+{{Compat}}
 
 ## Veja também
 

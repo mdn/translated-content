@@ -40,7 +40,7 @@ _No change._
 
 _No change._
 
-## 相关链接
+## 参见
 
 - [Firefox 26 网站兼容性](/zh-CN/docs/Mozilla/Firefox/Releases/26/Site_Compatibility)
 

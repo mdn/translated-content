@@ -83,7 +83,7 @@ viewBox 属性创建了一个与 SVG 图片坐标系相关联的逻辑坐标系�
 
 样式属性指定了 SVG 在 form 背景中的位置。
 
-## 相关链接
+## 参见
 
 - Another SVG in XHTML example: [A swarm of motes](/zh-CN/docs/SVG/Namespaces_Crash_Course/Example)
 - [Working example](http://jwatt.org/svg/demos/xhtml-with-inline-svg.xhtml) 可以同时工作在安装有 Adobe SVG Viwer 的 Mozilla 和 IE 浏览器中。 （对于同时工作在 Firefox 和 IE 浏览器中得内联 SVG，需要为每个浏览器的服务文档设置不同的 Cotent-type。因为当你基于一个代理服务器获取页面的时候，如果在第二个浏览器中加载该案例将会失败，因其会获取错误的 Content-Type）

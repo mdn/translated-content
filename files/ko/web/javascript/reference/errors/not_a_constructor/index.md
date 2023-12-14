@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Errors/Not_a_constructor
 
 객체 혹은 변수를 생성자로 사용하려고 했습니다, 하지만 객체(혹은 변수)가 생성자가 아닙니다. 생성자가 무엇인지에 대한 자세한 정보는 {{Glossary("constructor")}} 혹은 [`new` operator](/ko/docs/Web/JavaScript/Reference/Operators/new) 를 참조하시기 바랍니다.
 
-{{jsxref("String")}} 혹은 {{jsxref("Array")}}와 같이 `new`,를 사용하여 생성할 수 있는 전역 객체들이 있습니다. 하지만 일부 전역 객체들은 그렇지 않고 속성과 메서드가 정적입니다. 다음의 자바스크립트 표준 내장 객체들은 생성자가 아닙니다: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.
+{{jsxref("String")}} 혹은 {{jsxref("Array")}}와 같이 `new`,를 사용하여 생성할 수 있는 전역 객체들이 있습니다. 하지만 일부 전역 객체들은 그렇지 않고 속성과 메서드가 정적입니다. 다음의 JavaScript 표준 내장 객체들은 생성자가 아닙니다: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.
 
 [Generator functions](/ko/docs/Web/JavaScript/Reference/Statements/function*) 또한 생성자로 사용될 수 없습니다.
 

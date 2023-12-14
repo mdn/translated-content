@@ -91,11 +91,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 ## Спецификации
 
-| Спецификация                                                   | Статус                     | Комментарий                                                     |
-| -------------------------------------------------------------- | -------------------------- | --------------------------------------------------------------- |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}} | {{Spec2('CSS3 Overflow')}} | Changed syntax to allow one or two keywords instead of only one |
-| {{SpecName('CSS3 Box', '#propdef-overflow', 'overflow')}}      | {{Spec2('CSS3 Box')}}      | Без изменений                                                   |
-| {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}     | {{Spec2('CSS2.1')}}        | Initial definition.                                             |
+{{Specifications}}
 
 ## Совместимость браузера
 

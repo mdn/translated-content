@@ -32,7 +32,7 @@ slug: Web/API/XMLHttpRequest/load_event
 
 ## 示例
 
-### 在线例子
+### 在线示例
 
 #### HTML
 
@@ -120,7 +120,7 @@ xhrButtonAbort.addEventListener("click", () => {
 
 #### 结果
 
-{{ EmbedLiveSample('在线例子', '100%', '150px') }}
+{{ EmbedLiveSample('在线示例', '100%', '150px') }}
 
 ## 规范
 
@@ -130,7 +130,7 @@ xhrButtonAbort.addEventListener("click", () => {
 
 {{Compat}}
 
-**了解更多**
+## 参见
 
-- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [监测进度](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#监测进度)
+- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}、{{domxref("XMLHttpRequest/loadend_event", "loadend")}}、{{domxref("XMLHttpRequest/progress_event", "progress")}}、{{domxref("XMLHttpRequest/error_event", "error")}}、{{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [监测进度](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#监测进度)

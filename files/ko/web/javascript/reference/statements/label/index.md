@@ -17,7 +17,7 @@ label:
 ```
 
 - `label`
-  - : 자바스크립트에서 사용할 수 있는 식별자면 모두 가능하다.
+  - : JavaScript에서 사용할 수 있는 식별자면 모두 가능하다.
 - `statement`
   - : 구문. break는 모든 레이블 구문에서 사용될 수 있으며, continue는 반복 레이블 구문에서만 사용할 수 있다.
 
@@ -25,7 +25,7 @@ label:
 
 반복문에 레이블을 붙이고, break나 continue 구문을 사용해 반복문의 어느 위치에서 작업을 멈추고 어느 위치에서 다시 수행할지를 알려줄 수 있다.
 
-자바스크립트에는 goto 구문이 없다는 것에 주의. break나 continue에서만 레이블을 사용할 수 있다.
+JavaScript에는 goto 구문이 없다는 것에 주의. break나 continue에서만 레이블을 사용할 수 있다.
 
 [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) 코드에서 "let"을 레이블 이름으로 사용할 수 없다. {{jsxref("SyntaxError")}}를 발생시킨다. (let은 허용되지 않는 식별자이다.)
 

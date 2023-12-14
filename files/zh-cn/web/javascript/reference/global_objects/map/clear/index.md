@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 
 {{JSRef}}
 
-`clear()` 方法会移除 `Map` 对象中的所有元素。
+{{jsxref("Map")}} 实例的 **`clear()`** 方法会移除该 map 中的所有元素。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
 
@@ -15,9 +15,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 clear()
 ```
 
+### 参数
+
+无。
+
 ### 返回值
 
-{{jsxref("undefined")}}。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 

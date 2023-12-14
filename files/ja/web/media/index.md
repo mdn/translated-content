@@ -1,6 +1,8 @@
 ---
 title: ウェブメディア技術
 slug: Web/Media
+l10n:
+  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
@@ -24,16 +26,16 @@ slug: Web/Media
 
 ### API
 
-- [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API)
-  - : Media Capabilities API を使用すると、アプリやサイトが実行されているデバイスのエンコーディングとデコーディングの能力を判断できます。これにより、どのフォーマットをいつ使用するかをリアルタイムで判断することができます。
-- [メディアキャプチャと Streams API](/ja/docs/Web/API/Media_Streams_API)
+- [メディア能力 API](/ja/docs/Web/API/Media_Capabilities_API)
+  - : メディア能力 API を使用すると、アプリやサイトが実行されているデバイスのエンコーディングとデコーディングの能力を判断できます。これにより、どのフォーマットをいつ使用するかをリアルタイムで判断することができます。
+- [メディアキャプチャと Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
   - : ローカルおよび、ネットワークを介したメディアのストリーミング、記録、操作を可能にする API のリファレンスです。これには、ビデオ、オーディオおよび、静止画をキャプチャするためのローカルカメラとマイクの使用が含まれます。
-- [Media Session API](/ja/docs/Web/API/Media_Session_API)
-  - : Media Session API は、メディア通知をカスタマイズする方法を提供します。Media Session API は、ウェブアプリが再生しているメディアのユーザーエージェントが表示するためのメタデータを提供します。また、キーボード、ヘッドセット、リモコンなどにあるハードウェアキーや、モバイル機器の通知領域やロック画面にあるソフトウェアキーなどのプラットフォームメディアキーにアクセスするためのアクションハンドラーも提供しています。
-- [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API)
-  - : MediaStream Recording API を使用すると、メディアストリームをキャプチャしてデータ処理または、フィルターリングを行ったり、ディスクに記録したりすることができます。
-- [Web Audio API](/ja/docs/Web/API/Web_Audio_API)
-  - : Web Audio API を使用すると、サウンドデータをリアルタイムおよび、録音済み素材の両方で生成、フィルターリングおよび、操作してからそのオーディオを `<audio>` 要素、メディアストリームまたは、ディスクなどへ送信できます。
+- [メディアセッション API](/ja/docs/Web/API/Media_Session_API)
+  - : メディアセッション API は、メディア通知をカスタマイズする方法を提供します。メディアセッション API は、ウェブアプリが再生しているメディアのユーザーエージェントが表示するためのメタデータを提供します。また、キーボード、ヘッドセット、リモコンなどにあるハードウェアキーや、モバイル機器の通知領域やロック画面にあるソフトウェアキーなどのプラットフォームメディアキーにアクセスするためのアクションハンドラーも提供しています。
+- [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API)
+  - : MediaStream 収録 API を使用すると、メディアストリームをキャプチャしてデータ処理または、フィルターリングを行ったり、ディスクに記録したりすることができます。
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+  - : ウェブオーディオ API を使用すると、サウンドデータをリアルタイムおよび、録音済み素材の両方で生成、フィルターリングおよび、操作してからそのオーディオを `<audio>` 要素、メディアストリームまたは、ディスクなどへ送信できます。
 - [WebRTC](/ja/docs/Web/API/WebRTC_API)
   - : WebRTC (Web Real-Time Communication、ウェブリアルタイム通信) を使用すると、直接インターネット上の 2 つのピア間で、ライブオーディオとビデオをストリーミングしたり、任意のデータを転送したりできます。
 
@@ -47,7 +49,7 @@ slug: Web/Media
   - : ウェブ上の画像、音声および、動画メディアに使用できる、ファイルタイプとコーデックのガイドです。これには、どの種類のコンテンツにどの形式を使用するのかということ、フォールバックの提供方法や、メディアタイプの優先順位付けなどのベストプラクティスおよび、各メディアコンテナーとコーデックの一般的なブラウザー対応情報が含まれます。
 - [音声と動画のストリーミングガイド](/ja/docs/Web/Media/Streaming)
   - : 音声と動画のストリーミング方法、そしてストリームの最高の品質とパフォーマンスを確保するために活用できる技術と技術を網羅したガイドです。
-- [メディアおよび Web Audio API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
+- [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
   - : メディアや音声の予期しない自動再生は、ユーザーにとってはうれしくない驚きです。自動再生はある目的を果たす一方で、慎重に使用する必要があります。ユーザーがこれを制御できるようにするために、現在多くのブラウザーで自動再生ブロック機能が提供されています。この記事は自動再生の手引きとして、いつ、どのように使用するのかそして、ブラウザーを使って自動再生ブロックを適切に処理する方法についてのヒントを提供します。
 - [ウェブオーディオの空間演出の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
   - : 画面に描画された 3D シーンや、ヘッドセットを使用して体験する複合現実感などの 3D 環境では、音声が音源の方向から聞こえてくるように演奏することが重要です。このガイドでは、その方法について説明します。
@@ -56,11 +58,11 @@ slug: Web/Media
 
 面白い方法でメディア API と並行して使用できるような、興味深いトピックもあります。
 
-- [Canvas API](/ja/docs/Web/API/Canvas_API)
+- [キャンバス API](/ja/docs/Web/API/Canvas_API)
   - : Canvas API を使用すると、{{HTMLElement("canvas")}} に描画して、画像の内容を操作したり変更したりできます。これは、`<canvas>` 要素を動画の再生先または、カメラのキャプチャ先として設定して、ビデオフレームをキャプチャして操作できるようにするなど、さまざまな方法によるメディア使用を可能にします。
 - [WebGL](/ja/docs/Web/API/WebGL_API)
   - : WebGL は、既存の Canvas API 上に OpenGL ES 互換の API を提供し、ウェブ上で強力な 3D グラフィックスを実行することを可能にします。キャンバスを通して、これはメディアコンテンツに 3D画像を追加するように使用できます。
-- [WebXR](/ja/docs/Web/API/WebXR_API)
+- [WebXR](/ja/docs/Web/API/WebXR_Device_API)
   - : WebXR は最終的に、WebVR に代わるもので、バーチャルリアリティ (VR) と拡張現実 (AR) コンテンツの作成をサポートする技術です。複合現実的なコンテンツはその後、デバイスの画面に表示されるか、ゴーグルやヘッドセットを使用して表示されます。
 - [WebVR](/ja/docs/Web/API/WebVR_API) {{deprecated_inline}}
   - : Web Virtual Reality API は、Oculus Rift や HTC Vive などのバーチャルリアリティ (VR) デバイスをサポートしているため、開発者はユーザーの位置や動きを 3D シーン内の動きに変換して、デバイスに表示することができます。WebVR は順次、WebXR に置き換えられることが望まれています。WebXR はより広範囲なユースケースをカバーします。

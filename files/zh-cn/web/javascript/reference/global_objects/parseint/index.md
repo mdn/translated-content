@@ -170,7 +170,7 @@ console.log(filterInt("1.61803398875")); // NaN
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}

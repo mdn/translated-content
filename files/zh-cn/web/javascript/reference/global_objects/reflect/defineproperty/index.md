@@ -66,7 +66,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.defineProperty()")}}

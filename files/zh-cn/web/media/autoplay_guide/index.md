@@ -151,8 +151,6 @@ if (startPlayPromise !== undefined) {
 
 在 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 中，网站或应用程序可以使用链接到 {{domxref("AudioContext")}} 的源节点上的 `start()` 方法开始播放音频。在处理用户输入事件的上下文之外执行此操作受自动播放规则的约束。
 
-_更多内容即将推出；Mozilla 仍在致力于阻止自动播放。如果其他人已经拥有它，欢迎他们参与本部分……_
-
 ## 自动播放功能策略
 
 除了上述的浏览器端管理和对自动播放功能的控制之外，web 服务器也可以表示愿意让自动播放功能发挥作用。{{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} 标头的 [`autoplay`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) 指令用于控制哪些域（如果有）可用于自动播放媒体。默认情况下， `autoplay` 功能策略设置为 `'self'`（_包括单引号字符_），表示允许自动播放，因为它们与文档托管在同一域中。

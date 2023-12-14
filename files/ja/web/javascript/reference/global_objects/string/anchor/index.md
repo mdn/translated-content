@@ -9,7 +9,7 @@ l10n:
 
 **`anchor()`** メソッドは、{{HTMLElement("a")}} 要素に name を付けたものに文字列を埋め込んだ文字列 (`<a name="...">str</a>`) を生成します。
 
-> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
+> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
 >
 > HTML 仕様書では {{HTMLElement("a")}} 要素に `name` 属性を設定することを許容しなくなりましたので、このメソッドが生成するものは妥当なマークアップになりません。
 

@@ -94,7 +94,7 @@ Safari Mobile considers the following elements to be typically interactive (and 
 - {{HTMLElement("textarea")}}
 - _This list is incomplete; you can help MDN by doing further testing/research and expanding it._
 
-{{Compat("api.Element.click_event")}}
+{{Compat}}
 
 ## See also
 

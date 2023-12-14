@@ -486,13 +486,11 @@ Examples of this usage can be [found above](#Preflighted_requests).
 
 ## Specifications
 
-| Specification                                   | Status             | Comment                                                                          |
-| ----------------------------------------------- | ------------------ | -------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### Compatibility notes
 

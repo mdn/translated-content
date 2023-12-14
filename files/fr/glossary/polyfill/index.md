@@ -3,6 +3,8 @@ title: Polyfill
 slug: Glossary/Polyfill
 ---
 
+{{GlossarySidebar}}
+
 Un polyfill est un bout de code (généralement en JavaScript sur le web) utilisé pour fournir des fonctionnalités récentes sur d'anciens navigateurs qui ne les supportent pas nativement.
 
 Par exemple, un polyfill pourrait être utilisé pour imiter la fonctionnalité d'un élément HTML Canvas sur Microsoft Internet Explorer 7 avec un plugin Silverlight, ou imiter le support des unités de mesure en rem ou ce que vous voulez.

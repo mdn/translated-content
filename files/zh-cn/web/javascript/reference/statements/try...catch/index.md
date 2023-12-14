@@ -242,7 +242,7 @@ try {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error")}}
 - {{jsxref("Statements/throw", "throw")}}

@@ -98,6 +98,6 @@ Service worker 可以使用以下 API 来使你的应用程序在离线状态下
 
 ## 参见
 
-- web.dev 上的[渐进式 web 应用](https://web.dev/progressive-web-apps/)
+- web.dev 上的[渐进式 web 应用](https://web.dev/explore/progressive-web-apps)
 - web.dev 上的[学习 PWA](https://web.dev/learn/pwa/)
 - learn.microsoft.com 上的[渐进式 web 应用](https://learn.microsoft.com/zh-cn/microsoft-edge/progressive-web-apps-chromium/)（2023 年 1 月 24 日）

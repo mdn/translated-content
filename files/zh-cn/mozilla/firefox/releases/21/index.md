@@ -88,7 +88,7 @@ slug: Mozilla/Firefox/Releases/21
 
     - `nsINavHistoryService::AddVisit`
 
-## 相关链接
+## 参见
 
 - [Firefox 21 发行说明](http://www.mozilla.org/zh-CN/firefox/21.0/releasenotes/)
 - [Firefox 21 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_21)

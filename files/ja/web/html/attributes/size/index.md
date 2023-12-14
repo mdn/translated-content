@@ -1,6 +1,8 @@
 ---
 title: "HTML 属性: size"
 slug: Web/HTML/Attributes/size
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
@@ -8,6 +10,8 @@ slug: Web/HTML/Attributes/size
 **`size`** 属性は、 {{htmlelement('input')}} 要素の幅と {{htmlelement('select')}} 要素の高さを定義します。 `input` については、 `type` 属性が {{HTMLElement("input/text", "text")}} または {{HTMLElement("input/password", "password")}} の場合は文字数です。これは 0 以上の整数でなければなりません。 `size` が指定されていないか、無効な値が指定された場合、入力欄にサイズが宣言されず、そのフォームコントロールはユーザーエージェントに基づいた既定の幅になります。 CSS が幅に影響を与えるプロパティで要素を対象としている場合は、 CSS が優先されます。
 
 `size` 属性は制約検証には影響しません。
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-size.html", "tabbed-standard")}}
 
 ## 例
 

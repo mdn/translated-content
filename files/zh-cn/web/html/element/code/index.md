@@ -33,7 +33,7 @@ Regular text. `This is code.` Regular text.
 
 CSS 规则可以覆盖浏览器默认的 `code` 标签字体样式。但用户设置的浏览器字体选项可能会超过 CSS 的优先级，使之无效。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -41,11 +41,11 @@ CSS 规则可以覆盖浏览器默认的 `code` 标签字体样式。但用户�
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{HTMLElement("samp")}}
 - {{HTMLElement("kbd")}}
-- {{HTMLElement("command")}}
 - {{HTMLElement("var")}}
+- {{HTMLElement("pre")}}
 
 {{HTMLSidebar}}

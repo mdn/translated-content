@@ -103,9 +103,7 @@ p {
 
 ## Спецификации
 
-| Specification                                                                 | Status                        | Comment            |
-| ----------------------------------------------------------------------------- | ----------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-image-width', 'border-image-width')}} | {{Spec2('CSS3 Backgrounds')}} | Initial definition |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

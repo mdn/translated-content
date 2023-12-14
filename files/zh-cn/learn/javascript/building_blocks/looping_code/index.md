@@ -694,7 +694,7 @@ do {
 
 如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
 
-## 相关链接
+## 参见
 
 - [Loops and iteration in detail](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [for statement reference](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)

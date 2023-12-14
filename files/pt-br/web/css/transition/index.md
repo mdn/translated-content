@@ -52,13 +52,11 @@ Existem vários outros exemplos de transições CSS incluídas no artigo princip
 
 ## Specifications
 
-| Specification                                                                      | Status                          | Comment            |
-| ---------------------------------------------------------------------------------- | ------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Transitions', '#transition-shorthand-property', 'transition') }} | {{ Spec2('CSS3 Transitions') }} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## See also
 

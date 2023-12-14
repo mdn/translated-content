@@ -18,13 +18,8 @@ slug: Glossary/Algorithm
 
 还有很多机器学习算法例如“线性回归”、“决策树”、“随机森林”、“支持向量机”、“循环神经网络（RNN）”、“长短时记忆（LSTM）神经网络”、“卷积神经网络（CNN）”、“深度卷积神经网络”等。
 
-## 更多详情
-
-### 通用知识库（维基百科）
+## 参见
 
 - [Algorithm](https://zh.wikipedia.org/wiki/Algorithm)，维基百科
-
-### 技术分析
-
 - [Explanations of sorting algorithms](https://www.toptal.com/developers/sorting-algorithms)
-- [Explanations of algorithmic complexity](https://bigocheatsheet.com/)
+- [Explanations of algorithmic complexity](https://www.bigocheatsheet.com/)

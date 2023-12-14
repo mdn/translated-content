@@ -90,4 +90,4 @@ initial-letter-align: unset;
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.initial-letter-align")}}
+{{Compat}}

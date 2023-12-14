@@ -75,7 +75,7 @@ form {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.min-height")}}
+{{Compat}}
 
 ## 関連情報
 

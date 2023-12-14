@@ -89,13 +89,11 @@ console.log(str); // retorna 'foo  '
 
 ## Especificações
 
-| Especificação                                                                             |
-| ----------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.trimstart', ' String.prototype.trimStart')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.trimStart")}}
+{{Compat}}
 
 ## Veja também
 

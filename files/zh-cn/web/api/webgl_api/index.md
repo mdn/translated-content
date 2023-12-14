@@ -127,7 +127,7 @@ WebGL 2 是 WebGL 的一个主要更新，它通过{{domxref("WebGL2RenderingCon
 - [WebGL 模型视图投影](/zh-CN/docs/Web/API/WebGL_API/WebGL_model_view_projection)
   - : 详述了常用于显示 3D 物体视图的三种核心矩阵：模型，视图和投影矩阵。
 - [Web 中的矩阵运算](/zh-CN/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
-  - : 讲述 3D 变换矩阵工作原理的指南 —— 这也能在 WebGL 计算和 CSS3 变换中派上用场。
+  - : 讲述 3D 变换矩阵工作原理的指南——这也能在 WebGL 计算和 CSS3 变换中派上用场。
 
 ## 资源
 

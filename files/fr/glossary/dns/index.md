@@ -3,6 +3,8 @@ title: DNS
 slug: Glossary/DNS
 ---
 
+{{GlossarySidebar}}
+
 **DNS** (domain name system) transforme les noms de domaines en adresses IP nécessaires à la mise en relation avec un service sur Internet ou un réseau privé.
 
 ## Pour en savoir plus

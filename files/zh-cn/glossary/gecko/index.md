@@ -11,12 +11,6 @@ Web {{glossary("browser","浏览器")}} 需要一个被称为布局引擎的软�
 
 由于所有的 Firefox OS 应用都是 Web 应用程序，所以 Firefox OS 会使用 Gecko 当其应用处于运行时。
 
-## 了解更多
-
-### 基本知识
+## 参见
 
 - [Gecko](<https://zh.wikipedia.org/wiki/Gecko_(software)>) on Wikipedia
-
-### 技术参考
-
-- [The Gecko documentation on MDN](/zh-CN/docs/Mozilla/Gecko)

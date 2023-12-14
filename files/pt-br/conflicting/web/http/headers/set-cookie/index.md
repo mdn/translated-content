@@ -49,7 +49,7 @@ Set-Cookie2: <cookie-name>=<cookie-value>, <cookie-name>=<cookie-value>, ...
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Set-Cookie2")}}
+{{Compat}}
 
 ## Veja também
 
