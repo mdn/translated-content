@@ -343,11 +343,11 @@ CSS를 구성하는 또 다른 방법은 프론트엔드 개발자를 위한 도
 
 가장 유명한 전처리 도구는 [Sass](https://sass-lang.com/)입니다. 이것은 Sass 자습서가 아니므로, Sass가 할 수 있는 몇 가지를 간단히 설명하겠습니다. 이들은 다른 Sass 기능을 사용하지 않더라도 구성하는, 조직성 측면에서 매우 도움이 됩니다. Sass에 대해 더 많이 알고 싶다면, [Sass 기초](https://sass-lang.com/guide) 문서로 시작한 다음 다른 문서를 참조하시기 바랍니다.
 
-#### Defining variables
+#### 변수 선언하기
 
-CSS now has native [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties), making this feature increasingly less important. However, one of the reasons you might use Sass is to be able to define all of the colors and fonts used in a project as settings, then to use that variable around the project. This means that if you realize you have used the wrong shade of blue, you only need change it in one place.
+CSS 에는 기본 [사용자 지정 CSS 속성 사용하기](/en-US/docs/Web/CSS/Using_CSS_custom_properties)가 있으므로 이 기능의 중요성이 점점 줄어듭니다. 그러나 Sass를 사용하는 이유 중 하나는 프로젝트에 사용되는 모든 색상과 글꼴을 설정으로 정의한 다음 프로젝트 주변에 해당 변수를 사용할 수 있기 때문입니다. 즉, 파란색 음영을 잘못 사용했다는 것을 깨달았을 때 한 곳에서만 변경하면 됩니다.
 
-If we created a variable called `$base-color`, as in the first line below, we could then use it through the stylesheet anywhere that required that color.
+아래 첫 번째 줄처럼 `$base-color`라는 변수를 만들면 해당 색상이 필요한 모든 곳에서 스타일 시트를 통해 사용할 수 있습니다.
 
 ```scss
 $base-color: #c6538c;
@@ -357,7 +357,7 @@ $base-color: #c6538c;
 }
 ```
 
-Once compiled to CSS, you would end up with the following CSS in the final stylesheet.
+CSS로 컴파일되면 최종 스타일시트에 다음과 같은 CSS를 얻게 됩니다.
 
 ```css
 .alert {
