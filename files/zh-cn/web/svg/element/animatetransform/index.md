@@ -35,8 +35,6 @@ slug: Web/SVG/Element/animateTransform
 </svg>
 ```
 
-**示例输出**
-
 {{ EmbedLiveSample('示例','120','120') }}
 
 ## 属性

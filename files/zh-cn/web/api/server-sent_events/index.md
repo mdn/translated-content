@@ -39,9 +39,9 @@ slug: Web/API/Server-sent_events
 - Rick Waldron 的 [jquery 插件](https://github.com/rwaldron/jquery.eventsource)
 - intercooler.js [声明性的 SSE 支持](https://intercoolerjs.org/docs.html#sse)
 
-### 相关话题
+### 相关主题
 
-- [AJAX](/zh-CN/docs/Web/Guide/AJAX)
+- [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [JavaScript](/zh-CN/docs/Web/JavaScript)
 - [WebSocket](/zh-CN/docs/Web/API/WebSockets_API)
 

@@ -3,6 +3,8 @@ title: Selector (CSS)
 slug: Glossary/CSS_Selector
 ---
 
+{{GlossarySidebar}}
+
 O **seletor CSS** é parte da regra do CSS que lhe permite selecionar qual elemento(s) vai receber o estilo pela regra.
 
 ## Exemplos

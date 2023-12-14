@@ -266,16 +266,3 @@ WEBVTT
 - Автоматические опции по переводу([translate multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/)).
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
-
-## В этом модуле
-
-- [Images in HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
-
-<!---->
-
-<!---->

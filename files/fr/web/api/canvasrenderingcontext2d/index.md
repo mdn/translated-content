@@ -152,8 +152,6 @@ The following methods can be used to manipulate paths of objects.
 
 Objects in the `CanvasRenderingContext2D` rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("SVGMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.
 
-- {{domxref("CanvasRenderingContext2D.currentTransform")}}
-  - : Current transformation matrix ({{domxref("SVGMatrix")}} object).
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - : Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.
 - {{domxref("CanvasRenderingContext2D.scale()")}}
@@ -273,10 +271,6 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 #### Prefixed APIs
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inversed transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`

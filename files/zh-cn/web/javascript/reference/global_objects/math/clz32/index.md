@@ -173,7 +173,7 @@ if (!Math.clz32)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math")}}
 - {{jsxref("Math.imul")}}

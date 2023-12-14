@@ -6,7 +6,7 @@
 //
 // Written by Queen Vinyl Da.i'gyu-Kazotetsu (@queengooborg, https://www.queengoob.org)
 
-import fs from "fs-extra";
+import fs from "node:fs/promises";
 import cld from "cld";
 import { fdir } from "fdir";
 import MarkdownIt from "markdown-it";

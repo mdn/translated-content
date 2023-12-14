@@ -83,7 +83,7 @@ doc.appendChild(peopleElem);
 DOM 树可以：
 
 - [使用 XPath 表达式查询](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
-- 使用 [XMLSerializer](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML) 转换为字符串
+- 使用 [XMLSerializer](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML) 转换为字符串
 - 使用 `XMLHttpRequest` [发布到 web 服务器](/zh-CN/docs/Web/API/XMLHttpRequest)上
 - 使用 [XSLT](/zh-CN/docs/Web/XSLT) 或 [XLink](/zh-CN/docs/Glossary/XLink) 转换
 
@@ -91,5 +91,5 @@ DOM 树可以：
 
 - [XML](/zh-CN/docs/Web/XML)
 - [XPath](/zh-CN/docs/Web/XPath)
-- [解析和序列化 XML](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML)
+- [解析和序列化 XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)

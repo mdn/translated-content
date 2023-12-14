@@ -115,15 +115,6 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 ## 參見
 
-- MDN 上涵蓋 XMLHttpRequest 的相關教學：
-
-  - [Ajax](/zh-TW/docs/Web/Guide/AJAX)
-  - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-  - [`FormData`](/zh-TW/docs/Web/API/FormData)
-
-- [HTML5 Rocks — New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
-- `Chrome scope availability` — how to access XMLHttpRequest from JSM modules etc., which do not have access to DOM
-
-  - [Components.utils.importGlobalProperties](/zh-TW/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties)
-  - [nsIXMLHttpRequest](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)
+- {{domxref("XMLSerializer")}}：將 DOM 樹解析為 XML 物件
+- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Fetch API](/zh-TW/docs/Web/API/Fetch_API)

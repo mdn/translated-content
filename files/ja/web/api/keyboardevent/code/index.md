@@ -1,8 +1,9 @@
 ---
-title: KeyboardEvent.code
+title: "KeyboardEvent: code プロパティ"
+short-title: code
 slug: Web/API/KeyboardEvent/code
 l10n:
-  sourceCommit: d3408b2effc88ae340124639248fdcf986dfaa21
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("UI Events")}}
@@ -15,7 +16,7 @@ l10n:
 
 例えば、返ってきた `code` が "`KeyQ`" は QWERTY レイアウトのキーボードでは <kbd>Q</kbd> キーですが、同じ Dvorak キーボードでは同じ `code` の値が <kbd>'</kbd> キーを表し、 AZERTY キーボードでは <kbd>A</kbd> キーを表すものでもあります。したがって、すべてのユーザーが特定のキーボードレイアウトを使用しているわけではないため、 `code` の値を用いてユーザーが認識しているキーの名前が何であるかを特定することはできません。
 
-キーイベントに対応する文字が何であるかを判別するには、代わりに{{domxref("KeyboardEvent.key")}} プロパティを使用してください。
+キーイベントに対応する文字が何であるかを判別するには、代わりに {{domxref("KeyboardEvent.key")}} プロパティを使用してください。
 
 ## 値
 
@@ -25,10 +26,11 @@ Windows, Linux, macOS におけるコード値は、 [KeyboardEvent: コード�
 
 ### KeyboardEvent の使用例
 
-```html
+#### HTML
+
+```html-nolint
 <p>
-  キーボードのキーを押して、 KeyboardEvent
-  のキーとコードの値がそれぞれどうなっているかを確認しましょう。
+  キーボードのキーを押して、 KeyboardEvent のキーとコードの値がそれぞれどうなっているかを確認しましょう。
 </p>
 <div id="output" tabindex="0"></div>
 ```
@@ -211,7 +213,7 @@ window.addEventListener(
 );
 ```
 
-#### やってみましょう
+#### 試してみましょう
 
 キー入力が確実にサンプルコードに反映されるように、キーを押す前に下の黒いゲームプレイフィールドをクリックまたはフォーカスしてください。
 

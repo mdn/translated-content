@@ -68,7 +68,7 @@ CDN 是一个分布在不同地理位置的服务器网络，它们协同工作�
 
 ### 减少内联脚本的数量
 
-内联脚本对页面加载的影响很大，因为解析器必须假定内联脚本可能会在解析过程中修改页面结构。减少内联脚本的使用，尤其是减少使用 `document.write()` 来输出内容，可以提高页面的整体加载速度。为现代浏览器使用现代 [AJAX](/zh-CN/docs/Web/Guide/AJAX) 方法来操作页面内容，而不是使用基于 `document.write()` 的旧方法。
+内联脚本对页面加载的影响很大，因为解析器必须假定内联脚本可能会在解析过程中修改页面结构。减少内联脚本的使用，尤其是减少使用 `document.write()` 来输出内容，可以提高页面的整体加载速度。为现代浏览器使用 [DOM API 来操作页面内容](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)，而不是使用 `document.write()`。
 
 ### 使用现代 CSS 和有效标记
 

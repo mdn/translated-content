@@ -24,15 +24,15 @@ Historically, this has been presented as a horizontal rule or line. While it may
 
 This element's attributes include the [global attributes](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : Задаёт правило выравнивания.По умолчанию значение выставлено как **left**
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : Задаёт цвет линии
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : Sets the rule to have no shading.
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : Устанавливает высоту в px
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : Задаёт длину линии в px либо в %
 
 ## Example

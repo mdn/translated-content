@@ -7,6 +7,8 @@ slug: Web/SVG/Attribute/r
 
 Этот атрибут используют два элемента: {{SVGElement("circle")}}, и {{SVGElement("radialGradient")}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -40,7 +42,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## circle
 

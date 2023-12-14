@@ -40,6 +40,6 @@ Object(Symbol("foo")).toString() + "bar";
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.valueOf()")}}

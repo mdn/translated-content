@@ -46,8 +46,8 @@ var premierControle = false,
   acces = premierControle
     ? "Accès refusé"
     : secondControle
-    ? "Accès refusé"
-    : "Accès autorisé";
+      ? "Accès refusé"
+      : "Accès autorisé";
 
 console.log(acces); // "Accès autorisé"
 ```

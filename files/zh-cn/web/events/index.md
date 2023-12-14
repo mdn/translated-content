@@ -406,9 +406,9 @@ slug: Web/Events
       <td>媒体</td>
       <td>
         <p>
-          与媒体使用（包括
-          <a href="/zh-CN/docs/Web/API/Media_Streams_API#events"
-            >Media Capture and Streams API</a
+          与媒体使用（包括<a
+            href="/zh-CN/docs/Web/API/Media_Capture_and_Streams_API#事件"
+            >媒体捕捉与媒体流 API</a
           >、<a href="/zh-CN/docs/Web/API/Web_Audio_API#events">Web Audio API</a>、<a href="/zh-CN/docs/Web/API/Picture-in-Picture_API#事件"
             >画中画 API</a
           >，等等）相关的事件。

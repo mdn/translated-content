@@ -27,4 +27,4 @@ slug: Web/API/HTMLUnknownElement
 
 ## 関連情報
 
-- このインターフェイスを持つ非標準要素及び廃止要素 : {{HTMLElement("bgsound")}} 、 {{HTMLElement("blink")}} 、 {{HTMLElement("isindex")}} 、 {{HTMLElement("multicol")}} 、 {{HTMLElement("nextid")}} 、 {{HTMLElement("rb")}} 、 {{HTMLElement("spacer")}}
+- このインターフェイスを持つ非標準要素及び廃止要素 : {{HTMLElement("bgsound")}} 、 {{HTMLElement("isindex")}} 、 {{HTMLElement("multicol")}} 、 {{HTMLElement("nextid")}} 、 {{HTMLElement("rb")}} 、 {{HTMLElement("spacer")}}

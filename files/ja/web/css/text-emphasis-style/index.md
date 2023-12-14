@@ -35,6 +35,8 @@ text-emphasis-style: revert;
 text-emphasis-style: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/text-emphasis-style.html")}}
+
 ## 構文
 
 ### 値

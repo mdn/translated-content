@@ -74,9 +74,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${quota} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${quota} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -153,9 +152,8 @@ document.querySelector("#generate").addEventListener("click", () => {
 
 // 当 worker 给主线程回发一条消息时，为用户更新 output 框，包含生成的质数（从 message 中获取）。
 worker.addEventListener("message", (message) => {
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${message.data} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${message.data} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {

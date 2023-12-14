@@ -41,7 +41,7 @@ var UTCstring = today.toUTCString();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toDateString()")}}

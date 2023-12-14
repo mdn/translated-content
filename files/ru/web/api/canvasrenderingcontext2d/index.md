@@ -152,8 +152,6 @@ ctx.fillRect(10, 10, 55, 50);
 
 Объекты в контексте рендеринга `CanvasRenderingContext2D` имеют текущую матрицу преобразований и методы для управления ей. Матрица преобразований применяется в момент создания текущего контура по умолчанию, рисования текста, форм и объектов {{domxref("Path2D")}}. Методы, перечисленные ниже, остаются по историческим причинам и из соображений совместимости, в то время как в настоящее время в большинстве разделов API используются объекты {{domxref("SVGMatrix")}}, которые будут использоваться в будущем как замена устаревшим методам.
 
-- {{domxref("CanvasRenderingContext2D.currentTransform")}}
-  - : Текущая матрица преобразований ({{domxref("SVGMatrix")}} object).
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - : Добавляет вращение в матрицу преобразований. Аргумент представляет угол вращения по часовой стрелке, выраженный в радианах.
 - {{domxref("CanvasRenderingContext2D.scale()")}}
@@ -275,10 +273,6 @@ ctx.fillRect(10, 10, 55, 50);
 
 #### Prefixed APIs
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inversed transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozFillRule`
   - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`

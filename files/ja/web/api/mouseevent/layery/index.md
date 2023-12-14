@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.layerY
+title: "MouseEvent: layerY プロパティ"
+short-title: layerY
 slug: Web/API/MouseEvent/layerY
 l10n:
-  sourceCommit: a03b4b0e9aaac7409ff1ce974ab1bf2f40c81e03
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}{{Non-standard_Header}}

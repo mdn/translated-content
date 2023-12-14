@@ -26,7 +26,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ### Обработка ошибок
 
-Заметьте, если процесс парсинга не удастся , `DOMParser` теперь не выдаёт исключение, но вместо этого выдаёт документ ошибки (see {{Bug(45566)}}):
+Заметьте, если процесс парсинга не удастся , `DOMParser` теперь не выдаёт исключение, но вместо этого выдаёт документ ошибки (see [Firefox bug 45566](https://bugzil.la/45566)):
 
 ```xml
 <parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">

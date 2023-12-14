@@ -3,6 +3,8 @@ title: Кодирование и декодирование в формате Ba
 slug: Glossary/Base64
 ---
 
+{{GlossarySidebar}}
+
 **Base64** - это группа схожих [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) схем, которые представляют двоичные данные в ASCII-формате методом перевода в radix-64 представление. Термин _Base64_ происходит от a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 
 Кодирование Base64 широко используется в случаях, когда требуется перекодировать двоичные данные для передачи по каналу приспособленному для передачи текстовых данных. Это делается с целью защиты двоичных данных от любых возможных повреждений при передаче. Base64 широко используется во многих приложениях, включая электронную почту ([MIME](https://en.wikipedia.org/wiki/MIME)), и при сохранении больших объёмов данных в [XML](/ru/docs/XML).

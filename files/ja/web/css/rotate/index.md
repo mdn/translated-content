@@ -33,6 +33,8 @@ rotate: revert;
 rotate: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/rotate.html")}}
+
 ### 値
 
 - 角度値

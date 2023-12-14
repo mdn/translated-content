@@ -30,7 +30,7 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR
 
   - : Um atributo Booleano; se especificado, o video vai começar a carregar automaticamente mesmo que não especificado para tocar automaticamente. Isso deve ser usado em casos que é esperado que o vídeo seja reproduzido (por exemplo, se o usuário acessa a página para assistir o vídeo, mas não se o vídeo estiver incorporado à pagina junto a outro conteúdo). O vídeo é carregado até que o cache de mídia.
 
-    > **Note:** **Nota de implementação:** embora parte dos primeiros rascunhos das especificações do HTML5, o atributo `autobuffer` foi removido das últimas versões. Ele foi removido do Gecko 2.0 e outros navegadores, e nunca implementado em outros. A especificação define um novo atributo enumerado, `preload`, para substituir o atributo `autobuffer`, com sintaxe diferente. {{ bug(548523) }}
+    > **Note:** **Nota de implementação:** embora parte dos primeiros rascunhos das especificações do HTML5, o atributo `autobuffer` foi removido das últimas versões. Ele foi removido do Gecko 2.0 e outros navegadores, e nunca implementado em outros. A especificação define um novo atributo enumerado, `preload`, para substituir o atributo `autobuffer`, com sintaxe diferente. [Firefox bug 548523](https://bugzil.la/548523)
 
 - `buffered`
   - : Um atributo que pode ser lido para determinar os intervalos do vídeo que já foram carregados. Este atributo contém um objeto {{ domxref("TimeRanges") }}.

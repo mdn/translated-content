@@ -20,7 +20,7 @@ slug: Mozilla/Firefox/Releases/23
 
 ### HTML
 
-- Le support de l'élément {{HTMLElement("blink")}} a désormais été abandonné. La balise `<blink>` fait désormais partie de l'interface {{domxref("HTMLUnknownElement")}} ([bug Firefox 857820](https://bugzil.la/857820).)
+- Le support de l'élément `<blink>` a désormais été abandonné. La balise `<blink>` fait désormais partie de l'interface {{domxref("HTMLUnknownElement")}} ([bug Firefox 857820](https://bugzil.la/857820).)
 - Le type `range` de l'élément {{HTMLElement("input")}} (`<input type="range">`) a été activé par défaut ([bug Firefox 841950](https://bugzil.la/841950)).
 
 ### JavaScript

@@ -115,7 +115,7 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 {{Compat}}
 
-> **备注：** 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值 —— network.http.referer.userControlPolicy。可选的值包括：
+> **备注：** 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值——network.http.referer.userControlPolicy。可选的值包括：
 
 - 0 — `no-referrer`
 - 1 — `same-origin`

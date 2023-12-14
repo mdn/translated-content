@@ -3,6 +3,8 @@ title: Boolean
 slug: Glossary/Boolean
 ---
 
+{{GlossarySidebar}}
+
 コンピューター科学において、**boolean**（論理型、真偽値型）は `true`（真）か `false`（偽）の値のみを取れる論理データ型です。たとえば、 JavaScript では boolean による条件がコードの部分を実行するか（[if 文](/ja/docs/Web/JavaScript/Reference/Statements/if...else)の中など）や繰り返し（[for ループ](/ja/docs/Web/JavaScript/Reference/Statements/for)など）を決定します。
 
 ```js

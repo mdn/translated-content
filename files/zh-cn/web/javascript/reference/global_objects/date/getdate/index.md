@@ -44,7 +44,7 @@ alert(day); // 25
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCDate()")}}
 - {{jsxref("Date.prototype.getUTCDay()")}}

@@ -3,6 +3,8 @@ title: "Null"
 slug: Glossary/Null
 ---
 
+{{GlossarySidebar}}
+
 コンピュータサイエンス分野において、一般的に **`null`** という値は、存在しないまたは無効な{{glossary("object","オブジェクト")}}やアドレスへのポインター参照を表します。 null による参照が持つ意味は、言語実装によって様々です。
 
 {{Glossary("JavaScript")}} では、 `null` は動作がプリミティブらしく見えるので、{{Glossary("Primitive", "プリミティブ値")}}の一つであるとされています。

@@ -17,7 +17,7 @@ Veja [Using files from web applications](/pt-BR/docs/Using_files_from_web_applic
 
 A referência ao arquivo pode ser salva quando o formulário é submetido enquanto o usuário está offline, de forma que os dados possam ser recuperados e enviados quando a conexão com a internet for reestabelecida,
 
-**Propriedades**
+## Propriedades
 
 - {{domxref("File.lastModifiedDate")}} {{readonlyinline}}
   - : A Data da última modificação do arquivo referenciado pelo objeto `File`.

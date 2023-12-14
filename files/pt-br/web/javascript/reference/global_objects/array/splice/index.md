@@ -38,7 +38,7 @@ array.splice(indice) // SpiderMonkey/Firefox extension
 
 Uma lista contendo os elementos removidos. Se apenas um elemento é removido, por exemplo, uma lista contendo apenas um elemento é retornada. Se nenhum elemento é removido, uma lista vazia é retornada.
 
-**Descrição**
+## Descrição
 
 Se você especificar um número diferente de elementos a inserir comparado ao número de elementos que você está removendo, a lista terá um tamanho diferente no final da execução.
 

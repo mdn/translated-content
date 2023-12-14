@@ -15,7 +15,7 @@ Firefox 23 移除了针对 HTML5 WebM 视频的 DASH 实现。此功能将被 [�
 
 首先，你需要将 WebM 视频转换为带有不同比特率的随附视频文件的 DASH 清单。根据你的需求，启动从 [ffmpeg.org](http://www.ffmpeg.org) 的 ffmpeg 程序，就可以使用 libvpx 和 libbvorbis 支持的 WebM 视频和音频（版本 2.5 以上，3.2.5 版本已通过测试）。
 
-### 1. 使用现有的 WebM 文件创建一个音频文件和多个视频文件。
+### 1. 使用现有的 WebM 文件创建一个音频文件和多个视频文件
 
 例如：
 

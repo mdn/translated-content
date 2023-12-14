@@ -15,6 +15,8 @@ slug: Web/CSS/:checked
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-checked.html", "tabbed-shorter")}}
+
 ユーザーは要素をチェック/選択することでこの状態にすることができ、要素のチェックや選択を外すとこの状態から外れます。
 
 > **メモ:** ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/Replaced_element)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。

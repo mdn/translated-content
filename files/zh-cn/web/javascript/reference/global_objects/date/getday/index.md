@@ -50,7 +50,7 @@ console.log(weekday); // 1
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCDate()")}}
 - {{jsxref("Date.prototype.getUTCDay()")}}

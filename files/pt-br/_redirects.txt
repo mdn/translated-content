@@ -4,7 +4,7 @@
 #    yarn content add-redirect <fromURL> <toURL>
 #
 # FROM-URL	TO-URL
-/pt-BR/docs/AJAX	/pt-BR/docs/Web/Guide/AJAX
+/pt-BR/docs/AJAX	/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /pt-BR/docs/AJAX/Getting_Started	/pt-BR/docs/conflicting/Web/Guide/AJAX
 /pt-BR/docs/API_Web_Audio	/pt-BR/docs/Web/API/Web_Audio_API
 /pt-BR/docs/Aprender	/pt-BR/docs/Learn
@@ -103,7 +103,7 @@
 /pt-BR/docs/DOM/Referencia_do_DOM/Introdução	/pt-BR/docs/Web/API/Document_Object_Model/Introduction
 /pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM	/pt-BR/docs/Web/API/Document_Object_Model/Whitespace
 /pt-BR/docs/DOM/XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest
-/pt-BR/docs/DOM/XMLHttpRequest/Usando_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/pt-BR/docs/DOM/XMLHttpRequest/Usando_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /pt-BR/docs/DOM/element.addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/DOM/element.addEventListener-redirect-1	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/DOM/window.URL.createObjectURL	/pt-BR/docs/Web/API/URL/createObjectURL_static
@@ -534,7 +534,8 @@
 /pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange	/pt-BR/docs/Web/API/BatteryManager/dischargingtimechange_event
 /pt-BR/docs/Web/API/BatteryManager/ondischargintimechange	/pt-BR/docs/Web/API/BatteryManager/dischargingtimechange_event
 /pt-BR/docs/Web/API/BatteryManager/onlevelchange	/pt-BR/docs/Web/API/BatteryManager/levelchange_event
-/pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/console/timeEnd
+/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/pt-BR/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
+/pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/console/timeend_static
 /pt-BR/docs/Web/API/Coordinates	/pt-BR/docs/Web/API/GeolocationCoordinates
 /pt-BR/docs/Web/API/Coordinates/altitude	/pt-BR/docs/Web/API/GeolocationCoordinates/altitude
 /pt-BR/docs/Web/API/DOMString	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
@@ -584,7 +585,8 @@
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
 /pt-BR/docs/Web/API/HTMLContentElement/getDistributedNodes	/pt-BR/docs/Web/API/HTMLSlotElement
 /pt-BR/docs/Web/API/HTMLContentElement/select	/pt-BR/docs/conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
-/pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
+/pt-BR/docs/Web/API/History_API/Example	/pt-BR/docs/Web/API/History_API/Working_with_the_History_API
+/pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Working_with_the_History_API
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /pt-BR/docs/Web/API/Navigation_timing_API	/pt-BR/docs/Web/API/Performance_API/Navigation_timing
 /pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/getBattery
@@ -634,9 +636,23 @@
 /pt-BR/docs/Web/API/WindowTimers.clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/WindowTimers/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/XMLDocument/async	/pt-BR/docs/conflicting/Web/API/XMLDocument
-/pt-BR/docs/Web/API/XMLHttpRequest/Requisicoes_sincronas_e_assincronas	/pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
-/pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/pt-BR/docs/Web/API/XMLHttpRequest/Requisicoes_sincronas_e_assincronas	/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
+/pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
+/pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /pt-BR/docs/Web/API/XMLHttpRequest/onreadystatechange	/pt-BR/docs/Web/API/XMLHttpRequest/readystatechange_event
+/pt-BR/docs/Web/API/console/assert	/pt-BR/docs/Web/API/console/assert_static
+/pt-BR/docs/Web/API/console/clear	/pt-BR/docs/Web/API/console/clear_static
+/pt-BR/docs/Web/API/console/count	/pt-BR/docs/Web/API/console/count_static
+/pt-BR/docs/Web/API/console/dir	/pt-BR/docs/Web/API/console/dir_static
+/pt-BR/docs/Web/API/console/error	/pt-BR/docs/Web/API/console/error_static
+/pt-BR/docs/Web/API/console/info	/pt-BR/docs/Web/API/console/info_static
+/pt-BR/docs/Web/API/console/log	/pt-BR/docs/Web/API/console/log_static
+/pt-BR/docs/Web/API/console/table	/pt-BR/docs/Web/API/console/table_static
+/pt-BR/docs/Web/API/console/time	/pt-BR/docs/Web/API/console/time_static
+/pt-BR/docs/Web/API/console/timeEnd	/pt-BR/docs/Web/API/console/timeend_static
+/pt-BR/docs/Web/API/console/timeStamp	/pt-BR/docs/Web/API/console/timestamp_static
+/pt-BR/docs/Web/API/console/warn	/pt-BR/docs/Web/API/console/warn_static
 /pt-BR/docs/Web/API/document.getElementById	/pt-BR/docs/Web/API/Document/getElementById
 /pt-BR/docs/Web/API/document.images	/pt-BR/docs/Web/API/Document/images
 /pt-BR/docs/Web/API/document.scripts	/pt-BR/docs/Web/API/Document/scripts
@@ -733,18 +749,20 @@
 /pt-BR/docs/Web/Events/readystatechange	/pt-BR/docs/Web/API/Document/readystatechange_event
 /pt-BR/docs/Web/Events/resize	/pt-BR/docs/Web/API/Window/resize_event
 /pt-BR/docs/Web/Events/touchstart	/pt-BR/docs/Web/API/Element/touchstart_event
+/pt-BR/docs/Web/Guide/AJAX	/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /pt-BR/docs/Web/Guide/AJAX/Getting_Started	/pt-BR/docs/conflicting/Web/Guide/AJAX
 /pt-BR/docs/Web/Guide/CSS/CSS_Media_queries	/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /pt-BR/docs/Web/Guide/CSS/Scaling_background_images	/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /pt-BR/docs/Web/Guide/CSS/Understanding_z_index	/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /pt-BR/docs/Web/Guide/Events/Touch_events	/pt-BR/docs/Web/API/Touch_events
-/pt-BR/docs/Web/Guide/Gráficos	/pt-BR/docs/Web/Guide/Graphics
+/pt-BR/docs/Web/Guide/Graphics	/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+/pt-BR/docs/Web/Guide/Gráficos	/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial	/pt-BR/docs/Web/API/Canvas_API/Tutorial
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Compositing	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing
-/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Exemplo	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Exemplo	/pt-BR/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Conclusão	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Finale
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_text	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -761,7 +779,10 @@
 /pt-BR/docs/Web/Guide/HTML/Forms/Meu_primeiro_formulario_HTML	/pt-BR/docs/Learn/Forms/Your_first_form
 /pt-BR/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data
 /pt-BR/docs/Web/Guide/HTML/Using_data_attributes	/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes
-/pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/Web/Guide/Introduction_to_Web_development
+/pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/conflicting/Learn_680f0a64719ec97f557d9b1ef1710826
+/pt-BR/docs/Web/Guide/Introduction_to_Web_development	/pt-BR/docs/conflicting/Learn_680f0a64719ec97f557d9b1ef1710826
+/pt-BR/docs/Web/Guide/Performance	/pt-BR/docs/Web/Performance
+/pt-BR/docs/Web/Guide/Printing	/pt-BR/docs/Web/CSS/CSS_media_queries/Printing
 /pt-BR/docs/Web/HTML/Applying_color	/pt-BR/docs/Web/CSS/CSS_colors/Applying_color
 /pt-BR/docs/Web/HTML/Block-level_elements	/pt-BR/docs/Glossary/Block-level_content
 /pt-BR/docs/Web/HTML/CORS_imagens_habilitadas	/pt-BR/docs/Web/HTML/CORS_enabled_image
