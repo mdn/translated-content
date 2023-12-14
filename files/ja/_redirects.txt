@@ -2141,12 +2141,9 @@
 /ja/docs/Localization	/ja/docs/Glossary/Localization
 /ja/docs/Localizing_extension_descriptions	/ja/docs/orphaned/Localizing_extension_descriptions
 /ja/docs/MDN/About	/ja/docs/MDN/Writing_guidelines
-/ja/docs/MDN/About/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
-/ja/docs/MDN/Community/Conversations	/ja/docs/orphaned/MDN/Community/Conversations
-/ja/docs/MDN/Community/Doc_sprints	/ja/docs/orphaned/MDN/Community/Doc_sprints
+/ja/docs/MDN/Community/Conversations	/ja/docs/MDN/Community/Conversations
 /ja/docs/MDN/Community/Issues/Issue_triage	/ja/docs/MDN/Community/Issues
-/ja/docs/MDN/Community/Whats_happening	/ja/docs/orphaned/MDN/Community/Whats_happening
-/ja/docs/MDN/Community/Working_in_community	/ja/docs/orphaned/MDN/Community/Working_in_community
+/ja/docs/MDN/Community/Working_in_community	/ja/docs/MDN/Community/Working_in_community
 /ja/docs/MDN/Contribute/Changelog	/ja/docs/MDN/Changelog
 /ja/docs/MDN/Contribute/Content	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Content/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
@@ -2156,9 +2153,9 @@
 /ja/docs/MDN/Contribute/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Contribute/Fixing_MDN_content_bugs	/ja/docs/MDN/Community/MDN_content
 /ja/docs/MDN/Contribute/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
-/ja/docs/MDN/Contribute/GitHub_beginners	/ja/docs/conflicting/MDN/Community/Contributing/Getting_started
+/ja/docs/MDN/Contribute/GitHub_beginners	/ja/docs/MDN/Community/Contributing/Getting_started
 /ja/docs/MDN/Contribute/GitHub_best_practices	/ja/docs/MDN/Community/Issues
-/ja/docs/MDN/Contribute/GitHub_cheatsheet	/ja/docs/conflicting/MDN/Community/Issues
+/ja/docs/MDN/Contribute/GitHub_cheatsheet	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Contribute/Guidelines	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Guidelines/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
@@ -2172,7 +2169,6 @@
 /ja/docs/MDN/Contribute/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/MDN/Contribute/Help_beginners	/ja/docs/MDN/Community/Learn_forum
 /ja/docs/MDN/Contribute/Howto	/ja/docs/MDN/Contribute
-/ja/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	/ja/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 /ja/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
@@ -2199,7 +2195,7 @@
 /ja/docs/MDN/Contribute/Structures/Code_examples	/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples
 /ja/docs/MDN/Contribute/Structures/Compatibility_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /ja/docs/MDN/Contribute/Structures/Live_samples	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/ja/docs/MDN/Contribute/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
+/ja/docs/MDN/Contribute/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Structures/Macros	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
 /ja/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /ja/docs/MDN/Contribute/Structures/Macros/Project:Custom_Templates	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
@@ -2236,7 +2232,7 @@
 /ja/docs/MDN/Structures/Code_examples	/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples
 /ja/docs/MDN/Structures/Compatibility_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /ja/docs/MDN/Structures/Live_samples	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/ja/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
+/ja/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Structures/Macros	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
 /ja/docs/MDN/Structures/Macros/Commonly-used_macros	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /ja/docs/MDN/Structures/Page_types	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types
@@ -2251,7 +2247,6 @@
 /ja/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /ja/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
-/ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
 /ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
