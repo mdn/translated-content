@@ -18,7 +18,7 @@ new ArrayBuffer(length)
 new ArrayBuffer(length, options)
 ```
 
-> **メモ:** `ArrayBuffer()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築することができます。`new` 梨で呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> **メモ:** `ArrayBuffer()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築することができます。`new` 無しで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

@@ -33,7 +33,7 @@ WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的�
 
   - 集显（Integrated GPU），与 CPU 位于同一主板上，并共享其内存。
   - 独显（Discrete GPU），位于单独的显卡上，与 CPU 分开。
-  - 核显（Software "GPU"），在 CPU 上实现。
+  - 软件 GPU（Software "GPU"），在 CPU 上实现。
 
   > **备注：** 上图假设仅有一个 CPU 设备。
 
