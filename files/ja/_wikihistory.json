@@ -30387,52 +30387,6 @@
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": ["mfuji09", "tamura4278"]
   },
-  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
-    "modified": "2020-10-21T02:00:03.457Z",
-    "contributors": [
-      "mpcjazz",
-      "xfq",
-      "granola",
-      "Uemmra3",
-      "kaiji",
-      "mfuji09",
-      "x2357",
-      "ethertank",
-      "akiroom",
-      "yyss",
-      "electrolysis"
-    ]
-  },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-08-10T22:38:23.911Z",
-    "contributors": [
-      "eltociear",
-      "isdh",
-      "mfuji09",
-      "masaru-b-cl",
-      "yyss",
-      "ethertank",
-      "saneyuki_s",
-      "Potappo",
-      "Yuichirou",
-      "Taken",
-      "Mgjbot",
-      "Shimono"
-    ]
-  },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
-    "modified": "2020-11-22T14:52:43.660Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "ziyunfei",
-      "shirayuki",
-      "Potappo",
-      "Mgjbot",
-      "Taken",
-      "electrolysis"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
@@ -30611,44 +30565,6 @@
   "orphaned/Web/Guide/Localizations_and_character_encodings": {
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
-  },
-  "orphaned/Web/JavaScript/Guide/Objects_and_Properties": {
-    "modified": "2019-03-24T00:01:07.858Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis", "Mgjbot"]
-  },
-  "orphaned/Web/JavaScript/Guide/Variables": {
-    "modified": "2019-03-24T00:01:09.887Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "Yuichirou",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
-    "modified": "2020-03-12T19:44:36.287Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
-    "modified": "2020-03-12T19:46:14.001Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument": {
-    "modified": "2020-03-12T19:44:08.901Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-17T14:59:10.566Z",
-    "contributors": ["mpcjazz", "mfuji09", "YuichiNukiyama"]
-  },
-  "orphaned/Web/JavaScript/Reference/Operators/Special": {
-    "modified": "2019-01-16T13:14:28.710Z",
-    "contributors": ["ethertank", "Potappo"]
-  },
-  "orphaned/Web/JavaScript/Reference/Operators/Special_Operators": {
-    "modified": "2019-01-16T13:12:31.355Z",
-    "contributors": ["ethertank", "Potappo"]
   },
   "orphaned/Web/SVG/Element/hatchpath": {
     "modified": "2020-12-06T00:02:55.360Z",
