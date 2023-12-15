@@ -7,10 +7,10 @@ l10n:
 
 {{CSSRef("Selectors")}}
 
-Le **combinateur de voisin direct** (`+`) sépare deux sélecteurs et ne fait correspondre le second élément que s'il suit _immédiatement_ le premier élément, et si les deux sont des enfants du même [`element`](/fr/docs/Web/API/Element) parent.
+Le **combinateur de voisin direct** (`+`) sépare deux sélecteurs et ne fait correspondre le second élément que s'il suit _immédiatement_ le premier élément, et si les deux sont des enfants du même élément parent.
 
 ```css
-/* Ne cible que les paragraphes situé directement après une image */
+/* Ne cible que les paragraphes situés directement après une image */
 img + p {
   font-style: bold;
 }
@@ -45,7 +45,7 @@ li:first-of-type + li {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', "auto", 100)}}
+{{EmbedLiveSample('', "100%", 100)}}
 
 ## Spécifications
 

@@ -1,5 +1,5 @@
 ---
-title: Combinateur de voisins généraux
+title: Combinateur de voisins suivants
 slug: Web/CSS/Subsequent-sibling_combinator
 l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
@@ -7,11 +7,11 @@ l10n:
 
 {{CSSRef("Selectors")}}
 
-Le **combinateur de voisins généraux** (`~`) permet de séparer deux sélecteurs et de cibler _toutes les instances_ du deuxième élément qui suivent le premier (mais n'étant pas forcément voisin immédiat) et qui partagent le même élément parent.
+Le **combinateur de voisins suivants** (`~`) permet de séparer deux sélecteurs et de cibler _toutes les instances_ du deuxième élément qui suivent le premier (qui ne sont pas nécessairement voisins immédiats) et qui partagent le même élément parent.
 
 ```css
-/* Parmi tous les éléments <img>, cible tous éléments <p>
-   qui les suivent. */
+/* Cible tous éléments <p> qui arrivent après un élément
+   <img>. */
 img ~ p {
   color: red;
 }
@@ -20,15 +20,15 @@ img ~ p {
 ## Syntaxe
 
 ```css-nolint
-/* L'espace entre le tilde (~) est optionnel mais est recommendé. */
-premier_element ~ second_element { propriétés de style }
+/* L'espace entre le tilde (~) est optionnel mais est recommandé. */
+element_anterieur ~ element_cible { propriétés de style }
 ```
 
 ## Exemples
 
 ### Utilisation du combinateur avec des sélecteurs simples
 
-This example shows the use of the `~` combinator when both the selectors are simple selectors (`p` and `span`).
+Cet exemple illustre l'utilisation du combinateur `~` avec deux sélecteurs simples (`p` et `span`).
 
 ```html
 <article>
@@ -47,7 +47,7 @@ This example shows the use of the `~` combinator when both the selectors are sim
   </span>
 </article>
 <span>
-  Ce span n'est pas rouge car il ne partage pas de parent avec un paragraphe.
+  Ce span n'est pas rouge, car il ne partage pas de parent avec un paragraphe.
 </span>
 ```
 
@@ -57,14 +57,14 @@ p ~ span {
 }
 ```
 
-{{EmbedLiveSample("Utilisation du combinateur avec des sélecteurs simples", "auto", 200)}}
+{{EmbedLiveSample("", "auto", 300)}}
 
 ### Utilisation du combinateur avec des sélecteurs complexes
 
 Cet exemple contient deux [sélecteurs complexes](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selecteur_complexe), tous deux utilisant le combinateur de voisins généraux&nbsp;: `.monTexte p ~ span` et `.monTexte p ~ .monTexte span`.
 
-- Le premier sélecteur complexe, `.monTexte p ~ span`, correspond à tous les `span` qui viennent après un paragraphe _si_ le span et le paragraphe partagent le même parent **et** ce parent ou un parent _plus haut_ de ce parent a la classe `.monTexte`.
-- Le second sélecteur complexe, `.monTexte p ~ .monTexte span`, correspond à toutes les `span` qui sont un descendant de l'élément parent avec la classe `.monTexte` _si_ cet élément est un voisin du paragraphe mentionné précédemment.
+- Le premier sélecteur complexe, `.monTexte p ~ span`, correspond à tous les `<span>` qui viennent après un paragraphe _si_ le `<span>` et le paragraphe partagent le même parent **et** ce parent ou un parent _plus haut_ de ce parent a la classe `.monTexte`.
+- Le second sélecteur complexe, `.monTexte p ~ .monTexte span`, correspond à toutes les `<span>` qui sont un descendant de l'élément parent avec la classe `.monTexte` _si_ cet élément est un voisin du paragraphe mentionné précédemment.
 
 L'exemple ci-dessous montre que l'élément cible du sélecteur complexe doit partager le même parent que l'élément initial du sélecteur complexe.
 
@@ -90,7 +90,7 @@ L'exemple ci-dessous montre que l'élément cible du sélecteur complexe doit pa
 }
 ```
 
-{{EmbedLiveSample("Utilisation du combinateur avec des sélecteurs complexes", "auto", 200)}}
+{{EmbedLiveSample("", "auto", 200)}}
 
 Dans le HTML ci-dessus, les deux voisins de `.monTexte p` sont `span` et `.monTexte`. Le `span` vert est un descendant de la classe `.monTexte`, qui est un voisin de `p`.
 
