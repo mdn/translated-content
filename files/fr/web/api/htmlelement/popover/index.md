@@ -16,11 +16,11 @@ Elle reflète la valeur de l'attribut HTML global [`popover`](/fr/docs/Web/HTML/
 Une valeur énumérée&nbsp;; les valeurs possibles sont&nbsp;:
 
 - `"auto"`
-  - : Dans l'[état automatique](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère) :
+  - : Dans l'[état automatique](/fr/docs/Web/API/Popover_API/Using#l_état_automatique_et_la_fermeture_légère) :
     - Le <i lang="en">popover</i> peut être masqué en cliquant en dehors de la zone ou en appuyant sur la touche <kbd>Esc</kbd> (<i lang="en">light-dismissed</i>).
-    - Habituellement, un seul <i lang="en">popover</i> peut être affiché à la fois&nbsp;: afficher un deuxième <i lang="en">popover</i> alors qu'un autre est déjà affiché masquera le premier. Les <i lang="en">popovers</i> automatiques imbriqués sont la seule exception à cette règle. Voir [la section sur les <i lang="en">popovers</i> imbriqués](/fr/docs/Web/API/Popover_API/Using#popover_imbriqués) pour plus de détails.
+    - Habituellement, un seul <i lang="en">popover</i> peut être affiché à la fois&nbsp;: afficher un deuxième <i lang="en">popover</i> alors qu'un autre est déjà affiché masquera le premier. Les <i lang="en">popovers</i> automatiques imbriqués sont la seule exception à cette règle. Voir [la section sur les <i lang="en">popovers</i> imbriqués](/fr/docs/Web/API/Popover_API/Using#popovers_imbriqués) pour plus de détails.
 - `"manual"`
-  - : Dans l'[état manuel](/fr/docs/Web/API/Popover_API/Using#utiliser_l_état_manuel) :
+  - : Dans l'[état manuel](/fr/docs/Web/API/Popover_API/Using#l_état_manuel) :
     - Le popover ne peut pas être fermé en cliquant en dehors de la zone ou avec <kbd>Esc</kbd>, les boutons déclaratifs d'affichage/masquage/basculement fonctionneront toujours.
     - Plusieurs <i lang="en">popovers</i> indépendants peuvent être affichés en même temps.
 

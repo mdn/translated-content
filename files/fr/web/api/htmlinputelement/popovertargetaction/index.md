@@ -26,7 +26,7 @@ Une valeur énumérée. Les valeurs possibles sont&nbsp;:
 
 ### L'action `toggle` avec un <i lang="en">popover</i> automatique
 
-Cet exemple montre une utilisation simple de l'API Popover avec la valeur `toggle` pour la propriété `popoverTargetAction`. L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère), de sorte que le <i lang="en">popover</i> peut être fermé en cliquant en dehors de la zone du <i lang="en">popover</i> (<i lang="en">light-dismissed</i>).
+Cet exemple montre une utilisation simple de l'API Popover avec la valeur `toggle` pour la propriété `popoverTargetAction`. L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_automatique_et_la_fermeture_légère), de sorte que le <i lang="en">popover</i> peut être fermé en cliquant en dehors de la zone du <i lang="en">popover</i> (<i lang="en">light-dismissed</i>).
 
 #### HTML
 
@@ -82,7 +82,7 @@ Vous pouvez essayer l'exemple ci-après. Affichez et masquez le <i lang="en">pop
 
 Cet exemple montre comment utiliser les valeurs `"show"` et `"hide"` de l'attribut `popoverTargetAction`.
 
-Le code est quasiment identique à l'exemple précédent, sauf qu'il y a deux `<button>` et que le <i lang="en">popover</i> est défini avec la valeur [`"manual"`](/fr/docs/Web/API/Popover_API/Using#utiliser_l_état_manuel). Un <i lang="en">popover</i> manuel doit être fermé explicitement et ne peut pas être fermé simplement (<i lang="en">light-dismissed</i>) par un clic hors du <i lang="en">popover</i>.
+Le code est quasiment identique à l'exemple précédent, sauf qu'il y a deux `<button>` et que le <i lang="en">popover</i> est défini avec la valeur [`"manual"`](/fr/docs/Web/API/Popover_API/Using#l_état_manuel). Un <i lang="en">popover</i> manuel doit être fermé explicitement et ne peut pas être fermé simplement (<i lang="en">light-dismissed</i>) par un clic hors du <i lang="en">popover</i>.
 
 #### HTML
 

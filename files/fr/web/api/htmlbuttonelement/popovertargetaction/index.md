@@ -26,7 +26,7 @@ Une valeur énumérée. Les valeurs possibles sont&nbsp;:
 
 ### L'action `toggle` avec un <i lang="en">popover</i> automatique
 
-Cet exemple montre l'utilisation de base de l'API Popover avec la valeur `toggle` définie pour la propriété `popoverTargetAction`. L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère), de sorte que le popover peut être fermé («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors de la zone du <i lang="en">popover</i>.
+Cet exemple montre l'utilisation de base de l'API Popover avec la valeur `toggle` définie pour la propriété `popoverTargetAction`. L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_automatique_et_la_fermeture_légère), de sorte que le popover peut être fermé («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors de la zone du <i lang="en">popover</i>.
 
 Tout d'abord, nous définissons un élément HTML `<button>` que nous utiliserons pour afficher et masquer le <i lang="en">popover</i>, et un `<div>` qui sera le <i lang="en">popover</i>. Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#l_attribut_popovertargetaction) sur le `<button>` ou l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) sur le `<div>`, car nous le ferons de manière programmatique.
 
@@ -74,7 +74,7 @@ Vous pouvez essayer l'exemple ci-après. Affichez et masquez le <i lang="en">pop
 
 Cet exemple montre comment utiliser les valeurs `"show"` et `"hide"` de l'attribut `popoverTargetAction`.
 
-Le code est quasiment identique à l'exemple précédent, sauf qu'il y a deux `<button>` et que le <i lang="en">popover</i> est défini avec la valeur [`"manual"`](/fr/docs/Web/API/Popover_API/Using#utiliser_l_état_manuel). Un popover manuel doit être fermé explicitement et ne peut pas être fermé facilement par un clic hors du <i lang="en">popover</i>.
+Le code est quasiment identique à l'exemple précédent, sauf qu'il y a deux `<button>` et que le <i lang="en">popover</i> est défini avec la valeur [`"manual"`](/fr/docs/Web/API/Popover_API/Using#l_état_manuel). Un popover manuel doit être fermé explicitement et ne peut pas être fermé facilement par un clic hors du <i lang="en">popover</i>.
 
 ```html
 <button id="showBtn">Afficher le popover</button>

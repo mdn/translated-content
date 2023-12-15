@@ -17,7 +17,7 @@ Une référence vers un élément <i lang="en">popover</i> dans le DOM.
 
 ## Exemples
 
-Cet exemple montre une utilisation simple l'API Popover, en définissant un élément `<div>` comme <i lang="en">popover</i>, puis en le définissant comme `popoverTargetElement` d'un `<input type="button">`. L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère), de sorte que le <i lang="en">popover</i> peut être fermé en cliquant en dehors de sa zone (<i lang="en">light-dismissed</i>).
+Cet exemple montre une utilisation simple l'API Popover, en définissant un élément `<div>` comme <i lang="en">popover</i>, puis en le définissant comme `popoverTargetElement` d'un `<input type="button">`. L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_automatique_et_la_fermeture_légère), de sorte que le <i lang="en">popover</i> peut être fermé en cliquant en dehors de sa zone (<i lang="en">light-dismissed</i>).
 
 ### HTML
 
