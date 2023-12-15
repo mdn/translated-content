@@ -7,8 +7,6 @@ slug: Web/API/Document/documentElement
 
 ### Resumen
 
-**Solo-lectura**
-
 Devuelve el [`Element`](/es/DOM/element) que es el elemento raíz de [document](/es/DOM/document) (por ejemplo, devuelve el elemento `<html>` en los documentos HTML).
 
 ### Sintaxis
