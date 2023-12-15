@@ -1,52 +1,46 @@
 ---
-title: "HTMLButtonElement: propriété popoverTargetElement"
-short-title: popoverTargetElement
+title: "HTMLButtonElement : propriété popoverTargetElement"
 slug: Web/API/HTMLButtonElement/popoverTargetElement
 l10n:
-  sourceCommit: 0df415130c
+  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-La propriété **`popoverTargetElement`** de l'interface {{domxref("HTMLButtonElement")}} permet de lire et définit l'élément popover à contrôler via un bouton.
+La propriété **`popoverTargetElement`** de l'interface [`HTMLButtonElement`](/fr/docs/Web/API/HTMLButtonElement) permet de lire et définir l'élément <i lang="en">popover</i> à contrôler via un bouton.
 
 Elle est l'équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Element/button#l_attribut_popovertarget).
 
 ## Valeur
 
-Une référence vers un élément popover dans le DOM.
+Une référence vers un élément <i lang="en">popover</i> dans le DOM.
 
 ## Exemples
 
-### L'action `toggle` avec un popover automatique
+### L'action `toggle` avec un <i lang="en">popover</i> automatique
 
-Cet exemple montre l'utilisation de base de l'API popover, en définissant un élément `<div>` comme popover, puis en le définissant comme `popoverTargetElement` d'un `<button>`.
-L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère), de sorte que le popover peut être fermé (« _Light Dismissed_ ») en cliquant en dehors de la zone du popover.
+Cet exemple montre l'utilisation de base de l'API Popover, en définissant un élément `<div>` comme <i lang="en">popover</i>, puis en le définissant comme `popoverTargetElement` d'un `<button>`. L'attribut `popover` est défini sur [`"auto"`](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère), de sorte que le <i lang="en">popover</i> peut être fermé («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors de la zone du <i lang="en">popover</i>.
 
-Tout d'abord, nous définissons un élément HTML `<button>` que nous utiliserons pour afficher et masquer le popover, et un `<div>` qui sera le popover.
-Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction) sur le `<button>` ou l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) sur le `<div>`, car nous le ferons de manière programmatique.
+Tout d'abord, nous définissons un élément HTML `<button>` que nous utiliserons pour afficher et masquer le <i lang="en">popover</i>, et un `<div>` qui sera le <i lang="en">popover</i>. Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction) sur le `<button>` ou l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) sur le `<div>`, car nous le ferons de manière programmatique.
 
 ```html
 <button id="toggleBtn">Afficher/masquer le popover</button>
-<div id="mypopover">Ceci est le contenu du popover !</div>
+<div id="monpopover">Ceci est le contenu du popover !</div>
 ```
 
-Le code JavaScript récupère d'abord une référence vers les éléments `<div>` et `<button>`.
-Il définit ensuite une fonction pour vérifier la prise en charge du popover.
+Le code JavaScript récupère d'abord une référence vers les éléments `<div>` et `<button>`. Il définit ensuite une fonction pour vérifier la prise en charge du popover.
 
 ```js
-const popover = document.getElementById("mypopover");
+const popover = document.getElementById("monpopover");
 const toggleBtn = document.getElementById("toggleBtn");
 
-// Vérifie la prise en charge de l'API popover.
+// Vérifie la prise en charge de l'API Popover.
 function supportsPopover() {
   return HTMLElement.prototype.hasOwnProperty("popover");
 }
 ```
 
-Si l'API popover est prise en charge, le code définit l'attribut `popover` de l'élément `<div>` sur `"auto"` et en fait la cible du popover du bouton de basculement.
-Nous définissons ensuite la `popoverTargetAction` du `<button>` sur `"toggle"`.
-Si l'API popover n'est pas prise en charge, nous changeons le contenu textuel de l'élément `<div>` pour indiquer cela, et masquons le bouton de basculement.
+Si l'API Popover est prise en charge, le code définit l'attribut `popover` de l'élément `<div>` sur `"auto"` et en fait la cible du <i lang="en">popover</i> du bouton de basculement. Nous définissons ensuite la `popoverTargetAction` du `<button>` sur `"toggle"`. Si l'API Popover n'est pas prise en charge, nous changeons le contenu textuel de l'élément `<div>` pour indiquer cela, et masquons le bouton de basculement.
 
 ```js
 if (supportsPopover()) {
@@ -59,18 +53,16 @@ if (supportsPopover()) {
   // Définit comment le bouton change la visibilité du popover
   toggleBtn.popoverTargetAction = "toggle";
 } else {
-  popover.textContent = "L'API popover n'est pas prise en charge.";
+  popover.textContent = "L'API Popover n'est pas prise en charge.";
   toggleBtn.hidden = true;
 }
 ```
 
-> **Note :** Un element popover est masqué par défaut, mais si l'API n'est pas prise en charge, votre élément s'affichera « comme d'habitude ».
+> **Note :** Un élément <i lang="en">popover</i> est masqué par défaut, mais si l'API n'est pas prise en charge, il s'affichera de façon classique.
 
-Vous pouvez essayer l'exemple ci-après.
-Affichez et masquez le popover en activant le bouton.
-Le popover `"auto"` peut également être « _Light Dismissed_ » en cliquant en dehors des limites du popover.
+Vous pouvez essayer l'exemple ci-après. Affichez et masquez le <i lang="en">popover</i> en activant le bouton. Le <i lang="en">popover</i> `"auto"` peut également être fermé facilement («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors des limites du <i lang="en">popover</i>.
 
-{{EmbedLiveSample("Toggle popover action with an auto popover", "100%")}}
+{{EmbedLiveSample("", "100%")}}
 
 ## Spécifications
 

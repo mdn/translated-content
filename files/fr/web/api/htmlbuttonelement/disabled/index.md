@@ -1,9 +1,8 @@
 ---
-title: "HTMLButtonElement: propriété disabled"
-short-title: disabled
+title: "HTMLButtonElement : propriété disabled"
 slug: Web/API/HTMLButtonElement/disabled
 l10n:
-  sourceCommit: a3d9f61a89
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
