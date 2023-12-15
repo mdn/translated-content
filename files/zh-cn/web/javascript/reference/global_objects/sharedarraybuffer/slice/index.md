@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("SharedArrayBuffer")}} 实例的 **`slice()`** 方法返回一个新的 {{jsxref("SharedArrayBuffer")}}，其包含当前 `SharedArrayBuffer` 从 `start` 开始（包含）到 `end` 结束（不含）的字节内容的副本。如果 `start` 或 `end` 为负数，则表示从数组末尾开始计数的索引，而非从数组的开头。该方法与 {{jsxref("Array.prototype.slice()")}} 的算法相同。
+{{jsxref("SharedArrayBuffer")}} 实例的 **`slice()`** 方法返回一个新的 `SharedArrayBuffer`，其包含当前 `SharedArrayBuffer` 从 `start` 开始（包含）到 `end` 结束（不含）的字节内容的副本。如果 `start` 或 `end` 为负数，则表示从数组末尾开始计数的索引，即与从开头开始的方向相反。
 
 {{EmbedInteractiveExample("pages/js/sharedarraybuffer-slice.html")}}
 
