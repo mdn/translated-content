@@ -2,8 +2,8 @@
 title: "DeviceMotionEventAcceleration: z プロパティ"
 short-title: z
 slug: Web/API/DeviceMotionEventAcceleration/z
-page-type: web-api-instance-property
-browser-compat: api.DeviceMotionEventAcceleration.z
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{ APIRef("Device Orientation Events") }}
