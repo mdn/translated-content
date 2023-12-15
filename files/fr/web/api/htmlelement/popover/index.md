@@ -1,33 +1,34 @@
 ---
-title: "HTMLElement: propriété popover"
-short-title: popover
+title: "HTMLElement : propriété popover"
 slug: Web/API/HTMLElement/popover
 l10n:
-  sourceCommit: 0df415130c
+  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-La propriété **`popover`** de l'interface {{domxref("HTMLElement")}} récupère et définit l'état popover d'un élément via JavaScript (`"auto"` ou `"manual"`), et peut être utilisée pour la détection de fonctionnalités.
+La propriété **`popover`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) récupère et définit l'état d'un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) via JavaScript (`"auto"` ou `"manual"`), et peut être utilisée pour la détection de fonctionnalités.
 
 Elle reflète la valeur de l'attribut HTML global [`popover`](/fr/docs/Web/HTML/Global_attributes/popover).
 
 ## Valeur
 
-Une valeur énumérée ; les valeurs possibles sont :
+Une valeur énumérée&nbsp;; les valeurs possibles sont&nbsp;:
 
-- `"auto"` : Dans l'[état automatique](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère) :
-  - Le popover peut être « _Light Dismiss_ » — cela signifie que vous pouvez masquer le popover en cliquant en dehors ou en appuyant sur la touche <kbd>Esc</kbd>.
-  - Habituellement, un seul popover peut être affiché à la fois — afficher un deuxième popover quand un est déjà affiché masquera le premier. Les popovers automatiques imbriqués sont la seul exception à cette règle. Voir [Popovers imbriqués](/fr/docs/Web/API/Popover_API/Using#popover_imbriqués) pour plus de détails.
-- `"manual"` : Dans l'[état manuel](/fr/docs/Web/API/Popover_API/Using#utiliser_l_état_manuel) :
-  - Le popover ne peut pas être « _Light Dismiss_ », bien que les boutons déclaratifs d'affichage/masquage/basculement fonctionneront toujours.
-  - Plusieurs popovers indépendants peuvent être affichés en même temps.
+- `"auto"`
+  - : Dans l'[état automatique](/fr/docs/Web/API/Popover_API/Using#l_état_auto_et_la_suppression_légère) :
+    - Le <i lang="en">popover</i> peut être masqué en cliquant en dehors de la zone ou en appuyant sur la touche <kbd>Esc</kbd> (<i lang="en">light-dismissed</i>).
+    - Habituellement, un seul <i lang="en">popover</i> peut être affiché à la fois&nbsp;: afficher un deuxième <i lang="en">popover</i> alors qu'un autre est déjà affiché masquera le premier. Les <i lang="en">popovers</i> automatiques imbriqués sont la seule exception à cette règle. Voir [la section sur les <i lang="en">popovers</i> imbriqués](/fr/docs/Web/API/Popover_API/Using#popover_imbriqués) pour plus de détails.
+- `"manual"`
+  - : Dans l'[état manuel](/fr/docs/Web/API/Popover_API/Using#utiliser_l_état_manuel) :
+    - Le popover ne peut pas être fermé en cliquant en dehors de la zone ou avec <kbd>Esc</kbd>, les boutons déclaratifs d'affichage/masquage/basculement fonctionneront toujours.
+    - Plusieurs <i lang="en">popovers</i> indépendants peuvent être affichés en même temps.
 
 ## Exemples
 
 ### Détection de fonctionnalités
 
-Vous pouvez utiliser l'attribut `popover` pour détecter la [Popover API](/fr/docs/Web/API/Popover_API) :
+Vous pouvez utiliser l'attribut `popover` pour détecter la prise en charge de [l'API Popover](/fr/docs/Web/API/Popover_API)&nbsp;:
 
 ```js
 function supportsPopover() {
@@ -35,7 +36,7 @@ function supportsPopover() {
 }
 ```
 
-### Configuration d'un popover de manière programmatique
+### Configuration d'un <i lang="en">popover</i> de manière programmatique
 
 ```js
 const popover = document.getElementById("mypopover");

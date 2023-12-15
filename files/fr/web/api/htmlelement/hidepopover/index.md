@@ -1,16 +1,21 @@
 ---
-title: "HTMLElement: méthode hidePopover()"
-short-title: hidePopover()
+title: "HTMLElement : méthode hidePopover()"
 slug: Web/API/HTMLElement/hidePopover
 l10n:
-  sourceCommit: 0df415130c
+  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-La méthode **`hidePopover()`** de l'interface {{domxref("HTMLElement")}} masque un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en le supprimant du {{glossary("top layer")}} et en le stylisant avec `display: none`.
+La méthode **`hidePopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) masque un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en le supprimant de [la couche supérieure](/fr/docs/Glossary/Top_layer) et en le stylisant avec `display: none`.
 
-Lorsque `hidePopover()` est appelé sur un élément affiché avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover), un évènement {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} sera déclenché, suivi du masquage du popover, puis de l'évènement {{domxref("HTMLElement/toggle_event", "toggle")}}. Si l'élément est déjà masqué, une erreur est lancée.
+Lorsque `hidePopover()` est appelée sur un élément affiché avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover)&nbsp;:
+
+1. Un évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) est déclenché.
+2. Le <i lang="en">popover</i> est masqué.
+3. L'évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) est déclenché.
+
+Si l'élément est déjà masqué, une erreur est lancée.
 
 ## Syntaxe
 
@@ -24,41 +29,28 @@ Aucun.
 
 ### Valeur de retour
 
-Aucune ({{jsxref("undefined")}}).
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ### Exceptions
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `InvalidStateError` [`DOMException`](/fr/docs/Web/API/DOMException)
   - : Lancée si le popover est déjà masqué.
 
 ## Exemples
 
-L'exemple suivant définit un comportement pour masquer un popover en appuyant sur une touche particulière du clavier.
+L'exemple suivant définit un comportement pour masquer un <i lang="en">popover</i> en appuyant sur une touche particulière du clavier.
 
-D'abord, un peu de HTML :
+### HTML
 
 ```html
-<div id="mypopover">
-  <h2>Aide !</h2>
-
-  <p>
-    Vous pouvez utiliser les commandes suivantes pour contrôler l'application
-  </p>
-
-  <ul>
-    <li>Appuyez sur <ins>C</ins> pour commander du fromage</li>
-    <li>Appuyez sur <ins>T</ins> pour commander du tofu</li>
-    <li>Appuyez sur <ins>B</ins> pour commander du bacon</li>
-    <hr />
-    <li>
-      Dites "Service" pour appeler le robot serveur et passer votre commande
-    </li>
-    <li>Dites "Éjection" pour activer le siège éjectable</li>
-  </ul>
+<button popovertarget="mypopover">Basculer l'affichage du popover</button>
+<div id="mypopover" popover="manual">
+  Vous pouvez appuyer sur la touche <kbd>h</kbd> de votre clavier pour fermer le
+  popover.
 </div>
 ```
 
-Et maintenant le JavaScript pour activer le comportement :
+### JavaScript
 
 ```js
 const popover = document.getElementById("mypopover");
@@ -69,6 +61,10 @@ document.addEventListener("keydown", (event) => {
   }
 });
 ```
+
+### Résultat
+
+{{EmbedLiveSample("","100%",100)}}
 
 ## Spécifications
 

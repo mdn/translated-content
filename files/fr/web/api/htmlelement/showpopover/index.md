@@ -1,16 +1,21 @@
 ---
-title: "HTMLElement: méthode showPopover()"
-short-title: showPopover()
+title: "HTMLElement : méthode showPopover()"
 slug: Web/API/HTMLElement/showPopover
 l10n:
-  sourceCommit: 0df415130c
+  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-La méthode **`showPopover()`** de l'interface {{domxref("HTMLElement")}} affiche un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en l'ajoutant au {{glossary("top layer")}}.
+La méthode **`showPopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) affiche un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en l'ajoutant à [la couche supérieure](/fr/docs/Glossary/Top_layer).
 
-Lorsque `showPopover()` est appelé sur un élément avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) qui est actuellement masqué, un évènement {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} sera déclenché, suivi de l'affichage du popover, puis de l'évènement {{domxref("HTMLElement/toggle_event", "toggle")}}. Si l'élément est déjà visible, une erreur est lancée.
+Lorsque `showPopover()` est appelée sur un élément avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) qui est actuellement masqué&nbsp;:
+
+1. Un évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) est déclenché.
+2. Le <i lang="en">popover</i> est affiché.
+3. L'évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) est déclenché.
+
+Si l'élément est déjà visible, une erreur est lancée.
 
 ## Syntaxe
 
@@ -24,41 +29,29 @@ Aucun.
 
 ### Valeur de retour
 
-Aucune ({{jsxref("undefined")}}).
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ### Exceptions
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Lancée si le popover est déjà affiché.
+- `InvalidStateError` [`DOMException`](/fr/docs/Web/API/DOMException)
+  - : Lancée si le <i lang="en">popover</i> est déjà affiché.
 
 ## Exemples
 
 L'exemple suivant définit un comportement pour afficher un popover en appuyant sur une touche particulière du clavier.
 
-D'abord, un peu de HTML :
+### HTML
 
 ```html
-<div id="mypopover">
-  <h2>Aide !</h2>
-
-  <p>
-    Vous pouvez utiliser les commandes suivantes pour contrôler l'application
-  </p>
-
-  <ul>
-    <li>Appuyez sur <ins>C</ins> pour commander du fromage</li>
-    <li>Appuyez sur <ins>T</ins> pour commander du tofu</li>
-    <li>Appuyez sur <ins>B</ins> pour commander du bacon</li>
-    <hr />
-    <li>
-      Dites "Service" pour appeler le robot serveur et passer votre commande
-    </li>
-    <li>Dites "Éjection" pour activer le siège éjectable</li>
-  </ul>
-</div>
+<button popovertarget="mypopover">Basculer l'affichage du popover</button>
+<p>
+  Vous pouvez appuyer sur la touche <kbd>h</kbd> de votre clavier pour afficher
+  le popover.
+</p>
+<div id="mypopover" popover="manual">Coucou</div>
 ```
 
-Et maintenant le JavaScript pour activer le comportement :
+### JavaScript
 
 ```js
 const popover = document.getElementById("mypopover");
@@ -70,6 +63,10 @@ document.addEventListener("keydown", (event) => {
 });
 ```
 
+### Résultat
+
+{{EmbedLiveSample("","100%",100)}}
+
 ## Spécifications
 
 {{Specifications}}
@@ -80,4 +77,4 @@ document.addEventListener("keydown", (event) => {
 
 ## Voir aussi
 
-- {{domxref("Popover_API", "L'API Popover", "", "nocode")}}
+- [L'API Popover](/fr/docs/Web/API/Popover_API)

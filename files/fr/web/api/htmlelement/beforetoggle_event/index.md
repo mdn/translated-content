@@ -1,20 +1,20 @@
 ---
-title: "HTMLElement: événement beforetoggle"
+title: "HTMLElement : évènement beforetoggle"
 slug: Web/API/HTMLElement/beforetoggle_event
 l10n:
-  sourceCommit: 44cf523714
+  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
 {{APIRef}}
 
-L'événement **`beforetoggle`** de l'interface {{domxref("HTMLElement")}} se déclenche sur un élément {{domxref("Popover_API", "popover", "", "nocode")}} (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) juste avant qu'il ne soit affiché ou masqué.
+L'évènement **`beforetoggle`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) se déclenche sur un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) juste avant qu'il ne soit affiché ou masqué.
 
-- Si le popover passe de masqué à affiché, la propriété `event.oldState` sera définie sur `closed` et la propriété `event.newState` sera définie sur `open`.
-- Si le popover passe d'affiché à masqué, alors `event.oldState` sera définie sur `open` et `event.newState` sera définie sur `closed`.
+- Si le <i lang="en">popover</i> passe de masqué à affiché, la propriété `event.oldState` sera définie sur `closed` et la propriété `event.newState` sera définie sur `open`.
+- Si le <i lang="en">popover</i> passe d'affiché à masqué, alors `event.oldState` sera définie sur `open` et `event.newState` sera définie sur `closed`.
 
 ## Syntaxe
 
-Utilisez le nom de l'événement dans des méthodes comme {{domxref("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'événement.
+Utilisez le nom de l'évènement dans des méthodes comme [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez une propriété de gestionnaire d'évènement.
 
 ```js
 addEventListener("beforetoggle", (event) => {});
@@ -22,20 +22,18 @@ addEventListener("beforetoggle", (event) => {});
 onbeforetoggle = (event) => {};
 ```
 
-## Type d'événement
+## Type d'évènement
 
-Un {{domxref("ToggleEvent")}}. Hérite de {{domxref("Event")}}.
+[`ToggleEvent`](/fr/docs/Web/API/ToggleEvent). Hérite de [`Event`](/fr/docs/Web/API/Event).
 
 {{InheritanceDiagram("ToggleEvent")}}
 
 ## Exemples
 
-### Exemple de base
-
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+//…
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {
@@ -46,15 +44,15 @@ popover.addEventListener("beforetoggle", (event) => {
 });
 ```
 
-### Une note sur l'agrégation des événements de basculement
+## Une note sur l'agrégation des évènements de basculement
 
-Il convient de souligner que les événements `beforetoggle` sont agrégés, ce qui signifie que si plusieurs événements `beforetoggle` sont déclenchés avant que la boucle d'événements ait eu la possibilité de s'exécuter, un seul événement sera déclenché.
+Il convient de souligner que les évènements `beforetoggle` sont agrégés, ce qui signifie que si plusieurs évènements `beforetoggle` sont déclenchés avant que la boucle d'évènements ait eu la possibilité de s'exécuter, un seul évènement sera déclenché.
 
-Par exemple :
+Par exemple&nbsp;:
 
 ```js
 popover.addEventListener("beforetoggle", () => {
-  //...
+  //…
 });
 
 popover.showPopover();
@@ -73,4 +71,4 @@ popup.hidePopover();
 ## Voir aussi
 
 - [L'API Popover](/fr/docs/Web/API/Popover_API)
-- Événement associé: [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event)
+- L'évènement associé&nbsp;: [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event)
