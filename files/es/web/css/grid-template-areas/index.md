@@ -91,7 +91,7 @@ Estas áreas no están asociadas a ningún elemento particular de la cuadrícula
 
 ### Result
 
-_{{EmbedLiveSample("Example", "100%", "250px")}}_
+{{EmbedLiveSample("Example", "100%", "250px")}}
 
 ## Especificaciones
 
