@@ -2,7 +2,7 @@
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+  sourceCommit: a37335abeaad31f9fafc56cfaa641db2337777a3
 ---
 
 {{JSRef}}
