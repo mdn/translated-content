@@ -409,6 +409,5 @@ CSS에서 레이아웃에 대해 더 알아보려면, [CSS 레이아웃][] 모�
 [CSS 레이아웃]: /ko/docs/Learn/CSS/CSS_layout
 
 [MDN CSS]: /ko/docs/Web/CSS
-
 [CSS 자세한 설명서]: /ko/docs/Web/CSS/Layout_cookbook
 [CSS 그리드 레이아웃 가이드]: /ko/docs/Web/CSS/CSS_grid_layout
