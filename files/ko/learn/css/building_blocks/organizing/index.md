@@ -1,7 +1,6 @@
 ---
 title: CSS 구성
 slug: Learn/CSS/Building_blocks/Organizing
-page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
