@@ -1,6 +1,8 @@
 ---
 title: CSS 구성
 slug: Learn/CSS/Building_blocks/Organizing
+l10n:
+  sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
