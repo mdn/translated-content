@@ -14,7 +14,7 @@ slug: Learn/CSS/Building_blocks/Organizing
       <td>
         기본 컴퓨터 활용 능력,
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >기본 소프트웨어 설치</a
         >, <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
