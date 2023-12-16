@@ -1,25 +1,24 @@
 ---
-title: "ToggleEvent: propriété newState"
-short-title: newState
+title: "ToggleEvent : propriété newState"
 slug: Web/API/ToggleEvent/newState
 l10n:
-  sourceCommit: 0df415130c
+  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
 {{APIRef("Popover API")}}
 
-La propriété en lecture seule **`newState`** de l'interface {{domxref("ToggleEvent")}} est une chaîne de caractères représentant l'état vers lequel l'élément est en train de transitionner.
+La propriété en lecture seule **`newState`** de l'interface [`ToggleEvent`](/fr/docs/Web/API/ToggleEvent) est une chaîne de caractères représentant l'état vers lequel l'élément est en train de transitionner.
 
 ## Valeur
 
-Une chaîne de caractères. Les valeurs possibles sont `"open"` (le popover est en train d'être affiché) ou `"closed"` (le popover est en train d'être masqué).
+Une chaîne de caractères. Les valeurs possibles sont `"open"` (le <i lang="en">popover</i> est en train d'être affiché) ou `"closed"` (le <i lang="en">popover</i> est en train d'être masqué).
 
 ## Exemples
 
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {

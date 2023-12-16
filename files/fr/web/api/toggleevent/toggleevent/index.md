@@ -1,14 +1,13 @@
 ---
-title: "ToggleEvent: le constructeur ToggleEvent()"
-short-title: ToggleEvent()
+title: "ToggleEvent : le constructeur ToggleEvent()"
 slug: Web/API/ToggleEvent/ToggleEvent
 l10n:
-  sourceCommit: 0df415130c
+  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
 {{APIRef("Popover API")}}
 
-Le constructeur **`ToggleEvent()`** crée un nouvel objet {{domxref("ToggleEvent")}}.
+Le constructeur **`ToggleEvent()`** crée un nouvel objet [`ToggleEvent`](/fr/docs/Web/API/ToggleEvent).
 
 ## Syntaxe
 
@@ -19,9 +18,9 @@ new ToggleEvent(type, init)
 ### Paramètres
 
 - `type`
-  - : Une chaîne de caractères représentant le type d'évènement. Dans le cas de `ToggleEvent`, il s'agit toujours de `toggleevent`.
+  - : Une chaîne de caractères représentant le type d'évènement. Dans le cas de `ToggleEvent`, il s'agit toujours de `"toggleevent"`.
 - `init`
-  - : Un objet contenant les propriétés suivantes :
+  - : Un objet contenant les propriétés suivantes&nbsp;:
     - `newState`
       - : Une chaîne de caractères représentant l'état vers lequel l'élément est en train de transitionner. Les valeurs possibles sont `"open"` et `"closed"`.
     - `oldState`
@@ -29,14 +28,14 @@ new ToggleEvent(type, init)
 
 ## Exemples
 
-Un développeur ne devrait utiliser pas ce constructeur manuellement. Un nouvel objet `ToggleEvent` est construit lorsqu'un gestionnaire est invoqué à la suite du déclenchement d'un évènement pertinent.
+Ce constructeur ne devrait généralement pas être utilisé manuellement dans un script. Un nouvel objet `ToggleEvent` est construit automatiquement lorsqu'un gestionnaire est invoqué à la suite du déclenchement d'un évènement pertinent.
 
-Par exemple :
+Par exemple&nbsp;:
 
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {

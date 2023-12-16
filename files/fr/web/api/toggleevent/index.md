@@ -2,41 +2,39 @@
 title: ToggleEvent
 slug: Web/API/ToggleEvent
 l10n:
-  sourceCommit: 0df415130c
+  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
 {{APIRef("UI Events")}}
 
-L'interface **`ToggleEvent`** représente un évènement notifiant l'utilisateur lorsqu'un élément [popover](/fr/docs/Web/API/Popover_API) change d'état entre visible et masqué.
+L'interface **`ToggleEvent`** représente un évènement qui notifie lorsqu'un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) change d'état entre visible et masqué.
 
-C'est l'objet d'évènement pour les évènements {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} et {{domxref("HTMLElement.toggle_event", "toggle")}} emis par `HTMLElement`, qui se déclenchent sur les popovers lorsqu'ils changent d'état, visible ou masqué (avant et après, respectivement).
+Cette interface est implémentée par les évènements [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) et [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) émis par `HTMLElement` lorsqu'un <i lang="en">popover</i> change d'état, visible ou masqué (avant et après, respectivement).
 
 {{InheritanceDiagram}}
 
-> **Note :** `ToggleEvent` n'a aucun rapport avec l'évènement {{domxref("HTMLDetailsElement.toggle_event", "toggle")}} de l'élément {{htmlelement("details")}}, qui se déclenche sur un élément `details` lorsque son état `open`/`closed` change. Son objet d'évènement est un {{domxref("Event")}} générique.
+> **Note :** `ToggleEvent` n'a aucun rapport avec l'évènement [`toggle`](/fr/docs/Web/API/HTMLDetailsElement/toggle_event) de l'élément [`<details>`](/fr/docs/Web/HTML/Element/details), qui se déclenche sur un élément `<details>` lorsque son état `open`/`closed` change. Dans ce cas, `toggle` implémente l'interface générique [`Event`](/fr/docs/Web/API/Event).
 
 ## Constructeur
 
-- {{DOMxRef("ToggleEvent.ToggleEvent", "ToggleEvent()")}}
+- [`ToggleEvent()`](/fr/docs/Web/API/ToggleEvent/ToggleEvent)
   - : Crée un objet `ToggleEvent`.
 
 ## Propriétés de l'instance
 
-_Cette interface hérite des propriétés de son parent, {{DOMxRef("Event")}}._
+_Cette interface hérite des propriétés de son parent, [`Event`](/fr/docs/Web/API/Event)._
 
-- {{DOMxRef("ToggleEvent.newState")}} {{ReadOnlyInline}}
+- [`ToggleEvent.newState`](/fr/docs/Web/API/ToggleEvent/newState) {{ReadOnlyInline}}
   - : Une chaîne de caractères (soit `"open"` soit `"closed"`), représentant l'état vers lequel l'élément est en train de transitionner.
-- {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
+- [`ToggleEvent.oldState`](/fr/docs/Web/API/ToggleEvent/oldState) {{ReadOnlyInline}}
   - : Une chaîne de caractères (soit `"open"` soit `"closed"`), représentant l'état depuis lequel l'élément est en train de transitionner.
 
 ## Exemples
 
-### Exemple basique
-
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {
