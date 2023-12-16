@@ -15,19 +15,15 @@ slug: Learn/CSS/Building_blocks/Organizing
         기본 컴퓨터 활용 능력,
         <a
           href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >기본 소프트웨어 설치</a
         >, <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
         > 에 대한 기본 지식
         , HTML 기본 사항 (
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         > 학습) 및, CSS 작동 방식 이해 (
-        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
         <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
       </td>
     </tr>
