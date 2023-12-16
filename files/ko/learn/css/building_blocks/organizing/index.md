@@ -1,7 +1,6 @@
 ---
 title: CSS 구성
 slug: Learn/CSS/Building_blocks/Organizing
-page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
@@ -16,15 +15,19 @@ page-type: learn-module-chapter
         기본 컴퓨터 활용 능력,
         <a
           href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >기본 소프트웨어 설치</a
         >, <a
+          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
         > 에 대한 기본 지식
         , HTML 기본 사항 (
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         > 학습) 및, CSS 작동 방식 이해 (
+        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
         <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
       </td>
     </tr>
@@ -104,7 +107,7 @@ It can be broken onto multiple lines. */
 
 CSS의 대부분이 자명할 것이기 때문에 CSS의 모든 것에 각각 주석을 달 필요는 없습니다. 주석을 달아야하는 것들은 어떤 이유로 특별한 결정을 내린 것들입니다.
 
-다음과 같은 특정한 방법으로 CSS 속성을 사용하여 이전 브라우저 호환성을 방지할 수 있습니다. 예를 들면 다음과 같습니다. 
+다음과 같은 특정한 방법으로 CSS 속성을 사용하여 이전 브라우저 호환성을 방지할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```css
 .box {
@@ -151,7 +154,7 @@ blockquote {
 }
 ```
 
-이 섹션 이후, 몇 가지 유틸리티 클래스를 정의할 수 있습니다. 예를 들어, 플렉스 아이템이나 다른 방법으로 표시할 리스트의 기본 리스트 스타일을 제거하는 클래스가 있습니다. 다양한 요소에 적용하고 싶은 스타일링 옵션이 몇 가지 있다면, 이 섹션에 넣을 수 있습니다. 
+이 섹션 이후, 몇 가지 유틸리티 클래스를 정의할 수 있습니다. 예를 들어, 플렉스 아이템이나 다른 방법으로 표시할 리스트의 기본 리스트 스타일을 제거하는 클래스가 있습니다. 다양한 요소에 적용하고 싶은 스타일링 옵션이 몇 가지 있다면, 이 섹션에 넣을 수 있습니다.
 
 ```css
 /* || UTILITIES */
@@ -217,7 +220,7 @@ article.main p.box {
 
 ### 큰 스타일시트를 여러 개의 작은 스타일 시트로 분할하세요
 
-사이트의 다른 부분에 대해 전혀 다른 스타일을 하고 있는 경우, 모든 전역 규칙을 포함하는 하나의 스타일시트와 그 섹션에 필요한 특정 규칙을 포함하는 몇 개의 작은 스타일시트를 만들고 싶을 수 있습니다. 이 때 한 페이지에서 여러 스타일시트를 연결할 수 있고, 일반적인 종속의 규칙이 적용되며, 이후에 연결된 스타일시트의 규칙이 먼저 연결된 스타일시트의 규칙 다음으로 적용됩니다. 
+사이트의 다른 부분에 대해 전혀 다른 스타일을 하고 있는 경우, 모든 전역 규칙을 포함하는 하나의 스타일시트와 그 섹션에 필요한 특정 규칙을 포함하는 몇 개의 작은 스타일시트를 만들고 싶을 수 있습니다. 이 때 한 페이지에서 여러 스타일시트를 연결할 수 있고, 일반적인 종속의 규칙이 적용되며, 이후에 연결된 스타일시트의 규칙이 먼저 연결된 스타일시트의 규칙 다음으로 적용됩니다.
 
 예를 들어, 사이트의 일부로 온라인 스토어가 있을 수 있는데, 스토어에 필요한 제품 목록과 양식을 꾸미기 위해 사용되는 CSS가 많을 수 있습니다. 그런 것들을 다른 스타일시트에 넣고, 스토어 페이지에서만 연결하는 것이 타당할 것입니다.
 
