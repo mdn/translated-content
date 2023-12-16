@@ -67,7 +67,8 @@ _このインターフェイスに特有のメソッドはありませんが、 
     <main>
       <h1>ファイルのアップロード</h1>
       <p>
-        <label for="file">アップロードするファイル</label><input type="file" id="file" />
+        <label for="file">アップロードするファイル</label>
+        <input type="file" id="file" />
       </p>
       <p>
         <progress />
