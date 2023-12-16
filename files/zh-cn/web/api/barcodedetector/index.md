@@ -2,17 +2,17 @@
 title: BarcodeDetector
 slug: Web/API/BarcodeDetector
 l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+  sourceCommit: 5d6753b16efeb5b4d5cd91dcea1ec82f85b4ec21
 ---
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-{{domxref('Barcode Detection API')}} 的 **`BarcodeDetector`** 接口允许检测图像中的条形码和二维码。
+{{domxref('Barcode Detection API', '', '', 'nocode')}} 的 **`BarcodeDetector`** 接口允许检测图像中的条形码和二维码。
 
 ## 构造方法
 
 - {{domxref('BarcodeDetector.BarcodeDetector', 'BarcodeDetector.BarcodeDetector()')}} {{Experimental_Inline}}
-  - : 创建并返回一个 `BarcodeDetector` 对象，带有可选的 `barcodeDetectorOptions` 参数。
+  - : 创建并返回一个 `BarcodeDetector` 对象，带有可选的 `BarcodeDetectorOptions` 参数。
 
 ## 静态方法
 
@@ -52,7 +52,7 @@ if (!("BarcodeDetector" in globalThis)) {
 
 ### 获取支持的格式
 
-以下示例调用 `getSupportedFormats()` 方法并将结果记录到控制台。
+以下示例调用 `getSupportedFormats()` 方法并将结果在控制台打印。
 
 ```js
 // 检查支持的类型
@@ -63,7 +63,7 @@ BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
 
 ### 检测条形码
 
-此示例使用 `detect()` 方法来检测给定图像中的条形码。识别结果被迭代并且条形码数据被记录到控制台。
+此示例使用 `detect()` 方法来检测给定图像中的条形码。识别结果被迭代并且条形码数据在控制台打印。
 
 ```js
 barcodeDetector
