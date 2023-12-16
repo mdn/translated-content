@@ -24,7 +24,7 @@ slug: Learn/CSS/Building_blocks/Organizing
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         > 학습) 및, CSS 작동 방식 이해 (
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
+        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
       </td>
     </tr>
     <tr>
