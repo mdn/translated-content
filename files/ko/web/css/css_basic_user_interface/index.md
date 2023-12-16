@@ -53,8 +53,8 @@ CSS의 {{CSSxRef("outline")}}와 {{CSSxRef("outline-offset")}} 속성은 사용�
 
 ## 관련 개념
 
-- CSS [`cursor`](/en-US/docs/Web/CSS/cursor) property
-- SVG [`cursor`](/en-US/docs/Web/SVG/Attribute/cursor) 속성
+- CSS [`cursor`](/ko/docs/Web/CSS/cursor) property
+- SVG [`cursor`](/ko/docs/Web/SVG/Attribute/cursor) 속성
 - CSS {{CSSxRef(":focus")}}, {{CSSxRef(":focus-within")}}, 그리고 {{CSSxRef(":focus-visible")}} 의사클래스
 - {{DOMXref("CaretPosition")}} 인터페이스
 
