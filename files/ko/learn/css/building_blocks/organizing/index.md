@@ -44,7 +44,7 @@ slug: Learn/CSS/Building_blocks/Organizing
 
 기존의 프로젝트에서 팀과 함께 작업하는 경우, 프로젝트에 CSS를 위한 기존 스타일 가이드가 있는지 확인하는 것이 먼저입니다. 팀 스타일 가이드는 항상 자신의 개인적 선호보다 우선되야 합니다. 일을 하는 데에 옳거나 틀린 방법은 거의 없지만, 일관성이 중요합니다.
 
-예를 들어, [CSS guidelines for N code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)를 살펴보세요.
+예를 들어, [CSS guidelines for N code examples](/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)를 살펴보세요.
 
 ### 일관성을 유지하세요
 
