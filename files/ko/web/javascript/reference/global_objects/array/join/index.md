@@ -91,7 +91,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
-  3: 5, // lengtht가 3 이므로 join()에서 무시됨.
+  3: 5, // length가 3 이므로 join()에서 무시됨.
 };
 console.log(Array.prototype.join.call(arrayLike));
 // 2,3,4
