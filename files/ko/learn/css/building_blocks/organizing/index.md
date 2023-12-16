@@ -234,7 +234,7 @@ CSS 작성 규칙을 스스로 만들어야 하는 대신, 커뮤니티에서 �
 
 #### OOCSS(객체지향 CSS)
 
-당신이 마주칠 대부분의 접근법들은 객체 지향 CSS(OOCSS)라는 개념에 어느 정도 기여합니다. 이 접근법은 [Nicole Sullivan의 작업](https://github.com/stubbornella/oocss/wiki)으로 인해 인기를 얻었습니다. OOCSS의 기본 아이디어는 CSS를 재사용 가능한 객체로 분리하고, 이를 웹사이트의 필요한 어디에서나 사용하는 것입니다. OOCSS의 표준 예시는 [The Media Object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)로 설명된 패턴입니다. 이는 한쪽에 고정 크기의 이미지, 비디오 또는 다른 요소와, 다른 한쪽에 유연한 콘텐츠가 있는 패턴입니다. 이는 댓글, 목록 등 웹사이트 곳곳에서 볼 수 있는 패턴입니다.
+당신이 마주칠 대부분의 접근법들은 객체 지향 CSS(OOCSS)라는 개념에 어느 정도 기여합니다. 이 접근법은 [Nicole Sullivan의 작업](https://github.com/stubbornella/oocss/wiki)으로 인해 인기를 얻었습니다. OOCSS의 기본 아이디어는 CSS를 재사용 가능한 객체로 분리하고, 이를 웹사이트의 필요한 어디에서나 사용하는 것입니다. OOCSS의 표준 예시는 [The Media Object](/ko/docs/Web/CSS/Layout_cookbook/Media_objects)로 설명된 패턴입니다. 이는 한쪽에 고정 크기의 이미지, 비디오 또는 다른 요소와, 다른 한쪽에 유연한 콘텐츠가 있는 패턴입니다. 이는 댓글, 목록 등 웹사이트 곳곳에서 볼 수 있는 패턴입니다.
 
 OOCSS 접근법을 사용하지 않는다면, 이 패턴이 사용되는 다양한 곳에 대해 사용자 정의의 CSS를 만들 수 있습니다. 예를 들어, 컴포넌트 부분에 대한 여러 규칙이 있는 `comment` 클래스와 `comment` 클래스와 거의 동일한 규칙을 가진 `list-item`이라는 또 다른 클래스를 만들 수 있습니다. 이 두 컴포넌트 간의 차이점은 list-item에는 하단 테두리가 있고, comment의 이미지에는 테두리가 있으나 list-item의 이미지에는 테두리가 없다는 것입니다.
 
