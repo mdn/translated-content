@@ -15,21 +15,21 @@ page-type: learn-module-chapter
       <td>
         기본 컴퓨터 활용 능력,
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >기본 소프트웨어 설치</a
         >, <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
         > 에 대한 기본 지식
         , HTML 기본 사항 (
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         > 학습) 및, CSS 작동 방식 이해 (
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
+        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
       </td>
     </tr>
     <tr>
-      <th scope="row">목표:</th>
+      <th scope="row">목표:</th>
       <td>
         스타일시트를 구성하기 위한 몇 가지 팁과 모범 사례를 알아보고, CSS 구성 및 팀 작업에 도움이 되는 일반적인 사용 방식의 명명 규칙과 도구를 알아봅시다.
       </td>
@@ -45,7 +45,7 @@ page-type: learn-module-chapter
 
 기존의 프로젝트에서 팀과 함께 작업하는 경우, 프로젝트에 CSS를 위한 기존 스타일 가이드가 있는지 확인하는 것이 먼저입니다. 팀 스타일 가이드는 항상 자신의 개인적 선호보다 우선되야 합니다. 일을 하는 데에 옳거나 틀린 방법은 거의 없지만, 일관성이 중요합니다.
 
-예를 들어, [CSS guidelines for N code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)를 살펴보세요.
+예를 들어, [CSS guidelines for N code examples](/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)를 살펴보세요.
 
 ### 일관성을 유지하세요
 
@@ -235,7 +235,7 @@ CSS 작성 규칙을 스스로 만들어야 하는 대신, 커뮤니티에서 �
 
 #### OOCSS(객체지향 CSS)
 
-당신이 마주칠 대부분의 접근법들은 객체 지향 CSS(OOCSS)라는 개념에 어느 정도 기여합니다. 이 접근법은 [Nicole Sullivan의 작업](https://github.com/stubbornella/oocss/wiki)으로 인해 인기를 얻었습니다. OOCSS의 기본 아이디어는 CSS를 재사용 가능한 객체로 분리하고, 이를 웹사이트의 필요한 어디에서나 사용하는 것입니다. OOCSS의 표준 예시는 [The Media Object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)로 설명된 패턴입니다. 이는 한쪽에 고정 크기의 이미지, 비디오 또는 다른 요소와, 다른 한쪽에 유연한 콘텐츠가 있는 패턴입니다. 이는 댓글, 목록 등 웹사이트 곳곳에서 볼 수 있는 패턴입니다.
+당신이 마주칠 대부분의 접근법들은 객체 지향 CSS(OOCSS)라는 개념에 어느 정도 기여합니다. 이 접근법은 [Nicole Sullivan의 작업](https://github.com/stubbornella/oocss/wiki)으로 인해 인기를 얻었습니다. OOCSS의 기본 아이디어는 CSS를 재사용 가능한 객체로 분리하고, 이를 웹사이트의 필요한 어디에서나 사용하는 것입니다. OOCSS의 표준 예시는 [The Media Object](/ko/docs/Web/CSS/Layout_cookbook/Media_objects)로 설명된 패턴입니다. 이는 한쪽에 고정 크기의 이미지, 비디오 또는 다른 요소와, 다른 한쪽에 유연한 콘텐츠가 있는 패턴입니다. 이는 댓글, 목록 등 웹사이트 곳곳에서 볼 수 있는 패턴입니다.
 
 OOCSS 접근법을 사용하지 않는다면, 이 패턴이 사용되는 다양한 곳에 대해 사용자 정의의 CSS를 만들 수 있습니다. 예를 들어, 컴포넌트 부분에 대한 여러 규칙이 있는 `comment` 클래스와 `comment` 클래스와 거의 동일한 규칙을 가진 `list-item`이라는 또 다른 클래스를 만들 수 있습니다. 이 두 컴포넌트 간의 차이점은 list-item에는 하단 테두리가 있고, comment의 이미지에는 테두리가 있으나 list-item의 이미지에는 테두리가 없다는 것입니다.
 
@@ -345,7 +345,7 @@ CSS를 구성하는 또 다른 방법은 프론트엔드 개발자를 위한 도
 
 #### 변수 선언하기
 
-CSS 에는 기본 [사용자 지정 CSS 속성 사용하기](/en-US/docs/Web/CSS/Using_CSS_custom_properties)가 있으므로 이 기능의 중요성이 점점 줄어듭니다. 그러나 Sass를 사용하는 이유 중 하나는 프로젝트에 사용되는 모든 색상과 글꼴을 설정으로 정의한 다음 프로젝트 주변에 해당 변수를 사용할 수 있기 때문입니다. 즉, 파란색 음영을 잘못 사용했다는 것을 깨달았을 때 한 곳에서만 변경하면 됩니다.
+CSS 에는 기본 [사용자 지정 CSS 속성 사용하기](/ko/docs/Web/CSS/Using_CSS_custom_properties)가 있으므로 이 기능의 중요성이 점점 줄어듭니다. 그러나 Sass를 사용하는 이유 중 하나는 프로젝트에 사용되는 모든 색상과 글꼴을 설정으로 정의한 다음 프로젝트 주변에 해당 변수를 사용할 수 있기 때문입니다. 즉, 파란색 음영을 잘못 사용했다는 것을 깨달았을 때 한 곳에서만 변경하면 됩니다.
 
 아래 첫 번째 줄처럼 `$base-color`라는 변수를 만들면 해당 색상이 필요한 모든 곳에서 스타일 시트를 통해 사용할 수 있습니다.
 
