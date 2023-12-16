@@ -108,7 +108,6 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 - {{domxref("HTMLIFrameElement")}}
 - {{domxref("HTMLImageElement")}}
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLKeygenElement")}}
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLLegendElement")}}
 - {{domxref("HTMLLIElement")}}

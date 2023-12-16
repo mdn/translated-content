@@ -15,7 +15,7 @@ Les tableaux ne peuvent pas utiliser de chaînes de caractères comme indices po
 
 ### Opérations fréquentes
 
-**Créer un tableau**
+**Créer un tableau:**
 
 ```js
 let fruits = ["Apple", "Banana"];
@@ -24,7 +24,7 @@ console.log(fruits.length);
 // 2
 ```
 
-**Accéder (via son index) à un élément du tableau**
+**Accéder (via son index) à un élément du tableau:**
 
 ```js
 let first = fruits[0];
@@ -34,7 +34,7 @@ let last = fruits[fruits.length - 1];
 // Banana
 ```
 
-**Boucler sur un tableau**
+**Boucler sur un tableau:**
 
 ```js
 fruits.forEach(function (item, index, array) {
@@ -44,35 +44,35 @@ fruits.forEach(function (item, index, array) {
 // Banana 1
 ```
 
-**Ajouter à la fin du tableau**
+**Ajouter à la fin du tableau:**
 
 ```js
 let newLength = fruits.push("Orange");
 // ["Apple", "Banana", "Orange"]
 ```
 
-**Supprimer le dernier élément du tableau**
+**Supprimer le dernier élément du tableau:**
 
 ```js
 let last = fruits.pop(); // supprime Orange (à la fin)
 // ["Apple", "Banana"];
 ```
 
-**Supprimer le premier élément du tableau**
+**Supprimer le premier élément du tableau:**
 
 ```js
 let first = fruits.shift(); // supprime Apple (au début)
 // ["Banana"];
 ```
 
-**Ajouter au début du tableau**
+**Ajouter au début du tableau:**
 
 ```js
 let newLength = fruits.unshift("Strawberry"); // ajoute au début
 // ["Strawberry", "Banana"];
 ```
 
-**Trouver l'index d'un élément dans le tableau**
+**Trouver l'index d'un élément dans le tableau:**
 
 ```js
 fruits.push("Mango");
@@ -82,7 +82,7 @@ let pos = fruits.indexOf("Banana");
 // 1
 ```
 
-**Supprimer un élément par son index**
+**Supprimer un élément par son index:**
 
 ```js
 let removedItem = fruits.splice(pos, 1); // supprime 1 élément à la position pos
@@ -90,7 +90,7 @@ let removedItem = fruits.splice(pos, 1); // supprime 1 élément à la position 
 // ["Strawberry", "Mango"]
 ```
 
-**Supprimer des éléments à partir d'un index**
+**Supprimer des éléments à partir d'un index:**
 
 ```js
 let vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
@@ -111,7 +111,7 @@ console.log(removedItems);
 // ["Turnip", "Radish"] (splice retourne la liste des éléments supprimés)
 ```
 
-**Copier un tableau**
+**Copier un tableau:**
 
 ```js
 let shallowCopy = fruits.slice(); // crée un nouveau tableau qui contient les éléments de fruits

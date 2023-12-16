@@ -487,6 +487,6 @@ You can set `color-adjust` to `exact` to tell the browser that the element or el
 
 ## 参见
 
-- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/zh-CN/docs/Web/Guide/Graphics)
-- [MDN's color picker tool](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [绘制图形](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Web 上的图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#web_上的其他图形)
+- [CSS color 模块](/zh-CN/docs/Web/CSS/CSS_colors)

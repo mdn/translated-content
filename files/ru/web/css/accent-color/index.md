@@ -19,7 +19,7 @@ slug: Web/CSS/accent-color
 ## Синтаксис
 
 ```css
-/* Специальные значения */
+/* Ключевые слова */
 accent-color: auto;
 
 /* <color> значения */
@@ -28,7 +28,7 @@ accent-color: #5729e9;
 accent-color: rgb(0, 200, 0);
 accent-color: hsl(228, 4%, 24%);
 
-/* Общие значения */
+/* Глобальные значения */
 accent-color: inherit;
 accent-color: initial;
 accent-color: revert;

@@ -353,13 +353,3 @@ imgThumb.onblur = hideImg;
 Далее WAI-ARIA!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## В этом модуле
-
-- [Что такое доступность?](/ru/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: Хорошая основа для доступности](/ru/docs/Learn/Accessibility/HTML)
-- [CSS и JavaScript доступность - лучшие практики](/ru/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Основы WAI-ARIA](/ru/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Доступность мультимедиа](/ru/docs/Learn/Accessibility/Multimedia)
-- [Мобильная доступность](/ru/docs/Learn/Accessibility/Mobile)
-- [Устранение проблем доступности](/ru/docs/Learn/Accessibility/Accessibility_troubleshooting)

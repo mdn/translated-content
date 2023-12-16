@@ -11,9 +11,9 @@ O método `includes()` determina se um array contém um determinado elemento, re
 
 {{EmbedInteractiveExample("pages/js/array-includes.html")}}
 
-**Sintaxe**
+## Sintaxe
 
-```
+```js-nolint
 array.includes(searchElement[, fromIndex])
 ```
 

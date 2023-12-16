@@ -752,7 +752,7 @@ aside {
 
 ## 関連情報
 
-- [CSS グリッドのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout#ガイド)
+- [CSS グリッドのガイド](/ja/docs/Web/CSS/CSS_grid_layout#ガイド)
 - [CSS グリッドインスペクター: グリッドレイアウトを調査する](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}

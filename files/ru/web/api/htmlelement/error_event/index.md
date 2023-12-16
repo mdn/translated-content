@@ -35,8 +35,6 @@ slug: Web/API/HTMLElement/error_event
 
 Эти события типа {{domxref("MediaRecorderErrorEvent")}}.
 
-{{page("/en-US/docs/Web/API/MediaRecorderErrorEvent", "Properties")}}
-
 ## Смотрите также
 
 - {{domxref("GlobalEventHandlers.onerror")}}

@@ -19,7 +19,7 @@ slug: Web/CSS/vertical-align
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 vertical-align: baseline;
 vertical-align: sub;
 vertical-align: super;

@@ -25,4 +25,4 @@ _Нет специфичных методов; наследует методы �
 
 ## Смотрите также
 
-- Устаревшие или нестандартные HTML-элементы реализующие этот интерфейс: {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}
+- Устаревшие или нестандартные HTML-элементы реализующие этот интерфейс: {{HTMLElement("bgsound")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}

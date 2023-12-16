@@ -101,7 +101,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -188,11 +187,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         media capture spec,
         specifies a new file can be captured.
       </td>
-    </tr>
-    <tr>
-      <td><code>challenge</code></td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>공개 키와 같이 전송된 challenge 문자열입니다.</td>
     </tr>
     <tr>
       <td><code>charset</code></td>
@@ -401,7 +395,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         {{ HTMLElement("command") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -475,7 +468,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -739,11 +731,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td></td>
     </tr>
     <tr>
-      <td><code>keytype</code></td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>Specifies the type of key generated.</td>
-    </tr>
-    <tr>
       <td><code>kind</code></td>
       <td>{{ HTMLElement("track") }}</td>
       <td>Specifies the kind of text track.</td>
@@ -895,7 +882,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},

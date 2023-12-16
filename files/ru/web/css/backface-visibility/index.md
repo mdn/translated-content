@@ -14,7 +14,7 @@ slug: Web/CSS/backface-visibility
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 backface-visibility: visible;
 backface-visibility: hidden;
 

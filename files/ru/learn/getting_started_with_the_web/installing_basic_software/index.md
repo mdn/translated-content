@@ -44,14 +44,3 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 Некоторые примеры для успешной работы необходимо будет запустить на веб-сервере. Вы можете узнать, как это сделать в статье [Как настроить локальный сервер для тестирования?](/ru/docs/Learn/Common_questions/set_up_a_local_testing_server)
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## В этом модуле
-
-- [Установка базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)
-- [Каким должен быть ваш веб-сайт?](/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Основы HTML](/ru/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Основы CSS](/ru/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Основы JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Публикация вашего веб-сайта](/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Как работает Веб](/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

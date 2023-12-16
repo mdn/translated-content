@@ -50,12 +50,12 @@ Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuf
     - crear una colección de métodos para los que los objetos parecidos a cadenas (de ahora en adelante, `stringView`s) funcionen estrictamente en arrays de números más que en cadenas JavaScript inmutables.
     - trabajar con otras codificaciones Unicode diferentes de las [`DOMString`](/es/docs/Web/JavaScript/Reference/Global_Objects/String)s UTF-16 por defecto de JavaScript.
 
-**Herramientas**
+## Herramientas
 
 - [Reescribir atob() y btoa() usando TypedArrays y UTF-8](/es/docs/glossary/base64#solution_.232_.e2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_typedarrays_and_utf-8)
 - [`StringView`, una representación tipo C de cadenas basadas en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView)
 
-**Temas relacionados**
+## Temas relacionados
 
 - [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [Vectores o arrays tipados](/es/docs/Web/JavaScript/Typed_arrays)

@@ -20,9 +20,9 @@ numeros.push(5, 6, 7);
 console.log(numeros); // [1, 2, 3, 4, 5, 6, 7]
 ```
 
-**Sintaxe**
+## Sintaxe
 
-```
+```js-nolint
 arr.push(elemento1, ..., elementoN)
 ```
 
@@ -35,7 +35,7 @@ arr.push(elemento1, ..., elementoN)
 
 O novo valor da propriedade {{jsxref("Array.length", "length")}} do objeto no qual o método foi chamado.
 
-**Descrição**
+## Descrição
 
 O método `push` adiciona valores a um array.
 

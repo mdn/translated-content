@@ -7,7 +7,7 @@ slug: Web/JavaScript/Enumerability_and_ownership_of_properties
 
 Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable interno se establece en `true`, que es el valor predeterminado para las propiedades creadas mediante una asignación simple o mediante un iniciador de propiedad (propiedades definidas mediante {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty")}} y tal valor enumerable predeterminado a `false`). Se muestran numerosas propiedades en bucles {{jsref("Statements/for...in", "for...in")}} a menos que la clave de la propiedad sea {{jsxref("Global_Objects/Symbol", "Symbol")}}. La posesión de las propiedades está determinada por si la propiedad pertenece directamente al objeto y no a su cadena prototipo. Las propiedades de un objeto también se pueden recuperar en total. Hay varios medios incorporados para detectar, iterar/enumerar y recuperar propiedades de objetos, y el gráfico que se muestra a continuación está disponible. A continuación, se muestra un código de muestra que demuestra cómo obtener las categorías faltantes.
 
-**Propiedad, enumerabilidad y posesión — métodos integrados de detección, recuperación e iteración**
+**Propiedad, enumerabilidad y posesión — métodos integrados de detección, recuperación e iteración.**
 
 - Funcionalidad
 

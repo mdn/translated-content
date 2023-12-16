@@ -13,7 +13,7 @@ El tipo de datos [CSS](/es/docs/CSS) `<gradient>` indica un tipo de {{cssxref("&
 
 Un gradiente de CSS no es un {{cssxref("&lt;color&gt;")}} pero tampoco es una imagen con [dimensiones intrínsecas](/es/docs/Web/CSS/image#no_intrinsic); es decir, que no tiene tamaño natural o preferido, ni una relación preferida. Su tamaño concreto coincidirá con los elementos a los que se aplica.
 
-**Funciones de las Gradientes**
+## Funciones de las Gradientes
 
 Hay tres tipos de gradientes de color:
 

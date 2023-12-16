@@ -252,13 +252,3 @@ Web Audio и HTMLMediaElement API подчиняются механизму бе
 На данном этапе, у вас должно сформироваться представление о том, что такое API, как они работают и как вы можете применить их в своём JavaScript-коде. Вам наверняка не терпится начать делать по-настоящему интересные вещи с конкретными API, так вперёд! В следующий раз мы рассмотрим работу с документом с помощью Document Object Model (DOM).
 
 {{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## В этом модуле
-
-- [Введение в web APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

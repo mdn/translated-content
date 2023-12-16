@@ -6,7 +6,7 @@ slug: Web/CSS/grid-area
 CSS-свойство `grid-area` - это [сокращённая форма записи](/ru/docs/Web/CSS/Shorthand_properties) для свойств {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} и {{cssxref("grid-column-end")}}. Определяет размер и местоположение грид-элемента в пределах {{glossary("grid rows", "grid row")}}. Задаёт края {{glossary("grid areas", "грид-области")}} грид-элемента.
 
 ```css
-/* Ключевые слова в качестве значений */
+/* Ключевые слова */
 grid-area: auto;
 grid-area: auto / auto;
 grid-area: auto / auto / auto;

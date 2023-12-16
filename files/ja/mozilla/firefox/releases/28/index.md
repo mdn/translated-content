@@ -26,7 +26,7 @@ Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました�
 
 ### CSS
 
-- 複数行の [flexbox](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) をサポートしました ([Firefox バグ 939901](https://bugzil.la/939901))。
+- 複数行の [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) をサポートしました ([Firefox バグ 939901](https://bugzil.la/939901))。
 - 東アジア言語における長い表記のの[カウンタースタイル](/ja/docs/Web/CSS/list-style-type)を実装しました ([Firefox バグ 934072](https://bugzil.la/934072))。
 - {{cssxref("background-blend-mode")}} プロパティをサポートしました ([Firefox バグ 841601](https://bugzil.la/841601))。
 - {{cssxref("font-variant-ligatures")}} プロパティに値 `none` を追加しました ([Firefox バグ 913264](https://bugzil.la/913264))。
