@@ -1,11 +1,12 @@
 ---
-title: XMLHttpRequest.responseText
+title: "XMLHttpRequest: responseText プロパティ"
+short-title: responseText
 slug: Web/API/XMLHttpRequest/responseText
 l10n:
   sourceCommit: 8e294a76bdebc9583d418ee14b42422eb4a8f4a5
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("XMLHttpRequest")}} の **`responseText`** プロパティは読み取り専用で、送信されたリクエストに続いてサーバーから受け取ったテキストを返します。
 
