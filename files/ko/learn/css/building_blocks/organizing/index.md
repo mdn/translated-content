@@ -388,16 +388,16 @@ CSS로 컴파일되면 최종 스타일시트에 다음과 같은 CSS를 얻게 
 
 > **참고:** Sass를 시도해보는 간단한 방법은 [CodePen](https://codepen.io)을 사용하는 것입니다. 펜의 설정에서 CSS에 대한 Sass를 활성화할 수 있고, 그런 다음 CodePen은 일반 CSS가 적용된 결과 웹페이지를 볼 수 있도록 Sass 파서를 실행해줍니다. 때때로 CSS 튜토리얼에서는 CodePen 데모에서 일반 CSS보다 Sass를 사용한 경우가 있으므로, 이에 대해 약간 알고 있는 것이 편리합니다.
 
-#### Post-processing for optimization
+#### 최적화를 위한 후처리
 
-If you are concerned about adding size to your stylesheets, for example, by adding a lot of additional comments and whitespace, then a post-processing step could be to optimize the CSS by stripping out anything unnecessary in the production version. An example of a post-processor solution for doing this would be [cssnano](https://cssnano.co/).
+예를 들어, 많은 추가적인 주석과 공백을 추가함으로써 스타일시트의 크기를 늘리는 것에 대해 우려한다면, 후처리 단계는 생산 버전에서 불필요한 모든 것을 제거함으로써 CSS를 최적화하는 것일 수 있습니다. 이를 수행하는 후처리 솔루션의 예시로 [cssnano](https://cssnano.co/)가 있습니다.
 
-## Summary
+## 요약
 
-This is the final part of our building blocks module, and as you can see there are many ways in which your exploration of CSS can continue from this point — but now you can go on to testing yourself with our assessments: the first one is linked below.
+이것은 우리의 기본 구성 요소 모듈의 마지막 부분이며, 여러분이 볼 수 있듯이 CSS에 대한 탐구는 이 시점에서 여러 방법으로 계속될 수 있습니다. 하지만 이제 우리의 평가로 자신을 테스트할 수 있습니다. 첫 번째는 아래에 링크되어 있습니다.
 
-To learn more about layout in CSS, see the [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
+CSS에서 레이아웃에 대해 더 알아보려면, [CSS 레이아웃](/ko/docs/Learn/CSS/CSS_layout) 모듈을 참조하세요.
 
-You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout).
+또한 이제 [MDN CSS](/ko/docs/Web/CSS) 자료의 나머지 부분을 탐색하는 능력도 있어야 합니다. 속성과 값을 찾아보고, 패턴을 사용하기 위해 우리의 [CSS 자세한 설명서](/ko/docs/Web/CSS/Layout_cookbook)를 탐색하거나, [CSS 그리드 레이아웃 가이드](/ko/docs/Web/CSS/CSS_grid_layout)와 같은 특정 가이드들을 계속 읽을 수 있습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
