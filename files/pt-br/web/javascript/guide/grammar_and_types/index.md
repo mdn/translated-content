@@ -62,7 +62,7 @@ Você pode declarar uma variável de três formas:
 
 - Com a palavra chave {{jsxref("Statements/var", "var")}}. Por exemplo, var `x = 42`. Esta sintaxe pode ser usada para declarar tanto variáveis locais como variáveis globais.
 - Por simples adição de valor. Por exemplo, `x = 42`. Isso declara uma variável global. Essa declaração gera um aviso de advertência no JavaScript. Você não deve usar essa variante.
-- Com a palavra chave {{jsxref("Statements/let", "let")}}. Por exemplo, `let y = 13`. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja [escopo de variável](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types#Variable_scope) abaixo.
+- Com a palavra chave {{jsxref("Statements/let", "let")}}. Por exemplo, `let y = 13`. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja [escopo de variável](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types#escopo_de_variável) abaixo.
 
 ### Classificando variáveis
 
