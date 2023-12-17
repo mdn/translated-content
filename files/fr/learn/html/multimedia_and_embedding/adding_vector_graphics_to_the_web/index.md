@@ -92,7 +92,7 @@ Pour intégrer une image SVG à l'aide d'un élément [`<img>`](/fr/docs/Web/HTM
 ```html
 <img
   src="equilateral.svg"
-  alt="un triange avec trois côtés égaux"
+  alt="un triangle avec trois côtés égaux"
   height="87"
   width="100" />
 ```
@@ -116,7 +116,7 @@ Pour les navigateurs qui ne prennent pas en charge SVG (IE8 et antérieur, Andro
 ```html
 <img
   src="equilateral.png"
-  alt="un triange avec trois côtés égaux"
+  alt="un triangle avec trois côtés égaux"
   srcset="equilateral.svg" />
 ```
 
