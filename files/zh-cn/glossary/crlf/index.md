@@ -1,6 +1,8 @@
 ---
 title: CRLF
 slug: Glossary/CRLF
+l10n:
+  sourceCommit: d4a90d5f1e37524e3c9e9c223f2a153d9b833128
 ---
 
 {{GlossarySidebar}}
