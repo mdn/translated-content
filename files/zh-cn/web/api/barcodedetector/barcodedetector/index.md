@@ -1,68 +1,57 @@
 ---
-title: "BarcodeDetector: BarcodeDetector() constructor"
-short-title: BarcodeDetector()
+title: BarcodeDetector：BarcodeDetector() 构造方法
 slug: Web/API/BarcodeDetector/BarcodeDetector
-page-type: web-api-constructor
-status:
-  - experimental
-browser-compat: api.BarcodeDetector.BarcodeDetector
+l10n:
+  sourceCommit: 236d6a07df44912cfd6d55d33bd8869fad173040
 ---
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-The **`BarcodeDetector()`** constructor creates
-a new {{domxref("BarcodeDetector")}} object which detects linear and two-dimensional
-barcodes in images.
+**`BarcodeDetector()`** 构造函数创建一个新的 {{domxref("BarcodeDetector")}} 对象，用于检测图像中条形码和二维码。
 
-## Syntax
+## 语法
 
 ```js-nolint
 new BarcodeDetector()
 new BarcodeDetector(options)
 ```
 
-### Parameters
+### 参数
 
 - `options` {{optional_inline}}
 
-  - : An options object containing a series of `BarcodeFormats` to search for
-    in the subsequent {{domxref('BarcodeDetector.detect()','detect()')}} calls. The
-    options are:
+  - : 包含一系列 `BarcodeFormats` 的选项对象，用于在后续调用 {{domxref('BarcodeDetector.detect()','detect()')}} 中搜索。选项有：
 
     - `formats` {{optional_inline}}
-      - : An {{jsxref('Array')}} of barcode formats as strings.
-        If not provided, `detect()` calls search for all supported formats.
-        Limiting to specific formats is therefore recommended for performance reasons.
-        To see a full list of supported formats see the {{domxref("Barcode Detection API")}}.
+      - : 一个表示条形码格式的字符串的 {{jsxref('Array')}}。 如果未提供，调用 `detect()` 将搜索所有支持的格式。因此，出于性能原因，建议限制为具体的格式。要查看支持格式的完整列表，请参阅 {{domxref("BarcodeDetection API")}}。
 
-### Exceptions
+### 异常
 
 - {{jsxref("TypeError")}}
   - : Thrown if the `formats` is specified and the parameter is empty or contains `unknown`.
 
-## Examples
+## 示例
 
-This example creates a new barcode detector object, with specified supported formats
-and tests for browser compatibility.
+此示例测试浏览器兼容性并使用指定的支持格式创建新的条形码检测器对象。
 
 ```js
-// check compatibility
+// 检查兼容性
 if (!("BarcodeDetector" in globalThis)) {
-  console.log("Barcode Detector is not supported by this browser.");
+  console.log("此浏览器不支持条形码检测器。");
 } else {
-  console.log("Barcode Detector supported!");
+  console.log("条形码检测器是支持的！");
 
-  // create new detector
+  // 创建新检测器
   const barcodeDetector = new BarcodeDetector({
     formats: ["code_39", "codabar", "ean_13"],
   });
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
