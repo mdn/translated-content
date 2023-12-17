@@ -2,7 +2,7 @@
 title: Screen
 slug: Web/API/Screen
 l10n:
-  sourceCommit: 7ccc447f6bf300a735ecf1bd44435998dcb3874d
+  sourceCommit: ee0b1ae4976a379b0305813cbd84f05aa7e8d95e
 ---
 
 {{APIRef("CSSOM")}}
@@ -57,7 +57,7 @@ _Также наследует методы от своего родительс
 ## Примеры
 
 ```js
-if (screen.pixelDepth < 8) {
+if (screen.colorDepth < 8) {
   // использовать версию страницы с неполным количеством цветов
 } else {
   // использовать обычную полноцветную версию страницу
