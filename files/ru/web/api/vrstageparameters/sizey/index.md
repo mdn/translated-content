@@ -27,11 +27,10 @@ var mySizeY = vrStageParametersInstance.sizeY;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрационные материалы,загружаемые и другие ресурсы команды Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

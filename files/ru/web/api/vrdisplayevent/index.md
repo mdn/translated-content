@@ -45,5 +45,4 @@ window.addEventListener("vrdisplaypresentchange", function (e) {
 
 ## See also
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрации, загружаемые материалы и другие ресурсы команды the Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)
