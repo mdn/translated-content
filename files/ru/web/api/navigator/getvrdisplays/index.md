@@ -1,8 +1,8 @@
 ---
-title: Navigator.getVRDisplays()
+title: "Navigator: метод getVRDisplays()"
 slug: Web/API/Navigator/getVRDisplays
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: d558b37cc2a66f5a888f3b95902e64444047c052
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
