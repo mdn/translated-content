@@ -37,11 +37,10 @@ var myPosition = VRPose.position;
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Дополнительно
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрационные, материалы для загрузки и другие ресурсы команды Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

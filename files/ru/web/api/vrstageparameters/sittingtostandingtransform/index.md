@@ -27,11 +27,10 @@ var myTransform = vrStageParametersInstance.sittingToStandingTransform;
 
 {{Specifications}}
 
-## Режим совместимости браузера
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Дополнительно
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрационные, доступные для загрузки и другие материалы команды Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)
