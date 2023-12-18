@@ -55,7 +55,7 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 ### 虛擬實境 ( Virtual Reality )
 
 - The Polar Sea ([source code](https://github.com/MozVR/polarsea))
-- Sechelt fly-through ([source code](https://github.com/mozvr/sechelt))
+- [Sechelt fly-through](http://mozvr.github.io/sechelt/) ([source code](https://github.com/mozvr/sechelt))
 
 ## CSS
 
