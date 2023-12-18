@@ -1,11 +1,12 @@
 ---
 title: "XMLHttpRequest: load イベント"
+short-title: load
 slug: Web/API/XMLHttpRequest/load_event
 l10n:
   sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 `load` イベントは、 {{domxref("XMLHttpRequest")}} のトランザクションが成功裏に完了したときに発行されます。
 
@@ -138,4 +139,4 @@ xhrButtonAbort.addEventListener("click", () => {
 ## 関連情報
 
 - 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#進捗の監視)
