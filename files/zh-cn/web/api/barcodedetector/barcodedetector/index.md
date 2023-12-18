@@ -28,7 +28,7 @@ new BarcodeDetector(options)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the `formats` is specified and the parameter is empty or contains `unknown`.
+  - : 如果指定了“formats”参数并且该参数为空数组或包含“unknown”，则抛出此异常。
 
 ## 示例
 
