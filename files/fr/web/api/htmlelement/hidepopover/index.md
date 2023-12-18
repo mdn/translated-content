@@ -2,7 +2,7 @@
 title: "HTMLElement : méthode hidePopover()"
 slug: Web/API/HTMLElement/hidePopover
 l10n:
-  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
+  sourceCommit: a3afc20137b6ada89203f18bc7d4d4c236cacb92
 ---
 
 {{APIRef("HTML DOM")}}
