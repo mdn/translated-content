@@ -1,63 +1,50 @@
 ---
-title: "BarcodeDetector: detect() method"
-short-title: detect()
+title: BarcodeDetector：detect() 方法
 slug: Web/API/BarcodeDetector/detect
-page-type: web-api-instance-method
-status:
-  - experimental
-browser-compat: api.BarcodeDetector.detect
+l10n:
+  sourceCommit: 5d6753b16efeb5b4d5cd91dcea1ec82f85b4ec21
 ---
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-The **`detect()`** method of the
-{{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which fulfills
-with an {{jsxref('Array')}} of detected barcodes within an image.
+{{domxref("BarcodeDetector")}} 接口的 **`detect()`** 方法返回一个 {{jsxref('Promise')}}，它兑现一个从图像中检测到的条形码的 {{jsxref('Array')}}。
 
-## Syntax
+## 语法
 
 ```js-nolint
 detect(imageBitmapSource)
 ```
 
-### Parameters
+### 参数
 
 - `imageBitmapSource`
-  - : Receives an image source as a parameter. This can be a {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, a {{domxref("HTMLVideoElement")}}, a {{domxref("HTMLCanvasElement")}}, an {{domxref("ImageBitmap")}}, an {{domxref("OffscreenCanvas")}}, a {{domxref("VideoFrame")}}, a {{domxref('Blob')}} of type image or an {{domxref('ImageData')}} object.
+  - : 接受一个图像源作为参数；它可以是以下对象之一：{{domxref("HTMLImageElement")}}、{{domxref("SVGImageElement")}}、{{domxref("HTMLVideoElement")}}、{{domxref("HTMLCanvasElement")}}、{{domxref("ImageBitmap")}}、{{domxref("OffscreenCanvas")}}、{{domxref("VideoFrame")}}、{{domxref('Blob')}} 格式的图像或 {{domxref('ImageData')}}。
 
-### Return value
+### 返回值
 
-Returns a {{jsxref('Promise')}} which fulfills with an array of
-`detectedBarcode` objects with the following properties:
+返回一个 {{jsxref('Promise')}}，它兑现一个具有以下属性的 `DetectedBarcode` 对象数组：
 
 - `boundingBox`
-  - : A {{domxref('DOMRectReadOnly')}}, which returns the
-    dimensions of a rectangle representing the extent of a detected barcode, aligned with
-    the image.
+  - : 一个 {{domxref('DOMRectReadOnly')}}，返回表示检测到的条形码范围的矩形尺寸，与图像对齐。
 - `cornerPoints`
-  - : The x and y co-ordinates of the four corner points of the
-    detected barcode relative to the image, starting with the top left and working
-    clockwise. This may not be square due to perspective distortions within the image.
+  - : 检测到的条形码的四个角点相对于图像的 x 和 y 坐标，从左上角开始顺时针旋转。由于图像内的透视变形，这可能不是方形的。
 - `format`
-  - : The detected barcode format. (For a full list of formats see
-    the {{domxref('Barcode Detection API', 'Barcode Detection API overview page')}}).
+  - : 检测到的条形码格式。（有关格式的完整列表，请参阅 {{domxref('Barcode Detection API', 'Barcode Detection API 概述页面')}}）
 - `rawValue`
-  - : A string decoded from the barcode data.
+  - : 一个从条形码数据解码的字符串。
 
-### Exceptions
+### 异常
 
 - {{jsxref("TypeError")}}
-  - : No parameter is specified or the `type` is not that of an
-    `ImageBitmapSource`.
+  - : 未指定参数或 `type` 参数不是一个 `ImageBitmapSource` 类型。
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the `imageBitmapSource` has an origin and is not the same as the document's origin, or if the `imageBitmapSource` is a {{domxref('HTMLCanvasElement')}} and its [origin-clean](https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-origin-clean) flag is set to `false`.
+  - : 如果 `imageBitmapSource` 有源并且与文档的源不同，或者如果 `imageBitmapSource` 是一个 {{domxref('HTMLCanvasElement')}} 及其 [origin-clean](https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-origin-clean) 标志设置为 `false`。
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the `imageBitmapSource` is an {{domxref('HTMLImageElement')}} and is not fully decoded or decoding failed, or is an {{domxref('HTMLVideoElement')}} and its {{domxref('HTMLMediaElement.readyState', 'readyState')}} is `HAVE_NOTHING` or `HAVE_METADATA`.
+  - : 如果 `imageBitmapSource` 是一个 {{domxref('HTMLImageElement')}} 并且未完全解码或解码失败，或者是一个 {{domxref('HTMLVideoElement')}} 并且其 {{domxref('HTMLMediaElement.readyState', 'readyState')}} 属性是 `HAVE_NOTHING` 或 `HAVE_METADATA`，抛出此异常。
 
-## Examples
+## 示例
 
-This example uses the `detect()` method to detect the barcodes within the
-given image. These are iterated over and the barcode data is logged to the console.
+此示例使用 `detect()` 方法来检测给定图像中的条形码。识别结果被迭代并且条形码数据被记录到控制台。
 
 ```js
 barcodeDetector
@@ -70,10 +57,10 @@ barcodeDetector
   });
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
