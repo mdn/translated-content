@@ -18,7 +18,7 @@ var element = node.firstElementChild;
 ## 例子
 
 ```html
-<ul id="foo">
+<ul id="list">
   <li>First (1)</li>
   <li>Second (2)</li>
   <li>Third (3)</li>
