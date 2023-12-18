@@ -29,16 +29,16 @@ detect(imageBitmapSource)
 - `cornerPoints`
   - : 检测到的条形码的四个角点相对于图像的 x 和 y 坐标，从左上角开始顺时针旋转。由于图像内的透视变形，这可能不是方形的。
 - `format`
-  - : 检测到的条形码格式。（有关格式的完整列表，请参阅 {{domxref('Barcode Detection API', 'Barcode Detection API 概述页面')}}）
+  - : 检测到的条形码格式。（有关格式的完整列表，请参阅[受支持的条形码格式类型](/zh-CN/docs/Web/API/Barcode_Detection_API#支持的条形码格式)）
 - `rawValue`
   - : 一个从条形码数据解码的字符串。
 
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 未指定参数或 `type` 参数不是一个 `ImageBitmapSource` 类型。
+  - : 如果未指定参数或 `type` 参数不是一个 `ImageBitmapSource` 类型，抛出此异常。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果 `imageBitmapSource` 有源并且与文档的源不同，或者如果 `imageBitmapSource` 是一个 {{domxref('HTMLCanvasElement')}} 及其 [origin-clean](https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-origin-clean) 标志设置为 `false`。
+  - : 如果 `imageBitmapSource` 有源并且与文档的源不同，或者如果 `imageBitmapSource` 是一个 {{domxref('HTMLCanvasElement')}} 及其 [origin-clean](https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-origin-clean) 标志设置为 `false`，抛出此异常。
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 如果 `imageBitmapSource` 是一个 {{domxref('HTMLImageElement')}} 并且未完全解码或解码失败，或者是一个 {{domxref('HTMLVideoElement')}} 并且其 {{domxref('HTMLMediaElement.readyState', 'readyState')}} 属性是 `HAVE_NOTHING` 或 `HAVE_METADATA`，抛出此异常。
 
