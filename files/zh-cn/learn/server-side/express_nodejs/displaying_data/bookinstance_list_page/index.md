@@ -35,7 +35,7 @@ exports.bookinstance_list = function (req, res, next) {
 
 ## 视图
 
-创建 **/views/bookinstance_list.pug** ，并复制粘贴下面的文字。
+创建 **/views/bookinstance_list.pug**，并复制粘贴下面的文本。
 
 ```js
 extends layout
