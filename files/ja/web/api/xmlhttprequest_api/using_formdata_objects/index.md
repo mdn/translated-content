@@ -25,7 +25,7 @@ send.addEventListener("click", async () => {
   const avatar = document.querySelector("#avatar");
   formData.append("avatar", avatar.files[0]);
 
-// JavaScript のファイル風オブジェクト
+  // JavaScript のファイル風オブジェクト
   const content = '<q id="a"><span id="b">hey!</span></q>';
   const blob = new Blob([content], { type: "text/xml" });
   formData.append("webmasterfile", blob);
