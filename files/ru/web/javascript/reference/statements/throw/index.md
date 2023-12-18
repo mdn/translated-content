@@ -71,7 +71,6 @@ try {
   monthName = getMonthName(myMonth);
 } catch (e) {
   monthName = "неизвестен.";
-  console.log(2)
   logMyErrors(e.message, e.name, monthName); // передаём исключение в обработчик ошибок
 }
 ```
