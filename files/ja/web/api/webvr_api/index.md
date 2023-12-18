@@ -130,7 +130,6 @@ WebVR API は、以下の API を継承することで、掲載されている�
 
 ## 関連情報
 
-- [vr.mozilla.org](https://mixedreality.mozilla.org/) — Mozilla の WebVR に関するメインのランディングパッドで、デモやユーティリティ、その他の情報が掲載されています。
 - [A-Frame](https://aframe.io/) — VR 体験を構築するためのオープンソースのウェブフレームワーク。
 - [webvr.info](https://webvr.info) — WebVR の最新情報、ブラウザー設定、コミュニティなど。
 - [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) — WebVR アプリを書き込むための有益なスターターテンプレートです。
