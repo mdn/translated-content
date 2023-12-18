@@ -37,7 +37,7 @@ exports.bookinstance_list = function (req, res, next) {
 
 创建 **/views/bookinstance_list.pug**，并复制粘贴下面的文本。
 
-```js
+```pug
 extends layout
 
 block content
