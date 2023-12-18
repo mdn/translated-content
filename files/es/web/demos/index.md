@@ -66,7 +66,7 @@ Mozilla soporta una amplia variedad de emocionantes tecnologías web abiertas, y
 ### Realidad VIrtual
 
 - The Polar Sea ([código fuente](https://github.com/MozVR/polarsea))
-- [Sechelt fly-through](http://mozvr.github.io/sechelt/) ([código fuente](https://github.com/mozvr/sechelt))
+- [Sechelt fly-through](https://mozvr.github.io/sechelt/) ([código fuente](https://github.com/mozvr/sechelt))
 
 ## CSS
 
