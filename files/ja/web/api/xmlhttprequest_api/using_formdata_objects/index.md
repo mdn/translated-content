@@ -21,7 +21,7 @@ send.addEventListener("click", async () => {
   formData.append("username", "Groucho");
   formData.append("accountnum", 123456);
 
-// file 型の <input> 要素
+  // file 型の <input> 要素
   const avatar = document.querySelector("#avatar");
   formData.append("avatar", avatar.files[0]);
 
