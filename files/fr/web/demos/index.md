@@ -66,8 +66,8 @@ Mozilla supporte une large gamme de technologies open web vraiment intéressante
 
 ### Réalité Virtuelle
 
-- [La Mer Polaire](https://mozvr.com/demos/polarsea/) ([code source](https://github.com/MozVR/polarsea))
-- [Sechelt fly-through](https://mozvr.github.io/sechelt/) ([code source](https://github.com/mozvr/sechelt))
+- La Mer Polaire ([code source](https://github.com/MozVR/polarsea))
+- Sechelt fly-through ([code source](https://github.com/mozvr/sechelt))
 
 ### Réalité augmentée
 
