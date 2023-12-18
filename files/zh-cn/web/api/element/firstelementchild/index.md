@@ -9,7 +9,7 @@ l10n:
 
 **`Element.firstElementChild`** 只读属性返回元素的第一个子{{domxref("Element", "元素", "", 1)}}，如果没有子元素，则为 `null`。
 
-`Element.firstElementChild` 仅包含元素节点。要获取所有子节点（包括文本和注释节点等非节点元素），请使用 {{domxref("Node.firstChild")}}。
+`Element.firstElementChild` 仅包含元素节点。要获取所有子节点（包括文本和注释节点等非元素节点），请使用 {{domxref("Node.firstChild")}}。
 
 ## 值
 
