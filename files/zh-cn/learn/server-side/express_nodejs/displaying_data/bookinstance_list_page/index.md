@@ -64,7 +64,7 @@ block content
 
 ## 它看起来像是？
 
-运行本应用，打开浏览器访问 <http://localhost:3000/>，然后选择 All book-instances 连结。假如每个东西都设定正确了，你的网站看起来应该像是底下的截图。
+运行本应用，打开浏览器访问 `http://localhost:3000/`，然后选择 _All book-instances_ 链接。假如每个东西都设置正确了，你的网站看起来应该像是底下的截图。
 
 ![BookInstance List Page - Express Local Library site](locallibary_express_bookinstance_list.png)
 
