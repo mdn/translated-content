@@ -1,6 +1,6 @@
 ---
 title: "VRStageParameters: свойство sizeX"
-slug: Web/API/VRStageParameters/sizeX
+slug: `Web/API/VRStageParameters/sizeX`
 l10n:
   sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
