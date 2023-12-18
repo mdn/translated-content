@@ -52,7 +52,7 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 ### Realidade virtual
 
 - The Polar Sea ([source code](https://github.com/MozVR/polarsea))
-- [Sechelt fly-through](http://mozvr.github.io/sechelt/) ([source code](https://github.com/mozvr/sechelt))
+- [Sechelt fly-through](https://mozvr.github.io/sechelt/) ([source code](https://github.com/mozvr/sechelt))
 
 ## CSS
 
