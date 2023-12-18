@@ -1,6 +1,8 @@
 ---
 title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
+l10n:
+  sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
 ---
 
 {{jsSidebar("Errors")}}
