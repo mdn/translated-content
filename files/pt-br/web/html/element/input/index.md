@@ -5,7 +5,7 @@ slug: Web/HTML/Element/input
 
 O **elemento HTML `<input>`** é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um `<input>` varia consideravelmente dependendo do valor de seu atributo `type`.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo)_ [Conteúdo de fluxo](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conteúdo_de_fluxo), listado, enviável, resetável, elemento associado a formulário, [conteúdo fraseado](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conteúdo_fraseado).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo), listado, enviável, resetável, elemento associado a formulário, [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_fraseado).
   Se o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) não tiver o valor `hidden`, elemento rotulável, conteúdo palpável.
 - _Conteúdo permitido_ Nenhum, este é um {{Glossary("elemento vazio")}}.
 - _Omissão de tags_ Deve ter uma tag de abertura e não deve ter uma tag de fechamento.
