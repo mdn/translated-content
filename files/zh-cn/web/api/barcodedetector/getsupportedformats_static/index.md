@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-{{domxref("BarcodeDetector")}} 接口的 **`getSupportedFormats()`** 静态方法返回一个 {{jsxref('Promise')}}，它兑现一个包含受支持的条形码格式类型的 {{jsxref('Array')}}。
+{{domxref("BarcodeDetector")}} 接口的 **`getSupportedFormats()`** 静态方法返回一个 {{jsxref('Promise')}}，它兑现一个包含受支持的条形码格式类型的{{jsxref('Array', "数组", "", 1)}}。
 
 ## 语法
 
@@ -21,7 +21,7 @@ BarcodeDetector.getSupportedFormats()
 
 ### 返回值
 
-一个 {{jsxref('Promise')}}，它兑现一个包含受支持的[条形码格式类型](/zh-CN/docs/Web/API/Barcode_Detection_API#支持的条形码格式) 的{{jsxref('Array')}}。
+一个 {{jsxref('Promise')}}，它兑现一个包含受支持的[条形码格式类型](/zh-CN/docs/Web/API/Barcode_Detection_API#支持的条形码格式)的{{jsxref('Array', "数组", "", 1)}}。
 
 ### 异常
 
