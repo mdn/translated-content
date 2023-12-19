@@ -2,7 +2,7 @@
 title: En-têtes HTTP
 slug: Web/HTTP/Headers
 l10n:
-  sourceCommit: d2adfc444695707570fae98fbfa1a98a8ef067ce
+  sourceCommit: 53b19adf7936b1830f407813c3252b35c5eb925e
 ---
 
 {{HTTPSidebar}}
