@@ -2,7 +2,7 @@
 title: BarcodeDetector：detect() 方法
 slug: Web/API/BarcodeDetector/detect
 l10n:
-  sourceCommit: 5d6753b16efeb5b4d5cd91dcea1ec82f85b4ec21
+  sourceCommit: 78d53558b704be923e00aa2664f47a93c32652b4
 ---
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
