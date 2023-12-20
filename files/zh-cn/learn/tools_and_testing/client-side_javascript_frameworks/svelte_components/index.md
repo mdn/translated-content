@@ -15,10 +15,10 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_component
       <td>
         <p>
           至少，建议你熟悉核心的
-          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、
-          <a href="/zh-CN/docs/Learn/CSS">CSS</a> 和
-          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，并了解
-          <a
+          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
+            href="/zh-CN/docs/Learn/CSS">CSS</a> 和
+          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>
+          语言，并了解<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >终端/命令行</a
           >的知识。
@@ -69,13 +69,13 @@ npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app
 
 ## 将应用拆分为组件
 
-在 Svelte 中，应用程序由一个或多个组件组成。组件是可重用的、自包含的代码块，将 HTML、CSS 和 JavaScript 组合在一起，写入 `.svelte` 文件中。组件可以大或小，但通常明确定义：最有效的组件只服务于某个明显的目的。
+在 Svelte 中，应用程序由一个或多个组件组成。组件是可重用的、自包含的代码块，将 HTML、CSS 和 JavaScript 组合在一起，写入 `.svelte` 文件中。组件可大可小，但通常具有明确定义：最有效的组件只服务于某个明确的目的。
 
 定义组件的好处类似于将代码组织成可管理的片段的更一般的最佳实践。它将帮助你理解它们之间的关系，促进重用，并使你的代码更易于理解、维护和扩展。
 
 但是，你如何知道什么应该拆分为组件呢？
 
-这没有硬性规定。有些人更喜欢直观的方法，开始查看标记并在每个似乎具有自己逻辑的组件和子组件周围画框。
+这没有硬性规定。有些人更喜欢直观的方法，开始查看标记并在每个似乎具有自己逻辑的组件和子组件周围绘制封装。
 
 其他人应用同样用于决定是否创建新函数或对象的技术。其中一种技术是单一职责原则——也就是说，一个组件理想情况下只做一件事。如果它变得越来越庞大，应该将其拆分为更小的子组件。
 
@@ -145,19 +145,19 @@ npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app
 
 到目前为止一切顺利！现在让我们试试该应用程序。你会注意到，当你点击过滤器按钮时，它们会被选中，并且样式会相应更新。但是我们有一个问题：待办事项没有被正确过滤。这是因为 `filter` 变量通过属性从 `Todos` 组件向下流动到 `FilterButton` 组件，但是在 `FilterButton` 组件中发生的更改不会向上流回其父组件——默认情况下，数据绑定是单向的。让我们看看解决这个问题的方法。
 
-## 在组件之间共享数据：将处理程序作为属性传递
+## 在组件之间共享数据：将处理器作为属性传递
 
-让子组件通知其父组件发生的任何更改的一种方法是将处理程序作为属性传递。子组件将执行处理程序，并将所需的信息作为参数传递给父组件的处理程序，从而修改父组件的状态。
+让子组件通知其父组件发生的任何更改的一种方法是将处理器作为属性传递。子组件将执行处理器，并将所需的信息作为参数传递给父组件的处理器，从而修改父组件的状态。
 
-在我们的例子中，`FilterButton` 组件将从其父组件接收一个 `onclick` 处理程序。每当用户点击任何过滤器按钮时，子组件将调用 `onclick` 处理程序，并将所选的过滤器作为参数传递回其父组件。
+在我们的例子中，`FilterButton` 组件将从其父组件接收一个 `onclick` 处理器。每当用户点击任何过滤器按钮时，子组件将调用 `onclick` 处理器，并将所选的过滤器作为参数传递回其父组件。
 
-我们只需要声明 `onclick` 属性，并分配一个虚拟处理程序以防止错误，就像这样：
+我们只需要声明 `onclick` 属性，并分配一个虚拟处理器以防止错误，就像这样：
 
 ```js
 export let onclick = (clicked) => {};
 ```
 
-并且我们将声明一个响应式语句 `$: onclick(filter)`，以在更新 `filter` 变量时调用 `onclick` 处理程序。
+并且我们将声明一个响应式语句 `$: onclick(filter)`，以在更新 `filter` 变量时调用 `onclick` 处理器。
 
 1. 我们的 `FilterButton` 组件的 `<script>` 部分应该如下所示。现在更新它：
 
@@ -167,7 +167,7 @@ export let onclick = (clicked) => {};
    $: onclick(filter);
    ```
 
-2. 现在，在 `Todos.svelte` 中调用 `FilterButton` 时，我们需要指定处理程序。更新如下：
+2. 现在，在 `Todos.svelte` 中调用 `FilterButton` 时，我们需要指定处理器。更新如下：
 
    ```svelte
    <FilterButton {filter} onclick={ (clicked) => filter = clicked }/>
@@ -179,7 +179,7 @@ export let onclick = (clicked) => {};
 
 在前面的示例中，我们意识到我们的 `FilterButton` 组件无法正常工作，是因为我们的应用程序状态通过 `filter` 属性从父组件流向子组件，但是无法返回。因此，我们添加了 `onclick` 属性，用于让子组件将新的 `filter` 值传递给父组件。
 
-这种方法可以正常工作，但是 Svelte 提供了一种更简单、更直接的方法来实现双向数据绑定。通常情况下，数据通过属性从父组件向子组件流动。如果我们希望它也能从子组件向父组件流动，我们可以使用 [`bind` 指令](https://svelte.dev/docs#bind_element_property)。
+这种方法可以正常工作，但是 Svelte 提供了一种更简单、更直接的方法来实现双向数据绑定。通常情况下，数据通过属性从父组件向子组件流动。如果我们希望它也能从子组件向父组件流动，我们可以使用 [`bind:` 指令](https://svelte.dev/docs#bind_element_property)。
 
 通过使用 `bind`，我们告诉 Svelte，在 `FilterButton` 组件中对 `filter` 属性进行的任何更改都应该传播回父组件 `Todos`。也就是说，我们将父组件中的 `filter` 变量的值绑定到子组件中的值。
 
@@ -266,9 +266,9 @@ export let onclick = (clicked) => {};
 
 让我们看看如何使用自定义事件重新实现缺失的*删除*按钮功能。
 
-为了创建自定义事件，我们将使用 `createEventDispatcher` 程序。它将返回一个 `dispatch()` 函数，允许我们发出自定义事件。当你发出一个事件时，你需要传递事件的名称，以及（可选的）包含要传递给每个监听器的附加信息的对象。这些附加数据将在事件对象的 `detail` 属性中。
+为了创建自定义事件，我们将使用 `createEventDispatcher` 程序。它将返回一个 `dispatch()` 函数，允许我们发出自定义事件。当你发出一个事件时，你需要传递事件的名称，以及（可选地）包含要传递给每个监听器的附加信息的对象。这些附加数据将在事件对象的 `detail` 属性中。
 
-> **备注：** Svelte 中的自定义事件与常规 DOM 事件共享相同的 API。此外，你可以通过指定 `on:event` 通过将事件向上传递给父组件，而无需指定处理程序。
+> **备注：** Svelte 中的自定义事件与常规 DOM 事件共享相同的 API。此外，你可以通过指定 `on:event` 通过将事件向上传递给父组件，而无需指定处理器。
 
 我们将编辑我们的 `Todo` 组件，以发出一个 `remove` 事件，并传递被删除的待办事项作为附加信息。
 
@@ -287,7 +287,7 @@ export let onclick = (clicked) => {};
    </button>
    ```
 
-   使用 `dispatch('remove', todo)`，我们发出 `remove` 事件，并将要删除的 `todo` 作为附加数据传递。处理程序将被调用，实参为可用的事件对象，附加数据位于 `event.detail` 属性中。
+   使用 `dispatch('remove', todo)`，我们发出 `remove` 事件，并将要删除的 `todo` 作为附加数据传递。处理器将被调用，实参为可用的事件对象，附加数据位于 `event.detail` 属性中。
 
 3. 现在我们要从 `Todos.svelte` 内部监听该事件，并根据情况采取行动。返回到该文件，并像下面这样更新对 `<Todo>` 组件的调用：
 
@@ -366,7 +366,7 @@ export let onclick = (clicked) => {};
 
 为了处理编辑模式，我们使用了布尔类型的 `editing` 变量。当它为 `true` 时，它应该显示用于编辑待办事项名称的 `<input>` 字段以及 _Cancel_ 和 _Save_ 按钮。当它不处于编辑模式时，它将显示复选框、待办事项名称以及编辑和删除待办事项的按钮。
 
-为了实现这一点，我们将使用 [`if` 块](https://svelte.dev/docs#if)。`if` 块会根据条件有条件地渲染一些标记。请注意，它不仅仅是根据条件显示或隐藏标记——它会根据条件在 DOM 中动态添加和移除元素。
+为了实现这一点，我们将使用 [`if` 块](https://svelte.dev/docs#if)。`if` 块会根据条件渲染标记。请注意，它不仅仅是根据条件显示或隐藏标记——它会根据条件在 DOM 中动态添加和移除元素。
 
 例如，当 `editing` 为 `true` 时，Svelte 会显示更新表单；当它为 `false` 时，它会将其从 DOM 中移除并添加复选框。由于 Svelte 的响应性，仅仅分配 `editing` 变量的值就足以显示正确的 HTML 元素。
 
@@ -441,7 +441,7 @@ export let onclick = (clicked) => {};
 - 当调用 `onCancel()` 时，`name` 将恢复为其原始值（当作为属性传递时），并且我们退出编辑模式（通过将 `editing` 设置为 `false`）。
 - 当调用 `onSave()` 时，我们运行 `update()` 函数，将修改后的 `name` 传递给它，并退出编辑模式。
 
-我们还借助 `disabled={!name}` 特性来在 `<input>` 为空时禁用*保存*按钮，并允许用户使用 <kbd>Escape</kbd> 键取消编辑，如下所示：
+我们还借助 `disabled={!name}` 属性以在 `<input>` 为空时禁用*保存*按钮，并允许用户使用 <kbd>Escape</kbd> 键取消编辑，如下所示：
 
 ```plain
 on:keydown={(e) => e.key === 'Escape' && onCancel()}
@@ -491,7 +491,7 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
 
    > **备注：** 我们可以进一步将其拆分为两个不同的组件，一个用于编辑待办事项，另一个用于显示待办事项。最终，这取决于你是否对在单个组件中处理这种复杂性感到舒适。你还应考虑进一步拆分的话，是否能够在其他的上下文中重用此组件。
 
-2. 要使更新功能起作用，我们必须在 `Todos` 组件 中处理 `update` 事件。在 `Todos` 组件的 `<script>` 部分中添加以下处理程序：
+2. 要使更新功能起作用，我们必须在 `Todos` 组件 中处理 `update` 事件。在 `Todos` 组件的 `<script>` 部分中添加以下处理器：
 
    ```js
    function updateTodo(todo) {
