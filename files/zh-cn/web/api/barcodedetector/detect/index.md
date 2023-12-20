@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-{{domxref("BarcodeDetector")}} 接口的 **`detect()`** 方法返回一个 {{jsxref('Promise')}}，它兑现一个从图像中检测到的条形码的 {{jsxref('Array')}}。
+{{domxref("BarcodeDetector")}} 接口的 **`detect()`** 方法返回一个 {{jsxref('Promise')}}，它兑现一个从图像中检测到的条形码的{{jsxref('Array', "数组", "", 1)}}。
 
 ## 语法
 
