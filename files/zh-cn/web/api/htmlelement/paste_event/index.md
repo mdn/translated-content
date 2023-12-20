@@ -52,11 +52,11 @@ _也从其父接口 {{domxref("Event")}} 继承属性。_
 
 ```js
 function logCopy(event) {
-  log.innerText = `复制！\n${log.innerText}`;
+  log.innerText = `已复制！\n${log.innerText}`;
 }
 
 function logPaste(event) {
-  log.innerText = `粘贴！\n${log.innerText}`;
+  log.innerText = `已粘贴！\n${log.innerText}`;
 }
 
 const editor = document.getElementById("editor");
