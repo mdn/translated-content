@@ -2621,6 +2621,7 @@
 /ja/docs/Web/API/BarcodeDetector/getSupportedFormats	/ja/docs/Web/API/BarcodeDetector/getSupportedFormats_static
 /ja/docs/Web/API/BaseAudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/statechange_event
 /ja/docs/Web/API/BlobBuilder	/ja/docs/Web/API/Blob
+/ja/docs/Web/API/Bluetooth/availabilitychanged_event	/ja/docs/orphaned/Web/API/Bluetooth/availabilitychanged_event
 /ja/docs/Web/API/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Web/API/BroadcastChannel/onmessage	/ja/docs/Web/API/BroadcastChannel/message_event
 /ja/docs/Web/API/BroadcastChannel/onmessageerror	/ja/docs/Web/API/BroadcastChannel/messageerror_event
@@ -3633,6 +3634,7 @@
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_basic_user_interface
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
+/ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS

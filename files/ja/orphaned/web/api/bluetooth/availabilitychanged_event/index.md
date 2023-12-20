@@ -1,8 +1,7 @@
 ---
 title: "Bluetooth: availabilitychanged イベント"
-slug: Web/API/Bluetooth/availabilitychanged_event
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+slug: orphaned/Web/API/Bluetooth/availabilitychanged_event
+original_slug: Web/API/Bluetooth/availabilitychanged_event
 ---
 
 {{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
