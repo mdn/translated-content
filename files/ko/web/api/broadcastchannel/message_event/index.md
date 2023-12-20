@@ -36,7 +36,7 @@ onmessage = (event) => { }
 - {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
   - : 이벤트의 고유 ID를 나타내는 문자열.
 - {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
-  - : {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, 또는 {{domxref("ServiceWorker")}} 객체 등 메시지 발신자를 나타내는 메시지 이벤트 소스.
+  - : {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, 또는 {{domxref("ServiceWorker")}} 객체 등 메시지 발신자를 나타내는 메시지 이벤트 출처.
 - {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
   - : 메시지가 전송되는 채널과 연결된 포트를 나타내는 {{domxref("MessagePort")}} 객체의 배열(예: 체널 내 메시징, 공유된 맥락에 메시지를 보낼 때 등).
 
