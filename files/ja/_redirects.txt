@@ -1258,8 +1258,8 @@
 /ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Drawing_text_using_a_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ja/docs/Dynamically_modifying_XUL-based_user_interface	/ja/docs/orphaned/Dynamically_modifying_XUL-based_user_interface
-/ja/docs/ECMA-262	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
-/ja/docs/ECMAScript	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/ECMA-262	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/ECMAScript	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/EXSLT	/ja/docs/Web/EXSLT
 /ja/docs/EXSLT/exsl	/ja/docs/Web/EXSLT/exsl
 /ja/docs/EXSLT/exsl/node-set	/ja/docs/Web/EXSLT/exsl/node-set
@@ -1574,7 +1574,7 @@
 /ja/docs/JavaScript/Guide/About-redirect-1	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/JavaScript/Guide/Block_Statement-redirect-1	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
+/ja/docs/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/JavaScript/Guide/Core_Language_Features	/ja/docs/Web/JavaScript/Guide
 /ja/docs/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_objects#新しいオブジェクトの作成
@@ -1594,7 +1594,7 @@
 /ja/docs/JavaScript/Guide/Creating_New_Objects/Using_a_Constructor_Function-redirect-1	/ja/docs/Web/JavaScript/Guide/Working_with_objects#コンストラクター関数の使用
 /ja/docs/JavaScript/Guide/Creating_New_Objects/Using_this_for_Object_References	/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクト参照のための_this_の使用
 /ja/docs/JavaScript/Guide/Creating_New_Objects/Using_this_for_Object_References-redirect-1	/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクト参照のための_this_の使用
-/ja/docs/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
+/ja/docs/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/JavaScript/Guide/Expressions_and_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_operators
 /ja/docs/JavaScript/Guide/Expressions_and_Operators-redirect-1	/ja/docs/Web/JavaScript/Guide/Expressions_and_operators
 /ja/docs/JavaScript/Guide/Functions	/ja/docs/Web/JavaScript/Guide/Functions
@@ -1604,8 +1604,8 @@
 /ja/docs/JavaScript/Guide/Iterators_and_Generators	/ja/docs/Web/JavaScript/Guide/Iterators_and_generators
 /ja/docs/JavaScript/Guide/JavaScript_Overview	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/JavaScript/Guide/JavaScript_Overview-redirect-1	/ja/docs/Web/JavaScript/Guide/Introduction
-/ja/docs/JavaScript/Guide/Objects_and_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
-/ja/docs/JavaScript/Guide/Objects_and_Properties-redirect-1	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
+/ja/docs/JavaScript/Guide/Objects_and_Properties	/ja/docs/Web/JavaScript/Guide/Working_with_objects
+/ja/docs/JavaScript/Guide/Objects_and_Properties-redirect-1	/ja/docs/Web/JavaScript/Guide/Working_with_objects
 /ja/docs/JavaScript/Guide/Operators/Arithmetic_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#算術演算子
 /ja/docs/JavaScript/Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子
 /ja/docs/JavaScript/Guide/Operators/Assignment_Operators-redirect-1	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子
@@ -1620,10 +1620,10 @@
 /ja/docs/JavaScript/Guide/Working_with_Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/JavaScript/Guide/Working_with_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_objects
 /ja/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript	/ja/docs/Learn/JavaScript/Objects
-/ja/docs/JavaScript/JavaScript_shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
+/ja/docs/JavaScript/JavaScript_shells	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript/JavaScript_technologies_overview	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
-/ja/docs/JavaScript/Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
-/ja/docs/JavaScript/Language_Resources-redirect-1	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/JavaScript/Language_Resources	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/JavaScript/Language_Resources-redirect-1	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript/Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/JavaScript/Reference	/ja/docs/Web/JavaScript/Reference
@@ -2023,8 +2023,8 @@
 /ja/docs/JavaScript/Reference/文	/ja/docs/Web/JavaScript/Reference/Statements
 /ja/docs/JavaScript/Reference/文/for...of	/ja/docs/Web/JavaScript/Reference/Statements/for...of
 /ja/docs/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
-/ja/docs/JavaScript/Shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
-/ja/docs/JavaScript/Shells1	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
+/ja/docs/JavaScript/Shells	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/JavaScript/Shells1	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/JavaScript/Typed_arrays	/ja/docs/Web/JavaScript/Guide/Typed_arrays
 /ja/docs/JavaScript/Typed_arrays/ArrayBuffer	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
@@ -2039,8 +2039,8 @@
 /ja/docs/JavaScript/Typed_arrays/Uint32Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/JavaScript/Typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
 /ja/docs/JavaScriptReference/Statements/let	/ja/docs/Web/JavaScript/Reference/Statements/let
-/ja/docs/JavaScript_Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
-/ja/docs/JavaScript_shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
+/ja/docs/JavaScript_Language_Resources	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/JavaScript_shells	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript_technologies_overview	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript_typed_arrays	/ja/docs/Web/JavaScript/Guide/Typed_arrays
 /ja/docs/JavaScript_技術の概要	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
@@ -2141,12 +2141,7 @@
 /ja/docs/Localization	/ja/docs/Glossary/Localization
 /ja/docs/Localizing_extension_descriptions	/ja/docs/orphaned/Localizing_extension_descriptions
 /ja/docs/MDN/About	/ja/docs/MDN/Writing_guidelines
-/ja/docs/MDN/About/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
-/ja/docs/MDN/Community/Conversations	/ja/docs/orphaned/MDN/Community/Conversations
-/ja/docs/MDN/Community/Doc_sprints	/ja/docs/orphaned/MDN/Community/Doc_sprints
 /ja/docs/MDN/Community/Issues/Issue_triage	/ja/docs/MDN/Community/Issues
-/ja/docs/MDN/Community/Whats_happening	/ja/docs/orphaned/MDN/Community/Whats_happening
-/ja/docs/MDN/Community/Working_in_community	/ja/docs/orphaned/MDN/Community/Working_in_community
 /ja/docs/MDN/Contribute/Changelog	/ja/docs/MDN/Changelog
 /ja/docs/MDN/Contribute/Content	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Content/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
@@ -2156,9 +2151,9 @@
 /ja/docs/MDN/Contribute/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Contribute/Fixing_MDN_content_bugs	/ja/docs/MDN/Community/MDN_content
 /ja/docs/MDN/Contribute/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
-/ja/docs/MDN/Contribute/GitHub_beginners	/ja/docs/conflicting/MDN/Community/Contributing/Getting_started
+/ja/docs/MDN/Contribute/GitHub_beginners	/ja/docs/MDN/Community/Contributing/Getting_started
 /ja/docs/MDN/Contribute/GitHub_best_practices	/ja/docs/MDN/Community/Issues
-/ja/docs/MDN/Contribute/GitHub_cheatsheet	/ja/docs/conflicting/MDN/Community/Issues
+/ja/docs/MDN/Contribute/GitHub_cheatsheet	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Contribute/Guidelines	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Guidelines/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
@@ -2172,7 +2167,6 @@
 /ja/docs/MDN/Contribute/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/MDN/Contribute/Help_beginners	/ja/docs/MDN/Community/Learn_forum
 /ja/docs/MDN/Contribute/Howto	/ja/docs/MDN/Contribute
-/ja/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	/ja/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 /ja/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
@@ -2199,7 +2193,7 @@
 /ja/docs/MDN/Contribute/Structures/Code_examples	/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples
 /ja/docs/MDN/Contribute/Structures/Compatibility_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /ja/docs/MDN/Contribute/Structures/Live_samples	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/ja/docs/MDN/Contribute/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
+/ja/docs/MDN/Contribute/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Structures/Macros	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
 /ja/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /ja/docs/MDN/Contribute/Structures/Macros/Project:Custom_Templates	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
@@ -2236,7 +2230,7 @@
 /ja/docs/MDN/Structures/Code_examples	/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples
 /ja/docs/MDN/Structures/Compatibility_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /ja/docs/MDN/Structures/Live_samples	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/ja/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
+/ja/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Structures/Macros	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
 /ja/docs/MDN/Structures/Macros/Commonly-used_macros	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /ja/docs/MDN/Structures/Page_types	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types
@@ -2251,7 +2245,6 @@
 /ja/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /ja/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
-/ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
 /ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
@@ -2282,7 +2275,6 @@
 /ja/docs/NPAPI/Constants	/ja/docs/Glossary/Plugin
 /ja/docs/NPAPI:Constants	/ja/docs/Glossary/Plugin
 /ja/docs/Namespace	/ja/docs/Glossary/Namespace
-/ja/docs/New_in_JavaScript_1.8	/ja/docs/orphaned/New_in_JavaScript_1.8
 /ja/docs/Node.isSupported	/ja/docs/Web/API/Node
 /ja/docs/Notable_bugs_fixed_in_Firefox_3	/ja/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 /ja/docs/Notification_object	/ja/docs/Web/API/Notification
@@ -3641,6 +3633,7 @@
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_basic_user_interface
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
+/ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS
@@ -4165,7 +4158,7 @@
 /ja/docs/Web/JavaScript/Getting_Started	/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /ja/docs/Web/JavaScript/Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Web/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
+/ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/Web/JavaScript/Guide/Core_Language_Features	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_objects#新しいオブジェクトの作成
@@ -4177,10 +4170,10 @@
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Using_Object_Initializers	/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクト初期化子の使用
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Using_a_Constructor_Function	/ja/docs/Web/JavaScript/Guide/Working_with_objects#コンストラクター関数の使用
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Using_this_for_Object_References	/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクト参照のための_this_の使用
-/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
+/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/JavaScript_Overview	/ja/docs/Web/JavaScript/Guide/Introduction
-/ja/docs/Web/JavaScript/Guide/Objects_and_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
+/ja/docs/Web/JavaScript/Guide/Objects_and_Properties	/ja/docs/Web/JavaScript/Guide/Working_with_objects
 /ja/docs/Web/JavaScript/Guide/Obsolete_Pages	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
@@ -4205,8 +4198,8 @@
 /ja/docs/Web/JavaScript/Guide/Variables	/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declarations
 /ja/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/ja/docs/Learn/JavaScript/Objects
 /ja/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
-/ja/docs/Web/JavaScript/JavaScript_shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
-/ja/docs/Web/JavaScript/Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/Web/JavaScript/JavaScript_shells	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/Web/JavaScript/Language_Resources	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/Web/JavaScript/Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/Web/JavaScript/Reference/About	/ja/docs/Web/JavaScript/Reference
@@ -4219,11 +4212,8 @@
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/ja/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 /ja/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ja/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
 /ja/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ja/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
-/ja/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
-/ja/docs/Web/JavaScript/Reference/Errors/Var_hides_argument	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
 /ja/docs/Web/JavaScript/Reference/Functions_and_function_scope	/ja/docs/Web/JavaScript/Reference/Functions
 /ja/docs/Web/JavaScript/Reference/Functions_and_function_scope/Arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ja/docs/Web/JavaScript/Reference/Functions_and_function_scope/Default_parameters	/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters
@@ -4459,7 +4449,7 @@
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ja/docs/Web/JavaScript/Reference/template_strings	/ja/docs/Web/JavaScript/Reference/Template_literals
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
-/ja/docs/Web/JavaScript/Shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
+/ja/docs/Web/JavaScript/Shells	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/Web/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf

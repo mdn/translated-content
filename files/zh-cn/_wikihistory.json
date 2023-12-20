@@ -15441,10 +15441,6 @@
     "modified": "2019-04-18T11:21:46.570Z",
     "contributors": ["irenesmith", "hhxxhg", "fscholz", "charlie"]
   },
-  "Web/API/Window/ondragdrop": {
-    "modified": "2020-06-28T00:52:25.247Z",
-    "contributors": ["PengyaoZhang"]
-  },
   "Web/API/Window/online_event": {
     "modified": "2019-03-18T21:38:43.642Z",
     "contributors": ["wanderzhang", "githubyangwei"]

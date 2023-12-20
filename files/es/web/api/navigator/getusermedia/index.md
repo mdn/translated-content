@@ -11,7 +11,7 @@ Pide al usuario permiso para usar un dispositivo multimedia como una cámara o m
 navigator.getUserMedia ( constraints, successCallback, errorCallback );
 ```
 
-**Ejemplo**
+## Ejemplo
 
 Aquí hay un ejemplo usando getUserMedia() con los prefijos del navegador.
 

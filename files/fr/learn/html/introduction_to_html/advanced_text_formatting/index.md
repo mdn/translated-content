@@ -462,7 +462,7 @@ textarea.onkeyup = function () {
 
 ## Abréviations
 
-Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#title)}. Voyons quelques exemples :
+Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#title)). Voyons quelques exemples :
 
 ```html
 <p>

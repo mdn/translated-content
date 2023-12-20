@@ -12,7 +12,7 @@ Los _arrays_ son objetos similares a una lista cuyo prototipo proporciona métod
 
 ### Operaciones habituales
 
-**Crear un Array**
+#### Crear un Array
 
 ```js
 let frutas = ["Manzana", "Banana"];
@@ -21,7 +21,7 @@ console.log(frutas.length);
 // 2
 ```
 
-**Acceder a un elemento de Array mediante su índice**
+#### Acceder a un elemento de Array mediante su índice
 
 ```js
 let primero = frutas[0];
@@ -31,7 +31,7 @@ let ultimo = frutas[frutas.length - 1];
 // Banana
 ```
 
-**Recorrer un Array**
+#### Recorrer un Array
 
 ```js
 frutas.forEach(function (elemento, indice, array) {
@@ -41,35 +41,35 @@ frutas.forEach(function (elemento, indice, array) {
 // Banana 1
 ```
 
-**Añadir un elemento al final de un Array**
+#### Añadir un elemento al final de un Array
 
 ```js
 let nuevaLongitud = frutas.push("Naranja"); // Añade "Naranja" al final
 // ["Manzana", "Banana", "Naranja"]
 ```
 
-**Eliminar el último elemento de un Array**
+#### Eliminar el último elemento de un Array
 
 ```js
 let ultimo = frutas.pop(); // Elimina "Naranja" del final
 // ["Manzana", "Banana"]
 ```
 
-**Añadir un elemento al principio de un Array**
+#### Añadir un elemento al principio de un Array
 
 ```js
 let nuevaLongitud = frutas.unshift("Fresa"); // Añade "Fresa" al inicio
 // ["Fresa" ,"Manzana", "Banana"]
 ```
 
-**Eliminar el primer elemento de un Array**
+#### Eliminar el primer elemento de un Array
 
 ```js
 let primero = frutas.shift(); // Elimina "Fresa" del inicio
 // ["Manzana", "Banana"]
 ```
 
-**Encontrar el índice de un elemento del Array**
+#### Encontrar el índice de un elemento del Array
 
 ```js
 frutas.push("Fresa");
@@ -79,7 +79,7 @@ let pos = frutas.indexOf("Banana"); // (pos) es la posición para abreviar
 // 1
 ```
 
-**Eliminar un único elemento mediante su posición**
+#### Eliminar un único elemento mediante su posición
 
 - Ejemplo:
   - : Eliminamos "Banana" del _array_ pasándole dos parámetros: la posición del primer elemento que se elimina y el número de elementos que queremos eliminar. De esta forma, `.splice(pos, 1)` empieza en la posición que nos indica el valor de la variable `pos` y elimina 1 elemento. En este caso, como `pos` vale 1, elimina un elemento comenzando en la posición 1 del _array,_ es decir "Banana".
@@ -89,7 +89,7 @@ let elementoEliminado = frutas.splice(pos, 1);
 // ["Manzana", "Fresa"]
 ```
 
-**Eliminar varios elementos a partir de una posición**
+#### Eliminar varios elementos a partir de una posición
 
 - Nota:
   - : Con `.splice()` no solo se puede eliminar elementos del array, si no que también podemos extraerlos guardándolo en un nuevo array. ¡Ojo! que al hacer esto estaríamos modificando el array de origen.
@@ -109,7 +109,7 @@ console.log(vegetales);
 // ["Repollo", "Zanahoria"] ==> Lo que actualmente tiene "vegetales"
 ```
 
-**Copiar un Array**
+#### Copiar un Array
 
 ```js
 let copiaArray = vegetales.slice();

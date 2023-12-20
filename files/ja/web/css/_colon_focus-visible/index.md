@@ -9,6 +9,8 @@ slug: Web/CSS/:focus-visible
 
 このセレクターは、ユーザーの入力方法 (マウスなのかキーボードなのか) によって異なるフォーカス表示を提供したい場合に便利です。
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus-visible.html", "tabbed-shorter")}}
+
 ## 構文
 
 ```

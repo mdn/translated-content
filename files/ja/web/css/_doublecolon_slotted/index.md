@@ -21,6 +21,8 @@ slug: Web/CSS/::slotted
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-slotted.html", "tabbed-shorter")}}
+
 ## 構文
 
 {{csssyntax}}
