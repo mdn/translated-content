@@ -2621,7 +2621,6 @@
 /ja/docs/Web/API/BarcodeDetector/getSupportedFormats	/ja/docs/Web/API/BarcodeDetector/getSupportedFormats_static
 /ja/docs/Web/API/BaseAudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/statechange_event
 /ja/docs/Web/API/BlobBuilder	/ja/docs/Web/API/Blob
-/ja/docs/Web/API/Bluetooth/availabilitychanged_event	/ja/docs/orphaned/Web/API/Bluetooth/availabilitychanged_event
 /ja/docs/Web/API/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Web/API/BroadcastChannel/onmessage	/ja/docs/Web/API/BroadcastChannel/message_event
 /ja/docs/Web/API/BroadcastChannel/onmessageerror	/ja/docs/Web/API/BroadcastChannel/messageerror_event
