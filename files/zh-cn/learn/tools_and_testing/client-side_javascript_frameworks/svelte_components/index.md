@@ -258,7 +258,7 @@ export let onclick = (clicked) => {};
 
    待办事项列表将显示在页面上，复选框应该可以正常工作（尝试勾选/取消勾选几个，然后观察过滤器是否按预期工作），但是我们的“x out of y items completed”状态标题将不再相应地更新。这是因为我们的 `Todo` 组件通过属性接收待办事项，但没有向其父组件发送任何信息。我们将在以后修复这个问题。
 
-## 在组件之间共享数据：props-down、events-up 模式
+## 在组件之间共享数据：属性向下传递、事件向上传播模式
 
 `bind` 指令非常简单直观，可以让你在父组件和子组件之间共享数据。然而，当应用程序变得更大、更复杂时，便难以跟踪所有绑定的值。另一种方法是使用“props-down、events-up”通信模式。
 
@@ -514,7 +514,7 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
 
 4. 再次尝试你的应用程序，你将看到你可以删除、添加、编辑、取消编辑和切换待办事项的完成状态。当待办事项完成时，“x out of y items completed”的状态标题将相应更新。
 
-正如你所见，在 Svelte 中实现“props-down，events-up”模式很容易。尽管如此，对于简单的组件，`bind` 可能是一个不错的选择；Svelte 允许你自由选择。
+正如你所见，在 Svelte 中实现“属性向下传递、事件向上传播”模式很容易。尽管如此，对于简单的组件，`bind` 可能是一个不错的选择；Svelte 允许你自由选择。
 
 > **备注：** Svelte 提供了更高级的机制来在组件之间共享信息：[Context API](https://svelte.dev/docs#setContext) 和 [Stores](https://svelte.dev/docs#svelte_store)。Context API 提供了一种机制，使组件及其后代组件能够在不传递数据和函数作为属性或分发大量事件的情况下进行通信。Stores 允许你在不具有层次关系的组件之间共享响应式数据。我们将在本系列的后续内容中介绍 Stores。
 
@@ -552,7 +552,7 @@ npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts
 - 使用作为属性接收到的处理程序将信息从子组件传递到父组件
 - 使用 `bind` 指令将信息从子组件传递到父组件
 - 使用 `if` 块有条件地渲染标记块
-- 实现“props-down, events-up”通信模式
+- 实现“属性向下传递、事件向上传播”通信模式
 - 创建和监听自定义事件
 
 在下一篇文章中，我们将继续将我们的应用程序组件化，并了解一些在处理 DOM 方面的高级技巧。
