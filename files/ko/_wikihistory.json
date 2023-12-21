@@ -4937,10 +4937,6 @@
     "modified": "2019-11-14T21:10:56.947Z",
     "contributors": ["so4869"]
   },
-  "Web/CSS/CSS_charsets": {
-    "modified": "2019-04-25T11:04:17.063Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
   "Web/CSS/CSS_colors": {
     "modified": "2020-10-15T22:04:24.231Z",
     "contributors": ["alattalatta", "hyeran2"]
@@ -5180,6 +5176,10 @@
   "Web/CSS/CSS_shapes": {
     "modified": "2019-04-25T10:46:18.309Z",
     "contributors": ["alattalatta", "seunghun", "Netaras"]
+  },
+  "Web/CSS/CSS_syntax": {
+    "modified": "2019-04-25T11:04:17.063Z",
+    "contributors": ["alattalatta", "Netaras"]
   },
   "Web/CSS/CSS_table": {
     "modified": "2020-08-14T07:19:40.233Z",

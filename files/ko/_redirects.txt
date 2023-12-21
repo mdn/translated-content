@@ -584,6 +584,7 @@
 /ko/docs/Web/CSS/CSS_Scrollbars	/ko/docs/Web/CSS/CSS_scrollbars_styling
 /ko/docs/Web/CSS/CSS_User_Interface	/ko/docs/Web/CSS/CSS_basic_user_interface
 /ko/docs/Web/CSS/CSS_Variables	/ko/docs/Web/CSS/CSS_cascading_variables
+/ko/docs/Web/CSS/CSS_charsets	/ko/docs/Web/CSS/CSS_syntax
 /ko/docs/Web/CSS/CSS_단위와_값	/ko/docs/Web/CSS/CSS_Values_and_Units
 /ko/docs/Web/CSS/Compositing_and_Blending	/ko/docs/Web/CSS/CSS_compositing_and_blending
 /ko/docs/Web/CSS/Filter_Effects	/ko/docs/Web/CSS/CSS_filter_effects
