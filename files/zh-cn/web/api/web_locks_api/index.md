@@ -7,92 +7,90 @@ l10n:
 
 {{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}}
 
-The **Web Locks API** allows scripts running in one tab or worker to asynchronously acquire a lock, hold it while work is performed, then release it. While held, no other script executing in the same origin can acquire the same lock, which allows a web app running in multiple tabs or workers to coordinate work and the use of resources.
+**Web Locks API** 允许在一个选项卡或工作线程中运行的脚本异步获取锁，在执行工作时保持它，然后释放它。持有锁时，在同一源中执行的其他脚本都无法获取相同的锁，这允许在多个选项卡或工作线程中运行的 Web 应用程序协调工作和资源的使用。
 
 {{AvailableInWorkers}}
 
 ## 概念和用法
 
-A lock is an abstract concept representing some potentially shared resource, identified by a name chosen by the web app. For example, if a web app running in multiple tabs wants to ensure that only one tab is syncing data between the network and Indexed DB, each tab could try to acquire a "my_net_db_sync" lock, but only one tab will succeed (the [leader election pattern](https://en.wikipedia.org/wiki/Leader_election).)
+锁是一个抽象概念，代表一些潜在的共享资源，由 Web 应用程序选择的名称进行标识。例如，如果在多个选项卡中运行的 Web 应用程序想要确保只有一个选项卡在网络和索引数据库之间同步数据，则每个选项卡都可以尝试获取“my_net_db_sync”锁，但只有一个选项卡会成功（[领导者选举模式](https://en.wikipedia.org/wiki/Leader_election)。）
 
-The API is used as follows:
+API 使用如下：
 
-1. The lock is requested.
-2. Work is done while holding the lock in an asynchronous task.
-3. The lock is automatically released when the task completes.
+1. 请求锁。
+2. 在异步任务中持有锁的同时完成工作。
+3. 任务完成后锁自动释放。
 
 ```js
 navigator.locks.request("my_resource", async (lock) => {
-  // The lock has been acquired.
+  // 锁已被获取。
   await do_something();
   await do_something_else();
-  // Now the lock will be released.
+  // 现在锁将被释放。
 });
 ```
 
-While a lock is held, requests for the same lock from this execution context, or from other tabs/workers, will be queued. The first queued request will be granted only when the lock is released.
+当持有锁时，来自此执行上下文或其他选项卡以及 Worker 进程的相同锁的请求将排队。仅当锁被释放时，第一个排队的请求才会被授予锁。
 
-The API provides optional functionality that may be used as needed, including:
+API 提供了可根据需要使用的可选功能，包括：
 
-- returning values from the asynchronous task
-- shared and exclusive lock modes
-- conditional acquisition
-- diagnostics to query the state of locks in an origin
-- an escape hatch to protect against deadlocks
+- 从异步任务返回值
+- 共享锁和独占锁模式
+- 有条件获取
+- 诊断以查询源中锁的状态
+- 防止死锁的逃生舱
 
-Locks are scoped to origins; the locks acquired by a tab from `https://example.com` have no effect on the locks acquired by a tab from `https://example.org:8080` as they are separate origins.
+锁的范围仅限于同一个源内；一个选项卡从 `https://example.com` 获取的锁对另一个选项卡从 `https://example.org:8080` 获取的锁没有影响，因为它们是不同的源。
 
-The main entry point is `navigator.locks.request()` which requests a lock. It takes a lock name, an optional set of options, and a callback. The callback is invoked when the lock is granted. The lock is automatically released when the callback returns, so usually the callback is an _async function_, which causes the lock to be released only when the async function has completely finished.
+主要入口点是请求锁的 `navigator.locks.request()` 方法。 它需要一个锁的名称、一组可选选项和一个回调方法。授予锁时将调用回调方法。当回调方法返回时，锁会自动释放，因此通常回调是一个*异步函数*，这会导致只有当异步函数完全完成时才会释放锁。
 
-The `request()` method itself returns a promise which resolves once the lock has been released;
-within an async function, a script can `await` the call to make the asynchronous code flow linearly.
-For example:
+`request()` 方法本身返回一个 promise，一旦锁被释放，该 promise 就会兑现；在 async 函数中，脚本可以使用 `await` 关键字等待调用以使异步代码线性流动。例如：
 
 ```js
 await do_something_without_lock();
 
-// Request the lock.
+// 请求锁。
 await navigator.locks.request("my_resource", async (lock) => {
-  // The lock has been acquired.
+  // 锁已被获取。
   await do_something_with_lock();
   await do_something_else_with_lock();
-  // Now the lock will be released.
+  // 现在锁将被释放。
 });
-// The lock has been released.
+// 锁已被释放。
 
 await do_something_else_without_lock();
 ```
 
-### Options
+### 选项
 
-Several options can be passed when requesting a lock:
+请求锁时可以传递一些选项：
 
-- `mode`: The default mode is "exclusive", but "shared" can be specified. There can be only one "exclusive" holder of a lock, but multiple "shared" requests can be granted at the same time. This can be used to implement the [readers-writer pattern](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock).
-- `ifAvailable`: If specified, the lock request will fail if the lock cannot be granted immediately without waiting. The callback is invoked with `null`.
-- `steal`: If specified, then any held locks with the same name will be released, and the request will be granted, preempting any queued requests for it.
-- `signal`: An {{domxref("AbortSignal")}} can be passed in, allowing a lock request to be aborted. This can be used to implement a timeout on requests.
+- `mode`：默认模式为“独占”，但可以指定为“共享”。锁只能有一个“独占”持有者，但可以同时授予多个“共享”请求。这可用于实现[读者-作者模式](https://zh.wikipedia.org/wiki/%E8%AF%BB%E5%86%99%E9%94%81)。
+- `ifAvailable`：如果指定，如果不等待就无法立即授予锁定，则锁定请求将失败。使用 `null` 调用回调方法。
+- `steal`：如果指定，则将释放任何持有的同名锁，并且请求将被授予，抢占任何排队的请求。
+- `signal`：可以传入一个 {{domxref("AbortSignal")}}，允许中止锁定请求。这可用于实现请求超时。
 
-### Monitoring
+### 监控
 
-The `navigator.locks.query()` method can be used by scripts to introspect the state of the lock manager for the origin. This can be useful when debugging, for example, identifying why a lock could not be acquired. The results are a snapshot of the lock manager state, which identifies held and requested locks and some additional data (e.g. mode) about each, at the time the snapshot was taken.
+脚本可以使用 `navigator.locks.query()` 方法来内省源锁管理器的状态。这在调试时非常有用，例如，确定无法获取锁的原因。结果是一个锁管理器状态的快照，它标识了拍摄快照时持有的锁和请求中的锁以及有关每个锁的一些附加数据（例如模式）。
 
-### Advanced use
+### 进阶使用
 
-For more complicated cases, such as holding the lock for an arbitrary amount of time, the callback can return a promise explicitly resolved by the script:
+对于更复杂的情况，例如在任意时间内保持锁，回调可以返回一个脚本显式解析的 promise：
 
 ```js
-// Capture promise control functions:
+// 捕获 promise 控制功能：
 let resolve, reject;
 const p = new Promise((res, rej) => {
   resolve = res;
   reject = rej;
 });
 
-// Request the lock:
+// 请求锁：
 navigator.locks.request(
   "my_resource",
-  // Lock is acquired.
-  (lock) => p, // Now lock will be held until either resolve() or reject() is called.
+  // 锁已被获取。
+  (lock) => p, // 现在锁将被保持直到调用 resolve() 或 reject() 为止。
 );
 ```
 
