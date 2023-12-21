@@ -9,7 +9,7 @@ l10n:
 
 **CSS 構文**モジュールは、一般的な用語として、カスケーディングスタイルシート (CSS) の構造と構文について記述しています。 CSS は、ウェブや他の場所での構造化文書（HTML や XML など）のレンダリングを記述するための言語として定義されています。
 
-このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/CSS_Types)、[関数](/ja/docs/Web/CSS/CSS_Functions)、[アットルール](/ja/docs/Web/CSS/At-rule)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を解釈すべきかを詳しく説明しています。
+このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/CSS_Types)、[関数](/ja/docs/Web/CSS/CSS_Functions)、[アットルール](/ja/docs/Web/CSS/At-rule)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。
 
 ### アットルール
 
@@ -33,7 +33,7 @@ l10n:
 ### 用語集の用語
 
 - {{glossary("CSS_Descriptor", "CSS 記述子")}}
-- {{glossary("parse", "解釈")}}
+- {{glossary("parse", "構文解析")}}
 - {{glossary("stylesheet", "スタイルシート")}}
 - {{glossary("whitespace", "ホワイトスペース")}}
 
