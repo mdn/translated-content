@@ -319,13 +319,13 @@ Les [indications client pour l'agent utilisateur](/fr/docs/Web/HTTP/Client_hints
 
 Les indications client relatives au réseau permettent au serveur de choisir les informations envoyées selon la bande passante et la latence réseau du client.
 
-- [`Downlink`](/fr/docs/Web/HTTP/Headers/Downlink)` {{experimental_inline}}
+- [`Downlink`](/fr/docs/Web/HTTP/Headers/Downlink) {{experimental_inline}}
   - : Une approximation de la bande passante, exprimée en Mo/s entre le client et le serveur. Cet en-tête s'inscrit dans [l'API <i lang="en">Network Information API</i>](/fr/docs/Web/API/Network_Information_API).
-- [`ECT`](/fr/docs/Web/HTTP/Headers/ECT)` {{experimental_inline}}
+- [`ECT`](/fr/docs/Web/HTTP/Headers/ECT) {{experimental_inline}}
   - : Le [type de connexion effectif](/fr/docs/Glossary/Effective_connection_type) qui correspond le mieux à la latence et bande passante de la connexion. Cet en-tête s'inscrit dans [l'API <i lang="en">Network Information API</i>](/fr/docs/Web/API/Network_Information_API).
-- [`RTT`](/fr/docs/Web/HTTP/Headers/RTT)` {{experimental_inline}}
+- [`RTT`](/fr/docs/Web/HTTP/Headers/RTT) {{experimental_inline}}
   - : Le temps d'aller-retour (RTT) au niveau de la couche d'application, exprimée en millisecondes, et qui inclut le temps de traitement du serveur. Cet en-tête s'inscrit dans [l'API <i lang="en">Network Information API</i>](/fr/docs/Web/API/Network_Information_API).
-- [`Save-Data`](/fr/docs/Web/HTTP/Headers/Save-Data)` {{experimental_inline}}
+- [`Save-Data`](/fr/docs/Web/HTTP/Headers/Save-Data) {{experimental_inline}}
   - : Une chaîne de caractères indiquant la préférence de l'agent utilisateur pour un usage de données réduit.
 
 ### Confidentialité
