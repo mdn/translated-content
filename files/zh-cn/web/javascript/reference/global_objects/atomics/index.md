@@ -1,35 +1,42 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`Atomics`** 对象提供了一组静态方法对 {{jsxref("SharedArrayBuffer")}} 和 {{jsxref("ArrayBuffer")}} 对象进行原子操作。
+**`Atomics`** 命名空间对象包含对 {{jsxref("SharedArrayBuffer")}} 和 {{jsxref("ArrayBuffer")}} 对象执行原子操作的静态方法。
 
 ## 描述
 
-这些原子操作属于 `Atomics` 模块。与一般的全局对象不同，`Atomics` 不是构造函数，因此不能使用 [new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符调用，也不能将其当作函数直接调用。`Atomics` 的所有属性和方法都是静态的（与 {{jsxref("Math")}} 对象一样）。
+与一般的全局对象不同，`Atomics` 不是构造函数。因此你不能将其与 [new 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 一起使用或将 `Atomics` 对象作为一个函数来进行调用。`Atomics` 的所有属性和方法都是静态的（与 {{jsxref("Math")}} 对象一样）。
 
 ### 原子操作
 
-多个共享内存的线程能够同时读写同一位置上的数据。原子操作会确保正在读或写的数据的值是符合预期的，即下一个原子操作一定会在上一个原子操作结束后才会开始，其操作过程不会中断。
+当内存被共享时，多个的线程能够读写内存上的同一数据。原子操作会确保正在读或写的数据的值是符合预期的，即下一个原子操作一定会在上一个原子操作结束后才会开始，其操作不会被中断。
 
 ### 等待和通知
 
 `wait()` 和 `notify()` 方法采用的是 Linux 上的 futexes 模型（“快速用户空间互斥量”），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。
 
-## 方法
+## 静态属性
+
+- `Atomics[@@toStringTag]`
+  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Atomics"`。这个属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+
+## 静态方法
 
 - {{jsxref("Atomics.add()")}}
-  - : 将指定位置上的数组元素与给定的值相加，并返回相加前该元素的值。
+  - : 将给定的值与数组上指定位置的元素相加，并返回相加前该元素的值。
 - **{{jsxref("Atomics.and()")}}**
   - : 将指定位置上的数组元素与给定的值相与，并返回与操作前该元素的值。
 - {{jsxref("Atomics.compareExchange()")}}
   - : 如果数组中指定的元素与给定的值相等，则将其更新为新的值，并返回该元素原先的值。
 - {{jsxref("Atomics.exchange()")}}
   - : 将数组中指定的元素更新为给定的值，并返回该元素更新前的值。
-- {{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}
+- {{jsxref("Atomics.isLockFree()")}}
   - : 可以用来检测当前系统是否支持硬件级的原子操作。对于指定大小的数组，如果当前系统支持硬件级的原子操作，则返回 `true`；否则就意味着对于该数组，`Atomics` 对象中的各原子操作都只能用锁来实现。此函数面向的是技术专家。
 - {{jsxref("Atomics.load()")}}
   - : 返回数组中指定元素的值。
@@ -43,6 +50,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
   - : 将指定位置上的数组元素与给定的值相减，并返回相减前该元素的值。
 - {{jsxref("Atomics.wait()")}}
   - : 检测数组中某个指定位置上的值是否仍然是给定值，是则保持挂起直到被唤醒或超时。返回值为 "`ok`"、"`not-equal`" 或 "`time-out`"。调用时，如果当前线程不允许阻塞，则会抛出异常（大多数浏览器都不允许在主线程中调用 `wait()`）。
+- {{jsxref("Atomics.waitAsync()")}}
+  - 在共享内存位置上异步等待（即没有阻塞，与 `Atomics.wait` 不同）并返回一个 {{jsxref("Promise")}}。
 - {{jsxref("Atomics.xor()")}}
   - : 将指定位置上的数组元素与给定的值相异或，并返回异或操作前该元素的值。
 
@@ -123,6 +132,5 @@ Atomics.notify(int32, 0, 1);
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API)
-- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
-- [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [Shared Memory——一个简短的教程](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)，在 TC39 ecmascript-sharedmem 提案中
+- [JavaScript 新并行语法的初体验](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) 在 hacks.mozilla.org 上（2016）
