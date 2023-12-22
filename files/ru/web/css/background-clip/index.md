@@ -14,7 +14,7 @@ slug: Web/CSS/background-clip
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 background-clip: border-box;
 background-clip: padding-box;
 background-clip: content-box;

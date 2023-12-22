@@ -122,11 +122,5 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 ## 参见
 
 - {{domxref("XMLSerializer")}}：将 DOM 树解析为 XML 对象
-- MDN 教程中的 `XMLHttpRequest`：
-
-  - [Ajax](/zh-CN/docs/Web/Guide/AJAX)
-  - [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-  - [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-  - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-
-- [XMLHttpRequest2 中的新技巧（2011）](https://web.dev/articles/xhr2)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)

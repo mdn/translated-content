@@ -11,14 +11,14 @@ slug: Web/API/XMLDocument
 
 ## プロパティ
 
-_また、 {{DOMxRef("Document")}} からプロパティを継承します_
+_また、 {{DOMxRef("Document")}} からプロパティを継承します。_
 
 - {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : {{DOMxRef("XMLDocument.load()")}} と併用して、非同期リクエストを示します。
 
 ## メソッド
 
-_また、 {{DOMxRef("Document")}} からメソッドを継承します_
+_また、 {{DOMxRef("Document")}} からメソッドを継承します。_
 
 - {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : XML ドキュメントをロードします。

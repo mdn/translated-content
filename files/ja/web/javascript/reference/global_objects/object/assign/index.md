@@ -30,7 +30,7 @@ Object.assign(target, ...sources);
 
 コピー先オブジェクトのプロパティは、コピー元に同じ{{jsxref("Object/keys", "キー", "", 1)}}のプロパティがあると上書きされます。より後のコピー元のプロパティが、より前のものを同様に上書きします。
 
-`Object.assign()` メソッドは、コピー元オブジェクトから*列挙可能 (enumerable)* かつ*直接所有 (own)* のプロパティだけをコピー先オブジェクトにコピーします。この際、コピー元オブジェクトには `{[[Get]]`、コピー先オブジェクトには `[[Set]]` を使いますので、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)と[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を呼び出すことになります。これはプロパティの*代入 (assign)* であり、プロパティをコピーしたり新しく定義したりするのとは異なります。そのため、コピー元にゲッターが存在する場合、新しいプロパティをプロトタイプにマージする用途には不適切でしょう。
+`Object.assign()` メソッドは、コピー元オブジェクトから*列挙可能 (enumerable)* かつ*直接所有 (own)* のプロパティだけをコピー先オブジェクトにコピーします。この際、コピー元オブジェクトには `[[Get]]`、コピー先オブジェクトには `[[Set]]` を使いますので、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)と[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を呼び出すことになります。これはプロパティの*代入 (assign)* であり、プロパティをコピーしたり新しく定義したりするのとは異なります。そのため、コピー元にゲッターが存在する場合、新しいプロパティをプロトタイプにマージする用途には不適切でしょう。
 
 プロパティ定義を (列挙可能属性も含めて) プロトタイプの中にコピーするには、このメソッドではなく {{jsxref("Object.getOwnPropertyDescriptor()")}} と {{jsxref("Object.defineProperty()")}} を使用してください。
 

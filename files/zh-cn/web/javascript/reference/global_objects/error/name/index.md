@@ -32,7 +32,7 @@ throw e; // "ParseError: Malformed input"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error.prototype.message")}}
 - {{jsxref("Error.prototype.toString()")}}

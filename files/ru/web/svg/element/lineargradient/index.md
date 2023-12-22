@@ -9,6 +9,8 @@ slug: Web/SVG/Element/linearGradient
 
 > **Примечание:** Не путайте с CSS {{cssxref('linear-gradient()')}}, CSS-градиенты могут быть применены только к HTML-элементам, тогда как SVG-градиент применим только к SVG-элементам.
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -34,7 +36,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{EmbedLiveSample("Пример", 150, '100%')}}
 
 ## Атрибуты
 

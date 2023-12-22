@@ -13,6 +13,8 @@ If you place content outside of this explicit grid, or if you are relying on aut
 
 В примере ниже отображена _точная сетка_ из трёх колонок и двух рядов. The _third_ row on the grid is an _implicit grid_ row track, formed due to their being more than the six items which fill the explicit tracks.
 
+## Пример
+
 ```css hidden
 * {
   box-sizing: border-box;
@@ -54,7 +56,7 @@ If you place content outside of this explicit grid, or if you are relying on aut
 </div>
 ```
 
-{{ EmbedLiveSample('example', '500', '330') }}
+{{ EmbedLiveSample('Пример', '500', '330') }}
 
 ## Дополнительные материалы
 
@@ -67,4 +69,4 @@ If you place content outside of this explicit grid, or if you are relying on aut
 
 ### Что почитать ещё
 
-- Руководство по CSS Grid: _[Базовые принципы CSS сеток](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Руководство по CSS Grid: _[Базовые принципы CSS сеток](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

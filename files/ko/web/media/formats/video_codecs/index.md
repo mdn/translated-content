@@ -1039,7 +1039,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
 
 \[1] Firefox supports MP4V-ES in [3GP](/ko/docs/Web/Media/Formats/Containers#3GP) containers only.
 
-\[2] Chrome does not support MP4V-ES; however, Chrome OS does.
+\[2] Chrome does not support MP4V-ES; however, ChromeOS does.
 
 ### MPEG-1 Part 2 Video
 

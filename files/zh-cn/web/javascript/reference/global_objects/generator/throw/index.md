@@ -59,6 +59,6 @@ g.throw(new Error("Something went wrong")); // "Error caught!"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
+- {{jsxref("Statements/function*", "function*")}}

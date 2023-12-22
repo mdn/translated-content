@@ -58,7 +58,7 @@ Java 是基于类的编程语言，设计的初衷就是为了确保快速执行
 
 ## JavaScript 和 ECMAScript 规范
 
-JavaScript 的标准化组织是 [ECMA](http://www.ecma-international.org/) ——这个欧洲信息与通信系统标准化协会提供基于 Javascript 的标准化方案（ECMA 原先是欧洲计算机制造商协会的首字母缩写）。这种标准化版本的 JavaScript 被称作 ECMAScript，在所有支持该标准的应用中以相同的方式工作。公司可以使用开放标准语言来开发他们自己的 JavaScript 实现版本。ECMAScript 标准在 ECMA－262 规范中进行文档化。参照 [JavaScript 的新特性](/zh-CN/docs/Web/JavaScript/New_in_JavaScript) 以便学习更多关于不同版本的 JavaScript 和 ECMAScript 规范版本。
+JavaScript 的标准化组织是 [ECMA](http://www.ecma-international.org/)——这个欧洲信息与通信系统标准化协会提供基于 Javascript 的标准化方案（ECMA 原先是欧洲计算机制造商协会的首字母缩写）。这种标准化版本的 JavaScript 被称作 ECMAScript，在所有支持该标准的应用中以相同的方式工作。公司可以使用开放标准语言来开发他们自己的 JavaScript 实现版本。ECMAScript 标准在 ECMA－262 规范中进行文档化。参照 [JavaScript 的新特性](/zh-CN/docs/Web/JavaScript/New_in_JavaScript)以便学习更多关于不同版本的 JavaScript 和 ECMAScript 规范版本。
 
 ECMA-262 标准也通过了 国际标准化组织（[ISO](http://www.iso.ch/)）的 ISO-16262。你可以[在这里](http://www.ecma-international.org/publications/standards/Ecma-262.htm)找到该规范文件。ECMAScript 规范并没有描述文档对象模型（[DOM](/zh-CN/docs/Web/API/Document_Object_Model)），该模型由 万维网联盟（[W3C](http://www.w3.org/)）制定。DOM 定义了 HTML 文件对象被脚本操作的方法。为了更清楚地了解当使用 JavaScript 编程时用到的不同技术，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
 

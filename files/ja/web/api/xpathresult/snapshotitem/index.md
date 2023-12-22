@@ -1,21 +1,29 @@
 ---
-title: XPathResult.snapshotItem()
+title: "XPathResult: snapshotItem() メソッド"
+short-title: snapshotItem()
 slug: Web/API/XPathResult/snapshotItem
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM XPath")}}
 
-**`snapshotItem()`** は {{domxref("XPathResult")}} インターフェイスのメソッドで、アイテムのスナップショットのコレクション、または添字がノードの範囲を外れている場合は `null` を返します。イテレーターの返値とは異なり、スナップショットは無効になることはありませんが、変更したときに現在の文書に対応しない場合があります。
+**`snapshotItem()`** は {{domxref("XPathResult")}} インターフェイスのメソッドで、アイテムのスナップショットの集合、またはインデックスがノードの範囲を外れている場合は `null` を返します。イテレーターの返値とは異なり、スナップショットは無効になることはありませんが、変更したときに現在の文書に対応しない場合があります。
 
 ## 構文
 
+```js-nolint
+snapshotItem(i)
 ```
-var node = result.snapshotItem(i);
-```
+
+### 引数
+
+- `i`
+  - : 数値で、項目のインデックスです。
 
 ### 返値
 
-`XPathResult` のノードセット内の指定された添字の {{domxref("Node")}} です。
+`XPathResult` のノード集合内の指定されたインデックスの {{domxref("Node")}} です。
 
 ### 例外
 
@@ -37,18 +45,18 @@ var node = result.snapshotItem(i);
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var result = document.evaluate(
+const xpath = "//div";
+const result = document.evaluate(
   xpath,
   document,
   null,
   XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
   null,
 );
-var node = null;
-var tagNames = [];
-for (var i = 0; i < result.snapshotLength; i++) {
-  var node = result.snapshotItem(i);
+let node = null;
+const tagNames = [];
+for (let i = 0; i < result.snapshotLength; i++) {
+  node = result.snapshotItem(i);
   tagNames.push(node.localName);
 }
 document.querySelector("output").textContent = tagNames.join(", ");
@@ -56,7 +64,7 @@ document.querySelector("output").textContent = tagNames.join(", ");
 
 ### 結果
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 

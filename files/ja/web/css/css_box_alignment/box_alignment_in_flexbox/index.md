@@ -17,7 +17,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 
 フレックスボックスは文書の書字方向を尊重しますので、英語の場合で {{cssxref("justify-content")}} が `flex-end` に設定されていた場合、アイテムをフレックスコンテナーの末尾に配置します。 {{cssxref("flex-direction")}} が `row` に設定されていた場合、この配置はインライン方向になります。
 
-しかし、フレックスボックスでは `flex-direction` を `column` に設定することで、主軸を変更することができます。この場合、 `justify-content` はアイテムをブロック方向に配置します。したがって、フレックスボックスでは主軸と交差じっくについて次のように考えると最も簡単です。
+しかし、フレックスボックスでは `flex-direction` を `column` に設定することで、主軸を変更することができます。この場合、 `justify-content` はアイテムをブロック方向に配置します。したがって、フレックスボックスでは主軸と交差軸について次のように考えると最も簡単です。
 
 - 主軸 = `flex-direction` で設定された向き = `justify-content` で配置
 - 交差軸 = 主軸と交差 = `align-content`, `align-self`/`align-items` で配置
@@ -84,7 +84,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 
 ## ガイド
 
-- [フレックスボックスでの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 
 ## 外部リソース
 

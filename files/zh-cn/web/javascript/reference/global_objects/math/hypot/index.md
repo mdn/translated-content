@@ -98,7 +98,7 @@ if (!Math.hypot)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.pow()")}}

@@ -9,6 +9,8 @@ slug: Web/SVG/Attribute/id
 
 Этот атрибут используется всеми элементами.
 
+## Пример
+
 ```html
 <svg
   width="120"
@@ -28,7 +30,7 @@ slug: Web/SVG/Attribute/id
 </svg>
 ```
 
-{{EmbedLiveSample("topExample", "120", "120")}}
+{{EmbedLiveSample("Пример", 120, 120)}}
 
 ## Примечания по использованию
 

@@ -12,34 +12,34 @@ slug: Web/CSS/content
 content: normal;
 content: none;
 
-/* значение <url>  */
+/* Значение <url>  */
 content: url("http://www.example.com/test.png");
 
-/* значение <image>  */
+/* Значение <image>  */
 content: linear-gradient(#e66465, #9198e5);
 
-/* указанные ниже значения могут быть применены только к сгенерированному контенту с использованием ::before и ::after */
+/* Указанные ниже значения могут быть применены только к сгенерированному контенту с использованием ::before и ::after */
 
-/* значение <string>  */
+/* Значение <string>  */
 content: "prefix";
 
-/* значения <counter> */
+/* Значения <counter> */
 content: counter(chapter_counter);
 content: counters(section_counter, ".");
 
-/* значение attr() связано со значением атрибута HTML */
+/* Значение attr() связано со значением атрибута HTML */
 content: attr(value string);
 
-/* языко- и позиция-зависимые ключевые слова */
+/* Значения <quote> */
 content: open-quote;
 content: close-quote;
 content: no-open-quote;
 content: no-close-quote;
 
-/* несколько значений могут использоваться вместе */
+/* Несколько значений могут использоваться вместе */
 content: open-quote chapter_counter;
 
-/* глобальные значения */
+/* Глобальные значения */
 content: inherit;
 content: initial;
 content: unset;

@@ -338,7 +338,7 @@ button {
 
 我们在[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块中讨论了克服跨浏览器支持问题的策略。
 
-## 测试你的技能
+## 技能测试
 
 我们在文章里面覆盖了很多内容，但你是否能记住最重要的知识？在你继续学习前，你可以进行[测试](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox_skills)来验证你是否掌握了这些知识。
 

@@ -18,7 +18,7 @@ slug: Web/SVG/Attribute/stroke
 
 ## SVG 描边的线
 
-### 示例 1：用 stroke 属性画一条绿色的直线。
+### 示例 1：用 stroke 属性画一条绿色的直线
 
 ```html
 <svg height="50" width="300">

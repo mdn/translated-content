@@ -31,7 +31,7 @@ const n = new Notification("新评论活动", options);
 console.log(n.data); // 打印 data 对象
 ```
 
-## 参见
+## 规范
 
 {{Specifications}}
 

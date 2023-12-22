@@ -1,11 +1,15 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
+l10n:
+  sourceCommit: 23f1411b3cdb751abd46821402b80bbc99348a72
 ---
 
 {{CSSRef}}
 
-**`flex-grow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムの[主軸方向の寸法](https://www.w3.org/TR/css-flexbox/#main-size)のフレックス伸長係数を設定します。
+**`flex-grow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナー内の残りの空間が、どれだけフレックスアイテムの[主軸方向の寸法](https://www.w3.org/TR/css-flexbox/#main-size)に割り当てられるべきかを指定するフレックス伸長係数を設定します。
+
+フレックスコンテナーの主軸方向の寸法が、フレックスアイテムの主軸方向の寸法の合計よりも大きい場合、余った空間はフレックスアイテムに分配され、各アイテムが伸びる大きさは、コンテナーのすべてのアイテムのフレックス伸長係数の合計の割合で按分した値になります。
 
 {{EmbedInteractiveExample("pages/css/flex-grow.html")}}
 
@@ -53,18 +57,20 @@ flex-grow: unset;
 
 ### フレックスアイテムの伸長係数の設定
 
+この例では、 6 つのフレックスアイテムに合計 8 の伸長係数が配分されており、伸長係数 1 あたり余白の 12.5% になります。
+
 #### HTML
 
 ```html
-<h4>This is a Flex-Grow</h4>
-<h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
+<h4>これは Flex-Grow です</h4>
+<h5>A、B、C、F は flex-grow:1 です。 D と E は flex-grow:2 です。</h5>
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box1" style="background-color:brown;">D</div>
-  <div class="box1" style="background-color:lightgreen;">E</div>
-  <div class="box" style="background-color:brown;">F</div>
+  <div class="small" style="background-color:red;">A</div>
+  <div class="small" style="background-color:lightblue;">B</div>
+  <div class="small" style="background-color:yellow;">C</div>
+  <div class="double" style="background-color:brown;">D</div>
+  <div class="double" style="background-color:lightgreen;">E</div>
+  <div class="small" style="background-color:brown;">F</div>
 </div>
 ```
 
@@ -94,6 +100,8 @@ flex-grow: unset;
 
 {{EmbedLiveSample('Setting flex item grow factor')}}
 
+6 つのフレックスアイテムがコンテナーの主軸方向に配置されている場合、それらのフレックスアイテムの内容の主要部分の合計がコンテナーの主軸のサイズよりも小さいと、余分なスペースはサイズのフレックスアイテムに分配され、A、B、C、F はそれぞれ残りの空間の 12.5%、 D と E はそれぞれ残りの空間の 25% を取得します。
+
 ## 仕様書
 
 {{Specifications}}
@@ -104,6 +112,6 @@ flex-grow: unset;
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの主軸方向における比率の制御](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
 - [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) Manuel Matuzovic による CSS-Tricks の記事で、どのように flex-grow が動作するかを解説している

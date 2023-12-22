@@ -25,6 +25,8 @@ inset-inline-end: revert;
 inset-inline-end: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/inset-inline-end.html")}}
+
 {{cssxref("inset-inline-start")}} と `inset-inline-end` の一括指定は {{cssxref("inset-inline")}} です。
 
 ## 構文

@@ -3,6 +3,8 @@ title: XPath
 slug: Glossary/XPath
 ---
 
+{{GlossarySidebar}}
+
 **XPath** とは{{glossary("XML")}} ドキュメント内のセクションやコンテンツにアクセスできる問い合わせ言語です。
 
 ## 関連項目

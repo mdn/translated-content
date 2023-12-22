@@ -11,8 +11,8 @@ slug: WebAssembly/Rust_to_Wasm
 
 Rust 和 WebAssembly 有两大主要用例：
 
-- 构建完整应用 —— 整个 Web 应用都基于 Rust 开发！
-- 构建应用的组成部分 —— 在现存的 JavaScript 前端中使用 Rust。
+- 构建完整应用——整个 Web 应用都基于 Rust 开发！
+- 构建应用的组成部分——在现存的 JavaScript 前端中使用 Rust。
 
 目前，Rust 团队正专注于第二种用例，因此我们也将着重介绍它。对于第一种用例，可以参阅 [`yew`](https://github.com/DenisKolodin/yew) 这类项目。
 

@@ -300,7 +300,7 @@ article:nth-of-type(3) div:first-child {
 
 ```css
 button {
-  flex: 1;
+  flex: 1 auto;
   margin: 5px;
   font-size: 18px;
   line-height: 1.5;

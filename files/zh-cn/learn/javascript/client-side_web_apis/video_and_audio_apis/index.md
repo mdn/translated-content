@@ -157,7 +157,7 @@ button:before {
 }
 ```
 
-首先在 CSS 的最上方我们使用 {{cssxref("@font-face")}} 块来导入自定义 Web 字体。这是一种图标字体 —— 字母表中的所有字符都是各种常用图标，你可以尝试在程序中调用。
+首先在 CSS 的最上方我们使用 {{cssxref("@font-face")}} 块来导入自定义 Web 字体。这是一种图标字体——字母表中的所有字符都是各种常用图标，你可以尝试在程序中调用。
 
 接下来，我们使用这些内容来显示每个按钮上的图标：
 
@@ -165,7 +165,7 @@ button:before {
 - 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 包含大写的“P”。
 - 我们使用 {{cssxref("font-family")}} 将自定义 Web 字体应用于我们的按钮上。在该字体中“P”对应的是“播放”图标，因此播放按钮上显示“播放”图标。
 
-图标字体非常酷有很多原因 —— 减少 HTTP 请求，因为你不需要将这些图标作为图像文件下载。同时具有出色的可扩展性，以及你可以使用文本属性来设置它们的样式 —— 例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。
+图标字体非常酷有很多原因——减少 HTTP 请求，因为你不需要将这些图标作为图像文件下载。同时具有出色的可扩展性，以及你可以使用文本属性来设置它们的样式——例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。
 
 最后让我们来看看进度条的 CSS:
 
@@ -200,7 +200,7 @@ button:before {
 - 我们将外部 `.timer` `<div>` 设为 flex：5，这样它占据了控件栏的大部分宽度。我们还设置 {{cssxref("position")}}`: relative`，这样我们就可以根据它的边界方便地定位元素，而不是{{htmlelement("body")}} 元素的边界。
 - 内部 `<div>` 绝对定位于外部 `<div>` 的顶部。它的初始宽度为 0，因此根本无法看到它。随着视频的播放，JavaScript 将动态的增加其宽度。
 - `<span>` 也绝对位于计时器/进度条 `timer` 栏的左侧附近。
-- 我们还对内部 `<div>` 和 `<span>` 定义适当数值的 {{cssxref("z-index")}} ，以便进度条显示在最上层，内部 `<div>` 显示在下层。这样，我们确保我们可以看到所有信息 —— 一个 box 不会遮挡另一个。
+- 我们还对内部 `<div>` 和 `<span>` 定义适当数值的 {{cssxref("z-index")}} ，以便进度条显示在最上层，内部 `<div>` 显示在下层。这样，我们确保我们可以看到所有信息——一个 box 不会遮挡另一个。
 
 ### 实现 JavaScript
 
@@ -277,7 +277,7 @@ button:before {
 
    [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由[`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
 
-2. 接下来，让我们定义 `stopMedia()`—— 在 `playPauseMedia()` 后面添加以下函数：
+2. 接下来，让我们定义 `stopMedia()`——在 `playPauseMedia()` 后面添加以下函数：
 
    ```plain
    function stopMedia() {

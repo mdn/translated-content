@@ -3,6 +3,8 @@ title: Instance (インスタンス)
 slug: Glossary/Instance
 ---
 
+{{GlossarySidebar}}
+
 {{glossary("constructor", "コンストラクター")}}によって作成された{{glossary("object","オブジェクト")}}は、そのコンストラクターのインスタンスになります。
 
 ## 詳細情報

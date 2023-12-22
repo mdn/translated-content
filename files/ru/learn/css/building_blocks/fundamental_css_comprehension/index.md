@@ -75,19 +75,3 @@ slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 Если вы проходите эту проверку в рамках организованного курса, у вас должна быть возможность отдать свою работу своему учителю/наставнику для оценки. Если вы самообучаетесь, то вы можете получить руководство по оценке достаточно простым путём: спросив в [теме обсуждения об этом упражнении](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682), или в канале [#mdn](irc://irc.mozilla.org/mdn) IRC на [Mozilla IRC](https://wiki.mozilla.org/IRC). Но сначала попробуйте выполнить упражнение — вы ничего не выиграете путём обмана!
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
-
-## В этом модуле
-
-- [Вступление в CSS](/ru/docs/Learn/CSS/First_steps)
-- [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
-- [Синтаксис CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [Введение в селекторы](/ru/docs/Learn/CSS/Building_blocks/Selectors)
-- [Простые селекторы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-- [Селекторы по атрибутам](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-- [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-- [Комбинаторы и множественные селекторы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-- [CSS значения и единицы](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Каскадность и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [Блочная модель](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Отладка CSS](/ru/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
-- [Задание: Основы понимания CSS](/ru/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)

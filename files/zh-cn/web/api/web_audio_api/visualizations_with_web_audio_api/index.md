@@ -33,9 +33,9 @@ analyser.connect(distortion);
 
 要捕获数据，你需要使用 {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 或 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 方法来获取频率数据，用 {{ domxref("AnalyserNode.getByteTimeDomainData()") }} 或 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} 来获取波形数据。
 
-这些方法把数据复制进了一个特定的数组当中，所以你在调用它们之前要先创建一个新数组。第一个方法会产生一个 32 位浮点数组，第二个和第三个方法会产生 8 位无符号整型数组，因此一个标准的 JavaScript 数组就不能使用 —— 你需要用一个 {{ domxref("Float32Array") }} 或者 {{ domxref("Uint8Array") }} 数组，具体需要哪个视情况而定。
+这些方法把数据复制进了一个特定的数组当中，所以你在调用它们之前要先创建一个新数组。第一个方法会产生一个 32 位浮点数组，第二个和第三个方法会产生 8 位无符号整型数组，因此一个标准的 JavaScript 数组就不能使用——你需要用一个 {{ domxref("Float32Array") }} 或者 {{ domxref("Uint8Array") }} 数组，具体需要哪个视情况而定。
 
-那么让我们来看看例子，比如我们正在处理一个 2048 尺寸的 FFT。我们返回 {{ domxref("AnalyserNode.frequencyBinCount") }} 值，它是 FFT 的一半，然后调用 Uint8Array()，把 frequencyBinCount 作为它的长度参数 —— 这代表我们将对这个尺寸的 FFT 收集多少数据点。
+那么让我们来看看例子，比如我们正在处理一个 2048 尺寸的 FFT。我们返回 {{ domxref("AnalyserNode.frequencyBinCount") }} 值，它是 FFT 的一半，然后调用 Uint8Array()，把 frequencyBinCount 作为它的长度参数——这代表我们将对这个尺寸的 FFT 收集多少数据点。
 
 ```js
 analyser.fftSize = 2048;

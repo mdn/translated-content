@@ -1052,9 +1052,9 @@ HTML5 重新定义了 `<b>`、`<i>` 和 `<u>`，赋予了它们新的但有点�
 </dl>
 ```
 
-## 测试你的技能！
+## 技能测试！
 
-你已经到了本文的结尾，但你能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——参见[测试你的技能：HTML 文本基础知识](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics) 。
+你已经到了本文的结尾，但你能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——参见[技能测试：HTML 文本基础知识](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics) 。
 
 ## 总结
 

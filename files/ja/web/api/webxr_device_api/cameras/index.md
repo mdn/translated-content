@@ -13,7 +13,7 @@ WebGL と WebXR の背後にある基本的な数学、幾何学、およびそ�
 
 - [基本の 3D 理論の説明](/ja/docs/Games/Techniques/3D_on_the_web/Basic_theory)
 - [ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
-- [WebGL モデル ビュー 射影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
+- [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
 - [WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)
 
 _編注: この記事で使用されているほとんどの図は、標準的な動作を実行しながらカメラがどのように動くかを示すために、[FilmmakerIQ ウェブサイトの記事](https://filmmakeriq.com/2016/09/the-importance-and-not-so-importance-of-film-terminology/)から取られました。 つまり、ウェブ全体で見られる[この画像](https://filmmakeriq.com/wp-content/uploads/2016/09/Pan-Tilt.png)からです。 それらは頻繁に再利用されるため、許可されたライセンスの下で利用できると想定しているため、所有権は不明です。 私たちはそれが自由に使えることを望みます。 そうでない場合で、あなたが所有者である場合はお知らせください。 新しい図を検索または作成します。 または、画像の使用を継続してよろしければ、適切にクレジットできるようにお知らせください。_
@@ -60,7 +60,7 @@ WebGL（そして、拡張によって、WebXR）では、移動および回転�
 
 WebGL または WebXR には標準のカメラオブジェクトがないため、カメラを自分でシミュレートする必要があります。 そうする前に、そしてカメラの動きをシミュレートする前に、実際に仮想カメラとその動きを最も基本的なレベルで見てみましょう。 すべてのものと同様に、空間内のオブジェクトの**位置**（position）は、たとえ仮想空間であっても、原点を基準にした位置を示す 3 つの数値を使用して表すことができ、原点の位置は (0, 0, 0) と定義されています。
 
-オブジェクトと空間の原点との空間関係には、考慮する必要のある別の側面があります。 それは**パースペクティブ**（perspective）です。 パースペクティブは、シーン内のオブジェクトに適切に適用されると、通常の 2D 画面と同じくらい平面に見えるシーンを取り、まるで 3D であるかのように飛び出させることができます。 パースペクティブにはいくつかの種類があります。 それらは定義されており、それらの数学は [WebGL モデル ビュー 射影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)の記事で説明されています。 重要なのは、ベクトルに対するパースペクティブの効果は、ベクトルに `w` と呼ばれる 4 番目のパースペクティブ成分を追加することによって表すことができるということです。
+オブジェクトと空間の原点との空間関係には、考慮する必要のある別の側面があります。 それは**パースペクティブ**（perspective）です。 パースペクティブは、シーン内のオブジェクトに適切に適用されると、通常の 2D 画面と同じくらい平面に見えるシーンを取り、まるで 3D であるかのように飛び出させることができます。 パースペクティブにはいくつかの種類があります。 それらは定義されており、それらの数学は [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)の記事で説明されています。 重要なのは、ベクトルに対するパースペクティブの効果は、ベクトルに `w` と呼ばれる 4 番目のパースペクティブ成分を追加することによって表すことができるということです。
 
 `w` の値は、他の 3 つの成分のそれぞれをそれで除算することによって適用され、最終的な位置またはベクトルを取得します。 つまり、(`x`, `y`, `z`, `w`) として与えられた座標の場合、3D 空間の点は実際には (`x`/`w`, `y`/`w`, `z`/`w`, 1) または単に (`x`/`w`, `y`/`w`, `z`/`w`) です。 パースペクティブを使用していない場合、`w` は常に 1 です。 その場合、(1, 0, 3) にあるオブジェクトの完全な座標は (1, 0, 3, 1) になります。
 
@@ -100,7 +100,7 @@ let viewMatrix = view.transform.inverse.matrix;
 
 変換を適用するには、点またはベクトルに変換または変換の合成を掛けます。
 
-これは、物理的な場所、方向または向き、およびパースペクティブの観点から見た位置の概念の概要です。 このテーマの詳細については、[幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)、[WebGL モデル ビュー 射影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)、および[ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)の記事を参照してください。
+これは、物理的な場所、方向または向き、およびパースペクティブの観点から見た位置の概念の概要です。 このテーマの詳細については、[幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)、[WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)、および[ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)の記事を参照してください。
 
 ## 古典的な映画撮影のシミュレーション
 
@@ -441,6 +441,6 @@ function myAnimationFrameCallback(time, frame) {
 ## 関連情報
 
 - [幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)
-- [WebGL モデル ビュー 射影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
+- [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
 - [ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
 - [移動、向き、モーション: WebXR の例](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion)

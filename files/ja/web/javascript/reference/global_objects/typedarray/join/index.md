@@ -2,12 +2,12 @@
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
 ---
 
 {{JSRef}}
 
-**`join()`** メソッドは、配列のすべての要素を 1 本の文字列に結合します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.join()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)のうちの 1 つです。
+**`join()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、この型付き配列のすべての要素を、カンマまたは指定する区切り文字で連結して新しい文字列を作成して返します。型付き配列に 1 つの項目しかない場合、その項目は区切り文字を使用せずに返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.join()")}} と同じです。
 
 {{EmbedInteractiveExample("pages/js/typedarray-join.html")}}
 
@@ -25,7 +25,11 @@ join(separator)
 
 ### 返値
 
-配列のすべての要素が結合された文字列です。
+型付き配列の要素をすべて連結した文字列です。 `array.length` が `0` の場合は空文字列を返します。
+
+## 解説
+
+詳細については、 {{jsxref("Array.prototype.join()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
@@ -49,5 +53,8 @@ uint8.join(""); // '123'
 ## 関連情報
 
 - [`TypedArray.prototype.join` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.toString()")}}
 - {{jsxref("Array.prototype.join()")}}
+- {{jsxref("String.prototype.split()")}}

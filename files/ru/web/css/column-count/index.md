@@ -12,13 +12,13 @@ slug: Web/CSS/column-count
 ## Синтаксис
 
 ```css
-/* Значение, заданное ключевым словом */
+/* Ключевые слова */
 column-count: auto;
 
 /* целое значение */
 column-count: 3;
 
-/* глобальные значения */
+/* Глобальные значения */
 column-count: inherit;
 column-count: initial;
 column-count: unset;

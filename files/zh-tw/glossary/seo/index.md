@@ -31,4 +31,4 @@ SEO 方法分為三大類：
 - [什麼是 SEO？由淺入深新手教學](https://seo.whoops.com.tw/what-is-seo/)
 - [SEO 新手初入門，3 分鐘了解什麼是 SEO 教學](https://techmoon.xyz/what-is-seo/)
 - [Google Webmaster Central](https://www.google.com/webmasters/)
-- [您需要 SEO 嗎？ - Search Console 說明](https://support.google.com/webmasters/answer/35291?hl=zh-Hant)
+- [你需要 SEO 嗎？ - Search Console 說明](https://support.google.com/webmasters/answer/35291?hl=zh-Hant)

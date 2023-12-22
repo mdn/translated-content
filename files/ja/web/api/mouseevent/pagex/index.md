@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.pageX
+title: "MouseEvent: pageX プロパティ"
+short-title: pageX
 slug: Web/API/MouseEvent/pageX
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
 {{APIRef("UI Events")}}
@@ -13,10 +14,10 @@ l10n:
 文書の端をそのまま基準とするため、このプロパティは、ページの水平方向のスクロールを加味します。
 例えば、文書の左側 200 ピクセルが隠れるようにページがスクロールされ、ビューの左端から 100 ピクセル内側でマウスがクリックされた場合、 `pageX` が返す値は 300 となります。
 
-元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/ja/docs/Web/CSS/CSSOM_View) では、 `double` 型の浮動小数点値として再定義しています。
+元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/ja/docs/Web/CSS/CSSOM_view) では、 `double` 型の浮動小数点値として再定義しています。
 詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
-この方法で指定された座標について詳しくは、[座標系](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems)の[ページ](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems#ページ)の節を参照してください。
+この方法で指定された座標について詳しくは、[座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#%e3%83%9a%e3%83%bc%e3%82%b8)を参照してください。
 
 ## 値
 
@@ -97,7 +98,7 @@ JavaScript では、 {{domxref("EventTarget.addEventListener", "addEventListener
 
 ### その他の例
 
-利用可能なすべての座標系における情報を示す例は、[マウス位置へのアクセス方法](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems#例)で見ることができます。
+利用可能なすべての座標系における情報を示す例は、[マウス位置へのアクセス方法](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#%e4%be%8b)で見ることができます。
 
 ## 仕様書
 

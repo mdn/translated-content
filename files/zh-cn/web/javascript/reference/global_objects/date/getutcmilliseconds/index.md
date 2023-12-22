@@ -42,7 +42,7 @@ var milliseconds = today.getUTCMilliseconds();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getMilliseconds()")}}
 - {{jsxref("Date.prototype.setUTCMilliseconds()")}}

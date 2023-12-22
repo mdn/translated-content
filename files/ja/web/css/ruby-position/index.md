@@ -23,6 +23,8 @@ ruby-position: revert;
 ruby-position: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/ruby-position.html")}}
+
 ### 値
 
 - `over`

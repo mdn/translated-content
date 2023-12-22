@@ -3,6 +3,8 @@ title: Propriedade (CSS)
 slug: Glossary/Property/CSS
 ---
 
+{{GlossarySidebar}}
+
 Uma **propriedade CSS** é uma característica (como a cor) cujo valor define o aspecto de como o navegador deve exibir o elemento.
 
 Aqui está um exemplo de uma regra do CSS:

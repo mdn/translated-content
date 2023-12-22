@@ -38,7 +38,7 @@ slug: Web/API/HTMLMediaElement/ended_event
   </tbody>
 </table>
 
-> **备注：** 该事件也在 [Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API) 和 [Web Audio](/zh-CN/docs/Web/API/Web_Audio_API) 这两个 API 中定义。
+> **备注：** 该事件也在[媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)和 [Web Audio](/zh-CN/docs/Web/API/Web_Audio_API) 这两个 API 中定义。
 
 ## 示例
 
@@ -105,9 +105,9 @@ video.onended = (event) => {
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- [Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API)
+- [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Streams_API)
 
-  - [Media Capture and Streams](/zh-CN/docs/Web/API/Media_Streams_API)[: ended 事件](/zh-CN/docs/Web/API/MediaStreamTrack/ended_event)
+  - [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Streams_API)[：ended 事件](/zh-CN/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
 

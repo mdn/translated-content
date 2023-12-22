@@ -321,12 +321,3 @@ PDF-файлы были необходимой ступенью между бу�
 Существует много других технологий, которые включают в себя внедрение внешнего контента, помимо тех, которые мы обсуждали здесь. Мы видели некоторые из них в предыдущих статьях, например {{htmlelement ("video")}}, {{htmlelement ("audio")}} и {{htmlelement ("img")}}, но есть и другие. Например, {{htmlelement ("canvas")}} для 2D-и 3D-графики, сгенерированной JavaScript, и {{SVGElement ("svg")}} для встраивания векторной графики. Мы рассмотрим SVG в следующей статье модуля.
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
-
-## В этом модуле
-
-- [Images in HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

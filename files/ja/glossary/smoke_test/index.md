@@ -3,6 +3,8 @@ title: Smoke Test (スモークテスト)
 slug: Glossary/Smoke_Test
 ---
 
+{{GlossarySidebar}}
+
 スモークテストは、ソフトウェアの中核機能の機能テストと単体テストから構成され、より詳細なテストの前に実施されます。
 
 スモークテストは次のような疑問に答えてくれます。
