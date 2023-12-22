@@ -700,11 +700,11 @@ HTML에서 문자 `<`,`>`, `"`및 `&`는 특수 문자입니다. 이들은 HTML 
 
 | Literal character | Character reference equivalent |
 | ----------------- | ------------------------------ |
-| <                 | &lt;                           |
-| >                 | &gt;                           |
-| "                 | &quot;                         |
-| '                 | &apos;                         |
-| &                 | &amp;                          |
+| <                 | `&lt;`                         |
+| >                 | `&gt;`                         |
+| "                 | `&quot;`                       |
+| '                 | `&apos;`                       |
+| &                 | `&amp;`                        |
 
 문자 참조에 해당하는 문자는 '\&lt;'보다 작거나 '\&quot;'에 대한 인용 및 기타 문자 참조와 유사하게 볼 수 있기 때문에 쉽게 기억할 수 있습니다. 엔터티 참조에 대한 자세한 내용은 [List of XML and HTML character entity references](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia)을 참조하십시오.
 
