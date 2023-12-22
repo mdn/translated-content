@@ -91,85 +91,85 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 _`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
 
 - {{domxref("Element.ariaAtomic")}}
-  - : A string reflecting the [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
+  - : 反映 [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性的字符串，表示辅助技术是否将根据 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性定义的变更通知，显示全部或仅部分变更区域。
 - {{domxref("Element.ariaAutoComplete")}}
-  - : A string reflecting the [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
+  - : 反映 [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性的字符串，表示输入文本是否会触发显示一个或多个用户对组合框、搜索框或文本框的预期值的预测，并指定如果进行了预测将如何显示。
 - {{domxref("Element.ariaBusy")}}
-  - : A string reflecting the [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
+  - : 反映 [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-busy) 属性的字符串，表示元素是否正在被修改，因为辅助技术可能希望等到修改完成后再向用户展示。
 - {{domxref("Element.ariaChecked")}}
-  - : A string reflecting the [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
+  - : 反映 [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-checked)属性的字符串，表示复选框、单选按钮和其他具有选中状态的部件的当前“选中”状态。
 - {{domxref("Element.ariaColCount")}}
-  - : A string reflecting the [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
+  - : 反映 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性的字符串，该属性定义了表格、网格或树状网格中的列数。
 - {{domxref("Element.ariaColIndex")}}
-  - : A string reflecting the [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
+  - : 反映 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性的字符串，该属性定义了元素的列索引或相对于表格、网格或树状网格中列总数的位置。
 - {{domxref("Element.ariaColIndexText")}} {{experimental_inline}}
-  - : A string reflecting the [`aria-colindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
+  - : 反映 [`aria-colindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) 属性的字符串，该属性定义了 aria-colindex 的人类可读文本替代。
 - {{domxref("Element.ariaColSpan")}}
-  - : A string reflecting the [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+  - : 反映 [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨列数。
 - {{domxref("Element.ariaCurrent")}}
-  - : A string reflecting the [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
+  - : 反映 [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性的字符串，表示在一个容器或一组相关元素中代表当前项目的元素。
 - {{domxref("Element.ariaDescription")}}
-  - : A string reflecting the [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.
+  - : 反映 [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性的字符串，该属性定义了描述或注释当前元素的字符串值。
 - {{domxref("Element.ariaDisabled")}}
-  - : A string reflecting the [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
+  - : 反映 [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) 属性的字符串，表示该元素可感知但已禁用，因此不可编辑或以其他方式操作。
 - {{domxref("Element.ariaExpanded")}}
-  - : A string reflecting the [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
+  - : 反映 [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性的字符串，表示该元素拥有或控制的分组元素是展开还是折叠状态。
 - {{domxref("Element.ariaHasPopup")}}
-  - : A string reflecting the [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
+  - : 反映 [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性的字符串，表示可由元素触发的交互式弹出元素（如菜单或对话框）的可用性和类型。
 - {{domxref("Element.ariaHidden")}}
-  - : A string reflecting the [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute, which indicates whether the element is exposed to an accessibility API.
+  - : 反映 [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性的字符串，表示元素是否暴露于无障碍 API。
 - {{domxref("Element.ariaKeyShortcuts")}}
-  - : A string reflecting the [`aria-keyshortcuts`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
+  - : 反映 [`aria-keyshortcuts`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) 属性的字符串，表示作者为激活元素或将焦点赋予元素而实施的键盘快捷方式。
 - {{domxref("Element.ariaLabel")}}
-  - : A string reflecting the [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, which defines a string value that labels the current element.
+  - : 反映 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性的字符串，该属性定义了标示当前元素的字符串值。
 - {{domxref("Element.ariaLevel")}}
-  - : A string reflecting the [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute, which defines the hierarchical level of an element within a structure.
+  - : 反映 [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-level) 属性的字符串，该属性定义了结构中元素的层次级别。
 - {{domxref("Element.ariaLive")}}
-  - : A string reflecting the [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
+  - : 反映 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性的字符串，表示元素将被更新，并描述了用户代理、辅助技术和用户可期望从实时区域获得的更新类型。
 - {{domxref("Element.ariaModal")}}
-  - : A string reflecting the [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.
+  - : 反映 [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-modal) 属性的字符串，表示元素在显示时是否为模态元素。
 - {{domxref("Element.ariaMultiline")}}
-  - : A string reflecting the [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
+  - : 反映 [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) 属性的字符串，表示文本框是接受多行输入还是只接受单行输入。
 - {{domxref("Element.ariaMultiSelectable")}}
-  - : A string reflecting the [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
+  - : 反映 [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) 属性的字符串，表示用户可以从当前可选后代中选择多个项目。
 - {{domxref("Element.ariaOrientation")}}
-  - : A string reflecting the [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
+  - : 反映 [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 属性的字符串，表示元素的方向是水平、垂直还是未知/模糊。
 - {{domxref("Element.ariaPlaceholder")}}
-  - : A string reflecting the [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
+  - : 反映 [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) 属性的字符串，它定义了一个简短的提示，目的是在控件无值时帮助用户输入数据。
 - {{domxref("Element.ariaPosInSet")}}
-  - : A string reflecting the [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) attribute, which defines an element's number or position in the current set of listitems or treeitems.
+  - : 反映 [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) 属性的字符串，它定义了元素在当前列表项或树状项集合中的编号或位置。
 - {{domxref("Element.ariaPressed")}}
-  - : A string reflecting the [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
+  - : 反映 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性的字符串，表示切换按钮当前的“按下”状态。
 - {{domxref("Element.ariaReadOnly")}}
-  - : A string reflecting the [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
+  - : 反映 [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) 属性的字符串，表示该元素不可编辑，但在其他方面是可操作的。
 - {{domxref("Element.ariaRelevant")}} {{Non-standard_Inline}}
-  - : A string reflecting the [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
+  - : 反映 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性的字符串，表示当实时区域内的无障碍树被修改时，用户代理将触发哪些通知。该属性用于描述 `aria-live` 区域中哪些变化是相关的，应予以公布。
 - {{domxref("Element.ariaRequired")}}
-  - : A string reflecting the [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
+  - : [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required) 属性的字符串，表示在提交表单前需要用户输入。
 - {{domxref("Element.ariaRoleDescription")}}
-  - : A string reflecting the [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an element.
+  - : 反映 [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 属性的字符串，它定义了一个元素的角色的人类可读、作者本地化描述。
 - {{domxref("Element.ariaRowCount")}}
-  - : A string reflecting the [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
+  - : 反映 [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 属性的字符串，该属性定义了表格、网格或树状网格中的总行数。
 - {{domxref("Element.ariaRowIndex")}}
-  - : A string reflecting the [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
+  - : 反映 [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性的字符串，它定义了元素的行索引或相对于表格、网格或树状网格中总行数的位置。
 - {{domxref("Element.ariaRowIndexText")}} {{experimental_inline}}
-  - : A string reflecting the [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
+  - : 反映 [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindext) 属性的字符串，它定义了 aria-rowindex 的人类可读文本替代。
 - {{domxref("Element.ariaRowSpan")}}
-  - : A string reflecting the [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
+  - : 反映 [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨行数。
 - {{domxref("Element.ariaSelected")}}
-  - : A string reflecting the [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
+  - : 反映 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected)属性的字符串，表示具有选定状态的元素的当前“选定”状态。
 - {{domxref("Element.ariaSetSize")}}
-  - : A string reflecting the [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) attribute, which defines the number of items in the current set of listitems or treeitems.
+  - : 反映 [`aria-setize`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-setize) 属性的字符串，该属性定义了当前列表项或树状项集合中的项数。
 - {{domxref("Element.ariaSort")}}
-  - : A string reflecting the [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
+  - : 反映 [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性的字符串，表示表格或网格中的项目是按升序还是降序排序。
 - {{domxref("Element.ariaValueMax")}}
-  - : A string reflecting the [`aria-valueMax`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
+  - : 反映 [`aria-valueMax`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性的字符串，该属性定义了范围部件允许的最大值。
 - {{domxref("Element.ariaValueMin")}}
-  - : A string reflecting the [`aria-valueMin`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
+  - : 反映 [`aria-valueMin`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) 属性的字符串，该属性定义了范围部件的最小允许值。
 - {{domxref("Element.ariaValueNow")}}
-  - : A string reflecting the [`aria-valueNow`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
+  - : 反映 [`aria-valueNow`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性的字符串，该属性定义了范围部件的当前值。
 - {{domxref("Element.ariaValueText")}}
-  - : A string reflecting the [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
+  - : 反映 [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 属性的字符串，该属性为范围部件定义了 aria-valuenow 的人类可读文本替代值。
 
 ## 实例方法
 
