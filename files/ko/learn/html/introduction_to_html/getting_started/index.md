@@ -455,7 +455,7 @@ textarea.onkeyup = function () {
 ```html
 <a href="http://www.example.com">A link to my example.</a>
 
-<a href="http://www.example.com">A link to my example.</a>
+<a href='http://www.example.com'>A link to my example.</a>
 ```
 
 주의해야할 점은 두 개를 섞어 쓰면 안된다는 것입니다. 다음은 잘못 사용한 예입니다.
