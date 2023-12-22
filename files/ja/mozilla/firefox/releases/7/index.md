@@ -52,7 +52,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - `index` が範囲外の場合、{{ domxref("DOMTokenList.item") }} が `undefined` を返すようになりました。これまでは `null` を返していました。
 - `Node.getFeature` が削除されました。
 - `HTMLInsElement` インターフェースと `HTMLDelElement` インターフェースが削除されました。これは {{ HTMLElement("ins") }} と {{ HTMLElement("del") }} 要素が実際には {{ domxref("HTMLModElement") }} を使用していたためです。
-- 新しい [DOM4](http://www.w3.org/TR/dom/) 仕様にある {{ domxref("Attr") }} が {{ domxref("Node") }} を継承しない (DOM Core 1, 2, 3 まではしていた) という定義に準拠するため、{{ domxref("Attr") }} インターフェース上の {{ domxref("Node") }}} プロパティやメソッドについて、将来的にこれらを削除するといった意味の [警告を出す](/ja/docs/DOM/Attr#Deprecated_properties_and_methods) ようになりました。
+- 新しい [DOM4](http://www.w3.org/TR/dom/) 仕様にある {{ domxref("Attr") }} が {{ domxref("Node") }} を継承しない (DOM Core 1, 2, 3 まではしていた) という定義に準拠するため、{{ domxref("Attr") }} インターフェース上の {{ domxref("Node") }} プロパティやメソッドについて、将来的にこれらを削除するといった意味の [警告を出す](/ja/docs/DOM/Attr#Deprecated_properties_and_methods) ようになりました。
 - {{ domxref("Window") }} オブジェクトに {{ domxref("window.ondeviceorientation") }} プロパティと {{ domxref("window.ondevicemotion") }} プロパティのサポートを追加しました。
 - {{ domxref("window.resizeTo") }}、{{ domxref("window.resizeBy") }}、{{ domxref("window.moveTo") }}、{{ domxref("window.moveBy") }} はメインウィンドウに適用されなくなりました。
 
