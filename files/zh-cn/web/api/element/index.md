@@ -1,147 +1,224 @@
 ---
 title: Element
 slug: Web/API/Element
+l10n:
+  sourceCommit: e83aa62ce6bf2e2bc44f55a3fb73b63d724fa6a6
 ---
 
 {{APIRef("DOM")}}
 
-**`Element`** 是一个通用性非常强的基类，所有 {{DOMxRef("Document")}} 对象下的对象都继承自它。这个接口描述了所有相同种类的元素所普遍具有的方法和属性。一些接口继承自 `Element` 并且增加了一些额外功能的接口描述了具体的行为。例如， {{DOMxRef("HTMLElement")}} 接口是所有 HTML 元素的基本接口，而 {{DOMxRef("SVGElement")}} 接口是所有 SVG 元素的基础。大多数功能是在这个类的更深层级（hierarchy）的接口中被进一步制定的。
+**`Element`** 是一个通用性非常强的基类，所有 {{DOMxRef("Document")}} 对象下的对象都继承自它。这个接口描述了所有相同种类的元素所普遍具有的方法和属性。一些接口继承自 `Element` 并且增加了一些额外功能的接口描述了具体的行为。
+
+例如，{{DOMxRef("HTMLElement")}} 接口是所有 HTML 元素的基本接口，而 {{DOMxRef("SVGElement")}} 接口是所有 SVG 元素的基础。大多数功能是在这个类的更深层级的接口中被进一步制定的。
 
 在 Web 平台的领域以外的语言，比如 XUL，通过 `XULElement` 接口，同样也实现了 `Element` 接口。
 
 {{InheritanceDiagram}}
 
-## 属性
+## 实例属性
 
-*所有属性继承自它的祖先接口 {{DOMxRef("Node")}}，并且扩展了 {{DOMxRef("Node")}} 的父接口 {{DOMxRef("EventTarget")}}，并且从以下部分继承了属性：{{DOMxRef("ParentNode")}}、{{DOMxRef("ChildNode")}}、{{DOMxRef("NonDocumentTypeChildNode")}}，*和 {{DOMxRef("Animatable")}}。
+_`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOMxRef("EventTarget")}} 继承属性。_
 
-- {{DOMxRef("Element.attributes")}} {{readOnlyInline}}
-  - : 返回一个与该元素相关的所有属性集合 {{DOMxRef("NamedNodeMap")}}。
-- {{DOMxRef("Element.classList")}} {{readOnlyInline}}
-  - : 返回该元素包含的 class 属性，是一个 {{DOMxRef("DOMTokenList")}}。
+- {{DOMxRef("Element.assignedSlot")}} {{ReadOnlyInline}}
+  - : 返回一个表示节点所插入的 {{htmlelement("slot")}} 的 {{DOMxRef("HTMLSlotElement")}} 值。
+- {{DOMxRef("Element.attributes")}} {{ReadOnlyInline}}
+  - : 返回一个 {{DOMxRef("NamedNodeMap")}} 对象，其中包含相应 HTML 元素的指定属性。
+- {{domxref("Element.childElementCount")}} {{ReadOnlyInline}}
+  - : 返回此元素的子元素个数。
+- {{domxref("Element.children")}} {{ReadOnlyInline}}
+  - : 返回此元素的子元素。
+- {{DOMxRef("Element.classList")}} {{ReadOnlyInline}}
+  - : 返回该元素包含的所有 class 属性，是一个 {{DOMxRef("DOMTokenList")}}。
 - {{DOMxRef("Element.className")}}
-  - : 一个 {{DOMxRef("DOMString")}}，表示这个元素的 class。
-- {{DOMxRef("Element.clientHeight")}} {{readOnlyInline}}
-  - : 返回{{jsxref("Number")}} 表示内部相对于外层元素的高度。
-- {{DOMxRef("Element.clientLeft")}} {{readOnlyInline}}
-  - : 返回{{jsxref("Number")}}表示该元素距离它左边界的宽度。
-- {{DOMxRef("Element.clientTop")}} {{readOnlyInline}}
-  - : 返回 {{jsxref("Number")}} 表示该元素距离它上边界的高度。
-- {{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}
-  - : 返回{{jsxref("Number")}} 表示该元素内部的宽度。
-- {{DOMxRef("Element.computedName")}} {{readOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the label exposed to accessibility.
-- {{DOMxRef("Element.computedRole")}} {{readOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the ARIA role that has been applied to a particular element.
+  - : 一个字符串，表示这个元素的类。
+- {{DOMxRef("Element.clientHeight")}} {{ReadOnlyInline}}
+  - : 返回代表元素内部高度的数值。
+- {{DOMxRef("Element.clientLeft")}} {{ReadOnlyInline}}
+  - : 返回代表元素左边界宽度的数值。
+- {{DOMxRef("Element.clientTop")}} {{ReadOnlyInline}}
+  - : 返回代表元素顶部边框宽度的数值。
+- {{DOMxRef("Element.clientWidth")}} {{ReadOnlyInline}}
+  - : 返回代表元素内部宽度的数值。
+- {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
+  - : 一个字符串，反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Attributes/elementtiming) 属性，该属性在 {{domxref("PerformanceElementTiming")}} API 中标记了一个观察元素。
+- {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
+  - : 返回此元素的第一个子元素。
 - {{DOMxRef("Element.id")}}
-  - : 是一个{{DOMxRef("DOMString")}} 表示这个元素的 id。
+  - : 一个字符串，表示此元素的 id 值。
 - {{DOMxRef("Element.innerHTML")}}
-  - : 是一个{{DOMxRef("DOMString")}} 表示这个元素的内容文本。
-- {{DOMxRef("Element.localName")}} {{readOnlyInline}}
-  - : 是一个 {{DOMxRef("DOMString")}} 表示这个元素名称本地化的部分。
-- {{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}
+  - : 一个字符串，表示元素内容标记。
+- {{domxref("Element.lastElementChild")}} {{ReadOnlyInline}}
+  - : 返回此元素的最后一个子元素。
+- {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
+  - : 一个字符串，代表元素限定名称的本地部分。
+- {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
 
-  - : 元素对应的 namespace URI，如果没有则返回 `null`
+  - : 元素对应的命名空间 URI，如果没有则返回 `null`。
 
-    > **备注：** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
+    > **备注：** 在 Firefox 3.5 及更早版本中，HTML 元素不在命名空间中。在以后的版本中，HTML 元素在 HTML 树和 XML 树中都属于 [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) 命名空间。
 
-- {{DOMxRef("NonDocumentTypeChildNode.nextElementSibling")}} {{readOnlyInline}}
-  - : 是一个{{DOMxRef("Element")}}, 该元素下一个兄弟节点，如果为 null 表示不存在..
+- {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
+  - : 一个 {{DOMxRef("Element")}}，树中紧跟给定元素的元素，如果没有同级节点，则为 `null`。
 - {{DOMxRef("Element.outerHTML")}}
-  - : 是一个 {{DOMxRef("DOMString")}}，获取该 DOM 元素及其后代的 HTML 文本。在设置它的时候，会从给定的字符串开始解析，替换自身。
-- {{DOMxRef("Element.prefix")}} {{readOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} representing the namespace prefix of the element, or `null` if no prefix is specified.
-- {{DOMxRef("NonDocumentTypeChildNode.previousElementSibling")}} {{readOnlyInline}}
-  - : 是一个 {{DOMxRef("Element")}}, 该元素上一个兄弟节点，如果为 null 表示不存在..
-- {{DOMxRef("Element.scrollHeight")}} {{readOnlyInline}}
-  - : 返回类型为： {{jsxref("Number")}}，表示元素的滚动视图高度。
+  - : 一个字符串，代表元素的标记（包括其内容）。作为 setter 使用时，将用从给定字符串解析出的节点替换元素。
+- {{DOMxRef("Element.part")}}
+  - : 代表元素的部分标识符（即使用 `part` 属性设置的标识符），以 {{domxref("DOMTokenList")}} 的形式返回。
+- {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
+  - : 代表元素命名空间前缀的字符串，如果没有指定前缀，则为 `null`。
+- {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
+  - : 一个 {{DOMxRef("Element")}}，树中紧靠给定元素的元素，如果没有同级元素，则为 `null`。
+- {{DOMxRef("Element.scrollHeight")}} {{ReadOnlyInline}}
+  - : 元素滚动视图高度的数值。
 - {{DOMxRef("Element.scrollLeft")}}
-  - : 返回类型为：{{jsxref("Number")}}，表示该元素横向滚动条距离最左的位移。
-- {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
-  - : 返回类型为： {{jsxref("Number")}}，表示该元素横向滚动条可移动的最大值
+  - : 元素左滚动偏移量的数值。
+- {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : 元素可能的最大左滚动偏移值。
 - {{DOMxRef("Element.scrollTop")}}
-  - : 返回类型为：{{jsxref("Number")}} ，表示该元素纵向滚动条距离
-- {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
-  - : 返回类型为：{{jsxref("Number")}} ，表示该元素纵向滚动条可移动的最大值
-- {{DOMxRef("Element.scrollWidth")}} {{readOnlyInline}}
-  - : 返回类型为： {{jsxref("Number")}} ，表示元素的滚动视图宽度。
-- {{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}
-  - : Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
-  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Available only to [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions).**
-- {{DOMxRef("Element.slot")}} {{Experimental_Inline}}
-  - : Returns the name of the shadow DOM slot the element is inserted in.
-- {{DOMxRef("Element.tabStop")}} {{Non-standard_Inline}}
-  - : Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.
-- {{DOMxRef("Element.tagName")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("String")}} with the name of the tag for the given element.
-- {{DOMxRef("Element.undoManager")}} {{Experimental_Inline}} {{readOnlyInline}}
-  - : Returns the {{DOMxRef("UndoManager")}} associated with the element.
-- {{DOMxRef("Element.undoScope")}} {{Experimental_Inline}}
-  - : Is a {{jsxref("Boolean")}} indicating if the element is an undo scope host, or not.
+  - : 元素顶部垂直滚动的像素数。
+- {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : 元素可能的最大顶部滚动偏移值。
+- {{DOMxRef("Element.scrollWidth")}} {{ReadOnlyInline}}
+  - : 代表元素滚动视图宽度的数值。
+- {{DOMxRef("Element.shadowRoot")}} {{ReadOnlyInline}}
+  - : 返回元素托管的开放阴影根；如果没有开放阴影根，则返回 null。
+- {{DOMxRef("Element.slot")}}
+  - : 返回元素插入的阴影 DOM 插槽的名称。
+- {{DOMxRef("Element.tagName")}} {{ReadOnlyInline}}
+  - : 返回一个字符串，包含给定元素的标签名称。
 
-> **备注：** DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{DOMxRef("Node")}} interface. In DOM4 they were moved to `Element`.
->
-> This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.
+### ARIA 中包含的实例属性
 
-### Properties included from Slotable
+_`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
 
-_The `Element` interface includes the following property, defined on the {{DOMxRef("Slotable")}} mixin._
+- {{domxref("Element.ariaAtomic")}}
+  - : A string reflecting the [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
+- {{domxref("Element.ariaAutoComplete")}}
+  - : A string reflecting the [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
+- {{domxref("Element.ariaBusy")}}
+  - : A string reflecting the [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
+- {{domxref("Element.ariaChecked")}}
+  - : A string reflecting the [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
+- {{domxref("Element.ariaColCount")}}
+  - : A string reflecting the [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
+- {{domxref("Element.ariaColIndex")}}
+  - : A string reflecting the [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
+- {{domxref("Element.ariaColIndexText")}} {{experimental_inline}}
+  - : A string reflecting the [`aria-colindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
+- {{domxref("Element.ariaColSpan")}}
+  - : A string reflecting the [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+- {{domxref("Element.ariaCurrent")}}
+  - : A string reflecting the [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
+- {{domxref("Element.ariaDescription")}}
+  - : A string reflecting the [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.
+- {{domxref("Element.ariaDisabled")}}
+  - : A string reflecting the [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
+- {{domxref("Element.ariaExpanded")}}
+  - : A string reflecting the [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
+- {{domxref("Element.ariaHasPopup")}}
+  - : A string reflecting the [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
+- {{domxref("Element.ariaHidden")}}
+  - : A string reflecting the [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute, which indicates whether the element is exposed to an accessibility API.
+- {{domxref("Element.ariaKeyShortcuts")}}
+  - : A string reflecting the [`aria-keyshortcuts`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
+- {{domxref("Element.ariaLabel")}}
+  - : A string reflecting the [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, which defines a string value that labels the current element.
+- {{domxref("Element.ariaLevel")}}
+  - : A string reflecting the [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute, which defines the hierarchical level of an element within a structure.
+- {{domxref("Element.ariaLive")}}
+  - : A string reflecting the [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
+- {{domxref("Element.ariaModal")}}
+  - : A string reflecting the [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.
+- {{domxref("Element.ariaMultiline")}}
+  - : A string reflecting the [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
+- {{domxref("Element.ariaMultiSelectable")}}
+  - : A string reflecting the [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
+- {{domxref("Element.ariaOrientation")}}
+  - : A string reflecting the [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
+- {{domxref("Element.ariaPlaceholder")}}
+  - : A string reflecting the [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
+- {{domxref("Element.ariaPosInSet")}}
+  - : A string reflecting the [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) attribute, which defines an element's number or position in the current set of listitems or treeitems.
+- {{domxref("Element.ariaPressed")}}
+  - : A string reflecting the [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
+- {{domxref("Element.ariaReadOnly")}}
+  - : A string reflecting the [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
+- {{domxref("Element.ariaRelevant")}} {{Non-standard_Inline}}
+  - : A string reflecting the [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
+- {{domxref("Element.ariaRequired")}}
+  - : A string reflecting the [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
+- {{domxref("Element.ariaRoleDescription")}}
+  - : A string reflecting the [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an element.
+- {{domxref("Element.ariaRowCount")}}
+  - : A string reflecting the [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
+- {{domxref("Element.ariaRowIndex")}}
+  - : A string reflecting the [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
+- {{domxref("Element.ariaRowIndexText")}} {{experimental_inline}}
+  - : A string reflecting the [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
+- {{domxref("Element.ariaRowSpan")}}
+  - : A string reflecting the [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
+- {{domxref("Element.ariaSelected")}}
+  - : A string reflecting the [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
+- {{domxref("Element.ariaSetSize")}}
+  - : A string reflecting the [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) attribute, which defines the number of items in the current set of listitems or treeitems.
+- {{domxref("Element.ariaSort")}}
+  - : A string reflecting the [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
+- {{domxref("Element.ariaValueMax")}}
+  - : A string reflecting the [`aria-valueMax`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
+- {{domxref("Element.ariaValueMin")}}
+  - : A string reflecting the [`aria-valueMin`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
+- {{domxref("Element.ariaValueNow")}}
+  - : A string reflecting the [`aria-valueNow`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
+- {{domxref("Element.ariaValueText")}}
+  - : A string reflecting the [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
 
-- {{DOMxRef("Slotable.assignedSlot")}}{{readonlyInline}}
-  - : Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
+## 实例方法
 
-### 事件句柄
+_`Element` 继承其父级 {{DOMxRef("Node")}} 和父级 {{DOMxRef("EventTarget")}} 的方法。_
 
-- {{domxref("Element.onfullscreenchange")}}
-  - : 事件 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 的回调方法，在元素进入或退出全屏模式时触发。不仅可用于观察（监听）可预期的过度变化，还可以观察（监听）未知的变化，如：当你的应用程序在后台运行。
-- {{domxref("Element.onfullscreenerror")}}
-  - : 事件 [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 的回调方法，在进入全屏模式过程中出现错误时触发。
-
-## 方法
-
-_Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}_, and implements those of {{DOMxRef("ParentNode")}}, {{DOMxRef("ChildNode")}}_, {{DOMxRef("NonDocumentTypeChildNode")}},_ _and {{DOMxRef("Animatable")}}._
-
-- {{DOMxRef("EventTarget.addEventListener()")}}
-  - : Registers an event handler to a specific event type on the element.
-- {{DOMxRef("Element.attachShadow()")}}
-  - : Attatches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
-- {{DOMxRef("Element.animate()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.after()")}}
+  - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
+- {{DOMxRef("Element.animate()")}}
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
-- {{DOMxRef("Element.closest()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.append()")}}
+  - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the element.
+- {{DOMxRef("Element.attachShadow()")}}
+  - : Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
+- {{DOMxRef("Element.before()")}}
+  - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just before the `Element`.
+- {{DOMxRef("Element.closest()")}}
   - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
-- {{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.computedStyleMap()")}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
-- {{DOMxRef("EventTarget.dispatchEvent()")}}
-  - : Dispatches an event to this node in the DOM and returns a {{jsxref("Boolean")}} that indicates whether no handler canceled the event.
-- {{DOMxRef("Element.getAnimations()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.getAnimations()")}}
   - : Returns an array of Animation objects currently active on the element.
 - {{DOMxRef("Element.getAttribute()")}}
-  - : Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.
+  - : Retrieves the value of the named attribute from the current node and returns it as a string.
 - {{DOMxRef("Element.getAttributeNames()")}}
   - : Returns an array of attribute names from the current element.
-- {{DOMxRef("Element.getAttributeNS()")}}
-  - : Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.
-- {{DOMxRef("Element.getAttributeNode()")}} {{Deprecated_Inline}}
+- {{DOMxRef("Element.getAttributeNode()")}}
   - : Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.
-- {{DOMxRef("Element.getAttributeNodeNS()")}} {{Deprecated_Inline}}
+- {{DOMxRef("Element.getAttributeNodeNS()")}}
   - : Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.
+- {{DOMxRef("Element.getAttributeNS()")}}
+  - : Retrieves the value of the attribute with the specified namespace and name from the current node and returns it as a string.
 - {{DOMxRef("Element.getBoundingClientRect()")}}
-  - : 返回元素的大小及其相对于视口的位置。
+  - : Returns the size of an element and its position relative to the viewport.
+- {{domxref("Element.getBoxQuads()")}} {{Experimental_Inline}}
+  - : Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.
 - {{DOMxRef("Element.getClientRects()")}}
   - : Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.
 - {{DOMxRef("Element.getElementsByClassName()")}}
-  - : 参数中给出类的列表，返回一个动态的 {{DOMxRef("HTMLCollection")}} ，包含了所有持有这些类的后代元素。
+  - : Returns a live {{DOMxRef("HTMLCollection")}} that contains all descendants of the current element that possess the list of classes given in the parameter.
 - {{DOMxRef("Element.getElementsByTagName()")}}
   - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name, from the current element.
 - {{DOMxRef("Element.getElementsByTagNameNS()")}}
   - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name and namespace, from the current element.
 - {{DOMxRef("Element.hasAttribute()")}}
-  - : Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute or not.
+  - : Returns a boolean value indicating if the element has the specified attribute or not.
 - {{DOMxRef("Element.hasAttributeNS()")}}
-  - : Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute, in the specified namespace, or not.
+  - : Returns a boolean value indicating if the element has the specified attribute, in the specified namespace, or not.
 - {{DOMxRef("Element.hasAttributes()")}}
-  - : Returns a {{jsxref("Boolean")}} indicating if the element has one or more HTML attributes present.
+  - : Returns a boolean value indicating if the element has one or more HTML attributes present.
 - {{DOMxRef("Element.hasPointerCapture()")}}
   - : Indicates whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.
 - {{DOMxRef("Element.insertAdjacentElement()")}}
@@ -150,48 +227,54 @@ _Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DO
   - : Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.
 - {{DOMxRef("Element.insertAdjacentText()")}}
   - : Inserts a given text node at a given position relative to the element it is invoked upon.
-- {{DOMxRef("Element.matches()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.
-- {{DOMxRef("Element.pseudo()")}} {{Experimental_Inline}}
-  - : Returns a {{DOMxRef("CSSPseudoElement")}} representing the child pseudo-element matched by the specified pseudo-element selector.
+- {{DOMxRef("Element.matches()")}}
+  - : Returns a boolean value indicating whether or not the element would be selected by the specified selector string.
+- {{DOMxRef("Element.prepend()")}}
+  - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
 - {{DOMxRef("Element.querySelector()")}}
   - : Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.
 - {{DOMxRef("Element.querySelectorAll()")}}
   - : Returns a {{DOMxRef("NodeList")}} of nodes which match the specified selector string relative to the element.
 - {{DOMxRef("Element.releasePointerCapture()")}}
   - : Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent","pointer event")}}.
-- {{DOMxRef("ChildNode.remove()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.remove()")}}
   - : Removes the element from the children list of its parent.
 - {{DOMxRef("Element.removeAttribute()")}}
   - : Removes the named attribute from the current node.
+- {{DOMxRef("Element.removeAttributeNode()")}}
+  - : Removes the node representation of the named attribute from the current node.
 - {{DOMxRef("Element.removeAttributeNS()")}}
   - : Removes the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("Element.removeAttributeNode()")}} {{Deprecated_Inline}}
-  - : Removes the node representation of the named attribute from the current node.
-- {{DOMxRef("EventTarget.removeEventListener()")}}
-  - : Removes an event listener from the element.
-- {{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}
-  - : Asynchronously asks the browser to make the element full-screen.
-- {{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.replaceChildren()")}}
+  - : Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.
+- {{DOMxRef("Element.replaceWith()")}}
+  - : Replaces the element in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
+- {{DOMxRef("Element.requestFullscreen()")}}
+  - : Asynchronously asks the browser to make the element fullscreen.
+- {{DOMxRef("Element.requestPointerLock()")}}
   - : Allows to asynchronously ask for the pointer to be locked on the given element.
-- {{DOMxRef("Element.scroll()")}}
+- {{domxref("Element.scroll()")}}
   - : Scrolls to a particular set of coordinates inside a given element.
-- {{DOMxRef("Element.scrollBy()")}}
+- {{domxref("Element.scrollBy()")}}
   - : Scrolls an element by the given amount.
-- {{DOMxRef("Element.scrollIntoView()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.scrollIntoView()")}}
   - : Scrolls the page until the element gets into the view.
-- {{DOMxRef("Element.scrollTo()")}}
+- {{DOMxRef("Element.scrollIntoViewIfNeeded()")}} {{Non-standard_Inline}}
+  - : Scrolls the current element into the visible area of the browser window if it's not already within the visible area of the browser window. **Use the standard {{DOMxRef("Element.scrollIntoView()")}} instead.**
+- {{domxref("Element.scrollTo()")}}
   - : Scrolls to a particular set of coordinates inside a given element.
 - {{DOMxRef("Element.setAttribute()")}}
   - : Sets the value of a named attribute of the current node.
+- {{DOMxRef("Element.setAttributeNode()")}}
+  - : Sets the node representation of the named attribute from the current node.
+- {{DOMxRef("Element.setAttributeNodeNS()")}}
+  - : Sets the node representation of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setAttributeNS()")}}
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("Element.setAttributeNode()")}} {{Deprecated_Inline}}
-  - : Sets the node representation of the named attribute from the current node.
-- {{DOMxRef("Element.setAttributeNodeNS()")}} {{Deprecated_Inline}}
-  - : Sets the node representation of the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}
+- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
+- {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}}
+  - : Parses and [sanitizes](/zh-CN/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/zh-CN/docs/Web/API/Pointer_events).
 - {{DOMxRef("Element.toggleAttribute()")}}
@@ -199,146 +282,174 @@ _Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DO
 
 ## 事件
 
-Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
+使用 `addEventListener()` 或将事件监听器分配给此接口的 `oneventname` 属性来监听这些事件。
 
-- {{DOMxRef("Element/cancel_event", "cancel")}}
-
-  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the&#x20;
-
-    <kbd>Esc</kbd>
-
-    &#x20;key or clicks a "Close dialog" button which is part of the browser's UI.
-    Also available via the {{DOMxRef("GlobalEventHandlers/oncancel", "oncancel")}} property.
-
-- [`error`](/zh-CN/docs/Web/API/Element/error_event)
-  - : Fired when when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onerror", "onerror")}} property.
-- {{DOMxRef("Element/scroll_event", "scroll")}}
+- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
+  - : Fired when a script has been executed.
+- {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
+  - : Fires on an element that is in the [_hidden until found_](/zh-CN/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
+- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
+  - : Fired when a script is about to be executed.
+- {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
+  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/zh-CN/docs/Web/CSS/CSS_containment#relevant_to_the_user) and [skipping its contents](/zh-CN/docs/Web/CSS/CSS_containment#skips_its_contents).
+- {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
-- {{DOMxRef("Element/select_event", "select")}}
-  - : Fired when some text has been selected.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
-- {{DOMxRef("Element/wheel_event","wheel")}}
+- {{domxref("Element/scrollend_event", "scrollend")}}
+  - : Fires when the document view has completed scrolling.
+- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
+  - : Fired when a [Content Security Policy](/zh-CN/docs/Web/HTTP/CSP) is violated.
+- {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
-    Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
+
+### 动画事件
+
+- {{domxref("Element/animationcancel_event", "animationcancel")}}
+  - : Fired when an animation unexpectedly aborts.
+- {{domxref("Element/animationend_event", "animationend")}}
+  - : Fired when an animation has completed normally.
+- {{domxref("Element/animationiteration_event", "animationiteration")}}
+  - : Fired when an animation iteration has completed.
+- {{domxref("Element/animationstart_event", "animationstart")}}
+  - : Fired when an animation starts.
 
 ### 剪贴板事件
 
-- {{DOMxRef("Element/copy_event", "copy")}}
+- {{domxref("Element/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/oncopy", "oncopy")}} property.
-- {{DOMxRef("Element/cut_event", "cut")}}
+- {{domxref("Element/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/oncut", "oncut")}} property.
-- {{DOMxRef("Element/paste_event", "paste")}}
+- {{domxref("Element/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/onpaste", "onpaste")}} property.
 
-### Composition events
+### 合成事件
 
-- {{DOMxRef("Element/compositionend_event", "compositionend")}}
+- {{domxref("Element/compositionend_event", "compositionend")}}
   - : Fired when a text composition system such as an {{glossary("input method editor")}} completes or cancels the current composition session.
-- {{DOMxRef("Element/compositionstart_event", "compositionstart")}}
+- {{domxref("Element/compositionstart_event", "compositionstart")}}
   - : Fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.
-- {{DOMxRef("Element/compositionupdate_event", "compositionupdate")}}
+- {{domxref("Element/compositionupdate_event", "compositionupdate")}}
   - : Fired when a new character is received in the context of a text composition session controlled by a text composition system such as an {{glossary("input method editor")}}.
 
-### Focus events
+### 聚焦事件
 
-- {{DOMxRef("Element/blur_event", "blur")}}
+- {{domxref("Element/blur_event", "blur")}}
   - : Fired when an element has lost focus.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onblur", "onblur")}} property.
-- {{DOMxRef("Element/focus_event", "focus")}}
+- {{domxref("Element/focus_event", "focus")}}
   - : Fired when an element has gained focus.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onfocus", "onfocus")}} property
-- {{DOMxRef("Element/focusin_event", "focusin")}}
-  - : Fired when an element is about to gain focus.
-- {{DOMxRef("Element/focusout_event", "focusout")}}
-  - : Fired when an element is about to lose focus.
+- {{domxref("Element/focusin_event", "focusin")}}
+  - : Fired when an element has gained focus, after {{domxref("Element/focus_event", "focus")}}.
+- {{domxref("Element/focusout_event", "focusout")}}
+  - : Fired when an element has lost focus, after {{domxref("Element/blur_event", "blur")}}.
 
-### Fullscreen events
+### 全屏事件
 
-- {{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{DOMxRef("Element.onfullscreenchange", "onfullscreenchange")}} property.
-- {{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}
-  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{DOMxRef("Element.onfullscreenerror", "onfullscreenerror")}} property.
+- {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
+  - : Sent to an {{domxref("Element")}} when it transitions into or out of [fullscreen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
+- {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
+  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [fullscreen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
 
 ### 键盘事件
 
-- {{DOMxRef("Element/keydown_event", "keydown")}}
-  - : Fired when a key is pressed.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
-- {{DOMxRef("Element/keypress_event", "keypress")}}
-  - : Fired when a key that produces a character value is pressed down. {{deprecated_inline}}
-    Also available via the {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
-- {{DOMxRef("Element/keyup_event", "keyup")}}
-  - : Fired when a key is released.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onkeyup", "onkeyup")}} property.
+- {{domxref("Element/keydown_event", "keydown")}}
+  - : 当按键按下时触发此事件。
+- {{domxref("Element/keypress_event", "keypress")}} {{Deprecated_Inline}}
+  - : 当按下可产生字符值的按键时触发此事件。
+- {{domxref("Element/keyup_event", "keyup")}}
+  - : 当按键释放时触发此事件。
 
 ### 鼠标事件
 
-- {{DOMxRef("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/auxclick_event", "auxclick")}}
   - : Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onauxclick", "onauxclick")}} property.
-- {{DOMxRef("Element/click_event", "click")}}
+- {{domxref("Element/click_event", "click")}}
   - : Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onclick", "onclick")}} property.
-- {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
   - : Fired when the user attempts to open a context menu.
-    Also available via the {{DOMxRef("GlobalEventHandlers/oncontextmenu", "oncontextmenu")}} property.
-- {{DOMxRef("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
   - : Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ondblclick", "ondblclick")}} property.
-- {{DOMxRef("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
+- {{domxref("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
   - : Occurs when an element is activated, for instance, through a mouse click or a keypress.
-- {{DOMxRef("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/DOMMouseScroll_event", "DOMMouseScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Occurs when mouse wheel or similar device is operated and the accumulated scroll amount is over 1 line or 1 page since last event.
+- {{domxref("Element/mousedown_event", "mousedown")}}
   - : Fired when a pointing device button is pressed on an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmousedown", "onmousedown")}} property.
-- {{DOMxRef("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
   - : Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseenter", "onmouseenter")}} property.
-- {{DOMxRef("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
   - : Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseleave", "onmouseleave")}} property.
-- {{DOMxRef("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
   - : Fired when a pointing device (usually a mouse) is moved while over an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmousemove", "onmousemove")}} property.
-- {{DOMxRef("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
   - : Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseout", "onmouseout")}} property.
-- {{DOMxRef("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
   - : Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseover", "onmouseover")}} property.
-- {{DOMxRef("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
   - : Fired when a pointing device button is released on an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseup", "onmouseup")}} property.
-- {{DOMxRef("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}
+- {{domxref("Element/mousewheel_event", "mousewheel")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a mouse wheel or similar device is operated.
+- {{domxref("Element/MozMousePixelScroll_event", "MozMousePixelScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a mouse wheel or similar device is operated.
+- {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
   - : Fired each time the amount of pressure changes on the trackpadtouchscreen.
-- {{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}
+- {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
   - : Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
-- {{DOMxRef("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
-  - : Fired before the {{DOMxRef("Element/mousedown_event", "mousedown")}} event.
-- {{DOMxRef("Element/webkitmouseforceup_event", "webkitmouseforceup")}}
-  - : Fired after the {{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
+- {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{Non-standard_Inline}}
+  - : Fired before the {{domxref("Element/mousedown_event", "mousedown")}} event.
+- {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{Non-standard_Inline}}
+  - : Fired after the {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
+ 
+### 指针事件
 
-### Touch events
+- {{domxref("Element/gotpointercapture_event", "gotpointercapture")}}
+  - : 当元素使用 {{domxref("Element/setPointerCapture", "setPointerCapture()")}} 捕捉指针时触发。
+- {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
+  - : 当[捕获指针](/zh-CN/docs/Web/API/Pointer_events#指针捕获)被释放时触发。
+- {{domxref("Element/pointercancel_event", "pointercancel")}}
+  - : 指针事件取消时触发。
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+  - : 指针变为活动状态时触发。
+- {{domxref("Element/pointerenter_event", "pointerenter")}}
+  - : 指针移动到元素或其子代的命中测试边界时触发。
+- {{domxref("Element/pointerleave_event", "pointerleave")}}
+  - : 当指针移出元素的命中测试边界时触发。
+- {{domxref("Element/pointermove_event", "pointermove")}}
+  - : 指针改变坐标时触发。
+- {{domxref("Element/pointerout_event", "pointerout")}}
+  - : 当指针移出元素的*命中测试*边界（以及其他原因）时触发。
+- {{domxref("Element/pointerover_event", "pointerover")}}
+  - : 当指针移动到元素的命中测试边界时触发。
+- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}}
+  - : 指针改变任何属性时触发，这些属性不会触发 {{domxref("Element/pointerdown_event", "pointerdown")}} 或 {{domxref("Element/pointerup_event", "pointerup")}} 事件。
+- {{domxref("Element/pointerup_event", "pointerup")}}
+  - : 指针不再处于活动状态时触发。
 
-- {{DOMxRef("Element/touchcancel_event", "touchcancel")}}
-  - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchcancel", "ontouchcancel")}} property.
-- {{DOMxRef("Element/touchend_event", "touchend")}}
-  - : Fired when one or more touch points are removed from the touch surface.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchend", "ontouchend")}} property
-- {{DOMxRef("Element/touchmove_event", "touchmove")}}
-  - : Fired when one or more touch points are moved along the touch surface.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchmove", "ontouchmove")}} property
-- {{DOMxRef("Element/touchstart_event", "touchstart")}}
-  - : Fired when one or more touch points are placed on the touch surface.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchstart", "ontouchstart")}} property
+### 触摸事件
+
+- {{domxref("Element/gesturechange_event","gesturechange")}} {{Non-standard_Inline}}
+  - : 触控手势期间数字移动时触发。
+- {{domxref("Element/gestureend_event","gestureend")}} {{Non-standard_Inline}}
+  - : 当不再有多个手指接触触摸表面时触发，从而结束手势。
+- {{domxref("Element/gesturestart_event","gesturestart")}} {{Non-standard_Inline}}
+  - : 当多个手指接触触摸表面时触发，从而开始一个新手势。
+- {{domxref("Element/touchcancel_event", "touchcancel")}}
+  - : 当一个或多个触摸点以特定的实现方式受到破坏（例如，创建的触摸点过多）时触发。
+- {{domxref("Element/touchend_event", "touchend")}}
+  - : 当一个或多个触摸点从触摸表面移除时触发。
+- {{domxref("Element/touchmove_event", "touchmove")}}
+  - : 当一个或多个触摸点沿触摸表面移动时触发。
+- {{domxref("Element/touchstart_event", "touchstart")}}
+  - : 当一个或多个触摸点放置在触摸表面时触发。
+ 
+### 过渡事件
+
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}}
+  - : [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)被取消时触发的 {{domxref("Event")}}。
+- {{domxref("Element/transitionend_event", "transitionend")}}
+  - : [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)结束播放时触发的 {{domxref("Event")}}。
+- {{domxref("Element/transitionrun_event", "transitionrun")}}
+  - : 当创建 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)（即当它被添加到一组正在运行的过渡中时）时，一个 {{domxref("Event")}} 会被触发，但不一定会被启动。
+- {{domxref("Element/transitionstart_event", "transitionstart")}}
+  - : [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)开始过渡时触发的 {{domxref("Event")}}。
 
 ## 规范
 
