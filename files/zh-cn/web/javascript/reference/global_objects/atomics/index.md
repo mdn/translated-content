@@ -130,7 +130,7 @@ Atomics.notify(int32, 0, 1);
 ## 参见
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API)
 - [Shared Memory——一个简短的教程](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)，在 TC39 ecmascript-sharedmem 提案中
 - [JavaScript 新并行语法的初体验](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) 在 hacks.mozilla.org 上（2016）
