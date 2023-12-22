@@ -11,7 +11,7 @@ l10n:
 
 ## 描述
 
-与一般的全局对象不同，`Atomics` 不是构造函数。因此你不能将其与 [new 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 一起使用或将 `Atomics` 对象作为一个函数来进行调用。`Atomics` 的所有属性和方法都是静态的（与 {{jsxref("Math")}} 对象一样）。
+与一般的全局对象不同，`Atomics` 不是构造函数。因此你不能将其与 [new 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)一起使用或将 `Atomics` 对象作为一个函数来进行调用。`Atomics` 的所有属性和方法都是静态的（与 {{jsxref("Math")}} 对象一样）。
 
 ### 原子操作
 
@@ -19,7 +19,7 @@ l10n:
 
 ### 等待和通知
 
-`wait()` 和 `notify()` 方法采用的是 Linux 上的 futexes 模型（“快速用户空间互斥量”），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。
+`wait()` 和 `notify()` 方法采用的是 Linux 上的 futex 模型（“快速用户空间互斥体”），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。
 
 ## 静态属性
 
@@ -30,7 +30,7 @@ l10n:
 
 - {{jsxref("Atomics.add()")}}
   - : 将给定的值与数组上指定位置的元素相加，并返回相加前该元素的值。
-- **{{jsxref("Atomics.and()")}}**
+- {{jsxref("Atomics.and()")}}
   - : 将指定位置上的数组元素与给定的值相与，并返回与操作前该元素的值。
 - {{jsxref("Atomics.compareExchange()")}}
   - : 如果数组中指定的元素与给定的值相等，则将其更新为新的值，并返回该元素原先的值。
@@ -49,9 +49,9 @@ l10n:
 - {{jsxref("Atomics.sub()")}}
   - : 将指定位置上的数组元素与给定的值相减，并返回相减前该元素的值。
 - {{jsxref("Atomics.wait()")}}
-  - : 检测数组中某个指定位置上的值是否仍然是给定值，是则保持挂起直到被唤醒或超时。返回值为 "`ok`"、"`not-equal`" 或 "`time-out`"。调用时，如果当前线程不允许阻塞，则会抛出异常（大多数浏览器都不允许在主线程中调用 `wait()`）。
+  - : 检测数组中某个指定位置上的值是否仍然是给定值，是则保持挂起直到被唤醒或超时。返回值为 `"ok"`、`"not-equal"` 或 `"time-out"`。调用时，如果当前代理不允许阻塞，则会抛出异常（大多数浏览器都不允许在主线程中调用 `wait()`）。
 - {{jsxref("Atomics.waitAsync()")}}
-  - 在共享内存位置上异步等待（即没有阻塞，与 `Atomics.wait` 不同）并返回一个 {{jsxref("Promise")}}。
+  - : 在共享内存位置上异步等待（即没有阻塞，与 `Atomics.wait` 不同）并返回一个 {{jsxref("Promise")}}。
 - {{jsxref("Atomics.xor()")}}
   - : 将指定位置上的数组元素与给定的值相异或，并返回异或操作前该元素的值。
 
