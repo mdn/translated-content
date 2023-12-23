@@ -1,11 +1,12 @@
 ---
 title: "XMLHttpRequest: abort イベント"
+short-title: abort
 slug: Web/API/XMLHttpRequest/abort_event
 l10n:
-  sourceCommit: 073f70e052ff92ab715df3c20678c11c9b51747f
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 `abort` イベントは、例えばプログラムが {{domxref("XMLHttpRequest.abort()")}} を呼び出した時など、リクエストが中断されたときに発行されます。
 
@@ -111,15 +112,15 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR("dgszyjnxcaipwzy.jpg");
+  runXHR("my-picture.jpg");
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("https://somewhere.org/i-dont-exist");
+  runXHR("https://example.com/some-path");
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR("dgszyjnxcaipwzy.jpg").abort();
+  runXHR("my-picture.jpg").abort();
 });
 ```
 
@@ -138,4 +139,4 @@ xhrButtonAbort.addEventListener("click", () => {
 ## 関連情報
 
 - 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
-- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#進捗の監視)

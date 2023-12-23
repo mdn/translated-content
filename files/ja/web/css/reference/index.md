@@ -133,7 +133,7 @@ div.menu-bar li:hover > ul {
 - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 - [置換要素](/ja/docs/Web/CSS/Replaced_element)
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
