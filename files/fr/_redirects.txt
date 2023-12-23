@@ -1172,7 +1172,7 @@
 /fr/docs/Du_DHTML_accessible	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Développement_Web	/fr/docs/Web/Guide
-/fr/docs/Développement_Web/Développer_des_sites_à_compatibilité_descendante	/fr/docs/conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+/fr/docs/Développement_Web/Développer_des_sites_à_compatibilité_descendante	/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /fr/docs/Développement_Web/Introduction_au_développement_web	/fr/docs/conflicting/Learn
 /fr/docs/ECMAScript	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/EXSLT	/fr/docs/Web/EXSLT
@@ -4733,7 +4733,7 @@
 /fr/docs/Web/Guide/AJAX/Community	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /fr/docs/Web/Guide/AJAX/Getting_Started	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /fr/docs/Web/Guide/AJAX/Premiers_pas	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
-/fr/docs/Web/Guide/API	/fr/docs/conflicting/Web/API
+/fr/docs/Web/Guide/API	/fr/docs/Web/API
 /fr/docs/Web/Guide/API/DOM	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/Guide/API/DOM/Storage	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/Web/Guide/API/Gamepad	/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
@@ -4761,7 +4761,7 @@
 /fr/docs/Web/Guide/Events	/fr/docs/Web/Events
 /fr/docs/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
-/fr/docs/Web/Guide/Graphics	/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+/fr/docs/Web/Guide/Graphics	/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
@@ -4798,7 +4798,7 @@
 /fr/docs/Web/Guide/Performance	/fr/docs/Web/Performance
 /fr/docs/Web/Guide/User_input_methods	/fr/docs/Learn/Forms/User_input_methods
 /fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
-/fr/docs/Web/Guide/Writing_forward-compatible_websites	/fr/docs/conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+/fr/docs/Web/Guide/Writing_forward-compatible_websites	/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/CSS/CSS_colors/Applying_color
 /fr/docs/Web/HTML/Applying_color	/fr/docs/Web/CSS/CSS_colors/Applying_color
 /fr/docs/Web/HTML/Attributs	/fr/docs/Web/HTML/Attributes
@@ -6458,6 +6458,7 @@
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals	/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals_42ad0dcdd765b60d8adda1f6293954b6	/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals_e22cde852fd55bbd8b014a4eac49a3bc	/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
+/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML_2c0377f7605f693cad465c2b4839addc	/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies_fbe06d127f73df4dd2f56a31b7c2bd2d	/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
@@ -6466,6 +6467,7 @@
 /fr/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /fr/docs/conflicting/Learn/JavaScript/Objects	/fr/docs/Learn/JavaScript/Objects
 /fr/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript	/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/fr/docs/conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript	/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /fr/docs/conflicting/Learn_370bfb0fa23e42f4384f010341852c43	/fr/docs/Learn
 /fr/docs/conflicting/Learn_6767a192c90d2c9c5179cf004fce2ee8	/fr/docs/Learn
 /fr/docs/conflicting/MDN/Community/Contributing/Getting_started	/fr/docs/MDN/Community/Contributing/Getting_started
@@ -6492,6 +6494,7 @@
 /fr/docs/conflicting/Tools/Page_Inspector/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html
 /fr/docs/conflicting/Tools/Performance/Waterfall	https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html
 /fr/docs/conflicting/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
+/fr/docs/conflicting/Web/API	/fr/docs/Web/API
 /fr/docs/conflicting/Web/API/Blob	/fr/docs/Web/API/Blob
 /fr/docs/conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial

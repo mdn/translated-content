@@ -27418,23 +27418,5 @@
   "conflicting/Learn": {
     "modified": "2019-03-24T00:03:04.501Z",
     "contributors": ["Jeremie", "fscholz", "BenoitL"]
-  },
-  "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
-    "modified": "2019-03-23T23:29:27.864Z",
-    "contributors": [
-      "tonybengue",
-      "Patrice-Koumar",
-      "Goofy",
-      "tregagnon",
-      "darnuria"
-    ]
-  },
-  "conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript": {
-    "modified": "2019-03-24T00:13:23.048Z",
-    "contributors": ["Dralyab", "pixelastic"]
-  },
-  "conflicting/Web/API": {
-    "modified": "2019-03-23T23:08:38.035Z",
-    "contributors": ["SphinxKnight", "demangejeremy", "shing0608"]
   }
 }
