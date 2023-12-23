@@ -85,7 +85,7 @@ Sec-WebSocket-Key: key
 - `key`
   - : La clé pour la requête à mettre à niveau. Le client ajoute cette valeur s'il le souhaite et le serveur inclura une clé à lui en réponse, que le client validera avant de transmettre la réponse de mise à niveau.
 
-L'en-tête de réponse du serveur [`Sec-WebSocket-Accept`](/fr/docs/Web/HTTP/Sec-WebSocket-Accept) contiendra une valeur calculée selon la valeur de la clé fournie (`key`).
+L'en-tête de réponse du serveur [`Sec-WebSocket-Accept`](/fr/docs/Web/HTTP/Headers/Sec-WebSocket-Accept) contiendra une valeur calculée selon la valeur de la clé fournie (`key`).
 
 ### `Sec-WebSocket-Protocol`
 
@@ -131,7 +131,7 @@ Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
-  - : Si l'en-tête [`Sec-WebSocket-Key`](/fr/docs/Web/HTTP/Sec-WebSocket-Key) a été fourni, la valeur de cet en-tête est calculée en prenant la clé, en lui concaténant la chaîne de caractères "258EAFA5-E914-47DA-95CA-C5AB0DC85B11", puis en calculant [l'empreinte SHA-1](https://fr.wikipedia.org/wiki/SHA-1), ce qui fournit une valeur sur 20 octets. Cette valeur est encodée en [Base64](/fr/docs/Glossary/Base64) pour obtenir la valeur finale passée à l'en-tête.
+  - : Si l'en-tête [`Sec-WebSocket-Key`](/fr/docs/Web/HTTP/Headers/Sec-WebSocket-Key) a été fourni, la valeur de cet en-tête est calculée en prenant la clé, en lui concaténant la chaîne de caractères "258EAFA5-E914-47DA-95CA-C5AB0DC85B11", puis en calculant [l'empreinte SHA-1](https://fr.wikipedia.org/wiki/SHA-1), ce qui fournit une valeur sur 20 octets. Cette valeur est encodée en [Base64](/fr/docs/Glossary/Base64) pour obtenir la valeur finale passée à l'en-tête.
 
 ## Voir aussi
 
