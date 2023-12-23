@@ -80,9 +80,9 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 - {{DOMxRef("Element.scrollWidth")}} {{ReadOnlyInline}}
   - : 代表元素滚动视图宽度的数值。
 - {{DOMxRef("Element.shadowRoot")}} {{ReadOnlyInline}}
-  - : 返回元素托管的开放阴影根；如果没有开放阴影根，则返回 null。
+  - : 返回元素托管的开放影子根；如果没有开放影子根，则返回 null。
 - {{DOMxRef("Element.slot")}}
-  - : 返回元素插入的阴影 DOM 插槽的名称。
+  - : 返回元素插入的影子 DOM 插槽的名称。
 - {{DOMxRef("Element.tagName")}} {{ReadOnlyInline}}
   - : 返回一个字符串，包含给定元素的标签名称。
 
@@ -176,109 +176,109 @@ _`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
 _`Element` 继承其父级 {{DOMxRef("Node")}} 和父级 {{DOMxRef("EventTarget")}} 的方法。_
 
 - {{DOMxRef("Element.after()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
+  - : 在 `Element` 父节点的子节点列表中插入一组 {{domxref("Node")}} 对象或字符串，位于 `Element` 之后。
 - {{DOMxRef("Element.animate()")}}
-  - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
+  - : 在元素上创建并运行动画的快捷方法。返回创建的动画对象实例。
 - {{DOMxRef("Element.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the element.
+  - : 在元素的最后一个子元素后插入一组 {{domxref("Node")}} 对象或字符串。
 - {{DOMxRef("Element.attachShadow()")}}
-  - : Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
+  - : 为指定元素附加影子 DOM 树，并返回指向其 {{DOMxRef("ShadowRoot")}} 的引用。
 - {{DOMxRef("Element.before()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just before the `Element`.
+  - : 在 `Element` 父节点的子节点列表中插入一组 {{domxref("Node")}} 对象或字符串，位于 `Element` 之前。
 - {{DOMxRef("Element.closest()")}}
-  - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
+  - : 返回 {{DOMxRef("Element")}} 当前元素（或当前元素本身）最接近的祖先，且与参数中给定的选择器匹配。
 - {{DOMxRef("Element.computedStyleMap()")}}
-  - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
+  - : 返回一个 {{DOMxRef("StylePropertyMapReadOnly")}} 接口，该接口提供 CSS 声明块的只读表示，可替代 {{DOMxRef("CSSStyleDeclaration")}} 。
 - {{DOMxRef("Element.getAnimations()")}}
-  - : Returns an array of Animation objects currently active on the element.
+  - : 返回元素当前活动的动画对象数组。
 - {{DOMxRef("Element.getAttribute()")}}
-  - : Retrieves the value of the named attribute from the current node and returns it as a string.
+  - : 从当前节点读取指定属性的值，并以字符串形式返回。
 - {{DOMxRef("Element.getAttributeNames()")}}
-  - : Returns an array of attribute names from the current element.
+  - : 返回当前元素的属性名称数组。
 - {{DOMxRef("Element.getAttributeNode()")}}
-  - : Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.
+  - : 从当前节点获取指定属性的节点表示，并以 {{DOMxRef("Attr")}} 的形式返回。
 - {{DOMxRef("Element.getAttributeNodeNS()")}}
-  - : Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.
+  - : 从当前节点读取指定名称和命名空间的属性的节点表示，并以 {{DOMxRef("Attr")}}} 的形式返回。
 - {{DOMxRef("Element.getAttributeNS()")}}
-  - : Retrieves the value of the attribute with the specified namespace and name from the current node and returns it as a string.
+  - : 从当前节点读取指定名称空间和名称的属性值，并以字符串形式返回。
 - {{DOMxRef("Element.getBoundingClientRect()")}}
-  - : Returns the size of an element and its position relative to the viewport.
+  - : 返回元素的大小及其相对于视口的位置。
 - {{domxref("Element.getBoxQuads()")}} {{Experimental_Inline}}
-  - : Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.
+  - : 返回代表节点 CSS 片段的 {{domxref("DOMQuad")}} 对象列表。
 - {{DOMxRef("Element.getClientRects()")}}
-  - : Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.
+  - : 返回表示客户端中每行文本边界矩形的矩形集合。
 - {{DOMxRef("Element.getElementsByClassName()")}}
-  - : Returns a live {{DOMxRef("HTMLCollection")}} that contains all descendants of the current element that possess the list of classes given in the parameter.
+  - : 返回一个实时的 {{DOMxRef("HTMLCollection")}}，其中包含当前元素的所有后代，这些后代拥有参数中给定的类列表。
 - {{DOMxRef("Element.getElementsByTagName()")}}
-  - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name, from the current element.
+  - : 返回一个实时的 {{DOMxRef("HTMLCollection")}}，其中包含当前元素的特定标签名的所有后代元素。
 - {{DOMxRef("Element.getElementsByTagNameNS()")}}
-  - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name and namespace, from the current element.
+  - : 返回一个实时的 {{DOMxRef("HTMLCollection")}}，其中包含当前元素的特定标签名和命名空间的所有后代元素。
 - {{DOMxRef("Element.hasAttribute()")}}
-  - : Returns a boolean value indicating if the element has the specified attribute or not.
+  - : 返回一个布尔值，表示元素是否具有指定属性。
 - {{DOMxRef("Element.hasAttributeNS()")}}
-  - : Returns a boolean value indicating if the element has the specified attribute, in the specified namespace, or not.
+  - : 返回一个布尔值，表示元素是否在指定名称空间中具有指定属性。
 - {{DOMxRef("Element.hasAttributes()")}}
-  - : Returns a boolean value indicating if the element has one or more HTML attributes present.
+  - : 返回一个布尔值，表示元素是否具有一个或多个 HTML 属性。
 - {{DOMxRef("Element.hasPointerCapture()")}}
-  - : Indicates whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.
+  - : 指示调用该函数的元素是否具有指针捕获功能，用于捕获由给定指针 ID 标识的指针。
 - {{DOMxRef("Element.insertAdjacentElement()")}}
-  - : Inserts a given element node at a given position relative to the element it is invoked upon.
+  - : 将指定元素节点插入调用该函数的元素的指定位置。
 - {{DOMxRef("Element.insertAdjacentHTML()")}}
-  - : Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.
+  - : 解析 HTML 或 XML 文本，并将生成的节点插入树中指定的位置。
 - {{DOMxRef("Element.insertAdjacentText()")}}
-  - : Inserts a given text node at a given position relative to the element it is invoked upon.
+  - : 将给定的文本节点插入调用该函数的元素的指定位置。
 - {{DOMxRef("Element.matches()")}}
-  - : Returns a boolean value indicating whether or not the element would be selected by the specified selector string.
+  - : 返回一个布尔值，表示该元素是否会被指定的选择器字符串选中。
 - {{DOMxRef("Element.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
+  - : 在元素的第一个子元素之前插入一组 {{domxref("Node")}} 对象或字符串。
 - {{DOMxRef("Element.querySelector()")}}
-  - : Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.
+  - : 返回相对于元素符合指定选择器字符串的第一个 {{DOMxRef("Node")}}。
 - {{DOMxRef("Element.querySelectorAll()")}}
-  - : Returns a {{DOMxRef("NodeList")}} of nodes which match the specified selector string relative to the element.
+  - : 返回 {{DOMxRef("NodeList")}} 中相对于元素符合指定选择器字符串的节点。
 - {{DOMxRef("Element.releasePointerCapture()")}}
-  - : Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent","pointer event")}}.
+  - : 释放（停止）之前为特定{{DOMxRef("PointerEvent", "指针事件")}}设置的指针捕捉。
 - {{DOMxRef("Element.remove()")}}
-  - : Removes the element from the children list of its parent.
+  - : 从父元素的子元素列表中删除该元素。
 - {{DOMxRef("Element.removeAttribute()")}}
-  - : Removes the named attribute from the current node.
+  - : 从当前节点删除指定属性。
 - {{DOMxRef("Element.removeAttributeNode()")}}
-  - : Removes the node representation of the named attribute from the current node.
+  - : 从当前节点删除指定属性的节点表示。
 - {{DOMxRef("Element.removeAttributeNS()")}}
-  - : Removes the attribute with the specified name and namespace, from the current node.
+  - : 从当前节点删除指定名称和命名空间的属性。
 - {{DOMxRef("Element.replaceChildren()")}}
-  - : Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.
+  - : 用一组指定的新子节点替换 {{domxref("Node")}} 的现有子节点。
 - {{DOMxRef("Element.replaceWith()")}}
-  - : Replaces the element in the children list of its parent with a set of {{domxref("Node")}} objects or strings.
+  - : 用一组 {{domxref("Node")}} 对象或字符串替换父元素子元素列表中的元素。
 - {{DOMxRef("Element.requestFullscreen()")}}
-  - : Asynchronously asks the browser to make the element fullscreen.
+  - : 异步要求浏览器全屏显示元素。
 - {{DOMxRef("Element.requestPointerLock()")}}
-  - : Allows to asynchronously ask for the pointer to be locked on the given element.
+  - : 允许异步请求锁定给定元素上的指针。
 - {{domxref("Element.scroll()")}}
-  - : Scrolls to a particular set of coordinates inside a given element.
+  - : 滚动到指定元素内部的特定坐标。
 - {{domxref("Element.scrollBy()")}}
-  - : Scrolls an element by the given amount.
+  - : 以给定数值滚动元素。
 - {{DOMxRef("Element.scrollIntoView()")}}
-  - : Scrolls the page until the element gets into the view.
+  - : 滚动页面，直到元素进入视图。
 - {{DOMxRef("Element.scrollIntoViewIfNeeded()")}} {{Non-standard_Inline}}
-  - : Scrolls the current element into the visible area of the browser window if it's not already within the visible area of the browser window. **Use the standard {{DOMxRef("Element.scrollIntoView()")}} instead.**
+  - : 如果当前元素尚未进入浏览器窗口的可见区域，则将其滚动到浏览器窗口的可见区域。**请使用标准的 {{DOMxRef("Element.scrollIntoView()")}}。**
 - {{domxref("Element.scrollTo()")}}
-  - : Scrolls to a particular set of coordinates inside a given element.
+  - : 滚动到指定元素内部的特定坐标。
 - {{DOMxRef("Element.setAttribute()")}}
-  - : Sets the value of a named attribute of the current node.
+  - : 设置当前节点的指定属性值。
 - {{DOMxRef("Element.setAttributeNode()")}}
-  - : Sets the node representation of the named attribute from the current node.
+  - : 设置当前节点指定属性的节点表示形式。
 - {{DOMxRef("Element.setAttributeNodeNS()")}}
-  - : Sets the node representation of the attribute with the specified name and namespace, from the current node.
+  - : 设置当前节点具有指定名称和命名空间的属性的节点表示形式。
 - {{DOMxRef("Element.setAttributeNS()")}}
-  - : Sets the value of the attribute with the specified name and namespace, from the current node.
+  - : 设置当前节点指定名称和命名空间的属性值。
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Sets up mouse event capture, redirecting all mouse events to this element.
+  - : 设置鼠标事件捕获，将所有鼠标事件重定向到此元素。
 - {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}}
-  - : Parses and [sanitizes](/zh-CN/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
+  - : 解析和[净化](/zh-CN/docs/Web/API/HTML_Sanitizer_API) HTML 字符串，并插入到 DOM 作为元素的子树。
 - {{DOMxRef("Element.setPointerCapture()")}}
-  - : Designates a specific element as the capture target of future [pointer events](/zh-CN/docs/Web/API/Pointer_events).
+  - : 指定一个特定的元素作为未来[指针事件](/zh-CN/docs/Web/API/Pointer_events)的捕获目标。
 - {{DOMxRef("Element.toggleAttribute()")}}
-  - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
+  - : 在指定的元素上切换布尔属性，如果存在则删除它，如果不存在则添加它。
 
 ## 事件
 
