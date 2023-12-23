@@ -1,6 +1,7 @@
 ---
 title: Graphismes sur le Web
-slug: Web/Guide/Graphics
+slug: conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+original_slug: Web/Guide/Graphics
 ---
 
 Les applications et sites Web modernes ont souvent besoin de présenter des graphismes de qualité. Tandis qu'afficher de simples images statiques peut être aisément réalisé à l'aide de la balise [`<img>`](/fr/docs/Web/HTML/Element/img), ou en réglant l'arrière-plan des éléments HTML avec la propriété CSS : [background-image](/fr/docs/Web/CSS/background-image).

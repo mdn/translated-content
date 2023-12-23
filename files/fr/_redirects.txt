@@ -1172,8 +1172,8 @@
 /fr/docs/Du_DHTML_accessible	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Développement_Web	/fr/docs/Web/Guide
-/fr/docs/Développement_Web/Développer_des_sites_à_compatibilité_descendante	/fr/docs/Web/Guide/Writing_forward-compatible_websites
-/fr/docs/Développement_Web/Introduction_au_développement_web	/fr/docs/Web/Guide/Introduction_to_Web_development
+/fr/docs/Développement_Web/Développer_des_sites_à_compatibilité_descendante	/fr/docs/conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+/fr/docs/Développement_Web/Introduction_au_développement_web	/fr/docs/conflicting/Learn
 /fr/docs/ECMAScript	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/EXSLT	/fr/docs/Web/EXSLT
 /fr/docs/EXSLT/exsl	/fr/docs/Web/EXSLT/exsl
@@ -4175,11 +4175,11 @@
 /fr/docs/Web/Accessibility/Community	/fr/docs/Web/Accessibility
 /fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur	/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /fr/docs/Web/Accessibility/Web_Development	/fr/docs/Web/Accessibility
-/fr/docs/Web/Apps/Build/Audio_and_video_delivery	/fr/docs/Web/Guide/Audio_and_video_delivery
-/fr/docs/Web/Apps/Build/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-/fr/docs/Web/Apps/Build/Audio_and_video_delivery/buffering_seeking_time_ranges	/fr/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
-/fr/docs/Web/Apps/Build/Audio_and_video_manipulation	/fr/docs/Web/Guide/Audio_and_video_manipulation
-/fr/docs/Web/Apps/Build/User_input_methods	/fr/docs/Web/Guide/User_input_methods
+/fr/docs/Web/Apps/Build/Audio_and_video_delivery	/fr/docs/Web/Media/Audio_and_video_delivery
+/fr/docs/Web/Apps/Build/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/fr/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
+/fr/docs/Web/Apps/Build/Audio_and_video_delivery/buffering_seeking_time_ranges	/fr/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
+/fr/docs/Web/Apps/Build/Audio_and_video_manipulation	/fr/docs/Web/Media/Audio_and_video_manipulation
+/fr/docs/Web/Apps/Build/User_input_methods	/fr/docs/Learn/Forms/User_input_methods
 /fr/docs/Web/Apps/Progressive	/fr/docs/Web/Progressive_web_apps
 /fr/docs/Web/Apps/Progressive/Adaptative	/fr/docs/Learn/CSS/CSS_layout/Responsive_Design
 /fr/docs/Web/Apps/Progressive/Identifiable	/fr/docs/Web/Progressive_web_apps
@@ -4413,6 +4413,7 @@
 /fr/docs/Web/CSS/CSS_User_Interface	/fr/docs/Web/CSS/CSS_basic_user_interface
 /fr/docs/Web/CSS/CSS_User_Interface/Utilisation_d_URL_pour_la_propriété_cursor	/fr/docs/Web/CSS/cursor
 /fr/docs/Web/CSS/CSS_Variables	/fr/docs/Web/CSS/CSS_cascading_variables
+/fr/docs/Web/CSS/CSS_charsets	/fr/docs/Web/CSS/CSS_syntax
 /fr/docs/Web/CSS/CSS_percentage_values	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/CSS_questions_frequentes	/fr/docs/Learn/CSS/Howto/CSS_FAQ
 /fr/docs/Web/CSS/CSS_values_serialization	/fr/docs/Web/CSS
@@ -4477,7 +4478,7 @@
 /fr/docs/Web/CSS/General_sibling_combinator	/fr/docs/Web/CSS/Subsequent-sibling_combinator
 /fr/docs/Web/CSS/Héritage	/fr/docs/Web/CSS/Inheritance
 /fr/docs/Web/CSS/Implémentation_des_Brouillons_CSS	/fr/docs/Web/CSS/Mozilla_Extensions
-/fr/docs/Web/CSS/Jeux_de_caractères_CSS	/fr/docs/Web/CSS/CSS_charsets
+/fr/docs/Web/CSS/Jeux_de_caractères_CSS	/fr/docs/Web/CSS/CSS_syntax
 /fr/docs/Web/CSS/Layout_cookbook/Bas_de_page_adhérant	/fr/docs/Web/CSS/Layout_cookbook/Sticky_footers
 /fr/docs/Web/CSS/Layout_cookbook/Carte	/fr/docs/Web/CSS/Layout_cookbook/Card
 /fr/docs/Web/CSS/Layout_cookbook/Centrer_un_element	/fr/docs/Web/CSS/Layout_cookbook/Center_an_element
@@ -4732,6 +4733,7 @@
 /fr/docs/Web/Guide/AJAX/Community	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /fr/docs/Web/Guide/AJAX/Getting_Started	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /fr/docs/Web/Guide/AJAX/Premiers_pas	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+/fr/docs/Web/Guide/API	/fr/docs/conflicting/Web/API
 /fr/docs/Web/Guide/API/DOM	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/Guide/API/DOM/Storage	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/Web/Guide/API/Gamepad	/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
@@ -4739,6 +4741,10 @@
 /fr/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/fr/docs/Web/API/WebRTC_API
 /fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture	/fr/docs/Web/API/WebRTC_API/Connectivity
 /fr/docs/Web/Guide/API/WebRTC/WebRTC_basics	/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling
+/fr/docs/Web/Guide/Audio_and_video_delivery	/fr/docs/Web/Media/Audio_and_video_delivery
+/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/fr/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
+/fr/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/fr/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
+/fr/docs/Web/Guide/Audio_and_video_manipulation	/fr/docs/Web/Media/Audio_and_video_manipulation
 /fr/docs/Web/Guide/CSS	/fr/docs/Learn/CSS
 /fr/docs/Web/Guide/CSS/Flexible_boxes	/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /fr/docs/Web/Guide/DOM	/fr/docs/Web/API/Document_Object_Model
@@ -4755,6 +4761,7 @@
 /fr/docs/Web/Guide/Events	/fr/docs/Web/Events
 /fr/docs/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
+/fr/docs/Web/Guide/Graphics	/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
@@ -4787,7 +4794,11 @@
 /fr/docs/Web/Guide/HTML/Liens_email	/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 /fr/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Element/Heading_Elements
+/fr/docs/Web/Guide/Introduction_to_Web_development	/fr/docs/conflicting/Learn
+/fr/docs/Web/Guide/Performance	/fr/docs/Web/Performance
+/fr/docs/Web/Guide/User_input_methods	/fr/docs/Learn/Forms/User_input_methods
 /fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
+/fr/docs/Web/Guide/Writing_forward-compatible_websites	/fr/docs/conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/CSS/CSS_colors/Applying_color
 /fr/docs/Web/HTML/Applying_color	/fr/docs/Web/CSS/CSS_colors/Applying_color
 /fr/docs/Web/HTML/Attributs	/fr/docs/Web/HTML/Attributes
@@ -6413,7 +6424,6 @@
 /fr/docs/conflicting/Glossary/Internationalization	/fr/docs/Glossary/Internationalization
 /fr/docs/conflicting/Glossary/Object_reference	/fr/docs/Glossary/Object_reference
 /fr/docs/conflicting/Glossary/TCP	/fr/docs/Glossary/TCP
-/fr/docs/conflicting/Learn	/fr/docs/Learn
 /fr/docs/conflicting/Learn/CSS/Building_blocks	/fr/docs/Learn/CSS/Building_blocks
 /fr/docs/conflicting/Learn/CSS/Building_blocks/Cascade_and_inheritance	/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 /fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors	/fr/docs/Learn/CSS/Building_blocks/Selectors
@@ -6448,7 +6458,6 @@
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals	/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals_42ad0dcdd765b60d8adda1f6293954b6	/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals_e22cde852fd55bbd8b014a4eac49a3bc	/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML_2c0377f7605f693cad465c2b4839addc	/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies_fbe06d127f73df4dd2f56a31b7c2bd2d	/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
@@ -6483,7 +6492,6 @@
 /fr/docs/conflicting/Tools/Page_Inspector/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html
 /fr/docs/conflicting/Tools/Performance/Waterfall	https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html
 /fr/docs/conflicting/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
-/fr/docs/conflicting/Web/API	/fr/docs/Web/API
 /fr/docs/conflicting/Web/API/Blob	/fr/docs/Web/API/Blob
 /fr/docs/conflicting/Web/API/CanvasRenderingContext2D/globalCompositeOperation	/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial

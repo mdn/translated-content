@@ -2648,6 +2648,10 @@
     "modified": "2020-07-16T22:21:30.990Z",
     "contributors": ["Dralyab", "Goofy", "tregagnon", "FredB"]
   },
+  "Learn/Forms/User_input_methods": {
+    "modified": "2019-03-23T22:00:16.721Z",
+    "contributors": ["chrisdavidmills", "a-mt"]
+  },
   "Learn/Forms/Your_first_form": {
     "modified": "2020-11-20T03:07:01.051Z",
     "contributors": [
@@ -15085,10 +15089,6 @@
     "modified": "2019-04-06T12:40:29.577Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/CSS/CSS_charsets": {
-    "modified": "2020-10-15T21:44:09.549Z",
-    "contributors": ["SphinxKnight", "xdelatour"]
-  },
   "Web/CSS/CSS_colors": {
     "modified": "2020-10-15T22:02:12.684Z",
     "contributors": ["SphinxKnight"]
@@ -15566,6 +15566,10 @@
   "Web/CSS/CSS_shapes/Shapes_from_images": {
     "modified": "2019-04-06T12:48:32.877Z",
     "contributors": ["SphinxKnight"]
+  },
+  "Web/CSS/CSS_syntax": {
+    "modified": "2020-10-15T21:44:09.549Z",
+    "contributors": ["SphinxKnight", "xdelatour"]
   },
   "Web/CSS/CSS_table": {
     "modified": "2019-04-06T12:48:15.509Z",
@@ -19362,59 +19366,13 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/API": {
-    "modified": "2019-03-23T23:08:38.035Z",
-    "contributors": ["SphinxKnight", "demangejeremy", "shing0608"]
-  },
-  "Web/Guide/Audio_and_video_delivery": {
-    "modified": "2019-03-23T22:00:15.299Z",
-    "contributors": ["chrisdavidmills", "a-mt"]
-  },
-  "Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video": {
-    "modified": "2019-03-18T20:51:45.799Z",
-    "contributors": ["chrisdavidmills", "a-mt"]
-  },
-  "Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges": {
-    "modified": "2019-03-18T20:51:45.442Z",
-    "contributors": ["chrisdavidmills", "a-mt"]
-  },
-  "Web/Guide/Audio_and_video_manipulation": {
-    "modified": "2019-03-23T22:00:16.201Z",
-    "contributors": ["chrisdavidmills", "a-mt"]
-  },
   "Web/Guide/CSS/Block_formatting_context": {
     "modified": "2019-05-18T12:20:40.602Z",
     "contributors": ["SphinxKnight", "teoli", "tregagnon"]
   },
-  "Web/Guide/Graphics": {
-    "modified": "2019-03-23T23:29:27.864Z",
-    "contributors": [
-      "tonybengue",
-      "Patrice-Koumar",
-      "Goofy",
-      "tregagnon",
-      "darnuria"
-    ]
-  },
-  "Web/Guide/Introduction_to_Web_development": {
-    "modified": "2019-03-24T00:03:04.501Z",
-    "contributors": ["Jeremie", "fscholz", "BenoitL"]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T23:29:36.868Z",
     "contributors": ["wakka27", "BenoitL"]
-  },
-  "Web/Guide/Performance": {
-    "modified": "2019-03-23T23:28:31.959Z",
-    "contributors": ["superfrenchboy", "teoli", "Sheppy"]
-  },
-  "Web/Guide/User_input_methods": {
-    "modified": "2019-03-23T22:00:16.721Z",
-    "contributors": ["chrisdavidmills", "a-mt"]
-  },
-  "Web/Guide/Writing_forward-compatible_websites": {
-    "modified": "2019-03-24T00:13:23.048Z",
-    "contributors": ["Dralyab", "pixelastic"]
   },
   "Web/HTML": {
     "modified": "2020-05-09T13:47:36.411Z",
@@ -26060,6 +26018,22 @@
     "modified": "2019-03-23T22:41:04.847Z",
     "contributors": ["xdelatour"]
   },
+  "Web/Media/Audio_and_video_delivery": {
+    "modified": "2019-03-23T22:00:15.299Z",
+    "contributors": ["chrisdavidmills", "a-mt"]
+  },
+  "Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video": {
+    "modified": "2019-03-18T20:51:45.799Z",
+    "contributors": ["chrisdavidmills", "a-mt"]
+  },
+  "Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges": {
+    "modified": "2019-03-18T20:51:45.442Z",
+    "contributors": ["chrisdavidmills", "a-mt"]
+  },
+  "Web/Media/Audio_and_video_manipulation": {
+    "modified": "2019-03-23T22:00:16.201Z",
+    "contributors": ["chrisdavidmills", "a-mt"]
+  },
   "Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video": {
     "modified": "2020-02-21T13:42:34.237Z",
     "contributors": ["Sroucheray", "SphinxKnight", "Spharian", "nicoo"]
@@ -26075,6 +26049,10 @@
   "Web/Media/Formats/Support_issues": {
     "modified": "2020-02-08T13:23:17.232Z",
     "contributors": ["tristantheb"]
+  },
+  "Web/Performance": {
+    "modified": "2019-03-23T23:28:31.959Z",
+    "contributors": ["superfrenchboy", "teoli", "Sheppy"]
   },
   "Web/Performance/How_browsers_work": {
     "modified": "2019-12-19T10:00:31.657Z",
@@ -27436,5 +27414,27 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/Learn": {
+    "modified": "2019-03-24T00:03:04.501Z",
+    "contributors": ["Jeremie", "fscholz", "BenoitL"]
+  },
+  "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
+    "modified": "2019-03-23T23:29:27.864Z",
+    "contributors": [
+      "tonybengue",
+      "Patrice-Koumar",
+      "Goofy",
+      "tregagnon",
+      "darnuria"
+    ]
+  },
+  "conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript": {
+    "modified": "2019-03-24T00:13:23.048Z",
+    "contributors": ["Dralyab", "pixelastic"]
+  },
+  "conflicting/Web/API": {
+    "modified": "2019-03-23T23:08:38.035Z",
+    "contributors": ["SphinxKnight", "demangejeremy", "shing0608"]
   }
 }

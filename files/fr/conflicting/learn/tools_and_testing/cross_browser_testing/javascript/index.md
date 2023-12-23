@@ -1,6 +1,7 @@
 ---
 title: Développer des sites à compatibilité descendante
-slug: Web/Guide/Writing_forward-compatible_websites
+slug: conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+original_slug: Web/Guide/Writing_forward-compatible_websites
 ---
 
 Cette page explique comment développer des sites qui continuent de fonctionner au fur et à mesure des mises à jour des navigateurs.
