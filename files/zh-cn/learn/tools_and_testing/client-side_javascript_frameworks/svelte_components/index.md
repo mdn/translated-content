@@ -179,7 +179,7 @@ export let onclick = (clicked) => {};
 
 在前面的示例中，我们意识到我们的 `FilterButton` 组件无法正常工作，是因为我们的应用程序状态通过 `filter` 属性从父组件流向子组件，但是无法返回。因此，我们添加了 `onclick` 属性，用于让子组件将新的 `filter` 值传递给父组件。
 
-这种方法可以正常工作，但是 Svelte 提供了一种更简单、更直接的方法来实现双向数据绑定。通常情况下，数据通过属性从父组件向子组件流动。如果我们希望它也能从子组件向父组件流动，我们可以使用 [`bind:` 指令](https://svelte.dev/docs#bind_element_property)。
+这种方法可以正常工作，但是 Svelte 提供了一种更简单、更直接的方法来实现双向数据绑定。通常情况下，数据通过属性从父组件向子组件流动。如果我们希望它也能从子组件向父组件流动，我们可以使用 [`bind:` 指令](https://svelte.dev/docs/element-directives#bind-property)。
 
 通过使用 `bind`，我们告诉 Svelte，在 `FilterButton` 组件中对 `filter` 属性进行的任何更改都应该传播回父组件 `Todos`。也就是说，我们将父组件中的 `filter` 变量的值绑定到子组件中的值。
 
@@ -366,7 +366,7 @@ export let onclick = (clicked) => {};
 
 为了处理编辑模式，我们使用了布尔类型的 `editing` 变量。当它为 `true` 时，它应该显示用于编辑待办事项名称的 `<input>` 字段以及 _Cancel_ 和 _Save_ 按钮。当它不处于编辑模式时，它将显示复选框、待办事项名称以及编辑和删除待办事项的按钮。
 
-为了实现这一点，我们将使用 [`if` 块](https://svelte.dev/docs#if)。`if` 块会根据条件渲染标记。请注意，它不仅仅是根据条件显示或隐藏标记——它会根据条件在 DOM 中动态添加和移除元素。
+为了实现这一点，我们将使用 [`if` 块](https://svelte.dev/docs/logic-blocks#if)。`if` 块会根据条件渲染标记。请注意，它不仅仅是根据条件显示或隐藏标记——它会根据条件在 DOM 中动态添加和移除元素。
 
 例如，当 `editing` 为 `true` 时，Svelte 会显示更新表单；当它为 `false` 时，它会将其从 DOM 中移除并添加复选框。由于 Svelte 的响应性，仅仅分配 `editing` 变量的值就足以显示正确的 HTML 元素。
 
@@ -516,7 +516,7 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
 
 正如你所见，在 Svelte 中实现“属性向下传递、事件向上传播”模式很容易。尽管如此，对于简单的组件，`bind` 可能是一个不错的选择；Svelte 允许你自由选择。
 
-> **备注：** Svelte 提供了更高级的机制来在组件之间共享信息：[Context API](https://svelte.dev/docs#setContext) 和 [Stores](https://svelte.dev/docs#svelte_store)。Context API 提供了一种机制，使组件及其后代组件能够在不传递数据和函数作为属性或分发大量事件的情况下进行通信。Stores 允许你在不具有层次关系的组件之间共享响应式数据。我们将在本系列的后续内容中介绍 Stores。
+> **备注：** Svelte 提供了更高级的机制来在组件之间共享信息：[Context API](https://svelte.dev/docs/svelte#setcontext) 和 [Stores](https://svelte.dev/docs/svelte-store)。Context API 提供了一种机制，使组件及其后代组件能够在不传递数据和函数作为属性或分发大量事件的情况下进行通信。Stores 允许你在不具有层次关系的组件之间共享响应式数据。我们将在本系列的后续内容中介绍 Stores。
 
 ## 到目前为止的代码
 
