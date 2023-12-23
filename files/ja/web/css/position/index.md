@@ -33,25 +33,25 @@ position: unset;
 
   - : 要素は文書の通常のフローに従って配置され、 `top`, `right`, `bottom`, `left` の値に基づいて*自分自身からの相対*オフセットで配置されます。オフセットは他の要素の配置には影響を与えません。つまり、ページレイアウト内で要素に与えられる空間は、位置が `static` であった時と同じです。
 
-    `z-index` の値が `auto` でない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を生成します。 `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` の要素における効果は未定義です。
+    `z-index` の値が `auto` でない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成します。 `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` の要素における効果は未定義です。
 
 - `absolute`
 
   - : 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。直近の配置されている祖先があれば、それに対して相対配置されます。そうでなければ、初期の[包含ブロック](/ja/docs/Web/CSS/Containing_block)に対して相対配置されます。最終的な位置は `top`, `right`, `bottom`, `left` の値によって決定されます。
 
-    この値では、 `z-index` の値が `auto` ではない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を作成します。絶対位置指定ボックスのマージンは、他の要素のマージンと[相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)されません。
+    この値では、 `z-index` の値が `auto` ではない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を作成します。絶対位置指定ボックスのマージンは、他の要素のマージンと[相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)されません。
 
 - `fixed`
 
   - : 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。{{glossary("viewport", "ビューポート")}}によって定められた初期の[包含ブロック](/ja/docs/Web/CSS/Containing_block)に対して相対配置されますが、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外 ([CSS Transforms 仕様書](https://www.w3.org/TR/css-transforms-1/#propdef-transform)を参照) に設定されている場合は例外で、その場合は祖先が包含ブロックとしてふるまいます。 (なお、包含ブロック形成に寄与している `perspective` と `filter` に矛盾のあるブラウザーがあります。) 最終的な位置は `top`, `right`, `bottom`, `left` の値によって決定されます。
 
-    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を作成します。印刷文書の場合、要素は*各ページ*の同じ位置に配置されます。
+    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を作成します。印刷文書の場合、要素は*各ページ*の同じ位置に配置されます。
 
 - `sticky`
 
   - : 要素は文書の通常のフローに従って配置され、*直近のスクロールする祖先*および[包含ブロック](/ja/docs/Web/CSS/Containing_block) (直近のブロックレベル祖先、表関連要素を含む) に対して `top`, `right`, `bottom`, `left` の値に基づいて相対配置されます。オフセットは他の要素の配置には影響を与えません。
 
-    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先 (`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの) に「粘着」します。これによって「粘着」のふるまいを効果的に抑止します ([GitHub issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865) を参照)。
+    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先 (`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの) に「粘着」します。これによって「粘着」のふるまいを効果的に抑止します ([GitHub issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865) を参照)。
 
 ## 解説
 
