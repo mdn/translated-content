@@ -42,7 +42,7 @@ API 提供了可根据需要使用的可选功能，包括：
 
 锁的范围仅限于同一个源内；一个选项卡从 `https://example.com` 获取的锁对另一个选项卡从 `https://example.org:8080` 获取的锁没有影响，因为它们是不同的源。
 
-主要入口点是请求锁的 `navigator.locks.request()` 方法。它需要一个锁的名称、一组可选选项和一个回调方法。授予锁时将调用回调方法。当回调方法返回时，锁会自动释放，因此通常回调是一个*异步函数*，这会导致只有当异步函数完全完成时才会释放锁。
+主要入口点是请求锁的 {{domxref("LockManager.request", "navigator.locks.request()")}} 方法。它需要一个锁的名称、一组可选选项和一个回调方法。授予锁时将调用回调方法。当回调方法返回时，锁会自动释放，因此通常回调是一个*异步函数*，这会导致只有当异步函数完全完成时才会释放锁。
 
 `request()` 方法本身返回一个 promise，一旦锁被释放，该 promise 就会兑现；在 async 函数中，脚本可以使用 `await` 关键字等待调用以使异步代码线性流动。例如：
 
@@ -72,7 +72,7 @@ await do_something_else_without_lock();
 
 ### 监控
 
-脚本可以使用 `navigator.locks.query()` 方法来内省源锁管理器的状态。这在调试时非常有用，例如，确定无法获取锁的原因。结果是一个锁管理器状态的快照，它标识了拍摄快照时持有的锁和请求中的锁以及有关每个锁的一些附加数据（例如模式）。
+脚本可以使用 {{domxref("LockManager.query", "navigator.locks.query()")}} 方法来内省源锁管理器的状态。这在调试时非常有用，例如，确定无法获取锁的原因。结果是一个锁管理器状态的快照，它标识了拍摄快照时持有的锁和请求中的锁以及有关每个锁的一些附加数据（例如模式）。
 
 ### 进阶使用
 
@@ -103,7 +103,7 @@ navigator.locks.request(
 - {{domxref("Lock")}}
   - : 提供先前请求的锁的名称和模式，该名称和模式在传入 {{domxref("LockManager.request()")}} 的回调方法中接收。
 - {{domxref("LockManager")}}
-  - : 提供请求新的 {{domxref("Lock")}} 对象和查询现有 Lock 对象的方法。要获取 LockManager 的实例，访问 {{domxref("navigator.locks")}}。
+  - : 提供请求新的 {{domxref("Lock")}} 对象和查询现有 {{domxref('Lock')}} 对象的方法。要获取 {{domxref("LockManager")}} 的实例，访问 {{domxref("navigator.locks")}}。
 
 ### 其他接口的扩展
 
