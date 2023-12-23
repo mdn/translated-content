@@ -65,10 +65,6 @@ p {
 
 {{EmbedLiveSample('Examples', 'auto', 350)}}
 
-## 仕様書
-
-{{Specifications}}
-
 ## 関連情報
 
 - CSS の主要概念:
