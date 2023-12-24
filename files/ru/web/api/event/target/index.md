@@ -1,5 +1,5 @@
 ---
-title: Event.target
+title: "Event: свойство target"
 slug: Web/API/Event/target
 ---
 
@@ -13,15 +13,15 @@ slug: Web/API/Event/target
 theTarget = event.target
 ```
 
-Значение:
+## Значение
 
-{{domxref("EventTarget")}}
+Связано с {{domxref("EventTarget")}}.
 
 ## Пример
 
 Свойство `event.target` может быть использовано для реализации **делегирования событий**.
 
-```
+```js
 // Создадим список
 var ul = document.createElement('ul');
 document.body.appendChild(ul);
@@ -64,4 +64,4 @@ function hide(e) {
 
 ## Смотрите также
 
-- [Comparison of Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Сравнение разных Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets)
