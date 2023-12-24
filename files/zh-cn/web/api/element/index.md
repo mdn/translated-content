@@ -285,68 +285,68 @@ _`Element` 继承其父级 {{DOMxRef("Node")}} 和父级 {{DOMxRef("EventTarget"
 使用 `addEventListener()` 或将事件监听器分配给此接口的 `oneventname` 属性来监听这些事件。
 
 - {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
-  - : Fired when a script has been executed.
+  - : 执行脚本时触发此事件。
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
-  - : Fires on an element that is in the [_hidden until found_](/zh-CN/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
+  - : 触发处于 [_hidden until found_](/zh-CN/docs/Web/HTML/Global_attributes/hidden) 状态的元素，此时浏览器即将显示其内容，因为用户已通过“在页面中查找”功能或片段导航找到了该内容。
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
-  - : Fired when a script is about to be executed.
+  - : 脚本即将执行时触发此事件。
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
-  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/zh-CN/docs/Web/CSS/CSS_containment#relevant_to_the_user) and [skipping its contents](/zh-CN/docs/Web/CSS/CSS_containment#skips_its_contents).
+  - : 当元素开始或停止[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)和[跳过其内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其内容)时，触发任何设置了 {{cssxref("content-visibility", "content-visibility: auto")}} 的元素。
 - {{domxref("Element/scroll_event", "scroll")}}
-  - : Fired when the document view or an element has been scrolled.
+  - : 当文档视图或元素滚动时触发此事件。
 - {{domxref("Element/scrollend_event", "scrollend")}}
-  - : Fires when the document view has completed scrolling.
+  - : 当文档视图完成滚动时触发此事件。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
-  - : Fired when a [Content Security Policy](/zh-CN/docs/Web/HTTP/CSP) is violated.
+  - : 当违反[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)时触发此事件。
 - {{domxref("Element/wheel_event","wheel")}}
-  - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
+  - : 当用户旋转指向设备（通常是鼠标）上的滚轮按钮时触发此事件。
 
 ### 动画事件
 
 - {{domxref("Element/animationcancel_event", "animationcancel")}}
-  - : Fired when an animation unexpectedly aborts.
+  - : 当动画意外终止时触发此事件。
 - {{domxref("Element/animationend_event", "animationend")}}
-  - : Fired when an animation has completed normally.
+  - : 当动画正常结束时触发此事件。
 - {{domxref("Element/animationiteration_event", "animationiteration")}}
-  - : Fired when an animation iteration has completed.
+  - : 当动画迭代完成时触发此事件。
 - {{domxref("Element/animationstart_event", "animationstart")}}
-  - : Fired when an animation starts.
+  - : 当动画开始时触发此事件。
 
 ### 剪贴板事件
 
 - {{domxref("Element/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
+  - : 当用户通过浏览器的用户界面初始化复制操作时触发此事件。
 - {{domxref("Element/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
+  - : 当用户通过浏览器的用户界面初始化剪切操作时触发此事件。
 - {{domxref("Element/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
+  - : 当用户通过浏览器的用户界面初始化粘贴操作时触发此事件。
 
 ### 合成事件
 
 - {{domxref("Element/compositionend_event", "compositionend")}}
-  - : Fired when a text composition system such as an {{glossary("input method editor")}} completes or cancels the current composition session.
+  - : 当文本合成系统（如{{glossary("input method editor", "输入法编辑器")}}）完成或取消当前合成会话时触发此事件。
 - {{domxref("Element/compositionstart_event", "compositionstart")}}
-  - : Fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.
+  - : 当文本合成系统（如{{glossary("input method editor", "输入法编辑器")}}）开始新的合成会话时触发此事件。
 - {{domxref("Element/compositionupdate_event", "compositionupdate")}}
-  - : Fired when a new character is received in the context of a text composition session controlled by a text composition system such as an {{glossary("input method editor")}}.
+  - : 在文本合成系统（如{{glossary("input method editor", "输入法编辑器")}}）控制的文本合成会话中收到新字符时触发此事件。
 
 ### 聚焦事件
 
 - {{domxref("Element/blur_event", "blur")}}
-  - : Fired when an element has lost focus.
+  - : 当元素失去焦点时触发此事件。
 - {{domxref("Element/focus_event", "focus")}}
-  - : Fired when an element has gained focus.
+  - : 当元素获得焦点时触发此事件。
 - {{domxref("Element/focusin_event", "focusin")}}
-  - : Fired when an element has gained focus, after {{domxref("Element/focus_event", "focus")}}.
+  - : 当元素获得焦点时触发此事件，位于 {{domxref("Element/focus_event", "focus")}} 事件之后。
 - {{domxref("Element/focusout_event", "focusout")}}
-  - : Fired when an element has lost focus, after {{domxref("Element/blur_event", "blur")}}.
+  - : 当元素失去焦点时触发此事件，位于 {{domxref("Element/blur_event", "blur")}} 事件之后。
 
 ### 全屏事件
 
 - {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : Sent to an {{domxref("Element")}} when it transitions into or out of [fullscreen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
+  - : 当前 {{domxref("Element")}} 进入或退出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时发送给该元素。
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
-  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [fullscreen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
+  - : 如果在尝试将当前 `Element` 切换到或切换出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时发生错误，则向该 `Element` 发送该事件。
 
 ### 键盘事件
 
@@ -360,43 +360,43 @@ _`Element` 继承其父级 {{DOMxRef("Node")}} 和父级 {{DOMxRef("EventTarget"
 ### 鼠标事件
 
 - {{domxref("Element/auxclick_event", "auxclick")}}
-  - : Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
+  - : 当元素上的非主要指针设备按钮（例如除左键以外的任何鼠标按钮）被按下并释放时触发此事件。
 - {{domxref("Element/click_event", "click")}}
-  - : Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.
+  - : 指针设备按钮（如鼠标的主按钮）在单个元素上按下并释放时触发此事件。
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
-  - : Fired when the user attempts to open a context menu.
+  - : 当用户尝试打开上下文菜单时触发此事件。
 - {{domxref("Element/dblclick_event", "dblclick")}}
-  - : Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
+  - : 当指针设备按钮（如鼠标的主按钮）在单个元素上被点击两次时触发此事件。
 - {{domxref("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
-  - : Occurs when an element is activated, for instance, through a mouse click or a keypress.
+  - : 元素被激活，例如通过鼠标点击或按键时触发此事件。
 - {{domxref("Element/DOMMouseScroll_event", "DOMMouseScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Occurs when mouse wheel or similar device is operated and the accumulated scroll amount is over 1 line or 1 page since last event.
+  - : 操作鼠标滚轮或类似设备，且自上次事件以来累计滚动量超过 1 行或 1 页时触发此事件。
 - {{domxref("Element/mousedown_event", "mousedown")}}
-  - : Fired when a pointing device button is pressed on an element.
+  - : 当元素上的指针设备按钮被按下时触发此事件。
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
-  - : Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
+  - : 当指针设备（通常是鼠标）移动到附加了监听器的元素上时触发此事件。
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
-  - : Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.
+  - : 当指针设备（通常是鼠标）的指针移出附有监听器的元素时触发此事件。
 - {{domxref("Element/mousemove_event", "mousemove")}}
-  - : Fired when a pointing device (usually a mouse) is moved while over an element.
+  - : 当指针设备（通常是鼠标）在元素上移动时触发此事件。
 - {{domxref("Element/mouseout_event", "mouseout")}}
-  - : Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.
+  - : 当指针设备（通常是鼠标）离开监听器所连接的元素或其子元素时触发此事件。
 - {{domxref("Element/mouseover_event", "mouseover")}}
-  - : Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
+  - : 当指针设备移动到监听器所连接的元素上或其子元素上时触发此事件。
 - {{domxref("Element/mouseup_event", "mouseup")}}
-  - : Fired when a pointing device button is released on an element.
+  - : 当元素上的指针设备按钮被释放时触发此事件。
 - {{domxref("Element/mousewheel_event", "mousewheel")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a mouse wheel or similar device is operated.
+  - : 操作鼠标滚轮或类似设备时触发此事件。
 - {{domxref("Element/MozMousePixelScroll_event", "MozMousePixelScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when a mouse wheel or similar device is operated.
+  - : 操作鼠标滚轮或类似设备时触发此事件。
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
-  - : Fired each time the amount of pressure changes on the trackpadtouchscreen.
+  - : 每次触控板触摸屏上的压力发生变化时触发此事件。
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
-  - : Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
+  - : 在鼠标按下事件后，一旦施加了足够的压力，就会触发“强制点击”。
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{Non-standard_Inline}}
-  - : Fired before the {{domxref("Element/mousedown_event", "mousedown")}} event.
+  - : 在 {{domxref("Element/mousedown_event", "mousedown")}} 事件之前触发。
 - {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{Non-standard_Inline}}
-  - : Fired after the {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
+  - : 在 {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} 事件之后，当压力充分减小以结束“强制点击”时触发。
  
 ### 指针事件
 
