@@ -10,7 +10,7 @@ slug: Web/API/Event/target
 Синтаксис:
 
 ```js
-theTarget = event.target
+const theTarget = event.target
 ```
 
 ## Значение
@@ -23,11 +23,11 @@ theTarget = event.target
 
 ```js
 // Создадим список
-var ul = document.createElement('ul');
+const ul = document.createElement('ul');
 document.body.appendChild(ul);
 
-var li1 = document.createElement('li');
-var li2 = document.createElement('li');
+const li1 = document.createElement('li');
+const li2 = document.createElement('li');
 ul.appendChild(li1);
 ul.appendChild(li2);
 
@@ -57,7 +57,7 @@ ul.addEventListener('click', hide, false);
 ```js
 function hide(e) {
   // Поддержка IE 6-8
-  var target = e.target || e.srcElement;
+  const target = e.target || e.srcElement;
   target.style.visibility = "hidden";
 }
 ```
