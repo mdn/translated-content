@@ -8,6 +8,7 @@ l10n:
 {{jsSidebar("Classes")}}
 
 **`constructor`** メソッドは、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)で作成されたオブジェクトインスタンスの生成と初期化を行うための特殊なメソッドです。
+
 > **メモ:** このページでは `constructor` の構文を紹介します。すべてのオブジェクトに存在する `constructor` プロパティについては、 {{jsxref("Object.prototype.constructor")}} を参照してください。
 
 {{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
