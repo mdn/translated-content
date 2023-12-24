@@ -115,4 +115,4 @@ p {
 
 - {{cssxref("clip-path")}} プロパティは*要素全体*を表示する部分を定義するクリッピング領域を作成します。
 - 背景のプロパティ: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}
-- [CSS ボックスモデルの紹介](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS ボックスモデルの紹介](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
