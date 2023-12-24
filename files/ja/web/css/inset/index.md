@@ -102,5 +102,5 @@ div {
 ## 関連情報
 
 - 個別指定のボックスのオフセットプロパティ: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
-- 対応する論理プロパティの一括指定: {{cssxref("inset-block")}} および {{cssxref("inset-inline")}}
+- 対応する論理的プロパティの一括指定: {{cssxref("inset-block")}} および {{cssxref("inset-inline")}}
 - {{cssxref("margin")}} 一括指定の複数値の構文
