@@ -60,7 +60,7 @@ browser.bookmarks.onMoved.hasListener(listener)
 
 {{Compat}}
 
-## Examples
+## 例
 
 ```js
 function handleMoved(id, moveInfo) {
