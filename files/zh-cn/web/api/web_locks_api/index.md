@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}}
 
-**Web Locks API** 允许在一个选项卡或工作线程中运行的脚本异步获取锁，在执行工作时保持它，然后释放它。持有锁时，在同一源中执行的其他脚本都无法获取相同的锁，这允许在多个选项卡或工作线程中运行的 Web 应用程序协调工作和资源的使用。
+**Web Locks API** 允许在一个选项卡或工作线程中运行的脚本异步获取锁，在执行工作时保持锁，最后释放锁。持有锁时，在同一源中执行的其他脚本都无法获取相同的锁，这允许在多个选项卡或工作线程中运行的 Web 应用程序协调工作和资源的使用。
 
 {{AvailableInWorkers}}
 
@@ -44,7 +44,7 @@ API 提供了可根据需要使用的可选功能，包括：
 
 主要入口点是请求锁的 {{domxref("LockManager.request", "navigator.locks.request()")}} 方法。它需要一个锁的名称、一组可选选项和一个回调方法。授予锁时将调用回调方法。当回调方法返回时，锁会自动释放，因此通常回调是一个*异步函数*，这会导致只有当异步函数完全完成时才会释放锁。
 
-`request()` 方法本身返回一个 promise，一旦锁被释放，该 promise 就会兑现；在 async 函数中，脚本可以使用 `await` 关键字等待调用以使异步代码线性流动。例如：
+`request()` 方法本身返回一个 Promise，一旦锁被释放，该 Promise 就会兑现；在 `async` 函数中，脚本可以使用 `await` 关键字等待调用以使异步代码线性流动。例如：
 
 ```js
 await do_something_without_lock();
@@ -76,10 +76,10 @@ await do_something_else_without_lock();
 
 ### 进阶使用
 
-对于更复杂的情况，例如在任意时间内保持锁，回调可以返回一个脚本显式解析的 promise：
+对于更复杂的情况，例如在任意时间内保持锁，回调可以返回一个脚本显式解析的 Promise：
 
 ```js
-// 捕获 promise 控制功能：
+// 捕获 Promise 控制功能：
 let resolve, reject;
 const p = new Promise((res, rej) => {
   resolve = res;
@@ -90,7 +90,7 @@ const p = new Promise((res, rej) => {
 navigator.locks.request(
   "my_resource",
   // 锁已被获取。
-  (lock) => p, // 现在锁将被保持直到调用 resolve() 或 reject() 为止。
+  (lock) => p, // 现在锁将被保持直到调用 resolve() 方法或 reject() 方法为止。
 );
 ```
 
