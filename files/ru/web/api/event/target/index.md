@@ -23,23 +23,23 @@ const theTarget = event.target
 
 ```js
 // Создадим список
-const ul = document.createElement('ul');
+const ul = document.createElement("ul");
 document.body.appendChild(ul);
 
-const li1 = document.createElement('li');
-const li2 = document.createElement('li');
+const li1 = document.createElement("li");
+const li2 = document.createElement("li");
 ul.appendChild(li1);
 ul.appendChild(li2);
 
-function hide(e){
-  // e.target ссылается на <li> элемент, на котором произошло нажатие
-  // Он отличается от e.currentTarget, который будет ссылаться на родительский <ul> в этом контексте
-  e.target.style.visibility = 'hidden';
+function hide(evt) {
+  // evt.target ссылается на элемент <li>, на котором произошло нажатие
+  // Он отличается от evt.currentTarget, который будет ссылаться на родительский <ul> в этом контексте
+  evt.target.style.visibility = "hidden";
 }
 
 // Назначим обработчик к списку
 // Он будет вызван, когда нажатие произошло на любом из <li>
-ul.addEventListener('click', hide, false);
+ul.addEventListener("click", hide, false);
 ```
 
 ## Спецификации
