@@ -1,6 +1,8 @@
 ---
 title: 将我们的 Svelte 应用组件化
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components
+l10n:
+  sourceCommit: e9be22eaa7416206e3f263a058f0d509a7f81f88
 ---
 
 {{LearnSidebar}}
@@ -516,7 +518,7 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
 
 正如你所见，在 Svelte 中实现“属性向下传递、事件向上传播”模式很容易。尽管如此，对于简单的组件，`bind` 可能是一个不错的选择；Svelte 允许你自由选择。
 
-> **备注：** Svelte 提供了更高级的机制来在组件之间共享信息：[Context API](https://svelte.dev/docs/svelte#setcontext) 和 [Stores](https://svelte.dev/docs/svelte-store)。Context API 提供了一种机制，使组件及其后代组件能够在不传递数据和函数作为属性或分发大量事件的情况下进行通信。Stores 允许你在不具有层次关系的组件之间共享响应式数据。我们将在本系列的后续内容中介绍 Stores。
+> **备注：** Svelte 提供了更高级的机制来在组件之间共享信息：[Context API](https://svelte.dev/docs/svelte#setcontext) 和 [Store](https://svelte.dev/docs/svelte-store)。Context API 提供了一种机制，使组件及其后代组件能够在不传递数据和函数作为属性或分发大量事件的情况下进行通信。Store 允许你在不具有层次关系的组件之间共享响应式数据。我们将在本系列的后续内容中介绍 Store。
 
 ## 到目前为止的代码
 
