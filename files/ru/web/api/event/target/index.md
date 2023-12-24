@@ -10,7 +10,7 @@ slug: Web/API/Event/target
 Синтаксис:
 
 ```js
-const theTarget = event.target
+const theTarget = event.target;
 ```
 
 ## Значение
