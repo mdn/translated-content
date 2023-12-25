@@ -16349,10 +16349,6 @@
     "modified": "2019-09-26T04:21:48.836Z",
     "contributors": ["cmplstofB"]
   },
-  "Web/CSS/CSS_charsets": {
-    "modified": "2020-10-15T22:04:01.150Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/CSS/CSS_colors": {
     "modified": "2020-10-15T22:04:14.476Z",
     "contributors": ["mfuji09"]
@@ -16761,6 +16757,10 @@
   },
   "Web/CSS/CSS_shapes/Shapes_from_images": {
     "modified": "2019-03-18T21:34:58.823Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_syntax": {
+    "modified": "2020-10-15T22:04:01.150Z",
     "contributors": ["mfuji09"]
   },
   "Web/CSS/CSS_table": {
