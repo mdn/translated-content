@@ -16,11 +16,15 @@ elemento_anterior + elemento_afectado { estilos }
 
 ## Ejemplo
 
+### CSS
+
 ```css
 li:first-of-type + li {
   color: red;
 }
 ```
+
+### HTML
 
 ```html
 <ul>
@@ -30,24 +34,9 @@ li:first-of-type + li {
 </ul>
 ```
 
-{{EmbedLiveSample('Example_1', 200, 100)}}
+### Resultado
 
-## Ejemplo
-
-Otro caso podría ser dar estilos a un span que se use de pie de foto de los siguientes elementos {{HTMLElement("img")}} :
-
-```css
-img + span.caption {
-  font-style: italic;
-}
-```
-
-que coincidiría con los siguientes elementos {{HTMLElement("span")}} :
-
-```html
-<img src="photo1.jpg" /><span class="caption">The first photo</span>
-<img src="photo2.jpg" /><span class="caption">The second photo</span>
-```
+{{EmbedLiveSample('Ejemplo', 200, 100)}}
 
 ## Especificaciones
 
