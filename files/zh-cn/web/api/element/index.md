@@ -397,6 +397,7 @@ _`Element` 继承其父级 {{DOMxRef("Node")}} 和父级 {{DOMxRef("EventTarget"
   - : 在 {{domxref("Element/mousedown_event", "mousedown")}} 事件之前触发。
 - {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{Non-standard_Inline}}
   - : 在 {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} 事件之后，当压力充分减小以结束“强制点击”时触发。
+
 ### 指针事件
 
 - {{domxref("Element/gotpointercapture_event", "gotpointercapture")}}
@@ -438,6 +439,7 @@ _`Element` 继承其父级 {{DOMxRef("Node")}} 和父级 {{DOMxRef("EventTarget"
   - : 当一个或多个触摸点沿触摸表面移动时触发。
 - {{domxref("Element/touchstart_event", "touchstart")}}
   - : 当一个或多个触摸点放置在触摸表面时触发。
+
 ### 过渡事件
 
 - {{domxref("Element/transitioncancel_event", "transitioncancel")}}
