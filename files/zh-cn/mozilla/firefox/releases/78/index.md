@@ -1,6 +1,8 @@
 ---
 title: Firefox 78 的开发者说明
 slug: Mozilla/Firefox/Releases/78
+l10n:
+  sourceCommit: e088b8a1e80e78da560675a4b05e91737d85a4cf
 ---
 
 {{FirefoxSidebar}}
