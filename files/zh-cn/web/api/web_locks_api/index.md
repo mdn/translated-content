@@ -76,7 +76,7 @@ await do_something_else_without_lock();
 
 ### 进阶用法
 
-对于更复杂的情况，例如在任意时间内保持锁，回调方法可以返回一个由脚本显式解析的 Promise：
+对于更复杂的情况，例如在任意时间内保持锁，回调可以返回一个脚本显式解决的 Promise：
 
 ```js
 // 捕获 Promise 控制函数：
