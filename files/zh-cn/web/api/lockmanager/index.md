@@ -7,7 +7,6 @@ l10n:
 
 {{APIRef("Web Locks API")}}{{securecontext_header}}
 
-The **`LockManager`** interface of the [Web Locks API](/zh-CN/docs/Web/API/Web_Locks_API) provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing `Lock` object. To get an instance of `LockManager`, call {{domxref('navigator.locks')}}.
 [Web Locks API](/zh-CN/docs/Web/API/Web_Locks_API) 的 **`LockManager`** 接口提供了请求新的 {{domxref('Lock')}} 对象以及枚举现有的 `Lock` 对象的方法。要获取 `LockManager` 实例，请访问 {{domxref('navigator.locks')}} 属性。
 
 {{AvailableInWorkers}}
