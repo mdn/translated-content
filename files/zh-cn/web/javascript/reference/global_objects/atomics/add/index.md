@@ -24,7 +24,7 @@ Atomics.add(typedArray, index, value)
 - `index`
   - : `typedArray` 中的要加上 `value` 的位置。
 - `value`
-  - : 增加的数字。
+  - : 要增加的数字。
 
 ### 返回值
 
