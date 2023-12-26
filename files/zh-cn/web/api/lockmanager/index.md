@@ -14,7 +14,7 @@ l10n:
 ## 实例方法
 
 - {{domxref('LockManager.request()')}}
-  - : 请求一个指定其名称和特征参数的 {{domxref('Lock')}} 对象。
+  - : 请求一个指定其名称和模式参数的 {{domxref('Lock')}} 对象。
 - {{domxref('LockManager.query()')}}
   - : 返回一个 {{jsxref('Promise')}}，兑现一个包含持有的锁以及等待的锁请求的对象。
 
