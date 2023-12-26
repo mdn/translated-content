@@ -9,7 +9,7 @@ slug: Web/API/Document/createNodeIterator
 
 ## 语法
 
-```
+```js
 const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
 ```
 
@@ -23,7 +23,7 @@ const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
 
     | 常量                                                     | 数字值                            | 描述                                                                                                                                                                                                                                                          |
     | -------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `-1` (即`unsigned long` 的最大值) | 显示所有节点。                                                                                                                                                                                                                                                |
+    | `NodeFilter.SHOW_ALL`                                    | `4294967295` (即`unsigned long` 的最大值) | 显示所有节点。                                                                                                                                                                                                                                                |
     | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                               | 显示 {{ domxref("Attr") }} 特性节点。这仅在创建以{{ domxref("Attr") }} 特性节点为根节点的{{ domxref("TreeWalker") }}时有意义；在这种情况下，这意味着该特性节点会出现在迭代或遍历的第一位。因为特性节点不会是其他节点的子代，遍历文档树时，特性节点不会出现。  |
     | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                               | 显示 {{ domxref("CDATASection") }} 节点。                                                                                                                                                                                                                     |
     | `NodeFilter.SHOW_COMMENT`                                | `128`                             | 显示 {{ domxref("Comment") }} 节点。                                                                                                                                                                                                                          |
@@ -44,7 +44,7 @@ const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
 
 ## 示例
 
-```
+```js
 const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
