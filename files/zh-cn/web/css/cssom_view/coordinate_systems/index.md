@@ -17,7 +17,7 @@ l10n:
 
 在 web 中，默认的原点是给定上下文的左*上*角（Y 坐标正值位于原点下方）。请注意，这与大多数数学模型不同，在大多数数学模型中，原点位于左*下*角，Y 坐标的正值位于原点之上。
 
-在使用第三维度将物体从前向后分层时，我们使用 z 轴。Z 轴从查看器一直延伸到屏幕表面。CSS z-index 属性会影响定位元素在此轴线上的位置，从而产生远离或朝向观众的效果。
+在使用第三维度将物体从前向后分层时，我们使用 z 轴。z 轴从查看器一直延伸到屏幕表面。CSS z-index 属性会影响定位元素在此轴线上的位置，从而产生远离或朝向观众的效果。
 
 > **备注：** 实际上，使用 CSS 属性（如 {{cssxref("transform")}}）可以改变这些坐标系的定义和方向。不过，我们现在只讨论标准坐标系。
 
@@ -59,7 +59,7 @@ CSS 对象模型使用四种标准坐标系。为了帮助直观地理解这些�
 
 ### JavaScript
 
-在 JavaScript 中，代码通过调用 {{domxref("EventTarget. addEventListener", "addEventListener()")}}、{{domxref("Element/mouseenter_event", "mouseenter")}}、{{domxref("Element/mousemove_event", "mousemove")}} 和 {{domxref("Element/mouseleave_event", "mouseleave")}} 设置事件处理器。对于每个事件，我们都会调用 `setCoords()` 函数，该函数会将每个系统的坐标设置到 `<p>` 元素的内部文本中。
+在 JavaScript 中，代码通过调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}}、{{domxref("Element/mouseenter_event", "mouseenter")}}、{{domxref("Element/mousemove_event", "mousemove")}} 和 {{domxref("Element/mouseleave_event", "mouseleave")}} 设置事件处理器。对于每个事件，我们都会调用 `setCoords()` 函数，该函数会将每个系统的坐标设置到 `<p>` 元素的内部文本中。
 
 ```js
 const log = document.querySelector(".log");
@@ -67,10 +67,10 @@ const inner = document.querySelector(".inner");
 
 function setCoords(e) {
   log.innerText = `
-    Offset X/Y: ${e.offsetX}, ${e.offsetY}
-    Viewport X/Y: ${e.clientX}, ${e.clientY}
-    Page X/Y: ${e.pageX}, ${e.pageY}
-    Screen X/Y: ${e.screenX}, ${e.screenY}`;
+    偏移 X/Y：${e.offsetX}, ${e.offsetY}
+    视口 X/Y：${e.clientX}, ${e.clientY}
+    页面 X/Y：${e.pageX}, ${e.pageY}
+    屏幕 X/Y：${e.screenX}, ${e.screenY}`;
 }
 
 inner.addEventListener("mousemove", setCoords);
