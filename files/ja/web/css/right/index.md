@@ -71,7 +71,7 @@ right: unset;
 
 ## 例
 
-<h3 id="Absolute_and_relative_positioning_using_right">絶対位置指定および相対位置指定で right を使用</h3>
+### 絶対位置指定および相対位置指定で right を使用
 
 #### HTML
 
@@ -104,9 +104,9 @@ right: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Absolute_and_relative_positioning_using_right', 500, 220) }}
+{{ EmbedLiveSample('絶対位置指定および相対位置指定で right を使用', 500, 220) }}
 
-<h3 id="Declaring_both_left_and_right">left と right の同時指定</h3>
+### left と right の同時指定
 
 `left` と `right` の両方が宣言されている場合、他の制約条件がそれを妨げない限り、要素は両方を満たすように伸びます。要素が両方を満たすように伸びたり縮んだりしない場合、要素の位置が*過剰指定*のとなり、コンテナーの書字方向に基づいて優先順位が決まります。コンテナーの書字方向が左書きであれば、`left` が優先されます。コンテナーの書字方向が右書きの場合は、`right` が優先されます。
 
@@ -149,7 +149,7 @@ div {
 
 #### 結果
 
-{{ EmbedLiveSample('Declaring_both_left_and_right', 500, 220) }}
+{{ EmbedLiveSample('left と right の同時指定', 500, 220) }}
 
 ## 仕様書
 

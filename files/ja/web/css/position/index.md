@@ -55,7 +55,7 @@ position: unset;
 
 ## 解説
 
-<h3 id="Types_of_positioning">位置の種類</h3>
+### 位置の種類
 
 - **位置指定要素** (positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/computed_value)が `relative`, `absolute`, `fixed`, `sticky` のいずれかである要素です。 (言い換えれば、 `static` 以外の全てです。)
 - **相対位置指定要素** (relatively positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/computed_value)が `relative` である要素です。 {{Cssxref("top")}} および {{Cssxref("bottom")}} プロパティは、通常の位置からの垂直方向のオフセットを指定します。 {{Cssxref("left")}} および {{Cssxref("right")}} プロパティは、水平方向のオフセットを指定します。
@@ -90,7 +90,7 @@ position: unset;
 
 ## 例
 
-<h3 id="Relative_positioning">相対位置指定</h3>
+### 相対位置指定
 
 相対位置指定の要素は文書中の通常の配置から、指定された量だけオフセットしますが、ほかの要素にはオフセットの影響を与えません。以下の例では、 "Two" が通常の位置に空間を得ているように他の要素が配置されることに注意してください。
 
@@ -126,9 +126,9 @@ position: unset;
 }
 ```
 
-{{EmbedLiveSample('Relative_positioning', '', '200px')}}
+{{EmbedLiveSample('相対位置指定', '', '200px')}}
 
-<h3 id="Absolute_positioning">絶対位置指定</h3>
+### 絶対位置指定
 
 相対位置指定の要素も、文書の通常のフローの中に配置されます。それに対して、絶対位置指定の要素はフローから除外されます。つまり、他の要素はこの要素が存在しないかのように配置されます。絶対位置指定の要素は*配置された直近の祖先* (つまり、 `static` ではない直近の祖先) に対して相対的に配置されます。配置された祖先がない場合は、 ICB (initial containing block — [W3C の定義](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)も御覧ください) すなわち文書のルート要素の包含ブロックに対する相対的な配置になります。
 
@@ -197,9 +197,9 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Absolute_positioning', '', '420px')}}
+{{EmbedLiveSample('絶対位置指定', '', '420px')}}
 
-<h3 id="Fixed_positioning">固定位置指定</h3>
+### 固定位置指定
 
 固定位置指定は絶対位置指定に似ていますが、要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)が*ビューポート*によって定義される初期包含ブロックであるという点が異なり、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外 ([CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform) を参照) に設定されている場合は例外で、その場合は祖先が[包含ブロック](/ja/docs/Web/CSS/Containing_block)としてふるまいます。これはよく、ページをスクロールしても同位置に留まり続けるような「浮く」要素 ("floating" element) を作るのに使われます。下の例ではボックス "One" はページの上から 80px、左から 10px の位置に固定されます。スクロールしても、ビューポートに対して同じ位置に留まり続けます。
 
@@ -268,9 +268,9 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Fixed_positioning', '', '300px')}}
+{{EmbedLiveSample('固定位置指定', '', '300px')}}
 
-<h3 id="Sticky_positioning">粘着位置指定</h3>
+### 粘着位置指定
 
 粘着位置指定は、相対位置指定と固定位置指定を組み合わせたものです。粘着位置指定された要素は、指定したしきい値に達するまでは相対位置指定として、しきい値に達したら固定位置指定として扱われます。例えば・・・
 
@@ -367,7 +367,7 @@ dd + dd {
 
 #### 結果
 
-{{EmbedLiveSample('Sticky_positioning', '', '300px')}}
+{{EmbedLiveSample('粘着位置指定', '', '300px')}}
 
 ## 仕様書
 
