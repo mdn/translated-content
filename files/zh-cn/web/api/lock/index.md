@@ -14,13 +14,13 @@ l10n:
 ## 实例属性
 
 - {{domxref('Lock.mode')}} {{ReadOnlyInline}}
-  - : 返回请求锁时传递给 {{domxref('LockManager.request()')}} 的访问模式。该模式可以是 `"exclusive"`（默认值）或 `"shared"`。
+  - : 返回请求锁时传递给 {{domxref('LockManager.request()')}} 的访问模式。模式可以是 `"exclusive"`（默认值）或 `"shared"`。
 - {{domxref('Lock.name')}} {{ReadOnlyInline}}
   - : 返回请求锁时传递给 {{domxref('LockManager.request()')}} 方法的名称。
 
 ## 示例
 
-以下示例展示如何在对 {{domxref('LockManager.request()')}} 的调用中传递模式和名称属性。{{domxref('LockManager')}} 是 {{domxref('navigator.locks')}} 属性返回的对象。
+以下示例展示如何在对 {{domxref('LockManager.request()')}} 的调用中传递模式和名称参数。{{domxref('LockManager')}} 是 {{domxref('navigator.locks')}} 属性返回的对象。
 
 ```js
 navigator.locks.request("net_db_sync", show_lock_properties);
@@ -32,7 +32,7 @@ navigator.locks.request(
 
 function show_lock_properties(lock) {
   console.log(`锁的名称是：${lock.name}`);
-  console.log(`锁的名称是：${lock.mode}`);
+  console.log(`锁的模式是：${lock.mode}`);
 }
 ```
 
