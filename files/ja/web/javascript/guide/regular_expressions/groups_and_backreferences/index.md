@@ -9,7 +9,7 @@ l10n:
 
 グループは複数のパターンを全体としてグループ化し、グループをキャプチャすることで、正規表現パターンを使用して文字列と一致する場合に、追加の副一致情報を提供します。後方参照は、同じ正規表現で以前に捕捉したグループを参照します。
 
-{{EmbedInteractiveExample("pages/js/regexp-groups-ranges.html")}}
+{{EmbedInteractiveExample("pages/js/regexp-groups-backreferences.html")}}
 
 ## 種類
 
