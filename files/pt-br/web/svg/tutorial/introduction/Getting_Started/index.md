@@ -45,10 +45,10 @@ O processo de renderização inclui o seguinte:
 - A primeira coisa a levar em conta é a ordem de representação dos elementos. A regra globalmente válida para arquivos SVG é que os elementos subsequentes sejam renderizados sobre os anteriores. Quanto mais baixo for um elemento, mais visível ele será.
 - Na web, os arquivos SVG podem ser exibidos diretamente no navegador ou incorporados em arquivos HTML usando vários métodos:
 
-    - Se o HTML for XHTML e entregue como application/xhtml+xml, o SVG poderá ser incorporado diretamente na fonte XML.
-   - O SVG também pode ser incorporado diretamente no HTML.
-   - Pode ser usado com o elemento [`<img>`](/pt-BR/docs/Web/HTML/Element/img)
-   - O arquivo SVG pode ser referenciado com um elemento `object`:
+  - Se o HTML for XHTML e entregue como application/xhtml+xml, o SVG poderá ser incorporado diretamente na fonte XML.
+  - O SVG também pode ser incorporado diretamente no HTML.
+  - Pode ser usado com o elemento [`<img>`](/pt-BR/docs/Web/HTML/Element/img)
+  - O arquivo SVG pode ser referenciado com um elemento `object`:
 
     ```html
     <object data="image.svg" type="image/svg+xml" />
