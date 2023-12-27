@@ -68,7 +68,7 @@ O processo de renderização inclui o seguinte:
 
 Os arquivos SVG são de dois tipos. Arquivos SVG regulares, que são arquivos de texto simples que contêm marcações SVG e têm a extensão recomendada ".svg" (todas em letras minúsculas).
 
-Devido ao enorme tamanho que os arquivos SVG podem atingir quando usados ​​para algumas aplicações (por exemplo, aplicações geográficas), a especificação SVG também permite arquivos SVG compactados com gzip. A extensão recomendada para esses arquivos é “.svgz” (todas em letras minúsculas). Infelizmente, é muito problemático fazer com que arquivos SVG compactados funcionem de maneira confiável em todos os agentes de usuário habilitados para SVG quando servidos a partir de um servidor Microsoft IIS, e o Firefox não pode carregar SVGs compactados do computador local. Evite arquivos SVG compactados, exceto ao publicá-los em um servidor web que você sabe que os servirá corretamente (veja abaixo).
+Devido ao enorme tamanho que os arquivos SVG podem atingir quando usados ​​para algumas aplicações (por exemplo, aplicações geográficas), a especificação SVG também permite arquivos SVG compactados com gzip. A extensão recomendada para esses arquivos é ".svgz" (todas em letras minúsculas). Infelizmente, é muito problemático fazer com que arquivos SVG compactados funcionem de maneira confiável em todos os agentes de usuário habilitados para SVG quando servidos a partir de um servidor Microsoft IIS, e o Firefox não pode carregar SVGs compactados do computador local. Evite arquivos SVG compactados, exceto ao publicá-los em um servidor web que você sabe que os servirá corretamente (veja abaixo).
 
 ### Algumas palavras sobre servidores web para arquivos .svgz
 
