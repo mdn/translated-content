@@ -37,7 +37,7 @@ O processo de renderização inclui o seguinte:
    - Como um dialeto XML, o SVG deve sempre vincular os namespaces corretamente (no atributo xmlns). Consulte a página [Curso intensivo de namespaces](/pt-BR/docs/Web/SVG/Namespaces_Crash_Course) para obter mais informações.
 
 2. O fundo é definido como vermelho desenhando um retângulo [`<rect>`](/pt-BR/docs//Web/SVG/Element/rect) que cobre toda a área da imagem.
-3. Um círculo verde [<circle>](/pt-BR/docs//Web/SVG/Element/circle)com raio de 80px é desenhado no centro do retângulo vermelho (centro do círculo deslocado 150px para a direita e 100px para baixo a partir do canto superior esquerdo).
+3. Um círculo verde [`<circle>`](/pt-BR/docs//Web/SVG/Element/circle)com raio de 80px é desenhado no centro do retângulo vermelho (centro do círculo deslocado 150px para a direita e 100px para baixo a partir do canto superior esquerdo).
 4. O texto "SVG" é desenhado. O interior de cada letra é preenchido com branco. O texto é posicionado definindo uma âncora onde queremos que fique o ponto médio: neste caso, o ponto médio deve corresponder ao centro do círculo verde. Ajustes finos podem ser feitos no tamanho da fonte e na posição vertical para garantir que o resultado final seja esteticamente agradável.
 
 ### Propriedades básicas de arquivos SVG
