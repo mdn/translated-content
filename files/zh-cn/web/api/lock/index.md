@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Locks API")}}{{securecontext_header}}
 
-[Web Locks API](/zh-CN/docs/Web/API/Web_Locks_API) 的 **`Lock`** 接口提供锁的名称和模式。这可能是在 {{domxref('LockManager.request','LockManager.request()')}} 方法的回调中接收到的新请求的锁，也可能是 {{domxref('LockManager.query()')}} 方法返回的队列中的锁请求。
+[Web Locks API](/zh-CN/docs/Web/API/Web_Locks_API) 的 **`Lock`** 接口提供锁的名称和模式。这可能是在 {{domxref('LockManager.request','LockManager.request()')}} 方法的回调中接收到的新请求的锁，也可能是 {{domxref('LockManager.query()')}} 方法返回的活动状态的锁或队列中的锁请求。
 
 {{AvailableInWorkers}}
 
