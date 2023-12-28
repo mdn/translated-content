@@ -299,7 +299,7 @@ Then this specific 'voice' will be stylable like so:
 
 > **メモ:** Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
 
-## Browser Compatibility
+## ブラウザーの互換性
 
 [Browser support for WebVTT and the `<track>` element](http://caniuse.com/webvtt) is fairly good, although some browsers differ slightly in their implementation.
 

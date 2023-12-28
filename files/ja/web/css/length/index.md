@@ -210,4 +210,4 @@ inputElem.addEventListener("change", () => {
 
 - [CSS 値と単位チュートリアル](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [CSS 値と単位リファレンス](/ja/docs/Web/CSS/CSS_Values_and_Units)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)

@@ -108,6 +108,6 @@ max-width: unset;
 
 ## 関連情報
 
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("width")}}, {{cssxref("min-width")}}
 - 対応する論理的プロパティ: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}
