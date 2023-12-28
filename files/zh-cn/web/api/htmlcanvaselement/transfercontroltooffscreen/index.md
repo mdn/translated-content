@@ -3,14 +3,14 @@ title: HTMLCanvasElement.transferControlToOffscreen()
 slug: Web/API/HTMLCanvasElement/transferControlToOffscreen
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 方法 **`HTMLCanvasElement.transferControlToOffscreen()`** 将控制转移到一个在主线程或者 web worker 的 {{domxref("OffscreenCanvas")}} 对象上。
 
-## 用法
+## 语法
 
-```plain
-OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()
+```js-nolint
+transferControlToOffscreen()
 ```
 
 ### 返回值
@@ -38,8 +38,7 @@ gl.commit();
 
 {{Compat}}
 
-## 查阅
+## 参见
 
-- The interface defining this method, {{domxref("HTMLCanvasElement")}}
+- 定义此方法的接口 {{domxref("HTMLCanvasElement")}}
 - {{domxref("OffscreenCanvas")}}
-- {{domxref("WebGLRenderingContext.commit()")}}

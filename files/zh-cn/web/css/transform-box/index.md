@@ -3,7 +3,7 @@ title: transform-box
 slug: Web/CSS/transform-box
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 ## 概述
 

@@ -196,8 +196,6 @@ div:not(.outer) p {
 
 ### `:where()` 例外规则
 
-{{SeeCompatTable}}
-
 The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} always has its specificity replaced with zero.
 
 有如下 CSS 样式声明：
