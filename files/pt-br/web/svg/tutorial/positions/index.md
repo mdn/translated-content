@@ -25,6 +25,7 @@ O elemento
 
 define um retângulo do canto superior esquerdo que se estende por 100px para a direita e 100px para a parte inferior.
 
+### O que são "pixels"?
 
 No caso mais básico, um pixel em um documento SVG é mapeado para um pixel no dispositivo de saída (ou seja, a tela). Mas o SVG não teria o "Escalável" no nome se não houvesse diversas possibilidades de mudar esse comportamento. Assim como os tamanhos de fonte absolutos e relativos em CSS, o SVG define unidades absolutas (aquelas com um identificador dimensional como "pt" ou "cm") e as chamadas unidades de usuário, que não possuem esse identificador e são números simples.
 
