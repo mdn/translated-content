@@ -1,6 +1,7 @@
 ---
 title: contentStyleType
-slug: Web/SVG/Attribute/contentStyleType
+slug: orphaned/Web/SVG/Attribute/contentStyleType
+original_slug: Web/SVG/Attribute/contentStyleType
 ---
 
 « [Página inicial de referência do atributo SVG](/pt-BR/SVG/Attribute)
