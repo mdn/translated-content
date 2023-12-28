@@ -1,13 +1,14 @@
 ---
-title: IDBDatabase.transaction()
+title: "IDBDatabase: transaction() メソッド"
+short-title: transaction()
 slug: Web/API/IDBDatabase/transaction
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: 88241bf466f1025d3c2f4ce2752586dd85d1ae13
 ---
 
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBDatabase")}} インターフェイスの **`transaction`** メソッドは、オブジェクトストアへのアクセスに利用できる {{domxref("IDBTransaction.objectStore")}} メソッドを含むトランザクションオブジェクト ({{domxref("IDBTransaction")}}) を即座に返します。
+**`transaction`** は {{domxref("IDBDatabase")}} インターフェイスのメソッドで、オブジェクトストアへのアクセスに利用できる {{domxref("IDBTransaction.objectStore")}} メソッドを含むトランザクションオブジェクト ({{domxref("IDBTransaction")}}) を即座に返します。
 
 {{AvailableInWorkers}}
 
@@ -81,7 +82,7 @@ transaction(storeNames, mode, options)
 ```js
 let db;
 
-// 我々のデータベースを開きましょう
+// データベースを開く
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
