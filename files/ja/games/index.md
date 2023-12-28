@@ -52,6 +52,6 @@ MDN ゲーム開発センターにようこそ! サイトのこのエリアで�
 - [Mozilla Hacks Blog](https://hacks.mozilla.org/category/games/)
   - : Mozilla Hacks ブログの Games カテゴリには、ゲーム開発に関する興味深い記事が掲載されています。
 
-## See also
+## 関連情報
 
 - [Games section on wiki.mozilla.org](https://wiki.mozilla.org/Platform/Games)
