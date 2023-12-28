@@ -24,7 +24,7 @@ Atomics.isLockFree(size)
 
 ### 返回值
 
-指示操作是否不涉及锁的 `true` 或 `false`。
+`true` 或 `false`，指示操作字节是否不涉及锁。
 
 ## 示例
 
