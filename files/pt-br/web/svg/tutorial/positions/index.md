@@ -11,7 +11,6 @@ Neste artigo, examinamos como os Scalable Vector Graphics (SVG) representam as p
 
 Para todos os elementos, o SVG usa um sistema de coordenadas ou sistema **de grade** semelhante ao usado pelo [canvas](pt-BR/HTML/Canvas) (e por muitas outras rotinas de desenho de computador). Ou seja, o canto superior esquerdo do documento é considerado o ponto (0,0), ou ponto de origem. As posições são então medidas em pixels a partir do canto superior esquerdo, com a direção x positiva voltada para a direita e a direção y positiva voltada para baixo.
 
-
 ![](canvas_default_grid.png)
 
 Observe que isso é um pouco diferente da maneira como você aprendeu a fazer gráficos quando criança (o eixo y é invertido). No entanto, esta é a mesma forma como os elementos em HTML são posicionados (por padrão, os documentos LTR são considerados não os documentos RTL que posicionam X da direita para a esquerda).
