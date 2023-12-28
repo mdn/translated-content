@@ -7,7 +7,6 @@ slug: Web/API/Element/shadowRoot
 
 `Element.shadowRoot` 是只读属性，表示元素挂载的 shadow root。可以使用 {{domxref('Element.attachShadow')}} 给一个已存在的元素添加 shadow root。
 
-
 ## 值
 
 可以是一个{{domxref('ShadowRoot')}}实例对象，但如果一个 shadow root 的 {{domxref("ShadowRoot.mode", "mode")}}被设置为 `closed`那么它的值将会是 `null`。(详情请见 {{domxref("Element.attachShadow")}} ).
