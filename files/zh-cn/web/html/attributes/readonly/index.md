@@ -2,7 +2,7 @@
 title: HTML 属性：readonly
 slug: Web/HTML/Attributes/readonly
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: b1699bac6bc35d0958734ff5e982f5f35974f448
 ---
 
 {{HTMLSidebar}}
