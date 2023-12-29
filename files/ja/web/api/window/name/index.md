@@ -34,7 +34,7 @@ window.name = "lab_view";
 
 > **メモ:** `window.name` は保存される全ての値を `toString` メソッドにより文字列表現に変換します。
 
-## 例
+### 例
 
 ```html
 <script>
