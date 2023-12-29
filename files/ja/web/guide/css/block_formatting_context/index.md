@@ -28,7 +28,7 @@ slug: Web/Guide/CSS/Block_formatting_context
 
 - 内部の浮動要素を収めます。
 - 外部の浮動要素を追いやります。
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)を抑止します。
+- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)を抑止します。
 
 > **メモ:** フレックス／グリッドコンテナー ({{ cssxref("display") }}: flex/grid/inline-flex/inline-grid) は新しいフレックス／グリッド整形コンテキストを確立します。これは、レイアウト以外はブロック整形コンテキストに類似しています。フレックス／グリッドコンテナーの中に利用できる浮動子要素はありませんが、外部の浮動要素を除外したり、マージンの折りたたみを抑制したりすることはできます。
 
@@ -164,7 +164,7 @@ inline-block で width:\<percentage> を使用するよりも、この場合は�
 
 ### マージンの相殺
 
-新しい BFC を作成すると、隣接する 2 つの div 間の[マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)を避けることができます。
+新しい BFC を作成すると、隣接する 2 つの div 間の[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)を避けることができます。
 
 #### HTML
 
@@ -210,11 +210,11 @@ inline-block で width:\<percentage> を使用するよりも、この場合は�
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
   - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [計算値](/ja/docs/Web/CSS/computed_value)

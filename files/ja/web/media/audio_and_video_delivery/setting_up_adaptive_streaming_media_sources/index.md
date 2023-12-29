@@ -242,7 +242,7 @@ http://media.example.com/segment2.ts
 
 > **メモ:** Comprehensive information on how to encode media for Apple's HLS format can be found on [Apple's Developer Pages](https://developer.apple.com/streaming/).
 
-## See Also
+## 関連情報
 
 Further resources on adaptive streaming.
 

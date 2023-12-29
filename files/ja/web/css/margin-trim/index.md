@@ -1,38 +1,61 @@
 ---
 title: margin-trim
 slug: Web/CSS/margin-trim
+l10n:
+  sourceCommit: de76d381cb79a61813378963b66d98f68e74381c
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
-`margin-trim` プロパティは、包含ブロックがその子のマージンを包含ブロックの縁に隣接する部分で切り取るすることを可能にします。
+`margin-trim` プロパティにより、コンテナーの辺に隣接する子のマージンを切り取ることができます。
 
 ## 構文
 
 ```css
 margin-trim: none;
-margin-trim: in-flow;
-margin-trim: all;
+margin-trim: block;
+margin-trim: block-start;
+margin-trim: block-end;
+margin-trim: inline;
+margin-trim: inline-start;
+margin-trim: inline-end;
 
 /* グローバル値 */
 margin-trim: inherit;
 margin-trim: initial;
 margin-trim: revert;
+margin-trim: revert-layer;
 margin-trim: unset;
 ```
 
 ## 値
 
 - `none`
+
   - : マージンは包含ブロックで切り取られません。
-- `in-flow`
 
-  - : このボックスに含まれるフロー内のボックスでは、ボックスの縁に隣接するブロック軸のマージンがゼロに切り捨てられます。
+- `block`
 
-    また、そのようなマージンで相殺されたマージンは切り捨てられます。
+  - : コンテナーの辺に隣接するブロックの子に指定されたマージンは、コンテナーに指定されたマージンに影響を与えることなく、ゼロに切り詰められます。
 
-- `all`
-  - : 包含ブロックのコンテンツの縁とマージンが一致しているフロー内のボックスや浮動要素のマージンを切り取ります。
+- `block-start`
+
+  - : コンテナーの端にある最初の子ブロックのマージンはゼロに切り詰められます。
+
+- `block-end`
+
+  - : コンテナーの端にある最後の子ブロックのマージンはゼロに切り詰められます。
+
+- `inline`
+
+  - : コンテナーの辺に隣接するインラインの子に指定されたマージンは、行の始まりと終わりの空間に影響を与えることなく、ゼロに切り詰められます。
+
+- `inline-start`
+
+  - : コンテナーの辺と最初のインラインの子との間のマージンはゼロに切り詰められます。
+
+- `inline-end`
+  - : コンテナーの辺と最後のインラインの子との間のマージンはゼロに切り詰められます。
 
 ## 公式定義
 
@@ -64,6 +87,7 @@ article > span {
   text-align: center;
   padding: 10px;
   margin-right: 20px;
+  margin-left: 30px;
 }
 ```
 
@@ -72,15 +96,25 @@ article > span {
 ```css
 span:last-child {
   margin-right: 0;
+  margin-left: 0;
 }
 ```
 
 これを実現するために別のルールを書かなければならないのは面倒ですし、柔軟性もありません。代わりに、 `margin-trim` で解決できます。
 
 ```css
- article {
-  margin-trim: in-flow;
-  ...
+article {
+  margin-trim: inline-end;
+  /* … */
+}
+```
+
+同様に、コンテナーのエッジで左マージンを除去する場合は次のようにします。
+
+```css
+article {
+  margin-trim: inline-start;
+  /* … */
 }
 ```
 

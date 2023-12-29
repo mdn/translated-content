@@ -588,4 +588,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

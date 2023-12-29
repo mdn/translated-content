@@ -42,7 +42,7 @@ Rendering in your browser: <math><mrow><mi>x </mi><mo>+ </mo><mphantom><mi>y </m
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{ MathMLElement("mspace") }}
 - {{ MathMLElement("mpadded") }}

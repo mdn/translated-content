@@ -9,6 +9,8 @@ slug: Web/SVG/Element/g
 
 `<g>` 要素に適用された変形はその全ての子要素に対して実行されます。適用された属性は子要素に継承されます。加えて、多数のオブジェクトをグループ化しておくと後に {{SVGElement("use")}} 要素で参照することができます。
 
+## 例
+
 ```css hidden
 html,
 body,
@@ -27,7 +29,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, '100%')}}
+{{EmbedLiveSample('例', 100, '100%')}}
 
 ## 属性
 
