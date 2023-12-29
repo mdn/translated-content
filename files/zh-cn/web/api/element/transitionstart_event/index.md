@@ -1,5 +1,5 @@
 ---
-title: "HTMLElement: transitionstart 事件"
+title: HTMLElement：transitionstart 事件
 slug: Web/API/Element/transitionstart_event
 ---
 

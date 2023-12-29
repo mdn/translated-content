@@ -41,6 +41,6 @@ div.appendChild(elt); // 点击该链接接时不会发送 Referer 请求头
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("HTMLImageElement.referrer")}}、{{domxref("HTMLAreaElement.referrer")}}、{{domxref("HTMLIFrameElement.referrer")}}
+- {{domxref("HTMLImageElement.referrerPolicy")}}、{{domxref("HTMLAreaElement.referrerPolicy")}} 和 {{domxref("HTMLIFrameElement.referrerPolicy")}}

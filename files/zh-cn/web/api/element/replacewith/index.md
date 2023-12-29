@@ -5,7 +5,7 @@ slug: Web/API/Element/replaceWith
 
 {{APIRef("DOM")}}
 
-**`ChildNode.replaceWith()`** 的方法用一套 {{domxref("Node")}} 对象或者 {{domxref("DOMString")}} 对象，替换了该节点父节点下的子节点。{{domxref("DOMString")}} 对象被当做等效的{{domxref("Text")}} 节点插入。
+**`ChildNode.replaceWith()`** 的方法用一套 {{domxref("Node")}} 对象或者字符串对象，替换了该节点父节点下的子节点。字符串对象被当做等效的 {{domxref("Text")}} 节点插入。
 
 ## 语法
 
@@ -23,7 +23,7 @@ replaceWith(param1, param2, /* …, */ paramN)
 ### 异常
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : 无法在层次结构中的指定点插入节点。
+  - : 无法在层次结构中的指定节点处插入节点时抛出。
 
 ## 示例
 

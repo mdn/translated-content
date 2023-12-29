@@ -17,12 +17,13 @@ before(param1, param2, /* …, */ paramN)
 
 ### 参数
 
-- `nodes`
-  - : 一系列的 {{domxref("Node")}} 或者 {{domxref("DOMString")}}
+- `param1`、…、`paramN`
+  - : 一系列的 {{domxref("Node")}} 或者字符串对象。
 
 ### 异常
 
-- {{domxref("HierarchyRequestError")}}: 当节点插入了错误的层级就会出现报错，需要遵循 html 标签的层级关系，
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : 无法在层次结构中的指定节点处插入节点时抛出。
 
 ## 示例
 

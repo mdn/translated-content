@@ -5,9 +5,7 @@ slug: Web/API/Window/cancelAnimationFrame
 
 {{APIRef}}
 
-## 概述
-
-取消一个先前通过调用 {{domxref("window.requestAnimationFrame()")}} 方法添加到计划中的动画帧请求。
+**`window.cancelAnimationFrame()`** 方法取消一个先前通过调用 {{domxref("window.requestAnimationFrame()")}} 方法添加到计划中的动画帧请求。
 
 ## 语法
 
@@ -15,10 +13,14 @@ slug: Web/API/Window/cancelAnimationFrame
 cancelAnimationFrame(requestID)
 ```
 
-## 参数
+### 参数
 
 - `requestID`
-  - : 先前调用{{ domxref("window.requestAnimationFrame()") }}方法时返回的 ID.
+  - : 先前调用 {{domxref("window.requestAnimationFrame()")}} 方法时返回的 ID。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
@@ -59,5 +61,5 @@ cancelAnimationFrame(myReq);
 
 ## 参见
 
-- {{ domxref("window.mozAnimationStartTime") }}
-- {{ domxref("window.requestAnimationFrame()") }}
+- {{domxref("Window.requestAnimationFrame()")}}
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}

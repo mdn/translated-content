@@ -21,7 +21,7 @@ entries()
 
 ### 返回值
 
-返回一个{{jsxref("Iteration_protocols","迭代器")}}。
+返回一个{{jsxref("Iteration_protocols","迭代器", "", 1)}}。
 
 ## 示例
 

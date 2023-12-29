@@ -15,6 +15,11 @@ slug: Web/HTML/Global_attributes/slot
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- HTML [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- HTML {{HTMLElement("slot")}} 元素
+- HTML {{HTMLElement("template")}} 元素
+- CSS {{CSSXref("::slotted")}} 伪元素
+- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
+- [Web 组件](/zh-CN/docs/Web/API/Web_components)
