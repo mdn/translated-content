@@ -17,7 +17,7 @@ replaceWith(param1, param2, /* …, */ paramN)
 
 ### 参数
 
-- `param1`, …, `paramN`
+- `param1`、…、`paramN`
   - : 一系列用来替换的 {{domxref("Node")}} 对象或者字符串对象。
 
 ### 异常

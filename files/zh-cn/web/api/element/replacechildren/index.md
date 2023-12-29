@@ -17,7 +17,7 @@ replaceChildren(param1, param2, /* …, */ paramN)
 
 ### 参数
 
-- `param1`, …, `paramN`
+- `param1`、…、`paramN`
   - : 一组用于替换 `Element` 现有后代的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。若没有指定替代对象时，`Element` 的所有后代都将被清空。
 
 ### 异常
