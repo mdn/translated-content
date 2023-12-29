@@ -68,7 +68,7 @@ outline-style: unset;
 
 ## 例
 
-<h3 id="Setting_outline_style_to_auto">輪郭線のスタイルを auto に設定</h3>
+### 輪郭線のスタイルを auto に設定
 
 `auto` の値は、輪郭線のスタイルが独自のものであることを表します。[仕様書](https://www.w3.org/TR/css-ui-3/#outline-style)によれば、「典型的には、プラットフォーム用のユーザーインターフェイスの既定のスタイル、または、CSS で詳細に記述できるスタイルよりも表現豊かなスタイル 、例えば、輝いて見える半透明の外郭を持つ、輪郭の丸い輪郭線」となっています。
 
@@ -96,9 +96,9 @@ outline-style: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_auto') }}
+{{ EmbedLiveSample('輪郭線のスタイルを auto に設定') }}
 
-<h3 id="Setting_outline_style_to_dashed_and_dotted">輪郭線を dashed と dotted に設定</h3>
+### 輪郭線を dashed と dotted に設定
 
 #### HTML
 
@@ -129,9 +129,9 @@ outline-style: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_dashed_and_dotted') }}
+{{ EmbedLiveSample('輪郭線を dashed と dotted に設定') }}
 
-<h3 id="Setting_outline_style_to_solid_and_double">輪郭線のスタイルを solid と double に設定</h3>
+### 輪郭線のスタイルを solid と double に設定
 
 #### HTML
 
@@ -162,9 +162,9 @@ outline-style: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_solid_and_double') }}
+{{ EmbedLiveSample('輪郭線のスタイルを solid と double に設定') }}
 
-<h3 id="Setting_outline_style_to_groove_and_ridge">輪郭線のスタイルを groove と ridge に設定</h3>
+### 輪郭線のスタイルを groove と ridge に設定
 
 #### HTML
 
@@ -195,9 +195,9 @@ outline-style: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_groove_and_ridge') }}
+{{ EmbedLiveSample('輪郭線のスタイルを groove と ridge に設定') }}
 
-<h3 id="Setting_outline_style_to_inset_and_outset">輪郭線のスタイルを inset と outset に設定</h3>
+### 輪郭線のスタイルを inset と outset に設定
 
 #### HTML
 
@@ -228,7 +228,7 @@ outline-style: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_outline_style_to_inset_and_outset') }}
+{{ EmbedLiveSample('輪郭線のスタイルを inset と outset に設定') }}
 
 ## 仕様書
 

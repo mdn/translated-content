@@ -49,7 +49,7 @@ list-style-image: unset;
 
 ## 例
 
-<h3 id="Using_a_url_value">url 値の使用</h3>
+### url 値の使用
 
 #### HTML
 
@@ -70,9 +70,9 @@ ul {
 
 #### 結果
 
-{{ EmbedLiveSample('Using_a_url_value') }}
+{{ EmbedLiveSample('url 値の使用') }}
 
-<h3 id="Using_a_gradient">グラデーションの使用</h3>
+### グラデーションの使用
 
 #### HTML
 
@@ -94,7 +94,7 @@ ul {
 
 #### 結果
 
-{{ EmbedLiveSample('Using_a_gradient') }}
+{{ EmbedLiveSample('グラデーションの使用') }}
 
 ## 仕様書
 

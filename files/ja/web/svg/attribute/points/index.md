@@ -61,7 +61,7 @@ svg {
   </tbody>
 </table>
 
-### Example
+### 例
 
 ```css hidden
 html,
@@ -103,7 +103,7 @@ svg {
   </tbody>
 </table>
 
-### Example
+### 例
 
 ```css hidden
 html,

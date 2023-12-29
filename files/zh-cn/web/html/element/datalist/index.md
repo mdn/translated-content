@@ -47,10 +47,6 @@ slug: Web/HTML/Element/datalist
 
 {{Compat}}
 
-## Polyfill
-
-以下 Polyfill 旨在支持旧的或者目前不兼容的浏览器：[datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
-
 ## 参见
 
 - {{ HTMLElement("input") }} 元素，它更特殊的 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性;

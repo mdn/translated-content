@@ -9,13 +9,14 @@ The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}}.
 
 构造方法 CustomerEvent() 创建一个新的 {{domxref("CustomEvent")}} 对象。
 
-## Syntax 语法
+## 语法
 
-```
- event = new CustomEvent(typeArg, customEventInit);
+```js-nolint
+new CustomEvent(type)
+new CustomEvent(type, options)
 ```
 
-### Values 参数
+### 参数
 
 - _typeArg_
   - : 一个表示 event 名字的字符串
@@ -29,7 +30,7 @@ The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}}.
 
     <div class="note"><p><em>The <code>CustomEventInit</code></em><em> dictionary also accepts fields from the {{domxref("Event.Event", "EventInit")}} dictionary.</em></p><p>CustomerEventInit 字典参数同样接受来自于 Event 类构造函数的 eventInit 字典参数，如下</p><p>bubbles 一个布尔值，表示该事件能否冒泡</p><p>cancelable 一个布尔值，表示该事件是否可以取消</p></div>
 
-## Example
+## 示例
 
 ```js
 // add an appropriate event listener
@@ -46,51 +47,14 @@ var event = new CustomEvent("cat", {
 obj.dispatchEvent(event);
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## Polyfill
-
-You can polyfill the `CustomEvent()` constructor functionality in Internet Explorer 9 and higher with the following code:
-
-```js
-(function () {
-  try {
-    // a : While a window.CustomEvent object exists, it cannot be called as a constructor.
-    // b : There is no window.CustomEvent object
-    new window.CustomEvent("T");
-  } catch (e) {
-    var CustomEvent = function (event, params) {
-      params = params || {
-        bubbles: false,
-        cancelable: false,
-        detail: undefined,
-      };
-
-      var evt = document.createEvent("CustomEvent");
-
-      evt.initCustomEvent(
-        event,
-        params.bubbles,
-        params.cancelable,
-        params.detail,
-      );
-
-      return evt;
-    };
-
-    CustomEvent.prototype = window.Event.prototype;
-
-    window.CustomEvent = CustomEvent;
-  }
-})();
-```
-
-## See also
+## 参见
 
 - {{domxref("CustomEvent")}}

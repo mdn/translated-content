@@ -17,4 +17,4 @@ slug: Glossary/XMLHttpRequest
 ### 技術リファレンス
 
 - {{domxref("XMLHttpRequest")}} オブジェクト
-- [XMLHttpRequest の使い方についての MDN ドキュメント](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使い方についての MDN ドキュメント](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

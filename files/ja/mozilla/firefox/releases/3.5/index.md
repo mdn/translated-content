@@ -110,7 +110,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 - [HTTP 向けのクロスサイトアクセスコントロール](/ja/docs/Web/HTTP/CORS)
   - : Firefox 3.5 では、サーバーがサポートする場合に、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) によるものも含む HTTP リクエストでドメインを超える動作が可能になりました。
-- [`XMLHttpRequest` のための Progress イベント](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [`XMLHttpRequest` のための Progress イベント](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
   - : Progress イベントが拡張がリクエストの進捗を監視できるようにするために提供されるようになりました。
 - 同期 `XMLHttpRequest`サポートの改善
   - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) と [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) が同期 `XMLHttpRequest中に抑制されるようになりました。`
