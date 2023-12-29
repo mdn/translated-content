@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Element`** 是一个通用性非常强的基类，所有 {{DOMxRef("Document")}} 对象下的对象都继承自它。这个接口描述了所有相同种类的元素所普遍具有的方法和属性。一些接口继承自 `Element` 并且增加了一些额外功能的接口描述了具体的行为。
+**`Element`** 是最通用的基类，{{DOMxRef("Document")}} 中的所有元素对象（即表示元素的对象）都继承自它。它只具有各种元素共有的方法和属性。更具体的类则继承自 `Element`。
 
-例如，{{DOMxRef("HTMLElement")}} 接口是所有 HTML 元素的基本接口，而 {{DOMxRef("SVGElement")}} 接口是所有 SVG 元素的基础。大多数功能是在这个类的更深层级的接口中被进一步制定的。
+例如，{{DOMxRef("HTMLElement")}} 接口是所有 HTML 元素的基本接口。同样，{{DOMxRef("SVGElement")}} 接口是所有 SVG 元素的基本接口，而 {{DOMxRef("MathMLElement")}} 接口则是 MathML 元素的基础接口。大多数功能是在这个类的更深层级的接口中被进一步制定的。
 
 在 Web 平台的领域以外的语言，比如 XUL，通过 `XULElement` 接口，同样也实现了 `Element` 接口。
 
@@ -58,7 +58,7 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
     > **备注：** 在 Firefox 3.5 及更早版本中，HTML 元素不在命名空间中。在以后的版本中，HTML 元素在 HTML 树和 XML 树中都属于 [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) 命名空间。
 
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
-  - : 一个 {{DOMxRef("Element")}}，树中紧跟给定元素的元素，如果没有同级节点，则为 `null`。
+  - : 一个 `Element`，树中紧跟给定元素的元素，如果没有同级节点，则为 `null`。
 - {{DOMxRef("Element.outerHTML")}}
   - : 一个字符串，代表元素的标记（包括其内容）。作为 setter 使用时，将用从给定字符串解析出的节点替换元素。
 - {{DOMxRef("Element.part")}}
@@ -66,7 +66,7 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : 代表元素命名空间前缀的字符串，如果没有指定前缀，则为 `null`。
 - {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
-  - : 一个 {{DOMxRef("Element")}}，树中紧靠给定元素的元素，如果没有同级元素，则为 `null`。
+  - : 一个 `Element`，树中紧靠给定元素的元素，如果没有同级元素，则为 `null`。
 - {{DOMxRef("Element.scrollHeight")}} {{ReadOnlyInline}}
   - : 元素滚动视图高度的数值。
 - {{DOMxRef("Element.scrollLeft")}}
@@ -80,7 +80,7 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 - {{DOMxRef("Element.scrollWidth")}} {{ReadOnlyInline}}
   - : 代表元素滚动视图宽度的数值。
 - {{DOMxRef("Element.shadowRoot")}} {{ReadOnlyInline}}
-  - : 返回元素托管的开放影子根；如果没有开放影子根，则返回 null。
+  - : 返回元素挂载的开放影子根；如果没有开放影子根，则返回 null。
 - {{DOMxRef("Element.slot")}}
   - : 返回元素插入的影子 DOM 插槽的名称。
 - {{DOMxRef("Element.tagName")}} {{ReadOnlyInline}}
@@ -153,13 +153,13 @@ _`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
 - {{domxref("Element.ariaRowIndex")}}
   - : 反映 [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性的字符串，它定义了元素的行索引或相对于表格、网格或树状网格中总行数的位置。
 - {{domxref("Element.ariaRowIndexText")}} {{experimental_inline}}
-  - : 反映 [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindext) 属性的字符串，它定义了 aria-rowindex 的人类可读文本替代。
+  - : 反映 [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) 属性的字符串，它定义了 aria-rowindex 的人类可读文本替代。
 - {{domxref("Element.ariaRowSpan")}}
   - : 反映 [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨行数。
 - {{domxref("Element.ariaSelected")}}
-  - : 反映 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected)属性的字符串，表示具有选定状态的元素的当前“选定”状态。
+  - : 反映 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性的字符串，表示具有选定状态的元素的当前“选定”状态。
 - {{domxref("Element.ariaSetSize")}}
-  - : 反映 [`aria-setize`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-setize) 属性的字符串，该属性定义了当前列表项或树状项集合中的项数。
+  - : 反映 [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) 属性的字符串，该属性定义了当前列表项或树状项集合中的项数。
 - {{domxref("Element.ariaSort")}}
   - : 反映 [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性的字符串，表示表格或网格中的项目是按升序还是降序排序。
 - {{domxref("Element.ariaValueMax")}}
@@ -173,7 +173,7 @@ _`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
 
 ## 实例方法
 
-_`Element` 继承其父级 {{DOMxRef("Node")}} 和父级 {{DOMxRef("EventTarget")}} 的方法。_
+_`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}} 的方法。_
 
 - {{DOMxRef("Element.after()")}}
   - : 在 `Element` 父节点的子节点列表中插入一组 {{domxref("Node")}} 对象或字符串，位于 `Element` 之后。
@@ -186,9 +186,9 @@ _`Element` 继承其父级 {{DOMxRef("Node")}} 和父级 {{DOMxRef("EventTarget"
 - {{DOMxRef("Element.before()")}}
   - : 在 `Element` 父节点的子节点列表中插入一组 {{domxref("Node")}} 对象或字符串，位于 `Element` 之前。
 - {{DOMxRef("Element.closest()")}}
-  - : 返回 {{DOMxRef("Element")}} 当前元素（或当前元素本身）最接近的祖先，且与参数中给定的选择器匹配。
+  - : 返回 `Element` 当前元素（或当前元素本身）最接近的祖先，且与参数中给定的选择器匹配。
 - {{DOMxRef("Element.computedStyleMap()")}}
-  - : 返回一个 {{DOMxRef("StylePropertyMapReadOnly")}} 接口，该接口提供 CSS 声明块的只读表示，可替代 {{DOMxRef("CSSStyleDeclaration")}} 。
+  - : 返回一个 {{DOMxRef("StylePropertyMapReadOnly")}} 接口，该接口提供 CSS 声明块的只读表示，可替代 {{DOMxRef("CSSStyleDeclaration")}}。
 - {{DOMxRef("Element.getAnimations()")}}
   - : 返回元素当前活动的动画对象数组。
 - {{DOMxRef("Element.getAttribute()")}}
@@ -198,7 +198,7 @@ _`Element` 继承其父级 {{DOMxRef("Node")}} 和父级 {{DOMxRef("EventTarget"
 - {{DOMxRef("Element.getAttributeNode()")}}
   - : 从当前节点获取指定属性的节点表示，并以 {{DOMxRef("Attr")}} 的形式返回。
 - {{DOMxRef("Element.getAttributeNodeNS()")}}
-  - : 从当前节点读取指定名称和命名空间的属性的节点表示，并以 {{DOMxRef("Attr")}}} 的形式返回。
+  - : 从当前节点读取指定名称和命名空间的属性的节点表示，并以 {{DOMxRef("Attr")}} 的形式返回。
 - {{DOMxRef("Element.getAttributeNS()")}}
   - : 从当前节点读取指定名称空间和名称的属性值，并以字符串形式返回。
 - {{DOMxRef("Element.getBoundingClientRect()")}}
