@@ -38,7 +38,7 @@ MathML の `<mtd>` 要素は表組み・行列のセルを表します。{{ Math
 
 {{Specifications}}
 
-## See also
+## 関連情報
 
 - {{ MathMLElement("mtable") }}
 - {{ MathMLElement("mtr") }}
