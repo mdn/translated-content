@@ -102,7 +102,7 @@ vertical-align: unset;
 
 ## 例
 
-<h3 id="Basic_example">基本的な例</h3>
+### 基本的な例
 
 #### HTML
 
@@ -144,9 +144,9 @@ img.middle {
 
 #### 結果
 
-{{EmbedLiveSample("Basic_example")}}
+{{EmbedLiveSample("基本的な例")}}
 
-<h3 id="Vertical_alignment_in_a_line_box">行ボックス内での垂直方向の配置</h3>
+### 行ボックス内での垂直方向の配置
 
 #### HTML
 
@@ -191,9 +191,9 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Vertical_alignment_in_a_line_box", 1200, 160)}}
+{{EmbedLiveSample("行ボックス内での垂直方向の配置", 1200, 160)}}
 
-<h3 id="Vertical_alignment_in_a_table_cell">表のセル内での垂直方向の配置</h3>
+### 表のセル内での垂直方向の配置
 
 #### HTML
 
@@ -241,7 +241,7 @@ td {
 
 #### 結果
 
-{{EmbedLiveSample("Vertical_alignment_in_a_table_cell", 1200, 230)}}
+{{EmbedLiveSample("表のセル内での垂直方向の配置", 1200, 230)}}
 
 ## 仕様書
 

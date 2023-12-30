@@ -76,7 +76,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 > **メモ:** In extension background scripts, the only properties that are available are tabId and **windowId.**
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 

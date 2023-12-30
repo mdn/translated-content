@@ -2132,7 +2132,7 @@
 /ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型	/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 /ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/JavaScript/Objects/Inheritance	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
-/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ja/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/非同期	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/How_browsers_work
