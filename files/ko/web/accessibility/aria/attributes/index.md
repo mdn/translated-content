@@ -1,7 +1,6 @@
 ---
 title: ARIA 상태와 속성
 slug: Web/Accessibility/ARIA/Attributes
-page-type: landing-page
 ---
 
 이 문서는 MDN에서 논의된 모든 <abbr>WAI-ARIA</abbr> 속성들을 다루는 참조 페이지를 나열합니다.
