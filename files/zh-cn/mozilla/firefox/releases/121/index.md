@@ -2,7 +2,7 @@
 title: Firefox 121 的开发者说明
 slug: Mozilla/Firefox/Releases/121
 l10n:
-  sourceCommit: d0633d8d5509e827ca5421d9cee6ab5cc68444d9
+  sourceCommit: 6534b4d3f496ff00832e465de36e7488188d0776
 ---
 
 {{FirefoxSidebar}}
