@@ -2,7 +2,7 @@
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+  sourceCommit: ec9fab3524d17932694856be045c9e50168821fd
 ---
 
 {{JSRef}}
