@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- `<iframes>` 现已支持[懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)，这允许开发者提示特定的 `<iframe>` 仅在可见时才进行加载。这可以减少页面加载时需要获取的资源（某些 `<iframe>` 可能根本不需要获取）以加快初始加载的时间。提示可以通过 `<iframe>` 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性或 JavaScript 中的 {{domxref("HTMLIFrameElement.loading")}} 属性提供。（[Firefox bug 1622090](https://bugzil.la/1622090)）。
+- `<iframe>` 现已支持[懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)，这允许开发者提示特定的 `<iframe>` 仅在可见时才进行加载。这可以减少页面加载时需要获取的资源（某些 `<iframe>` 可能根本不需要获取）以加快初始加载的时间。提示可以通过 `<iframe>` 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性或 JavaScript 中的 {{domxref("HTMLIFrameElement.loading")}} 属性提供。（[Firefox bug 1622090](https://bugzil.la/1622090)）。
 
 ### CSS
 
@@ -48,19 +48,19 @@ l10n:
 
 ### WebAssembly
 
-- WebAssembly 现已支持尾调用优化，使用新的 `return_call` 和 `return_call_indirect` 替代 [`call`](/zh-CN/docs/WebAssembly/Reference/Control_flow/call) 指令。这提高了性能，减少了堆栈空间的使用，并增强了与使用尾调用的编程语言的兼容性。([Firefox bug 1858855](https://bugzil.la/1846789))。
+- WebAssembly 现已支持尾调用优化，使用新的 `return_call` 和 `return_call_indirect` 替代 [`call`](/zh-CN/docs/WebAssembly/Reference/Control_flow/call) 指令。这提高了性能，减少了堆栈空间的使用，并增强了与使用尾调用的编程语言的兼容性。（[Firefox bug 1858855](https://bugzil.la/1846789)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
 
 #### WebDriver BiDi
 
 - 添加了 [`browsingContext.contextDestroyed`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextDestroyed) 事件，该事件在丢弃浏览上下文时触发（[Firefox bug 1694390](https://bugzil.la/1694390)）。
-- 添加了对 [`script.callFunction`](https://w3c.github.io/webdriver-bidi/#command-script-callFunction) 和 [`script.evaluate`](https://w3c.github.io/webdriver-bidi/#command-script-evaluate) 命令的 `userActivation` 参数的支持，该参数允许在模拟用户操作时执行 JavaScript。（[Firefox bug 1845488](https://bugzil.la/1845488))。
+- 添加了对 [`script.callFunction`](https://w3c.github.io/webdriver-bidi/#command-script-callFunction) 和 [`script.evaluate`](https://w3c.github.io/webdriver-bidi/#command-script-evaluate) 命令的 `userActivation` 参数的支持，该参数允许在模拟用户操作时执行 JavaScript。（[Firefox bug 1845488](https://bugzil.la/1845488)）。
 - 添加了对 [`browsingContext.userPromptOpened`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-userPromptOpened) 事件的 `defaultValue` 字段的支持，该字段允许用户检索提示的默认值（[Firefox bug 1851761](https://bugzil.la/1851761)）。
 - 将 [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) 命令的 `viewportOptions` 参数重命名为 `boxOptions`（[Firefox bug 1859258](https://bugzil.la/1859258)）。
 - 移除了 [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) 命令的 `scrollIntoView` 参数，其已被下面的 `origin` 参数取代（[Firefox bug 1862649](https://bugzil.la/1862649)）。
 - 添加了对 [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) 命令的 `origin` 参数的支持，该参数允许定义屏幕截图的原点和边界。接受的值为 `"document"` 和 `"viewport"`（[Firefox bug 1840999](https://bugzil.la/1840999)）。
-- 在序列化 `Window` 对象时，现在序列化后的值包含一个 `context` 属性，该属性被设置为 `Window` 对象的上下文 id，该 id 也可以与 Marionette 交换以引用特定的窗口和框架（[Firefox bug 1841049](https://bugzil.la/1841049)）。
+- 在序列化 `Window` 对象时，序列化后的值现包含 `context` 属性，该属性被设置为 `Window` 对象的上下文 id，该 id 也可以与 Marionette 交换以引用特定的窗口和框架（[Firefox bug 1841049](https://bugzil.la/1841049)）。
 - 修复了嵌套在数据结构（数组、映射等）中的节点（Node）的序列化失败的错误（[Firefox bug 1861000](https://bugzil.la/1861000)）。
 - 修复了 [`browsingContext.navigate`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-navigate) 命令会返回不正确的导航 id 的错误（[Firefox bug 1861655](https://bugzil.la/1861655)）。
 
