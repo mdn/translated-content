@@ -30254,10 +30254,6 @@
     "modified": "2020-10-15T21:36:10.884Z",
     "contributors": ["mfuji09", "silverskyvicto", "hashedhyphen", "clariroid"]
   },
-  "conflicting/Web/XSLT/Transforming_XML_with_XSLT": {
-    "modified": "2019-03-18T20:50:34.704Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "orphaned/Code_snippets/Toolbar": {
     "modified": "2019-03-23T23:46:21.932Z",
     "contributors": ["teoli", "Mgjbot", "Shimono"]
