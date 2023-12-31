@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-如果给定的预期值等于旧值，**`Atomics.exchange()`** 静态方法会用给定的值替换数组上指定位置的值，并返回该位置的旧值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
+如果给定的预期值等于旧值，**`Atomics.exchange()`** 静态方法会用给定的值替换数组上指定位置的值，并返回该位置的旧值，无论其是否等于预期的值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
 
 {{EmbedInteractiveExample("pages/js/atomics-compareexchange.html")}}
 
