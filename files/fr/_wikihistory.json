@@ -27410,9 +27410,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "orphaned/Web/API/Window/defaultStatus": {
-    "modified": "2020-08-26T10:36:08.889Z",
-    "contributors": ["Voulto"]
   }
 }
