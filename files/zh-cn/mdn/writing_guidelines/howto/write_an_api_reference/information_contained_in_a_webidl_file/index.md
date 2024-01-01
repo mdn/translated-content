@@ -167,9 +167,7 @@ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
 
 > **备注：** 此信息特定于 Gecko，应仅在浏览器兼容性部分中使用。
 
-In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.
-
-在 Gecko 中，部分接口的可用性（包括其构造函数、属性和方法）可能受到首选项（通常称为“pref”）的控制。这也在 WebIDL 中进行标记。
+在 Gecko 中，部分接口的可用性（包括其构造函数、属性和方法）可能受到首选项（通常称为“pref”）的控制。这也被标记在 WebIDL 中。
 
 ```webidl
 [Pref="media.webspeech.synth.enabled"]
@@ -180,7 +178,7 @@ interface SpeechSynthesis {
 };
 ```
 
-这里 `media.webspeech.synth.enabled` 控制 `SpeechSynthesis` 接口及其属性（完整列表有超过 3 个）。
+这里，`media.webspeech.synth.enabled` 控制 `SpeechSynthesis` 接口及其属性（完整列表有超过 3 个）。
 
 > **备注：** 首选项的默认值不能直接在 WebIDL 中使用（它可能因使用 Gecko 的产品而不同）。
 
@@ -205,7 +203,7 @@ interface MyInterface {
 readonly attribute MediaError? error;
 ```
 
-在以上示例中，属性的名称是 `error`；在文档中，我们将其称为 `HTMLMediaElement.error`，因为它属于 `HTMLMediaElement` 接口。链接到页面可以使用 \\{{domxref('HTMLMediaElement.error')}} **带有**接口前缀，也可以在上下文明确且不含糊时使用 \\{{domxref('HTMLMediaElement.error', 'error')}} 而**不带**接口前缀。
+在以上示例中，属性的名称是 `error`；在文档中，我们将其称为 `HTMLMediaElement.error`，因为它属于 `HTMLMediaElement` 接口。要链接到该页面，可以使用**带有**接口前缀的 \\{{domxref('HTMLMediaElement.error')}} ，也可以在上下文明确且不清晰时使用**不带**接口前缀的 \\{{domxref('HTMLMediaElement.error', 'error')}}。
 
 ### 属性类型
 
@@ -239,7 +237,7 @@ readonly attribute MediaError? error;
 
 在某些情况下，例如当某些值是非法的时，设置新值可能会导致引发异常。这需要使用 `[SetterThrows]` 注释标记。当这种情况发生时，属性页面的语法部分*必须*有一个异常子部分。异常列表和引发它们的条件在该 API 的规范中列出，作为文本信息。
 
-注意，某些异常没有明确标记，而由 JavaScript 绑定定义。[尝试设置非法的枚举值](https://heycam.github.io/webidl/#es-enumeration)（映射到 JavaScript {{jsxref('String')}}）会引发 {{jsxref('TypeError')}} 异常。这必须记录下来，但是在 WebIDL 文档中只是隐式标记。
+注意，一些异常没有被明确标记，而由 JavaScript 绑定定义。尝试将参数[设置为非法的枚举值](https://webidl.spec.whatwg.org/#es-enumeration)（映射到 JavaScript {{jsxref('String')}}）会引发 {{jsxref('TypeError')}} 异常。这必须记录下来，但是这在 WebIDL 文档中只会被隐式标记。
 
 getter 抛出异常的情况并不常见，但在少数情况下会发生。在这种情况下，使用 `[GetterThrows]` 注释。在这里，属性页面的语法部分*必须*有一个异常子部分。
 
@@ -304,28 +302,28 @@ _**`HTMLMediaElement.buffered`** 只读属性返回一个新的 \\{{domxref("Tim
 
 ### 在 worker 中的可用性
 
-Individual property availability in workers is also found in the WebIDL. For a property, the default is the same availability as the `interface` (that is available to {{domxref('Window')}} context only if nothing special is marked) or as the `partial interface` it is defined in.
+属性在 worker 中的可用性也可以在 WebIDL 中找到。对于属性，默认情况下与 `interface` 相同（即，如果没有特殊标记，则仅在 {{domxref('Window')}} 上下文中可用）或者与定义该属性的 `partial interface` 相同。
 
-For documentation, the subpage must contain a sentence indicating if it is available or not in Web workers, right before the "Syntax" section.
+对于文档，子页面必须在“语法”部分之前包含一句话，指出它是否在 Web worker 中可用。
 
 ### 首选项
 
-> **Note:** This information is specific to Gecko and should only be used in the Browser compatibility section.
+> **备注：** 此信息特定于 Gecko，应仅在浏览器兼容性部分中使用。
 
-In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
+在 Gecko 中，某些属性的可用性可能受到首选项的控制。这也被标记在 WebIDL 中。
 
 ```webidl
 [Pref="media.webvtt.enabled"]
     readonly attribute TextTrackList? textTracks;
 ```
 
-Here `media.webvtt.enabled` controls the `textTracks` property.
+这里，`media.webvtt.enabled` 控制 `textTracks` 属性。
 
-> **Note:** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).
+> **备注：** 首选项的默认值不会直接记录在 WebIDL 中（它可能因使用 Gecko 的产品而不同）。
 
 ## 方法
 
-You can recognize the definition of a method by the presence of parentheses after the name.
+你可以通过名称后的括号来识别方法的定义。
 
 ### 方法名
 
@@ -333,7 +331,7 @@ You can recognize the definition of a method by the presence of parentheses afte
 DOMString canPlayType(DOMString type);
 ```
 
-The name of the method is `canPlayType`, and we will refer to it as `HTMLMediaElement.canPlayType()` (with the parentheses that indicate that it is a method) in the docs, as it belongs to the `HTMLMediaElement` interface. Linking to the page is either done **with** the interface prefix using \\{{domxref('HTMLMediaElement.canPlayType()')}}, or **without** the prefix using \\{{domxref('HTMLMediaElement.canPlayType', 'canPlayType()')}} when the context is obvious and unambiguous. The parentheses should always be included.
+方法的名称是 `canPlayType`，而因为它属于 `HTMLMediaElement` 接口，我们可以在文档中将其称为 `HTMLMediaElement.canPlayType()`（带有括号，表示它是一个方法）。要链接到该页面，可以使用**带有**接口前缀的 \\{{domxref('HTMLMediaElement.canPlayType()')}}，也可以在上下文明确且清晰时使用**不带**接口前缀的 \\{{domxref('HTMLMediaElement.canPlayType', 'canPlayType()')}}。括号应始终包含在内。
 
 ### 参数
 
@@ -343,7 +341,7 @@ TextTrack addTextTrack(TextTrackKind kind,
                        optional DOMString language = "");
 ```
 
-The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g. a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{OptionalInline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
+方法的参数在方法子页面的语法部分中列出。在 WebIDL 中，它们在括号之间以逗号分隔的列表形式按顺序列出。每个参数都有一个名称（如上所示）和一个类型（例如 `'?'` 表示 `null` 值是有效的）。如果标记为 `optional`，则该参数在方法调用中是可选的，并且当它在语法部分中列出时必须包含 \\{{OptionalInline}} 标志。参数的默认值在等号（`'='`）之后列出。
 
 ### 返回值类型
 
@@ -351,9 +349,9 @@ The parameters of a method are listed in the Syntax section of the method sub-pa
 DOMString canPlayType(DOMString type);
 ```
 
-The return value type is indicated first inside the parentheses — in the above case the value is an object of type `DOMString`. if followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
+返回值类型在方法名称之前指定——在上面的示例中，其为 `DOMString` 类型的对象。如果后面跟着一个问号（`'?'`），则还可以返回 `null` 值，并且文档必须解释*何时*可能发生这种情况。如果没有问号（如此处所示），则返回值不能为 `null`。
 
-The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple "None.".
+关键字 `void` 表示没有返回值。它不是返回值类型。如果 WebIDL 条目读取 `void`，则文档中的*返回值*部分应该只包含一句“无（\{{jsxref("undefined")}}）。”。
 
 ### 抛出异常
 
@@ -362,23 +360,23 @@ The keyword `void` means that there is no return value. It is not a return value
    void fastSeek(double time);
 ```
 
-Some methods can throw exceptions. This is marked using the `[Throws]` annotation. When this happens, the Syntax section of the method page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
+一些方法可能会抛出异常。这使用 `[Throws]` 注释标记。当这种情况发生时，方法页面的语法部分*必须*有一个异常子部分。异常列表和引发它们的条件在该 API 的规范中以文本信息列出。
 
-Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{jsxref('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
+注意，一些异常没有被明确标记，而由 JavaScript 绑定定义。尝试将参数[设置为非法的枚举值](https://webidl.spec.whatwg.org/#es-enumeration)（映射到 JavaScript {{jsxref('String')}}）会引发 {{jsxref('TypeError')}} 异常。这必须记录下来，但是这在 WebIDL 文档中只会被隐式标记。
 
-Have a look at one of these [_Exceptions_ sections](/zh-CN/docs/Web/API/SubtleCrypto/importKey#exceptions).
+请参考其中一个[*异常*部分](/zh-CN/docs/Web/API/SubtleCrypto/importKey#异常)。
 
 ### 在 worker 中的可用性
 
-Individual method availability in workers is also found in the WebIDL. For a method, the default is the same availability as the `interface` (that is available to {{domxref('Window')}} context only if nothing special is marked) or as the `partial interface` it is defined it.
+方法在 worker 中的可用性也可以在 WebIDL 中找到。对于方法，默认情况下与 `interface` 相同（即，如果没有特殊标记，则仅在 {{domxref('Window')}} 上下文中可用）或者与定义该方法的 `partial interface` 相同。
 
-For the documentation, the sub-page must contain a sentence indicating if it is available in Web workers, right before the Syntax section.
+对于文档，子页面必须在“语法”部分之前包含一句话，指出它是否在 Web worker 中可用。
 
 ### 首选项
 
-> **Note:** this information is specific to Gecko and should only be used in the Browser compatibility section.
+> **备注：** 此信息特定于 Gecko，应仅在浏览器兼容性部分中使用。
 
-In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
+在 Gecko 中，某些方法的可用性可能受到首选项的控制。这也被标记在 WebIDL 中。
 
 ```webidl
 [Pref="media.webvtt.enabled"]
@@ -387,34 +385,34 @@ In Gecko, the availability of some properties may be controlled by a preference.
                           optional DOMString language = "");
 ```
 
-Here `media.webvtt.enabled` controls the `addTextTrack()` method.
+这里，`media.webvtt.enabled` 控制 `addTextTrack()` 方法。
 
-> **Note:** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
+> **备注：** 首选项的默认值不会直接记录在 WebIDL 中（它可能因使用 Gecko 的产品而不同）。
 
 ## 特殊方法
 
-Some methods are not listed as regular methods in WebIDL but instead as special keywords, which translate to specific standard JavaScript methods.
+一些方法在 WebIDL 中并未被列为常规方法，而是作为特殊关键字，这些关键字会被转换为特定的标准 JavaScript 方法。
 
 ### toString() 和 toJSON()
 
-A stringifier specifies how an object based on an interface is resolved in contexts expecting a string. (See the [Stringifiers](#stringifiers) section.) Additionally, the keyword is mapped to `toString()` and defined as:
+字符串化器（stringifier）指定了基于接口的对象在期望字符串的上下文中因如何解析。（参见[字符串化器](#字符串化器)部分。）此外，该关键字被映射到 `toString()` 并被定义为：
 
 ```webidl
 stringifier;
 ```
 
-The `toString()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Range.toString()")}})
+`toString()` 方法就像其他方法一样被列在接口中，并且有自己的子页面（例如 {{domxref("Range.toString()")}}）。
 
-A jsonifier is mapped to `toJSON()` and defined as:
+JSON 化器（jsonifier）被映射到 `toJSON()` 并被定义为：
 
 ```webidl
-jsonifier; // Gecko version
-serializer; // Standard version
+jsonifier; // Gecko 版本
+serializer; // 标准版本
 ```
 
-The `toJSON()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})
+`toJSON()` 方法就像其他方法一样被列在接口中，并且有自己的子页面（例如 {{domxref("Performance.toJSON()")}}）。
 
-> **Note:** the WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
+> **备注：** WebIDL 规范使用 `serializer` 而不是 `jsonifier`。这没有在 Gecko 中使用——mozilla-central 中只能找到非标准的早期提案 `jsonifier`。
 
 ### 类迭代器方法
 
@@ -490,7 +488,7 @@ Such an set interface also allows to use the syntax `for (const p in object)` as
 
 Some IDL members indicate special behaviors that should be noted on appropriate pages.
 
-### Stringifiers
+### 字符串化器
 
 In addition to adding the `toString()` method to an interface as described in [toString() and toJSON()](#tostring_and_tojson), stringifiers also indicate that an object instance, when used as a string, returns a string other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.
 
