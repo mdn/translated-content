@@ -26,7 +26,7 @@ new constructor(arg1, arg2, /* …, */ argN)
 - `constructor`
   - : 一个指定对象实例的类型的类或函数。
 - `arg1`、`arg2`、……、`argN`
-  - : 一个用于被 `constructor` 调用的值列表。`new Foo` 与 `new Foo()` 等价，例如：如果没有指定参数列表，则在不带参数的情况下调用 `Foo`。
+  - : 一个用于被 `constructor` 调用的值列表。`new Foo` 与 `new Foo()` 等价，换句话说：如果没有指定参数列表，则在不带参数的情况下调用 `Foo`。
 
 ## 描述
 
@@ -37,7 +37,7 @@ new constructor(arg1, arg2, /* …, */ argN)
 
    > **备注：** 因此，通过构造函数创建的所有实例都可以访问添加到构造函数 `prototype` 属性中的属性/对象。
 
-3. 使用给定参数执行构造函数，并将 `newInstance` 绑定为 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的上下文（例如，在构造函数中的所有 `this` 引用都指向 `newInstance`）。
+3. 使用给定参数执行构造函数，并将 `newInstance` 绑定为 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的上下文（也就是说，在构造函数中的所有 `this` 引用都指向 `newInstance`）。
 4. 如果构造函数返回[非原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)，则该返回值成为整个 `new` 表达式的结果。否则，如果构造函数未返回任何值或返回了一个原始值，则返回 `newInstance`。（通常构造函数不返回值，但可以选择返回值，以覆盖正常的对象创建过程。）
 
 [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)只能用 `new` 运算符实例化——尝试不使用 `new` 调用一个类将抛出 `TypeError`。
@@ -78,8 +78,8 @@ console.log(car1.color); // '原色'
 car1.color = "黑色";
 console.log(car1.color); // '黑色'
 
-console.log(car1.__proto__.color); // '原色'
-console.log(car2.__proto__.color); // '原色'
+console.log(Object.getPrototypeOf(car1).color); // '原色'
+console.log(Object.getPrototypeOf(car2).color); // '原色'
 console.log(car1.color); // '黑色'
 console.log(car2.color); // '原色'
 ```
@@ -156,8 +156,8 @@ function Person(name, age, sex) {
 然后实例化了两个新的 `Person` 对象如下：
 
 ```js
-var rand = new Person("兰德·麦克纳利", 33, "男性");
-var ken = new Person("肯·琼斯", 39, "男性");
+const rand = new Person("兰德·麦克纳利", 33, "男性");
+const ken = new Person("肯·琼斯", 39, "男性");
 ```
 
 然后你可以重写 `Car` 的定义，添加一个值为 `Person` 对象的 `owner` 属性，如下：
