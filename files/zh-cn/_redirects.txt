@@ -1856,6 +1856,7 @@
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/clearInterval
 /zh-CN/docs/Web/API/Window/content	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/crypto	/zh-CN/docs/Web/API/crypto_property
+/zh-CN/docs/Web/API/Window/defaultStatus	/zh-CN/docs/orphaned/Web/API/Window/defaultStatus
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozPaintCount	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/onappinstalled	/zh-CN/docs/Web/API/Window/appinstalled_event
