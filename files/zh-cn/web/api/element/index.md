@@ -287,7 +287,7 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 - {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
   - : 执行脚本时触发此事件。
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
-  - : 触发处于 [_hidden until found_](/zh-CN/docs/Web/HTML/Global_attributes/hidden) 状态的元素，此时浏览器即将显示其内容，因为用户已通过“在页面中查找”功能或片段导航找到了该内容。
+  - : 浏览器在（处于[_被找到前隐藏_](/zh-CN/docs/Web/HTML/Global_attributes/hidden)状态的）元素因用户已通过“在页面中查找”功能或片段导航找到了该内容而即将显示时触发。
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
   - : 脚本即将执行时触发此事件。
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
