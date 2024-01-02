@@ -21,9 +21,9 @@ new CustomEvent(type, options)
 - `type`
   - : 提供事件名称的字符串。事件名称区分大小写。
 - `options` {{optional_inline}}
-  - : *除 {{domxref("Event/Event", "Event()")}} 中定义的属性外*，该对象还可以具有以下属性：
+  - : 一个对象，_除 {{domxref("Event/Event", "Event()")}} 中定义的属性外_，该对象还可以具有以下属性：
     - `detail` {{optional_inline}}
-      - : 与事件相关联的事件相关值。处理器可使用 {{domxref("CustomEvent.detail")}} 属性获取该值。默认为`null`。
+      - : 与事件相关联的事件相关值。处理器可使用 {{domxref("CustomEvent.detail")}} 属性获取该值。默认为 `null`。
 
 ### 返回值
 
