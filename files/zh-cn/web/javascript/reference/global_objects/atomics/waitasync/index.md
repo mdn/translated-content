@@ -11,7 +11,7 @@ l10n:
 
 与 {{jsxref("Atomics.wait()")}} 不同，`waitAsync` 是非阻塞的且可用于主线程。
 
-> **备注：** 此操作仅适用于查看 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}。
+> **备注：** 此操作仅适用于基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}。
 
 ## 语法
 
@@ -23,7 +23,7 @@ Atomics.waitAsync(typedArray, index, value, timeout)
 ### 参数
 
 - `typedArray`
-  - : 查看 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}。
+  - : 基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}。
 - `index`
   - : `typedArray` 中要等待的位置。
 - `value`
@@ -43,7 +43,7 @@ Atomics.waitAsync(typedArray, index, value, timeout)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `typedArray` 不是一个查看 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}，则抛出该异常。
+  - : 如果 `typedArray` 不是一个基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}，则抛出该异常。
 - {{jsxref("RangeError")}}
   - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
 
@@ -65,7 +65,7 @@ const result = Atomics.waitAsync(int32, 0, 0, 1000);
 // { async: true, value: Promise {<pending>} }
 ```
 
-在该读取线程或另一个线程中，在内存位置 0 调用以令该 promise 解决为 `"ok"`。
+在该读取线程或另一个线程中，对内存位置 0 调用以令该 promise 解决为 `"ok"`。
 
 ```js
 Atomics.notify(int32, 0);
