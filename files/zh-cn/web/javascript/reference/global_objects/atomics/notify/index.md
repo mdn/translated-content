@@ -34,7 +34,7 @@ Atomics.notify(typedArray, index, count)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `typedArray` 不是一个查看 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}，则抛出该异常。
+  - : 如果 `typedArray` 不是一个基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}，则抛出该异常。
 - {{jsxref("RangeError")}}
   - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
 

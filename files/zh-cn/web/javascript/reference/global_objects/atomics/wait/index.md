@@ -37,7 +37,7 @@ Atomics.wait(typedArray, index, value, timeout)
 
 - {{jsxref("TypeError")}}
   - : 有下列情况之一，则抛出该异常：
-    - 如果 `typedArray` 不是一个查看 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}。
+    - 如果 `typedArray` 不是一个基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}。
     - 如果当前线程无法被阻塞（例如主线程）。
 - {{jsxref("RangeError")}}
   - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
