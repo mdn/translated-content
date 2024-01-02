@@ -42,7 +42,7 @@ O processo de renderização inclui o seguinte:
 3. Um círculo verde [`<circle>`](/pt-BR/docs/Web/SVG/Element/circle)com raio de 80px é desenhado no centro do retângulo vermelho (centro do círculo deslocado 150px para a direita e 100px para baixo a partir do canto superior esquerdo).
 4. O texto "SVG" é desenhado. O interior de cada letra é preenchido com branco. O texto é posicionado definindo uma âncora onde queremos que fique o ponto médio: neste caso, o ponto médio deve corresponder ao centro do círculo verde. Ajustes finos podem ser feitos no tamanho da fonte e na posição vertical para garantir que o resultado final seja esteticamente agradável.
 
-### Propriedades básicas de arquivos SVG
+## Propriedades básicas de arquivos SVG
 
 - A primeira coisa a levar em conta é a ordem de representação dos elementos. A regra globalmente válida para arquivos SVG é que os elementos subsequentes sejam renderizados sobre os anteriores. Quanto mais baixo for um elemento, mais visível ele será.
 - Na web, os arquivos SVG podem ser exibidos diretamente no navegador ou incorporados em arquivos HTML usando vários métodos:
