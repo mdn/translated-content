@@ -58,7 +58,7 @@ const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
 
-令一个读取线程休眠并等待位置 0，其预期为 0。`result.value` 将是一个 promise。
+令一个读取线程休眠并在位置 0 处等待，预期该位置的值为 0。`result.value` 将是一个 promise。
 
 ```js
 const result = Atomics.waitAsync(int32, 0, 0, 1000);
