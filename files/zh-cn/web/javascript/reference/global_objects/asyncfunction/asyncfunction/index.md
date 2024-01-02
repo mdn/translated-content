@@ -1,6 +1,6 @@
 ---
 title: AsyncFunction() 构造函数
-slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction\
+slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
 l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
