@@ -28,7 +28,7 @@ Vamos mergulhar direto com um exemplo simples. Dê uma olhada no código a segui
 
 Copie o código e salve-o como demo1.svg. Em seguida, abra-o no Firefox. Você o verá como visto na figura a seguir. (Usuários do Firefox: clique [aqui](svgdemo1.xml))
 
-![svgdemo1.png](svgdemo1.png)
+![Fundo vermelho composto por um círculo verde centralizado. O texto branco centralizado dentro do círculo é SVG.](svgdemo1.png)
 
 O processo de renderização inclui o seguinte:
 
