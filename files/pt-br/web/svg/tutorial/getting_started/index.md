@@ -7,7 +7,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 
 {{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
 
-### Um Exemplo Simples
+## Um Exemplo Simples
 
 Vamos mergulhar direto com um exemplo simples. Dê uma olhada no código a seguir.
 
