@@ -3,6 +3,8 @@ title: Primeiros passos
 slug: Web/SVG/Tutorial/Getting_Started
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
 
 ### Um Exemplo Simples
