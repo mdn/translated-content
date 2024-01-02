@@ -30,9 +30,9 @@ onmessageerror = (event) => { }
 아래 나열된 속성 외에도, 부모 인터페이스인 {{domxref("Event")}}의 속성들을 사용할 수 있습니다.
 
 - {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
-  - : 메시지 발신자가 보낸 데이터.
+  - : 메시지 발신기가 보낸 데이터.
 - {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
-  - : 메시지 발신자의 출처를 나타내는 문자열.
+  - : 메시지 발신기의 출처를 나타내는 문자열.
 - {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
   - : 이벤트의 고유 ID를 나타내는 문자열.
 - {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
