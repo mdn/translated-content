@@ -9,11 +9,11 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 
 ## 路由
 
-在 [前面的教程](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)，我们创建 index 页面路由。此处要提醒的是，所有的路由函数，都定义在 **/routes/catalog.js**：
+在[前面的教程](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)中，我们创建了索引页的路由。此处要提醒的是，所有的路由函数都定义在 **/routes/catalog.js** 中：
 
 ```js
 // GET 分类主页
-router.get("/", book_controller.index); // 实际上，它映射到 /catalog/，因为我们导入过带有 /catalog 前缀的路由
+router.get("/", book_controller.index); // 实际上，它映射到 /catalog/，因为我们导入路由时使用了 /catalog 前缀
 ```
 
 在 **/controllers/bookController.js** 中，定义回调函数参数 (`book_controller.index`) ：
@@ -30,7 +30,7 @@ exports.index = asyncHandler(async (req, res, next) => {
 
 索引控制器函数需要获取以下有关信息，即数据库中有多少`Book`，`BookInstance`，可用的`BookInstance`，`Author`和`Genre`记录，将这些数据渲染到模板中，以创建 HTML 页面，然后将其返回到 HTTP 响应中。
 
-打开 **/controllers/bookController.js**. 在文件顶部附近，你应该看到导出的 `index()` 函数。
+打开 **/controllers/bookController.js**。在文件的顶部，你应该可以看到导出的 `index()` 函数。
 
 ```js
 const Book = require("../models/book");
@@ -41,7 +41,7 @@ exports.index = asyncHandler(async (req, res, next) => {
 });
 ```
 
-用以下代码片段替换上面的所有代码。这要做的第一件事，是导入 (`require()`) 所有模型（以粗体突出高亮显示）。我们需要这样做，是因为我们将使用它们来获取记录的计数。
+用以下代码片段替换上面的所有代码。这要做的第一件事，是导入（`require()`）所有模型。我们需要这样做，因为我们将使用它们来获取记录的计数。这部分代码也同样需要“express-async-handler”，它可以[捕获路由处理器函数抛出的异常](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes#处理路由函数中的异常)。
 
 ```js
 const Book = require("../models/book");
