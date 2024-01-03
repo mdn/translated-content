@@ -64,7 +64,9 @@ color: light-dark(var(--light), var(--dark));
 <h1>CSS の <code>light-dark()</code> 関数</h1>
 <section>
   <h2>自動</h2>
-  <p>このセクションは、ユーザーシステムまたはユーザーエージェントの設定に反応します。</p>
+  <p>
+    このセクションは、ユーザーシステムまたはユーザーエージェントの設定に反応します。
+  </p>
 </section>
 <section class="light">
   <h2>ライト</h2>
