@@ -1,5 +1,5 @@
 ---
-title: "HTMLVideoElement: videoHeight property"
+title: "HTMLVideoElement: videoHeight プロパティ"
 short-title: videoHeight
 slug: Web/API/HTMLVideoElement/videoHeight
 l10n:

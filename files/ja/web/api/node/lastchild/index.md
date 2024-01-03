@@ -13,7 +13,7 @@ l10n:
 > {{domxref("Text")}} や {{domxref("Comment")}} ノードである可能性があります。
 > 他の要素の子である最後の {{domxref("Element")}} を取得したい場合は、{{domxref("Element.lastElementChild")}} の使用を検討してください。
 
-## Value
+## 値
 
 このノードの最後の子である {{domxref("Node")}}、または子ノードがなければ `null` です。
 

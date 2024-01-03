@@ -7,8 +7,6 @@ slug: Web/CSS/border
 
 **`border`** は [CSS](/ja/docs/Web/CSS) の [一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、要素の境界を設定します。これは {{cssxref("border-width")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}} の値を設定します。
 
-## 例
-
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
 ## 構成要素のプロパティ
@@ -76,7 +74,7 @@ border: unset;
 
 ## 例
 
-<h3 id="Setting_a_pink_outset_border">ピンク色の出っ張った境界の設定</h3>
+### ピンク色の出っ張った境界の設定
 
 #### HTML
 
@@ -101,7 +99,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_pink_outset_border')}}
+{{EmbedLiveSample('ピンク色の出っ張った境界の設定')}}
 
 ## 仕様書
 
