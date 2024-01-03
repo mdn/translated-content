@@ -30194,10 +30194,6 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
   },
-  "conflicting/Web/API/MediaStreamTrack": {
-    "modified": "2019-03-18T21:45:17.038Z",
-    "contributors": ["e53e04ac"]
-  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
@@ -30324,10 +30320,6 @@
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
-  },
-  "orphaned/Web/API/Window/defaultStatus": {
-    "modified": "2019-03-23T23:50:29.916Z",
-    "contributors": ["teoli", "khalid32", "ethertank", "Potappo"]
   },
   "orphaned/Web/API/XSLTProcessor/Browser_Differences": {
     "modified": "2020-04-13T14:01:47.252Z",

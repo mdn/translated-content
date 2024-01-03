@@ -921,7 +921,7 @@
 /ja/docs/DOM/window.confirm-redirect-1	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.content	/ja/docs/Web/API/Window
 /ja/docs/DOM/window.crypto	/ja/docs/Web/API/crypto_property
-/ja/docs/DOM/window.defaultStatus	/ja/docs/orphaned/Web/API/Window/defaultStatus
+/ja/docs/DOM/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM/window.dump	/ja/docs/Web/API/Window/dump
 /ja/docs/DOM/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -1141,7 +1141,7 @@
 /ja/docs/DOM:window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM:window.content	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.crypto	/ja/docs/Web/API/crypto_property
-/ja/docs/DOM:window.defaultStatus	/ja/docs/orphaned/Web/API/Window/defaultStatus
+/ja/docs/DOM:window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM:window.dump	/ja/docs/Web/API/Window/dump
 /ja/docs/DOM:window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -2928,16 +2928,16 @@
 /ja/docs/Web/API/MediaRecorder/onresume	/ja/docs/Web/API/MediaRecorder/resume_event
 /ja/docs/Web/API/MediaRecorder/onstart	/ja/docs/Web/API/MediaRecorder/start_event
 /ja/docs/Web/API/MediaRecorder/onstop	/ja/docs/Web/API/MediaRecorder/stop_event
-/ja/docs/Web/API/MediaRecorder/warning_event	/ja/docs/conflicting/Web/API/MediaRecorder
+/ja/docs/Web/API/MediaRecorder/warning_event	/ja/docs/Web/API/MediaRecorder
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/MediaSource/isTypeSupported	/ja/docs/Web/API/MediaSource/isTypeSupported_static
 /ja/docs/Web/API/MediaStream/onaddtrack	/ja/docs/Web/API/MediaStream/addtrack_event
 /ja/docs/Web/API/MediaStreamConstraints	/ja/docs/Web/API/MediaDevices/getUserMedia
 /ja/docs/Web/API/MediaStreamTrack/onended	/ja/docs/Web/API/MediaStreamTrack/ended_event
 /ja/docs/Web/API/MediaStreamTrack/onmute	/ja/docs/Web/API/MediaStreamTrack/mute_event
-/ja/docs/Web/API/MediaStreamTrack/onoverconstrained	/ja/docs/conflicting/Web/API/MediaStreamTrack
+/ja/docs/Web/API/MediaStreamTrack/onoverconstrained	/ja/docs/Web/API/MediaStreamTrack
 /ja/docs/Web/API/MediaStreamTrack/onunmute	/ja/docs/Web/API/MediaStreamTrack/unmute_event
-/ja/docs/Web/API/MediaStreamTrack/overconstrained_event	/ja/docs/conflicting/Web/API/MediaStreamTrack
+/ja/docs/Web/API/MediaStreamTrack/overconstrained_event	/ja/docs/Web/API/MediaStreamTrack
 /ja/docs/Web/API/MediaStreamTrack/remote	/ja/docs/Web/API/MediaStreamTrack
 /ja/docs/Web/API/Media_Streams_API	/ja/docs/Web/API/Media_Capture_and_Streams_API
 /ja/docs/Web/API/Media_Streams_API/Constraints	/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints
@@ -3142,7 +3142,7 @@
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
-/ja/docs/Web/API/Window/defaultStatus	/ja/docs/orphaned/Web/API/Window/defaultStatus
+/ja/docs/Web/API/Window/defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/Window/mozPaintCount	/ja/docs/Web/API/Window
@@ -3367,7 +3367,7 @@
 /ja/docs/Web/API/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
-/ja/docs/Web/API/window.defaultStatus	/ja/docs/orphaned/Web/API/Window/defaultStatus
+/ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/Web/API/window.dump	/ja/docs/Web/API/Window/dump
 /ja/docs/Web/API/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
