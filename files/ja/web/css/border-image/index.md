@@ -118,9 +118,7 @@ border-image: unset;
 #### HTML
 
 ```html
-<div id="gradient">
-  この要素はグラデーションの境界に囲まれています。
-</div>
+<div id="gradient">この要素はグラデーションの境界に囲まれています。</div>
 ```
 
 #### CSS
