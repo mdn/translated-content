@@ -42,7 +42,7 @@ Mozilla は多種多様なオープンウェブ技術に対応しており、使
 ### バーチャルリアリティ
 
 - The Polar Sea ([source code](https://github.com/MozillaReality/polarsea))
-- [Sechelt fly-through](https://mixedreality.mozilla.org/sechelt/) ([source code](https://github.com/MozillaReality/sechelt))
+- [Sechelt fly-through](https://mozvr.github.io/sechelt/) ([source code](https://github.com/MozillaReality/sechelt))
 
 ## CSS
 

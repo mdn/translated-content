@@ -35,7 +35,7 @@ AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 
 参见 {{jsxref("Function/Function", "Function()")}}。
 
-## 参见
+## 示例
 
 ### 使用构造函数
 

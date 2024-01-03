@@ -58,7 +58,7 @@ browser.bookmarks.onRemoved.hasListener(listener)
 
 {{Compat}}
 
-## Examples
+## 例
 
 ```js
 function handleRemoved(id, removeInfo) {

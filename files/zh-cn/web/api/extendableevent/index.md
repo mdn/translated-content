@@ -3,7 +3,7 @@ title: ExtendableEvent
 slug: Web/API/ExtendableEvent
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
 作为 service worker 生命周期的一部分，**`ExtendableEvent`** 接口延长了在全局范围上 [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install_event) 和 [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate_event) 事件的生命周期。这样可以确保在升级数据库架构并删除过时的 caches 之前，不会调度任何函数事件（如{{domxref("FetchEvent")}}）。如果在`ExtendableEvent`处理程序之外调用{{domxref("ExtendableEvent.waitUntil","waitUntil()")}}，浏览器应该抛出一个`InvalidStateError`；还要注意，多个调用将堆积起来，结果 promises 将添加到[extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises).
 
@@ -92,6 +92,4 @@ self.addEventListener("install", function (event) {
 
 - [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service worker 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
