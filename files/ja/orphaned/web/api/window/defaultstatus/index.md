@@ -1,6 +1,7 @@
 ---
 title: Window.defaultStatus
-slug: Web/API/Window/defaultStatus
+slug: orphaned/Web/API/Window/defaultStatus
+original_slug: Web/API/Window/defaultStatus
 ---
 
 {{APIRef()}}{{deprecated_header}}

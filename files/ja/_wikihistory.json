@@ -9037,6 +9037,10 @@
     "modified": "2020-10-15T22:31:35.749Z",
     "contributors": ["mfuji09"]
   },
+  "Web/API/HTMLElement/autofocus": {
+    "modified": "2020-10-15T22:02:47.537Z",
+    "contributors": ["dskmori", "8845musign"]
+  },
   "Web/API/HTMLElement/beforeinput_event": {
     "modified": "2020-12-09T10:48:15.929Z",
     "contributors": ["mfuji09", "Wind1808"]
@@ -9644,10 +9648,6 @@
   "Web/API/HTMLSelectElement": {
     "modified": "2020-10-15T22:02:48.089Z",
     "contributors": ["mfuji09", "silverskyvicto", "Speich"]
-  },
-  "Web/API/HTMLSelectElement/autofocus": {
-    "modified": "2020-10-15T22:02:47.537Z",
-    "contributors": ["dskmori", "8845musign"]
   },
   "Web/API/HTMLSelectElement/options": {
     "modified": "2020-10-15T22:15:59.932Z",
@@ -10363,10 +10363,6 @@
   },
   "Web/API/MediaStreamTrack/muted": {
     "modified": "2019-03-18T21:45:08.367Z",
-    "contributors": ["e53e04ac"]
-  },
-  "Web/API/MediaStreamTrack/overconstrained_event": {
-    "modified": "2019-03-18T21:45:17.038Z",
     "contributors": ["e53e04ac"]
   },
   "Web/API/MediaStreamTrack/readyState": {
@@ -13971,10 +13967,6 @@
   "Web/API/Window/cut_event": {
     "modified": "2020-10-15T22:27:13.710Z",
     "contributors": ["mfuji09"]
-  },
-  "Web/API/Window/defaultStatus": {
-    "modified": "2019-03-23T23:50:29.916Z",
-    "contributors": ["teoli", "khalid32", "ethertank", "Potappo"]
   },
   "Web/API/Window/devicePixelRatio": {
     "modified": "2020-10-15T21:58:39.969Z",
@@ -30202,6 +30194,10 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
   },
+  "conflicting/Web/API/MediaStreamTrack": {
+    "modified": "2019-03-18T21:45:17.038Z",
+    "contributors": ["e53e04ac"]
+  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
@@ -30328,6 +30324,10 @@
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
+  },
+  "orphaned/Web/API/Window/defaultStatus": {
+    "modified": "2019-03-23T23:50:29.916Z",
+    "contributors": ["teoli", "khalid32", "ethertank", "Potappo"]
   },
   "orphaned/Web/API/XSLTProcessor/Browser_Differences": {
     "modified": "2020-04-13T14:01:47.252Z",
