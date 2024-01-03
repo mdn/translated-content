@@ -134,7 +134,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 <img href="./images/footerlogo.jpg" loading="lazy" />
 ```
 
-ただし、遅延読み込みされた画像は、 `load` イベントが発生した時点では利用できない場合があります。画像がロードされているかどうかは、論理プロパティの {{domxref("HTMLImageElement.complete", "complete")}} の値が `true` であるかどうかを確認することで判断できます。
+ただし、遅延読み込みされた画像は、 `load` イベントが発生した時点では利用できない場合があります。画像がロードされているかどうかは、論理的プロパティの {{domxref("HTMLImageElement.complete", "complete")}} の値が `true` であるかどうかを確認することで判断できます。
 
 ### ユーザーエージェント要件の賢い選択
 

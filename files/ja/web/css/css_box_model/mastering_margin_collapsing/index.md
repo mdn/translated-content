@@ -1,11 +1,13 @@
 ---
 title: マージンの相殺の習得
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
+l10n:
+  sourceCommit: 28505c5b2d83732399d8ba96e4b32793580a7f13
 ---
 
 {{CSSRef}}
 
-ブロックの[上端](/ja/docs/Web/CSS/margin-top)と[下端](/ja/docs/Web/CSS/margin-bottom)のマージンは、それぞれのマージンの最も大きい寸法 (または等しい場合はいずれか 1 つ) の単一のマージンに結合される (折り畳まれる、collapsed) ことがあり、**マージンの相殺**という動作として知られています。なお、[浮動](/ja/docs/Web/CSS/float)要素と[絶対位置指定](/ja/docs/Web/CSS/position#types_of_positioning)要素では折り畳まれません。
+ブロックの[上端](/ja/docs/Web/CSS/margin-top)と[下端](/ja/docs/Web/CSS/margin-bottom)のマージンは、それぞれのマージンの大きい方の寸法（または等しい場合はいずれか 1 つ）の単一のマージンに結合される（折り畳まれる、collapsed）ことがあり、**マージンの相殺**という動作として知られています。なお、[浮動](/ja/docs/Web/CSS/float)要素と[絶対位置指定](/ja/docs/Web/CSS/position#位置の種類)要素では折り畳まれません。
 
 マージンの相殺は、基本的に 3 つの場合に発生します。
 
@@ -23,6 +25,7 @@ slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 - 負のマージンが含まれる場合には、相殺されるマージンの大きさは、一番大きな正のマージンと一番小さな (もっともマイナス寄りの) マージンの合計値になります。
 - すべてのマージンが負の場合、折りたたまれたマージンのサイズは、最小の (最もマイナス寄りの) マージンとなります。これは、隣接する要素と入れ子になった要素の両方に適用されます。
 - マージンの相殺は、縦方向にのみ関係します。
+- マージンはコンテナーの `display` が `flex` または `grid` に設定されていると相殺されません。
 
 ## 例
 
@@ -65,10 +68,6 @@ p {
 
 {{EmbedLiveSample('Examples', 'auto', 350)}}
 
-## 仕様書
-
-{{Specifications}}
-
 ## 関連情報
 
 - CSS の主要概念:
@@ -76,8 +75,8 @@ p {
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
   - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
   - 値

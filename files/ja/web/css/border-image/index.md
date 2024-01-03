@@ -77,7 +77,7 @@ border-image: unset;
 
 ## 例
 
-<h3 id="Bitmap">ビットマップ</h3>
+### ビットマップ
 
 この例では、要素の境界にダイヤモンド模様を適用します。 source の画像は、縦と横にダイヤモンドが 3 つずつ並んだ 81 × 81 ピクセルの ".png" ファイルです。
 
@@ -108,9 +108,9 @@ border-image: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Bitmap', '100%', 200)}}
+{{EmbedLiveSample('ビットマップ', '100%', 200)}}
 
-<h3 id="Gradient">グラデーション</h3>
+### グラデーション
 
 #### HTML
 
@@ -131,7 +131,7 @@ border-image: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Gradient')}}
+{{EmbedLiveSample('グラデーション')}}
 
 ## 仕様書
 

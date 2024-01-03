@@ -52,7 +52,7 @@ mix-blend-mode: unset;
 
 ## 例
 
-<h3 id="Effect_of_different_mix-blend-mode_values">mix-blend-mode の様々な値の効果</h3>
+### mix-blend-mode の様々な値の効果
 
 ```html hidden
 <div class="grid">
@@ -631,9 +631,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("mix-blend-mode の様々な値の効果", "100%", 1600, "", "", "example-outcome-frame")}}
 
-<h3 id="Using_mix-blend-mode_with_HTML">HTML での mix-blend-mode の使用</h3>
+### HTML での mix-blend-mode の使用
 
 #### HTML
 
@@ -679,9 +679,9 @@ body {
 
 #### 結果
 
-{{EmbedLiveSample("Using_mix-blend-mode_with_HTML", "100%", "180")}}
+{{EmbedLiveSample("HTML での mix-blend-mode の使用", "100%", "180")}}
 
-<h3 id="Using_mix-blend-mode_with_SVG">SVG での mix-blend-mode の使用</h3>
+### SVG での mix-blend-mode の使用
 
 #### SVG
 
@@ -708,7 +708,7 @@ circle {
 
 #### 結果
 
-{{EmbedLiveSample("Using_mix-blend-mode_with_SVG", "100%", "180")}}
+{{EmbedLiveSample("SVG での mix-blend-mode の使用", "100%", "180")}}
 
 ## 仕様書
 
