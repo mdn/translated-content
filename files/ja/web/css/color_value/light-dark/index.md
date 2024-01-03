@@ -60,7 +60,7 @@ color: light-dark(var(--light), var(--dark));
 
 ライト色、ダーク色、ユーザーの推奨する配色に基づいて選択した色を対象とすることができるように、 3 つのセクションを設けています。
 
-```html
+```html-nolint
 <h1>CSS の <code>light-dark()</code> 関数</h1>
 <section>
   <h2>自動</h2>
