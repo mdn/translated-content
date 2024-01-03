@@ -1,8 +1,7 @@
 ---
 title: MediaRecorder.onwarning
-slug: Web/API/MediaRecorder/warning_event
-l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+slug: conflicting/Web/API/MediaRecorder
+original_slug: Web/API/MediaRecorder/warning_event
 ---
 
 {{APIRef("Media Recorder API")}}{{Deprecated_Header}}
