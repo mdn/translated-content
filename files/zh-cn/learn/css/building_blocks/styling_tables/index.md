@@ -208,7 +208,7 @@ tfoot th {
 
 首先将下面的 CSS 添加到`style.css`文件中，在底部添加：
 
-```plain
+```css
 thead, tfoot {
   background: url(leopardskin.jpg);
   color: white;
