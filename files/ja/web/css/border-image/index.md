@@ -89,9 +89,7 @@ border-image: unset;
 #### HTML
 
 ```html
-<div id="bitmap">
-  この要素はビットマップベースの境界画像に囲まれています。
-</div>
+<div id="bitmap">この要素はビットマップベースの境界画像に囲まれています。</div>
 ```
 
 #### CSS
