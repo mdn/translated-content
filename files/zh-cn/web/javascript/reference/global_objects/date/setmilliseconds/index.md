@@ -20,7 +20,7 @@ setMilliseconds(millisecondsValue)
 ### 参数
 
 - `millisecondsValue`
-  - : 一个在 0 到 999 之间的整数，表示豪秒数。
+  - : 一个在 0 到 999 之间的整数，表示毫秒数。
 
 ### 返回值
 
