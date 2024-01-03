@@ -68,10 +68,6 @@ svg {
 
 {{svginfo}}
 
-## Пример
-
-» [ellipse.svg](/files/3253/ellipse.svg)
-
 ## Интерфейс DOM
 
 Этот элемент реализует интерфейс {{ domxref("SVGEllipseElement") }}.
