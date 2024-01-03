@@ -41,7 +41,7 @@ console.log(gen.next().value); // 3
 
   - : 创建实例对象的构造函数。对于 `Generator` 实例，其初始值是 [`GeneratorFunction.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)。
 
-    > **备注：** `Generator` 对象不会存储创建他们的生成器函数的引用。
+    > **备注：** `Generator` 对象不会存储创建它们的生成器函数的引用。
 
 - `Generator.prototype[@@toStringTag]`
   - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Generator"`。该属性被 {{jsxref("Object.prototype.toString()")}} 使用。
@@ -53,7 +53,7 @@ _同时也从其父类 {{jsxref("Iterator")}} 继承实例方法_。
 - {{jsxref("Generator.prototype.next()")}}
   - : 返回 {{jsxref("Operators/yield", "yield")}} 表达式生成的值。
 - {{jsxref("Generator.prototype.return()")}}
-  - : 类似于在当前的生成器主体的暂停位置插入 `return` 语句，该语句结束了生成器并且允许生成器与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) 块相组合时，执行任何清理任务。
+  - : 类似于在当前的生成器主体的暂停位置插入 `return` 语句，该语句结束了生成器并且允许生成器与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally_块) 块相组合时，执行任何清理任务。
 - {{jsxref("Generator.prototype.throw()")}}
   - : 类似于在当前的生成器主体的暂停位置插入 `throw` 语句，该语句通知生成器有错误的情况并且允许其处理错误或执行清理并自行关闭。
 
