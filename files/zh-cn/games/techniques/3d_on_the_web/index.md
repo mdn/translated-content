@@ -21,11 +21,11 @@ WebGL 2.0（基于 OpenGL ES 3.0）将在不久的将来发布，它将带来许
 
 ## 进阶概念
 
-使用 WebGL，可以做更多事情。应该深入学习一些高级概念，如着色器、碰撞检测或最新的热门话题：网络虚拟现实。
+使用 WebGL，可以做更多事情。应该深入学习一些高级概念，如着色器、碰撞检测或最新的热门话题：Web 虚拟现实。
 
 ### 着色器
 
-值得一提的是着色器，其本身有很多值得探讨的地方。着色器使用一种特殊的 OpenGL 着色语言——GLSL，其语法类似于 C 语言，由图形管道直接执行。着色器可分为顶点着色器和片段着色器（或像素着色器），前者将形状位置转换为真实的 3D 绘图坐标，后者则计算渲染颜色和其他属性。你一定要看看 [GLSL 着色器](/zh-CN/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders) 这篇文章，了解更多关于它们的信息。
+值得一提的是着色器，其本身有很多值得探讨的地方。着色器使用一种特殊的 OpenGL 着色语言——GLSL，其语法类似于 C 语言，由图形管道直接执行。着色器可分为顶点着色器和片段着色器（或像素着色器），前者将形状位置转换为真实的 3D 绘图坐标，后者则计算渲染颜色和其他属性。你一定要看看 [GLSL 着色器](/zh-CN/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)这篇文章，了解更多关于它们的信息。
 
 ### 碰撞检测
 
@@ -34,17 +34,17 @@ WebGL 2.0（基于 OpenGL ES 3.0）将在不久的将来发布，它将带来许
 - [2D 碰撞检测](/zh-CN/docs/Games/Techniques/2D_collision_detection)
 - [3D 碰撞检测](/zh-CN/docs/Games/Techniques/3D_collision_detection)
 
-### Web 虚拟现实（WebXR）
+### WebXR
 
-虚拟现实的概念并不新鲜，但由于 [Meta Quest](https://www.meta.com/quest/)、[WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API)（目前处于试验阶段）等硬件的进步，它正风靡网络，用于从 XR 硬件捕捉信息并将其提供给 JavaScript 应用程序使用。更多信息，请阅读 [WebXR——网络虚拟和增强现实](/zh-CN/docs/Games/Techniques/3D_on_the_web/WebXR)。
+虚拟现实的概念并不新鲜，但由于 [Meta Quest](https://www.meta.com/quest/)、[WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API)（目前处于试验阶段）等硬件的进步，它正风靡网络，用于从 XR 硬件捕捉信息并将其提供给 JavaScript 应用程序使用。更多信息，请阅读 [WebXR——Web 虚拟和增强现实](/zh-CN/docs/Games/Techniques/3D_on_the_web/WebXR)。
 
 还有一篇[用 A-Frame 构建基本演示](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)的文章，向你展示了使用 [A-Frame](http://aframe.io/) 框架构建 3D 环境的虚拟现实是多么的简单。
 
 ## 库和框架的兴起
 
-编码原生 WebGL 是相当复杂的，从长远来看，随着项目更进一步，你会希望掌握它（请参阅我们的 [WebGL 文档](/zh-CN/docs/Web/API/WebGL_API) 以开始学习）。在实际项目中，你可能也会使用框架来加快开发速度，并帮助你管理正在进行的项目。在 3D 游戏中使用框架还有助于优化性能，因为所使用的工具可以解决很多问题，这样就可以专注于构建游戏本身。
+编码原生 WebGL 是相当复杂的，从长远来看，随着项目更进一步，你会希望掌握它（请参阅我们的 [WebGL 文档](/zh-CN/docs/Web/API/WebGL_API)以开始学习）。在实际项目中，你可能也会使用框架来加快开发速度，并帮助你管理正在进行的项目。在 3D 游戏中使用框架还有助于优化性能，因为所使用的工具可以解决很多问题，这样就可以专注于构建游戏本身。
 
-最流行的 JavaScript 3D 库是 [Three.js](http://threejs.org/)，这是一个多用途工具，它使常见的 3D 技术更易于实现。还有其他一些流行的游戏开发库和框架也值得一看。[A-Frame](https://aframe.io)、[PlayCanvas](https://playcanvas.com/) 和 [Babylon.js](http://www.babylonjs.com/) 是其中最知名的几个，它们拥有丰富的文档、在线编辑器和活跃的社区。
+最流行的 JavaScript 3D 库是 [Three.js](https://threejs.org/)，这是一个多用途工具，它使常见的 3D 技术更易于实现。还有其他一些流行的游戏开发库和框架也值得一看。[A-Frame](https://aframe.io)、[PlayCanvas](https://playcanvas.com/) 和 [Babylon.js](http://www.babylonjs.com/) 是其中最知名的几个，它们拥有丰富的文档、在线编辑器和活跃的社区。
 
 ### 使用 A-Frame 搭建一个基础演示
 
@@ -64,7 +64,7 @@ PlayCanvas 是一个流行的 GitHub 开源 3D WebGL 游戏引擎，有在线编
 
 ### 其他工具
 
-[Unity](https://unity.com/) 和 [Unreal](https://www.unrealengine.com/) 可以将你的游戏通过 [asm.js](/zh-CN/docs/Games/Tools/asm.js) 输出到 [WebGL](/zh-CN/docs/Web/API/WebGL_API)，因此你可以自由地使用这些工具与技术来构建可被输出到 Web 上的游戏。
+[Unity](https://unity.com/) 和[虚幻引擎](https://www.unrealengine.com/)可以将你的游戏通过 [asm.js](/zh-CN/docs/Games/Tools/asm.js) 输出到 [WebGL](/zh-CN/docs/Web/API/WebGL_API)，因此你可以自由地使用这些工具与技术来构建可被输出到 Web 上的游戏。
 
 ![三个三维几何图形的插图：灰色环形体、蓝色立方体和黄色圆柱体。](shapes.png)
 
