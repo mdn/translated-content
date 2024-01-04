@@ -7,11 +7,9 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Generator")}} 实例的 **`return()`** 方法的作用就好像一个 `return` 语句被插入到生成器主体的当前暂停位置，这会完成生成器并允许生成器与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally块) 块结合使用时执行任何清理任务。
+{{jsxref("Generator")}} 实例的 **`return()`** 方法的作用就好像一个 `return` 语句被插入到生成器主体的当前暂停位置，这会完成生成器并允许生成器与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally_块) 块结合使用时执行任何清理任务。
 
 ## 语法
-
-<!-- 我们通常不会为 return 添加“generatorInstance”主体。然而，这里是必要的，因为“return”是一个关键字，所以否则它是无效的语法。 -->
 
 ```js-nolint
 generatorInstance.return()
@@ -30,9 +28,9 @@ generatorInstance.return(value)
 - `done`
   - : 一个布尔值：
     - 如果该生成器函数的控制流程已经结束，则为 `true`。
-    - 如果该生成器函数的控制流程还未结束并能产生更多的值，则为 `false`。只有在 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally块) 中捕获 `return` 并且 `finally` 块中还有更多的 `yield` 表达式时才会发生这种情况。
+    - 如果该生成器函数的控制流程还未结束并能产生更多的值，则为 `false`。只有在 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally_块) 中捕获 `return` 并且 `finally` 块中还有更多的 `yield` 表达式时才会发生这种情况。
 - `value`
-  - : 给定的作为参数的值，或者，如果 `yield` 表达式包含在 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try... catch#finally块)，从 `finally` 块产生/返回的值。
+  - : 给定的作为参数的值，或者，如果 `yield` 表达式包含在 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally_块)，从 `finally` 块产生/返回的值。
 
 ## 描述
 
