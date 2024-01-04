@@ -2641,8 +2641,8 @@
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 /ja/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/ja/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
-/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility	/ja/docs/orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
-/ja/docs/Web/API/CloseEvent/initCloseEvent	/ja/docs/conflicting/Web/API/CloseEvent
+/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility	/ja/docs/Web/API/Canvas_API/Tutorial
+/ja/docs/Web/API/CloseEvent/initCloseEvent	/ja/docs/Web/API/CloseEvent
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/console/error_static
 /ja/docs/Web/API/Console/dir	/ja/docs/Web/API/console/dir_static
 /ja/docs/Web/API/Console/error	/ja/docs/Web/API/console/error_static
