@@ -54,7 +54,7 @@ try {
 
 你也可以用`try`语句去处理 JavaScript 异常。参考[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)了解更多关于 Javascript 异常的信息。
 
-### 无条件的`catch`块
+### 无条件的 `catch` 块
 
 当使用单个无条件`catch`子句时，抛出的任何异常时都会进入到`catch`块。例如，当在下面的代码中发生异常时，控制转移到`catch`子句。
 
@@ -69,7 +69,7 @@ try {
 
 `catch`块指定一个标识符（在上面的示例中为 e），该标识符保存由`throw`语句指定的值。`catch`块是唯一的，因为当输入`catch`块时，JavaScript 会创建此标识符，并将其添加到当前作用域；标识符仅在`catch`块执行时存在；`catch`块执行完成后，标识符不再可用。
 
-### 条件`catch`块
+### 条件 `catch` 块
 
 {{non-standard_header}}
 
@@ -125,7 +125,7 @@ function isValidJSON(text) {
 }
 ```
 
-### `finally`块
+### `finally` 块
 
 `finally`块包含的语句在`try`块和`catch`之后，`try..catch..finally`块后的语句之前执行。请注意，无论是否抛出异常`finally`子句都会执行。此外，如果抛出异常，即使没有`catch`子句处理异常，`finally`子句中的语句也会执行。
 
