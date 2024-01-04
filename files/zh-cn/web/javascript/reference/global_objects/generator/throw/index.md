@@ -11,8 +11,6 @@ l10n:
 
 ## 语法
 
-<!-- 我们通常不会为 return 添加“generatorInstance”主体。然而，这里是必要的，因为“throw”是一个关键字，所以否则它是无效的语法。 -->
-
 ```js-nolint
 generatorInstance.throw(exception)
 ```
