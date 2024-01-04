@@ -30428,9 +30428,5 @@
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2020-03-15T03:29:26.429Z",
     "contributors": ["mfuji09", "takubokudori", "Uemmra3"]
-  },
-  "orphaned/Web/Web_Components/Status_in_Firefox": {
-    "modified": "2019-03-23T22:35:08.421Z",
-    "contributors": ["ueokande", "dskmori"]
-  },
+  }
 }
