@@ -81,9 +81,7 @@ button {
 
 ```html
 <button class="button with-fallback" type="button">代替のあるボタン</button>
-<button class="button without-fallback" type="button">
-  代替のないボタン
-</button>
+<button class="button without-fallback" type="button">代替のないボタン</button>
 ```
 
 ```css
