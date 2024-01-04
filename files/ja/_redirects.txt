@@ -3082,7 +3082,7 @@
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
 /ja/docs/Web/API/StorageEstimate	/ja/docs/Web/API/StorageManager/estimate
-/ja/docs/Web/API/SVGMatrix /ja/docs/Web/API/DOMMatrix
+/ja/docs/Web/API/SVGMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/conflicting/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/conflicting/Web/API/Text
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
