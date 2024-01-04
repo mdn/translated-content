@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Generator")}} 实例的 **`return()`** 方法的作用就好像一个 `return` 语句被插入到生成器主体的当前暂停位置，这会完成生成器并允许生成器与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally_块) 块结合使用时执行任何清理任务。
+{{jsxref("Generator")}} 实例的 **`return()`** 方法的作用就好像一个 `return` 语句被插入到生成器主体的当前暂停位置，这会结束生成器并允许生成器与 [`try...finally`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#finally_块) 块结合使用时执行任何清理任务。
 
 ## 语法
 
@@ -78,7 +78,7 @@ g.return(1); // { value: 1, done: true }
 
 ### 将 return() 与 try...finally 一起使用
 
-如果 `yield` 表达式被包含在一个 `try...finally` 块中，只有生成器本身才能知道 `return` 方法以及被调用了。
+如果 `yield` 表达式被包含在一个 `try...finally` 块中，只有生成器本身才能知道 `return` 方法已被调用。
 
 当在 `try` 块中暂停的生成器上调用 `return` 方法时，生成器中的执行将继续到 `finally` 块——因为 `try...finally` 语句的 `finally` 块始终执行。
 
