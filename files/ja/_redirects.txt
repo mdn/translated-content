@@ -4554,7 +4554,7 @@
 /ja/docs/Web/Web_Components	/ja/docs/Web/API/Web_components
 /ja/docs/Web/Web_Components/Custom_Elements	/ja/docs/Web/API/Web_components/Using_custom_elements
 /ja/docs/Web/Web_Components/HTML_Imports	/ja/docs/Web/API/Web_components
-/ja/docs/Web/Web_Components/Status_in_Firefox	/ja/docs/orphaned/Web/Web_Components/Status_in_Firefox
+/ja/docs/Web/Web_Components/Status_in_Firefox	/ja/docs/Web/API/Web_components
 /ja/docs/Web/Web_Components/Using_custom_elements	/ja/docs/Web/API/Web_components/Using_custom_elements
 /ja/docs/Web/Web_Components/Using_shadow_DOM	/ja/docs/Web/API/Web_components/Using_shadow_DOM
 /ja/docs/Web/Web_Components/Using_templates_and_slots	/ja/docs/Web/API/Web_components/Using_templates_and_slots
