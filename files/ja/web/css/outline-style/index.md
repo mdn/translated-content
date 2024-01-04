@@ -1,6 +1,8 @@
 ---
 title: outline-style
 slug: Web/CSS/outline-style
+l10n:
+  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
 {{CSSRef}}
@@ -30,6 +32,7 @@ outline-style: outset;
 outline-style: inherit;
 outline-style: initial;
 outline-style: revert;
+outline-style: revert-layer;
 outline-style: unset;
 ```
 
@@ -76,7 +79,7 @@ outline-style: unset;
 
 ```html
 <div>
-  <p class="auto">Outline Demo</p>
+  <p class="auto">Outline デモ</p>
 </div>
 ```
 
@@ -84,7 +87,7 @@ outline-style: unset;
 
 ```css
 .auto {
-  outline-style: auto; /* same result as "outline: auto" */
+  outline-style: auto; /* "outline: auto" と同じ */
 }
 
 /* デモを見やすく */
