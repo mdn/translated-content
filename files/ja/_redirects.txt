@@ -3044,6 +3044,7 @@
 /ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
 /ja/docs/Web/API/Response/error	/ja/docs/Web/API/Response/error_static
 /ja/docs/Web/API/Response/redirect	/ja/docs/Web/API/Response/redirect_static
+/ja/docs/Web/API/SVGMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/Screen/availLeft	/ja/docs/Web/API/ScreenDetailed/availLeft
 /ja/docs/Web/API/Screen/availTop	/ja/docs/Web/API/ScreenDetailed/availTop
 /ja/docs/Web/API/Screen/left	/ja/docs/Web/API/ScreenDetailed/left
@@ -3082,7 +3083,6 @@
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
 /ja/docs/Web/API/StorageEstimate	/ja/docs/Web/API/StorageManager/estimate
-/ja/docs/Web/API/SVGMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/conflicting/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/conflicting/Web/API/Text
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
