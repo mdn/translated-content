@@ -30218,10 +30218,6 @@
     "modified": "2019-03-23T23:28:35.294Z",
     "contributors": ["yyss", "teoli"]
   },
-  "conflicting/Web/CSS/:focus-visible": {
-    "modified": "2020-12-01T13:53:58.637Z",
-    "contributors": ["mfuji09", "teoli"]
-  },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
     "contributors": ["mfuji09"]
