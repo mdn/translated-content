@@ -1704,6 +1704,7 @@
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/Notification/permission	/zh-CN/docs/Web/API/Notification/permission_static
 /zh-CN/docs/Web/API/Notification/requestPermission	/zh-CN/docs/Web/API/Notification/requestPermission_static
+/zh-CN/docs/Web/API/NotifyAudioAvailableEvent	/zh-CN/docs/orphaned/Web/API/NotifyAudioAvailableEvent
 /zh-CN/docs/Web/API/OfflineAudioContext/complete	/zh-CN/docs/Web/API/OfflineAudioContext/complete_event
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode/childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
