@@ -193,11 +193,11 @@ p {
 ## Смотрите также
 
 - [`@import`](/ru/docs/Web/CSS/@import)
-- {{domxref("CSSLayerBlockRule")}}
-- {{domxref("CSSLayerStatementRule")}}
+- [`CSSLayerBlockRule`](/ru/docs/Web/API/CSSLayerBlockRule)
+- [`CSSLayerStatementRule`](/ru/docs/Web/API/CSSLayerStatementRule)
 - [`!important`](/ru/docs/Web/CSS/important)
 - [`revert-layer`](/ru/docs/Web/CSS/revert-layer)
 - [Introducing the CSS cascade](/ru/docs/Web/CSS/Cascade)
-- [Cascade, specificity, and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Каскад, специфичность и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [Cascade layers](/ru/docs/Learn/CSS/Building_blocks/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)
