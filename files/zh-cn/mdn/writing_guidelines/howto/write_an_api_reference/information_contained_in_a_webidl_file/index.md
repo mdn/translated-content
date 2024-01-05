@@ -18,11 +18,11 @@ WebIDL 可以在多个位置找到：
 
   - 对于 Gecko，所有 WebIDL 文件都分组在一个目录中：<https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>。它们的扩展名是 `.webidl`。Gecko 源代码树中还有其他的 `*.idl` 文件，但它们不是 WebIDL，因此你可以忽略它们。旧版本的 Gecko 有一些 WebIDL 分散在某些地方，甚至可能使用 Mozilla 的 IDL 而不是 WebIDL 来描述一些 Web 接口，但这在任何最近的 Gecko 代码中都不会成为问题。
   - 对于 Chromium，它们分布在两个位置，都是 [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) 源代码目录的两个子目录：[`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) 和 [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/)。Chromium 源代码中的一些 IDL 文件分散在其他位置，但这些属于测试系统，与 API 实现无关。
-  - 对于 WebCore，它们分散在源代码中，因此你需要进一步发掘：例如 <https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl>
+  - 对于 WebCore，它们分散在源代码中，因此你需要进一步发掘：例如 <https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>
 
 ## WebIDL 的特有扩展
 
-WebIDL 在[其规范](https://heycam.github.io/webidl/)中定义。但它被设计为可以进行扩展以传达更多信息，浏览器供应商正是这样做的：
+WebIDL 在[其规范](https://webidl.spec.whatwg.org/)中定义。但它被设计为可以进行扩展以传达更多信息，浏览器供应商正是这样做的：
 
 - 对于 Gecko，Mozilla 创建了其特有的 WebIDL [文档](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html)。
 - 对于 Chromium，Google 也创建了一个[文档](https://www.chromium.org/blink/webidl/)来描述其扩展。
@@ -416,9 +416,9 @@ serializer; // 标准版本
 
 ### 类迭代器方法
 
-An interface may be defined as _iterable_, meaning that it will have the following methods: `entries()`, `keys()`, `values()` and `forEach()`. They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface.
+可以将接口定义为是*可以迭代的*，这意味着它将具有以下方法：`entries()`、`keys()`、`values()` 和 `forEach()`。还支持在实现此接口的对象上使用 {{jsxref("Statements/for...of", "for...of")}}。
 
-There are two kinds of iteration possible: the _value iterator_ and the _pair iterator._
+有两种可能的迭代方式：*值迭代器*和*对组迭代器*。
 
 #### 值迭代器
 
@@ -426,73 +426,73 @@ There are two kinds of iteration possible: the _value iterator_ and the _pair it
 iterable<valueType>
 ```
 
-The iterator will iterate over values of type _valueType_. The generated methods will be:
+迭代器将迭代类型为 _valueType_ 的值。生成的方法有：
 
-- `entries()`, which returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes (that are `unsigned long`).
-- `values()`, which returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the values.
-- `keys()`, which returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys, that are its indexes (that are `unsigned long`). In the case of value iterators, `keys()` and `entries()` are identical.
-- `forEach()`, which returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys that calls a given callback function one for each entry in the list.
+- `entries()`，返回一个索引（`unsigned long` 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+- `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+- `keys()`，返回一个键（即，索引，`unsigned long` 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。对于值迭代器，`keys()` 和 `entries()` 是相同的。
+- `forEach()`，会对列表中的每个条目调用给定的回调函数。
 
-Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description.
+这类迭代器允许将 `for (const p in object)` 语法作为 `for (const p in object.entries())` 的简写来使用。我们需要在接口的描述中用一句话来说明这一点。
 
-> **Note:** the value pairs to iterate over can be defined in two different ways:
+> **备注：** 可以通过两种不同的方式来定义要迭代的值对组：
 >
-> 1. Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…"_.
-> 2. In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a `getter` methods with a parameter of type `unsigned long`.
+> 1. 在 webidl 文件之外所附带的说明中定义。在规范中，这样的说明通常以“_The [values to iterate over](https://webidl.spec.whatwg.org/#dfn-value-iterator)…_”开头。
+> 2. 在 webidl 文件中通过接口支持索引属性（即，接口带有参数类型为 `unsigned long` 的 `getter` 方法）隐式地定义了这一点。
 
-#### Pair iterator
-
-<!-- #### 对偶迭代器  -->
+#### 对组迭代器
 
 ```webidl
 iterable<keyType, valueType>
 ```
 
-The iterator will iterate over values of type _valueType_, with keys of type _keyType_. The generated methods will be:
+迭代器将同时迭代 _valueType_ 类型的值和 _keyType_ 类型的键。生成的方法有：
 
-- `entries()` that returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes (of type _keyType_). E.g. {{domxref('FormData.entries()')}}
-- `values()` that returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. E.g. {{domxref('FormData.values()')}}
-- `keys()` that returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('FormData.keys()')}}
+- `entries()`，返回一个索引（_keyType_ 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('FormData.entries()')}}
+- `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('FormData.values()')}}
+- `keys()`，返回一个键（_keyType_ 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('FormData.keys()')}}
 - Once [Firefox bug 1216751](https://bugzil.la/1216751) lands, `forEach()`.
+- `forEach()`，需等待 [Firefox bug 1216751](https://bugzil.la/1216751) 落地。
 
-Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
+这类迭代器允许将 `for (const p in object)` 语法作为 `for (const p in object.entries())` 的简写来使用。我们需要在接口的描述中用一句话来说明这一点。例如 {{domxref('FormData')}}。
 
-> **Note:** the value pairs to iterate over are _not_ defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over)…"_
+> **备注：** 要迭代的值对组*不是*在 webidl 文件中定义的，而是在其附带的说明中定义的。这样的说明在规范中，通常以“_The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…_”开头。
 >
-> E.g, for {{domxref('FormData')}} you find in the spec: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value). "_
+> 例如，对于 {{domxref('FormData')}}，你可以在规范中找到：“_The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value)._”。
 
 ### 类集合方法
 
-An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
+可以将接口定义为是*类集合的*（set-like），这意味着它表示一个*有序的值集合*，并且具有以下方法：`entries()`、`keys()`、`values()`、`forEach()` 和 `has()`（它还具有 `size` 属性）。它还支持在实现此接口的对象上使用 {{jsxref("Statements/for...of", "for...of")}}。类集合可以带有或不带有 `readonly` 前缀。如果不是只读的，那么修改集合的方法也会被实现：`add()`、`clear()` 和 `delete()`。
 
 ```webidl
 setlike<valueType>
 ```
 
-The generated properties will be:
+生成的属性有：
 
-- `entries()` that returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes. E.g. {{domxref('NodeList.entries()')}}.
-- `values()` that returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. E.g. {{domxref('NodeList.values()')}}.
+- `entries()`，返回一个索引[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('NodeList.entries()')}}。
+- `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('NodeList.values()')}}。
 - `keys()` that returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('NodeList.keys()')}},
-- `forEach()`.
+- `keys()`，返回一个键[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('NodeList.keys()')}}。
+- `forEach()`。
 
-In cases where the set-like declaration is not prefixed by read-only, the following methods are also generated:
+对于没有 `readonly` 前缀的类集合声明的情况，还会生成以下方法：
 
-- `add()` that adds an entry. E.g. the `.add()` method of {{domxref('FontFaceSet')}}.
-- `clear()` that empties the set-like structure. E.g. the `.clear()` method of {{domxref('FontFaceSet')}}.
-- `delete()` that removes an entry. E.g. the `.delete()` method of {{domxref('FontFaceSet')}}.
+- `add()`，添加一个条目。例如 {{domxref('FontFaceSet')}} 的 `.add()` 方法。
+- `clear()`，清空类集合。例如 {{domxref('FontFaceSet')}} 的 `.clear()` 方法。
+- `delete()`，删除一个条目。例如 {{domxref('FontFaceSet')}} 的 `.delete()` 方法。
 
-Such an set interface also allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`.
+此类集合接口允许将 `for (const p in object)` 语法作为 `for (const p in object.entries())` 的简写来使用。
 
 ## 特殊行为
 
-Some IDL members indicate special behaviors that should be noted on appropriate pages.
+一些 IDL 成员指示了应在适当页面上注意的特殊行为。
 
 ### 字符串化器
 
-In addition to adding the `toString()` method to an interface as described in [toString() and toJSON()](#tostring_and_tojson), stringifiers also indicate that an object instance, when used as a string, returns a string other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.
+除了将 `toString()` 方法添加到接口中（如 [toString() 和 toJSON()](#tostring_和_tojson) 中所述）之外，字符串化器还指示了当对象实例用作字符串时，返回的字符串与默认值不同。（默认值通常是对象的 JSON 表示。）具体取决于它在 IDL 中的指定方式。不管如何，非默认行为都应在接口页面上进行描述。
 
-When the `stringifier` keyword accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:
+当 `stringifier` 关键字与属性名称一起出现时，引用对象名称的结果与引用属性名称相同。考虑以下 IDL：
 
 ```webidl
 interface InterfaceIdentifier {
@@ -500,14 +500,14 @@ interface InterfaceIdentifier {
 };
 ```
 
-For a class based on this interface, the following lines of code below are equivalent. The behavior should be noted on the property page in addition to the interface page.
+对于基于此接口的类，下面的代码是等效的。除了接口页面之外，还应该在属性页面上说明其行为。
 
 ```js
 console.log(interfaceIdentifier);
 console.log(interfaceIdentifier.name);
 ```
 
-When the `stringifier` keyword is used by itself, an object of the interface may be used as above, but the behavior is defined in source code.
+当 `stringifier` 关键字与方法名称一起出现时，引用对象名称的结果与调用方法相同。考虑以下 IDL：
 
 ```webidl
 interface InterfaceIdentifier {
@@ -515,7 +515,7 @@ interface InterfaceIdentifier {
 };
 ```
 
-To learn what an interface reference actually does, refer to the interface's spec or experiment with the interface to determine its output.
+要了解接口引用的实际作用，请参阅接口的规范或尝试使用接口来确定其输出。
 
 ## 构造函数
 
