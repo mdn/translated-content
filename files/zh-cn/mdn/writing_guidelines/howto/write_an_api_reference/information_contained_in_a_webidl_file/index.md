@@ -519,11 +519,11 @@ interface InterfaceIdentifier {
 
 ## 构造函数
 
-Constructors are a little bit hidden in WebIDL: they are listed as annotations of the main interface.
+构造函数被略微隐藏在 WebIDL 中：它们以主接口的注释的形式列出。
 
 ### 匿名构造函数
 
-This is the most common case for constructors. The constructor of a given interface A, can be used as `a = new A(parameters);`
+这是构造函数最常见的情况。给定接口 A 的构造函数可以用作 `a = new A(parameters);`
 
 ```webidl
 [Constructor, Func="MessageChannel::Enabled",
@@ -531,9 +531,9 @@ This is the most common case for constructors. The constructor of a given interf
     interface MessageChannel {…};
 ```
 
-A constructor with the same interface is defined using the `Constructor` annotation on the interface. There can be parenthesis and a list of parameters or not (like in the above example.) We document all the unnamed constructors on a sub-page — for example the above is given the slug _Web/API/MessageChannel/MessageChannel_ and the title `MessageChannel()`.
+与接口同名的构造函数使用该接口上的 `Constructor` 注释定义。它可以有括号和参数列表，也可以没有（如上面的示例）。我们在子页面上记录所有未命名的构造函数，例如，对于上面的内容，页面的别名（slug）为 _Web/API/MessageChannel/MessageChannel_，标题为 `MessageChannel()`。
 
-Another example of an unnamed constructor, with parameters:
+另一个，带有参数的匿名构造函数的示例：
 
 ```webidl
 [Constructor(DOMString type, optional MessageEventInit eventInitDict),
@@ -541,7 +541,7 @@ Another example of an unnamed constructor, with parameters:
    interface MessageEvent : Event {…};
 ```
 
-There can also be several unnamed constructors, differing by their parameter lists. All syntax is documented in one single sub-page.
+还可以有几个匿名构造函数，它们的参数列表不同。其所有语法都应在一个子页面中记录。
 
 ```webidl
 [Constructor(DOMString url, URL base),
@@ -557,13 +557,13 @@ There can also be several unnamed constructors, differing by their parameter lis
     interface HTMLImageElement : HTMLElement {…
 ```
 
-A named constructor is a constructor that has a different name than that of its interface. For example `new Image(…)` creates a new `HTMLImageElement` object. They are defined in the WebIDL using the `NamedConstructor` annotation on the interface, followed by the name of the constructor after the equality sign (`'='`) and the parameter inside the parenthesis, in the same format as you'll see for methods.
+具名构造函数是具有与其接口不同的名称的构造函数。例如 `new Image(…)` 创建一个新的 `HTMLImageElement` 对象。它们在 WebIDL 中使用接口上的 `NamedConstructor` 注释定义，后跟等号（`'='`）后的构造函数名称和括号中的参数，其格式与方法相同。
 
-There can be several named constructors for a specific interface, but this is extremely rare; in such a case we include one sub-page per name.
+一个特定接口可以有多个具名构造函数，但这种情况非常罕见；在这种情况下，我们为每个名称包含一个子页面。
 
 ### 新的构造函数语法
 
-As of September 2019, WebIDL constructor syntax was updated. Constructor syntax no longer involves an extended attribute on the interface:
+截至 2019 年 9 月，WebIDL 构造函数语法已更新。构造函数语法不再涉及接口上的扩展属性：
 
 ```webidl
 [Constructor(DOMString str)]
@@ -572,7 +572,7 @@ As of September 2019, WebIDL constructor syntax was updated. Constructor syntax 
 };
 ```
 
-New specs instead use a method-like syntax named `constructor` with no explicitly-defined return type, written like so:
+新规范使用了一种类似方法的语法，名为 `constructor`，没有明确定义的返回值类型，如下所示：
 
 ```webidl
 interface MyInterface {
@@ -580,7 +580,7 @@ interface MyInterface {
 };
 ```
 
-This means extended attributes can now be specified on the constructor, and it is no longer assumed that all constructors throw. If a constructor does throw, `[Throws]` will be used to indicate that:
+这意味着现在可以在构造函数上指定扩展属性，并且不再假定所有构造函数都会抛出异常。如果构造函数确实会抛出异常，则使用 `[Throws]` 来指示：
 
 ```webidl
 interface MyInterface {
@@ -588,12 +588,12 @@ interface MyInterface {
 };
 ```
 
-It is unlikely that _all_ specs will be updated to use the new syntax, so you'll probably encounter both out in the wild. We will therefore continue to cover both types of syntax here.
+不太可能更新*所有*规范以使用新语法，因此你可能会在外面遇到两种语法。因此，我们将在这里继续介绍这两种类型的语法。
 
 ### 在 worker 中的可用性
 
-Constructors have the same availability as the interface, or partial interface, they are defined on. The sub-page provides this information in the same way as for a method.
+构造函数与接口或分部接口的可用性相同。子页面以与方法相同的方式提供此信息。
 
 ### 首选项
 
-Constructors are controlled by the same preference as the interface, or partial interface, they are defined on. The sub-page provides this information in the same way as for a method.
+构造函数由与其定义的接口或分部接口相同的首选项控制。子页面以与方法相同的方式提供此信息。
