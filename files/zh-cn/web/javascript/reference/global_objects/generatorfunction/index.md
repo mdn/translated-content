@@ -9,7 +9,7 @@ l10n:
 
 **`GeneratorFunction`** 对象为[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)提供了方法。在 JavaScript 中，每个生成器函数实际上都是一个 `GeneratorFunction` 对象。
 
-请注意，`GeneratorFunction` *不是*一个全局对象。可以通过以下代码来获取它：
+请注意，`GeneratorFunction` *不是*全局对象。可以通过以下代码来获取它：
 
 ```js
 const GeneratorFunction = function* () {}.constructor;
@@ -56,4 +56,4 @@ _从其父类 {{jsxref("Function")}} 继承实例方法_。
 - {{jsxref("Function")}}
 - {{jsxref("AsyncFunction")}}
 - {{jsxref("AsyncGeneratorFunction")}}
-- {{jsxref("Functions", "Functions", "", 1)}}
+- {{jsxref("Functions", "函数", "", 1)}}
