@@ -5,7 +5,7 @@ slug: Web/CSS/@layer
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [At-правило](/ru/docs/Web/CSS/At-rule) **`@layer`** используется для объявления каскадного слоя, а также позволяет установить порядок приоритета в случае наличия нескольких каскадных слоёв.
+[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/At-rule) **`@layer`** используется для объявления каскадного слоя, а также позволяет задать приоритеты при наличии нескольких каскадных слоёв.
 
 {{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
 
