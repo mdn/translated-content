@@ -1,0 +1,203 @@
+---
+title: "@layer"
+slug: Web/CSS/@layer
+---
+
+{{CSSRef}}
+
+[CSS](/ru/docs/Web/CSS) [At-правило](/ru/docs/Web/CSS/At-rule) **`@layer`** используется для объявления каскадного слоя, а также может быть использовано для определения порядка приоритета в случае наличия нескольких каскадных слоёв.
+
+{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+
+## Синтаксис
+
+```css
+@layer layer-name {rules}
+@layer layer-name;
+@layer layer-name, layer-name, layer-name;
+@layer {rules}
+```
+
+где:
+
+- `layer-name`
+  - : Название каскадного слоя.
+- `rules`
+  - : Набор CSS свойств содержащихся в этом слое.
+
+## Описание
+
+Правила внутри каскадного слоя объединяются вместе, предоставляя веб-разработчикам больший контроль над каскадом. Все стили, не принадлежащие к слою, собираются в один анонимный слой, который следует после всех объявленных слоёв, будь то именованные или анонимные. Это означает, что любые стили, объявленные вне слоя, переопределят стили, объявленные в слое, независимо от их специфичности.
+
+At-правило `@layer` может объявлять каскадные слои тремя способами.
+
+Первый способ - это создать именованный каскадный слой с набором CSS правил внутри этого слоя, вот так:
+
+```css
+@layer utilities {
+  .padding-sm {
+    padding: 0.5rem;
+  }
+
+  .padding-lg {
+    padding: 0.8rem;
+  }
+}
+```
+
+Второй способ - создать именованный каскадный слой, не присваивая ему никаких стилей. Это может быть единственным слоем, как показано ниже:
+
+```css
+@layer utilities;
+```
+
+Можно определить несколько слоёв одновременно, например:
+
+```css
+@layer theme, layout, utilities;
+```
+
+Это полезно, потому что первоначальный порядок объявления слоёв указывает на их приоритет. Последний слой в списке будет иметь преимущество, если объявления найдены в нескольких слоях. Таким образом, в предшествующем примере, если бы в слоях `theme` и `utilities` было найдено конфликтующее правило, победу одержало бы правило из `utilities` и оно было бы применено.
+
+Правило в слое `utilities` будет применено _даже если у него меньшая специфичность_, чем правило в слое `theme`. Это происходит потому, что после определения порядка слоёв игнорируются специфичность и порядок появления. Это позволяет создавать более простые селекторы в CSS, поскольку вам не нужно обеспечивать высокую специфичность селектора для переопределения конфликтующих правил; важно только, чтобы он появлялся в более позднем слое.
+
+> **Заметка:** Объявив имена слоёв, и установив их порядок, вы можете добавить CSS-правила в слой, повторно объявив его имя. Таким образом стили добавятся к слою, и порядок слоёв не изменится.
+
+Третий способ - создать каскадный слой без имени. Например:
+
+```css
+@layer {
+  p {
+    margin-block: 1rem;
+  }
+}
+```
+
+Это создаёт _анонимный каскадный слой_. Этот слой работает так же, как и именованные слои; однако ему нельзя позже присвоить правила. Порядок приоритета для анонимных слоёв определяется порядком объявления слоёв, с именем или без, и ниже стилей, объявленных вне слоя.
+Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except `@charset` and `@layer` rules.
+
+```css
+@import "theme.css" layer(utilities);
+```
+
+### Вложение слоёв
+
+Слои могут быть вложенными, например:
+
+```css
+@layer framework {
+  @layer layout {
+  }
+}
+```
+
+Для добавления правил в слой `layout`, который находится внутри `framework`, используйте запись через точку.
+
+```css
+@layer framework.layout {
+  p {
+    margin-block: 1rem;
+  }
+}
+```
+
+## Формальный синтаксис
+
+{{csssyntax}}
+
+## Примеры
+
+### Простой пример
+
+В следующем примере создаются два CSS правила: одно для элемента {{htmlelement("p")}} вне какого-либо слоя и одно внутри слоя с именем `type` для `.box p`.
+
+Без слоёв селектор `.box p` имел бы наивысшую специфичность, и, следовательно, текст `Hello, world!` отобразился бы зелёным. Так как слой `type` идёт перед анонимным слоем, созданным для хранения контента вне слоёв, текст будет фиолетовым.
+
+Также обратите внимание на порядок. Несмотря на то что мы объявляем стиль вне слоёв в первую очередь, он всё равно применяется _после_ стилей слоя.
+
+#### HTML
+
+```html
+<div class="box">
+  <p>Привет, мир!</p>
+</div>
+```
+
+#### CSS
+
+```css
+p {
+  color: rebeccapurple;
+}
+
+@layer type {
+  .box p {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: green;
+  }
+}
+```
+
+#### Результат
+
+{{EmbedLiveSample("Simple_example")}}
+
+### Присвоение правил существующим слоям
+
+В следующем примере создаются два слоя, без применённых правил. Затем применяются CSS-правила к обоим слоям. Слой `base` определяет `color`, `border`, `font-size` и `padding`. Слой `special` определяет другой цвет. Поскольку `special` идёт последним при определении слоёв, используется его цвет, и текст отображается с использованием `rebeccapurple`. Все остальные правила из `base` по-прежнему действуют.
+
+#### HTML
+
+```html
+<div class="item">
+  Я отображаюсь в цвете <code>rebeccapurple</code>, потому что слой
+  <code>special</code> идёт после слоя <code>base</code>. Мои border, font-size,
+  и padding берутся из слоя <code>base</code>.
+</div>
+```
+
+#### CSS
+
+```css
+@layer base, special;
+
+@layer special {
+  .item {
+    color: rebeccapurple;
+  }
+}
+
+@layer base {
+  .item {
+    color: green;
+    border: 5px solid green;
+    font-size: 1.3em;
+    padding: 0.5em;
+  }
+}
+```
+
+#### Результат
+
+{{EmbedLiveSample("Assigning_rules_to_existing_layers")}}
+
+## Спецификация
+
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- [`@import`](/ru/docs/Web/CSS/@import)
+- {{domxref("CSSLayerBlockRule")}}
+- {{domxref("CSSLayerStatementRule")}}
+- [`!important`](/ru/docs/Web/CSS/important)
+- [`revert-layer`](/ru/docs/Web/CSS/revert-layer)
+- [Introducing the CSS cascade](/ru/docs/Web/CSS/Cascade)
+- [Cascade, specificity, and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascade layers](/ru/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)
