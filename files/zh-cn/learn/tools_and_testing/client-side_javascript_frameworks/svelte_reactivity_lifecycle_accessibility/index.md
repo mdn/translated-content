@@ -1,7 +1,6 @@
 ---
-title: "Svelte 进阶：响应性、生命周期以及无障碍"
+title: Svelte 进阶：响应性、生命周期以及无障碍
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility
-page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -16,7 +15,7 @@ page-type: learn-module-chapter
       <td>
         <p>
           至少，建议你熟悉核心<a href="/zh-CN/docs/Learn/HTML"> HTML<
-          /a>、<a 
+          /a>、<a
           href="/zh-CN/docs/Learn/CSS">CSS </a>和<a
            href="/zh-CN/docs/Learn/JavaScript"> JavaScript </a> 语言，并且了解<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
@@ -46,7 +45,7 @@ page-type: learn-module-chapter
 本文将在课程中开发以下新组件：
 
 - `MoreActions`：显示*全选*和*移除已完成*按钮，并发出处理其功能所需的相应事件。
-- `NewTodo`：显示用于添加新待办事项的 `<input>` 字段和 *Add*（添加）按钮。
+- `NewTodo`：显示用于添加新待办事项的 `<input>` 字段和 _Add_（添加）按钮。
 - `TodosStatus`：显示“x out of y items completed”（“x 个已完成，共 y 个项目”）的状态标题。
 
 ## 与我们一起编码
@@ -160,7 +159,7 @@ npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts
 
 为了弄清楚发生这种情况的原因，我们需要了解在更新数组和对象时 Svelte 中的响应性是如何工作的。
 
-许多 Web 框架使用虚拟 DOM 技术来更新页面。基本上，虚拟 DOM 是网页内容的内存副本。框架更新这个虚拟表示，然后将其与“真实” DOM 同步。这比直接更新 DOM 要快得多，并允许框架应用许多优化技术。
+许多 Web 框架使用虚拟 DOM 技术来更新页面。基本上，虚拟 DOM 是网页内容的内存副本。框架更新这个虚拟表示，然后将其与“真实”DOM 同步。这比直接更新 DOM 要快得多，并允许框架应用许多优化技术。
 
 这些框架通常会在每次对虚拟 DOM 更改后重新运行我们的 JavaScript 代码，并应用不同的方法来缓存资源消耗巨大的计算和优化执行。它们几乎不会尝试理解我们的 JavaScript 代码在做什么。
 
@@ -502,7 +501,7 @@ const checkAllTodos = (completed) => {
 
 那么这里发生了什么？当你在 Svelte 中更新组件的状态时，它不会立即更新 DOM。相反，它会等到下一个微任务来检查是否有其他需要应用的更改，包括其他组件。这样做可以避免不必要的工作，并允许浏览器更有效地批处理操作。
 
-在这种情况下，当 `editing` 是 `false` 时，编辑 `<input>` 不可见，因为它不存在于 DOM中。在 `onEdit()` 函数中，我们将 `editing` 设置为 `true`，然后立即尝试访问 `nameEl` 变量并执行 `nameEl.focus()`。问题在于，Svelte 还没有更新 DOM。
+在这种情况下，当 `editing` 是 `false` 时，编辑 `<input>` 不可见，因为它不存在于 DOM 中。在 `onEdit()` 函数中，我们将 `editing` 设置为 `true`，然后立即尝试访问 `nameEl` 变量并执行 `nameEl.focus()`。问题在于，Svelte 还没有更新 DOM。
 
 解决这个问题的一种方法是使用 [`setTimeout()`](/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) 函数，延迟调用 `nameEl.focus()`，直到下一个事件循环，并给 Svelte 更新 DOM 的机会。
 
@@ -668,7 +667,7 @@ node.addEventListener("focus", (event) => node.select());
    <input bind:value={name} use:selectOnFocus use:focusOnInit />
    ```
 
-3. 现在我们的 `onEdit()` 函数可以简单得多:
+3. 现在我们的 `onEdit()` 函数可以简单得多：
 
    ```js
    function onEdit() {
@@ -689,7 +688,7 @@ node.addEventListener("focus", (event) => node.select());
    let editButtonPressed = false; // 跟踪编辑按钮是否已按下，以便在取消或保存后将焦点放在它上面
    ```
 
-3. 接下来，我们将修改*编辑*按钮的特性来保存这个标志，并创建一个 action。像这样更新 `onEdit()` 函数:
+3. 接下来，我们将修改*编辑*按钮的特性来保存这个标志，并创建一个 action。像这样更新 `onEdit()` 函数：
 
    ```js
    function onEdit() {
@@ -704,7 +703,7 @@ node.addEventListener("focus", (event) => node.select());
    const focusEditButton = (node) => editButtonPressed && node.focus();
    ```
 
-5. 最后，我们在*编辑*按钮上使用 `focusEditButton` action，像这样:
+5. 最后，我们在*编辑*按钮上使用 `focusEditButton` action，像这样：
 
    ```svelte
    <button type="button" class="btn" on:click={onEdit} use:focusEditButton>
