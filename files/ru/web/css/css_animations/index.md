@@ -35,7 +35,7 @@ slug: Web/CSS/CSS_animations
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

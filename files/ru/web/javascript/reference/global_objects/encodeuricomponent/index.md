@@ -78,7 +78,7 @@ function encodeRFC5987ValueChars(str) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

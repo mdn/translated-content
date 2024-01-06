@@ -53,7 +53,7 @@ For more examples, see [Using audio and video in Firefox](/ru/docs/Using_HTML5_a
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

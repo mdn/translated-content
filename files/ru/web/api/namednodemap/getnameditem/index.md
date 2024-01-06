@@ -17,6 +17,6 @@ myAttr = attrs.getNamedItem(name)
 
 - `name` имя нужного атрибута
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

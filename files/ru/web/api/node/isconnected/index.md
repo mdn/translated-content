@@ -67,6 +67,6 @@ console.log(style.isConnected); // returns true
 
 {{Specifications}}
 
-## Поддержка Браузерами
+## Совместимость с браузерами
 
 {{Compat}}

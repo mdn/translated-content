@@ -44,6 +44,6 @@ slug: Web/CSS/Universal_selectors
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

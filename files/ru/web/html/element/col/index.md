@@ -125,7 +125,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<col>`.
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

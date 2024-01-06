@@ -45,7 +45,7 @@ slug: Web/HTML/Element/wbr
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -32,7 +32,7 @@ slug: Web/CSS/ratio
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
