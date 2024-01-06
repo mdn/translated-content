@@ -1,11 +1,10 @@
 ---
 title: Array.prototype.toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.toSpliced
 ---
 
 {{JSRef}}
+
 {{jsxref("Array")}}의 **`toSpliced()`** 메서드는 {{jsxref("Array/splice", "splice()")}}에 대응되는 [복사](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) 메서드입니다. 이 메서드는 주어진 인덱스에서 일부 요소가 제거되거나 교체된 새로운 배열을 반환합니다.
 
 ## 구문
