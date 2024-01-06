@@ -1,7 +1,8 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-l10n.sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
