@@ -29,7 +29,7 @@ window.ongamepadconnected = function(event) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

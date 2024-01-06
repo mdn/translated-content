@@ -42,7 +42,7 @@ An `InvalidState` error is raised if the `requestData()` method is called while 
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

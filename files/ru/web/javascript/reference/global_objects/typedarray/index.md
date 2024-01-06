@@ -133,23 +133,9 @@ for (var k in typedArrayTypes)
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Совместимость
-
-Начиная с ECMAScript 2015, конструкторы `TypedArray` требуют использования оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора `TypedArray` как функции без `new`, отныне выбросит ошибку {{jsxref("TypeError")}}.
-
-```js example-bad
-var dv = Int8Array([1, 2, 3]);
-// TypeError: вызов встроенного конструктора Int8Array
-// без new запрещён
-```
-
-```js example-good
-var dv = new Int8Array([1, 2, 3]);
-```
 
 ## Смотрите также
 

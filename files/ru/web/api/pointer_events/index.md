@@ -352,7 +352,7 @@ Here are some _best practices_ to consider when using pointer events:
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

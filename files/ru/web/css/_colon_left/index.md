@@ -36,7 +36,7 @@ slug: Web/CSS/:left
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

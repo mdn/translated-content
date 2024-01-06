@@ -61,7 +61,7 @@ This element's attributes include the [global attributes](/ru/docs/Web/HTML/Glob
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

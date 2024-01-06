@@ -51,7 +51,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 - {{WebExtAPIRef("windows.onFocusChanged")}}
   - : Fired when the currently focused window changes.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

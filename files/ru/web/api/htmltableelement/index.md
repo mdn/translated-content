@@ -68,7 +68,7 @@ _Наследует методы от своего родителя, {{domxref("
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
