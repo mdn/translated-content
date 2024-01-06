@@ -1,6 +1,8 @@
 ---
 title: Array.prototype.toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
+l10n:
+  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
 {{JSRef}}
@@ -48,9 +50,9 @@ toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
 
 `splice()`와 비슷한 `toSpliced()`메서드는 여러 작업을 한 번에 수행합니다. 지정한 인덱스에서 시작하여 배열에서 지정한 수의 요소를 제거한 다음 동일한 인덱스에 지정된 요소를 삽입합니다. 그러나 원래 배열을 수정하는 대신 새로운 배열을 반환합니다. 따라서 삭제된 요소는 이 메서드에서 반환되지 않습니다.
 
-toSpliced() 메서드는 절대 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)을 생성하지 않습니다. 만약 배열이 비어있다면 빈 슬롯은 새로운 배열에서 `undefined`로 대체됩니다.
+`toSpliced()` 메서드는 절대 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)을 생성하지 않습니다. 만약 배열이 비어있다면 빈 슬롯은 새로운 배열에서 `undefined`로 대체됩니다.
 
-`toSpliced()`메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)입니다. `this`값에는 `length`속성과 정수 키 속상만 있을 것으로 예상합니다.
+`toSpliced()`메서드는 [제네릭](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)입니다. `this`값에는 `length`속성과 정수 키 속성만 있을 것으로 예상합니다.
 
 ## 예시
 
@@ -101,15 +103,15 @@ console.log(Array.prototype.toSpliced.call(arrayLike, 0, 1, 2, 3));
 // [2, 3, undefined, 4]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - [Polyfill of `Array.prototype.toSpliced` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
 - {{jsxref("Array.prototype.splice()")}}
