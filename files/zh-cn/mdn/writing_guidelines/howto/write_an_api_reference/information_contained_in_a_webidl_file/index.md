@@ -2,23 +2,23 @@
 title: WebIDL 文件中包含的信息
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 l10n:
-  source Commit: c6497f6347a9dd6d6844b520b1ba8542552653a8
+  sourceCommit: c6497f6347a9dd6d6844b520b1ba8542552653a8
 ---
 
 {{MDNSidebar}}
 
 在编写有关 API 的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。WebIDL 文件是一种非常简洁的方式，可以提供很多（但不是全部）有关 API 的信息。本文档提供了有助于理解 WebIDL 语法的参考。
 
-IDL 代表**_接口定义语言_**，它用于描述 API。在更广泛的计算领域，有几种 IDL。在浏览器领域，我们使用的 IDL 被称为 _WebIDL_。有两种 WebIDL 可用：WebIDL 规范中给出的一种，以及在浏览器中实现的一种。规范是规范引用，浏览器 WebIDL 描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释、有关非标准元素的信息，以及对 IDL 规范的特定于浏览器的扩展。
+IDL 代表**_接口定义语言_**，它用于描述 API。在更广泛的计算领域，有几种 IDL。在浏览器领域，我们使用的 IDL 被称为 _WebIDL_。有两种 WebIDL 可用：一种是在 WebIDL 规范中给出的，一种是在浏览器中实现的。规范是标准参考，而浏览器的 WebIDL 描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释、有关非标准元素的信息，以及对 IDL 规范的特定于浏览器的扩展。
 
 ## 在哪里可以找到 WebIDL 文件
 
 WebIDL 可以在多个位置找到：
 
-- 每个规范在文本中都包含 WebIDL：它是一种传达精确定义的非常方便的方法。这些描述了 API 的语法。虽然是规范参考，但我们必须记住，它们可能与实际实施不同。在 MDN 上，我们希望实用并记录 Web 平台的真正含义，而不是理想应该是什么。因此，请仔细检查实现中的内容（如果发现错误，请不要犹豫，立即提交）。
-- 三个浏览器引擎使用（修改）WebIDL 作为其工具链的一部分：Gecko、Chromium/Blink 和 WebCore/WebKit。Edge 之前不基于 Chromium 内核的版本在内部使用它，但遗憾的是它们不公开。
+- 每个规范都在文本中包含 WebIDL：它是一种传达精确定义的非常方便的方法。这些描述了 API 的语法。虽然是标准参考，但我们必须记住，它们可能与实际实现不同。在 MDN 上，我们希望内容实用，因此记录 Web 平台的真实情况，而不是想法应该是什么样的。因此，请仔细检查实现中的内容（如果发现不清楚的内容，请不要犹豫并立即报告错误内容）。
+- 三个浏览器引擎使用（修改后的）WebIDL 作为其工具链的一部分：Gecko、Chromium/Blink 和 WebCore/WebKit。Edge 之前不基于 Chromium 内核的版本在内部使用它，但遗憾的是它们并不公开。
 
-  - 对于 Gecko，所有 WebIDL 文件都分组在一个目录中：<https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>。它们的扩展名是 `.webidl`。Gecko 源代码树中还有其他的 `*.idl` 文件，但它们不是 WebIDL，因此你可以忽略它们。旧版本的 Gecko 有一些 WebIDL 分散在某些地方，甚至可能使用 Mozilla 的 IDL 而不是 WebIDL 来描述一些 Web 接口，但这在任何最近的 Gecko 代码中都不会成为问题。
+  - 对于 Gecko，所有 WebIDL 文件都被归类在一个目录中：<https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>。它们的扩展名是 `.webidl`。Gecko 源代码树中还有其他的 `*.idl` 文件，但它们不是 WebIDL，因此你可以忽略它们。旧版本的 Gecko 有一些 WebIDL 分散在其他地方，甚至可能使用 Mozilla 的 IDL 而不是 WebIDL 来描述一些 Web 接口，但这在任何最近的 Gecko 代码中都不会成为问题。
   - 对于 Chromium，它们分布在两个位置，都是 [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) 源代码目录的两个子目录：[`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) 和 [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/)。Chromium 源代码中的一些 IDL 文件分散在其他位置，但这些属于测试系统，与 API 实现无关。
   - 对于 WebCore，它们分散在源代码中，因此你需要进一步发掘：例如 <https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>
 
@@ -30,7 +30,7 @@ WebIDL 在[其规范](https://webidl.spec.whatwg.org/)中定义。但它被设�
 - 对于 Chromium，Google 也创建了一个[文档](https://www.chromium.org/blink/webidl/)来描述其扩展。
 - 对于 WebCore，Apple 同样为其特有扩展提供了一个[页面](https://trac.webkit.org/wiki/WebKitIDL)。
 
-> **备注：** 我们在这里只描述了编写文档时最有用的 WebIDL 子集。有许多其他的注释对于实现者来说很有用；请参阅上面链接的四个文档，以获得完整的概述。
+> **备注：** 我们在这里只描述了编写文档时最有用的 WebIDL 子集。有许多其他的注释对于实现者来说很有用；请参阅上面链接的四个文档，以有一个完整的概念。
 
 ## 接口
 
@@ -38,7 +38,7 @@ WebIDL 在[其规范](https://webidl.spec.whatwg.org/)中定义。但它被设�
 
 ### 接口名称
 
-接口名称是在关键字 `interface` 之后和下一个开括号（`'{'`）或冒号（`':'`）之前出现的字符串。
+接口名称是出现在关键字 `interface` 之后和下一个开括号（`'{'`）或冒号（`':'`）之前的字符串。
 
 ```webidl
 interface URL {};
@@ -58,9 +58,9 @@ interface HTMLMediaElement : HTMLElement {…}
 
 ### 混入
 
-一些属性和方法在多个接口中可用。为了防止重新定义，它们被定义在特殊的、被称为*混入*（mixin）的 WebIDL 接口中。
+一些属性和方法在多个接口中可用。为防止重新定义，它们被定义在特殊的、被称为*混入*（mixin）的 WebIDL 接口中。
 
-截至 2019 年 9 月，混入语法已更新。在新语法中，你使用 `interface mixin` 来定义混入接口，如下所示：
+截至 2019 年 9 月，混入语法已更新。在新语法中，你可以使用 `interface mixin` 来定义混入接口，如下所示：
 
 ```webidl
 interface MyInterface {};
@@ -70,7 +70,7 @@ interface mixin MyMixin {
 }
 ```
 
-然后，你可以使用 `includes` 关键字来表示混入接口中定义的属性在接口上可用：
+然后，你可以使用 `includes` 关键字来表示混入接口中定义的属性在某个接口上可用：
 
 ```webidl
 MyInterface includes MyMixin;
@@ -146,7 +146,7 @@ partial interface Performance {
 - `Window`
   - : 分部接口在 {{domxref('Window')}} 全局作用域中可用。
 - `Worker`
-  - : 分部接口在任何类型的 worker 中均可用，即全局作用域是 {{domxref('WorkerGlobalScope')}} 的子接口——{{domxref('DedicatedWorkerGlobalScope')}}、{{domxref('SharedWorkerGlobalScope')}} 或 {{domxref('ServiceWorkerGlobalScope')}}（它也可用于 `ChromeWorker`，但我们不会记录它们，因为它们在 Web 上不可见，且是 Firefox 的内部接口。）
+  - : 分部接口在任何类型的 worker 中均可用，即全局作用域是 {{domxref('WorkerGlobalScope')}} 的子接口——{{domxref('DedicatedWorkerGlobalScope')}}、{{domxref('SharedWorkerGlobalScope')}} 或 {{domxref('ServiceWorkerGlobalScope')}}（它也可用于 `ChromeWorker`，但我们不会记录它们，因为它们在 Web 上不可见，且为 Firefox 的内部接口。）
 - `DedicatedWorker`
   - : 分部接口仅在 {{domxref('DedicatedWorkerGlobalScope')}} 中可用。
 - `SharedWorker`
@@ -154,7 +154,7 @@ partial interface Performance {
 - `ServiceWorker`
   - : 分部接口仅在 {{domxref('ServiceWorkerGlobalScope')}} 中可用。
 
-其他可能的值，如 `System`，具有一个[特殊的含义](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html#custom-extended-attributes)，且不需要记录。
+其他可能的值（如 `System`）具有一个[特殊的含义](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html#custom-extended-attributes)，且不需要记录。
 
 注意，这些可能的值本身是在 WebIDL 文件中定义的。接口可能有一个 `[Global=xyz]` 注释。它意味着当使用此类型的对象作为全局作用域时，任何具有 `xyz` 作为 `[Exposed]` 值的接口、属性或方法都可用。
 
@@ -197,7 +197,7 @@ interface MyInterface {
 
 ## 属性
 
-你可以通过 `attribute` 关键字的存在来识别属性的定义。
+你可以通过是否存在 `attribute` 关键字来识别属性的定义。
 
 ### 属性名称
 
@@ -224,9 +224,9 @@ readonly attribute MediaError? error;
 如果关键字 `readonly` 存在，则该属性不能被修改。它必须标记为只读：
 
 - 在接口页面中，在第一句话中使用 \\{{ReadOnlyInline}} 宏。
-- 在其自己的页面中，在第一句话中使用中使用描述：_**`HTMLMediaElement.error`** 只读属性……_
+- 在其自己的页面中，在第一句话中使用中使用描述：_**`HTMLMediaElement.error`** 只读属性…_
 - 在其自己的页面中，添加 `Read-only` 标签。
-- 在接口页面中对其进行描述时，使用“*返回……”*开始。
+- 在接口页面中对其进行描述时，以“_返回…_”开头。
 
 > **备注：** 只有只读属性可以被描述为“返回”一个值。非只读属性也可以用于设置值。
 
@@ -237,11 +237,11 @@ readonly attribute MediaError? error;
             attribute DOMString src;
 ```
 
-在某些情况下，例如当某些值是非法的时，设置新值可能会导致引发异常。这需要使用 `[SetterThrows]` 注释标记。当这种情况发生时，属性页面的语法部分*必须*有一个异常子部分。异常列表和引发它们的条件在该 API 的规范中列出，作为文本信息。
+在某些情况下，例如当某些值是非法的时，设置新值可能会导致引发异常。这需要使用 `[SetterThrows]` 注释标记。当发生这种情况时，属性页面的语法部分*必须*有一个异常子部分。异常列表和引发它们的条件在该 API 的规范中以文本信息列出。
 
 注意，一些异常没有被明确标记，而由 JavaScript 绑定定义。尝试将参数[设置为非法的枚举值](https://webidl.spec.whatwg.org/#es-enumeration)（映射到 JavaScript {{jsxref('String')}}）会引发 {{jsxref('TypeError')}} 异常。这必须记录下来，但是这在 WebIDL 文档中只会被隐式标记。
 
-getter 抛出异常的情况并不常见，但在少数情况下会发生。在这种情况下，使用 `[GetterThrows]` 注释。在这里，属性页面的语法部分*必须*有一个异常子部分。
+getter 抛出异常的情况并不常见，但在少数情况下会发生。对于这种情况，会使用 `[GetterThrows]` 注释。在这里，属性页面的语法部分*必须*有一个异常子部分。
 
 ```webidl
 partial interface Blob {
@@ -252,9 +252,9 @@ partial interface Blob {
 
 ### 不抛出异常
 
-当不遵循 Webidl 的语义时，即使没有设置 `[SetterThrows]` 或 `[GetterThrows]`，通常也会抛出异常。例如，在严格模式下，如果我们尝试将只读属性设置为新值，即调用其隐式 setter，则该只读属性将在严格模式下抛出。
+当不遵循 WebIDL 的语义时，即使没有设置 `[SetterThrows]` 或 `[GetterThrows]`，通常也会抛出异常。例如，在严格模式下，如果我们尝试将只读属性设置为新值，即调用其隐式 setter，该只读属性将在严格模式下抛出异常。
 
-主要是出于兼容性的目的，这种行为有时很烦人。为了防止这种情况而创建一个无操作 setter（即静默忽略任何尝试将属性设置为新值），可以使用 `[LenientSetter]` 注释。
+这种行为主要是出于兼容性的目的，但它有时很烦人。为防止这种情况而创建一个无操作 setter（即静默忽略任何尝试将属性设置为新值），可以使用 `[LenientSetter]` 注释。
 
 ```webidl
 partial interface Document {
@@ -267,7 +267,7 @@ partial interface Document {
 
 在这些情况下，需要在属性的描述中添加额外的句子。例如：
 
-_尽管此属性是只读的，但如果修改它（即使在严格模式下），它也不会抛出异常；setter 是无操作的，将被忽略。_
+_尽管此属性是只读的，但如果修改它（即使在严格模式下）也不会抛出异常；setter 是无操作的，将被忽略。_
 
 ### 创建对象或引用
 
@@ -277,7 +277,7 @@ _尽管此属性是只读的，但如果修改它（即使在严格模式下）�
 
 对于接口对象，默认情况下返回对内部对象的*引用*。这必须在接口页面中的简短描述和特定子页面中的描述中提到。
 
-> **备注：** 与返回对象的属性一起使用的关键字 `readonly` 适用于引用（无法更改内部对象）。返回对象的属性可以更改，即使它们在相关接口中被标记为只读。
+> **备注：** 与返回对象的属性一起使用的 `readonly` 关键字适用于引用（无法更改内部对象）。返回对象的属性可以更改，即使它们在相关接口中被标记为只读。
 
 某些情况下，API 必须返回一个*新*对象，或者是内部对象的*副本*。这种情况在 WebIDL 中使用 `[NewObject]` 注释来表示。
 
@@ -286,16 +286,16 @@ _尽管此属性是只读的，但如果修改它（即使在严格模式下）�
    readonly attribute TimeRanges buffered;
 ```
 
-对于上面的示例，对 `buffered` 的每次调用都会返回一个不同的对象：更改它不会更改内部值，内部值的更改也不会影响每个对象实例。在文档中，我们将在对象前使用形容词“新的”来标记它：
+对于上面的示例，对 `buffered` 的每次调用都会返回一个不同的对象：更改它不会改变内部值，内部值的更改也不会影响每个对象实例。在文档中，我们将在对象前使用形容词“新的”来标记它：
 
-_**`HTMLMediaElement.buffered`** 只读属性返回一个新的 \\{{domxref("TimeRanges")}} 对象，该对象……_
+_**`HTMLMediaElement.buffered`** 只读属性返回一个新的 \\{{domxref("TimeRanges")}} 对象，该对象…_
 
 以及
 
 - _\\{{domxref("HTMLMediaElement.buffered")}}\\{{ReadOnlyInline}}_
-  - : _返回一个新的 \\{{domxref("TimeRanges")}} 对象，其……_
+  - : _返回一个新的 \\{{domxref("TimeRanges")}} 对象，其…_
 
-对于集合对象的引用（如 `HTMLCollection`、`HTMLFormElementsCollection` 或 `HTMLOptionsCollection`，始终不带 `[NewObject]`），我们明确表示对基础对象的更改将通过返回的引用可用。为了标记这一点，我们将集合标记为**动态的** `HTMLCollection`（或 `HTMLFormElementsCollections`、`HTMLOptionsCollection`），在接口描述和子页面中都是如此。
+对于集合对象的引用（如 `HTMLCollection`、`HTMLFormElementsCollection` 或 `HTMLOptionsCollection`，始终不带 `[NewObject]`），我们明确表示可以通过返回的引用对底层对象进行更改。为了标记这一点，我们将集合标记为**动态** `HTMLCollection`（或 `HTMLFormElementsCollections`、`HTMLOptionsCollection`），在接口描述和子页面中都是如此。
 
 例如
 
@@ -353,7 +353,7 @@ DOMString canPlayType(DOMString type);
 
 返回值类型在方法名称之前指定——在上面的示例中，其为 `DOMString` 类型的对象。如果返回类型后面跟着一个问号（`'?'`），则还可以返回 `null` 值，并且文档必须解释*何时*可能发生这种情况。如果没有问号（如此处所示），则返回值不能为 `null`。
 
-如果返回类型是 `void` 关键字，则意味着其没有返回值。如果 WebIDL 条目读取 `void`，则文档中的*返回值*部分应该简单地阐述“无（\{{jsxref("undefined")}}）。”。
+如果返回类型是 `void` 关键字，则意味着其没有返回值。如果 WebIDL 条目中为 `void`，则文档中的*返回值*部分应该简单地阐述“无（\{{jsxref("undefined")}}）。”。
 
 ### 抛出异常
 
@@ -364,7 +364,7 @@ DOMString canPlayType(DOMString type);
 
 一些方法可能会抛出异常。这使用 `[Throws]` 注释标记。当这种情况发生时，方法页面的语法部分*必须*有一个异常子部分。异常列表和引发它们的条件在该 API 的规范中以文本信息列出。
 
-注意，一些异常没有被明确标记，而由 JavaScript 绑定定义。尝试将参数[设置为非法的枚举值](https://webidl.spec.whatwg.org/#es-enumeration)（映射到 JavaScript {{jsxref('String')}}）会引发 {{jsxref('TypeError')}} 异常。这必须记录下来，但是这在 WebIDL 文档中只会被隐式标记。
+注意，一些异常没有被显式标记，而由 JavaScript 绑定定义。尝试将参数[设置为非法的枚举值](https://webidl.spec.whatwg.org/#es-enumeration)（映射到 JavaScript {{jsxref('String')}}）会引发 {{jsxref('TypeError')}} 异常。这必须记录下来，但是这在 WebIDL 文档中只会被隐式标记。
 
 请参考其中一个[*异常*部分](/zh-CN/docs/Web/API/SubtleCrypto/importKey#异常)。
 
@@ -420,7 +420,7 @@ serializer; // 标准版本
 
 可以将接口定义为是*可以迭代的*，这意味着它将具有以下方法：`entries()`、`keys()`、`values()` 和 `forEach()`。还支持在实现此接口的对象上使用 {{jsxref("Statements/for...of", "for...of")}}。
 
-有两种可能的迭代方式：*值迭代器*和*对组迭代器*。
+有两种可能的迭代方式：_值迭代器_（value iterator）和*对组迭代器*（pair iterator）。
 
 #### 值迭代器
 
@@ -437,7 +437,7 @@ iterable<valueType>
 
 这类迭代器允许将 `for (const p in object)` 语法作为 `for (const p in object.entries())` 的简写来使用。我们需要在接口的描述中用一句话来说明这一点。
 
-可以通过两种不同的方式来定义要迭代的值：
+可以通过以下的方式之一来定义要迭代的值：
 
 - 在 WebIDL 文件中，使用 `iterable<valueType>` 注释来定义。例如，请参见 {{domxref('DOMTokenList')}}。
 - 在 WebIDL 文件中通过接口支持索引属性来隐式定义这一点。当接口包含一个参数类型为 `unsigned long` 的 `getter` 方法时，就表明其支持索引属性。
@@ -451,15 +451,14 @@ iterable<keyType, valueType>
 
 迭代器将同时迭代 _valueType_ 类型的值和 _keyType_ 类型的键，即值对组（value pair）。生成的方法有：
 
-- `entries()`，返回一个索引（_keyType_ 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.entries()')}}
-- `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.values()')}}
-- `keys()`，返回一个键（_keyType_ 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.keys()')}}
-- Once [Firefox bug 1216751](https://bugzil.la/1216751) lands, `forEach()`.
+- `entries()`，返回一个值对组[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.entries()')}}。
+- `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.values()')}}。
+- `keys()`，返回一个键[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.keys()')}}。
 - `forEach()`，会对列表中的每一个实体调用一次给定的构造函数。例如，请参见 {{domxref('Headers.forEach()')}}。
 
 这类迭代器允许将 `for (const p in object)` 语法作为 `for (const p in object.entries())` 的简写来使用。我们需要在接口的描述中用一句话来说明这一点。例如 {{domxref('FormData')}}。
 
-可以通过两种不同的方式来定义要迭代的值对组：
+可以通过以下的方式之一来定义要迭代的值对组：
 
 - 在 WebIDL 文件中，使用 `iterable<keyType, valueType>` 注释来定义。例如，请参见 {{domxref('FormData')}}。
 - 在 WebIDL 文件之外所附带的说明中定义。在规范中通常可以找到类似的说明，并通常以以下内容开头：“_The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…_”。
@@ -479,7 +478,7 @@ setlike<valueType>
 - `keys()`，返回一个键[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('NodeList.keys()')}}。
 - `forEach()`，会对列表中的每一个实体调用一次给定的构造函数。例如，请参见 {{domxref('NodeList.forEach()')}}。
 
-对于没有 `readonly` 前缀的类集合声明的情况，还会生成以下方法：
+对于没有只读前缀声明的类集合，还会生成以下方法：
 
 - `add()`，添加一个条目。例如 {{domxref('FontFaceSet')}} 的 `.add()` 方法。
 - `clear()`，清空类集合。例如 {{domxref('FontFaceSet')}} 的 `.clear()` 方法。
