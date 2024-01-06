@@ -1,6 +1,8 @@
 ---
 title: WebIDL 文件中包含的信息
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+l10n:
+  source Commit: c6497f6347a9dd6d6844b520b1ba8542552653a8
 ---
 
 {{MDNSidebar}}
@@ -161,7 +163,7 @@ partial interface Performance {
 interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
 ```
 
-在这里，其定义了当全局作用域是 `DedicatedWorkerGlobalScope` 类型时（即如果我们在专用 worker 中），则任何使用 `[Exposed]` 注释公开给 `Worker` 或 `DedicatedWorker` 的接口、属性或方法都可用。
+在这里，其定义了当全局作用域是 `DedicatedWorkerGlobalScope` 类型时（即如果我们在专用 worker 中），则任何使用 `[Exposed]` 注释暴露给 `Worker` 或 `DedicatedWorker` 的接口、属性或方法都可用。
 
 ### 首选项
 
@@ -349,9 +351,9 @@ TextTrack addTextTrack(TextTrackKind kind,
 DOMString canPlayType(DOMString type);
 ```
 
-返回值类型在方法名称之前指定——在上面的示例中，其为 `DOMString` 类型的对象。如果后面跟着一个问号（`'?'`），则还可以返回 `null` 值，并且文档必须解释*何时*可能发生这种情况。如果没有问号（如此处所示），则返回值不能为 `null`。
+返回值类型在方法名称之前指定——在上面的示例中，其为 `DOMString` 类型的对象。如果返回类型后面跟着一个问号（`'?'`），则还可以返回 `null` 值，并且文档必须解释*何时*可能发生这种情况。如果没有问号（如此处所示），则返回值不能为 `null`。
 
-关键字 `void` 表示没有返回值。它不是返回值类型。如果 WebIDL 条目读取 `void`，则文档中的*返回值*部分应该只包含一句“无（\{{jsxref("undefined")}}）。”。
+如果返回类型是 `void` 关键字，则意味着其没有返回值。如果 WebIDL 条目读取 `void`，则文档中的*返回值*部分应该简单地阐述“无（\{{jsxref("undefined")}}）。”。
 
 ### 抛出异常
 
@@ -431,14 +433,15 @@ iterable<valueType>
 - `entries()`，返回一个索引（`unsigned long` 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 - `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 - `keys()`，返回一个键（即，索引，`unsigned long` 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。对于值迭代器，`keys()` 和 `entries()` 是相同的。
-- `forEach()`，会对列表中的每个条目调用给定的回调函数。
+- `forEach()`，会对列表中的每一个实体调用一次给定的构造函数。
 
 这类迭代器允许将 `for (const p in object)` 语法作为 `for (const p in object.entries())` 的简写来使用。我们需要在接口的描述中用一句话来说明这一点。
 
-> **备注：** 可以通过两种不同的方式来定义要迭代的值对组：
->
-> 1. 在 webidl 文件之外所附带的说明中定义。在规范中，这样的说明通常以“_The [values to iterate over](https://webidl.spec.whatwg.org/#dfn-value-iterator)…_”开头。
-> 2. 在 webidl 文件中通过接口支持索引属性（即，接口带有参数类型为 `unsigned long` 的 `getter` 方法）隐式地定义了这一点。
+可以通过两种不同的方式来定义要迭代的值：
+
+- 在 WebIDL 文件中，使用 `iterable<valueType>` 注释来定义。例如，请参见 {{domxref('DOMTokenList')}}。
+- 在 WebIDL 文件中通过接口支持索引属性来隐式定义这一点。当接口包含一个参数类型为 `unsigned long` 的 `getter` 方法时，就表明其支持索引属性。
+- 在 WebIDL 文件之外所附带的说明中定义。在规范中通常可以找到类似的说明，并通常以以下内容开头：“_The [values to iterate over](https://webidl.spec.whatwg.org/#dfn-value-iterator)…_”。
 
 #### 对组迭代器
 
@@ -446,19 +449,20 @@ iterable<valueType>
 iterable<keyType, valueType>
 ```
 
-迭代器将同时迭代 _valueType_ 类型的值和 _keyType_ 类型的键。生成的方法有：
+迭代器将同时迭代 _valueType_ 类型的值和 _keyType_ 类型的键，即值对组（value pair）。生成的方法有：
 
-- `entries()`，返回一个索引（_keyType_ 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('FormData.entries()')}}
-- `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('FormData.values()')}}
-- `keys()`，返回一个键（_keyType_ 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('FormData.keys()')}}
+- `entries()`，返回一个索引（_keyType_ 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.entries()')}}
+- `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.values()')}}
+- `keys()`，返回一个键（_keyType_ 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.keys()')}}
 - Once [Firefox bug 1216751](https://bugzil.la/1216751) lands, `forEach()`.
-- `forEach()`，需等待 [Firefox bug 1216751](https://bugzil.la/1216751) 落地。
+- `forEach()`，会对列表中的每一个实体调用一次给定的构造函数。例如，请参见 {{domxref('Headers.forEach()')}}。
 
 这类迭代器允许将 `for (const p in object)` 语法作为 `for (const p in object.entries())` 的简写来使用。我们需要在接口的描述中用一句话来说明这一点。例如 {{domxref('FormData')}}。
 
-> **备注：** 要迭代的值对组*不是*在 webidl 文件中定义的，而是在其附带的说明中定义的。这样的说明在规范中，通常以“_The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…_”开头。
->
-> 例如，对于 {{domxref('FormData')}}，你可以在规范中找到：“_The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value)._”。
+可以通过两种不同的方式来定义要迭代的值对组：
+
+- 在 WebIDL 文件中，使用 `iterable<keyType, valueType>` 注释来定义。例如，请参见 {{domxref('FormData')}}。
+- 在 WebIDL 文件之外所附带的说明中定义。在规范中通常可以找到类似的说明，并通常以以下内容开头：“_The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…_”。
 
 ### 类集合方法
 
@@ -470,11 +474,10 @@ setlike<valueType>
 
 生成的属性有：
 
-- `entries()`，返回一个索引[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('NodeList.entries()')}}。
-- `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('NodeList.values()')}}。
-- `keys()` that returns an [`iterator`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('NodeList.keys()')}},
-- `keys()`，返回一个键[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如 {{domxref('NodeList.keys()')}}。
-- `forEach()`。
+- `entries()`，返回一个索引[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('NodeList.entries()')}}。
+- `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('NodeList.values()')}}。
+- `keys()`，返回一个键[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('NodeList.keys()')}}。
+- `forEach()`，会对列表中的每一个实体调用一次给定的构造函数。例如，请参见 {{domxref('NodeList.forEach()')}}。
 
 对于没有 `readonly` 前缀的类集合声明的情况，还会生成以下方法：
 
