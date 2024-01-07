@@ -127,7 +127,7 @@ function isValidJSON(text) {
 
 ### `finally` 块
 
-`finally` 块包含的语句会在 `try` 块和 `catch` 块执行之后、及 `try..catch..finally` 块后面的语句执行之前执行。控制流始终会进入 `finally` 块，可以通过以下方式之一执行：
+`finally` 块包含的语句会在 `try` 块和 `catch` 块执行之后、及 `try...catch...finally` 块后面的语句执行之前执行。控制流始终会进入 `finally` 块，可以通过以下方式之一执行：
 
 - `try` 块正常执行结束后（没有抛出异常）立即执行；
 - 在 `catch` 块正常执行完毕后立即执行；
