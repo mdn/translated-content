@@ -13,7 +13,7 @@ l10n:
 
 > **备注：** 游戏 [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) 是用 Phaser 构建的，控制管理也是基于 Phaser 的，但也可以用纯 JavaScript 完成。使用 Phaser 的好处是它提供了辅助变量和函数，可以让开发更简单、更快速，但选择哪种方法完全取决于你。
 
-## 纯 JavaScript 放罚
+## 纯 JavaScript 方法
 
 我们可以自己实现触摸事件——设置事件监听器，并分配相关的函数，非常简单直接：
 
