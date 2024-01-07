@@ -9,7 +9,7 @@ l10n:
 
 **`GeneratorFunction()`** 构造函数创建 {{jsxref("GeneratorFunction")}} 对象。
 
-请注意，`GeneratorFunction` *不是*一个全局对象。可以通过以下代码来获取它：
+请注意，`GeneratorFunction` *不是*全局对象。可以通过以下代码来获取它：
 
 ```js
 const GeneratorFunction = function* () {}.constructor;
