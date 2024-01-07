@@ -124,7 +124,6 @@ const buttonEnclave = this.add.button(
 
 在实际游戏中，与其创建更多的按钮并用它们覆盖狭小的手机屏幕，我们可以使用一些不同的方法：我们将创建隐形区域来响应给定的操作。从设计的角度来看，最好是让活动区域更大，而不要让按钮图像覆盖半个屏幕。例如，点击屏幕右侧将发射武器：
 
-
 ```js
 this.buttonShoot = this.add.button(
   this.world.width * 0.5,
