@@ -786,7 +786,6 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/supportedLocalesOf	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty	/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes
