@@ -16349,10 +16349,6 @@
       "uleming"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
-    "modified": "2020-03-12T19:48:40.635Z",
-    "contributors": ["MakarovDs777"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {
     "modified": "2020-10-15T21:32:06.154Z",
     "contributors": ["boxa6", "teoli", "maxbarbul", "fscholz", "Correcter"]
