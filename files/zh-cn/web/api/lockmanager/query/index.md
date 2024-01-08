@@ -41,7 +41,7 @@ query()
 
 ### 异常
 
-此方法可能会返回一个被以下类型之一的 {{domxref("DOMException")}} 拒绝的 promise：
+此方法可能会返回一个被以下类型的 {{domxref("DOMException")}} 之一拒绝的 promise：
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 如果当前环境的文档未完全激活，则抛出该异常。
