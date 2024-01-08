@@ -384,7 +384,6 @@
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_текста	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_фигур	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ru/docs/Web/API/Canvas_API/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
-/ru/docs/Web/API/Constraint_validation	/ru/docs/conflicting/Learn/Forms/Form_validation
 /ru/docs/Web/API/Coordinates	/ru/docs/Web/API/GeolocationCoordinates
 /ru/docs/Web/API/DOMString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /ru/docs/Web/API/Document.querySelectorAll	/ru/docs/Web/API/Document/querySelectorAll
