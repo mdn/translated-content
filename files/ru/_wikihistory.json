@@ -16408,10 +16408,6 @@
     "modified": "2019-03-23T23:08:18.833Z",
     "contributors": ["Mingun"]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString": {
-    "modified": "2019-08-25T13:48:33.955Z",
-    "contributors": ["Yialo", "Mingun"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
     "modified": "2020-03-13T11:04:21.413Z",
     "contributors": ["fishr-flash", "AMurkin", "Mingun", "teoli", "kreshikhin"]
