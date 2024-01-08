@@ -16432,10 +16432,6 @@
     "modified": "2019-03-23T23:05:56.982Z",
     "contributors": ["Mingun"]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
-    "modified": "2019-08-27T16:00:03.262Z",
-    "contributors": ["Yialo", "Mingun"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Set": {
     "modified": "2020-10-15T22:08:32.198Z",
     "contributors": ["AndreyGlyan", "qqwweeaassdd", "paramoshkinandrew"]
