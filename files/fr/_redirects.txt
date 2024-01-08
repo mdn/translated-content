@@ -3944,6 +3944,7 @@
 /fr/docs/Web/API/Notification/maxActions	/fr/docs/Web/API/Notification/maxActions_static
 /fr/docs/Web/API/Notification/permission	/fr/docs/Web/API/Notification/permission_static
 /fr/docs/Web/API/Notification/requestPermission	/fr/docs/Web/API/Notification/requestPermission_static
+/fr/docs/Web/API/NotifyAudioAvailableEvent	/fr/docs/orphaned/Web/API/NotifyAudioAvailableEvent
 /fr/docs/Web/API/ParentNode	/fr/docs/Web/API/Element
 /fr/docs/Web/API/ParentNode/append	/fr/docs/Web/API/Element/append
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
@@ -4249,6 +4250,7 @@
 /fr/docs/Web/CSS/::-moz-placeholder	/fr/docs/Web/CSS/::placeholder
 /fr/docs/Web/CSS/::-webkit-file-upload-button	/fr/docs/Web/CSS/::file-selector-button
 /fr/docs/Web/CSS/::-webkit-input-placeholder	/fr/docs/Web/CSS/::placeholder
+/fr/docs/Web/CSS/::-webkit-outer-spin-button	/fr/docs/conflicting/Web/CSS/::-webkit-inner-spin-button
 /fr/docs/Web/CSS/:after	/fr/docs/Web/CSS/::after
 /fr/docs/Web/CSS/:after_|_::after	/fr/docs/Web/CSS/::after
 /fr/docs/Web/CSS/:any	/fr/docs/Web/CSS/:is
