@@ -16349,22 +16349,6 @@
       "uleming"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
-    "modified": "2019-03-23T22:45:00.856Z",
-    "contributors": ["teoli", "WispProxy", "casfcitizen"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_3720fcfc8cf309ee8f3b5f3474dc9e12": {
-    "modified": "2020-03-12T19:48:16.347Z",
-    "contributors": ["KTatyana"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_9896c9277d53005e5ad73315265daed1": {
-    "modified": "2020-03-12T19:48:53.962Z",
-    "contributors": ["MakarovDs777"]
-  },
-  "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features_ce02ff996e57a0f0af4fbdf5f792ff46": {
-    "modified": "2020-03-12T19:48:53.985Z",
-    "contributors": ["MakarovDs777"]
-  },
   "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-03-12T19:46:46.233Z",
     "contributors": ["Pandemoniumus"]
