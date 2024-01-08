@@ -774,7 +774,6 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Collator/resolvedOptions	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Collator/supportedLocalesOf	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 /ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts

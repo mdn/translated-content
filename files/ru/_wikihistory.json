@@ -16361,10 +16361,6 @@
     "modified": "2020-02-07T02:50:13.993Z",
     "contributors": ["alexbs", "deepdarkness", "Mingun"]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString": {
-    "modified": "2019-03-23T23:07:35.386Z",
-    "contributors": ["Mingun"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Error": {
     "modified": "2019-03-23T23:08:50.114Z",
     "contributors": ["rinbik", "Mingun"]
