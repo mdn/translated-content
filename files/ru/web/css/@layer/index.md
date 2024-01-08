@@ -154,7 +154,9 @@ p {
 
 ```html
 <div class="item">
-  Я отображаюсь фиолетовым цветом, потому что слой <code>special</code> идёт после слоя <code>base</code>. Значения свойств border, font-size и padding берутся из слоя <code>base</code>.
+  Я отображаюсь фиолетовым цветом, потому что слой <code>special</code> идёт
+  после слоя <code>base</code>. Значения свойств border, font-size и padding
+  берутся из слоя <code>base</code>.
 </div>
 ```
 
