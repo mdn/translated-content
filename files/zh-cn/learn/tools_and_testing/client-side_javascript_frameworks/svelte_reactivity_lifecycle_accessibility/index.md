@@ -1,12 +1,12 @@
 ---
-title: Svelte 进阶：响应性、生命周期以及无障碍
+title: Svelte 进阶：响应式、生命周期以及无障碍
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility
 ---
 
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-在上一篇文章中，我们为待办事项列表添加了更多功能，并开始将应用程序组织成组件。在本文中，我们将添加应用程序的最终功能，并进一步组件化我们的应用程序。我们将学习处理与更新对象和数组相关的响应性问题。为了避免常见的问题，我们需要深入了解 Svelte 的响应性系统。我们还将解决一些无障碍聚焦问题，以及其他一些问题。
+在上一篇文章中，我们为待办事项列表添加了更多功能，并开始将应用程序组织成组件。在本文中，我们将添加应用程序的最终功能，并进一步组件化我们的应用程序。我们将学习处理与更新对象和数组相关的响应式问题。为了避免常见的问题，我们需要深入了解 Svelte 的响应式系统。我们还将解决一些无障碍聚焦问题，以及其他一些问题。
 
 <table>
   <tbody>
@@ -38,13 +38,13 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivit
 
 我们将重点关注涉及焦点管理的一些无障碍问题。为此，我们将利用一些访问 DOM 节点和执行 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 和 [`select()`](/zh-CN/docs/Web/API/HTMLInputElement/select) 等方法的技术。我们还将学习如何声明以及清除 DOM 元素的事件监听器。
 
-我们也需要学习一些组件生命周期的知识，以了解这些 DOM 节点何时从 DOM 中挂载（mount）和卸载（unmount），以及我们如何访问它们。我们还将学习 `action` 指令，它将允许我们以可重用和声明性的方式扩展 HTML 元素的功能。
+我们也需要学习一些组件生命周期的知识，以了解这些 DOM 节点何时在 DOM 中挂载（mount）和卸载（unmount），以及我们如何访问它们。我们还将学习 `action` 指令，它将允许我们以可重用和声明性的方式扩展 HTML 元素的功能。
 
-最后，我们将进一步了解组件。到目前为止，我们已经看到组件如何使用属性共享数据，并使用事件和双向数据绑定与其父组件通信。现在，我们将看到组件如何公开方法和变量。
+最后，我们将进一步了解组件。到目前为止，我们已经看到组件如何使用属性共享数据，并使用事件和双向数据绑定与其父组件通信。现在，我们将看到组件如何暴露方法和变量。
 
 本文将在课程中开发以下新组件：
 
-- `MoreActions`：显示*全选*和*移除已完成*按钮，并发出处理其功能所需的相应事件。
+- `MoreActions`：显示 _Check All_（全选）和 _Remove Completed_（移除已完成）按钮，并发出处理其功能所需的相应事件。
 - `NewTodo`：显示用于添加新待办事项的 `<input>` 字段和 _Add_（添加）按钮。
 - `TodosStatus`：显示“x out of y items completed”（“x 个已完成，共 y 个项目”）的状态标题。
 
@@ -108,7 +108,7 @@ npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts
 
    我们还包含了 `completed` 变量，用于在全选和取消全选之间进行切换。
 
-3. 在 `Todos.svelte` 中，我们要导入我们的 `MoreActions` 组件，并创建两个函数来处理 `MoreActions` 组件发出的事件。
+3. 回到 `Todos.svelte`，我们要导入我们的 `MoreActions` 组件，并创建两个函数来处理 `MoreActions` 组件发出的事件。
 
    在现有的导入语句下面添加以下导入语句：
 
@@ -138,9 +138,9 @@ npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts
 
 6. 好的，让我们回到应用程序中尝试一下。你会发现*移除已完成*按钮正常工作，但*全选*/*全部取消*按钮却没有任何反应。
 
-要明白这里发生了什么，我们需要深入了解 Svelte 的响应性。
+要明白这里发生了什么，我们需要深入了解 Svelte 的响应式。
 
-## 响应性问题：更新对象和数组
+## 响应式问题：更新对象和数组
 
 为了查看发生了什么，我们可以在 `checkAllTodos()` 函数中将 `todos` 数组记录到控制台中。
 
@@ -157,7 +157,7 @@ npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts
 
 你会注意到，每次按下按钮时，数组都会成功更新（`todo` 对象的 `completed` 属性在 `true` 和 `false` 之间切换），但是 Svelte 无法意识到这一点。这也意味着，在这种情况下，像 `$: console.log('todos', todos)` 这样的响应式语句并没有太大用处。
 
-为了弄清楚发生这种情况的原因，我们需要了解在更新数组和对象时 Svelte 中的响应性是如何工作的。
+为了弄清楚发生这种情况的原因，我们需要了解在更新数组和对象时 Svelte 中的响应式是如何工作的。
 
 许多 Web 框架使用虚拟 DOM 技术来更新页面。基本上，虚拟 DOM 是网页内容的内存副本。框架更新这个虚拟表示，然后将其与“真实”DOM 同步。这比直接更新 DOM 要快得多，并允许框架应用许多优化技术。
 
@@ -271,7 +271,7 @@ const checkAllTodos = (completed) => {
 
 ## 使用 DOM：关注细节
 
-现在我们已经完成了应用程序的所有必需功能，接下来我们将专注于一些无障碍功能，以改善我们的应用程序对仅使用键盘或屏幕阅读器的用户的可用性。
+现在我们已经完成了应用程序的所有必需功能，接下来我们将专注于一些无障碍特性，以改善我们的应用程序对仅使用键盘或屏幕阅读器的用户的可用性。
 
 在当前状态下，我们的应用程序存在一些键盘无障碍问题，比如说在焦点管理方面。让我们了解一下这些问题。
 
@@ -287,9 +287,9 @@ const checkAllTodos = (completed) => {
 
 此外，如果按下 <kbd>Escape</kbd> 或 <kbd>Enter</kbd> 键，什么都不会发生。如果点击*取消*或*保存*，焦点再次消失。对于使用键盘的用户来说，这很令人困惑。
 
-我们还希望添加一些实用特性，例如在必填字段为空时禁用*保存*按钮，在文本输入获得焦点时给予某些 HTML 元素焦点以及在文本输入获得焦点时自动选择内容。
+我们还希望添加一些实用特性，例如在必填字段为空时禁用*保存*按钮，在文本输入获得焦点时给予某些 HTML 元素焦点或自动选择内容。
 
-要实现所有这些功能，我们需要以编程方式访问 DOM 节点，以运行诸如 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 和 [`select()`](/zh-CN/docs/Web/API/HTMLInputElement/select) 等函数。我们还必须使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 和 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 以在控件获得焦点时运行特定的任务。
+要实现所有这些特性，我们需要以编程方式访问 DOM 节点，以运行诸如 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 和 [`select()`](/zh-CN/docs/Web/API/HTMLInputElement/select) 等函数。我们还必须使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 和 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 以在控件获得焦点时运行特定的任务。
 
 问题是，所有这些 DOM 节点是由 Svelte 在运行时动态创建的。因此，我们必须等待直到它们被创建并添加到 DOM 中，才能使用它们。为此，我们需要学习关于[组件生命周期](https://learn.svelte.dev/tutorial/onmount)的知识，以了解何时可以访问它们（稍后再详细讨论）。
 
@@ -419,7 +419,7 @@ const checkAllTodos = (completed) => {
    <NewTodo autofocus on:addTodo={(e) => addTodo(e.detail)} />
    ```
 
-3. 如果现在尝试运行应用程序，你会发现页面现在是空白的，并且在 DevTools 的控制台中会显示类似于 `TypeError: nameEl is undefined` 的错误。
+3. 如果现在尝试运行应用程序，你会发现页面现在是空白的，并且在开发者工具的控制台中会显示类似于 `TypeError: nameEl is undefined` 的错误。
 
 要理解这里发生了什么，让我们更详细地讨论一下我们之前提到的[组件生命周期](https://learn.svelte.dev/tutorial/onmount)。
 
@@ -437,7 +437,7 @@ const checkAllTodos = (completed) => {
    import { onMount } from "svelte";
    ```
 
-2. 然后在 `<script>` 部分的末尾添加以下行：
+2. 然后在该部分的末尾添加以下行：
 
    ```js
    console.log("initializing:", nameEl);
@@ -522,7 +522,7 @@ function onEdit() {
    import { tick } from "svelte";
    ```
 
-2. 接下来，在[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 中使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 调用 `tick()`；更新 `onEdit()` 如下：
+2. 接下来，在[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)中使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 调用 `tick()`；更新 `onEdit()` 如下：
 
    ```js
    async function onEdit() {
@@ -646,7 +646,7 @@ node.addEventListener("focus", (event) => node.select());
      class="input input__lg" />
    ```
 
-只需几行代码，我们就可以以非常可重用和声明性的方式为常规 HTML 元素添加特性。只需要一个 `import` 语句和一个类似 `use:selectOnFocus` 这样的清晰描述其目的的短指令，就可以实现这一点，而无需创建自定义包装元素，如 `TextInput`、`MyInput` 或类似的元素。此外，你可以为一个元素添加任意多个 `use:action` 指令。
+只需几行代码，我们就可以以高度可重用和声明性的方式为常规 HTML 元素添加特性。只需要一个 `import` 语句和一个类似 `use:selectOnFocus` 这样的清晰描述其目的的短指令，就可以实现这一点，而无需创建自定义包装元素，如 `TextInput`、`MyInput` 或类似的元素。此外，你可以为一个元素添加任意多个 `use:action` 指令。
 
 此外，我们不需要费力处理 `onMount()`、`onDestroy()` 或 `tick()`——`use` 指令会为我们处理组件的生命周期。
 
@@ -753,7 +753,7 @@ node.addEventListener("focus", (event) => node.select());
    <TodosStatus {todos} />
    ```
 
-5. 进行一些清理工作，从 `Todos.svelte` 中移除 `totalTodos` 和 `completedTodos` 变量。只需移除 `$：totalTodos = …` 和 `$：completedTodos = …` 行，还要在计算 `newTodoId` 时不再使用 `totalTodos`，转而使用 `todos.length`。要做到这一点，请使用以下内容替换以 `let newTodoId` 开头的块：
+5. 进行一些清理工作，从 `Todos.svelte` 中移除 `totalTodos` 和 `completedTodos` 变量。只需移除 `$：totalTodos = …` 和 `$：completedTodos = …` 行，还要在计算 `newTodoId` 时移除对 `totalTodos` 的引用，转而使用 `todos.length`。要做到这一点，请使用以下内容替换以 `let newTodoId` 开头的块：
 
    ```js
    $: newTodoId = todos.length ? Math.max(...todos.map((t) => t.id)) + 1 : 1;
@@ -813,7 +813,7 @@ node.addEventListener("focus", (event) => node.select());
 
    注意，我们在 `<h2>` 上添加了 `tabindex` 属性，以便允许元素通过编程方式接收焦点。
 
-   正如我们之前所看到的，使用 `bind:this={headingEl}` 指令可以将 DOM 节点的引用存储在变量 `headingEl` 中。然后，我们使用 `export function focus()` 公开一个函数，该函数将焦点放在 `<h2>` 标题上。
+   正如我们之前所看到的，使用 `bind:this={headingEl}` 指令可以将 DOM 节点的引用存储在变量 `headingEl` 中。然后，我们使用 `export function focus()` 暴露一个函数，该函数将焦点放在 `<h2>` 标题上。
 
    我们如何从父组件访问这些导出的值呢？正如你可以使用 `bind:this={dom_node}` 指令绑定到 DOM 元素一样，你也可以使用 `bind:this={component}` 指令绑定到组件实例本身。因此，当你在 HTML 元素上使用 `bind:this` 时，你会得到对 DOM 节点的引用，当你在 Svelte 组件上使用它时，你会得到对该组件实例的引用。
 
@@ -873,7 +873,7 @@ npx degit opensas/mdn-svelte-tutorial/06-stores
 
 与此同时，我们学习了一些进阶的 Svelte 技术，包括：
 
-- 在更新对象和数组时处理响应性的注意事项
+- 在更新对象和数组时处理响应式的注意事项
 - 使用 `bind:this={dom_node}`（绑定 DOM 元素）来处理 DOM 节点
 - 使用组件生命周期函数 `onMount()`
 - 使用 `tick()` 函数强制 Svelte 解决待处理的状态更改
