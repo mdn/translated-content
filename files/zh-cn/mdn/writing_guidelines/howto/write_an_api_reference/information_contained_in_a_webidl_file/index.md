@@ -225,7 +225,6 @@ readonly attribute MediaError? error;
 
 - 在接口页面中，在其定义项旁边添加 \\{{ReadOnlyInline}} 宏。
 - 在自己页面的第一句话中，用以下文字开始描述：_**`HTMLMediaElement.error`** 只读属性…_
-- 在其自己的页面中，添加 `Read-only` 标签。
 - 在接口页面中对其进行描述时，以“_返回…_”开头。
 
 > **备注：** 只有只读属性可以被描述为“返回”一个值。非只读属性也可以用于设置值。
