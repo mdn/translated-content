@@ -793,7 +793,6 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile	/ru/docs/WebAssembly/JavaScript_interface/compile_static
 /ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming	/ru/docs/WebAssembly/JavaScript_interface/compileStreaming_static
 /ru/docs/Web/JavaScript/Reference/Global_Objects/null	/ru/docs/Web/JavaScript/Reference/Operators/null
-/ru/docs/Web/JavaScript/Reference/Global_Objects/uneval	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects
 /ru/docs/Web/JavaScript/Reference/Methods_Index	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment	/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 /ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator	/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing

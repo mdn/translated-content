@@ -16349,10 +16349,6 @@
       "uleming"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects": {
-    "modified": "2020-10-15T21:32:06.154Z",
-    "contributors": ["boxa6", "teoli", "maxbarbul", "fscholz", "Correcter"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean": {
     "modified": "2019-03-23T23:08:22.785Z",
     "contributors": ["Mingun"]
