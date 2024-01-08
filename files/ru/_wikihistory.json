@@ -16365,10 +16365,6 @@
     "modified": "2019-03-23T23:08:50.114Z",
     "contributors": ["rinbik", "Mingun"]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {
-    "modified": "2019-03-23T23:08:35.807Z",
-    "contributors": ["Mingun"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/EvalError": {
     "modified": "2019-03-23T23:08:32.207Z",
     "contributors": ["Mingun"]
