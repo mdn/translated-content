@@ -7,15 +7,15 @@ l10n:
 
 {{APIRef("Web Locks API")}}{{securecontext_header}}
 
-{{domxref("LockManager")}} 接口的 **`request()`** 方法请求一个 {{domxref('Lock')}} 对象，该方法发参数指定返回对象的名称和特征。请求的 `Lock` 对象被传递给回调，而函数本身返回一个 {{jsxref('Promise')}}，在锁被释放后解析（或拒绝）回调的结果，或者如果请求被中止时拒绝。
+{{domxref("LockManager")}} 接口的 **`request()`** 方法请求一个 {{domxref('Lock')}} 对象，该方法发参数指定返回对象的名称和特征。请求的 `Lock` 对象被传递给回调，而函数本身返回一个 {{jsxref('Promise')}}，在锁被释放后解析（或拒绝）回调的结果，或者在请求被中止时拒绝。
 
 `options` 参数的 `mode` 属性可以接收 `"exclusive"` 或 `"shared"`。
 
 当锁一次只能由一个代码实例持有时，请求 `"exclusive"` 锁。这适用于标签页和 worker 中的代码。使用它来表示对资源的互斥访问。当持有给定名称的 `"exclusive"` 锁时，不能持有其他同名的锁。
 
-当代码的多个实例可以共享对资源的访问时，请求`"shared"` 锁。当持有给定名称的`"shared"` 锁时，可以授予同名的其他`"shared"` 锁，但不能持有或授予具有该名称的 `"exclusive"` 锁。
+当代码的多个实例可以共享对资源的访问时，请求 `"shared"` 锁。当持有给定名称的 `"shared"` 锁时，可以授予同名的其他 `"shared"` 锁，但不能持有或授予具有该名称的 `"exclusive"` 锁。
 
-这种共享/独占锁模式在数据库事务架构中很常见，例如允许多个并发读取器（每个读取器请求一个 `"shared"` 锁），但仅允许一个写入器（单个 `"exclusive"` 锁）。这称为读者 - 作者模式。在 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中，这被公开为具有相同语义的 `"readonly"` 和 `"readwrite"` 事务。
+这种共享/独占锁模式在数据库事务架构中很常见，例如允许多个并发读取器（每个读取器请求一个 `"shared"` 锁），但仅允许一个写入器（单个 `"exclusive"` 锁）。这称为读者——作者模式。在 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中，这被公开为具有相同语义的 `"readonly"` 和 `"readwrite"` 事务。
 
 {{AvailableInWorkers}}
 
@@ -42,11 +42,11 @@ request(name, options, callback)
 
     - `ifAvailable` {{optional_inline}}
 
-      - : 如果为 `true`，则只有在尚未持有锁定请求时才会授予该锁定请求。如果无法授予，则将使用 `null` 而不是 `Lock` 实例来调用回调。默认值为 `false`。
+      - : 如果为 `true`，则只有在尚未持有锁定请求时才会授予该锁定请求。如果无法授予，则将传入 `null` 而非 `Lock` 实例来调用回调。默认值为 `false`。
 
     - `steal` {{optional_inline}}
 
-      - : 如果为 `true`，则任何持有的同名锁将被释放，并且请求将被授予，抢占任何排队的请求。默认值为 `false`。
+      - : 如果为 `true`，则任何持有的同名锁将被释放，并且请求将被授予，抢占任何排队中的锁请求。默认值为 `false`。
 
       > **警告：** 小心使用！之前在锁内运行的代码继续运行，并且可能与现在持有锁的代码发生冲突。
 
@@ -65,7 +65,7 @@ request(name, options, callback)
 此方法可能会返回一个被以下类型之一的 {{domxref("DOMException")}} 拒绝的 promise：
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - ：如果环境文档未完全激活，则抛出该异常。
+  - ：如果当前环境的文档未完全激活，则抛出该异常。
 - `SecurityError` {{domxref("DOMException")}}
   - ：如果无法获取当前环境的锁管理器，则抛出该异常。
 - `NotSupportedError` {{domxref("DOMException")}}
@@ -97,7 +97,7 @@ async function do_read() {
     "my_resource",
     { mode: "shared" },
     async (lock) => {
-      // 在这里放置读操作的代码。
+      // 在这里放置执行读取器具体操作的代码。
     },
   );
 }
@@ -111,7 +111,7 @@ async function do_write() {
     "my_resource",
     { mode: "exclusive" },
     async (lock) => {
-      // 在这里放置写操作的代码。
+      // 在这里放置执行写入器具体操作的代码。
     },
   );
 }
