@@ -297,4 +297,4 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 
 パフォーマンスとセキュリティの関係で、コールバックがいつ呼び出されるか、あるいはすべて呼び出されるかどうかは保証されていません。コールバックはクリーンアップにのみ使用すべきであり、しかも重要でないクリーンアップにのみ使用すべきです。他にも、[`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) で常に実行される `finally` ブロックで実行するなど、より決定的にリソースを管理する方法があります。`WeakRef` と `FinalizationRegistry` は、長時間実行するプログラムのメモリー使用量を最適化するためだけに存在します。
 
-F[`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) および [`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) の API について詳しくは、それぞれのリファレンスページを参照してください。
+[`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) および [`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) の API について詳しくは、それぞれのリファレンスページを参照してください。
