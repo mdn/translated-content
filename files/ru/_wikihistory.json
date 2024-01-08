@@ -16380,10 +16380,6 @@
       "Skorney"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString": {
-    "modified": "2019-03-23T23:08:53.546Z",
-    "contributors": ["Mingun"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction": {
     "modified": "2020-10-15T22:22:51.990Z",
     "contributors": ["ekirpichyov"]
