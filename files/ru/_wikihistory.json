@@ -16708,10 +16708,6 @@
     "modified": "2019-03-23T22:40:43.218Z",
     "contributors": ["SedovDP", "a-goodwin", "PPerminov", "MuradAz"]
   },
-  "conflicting/Web/Performance": {
-    "modified": "2020-08-20T11:16:04.965Z",
-    "contributors": ["bogpok"]
-  },
   "conflicting/Web/Progressive_web_apps": {
     "modified": "2019-03-23T23:27:07.759Z",
     "contributors": ["ArsenBespalov"]
