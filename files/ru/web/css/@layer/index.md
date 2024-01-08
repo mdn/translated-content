@@ -1,7 +1,8 @@
 ---
 title: "@layer"
 slug: Web/CSS/@layer
-l10n.sourceCommit: 42e6ca9ae2812cb8a3addb15f1765091bf48faaa
+l10n:
+  sourceCommit: 42e6ca9ae2812cb8a3addb15f1765091bf48faaa
 ---
 
 {{CSSRef}}
