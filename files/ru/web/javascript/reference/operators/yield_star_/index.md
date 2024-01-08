@@ -135,7 +135,7 @@ console.log(result); // "foo"
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -45,7 +45,7 @@ background-attachment: unset;
 
 ## 例
 
-<h3 id="Simple_example">単純な例</h3>
+### 単純な例
 
 #### HTML
 
@@ -68,9 +68,9 @@ p {
 
 <h4 id="Result" name="Result">結果</h4>
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("単純な例")}}
 
-<h3 id="Multiple_background_images">複数の背景画像</h3>
+### 複数の背景画像
 
 このプロパティは複数の背景画像に対応しており、それぞれの背景画像に異なる `<attachment>` をカンマ区切りで指定できます。それぞれの画像には先頭から順番に `<attachment>` の値が適用されます。
 
@@ -104,7 +104,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Multiple_background_images")}}
+{{EmbedLiveSample("複数の背景画像")}}
 
 ## 仕様書
 

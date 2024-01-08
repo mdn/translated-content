@@ -56,7 +56,7 @@ input:out-of-range + label::after {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

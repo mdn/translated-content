@@ -12309,10 +12309,6 @@
       "Hawkeyes_Wind"
     ]
   },
-  "Web/API/NotifyAudioAvailableEvent": {
-    "modified": "2019-01-17T01:59:59.816Z",
-    "contributors": ["asins", "garden4hu"]
-  },
   "Web/API/OES_vertex_array_object": {
     "modified": "2020-10-15T22:26:52.417Z",
     "contributors": ["ymyh"]
@@ -15212,10 +15208,6 @@
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:02:36.021Z",
     "contributors": ["RainSlide", "shhider", "bluetomlee", "lltemplar", "Mmzer"]
-  },
-  "Web/API/Window/defaultStatus": {
-    "modified": "2019-03-23T22:02:52.798Z",
-    "contributors": ["zhouinfo", "webber007"]
   },
   "Web/API/Window/devicePixelRatio": {
     "modified": "2020-10-15T21:44:13.198Z",

@@ -59,7 +59,7 @@ span:nth-last-of-type(2) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

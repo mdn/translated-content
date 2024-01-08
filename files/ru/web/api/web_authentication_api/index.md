@@ -179,41 +179,9 @@ navigator.credentials
 
 ## Спецификации
 
-| Specification                                                                                      |
-| -------------------------------------------------------------------------------------------------- |
-| [Web Authentication: An API for accessing Public Key Credentials](https://w3c.github.io/webauthn/) |
+{{Specifications}}
 
-## Совместимость
-
-### Credential
-
-{{Compat}}
-
-### CredentialsContainer
-
-{{Compat}}
-
-### PublicKeyCredential
-
-{{Compat}}
-
-### AuthenticatorResponse
-
-{{Compat}}
-
-### AuthenticatorAttestationResponse
-
-{{Compat}}
-
-### AuthenticatorAssertionResponse
-
-{{Compat}}
-
-### PublicKeyCredentialCreationOptions
-
-{{Compat}}
-
-### PublicKeyCredentialRequestOptions
+## Совместимость с браузерами
 
 {{Compat}}
 

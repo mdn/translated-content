@@ -102,7 +102,7 @@ grid-area: unset;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

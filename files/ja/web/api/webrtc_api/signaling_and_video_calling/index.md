@@ -667,7 +667,7 @@ You can now [try out this example on Glitch](https://webrtc-from-chat.glitch.me/
 
 Another obvious improvement would be to add a "ringing" feature, so that instead of just asking the user for permission to use the camera and microphone, a "User X is calling. Would you like to answer?" prompt appears first.
 
-## See also
+## 関連情報
 
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)
 - [Web media technologies](/ja/docs/Web/Media)

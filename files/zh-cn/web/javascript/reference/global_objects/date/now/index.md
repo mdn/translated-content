@@ -46,18 +46,6 @@ Date.now();
 
 在 Firefox 中，还可以通过启用 `privacy.resistFingerprinting` 来进一步降低精度。启用后，精度将为 100 毫秒或者 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，取决于这两个值中哪一个更大，也就是，精度更低一些。
 
-## Polyfill
-
-该方法在 ECMA-262 第五版中被标准化，可以通过下面的代码端来兼容那些不支持该方法的引擎：
-
-```js
-if (!Date.now) {
-  Date.now = function now() {
-    return new Date().getTime();
-  };
-}
-```
-
 ## 规范
 
 {{Specifications}}
