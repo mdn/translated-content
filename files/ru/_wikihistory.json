@@ -7086,10 +7086,6 @@
     "modified": "2020-10-15T08:26:15.790Z",
     "contributors": ["pm3512", "MarishKo", "swa1ps", "PaulineNemchak"]
   },
-  "Web/API/Web_Authentication_API": {
-    "modified": "2020-10-15T22:31:49.298Z",
-    "contributors": ["sh7dm"]
-  },
   "Web/API/Web_Crypto_API": {
     "modified": "2020-10-15T21:57:19.936Z",
     "contributors": ["qkudev", "boxa6", "Zlaty", "thesiv95"]
