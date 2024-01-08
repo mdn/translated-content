@@ -9,7 +9,7 @@ l10n:
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 
-未来的手游一定是 Web 的天下，许多开发在游戏开发过程中[首先选择手游](/zh-CN/docs/Glossary/Mobile_First)——在现代社会，这通常还涉及到触摸控制的实现。在本教程中，我们将看到在 HTML 游戏中实现移动控件是多么容易，并且可以在支持移动触摸的设备上尽情玩耍。
+未来的手游一定是 Web 的天下，许多开发者在游戏开发过程中[首先选择手游](/zh-CN/docs/Glossary/Mobile_First)——在现代社会，这通常还涉及到触摸控制的实现。在本教程中，我们将看到在 HTML 游戏中实现移动控件是多么容易，并且可以在支持移动触摸的设备上尽情玩耍。
 
 > **备注：** 游戏 [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) 是用 Phaser 构建的，控制管理也是基于 Phaser 的，但也可以用纯 JavaScript 完成。使用 Phaser 的好处是它提供了辅助变量和函数，可以让开发更简单、更快速，但选择哪种方法完全取决于你。
 
