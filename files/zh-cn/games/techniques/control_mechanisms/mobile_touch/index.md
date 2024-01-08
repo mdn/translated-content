@@ -9,7 +9,7 @@ l10n:
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 
-未来的手游一定是 Web 的天下，许多开发者在游戏开发过程中[首先选择手游](/zh-CN/docs/Glossary/Mobile_First)——在现代社会，这通常还涉及到触摸控制的实现。在本教程中，我们将看到在 HTML 游戏中实现移动控件是多么容易，并且可以在支持移动触摸的设备上尽情玩耍。
+未来的手游一定是 Web 的天下，许多开发者在游戏开发过程中[首先选择移动端](/zh-CN/docs/Glossary/Mobile_First)——在现代社会，这通常还涉及到触摸控制的实现。在本教程中，我们将看到在 HTML 游戏中实现移动控件是多么容易，并且可以在支持移动触摸的设备上尽情玩耍。
 
 > **备注：** 游戏 [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) 是用 Phaser 构建的，控制管理也是基于 Phaser 的，但也可以用纯 JavaScript 完成。使用 Phaser 的好处是它提供了辅助变量和函数，可以让开发更简单、更快速，但选择哪种方法完全取决于你。
 
@@ -122,7 +122,7 @@ const buttonEnclave = this.add.button(
 
 这个是在 `MainMenu` 状态下形成的——它将被放置在距离屏幕左上角 10 个像素的位置，使用 `logo-enclave` 图像，并在被触摸时执行 `clickEnclave()` 函数。这将在手机和台式机上运行。主菜单中有几个按钮，其中包括启动游戏的按钮。
 
-在实际游戏中，与其创建更多的按钮并用它们覆盖狭小的手机屏幕，我们可以使用一些不同的方法：我们将创建隐形区域来响应给定的操作。从设计的角度来看，最好是让活动区域更大，而不要让按钮图像覆盖半个屏幕。例如，点击屏幕右侧将发射武器：
+在实际游戏中，与其创建更多的按钮并用它们覆盖狭小的手机屏幕，我们可以使用一些不同的方法：我们将创建隐形区域来响应给定的操作。从设计的角度来看，最好是让活动区域更大，而不要让按钮图像覆盖半个屏幕。例如，点击屏幕右侧将射击：
 
 ```js
 this.buttonShoot = this.add.button(
@@ -175,8 +175,8 @@ if (this.stick.isDown) {
 
 我们可以根据操纵杆的角度适当调整玩家的速度并移动他。
 
-## 摘要
+## 总结
 
-这篇文章主要讲解如何在移动端实现触摸控制; 下一篇文章我们将介绍怎样添加键盘和鼠标支持。
+这篇文章主要讲解如何在移动端实现触摸控制；下一篇文章我们将介绍怎样添加键盘和鼠标支持。
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
