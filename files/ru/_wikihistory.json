@@ -16412,10 +16412,6 @@
     "modified": "2020-03-13T11:04:21.413Z",
     "contributors": ["fishr-flash", "AMurkin", "Mingun", "teoli", "kreshikhin"]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
-    "modified": "2020-10-15T21:30:13.861Z",
-    "contributors": ["boxa6", "Mingun"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
     "modified": "2019-10-16T18:35:40.649Z",
     "contributors": ["tsimafey", "viosng", "alexicum", "AlexKhram"]
