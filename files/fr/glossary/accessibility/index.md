@@ -18,4 +18,3 @@ _L'Accessibilité du web_ (**A11Y**) correspond aux bonnes pratiques assurant qu
 - [Accessibilité du web](https://fr.wikipedia.org/wiki/Accessibilité_du_web) sur Wikipédia
 - [La page d'accueil de l'institut Web Accessibility in Mind](https://webaim.org/) (en)
 - [La page d'accueil de la Web Accessibility Initiative](http://www.w3.org/WAI/) sur le site du W3C (en)
-
