@@ -3944,7 +3944,6 @@
 /fr/docs/Web/API/Notification/maxActions	/fr/docs/Web/API/Notification/maxActions_static
 /fr/docs/Web/API/Notification/permission	/fr/docs/Web/API/Notification/permission_static
 /fr/docs/Web/API/Notification/requestPermission	/fr/docs/Web/API/Notification/requestPermission_static
-/fr/docs/Web/API/NotifyAudioAvailableEvent	/fr/docs/orphaned/Web/API/NotifyAudioAvailableEvent
 /fr/docs/Web/API/ParentNode	/fr/docs/Web/API/Element
 /fr/docs/Web/API/ParentNode/append	/fr/docs/Web/API/Element/append
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
