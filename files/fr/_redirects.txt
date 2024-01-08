@@ -4249,6 +4249,7 @@
 /fr/docs/Web/CSS/::-moz-placeholder	/fr/docs/Web/CSS/::placeholder
 /fr/docs/Web/CSS/::-webkit-file-upload-button	/fr/docs/Web/CSS/::file-selector-button
 /fr/docs/Web/CSS/::-webkit-input-placeholder	/fr/docs/Web/CSS/::placeholder
+/fr/docs/Web/CSS/::-webkit-outer-spin-button	/fr/docs/conflicting/Web/CSS/::-webkit-inner-spin-button
 /fr/docs/Web/CSS/:after	/fr/docs/Web/CSS/::after
 /fr/docs/Web/CSS/:after_|_::after	/fr/docs/Web/CSS/::after
 /fr/docs/Web/CSS/:any	/fr/docs/Web/CSS/:is
