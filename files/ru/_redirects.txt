@@ -770,7 +770,6 @@
 /ru/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ru/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов	/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Array/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
-/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Collator	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Collator/resolvedOptions	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
