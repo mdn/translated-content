@@ -15,7 +15,7 @@ l10n:
 
 当代码的多个实例可以共享对资源的访问时，请求 `"shared"` 锁。当持有给定名称的 `"shared"` 锁时，可以授予同名的其他 `"shared"` 锁，但不能持有或授予具有该名称的 `"exclusive"` 锁。
 
-这种共享/独占锁模式在数据库事务架构中很常见，例如允许多个并发读取器（每个读取器请求一个 `"shared"` 锁），但仅允许一个写入器（单个 `"exclusive"` 锁）。这称为读者——作者模式。在 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中，这被公开为具有相同语义的 `"readonly"` 和 `"readwrite"` 事务。
+这种共享/独占锁模式在数据库事务架构中很常见，例如允许多个并发读取器（每个读取器请求一个 `"shared"` 锁），但仅允许一个写入器（单个 `"exclusive"` 锁）。这称为读者——作者模式。在 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中，这被暴露为具有相同语义的 `"readonly"` 和 `"readwrite"` 事务。
 
 {{AvailableInWorkers}}
 
@@ -34,7 +34,7 @@ request(name, options, callback)
 
 - `options` {{optional_inline}}
 
-  - : 一个描述你要创建的锁的特征的对象。合法的值为：
+  - : 一个描述你要创建的锁的特征的对象。有效的值为：
 
     - `mode` {{optional_inline}}
 
@@ -48,13 +48,13 @@ request(name, options, callback)
 
       - : 如果为 `true`，则任何持有的同名锁将被释放，并且请求将被授予，抢占任何排队中的锁请求。默认值为 `false`。
 
-      > **警告：** 小心使用！之前在锁内运行的代码继续运行，并且可能与现在持有锁的代码发生冲突。
+        > **警告：** 小心使用！之前在锁内运行的代码会继续运行，并且可能与现在持有锁的代码发生冲突。
 
     - `signal` {{optional_inline}}
-      - : 一个 {{domxref("AbortSignal")}}（{{domxref("AbortController")}} 的 {{domxref("AbortController.signal", "signal")}} 属性）；如果指定并且 {{domxref("AbortController")}} 被中止，则锁请求将被抛弃（如果尚未授予）。
+      - : 一个 {{domxref("AbortSignal")}}（{{domxref("AbortController")}} 的 {{domxref("AbortController.signal", "signal")}} 属性）；如果指定并且 {{domxref("AbortController")}} 被中止，则锁请求将被丢弃（如果尚未授予）。
 
 - `callback`
-  - ：授予锁定时调用的方法。当回调返回（或抛出异常）时，锁会自动释放。通常回调是一个异步函数，这会导致只有当异步函数完全完成时才会释放锁。
+  - ：授予锁时调用的方法。当回调返回（或抛出异常）时，锁会自动释放。通常回调是一个异步函数，这会导致只有当异步函数完全完成时才会释放锁。
 
 ### 返回值
 
@@ -69,7 +69,7 @@ request(name, options, callback)
 - `SecurityError` {{domxref("DOMException")}}
   - ：如果无法获取当前环境的锁管理器，则抛出该异常。
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : 如果 `name` 以连字符 (`-`) 开头，或选项 `steal` 和 `ifAvailable` 均为 `true`，或者选项 `signal` 存在且选项 `steal` 或 `ifAvailable` 为 `true`。
+  - : 如果 `name` 以连字符（`-`）开头，或选项 `steal` 和 `ifAvailable` 均为 `true`，或者选项 `signal` 存在且选项 `steal` 或 `ifAvailable` 为 `true`。
 - `AbortError` {{domxref("DOMException")}}
   - ：如果选项 `signal` 存在并且被中止，则抛出该异常。
 
@@ -89,7 +89,7 @@ await navigator.locks.request("my_resource", async (lock) => {
 
 以下示例展示了如何为读取器和写入器使用 `mode` 选项。
 
-请注意，这两个函数都使用名为 `my_resource` 的锁。`do_read()` 请求 `'shared'` 模式下的锁定，这意味着多个调用可能会在不同的事件处理程序、标签页或 worker 中同时发生。
+请注意，这两个函数都使用名为 `my_resource` 的锁。`do_read()` 请求 `'shared'` 模式下的锁定，这意味着多个调用可能会在不同的事件处理器、标签页或 worker 中同时发生。
 
 ```js
 async function do_read() {
@@ -103,7 +103,7 @@ async function do_read() {
 }
 ```
 
-`do_write()` 函数使用相同的锁，但处于 `'exclusive'` 模式，这将延迟 `do_read()` 中 `request()` 的调用，直到写操作完成。这适用于事件处理程序、标签页或 worker。
+`do_write()` 函数使用相同的锁，但处于 `'exclusive'` 模式，这将延迟 `do_read()` 中 `request()` 的调用，直到写操作完成。这适用于事件处理器、标签页或 worker。
 
 ```js
 async function do_write() {
@@ -138,7 +138,7 @@ await navigator.locks.request(
 
 ### `signal` 示例
 
-如果只等待一小段时间的锁定，使用 `signal` 选项。
+如果只等待锁一小段时间，请使用 `signal` 选项。
 
 ```js
 const controller = new AbortController();
@@ -155,7 +155,7 @@ try {
   );
 } catch (ex) {
   if (ex.name === "AbortError") {
-    // 该请求在获得批准之前就中止了。
+    // 该请求在获得锁之前就中止了。
   }
 }
 ```
