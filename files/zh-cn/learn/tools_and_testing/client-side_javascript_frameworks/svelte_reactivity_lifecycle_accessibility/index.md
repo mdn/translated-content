@@ -48,7 +48,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivit
 - `NewTodo`：显示用于添加新待办事项的 `<input>` 字段和 _Add_（添加）按钮。
 - `TodosStatus`：显示“x out of y items completed”（“x 个已完成，共 y 个项目”）的状态标题。
 
-## 与我们一起编码
+## 与我们一起编写代码
 
 ### Git
 
@@ -847,23 +847,23 @@ node.addEventListener("focus", (event) => node.select());
 
 ### Git
 
-若想要看到本文结束后程序代码所呈现的最终结果，请获取我们仓库的复制：
+如果想要查看本文结束后代码所呈现的最终结果，你可以按照以下方式访问你对我们的仓库的克隆：
 
 ```bash
 cd mdn-svelte-tutorial/06-stores
 ```
 
-或直接下载文件夹的内容：
+或直接下载文件夹内容：
 
 ```bash
 npx degit opensas/mdn-svelte-tutorial/06-stores
 ```
 
-记得运行 `npm install && npm run dev` 以在开发模式下启动应用程序。
+记得执行 `npm install && npm run dev` 以开发模式来运行你的应用程序。
 
 ### REPL
 
-要在 REPL 中查看代码的当前状态，请访问：
+如果想在 REPL 上看到当前代码状态，请点击以下链接：
 
 <https://svelte.dev/repl/d1fa84a5a4494366b179c87395940039?version=3.23.2>
 
