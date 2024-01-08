@@ -619,7 +619,6 @@
 /ru/docs/Web/CSS/transform-function/rotate3d()	/ru/docs/Web/CSS/transform-function/rotate3d
 /ru/docs/Web/CSS/transform-function/scale3d()	/ru/docs/Web/CSS/transform-function/scale3d
 /ru/docs/Web/CSS/transform-function/skew()	/ru/docs/Web/CSS/transform-function/skew
-/ru/docs/Web/CSS/url()	/ru/docs/Web/CSS/url
 /ru/docs/Web/CSS/var()	/ru/docs/Web/CSS/var
 /ru/docs/Web/CSS/Действительное_значение	/ru/docs/Web/CSS/actual_value
 /ru/docs/Web/CSS/Замещаемый_элемент	/ru/docs/Web/CSS/Replaced_element
