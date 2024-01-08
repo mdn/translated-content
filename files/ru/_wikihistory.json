@@ -16472,22 +16472,6 @@
     "modified": "2020-10-15T22:08:32.198Z",
     "contributors": ["AndreyGlyan", "qqwweeaassdd", "paramoshkinandrew"]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2019-09-13T04:40:19.326Z",
-    "contributors": ["ekirpichyov", "opereverzeva"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
-    "modified": "2019-03-23T23:06:17.942Z",
-    "contributors": ["Mingun"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
-    "modified": "2019-03-23T22:53:48.183Z",
-    "contributors": ["WispProxy", "mxxn", "AlexAlex"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb": {
-    "modified": "2020-10-02T07:35:43.794Z",
-    "contributors": ["beltimor"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
     "modified": "2019-03-23T22:08:34.792Z",
     "contributors": ["4opper", "yanakey", "GRIDARK", "animhotep", "neutral"]
