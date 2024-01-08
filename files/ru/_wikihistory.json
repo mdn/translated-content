@@ -3671,10 +3671,6 @@
     "modified": "2019-03-23T22:27:52.691Z",
     "contributors": ["fscholz", "Taimayr"]
   },
-  "Web/API/AnimationEvent/AnimationEvent": {
-    "modified": "2020-10-15T22:25:07.472Z",
-    "contributors": ["BellaBe"]
-  },
   "Web/API/Attr": {
     "modified": "2019-03-18T21:40:03.351Z",
     "contributors": ["Ruswit", "dieillusion"]
