@@ -35,7 +35,7 @@ query()
 - `name`
   - : 请求锁时传递给 {{domxref("LockManager.request()")}} 的名称。
 - `mode`
-  - : 请求锁时传递给 {{domxref("LockManager.request()")}} 的访问模式。该模式可以是 `"exclusive"` 或 `"shared"`。
+  - : 请求锁时传递给 {{domxref("LockManager.request()")}} 的模式。该模式可以是 `"exclusive"` 或 `"shared"`。
 - `clientId`
   - : 调用 {{domxref("LockManager.request()")}} 的上下文的唯一标识。该值与 {{domxref("Client.id")}} 相同。
 
@@ -44,7 +44,7 @@ query()
 此方法可能会返回一个被以下类型之一的 {{domxref("DOMException")}} 拒绝的 promise：
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果环境文档未完全激活，则抛出该异常。
+  - : 如果当前环境的文档未完全激活，则抛出该异常。
 - `SecurityError` {{domxref("DOMException")}}
   - : 如果无法获取当前环境的锁管理器，则抛出该异常。
 
