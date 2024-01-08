@@ -71,6 +71,6 @@ formData.set(name, value, filename);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

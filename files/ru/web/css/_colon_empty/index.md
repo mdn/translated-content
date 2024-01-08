@@ -41,6 +41,6 @@ slug: Web/CSS/:empty
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

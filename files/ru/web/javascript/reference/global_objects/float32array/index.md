@@ -148,7 +148,7 @@ var float32 = new Float32Array(iterable);
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

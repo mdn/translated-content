@@ -36,7 +36,7 @@ A new {{domxref("AnimationEvent")}}, initialized per any provided options.
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

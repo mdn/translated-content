@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 
 Во время выполнения кода ошибки приводят к созданию и выбрасыванию новых объектов `Error`.
 
-`Error` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или копирован между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
+`Error` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ### Типы ошибок
 

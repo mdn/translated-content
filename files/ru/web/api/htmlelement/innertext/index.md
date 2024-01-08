@@ -19,7 +19,7 @@ slug: Web/API/HTMLElement/innerText
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

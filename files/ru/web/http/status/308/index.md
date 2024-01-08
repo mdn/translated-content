@@ -23,7 +23,7 @@ slug: Web/HTTP/Status/308
 | ----------------------------------------------- | -------------------------------------------------------------------- |
 | {{RFC("7538", "308 Permanent Redirect" , "3")}} | The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect) |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

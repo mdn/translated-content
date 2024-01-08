@@ -148,7 +148,7 @@ var float64 = new Float64Array(iterable);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

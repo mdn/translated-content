@@ -70,7 +70,7 @@ var whichButton = function (e) {
 
 {{Specifications}}
 
-## Поддерживается браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

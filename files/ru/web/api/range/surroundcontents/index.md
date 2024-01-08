@@ -36,7 +36,7 @@ range.surroundContents(newNode);
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
