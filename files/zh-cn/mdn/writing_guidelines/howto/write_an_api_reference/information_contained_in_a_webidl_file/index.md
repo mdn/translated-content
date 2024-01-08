@@ -9,7 +9,7 @@ l10n:
 
 在编写有关 API 的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。WebIDL 文件是一种非常简洁的方式，可以提供很多（但不是全部）有关 API 的信息。本文档提供了有助于理解 WebIDL 语法的参考。
 
-IDL 代表**_接口定义语言_**，它用于描述 API。在更广泛的计算领域，有几种 IDL。在浏览器领域，我们使用的 IDL 被称为 _WebIDL_。有两种 WebIDL 可用：一种是在 WebIDL 规范中给出的，一种是在浏览器中实现的。规范是标准参考，而浏览器的 WebIDL 描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释、有关非标准元素的信息，以及对 IDL 规范的特定于浏览器的扩展。
+IDL 代表**_接口定义语言_**，它用于描述 API。在更广泛的计算领域，IDL 有不同的种类。在浏览器领域，我们使用的 IDL 被称为 _WebIDL_。有两种 WebIDL 可用：一种是在 WebIDL 规范中给出的，一种是在浏览器中实现的。规范是标准参考，而浏览器的 WebIDL 描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释、有关非标准元素的信息，以及对 IDL 规范的特定于浏览器的扩展。
 
 ## 在哪里可以找到 WebIDL 文件
 
@@ -223,8 +223,8 @@ readonly attribute MediaError? error;
 
 如果关键字 `readonly` 存在，则该属性不能被修改。它必须标记为只读：
 
-- 在接口页面中，在第一句话中使用 \\{{ReadOnlyInline}} 宏。
-- 在其自己的页面中，在第一句话中使用中使用描述：_**`HTMLMediaElement.error`** 只读属性…_
+- 在接口页面中，在其定义项旁边添加 \\{{ReadOnlyInline}} 宏。
+- 在自己页面的第一句话中，用以下文字开始描述：_**`HTMLMediaElement.error`** 只读属性…_
 - 在其自己的页面中，添加 `Read-only` 标签。
 - 在接口页面中对其进行描述时，以“_返回…_”开头。
 
@@ -433,7 +433,7 @@ iterable<valueType>
 - `entries()`，返回一个索引（`unsigned long` 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 - `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 - `keys()`，返回一个键（即，索引，`unsigned long` 类型）[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。对于值迭代器，`keys()` 和 `entries()` 是相同的。
-- `forEach()`，会对列表中的每一个实体调用一次给定的构造函数。
+- `forEach()`，会对列表中的每一个实体调用一次给定的回调函数。
 
 这类迭代器允许将 `for (const p in object)` 语法作为 `for (const p in object.entries())` 的简写来使用。我们需要在接口的描述中用一句话来说明这一点。
 
@@ -454,7 +454,7 @@ iterable<keyType, valueType>
 - `entries()`，返回一个值对组[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.entries()')}}。
 - `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.values()')}}。
 - `keys()`，返回一个键[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('FormData.keys()')}}。
-- `forEach()`，会对列表中的每一个实体调用一次给定的构造函数。例如，请参见 {{domxref('Headers.forEach()')}}。
+- `forEach()`，会对列表中的每一个实体调用一次给定的回调函数。例如，请参见 {{domxref('Headers.forEach()')}}。
 
 这类迭代器允许将 `for (const p in object)` 语法作为 `for (const p in object.entries())` 的简写来使用。我们需要在接口的描述中用一句话来说明这一点。例如 {{domxref('FormData')}}。
 
@@ -476,7 +476,7 @@ setlike<valueType>
 - `entries()`，返回一个索引[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('NodeList.entries()')}}。
 - `values()`，返回一个值[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('NodeList.values()')}}。
 - `keys()`，返回一个键[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。例如，请参见 {{domxref('NodeList.keys()')}}。
-- `forEach()`，会对列表中的每一个实体调用一次给定的构造函数。例如，请参见 {{domxref('NodeList.forEach()')}}。
+- `forEach()`，会对列表中的每一个实体调用一次给定的回调函数。例如，请参见 {{domxref('NodeList.forEach()')}}。
 
 对于没有只读前缀声明的类集合，还会生成以下方法：
 
