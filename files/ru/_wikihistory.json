@@ -16349,30 +16349,6 @@
       "uleming"
     ]
   },
-  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
-    "modified": "2020-03-18T16:30:12.782Z",
-    "contributors": [
-      "HardKullez",
-      "qwerty-wasd",
-      "imalyavskiy",
-      "Davidnadejdin",
-      "SedovDP",
-      "metelskiy",
-      "wbamberg",
-      "rinbik",
-      "SphinxKnight",
-      "toolX",
-      "vherever",
-      "Megabyteceer",
-      "ndrsrv",
-      "NobbsNobby",
-      "Saviloff",
-      "makdeb",
-      "fscholz",
-      "esskia",
-      "ivan.p"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
     "modified": "2019-03-23T22:45:00.856Z",
     "contributors": ["teoli", "WispProxy", "casfcitizen"]

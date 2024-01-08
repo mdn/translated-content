@@ -749,7 +749,6 @@
 /ru/docs/Web/JavaScript/About_JavaScript	/ru/docs/conflicting/Web/JavaScript
 /ru/docs/Web/JavaScript/EventLoop	/ru/docs/Web/JavaScript/Event_loop
 /ru/docs/Web/JavaScript/Guide/Closures	/ru/docs/Web/JavaScript/Closures
-/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ru/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ru/docs/Web/JavaScript/Guide/EventLoop	/ru/docs/Web/JavaScript/Event_loop
 /ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov	/ru/docs/Web/JavaScript/Guide/Using_promises
