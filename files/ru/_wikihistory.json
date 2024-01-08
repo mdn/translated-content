@@ -16436,10 +16436,6 @@
     "modified": "2020-10-15T22:08:32.198Z",
     "contributors": ["AndreyGlyan", "qqwweeaassdd", "paramoshkinandrew"]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2019-03-23T22:08:34.792Z",
-    "contributors": ["4opper", "yanakey", "GRIDARK", "animhotep", "neutral"]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {
     "modified": "2019-03-23T23:08:31.199Z",
     "contributors": ["Mingun"]

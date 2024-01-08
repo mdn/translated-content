@@ -86,7 +86,6 @@
 /ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
 /ru/docs/Glossary/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Glossary/Round_Trip_Time_(RTT)	/ru/docs/Glossary/Round_Trip_Time
-/ru/docs/Glossary/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Glossary/XHR_(XMLHttpRequest)	/ru/docs/Glossary/XMLHttpRequest
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Void_element
 /ru/docs/HTML	/ru/docs/Web/HTML
@@ -1033,7 +1032,6 @@
 /ru/docs/Словарь/Semantics	/ru/docs/Glossary/Semantics
 /ru/docs/Словарь/Sloppy_mode	/ru/docs/Glossary/Sloppy_mode
 /ru/docs/Словарь/Specification	/ru/docs/Glossary/Specification
-/ru/docs/Словарь/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Словарь/TCP	/ru/docs/Glossary/TCP
 /ru/docs/Словарь/TLS	/ru/docs/Glossary/TLS
 /ru/docs/Словарь/Time_to_interactive	/ru/docs/Glossary/Time_to_interactive
