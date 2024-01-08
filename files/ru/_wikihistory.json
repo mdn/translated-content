@@ -8577,10 +8577,6 @@
     "modified": "2020-03-07T12:38:48.764Z",
     "contributors": ["Radragon"]
   },
-  "Web/CSS/Cascade": {
-    "modified": "2019-12-08T06:05:17.526Z",
-    "contributors": ["vitaminX", "bodrovphone", "blackcat55"]
-  },
   "Web/CSS/Child_combinator": {
     "modified": "2019-03-23T22:45:21.091Z",
     "contributors": ["ExE-Boss", "irakliykech", "BychekRU"]
