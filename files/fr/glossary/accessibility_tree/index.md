@@ -1,11 +1,13 @@
 ---
 title: Arbre d'accessibilité (MOA)
 slug: Glossary/Accessibility_tree
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-L'**arbre d'accessibilité**, ou **modèle d'objets d'accessibilité** (**MOA**), contient des informations concernant l'{{Glossary("accessibility")}} pour la plupart des éléments HTML.
+L'**arbre d'accessibilité**, ou **modèle d'objets d'accessibilité** (**MOA**), contient des informations concernant l'[accessibilité](/fr/docs/Glossary/Accessibility) pour la plupart des éléments HTML.
 
 Les navigateurs convertissent le balisage en une représentation interne appelée [arbre DOM](/fr/docs/Comment_créer_un_arbre_DOM). Le DOM contient un objet pour chaque balise, attribut et noeud de texte. Les navigateurs créent ensuite un arbre d'accessibilité basé sur l'arbre DOM, celui-ci est utilisé par les technologies d'assistance telles que les lecteurs d'écran via des APIs spécifiques à une plateforme.
 
@@ -22,9 +24,11 @@ Un objet de l'arbre d'accessibilité contient quatre éléments :
 
 De plus, l'arbre d'accessibilité contient souvent des informations concernant ce qui peut être fait avec un élément : un lien peut être _suivi,_ on peut _écrire dans_ un champ texte etc.
 
+Toujours à l'état de brouillon au sein du Web Incubator Community Group en avril 2022, Le **[modèle d'objet accessible](https://wicg.github.io/aom/explainer.html)** (<i lang="en">Accessibility Object Model, AOM</i> en anglais) cherche à étendre les APIs pour rendre plus facile l'expression des sémantiques d'accessibilité et potentiellement permettre l'accès en lecture à l'arborescence d'accessibilité calculée.
+
 ## Voir aussi
 
 1. [Glossaire](/fr/docs/Glossaire)
 
-   1. {{Glossary("Accessibility")}}
-   2. {{Glossary("ARIA")}}
+   1. [Accessibilité](/fr/docs/Glossary/Accessibility)
+   2. [ARIA](/fr/docs/Glossary/ARIA)

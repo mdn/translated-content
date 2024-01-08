@@ -2,7 +2,7 @@
 title: Abstraction
 slug: Glossary/Abstraction
 l10n:
-  sourceCommit: 69df5ac5749504dee7b92d825e913c1a9d0956f1
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
