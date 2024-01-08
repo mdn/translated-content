@@ -27402,9 +27402,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Web/CSS/::-webkit-inner-spin-button": {
-    "modified": "2020-10-15T21:48:38.423Z",
-    "contributors": ["SphinxKnight", "teoli"]
   }
 }
