@@ -1,6 +1,7 @@
 ---
 title: Веб-разработка под мобильные устройства
-slug: Web/Guide/Mobile
+slug: conflicting/Learn/CSS/CSS_layout/Responsive_Design
+original_slug: Web/Guide/Mobile
 ---
 
 На этой странице даётся обзор основных методов разработки веб-сайтов, корректно работающих на мобильных устройствах. Если вы ищете информацию о проекте Firefox OS от Mozilla, смотрите страницу [Firefox OS](/ru/docs/Archive/B2G_OS). Возможно вас также интересует подробная информация о [Firefox для Android](/ru/docs/Mozilla/Firefox_%D0%B4%D0%BB%D1%8F_Android).
