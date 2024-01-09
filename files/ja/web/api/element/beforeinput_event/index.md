@@ -1,8 +1,7 @@
 ---
 title: "HTMLElement: beforeinput イベント"
-slug: Web/API/HTMLElement/beforeinput_event
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+slug: Web/API/Element/beforeinput_event
+original_slug: Web/API/HTMLElement/beforeinput_event
 ---
 
 {{APIRef}}

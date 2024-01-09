@@ -589,7 +589,7 @@
 /ja/docs/DOM/DOM_Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM/DOM_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/DOM/DOM_event_reference/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
-/ja/docs/DOM/DOM_event_reference/input	/ja/docs/Web/API/HTMLElement/input_event
+/ja/docs/DOM/DOM_event_reference/input	/ja/docs/Web/API/Element/input_event
 /ja/docs/DOM/Document.querySelector	/ja/docs/Web/API/Document/querySelector
 /ja/docs/DOM/Document.scripts	/ja/docs/Web/API/Document/scripts
 /ja/docs/DOM/Element.hasAttributes	/ja/docs/Web/API/Element/hasAttributes
@@ -640,7 +640,7 @@
 /ja/docs/DOM/MediaQueryList	/ja/docs/Web/API/MediaQueryList
 /ja/docs/DOM/Mozilla_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/DOM/Mozilla_event_reference/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
-/ja/docs/DOM/Mozilla_event_reference/input	/ja/docs/Web/API/HTMLElement/input_event
+/ja/docs/DOM/Mozilla_event_reference/input	/ja/docs/Web/API/Element/input_event
 /ja/docs/DOM/MutationObserver	/ja/docs/Web/API/MutationObserver
 /ja/docs/DOM/Node	/ja/docs/Web/API/Node
 /ja/docs/DOM/Node.appendChild	/ja/docs/Web/API/Node/appendChild
@@ -2681,6 +2681,7 @@
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/keydown_event	/ja/docs/Web/API/Element/keydown_event
 /ja/docs/Web/API/Document/keyup_event	/ja/docs/Web/API/Element/keyup_event
+/ja/docs/Web/API/Document/lostpointercapture_event	/ja/docs/conflicting/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/afterscriptexecute_event
 /ja/docs/Web/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
 /ja/docs/Web/API/Document/onfullscreenchange	/ja/docs/Web/API/Document/fullscreenchange_event
@@ -2781,7 +2782,7 @@
 /ja/docs/Web/API/GlobalEventHandlers/onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/GlobalEventHandlers/onformdata	/ja/docs/Web/API/HTMLFormElement/formdata_event
 /ja/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/ja/docs/Web/API/Element/gotpointercapture_event
-/ja/docs/Web/API/GlobalEventHandlers/oninput	/ja/docs/Web/API/HTMLElement/input_event
+/ja/docs/Web/API/GlobalEventHandlers/oninput	/ja/docs/Web/API/Element/input_event
 /ja/docs/Web/API/GlobalEventHandlers/oninvalid	/ja/docs/Web/API/HTMLInputElement/invalid_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeydown	/ja/docs/Web/API/Element/keydown_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeypress	/ja/docs/Web/API/Element/keypress_event
@@ -2824,8 +2825,10 @@
 /ja/docs/Web/API/HTMLElement/animationend_event	/ja/docs/Web/API/Element/animationend_event
 /ja/docs/Web/API/HTMLElement/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/HTMLElement/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
+/ja/docs/Web/API/HTMLElement/beforeinput_event	/ja/docs/Web/API/Element/beforeinput_event
 /ja/docs/Web/API/HTMLElement/contextMenu	/ja/docs/orphaned/Web/API/HTMLElement/contextMenu
 /ja/docs/Web/API/HTMLElement/gotpointercapture_event	/ja/docs/Web/API/Element/gotpointercapture_event
+/ja/docs/Web/API/HTMLElement/input_event	/ja/docs/Web/API/Element/input_event
 /ja/docs/Web/API/HTMLElement/lostpointercapture_event	/ja/docs/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event
 /ja/docs/Web/API/HTMLElement/oncut	/ja/docs/Web/API/HTMLElement/cut_event
@@ -3840,7 +3843,7 @@
 /ja/docs/Web/Events/fullscreenerror	/ja/docs/Web/API/Document/fullscreenerror_event
 /ja/docs/Web/Events/gamepadconnected	/ja/docs/Web/API/Window/gamepadconnected_event
 /ja/docs/Web/Events/gamepaddisconnected	/ja/docs/Web/API/Window/gamepaddisconnected_event
-/ja/docs/Web/Events/input	/ja/docs/Web/API/HTMLElement/input_event
+/ja/docs/Web/Events/input	/ja/docs/Web/API/Element/input_event
 /ja/docs/Web/Events/install	/ja/docs/Web/API/Window/appinstalled_event
 /ja/docs/Web/Events/load	/ja/docs/Web/API/Window/load_event
 /ja/docs/Web/Events/loadeddata	/ja/docs/Web/API/HTMLMediaElement/loadeddata_event
@@ -3966,6 +3969,9 @@
 /ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
 /ja/docs/Web/Guide/Introduction_to_Web_development	/ja/docs/Learn
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
+/ja/docs/Web/Guide/Mobile	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
+/ja/docs/Web/Guide/Mobile/A_hybrid_approach	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
+/ja/docs/Web/Guide/Mobile/Mobile-friendliness	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 /ja/docs/Web/Guide/Mobile/Separate_sites	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Guide/Parsing_and_serializing_XML	/ja/docs/Web/XML/Parsing_and_serializing_XML
 /ja/docs/Web/Guide/Performance	/ja/docs/Web/Performance
@@ -4504,7 +4510,7 @@
 /ja/docs/Web/Reference/Events/fullscreenerror	/ja/docs/Web/API/Document/fullscreenerror_event
 /ja/docs/Web/Reference/Events/gamepadconnected	/ja/docs/Web/API/Window/gamepadconnected_event
 /ja/docs/Web/Reference/Events/gamepaddisconnected	/ja/docs/Web/API/Window/gamepaddisconnected_event
-/ja/docs/Web/Reference/Events/input	/ja/docs/Web/API/HTMLElement/input_event
+/ja/docs/Web/Reference/Events/input	/ja/docs/Web/API/Element/input_event
 /ja/docs/Web/Reference/Events/install	/ja/docs/Web/API/Window/appinstalled_event
 /ja/docs/Web/Reference/Events/load	/ja/docs/Web/API/Window/load_event
 /ja/docs/Web/Reference/Events/mousedown	/ja/docs/Web/API/Element/mousedown_event
@@ -4617,7 +4623,7 @@
 /ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/Web2/Reference/Events/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/Web2/Reference/Events/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
-/ja/docs/Web2/Reference/Events/input	/ja/docs/Web/API/HTMLElement/input_event
+/ja/docs/Web2/Reference/Events/input	/ja/docs/Web/API/Element/input_event
 /ja/docs/WebAPI	/ja/docs/Web/API
 /ja/docs/WebAPI/Battery_Status	/ja/docs/Web/API/Battery_Status_API
 /ja/docs/WebAPI/Managing_screen_orientation	/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
@@ -4655,7 +4661,7 @@
 /ja/docs/Web_Development	/ja/docs/Web/Guide
 /ja/docs/Web_Development/Historical_artifacts_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web_Development/Introduction_to_Web_development	/ja/docs/Learn
-/ja/docs/Web_Development/Mobile	/ja/docs/Web/Guide/Mobile
+/ja/docs/Web_Development/Mobile	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 /ja/docs/Web_Development/Mobile/Responsive_design	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web_Development/Writing_forward-compatible_websites	/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /ja/docs/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace

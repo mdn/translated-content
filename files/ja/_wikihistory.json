@@ -7268,10 +7268,6 @@
     "modified": "2020-10-15T21:21:49.768Z",
     "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank"]
   },
-  "Web/API/Document/lostpointercapture_event": {
-    "modified": "2020-10-15T22:16:22.873Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/API/Document/open": {
     "modified": "2020-10-15T21:15:48.961Z",
     "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank", "Potappo"]
@@ -7618,6 +7614,10 @@
     "modified": "2020-10-17T03:58:22.731Z",
     "contributors": ["Potappo", "Shirasu"]
   },
+  "Web/API/Element/beforeinput_event": {
+    "modified": "2020-12-09T10:48:15.929Z",
+    "contributors": ["mfuji09", "Wind1808"]
+  },
   "Web/API/Element/blur_event": {
     "modified": "2020-10-15T21:58:39.988Z",
     "contributors": ["mfuji09", "fscholz", "TNKSoftware"]
@@ -7877,6 +7877,10 @@
       "Mgjbot",
       "Hfjapancom"
     ]
+  },
+  "Web/API/Element/input_event": {
+    "modified": "2020-10-15T22:22:03.393Z",
+    "contributors": ["mfuji09"]
   },
   "Web/API/Element/insertAdjacentHTML": {
     "modified": "2019-03-23T23:38:38.922Z",
@@ -9041,10 +9045,6 @@
     "modified": "2020-10-15T22:02:47.537Z",
     "contributors": ["dskmori", "8845musign"]
   },
-  "Web/API/HTMLElement/beforeinput_event": {
-    "modified": "2020-12-09T10:48:15.929Z",
-    "contributors": ["mfuji09", "Wind1808"]
-  },
   "Web/API/HTMLElement/blur": {
     "modified": "2020-10-15T21:21:43.979Z",
     "contributors": ["mfuji09", "Wind1808", "fscholz", "ethertank"]
@@ -9107,10 +9107,6 @@
   "Web/API/HTMLElement/innerText": {
     "modified": "2020-10-15T21:43:21.632Z",
     "contributors": ["genzai", "mfuji09", "momdo", "j5a"]
-  },
-  "Web/API/HTMLElement/input_event": {
-    "modified": "2020-10-15T22:22:03.393Z",
-    "contributors": ["mfuji09"]
   },
   "Web/API/HTMLElement/isContentEditable": {
     "modified": "2020-10-15T21:21:11.925Z",
@@ -20299,18 +20295,6 @@
     "modified": "2020-07-24T06:19:03.585Z",
     "contributors": ["Wind1808"]
   },
-  "Web/Guide/Mobile": {
-    "modified": "2020-03-07T14:24:28.388Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
-  "Web/Guide/Mobile/A_hybrid_approach": {
-    "modified": "2019-04-11T09:38:06.495Z",
-    "contributors": ["Wind1808"]
-  },
-  "Web/Guide/Mobile/Mobile-friendliness": {
-    "modified": "2019-04-16T23:59:54.980Z",
-    "contributors": ["Uemmra3", "Wind1808"]
-  },
   "Web/HTML": {
     "modified": "2020-12-14T11:33:50.265Z",
     "contributors": [
@@ -30165,6 +30149,10 @@
   "conflicting/Web/API/Element/clientWidth": {
     "modified": "2020-10-15T21:21:07.088Z",
     "contributors": ["mfuji09", "fscholz", "AshfaqHossain", "ethertank"]
+  },
+  "conflicting/Web/API/Element/lostpointercapture_event": {
+    "modified": "2020-10-15T22:16:22.873Z",
+    "contributors": ["mfuji09"]
   },
   "conflicting/Web/API/Element/touchcancel_event": {
     "modified": "2020-10-15T22:15:27.879Z",
