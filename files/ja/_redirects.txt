@@ -3968,9 +3968,9 @@
 /ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
 /ja/docs/Web/Guide/Introduction_to_Web_development	/ja/docs/Learn
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
-/ja/docs/Web/Guide/Mobile	/ja/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design_508cdbc0c19930f5e8acbbfa8bbb24d1
-/ja/docs/Web/Guide/Mobile/A_hybrid_approach	/ja/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design
-/ja/docs/Web/Guide/Mobile/Mobile-friendliness	/ja/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design_4953934c2f1f237286eff99a88d7cad2
+/ja/docs/Web/Guide/Mobile	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
+/ja/docs/Web/Guide/Mobile/A_hybrid_approach	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
+/ja/docs/Web/Guide/Mobile/Mobile-friendliness	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 /ja/docs/Web/Guide/Mobile/Separate_sites	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Guide/Parsing_and_serializing_XML	/ja/docs/Web/XML/Parsing_and_serializing_XML
 /ja/docs/Web/Guide/Performance	/ja/docs/Web/Performance
@@ -4660,7 +4660,7 @@
 /ja/docs/Web_Development	/ja/docs/Web/Guide
 /ja/docs/Web_Development/Historical_artifacts_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web_Development/Introduction_to_Web_development	/ja/docs/Learn
-/ja/docs/Web_Development/Mobile	/ja/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design_508cdbc0c19930f5e8acbbfa8bbb24d1
+/ja/docs/Web_Development/Mobile	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 /ja/docs/Web_Development/Mobile/Responsive_design	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web_Development/Writing_forward-compatible_websites	/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 /ja/docs/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
