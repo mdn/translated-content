@@ -16144,10 +16144,6 @@
     "modified": "2019-03-23T22:07:41.302Z",
     "contributors": ["paulvoloschuk"]
   },
-  "conflicting/Web/API/File/name": {
-    "modified": "2019-03-23T22:09:17.877Z",
-    "contributors": ["Ferguse"]
-  },
   "conflicting/Web/API/Geolocation": {
     "modified": "2019-03-23T22:43:32.725Z",
     "contributors": ["AlexAlex"]
