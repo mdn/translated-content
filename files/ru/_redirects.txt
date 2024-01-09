@@ -416,7 +416,7 @@
 /ru/docs/Web/API/GlobalEventHandlers/ondragstart	/ru/docs/Web/API/HTMLElement/dragstart_event
 /ru/docs/Web/API/GlobalEventHandlers/onerror	/ru/docs/Web/API/Window/error_event
 /ru/docs/Web/API/GlobalEventHandlers/onfocus	/ru/docs/Web/API/Window/focus_event
-/ru/docs/Web/API/GlobalEventHandlers/oninput	/ru/docs/Web/API/HTMLElement/input_event
+/ru/docs/Web/API/GlobalEventHandlers/oninput	/ru/docs/Web/API/Element/input_event
 /ru/docs/Web/API/GlobalEventHandlers/onkeydown	/ru/docs/conflicting/Web/API/Element/keydown_event
 /ru/docs/Web/API/GlobalEventHandlers/onkeypress	/ru/docs/conflicting/Web/API/Element/keypress_event
 /ru/docs/Web/API/GlobalEventHandlers/onload	/ru/docs/conflicting/Web/API/Window/load_event
@@ -429,6 +429,7 @@
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLBaseFontElement	/ru/docs/Web/CSS/CSS_Fonts
 /ru/docs/Web/API/HTMLContentElement	/ru/docs/Web/API/HTMLSlotElement
+/ru/docs/Web/API/HTMLElement/input_event	/ru/docs/Web/API/Element/input_event
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLElement/pointerover_event	/ru/docs/Web/API/Element/pointerover_event
 /ru/docs/Web/API/HTMLElement/transitionend_event	/ru/docs/Web/API/Element/transitionend_event
@@ -667,6 +668,7 @@
 /ru/docs/Web/Guide/HTML/Introduction	/ru/docs/Learn/HTML/Introduction_to_HTML
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn/HTML/Howto/Use_data_attributes
+/ru/docs/Web/Guide/Mobile	/ru/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design
 /ru/docs/Web/Guide/Parsing_and_serializing_XML	/ru/docs/Web/XML/Parsing_and_serializing_XML
 /ru/docs/Web/Guide/User_input_methods	/ru/docs/Learn/Forms/User_input_methods
 /ru/docs/Web/Guide/WOFF	/ru/docs/Web/CSS/CSS_fonts/WOFF
