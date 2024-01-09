@@ -16156,10 +16156,6 @@
     "modified": "2019-03-23T22:53:31.496Z",
     "contributors": ["AlexAlex"]
   },
-  "conflicting/Web/API/Pointer_events": {
-    "modified": "2020-08-27T17:02:59.997Z",
-    "contributors": ["hisbvdis"]
-  },
   "conflicting/Web/API/Push_API": {
     "modified": "2019-03-23T22:33:26.535Z",
     "contributors": [
