@@ -18,7 +18,7 @@ Par exemple :
 
 Les algorithmes courants sont des algorithmes de recherche de chemins tels que l'optimisation du [Problème du Voyageur de Commerce](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce), les [algorithmes de parcours d'arbres](https://fr.wikipedia.org/wiki/Parcours_d%27arbre), etc.
 
-Il existe également des algorithmes d'[apprentissage automatique](https://fr.wikipedia.org/wiki/Apprentissage_automatique) tels que la [Régression Linéaire](https://fr.wikipedia.org/wiki/R%C3%A9gression_(statistiques)), la Régression Logistique, l'Arbre de Décision, la Forêt Aléatoire, la Machine à Vecteurs de Support, le Réseau de Neurones Récurent (RNR), le Réseau de Neurones à Mémoire à Court Terme (LSTM), le Réseau de Neurones Convolutif (CNN), le Réseau de Neurones Convolutif Profond, et ainsi de suite.
+Il existe également des algorithmes d'[apprentissage automatique](https://fr.wikipedia.org/wiki/Apprentissage_automatique) tels que la [Régression Linéaire](<https://fr.wikipedia.org/wiki/R%C3%A9gression_(statistiques)>), la Régression Logistique, l'Arbre de Décision, la Forêt Aléatoire, la Machine à Vecteurs de Support, le Réseau de Neurones Récurent (RNR), le Réseau de Neurones à Mémoire à Court Terme (LSTM), le Réseau de Neurones Convolutif (CNN), le Réseau de Neurones Convolutif Profond, et ainsi de suite.
 
 ## Voir aussi
 
