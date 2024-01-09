@@ -4823,6 +4823,10 @@
       "SergKorol"
     ]
   },
+  "Web/API/Element/input_event": {
+    "modified": "2019-03-18T21:31:39.381Z",
+    "contributors": ["dieuromodin"]
+  },
   "Web/API/Element/insertAdjacentElement": {
     "modified": "2020-10-15T22:04:14.603Z",
     "contributors": ["torbasow", "ekirpichyov", "fanich37"]
@@ -5621,10 +5625,6 @@
   "Web/API/HTMLElement/innerText": {
     "modified": "2020-10-15T21:49:13.148Z",
     "contributors": ["YozhEzhi", "ivandoroshenko", "Aleksander3007"]
-  },
-  "Web/API/HTMLElement/input_event": {
-    "modified": "2019-03-18T21:31:39.381Z",
-    "contributors": ["dieuromodin"]
   },
   "Web/API/HTMLElement/offsetHeight": {
     "modified": "2020-10-15T21:43:04.993Z",
@@ -9836,10 +9836,6 @@
       "ViT09",
       "akhabibullina"
     ]
-  },
-  "Web/Guide/Mobile": {
-    "modified": "2020-02-07T13:05:09.003Z",
-    "contributors": ["McBurns", "VDyrda"]
   },
   "Web/HTML": {
     "modified": "2020-05-09T08:33:52.357Z",
@@ -16036,6 +16032,10 @@
   "conflicting/Learn/CSS/Building_blocks/Values_and_units": {
     "modified": "2019-03-23T22:31:38.617Z",
     "contributors": ["TuchaNK"]
+  },
+  "conflicting/Learn/CSS/CSS_layout/Responsive_Design": {
+    "modified": "2020-02-07T13:05:09.003Z",
+    "contributors": ["McBurns", "VDyrda"]
   },
   "conflicting/Learn/CSS/First_steps": {
     "modified": "2019-03-23T23:09:39.395Z",
