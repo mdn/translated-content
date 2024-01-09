@@ -16140,17 +16140,6 @@
     "modified": "2019-03-18T21:43:39.016Z",
     "contributors": ["fscholz"]
   },
-  "conflicting/Web/API/EventTarget/addEventListener": {
-    "modified": "2020-08-18T17:11:27.001Z",
-    "contributors": [
-      "proshka",
-      "Bargamut",
-      "m-kon",
-      "daydarkln",
-      "insafski",
-      "einperegrin"
-    ]
-  },
   "conflicting/Web/API/EventTarget/removeEventListener": {
     "modified": "2019-03-23T22:07:41.302Z",
     "contributors": ["paulvoloschuk"]
