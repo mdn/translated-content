@@ -387,19 +387,17 @@ fetch("/login", {
 Поддержка Fetch API может быть обнаружена путём проверки наличия {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} или {{domxref("GlobalFetch.fetch","fetch()")}} в области видимости {{domxref("Window")}} или {{domxref("Worker")}}. Для примера:
 
 ```js
-if (self.fetch) {
+if (window.fetch) {
   // запустить мой fetch запрос здесь
 } else {
-  // Сделать что-то с XMLHttpRequest?
+  // сделать что-то с XMLHttpRequest?
 }
 ```
 
-## Полифил
+## Смотрите также
 
-Для того, чтобы использовать Fetch в неподдерживаемых браузерах, существует Fetch Polyfill , который воссоздаёт функциональность для не поддерживающих браузеров.
-
-СпецификацииSpecification Status Comment [Fetch](https://fetch.spec.whatwg.org/) Живой стандарт Initial definitionСовместимость браузера
-
-{{Compat}}
-
-Смотрите такжеServiceWorker APIHTTP access control (CORS)HTTPFetch polyfillFetch examples on Github`
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [HTTP CORS](/ru/docs/Web/HTTP/CORS)
+- [HTTP](/ru/docs/Web/HTTP)
+- [Полифил Fetch](https://github.com/github/fetch)
+- [Примеры работы с Fetch](https://github.com/mdn/dom-examples/tree/main/fetch) на GitHub

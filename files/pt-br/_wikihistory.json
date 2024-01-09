@@ -10050,10 +10050,6 @@
     "modified": "2019-03-23T22:58:45.630Z",
     "contributors": ["caio"]
   },
-  "Web/SVG/Attribute/contentStyleType": {
-    "modified": "2019-03-23T22:58:38.907Z",
-    "contributors": ["caio"]
-  },
   "Web/SVG/Attribute/fill": {
     "modified": "2020-10-15T22:34:04.647Z",
     "contributors": ["littlebru"]
@@ -11461,6 +11457,10 @@
       "takahan",
       "pcf-pcf"
     ]
+  },
+  "orphaned/Web/SVG/Attribute/contentStyleType": {
+    "modified": "2019-03-23T22:58:38.907Z",
+    "contributors": ["caio"]
   },
   "orphaned/Web/SVG/Element/altGlyph": {
     "modified": "2019-03-23T22:57:23.875Z",

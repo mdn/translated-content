@@ -136,7 +136,7 @@ Cache-Control: public, max-age=31536000
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

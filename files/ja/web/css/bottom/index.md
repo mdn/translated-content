@@ -1,6 +1,8 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
+l10n:
+  sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
 {{CSSRef}}
@@ -9,9 +11,9 @@ slug: Web/CSS/bottom
 
 {{EmbedInteractiveExample("pages/css/bottom.html")}}
 
-`bottom` の効果は、要素がどの様に配置されているか (つまり、 {{cssxref("position")}} プロパティの値) によって変わります。
+`bottom` の効果は、要素がどの様に配置されているか（つまり、 {{cssxref("position")}} プロパティの値）によって変わります。
 
-- `position` が `absolute` または `fixed` に設定されている場合、 `bottom` プロパティは要素の下辺と包含ブロックの下辺との間の距離を指定します。
+- `position` が `absolute` または `fixed` に設定されている場合、 `bottom` プロパティは要素の[下マージン](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の外側の辺と、包含ブロックの下パディングの外側の辺との間の距離を指定します。
 - `position` が `relative` に設定されている場合、 `bottom` プロパティは要素の下辺が通常位置から上方向へ移動する量を指定します。
 - `position` が `sticky` に設定されている場合、 `bottom` プロパティは sticky 制約の矩形を計算するために使用されます。
 - `position` が `static` に設定されている場合、 `bottom` プロパティは*効果がありません*。
@@ -35,6 +37,7 @@ bottom: auto;
 bottom: inherit;
 bottom: initial;
 bottom: revert;
+bottom: revert-layer;
 bottom: unset;
 ```
 
@@ -69,7 +72,7 @@ bottom: unset;
 
 ## 例
 
-<h3 id="Absolute_and_fixed_positioning">絶対位置指定と固定位置指定</h3>
+### 絶対位置指定と固定位置指定
 
 この例は、 {{cssxref("position")}} が `absolute` と `fixed` であった場合の `bottom` プロパティの動作の違いを示します。
 

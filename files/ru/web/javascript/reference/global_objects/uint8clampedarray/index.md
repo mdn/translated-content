@@ -140,7 +140,7 @@ var z = new Uint8ClampedArray(buffer, 1, 4);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

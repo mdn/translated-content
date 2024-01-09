@@ -22,6 +22,6 @@ element.onmouseup =  код обработки событий
 
 {{Specifications}}
 
-## Browser Compatibility
+## Совместимость с браузерами
 
 {{Compat}}

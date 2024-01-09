@@ -28,7 +28,7 @@ window.ongamepaddisconnected = function() {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

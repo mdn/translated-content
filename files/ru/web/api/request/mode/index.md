@@ -45,7 +45,7 @@ var myMode = myRequest.mode; // вернёт "cors" по умолчанию
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

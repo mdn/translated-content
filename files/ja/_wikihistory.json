@@ -9037,6 +9037,10 @@
     "modified": "2020-10-15T22:31:35.749Z",
     "contributors": ["mfuji09"]
   },
+  "Web/API/HTMLElement/autofocus": {
+    "modified": "2020-10-15T22:02:47.537Z",
+    "contributors": ["dskmori", "8845musign"]
+  },
   "Web/API/HTMLElement/beforeinput_event": {
     "modified": "2020-12-09T10:48:15.929Z",
     "contributors": ["mfuji09", "Wind1808"]
@@ -9644,10 +9648,6 @@
   "Web/API/HTMLSelectElement": {
     "modified": "2020-10-15T22:02:48.089Z",
     "contributors": ["mfuji09", "silverskyvicto", "Speich"]
-  },
-  "Web/API/HTMLSelectElement/autofocus": {
-    "modified": "2020-10-15T22:02:47.537Z",
-    "contributors": ["dskmori", "8845musign"]
   },
   "Web/API/HTMLSelectElement/options": {
     "modified": "2020-10-15T22:15:59.932Z",
@@ -10363,10 +10363,6 @@
   },
   "Web/API/MediaStreamTrack/muted": {
     "modified": "2019-03-18T21:45:08.367Z",
-    "contributors": ["e53e04ac"]
-  },
-  "Web/API/MediaStreamTrack/overconstrained_event": {
-    "modified": "2019-03-18T21:45:17.038Z",
     "contributors": ["e53e04ac"]
   },
   "Web/API/MediaStreamTrack/readyState": {
@@ -13971,10 +13967,6 @@
   "Web/API/Window/cut_event": {
     "modified": "2020-10-15T22:27:13.710Z",
     "contributors": ["mfuji09"]
-  },
-  "Web/API/Window/defaultStatus": {
-    "modified": "2019-03-23T23:50:29.916Z",
-    "contributors": ["teoli", "khalid32", "ethertank", "Potappo"]
   },
   "Web/API/Window/devicePixelRatio": {
     "modified": "2020-10-15T21:58:39.969Z",
@@ -30158,36 +30150,6 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
-    "modified": "2020-08-12T11:49:11.332Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "chrisdavidmills",
-      "fscholz",
-      "ethertank",
-      "Potappo",
-      "Mgjbot",
-      "Summit677",
-      "Marsf",
-      "Shimono",
-      "Taken Bot",
-      "Dria"
-    ]
-  },
-  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
-    "modified": "2020-12-06T14:17:48.495Z",
-    "contributors": [
-      "eldesh",
-      "silverskyvicto",
-      "mfuji09",
-      "JuthaDDA",
-      "Uemmra3",
-      "hamasaki",
-      "kenji-yamasaki",
-      "sii"
-    ]
-  },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",
     "contributors": ["mfuji09", "silverskyvicto"]
@@ -30287,10 +30249,6 @@
   "conflicting/Web/Security/Certificate_Transparency": {
     "modified": "2020-10-15T21:36:10.884Z",
     "contributors": ["mfuji09", "silverskyvicto", "hashedhyphen", "clariroid"]
-  },
-  "conflicting/Web/XSLT/Transforming_XML_with_XSLT": {
-    "modified": "2019-03-18T20:50:34.704Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "orphaned/Code_snippets/Toolbar": {
     "modified": "2019-03-23T23:46:21.932Z",
@@ -30462,13 +30420,5 @@
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2020-03-15T03:29:26.429Z",
     "contributors": ["mfuji09", "takubokudori", "Uemmra3"]
-  },
-  "orphaned/Web/Web_Components/Status_in_Firefox": {
-    "modified": "2019-03-23T22:35:08.421Z",
-    "contributors": ["ueokande", "dskmori"]
-  },
-  "orphaned/Working_with_windows_in_chrome_code": {
-    "modified": "2019-01-16T17:12:27.632Z",
-    "contributors": ["fscholz", "ethertank"]
   }
 }

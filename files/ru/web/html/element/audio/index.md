@@ -164,7 +164,7 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -69,39 +69,6 @@ with (parent) {
 // ReferenceError: append is not defined
 ```
 
-## Polyfill
-
-下面的 Polyfill 只支持到 IE 9 及以上：
-
-```js
-// Source: https://github.com/jserz/js_piece/blob/master/DOM/Element/append()/append().md
-(function (arr) {
-  arr.forEach(function (item) {
-    if (item.hasOwnProperty("append")) {
-      return;
-    }
-    Object.defineProperty(item, "append", {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function append() {
-        var argArr = Array.prototype.slice.call(arguments),
-          docFrag = document.createDocumentFragment();
-
-        argArr.forEach(function (argItem) {
-          var isNode = argItem instanceof Node;
-          docFrag.appendChild(
-            isNode ? argItem : document.createTextNode(String(argItem)),
-          );
-        });
-
-        this.appendChild(docFrag);
-      },
-    });
-  });
-})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
-```
-
 ## 规范
 
 {{Specifications}}
@@ -112,8 +79,8 @@ with (parent) {
 
 ## 参见
 
-- {{domxref("Element")}} and {{domxref("ChildNode")}}
 - {{domxref("Element.prepend()")}}
 - {{domxref("Node.appendChild()")}}
-- {{domxref("ChildNode.after()")}}
+- {{domxref("Element.after()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("NodeList")}}

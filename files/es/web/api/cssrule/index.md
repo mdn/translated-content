@@ -37,8 +37,6 @@ Existen varias clases de reglas y todas ellas comparten unas cuantas propiedades
 - [style](/Es/DOM/CssRule.style)
   - : Devuelve el objeto [CSSStyleDeclaration](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration) para el bloque [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) de la regla.
 
-### CSSStyleRule
-
 ### CSSMediaRule
 
 ### CSSFontFaceRule

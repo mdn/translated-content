@@ -80,7 +80,7 @@ document.open(type, replace);
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{domxref("Document")}}
 - {{domxref("Window.open()")}}

@@ -59,7 +59,7 @@ function load(url, callback) {
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

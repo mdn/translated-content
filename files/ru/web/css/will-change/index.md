@@ -87,6 +87,6 @@ function removeHint() {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
