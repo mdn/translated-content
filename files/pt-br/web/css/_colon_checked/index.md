@@ -160,4 +160,4 @@ Você também pode usar a pseudo-classe `:checked`aplicada a um radioboxe escond
 
 ## Compatibilidade de navegadores
 
-{{Compat("css.selectors.checked")}}
+{{Compat}}

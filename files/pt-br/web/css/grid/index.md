@@ -105,7 +105,7 @@ grid: unset;
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.grid")}}
+{{Compat}}
 
 ## Veja também
 

@@ -25,7 +25,7 @@ HTTP **`304 Not Modified`** クライアントリダイレクトレスポンス�
 
 ## ブラウザーの互換性
 
-{{Compat("http.status.304")}}
+{{Compat}}
 
 ## 互換性メモ
 

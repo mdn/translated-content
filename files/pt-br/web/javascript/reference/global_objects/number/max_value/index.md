@@ -35,7 +35,7 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.MAX_VALUE")}}
+{{Compat}}
 
 ## Veja também
 

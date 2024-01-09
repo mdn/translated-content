@@ -120,7 +120,7 @@ Object.getOwnPropertyDescriptor({
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.toString")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 

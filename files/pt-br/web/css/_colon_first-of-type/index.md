@@ -84,7 +84,7 @@ article :first-of-type {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
 ## Veja também
 

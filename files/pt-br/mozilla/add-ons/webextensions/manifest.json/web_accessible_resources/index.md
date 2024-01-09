@@ -100,4 +100,4 @@ Make the file at "images/my-image.png" web accessible.
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.manifest.web_accessible_resources")}}
+{{Compat}}

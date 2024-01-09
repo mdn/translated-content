@@ -122,10 +122,6 @@ const gdmOptions = {
 
 {{jsxref("promise")}} が返す {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} は、画面または画面領域を含む少なくとも一つの動画ストリームを含み、 `getDisplayMedia()` が呼ばれたときに指定した制約に基づいて調整またはフィルタリングされた {{domxref("MediaStream")}} に解決されます。
 
-## セキュリティ
-
-ネットワーク上でコンテンツを共有する場合は常にそうですが、画面共有のプライバシーと安全性への影響を考慮することが重要です。
-
 ### 潜在的なリスク
 
 画面共有を取り巻くプライバシーとセキュリティの問題は、通常、それほど深刻ではありませんが、実際に存在します。最も大きな潜在的問題は、ユーザーが共有したくないコンテンツを不注意に共有してしまうことです。
@@ -324,7 +320,7 @@ HTML の主要な部分は以下の通りです。
 
 最終的にはこのようになります。ブラウザーが画面キャプチャ API に対応している場合、"Start Capture" をクリックすると、共有する画面、ウィンドウ、タブを選択するための{{Glossary("user agent", "ユーザーエージェント")}}のインターフェイスが表示されます。
 
-{{EmbedLiveSample("Simple_screen_capture", 640, 680, "", "", "", "display-capture")}}
+{{EmbedLiveSample("単純な画面キャプチャ", 640, 680, "", "", "", "display-capture")}}
 
 ## セキュリティ
 
@@ -344,7 +340,7 @@ Feature-Policy: display-capture 'self'
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## 関連情報
 

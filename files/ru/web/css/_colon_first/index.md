@@ -60,7 +60,7 @@ document.querySelector("button").onclick = function () {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

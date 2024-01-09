@@ -63,7 +63,7 @@ animation-fill-mode: both, forwards, none;
 
     与上面两个值的差别是，如果元素使用 **`forwards`**、**`backwards`** 两个值会在没有添加动画之前的展示状态进行停留，执行动画的时候才会开始执行关键帧，有这么一些细小的差别。
 
-> **備註：** 当您在一个 `animation-*` 属性上指定多个逗号分隔的值时，它们将被分配给 `"animationname"` 属性中指定的动画，这取决于有多少动画。有关更多信息，请参见[设置多个动画属性值](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> **備註：** 当你在一个 `animation-*` 属性上指定多个逗号分隔的值时，它们将被分配给 `"animationname"` 属性中指定的动画，这取决于有多少动画。有关更多信息，请参见[设置多个动画属性值](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ## Example
 

@@ -142,7 +142,7 @@ str3.match(null); // retorna ["null"]
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.match")}}
+{{Compat}}
 
 ## Veja também
 

@@ -488,9 +488,9 @@ Examples of this usage can be [found above](#Preflighted_requests).
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### Compatibility notes
 

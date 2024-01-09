@@ -83,7 +83,7 @@ var view   = new Int32Array(buffer);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.ArrayBuffer")}}
+{{Compat}}
 
 ## Compatibility notes
 

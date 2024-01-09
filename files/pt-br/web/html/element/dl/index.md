@@ -100,7 +100,7 @@ Para mudar a indentação de um termo, use a propriedade [CSS](/pt-BR/CSS) [marg
 
 ## Compatibilidade de navegadores
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## Veja também
 

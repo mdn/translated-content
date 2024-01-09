@@ -68,7 +68,7 @@ add(10).then((v) => {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.async_function")}}
+{{Compat}}
 
 ## Veja também
 

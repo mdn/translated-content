@@ -53,7 +53,7 @@ try {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.EvalError")}}
+{{Compat}}
 
 ## 関連情報
 

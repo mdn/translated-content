@@ -73,7 +73,7 @@ console.log(
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.lastIndexOf")}}
+{{Compat}}
 
 ## Veja também
 

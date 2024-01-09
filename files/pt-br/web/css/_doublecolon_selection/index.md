@@ -98,7 +98,7 @@ Facilite para os usuários ver e ouvir o conteúdo, incluindo a separação do p
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.selection")}}
+{{Compat}}
 
 ## Veja também
 

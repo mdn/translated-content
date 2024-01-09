@@ -36,7 +36,7 @@ Como todos os outros elementos do HTML, este elemento tem os atributos globais, 
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.bdi")}}
+{{Compat}}
 
 ## Veja Também
 

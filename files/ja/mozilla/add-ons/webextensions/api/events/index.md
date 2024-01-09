@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/events
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.events")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -3,11 +3,13 @@ title: viewBox
 slug: Web/SVG/Attribute/viewBox
 ---
 
-« [SVG Attribute reference home](/en/SVG/Attribute)
+{{SVGRef}}
 
-`Аттрибут viewBox` определяет расположение и размеры окна отображения SVG.
+Аттрибут `viewBox` определяет расположение и размеры окна отображения SVG.
 
 Значение атрибута `viewBox` — это набор четырёх чисел: `min-x`, `min-y`, `width` и `height`, — разделённых пробелами и/или запятой, которые задают прямоугольник в пользовательском пространстве, стороны которого определяют границы окна отображения элемента SVG (не [браузера](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Viewport)).
+
+## Пример
 
 ```
 html, body, svg {
@@ -68,7 +70,7 @@ svg:not(:root) {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 На отображение с `viewBox` также влияет атрибут {{ SVGAttr("preserveAspectRatio") }}.
 
@@ -123,4 +125,4 @@ svg:not(:root) {
 
 ## Смотрите также
 
-- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions)
+- [SVG Getting Started: Positions](/ru/docs/Web/SVG/Tutorial/Positions)

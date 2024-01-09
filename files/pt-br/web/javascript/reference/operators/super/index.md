@@ -151,7 +151,7 @@ obj2.method2(); // retorna "method 1"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.super")}}
+{{Compat}}
 
 ## Notas Gecko específicas
 

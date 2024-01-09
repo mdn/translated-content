@@ -91,7 +91,7 @@ captureStream =
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## 関連情報
 

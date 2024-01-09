@@ -42,7 +42,7 @@ var myVar = flag.toString();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Boolean.toString")}}
+{{Compat}}
 
 ## Veja também
 

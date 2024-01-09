@@ -335,4 +335,4 @@ Scrolling elements containing `fixed` or `sticky` content can cause performance 
 
 ## Compatibilidade do navegador
 
-{{Compat("css.properties.position")}}
+{{Compat}}

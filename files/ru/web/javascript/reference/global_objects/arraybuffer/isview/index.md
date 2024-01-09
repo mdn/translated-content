@@ -47,7 +47,7 @@ ArrayBuffer.isView(dv); // true
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

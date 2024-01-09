@@ -40,7 +40,7 @@ equal = Math.abs(x - y + z) < Number.EPSILON;
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.EPSILON")}}
+{{Compat}}
 
 ## Veja também
 

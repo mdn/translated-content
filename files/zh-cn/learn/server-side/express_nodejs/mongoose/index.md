@@ -386,7 +386,7 @@ Athlete.find()
 
 查询还能做更多。请参阅 [查询](http://mongoosejs.com/docs/queries.html)（Mongoose 英文文档）。
 
-#### 文档间协同 —— population
+#### 文档间协同——population
 
 可以使用 `ObjectId` 模式字段来创建两个文档/模型实例间一对一的引用，（一组 `ObjectIds` 可创建一对多的引用）。该字段存储相关模型的 id。如果需要相关文档的实际内容，可以在查询中使用 [`populate()`](http://mongoosejs.com/docs/api.html#query_Query-populate) 方法，将 id 替换为实际数据。
 

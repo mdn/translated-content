@@ -125,7 +125,7 @@ Object.getOwnPropertyNames("foo");
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertyNames")}}
+{{Compat}}
 
 ## Notas específicas para SpiderMonkey
 

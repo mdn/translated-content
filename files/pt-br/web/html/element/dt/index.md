@@ -27,7 +27,7 @@ Para exemplo veja [definição de lista](/pt-BR/docs/HTML/Element/dl#Examples).
 
 ## Navegadores compatíveis
 
-{{Compat("html.elements.dt")}}
+{{Compat}}
 
 ## Veja também
 

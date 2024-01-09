@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
+{{GlossarySidebar}}
+
 コンピューター科学では、**列挙**型は、名前の付いた値の限られた集合からなるデータ型です。
 
 ## HTML 列挙型属性

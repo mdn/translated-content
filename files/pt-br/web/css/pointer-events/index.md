@@ -102,7 +102,7 @@ Esta propriedade pode também ser usada para alcançar melhores taxas de quadros
 
 ## Compatibilidade do navegador
 
-{{Compat("css.properties.pointer-events")}}
+{{Compat}}
 
 ## Veja também
 

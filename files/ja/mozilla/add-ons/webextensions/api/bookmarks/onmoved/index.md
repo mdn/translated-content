@@ -58,9 +58,9 @@ browser.bookmarks.onMoved.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onMoved")}}
+{{Compat}}
 
-## Examples
+## 例
 
 ```js
 function handleMoved(id, moveInfo) {

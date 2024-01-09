@@ -109,7 +109,7 @@ div.menu-bar li:hover > ul {
 - [カスケード](/ja/docs/Web/CSS/Cascade)
 - [コメント](/ja/docs/Web/CSS/Comments)
 - [記述子](/ja/docs/Glossary/CSS_Descriptor)
-- [継承](/ja/docs/Web/CSS/inheritance)
+- [継承](/ja/docs/Web/CSS/Inheritance)
 - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
 - [優先度](/ja/docs/Web/CSS/Specificity)
 - [値定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
@@ -128,12 +128,12 @@ div.menu-bar li:hover > ul {
 ### レイアウト
 
 - [ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [包含ブロック](/ja/docs/Web/CSS/Containing_block)
 - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [置換要素](/ja/docs/Web/CSS/Replaced_element)
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

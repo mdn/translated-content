@@ -48,7 +48,7 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.412")}}
+{{Compat}}
 
 ## 関連情報
 

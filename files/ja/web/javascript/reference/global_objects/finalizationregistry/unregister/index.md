@@ -106,7 +106,7 @@ class Thingy {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.FinalizationRegistry.unregister")}}
+{{Compat}}
 
 ## 関連情報
 

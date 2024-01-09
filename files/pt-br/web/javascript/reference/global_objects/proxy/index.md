@@ -372,7 +372,7 @@ console.log(docCookies.my_cookie1);
 
 ## Navegadores Compatíveis
 
-{{Compat("javascript.builtins.Proxy", 2)}}
+{{Compat}}
 
 ## Notas Especificas Gecko
 

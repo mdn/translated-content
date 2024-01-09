@@ -57,9 +57,8 @@ Math.atan2( ±Infinity, +Infinity ) // ±PI/4.
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
 - {{jsxref("Math.acos()")}}
 - {{jsxref("Math.asin()")}}
 - {{jsxref("Math.atan()")}}

@@ -187,7 +187,7 @@ if (typeof Object.create != "function") {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.create")}}
+{{Compat}}
 
 ## Veja também
 

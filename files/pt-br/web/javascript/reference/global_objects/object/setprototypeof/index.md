@@ -176,7 +176,7 @@ george(); // 'Hello guys!!'
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.setPrototypeOf")}}
+{{Compat}}
 
 ## Veja também
 

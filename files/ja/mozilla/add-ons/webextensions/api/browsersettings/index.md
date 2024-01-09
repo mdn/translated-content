@@ -24,6 +24,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserSettings")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

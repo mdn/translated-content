@@ -21,7 +21,7 @@ O código de informação de status de resposta HTTP **`103 Early Hints`** é de
 
 ## Comptabilidade de navegador
 
-{{Compat("http.status.103")}}
+{{Compat}}
 
 ## Veja também
 

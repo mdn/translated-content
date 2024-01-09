@@ -50,7 +50,7 @@ window.addEventListener(
 
 ## ブラウザーの対応
 
-{{Compat("api.Window.rejectionhandled_event")}}
+{{Compat}}
 
 ## 関連情報
 

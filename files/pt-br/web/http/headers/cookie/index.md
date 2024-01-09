@@ -47,7 +47,7 @@ Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Cookie")}}
+{{Compat}}
 
 ## Veja também
 

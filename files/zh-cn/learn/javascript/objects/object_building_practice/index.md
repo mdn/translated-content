@@ -171,7 +171,7 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 
 {{ EmbedLiveSample('弹跳吧！小彩球！', '100%', 480) }}
 
-这个实例将会利用 [Canvas API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) 来在屏幕上画小球，还会用到 [requestAnimationFrame](/zh-CN/docs/Web/API/window/requestAnimationFrame) API 来使整个画面动起来 —— 我们并不要求你事先学习过这些 API 的相关知识，希望你完成这个练习之后会想去探索更多。这个过程中我们会用到一些漂亮的小东西并向你展示一些技巧，比如小球从墙上反弹，检查它们是否撞到了对方（也就是碰撞检测）。
+这个实例将会利用 [Canvas API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) 来在屏幕上画小球，还会用到 [requestAnimationFrame](/zh-CN/docs/Web/API/window/requestAnimationFrame) API 来使整个画面动起来——我们并不要求你事先学习过这些 API 的相关知识，希望你完成这个练习之后会想去探索更多。这个过程中我们会用到一些漂亮的小东西并向你展示一些技巧，比如小球从墙上反弹，检查它们是否撞到了对方（也就是碰撞检测）。
 
 ## 让我们开始吧
 
@@ -237,10 +237,10 @@ function Ball(x, y, velX, velY, color, size) {
 
 这个构造器中定义了每个小球需要的参数：
 
-- `x` 和 `y` 坐标 —— 小球在屏幕上最开始时候的坐标。坐标的范围从 0（左上角）到浏览器视口的宽和高（右下角）。
-- 水平和竖直速度（`velX` 和 `velY`）—— 我们会给每个小球一个水平和竖直速度。实际上，当我们让这些球开始运动时候，每过一帧都会给小球的 `x` 和 `y` 坐标加一次这些值。
-- `color` —— 每一个小球会有自己的颜色。
-- `size` —— 每一个小球会有自己的大小 — 也就是小球的半径，以像素为单位。
+- `x` 和 `y` 坐标——小球在屏幕上最开始时候的坐标。坐标的范围从 0（左上角）到浏览器视口的宽和高（右下角）。
+- 水平和竖直速度（`velX` 和 `velY`）——我们会给每个小球一个水平和竖直速度。实际上，当我们让这些球开始运动时候，每过一帧都会给小球的 `x` 和 `y` 坐标加一次这些值。
+- `color`——每一个小球会有自己的颜色。
+- `size`——每一个小球会有自己的大小——也就是小球的半径，以像素为单位。
 
 这里说明了小球的属性，那么方法呢？别忘了我们要让小球动起来。
 
@@ -263,8 +263,8 @@ Ball.prototype.draw = function () {
 - 然后，我们使用 [`fillStyle`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/fillStyle) 来定义这个图形的颜色 — 这个值正是小球的颜色属性。
 - 接下来，我们使用 [`arc()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/arc) 方法来在纸上画出一段圆弧。有这些参数：
 
-  - `x` 和 `y` 是圆弧的中心的坐标 —— 也就是小球的中心坐标。
-  - 圆弧的半径 —— 小球的半径。
+  - `x` 和 `y` 是圆弧的中心的坐标——也就是小球的中心坐标。
+  - 圆弧的半径——小球的半径。
   - 最后两个参数是开始和结束，也就是圆弧对应的夹角，单位以弧度表示。这里我们用的是 0 和 `2 * PI`，也就是 360 度（如果你设置成 0 和 `1 * PI`，则只会出现一个半圆，也就是 180 度）
 
 - 最后，我们使用 [`fill()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/fill) 方法，也就是声明我们结束了以 `beginPath()` 开始的绘画，并且使用我们之前设置的颜色进行填充。
@@ -328,7 +328,7 @@ Ball.prototype.update = function () {
 
 在每种情况下，我们都会加上小球的半径，因为 `x`/`y` 坐标是小球中心的坐标，我们希望小球在其边界接触浏览器窗口的边界时反弹，而不是小球的一部分都不见了再返回。
 
-最后两行，我们将 `velX` 的值加到 `x` 的坐标上，将 `velY` 的值加到 `y` 坐标上 —— 每次调用这个方法的时候小球就移动这么多。
+最后两行，我们将 `velX` 的值加到 `x` 的坐标上，将 `velY` 的值加到 `y` 坐标上——每次调用这个方法的时候小球就移动这么多。
 
 暂时先这样做；让我们继续做一些动画！
 
@@ -336,7 +336,7 @@ Ball.prototype.update = function () {
 
 现在就变得非常有趣了。我们在画布上加上一些小球，并且让他们动起来。
 
-1. 首先我们需要一个地方储存小球，下面的数组会干这件事 —— 现在将它添加到你的代码底部：
+1. 首先我们需要一个地方储存小球，下面的数组会干这件事——现在将它添加到你的代码底部：
 
    ```js
    let balls = [];
@@ -378,9 +378,9 @@ Ball.prototype.update = function () {
    - 将整个画布的颜色设置成半透明的黑色。然后使用 `fillRect()`（这四个参数分别是起始的坐标、绘制的矩形的宽和高）画出一个填充满整个画布的矩形。这是在下一个视图画出来时用来遮住之前的视图的。如果不这样做得话，你就会在屏幕上看到一条蛇的形状而不是小球的运动了。用来填充的颜色设置成半透明的`rgba(0,0,0,0.25)`，也就是让之前的视图留下来一点点，从而你可以看到小球运动时的轨迹。如果你将 0.25 设置成 1 时，你就完全看不到了。试着改变其中的值查看造成的影响。
    - 当且仅当小球数量小于 25 时，将 `random()` 函数产生的数字传入新的小球实例从而创建一个新的小球，并且加入到数组中。因此当屏幕上有 25 个小球时，不会再出现更多小球。你可以改变这个值，从而看到不同小球个数造成的影响。如果你的电脑或者浏览器性能不怎么样的话，几千个小球的速度就会明显慢下来。
    - 遍历数组中的所有小球，并且让每个小球都调用 `draw()` 和 `update()` 函数来将自己画出来，并且再接下来的每一帧都按照其速度进行位置的更新。
-   - 使用 `requestAnimationFrame()` 方法再运行一次函数 —— 当一个函数正在运行时传递相同的函数名，从而每隔一小段时间都会运行一次这个函数，这样我们可以得到一个平滑的动画效果。这主要是通过递归完成的 —— 也就是说函数每次运行的时候都会调用自己，从而可以一遍又一遍得运行。
+   - 使用 `requestAnimationFrame()` 方法再运行一次函数——当一个函数正在运行时传递相同的函数名，从而每隔一小段时间都会运行一次这个函数，这样我们可以得到一个平滑的动画效果。这主要是通过递归完成的——也就是说函数每次运行的时候都会调用自己，从而可以一遍又一遍得运行。
 
-4. 最后但是非常重要的是，加上下面这一行 —— 让动画开始运行的话我们需要调用这个函数。
+4. 最后但是非常重要的是，加上下面这一行——让动画开始运行的话我们需要调用这个函数。
 
    ```js
    loop();
@@ -435,11 +435,11 @@ Ball.prototype.update = function () {
 
 ## 参见
 
-- [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) —— 2D canvas 初学者指南。
+- [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial)——2D canvas 初学者指南。
 - [requestAnimationFrame()](/zh-CN/docs/Web/API/window/requestAnimationFrame)
 - [2D 碰撞检测](/zh-CN/docs/Games/Techniques/2D_collision_detection)
 - [3D 碰撞检测](/zh-CN/docs/Games/Techniques/3D_collision_detection)
-- [纯 JavaScript 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) —— 一个很好的 2D 游戏开发初学者教程。
-- [Phaser 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) —— JavaScript 游戏库构建 2D 游戏的基础知识。
+- [纯 JavaScript 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)——一个很好的 2D 游戏开发初学者教程。
+- [Phaser 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)——JavaScript 游戏库构建 2D 游戏的基础知识。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}

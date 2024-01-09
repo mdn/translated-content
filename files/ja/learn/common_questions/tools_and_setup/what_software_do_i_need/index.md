@@ -153,7 +153,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>
@@ -231,7 +231,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td>
         <ul>
           <li><a href="https://shiftedit.net/">ShiftEdit</a> (すべての OS)</li>

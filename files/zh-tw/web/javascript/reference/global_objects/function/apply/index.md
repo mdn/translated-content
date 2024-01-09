@@ -42,7 +42,7 @@ fun.apply(thisArg, [argsArray])
 
 ### 使用 `apply` 與建構子鏈結
 
-您可以使用 `apply` 鏈結 {{jsxref("Operators/new", "constructors", "", 1)}} 一個物件，與 Java 相似，如下範例中我們可以建立一個全域的 {{jsxref("Function")}} 方法叫 `construct`，使您可以使用類陣列的物件與建構子去替代參數列表。
+你可以使用 `apply` 鏈結 {{jsxref("Operators/new", "constructors", "", 1)}} 一個物件，與 Java 相似，如下範例中我們可以建立一個全域的 {{jsxref("Function")}} 方法叫 `construct`，使你可以使用類陣列的物件與建構子去替代參數列表。
 
 ```js
 Function.prototype.construct = function (aArgs) {

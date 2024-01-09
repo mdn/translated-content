@@ -70,7 +70,7 @@ _A Internet_ é um sistema global de redes interconectadas que usam o Internet P
 
 ## Navegadores compatíveis
 
-{{Compat("html.elements.dfn")}}
+{{Compat}}
 
 ## Veja também
 

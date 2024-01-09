@@ -55,7 +55,7 @@ Embora o elemento `address` exiba o texto com o mesmo estilo padrão que os elem
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.address")}}
+{{Compat}}
 
 ## Ver também
 

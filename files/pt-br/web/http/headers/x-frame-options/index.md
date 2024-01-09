@@ -129,7 +129,7 @@ app.use(frameguard({ action: "SAMEORIGIN" }));
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.X-Frame-Options")}}
+{{Compat}}
 
 ## Veja também
 

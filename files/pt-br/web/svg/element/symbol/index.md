@@ -58,7 +58,7 @@ Esse elemento implementa a interface do [`SVGSymbolElement`](/pt-BR/DOM/SVGSymbo
 
 ## Compatibilidade
 
-{{Compat("svg.elements.symbol")}}
+{{Compat}}
 
 ## Veja também
 

@@ -51,7 +51,7 @@ regexObj.compile("new foo", "g");
 
 ## Browser compativeis
 
-{{Compat("javascript.builtins.RegExp.compile")}}
+{{Compat}}
 
 ## Veja também
 

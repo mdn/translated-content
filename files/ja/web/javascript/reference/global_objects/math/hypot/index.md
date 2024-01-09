@@ -94,8 +94,8 @@ if (!Math.hypot)
     return containsInfinity
       ? Infinity
       : max === 1 / 0
-      ? 1 / 0
-      : max * Math.sqrt(s);
+        ? 1 / 0
+        : max * Math.sqrt(s);
   };
 ```
 
@@ -105,7 +105,7 @@ if (!Math.hypot)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.hypot")}}
+{{Compat}}
 
 ## 関連情報
 

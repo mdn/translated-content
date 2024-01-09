@@ -209,7 +209,7 @@ No cenário acima, `no-referrer` só será usada se `strict-origin-when-cross-or
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Referrer-Policy")}}
+{{Compat}}
 
 > **Nota:** - Da versão 53 em diante, Gecko possui uma preferência disponível em `about:config` para permitir usuários colocarem a `Referrer-Policy` padrão — `network.http.referer.userControlPolicy`.
 >

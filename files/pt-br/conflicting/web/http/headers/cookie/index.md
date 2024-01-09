@@ -34,7 +34,7 @@ Cookie2: $Version="1"
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Cookie2")}}
+{{Compat}}
 
 ## Veja também
 

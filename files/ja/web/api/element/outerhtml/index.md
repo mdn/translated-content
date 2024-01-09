@@ -27,7 +27,7 @@ l10n:
 
 ### 要素の outerHTML プロパティから値を取得
 
-### HTML
+#### HTML
 
 ```html
 <div id="d">
@@ -36,7 +36,7 @@ l10n:
 </div>
 ```
 
-### Javascript
+#### Javascript
 
 ```js
 const d = document.getElementById("d");
@@ -48,7 +48,7 @@ console.log(d.outerHTML);
 
 ### outerHTML プロパティへ設置することでノードを置き換え
 
-### HTML
+#### HTML
 
 ```html
 <div id="container">
@@ -56,7 +56,7 @@ console.log(d.outerHTML);
 </div>
 ```
 
-### Javascript
+#### Javascript
 
 ```js
 const container = document.getElementById("container");

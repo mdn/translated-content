@@ -78,19 +78,19 @@ Not a flex item
 
 ### inline-block の対応
 
-{{Compat("css.properties.display.inline-block", 10)}}
+{{Compat}}
 
 ### inline-table の対応
 
-{{Compat("css.properties.display.inline-table", 10)}}
+{{Compat}}
 
 ### inline-flex の対応
 
-{{Compat("css.properties.display.inline-flex", 10)}}
+{{Compat}}
 
 ### inline-grid の対応
 
-{{Compat("css.properties.display.inline-grid", 10)}}
+{{Compat}}
 
 ## 関連情報
 

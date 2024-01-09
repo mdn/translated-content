@@ -130,7 +130,7 @@ Quando formatar uma grande quantidade de números, é melhor criar um objeto {{j
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.toLocaleString")}}
+{{Compat}}
 
 ## Veja também
 

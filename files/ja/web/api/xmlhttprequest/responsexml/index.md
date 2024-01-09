@@ -1,11 +1,12 @@
 ---
-title: XMLHttpRequest.responseXML
+title: "XMLHttpRequest: responseXML プロパティ"
+short-title: responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: fe468a9966c87cac081d3986b3332d0a51c4e2ee
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`XMLHttpRequest.responseXML`** は読み取り専用のプロパティで、リクエストによって受け取った HTML または XML を含む {{domxref("Document")}}、またはリクエストが成功しなかった場合、まだ送信されていない場合、データが XML または HTML として解釈できない場合は `null` を返します。
 
@@ -60,6 +61,6 @@ xhr.send();
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLHttpRequest.response")}}
 - {{domxref("XMLHttpRequest.responseType")}}
-- [XML の解釈とシリアライズ](/ja/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XML の解釈とシリアライズ](/ja/docs/Web/XML/Parsing_and_serializing_XML)
 - XML を解釈して DOM ツリーに格納: {{domxref("DOMParser")}}
 - DOM ツリーを XML にシリアライズ: {{domxref("XMLSerializer")}} (特に {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} メソッド)

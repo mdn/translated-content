@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 
 在 2009 年时，规则看起来很不一样。当时，要创建一个弹性容器你会用`display: box` ，会有一大堆 `box-*` 属性，和现在的弹性盒子显然完全不同。
 
-曾有一个[规范的更新](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/)将语法换成了 `display: flexbox` ——这仍旧是浏览器前缀。
+曾有一个[规范的更新](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/)将语法换成了 `display: flexbox`——这仍旧是浏览器前缀。
 
 最后规范被修改成，定义 `display: flex` 作为创建弹性容器的方式。对于最新版本规范的浏览器支持自此就尽善尽美了。
 

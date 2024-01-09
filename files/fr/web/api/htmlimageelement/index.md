@@ -9,7 +9,7 @@ L'interface **`HTMLImageElement`** fournit des propriétés et des méthodes sp�
 
 ## Propriétés
 
-_Hérite les propriétés de son parent, {{domxref ("HTMLElement")}}_
+_Hérite les propriétés de son parent, {{domxref ("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.align")}} {{deprecated_inline}}
   - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ qui indique l'alignement de l'image en respectant le contexte environnant. Les valeurs possibles sont `"left"`_(gauche)_, `"right"`_(droite)_, `"justify"`_(justifié)_, et `"center"`_(centré) ._

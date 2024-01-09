@@ -65,7 +65,7 @@ O elemento \<main> é amplamente suportado (exceto pelo Internet Explorer). Suge
 <main role="main">...</main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## Veja também
 

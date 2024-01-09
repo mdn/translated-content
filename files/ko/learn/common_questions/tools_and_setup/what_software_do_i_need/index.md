@@ -48,7 +48,7 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 | Windows   | [Notepad](http://en.wikipedia.org/wiki/Notepad_%28software%29)                                                                                                                                                                             | [Notepad++](http://notepad-plus-plus.org/)[Visual Studio Code](https://www.visualstudio.com/)[Web Storm](https://www.jetbrains.com/webstorm/)[Brackets](http://brackets.io/)[ShiftEdit](https://shiftedit.net/) |
 | Mac OS    | [TextEdit](http://en.wikipedia.org/wiki/TextEdit)                                                                                                                                                                                          | [TextWrangler](http://www.barebones.com/products/textwrangler/)[Visual Studio Code](https://www.visualstudio.com/)[Brackets](http://brackets.io/)[ShiftEdit](https://shiftedit.net/)                            |
 | Linux     | [Vi](http://en.wikipedia.org/wiki/Vi) (All UNIX) [GEdit](http://en.wikipedia.org/wiki/Gedit) (Gnome) [Kate](http://en.wikipedia.org/wiki/Kate_%28text_editor%29) (KDE) [LeafPad](<http://en.wikipedia.org/wiki/Kate_(text_editor)>) (Xfce) | [Emacs](http://www.gnu.org/software/emacs/) [Vim](http://www.vim.org/)[Visual Studio Code](https://www.visualstudio.com/)[Brackets](http://brackets.io/)[ShiftEdit](https://shiftedit.net/)                     |
-| Chrome OS |                                                                                                                                                                                                                                            | [ShiftEdit](https://shiftedit.net/)                                                                                                                                                                             |
+| ChromeOS  |                                                                                                                                                                                                                                            | [ShiftEdit](https://shiftedit.net/)                                                                                                                                                                             |
 
 이것은 하나의 고급 텍스트 에디터의 스크린샷입니다:
 
@@ -96,7 +96,7 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
       <td><a href="http://cyberduck.de/">Cyberduck</a></td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td><a href="https://shiftedit.net/">ShiftEdit</a> (All OS)</td>
       <td colspan="1"></td>
     </tr>

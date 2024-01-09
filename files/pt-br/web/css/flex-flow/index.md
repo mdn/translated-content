@@ -60,7 +60,7 @@ elemento {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.flex-flow")}}
+{{Compat}}
 
 ## Veja também
 

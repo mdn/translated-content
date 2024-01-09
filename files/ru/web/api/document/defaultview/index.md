@@ -19,6 +19,6 @@ var win = document.defaultView;
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}

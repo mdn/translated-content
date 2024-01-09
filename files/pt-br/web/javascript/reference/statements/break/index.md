@@ -73,7 +73,7 @@ bloco_2:{
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.break")}}
+{{Compat}}
 
 ## Veja também
 

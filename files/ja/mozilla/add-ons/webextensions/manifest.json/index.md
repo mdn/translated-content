@@ -114,4 +114,4 @@ browser.runtime.getManifest().version;
 
 マニフェストキーとサブキーのすべてを見るには、[完全な manifest.json ブラウザー互換テーブルを見てください。](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
 
-{{Compat("webextensions.manifest")}}
+{{Compat}}

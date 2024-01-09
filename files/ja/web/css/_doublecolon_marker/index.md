@@ -14,6 +14,8 @@ slug: Web/CSS/::marker
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-marker.html", "tabbed-shorter")}}
+
 ## 利用できるプロパティ
 
 `::marker` 擬似要素では、一部の CSS プロパティのみが利用できます。

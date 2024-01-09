@@ -66,7 +66,7 @@ Number.isInteger =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.isInteger")}}
+{{Compat}}
 
 ## Ver tabém
 

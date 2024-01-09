@@ -43,4 +43,4 @@ Este elemento implementa o [HTMLElement](/pt-BR/docs/DOM/HTMLElement) interface.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.wbr")}}
+{{Compat}}

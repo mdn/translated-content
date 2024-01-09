@@ -41,7 +41,7 @@ Entradas requeridas devem ser indicadas visualmente, utilizando um tratamento qu
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.optional")}}
+{{Compat}}
 
 ## Ver também
 

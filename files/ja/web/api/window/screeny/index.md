@@ -78,7 +78,7 @@ if (!window.screenLeft) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.screenY")}}
+{{Compat}}
 
 ## 関連情報
 

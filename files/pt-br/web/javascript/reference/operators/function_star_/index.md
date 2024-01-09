@@ -42,7 +42,7 @@ var x = function* (y) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.generator_function")}}
+{{Compat}}
 
 ## Veja também
 

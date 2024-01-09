@@ -332,7 +332,7 @@ Além dos exemplos variados acima, você encontrará as entradas de alcance demo
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.type_range")}}
+{{Compat}}
 
 ## See also
 

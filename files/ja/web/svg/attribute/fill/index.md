@@ -224,12 +224,12 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
 
 > **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("svg.attributes.presentation.fill")}}
+{{Compat}}
 
 > **メモ:** For information on using the `context-fill` (and `context-stroke`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.

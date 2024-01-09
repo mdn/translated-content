@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 
 **`valueOf()`** メソッドは、 Symbol オブジェクトのプリミティブ値を返します。
 
+{{EmbedInteractiveExample("pages/js/symbol-prototype-valueof.html")}}
+
 ## 構文
 
 ```
@@ -38,7 +40,7 @@ sym === sym.valueOf(); // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.valueOf")}}
+{{Compat}}
 
 ## 関連情報
 

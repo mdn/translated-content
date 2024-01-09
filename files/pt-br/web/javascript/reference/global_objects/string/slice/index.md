@@ -161,7 +161,7 @@ console.log(str.slice(-5, -1)); // retorna "e nó"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.slice")}}
+{{Compat}}
 
 ## Veja também
 

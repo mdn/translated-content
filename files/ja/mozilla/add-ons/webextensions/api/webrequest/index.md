@@ -124,7 +124,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.webRequest")}}
+{{Compat}}
 
 [Extra notes on Chrome incompatibilities](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
 

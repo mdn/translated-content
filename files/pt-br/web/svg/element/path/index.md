@@ -58,7 +58,7 @@ Este elemento implementa a interace do [`SVGPathElement`](/pt-BR/docs/DOM/SVGPat
 
 ## Compatibilidade dos navegadores
 
-{{Compat("svg.elements.path")}}
+{{Compat}}
 
 ## Veja também
 

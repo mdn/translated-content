@@ -5,7 +5,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-在這個評估中，您將使用您在 [Django Web Framework (Python)](/zh-TW/docs/Learn/Server-side/Django) 模組中獲得的知識，來創建一個非常基本的部落格。
+在這個評估中，你將使用你在 [Django Web Framework (Python)](/zh-TW/docs/Learn/Server-side/Django) 模組中獲得的知識，來創建一個非常基本的部落格。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -148,7 +148,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
   </tbody>
 </table>
 
-另外您應該要寫一些基本的測試來驗證:
+另外你應該要寫一些基本的測試來驗證:
 
 - 所有的模型欄位都有正確的標示和長度。
 - 所有的模型都有期望的物件名稱(例如 `__str__()` 回傳期望的值)。
@@ -158,7 +158,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
 - BlogListView (所有文章的頁面) 使用期望的模板(例如預設值)。
 - BlogListView 以每頁 5 筆項目分頁(至少第一頁是如此)。
 
-> **備註：** 當然你也可以跑很多其他的測試。但是我們會希望您至少實作以上列出的測試項目。
+> **備註：** 當然你也可以跑很多其他的測試。但是我們會希望你至少實作以上列出的測試項目。
 
 下一區塊顯示符合以上需求的網頁[截圖](#Screenshots)。
 

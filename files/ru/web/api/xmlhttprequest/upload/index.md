@@ -23,6 +23,6 @@ slug: Web/API/XMLHttpRequest/upload
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

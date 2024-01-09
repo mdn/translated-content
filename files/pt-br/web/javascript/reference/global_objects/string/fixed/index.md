@@ -39,7 +39,7 @@ console.log(worldString.fixed()); // "<tt>Olá, mundo</tt>"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.fixed")}}
+{{Compat}}
 
 ## Veja também
 

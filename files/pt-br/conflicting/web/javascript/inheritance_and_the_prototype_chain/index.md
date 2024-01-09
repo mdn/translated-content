@@ -553,7 +553,7 @@ function instanceOf(object, constructor) {
 }
 ```
 
-> **Nota:** The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See {{ bug(634150) }} if you want the nitty-gritty details.
+> **Nota:** The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See [Firefox bug 634150](https://bugzil.la/634150) if you want the nitty-gritty details.
 
 > **Nota:** Using the `instanceOf` function defined above, these expressions are true:
 

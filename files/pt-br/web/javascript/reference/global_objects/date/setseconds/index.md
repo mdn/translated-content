@@ -53,7 +53,7 @@ theBigDay.setSeconds(30);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setSeconds")}}
+{{Compat}}
 
 ## Veja também
 

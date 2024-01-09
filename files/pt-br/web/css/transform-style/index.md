@@ -43,7 +43,7 @@ transform-style: unset;
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.transform-style")}}
+{{Compat}}
 
 ## Veja também
 

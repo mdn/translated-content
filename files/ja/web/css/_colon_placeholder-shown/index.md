@@ -14,6 +14,8 @@ slug: Web/CSS/:placeholder-shown
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
+
 ## 構文
 
 ```

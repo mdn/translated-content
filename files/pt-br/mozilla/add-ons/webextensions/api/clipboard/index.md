@@ -22,6 +22,6 @@ Para utilizar esta API voce precisa ter a [permissão](/pt-BR/docs/Mozilla/Add-o
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.clipboard", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}
 
 > **Nota:** **Agradecimentos**Esta API é baseada na API Chromium [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard).

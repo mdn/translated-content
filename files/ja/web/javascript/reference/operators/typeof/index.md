@@ -210,8 +210,8 @@ function type(obj, fullClass) {
   )
     ? deepType
     : typeof obj === "object" || typeof obj === "function"
-    ? "object"
-    : typeof obj;
+      ? "object"
+      : typeof obj;
 }
 ```
 

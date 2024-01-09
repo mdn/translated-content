@@ -39,7 +39,7 @@ for (var i = 0, j = 9; i <= 9; i++, j--)
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.comma")}}
+{{Compat}}
 
 ## Veja também
 

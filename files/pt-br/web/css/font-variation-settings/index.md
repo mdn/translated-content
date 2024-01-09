@@ -85,7 +85,7 @@ O CSS do exemplo a seguir pode ser editado para permitir que você mude os valor
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.font-variation-settings")}}
+{{Compat}}
 
 ## Veja também
 

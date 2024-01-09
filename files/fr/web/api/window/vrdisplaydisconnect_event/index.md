@@ -64,5 +64,4 @@ window.onvrdisplaydisconnect = function() {
 
 ## Voir aussi
 
-- [WebVR API homepage](/fr/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — démos, téléchargements et autres ressources de l'équipe Mozilla VR.
+- [WebVR API](/fr/docs/Web/API/WebVR_API)

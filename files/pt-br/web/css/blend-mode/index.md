@@ -347,7 +347,7 @@ Changes between blends mode are not interpolated. Any change occurs immediately.
 
 ## Browser Compatibility
 
-{{Compat("css.types.blend-mode")}}
+{{Compat}}
 
 ## See also
 

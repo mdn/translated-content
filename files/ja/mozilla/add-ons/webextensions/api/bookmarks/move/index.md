@@ -39,7 +39,7 @@ browser.bookmarks.move(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.move")}}
+{{Compat}}
 
 ## 使用例
 

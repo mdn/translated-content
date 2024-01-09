@@ -176,4 +176,4 @@ For a simple example of an extension that uses a sidebar, see [annotate-page](ht
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.sidebar_action")}}
+{{Compat}}

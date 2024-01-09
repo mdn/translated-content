@@ -134,14 +134,6 @@ normalArray.length === 4;
 normalArray.constructor === Array;
 ```
 
-## Especificações
-
-| Especificações                                                           | Status                   | Comente                                 |
-| ------------------------------------------------------------------------ | ------------------------ | --------------------------------------- |
-| {{SpecName('Typed Array')}}                                              | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.          |
-| {{SpecName('ES2015', '#sec-typedarray-objects', 'TypedArray Objects')}}  | {{Spec2('ES2015')}}      | Initial definition in an ECMA standard. |
-| {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} | {{Spec2('ESDraft')}}     |                                         |
-
 ## Veja também
 
 - [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/pt-BR/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)

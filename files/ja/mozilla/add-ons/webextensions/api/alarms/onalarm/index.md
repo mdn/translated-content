@@ -39,7 +39,7 @@ browser.alarms.onAlarm.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.alarms.onAlarm")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

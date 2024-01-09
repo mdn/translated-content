@@ -91,7 +91,7 @@ p.secret {
 
 ### contents の対応
 
-{{Compat("css.properties.display.contents", 10)}}
+{{Compat}}
 
 ## 関連情報
 

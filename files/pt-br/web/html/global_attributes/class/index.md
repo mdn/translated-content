@@ -15,7 +15,7 @@ Apesar da especificação não impor requesitos sobre os nomes de classes, é co
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.class")}}
+{{Compat}}
 
 ## Veja também
 

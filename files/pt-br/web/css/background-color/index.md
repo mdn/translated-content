@@ -108,7 +108,7 @@ A cor do contrast é determinada comparando a luminância da cor do texto e da c
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.background-color")}}
+{{Compat}}
 
 ## Veja também
 

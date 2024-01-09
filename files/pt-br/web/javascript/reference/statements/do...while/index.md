@@ -54,7 +54,7 @@ document.getElementById("exemplo").innerHTML = resultado;
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.do_while")}}
+{{Compat}}
 
 ## Veja também
 

@@ -26,7 +26,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.history.HistoryItem")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

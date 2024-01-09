@@ -43,7 +43,7 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.MediaSource")}}
+{{Compat}}
 
 ## 関連情報
 

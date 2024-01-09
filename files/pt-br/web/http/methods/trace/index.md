@@ -52,7 +52,7 @@ TRACE /index.html
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.TRACE")}}
+{{Compat}}
 
 ## Veja também
 

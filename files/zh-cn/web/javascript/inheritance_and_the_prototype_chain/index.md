@@ -623,7 +623,7 @@ const square = new Square(2);
       <th scope="row">优点</th>
       <td>
         被所有现代引擎所支持。非常高的可读性和可维护性。<a
-          href="/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields">私有属性</a>是原型继承中没有简单替代方案的特性。
+          href="/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties">私有属性</a>是原型继承中没有简单替代方案的特性。
       </td>
     </tr>
     <tr>

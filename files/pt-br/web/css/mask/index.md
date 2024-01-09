@@ -59,7 +59,7 @@ Se o valor é um valor URI, o elemento apontado pelo URI é usado como uma másc
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.mask")}}
+{{Compat}}
 
 ## Veja também
 

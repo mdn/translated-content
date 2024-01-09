@@ -68,7 +68,7 @@ Math.sinh =
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.sinh")}}
+{{Compat}}
 
 ## Veja também
 

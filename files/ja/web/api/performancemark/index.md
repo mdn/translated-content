@@ -37,7 +37,7 @@ slug: Web/API/PerformanceMark
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceMark")}}
+{{Compat}}
 
 ## あわせて参照
 

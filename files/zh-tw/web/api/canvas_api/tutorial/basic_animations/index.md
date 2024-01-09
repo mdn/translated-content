@@ -334,7 +334,7 @@ function draw() {
 <canvas id="canvas" width="800" height="200"></canvas>
 ```
 
-**Live sample**
+##### 結果
 
 {{EmbedLiveSample("循環景色", "830", "230")}}
 

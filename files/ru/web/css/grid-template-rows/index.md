@@ -12,7 +12,7 @@ CSS-свойство **`grid-template-rows`** определяет имена л
 ## Синтаксис
 
 ```css
-/* Ключевое слово в качестве значения */
+/* Ключевые слова */
 grid-template-rows: none;
 
 /* Значения <track-list> */
@@ -140,7 +140,7 @@ grid-template-rows: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

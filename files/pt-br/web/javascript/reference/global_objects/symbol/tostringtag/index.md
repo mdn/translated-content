@@ -72,7 +72,7 @@ test[Symbol.toStringTag]; // Retona HTMLButtonElement
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.toStringTag")}}
+{{Compat}}
 
 ## Veja também
 

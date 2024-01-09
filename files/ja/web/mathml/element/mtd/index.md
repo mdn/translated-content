@@ -32,13 +32,13 @@ MathML の `<mtd>` 要素は表組み・行列のセルを表します。{{ Math
 
 ## ブラウザーの互換性
 
-{{Compat("mathml.elements.mtd")}}
+{{Compat}}
 
 ## 仕様
 
 {{Specifications}}
 
-## See also
+## 関連情報
 
 - {{ MathMLElement("mtable") }}
 - {{ MathMLElement("mtr") }}

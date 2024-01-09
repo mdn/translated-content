@@ -119,7 +119,7 @@ dv.getInt16(1); //42
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.DataView")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

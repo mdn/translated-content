@@ -171,8 +171,8 @@ function pollGamepads() {
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads
-    : [];
+      ? navigator.webkitGetGamepads
+      : [];
   for (var i = 0; i < gamepads.length; i++) {
     var gp = gamepads[i];
     if (gp) {
@@ -209,8 +209,8 @@ function gameLoop() {
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads
-    : [];
+      ? navigator.webkitGetGamepads
+      : [];
   if (!gamepads) {
     return;
   }
@@ -234,13 +234,9 @@ function gameLoop() {
 }
 ```
 
-### 使用坐标方向 (axes) 信息
+## 完整的示例：显示控制器状态
 
-**待讨论 (除了一个用 axes\[i] 一个用 button\[i].value，其他基本一样，Firefox 与 Chrome 均是。)**
-
-## 完整的例子：显示控制器状态
-
-这个例子展示了怎样使用 {{ domxref("Gamepad") }} 对象，还有 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 和 [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件显示所有已连接到系统的控制器的状态。你可以查看[在线演示](http://luser.github.io/gamepadtest/)并且可在 Github 上看到[完整的源代码](https://github.com/luser/gamepadtest)。
+这个示例展示了怎样使用 {{ domxref("Gamepad") }} 对象，还有 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 和 [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件显示所有已连接到系统的控制器的状态。你可以查看[在线演示](http://luser.github.io/gamepadtest/)并且可在 Github 上看到[完整的源代码](https://github.com/luser/gamepadtest)。
 
 ```js
 var haveEvents = "ongamepadconnected" in window;
@@ -354,8 +350,8 @@ function scangamepads() {
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads()
-    : [];
+      ? navigator.webkitGetGamepads()
+      : [];
   for (var i = 0; i < gamepads.length; i++) {
     if (gamepads[i]) {
       if (gamepads[i].index in controllers) {

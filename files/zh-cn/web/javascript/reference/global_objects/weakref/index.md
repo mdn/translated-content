@@ -109,7 +109,7 @@ setTimeout(() => {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("FinalizationRegistry")}}
 - {{jsxref("WeakSet")}}

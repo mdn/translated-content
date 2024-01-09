@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 
 **`Intl.Numberformat.prototype.formatToParts()`** メソッドは `NumberFormat` フォーマッターによって生成された文字列のロケールに応じた書式設定を可能にします。
 
+{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-formattoparts.html")}}
+
 ## 構文
 
 ```
@@ -128,7 +130,7 @@ console.log(numberString);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat.formatToParts")}}
+{{Compat}}
 
 ## 関連情報
 

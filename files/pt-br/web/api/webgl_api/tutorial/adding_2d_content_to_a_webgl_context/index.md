@@ -188,9 +188,9 @@ The first step is to clear the context to our background color; then we establis
 
 Then we establish the position of the square by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the context, configure it, and draw the object by calling the `drawArrays()` method.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Open this demo on a new page](http://mdn.github.io/webgl-examples/tutorial/sample2/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Operações úteis da Matrix
 

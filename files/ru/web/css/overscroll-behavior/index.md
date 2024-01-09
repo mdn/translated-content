@@ -8,7 +8,7 @@ slug: Web/CSS/overscroll-behavior
 CSS-свойство **`overscroll-behavior`** — это сокращение для свойств {{cssxref("overscroll-behavior-x")}} и {{cssxref("overscroll-behavior-y")}}, которые позволяют управлять поведением прокрутки при достижении границы области прокрутки.
 
 ```css
-/* Значения-ключевые слова */
+/* Ключевые слова */
 overscroll-behavior: auto; /* по умолчанию */
 overscroll-behavior: contain;
 overscroll-behavior: none;
@@ -76,7 +76,7 @@ body {
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

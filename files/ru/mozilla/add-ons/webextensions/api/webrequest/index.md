@@ -21,7 +21,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) и [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.
 
-Для перехвата ресурсов, загруженных страницей (таких как картинки, скрипты или таблицы стилей), расширение должно иметь разрешение хоста для ресурса также как и для главной страницы, запрашивающей ресурс. К примеру, если страница на "https\://developer.mozilla.org" загружает картинку из "https\://mdn.mozillademos.org", тогда расширение должно иметь разрешения обоих хостов чтобы перехватить запрос картинки.
+Для перехвата ресурсов, загруженных страницей (таких как картинки, скрипты или таблицы стилей), расширение должно иметь разрешение хоста для ресурса также как и для главной страницы, запрашивающей ресурс. К примеру, если страница на `https://developer.mozilla.org` загружает картинку из `https://mdn.mozillademos.org`, тогда расширение должно иметь разрешения обоих хостов чтобы перехватить запрос картинки.
 
 ## Модифицирование заголовков
 
@@ -118,7 +118,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Fired when an error occurs.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -127,8 +127,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 {{WebExtExamples("h2")}}
 
 > **Примечание:** Это API основано на API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Эта документация основана на [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) из кода Chromium.
->
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -27,7 +27,7 @@ browser.bookmarks.removeTree(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.removeTree")}}
+{{Compat}}
 
 ## 使用例
 

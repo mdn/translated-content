@@ -63,4 +63,4 @@ Este elemento implementa a interface do [`SVGUseElement`](/pt-BR/DOM/SVGUseEleme
 
 ## Compatibilidade dos navegadores
 
-{{Compat("svg.elements.use")}}
+{{Compat}}

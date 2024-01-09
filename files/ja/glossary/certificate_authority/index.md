@@ -3,6 +3,8 @@ title: Certificate authority (認証局)
 slug: Glossary/Certificate_authority
 ---
 
+{{GlossarySidebar}}
+
 認証局 (CA) は、{{Glossary("Digital certificate", "デジタル証明書")}}とそれに関連する{{Glossary("Key", "公開鍵")}}に{{Glossary("Signature/Security", "署名")}}し、含まれる情報と鍵が正しいことを保証する組織です。
 
 ウェブサイトのデジタル証明書については、この情報には少なくともデジタル証明書を要求した組織 (例: Mozilla Corporation)、そのサイト (例: mozilla.org)、および認証局が含まれます。

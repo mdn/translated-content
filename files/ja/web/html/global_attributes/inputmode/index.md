@@ -2,7 +2,7 @@
 title: inputmode
 slug: Web/HTML/Global_attributes/inputmode
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -36,7 +36,7 @@ l10n:
 
 - `search`
   - : 検索入力に最適化された仮想キーボードです。
-    例えば、 [return/submit](https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute) キーのラベルが「検索」になっていたり、他の最適化が行われている可能性もあります。
+    例えば、 [return/submit](https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute) キーのラベルが「検索」になっていたり、他の最適化が行われている可能性もあります。
     検索クエリーを要求する入力欄は、ふつうは代わりに `{{HTMLElement("input/search", '&lt;input type="search"&gt;')}}` を使用してください。
 - `email`
   - : 電子メールアドレスの入力に最適化された仮想キーボードです。

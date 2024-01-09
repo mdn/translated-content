@@ -119,7 +119,7 @@ Esta propriedade pode ser especificada como:
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 ## See also
 

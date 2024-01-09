@@ -100,7 +100,7 @@ g.next(2);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Generator.next")}}
+{{Compat}}
 
 ## 関連情報
 

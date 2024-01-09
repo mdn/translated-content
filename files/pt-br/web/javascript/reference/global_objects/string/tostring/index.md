@@ -35,7 +35,7 @@ console.log(x.toString()); // retorna 'Hello world'
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.toString")}}
+{{Compat}}
 
 ## Veja também
 

@@ -33,4 +33,4 @@ _親である_ _{{domxref("ExtendableEvent")}}_ から関数を継承します�
 
 ## ブラウザーの互換性
 
-{{Compat("api.SyncEvent")}}
+{{Compat}}

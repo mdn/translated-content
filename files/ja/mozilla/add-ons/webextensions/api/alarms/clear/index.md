@@ -29,7 +29,7 @@ browser.alarms.clear(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.alarms.clear")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

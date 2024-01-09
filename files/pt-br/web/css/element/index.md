@@ -72,7 +72,7 @@ Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como _backgr
 
 ## Compatibilidade dos navegadores
 
-{{Compat("css.types.image.element")}}
+{{Compat}}
 
 ## Veja tambem
 

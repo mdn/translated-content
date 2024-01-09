@@ -74,7 +74,7 @@ Foo.name; // "NamedFoo"
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

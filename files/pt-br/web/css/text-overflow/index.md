@@ -518,7 +518,7 @@ The full path of the URL will be displayed over the mouse, and the screen will b
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.text-overflow")}}
+{{Compat}}
 
 ## See also
 

@@ -166,7 +166,7 @@ Veja {{HTMLElement("table")}} para mais elementos `<th>`.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.th")}}
+{{Compat}}
 
 ## Veja mais
 

@@ -266,7 +266,7 @@ console.log(instance.msg);
 
 {{Specifications("javascript.classes")}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

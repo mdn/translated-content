@@ -101,4 +101,4 @@ div {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.margin-bottom")}}
+{{Compat}}

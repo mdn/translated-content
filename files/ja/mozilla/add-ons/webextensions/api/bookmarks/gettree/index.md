@@ -26,7 +26,7 @@ browser.bookmarks.getTree(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.getTree")}}
+{{Compat}}
 
 ## 例
 

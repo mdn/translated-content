@@ -210,9 +210,9 @@ delete x; // !!! 语法错误
 eval("var y; delete y;"); // !!! 语法错误
 ```
 
-### 让`eval`和`arguments`变的简单
+### 让 eval 和 arguments 变的简单
 
-严格模式让`arguments`和`eval`少了一些奇怪的行为。两者在通常的代码中都包含了很多奇怪的行为： `eval`会添加删除绑定，改变绑定好的值，还会通过用它索引过的属性给形参取别名的方式修改形参。虽然在未来的 ECMAScript 版本解决这个问题之前，是不会有补丁来完全修复这个问题，但严格模式下将 eval 和 arguments 作为关键字对于此问题的解决是很有帮助的。
+严格模式让 `arguments` 和 `eval` 少了一些奇怪的行为。两者在通常的代码中都包含了很多奇怪的行为：`eval` 会添加删除绑定，改变绑定好的值，还会通过用它索引过的属性给形参取别名的方式修改形参。虽然在未来的 ECMAScript 版本解决这个问题之前，是不会有补丁来完全修复这个问题，但严格模式下将 eval 和 arguments 作为关键字对于此问题的解决是很有帮助的。
 
 第一，名称 `eval` 和 `arguments` 不能通过程序语法被绑定 (be bound) 或赋值。以下的所有尝试将引起语法错误：
 
@@ -349,13 +349,7 @@ function baz() {
 
 主流浏览器现在实现了严格模式。但是不要盲目地依赖它，因为市场上仍然有大量的浏览器版本只部分支持严格模式或者根本就不支持（比如 IE10 之前的版本）。*严格模式改变了语义。*依赖这些改变可能会导致没有实现严格模式的浏览器中出现问题或者错误。谨慎地使用严格模式，通过检测相关代码的功能保证严格模式不出问题。最后，记得*在支持或者不支持严格模式的浏览器中测试你的代码*。如果你只在不支持严格模式的浏览器中测试，那么在支持的浏览器中就很有可能出问题，反之亦然。
 
-## 相关链接
+## 参见
 
-- [Where's Walden? » New ES5 strict mode support: now with poison pills!](http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
-- [Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
-- [Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
-- [JavaScript "use strict" tutorial for beginners.](http://qnimate.com/javascript-strict-mode-in-nutshell/)
-- [John Resig - ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
-- [ECMA-262-5 in detail. Chapter 2. Strict Mode.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
-- [Strict mode compatibility table](http://kangax.github.com/es5-compat-table/strict-mode/)
-- [Transitioning to strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)

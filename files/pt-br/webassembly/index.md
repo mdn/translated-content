@@ -66,7 +66,7 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 
 ## Compatibilidade do navegador
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Veja também
 

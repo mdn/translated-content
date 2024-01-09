@@ -206,4 +206,4 @@ Na versão descomprimida, o programa cai no bloco-verdade e grava o log _'foo' i
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.name")}}
+{{Compat}}

@@ -343,7 +343,7 @@ console.log(it.next().value); // 2
 
 ### 使用类定义一个可迭代对象
 
-状态封装也可以对[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)进行。
+状态封装也可以对[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)进行。
 
 ```js
 class SimpleClass {

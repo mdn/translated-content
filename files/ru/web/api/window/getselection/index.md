@@ -59,7 +59,7 @@ var selectedText = selObj.toString();
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

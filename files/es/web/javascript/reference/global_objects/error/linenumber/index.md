@@ -35,19 +35,9 @@ Esta es una norma soportada por Chrome, Firefox entre otros.
 
 No forma parte de ninguna especificación. No es una norma.
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-Tabla de compatibilidad
-
-| Caracteristica | Chrome          | Firefox (Gecko) | Internet Explorer | Opera         | Safari        |
-| -------------- | --------------- | --------------- | ----------------- | ------------- | ------------- |
-| Soporte básico | Compatible \[1] | Compatible      | No compatible     | No compatible | No compatible |
-
-\[1] Objeto error en errores manejados.
-
-| Caracteristica | Android       | Chorme para Android | Firefox Móvil (Gecko) | IE Móvil      | Opera Móvil   | Safari Móvil  |
-| -------------- | ------------- | ------------------- | --------------------- | ------------- | ------------- | ------------- |
-| Soporte básico | No compatible | No compatible       | Compatible            | No compatible | No compatible | No compatible |
+{{Compat}}
 
 ## Vea también
 

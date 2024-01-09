@@ -78,4 +78,4 @@ observer.observe(targetNode, observerOptions);
 
 ## 各ブラウザの対応状況
 
-{{Compat("api.MutationObserver.MutationObserver")}}
+{{Compat}}

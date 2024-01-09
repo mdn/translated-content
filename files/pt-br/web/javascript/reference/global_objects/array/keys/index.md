@@ -45,7 +45,7 @@ console.log(denseKeys); // [0, 1, 2]
 
 ## Compatibilidade de Browser
 
-{{Compat("javascript.builtins.Array.keys")}}
+{{Compat}}
 
 ## Veja também
 

@@ -124,7 +124,7 @@ Ao formatar um grande número de datas, é melhor criar um objeto {{jsxref("Glob
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toLocaleDateString")}}
+{{Compat}}
 
 ## Veja também
 

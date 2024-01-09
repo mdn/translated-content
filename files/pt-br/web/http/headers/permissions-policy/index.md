@@ -112,7 +112,7 @@ Especificando a palavra-chave `'none'` para a lista de origem, as funcionalidade
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat}}
 
 ## Veja também
 

@@ -85,7 +85,7 @@ slug: Web/SVG/Element/mpath
 
 ## ブラウザ実装状況
 
-{{Compat("svg.elements.mpath")}}
+{{Compat}}
 
 ## 関連情報
 

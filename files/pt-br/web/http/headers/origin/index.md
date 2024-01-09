@@ -50,7 +50,7 @@ Origin: https://developer.mozilla.org
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Origin")}}
+{{Compat}}
 
 ## Veja também
 

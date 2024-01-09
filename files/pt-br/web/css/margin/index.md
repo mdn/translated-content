@@ -128,7 +128,7 @@ Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, est
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.margin")}}
+{{Compat}}
 
 ## Veja também
 

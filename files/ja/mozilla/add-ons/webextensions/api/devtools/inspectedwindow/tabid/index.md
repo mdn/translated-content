@@ -36,7 +36,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ## ブラウザの対応状況
 
-{{Compat("webextensions.api.devtools.inspectedWindow.tabId")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

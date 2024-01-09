@@ -13,7 +13,7 @@ slug: Web/API/XRRigidTransform/orientation
 let orientation = xrRigidTransform.orientation;
 ```
 
-### Value
+### 値
 
 変換の向き成分を提供する単位クォータニオンを含む {{domxref("DOMPointReadOnly")}} オブジェクト。 単位クォータニオンとして、返されるクォータニオンの長さは常に 1.0 メートルです。
 
@@ -35,7 +35,7 @@ xrReferenceSpace = refSpace.getOffsetReferenceSpace(
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.orientation")}}
+{{Compat}}
 
 ## 関連情報
 

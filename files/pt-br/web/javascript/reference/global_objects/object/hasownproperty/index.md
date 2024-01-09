@@ -116,7 +116,7 @@ Observe que neste ultimo caso nenhum novo objeto é criado.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## Veja Também
 

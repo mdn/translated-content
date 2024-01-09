@@ -31,6 +31,6 @@ Negative values for `width` or `height` are not permitted and a value of zero di
 - {{ SVGElement("pattern") }}
 - {{ SVGElement("view") }}
 
-## See also
+## 関連情報
 
 - [SVG Getting Started: Positions](/ja/SVG/Tutorial/Positions)

@@ -88,5 +88,5 @@ _该接口从 {{domxref("WorkerGlobalScope")}} 接口以及它的父接口 {{dom
 
 - {{domxref("Worker")}}
 - {{domxref("WorkerGlobalScope")}}
-- [使用 web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)
-- [Web Workers 可以使用的函数和类](/zh-CN/docs/Web/Guide/Needs_categorization/Functions_available_to_workers)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [worker 可以使用的函数](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
