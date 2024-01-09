@@ -1,66 +1,97 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
+page-type: javascript-instance-method
+browser-compat: javascript.builtins.Promise.finally
 ---
 
 {{JSRef}}
 
-**`finally()`** 메소드는 {{jsxref("Promise")}} 객체를 반환합니다. Promise가 처리되면 충족되거나 거부되는지 여부에 관계없이 지정된 콜백 함수가 실행됩니다. 이것은 Promise가 성공적으로 수행 되었는지 거절되었는지에 관계없이 `Promise`가 처리 된 후에 코드가 무조건 한 번은 실행되는 것을 제공합니다.
+{{jsxref("Promise")}} 인스턴스의 **`finally()`** 메서드는 프로미스를 처리한 후(이행되거나 거부된 후) 호출할 함수를 예약합니다.
+이 메서드는 즉시 동등한 {{jsxref("Promise")}} 객체를 반환하므로 [프로미스 체이닝](/ko/docs/Web/JavaScript/Guide/Using_promises#chaining)이 가능합니다.
 
-이것은 Promise의 {{jsxref("Promise.then", "then()")}}과 {{jsxref("Promise.catch", "catch()")}} 핸들러에서의 코드 중복을 피하게 합니다.
+**`finally()`** 메서드를 사용하면 {{jsxref("Promise/then", "then()")}} 와 {{jsxref("Promise/catch", "catch()")}} 처리기 속 코드 중복을 피할 수 있습니다.
+
+{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
 
 ## 문법
 
-```js
-p.finally(onFinally);
-
-p.finally(function () {
-  // settled (fulfilled or rejected)
-});
+```js-nolint
+promiseInstance.finally(onFinally)
 ```
 
-### Parameters
+### 매개변수
 
 - `onFinally`
-  - : `Promise`가 처리된 후 {{jsxref("Function")}} 이 호출됩니다.
+  - : 프로미스가 처리된 후 비동기적으로 실행될 함수입니다. 거부된 프로미스를 반환하지 않는 이상 반환 값은 무시됩니다. 함수는 인자 없이 호출됩니다.
+  <!-- -
+  A function to asynchronously execute when this promise becomes settled. Its return value is ignored unless the returned value is a rejected promise. The function is called with no arguments.
+   -->
 
-### Return value
+### 반환 값
 
-`finally` 핸들러는 `onFinally` 라는 지정된 함수의 {{jsxref("Promise")}}가 반환됩니다.
+반환 값은 인스턴스와 동일한 {{jsxref("Promise")}} 입니다. 만약 처리기에서 예외가 발생하거나 거부된 프로미스를 반환하면, `finally()`는 그 값을 이유로 거부된 프로미스를 반환합니다. 이외에는 처리기의 반환 값은 원래 프로미스의 상태에 영향을 주지 않습니다.
 
 ## 설명
 
-`finally()` 메서드는 결과에 관계없이 promise가 처리되면 무언가를 프로세싱 또는 정리를 수행하려는 경우에 유용합니다.
+`finally()` 메서드는 결과에 관계없이 promise가 처리되고 나서 무언가를 처리하거나 정리할 때 유용합니다.
 
-`finally()` 메서드는 `.then(onFinally, onFinally)` 를 호출하는 것과 매우 비슷하지만 몇 가지 차이점이 있습니다:
+`finally()` 메서드는 {{jsxref("Promise/then", "then(onFinally, onFinally)")}} 를 호출하는 것과 매우 비슷하지만 몇 가지 차이점이 있습니다.
 
-- 함수를 인라인으로 만들 때, 두 번 선언해야 하지 않고 한 번만 전달하거나 그것을 위한 변수를 만들 수 있습니다.
-- `finally` 콜백 함수는 어떤 인자도 전달받지 않습니다. 왜냐하면 promise가 수행되었는지 또는 거부되었는지 알 수 없기 때문입니다. promise의 거부된 이유 또는 수행되어 반환되는 값이 필요없는 경우에만 사용하므로 이를 넘겨주지 않아도 됩니다. 다음 예시를 참고하세요.
-  - `Promise.resolve(2).then(() => {}, () => {})`(`undefined`으로 이행됩니다.)와는 다르게, `Promise.resolve(2).finally(() => {})` 는 `2`로 이행됩니다.
-  - 유사하게 `Promise.reject(3).then(() => {}, () => {})` (`undefined`로 거부됩니다.)와는 달리 `Promise.reject(3).finally(() => {})` 는 값 `3`으로 거부됩니다.
+- 함수를 인라인으로 만들 때, 두 번 선언하거나 변수에 할당할 필요 없이 한 번만 사용해서 전달할 수 있습니다.
+- `finally()` 호출은 보통 외부의 영향을 받지 않으며 원래 프로미스의 최종 상태를 변경하지 않습니다. 다음 예시를 참고하세요.
+  - `Promise.resolve(2).then(() => 77, () => {})` 는 `77`로 이행됩니다. 이와는 다르게, `Promise.resolve(2).finally(() => 77)` 는 `2`로 이행됩니다.
+  - 유사하게 `Promise.reject(3).then(() => {}, () => 88)` 는 `88`로 거부됩니다. 이와는 달리 `Promise.reject(3).finally(() => {})` 는 `3`로 거부됩니다.
 
-> **참고:** `finally` 콜백에서 `throw` (또는 거부된 promise를 반환)하면 `throw()`를 호출 할 때 지정된 거부 이유로 새롭게 만들어진 promise를 반환합니다.
+> **참고:** `finally` 콜백 내 예외 발생 또는 거부된 프로미스를 반환하는 경우에는 거부된 프로미스를 반환합니다. 예를 들어 `Promise.reject(3).finally(() => { throw 99; })` 와 `Promise.reject(3).finally(() => Promise.reject(99))` 는 모두 `99`로 거부된 프로미스를 반환합니다.
 
-## 예제
+<!--
+Like {{jsxref("Promise/catch", "catch()")}}, `finally()` internally calls the `then` method on the object upon which it was called.
+{{jsxref("Promise/catch", "catch()")}} 처럼 `finally()`는 내부적으로 메소드를 호출한 인스턴스의 `then` 메서드를 호출합니다.
+
+If `onFinally` is not a function, `then()` is called with `onFinally` as both arguments — which, for {{jsxref("Promise.prototype.then()")}}, means that no useful handler is attached.
+만약 `onFinally` 가 함수가 아닌 경우, 호출된 `then()` 은 `onFinally` 를 두 인자로 받습니다. 즉 {{jsxref("Promise.prototype.then()")}} 에게 쓸모없는 인자가 전달됩니다.
+
+Otherwise, `then()` is called with two internally created functions, which behave like the following:
+이외의 경우, `then()` 은 내부적으로 생성되는 두 개의 함수와 함께 다음과 같이 호출됩니다.
+ -->
+
+> **경고:** 다음은 설명을 위한 예시이며 실제 폴리필이 아닙니다.
+
+```js
+promise.then(
+  (value) => Promise.resolve(onFinally()).then(() => value),
+  (reason) =>
+    Promise.resolve(onFinally()).then(() => {
+      throw reason;
+    }),
+);
+```
+
+`finally()` 메서드가 `then()` 을 호출하기 때문에 서브클래싱을 지원합니다. 위 예시의 {{jsxref("Promise.resolve()")}} 호출을 주목하세요. 실제로 `onFinally()` 의 반환 값은 `Promise.resolve()` 와 동일한 방식으로 이행됩니다. 하지만 이행된 프로미스의 진짜 생성자는 서브클래스가 됩니다. `finally()` 는 이 생성자를 [`promise.constructor[@@species]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species) 에서 얻습니다.
+
+## 예시
+
+### `finally()` 사용하기
 
 ```js
 let isLoading = true;
 
 fetch(myRequest)
-  .then(function (response) {
-    var contentType = response.headers.get("content-type");
+  .then((response) => {
+    const contentType = response.headers.get("content-type");
     if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
-  .then(function (json) {
-    /* process your JSON further */
+  .then((json) => {
+    /* JSON 처리 */
   })
-  .catch(function (error) {
-    console.log(error);
+  .catch((error) => {
+    console.error(error); // 이 줄도 오류가 발생할 수 있습니다. (예: console = {})
   })
-  .finally(function () {
+  .finally(() => {
     isLoading = false;
   });
 ```
@@ -75,6 +106,7 @@ fetch(myRequest)
 
 ## 더보기
 
+- [Polyfill of `Promise.prototype.finally` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
 - {{jsxref("Promise.prototype.catch()")}}
