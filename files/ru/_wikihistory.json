@@ -16092,10 +16092,6 @@
     "modified": "2019-09-11T09:35:03.457Z",
     "contributors": ["SphinxKnight", "BychekRU", "Sheppy"]
   },
-  "conflicting/Web/API/AbortSignal/abort_event": {
-    "modified": "2020-10-15T22:16:51.482Z",
-    "contributors": ["VerZsuT"]
-  },
   "conflicting/Web/API/CanvasRenderingContext2D": {
     "modified": "2020-10-15T21:39:04.221Z",
     "contributors": ["boxa6", "ows-nightwolf"]
