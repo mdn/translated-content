@@ -61,7 +61,7 @@ asyncGen.next().then((res) => console.log(res)); // { value: undefined, done: tr
 
 ### 向生成器传值
 
-在此示例中，调用 `next` 时传入值。
+在此示例中，调用 `next` 时传入了值。
 
 > **备注：** 第一次调用不会打印任何内容，因为生成器最初没有产生任何内容。
 
@@ -85,7 +85,7 @@ async function main() {
   const asyncGen = createAsyncGenerator();
   // 这一步不会有输出：通过 `next` 发送的第一个值会被丢弃
   console.log(await asyncGen.next(1)); // { value: undefined, done: false }
-  // 打印 2：通过 `next` 发送的值
+  // 打印通过 `next` 发送的值——2
   console.log(await asyncGen.next(2)); // { value: undefined, done: false }
 }
 
