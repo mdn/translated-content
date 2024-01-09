@@ -401,7 +401,6 @@
 /ru/docs/Web/API/FormData/Using_FormData_Objects	/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
-/ru/docs/Web/API/GlobalEventHandlers/onabort	/ru/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /ru/docs/Web/API/GlobalEventHandlers/onanimationcancel	/ru/docs/Web/API/Element/animationcancel_event
 /ru/docs/Web/API/GlobalEventHandlers/onanimationend	/ru/docs/Web/API/Element/animationend_event
 /ru/docs/Web/API/GlobalEventHandlers/onblur	/ru/docs/Web/API/Window/blur_event
