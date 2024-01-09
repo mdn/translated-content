@@ -64,7 +64,7 @@ asyncGen.next().then((res) => console.log(res)); // { value: undefined, done: tr
 
 ### 生成器结束后使用 return()
 
-如果没有给 `return()` 方法传入 `value` 参数，promise 将会像 [next()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator/next) 方法被调用了一样被兑现。在本示例中，生成器已经结束，因此返回的值是 `undefined`。
+如果没有给 `return()` 方法传入 `value` 参数，promise 将会像 [next()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator/next) 方法被调用了一样兑现。在本示例中，生成器已经结束，因此返回的值是 `undefined`。
 
 在生成器处于“完成”状态后，仍然可以调用 `return()`，但是生成器将保持此状态。
 
