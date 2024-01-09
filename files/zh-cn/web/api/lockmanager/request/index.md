@@ -54,7 +54,7 @@ request(name, options, callback)
       - : 一个 {{domxref("AbortSignal")}}（{{domxref("AbortController")}} 的 {{domxref("AbortController.signal", "signal")}} 属性）；如果指定并且 {{domxref("AbortController")}} 被中止，则锁请求将被丢弃（如果尚未授予）。
 
 - `callback`
-  - ：授予锁时调用的方法。当回调返回（或抛出异常）时，锁会自动释放。通常回调是一个异步函数，这会导致只有当异步函数完全完成时才会释放锁。
+  - : 授予锁时调用的方法。当回调返回（或抛出异常）时，锁会自动释放。通常回调是一个异步函数，这会导致只有当异步函数完全完成时才会释放锁。
 
 ### 返回值
 
