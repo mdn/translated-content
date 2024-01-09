@@ -16148,10 +16148,6 @@
     "modified": "2019-03-23T22:43:32.725Z",
     "contributors": ["AlexAlex"]
   },
-  "conflicting/Web/API/HTMLElement/dragstart_event": {
-    "modified": "2020-10-15T22:21:52.889Z",
-    "contributors": ["Dzvonek"]
-  },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {
     "modified": "2019-03-23T22:08:50.066Z",
     "contributors": ["12kb", "FlowerDeLuce"]
