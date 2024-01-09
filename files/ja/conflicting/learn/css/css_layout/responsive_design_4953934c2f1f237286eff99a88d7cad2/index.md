@@ -1,8 +1,8 @@
 ---
 title: モバイルフレンドリー
-slug: Web/Guide/Mobile/Mobile-friendliness
-l10n:
-  sourceCommit: c07e10915553888f8c33d4284e2ced107cd9c55c
+slug: >-
+  conflicting/Learn/CSS/CSS_layout/Responsive_Design_4953934c2f1f237286eff99a88d7cad2
+original_slug: Web/Guide/Mobile/Mobile-friendliness
 ---
 
 {{QuickLinksWithSubPages("/ja/docs/Web/Guide/Mobile")}}

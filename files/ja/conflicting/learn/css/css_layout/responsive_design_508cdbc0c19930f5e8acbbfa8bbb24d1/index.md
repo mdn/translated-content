@@ -1,8 +1,8 @@
 ---
 title: モバイルウェブ開発
-slug: Web/Guide/Mobile
-l10n:
-  sourceCommit: 1f3cb2a075350c2e85fbe59a5594180590e30ebf
+slug: >-
+  conflicting/Learn/CSS/CSS_layout/Responsive_Design_508cdbc0c19930f5e8acbbfa8bbb24d1
+original_slug: Web/Guide/Mobile
 ---
 
 <section id="Quick_links">

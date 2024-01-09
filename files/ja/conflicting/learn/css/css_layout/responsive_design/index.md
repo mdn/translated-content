@@ -1,8 +1,7 @@
 ---
 title: ハイブリッドアプローチ
-slug: Web/Guide/Mobile/A_hybrid_approach
-l10n:
-  sourceCommit: c07e10915553888f8c33d4284e2ced107cd9c55c
+slug: conflicting/Learn/CSS/CSS_layout/Responsive_Design
+original_slug: Web/Guide/Mobile/A_hybrid_approach
 ---
 
 {{QuickLinksWithSubPages("/ja/docs/Web/Guide/Mobile")}}

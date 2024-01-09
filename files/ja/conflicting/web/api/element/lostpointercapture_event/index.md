@@ -1,6 +1,7 @@
 ---
 title: "Document: lostpointercapture イベント"
-slug: Web/API/Document/lostpointercapture_event
+slug: conflicting/Web/API/Element/lostpointercapture_event
+original_slug: Web/API/Document/lostpointercapture_event
 ---
 
 {{APIRef}}
