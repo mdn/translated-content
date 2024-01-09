@@ -16033,10 +16033,6 @@
     "modified": "2019-03-23T22:31:38.617Z",
     "contributors": ["TuchaNK"]
   },
-  "conflicting/Learn/CSS/CSS_layout/Responsive_Design": {
-    "modified": "2020-02-07T13:05:09.003Z",
-    "contributors": ["McBurns", "VDyrda"]
-  },
   "conflicting/Learn/CSS/First_steps": {
     "modified": "2019-03-23T23:09:39.395Z",
     "contributors": ["BychekRU", "Aleksej", "frontgirl", "wjinca"]
@@ -16096,10 +16092,6 @@
     "modified": "2019-09-11T09:35:03.457Z",
     "contributors": ["SphinxKnight", "BychekRU", "Sheppy"]
   },
-  "conflicting/Web/API/AbortSignal/abort_event": {
-    "modified": "2020-10-15T22:16:51.482Z",
-    "contributors": ["VerZsuT"]
-  },
   "conflicting/Web/API/CanvasRenderingContext2D": {
     "modified": "2020-10-15T21:39:04.221Z",
     "contributors": ["boxa6", "ows-nightwolf"]
@@ -16107,16 +16099,6 @@
   "conflicting/Web/API/Crypto/getRandomValues": {
     "modified": "2019-07-04T02:33:27.227Z",
     "contributors": ["freezer278", "Jeremie"]
-  },
-  "conflicting/Web/API/Document/DOMContentLoaded_event": {
-    "modified": "2019-04-30T14:28:01.901Z",
-    "contributors": [
-      "wbamberg",
-      "cashm0ney",
-      "fscholz",
-      "vittorio-tortugo",
-      "e-h-h"
-    ]
   },
   "conflicting/Web/API/Document_Object_Model": {
     "modified": "2019-06-25T10:49:54.010Z",
@@ -16157,17 +16139,6 @@
   "conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e": {
     "modified": "2019-03-18T21:43:39.016Z",
     "contributors": ["fscholz"]
-  },
-  "conflicting/Web/API/EventTarget/addEventListener": {
-    "modified": "2020-08-18T17:11:27.001Z",
-    "contributors": [
-      "proshka",
-      "Bargamut",
-      "m-kon",
-      "daydarkln",
-      "insafski",
-      "einperegrin"
-    ]
   },
   "conflicting/Web/API/EventTarget/removeEventListener": {
     "modified": "2019-03-23T22:07:41.302Z",
