@@ -2,8 +2,6 @@
 title: Window.navigator
 short-title: navigator
 slug: Web/API/Window/navigator
-page-type: web-api-instance-property
-browser-compat: api.Window.navigator
 l10n:
   sourceCommit: dab2246748e9aaf86edb1c06240ff8ad0549120c
 ---

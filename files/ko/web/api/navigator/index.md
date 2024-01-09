@@ -1,8 +1,6 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-page-type: web-api-interface
-browser-compat: api.Navigator
 l10n:
   sourceCommit: baaf0062bf82c8ffe9c9f2948833589018c64ddd
 ---
