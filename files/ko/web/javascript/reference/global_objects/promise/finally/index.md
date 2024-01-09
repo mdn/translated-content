@@ -38,6 +38,7 @@ p.finally(function () {
 - `finally` 콜백 함수는 어떤 인자도 전달받지 않습니다. 왜냐하면 promise가 수행되었는지 또는 거부되었는지 알 수 없기 때문입니다. promise의 거부된 이유 또는 수행되어 반환되는 값이 필요없는 경우에만 사용하므로 이를 넘겨주지 않아도 됩니다. 다음 예시를 참고하세요.
   - `Promise.resolve(2).then(() => {}, () => {})`(`undefined`으로 이행됩니다.)와는 다르게, `Promise.resolve(2).finally(() => {})` 는 `2`로 이행됩니다.
   - 유사하게 `Promise.reject(3).then(() => {}, () => {})` (`undefined`로 거부됩니다.)와는 달리 `Promise.reject(3).finally(() => {})` 는 값 `3`으로 거부됩니다.
+
 > **참고:** `finally` 콜백에서 `throw` (또는 거부된 promise를 반환)하면 `throw()`를 호출 할 때 지정된 거부 이유로 새롭게 만들어진 promise를 반환합니다.
 
 ## 예제
