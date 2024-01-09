@@ -35,11 +35,9 @@ p.finally(function () {
 `finally()` 메서드는 `.then(onFinally, onFinally)` 를 호출하는 것과 매우 비슷하지만 몇 가지 차이점이 있습니다:
 
 - 함수를 인라인으로 만들 때, 두 번 선언해야 하지 않고 한 번만 전달하거나 그것을 위한 변수를 만들 수 있습니다.
-- `finally` 콜백은 어떠한 인수도 전달받지 않습니다, 왜냐하면 promise가 이행되었는지 또는 거부되었는지를 판단할 수 없기 때문입니다. promise의 왜 거부되었는지 또는 이행되었을때 반환되는 값이 필요하지 않거나 제공할 필요가 없을 때 활용합니다.
-- Promise.reject (3) .finally (() => {}) Promise.reject (3) .finally (() => {}) (약속 안 함) )는 3으로 거부됩니다.
-- `Promise.resolve(2).then(() => {}, () => {})`(`undefined`로 해결될) 와 달리, `Promise.resolve(2).finally(() => {})` 는 값 `2`로 해결됩니다.
-- 유사하게 `Promise.reject(3).then(() => {}, () => {})` (`undefined`로 거부될)와는 달리 `Promise.reject(3).finally(() => {})` 는 값 `3`로 거부됩니다.
-
+- `finally` 콜백 함수는 어떤 인자도 전달받지 않습니다. 왜냐하면 promise가 수행되었는지 또는 거부되었는지 알 수 없기 때문입니다. promise의 거부된 이유 또는 수행되어 반환되는 값이 필요없는 경우에만 사용하므로 이를 넘겨주지 않아도 됩니다. 다음 예시를 참고하세요.
+  - `Promise.resolve(2).then(() => {}, () => {})`(`undefined`으로 이행됩니다.)와는 다르게, `Promise.resolve(2).finally(() => {})` 는 `2`로 이행됩니다.
+  - 유사하게 `Promise.reject(3).then(() => {}, () => {})` (`undefined`로 거부됩니다.)와는 달리 `Promise.reject(3).finally(() => {})` 는 값 `3`으로 거부됩니다.
 > **참고:** `finally` 콜백에서 `throw` (또는 거부된 promise를 반환)하면 `throw()`를 호출 할 때 지정된 거부 이유로 새롭게 만들어진 promise를 반환합니다.
 
 ## 예제
