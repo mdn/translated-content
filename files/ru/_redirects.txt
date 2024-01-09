@@ -668,7 +668,6 @@
 /ru/docs/Web/Guide/HTML/Introduction	/ru/docs/Learn/HTML/Introduction_to_HTML
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn/HTML/Howto/Use_data_attributes
-/ru/docs/Web/Guide/Mobile	/ru/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design
 /ru/docs/Web/Guide/Parsing_and_serializing_XML	/ru/docs/Web/XML/Parsing_and_serializing_XML
 /ru/docs/Web/Guide/User_input_methods	/ru/docs/Learn/Forms/User_input_methods
 /ru/docs/Web/Guide/WOFF	/ru/docs/Web/CSS/CSS_fonts/WOFF
