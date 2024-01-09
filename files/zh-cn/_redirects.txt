@@ -446,7 +446,7 @@
 /zh-CN/docs/DOM/window.onbeforeunload	/zh-CN/docs/Web/API/Window/beforeunload_event
 /zh-CN/docs/DOM/window.oncontextmenu	/zh-CN/docs/Web/API/Element/contextmenu_event
 /zh-CN/docs/DOM/window.onhashchange	/zh-CN/docs/Web/API/Window/hashchange_event
-/zh-CN/docs/DOM/window.oninput	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/DOM/window.oninput	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/DOM/window.onpopstate	/zh-CN/docs/Web/API/Window/popstate_event
 /zh-CN/docs/DOM/window.onresize	/zh-CN/docs/Web/API/Window/resize_event
 /zh-CN/docs/DOM/window.onselect	/zh-CN/docs/Web/API/HTMLInputElement/select_event
@@ -1200,7 +1200,7 @@
 /zh-CN/docs/Mozilla_event_reference/beforescriptexecute	/zh-CN/docs/Web/API/Element/beforescriptexecute_event
 /zh-CN/docs/Mozilla_event_reference/change	/zh-CN/docs/Web/API/HTMLElement/change_event
 /zh-CN/docs/Mozilla_event_reference/hashchange	/zh-CN/docs/Web/API/Window/hashchange_event
-/zh-CN/docs/Mozilla_event_reference/input	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/Mozilla_event_reference/input	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Mozilla_event_reference/popstate	/zh-CN/docs/Web/API/Window/popstate_event
 /zh-CN/docs/Mozilla_event_reference/touchend	/zh-CN/docs/Web/API/Element/touchend_event
 /zh-CN/docs/Mozilla_event_reference/touchstart	/zh-CN/docs/Web/API/Element/touchstart_event
@@ -1499,7 +1499,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.oncontextmenu	/zh-CN/docs/Web/API/Element/contextmenu_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.ondblclick	/zh-CN/docs/Web/API/Element/dblclick_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onfocus	/zh-CN/docs/Web/API/Window/focus_event
-/zh-CN/docs/Web/API/GlobalEventHandlers.oninput	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/Web/API/GlobalEventHandlers.oninput	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeydown	/zh-CN/docs/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeypress	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeyup	/zh-CN/docs/Web/API/Element/keyup_event
@@ -1534,7 +1534,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onfocus	/zh-CN/docs/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onformdata	/zh-CN/docs/Web/API/HTMLFormElement/formdata_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/zh-CN/docs/Web/API/Element/gotpointercapture_event
-/zh-CN/docs/Web/API/GlobalEventHandlers/oninput	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/oninput	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oninvalid	/zh-CN/docs/Web/API/HTMLInputElement/invalid_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown	/zh-CN/docs/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress	/zh-CN/docs/Web/API/Element/keypress_event
@@ -1595,6 +1595,8 @@
 /zh-CN/docs/Web/API/HTMLElement/animationend_event	/zh-CN/docs/Web/API/Element/animationend_event
 /zh-CN/docs/Web/API/HTMLElement/animationiteration_event	/zh-CN/docs/Web/API/Element/animationiteration_event
 /zh-CN/docs/Web/API/HTMLElement/animationstart_event	/zh-CN/docs/Web/API/Element/animationstart_event
+/zh-CN/docs/Web/API/HTMLElement/beforeinput_event	/zh-CN/docs/Web/API/Element/beforeinput_event
+/zh-CN/docs/Web/API/HTMLElement/input_event	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Web/API/HTMLElement/oncopy	/zh-CN/docs/Web/API/HTMLElement/copy_event
 /zh-CN/docs/Web/API/HTMLElement/oncut	/zh-CN/docs/Web/API/HTMLElement/cut_event
 /zh-CN/docs/Web/API/HTMLElement/onpaste	/zh-CN/docs/Web/API/HTMLElement/paste_event
@@ -2233,7 +2235,7 @@
 /zh-CN/docs/Web/Events/gamepadconnected	/zh-CN/docs/Web/API/Window/gamepadconnected_event
 /zh-CN/docs/Web/Events/hashchange	/zh-CN/docs/Web/API/Window/hashchange_event
 /zh-CN/docs/Web/Events/icecandidate	/zh-CN/docs/Web/API/RTCPeerConnection/icecandidate_event
-/zh-CN/docs/Web/Events/input	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/Web/Events/input	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Web/Events/keypress	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/Events/load	/zh-CN/docs/Web/API/Window/load_event
 /zh-CN/docs/Web/Events/loadeddata	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
@@ -2345,6 +2347,7 @@
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
 /zh-CN/docs/Web/Guide/Introduction_to_Web_development	/zh-CN/docs/Learn
+/zh-CN/docs/Web/Guide/Mobile	/zh-CN/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design
 /zh-CN/docs/Web/Guide/Parsing_and_serializing_XML	/zh-CN/docs/Web/XML/Parsing_and_serializing_XML
 /zh-CN/docs/Web/Guide/Performance	/zh-CN/docs/Web/Performance
 /zh-CN/docs/Web/Guide/Performance/Using_web_workers	/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers

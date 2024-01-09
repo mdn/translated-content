@@ -1,6 +1,7 @@
 ---
 title: 移动端 Web 开发
-slug: Web/Guide/Mobile
+slug: conflicting/Learn/CSS/CSS_layout/Responsive_Design
+original_slug: Web/Guide/Mobile
 ---
 
 <section id="Quick_links">
