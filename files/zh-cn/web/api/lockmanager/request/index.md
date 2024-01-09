@@ -71,7 +71,7 @@ request(name, options, callback)
 - `NotSupportedError` {{domxref("DOMException")}}
   - : 如果 `name` 以连字符（`-`）开头，或选项 `steal` 和 `ifAvailable` 均为 `true`，或者选项 `signal` 存在且选项 `steal` 或 `ifAvailable` 为 `true`。
 - `AbortError` {{domxref("DOMException")}}
-  - ：如果选项 `signal` 存在并且被中止，则抛出该异常。
+  - : 如果选项 `signal` 存在并且被中止，则抛出该异常。
 
 ## 示例
 
