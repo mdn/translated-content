@@ -1,7 +1,6 @@
 ---
-title: input
+title: Element：input 事件
 slug: Web/API/Element/input_event
-original_slug: Web/API/HTMLElement/input_event
 ---
 
 {{APIRef}}
@@ -90,12 +89,7 @@ function updateValue(e) {
 
 ## 参见
 
-- [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event)
-- [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)
-- [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
-- [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
-- {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
-- {{domxref("HTMLElement/change_event", "change")}}
-- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
-
-此外，还有一个类似的 [`change`](/zh-CN/docs/Web/Reference/Events/change) 事件。change 触发的频率低于 `input` - 它只会在用户提交更改时触发。
+- 相关事件
+  - {{domxref("Element/beforeinput_event", "beforeinput")}}
+  - {{domxref("HTMLElement/change_event", "change")}}
+  - {{domxref("HTMLInputElement/invalid_event", "invalid")}}

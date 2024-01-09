@@ -1,7 +1,6 @@
 ---
-title: "HTMLElement: beforeinput event"
+title: Element：beforeinput 事件
 slug: Web/API/Element/beforeinput_event
-original_slug: Web/API/HTMLElement/beforeinput_event
 ---
 
 {{APIRef}}
@@ -81,4 +80,4 @@ function updateValue(e) {
 
 ## 参见
 
-- 相关事件：[`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
+- 相关事件：{{domxref("Element/input_event", "input")}}
