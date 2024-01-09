@@ -24,9 +24,6 @@ promiseInstance.finally(onFinally)
 
 - `onFinally`
   - : 프로미스가 처리된 후 비동기적으로 실행될 함수입니다. 거부된 프로미스를 반환하지 않는 이상 반환 값은 무시됩니다. 함수는 인자 없이 호출됩니다.
-  <!-- -
-  A function to asynchronously execute when this promise becomes settled. Its return value is ignored unless the returned value is a rejected promise. The function is called with no arguments.
-   -->
 
 ### 반환 값
 
@@ -44,17 +41,6 @@ promiseInstance.finally(onFinally)
   - 유사하게 `Promise.reject(3).then(() => {}, () => 88)` 는 `88`로 거부됩니다. 이와는 달리 `Promise.reject(3).finally(() => {})` 는 `3`로 거부됩니다.
 
 > **참고:** `finally` 콜백 내 예외 발생 또는 거부된 프로미스를 반환하는 경우에는 거부된 프로미스를 반환합니다. 예를 들어 `Promise.reject(3).finally(() => { throw 99; })` 와 `Promise.reject(3).finally(() => Promise.reject(99))` 는 모두 `99`로 거부된 프로미스를 반환합니다.
-
-<!--
-Like {{jsxref("Promise/catch", "catch()")}}, `finally()` internally calls the `then` method on the object upon which it was called.
-{{jsxref("Promise/catch", "catch()")}} 처럼 `finally()`는 내부적으로 메소드를 호출한 인스턴스의 `then` 메서드를 호출합니다.
-
-If `onFinally` is not a function, `then()` is called with `onFinally` as both arguments — which, for {{jsxref("Promise.prototype.then()")}}, means that no useful handler is attached.
-만약 `onFinally` 가 함수가 아닌 경우, 호출된 `then()` 은 `onFinally` 를 두 인자로 받습니다. 즉 {{jsxref("Promise.prototype.then()")}} 에게 쓸모없는 인자가 전달됩니다.
-
-Otherwise, `then()` is called with two internally created functions, which behave like the following:
-이외의 경우, `then()` 은 내부적으로 생성되는 두 개의 함수와 함께 다음과 같이 호출됩니다.
- -->
 
 > **경고:** 다음은 설명을 위한 예시이며 실제 폴리필이 아닙니다.
 
