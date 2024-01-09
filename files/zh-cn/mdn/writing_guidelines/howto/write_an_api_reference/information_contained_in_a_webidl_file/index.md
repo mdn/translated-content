@@ -2,7 +2,7 @@
 title: WebIDL 文件中包含的信息
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 l10n:
-  sourceCommit: c6497f6347a9dd6d6844b520b1ba8542552653a8
+  sourceCommit: 24b4448c9dbaf3cb9084ad69a85c72e6aa2f72f9
 ---
 
 {{MDNSidebar}}
