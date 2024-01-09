@@ -33,7 +33,7 @@ This element only includes the [global attributes](/ru/docs/HTML/Global_attribut
 </hgroup>
 ```
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

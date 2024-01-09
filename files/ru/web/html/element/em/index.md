@@ -56,7 +56,7 @@ slug: Web/HTML/Element/em
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -6151,10 +6151,6 @@
     "modified": "2019-03-23T22:27:08.613Z",
     "contributors": ["teoli", "pekechis"]
   },
-  "Web/CSS/::-webkit-outer-spin-button": {
-    "modified": "2019-03-23T22:27:04.174Z",
-    "contributors": ["teoli", "pekechis"]
-  },
   "Web/CSS/::-webkit-progress-bar": {
     "modified": "2019-03-23T22:26:48.592Z",
     "contributors": ["teoli", "pekechis"]
@@ -14182,6 +14178,10 @@
   "conflicting/Web/CSS": {
     "modified": "2019-03-23T22:28:04.142Z",
     "contributors": ["arturoblack"]
+  },
+  "conflicting/Web/CSS/::-webkit-inner-spin-button": {
+    "modified": "2019-03-23T22:27:04.174Z",
+    "contributors": ["teoli", "pekechis"]
   },
   "conflicting/Web/CSS/::placeholder": {
     "modified": "2019-03-23T22:29:22.118Z",

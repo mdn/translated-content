@@ -39,7 +39,7 @@ window.addEventListener("vrdisplaypresentchange", function (e) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

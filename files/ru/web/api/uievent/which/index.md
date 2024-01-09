@@ -66,7 +66,7 @@ var keyResult = event.which;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

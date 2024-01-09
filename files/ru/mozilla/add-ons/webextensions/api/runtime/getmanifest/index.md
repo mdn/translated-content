@@ -35,8 +35,6 @@ console.log(manifest.name);
 {{WebExtExamples}}
 
 > **Примечание:** Это API основано на API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime). Эта документация основана на [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) из кода Chromium.
->
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

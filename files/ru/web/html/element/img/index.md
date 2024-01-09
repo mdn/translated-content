@@ -233,7 +233,7 @@ slug: Web/HTML/Element/img
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

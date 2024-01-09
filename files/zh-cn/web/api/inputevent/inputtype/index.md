@@ -15,11 +15,11 @@ var aString = inputEvent.inputType;
 
 ### 返回值
 
-一个 {{domxref("DOMString")}} 对象，包含所做输入的类型。有许多可能的值，例如 `insertText`、`deleteContentBackward`、`insertFromPaste` 和 `formatBold`。有关可用输入类型的完整列表，请参阅 [Input Events Level 1 规范的属性部分](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes)。
+一个包含所做输入的类型的字符串。有许多可能的值，例如 `insertText`、`deleteContentBackward`、`insertFromPaste` 和 `formatBold`。有关可用输入类型的完整列表，请参阅 [Input Events Level 1 规范的属性部分](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes)。
 
 ## 示例
 
-此示例记录一个可编辑的 {{htmlElement("div")}} 所触发的 [input events](/zh-CN/docs/Web/API/HTMLElement/input_event) 的 `inputType`。
+此示例记录一个可编辑的 {{htmlElement("div")}} 所触发的 [input 事件](/zh-CN/docs/Web/API/Element/input_event)的 `inputType`。
 
 ### HTML
 
@@ -54,7 +54,7 @@ function logInputType(event) {
 }
 ```
 
-### Result
+### 结果
 
 尝试编辑 `<div>` 中的文本，并看看发生了什么事。
 

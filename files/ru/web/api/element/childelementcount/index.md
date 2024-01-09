@@ -31,6 +31,6 @@ if (foo.childElementCount > 0) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

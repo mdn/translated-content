@@ -148,7 +148,7 @@ slug: Web/HTML/Element/dfn
 
 {{Specifications}}
 
-## Совместимость в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -73,6 +73,6 @@ slug: Web/HTML/Element/title
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

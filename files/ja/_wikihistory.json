@@ -30194,10 +30194,6 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
   },
-  "conflicting/Web/API/MediaStreamTrack": {
-    "modified": "2019-03-18T21:45:17.038Z",
-    "contributors": ["e53e04ac"]
-  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
@@ -30253,10 +30249,6 @@
   "conflicting/Web/Security/Certificate_Transparency": {
     "modified": "2020-10-15T21:36:10.884Z",
     "contributors": ["mfuji09", "silverskyvicto", "hashedhyphen", "clariroid"]
-  },
-  "conflicting/Web/XSLT/Transforming_XML_with_XSLT": {
-    "modified": "2019-03-18T20:50:34.704Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "orphaned/Code_snippets/Toolbar": {
     "modified": "2019-03-23T23:46:21.932Z",
@@ -30324,10 +30316,6 @@
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
-  },
-  "orphaned/Web/API/Window/defaultStatus": {
-    "modified": "2019-03-23T23:50:29.916Z",
-    "contributors": ["teoli", "khalid32", "ethertank", "Potappo"]
   },
   "orphaned/Web/API/XSLTProcessor/Browser_Differences": {
     "modified": "2020-04-13T14:01:47.252Z",
@@ -30432,13 +30420,5 @@
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2020-03-15T03:29:26.429Z",
     "contributors": ["mfuji09", "takubokudori", "Uemmra3"]
-  },
-  "orphaned/Web/Web_Components/Status_in_Firefox": {
-    "modified": "2019-03-23T22:35:08.421Z",
-    "contributors": ["ueokande", "dskmori"]
-  },
-  "orphaned/Working_with_windows_in_chrome_code": {
-    "modified": "2019-01-16T17:12:27.632Z",
-    "contributors": ["fscholz", "ethertank"]
   }
 }

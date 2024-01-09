@@ -32,6 +32,6 @@ window.onabort = function() {
 
 {{Specifications}}
 
-## Browser Compatibility
+## Совместимость с браузерами
 
 {{Compat}}
