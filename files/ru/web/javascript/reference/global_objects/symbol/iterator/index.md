@@ -53,7 +53,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

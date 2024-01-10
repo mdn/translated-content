@@ -1808,6 +1808,7 @@
 /es/docs/Web/CSS/:-moz-ui-invalid	/es/docs/Web/CSS/:user-invalid
 /es/docs/Web/CSS/:-webkit-autofill	/es/docs/Web/CSS/:autofill
 /es/docs/Web/CSS/::-webkit-file-upload-button	/es/docs/Web/CSS/::file-selector-button
+/es/docs/Web/CSS/::-webkit-outer-spin-button	/es/docs/conflicting/Web/CSS/::-webkit-inner-spin-button
 /es/docs/Web/CSS/:any	/es/docs/Web/CSS/:is
 /es/docs/Web/CSS/:not()	/es/docs/Web/CSS/:not
 /es/docs/Web/CSS/@media/altura	/es/docs/Web/CSS/@media/height

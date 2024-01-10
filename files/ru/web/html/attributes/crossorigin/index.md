@@ -28,7 +28,7 @@ slug: Web/HTML/Attributes/crossorigin
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

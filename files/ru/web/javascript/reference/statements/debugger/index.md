@@ -32,7 +32,7 @@ function potentiallyBuggyCode() {
 
 {{Specifications}}
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

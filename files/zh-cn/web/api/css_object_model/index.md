@@ -107,4 +107,4 @@ CSSOM 相关规范也扩展了其他几个接口：{{DOMxRef("Document")}}、{{D
 ## 参见
 
 - [文档对象模型（DOM）](/zh-CN/docs/Web/API/Document_Object_Model)
-- [Houdini](/zh-CN/docs/Web/Guide/Houdini)
+- [Houdini](/zh-CN/docs/Web/API/Houdini)

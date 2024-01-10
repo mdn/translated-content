@@ -167,7 +167,7 @@ flex-basis: unset;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

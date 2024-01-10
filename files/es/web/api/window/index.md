@@ -360,32 +360,9 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
 - {{domxref("Window.onuserproximity")}}
   - : An event handler property for user proximity events
 
-## Constructores
-
-See also the [DOM Interfaces](/es/docs/DOM/DOM_Reference).
-
-- {{domxref("Window.DOMParser")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Window.GeckoActiveXObject")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Image")}}
-  - : Used for creating an {{domxref("HTMLImageElement")}}.
-- {{domxref("Option")}}
-  - : Used for creating an {{domxref("HTMLOptionElement")}}
-- {{domxref("Window.QueryInterface")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Window.XMLSerializer")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/es/docs/DOM/Using_web_workers)
-- {{domxref("Window.XPCNativeWrapper")}}
-  - : {{todo("NeedsContents")}}
-- {{domxref("Window.XPCSafeJSObjectWrapper")}}
-  - : {{todo("NeedsContents")}}
-
 ## Interfaces
 
-Ver [DOM Reference](/es/docs/DOM/DOM_Reference)
+Ver [DOM Reference](/es/docs/Web/API/Document_Object_Model)
 
 ## Ver Tambien
 

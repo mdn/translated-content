@@ -35,7 +35,7 @@ document.documentElement.scrollHeight
 
 HTML5
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

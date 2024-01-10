@@ -883,6 +883,7 @@
 /pt-BR/docs/Web/Progressive_web_apps/Introduction	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /pt-BR/docs/Web/Progressive_web_apps/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames
+/pt-BR/docs/Web/SVG/Attribute/contentStyleType	/pt-BR/docs/orphaned/Web/SVG/Attribute/contentStyleType
 /pt-BR/docs/Web/SVG/Compatibility_sources	/pt-BR/docs/conflicting/Web/SVG
 /pt-BR/docs/Web/SVG/Element/animateColor	/pt-BR/docs/conflicting/Web/SVG/Element/animate
 /pt-BR/docs/Web/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text

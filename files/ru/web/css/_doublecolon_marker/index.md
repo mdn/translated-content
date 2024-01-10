@@ -60,7 +60,7 @@ ul li::marker {
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
