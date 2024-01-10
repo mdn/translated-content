@@ -16088,10 +16088,6 @@
     "modified": "2020-07-16T22:35:29.176Z",
     "contributors": ["wbamberg", "CamelFoe"]
   },
-  "conflicting/Web/API": {
-    "modified": "2019-09-11T09:35:03.457Z",
-    "contributors": ["SphinxKnight", "BychekRU", "Sheppy"]
-  },
   "conflicting/Web/API/CanvasRenderingContext2D": {
     "modified": "2020-10-15T21:39:04.221Z",
     "contributors": ["boxa6", "ows-nightwolf"]
