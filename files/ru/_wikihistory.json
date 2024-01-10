@@ -16162,10 +16162,6 @@
     "modified": "2019-03-23T23:13:28.239Z",
     "contributors": ["Steln", "akhabibullina"]
   },
-  "conflicting/Web/API/Window/load_event": {
-    "modified": "2019-03-23T22:57:03.709Z",
-    "contributors": ["xercool"]
-  },
   "conflicting/Web/API/Window/localStorage": {
     "modified": "2019-03-23T22:05:00.067Z",
     "contributors": ["ZVanoZ"]
