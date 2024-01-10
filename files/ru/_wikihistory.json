@@ -16162,20 +16162,6 @@
     "modified": "2019-03-23T23:13:28.239Z",
     "contributors": ["Steln", "akhabibullina"]
   },
-  "conflicting/Web/API/Window/beforeunload_event": {
-    "modified": "2020-10-15T21:52:01.565Z",
-    "contributors": [
-      "bershanskiy",
-      "Khich",
-      "mcmimik",
-      "R.A.S.",
-      "sumthief",
-      "WispProxy",
-      "vitalyzhakov",
-      "artemderzkiy",
-      "rtf-const"
-    ]
-  },
   "conflicting/Web/API/Window/deviceorientation_event": {
     "modified": "2019-03-23T22:29:46.961Z",
     "contributors": ["timur-gilauri"]
