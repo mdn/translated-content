@@ -16162,10 +16162,6 @@
     "modified": "2019-03-23T23:13:28.239Z",
     "contributors": ["Steln", "akhabibullina"]
   },
-  "conflicting/Web/API/Window/deviceorientation_event": {
-    "modified": "2019-03-23T22:29:46.961Z",
-    "contributors": ["timur-gilauri"]
-  },
   "conflicting/Web/API/Window/gamepadconnected_event": {
     "modified": "2020-11-17T12:43:15.635Z",
     "contributors": ["venanen"]
