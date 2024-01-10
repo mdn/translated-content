@@ -16166,10 +16166,6 @@
     "modified": "2019-03-23T22:05:00.067Z",
     "contributors": ["ZVanoZ"]
   },
-  "conflicting/Web/API/Window/popstate_event": {
-    "modified": "2020-10-15T21:34:09.985Z",
-    "contributors": ["hisbvdis", "stary71", "alexismaster"]
-  },
   "conflicting/Web/API/Window/scrollY": {
     "modified": "2020-10-15T22:28:25.886Z",
     "contributors": ["anima-dev"]
