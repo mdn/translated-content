@@ -867,8 +867,6 @@
 /ru/docs/XHTML	/ru/docs/Glossary/XHTML
 /ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
-/ru/docs/conflicting/Glossary/First_CPU_idle	/ru/docs/Glossary/First_CPU_idle
-/ru/docs/conflicting/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ru/docs/en	/en-US/
 /ru/docs/Заглавная_страница	/ru/docs/Web
 /ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/Language_overview
