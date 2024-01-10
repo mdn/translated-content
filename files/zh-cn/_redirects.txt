@@ -2346,6 +2346,7 @@
 /zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
+/zh-CN/docs/Web/Guide/Houdini	/zh-CN/docs/Web/API/Houdini
 /zh-CN/docs/Web/Guide/Introduction_to_Web_development	/zh-CN/docs/Learn
 /zh-CN/docs/Web/Guide/Mobile	/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design
 /zh-CN/docs/Web/Guide/Parsing_and_serializing_XML	/zh-CN/docs/Web/XML/Parsing_and_serializing_XML
@@ -2442,7 +2443,7 @@
 /zh-CN/docs/Web/HTTP/策略特征	/zh-CN/docs/Web/HTTP/Permissions_Policy
 /zh-CN/docs/Web/HTTP/缓存_FAQ	/zh-CN/docs/Web/HTTP/Caching
 /zh-CN/docs/Web/HTTP/重定向	/zh-CN/docs/Web/HTTP/Redirections
-/zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/Guide/Houdini
+/zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/API/Houdini
 /zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/zh-CN/docs/Web/JavaScript/Language_overview
 /zh-CN/docs/Web/JavaScript/About_JavaScript	/zh-CN/docs/Web/JavaScript
 /zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
