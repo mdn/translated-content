@@ -16166,10 +16166,6 @@
     "modified": "2019-03-23T22:05:00.067Z",
     "contributors": ["ZVanoZ"]
   },
-  "conflicting/Web/API/Window/scrollY": {
-    "modified": "2020-10-15T22:28:25.886Z",
-    "contributors": ["anima-dev"]
-  },
   "conflicting/Web/API/XMLHttpRequest": {
     "modified": "2019-03-24T00:11:01.706Z",
     "contributors": [
