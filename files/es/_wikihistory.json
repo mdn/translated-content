@@ -3911,6 +3911,10 @@
       "JAparici"
     ]
   },
+  "Web/API/Element/input_event": {
+    "modified": "2020-10-15T22:17:41.989Z",
+    "contributors": ["mariomoreno", "IsraelFloresDGA"]
+  },
   "Web/API/Element/insertAdjacentElement": {
     "modified": "2020-12-03T10:36:12.400Z",
     "contributors": ["AlePerez92", "alexlndn", "AgustinPrieto"]
@@ -4384,10 +4388,6 @@
   "Web/API/HTMLElement/dragover_event": {
     "modified": "2019-04-30T14:24:25.773Z",
     "contributors": ["wbamberg", "fscholz", "ExE-Boss", "Vickysolo"]
-  },
-  "Web/API/HTMLElement/input_event": {
-    "modified": "2020-10-15T22:17:41.989Z",
-    "contributors": ["mariomoreno", "IsraelFloresDGA"]
   },
   "Web/API/HTMLElement/offsetHeight": {
     "modified": "2019-04-30T12:33:07.062Z",
@@ -8496,10 +8496,6 @@
   "Web/Guide/CSS/Block_formatting_context": {
     "modified": "2019-03-23T22:32:27.340Z",
     "contributors": ["Enesimus", "javichito"]
-  },
-  "Web/Guide/Mobile": {
-    "modified": "2019-03-23T22:48:50.706Z",
-    "contributors": ["miguelsp"]
   },
   "Web/HTML": {
     "modified": "2020-12-10T12:38:08.697Z",
@@ -13860,6 +13856,10 @@
   "conflicting/Learn/CSS/CSS_layout": {
     "modified": "2019-03-23T22:20:39.961Z",
     "contributors": ["lavilofam1"]
+  },
+  "conflicting/Learn/CSS/CSS_layout/Responsive_Design": {
+    "modified": "2019-03-23T22:48:50.706Z",
+    "contributors": ["miguelsp"]
   },
   "conflicting/Learn/CSS/First_steps": {
     "modified": "2019-03-24T00:09:12.368Z",
