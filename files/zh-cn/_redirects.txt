@@ -2072,7 +2072,7 @@
 /zh-CN/docs/Web/CSS/CSS_Columns/Styling_Columns	/zh-CN/docs/Web/CSS/CSS_multicol_layout/Styling_columns
 /zh-CN/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持	/zh-CN/docs/Glossary/Flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
@@ -2110,6 +2110,7 @@
 /zh-CN/docs/Web/CSS/CSS_Scrollbars	/zh-CN/docs/Web/CSS/CSS_scrollbars_styling
 /zh-CN/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/zh-CN/docs/Web/XPath/Comparison_with_CSS_selectors
 /zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes
+/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/zh-CN/docs/Glossary/Flexbox
 /zh-CN/docs/Web/CSS/CSS_reference	/zh-CN/docs/Web/CSS/Reference
 /zh-CN/docs/Web/CSS/CSS_values_syntax	/zh-CN/docs/Web/CSS
 /zh-CN/docs/Web/CSS/CSS_分片	/zh-CN/docs/Web/CSS/CSS_fragmentation
