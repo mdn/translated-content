@@ -218,7 +218,6 @@ CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支�
 ## 参见
 
 - [在 CSS 中使用媒体查询](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [弹性盒的后向兼容性](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [CSS 网格布局和渐进优化](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [使用 CSS 网格：支持没有网格的浏览器](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [使用 IE10 和 IE11 版网格的教程](https://24ways.org/2012/css3-grid-layout/)

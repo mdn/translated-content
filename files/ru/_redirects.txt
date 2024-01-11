@@ -49,7 +49,6 @@
 /ru/docs/DOM/element	/ru/docs/Web/API/Element
 /ru/docs/DOM/element.dispatchEvent	/ru/docs/Web/API/EventTarget/dispatchEvent
 /ru/docs/DOM/element.getAttribute	/ru/docs/Web/API/Element/getAttribute
-/ru/docs/DOM/element.onkeypress	/ru/docs/conflicting/Web/API/Element/keypress_event
 /ru/docs/DOM/table	/ru/docs/Web/API/HTMLTableElement
 /ru/docs/DOM/window.requestAnimationFrame	/ru/docs/Web/API/window/requestAnimationFrame
 /ru/docs/DOM:document.createElement	/ru/docs/Web/API/Document/createElement
@@ -382,7 +381,6 @@
 /ru/docs/Web/API/Document/defaultView/resize_event	/ru/docs/Web/API/Window/resize_event
 /ru/docs/Web/API/Document/defaultView/storage_event	/ru/docs/Web/API/Window/storage_event
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
-/ru/docs/Web/API/Document/height	/ru/docs/conflicting/Web/API/Element/clientHeight
 /ru/docs/Web/API/Document/keypress_event	/ru/docs/Web/API/Element/keypress_event
 /ru/docs/Web/API/Document/origin	/ru/docs/Web/API/origin
 /ru/docs/Web/API/Document/registerElement	/ru/docs/Web/API/CustomElementRegistry/define
@@ -412,12 +410,7 @@
 /ru/docs/Web/API/GlobalEventHandlers/onerror	/ru/docs/Web/API/Window/error_event
 /ru/docs/Web/API/GlobalEventHandlers/onfocus	/ru/docs/Web/API/Window/focus_event
 /ru/docs/Web/API/GlobalEventHandlers/oninput	/ru/docs/Web/API/Element/input_event
-/ru/docs/Web/API/GlobalEventHandlers/onkeydown	/ru/docs/conflicting/Web/API/Element/keydown_event
-/ru/docs/Web/API/GlobalEventHandlers/onkeypress	/ru/docs/conflicting/Web/API/Element/keypress_event
-/ru/docs/Web/API/GlobalEventHandlers/onload	/ru/docs/conflicting/Web/API/Window/load_event
 /ru/docs/Web/API/GlobalEventHandlers/onloadend	/ru/docs/Web/API/XMLHttpRequest/loadend_event
-/ru/docs/Web/API/GlobalEventHandlers/onmousedown	/ru/docs/conflicting/Web/API/Element/mousedown_event
-/ru/docs/Web/API/GlobalEventHandlers/onmouseup	/ru/docs/conflicting/Web/API/Element/mouseup_event
 /ru/docs/Web/API/GlobalEventHandlers/onscroll	/ru/docs/Web/API/Element/scroll_event
 /ru/docs/Web/API/GlobalEventHandlers/onselect	/ru/docs/Web/API/HTMLInputElement/select_event
 /ru/docs/Web/API/GlobalEventHandlers/onsubmit	/ru/docs/Web/API/HTMLFormElement/submit_event
@@ -480,16 +473,10 @@
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
-/ru/docs/Web/API/Window/ondeviceorientation	/ru/docs/conflicting/Web/API/Window/deviceorientation_event
-/ru/docs/Web/API/Window/ongamepadconnected	/ru/docs/conflicting/Web/API/Window/gamepadconnected_event
-/ru/docs/Web/API/Window/ongamepaddisconnected	/ru/docs/conflicting/Web/API/Window/gamepaddisconnected_event
-/ru/docs/Web/API/Window/pageYOffset	/ru/docs/conflicting/Web/API/Window/scrollY
 /ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
 /ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
 /ru/docs/Web/API/WindowEventHandlers/onafterprint	/ru/docs/Web/API/Window/afterprint_event
-/ru/docs/Web/API/WindowEventHandlers/onbeforeunload	/ru/docs/conflicting/Web/API/Window/beforeunload_event
-/ru/docs/Web/API/WindowEventHandlers/onpopstate	/ru/docs/conflicting/Web/API/Window/popstate_event
 /ru/docs/Web/API/WindowEventHandlers/onunload	/ru/docs/Web/API/Window/unload_event
 /ru/docs/Web/API/WindowTimers.setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/WindowTimers/setTimeout	/ru/docs/Web/API/setTimeout
@@ -633,7 +620,6 @@
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
 /ru/docs/Web/Guide/AJAX	/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
-/ru/docs/Web/Guide/API	/ru/docs/conflicting/Web/API
 /ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 /ru/docs/Web/Guide/Audio_and_video_manipulation	/ru/docs/Web/Media/Audio_and_video_manipulation
@@ -881,8 +867,6 @@
 /ru/docs/XHTML	/ru/docs/Glossary/XHTML
 /ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
-/ru/docs/conflicting/Glossary/First_CPU_idle	/ru/docs/Glossary/First_CPU_idle
-/ru/docs/conflicting/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ru/docs/en	/en-US/
 /ru/docs/Заглавная_страница	/ru/docs/Web
 /ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/Language_overview
