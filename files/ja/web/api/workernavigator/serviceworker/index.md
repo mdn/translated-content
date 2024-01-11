@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Service Workers API")}}
 
-{{domxref("WorkerNavigator")}} インターフェイスの読み取り専用プロパティ  **`serviceWorker`** は、[関連付けられた文書](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)の {{domxref("ServiceWorkerContainer")}} オブジェクトを返します。このオブジェクトは、{{domxref("ServiceWorker")}} の登録、除去、更新、通信を可能にします。
+{{domxref("WorkerNavigator")}} インターフェイスの読み取り専用プロパティ **`serviceWorker`** は、[関連付けられた文書](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)の {{domxref("ServiceWorkerContainer")}} オブジェクトを返します。このオブジェクトは、{{domxref("ServiceWorker")}} の登録、除去、更新、通信を可能にします。
 
 この機能は、プライベートモードでは利用できない可能性があります。
 
