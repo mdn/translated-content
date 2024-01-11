@@ -32,9 +32,9 @@ new File(fileBits, fileName, options)
     - `type` {{optional_inline}}
       - : Una cadena que representa el tipo MIME del contenido que contendrá el archivo. El valor predeterminado es `""`
     - `endings` {{optional_inline}}
-      - : Cómo interpretar los caracteres de salto de linea (`\n`) dentro del contenido, si el dato es texto. El valor predeterminado, `transparent`, copia caracteres de nueva línea en el blob sin cambiarlos. Para convertir nuevas líneas a la convención nativa del sistema host, especifique el valor `native`.
+      - : Cómo interpretar los caracteres de salto de linea (`\n`) dentro del contenido, si el dato es texto. El valor predeterminado, `transparent`, copia caracteres de nueva línea en el blob sin cambiarlos. Para convertir nuevas líneas a la convención nativa del sistema anfitrión, especifica el valor `native`.
     - `lastModified` {{optional_inline}}
-      - : Un número que representa el número de milisegundos entre la época de unix y la ultima modificación del archivo. El valor predeterminado es {{jsxref("Date.now()")}}.
+      - : Un número que representa el número de milisegundos entre la época de tiempo Unix y la última modificación del archivo. El valor predeterminado es {{jsxref("Date.now()")}}.
 
 ## Ejemplos
 
