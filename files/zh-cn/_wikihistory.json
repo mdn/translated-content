@@ -17418,17 +17418,6 @@
       "zhang-hongwei"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
-    "modified": "2020-02-11T09:41:01.217Z",
-    "contributors": [
-      "knightyun",
-      "fanjianfeng1010",
-      "EndlessSong",
-      "minvedacat",
-      "Ran_Lyu",
-      "xieminjie"
-    ]
-  },
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-08-28T05:40:29.406Z",
     "contributors": [
@@ -32697,6 +32686,17 @@
       "kingysu",
       "skyfore",
       "xgqfrms-GitHub"
+    ]
+  },
+  "conflicting/Glossary/Flexbox": {
+    "modified": "2020-02-11T09:41:01.217Z",
+    "contributors": [
+      "knightyun",
+      "fanjianfeng1010",
+      "EndlessSong",
+      "minvedacat",
+      "Ran_Lyu",
+      "xieminjie"
     ]
   }
 }
