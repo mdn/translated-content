@@ -8361,10 +8361,6 @@
       "dubtar"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
-    "modified": "2019-03-18T21:22:36.012Z",
-    "contributors": ["viktoryiakuzmitskaya"]
-  },
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-07-30T04:09:14.375Z",
     "contributors": [
@@ -16002,5 +15998,9 @@
   "WebAssembly/Using_the_JavaScript_API": {
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
+  },
+  "conflicting/Glossary/Flexbox": {
+    "modified": "2019-03-18T21:22:36.012Z",
+    "contributors": ["viktoryiakuzmitskaya"]
   }
 }
