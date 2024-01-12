@@ -37,9 +37,9 @@ history.pushState(stateObj, "", "bar.html");
 history.replaceState(stateObj, "", "bar2.html");
 ```
 
-这会让 URL 栏显示 `http://mozilla.org/bar2.html`，但是不会加载 `bar2.html` 页面，甚至不会检查 bar2.html 是否存在
+这会让 URL 栏显示 `https://www.mozilla.org/bar2.html`，但是不会加载 `bar2.html` 页面，甚至不会检查 bar2.html 是否存在
 
-假设用户跳转到 `http://www.microsoft.com`，然后点击返回按钮。这时，URL 栏将会显示 `http://mozilla.org/bar2.html` 页面。如果用户此时点击返回按钮，URL 栏将会显示 `http://mozilla.org/foo.html` 页面，最终绕过了 bar.html 页面。
+假设用户跳转到 `https://www.microsoft.com`，然后点击返回按钮。这时，URL 栏将会显示 `https://www.mozilla.org/bar2.html` 页面。如果用户此时点击返回按钮，URL 栏将会显示 `https://www.mozilla.org/foo.html` 页面，最终绕过了 bar.html 页面。
 
 ## 规范
 
