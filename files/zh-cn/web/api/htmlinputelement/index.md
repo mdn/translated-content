@@ -40,7 +40,7 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLInputElement.step", "step")}}
   - : 一个表示元素的 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性的字符串，它与 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 一起使用，以限制可以设置数字或日期时间值的增量。它可以是字符串 `any` 或正浮点数。如果不设置为 `any`，则控件仅接受大于最小值的步长值的倍数。
 - {{domxref("HTMLInputElement.type", "type")}}
-  - : 一个表示元素的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的字符串，表示要显示的控件类型。可能的值，请参阅 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的文档。
+  - : 一个表示元素的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的字符串，表示要显示的控件类型。请参阅 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的文档，以了解其可能的值。
 - {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
   - : 一个表示客户端图像映射的字符串。
 - {{domxref("HTMLInputElement.value", "value")}}
@@ -53,7 +53,7 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 ### 与父表单相关的实例属性
 
 - {{domxref("HTMLInputElement.form", "form")}} {{ReadOnlyInline}}
-  - : 返回一个父元素 {{HtmlElement("form")}} 的引用。
+  - : 返回一个父表单（{{HtmlElement("form")}}）元素的引用。
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
   - : 一个表示元素的 [`formaction`](/zh-CN/docs/Web/HTML/Element/input#formaction) 属性的字符串，包含处理元素提交信息程序的 URI。这会覆盖父表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
 - {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
@@ -72,7 +72,7 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLInputElement.required", "required")}}
   - : 一个表示元素的 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性的布尔值，表示用户必须在提交表单之前填写值。
 - {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
-  - : 返回一条描述控件不满足的验证约束的本地化消息（如果不满足的话）。如果控件不是约束验证的候选项（[`willValidate`](/zh-CN/docs/Web/API/HTMLObjectElement/willValidate) 为 `false`），或者它满足其约束，则为空字符串。此值可以通过 {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} 方法设置。
+  - : 返回一条描述控件不满足时的验证约束的本地化消息。如果控件不是约束验证的候选项（[`willValidate`](/zh-CN/docs/Web/API/HTMLObjectElement/willValidate) 为 `false`），或者它满足其约束，则为空字符串。此值可以通过 {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} 方法设置。
 - {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
   - : 返回元素当前的有效状态。
 - {{domxref("HTMLInputElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
@@ -167,13 +167,13 @@ _也从其父接口 {{domxref("HTMLElement")}} 继承事件。_
 
 使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 或通过将事件监听器赋值给此接口的 `oneventname` 属性来监听这些事件：
 
-- {{domxref("HTMLInputElement/invalid_event", "invalid")}} event
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件
   - : 当元素在约束验证期间不满足其约束时触发。
-- {{domxref("HTMLInputElement/search_event", "search")}} event {{Non-standard_Inline}}
+- {{domxref("HTMLInputElement/search_event", "search")}} 事件 {{Non-standard_Inline}}
   - : 当在 `type="search"` 的 {{HTMLElement("input")}} 上开始搜索时触发。
-- {{domxref("HTMLInputElement/select_event", "select")}} event
+- {{domxref("HTMLInputElement/select_event", "select")}} 事件
   - : 当选中了一些文本时触发。
-- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{Experimental_Inline}}
+- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} 事件 {{Experimental_Inline}}
   - : 在 {{HTMLElement("input")}} 元素中的文本选择发生更改后触发。
 
 ## 规范
