@@ -31,7 +31,7 @@ var stateObj = { foo: "bar" };
 history.pushState(stateObj, "", "bar.html");
 ```
 
-上面这两行的解释可以在“[使用历史记录 API](/zh-CN/docs/Web/API/History_API/Working_with_the_History_API)”这个章节找到。然后假设 `http://mozilla.org/bar.html` 执行下面的 JavaScript 代码：
+上面这两行的解释可以在使用历史记录 API 的[使用 `pushState()` 方法的示例](/zh-CN/docs/Web/API/History_API/Working_with_the_History_API#使用_pushstate)这一部分找到。然后假设 `https://www.mozilla.org/bar.html` 执行下面的 JavaScript 代码：
 
 ```js
 history.replaceState(stateObj, "", "bar2.html");
