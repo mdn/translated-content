@@ -9,7 +9,7 @@ l10n:
 
 ## 解説
 
-aria-labelledby` プロパティによって、アクセシブル名を定義するためにページ上の他の要素を参照することができます。これは、アクセシブル名を提供する要素の関連付けにネイティブ対応していない要素を使用する場合に有益です。
+`aria-labelledby` プロパティによって、アクセシブル名を定義するためにページ上の他の要素を参照することができます。これは、アクセシブル名を提供する要素の関連付けにネイティブ対応していない要素を使用する場合に有益です。
 
 要素によっては、その[アクセシブル名](https://w3c.github.io/accname/#dfn-accessible-name)を内部コンテンツから取得するものがあります。例えば、{{HTMLElement('button')}}、{{HTMLElement('a')}}、{{HTMLElement('td')}} のアクセシブル名は開始タグと終了タグの間のテキストから決まります。他にも、フォームの {{HTMLElement('textarea')}}、{{HTMLElement('fieldset')}}、{{HTMLElement('table')}} などの要素は、関連する要素のコンテンツからアクセシブル名を取得します。これらの要素では、アクセシブル名はそれぞれ `for` 属性を持つ {{HTMLElement('label')}}、{{HTMLElement('legend')}}、{{HTMLElement('caption')}} から取得します。
 

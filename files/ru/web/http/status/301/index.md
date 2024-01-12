@@ -37,7 +37,7 @@ Location: http://www.example.org/index.asp
 | ----------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "301 Redirect Permanently" , "6.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

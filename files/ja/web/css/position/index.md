@@ -131,7 +131,7 @@ position: unset;
 }
 ```
 
-{{EmbedLiveSample('Relative_positioning', '', '200px')}}
+{{EmbedLiveSample('相対位置指定', '', '200px')}}
 
 ### 絶対位置指定
 
@@ -202,7 +202,7 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Absolute_positioning', '', '420px')}}
+{{EmbedLiveSample('絶対位置指定', '', '420px')}}
 
 ### 固定位置指定
 
@@ -273,7 +273,7 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Fixed_positioning', '', '300px')}}
+{{EmbedLiveSample('固定位置指定', '', '300px')}}
 
 ### 粘着位置指定
 
@@ -372,7 +372,7 @@ dd + dd {
 
 #### 結果
 
-{{EmbedLiveSample('Sticky_positioning', '', '300px')}}
+{{EmbedLiveSample('粘着位置指定', '', '300px')}}
 
 ## 仕様書
 

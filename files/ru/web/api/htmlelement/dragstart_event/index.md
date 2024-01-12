@@ -80,7 +80,7 @@ function dragover_handler(ev) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

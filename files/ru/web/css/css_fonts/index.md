@@ -43,7 +43,7 @@ p {
 
 ## Отсылки
 
-### Properties
+### Свойства
 
 - {{cssxref("font")}}
 - {{cssxref("font-family")}}
@@ -67,7 +67,7 @@ p {
 - {{cssxref("font-weight")}}
 - {{cssxref("line-height")}}
 
-### At-rules
+### @-правила
 
 - {{cssxref("@font-face")}}
   - : {{cssxref("@font-face/font-family", "font-family")}}

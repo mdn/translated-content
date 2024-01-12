@@ -7,9 +7,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 La propiedad **`function.name`** retorna el nombre de la función o retorna `"anonymous"` por funciones creadas anónimamente.
 
-{{js_property_attributes(0,0,1)}}Nótese que en implementaciones no estándar previas a ES2015 el atributo `configurable` también era `false`.
+{{js_property_attributes(0,0,1)}}
 
-## Ejemplos
+Nótese que en implementaciones no estándar previas a ES2015 el atributo `configurable` también era `false`.
+
+## Descripción
 
 ### Nombre de una declaración de función
 

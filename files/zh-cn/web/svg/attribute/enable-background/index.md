@@ -9,7 +9,7 @@ slug: Web/SVG/Attribute/enable-background
 
 **注意：**作为演示文稿属性，`enable-background`可以用作 CSS 属性。
 
-作为表示属性，它可以应用于任何元素，但仅对以下 11 个元素有效：{{SVGElement("a")}}，{{SVGElement("defs")}}，{{SVGElement("字形")}}，{{SVGElement("g")}}，{{SVGElement("marker")}}，{{SVGElement("mask")}}，{{SVGElement("missing-glyph")}}，{{SVGElement("pattern")}}，{{SVGElement("svg")}}，{{SVGElement("switch")}}和{{SVGElement("symbol")}}}
+作为表示属性，它可以应用于任何元素，但仅对以下 11 个元素有效：{{SVGElement("a")}}，{{SVGElement("defs")}}，{{SVGElement("字形")}}，{{SVGElement("g")}}，{{SVGElement("marker")}}，{{SVGElement("mask")}}，{{SVGElement("missing-glyph")}}，{{SVGElement("pattern")}}，{{SVGElement("svg")}}，{{SVGElement("switch")}}和{{SVGElement("symbol")}}
 
 ## 上下文注释
 

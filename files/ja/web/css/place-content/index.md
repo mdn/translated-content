@@ -84,7 +84,7 @@ place-content: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 

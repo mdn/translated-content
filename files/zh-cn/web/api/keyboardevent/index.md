@@ -7,7 +7,7 @@ slug: Web/API/KeyboardEvent
 
 **`KeyboardEvent`** 对象描述了用户与键盘的交互。每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型`keydown`， `keypress` 与 `keyup` 用于识别不同的键盘活动类型。
 
-> **备注：** `KeyboardEvent` 只在低级别提示用户与一个键盘按键的交互是什么，不涉及这个交互的上下文含义。当你需要处理文本输入的时候，使用 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
+> **备注：** `KeyboardEvent` 只在低级别提示用户与一个键盘按键的交互是什么，不涉及这个交互的上下文含义。当你需要处理文本输入的时候，使用 [`input`](/zh-CN/docs/Web/API/Element/input_event) 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
 
 ## 构造函数
 

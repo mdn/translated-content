@@ -36,7 +36,7 @@ slug: Web/HTML/Element/mark
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -152,7 +152,7 @@ div {
 
 #### 結果
 
-{{ EmbedLiveSample('Declaring_both_left_and_right', 500, 220) }}
+{{ EmbedLiveSample('left と right の同時指定', 500, 220) }}
 
 ## 仕様書
 

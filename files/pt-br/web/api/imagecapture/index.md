@@ -19,7 +19,7 @@ A interface **`ImageCapture`** da [MediaStream Image Capture API](/pt-BR/docs/We
 
 ## Métodos
 
-A interface do `ImageCapture` é baseada em {{domxref ("EventTarget")}}}, portanto inclui os métodos definidos por essa interface e os listados abaixo.
+A interface do `ImageCapture` é baseada em {{domxref ("EventTarget")}}, portanto inclui os métodos definidos por essa interface e os listados abaixo.
 
 - {{domxref("ImageCapture.takePhoto()")}}
   - : Faz uma única exposição usando o dispositivo de captura de vídeo que busca um {{domxref ("MediaStreamTrack")}} e retorna um {{jsxref ("Promise")}} que resolve com um {{domxref ("Blob")}} que contém o dados.

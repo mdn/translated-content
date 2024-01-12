@@ -44,7 +44,7 @@ La couche du masque de l'élément est appelée _source_ et les couches inférie
 
 ## Syntaxe formelle
 
-{{csssyntax}}}
+{{csssyntax}}
 
 ## Exemples
 

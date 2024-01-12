@@ -43,7 +43,7 @@ document.addEventListener('click', function(e) {
 
 {{Specifications}}
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

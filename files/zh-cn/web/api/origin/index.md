@@ -1,38 +1,34 @@
 ---
-title: origin
+title: origin 全局属性
 slug: Web/API/origin
+l10n:
+  sourceCommit: cb279e20569055b200f93802d1704846c28aa04f
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef}}{{AvailableInWorkers}}
 
-`WindowOrWorkerGlobalScope` 接口的 **`origin`** 只读属性返回全局范围的 **origin**, 序列化为一个字符串。
+**`origin`** 全局只读属性返回全局作用域的来源，序列化为一个字符串。
 
-## Syntax
+## 值
 
-```plain
-let myOrigin = self.origin; // or just origin
-```
+一个字符串。
 
-### Value
+## 示例
 
-A {{domxref("USVString")}}.
-
-## Examples
-
-Executed from inside a worker script, the following snippet will log the worker's global scope's origin to the console each time it receives a message
+在 Worker 脚本中执行以下代码段，每次收到消息时，它都会将 Worker 全局作用域的来源记录到控制台中：
 
 ```js
-onmessage = function () {
+onmessage = () => {
   console.log(self.origin);
 };
 ```
 
-If the origin is not a scheme/host/port tuple (say you are trying to run it locally, i.e. via `file://` URL), `origin` will return the string `"null"`.
+如果来源不是协议/主机/端口元组（例如试图在本地，即通过 `file://` URL 运行脚本），`origin` 将返回字符串 `"null"`。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
