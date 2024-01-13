@@ -1,13 +1,19 @@
 ---
 title: r
 slug: Web/SVG/Attribute/r
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
 {{SVGRef}}
 
 **`r`** 属性は円の半径を定義します。
 
-二つの要素、すなわち、{{SVGElement("circle")}} と {{SVGElement("radialGradient")}} が、この属性を使っています。
+この属性は次の SVG 要素で使用できます。
+- {{SVGElement("circle")}}
+- {{SVGElement("radialGradient")}}
+
+## 例
 
 ```css hidden
 html,
@@ -42,16 +48,40 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample('Example', '100%', 200)}}
 
 ## circle
 
 {{SVGElement('circle')}} に関しては、`r` は、円の半径を定めており、したがって、その円の大きさを定めています。ゼロ以下の値を用いると、その円はまったく描画されません。
 
-| 値                   | **[\<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| デフォルト値         | `0`                                                                                                                    |
-| アニメーション可能か | Yes                                                                                                                    |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション可能か</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 > **メモ:** SVG2 からは、`r` は _幾何属性 (Geometry Property)_ です。これが意味することは、`r` 属性を `circle` の CSS 属性としても使える、ということです。
 
@@ -61,10 +91,34 @@ svg {
 
 グラデーションの **100%** にあたるピン留め箇所 (stop) が、この末端の円の外周にマッピングされるように、グラデーションが描画されます。ゼロ以下の値を用いると、グラデーションの最後の {{ SVGElement("stop") }} の色と不透明度を使った単一の色で、当該領域を塗りつぶすことになります。
 
-| 値                   | **[\<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| デフォルト値         | `50%`                                                                                                                  |
-| アニメーション可能か | Yes                                                                                                                    |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><code>50%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション可能か</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様
 
