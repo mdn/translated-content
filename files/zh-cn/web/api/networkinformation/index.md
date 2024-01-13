@@ -44,7 +44,7 @@ _此接口也从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 _此接口也从其父接口 {{domxref("EventTarget")}} 继承方法。_
 
-### 事件
+## 事件
 
 - {{domxref("NetworkInformation.change_event", "change")}} {{Experimental_Inline}}
   - : 在连接信息发生变化时触发的事件。
