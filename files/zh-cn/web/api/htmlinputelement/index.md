@@ -98,7 +98,7 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLInputElement.width", "width")}}
   - : 一个表示元素的 [`width`](/zh-CN/docs/Web/HTML/Element/input#width) 属性的字符串，包含要显示为按钮的图像的宽度。
 
-### 仅适用与文件类型的元素的实例属性
+### 仅适用于文件类型的元素的实例属性
 
 - {{domxref("HTMLInputElement.accept", "accept")}}
   - : 一个表示元素的 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性的字符串，包含可以选择的文件类型的以逗号分隔的列表。
