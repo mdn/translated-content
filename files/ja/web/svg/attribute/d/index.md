@@ -177,7 +177,7 @@ SVG では、6 つのタイプのパスコマンドを定義しており、全�
 
 ### MoveTo パスコマンド
 
-_MoveTo_ での指定は、筆記用具を持ち上げ他の位置で下ろす動作と考えられます―言い換えると、_現在位置_  (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) の移動です。_P<sub>o</sub>_ と新しい _現在位置_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}) との間には線は描かれません。
+_MoveTo_ での指定は、筆記用具を持ち上げ他の位置で下ろす動作と考えられます―言い換えると、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) の移動です。_P<sub>o</sub>_ と新しい _現在位置_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}) との間には線は描かれません。
 
 <table class="no-markdown">
   <tbody>
@@ -195,7 +195,7 @@ _MoveTo_ での指定は、筆記用具を持ち上げ他の位置で下ろす�
       </td>
       <td>
         <p>
-          <em>現在位置</em> を座標 
+          <em>現在位置</em> を座標
           <code><var>x</var></code
           >,<code><var>y</var></code
           > へ移動します。後続する任意個の座標の組は暗黙的に絶対座標での LineTo(<code>L</code>)コマンドと解釈されます(<em
@@ -267,7 +267,7 @@ svg {
 
 ### LineTo パスコマンド
 
-_LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) から _終端位置_  (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}) への直線を指定されたパラメータに基づいて描きます。_終端位置_ (_P<sub>n</sub>_) は、次のコマンドでの _現在位置_ (_P<sub>o</sub>′_) となります。
+_LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) から _終端位置_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}) への直線を指定されたパラメータに基づいて描きます。_終端位置_ (_P<sub>n</sub>_) は、次のコマンドでの _現在位置_ (_P<sub>o</sub>′_) となります。
 
 <table class="no-markdown">
   <tbody>
@@ -626,7 +626,7 @@ _2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
   - : _P<sub>c</sub>_ = {_x<sub>c</sub>_, _y<sub>c</sub>_}
     (曲率を制御します)
 
-描画後に、_終端位置_ (_P<sub>n</sub>_) は、次のコマンドに対する_現在位置_ (_P<sub>o</sub>′_)となります。
+描画後に、_終端位置_ (_P<sub>n</sub>_) は、次のコマンドに対する _現在位置_ (_P<sub>o</sub>′_)となります。
 
 <table class="no-markdown">
   <tbody>

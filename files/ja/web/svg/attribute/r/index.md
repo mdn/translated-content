@@ -10,6 +10,7 @@ l10n:
 **`r`** 属性は円の半径を定義します。
 
 この属性は次の SVG 要素で使用できます。
+
 - {{SVGElement("circle")}}
 - {{SVGElement("radialGradient")}}
 
@@ -60,13 +61,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -97,13 +98,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >

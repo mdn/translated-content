@@ -282,7 +282,7 @@ svg {
 
 ## rect
 
-{{SVGElement('rect')}} は、`fill` は四角形の色を定義するプレゼンテーション属性です。 
+{{SVGElement('rect')}} は、`fill` は四角形の色を定義するプレゼンテーション属性です。
 
 <table class="properties">
   <tbody>
@@ -335,7 +335,7 @@ svg {
 
 ## text
 
-{{SVGElement('text')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。 
+{{SVGElement('text')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。
 
 <table class="properties">
   <tbody>
@@ -362,7 +362,7 @@ svg {
 
 ## textPath
 
-{{SVGElement('textPath')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。 
+{{SVGElement('textPath')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。
 
 <table class="properties">
   <tbody>
@@ -391,7 +391,7 @@ svg {
 
 > **警告:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
-{{SVGElement('tref')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。 
+{{SVGElement('tref')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。
 
 <table class="properties">
   <tbody>
@@ -418,7 +418,7 @@ svg {
 
 ## tspan
 
-{{SVGElement('tspan')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。 
+{{SVGElement('tspan')}} は、`fill` はテキストの色を定義するプレゼンテーション属性です。
 
 <table class="properties">
   <tbody>
