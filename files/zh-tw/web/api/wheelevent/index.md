@@ -29,11 +29,14 @@ _該介面繼承了父介面{{domxref("MouseEvent")}}、{{domxref("UIEvent")}}�
 - {{domxref("WheelEvent.deltaZ")}} {{readonlyinline}}
   - : 返回`double`值，該值表示滾輪的 z 軸方向上的滾動量。
 - {{domxref("WheelEvent.deltaMode")}} {{readonlyinline}}
-  - | : 返回`unsigned long`值，該值表示上述各 delta 的值的單位。該值及所表示的單位如下： | 常數   | 值                 | 描述 |
-    | ---------------------------------------------------------------------------------- | ------ | ------------------ | ---- |
-    | `DOM_DELTA_PIXEL`                                                                  | `0x00` | 滾動量單位爲像素。 |
-    | `DOM_DELTA_LINE`                                                                   | `0x01` | 滾動量單位爲行。   |
-    | `DOM_DELTA_PAGE`                                                                   | `0x02` | 滾動量單位爲頁。   |
+
+  - : 返回`unsigned long`值，該值表示上述各 delta 的值的單位。該值及所表示的單位如下：
+
+    | 常數              | 值     | 描述               |
+    | ----------------- | ------ | ------------------ |
+    | `DOM_DELTA_PIXEL` | `0x00` | 滾動量單位爲像素。 |
+    | `DOM_DELTA_LINE`  | `0x01` | 滾動量單位爲行。   |
+    | `DOM_DELTA_PAGE`  | `0x02` | 滾動量單位爲頁。   |
 
 ## 方法
 
