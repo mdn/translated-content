@@ -81,6 +81,7 @@ html {
 #### 結果
 
 {{EmbedLiveSample('横書きテキストでの "all" の使用', 250, 200)}}
+
 ## 仕様書
 
 {{Specifications}}
