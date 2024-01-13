@@ -15998,9 +15998,5 @@
   "WebAssembly/Using_the_JavaScript_API": {
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
-  },
-  "conflicting/Glossary/Flexbox": {
-    "modified": "2019-03-18T21:22:36.012Z",
-    "contributors": ["viktoryiakuzmitskaya"]
   }
 }
