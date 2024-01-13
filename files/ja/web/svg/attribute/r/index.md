@@ -11,6 +11,7 @@ l10n:
 
 この属性は次の SVG 要素で使用できます。
 
+
 - {{SVGElement("circle")}}
 - {{SVGElement("radialGradient")}}
 
