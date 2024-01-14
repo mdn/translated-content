@@ -13,17 +13,9 @@ slug: Web/API/Event/preventDefault
 
 ### 语法
 
-```plain
-event.preventDefault();
+```js-nolint
+event.preventDefault()
 ```
-
-### 参数
-
-无
-
-### 返回值
-
-`undefined`
 
 ## 示例
 
@@ -66,7 +58,7 @@ function checkboxClick(event) {
 
 ### 在编辑域中阻止按键
 
-下面的这个例子说明了如何使用 `preventDefault()` 在文本编辑域中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn/HTML/Forms/Data_form_validation)来代替。
+下面的这个例子说明了如何使用 `preventDefault()` 在文本编辑域中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn/Forms/Form_validation)来代替。
 
 #### HTML
 
