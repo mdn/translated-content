@@ -3584,9 +3584,9 @@
 /ja/docs/Web/CSS/CSS_Columns/Styling_Columns	/ja/docs/Web/CSS/CSS_multicol_layout/Styling_columns
 /ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ja/docs/Web/CSS/CSS_Device_Adaptation	/ja/docs/Web/CSS
-/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/conflicting/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/conflicting/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /ja/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
@@ -3634,6 +3634,7 @@
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
+/ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/conflicting/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS
