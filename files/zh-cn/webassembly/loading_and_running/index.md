@@ -13,7 +13,7 @@ l10n:
 
 WebAssembly 还没有和 `<script type='module'>` 或 `import` 语句集成，因此当前还没有方式可以让浏览器使用 import 为你获取模块。
 
-老的 [`WebAssembly.compile`](/zh-CN/docs/WebAssembly/JavaScript_interface/compile_static)/[`WebAssembly.instantiate`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static) 方法要求你在获取原始字节之后创建一个包含了你的 WebAssembly 模块二进制的 {{jsxref("ArrayBuffer")}}，然后编译/实例化它。这类似于 `new Function(string)`，只不过我们用字节缓存（WebAssembly 源码）替换了字符串（JavaScript 源码）。
+老的 [`WebAssembly.compile`](/zh-CN/docs/WebAssembly/JavaScript_interface/compile_static)/[`WebAssembly.instantiate`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static) 方法要求你在获取原始字节之后创建一个包含了你的 WebAssembly 模块二进制的 {{jsxref("ArrayBuffer")}}，然后编译/实例化它。这类似于 `new Function(string)`，只不过我们用字节数组缓冲区（WebAssembly 源码）替换了字符串（JavaScript 源码）。
 
 新的 [`WebAssembly.compileStreaming`](/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming_static)/[`WebAssembly.instantiateStreaming`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 方法更加高效——它们直接在来自网络的原始字节流上执行操作，省去了 {{jsxref("ArrayBuffer")}} 步骤。
 
