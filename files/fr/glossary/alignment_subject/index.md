@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-Dans le [CSS Box Alignment (alignement des boîtes en CSS)](/fr/docs/Web/CSS/CSS_Box_Alignment) l'**alignment subject** (le sujet de l'alignement) est la ou les choses alignées par la propriété.
+Dans le [CSS Box Alignment (alignement des boîtes en CSS)](/fr/docs/Web/CSS/CSS_box_alignment) l'**alignment subject** (le sujet de l'alignement) est la ou les choses alignées par la propriété.
 
 Pour [justify-self](/fr/docs/Web/CSS/justify-self) et [align-self](/fr/docs/Web/CSS/align-self), l'**alignment subject** est la marge de la boite sur laquelle la propriété est définie, en utilisant le mode d'écriture de cette zone. Pour [justify-content](/fr/docs/Web/CSS/justify-content) et [align-content](/fr/docs/Web/CSS/align-content), le mode d'écriture de la boîte est également utilisé.
 
@@ -25,4 +25,4 @@ La définition du sujet de l'alignement dépend du mode de mise en page utilisé
 
 ## Voir aussi
 
-- [CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- Le module [CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)
