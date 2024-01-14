@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`animation-range-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、タイムラインに沿ったアニメーションの適用範囲の終わり、つまり、タイムラインに沿ったアニメーションの終わりを設定するために使用します。
+**`animation-range-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、タイムラインに沿ったアニメーションの適用範囲の末尾、つまり、タイムラインに沿ったアニメーションの末尾を設定するために使用します。
 
 `animation-range-end` および {{cssxref("animation-range-start")}} のプロパティは、 [`animation-range`](/ja/docs/Web/CSS/animation-range) 一括指定プロパティを使用して設定することもできます。
 
