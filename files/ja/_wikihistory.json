@@ -16402,10 +16402,6 @@
     "modified": "2019-12-09T15:33:55.799Z",
     "contributors": ["mfuji09", "harupiyo", "dynamis", "reppets"]
   },
-  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
-    "modified": "2020-08-14T09:23:43.070Z",
-    "contributors": ["mfuji09", "Uemmra3", "sutara79"]
-  },
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-08-14T10:39:21.091Z",
     "contributors": [
@@ -30133,6 +30129,10 @@
   "WebAssembly/existing_C_to_Wasm": {
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
+  },
+  "conflicting/Glossary/Flexbox": {
+    "modified": "2020-08-14T09:23:43.070Z",
+    "contributors": ["mfuji09", "Uemmra3", "sutara79"]
   },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",

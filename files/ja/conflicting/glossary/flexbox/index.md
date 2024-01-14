@@ -1,8 +1,7 @@
 ---
 title: フレックスボックスの後方互換性
-slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
-l10n:
-  sourceCommit: 883b021c97375f872d0702f0d0747b1373155cef
+slug: conflicting/Glossary/Flexbox
+original_slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 ---
 
 {{CSSRef}}
