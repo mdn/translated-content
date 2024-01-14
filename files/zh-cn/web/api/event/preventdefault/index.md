@@ -1,5 +1,5 @@
 ---
-title: Event.preventDefault
+title: Event：preventDefault() 方法
 slug: Web/API/Event/preventDefault
 ---
 
@@ -9,7 +9,7 @@ slug: Web/API/Event/preventDefault
 
 此事件还是继续传播，除非碰到事件监听器调用 {{domxref("Event.stopPropagation", "stopPropagation()")}} 或 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}，才停止传播。
 
-如后文所述，对于不可取消的事件，例如通过 {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}} 调用的、没有指定 `cancelable: true` 的事件，调用 **`preventDefault()`** 是没有任何效果的。
+如后文所述，对于不可取消的事件（例如通过 {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}} 分派的、没有指定 `cancelable: true` 的事件），调用 **`preventDefault()`** 是没有任何效果的。
 
 ### 语法
 
