@@ -55,7 +55,7 @@ l10n:
 
 ## 예제
 
-### `JSON.parse()`는 trailing comma를 허용하지 않습니다.
+### `JSON.parse()`는 trailing comma를 허용하지 않습니다
 
 다음 두 줄 모두 SyntaxError가 발생합니다.
 
