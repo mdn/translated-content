@@ -9,9 +9,9 @@ l10n:
 
 Un **algorithme** est une série d'instructions indépendantes qui exécutent une fonction.
 
-En d'autres termes, un algorithme est une manière de décrire une façon de résoudre un problème afin qu'il puisse être résolu de manière répétée, par des humains ou des machines. Les informaticiens comparent l'efficacité des algorithmes à travers le concept de "Complexité algorithmique" ou la notation en "Grand O".
+En d'autres termes, un algorithme est une manière de décrire une façon de résoudre un problème afin qu'il puisse être résolu de manière répétée, par des humains ou des machines. Les informaticiens comparent l'efficacité des algorithmes à travers le concept de «&nbsp;Complexité algorithmique&nbsp;» ou la notation en «&nbsp;Grand O&nbsp;».
 
-Par exemple :
+Par exemple&nbsp;:
 
 - Une recette de cuisine est un algorithme simple pour les humains.
 - Un algorithme de tri est souvent utilisé en programmation informatique pour expliquer à une machine comment trier des données.
@@ -22,6 +22,6 @@ Il existe également des algorithmes d'[apprentissage automatique](https://fr.wi
 
 ## Voir aussi
 
-- [Algorithme](https://fr.wikipedia.org/wiki/Algorithme) on Wikipedia
-- [Animations d'algorithmes de tris](https://www.toptal.com/developers/sorting-algorithms) (en)
-- [Explication de complexité algorithmique](https://www.bigocheatsheet.com/) (en)
+- [Algorithme](https://fr.wikipedia.org/wiki/Algorithme) sur Wikipedia
+- [Animations d'algorithmes de tris](https://www.toptal.com/developers/sorting-algorithms) (en anglais)
+- [Explication de complexité algorithmique](https://www.bigocheatsheet.com/) (en anglais)
