@@ -11,10 +11,10 @@ _L'Accessibilité du web_ (**A11Y**) correspond aux bonnes pratiques assurant qu
 
 ## Voir aussi
 
-- [Ressources sur l'accessibilité](/fr/docs/Accessibilité) sur MDN
-- [Le guide sur l'accessibilité](/fr/docs/Learn/Accessibility) sur MDN
-- [La Documentation ARIA](/fr/docs/Web/Accessibility/ARIA) sur MDN
-- [La recommandation WAI-ARIA](http://www.w3.org/TR/wai-aria/) sur le site du W3C (en).
+- [Ressources sur l'accessibilité sur le MDN](/fr/docs/Accessibility)
+- [Le guide sur l'accessibilité sur le MDN](/fr/docs/Learn/Accessibility)
+- [La Documentation ARIA sur le MDN](/fr/docs/Web/Accessibility/ARIA)
+- [La recommandation WAI-ARIA](http://www.w3.org/TR/wai-aria/) sur le site du W3C (en anglais)
 - [Accessibilité du web](https://fr.wikipedia.org/wiki/Accessibilité_du_web) sur Wikipédia
-- [La page d'accueil de l'institut Web Accessibility in Mind](https://webaim.org/) (en)
-- [La page d'accueil de la Web Accessibility Initiative](http://www.w3.org/WAI/) sur le site du W3C (en)
+- [La page d'accueil de l'institut Web Accessibility in Mind](https://webaim.org/) (en anglais)
+- [La page d'accueil du W3C de la Web Accessibility Initiative](https://www.w3.org/WAI/) (en anglais)
