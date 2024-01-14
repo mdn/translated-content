@@ -30,5 +30,5 @@ Toujours à l'état de brouillon au sein du Web Incubator Community Group en avr
 
 - [Glossaire](/fr/docs/Glossary)
 
-   - [Accessibilité](/fr/docs/Glossary/Accessibility)
-   - [ARIA](/fr/docs/Glossary/ARIA)
+  - [Accessibilité](/fr/docs/Glossary/Accessibility)
+  - [ARIA](/fr/docs/Glossary/ARIA)
