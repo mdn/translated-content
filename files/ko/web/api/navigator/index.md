@@ -19,7 +19,7 @@ l10n:
 
 - {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 현재 문서의 {{domxref("Bluetooth")}} 객체를 반환합니다. [Web Bluetooth API](/ko/docs/Web/API/Web_Bluetooth_API)의 기능에 접근할 수 있습니다.
-- {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}}
+- {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : 시스템 클립보드의 읽기, 쓰기에 접근할 수 있는 {{domxref("Clipboard")}} 객체를 반환합니다.
 - {{domxref("Navigator.connection")}} {{readonlyInline}} {{experimental_inline}}
   - : 장치의 네트워크 연결 정보를 담은 {{domxref("NetworkInformation")}} 객체를 반환합니다.
