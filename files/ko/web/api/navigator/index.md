@@ -151,16 +151,16 @@ l10n:
 - {{domxref("Navigator.vibrate()")}}
   - : 지원하는 경우, 장치가 진동하도록 합니다. 진동을 지원하지 않는 장치에서는 아무것도 하지 않습니다.
 
-### Deprecated methods
+### 사용되지 않는 메서드
 
 - {{domxref("Navigator.getUserMedia()")}} {{Deprecated_Inline}}
-  - : After having prompted the user for permission, returns the audio or video stream associated to a camera or microphone on the local computer.
+  - : 사용자에게 권한을 요청한 후에 로컬 컴퓨터의 카메라 또는 마이크와 연관된 오디오나 비디오 스트림을 반환합니다.
 - {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.
+  - : {{domxref("VRDisplay")}} 객체 배열을 이행하는 promise를 반환합니다. 이 객체는 컴퓨터에 사용 가능한 VR 기기가 연결되었는지를 나타냅니다.
 - {{domxref("Navigator.javaEnabled()")}} {{Deprecated_Inline}}
-  - : Always returns false.
+  - : 항상 `false`를 반환합니다.
 - {{domxref("Navigator.taintEnabled()")}} {{Deprecated_Inline}}
-  - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
+  - : `false`를 반환합니다. JavaScript taint/untaint 기능은 JavaScript 1.2에서 제거되었습니다.
 
 ## 명세
 
