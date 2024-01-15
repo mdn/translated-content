@@ -28,6 +28,10 @@ append(param1, param2, /* …, */ paramN)
 - `param1`、…、`paramN`
   - : 一组要插入的 {{domxref("Node")}} 或字符串对象。
 
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
 ### 异常
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
