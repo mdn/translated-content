@@ -1,18 +1,16 @@
 ---
 title: view-timeline-inset
 slug: Web/CSS/view-timeline-inset
-page-type: css-property
-status:
-  - experimental
-browser-compat: css.properties.view-timeline-inset
+l10n:
+  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`view-timeline-inset`** [CSS](/ja/docs/Web/CSS) property is used to specify one or two values representing an adjustment to the position of the scrollport (see {{glossary("Scroll container")}} for more details) in which the subject element of a _named view progress timeline_ animation is deemed to be visible. Put another way, this allows you to specify start and/or end inset (or outset) values that offset the position of the timeline.
+**`view-timeline-inset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ビュー進行タイムラインのアニメーションの主体要素が可視であるとみなされるスクロールポート（詳細は{{glossary("Scroll container", "スクロールコンテナー")}}を参照）の位置の調整を表す 1 つまたは 2 つの値を指定するために使用します。別の言い方をすると、これはタイムラインの位置をオフセットする開始値や終了値のインセット（またはアウトセット）を指定することができます。
 
-This can be combined with or used instead of {{cssxref("animation-range")}} and its longhand properties, which can be used to set the attachment range of an animation along its timeline.
-See [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) for more details.
+これは {{cssxref("animation-range")}} とその個別指定プロパティと組み合わせたり、その代わりに使用したりすることができ、タイムラインに沿ってアニメーションの適用範囲を設定することができます。
+詳細は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を参照してください。
 
 ## 構文
 
@@ -30,16 +28,16 @@ view-timeline-inset: 20% 200px;
 
 ### 値
 
-Allowed values for `view-timeline-inset` are:
+`view-timeline-inset` に指定できる値は以下の通りです。
 
 - `auto`
-  - : If set, the corresponding {{cssxref("scroll-padding")}} (or equivalent longhand value) for that edge of the scrollport is used. If this is not set (or set to `auto`), the value will usually be 0, although some user agents may use heuristics to determine a different default value if appropriate.
+  - : 設定されている場合、スクロールポートの端に対応する {{cssxref("scroll-padding")}} （または同等の個別指定値）が使用されます。これが設定されていない場合（または `auto` に設定されている場合）、通常は 0 が使用されますが、ユーザーエージェントによっては調査結果を使用して異なる既定値を使用する場合もあります。
 - {{cssxref("length-percentage")}}
-  - : Any valid `<length-percentage>` value is accepted as an inset/outset value.
-    - If the value is positive, the position of the animation's start/end will be moved inside the scrollport by the specified length or percentage.
-    - If the value is negative, the position of the animation's start/end will be moved outside the scrollport by the specified length or percentage, i.e. it will start animating before it appears in the scrollport, or finish animating after it leaves the scrollport.
+  - : 有効な `<length-percentage>` 値であれば、インセット/アウトセットの値として受け入れられます。
+    - 値が正の値の場合、アニメーションの開始/終了位置は、指定した長さまたはパーセント分だけスクロールポートの内側に移動されます。
+    - 値が負の場合、アニメーションの開始/終了位置は、指定した長さまたはパーセントだけスクロールポートの外に移動します。つまり、スクロールポートに現れる前にアニメーションを開始したり、スクロールポートを出た後にアニメーションを終了したりします。
 
-If two values are provided, the first value represents the start inset/outset in the relevant axis (where the animation begins) and the second value represents the end inset/outset (where the animation ends). If only one value is provided, the start and end inset/outset are both set to the same value.
+2 つの値が指定された場合、最初の値は関連する軸の開始インセット/アウトセット（アニメーションが始まる場所）を表し、 2 つ目の値は終了インセット/アウトセット（アニメーションが終わる場所）を表します。値が 1 つだけ指定された場合、開始と終了のインセット/アウトセットは両方とも同じ値に設定されます。
 
 ## 公式定義
 
@@ -51,16 +49,16 @@ If two values are provided, the first value represents the start inset/outset in
 
 ## 例
 
-### Creating a named view progress timeline with inset
+### インセットを含む名前付きビュー進行タイムラインの作成
 
-A view progress timeline named `--subjectReveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subjectReveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
+`--subjectReveal` という名前のビュー進行タイムラインを `view-timeline` プロパティを用いて、 `class` が `animation` の主体要素に定義します。
+これを同じ要素のタイムラインとして設定するには `animation-timeline: --subjectReveal;` を使用します。その結果、主体要素は文書化されたものをスクロールしながら上方向に移動してアニメーションします。
 
-A `view-timeline-inset` declaration is also set to make the animation begin later than expected, and finish earlier.
+`view-timeline-inset` 宣言も設定することで、アニメーションを予想より遅く始め、早く終わらせることができます。
 
 #### HTML
 
-The HTML for the example is shown below.
+この例の HTML は以下の通りです。
 
 ```html
 <div class="content">
@@ -99,7 +97,7 @@ The HTML for the example is shown below.
 
 #### CSS
 
-The `subject` element and its containing `content` element are styled minimally, and the text content is given some basic font settings:
+`subject` 要素とそれを含む `content` 要素には最小限のスタイルを設定し、テキストコンテンツには基本的なフォントを設定します。
 
 ```css
 .subject {
@@ -130,9 +128,9 @@ p {
 }
 ```
 
-The `<div>` with the class of `subject` is also given a class of `animation` — this is where `view-timeline` is set to define a named view progress timeline. We also give it a `view-timeline-inset` declaration to make the animation begin later than expected, and finish earlier. It is also given an `animation-timeline` name with the same value to declare that this will be the element animated as the view progress timeline is progressed.
+`subject` クラスのついた `<div>` には、`animation` クラスも指定されています。ここで `view-timeline` を設定し、名前付きビュー進行タイムラインを定義しています。また、アニメーションが予想よりも遅く始まり、早く完了するように `view-timeline-inset` 宣言も指定します。また、同じ値で `animation-timeline` の名前を指定して、ビュー進行タイムラインが進むにつれてアニメーションする要素であることを宣言します。
 
-Last, an animation is specified on the element that animates its opacity and scale, causing it to fade in and size up as it moves up the scroller.
+最後に、要素の透過率と変倍をアニメーションで指定し、スクロール移動されるたびにフェードインしたり変倍させたりします。
 
 ```css
 .animation {
@@ -160,7 +158,7 @@ Last, an animation is specified on the element that animates its opacity and sca
 
 #### 結果
 
-Scroll to see the subject element being animated.
+スクロールすると、主体要素がアニメーションします。
 
 {{EmbedLiveSample("Creating a named view progress timeline with inset", "100%", "480px")}}
 
