@@ -1,22 +1,20 @@
 ---
 title: view-timeline-name
 slug: Web/CSS/view-timeline-name
-page-type: css-property
-status:
-  - experimental
-browser-compat: css.properties.view-timeline-name
+l10n:
+  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`view-timeline-name`** [CSS](/ja/docs/Web/CSS) property is used to define the name of a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline` is set on the subject.
+**`view-timeline-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインの名前を定義するために使用します。 `view-timeline` は主体要素に設定します。
 
-The visibility of the subject inside the scroller is tracked — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller and 100% when it reaches the opposite edge.
-The name is then referenced in an [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) declaration to indicate the element that will be animated as the timeline progresses. This can be the subject element, but it doesn't have to be — you can animate a different element as the subject moves through the scrolling area.
+既定では、主体要素がスクローラーの一方の端に初めて表示されるとタイムラインは 0% になり、反対側の端に達すると 100% になります。
+この名前は [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) 宣言で参照され、タイムラインの進行に合わせてアニメーションする要素を示します。これは主体要素である場合もありますが、そうである必要はありません。主体がスクロール領域を移動する際に異なる要素をアニメーションさせることができます。
 
-> **メモ:** If the element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
+> **メモ:** 要素が軸方向の寸法でそのコンテナーをはみ出さない場合、またははみ出した部分が隠されているかクリップされている場合、タイムラインは作成されません。
 
-The {{cssxref("view-timeline-axis")}} and `view-timeline-name` properties can also be set using the [`view-timeline`](/ja/docs/Web/CSS/scroll-timeline) shorthand property.
+{{cssxref("view-timeline-axis")}} および `view-timeline-name` プロパティは [`view-timeline`](/ja/docs/Web/CSS/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
 
 ## 構文
 
@@ -27,15 +25,15 @@ view-timeline-name: --custom_name_for_timeline;
 
 ### 値
 
-Allowed values for `view-timeline-name` are:
+`view-timeline-name` に指定できる値は次の通りです。
 
 - `none`
-  - : The timeline has no name.
+  - : タイムラインには名前がありません。
 - `<dashed-ident>`
 
-  - : An arbitrary custom identifier defining a name for a view progress timeline, which can then be referenced in an [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) property.
+  - : ビュー進行タイムラインの名前を定義する任意のカスタム識別子で、[`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) プロパティで参照することができます。
 
-    > **メモ:** [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
+    > **メモ:** [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
 
 ## 公式定義
 
@@ -47,14 +45,14 @@ Allowed values for `view-timeline-name` are:
 
 ## 例
 
-### Creating a named view progress timeline
+### 名前付きビュー進行タイムラインの作成
 
-A view progress timeline named `--subjectReveal` is defined using the `view-timeline-name` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subjectReveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
+`--subjectReveal` という名前のビュー進行タイムラインは、 `view-timeline-name` プロパティを使用して、`class` が `animation` の主体要素に定義します。
+これを同じ要素のタイムラインとして設定するには `animation-timeline: --subjectReveal;` を使用します。その結果、主体要素は文書がスクロールされるにつれて上方向に移動するアニメーションが表示されます。
 
 #### HTML
 
-The HTML for the example is shown below.
+この例の HTML は以下の通りです。
 
 ```html
 <div class="content">
@@ -93,7 +91,7 @@ The HTML for the example is shown below.
 
 #### CSS
 
-The `subject` element and its containing `content` element are styled minimally, and the text content is given some basic font settings:
+`subject` 要素とそれを含む `content` 要素には最小限のスタイルを設定し、テキストコンテンツには基本的なフォントを設定します。
 
 ```css
 .subject {
@@ -124,9 +122,9 @@ p {
 }
 ```
 
-The `<div>` with the class of `subject` is also given a class of `animation` — this is where `view-timeline-name` is set to define a named view progress timeline. It is also given an `animation-timeline` name with the same value to declare that this will be the element animated as the view progress timeline is progressed.
+`subject` クラスのついた `<div>` には、`animation` クラスも指定されています。ここで `view-timeline-name` を設定し、名前付きビュー進行タイムラインを定義しています。また、同じ値で `animation-timeline` の名前を指定して、ビュー進行タイムラインが進むにつれてアニメーションする要素であることを宣言します。
 
-Last, an animation is specified on the element that animates its opacity and scale, causing it to fade in and size up as it moves up the scroller.
+最後に、要素の透過率と変倍をアニメーションで指定し、スクロール移動されるたびにフェードインしたり変倍させたりします。
 
 ```css
 .animation {
@@ -153,7 +151,7 @@ Last, an animation is specified on the element that animates its opacity and sca
 
 #### 結果
 
-Scroll to see the subject element being animated.
+スクロールすると、主体要素がアニメーションします。
 
 {{EmbedLiveSample("Creating a named view progress timeline", "100%", "480px")}}
 
