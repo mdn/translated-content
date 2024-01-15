@@ -93,7 +93,7 @@ l10n:
 ### 비표준 속성
 
 - {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : 브라우저의 빌드 식별자를 리턴합니다. 현재 최신 브라우저에서 이 속성은 개인 정보 보호 조치로 고정된 타임스탬프를 리턴합니다. e.g. Firefox 64 이상에서는 `20181001000000`을 리턴.
+  - : 브라우저의 빌드 식별자를 리턴합니다. 현재 최신 브라우저에서 이 속성은 개인 정보 보호 조치로 고정된 타임스탬프를 리턴합니다. 예를 들어 Firefox 64 이상에서는 `20181001000000`을 반환합니다.
 - {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : 자신의 정보가 공유되거나 판매되는 것에 대한 사용자의 동의를 나타내는 불리언 값을 리턴합니다.
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
