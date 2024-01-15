@@ -63,7 +63,7 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 
 ## 示例
 
-**提示**: 在大多数情况下，你可能需要使用{{jsxref("WebAssembly.instantiateStreaming()")}}，因为它比`instantiate()`更具效率。
+> **备注：** 在大多数情况下，你可能需要使用 {{jsxref("WebAssembly.instantiateStreaming()")}}，因为它比 `instantiate()` 更具效率。
 
 ### 第一种重载示例
 
