@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Iterator`** 对象是一个符合[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)的对象，其提供了 `next()` 方法用以返回迭代器结果对象。所有内置迭代器都继承自 `Iterator` 类。`Iterator` 类提供了 [`@@iterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator) 方法，该方法返回迭代器对象本身，使迭代器也[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。它还提供了一些使用迭代器的辅助方法。
+**`Iterator`** 对象是一个符合[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)的对象，其提供了 `next()` 方法用以返回迭代器结果对象。所有内置迭代器都继承自 `Iterator` 类。`Iterator` 类提供了 [`@@iterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator) 方法，该方法返回迭代器对象本身，使迭代器也[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。它还提供了一些使用迭代器的辅助方法。
 
 ## 描述
 
@@ -15,9 +15,7 @@ l10n:
 
 - _数组迭代器_，返回自 {{jsxref("Array.prototype.values()")}}、{{jsxref("Array.prototype.keys()")}}、{{jsxref("Array.prototype.entries()")}}、[`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)、{{jsxref("TypedArray.prototype.values()")}}、{{jsxref("TypedArray.prototype.keys()")}}、{{jsxref("TypedArray.prototype.entries()")}}、[`TypedArray.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator) 和 [`arguments[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)。
 - _字符串迭代器_，返回自 [`String.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)。
-- The _Map Iterator_ returned by {{jsxref("Map.prototype.values()")}}, {{jsxref("Map.prototype.keys()")}}, {{jsxref("Map.prototype.entries()")}}, and [`Map.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator).
 - _Map 迭代器_，返回自 {{jsxref("Map.prototype.values()")}}、{{jsxref("Map.prototype.keys()")}}、{{jsxref("Map.prototype.entries()")}} 和 [`Map.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)。
-- The _Set Iterator_ returned by {{jsxref("Set.prototype.values()")}}, {{jsxref("Set.prototype.keys()")}}, {{jsxref("Set.prototype.entries()")}}, and [`Set.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator).
 - _Set 迭代器_，返回自 {{jsxref("Set.prototype.values()")}}、{{jsxref("Set.prototype.keys()")}}、{{jsxref("Set.prototype.entries()")}} 和 [`Set.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)。
 - _正则表达式字符串迭代器_，返回自 [`RegExp.prototype[@@matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll) 和 {{jsxref("String.prototype.matchAll()")}}。
 - {{jsxref("Generator")}} 对象，返回自[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)。
@@ -121,7 +119,7 @@ const myIterator = Iterator.from({
 ## 构造函数
 
 - {{jsxref("Iterator/Iterator", "Iterator()")}} {{experimental_inline}}
-  - ：旨在被创建迭代器的其他类[继承](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。直接构建会抛出错误。
+  - ：旨在被创建迭代器的其他类[继承](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。直接用于构建会抛出错误。
 
 ## 静态方法
 
