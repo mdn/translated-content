@@ -327,7 +327,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 {{cssinfo}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -36,7 +36,7 @@ console.log(audioCtx.currentTime);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

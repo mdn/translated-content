@@ -46,7 +46,7 @@ function showChar(e){
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -148,7 +148,7 @@ var int8 = new Int8Array(iterable);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

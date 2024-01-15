@@ -208,7 +208,7 @@ ul li::before {
 
 ## 例
 
-<h3 id="Setting_list_item_markers">リスト項目マーカーの設定</h3>
+### リスト項目マーカーの設定
 
 #### HTML
 
@@ -244,9 +244,9 @@ ol.shortcut {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_list_item_markers","200","300")}}
+{{EmbedLiveSample("リスト項目マーカーの設定","200","300")}}
 
-<h3 id="All_list_style_types">リストスタイルのすべての種類</h3>
+### リストスタイルのすべての種類
 
 #### HTML
 
@@ -704,7 +704,7 @@ container.addEventListener("change", (event) => {
 
 #### 結果
 
-{{EmbedLiveSample("All_list_style_types", "600", "800")}}
+{{EmbedLiveSample("リストスタイルのすべての種類", "600", "800")}}
 
 ## 仕様書
 

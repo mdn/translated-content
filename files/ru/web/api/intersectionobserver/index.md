@@ -53,7 +53,7 @@ intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

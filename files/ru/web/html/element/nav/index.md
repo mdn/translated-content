@@ -41,7 +41,7 @@ slug: Web/HTML/Element/nav
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -40,7 +40,7 @@ slug: Web/HTML/Element/blockquote
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

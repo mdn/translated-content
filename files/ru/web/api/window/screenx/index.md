@@ -75,7 +75,7 @@ if (!window.screenLeft) {
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 
