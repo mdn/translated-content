@@ -147,7 +147,7 @@ parentRule {
 
 #### HTML
 
-```html
+```html-nolint
 <p class="example">
   この段落には<a href="#">リンクを含んでいます</a>。ポインターを当てるかフォーカスを当ててみてください。
 </p>
@@ -182,7 +182,7 @@ parentRule {
 
 #### HTML
 
-```html
+```html-nolint
 <p class="example">
   この段落には<a href="#">リンクを含んでいます</a>。ポインターを当てるかフォーカスを当ててみてください。
 </p>
