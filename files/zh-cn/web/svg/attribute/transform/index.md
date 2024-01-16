@@ -165,7 +165,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- No translation -->
+  <!-- 未经平移 -->
   <rect x="5" y="5" width="40" height="40" fill="green" />
 
   <!-- 水平平移 -->
