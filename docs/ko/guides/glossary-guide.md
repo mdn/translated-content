@@ -128,7 +128,7 @@
 | Rendering          | 렌더링          |                                                                                                        |
 | Section            | 구획            |                                                                                                        |
 | Statement          | 명령문 또는 문  |                                                                                                        |
-| short-circuit      |
+| short-circuit      |                 |                                                                                                        |
 | User agent         | 사용자 에이전트 |                                                                                                        |
 
 ## CSS
