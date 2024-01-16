@@ -16,7 +16,7 @@
   },
   "line-length": false,
   "no-duplicate-heading": {
-    "allow_different_nesting": true
+    "siblings_only": true,
   },
   "single-title": {
     "front_matter_title": "^\\s*title\\s*[:=]",
