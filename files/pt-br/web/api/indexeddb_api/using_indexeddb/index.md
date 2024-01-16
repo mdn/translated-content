@@ -17,7 +17,7 @@ O IndexedDB encoraja o uso do seguinte padrão:
 
 1. Abrir um banco de dados.
 2. Criar um ObjectStore ao atualizar o banco.
-3. Iniciar uma transação e e faz um request para fazer alguma operação no banco, como adicionar ou obter dados.
+3. Iniciar uma transação e faz um request para fazer alguma operação no banco, como adicionar ou obter dados.
 4. Esperar a operação ser completada ouvindo algum evento DOM.
 5. Fazer algo com o resultado da query (que pode ser obtida pelo objeto request).
 
