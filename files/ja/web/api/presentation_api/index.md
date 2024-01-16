@@ -9,7 +9,6 @@ l10n:
 
 Presentation API は、(ウェブブラウザーなどの) {{Glossary("user agent", "ユーザーエージェント")}}がウェブコンテンツをプロジェクターやネットワークで接続されたテレビジョンなどの大型プレゼンテーションデバイスに効率よく表示できるようにします。対応しているマルチメディアデバイスには、HDMI や DVI などの有線接続のディスプレイも、[DLNA](https://www.dlna.org/)、[Chromecast](https://developers.google.com/cast/)、[AirPlay](https://developer.apple.com/airplay/)、[Miracast](https://www.wi-fi.org/discover-wi-fi/miracast) を用いた無線接続のディスプレイもあります。
 
-
 ![1-UA モードでは操作ページと表示ページをディスプレイに出力する前に一緒に読み込みます。2-UA モードではそれらを Presentation Control Protocol を用いて別々に読み込みます。](presentation_mode_illustration.png)
 
 一般に、ウェブページは Presentation Controller API を用いてプレゼンテーションデバイスにレンダリングするウェブコンテンツを指定し、プレゼンテーションセッションを開始します。表示されるウェブコンテンツは、Presentation Receiver API を用いてセッションの状態を取得します。メッセージベースのチャンネルを持つ操作ページと受信ページの両方を提供することで、ウェブ開発者はそれらの 2 ページ間のやり取りを実装できます。
