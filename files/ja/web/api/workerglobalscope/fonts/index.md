@@ -1,8 +1,9 @@
 ---
-title: WorkerGlobalScope.fonts
+title: "WorkerGlobalScope: fonts プロパティ"
+short-title: fonts
 slug: Web/API/WorkerGlobalScope/fonts
 l10n:
-  sourceCommit: 88e92273cd9ab37146d163239e444c194ac14f13
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef("DOM")}}

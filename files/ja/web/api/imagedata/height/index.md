@@ -22,7 +22,7 @@ let imageData = new ImageData(200, 100);
 console.log(imageData.height); // 100
 ```
 
-## 関連情報
+## 仕様書
 
 {{Specifications}}
 

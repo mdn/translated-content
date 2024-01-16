@@ -47,6 +47,6 @@ slug: Web/CSS/time
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

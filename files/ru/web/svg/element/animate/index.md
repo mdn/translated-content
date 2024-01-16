@@ -46,6 +46,6 @@ slug: Web/SVG/Element/animate
 
 {{Specifications}}
 
-## Поддерживаемые браузеры
+## Совместимость с браузерами
 
 {{Compat}}

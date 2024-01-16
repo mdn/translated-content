@@ -148,7 +148,7 @@ var int32 = new Int32Array(iterable);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
