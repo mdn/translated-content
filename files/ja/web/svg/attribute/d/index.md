@@ -1011,6 +1011,6 @@ svg {
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザー互換性
 
 {{Compat}}
