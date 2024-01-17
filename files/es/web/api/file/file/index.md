@@ -1,5 +1,5 @@
 ---
-title: Constructor File()
+title: "File: Constructor File()"
 slug: Web/API/File/File
 l10n:
   sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
@@ -21,7 +21,7 @@ new File(fileBits, fileName, options)
 - `fileBits`
   - : Un objeto [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) como un {{jsxref("Array")}}, que tiene {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, cadenas,
-    o una mezcla de cualquiera de dichos elementos, que se pondrá dentro del {{domxref("File")}}.
+    o una mezcla de cualquiera de dichos elementos, que se pondrá dentro de {{domxref("File")}}.
     Nota que las cadenas aquí están codificados como UTF-8, a diferencia de las cadenas UTF-16 de JavaScript habituales.
 - `fileName`
   - : Una cadena que representa el nombre del archivo o ruta del archivo.
