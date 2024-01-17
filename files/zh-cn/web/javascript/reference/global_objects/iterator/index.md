@@ -20,7 +20,7 @@ l10n:
 - _正则表达式字符串迭代器_，返回自 [`RegExp.prototype[@@matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll) 和 {{jsxref("String.prototype.matchAll()")}}。
 - {{jsxref("Generator")}} 对象，返回自[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)。
 - _Segment 迭代器_，返回自 [`Intl.Segmenter.prototype.segment()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) 返回的 [`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 对象的 [`[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator) 方法。
-- _迭代器 Helper_，返回自迭代器辅助方法例如 {{jsxref("Iterator.prototype.filter()")}} 和 {{jsxref("Iterator.prototype.map()")}}。
+- _迭代器辅助方法_，返回自迭代器辅助方法例如 {{jsxref("Iterator.prototype.filter()")}} 和 {{jsxref("Iterator.prototype.map()")}}。
 
 每个迭代器都有一个不同的原型对象，它定义了特定迭代器使用的 `next()` 方法。例如，所有字符串迭代器对象都继承自隐藏对象 `StringIteratorPrototype`，该对象具有按码位迭代当前字符串的 `next()` 方法。`StringIteratorPrototype` 还有一个 [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性，其初始值为字符串 `"String Iterator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。类似地，其他迭代器原型也有自己的 `@@toStringTag` 值，这些值与上面给出的名称相同。
 
