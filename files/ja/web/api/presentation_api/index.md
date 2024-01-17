@@ -2,7 +2,7 @@
 title: Presentation API
 slug: Web/API/Presentation_API
 l10n:
-  sourceCommit: 95dff5ec1195f072b8e48a2273294933670b1e99
+  sourceCommit: 88c098f5bd651a5c587d7b32dba055766c1789ca
 ---
 
 {{securecontext_header}}{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
