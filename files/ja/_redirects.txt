@@ -3619,7 +3619,7 @@
 /ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3	/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 /ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index	/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 /ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context	/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
-/ja/docs/Web/CSS/CSS_Properties_Reference	/ja/docs/orphaned/Web/CSS/CSS_Properties_Reference
+/ja/docs/Web/CSS/CSS_Properties_Reference	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
 /ja/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/Web/CSS/CSS_Ruby	/ja/docs/Web/CSS/CSS_ruby_layout
