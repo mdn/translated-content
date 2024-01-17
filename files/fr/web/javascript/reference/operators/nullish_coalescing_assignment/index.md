@@ -2,7 +2,7 @@
 title: Affectation après coalescence des nuls (??=)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 l10n:
-  commitSource: 71cf0cb885d46d83af054ae4df350248e246f006
+  sourceCommit: 71cf0cb885d46d83af054ae4df350248e246f006
 ---
 
 {{jsSidebar("Operators")}}
