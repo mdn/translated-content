@@ -21,7 +21,7 @@ x ??= y
 
 L'opérateur de coalescence des nuls est un [_court-circuit_](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence#court-circuit), ce qui signifie que `x ??= y` est équivalent à `x ?? (x = y)`, sauf que l'expression `x` n'est évaluée qu'une seule fois.
 
-Aucune affectation n'est effectuée si le côté gauche n'est pas nul, en raison d'un court-circuit de l'opérateur de [coalescence des nuls](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing). Par exemple, ce qui suit ne génère pas d'erreur, bien que «&nbsp;x&nbsp;» soit  une constante «&nbsp;const&nbsp;»&nbsp;:
+Aucune affectation n'est effectuée si le côté gauche n'est pas nul, en raison d'un court-circuit de l'opérateur de [coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing). Par exemple, ce qui suit ne génère pas d'erreur, bien que «&nbsp;x&nbsp;» soit une constante «&nbsp;const&nbsp;»&nbsp;:
 
 ```js
 const x = 1;
