@@ -229,7 +229,7 @@ strong {
 
 {{ EmbedLiveSample('Example using "capitalize" (Dutch ij digraph)', '100%', '100px') }}
 
-### ppercase (一般的)
+### uppercase (一般的)
 
 ```html
 <p>
