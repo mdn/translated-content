@@ -50,7 +50,7 @@ p:last-of-type {
 
 #### HTML
 
-```html
+```html-nolint
 <article>
   <div>これは最初の `div` です。</div>
   <div>これは<span>内側で最後の `span`</span> です。</div>
@@ -80,7 +80,7 @@ article :last-of-type {
 
 #### HTML
 
-```html
+```html-nolint
 <p>この `p` は選択されていません。</p>
 <p>この `p` も選択されていません。</p>
 <p>
