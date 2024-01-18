@@ -1,6 +1,7 @@
 ---
 title: 快速链接
-slug: MDN/Writing_guidelines/Page_structures/Quicklinks
+slug: MDN/Writing_guidelines/Page_structures/Sidebars
+original_slug: MDN/Writing_guidelines/Page_structures/Quicklinks
 ---
 
 {{MDNSidebar}}
