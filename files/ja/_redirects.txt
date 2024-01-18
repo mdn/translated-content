@@ -2202,7 +2202,7 @@
 /ja/docs/MDN/Contribute/Structures/Page_types/API_method_subpage_template	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
 /ja/docs/MDN/Contribute/Structures/Page_types/API_property_subpage_template	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 /ja/docs/MDN/Contribute/Structures/Page_types/API_reference_page_template	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
-/ja/docs/MDN/Contribute/Structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/ja/docs/MDN/Contribute/Structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /ja/docs/MDN/Contribute/Structures/Specification_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /ja/docs/MDN/Contribute/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /ja/docs/MDN/Contribute/Structures/マクロ	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
@@ -2238,7 +2238,7 @@
 /ja/docs/MDN/Structures/Page_types/API_method_subpage_template	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
 /ja/docs/MDN/Structures/Page_types/API_property_subpage_template	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 /ja/docs/MDN/Structures/Page_types/API_reference_page_template	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
-/ja/docs/MDN/Structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/ja/docs/MDN/Structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /ja/docs/MDN/Structures/Specification_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /ja/docs/MDN/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /ja/docs/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
@@ -2246,6 +2246,7 @@
 /ja/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
+/ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
 /ja/docs/MDN_at_ten/History_of_MDN	/ja/docs/MDN/At_ten/History_of_MDN
@@ -2899,6 +2900,7 @@
 /ja/docs/Web/API/HTMLTableRowElement.rowIndex	/ja/docs/Web/API/HTMLTableRowElement/rowIndex
 /ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items	/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /ja/docs/Web/API/History_API/Example	/ja/docs/Web/API/History_API/Working_with_the_History_API
+/ja/docs/Web/API/Houdini	/ja/docs/Web/API/Houdini_APIs
 /ja/docs/Web/API/IDBDatabase.close	/ja/docs/Web/API/IDBDatabase/close
 /ja/docs/Web/API/IDBDatabase.createObjectStore	/ja/docs/Web/API/IDBDatabase/createObjectStore
 /ja/docs/Web/API/IDBDatabase.name	/ja/docs/Web/API/IDBDatabase/name
@@ -3584,9 +3586,9 @@
 /ja/docs/Web/CSS/CSS_Columns/Styling_Columns	/ja/docs/Web/CSS/CSS_multicol_layout/Styling_columns
 /ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ja/docs/Web/CSS/CSS_Device_Adaptation	/ja/docs/Web/CSS
-/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/conflicting/Glossary/Flexbox
+/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/conflicting/Glossary/Flexbox
+/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /ja/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
@@ -3634,7 +3636,7 @@
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
-/ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/conflicting/Glossary/Flexbox
+/ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS
@@ -3967,7 +3969,7 @@
 /ja/docs/Web/Guide/HTML/Obsolete_things_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/Guide/HTML/XHTML	/ja/docs/Glossary/XHTML
-/ja/docs/Web/Guide/Houdini	/ja/docs/Web/API/Houdini
+/ja/docs/Web/Guide/Houdini	/ja/docs/Web/API/Houdini_APIs
 /ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
 /ja/docs/Web/Guide/Introduction_to_Web_development	/ja/docs/Learn
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
@@ -4155,7 +4157,7 @@
 /ja/docs/Web/HTTP/Response_codes/204	/ja/docs/Web/HTTP/Status/204
 /ja/docs/Web/HTTP/Server-Side_Access_Control	/ja/docs/Web/HTTP/CORS
 /ja/docs/Web/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Headers/X-Frame-Options
-/ja/docs/Web/Houdini	/ja/docs/Web/API/Houdini
+/ja/docs/Web/Houdini	/ja/docs/Web/API/Houdini_APIs
 /ja/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/Language_overview
 /ja/docs/Web/JavaScript/About_JavaScript	/ja/docs/Web/JavaScript
 /ja/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness

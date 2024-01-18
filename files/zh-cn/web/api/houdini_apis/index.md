@@ -1,6 +1,6 @@
 ---
-title: Houdini
-slug: Web/API/Houdini
+title: Houdini API
+slug: Web/API/Houdini_APIs
 ---
 
 {{DefaultAPISidebar("Houdini API")}}
