@@ -15,9 +15,9 @@ l10n:
 
 > **备注：** 只有在无法使用不安全的内联脚本或样式内容时，才使用 `nonce`。如果不需要 `nonce`，就不要使用。如果脚本是静态的，也可以使用 CSP 哈希值来代替。（请参阅[不安全内联脚本](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#不安全内联脚本)中的使用说明）。始终尽量充分利用 [CSP](/zh-CN/docs/Web/HTTP/CSP) 保护，并尽可能避免使用 nonce 或不安全的内联脚本。
 
-### 使用 nonce 允许获取 \<script> 元素包含的资源
+### 使用 nonce 以允许一个 \<script> 元素
 
-使用 nonce 机制允许获取内联脚本需要几个步骤：
+使用 nonce 机制允许内联脚本需要几个步骤：
 
 #### 生成所需值
 
