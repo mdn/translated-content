@@ -8361,10 +8361,6 @@
       "dubtar"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
-    "modified": "2019-03-18T21:22:36.012Z",
-    "contributors": ["viktoryiakuzmitskaya"]
-  },
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-07-30T04:09:14.375Z",
     "contributors": [
