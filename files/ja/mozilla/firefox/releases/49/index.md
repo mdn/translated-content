@@ -53,7 +53,7 @@ l10n:
 - [長さの単位 `q`](/ja/docs/Web/CSS/length#q) をサポートしました ([Firefox バグ 1274526](https://bugzil.la/1274526))。
 - {{cssxref("text-align-last")}} プロパティの接頭辞を削除しました ([Firefox バグ 1039541](https://bugzil.la/1039541))。
 - {{cssxref("overflow-wrap")}} をサポートしました。 `word-wrap` を置き換えるものですが、こちらも別名としてサポートを続けます ([Firefox バグ 955857](https://bugzil.la/955857))。
-- [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout) の実験的な実装が進展しました。
+- [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) の実験的な実装が進展しました。
 
   - {{cssxref("&lt;percentage&gt;")}} を `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティで対応しました ([Firefox バグ 1266268](https://bugzil.la/1266268))。
   - {{cssxref("align")}}、{{cssxref("justify-self")}}`:baseline`、`last-baseline` ("baseline self-alignment" として知られる) でグリッドレイアウトをサポートしました ([Firefox バグ 1221525](https://bugzil.la/1221525))。

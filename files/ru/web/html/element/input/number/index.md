@@ -48,13 +48,9 @@ This value must be greater than or equal to the value of the `min` attribute.
 
 ### `min`
 
-The minimum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
+Минимальное значение, которое может принять это поле ввода. Если значение атрибута [`value`](/ru/docs/Web/HTML/Element/input#value) меньше, то элемент не проходит [проверку ограничений](/ru/docs/Web/HTML/Constraint_validation). Если указанное для `min` значение не является числом, то у поля ввода нет минимального значения.
 
-This value must be less than or equal to the value of the `max` attribute.
-
-{{page("/ru/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
-
-{{page("/ru/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
+Это значение должно быть меньше или равно значению атрибута `max`.
 
 ### `step`
 
@@ -364,7 +360,7 @@ After declaring a few variables, we add an event listener to the button to contr
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

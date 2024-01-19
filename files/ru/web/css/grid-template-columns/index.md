@@ -138,7 +138,7 @@ grid-template-columns: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

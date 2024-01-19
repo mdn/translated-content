@@ -14,6 +14,8 @@ p:last-of-type {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-last-of-type.html", "tabbed-shorter")}}
+
 > **メモ:** 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
 ## 構文

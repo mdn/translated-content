@@ -37,7 +37,7 @@ row-gap: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
@@ -125,4 +125,4 @@ row-gap: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)
+- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)

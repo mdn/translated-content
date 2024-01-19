@@ -379,6 +379,6 @@ if (!haveEvents) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

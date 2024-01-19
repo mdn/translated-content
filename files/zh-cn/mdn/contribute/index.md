@@ -95,4 +95,4 @@ MDN Web 文档需要你的帮助！我们有大量需要完成的工作，比如
 
 ## 其他有用的页面
 
-{{LandingPageListSubPages()}}
+{{LandingPageListSubPages}}

@@ -76,7 +76,7 @@ function displayDataByIndex() {
 
 Not currently part of any specification.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

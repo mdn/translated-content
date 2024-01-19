@@ -94,7 +94,7 @@ ul li:first-child {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

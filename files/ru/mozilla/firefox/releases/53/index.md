@@ -55,17 +55,17 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 - {{Domxref ( "CompositionEvent.CompositionEvent", "CompositionEvent")}} Конструктор был реализован (см [Firefox bug 1002256](https://bugzil.la/1002256)).
 - {{Domxref ( "MouseEvent.x")}} и {{domxref ( "MouseEvent.y")}} псевдонимами {{domxref ( "MouseEvent.clientX")}} / {{domxref ( "MouseEvent.clientY" )}} были реализованы (см [Firefox bug 424390](https://bugzil.la/424390)).
 - {{Event ( "auxclick")}} событие и соответствующий {{domxref ( "GlobalEventHandlers.onauxclick")}} был реализован обработчик (см [Firefox bug 1304044](https://bugzil.la/1304044)).
-- {{Event ( "transitioncancel")}} событие теперь уволен после [перехода](/ru/docs/Web/CSS/CSS_Transitions) отменяется. См {{domxref ( "GlobalEventHandlers.ontransitioncancel")}} для получения более подробной информации и пример ({{bug ( "1264125")}}).
+- {{Event ( "transitioncancel")}} событие теперь уволен после [перехода](/ru/docs/Web/CSS/CSS_Transitions) отменяется. См {{domxref ( "GlobalEventHandlers.ontransitioncancel")}} для получения более подробной информации и пример ([Firefox bug 1264125](https://bugzil.la/1264125)).
 
 ### DOM
 
 - {{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. Например, для URL из `http://z.com/x?a=true&b=false`, `pathname` будет возвращаться « `/x?a=true&b=false"` и `search` вернётся„", а не» `/x` «и» `?a=true&b=false"` соответственно. Теперь это было исправлено ([Firefox bug 1310483](https://bugzil.la/1310483)).
-- {{Domxref ( "URLSearchParams.URLSearchParams", "URLSearchParams ()")}} Конструктор теперь принимает на {{domxref ( "USVString")}} или последовательность {{domxref ( "USVString")}} ев в качестве инициализации объект ({{bug( "1330678")}}).
+- {{Domxref ( "URLSearchParams.URLSearchParams", "URLSearchParams ()")}} Конструктор теперь принимает на {{domxref ( "USVString")}} или последовательность {{domxref ( "USVString")}} ев в качестве инициализации объект ([Firefox bug 1330678](https://bugzil.la/1330678)).
 - {{Domxref ( "Selection.setBaseAndExtent ()")}} метод [API выбора](/ru/docs/Web/API/Selection_API) теперь реализован (см [Firefox bug 1321623](https://bugzil.la/1321623)).
 - ["Fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) дополнение `file` типа {{HTMLElement ( "вход")}} `values` была реализована в Gecko, давая его соотношение с другими браузерами (см [Firefox bug 1274596](https://bugzil.la/1274596)).
 - {{Domxref ( "Node.getRootNode ()")}} была реализована, заменяя устаревшее {{domxref ( "Node.rootNode")}} Свойство ([Firefox bug 1269155](https://bugzil.la/1269155)).
-- Собственные свойства {{domxref ( "Plugin")}} и {{domxref ( "PluginArray")}} объектов больше не перечислимы ({{bug ( "1270366")}}).
-- Названные свойства {{domxref ( "MimeTypeArray")}} объекты больше не перечислимы ({{bug ( "1270364")}}).
+- Собственные свойства {{domxref ( "Plugin")}} и {{domxref ( "PluginArray")}} объектов больше не перечислимы ([Firefox bug 1270366](https://bugzil.la/1270366)).
+- Названные свойства {{domxref ( "MimeTypeArray")}} объекты больше не перечислимы ([Firefox bug 1270364](https://bugzil.la/1270364)).
 - [API разрешений](/ru/docs/Web/API/Permissions_API) теперь имеет новое название разрешения доступного - `persistent-storage`- как он используется при создании {{domxref ( "Permissions.query ()")}} (см [Firefox bug 1270038](https://bugzil.la/1270038)). Это позволяет источнику использовать постоянную форму (т.е. [постоянного хранения](https://storage.spec.whatwg.org/#persistence) ) для его хранения, в соответствии с [API хранения](https://storage.spec.whatwg.org/) .
 
 ### Рабочие и работники сферы обслуживания
@@ -91,7 +91,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 #### Web Audio API
 
-- Был добавлен {{domxref ( "AudioScheduledSourceNode")}} интерфейс и {{domxref ( "AudioBufferSourceNode")}}, {{domxref ( "ConstantSourceNode")}} и {{domxref ( "OscillatorNode")}} интерфейсы теперь основаны на нем ({{bug( "1324568")}}).
+- Был добавлен {{domxref ( "AudioScheduledSourceNode")}} интерфейс и {{domxref ( "AudioBufferSourceNode")}}, {{domxref ( "ConstantSourceNode")}} и {{domxref ( "OscillatorNode")}} интерфейсы теперь основаны на нем ([Firefox bug 1324568](https://bugzil.la/1324568)).
 
 #### WebRTC
 
@@ -102,14 +102,14 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### HTTP / Networking
 
-- Gecko теперь имеет прив доступный в , `about:config` чтобы позволить пользователям устанавливать их по умолчанию {{HTTPHeader ( "Referrer-политики")}} - ({{bug ( "1304623")}}). Возможные значения: `network.http.referer.userControlPolicy`
+- Gecko теперь имеет прив доступный в , `about:config` чтобы позволить пользователям устанавливать их по умолчанию {{HTTPHeader ( "Referrer-политики")}} - ([Firefox bug 1304623](https://bugzil.la/1304623)). Возможные значения: `network.http.referer.userControlPolicy`
 
   - 0 - `no-referrer`
   - 1 - `same-origin`
   - 2 - `strict-origin-when-cross-origin`
   - 3 - `no-referrer-when-downgrade` (по умолчанию)
 
-- Поддержка следующего протокола переговоров (NPN) была удалена в пользу [протокола прикладного уровня переговоров](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation) (ALPN) - см {{bug ( "1248198")}}.
+- Поддержка следующего протокола переговоров (NPN) была удалена в пользу [протокола прикладного уровня переговоров](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation) (ALPN) - см [Firefox bug 1248198](https://bugzil.la/1248198).
 - {{HTTPHeader ( "Large-Allocation")}} заголовок HTTP теперь доступен по умолчанию, и больше не скрывается за привилегированную ([Firefox bug 1331083](https://bugzil.la/1331083)).
 
 ### SVG

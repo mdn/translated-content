@@ -5451,10 +5451,6 @@
     "modified": "2020-04-05T18:24:36.523Z",
     "contributors": ["guidiasz", "michelsouza"]
   },
-  "Web/Guide/Performance": {
-    "modified": "2019-03-18T20:49:01.451Z",
-    "contributors": ["ssamuel645", "KelviDalmazo"]
-  },
   "Web/HTML": {
     "modified": "2019-09-10T15:24:16.025Z",
     "contributors": [
@@ -10024,6 +10020,10 @@
     "modified": "2019-03-23T22:44:08.372Z",
     "contributors": ["MarceloBonifazio", "yuriploc", "brunoeduardo"]
   },
+  "Web/Performance": {
+    "modified": "2019-03-18T20:49:01.451Z",
+    "contributors": ["ssamuel645", "KelviDalmazo"]
+  },
   "Web/Progressive_web_apps/Tutorials/js13kGames": {
     "modified": "2019-03-18T20:52:09.829Z",
     "contributors": ["chrisdavidmills", "rodolfo.ghiggi"]
@@ -10048,10 +10048,6 @@
   },
   "Web/SVG/Attribute/class": {
     "modified": "2019-03-23T22:58:45.630Z",
-    "contributors": ["caio"]
-  },
-  "Web/SVG/Attribute/contentStyleType": {
-    "modified": "2019-03-23T22:58:38.907Z",
     "contributors": ["caio"]
   },
   "Web/SVG/Attribute/fill": {
@@ -11461,6 +11457,10 @@
       "takahan",
       "pcf-pcf"
     ]
+  },
+  "orphaned/Web/SVG/Attribute/contentStyleType": {
+    "modified": "2019-03-23T22:58:38.907Z",
+    "contributors": ["caio"]
   },
   "orphaned/Web/SVG/Element/altGlyph": {
     "modified": "2019-03-23T22:57:23.875Z",

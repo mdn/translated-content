@@ -1,12 +1,15 @@
 ---
 title: バイナリーデータの送信と受信
 slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
-original_slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
+l10n:
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
+
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 XMLHttpRequest オブジェクトの `responseType` プロパティで、サーバーに期待する応答の種類を変更することができます。設定可能な値は空文字列 (既定), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, `"text"` です。 `response` プロパティにはエンティティの本体が `responseType` に応じて `ArrayBuffer`, `Blob`, `Document`, `JSON` または文字列で格納されます。要求が不完全であったり成功しなかった場合は `null` になります。
 
-このサンプルでは画像をバイナリーファイルとして読み込み、生のバイト列から 8 ビット符号なし整数値の配列を作成します。なお、これは画像をデコードしてピクセルを読み取ることは行いません。そのためには [png デコードライブラルー](https://github.com/foliojs/png.js/)が必要になるでしょう。
+このサンプルでは画像をバイナリーファイルとして読み込み、生のバイト列から 8 ビット符号なし整数値の配列を作成します。なお、これは画像をデコードしてピクセルを読み取ることは行いません。そのためには [png デコードライブラリー](https://github.com/foliojs/png.js)が必要になるでしょう。
 
 ```js
 const req = new XMLHttpRequest();
@@ -38,7 +41,7 @@ req.onload = (event) => {
   // ...
 };
 
-oReq.send();
+req.send();
 ```
 
 ## 古いブラウザーでのバイナリーデータの受信
@@ -66,7 +69,7 @@ const abyte = filestream.charCodeAt(x) & 0xff; // throw away high-order byte (f7
 
 上記のサンプルでは、ロードしたバイナリーデータ内のオフセット `x` のバイトを取得します。 `x` の有効範囲は 0 から `filestream.length-1` です。
 
-詳細な説明は [downloading binary streams with XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) を見て下さい。また[ファイルのダウンロード](/ja/docs/Code_snippets/Downloading_Files)も見て下さい。
+詳細な説明は [downloading binary streams with XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) を見て下さい。
 
 ## バイナリーデータの送信
 
@@ -103,6 +106,4 @@ xhr.send(array);
 
 ## フォーム送信とファイルアップロード
 
-[この節](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files)をお読み下さい。
-
-{{APIRef("XMLHttpRequest")}}
+[`FormData`](/ja/docs/Web/API/FormData) を参照してください。

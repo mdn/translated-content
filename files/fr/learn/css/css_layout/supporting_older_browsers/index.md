@@ -121,10 +121,6 @@ Pour de nombreux ajustements de mise en page dans les navigateurs plus anciens, 
 
 Dans la disposition flottante, le pourcentage est calculé à partir du conteneur — 33,333 % correspond à un tiers de la largeur du conteneur. Dans la grille, cependant, ces 33,333 % sont calculés à partir de la zone de la grille dans laquelle l'élément est placé, de sorte qu'il devient en fait un tiers de la taille souhaitée une fois que la disposition en grille est introduite.
 
-### Exemple
-
-#### CSS
-
 ```css
 * {
   box-sizing: border-box;
@@ -147,8 +143,6 @@ Dans la disposition flottante, le pourcentage est calculé à partir du conteneu
 }
 ```
 
-#### HTML
-
 ```html
 <div class="wrapper">
   <div class="item">Item One</div>
@@ -157,7 +151,7 @@ Dans la disposition flottante, le pourcentage est calculé à partir du conteneu
 </div>
 ```
 
-{{EmbedLiveSample('Exemple_2', '', '150')}}
+{{EmbedLiveSample('Méthodes de substitution', '100%', '200')}}
 
 Pour résoudre ce problème, nous devons trouver un moyen de détecter si la grille est prise en charge et donc si elle remplacera la largeur. CSS a une solution pour nous ici.
 
@@ -166,10 +160,6 @@ Pour résoudre ce problème, nous devons trouver un moyen de détecter si la gri
 Les requêtes de fonctionnalités vous permettent de vérifier si un navigateur prend en charge une fonctionnalité CSS particulière. Cela signifie que vous pouvez écrire du CSS pour les navigateurs qui ne prennent pas en charge une certaine fonctionnalité, puis vérifier si le navigateur la prend en charge et, si c'est le cas, intégrer votre mise en page.
 
 Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous pouvons l'utiliser pour remettre les largeurs de nos éléments sur `auto` si nous savons que nous avons un support de grille.
-
-### Exemple
-
-#### CSS
 
 ```css
 * {
@@ -199,8 +189,6 @@ Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous po
 }
 ```
 
-#### HTML
-
 ```html
 <div class="wrapper">
   <div class="item">Item One</div>
@@ -209,7 +197,7 @@ Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous po
 </div>
 ```
 
-{{EmbedLiveSample('Exemple_3', '', '150')}}
+{{EmbedLiveSample('Requêtes de fonctionnalités', '100%', '200') }}
 
 La prise en charge des requêtes de caractéristiques est très bonne dans les navigateurs modernes. Toutefois, vous devez noter que ce sont les navigateurs qui ne prennent pas en charge la grille CSS, qui ne prennent pas non plus en charge les requêtes de fonctionnalités. Cela signifie qu'une approche telle que celle décrite ci-dessus fonctionnera pour ces navigateurs. Ce que nous faisons, c'est écrire notre ancien CSS en premier, en dehors de toute requête de fonctionnalité. Les navigateurs qui ne prennent pas en charge la grille et la requête de fonctionnalité utiliseront les informations de mise en page qu'ils peuvent comprendre et ignoreront complètement tout le reste. Les navigateurs qui prennent en charge la requête de fonctionnalité prennent également en charge CSS Grid et exécuteront donc le code de la grille et le code contenu dans la requête de fonctionnalité.
 

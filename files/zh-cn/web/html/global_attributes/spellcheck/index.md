@@ -3,7 +3,7 @@ title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{HTMLSidebar("Global_attributes")}}
 
 spellcheck [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是枚举属性，定义是否可以检查元素的拼写错误。它可以具有以下值：
 

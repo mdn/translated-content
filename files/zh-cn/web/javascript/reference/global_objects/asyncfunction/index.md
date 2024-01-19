@@ -1,6 +1,8 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
@@ -13,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 const AsyncFunction = async function () {}.constructor;
 ```
 
-`AsyncFunction` 是 {{jsxref("Function")}} 的子类型。
+`AsyncFunction` 是 {{jsxref("Function")}} 的子类。
 
 ## 构造函数
 
