@@ -6656,10 +6656,6 @@
       "turuto"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
-    "modified": "2019-11-06T19:10:32.985Z",
-    "contributors": ["tonyrodz"]
-  },
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-03-25T21:15:58.856Z",
     "contributors": ["amazing79", "otello1971", "cwalternicolas"]
@@ -13832,6 +13828,10 @@
   "conflicting/Glossary/Doctype": {
     "modified": "2019-01-17T00:20:06.485Z",
     "contributors": ["wilfridoSantos"]
+  },
+  "conflicting/Glossary/Flexbox": {
+    "modified": "2019-11-06T19:10:32.985Z",
+    "contributors": ["tonyrodz"]
   },
   "conflicting/Learn": {
     "modified": "2020-07-16T22:22:13.785Z",
