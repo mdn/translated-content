@@ -82,7 +82,7 @@ events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

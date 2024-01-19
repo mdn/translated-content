@@ -19,7 +19,7 @@ connectionInfo = navigator.connection
 
 {{Specifications}}
 
-## Доступность в браузере
+## Совместимость с браузерами
 
 {{Compat}}
 

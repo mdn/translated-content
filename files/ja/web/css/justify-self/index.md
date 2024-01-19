@@ -106,13 +106,13 @@ justify-self: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<h3 id="Simple_demonstration">簡単なデモ</h3>
+### 簡単なデモ
 
 以下の例では簡単な 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには `justify-items` の値を `stretch` に — 既定値に — 設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
 
@@ -179,11 +179,11 @@ article {
 
 #### 結果
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
+{{EmbedLiveSample('簡単なデモ', '100%', 200)}}
 
 ## 仕様書
 
-{{Specifications("css.properties.justify-self.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 

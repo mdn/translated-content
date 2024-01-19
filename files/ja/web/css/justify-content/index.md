@@ -99,13 +99,13 @@ justify-content: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<h3 id="Setting_flex_item_distribution">フレックスアイテムの配分の設定</h3>
+### フレックスアイテムの配分の設定
 
 #### CSS
 
@@ -155,11 +155,11 @@ justifyContent.addEventListener("change", function (evt) {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_flex_item_distribution", "100%", 180)}}
+{{EmbedLiveSample("フレックスアイテムの配分の設定", "100%", 180)}}
 
 ## 仕様書
 
-{{Specifications("css.properties.justify-content.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 

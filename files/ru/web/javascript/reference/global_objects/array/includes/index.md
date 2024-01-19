@@ -141,7 +141,7 @@ if (!Array.prototype.includes) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

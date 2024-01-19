@@ -40,6 +40,6 @@ MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗�
 
 {{Specifications}}
 
-## See also
+## 関連情報
 
 - {{ MathMLElement("mroot") }} (Radical with an index)

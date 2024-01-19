@@ -29,7 +29,7 @@ isCollapsed = range.collapsed;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

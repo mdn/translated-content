@@ -68,7 +68,7 @@ fetch("simple.wasm")
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

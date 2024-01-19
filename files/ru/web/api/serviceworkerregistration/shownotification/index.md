@@ -76,6 +76,6 @@ You can also retrieve details of the {{domxref("Notification")}}s have have been
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

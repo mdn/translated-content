@@ -33,7 +33,7 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 ## Propiedades
 
 - {{domxref("IDBCursor.source")}} {{readonlyInline}}
-  - : Devuelve {{domxref("IDBObjectStore")}} o {{domxref("IDBIndex")}}} que el cursor está iterando. Esta función nunca devuelve nulo o lanza una excepción, incluso si el cursor está siendo iterado, ha iterado más allá de su final, o su transacción no está activa.
+  - : Devuelve {{domxref("IDBObjectStore")}} o {{domxref("IDBIndex")}} que el cursor está iterando. Esta función nunca devuelve nulo o lanza una excepción, incluso si el cursor está siendo iterado, ha iterado más allá de su final, o su transacción no está activa.
 - {{domxref("IDBCursor.direction")}} {{readonlyInline}}
   - : Devuelve la dirección de desplazamiento del cursor. Ver [Constants](#const_next) para valores posibles.
 - {{domxref("IDBCursor.key")}} {{readonlyInline}}

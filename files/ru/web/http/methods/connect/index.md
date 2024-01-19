@@ -64,7 +64,7 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

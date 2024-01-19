@@ -1,6 +1,8 @@
 ---
 title: d
 slug: Web/SVG/Attribute/d
+l10n:
+  sourceCommit: 32d1c9ff83019f8efae3e7987a55e83035e4b926
 ---
 
 {{SVGRef}}
@@ -9,7 +11,11 @@ slug: Web/SVG/Attribute/d
 
 パスの定義は[パスコマンド](#Path_commands)のリストで、各コマンドはコマンド文字とコマンドへのパラメータを示す数値から構成されます。コマンドの詳細は以下になります。
 
-３つの要素がこの属性を有します： {{SVGElement("path")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}
+３つの要素がこの属性を有します： [`<path>`](#path), [`<glyph>`](#glyph), [`<missing-glyph>`](#missing-glyph)
+
+`d` は [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation) のため、[CSS プロパティとして使用](#css_%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%A8%E3%81%97%E3%81%A6_d_%E3%82%92%E4%BD%BF%E7%94%A8) することもできます。
+
+## 例
 
 ```css hidden
 html,
@@ -38,10 +44,24 @@ svg {
 
 {{SVGElement('path')}}要素に対しては、`d`属性は、描かれるパスを定義するパスコマンドの並びを含む文字列です。
 
-| 値                 | **[\<string>](/ja/docs/Web/SVG/Content_type#String)** |
-| ------------------ | ----------------------------------------------------- |
-| 初期値             | _none_                                                |
-| アニメーション可否 | Yes                                                   |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 ## glyph
 
@@ -49,12 +69,26 @@ svg {
 
 {{SVGElement('glyph')}}要素に対しては、`d`属性はグリフのアウトライン形状を定義するパスコマンドの並びを含む文字列です。
 
-| 値                 | **[\<string>](/ja/docs/Web/SVG/Content_type#String)** |
-| ------------------ | ----------------------------------------------------- |
-| 初期値             | _none_                                                |
-| アニメーション可否 | Yes                                                   |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** 原点(座標`0`,`0`)は通常、コンテキストの*左上の角*です。しかし、{{SVGElement("glyph")}}要素は、それ自身の原点を文字ボックスの*左下*に持ちます。
+> **メモ:** 原点(座標`0`, `0`)は通常、コンテキストの _左上の角_ です。しかし、{{SVGElement("glyph")}}要素は、それ自身の原点を文字ボックスの _左下_ に持ちます。
 
 ## missing-glyph
 
@@ -62,10 +96,63 @@ svg {
 
 {{SVGElement('missing-glyph')}}要素に対しては、`d`属性は、グリフのアウトライン形状を定義するパスコマンドの並びを含んだ文字列です。
 
-| 値                 | **[\<string>](/ja/docs/Web/SVG/Content_type#String)** |
-| ------------------ | ----------------------------------------------------- |
-| 初期値             | _none_                                                |
-| アニメーション可否 | Yes                                                   |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+## CSS プロパティとして d を使用
+
+`d` は [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation) であるため、CSS を使用して変更することもできます。
+このプロパティは、[path()](/ja/docs/Web/CSS/path) または `none` のいずれかをとります。
+
+以下の例は、要素の上にマウスを置くと新しいパスを適用する方法を示しています。
+新しいパスは古いパスと同じですが、ハートを横切る線が追加されます。
+
+```css
+html,
+body,
+svg {
+  height: 100%;
+}
+
+/* This path is displayed on hover*/
+#svg_css_ex1:hover path {
+  d: path(
+    "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
+  );
+}
+```
+
+```html
+<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill="none"
+    stroke="red"
+    d="M 10,30
+       A 20,20 0,0,1 50,30
+       A 20,20 0,0,1 90,30
+       Q 90,60 50,90
+       Q 10,60 10,30 z
+       " />
+</svg>
+```
+
+{{EmbedLiveSample('Using d as a CSS Property', '100%', 200)}}
 
 ## パスコマンド
 
@@ -80,22 +167,72 @@ SVG では、6 つのタイプのパスコマンドを定義しており、全�
 - 楕円円弧曲線: `A`, `a`
 - ClosePath: `Z`, `z`
 
-> **メモ:** **ノート:**コマンドは*ケースセンシティブ（大小文字の区別あり）*です. 大文字のコマンドは絶対座標を指定し、これに対して小文字のコマンドは現在位置からの相対座標を指定します。
+> **メモ:** コマンドは _ケースセンシティブ（大小文字の区別あり）_ です. 大文字のコマンドは絶対座標を指定し、これに対して小文字のコマンドは現在位置からの相対座標を指定します。
 
 コマンドへの引数として負値を指定することは常に可能です:
 
 - 負の角度は反時計回りとなります;
-- *絶対値*での負の*x*と*y*の値は反転座標と解釈されます;
-- *相対値*での負の*x*の値は左へ移動,相対値での負の*y*の値は上方向へ移動します。
+- _絶対値_ での負の _x_ と _y_ の値は反転座標と解釈されます;
+- _相対値_ での負の _x_ の値は左へ移動、相対値での負の _y_ の値は上方向へ移動します。
 
 ### MoveTo パスコマンド
 
-*MoveTo*での指定は、筆記用具を持ち上げ他の位置で下ろす動作と考えられます―言い換えると、_現在位置_ (Po; {xo, yo})の移動です。Po と新しい*現在位置* (Pn; {xn, yn})との間には線は描かれません。
+_MoveTo_ での指定は、筆記用具を持ち上げ他の位置で下ろす動作と考えられます―言い換えると、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) の移動です。_P<sub>o</sub>_ と新しい _現在位置_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}) との間には線は描かれません。
 
-| コマンド | パラメータ    | 説明                                                                                                                                                                                                                                          |
-| -------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| M        | (`x`, `y`)+   | *現在位置*を座標`x`,`y`へ移動します。後続する任意個の座標の組は暗黙的に絶対座標での LineTo(`L`)コマンドと解釈されます(_以下を参照_)。**形式:** Pn = {`x`, `y`}                                                                                |
-| m        | (`dx`, `dy`)+ | *現在位置*を最後に把握されたパス位置からの`dx`を x 軸方向、`dy`を y 軸に沿った並進として移動します。後続する任意個の座標の組は暗黙的に相対座標での LineTo(`l`)コマンドとして解釈されます(_以下を参照_)。**形式:** Pn = {xo + `dx`, yo + `dy`} |
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th scope="col">コマンド</th>
+      <th scope="col">パラメータ</th>
+      <th scope="col">説明</th>
+    </tr>
+    <tr>
+      <th scope="row">M</th>
+      <td>
+        (<code><var>x</var></code
+        >, <code><var>y</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          <em>現在位置</em> を座標
+          <code><var>x</var></code
+          >,<code><var>y</var></code
+          > へ移動します。後続する任意個の座標の組は暗黙的に絶対座標での LineTo(<code>L</code>)コマンドと解釈されます(<em
+            >以下を参照</em
+          >)。
+        </p>
+        <p>
+          <strong>形式:</strong> <var>P<sub>n</sub></var> = {<code
+            ><var>x</var></code
+          >, <code><var>y</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">m</th>
+      <td>
+        (<code><var>dx</var></code
+        >, <code><var>dy</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          <em>現在位置</em> を最後に把握されたパス位置からの <code><var>dx</var></code> を x 軸方向、<code><var>dy</var></code> を y 軸に沿った並進として移動します。後続する任意個の座標の組は暗黙的に相対座標での LineTo(<code>l</code>)コマンドとして解釈されます(<em>以下を参照</em>)。
+        </p>
+        <p>
+          <strong>形式:</strong> <var>P<sub>n</sub></var> = {<var
+            >x<sub>o</sub></var
+          >
+          + <code><var>dx</var></code
+          >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### 例
 
@@ -130,16 +267,125 @@ svg {
 
 ### LineTo パスコマンド
 
-*LineTo*は、_現在位置_ (Po; {xo, yo})から*終端位置* (Pn; {xn, yn})への直線を指定されたパラメータに基づいて描きます。_終端位置_(Pn)は、次のコマンドでの*現在位置* (Po′)となります。
+_LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) から _終端位置_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}) への直線を指定されたパラメータに基づいて描きます。_終端位置_ (_P<sub>n</sub>_) は、次のコマンドでの _現在位置_ (_P<sub>o</sub>′_) となります。
 
-| コマンド | パラメータ    | 説明                                                                                                                                                                                                                                                     |
-| -------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| L        | (`x`, `y`)+   | *現在位置*から`x`,`y`で指定される*終端位置*へ直線を描きます。後続する任意個の座標の組は暗黙的に絶対座標での LineTo (`L`) コマンドと解釈されます。**形式:** Po′ = Pn = {`x`, `y`}                                                                         |
-| l        | (`dx`, `dy`)+ | *現在位置*から、*現在位置*に対する x-軸方向に`dx`、y-軸方向に`dy`で表される*終端位置*への直線を描きます。後続する任意個の座標の組は、暗黙的に相対座標での LineTo (`l`) コマンドと解釈されます(_以下を参照_)。**形式:** Po′ = Pn = {xo + `dx`, yo + `dy`} |
-| H        | `x`+          | *現在位置*から、パラメータ`x`と*現在位置の\_y 座標で指定される*終端座標\_までの水平線を描きます。後続する任意個の値は、暗黙的に絶対座標での水平線用の LineTo (`H`)コマンドと解釈されます。**形式:** Po′ = Pn = {`x`, yo}                                 |
-| h        | `dx`+         | *現在位置*から、*現在位置*からの x-軸方向への`dx`の並進と*現在位置の\_y 座標で指定される*終端位置\_までの水平線を描きます。後続する任意個の値は、暗黙的に相対座標での水平線用の LineTo (`h`)コマンドと解釈されます。**形式:** Po′ = Pn = {xo + `dx`, yo} |
-| V        | `y`+          | *現在位置*から、パラメータ`y`と*現在位置の\_x 座標で指定される*終端座標\_までの垂直線を描きます。後続する任意個の値は、暗黙的に絶対座標での垂直線用の LineTo (`V`)コマンドと解釈されます。**形式:** Po′ = Pn = {xo, `y`}                                 |
-| v        | `dy`+         | *現在位置*から、*現在位置*からの y-軸方向への`dx`の並進と*現在位置の\_x 座標で指定される*終端位置\_までの垂直線を描きます。後続する任意個の値は、暗黙的に相対座標での垂直線用の LineTo (`v`)コマンドと解釈されます。**形式:** Po′ = Pn = {xo, yo + `dy`} |
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th scope="col">コマンド</th>
+      <th scope="col">パラメータ</th>
+      <th scope="col">説明</th>
+    </tr>
+    <tr>
+      <th scope="row">L</th>
+      <td>(<code>x</code>, <code>y</code>)+</td>
+      <td>
+        <p>
+          <em>現在位置</em> から <code><var>x</var></code>,<code><var>y</var></code> で指定される <em>終端位置</em> へ直線を描きます。後続する任意個の座標の組は暗黙的に絶対座標での LineTo (<code>L</code>) コマンドと解釈されます。
+        </p>
+        <p>
+          <strong>形式:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<code><var>x</var></code
+          >, <code><var>y</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">l</th>
+      <td>
+        (<code><var>dx</var></code
+        >, <code><var>dy</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          <em>現在位置</em> から、<em>現在位置</em> に対する x-軸方向に<code><var>dx</var></code> 、y-軸方向に <code><var>dy</var></code> で表される <em>終端位置</em> への直線を描きます。後続する任意個の座標の組は、暗黙的に相対座標での LineTo (<code>l</code>) コマンドと解釈されます(<em>以下を参照</em>)。
+        </p>
+        <p>
+          <strong>形式:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var> +
+          <code><var>dx</var></code
+          >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">H</th>
+      <td>
+        <code><var>x</var></code
+        >+
+      </td>
+      <td>
+        <p>
+          <em>現在位置</em>から、パラメータ<code><var>x</var></code>と<em>現在位置</em>の<code>y</code>座標で指定される<em>終端座標</em>までの水平線を描きます。後続する任意個の値は、暗黙的に絶対座標での水平線用の LineTo (<code>H</code>)コマンドと解釈されます。
+        </p>
+        <p>
+          <strong>形式:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<code><var>x</var></code
+          >, <var>y<sub>o</sub></var
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">h</th>
+      <td>
+        <code><var>dx</var></code
+        >+
+      </td>
+      <td>
+        <p>
+          <em>現在位置</em>から、<em>現在位置</em>からの x-軸方向への<code><var>dx</var></code>の並進と<em>現在位置</em>の <code>y</code> 座標で指定される<em>終端位置</em>までの水平線を描きます。後続する任意個の値は、暗黙的に相対座標での水平線用の LineTo (<code>h</code>) コマンドと解釈されます。
+        </p>
+        <p>
+          <strong>形式:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var> +
+          <code><var>dx</var></code
+          >, <var>y<sub>o</sub></var
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">V</th>
+      <td>
+        <code><var>y</var></code
+        >+
+      </td>
+      <td>
+        <p>
+          <em>現在位置</em>から、パラメータ <code><var>y</var></code> と<em>現在位置</em>の <code>x</code> 座標で指定される<em>終端座標</em>までの垂直線を描きます。後続する任意個の値は、暗黙的に絶対座標での垂直線用の LineTo (<code>V</code>)コマンドと解釈されます。
+        </p>
+        <p>
+          <strong>形式:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var
+          >, <code><var>y</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">v</th>
+      <td>
+        <code><var>dy</var></code
+        >+
+      </td>
+      <td>
+        <p>
+          <em>現在位置</em>から、<em>現在位置</em>からの y-軸方向への <code><var>dy</var></code> の並進と<em>現在位置</em>の <code>x</code> 座標で指定される<em>終端位置</em>までの垂直線を描きます。後続する任意個の値は、暗黙的に相対座標での垂直線用の LineTo (<code>v</code>)コマンドと解釈されます。
+        </p>
+        <p>
+          <strong>形式:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var
+          >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### 例
 
@@ -190,9 +436,9 @@ _3 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
   - : (Pce = {xce, yce})
     (曲線の終端近くの曲率を制御します)
 
-描画後に、_終端位置_(Pn)は、次のコマンドに対する*現在位置* (Po′)となります。
+描画後に、_終端位置_ (_P<sub>n</sub>_) は、次のコマンドに対する _現在位置_ (_P<sub>o</sub>′_) となります。
 
-<table class="standard-table">
+<table class="no-markdown">
   <tbody>
     <tr>
       <th scope="col">コマンド</th>
@@ -202,8 +448,13 @@ _3 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
     <tr>
       <th scope="row">C</th>
       <td>
-        (<code>x1</code>,<code>y1</code>, <code>x2</code>,<code>y2</code>,
-        <code>x</code>,<code>y</code>)+
+        (<code><var>x1</var></code
+        >,<code><var>y1</var></code
+        >, <code><var>x2</var></code
+        >,<code><var>y2</var></code
+        >, <code><var>x</var></code
+        >,<code><var>y</var></code
+        >)+
       </td>
       <td>
         <p>
@@ -213,11 +464,14 @@ _3 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
         <dl>
           <dt>形式:</dt>
           <dd>
-            P<sub>o</sub>′ = P<sub>n</sub> = {<code>x</code>, <code>y</code>}
-            ;<br />P<sub>cs</sub> = {<code>x1</code>, <code>y1</code>} ;<br />P<sub
-              >ce</sub
-            >
-            = {<code>x2</code>, <code>y2</code>}
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code
+              ><var>x</var></code
+            >, <code><var>y</var></code
+            >} ;<br /><var>P<sub>cs</sub></var> = {<code><var>x1</var></code
+            >, <code><var>y1</var></code
+            >} ;<br /><var>P<sub>ce</sub></var> = {<code><var>x2</var></code
+            >, <code><var>y2</var></code
+            >}
           </dd>
         </dl>
       </td>
@@ -225,8 +479,13 @@ _3 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
     <tr>
       <th scope="row">c</th>
       <td>
-        (<code>dx1</code>,<code>dy1</code>, <code>dx2</code>,<code>dy2</code>,
-        <code>dx</code>,<code>dy</code>)+
+        (<code><var>dx1</var></code
+        >,<code><var>dy1</var></code
+        >, <code><var>dx2</var></code
+        >,<code><var>dy2</var></code
+        >, <code><var>dx</var></code
+        >,<code><var>dy</var></code
+        >)+
       </td>
       <td>
         <p>
@@ -243,22 +502,31 @@ _3 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
         <dl>
           <dt>形式:</dt>
           <dd>
-            P<sub>o</sub>′ = P<sub>n</sub> = {x<sub>o</sub> + <code>dx</code>,
-            y<sub>o</sub> + <code>dy</code>} ;<br />P<sub>cs</sub> = {x<sub
-              >o</sub
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var
+              >x<sub>o</sub></var
             >
-            + <code>dx1</code>, y<sub>o</sub> + <code>dy1</code>} ;<br />P<sub
-              >ce</sub
-            >
-            = {x<sub>o</sub> + <code>dx2</code>, y<sub>o</sub> +
-            <code>dy2</code>}
+            + <code><var>dx</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+            >} ;<br /><var>P<sub>cs</sub></var> = {<var>x<sub>o</sub></var> +
+            <code><var>dx1</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy1</var></code
+            >} ;<br /><var>P<sub>ce</sub></var> = {<var>x<sub>o</sub></var> +
+            <code><var>dx2</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy2</var></code
+            >}
           </dd>
         </dl>
       </td>
     </tr>
     <tr>
       <th scope="row">S</th>
-      <td>(<code>x2</code>,<code>y2</code>, <code>x</code>,<code>y</code>)+</td>
+      <td>
+        (<code><var>x2</var></code
+        >,<code><var>y2</var></code
+        >, <code><var>x</var></code
+        >,<code><var>y</var></code
+        >)+
+      </td>
       <td>
         <em>開始位置</em
         >から、<code>x</code>,<code>y</code>で指定される<em>終端位置</em>までの滑らかな3次ベジエ曲線を描きます。<em>終端制御点</em>は、<code>x2</code>,<code>y2</code>で指定されます。<em>開始制御点</em>は、直前の曲線コマンドの<em>終端制御点</em>が鏡映されます。もし直前のコマンドが3次ベジエ曲線でない場合は、<em>開始制御点</em>は曲線の開始位置(<em>現在座標</em>)と同一となります。後続する任意個の座標の組は、暗黙的に絶対座標での滑らかな3次ベジエ曲線(<code>S</code>)コマンドへのパラメータと解釈されます。
@@ -267,7 +535,11 @@ _3 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
     <tr>
       <th scope="row">s</th>
       <td>
-        (<code>dx2</code>,<code>dy2</code>, <code>dx</code>,<code>dy</code>)+
+        (<code><var>dx2</var></code
+        >,<code><var>dy2</var></code
+        >, <code><var>dx</var></code
+        >,<code><var>dy</var></code
+        >)+
       </td>
       <td>
         <em>開始位置</em
@@ -336,7 +608,7 @@ svg {
     <circle cx="50" cy="10" r="1.5" />
     <circle cx="90" cy="90" r="1.5" />
   </g>
-  <use xlink:href="#ControlPoints" x="100" />
+  <use href="#ControlPoints" x="100" />
 </svg>
 ```
 
@@ -347,16 +619,16 @@ svg {
 _2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)_ は 3 点で定義される滑らかな曲線です:
 
 - _開始座標(現在位置)_
-  - : Po = {xo, yo}
+  - : _P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_}
 - _終端座標_
-  - : Pn = {xn, yn}
+  - : _P<sub>n</sub>_ = {_x<sub>n</sub>_, _y<sub>n</sub>_}
 - _制御点_
-  - : Pc = {xc, yc}
+  - : _P<sub>c</sub>_ = {_x<sub>c</sub>_, _y<sub>c</sub>_}
     (曲率を制御します)
 
-描画後に、_終端位置_(Pn)は、次のコマンドに対する*現在位置*(Po′)となります。
+描画後に、_終端位置_ (_P<sub>n</sub>_) は、次のコマンドに対する _現在位置_ (_P<sub>o</sub>′_)となります。
 
-<table class="standard-table">
+<table class="no-markdown">
   <tbody>
     <tr>
       <th scope="col">コマンド</th>
@@ -365,7 +637,13 @@ _2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
     </tr>
     <tr>
       <th scope="row">Q</th>
-      <td>(<code>x1</code>,<code>y1</code>, <code>x</code>,<code>y</code>)+</td>
+      <td>
+        (<code><var>x1</var></code
+        >,<code><var>y1</var></code
+        >, <code><var>x</var></code
+        >,<code><var>y</var></code
+        >)+
+      </td>
       <td>
         <p>
           <em>開始位置</em
@@ -375,8 +653,12 @@ _2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
         <dl>
           <dt><strong>形式:</strong></dt>
           <dd>
-            P<sub>o</sub>′ = P<sub>n</sub> = {<code>x</code>, <code>y</code>}
-            ;<br />P<sub>c</sub> = {<code>x1</code>, <code>y1</code>}
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code
+              ><var>x</var></code
+            >, <code><var>y</var></code
+            >} ;<br /><var>P<sub>c</sub></var> = {<code><var>x1</var></code
+            >, <code><var>y1</var></code
+            >}
           </dd>
         </dl>
       </td>
@@ -384,7 +666,11 @@ _2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
     <tr>
       <th scope="row">q</th>
       <td>
-        (<code>dx1</code>,<code>dy1</code>, <code>dx</code>,<code>dy</code>)+
+        (<code><var>dx1</var></code
+        >,<code><var>dy1</var></code
+        >, <code><var>dx</var></code
+        >,<code><var>dy</var></code
+        >)+
       </td>
       <td>
         <p>
@@ -398,18 +684,26 @@ _2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
         <dl>
           <dt>形式:</dt>
           <dd>
-            P<sub>o</sub>′ = P<sub>n</sub> = {x<sub>o</sub> + <code>dx</code>,
-            y<sub>o</sub> + <code>dy</code>} ;<br />P<sub>c</sub> = {x<sub
-              >o</sub
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var
+              >x<sub>o</sub></var
             >
-            + <code>dx1</code>, y<sub>o</sub> + <code>dy1</code>}
+            + <code><var>dx</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+            >} ;<br /><var>P<sub>c</sub></var> = {<var>x<sub>o</sub></var> +
+            <code><var>dx1</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy1</var></code
+            >}
           </dd>
         </dl>
       </td>
     </tr>
     <tr>
       <th scope="row">T</th>
-      <td>(<code>x</code>,<code>y</code>)+</td>
+      <td>
+        (<code><var>x</var></code
+        >,<code><var>y</var></code
+        >)+
+      </td>
       <td>
         <p>
           <em>開始位置</em
@@ -418,14 +712,21 @@ _2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
         <dl>
           <dt>形式:</dt>
           <dd>
-            P<sub>o</sub>′ = P<sub>n</sub> = {<code>x</code>, <code>y</code>}
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code
+              ><var>x</var></code
+            >, <code><var>y</var></code
+            >}
           </dd>
         </dl>
       </td>
     </tr>
     <tr>
       <th scope="row">t</th>
-      <td>(<code>dx</code>,<code>dy</code>)+</td>
+      <td>
+        (<code><var>dx</var></code
+        >,<code><var>dy</var></code
+        >)+
+      </td>
       <td>
         <p>
           <em>開始位置</em
@@ -435,8 +736,12 @@ _2 次[ベジエ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A
         <dl>
           <dt>形式:</dt>
           <dd>
-            P<sub>o</sub>′ = P<sub>n</sub> = {x<sub>o</sub> + <code>dx</code>,
-            y<sub>o</sub> + <code>dy</code>}
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var
+              >x<sub>o</sub></var
+            >
+            + <code><var>dx</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+            >}
           </dd>
         </dl>
       </td>
@@ -496,20 +801,20 @@ svg {
       <circle cx="100" cy="50" r="1.5" />
     </g>
 
-    <use xlink:href="#SmoothQuadraticDown" x="60" />
-    <use xlink:href="#SmoothQuadraticUp" x="60" />
-    <use xlink:href="#SmoothQuadraticDown" x="120" />
+    <use href="#SmoothQuadraticDown" x="60" />
+    <use href="#SmoothQuadraticUp" x="60" />
+    <use href="#SmoothQuadraticDown" x="120" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('Quadratic_Bezier_Curve', '100%', 200)}}
+{{EmbedLiveSample('Quadratic_Bézier_Curve', '100%', 200)}}
 
 ### 楕円円弧曲線
 
-*楕円円弧曲線*は楕円の一部として定義される曲線です。ベジエ曲線よりも楕円円弧曲線を用いるほうが、高度な正則曲線の描画が容易になることが多くあります。
+_楕円円弧曲線_ は楕円の一部として定義される曲線です。ベジエ曲線よりも楕円円弧曲線を用いるほうが、高度な正則曲線の描画が容易になることが多くあります。
 
-<table class="standard-table">
+<table class="no-markdown">
   <tbody>
     <tr>
       <th scope="col">コマンド</th>
@@ -519,9 +824,11 @@ svg {
     <tr>
       <th scope="row">A</th>
       <td>
-        (<code>rx</code> <code>ry</code> <code>角度</code>
-        <code>大円弧フラグ</code> <code>掃引フラグ</code> <code>x</code>
-        <code>y</code>)+
+        (<code><var>rx</var></code> <code><var>ry</var></code>
+        <code><var>角度</var></code> <code><var>大円弧フラグ<</var></code>
+        <code><var>掃引フラグ</var></code> <code><var>x</var></code>
+        <code><var>y</var></code
+        >)+
       </td>
       <td>
         <p>
@@ -554,9 +861,12 @@ svg {
     <tr>
       <th scope="row">a</th>
       <td>
-        (<code>rx</code> <code>ry</code> <code>角度</code>
-        <code>大円弧フラグflag</code> <code>掃引フラグ</code> <code>dx</code>
-        <code>dy</code>)+
+        (<code><var>rx</var></code> <code><var>ry</var></code>
+        <code><var>        (<code>rx</code> <code>ry</code> <code>角度</code>
+</var></code> <code><var>大円弧フラグ</var></code>
+        <code><var>掃引フラグ</var></code> <code><var>dx</var></code>
+        <code><var>dy</var></code
+        >)+
       </td>
       <td>
         <p>
@@ -632,13 +942,26 @@ svg {
 
 ### ClosePath
 
-*ClosePath*は、*現在位置*からパスの開始位置までの直線描画を指定します。
+_ClosePath_ は、_現在位置_ からパスの開始位置までの直線描画を指定します。
 
-| コマンド | パラメータ | 説明                                                                                                                                     |
-| -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Z, z     |            | パスの最終位置とその初期位置とを接続することで、現在のサブパスを閉じます。もし、2 つの点が異なる座標の場合は、2 点間に直線が描かれます。 |
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th scope="col">コマンド</th>
+      <th scope="col">パラメータ</th>
+      <th scope="col">説明</th>
+    </tr>
+    <tr>
+      <th scope="row">Z, z</th>
+      <td></td>
+      <td>
+        パスの最終位置とその初期位置とを接続することで、現在のサブパスを閉じます。もし、2 つの点が異なる座標の場合は、2 点間に直線が描かれます。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** *ClosePath*によって生じる形状は、他のコマンドを用いて初期位置へ線を描いて閉じた場合とは異なる場合があります。これは、描線の終端が互いに接続されるためです ({{SVGAttr('stroke-linejoin')}} 設定)を参照のこと。 単に同じ座標に配置されるわけではありません。
+> **メモ:** _ClosePath_ によって生じる形状は、他のコマンドを用いて初期位置へ線を描いて閉じた場合とは異なる場合があります。これは、描線の終端が互いに接続されるためです ({{SVGAttr('stroke-linejoin')}} 設定)を参照のこと。 単に同じ座標に配置されるわけではありません。
 
 #### 例
 
@@ -687,3 +1010,7 @@ svg {
 ## 仕様
 
 {{Specifications}}
+
+## ブラウザー互換性
+
+{{Compat}}

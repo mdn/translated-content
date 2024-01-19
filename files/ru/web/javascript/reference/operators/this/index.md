@@ -409,7 +409,7 @@ for (var i = 0; i < elements.length; i++) {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

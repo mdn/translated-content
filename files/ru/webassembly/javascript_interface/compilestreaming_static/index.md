@@ -47,7 +47,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

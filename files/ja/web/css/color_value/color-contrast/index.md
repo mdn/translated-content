@@ -2,7 +2,7 @@
 title: color-contrast()
 slug: Web/CSS/color_value/color-contrast
 l10n:
-  sourceCommit: 6be1b954a117202d7635caeec74ebbbde984d3f3
+  sourceCommit: 679ce634cab2ae7b2e8328946230393e69d6a6f9
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -18,11 +18,19 @@ color-contrast(#008080 vs olive, var(--myColor), #d2691e)
 
 ### 値
 
-- 関数記法: `color-contrast( <color> vs <color>#{2,} )`
+- 関数記法: `color-contrast(color vs color-list)`
 
-  - : `<color>` はいずれかの有効な{{cssxref("color_value","color","",1)}}です。
+- `color`
 
-    `<color>#{2,}` は最初の値と比較する色の値のカンマ区切りのリストです。
+  - : あらゆる有効な {{CSSXref("&lt;color&gt;")}} です。
+
+- `vs`
+
+  - : 構文の部品としてのリテラルトークンです。
+
+- `color-list`
+
+  - : 最初の値と比較する、少なくとも 2 つの色値のカンマ区切りリストです。
 
 ## 仕様書
 
