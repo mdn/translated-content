@@ -25,7 +25,7 @@ Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn/
   </tbody>
 </table>
 
-## Resumen
+## Descripción general
 
 El sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) que creamos en los tutoriales previos permite a los usuarios explorar los libros y autores en el catálogo. Mientras que el contenido se genera dinámicamente desde la base de datos, todos los usuarios básicamente tendrán acceso a las mismas páginas y tipos de información cuando usan el sitio.
 

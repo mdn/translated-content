@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_animations
 
 ## Reference
 
-### CSS Properties
+### Свойства
 
 - {{cssxref("animation")}}
 - {{cssxref("animation")}}
@@ -22,7 +22,7 @@ slug: Web/CSS/CSS_animations
 - {{cssxref("animation-play-state")}}
 - {{cssxref("animation-timing-function")}}
 
-### CSS At-rules
+### @-правила
 
 - {{cssxref("@keyframes")}}
 
@@ -35,7 +35,7 @@ slug: Web/CSS/CSS_animations
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -78,7 +78,7 @@ if ("geolocation" in navigator) {
 
 #### @supports
 
-Недавно, в CSS появился собственный механизм обнаружения собственных функций — {{cssxref("@supports")}} at-rule. Это работает аналогично [медиавыражениям](/ru/docs/Web/CSS/Media_Queries) (см. Также [Адаптивные проблемы дизайна](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.
+Недавно, в CSS появился собственный механизм обнаружения собственных функций — @-правило {{cssxref("@supports")}}. Это работает аналогично [медиавыражениям](/ru/docs/Web/CSS/Media_Queries) (см. Также [Адаптивные проблемы дизайна](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.
 
 Например, мы могли бы переписать наш предыдущий пример для использования `@supports` — см. [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) и [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Если вы посмотрите на последнее, вы увидите пару блоков `@supports` например:
 
@@ -99,7 +99,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-Этот блок at-rule применяет правило CSS только в том случае, если текущий браузер поддерживает объявления как `flex-flow: row` так и `flex: 1`. Чтобы каждое условие работало, вам необходимо включить полное объявление (а не просто имя свойства) и НЕ включать точку с запятой в конце.
+Этот блок применяет правило CSS только в том случае, если текущий браузер поддерживает объявления как `flex-flow: row` так и `flex: 1`. Чтобы каждое условие работало, вам необходимо включить полное объявление (а не просто имя свойства) и НЕ включать точку с запятой в конце.
 
 `@supports` также имеет логику `OR` и `NOT` — другой блок применяет разметку с плавающей запятой, если свойства flexbox недоступны:
 

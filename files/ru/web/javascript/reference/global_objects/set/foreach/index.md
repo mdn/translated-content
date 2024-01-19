@@ -74,7 +74,7 @@ new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
 {{Specifications}}
 
-## Совместимость в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -186,7 +186,7 @@ input:valid {
 
 {{EmbedLiveSample("Validation_selon_une_expression_régulière", "100%", 55)}}
 
-Dans cet exemple, l'élément {{HTMLElement("input")}}} accepte l'une des deux valeurs possibles : la chaîne «&nbsp;banane&nbsp;» ou la chaîne «&nbsp;cerise&nbsp;».
+Dans cet exemple, l'élément {{HTMLElement("input")}} accepte l'une des deux valeurs possibles : la chaîne «&nbsp;banane&nbsp;» ou la chaîne «&nbsp;cerise&nbsp;».
 
 Maintenant, essayez de changer la valeur à l'intérieur de l'attribut `pattern` suivant certains exemples vus plus haut et regardez comment les valeurs entrées en sont affectées pour rester valides. Écrivez vos propres textes et voyez comment vous vous en sortez ! Restez dans le domaine des fruits dans la mesure du possible, afin que vos exemples aient du sens !
 

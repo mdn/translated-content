@@ -1,19 +1,54 @@
 ---
 title: onclick
 slug: Web/SVG/Attribute/onclick
+l10n:
+  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
 ---
 
 {{SVGRef}}
 
 **`onclick`** 属性は、要素がクリックされたときに実行するスクリプトを指定します。
 
-37 個の要素がこの属性を使用します。 {{SVGElement("a")}}, {{SVGElement("altGlyph")}}, {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}},
-{{SVGElement("circle")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}},
-{{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("metadata")}}, {{SVGElement("mpath")}},
-{{SVGElement("path")}}, {{SVGElement("pattern")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("radialGradient")}}, {{SVGElement("rect")}},
-{{SVGElement("script")}}, {{SVGElement("set")}}, {{SVGElement("stop")}}, {{SVGElement("style")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}},
-{{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("title")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}},
-{{SVGElement("use")}}, {{SVGElement("view")}}
+この属性は次の SVG 要素で使用できます。
+
+- {{SVGElement("a")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("defs")}}
+- {{SVGElement("desc")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("foreignObject")}}
+- {{SVGElement("g")}}
+- {{SVGElement("image")}}
+- {{SVGElement("line")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("metadata")}}
+- {{SVGElement("mpath")}}
+- {{SVGElement("path")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("script")}}
+- {{SVGElement("set")}}
+- {{SVGElement("stop")}}
+- {{SVGElement("style")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("switch")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("title")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("use")}}
+- {{SVGElement("view")}}
+
+## 例
 
 ```css hidden
 html,
@@ -34,7 +69,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("topExample", "220", "220")}}
+{{EmbedLiveSample("Example", "220", "220")}}
 
 ## 使用上のメモ
 

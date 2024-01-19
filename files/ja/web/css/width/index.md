@@ -1,6 +1,8 @@
 ---
 title: width
 slug: Web/CSS/width
+l10n:
+  sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---
 
 {{CSSRef}}
@@ -9,7 +11,10 @@ slug: Web/CSS/width
 
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
-{{cssxref("min-width")}} および {{cssxref("max-width")}} プロパティは `width` を上書きします。
+`width` に指定された値は、その値が {{cssxref("min-width")}} および {{cssxref("max-width")}} で定義された値内にある限り、コンテンツ領域に適用されます。
+
+- `width` の値が `min-width` の値より小さい場合、`min-width` は `width` をオーバーライドします。
+- `width` の値が `max-width` の値より大きい場合、`max-width` は `width` をオーバーライドします。
 
 ## 構文
 
@@ -24,6 +29,7 @@ width: 75%;
 /* キーワード値 */
 width: max-content;
 width: min-content;
+width: fit-content;
 width: fit-content(20em);
 width: auto;
 
@@ -31,6 +37,7 @@ width: auto;
 width: inherit;
 width: initial;
 width: revert;
+width: revert-layer;
 width: unset;
 ```
 
@@ -39,14 +46,16 @@ width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 絶対的な値で幅を定義します。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 親となる包含ブロックの幅に対するパーセント値で定義します。
+  - : 親となる[包含ブロック](/ja/docs/Web/CSS/Containing_block)の幅に対するパーセント値で定義します。
 - `auto`
   - : 指定された要素の幅をブラウザーが計算して決めます。
 - `max-content`
   - : 望ましい固有の幅です。
 - `min-content`
   - : 最小の固有の幅です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- `fit-content`
+  - : 利用可能なスペースを使用しますが、[max-content](/ja/docs/Web/CSS/max-content)、つまり `min(max-content, max(min-content, stretch))` を超えません。
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
   - : 利用可能な空間に対して fit-content 式を使用し、指定された引数に置き換えられます。すなわち `min(max-content, max(min-content, <length-percentage>))` です。
 
 ## アクセシビリティの考慮
@@ -66,7 +75,7 @@ width: unset;
 
 ## 例
 
-<h3 id="Default_width">既定の幅</h3>
+### 既定の幅
 
 ```css
 p.goldie {
@@ -80,7 +89,7 @@ p.goldie {
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
 
-<h3 id="Pixels_and_ems">ピクセル数と em 単位</h3>
+### ピクセル数と em 単位
 
 ```css
 .px_length {
@@ -103,9 +112,9 @@ p.goldie {
 <div class="em_length">Width measured in em</div>
 ```
 
-{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
+{{EmbedLiveSample('Example using pixels and ems', '500px', '64px')}}
 
-<h3 id="Percentage">パーセント値</h3>
+### Percentage の例
 
 ```css
 .percent {
@@ -119,9 +128,9 @@ p.goldie {
 <div class="percent">Width in percentage</div>
 ```
 
-{{EmbedLiveSample('Percentage', '500px', '64px')}}
+{{EmbedLiveSample('Example using percentage', '500px', '64px')}}
 
-### max-content
+### max-content の例
 
 ```css
 p.maxgreen {
@@ -137,9 +146,9 @@ p.maxgreen {
 <p class="maxgreen">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('max-content', '500px', '64px')}}
+{{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
 
-### min-content
+### min-content の例
 
 ```css
 p.minblue {
@@ -154,7 +163,7 @@ p.minblue {
 <p class="minblue">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('min-content', '500px', '155px')}}
+{{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
 
 ## 仕様書
 

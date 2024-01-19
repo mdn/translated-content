@@ -34,7 +34,7 @@ var inp_xmls = XMLS.serializeToString(inp); // Конвертируем DOM-эл
 document.body.insertAdjacentHTML("afterbegin", inp_xmls);
 ```
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

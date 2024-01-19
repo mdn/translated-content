@@ -25,7 +25,7 @@ time = window.mozAnimationStartTime;
 
 Not part of specification.
 
-### Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

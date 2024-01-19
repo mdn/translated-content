@@ -55,7 +55,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

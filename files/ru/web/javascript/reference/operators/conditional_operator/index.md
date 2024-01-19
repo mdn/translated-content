@@ -100,7 +100,7 @@ location.assign(url); // "stop.html"
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

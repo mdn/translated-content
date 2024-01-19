@@ -88,7 +88,7 @@ customElements.define(
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

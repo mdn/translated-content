@@ -105,7 +105,7 @@ const response = await fetch(
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
