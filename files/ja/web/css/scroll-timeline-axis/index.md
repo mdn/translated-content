@@ -77,7 +77,7 @@ scroll-timeline-axis: x;
 :root {
   scroll-timeline-name: --myScroller;
 
-  /* Chromium は新しい x/y 構文をに対応 */
+  /* Chromium は新しい x/y 構文に対応 */
   scroll-timeline-axis: x;
   /* Firefox はまだ古い horizontal/vertical 構文に対応 */
   scroll-timeline-axis: horizontal;
