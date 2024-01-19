@@ -1,13 +1,20 @@
 ---
 title: points
 slug: Web/SVG/Attribute/points
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
 {{SVGRef}}
 
 **`points`** 属性は、点のリストを定義します。各点は、ユーザー座標系における X 座標と Y 座標を表す数値の組で定義されます。属性に奇数の座標が含まれている場合、最後の座標は無視されます。
 
-2 つの要素がこの属性を使用しています: {{SVGElement("polyline")}}、および{{SVGElement("polygon")}}
+この属性は次の SVG 要素で使用できます。
+
+- {{SVGElement("polyline")}}
+- {{SVGElement("polygon")}}
+
+## 例
 
 ```css hidden
 html,
@@ -36,7 +43,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample('Example', '100%', 200)}}
 
 ## polyline
 
@@ -60,8 +67,6 @@ svg {
     </tr>
   </tbody>
 </table>
-
-### Example
 
 ```css hidden
 html,
@@ -102,8 +107,6 @@ svg {
     </tr>
   </tbody>
 </table>
-
-### Example
 
 ```css hidden
 html,

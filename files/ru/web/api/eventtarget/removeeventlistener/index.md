@@ -62,7 +62,7 @@ div.addEventListener("click", listener, false);
 div.removeEventListener("click", listener, false);
 ```
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -232,11 +232,9 @@ display: unset;
 - [弹性盒基础概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [跨浏览器弹性盒的混合](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
 - [弹性元素排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [弹性盒子与其他布局方法的联系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [弹性盒的向后兼容](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [弹性盒的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
 
 ### display: grid

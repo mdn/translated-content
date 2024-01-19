@@ -39,7 +39,7 @@ Location: http://www.example.org/index.asp
 | -------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "302 Found" , "6.4.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

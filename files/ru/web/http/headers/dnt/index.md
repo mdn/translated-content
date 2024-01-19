@@ -48,7 +48,7 @@ navigator.doNotTrack; // "0" or "1"
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

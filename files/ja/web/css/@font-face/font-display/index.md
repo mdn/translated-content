@@ -50,7 +50,7 @@ font-display: optional;
 
 {{cssinfo}}
 
-## 構文
+## 形式文法
 
 {{csssyntax}}
 

@@ -13,6 +13,6 @@ Web ビーコンは、マークアップに埋め込まれた 1 ピクセル gif
 
 [W3C Draft Beacon Specification](https://w3c.github.io/beacon/) があり、パフォーマンスを低下させることなく、ページロード前にユーザーエージェントから Web サーバーに HTTP データを非同期的に転送するためのインターフェイスとしてビーコンを標準化しています。
 
-## See Also
+## 関連情報
 
 - Real User Monitoring (RUM)

@@ -118,7 +118,7 @@ Be sure to read the readme carefully; the polyfill comes in several versions dep
 
 #### WebXR API Emulator extension
 
-The [Mozilla WebXR team](https://mixedreality.mozilla.org/) has created a [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) browser extension, compatible with both Firefox and Chrome, which emulates the WebXR API, simulating a variety of compatible devices such as the HTC Vive, the Oculus Go and Oculus Quest, Samsung Gear, and Google Cardboard. With the extension in place, you can open up a developer tools panel that lets you control the position and orientation of the headset and any hand controllers, as well as button presses on the controllers.
+The Mozilla WebXR team has created a [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) browser extension, compatible with both Firefox and Chrome, which emulates the WebXR API, simulating a variety of compatible devices such as the HTC Vive, the Oculus Go and Oculus Quest, Samsung Gear, and Google Cardboard. With the extension in place, you can open up a developer tools panel that lets you control the position and orientation of the headset and any hand controllers, as well as button presses on the controllers.
 
 While somewhat awkward compared to using an actual headset, this makes it possible to experiment with and developer WebXR code on a desktop computer, where WebXR isn't normally available. It also lets you perform some basic testing before taking your code to a real device. Be aware, however, that the emulator does not yet completely emulate all of the WebXR API, so you may run into problems you're not expecting. Again, carefully read the readme file and make sure you're aware of the limitations before you begin.
 

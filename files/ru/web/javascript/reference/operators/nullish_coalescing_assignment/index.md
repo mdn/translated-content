@@ -56,7 +56,7 @@ config({}); // { duration: 100, speed: 25 }
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

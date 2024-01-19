@@ -90,7 +90,7 @@ box-shadow: unset;
 
 ## 例
 
-<h3 id="Setting_three_shadows">3 つの影の設定</h3>
+### 3 つの影の設定
 
 この例では、3 つの影を使用しています。内部への影、通常のドロップシャドウ、境界の効果を生む 2px の影です (3 つ目の影の代わりに {{cssxref('outline')}} を使用することもできます)。
 
@@ -122,13 +122,13 @@ blockquote {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_three_shadows', '300', '300')}}
+{{EmbedLiveSample('3 つの影の設定', '300', '300')}}
 
-<h3 id="Setting_zero_for_offset_and_blur">offset と blur をゼロに設定</h3>
+### offset と blur をゼロに設定
 
 `x-offset`, `y-offset`, `blur` がすべてゼロの場合、ボックスシャドウはすべての辺に同じ幅の単一色の囲み線になります。影は背後から手前にかけて描かれるため、最初の影はその後の影の最上位に表示されます。既定値通り、 `border-radius` が 0 に設定されていた場合、影の角は同様に尖った形になります。 `border-radius` にそれ以外の値を設定した場合、角は丸みを帯びます。
 
-影が隣接する要素と重ならないように、また、包含ボックスの境界線を超えないように、最も広いボックスシャドウの寸法のマージンを追加しました。ボックスシャドウは[ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)の寸法に影響を与えません。
+影が隣接する要素と重ならないように、また、包含ボックスの境界線を超えないように、最も広いボックスシャドウの寸法のマージンを追加しました。ボックスシャドウは[ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)の寸法に影響を与えません。
 
 #### HTML
 
@@ -150,7 +150,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_zero_for_offset_and_blur', '300', '300')}}
+{{EmbedLiveSample('offset と blur をゼロに設定', '300', '300')}}
 
 ## 仕様書
 

@@ -204,10 +204,13 @@ _这个接口从它的父元素中继承属性，{{domxref("EventTarget")}}._
 - {{domxref("RTCPeerConnection.onsignalingstatechange")}}
   - : 是收到 `signalingstatechange` 事件时调用的事件处理器，当{{domxref("RTCPeerConnection.signalingState", "signalingState")}}的值发生改变时，该事件被触发。
 
-## 方法
+## 构造函数
 
 - {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}}
   - : RTCPeerConnection 的初始化函数，通过 new RTCPeerConnection() 初始化一个 RTCPeerConnection 实例。
+
+## 实例方法
+
 - {{domxref("RTCPeerConnection.createOffer()")}}
   - : 生成一个 offer，它是一个带有特定的配置信息寻找远端匹配机器（peer）的请求。这个方法的前两个参数分别是方法调用成功以及失败的回调函数，可选的第三个参数是用户对视频流以及音频流的定制选项（一个对象）。
 - {{domxref("RTCPeerConnection.createAnswer()")}}
@@ -245,110 +248,16 @@ _这个接口从它的父元素中继承属性，{{domxref("EventTarget")}}._
 - {{domxref("RTCPeerConnection.getIdentityAssertion()")}}
   - : 初始化身份断言的收集，只有当{{domxref("RTCPeerConnection.signalingState", "signalingState")}}的值不为"closed"时，它才有效。它自动完成，在需求发生前调用它是最好的选择。
 
-### 构造函数
+## 规范
 
-```
-new RTCPeerConnection({{domxref("RTCConfiguration")}} configuration, optional {{domxref("MediaConstraints")}} constraints);
-```
+{{Specifications}}
 
-> **备注：** PeerConnection 需要传递一个 RTCConfiguration 对象作为参数，如果你没有传递参数的话，火狐浏览器会自动提供一个参数。
+## 浏览器兼容性
 
-## 方法
+{{Compat}}
 
-### createOffer
-
-`void createOffer({{domxref("RTCSessionDescriptionCallback")}} successCallback, {{domxref("RTCPeerConnectionErrorCallback")}} failureCallback, optional {{domxref("MediaConstraints")}} constraints);`
-
-createOffer 方法会生成描述信息的一个 blob 对象，它会帮助连接到本地机器。当你已经找到一个远端的 PeerConnection 并且打算设置建立本地的 PeerConnection 时，你可以使用该方法。
-
-#### 举例
-
-```
-var pc = new PeerConnection();
-pc.addStream(video);
-pc.createOffer(function(desc){
-  pc.setLocalDescription(desc, function() {
-    // send the offer to a server that can negotiate with a remote client
-  });
-}
-```
-
-#### 参数
-
-- successCallback（方法调用成功时的回调函数）
-  - : 一个 {{domxref("RTCSessionDescriptionCallback")}} 它会收到一个 {{domxref("RTCSessionDescription")}} 对象作为参数。
-- errorCallback（方法调用失败时的回调函数）
-  - : 一个 {{domxref("RTCPeerConnectionErrorCallback")}} 它会收到一个 {{domxref("DOMError")}} 对象作为参数。
-- \[optional] constraints(可选的约束条件)
-  - : 一个可选的{{domxref("MediaConstraints")}} 对象。
-
-### createAnswer
-
-`void createAnswer({{domxref("RTCSessionDescriptionCallback")}} successCallback, {{domxref("RTCPeerConnectionErrorCallback")}} failureCallback, optional {{domxref("MediaConstraints")}} constraints)")`
-
-对从远方收到的 offer 进行回答。
-
-#### 举例
-
-```
-var pc = new PeerConnection();
-pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
-  pc.createAnswer(function(answer) {
-    pc.setLocalDescription(answer, function() {
-      // send the answer to the remote connection
-    })
-  })
-});
-```
-
-#### 参数
-
-- successCallback（方法调用成功时的回调函数）
-  - : 一个 {{domxref("RTCSessionDescriptionCallback")}} 它会收到一个 {{domxref("RTCSessionDescription")}} 对象作为参数。
-- errorCallback（方法调用失败时的回调函数）
-  - : 一个 {{domxref("RTCPeerConnectionErrorCallback")}} 它会收到一个{{domxref("DOMError")}} 对象作为参数。
-- \[optional] constraints（可选的约束条件）
-  - : 一个可选的{{domxref("MediaConstraints")}} 对象。
-
-### updateIce()
-
-updateIce(optional {{domxref("RTCConfiguration")}} configuration, optional {{domxref("MediaConstraints")}} constraints)
-
-该方法会更新 ICE 代理收集本地 candidates 以及连接云端 candidates 的进程。如果强制约束条件"IceTransports"存在，那么它会控制 ICE 代理的工作方式。它可以用于限制接听者对 TURN candidates 的使用，这样可以避免在请求被应答前泄露位置信息。如果这个方法影响了已经建立的连接，那么它可能导致 ICE 代理状态的改变以及媒体状态的改变。
-
-#### 举例
-
-### addIceCandidate()
-
-addIceCandidate ({{domxref("RTCIceCandidate")}} candidate, {{domxref("Function")}} successCallback, {{domxref("RTCPeerConnectionErrorCallback")}} failureCallback);
-
-除了被添加到远端描述之外，只要约束条件"IceTransports" 没有被设置为 null，连接检测结果会被发送给新的 candidates。如果这个方法影响了已经建立的连接，那么它可能导致 ICE 代理状态的改变以及媒体状态的改变。
-
-#### 举例
-
-```js
-pc.addIceCandidate(new RTCIceCandidate(candidate));
-```
-
-### createDataChannel
-
-`{{domxref("RTCDataChannel")}} createDataChannel ({{domxref("DOMString")}} label, optional {{domxref("RTCDataChannelInit")}} dataChannelDict);`
-
-通过 peerconnection 建立一条数据信道，用于发送非视频音频信息。
-
-#### 例子
-
-```
-var pc = new PeerConnection();
-var channel = pc.createDataChannel("Mydata");
-channel.onopen = function(event) {
-  channel.send('sending a message');
-}
-channel.onmessage = function(event) { console.log(event.data); }
-```
-
-## 引申阅读
+## 参见
 
 - <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
-- <http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple>
-- <http://dev.w3.org/2011/webrtc/editor/webrtc.html>
+- [WebRTC 入门](https://web.dev/articles/webrtc-basics)
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom)：Node.js HTML 视频捕获、点对点视频和文件共享应用程序（[GitHub 上的源码](https://github.com/chrisjohndigital/TutorRoom)）

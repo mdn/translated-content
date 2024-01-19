@@ -104,7 +104,7 @@ grid-template-areas: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

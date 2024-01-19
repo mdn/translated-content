@@ -32,7 +32,7 @@ var blob = instanceOfBlob.slice([start [, end [, contentType]]]);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
