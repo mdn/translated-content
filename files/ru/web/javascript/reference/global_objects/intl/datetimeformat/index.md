@@ -39,7 +39,7 @@ l10n:
 - {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
   - : Этот метод принимает две [даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date) и возвращает массив объектов, которые содержат специфичные для локали токены, представляющие каждую часть отформатированного диапазона дат.
 - {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
-  - : Возвращает {{jsxref("Array")}} объектов, представляющих части даты, которые могут быть использованы для пользовательского форматирования с учётом локали.
+  - : Возвращает {{jsxref("Array", "массив")}} объектов, представляющих части даты, которые могут быть использованы для пользовательского форматирования с учётом локали.
 - {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
   - : Возвращает новый объект со свойствами, представляющими локаль и настройки форматирования, определённые во время инициализации объекта.
 
@@ -47,7 +47,7 @@ l10n:
 
 ### Использование `DateTimeFormat`
 
-При базовом использовании без определения локали `DateTimeFormat` использует локаль и опции по умолчанию.
+При использовании без указания локали `DateTimeFormat` использует локаль и настройки по умолчанию.
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
