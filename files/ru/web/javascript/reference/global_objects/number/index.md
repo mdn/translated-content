@@ -3,7 +3,7 @@ title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
 Объект **`Number`** является объектом-обёрткой, позволяющей вам работать с числовыми значениями. Объект `Number` создаётся через конструктор `Number()`.
 
