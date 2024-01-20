@@ -1,7 +1,6 @@
 ---
 title: 使用 Svelte store
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores
-page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
