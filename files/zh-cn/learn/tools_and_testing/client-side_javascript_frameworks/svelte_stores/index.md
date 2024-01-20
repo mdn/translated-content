@@ -617,6 +617,7 @@ Svelte 不会强制你以特定的方式组织状态管理；它只提供了工�
 6. 你还可以在开发者工具的控制台中进行检查。在 Web 控制台中，输入命令 `localStorage.getItem('mdn-svelte-todo')`。对应用程序进行一些更改，比如按下“全部取消”按钮，然后再次检查 Web 存储的内容。你将会看到类似以下的内容：
 
    ![带有 Web 控制台视图的待办事项应用程序，显示当在应用程序中更改待办事项时，相应的条目也在 Web 存储中更改](03-persisting-todos-to-local-storage.png)
+
 Svelte store 提供了一种非常简单、轻量但功能强大的方式，以响应式的方式处理来自全局数据存储的复杂应用程序状态。由于 Svelte 编译我们的代码，它可以提供 [`$store` 自动订阅语法](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values)，使我们可以通过与本地变量相同的方式处理存储。由于 store 具有很简单的 API，因此创建我们自己的自定义 store 来抽象 store 本身的内部工作方式非常简单。
 
 ## 彩蛋：过渡效果
