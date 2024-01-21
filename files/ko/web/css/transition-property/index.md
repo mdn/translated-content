@@ -1,8 +1,8 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
-page-type: css-property
-browser-compat: css.properties.transition-property
+l10n:
+  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
 {{CSSRef}}
@@ -62,7 +62,7 @@ transition-property: unset;
 
 ### 기본 예제
 
-버튼을 호버하거나 포커싱하면, 1초 동안 색상이 트랜지션됩니다.;여기서 `transition-property`는 [`background-color`](/ko/docs/Web/CSS/background-color)입니다.
+버튼을 호버하거나 포커싱하면, 1초 동안 색상이 트랜지션됩니다. 여기서 `transition-property`는 [`background-color`](/ko/docs/Web/CSS/background-color)입니다.
 
 #### HTML
 
