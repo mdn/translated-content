@@ -3,7 +3,7 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
-{{JSRef("Global_Objects", "Set")}}
+{{JSRef}}
 
 ## Sumário
 
