@@ -104,7 +104,7 @@ section {
 ### hidden を使用して手動で可視性を管理
 
 次の例では、JavaScript でコンテンツの可視性を管理する方法を示します。
- `display: none;` の代わりに `content-visibility: hidden;` を使用することで、非表示時のコンテンツの描画状態が保持され、描画が高速になります。
+`display: none;` の代わりに `content-visibility: hidden;` を使用することで、非表示時のコンテンツの描画状態が保持され、描画が高速になります。
 
 #### HTML
 
