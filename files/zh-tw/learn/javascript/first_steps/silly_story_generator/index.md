@@ -5,7 +5,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-在本次評估中，您被賦予的任務內容將與本單元學習到的知識息息相關，並將其應用於創建一個能隨機生成傻故事的有趣應用程式。 祝玩的開心！
+在本次評估中，你被賦予的任務內容將與本單元學習到的知識息息相關，並將其應用於創建一個能隨機生成傻故事的有趣應用程式。 祝玩的開心！
 
 <table class="learn-box standard-table">
   <tbody>
@@ -27,14 +27,14 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 在開始本測驗前，你應該:
 
-- 開啟右方網頁： [grab the HTML file](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) ，將 HTML 範本儲存到您的本地電腦的新資料夾中，並命名為`index.html` 。範本也包含相應的 CSS 檔案。
+- 開啟右方網頁： [grab the HTML file](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) ，將 HTML 範本儲存到你的本地電腦的新資料夾中，並命名為`index.html` 。範本也包含相應的 CSS 檔案。
 - 開啟右方網頁： [page containing the raw text](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) ，並保持網頁開啟在瀏覽器的另一分頁上，以便稍後使用。
 
-> **備註：** 除了將檔案下載到自己的電腦中，您也能使用線上編輯程式的網頁，像是：[JSBin](http://jsbin.com/) 或者 [Glitch](https://glitch.com/) 來完成評估測驗。您可以將 HTML, CSS 以及 JavaScript 貼到前述的線上編輯器中。如果您使用的線上編輯器沒有獨立給 JavaScript 的編輯區，您也能透過`<script>`直接將 JS 語法放到 HTML 檔案中。
+> **備註：** 除了將檔案下載到自己的電腦中，你也能使用線上編輯程式的網頁，像是：[JSBin](http://jsbin.com/) 或者 [Glitch](https://glitch.com/) 來完成評估測驗。你可以將 HTML, CSS 以及 JavaScript 貼到前述的線上編輯器中。如果你使用的線上編輯器沒有獨立給 JavaScript 的編輯區，你也能透過`<script>`直接將 JS 語法放到 HTML 檔案中。
 
 ## 任務簡介
 
-透過前述網頁您已經得到初版 HTML/CSS 與一些 JavaScript 字串、函數；您需要再寫一些必要的 JavaScript 語法來將這些檔案轉變為可運作的程式，任務如下：
+透過前述網頁你已經得到初版 HTML/CSS 與一些 JavaScript 字串、函數；你需要再寫一些必要的 JavaScript 語法來將這些檔案轉變為可運作的程式，任務如下：
 
 - 當 "Generate random story" (產生隨機故事)的按鈕被點擊，請產出一則傻故事
 - 若在點擊產生故事按鈕前將自定義名字輸入於輸入框"Enter custom name" (譯：輸入自定義名字），則將故事中預設的名字 "Bob" 代換為自定義名字
@@ -58,7 +58,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 初始化變數與函數：
 
-1. 在原始文件檔中(raw text file)，請複製標題 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" 以下到第 2 點前的所有程式碼，並貼到`main.js`中。這給你三個變數來標記：文字輸入框 "Enter custom name" (輸入自定義名字) ，變數為 (`customName`) 與按鈕 "Generate random story"(產生隨機故事) ，變數為 (`randomize`), 以及 HTML 中接近 body 底部的 {{htmlelement("p")}} 元素，故事將會被複製進第三個變數(`story`)中。此外您還會得到一個函數稱為： `randomValueFromArray()` ，從命名中可以得知這是一個陣列，它會隨機提供一則儲存其中的故事。
+1. 在原始文件檔中(raw text file)，請複製標題 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" 以下到第 2 點前的所有程式碼，並貼到`main.js`中。這給你三個變數來標記：文字輸入框 "Enter custom name" (輸入自定義名字) ，變數為 (`customName`) 與按鈕 "Generate random story"(產生隨機故事) ，變數為 (`randomize`), 以及 HTML 中接近 body 底部的 {{htmlelement("p")}} 元素，故事將會被複製進第三個變數(`story`)中。此外你還會得到一個函數稱為： `randomValueFromArray()` ，從命名中可以得知這是一個陣列，它會隨機提供一則儲存其中的故事。
 2. 接著讓我們查看原始文件檔中(raw text file)的第 2 點： "2. RAW TEXT STRINGS"。 其包含的這些字串在程式運行時會被放進來，請幫忙在`main.js`中將這些字串分別存進對應的變數裡：
 
    1. 將第一行超級長的字串存進變數 `storyText`中。
@@ -72,7 +72,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 2. 複製第 3 標題，"3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" 以下的內容，並貼到 `main.js` 檔案中的最下方，這包含：
 
    - 給變數`randomize`增加一個點擊事件監聽器（clickevent listener），所以當產生故事的按鈕被點擊，`result()` 函數會運行 。
-   - 增加一個部分完成的函數 `result()`，完成測驗您需要完善這個函數。
+   - 增加一個部分完成的函數 `result()`，完成測驗你需要完善這個函數。
 
 完善 `result()` 函數：
 
@@ -103,6 +103,6 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 ## 測驗一下
 
-如果您將這個測驗視為正規課程的一部分，建議將成果提供您的老師或指導者以利幫助您達到最好的學習效益。如果您是自學者，您可以輕鬆的透過右方網頁 [discussion thread for this exercise](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686) 得到建議，或者在[Mozilla IRC](https://wiki.mozilla.org/IRC)上的 [#mdn](irc://irc.mozilla.org/mdn) IRC 頻道。提醒您：第一次嘗試這個測驗時，作弊可不會得到任何收穫喔！
+如果你將這個測驗視為正規課程的一部分，建議將成果提供你的老師或指導者以利幫助你達到最好的學習效益。如果你是自學者，你可以輕鬆的透過右方網頁 [discussion thread for this exercise](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686) 得到建議，或者在[Mozilla IRC](https://wiki.mozilla.org/IRC)上的 [#mdn](irc://irc.mozilla.org/mdn) IRC 頻道。提醒你：第一次嘗試這個測驗時，作弊可不會得到任何收穫喔！
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

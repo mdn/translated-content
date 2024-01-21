@@ -42,7 +42,7 @@ var month = today.getUTCMonth();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getMonth()")}}
 - {{jsxref("Date.prototype.setUTCMonth()")}}

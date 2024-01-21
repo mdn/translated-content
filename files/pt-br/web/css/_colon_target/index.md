@@ -195,7 +195,7 @@ Você pode usar a pseudo-classe `:target` para criar uma lightbox sem usar JavaS
 
 ## Navegadores compatíveis
 
-{{Compat("css.selectors.target")}}
+{{Compat}}
 
 ## Veja também
 

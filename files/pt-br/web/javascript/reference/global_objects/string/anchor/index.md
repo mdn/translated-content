@@ -47,7 +47,7 @@ irá retornar o seguinte código HTML:
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.anchor")}}
+{{Compat}}
 
 ## Veja também
 

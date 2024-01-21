@@ -75,7 +75,7 @@ function sourceOpen(_) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.endOfStream")}}
+{{Compat}}
 
 ## 関連情報
 

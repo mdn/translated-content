@@ -146,7 +146,7 @@ if (!Array.prototype.every) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.every")}}
+{{Compat}}
 
 ## Veja também
 

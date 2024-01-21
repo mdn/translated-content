@@ -33,7 +33,7 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 ## ブラウザー互換性
 
-{{Compat("http.status.401")}}
+{{Compat}}
 
 ## 参照
 

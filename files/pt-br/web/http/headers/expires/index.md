@@ -55,7 +55,7 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Expires")}}
+{{Compat}}
 
 ## Veja também
 

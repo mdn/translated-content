@@ -74,7 +74,7 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}}
 
-## 轴对齐内容—— align-content 属性
+## 轴对齐内容——align-content 属性
 
 到现在为止，我们已经对定义在 flex 容器里的 flex 项目或者单个 flex 项目进行对齐操作了。如果你有一个折行的多条 flex 项目的 flex 容器，然后你可能想使用 `align-content` 来控制每行之间空间的分配，在这种特定的场景叫做[packing flex lines](https://drafts.csswg.org/css-flexbox/#align-content-property)。
 
@@ -106,7 +106,7 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 ## 对齐主轴内容
 
-到目前我们已经看到 flex 项目是如何在交叉轴上对齐的，现在我们可以看一下主轴上的对齐。这里只有一个属性是用于主轴上对齐—— `justify-content` 。这是因为我们把所有的 flex 项目当成一个组去处理。用 `justify-content` 这个属性的时候，我们只控制主轴出显示出来 flex 项目的多余空间。
+到目前我们已经看到 flex 项目是如何在交叉轴上对齐的，现在我们可以看一下主轴上的对齐。这里只有一个属性是用于主轴上对齐——`justify-content`。这是因为我们把所有的 flex 项目当成一个组去处理。用 `justify-content` 这个属性的时候，我们只控制主轴出显示出来 flex 项目的多余空间。
 
 在我们的最开始的例子中，我们在 flex 容器定义了 `display: flex`，flex 项目则水平排队从容器的初始端显示。这是因为 `justify-content` 的初始值是 `flex-start` ，其他多余的空间都会显示在 flex 项目的最后。
 

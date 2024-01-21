@@ -40,7 +40,7 @@ console.log(month); // 11
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getMonth")}}
+{{Compat}}
 
 ## <br>Veja também
 

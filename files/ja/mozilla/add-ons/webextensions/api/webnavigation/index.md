@@ -72,7 +72,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.webNavigation")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

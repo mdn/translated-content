@@ -11,12 +11,21 @@ slug: Web/HTML/Element/picture
 
 要决定加载哪个 URL，{{Glossary("user agent")}} 检查每个 `<source>` 的 [`srcset`](/zh-CN/docs/Web/HTML/Element/source#srcset)、[`media`](/zh-CN/docs/Web/HTML/Element/source#media) 和 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，来选择最匹配页面当前布局、显示设备特征等的兼容图像。
 
+`<img>` 元素有两个目的：
+
+- 描述图像的大小和其他属性及其呈现。
+- 在所有的 `<source>` 元素提供的图片都不可用时提供备选图片。
+
 `<picture>` 的常见使用场景：
 
-- 艺术指导 (Art direction) —— 针对不同 `media` 条件裁剪或修改图像
-- 遇到所有浏览器都不支持的特定格式时，提供不同的图像格式
+- **艺术指导**（Art direction）。针对不同 `media` 条件裁剪或修改图像（例如，在较小的显示器或图像的详细内容太多时显示较为图像的简单版本）。
+- 遇到不支持的特定格式时，**提供替代的图像格式**。
 
-如果要为高 DPI (Retina) 显示提供更高像素密度的图像版本，请在 `<img>` 元素上使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 。这使得浏览器可以在节约流量模式下选择低像素密度版本，且不需要你编写明确的 `media` 条件。
+  > **备注：** 例如，像 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像) 或 [WEBP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像) 这样的新格式具有诸多优点，但可能不受浏览器的支持。可以在[图像文件格式和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)中找到支持的图像格式的列表。
+
+- 通过加载最适合观看者显示的图像来**节省带宽和提高页面加载速度**。
+
+如果要为高 DPI（Retina）显示提供更高像素密度的图像版本，请在 `<img>` 元素上使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)。这使得浏览器可以在节约流量模式下选择低像素密度版本，且不需要你编写明确的 `media` 条件。
 
 <table class="properties">
  <tbody>

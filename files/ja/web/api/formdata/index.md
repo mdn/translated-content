@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 00a9eb81f3e6dfb9776d1eaa2aa731c6ef5b657b
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`FormData`** インターフェイスは、フォームフィールドおよびそれらの値から表現されるキーと値のペアのセットを簡単に構築する手段を提供します。これは {{domxref("fetch()")}}、{{domxref("XMLHttpRequest.send()")}}、{{domxref("navigator.sendBeacon()")}} の各メソッドを用いることで送信が可能です。エンコーディング型を `"multipart/form-data"` に設定した場合にフォームが使用するものと同じ形式を使用します。
 
@@ -51,5 +51,5 @@ l10n:
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -104,7 +104,7 @@ Note que no exemplo acima não tem a instrução `await` na instrução do `retu
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ### Notas específicas do Firefox
 

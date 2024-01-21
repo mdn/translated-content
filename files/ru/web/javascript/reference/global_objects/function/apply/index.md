@@ -3,7 +3,7 @@ title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 
-{{JSRef("Global_Objects", "Function")}}
+{{JSRef}}
 
 ## Общие сведения
 

@@ -755,9 +755,9 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```
 
-## 测试你的技能！
+## 技能测试！
 
-你已经到达了本篇文章的末尾，但还能记得多少重要的东西呢？在进行下一步前，你可以找一些测试来验证知识留存的多少——请查看[测试你的技能：高级 HTML 文本](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text)。
+你已经到达了本篇文章的末尾，但还能记得多少重要的东西呢？在进行下一步前，你可以找一些测试来验证知识留存的多少——请查看[技能测试：高级 HTML 文本](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text)。
 
 ## 总结
 

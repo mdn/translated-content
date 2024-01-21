@@ -72,9 +72,9 @@ API は現在、提案段階にあり、標準化プロセスはまだ開始さ�
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.hasStorageAccess")}}
+{{Compat}}
 
-{{Compat("api.Document.requestStorageAccess")}}
+{{Compat}}
 
 ## 関連情報
 

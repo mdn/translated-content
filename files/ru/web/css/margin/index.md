@@ -60,7 +60,7 @@ margin: unset;
 
 {{cssinfo}}
 
-## Синтаксис
+## Формальный синтаксис
 
 {{csssyntax}}
 

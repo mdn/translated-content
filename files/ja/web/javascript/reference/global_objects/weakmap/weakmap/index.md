@@ -60,7 +60,7 @@ wm1.has(o1); // false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap.WeakMap")}}
+{{Compat}}
 
 ## 関連情報
 

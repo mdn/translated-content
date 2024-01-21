@@ -133,7 +133,7 @@ function encodeRFC5987ValueChars2(str) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.encodeURIComponent")}}
+{{Compat}}
 
 ## 関連情報
 

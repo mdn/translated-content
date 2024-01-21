@@ -376,7 +376,7 @@ addEventListener("fetch", (event) => {
 });
 ```
 
-{{domxref("Response.Response","Response()")}} 构造方法接受两个可选参数—— response 的 body 和一个初始化对象（与{{domxref("Request.Request","Request()")}} 所接受的 init 参数类似）。
+{{domxref("Response.Response","Response()")}} 构造方法接受两个可选参数——response 的 body 和一个初始化对象（与{{domxref("Request.Request","Request()")}} 所接受的 init 参数类似）。
 
 > **备注：** 静态方法 {{domxref("Response.error","error()")}} 只是返回了错误的 response。与此类似地，{{domxref("Response.redirect","redirect()")}} 只是返回了一个可以重定向至某 URL 的 response。这些也只与 Service Worker 有关。
 
@@ -424,10 +424,6 @@ if (window.fetch) {
   // do something with XMLHttpRequest?
 }
 ```
-
-## Polyfill
-
-如果要在不支持的浏览器中使用 Fetch，可以使用 [Fetch Polyfill](https://github.com/github/fetch)。
 
 ## 参见
 

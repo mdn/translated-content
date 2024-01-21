@@ -53,7 +53,7 @@ function getTanDeg(deg) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.tan")}}
+{{Compat}}
 
 ## 関連情報
 

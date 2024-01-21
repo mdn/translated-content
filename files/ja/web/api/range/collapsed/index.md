@@ -1,6 +1,9 @@
 ---
-title: Range.collapsed
+title: "Range: collapsed プロパティ"
+short-title: collapsed
 slug: Web/API/Range/collapsed
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{ APIRef("DOM") }}

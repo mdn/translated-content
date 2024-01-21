@@ -172,7 +172,7 @@ Output para esse exemplo:
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.switch")}}
+{{Compat}}
 
 ## See also
 

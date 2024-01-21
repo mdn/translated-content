@@ -82,7 +82,7 @@ Propriedades personalizadas participam na cascata: cada uma delas pode aparecer 
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 ## Veja também
 

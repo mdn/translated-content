@@ -68,7 +68,7 @@ if (!String.prototype.padStart) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.padStart")}}
+{{Compat}}
 
 ## Veja também
 

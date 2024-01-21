@@ -264,7 +264,6 @@ render();
 ## 関連情報
 
 - [A-Frame ウェブサイト](https://aframe.io/)
-- [Mozilla Mixed Reality ウェブサイト](https://mixedreality.mozilla.org/)
 - [Introducing A-Frame 0.1.0 article](https://aframe.io/blog/2015/12/16/introducing-aframe/)
 - [Made with A-Frame Tumblr](https://aframevr.tumblr.com/)
 - [A-Frame physics plugin](https://github.com/ngokevin/aframe-physics-components)

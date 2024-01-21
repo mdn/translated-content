@@ -35,7 +35,7 @@ browser.i18n.getMessage(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.getMessage")}}
+{{Compat}}
 
 ## 例
 

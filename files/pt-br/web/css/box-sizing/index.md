@@ -45,7 +45,7 @@ box-sizing: inherit
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## Veja também
 

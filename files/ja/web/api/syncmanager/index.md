@@ -24,4 +24,4 @@ slug: Web/API/SyncManager
 
 ## ブラウザの互換性
 
-{{Compat("api.SyncManager")}}
+{{Compat}}

@@ -17,7 +17,7 @@ O valor deste atributo não deve conter lacunas (espaços, tabulações etc.). N
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.id")}}
+{{Compat}}
 
 ## Veja também
 

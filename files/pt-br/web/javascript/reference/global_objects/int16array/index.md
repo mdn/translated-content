@@ -150,7 +150,7 @@ var int16 = new Int16Array(iterable);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Int16Array")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

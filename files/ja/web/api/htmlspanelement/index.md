@@ -23,7 +23,7 @@ _このインターフェイスにはメソッドがありませんが、 {{DOMx
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLSpanElement")}}
+{{Compat}}
 
 ## 関連情報
 

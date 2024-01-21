@@ -41,7 +41,7 @@ var evaluating = browser.devtools.inspectedWindow.eval(
 );
 ```
 
-### Parameters
+### 引数
 
 - `expression`
   - : `string`. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
@@ -56,7 +56,7 @@ var evaluating = browser.devtools.inspectedWindow.eval(
     - `contextSecurityOrigin` {{optional_inline}}
       - : `string`. Evaluate the expression in the context of a content script attached by a different extension, whose origin matches the value given here. This overrides `useContentScriptContext`.
 
-### Return value
+### 返値
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` containing two elements.
 
@@ -76,7 +76,7 @@ If an error occurred, element 0 will be `undefined`, and element 1 will contain 
 
 ## ブラウザの対応状況
 
-{{Compat("webextensions.api.devtools.inspectedWindow.eval")}}
+{{Compat}}
 
 ## 例
 

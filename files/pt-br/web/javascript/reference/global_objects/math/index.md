@@ -243,7 +243,7 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math")}}
+{{Compat}}
 
 ## Veja também
 

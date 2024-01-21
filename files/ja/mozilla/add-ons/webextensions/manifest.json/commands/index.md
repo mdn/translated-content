@@ -209,4 +209,4 @@ Mac では、"Ctrl" は"Command" と翻訳され、実際の "Ctrl"が必要な�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.commands")}}
+{{Compat}}

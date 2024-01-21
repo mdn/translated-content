@@ -122,4 +122,4 @@ function String() {
 
 ## Compatibilidade de Browser
 
-{{Compat("javascript.builtins.Object.constructor")}}
+{{Compat}}

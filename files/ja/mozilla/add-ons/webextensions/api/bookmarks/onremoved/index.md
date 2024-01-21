@@ -56,9 +56,9 @@ browser.bookmarks.onRemoved.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onRemoved")}}
+{{Compat}}
 
-## Examples
+## 例
 
 ```js
 function handleRemoved(id, removeInfo) {

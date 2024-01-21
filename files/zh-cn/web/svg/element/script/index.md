@@ -69,6 +69,6 @@ slug: Web/SVG/Element/script
 
 ## 参见
 
-- [HTML 中的`script`元素](/zh-CN/HTML/Element/Script)
+- [HTML 中的 `script` 元素](/zh-CN/HTML/Element/Script)
 
 {{SVGRef}}

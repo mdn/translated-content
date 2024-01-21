@@ -44,7 +44,7 @@ var buf2 = buf1.slice(0);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

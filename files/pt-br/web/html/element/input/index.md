@@ -5,11 +5,11 @@ slug: Web/HTML/Element/input
 
 O **elemento HTML `<input>`** é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um `<input>` varia consideravelmente dependendo do valor de seu atributo `type`.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Categorias_de_conteúdo)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_de_fluxo), listado, enviável, resetável, elemento associado a formulário, [conteúdo fraseado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fraseado).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo), listado, enviável, resetável, elemento associado a formulário, [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_fraseado).
   Se o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) não tiver o valor `hidden`, elemento rotulável, conteúdo palpável.
 - _Conteúdo permitido_ Nenhum, este é um {{Glossary("elemento vazio")}}.
 - _Omissão de tags_ Deve ter uma tag de abertura e não deve ter uma tag de fechamento.
-- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fraseado).
+- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_fraseado).
 - _Interface do DOM_ {{domxref("HTMLInputElement")}}
 
 ## Atributos
@@ -271,11 +271,11 @@ Você pode usar o atributo [`mozactionhint`](/pt-BR/docs/Web/HTML/Element/input#
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input")}}
+{{Compat}}
 
 ## Veja também
 
-- Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
+- Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)
 
 {{HTMLSidebar}}

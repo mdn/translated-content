@@ -183,7 +183,7 @@ html {
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}}
 
-マージンが相殺される場合と相殺されない場合を規定する多くのルールがあります。 詳細については、[マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)に関する詳細ページをご覧ください。現時点で覚えておくべき主なことは、マージンの相殺が起こることです。マージンによるスペースを作成していて、期待したスペースが得られない場合、おそらくこれが起こっています。
+マージンが相殺される場合と相殺されない場合を規定する多くのルールがあります。 詳細については、[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)に関する詳細ページをご覧ください。現時点で覚えておくべき主なことは、マージンの相殺が起こることです。マージンによるスペースを作成していて、期待したスペースが得られない場合、おそらくこれが起こっています。
 
 ### Borders
 

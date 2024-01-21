@@ -126,7 +126,7 @@ Por favor veja a página {{HTMLElement("table")}} para exemplos sobre `<tfoot>`.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.tfoot")}}
+{{Compat}}
 
 ## Veja também
 

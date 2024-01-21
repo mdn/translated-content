@@ -7,7 +7,7 @@ slug: Web/HTML/Element/option
 
 Em um formulário Web, o **elemento HTML** `<option>` é usado para criar um controle que representa um item dentro de um elemento HTML5 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Categorias_de_conteúdo)_ Nenhuma.
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Nenhuma.
 - _Conteúdo permitido_ Texto com caracteres escapados (como `&eacute;`) ocasionalmente.
 - _Omissão de tags_ A tag de abertura é obrigatória. A tag de fechamento é opcional se este elemento é imediatamente seguido por um outro elemento `<option>` ou um {{HTMLElement("optgroup")}}, ou se o elemento pai não tem mais nenhum conteúdo.
 - _Elementos pai permitidos_ {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}.
@@ -43,10 +43,10 @@ Veja os exemplos do elemento {{HTMLElement("select")}}.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.option")}}
+{{Compat}}
 
 ## Veja também
 
-- Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
+- Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 
 {{HTMLSidebar}}

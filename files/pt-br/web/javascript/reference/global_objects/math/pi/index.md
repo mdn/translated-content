@@ -37,7 +37,7 @@ calcularCircunferencia(1); // 6.283185307179586
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.PI")}}
+{{Compat}}
 
 ## Veja também
 

@@ -46,7 +46,7 @@ theBigDay.setYear(2000);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setYear")}}
+{{Compat}}
 
 ## Veja também
 

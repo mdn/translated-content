@@ -16,7 +16,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageChange")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -35,7 +35,7 @@ getLog10e(); // 0.4342944819032518
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.LOG10E")}}
+{{Compat}}
 
 ## Veja também
 

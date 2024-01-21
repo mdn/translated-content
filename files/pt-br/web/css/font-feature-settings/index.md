@@ -100,7 +100,7 @@ td.tabular {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.font-feature-settings")}}
+{{Compat}}
 
 ## Veja Também
 

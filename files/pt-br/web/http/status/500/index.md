@@ -25,4 +25,4 @@ Status
 
 As informações mostradas acima foram extraídas do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.500")}}
+{{Compat}}

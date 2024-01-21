@@ -63,4 +63,4 @@ Esta propriedade é útil em páginas que contêm um monte de widgets que são t
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.contain")}}
+{{Compat}}

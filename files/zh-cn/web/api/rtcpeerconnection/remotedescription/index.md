@@ -43,8 +43,8 @@ else {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.currentLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
+- {{domxref("RTCPeerConnection.setRemoteDescription()")}}、{{domxref("RTCPeerConnection.pendingRemoteDescription")}}、{{domxref("RTCPeerConnection.currentRemoteDescription")}}
+- {{domxref("RTCPeerConnection.setLocalDescription()")}}、{{domxref("RTCPeerConnection.pendingLocalDescription")}}、{{domxref("RTCPeerConnection.currentLocalDescription")}}、{{domxref("RTCPeerConnection.localDescription")}}
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)

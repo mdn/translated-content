@@ -34,7 +34,7 @@ var hours = today.getUTCHours();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCHours")}}
+{{Compat}}
 
 ## Veja também
 

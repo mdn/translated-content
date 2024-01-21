@@ -26,7 +26,7 @@ browser.alarms.getAll(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.alarms.getAll")}}
+{{Compat}}
 
 ## 例
 

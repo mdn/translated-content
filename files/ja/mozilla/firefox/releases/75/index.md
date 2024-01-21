@@ -82,10 +82,6 @@ _変更なし。_
 
 _変更なし。_
 
-### セキュリティ
-
-_変更なし。_
-
 ### WebDriver conformance (Marionette)
 
 - Firefox が起動するとき常に Marionette の初期化が行われる不具合を修正しました。コマンドライン引数や環境変数で制限されるようになりました ([Firefox バグ 1622012](https://bugzil.la/1622012))。

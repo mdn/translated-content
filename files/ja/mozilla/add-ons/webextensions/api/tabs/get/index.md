@@ -17,16 +17,16 @@ var getting = browser.tabs.get(
 );
 ```
 
-### Parameters
+### 引数
 
 - `tabId`
   - : `integer`. 取得するタブの ID。
 
-### Return value
+### 返値
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
 
-## Examples
+## 例
 
 タブがアクティブなとき、情報を取得します:
 
@@ -45,9 +45,9 @@ browser.tabs.onActivated.addListener(logListener);
 
 {{WebExtExamples}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.get")}}
+{{Compat}}
 
 > **メモ:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-get) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 

@@ -35,7 +35,7 @@ getRoot1_2(); // 0.7071067811865476
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.SQRT1_2")}}
+{{Compat}}
 
 ## 関連情報
 

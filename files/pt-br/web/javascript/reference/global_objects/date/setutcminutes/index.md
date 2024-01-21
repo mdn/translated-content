@@ -49,7 +49,7 @@ theBigDay.setUTCMinutes(43);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setUTCMinutes")}}
+{{Compat}}
 
 ## Veja também
 

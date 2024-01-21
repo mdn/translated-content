@@ -85,7 +85,7 @@ Content-Location: /existing.html
 | ------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "PUT", "4.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

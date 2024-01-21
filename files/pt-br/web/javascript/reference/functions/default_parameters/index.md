@@ -202,7 +202,7 @@ f(); // 6
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions.default_parameters")}}
+{{Compat}}
 
 ## Veja também
 

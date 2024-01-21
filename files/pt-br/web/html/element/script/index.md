@@ -131,7 +131,7 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.script")}}
+{{Compat}}
 
 ## See also
 

@@ -96,4 +96,4 @@ Entretanto pode ser apropriado incluir `will-change` no seu estilo css para uma 
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.will-change")}}
+{{Compat}}

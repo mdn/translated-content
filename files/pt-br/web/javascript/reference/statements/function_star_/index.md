@@ -139,7 +139,7 @@ console.log(bar.next()); // {value: 10, done: false}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.generator_function")}}
+{{Compat}}
 
 ## Observações específicas Firefox
 

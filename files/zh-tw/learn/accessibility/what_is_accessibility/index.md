@@ -47,7 +47,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 - 有些是商業軟體，例如 [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS)（Windows）和 [Window Eyes](http://www.gwmicro.com/window-eyes/)（Windows）。
 - 也有些是自由軟體，例如 [NVDA](http://www.nvaccess.org/)（Windows）、[ChromeVox](http://www.chromevox.com/)（Chrome、Windows、Mac OS X）、[Orca](https://wiki.gnome.org/Projects/Orca)（Linux）
-- 還有些是系統內建，例如 [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/)（Mac OS X 與 iOS）、[Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)（Microsoft Windows）、[ChromeVox](http://www.chromevox.com/)（Chrome OS）、[TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)（Android）。
+- 還有些是系統內建，例如 [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/)（Mac OS X 與 iOS）、[Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)（Microsoft Windows）、[ChromeVox](http://www.chromevox.com/)（ChromeOS）、[TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)（Android）。
 
 熟悉螢幕閱讀器是個好主意；你得設定好螢幕閱讀器、還要會使用它，以理解其工作原理。請參見[cross browser testing screen readers guide](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)以深入理解。以下影片提供了簡單的體驗。
 

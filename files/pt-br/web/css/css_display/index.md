@@ -64,4 +64,4 @@ slug: Web/CSS/CSS_display
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.display", 10)}}
+{{Compat}}

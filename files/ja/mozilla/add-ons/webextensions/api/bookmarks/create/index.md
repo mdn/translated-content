@@ -29,7 +29,7 @@ browser.bookmarks.create(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.create")}}
+{{Compat}}
 
 ## 使用例
 

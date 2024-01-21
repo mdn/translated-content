@@ -78,9 +78,9 @@ var d = new D(); // logs class D extends C{constructor(){super();}}
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)
-- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
 - [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
 - [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)

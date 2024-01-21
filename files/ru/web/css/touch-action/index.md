@@ -90,9 +90,9 @@ html {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-{{compat("css.properties.touch-action")}}
+{{Compat}}
 
 ## Смотрите также
 

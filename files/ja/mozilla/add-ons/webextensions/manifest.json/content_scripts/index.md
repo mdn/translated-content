@@ -365,4 +365,4 @@ glob は単にワイルドカードを含むことのある文字列です。ワ
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.content_scripts")}}
+{{Compat}}

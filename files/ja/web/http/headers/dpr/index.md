@@ -49,7 +49,7 @@ DPR: 1.0
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.DPR")}}
+{{Compat}}
 
 ## 関連情報
 

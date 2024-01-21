@@ -36,7 +36,7 @@ var minutes = today.getUTCMinutes();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCMinutes")}}
+{{Compat}}
 
 ## Veja também
 

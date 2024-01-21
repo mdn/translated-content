@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.windows.WindowType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

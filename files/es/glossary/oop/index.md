@@ -3,6 +3,8 @@ title: Programación orientada a objetos
 slug: Glossary/OOP
 ---
 
+{{GlossarySidebar}}
+
 **OOP** (Programación orientada a objetos) es un paradigma de programación en el que los datos son encapsulados en **{{glossary("object","objetos")}},** los cuales tienen su propio comportamiento.
 
 {{glossary("JavaScript")}} esta altamente orientado a objetos. Sigue el modelo basado en prototipado (en oposición al modelo basado en **{{glossary("Class","clases")}}**).

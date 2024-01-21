@@ -228,7 +228,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String")}}
+{{Compat}}
 
 ## Veja também
 

@@ -81,4 +81,4 @@ Usually, a `foreignObject` will be used in conjunction with the {{SVGElement("sw
 
 ## ブラウザー互換性
 
-{{Compat("svg.elements.foreignObject")}}
+{{Compat}}

@@ -77,4 +77,4 @@ This element implements the {{domxref("SVGViewElement")}} interface.
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.view")}}
+{{Compat}}

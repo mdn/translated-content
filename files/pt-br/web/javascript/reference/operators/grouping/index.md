@@ -47,7 +47,7 @@ a * c + b * c; // 9
 
 ## Compatibilidade
 
-{{Compat("javascript.operators.grouping")}}
+{{Compat}}
 
 ## Veja também
 

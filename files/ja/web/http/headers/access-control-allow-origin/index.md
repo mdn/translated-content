@@ -75,7 +75,7 @@ Vary: Origin
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## 関連情報
 

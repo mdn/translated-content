@@ -110,7 +110,7 @@ Output:
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.continue")}}
+{{Compat}}
 
 ## Veja também
 

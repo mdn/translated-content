@@ -271,7 +271,7 @@ A notação de objeto literal não é a mesma de **J**ava**S**cript **O**bject *
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.object_initializer")}}
+{{Compat}}
 
 ## Veja também
 

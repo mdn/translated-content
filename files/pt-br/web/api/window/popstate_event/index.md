@@ -36,7 +36,7 @@ Navegadores tendem a lidar com o evento `popstate` diferentemente no carregament
 
 ## Compatiblidade com navegadores
 
-{{Compat("api.Window.popstate_event")}}
+{{Compat}}
 
 ## Exemplo
 

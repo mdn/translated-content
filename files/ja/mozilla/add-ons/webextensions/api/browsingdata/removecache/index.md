@@ -30,7 +30,7 @@ var removing = browser.browsingData.removeCache(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browsingData.removeCache")}}
+{{Compat}}
 
 ## 例
 

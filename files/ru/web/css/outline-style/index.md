@@ -16,7 +16,7 @@ l10n:
 ## Синтаксис
 
 ```css
-/* Значения в виде ключевых слов */
+/* Ключевые слова */
 outline-style: auto;
 outline-style: none;
 outline-style: dotted;
@@ -237,7 +237,7 @@ outline-style: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

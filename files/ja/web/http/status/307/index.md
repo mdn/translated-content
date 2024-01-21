@@ -25,7 +25,7 @@ slug: Web/HTTP/Status/307
 
 ## ブラウザーの対応
 
-{{Compat("http.status.307")}}
+{{Compat}}
 
 ## 関連情報
 

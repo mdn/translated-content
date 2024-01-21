@@ -125,16 +125,16 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 > **備註：** Angular 教學的最後測試時間為 2021 年四月，使用 Angular CLI（NG）11.2.5。
 >
-> 如果您需要根據我們的版本檢查程式碼，可以在 [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) 上找到範例程式碼的最終版本。
+> 如果你需要根據我們的版本檢查程式碼，可以在 [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) 上找到範例程式碼的最終版本。
 
 - [1. Angular 新手入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - : 在本文中，我們將會探索 Angular 所提供的功能、安裝必備工具、建立範例應用程式，並進一步瞭解 Angular 的基本架構。
 - [2. 開始開發我們的 Angular 待辦事項應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - : 此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，您將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。
+  - : 此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，你將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。
 - [3. 使用樣式點綴我們的 Angular 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - : 現在，我們已經建立了基本的應用程式結構，並加入了內容，接著我們就要來對應用程式進行樣式的調整，透過本篇文章來學習如何使用樣式點綴我們的 Angular 應用程式。
 - [4. 建立一個項目元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - : 元件為您提供了一種組織應用程式的方式。本篇文章將引導您建立一個元件，來處理待辦列表中的各個待辦項目，並增加標示完成、編輯以及刪除的功能。在本篇也將介紹 Angular 事件模型
+  - : 元件為你提供了一種組織應用程式的方式。本篇文章將引導你建立一個元件，來處理待辦列表中的各個待辦項目，並增加標示完成、編輯以及刪除的功能。在本篇也將介紹 Angular 事件模型
 - [5. 過濾待辦事項](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - : 現在，讓我們繼續增加功能，以允許用戶過濾待辦項目，以便他們可以查看進行中、已完成或所有待辦項目。
 - [6. 構建 Angular 應用程序和更多資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

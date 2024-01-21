@@ -45,7 +45,7 @@ To use the permissions API, decide which permissions your extension can request 
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.permissions")}}
+{{Compat}}
 
 ## その他
 

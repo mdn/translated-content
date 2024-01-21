@@ -39,7 +39,7 @@ var w4 = window.self;
 
 ## ブラウザー互換性
 
-{{Compat("api.Window.self")}}
+{{Compat}}
 
 ## 関連
 

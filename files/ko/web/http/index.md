@@ -2,12 +2,12 @@
 title: HTTP
 slug: Web/HTTP
 l10n:
-  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
+  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
 {{HTTPSidebar}}
 
-**하이퍼텍스트 전송 프로토콜(HTTP)**은 HTML과 같은 하이퍼미디어 문서를 전송하기 위한 [애플리케이션 계층](https://en.wikipedia.org/wiki/Application_Layer) 프로토콜입니다. 웹 브라우저와 웹 서버간의 통신을 위해 설계되었지만 다른 목적으로도 사용할 수 있습니다. HTTP는 클라이언트가 요청을 하기 위해 연결을 연 다음 응답을 받을때 까지 대기하는 전통적인 [클라이언트-서버 모델](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)을 따릅니다. HTTP는 [무상태 프로토콜](https://en.wikipedia.org/wiki/Stateless_protocol)이며, 서버가 두 요청 간에 어떠한 데이터(상태)도 유지하지 않습니다.
+**하이퍼텍스트 전송 프로토콜 (HTTP)**은 HTML과 같은 하이퍼미디어 문서를 전송하기 위한 [애플리케이션 계층](https://en.wikipedia.org/wiki/Application_Layer) 프로토콜입니다. 웹 브라우저와 웹 서버간의 통신을 위해 설계되었지만 다른 목적으로도 사용할 수 있습니다. HTTP는 클라이언트가 요청을 하기 위해 연결을 연 다음 응답을 받을때 까지 대기하는 전통적인 [클라이언트-서버 모델](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)을 따릅니다. HTTP는 [무상태 프로토콜](https://en.wikipedia.org/wiki/Stateless_protocol)이며, 서버가 두 요청 간에 어떠한 데이터(상태)도 유지하지 않습니다.
 
 ## 자습서
 
@@ -57,5 +57,5 @@ HTTP를 이해하고 디버깅하는데 도움이 되는 도구와 리소스입�
   - : 개발자, 시스템 관리자, 보안 전문가가 사이트를 안전하게 구성하는 것을 돕기위해 고안된 프로젝트입니다.
 - [RedBot](https://redbot.org/)
   - : 캐시 관련 헤더를 확인하는 도구입니다.
-- [브라우저가 동작하는 방식(2011)](https://web.dev/howbrowserswork/)
+- [브라우저가 동작하는 방식(2011)](https://web.dev/articles/howbrowserswork/)
   - : 브라우저 내부와 HTTP 프로토콜을 통한 요청 흐름에 대한 아주 이해하기 쉬운 문서입니다.

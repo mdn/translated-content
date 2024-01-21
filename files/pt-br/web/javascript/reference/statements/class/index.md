@@ -50,7 +50,7 @@ class Quadrado extends Poligono {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.class")}}
+{{Compat}}
 
 ## Veja também
 

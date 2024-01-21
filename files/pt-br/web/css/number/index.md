@@ -45,7 +45,7 @@ Quando animado, os valores de `<number>` são interpolados como números reais e
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.types.number")}}
+{{Compat}}
 
 ## Veja também
 

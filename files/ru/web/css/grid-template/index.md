@@ -20,7 +20,7 @@ slug: Web/CSS/grid-template
 ## Синтаксис
 
 ```css
-/* Ключевые слова в качестве значения */
+/* Ключевые слова */
 grid-template: none;
 
 /* Значения в формате grid-template-rows / grid-template-columns */
@@ -128,7 +128,7 @@ footer {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

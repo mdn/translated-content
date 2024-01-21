@@ -16,7 +16,7 @@ browser.bookmarks.getChildren(
 );
 ```
 
-### Parameters
+### 引数
 
 - `id`
   - : 取得したい子要素を持つフォルダ ID を指定する {{jsxref("string")}} です。
@@ -29,7 +29,7 @@ browser.bookmarks.getChildren(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.getChildren")}}
+{{Compat}}
 
 ## 使用例
 

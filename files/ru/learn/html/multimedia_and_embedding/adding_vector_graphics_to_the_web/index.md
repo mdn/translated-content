@@ -320,12 +320,3 @@ textarea.onkeyup = function () {
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## В этом модуле
-
-- [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Видео и аудио контент](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [От \<object> до \<iframe> — другие способы встраивать контент](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Добавление векторной графики](/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Адаптивные изображения](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Задание: страница о Mozilla](/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

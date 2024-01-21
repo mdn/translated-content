@@ -52,7 +52,7 @@ Promise.reject(new Error("falha")).then(
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.reject")}}
+{{Compat}}
 
 ## Ver também
 

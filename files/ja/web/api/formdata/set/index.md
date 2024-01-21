@@ -3,10 +3,10 @@ title: "FormData: set() メソッド"
 short-title: set()
 slug: Web/API/FormData/set
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`set()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクト内の既存のキーに値を追加したり、存在しないキーと値の組を追加したりします。
 
@@ -65,5 +65,5 @@ formData.get("name"); // "72"
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

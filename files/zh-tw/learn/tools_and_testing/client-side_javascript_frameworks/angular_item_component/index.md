@@ -143,7 +143,7 @@ Angular 使用 `\{{item.description}}` 從 `items` 陣列中獲取當前 `item` 
 
 ## 準備 AppComponent
 
-在下一章節，您將添加用來溝通 `AppComponent` 和 `ItemComponent` 的程式碼。首先將以下內容添加到 `app.component.ts` 中來配置 AppComponent：
+在下一章節，你將添加用來溝通 `AppComponent` 和 `ItemComponent` 的程式碼。首先將以下內容添加到 `app.component.ts` 中來配置 AppComponent：
 
 ```js
 remove(item) {
@@ -204,7 +204,7 @@ export class ItemComponent {
 
 ## 在 AppComponent 中使用 ItemComponent
 
-在父子關係的情境下，可將一個組件包含在另一個組件中，讓您靈活地使用它們。
+在父子關係的情境下，可將一個組件包含在另一個組件中，讓你靈活地使用它們。
 
 `AppComponent` 就像個應用程式的外殼，可在內部加入其他元件
 
@@ -236,11 +236,11 @@ export class ItemComponent {
 
 雙括號 `\{{}}`，在 `<h2>` 內顯示 `items` 的長度與數目。
 
-在 `<h2>` 中 `<span>` 使用 `*ngIf` 與 `else` 決定 `<h2>` 是否要呈現 "item" 或 "items"。如果在列表中只有一個項目， 則 `會顯示包含 <span> 的內容。當items 陣列不等於 1 時，被我們命名為 elseBlock 的 <ng-template>，將顯示 #elseBlock，而不是 <span>。當您不想內容在預設渲染的時候，可以使用 Angular 的 <ng-template> ，因 #elseBlock 不是 <span>，是使用 <ng-template>。在此範例中，若 item 陣列長度不是 1 ，則 *ngIf 會顯示 elseBlock 而不顯示 <span>。`
+在 `<h2>` 中 `<span>` 使用 `*ngIf` 與 `else` 決定 `<h2>` 是否要呈現 "item" 或 "items"。如果在列表中只有一個項目， 則 `會顯示包含 <span> 的內容。當items 陣列不等於 1 時，被我們命名為 elseBlock 的 <ng-template>，將顯示 #elseBlock，而不是 <span>。當你不想內容在預設渲染的時候，可以使用 Angular 的 <ng-template> ，因 #elseBlock 不是 <span>，是使用 <ng-template>。在此範例中，若 item 陣列長度不是 1 ，則 *ngIf 會顯示 elseBlock 而不顯示 <span>。`
 
 在 `<li>` 使用 Angular 的結構型指令 `*ngFor` 會在 `items`陣列迭代所有的項目，Angular 的 `*ngFor` 與 `*ngIf` 指令相似，是另一個可以協助你用更少的程式碼改變 DOM 元素架構，每一個 `item`，Angular 會重複 `<li>` 與其所有的內容，其中包含 `<app-item>`。這代表 Angular 為陣列中的每一個項目建立另一個 `<app-item>` 實體。Angular 會建立與 `items` 陣列中的數量相同的項目的 `<li>` 元素。
 
-您可使用 `*ngFor` 在其他的元素上，像是在 `<div>`、`<span>` 或是 `<p>`，以此類推。
+你可使用 `*ngFor` 在其他的元素上，像是在 `<div>`、`<span>` 或是 `<p>`，以此類推。
 
 在 `AppComponent` 有一個移除項目的 `remove()` 的方法，是綁定 `ItemComponent` 中 remove 的屬性，此 `item` 屬性是在中括號內 `[]`,用來綁定 `item` 在 `AppComponent` 與 `ItemComponent` 之間的值。
 
@@ -374,6 +374,6 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 
 ## 結論
 
-您現在應該擁有一個樣式化的 Angular 待辦事項列表應用程序，該應用程序可以添加，編輯和刪除項目。下一步是加入過濾功能，以便您可以查看符合特定條件的項目。
+你現在應該擁有一個樣式化的 Angular 待辦事項列表應用程序，該應用程序可以添加，編輯和刪除項目。下一步是加入過濾功能，以便你可以查看符合特定條件的項目。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

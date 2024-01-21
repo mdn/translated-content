@@ -234,7 +234,7 @@ Por exemplo, se seu CSS está em um arquivo com nome `default.css`, esse pode pa
 
 O SVG é importado do arquivo com nome `resources.svg`, usando o clip-path com o ID c1.
 
-**Veja também**
+## Veja também
 
 - [SVG](/pt-BR/docs/SVG)
 - [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)

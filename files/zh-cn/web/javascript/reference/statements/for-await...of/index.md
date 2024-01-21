@@ -122,7 +122,7 @@ getResponseSize("https://jsonplaceholder.typicode.com/photos");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}
 - {{jsxref("Statements/for...of")}}

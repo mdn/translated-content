@@ -73,7 +73,7 @@ var atts = para.attributes;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

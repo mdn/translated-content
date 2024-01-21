@@ -44,7 +44,7 @@ for (let e of eArr) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## Veja também
 

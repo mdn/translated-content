@@ -62,7 +62,7 @@ window.onhashchange = locationHashChanged;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.hashchange_event")}}
+{{Compat}}
 
 ## 関連情報
 

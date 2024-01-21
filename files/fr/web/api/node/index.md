@@ -129,8 +129,6 @@ _Hérite des méthodes de son parent {{domxref("EventTarget")}}_.
   - : Permet à un utilisateur d'obtenir une {{domxref ("DOMUserData")}} (_donnée utilisateur_) à partir du nœud.
 - {{domxref("Node.hasAttributes()")}} {{deprecated_inline}}
   - : Retourne un {{jsxref("Boolean")}} indiquant si l'élément possède des attributs ou non.
-- {{domxref("Node.isSupported()")}} {{deprecated_inline}}
-  - : Retourne une marque {{jsxref("Boolean")}} qui contient le résultat d'un test si l'implémentation DOM prend en compte une caractéristique spécifique et si cette fonctionnalité est prise en charge par le nœud spécifique.
 - {{domxref("Node.setUserData()")}} {{deprecated_inline}}
   - : Permet à un utilisateur d'attacher ou d'enlever {{domxref("DOMUserData")}} du nœud.
 

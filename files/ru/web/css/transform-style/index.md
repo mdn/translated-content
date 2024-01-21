@@ -41,7 +41,7 @@ transform-style: unset;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

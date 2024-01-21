@@ -87,7 +87,7 @@ JSON.parse('{"foo" : 1, }');
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.JSON.parse")}}
+{{Compat}}
 
 ## Veja Também
 

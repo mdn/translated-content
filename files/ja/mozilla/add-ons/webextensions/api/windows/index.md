@@ -53,7 +53,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.windows")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

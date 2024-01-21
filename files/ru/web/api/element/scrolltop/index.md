@@ -39,8 +39,6 @@ padding-bottom
 
 **Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-![Image:scrollTop.png](/@api/deki/files/842/=ScrollTop.png)
-
 ## Спецификации
 
 {{Specifications}}

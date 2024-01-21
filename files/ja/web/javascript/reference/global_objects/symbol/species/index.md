@@ -41,7 +41,7 @@ console.log(mapped instanceof Array); // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.species")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -34,7 +34,7 @@ browser.find.find(
 );
 ```
 
-### Parameters
+### 引数
 
 - `queryphrase`
   - : `string`. 検索語。
@@ -53,7 +53,7 @@ browser.find.find(
     - `includeRectData`
       - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`.
 
-### Return value
+### 返値
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing up to three properties:
 
@@ -103,11 +103,11 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
     - `text`
       - : マッチしたテキスト全体、上の例では"You may"が丸ごと入ります。
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("webextensions.api.find.find", 10)}}
+{{Compat}}
 
-## Examples
+## 例
 
 ### Basic examples
 

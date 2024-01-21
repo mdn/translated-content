@@ -84,4 +84,4 @@ text-decoration-style: unset;
 
 ## Browser compatíveis
 
-{{Compat("css.properties.text-decoration-style")}}
+{{Compat}}

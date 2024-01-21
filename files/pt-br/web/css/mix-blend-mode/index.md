@@ -73,7 +73,7 @@ circle {
 
 ## Compatibilidade de navegadores
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}
 
 ## Veja também
 

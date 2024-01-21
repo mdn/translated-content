@@ -36,7 +36,7 @@ new InternalError("Engine failure");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.InternalError.InternalError")}}
+{{Compat}}
 
 ## 関連情報
 

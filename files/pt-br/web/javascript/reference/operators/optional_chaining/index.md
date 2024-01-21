@@ -175,7 +175,7 @@ console.log(customerCity); // Cidade desconhecida
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.optional_chaining")}}
+{{Compat}}
 
 ## Veja também
 

@@ -19,7 +19,7 @@ slug: Learn/CSS/CSS_layout/Normal_Flow
 
 ## 要素はデフォルトでどのようにレイアウトされますか？
 
-まず初めに、個々の要素ボックスは要素のコンテンツを取り、それからそれらの周りにパディング (padding、詰め物)、ボーダー (border、境界線) そしてマージン (margin、余白) を追加することによってレイアウトされます — これはまた以前に見たことがある[ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)のことです。
+まず初めに、個々の要素ボックスは要素のコンテンツを取り、それからそれらの周りにパディング (padding、詰め物)、ボーダー (border、境界線) そしてマージン (margin、余白) を追加することによってレイアウトされます — これはまた以前に見たことがある[ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)のことです。
 
 デフォルトでは、[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)のコンテンツは、その親要素の幅の 100% で、そのコンテンツと同じ高さです [インライン要素](/ja/docs/Web/HTML/Inline_elements)は、コンテンツと同じ高さで、コンテンツと同じ幅です。インライン要素に幅や高さを設定することはできません — それらはブロックレベル要素のコンテンツの中にあるだけです。この方法でインライン要素のサイズを制御したい場合は、`display: block;` を使用してブロックレベル要素のようにふるまうように設定する必要があります (あるいは、`display: inline-block;` で、両方の特性を混在させます)。
 
@@ -27,7 +27,7 @@ slug: Learn/CSS/CSS_layout/Normal_Flow
 
 インライン要素は異なるふるまいをします — 新しい行に現れません。代わりに、親ブロックレベル要素の幅の内側にマージンがある限り、それらは互いに同じ行に配置され、隣接する (または折り返された) テキストコンテンツに配置されます。スペースがなければ、あふれているテキストや要素は新しい行に移動します。
 
-隣接する 2 つの要素の両方にマージンが設定されていて、2 つのマージンが接触している場合、2 つのうち大きい方が残り、小さい方が消えます — これは[マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) (margin collapsing) と呼ばれます。
+隣接する 2 つの要素の両方にマージンが設定されていて、2 つのマージンが接触している場合、2 つのうち大きい方が残り、小さい方が消えます — これは[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) (margin collapsing) と呼ばれます。
 
 これらすべてを説明する簡単な例を見てみましょう。
 

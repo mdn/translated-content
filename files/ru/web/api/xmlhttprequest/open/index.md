@@ -36,13 +36,13 @@ XMLHttpRequest.open(method, url[, async[, user[, password]]])
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}
 - {{domxref("XMLHttpRequest.send", "send()")}}
 - {{domxref("XMLHttpRequest.abort", "abort()")}}

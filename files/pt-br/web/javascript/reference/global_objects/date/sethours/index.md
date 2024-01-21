@@ -57,7 +57,7 @@ theBigDay.setHours(7);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setHours")}}
+{{Compat}}
 
 ## Veja também
 

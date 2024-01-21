@@ -92,7 +92,7 @@ Um ou mais dos seguintes, por qualquer ordem:
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.background")}}
+{{Compat}}
 
 ## Veja também
 

@@ -17,7 +17,7 @@ Ele não herda de nenhum elemento e também não é herdado. Não há restriçã
 
 ## Copatibilidade com navegadores
 
-{{Compat("css.selectors.backdrop")}}
+{{Compat}}
 
 ## Veja também
 

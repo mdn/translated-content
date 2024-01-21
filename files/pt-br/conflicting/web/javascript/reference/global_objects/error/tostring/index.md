@@ -37,7 +37,7 @@ Não faz parte de nenhum padrão.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Error.toSource")}}
+{{Compat}}
 
 ## Veja também
 

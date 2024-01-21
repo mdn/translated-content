@@ -23,7 +23,7 @@ var error = instanceOfFileReader.error
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

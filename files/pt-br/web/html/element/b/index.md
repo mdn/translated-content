@@ -48,7 +48,7 @@ Palavras-chave são exibidas com o estilo padrão do elemento \<b>, provavelment
 
 ## Navegadores Compatíveis
 
-{{Compat("html.elements.b")}}
+{{Compat}}
 
 ## Veja Também
 

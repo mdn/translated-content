@@ -23,7 +23,7 @@ var openingPage = browser.runtime.openOptionsPage();
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.runtime.openOptionsPage")}}
+{{Compat}}
 
 ## 例
 

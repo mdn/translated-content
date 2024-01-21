@@ -23,7 +23,7 @@ HTTP **`100 Continue`** 情報ステータスレスポンスコードは、こ�
 
 ## ブラウザーの実装状況
 
-{{Compat("http.status.100")}}
+{{Compat}}
 
 ## 関連情報
 

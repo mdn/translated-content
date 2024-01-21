@@ -97,8 +97,8 @@ console.log(tp.tripple()); // 'tp.tripple 不是一个函数'.
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`class`表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
-- [`class`声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)

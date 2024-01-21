@@ -53,7 +53,7 @@ gl.compressedTexImage2D(
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

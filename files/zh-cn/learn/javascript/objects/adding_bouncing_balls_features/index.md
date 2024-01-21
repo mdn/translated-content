@@ -314,7 +314,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 `draw()`, `update()`, 和`collisionDetect()` 方法定义应保持不变。
 
-你还需要为 `new Ball() { ... }` 构造器添加第五个参数—— `exists`，且值为 `true`。
+你还需要为 `new Ball() { ... }` 构造器添加第五个参数——`exists`，且值为 `true`。
 
 到这里，尝试重新加载代码（运行程序），程序以及重新设计的对象都应该像之前那样工作。
 
@@ -328,8 +328,8 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 它还应该定义自己的一些属性，如：
 
-- `color` —— `'white'`
-- `size` —— `10`
+- `color`——`'white'`
+- `size`——`10`
 
 再次记得给你的 `EvilCircle()` 构造器的传递的参数中定义你继承的属性，并且给`prototype` 和 `constructor` 属性设置适当的值。
 
@@ -346,7 +346,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 #### `checkBounds()`
 
-这个方法和 `Ball()` 的 `update()` 函数做相同的事情—— 查看恶魔圈是否将要超出屏幕的边界，并且禁止它超出。同样，你可以直接复制 `Ball.prototype.update` 的定义，但是你需要做一些修改：
+这个方法和 `Ball()` 的 `update()` 函数做相同的事情——查看恶魔圈是否将要超出屏幕的边界，并且禁止它超出。同样，你可以直接复制 `Ball.prototype.update` 的定义，但是你需要做一些修改：
 
 - 删除最后两行 — 我们不想要在每一帧中自动的更新恶魔圈的位置，因为我们会以下面所述的方式移动它。
 - 在 `if()` 语句中，如果检测为真（即小恶魔圈超出边界），我们不需要更新 `velX`/`velY`；取而代之的是，我们想要修改 `x`/`y` 的值，使恶魔圈稍微地弹回屏幕。增加或减去（根据实际判断）恶魔圈 `size` 的值即可实现。

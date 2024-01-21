@@ -267,7 +267,7 @@ npm install eslint --save-dev
 }
 ```
 
-深入解释一下，eslint src/js 命令可以在终端/命令行对应用目录下的 src/js 目录中的 JavaScript 文件运行 eslint。把上面一段脚本添加进应用的 package.json 中还可以为此命令提供一个快捷方式—— lint。
+深入解释一下，eslint src/js 命令可以在终端/命令行对应用目录下的 src/js 目录中的 JavaScript 文件运行 eslint。把上面一段脚本添加进应用的 package.json 中还可以为此命令提供一个快捷方式——lint。
 
 然后就可以用 NPM 这样运行 eslint 了：
 

@@ -226,7 +226,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

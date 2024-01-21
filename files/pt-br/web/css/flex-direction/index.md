@@ -119,7 +119,7 @@ Usar a propriedade `flex-direction` com o valores de `row-reverse` or `column-re
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 ## See also
 

@@ -316,9 +316,9 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org>
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org&subject=This%20is%20the%20subject>
 
-## 测试你的技能！
+## 技能测试！
 
-你已经到了这篇文章的结尾，但还能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——见[测试你的技能：链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)。
+你已经到了这篇文章的结尾，但还能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——见[技能测试：链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)。
 
 ## 小结
 

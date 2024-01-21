@@ -62,7 +62,7 @@ Para alterar a aparencia da linha ou as lacunas entre ela e os parágrafos, util
 
 ## Compatibilidade nos Navegadores
 
-{{Compat("html.elements.hr")}}
+{{Compat}}
 
 ## Veja também
 

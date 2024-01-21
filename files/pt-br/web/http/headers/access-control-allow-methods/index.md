@@ -47,7 +47,7 @@ Access-Control-Allow-Methods: *
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Methods")}}
+{{Compat}}
 
 ## Veja também
 

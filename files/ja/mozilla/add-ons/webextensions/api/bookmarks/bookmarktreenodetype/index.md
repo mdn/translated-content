@@ -17,6 +17,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeType", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}

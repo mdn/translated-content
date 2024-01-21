@@ -3,7 +3,7 @@ title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
 
-{{JSRef("Global_Objects", "Boolean")}}
+{{JSRef}}
 
 ## Сводка
 

@@ -128,7 +128,7 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.at-rules.font-face")}}
+{{Compat}}
 
 ## Veja Também
 

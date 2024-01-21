@@ -53,7 +53,7 @@ var downloading = browser.downloads.download(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.downloads.download")}}
+{{Compat}}
 
 ## 例
 

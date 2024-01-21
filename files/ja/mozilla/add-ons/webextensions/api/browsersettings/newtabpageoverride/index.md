@@ -11,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserSettings.newTabPageOverride", 10)}}
+{{Compat}}
 
 ## 例
 

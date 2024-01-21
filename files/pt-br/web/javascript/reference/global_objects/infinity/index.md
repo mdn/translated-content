@@ -31,7 +31,7 @@ Pela especificação ECMAScript 5, `Infinity` é somente leitura (implementado n
 
 ## Compatibilidade
 
-{{Compat("javascript.builtins.Infinity")}}
+{{Compat}}
 
 ## Veja também
 

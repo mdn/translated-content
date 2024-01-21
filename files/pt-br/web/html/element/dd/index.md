@@ -79,7 +79,7 @@ Para exemplos, veja [os exemplos de \<dl>](/pt-BR/docs/Web/HTML/Element/dl#Exemp
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.dd")}}
+{{Compat}}
 
 ## Veja também
 

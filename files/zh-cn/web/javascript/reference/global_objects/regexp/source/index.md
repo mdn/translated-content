@@ -25,6 +25,6 @@ console.log(regex.source); // "fooBar"，不包含 /.../ 和 "ig"。
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("RegExp.prototype.flags")}}

@@ -114,7 +114,7 @@ var b = mycar instanceof Object; // retorna true
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.instanceof")}}
+{{Compat}}
 
 ## Veja também
 
