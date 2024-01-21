@@ -175,7 +175,7 @@ If your browser supports `animationcancel`, hiding the box using the button will
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

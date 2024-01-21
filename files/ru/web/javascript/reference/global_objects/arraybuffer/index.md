@@ -58,7 +58,7 @@ var view = new Int32Array(buffer);
 
 {{Specifications}}
 
-## Таблица совместимости
+## Совместимость с браузерами
 
 {{Compat}}
 

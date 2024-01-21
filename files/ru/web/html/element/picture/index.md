@@ -53,7 +53,7 @@ slug: Web/HTML/Element/picture
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 
 **`Symbol.asyncIterator`** は、オブジェクトのデフォルトの AsyncIterator を指定します。このプロパティがオブジェクトに設定されている場合、それは非同期反復可能項目であり、[`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループで使用できます。
 
+{{EmbedInteractiveExample("pages/js/symbol-asynciterator.html", "taller")}}
+
 ## 説明
 
 `Symbol.asyncIterator` シンボルは、オブジェクトの `@@asyncIterator` メソッドにアクセスするための組み込みシンボルです。オブジェクトを非同期で反復可能にするには、`Symbol.asyncIterator` キーが必要です。

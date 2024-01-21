@@ -3,7 +3,7 @@ title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
 
-{{JSRef("Global_Objects", "Boolean")}}
+{{JSRef}}
 
 ## Сводка
 

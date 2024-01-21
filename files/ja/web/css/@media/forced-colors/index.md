@@ -1,11 +1,13 @@
 ---
 title: forced-colors
 slug: Web/CSS/@media/forced-colors
+l10n:
+  sourceCommit: 2b4bf33acb346baf925fad1317f425ba2b967456
 ---
 
 {{CSSRef}}
 
-**`forced-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)で、{{Glossary("user agent", "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 Windows のハイコントラストモードがあります。
+**`forced-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#media_features)で、{{Glossary("user agent", "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 Windows のハイコントラストモードがあります。
 
 ## 構文
 
@@ -16,7 +18,7 @@ slug: Web/CSS/@media/forced-colors
 - `none`
   - : 強制カラーモードは有効ではありません。ページの色が限られたパレットに強制されていません。
 - `active`
-  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/color_value#system_colors)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します (詳細は [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) を参照してください)。
+  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/system-color)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します (詳細は [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) を参照してください)。
 
 ## 使用上の注意
 
@@ -45,10 +47,10 @@ slug: Web/CSS/@media/forced-colors
 - {{cssxref("color-scheme")}} は 'light dark' に強制されます
 - {{cssxref("scrollbar-color")}} は 'auto' に強制されます
 
-The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/ja/docs/Web/CSS/color_value#system_colors) for additional details of when each might be appropriate in various UI contexts.
+上記のプロパティで強制されるシステム色は、要素のコンテキストに依存します。例えば、 button 要素の {{cssxref("color")}} プロパティは `ButtonText` に強制されます。通常のテキストでは `CanvasText` に強制されます。様々な UI コンテキストにおいて、それぞれがどのような場合に適切かについての詳細は[システム色の一覧](/ja/docs/Web/CSS/color_value#システム色)を参照してください。
 
 > **メモ:** ユーザーエージェントは、追加された ARIA ロールではなく、本来の要素の意味に基づいてシステム色を選択します。
-> 例えば、`div` に `role="button"` を追加しても、要素の色が `ButtonText` に強制されることは**ありません**。
+> 例えば、 `role="button"` を `div` に追加しても、要素の色が `ButtonText` に強制されることは**ありません**。
 
 これらの調整に加えて、ブラウザーはテキストの後ろに「バックプレート」を描くことで、テキストの読みやすさを確保します。これは、テキストが画像の上に配置されている場合にコントラストを保つために特に重要です。
 

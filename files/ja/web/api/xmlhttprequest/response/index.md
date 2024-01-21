@@ -1,11 +1,12 @@
 ---
-title: XMLHttpRequest.response
+title: "XMLHttpRequest: response プロパティ"
+short-title: response
 slug: Web/API/XMLHttpRequest/response
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("XMLHttpRequest")}} の **`response`** プロパティは、そのリクエストの本体の内容を、 {{jsxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}、JavaScript の {{jsxref("Object")}}、文字列など、リクエストの {{domxref("XMLHttpRequest.responseType", "responseType")}} プロパティの値に応じた形で返します。
 
@@ -49,5 +50,5 @@ function load(url, callback) {
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - テキストと HTML/XML データの取得: {{domxref("XMLHttpRequest.responseText")}} および {{domxref("XMLHttpRequest.responseXML")}}

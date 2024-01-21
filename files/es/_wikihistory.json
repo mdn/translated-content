@@ -3911,6 +3911,10 @@
       "JAparici"
     ]
   },
+  "Web/API/Element/input_event": {
+    "modified": "2020-10-15T22:17:41.989Z",
+    "contributors": ["mariomoreno", "IsraelFloresDGA"]
+  },
   "Web/API/Element/insertAdjacentElement": {
     "modified": "2020-12-03T10:36:12.400Z",
     "contributors": ["AlePerez92", "alexlndn", "AgustinPrieto"]
@@ -4384,10 +4388,6 @@
   "Web/API/HTMLElement/dragover_event": {
     "modified": "2019-04-30T14:24:25.773Z",
     "contributors": ["wbamberg", "fscholz", "ExE-Boss", "Vickysolo"]
-  },
-  "Web/API/HTMLElement/input_event": {
-    "modified": "2020-10-15T22:17:41.989Z",
-    "contributors": ["mariomoreno", "IsraelFloresDGA"]
   },
   "Web/API/HTMLElement/offsetHeight": {
     "modified": "2019-04-30T12:33:07.062Z",
@@ -6151,10 +6151,6 @@
     "modified": "2019-03-23T22:27:08.613Z",
     "contributors": ["teoli", "pekechis"]
   },
-  "Web/CSS/::-webkit-outer-spin-button": {
-    "modified": "2019-03-23T22:27:04.174Z",
-    "contributors": ["teoli", "pekechis"]
-  },
   "Web/CSS/::-webkit-progress-bar": {
     "modified": "2019-03-23T22:26:48.592Z",
     "contributors": ["teoli", "pekechis"]
@@ -6659,10 +6655,6 @@
       "Irvandoval",
       "turuto"
     ]
-  },
-  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
-    "modified": "2019-11-06T19:10:32.985Z",
-    "contributors": ["tonyrodz"]
   },
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-03-25T21:15:58.856Z",
@@ -8500,18 +8492,6 @@
   "Web/Guide/CSS/Block_formatting_context": {
     "modified": "2019-03-23T22:32:27.340Z",
     "contributors": ["Enesimus", "javichito"]
-  },
-  "Web/Guide/Mobile": {
-    "modified": "2019-03-23T22:48:50.706Z",
-    "contributors": ["miguelsp"]
-  },
-  "Web/Guide/Parsing_and_serializing_XML": {
-    "modified": "2019-03-23T22:10:22.365Z",
-    "contributors": ["FenixAlive"]
-  },
-  "Web/Guide/Performance": {
-    "modified": "2019-03-23T23:21:17.984Z",
-    "contributors": ["DeiberChacon", "Sheppy"]
   },
   "Web/HTML": {
     "modified": "2020-12-10T12:38:08.697Z",
@@ -13538,6 +13518,10 @@
       "diegogaysaez"
     ]
   },
+  "Web/XML/Parsing_and_serializing_XML": {
+    "modified": "2019-03-23T22:10:22.365Z",
+    "contributors": ["FenixAlive"]
+  },
   "Web/XML/XML_introduction": {
     "modified": "2019-07-25T12:38:17.842Z",
     "contributors": [
@@ -13845,6 +13829,10 @@
     "modified": "2019-01-17T00:20:06.485Z",
     "contributors": ["wilfridoSantos"]
   },
+  "conflicting/Glossary/Flexbox": {
+    "modified": "2019-11-06T19:10:32.985Z",
+    "contributors": ["tonyrodz"]
+  },
   "conflicting/Learn": {
     "modified": "2020-07-16T22:22:13.785Z",
     "contributors": ["hamfree"]
@@ -13868,6 +13856,10 @@
   "conflicting/Learn/CSS/CSS_layout": {
     "modified": "2019-03-23T22:20:39.961Z",
     "contributors": ["lavilofam1"]
+  },
+  "conflicting/Learn/CSS/CSS_layout/Responsive_Design": {
+    "modified": "2019-03-23T22:48:50.706Z",
+    "contributors": ["miguelsp"]
   },
   "conflicting/Learn/CSS/First_steps": {
     "modified": "2019-03-24T00:09:12.368Z",
@@ -14186,6 +14178,10 @@
   "conflicting/Web/CSS": {
     "modified": "2019-03-23T22:28:04.142Z",
     "contributors": ["arturoblack"]
+  },
+  "conflicting/Web/CSS/::-webkit-inner-spin-button": {
+    "modified": "2019-03-23T22:27:04.174Z",
+    "contributors": ["teoli", "pekechis"]
   },
   "conflicting/Web/CSS/::placeholder": {
     "modified": "2019-03-23T22:29:22.118Z",
@@ -14566,6 +14562,10 @@
   "conflicting/Web/OpenSearch": {
     "modified": "2019-01-16T15:27:59.157Z",
     "contributors": ["Mgjbot", "Superruzafa", "Lesmo sft", "Nukeador"]
+  },
+  "conflicting/Web/Performance": {
+    "modified": "2019-03-23T23:21:17.984Z",
+    "contributors": ["DeiberChacon", "Sheppy"]
   },
   "conflicting/Web/Progressive_web_apps": {
     "modified": "2019-03-23T23:32:50.922Z",

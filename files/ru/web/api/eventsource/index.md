@@ -11,11 +11,6 @@ slug: Web/API/EventSource
 
 См. [Using server-sent events](/en/Server-sent_events/Using_server-sent_events) для более детальной информации
 
-## Методы
-
-| `void close();` |
-| --------------- |
-
 ## Свойства
 
 | Attribute    | Type                       | Description                                                                                                   |

@@ -26,6 +26,8 @@ page-break-after: revert;
 page-break-after: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/page-break-after.html")}}
+
 このプロパティは、ボックスを生成するブロックレベル要素に適用されます。ボックスを生成しない空の {{HTMLElement("div")}} には適用されません。
 
 ## 構文

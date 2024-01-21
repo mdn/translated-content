@@ -7,6 +7,8 @@ slug: Web/CSS/scroll-snap-align
 
 `scroll-snap-align` プロパティは、ボックスのスナップ位置を、そのスナップコンテナーの (配置コンテナーとしての) スナップポート内における (配置主体としての) スナップ領域の配置として指定します。2つの値は、それぞれブロック軸とインライン軸内のスナップ位置合わせを指定します。値が1つだけ指定された場合、2番目の値は同じ値を既定値とします。
 
+{{EmbedInteractiveExample("pages/css/scroll-snap-align.html")}}
+
 ## 構文
 
 ```css

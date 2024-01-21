@@ -51,7 +51,7 @@ CSS の形式文法では、データ型は "`<`" と "`>`" の不等号で囲�
 - `<ratio>` (比率)
   - : `<number> / <number>` という構文で表される比率です。詳細は {{cssxref("&lt;ratio&gt;")}} のページを参照してください。
 - `<flex>`
-  - : [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)に導入された柔軟な長さで、`fr` の単位が付加された `<dimension>` として記述され、グリッドトラックのサイズ調整に使用されます。詳しくは{{cssxref("&lt;flex&gt;")}}のページを参照してください。
+  - : [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)に導入された柔軟な長さで、`fr` の単位が付加された `<dimension>` として記述され、グリッドトラックのサイズ調整に使用されます。詳しくは{{cssxref("&lt;flex&gt;")}}のページを参照してください。
 
 ## 数量
 

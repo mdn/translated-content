@@ -81,7 +81,7 @@ slug: Web/HTML/Element/meter
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

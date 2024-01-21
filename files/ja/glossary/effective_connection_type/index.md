@@ -22,7 +22,7 @@ slug: Glossary/Effective_connection_type
 navigator.connection.effectiveType;
 ```
 
-## See Also
+## 関連情報
 
 - [Network Information API](/ja/docs/Web/API/Network_Information_API)
 - {{domxref('NetworkInformation')}}

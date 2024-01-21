@@ -963,10 +963,10 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameteri()")}}, {{domx
 | `TIMESTAMP_EXT`              | 0x8E28 | The current time.                                                             |
 | `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether or not the GPU performed any disjoint operation. |
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## See also
+## 関連情報
 
 - {{domxref("WebGLRenderingContext")}}

@@ -450,7 +450,7 @@ svg {
 
 ## 三次贝塞尔曲线
 
-*三次[贝塞尔曲线](/zh-CN/docs/Glossary/Bezier_curve)*是使用四个点定义的平滑曲线：
+_三次_[_贝塞尔曲线_](/zh-CN/docs/Glossary/Bezier_curve)是使用四个点定义的平滑曲线：
 
 - 起始点（当前位置）
   - : (_P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_})
@@ -660,7 +660,7 @@ svg {
 
 ### 二次贝塞尔曲线
 
-*二次[贝塞尔曲线](/zh-CN/docs/Glossary/Bezier_curve)*是使用三个点定义的平滑曲线：
+_二次_[_贝塞尔曲线_](/zh-CN/docs/Glossary/Bezier_curve)是使用三个点定义的平滑曲线：
 
 - 起始点（当前位置）
   - : _P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_}

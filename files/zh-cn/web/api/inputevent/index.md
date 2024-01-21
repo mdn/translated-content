@@ -37,5 +37,5 @@ slug: Web/API/InputEvent
 
 ## 参见
 
-- [`beforeinput` 事件](/zh-CN/docs/Web/API/HTMLElement/beforeinput_event)
-- [`input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)
+- [`beforeinput` 事件](/zh-CN/docs/Web/API/Element/beforeinput_event)
+- [`input` 事件](/zh-CN/docs/Web/API/Element/input_event)

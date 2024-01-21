@@ -44,6 +44,6 @@ gyroscope.start();
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -13,7 +13,7 @@ Para documentacion de referencia acerca de workers busca {{ domxref("Worker") }}
 
 La interfaz {{ domxref("Worker") }} crea hilos a nivel de SO reales, y la concurrencia puede causar effectos interesantes en tu código si no eres cuidadoso. Sin embargo, en el caso de los web workers, el control cuidadoso de los puntos de comunicacion con otros hilos indica que es realmente muy dificil causar problemas de concurrencia. No existe acceso a componentes no-hilo seguros o al DOM y debes pasar la informacion entrante o saliente del hilo a traves de objetos serializados. Así que debes poner esfuerzo para causar problemas en tu código.
 
-**Creando un web worker**
+### Creando un web worker
 
 Crear un nuevo worker es simple. Sólo tienes que llamar el constructor {{ domxref("Worker.Worker", "Worker()") }}, especificando la URI de un script a ejecutar en el hilo del worker (_worker thread_), y, si deseas poder recibir notificaciones del worker, establece la propiedad {{domxref("Worker.onmessage")}} del worker a una función de manejo de eventos apropiada.
 

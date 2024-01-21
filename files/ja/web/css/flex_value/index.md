@@ -1,6 +1,8 @@
 ---
 title: <flex>
 slug: Web/CSS/flex_value
+l10n:
+  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
 {{CSSRef}}
@@ -9,13 +11,13 @@ slug: Web/CSS/flex_value
 
 ## 構文
 
-`<flex>` データ型は {{cssxref("&lt;number&gt;")}} のあとに単位 `fr` が付きます。他の CSS の数量と同様に、数値と単位の間に空白は入れません。
+`<flex>` データ型は {{cssxref("&lt;number&gt;")}} のあとに単位 `fr` が付きます。 `fr` 単位はグリッドコンテナーの余った空間の割合を表します。他の CSS の数量と同様に、数値と単位の間に空白は入れません。
 
 ## 例
 
 ### fr データ型の正しい値の例
 
-```css
+```plain
 1fr    /* 整数値の使用 */
 2.5fr  /* 浮動小数点値の使用 */
 ```
@@ -39,4 +41,4 @@ slug: Web/CSS/flex_value
 
 ## 関連情報
 
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)

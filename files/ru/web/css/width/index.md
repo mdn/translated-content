@@ -171,7 +171,7 @@ p.minblue {
 
 {{Specifications}}{{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
