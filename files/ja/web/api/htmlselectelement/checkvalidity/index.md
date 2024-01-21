@@ -3,7 +3,7 @@ title: "HTMLSelectElement: checkValidity() メソッド"
 short-title: checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: 58269be5547b2e0b5b6f53a4c6eff6b13dfdf9bd
 ---
 
 {{ APIRef("HTML DOM") }}
