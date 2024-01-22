@@ -37,7 +37,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores
 
 我们将使用 store，创建名为 `Alert` 的组件，用于在屏幕上显示通知。这个组件可以从任何组件中接收消息。在这种情况下，`Alert` 组件是独立于其他组件的——它不是任何其他组件的父组件或子组件，因此消息不符合组件层次结构。
 
-我们还将看到如何开发自己的自定义 store，将待办事项信息持久化到 [Web 存储](/zh-CN/docs/Web/API/Web_Storage_API)中，使我们的待办事项在页面重新加载后不变。
+我们还将看到如何开发自己的自定义 store，将待办事项信息持久化到 [Web 存储](/zh-CN/docs/Web/API/Web_Storage_API)中，使我们的待办事项在页面重新加载后保持不变。
 
 ## 与我们一起编写代码
 
@@ -71,23 +71,23 @@ npx degit opensas/mdn-svelte-tutorial/06-stores
 
 ## 处理应用程序状态
 
-我们已经学习如何使用属性、双向数据绑定和事件使组件之间进行通信。在所有这些情况下，我们处理的都是父子组件之间的通信。
+我们已经学习如何使用属性、双向数据绑定和事件在组件之间进行通信。在所有这些情况下，我们处理的都是父子组件之间的通信。
 
-但并不是所有的应用程序状态都应该放在应用程序的组件层次结构中。例如，关于已登录用户的信息，或者是否选择了暗黑主题。
+但并不是所有的应用程序状态都应该放在应用程序的组件层次结构中。例如，关于已登录用户的信息，或者是否选择了深色主题。
 
 有时，你的应用程序状态需要被多个没有层次关系的组件访问，或者被常规的 JavaScript 模块访问。
 
 此外，当你的应用程序变得复杂，组件层次结构变得复杂时，组件之间传递数据可能变得非常困难。在这种情况下，转向全局数据存储可能是一个不错的选择。如果你已经使用过 [Redux](https://redux.js.org/) 或 [Vuex](https://vuex.vuejs.org/)，那么你应该很熟悉这种存储方式。Svelte store 提供了类似的状态管理特性。
 
-store 是带有 `subscribe()` 方法的对象，允许感兴趣的方在它的值变化时得到通知，并且还可以有一个可选的 `set()` 方法，用于设置 store 的新值。这套最小化的 API 被称为 [store contract](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values-store-contract)。
+store 是带有 `subscribe()` 方法的对象，允许感兴趣的一方在它的值变化时得到通知，并且还可以有一个可选的 `set()` 方法，用于设置 store 的新值。这套最小化的 API 被称为 [store contract](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values-store-contract)。
 
 svelte 在 `svelte/store` 模块中提供了创建[可读](https://svelte.dev/docs/svelte-store#readable)、[可写](https://svelte.dev/docs/svelte-store#writable)和[派生](https://svelte.dev/docs/svelte-store#derived) store 的函数。
 
-svelte 还提供了一种非常直观的将 store 集成到其响应式系统中的方式：[reactive `$store` 语法](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values)。如果你按照 store contract 创建自己的 store，你将获得这种响应式的语法糖而无需多余代码。
+svelte 还提供了一种非常直观的将 store 集成到其响应式系统中的方式：[响应式 `$store` 语法](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values)。如果你按照 store contract 创建自己的 store，你将获得这种响应式的语法糖而无需多余代码。
 
 ## 创建 Alert 组件
 
-为了展示如何使用 store，我们将创建 `Alert` 组件。这种小部件也被称为弹出通知、toast 或者提示气泡。
+为了展示如何使用 store，我们将创建 `Alert` 组件。这种小部件也被称为弹出通知、吐司提示或者提示气泡。
 
 我们的 `Alert` 组件将由 `App` 组件显示，但任何组件都可以向其发送通知。每当有通知到达时，`Alert` 组件将负责在屏幕上显示它。
 
@@ -248,7 +248,7 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
 
 这个巧妙的技巧的最终结果是，你可以像使用响应式的局部变量一样轻松地访问全局的 store。
 
-这是一个完美的例子，展示了 Svelte 如何通过编译器来提供更好的开发人员体验，不仅节省了我们输入样板代码的时间，还生成了更不容易出错的代码。
+这是一个完美的例子，展示了 Svelte 如何通过编译器来提供更好的开发者体验，不仅节省了我们输入样板代码的时间，还生成了更不容易出错的代码。
 
 ## 写入 store
 
@@ -393,9 +393,9 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
 <div role="alert" on:click={() => visible = false}>
 ```
 
-通常情况下，使用屏幕阅读器测试应用程序是一个好主意，不仅可以发现可访问性问题，还可以熟悉视觉障碍人士如何使用 Web。你有几个选项，例如 Windows 上的 [NVDA](https://www.nvaccess.org/)，Chrome 上的 [ChromeVox](https://support.google.com/chromebook/answer/7031755)，Linux 上的[Orca](https://wiki.gnome.org/Projects/Orca)，以及 macOS 和 iOS 上的 [VoiceOver](https://www.apple.com/accessibility/vision/)，还有其他选项。
+通常情况下，使用屏幕阅读器测试应用程序是一个好主意，不仅可以发现可访问性问题，还可以熟悉视觉障碍人士如何使用 Web。你有几个选项，例如 Windows 上的 [NVDA](https://www.nvaccess.org/)、Chrome 上的 [ChromeVox](https://support.google.com/chromebook/answer/7031755)、Linux 上的 [Orca](https://wiki.gnome.org/Projects/Orca)、macOS 和 iOS 上的 [VoiceOver](https://www.apple.com/accessibility/vision/)，以及其他选项。
 
-要了解有关检测和修复无障碍问题的更多信息，请查看我们的[处理常见无障碍性问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)文章。
+要了解有关检测和修复无障碍问题的更多信息，请查看我们的[解决常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)文章。
 
 ## 使用存储合约持久化我们的待办事项
 
@@ -476,15 +476,15 @@ console.log("todos store content - $todos:", $todos);
 
 如你所见，我们的 store 只是一个包含 `subscribe()`、`set()` 和 `update()` 方法的对象，而 `$todos` 则是我们的待办事项数组。
 
-以下是一个基本的可工作的 store，从头开始实现：
+以下是一个（从头开始实现的）基本的可工作的 store：
 
 ```js
 export const writable = (initial_value = 0) => {
   let value = initial_value; // store 的内容
-  let subs = []; // 订阅者的处理函数
+  let subs = []; // 订阅者的处理器
 
   const subscribe = (handler) => {
-    subs = [...subs, handler]; // 将处理函数添加到订阅者数组中
+    subs = [...subs, handler]; // 将处理器添加到订阅者数组中
     handler(value); // 用当前值调用处理函数
     return () => (subs = subs.filter((sub) => sub !== handler)); // 返回取消订阅的函数
   };
@@ -501,9 +501,9 @@ export const writable = (initial_value = 0) => {
 };
 ```
 
-在这里，我们声明了 `subs`，它是订阅者数组。在 `subscribe()` 方法中，我们将处理函数添加到 `subs` 数组中，并返回一个函数，当执行该返回的函数时，它将从数组中删除该处理函数。
+在这里，我们声明了 `subs`，它是订阅者数组。在 `subscribe()` 方法中，我们将处理器添加到 `subs` 数组中，并返回一个在执行时会从数组中删除该处理处理器的函数。
 
-当我们调用 `set()` 时，我们更新 store 的值并调用每个处理函数，在这里将新值作为参数传递。
+当我们调用 `set()` 时，我们更新 store 的值并将新值作为参数来调用每个处理器。
 
 通常情况下，你不需要从头开始实现 store；相反，你可以使用可写 store 来创建具有特定逻辑的[自定义 store](https://learn.svelte.dev/tutorial/custom-stores)。在以下示例中，我们创建了计数器 store，它只允许我们将计数器加一或重置其值：
 
@@ -520,7 +520,7 @@ function myStore() {
 }
 ```
 
-如果我们的待办事项列表应用程序变得太复杂，我们可以让待办事项 store 处理所有状态修改。我们可以将所有修改 `todo` 数组的方法（如 `addTodo()`、`removeTodo()` 等）从我们的 `Todos` 组件移动到 store 中。如果有一个集中处理所有状态修改的地方，组件只需调用这些方法来修改应用程序的状态，并以响应式的方式显示 store 暴露的信息。有一个统一的处理状态修改的地方可以更容易地理解状态流动并发现问题。
+如果我们的待办事项列表应用程序变得太复杂，我们可以让待办事项 store 处理所有状态修改。我们可以将所有修改 `todo` 数组的方法（如 `addTodo()`、`removeTodo()` 等）从我们的 `Todos` 组件移动到 store 中。如果有一个集中处理所有状态修改的地方，组件只需调用这些方法来修改应用程序的状态，并以响应式的方式显示 store 暴露的信息。有一个统一的处理状态修改的地方可以更容易地推理状态流并发现问题。
 
 Svelte 不会强制你以特定的方式组织状态管理；它只提供了工具，你可以自由选择如何处理它。
 
@@ -528,9 +528,9 @@ Svelte 不会强制你以特定的方式组织状态管理；它只提供了工�
 
 我们的待办事项列表应用程序并不特别复杂，因此我们不会将所有的修改方法移到中心位置。我们将保持它们原样，集中精力将待办事项持久化。
 
-> **备注：** 如果你正在 Svelte REPL 上遵循本指南进行操作，你将无法完成此步骤。出于安全原因，Svelte REPL 在沙箱环境中工作，不能让你访问 Web 存储，你将收到“The operation is insecure”错误。要遵循本部分，你需要克隆存储库并转到 `mdn-svelte-tutorial/06-stores` 文件夹，或者你可以使用 `npx degit opensas/mdn-svelte-tutorial/06-stores` 直接下载该文件夹的内容。
+> **备注：** 如果你正在 Svelte REPL 上遵循本指南进行操作，你将无法完成此步骤。出于安全原因，Svelte REPL 在沙箱环境中工作，不允许你访问 Web 存储，你将收到“The operation is insecure”错误。要跟着完成本部分，你需要克隆存储库并转到 `mdn-svelte-tutorial/06-stores` 文件夹，或者你可以使用 `npx degit opensas/mdn-svelte-tutorial/06-stores` 直接下载该文件夹的内容。
 
-要实现将其内容保存到 Web 存储的自定义 store，我们需要做以下内容的可写 store：
+要实现将其内容保存到 Web 存储的自定义 store，我们需要一个执行以下操作的可写 store：
 
 - 最初从 Web 存储中读取值，如果不存在，则使用默认值进行初始化
 - 每当值被修改时，更新 store 本身和本地存储中的数据
@@ -597,7 +597,7 @@ Svelte 不会强制你以特定的方式组织状态管理；它只提供了工�
 
    通过使用 `localStore('mdn-svelte-todo', initialTodos)`，我们配置 store 将数据保存在 Web 存储中的键 `mdn-svelte-todo` 下。我们还设置了一些待办事项作为初始值。
 
-4. 现在让我们删除 `App.svelte` 中的硬编码待办事项。更新它的内容如下所示。我们基本上只是删除了 `$todos` 数组和 `console.log()` 语句：
+4. 现在让我们删除 `App.svelte` 中硬编码的待办事项。更新它的内容如下所示。我们基本上只是删除了 `$todos` 数组和 `console.log()` 语句：
 
    ```svelte
    <script>
@@ -618,7 +618,7 @@ Svelte 不会强制你以特定的方式组织状态管理；它只提供了工�
 
    ![带有 Web 控制台视图的待办事项应用程序，显示当在应用程序中更改待办事项时，相应的条目也在 Web 存储中更改](03-persisting-todos-to-local-storage.png)
 
-Svelte store 提供了一种非常简单、轻量但功能强大的方式，以响应式的方式处理来自全局数据存储的复杂应用程序状态。由于 Svelte 编译我们的代码，它可以提供 [`$store` 自动订阅语法](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values)，使我们可以通过与本地变量相同的方式处理存储。由于 store 具有很简单的 API，因此创建我们自己的自定义 store 来抽象 store 本身的内部工作方式非常简单。
+Svelte store 提供了一种非常简单、轻量但功能强大的方式，以响应式的方式处理来自全局数据存储的复杂应用程序状态。由于 Svelte 会编译我们的代码，它可以提供 [`$store` 自动订阅语法](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values)，使我们可以通过与本地变量相同的方式处理存储。由于 store 具有很简单的 API，因此创建我们自己的自定义 store 来抽象 store 本身的内部工作方式非常简单。
 
 ## 彩蛋：过渡效果
 
