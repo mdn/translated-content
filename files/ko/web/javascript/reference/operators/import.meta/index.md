@@ -15,16 +15,16 @@ import.meta
 
 ### 값
 
-`import.meta` 객체는 호스트 환경(브라우저 또는 Node.js 등)에서 모든 속성을 쓰기 가능하고(writable), 구성할 수 있으며(configurable), 열거할 수 있는(enumerable) 확장 가능한(extensible) [`null`-prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) 객체로 만들어집니다. 사양에는 이 객체에 정의할 속성이 명시되어 있지 않지만, 호스트는 일반적으로 다음과 같은 속성을 구현합니다:
+`import.meta` 객체는 호스트 환경(브라우저 또는 Node.js 등)에서 모든 속성을 쓰기 가능하고(writable), 구성할 수 있으며(configurable), 열거할 수 있는(enumerable) 확장 가능한(extensible) [`null`-prototype](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) 객체로 만들어집니다. 사양에는 이 객체에 정의할 속성이 명시되어 있지 않지만, 호스트는 일반적으로 다음과 같은 속성을 구현합니다:
 
 - `url`
   - : 모듈에 대한 전체 URL입니다. 이는 쿼리 매개변수(`?`) 또는 해시(`#`)를 포함합니다. 브라우저에서는 스크립트를 가져온 URL(외부 스크립트의 경우)이거나 포함된 문서의 URL(인라인 스크립트의 경우)입니다. Node.js에서는 `file://`와 같은 프로토콜을 포함한 파일 경로입니다.
-- [`resolve`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve)
+- [`resolve`](/ko/docs/Web/JavaScript/Reference/Operators/import.meta/resolve)
   - : 현재 모듈의 URL을 기본으로 사용하여 모듈 지정자를 URL로 해석합니다.
 
 ## 설명
 
-`import.meta` 구문은 키워드 `import`, 점(`.`), 식별자로 구성됩니다. `import`는 식별자가 아닌 [예약어](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)이므로 [속성 접근자](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)가 아니라 특수 표현식 구문입니다.
+`import.meta` 구문은 키워드 `import`, 점(`.`), 식별자로 구성됩니다. `import`는 식별자가 아닌 [예약어](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)이므로 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)가 아니라 특수 표현식 구문입니다.
 
 `import.meta` 속성은 JavaScript 모듈에서 사용할 수 있으며, 모듈 외부에서 `import.meta`를 사용하거나 모듈 내에서 직접 [eval()](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)을 사용하는 경우, 구문 오류가 발생합니다.
 
@@ -32,7 +32,7 @@ import.meta
 
 ### 쿼리 매개변수 전달
 
-`import` 지정자에 쿼리 매개변수를 사용하면 모듈에 특별한 정보를 전달할 수 있으며, 이는 애플리케이션 전체에서 매개변수를 읽을 수 있습니다(브라우저의 경우 [`window.location`](/en-US/docs/Web/API/Window/location), Node.js의 경우 `process.argv`). 예를 들면 다음 HTML이 있습니다:
+`import` 지정자에 쿼리 매개변수를 사용하면 모듈에 특별한 정보를 전달할 수 있으며, 이는 애플리케이션 전체에서 매개변수를 읽을 수 있습니다(브라우저의 경우 [`window.location`](/ko/docs/Web/API/Window/location), Node.js의 경우 `process.argv`). 예를 들면 다음 HTML이 있습니다:
 
 ```html
 <script type="module">
