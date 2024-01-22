@@ -3,7 +3,7 @@ title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 指定ウィンドウの選択タブの表示領域の画像をエンコードしたデータ URI を作成します。このメソッドを使うには `<all_urls>` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) が必要です (Chrome の場合、`activeTab` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) があり、ユーザーが許可の操作を行えば、このメソッドを使うことができます)。
 
