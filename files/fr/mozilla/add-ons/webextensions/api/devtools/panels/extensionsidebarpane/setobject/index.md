@@ -3,7 +3,7 @@ title: devtools.panels.ExtensionSidebarPane.setObject()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Affiche un objet JSON dans le volet de la barre latérale de l'extension.
 

@@ -3,7 +3,7 @@ title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Rejette un ou plusieurs onglets.
 

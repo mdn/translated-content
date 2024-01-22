@@ -3,7 +3,7 @@ title: getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obient toutes les commandes pour l'exécution que vous avez enregistré à l'aide d'une des [`commandes` clef du manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
