@@ -3,7 +3,7 @@ title: bookmarks.removeTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.removeTree()`** は、ブックマークフォルダやその要素を再帰的に削除するメソッドです。
 
