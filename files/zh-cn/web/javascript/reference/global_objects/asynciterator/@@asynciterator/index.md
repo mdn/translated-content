@@ -29,7 +29,7 @@ asyncIterator[Symbol.asyncIterator]()
 
 ### 使用 for await...of 循环进行迭代
 
-请注意，你很少需要直接调用该方法。`@@asyncIterator` 方法的存在使得所有内置的异步迭代器都成为[异步可迭代](/zh-CN/docs/JavaScript/Reference/Iteration_protocol#异步迭代器和异步可迭代协议)对象，而像 `for await...of` 循环这样的迭代语法会自动调用该方法来获取异步迭代器来进行循环。
+请注意，你很少需要直接调用该方法。`@@asyncIterator` 方法的存在使得所有内置的异步迭代器都成为[异步可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)对象，而像 `for await...of` 循环这样的迭代语法会自动调用该方法来获取异步迭代器来进行循环。
 
 ```js
 const asyncIterator = (async function* () {
