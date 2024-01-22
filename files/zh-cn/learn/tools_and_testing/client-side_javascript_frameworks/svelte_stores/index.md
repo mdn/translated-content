@@ -79,11 +79,11 @@ npx degit opensas/mdn-svelte-tutorial/06-stores
 
 此外，当你的应用程序变得复杂，组件层次结构变得复杂时，组件之间传递数据可能变得非常困难。在这种情况下，转向全局数据存储可能是一个不错的选择。如果你已经使用过 [Redux](https://redux.js.org/) 或 [Vuex](https://vuex.vuejs.org/)，那么你应该很熟悉这种存储方式。Svelte store 提供了类似的状态管理特性。
 
-store 是带有 `subscribe()` 方法的对象，允许感兴趣的一方在它的值变化时得到通知，并且还可以有一个可选的 `set()` 方法，用于设置 store 的新值。这套最小化的 API 被称为 [store contract](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values-store-contract)。
+store 是带有 `subscribe()` 方法的对象，允许感兴趣的一方在它的值变化时得到通知，并且还可以有一个可选的 `set()` 方法，用于设置 store 的新值。这套最小化的 API 被称为 [store 合约](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values-store-contract)。
 
 svelte 在 `svelte/store` 模块中提供了创建[可读](https://svelte.dev/docs/svelte-store#readable)、[可写](https://svelte.dev/docs/svelte-store#writable)和[派生](https://svelte.dev/docs/svelte-store#derived) store 的函数。
 
-svelte 还提供了一种非常直观的将 store 集成到其响应式系统中的方式：[响应式 `$store` 语法](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values)。如果你按照 store contract 创建自己的 store，你将获得这种响应式的语法糖而无需多余代码。
+svelte 还提供了一种非常直观的将 store 集成到其响应式系统中的方式：[响应式 `$store` 语法](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values)。如果你按照 store 合约创建自己的 store，你将获得这种响应式的语法糖而无需多余代码。
 
 ## 创建 Alert 组件
 
@@ -397,7 +397,7 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
 
 要了解有关检测和修复无障碍问题的更多信息，请查看我们的[解决常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)文章。
 
-## 使用存储合约持久化我们的待办事项
+## 使用 store 合约持久化我们的待办事项
 
 我们的小应用程序可以轻松地管理我们的待办事项，但如果在重新加载时总是获得同样的硬编码待办事项列表，那就没有什么用了。为了使其真正有用，我们必须找到一种持久化我们的待办事项的方法。
 
@@ -455,9 +455,9 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
 
 3. 尝试一下，一切应该正常工作。接下来，我们将看到如何定义自己的自定义存储。
 
-### 如何实现存储合约：理论
+### 如何实现 store 合约：理论
 
-你可以通过实现存储合约来创建自己的 store，而无需依赖于 `svelte/store`。它必须按照以下方式工作：
+你可以通过实现 store 合约来创建自己的 store，而无需依赖于 `svelte/store`。它必须按照以下方式工作：
 
 1. store 必须包含 `subscribe()` 方法，该方法必须接受订阅函数作为参数。每当 store 的值发生更改时，必须调用所有订阅函数。
 2. `subscribe()` 方法必须返回 `unsubscribe()` 函数，当调用 `unsubscribe()` 函数时，必须停止订阅。
