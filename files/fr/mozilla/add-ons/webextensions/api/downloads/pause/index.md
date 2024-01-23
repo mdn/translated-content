@@ -3,7 +3,7 @@ title: downloads.pause()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/pause
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`pause()`** de l'API {{WebExtAPIRef("downloads")}} interrompt un téléchargement.
 

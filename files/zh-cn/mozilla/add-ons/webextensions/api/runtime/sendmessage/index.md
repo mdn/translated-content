@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 向你的扩展或其他扩展中的事件监听器发送一条消息。
 

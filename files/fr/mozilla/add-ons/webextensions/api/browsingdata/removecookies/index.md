@@ -3,7 +3,7 @@ title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface les cookies du navigateur
 

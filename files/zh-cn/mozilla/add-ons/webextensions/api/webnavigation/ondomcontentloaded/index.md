@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5ff95690a38837afa6a80d00c31adc3ea0217a6e
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 在页面中触发 [DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像、样式表和子框架）可能尚未被加载。
 
