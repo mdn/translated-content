@@ -1,7 +1,6 @@
 ---
 title: Iterator() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Iterator
-page-type: javascript-constructor
 l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
