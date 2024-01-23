@@ -3,7 +3,7 @@ title: tabs.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ferme un ou plusieurs onglets.
 
