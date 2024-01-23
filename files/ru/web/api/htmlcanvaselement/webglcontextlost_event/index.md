@@ -50,7 +50,7 @@ gl.getExtension("WEBGL_lose_context").loseContext();
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

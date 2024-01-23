@@ -36,7 +36,7 @@ The example image above shows a scrollbar and an offsetHeight which fits on the 
 
 `offsetHeight` is a property of the DHTML object model which was first introduced by MSIE. It is sometimes referred to as an element's physical/graphical dimensions, or an element's border-box height.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

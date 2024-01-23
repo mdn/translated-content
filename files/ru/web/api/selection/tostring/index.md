@@ -36,7 +36,7 @@ alert(window.getSelection().toString()); // What is actually being effectively c
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

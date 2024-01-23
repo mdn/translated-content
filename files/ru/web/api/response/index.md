@@ -119,7 +119,7 @@ doAjax().then(console.log).catch(console.log);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

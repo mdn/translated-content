@@ -3,7 +3,7 @@ title: downloads.drag()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/drag
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`drag()`** de l'API {{WebExtAPIRef("downloads")}} initie le glissement du fichier téléchargé vers une autre application.
 

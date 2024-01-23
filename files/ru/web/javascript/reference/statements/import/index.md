@@ -243,7 +243,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

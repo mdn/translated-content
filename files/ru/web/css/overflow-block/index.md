@@ -133,7 +133,7 @@ overflow-block: unset;
 
 {{Specifications}}{{cssinfo}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

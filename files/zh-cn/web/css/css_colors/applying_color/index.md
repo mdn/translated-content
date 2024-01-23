@@ -556,7 +556,7 @@ colorPicker.addEventListener(
 );
 ```
 
-每次元素的值发生变化，即每次用户调整颜色选择器中的颜色时，{{domxref("HTMLElement/input_event", "input")}} 事件就会被发送。每次该事件发生时，我们都会设置方框的边框颜色，使其与颜色选择器的当前值相匹配。
+每次元素的值发生变化，即每次用户调整颜色选择器中的颜色时，{{domxref("Element/input_event", "input")}} 事件就会被发送。每次该事件发生时，我们都会设置方框的边框颜色，使其与颜色选择器的当前值相匹配。
 
 当颜色选择器的值最终确定时，我们会收到 {{domxref("HTMLElement/change_event", "change")}} 事件。我们的回应是将 ID 为 `"output"` 的 `<p>` 元素的内容设置为描述最终选定颜色的字符串。
 

@@ -47,7 +47,7 @@ gl.getParameter(gl.COLOR_CLEAR_VALUE);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

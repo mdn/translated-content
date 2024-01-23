@@ -3,7 +3,7 @@ title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ajoute un nouveau panneau aux devtools.
 

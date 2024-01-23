@@ -77,7 +77,7 @@ searchParams.toString(); // "q=URLUtils.searchParams"
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

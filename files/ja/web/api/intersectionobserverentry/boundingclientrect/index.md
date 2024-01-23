@@ -1,13 +1,14 @@
 ---
-title: IntersectionObserverEntry.boundingClientRect
+title: "IntersectionObserverEntry: boundingClientRect プロパティ"
+short-title: boundingClientRect
 slug: Web/API/IntersectionObserverEntry/boundingClientRect
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`boundingClientRect`** プロパティは、要するに対象要素全体を含む最小の矩形を記述した {{domxref("DOMRectReadOnly")}} を返します。
+{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`boundingClientRect`** プロパティは、簡単にいえば、対象要素全体を含む最小の矩形を記述した {{domxref("DOMRectReadOnly")}} を返します。
 
 ## 値
 

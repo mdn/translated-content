@@ -56,7 +56,7 @@ TRACE /index.html
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
