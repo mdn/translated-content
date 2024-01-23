@@ -3,7 +3,7 @@ title: browsingData.DataTypeSet
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type **`browsingData.DataTypeSet`** décrit un ensemble de types de données.
 

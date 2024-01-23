@@ -3,7 +3,7 @@ title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
 ## Сводка
 

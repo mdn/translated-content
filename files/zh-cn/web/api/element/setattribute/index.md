@@ -30,7 +30,7 @@ element.setAttribute(name, value);
 
 布尔属性（原文是 Boolean attributes）只要出现在元素上就会被认为是 `true` ，无论它的值是什么; 一般来说，你应该将 `value` 设置为空字符串 (`""`) 。(一些人使用这个属性的名称作为值; 这不会出现什么问题，但这是不规范的). See the [example](#示例) below for a practical demonstration.
 
-由于将指定的值转换为字符串，因此指定 null 不一定能达到你的期望。而不是删除属性或将其值设置为{{jsxref("null")}}，而是将属性的值设置为字符串“null”。如果要删除属性，请调用{{domxref("Element.removeAttribute", "removeAttribute()")}}}。
+由于将指定的值转换为字符串，因此指定 null 不一定能达到你的期望。而不是删除属性或将其值设置为{{jsxref("null")}}，而是将属性的值设置为字符串“null”。如果要删除属性，请调用{{domxref("Element.removeAttribute", "removeAttribute()")}}。
 
 ### 返回值
 

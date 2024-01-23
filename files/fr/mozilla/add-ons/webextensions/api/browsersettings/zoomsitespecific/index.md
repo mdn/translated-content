@@ -3,7 +3,7 @@ title: browserSettings.zoomSiteSpecific
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.
 
