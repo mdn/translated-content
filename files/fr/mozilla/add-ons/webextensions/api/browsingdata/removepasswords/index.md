@@ -3,7 +3,7 @@ title: browsingData.removePasswords()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface les mots de passes enregistrés
 

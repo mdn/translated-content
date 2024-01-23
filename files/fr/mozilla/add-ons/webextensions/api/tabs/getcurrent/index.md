@@ -3,7 +3,7 @@ title: tabs.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtenez un {{WebExtAPIRef("tabs.Tab")}} contenant des informations sur l'onglet dans lequel ce script s'exécute.
 

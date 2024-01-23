@@ -3,7 +3,7 @@ title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 {{WebExtAPIRef("cookies")}} API 的 `CookieStore` 型別代表瀏覽器中的 cookie 存放空間。
 

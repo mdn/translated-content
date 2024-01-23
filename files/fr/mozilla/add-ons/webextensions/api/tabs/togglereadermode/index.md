@@ -3,7 +3,7 @@ title: tabs.toggleReaderMode()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Bascule en mode Lecteur pour l'onglet donné.
 
