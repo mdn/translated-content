@@ -120,7 +120,7 @@ Se pueden solicitar idiomas adicionales en el proceso [discutido en GitHub](http
 
 ### Omitiendo analizadores de código (_linters_)
 
-Los escritores pueden agregar un sufijo `-nolint` a cualquiera de los identificadores de idioma:
+Los escritores pueden agregar un sufijo `-nolint` a cualquiera de los identificadores de lenguaje:
 
 ````md-nolint
 ```html-nolint
