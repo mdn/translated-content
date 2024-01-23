@@ -116,7 +116,7 @@ const greeting = "Obtendré resaltado de sintaxis de JavaScript";
 ````
 
 Si el resaltado que quieres usar no aparece en la lista anterior, deberás marcar el bloque de código como `plain`.
-Se pueden solicitar idiomas adicionales en el proceso [discutido en GitHub](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
+Se pueden solicitar lenguajes adicionales en el proceso [discutido en GitHub](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
 
 ### Omitiendo analizadores de código (_linters_)
 
