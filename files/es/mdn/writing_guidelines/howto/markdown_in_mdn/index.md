@@ -7,11 +7,11 @@ l10n:
 
 {{MDNSidebar}}
 
-Esta página describe cómo usamos Markdown para escribir documentación en MDN Web Docs. Hemos elegido GitHub-Flavored Markdown (GFM) como base y agregamos algunas extensiones para admitir algunas de las cosas que necesitamos hacer en MDN que no son fácilmente compatibles con GFM.
+Esta página describe cómo usamos Markdown para escribir documentación en MDN Web Docs. Hemos elegido un Markdown personalizado por GitHub (GFM, por sus siglas en inglés ―GitHub-Flavored Markdown―) como base y agregamos algunas extensiones para admitir algunas de las cosas que necesitamos hacer en MDN que no son fácilmente compatibles con GFM.
 
-## Base: GitHub-Flavored Markdown
+## Base: Markdown personalizado por GitHub
 
-La base para MDN Markdown es GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. Esto significa que puedes consultar la especificación de GFM para cualquier cosa que no se especifique explícitamente en esta página. GFM, a su vez, es un superconjunto de CommonMark (<https://spec.commonmark.org/>).
+La base para el Markdown de MDN es un Markdown personalizado por GitHub (GFM): <https://github.github.com/gfm/>. Esto significa que puedes consultar la especificación de GFM para cualquier cosa que no se especifique explícitamente en esta página. GFM, a su vez, es un superconjunto de CommonMark (<https://spec.commonmark.org/>).
 
 ## Enlaces
 
@@ -40,7 +40,7 @@ Los [macarrones][macaron] son deliciosos pero difíciles de hacer.
 
 En GFM y CommonMark, los autores pueden usar "vallas de código" para demarcar bloques `<pre>`. El código de apertura puede ir seguido de algún texto llamado "cadena de información". La especificación establece lo siguiente:
 
-> La primera palabra de la cadena de información se usa normalmente para especificar el idioma del ejemplo de código y se representa en el atributo de clase de la etiqueta de código.
+> La primera palabra de la cadena de información se usa normalmente para especificar el lenguaje del ejemplo de código y se representa en el atributo de clase de la etiqueta de código.
 
 Está permitido que la cadena de información contenga varias palabras, como:
 
@@ -50,7 +50,7 @@ Está permitido que la cadena de información contenga varias palabras, como:
 ```
 ````
 
-En MDN, los escritores usarán vallas de código, por ejemplo, bloques de código. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
+En MDN, los escritores usarán bloques de código. Deben especificar el lenguaje del ejemplo de código usando la primera palabra de la cadena de información, y esto se usará para resaltar la sintaxis del bloque. Se admiten las siguientes palabras:
 
 - Lenguajes de programación
   - JavaScript
@@ -118,19 +118,19 @@ const greeting = "Obtendré resaltado de sintaxis de JavaScript";
 Si el resaltado que quieres usar no aparece en la lista anterior, deberás marcar el bloque de código como `plain`.
 Se pueden solicitar idiomas adicionales en el proceso [discutido en GitHub](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
 
-### Supresión de lint
+### Omitiendo analizadores de código (_linters_)
 
-Writers can add a `-nolint` suffix to any of the language identifiers:
+Los escritores pueden agregar un sufijo `-nolint` a cualquiera de los identificadores de idioma:
 
 ````md-nolint
 ```html-nolint
 <p>
-Este código no será lintado.
+Este código no será analizado.
 </p>
 ```
 ````
 
-Los bloques de código como este obtendrán un resaltado de sintaxis apropiado y serán reconocidos por el sistema de muestra en vivo, pero serán ignorados por linters o formateadores automáticos como Prettier. Los autores deben usar este sufijo para mostrar código no válido o formato alternativo que los linters o formateadores no deberían corregir.
+Los bloques de código como este obtendrán un resaltado de sintaxis apropiado y serán reconocidos por el sistema de ejemplos en vivo, pero serán ignorados por analizadores o formateadores automáticos como Prettier. Los autores deben usar este sufijo para mostrar código no válido o formato alternativo que los analizadores o formateadores no deberían corregir.
 
 ### Clases adicionales (cadenas de información)
 
@@ -140,7 +140,7 @@ Los escritores podrán proporcionar cualquiera de las siguientes cadenas de info
 
 - `example-good`: pinta este ejemplo como un buen ejemplo (uno a seguir)
 - `example-bad`: pinta este ejemplo como un mal ejemplo (uno que se debe evitar)
-- `hidden`: no mostrar este bloque de código en la página. Esto es para usar en muestras en vivo.
+- `hidden`: no mostrar este bloque de código en la página. Esto es para usar en ejemplos en vivo.
 
 Por ejemplo:
 
@@ -158,7 +158,7 @@ const greeting = "Soy un saludo secreto";
 ```
 ````
 
-These will be rendered as:
+Serán mostrados de la siguiente manera:
 
 ```js example-good
 const greeting = "Soy un buen ejemplo";
@@ -185,7 +185,7 @@ A veces, los escritores quieren llamar la atención sobre un contenido. Para hac
 
 Las notas y advertencias mostrarán el texto **Nota:** o **Advertencia:** en el resultado, mientras que las observaciones no. Esto hace que las observaciones sean una buena opción cuando un autor desea proporcionar un título personalizado.
 
-El procesamiento del marcado funciona en el AST que produce, no en los caracteres exactos proporcionados. Esto significa que proporcionar `<strong>Nota:</strong>` también generará una nota. Sin embargo, la sintaxis de Markdown es necesaria por una cuestión de estilo.
+El procesamiento del marcado funciona en el árbol de sintaxis abstracta (AST, por sus siglas en inglés) que produce, no en los caracteres exactos proporcionados. Esto significa que proporcionar `<strong>Nota:</strong>` también generará una nota. Sin embargo, la sintaxis de Markdown es necesaria por una cuestión de estilo.
 
 Una línea de cita en bloque vacía produce varias líneas de la misma manera que los párrafos normales. Además, las líneas múltiples sin espacios también se tratan como líneas Markdown normales y se concatenan.
 
@@ -228,7 +228,7 @@ Esto producirá el siguiente HTML:
 
 ```html
 <div class="notecard warning">
-  <p><strong>Warning:</strong> Así es como se escribe una advertencia.</p>
+  <p><strong>Advertencia:</strong> Así es como se escribe una advertencia.</p>
   <p>Puede tener varios párrafos.</p>
 </div>
 ```
@@ -420,7 +420,7 @@ Entonces, el principio general es que los autores deben usar la sintaxis de GFM 
 
 ### Estilo de sintaxis de tablas de GFM
 
-En la sintaxis de tablas de GFM, los autores pueden omitir las tuberías iniciales y finales de las filas. Sin embargo, por razones de legibilidad, los autores de MDN deben incluir estas tuberías. Además, los autores deben proporcionar espacios finales en las filas, de modo que todas las celdas de una columna tengan la misma longitud en texto sin formato.
+En la sintaxis de tablas de GFM, los autores pueden omitir el símbolo de tubería inicial y final de las filas. Sin embargo, por razones de legibilidad, los autores de MDN deben incluirlos. Además, los autores deben proporcionar espacios finales en las filas, de modo que todas las celdas de una columna tengan la misma longitud en texto sin formato.
 
 Es decir, los autores de MDN deben usar este estilo:
 
@@ -564,10 +564,10 @@ Este problema se resolvió en <https://github.com/mdn/content/issues/4578>.
 
 ## Resumen de página
 
-El _resumen de página_ es el primer párrafo de "contenido" de una página — el primer texto que aparece después de la portada de la página y cualquier macro de [barra lateral](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#generar_la_barra_lateral) o [banner de página](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#indicadores_de_encabezado_de_página_o_sección).
+El _resumen de página_ es el primer párrafo de "contenido" de una página — el primer texto que aparece después de la portada de la página y cualquier macro de [menú lateral](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#generar_la_barra_lateral) o [banner de página](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#indicadores_de_encabezado_de_página_o_sección).
 
 Este resumen se usa para la optimización de motores de búsqueda (SEO) y algunas macros también lo incluyen automáticamente junto con los listados de páginas.
-Por lo tanto, el primer párrafo debe ser a la vez sucinto e informativo.
+Por lo tanto, el primer párrafo debe ser a la vez breve e informativo.
 
 ### Referencia de discusión
 
