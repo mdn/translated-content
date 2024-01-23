@@ -3,7 +3,7 @@ title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Utilisez cette fonction pour enregistrer un ou plusieurs scripts de contenu.
 

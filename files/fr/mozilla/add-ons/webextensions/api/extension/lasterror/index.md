@@ -3,7 +3,7 @@ title: extension.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/extension/lastError
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un alias de {{WebExtAPIRef("runtime.lastError")}}.
 
