@@ -3,7 +3,7 @@ title: runtime.PlatformInfo
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet contenant des informations sur la plate-forme actuelle.
 

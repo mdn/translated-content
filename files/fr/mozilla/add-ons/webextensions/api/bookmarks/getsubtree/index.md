@@ -3,7 +3,7 @@ title: bookmarks.getSubTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La méthode **`bookmarks.getSubTree()`** récupère de façon asynchrone un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, étant donné son ID.
 

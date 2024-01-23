@@ -69,7 +69,7 @@ _唯一変わらないのは、変化することです。_
 
 ハイパーテキスト転送プロトコル、または[HTTP](/ja/docs/Web/HTTP/Basics_of_HTTP)は、ウェブブラウザーをウェブサーバー（ウェブサイトが格納される場所）と通信させるためのメッセージプロトコルです。良くあるやり取りは次のようなものです。
 
-```
+```plain
 「やあ、ウェブサーバー。 bbc.co.uk を表示するのに必要案ファイルをくれる？」
 
 「分かったよ、ウェブブラウザー。ほら、どうぞ。」
@@ -118,7 +118,7 @@ HTTP メッセージ（リクエストとレスポンスと呼ばれる）の実
 
 ウェブページを作成するための「生」の技術（HTML、CSS、JavaScriptなど）を一通り学んだら、今度は作業を簡単にしたり効率化したりするための様々なツールに出会うようになります。例えば、以下のようなものが挙げられます。
 
-- コードのデバッグに使用することができる、現代のブラウザー内にある[開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)。
+- コードのデバッグに使用することができる、現代のブラウザー内にある[開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)。
 - コードが意図したとおりに動作しているかどうかを示すテストを使用することができる[テストツール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 - ある種のウェブサイトをすばやく効果的に構築することができる、 JavaScript 上に構築されたライブラリーやフレームワーク。
 - 一連のルールを受け取り、コードを調べて、ルールに正しく従っていない箇所を強調する、いわゆる「リンター」。
@@ -130,7 +130,7 @@ HTML、CSS、JavaScriptは、フロントエンド（またはクライアント
 
 一方、バックエンド（サーバーサイド）言語と呼ばれるものもあります。これは、サーバー上で実行され、その結果をブラウザーに送って表示させる言語です。サーバーサイド言語の代表的な使用方法は、データベースからデータを取り出して、そのデータを含む HTML を生成し、その HTML をブラウザーに送信してユーザーに表示させることです。
 
-サーバーサイド言語の例としては、ASP.NET、Python、PHP、NodeJS などが挙げられます。
+サーバサイドフレームワークの例としては、ASP.NET（C# で）、Django（Python で）、Laravel（PHP で）、Next.js（JavaScript で）などが挙げられます。
 
 ## ウェブの最善の手法
 
@@ -157,4 +157,4 @@ HTML、CSS、JavaScriptは、フロントエンド（またはクライアント
 ## 関連情報
 
 - [World Wide Web の歴史](https://ja.wikipedia.org/wiki/World_Wide_Web#歴史)
-- [インターネットの仕組み](/ja/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [インターネットの仕組み](/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)

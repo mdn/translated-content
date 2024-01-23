@@ -3,7 +3,7 @@ title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`Date.parse()`** 方法解析一个表示某个日期的字符串，并返回从 1970-1-1 00:00:00 UTC 到该日期对象（该日期对象的 UTC 时间）的毫秒数，如果该字符串无法识别，或者一些情况下，包含了不合法的日期数值（如：2015-02-31），则返回值为 NaN。
 

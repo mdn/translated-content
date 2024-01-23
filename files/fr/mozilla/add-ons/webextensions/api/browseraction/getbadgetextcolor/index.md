@@ -3,7 +3,7 @@ title: browserAction.getBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeTextColor
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient la couleur du texte du badge de l'action du navigateur.
 
