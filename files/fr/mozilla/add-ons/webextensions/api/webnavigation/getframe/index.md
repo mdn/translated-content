@@ -3,7 +3,7 @@ title: webNavigation.getFrame()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Récupère des informations sur un cadre particulier. Un cadre peut être l'image de niveau supérieur dans un onglet ou un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué, et est identifié de manière unique par un ID de tabulation et un ID de cadre.
 

@@ -3,7 +3,7 @@ title: cookies.getAllCookieStores()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La méthode **`getAllCookieStores()`** de l'API {{WebExtAPIRef("cookies")}} retourne une liste de tous les cookies stores.
 
