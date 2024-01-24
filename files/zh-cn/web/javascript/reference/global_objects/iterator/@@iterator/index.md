@@ -27,14 +27,14 @@ iterator[Symbol.iterator]()
 
 ### 使用 for...of 循环进行迭代
 
-请注意，你很少需要直接调用这个方法。`@@iterator` 方法的存在使内置迭代器成为[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)对象，而像 `for...of` 循环这样的迭代语法会自动调用这个方法来获取迭代器来进行循环。
+请注意，你很少需要直接调用这个方法。`@@iterator` 方法的存在使内置迭代器成为[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)对象，而像 `for...of` 循环这样的迭代语法会自动调用这个方法来获取用于进行循环的迭代器。
 
 ```js
 const arrIterator = [1, 2, 3].values();
 for (const value of arrIterator) {
   console.log(value);
 }
-// 输出：1，2，3
+// 输出：1、2、3
 ```
 
 ## 规范
