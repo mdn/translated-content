@@ -1,8 +1,7 @@
 ---
 title: Enlaces rápidos
-slug: MDN/Writing_guidelines/Page_structures/Quicklinks
-l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+slug: MDN/Writing_guidelines/Page_structures/Sidebars
+original_slug: MDN/Writing_guidelines/Page_structures/Quicklinks
 ---
 
 {{MDNSidebar}}
