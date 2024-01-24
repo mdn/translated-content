@@ -3,7 +3,7 @@ title: Comparison entre les sélecteurs CSS et XPath
 slug: Web/XPath/Comparison_with_CSS_selectors
 ---
 
-{{CSSRef("Selectors")}}{{QuickLinksWithSubpages("/fr/docs/Web/XPath")}}
+{{XsltSidebar}}
 
 Dans cet article, nous listerons les différences entre les sélecteurs CSS et les fonctionnalités XPath afin que les développeurs web puissent choisir l'outil le plus pertinent.
 
