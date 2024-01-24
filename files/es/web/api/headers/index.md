@@ -21,7 +21,6 @@ Un objeto que implementa `Headers` se puede usar directamente en una estructura 
 
 > **Nota:** puedes obtener más información sobre los encabezados disponibles leyendo nuestra referencia de [encabezados HTTP](/es/docs/Web/HTTP/Headers).
 
-
 {{AvailableInWorkers}}
 
 ## Constructor
@@ -61,7 +60,6 @@ Un objeto que implementa `Headers` se puede usar directamente en una estructura 
 ## Ejemplos
 
 En el siguiente fragmento, creamos un nuevo encabezado utilizando el constructor `Headers()`, añadimos un nuevo encabezado utilizando `append()`, y luego recuperamos ese valor de encabezado utilizando `get()`:
-
 
 ```js
 const myHeaders = new Headers();
