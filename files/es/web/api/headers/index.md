@@ -15,7 +15,7 @@ Un objeto `Headers` también tiene un guardián asociado, que toma un valor de `
 
 Puedes recuperar un objeto `Headers` a través de las propiedades `{{domxref("Request.headers")}}` y `{{domxref("Response.headers")}}`, y crear un nuevo objeto `Headers` usando el constructor `{{domxref("Headers.Headers", "Headers()")}}`.
 
-Un objeto que implementa `Headers` se puede usar directamente en una estructura `{{jsxref("Statements/for...of", "for...of")}}`, en lugar de `{{domxref('Headers.entries()', 'entries()')}}`: `for (const p de misEncabezados)` es equivalente a `for (const p de misEncabezados.entries())`.
+Un objeto que implementa `Headers` se puede usar directamente en una estructura `{{jsxref("Statements/for...of", "for...of")}}`, en lugar de `{{domxref('Headers.entries()', 'entries()')}}`: `for (const p de myHeaders)` es equivalente a `for (const p de myHeaders.entries())`.
 
 > **Nota:** puedes obtener más información sobre los encabezados disponibles leyendo nuestra referencia de [encabezados HTTP](/es/docs/Web/HTTP/Headers).
 
