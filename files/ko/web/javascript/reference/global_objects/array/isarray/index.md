@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-정적 메서드 <strong>`Array.isArray()`</strong>는 전달된 값이 {{jsxref("Array")}}인지 판단합니다.
+**`Array.isArray()`** 정적 메서드는 전달된 값이 {{jsxref("Array")}}인지 판단합니다.
 
 {{EmbedInteractiveExample("pages/js/array-isarray.html")}}
 
