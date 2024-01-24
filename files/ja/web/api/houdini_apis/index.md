@@ -1,26 +1,47 @@
 ---
-title: CSS Houdini
+title: Houdini API
 slug: Web/API/Houdini_APIs
 original_slug: Web/API/Houdini
+l10n:
+  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-Houdini は、CSS エンジンの一部を公開する低レベル API のセットであり、開発者はブラウザーのレンダリングエンジンのスタイリングおよびレイアウトプロセスにフックすることで CSS を拡張できます。 Houdini は、開発者が [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)（CSSOM）に直接アクセスできるようにする API のグループです。 開発者は、ブラウザーが CSS として解析できるコードを記述できるため、ブラウザーにネイティブに実装されるのを待たずに新しい CSS 機能を作成できます。
+{{DefaultAPISidebar("Houdini API")}}
+
+Houdini は、CSS エンジンの一部を公開する低レベル API のセットであり、開発者はブラウザーのレンダリングエンジンのスタイリングおよびレイアウトプロセスにフックすることで CSS を拡張できます。
+Houdini は、開発者が [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model) (CSSOM) に直接アクセスできるようにする API のグループです。 開発者は、ブラウザーが CSS として解析できるコードを記述できるため、ブラウザーにネイティブに実装されるのを待たずに新しい CSS 機能を作成できます。
 
 ## Houdini の利点
 
-Houdini は、スタイルの変更に JavaScript の .[`style`](/ja/docs/Web/API/HTMLElement/style) を使用するよりも高速な解析時間を可能にします。 ブラウザーは、スクリプトで見つかったスタイルの更新を適用する前に、CSSOM（レイアウト、ペイント、合成のプロセスを含む）を解析します。 さらに、JavaScript スタイルの更新のために、レイアウト、ペイント、および合成のプロセスが繰り返されます。 Houdini のコードは、最初のレンダリングサイクルが完了するまで待機しません。 むしろ、それは最初のサイクルに含まれ、レンダリング可能で理解可能なスタイルを作成します。 Houdini は、JavaScript で CSS 値を操作するためのオブジェクトベースの API を提供します。
+Houdini は、スタイルの変更に JavaScript の {{domxref("HTMLElement.style")}} を使用するよりも構文解析時間を高速にすることができます。
+ブラウザーは、スクリプトで見つかったスタイルの更新を適用する前に、CSSOM（レイアウト、描画、合成のプロセスを含む）を解釈します。
+さらに、JavaScript スタイルの更新のために、レイアウト、描画、および合成のプロセスが繰り返されます。
+Houdini のコードは、最初のレンダリングサイクルが完了するまで待機しません。
+むしろ、それは最初のサイクルに含まれ、レンダリング可能で理解可能なスタイルを作成します。
+Houdini は、JavaScript で CSS 値を操作するためのオブジェクトベースの API を提供します。
 
-Houdini の CSS Typed OM は、型とメソッドを備えた CSS オブジェクトモデルであり、値を JavaScript オブジェクトとして公開し、以前の文字列ベースの [`HTMLElement.style`](/ja/docs/Web/API/HTMLElement/style) 操作よりも直感的な CSS 操作を実現します。 すべての要素とスタイルシートのルールには、[`StylePropertyMap`](/ja/docs/Web/API/StylePropertyMap) を介してアクセスできるスタイルマップがあります。
+Houdini の [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API) は、型とメソッドを備えた CSS オブジェクトモデルであり、値を JavaScript オブジェクトとして公開し、以前の文字列ベースの {{domxref("HTMLElement.style")}} 操作よりも直感的な CSS 操作を実現します。
+すべての要素とスタイルシートのルールには、 {{domxref("StylePropertyMap")}} を介してアクセスできるスタイルマップがあります。
 
-CSS Houdini の機能の 1 つはワークレット（[Worklet](/ja/docs/Web/API/Worklet)）です。 ワークレットを使用すると、モジュール方式の CSS を作成できます。 構成可能なコンポーネントをインポートするには、次の JavaScript の 1 行が必要です。 プリプロセッサー、ポストプロセッサー、JavaScript フレームワークは必要ありません。
+CSS Houdini の機能の 1 つはワークレット ({{domxref("Worklet")}}) です。 ワークレットを使用すると、モジュール方式の CSS を作成できます。
+構成可能なコンポーネントをインポートするには、次の JavaScript の 1 行が必要です。
+プリプロセッサー、ポストプロセッサー、JavaScript フレームワークは必要ありません。
 
 ```js
-<script>CSS.paintWorklet.addModule('csscomponent.js');</script>
+CSS.paintWorklet.addModule("csscomponent.js");
 ```
 
-この追加されたモジュールには、完全に構成可能なワークレットを登録する [`registerPaint()`](/ja/docs/Web/API/PaintWorklet/registerPaint) 関数が含まれています。
+この追加されたモジュールには、完全に構成可能なワークレットを登録する {{domxref("PaintWorkletGlobalScope.registerPaint")}} 関数が含まれています。
 
-CSS の `paint()` 関数のパラメーターには、オプションのパラメーターとともに、ワークレットの名前が含まれます。 ワークレットは要素のカスタムプロパティにもアクセスできます。 これらは関数の引数として渡す必要はありません。
+> **メモ:** 自分自身でワークレットを書いたり、他にも作成した部品をインストールすることができます。
+> [Houdini.how](https://houdini.how/) ウェブサイトは、[使用する方法を説明した](https://houdini.how/usage/)ワークレットのコレクションです。
+
+CSS の `paint()` 関数は {{cssxref("image")}} 型で対応している追加関数です。
+これは、ワークレットの名前とワークレットが必要とする追加の引数を取ります。
+ワークレットは要素のカスタムプロパティにもアクセスすることができます。
+関数の引数として渡す必要はありません。
+
+次の例では `paint()` 関数に `myComponent` というワークレットを渡しています。
 
 ```css
 li {
@@ -30,53 +51,75 @@ li {
 }
 ```
 
-> **メモ:** 大きな力には大きな責任が伴います。 Houdini を使用すると、独自の石積み（masonry）、グリッド、またはリージョンの実装を発明できますが、そうすることが必ずしも最良の考えであるとは限りません。 CSS ワーキンググループは、すべての機能が確実に実行され、すべてのエッジケースを処理し、セキュリティ、プライバシー、およびアクセシビリティを考慮するために多くの作業を行います。 Houdini で CSS を拡張するときは、これらの考慮事項を念頭に置き、より野心的なプロジェクトに進む前に、まずは小さいものから始めてください。
+> **メモ:** 大きな力には大きな責任が伴います。
+> Houdini を使用すると、独自の石積み (masonry）)グリッド、リージョンの実装を開発することができますが、そうすることが必ずしも最良の考えであるとは限りません。
+> CSS ワーキンググループは、すべての機能が確実に実行され、すべてのエッジケースを処理し、セキュリティ、プライバシー、およびアクセシビリティを考慮するために多くの作業を行います。
+> Houdini で CSS を拡張するときは、これらの考慮事項を念頭に置き、より野心的なプロジェクトに進む前に、まずは小さいものから始めてください。
 
-## Houdini の API
+## Houdini API
 
 以下に、Houdini の傘下にある API をカバーするメインリファレンスページへのリンクと、それらの使用方法を学習する際にガイダンスが必要な場合に役立つガイドへのリンクを示します。
 
-- CSS Parser API
+### CSS プロパティと値 API
 
-  - : 任意の CSS のような言語を穏やかに型付けされた表現に解析するために、CSS パーサーをより直接的に公開する API。
+新しい CSS プロパティを登録するための API を定義します。
+この API を使用して登録したプロパティには、型、継承の振る舞い、および初期値を定義する解析構文が提供されます。
 
-    この API のガイドやリファレンスは現在書かれていません。
+- [CSS プロパティと値 API リファレンス](/ja/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS プロパティと値 API ガイド](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [Smarter custom properties with Houdini's new API](https://web.dev/articles/css-props-and-vals)
 
-- CSS Properties and Values API
+### CSS 型付きオブジェクトモデル
 
-  - : 新しい CSS プロパティを登録するための API を定義します。 この API を使用して登録したプロパティには、型、継承の振る舞い、および初期値を定義する解析構文が提供されます。
+CSSOM 値の文字列を意味のある型の JavaScript 表現に変換したり、元に戻したりすると、パフォーマンスのオーバーヘッドが大幅に増加する可能性があります。
+CSS 型付きオブジェクトモデルは、CSS 値を型付き JavaScript オブジェクトとして公開し、パフォーマンスの高い操作を可能にします。
 
-    [CSS Properties and Values API リファレンス](/ja/docs/Web/API/CSS_Properties_and_Values_API)
-    [CSS Properties and Values API ガイド](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [CSS 型付きオブジェクトモデルリファレンス](/ja/docs/Web/API/CSS_Typed_OM_API)
+- [CSS 型付きオブジェクトモデルガイド](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [Working with the new CSS Typed Object Model](https://developer.chrome.com/blog/cssom/)
 
-- CSS Typed OM
+### CSS 描画 API
 
-  - : CSSOM 値の文字列を意味のある型の JavaScript 表現に変換したり、元に戻したりすると、パフォーマンスのオーバーヘッドが大幅に増加する可能性があります。 CSS Typed OM は、CSS 値を型付き JavaScript オブジェクトとして公開し、パフォーマンスの高い操作を可能にします。
+CSS の拡張性を改善するために開発された描画 API により、開発者は `paint()` CSS 関数を使って要素の背景や境界、コンテンツに直接描画する JavaScript 関数を書くことができます。
 
-    [CSS Typed OM リファレンス](/ja/docs/Web/API/CSS_Typed_OM_API)
-    [CSS Typed OM ガイド](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS 描画 API リファレンス](/ja/docs/Web/API/CSS_Painting_API)
+- [CSS 描画 API ガイド](/ja/docs/Web/API/CSS_Painting_API/Guide)
+- [CSS Paint API](https://developer.chrome.com/blog/paintapi/)
+- [The CSS Paint API](https://css-tricks.com/the-css-paint-api/)
+- [Simulating Drop Shadows with the CSS Paint API](https://css-tricks.com/simulating-drop-shadows-with-the-css-paint-api/)
+- [CSS Paint API Being predictably random](https://jakearchibald.com/2020/css-paint-predictably-random/)
 
-- CSS Layout API
+### ワークレット
 
-  - : CSS の拡張性を改善するように設計されたこの API は、開発者が石積みやラインスナップなどの独自のレイアウトアルゴリズムを作成できるようにします。 まだネイティブでは利用できません。
+メインの JavaScript 実行環境から独立した、レンダリングパイプラインのさまざまな段階でスクリプトを実行するための API です。
+ワークレットは概念的には[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)に似ており、レンダリングエンジンによって呼び出され、レンダリングエンジンを拡張します。
 
-    この API のガイドやリファレンスは現在書かれていません。
+- [ワークレットリファレンス](/ja/docs/Web/API/Worklet)
 
-- CSS Painting API
+### CSS レイアウト API
 
-  - : CSS の拡張性を向上させるために開発 — 開発者が `paint()` CSS 関数を介して要素の背景、境界線、またはコンテンツに直接描画できる JavaScript 関数を記述できるようにします。
+CSS の拡張性を改善するように設計されたこの API は、開発者が石積みやラインスナップなどの独自のレイアウトアルゴリズムを作成できるようにします。
 
-    [CSS Painting API リファレンス](/ja/docs/Web/API/CSS_Painting_API)
-    [CSS Painting API ガイド](/ja/docs/Web/API/CSS_Painting_API/ガイド)
+_この API は Chrome Canary で部分的に対応されています。まだ MDN では文書化されていません。_
 
-- Worklets
+### CSS パーサー API
 
-  - : メインの JavaScript 実行環境から独立した、レンダリングパイプラインのさまざまな段階でスクリプトを実行するための API。 ワークレットは概念的には [Web Workers](/ja/docs/Web/API/Web_Workers_API/Using_web_workers) に似ており、レンダリングエンジンによって呼び出され、レンダリングエンジンを拡張します。
+任意の CSS のような言語を穏やかに型付けされた表現に解析するために、CSS パーサーをより直接的に公開する API です。
 
-    [Worklets リファレンス](/ja/docs/Web/API/Worklet)
+_この API は現在提案段階にあり、ブラウザーの実装や MDN のドキュメントはありません。_
 
-## その他のトピック
+- [Proposal](https://github.com/WICG/css-parser-api)
 
-興味深い方法で Houdini API と連携して使用できるため、興味深い関連トピック。
+### フォントメトリック API
 
-合成スクロールとアニメーション
+フォントのメトリックを公開し、書体のレイアウトの結果にアクセスする API です。
+
+_この API は現在提案段階にあり、ブラウザーの実装や MDN のドキュメントはありません。_
+
+- [Proposal](https://github.com/w3c/css-houdini-drafts/blob/main/font-metrics-api/README.md)
+
+## 関連情報
+
+- [Worklet library](https://houdini.how/) に例とコードがあります
+- [Interactive introduction to Houdini](https://houdini.glitch.me/)
+- [Is Houdini Ready Yet?](https://houdini.glitch.me/)

@@ -3,7 +3,7 @@ title: Универсальные селекторы
 slug: Web/CSS/Universal_selectors
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 ## Краткое описание
 

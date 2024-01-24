@@ -3,7 +3,7 @@ title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 El método **`split()`** divide un objeto de tipo `String` en un array (vector) de cadenas mediante la separación de la cadena en subcadenas.
 
