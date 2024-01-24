@@ -3,7 +3,7 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 ---
 
-{{CSSRef("CSS Tables")}}
+{{CSSRef}}
 
 ## 概述
 
