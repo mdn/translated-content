@@ -1,6 +1,8 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
+l10n:
+  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
 {{CSSRef}}
@@ -28,6 +30,7 @@ background-clip: text;
 background-clip: inherit;
 background-clip: initial;
 background-clip: revert;
+background-clip: revert-layer;
 background-clip: unset;
 ```
 
@@ -58,14 +61,18 @@ background-clip: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
-```html
+```html-nolint
 <p class="border-box">背景が境界の裏まで拡張されます。</p>
-<p class="padding-box">背景が境界の内側の縁まで拡張されます。</p>
-<p class="content-box">背景がコンテンツボックスの縁までだけ表示されます。</p>
+<p class="padding-box">
+  背景が境界の内側の縁まで拡張されます。
+</p>
+<p class="content-box">
+  背景がコンテンツボックスの縁までだけ表示されます。
+</p>
 <p class="text">背景が前景のテキストで切り取られます。</p>
 ```
 
@@ -95,7 +102,7 @@ p {
 .text {
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgb(0 0 0 / 20%);
 }
 ```
 
