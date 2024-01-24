@@ -1,8 +1,6 @@
 ---
 title: Headers
 slug: Web/API/Headers
-page-type: web-api-interface
-browser-compat: api.Headers
 ---
 
 {{APIRef("Fetch API")}}
