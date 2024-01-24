@@ -34,7 +34,7 @@ ondevicemotion = (event) => {};
 - {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} {{ReadOnlyInline}}
   - : 在重力作用下，给出设备在 x、y、z 三个轴上的加速度的对象。加速度单位为 [m/s²](https://zh.wikipedia.org/wiki/米每二次方秒)。
 - {{DOMxRef("DeviceMotionEvent.rotationRate")}} {{ReadOnlyInline}}
-  - : 一个给出设备在三个方向轴（阿尔法轴、贝塔轴和伽马轴）上方向变化率的对象。旋转率以每秒度数表示。
+  - : 一个给出设备绕三个方向轴（阿尔法轴、贝塔轴和伽马轴）的旋转速率的对象。旋转速率以度每秒表示。
 - {{DOMxRef("DeviceMotionEvent.interval")}} {{ReadOnlyInline}}
   - : 代表从设备获取数据的时间间隔（毫秒）的数字。
 
@@ -60,7 +60,7 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
 - [DeviceOrientation 事件](https://www.w3.org/TR/orientation-event/#devicemotion)
