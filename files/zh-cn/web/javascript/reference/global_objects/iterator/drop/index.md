@@ -27,7 +27,7 @@ drop(limit)
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : 如果 `limit` [转换为整数后](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换) 变成 {{jsxref("NaN")}} 或负数，则抛出该异常。
+  - : 如果 `limit` [转换为整数后](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)变成 {{jsxref("NaN")}} 或负数，则抛出该异常。
 
 ## 示例
 
