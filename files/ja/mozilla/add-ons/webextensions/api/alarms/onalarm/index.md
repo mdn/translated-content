@@ -3,7 +3,7 @@ title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 アドオンによってアラームが動作した際に発火します。
 
