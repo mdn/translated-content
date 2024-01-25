@@ -1,6 +1,7 @@
 ---
 title: Contribuir a MDN
-slug: MDN/Contribute
+slug: MDN/Community/Contributing
+original_slug: MDN/Contribute
 ---
 
 {{MDNSidebar}}
