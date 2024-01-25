@@ -29,14 +29,13 @@ slug: Web/JavaScript/Guide/Regular_expressions/Assertions
           在换行符后也能立即匹配，比如 <code>/^A/</code> 匹配不了 "an A" 里面的
           "A"，但是可以匹配 "An A" 里面第一个 "A"。
         </p>
-        <div class="note">
+        <div class="notecard note">
           <p>
             <strong>备注：</strong
-            ><code>^</code> 出现在集合或范围开头时的含义与此不同（参见
-            <a
-              href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges"
-              >group</a
-            >）。
+            >此字符出现在<a
+              href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
+              >字符类</a
+            >开头时的含义与此不同。
           </p>
         </div>
       </td>
@@ -271,9 +270,9 @@ console.log('This is a First peach in a month.'.match(regex)); // null
 console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 ```
 
-### 不同含义的'?!'：断言和范围的组合用法
+### 不同含义的'?!'：断言和字符集的组合用法
 
-不同含义的 `?!` 结合使用[断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) `/x(?!y)/` 和[范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges) `[^?!]`。
+在像 `/x(?!y)/` 这样的断言和 `[^?!]` 这样的[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)中，`?!` 组合具有不同的含义。
 
 ```plain
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
@@ -297,10 +296,7 @@ console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ## 参见
 
 - [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-
-  - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-  - [组和范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)
-
-- [RegExp() 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)指南
+- [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)指南
+- [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)指南
+- [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
