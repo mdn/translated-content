@@ -103,7 +103,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
         <p>
           默认情况下，像 <code>* </code>和
           <code>+ </code
-          >这样的量词是“贪婪的”，这意味着它们试图匹配尽可能多的字符串。?量词后面的字符使量词“非贪婪”：意思是它一旦找到匹配就会停止。例如，给定一个字符串“some
+          >这样的量词是“贪婪的”，这意味着它们试图匹配尽可能多的字符串。量词后面的字符?使量词“非贪婪”：意思是它一旦找到匹配就会停止。例如，给定一个字符串“some
           &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing”:
         </p>
         <ul>
