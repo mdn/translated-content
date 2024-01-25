@@ -1,7 +1,6 @@
 ---
 title: 貢獻 MDN
 slug: MDN/Community/Contributing
-original_slug: MDN/Contribute
 ---
 
 {{MDNSidebar}}
