@@ -41,16 +41,14 @@ var re = new RegExp("ab+c");
 
 下面的页面与表格列出了一个正则表达式中可以利用的特殊字符的完整列表和描述。
 
-- [断言（Assertions）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+- [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)指南
   - : 表示一个匹配在某些条件下发生。断言包含先行断言、后行断言和条件表达式。
-- [字符类（Character Classes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+- [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)指南
   - : 区分不同类型的字符，例如区分字母和数字。
-- [组和范围（Groups and Ranges）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-  - : 表示表达式字符的分组和范围。
-- [量词（Quantifiers）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+- [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)指南
+  - : 当使用正则表达式模式与字符串匹配时，组会将多个模式组合成一个整体，捕获组会提供额外的子匹配信息。反向引用指的是同一正则表达式中以前捕获的组。
+- [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)指南
   - : 表示匹配的字符或表达式的数量。
-- [Unicode 属性转义（Unicode Property Escapes）](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-  - : 基于 unicode 字符属性区分字符。例如大写和小写字母、数学符号和标点。
 
 <table class="standard-table">
   <caption>
