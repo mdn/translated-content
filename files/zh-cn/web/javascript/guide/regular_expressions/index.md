@@ -45,7 +45,7 @@ var re = new RegExp("ab+c");
   - : 表示一个匹配在某些条件下发生。断言包含先行断言、后行断言和条件表达式。
 - [字符类（Character Classes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - : 区分不同类型的字符，例如区分字母和数字。
-- [组和范围（Groups and Ranges）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)
+- [组和范围（Groups and Ranges）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
   - : 表示表达式字符的分组和范围。
 - [量词（Quantifiers）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - : 表示匹配的字符或表达式的数量。
