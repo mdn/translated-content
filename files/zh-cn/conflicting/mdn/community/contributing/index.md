@@ -1,6 +1,7 @@
 ---
 title: 为 MDN Web 文档内容做出贡献
-slug: MDN/Community/MDN_content
+slug: conflicting/MDN/Community/Contributing
+original_slug: MDN/Community/MDN_content
 ---
 
 {{MDNSidebar}}

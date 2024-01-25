@@ -1,6 +1,7 @@
 ---
 title: 为 MDN 做贡献
-slug: MDN/Contribute
+slug: conflicting/MDN/Community/Contributing_14a592aa7cec3d76321bac7830dc4690
+original_slug: MDN/Contribute
 ---
 
 {{MDNSidebar}}
