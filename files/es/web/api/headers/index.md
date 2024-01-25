@@ -5,7 +5,7 @@ slug: Web/API/Headers
 
 {{APIRef("Fetch API")}}
 
-La interfaz **`Headers`** de la [Fetch API](/es/docs/Web/API/Fetch_API) te permite realizar varias acciones en los [encabezados de solicitud y respuesta HTTP](/es/docs/Web/HTTP/Headers). Estas acciones incluyen recuperar, establecer, agregar y eliminar encabezados de la lista de encabezados de la solicitud.
+La interfaz **`Headers`** de la [API Fetch](/es/docs/Web/API/Fetch_API) te permite realizar varias acciones en las [cabeceras de solicitud y respuesta HTTP](/es/docs/Web/HTTP/Headers). Estas acciones incluyen recuperar, establecer, agregar y eliminar cabeceras de la lista de cabeceras de la solicitud.
 
 Un objeto `Headers` tiene una lista de encabezados asociada, que inicialmente está vacía y consta de cero o más pares de nombre y valor. Puedes agregar a esto utilizando métodos como `{{domxref("Headers.append","append()")}}` (ver [Ejemplos](#ejemplos).) En todos los métodos de esta interfaz, los nombres de los encabezados se comparan mediante secuencias de bytes sin distinción de mayúsculas y minúsculas.
 
