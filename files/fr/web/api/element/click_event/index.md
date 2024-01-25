@@ -40,7 +40,7 @@ L'objet {{domxref("MouseEvent")}}, passé au gestionnaire d'évènement (lorsque
 
 ### Internet Explorer
 
-Internet Explorer 8 & 9 souffrent d'un bug où les élméents avec une {{cssxref("background-color")}} calculée qui vaut [`transparent`](/fr/docs/Web/CSS/color_value#transparent_keyword) qui recouvrent d'autres éléments ne recevront pas d'évènements `click`. Les évènements `click` toucheront les éléments en dessous à la place.
+Internet Explorer 8 & 9 souffrent d'un bug où les éléments avec une {{cssxref("background-color")}} calculée qui vaut [`transparent`](/fr/docs/Web/CSS/color_value#transparent_keyword) qui recouvrent d'autres éléments ne recevront pas d'évènements `click`. Les évènements `click` toucheront les éléments en dessous à la place.
 
 Quelques méthodes de contournement pour ce bug :
 

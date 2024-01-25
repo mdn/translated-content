@@ -1,6 +1,7 @@
 ---
 title: Участие в развитии MDN
-slug: MDN/Contribute
+slug: MDN/Community/Contributing
+original_slug: MDN/Contribute
 ---
 
 {{MDNSidebar}}

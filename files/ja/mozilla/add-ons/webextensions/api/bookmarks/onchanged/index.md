@@ -3,7 +3,7 @@ title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 以下の変更に対して発火します。
 
