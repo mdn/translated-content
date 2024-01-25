@@ -32,7 +32,7 @@ import.meta
 
 ### 쿼리 매개변수 전달
 
-`import` 지정자에 쿼리 매개변수를 사용하면 모듈에 특별한 정보를 전달할 수 있으며, 이는 애플리케이션 전체에서 매개변수를 읽을 수 있습니다(브라우저의 경우 [`window.location`](/ko/docs/Web/API/Window/location), Node.js의 경우 `process.argv`). 예를 들면 다음 HTML이 있습니다:
+`import` 지정자에 쿼리 매개변수를 사용하면 모듈별 인자를 전달할 수 있으며, 이는 애플리케이션 전체에서 매개변수를 읽는 것과 상호보완적일 수 있습니다.(브라우저의 경우 [`window.location`](/ko/docs/Web/API/Window/location), Node.js의 경우 `process.argv`). 예를 들면 다음 HTML이 있습니다:
 
 ```html
 <script type="module">
