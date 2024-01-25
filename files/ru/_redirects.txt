@@ -276,6 +276,7 @@
 /ru/docs/Learn/Фронтенд_разработчик	/ru/docs/Learn/Front-end_web_developer
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /ru/docs/MDN/About	/ru/docs/MDN/Writing_guidelines
+/ru/docs/MDN/Contribute	/ru/docs/MDN/Community/Contributing
 /ru/docs/MDN/Contribute/Creating_and_editing_pages	/ru/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ru/docs/MDN/Contribute/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Contribute/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
@@ -285,7 +286,8 @@
 /ru/docs/MDN/Contribute/Howto/Report_a_problem	/ru/docs/MDN/Community/Issues
 /ru/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ru/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /ru/docs/MDN/Contribute/Open_source_etiquette	/ru/docs/MDN/Community/Open_source_etiquette
-/ru/docs/MDN/Contribute/Процессы	/ru/docs/MDN/Contribute/Processes
+/ru/docs/MDN/Contribute/Processes	/ru/docs/conflicting/MDN/Community/Contributing
+/ru/docs/MDN/Contribute/Процессы	/ru/docs/conflicting/MDN/Community/Contributing
 /ru/docs/MDN/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
