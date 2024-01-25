@@ -3,7 +3,7 @@ title: "Window: name 속성"
 short-title: name
 slug: Web/API/Window/name
 l10n:
-  sourceCommit: baaf0062bf82c8ffe9c9f2948833589018c64ddd
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
