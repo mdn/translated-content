@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}{{SeeCompatTable}}
 
-{{jsxref("Iterator")}} 实例的 **`drop()`** 方法返回一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#迭代器辅助方法)，该迭代器辅助方法会跳过该迭代器的开头的给定数量的元素。
+{{jsxref("Iterator")}} 实例的 **`drop()`** 方法返回一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#迭代器辅助方法)，该迭代器辅助方法会跳过此迭代器的开头的给定数量的元素。
 
 ## 语法
 
@@ -22,12 +22,12 @@ drop(limit)
 
 ### 返回值
 
-一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers)。第一次调用返回的迭代器辅助方法的 `next()` 方法时，当前迭代器立即前进 `limit` 个元素，然后生成下一个元素（即第 `limit+1` 个元素）。然后，迭代器辅助方法会逐一生成剩余元素。如果当前迭代器的元素数量少于 `limit` 个，那么新生成的迭代器辅助方法会在 `next()` 方法第一次调用时立即完成。
+一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#迭代器辅助方法)。第一次调用返回的迭代器辅助方法的 `next()` 方法时，当前迭代器立即前进 `limit` 个元素，然后生成下一个元素（即第 `limit+1` 个元素）。然后，迭代器辅助方法会逐一生成剩余元素。如果当前迭代器的元素数量少于 `limit` 个，那么新生成的迭代器辅助方法会在 `next()` 方法第一次调用时立即完成。
 
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : 如果 `limit` [转换为整数后](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) 变成 {{jsxref("NaN")}} 或负数，则抛出该异常。
+  - : 如果 `limit` [转换为整数后](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换) 变成 {{jsxref("NaN")}} 或负数，则抛出该异常。
 
 ## 示例
 
