@@ -15,7 +15,7 @@ Un objeto `Headers` también tiene un guardián asociado, que toma un valor de `
 
 Puedes recuperar un objeto `Headers` a través de las propiedades `{{domxref("Request.headers")}}` y `{{domxref("Response.headers")}}`, y crear un nuevo objeto `Headers` usando el constructor `{{domxref("Headers.Headers", "Headers()")}}`.
 
-Un objeto que implementa `Headers` se puede usar directamente en una estructura `{{jsxref("Statements/for...of", "for...of")}}`, en lugar de `{{domxref('Headers.entries()', 'entries()')}}`: `for (const p de myHeaders)` es equivalente a `for (const p de myHeaders.entries())`.
+Un objeto que implementa `Headers` se puede usar directamente en una estructura `{{jsxref("Statements/for...of", "for...of")}}`, en lugar de `{{domxref('Headers.entries()', 'entries()')}}`: `for (const p of myHeaders)` es equivalente a `for (const p of myHeaders.entries())`.
 
 > **Nota:** puedes obtener más información sobre las cabeceras disponibles leyendo nuestra referencia de [cabeceras HTTP](/es/docs/Web/HTTP/Headers).
 
@@ -24,7 +24,7 @@ Un objeto que implementa `Headers` se puede usar directamente en una estructura 
 ## Constructor
 
 - {{domxref("Headers.Headers()", "Headers()")}}
-- : Crea un nuevo objeto `Headers`.
+  - : Crea un nuevo objeto `Headers`.
 
 ## Métodos de instancia
 
@@ -66,14 +66,14 @@ myHeaders.append("Content-Type", "text/xml");
 myHeaders.get("Content-Type"); // debería devolver 'text/xml'
 ```
 
-The same can be achieved by passing an array of arrays or an object literal to the constructor:
+Se puede lograr lo mismo pasando un arreglo de arreglos o un objeto literal al constructor:
 
 ```js
 let myHeaders = new Headers({
   "Content-Type": "text/xml",
 });
 
-// o, utilizando un array de arrays:
+// o, utilizando un arreglo de arreglos:
 myHeaders = new Headers([["Content-Type", "text/xml"]]);
 
 myHeaders.get("Content-Type"); // debería devolver 'text/xml'
@@ -89,6 +89,6 @@ myHeaders.get("Content-Type"); // debería devolver 'text/xml'
 
 ## Véase también
 
-- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
+- [API de ServiceWorker](/es/docs/Web/API/Service_Worker_API)
+- [Control de Acceso HTTP (CORS)](/es/docs/Web/HTTP/CORS)
 - [HTTP](/es/docs/Web/HTTP)
