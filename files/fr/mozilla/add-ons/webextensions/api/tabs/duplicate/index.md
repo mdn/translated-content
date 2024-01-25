@@ -3,7 +3,7 @@ title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Duplique un onglet dont l'identifiant est donné.
 

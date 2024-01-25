@@ -3,7 +3,7 @@ title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Cette méthode permet de créer une nouvelle alarme pour la session de navigation en cours. Une alarme peut se déclencher une ou plusieurs fois. Une alarme est effacée après qu'elle se soit déclenchée pour la dernière fois.
 

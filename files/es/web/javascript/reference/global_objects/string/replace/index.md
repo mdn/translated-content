@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 El método **`replace()`** devuelve una nueva cadena con una, algunas, o todas las coincidencias de un `patrón`, siendo cada una de estas coincidencias reemplazadas por un `reemplazo`. El `patrón` puede ser una cadena o un objeto _{{jsxref("RegExp")}}_, y el `reemplazo` puede ser una cadena o una función que será llamada para cada coincidencia. Si el `patrón` es una cadena, sólo la primera coincidencia será reemplazada. La cadena original permanecerá inalterada.
 

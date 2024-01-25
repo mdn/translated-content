@@ -3,7 +3,7 @@ title: tabs.update()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'onglet.
 

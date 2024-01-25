@@ -3,7 +3,7 @@ title: browserAction.disable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 タブに対してブラウザアクションを無効にします。つまり、タブがアクティブな時クリックされなくなります。
 

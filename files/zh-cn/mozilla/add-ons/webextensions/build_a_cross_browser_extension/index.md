@@ -3,7 +3,7 @@ title: 构建一个跨浏览器的扩展程序
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 浏览器扩展 API 的引入为浏览器扩展的开发创造了“一次开发跨浏览器”的前景。然而，在使用扩展 API 的浏览器中 (主要是 Chrome、Firefox、Opera 和 Edge) ，API 的实现和覆盖范围都存在差异。除此之外，Safari 使用了它自己的 Safari 扩展脚本系统。
 

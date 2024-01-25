@@ -3,7 +3,7 @@ title: border
 slug: Web/CSS/border
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
 Свойство [CSS](/ru/docs/CSS) **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
 
