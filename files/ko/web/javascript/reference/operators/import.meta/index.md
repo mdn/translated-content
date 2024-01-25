@@ -59,7 +59,7 @@ new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 
 Node.js의 ES modules 구현은 두 번째 예시(`index2.mjs`)와 같이 쿼리 매개변수(또는 해시)가 포함된 모듈 지정자 접근을 지원합니다.
 
-그러나, Node.js의 CLI 명령(예: `node index.mjs?someURLInfo=5`)을 통해 쿼리 매개변수를 지정한 경우 쿼리(`?`) 또는 해시(`#`)를 사용할 수 없습니다. CLI 엔트리포인트는 CommonJS와 유사한 resolution mode를 사용하기 때문에 경로를 URL이 아닌 파일 경로로 취급하기 때문입니다. 엔트리포인트 모듈에 매개변수를 전달하려면 CLI 인수를 사용하고 대신 `process.argv`를 통해 매개변수를 읽어야 합니다(예: `node index.mjs --someURLInfo=5`).
+그러나, Node.js의 CLI 명령(예: `node index.mjs?someURLInfo=5`)을 통해 모듈을 지정한 경우 쿼리(`?`) 또는 해시(`#`)를 사용할 수 없습니다. CLI 엔트리포인트는 CommonJS와 유사한 모듈 해석을 사용하기 때문에 경로를 URL이 아닌 파일 경로로 취급하기 때문입니다. 엔트리포인트 모듈에 매개변수를 전달하려면 CLI 인수를 사용하고 대신 `process.argv`를 통해 매개변수를 읽어야 합니다(예: `node index.mjs --someURLInfo=5`).
 
 ### 현재 파일을 기준으로 파일 확인하기
 
