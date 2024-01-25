@@ -128,7 +128,7 @@ console.table(nonEnglishText.match(regexpUPE));
 
 ## 浏览器兼容性
 
-{{Compat}} 
+{{Compat}}
 
 ## 参见
 
