@@ -47,7 +47,7 @@ A {{domxref("DOMString")}} whose value is one of the strings which are a member 
     </tr>
     <tr>
       <th scope="row"><code>"inactive"</code></th>
-      <td><em>不</em>可以接收 RTP 数据，无论如何都不会接收数据。</td>
+      <td><em>不</em>可以发送 RTP 数据，无论如何都不会发送数据。</td>
       <td><em>不</em>可以接收 RTP 数据，无论如何都不会接收数据。</td>
     </tr>
   </tbody>

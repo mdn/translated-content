@@ -3,7 +3,7 @@ title: history.HistoryItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 `HistoryItem` オブジェクトはブラウザー履歴でのページ情報を提供します。
 
