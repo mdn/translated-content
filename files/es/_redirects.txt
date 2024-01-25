@@ -1258,6 +1258,7 @@
 /es/docs/MDN/Tools/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/MDN/Writing_guidelines/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto
+/es/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /es/docs/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN_en_diez	/es/docs/MDN/At_ten
 /es/docs/Manipular_video_por_medio_de_canvas	/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
