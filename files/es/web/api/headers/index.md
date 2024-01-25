@@ -1,6 +1,8 @@
 ---
 title: Headers
 slug: Web/API/Headers
+l10n:
+  sourceCommit: 2b554506d84d016d3ddf612c593bd8315833c64d
 ---
 
 {{APIRef("Fetch API")}}
