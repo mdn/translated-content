@@ -73,7 +73,7 @@ border-color: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <div id="justone">
   <p><code>border-color: red;</code> は以下のものと等価です。</p>
   <ul>
