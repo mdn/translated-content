@@ -1,11 +1,13 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
+l10n:
+  sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
 ---
 
 {{CSSRef}}
 
-**`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界 ({{cssxref("border")}}) における線の形状を設定します。
+**`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界 ({{cssxref("border")}}) における線のスタイルを設定します。
 
 {{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
 
@@ -30,10 +32,11 @@ border-bottom-style: outset;
 border-bottom-style: inherit;
 border-bottom-style: initial;
 border-bottom-style: revert;
+border-bottom-style: revert-layer;
 border-bottom-style: unset;
 ```
 
-`border-bottom-style` プロパティは、 {{cssxref("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
+`border-bottom-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
 
 ## 公式定義
 
@@ -45,7 +48,7 @@ border-bottom-style: unset;
 
 ## 例
 
-<h3 id="Demonstrating_all_border_styles">すべての境界の形状のデモ</h3>
+### すべての境界線のスタイルのデモ
 
 #### HTML
 
@@ -118,7 +121,7 @@ td {
 
 #### 結果
 
-{{ EmbedLiveSample('Demonstrating_all_border_styles', 300, 200) }}
+{{ EmbedLiveSample('すべての境界線のスタイルのデモ', 300, 200) }}
 
 ## 仕様書
 
