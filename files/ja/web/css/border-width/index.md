@@ -1,6 +1,8 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
@@ -43,6 +45,7 @@ border-width: 1px 2em 0 4rem;
 border-width: inherit;
 border-width: initial;
 border-width: revert;
+border-width: revert-layer;
 border-width: unset;
 ```
 
@@ -63,7 +66,7 @@ border-width: unset;
     - `medium`
     - `thick`
 
-> **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか 1つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+> **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
@@ -75,41 +78,39 @@ border-width: unset;
 
 ## 例
 
-<h3 id="A_mix_of_values_and_lengths">値と長さの組み合わせ</h3>
+### 値と長さの組み合わせ
 
 #### HTML
 
-```html
-<p id="sval">one value: 6px wide border on all 4 sides</p>
-<p id="bival">
-  two different values: 2px wide top and bottom border, 10px wide right and left
-  border
+```html-nolint
+<p id="one-value">1 つの値: 6px 幅が全 4 辺の境界に適用</p>
+<p id="two-values">
+  異なる値 2 つの値: 2px 幅が上下の境界に、 10px 幅が左右の境界に適用
 </p>
-<p id="treval">
-  three different values: 0.3em top, 9px bottom, and zero width right and left
+<p id="three-values">
+  異なる 3 つの値: 0.3em 幅が上に、 9px 幅が下に、ゼロ幅が左右に適用
 </p>
-<p id="fourval">
-  four different values: "thin" top, "medium" right, "thick" bottom, and 1em
-  left
+<p id="four-values">
+  異なる 4 つの値: "thin" が上に、 "medium" が右に、 "thick" が下に、 1em が左に
 </p>
 ```
 
 #### CSS
 
 ```css
-#sval {
+#one-value {
   border: ridge #ccc;
   border-width: 6px;
 }
-#bival {
+#two-values {
   border: solid red;
   border-width: 2px 10px;
 }
-#treval {
+#three-values {
   border: dotted orange;
   border-width: 0.3em 0 9px;
 }
-#fourval {
+#four-values {
   border: solid lightgreen;
   border-width: thin medium thick 1em;
 }
@@ -120,9 +121,9 @@ p {
 }
 ```
 
-#### Result
+#### 結果
 
-{{ EmbedLiveSample('A_mix_of_values_and_lengths', 320, 320) }}
+{{ EmbedLiveSample('値と長さの組み合わせ', 320, 320) }}
 
 ## 仕様書
 
