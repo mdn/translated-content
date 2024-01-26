@@ -223,7 +223,7 @@ const fruitsStartsWithA = fruits.filter((fruit) => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
-在第二个示例中，`^` 用于在输入的开始处匹配，以及在内部使用时用于创建否定或被补充的字符集[组和范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)。
+在第二个示例中，`^` 既用于在输入开头进行匹配，也用于在[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)中使用时创建字符类补集。
 
 ```js
 const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
