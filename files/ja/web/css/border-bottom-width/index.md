@@ -1,6 +1,8 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
@@ -26,6 +28,7 @@ border-bottom-width: 6px;
 border-bottom-width: inherit;
 border-bottom-width: initial;
 border-bottom-width: revert;
+border-bottom-width: revert-layer;
 border-bottom-width: unset;
 ```
 
@@ -51,7 +54,7 @@ border-bottom-width: unset;
 
 ## 例
 
-<h3 id="Comparing_bottom_border_widths">下境界の太さの比較</h3>
+### 下境界の太さの比較
 
 #### HTML
 
@@ -78,7 +81,7 @@ div:nth-child(2) {
 
 #### 結果
 
-{{EmbedLiveSample('Comparing_bottom_border_widths', '100%')}}
+{{EmbedLiveSample('下境界の太さの比較', '100%')}}
 
 ## 仕様書
 
