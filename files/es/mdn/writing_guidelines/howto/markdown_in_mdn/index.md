@@ -268,7 +268,7 @@ Este HTML se representará como un cuadro resaltado:
 
 Debido a que el texto "Nota:" o "Advertencia:" también aparece en la salida renderizada, debe ser sensible a las traducciones. En la práctica, esto significa que cada configuración regional admitida por MDN debe proporcionar su propia traducción de estas cadenas, y la plataforma debe reconocerlas como indicativas de que la construcción necesita un tratamiento especial.
 
-Las localizaciones se almacenan en [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) como archivos JSON en formato [gettext](https://www.gnu.org/software/gettext/). Consulte estos archivos para determinar qué cadena se debe utilizar en lugar de "Nota:" o "Advertencia:" para esa configuración regional. Si no se define un archivo local, se utilizará el inglés como alternativa.
+Las localizaciones se almacenan en [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) como archivos JSON en formato [gettext](https://www.gnu.org/software/gettext/). Consulta estos archivos para determinar qué cadena se debe usar en lugar de "Nota:" o "Advertencia:" para esa configuración regional. Si no se define un archivo local, se usará el inglés como alternativa.
 
 Por ejemplo, si queremos utilizar "Warnung" para "Advertencia" en alemán, entonces en las páginas alemanas escribiríamos:
 
