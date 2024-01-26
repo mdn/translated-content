@@ -1,5 +1,5 @@
 ---
-title: Unicode 字符类转义：\\p{...}、\\P{...}
+title: Unicode 字符类转义：\p{...}、\P{...}
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 ---
 
@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escap
 
 ## 语法
 
-```js
+```regex
 \p{loneProperty}
 \P{loneProperty}
 

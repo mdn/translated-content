@@ -270,7 +270,7 @@ console.log('This is a First peach in a month.'.match(regex)); // null
 console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 ```
 
-### 不同含义的'?!'：断言和字符集的组合用法
+### 不同含义的“?!”：在断言和字符集中的组合用法
 
 在像 `/x(?!y)/` 这样的断言和 `[^?!]` 这样的[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)中，`?!` 组合具有不同的含义。
 
