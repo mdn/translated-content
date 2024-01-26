@@ -196,7 +196,7 @@ tangs on ihe greon traa`;
 buggyMultiline = buggyMultiline.replace(/^t/gim, "h");
 console.log(1, buggyMultiline); // 修复 'tey' => 'hey' 和 'tangs' => 'hangs'，而不对 'traa' 做改动。
 
-// 2) Use $ to fix matching at the end of the text.
+// 2) 使用 $ 修正字符串结尾处的匹配。
 buggyMultiline = buggyMultiline.replace(/aa$/gim, "ee.");
 console.log(2, buggyMultiline); // 修复 'traa' => 'tree.'。
 
