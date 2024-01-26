@@ -2,7 +2,7 @@
 title: border-style
 slug: Web/CSS/border-style
 l10n:
-  sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
+  sourceCommit: 59593341146f085e57cec84f0928c7b7e18f3e97
 ---
 
 {{CSSRef}}
