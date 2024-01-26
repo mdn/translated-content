@@ -2,7 +2,7 @@
 title: Iterator.prototype.take()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
 l10n:
-  sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
+  sourceCommit: 2ce8f6f9d08cd6f10b77c4853ef5494c690b56b1
 ---
 
 {{JSRef}}{{SeeCompatTable}}
