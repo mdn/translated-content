@@ -130,7 +130,7 @@ slug: Web/API/Event
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

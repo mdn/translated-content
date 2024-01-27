@@ -128,7 +128,7 @@
 | Rendering          | 렌더링          |                                                                                                        |
 | Section            | 구획            |                                                                                                        |
 | Statement          | 명령문 또는 문  |                                                                                                        |
-| short-circuit      |
+| short-circuit      |                 |                                                                                                        |
 | User agent         | 사용자 에이전트 |                                                                                                        |
 
 ## CSS
@@ -189,7 +189,7 @@
 | Scope                   | 범위            |               |                                                                                          |
 | Settled                 | 처리            |               |                                                                                          |
 | Sparse array            | 희소 배열       |               |                                                                                          |
-| Temporal Dead Zone, TDZ | 시간상 사각지대 |               | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files)                   |
+| Temporal Dead Zone, TDZ | 일시적 사각지대 |               | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files)                   |
 | TypedArray              | 형식화 배열     |               |                                                                                          |
 
 ## HTTP

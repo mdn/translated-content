@@ -83,7 +83,7 @@ for (var prop in obj) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

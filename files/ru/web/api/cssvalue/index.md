@@ -26,7 +26,7 @@ slug: Web/API/CSSValue
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

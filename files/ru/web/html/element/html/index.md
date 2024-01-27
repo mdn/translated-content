@@ -53,7 +53,7 @@ slug: Web/HTML/Element/html
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

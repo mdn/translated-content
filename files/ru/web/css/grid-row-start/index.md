@@ -126,7 +126,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 {{cssinfo}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

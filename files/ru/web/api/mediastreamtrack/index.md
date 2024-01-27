@@ -82,7 +82,7 @@ slug: Web/API/MediaStreamTrack
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

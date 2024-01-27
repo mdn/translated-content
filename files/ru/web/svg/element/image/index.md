@@ -58,6 +58,6 @@ This element implements the [`SVGImageElement`](/ru/docs/Web/API/SVGImageElement
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

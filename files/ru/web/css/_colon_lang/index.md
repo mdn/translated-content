@@ -67,7 +67,7 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

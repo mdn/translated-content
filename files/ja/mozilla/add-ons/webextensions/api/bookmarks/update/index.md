@@ -3,7 +3,7 @@ title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.update()`** は、ブックマークの URL やタイトル、またはフォルダの名前を更新するメソッドです。
 

@@ -3,7 +3,7 @@ title: browserAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient le titre de l'action du navigateur.
 

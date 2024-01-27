@@ -3,7 +3,7 @@ title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Exécute JavaScript dans la fenêtre à laquelle les devtools sont attachés.
 

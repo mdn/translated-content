@@ -93,7 +93,7 @@ _Не имеют унаследованных свойств._
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

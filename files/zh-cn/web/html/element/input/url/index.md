@@ -22,7 +22,7 @@ slug: Web/HTML/Element/input/url
   <tr>
    <td><strong>事件</strong></td>
    <td>
-    {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}
+    {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}
    </td>
   </tr>
   <tr>

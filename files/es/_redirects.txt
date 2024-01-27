@@ -1215,6 +1215,7 @@
 /es/docs/Learn/Using_Github_pages	/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 /es/docs/MDN/About	/es/docs/MDN/Writing_guidelines
 /es/docs/MDN/Comenzando	/es/docs/MDN/Community/Contributing/Getting_started
+/es/docs/MDN/Contribute	/es/docs/MDN/Community/Contributing
 /es/docs/MDN/Contribute/Content	/es/docs/conflicting/MDN/Writing_guidelines
 /es/docs/MDN/Contribute/Content/Content_blocks	/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /es/docs/MDN/Contribute/Feedback	/es/docs/MDN/Community
@@ -1229,7 +1230,8 @@
 /es/docs/MDN/Contribute/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto
 /es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /es/docs/MDN/Contribute/Markdown_in_MDN	/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
-/es/docs/MDN/Contribute/Procesos	/es/docs/MDN/Contribute/Processes
+/es/docs/MDN/Contribute/Procesos	/es/docs/conflicting/MDN/Community/Contributing
+/es/docs/MDN/Contribute/Processes	/es/docs/conflicting/MDN/Community/Contributing
 /es/docs/MDN/Contribute/Structures	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Contribute/Structures/Ejemplos_ejecutables	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /es/docs/MDN/Contribute/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
@@ -1258,6 +1260,7 @@
 /es/docs/MDN/Tools/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/MDN/Writing_guidelines/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto
+/es/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /es/docs/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN_en_diez	/es/docs/MDN/At_ten
 /es/docs/Manipular_video_por_medio_de_canvas	/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
@@ -1668,6 +1671,7 @@
 /es/docs/Web/API/GlobalEventHandlers/onwheel	/es/docs/conflicting/Web/API/Element/wheel_event
 /es/docs/Web/API/HTMLElement/animationend_event	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/API/HTMLElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
+/es/docs/Web/API/HTMLElement/input_event	/es/docs/Web/API/Element/input_event
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/HTMLElement/transitioncancel_event	/es/docs/Web/API/Element/transitioncancel_event
 /es/docs/Web/API/HTMLElement/transitionend_event	/es/docs/Web/API/Element/transitionend_event
@@ -1808,6 +1812,7 @@
 /es/docs/Web/CSS/:-moz-ui-invalid	/es/docs/Web/CSS/:user-invalid
 /es/docs/Web/CSS/:-webkit-autofill	/es/docs/Web/CSS/:autofill
 /es/docs/Web/CSS/::-webkit-file-upload-button	/es/docs/Web/CSS/::file-selector-button
+/es/docs/Web/CSS/::-webkit-outer-spin-button	/es/docs/conflicting/Web/CSS/::-webkit-inner-spin-button
 /es/docs/Web/CSS/:any	/es/docs/Web/CSS/:is
 /es/docs/Web/CSS/:not()	/es/docs/Web/CSS/:not
 /es/docs/Web/CSS/@media/altura	/es/docs/Web/CSS/@media/height
@@ -1862,6 +1867,7 @@
 /es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento	/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 /es/docs/Web/CSS/CSS_Properties_Reference	/es/docs/orphaned/Web/CSS/CSS_Properties_Reference
 /es/docs/Web/CSS/CSS_Reglas_Condicionales	/es/docs/Web/CSS/CSS_conditional_rules
+/es/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/es/docs/conflicting/Glossary/Flexbox
 /es/docs/Web/CSS/Child_selectors	/es/docs/Web/CSS/Child_combinator
 /es/docs/Web/CSS/Columnas_CSS	/es/docs/Web/CSS/CSS_multicol_layout
 /es/docs/Web/CSS/Comentarios	/es/docs/Web/CSS/Comments
@@ -1976,7 +1982,8 @@
 /es/docs/Web/Guide/HTML/Forms/Styling_HTML_forms	/es/docs/Learn/Forms/Styling_web_forms
 /es/docs/Web/Guide/HTML/Introduction_alhtml	/es/docs/Learn/HTML/Introduction_to_HTML
 /es/docs/Web/Guide/HTML/categorias_de_contenido	/es/docs/Web/HTML/Content_categories
-/es/docs/Web/Guide/Movil	/es/docs/Web/Guide/Mobile
+/es/docs/Web/Guide/Mobile	/es/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design
+/es/docs/Web/Guide/Movil	/es/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design
 /es/docs/Web/Guide/Parsing_and_serializing_XML	/es/docs/Web/XML/Parsing_and_serializing_XML
 /es/docs/Web/Guide/Performance	/es/docs/conflicting/Web/Performance
 /es/docs/Web/Guide/Performance/Usando_web_workers	/es/docs/Web/API/Web_Workers_API/Using_web_workers
