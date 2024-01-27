@@ -79,6 +79,6 @@ config({}); // { duration: 100, speed: 25 }
 ## Voir aussi
 
 - [L'opérateur de coalescence des nuls (`??`)](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [_Nullish_](/fr/docs/Glossary/Nullish)
-- [_Truthy_](/fr/docs/Glossary/Truthy)
-- [_Falsy_](/fr/docs/Glossary/Falsy)
+- [Valeur nulle (<i lang="en">nullish</i>)](/fr/docs/Glossary/Nullish)
+- [<i lang="en">Truthy</i>](/fr/docs/Glossary/Truthy)
+- [<i lang="en">Falsy</i>](/fr/docs/Glossary/Falsy)
