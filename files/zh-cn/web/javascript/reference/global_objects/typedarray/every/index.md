@@ -21,23 +21,23 @@ every(callbackFn, thisArg)
 ### 参数
 
 - `callback`
-  - : 用于测试类型化数组中每一个元素的函数。其应该返回[真值](/zh-CN/docs/Glossary/Truthy)来表示元素通过了测试，否则返回[假值](/zh-CN/docs/Glossary/Falsy)。函数会以下面的参数被调用：
+  - : 用于测试类型化数组中每一个元素的函数。其应该返回[真值](/zh-CN/docs/Glossary/Truthy)来表示元素通过了测试，否则返回[假值](/zh-CN/docs/Glossary/Falsy)。会使用以下参数调用该函数：
     - `element`
-      - : 类型化数组中要处理的当前元素。
+      - : 类型化数组中当前要处理的元素。
     - `index`
-      - : 要处理的当前元素在类型化数组中的下标
+      - : 当前要处理的元素在类型化数组中的下标。
     - `array`
-      - : 调用 `every()` 的类型类型化数组。
+      - : 调用 `every()` 的类型化数组。
 - `thisArg` {{optional_inline}}
   - : 该值会作为执行 `callbackFn` 时的 `this` 值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
-除非 `callbackFn` 对类型化数组中的某个元素返回了{{Glossary("falsy", "假")}} 值（在这种情况下，立即返回 `false`），否则返回 `true`。
+返回 `true`，除非 `callbackFn` 对类型化数组中的某个元素返回了{{Glossary("falsy", "假")}}值（在这种情况下，立即返回 `false`）。
 
 ## 描述
 
-参见 {{jsxref("Array.prototype.every()")}} 以了解详情。该方法不是通用，只能在类型化数组实例上调用。
+参见 {{jsxref("Array.prototype.every()")}} 以了解详情。该方法不是通用的，只能在类型化数组实例上调用。
 
 ## 示例
 
