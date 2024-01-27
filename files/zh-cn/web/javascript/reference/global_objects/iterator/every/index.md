@@ -26,7 +26,7 @@ every(callbackFn)
 
 ### 返回值
 
-如果 `callbackFn` 为所有元素都返回 {{Glossary("truthy")}} 则为 `true`，否则为 `false`。
+如果 `callbackFn` 为所有元素都返回{{Glossary("truthy", "真")}}值，则为 `true`，否则为 `false`。
 
 ## 描述
 
