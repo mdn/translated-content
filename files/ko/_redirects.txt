@@ -320,15 +320,17 @@
 /ko/docs/Learn/접근성/What_is_accessibility	/ko/docs/Learn/Accessibility/What_is_accessibility
 /ko/docs/Localization	/ko/docs/Glossary/Localization
 /ko/docs/MDN/About	/ko/docs/MDN/Writing_guidelines
+/ko/docs/MDN/Contribute	/ko/docs/conflicting/MDN/Community/Contributing
 /ko/docs/MDN/Contribute/Content/Best_practices	/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ko/docs/MDN/Contribute/Creating_and_editing_pages	/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ko/docs/MDN/Contribute/Does_this_belong	/ko/docs/MDN/Writing_guidelines/What_we_write
 /ko/docs/MDN/Contribute/Feedback	/ko/docs/MDN/Community
 /ko/docs/MDN/Contribute/Getting_started	/ko/docs/MDN/Community/Contributing/Getting_started
 /ko/docs/MDN/Contribute/Guidelines/Code_guidelines/Code_guidelines	/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-/ko/docs/MDN/Contribute/Howto	/ko/docs/MDN/Contribute
+/ko/docs/MDN/Contribute/Howto	/ko/docs/conflicting/MDN/Community/Contributing
 /ko/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ko/docs/MDN/Contribute/Howto/Report_a_problem	/ko/docs/MDN/Community/Issues
+/ko/docs/MDN/Contribute/Processes	/ko/docs/conflicting/MDN/Community/Contributing_6f769e24821efb7b69fc8d984aa30a77
 /ko/docs/MDN/Getting_started	/ko/docs/MDN/Community/Contributing/Getting_started
 /ko/docs/MDN/Guidelines/Best_practices	/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ko/docs/MDN/Guidelines/Code_guidelines/Code_guidelines	/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
@@ -448,6 +450,7 @@
 /ko/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ko/docs/Web/API/Element/contextmenu_event
 /ko/docs/Web/API/GlobalEventHandlers/ondblclick	/ko/docs/Web/API/Element/dblclick_event
 /ko/docs/Web/API/GlobalEventHandlers/onsubmit	/ko/docs/Web/API/HTMLFormElement/submit_event
+/ko/docs/Web/API/HTMLElement/input_event	/ko/docs/Web/API/Element/input_event
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/Media_Streams_API	/ko/docs/Web/API/Media_Capture_and_Streams_API
