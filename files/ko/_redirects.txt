@@ -654,7 +654,6 @@
 /ko/docs/Web/Guide/CSS	/ko/docs/Learn/CSS
 /ko/docs/Web/Guide/CSS/Media_queries	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /ko/docs/Web/Guide/CSS/Using_CSS_transitions	/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
-/ko/docs/Web/Guide/CSS/Visual_formatting_model	/ko/docs/Web/CSS/Visual_formatting_model
 /ko/docs/Web/Guide/DOM/Using_full_screen_mode	/ko/docs/Web/API/Fullscreen_API
 /ko/docs/Web/Guide/Graphics	/ko/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /ko/docs/Web/Guide/HTML	/ko/docs/Learn/HTML
