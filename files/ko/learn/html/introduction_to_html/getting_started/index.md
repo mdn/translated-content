@@ -1,6 +1,7 @@
 ---
 title: HTML 시작하기
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
