@@ -31,7 +31,7 @@ ARIA 定义了可以应用于元素的语义，这些语义分为**角色**（�
 
 ## 角色
 
-### 部件角色
+### 微件角色
 
 - [`button`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role)
 - [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
@@ -123,7 +123,7 @@ ARIA 定义了可以应用于元素的语义，这些语义分为**角色**（�
 
 ## 状态和属性
 
-### 部件属性
+### 微件属性
 
 - [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
 - [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
