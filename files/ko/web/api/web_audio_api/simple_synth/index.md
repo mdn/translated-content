@@ -480,7 +480,7 @@ function createKey(note, octave, freq) {
 
 ### 음악 만들기
 
-#### 음 재생하기
+#### 음색 재생하기
 
 `playTone()` 함수의 역할은 주어진 주파수의 음을 재생하는 것입니다. 이것은 적절한 음을 재생하는 키보드 건반의 이벤트 핸들러에 의해 사용될 것입니다.
 
@@ -510,7 +510,7 @@ function playTone(freq) {
 
 oscillator의 주파수는 {{domxref("Oscillator.frequency")}} {{domxref("AudioParam")}} 객체의 값을 설정함으로써 `freq` 파라미터에 명시된 값으로 설정됩니다. 그리고서, 마침내, oscillator는 상속된 {{domxref("AudioScheduledSourceNode.start()")}} 메서드를 호출하여 소리를 생성하도록 시작됩니다.
 
-#### 음을 연주하다
+#### 음 재생하기
 
 {{event("mousedown")}} 이나 {{domxref("mouseover")}} 이벤트가 건반에서 발생했을 때, 우리는 대응하는 음을 재생하기를 원합니다. `notePressed()` 함수는 이 이벤트들에 대한 이벤트 핸들러로 사용됩니다.
 
