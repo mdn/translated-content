@@ -169,6 +169,6 @@ Cuando desactives bordes (y cualquier otra propiedad que pueda tomar `0` o `none
 border: 0;
 ```
 
-## Ver también
+## Véase también
 
 [Índice de referencia de CSS](/es/docs/Web/CSS/Reference#index) - navega por nuestras páginas de referencia de propiedades CSS para ver algunos fragmentos de CSS buenos, concisos y significativos. Nuestros ejemplos interactivos en la sección "Pruébalo" suelen estar escritos siguiendo las pautas descritas en esta página.
