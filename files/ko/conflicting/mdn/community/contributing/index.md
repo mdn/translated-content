@@ -1,6 +1,7 @@
 ---
 title: MDN에 참여하기
-slug: MDN/Contribute
+slug: conflicting/MDN/Community/Contributing
+original_slug: MDN/Contribute
 ---
 
 {{MDNSidebar}}
