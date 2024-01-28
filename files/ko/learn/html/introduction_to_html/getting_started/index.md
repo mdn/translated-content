@@ -431,15 +431,15 @@ textarea.onkeyup = () => {
 이 글에서 모든 속성값은 큰 따옴표에 둘러싸여 있는 것을 볼 수 있습니다. 하지만 당신은 어떤 사람의 HTML에서 작은 따옴표를 볼 수 있을 것입니다. 이 것은 스타일의 문제로, 당신이 좋아하는 방법을 사용하면 됩니다. 아래 두 문장은 똑같이 동작합니다.
 
 ```html-nolint
-<a href="http://www.example.com">A link to my example.</a>
+<a href='https://www.example.com'>A link to my example.</a>
 
-<a href="http://www.example.com">A link to my example.</a>
+<a href="https://www.example.com">A link to my example.</a>
 ```
 
 주의해야할 점은 두 개를 섞어 쓰면 안된다는 것입니다. 다음은 잘못 사용한 예입니다.
 
 ```html-nolint example-bad
-<a href="http://www.example.com'>A link to my example.</a>
+<a href="https://www.example.com'>A link to my example.</a>
 ```
 
 만약 한 가지 따옴표를 사용했다면 다른 따옴표로 속성값을 둘러싸서 오류를 방지할 수 있습니다.
@@ -453,13 +453,13 @@ textarea.onkeyup = () => {
 하지만 만약 당신이 따옴표 안에 같은 따옴표를 사용하고 싶다면(작은 따옴표든 큰 따옴표든) 따옴표를 표시하기 위해서 [HTML entities](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_Including_special_characters_in_HTML)를 사용하세요. 예를 들어 이렇게 하면 잘못됩니다:
 
 ```html-nolint example-bad
-<a href='http://www.example.com' title='Isn't this fun?'>A link to my example.</a>
+<a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
 ```
 
 그래서 이렇게 바꿔주면 잘 작동합니다.
 
 ```html-nolint
-<a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
+<a href="https://www.example.com" title="An &quot;interesting&quot; reference">A link to my example.</a>
 ```
 
 ## HTML 문서의 구조
