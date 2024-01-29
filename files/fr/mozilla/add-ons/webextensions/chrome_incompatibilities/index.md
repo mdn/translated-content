@@ -101,7 +101,7 @@ Le reste de cette section décrit les problèmes de compatibilité qui ne sont p
 - Dans Firefox, les requêtes ne peuvent être redirigées que si l'URL originale utilise le schéma `http:` ou `https:`.
 - Dans Firefox, les évènements ne sont pas déclenchés pour les requêtes système (mise à jour d'extensions, suggestions dans la barre de recherche). À partir de Firefox 57, Firefox fait une exception pour les extensions qui doivent intercepter {{WebExtAPIRef("webRequest.onAuthRequired")}} afin d'autoriser le proxy. Pour plus d'informations, voir la page {{WebExtAPIRef("webRequest.onAuthRequired")}}.
 - Dans Firefox, si une extension souhaite rediriger une URL publique vers [une page d'extension](/fr/Add-ons/WebExtensions/user_interface/pages_web_incluses), le fichier `manifest.json` de l'extension doit contenir une clé [`web_accessible_resources`](/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui indique l'URL de la page de l'extension. On notera que n'importe quel site pourra alors lier ou rediriger vers cette URL et que les extensions doivent considérer n'importe quelle entrée (données provenant d'une requête POST par exemple) comme potentiellement dangereuse.
-- Dans Firefox, à partir de Firefox 52, certaines API `browser.webRequest.*` renvoient des promesses qui résolvent `webRequest.BlockingResponse` de façon asynchrone. Pour Chrome, seule `webRequest.onAuthRequired` prend en charge une gestion asynchrone de `webRequest.BlockingResponse` avec `'asyncBlocking'`.
+- Dans Firefox, à partir de Firefox 52, certaines API `browser.webRequest.*` renvoient des promesses qui résolvent `webRequest.BlockingResponse` de façon asynchrone. Pour Chrome, seule `webRequest.onAuthRequired` prend en charge une gestion asynchrone de `webRequest.BlockgResponse` avec `'asyncBlockg'`.
 
 #### windows
 
@@ -111,7 +111,7 @@ Le reste de cette section décrit les problèmes de compatibilité qui ne sont p
 
 #### declarativeContent
 
-l'API `declarativeContent` de Chrome [n'a pas encore été implémentée](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864) in Firefox.
+l'API `declarativeContent` de Chrome [n'a pas encore été implémentée](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864) dans Firefox.
 
 Firefox [ne supportera pas](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) l'API `declarativeContent.RequestContentScript`, qui est rarement utilisée et n'est pas disponible dans les versions stables de Chrome.
 
