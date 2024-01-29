@@ -80,7 +80,7 @@ fetch(myRequest)
   });
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -88,7 +88,7 @@ fetch(myRequest)
 
 {{Compat}}
 
-## 더보기
+## 같이 보기
 
 - [Polyfill of `Promise.prototype.finally` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{jsxref("Promise")}}
