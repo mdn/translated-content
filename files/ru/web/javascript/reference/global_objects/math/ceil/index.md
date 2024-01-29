@@ -3,7 +3,7 @@ title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

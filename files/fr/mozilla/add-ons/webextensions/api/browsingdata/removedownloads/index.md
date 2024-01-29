@@ -3,7 +3,7 @@ title: browsingData.removeDownloads()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface l'historique de téléchargement du navigateur. Notez que cela ne supprime pas les objets téléchargés eux-mêmes, seulement les enregistrements de téléchargements dans l'historique du navigateur.
 

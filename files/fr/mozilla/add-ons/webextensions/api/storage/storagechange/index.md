@@ -3,7 +3,7 @@ title: storage.StorageChange
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 ---
 
-{{AddonSidebar()}}`StorageChange` est un objet représentant une modification d'une zone de stockage.
+{{AddonSidebar}}`StorageChange` est un objet représentant une modification d'une zone de stockage.
 
 ## Type
 

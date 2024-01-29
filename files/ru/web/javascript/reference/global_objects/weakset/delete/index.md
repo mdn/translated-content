@@ -3,7 +3,7 @@ title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
 
-{{JSRef("Global_Objects", "WeakSet")}}
+{{JSRef}}
 
 Метод **`delete()`** удаляет указанный элемент из объекта `WeakSet`.
 

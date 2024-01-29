@@ -3,7 +3,7 @@ title: tabs.saveAsPDF()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Enregistre la page en cours en tant que fichier PDF. Cela ouvrira une boîte de dialogue, fournie par le système d'exploitation sous-jacent, demandant à l'utilisateur où il veut enregistrer le fichier PDF.
 
