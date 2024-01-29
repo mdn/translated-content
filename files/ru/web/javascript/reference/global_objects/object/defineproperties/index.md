@@ -3,7 +3,7 @@ title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Сводка
 

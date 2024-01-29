@@ -3,7 +3,7 @@ title: browserAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient le document HTML défini comme la popup pour cette action du navigateur.
 

@@ -7,7 +7,7 @@ slug: Web/API/HTMLTableRowElement/rowIndex
 
 只读属性 **`HTMLTableRowElement.rowIndex`** 用于表示元素所在行相对于整个 {{HtmlElement("table")}} 的逻辑位置。
 
-即使 {{HtmlElement("thead")}}、{{HtmlElement("tbody")}} 和 {{HtmlElement("tfoot")}}} 元素在 HTML 中乱序排列，浏览器也会以正确的顺序渲染表格。因此，行号的标记顺序为：从 `<thead>` 到 `<tbody>`，再到 `<tfoot>`。
+即使 {{HtmlElement("thead")}}、{{HtmlElement("tbody")}} 和 {{HtmlElement("tfoot")}} 元素在 HTML 中乱序排列，浏览器也会以正确的顺序渲染表格。因此，行号的标记顺序为：从 `<thead>` 到 `<tbody>`，再到 `<tfoot>`。
 
 ## 语法
 

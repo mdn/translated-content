@@ -3721,24 +3721,6 @@
     "modified": "2020-08-12T13:57:26.219Z",
     "contributors": ["mfuji09"]
   },
-  "MDN/Contribute": {
-    "modified": "2019-01-16T18:55:44.803Z",
-    "contributors": [
-      "wbamberg",
-      "Uemmra3",
-      "Marsf",
-      "akiomik",
-      "mamodayo",
-      "x2357",
-      "Fajrovulpo",
-      "koheishingai",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Processes": {
-    "modified": "2020-07-22T12:19:59.681Z",
-    "contributors": ["wbamberg", "hamasaki", "jswisher"]
-  },
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-08-06T03:36:58.834Z",
     "contributors": ["mfuji09", "silverskyvicto", "wbamberg"]
@@ -9912,6 +9894,10 @@
   "Web/API/History_API/Working_with_the_History_API": {
     "modified": "2020-05-28T00:42:35.014Z",
     "contributors": ["nokazn", "mfuji09", "woodmix"]
+  },
+  "Web/API/Houdini_APIs": {
+    "modified": "2020-07-24T06:19:03.585Z",
+    "contributors": ["Wind1808"]
   },
   "Web/API/IDBCursor": {
     "modified": "2020-10-15T21:47:15.462Z",
@@ -16398,10 +16384,6 @@
     "modified": "2019-12-09T15:33:55.799Z",
     "contributors": ["mfuji09", "harupiyo", "dynamis", "reppets"]
   },
-  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
-    "modified": "2020-08-14T09:23:43.070Z",
-    "contributors": ["mfuji09", "Uemmra3", "sutara79"]
-  },
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-08-14T10:39:21.091Z",
     "contributors": [
@@ -20290,10 +20272,6 @@
   "Web/Guide/CSS/Getting_started/Challenge_solutions": {
     "modified": "2019-03-23T23:30:43.615Z",
     "contributors": ["teoli", "ethertank"]
-  },
-  "Web/Guide/Houdini": {
-    "modified": "2020-07-24T06:19:03.585Z",
-    "contributors": ["Wind1808"]
   },
   "Web/HTML": {
     "modified": "2020-12-14T11:33:50.265Z",
@@ -30134,6 +30112,24 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
+  "conflicting/MDN/Community/Contributing_14a592aa7cec3d76321bac7830dc4690": {
+    "modified": "2019-01-16T18:55:44.803Z",
+    "contributors": [
+      "wbamberg",
+      "Uemmra3",
+      "Marsf",
+      "akiomik",
+      "mamodayo",
+      "x2357",
+      "Fajrovulpo",
+      "koheishingai",
+      "Mars"
+    ]
+  },
+  "conflicting/MDN/Community/Contributing_6f769e24821efb7b69fc8d984aa30a77": {
+    "modified": "2020-07-22T12:19:59.681Z",
+    "contributors": ["wbamberg", "hamasaki", "jswisher"]
+  },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",
     "contributors": ["mfuji09", "silverskyvicto"]
@@ -30190,25 +30186,9 @@
     "modified": "2020-10-15T22:05:58.801Z",
     "contributors": ["yumemi-kuwahara"]
   },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-03-23T23:28:42.286Z",
-    "contributors": ["yyss", "teoli"]
-  },
   "conflicting/Web/Accessibility/ARIA/Roles/alert_role": {
     "modified": "2019-03-18T21:24:32.583Z",
     "contributors": ["8845musign"]
-  },
-  "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
-    "modified": "2019-03-23T23:28:50.521Z",
-    "contributors": ["yyss", "teoli"]
-  },
-  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
-    "modified": "2019-03-23T23:28:35.294Z",
-    "contributors": ["yyss", "teoli"]
-  },
-  "conflicting/Web/CSS/:focus-visible": {
-    "modified": "2020-12-01T13:53:58.637Z",
-    "contributors": ["mfuji09", "teoli"]
   },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
@@ -30312,10 +30292,6 @@
   "orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
     "modified": "2019-03-18T21:20:29.728Z",
     "contributors": ["mfuji09"]
-  },
-  "orphaned/Web/CSS/CSS_Properties_Reference": {
-    "modified": "2019-03-18T21:41:37.652Z",
-    "contributors": ["mfuji09", "Uemmra3"]
   },
   "orphaned/Web/Compatibility_FAQ": {
     "modified": "2019-03-23T23:03:33.809Z",

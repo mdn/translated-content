@@ -3,7 +3,7 @@ title: browserAction.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ## 型
 

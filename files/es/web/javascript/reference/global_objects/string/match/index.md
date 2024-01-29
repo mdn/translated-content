@@ -3,7 +3,7 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 
-{{JSRef('Objetos_globales', 'String')}}
+{{JSRef}}
 
 El método **`match()`** devuelve todas las ocurrencias de una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_Expressions) dentro de una _cadena_.
 

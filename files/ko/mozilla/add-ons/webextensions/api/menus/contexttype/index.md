@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2c5465eab20015868a1eeca59c5623d37b105f7c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 메뉴 항목이 표시될 수 있는 컨텍스트들입니다.
 
