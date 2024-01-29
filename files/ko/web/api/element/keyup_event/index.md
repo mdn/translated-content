@@ -22,7 +22,7 @@ eventTarget.addEventListener("keyup", (event) => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
-  // 무언가를합니다
+  // 무언가를 합니다
 });
 ```
 
@@ -38,12 +38,12 @@ eventTarget.addEventListener("keyup", (event) => {
 ```
 
 ```js
-const log = document.getElementById ( 'log');
+const log = document.getElementById('log');
 
-document.addEventListener ( 'keyup', logKey);
+document.addEventListener('keyup', logKey);
 
-function logKey (e) {
-  log.textContent + =`$ {e.code}`;
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
 }
 ```
 
