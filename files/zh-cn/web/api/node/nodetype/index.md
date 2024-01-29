@@ -26,7 +26,7 @@ var type = node.nodeType;
 | 常量                               | 值   | 描述                                                                                             |
 | ---------------------------------- | ---- | ------------------------------------------------------------------------------------------------ |
 | `Node.ELEMENT_NODE`                | `1`  | 一个 {{domxref("Element", "元素")}} 节点，例如 {{HTMLElement("p")}} 和 {{HTMLElement("div")}}。  |
-| `Node.ATTRIBUTE_NODE`              | 2    | {{domxref("Element","元素")}} 的耦合 {{domxref("Attr", "属性")}}。                               |
+| `Node.ATTRIBUTE_NODE`              | `2`  | {{domxref("Element","元素")}} 的耦合 {{domxref("Attr", "属性")}}。                               |
 | `Node.TEXT_NODE`                   | `3`  | {{domxref("Element")}} 或者 {{domxref("Attr")}} 中实际的 {{domxref("Text", "文字")}}             |
 | `Node.CDATA_SECTION_NODE`          | `4`  | 一个 {{domxref("CDATASection")}}，例如 `<!CDATA[[ … ]]>`。                                       |
 | `Node.PROCESSING_INSTRUCTION_NODE` | `7`  | 一个用于 XML 文档的 {{domxref("ProcessingInstruction")}} ，例如 `<?xml-stylesheet ... ?>` 声明。 |
