@@ -21,7 +21,7 @@ clearAppBadge()
 
 ### 返回值
 
-一个兑现 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
+一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
 
 ### 异常
 
