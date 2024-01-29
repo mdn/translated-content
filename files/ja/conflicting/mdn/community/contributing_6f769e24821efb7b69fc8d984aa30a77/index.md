@@ -1,6 +1,7 @@
 ---
 title: 文書作成のプロセス
-slug: MDN/Contribute/Processes
+slug: conflicting/MDN/Community/Contributing_6f769e24821efb7b69fc8d984aa30a77
+original_slug: MDN/Contribute/Processes
 ---
 
 {{MDNSidebar}}

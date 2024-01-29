@@ -1,8 +1,7 @@
 ---
 title: MDN への協力
-slug: MDN/Contribute
-l10n:
-  sourceCommit: b8f5e2a73b0a410fe5508fc674f1ad463deeffb1
+slug: conflicting/MDN/Community/Contributing_14a592aa7cec3d76321bac7830dc4690
+original_slug: MDN/Contribute
 ---
 
 {{MDNSidebar}}

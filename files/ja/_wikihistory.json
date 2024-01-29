@@ -3721,24 +3721,6 @@
     "modified": "2020-08-12T13:57:26.219Z",
     "contributors": ["mfuji09"]
   },
-  "MDN/Contribute": {
-    "modified": "2019-01-16T18:55:44.803Z",
-    "contributors": [
-      "wbamberg",
-      "Uemmra3",
-      "Marsf",
-      "akiomik",
-      "mamodayo",
-      "x2357",
-      "Fajrovulpo",
-      "koheishingai",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Processes": {
-    "modified": "2020-07-22T12:19:59.681Z",
-    "contributors": ["wbamberg", "hamasaki", "jswisher"]
-  },
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-08-06T03:36:58.834Z",
     "contributors": ["mfuji09", "silverskyvicto", "wbamberg"]
@@ -30129,6 +30111,24 @@
   "WebAssembly/existing_C_to_Wasm": {
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
+  },
+  "conflicting/MDN/Community/Contributing_14a592aa7cec3d76321bac7830dc4690": {
+    "modified": "2019-01-16T18:55:44.803Z",
+    "contributors": [
+      "wbamberg",
+      "Uemmra3",
+      "Marsf",
+      "akiomik",
+      "mamodayo",
+      "x2357",
+      "Fajrovulpo",
+      "koheishingai",
+      "Mars"
+    ]
+  },
+  "conflicting/MDN/Community/Contributing_6f769e24821efb7b69fc8d984aa30a77": {
+    "modified": "2020-07-22T12:19:59.681Z",
+    "contributors": ["wbamberg", "hamasaki", "jswisher"]
   },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",
