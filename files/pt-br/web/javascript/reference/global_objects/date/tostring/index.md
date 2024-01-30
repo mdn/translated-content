@@ -78,7 +78,7 @@ var myVar = x.toString(); // atribui uma string em myVar no mesmo formato que es
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toString")}}
+{{Compat}}
 
 ## Veja também
 

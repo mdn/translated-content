@@ -3,7 +3,7 @@ title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 ## Resumen
 

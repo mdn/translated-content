@@ -9,8 +9,9 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 当规定 SVG 时，在浏览器支持 web 字体并不流行。因为访问正确的字体文件对于正确呈现字体是有确定性的，SVG 中添加了一个字体描述技术，以提供这个能力。它并不是为了和别的格式比如说 PostScript 或 OTF 兼容，而是为了将字形信息嵌入 SVG 呈现的一个简单的方法。
 
-> **备注：** **SVG 字体当前只在 Safari 和 Android 浏览器中受支持。**
-> Chrome 38（和 Opera25）[移除了这个功能](https://www.chromestatus.com/feature/5930075908210688)，Firefox 已经[无限期推迟实施它](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)以专心实现 [WOFF](/zh-CN/docs/Web/Guide/WOFF)。别的工具，如 Batik 和部分 Inkscape 支持 SVG 字体嵌入。
+> **备注：** SVG 字体当前只在 Safari 和 Android 浏览器中受支持。
+>
+> Chrome 38（和 Opera25）[移除了这个功能](https://www.chromestatus.com/feature/5930075908210688)，Firefox 已经[无限期推迟实施它](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)以专注于实现 [WOFF](/zh-CN/docs/Web/CSS/CSS_fonts/WOFF)。别的工具，如 Batik 和部分 Inkscape 支持 SVG 字体嵌入。
 
 定义一个 SVG 字体的基础是 {{ SVGElement("font") }} 元素。
 

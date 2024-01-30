@@ -13,6 +13,7 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 - `true` 或*空字符串*，表示元素是可编辑的。
 - `false` 表示元素不是可编辑的。
+- `plaintext-only` 表示元素的原始文本是可编辑的，但富文本格式会被禁用。
 
 如果没有设置该属性的值（例如：`<label contenteditable>Example Label</label>`），则其值被视为空字符串。
 
@@ -32,8 +33,7 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 ## 参见
 
-- [使内容可编辑](/zh-CN/docs/Web/Guide/HTML/Editable_content)
 - 所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} 和 {{domxref("HTMLElement.isContentEditable")}}
 - CSS {{cssxref("caret-color")}} 属性
-- [HTMLElement `input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)
+- [Element `input` 事件](/zh-CN/docs/Web/API/Element/input_event)

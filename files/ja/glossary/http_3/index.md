@@ -3,6 +3,8 @@ title: HTTP/3
 slug: Glossary/HTTP_3
 ---
 
+{{GlossarySidebar}}
+
 **HTTP/3** は {{glossary("HTTP 2", "HTTP/2")}} に続く [HTTP ネットワークプロトコル](/ja/docs/Web/HTTP/Basics_of_HTTP) の今後のメジャーリビジョンです。 HTTP/3 の主なポイントは {{glossary("TCP")}} の代わりに QUIC という新しい {{glossary("UDP")}} プロトコルを使用することです。
 
 1. 一般知識

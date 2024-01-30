@@ -40,7 +40,7 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toJSON")}}
+{{Compat}}
 
 ## Veja também
 

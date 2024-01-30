@@ -46,7 +46,7 @@ slug: Web/SVG/Attribute/writing-mode
 
 ## ブラウザーの互換性
 
-{{Compat("svg.attributes.presentation.writing-mode")}}
+{{Compat}}
 
 ## 関連情報
 

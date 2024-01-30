@@ -3,7 +3,7 @@ title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 1 つ以上のアイテムをストレージ領域に保存または上書きします。
 
@@ -21,7 +21,7 @@ let settingItem = browser.storage.<storageType>.set(
 
 `<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) の書き込み可能なストレージタイプです。
 
-### Parameters
+### 引数
 
 - `keys`
 
@@ -37,7 +37,7 @@ let settingItem = browser.storage.<storageType>.set(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageArea.set")}}
+{{Compat}}
 
 ## 例
 

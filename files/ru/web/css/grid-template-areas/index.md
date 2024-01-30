@@ -14,7 +14,7 @@ CSS-свойство **`grid-template-areas`** создаёт {{glossary("grid a
 ## Синтаксис
 
 ```css
-/* Ключевое слово в качестве значения */
+/* Ключевые слова */
 grid-template-areas: none;
 
 /* Строка (<string>) в качестве значения */
@@ -104,7 +104,7 @@ grid-template-areas: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

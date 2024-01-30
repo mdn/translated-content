@@ -110,7 +110,7 @@ Devido a esses problemas, geralmente não é aconselhável usar o `accesskey`s p
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.accesskey")}}
+{{Compat}}
 
 ## Veja também
 

@@ -29,13 +29,6 @@ Quando ocorre um [colapso de margens](/pt-BR/docs/Web/CSS/margin_collapsing), a 
 
 Finalmente, note que, para elementos não substituídos inline, o total de espaço ocupado (para a altura da linha) é determinado pela propriedade {{ cssxref('line-height') }}, mesmo que a borda e o padding aparecerem visualmente em torno do conteúdo.
 
-## Especificação
-
-| Especificação                                     | Status                | Comentário                                                        |
-| ------------------------------------------------- | --------------------- | ----------------------------------------------------------------- |
-| {{ SpecName("CSS2.1","box.html#box-dimensions")}} | {{ Spec2('CSS2.1') }} | Embora mais precisamente formulada, não existem mudanças práticas |
-| {{ SpecName("CSS1","#formatting-model")}}         | {{ Spec2('CSS1') }}   |                                                                   |
-
 ## Veja também
 
 - [Referência CSS](/pt-BR/docs/Web/CSS/CSS_Reference)

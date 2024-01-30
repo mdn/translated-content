@@ -138,7 +138,8 @@ if (!mycar instanceof Car)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [typeof](/zh-CN/docs/JavaScript/Reference/Operators/typeof)
 - {{jsxref("Symbol.hasInstance")}}
+- {{jsxref("Object.prototype.isPrototypeOf")}}

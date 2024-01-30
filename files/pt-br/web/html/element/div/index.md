@@ -40,7 +40,7 @@ Qualquer tipo de conteúdo aqui. Como \<p>, \<table>. Você dá o nome!
 
 ## Compatibilidade dos navegadores
 
-{{Compat("html.elements.div")}}
+{{Compat}}
 
 ## Veja também
 

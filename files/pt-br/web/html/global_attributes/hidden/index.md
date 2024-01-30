@@ -25,7 +25,7 @@ Similarmente, um elemento canvas com atributo `hidden` poderia ser usado como bu
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## Veja também
 

@@ -157,7 +157,7 @@ gl.uniformMatrix4fv(
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-[查看完整的源码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [在新标签页中查看演示](https://mdn.github.io/webgl-examples/webgl-examples/tutorial/sample7/)
+[查看完整的源码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [在新标签页中查看演示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## 读者练习
 

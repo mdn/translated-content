@@ -1,32 +1,27 @@
 ---
-title: I18N(国際化対応)
+title: Internationalization (i18n) （国際化対応）
 slug: Glossary/Internationalization
-original_slug: Glossary/I18N
+l10n:
+  sourceCommit: 5f5daffff583dffcf4650a8812bc228807a1b34d
 ---
 
-i18n("internationalization"という 20 文字の単語より)(国際化対応)は、製品やサービスをどんなターゲット文化にも容易に適応させるベストプラクティスです。
+{{GlossarySidebar}}
 
-> **Internationalization(国際化対応)**とは、文化、地域、言語によって異なるターゲットオーディエンスに合わせて容易にローカライズできる製品、アプリケーション、または文書内容の設計と開発のことです。({{Glossary("W3C")}}の定義)
+**国際化対応** (Internationalization) は "i18n" と略されることもあり、さまざまな地域、言語、文化が異なるターゲットオーディエンスに簡単に適応できるようにシステムを設計することです。
 
-なかでも、i18n では次に挙げるものについて、複数のサポートが必要です。
+システムを特定のターゲット層に適合させる補完的なプロセスを{{glossary("Localization", "ローカライズ")}}と呼びます。
 
-- 文字セット(通常は[Unicode](http://searchcio-midmarket.techtarget.com/definition/Unicode))
-- 測定単位(通貨、°C/°F, km/マイル、など)
+特に国際化とは、国際的な文化や習慣に関する次のような違いに適応することです。
+
+- 書記体系
+- 測定単位（通貨、°C/°F, km/マイル、など）
 - 日時フォーマット
 - キーボードレイアウト
-- テキストの方向
 
-## 詳細情報
+[Unicode コンソーシアム](https://home.unicode.org/)の活動は、国際化の基本的な部分です。 Unicode は、世界の書記体系の多様性だけでなく、通貨や時間/日付フォーマットのような文化的な多様性にも対応しています。
 
-### 一般知識
+## 関連情報
 
-- Wikipedia 上の記事：[国際化と地域化](https://ja.wikipedia.org/wiki/国際化と地域化)
-
-### 技術リファレンス
-
-- [W3C での国際化対応](http://www.w3.org/International/questions/qa-i18n.en#Internationalization)
-- [gala-global.org での国際化対応](http://www.gala-global.org/what-internationalization)
-
-### これについて学習する
-
-- [i18nguy.com での i18n 資料](http://www.i18nguy.com/)
+- {{glossary("Localization", "地域化")}}
+- [Unicode コンソーシアム](https://home.unicode.org/)
+- [JavaScript 国際化対応 API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl)

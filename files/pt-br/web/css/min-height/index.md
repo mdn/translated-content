@@ -62,7 +62,7 @@ form {
 
 ## Navegadores compatíveis
 
-{{Compat("css.properties.min-height")}}
+{{Compat}}
 
 ## Ver também
 

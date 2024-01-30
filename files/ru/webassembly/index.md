@@ -68,7 +68,7 @@ WebAssembly разработан для дополнения JavaScript – ис
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Смотрите также
 

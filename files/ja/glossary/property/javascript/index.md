@@ -3,6 +3,8 @@ title: Property (プロパティ) (JavaScript)
 slug: Glossary/Property/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 **JavaScript プロパティ**は、多くの場合データ構造と関連付けられた属性を記述する、オブジェクトの特性です。
 
 プロパティは 2 種類あります。

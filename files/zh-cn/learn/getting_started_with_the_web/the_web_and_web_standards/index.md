@@ -17,7 +17,7 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 快进到 1989 年，TimBL 在 CERN 撰写了 [《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html) 和《HyperText》 ；这两个出版物共同为 Web 将如何工作做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
 
-到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/zh-CN/docs/Web/HTTP)，[HTML](/zh-CN/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
+到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西——[HTTP](/zh-CN/docs/Web/HTTP)、[HTML](/zh-CN/docs/Web/HTML)、名为 [WorldWideWeb](https://zh.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器、一个 HTTP 服务器和一些用于查看的网页。
 
 在随后的几年中，随着多个浏览器的发布，数以千计 Web 服务器的建立，上百万网页的生成，Web 爆发式发展。OK，这只是对事件非常粗略的描述，但我向你说过会简单叙述。
 
@@ -70,7 +70,7 @@ _唯一不变的就是变化。_
 ```plain
 "你好 Web 服务器。你可以给我用于渲染 bbc.co.uk 的文件吗？"
 
-"当然啦 Web 浏览器 —— 给你"
+"当然啦 Web 浏览器——给你"
 
 [下载文件并渲染 Web 页面]
 ```

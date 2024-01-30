@@ -93,4 +93,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.optional_permissions")}}
+{{Compat}}

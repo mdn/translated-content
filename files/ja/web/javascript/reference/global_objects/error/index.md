@@ -181,7 +181,7 @@ try {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Error")}}
+{{Compat}}
 
 ## 関連情報
 

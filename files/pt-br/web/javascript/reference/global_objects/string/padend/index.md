@@ -67,7 +67,7 @@ if (!String.prototype.padEnd) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.padEnd")}}
+{{Compat}}
 
 ## Veja também
 

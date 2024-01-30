@@ -145,7 +145,7 @@ IIS から `Public-Key-Pins` ヘッダーを送信するには、以下のよう
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Public-Key-Pins")}}
+{{Compat}}
 
 ## 関連情報
 

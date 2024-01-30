@@ -3,7 +3,7 @@ title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 {{WebExtAPIRef("downloads")}} API の **`download()`** 関数では URL とそのほかのオプションの設定を行うことでファイルのダウンロードをすることができます。
 
@@ -53,7 +53,7 @@ var downloading = browser.downloads.download(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.downloads.download")}}
+{{Compat}}
 
 ## 例
 

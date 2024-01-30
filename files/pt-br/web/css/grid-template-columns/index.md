@@ -115,7 +115,7 @@ grid-template-columns: unset;
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## Leia Mais
 

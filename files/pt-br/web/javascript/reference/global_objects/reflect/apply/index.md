@@ -64,7 +64,7 @@ Reflect.apply("".charAt, "ponies", [3]);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect.apply")}}
+{{Compat}}
 
 ## Veja também
 

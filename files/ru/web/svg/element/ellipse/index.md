@@ -9,6 +9,8 @@ slug: Web/SVG/Element/ellipse
 
 > **Примечание:** Сам по себе элемент `ellipse` не позволяет задать точное его расположение (например, нельзя сразу отобразить эллипс, повёрнутый на 45**°**), однако его можно повернуть с помощью атрибута {{SVGAttr("transform")}}.
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -23,7 +25,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('LiveSample', 100, '100%')}}
+{{EmbedLiveSample("Пример", 100, '100%')}}
 
 ## Атрибуты
 
@@ -49,7 +51,7 @@ svg {
 
 ### Глобальные Атрибуты
 
-- [Основные атрибуты](/docs/Web/SVG/Attribute/Core)
+- [Основные атрибуты](/ru/docs/Web/SVG/Attribute/Core)
   - : Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Атрибуты стиля](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
@@ -66,10 +68,6 @@ svg {
 
 {{svginfo}}
 
-## Пример
-
-» [ellipse.svg](/files/3253/ellipse.svg)
-
 ## Интерфейс DOM
 
 Этот элемент реализует интерфейс {{ domxref("SVGEllipseElement") }}.
@@ -78,7 +76,7 @@ svg {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

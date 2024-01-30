@@ -175,7 +175,7 @@ A' | 0 0 0 1 0 |
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.feColorMatrix")}}
+{{Compat}}
 
 ## 関連情報
 

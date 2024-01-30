@@ -50,4 +50,4 @@ padding-left: inherit
 
 ## Compatibilidade do Navegador
 
-{{Compat("css.properties.padding-left")}}
+{{Compat}}

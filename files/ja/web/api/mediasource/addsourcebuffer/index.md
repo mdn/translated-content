@@ -76,7 +76,7 @@ function sourceOpen(_) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.addSourceBuffer")}}
+{{Compat}}
 
 ## 関連情報
 

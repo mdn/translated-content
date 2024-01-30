@@ -252,7 +252,7 @@ function sendMessage() {
 }
 ```
 
-首先，待发送的消息文本从文本输入框的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。都搞定了！余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。
+首先，待发送的消息文本从文本输入框的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。都搞定了！余下的只是些用户体验糖——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。
 
 ### 接收消息
 

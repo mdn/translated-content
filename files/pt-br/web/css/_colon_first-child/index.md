@@ -73,4 +73,4 @@ li:first-child {
 
 ## Browsers compatíveis
 
-{{Compat("css.selectors.first-child")}}
+{{Compat}}

@@ -25,7 +25,7 @@ HyperText Transfer Protocol (HTTP) の **`302 Found`** リダイレクトステ�
 
 ## ブラウザーの互換性
 
-{{Compat("http.status.302")}}
+{{Compat}}
 
 ## 関連情報
 

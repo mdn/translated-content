@@ -74,7 +74,7 @@ Reflect.has(c, "foo"); // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.has")}}
+{{Compat}}
 
 ## 関連情報
 

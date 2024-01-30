@@ -39,10 +39,10 @@ O elemento implementa a interface [HTMLOutputElement](/pt-BR/DOM/HTMLOutputEleme
 
 ## Compatibilidade
 
-{{Compat("html.elements.output")}}
+{{Compat}}
 
 ## Veja também
 
-Outros elementos relacionados ao form: {{ HTMLElement("form") }}, {{ HTMLElement("input") }}, {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("label") }}, {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("progress") }} and {{ HTMLElement("meter") }}.
+Outros elementos relacionados ao form: {{ HTMLElement("form") }}, {{ HTMLElement("input") }}, {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("label") }}, {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("progress") }} and {{ HTMLElement("meter") }}.
 
 {{ HTMLSidebar }}

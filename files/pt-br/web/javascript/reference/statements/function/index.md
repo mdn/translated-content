@@ -76,7 +76,7 @@ function calc_sales(units_a, units_b, units_c) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.function")}}
+{{Compat}}
 
 ## Veja também
 

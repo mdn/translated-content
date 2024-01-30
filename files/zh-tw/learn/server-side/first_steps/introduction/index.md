@@ -30,7 +30,7 @@ slug: Learn/Server-side/First_steps/Introduction
 
 ## 何謂伺服器端網站程式開發？
 
-網頁瀏覽器使用超文本傳輸協定（**H**yper**T**ext **T**ransfer **P**rotocol, {{glossary("HTTP")}}）與網頁伺服器（[web servers](/zh-TW/docs/Learn/Common_questions/What_is_a_web_server)）溝通。當您點選網頁上的連結、送出表單，或者執行搜尋，一段 **HTTP 請求**（**request**）會由您的瀏覽器送至目標伺服器。
+網頁瀏覽器使用超文本傳輸協定（**H**yper**T**ext **T**ransfer **P**rotocol, {{glossary("HTTP")}}）與網頁伺服器（[web servers](/zh-TW/docs/Learn/Common_questions/What_is_a_web_server)）溝通。當你點選網頁上的連結、送出表單，或者執行搜尋，一段 **HTTP 請求**（**request**）會由你的瀏覽器送至目標伺服器。
 
 該請求（request）包含一個用來指定受影響資源的 URL、一個定義行為的請求方法（例如對資源進行 get、delete 或 post）與當進行[HTTP POST 方法](/zh-TW/docs/Web/HTTP/Methods/POST)時可能包含編碼於 URL 參數中的額外資訊（經由一段[查詢字串](https://en.wikipedia.org/wiki/Query_string)送出的各個鍵值對），或是在關聯的{{glossary("Cookie", "cookies")}}中。
 
@@ -94,7 +94,7 @@ slug: Learn/Server-side/First_steps/Introduction
 
 銀行使用伺服端程式設計來儲存帳號資訊，並讓已授權用戶檢視與進行交易。其他服務如 Facebook、Twitter、Instagram 與 Wikipedia 使用伺服端程式設計來突顯、分享與控制使用者存取到感興趣的內容。
 
-一些常見的伺服端程式設計使用案例與效益列舉如下。您將會注意到這當中會有些重疊的部分！
+一些常見的伺服端程式設計使用案例與效益列舉如下。你將會注意到這當中會有些重疊的部分！
 
 ### 高效率資訊儲存與遞送
 

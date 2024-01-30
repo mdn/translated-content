@@ -82,7 +82,7 @@ Note que o escope bloqueado de `const c = 2` _não invoca uma_ `SyntaxError: Ide
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.block")}}
+{{Compat}}
 
 ## Veja também
 

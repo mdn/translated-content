@@ -64,7 +64,7 @@ If-None-Match: *
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.If-None-Match")}}
+{{Compat}}
 
 ## Veja também
 

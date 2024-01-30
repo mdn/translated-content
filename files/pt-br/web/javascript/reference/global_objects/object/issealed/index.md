@@ -98,7 +98,7 @@ Object.isSealed(1);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.isSealed")}}
+{{Compat}}
 
 ## Veja também
 

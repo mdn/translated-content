@@ -59,7 +59,7 @@ Reflect.setPrototypeOf(target, proto); // false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.setPrototypeOf")}}
+{{Compat}}
 
 ## 関連情報
 

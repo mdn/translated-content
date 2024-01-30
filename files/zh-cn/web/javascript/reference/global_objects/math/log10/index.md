@@ -3,7 +3,7 @@ title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -44,6 +44,11 @@ Math.log10("foo"); // NaN
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Global_Objects/Math", "Math")}} 对象。
+- [`core-js` 中 `Math.log10` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

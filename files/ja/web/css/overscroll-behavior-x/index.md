@@ -68,7 +68,7 @@ main > div {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.overscroll-behavior-x")}}
+{{Compat}}
 
 ## 関連情報
 

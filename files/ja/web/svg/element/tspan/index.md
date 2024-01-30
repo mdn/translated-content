@@ -86,4 +86,4 @@ svg {
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.tspan")}}
+{{Compat}}

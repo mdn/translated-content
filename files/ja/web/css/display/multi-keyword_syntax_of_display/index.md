@@ -17,7 +17,7 @@ h1 {
 }
 ```
 
-最近では、[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)が追加されました。これらにアクセスするためには、 `display` プロパティの値、つまり `display: grid` と `display: flex` も使用します。 `display` の値が変更されて初めて、子プロパティはフレックスやグリッドのアイテムとなり、グリッドやフレックスボックスの仕様にある他のプロパティに反応するようになります。要素の `display` の値を変更すると、その直接の子要素の整形コンテキストが変更されます。
+最近では、[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)が追加されました。これらにアクセスするためには、 `display` プロパティの値、つまり `display: grid` と `display: flex` も使用します。 `display` の値が変更されて初めて、子プロパティはフレックスやグリッドのアイテムとなり、グリッドやフレックスボックスの仕様にある他のプロパティに反応するようになります。要素の `display` の値を変更すると、その直接の子要素の整形コンテキストが変更されます。
 
 しかし、グリッドとフレックスボックスが示すのは、要素には**外部**と**内部**の両方の表示型があるということです。外側の表示型は、その要素がブロックレベルかインラインレベルかを表します。内側の表示型は、そのボックスの子要素がどのように動作するかを記述します。
 
@@ -106,7 +106,7 @@ h1 {
 
 上で示したように、今すぐ 2 値版を使うメリットはあまりありません。もし使ったとしても、そのページは Firefox でしか動かないでしょう 他のブラウザーはまだ 2 値版を実装していません。そのため、 `display: block flex` は Firefox でのみフレックスレイアウトを実現し 、Chrome では無効なものとして無視されます。 2 値構文に対する現在の対応状況は、互換性データで確認することができます。
 
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
+{{Compat}}
 
 - Chromium bug: <https://bugs.chromium.org/p/chromium/issues/detail?id=804600>
 

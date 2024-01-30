@@ -75,9 +75,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${quota} nombres premiers terminée !`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -159,9 +158,8 @@ document.querySelector("#generate").addEventListener("click", () => {
 // du message, on met à jour la zone de sortie avec un texte, indiquant aussi
 // le quantité de nombres premiers générés.
 worker.addEventListener("message", (message) => {
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${message.data} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${message.data} nombres premiers terminée !`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {

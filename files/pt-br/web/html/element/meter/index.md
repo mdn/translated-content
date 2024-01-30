@@ -67,7 +67,7 @@ No Google Chrome, o medidor aparece como:
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.meter")}}
+{{Compat}}
 
 ## Veja também
 

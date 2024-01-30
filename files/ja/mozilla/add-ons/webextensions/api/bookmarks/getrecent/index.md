@@ -3,7 +3,7 @@ title: bookmarks.getRecent()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.getRecent()`** は、最近に追加されたブックマークを指定した最大個数まで取得し、{{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} オブジェクトの配列としてコールバック関数に渡します。
 
@@ -29,7 +29,7 @@ browser.bookmarks.getRecent(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.getRecent")}}
+{{Compat}}
 
 ## 使用例
 

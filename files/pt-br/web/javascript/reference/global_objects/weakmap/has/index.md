@@ -43,7 +43,7 @@ wm.has("baz"); // retorna false
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.has")}}
+{{Compat}}
 
 ## Ver também
 

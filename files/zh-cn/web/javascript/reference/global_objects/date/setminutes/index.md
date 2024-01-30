@@ -3,7 +3,7 @@ title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`setMinutes()`** 方法根据本地时间为一个日期对象设置分钟数。
 
@@ -53,7 +53,7 @@ theBigDay.setMinutes(45);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getMinutes()")}}
 - {{jsxref("Date.prototype.setUTCMinutes()")}}

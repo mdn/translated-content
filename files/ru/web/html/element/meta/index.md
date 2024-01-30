@@ -21,7 +21,7 @@ slug: Web/HTML/Element/meta
 
 > **Примечание:** атрибут [`name`](/ru/docs/Web/HTML/Element/meta#name) имеет особое значение для элемента `<meta>` и атрибут [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop) не должен быть задан в `<meta>` элементе в котором уже определены какие-либо [`name`](/ru/docs/Web/HTML/Element/meta#name), [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) или [`charset`](/ru/docs/Web/HTML/Element/meta#charset) атрибуты.
 
-- {{htmlattrdef("charset")}}
+- `charset`
 
   - : Этот атрибут задаёт кодировку символов, используемую на странице. Он должен содержать [стандартное имя IANA MIME для кодировки символов](https://www.iana.org/assignments/character-sets). Хотя стандарт не требует определённой кодировки, он рекомендует:
 
@@ -43,9 +43,9 @@ slug: Web/HTML/Element/meta
       > - Этот {{HTMLElement("meta")}} элемент это синоним для pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` где *`IANAcharset` *соответствует значению эквивалентного [`charset`](/ru/docs/Web/HTML/Element/meta#charset) атрибута.
       >   Этот синтаксис по-прежнему разрешён, хотя и устарел и больше не рекомендуется.
 
-- {{htmlattrdef("content")}}
+- `content`
   - : Этот атрибут содержит значение для [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) или [`name`](/ru/docs/Web/HTML/Element/meta#name) атрибута, в зависимости от контекста.
-- {{htmlattrdef("http-equiv")}}
+- `http-equiv`
 
   - : Этот атрибут определяет прагму, которая может изменять поведение серверов и пользователей. Значение прагмы определяется с помощью [`content`](/ru/docs/Web/HTML/Element/meta#content) и может быть следующим:
 
@@ -78,7 +78,7 @@ slug: Web/HTML/Element/meta
       - : Эта прагма определяет [cookie](/ru/docs/cookie) для страницы. Её содержимое должно заканчиваться синтаксисом, определяемым [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
         > **Примечание:** Не используете эту прагму, так как она устарела. Используйте HTTP header set-cookie вместо этого.
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : Этот атрибут определяет имя уровня документа метаданных.
     Его не следует устанавливать, если один из атрибутов [`itemprop`](/ru/docs/Web/HTML/Element/meta#itemprop), [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) или [`charset`](/ru/docs/Web/HTML/Element/meta#charset) также указан в наборе.
@@ -153,7 +153,7 @@ slug: Web/HTML/Element/meta
       > - Значения по умолчанию могут быть изменены у разных браузеров или устройств..
       > - Для изучения этой прагмы на Firefox for Mobile, посмотрите статью [this article](/ru/docs/Mobile/Viewport_meta_tag).
 
-- {{htmlattrdef("scheme")}}
+- `scheme`
 
   - : Этот атрибут определяет схему, которая описывает метаданные.
     Схема - это контекст, ведущий к правильной интерпретации [`content`](/ru/docs/Web/HTML/Element/meta#content) значения, например формата.

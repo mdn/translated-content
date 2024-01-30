@@ -50,7 +50,7 @@ Access-Control-Max-Age: 600
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Max-Age")}}
+{{Compat}}
 
 ## Veja também
 

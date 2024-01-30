@@ -327,13 +327,13 @@ myString;
 
 ## 摘要
 
-我們透過本文簡單介紹了該如何在程式中使用 JSON、該如何建立＼剖析 JSON、該如何存取其內的資料。接著就要說明物件導向 JavaScript (OOJS)。
+我們透過本文簡單介紹了該如何在程式中使用 JSON、該如何建立＼剖析 JSON、該如何存取其內的資料。接著就要說明物件導向 JavaScript（OOJS）。
 
-## 另可參閱
+## 參見
 
 - [JSON 物件參考頁面](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [XMLHttpRequest 物件參考頁面](/zh-TW/docs/Web/API/XMLHttpRequest)
-- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [HTTP 請求函式](/zh-TW/docs/Web/HTTP/Methods)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

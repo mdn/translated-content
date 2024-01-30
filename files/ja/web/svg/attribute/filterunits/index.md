@@ -22,7 +22,7 @@ slug: Web/SVG/Attribute/filterUnits
 - objectBoundingBox
   - : In that case, {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }} represent fractions or percentages of the bounding box on the referencing element.
 
-## Examples
+## 例
 
 ## Elements
 

@@ -131,10 +131,3 @@ CSRF-атаки позволяют злоумышленнику выполнят
 Этой статьёй вы подошли к концу [этого модуля](/ru/docs/Learn/Server-side/First_steps), охватывающего ваши первые шаги в программировании на стороне сервера. Мы надеемся, что вам понравилось изучать эти фундаментальные концепции, и теперь вы готовы выбрать веб-платформу и начать программировать.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## В этом модуле
-
-- [Введение в серверную часть](/ru/docs/Learn/Server-side/First_steps/Introduction)
-- [Обзор технологии клиент-сервер](/ru/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Серверные веб-фреймворки](/ru/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Безопасность веб-сайта](/ru/docs/Learn/Server-side/First_steps/Website_security)

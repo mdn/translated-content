@@ -176,7 +176,7 @@ console.debug("Back to the outer level");
 
 Вывод будет таким:
 
-![nesting.png](/@api/deki/files/6082/=nesting.png)
+![Демонстрация вложенных групп в консоли Firefox](console_groups_demo.png)
 
 ### Таймеры
 
@@ -192,7 +192,7 @@ console.timeEnd("answer time");
 
 этот код запишет в веб-консоль время необходимое пользователю для того, чтобы закрыть окно `alert`:
 
-![timerresult.png](/@api/deki/files/6084/=timerresult.png)
+![Логирование времени в консоли Firefox](console-timelog.png)
 
 Заметьте, что имя таймера отображено и при старте таймера и при его остановке.
 

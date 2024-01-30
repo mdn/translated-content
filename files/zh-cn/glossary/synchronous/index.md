@@ -14,4 +14,4 @@ slug: Glossary/Synchronous
 ## 参见
 
 - {{glossary("Asynchronous")}}
-- 使用了 [XMLHttpRequest()](/zh-CN/docs/Web/API/XMLHttpRequest) {{glossary("API")}} 的[同步和异步请求](/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
+- 使用了 [XMLHttpRequest()](/zh-CN/docs/Web/API/XMLHttpRequest) {{glossary("API")}} 的[同步和异步请求](/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests)

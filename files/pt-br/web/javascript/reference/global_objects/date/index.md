@@ -171,4 +171,4 @@ retornoDaSuaFuncao = imprimirTempoDecorrido(suaFuncao);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date")}}
+{{Compat}}

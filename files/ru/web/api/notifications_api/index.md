@@ -45,9 +45,9 @@ Notifications API позволяют web-страницам контролиро
 | --------------------------------------------------------------------------- |
 | [Notifications API Living Standard](https://notifications.spec.whatwg.org/) |
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Firefox OS разрешения
 

@@ -303,7 +303,8 @@ for (let i of iterable) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
+- {{jsxref("Object.entries()")}}

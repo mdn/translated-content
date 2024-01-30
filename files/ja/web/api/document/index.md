@@ -80,7 +80,7 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
 - {{DOMxRef("Document.plugins")}} {{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、利用可能なプラグインのリストを返します。
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
-  - : ポインターがロックされている場合、マウスイベントのターゲットとして設定された要素を返します。ロック町の場合、ポインターがロックされていない場合、ターゲットが他の文書にある場合は `null` を返します。
+  - : ポインターがロックされている場合、マウスイベントのターゲットとして設定された要素を返します。ロック待ちの場合、ポインターがロックされていない場合、ターゲットが他の文書にある場合は `null` を返します。
 - {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : 特定の文書に適用される機能ポリシーを簡単に導入するための API を提供する {{DOMxRef("FeaturePolicy")}} インターフェイスを返します。
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}

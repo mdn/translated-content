@@ -56,7 +56,7 @@ Django 如何在安裝和配置方面非常靈活。Django 可以：
 
 #### 你應該使用什麼版本的 Python?
 
-我們建議您使用最新版本 - 在編寫本文時，這是 Python 3.7。
+我們建議你使用最新版本 - 在編寫本文時，這是 Python 3.7。
 
 如果需要，可以使用 Python 3.4 或更高版本（將來的版本中將刪除 Python 3.4 支持）。
 
@@ -82,15 +82,15 @@ Django 支持四個主要數據庫（PostgreSQL，MySQL，Oracle 和 SQLite）�
 
 #### 安裝到整個本機系統還是 Python 虛擬環境中?
 
-安裝 Python3 時，您將獲得一個由所有 Python3 代碼共享的單一全局環境。雖然您可以在環境中，安裝任何您喜歡的 Python 軟件包，但您一次只能安裝每個軟件包的一個特定版本。
+安裝 Python3 時，你將獲得一個由所有 Python3 代碼共享的單一全局環境。雖然你可以在環境中，安裝任何你喜歡的 Python 軟件包，但你一次只能安裝每個軟件包的一個特定版本。
 
 > **備註：** 安裝到全局環境中的 Python 應用程序可能會相互衝突（即，如果它們依賴於同一程序包的不同版本）。
 
-如果您將 Django 安裝到默認/全局環境中，那麼您將只能在計算機上，定位一個版本的 Django。如果您想要創建新網站（使用最新版本的 Django）同時仍然維護依賴舊版本的網站，這可能是一個問題。
+如果你將 Django 安裝到默認/全局環境中，那麼你將只能在計算機上，定位一個版本的 Django。如果你想要創建新網站（使用最新版本的 Django）同時仍然維護依賴舊版本的網站，這可能是一個問題。
 
-因此，經驗豐富的 Python / Django 開發人員，通常在獨立的 Python 虛擬環境中，運行 Python 應用程序。這樣可以在一台計算機上，實現多個不同的 Django 環境。 Django 開發團隊本身建議您使用 Python 虛擬環境！
+因此，經驗豐富的 Python / Django 開發人員，通常在獨立的 Python 虛擬環境中，運行 Python 應用程序。這樣可以在一台計算機上，實現多個不同的 Django 環境。 Django 開發團隊本身建議你使用 Python 虛擬環境！
 
-本模塊假設您已將 Django 安裝到虛擬環境中，我們將向您展示如何做。
+本模塊假設你已將 Django 安裝到虛擬環境中，我們將向你展示如何做。
 
 ## 安裝 Python 3
 
@@ -98,11 +98,11 @@ Django 支持四個主要數據庫（PostgreSQL，MySQL，Oracle 和 SQLite）�
 
 本書簡要說明如何根據需要檢查什麼版本，並根據需要安裝新版本，適用於**Ubuntu Linux 16.04, Mac OS X, and Windows 10。**
 
-> **備註：** 根據你的平台,您還可以從操作系統自己的軟件包管理器或其他機制安裝 Python / pip。對於大多數平台，您可以從<https://www.python.org/downloads/>下載所需的安裝文件，並使用適當的平台特定方法進行安裝。
+> **備註：** 根據你的平台,你還可以從操作系統自己的軟件包管理器或其他機制安裝 Python / pip。對於大多數平台，你可以從<https://www.python.org/downloads/>下載所需的安裝文件，並使用適當的平台特定方法進行安裝。
 
 ### Ubuntu 18.04
 
-Ubuntu Linux 18.04 LTS 默認包含 Python 3.6.5。您可以通過在 bash 終端中運行以下命令來確認：
+Ubuntu Linux 18.04 LTS 默認包含 Python 3.6.5。你可以通過在 bash 終端中運行以下命令來確認：
 
 ```bash
 python3 -V
@@ -170,7 +170,7 @@ py -3 -V
 pip3 list
 ```
 
-> **備註：** 安裝程序應設置上述命令工作所需的一切。但是，如果您收到無法找到 Python 的消息，則可能忘記將其添加到系統路徑中。您可以通過再次運行安裝程序，選擇「修改」"Modify"，然後選中第二頁上標有「將 Python 添加到環境變量」"Add Python to environment variables"的框來執行此操作。
+> **備註：** 安裝程序應設置上述命令工作所需的一切。但是，如果你收到無法找到 Python 的消息，則可能忘記將其添加到系統路徑中。你可以通過再次運行安裝程序，選擇「修改」"Modify"，然後選中第二頁上標有「將 Python 添加到環境變量」"Add Python to environment variables"的框來執行此操作。
 
 ## 在 Python 虛擬環境中使用 Django
 
@@ -200,7 +200,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 > **備註：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 變量指向 Python3 的正常安裝位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`腳本的正常位置。如果 virtualenv 在測試時不起作用，那麼要檢查的一件事是 Python 和腳本位於預期的位置（然後適當地更改啟動文件）。
 >
-> 您可以使用`which virtualenvwrapper.sh` 和 `which python3`.的命令找到系統的正確位置。
+> 你可以使用`which virtualenvwrapper.sh` 和 `which python3`.的命令找到系統的正確位置。
 
 然後在終端中運行以下命令重新加載啟動文件：
 
@@ -208,7 +208,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 source ~/.bashrc
 ```
 
-此時您應該看到一堆腳本正在運行，如下所示：
+此時你應該看到一堆腳本正在運行，如下所示：
 
 ```bash
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
@@ -219,11 +219,11 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details
 ```
 
-現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境。
+現在，你可以使用`mkvirtualenv`命令創建新的虛擬環境。
 
 #### macOS X 虛擬環境設置
 
-在 macOS X 上設置 virtualenvwrapper 與在 Ubuntu 上幾乎完全相同（同樣，您可以按照[官方安裝指南](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)或下面的說明進行操作。
+在 macOS X 上設置 virtualenvwrapper 與在 Ubuntu 上幾乎完全相同（同樣，你可以按照[官方安裝指南](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)或下面的說明進行操作。
 
 使用 pip 安裝 virtualenvwrapper（並捆綁 virtualenv），如圖所示。
 
@@ -251,7 +251,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 > source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh
 > ```
 >
-> 您可以使用`which virtualenvwrapper.sh` 和 `which python3`的命令找到系統的正確位置。
+> 你可以使用`which virtualenvwrapper.sh` 和 `which python3`的命令找到系統的正確位置。
 
 這幾行與 Ubuntu 相同，但啟動文件是主目錄中、名稱不同的隱藏文件**.bash_profile**。
 
@@ -273,23 +273,23 @@ source /usr/local/bin/virtualenvwrapper.sh
 source ~/.bash_profile
 ```
 
-此時，您可能會看到一堆腳本正在運行（與 Ubuntu 安裝相同的腳本）。您現在應該能夠使用`mkvirtualenv`命令，創建新的虛擬環境。
+此時，你可能會看到一堆腳本正在運行（與 Ubuntu 安裝相同的腳本）。你現在應該能夠使用`mkvirtualenv`命令，創建新的虛擬環境。
 
 #### Windows 10 虛擬環境設置
 
-安裝[virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)比設置 virtualenvwrapper 更簡單，因為您不需要配置工具存放虛擬環境信息的位置（有默認值）。您需要做的就是，在命令提示符中運行以下命令：
+安裝[virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)比設置 virtualenvwrapper 更簡單，因為你不需要配置工具存放虛擬環境信息的位置（有默認值）。你需要做的就是，在命令提示符中運行以下命令：
 
 ```bash
 pip3 install virtualenvwrapper-win
 ```
 
-現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境
+現在，你可以使用`mkvirtualenv`命令創建新的虛擬環境
 
 ### 創建虛擬環境
 
 一旦你安裝了 virtualenvwrapper 或 virtualenvwrapper-win，那麼在所有平台上使用虛擬環境都非常相似。
 
-現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，您將看到正在設置的環境（您看到的是略微特定 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 您可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
+現在，你可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，你將看到正在設置的環境（你看到的是略微特定 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 你可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
 
 ```
 $ mkvirtualenv my_django_environment
@@ -300,13 +300,13 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 (my_django_environment) ubuntu@ubuntu:~$
 ```
 
-現在，您可以在虛擬環境中，安裝 Django，並開始開發。
+現在，你可以在虛擬環境中，安裝 Django，並開始開發。
 
 > **備註：** 從本文開始（實際上是本系列教學），請假設任何命令都在 Python 虛擬環境中運行，就像我們在上面設置的那樣。
 
 ### 使用虛擬環境
 
-您應該知道其他一些有用的命令（工具文檔中有更多，但這些是您經常使用的命令）：
+你應該知道其他一些有用的命令（工具文檔中有更多，但這些是你經常使用的命令）：
 
 - `deactivate` — 退出當前的 Python 虛擬環境
 - `workon` — 列出可用的虛擬環境
@@ -321,7 +321,7 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 pip3 install django
 ```
 
-您可以通過運行以下命令來測試 Django 是否安裝（這只是測試 Python 可以找到 Django 模塊）：
+你可以通過運行以下命令來測試 Django 是否安裝（這只是測試 Python 可以找到 Django 模塊）：
 
 ```bash
 # Linux/macOS X
@@ -341,18 +341,18 @@ py -3 -m django --version
 >
 > 在 Windows 中，Python 3 腳本通過在命令前面加上`py -3`來啟動，儘管這可能會因具體安裝而異。如果遇到任何命令問題，請嘗試省略`-3`修飾符。在 Linux / macOS X 中，命令是`python3`。
 
-> **警告：** 本教程的其餘部分，使用 Linux 命令來調用 Python 3（python3）。如果您在 Windows 上工作，只需將此前綴替換為：`py -3`
+> **警告：** 本教程的其餘部分，使用 Linux 命令來調用 Python 3（python3）。如果你在 Windows 上工作，只需將此前綴替換為：`py -3`
 
 ## 測試你的安裝
 
-上面的測試可以工作，但它不是很有趣。一個更有趣的測試是創建一個骨架項目並看到它工作。要做到這一點，先在你的命令提示符/終端導航到你想存儲你**Django**應用程序的位置。為您的測試站點創建一個文件夾並瀏覽它。
+上面的測試可以工作，但它不是很有趣。一個更有趣的測試是創建一個骨架項目並看到它工作。要做到這一點，先在你的命令提示符/終端導航到你想存儲你**Django**應用程序的位置。為你的測試站點創建一個文件夾並瀏覽它。
 
 ```bash
 mkdir django_test
 cd django_test
 ```
 
-然後，您可以使用**django-admin**工具創建一個名為「 **mytestsite** 」的新骨架站點，如圖所示。創建網站後，您可以導航到文件夾，您將在其中找到管理項目的主要腳本，名為**manage.py**。
+然後，你可以使用**django-admin**工具創建一個名為「 **mytestsite** 」的新骨架站點，如圖所示。創建網站後，你可以導航到文件夾，你將在其中找到管理項目的主要腳本，名為**manage.py**。
 
 ```bash
 django-admin startproject mytestsite
@@ -376,17 +376,17 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **備註：** 以上命令顯示 Linux / macOS X 命令。此時您可以忽略有關「14 個未應用的遷移」的警告！（"14 unapplied migration(s)" ）
+> **備註：** 以上命令顯示 Linux / macOS X 命令。此時你可以忽略有關「14 個未應用的遷移」的警告！（"14 unapplied migration(s)" ）
 
-一旦服務器運行，您可以通過導航到本地 Web 瀏覽器上的以下 URL 來查看該站點：`http://127.0.0.1:8000/`。你應該看到一個如下所示的網站：
+一旦服務器運行，你可以通過導航到本地 Web 瀏覽器上的以下 URL 來查看該站點：`http://127.0.0.1:8000/`。你應該看到一個如下所示的網站：
 
 ![Django Skeleton App Homepage](django_skeleton_app_homepage_django_4_0.png)
 
 ## 總結 Summary
 
-您現在已在計算機上啟動並運行 Django 開發環境。
+你現在已在計算機上啟動並運行 Django 開發環境。
 
-在測試部分，您還簡要了解了，我們如何使用`django-admin startproject`，創建一個新的 Django 網站，並使用開發 Web 服務器（`python3 manage.py runserver`）在瀏覽器中運行它。在下一篇文章中，我們將擴展此過程，構建一個簡單、但完整的 Web 應用程序。
+在測試部分，你還簡要了解了，我們如何使用`django-admin startproject`，創建一個新的 Django 網站，並使用開發 Web 服務器（`python3 manage.py runserver`）在瀏覽器中運行它。在下一篇文章中，我們將擴展此過程，構建一個簡單、但完整的 Web 應用程序。
 
 ## 參見
 

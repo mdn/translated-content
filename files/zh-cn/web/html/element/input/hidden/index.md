@@ -36,7 +36,7 @@ slug: Web/HTML/Element/input/hidden
  </tbody>
 </table>
 
-> **备注：** {{domxref("HTMLElement/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}} 事件不适用于此输入类型。即使使用 JavaScript（如 `hiddenInput.focus()`），隐藏的 input 也无法获得焦点。
+> **备注：** {{domxref("Element/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}} 事件不适用于此输入类型。即使使用 JavaScript（如 `hiddenInput.focus()`），隐藏的 input 也无法获得焦点。
 
 ## 值
 

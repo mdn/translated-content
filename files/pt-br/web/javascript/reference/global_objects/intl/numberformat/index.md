@@ -161,7 +161,7 @@ console.log(
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Intl.NumberFormat")}}
+{{Compat}}
 
 ## Veja também
 

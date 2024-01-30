@@ -422,7 +422,7 @@ if (!Array.prototype.reduce) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
 ## Leia também
 

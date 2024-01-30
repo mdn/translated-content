@@ -67,7 +67,7 @@ Reflect.getPrototypeOf(Object("foo")); // String.prototype
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.getPrototypeOf")}}
+{{Compat}}
 
 ## 関連情報
 

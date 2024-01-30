@@ -67,7 +67,7 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## ブラウザーの対応
 
-{{Compat("http.headers.If-Modified-Since")}}
+{{Compat}}
 
 ## 関連情報
 

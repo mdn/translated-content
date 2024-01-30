@@ -122,7 +122,7 @@ pc.onicecandidate = (ev) => {
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

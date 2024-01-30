@@ -51,7 +51,7 @@ arr.unshift([-3]);
 
 ## Compatibilidade entre browsers
 
-{{Compat("javascript.builtins.Array.unshift")}}
+{{Compat}}
 
 ## Veja também
 

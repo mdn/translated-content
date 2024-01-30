@@ -131,7 +131,7 @@ carro2.dono.nome;
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.new")}}
+{{Compat}}
 
 ## Veja também
 

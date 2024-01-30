@@ -88,9 +88,9 @@ svg {
 
 The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a [\<percentage>](/ja/SVG/Content_type#Percentage) is used, the value is resolved as a percentage of the current viewport.
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("svg.attributes.presentation.stroke-dashoffset")}}
+{{Compat}}
 
 ## Specification
 

@@ -3,7 +3,7 @@ title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 新しいタブを作ります。
 
@@ -65,7 +65,7 @@ var creating = browser.tabs.create(
 
 ## ブラウザー互換状況
 
-{{Compat("webextensions.api.tabs.create", 10)}}
+{{Compat}}
 
 ## 例
 

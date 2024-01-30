@@ -242,7 +242,7 @@ Segue a sintaxe do `continue`:
 
 ### Exemplo 1
 
-O exemplo a seguir mostra um laço `while` utlizando `continue` que executará quando o valor de `i` for igual a 3. Desta forma, `n` recebe os valores um, três, sete, e doze.
+O exemplo a seguir mostra um laço `while` utilizando `continue` que executará quando o valor de `i` for igual a 3. Desta forma, `n` recebe os valores um, três, sete, e doze.
 
 ```js
 i = 0;

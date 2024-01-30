@@ -3,7 +3,7 @@ title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 ---
 
-{{JSRef("Global_Objects", "Symbol")}}
+{{JSRef}}
 
 ## 概述
 
@@ -40,6 +40,6 @@ Object(Symbol("foo")).toString() + "bar";
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.valueOf()")}}

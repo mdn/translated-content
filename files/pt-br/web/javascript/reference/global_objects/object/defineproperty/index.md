@@ -426,7 +426,7 @@ console.log(myclass.prototype.y); // 1
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.defineProperty")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

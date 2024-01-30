@@ -3,6 +3,8 @@ title: Grid Column
 slug: Glossary/Grid_Column
 ---
 
+{{GlossarySidebar}}
+
 Столбец сетки (**grid column)** — это вертикальный элемент в [CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout), а также пространство между двумя вертикальными линиями сетки. Он определяется свойством {{cssxref("grid-template-columns")}}, либо в сокращённом виде {{cssxref("grid")}} или {{cssxref("grid-template")}}.
 
 Кроме того, столбцы могут быть созданы в неявном виде (_implicit grid),_ когда элементы расположены за пределами столбцов, созданных в явно-заданной сетке (_explicit grid)_. Размер этих столбцов будет подобран автоматически, либо задан с помощью свойства {{cssxref("grid-auto-columns")}}.

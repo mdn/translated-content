@@ -19,8 +19,6 @@ var connectionState = RTCPeerConnection.connectionState;
 
 Текущий статус соединения представлен одним из значений перечисления [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
 
-{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}
-
 ## Пример
 
 ```js

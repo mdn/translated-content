@@ -23,7 +23,7 @@ Como todos os outros elementos HTML, este elemento suporta os [global attributes
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.dir")}}
+{{Compat}}
 
 ## Veja também
 

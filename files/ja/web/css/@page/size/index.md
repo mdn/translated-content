@@ -103,7 +103,7 @@ size: A4 portrait;
 
 ## ブラウザーの互換性
 
-{{Compat("css.at-rules.page.size")}}
+{{Compat}}
 
 ## 関連情報
 

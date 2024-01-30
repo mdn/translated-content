@@ -224,6 +224,6 @@ window.addEventListener(
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

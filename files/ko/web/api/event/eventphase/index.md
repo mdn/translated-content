@@ -121,12 +121,12 @@ function OnDivClick(e) {
     e.eventPhase == 0
       ? "없음"
       : e.eventPhase == 1
-      ? "캡처"
-      : e.eventPhase == 2
-      ? "대상"
-      : e.eventPhase == 3
-      ? "버블"
-      : "오류";
+        ? "캡처"
+        : e.eventPhase == 2
+          ? "대상"
+          : e.eventPhase == 3
+            ? "버블"
+            : "오류";
   const p = document.createElement("p");
   p.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
   divInfo.appendChild(p);

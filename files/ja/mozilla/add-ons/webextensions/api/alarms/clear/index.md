@@ -3,7 +3,7 @@ title: alarms.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clear
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 与えた名前に対応するアラームを解除します。
 
@@ -29,7 +29,7 @@ browser.alarms.clear(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.alarms.clear")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -5,7 +5,7 @@ slug: Learn/JavaScript/First_steps/Arrays
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
-在本模块的最后一篇文章中，我们将看看数组 —— 一种将一组数据存储在单个变量名下的优雅方式。现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。
+在本模块的最后一篇文章中，我们将看看数组——一种将一组数据存储在单个变量名下的优雅方式。现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -174,7 +174,7 @@ slug: Learn/JavaScript/First_steps/Arrays
    // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
    ```
 
-   > **备注：** 我们以前说过，但还是提醒一下 —— 电脑从 0 开始计数！
+   > **备注：** 我们以前说过，但还是提醒一下——电脑从 0 开始计数！
 
 3. 请注意，数组中包含数组的话称之为多维数组。你可以通过将两组方括号链接在一起来访问数组内的另一个数组。例如，要访问数组内部的一个项目，即 `random` 数组中的第三个项目（参见上一节），我们可以这样做：
 
@@ -271,7 +271,7 @@ let myArray = [
 
 首先，要在数组末尾添加或删除一个项目，我们可以使用 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}}。
 
-1. 让我们先使用 `push()` —— 注意，你需要添加一个或多个要添加到数组末尾的元素。尝试下面的代码：
+1. 让我们先使用 `push()`——注意，你需要添加一个或多个要添加到数组末尾的元素。尝试下面的代码：
 
    ```js
    myArray.push("Cardiff");
@@ -304,14 +304,14 @@ let myArray = [
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} 和 {{jsxref("Array.prototype.shift()","shift()")}} 从功能上与 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}} 完全相同，只是它们分别作用于数组的开始，而不是结尾。
 
-1. 首先 `unshift()` ——尝试一下这个命令：
+1. 首先 `unshift()`——尝试一下这个命令：
 
    ```js
    myArray.unshift("Edinburgh");
    myArray;
    ```
 
-2. 现在 `shift()` —— 尝试一下！
+2. 现在 `shift()`——尝试一下！
 
    ```js
    let removedItem = myArray.shift();
@@ -321,7 +321,7 @@ let myArray = [
 
 ## 积极学习：打印这些产品
 
-我们回到前面描述的例子 —— 打印出发票上的产品名称和价格，然后计算总价格并将其印在底部。在下面的可编辑示例中，包含数字的注释 —— 每个注释标记都是你必须向代码添加内容的地方。它们如下：
+我们回到前面描述的例子——打印出发票上的产品名称和价格，然后计算总价格并将其印在底部。在下面的可编辑示例中，包含数字的注释——每个注释标记都是你必须向代码添加内容的地方。它们如下：
 
 1. 在 `// number 1` 注释下面是一些字符串，每个字符串包含一个产品名称和一个冒号分隔的价格。我们希望你将其转换为一个数组，并将其存储在名为 `products` 的数组中。
 2. 与 `// number 2` 注释同一行的是 for 循环的开头。在这行中，我们目前有 `i <= 0`，这是一个条件测试，导致 [for 循环](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash#循环（Loop）) 立即停止，因为它说“当 `i` 不再小于或等于 0”时停止，而 `i` 从 0 开始。我们希望你使用条件测试来替换它，当 `i` 不再小于 `products` 数组的长度时，该条件测试会停止循环。

@@ -3,6 +3,8 @@ title: CORS
 slug: Glossary/CORS
 ---
 
+{{GlossarySidebar}}
+
 **CORS** (オリジン間リソース共有、 Cross-Origin Resource Sharing) は、 {{Glossary("Header", "HTTP ヘッダー")}}の転送で構成されるシステムであり、ブラウザーがオリジンをまたいだリクエストのレスポンスに、フロントエンドの JavaScript コードがアクセスすることをブロックするかどうかを決めるものです。
 
 [同一オリジンセキュリティポリシー](/ja/docs/Web/Security/Same-origin_policy)は、既定でリソースへのオリジン間のアクセスを禁止しています。しかし、 CORS はウェブサーバーに、リソースへのオリジンをまたいだアクセスを許可すると言うことができるようにします。
@@ -38,5 +40,3 @@ slug: Glossary/CORS
 ### 技術リファレンス
 
 - [Fetch specification](https://fetch.spec.whatwg.org)
-
-{{QuickLinksWithSubpages("/ja/docs/Glossary")}}

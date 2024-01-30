@@ -81,7 +81,7 @@ Uma das palavras-chave listadas abaixo.
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.isolation")}}
+{{Compat}}
 
 ## Veja também
 

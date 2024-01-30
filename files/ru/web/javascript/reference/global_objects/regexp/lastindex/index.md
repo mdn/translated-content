@@ -3,7 +3,7 @@ title: RegExp.lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## Сводка
 

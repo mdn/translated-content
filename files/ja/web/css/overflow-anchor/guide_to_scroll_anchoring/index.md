@@ -79,4 +79,4 @@ body {
 
 ブラウザーでスクロールアンカリングが利用できるかどうかを検査する必要がある場合は、[機能クエリー](/ja/docs/Web/CSS/@supports)を使用して `overflow-anchor` プロパティに対応しているかどうかを検査してください。
 
-{{Compat("css.properties.overflow-anchor")}}
+{{Compat}}

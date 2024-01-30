@@ -55,7 +55,7 @@ theBigDay.setMinutes(45);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setMinutes")}}
+{{Compat}}
 
 ## Veja também
 

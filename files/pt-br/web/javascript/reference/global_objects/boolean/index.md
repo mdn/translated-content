@@ -58,7 +58,7 @@ var myString = new String("Hello"); // objeto String
 var s = new Boolean(myString); // valor inicial true
 ```
 
-Não use um um objeto `Boolean` no lugar de um primitivo B`oolean`.
+Não use um um objeto `Boolean` no lugar de um primitivo `Boolean`.
 
 ## Propriedades
 
@@ -112,7 +112,7 @@ var bObjProto = new Boolean({});
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Boolean")}}
+{{Compat}}
 
 ## Veja também
 

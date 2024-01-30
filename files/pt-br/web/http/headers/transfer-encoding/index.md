@@ -82,7 +82,7 @@ Network\r\n
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Transfer-Encoding")}}
+{{Compat}}
 
 ## Veja também
 

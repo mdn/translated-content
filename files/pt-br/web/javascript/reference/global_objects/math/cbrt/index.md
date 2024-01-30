@@ -63,7 +63,7 @@ if (!Math.cbrt) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.cbrt")}}
+{{Compat}}
 
 ## Veja também
 

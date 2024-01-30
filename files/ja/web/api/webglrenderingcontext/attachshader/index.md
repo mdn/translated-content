@@ -1,16 +1,19 @@
 ---
-title: WebGLRenderingContext.attachShader()
+title: "WebGLRenderingContext: attachShader() メソッド"
+short-title: attachShader()
 slug: Web/API/WebGLRenderingContext/attachShader
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **WebGLRenderingContext.attachShader()** メソッドは、フラグメントか頂点のどちらかの {{domxref("WebGLShader")}} を {{domxref("WebGLProgram")}} にアタッチします。
+**WebGLRenderingContext.attachShader()** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、フラグメントか頂点のどちらかの {{domxref("WebGLShader")}} を {{domxref("WebGLProgram")}} にアタッチします。
 
 ## 構文
 
-```
-void gl.attachShader(program, shader);
+```js-nolint
+attachShader(program, shader)
 ```
 
 ### 引数
@@ -25,29 +28,29 @@ void gl.attachShader(program, shader);
 以下は既存のシェーダーを {{domxref("WebGLProgram")}} にアタッチするコードです。
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
-// Attach pre-existing shaders
+// 既に存在するシェーダーをアタッチ
 gl.attachShader(program, vertexShader);
 gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  var info = gl.getProgramInfoLog(program);
-  throw "Could not compile WebGL program. \n\n" + info;
+  const info = gl.getProgramInfoLog(program);
+  throw `WebGL プログラムをコンパイルできませんでした。 \n\n${info}`;
 }
 ```
 
-## 仕様策定状況
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.WebGLRenderingContext.attachShader")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLProgram")}}
 - {{domxref("WebGLShader")}}

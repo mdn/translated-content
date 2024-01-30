@@ -196,7 +196,8 @@ pessoa["nome"]["ultimo"];
 Não podemos apenas atualizar valores existentes de propriedades e métodos; podemos também criar membros completamente novos. Tente isso aqui no console:
 
 ```js
-pessoa["olhos"] = "castanho".pessoa.despedida = function () {
+pessoa["olhos"] = "castanho";
+pessoa.despedida = function () {
   alert("Adeus a todos!");
 };
 ```

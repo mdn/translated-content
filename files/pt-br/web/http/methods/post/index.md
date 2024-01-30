@@ -111,7 +111,7 @@ value2
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.POST")}}
+{{Compat}}
 
 ## Veja também
 

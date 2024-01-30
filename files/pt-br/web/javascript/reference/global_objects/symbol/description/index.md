@@ -38,7 +38,7 @@ Symbol.for("foo").description; // "foo"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.description")}}
+{{Compat}}
 
 ## Veja também
 

@@ -44,7 +44,7 @@ slug: Web/SVG/Element/polyline
 
 ## ブラウザ実装状況
 
-{{Compat("svg.elements.polyline")}}
+{{Compat}}
 
 ## 関連情報
 

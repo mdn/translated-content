@@ -44,7 +44,7 @@ null == undefined; // verdadeiro
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.null")}}
+{{Compat}}
 
 ## Veja também
 

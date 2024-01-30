@@ -3,6 +3,8 @@ title: SVG
 slug: Glossary/SVG
 ---
 
+{{GlossarySidebar}}
+
 _Scalable Vector Graphics_ (**SVG**) は {{Glossary("XML")}} の文法に基づいた 2 次元ベクター画像フォーマットです。
 
 {{Glossary("W3C")}} は、1990 年代後半に SVG に取り組み始めましたが、 SVG は {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 が対応したときにはじめて有名になりました。主要な{{Glossary("browser","ウェブブラウザー")}}はすべて SVG に対応するようになりました。

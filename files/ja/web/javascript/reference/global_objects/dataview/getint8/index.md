@@ -49,7 +49,7 @@ dataview.getInt8(1); // 0
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.getInt8")}}
+{{Compat}}
 
 ## 関連情報
 

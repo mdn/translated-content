@@ -51,7 +51,7 @@ testDate[Symbol.toPrimitive]("default");
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.@@toPrimitive")}}
+{{Compat}}
 
 ## Veja também
 

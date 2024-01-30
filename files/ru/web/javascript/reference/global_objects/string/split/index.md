@@ -3,7 +3,7 @@ title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Сводка
 

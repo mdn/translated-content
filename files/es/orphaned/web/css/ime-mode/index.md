@@ -14,7 +14,7 @@ La propiedad `ime-mode` controla el estado del método de entrada del editor par
 - Se aplica a: campos de texto.
 - {{ Cssxref("inheritance", "Valor heredado") }}: no
 - Porcentajes: N/A
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}:
 
 ### Sintaxis

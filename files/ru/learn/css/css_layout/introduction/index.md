@@ -746,16 +746,3 @@ body {
 Эта статья предоставила короткое обобщение всех методов макетов о которых вам следует знать. Читайте далее для получения дополнительной информации по каждому методу!
 
 {{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
-
-## В этом модуле
-
-- [Введение в CSS вёрстку](/ru/docs/Learn/CSS/CSS_layout/Introduction)
-- [Нормальный поток](/ru/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/ru/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/ru/docs/Learn/CSS/CSS_layout/Floats)
-- [Позиционирование](/ru/docs/Learn/CSS/CSS_layout/Positioning)
-- [Многоколоночный макет](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Устаревшие методы вёрстки](/ru/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Поддержка старых браузеров](/ru/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Оценка понимания базовых макетов](/ru/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

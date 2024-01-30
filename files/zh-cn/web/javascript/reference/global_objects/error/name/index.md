@@ -3,7 +3,7 @@ title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
 ---
 
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
+{{JSRef}}
 
 ## 概述
 
@@ -32,7 +32,7 @@ throw e; // "ParseError: Malformed input"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error.prototype.message")}}
 - {{jsxref("Error.prototype.toString()")}}

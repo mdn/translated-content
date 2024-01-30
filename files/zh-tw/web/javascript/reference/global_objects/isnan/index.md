@@ -83,8 +83,6 @@ isNaN("blabla"); // true: "blabla" 被轉換為數字，將其解析為數字失
 
 比方說，你可以用這個式子，去測試函式的參數能不能透過算術處理（也就是能「像」數字一樣被利用）、否則就提供預設值之類的。你可以透過上下文的根據以隱式數值轉換（implicitly converting value），以使用 JavaScript 提供的全部功能。
 
-## 範例
-
 ```js
 function increment(x) {
   if (isNaN(x)) x = 0;

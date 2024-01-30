@@ -40,7 +40,7 @@ var year = today.getUTCFullYear();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCFullYear")}}
+{{Compat}}
 
 ## Veja também
 

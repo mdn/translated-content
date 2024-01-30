@@ -3,13 +3,13 @@ title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 {{deprecated_header}}
 
 ## Resumen
 
-Causa que una cadena parpadee como si estuviese en una etiqueta {{HTMLElement("blink")}}.
+Causa que una cadena parpadee como si estuviese en una etiqueta `<blink>`.
 
 ## Sintaxis
 

@@ -138,7 +138,7 @@ var o = new Object(Boolean());
 
 ## Compatibilidade
 
-{{Compat("javascript.builtins.Object")}}
+{{Compat}}
 
 ## Veja também
 

@@ -175,15 +175,13 @@ Array.from({ length: 5 }, (v, k) => k);
 // [0, 1, 2, 3, 4]
 ```
 
-## Especificação
+## Especificações
 
-| Specification                                        | Status           | Comment             |
-| ---------------------------------------------------- | ---------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.from', 'Array.from')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.from")}}
+{{Compat}}
 
 ## Veja também
 

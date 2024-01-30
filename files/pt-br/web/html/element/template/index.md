@@ -152,7 +152,7 @@ table td {
 
 ## Compatibilidade de Navegadores
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## Veja também
 

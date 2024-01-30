@@ -25,7 +25,7 @@ The HyperText Transfer Protocol (HTTP) **`308 Permanent Redirect`** リダイレ
 
 ## ブラウザーの対応
 
-{{Compat("http.status.308")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -3,11 +3,11 @@ title: search.get()
 slug: Mozilla/Add-ons/WebExtensions/API/search/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient un tableau de tous les moteurs de recherche installés.
 
-Chaque moteur de recherche renvoyé est identifié par un nom, que vous pouvez passer dans {{WebExtAPIRef("search.search()")}}} pour utiliser ce moteur particulier pour effectuer une recherche.
+Chaque moteur de recherche renvoyé est identifié par un nom, que vous pouvez passer dans {{WebExtAPIRef("search.search()")}} pour utiliser ce moteur particulier pour effectuer une recherche.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

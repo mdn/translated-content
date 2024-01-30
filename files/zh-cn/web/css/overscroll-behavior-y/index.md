@@ -46,7 +46,7 @@ overscroll-behavior-y: unset;
 
 ## 示例
 
-### 阻止底部元素在垂直方向上滚动。
+### 阻止底部元素在垂直方向上滚动
 
 ```css
 .messages {

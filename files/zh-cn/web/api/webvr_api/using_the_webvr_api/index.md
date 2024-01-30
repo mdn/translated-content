@@ -14,12 +14,6 @@ The [WebVR API](/zh-CN/docs/Web/API/WebVR_API) is a fantastic addition to the we
 To get started, you need to have your VR hardware set up as recommended in the owner's manual, and your computer set up as indicated in [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup). A dedicated GPU is recommended for smoother performance.
 你需要先准备好一个已经配置好 VR 硬件，并且还需要完成 [WebVR 环境的安装](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup)。当然，若想要保证很平滑的体验，你需要配置一个足够好的 GPU 显卡。
 
-You also need to have [Firefox Nightly](https://nightly.mozilla.org/) (or [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)) installed, along with the [WebVR Enabler Add-on](http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi)
-安装好 [Firefox Nightly](https://nightly.mozilla.org/) (或 [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/))，以及 [WebVR Enabler Add-on](http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi)
-
-Once your environment is set up, try visiting one of our [MozVR projects](http://mozvr.com/projects/) and clicking on the "Enter VR" button to test it out.
-设置好环境后，请尝试访问我们直接可在线运行的工程项目 [MozVR projects](http://mozvr.com/projects/) ，点击“Enter VR”按钮，就可以开始测试你的环境了。
-
 > **备注：** For more in depth information, be sure to check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup).
 > 注意：更深层次的信息，请 check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup) 以获取更详细的内容。
 
@@ -292,7 +286,7 @@ Finally, we {{domxref("CanvasRenderingContext2D.restore","restore()")}} the canv
 
 ### Fullscreen 全屏控制
 
-The VR effect is much more effective if you set your app runnning in [fullscreen mode](/zh-CN/docs/Web/Guide/API/DOM/Using_full_screen_mode) — this generally means setting your {{htmlelement("canvas")}} element to fullscreen when a specific event occurs — such as double-clicking the display or pressing a specific button.
+The VR effect is much more effective if you set your app runnning in [fullscreen mode](/zh-CN/docs/Web/API/Fullscreen_API) — this generally means setting your {{htmlelement("canvas")}} element to fullscreen when a specific event occurs — such as double-clicking the display or pressing a specific button.
 
 In this case I have just kept things simple, running a `fullScreen()` function when the canvas is clicked:
 

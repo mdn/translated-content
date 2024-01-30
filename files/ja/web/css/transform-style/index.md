@@ -1,6 +1,8 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
@@ -24,6 +26,7 @@ transform-style: preserve-3d;
 transform-style: inherit;
 transform-style: initial;
 transform-style: revert;
+transform-style: revert-layer;
 transform-style: unset;
 ```
 
@@ -44,7 +47,7 @@ transform-style: unset;
 
 ## 例
 
-<h3 id="Transform_style_demonstration">座標変換スタイルのデモ</h3>
+### 座標変換スタイルのデモ
 
 この例では、座標変換を使用して 3D の立方体を作成しています。立方体の面の親コンテナーには、既定で `transform-style: preserve-3d` が設定されているため、3D 空間で座標変換され、意図したとおりに表示されます。
 
@@ -129,11 +132,7 @@ const cube = document.getElementById("example-element");
 const checkbox = document.getElementById("preserve");
 
 checkbox.addEventListener("change", () => {
-  if (checkbox.checked) {
-    cube.style.transformStyle = "preserve-3d";
-  } else {
-    cube.style.transformStyle = "flat";
-  }
+  cube.style.transformStyle = checkbox.checked ? "preserve-3d" : "flat";
 });
 ```
 
@@ -151,4 +150,4 @@ checkbox.addEventListener("change", () => {
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

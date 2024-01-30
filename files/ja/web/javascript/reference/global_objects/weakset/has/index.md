@@ -44,7 +44,7 @@ mySet.has(obj); // returns false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakSet.has")}}
+{{Compat}}
 
 ## 関連情報
 

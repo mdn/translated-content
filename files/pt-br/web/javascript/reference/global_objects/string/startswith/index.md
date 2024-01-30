@@ -66,7 +66,7 @@ Um polyfill mais robusto (totalmente conforme com a especificação ES2015), mas
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.startsWith")}}
+{{Compat}}
 
 ## Veja também
 

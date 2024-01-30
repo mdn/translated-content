@@ -150,7 +150,7 @@ Esse método é especialmente útil quando você quer fazer debug de eventos, ou
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.apply")}}
+{{Compat}}
 
 ## Veja também
 

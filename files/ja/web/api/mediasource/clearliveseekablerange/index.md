@@ -27,4 +27,4 @@ mediaSource.clearLiveSeekableRange()
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.clearLiveSeekableRange")}}
+{{Compat}}

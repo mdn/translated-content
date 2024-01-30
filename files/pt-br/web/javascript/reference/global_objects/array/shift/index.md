@@ -64,7 +64,7 @@ while ((i = nomes.shift()) !== undefined) {
 
 ## Compatibilidade de Browser
 
-{{Compat("javascript.builtins.Array.shift")}}
+{{Compat}}
 
 ## Veja também
 

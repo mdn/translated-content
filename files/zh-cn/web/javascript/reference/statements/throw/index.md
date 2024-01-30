@@ -168,6 +168,7 @@ try {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)
+- {{jsxref("Statements/try...catch", "try...catch")}}
+- {{jsxref("Error")}}

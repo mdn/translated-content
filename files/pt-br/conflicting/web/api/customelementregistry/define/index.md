@@ -53,7 +53,7 @@ mytag.textContent = "I am a my-tag element.";
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.registerElement")}}
+{{Compat}}
 
 ## Veja também
 

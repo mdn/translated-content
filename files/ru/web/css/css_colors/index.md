@@ -26,19 +26,9 @@ _Нет._
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-### `color` property
-
-{{Compat("css.properties.color")}}
-
-### `color-adjust` property
-
-{{Compat("css.properties.color-adjust")}}
-
-### `opacity` property
-
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Смотрите также
 

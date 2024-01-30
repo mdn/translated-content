@@ -28,7 +28,7 @@ Para as pseudo-classes CSS {{cssxref(":lang")}}, dois nomes de idiomas inválido
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.lang")}}
+{{Compat}}
 
 ## Veja também
 

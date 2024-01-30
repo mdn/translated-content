@@ -67,7 +67,7 @@ Math.trunc =
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.Math.trunc")}}
+{{Compat}}
 
 ## Veja também
 

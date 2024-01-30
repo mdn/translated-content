@@ -665,18 +665,3 @@ dt {
 
 - Справка свойства {{cssxref("position")}}.
 - [Примеры практического позиционирования](/ru/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), для дополнительных полезных идей
-
-## В этом модуле
-
-- [Введение в CSS макет](/ru/docs/Learn/CSS/CSS_layout/Introduction)
-- [Нормальный поток](/ru/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/ru/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/ru/docs/Learn/CSS/CSS_layout/Floats)
-- [Позиционирование](/ru/docs/Learn/CSS/CSS_layout/Positioning)
-- [Макет с несколькими столбцами](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Отзывчивый дизайн](/ru/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Руководство по медиавыражениям для новичков](/ru/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Устаревшие методы макетов](/ru/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Поддержка старых браузеров](/ru/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Базовая оценка понимания макета](/ru/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

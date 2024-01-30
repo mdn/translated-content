@@ -110,9 +110,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `完成！已生成素数${quota}个。`;
+  document.querySelector("#output").textContent =
+    `完成！已生成素数${quota}个。`;
 });
 document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
@@ -170,9 +169,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `完成！已生成素数${quota}个。`;
+  document.querySelector("#output").textContent =
+    `完成！已生成素数${quota}个。`;
 });
 document.querySelector("#reload").addEventListener("click", () => {
   document.querySelector("#user-input").value =

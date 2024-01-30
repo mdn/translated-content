@@ -66,7 +66,7 @@ if (!Array.isArray) {
 
 ## Compatibilidade com o Browser
 
-{{Compat("javascript.builtins.Array.isArray")}}
+{{Compat}}
 
 ## Veja Também
 

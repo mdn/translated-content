@@ -3,7 +3,7 @@ title: tabs.MutedInfoReason
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 タブがミュート・アンミュートになった理由を指定します。
 
@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.MutedInfoReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

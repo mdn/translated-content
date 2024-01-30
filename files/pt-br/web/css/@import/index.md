@@ -46,4 +46,4 @@ where:
 
 ## Browser compatibilidade
 
-{{Compat("css.at-rules.import")}}
+{{Compat}}

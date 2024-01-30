@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{JSxRef("RegExp.lastIndex")}}
 - {{JSxRef("RegExp.prototype.global")}}

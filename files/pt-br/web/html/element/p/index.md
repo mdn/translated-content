@@ -127,7 +127,7 @@ p {
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.p")}}
+{{Compat}}
 
 ## Veja também
 

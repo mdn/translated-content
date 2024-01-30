@@ -49,6 +49,6 @@ client.send();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)

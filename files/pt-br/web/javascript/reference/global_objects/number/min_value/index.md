@@ -37,7 +37,7 @@ if (num1 / num2 >= Number.MIN_VALUE) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.MIN_VALUE")}}
+{{Compat}}
 
 ## Veja também
 

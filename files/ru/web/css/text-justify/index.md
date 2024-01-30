@@ -7,17 +7,23 @@ slug: Web/CSS/text-justify
 
 CSS-свойство **`text-justify`** определяет какой тип выравнивания следует применить к тексту, когда {{cssxref("text-align")}}`: justify;` применяется к элементу.
 
+## Синтаксис
+
 ```css
+/* Ключевые слова */
 text-justify: none;
 text-justify: auto;
 text-justify: inter-word;
 text-justify: inter-character;
 text-justify: distribute; /* Устаревшее значение */
+
+/* Глобальные значения */
+text-justify: inherit;
+text-justify: initial;
+text-justify: revert;
+text-justify: revert-layer;
+text-justify: unset;
 ```
-
-{{cssinfo}}
-
-## Синтаксис
 
 Свойство `text-justify` указывается как одно ключевое слово, выбранное из нижеследующего списка значений.
 
@@ -34,7 +40,11 @@ text-justify: distribute; /* Устаревшее значение */
 - `distribute` {{deprecated_inline}}
   - : Показывает тоже поведение, что и `inter-character`; это значение сохранилось для обратной совместимости.
 
-### Формальный синтаксис
+## Формальное определение
+
+{{CSSInfo}}
+
+## Формальный синтаксис
 
 {{csssyntax}}
 
@@ -110,7 +120,7 @@ p {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

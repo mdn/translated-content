@@ -52,7 +52,7 @@ registry.register(target, { useful: "info about target" });
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.FinalizationRegistry.register")}}
+{{Compat}}
 
 ## 関連情報
 

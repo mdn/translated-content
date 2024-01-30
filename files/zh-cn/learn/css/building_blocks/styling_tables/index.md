@@ -204,19 +204,24 @@ tfoot th {
 
 ### 图形和颜色
 
-现在轮到图形和颜色了！因为表格上充满“朋克“和“个性”，我们需要给它再搭配一些鲜艳的造型。别担心，你不必让你的表格”燥起来“，你可以选择一些更巧妙、更有品位的东西。
+现在轮到图形和颜色了！因为表格上充满“朋克“和“个性”，我们需要给它再搭配一些鲜艳的造型。别担心，你不必让你的表格“燥起来”，你可以选择一些更巧妙、更有品位的东西。
 
-首先将下面的 CSS 添加到`style.css`文件中，在底部添加：
+首先将下面的 CSS 添加到 `style.css` 文件中，在底部添加：
 
-```plain
-thead, tfoot {
+```css
+/* 图形和颜色 */
+
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 50%));
   border: 3px solid purple;
 }
 ```
@@ -294,9 +299,9 @@ caption {
 - 使用斑马线来让其他行更容易阅读。
 - 使用 {{cssxref("text-align")}}直线对齐你的{{htmlelement("th")}}和{{htmlelement("td")}}文本，使内容更整洁、更易于跟随。
 
-## 小试牛刀！
+## 技能测试！
 
-我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？你能找到些更进一步的测试，在你继续之前，想要验证你已经吸收了这些信息的话，请见[Test your skills: tables](/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks)。
+我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？你能找到些更进一步的测试，在你继续之前，想要验证你已经吸收了这些信息的话，请见[技能测试：表格](/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks)。
 
 ## 总结
 
