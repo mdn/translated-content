@@ -49,7 +49,7 @@ ARIA のロールには 6 つのカテゴリーがあります。
 - [row](/ja/docs/Web/Accessibility/ARIA/Roles/row_role) （the {{HTMLElement('tr')}} を {{HTMLElement('table')}} で使用）
 - [rowgroup](/ja/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) （{{HTMLElement('thead')}}、{{HTMLElement('tfoot')}}、{{HTMLElement('tbody')}} を使用）
 - [rowheader](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role) （`{{HTMLElement('th','&lt;th scope="row">')}}` を使用）
-- [separator](/ja/docs/Web/Accessibility/ARIA/Roles/separator_role) （フォーカス不可の場合は {{HTMLElement('hr')}}  を使用）
+- [separator](/ja/docs/Web/Accessibility/ARIA/Roles/separator_role) （フォーカス不可の場合は {{HTMLElement('hr')}} を使用）
 - [table](/ja/docs/Web/Accessibility/ARIA/Roles/table_role) （{{HTMLElement('table')}} を使用）
 - [term](/ja/docs/Web/Accessibility/ARIA/Roles/term_role) （{{HTMLElement('dfn')}} を使用）
 
