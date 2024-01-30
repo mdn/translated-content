@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Badging API")}}{{securecontext_header}}
 
-{{domxref("Navigator")}} 接口的 **`setAppBadge()`** 方法在与此应用关联的图标上设置徽章。如果将值传递给该方法，则该值将被设置为徽章的值。否则，徽章将显示为点或平台定义的其他指示器。
+{{domxref("WorkerNavigator")}} 接口的 **`setAppBadge()`** 方法在与此应用关联的图标上设置徽章。如果将值传递给该方法，则该值将被设置为徽章的值。否则，徽章将显示为点或平台定义的其他指示器。
 
 ## 语法
 

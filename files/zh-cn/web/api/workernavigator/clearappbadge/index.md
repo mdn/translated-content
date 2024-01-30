@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Badging API")}}{{securecontext_header}}
 
-{{domxref("Navigator")}} 接口的 **`clearAppBadge()`** 方法通过将当前应用程序图标设置为 `nothing` 来清除当前应用程序图标上的徽章。`nothing` 表示当前没有设置徽章，并且徽章的状态为*已清除*。
+{{domxref("WorkerNavigator")}} 接口的 **`clearAppBadge()`** 方法通过将当前应用程序图标设置为 `nothing` 来清除当前应用程序图标上的徽章。`nothing` 表示当前没有设置徽章，并且徽章的状态为*已清除*。
 
 ## 语法
 
