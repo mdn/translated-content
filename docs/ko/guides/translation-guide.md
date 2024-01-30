@@ -16,7 +16,7 @@
 
 `translate-content` 저장소에서 더 이상 `mdn/content`의 이미지 파일들을 복사하지 않아도 됩니다.
 
-**참고 PR**
+#### 참고 PR
 
 - [deleted duplicated mdn/content images/assets #4545](https://github.com/mdn/translated-content/pull/5031)
 - [Remove unused assets](https://github.com/mdn/translated-content/pull/14664)
