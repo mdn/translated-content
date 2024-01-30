@@ -24,6 +24,10 @@ MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습
 
 [번역 안내서](./guides/translation-guide.md), [용어 안내서](./guides/glossary-guide.md) 및 [macro 안내서](./guides/macro-guide.md)을 숙지 후 기여해주세요.
 
+### 관리자의 편집 허용
+
+PR 생성 시 `Create pull request` 버튼 옆에 있는 `Allow edits by maintainers`를 꼭 활성화해 주세요.
+
 ### PR 파일 개수
 
 PR 생성시에 한국 리뷰어들은 라운드 로빈 방식으로 배정이 되고 있습니다. 한 리뷰어에게 너무 많은 리뷰가 몰리지 않도록 번역 PR의 경우 1개의 파일을 넘지 않는 것을 권장합니다.
