@@ -4,7 +4,7 @@ slug: Web/CSS/Next-sibling_combinator
 original_slug: Web/CSS/Adjacent_sibling_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 Se hace referencia a este selector como selector adyacente o selector del próximo hermano. Sólo seleccionará un elemento especificado que esté inmediatamente después de otro elemento especificado.
 

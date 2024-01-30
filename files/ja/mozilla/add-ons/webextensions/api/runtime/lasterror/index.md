@@ -3,7 +3,7 @@ title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 この値は、コールバック関数のある非同期 API でエラーメッセージを伝える時に使われます。拡張機能のコールバックベースの API を使っている時に便利です。
 

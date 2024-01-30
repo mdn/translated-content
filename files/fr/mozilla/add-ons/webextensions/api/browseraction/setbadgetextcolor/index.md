@@ -3,7 +3,7 @@ title: browserAction.setBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeTextColor
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit la couleur du texte du badge de l'action du navigateur. Les onglets sans couleur de texte de badge spécifique hériteront de la couleur globale du texte de badge.
 

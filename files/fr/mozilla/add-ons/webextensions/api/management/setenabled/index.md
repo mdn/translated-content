@@ -3,7 +3,7 @@ title: management.setEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Active ou désactive l'extension ajoutée.
 
