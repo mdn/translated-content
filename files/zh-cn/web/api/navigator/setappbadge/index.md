@@ -19,7 +19,7 @@ setAppBadge(contents)
 ### 参数
 
 - `contents` {{optional_inline}}
-  - : 一个将用作徽章值的{{jsxref("number", "数值")}}。如果 `contents` 为 `0`，则徽章将设置为 `nothing`，表示已清除徽章。
+  - : 一个将用作徽章值的{{jsxref("number", "数值", "", 1)}}。如果 `contents` 为 `0`，则徽章将设置为 `nothing`，表示已清除徽章。
 
 ### 返回值
 
