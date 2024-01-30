@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/transition-property.html")}}
 
-단축 속성을 지정하면 (e.g., {{cssxref("background")}}), 애니메이션 가능한 모든 하위 속성들이 지정됩니다.
+단축 속성을 지정하면 (e.g., {{cssxref("background")}}), 애니메이션 가능한 모든 세부 속성이 지정됩니다.
 
 ## 구문
 
