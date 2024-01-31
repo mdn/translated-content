@@ -14,7 +14,7 @@ slug: Web/CSS/Inline_formatting_context
 - 对于水平书写模式，各个框从左边开始水平地排列
 - 对于垂直书写模式，各个框从顶部开始水平地排列
 
-在下面给出的例子中，带黑色边框的两个 ({{HTMLElement("div")}}) 元素组成了一个[块级格式化上下文（block formatting context）](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)，其中的每一个单词都参与一个行内格式化上下文中。水平书写模式下的各个框水平地排列，垂直书写模式下的各个框垂直地排列。
+在下面给出的例子中，带黑色边框的两个 ({{HTMLElement("div")}}) 元素组成了一个[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)，其中的每一个单词都参与一个行内格式化上下文中。水平书写模式下的各个框水平地排列，垂直书写模式下的各个框垂直地排列。
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}
 
@@ -50,5 +50,5 @@ Margins, borders, 以及 padding 的设置，在行的方向上是生效的。�
 
 ## 参见
 
-- [块级格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
