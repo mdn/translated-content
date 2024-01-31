@@ -48,7 +48,7 @@ Margins, borders, 以及 padding 的设置，在行的方向上是生效的。�
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
-## 另见
+## 参见
 
-- [Block formatting context](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Visual Formatting Model](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+- [块级格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
