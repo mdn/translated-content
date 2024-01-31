@@ -5,9 +5,7 @@ slug: Web/CSS/image
 
 {{CSSRef}}
 
-## 综述：
-
-CSS 的\<image>数据类型描述的是 2D 图形。在 CSS 中有两种类型的图像：简单的静态图像，经常被一个在使用的 URL 引用，动态生成的图像，比如 DOM 树的部分元素样式渐变或者计算样式产生。
+CSS 的 **`<image>`** 数据类型描述的是 2D 图形。在 CSS 中有两种类型的图像：简单的静态图像，经常被一个在使用的 URL 引用，动态生成的图像，比如 DOM 树的部分元素样式渐变或者计算样式产生。
 
 CSS 可以处理以下情形中的不同类型图像：
 
@@ -71,7 +69,10 @@ element(#fakeid)                       如果 fakeid 是一个不存在与页面
 
 {{Compat}}
 
-## 参阅：
+## 参见
 
-- [Using CSS gradients](/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient","linear-gradient()")}}, {{cssxref("radial-gradient","radial-gradient()")}}, {{cssxref("repeating-linear-gradient","repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient","repeating-radial-gradient()")}}
-- {{cssxref("element","element()")}}
+- {{CSSxRef("&lt;gradient&gt;")}}
+- {{CSSxRef("element","element()")}} {{Experimental_Inline}}
+- {{CSSxRef("image/image", "image()")}}
+- {{CSSxRef("image/image-set","image-set()")}}
+- {{CSSxRef("cross-fade","cross-fade()")}}
