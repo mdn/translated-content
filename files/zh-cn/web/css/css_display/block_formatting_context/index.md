@@ -1,6 +1,7 @@
 ---
 title: 区块格式化上下文
-slug: Web/Guide/CSS/Block_formatting_context
+slug: Web/CSS/CSS_display/Block_formatting_context
+original_slug: Web/Guide/CSS/Block_formatting_context
 ---
 
 {{CSSRef}}
