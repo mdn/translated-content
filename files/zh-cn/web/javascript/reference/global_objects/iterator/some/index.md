@@ -19,7 +19,8 @@ some(callbackFn)
 
 - `callbackFn`
   - : 为迭代器中的每个元素执行的函数。它应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)来表示元素通过了测试，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。该函数被调用时将传入以下参数：
-    - : 当前正在处理的元素。
+    - : `element`
+        - : 当前正在处理的元素。
     - `index`
       - : 当前正在处理的元素的索引。
 
