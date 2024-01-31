@@ -73,8 +73,8 @@ box model 不完全适用于参与内联格式上下文。在水平书写模式�
 
 在本指南中，我们更详细地介绍了块和内联格式上下文以及创建块格式上下文（BFC）的重要主题。在下一个指南中，我们将了解正常流如何与不同的写入模式交互 [how normal flow interacts with different writing modes](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)。
 
-## 另请参见
+## 参见
 
-- [Block formatting context](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
-- [Visual Formatting Model](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-- [CSS Box Model](/zh-CN/docs/Web/CSS/CSS_box_model)
+- [块级格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)
