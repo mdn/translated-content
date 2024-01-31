@@ -31,7 +31,7 @@ CSS 编写模式级别 3 规范定义了文档编写模式更改对流布局的�
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/horizontal-tb.html", '100%', 720)}}
 
-`horizontal-tb` 值为你提供了一个从右到左的块流方向和一个垂直的内联方向，如下一个示例所示。
+`vertical-rl` 值为你提供了一个从右到左的块流方向和一个垂直的内联方向，如下一个示例所示。
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/vertical-rl.html", '100%', 720)}}
 
