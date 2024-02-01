@@ -1,12 +1,13 @@
 ---
 title: ブロック整形コンテキスト
 slug: Web/CSS/CSS_display/Block_formatting_context
-original_slug: Web/Guide/CSS/Block_formatting_context
+l10n:
+  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
-**ブロック整形コンテキスト** (block formatting context, BFC) は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動が他の要素と相互作用する領域です。
+**ブロック整形コンテキスト** (block formatting context, BFC) は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動要素が他の要素と相互作用する領域です。
 
 ブロック整形コンテキストは、以下のうちの少なくとも一つから生成されます。
 
@@ -20,8 +21,8 @@ original_slug: Web/Guide/CSS/Block_formatting_context
 - {{ cssxref("overflow") }} の値が `visible` 以外であるブロック要素
 - {{ cssxref("display") }}`: flow-root`
 - {{ cssxref("contain") }}`: layout`, `content`, `paint` の付いた要素
-- フレックスアイテム ({{ cssxref("display") }}`: flex` または `inline-flex` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_Table)でもない場合
-- グリッドアイテム ({{ cssxref("display") }}`: grid` または `inline-grid` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_Table)でもない場合
+- フレックスアイテム ({{ cssxref("display") }}`: flex` または `inline-flex` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_table)でもない場合
+- グリッドアイテム ({{ cssxref("display") }}`: grid` または `inline-grid` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_table)でもない場合
 - 段組みコンテナー ({{ cssxref("column-count") }} または {{ cssxref("column-width") }} が `auto` ではない要素、 `column-count: 1` の要素も含む)
 - {{ cssxref("column-span") }}`: all` は、 `column-span: all` の要素が段組みコンテナーに含まれていなくても、常に新たな整形コンテキストを生成します ([仕様変更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362))。
 
@@ -41,7 +42,7 @@ original_slug: Web/Guide/CSS/Block_formatting_context
 
 新しいBFC を作成する効果を見るために、これらのいくつかを見てみましょう。
 
-以下の例では、`border`が適用された `<div>` の中に浮動要素があります。その `<div>` のコンテンツは浮動要素の横に並んだ状態になっています。浮動要素のコンテンツは横に並んだコンテンツよりも高さがあるため、`<div>` の境界線が浮動要素を貫通してしまいます。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)で説明しているように、浮動要素がフローから外れたので、 `<div>` の `background` と `border` には浮動要素はなく、コンテンツだけが保持されています。
+以下の例では、`border`が適用された `<div>` の中に浮動要素があります。その `<div>` のコンテンツは浮動要素の横に並んだ状態になっています。浮動要素のコンテンツは横に並んだコンテンツよりも高さがあるため、`<div>` の境界線が浮動要素を貫通してしまいます。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)で説明しているように、浮動要素がフローから外れたので、 `<div>` の `background` と `border` には浮動要素はなく、コンテンツだけが保持されています。
 
 **`overflow: auto` の使用**
 
@@ -87,7 +88,7 @@ section {
   height: 150px;
 }
 .box {
-  background-color: rgb(224, 206, 247);
+  background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
 }
 .box[style] {
@@ -98,13 +99,11 @@ section {
   float: left;
   width: 200px;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
   border: 1px solid black;
   padding: 10px;
 }
 ```
-
-#### 結果
 
 {{EmbedLiveSample("Contain_internal_floats", 200, 480)}}
 
@@ -123,7 +122,6 @@ section {
   <div class="float">外部の浮動要素の大きさを変えてみてください</div>
   <div class="box" style="display:flow-root">
     <p><code>display:flow-root</code></p>
-    <p></p>
   </div>
 </section>
 ```
@@ -135,7 +133,7 @@ section {
   height: 150px;
 }
 .box {
-  background-color: rgb(224, 206, 247);
+  background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
 }
 .box[style] {
@@ -149,13 +147,11 @@ section {
   margin-right: 25px;
   width: 200px;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgb(255 255 255 / 75%);
   border: 1px solid black;
   padding: 10px;
 }
 ```
-
-#### 結果
 
 {{EmbedLiveSample("Exclude_external_floats", 200, 330)}}
 
@@ -163,24 +159,22 @@ inline-block で width:\<percentage> を使用するよりも、この場合は�
 
 なお、最近の CSS では、フレックスボックスの方が効率的に複数列のレイアウトを搭載することができます。
 
-### マージンの相殺
+### マージンの相殺を防止する
 
 新しい BFC を作成すると、隣接する 2 つの div 間の[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)を避けることができます。
 
-#### HTML
+#### マージンの相殺の例
+
+この例では、隣接する 2 つの {{HTMLElement("div")}} 要素があり、それぞれの垂直マージンは `10px` です。マージンが相殺されるため、両要素間の垂直方向のギャップは 10 ピクセルとなり、期待される 20 ピクセルにはなりません。
 
 ```html
 <div class="blue"></div>
-<div class="red-outer">
-  <div class="red-inner">red inner</div>
-</div>
+<div class="red"></div>
 ```
-
-#### CSS
 
 ```css
 .blue,
-.red-inner {
+.red {
   height: 50px;
   margin: 10px 0;
 }
@@ -189,15 +183,46 @@ inline-block で width:\<percentage> を使用するよりも、この場合は�
   background: blue;
 }
 
-.red-outer {
-  overflow: hidden;
+.red {
   background: red;
 }
 ```
 
-#### 結果
+{{EmbedLiveSample("マージンの相殺の例", 120, 170)}}
 
-{{EmbedLiveSample("Margin_collapsing", 120, 170)}}
+#### マージンの相殺の防止
+
+この例では、2つ目の `<div>` を外側の `<div>` で囲み、新しい BFC を作成し、マージンの相殺を防いでいます。
+
+```html
+<div class="blue"></div>
+<div class="outer">
+  <div class="red"></div>
+</div>
+```
+
+```css
+.blue,
+.red {
+  height: 50px;
+  margin: 10px 0;
+}
+
+.blue {
+  background: blue;
+}
+
+.red {
+  background: red;
+}
+
+.outer {
+  overflow: hidden;
+  background: transparent;
+}
+```
+
+{{EmbedLiveSample("マージンの相殺の防止", 120, 170)}}
 
 ## 仕様書
 
