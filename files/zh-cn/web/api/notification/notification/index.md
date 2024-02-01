@@ -76,7 +76,7 @@ new Notification(title, options)
   - : 如果满足以下条件之一，则抛出该异常：
     - 构造函数在 {{domxref("ServiceWorkerGlobalScope")}} 上下文中调用。
     - `actions` 选项被指定且不为空。
-    - `silent` 选项是 `true` 且同时指定了 `vibrate` 选项。
+    - `silent` 选项是 `true` 且 `vibrate` 选项被同时指定。
     - `renotify` 选项是 `true` 但是 `tag` 选项为空值。
 - `DataCloneError` {{domxref("DOMException")}}
   - : 若由于某种原因序列化 `data` 选项失败，则抛出该异常。
