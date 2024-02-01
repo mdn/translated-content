@@ -5,7 +5,7 @@ slug: Web/API/Text
 
 {{ApiRef("DOM")}}
 
-**`Text`** 接口表示 DOM 树中的一个文本节点（{{domxref("Node"， "Node")}}）。
+**`Text`** 接口表示 DOM 树中的一个文本{{domxref("Node", "节点")}}。
 
 {{InheritanceDiagram}}
 
