@@ -80,7 +80,7 @@ slug: Web/HTML/Element/footer
 - 將有關作者的信息置於可以包含在 `<footer>` 元素中的 {{HTMLElement("address")}} 元素中。
 - 當最近的祖先分節內容或分節根元素是 body 元素時，頁尾應用於整個頁面。
 - `<footer>` 元素不是分節內容，因此在 [大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 中不引入新的節。
-  
+
 ## 範例
 
 ```html
