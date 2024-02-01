@@ -31,7 +31,7 @@ No utilices la sintaxis de preprocesadores, como [Sass](https://sass-lang.com/),
 
 ### No uses metodologías CSS específicas
 
-En el mismo espíritu que la guía anterior, no escribas códigos de ejemplo en MDN Web Docs utilizando una metodología CSS específica como [BEM](https://getbem.com/naming/) o [SMACSS](https://smacss.com/). Aunque son sintaxis CSS válida, las convenciones de nombres pueden resultar confusas para personas que no están familiarizadas con esas metodologías.
+En el mismo espíritu que la guía anterior, no escribas códigos de ejemplo en MDN Web Docs utilizando una metodología CSS específica como [BEM](https://getbem.com/naming/) o [SMACSS](https://smacss.com/). Aunque son sintaxis CSS válidas, las convenciones de nombres pueden resultar confusas para personas que no están familiarizadas con esas metodologías.
 
 ### No uses reinicios (resets)
 
@@ -70,7 +70,7 @@ h3 {
 
 ## Comillas dobles alrededor de los valores
 
-Cuando se pueden o deben incluir comillas, úsalas y utiliza comillas dobles. Por ejemplo:
+Cuando se puedan o deban incluir comillas, utilízalas y utiliza comillas dobles. Por ejemplo:
 
 ```css example-good
 [data-vegetable="liquid"] {
@@ -122,9 +122,9 @@ Por lo general, al enseñar los detalles de la sintaxis de CSS, es más claro y 
 
 En este ejemplo, el primer valor que se puede analizar como un [`<time>`](/es/docs/Web/CSS/time) se asigna a la propiedad [`animation-duration`](/es/docs/Web/CSS/animation-duration), y el segundo valor que se puede analizar como tiempo se asigna a [`animation-delay`](/es/docs/Web/CSS/animation-delay). (Para obtener más información, consulta los detalles de la [sintaxis de animación](/es/docs/Web/CSS/animation#syntax).)
 
-## Consultas de medios para móviles primero
+## Media queries centradas en móviles
 
-En una hoja de estilo que contiene estilos de [consulta de medios](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para diferentes tamaños de ventana gráfica de destino, primero incluye el estilo para pantallas estrechas/móviles antes de encontrar cualquier otra consulta de medios. Agrega estilos para tamaños de ventana gráfica más amplios mediante consultas de medios sucesivas. Seguir esta regla tiene muchas ventajas que se explican en el artículo de [Mobile First](/es/docs/Learn/CSS/CSS_layout/Responsive_Design).
+En una hoja de estilo que contiene estilos de [_media queries_](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para diferentes tamaños de ventana gráfica de dispositivos, primero incluye el estilo para pantallas estrechas/móviles antes de encontrar cualquier otra _media query_. Agrega estilos para tamaños de ventana gráfica más amplios mediante _media queries_ sucesivas. Seguir esta regla tiene muchas ventajas que se explican en el artículo de [Diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design).
 
 ```css example-good
 /* Diseño CSS predeterminado para pantallas estrechas */
