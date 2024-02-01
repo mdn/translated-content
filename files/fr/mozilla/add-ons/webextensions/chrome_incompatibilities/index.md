@@ -111,7 +111,7 @@ Le reste de cette section décrit les problèmes de compatibilité qui ne sont p
 
 #### declarativeContent
 
-l'API `declarativeContent` de Chrome [n'a pas encore été implémentée](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864) in Firefox.
+L'API `declarativeContent` de Chrome [n'a pas encore été implémentée](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864) dans Firefox.
 
 Firefox [ne supportera pas](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) l'API `declarativeContent.RequestContentScript`, qui est rarement utilisée et n'est pas disponible dans les versions stables de Chrome.
 

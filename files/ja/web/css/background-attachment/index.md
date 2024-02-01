@@ -1,11 +1,13 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
+l10n:
+  sourceCommit: ef75fee56d11bb7bef44240627abb97cd388b5be
 ---
 
 {{CSSRef}}
 
-**`background-attachment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像の位置を{{glossary("Viewport", "ビューポート")}}の中で固定するか、包含ブロックと一緒にスクロールするかを設定します。
+**`background-attachment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像の位置を{{glossary("viewport", "ビューポート")}}の中で固定するか、包含ブロックと一緒にスクロールするかを設定します。
 
 {{EmbedInteractiveExample("pages/css/background-attachment.html")}}
 
@@ -21,6 +23,7 @@ background-attachment: local;
 background-attachment: inherit;
 background-attachment: initial;
 background-attachment: revert;
+background-attachment: revert-layer;
 background-attachment: unset;
 ```
 
@@ -66,7 +69,7 @@ p {
 }
 ```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
 {{EmbedLiveSample("単純な例")}}
 
@@ -116,4 +119,4 @@ p {
 
 ## 関連情報
 
-- [複数の背景画像を使う](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [複数の背景画像を使う](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
