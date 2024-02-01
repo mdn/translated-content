@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSStyleSheet`** 인터페이스는 단일 [CSS](/en-US/docs/Web/CSS) 스타일 시트를 나타내며, 그 안에 포함된 규칙 목록을 검사하고 수정할 수 있게 합니다. 이 인터페이스는 그 부모인 {{domxref("StyleSheet")}}로부터 속성과 메서드를 상속합니다.
+**`CSSStyleSheet`** 인터페이스는 단일 [CSS](/ko/docs/Web/CSS) 스타일 시트를 나타내며, 그 안에 포함된 규칙 목록을 검사하고 수정할 수 있게 합니다. 이 인터페이스는 그 부모인 {{domxref("StyleSheet")}}로부터 속성과 메서드를 상속합니다.
 
 {{InheritanceDiagram}}
 
