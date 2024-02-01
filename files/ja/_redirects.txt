@@ -2918,7 +2918,7 @@
 /ja/docs/Web/API/IDBKeyRange/lowerBound	/ja/docs/Web/API/IDBKeyRange/lowerBound_static
 /ja/docs/Web/API/IDBKeyRange/only	/ja/docs/Web/API/IDBKeyRange/only_static
 /ja/docs/Web/API/IDBKeyRange/upperBound	/ja/docs/Web/API/IDBKeyRange/upperBound_static
-/ja/docs/Web/API/IDBLocaleAwareKeyRange	/ja/docs/conflicting/Web/API/IDBIndex
+/ja/docs/Web/API/IDBLocaleAwareKeyRange	/ja/docs/Web/API/IDBIndex
 /ja/docs/Web/API/IDBRequest/onsuccess	/ja/docs/Web/API/IDBRequest/success_event
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
