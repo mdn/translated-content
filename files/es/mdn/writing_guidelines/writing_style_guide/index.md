@@ -1,15 +1,7 @@
 ---
 title: Guía de estilo
-slug: MDN/Writing_guidelines/Writing_style_guide 
+slug: MDN/Writing_guidelines/Writing_style_guide
 ---
-
-
-
-
-
-
-
-
 
 {{MDNSidebar}}
 
