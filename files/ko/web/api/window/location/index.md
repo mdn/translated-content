@@ -2,6 +2,8 @@
 title: "Window: location 속성"
 short-title: location
 slug: Web/API/Window/location
+l10n:
+  sourceCommit: c35cc9cdf8712f0400fb646b33465b295230b7b2
 ---
 
 {{APIRef}}
