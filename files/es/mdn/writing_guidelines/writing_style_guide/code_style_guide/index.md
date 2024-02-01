@@ -1,6 +1,8 @@
 ---
 title: Directrices para escribir ejemplos de código
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+l10n:
+  sourceCommit: f7c186696980fee97e72261370d7b5a8c1cd9302
 ---
 
 {{MDNSidebar}}
@@ -33,7 +35,7 @@ Algunas mejores prácticas adicionales incluyen:
 
 - El ejemplo de código debe ser corto y mostrar idealmente solo la característica que te interesa de inmediato.
 - **Solo** incluye el código que es esencial para el ejemplo. Una gran cantidad de código no relevante puede distraer o confundir fácilmente al lector. Si deseas proporcionar un ejemplo completo y más extenso, colócalo en uno de nuestros [repositorios de GitHub](https://github.com/mdn/) (o en JSBin, Codepen u otro similar) y luego proporciona el enlace a la versión completa arriba o debajo del fragmento.
-- No incluyas código innecesario del lado del servidor, bibliotecas, marcos, preprocesadores y otras dependencias similares. Esto dificulta la portabilidad y la comprensión del código. Usa código simple siempre que sea posible.
+- No incluyas código innecesario del lado del servidor, bibliotecas, marcos de trabajo (_frameworks_), preprocesadores y otras dependencias similares. Esto dificulta la portabilidad y la comprensión del código. Usa código simple siempre que sea posible.
 - No asumas el conocimiento de los lectores sobre bibliotecas, marcos, preprocesadores u otras características no nativas. Por ejemplo, utiliza nombres de clases que tengan sentido dentro del ejemplo en lugar de nombres de clases que tengan sentido para usuarios de BEM o Bootstrap.
 - Escribe tu código de manera limpia y comprensible, incluso si no es la forma más eficiente de escribirlo.
 - Sé inclusivo en tus ejemplos de código; considera que los lectores de MDN provienen de todo el mundo y son diversos en sus etnias, religiones, edades, géneros, etc. Asegúrate de que el texto en los ejemplos de código refleje esa diversidad y sea inclusivo para todas las personas.
@@ -62,32 +64,32 @@ Si el bloque de código es pseudocódigo, la salida de un comando, o de alguna m
 
 - Las líneas de código no deben ser tan largas que requieran desplazamiento horizontal para leerlas.
 - Como práctica recomendada, mantiene las líneas de código hasta un máximo de 80 caracteres de longitud (64 para [ejemplos interactivos](https://github.com/mdn/interactive-examples)).
-- Rompe las líneas largas en puntos naturales de ruptura por el bien de la legibilidad, pero no a expensas de las mejores prácticas.
+- Divide las líneas largas en puntos naturales de ruptura por el bien de la legibilidad, pero no a expensas de las mejores prácticas.
 
 Por ejemplo, esto no es ideal:
 
 ```js example-bad
 let tommyCat =
-  "Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.";
+  "Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña que pudiera haberse metido en su poderosa garganta. Más de una rata callejera gorda había encontrado su muerte mientras miraba fijamente el cavernoso cañón de esta impresionante máquina merodeadora.";
 ```
 
 Esto es mejor, pero algo incómodo:
 
 ```js
 const tommyCat =
-  "Said Tommy the Cat as he reeled back to clear whatever foreign " +
-  "matter may have nestled its way into his mighty throat. Many a fat alley rat " +
-  "had met its demise while staring point blank down the cavernous barrel of " +
-  "this awesome prowling machine.";
+  "Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña " +
+  "que pudiera haberse metido en su poderosa garganta. Más de una rata callejera gorda " +
+  "había encontrado su muerte mientras miraba fijamente el cavernoso cañón de esta " +
+  "impresionante máquina merodeadora.";
 ```
 
 Incluso mejor es usar una plantilla literal:
 
 ```js example-good
-const tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
-  matter may have nestled its way into his mighty throat. Many a fat alley rat
-  had met its demise while staring point blank down the cavernous barrel of
-  this awesome prowling machine.`;
+const tommyCat = `Dijo Tommy el Gato mientras retrocedía para limpiar cualquier materia extraña
+  que pudiera haberse metido en su poderosa garganta. Más de una rata callejera gorda
+  había encontrado su muerte mientras miraba fijamente el cavernoso cañón de esta
+  impresionante máquina merodeadora`";
 ```
 
 ```js example-good
@@ -97,7 +99,7 @@ if (
   obj.SOME_OTHER_CONDITION ||
   obj.YET_ANOTHER_CONDITION
 ) {
-  /* something */
+  /* algo */
 }
 
 const toolkitProfileService = Components.classes[
@@ -161,7 +163,7 @@ Notarás en esta página que los bloques de código que representan buenas prác
 
 Puedes seguir el mismo estilo al escribir ejemplos de código. No es necesario utilizar este estilo en todas partes, solo en páginas donde desees destacar específicamente buenas y malas prácticas en tus ejemplos de código.
 
-Para lograr esta representación, utiliza "fences de código" para delimitar el bloque de código, seguido de la cadena de información del lenguaje. Por ejemplo:
+Para lograr esta representación, utiliza "vallas de código" para delimitar el bloque de código, seguido de la cadena de información del lenguaje. Por ejemplo:
 
 ```js
 function myFunc() {
