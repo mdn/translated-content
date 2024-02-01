@@ -14,6 +14,7 @@ l10n:
 스타일 시트는 스타일 시트에 포함된 각 규칙을 나타내는 객체인 {{domxref("CSSRule")}}의 모음으로 구성되어 있습니다. 그 규칙들은 스타일 시트의 {{domxref("CSSStyleSheet.cssRules", "cssRules")}} 속성으로부터 얻을 수 있는 {{domxref("CSSRuleList")}}에 포함되어 있습니다.
 
 예를 들어, 어떤 규칙은 다음과 같은 스타일을 포함하는 {{domxref("CSSStyleRule")}} 객체일 수 있습니다.
+
 ```css
 h1,
 h2 {
