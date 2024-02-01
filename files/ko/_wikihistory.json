@@ -1703,14 +1703,6 @@
     "modified": "2020-01-07T12:20:00.841Z",
     "contributors": ["peterbe", "wbamberg", "LimeClover"]
   },
-  "MDN/Contribute": {
-    "modified": "2019-01-16T19:13:18.509Z",
-    "contributors": ["wbamberg", "zziuni", "hoony", "Junny", "Sheppy"]
-  },
-  "MDN/Contribute/Processes": {
-    "modified": "2019-01-17T02:54:48.050Z",
-    "contributors": ["wbamberg", "zziuni"]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2019-09-10T08:53:31.700Z",
     "contributors": [
@@ -2796,6 +2788,10 @@
     "modified": "2020-10-15T21:47:43.585Z",
     "contributors": ["DeadIntegral", "apple77y", "rlaxognsk"]
   },
+  "Web/API/Element/input_event": {
+    "modified": "2020-10-15T22:27:30.949Z",
+    "contributors": ["composite"]
+  },
   "Web/API/Element/insertAdjacentHTML": {
     "modified": "2020-10-15T21:37:34.409Z",
     "contributors": ["alattalatta", "DeadIntegral", "dragonist"]
@@ -3160,10 +3156,6 @@
   "Web/API/HTMLElement/innerText": {
     "modified": "2020-10-15T22:08:26.441Z",
     "contributors": ["alattalatta", "DeadIntegral"]
-  },
-  "Web/API/HTMLElement/input_event": {
-    "modified": "2020-10-15T22:27:30.949Z",
-    "contributors": ["composite"]
   },
   "Web/API/HTMLElement/offsetParent": {
     "modified": "2020-10-15T22:00:41.448Z",
@@ -10769,6 +10761,14 @@
   "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
     "modified": "2020-02-15T07:39:57.101Z",
     "contributors": ["Netaras", "hyeonseok", "narae_lee"]
+  },
+  "conflicting/MDN/Community/Contributing": {
+    "modified": "2019-01-16T19:13:18.509Z",
+    "contributors": ["wbamberg", "zziuni", "hoony", "Junny", "Sheppy"]
+  },
+  "conflicting/MDN/Community/Contributing_6f769e24821efb7b69fc8d984aa30a77": {
+    "modified": "2019-01-17T02:54:48.050Z",
+    "contributors": ["wbamberg", "zziuni"]
   },
   "conflicting/Web/API/XSLTProcessor": {
     "modified": "2019-03-23T23:42:13.222Z",
