@@ -1,8 +1,6 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
-page-type: web-api-interface
-browser-compat: api.CSSStyleSheet
 l10n:
   sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
