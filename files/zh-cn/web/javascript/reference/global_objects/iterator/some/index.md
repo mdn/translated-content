@@ -26,7 +26,7 @@ some(callbackFn)
 
 ### 返回值
 
-如果回调函数返回了一个 {{Glossary("truthy", "真值")}} ，则返回 `true`。否则，返回 `false`。
+如果回调函数返回了一个{{Glossary("truthy", "真值")}}，则返回 `true`。否则，返回 `false`。
 
 ## 描述
 
