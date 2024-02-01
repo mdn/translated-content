@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
-{{domxref("Notifications API", "", "", "nocode")}} 的 **`Notification`** 接口用于配置以向用户显示桌面通知。
+{{domxref("Notifications API", "", "", "nocode")}} 的 **`Notification`** 接口用于向用户配置和显示桌面通知。
 
-这些通知的外观和功能因平台而异，但通常它们会提供一种异步向用户提供信息的方式。
+这些通知的外观和功能因平台而异，但通常它们提供了一种异步向用户提供信息的方式。
 
 {{AvailableInWorkers}}
 
@@ -40,13 +40,13 @@ _还继承了其父接口 {{domxref("EventTarget")}} 的属性。_
 _还继承了其父接口 {{domxref("EventTarget")}} 的属性。_
 
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 在构造函数的 `options` 参数中指定的通知的操作数组。
+  - : 在构造函数的 `options` 参数中指定的通知的操作的数组。
 - {{domxref("Notification.badge")}} {{ReadOnlyInline}}
   - : 返回一个包含图像 URL 的字符串，在没有足够的空间来显示通知本身（例如 Android 通知栏）时表示通知。在 Android 设备上，徽章应适应高达 4 倍分辨率（约 96 x 96 像素）的设备，并且图像将自动屏蔽。
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的正文字符串。
 - {{domxref("Notification.data")}} {{ReadOnlyInline}}
-  - : 返回一个通知的数据的结构化克隆。
+  - : 返回一个通知的结构化克隆的数据。
 - {{domxref("Notification.dir")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的文本方向。
 - {{domxref("Notification.icon")}} {{ReadOnlyInline}}
