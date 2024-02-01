@@ -7,7 +7,6 @@ slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 
 Las pautas descritas en este artículo se aplican al estilo y formato de los ejemplos de código, independientemente del lenguaje. Para obtener pautas sobre qué contenido incluir al escribir ejemplos de código, consulta la [guía de estilo de escritura](/es/docs/MDN/Writing_guidelines/Writing_style_guide#code_examples).
 
-
 Para pautas específicas de tecnología, consulta los siguientes artículos:
 
 - [Directrices HTML](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
@@ -26,7 +25,6 @@ Los ejemplos de código que agregues a MDN Web Docs deben ser:
 
 Existe una consideración general que debes tener en cuenta: **Los lectores copiarán y pegarán el fragmento de código en su propio código y es posible que lo utilicen en producción.**
 
-
 Por lo tanto, debes asegurarte de que el ejemplo de código sea utilizable, siga las mejores prácticas generalmente aceptadas y **no** realice acciones que puedan hacer que una aplicación sea insegura, ineficiente, abultada o inaccesible. Si el ejemplo de código no es ejecutable o no es apto para producción, asegúrate de incluir una advertencia en un comentario de código y en el texto explicativo; por ejemplo, si es solo un fragmento y no un ejemplo completo, deja esto claro. Esto también significa que debes proporcionar **toda** la información necesaria para ejecutar el ejemplo, incluidas las dependencias e información de configuración.
 
 Los ejemplos de código deben ser lo más autosuficientes y comprensibles posible. El objetivo no es necesariamente producir código eficiente e ingenioso que impresione a expertos y tenga una gran funcionalidad, sino más bien producir ejemplos de trabajo reducidos que se puedan entender lo más rápido posible.
@@ -41,7 +39,6 @@ Algunas mejores prácticas adicionales incluyen:
 - Sé inclusivo en tus ejemplos de código; considera que los lectores de MDN provienen de todo el mundo y son diversos en sus etnias, religiones, edades, géneros, etc. Asegúrate de que el texto en los ejemplos de código refleje esa diversidad y sea inclusivo para todas las personas.
 - No uses malas prácticas por brevedad (como elementos de presentación como {{HTMLElement("big")}} o {{domxref("Document.write", "document.write()")}}); hazlo correctamente.
 - En el caso de demostraciones de API, si estás utilizando múltiples API juntas, señala qué APIs se incluyen y qué características provienen de cada una.
-
 
 ## Pautas para el formato
 
