@@ -170,5 +170,5 @@ h2 {
 
 ## 같이 보기
 
-- [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [CSS Object Model](/ko/docs/Web/API/CSS_Object_Model)
+- [Using dynamic styling information](/ko/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
