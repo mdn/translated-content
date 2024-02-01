@@ -15,16 +15,16 @@ l10n:
 
 下表显示了不同类型节点的返回值：
 
-| 节点类型                                 | 返回值           |
-|--------------------------------------|---------------|
+| 节点类型                             | 返回值               |
+| ------------------------------------ | -------------------- |
 | {{domxref("CDATASection")}}          | CDATA 部分的文本内容 |
-| {{domxref("Comment")}}               | 注释的内容         |
-| {{domxref("Document")}}              | `null`        |
-| {{domxref("DocumentFragment")}}      | `null`        |
-| {{domxref("DocumentType")}}          | `null`        |
-| {{domxref("Element")}}               | `null`        |
-| {{domxref("NamedNodeMap")}}          | `null`        |
-| {{domxref("ProcessingInstruction")}} | 不包括目标的全部内容    |
+| {{domxref("Comment")}}               | 注释的内容           |
+| {{domxref("Document")}}              | `null`               |
+| {{domxref("DocumentFragment")}}      | `null`               |
+| {{domxref("DocumentType")}}          | `null`               |
+| {{domxref("Element")}}               | `null`               |
+| {{domxref("NamedNodeMap")}}          | `null`               |
+| {{domxref("ProcessingInstruction")}} | 不包括目标的全部内容 |
 | {{domxref("Text")}}                  | 文本节点的内容       |
 
 > **备注：** 如果 `nodeValue` 的值为 `null`，则对它赋值也不会有任何效果。
