@@ -1,8 +1,7 @@
 ---
 title: IDBLocaleAwareKeyRange
-slug: Web/API/IDBLocaleAwareKeyRange
-l10n:
-  sourceCommit: 59a0a003281f70f55ac524bb3c370b19f0a7a14a
+slug: conflicting/Web/API/IDBIndex
+original_slug: Web/API/IDBLocaleAwareKeyRange
 ---
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}{{Non-standard_Header}}
