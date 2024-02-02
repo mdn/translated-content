@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`target`** 属性是 {{domxref("ProcessingInstruction")}} 接口的一个只读属性，它表示该 `处理指令` 的目标。
+**`target`** 属性是 {{domxref("ProcessingInstruction")}} 接口的一个只读属性，它表示该处理指令的目标。
 
 例子：
 
@@ -75,4 +75,4 @@ document.querySelector("pre").textContent = result;
 
 ## 参见
 
-- The [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)
+- [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)
