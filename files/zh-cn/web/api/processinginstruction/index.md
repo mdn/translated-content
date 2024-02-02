@@ -31,7 +31,7 @@ _此接口从其父接口 {{domxref("CharacterData")}}、{{domxref("Node")}} 和
 
 - {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
 
-  - : 常用于获取包含在 XML 或 HTML 文档中的样式表，如果存在关联的 {{domxref("StyleSheet")}} 对象则返回该对象，如果没有则返回 `null` 。
+  - : 常用于获取包含在 XML 或 HTML 文档中的样式表，如果存在关联的 {{domxref("StyleSheet")}} 对象则返回该对象，如果没有则返回 `null`。
 
 - {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}
   - : 常用于获取处理指令的目标。
