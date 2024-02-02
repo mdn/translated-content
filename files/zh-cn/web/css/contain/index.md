@@ -17,7 +17,7 @@ slug: Web/CSS/contain
 >
 > 1. 新的[包含区块](/zh-CN/docs/Web/CSS/Containing_block)（针对其 {{CSSXref("position")}} 属性为 `absolute` 或 `fixed` 的后代元素）。
 > 2. 新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。
-> 3. 新的[区块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
+> 3. 新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)。
 
 ## 语法
 

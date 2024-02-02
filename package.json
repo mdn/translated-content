@@ -21,7 +21,7 @@
     "lint:json": "prettier -c \"**/*.json(c)?\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && yarn autocorrect --lint . && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "prepare": "husky install"
+    "prepare": "husky || true"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -31,8 +31,8 @@
     "cld": "^2.9.1",
     "fdir": "^6.1.1",
     "front-matter": "^4.0.2",
-    "husky": "9.0.6",
-    "lint-staged": "15.2.0",
+    "husky": "9.0.7",
+    "lint-staged": "15.2.1",
     "markdown-it": "^14.0.0",
     "markdownlint-cli2": "0.12.1",
     "markdownlint-rule-search-replace": "1.2.0",
