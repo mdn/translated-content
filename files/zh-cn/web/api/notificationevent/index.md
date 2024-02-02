@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Notifications")}}
 
-{{domxref("Notifications API", "", "", "nocode")}} 的 **`NotificationEvent`** 接口表示在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上发送的通知事件。
+{{domxref("Notifications API", "", "", "nocode")}} 的 **`NotificationEvent`** 接口表示在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上触发的通知事件。
 
 该接口继承自 {{domxref("ExtendableEvent")}} 接口。
 
@@ -40,7 +40,7 @@ self.addEventListener("notificationclick", (event) => {
   console.log(`通知被点击：${event.notification.tag}`);
   event.notification.close();
 
-  // 这会查看当前标签页是否已打开并聚焦
+  // 这会检查当前标签页是否已打开并聚焦
   event.waitUntil(
     clients
       .matchAll({
