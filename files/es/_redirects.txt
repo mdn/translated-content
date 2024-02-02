@@ -1965,6 +1965,7 @@
 /es/docs/Web/Guide/API/Vibration	/es/docs/Web/API/Vibration_API
 /es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/conflicting/Web/API/WebRTC_API
 /es/docs/Web/Guide/CSS	/es/docs/Learn/CSS
+/es/docs/Web/Guide/CSS/Block_formatting_context	/es/docs/Web/CSS/CSS_display/Block_formatting_context
 /es/docs/Web/Guide/Graphics	/es/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /es/docs/Web/Guide/HTML	/es/docs/Learn/HTML
 /es/docs/Web/Guide/HTML/Canvas_tutorial	/es/docs/Web/API/Canvas_API/Tutorial
