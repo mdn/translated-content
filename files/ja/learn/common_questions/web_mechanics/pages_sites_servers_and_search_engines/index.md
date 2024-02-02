@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンなどのウェブに関係する色々な概念に関して解説します。これらの用語はウェブの初心者を混乱させたり、間違って使われたりしています。それぞれの意味を学びましょう。
 

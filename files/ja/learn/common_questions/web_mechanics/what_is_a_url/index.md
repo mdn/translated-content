@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では URL (Uniform Resource Locator) について説明し、その内容と構造を説明します。
 

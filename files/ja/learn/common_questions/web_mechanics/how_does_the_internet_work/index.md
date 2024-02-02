@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事はインターネットの仕組みとどのように動いているかを説明します。
 

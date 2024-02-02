@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 <table>
   <tbody>
