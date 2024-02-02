@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、ウェブサーバーとは何か、ウェブサーバーの仕組み、なぜウェブサーバーが重要なのかを説明します。
 
