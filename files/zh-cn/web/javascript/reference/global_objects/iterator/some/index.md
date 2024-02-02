@@ -26,11 +26,11 @@ some(callbackFn)
 
 ### 返回值
 
-如果回调函数返回了一个{{Glossary("truthy", "真值")}}，则返回 `true`。否则，返回 `false`。
+如果回调函数对至少一个元素返回了{{Glossary("truthy", "真值")}}，则返回 `true`。否则，返回 `false`。
 
 ## 描述
 
-`some()` 迭代该迭代器，并对每个元素调用一次 `callbackFn` 函数。如果 `callbackFn` 返回真值，则立即返回 `true`。否则，它会一直迭代到迭代器的末尾，并返回 `false`。如果 `some()` 返回 `true`，则会调用底层迭代器的 `return()` 方法。
+`some()` 迭代该迭代器，并对每个元素调用一次 `callbackFn` 函数。如果 `callbackFn` 返回真值，则立即返回 `true`。否则，它会一直迭代到迭代器的末尾，并返回 `false`。如果 `some()` 返回 `true`，则会调用底层迭代器的 `return()` 方法以关闭它。
 
 迭代器辅助方法相对于数组方法的主要优势在于它们能够处理无限迭代器。对于无限迭代器，`some()` 会在第一次找到真值时立即返回 `true`。如果 `callbackFn` 始终返回假值，则该方法永远不会返回。
 
