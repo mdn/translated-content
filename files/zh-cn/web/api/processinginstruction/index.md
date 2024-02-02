@@ -1,8 +1,6 @@
 ---
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
-page-type: web-api-interface
-browser-compat: api.ProcessingInstruction
 l10n:
   sourceCommit: b5c766f4eecb4fcf9d8ba175caddb94f7c3e9d20
 ---

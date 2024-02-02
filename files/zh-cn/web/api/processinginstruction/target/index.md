@@ -2,8 +2,6 @@
 title: "ProcessingInstruction: target property"
 short-title: target
 slug: Web/API/ProcessingInstruction/target
-page-type: web-api-instance-property
-browser-compat: api.ProcessingInstruction.target
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---

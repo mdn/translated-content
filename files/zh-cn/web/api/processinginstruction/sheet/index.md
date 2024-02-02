@@ -2,8 +2,6 @@
 title: "ProcessingInstruction: sheet property"
 short-title: sheet
 slug: Web/API/ProcessingInstruction/sheet
-page-type: web-api-instance-property
-browser-compat: api.ProcessingInstruction.sheet
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
