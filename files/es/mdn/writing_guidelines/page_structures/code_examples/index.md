@@ -1,5 +1,5 @@
 ---
-title: Code examples
+title: Ejemplos de código
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 l10n:
   sourceCommit: d2a6da680830dbd7b1cf315e84a6b27ed4010fd2
