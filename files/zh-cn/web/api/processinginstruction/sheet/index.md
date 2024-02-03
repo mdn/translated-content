@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`sheet`** 属性是 {{domxref("ProcessingInstruction")}} 接口的一个只读属性，它包含了与该处理指令相关联的样式表信息。
+**`sheet`** 属性是 {{domxref("ProcessingInstruction")}} 接口的一个只读属性，它包含了与该 `ProcessingInstruction ` 相关联的样式表信息。
 
 处理指令 `xml-stylesheet` 常用于在 XML 文件中关联样式表。
 
@@ -21,9 +21,7 @@ l10n:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="rule.css"?>
-<root>
-  <!-- 其他元素和内容 -->
-</root>
+…
 ```
 
 处理指令的 `sheet` 属性将返回描述 `rule.css` 的 {{domxref("StyleSheet")}} 对象。

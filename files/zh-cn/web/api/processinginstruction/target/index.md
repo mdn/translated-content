@@ -8,9 +8,9 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`target`** 属性是 {{domxref("ProcessingInstruction")}} 接口的一个只读属性，它表示该处理指令的目标。
+**`target`** 属性是 {{domxref("ProcessingInstruction")}} 接口的一个只读属性，它表示该 `ProcessingInstruction` 的目标。
 
-例子：
+例如：
 
 ```html
 <?xml version="1.0"?>
@@ -20,7 +20,7 @@ l10n:
 
 ## 值
 
-是一个包含应用程序名称的字符串。
+一个包含应用程序名称的字符串。
 
 ## 示例
 
