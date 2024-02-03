@@ -52,5 +52,3 @@ Uma citação da especificação SVG 1.1 ilustra isso:
 > \[...] suponha que o agente do usuário possa determinar a partir de seu ambiente que "1px" corresponde a "0,2822222mm" (ou seja, 90dpi). Então, para todo o processamento de conteúdo SVG: [...] "1cm" é igual a "35,43307px" (e, portanto, 35,43307 unidades de usuário)
 
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
-
-{{ PreviousNext("SVG/Tutoriel/Getting_Started", "SVG/Tutoriel/Basic_Shapes") }}
