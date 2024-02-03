@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 `permission` 只读静态属性表明当前用户是否授予当前来源（origin）显示 web 通知的权限。
+{{domxref("Notification")}} 接口的 **`permission`** 只读静态属性表明当前用户是否授予当前来源（origin）显示 web 通知的权限。
 
 {{AvailableInWorkers}}
 
