@@ -196,4 +196,4 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 - [Web API](/zh-CN/docs/Web/API)
 - [JavaScript](/zh-CN/docs/Web/JavaScript)
 - [学习区](/zh-CN/docs/Learn)
-- [为 MDN 做贡献](/zh-CN/docs/MDN/Contribute)
+- [为 MDN 做贡献](/zh-CN/docs/MDN/Community/Contributing)

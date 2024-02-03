@@ -3721,24 +3721,6 @@
     "modified": "2020-08-12T13:57:26.219Z",
     "contributors": ["mfuji09"]
   },
-  "MDN/Contribute": {
-    "modified": "2019-01-16T18:55:44.803Z",
-    "contributors": [
-      "wbamberg",
-      "Uemmra3",
-      "Marsf",
-      "akiomik",
-      "mamodayo",
-      "x2357",
-      "Fajrovulpo",
-      "koheishingai",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Processes": {
-    "modified": "2020-07-22T12:19:59.681Z",
-    "contributors": ["wbamberg", "hamasaki", "jswisher"]
-  },
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-08-06T03:36:58.834Z",
     "contributors": ["mfuji09", "silverskyvicto", "wbamberg"]
@@ -9913,7 +9895,7 @@
     "modified": "2020-05-28T00:42:35.014Z",
     "contributors": ["nokazn", "mfuji09", "woodmix"]
   },
-  "Web/API/Houdini": {
+  "Web/API/Houdini_APIs": {
     "modified": "2020-07-24T06:19:03.585Z",
     "contributors": ["Wind1808"]
   },
@@ -16383,6 +16365,16 @@
     "modified": "2020-10-15T22:01:55.406Z",
     "contributors": ["mfuji09"]
   },
+  "Web/CSS/CSS_display/Block_formatting_context": {
+    "modified": "2019-10-20T13:29:22.992Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "Uemmra3",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
   "Web/CSS/CSS_filter_effects": {
     "modified": "2020-10-15T22:11:38.008Z",
     "contributors": ["mfuji09"]
@@ -16401,10 +16393,6 @@
   "Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container": {
     "modified": "2019-12-09T15:33:55.799Z",
     "contributors": ["mfuji09", "harupiyo", "dynamis", "reppets"]
-  },
-  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
-    "modified": "2020-08-14T09:23:43.070Z",
-    "contributors": ["mfuji09", "Uemmra3", "sutara79"]
   },
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-08-14T10:39:21.091Z",
@@ -20279,16 +20267,6 @@
       "fucsm",
       "ethertank",
       "Sheppy"
-    ]
-  },
-  "Web/Guide/CSS/Block_formatting_context": {
-    "modified": "2019-10-20T13:29:22.992Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "Uemmra3",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "Web/Guide/CSS/Getting_started/Challenge_solutions": {
@@ -30190,21 +30168,9 @@
     "modified": "2020-10-15T22:05:58.801Z",
     "contributors": ["yumemi-kuwahara"]
   },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-03-23T23:28:42.286Z",
-    "contributors": ["yyss", "teoli"]
-  },
   "conflicting/Web/Accessibility/ARIA/Roles/alert_role": {
     "modified": "2019-03-18T21:24:32.583Z",
     "contributors": ["8845musign"]
-  },
-  "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
-    "modified": "2019-03-23T23:28:50.521Z",
-    "contributors": ["yyss", "teoli"]
-  },
-  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
-    "modified": "2019-03-23T23:28:35.294Z",
-    "contributors": ["yyss", "teoli"]
   },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
@@ -30308,10 +30274,6 @@
   "orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
     "modified": "2019-03-18T21:20:29.728Z",
     "contributors": ["mfuji09"]
-  },
-  "orphaned/Web/CSS/CSS_Properties_Reference": {
-    "modified": "2019-03-18T21:41:37.652Z",
-    "contributors": ["mfuji09", "Uemmra3"]
   },
   "orphaned/Web/Compatibility_FAQ": {
     "modified": "2019-03-23T23:03:33.809Z",

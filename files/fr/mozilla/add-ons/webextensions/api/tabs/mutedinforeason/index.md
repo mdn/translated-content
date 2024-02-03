@@ -3,7 +3,7 @@ title: tabs.MutedInfoReason
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Spécifie la raison pour laquelle un onglet a été désactivé ou désactivé.
 

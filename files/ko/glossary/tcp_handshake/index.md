@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-{{glossary('TCP','전송 제어 프로토콜(Transmission Control Protocol)')}}은 uses a **3방향 핸드셰이크(three-way handshake)** (TCP-handshake, 3개의 메시지 핸드셰이크 및/또는 SYN-SYN-ACK로 알려져 있습니다)를 사용하여 IP 기반 네트워크를 통해 TCP/IP 연결을 설정합니다.
+{{glossary('TCP','전송 제어 프로토콜(Transmission Control Protocol)')}}은 **3방향 핸드셰이크(three-way handshake)** (TCP-handshake, 3개의 메시지 핸드셰이크 및/또는 SYN-SYN-ACK로 알려져 있습니다)를 사용하여 IP 기반 네트워크를 통해 TCP/IP 연결을 설정합니다.
 
 TCP 세션을 협상하고 시작하기 위해 TCP가 전송하는 세 가지 메시지는 각각 **SYN(SYNchronize)**, **SYN-ACK(SYNchronize-ACKnowledgement)**, **ACK(ACKnowledge)** 라는 이름을 가집니다. 세 가지 메시지 메커니즘은 서로 정보를 주고 받기를 윈하는 두 컴퓨터가 HTTP 브라우저 요청과 같은 데이터를 전송하기 전에 연결 매개변수를 협상할 수 있도록 설계되었습니다.
 

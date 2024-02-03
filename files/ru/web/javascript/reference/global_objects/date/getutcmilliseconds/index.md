@@ -3,7 +3,7 @@ title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Сводка
 

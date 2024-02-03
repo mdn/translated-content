@@ -47,7 +47,7 @@
 >
 > 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
 >
-> [**시작하기**](/en-US/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 ```
 
 ### 카드 번역
