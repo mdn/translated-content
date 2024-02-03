@@ -11,7 +11,7 @@ slug: Web/HTML/Element/pre
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
-如果您需要在 `<pre>` 標籤內顯示保留字元，如 `<`、 `>`、 `&` 和 `"`，這些字元必須使用相應的 [HTML 實體](/zh-TW/docs/Glossary/Entity) 進行轉義。
+如果你需要在 `<pre>` 標籤內顯示保留字元，如 `<`、 `>`、 `&` 和 `"`，這些字元必須使用相應的 [HTML 實體](/zh-TW/docs/Glossary/Entity) 進行轉義。
 
 ## 屬性
 
