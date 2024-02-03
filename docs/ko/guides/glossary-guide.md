@@ -150,7 +150,7 @@
 | Block              | 블록            |                             |                             |
 | Border             | 테두리          |                             |                             |
 | Box                | 박스            |                             |                             |
-| Descriptor         | 설명자         |                             |                             |
+| Descriptor         | 설명자          |                             |                             |
 | Flexbox            | 플렉스박스      |                             |                             |
 | Flow               | 플로            | 레이아웃 방식일 경우에 한정 |                             |
 | Formal syntax      | 형식 구문       |                             |                             |
@@ -171,13 +171,14 @@
 | Argument                | 전달인자, 인수  |               | [참고 링크](https://github.com/mdn/translated-content/pull/3888)                         |
 | Blocking operation      | 블로킹 연산     |               |                                                                                          |
 | Callback                | 콜백            |               |                                                                                          |
+| Decimal equivalent      | 10진수 변환값   |               |                                                                                          |
 | Dictionary              | 사전            |               | [참고 링크](https://github.com/mdn/translated-content/pull/10976#discussion_r1073704799) |
 | Fulfilled               | 이행(함)        |               |                                                                                          |
 | Handler                 | 처리기          | 이벤트 처리기 |                                                                                          |
 | Interface               | 인터페이스      |               |                                                                                          |
 | Iterate                 | 순회            |               |                                                                                          |
 | Listener                | 수신기          | 이벤트 수신기 |                                                                                          |
-| Mixin                   | 믹스인          |               |
+| Mixin                   | 믹스인          |               |                                                                                          |
 | Mutating method         | 변경 메서드     |               |                                                                                          |
 | Non-blocking operation  | 논블로킹 연산   |               |                                                                                          |
 | Parameter               | 매개변수        |               |                                                                                          |
