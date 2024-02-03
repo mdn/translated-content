@@ -77,7 +77,7 @@ slug: Web/HTML/Element/search
 
 {{EmbedLiveSample('Web app search')}}
 
-> **注意：** 請記住，一些用戶沒有 JavaScript，且在 JavaScript 成功下載、解析和執行之前，沒有任何用戶運行 JavaScript，請確保您的用戶可以在禁用 JavaScript 的情況下訪問您站點的內容。
+> **注意：** 請記住，一些用戶沒有 JavaScript，且在 JavaScript 成功下載、解析和執行之前，沒有任何用戶運行 JavaScript，請確保你的用戶可以在禁用 JavaScript 的情況下訪問你站點的內容。
 
 ### 多個搜尋
 
