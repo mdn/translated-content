@@ -54,6 +54,7 @@
 | Instance methods       | 인스턴스 메서드 |                                                                                                                                         |
 | Learn More             | 더 알아보기     | [링크][Mutable]                                                                                                                         |
 | Next steps             | 다음 단계       | [링크][2D_breakout_game_Phaser]                                                                                                         |
+| Overview               | 개요            |                                                                                                                                         |
 | Polyfill               | 폴리필          | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
 | Reference              | 참고서          |                                                                                                                                         |
 | See also               | 같이 보기       | [링크][target]                                                                                                                          |
@@ -105,6 +106,7 @@
 | Encoding           | 인코딩          | [링크](https://github.com/mdn/translated-content/issues/12452)                                         |
 | Entity             | 개체            |                                                                                                        |
 | Enumerated         | 열거형          |                                                                                                        |
+| Error              | 오류            |                                                                                                        |
 | Expression         | 표현식 또는 식  |                                                                                                        |
 | Framework          | 프레임워크      |                                                                                                        |
 | Global             | 전역            |                                                                                                        |
@@ -129,6 +131,7 @@
 | Statement          | 명령문 또는 문  |                                                                                                        |
 | short-circuit      |                 |                                                                                                        |
 | User agent         | 사용자 에이전트 |                                                                                                        |
+| Update             | 갱신            |                                                                                                        |
 
 ## CSS
 
@@ -143,56 +146,60 @@
 
 **사전 순으로 용어집을 편집해주세요.**
 
-| 용어               | 번역            | 기타                        | 참고 링크                   |
-| ------------------ | --------------- | --------------------------- | --------------------------- |
-| At-rule            | @규칙           |                             |                             |
-| Block              | 블록            |                             |                             |
-| Border             | 테두리          |                             |                             |
-| Box                | 박스            |                             |                             |
-| Descriptor         | 설명자          |                             |                             |
-| Flexbox            | 플렉스박스      |                             |                             |
-| Flow               | 플로            | 레이아웃 방식일 경우에 한정 |                             |
-| Formal syntax      | 형식 구문       |                             |                             |
-| Grid               | 그리드          |                             |                             |
-| Inline             | 인라인          |                             |                             |
-| Layout             | 레이아웃        |                             |                             |
-| Longhand property  | 본디 속성       |                             |                             |
-| Margin             | 바깥 여백       |                             |                             |
-| Padding            | 안쪽 여백(패딩) |                             | [CSS 기본 박스 모델 입문][] |
-| Shorthand property | 단축 속성       |                             |                             |
+| 용어               | 번역            | 기타                        | 참고 링크                                                                               |
+| ------------------ | --------------- | --------------------------- | --------------------------------------------------------------------------------------- |
+| At-rule            | @규칙           |                             |                                                                                         |
+| Block              | 블록            |                             |                                                                                         |
+| Border             | 테두리          |                             |                                                                                         |
+| Box                | 박스            |                             |                                                                                         |
+| Cascade            | 캐스케이드      |                             | [참고링크](https://github.com/mdn/translated-content/pull/15519#discussion_r1320588159) |
+| Descriptor         | 설명자          |                             |                                                                                         |
+| Flexbox            | 플렉스박스      |                             |                                                                                         |
+| Flow               | 플로            | 레이아웃 방식일 경우에 한정 |                                                                                         |
+| Formal syntax      | 형식 구문       |                             |                                                                                         |
+| Grid               | 그리드          |                             |                                                                                         |
+| Inline             | 인라인          |                             |                                                                                         |
+| Layout             | 레이아웃        |                             |                                                                                         |
+| Longhand property  | 본디 속성       |                             |                                                                                         |
+| Margin             | 바깥 여백       |                             |                                                                                         |
+| Padding            | 안쪽 여백(패딩) |                             | [CSS 기본 박스 모델 입문][]                                                             |
+| Shorthand property | 단축 속성       |                             |                                                                                         |
 
 ## API/JavaScript
 
 **사전 순으로 용어집을 편집해주세요.**
 
-| 용어                    | 번역            | 기타          | 참고 링크                                                                                |
-| ----------------------- | --------------- | ------------- | ---------------------------------------------------------------------------------------- |
-| Argument                | 전달인자, 인수  |               | [참고 링크](https://github.com/mdn/translated-content/pull/3888)                         |
-| Blocking operation      | 블로킹 연산     |               |                                                                                          |
-| Callback                | 콜백            |               |                                                                                          |
-| Decimal equivalent      | 10진수 변환값   |               |                                                                                          |
-| Dictionary              | 사전            |               | [참고 링크](https://github.com/mdn/translated-content/pull/10976#discussion_r1073704799) |
-| Fulfilled               | 이행(함)        |               |                                                                                          |
-| Handler                 | 처리기          | 이벤트 처리기 |                                                                                          |
-| Interface               | 인터페이스      |               |                                                                                          |
-| Iterate                 | 순회            |               |                                                                                          |
-| Listener                | 수신기          | 이벤트 수신기 |                                                                                          |
-| Mixin                   | 믹스인          |               |                                                                                          |
-| Mutating method         | 변경 메서드     |               |                                                                                          |
-| Non-blocking operation  | 논블로킹 연산   |               |                                                                                          |
-| Parameter               | 매개변수        |               |                                                                                          |
-| Pending                 | 대기            |               |                                                                                          |
-| Promise                 | 프로미스        |               | [참고 링크](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558)  |
-| Promise chaining        | 프로미스 체이닝 |               |                                                                                          |
-| Prototype               | 프로토타입      |               |                                                                                          |
-| Reject                  | 거부            |               |                                                                                          |
-| Resolve                 | 이행            |               |                                                                                          |
-| Rest parameters         | 나머지 매개변수 |               | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files)                   |
-| Scope                   | 범위            |               |                                                                                          |
-| Settled                 | 처리            |               |                                                                                          |
-| Sparse array            | 희소 배열       |               |                                                                                          |
-| Temporal Dead Zone, TDZ | 일시적 사각지대 |               | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files)                   |
-| TypedArray              | 형식화 배열     |               |                                                                                          |
+| 용어                    | 번역            | 기타              | 참고 링크                                                                                |
+| ----------------------- | --------------- | ----------------- | ---------------------------------------------------------------------------------------- |
+| Argument                | 전달인자, 인수  |                   | [참고 링크](https://github.com/mdn/translated-content/pull/3888)                         |
+| Blocking operation      | 블로킹 연산     |                   |                                                                                          |
+| Callback                | 콜백            |                   |                                                                                          |
+| Decimal equivalent      | 10진수 변환 값  |                   |                                                                                          |
+| Dictionary              | 사전            |                   | [참고 링크](https://github.com/mdn/translated-content/pull/10976#discussion_r1073704799) |
+| Fulfilled               | 이행(함)        |                   |                                                                                          |
+| Fetch                   | 페치            | Patch와 음차 구분 | [참고 링크](https://ko.dict.naver.com/#/search?query=fetch)                              |
+| Handler                 | 처리기          | 이벤트 처리기     |                                                                                          |
+| Interface               | 인터페이스      |                   |                                                                                          |
+| Iterate                 | 순회            |                   |                                                                                          |
+| Iterator                | 반복자          |                   |                                                                                          |
+| Listener                | 수신기          | 이벤트 수신기     |                                                                                          |
+| Mixin                   | 믹스인          |                   |                                                                                          |
+| Mutating method         | 변경 메서드     |                   |                                                                                          |
+| Non-blocking operation  | 논블로킹 연산   |                   |                                                                                          |
+| Parameter               | 매개변수        |                   |                                                                                          |
+| Patch                   | 패치            |                   |                                                                                          |
+| Pending                 | 대기            |                   |                                                                                          |
+| Promise                 | 프로미스        |                   | [참고 링크](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558)  |
+| Promise chaining        | 프로미스 체이닝 |                   |                                                                                          |
+| Prototype               | 프로토타입      |                   |                                                                                          |
+| Reject                  | 거부            |                   |                                                                                          |
+| Resolve                 | 이행            |                   |                                                                                          |
+| Rest parameters         | 나머지 매개변수 |                   | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files)                   |
+| Scope                   | 범위            |                   |                                                                                          |
+| Settled                 | 처리            |                   |                                                                                          |
+| Sparse array            | 희소 배열       |                   |                                                                                          |
+| Temporal Dead Zone, TDZ | 일시적 사각지대 |                   | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files)                   |
+| TypedArray              | 형식화 배열     |                   |                                                                                          |
 
 ## HTTP
 
