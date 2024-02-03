@@ -36,7 +36,7 @@ slug: Web/HTML/Element/p
     <tr>
       <th scope="row">標籤省略</th>
       <td>
-        必須有起始標籤。如果 {{HTMLElement("p")}} 元素的結束標籤之後緊接著的是 
+        必須有起始標籤。如果 {{HTMLElement("p")}} 元素的結束標籤之後緊接著的是
         {{HTMLElement("address")}},
         {{HTMLElement("article")}}, {{HTMLElement("aside")}},
         {{HTMLElement("blockquote")}}, {{HTMLElement("details")}}, {{HTMLElement("div")}},

@@ -127,9 +127,7 @@ slug: Web/HTML/Element/search
       </td>
     </tr>
     <tr>
-      <th scope="
-
-row">標籤省略</th>
+      <th scope="row">標籤省略</th>
       <td>{{no_tag_omission}}</td>
     </tr>
     <tr>
