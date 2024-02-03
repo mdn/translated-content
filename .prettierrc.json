@@ -1,11 +1,3 @@
 {
-  "bracketSameLine": true,
-  "overrides": [
-    {
-      "files": "./docs/ko/guides/*.md",
-      "options": {
-        "proseWrap": "never"
-      }
-    }
-  ]
+  "bracketSameLine": true
 }
