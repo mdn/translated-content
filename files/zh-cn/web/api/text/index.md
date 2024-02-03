@@ -46,7 +46,7 @@ _从其父类 {{domxref("CharacterData")}}、{{domxref("Node")}} 和 {{domxref("
 - {{domxref("Text.assignedSlot")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("HTMLSlotElement")}}，表示当前节点所在的 {{htmlelement("slot")}}。
 - {{domxref("Text.wholeText")}} {{ReadOnlyInline}}
-  - : 获取相邻文本节点（{{domxref("Node")}}）的文本内容并拼接成一个字符串。
+  - : 获取与当前{{domxref("Node", "节点", "", 1)}}相邻文本节点的文本内容并拼接成一个字符串。
 
 ## 实例方法
 
