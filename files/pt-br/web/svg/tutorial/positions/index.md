@@ -40,7 +40,7 @@ Sem especificações adicionais, uma unidade de usuário equivale a uma unidade 
 O elemento acima define uma tela SVG simples com 100x100px. Uma unidade de usuário equivale a uma unidade de tela.
 
 ```html
-<svg width="200" height="200" viewBox="0 0 100 100"></svg>
+<svg width="200" height="200" viewBox="0 0 100 100">…</svg>
 ```
 
 Toda a tela SVG aqui tem 200px por 200px de tamanho. No entanto, o atributo `viewPort` define a parte dessa tela a ser exibida. Esses pixels de 200x200 exibem uma área que começa na unidade do usuário (0,0) e se estende por 100x100 unidades do usuário à direita e na parte inferior. Isso amplia efetivamente a área da unidade de 100x100 e amplia a imagem para o dobro do tamanho.
