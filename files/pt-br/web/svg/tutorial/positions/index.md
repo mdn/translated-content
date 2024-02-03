@@ -3,6 +3,8 @@ title: Posições
 slug: Web/SVG/Tutorial/Positions
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutoriel/Getting_Started", "SVG/Tutoriel/Basic_Shapes") }}
 
 Neste artigo, examinamos como os Scalable Vector Graphics (SVG) representam as posições e tamanhos dos objetos dentro de um contexto de desenho, incluindo o sistema de coordenadas e o que significa uma medição de "pixel" em um contexto escalável.
