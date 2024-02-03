@@ -2,7 +2,7 @@
 title: Notification：vibrate 属性
 slug: Web/API/Notification/vibrate
 l10n:
-  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
+  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
 ---
 
 {{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
