@@ -1,5 +1,5 @@
 ---
-title: Node.nodeValue
+title: Node：nodeValue 属性
 slug: Web/API/Node/nodeValue
 l10n:
   sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
@@ -31,21 +31,19 @@ l10n:
 
 ## 示例
 
-### HTML
-
 ```html
 <div id="d1">Hello world</div>
 <!-- 注释节点类型 -->
 <output id="result">等待结果...</output>
 ```
 
-### JavaScript
+以及以下脚本：
 
 ```js
 let node = document.querySelector("body").firstChild;
 let result = "<br/>节点名称：<br/>";
 while (node) {
-  result += `${node.nodeName} 的值是： ${node.nodeValue}<br/>`;
+  result += `${node.nodeName} 的值是：${node.nodeValue}<br/>`;
   node = node.nextSibling;
 }
 
