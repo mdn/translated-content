@@ -3,7 +3,7 @@ title: browsingData.removeFormData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Limpa os dados que o navegador salvou para formulários com preenchimento automático.
 
