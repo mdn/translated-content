@@ -34,7 +34,7 @@ No caso mais básico, um pixel em um documento SVG é mapeado para um pixel no d
 Sem especificações adicionais, uma unidade de usuário equivale a uma unidade de tela. Para alterar explicitamente esse comportamento, existem diversas possibilidades no SVG. Começamos com o `svg` elemento raiz:
 
 ```html
-<svg width="100" height="100"></svg>
+<svg width="100" height="100">…</svg>
 ```
 
 O elemento acima define uma tela SVG simples com 100x100px. Uma unidade de usuário equivale a uma unidade de tela.
