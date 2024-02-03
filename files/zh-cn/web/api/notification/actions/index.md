@@ -11,13 +11,13 @@ l10n:
 
 使用 {{DOMxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} 方法和 {{DOMxref("Notification/Notification", "Notification()")}} 构造函数的第二个参数的 `actions` 选项设置操作。
 
-> **备注：** 浏览器通常会限制它们为特定通知显示的最大的操作的数量。检测 {{DOMxRef("Notification.maxActions")}} 静态属性以确定限制的操作的数量。
+> **备注：** 浏览器通常会限制它们为特定通知显示的最大的操作的数量。检测 {{DOMxref("Notification.maxActions_static", "Notification.maxActions")}} 静态属性以确定限制的操作的数量。
 
 {{AvailableInWorkers}}
 
 ## 值
 
-一个只读的表示操作数组。数组中的每个元素都是一个具有以下成员的对象：
+一个只读的表示操作的数组。数组中的每个元素都是一个具有以下成员的对象：
 
 - `action`
   - : 一个标识要在通知上显示的用户操作的字符串。
