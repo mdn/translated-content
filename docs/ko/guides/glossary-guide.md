@@ -36,6 +36,7 @@
 | ---------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Access                 | 접근            |                                                                                                                                         |
 | Accessibility concerns | 접근성 고려사항 |                                                                                                                                         |
+| Advanced Topics        | 고급 주제       |                                                                                                                                         |
 | Advantages             | 장점            | [링크][Introduction_to_HTML5_Game_Development]                                                                                          |
 | Aliasing               | 별칭            | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
 | Brief history          | 간략한 역사     | [링크][HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC]                                                                             |
@@ -56,6 +57,7 @@
 | Next steps             | 다음 단계       | [링크][2D_breakout_game_Phaser]                                                                                                         |
 | Overview               | 개요            |                                                                                                                                         |
 | Polyfill               | 폴리필          | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
+| Recommendations        | 권장 사항       |                                                                                                                                         |
 | Reference              | 참고서          |                                                                                                                                         |
 | See also               | 같이 보기       | [링크][target]                                                                                                                          |
 | Specifications         | 명세서          | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
@@ -198,6 +200,7 @@
 | Scope                   | 범위            |                   |                                                                                          |
 | Settled                 | 처리            |                   |                                                                                          |
 | Sparse array            | 희소 배열       |                   |                                                                                          |
+| Spread                  | 전개            |                   | [참고 링크](https://github.com/mdn/translated-content/pull/14898#discussion_r1296533201) |
 | Temporal Dead Zone, TDZ | 일시적 사각지대 |                   | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files)                   |
 | TypedArray              | 형식화 배열     |                   |                                                                                          |
 
@@ -209,6 +212,13 @@
 | Payload       | 페이로드  |      | [참고 링크](https://github.com/mdn/translated-content/pull/2737) |
 | Request Body  | 요청 본문 |      |                                                                  |
 | Response Body | 응답 본문 |      |                                                                  |
+
+## React
+
+| 용어  | 번역  | 기타 | 참고 링크                                                                                |
+| ----- | ----- | ---- | ---------------------------------------------------------------------------------------- |
+| Props | props |      | [참고 링크](https://github.com/mdn/translated-content/pull/14898#discussion_r1299129511) |
+| hooks | hooks |      |                                                                                          |
 
 [AudioWorkletNode]: https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode#parameters
 [Using_IIR_filters]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters#browser_support
