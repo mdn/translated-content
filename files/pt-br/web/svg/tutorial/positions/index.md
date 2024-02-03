@@ -9,7 +9,7 @@ slug: Web/SVG/Tutorial/Positions
 
 Neste artigo, examinamos como os Scalable Vector Graphics (SVG) representam as posições e tamanhos dos objetos dentro de um contexto de desenho, incluindo o sistema de coordenadas e o que significa uma medição de "pixel" em um contexto escalável.
 
-### A Grade
+## A Grade
 
 Para todos os elementos, o SVG usa um sistema de coordenadas ou sistema **de grade** semelhante ao usado pelo [canvas](pt-BR/HTML/Canvas) (e por muitas outras rotinas de desenho de computador). Ou seja, o canto superior esquerdo do documento é considerado o ponto (0,0), ou ponto de origem. As posições são então medidas em pixels a partir do canto superior esquerdo, com a direção x positiva voltada para a direita e a direção y positiva voltada para baixo.
 
