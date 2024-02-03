@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`Text`** 接口表示 DOM 树中的一个文本{{domxref("Node", "节点")}}。
+**`Text`** 接口表示 DOM 树中的一个文本{{domxref("Node", "节点", "", 1)}}。
 
 {{InheritanceDiagram}}
 
@@ -41,16 +41,16 @@ l10n:
 
 ## 实例属性
 
-_从其父类继承属性，{{domxref("CharacterData")}}, {{domxref("Node")}}, 和 {{domxref("EventTarget")}}。_
+_从其父类 {{domxref("CharacterData")}}、{{domxref("Node")}} 和 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("Text.assignedSlot")}} {{ReadOnlyInline}}
-  - : 返回一个 {{domxref("HTMLSlotElement")}}，表示当前节点所在的{{htmlelement("slot")}}。
+  - : 返回一个 {{domxref("HTMLSlotElement")}}，表示当前节点所在的 {{htmlelement("slot")}}。
 - {{domxref("Text.wholeText")}} {{ReadOnlyInline}}
   - : 获取相邻文本节点（{{domxref("Node")}}）的文本内容并拼接成一个字符串。
 
 ## 实例方法
 
-_从其父类{{domxref("CharacterData")}}、{{domxref("Node")}}和{{domxref("EventTarget")}}继承方法。_
+_从其父类 {{domxref("CharacterData")}}、{{domxref("Node")}} 和 {{domxref("EventTarget")}} 继承方法。_
 
 - {{domxref("Text.splitText")}}
   - : 在指定的偏移位置将节点分成两个节点。
