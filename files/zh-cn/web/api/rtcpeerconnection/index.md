@@ -1,8 +1,6 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-page-type: web-api-interface
-browser-compat: api.RTCPeerConnection
 ---
 
 {{APIRef('WebRTC')}}
