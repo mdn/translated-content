@@ -43,16 +43,14 @@ O elemento acima define uma tela SVG simples com 100x100px. Uma unidade de usuá
 <svg width="200" height="200" viewBox="0 0 100 100"></svg>
 ```
 
-Toda a tela SVG aqui tem 200 x 200 pixels de tamanho. No entanto, o viewBoxatributo define a parte dessa tela a ser exibida. Esses pixels de 200x200 exibem uma área que começa na unidade do usuário (0,0) e se estende por 100x100 unidades do usuário à direita e na parte inferior. Isso amplia efetivamente a área da unidade de 100x100 e amplia a imagem para o dobro do tamanho.
+Toda a tela SVG aqui tem 200px por 200px de tamanho. No entanto, o atributo `viewPort` define a parte dessa tela a ser exibida. Esses pixels de 200x200 exibem uma área que começa na unidade do usuário (0,0) e se estende por 100x100 unidades do usuário à direita e na parte inferior. Isso amplia efetivamente a área da unidade de 100x100 e amplia a imagem para o dobro do tamanho.
 
 O mapeamento atual (para um único elemento ou para a imagem inteira) de unidades do usuário para unidades de tela é chamado de **sistema de coordenadas do usuário** . Além da escala, o sistema de coordenadas também pode ser girado, inclinado e invertido. O sistema de coordenadas do usuário padrão mapeia um pixel do usuário para um pixel do dispositivo. (No entanto, o dispositivo pode decidir o que entende como um pixel.) Os comprimentos no arquivo SVG com dimensões específicas, como "in" ou "cm", são então calculados de forma que apareçam 1:1 na imagem resultante. .
 
-Cependant, le périphérique peut décider lui-même ce qui correspond à un pixel.
-
-Les tailles dans le fichier SVG ayant des unités spécifiques, tels que les "in" et les "cm", sont ensuite calculées de manière à les faire apparaître avec une échelle de 1:1 dans l'image résultante.
-
 Uma citação da especificação SVG 1.1 ilustra isso:
 
-> \[…] [...] suponha que o agente do usuário possa determinar a partir de seu ambiente que "1px" corresponde a "0,2822222mm" (ou seja, 90dpi). Então, para todo o processamento de conteúdo SVG: [...] "1cm" é igual a "35,43307px" (e, portanto, 35,43307 unidades de usuário)
+> \[...] suponha que o agente do usuário possa determinar a partir de seu ambiente que "1px" corresponde a "0,2822222mm" (ou seja, 90dpi). Então, para todo o processamento de conteúdo SVG: [...] "1cm" é igual a "35,43307px" (e, portanto, 35,43307 unidades de usuário)
+
+{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 
 {{ PreviousNext("SVG/Tutoriel/Getting_Started", "SVG/Tutoriel/Basic_Shapes") }}
