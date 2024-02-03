@@ -86,9 +86,7 @@ slug: Web/HTML/Element/article
 
 ## 使用注意事項
 
-- 每個 `<article>` 應該被識別，通常通過在 `<article>` 元素的子元素中包含標題（[`<h1>` - `<h6>`](/zh-TW/docs
-
-/Web/HTML/Element/Heading_Elements) 元素）。
+- 每個 `<article>` 應該被識別，通常通過在 `<article>` 元素的子元素中包含標題（[`<h1>` - `<h6>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 元素）。
 - 當嵌套 `<article>` 元素時，內部元素代表與外部元素相關的文章。例如，部落格文章的評論可以是嵌套在表示部落格文章的 `<article>` 中的 `<article>` 元素。
 - `<article>` 元素的作者信息可以通過 {{HTMLElement("address")}} 元素提供，但不適用於嵌套的 `<article>` 元素。
 - `<article>` 元素的發佈日期和時間可以使用 {{HTMLElement("time")}} 元素的 [`datetime`](/zh-TW/docs/Web/HTML/Element/time#datetime) 屬性來描述。
