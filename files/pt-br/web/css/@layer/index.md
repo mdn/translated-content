@@ -25,7 +25,7 @@ Sendo que:
 - _regras_
   - : São as regras CSS utilizadas dentro da camada.
 
-### Descrição
+## Descrição
 
 Adicionar regras CSS numa _camada de cascata_ possibilita aos desenvolvedores web um controle maior sobre a cascata. Qualquer estilo fora de uma camada são agrupados numa camada anônima posicionada após todas as camadas declaradas, nomeadas ou anônimas. Isso significa que quaisquer estilos declarados fora de uma camada vão sobrescrever os estilos declarados em camadas, seja qual for seu grau de especificidade.
 
