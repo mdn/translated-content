@@ -27,7 +27,7 @@ _还从其父接口 {{domxref("ExtendableEvent")}} 继承属性_。
 - {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("Notification")}} 对象，表示单击以触发事件的通知。
 - {{domxref("NotificationEvent.action")}} {{ReadOnlyInline}}
-  - : .返回用户单击的通知按钮的字符串 ID。如果用户单击操作按钮以外的通知，或者通知没有按钮，则此值返回空字符串。
+  - : 返回用户单击的通知按钮的字符串 ID。如果用户单击操作按钮以外的通知，或者通知没有按钮，则此值返回空字符串。
 
 ## 实例方法
 
