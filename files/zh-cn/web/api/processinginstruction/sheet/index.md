@@ -1,6 +1,5 @@
 ---
-title: "ProcessingInstruction: sheet property"
-short-title: sheet
+title: ProcessingInstruction：sheet 属性
 slug: Web/API/ProcessingInstruction/sheet
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
@@ -8,13 +7,13 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`sheet`** 属性是 {{domxref("ProcessingInstruction")}} 接口的一个只读属性，它包含了与该 `ProcessingInstruction ` 相关联的样式表信息。
+**`sheet`** 属性是 {{domxref("ProcessingInstruction")}} 接口的一个只读属性，它包含了与该 `ProcessingInstruction` 相关联的样式表信息。
 
 处理指令 `xml-stylesheet` 常用于在 XML 文件中关联样式表。
 
 ## 值
 
-**`sheet`** 属性与 {{DOMxref("Stylesheet")}} 对象关联，如果 Stylesheet 不存在，那么值为 `null`。
+关联的 {{DOMxref("Stylesheet")}} 对象，如果没有，则为 `null`。
 
 ## 示例
 
