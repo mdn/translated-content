@@ -1,11 +1,15 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
+l10n:
+  sourceCommit: 2184f627ae940cca9d95ba9846903ae0cfc4d323
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
 
 **Notifications API** 允许网页控制向最终用户显示系统通知——这些都在顶级浏览上下文视口之外，因此即使用户已经切换标签页或移动到不同的应用程序，也可以显示。该 API 被设计成与不同平台上的现有通知系统兼容。
+
+{{AvailableInWorkers}}
 
 ## 概念和用法
 
@@ -34,19 +38,23 @@ btn.addEventListener("click", () => {
 
 > **备注：** 想了解怎么在你的应用里使用通知接口，请阅读[使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
 
-## Notifications 接口
+## 接口
 
-- {{domxref("Notification")}}
-  - : 定义的通知对象。
-
-### Service worker 附加内容
-
-- {{domxref("ServiceWorkerRegistration")}}
-  - : 该对象包含 {{domxref("ServiceWorkerRegistration.showNotification()")}} 和 {{domxref("ServiceWorkerRegistration.getNotifications()")}} 方法，用于控制通知的显示。
-- {{domxref("ServiceWorkerGlobalScope")}}
-  - : 该对象包含 {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} 事件处理器，用于通知被点击的时候触发自定义函数。
+- {{domxref("通知")}}
+  - : 定义通知对象。
 - {{domxref("NotificationEvent")}}
-  - : 该对象是功能明确的事件对象，表示一个被触发的通知事件，继承自 {{domxref("ExtendableEvent")}}。
+  - : 表示在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上下文中触发的通知事件。
+
+### 其他接口的扩展
+
+- {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} 事件
+  - : 当用户单击显示的通知时触发。
+- {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} 事件
+  - : 当用户关闭显示的通知时触发。
+- {{domxref("ServiceWorkerRegistration.getNotifications()")}}
+  - : 按照通过当前 Service Worker 注册从当前源创建的顺序返回通知列表。
+- {{domxref("ServiceWorkerRegistration.showNotification()")}}
+  - : 显示带有请求的标题的通知。
 
 ## 规范
 

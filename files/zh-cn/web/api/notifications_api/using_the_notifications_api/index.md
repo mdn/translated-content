@@ -2,10 +2,10 @@
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 l10n:
-  sourceCommit: 2184f627ae940cca9d95ba9846903ae0cfc4d323
+  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
 
 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序以系统级别发送在页面外部显示的通知；这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在你自己的应用程序中使用此 API 的基础知识。
 
@@ -14,6 +14,8 @@ l10n:
 ![桌面通知：通过 mdn.github.io 列出待办事项 嘿！你的任务“去购物”现已过期](desktop-notification.png)
 
 系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 编写得足够通用，足以与大多数系统通知系统兼容。
+
+{{AvailableInWorkers}}
 
 ## 示例
 
@@ -95,8 +97,6 @@ function askNotificationPermission() {
 首先查看第二个主要块，你会发现我们首先检查是否支持通知。如果支持的话，我们接着运行基于 Promise 的 `Notification.requestPermission()` 版本，否则在控制台输出一条消息。
 
 为了避免重复代码，我们在 `handlePermission()` 函数中存储了一些内部代码，这是该代码段中的第一个主要块。在这里，我们明确设置了 `Notification.permission` 值（某些旧版本的 Chrome 无法自动执行此操作），并根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
-
-> **备注：** 在 Chrome 的 37 版本之前，其不允许你在 `load` 事件处理程序中调用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}（请参阅 [issue 274284](https://crbug .com/274284)）。
 
 ## 创建通知
 
