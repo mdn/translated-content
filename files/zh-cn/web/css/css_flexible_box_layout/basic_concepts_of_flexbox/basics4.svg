@@ -19,7 +19,7 @@
   <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" />
   <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="M930.377 39.974H759.496" />
   <path d="m927.377 46.974 12-7-12-7z" /><text font-family="Helvetica" font-size="33" transform="translate(219.854 19.987)">
-    <tspan x="0" y="32" textLength="515.351">交叉轴 - flex-direction: column</tspan>
+    <tspan x="0" y="32" textLength="515.351">交叉轴 — flex-direction: column</tspan>
   </text>
   <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="M48.978 40.33c14.029-.056 150.889-.591 150.889-.591" />
   <path d="m51.95 33.318-11.972 7.046 12.027 6.953z" />

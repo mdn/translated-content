@@ -18,7 +18,7 @@
   <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" />
   <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="M981.319 59.96H839.444" />
   <path d="m978.319 66.96 12-7-12-7z" /><text font-family="Helvetica" font-size="33" transform="translate(279.814 39.974)">
-    <tspan x="55.249" y="32" textLength="452.977">主轴 - flex-direction: row</tspan>
+    <tspan x="55.249" y="32" textLength="452.977">主轴 — flex-direction: row</tspan>
   </text>
   <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m159.885 60.316 159.902-.626" />
   <path d="m162.858 53.304-11.973 7.047 12.027 6.953z" /><text font-family="Helvetica" font-size="33" transform="translate(47.23 179.881)">

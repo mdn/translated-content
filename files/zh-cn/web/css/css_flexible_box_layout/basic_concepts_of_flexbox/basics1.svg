@@ -19,7 +19,7 @@
     <use xlink:href="#a" fill-rule="evenodd" />
   </mask>
   <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" /><text font-family="Helvetica" font-size="33" transform="translate(239.841 39.69)">
-    <tspan x="0" y="32" textLength="452.977">主轴 - flex-direction: row</tspan>
+    <tspan x="0" y="32" textLength="452.977">主轴 — flex-direction: row</tspan>
   </text>
   <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m48.975 60.033 170.878-.669" />
   <path d="m51.947 53.02-11.973 7.048 12.028 6.953z" />

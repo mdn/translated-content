@@ -17,7 +17,7 @@
     <use xlink:href="#a" fill-rule="evenodd" />
   </mask>
   <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="8" stroke-linecap="butt" stroke-width="6" mask="url(#b)" /><text font-family="Helvetica" font-size="48" transform="translate(439.708 21.625)">
-    <tspan x="40.301" y="47" textLength="519">width (容器宽度) = 500px</tspan>
+    <tspan x="37.301" y="47" textLength="580">width （容器宽度） = 500px</tspan>
   </text><text font-family="Helvetica" font-size="48" transform="translate(919.391 501.307)">
     <tspan x="110.086" y="47" textLength="379.43">可用空间 = 200px</tspan>
   </text>

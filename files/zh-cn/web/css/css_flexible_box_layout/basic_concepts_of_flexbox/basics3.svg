@@ -17,7 +17,7 @@
     <use xlink:href="#a" fill-rule="evenodd" />
   </mask>
   <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" /><text font-family="Helvetica" font-size="24" transform="translate(80.23 116.802)">
-    <tspan x="85.688" y="23" textLength="113.367">交叉轴
+    <tspan x="54" y="23" textLength="113.367">交叉轴
     </tspan>
     <tspan x="3" y="52" textLength="196.055">Flex-direction: row</tspan>
   </text>
