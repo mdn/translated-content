@@ -1,17 +1,21 @@
 ---
 title: Notification：data 属性
 slug: Web/API/Notification/data
+l10n:
+  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 **`data`** 只读属性返回一个在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `data` 选项中指定的、结构化的通知的数据。
+{{domxref("Notification")}} 接口的 **`data`** 只读属性返回一个在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `data` 选项中指定的结构化克隆的通知的数据。
 
 通知的数据可以是任意你希望与通知关联的数据。
 
+{{AvailableInWorkers}}
+
 ## 值
 
-一个结构化的克隆数据。
+一个结构化克隆的数据。
 
 ## 示例
 

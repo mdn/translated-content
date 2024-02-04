@@ -3,7 +3,7 @@ title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 使用指定的搜索引擎或默认搜索引擎进行搜索。
 

@@ -98,7 +98,7 @@ My cat is very grumpy
 
 - `<!DOCTYPE html>`——[文档类型](/zh-CN/docs/Glossary/Doctype)。这是必不可少的开头。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，这个元素用来关联 HTML 编写规范，以供自动查错等功能所用。而在当今，它作用有限，可以说仅用于保证文档正常读取。现在知道这些就足够了。
 - `<html></html>`——{{htmlelement("html")}} 元素。该元素包含整个页面的所有内容，有时候也称作根元素。里面也包含了 `lang` 属性，写明了页面的主要语种。
-- `<head></head>`——{{htmlelement("head")}} 元素。所有那些你加到页面中，且*不*向观众展示的页面内容，都以这个元素为容器。其中包含诸如提供给搜索引擎的{{Glossary("keyword", "关键字")}}和页面描述、用于设置页面样式的 CSS、字符集声明等等。
+- `<head></head>`——{{htmlelement("head")}} 元素。所有那些你加到页面中，且*不*向用户展示的页面内容，都以这个元素为容器。其中包含诸如提供给搜索引擎的{{Glossary("keyword", "关键字")}}和页面描述、用于设置页面样式的 CSS、字符集声明等等。
 - `<meta charset="utf-8">`——该元素指明你的文档使用 UTF-8 字符编码，UTF-8 包括世界绝大多数书写语言的字符。它基本上可以处理任何文本内容。以它为编码还可以避免以后出现某些问题，没有理由再选用其他编码。
 - `<meta name="viewport" content="width=device-width">`——[视口元素](/zh-CN/docs/Web/CSS/Viewport_concepts#移动设备的视口)可以确保页面以视口宽度进行渲染，避免移动端浏览器上因页面过宽导致缩放。
 - `<title></title>`——{{htmlelement("title")}} 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。
