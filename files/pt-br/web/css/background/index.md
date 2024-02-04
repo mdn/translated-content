@@ -3,7 +3,7 @@ title: background
 slug: Web/CSS/background
 ---
 
-{{CSSRef ( "CSS Background")}}
+{{CSSRef}}
 
 ## Resumo
 

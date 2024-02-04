@@ -233,7 +233,7 @@
 /ja/docs/CSS/Attribute_selectors	/ja/docs/Web/CSS/Attribute_selectors
 /ja/docs/CSS/Background	/ja/docs/Web/CSS/background
 /ja/docs/CSS/Background_Backup	/ja/docs/Web/CSS/background
-/ja/docs/CSS/Block_formatting_context	/ja/docs/Web/Guide/CSS/Block_formatting_context
+/ja/docs/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
 /ja/docs/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
 /ja/docs/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/CSS/CSS_animated_properties	/ja/docs/Web/CSS/CSS_animated_properties
@@ -2918,6 +2918,7 @@
 /ja/docs/Web/API/IDBKeyRange/lowerBound	/ja/docs/Web/API/IDBKeyRange/lowerBound_static
 /ja/docs/Web/API/IDBKeyRange/only	/ja/docs/Web/API/IDBKeyRange/only_static
 /ja/docs/Web/API/IDBKeyRange/upperBound	/ja/docs/Web/API/IDBKeyRange/upperBound_static
+/ja/docs/Web/API/IDBLocaleAwareKeyRange	/ja/docs/conflicting/Web/API/IDBIndex
 /ja/docs/Web/API/IDBRequest/onsuccess	/ja/docs/Web/API/IDBRequest/success_event
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
@@ -3574,7 +3575,7 @@
 /ja/docs/Web/CSS/Adjacent_sibling_combinator	/ja/docs/Web/CSS/Next-sibling_combinator
 /ja/docs/Web/CSS/Adjacent_sibling_selectors	/ja/docs/Web/CSS/Next-sibling_combinator
 /ja/docs/Web/CSS/Background_Backup	/ja/docs/Web/CSS/background
-/ja/docs/Web/CSS/Block_formatting_context	/ja/docs/Web/Guide/CSS/Block_formatting_context
+/ja/docs/Web/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
 /ja/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /ja/docs/Web/CSS/CSS_Background_and_Borders	/ja/docs/Web/CSS/CSS_backgrounds_and_borders
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -3892,6 +3893,7 @@
 /ja/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources	/ja/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
 /ja/docs/Web/Guide/Audio_and_video_manipulation	/ja/docs/Web/Media/Audio_and_video_manipulation
 /ja/docs/Web/Guide/CSS	/ja/docs/Learn/CSS
+/ja/docs/Web/Guide/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
 /ja/docs/Web/Guide/CSS/Counters	/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
 /ja/docs/Web/Guide/CSS/Flexible_boxes	/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /ja/docs/Web/Guide/CSS/Getting_started	/ja/docs/Learn/CSS
