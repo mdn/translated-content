@@ -22,23 +22,23 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 - `column`
 - `column-reverse`
 
-如果你选择了 `row` 或者 `row-reverse`，你的主轴将沿着 **inline** 方向延伸。
+如果你选择了 `row` 或者 `row-reverse`，你的主轴将沿着**行向**延伸。
 
-![当主轴方向设置为 row 时，主轴沿着 inline 方向延伸](basics1.svg)
+![当主轴方向设置为 row 时，主轴沿着行向延伸](basics1.svg)
 
-选择 `column` 或者 `column-reverse` 时，你的主轴会沿着上下方向延伸 — 也就是 **block 排列的方向。**
+选择 `column` 或者 `column-reverse` 时，你的主轴会沿着页面的上下方向延伸——也就是**块向**。
 
-![当主轴方向设置为 column 时，主轴沿着上下方向延伸](basics2.svg)
+![当主轴方向设置为 column 时，主轴沿着块向延伸](basics2.svg)
 
 ### 交叉轴
 
-交叉轴垂直于主轴，所以如果你的`flex-direction` (主轴) 设成了 `row` 或者 `row-reverse` 的话，交叉轴的方向就是沿着上下方向延伸的。
+交叉轴垂直于主轴，所以如果你的`flex-direction`（主轴）设成了 `row` 或者 `row-reverse` 的话，交叉轴的方向就是沿着上下方向延伸的。
 
-![当主轴方向设置为 row 时，交叉轴的方向沿着上下方向延伸](basics3.svg)
+![当主轴方向设置为 row 时，交叉轴的方向沿着块向延伸](basics3.svg)
 
 如果主轴方向设成了 `column` 或者 `column-reverse`，交叉轴就是水平方向。
 
-![当主轴方向设置为 column 时，交叉轴的方向沿着 inline 方向延伸](basics4.svg)
+![当主轴方向设置为 column 时，交叉轴的方向沿着行向延伸](basics4.svg)
 
 理解主轴和交叉轴的概念对于对齐 flexbox 里面的元素是很重要的；flexbox 的特性是沿着主轴或者交叉轴对齐之中的元素。
 
@@ -48,7 +48,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 你可以在接下来的文章中学到更多 flexbox 和书写模式关系的详细说明。下面的描述是来帮助我们理解为什么不用上下左右来描述 flexbox 元素的方向。
 
-如果 `flex-direction` 是 `row` ，并且我是在书写英文，那么主轴的起始线是左边，终止线是右边。
+如果 `flex-direction` 是 `row`，并且我是在书写英文，那么主轴的起始线是左边，终止线是右边。
 
 ![书写英文时，主轴的起始线是左边](basics5.svg)
 
@@ -64,7 +64,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 {{cssxref("display")}} 属性值改为 `flex` 或者 `inline-flex`。完成这一步之后，容器中的直系子元素就会变为 **flex 元素**。由于所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：
 
-- 元素排列为一行 (`flex-direction` 属性的初始值是 `row`)。
+- 元素排列为一行（`flex-direction` 属性的初始值是 `row`）。
 - 元素从主轴的起始线开始。
 - 元素不会在主维度方向拉伸，但是可以缩小。
 - 元素被拉伸来填充交叉轴大小。
@@ -79,7 +79,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 在 flex 容器中添加 {{cssxref("flex-direction")}} 属性可以让我们更改 flex 元素的排列方向。设置 `flex-direction: row-reverse` 可以让元素沿着行的方向显示，但是起始线和终止线位置会交换。
 
-把 flex 容器的属性 `flex-direction` 改为 `column` ，主轴和交叉轴交换，元素沿着列的方向排列显示。改为 `column-reverse` ，起始线和终止线交换。
+把 flex 容器的属性 `flex-direction` 改为 `column`，主轴和交叉轴交换，元素沿着列的方向排列显示。改为 `column-reverse`，起始线和终止线交换。
 
 下面的例子中，`flex-direction` 值为 `row-reverse`。尝试使用其他的值 `row` ，`column`，`column-reverse`，看看内容会发生什么改变。
 
@@ -135,7 +135,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 flex-grow 属性可以按比例分配空间。如果第一个元素 `flex-grow` 值为 2，其他元素值为 1，则第一个元素将占有 2/4（上例中，即为 200px 中的 100px）, 另外两个元素各占有 1/4（各 50px）。
 
-### Flex 元素属性： `flex-shrink`
+### Flex 元素属性：`flex-shrink`
 
 `flex-grow`属性是处理 flex 元素在主轴上增加空间的问题，相反`flex-shrink`属性是处理 flex 元素收缩的问题。如果我们的容器中没有足够排列 flex 元素的空间，那么可以把 flex 元素`flex-shrink`属性设置为正整数来缩小它所占空间到`flex-basis`以下。与`flex-grow`属性一样，可以赋予不同的值来控制 flex 元素收缩的程度——给`flex-shrink`属性赋予更大的数值可以比赋予小数值的同级元素收缩程度更大。
 
