@@ -1,11 +1,13 @@
 ---
 title: CSS マスク
 slug: Web/CSS/CSS_masking
+l10n:
+  sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
 ---
 
 {{CSSRef}}
 
-**CSS マスク** (CSS Masking) は [CSS](/ja/docs/Web/CSS) のモジュールの一つで、マスク、クリップを含め、可視要素の一部または全部を隠すための方法を定義します。
+**CSS マスク** (CSS masking) は [CSS](/ja/docs/Web/CSS) のモジュールの一つで、可視要素の一部または全部を隠すためのマスク、クリップを定義します。
 
 ## リファレンス
 

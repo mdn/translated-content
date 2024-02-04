@@ -49,7 +49,7 @@ console.log(x);
 
 C나 Java와 같이 블록이 스코프를 생성하는 언어의 경우, 위 코드의 `console.log` 라인에서 `x`가 어떤 블록 스코프에도 포함되지 않기 때문에 에러가 발생해야 할 것입니다. 그러나, 블록은 `var`로 선언한 변수에 대해 스코프를 생성하지 않기 때문에, 여기서 `var` 명령문은 전역 변수를 생성합니다. 이것을 클로저와 함께 사용했을 때 어떤 버그가 발생할 수 있는지 [실제 예제](#루프에서_클로저_생성하기_일반적인_실수)가 아래 소개되어 있습니다.
 
-ES6에서, JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`과 `const` 선언과 함께 [시간상 사각지대](/ko/docs/Web/JavaScript/Reference/Statements/let#시간상_사각지대) 등을 도입했습니다.
+ES6에서, JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`과 `const` 선언과 함께 [일시적 사각지대](/ko/docs/Web/JavaScript/Reference/Statements/let#일시적_사각지대) 등을 도입했습니다.
 
 ```js
 if (Math.random() > 0.5) {

@@ -3,7 +3,7 @@ title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'ID de {{WebExtAPIRef("tabs.Tab", "tab")}} est que cette instance des devtools est jointe, représenté comme un nombre.
 

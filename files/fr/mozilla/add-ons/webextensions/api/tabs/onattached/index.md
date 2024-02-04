@@ -3,7 +3,7 @@ title: tabs.onAttached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un onglet est attaché à une fenêtre, par exemple parce qu'il a été déplacé entre les fenêtres.
 

@@ -3,7 +3,7 @@ title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
 
-{{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}
+{{JSRef}} {{non-standard_header}} {{deprecated_header}}
 
 ## Сводка
 

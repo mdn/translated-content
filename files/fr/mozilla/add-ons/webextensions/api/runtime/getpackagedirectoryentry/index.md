@@ -3,7 +3,7 @@ title: runtime.getPackageDirectoryEntry()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoie un objet `DirectoryEntry` représentant le répertoire du package.
 

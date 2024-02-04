@@ -2,18 +2,18 @@
 title: Firefox 121 for developers
 slug: Mozilla/Firefox/Releases/121
 l10n:
-  sourceCommit: d0633d8d5509e827ca5421d9cee6ab5cc68444d9
+  sourceCommit: d1a9b34e50b4b9e84b51f8fadc585ae1afe75069
 ---
 
 {{FirefoxSidebar}}
 
-このページでは、開発者に影響する Firefox 121 の変更点をまとめています。Firefox 121 は、米国時間 [2023 年 12 月 19 日](https://whattrainisitnow.com/release/?version=121) にリリースされました。。
+このページでは、開発者に影響する Firefox 121 の変更点をまとめています。Firefox 121 は、米国時間 [2023 年 12 月 19 日](https://whattrainisitnow.com/release/?version=121) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- `<iframes>` の [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) をサポートしました。特定の `<iframe>` が、表示されたときに限り読み込まれるべきであると開発者が示すことができます。これはページを読み込むときに取得しなければならないリソースを削減する (一部の `<iframes>` を取得する必要がない) ことで、最初の読み込み時間を短縮できます。
+- `<iframe>` 要素の [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) をサポートしました。特定の `<iframe>` 要素が、表示されたときに限り読み込まれるべきであると開発者が示すことができます。これはページを読み込むときに取得しなければならないリソースを削減する (一部の `<iframe>` 要素を取得する必要がない) ことで、最初の読み込み時間を短縮できます。
   このヒントは [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 要素の [`loading`](/ja/docs/Web/HTML/Element/iframe#loading) 属性か、JavaScript で {{domxref("HTMLIFrameElement.loading")}} を使用して提供できます ([Firefox bug 1622090](https://bugzil.la/1622090))。
 
 ### CSS
@@ -46,6 +46,10 @@ l10n:
 ### API
 
 - {{domxref("WebTransportSendStream")}} インターフェイスの {{domxref("WebTransportSendStream.sendOrder", "sendOrder")}} プロパティをサポートしました。[WebTransport API](/ja/docs/Web/API/WebTransport_API) の _双方向_ ストリームの相対的な送信優先度を、ストリームの作成後に取得および変更できます。このプロパティは一方向ストリームの優先度変更には使用できません。Firefox は一方向ストリームを {{domxref("WebTransportSendStream")}} ではなく {{domxref("WritableStream")}} として実装しているためです (詳しくは [Firefox bug 1853444](https://bugzil.la/1853444) をご覧ください)。
+
+#### DOM
+
+- Android で、{{domxref("HTMLInputElement.showPicker()")}} が [`<input type="week">`](/ja/docs/Web/HTML/Element/input/month) および [`<input type="month">`](/ja/docs/Web/HTML/Element/input/month) 要素で動作するようになりました ([Firefox bug 1853797](https://bugzil.la/161853797))。
 
 ### WebAssembly
 

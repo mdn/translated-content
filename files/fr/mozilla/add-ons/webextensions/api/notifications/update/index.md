@@ -3,7 +3,7 @@ title: notifications.update()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Met à jour une notification, compte tenu de son identifiant
 

@@ -3,7 +3,7 @@ title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Sumário
 

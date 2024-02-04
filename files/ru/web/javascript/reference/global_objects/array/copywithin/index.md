@@ -3,7 +3,7 @@ title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 
