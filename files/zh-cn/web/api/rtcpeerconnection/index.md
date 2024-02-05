@@ -102,7 +102,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Deprecated_Inline}}
   - : 创建一个新的 {{DOMxRef("RTCDTMFSender")}}，并与特定的 {{DOMxRef("MediaStreamTrack")}} 相关联，以便通过连接发送 {{Glossary("DTMF")}} 电话信令。
 - {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 删除本地媒体流 {{DOMxRef("MediaStream")}} . 请使用 {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}} 替代本方法
+  - : 移除作为本地音频或视频源的 {{DOMxRef("MediaStream")}}。由于该方法已过时，应改用  {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}。
 
 ## 事件
 
