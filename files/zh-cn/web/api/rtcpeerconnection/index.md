@@ -77,7 +77,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}}
   - : 返回 {{DOMxRef("RTCRtpSender")}} 对象数组，每个对象都代表负责传输单个轨道数据的 {{Glossary("RTP")}} 发送器。
 - {{DOMxRef("RTCPeerConnection.getStats", "getStats()")}}
-  - : 返回一个 {{jsxref("Promise")}} ，它解析为提供有关整个连接或特定 {{DOMxRef("MediaStreamTrack")}} 的统计数据的数据。
+  - : 返回一个 {{jsxref("Promise")}} ，它兑现为有关整个连接或特定 {{DOMxRef("MediaStreamTrack")}} 的统计数据。
 - {{DOMxRef("RTCPeerConnection.getTransceivers", "getTransceivers()")}}
   - : 返回一个 {{DOMxRef("RTCRtpTransceiver")}} 列表，该列表包含所有在连接上用于发送和接收数据的{{DOMxRef("RTCRtpTransceiver")}} 对象。
 - {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}
