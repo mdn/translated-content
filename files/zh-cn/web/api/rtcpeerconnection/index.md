@@ -5,8 +5,7 @@ slug: Web/API/RTCPeerConnection
 
 {{APIRef('WebRTC')}}
 
-**`RTCPeerConnection`** 接口表示本地端和远程对等端之间的 WebRTC 连接。
-它提供了连接到远程对等端的维护、监视和关闭连接等方法。
+**`RTCPeerConnection`** 接口表示本地端和远程对等端之间的 WebRTC 连接。它提供了连接到远程对等端的维护、监视和关闭连接等方法。
 
 {{InheritanceDiagram}}
 
