@@ -79,7 +79,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.getStats", "getStats()")}}
   - : 返回一个 {{jsxref("Promise")}} ，它兑现为有关整个连接或特定 {{DOMxRef("MediaStreamTrack")}} 的统计数据。
 - {{DOMxRef("RTCPeerConnection.getTransceivers", "getTransceivers()")}}
-  - : 返回一个 {{DOMxRef("RTCRtpTransceiver")}} 列表，该列表包含所有在连接上用于发送和接收数据的{{DOMxRef("RTCRtpTransceiver")}} 对象。
+  - : 返回用于在连接上发送和接收数据的所有 {{DOMxRef("RTCRtpTransceiver")}} 对象的列表。
 - {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}
   - : 停止从指定的轨道发送媒体数据，该方法不会从发送者列表中删除相应的 {{DOMxRef("RTCRtpSender")}} 对象。
     如果轨道已经停止或者不在连接的发送者列表{{DOMxRef("RTCRtpSender")}}中，此方法没有效果。
