@@ -67,7 +67,10 @@ JavaScript 拥有二元和一元运算符和一个特殊的三元运算符（条
 | [按位与赋值 (Bitwise AND assignment)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_AND_assignment)                         | `x &= y`     | `x = x & y`   |
 | [按位异或赋值 (Bitwise XOR assignment)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_XOR_assignment)                       | `x ^= y`     | `x = x ^ y`   |
 | [按位或赋值 (Bitwise OR assignment)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_OR_assignment)                           | `x \|= y`    | `x = x \| y`  |
-
+| [逻辑与赋值 (Logical AND assignment)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                                              | `x &&= f()`  | `x && (x = f())`|
+| [逻辑或赋值 (Logical OR assignment)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                                                | `x ||= f()`  | `x || (x = f())` |
+| [逻辑空赋值 (Nullish coalescing assignment)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)                                | `x ??= f()`  | `x ?? (x = f())` |
+ 
 #### 解构
 
 对于更复杂的赋值，[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。
