@@ -106,7 +106,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 
 ## 事件
 
-注册事件监听可以调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 或者也可以添加 `oneventname` 属性。
+使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 或将事件监听器分配给此接口的 `oneventname` 属性，即可监听这些事件。
 
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
   - : 当连接 `RTCPeerConnection` 状态改变时触发。
