@@ -3642,6 +3642,7 @@
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
+/ja/docs/Web/CSS/CSS_container_queries	/ja/docs/Web/CSS/CSS_containment/Container_queries
 /ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
