@@ -154,5 +154,5 @@ _继承 {{DOMxRef("EventTarget")}} 的方法。_
 
 - <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
 - [WebRTC 入门](https://web.dev/articles/webrtc-basics)
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML 视频，peer-to-peer 视频和文件共享 ([源码 GitHub](https://github.com/chrisjohndigital/TutorRoom))
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML 视频，点对点视频和文件共享（[GitHub 上的源代码](https://github.com/chrisjohndigital/TutorRoom)）
   ）
