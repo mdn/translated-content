@@ -67,8 +67,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}}
   - : 创建一个与远程对等连接的新通道，该通道可以传输任何类型的数据。例如图像、文件传输、文本聊天、游戏更新包等。
 - {{DOMxRef("RTCPeerConnection.createOffer", "createOffer()")}}
-  - : 创建一个信息 {{Glossary("SDP")}} 邀请（offer），以启动与远程对等方的新 `WebRTC` 连接。
-    {{Glossary("SDP")}} 邀请（offer）的内容包括 {{DOMxRef("MediaStreamTrack")}} 对象的信息和已经连接到 `WebRTC` 会话信息、编/解码器和浏览器支持的选项，以及已经由 {{Glossary("ICE")}} 代理收集的候选对象，通过信令信道发送到潜在的对等端，以请求连接或更新现有连接的配置。
+  - : 创建一个信息 {{Glossary("SDP")}} 邀请（offer），以启动与远程对等方的新 WebRTC 连接。SDP 邀请（offer）的内容包括已附加到 WebRTC 会话、编解码器和浏览器支持的选项的任何 {{DOMxRef("MediaStreamTrack")}} 对象的信息，以及 {{Glossary("ICE")}} 代理已收集的任何候选信息，目的是通过信令信道发送给潜在对等方，以请求连接或更新现有连接的配置。
 - {{DOMxRef("RTCPeerConnection.getConfiguration", "getConfiguration()")}}
   - : 返回一个包含当前连接配置的对象。
 - {{DOMxRef("RTCPeerConnection.getIdentityAssertion", "getIdentityAssertion()")}}
