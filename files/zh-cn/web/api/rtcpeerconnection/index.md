@@ -100,7 +100,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 添加 {{DOMxRef("MediaStream")}} 作为本地音频或视频源。不应使用这种过时的方法，而应针对希望发送到远程对等设备的每个轨道调用一次 {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}}。
 - {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Deprecated_Inline}}
-  - : 创建一个新的 {{DOMxRef("RTCDTMFSender")}} 对象，用于发送 DTMF 信号。
+  - : 创建一个新的 {{DOMxRef("RTCDTMFSender")}}，并与特定的 {{DOMxRef("MediaStreamTrack")}} 相关联，以便通过连接发送 {{Glossary("DTMF")}} 电话信令。
 - {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 删除本地媒体流 {{DOMxRef("MediaStream")}} . 请使用 {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}} 替代本方法
 
