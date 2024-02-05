@@ -135,7 +135,7 @@ _继承 {{DOMxRef("EventTarget")}} 的方法。_
 ## 废弃事件
 
 - {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 当新的 {{domxref("MediaStream")}} 添加到连接时触发。请使用 {{domxref("RTCPeerConnection.track_event", "track")}} 事件替代
+  - : 当新的 {{domxref("MediaStream")}} 添加到连接时触发。请使用 {{domxref("RTCPeerConnection.track_event", "track")}} 事件替代。
 - {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 当 {{domxref("MediaStream")}} 被移除时触发。请使用 {{domxref("MediaStream.removetrack_event", "removetrack")}} 事件替代。
 
