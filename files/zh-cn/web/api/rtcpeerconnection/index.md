@@ -73,7 +73,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.getIdentityAssertion", "getIdentityAssertion()")}}
   - : 该方法返回一个 {{jsxref("Promise")}} ，该 `Promise` 兑现为编码为字符串的身份断言。仅在 {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} 的值不为 `closed` 时解析有效。
 - {{DOMxRef("RTCPeerConnection.getReceivers", "getReceivers()")}}
-  - : 返回一个 {{DOMxRef("RTCRtpReceiver")}} 对象的数组，每个对象都代表一个 RTP 接收器。
+  - : 返回 {{DOMxRef("RTCRtpReceiver")}} 对象数组，每个对象都代表一个 {{Glossary("RTP")}} 接收器。
 - {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}}
   - : 返回一个 {{DOMxRef("RTCRtpSender")}} 对象的数组，每个对象都代表负责传输单个轨道数据的 {{Glossary("RTP")}} 发送器。
 - {{DOMxRef("RTCPeerConnection.getStats", "getStats()")}}
