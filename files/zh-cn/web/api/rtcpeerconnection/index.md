@@ -21,7 +21,7 @@ _继承 {{domxref("EventTarget")}} 的属性。_
 - {{DOMxRef("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} {{ReadOnlyInline}}
   - : 返回一个布尔值，指示远程对等方是否可以接受逐步传输的 [trickled ICE candidates](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice) 候选者。
 - {{DOMxRef("RTCPeerConnection.connectionState", "connectionState")}} {{ReadOnlyInline}}
-  - : 返回以下字符串之一来表示连接的当前状态：`new` （新建）、`connecting` （连接中）、`connected`（已连接）、`disconnected`（已断开连接）、`failed`（连接失败）或 `closed`（已关闭）。
+  - : 返回表示连接当前状态的下列字符串之一：`new`（新建）、`connecting`（连接中）、`connected`（已连接）、`disconnected`（已断开连接）、`failed`（连接失败）或 `closed`（已关闭）。
 - {{DOMxRef("RTCPeerConnection.currentLocalDescription", "currentLocalDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，该对象描述最后完成协商并连接的的本地连接描述。
     同时也可能包括首次初始化的时候通过 ICE 代理生成的 ICE 候选项列表。
