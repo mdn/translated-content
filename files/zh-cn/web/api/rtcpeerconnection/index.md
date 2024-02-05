@@ -59,8 +59,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}}
   - : 向要传输给对方的轨道集合中添加一个新的 {{DOMxRef("MediaStreamTrack")}}。
 - {{DOMxRef("RTCPeerConnection.addTransceiver", "addTransceiver()")}}
-  - : 创建一个新的 {{DOMxRef("RTCRtpTransceiver")}} 并将其添加到与连接关联的收发器集合中。
-    每个收发器代表一个双向流，分别与之关联一个 {{DOMxRef("RTCRtpSender")}} 和 {{DOMxRef("RTCRtpReceiver")}} 。
+  - : 创建一个新的 {{DOMxRef("RTCRtpTransceiver")}} 并将其添加到与连接关联的收发器集合中。每个收发器代表一个同时关联 {{DOMxRef("RTCRtpSender")}} 和 {{DOMxRef("RTCRtpReceiver")}} 的双向流。
 - {{DOMxRef("RTCPeerConnection.close", "close()")}}
   - : 关闭当前连接，释放所有资源。
 - {{DOMxRef("RTCPeerConnection.createAnswer", "createAnswer()")}}
