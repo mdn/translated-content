@@ -81,8 +81,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.getTransceivers", "getTransceivers()")}}
   - : 返回用于在连接上发送和接收数据的所有 {{DOMxRef("RTCRtpTransceiver")}} 对象的列表。
 - {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}
-  - : 停止从指定的轨道发送媒体数据，该方法不会从发送者列表中删除相应的 {{DOMxRef("RTCRtpSender")}} 对象。
-    如果轨道已经停止或者不在连接的发送者列表{{DOMxRef("RTCRtpSender")}}中，此方法没有效果。
+  - : 停止从指定的轨道发送媒体数据，该方法不会从发送者列表（由 {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}} 报告）中删除相应的 {{DOMxRef("RTCRtpSender")}} 对象。如果轨道已经停止或者不在连接的发送者列表中，此方法没有效果。
 - {{DOMxRef("RTCPeerConnection.restartIce", "restartIce()")}}
   - : 重新收集 {{Glossary("ICE")}} 候选者，允许调用方或接收方触发 {{Glossary("ICE")}} 重启。
 - {{DOMxRef("RTCPeerConnection.setConfiguration", "setConfiguration()")}}
