@@ -16,7 +16,7 @@ slug: Web/API/RTCPeerConnection
 
 ## 实例属性
 
-_继承 {{domxref("EventTarget")}} 的属性。_
+_也从 {{domxref("EventTarget")}} 继承属性。_
 
 - {{DOMxRef("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} {{ReadOnlyInline}}
   - : 返回一个布尔值，指示远程对等方是否可以接受逐步传输的 [trickled ICE candidates](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice) 候选者。
