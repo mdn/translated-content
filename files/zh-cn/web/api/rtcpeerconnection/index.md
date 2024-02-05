@@ -31,8 +31,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 - {{DOMxRef("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} {{ReadOnlyInline}}
   - : 返回一个描述连接 ICE 收集状态的字符串。返回值枚举 `new`（新的）、`gathering`（收集中）、`complete`（完成）。
 - {{DOMxRef("RTCPeerConnection.localDescription", "localDescription")}} {{ReadOnlyInline}}
-  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} ，代表这条连接的本地端的会话描述。
-    如果本地的会话描述还没有被设置，它的值就会是 `null`。
+  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} ，代表这条连接的本地端的会话描述。如果本地的会话描述还没有被设置，返回 `null`。
 - {{DOMxRef("RTCPeerConnection.peerIdentity", "peerIdentity")}} {{ReadOnlyInline}}
   - : 返回一个兑现为标识远程对等端 {{DOMxRef("RTCIdentityAssertion")}}（其包含标识对等端身份的字符串）的 {{jsxref("Promise")}}。一旦这个 `Promise` 成功兑现，得到的身份信息就是目标对等端的身份信息，并且在连接的持续时间内不会改变。
 - {{DOMxRef("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} {{ReadOnlyInline}}
