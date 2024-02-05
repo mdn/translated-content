@@ -98,7 +98,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 ## 废弃方法
 
 - {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 添加 本地媒体流 {{DOMxRef("MediaStream")}} . 请使用 {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}} 替代本方法
+  - : 添加 {{DOMxRef("MediaStream")}} 作为本地音频或视频源。不应使用这种过时的方法，而应针对希望发送到远程对等设备的每个轨道调用一次 {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}}。
 - {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Deprecated_Inline}}
   - : 创建一个新的 {{DOMxRef("RTCDTMFSender")}} 对象，用于发送 DTMF 信号。
 - {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
