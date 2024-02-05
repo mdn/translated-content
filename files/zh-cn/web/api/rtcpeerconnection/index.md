@@ -1,6 +1,8 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
+l10n:
+  sourceCommit: 31fa0bbc78b87bf3ec7559906515fcd3dfde68de
 ---
 
 {{APIRef('WebRTC')}}
@@ -29,7 +31,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 - {{DOMxRef("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} {{ReadOnlyInline}}
   - : 返回与此 RTCPeerConnection 关联的 ICE 代理的状态字符串，可以是下列值之一：`new`（新建）、`connecting`（连接中）、`connected`（已连接）、`disconnected`（已断开连接）、`failed`（连接失败）或 `closed`（已关闭）。
 - {{DOMxRef("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} {{ReadOnlyInline}}
-  - : 返回一个描述连接 ICE 收集状态的字符串。返回值枚举 `new`（新的）、`gathering`（收集中）、`complete`（完成）。
+  - : 返回一个描述连接的 ICE 收集状态的字符串。该属性可以检测 ICE 收集候选者的收集状态是否已经完成，可能返回值有： `new`（新的）、`gathering`（收集中）、`complete`（完成）。
 - {{DOMxRef("RTCPeerConnection.localDescription", "localDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}}，代表这条连接的本地端的会话描述。如果本地的会话描述还没有被设置，返回 `null`。
 - {{DOMxRef("RTCPeerConnection.peerIdentity", "peerIdentity")}} {{ReadOnlyInline}}
@@ -83,17 +85,15 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}
   - : 停止从指定的轨道发送媒体数据，该方法不会从发送者列表（由 {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}} 报告）中删除相应的 {{DOMxRef("RTCRtpSender")}} 对象。如果轨道已经停止或者不在连接的发送者列表中，此方法没有效果。
 - {{DOMxRef("RTCPeerConnection.restartIce", "restartIce()")}}
-  - : 重新收集 {{Glossary("ICE")}} 候选者，允许调用方或接收方触发 {{Glossary("ICE")}} 重启。
+  - : 允许轻松地要求在连接的两端重新进行 {{Glossary("ICE")}} 候选人收集，这简化了通过允许调用方或接收方使用相同的方法来触发 {{Glossary("ICE")}} 重启（重新收集候选者的）过程。
 - {{DOMxRef("RTCPeerConnection.setConfiguration", "setConfiguration()")}}
-  - : 给当前连接设置配置信息，用于更改与 {{Glossary("ICE")}} 服务器的连接传输相关配置。
+  - : 根据指定对象中的值设置连接的当前配置信息。这样你就可以更改连接使用的 {{Glossary("ICE")}} 服务器以及使用的传输策略。
 - {{DOMxRef("RTCPeerConnection.setIdentityProvider", "setIdentityProvider()")}}
-  - : 将给定的参数值： `name` 、 `protocol` 、 `username` 设置给身份提供商 (IdP) ，其中`protocol` 和 `username `为可选参数。
+  - : 给身份提供商 (IdP) 的设置用于通讯与其的 `name` 、 `protocol` 参数和 `username` 三个参数，其中 `protocol` 和 `username` 为可选参数。
 - {{DOMxRef("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}
-  - : 修改本地的连接描述 SDP, 此描述指定连接的本地端的连接属性，包括媒体格式。
-    此方法返回一个 {{jsxref("Promise")}}, 配置修改成功后，该 `Promise` 状态才会变更为 `fulfilled`。
+  - : 修改与连接关联的本地描述，此描述指定连接的本地端的连接属性，包括媒体格式。此方法返回一个 {{jsxref("Promise")}}, 配置修改成功后，该 `Promise` 状态才会变更为 `fulfilled`，这是一个异步操作。
 - {{DOMxRef("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}
-  - : 修改远程的连接描述 SDP, 此描述指定连接的远程端的连接属性，包括媒体格式。
-    此方法返回一个 {{jsxref("Promise")}}, 配置修改成功后，该 `Promise` 状态才会变更为 `fulfilled`。
+  - : 修改与连接关联的远程描述，此描述指定连接的远程端的连接属性，包括媒体格式。此方法返回一个 {{jsxref("Promise")}}, 配置修改成功后，该 `Promise` 状态才会变更为 `fulfilled`，这是一个异步操作。
 
 ## 废弃方法
 
@@ -102,7 +102,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Deprecated_Inline}}
   - : 创建一个新的 {{DOMxRef("RTCDTMFSender")}}，并与特定的 {{DOMxRef("MediaStreamTrack")}} 相关联，以便通过连接发送 {{Glossary("DTMF")}} 电话信令。
 - {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 移除作为本地音频或视频源的 {{DOMxRef("MediaStream")}}。由于该方法已过时，应改用  {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}。
+  - : 移除作为本地音频或视频源的 {{DOMxRef("MediaStream")}}。由于该方法已过时，应改用 {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}。
 
 ## 事件
 
@@ -121,9 +121,9 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
   - : 当 {{Glossary("ICE")}} 的收集状态 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} 发生变更时触发，状态值表示 ICE 协商状态：`new`（尚未开始协商）、`gathering`（开始收集候选者）、`completed`（协商完成）。
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
-  - : 当 {{Glossary("ICE")}} 连接需要协商或重新协商时触发，在第一次打开连接时或者网络发生变更时都会触发该事件，接收方应通过创建请求并将其发送给另一对等方来进行响应。
+  - : 当 {{Glossary("ICE")}} 连接需要协商或重新协商时触发，在第一次打开连接时或者网络发生变更时都会触发该事件，接收方应通过创建邀请并将其发送给另一对等方来进行响应。
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
-  - : 当连接的 {{Glossary("ICE")}} 信号状态状态发生变更时触发。
+  - : 当连接的 {{Glossary("ICE")}} 信令状态发生变更时触发。
 - {{domxref("RTCPeerConnection.track_event", "track")}}
   - : 当新的轨道添加到连接中的 {{domxref("RTCRtpReceiver")}} 时触发。
 
