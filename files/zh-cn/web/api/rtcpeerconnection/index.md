@@ -39,8 +39,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 - {{DOMxRef("RTCPeerConnection.pendingRemoteDescription", "pendingRemoteDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，描述远程连接端的待定配置更改。这不是描述当前连接的状态，而是描述可能将存在的状态。
 - {{DOMxRef("RTCPeerConnection.remoteDescription", "remoteDescription")}} {{ReadOnlyInline}}
-  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 描述连接远端的会话信息的对象，包括配置和媒体信息。
-    如果当前尚未设置，将返回 `null`。
+  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，描述连接远端的会话，包括配置和媒体信息。如果当前尚未设置，将返回 `null`。
 - {{DOMxRef("RTCPeerConnection.sctp", "sctp")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSctpTransport")}} 描述正在发送和接收 {{Glossary("SCTP")}} 数据的 SCTP 传输层。如果 SCTP 尚未协商完成，则该值为 `null`。
 - {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} {{ReadOnlyInline}}
