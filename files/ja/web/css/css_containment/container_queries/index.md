@@ -1,8 +1,7 @@
 ---
 title: CSS コンテナークエリー
-slug: Web/CSS/CSS_container_queries
-l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+slug: Web/CSS/CSS_containment/Container_queries
+original_slug: Web/CSS/CSS_container_queries
 ---
 
 {{CSSRef}}
