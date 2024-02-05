@@ -57,7 +57,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
   - : 向 `RTCPeerConnection` 的远程描述中添加一个新的远程候选者，描述连接的远程端的状态。
 - {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}}
-  - : 向要传输给对方的轨道集合中添加一个新的 {{DOMxRef("MediaStreamTrack")}} 。
+  - : 向要传输给对方的轨道集合中添加一个新的 {{DOMxRef("MediaStreamTrack")}}。
 - {{DOMxRef("RTCPeerConnection.addTransceiver", "addTransceiver()")}}
   - : 创建一个新的 {{DOMxRef("RTCRtpTransceiver")}} 并将其添加到与连接关联的收发器集合中。
     每个收发器代表一个双向流，分别与之关联一个 {{DOMxRef("RTCRtpSender")}} 和 {{DOMxRef("RTCRtpReceiver")}} 。
