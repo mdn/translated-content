@@ -111,7 +111,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
   - : 当连接 `RTCPeerConnection` 状态改变时触发。
 - {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}
-  - : 当远程端添加数据通道{{domxref("RTCDataChannel")}}至连接时触发。
+  - : 当远程端添加 {{domxref("RTCDataChannel")}} 至连接时触发。
 - {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
   - : 当接收到新的 ICE 候选者时触发。
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
