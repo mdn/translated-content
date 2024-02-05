@@ -121,7 +121,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
   - : 当 {{Glossary("ICE")}} 的收集状态 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} 发生变更时触发，状态值表示 ICE 协商状态：`new`（尚未开始协商）、`gathering`（开始收集候选者）、`completed`（协商完成）。
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
-  - : 当{{Glossary("ICE")}} 连接需要协商或重新协商时触发，在第一次打开连接时或者网络发生变更时都会触发该事件，接收方应通过创建`offer`并将其发送给另一对等方来进行响应。
+  - : 当 {{Glossary("ICE")}} 连接需要协商或重新协商时触发，在第一次打开连接时或者网络发生变更时都会触发该事件，接收方应通过创建请求并将其发送给另一对等方来进行响应。
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
   - : 当连接的 {{Glossary("ICE")}} 信号状态状态发生变更时触发。
 - {{domxref("RTCPeerConnection.track_event", "track")}}
