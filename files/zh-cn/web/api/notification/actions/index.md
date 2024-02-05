@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Notification")}} 接口的 **`actions`** 只读属性提供了可供用户选择的以与通知交互的操作。
+{{domxref("Notification")}} 接口的 **`actions`** 只读属性提供了可供用户选择以与通知交互的操作。
 
 使用 {{DOMxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} 方法和 {{DOMxref("Notification/Notification", "Notification()")}} 构造函数的第二个参数的 `actions` 选项设置操作。
 
