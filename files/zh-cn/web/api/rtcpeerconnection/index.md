@@ -37,8 +37,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 - {{DOMxRef("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，描述连接本地端的待定配置更改。这不是描述当前连接的状态，而是描述可能将存在的状态。
 - {{DOMxRef("RTCPeerConnection.pendingRemoteDescription", "pendingRemoteDescription")}} {{ReadOnlyInline}}
-  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 描述远程连接端的一个待处理配置变更的对象。
-    这不是描述当前连接的状态，而是描述可能将存在的状态。
+  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，描述远程连接端的待定配置更改。这不是描述当前连接的状态，而是描述可能将存在的状态。
 - {{DOMxRef("RTCPeerConnection.remoteDescription", "remoteDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 描述连接远端的会话信息的对象，包括配置和媒体信息。
     如果当前尚未设置，将返回 `null`。
