@@ -41,7 +41,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 - {{DOMxRef("RTCPeerConnection.remoteDescription", "remoteDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，描述连接远端的会话，包括配置和媒体信息。如果当前尚未设置，将返回 `null`。
 - {{DOMxRef("RTCPeerConnection.sctp", "sctp")}} {{ReadOnlyInline}}
-  - : 返回一个 {{DOMxRef("RTCSctpTransport")}} 描述正在发送和接收 {{Glossary("SCTP")}} 数据的 SCTP 传输层。如果 SCTP 尚未协商完成，则该值为 `null`。
+  - : 返回一个 {{DOMxRef("RTCSctpTransport")}} 对象，该对象描述了发送和接收 SCTP 数据所使用的 {{Glossary("SCTP")}} 传输层。如果 SCTP 尚未协商完成，则该值为 `null`。
 - {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} {{ReadOnlyInline}}
   - : 返回一个字符串，说明在连接或重新连接另一个对等端时，连接本地端的信令进程的状态。它是以下值之一： `stable`（稳定）、`have-local-offer`（有本地提议）、`have-remote-offer`（有远程提议）、`have-local-pranswer`（有本地预答）、`have-remote-pranswer`（有远程预答）、`closed`（关闭）。
 
