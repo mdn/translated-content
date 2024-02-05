@@ -117,7 +117,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : 当收集 {{Glossary("ICE")}} 连接候选者时发生错误触发。
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-  - : 当与 {{Glossary("ICE")}} 连接状态发生变更时触发
+  - : 当与 {{Glossary("ICE")}} 连接状态发生变更时触发。
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
   - : 当 {{Glossary("ICE")}} 的收集状态 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} 发生变更时触发，状态值表示 ICE 协商状态：`new`（尚未开始协商）、`gathering`（开始收集候选者）、`completed`（协商完成）。
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
