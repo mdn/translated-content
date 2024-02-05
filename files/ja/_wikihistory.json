@@ -16365,6 +16365,16 @@
     "modified": "2020-10-15T22:01:55.406Z",
     "contributors": ["mfuji09"]
   },
+  "Web/CSS/CSS_display/Block_formatting_context": {
+    "modified": "2019-10-20T13:29:22.992Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "Uemmra3",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
   "Web/CSS/CSS_filter_effects": {
     "modified": "2020-10-15T22:11:38.008Z",
     "contributors": ["mfuji09"]
@@ -20257,16 +20267,6 @@
       "fucsm",
       "ethertank",
       "Sheppy"
-    ]
-  },
-  "Web/Guide/CSS/Block_formatting_context": {
-    "modified": "2019-10-20T13:29:22.992Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "Uemmra3",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "Web/Guide/CSS/Getting_started/Challenge_solutions": {
