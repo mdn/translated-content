@@ -52,7 +52,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 
 ## 实例方法
 
-_继承 {{DOMxRef("EventTarget")}} 的方法。_
+_也从 {{DOMxRef("EventTarget")}} 继承方法。_
 
 - {{DOMxRef("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
   - : 向 `RTCPeerConnection` 的远程描述中添加一个新的远程候选者，描述连接的远程端的状态。
