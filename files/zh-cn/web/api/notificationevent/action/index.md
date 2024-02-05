@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Notifications")}}
 
-{{domxref("NotificationEvent")}} 接口的 **`action`** 只读属性返回用户单击的通知按钮的字符串 ID。如果用户单击操作按钮以外的通知，或者通知没有按钮，则此值返回空字符串。通知 ID 在创建通知期间通过 actions 数组属性设置，并且无法修改，除非通知被替换。
+{{domxref("NotificationEvent")}} 接口的 **`action`** 只读属性返回用户单击的通知按钮的字符串 ID。如果用户单击通知除操作按钮以外的区域，或者通知没有按钮，则此值返回空字符串。通知 ID 在创建通知期间通过 actions 数组属性设置，并且无法修改（除非通知被替换）。
 
 ## 值
 
