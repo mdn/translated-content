@@ -17,7 +17,13 @@ slug: Learn
 
 Если у вас есть предложения о добавлении тем, которые вы хотели бы увидеть или которых, как вы считаете, не хватает, напишите нам на нашем [форуме Discourse](https://discourse.mozilla.org/c/mdn/236).
 
-> **Сноска:** Хотите стать фронтенд-разработчиком?Мы составили курс, который включает всю важную информацию, необходимую для достижения вашей цели.[Начать](/docs/Learn/Front-end_web_developer)
+> **Сноска:**
+>
+> #### Хотите стать фронтенд-разработчиком?
+>
+> Мы составили курс, который включает всю важную информацию, необходимую для достижения вашей цели.
+>
+> [**Начать**](/docs/Learn/Front-end_web_developer)
 
 ## С чего начать
 
@@ -28,7 +34,7 @@ slug: Learn
 - Погружаемся в программирование
   - : Если вы уже чувствуете себя комфортно с HTML и CSS или в основном интересуетесь кодингом, то вы захотите погрузиться в {{glossary("JavaScript")}} или разработку на стороне сервера. Загляните в разделы «[Первые шаги в JavaScript](/ru/docs/Learn/JavaScript/First_steps)» и «[Первые шаги в программировании веб-сайтов на стороне сервера](/ru/docs/Learn/Server-side/First_steps)».
 - Фреймворки и инструменты
-  - : своив основы ванильного HTML, CSS и JavaScript, стоит приступить к изучению [инструментов веб-разработки на стороне клиента](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools), а затем углубиться в [JavaScript-фреймворки для фронтенда](/ru/docs/Learn/Tools_and_testing/%D0%A4%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4_JavaScript_%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%B8) и [программирование веб-сайтов на стороне сервера](/ru/docs/Learn/Server-side).
+  - : Освоив основы ванильного HTML, CSS и JavaScript, стоит приступить к изучению [инструментов веб-разработки на стороне клиента](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools), а затем углубиться в [JavaScript-фреймворки для фронтенда](/ru/docs/Learn/Tools_and_testing/%D0%A4%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4_JavaScript_%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%B8) и [программирование веб-сайтов на стороне сервера](/ru/docs/Learn/Server-side).
 
 > **Примечание:** в нашем [глоссарии](/ru/docs/Glossary) вы можете найти термины и их определения. Кроме того, если у вас есть конкретный вопрос по веб-разработке, возможно, ответ найдётся в разделе «[Распространённые вопросы](/ru/docs/Learn/Common_questions)».
 
@@ -65,7 +71,7 @@ slug: Learn
 2. Откройте [командную строку](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) или терминал ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
 3. Чтобы скопировать репозиторий обучающего раздела в папку с именем learning-area в текущем местоположении, на которое указывает ваша командная строка/терминал, используйте следующую команду:
 
-   ```
+   ```bash
    git clone https://github.com/mdn/learning-area
    ```
 
@@ -75,13 +81,13 @@ slug: Learn
 
 1. В командной строке / терминале войдите в директорию `learning-area` командой `cd`. Например, если вы в родительской директории:
 
-   ```
+   ```bash
    cd learning-area
    ```
 
 2. Обновите репозиторий, выполнив следующую команду:
 
-   ```
+   ```bash
    git pull
    ```
 
