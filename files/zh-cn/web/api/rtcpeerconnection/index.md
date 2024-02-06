@@ -35,7 +35,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 - {{DOMxRef("RTCPeerConnection.localDescription", "localDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}}，代表这条连接的本地端的会话描述。如果本地的会话描述还没有被设置，返回 `null`。
 - {{DOMxRef("RTCPeerConnection.peerIdentity", "peerIdentity")}} {{ReadOnlyInline}}
-  - : 返回一个兑现为标识远程对等端 {{DOMxRef("RTCIdentityAssertion")}}（其包含标识对等端身份的字符串）的 {{jsxref("Promise")}}。一旦这个 `Promise` 成功兑现，得到的身份信息就是目标对等端的身份信息，并且在连接的持续时间内不会改变。
+  - : 返回一个兑现为标识远程对等端 {{DOMxRef("RTCIdentityAssertion")}}（其包含标识对等端身份的字符串）的 {{jsxref("Promise")}}。一旦这个 `Promise` 成功兑现，得到的身份信息就是目标对等端的身份信息，并且在连接期间不会改变。
 - {{DOMxRef("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，描述连接本地端的待定配置更改。这不是描述当前连接的状态，而是描述可能将存在的状态。
 - {{DOMxRef("RTCPeerConnection.pendingRemoteDescription", "pendingRemoteDescription")}} {{ReadOnlyInline}}
