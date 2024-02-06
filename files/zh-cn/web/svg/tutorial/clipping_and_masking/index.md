@@ -103,6 +103,6 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 
 ## 利用广为人知的 CSS 技术
 
-Web 开发工具箱中有一个很有用的工具是`display:none`。它虽然几无悬念，但是依然可以在 SVG 上使用该 CSS 属性，连同 CSS2 定义的`visibility`和`clip`属性。为了恢复以前设置的`display:none`，知道这一点很重要：所有的 SVG 元素的初始`display`值都是`inline`。
+Web 开发工具箱中有一个很有用的工具是 `display:none`。因此，决定将此 CSS 属性与 CSS 2 中定义的 `visibility` 和 `clip` 属性一起纳入 SVG 并不奇怪。对于恢复以前设置的 `display:none`，重要的是知道所有的 SVG 元素的初始 `display` 值都是 `inline`。
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}

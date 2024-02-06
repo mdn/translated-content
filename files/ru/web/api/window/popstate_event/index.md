@@ -34,7 +34,7 @@ slug: Web/API/Window/popstate_event
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.           |
 | `state` {{readonlyInline}}      | _any_                      | The current history entry's state object (if any). |
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

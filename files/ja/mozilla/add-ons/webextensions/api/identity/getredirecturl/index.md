@@ -3,7 +3,7 @@ title: identity.getRedirectURL()
 slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 リダイレクト URL として利用可能な URL を生成します。
 

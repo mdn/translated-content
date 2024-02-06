@@ -3,7 +3,7 @@ title: Theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme/Theme
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet thème représente la spécification d'un thème.
 

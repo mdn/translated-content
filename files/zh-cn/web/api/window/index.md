@@ -136,16 +136,12 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 
 ### 已废弃属性
 
-- {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
-  - : 获取/设置给定窗口的状态栏文本。
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回**当前事件**，即当前由 JavaScript 代码的上下文处理的事件，如果当前没有事件被处理，则返回 `undefined`。应尽可能使用直接传递给事件处理程序的 {{domxref("Event")}} 对象来代替。
 - {{domxref("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回一个带有向浏览器添加外部搜索提供者的功能的对象。
 - {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回视口相对于设备自然方向的度数（以 90 度为增量）。
-- {{domxref("Window.returnValue")}} {{Deprecated_Inline}}
-  - : 返回给调用 {{domxref("window.showModalDialog()")}} 的函数的返回值，以便将该窗口显示为模态对话框。
 - {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : 返回对侧边栏的 window 对象的一个引用。
 - {{domxref("Window.status")}} {{Deprecated_Inline}}

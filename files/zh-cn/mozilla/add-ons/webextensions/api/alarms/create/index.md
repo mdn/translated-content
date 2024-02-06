@@ -3,7 +3,7 @@ title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 创建一个新的 alarm.
 

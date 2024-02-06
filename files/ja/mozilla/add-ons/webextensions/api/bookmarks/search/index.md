@@ -3,7 +3,7 @@ title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.search()`** 関数は、指定したクエリにマッチするブックマークを検索するものです。マッチしたブックマークは、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの配列として、指定されたコールバック関数の引数に渡されます。
 

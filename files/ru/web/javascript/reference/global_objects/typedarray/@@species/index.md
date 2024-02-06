@@ -54,7 +54,7 @@ class MyTypedArray extends Uint8Array {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

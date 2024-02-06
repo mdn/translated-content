@@ -41,7 +41,7 @@ slug: Web/API/NamedNodeMap
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

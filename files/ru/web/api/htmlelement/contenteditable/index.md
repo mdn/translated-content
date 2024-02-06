@@ -24,7 +24,7 @@ element.contentEditable = "true"
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

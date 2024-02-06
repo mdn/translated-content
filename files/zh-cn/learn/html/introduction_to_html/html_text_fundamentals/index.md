@@ -514,7 +514,7 @@ function updateCode() {
 }
 
 const htmlSolution = `<ol>
-  <li>沿着条路走到头</li>
+  <li>沿这条路走到头</li>
   <li>右转</li>
   <li>直行穿过第一个十字路口</li>
   <li>在第三个十字路口处左转</li>

@@ -3,7 +3,7 @@ title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 从 WebExtension 发送单条消息到 native application。
 

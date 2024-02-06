@@ -4,7 +4,7 @@ slug: Web/CSS/Subsequent-sibling_combinator
 original_slug: Web/CSS/General_sibling_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 ## Описание
 
@@ -37,7 +37,7 @@ p ~ span {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

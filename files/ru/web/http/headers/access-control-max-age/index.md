@@ -45,7 +45,7 @@ Access-Control-Max-Age: 600
 
 {{Specifications}}
 
-## Совместимость в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

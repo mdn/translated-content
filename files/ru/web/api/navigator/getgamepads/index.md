@@ -32,7 +32,7 @@ window.addEventListener("gamepadconnected", function (e) {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -30,7 +30,7 @@ slug: Web/API/Element/focusout_event
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Возможно ли отменить событие.                 |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM-элемент) | Цель события, получающая фокус.               |
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

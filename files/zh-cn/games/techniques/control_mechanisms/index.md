@@ -1,67 +1,69 @@
 ---
-title: Implementing game control mechanisms
+title: 实现游戏控制机制
 slug: Games/Techniques/Control_mechanisms
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
 
-One of HTML5's main advantages as a game development platform is the ability to run on various platforms and devices. Streamlining cross device differences creates multiple challenges, not least when providing appropriate controls for different contexts. In this series of articles we will show you how you can approach building a game that can be played using touchscreen smartphones, mouse and keyboard, and also less common mechanisms such as gamepads.
+作为游戏开发平台，HTML5 的主要优势之一是能够在各种平台和设备上运行。简化跨设备差异带来了多重挑战，尤其是在为不同环境提供适当控件时。在本系列文章中，我们将向你展示如何构建一款可以使用触摸屏智能手机、鼠标和键盘以及游戏手柄等不常用机制进行游玩的游戏。
 
-## Case study
+## 案例分析
 
-We'll be using the [Captain Rogers: Battle at Andromeda demo](http://rogers2.enclavegames.com/demo/) as an example.
+我们将使用 [Captain Rogers: Battle at Andromeda](http://rogers2.enclavegames.com/demo/) 演示版作为示例。
 
-![Captain Rogers: Battle at Andromeda - cover of the game containing Enclave Games and Blackmoon Design logos, Roger's space ship and title of the game.](captainrogers2-cover.png)
+![Captain Rogers: Battle at Andromeda——包含 Enclave Games 和 Blackmoon Design 徽标、罗杰的太空船和游戏名称的游戏封面。](captainrogers2-cover.png)
 
-Captain Rogers was created using the [Phaser](http://phaser.io/) framework, the most popular tool for simple 2D game development in JavaScript right now, but it should be fairly easy to reuse the knowledge contained within these articles when building games in pure JavaScript or any other framework. If you're looking for a good introduction to Phaser, then check the [2D breakout game using Phaser](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) tutorial.
+Captain Rogers 是使用 [Phaser](https://phaser.io/) 框架开发的游戏，该框架是目前 JavaScript 中最流行的简单 2D 游戏开发工具，但在使用纯 JavaScript 或其他框架构建游戏时，重复使用这些文章中包含的知识应该相当容易。如果你想了解 Phaser 的入门知识，请查看[使用 Phaser 开发 2D 打砖块游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)教程。
 
-In the following articles we will show how to implement various different control mechanisms for Captain Rogers to support different platforms — from touch on mobile, through keyboard/mouse/gamepad on desktop, to more unconventional ones like TV remote, shouting to or waving your hand in front of the laptop, or squeezing bananas.
+在接下来的文章中，我们将展示如何为 Rogers 船长实现各种不同的控制机制，以支持不同的平台——从手机上的触摸、桌面上的键盘/鼠标/游戏板，到更多非常规的控制机制，如电视遥控器、对着笔记本电脑大喊或挥手，或者捏香蕉。
 
-## Setting up the environment
+## 设置环境
 
-Let's start with a quick overview of the game's folder structure, JavaScript files and in-game states, so we know what's happening where. The game's folders look like this:
+让我们先快速浏览一下游戏的文件夹结构、JavaScript 文件和游戏中的状态，这样就能知道在哪里发生了什么。游戏的文件夹看起来是这样的：
 
-![Captain Rogers: Battle at Andromeda - folder structure of the games' project containing JavaScript sources, images and fonts.](captainrogers2-folderstructure.png)
+![Captain Rogers: Battle at Andromeda——游戏项目的文件夹结构，其中包含 JavaScript 源代码、图像和字体。](captainrogers2-folderstructure.png)
 
-As you can see there are folders for images, JavaScript files, fonts and sound effects. The `src` folder contains the JavaScript files split as a separate states — `Boot.js`, `Preloader.js`, `MainMenu.js` and `Game.js` — these are loaded into the index file in this exact order. The first one initializes Phaser, the second preloads all the assets, the third one controls the main menu welcoming the player, and the fourth controls the actual gameplay.
+正如你所看到的，这里有用于存放图片、JavaScript 文件、字体和音效的文件夹。`src` 文件夹包含 JavaScript 文件，这些文件被分为不同的状态：`Boot.js`、`Preloader.js`、`MainMenu.js` 和 `Game.js`。第一个状态初始化 Phaser，第二个状态预加载所有资源，第三个状态控制欢迎玩家的主菜单，第四个状态控制实际游戏。
 
-Every state has its own default methods: `preload()`, `create()`, and `update()`. The first one is needed for preloading required assets, `create()` is executed once the state had started, and `update()` is executed on every frame.
+每个状态都有自己的默认方法：`preload()`、`create()` 和 `update()`。第一个方法用于预载所需资源，`create()` 在状态启动后执行，而 `update()` 则在每一帧上执行。
 
-For example, you can define a button in the `create()` function:
+例如，你可以在 `create()` 函数中定义一个按钮：
 
 ```js
-create: function() {
-  // ...
-  var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
-  // ...
+create() {
+  // …
+  const buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+  // …
 }
 ```
 
-It will be created once at the start of the game, and will execute `this.clickEnclave()` action assigned to it when clicked, but you can also use the mouse's pointer value in the `update()` function to make an action:
+它将在游戏开始时创建一次，并在点击时执行分配给它的 `this.clickEnclave()` 动作，但你也可以在 `update()` 函数中使用鼠标指针值来执行动作：
 
 ```js
-update: function() {
-  // ...
-  if(this.game.input.mousePointer.isDown) {
-    // do something
+update() {
+  // …
+  if (this.game.input.mousePointer.isDown) {
+      // 做些什么
   }
-  // ...
+  // …
 }
 ```
 
-This will be executed whenever the mouse button is pressed, and it will be checked against the input's `isDown` boolean variable on every frame of the game.
+当鼠标按钮被按下时，它就会被执行，并且在游戏的每一帧都会根据输入的 `isDown` 布尔变量进行检查。
 
-That should give you some understanding of the project structure. We'll be playing mostly with the `MainMenu.js` and `Game.js` files, and we'll explain the code inside the `create()` and `update()` methods in much more detail in later articles.
+这应该能让你对项目结构有一些了解。我们将主要使用 `MainMenu.js` 和 `Game.js` 文件，并将在以后的文章中更详细地解释 `create()` 和 `update()` 方法中的代码。
 
-## Pure JavaScript demo
+## 纯 JavaScript 演示
 
-There's also a [small online demo](https://end3r.github.io/JavaScript-Game-Controls/) with full source code [available on GitHub](https://github.com/end3r/JavaScript-Game-Controls/) where the basic support for the control mechanisms described in the articles is implemented in pure JavaScript. It will be explained in the given articles themselves below, but you can play with it already, and use the code however you want for learning purposes.
+另外还有一个[小型在线演示](https://end3r.github.io/JavaScript-Game-Controls/)，其完整源代码[可在 GitHub 上获取](https://github.com/end3r/JavaScript-Game-Controls/)，其中文章中描述的控制机制的基本支持是用纯 JavaScript 实现的。下面的文章将对其进行解释，但你已经可以用它来玩了，也可以出于学习目的随意使用这些代码。
 
-## The articles
+## 其他文章
 
-JavaScript is the perfect choice for mobile gaming because of HTML5 being truly multiplatform; all of the following articles focus on the APIs provided for interfacing with different control mechanisms:
+JavaScript 是移动游戏的最佳选择，因为 HTML 具有真正的多平台特性；以下所有文章都将重点放在为不同控制机制提供接口的 API 上：
 
-1. [Mobile touch controls](/zh-CN/docs/Games/Techniques/Control_mechanisms/Mobile_touch) — The first article will kick off with touch, as the mobile first approach is very popular.
-2. [Desktop mouse and keyboard controls](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) — When playing on a desktop/laptop computer, providing keyboard and mouse controls is essential to provide an acceptable level of accessibility for the game.
-3. [Desktop gamepad controls](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_gamepad) — The Gamepad API rather usefully allows gamepads to be used for controlling web apps on desktop/laptop, for that console feel.
-4. [Unconventional controls](/zh-CN/docs/Games/Techniques/Control_mechanisms/Other) — The final article showcases some unconventional control mechanisms, from the experimental to the slightly crazy, which you might not believe could be used to play the game.
+1. [移动触控](/zh-CN/docs/Games/Techniques/Control_mechanisms/Mobile_touch)——第一篇文章将以触控为开篇，因为移动优先的方式非常流行。
+2. [桌面鼠标和键盘控制](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)——当在台式机/笔记本电脑上进行游戏时，提供键盘和鼠标控制对于为游戏提供可接受的无障碍程度至关重要。
+3. [桌面游戏手柄控制](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_gamepad)——游戏手柄 API 允许在桌面/笔记本电脑上使用游戏手柄控制网络应用程序，以获得游戏机的感觉。
+4. [非常规控制](/zh-CN/docs/Games/Techniques/Control_mechanisms/Other)——最后一篇文章展示了一些非常规的控制机制，从实验性的到略显疯狂的，你可能不会相信这些机制可以用来玩游戏。
