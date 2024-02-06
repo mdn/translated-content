@@ -31,7 +31,7 @@ flatMap(callbackFn)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `callbackFn` 返回一个非迭代器/可迭代对象值或原始字符串，则抛出该异常。
+  - : 如果 `callbackFn` 返回一个非迭代器/可迭代对象值或字符串原始值，则抛出该异常。
 
 ## 描述
 
@@ -105,7 +105,7 @@ new Map([map1, map2].flatMap((x) => x)); // Map(1) {undefined => undefined}
 
 ### 返回字符串
 
-虽然字符串是可迭代对象，但 `flatMap()` 明确拒绝从 `callbackFn` 返回的原生字符串，因为按码位迭代的行为通常不是你想要的。
+虽然字符串是可迭代对象，但 `flatMap()` 明确拒绝从 `callbackFn` 返回的字符串原始值，因为按码位迭代的行为通常不是你想要的。
 
 ```js example-bad
 [1, 2, 3]
