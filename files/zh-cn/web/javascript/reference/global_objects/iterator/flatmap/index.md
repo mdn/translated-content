@@ -97,7 +97,7 @@ console.log(merged.get("a")); // 1
 console.log(merged.get("e")); // 5
 ```
 
-则避免创建 map 内容的临时拷贝。请注意，必须先将数组 `[map1, map2]` 转换为迭代器（通过 {{jsxref("Array.prototype.values()")}}），因为 {{jsxref("Array.prototype.flatMap()")}} 只能展开数组，而不是可迭代对象。
+这避免了创建 map 内容的临时拷贝。请注意，必须先将数组 `[map1, map2]` 转换为迭代器（通过 {{jsxref("Array.prototype.values()")}}），因为 {{jsxref("Array.prototype.flatMap()")}} 只能展开数组，而不是可迭代对象。
 
 ```js
 new Map([map1, map2].flatMap((x) => x)); // Map(1) {undefined => undefined}
