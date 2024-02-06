@@ -50,7 +50,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 ## 静态方法
 
 - {{DOMxRef("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}}
-  - : 创建一个 X.509 证书及其对应的私钥，返回一个 {{jsxref("Promise")}} 对象，证书生成后该 {{jsxref("Promise")}} 将会兑现为一个新的 {{DOMxRef("RTCCertificate")}}。
+  - : 创建一个 X.509 证书及其对应的私钥，返回一个 {{jsxref("Promise")}} 对象，其在证书生成后将会兑现为生成的新 {{DOMxRef("RTCCertificate")}}。
 
 ## 实例方法
 
