@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-在本文中，我们将介绍如何使用 CSS 来为较难样式化的表单控件类型添加样式，即“糟糕的（bad）”和“丑陋的（ugly）”类型。正如我们在[上一篇文章](/zh-CN/docs/Learn/Forms/Styling_web_forms)中所看到的，文本域和按钮的样式完全可以轻松实现；现在我们将深入研究问题较多的样式。
+在本文中，我们将介绍如何使用 CSS 来为较难样式化的表单控件类型添加样式，即“糟糕的（bad）”和“丑陋的（ugly）”类型。正如我们在[上一篇文章](/zh-CN/docs/Learn/Forms/Styling_web_forms)中所看到的，文本字段和按钮的样式完全可以轻松实现；现在我们将深入研究问题较多的样式。
 
 <table>
   <tbody>
@@ -33,6 +33,7 @@ l10n:
 
 - 复选框和单选框
 - [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
+
 **丑陋的**：有些元素无法使用 CSS 进行彻底样式化。这些元素包括：
 
 - 创建下拉部件时涉及的元素，包括 {{HTMLElement("select")}}、{{HTMLElement("option")}}、{{HTMLElement("optgroup")}} 和 {{HTMLElement("datalist")}}。
