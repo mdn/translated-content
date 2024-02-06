@@ -21,7 +21,7 @@ l10n:
 _也从 {{domxref("EventTarget")}} 继承属性。_
 
 - {{DOMxRef("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} {{ReadOnlyInline}}
-  - : 返回一个布尔值，指示远程对等方是否可以接受[trickled ICE candidates](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice) 候选者。
+  - : 返回一个布尔值，指示远程对等方是否可以接受[trickled ICE candidates](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice)。
 - {{DOMxRef("RTCPeerConnection.connectionState", "connectionState")}} {{ReadOnlyInline}}
   - : 返回表示连接当前状态的下列字符串之一：`new`（新建）、`connecting`（连接中）、`connected`（已连接）、`disconnected`（已断开连接）、`failed`（连接失败）或 `closed`（已关闭）。
 - {{DOMxRef("RTCPeerConnection.currentLocalDescription", "currentLocalDescription")}} {{ReadOnlyInline}}
