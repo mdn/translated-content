@@ -417,7 +417,7 @@ select {
 
 ### 日期输入类型
 
-日期/时间输入类型（[`datetime-local`](/zh-cN/docs/Web/HTML/Element/input/datetime-local)、[`time`](/zh-CN/docs/Web/HTML/Element/input/time)、[`week`](/zh-CN/docs/Web/HTML/Element/input/week)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month)）都有相同的主要相关问题。实际的包含框与任何文本输入一样容易设计样式，我们在此演示中使用的样式看起来很好。
+日期/时间输入类型（[`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`time`](/zh-CN/docs/Web/HTML/Element/input/time)、[`week`](/zh-CN/docs/Web/HTML/Element/input/week)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month)）都有相同的主要相关问题。实际的包含框与任何文本输入一样容易设计样式，我们在此演示中使用的样式看起来很好。
 
 但是，该控件的内部部分（例如，用于选择日期的弹出日历、用于递增/递减值的旋转器）完全不可样式化，而且无法使用`"appearance: none;` 将其删除。如果你真的需要完全控制样式，必须使用某种库来生成自定义控件，或者创建自己的控件。
 
