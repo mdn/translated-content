@@ -33,7 +33,6 @@ l10n:
 
 - 复选框和单选框
 - [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
- 
 **丑陋的**：有些元素无法使用 CSS 进行彻底样式化。这些元素包括：
 
 - 创建下拉部件时涉及的元素，包括 {{HTMLElement("select")}}、{{HTMLElement("option")}}、{{HTMLElement("optgroup")}} 和 {{HTMLElement("datalist")}}。
