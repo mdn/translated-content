@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 
 除了连字或齐线数字（数字排列均匀，而“老式”数字的看起来像小写字母）等广泛应用的特性，还有非常特殊的一部分，如样式集（可能含有几种特定的字形变体，它们可以一起使用），甚至是特定的东亚文字的字形变化。对于最后一种情况，这些变化实际上是正确表达语言所必须的，因为他们超越了大多数其他 OpenType 特性的风格偏好。
 
-> **警告：** CSS 定义了很多的属性用以改变字体特性，然而很多属性没有完全实现。这里给出了所有属性的定义，但是大部分都只能用底层属性 {{cssxref("font-feature-settings")}} 来控制。可以同时使用两种方式定义 CSS，但这可能会变得很繁琐。而只使用 `font-feature-settings` 控制一切的问题是，每次你要变动一个特性，就必须处理整个字符串（类似于用 {{cssxref("font-variation-settings")}} 操纵变量字体）。
+> **警告：** CSS 定义了很多的属性用以改变字体特性，然而很多属性没有完全实现。这里给出了所有属性的定义，但是大部分都只能用底层属性 {{cssxref("font-feature-settings")}} 来控制。可以同时使用两种方式定义 CSS，但这可能会变得很繁琐。而只使用 `font-feature-settings` 控制一切的问题是，每次你要变动一个特性，就必须重新定义整个字符串（类似于用 {{cssxref("font-variation-settings")}} 操纵变量字体）。
 
 ## 了解字体的可用特性
 
@@ -147,7 +147,7 @@ OpenType 特性最常用的情形之一，就是正确地呈现小型大写字�
 
 ## 字体特性设置
 
-{{cssxref("font-feature-settings")}} 是允许直接访问每个命名的 OpenType 特性的“低级语法”。这样可以获得更多的控制权，但也有一些缺点，比如它对继承的影响，以及——如上所述——如果你想改变一个设置，你就必须重新声明整个字符串（除非你使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)来设置值）。因此，最好在可能的情况下使用上面展示的标准属性。
+{{cssxref("font-feature-settings")}} 是允许直接访问每个命名的 OpenType 特性的“底层语法”。这样可以获得更多的控制权，但也有一些缺点，比如它对继承的影响，以及——如上所述——如果你想改变一个设置，你就必须重新声明整个字符串（除非你使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)来设置值）。因此，最好在可能的情况下使用上面展示的标准属性。
 
 其具有大量可能的特性。你可以在上面看到其中一部分的示例，也有一些资源可以帮助你找到更多的特性。
 
@@ -211,5 +211,5 @@ OpenType 特性最常用的情形之一，就是正确地呈现小型大写字�
 
 ### 其他资源
 
-- [使用 OpenType 特性](https://helpx.adobe.com/fonts/using/use-open-type-features.html) by Tim Brown, Head of Typography, Adobe
+- [使用 OpenType 特性](https://helpx.adobe.com/fonts/using/use-open-type-features.html)，来自 Adobe 排版设计负责人 Tim Brown
 - [CSS 中的 OpenType 特性的语法](https://helpx.adobe.com/cn/fonts/using/open-type-syntax.html)
