@@ -19,7 +19,7 @@ l10n:
 self.addEventListener("notificationclick", (event) => {
   console.log("通知被点击");
 
-  // 数据可以附加到通知中，以便您在 notificationclick 事件处理方法中对其进行处理。
+  // 数据可以附加到通知中，以便你在 notificationclick 事件处理方法中对其进行处理。
   console.log(`Notification Tag: ${event.notification.tag}`);
   console.log(`Notification Data: ${event.notification.data}`);
   event.notification.close();
