@@ -34,7 +34,8 @@ El elemento `<div>` tiene [un rol implícito de `generic`](https://www.w3.org/TR
 ```html
 <div>
   <p>
-    Cualquier tipo de contenido aquí. Como &lt;p&gt;, &lt;table&gt;. ¡Lo que quieras!
+    Cualquier tipo de contenido aquí. Como &lt;p&gt;, &lt;table&gt;. ¡Lo que
+    quieras!
   </p>
 </div>
 ```
@@ -51,7 +52,9 @@ Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS.
 
 ```html
 <div class="shadowbox">
-  <p>Aquí hay una nota muy interesante exhibida en un hermoso cuadro sombreado.</p>
+  <p>
+    Aquí hay una nota muy interesante exhibida en un hermoso cuadro sombreado.
+  </p>
 </div>
 ```
 
