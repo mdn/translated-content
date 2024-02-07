@@ -2,18 +2,18 @@
 title: Notifications API
 slug: Web/API/Notifications_API
 l10n:
-  sourceCommit: 2184f627ae940cca9d95ba9846903ae0cfc4d323
+  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
 
-**Notifications API** 允许网页控制向最终用户显示系统通知——这些都在顶级浏览上下文视口之外，因此即使用户已经切换标签页或移动到不同的应用程序，也可以显示。该 API 被设计成与不同平台上的现有通知系统兼容。
+**Notifications API** 允许网页控制向最终用户显示系统通知——这些都在顶级浏览上下文视口之外，因此即使用户已经切换标签页或移动到不同的应用程序也可以显示。该 API 被设计成与不同平台上的现有通知系统兼容。
 
 {{AvailableInWorkers}}
 
 ## 概念和用法
 
-在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要为当前来源授予权限以显示系统通知，这通常在应用或站点初始化时，使用 {{domxref("Notification.requestPermission()")}} 方法来完成。这应该通过响应用户交互来完成，例如单击按钮，例如：
+在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要为当前来源授予权限以显示系统通知，这通常在应用或站点初始化时，使用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} 方法来完成。这应该通过响应用户交互来实现，如单击按钮，例如：
 
 ```js
 btn.addEventListener("click", () => {
@@ -40,7 +40,7 @@ btn.addEventListener("click", () => {
 
 ## 接口
 
-- {{domxref("通知")}}
+- {{domxref("Notification")}}
   - : 定义通知对象。
 - {{domxref("NotificationEvent")}}
   - : 表示在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上下文中触发的通知事件。

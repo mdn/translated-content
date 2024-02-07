@@ -69,7 +69,7 @@ Notification.requestPermission((result) => {
 在我们的待办事项列表演示中，我们包含一个“启用通知”按钮，按下该按钮时，会请求应用程序的通知权限。
 
 ```html
-<button id="enable">Enable notifications</button>
+<button id="enable">启用通知</button>
 ```
 
 单击此按钮将调用 `askNotificationPermission()` 函数：
@@ -102,7 +102,7 @@ function askNotificationPermission() {
 
 创建通知很简单，只需要用 {{domxref("Notification")}} 构造方法。这个构造方法需要一个用来显示在通知内的标题以及一些用来增强通知的选项，例如 {{domxref("Notification.icon","icon")}} 或文本 {{domxref("Notification.body","body")}}。
 
-例如，在待办事项列表示例中，我们使用以下代码片段在需要时创建通知（在 `createNotification()` 函数中找到）：
+例如，在待办事项列表示例中，我们使用以下代码片段在需要时创建通知（可以在 `createNotification()` 函数中找到）：
 
 ```js
 const img = "/to-do-notifications/img/icon-128.png";
