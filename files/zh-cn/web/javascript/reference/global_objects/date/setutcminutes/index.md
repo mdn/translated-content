@@ -30,7 +30,7 @@ setUTCMinutes(minutesValue, secondsValue, msValue)
 
 ### 返回值
 
-原地修改当前 {{jsxref("Date")}} 对象，并返回它的新的[时间戳](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)。如果参数为 `NaN`（或其他会被[强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)为 `NaN` 的值，比如 `undefined`），则日期会被设置为[无效日期](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)，并返回 `NaN`。
+原地修改当前 {{jsxref("Date")}} 对象，并返回它的新[时间戳](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)。如果参数为 `NaN`（或其他会被[强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)为 `NaN` 的值，比如 `undefined`），则日期会被设置为[无效日期](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)，并返回 `NaN`。
 
 ## 描述
 
