@@ -68,7 +68,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 {{HTMLElement('dfn')}} は定義されたキーワードをマークし、現在の段落がキーワードを定義していることを示します。 言い換えれば、`<dfn>` 要素とそのコンテナーの間に暗黙の関係があります。 より正式な関係を望む場合、または定義が段落全体ではなく 1 つの文で構成されている場合は、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性を使用して、より正式に定義に関連付けることができます。
 
-```html
+```html-nolint
 <p>
   <span id="ff">
     <dfn aria-describedby="ff">Firefox</dfn>
@@ -92,7 +92,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 ここでは簡単な例として、食べ物と飲み物の種類を説明します。
 
-```html
+```html-nolint
 <dl>
   <dt>ジャンバラヤ</dt>
   <dd>
