@@ -55,7 +55,7 @@ theBigDay.setUTCMinutes(43);
 
 {{Compat}}
 
-## 规范
+## 参见
 
 - {{jsxref("Date.prototype.getUTCMinutes()")}}
 - {{jsxref("Date.prototype.setMinutes()")}}
