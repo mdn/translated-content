@@ -2639,6 +2639,18 @@
       "DracotMolver"
     ]
   },
+  "MDN/Community/Contributing": {
+    "modified": "2019-03-22T01:52:35.495Z",
+    "contributors": [
+      "Beatriz_Ortega_Valdes",
+      "wbamberg",
+      "Rrxxxx",
+      "Ibrahim1997",
+      "LeoHirsch",
+      "MauricioGil",
+      "Mars"
+    ]
+  },
   "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-12-02T19:26:24.923Z",
     "contributors": [
@@ -2661,22 +2673,6 @@
       "LeoHirsch",
       "cototion"
     ]
-  },
-  "MDN/Contribute": {
-    "modified": "2019-03-22T01:52:35.495Z",
-    "contributors": [
-      "Beatriz_Ortega_Valdes",
-      "wbamberg",
-      "Rrxxxx",
-      "Ibrahim1997",
-      "LeoHirsch",
-      "MauricioGil",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Processes": {
-    "modified": "2019-01-17T02:12:44.469Z",
-    "contributors": ["wbamberg", "astrapotro"]
   },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-03T01:47:58.469Z",
@@ -6641,6 +6637,10 @@
     "modified": "2020-10-21T02:39:25.867Z",
     "contributors": ["SphinxKnight", "RoqueAlonso"]
   },
+  "Web/CSS/CSS_display/Block_formatting_context": {
+    "modified": "2019-03-23T22:32:27.340Z",
+    "contributors": ["Enesimus", "javichito"]
+  },
   "Web/CSS/CSS_flexible_box_layout": {
     "modified": "2019-03-23T22:43:42.897Z",
     "contributors": ["danpaltor", "tipoqueno", "pepe2016", "fscholz"]
@@ -8488,10 +8488,6 @@
       "ethertank",
       "Sheppy"
     ]
-  },
-  "Web/Guide/CSS/Block_formatting_context": {
-    "modified": "2019-03-23T22:32:27.340Z",
-    "contributors": ["Enesimus", "javichito"]
   },
   "Web/HTML": {
     "modified": "2020-12-10T12:38:08.697Z",
@@ -13969,6 +13965,10 @@
       "anyruizd",
       "Michelangeur"
     ]
+  },
+  "conflicting/MDN/Community/Contributing": {
+    "modified": "2019-01-17T02:12:44.469Z",
+    "contributors": ["wbamberg", "astrapotro"]
   },
   "conflicting/MDN/Contribute": {
     "modified": "2019-01-16T18:56:52.965Z",
