@@ -17,7 +17,7 @@ slug: Web/HTML/Content_categories
 
 ## 主要內容類型
 
-### 資訊元內容
+### 元資訊內容
 
 屬於*元資訊內容*（Metadata content）類型的元素修飾該文件其餘部分的陳述或行為、與其他文件建立連結、或是傳達其他*外來*（out of band）訊息。
 
@@ -183,7 +183,8 @@ slug: Web/HTML/Content_categories
 - {{HTMLElement("u")}}
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
-- {{HTMLElement("wbr")}} -空白字符在內的純文本
+- {{HTMLElement("wbr")}} 
+- 包含空白字符在內的純文本
 
 在滿足特定條件下，某些元素也屬這個類型：
 
@@ -233,7 +234,7 @@ slug: Web/HTML/Content_categories
 
 ### 捫及內容
 
-不是空白或隱藏的內容稱為捫及（Palpable content）。屬於流內容或是段落型內容模型的元素最少要有一個捫及的節點。
+不是空白或隱藏的內容稱為捫及內容（Palpable content）。屬於流內容或是段落型內容模型的元素最少要有一個捫及的節點。
 
 ### 表單相關內容
 
@@ -274,7 +275,7 @@ slug: Web/HTML/Content_categories
 </p>
 ```
 
-這果這些元素被刪掉的話，這個分段依然在 HTML 有效（如果不修正語法）
+如果這些元素被刪掉的話，這個分段依然在 HTML 有效（如果不修正語法）。
 
 ```html
 <p>我們認為下面這些真理是<em>神聖不可否認</em>不言而喻的。</p>
