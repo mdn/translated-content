@@ -48,17 +48,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">値</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
@@ -81,17 +71,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">値</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
@@ -114,11 +94,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">値</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
@@ -192,3 +168,8 @@ svg {
 ## 仕様
 
 {{Specifications}}
+
+## 関連情報
+
+- {{SVGAttr("cx")}}
+- {{SVGAttr("r")}}

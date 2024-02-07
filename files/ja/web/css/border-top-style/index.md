@@ -1,15 +1,17 @@
 ---
 title: border-top-style
 slug: Web/CSS/border-top-style
+l10n:
+  sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
 ---
 
 {{CSSRef}}
 
-**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線の形状を設定します。
+**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線のスタイルを設定します。
 
 {{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 
-> **メモ:** 仕様書では、異なる形状の境界線を角でどのように接続するかを定義していません。
+> **メモ:** 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。
 
 ## 構文
 
@@ -30,10 +32,11 @@ border-top-style: outset;
 border-top-style: inherit;
 border-top-style: initial;
 border-top-style: revert;
+border-top-style: revert-layer;
 border-top-style: unset;
 ```
 
-`border-top-style` プロパティは、 {{CSSxRef("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
+`border-top-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
 
 ## 公式定義
 
@@ -43,7 +46,7 @@ border-top-style: unset;
 
 {{CSSSyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### border-top-style の設定
 
@@ -118,7 +121,7 @@ td {
 
 #### 結果
 
-{{EmbedLiveSample('Examples', 300, 200)}}
+{{EmbedLiveSample('例', 300, 200)}}
 
 ## 仕様書
 
@@ -130,5 +133,5 @@ td {
 
 ## 関連情報
 
-- その他の形状に関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
+- その他のスタイルに関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
 - その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-top-width")}}

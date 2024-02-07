@@ -1,11 +1,13 @@
 ---
 title: border
 slug: Web/CSS/border
+l10n:
+  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
-**`border`** は [CSS](/ja/docs/Web/CSS) の [一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、要素の境界を設定します。これは {{cssxref("border-width")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}} の値を設定します。
+**`border`** は [CSS](/ja/docs/Web/CSS) の [一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
 
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
@@ -13,9 +15,9 @@ slug: Web/CSS/border
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- {{cssxref("border-color")}}
-- {{cssxref("border-style")}}
-- {{cssxref("border-width")}}
+- [`border-color`](/ja/docs/Web/CSS/border-color)
+- [`border-style`](/ja/docs/Web/CSS/border-style)
+- [`border-width`](/ja/docs/Web/CSS/border-width)
 
 ## 構文
 
@@ -35,6 +37,8 @@ border: medium dashed green;
 /* グローバル値 */
 border: inherit;
 border: initial;
+border: revert;
+border: revert-layer;
 border: unset;
 ```
 
@@ -45,8 +49,8 @@ border: unset;
 ### 値
 
 - `<line-width>`
-  - : 境界線の太さを設定します。指定されなかった場合は既定値の `medium` になります。 {{cssxref("border-width")}} を参照してください。
-- `<line-style>`
+  - : 境界線の太さを設定します。指定されなかった場合は既定値の `medium` になります。 {{Cssxref("border-width")}} を参照してください。
+- {{cssxref("&lt;line-style&gt;")}}
   - : 境界線の種類を設定します。指定されなかった場合は既定値の `none` になります。 {{cssxref("border-style")}} を参照してください。
 - {{cssxref("&lt;color&gt;")}}
   - : 境界線の色を設定します。指定されなかった場合は既定値で要素の {{cssxref("color")}} プロパティになります。 {{cssxref("border-color")}} を参照してください。
@@ -114,5 +118,6 @@ div {
 - {{Cssxref("border-width")}}
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
-- [背景と境界](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- {{Cssxref("outline")}}
+- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

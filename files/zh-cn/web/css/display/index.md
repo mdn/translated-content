@@ -80,10 +80,10 @@ display: unset;
 
         如果它的外部显示类型是 `inline` 或 `run-in`，并且它参与一个块或者内联格式上下文，那么它将生成一个内联盒子。否则它将生成一个块容器盒。
 
-        根据其他属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到块或者内联格式化上下文，它要么为它的内容建立新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
+        根据其他属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到块或者内联格式化上下文，它要么为它的内容建立新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
 
     - `flow-root`
-      - : 该元素生成一个块级元素盒，其会建立一个新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)，定义格式化上下文的根元素。
+      - : 该元素生成一个块级元素盒，其会建立一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)，定义格式化上下文的根元素。
     - `table`
       - : 该元素的行为类似于 HTML 中的 {{HTMLElement("table")}} 元素。它定义了一个块级别的盒子。
     - `flex`

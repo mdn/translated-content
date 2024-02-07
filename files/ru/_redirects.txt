@@ -625,6 +625,7 @@
 /ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 /ru/docs/Web/Guide/Audio_and_video_manipulation	/ru/docs/Web/Media/Audio_and_video_manipulation
+/ru/docs/Web/Guide/CSS/Block_formatting_context	/ru/docs/Web/CSS/CSS_display/Block_formatting_context
 /ru/docs/Web/Guide/CSS/Getting_started/SVG_и_CSS	/ru/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ru/docs/Web/Guide/CSS/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ru/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
