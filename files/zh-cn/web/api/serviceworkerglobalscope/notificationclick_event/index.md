@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Notifications")}}
 
-**`notificationclick`** 事件在点击由 {{domxref("ServiceWorkerRegistration.showNotification()")}} 生成的系统通知时触发。
+{{domxref("ServiceWorkerGlobalScope")}} 接口的 **`notificationclick`** 事件在点击由 {{domxref("ServiceWorkerRegistration.showNotification()")}} 生成的系统通知时触发。
 
 在主线程或非服务工作线程中使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建的通知则将在 {{domxref("Notification")}} 对象本身触发 {{domxref("Notification/click_event", "click")}} 事件。
 
