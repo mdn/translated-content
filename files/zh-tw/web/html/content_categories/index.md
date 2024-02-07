@@ -183,7 +183,7 @@ slug: Web/HTML/Content_categories
 - {{HTMLElement("u")}}
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
-- {{HTMLElement("wbr")}} 
+- {{HTMLElement("wbr")}}
 - 包含空白字符在內的純文本
 
 在滿足特定條件下，某些元素也屬這個類型：
