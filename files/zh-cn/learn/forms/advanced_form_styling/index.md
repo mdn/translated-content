@@ -80,7 +80,7 @@ l10n:
 </form>
 ```
 
-Applying the following CSS to them removes system-level styling.
+对它们应用以下 CSS 可以删除系统级样式。
 
 ```css
 input {
@@ -155,7 +155,7 @@ input[type="checkbox"] {
 
 #### 在单选框/复选框上使用 appearance: none
 
-如前所述，可以使用 {{cssxref('appearance')}}`:none;` 完全删除复选框或单选按钮的默认外观：
+如前所述，可以使用 {{cssxref('appearance')}}`:none;` 完全删除复选框或单选按钮的默认外观。让我们以该 HTML 为例：
 
 ```html
 <form>
