@@ -56,23 +56,23 @@ l10n:
 ```html
 <form>
   <p>
-    <label for="search">查询框：</label>
+    <label for="search">search: </label>
     <input id="search" name="search" type="search" />
   </p>
   <p>
-    <label for="text">文本：</label>
+    <label for="text">text: </label>
     <input id="text" name="text" type="text" />
   </p>
   <p>
-    <label for="date">日期：</label>
+    <label for="date">date: </label>
     <input id="date" name="date" type="datetime-local" />
   </p>
   <p>
-    <label for="radio">单选钮：</label>
+    <label for="radio">radio: </label>
     <input id="radio" name="radio" type="radio" />
   </p>
   <p>
-    <label for="checkbox">复选框：</label>
+    <label for="checkbox">checkbox: </label>
     <input id="checkbox" name="checkbox" type="checkbox" />
   </p>
   <p><input type="submit" value="submit" /></p>
@@ -160,24 +160,24 @@ input[type="checkbox"] {
 ```html
 <form>
   <fieldset>
-    <legend>水果偏向</legend>
+    <legend>Fruit preferences</legend>
 
     <p>
       <label>
         <input type="checkbox" name="fruit" value="cherry" />
-        我喜欢樱桃
+        I like cherry
       </label>
     </p>
     <p>
       <label>
         <input type="checkbox" name="fruit" value="banana" disabled />
-        我不喜欢香蕉
+        I can't like banana
       </label>
     </p>
     <p>
       <label>
         <input type="checkbox" name="fruit" value="strawberry" />
-        我喜欢草莓
+        I like strawberry
       </label>
     </p>
   </fieldset>
@@ -377,12 +377,12 @@ select {
 然后，我们利用生成内容创建了自己的图标。由于 [`::before`](/zh-CN/docs/Web/CSS/::before)/[`::after`](/zh-CN/docs/Web/CSS/::after) 并不适用于 `<select>` 元素（这是因为生成的内容是相对于元素的格式框放置的，而表单输入的工作方式更像是被替换的元素——它们的显示是由浏览器生成并放置的，因此没有格式框），因此我们在控件周围添加了一个额外的封装：
 
 ```html
-<label for="select">选择一种水果</label>
+<label for="select">Select a fruit</label>
 <div class="select-wrapper">
   <select id="select" name="select">
-    <option>香蕉</option>
-    <option>樱桃</option>
-    <option>柠檬</option>
+    <option>Banana</option>
+    <option>Cherry</option>
+    <option>Lemon</option>
   </select>
 </div>
 ```
@@ -408,7 +408,7 @@ select {
 如果你真的需要完全控制选项的样式，要么使用某种库来生成自定义控件，要么创建自己的自定义控件，或者在 select 中使用 `multiple` 属性，它可以使所有选项都显示在页面上，从而避免了这个特殊问题：
 
 ```html
-<label for="select">选择一些水果</label>
+<label for="select">Select fruits</label>
 <select id="select" name="select" multiple>
   …
 </select>
