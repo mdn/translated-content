@@ -86,7 +86,7 @@ self.onnotificationclick = (event) => {
 };
 ```
 
-你可以在 {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} 事件处理程序中使用 `event.action` 来处理事件操作：
+你可以在 `notificationclick` 事件处理程序中使用 `event.action` 来处理事件操作：
 
 ```js
 navigator.serviceWorker.register("sw.js");
