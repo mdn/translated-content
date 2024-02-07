@@ -1,7 +1,6 @@
 ---
 title: Iterator.from()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/from
-page-type: javascript-static-method
 l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
