@@ -2,14 +2,14 @@
 title: Ejemplos de código
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 l10n:
-  sourceCommit: d2a6da680830dbd7b1cf315e84a6b27ed4010fd2
+  sourceCommit: e5a9a20bfc03a99398bbdfc0a84b737db835a854
 ---
 
 {{MDNSidebar}}
 
 En MDN, encontrarás numerosos ejemplos de código insertados en las páginas para demostrar el uso de las características de la plataforma web. Este artículo discute los diferentes mecanismos disponibles para agregar ejemplos de código a las páginas, junto con cuáles debes usar y cuándo.
 
-> **Nota:** Si buscas consejos sobre el estilo y el linting del código tal como aparece en un artículo de MDN, en lugar de las diferentes formas de incluir código, consulta nuestra [Guía de estilo de código](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+> **Nota:** Si buscas consejos sobre el estilo y el formato del código tal como aparece en un artículo de MDN, en lugar de las diferentes formas de incluir código, consulta nuestra [Guía de estilo de código](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
 ## ¿Qué tipos de ejemplos de código están disponibles?
 
@@ -17,8 +17,8 @@ Hay cuatro tipos de ejemplos de código disponibles en MDN:
 
 - Ejemplos estáticos: bloques de código simples, posiblemente con una captura de pantalla para mostrar estáticamente el resultado de dicho código si se ejecutara.
 - Ejemplos interactivos: nuestro sistema para crear [ejemplos interactivos en vivo](https://github.com/mdn/interactive-examples) que muestran el código ejecutándose en vivo, pero también te permiten cambiar el código sobre la marcha para ver cuál es el efecto y copiar fácilmente los resultados.
-- "Muestras en vivo" tradicionales de MDN: un macro que toma bloques de código simples, los coloca dinámicamente en un documento dentro de un elemento {{htmlelement("iframe")}} y lo incrusta en la página para mostrar el código ejecutándose en vivo.
-- "Muestras en vivo" de GitHub: un macro que toma un documento en un repositorio de GitHub dentro de la [organización MDN](https://github.com/mdn/), lo coloca dentro de un elemento {{htmlelement("iframe")}} y lo incrusta en la página para mostrar el código ejecutándose en vivo.
+- "Muestras en vivo" tradicionales de MDN: una macro que toma bloques de código simples, los coloca dinámicamente en un documento dentro de un elemento {{htmlelement("iframe")}} y lo incrusta en la página para mostrar el código ejecutándose en vivo.
+- "Muestras en vivo" de GitHub: una macro que toma un documento en un repositorio de GitHub dentro de la [organización MDN](https://github.com/mdn/), lo coloca dentro de un elemento {{htmlelement("iframe")}} y lo incrusta en la página para mostrar el código ejecutándose en vivo.
 
 Discutiremos cada uno en secciones posteriores.
 
@@ -35,7 +35,7 @@ Cada tipo de ejemplo de código tiene sus propios casos de uso. ¿Cuándo debes 
 
 Además del sistema específico para presentar los ejemplos en vivo, hay consideraciones de estilo y contenido a tener en cuenta al agregar o actualizar ejemplos en MDN.
 
-- Al colocar ejemplos en una página, intenta asegurarte de que se cubran todas las características o opciones de la API o concepto sobre el que estás escribiendo. Como mínimo, al menos las opciones o propiedades más comunes deben incluirse en los ejemplos.
+- Al colocar ejemplos en una página, intenta asegurarte de que se cubran todas las características u opciones de la API o concepto sobre el que estás escribiendo. Como mínimo, al menos las opciones o propiedades más comunes deben incluirse en los ejemplos.
 - Antecede cada ejemplo con una explicación de lo que hace y por qué es interesante o útil.
 - Sigue cada fragmento de código con una explicación de lo que hace.
 - Cuando sea posible, divide ejemplos grandes en fragmentos más pequeños. Por ejemplo, el sistema de "ejemplos en vivo" concatenará automáticamente todo tu código en una pieza antes de ejecutar el ejemplo, por lo que puedes dividir tu JavaScript, HTML y/o CSS en fragmentos más pequeños con texto descriptivo después de cada fragmento si eliges hacerlo. Esta es una excelente manera de ayudar a explicar tramos de código largos o complicados de manera más clara.
@@ -43,7 +43,7 @@ Además del sistema específico para presentar los ejemplos en vivo, hay conside
 
 ## Ejemplos estáticos
 
-Con ejemplos estáticos, nos referimos a bloques de código estáticos que muestran cómo se podría usar una característica en el código. Estos se colocan en una página utilizando "fences de código" de Markdown, como se describe en [Bloques de código de ejemplo](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks). Un resultado de ejemplo podría lucir así:
+Con ejemplos estáticos, nos referimos a bloques de código estáticos que muestran cómo se podría usar una característica en el código. Estos se colocan en una página utilizando "vallas de código" de Markdown, como se describe en [Bloques de código de ejemplo](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks). Un resultado de ejemplo podría lucir así:
 
 ```js
 // Ejemplo de JavaScript
@@ -70,7 +70,7 @@ Si encuentras una página que no tiene un ejemplo interactivo asociado, ¡eres b
 
 ### Demostración de ejemplo interactivo
 
-El macro [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedInteractiveExample.ejs) se utiliza para incrustar ejemplos terminados en las páginas de MDN. Por ejemplo, la llamada al macro \\{{EmbedInteractiveExample("pages/js/array-push.html")}} muestra el siguiente ejemplo de código:
+La macro [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedInteractiveExample.ejs) se utiliza para incrustar ejemplos terminados en las páginas de MDN. Por ejemplo, la llamada al macro \\{{EmbedInteractiveExample("pages/js/array-push.html")}} muestra el siguiente ejemplo de código:
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}Intenta ajustar el código para ver qué sucede y juega con los controles.
 
@@ -80,7 +80,7 @@ Las muestras en vivo tradicionales se insertan en la página mediante el macro [
 
 ## Muestras en vivo de GitHub
 
-Las muestras en vivo de GitHub se insertan en la página mediante el macro [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs). Una llamada \\{{EmbedGHLiveSample}} captura dinámicamente el documento en una URL especificada (que debe estar dentro de la organización **mdn** en GitHub) e lo inserta en la página dentro de un {{htmlelement("iframe")}}.
+Las muestras en vivo de GitHub se insertan en la página mediante el macro [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs). Una llamada \\{{EmbedGHLiveSample}} captura dinámicamente el documento en una URL especificada (que debe estar dentro de la organización **mdn** en GitHub) y lo inserta en la página dentro de un {{htmlelement("iframe")}}.
 
 Estas funcionan de manera muy similar a las muestras en vivo tradicionales, pero son mucho más simples:
 
