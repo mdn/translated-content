@@ -96,12 +96,9 @@ function showNotification() {
 }
 ```
 
-To invoke the above function at an appropriate time, you could listen to the
-{{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
+要在适当的时间调用上述函数，你可以监听 {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} 事件。
 
-You can also retrieve details of the {{domxref("Notification")}}s that have been fired
-from the current service worker using
-{{domxref("ServiceWorkerRegistration.getNotifications()")}}.
+你还可以使用以下 {{domxref("ServiceWorkerRegistration.getNotifications()")}} 方法检索当前 Service Worker 已触发的 {{domxref("Notification")}} 的详细信息。
 
 ## 规范
 
