@@ -1,6 +1,8 @@
 ---
 title: OpenType 字体特性指南
 slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
+l10n:
+  sourceCommit: f78cc1a104586ebcdbba5f3d3c7df7083d369068
 ---
 
 {{CSSRef}}
