@@ -72,7 +72,7 @@ Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS.
 
 #### Resultado
 
-{{EmbedLiveSample("Un_ejemplo_estilado", 650, 120)}}
+{{EmbedLiveSample("Un_ejemplo_con_estilos", 650, 120)}}
 
 ## Resumen técnico
 
