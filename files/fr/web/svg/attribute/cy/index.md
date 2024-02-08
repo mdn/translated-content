@@ -171,5 +171,5 @@ svg {
 
 ## Voir aussi
 
-- {{SVGAttr("cx")}}
-- {{SVGAttr("r")}}
+- [`cx`](/fr/docs/Web/SVG/Attribute/cx)
+- [`r`](/fr/docs/Web/SVG/Attribute/r)
