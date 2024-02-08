@@ -42,7 +42,9 @@ Pour un élément {{SVGElement('circle')}}, `cy` définit la coordonnée y de so
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>{{cssxref("length-percentage")}}</td>
+      <td><a href="/fr/docs/Web/CSS/length-percentage">
+        <code>&lt;length-percentage&gt;</code>
+      </a></td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -65,7 +67,9 @@ Pour un élément {{SVGElement('ellipse')}}, `cy` définit la coordonnée y de s
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>{{cssxref("length-percentage")}}</td>
+      <td><a href="/fr/docs/Web/CSS/length-percentage">
+        <code>&lt;length-percentage&gt;</code>
+      </a></td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -88,7 +92,9 @@ Pour un élément {{SVGElement('radialGradient')}}, `cy` définit la coordonnée
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>{{cssxref("length-percentage")}}</td>
+      <td><a href="/fr/docs/Web/CSS/length-percentage">
+        <code>&lt;length-percentage&gt;</code>
+      </a></td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
