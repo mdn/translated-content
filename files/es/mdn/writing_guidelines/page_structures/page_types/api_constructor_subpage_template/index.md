@@ -40,7 +40,7 @@ l10n:
 > - **page-type**
 >   - : La clave `page-type` para los constructores Web/API es siempre `constructor-web-api`.
 > - **status**
->   - : Incluir claves de estado de tecnología apropiadas: [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándar).
+>   - : Incluir claves de estado de tecnología apropiadas: [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (si no está en una pista de estándar).
 > - **browser-compat**
 >
 >   - : Reemplace el valor de marcador de posición `ruta.hacia.caracteristica.NombreDelConstructor` con la cadena de consulta para el constructor en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
