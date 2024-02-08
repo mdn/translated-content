@@ -44,7 +44,7 @@ El elemento `<div>` tiene [un rol implícito de `generic`](https://www.w3.org/TR
 
 {{EmbedLiveSample("Un_ejemplo_simple", 650, 60)}}
 
-### Un ejemplo estilado
+### Un ejemplo con estilos
 
 Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS. Ten en cuenta que el uso del atributo [`class`](/es/docs/Web/HTML/Global_attributes#class) en el `<div>` para aplicar el estilo llamado `"shadowbox"` al elemento.
 
