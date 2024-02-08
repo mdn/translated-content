@@ -2,7 +2,7 @@
 title: Plantilla de subpágina del constructor de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 l10n:
-  sourceCommit: 9199bfdaa4cea5887df109e08d8ef51a3c096d77
+  sourceCommit: a52dbbb6fe50971dc975b424e7ee5e0737cb8732
 ---
 
 {{MDNSidebar}}
