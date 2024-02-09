@@ -1,6 +1,8 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
+l10n:
+  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
 {{CSSRef}}
@@ -19,30 +21,31 @@ slug: Web/CSS/background-image
 
 ## 構文
 
-それぞれの背景画像は、キーワード `none` または {{cssxref("&lt;image&gt;")}} 値として指定されます。
-
-複数の背景画像を指定するには、複数の値をカンマで区切って指定してください。
-
 ```css
 background-image: linear-gradient(
     to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
+    rgb(255 255 0 / 50%),
+    rgb(0 0 255 / 50%)
   ), url("catfront.png");
 
 /* グローバル値 */
 background-image: inherit;
 background-image: initial;
 background-image: revert;
+background-image: revert-layer;
 background-image: unset;
 ```
+
+それぞれの背景画像は、キーワード `none` または {{cssxref("&lt;image&gt;")}} 値として指定されます。
+
+複数の背景画像を指定するには、複数の値をカンマで区切って指定してください。
 
 ### 値
 
 - `none`
   - : 画像を用いないことを表すキーワード。
 - `<image>`
-  - : 表示する背景を記述する {{cssxref("&lt;image&gt;")}}。[複数の背景](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)に対応している場合は、カンマ区切りで複数指定することができます。
+  - : 表示する背景を記述する {{cssxref("&lt;image&gt;")}}。[複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)に対応している場合は、カンマ区切りで複数指定することができます。
 
 ## アクセシビリティの考慮
 
@@ -61,7 +64,7 @@ background-image: unset;
 
 ## 例
 
-<h3 id="Layering_background_images">背景画像の重ね合わせ</h3>
+### 背景画像の重ね合わせ
 
 星の画像は一部透過となっており、猫の画像の上に重ねられている点に注意してください。
 
@@ -110,20 +113,20 @@ div {
 
 ## 関連情報
 
-- [CSS での画像スプライトの実装](/ja/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
+- [CSS での画像スプライトの実装](/ja/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
 - {{HTMLElement("img")}}
 - 画像に関するデータ型: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}
 - 画像に関する関数:
 
-  - {{cssxref("cross-fade()")}}
-  - {{cssxref("element()")}}
-  - {{cssxref("image/image()", "image()")}}
-  - {{cssxref("image/image-set()", "image-set()")}}
-  - {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}
-  - {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}
-  - {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}
-  - {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}
-  - {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}
-  - {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
-  - {{cssxref("image/paint()", "paint()")}}
-  - {{cssxref("url()", "url()")}}
+  - {{cssxref("cross-fade", "cross-fade()")}}
+  - {{cssxref("element", "element()")}}
+  - {{cssxref("image/image", "image()")}}
+  - {{cssxref("image/image-set", "image-set()")}}
+  - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
+  - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+  - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
+  - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+  - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+  - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+  - {{cssxref("image/paint", "paint()")}}
+  - {{cssxref("url", "url()")}}

@@ -3,7 +3,7 @@ title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Сводка
 

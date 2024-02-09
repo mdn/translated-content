@@ -3,7 +3,7 @@ title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Resumo
 

@@ -1,38 +1,22 @@
 ---
-title: "HTMLSelectElement: autofocus プロパティ"
+title: "HTMLElement: autofocus プロパティ"
+short-title: autofocus
 slug: Web/API/HTMLElement/autofocus
-original_slug: Web/API/HTMLSelectElement/autofocus
+l10n:
+  sourceCommit: 2c22a294a6394a439cb9496a70c46fee69f31ff7
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-**`HTMLSelectElement.autofocus`** プロパティは、HTML の [`autofocus`](/ja/docs/Web/HTML/Element/select#autofocus) 属性を反映した `true` または `false` の値を持ちます。これはユーザーが上書きしない限り、ページが読み込まれた際に関連付けられた {{HTMLElement("select")}} 要素がページ読み込み時に入力フォーカスを得るかどうかを示します。
+**`autofocus`** は {{domxref("HTMLElement")}} のプロパティで、HTML の [`autofocus`](/ja/docs/Web/HTML/Element/select#autofocus) 属性を反映した論理値で、ページが読み込まれた時、または、 {{htmlelement("dialog")}} 要素やポップオーバー属性が設定された要素の中で指定された場合は、ダイアログやポップオーバーが表示された時に、コントロールにフォーカスを当てるかどうかを表します。
 
-この属性を指定することができるのは、1 つの文書内のフォーム関連要素 1 つだけです。もし複数あった場合、属性が設定された最初の要素（通常は該当する要素のうちページで最初のもの）が初期のフォーカスを得ます。
+この属性を指定することができるのは、1 つの文書内、または {{htmlelement("dialog")}} 要素内、または `popover` 属性が設定された要素内のフォーム関連要素 1 つだけです。もし複数あった場合、属性が設定された最初の要素（通常は該当する要素のうちページで最初のもの）が初期のフォーカスを得ます。
 
 > **メモ:** このプロパティを設定しても、関連付けられた {{HTMLElement("select")}} 要素へフォーカスは設定されません。単純に文書へ*要素が挿入された*ときにブラウザーへフォーカスを移動するよう指示するだけです。挿入後に設定した場合、すなわち文書が読み込まれた後のほとんどの場合では、目に見える効果はありません。
 
 ## 値
 
 論理値です。
-
-## 例
-
-### HTML
-
-```html
-<select id="mySelect" autofocus>
-  <option>Option 1</option>
-  <option>Option 2</option>
-</select>
-```
-
-### JavaScript
-
-```js
-// <select> に autofocus 属性があるかどうかをチェック
-const hasAutofocus = document.getElementById("mySelect").autofocus;
-```
 
 ## 仕様書
 

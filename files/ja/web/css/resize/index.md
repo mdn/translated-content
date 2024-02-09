@@ -1,6 +1,8 @@
 ---
 title: resize
 slug: Web/CSS/resize
+l10n:
+  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
 {{CSSRef}}
@@ -29,6 +31,7 @@ resize: inline;
 resize: inherit;
 resize: initial;
 resize: revert;
+resize: revert-layer;
 resize: unset;
 ```
 

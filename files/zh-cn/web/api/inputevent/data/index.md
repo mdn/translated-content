@@ -21,7 +21,7 @@ var string = inputEvent.data;
 
 ## 示例
 
-在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件上设置了一个事件监听器，以便在对 {{htmlelement("input")}} 元素的内容进行任何更改时（通过键入或粘贴），通过 **`InputEvent.data`** 属性检索添加的文本，并在 `<input>` 下面的段落中报告。
+在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/Element/input_event) 事件上设置了一个事件监听器，以便在对 {{htmlelement("input")}} 元素的内容进行任何更改时（通过键入或粘贴），通过 **`InputEvent.data`** 属性检索添加的文本，并在 `<input>` 下面的段落中报告。
 
 ```html
 <p>Some text to copy and paste.</p>

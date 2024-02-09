@@ -1,6 +1,8 @@
 ---
 title: border-collapse
 slug: Web/CSS/border-collapse
+l10n:
+  sourceCommit: 59593341146f085e57cec84f0928c7b7e18f3e97
 ---
 
 {{CSSRef}}
@@ -9,7 +11,7 @@ slug: Web/CSS/border-collapse
 
 {{EmbedInteractiveExample("pages/css/border-collapse.html")}}
 
-セルが折り畳まれている場合 (collapse)、 {{cssxref("border-style")}} の値で `inset` が `groove` のように動作し、 `outset` が `ridge` のように動作します。
+セルが折り畳まれている場合 (collapse)、 {{cssxref("border-style")}} の値で `inset` が `ridge` のように動作し、 `outset` が `groove` のように動作します。
 
 セルが分離されている場合 (separate)、セル間の距離は {{cssxref("border-spacing")}} プロパティで定義されます。
 
@@ -24,6 +26,7 @@ border-collapse: separate;
 border-collapse: inherit;
 border-collapse: initial;
 border-collapse: revert;
+border-collapse: revert-layer;
 border-collapse: unset;
 ```
 

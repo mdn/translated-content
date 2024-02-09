@@ -127,9 +127,15 @@ function isValidJSON(text) {
 
 ### `finally` 块
 
-`finally`块包含的语句在`try`块和`catch`之后，`try..catch..finally`块后的语句之前执行。请注意，无论是否抛出异常`finally`子句都会执行。此外，如果抛出异常，即使没有`catch`子句处理异常，`finally`子句中的语句也会执行。
+`finally` 块包含的语句会在 `try` 块和 `catch` 块执行之后、及 `try...catch...finally` 块后面的语句执行之前执行。控制流始终会进入 `finally` 块，可以通过以下方式之一执行：
 
-以下示例打开一个文件，然后执行使用该文件的语句（服务器端 JavaScript 允许你访问文件）。如果文件打开时抛出异常，则`finally`子句会在脚本失败之前关闭该文件。finally 中的代码最终也会在`try`或`catch block`显式返回时执行。
+- `try` 块正常执行结束后（没有抛出异常）立即执行；
+- 在 `catch` 块正常执行完毕后立即执行；
+- 紧接着在 `try` 代码块或 `catch` 代码块中的控制流语句（`return`、`throw`、`break`、`continue`）执行之前执行。
+
+如果 `try` 代码块抛出异常，即使没有 `catch` 代码块来处理异常，`finally` 代码块仍会执行，在这种情况下，异常仍会在 `finally` 代码块执行完毕后立即抛出。
+
+下面的示例展示了 `finally` 代码块的一种使用情况。代码先打开一个文件，然后执行使用该文件的语句；即使出现异常，`finally` 块也会确保文件在使用后始终关闭。
 
 ```js
 openMyFile();
