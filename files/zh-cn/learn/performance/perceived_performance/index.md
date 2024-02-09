@@ -30,31 +30,31 @@ slug: Learn/Performance/Perceived_performance
   </tbody>
 </table>
 
-性能是关于用户视角的。How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or or inavailability of the [main thread](/zh-CN/docs/Glossary/Main_thread)), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.
+性能是关于用户视角的。网站加载和渲染的速度给用户的体验带来比实际加载和渲染速度更大的影响。即使一个操作将花费很长时间（因为延迟或主线程不可用），也可以通过显示加载旋转器，或一系列有用的提示和建议（或笑话，或其他你认为合适的内容）来保持用户的参与。这种方式比什么都不显示要好得多，否则会让用户感觉花费的时间更长，可能会导致用户认为网站出了问题而放弃。
 
 ## 感知性能
 
-The perception of how fast your site loads and how responsive feels to user interaction is vitally important; even more important that actual download time but difficult to quantify. There are areas of your site that you may not be able to make faster, but you can make it _feel_ faster even if the metrics discussed in the othser sections can't be improved.
+网站加载速度和对用户交互的响应感如何被感知，至关重要；甚至比实际下载时间更重要，但很难量化。您的网站可能有一些区域，可能无法使其加载更快，但即使在其他部分讨论的指标无法改进的情况下，您仍可以让用户感觉到加载更快。
 
-There is no unicorn metric that can measure what the user feels, but metrics are useful in guaging improvements (and regressions). Relevant measurements include first meaningful paint (FMP), largest contentful paint (LCP), time to interactive (TTI), render start, DOM interactive, and speed index.
+虽然没有一种理想的指标可以准确衡量用户的感受，但指标在衡量改进（和退化）方面是有用的。相关的测量指标包括首次有意义绘制（FMP）、最大内容绘制（LCP）、互动时间（TTI）、渲染开始、DOM 交互和速度指数。
 
-**[First paint](/zh-CN/docs/Glossary/First_paint)** is reported by the browser and provides the time, in ms, of when the page starts changing; but this change can be a simple background color update or something even less noticable. It doesn't indicate completeness and may report a time when nothing visible is painted. **[First Contentful Paint](/zh-CN/docs/Glossary/First_contentful_paint) (FCP)** reports the time when the browser first rendered anything of signifigance, be that text, foreground or background image, or a canvas or SVG; capturing the very beginning of the loading experience. But, just because there's content, doesn't mean it's useful content or that the user has content to consume. The **[First Meaningful Paint](/zh-CN/docs/Glossary/first_meaningful_paint)**, or FMP, is the when content appears on the screen that is actually meaningful; which is a better metric for user-perceived loading experience, but still not ideal. **Largest contentful paint (LCP)** metric, definited in the [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/), reports the render time of the largest content element visible in the viewport.
+**首次绘制[First paint](/zh-CN/docs/Glossary/First_paint)** 由浏览器报告，并提供页面开始变化的时间（以毫秒为单位）；但这种变化可能是简单的背景颜色更新，或者更不那么显眼的内容。它并不表示加载完成，并且有可能会在没有可见内容被绘制的时候报告时间。**首次有意义绘制 [First Contentful Paint](/zh-CN/docs/Glossary/First_contentful_paint) (FCP)** 报告了浏览器首次绘制任何值得注意的内容的时间，无论是文本、前景或背景图像，或者画布或SVG；捕捉加载体验的最初阶段。但是，仅仅因为有内容，并不意味着它是有用的内容，或者用户有内容可供消费。**首次有意义绘制（FMP）[First Meaningful Paint](/zh-CN/docs/Glossary/first_meaningful_paint)** 是指内容出现在屏幕上的时间，该内容实际上具有意义；这是用户感知加载体验的更好度量标准，但仍然不是理想的。**最大内容绘制（LCP）** 指标，在 [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/) 中定义，报告了在视口中可见的最大内容元素的渲染时间。
 
-**[Speed index](/zh-CN/docs/Glossary/Speed_index)** is also used to approximate perceived performance: it measures the average time for pixels on the visible screen to be painted. It doesn't account for jitter, nor does it weight which content important to a user more highly, so it's not a perfect metric.
+**速度指数[Speed index](/zh-CN/docs/Glossary/Speed_index)** 也用于近似感知性能：它测量了可见屏幕上像素被绘制的平均时间。它不考虑抖动，也不权衡用户更看重的内容，因此并不是一个完美的指标。
 
-These metrics have to do with initial load and render. It is also important to ensure the site feels fast once the user begins interacting with it. For this, **[time to interactive](/zh-CN/docs/Glossary/Time_to_interactive)**, is a good metric; it is the moment when the last [long task](/zh-CN/docs/Glossary/Long_task) of the load process finishes and the UI is available for user interaction with delay.
+这些指标与初始加载和渲染有关。同样重要的是确保用户开始与网站进行交互时，网站能够快速响应。对于这一点，**可交互时间 [time to interactive](/zh-CN/docs/Glossary/Time_to_interactive)** 是一个很好的指标；它表示加载过程中最后一个长任务完成并且UI可用以便用户进行有延迟的交互。
 
-UI lack or responsiveness and jank both harm perceived performance. Even though a task may take a long time, though, there are ways to make it seem faster. There are several tips to improving perceived performance.
+UI的缺乏响应性和卡顿均会影响到感知性能。即使一个任务可能需要很长时间，但仍然有方法可以让它看起来更快。有一些改善感知性能的技巧。
 
 ### 提升感知性能
 
-Understanding networking, how the browser works, user perception of time, etc., can help you better understand how to improve the user interaction. However, you don't have to know the ins and outs of how everything, including how the human mind works, to improve the perception of speed.
+对网络、浏览器工作原理、用户对时间的感知等方面的了解，可以更好地帮助您理解如何改善用户交互。然而，并不需要深入了解所有事情的内部机理，包括人类思维的工作方式，也可以改善速度感知。
 
-How fast or slow something feels like it's taking depends a lot on whether the user is actively or passively waiting for this thing to happen. Waits can have an active and passive phase. When the user is active - moving the mouse, thinking, being entertainted, they are in an active phase. The passive phase occurs when the user is passively waiting, like staring at a monochrome screen. If both the passive and active waits time were objectively equal, users would estimate that the passive waiting period was longer than the active. If a load, render, or response time can not be objectively minimized any further, turning the wait into an active wait instead of a passive wait can make it feel faster.
+某件事情的感觉花费时间快慢很大程度上取决于用户是主动还是被动地等待它发生。等待可以有主动和被动阶段。当用户是主动的时候 - 移动鼠标、思考、被娱乐时，他们处于主动阶段。被动阶段是指用户被 passively waiting 等待，比如盯着单色屏幕。如果主动等待和被动等待的时间在客观上是相等的，用户会认为被动等待期更长。如果加载、渲染或响应时间不能再客观地最小化，将等待转变为主动等待而不是被动等待可以让它感觉更快。
 
-There are tips and tricks to follow. Some of these quick tips have full articles if you want to dive deeper.
+有一些可遵循的技巧和窍门。其中一些快速技巧有详细的文章，如果您想深入了解。
 
-Displaying content, or at least some part of the page with an indication that content is loading, as quickly as possible, is essential to improving perceived performance. For example, because page render is blocked by loading and parsing CSS and JavaScript, minimizing the amount of CSS and JS that needs to be loaded on initially will have a major impact on improving perceived performance. Even though the bytes might be the same, not blocking the page from rendering makes the load _feel_ faster.
+尽快显示内容或至少页面的某些部分，并指示内容正在加载对于改善感知性能至关重要。例如，由于页面渲染被加载和解析 CSS 和 JavaScript 阻塞，最小化初始加载所需的 CSS 和 JS 的数量将对改善感知性能产生重大影响。即使字节可能相同，但不阻塞页面渲染会让加载感觉更快。
 
 这里有一些技巧有助于提升性能：
 
@@ -70,19 +70,19 @@ Displaying content, or at least some part of the page with an indication that co
 
 ### 防止内容跳转和其他重排
 
-Images or other assets causing content to be pushed down or jump to a different location, like the loading of third party advertisements, can make the page feel like it is still loading and is bad for perceived performance. Content reflowing is especially bad for user experience when not initiated by user interaction. If some assets are going to be slower to load than others, with elements loading after other content has already been painted to the screen, plan ahead and leave space in the layout for them so that content doesn't jump or resize, especially after the site has become interactive.
+图片或其他资源导致内容被向下推或跳转到不同位置，比如加载第三方广告，会让页面感觉仍在加载中，并且对感知性能有害。当用户未进行交互时，内容重排对用户体验尤为不利。如果某些资源的加载速度比其他资源慢，而某些元素在页面的其他部分已被绘制到屏幕上，则可以事先规划并在布局中留出空间，以便内容不会跳动或调整大小，尤其是在网站已经变得具有交互性之后。
 
 ### 避免字体文件延迟
 
-Font use can both help and harm user experience. Selecting the right fonts is an art form, and can greatly improve the user experience. Fonts can also harm user experience, especially if the fonts used need to be imported, and if the importing is not optimal, or if Comic Sans is used (kidding). Flicker of unstyled text and missing text both harm performance.
+使用字体既可以提高用户体验，又可能损害用户体验。选择合适的字体是一门艺术，并且可以极大地改善用户体验。字体也可能对用户体验造成损害，特别是如果使用的字体需要导入，并且导入方式不够理想，或者要是使用了Comic Sans字体(开玩笑)。未经样式化的文本出现闪烁和缺失文本都会影响性能。
 
-Make fallback fonts the same size and weight so that when fonts load the page change is less noticeable.
+确保备用字体与正式字体具有相同的大小和粗细，这样在字体加载时页面变化就不会那么明显。
 
 ### 交互类元素是可交互的
 
-Make sure visible interactive elements are always interactive and responsive. If input elements are visible, the user should be able to interact with them without a lag. Users feel that something is laggy when they take more than 50ms to react. They feel that a page is janky when content repaints slower than 16.67ms (or 60 frames per second) or repaints at uneven intervals.
+确保可见的交互元素始终是交互式和响应迅速的。如果输入元素是可见的，用户应该能够与其进行交互而不会有延迟。当某些操作需要超过50毫秒的反应时间时，用户会感到有些迟缓。当内容重绘速度慢于16.67毫秒（或60帧每秒），或以不规则的间隔进行重绘时，用户会感觉页面不流畅。
 
-Make things like type-ahead a progressive enhancement: use css to display input modal, JS to add typeahead/autocomplete as it is available
+使用CSS显示输入模态，这样的功能应该作为一种渐进式增强。如：使用JavaScript在可用时添加`autocomplete`功能。
 
 ### 使任务启动器显得更具交互性
 
@@ -90,6 +90,6 @@ Make things like type-ahead a progressive enhancement: use css to display input 
 
 ## 总结
 
-By turning as much of the download, render and wait time into active phases and reducing any passive waiting, even if the objective measurements stay the same, the user will feel like the content downloaded, rendered, and responded more quickly. Now that we know what we should be speeding up, let's take a look at some metrics and learn how we can measure these events.
+通过将尽可能多的下载、渲染和等待时间转化为主动阶段，并减少任何被动等待时间，即使客观测量结果保持不变，用户也会感觉内容下载、渲染和响应更加迅速。既然我们已经知道应该加快速度的内容，让我们来看一些指标，并学习如何衡量这些事件。
 
 {{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
