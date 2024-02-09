@@ -8,6 +8,7 @@ l10n:
 {{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、ウェブサイトを編集、アップロード、または閲覧するときに必要なソフトウェアについて説明します。
+
 </div>
 
 <table class="standard-table">
