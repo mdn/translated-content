@@ -78,7 +78,7 @@ function touchHandler(e) {
 
 你可以通过 `this.game.input.x` 和 `this.game.input.y` 变量快速获取最近激活指针的坐标。
 
-### Input 事件
+### 输入事件
 
 不直接使用指针，也可以监听 `this.game.input` 事件，如 `onDown`、`onUp`、`onTap` 和 `onHold`：
 
