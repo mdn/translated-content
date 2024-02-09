@@ -18,7 +18,7 @@ from(object)
 ### 参数
 
 - `object`
-  - : 一个实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)或[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)的对象。
+  - : 一个实现了[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)协议或[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)协议的对象。
 
 ### 返回值
 
