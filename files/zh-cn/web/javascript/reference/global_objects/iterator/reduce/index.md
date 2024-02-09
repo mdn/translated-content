@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}{{SeeCompatTable}}
 
-{{jsxref("Iterator")}} 实例的 **`reduce()`** 方法类似于 {{jsxref("Array.prototype.reduce")}}：它对迭代器生成的每个元素执行用户提供的“reducer”回调函数，并传入前一个元素的计算结果作为参数。对所有元素运行 reducer 回调函数的最终将汇总为单个值。
+{{jsxref("Iterator")}} 实例的 **`reduce()`** 方法类似于 {{jsxref("Array.prototype.reduce")}}：它对迭代器生成的每个元素执行用户提供的“reducer”回调函数，并传入前一个元素的计算结果作为参数。对所有元素运行 reducer 回调函数的最终结果为单个值。
 
 ## 语法
 
