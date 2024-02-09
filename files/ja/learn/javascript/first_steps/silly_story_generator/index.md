@@ -103,11 +103,7 @@ HTML および CSS と少しのテキストと JavaScript 関数があります�
   document.querySelector("html").style.backgroundColor = "red";
   ```
 
-- [Math.round()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/round) は JavaScript の組み込みメソッドで、計算結果を整数値に四捨五入します。
-- 置き換えなければならない文字列のインスタンスが３つあります。 `replace()` メソッドを複数回繰り返すか、正規表現を使用するかします。具体的には、 `var text = 'I am the biggest lover, I love my love'; text.replace(/love/g,'like');` とするとすべての 'love' のインスタンスを 'like' に置き換えます。なお、 String は変化しないことに注意してください。
-
-## 評価
-
-もし特定の組織の元でこのコースを受けているのなら、先生やメンターに出来たものを見せて、評価をお願いしてみましょう。もし自分だけでやっているのなら、[この評価試験のスレッド](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686)や、[Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルに評価をお願いしてみましょう。まずはやってみましょう。カンニングしても得られるものはないですよ！
+- [`Math.round()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/round) は JavaScript の組み込みメソッドで、計算結果を整数値に四捨五入します。
+- 置き換える必要のある文字列のインスタンスは 3 つあります。 `replace()` メソッドを複数回繰り返しても、 `replaceAll()` を使用しても構いません。文字列は不変であることを覚えておいてください。
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
