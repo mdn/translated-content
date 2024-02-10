@@ -9,7 +9,7 @@ A API de detecção de inatividade permite detectar quando um usuário está ina
 
 ## Conceitos e uso
 
-Aplicativos nativos e extensões de navegadores usam detecção de inatividade para melhorar a experiência do usuário enquanto o mesmo interage com o dispositivo. Por exemplo, aplicativos de bate-papo podem mostrar a outros usuários do aplicativo se um usuário estiver disponível (ativo). Outros aplicativos podem optar por mostrar notificações somente quando um usuário estiver interagindo com o aplicativo. Uma aplicação web poderia usar  esta API para casos de uso semelhantes. Além disso, um PWA (Progressive Web App) pode usar a detecção de inatividade para acionar uma atualização do service worker quando o aplicativo não estiver sendo usado.
+Aplicativos nativos e extensões de navegadores usam detecção de inatividade para melhorar a experiência do usuário enquanto o mesmo interage com o dispositivo. Por exemplo, aplicativos de bate-papo podem mostrar a outros usuários do aplicativo se um usuário estiver disponível (ativo). Outros aplicativos podem optar por mostrar notificações somente quando um usuário estiver interagindo com o aplicativo. Uma aplicação web poderia usar esta API para casos de uso semelhantes. Além disso, um PWA (Progressive Web App) pode usar a detecção de inatividade para acionar uma atualização do service worker quando o aplicativo não estiver sendo usado.
 
 ## Interfaces
 
