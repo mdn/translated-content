@@ -1,10 +1,6 @@
 ---
 title: Idle Detection API
 slug: Web/API/Idle_Detection_API
-page-type: web-api-overview
-status:
-  - experimental
-browser-compat: api.IdleDetector
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}{{SeeCompatTable}}
