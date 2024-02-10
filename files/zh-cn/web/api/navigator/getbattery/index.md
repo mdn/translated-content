@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
 
-**`getBattery()`** 方法提供了系统的电源信息，它返回一个电源的 promise 对象，兑现一个 {{domxref("BatteryManager")}} 对象，它提供了一些新的属性和事件来获取与监控电源状态。这个方法实现了 {{domxref("Battery Status API", "", "", "nocode")}}，参见那篇文档以获得更多额外的细节、使用 API 的指引和示例代码。
+**`getBattery()`** 方法提供了系统的电源信息，它返回一个包含电源对象的 promise 对象，兑现一个 {{domxref("BatteryManager")}} 对象，它提供了一些新的属性和事件来获取与监控电源状态。这个方法实现了 {{domxref("Battery Status API", "", "", "nocode")}}，参见那篇文档以获得更多额外的细节、使用 API 的指引和示例代码。
 
 自 Chrome 103 起，{{domxref("Battery Status API", "", "", "nocode")}} 的 `Navigator.getBattery()` 方法只在严格上下文中暴露。
 
@@ -63,4 +63,4 @@ navigator.getBattery().then((battery) => {
 ## 参见
 
 - {{domxref("Battery Status API", "", "", "nocode")}}
-- {{HTTPHeader("Permissions-Policy")}} {{HTTPHeader("Permissions-Policy/battery", "battery")}} 指令
+- {{HTTPHeader("Permissions-Policy")}} HTTP 头的 {{HTTPHeader("Permissions-Policy/battery", "battery")}} 指令
