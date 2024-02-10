@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("ServiceWorkerGlobalScope")}} 接口的 **`notificationclose`** 事件在用户关闭由 {{domxref("ServiceWorkerRegistration.showNotification()")}} 方法生成的显示的通知时触发。
 
-在主线程或非服务工作线程中使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建的通知则将在 {{domxref("Notification")}} 对象本身触发 {{domxref("Notification/close_event", "close")}} 事件。
+在主线程或非 Service· Worker 线程中使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建的通知则将在 {{domxref("Notification")}} 对象本身触发 {{domxref("Notification/close_event", "close")}} 事件。
 
 此事件不可取消且不会冒泡。
 
