@@ -29,7 +29,7 @@ Web 通知最明显的用例之一是基于 Web 的邮件或 IRC 应用程序，
 
 由于过去滥用推送通知，网络浏览器和开发人员已开始实施策略来帮助缓解此问题。你应该仅请求同意显示通知以响应用户手势（例如：单击按钮）。这不仅是最佳实践（你不应该向用户发送他们不同意的通知），而且未来的浏览器将明确禁止未响应用户手势而触发的通知权限请求。例如，Firefox 从版本 72 开始就已经这样做了，Safari 也已经这样做了一段时间了。
 
-此外，在 Chrome 和 Firefox 中，除非网站是安全上下文（即 HTTPS），否则你根本无法请求通知，并且你不能再从跨源 {{htmlelement("iframe")}} 请求通知权限。
+此外，在 Chrome 和 Firefox 中，除非网站是安全上下文（即 HTTPS），否则你根本无法请求通知，并且你不能再从跨域 {{htmlelement("iframe")}} 请求通知权限。
 
 ### 检查当前权限状态
 
@@ -52,7 +52,7 @@ Notification.requestPermission().then((result) => {
 });
 ```
 
-这使用了该方法的基于 promise 的版本。如果你想支持旧版本，你可能必须使用旧的回调版本，如下所示：
+这使用了该方法的基于 Promise 的版本。如果你想支持旧版本，你可能必须使用旧的回调版本，如下所示：
 
 ```js
 Notification.requestPermission((result) => {
@@ -78,7 +78,7 @@ Notification.requestPermission((result) => {
 function askNotificationPermission() {
   // 实际询问权限的函数
   function handlePermission(permission) {
-    // 根据用户的回答将按钮设置为显示或隐藏
+    // 根据用户的回答显示或隐藏按钮
     notificationBtn.style.display =
       Notification.permission === "granted" ? "none" : "block";
   }
@@ -174,7 +174,7 @@ window.addEventListener("load", () => {
     if (Notification?.permission === "granted") {
       // 如果用户同意收到通知让我们尝试发送十个通知
       let i = 0;
-      // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
+      // 使用时间间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
       const interval = setInterval(() => {
         // 由于 tag 参数，我们应该只能看到“Hi！9”通知
         const n = new Notification(`Hi! ${i}`, { tag: "soManyNotification" });
@@ -191,8 +191,8 @@ window.addEventListener("load", () => {
           let i = 0;
           // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
           const interval = setInterval(() => {
-            // 由于 tag 参数，我们应该只能看到“Hi！9”通知
-            const n = new Notification(`Hi! ${i}`, {
+            // 由于 tag 参数，我们应该只能看到“嗨！9”通知
+            const n = new Notification(`嗨！${i}`, {
               tag: "soManyNotification",
             });
             if (i === 9) {
@@ -201,12 +201,12 @@ window.addEventListener("load", () => {
             i++;
           }, 200);
         } else {
-          // 否则，我们可以回退到常规模式提醒
+          // 否则，我们可以回退到常规模式的提醒
           alert("Hi!");
         }
       });
     } else {
-      // 如果用户拒绝收到通知，我们可以退回到常规模式提醒
+      // 如果用户拒绝收到通知，我们可以回退到常规模式的提醒
       alert("Hi!");
     }
   });

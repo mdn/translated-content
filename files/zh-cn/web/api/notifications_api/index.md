@@ -7,13 +7,13 @@ l10n:
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
 
-**Notifications API** 允许网页控制向最终用户显示系统通知——这些都在顶级浏览上下文视口之外，因此即使用户已经切换标签页或移动到不同的应用程序也可以显示。该 API 被设计成与不同平台上的现有通知系统兼容。
+**Notifications API** 允许网页控制向最终用户显示系统通知——这些都在顶层浏览上下文窗口之外，因此即使用户已经切换标签页或移动到不同的应用程序也可以显示。该 API 被设计成与不同平台上的现有通知系统兼容。
 
 {{AvailableInWorkers}}
 
 ## 概念和用法
 
-在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要为当前来源授予权限以显示系统通知，这通常在应用或站点初始化时，使用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} 方法来完成。这应该通过响应用户交互来实现，如单击按钮，例如：
+在支持该接口的平台上，显示一个系统通知通常涉及两件事。首先，用户需要为当前来源授予权限以显示系统通知，这通常在应用或站点初始化时，使用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} 方法来完成。这应该通过响应用户交互行为来实现，如单击按钮，例如：
 
 ```js
 btn.addEventListener("click", () => {
@@ -32,16 +32,16 @@ btn.addEventListener("click", () => {
 
 > **备注：** 从 Firefox 44 开始，通知（Notification）和推送（[Push](/zh-CN/docs/Web/API/Push_API)）的权限已合并。如果为通知授予权限，推送也将启用。
 
-接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建一个新通知。这个函数必须传递一个标题参数，并且可以选择传递一个选项对象来指定选项，例如文本方向、正文、要显示的图标、要播放的通知声音等等。
+接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造方法创建一个新通知。这个函数必须传递一个标题参数，并且可以选择传递一个选项对象来指定选项，例如文本方向、正文、要显示的图标、要播放的通知的声音等等。
 
-此外，Notifications API 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 指定了多个添加，以允许 Service Worker 发送通知。
+此外，Notifications API 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 指定了多个扩展，以允许 Service Worker 发送通知。
 
 > **备注：** 想了解怎么在你的应用里使用通知接口，请阅读[使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
 
 ## 接口
 
 - {{domxref("Notification")}}
-  - : 定义通知对象。
+  - : 定义的通知对象。
 - {{domxref("NotificationEvent")}}
   - : 表示在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上下文中触发的通知事件。
 
@@ -52,7 +52,7 @@ btn.addEventListener("click", () => {
 - {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} 事件
   - : 当用户关闭显示的通知时触发。
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
-  - : 按照通过当前 Service Worker 注册从当前源创建的顺序返回通知列表。
+  - : 按照通过当前 Service Worker 从当前源创建的通知的顺序返回通知列表。
 - {{domxref("ServiceWorkerRegistration.showNotification()")}}
   - : 显示带有请求的标题的通知。
 
