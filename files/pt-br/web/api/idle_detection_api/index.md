@@ -5,7 +5,7 @@ slug: Web/API/Idle_Detection_API
 
 {{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}{{SeeCompatTable}}
 
-A API de detecção de inatividade permite detectar quando um usuário está inativo, especificamente, ativo, inativo ou bloqueado, bem como ser notificado em alterações de inatividade, sem consultar um scripts.
+A API de detecção de inatividade permite detectar quando um usuário está inativo, especificamente, ativo, inativo ou bloqueado, bem como ser notificado em alterações de inatividade, sem consultar nenhum script.
 
 ## Conceitos e uso
 
