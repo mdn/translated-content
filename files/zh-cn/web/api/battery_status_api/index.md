@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Battery API")}}{{securecontext_header}}
 
-**Battery Status API**，通常称为 **Battery API**，提供有关系统电池电量水平的信息，并让你在电池电量或充电状态发生变化时收到触发的事件通知。这可用于调整应用程序的资源使用情况，以在电池电量不足时减少电池消耗，或在电池电量耗尽之前保存更改以防止数据丢失。
+**Battery Status API**，通常被称为 **Battery API**，提供有关系统电池电量水平的信息，并让你在电池电量或充电状态发生变化时收到触发的事件通知。这可用于调整应用程序的资源使用情况，以在电池电量不足时减少电池消耗，或在电池电量耗尽之前保存更改以防止数据丢失。
 
 > **备注：** 此 API 在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中*不可用*（未通过 {{domxref("WorkerNavigator")}} 暴露）。
 
@@ -23,7 +23,7 @@ l10n:
 
 ## 示例
 
-在此示例中，我们观察充电状态的变化（无论是否插入电源并充电）以及电池电量和时间的变化。这可以通过监听 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}、{{domxref("BatteryManager.levelchange_event", "levelchange")}}、{{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}、{{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}} 事件完成。
+在此示例中，我们观察充电状态的变化（无论是否插入电源并充电）以及电池电量和时间的变化。这通过监听 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}、{{domxref("BatteryManager.levelchange_event", "levelchange")}}、{{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}、{{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}} 事件完成。
 
 ```js
 navigator.getBattery().then((battery) => {
