@@ -2,7 +2,7 @@
 title: ServiceWorkerRegistration：showNotification() 方法
 slug: Web/API/ServiceWorkerRegistration/showNotification
 l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+  sourceCommit: 6cab93c7fbd381e36065794351e2d7fcc3ce64e8
 ---
 
 {{APIRef("Web Notifications")}}{{SecureContext_Header}}
