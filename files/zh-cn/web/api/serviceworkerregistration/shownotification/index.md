@@ -54,11 +54,11 @@ showNotification(title, options)
     - `lang` {{optional_inline}}
       - : 指定通知中使用的语言。根据 {{RFC(5646, "识别语言的标签（也被称为 BCP47）")}}，此字符串必须是有效的语言标签。
     - `renotify` {{optional_inline}} {{experimental_inline}}
-      - : 一个布尔值，指示重复使用 `tag` 值时是否阻止振动和声音提醒。如果 _options_ 的 `renotify` 为 `true` 并且 _options_ 的 `tag` 是空字符串，则会抛出 `TypeError`。默认为 `false`。
+      - : 一个布尔值，指示重复使用 `tag` 值时是否阻止振动和声音提醒。如果 _options_ 参数的 `renotify` 属性为 `true` 并且 _options_ 参数的 `tag` 属性是空字符串，则会抛出 `TypeError`。默认为 `false`。
     - `requireInteraction` {{optional_inline}} {{experimental_inline}}
       - : 指示在屏幕足够大的设备上，通知应保持活动状态，直到用户单击或关闭它。如果此值不存在或为 `false`，桌面版 Chrome 将在大约二十秒后自动最小化通知。默认值为 `false`。
     - `silent` {{optional_inline}}
-      - : 设置后表示不应发出声音或振动。如果 _options_ 的 `silent` 为 `true` 并且 _options_ 的 `vibrate` 存在，则会抛出 `TypeError` 异常。默认值为 `false`。
+      - : 设置后表示不应发出声音或振动。如果 _options_ 参数的 `silent` 属性为 `true` 并且 _options_ 参数的 `vibrate` 属性存在，则会抛出 `TypeError` 异常。默认值为 `false`。
     - `tag` {{optional_inline}}
       - : 给定通知的 ID，允许你在必要时使用脚本查找、替换或删除通知。
     - `timestamp` {{optional_inline}}
