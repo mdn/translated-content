@@ -2,7 +2,7 @@
 title: ServiceWorkerGlobalScope：notificationclose 事件
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
 l10n:
-  sourceCommit: aecd1e31c1c85b4bada274379f09fcbd9683cf20
+  sourceCommit: 6cab93c7fbd381e36065794351e2d7fcc3ce64e8
 ---
 
 {{APIRef("Web Notifications")}}
