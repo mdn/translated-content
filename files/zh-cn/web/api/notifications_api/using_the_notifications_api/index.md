@@ -2,7 +2,7 @@
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 l10n:
-  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
+  sourceCommit: 6cab93c7fbd381e36065794351e2d7fcc3ce64e8
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
@@ -216,14 +216,6 @@ window.addEventListener("load", () => {
 ### 结果
 
 {{ EmbedLiveSample('标签示例', '100%', 30) }}
-
-## 规范
-
-{{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 参见
 
