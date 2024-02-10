@@ -2,14 +2,14 @@
 title: Notification：Notification() 构造函数
 slug: Web/API/Notification/Notification
 l10n:
-  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
+  sourceCommit: 6cab93c7fbd381e36065794351e2d7fcc3ce64e8
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
 **`Notification()`** 构造函数创建一个新的代表用户通知的 {{domxref("Notification")}} 对象实例。
 
-> **备注：** 尝试使用 `Notification()` 构造函数在 {{domxref("ServiceWorkerGlobalScope")}} 中创建通知将抛出 `TypeError`，你应该使用 {{domxref("ServiceWorkerRegistration.showNotification()")}}。
+> **备注：** 尝试使用 `Notification()` 构造函数在 {{domxref("ServiceWorkerGlobalScope")}} 中创建通知将抛出 `TypeError`，应该使用 {{domxref("ServiceWorkerRegistration.showNotification()")}}。
 
 {{AvailableInWorkers}}
 
