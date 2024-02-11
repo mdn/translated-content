@@ -100,50 +100,50 @@ const myObject = {
 
 ### 変数
 
-- [変数を宣言するには](/ja/docs/Learn/JavaScript/First_steps/Variables#declaring_a_variable)
-- [変数を値で初期化するには](/ja/docs/Learn/JavaScript/First_steps/Variables#initializing_a_variable)
-- [変数の値を変更するには](/ja/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable)([代入演算子](/ja/docs/Learn/JavaScript/First_steps/Math#assignment_operators)についても参照してください)
-- [JavaScript のデータ型とは](/ja/docs/Learn/JavaScript/First_steps/Variables#variable_types)
-- [「弱い型付け」とは](/ja/docs/Learn/JavaScript/First_steps/Variables#loose_typing)
+- [変数を宣言するには](/ja/docs/Learn/JavaScript/First_steps/Variables#変数の宣言)
+- [変数を値で初期化するには](/ja/docs/Learn/JavaScript/First_steps/Variables#変数の初期化)
+- [変数の値を変更するには](/ja/docs/Learn/JavaScript/First_steps/Variables#変数の更新)（[代入演算子](/ja/docs/Learn/JavaScript/First_steps/Math#比較演算子)についても参照してください）
+- [JavaScript のデータ型とは](/ja/docs/Learn/JavaScript/First_steps/Variables#変数のデータ型)
+- [「弱い型付け」とは](/ja/docs/Learn/JavaScript/First_steps/Variables#動的型付け)
 
 ### 数学
 
-- [Web 開発で扱わなければならない数値型とは](/ja/docs/Learn/JavaScript/First_steps/Math#types_of_numbers)
-- [JavaScript での基本的な算術演算の方法とは](/ja/docs/Learn/JavaScript/First_steps/Math#arithmetic_operators)
-- [JavaScript での演算子の優先順位とは](/ja/docs/Learn/JavaScript/First_steps/Math#operator_precedence)
-- [JavaScript で値をインクリメント、デクリメントするには](/ja/docs/Learn/JavaScript/First_steps/Math#increment_and_decrement_operators)
-- [JavaScript で値を比較するには](/ja/docs/Learn/JavaScript/First_steps/Math#comparison_operators)(どちらが大きいか、ある値が別の値と等しいか、など)
+- [Web 開発で扱わなければならない数値型とは](/ja/docs/Learn/JavaScript/First_steps/Math#数値の種類)
+- [JavaScript での基本的な算術演算の方法とは](/ja/docs/Learn/JavaScript/First_steps/Math#算術演算子)
+- [JavaScript での演算子の優先順位とは](/ja/docs/Learn/JavaScript/First_steps/Math#演算子の優先順位)
+- [JavaScript で値をインクリメント、デクリメントするには](/ja/docs/Learn/JavaScript/First_steps/Math#インクリメント演算子とデクリメント演算子)
+- [JavaScript で値を比較するには](/ja/docs/Learn/JavaScript/First_steps/Math#比較演算子)(どちらが大きいか、ある値が別の値と等しいか、など)
 
 ### 文字列
 
-- [JavaScript で文字列を作成するには](/ja/docs/Learn/JavaScript/First_steps/Strings#creating_a_string)
-- [単一引用符と二重引用符のどちらを使うべきか](/ja/docs/Learn/JavaScript/First_steps/Strings#single_quotes_vs._double_quotes)
-- [文字列をエスケープするには](/ja/docs/Learn/JavaScript/First_steps/Strings#escaping_characters_in_a_string)
-- [文字列を連結するには](/ja/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings)
-- [文字列と数値を連結できるかどうか](/ja/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings)
-- [文字列の長さを調べるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#finding_the_length_of_a_string)
-- [文字列内の特定位置の文字を調べるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character)
-- [文字列から部分文字列を抽出するには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#extracting_a_substring_from_a_string)
-- [文字列の大文字・小文字を切り替えるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#changing_case)
-- [文字列内の一部の文字列を別の文字列に置き換えるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#updating_parts_of_a_string)
+- [JavaScript で文字列を作成するには](/ja/docs/Learn/JavaScript/First_steps/Strings#文字列の宣言)
+- [単一引用符と二重引用符のどちらを使うべきか](/ja/docs/Learn/JavaScript/First_steps/Strings#単一引用符、二重引用符、逆引用符)
+- [文字列をエスケープするには](/ja/docs/Learn/JavaScript/First_steps/Strings#文字列に引用符を含めるには)
+- [文字列を連結するには](/ja/docs/Learn/JavaScript/First_steps/Strings#_を用いた連結)
+- [文字列と数値を連結できるかどうか](/ja/docs/Learn/JavaScript/First_steps/Strings#数値と文字列)
+- [文字列の長さを調べるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#文字列の長さを調べる)
+- [文字列内の特定位置の文字を調べるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#文字列の特定の文字を受け取る)
+- [文字列から部分文字列を抽出するには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#部分文字列を探して抽出)
+- [文字列の大文字・小文字を切り替えるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#大文字小文字の切り替え)
+- [文字列内の一部の文字列を別の文字列に置き換えるには](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#文字列の一部分を書き換える)
 
 ### 配列
 
-- [配列を作成するには](/ja/docs/Learn/JavaScript/First_steps/Arrays#creating_arrays)
-- [配列内の要素を取得したり変更したりするには](/ja/docs/Learn/JavaScript/First_steps/Arrays#accessing_and_modifying_array_items)（多次元配列の場合についても含む）
-- [配列の長さを調べるには](/ja/docs/Learn/JavaScript/First_steps/Arrays#finding_the_length_of_an_array)
-- [配列に要素を追加するには](/ja/docs/Learn/JavaScript/First_steps/Arrays#adding_items)
-- [配列から要素を削除するには](/ja/docs/Learn/JavaScript/First_steps/Arrays#removing_items)
-- [文字列を分割して配列にするには、もしくは配列を連結して一つの文字列にするには](/ja/docs/Learn/JavaScript/First_steps/Arrays#converting_between_strings_and_arrays)
+- [配列を作成するには](/ja/docs/Learn/JavaScript/First_steps/Arrays#配列の作成)
+- [配列内の要素を取得したり変更したりするには](/ja/docs/Learn/JavaScript/First_steps/Arrays#配列の項目を取得し変更する)（多次元配列の場合についても含む）
+- [配列の長さを調べるには](/ja/docs/Learn/JavaScript/First_steps/Arrays#配列の長さを調べる)
+- [配列に要素を追加するには](/ja/docs/Learn/JavaScript/First_steps/Arrays#アイテムの追加)
+- [配列から要素を削除するには](/ja/docs/Learn/JavaScript/First_steps/Arrays#アイテムの削除)
+- [文字列を分割して配列にするには、もしくは配列を連結して一つの文字列にするには](/ja/docs/Learn/JavaScript/First_steps/Arrays#文字列と配列を相互に変換する)
 
 ### JavaScript のデバッグ
 
-- [基本的なエラーの種類とは](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong#types_of_error)
+- [基本的なエラーの種類とは](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong#エラーの種類)
 - [ブラウザー開発者ツールとは何か、どのように開くのか](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
 - [JavaScript コンソールに値を出力するには](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#the_console_api)
 - [ブレイクポイント等の JavaScript のデバッグ機能を使うには](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 
-JavaScript のデバッグに関する詳細については、[JavaScript のよくある問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)を参照してください。よくあるエラーの説明については[その他のよくあるエラー](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong#other_common_errors)を参照してください。
+JavaScript のデバッグに関する詳細については、[JavaScript のよくある問題を扱う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)を参照してください。よくあるエラーの説明については[その他のよくあるエラー](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong#その他のよくあるエラー)を参照してください。
 
 ### コード内での決定
 
