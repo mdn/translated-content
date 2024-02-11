@@ -1,11 +1,15 @@
 ---
 title: Notification：dir 属性
 slug: Web/API/Notification/dir
+l10n:
+  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 `dir` 只读属性指示通知的文本方向，此文本方向在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `dir` 选项中指定。
+{{domxref("Notification")}} 接口的 **`dir`** 只读属性指示通知的文本方向，此文本方向在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `dir` 选项中指定。
+
+{{AvailableInWorkers}}
 
 ## 值
 
@@ -18,7 +22,7 @@ slug: Web/API/Notification/dir
 - `rtl`
   - : 从右到左。
 
-> **备注：** 大多数浏览器似乎都忽略了明确的 ltr 和 rtl 设置，而是使用浏览器的通用设置。
+> **备注：** 大多数浏览器似乎都忽略了明确的 ltr 和 rtl 设置，而是直接使用浏览器的通用设置。
 
 ## 示例
 

@@ -3,7 +3,7 @@ title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 テキストによるタブ内の検索をします。
 

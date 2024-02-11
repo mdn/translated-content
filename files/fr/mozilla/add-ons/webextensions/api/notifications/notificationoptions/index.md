@@ -3,7 +3,7 @@ title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ce type contient les données nécessaires pour :
 

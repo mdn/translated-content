@@ -3,7 +3,7 @@ title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Сводка
 

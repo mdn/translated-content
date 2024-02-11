@@ -25,7 +25,7 @@
 /zh-CN/docs/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/CSS/At-rule	/zh-CN/docs/Web/CSS/At-rule
 /zh-CN/docs/CSS/Attribute_selectors	/zh-CN/docs/Web/CSS/Attribute_selectors
-/zh-CN/docs/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
+/zh-CN/docs/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/CSS/CSS_animated_properties	/zh-CN/docs/Web/CSS/CSS_animated_properties
 /zh-CN/docs/CSS/CSS_reference	/zh-CN/docs/Web/CSS/Reference
@@ -1124,16 +1124,18 @@
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+/zh-CN/docs/MDN/Community/MDN_content	/zh-CN/docs/MDN/Community/Contributing
 /zh-CN/docs/MDN/Community/Users_teams	/zh-CN/docs/MDN/Community/Roles_teams
+/zh-CN/docs/MDN/Contribute	/zh-CN/docs/MDN/Community/Contributing
 /zh-CN/docs/MDN/Contribute/Content	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /zh-CN/docs/MDN/Contribute/Content/Custom_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Contribute/Content/Rules_Of_MDN_Documenting	/zh-CN/docs/MDN/Writing_guidelines/What_we_write
 /zh-CN/docs/MDN/Contribute/Content/Style_guide	/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide
 /zh-CN/docs/MDN/Contribute/Feedback	/zh-CN/docs/MDN/Community
-/zh-CN/docs/MDN/Contribute/Fixing_MDN_content_bugs	/zh-CN/docs/MDN/Community/MDN_content
+/zh-CN/docs/MDN/Contribute/Fixing_MDN_content_bugs	/zh-CN/docs/MDN/Community/Contributing
 /zh-CN/docs/MDN/Contribute/Getting_started	/zh-CN/docs/MDN/Community/Contributing/Getting_started
-/zh-CN/docs/MDN/Contribute/Howto	/zh-CN/docs/MDN/Contribute
+/zh-CN/docs/MDN/Contribute/Howto	/zh-CN/docs/MDN/Community/Contributing
 /zh-CN/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /zh-CN/docs/MDN/Contribute/Howto/Compatibility_tables	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -1179,6 +1181,7 @@
 /zh-CN/docs/MDN/Structures/Macros/Custom_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Structures/Macros/Other	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /zh-CN/docs/MDN/Writing_guidelines/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto
+/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /zh-CN/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-CN/docs/MDN_at_ten	/zh-CN/docs/MDN/At_ten
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus
@@ -1620,6 +1623,7 @@
 /zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/History_API/Example	/zh-CN/docs/Web/API/History_API/Working_with_the_History_API
+/zh-CN/docs/Web/API/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
@@ -2055,7 +2059,7 @@
 /zh-CN/docs/Web/CSS/Adjacent_sibling_combinator	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/Web/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/Web/CSS/All_About_The_Containing_Block	/zh-CN/docs/Web/CSS/Containing_block
-/zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
+/zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/CSS/CSS3中的关键帧	/zh-CN/docs/Web/CSS/@keyframes
 /zh-CN/docs/Web/CSS/CSSOM_View/坐标系	/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -2110,6 +2114,7 @@
 /zh-CN/docs/Web/CSS/CSS_Scrollbars	/zh-CN/docs/Web/CSS/CSS_scrollbars_styling
 /zh-CN/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/zh-CN/docs/Web/XPath/Comparison_with_CSS_selectors
 /zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes
+/zh-CN/docs/Web/CSS/CSS_container_queries	/zh-CN/docs/Web/CSS/CSS_containment/Container_queries
 /zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/zh-CN/docs/Glossary/Flexbox
 /zh-CN/docs/Web/CSS/CSS_reference	/zh-CN/docs/Web/CSS/Reference
 /zh-CN/docs/Web/CSS/CSS_values_syntax	/zh-CN/docs/Web/CSS
@@ -2292,6 +2297,7 @@
 /zh-CN/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 /zh-CN/docs/Web/Guide/Audio_and_video_manipulation	/zh-CN/docs/Web/Media/Audio_and_video_manipulation
 /zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn/CSS
+/zh-CN/docs/Web/Guide/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites	/zh-CN/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
@@ -2347,7 +2353,7 @@
 /zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
-/zh-CN/docs/Web/Guide/Houdini	/zh-CN/docs/Web/API/Houdini
+/zh-CN/docs/Web/Guide/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
 /zh-CN/docs/Web/Guide/Introduction_to_Web_development	/zh-CN/docs/Learn
 /zh-CN/docs/Web/Guide/Mobile	/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design
 /zh-CN/docs/Web/Guide/Parsing_and_serializing_XML	/zh-CN/docs/Web/XML/Parsing_and_serializing_XML
@@ -2444,7 +2450,7 @@
 /zh-CN/docs/Web/HTTP/策略特征	/zh-CN/docs/Web/HTTP/Permissions_Policy
 /zh-CN/docs/Web/HTTP/缓存_FAQ	/zh-CN/docs/Web/HTTP/Caching
 /zh-CN/docs/Web/HTTP/重定向	/zh-CN/docs/Web/HTTP/Redirections
-/zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/API/Houdini
+/zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
 /zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/zh-CN/docs/Web/JavaScript/Language_overview
 /zh-CN/docs/Web/JavaScript/About_JavaScript	/zh-CN/docs/Web/JavaScript
 /zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness

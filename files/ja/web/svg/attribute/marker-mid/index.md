@@ -1,6 +1,8 @@
 ---
 title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
 {{SVGRef}}
@@ -11,7 +13,17 @@ slug: Web/SVG/Attribute/marker-mid
 
 > **メモ:** プレゼンテーション属性なので、 `marker-mid` は CSS プロパティとして使用することができます。
 
-プレゼンテーション属性として任意の要素に適用できますが、 {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}} の 7 つの要素でのみ効果があります。
+この属性は次の SVG 要素で使用できます。
+
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("line")}}
+- {{SVGElement("path")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("rect")}}
+
+## 例
 
 ```css hidden
 html,
@@ -36,18 +48,18 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("topExample", "200", "200")}}
+{{EmbedLiveSample("Example", "200", "200")}}
 
 ## 使用上のメモ
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">値</th>
       <td><code>none</code> | <code>&#x3C;marker-ref></code></td>
     </tr>
     <tr>
-      <th scope="row">値</th>
+      <th scope="row">既定値</th>
       <td><code>none</code></td>
     </tr>
     <tr>

@@ -3,7 +3,7 @@ title: Sélecteurs universels
 slug: Web/CSS/Universal_selectors
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 L'astérisque (\*) est le sélecteur universel en CSS. Il correspond à un élément de n'importe quel type.
 
