@@ -399,7 +399,7 @@ textarea.onkeyup = () => {
 
 > **メモ:** ヒント — 文字列メソッドの引数は文字列リテラルである必要はなく、変数であっても、メソッドを呼び出す変数であってもかまいません。
 
-```html hidden
+```html-nolint hidden
 <h2>出力結果</h2>
 
 <div class="output" style="min-height: 125px;">
@@ -574,7 +574,7 @@ MAN: Manchester Piccadilly
 4. この 2 つの新しい変数と文字列リテラルとを連結し、最終的な文字列を作成します。
 5. `input` 変数ではなく、この最終結果が `result` 変数の値に代入されるよう修正します。
 
-```html hidden
+```html-nolint hidden
 <h2>出力結果</h2>
 
 <div class="output" style="min-height: 125px;">
