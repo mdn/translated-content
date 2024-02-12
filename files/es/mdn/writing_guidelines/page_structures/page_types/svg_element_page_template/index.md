@@ -2,7 +2,7 @@
 title: Plantilla de página de elemento SVG
 slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 l10n:
-  sourceCommit: a52dbbb6fe50971dc975b424e7ee5e0737cb8732
+  sourceCommit: dad6b0e057cd37b4408cdede8b9f568c56df9a82
 ---
 
 {{MDNSidebar}}
@@ -39,7 +39,7 @@ l10n:
 > - **page-type**
 >   - : Siempre `svg-element`.
 > - **status**
->   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
+>   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**desaprobada**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
 > - **browser-compat**
 >
 >   - : Reemplaza el valor de marcador de posición `svg.elements.NombreDelElemento` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
@@ -63,8 +63,8 @@ l10n:
 > - `\{{SecureContext_Header}}` — esto genera un banner de **Contexto seguro** que indica que la tecnología solo está disponible en un [contexto seguro](/es/docs/Web/Security/Secure_Contexts).
 >   Si no lo está, puedes eliminar la llamada a la macro.
 >   Si lo está, también debes completar una entrada para ella en la página [Características restringidas a contextos seguros](/es/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
-> - `\{{SVGRef}}` — esto genera la barra lateral izquierda de referencia para el elemento.
->   El contenido de la barra lateral depende de las etiquetas en los metadatos de la página.
+> - `\{{SVGRef}}` — esto genera el menú lateral izquierdo de referencia para el elemento.
+>   El contenido del menú lateral depende de las etiquetas en los metadatos de la página.
 > - Recuerda eliminar la macro `\{{MDNSidebar}}` cuando copies esta página.
 >
 > Se muestran muestras de los banners **Experimental** y **Obsoleto** justo después de este bloque de nota.
@@ -82,7 +82,7 @@ Idealmente, esto debería ser una o dos oraciones cortas.
 
 Para que aparezca la información correcta aquí, completa una entrada para el elemento en la macro `\{{svginfo}}` si aún no está.
 
-_**Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo Markdown.**_
+_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo Markdown._
 
 ## Atributos
 
@@ -99,7 +99,8 @@ _**Para usar esta macro, elimina las comillas invertidas y la barra invertida en
 ### Atributos específicos
 
 - Incluye una lista con viñetas
-- de todos los atributos SVG que puede tomar
+- de todos los atributos SVG
+- que puede tomar
 
 ## Interfaz DOM
 
@@ -147,17 +148,17 @@ Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Wr
 
 `\{{Specifications}}`
 
-_**Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo Markdown.**_
+_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo Markdown._
 
 ## Compatibilidad con navegadores
 
 `\{{Compat}}`
 
-_**Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo Markdown.**_
+_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo Markdown._
 
-## Ver también
+## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con el elemento actual. Para obtener más pautas, consulta la [sección Ver también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con el elemento actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
