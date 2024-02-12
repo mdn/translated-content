@@ -2,7 +2,7 @@
 title: Plantilla de subpágina del constructor de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 l10n:
-  sourceCommit: a52dbbb6fe50971dc975b424e7ee5e0737cb8732
+  sourceCommit: dad6b0e057cd37b4408cdede8b9f568c56df9a82
 ---
 
 {{MDNSidebar}}
@@ -64,10 +64,10 @@ l10n:
 > - `\{{SecureContext_Header}}` — esto genera un banner **Contexto seguro** que indica que la tecnología solo está disponible en un [contexto seguro](/es/docs/Web/Security/Secure_Contexts).
 >   Si no lo es, entonces puede eliminar la llamada al macro.
 >   Si lo es, entonces también debería completar una entrada para ella en la página [Funciones restringidas a contextos seguros](/es/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
-> - `\{{APIRef("GroupDataName")}}` — esto genera la barra lateral de referencia izquierda que muestra enlaces de referencia rápida relacionados con la página actual.
->   Por ejemplo, cada página en la [WebVR API](/es/docs/Web/API/WebVR_API) tiene la misma barra lateral, que apunta a las otras páginas en la API.
->   Para generar la barra lateral correcta para su API, debe agregar una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada al macro en lugar de _GroupDataName_.
->   Vea nuestra [guía de barras laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar el macro `\{{MDNSidebar}}` cuando copie esta página.
+> - `\{{APIRef("GroupDataName")}}` — esto genera un menú lateral de referencia del lado izquierdo que muestra enlaces de referencia rápida relacionados con la página actual.
+>   Por ejemplo, cada página en la [WebVR API](/es/docs/Web/API/WebVR_API) tiene el mismo menú lateral, que apunta a las otras páginas en la API.
+>   Para generar el menú lateral correcto para su API, debe agregar una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
+>   Vea nuestra [guía de menús laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar el macro `\{{MDNSidebar}}` cuando copie esta página.
 >
 > Se muestran ejemplos de los banners **Experimental**, **Contexto seguro** y **Desaprobado** justo después de este bloque de notas.
 >
@@ -81,22 +81,22 @@ Podría copiar la mayor parte de esto del resumen del constructor en la página 
 
 ## Sintaxis
 
-Complete un cuadro de sintaxis, según la guía en nuestras [secciones de sintaxis](/es/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections) artículo.
+Complete un cuadro de sintaxis, según la guía en nuestro artículo [secciones de sintaxis](/es/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections).
 
 ### Parámetros
 
-- `parámetro1` {{opcional_en_línea}}
+- `parámetro1` {{optional_inline}}
   - : Incluya una breve descripción del parámetro y lo que hace aquí. Incluya un término y definición para cada parámetro.
-    Si el parámetro no es opcional, elimine la llamada al macro \\{{opcional_en_línea}}.
+    Si el parámetro no es opcional, elimine la llamada a la macro \\{{optional_inline}}.
 - `parámetro2`
   - : etc.
 
 ### Valor de retorno
 
-Incluya una descripción del valor de retorno del constructor, incluido el tipo de datos y lo que representa.
+Incluya una descripción del valor de retorno del constructor, incluido el tipo de dato y lo que representa.
 Normalmente, esto es simplemente "Una instancia del objeto `\{{domxref("NombreDeLaInterfazPadre")}}`".
 
-_Para usar este macro, elimine las comillas invertidas y la barra invertida en el archivo markdown._
+_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo markdown._
 
 ### Excepciones
 
@@ -147,17 +147,17 @@ Consulte nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Wr
 
 `\{{Specifications}}`
 
-_Para usar este macro, elimine las comillas invertidas y la barra invertida en el archivo markdown._
+_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo markdown._
 
 ## Compatibilidad con navegadores
 
 `\{{Compat}}`
 
-_Para usar este macro, elimine las comillas invertidas y la barra invertida en el archivo markdown._
+_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo markdown._
 
-## Ver también
+## Véase también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con la API actual. Para obtener más pautas, consulte la [sección Ver también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluya enlaces a páginas de referencia y guías relacionadas con la API actual. Para obtener más pautas, consulte la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
