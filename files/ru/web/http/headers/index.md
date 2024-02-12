@@ -552,20 +552,6 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-MD5"
-            title="en/Content-MD5"
-            >Content-MD5</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td>{{ unimplemented_inline("232030") }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
             href="/ru/docs/Web/HTTP/Headers/Content-Range"
             title="en/Content-Range"
             >Content-Range</a
@@ -789,32 +775,6 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/Web/HTTP/Headers/Last-Event-ID"
-            title="en/Last-Event-ID"
-            >Last-Event-ID</a
-          ></code
-        >
-      </td>
-      <td>
-        Содержит идентификатор последнего события полученного клиентом от
-        сервера в предыдущем HTTP запросе. Используется для восстановления
-        синхронизации потока <code>text/event-stream</code>.
-      </td>
-      <td>
-        <a href="/ru/docs/Server-sent_events" title="en/Server-Sent Events"
-          >Server-Sent Events</a
-        >
-      </td>
-      <td>
-        <a class="external" href="http://dev.w3.org/html5/eventsource/"
-          >Server-Sent Events spec</a
-        >
-      </td>
     </tr>
     <tr>
       <td>
