@@ -54,7 +54,7 @@ PR 생성시에 한국 리뷰어들은 라운드 로빈 방식으로 배정이 �
 
 ## yari 빠른 사용법
 
-yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크](https://github.com/mdn/translated-content#making-contributions)를 참고해주세요.
+yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크](https://github.com/mdn/yari?tab=readme-ov-file#quickstart)를 참고해주세요.
 
 1. [content](https://github.com/mdn/content)와 (Fork된 본인 레포의) [translated-content](https://github.com/mdn/translated-content)를 클론합니다.
 2. content 폴더에 들어가서 `yarn install`을 통해 yari 등 필요한 패키지를 다운받습니다.
@@ -67,8 +67,8 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 
 4. `yarn start`
 
-다음과 같이 진행하면 아래와 같이 실시간으로 반영사항을 확인할 수 있고 4가지 편집 버튼으로 편집할 수 있습니다.
-![image](https://user-images.githubusercontent.com/22424891/117309001-002e0500-aebd-11eb-9842-8f78a99e8873.png)
+다음과 같이 진행하면 아래와 같이 실시간으로 반영사항을 확인할 수 있습니다.
+![image](https://github.com/mdn/translated-content/assets/23524849/c0247523-a8d2-4279-b17e-1156c15d08ce)
 
 ## 여러 안내서
 
@@ -87,7 +87,8 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 
 다음은 보관된 안내서입니다.
 
-- [마크다운 변환 안내서](./guides/markdown-conversion-guide.md)
+- [마크다운 변환 안내서](./guides/archived/markdown-conversion-guide.md)
+- [HTML 번역 안내서](./guides/archived/html-guide.md)
 
 ## 자주 묻는 질문
 
