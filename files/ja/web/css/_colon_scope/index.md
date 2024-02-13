@@ -60,7 +60,7 @@ l10n:
 
 #### HTML
 
-```html
+```html-nolint
 <div class="light-scheme">
   <p>
     MDN には、
