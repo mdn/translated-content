@@ -39,28 +39,28 @@ navigator.getBattery().then((battery) => {
     updateChargeInfo();
   });
   function updateChargeInfo() {
-    console.log(`电源是否充电中？${battery.charging ? "是" : "否"}`);
+    console.log(`电池是否充电中？${battery.charging ? "是" : "否"}`);
   }
 
   battery.addEventListener("levelchange", () => {
     updateLevelInfo();
   });
   function updateLevelInfo() {
-    console.log(`电源电量：${battery.level * 100}%`);
+    console.log(`电池电量：${battery.level * 100}%`);
   }
 
   battery.addEventListener("chargingtimechange", () => {
     updateChargingInfo();
   });
   function updateChargingInfo() {
-    console.log(`电源充电时间：${battery.chargingTime}秒`);
+    console.log(`电池充电时间：${battery.chargingTime}秒`);
   }
 
   battery.addEventListener("dischargingtimechange", () => {
     updateDischargingInfo();
   });
   function updateDischargingInfo() {
-    console.log(`电源续航时间：${battery.dischargingTime}秒`);
+    console.log(`电池续航时间：${battery.dischargingTime}秒`);
   }
 });
 ```
