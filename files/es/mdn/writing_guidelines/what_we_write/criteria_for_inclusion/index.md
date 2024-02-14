@@ -1,6 +1,8 @@
 ---
 title: Criterios para la inclusión en MDN Web Docs
 slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
+l10n:
+  sourceCommit: 73172d83538dd9dec805f14030b60932ade87ffa
 ---
 
 {{MDNSidebar}}
