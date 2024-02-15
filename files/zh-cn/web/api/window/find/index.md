@@ -19,23 +19,23 @@ window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
 ```
 
 - `aString`
-  - : 将要搜索的字符串
+  - : 将要搜索的字符串。
 - `aCaseSensitive`
-  - : 布尔值，如果为`true`,表示搜索是区分大小写的。
+  - : 布尔值，如果为 `true`，表示搜索是区分大小写的。
 - `aBackwards`
-  - : 布尔值。如果为`true`, 表示搜索方向为向上搜索。
+  - : 布尔值。如果为 `true`，表示搜索方向为向上搜索。
 - `aWrapAround`
-  - : 布尔值。如果为`true`, 表示为循环搜索。
-- `aWholeWord` {{ unimplemented_inline() }}
-  - : 布尔值。如果为`true`,表示采用全字匹配搜索。该参数无效; 查看 [Firefox bug 481513](https://bugzil.la/481513).
+  - : 布尔值。如果为 `true`，表示为循环搜索。
+- `aWholeWord`
+  - : 布尔值。如果为 `true`，表示采用全字匹配搜索。
 - `aSearchInFrames`
-  - : 布尔值。如果为`true`, 表示会搜索框架内的文本。
+  - : 布尔值。如果为 `true`，表示会搜索框架内的文本。
 - `aShowDialog`
-  - : 布尔值。如果为`true`, 则会弹出一个搜索对话框。
+  - : 布尔值。如果为 `true`，则会弹出一个搜索对话框。
 
 ### 返回值
 
-`如果搜索到指定的字符串，则返回 true，否则`返回 false.
+如果搜索到指定的字符串，则返回 `true`，否则返回 `false`。
 
 ## 规范
 
