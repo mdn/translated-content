@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-**`devicemotion`** 事件每隔一定时间触发一次，显示设备当时受到的物理加速度力的大小。如果有的话，它还会提供有关旋转速率的信息。
+**`devicemotion`** 事件每隔一定时间触发一次，显示设备当时在包括/不包括重力的作用下的加速度大小。如果有的话，它还会提供有关旋转速率的信息。
 
 该事件不可取消，也不会冒泡。
 
