@@ -1,6 +1,6 @@
 ---
 title: Cómo añadir imágenes y medios
-slug: MDN/Guías_de_escritura/Cómo/Images_media
+slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
   sourceCommit: 3e30f56aea49f6c406dc44179dadd5f1b5734c1d
 ---
