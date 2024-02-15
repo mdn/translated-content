@@ -82,7 +82,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
   - : 返回数组中等于特定值的最后一个元素（下标最大），如果没有找到则返回 -1，请参见 {{jsxref("Array.prototype.lastIndexOf()")}}。
 - {{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}
   - : 使用在该数组的每个元素上调用函数的结果创建新数组，请参见{{jsxref("Array.prototype.map()")}}。
-- {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}}
   - : {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}的之前的非标准版本。
 - {{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}
   - : 对累加器和数组的每个值应用函数（从左到右），使其归约为单一的值，另见 {{jsxref("Array.prototype.reduce()")}}。
