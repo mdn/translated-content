@@ -19,3 +19,9 @@
 
 {{Compat}}
 ```
+
+## [EmbedLiveSample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples)
+
+### EmbedLiveSample 오류 발생하는 문서 찾는 스크립트
+
+EmbedLiveSample/MacroLiveSampleError 오류 찾는 [스크립트 링크 참고](https://gist.github.com/hochan222/f7d3fead51f75c73b732dbd3697220bf) ([Thanks to SphinxKnight - All Korean pages with an EmbedLiveSample error](https://github.com/mdn/translated-content/issues/2848))
