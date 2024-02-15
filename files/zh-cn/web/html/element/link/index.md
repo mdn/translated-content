@@ -110,13 +110,13 @@ slug: Web/HTML/Element/link
 - `integrity` {{experimental_inline}}
   - : 包含行内元数据，它是一个你用浏览器获取的资源文件的哈希值，以 base64 编码的方式加的密，这样用户能用它来验证一个获取到的资源，在传送时未被非法篡改，详情查看[Subresource Integrity](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
-  - : 这个属性规定了外部资源适用的媒体类型。它的值必须是"[媒体查询](/zh-CN/docs/Web/Guide/CSS/Media_queries)"。这个属性使得用户代理能选择最适合设备运行的媒体类型。
-    - 在 HTML 4 中，该属性只能是一组以空白符作为分隔的媒体描述文字，比如"[媒体类型](/zh-CN/docs/Web/CSS/@media)"规定了该元素可取的属性，如 print、screen、aural、braille。HTML5 将该属性值扩展为任意类型的"[媒体查询](/zh-CN/docs/CSS/Media_queries)"，"媒体查询"将 HTML4 的属性值都包括在内。
-    - 不支持"[CSS3 媒体查询](/zh-CN/docs/CSS/Media_queries)"的浏览器并不会强行识别这些链接，因此别忘了设置备用 link，即那些可用于 HTML4 的 link。
+  - : 这个属性规定了外部资源适用的媒体类型。它的值必须是“[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)”。这个属性使得用户代理能选择最适合设备运行的媒体类型。
+    - 在 HTML 4 中，该属性只能是一组以空白符作为分隔的媒体描述文字，比如“[媒体类型](/zh-CN/docs/Web/CSS/@media)”规定了该元素可取的属性，如 print、screen、aural、braille。HTML5 将该属性值扩展为任意类型的“[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)”，“媒体查询”将 HTML4 的属性值都包括在内。
+    - 不支持“[CSS3 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)”的浏览器并不会强行识别这些链接，因此别忘了设置备用 link，即那些可用于 HTML4 的 link。
 - `referrerpolicy` {{experimental_inline}}
   - : 一个字符串，指示在获取资源时使用哪个引荐来源网址：
-    - `'no-referrer'` 表示{{HTTPHeader("Referer")}} 标头将不会发送。
-    - `'no-referrer-when-downgrade'` 的原始位置时不会发送任何{{HTTPHeader("Referer")}}标头。如果未指定其他政策，这是用户代理的默认行为。
+    - `'no-referrer'` 表示 {{HTTPHeader("Referer")}} 标头将不会发送。
+    - `'no-referrer-when-downgrade'` 的原始位置时不会发送任何 {{HTTPHeader("Referer")}} 标头。如果未指定其他政策，这是用户代理的默认行为。
     - `'origin'` 意味着引荐来源网址将是页面的来源，大致是方案，主机和端口。
     - `'origin-when-cross-origin'` 这意味着导航到其他来源将仅限于方案，主机和端口，而在同一来源上导航将包括引荐来源网址的路径。
     - `'unsafe-url'` 意味着引荐来源网址将包含来源和路径（但不包括片段，密码或用户名）。这种情况是不安全的，因为它可能会将来源和路径从受 TLS 保护的资源泄漏到不安全的来源。

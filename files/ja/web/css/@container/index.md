@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 3d4edafe934c84878d2a46d8c22911ba351b7261
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 **`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、[格納コンテキスト](/ja/docs/Web/CSS/CSS_container_queries#格納コンテキストの命名) にスタイルを適用する条件付きグループルールです。
 スタイル宣言は条件によってフィルタリングされ、条件が真の場合にコンテナーに適用されます。
@@ -231,8 +231,6 @@ span {
 ```
 
 ### スタイルのコンテナークエリー
-
-{{CSSRef}}{{SeeCompatTable}}
 
 コンテナクエリーでは、コンテナー要素の計算されたスタイルを評価することもできます。
 以下のコンテナークエリーは、コンテナー要素の `--accent-color` の {{cssxref("computed_value", "計算値")}} が `blue` かどうかを調べます。

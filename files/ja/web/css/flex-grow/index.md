@@ -85,12 +85,12 @@ flex-grow: unset;
   align-items: stretch;
 }
 
-.box {
+.small {
   flex-grow: 1;
   border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
-.box1 {
+.double {
   flex-grow: 2;
   border: 3px solid rgba(0, 0, 0, 0.2);
 }

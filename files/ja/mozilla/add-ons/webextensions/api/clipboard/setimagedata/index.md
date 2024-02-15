@@ -3,7 +3,7 @@ title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 イメージをクリップボードにコピーします。イメージはクリップボードに書き込まれる前に再エンコードされます。イメージが無効な場合、クリップボードは修正されません。
 

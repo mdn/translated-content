@@ -5,7 +5,7 @@ slug: Glossary/Accessibility
 
 {{GlossarySidebar}}
 
-_Web アクセシビリティ_ (略語: **A11Y**、Accessibility の A から Y までの間に 11 文字が挟まれているため、このように略す) は、身体的および技術的な制約によらず、Web サイトを使いやすく保つためのベストプラクティスです。Web アクセシビリティは、{{Glossary("W3C")}} の {{Glossary("WAI","Web Accessibility Initiative")}} (略称: WAI) によって、標準化と議論がされています。
+_ウェブアクセシビリティ_ (略語: **A11Y**、Accessibility の A から Y までの間に 11 文字が挟まれているため、このように略す) は、身体的および技術的な制約によらず、ウェブサイトを使いやすく保つためのベストプラクティスです。ウェブアクセシビリティは、{{Glossary("W3C")}} の {{Glossary("WAI","Web Accessibility Initiative")}} (略称: WAI) によって、標準化と議論がされています。
 
 ## 関連項目
 

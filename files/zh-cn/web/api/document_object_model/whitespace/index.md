@@ -137,9 +137,9 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 > **备注：** 从版本 52 开始，[Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)支持高亮文本节点，使得观察包含节点中包含的空白字符变得更加容易。纯的空白符节点会有一个“whitespace”标记。
 
-### 在块格式化上下文的空白符
+### 在区块格式化上下文的空白符
 
-上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
+上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)。
 
 这种情况下，空白符的处理方式非常不同。
 

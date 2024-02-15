@@ -3,7 +3,9 @@ title: runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
 
-{{AddonSidebar()}}Получить весь файл [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) в виде объекта JavaScript, совместимого с JSON.
+{{AddonSidebar}}
+
+Получить весь файл [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) в виде объекта JavaScript, совместимого с JSON.
 
 ## Синтаксис
 
