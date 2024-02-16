@@ -5,7 +5,7 @@ slug: Web/API/Element/insertAdjacentElement
 
 {{APIRef("DOM")}}
 
-**`insertAdjacentElement()`** 方法将一个给定的元素节点插入到相对于被调用的元素的给定的一个位置。
+**`insertAdjacentElement()`** 方法将一个给定的 {{domxref("Element")}} 元素插入到 DOM 树中的指定位置。
 
 ## 语法
 
@@ -13,32 +13,30 @@ slug: Web/API/Element/insertAdjacentElement
 element.insertAdjacentElement(position, element);
 ```
 
-### 参数
-
 - position
 
-  - : A {{domxref("DOMString")}} 表示相对于该元素的位置；必须是以下字符串之一：
+  - : 一个 {{domxref("DOMString")}}，表示插入内容相对于元素的位置，并且必须是以下字符串之一：
 
-    - `'beforebegin'`: 在该元素本身的前面。
-    - `'afterbegin'`:只在该元素当中，在该元素第一个子孩子前面。
-    - `'beforeend'`:只在该元素当中，在该元素最后一个子孩子后面。
-    - `'afterend'`: 在该元素本身的后面。
+    - `'beforebegin'`：元素自身的前面。
+    - `'afterbegin'`：插入元素内部的第一个子节点之前。
+    - `'beforeend'`：插入元素内部的最后一个子节点之后。
+    - `'afterend'`：元素自身的后面。
 
 - element
-  - : 要插入到树中的元素。
+  - : 要被插入到 DOM 树中的 {{domxref("Element")}} 元素。
 
 ### 返回值
 
-插入的元素，插入失败则返回 null.
+插入的元素，插入失败则返回 `null`。
 
 ### 异常
 
-| 异常          | 说明                           |
-| ------------- | ------------------------------ |
-| `SyntaxError` | 插入的位置是一个无法识别的值。 |
-| `TypeError`   | 插入的元素不是一个有效元素。   |
+- `SyntaxError` {{domxref("DOMException")}}
+  - 无法识别 `position` 的值。
+- {{jsxref("TypeError")}}
+  - 插入的 `element` 不是一个有效元素。
 
-### 位置命名的可视化展示
+### 位置名称的可视化
 
 ```html
 <!-- beforebegin -->
@@ -50,27 +48,20 @@ element.insertAdjacentElement(position, element);
 <!-- afterend -->
 ```
 
-> **备注：** 当节点处于 DOM 树中而且有一个父元素的时候 `beforebegin` 和 `afterend` 操作才能起作用。
+> **备注：** 只有当节点处于 DOM 树中且有一个父元素时 `beforebegin` 和 `afterend` 才会生效。
 
 ## 例子
 
 ```js
-beforeBtn.addEventListener("click", function () {
-  var tempDiv = document.createElement("div");
-  tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement("beforebegin", tempDiv);
-  setListener(tempDiv);
-});
+// 原为 <div id="one">one</div>
+const one = document.getElementById("one");
+const two = document.createElement("div");
+two.innerText = "two";
+one.insertAdjacentHTML("afterend", two);
 
-afterBtn.addEventListener("click", function () {
-  var tempDiv = document.createElement("div");
-  tempDiv.style.backgroundColor = randomColor();
-  activeElem.insertAdjacentElement("afterend", tempDiv);
-  setListener(tempDiv);
-});
+// 此时，新结构变为：
+// <div id="one">one</div><div id="two">two</div>
 ```
-
-看看我们在 Github（也可以参考 [源码](https://github.com/mdn/insert-adjacent/blob/master/insertAdjacentElement.html)）上的 [insertAdjacentElement.html](http://mdn.github.io/insert-adjacent/insertAdjacentElement.html) 演示。在一个容器当中我们有一组{{htmlelement("div")}} 元素。点击其中一个 div 时，这个容器会处于选中状态，然后你就可以按下*Insert before* 或*Insert after* 按钮通过 `insertAdjacentElement() 方法`来把一个新的 divs 插入到选中的元素前面或者后面。
 
 ## 规范
 
@@ -85,4 +76,4 @@ afterBtn.addEventListener("click", function () {
 - {{domxref("Element.insertAdjacentHTML()")}}
 - {{domxref("Element.insertAdjacentText()")}}
 - {{domxref("Node.insertBefore()")}}
-- {{domxref("Node.appendChild()")}} (same effect as `beforeend`)
+- {{domxref("Node.appendChild()")}}（与 `beforeend` 效果相同）
