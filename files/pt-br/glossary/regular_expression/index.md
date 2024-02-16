@@ -1,7 +1,6 @@
 ---
 title: Expressão regular
 slug: Glossary/Regular_expression
-page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}
