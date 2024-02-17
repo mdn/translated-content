@@ -32,7 +32,7 @@ insertAdjacentElement(position, element)
 ### 异常
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - 无法识别 `position` 的值。
+  - 如果指定的 `position` 不是可识别的值，则抛出该异常。
 - {{jsxref("TypeError")}}
   - 插入的 `element` 不是一个有效元素。
 
