@@ -72,7 +72,7 @@ afterBtn.addEventListener("click", () => {
 });
 ```
 
-看看我们在 Github（也可以参考 [源码]()）上的 [insertAdjacentElement.html]() 演示。在一个容器中我们有一组 {{htmlelement("div")}} 元素。点击其中一个 `div` 时，这个容器会处于选中状态，然后你就可以按下 `Insert before` 或 `Insert after` 按钮，通过 `insertAdjacentElement()` 方法来把一个新的 `div` 插入到选中的元素前面或者后面。
+看看我们在 Github（也可以参考 [源码](https://github.com/mdn/dom-examples/blob/main/insert-adjacent/insertAdjacentElement.html)）上的 [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) 演示。在一个容器中我们有一组 {{htmlelement("div")}} 元素。点击其中一个 `div` 时，这个容器会处于选中状态，然后你就可以按下 `Insert before` 或 `Insert after` 按钮，通过 `insertAdjacentElement()` 方法来把一个新的 `div` 插入到选中的元素前面或者后面。
 
 ## 规范
 
