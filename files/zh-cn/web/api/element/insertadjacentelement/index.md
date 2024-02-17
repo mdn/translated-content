@@ -17,10 +17,10 @@ insertAdjacentElement(position, element)
 
   - : 表示相对于 `targetElement` 的位置的字符串；必须是以下字符串之一（大小写不敏感）：
 
-    - `'beforebegin'`：元素自身的前面。
-    - `'afterbegin'`：插入元素内部的第一个子节点之前。
-    - `'beforeend'`：插入元素内部的最后一个子节点之后。
-    - `'afterend'`：元素自身的后面。
+    - `'beforebegin'`：`targetElement` 之前。
+    - `'afterbegin'`：`targetElement` 内部的第一个子节点之前。
+    - `'beforeend'`：`targetElement` 内部的最后一个子节点之后。
+    - `'afterend'`：`targetElement` 之后。
 
 - element
   - : 要被插入到 DOM 树中的 {{domxref("Element")}} 元素。
