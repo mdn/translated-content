@@ -50,7 +50,7 @@ insertAdjacentElement(position, element)
 
 > **备注：** 只有当节点处于 DOM 树中且有一个父元素时 `beforebegin` 和 `afterend` 才会生效。
 
-## 例子
+## 示例
 
 ```js
 beforeBtn.addEventListener("click", () => {
