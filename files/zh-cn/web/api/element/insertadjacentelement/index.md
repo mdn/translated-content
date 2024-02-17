@@ -5,7 +5,7 @@ slug: Web/API/Element/insertAdjacentElement
 
 {{APIRef("DOM")}}
 
-**`insertAdjacentElement()`** 方法将一个给定的 {{domxref("Element")}} 元素插入到 DOM 树中的指定位置。
+{{domxref("Element")}} 接口的 **`insertAdjacentElement()`** 方法将一个给定的元素节点插入到相对于当前元素的指定位置。
 
 ## 语法
 
