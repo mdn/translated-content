@@ -53,14 +53,23 @@ insertAdjacentElement(position, element)
 ## 例子
 
 ```js
-// 原为 <div id="one">one</div>
-const one = document.getElementById("one");
-const two = document.createElement("div");
-two.innerText = "two";
-one.insertAdjacentHTML("afterend", two);
+beforeBtn.addEventListener("click", () => {
+  const tempDiv = document.createElement("div");
+  tempDiv.style.backgroundColor = randomColor();
+  if (activeElem) {
+    activeElem.insertAdjacentElement("beforebegin", tempDiv);
+  }
+  setListener(tempDiv);
+});
 
-// 此时，新结构变为：
-// <div id="one">one</div><div id="two">two</div>
+afterBtn.addEventListener("click", () => {
+  const tempDiv = document.createElement("div");
+  tempDiv.style.backgroundColor = randomColor();
+  if (activeElem) {
+    activeElem.insertAdjacentElement("afterend", tempDiv);
+  }
+  setListener(tempDiv);
+});
 ```
 
 ## 规范
