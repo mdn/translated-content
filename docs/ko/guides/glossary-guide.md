@@ -145,7 +145,7 @@
 | Regular expression  | 정규 표현식     |                                                                                                        |
 | Rendering           | 렌더링          |                                                                                                        |
 | Section             | 구획            |                                                                                                        |
-| Space bar           | 스페이스바      |                                                                                                        |
+| Space bar           | 스페이스 바      |                                                                                                        |
 | Statement           | 명령문 또는 문  |                                                                                                        |
 | Tag                 | 태그            |                                                                                                        |
 | Tip                 | 팁              |                                                                                                        |
