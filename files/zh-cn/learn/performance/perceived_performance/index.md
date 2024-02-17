@@ -5,7 +5,7 @@ slug: Learn/Performance/Perceived_performance
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
 
-**[感知性能](/en-US/docs/Glossary/Perceived_performance)** 是用户对网站速度的感受。用户如何看待性能与任何客观统计数据一样重要，甚至更重要，但它是主观的，并且不易测量。感知性能是用户视角，而不是指标。
+**[感知性能](/zh-CN/docs/Glossary/Perceived_performance)** 是用户对网站速度的感受。用户如何看待性能与任何客观统计数据一样重要，甚至更重要，但它是主观的，并且不易测量。感知性能是用户视角，而不是指标。
 
 本文简要介绍了感知性能，着眼于用户的感知，以及可以使用哪些客观工具来衡量这类主观因素。
 
@@ -30,7 +30,7 @@ slug: Learn/Performance/Perceived_performance
   </tbody>
 </table>
 
-性能是关于用户视角的。网站加载和渲染的感觉速度对用户体验的影响大于网站实际加载和渲染的速度。即使某个操作会花费很长时间（可能是由于延迟或主线程（[main thread](/en-US/docs/Glossary/Main_thread)）不可用），通过显示一个加载旋转器，或一系列有用的提示和建议（或笑话，或任何你认为合适的内容），也可以在用户等待时保持他们的参与度。这种方法比什么都不显示要好得多，什么都不显示会让用户感觉等待的时间更长，可能还会让用户认为网站出了故障并放弃等待。
+性能是关于用户视角的。网站加载和渲染的感觉速度对用户体验的影响大于网站实际加载和渲染的速度。即使某个操作会花费很长时间（可能是由于延迟或主线程（[main thread](/zh-CN/docs/Glossary/Main_thread)）不可用），通过显示一个加载旋转器，或一系列有用的提示和建议（或笑话，或任何你认为合适的内容），也可以在用户等待时保持他们的参与度。这种方法比什么都不显示要好得多，什么都不显示会让用户感觉等待的时间更长，可能还会让用户认为网站出了故障并放弃等待。
 
 ## 感知性能
 
@@ -38,11 +38,11 @@ slug: Learn/Performance/Perceived_performance
 
 目前没有一种万能的指标可以量化用户的感受，但是这些指标在评估改进（和退步）方面是有用的。相关的衡量指标包括首次有意义绘制（FMP）、最大内容绘制（LCP）、可交互时间（TTI）、渲染开始时间、DOM 可交互时间和速度指数。
 
-**首次绘制 [First paint](/en-US/docs/Glossary/First_paint)** 由浏览器报告，并提供页面开始变化的时间（以毫秒为单位）；但这种变化可能是简单的背景颜色更新，或者更不那么显眼的内容。它并不表示加载完成，并且有可能会在没有可见内容被绘制的时候报告时间。**首次有意义绘制（FCP，[First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint)）** 报告了浏览器首次绘制任何值得注意的内容的时间，无论是文本、前景或背景图像，或者画布或 SVG；捕捉加载体验的最初阶段。但是，仅仅因为有内容，并不意味着它是有用的内容，或者用户有内容可供消费。**首次有意义绘制（FMP，[First Meaningful Paint](/en-US/docs/Glossary/first_meaningful_paint)）** 是指内容出现在屏幕上的时间，该内容实际上具有意义；这是用户感知加载体验的更好度量标准，但仍然不是理想的。**最大内容绘制（LCP）** 指标，在 [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/) 中定义，报告了在视口中可见的最大内容元素的渲染时间。
+**首次绘制 [First paint](/zh-CN/docs/Glossary/First_paint)** 由浏览器报告，并提供页面开始变化的时间（以毫秒为单位）；但这种变化可能是简单的背景颜色更新，或者更不那么显眼的内容。它并不表示加载完成，并且有可能会在没有可见内容被绘制的时候报告时间。**首次有意义绘制（FCP，[First Contentful Paint](/zh-CN/docs/Glossary/First_contentful_paint)）** 报告了浏览器首次绘制任何值得注意的内容的时间，无论是文本、前景或背景图像，或者画布或 SVG；捕捉加载体验的最初阶段。但是，仅仅因为有内容，并不意味着它是有用的内容，或者用户有内容可供消费。**首次有意义绘制（FMP，[First Meaningful Paint](/zh-CN/docs/Glossary/first_meaningful_paint)）** 是指内容出现在屏幕上的时间，该内容实际上具有意义；这是用户感知加载体验的更好度量标准，但仍然不是理想的。**最大内容绘制（LCP）** 指标，在 [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/) 中定义，报告了在视口中可见的最大内容元素的渲染时间。
 
-**速度指数（[Speed index](/en-US/docs/Glossary/Speed_index)）** 也被用来近似估算感知性能：它测量屏幕可见区域内像素被绘制的平均时间。这个指标没有考虑到抖动，也没有高权重地考虑对用户更重要的内容，因此它并不是一个完美的指标。
+**速度指数（[Speed index](/zh-CN/docs/Glossary/Speed_index)）** 也被用来近似估算感知性能：它测量屏幕可见区域内像素被绘制的平均时间。这个指标没有考虑到抖动，也没有高权重地考虑对用户更重要的内容，因此它并不是一个完美的指标。
 
-这些指标与网站的初始加载和渲染有关。确保用户开始与网站交互之后，网站依然感觉快速，这同样重要。对此，**可交互时间（[time to interactive](/en-US/docs/Glossary/Time_to_interactive)）** 是一个很好的指标；它指的是加载过程中最后一个**长任务（[long task](/en-US/docs/Glossary/Long_task)）** 完成，且用户界面在无延迟情况下可进行交互的那一刻。
+这些指标与网站的初始加载和渲染有关。确保用户开始与网站交互之后，网站依然感觉快速，这同样重要。对此，**可交互时间（[time to interactive](/zh-CN/docs/Glossary/Time_to_interactive)）** 是一个很好的指标；它指的是加载过程中最后一个**长任务（[long task](/zh-CN/docs/Glossary/Long_task)）** 完成，且用户界面在无延迟情况下可进行交互的那一刻。
 
 用户界面的缺乏响应性和卡顿都会损害感知性能。尽管某些任务可能需要较长时间，但仍有方法使其看起来更快。有若干技巧可以用来提高感知性能。
 
