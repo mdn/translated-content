@@ -22,10 +22,10 @@ l10n:
 ```js
 const buffer = new ArrayBuffer(8);
 const dataview = new DataView(buffer);
-dataview.byteOffset; // 0 (no offset specified)
+dataview.byteOffset; // 0 (오프셋이 명시되지 않음)
 
 const dataview2 = new DataView(buffer, 3);
-dataview2.byteOffset; // 3 (as specified when constructing the DataView)
+dataview2.byteOffset; // 3 (DataView 생성시 명시된 숫자)
 ```
 
 ## 명세서
