@@ -84,5 +84,5 @@ afterBtn.addEventListener("click", () => {
 
 - {{domxref("Element.insertAdjacentHTML()")}}
 - {{domxref("Element.insertAdjacentText()")}}
-- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.insertBefore()")}}（与 `beforebegin` 类似，但参数不同）
 - {{domxref("Node.appendChild()")}}（与 `beforeend` 效果相同）
