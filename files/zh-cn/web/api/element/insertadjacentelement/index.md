@@ -23,7 +23,7 @@ insertAdjacentElement(position, element)
     - `'afterend'`：`targetElement` 之后。
 
 - element
-  - : 要被插入到 DOM 树中的 {{domxref("Element")}} 元素。
+  - : 要插入到树中的元素。
 
 ### 返回值
 
