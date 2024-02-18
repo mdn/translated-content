@@ -34,9 +34,9 @@ insertAdjacentElement(position, element)
 ### 异常
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - 如果指定的 `position` 不是可识别的值，则抛出该异常。
+  - : 如果指定的 `position` 不是可识别的值，则抛出该异常。
 - {{jsxref("TypeError")}}
-  - 如果指定的 `element` 不是有效的元素，则抛出该异常。
+  - : 如果指定的 `element` 不是有效的元素，则抛出该异常。
 
 ### 位置名称的可视化
 
