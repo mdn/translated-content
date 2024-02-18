@@ -214,7 +214,7 @@ btn.addEventListener("click", () => {
 
 この HTML では、 {{htmlelement("div")}} 要素に [popover](/ja/docs/Web/HTML/Global_attributes/popover) 属性を用いてポップオーバーとして宣言し、 {{htmlelement("button")}} 要素に [popovertarget](/ja/docs/Web/HTML/Element/button#popovertarget) 属性を用いてポップオーバーの表示コントロールとして指定しています。
 
-```html
+```html-nolint
 <button popovertarget="mypopover">ポップオーバーを表示</button>
 <div popover="auto" id="mypopover">これがポップオーバーです。アニメーションします。</div>
 ```
