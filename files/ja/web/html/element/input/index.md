@@ -358,7 +358,7 @@ l10n:
 
   - : 論理属性で、指定された場合は、ページの読み込みが完了したとき（またはその要素を含む {{HTMLElement("dialog")}} が表示されたとき）に、自動的にその入力欄がフォーカスを持つことを示します。
 
-    > **メモ:** `autofocus` 属性がついた要素は、{{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前にフォーカスを得ることがあります。
+    > **メモ:** `autofocus` 属性がついた要素は、{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前にフォーカスを得ることがあります。
 
     文書中で一つの要素だけが `autofocus` 属性を持つことができます。複数の要素に付けた場合は、最初にこの属性を持つ要素がフォーカスを受け取ります。
 
