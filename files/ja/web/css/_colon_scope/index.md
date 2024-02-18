@@ -73,8 +73,7 @@ l10n:
 <div class="dark-scheme">
   <p>
     MDN には、
-    <a href="/ja/docs/Web/HTML">HTML</a>,
-    <a href="/ja/docs/Web/CSS">CSS</a>,
+    <a href="/ja/docs/Web/HTML">HTML</a>, <a href="/ja/docs/Web/CSS">CSS</a>,
     <a href="/ja/docs/Web/JavaScript">JavaScript</a>
     に関するたくさんの情報が含まれています。
   </p>
