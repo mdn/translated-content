@@ -195,7 +195,7 @@ html {
 
 ### 使用浏览器调试工具来查看盒模型
 
-[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_sestup/What_are_browser_developer_tools)可以使你更容易地理解盒模型。如果你在 Firefox 的 DevTools 中查看一个元素，你可以看到元素的大小以及它的外边距、内边距和边框。这是一个很好的检查元素大小的方式，可以便捷的判断你的盒子大小是否符合预期！
+[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)可以使你更容易地理解盒模型。如果你在 Firefox 的 DevTools 中查看一个元素，你可以看到元素的大小以及它的外边距、内边距和边框。这是一个很好的检查元素大小的方式，可以便捷的判断你的盒子大小是否符合预期！
 
 ![使用 Firefox DevTools 检查元素的盒模型](box-model-devtools.png)
 
