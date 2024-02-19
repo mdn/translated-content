@@ -7,19 +7,19 @@ l10n:
 
 {{GlossarySidebar}}
 
-在计算机科学中，**枚举**（enumerated）类型是一种数据类型，由一组有限的命名值组成。
+在计算机科学中，**枚举**（enumerated）类型是一种由一组有限的具名值组成的数据类型。
 
 ## HTML 枚举属性
 
-在 HTML 中，[枚举属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute) 是具有一组有限、预定义文本值的属性。例如，全局 HTML [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性有三个有效值：`ltr`、`rtl` 和 `auto`。
+在 HTML 中，[枚举属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)是具有一组有限、预定义文本值的属性。例如，全局 HTML [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性有三个有效值：`ltr`、`rtl` 和 `auto`。
 
-每个枚举属性都有一个默认值，当属性存在但没有值（值缺失）时，默认值为真，当属性被赋值为无效值时，默认值为假。与[布尔](/zh-CN/docs/Glossary/Boolean) HTML 属性不同的是，枚举 HTML 属性在属性存在时，无论值是存在、省略还是无效，默认值都是 true。例如，全局 HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 属性有两个有效关键字：`true` 和 `false`。如果属性存在但未设置值，则值为 `true`。如果设置了值但无效，例如 `contenteditable="contenteditable"`，则该值将映射到第三种状态 `inherit`。
+每个枚举属性在属性存在但没有值（值缺失）时，或属性被赋值为无效值时，会被赋值为默认值。与[布尔](/zh-CN/docs/Glossary/Boolean) HTML 属性不同的是，枚举 HTML 属性在属性存在时，无论值是存在、省略还是无效，其都为 true。例如，全局 HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 属性有两个有效关键字：`true` 和 `false`。如果属性存在但未设置值，则值为 `true`。如果设置了值但无效，例如 `contenteditable="contenteditable"`，则该值将映射到第三种状态 `inherit`。
 
 ## ARIA 枚举属性
 
 作为 HTML 的一部分，ARIA 状态和属性也有枚举属性。如果 ARIA 属性的枚举列表中同时包含 `true` 和 `false` 值，一般会将省略的属性视为 `false`，无效值视为 `true`，而空字符串或省略值的默认值则取决于属性。
 
-例如，`aria-current` 属性接受一个有限的值列表，包括 `page`、`step`、`location`、`date`、`time`、`true` 和 `false`。在这种情况下，如果属性不存在、为空字符串、存在但没有值，或设置为 `aria-current="false"` 则属性为 false，不会向用户公开。任何不在枚举值列表中的非空字符串值都将被视为设置了 `aria-current="true"` 属性。
+例如，`aria-current` 属性接受一个有限的值列表，包括 `page`、`step`、`location`、`date`、`time`、`true` 和 `false`。在这种情况下，如果属性不存在、为空字符串、存在但没有值，或设置为 `aria-current="false"` 则属性为 false，不会暴露给用户。任何不在枚举值列表中的非空字符串值都将被视为设置了 `aria-current="true"` 属性。
 
 ## JavaScript 枚举属性
 
