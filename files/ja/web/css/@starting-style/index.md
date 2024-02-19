@@ -37,7 +37,7 @@ l10n:
 
 予期しない動作を避けるため、既定では [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions) は要素の初期スタイル更新時や、 {{CSSxRef("display")}} 型が `none` から別の値に変わった時には発生しません。開始スタイル設定のトランジションを有効にするには、 `@starting-style` ルールが必要です。これは前回状態を持たない要素に開始スタイルを提供し、トランジションするプロパティ値を定義します。
 
-`@starting-style` は、[最上位レイヤー](/ja/docs/Glossary/Top_layer)に表示される要素（[ポップオーバー](/ja/docs/Web/API/Popover_API)やモーダルダイアログ ({{htmlelement("dialog")}}) など）、 `display: none` に変更される要素、 DOM に追加されたり除去されたりする要素の表示・非表示のトランジションを作成する場合に特に有益です。
+`@starting-style` は、[最上位レイヤー](/ja/docs/Glossary/Top_layer)に表示される要素（[ポップオーバー](/ja/docs/Web/API/Popover_API)やモーダルダイアログ ({{htmlelement("dialog")}}) など）、 `display: none` に変更される要素、 DOM に追加されたり除去されたりする要素の出現・消滅トランジションを作成する場合に特に有益です。
 
 > **メモ:** `@starting-style` は CSS トランジションにのみ関係します。 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)を使用してそのような効果を実装する場合、 `@starting-style` は必要ありません。例については [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
 
@@ -208,7 +208,7 @@ btn.addEventListener("click", () => {
 
 ### ポップオーバーのアニメーション
 
-この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)によってアニメーションしています。基本的な表示・非表示のアニメーションは、 {{CSSxRef("transition")}} プロパティを使用して提供しています。
+この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)によってアニメーションしています。基本的な出現・消滅のアニメーションは、 {{CSSxRef("transition")}} プロパティを使用して提供しています。
 
 #### HTML
 
@@ -237,7 +237,7 @@ html {
   font-size: 1.2rem;
   padding: 10px;
 
-  /* アニメーション終了時の最終状態 */
+  /* 消滅アニメーションの最終状態 */
   opacity: 0;
   transform: scaleX(0);
 
@@ -288,7 +288,7 @@ html {
 
 アニメーションする要素は、表示されると[最上位レイヤー](/ja/docs/Glossary/Top_layer)へ移動し、（[`display: none`](/ja/docs/Web/CSS/display) で）非表示になると最上位レイヤーから除去されるため、両方向で確実にアニメーションが動作するように、さらにいくつかの段階が必要になります。
 
-- `display` をトランジション後の要素のリストに追加することで、アニメーションする要素が表示・非表示の両方のアニメーション中に確実に表示される（`display: block` などの `display` の可視値に設定する）ようにします。これがなければ、非表示アニメーションは表示されません。その結果、ポップオーバーはただ消えてしまいます。アニメーションを有効にするために、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) 値も一括指定で設定されていることに注意してください。
+- `display` をトランジション後の要素のリストに追加することで、アニメーションする要素が出現・消滅の両方のアニメーション中に確実に表示される（`display: block` などの `display` の可視値に設定する）ようにします。これがなければ、消滅アニメーションは表示されません。その結果、ポップオーバーはただ消えてしまいます。アニメーションを有効にするために、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) 値も一括指定で設定されていることに注意してください。
 - [`overlay`](/ja/docs/Web/CSS/overlay) をトランジション後の要素のリストに追加して、要素を最上位レイヤーから除去するのをアニメーションが終わるまで確実に延期するようにします。これは、このような単純なアニメーションでは大差ありませんが、より複雑なケースでは、これを行わないと、要素がオーバーレイからすばやく除去され、アニメーションが滑らかでなくなったり、効果的でなくなったりすることがあります。この場合も、アニメーションを行うには `transition-behavior: allow-discrete` が必要です。
 
 > **メモ:** また、開いたときにポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) のトランジションも記載し、暗転するアニメーションも提供しています。 `[popover]:popover-open::backdrop` はポップオーバーが開くための背景を選択するために使用します。
@@ -356,7 +356,7 @@ function createColumn() {
 
 そして、 {{domxref("EventTarget.addEventListener", "addEventListener")}} によって閉じるボタンにイベントリスナーを追加します。閉じるボタンをクリックすると、 2 つのことが行われます。
 
-- `<div>` に `fade-out` クラスを追加します。クラスを追加すると、そのクラスに設定した終了アニメーションが起動します。
+- `<div>` に `fade-out` クラスを追加します。クラスを追加すると、そのクラスに設定した消滅アニメーションが起動します。
 - 1000 ミリ秒遅れて `<div>` を取り除きます。アニメーションが終わるまで、 {{domxref("setTimeout()")}} は `<div>` の DOM からの除去を遅らせます（{{domxref("Element.remove()")}} 経由）。
 
 #### CSS
@@ -442,7 +442,7 @@ div > button {
 
 - `div { ... }` ルールにトランジションさせたいプロパティの終了状態を指定します。
 - `@starting-style` ブロック内のプロパティでトランジションの開始状態を指定します。
-- `.fade-out` ルールの中で終了アニメーションを指定します。これは、閉じるボタンが押されたときに JavaScript が `<div>` 要素に割り当てるクラスです。透明度と変倍の終了状態を設定するほかに、 `<div>` 要素に `display: none` を設定します。 UI から除去されたときにすぐに利用できなくなるようにします。
+- `.fade-out` ルールの中で消滅アニメーションを指定します。これは、閉じるボタンが押されたときに JavaScript が `<div>` 要素に割り当てるクラスです。透明度と変倍の終了状態を設定するほかに、 `<div>` 要素に `display: none` を設定します。 UI から除去されたときにすぐに利用できなくなるようにします。
 - [`transition`](/ja/docs/Web/CSS/transition) のリストを `div { ... }` ルールの中で指定し、 `opacity`、`scale`、`display` をアニメーションさせます。 `display` については、アニメーションするように一括指定によって [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) の値も設定されることに注意してください。
 
 #### 結果
