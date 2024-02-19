@@ -188,7 +188,7 @@ a:focus {
 
 この例では、 [`display`](/ja/docs/Web/CSS/display) と [`content-visibility`](/ja/docs/Web/CSS/content-visibility) がどのように遷移するかを示します。この動作は、例えば `display: none` でコンテナーを DOM から除去するものの、すぐに消えるのではなく、[`opacity`](/ja/docs/Web/CSS/opacity) でフェードアウトさせるような出現・消滅アニメーションを作成する場合に便利です。
 
-対応しているブラウザーは、 `display` と `content-visibility` を[離散アニメーション値](/ja/docs/Web/CSS/CSS_animated_properties#離散)の一種としてトランジションさせます。これは一般的に、プロパティが 2 つの値の間をアニメーションの 50% で反転するという意味になります。
+対応しているブラウザーは、 `display` と `content-visibility` を[離散アニメーション値](/ja/docs/Web/CSS/CSS_animated_properties#離散)の一種としてトランジションさせます。これは一般的に、プロパティが 2 つの値の間をアニメーションの 50% で切り替えるという意味になります。
 
 ただし例外があり、それは `display: none` または `content-visibility: hidden` との間でアニメーションする場合です。この場合、ブラウザーはアニメーションの間中、トランジションしたコンテンツが表示されるように、 2 つの値を切り替えます。
 
