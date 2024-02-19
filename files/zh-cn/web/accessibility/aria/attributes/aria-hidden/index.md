@@ -57,7 +57,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-hidden
 - 祖先元素被`display: none`属性设置成不显示状态
 - 祖先元素被`visibility: hidden`属性设置成不显示状态
 
-在以上三个场景中，元素已经被隐藏，从可访问树种移除了，无需再添加`aria-hidden="true"`属性。
+在以上三个场景中，元素已经被隐藏，从可访问树中移除了，无需再添加 `aria-hidden="true"` 属性。
 
 ## 规范
 
