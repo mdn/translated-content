@@ -54,7 +54,8 @@ Elas podem ser utilizadas para corresponder a letras, números, símbolos, pontu
 
 ```js
 // encontrando todas as letras de um texto
-const estoria = "É o Gato Listrado: agora eu deve ter alguém com quem conversar.";
+const estoria =
+  "É o Gato Listrado: agora eu deve ter alguém com quem conversar.";
 
 // Forma mais explícita
 estoria.match(/\p{General_Category=Letter}/gu);
