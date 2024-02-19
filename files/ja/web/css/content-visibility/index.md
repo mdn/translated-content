@@ -11,6 +11,8 @@ l10n:
 
 > **メモ:** {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベントは、 `content-visibility: auto` が設定されている要素で、そのレンダリング作業が始まるか、またはスキップされなくなったときに発行されます。これは、アプリのコードがレンダリング処理（例えば {{htmlelement("canvas")}} に描画する）を不要なときに開始または停止する便利な方法を提供し、処理能力を節約します。
 
+{{EmbedInteractiveExample("pages/css/content-visibility.html")}}
+
 ## 構文
 
 ```css
@@ -47,9 +49,9 @@ content-visibility: unset;
 - `content-visibility` を `hidden` から `visible` にアニメーションさせる場合、アニメーション時間の `0%` で `visible` に値が切り替わるので、その間ずっと表示されます。
 - `content-visibility` を `visible` から `hidden` にアニメーションさせる場合、アニメーション時間の `100%` で `hidden` に値が反転するので、その間ずっと表示されます。
 
-この動作は、例えば、 `content-visibility: hidden` で DOM から何かコンテンツを除去したいが、すぐに消えてしまうのではなく、（フェードアウトのように）スムーズに遷移させたい場合に、ビュートランジションのアニメーションを作成するのに有益です。
+この動作は、望みどおりに出現・消滅アニメーションを生成する場合、例えば、 `content-visibility: hidden` で DOM から何かコンテンツを除去したいが、すぐに消えてしまうのではなく、（フェードアウトのように）スムーズに遷移させたい場合に有益です。
 
-[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)で `content-visibility` をアニメーションさせる場合、 `content-visibility` に [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。これにより、 `content-visibility` トランジションが有効になります。
+`content-visibility` を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)でアニメーションさせる場合、 `content-visibility` に [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。これにより、 `content-visibility` のトランジションが有効になります。
 
 > **メモ:** 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/display#display_のアニメーション) をトランジションさせるときのように、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style) ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 
@@ -209,29 +211,29 @@ div {
   animation: hide 0.7s ease-out forwards;
 }
 
-/* Animation keyframes */
+/* アニメーションのキーフレーム */
 
 @keyframes show {
   0% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0);
+    color: rgb(0 0 0 / 0%);
   }
 
   100% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 1);
+    color: rgb(0 0 0 / 100%);
   }
 }
 
 @keyframes hide {
   0% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 1);
+    color: rgb(0 0 0 / 100%);
   }
 
   100% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0);
+    color: rgb(0 0 0 / 0%);
   }
 }
 ```
