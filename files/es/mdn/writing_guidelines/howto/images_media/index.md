@@ -2,7 +2,7 @@
 title: Cómo añadir imágenes y medios
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: 3e30f56aea49f6c406dc44179dadd5f1b5734c1d
+  sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
 ---
 
 {{MDNSidebar}}
@@ -22,7 +22,7 @@ Veamos un ejemplo:
    # Ejecuta "yarn" nuevamente solo para asegurarte de que has
    # instalado la última dependencia de Yari.
    yarn
-   git checkout -b mis-imágenes
+   git checkout -b mis-imagenes
    ```
 
 2. Agregar tu imagen a la carpeta del documento. Para este ejemplo, supongamos que estamos agregando una nueva imagen al documento `files/es/web/css`.
@@ -32,30 +32,30 @@ Veamos un ejemplo:
    cp ../alguna/ruta/mi-imagen-genial.png files/es/web/css/
    ```
 
-3. Ejecuta `filecheck` en cada imagen, lo cual podría quejarse si hay algún problema.
+3. Ejecuta `filecheck` en cada imagen, lo cual podría mostrar si hay algún problema.
    Para más detalles, consulta la sección [Compresión de imágenes](#compressing_images).
 
    ```bash
-   yarn filecheck files/es/web/css/my-cool-image.png
+   yarn filecheck files/es/web/css/mi-imagen-genial.png
    ```
 
 4. Referencia tu imagen en el documento usando la sintaxis de Markdown para imágenes, proporcionando [texto descriptivo para el atributo `alt`](/es/docs/Learn/Accessibility/HTML#text_alternatives) entre corchetes que describan la imagen, o incluye un elemento {{htmlelement("img")}} con atributo `alt` dentro de `files/es/web/css/index.md`:
 
    ```md
-   ![Mi genial imagen](my-cool-image.png)
-   <img src="my-cool-image.png" alt="Mi genial imagen" />
+   ![Mi genial imagen](mi-imagen-genial.png)
+   <img src="mi-imagen-genial.png" alt="Mi genial imagen" />
    ```
 
-5. Agrega y confirma todos los archivos eliminados, creados y modificados, así como empuja tu rama a tu bifurcación:
+5. Agrega y confirma todos los archivos eliminados, creados y modificados, así mismo empuja tu rama a tu bifurcación:
 
    ```bash
-   git add files/es/web/css/my-cool-image.png files/es/web/css/index.html
+   git add files/es/web/css/mi-imagen-genial.png files/es/web/css/index.html
    git commit
-   git push -u origin my-images
+   git push -u origin mis-imagenes
    ```
 
 6. Ahora estás listo para crear tu
-   [solicitud de extracción](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+   [solicitud de incorporación](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ## Agregando texto alternativo a las imágenes
 
@@ -151,7 +151,7 @@ Consulta [Trabajando con el Inspector de Animación](https://firefox-source-docs
 Además, debes considerar los siguientes consejos:
 
 - El video terminará siendo cargado en YouTube antes de incrustarse.
-  Recomendamos una relación de aspecto de 16:9 para este uso, para que llene todo el marco de visualización y no termines con barras negras feas en la parte superior y inferior (o izquierda y derecha) de tu video.
+  Recomendamos una relación de aspecto de 16:9 para este uso, para que llene todo el marco de visualización y no termines con barras negras feas en la parte superior e inferior (o izquierda y derecha) de tu video.
   Por lo tanto, por ejemplo, podrías elegir una resolución de 1024×576, 1152×648 o 1280×720.
 - Graba el video en HD, para que se vea mejor al cargarse.
 - Para videos de DevTools, a menudo es una buena idea elegir un tema contrastante con el contenido de la página. Por ejemplo, elige el tema oscuro si la página de ejemplo tiene un tema claro. Es más fácil ver qué está sucediendo y dónde comienzan las DevTools y termina la página.
