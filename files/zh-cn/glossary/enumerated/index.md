@@ -19,7 +19,7 @@ l10n:
 
 作为 HTML 的一部分，ARIA 状态和属性也有枚举属性。如果 ARIA 属性的枚举列表中同时包含 `true` 和 `false` 值，一般会将省略的属性视为 `false`，无效值视为 `true`，而空字符串或省略值的默认值则取决于属性。
 
-例如，`aria-current` 属性接受一个有限的值列表，包括 `page`、`step`、`location、`date`、`time`、`true` 和 `false`。在这种情况下，如果属性不存在、为空字符串、存在但没有值，或设置为 `aria-current="false"` 则属性为 false，不会向用户公开。任何不在枚举值列表中的非空字符串值都将被视为设置了 `aria-current="true"` 属性。
+例如，`aria-current` 属性接受一个有限的值列表，包括 `page`、`step`、`location`、`date`、`time`、`true` 和 `false`。在这种情况下，如果属性不存在、为空字符串、存在但没有值，或设置为 `aria-current="false"` 则属性为 false，不会向用户公开。任何不在枚举值列表中的非空字符串值都将被视为设置了 `aria-current="true"` 属性。
 
 ## JavaScript 枚举属性
 
