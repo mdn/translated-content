@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escap
 
 {{jsSidebar}}
 
-Um **escape de classe de caracteres unicode** é um tipo de [escape de classe de caracteres](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) que corresponde a um conjunto de caracteres especificado por uma propriedade Unicode. Este escape é suportado apenas no [modo compatível com Unicode](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). Quando o marcador [`v`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) está habilitado, também pode ser usado para corresponder com strings de tamanho finito.
+Um **escape de classe de caracteres unicode** é um tipo de [escape de classe de caracteres](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) que corresponde a um conjunto de caracteres especificado por uma propriedade Unicode. Este escape é suportado apenas no [modo compatível com Unicode](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). Quando o marcador [`v`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) está habilitado, também pode ser usado para corresponder com textos de tamanho finito.
 
 {{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
 
@@ -23,7 +23,7 @@ Um **escape de classe de caracteres unicode** é um tipo de [escape de classe de
 
 - `propriedadeSolitaria`
 
-  - : Nome ou valor de uma propriedade Unicode solitária, seguindo a mesma sintaxe como `valor`. Ela especifica o valor para a propriedade `General_Category` (Categoria Geral), ou um [nome binário de propriedade (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). No modo [`v`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets), também pode ser uma [propriedade Unicode binária de strings (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings).
+  - : Nome ou valor de uma propriedade Unicode solitária, seguindo a mesma sintaxe como `valor`. Ela especifica o valor para a propriedade `General_Category` (Categoria Geral), ou um [nome binário de propriedade (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). No modo [`v`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets), também pode ser uma [propriedade Unicode binária de textos (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings).
 
     > **Nota:** A sintaxe [ICU (en-US)](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) permite omitir o nome da propriedade `Script` também, mas o JavaScript não suporta isso, porque na maioria dos casos a propriedade `Script_Extensions` é mais útil que a `Script`.
 
@@ -40,9 +40,9 @@ Todo caracter Unicode possui um conjunto de propriedades que o descreve. Por exe
 
 Para compor múltiplas propriedades, use a sintaxe de [intersecção de conjunto de caracteres](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class) habilitada com o marcador `v`, ou veja [padrão de subtração e intersecção](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection).
 
-No modo `v`, `\p` pode corresponder a uma sequências de pontos de código, definida no Unicode como "propriedades de strings". Isto é mais útil para emojis, que são frequentemente compostos por múltiplos pontos de código. Contudo, `\P` pode apenas complementar as propriedades do caracter.
+No modo `v`, `\p` pode corresponder a uma sequências de pontos de código, definida no Unicode como "propriedades de textos". Isto é mais útil para emojis, que são frequentemente compostos por múltiplos pontos de código. Contudo, `\P` pode apenas complementar as propriedades do caracter.
 
-> **Nota:** Existem planos de portar a funcionalidade de propriedades de string para o modo `u` também.
+> **Nota:** Existem planos de portar a funcionalidade de propriedades de texto para o modo `u` também.
 
 ## Exemplos
 
@@ -106,79 +106,79 @@ Se o caracter é utilizado em um conjunto limitado de escritas, a propriedade `S
 
 ### Escape de propriedades Unicode vs. Classes de caracteres
 
-With JavaScript regular expressions, it is also possible to use [character classes](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) and especially `\w` or `\d` to match letters or digits. However, such forms only match characters from the _Latin_ script (in other words, `a` to `z` and `A` to `Z` for `\w` and `0` to `9` for `\d`). As shown in [this example](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#looking_for_a_word_from_unicode_characters), it might be a bit clumsy to work with non Latin texts.
+Com expressões regulares no JavaScript, também é possível usar [classes de caracteres](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) e especialmente `\w` ou `\d` que correspondem a letras ou dígitos. Contudo, essas formas apenas correspondem a caracteres da escrita _Latin_ (em outras palavras, de `a` à `z` e de `A` à `Z` para `\w` e de `0` à `9` para `\d`). Conforme mostrado [neste exemplo](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#looking_for_a_word_from_unicode_characters), o trabalho com textos que não seguem a escrita Latim pode ser um pouco desajeitado.
 
-Unicode property escapes categories encompass much more characters and `\p{Letter}` or `\p{Number}` will work for any script.
+Categorias de escape de propriedades Unicode abrangem muito mais caracteres e `\p{Letter}` ou `\p{Number}` vai funcionar para qualquer escrita.
 
 ```js
-// Trying to use ranges to avoid \w limitations:
+// Tentando usar faixas de valores para evitar as limitações do \w:
 
-const nonEnglishText = "Приключения Алисы в Стране чудес";
-const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
-// BMP goes through U+0000 to U+FFFF but space is U+0020
+const textoQueNaoELatim = "Приключения Алисы в Стране чудес";
+const regexpPalavraBMP = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
+// BMP vai de U+0000 à U+FFFF mas o espaço é U+0020
 
-console.table(nonEnglishText.match(regexpBMPWord));
+console.table(textoQueNaoELatim.match(regexpPalavraBMP));
 
-// Using Unicode property escapes instead
+// Usando escapes de propriedades Unicode ao invés disso
 const regexpUPE = /\p{L}+/gu;
-console.table(nonEnglishText.match(regexpUPE));
+console.table(textoQueNaoELatim.match(regexpUPE));
 ```
 
-### Matching prices
+### Correspondendo à preços
 
-The following example matches prices in a string:
+O exemplo a seguir corresponde a preços em um texto:
 
 ```js
-function getPrices(str) {
-  // Sc stands for "currency symbol"
+function pegarPrecos(str) {
+  // Sc significa "currency symbol" (Símbolo de moeda)
   return [...str.matchAll(/\p{Sc}\s*[\d.,]+/gu)].map((match) => match[0]);
 }
 
-const str = `California rolls $6.99
-Crunchy rolls $8.49
-Shrimp tempura $10.99`;
-console.log(getPrices(str)); // ["$6.99", "$8.49", "$10.99"]
+const str = `Rolinhos California $6.99
+Rolinhos crocantes $8.49
+Tempura de camarão $10.99`;
+console.log(pegarPrecos(str)); // ["$6.99", "$8.49", "$10.99"]
 
-const str2 = `US store $19.99
-Europe store €18.99
-Japan store ¥2000`;
-console.log(getPrices(str2)); // ["$19.99", "€18.99", "¥2000"]
+const str2 = `Loja nos EUA $19.99
+Loja na Europa €18.99
+Loja no Japão ¥2000`;
+console.log(pegarPrecos(str2)); // ["$19.99", "€18.99", "¥2000"]
 ```
 
-### Matching strings
+### Correspondendo à textos
 
-With the `v` flag, `\p{…}` can match strings that are potentially longer than one character by using a property of strings:
+Com o marcador `v`, `\p{…}` pode corresponder a textos que são potencialmente mais longos do que um caracter utilizando as propriedades de textos:
 
 ```js
-const flag = "🇺🇳";
-console.log(flag.length); // 2
-console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
+const marcador = "🇺🇳";
+console.log(marcador.length); // 2
+console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(marcador)); // [ '🇺🇳' ]
 ```
 
-However, you can't use `\P` to match "a string that does not have a property", because it's unclear how many characters should be consumed.
+Contudo, você não pode usar `\P` para corresponder a "um texto que não tem uma propriedade", porque não é claro quantos caracteres devem ser usados.
 
 ```js-nolint example-bad
 /\P{RGI_Emoji_Flag_Sequence}/v; // SyntaxError: Invalid regular expression: Invalid property name
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
-- [Character classes](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) guide
-- [Regular expressions](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions)
-- [Character class: `[...]`, `[^...]`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
-- [Character class escape: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
-- [Character escape: `\n`, `\u{...}`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
-- [Disjunction: `|`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
-- [Unicode character property](https://en.wikipedia.org/wiki/Unicode_character_property) on Wikipedia
-- [ES2018: RegExp Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html) by Dr. Axel Rauschmayer (2017)
-- [Unicode regular expressions § Properties](https://unicode.org/reports/tr18/#Categories)
-- [Unicode Utilities: UnicodeSet](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)
-- [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) on v8.dev (2022)
+- Guia [Classes de caracteres](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+- [Expressões regulares](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Classe de caracter: `[...]`, `[^...]`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+- [Espace de classe de caracter: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
+- [Escape de caracter: `\n`, `\u{...}`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
+- [Disjunção: `|`](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
+- [Propriedade de caracter Unicode (en-US)](https://en.wikipedia.org/wiki/Unicode_character_property) na Wikipédia
+- [ES2018: Escapes de propriedades de RegExp Unicode (en-US)](https://2ality.com/2017/07/regexp-unicode-property-escapes.html) por Dr. Axel Rauschmayer (2017)
+- [Propriedades § de expressões regulares Unicode (en-US)](https://unicode.org/reports/tr18/#Categories)
+- [Utilidades do Unicode: UnicodeSet (en-US)](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)
+- [RegExp marcador v com conjunto de notações e propriedades de texto (en-US)](https://v8.dev/features/regexp-v-flag) no v8.dev (2022)
