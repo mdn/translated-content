@@ -71,7 +71,7 @@ story.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
 
 ### Escritas e extensões de escritas
 
-Algumas linguagens utilizam escritas diferentes para escrever seus sistemas. Por exemplo, inglês e espanhol são escritos utilizando latim enquanto árabe e russo são escritos utilizando outras escritas (respectivamente árabe e cirílico). As propriedades Unicode `Script` e `Script_Extensions` permitem  que expressões regulares correspondam com caracteres de acordo com a escrita com a qual elas são amplamente utilizadas (`Script`) ou de acordo com o conjunto de escritas as quais elas pertencem (`Script_Extensions`).
+Algumas linguagens utilizam escritas diferentes para escrever seus sistemas. Por exemplo, inglês e espanhol são escritos utilizando latim enquanto árabe e russo são escritos utilizando outras escritas (respectivamente árabe e cirílico). As propriedades Unicode `Script` e `Script_Extensions` permitem que expressões regulares correspondam com caracteres de acordo com a escrita com a qual elas são amplamente utilizadas (`Script`) ou de acordo com o conjunto de escritas as quais elas pertencem (`Script_Extensions`).
 
 Por exemplo, `A` pertence a escrita `Latin` (latim) e `ε` a escrita `Greek` (Grega).
 
