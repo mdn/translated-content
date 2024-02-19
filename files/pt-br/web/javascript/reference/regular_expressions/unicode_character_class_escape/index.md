@@ -54,19 +54,19 @@ Elas podem ser utilizadas para corresponder a letras, números, símbolos, pontu
 
 ```js
 // encontrando todas as letras de um texto
-const story = "É o Gato Listrado: agora eu deve ter alguém com quem conversar.";
+const estoria = "É o Gato Listrado: agora eu deve ter alguém com quem conversar.";
 
 // Forma mais explícita
-story.match(/\p{General_Category=Letter}/gu);
+estoria.match(/\p{General_Category=Letter}/gu);
 
 // Não é obrigatório usar o nome da propriedade para categorias gerais
-story.match(/\p{Letter}/gu);
+estoria.match(/\p{Letter}/gu);
 
 // Isso é equivalente (forma curta):
-story.match(/\p{L}/gu);
+estoria.match(/\p{L}/gu);
 
 // Isso também é equivalente (conjunção de todas as subcategorias usando a forma curta)
-story.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
+estoria.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
 ```
 
 ### Escritas e extensões de escritas
