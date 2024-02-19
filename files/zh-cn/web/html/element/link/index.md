@@ -63,9 +63,9 @@ l10n:
 其他使用说明：
 
 - `<link>` 元素可以出现在 {{HTMLElement("head")}} 元素或 {{HTMLElement("body")}} 元素中，具体取决于它是否有一个 **body-ok** 的[链接类型](https://html.spec.whatwg.org/multipage/links.html#body-ok)。例如，`stylesheet` 链接类型是 body-ok 的，因此 `<link rel="stylesheet">` 允许出现在 body 中。然而，这不是一种好的可遵循的实践方式；更合理的方式是，将你的 `<link>` 元素从你的 body 内容中分离出来，将其放在 `<head>` 中。
-- 当使用 `<link>` 为网站创建一个 favicon 时，你的网站使用内容安全策略（CSP）来增强它的安全性，这种策略适用于 favicon。如果你遇到 favicon 未加载的问题，验证 {{HTTPHeader("Content-Security-Policy")}} 头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)没有在阻止对它的访问。
+- 当使用 `<link>` 为网站创建一个 favicon 时，你的网站使用内容安全策略（CSP）来增强它的安全性，这种策略适用于 favicon。如果你遇到 favicon 未加载的问题，验证 {{HTTPHeader("Content-Security-Policy")}} 标头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)没有在阻止对它的访问。
 - HTML 和 XHTML 规范为 `<link>` 元素定义了一些事件处理器，但是对于它们的使用方法不明确。
-- 在 XHTML 1.0 下，像 `<link>` 这样的空元素需要一个尾斜杠：`<link />`。
+- 在 XHTML 1.0 下，像 `<link>` 这样的{{glossary("void element", "空元素")}}需要一个尾斜杠：`<link />`。
 - WebTV 支持 `rel` 使用 `next` 值，用于在一个文档系列中预加载下一页。
 
 ## 属性
@@ -103,7 +103,7 @@ l10n:
             <div class="notecard note">
               <p>
                 <strong>备注：</strong> 此值需要
-                <code>&#x3C;link></code> 包含跨域属性，参见<a href="/zh-CN/docs/Web/HTML/Attributes/rel/preload#cors-enabled_fetches">启用 CORS 的获取请求</a>。
+                <code>&#x3C;link></code> 包含跨源属性，参见<a href="/zh-CN/docs/Web/HTML/Attributes/rel/preload#启用_cors_的获取请求">启用 CORS 的获取请求</a>。
               </p>
             </div>
           </td>
@@ -115,7 +115,7 @@ l10n:
             <div class="notecard note">
               <p>
                 <strong>备注：</strong> 此值需要
-                <code>&#x3C;link></code> 包含跨域属性，参见<a href="/zh-CN/docs/Web/HTML/Attributes/rel/preload#cors-enabled_fetches">启用 CORS 的获取请求</a>。
+                <code>&#x3C;link></code> 包含跨源属性，参见<a href="/zh-CN/docs/Web/HTML/Attributes/rel/preload#启用_cors_的获取请求">启用 CORS 的获取请求</a>。
               </p>
             </div>
           </td>
@@ -161,21 +161,22 @@ l10n:
 - `blocking` {{Experimental_Inline}}
 
   - : 该属性明确表示在获取外部资源时应阻止某些操作。要阻止的操作必须是下面列出的以空格分隔的阻止属性列表。
-    - `render`: 屏幕上的内容渲染被阻止。
+    - `render`：屏幕上的内容渲染被阻止。
 
 - `crossorigin`
 
-  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性表示在获取资源时是否必须使用 {{Glossary("CORS")}}。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_Enabled_Image) 可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会受到*污染*。允许的值如下：
+  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性表示在获取资源时是否必须使用 {{Glossary("CORS")}}。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_Enabled_Image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会受到*污染*。允许的值如下：
 
     - `anonymous`
-      - : 会发起一个跨域请求（即包含 `Origin:` HTTP 标头），但不会发送任何认证信息（即不发送 cookie、X.509 证书和 HTTP 基本认证信息）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin:` HTTP 标头），资源就会被污染并限制使用。
+      - : 会发起一个跨源请求（即包含 `Origin` HTTP 标头），但不会发送任何认证信息（即不发送 cookie、X.509 证书和 HTTP 基本认证信息）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin` HTTP 标头），资源就会被污染并限制使用。
     - `use-credentials`
-      - : 会发起一个带有认证信息（进行 cookie、X.509 证书和/或 HTTP 基本认证）的跨域请求（即包含 `Origin:` HTTP 标头）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin:` HTTP 标头），资源就会被*污染*并限制使用。
+      - : 会发起一个带有认证信息（进行 cookie、X.509 证书和/或 HTTP 基本认证）的跨域请求（即包含 `Origin` HTTP 标头）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin` HTTP 标头），资源就会被*污染*并限制使用。
         当不设置此属性时，资源将会不使用 {{Glossary("CORS")}} 加载（即不发送 `Origin` HTTP 标头），从而无法使用该资源。若设置了非法的值，则视为使用 **anonymous**。前往 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
 
 - `disabled` {{Non-standard_Inline}}
 
   - : 仅对于 `rel="stylesheet"` 而言，`disabled` 布尔属性表示是否应加载所述样式表并将其应用于文档。如果在加载 HTML 时指定了`disabled`，则在页面加载过程中不会加载样式表。相反，如果将 `disabled` 属性更改为 `false` 或删除该属性，将按需加载样式表。
+
     在 DOM 中设置 `disabled` 属性会导致样式表从文档的 {{domxref("Document.styleSheets")}} 列表中删除。
 
 - `fetchpriority`
@@ -192,7 +193,7 @@ l10n:
 - `href`
   - : 此属性指定被链接资源的 {{glossary("URL")}}。URL 可以是绝对的，也可以是相对的。
 - `hreflang`
-  - : 此属性指明了被链接资源的语言。其意义仅供参考。可取的值参见{{RFC(5646, "语言识别标签（又称 BCP 47）")}}。仅当设置了 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性时才应设置该属性。
+  - : 此属性指明了被链接资源的语言。其意义仅供参考。可取的值参见 {{RFC(5646, "语言识别标签（又称 BCP 47）")}}。仅当设置了 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性时才应设置该属性。
 - `imagesizes`
   - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesizes` 属性是[一种 sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
 - `imagesrcset`
@@ -208,7 +209,7 @@ l10n:
   - : 一个字符串，表示在获取资源时使用哪个 referrer：
 
     - `no-referrer` 表示将不会发送 {{HTTPHeader("Referer")}} 标头。
-    - `no-referrer-when-downgrade` 表示在不使用 TLS（HTTPS）的情况下导航到源时，不会发送 {{HTTPHeader("Referer")}} 头信息。如果未指定其他策略，这是用户代理的默认行为。
+    - `no-referrer-when-downgrade` 表示在不使用 TLS（HTTPS）的情况下导航到源时，不会发送 {{HTTPHeader("Referer")}} 标头信息。如果未指定其他策略，这是用户代理的默认行为。
     - `origin` 意味着 referrer 网址将是页面的源，大致是协议、主机和端口。
     - `origin-when-cross-origin` 这意味着导航到其他来源将仅限于协议、主机和端口，而在同一源上导航将包括 referrer 的路径。
     - `unsafe-url` 意味着 referrer 网址将包含源和路径（但不包括片段、密码或用户名）。这种情况是不安全的，因为它可能会将源和路径从受 TLS 保护的资源泄漏到不安全的源。
