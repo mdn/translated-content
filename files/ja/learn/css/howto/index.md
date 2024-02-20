@@ -2,7 +2,7 @@
 title: CSS を使ってよくある問題を解決する
 slug: Learn/CSS/Howto
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
 ---
 
 {{LearnSidebar}}
@@ -15,7 +15,7 @@ l10n:
   - : ボックスに影を追加するには、{{cssxref("box-shadow")}} プロパティを使用します。このチュートリアルでは、その作業方法を説明し、例を示します。
 - [画像を歪ませずに枠内に収めるには](/ja/docs/Learn/CSS/Howto/Fill_a_box_with_an_image)
   - : 縦横比の異なるボックスに画像を収める異なる方法が {{cssxref("object-fit")}} プロパティによって提供されており、その使用方法はこのチュートリアルで確認することができます。
-- [ボックスを装飾するのに使える方法](/ja/docs/Learn/CSS/Howto/create_fancy_boxes)
+- [ボックスを装飾するのに使える方法](/ja/docs/Learn/CSS/Howto/Create_fancy_boxes)
   - : CSS を使用してボックスをスタイル設定する際に有益な、さまざまなプロパティを紹介します。
 - [要素を半透明にするには](/ja/docs/Learn/CSS/Howto/Make_box_transparent)
   - : {{cssxref("opacity")}} プロパティや、アルファチャンネルのついたカラー値を使うと実現できます。いつどちらを使うかについて確認しましょう。
@@ -51,8 +51,8 @@ l10n:
 ### レイアウトガイド
 
 - [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [CSS 段組みレイアウトの使用](/ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [CSS 段組みレイアウトの使用](/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
 - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS 生成コンテンツ](/ja/docs/Learn/CSS/Howto/Generated_content)
 
-> **メモ:** [CSS レイアウトの問題解決](/ja/docs/Web/CSS/Layout_cookbook)に向けた料理帳があり、良くあるレイアウトのタスクの完全に動作する例と説明が付いています。
+> **メモ:** [CSS レイアウトの問題解決](/ja/docs/Web/CSS/Layout_cookbook)に向けた料理帳があり、良くあるレイアウトのタスクの完全に動作する例と説明が付いています。また、[実践的な位置指定の例](/ja/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)では、位置指定を使用してタブ付きの情報ボックスやスライド式の隠しパネルを作成することができますので、調べてみてください。

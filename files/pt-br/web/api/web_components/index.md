@@ -9,7 +9,7 @@ Web Components é uma suíte de diferentes tecnologias que permite a criação d
 
 ## Conceitos e uso
 
-Como desenvolvedores, sabemos que é uma boa ideia reutilizar o código o máximo que pudermos. Tradicionalmente, isso não tem sido fácil quando o assunto são estruturas de marcação customizadas — pense no complexo HTML (e estilo e script associados) que, às vezes, deve ser escrito para renderizar controles UI customizados e em como utilizá-los repetidas vezes pode tornar sua página uma bagunça se você não tomar cuidado.
+Como desenvolvedores, sabemos que é uma boa ideia reutilizar o máximo de código que pudermos. Tradicionalmente, isso não tem sido fácil quando o assunto são estruturas de marcação customizadas — pense no complexo HTML (e estilo e script associados) que, às vezes, deve ser escrito para renderizar controles UI customizados e em como utilizá-los repetidas vezes pode tornar sua página uma bagunça se você não tomar cuidado.
 
 Web Components buscam resolver esses problemas — são formados por três tecnologias principais, que podem ser usadas em conjunto para criar elementos customizados versáteis, com funcionalidade encapsulada, que podem ser reutilizados onde você quiser sem preocupação com conflito de código.
 

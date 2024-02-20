@@ -1867,6 +1867,7 @@
 /es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento	/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 /es/docs/Web/CSS/CSS_Properties_Reference	/es/docs/orphaned/Web/CSS/CSS_Properties_Reference
 /es/docs/Web/CSS/CSS_Reglas_Condicionales	/es/docs/Web/CSS/CSS_conditional_rules
+/es/docs/Web/CSS/CSS_container_queries	/es/docs/Web/CSS/CSS_containment/Container_queries
 /es/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/es/docs/conflicting/Glossary/Flexbox
 /es/docs/Web/CSS/Child_selectors	/es/docs/Web/CSS/Child_combinator
 /es/docs/Web/CSS/Columnas_CSS	/es/docs/Web/CSS/CSS_multicol_layout
