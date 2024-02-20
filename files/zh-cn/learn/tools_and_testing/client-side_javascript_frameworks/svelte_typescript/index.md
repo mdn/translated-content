@@ -246,11 +246,11 @@ TypeScript 支持结构类型。结构类型是一种基于类型成员进行关
    我们将遇到以下错误：
 
    ![VS Code 中显示了类型错误，Todo 类型对象需要 id 属性。](08-vscode-structural-typing.png)
-   
+
 现在，你应该对 TypeScript 在构建 Svelte 项目的过程中所带来的帮助，有了一定了解。
-   
+
 现在，为了将我们的应用程序迁移到 TypeScript，我们将撤消这些更改，以便不会被检查警告所干扰。
-   
+
 1. 从 `Todos.svelte` 文件中移除有问题的待办事项和 `lang='ts'` 属性。
 2. 还要从 `Todo.svelte` 中删除对 `TodoType` 的导入和 `lang='ts'`。
 
@@ -566,15 +566,15 @@ Error: Type 'TodoType' is not assignable to type 'undefined'. (ts)
 4. 最后，你会注意到一个错误报告，其与设置 `tabindex` 属性相关。这是因为 TypeScript 正在对 `<h2>` 元素进行类型检查，且期望 `tabindex` 的类型为 `number`。
 
    ![VS Code 中的 tabindex 提示，tabindex 期望的类型是数字，而不是字符串](10-vscode-tabindex-hint.png)
-      
+
    为了修复这个问题，请将 `tabindex="-1"` 替换为 `tabindex={-1}`，像这样：
-   
+
    ```svelte
    <h2 id="list-heading" bind:this="{headingEl}" tabindex={-1}>
      {completedTodos} out of {totalTodos} items completed
    </h2>
    ```
-   
+
    这样，TypeScript 可以防止我们错误地将其分配给字符串变量。
 
 ### NewTodo.svelte
