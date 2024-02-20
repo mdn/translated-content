@@ -111,7 +111,7 @@ else
   statement2;
 ```
 
-如果使用声明而不是语句，则会产生{{jsxref("SyntaxError", "语法错误",)}}。例如，[`let`](<(/zh-CN/docs/Web/JavaScript/Reference/Statements/let)>) 声明不是语句，所以不能将其用作 `if` 语句的主体。
+如果使用声明而不是语句，则会产生{{jsxref("SyntaxError", "语法错误")}}。例如，[`let`](<(/zh-CN/docs/Web/JavaScript/Reference/Statements/let)>) 声明不是语句，所以不能将其用作 `if` 语句的主体。
 
 ```js-nolint example-bad
 if (condition)
