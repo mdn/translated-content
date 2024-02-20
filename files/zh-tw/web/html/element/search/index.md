@@ -1,5 +1,5 @@
 ---
-title: "<search>: 通用搜尋元素"
+title: <search>：通用搜尋元素
 slug: Web/HTML/Element/search
 ---
 
@@ -159,5 +159,5 @@ slug: Web/HTML/Element/search
 
 ## 參閱
 
-- 其他與搜尋相關的元素：{{HTMLElement("header")}}，{{HTMLElement("footer")}}，{{HTMLElement("aside")}}，{{HTMLElement("nav")}}，{{HTMLElement("form")}}
+- 其他與搜尋相關的元素：{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}}、{{HTMLElement("form")}}
 - [ARIA：Search 角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role)

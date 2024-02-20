@@ -1,5 +1,5 @@
 ---
-title: "<article>: 文章內容元素"
+title: <article>：文章內容元素
 slug: Web/HTML/Element/article
 ---
 
@@ -22,12 +22,10 @@ slug: Web/HTML/Element/article
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#flow_content"
           >流動內容</a
-        >、
-        <a
+        >、<a
           href="/zh-TW/docs/Web/HTML/Content_categories#sectioning_content"
           >分節內容</a
-        >、
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#palpable_content"
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#palpable_content"
           >有形內容</a
         >
       </td>
@@ -47,8 +45,7 @@ slug: Web/HTML/Element/article
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#flow_content"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流動內容</a
         > 的元素。請注意，<code>&#x3C;article></code> 元素不得是
         {{HTMLElement("address")}} 元素的子孫。
@@ -67,10 +64,7 @@ slug: Web/HTML/Element/article
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/main_role"><code>main</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/main_role"><code>main</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>
       </td>
     </tr>
     <tr>
@@ -137,9 +131,9 @@ slug: Web/HTML/Element/article
 
 ## 結果
 
-{{EmbedLiveSample('Examples','','570')}}
+{{EmbedLiveSample('範例','','570')}}
 
-## 規格
+## 規範
 
 {{Specifications}}
 
@@ -147,7 +141,7 @@ slug: Web/HTML/Element/article
 
 {{Compat}}
 
-## 參閱
+## 參見
 
 - 其他與節相關的元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("section")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_lements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
 - [使用 HTML 節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
