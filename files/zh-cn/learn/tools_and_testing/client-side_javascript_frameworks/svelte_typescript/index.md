@@ -187,7 +187,7 @@ TypeScript 为代码编辑器和集成开发环境提供了大量信息，使它
 
 如果你传递的不是一个数字，它会报错：
 
-![在VS Code中进行类型检查——ms 变量被赋予了非数字类型的值](06-vscode-type-checking-in-components.png)
+![在 VS Code 中进行类型检查——ms 变量被赋予了非数字类型的值](06-vscode-type-checking-in-components.png)
 
 应用程序模板配置了 `check` 脚本，该脚本对你的代码运行 `svelte-check`。该包允许你从命令行检测通常由代码编辑器显示的错误和警告，这适用于在持续集成（CI）流水线中运行。只需运行 `npm run check` 就会检查未使用的 CSS，并返回 A11y 提示和 TypeScript 编译错误。
 
@@ -634,7 +634,7 @@ Error: Type 'TodoType' is not assignable to type 'undefined'. (ts)
      const focusEditButton = (node) => editButtonPressed && node.focus()
    ```
 
-  我们只需要将节点变量定义为 `HTMLElement` 类型。在上面指示的两行中，将第一个 `node` 实例替换为 `node: HTMLElement`。
+   我们只需要将节点变量定义为 `HTMLElement` 类型。在上面指示的两行中，将第一个 `node` 实例替换为 `node: HTMLElement`。
 
 ### actions.js
 
