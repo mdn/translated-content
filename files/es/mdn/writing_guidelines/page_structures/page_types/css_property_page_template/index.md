@@ -1,6 +1,8 @@
 ---
 title: Plantilla de página de propiedad CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
+l10n:
+  sourceCommit: fcf868352a45840521813dbfea87fe2120f9c015
 ---
 
 {{MDNSidebar}}
@@ -27,17 +29,17 @@ slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_templa
 > ---
 > ```
 >
-> - **título**
->   - : El valor de `título` se muestra en la parte superior de la página. El formato del título es _NombreDeLaPropiedad_.
+> - **title**
+>   - : El valor de `title` se muestra en la parte superior de la página. El formato del título es _NombreDeLaPropiedad_.
 >     Por ejemplo, la propiedad [`background-color`](/es/docs/Web/CSS/background-color) tiene un título de _background-color_.
 > - **slug**
 >   - : El valor de `slug` es el final de la ruta URL después de `https://developer.mozilla.org/es/docs/`. Esto se formateará como `Web/CSS/NombreDeLaPropiedad`.
 >     Por ejemplo, el slug para la propiedad [`background-color`](/es/docs/Web/CSS/background-color) es `Web/CSS/background-color`. Para un componente de varias palabras como `Getting_started` en un slug, el slug debería usar un guión bajo como en `/es/docs/Learn/HTML/Getting_started`.
-> - **tipo-de-página**
->   - : El valor de `tipo-de-página` para las propiedades CSS es `css-property`. Para una propiedad CSS abreviada, el valor es `css-shorthand-property`. Por ejemplo, el valor de `tipo-de-página` para la propiedad [animation](/es/docs/Web/CSS/animation) es `css-shorthand-property` porque es una propiedad abreviada, mientras que el valor de `tipo-de-página` para la propiedad [animation-delay](/es/docs/Web/CSS/animation-delay) es `css-property`.
-> - **estado**
->   - : Si corresponde, el valor de la clave de tecnología `estado` puede ser [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated) y/o **non-standard** (si no está en una pista de estándares).
-> - **compatibilidad-con-navegador**
+> - **page-type**
+>   - : El valor de `page-type` para las propiedades CSS es `css-property`. Para una propiedad CSS abreviada, el valor es `css-shorthand-property`. Por ejemplo, el valor de `page-type` para la propiedad [animation](/es/docs/Web/CSS/animation) es `css-shorthand-property` porque es una propiedad abreviada, mientras que el valor de `page-type` para la propiedad [animation-delay](/es/docs/Web/CSS/animation-delay) es `css-property`.
+> - **status**
+>   - : Si corresponde, el valor de la clave de tecnología `status` puede ser [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated) y/o **non-standard** (si no está en una pista de estándares).
+> - **browser-compat**
 >   - : Reemplace el valor de marcador de posición <code>css.properties.NombreDeLaPropiedad</code> con la cadena de consulta para la propiedad en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data/tree/main/css/properties). Consulte la sección _Otros macros en la página_ de este bloque de nota para ver cómo se utiliza esta clave-valor para generar contenido para las secciones _Especificaciones_ y _Compatibilidad con el navegador_.
 >
 > ---
@@ -63,7 +65,7 @@ slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_templa
 >
 > - Sección de sintaxis formal: El contenido de la sección _Sintaxis formal_ se genera utilizando la macro `\{{CSSSyntax}}`. Esta macro obtiene datos de las especificaciones utilizando el paquete npm [@webref/css](https://www.npmjs.com/package/@webref/css).
 > - Sección de definición formal: El contenido de la sección _Definición formal_ se genera utilizando la macro `\{{CSSInfo}}`. Para que esta sección tenga datos, debe asegurarse de que se haya completado una entrada adecuada para la propiedad correspondiente en el archivo de datos [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) en el repositorio `mdn/data`. Consulte la página [Properties](https://github.com/mdn/data/blob/main/css/properties.md) para obtener más información.
-> - Secciones de Especificaciones y Compatibilidad con el navegador: La herramienta de compilación utiliza automáticamente el par clave-valor `compatibilidad-con-navegador` de los metadatos de la página para insertar datos en las secciones _Especificaciones_ y _Compatibilidad con el navegador_ (reemplazando las macros `\{{Specifications}}` y `\{{Compat}}` en esas secciones, respectivamente).
+> - Secciones de Especificaciones y Compatibilidad con el navegador: La herramienta de compilación utiliza automáticamente el par clave-valor `browser-compat` de los metadatos de la página para insertar datos en las secciones _Especificaciones_ y _Compatibilidad con el navegador_ (reemplazando las macros `\{{Specifications}}` y `\{{Compat}}` en esas secciones, respectivamente).
 >
 >   Tenga en cuenta que puede que primero necesite crear/actualizar una entrada para la propiedad y su especificación en nuestro <a href="https://github.com/mdn/browser-compat-data">repositorio de datos de compatibilidad con navegadores</a>.
 >   Consulte nuestra [guía de tablas de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para obtener información sobre cómo agregar o editar entradas.
@@ -78,7 +80,7 @@ Comienza el contenido de la página con un párrafo introductorio que nombre la 
 
 _Este título es generado automáticamente por la macro `\{{EmbedInteractiveExample}}`._
 
-Esta sección es para ejemplos interactivos agregados usando la macro `\{{EmbedInteractiveExample}}`. Puedes crear estos ejemplos en el [repositorio mdn/interactive-examples](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md). Consulta la sección [Ejemplos interactivos](/es/docs/MDN/Guidelines/Estructuras_de_página/Ejemplos_de_código#ejemplos_interactivos) en nuestras _Guías de escritura_ para obtener más información.
+Esta sección es para ejemplos interactivos agregados usando la macro `\{{EmbedInteractiveExample}}`. Puedes crear estos ejemplos en el [repositorio mdn/interactive-examples](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md). Consulta la sección [Ejemplos interactivos](es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#ejemplos_interactivos) en nuestras _Guías de escritura_ para obtener más información.
 
 ## Propiedades constituyentes
 
@@ -174,7 +176,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Veáse también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Para obtener más pautas, consulta la [sección Ver también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
