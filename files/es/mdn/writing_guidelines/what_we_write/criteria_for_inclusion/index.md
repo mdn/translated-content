@@ -13,7 +13,7 @@ Esto está dirigido a proyectos más grandes. Para sugerir una nueva página o a
 
 ## Tecnologías de estándares web
 
-El alcance de MDN Web Docs es documentar tecnologías de estándares web que están en una especificación publicada por un organismo de estándares confiable y son compatibles con al menos un navegador estable. Estos criterios señalan suficiente interés, estabilidad y "intención de implementación" por parte de la industria web en general. Por lo tanto, creemos que esas tecnologías son una apuesta segura para nosotros para gastar nuestro tiempo y esfuerzo en documentarlas. Antes de eso, una tecnología web o una función podrían ser propensas a ser canceladas debido a la falta de interés o podrían ser tan inestables que podrían cambiar significativamente, lo que requeriría innecesariamente mucha reescritura (lo que intentamos evitar cuando sea posible).
+El alcance de MDN Web Docs es documentar tecnologías de estándares web que están en una especificación publicada por un organismo de estándares confiable y son compatibles con al menos un navegador estable. Estos criterios señalan suficiente interés, estabilidad e "intención de implementación" por parte de la industria web en general. Por lo tanto, creemos que esas tecnologías son una apuesta segura para nosotros para gastar nuestro tiempo y esfuerzo en documentarlas. Antes de eso, una tecnología web o una función podrían ser propensas a ser canceladas debido a la falta de interés o podrían ser tan inestables que podrían cambiar significativamente, lo que requeriría innecesariamente mucha reescritura (lo que intentamos evitar cuando sea posible).
 
 ## Tecnologías que no son de estándares web
 
@@ -45,7 +45,7 @@ Relacionado con el punto anterior, tampoco queremos gastar nuestro tiempo docume
 
 ### No tener un recurso de documentación establecido en otro lugar
 
-Existen muchas bibliotecas y frameworks en existencia, que no son estándares web pero están construidos sobre tecnologías web y son muy populares en la industria web. No documentamos ninguno de estos porque, en general, todos tienen recursos de documentación establecidos ya. Sería absurdo competir con el recurso oficial de un framework popular, ya que sería una pérdida de tiempo y probablemente terminaría confundiendo a los desarrolladores que intentan aprender la tecnología.
+Hay muchas bibliotecas y _frameworks_ en existencia, que no son estándares web pero están construidos sobre tecnologías web y son muy populares en la industria web. No documentamos ninguno de estos porque, en general, todos tienen recursos de documentación establecidos ya. Sería absurdo competir con el recurso oficial de un _framework_ popular, ya que sería una pérdida de tiempo y probablemente terminaría confundiendo a los desarrolladores que intentan aprender la tecnología.
 
 ### Tener una comunidad dispuesta a escribir y mantener la documentación
 
