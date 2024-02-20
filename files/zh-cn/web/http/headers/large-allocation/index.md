@@ -58,7 +58,7 @@ Large-Allocation: 500
   - : 该错误意味着文档不是在用户打开的或者 noopener 打开的标签或窗口的顶层加载的。它可能在以下情况下出现：
 
     - 带有 `Large-Allocation` 标头的文档是在 {{HTMLElement("iframe")}} 中加载的。Firefox 目前无法将 iframe 移动到新的进程中，所以文档必须在当前进程中加载。
-    - 带有 `Large-Allocation` 标头的文档是在由 {{domxref("window.open()")}}、`<a target="_blank">` 或者其他类似方法在没有设置 `rel="noopener"` 或者 `"noopener"` 特性的情况下打开的窗口中加载的。这些窗口必须与其打开的窗口保持在统一线程中，因为他们可以相互通信，这意味着我们不能允许它们切换进程。
+    - 带有 `Large-Allocation` 标头的文档是在由 {{domxref("window.open()")}}、`<a target="_blank">` 或者其他类似方法在没有设置 `rel="noopener"` 或者 `"noopener"` 特性的情况下打开的窗口中加载的。这些窗口必须与其打开的窗口保持在同一进程中，因为它们可以相互通信，这意味着我们不能允许它们切换进程。
     - 带有 `Large-Allocation` 标头的文档已经使用 {{domxref("window.open()")}}、`<a target="_blank">` 或其他类似方法在没有设置 `rel="noopener"` 或者 `"noopener"` 特性的情况下打开了另一个窗口。这与上面的原因相同，即它们可以相互通信，因此我们不能允许它们切换进程。
 
 - 由于存在 `Large-Allocation` 标头，当前页面会在一个新的进程加载，然而 `Large-Allocation` 进程创建在非 Win32 平台上被禁用了。
