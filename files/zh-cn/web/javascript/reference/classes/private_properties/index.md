@@ -237,9 +237,10 @@ console.log(Derived.publicStaticMethod2());
 
 ## 参见
 
-- [Working with private class features](/zh-CN/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
+- [Using classes](/zh-CN/docs/Web/JavaScript/Guide/Using_classes) guide
+- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)
 - [Public class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [The
-  Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
-- [Public and private class fields](https://v8.dev/features/class-fields)
-  article at the v8.dev site
+- {{jsxref("Statements/class", "class")}}
+- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md) in the TC39 class-fields proposal
+- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (2018)
+- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (2018)
