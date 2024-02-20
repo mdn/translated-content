@@ -80,7 +80,7 @@ Comienza el contenido de la página con un párrafo introductorio que nombre la 
 
 _Este título es generado automáticamente por la macro `\{{EmbedInteractiveExample}}`._
 
-Esta sección es para ejemplos interactivos agregados usando la macro `\{{EmbedInteractiveExample}}`. Puedes crear estos ejemplos en el [repositorio mdn/interactive-examples](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md). Consulta la sección [Ejemplos interactivos](es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#ejemplos_interactivos) en nuestras _Guías de escritura_ para obtener más información.
+Esta sección es para ejemplos interactivos agregados usando la macro `\{{EmbedInteractiveExample}}`. Puedes crear estos ejemplos en el [repositorio mdn/interactive-examples](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md). Consulta la sección [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#ejemplos_interactivos) en nuestras _Guías de escritura_ para obtener más información.
 
 ## Propiedades constituyentes
 
