@@ -88,7 +88,7 @@ JavaScript 应用程序是由许多语法正确的语句组成的。单个语句
 
 ## 语句和声明的区别
 
-在本节内容中，我们将混合两种结构：[_语句_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Statement) 和 [_声明_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Declaration)。它们是两套不相关的语法。以下是声明：
+在本节内容中，我们将混合两种结构：[_语句_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Statement)和[_声明_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Declaration)。它们是两套不相关的语法。以下是声明：
 
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
