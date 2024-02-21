@@ -9,7 +9,7 @@ l10n:
 
 **`async function`** 声明创建一个{{Glossary("binding", "绑定")}}到给定名称的新异步函数。函数体内允许使用 `await` 关键字，这使得我们可以更简洁地编写基于 promise 的异步代码，并且避免了显式地配置 promise 链的需要。
 
-你也可以使用 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function) 来定义异步函数。
+你也可以使用 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)来定义异步函数。
 
 {{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
 
@@ -42,7 +42,7 @@ async function name(param0, param1, /* …, */ paramN) {
 
 `async function` 声明创建一个 {{jsxref("AsyncFunction")}} 对象。每次调用异步函数时，都会返回一个新的 {{jsxref("Promise")}} 对象，该对象将会被解决为异步函数的返回值，或者被拒绝为异步函数中未捕获的异常。
 
-异步函数可以包含零个或者多个 {{jsxref("Operators/await", "await")}} 表达式。await 表达式通过暂停执行使返回 promise 的函数函数表现得像同步函数一样，直到返回的 promise 被兑现或拒绝。返回的 promise 的解决值会被当作该 await 表达式的返回值。使用 `async`/`await` 关键字就可以使用普通的 `try`/`catch` 代码块捕获异步代码中的错误。
+异步函数可以包含零个或者多个 {{jsxref("Operators/await", "await")}} 表达式。await 表达式通过暂停执行使返回 promise 的函数表现得像同步函数一样，直到返回的 promise 被兑现或拒绝。返回的 promise 的解决值会被当作该 await 表达式的返回值。使用 `async`/`await` 关键字就可以使用普通的 `try`/`catch` 代码块捕获异步代码中的错误。
 
 > **备注：** `await` 关键字只在常规 JavaScript 代码中的异步函数内有效。如果你在异步函数体之外使用它，则会抛出 {{jsxref("SyntaxError")}}。
 >
@@ -144,7 +144,7 @@ async function foo() {
 foo().catch(() => {}); // 尝试捕捉所有的错误...
 ```
 
-`async function` 声明的行为类似于 {{jsxref("Statements/function", "function")}} 声明，它会被[提升](/zh-CN/docs/Glossary/Hoisting)到其作用域的顶部，并且可以在其作用域的任何位置被调用，并且只能在特定情况下被重新声明。
+`async function` 声明的行为类似于 {{jsxref("Statements/function", "function")}} 声明，它会被[提升](/zh-CN/docs/Glossary/Hoisting)到其作用域的顶部，并且可以在其作用域的任何位置被调用，并且只能在其他上下文中被重新声明。
 
 ## 示例
 
@@ -242,9 +242,9 @@ setTimeout(concurrent2, 10000); // 1 秒后，打印“fast”，然后过 1 秒
 
 在 `sequentialStart` 中，程序执行第一个 `await` 时暂停 2 秒，然后又为第二个 `await` 暂停了 1 秒。直到第一个计时器结束后，第二个计时器才被创建，因此程序需要 3 秒执行完毕。
 
-在 `sequentialWait` 中，两个计时器都被创建并用 `await` 进行等待。这两个计时器并行运行，这意味着代码运行时间缩短到 2 秒，而不是 3 秒，即最慢的计时器的时间。然而，`await` 调用仍旧是顺序执行的，这意味着第二个 `await` 会等待第一个执行完。在这个例子中，较快的计时器的结果会在较慢的计时器之后被处理。
+在 `sequentialWait` 中，两个计时器都被创建并用 `await` 进行等待。这两个计时器并行运行，这意味着代码运行时间缩短到 2 秒，而不是 3 秒，即较慢的计时器的时间。然而，`await` 调用仍旧是顺序执行的，这意味着第二个 `await` 会等待第一个执行完。在这个例子中，较快的计时器的结果会在较慢的计时器之后被处理。
 
-在 `concurrentStart` 中，两个计时器被同时创建，然后执行 `await`。这两个计时器同时运行，这意味着程序完成运行只需要 2 秒，而不是 3 秒，即最慢的计时器的时间。
+在 `concurrentStart` 中，两个计时器被同时创建，然后执行 `await`。这两个计时器同时运行，这意味着程序完成运行只需要 2 秒，而不是 3 秒，即较慢的计时器的时间。
 
 如果你希望在并发执行的两个或多个任务完成后安全地执行其他任务，那么在这些任务开始前，你必须等待对 {{jsxref("Promise.all()")}} 或 {{jsxref("Promise.allSettled()")}} 的调用。
 
@@ -289,7 +289,7 @@ async function getProcessedData(url) {
 }
 ```
 
-以上两个重写版本中，请注意在 `return` 关键字之后没有 `await` 语句，尽管这也是有效的：异步函数的返回值隐式地被包装在 {{jsxref("Promise.resolve")}} 中——如果它本身不是一个 promise 的话（如上面的例子）。
+以上两个重写版本中，请注意在 `return` 关键字之后没有 `await` 语句，尽管这也是有效的：异步函数的返回值隐式地被包装在 {{jsxref("Promise.resolve")}} 中——如果它本身不是一个 promise 的话（正如上面的示例所示）。
 
 ## 规范
 
