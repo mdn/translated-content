@@ -24,11 +24,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/checkout@v4
+        with:
+          repository: mdn/content
+          path: mdn/content
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
+          cache-dependency-path: "**/yarn.lock"
 
       - name: Install all yarn packages
         run: |
@@ -37,18 +43,6 @@ jobs:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUSKY: 0
-
-      - uses: actions/checkout@v4
-        with:
-          repository: mdn/content
-          path: mdn/content
-
-      - name: Setup Node.js environment for mdn/content
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: ".nvmrc"
-          cache: "yarn"
-          cache-dependency-path: mdn/content/yarn.lock
 
       - name: Install all yarn packages for mdn/content
         working-directory: ${{ github.workspace }}/mdn/content
@@ -67,25 +61,31 @@ jobs:
 
       - name: Create PR with only fixable issues
         if: success()
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "${{ matrix.lang }}: auto-fix Markdownlint issues"
           branch: markdownlint-auto-cleanup-${{ matrix.lang }}
           title: "Markdownlint auto-cleanup for ${{ matrix.lang }}"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             All issues auto-fixed
+          labels: |
+            automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}
 
       - name: Create PR with notice on unfixed issues
         if: failure()
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "${{ matrix.lang }}: auto-fix Markdownlint issues"
           branch: markdownlint-auto-cleanup-${{ matrix.lang }}
           title: "Markdownlint auto-cleanup for ${{ matrix.lang }}"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             Auto-fix was run, but additional issues found.
             Please review the run log: https://github.com/mdn/translated-content/actions/runs/${{ github.run_id }}
+          labels: |
+            automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}

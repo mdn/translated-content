@@ -1,7 +1,11 @@
 ---
-title: ウェブ上で何かをするためにどれくらいコストがかかる？
+title: ウェブで何かするのにかかるコスト
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
+
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 ウェブに関わることは、見た目ほど安いものではありません。この記事では、あなたがどれくらいの費用を負担しなければならないか、またその理由について説明します。
 
@@ -10,7 +14,13 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        すでに<a href="/ja/docs/Learn/Common_questions/What_software_do_I_need">どのソフトウェアが必要か</a>、<a href="/ja/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines">ウェブページやウェブサイトなどの違い</a>、<a href="/ja/docs/Learn/Common_questions/What_is_a_domain_name">ドメイン名とは何か</a>を理解していること。
+        すでに<a href="/ja/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need"
+          >どのソフトウェアが必要か</a
+        >、<a href="/ja/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+          >ウェブページやウェブサイトなどの違い</a
+        >、<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name"
+          >ドメイン名とは何か</a
+        >を理解していること。
       </td>
     </tr>
     <tr>
@@ -32,15 +42,15 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 Windows のメモ帳、Linux の Gedit、Mac の TextEdit などのテキストエディターを使った経験はおありでしょう。色分けしたり、文法をチェックしたり、コードの構築を手助けしたりするエディターを選択すれば、コードを書くのが楽になります。
 
-無料のエディターは多くあります。たとえば、 [Atom](https://atom.io/)、[Brackets](https://brackets.io/)、[Bluefish](https://bluefish.openoffice.nl/)、[TextWrangler](https://www.barebones.com/products/textwrangler/)、[Eclipse](https://www.eclipse.org/)、[Netbeans](https://netbeans.org/) などです。また[Sublime Text](https://www.sublimetext.com/)のように好きなだけ試用できるが、料金を支払ったほうが良いものもあります。なかには、 [PhpStorm](https://www.jetbrains.com/phpstorm/) のように、購入ライセンスによって、価格が数百円から 2 万円程度になるものもあります。 [Microsoft Visual Studio](https://visualstudio.microsoft.com/) は数万円から数十万円しますが、 Visual Studio Express は個人やオープンソースプロジェクトでは無料で使えます。 有料ソフトウエアには、無料の試用期間を設けているものもあります。
+無料のエディターは多くあります。たとえば、 [Brackets](https://brackets.io/)、[Bluefish](https://bluefish.openoffice.nl/)、[TextWrangler](https://www.barebones.com/products/textwrangler/)、[Eclipse](https://www.eclipse.org/)、[Netbeans](https://netbeans.apache.org//)、[Visual Studio Code](https://code.visualstudio.com/) などです。また [Sublime Text](https://www.sublimetext.com/) のように好きなだけ試用できるが、料金を支払ったほうが良いものもあります。なかには、 [PhpStorm](https://www.jetbrains.com/phpstorm/) のように、購入ライセンスによって、価格が数百円から 2 万円程度になるものもあります。 [Microsoft Visual Studio](https://visualstudio.microsoft.com/) は数万円から数十万円しますが、 Visual Studio Express は個人やオープンソースプロジェクトでは無料で使えます。 有料ソフトウエアには、無料の試用期間を設けているものもあります。
 
-最初に何種類かのエディターを試して、用途に合うのはどれか調べるといいでしょう。 {{Glossary("HTML")}} や {{Glossary("CSS")}}、それに {{Glossary("Javascript")}} で簡単なコードを書くのであれば、シンプルなエディターをお勧めします。
+最初に何種類かのエディターを試して、用途に合うのはどれか調べるといいでしょう。 {{Glossary("HTML")}} や {{Glossary("CSS")}}、それに {{Glossary("JavaScript")}} で簡単なコードを書くのであれば、シンプルなエディターをお勧めします。
 
 テキストエディターの品質と使いやすさは、あまり価格と連動しません。実際に使ってみて、目的に合うか調べるようにしてください。例えば Sublime Text は安価ですが、多くの無料プラグインがあり、拡張性が高いエディターです。
 
 ### 画像エディター
 
-お使いのシステムには、簡単な画像エディタやビューアが入っているはずです。 Windows ではペイント、 Ubuntuでは Eye of Gnome、 Mac では Preview などです。これらのプログラムは比較的限定的で、レイヤー、高か、グループ化を追加できる、より強力なエディタがすぐに必要になります。
+お使いのシステムには、簡単な画像エディターやビューアーが入っているはずです。 Windows ではペイント、 Ubuntu では Eye of Gnome、 Mac では Preview などです。これらのプログラムは比較的機能が限られていて、レイヤーやエフェクトを追加したり、グループ化したりすることができる、より強力なエディターがすぐに必要になるでしょう。
 
 編集ソフトは無料のもの ([GIMP](https://www.gimp.org/), [Paint.NET](https://www.getpaint.net/))、やや高価なもの ([PaintShop Pro](https://www.paintshoppro.com/), less than $100)、または数百ドルのもの ([Adobe Photoshop](https://www.adobe.com/products/photoshop.html)) もあります。
 
@@ -54,11 +64,11 @@ Windows のメモ帳、Linux の Gedit、Mac の TextEdit などのテキスト�
 
 ### 公開ツール
 
-また、ファイルをアップロードする方法も必要です。あなたの ハードディスクから遠くのウェブサーバーにアップロードします。そのためには、 (S)[FTP クライアント](/ja/docs/Glossary/FTP), [RSync](https://en.wikipedia.org/wiki/Rsync), [Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) などの公開ツールを使用する必要があります。
+また、ファイルをアップロードする方法も必要です。自分のハードドライブから遠くのウェブサーバーにアップロードします。そのためには、 (S)[FTP クライアント](/ja/docs/Glossary/FTP), [RSync](https://en.wikipedia.org/wiki/Rsync)、[Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) などの公開ツールを使用する必要があります。
 
-各オペレーティングシステムには、ファイルマネージャの一部として、 (S)FTP クライアントが入っています。 Windows のエクスプローラー、 Nautilus （Linux の一般的なファイルマネージャー）、 Mac の Finder はすべてこの機能を入れています。しかし、ローカルやリモートのディレクトリーを並べて表示したり、サーバーのパスワードを格納するために、専用の (S)FTP クライアントを選ぶ人がよくいます。
+それぞれのオペレーティングシステムには、ファイルマネージャーの一部として、 (S)FTP クライアントが入っています。 Windows のエクスプローラー、 Nautilus （Linux の一般的なファイルマネージャー）、 Mac の Finder はすべてこの機能を入れています。しかし、ローカルやリモートのディレクトリーを並べて表示したり、サーバーのパスワードを格納するために、専用の (S)FTP クライアントを選ぶ人がよくいます。
 
-(S)FTP クライアントをインストールする場合、信頼性が高く無料の選択肢がいくつかあります。例えば、すべてのプラットフォーム用の [FileZilla](https://filezilla-project.org/)、 Windows 用の [WinSCP](https://winscp.net/eng/index.php)、 Mac または Windows 用の[Cyberduck](https://cyberduck.io/)、[その他](https://en.wikipedia.org/wiki/List_of_FTP_server_software)があります。
+(S)FTP クライアントをインストールする場合、信頼性が高く無料の選択肢がいくつかあります。例えば、すべての全プラットフォーム用の [FileZilla](https://filezilla-project.org/)、 Windows 用の [WinSCP](https://winscp.net/eng/index.php)、 Mac または Windows 用の [Cyberduck](https://cyberduck.io/)、[その他](https://en.wikipedia.org/wiki/List_of_FTP_server_software)があります。
 
 FTP は本質的に安全ではないので、 SFTP - 最近ではほとんどのホスティングサイトが既定値で提供している安全で暗号化されたバージョンの FTP - または SSH 上の Rsync のような別の安全なソリューションを使用するようにすべきです。
 
@@ -93,10 +103,10 @@ FTP は本質的に安全ではないので、 SFTP - 最近ではほとんど�
 
 ### ドメイン名
 
-ドメイン名は、ドメイン名提供会社（レジストラ）を通じて購入する必要があります。ホスティングプロバイダーがレジストラーで ある場合もあります（例えば[Ionos](https://www.ionos.com/)、[Gandi](https://www.gandi.net/en-US)はレジストラーであり、同時にホスティングプロバイダーでもあります）。ドメイン名は通常、年間 5 ～ 15 ドルかかります。このコストは、以下によって変化します。
+ドメイン名は、ドメイン名提供会社（レジストラー）を通じて購入する必要があります。ホスティングプロバイダーがレジストラーで ある場合もあります（例えば [Ionos](https://www.ionos.com/)、[Gandi](https://www.gandi.net/en-US) はレジストラーであり、同時にホスティングプロバイダーでもあります）。ドメイン名は通常、年間 5 ～ 15 ドルかかります。このコストは、以下によって変化します。
 
 - 現地の事情: 国によってトップレベルドメイン名の価格が異なるため、より高価なものもあります。
-- ドメイン名に関連するサービス: 一部のレジストラーは、住所や 電子メールアドレスを独自のアドレスで隠すことにより、 スパム防止機能を提供しています。住所はレジストラーが代行することで提供し、電子メールアドレスはレジストラーのエイリアスで隠蔽することができます。
+- ドメイン名に関連するサービス: 一部のレジストラーは、住所や電子メールアドレスを独自のアドレスで隠すことにより、 スパム防止機能を提供しています。住所はレジストラーが代行することで提供し、電子メールアドレスはレジストラーのエイリアスで隠蔽することができます。
 
 ### 自分で作るホスティングと「パッケージ」ホスティングの比較
 
@@ -137,7 +147,7 @@ FTP は本質的に安全ではないので、 SFTP - 最近ではほとんど�
 
 ## 次のステップ
 
-さて、ウェブサイトがどのような費用を要するかを理解したところで、いよいよそのウェブサイトの設計と[作業環境の設定](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server)を開始することになります。
+さて、ウェブサイトがどのような費用を要するかを理解したところで、いよいよそのウェブサイトの設計と[作業環境の設定](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を開始することになります。
 
-- [テキストエディターの選び方とインストール方法](/ja/docs/Learn/Common_questions/Available_text_editors)について読んでください。
-- デザイン重視の方は、[ウェブページの解剖](/ja/docs/Learn/Common_questions/Common_web_layouts)を見てみてください。
+- [テキストエディターの選び方とインストール方法](/ja/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)について読んでください。
+- デザイン重視の方は、[ウェブページの解剖](/ja/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts)を見てみてください。
