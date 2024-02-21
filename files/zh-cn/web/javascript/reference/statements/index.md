@@ -70,7 +70,7 @@ JavaScript 应用程序是由许多语法正确的语句组成的。单个语句
 ### 其他
 
 - {{jsxref("Statements/Empty", "空语句", "", 1)}}
-  - : 空语句，用于不在 JavaScript 期望语句语法的地方提供语句。
+  - : 空语句，用于不在 JavaScript 语法期望有语句的地方提供语句。
 - {{jsxref("Statements/block", "块语句", "", 1)}}
   - : 块语句，用于将零个或多个语句组合在一起。块由一对花括号括起来。
 - {{jsxref("Statements/Expression_statement", "表达式语句", "", 1)}}
