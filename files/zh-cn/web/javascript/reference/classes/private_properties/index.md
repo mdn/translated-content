@@ -237,10 +237,10 @@ console.log(Derived.publicStaticMethod2());
 
 ## 参见
 
-- [Using classes](/zh-CN/docs/Web/JavaScript/Guide/Using_classes) guide
-- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)
-- [Public class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)指南
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{jsxref("Statements/class", "class")}}
-- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md) in the TC39 class-fields proposal
-- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (2018)
-- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (2018)
+- TC39 的 class-fields 提案中[关于私有化语法的 FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md)
+- [所有 JS 类元素的语义](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (2018)
+- v8.dev 站点中关于[公有和私有类字段](https://v8.dev/features/class-fields)的文章（2018）
