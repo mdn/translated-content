@@ -5,18 +5,18 @@ slug: Web/HTML/Element/ins
 
 {{HTMLSidebar}}
 
-**`<ins>`** [HTML](/en-US/docs/Web/HTML) 元素代表已添加到文件的一段文字範圍。您可以使用 {{HTMLElement("del")}} 元素來類似地表示已從文件中刪除的文字範圍。
+**`<ins>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表已添加到文件的一段文字範圍。你可以使用 {{HTMLElement("del")}} 元素來類似地表示已從文件中刪除的文字範圍。
 
 {{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
 
 ## 屬性
 
-此元素包含[全域屬性](/en-US/docs/Web/HTML/Global_attributes)。
+此元素包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `cite`
   - : 此屬性定義解釋變更的資源的 URI，例如連結到會議記錄或故障排除系統中的票證。
 - `datetime`
-  - : 此屬性指示變更的時間和日期，必須是帶有可選時間字串的有效日期。如果值無法解析為帶有可選時間字串的日期，該元素將沒有相關的時間戳記。有關不帶時間的字串的格式，請參閱[有效日期字串的格式](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings)。如果字串包含日期和時間，其格式則在[有效本地日期和時間字串的格式](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)中有所描述。
+  - : 此屬性指示變更的時間和日期，必須是帶有可選時間字串的有效日期。如果值無法解析為帶有可選時間字串的日期，該元素將沒有相關的時間戳記。有關不帶時間的字串的格式，請參閱[有效日期字串的格式](/zh-TW/docs/Web/HTML/Date_and_time_formats#date_strings)。如果字串包含日期和時間，其格式則在[有效本地日期和時間字串的格式](/zh-TW/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)中有所描述。
 
 ## 範例
 
@@ -55,7 +55,7 @@ ins::after {
 
 一些使用屏幕閱讀器的人有意禁用宣告內容以避免冗長。因此，重要的是不濫用此技術，僅在不知道內容已插入將對理解產生不利影響的情況下應用它。
 
-- [製作您的標記（更具可訪問性）的簡短說明 | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [製作你的標記（更具可訪問性）的簡短說明 | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
 - [微調文本級樣式 | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 技術摘要
@@ -64,15 +64,15 @@ ins::after {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
           >詞組內容</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流程內容</a
         >。
       </td>
@@ -81,7 +81,7 @@ ins::after {
       <th scope="row">允許的內容</th>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
+          href="/zh-TW/docs/Web/HTML/Content_categories#transparent_content_model"
           >透明</a
         >。
       </td>
@@ -94,7 +94,7 @@ ins::after {
       <th scope="row">允許的父元素</th>
       <td>
         任何接受
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
           >詞組內容</a
         >的元素。
       </td>
@@ -103,7 +103,7 @@ ins::after {
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">插入</a
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">插入</a
           ></code
         >
       </td>
