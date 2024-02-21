@@ -90,7 +90,7 @@ l10n:
 - 设置为 `display: inline-flex` 的 `<ul>` 元素会创建一个行向盒子，其中包含一些弹性项目。
 - 这两个段落都设置为 `display: inline`。行向弹性容器和段落都在一行中流动，而不是分成两行（如果它们显示为块级元素，就会这样）。
 
-**要在显示模式之间切换，可以将 `display: inline` 更改为 `display: block`，或将 `display: inline-flex` 更改为 `display: flex`** 。
+**要在显示模式之间切换，可以将 `display: inline` 更改为 `display: block`，或将 `display: inline-flex` 更改为 `display: flex`。**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1100)}}
 
@@ -193,15 +193,15 @@ html {
 
 > **备注：** 在[这里](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model)查看该任务的解答。
 
-### 使用浏览器调试工具来查看盒模型
+### 使用浏览器开发者工具来查看盒模型
 
 [浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)可以使你更容易地理解盒模型。如果你在 Firefox 的 DevTools 中查看一个元素，你可以看到元素的大小以及它的外边距、内边距和边框。这是一个很好的检查元素大小的方式，可以便捷的判断你的盒子大小是否符合预期！
 
-![使用 Firefox DevTools 检查元素的盒模型](box-model-devtools.png)
+![使用 Firefox 开发者工具检查元素的盒模型](box-model-devtools.png)
 
 ## 外边距、内边距和边框
 
-在上面的示例中，你已经看到了{{cssxref("margin")}}、{{cssxref("padding")}}和{{cssxref("border")}}属性的作用。该示例中使用了**简写属性**，允许我们一次性设置盒子的所有边。这些简写属性也有等效的普通属性，可以单独控制盒子的不同边。
+在上面的示例中，你已经看到了 {{cssxref("margin")}}、{{cssxref("padding")}} 和 {{cssxref("border")}} 属性的作用。该示例中使用了**简写属性**，允许我们一次性设置盒子的所有边。这些简写属性也有等效的普通属性，可以单独控制盒子的不同边。
 
 接下来，让我们更详细地探究这些属性。
 
@@ -226,11 +226,11 @@ html {
 
 - 两个正外边距将合并为一个外边距。其大小等于最大的单个外边距。
 - 两个负外边距会折叠，并使用最小（离零最远）的值。
-- 如果其中一个外边距为负值，其值将从总值中*减*去。
+- 如果其中一个外边距为负值，其值将从总值中*减去*。
 
 在下面的示例中，我们有两个段落。最上面一段的 `margin-bottom` 为 50 像素，另一段的 `margin-top` 为 30 像素。页边距折叠在一起，因此方框之间的实际页边距是 50 像素，而不是两个页边距的总和。
 
-**你可以通过将第 2 段的 `margin-top` 设置为 0 来测试它。两个段落之间的可见边距不会改变——它保留了第一个段落 `margin-bottom` 设置的 50 像素。如果将其设置为 -10px，你会发现总边距变成了 40px（从 50px 中减去该负值）**
+**你可以通过将第 2 段的 `margin-top` 设置为 0 来测试它。两个段落之间的可见边距不会改变——它保留了第一个段落 `margin-bottom` 设置的 50 像素。如果将其设置为 -10px，你会发现总边距变成了 40px（从 50px 中减去该负值）。**
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 800)}}
 
@@ -328,7 +328,7 @@ html {
 
 ## 总结
 
-这就是你需要了解的关于盒子模型的大部分内容。今后，如果你对布局中盒子的大小感到困惑，不妨再来学习这一课。
+这就是你需要了解的关于盒子模型的大部分内容。今后，如果你对布局中盒子的大小感到困惑，不妨再回来看看这些内容。
 
 在下一篇文章中，我们将看看如何使用[背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)来使你的普通盒子看起来更有趣。
 
