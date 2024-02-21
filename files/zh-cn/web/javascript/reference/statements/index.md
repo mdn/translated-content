@@ -44,7 +44,7 @@ JavaScript 应用程序是由许多语法正确的语句组成的。单个语句
 - {{jsxref("Statements/function", "function")}}
   - : 声明一个指定参数的函数。
 - {{jsxref("Statements/function*", "function*")}}
-  - : 生成器函数使编写[迭代器](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)更容易。
+  - : 生成器函数使编写[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)更容易。
 - {{jsxref("Statements/async_function", "async function")}}
   - : 使用指定的参数声明一个异步函数。
 - {{jsxref("Statements/async_function*", "async function*")}}
@@ -61,16 +61,16 @@ JavaScript 应用程序是由许多语法正确的语句组成的。单个语句
 - {{jsxref("Statements/for...in", "for...in")}}
   - : 无序遍历对象的可枚举属性。语句针对每个唯一的属性。
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : 遍历可迭代对象（包括 {{jsxref("Global_Objects/Array","数组")}}、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_generators)），对每个不同的属性的值，调用一个自定义的带有要执行的语句的迭代钩子。
+  - : 遍历可迭代对象（包括 {{jsxref("Global_Objects/Array","数组")}}、类数组对象、[迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)），对每个不同的属性的值，调用一个自定义的带有要执行的语句的迭代钩子。
 - {{jsxref("Statements/for-await...of", "for await...of")}}
-  - : 遍历异步可迭代对象、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_generators)，对每个不同的属性的值，调用一个自定义的带有要执行的语句的迭代钩子。
+  - : 遍历异步可迭代对象、类数组对象、[迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)，对每个不同的属性的值，调用一个自定义的带有要执行的语句的迭代钩子。
 - {{jsxref("Statements/while", "while")}}
   - : 创建一个执行指定语句的循环，直到测试条件的求值为假。先对条件进行求值，再执行语句。
 
 ### 其他
 
 - {{jsxref("Statements/Empty", "空语句", "", 1)}}
-  - ：空语句，用于 JavaScript 期望语句语法的地方表示没有语句。
+  - : 空语句，用于不在 JavaScript 期望语句语法的地方提供语句。
 - {{jsxref("Statements/block", "块语句", "", 1)}}
   - : 块语句，用于将零个或多个语句组合在一起。块由一对花括号括起来。
 - {{jsxref("Statements/Expression_statement", "表达式语句", "", 1)}}
@@ -153,4 +153,4 @@ if (condition) {
 
 ## 参见
 
-- [表达式和操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators)
+- [表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)
