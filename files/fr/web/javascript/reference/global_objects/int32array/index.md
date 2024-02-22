@@ -84,7 +84,7 @@ Tous les objets `Int32Array` héritent de {{jsxref("TypedArray.prototype", "%Typ
   - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Int32Array.prototype.map()")}}
   - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Int32Array.prototype.move()")}} {{non-standard_inline}}
   - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Int32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Int32Array.prototype.reduce()")}}
   - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
