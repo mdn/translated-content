@@ -30,7 +30,7 @@ slug: Web/HTML/Element/ins
 
 ## 可訪問性考慮事項
 
-大多數屏幕閱讀技術在默認配置中不會宣告`<ins>`元素的存在。通過使用 CSS {{cssxref("content")}} 屬性以及 {{cssxref("::before")}} 和 {{cssxref("::after")}} 擬似元素，可以使其被宣告。
+大多數屏幕閱讀技術在默認配置中不會宣告 `<ins>` 元素的存在。通過使用 CSS {{cssxref("content")}} 屬性以及 {{cssxref("::before")}} 和 {{cssxref("::after")}} 擬似元素，可以使其被宣告。
 
 ```css
 ins::before,
@@ -69,10 +69,10 @@ ins::after {
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
-          >詞組內容</a
-        >,
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
           >流程內容</a
         >。
       </td>
@@ -81,8 +81,8 @@ ins::after {
       <th scope="row">允許的內容</th>
       <td>
         <a
-          href="/zh-TW/docs/Web/HTML/Content_categories#transparent_content_model"
-          >透明</a
+          href="/zh-TW/docs/Web/HTML/Content_categories#透明內容模型"
+          >透明內容</a
         >。
       </td>
     </tr>
@@ -93,9 +93,9 @@ ins::after {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
-          >詞組內容</a
+        任何接受<a
+          href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
         >的元素。
       </td>
     </tr>
@@ -103,7 +103,7 @@ ins::after {
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">插入</a
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">insertion</a
           ></code
         >
       </td>
