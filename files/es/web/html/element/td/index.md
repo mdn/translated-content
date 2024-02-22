@@ -36,14 +36,14 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - Centro, centra el contenido de una celda
     - Derecha, alínea el contenido de la celda a la derecha
     - Justificado, inserta espacios en el texto para que el contenido se ajuste a la celda
-    - `char`, alinear el contenido a un caracter especial definido por los atributos [`char`](/es/docs/Web/HTML/Element/td#char) y [`charoff`](/es/docs/Web/HTML/Element/td#charoff) {{unimplemented_inline(2212)}}.
+    - `char`, alinear el contenido a un caracter especial definido por los atributos [`char`](/es/docs/Web/HTML/Element/td#char) y [`charoff`](/es/docs/Web/HTML/Element/td#charoff).
 
     Si este atributo no se define, se selecciona por defecto `left`
 
     > **Nota:** No usar este atributo ya que esta obsoleto en la ultima version.
     >
     > - Para lograr el mismo efecto de los valores `left`, `center`, `right`, o `justify` , usa la propiedad CSS {{cssxref("text-align")}} en el.
-    > - Para lograr el mismo efecto que el valor `char` , en CSS3,puedes usar el valor de la [`char`](/es/docs/Web/HTML/Element/td#char) como el valor de la propiedad {{cssxref("text-align")}} {{unimplemented_inline}}.
+    > - Para lograr el mismo efecto que el valor `char` , en CSS3,puedes usar el valor de la [`char`](/es/docs/Web/HTML/Element/td#char) como el valor de la propiedad {{cssxref("text-align")}}.
 
 - `axis` {{deprecated_inline}}
 
@@ -72,7 +72,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
   - : Este atributo se utiliza para establecer el carácter para alinear las celdas de una columna . Los valores típicos de esto incluyen un punto (. ) al intentar alinear los números o valores monetarios . Si [`align`](/es/docs/Web/HTML/Element/td#align) no está ajustado a char, este atributo se ignora.
 
-    > **Nota:** No usar este atributo ya que está obsoleto (y no soportado) en las últimas versiones estándares). Para lograr el mismo que el [`char`](/es/docs/Web/HTML/Element/thead#char), en CSS3, puedes usar el character set usando el atributo [`char`](/es/docs/Web/HTML/Element/th#char) como el valor de la propiedad {{cssxref("text-align")}} {{unimplemented_inline}}.
+    > **Nota:** No usar este atributo ya que está obsoleto (y no soportado) en las últimas versiones estándares). Para lograr el mismo que el [`char`](/es/docs/Web/HTML/Element/thead#char), en CSS3, puedes usar el character set usando el atributo [`char`](/es/docs/Web/HTML/Element/th#char) como el valor de la propiedad {{cssxref("text-align")}}.
 
 - `charoff` {{Deprecated_inline}} in HTML4.01 {{deprecated_inline}} in HTML5
 

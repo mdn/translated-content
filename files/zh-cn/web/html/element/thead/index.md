@@ -48,12 +48,12 @@ This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attrib
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/thead#charoff) attributes {{ unimplemented_inline("2212") }}.If this attribute is not set, the `left` value is assumed.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/thead#charoff) attributes. If this attribute is not set, the `left` value is assumed.
 
     > **备注：** Do not use this attribute as it is obsolete (not supported) in the latest standard.
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{ cssxref("text-align") }} property on it.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) as the value of the {{ cssxref("text-align") }} property {{ unimplemented_inline() }}.
+    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) as the value of the {{ cssxref("text-align") }} property.
 
 - `bgcolor` {{ Non-standard_inline() }}
 
@@ -65,7 +65,7 @@ This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attrib
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) is not set to `char`, this attribute is ignored.
 
-    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) attribute as the value of the {{ cssxref("text-align") }} property {{ unimplemented_inline() }}.
+    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) attribute as the value of the {{ cssxref("text-align") }} property.
 
 - `charoff` {{Deprecated_Inline}}
 

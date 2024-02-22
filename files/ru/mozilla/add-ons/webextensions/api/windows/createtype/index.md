@@ -3,7 +3,7 @@ title: windows.CreateType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/CreateType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Определение типа окна браузера для создания.
 
