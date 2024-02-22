@@ -11,67 +11,11 @@ slug: Web/HTML/Element/p
 
 {{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
-          >內容類型</a
-        >
-      </th>
-      <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#flow_content"
-          >流動內容</a
-        >，有形內容。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
-      <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
-          >詞彙內容</a
-        >。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
-      <td>
-        必須有起始標籤。如果 {{HTMLElement("p")}} 元素的結束標籤之後緊接著的是
-        {{HTMLElement("address")}},{{HTMLElement("article")}}, {{HTMLElement("aside")}},{{HTMLElement("blockquote")}}, {{HTMLElement("details")}}, {{HTMLElement("div")}},{{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},{{HTMLElement("figcaption")}}, {{HTMLElement("figure")}},{{HTMLElement("footer")}}, {{HTMLElement("form")}},{{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},{{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},{{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}},{{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}},{{HTMLElement("main")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}},{{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("search")}},{{HTMLElement("section")}}, {{HTMLElement("table")}},{{HTMLElement("ul")}} 或另一個 {{HTMLElement("p")}}元素，或者如果父元素中沒有更多內容，且父元素不是 {{HTMLElement("a")}},{{HTMLElement("audio")}}, {{HTMLElement("del")}}, {{HTMLElement("ins")}},{{HTMLElement("map")}}, {{HTMLElement("noscript")}} 或 {{HTMLElement("video")}} 元素，或者是獨立的自定義元素，則可以省略結束標籤。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
-      <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >流動內容</a
-        > 的元素。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含 ARIA 角色</th>
-      <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/structural_roles"
-          >paragraph</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
-      <td>任何</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLParagraphElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## 屬性
 
 此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
-> **注意：** `<p>` 標籤上的 `align` 屬性已過時，不應使用。
+> **備註：** `<p>` 標籤上的 `align` 屬性已過時，不應使用。
 
 ## 範例
 
@@ -159,7 +103,7 @@ document.querySelector("button").addEventListener("click", (event) => {
 
 ### 結果
 
-{{EmbedLiveSample('Styling_paragraphs')}}
+{{EmbedLiveSample('設計段落樣式')}}
 
 ## 可及性注意事項
 
@@ -174,6 +118,64 @@ p {
   margin-bottom: 2em; /* 在段落之後增加白色空間 */
 }
 ```
+
+## 技術概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+          >內容類型</a
+        >
+      </th>
+      <td>
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
+        >、捫及內容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的內容</th>
+      <td>
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">標籤省略</th>
+      <td>
+        必須有起始標籤。如果 {{HTMLElement("p")}} 元素的結束標籤之後緊接著的是
+        {{HTMLElement("address")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("blockquote")}}、{{HTMLElement("details")}}、{{HTMLElement("div")}}、{{HTMLElement("dl")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("figcaption")}}、{{HTMLElement("figure")}}、{{HTMLElement("footer")}}、{{HTMLElement("form")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("header")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("hr")}}、{{HTMLElement("main")}}、{{HTMLElement("menu")}}、{{HTMLElement("nav")}}、{{HTMLElement("ol")}}、{{HTMLElement("pre")}}、{{HTMLElement("search")}}、{{HTMLElement("section")}}、{{HTMLElement("table")}}、{{HTMLElement("ul")}} 或另一個 {{HTMLElement("p")}} 元素，或者如果父元素中沒有更多內容，且父元素不是 {{HTMLElement("a")}}、{{HTMLElement("audio")}}、{{HTMLElement("del")}}、{{HTMLElement("ins")}}、{{HTMLElement("map")}}、{{HTMLElement("noscript")}} 或 {{HTMLElement("video")}} 元素，或者是獨立的自定義元素，則可以省略結束標籤。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的父元素</th>
+      <td>
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隱含 ARIA 角色</th>
+      <td>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+          >paragraph</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的 ARIA 角色</th>
+      <td>任何</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 介面</th>
+      <td>{{domxref("HTMLParagraphElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 規範
 

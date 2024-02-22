@@ -23,7 +23,7 @@ slug: Web/HTML/Element/search
 
 ### 頁首搜尋表單
 
-此示例演示了在網站頁首中使用 `<search>` 作為容器，以執行簡單的全站搜尋。 `<search>` 是包含將用戶輸入的搜尋查詢提交到服務器的 {{HTMLElement("form")}} 的語義容器。
+此示例演示了在網站頁首中使用 `<search>` 作為容器，以執行簡單的全站搜尋。`<search>` 是包含將用戶輸入的搜尋查詢提交到服務器的 {{HTMLElement("form")}} 的語義容器。
 
 #### HTML
 
@@ -75,9 +75,9 @@ slug: Web/HTML/Element/search
 
 #### 結果
 
-{{EmbedLiveSample('Web app search')}}
+{{EmbedLiveSample('Web 應用程式搜尋')}}
 
-> **注意：** 請記住，一些用戶沒有 JavaScript，且在 JavaScript 成功下載、解析和執行之前，沒有任何用戶運行 JavaScript，請確保你的用戶可以在禁用 JavaScript 的情況下訪問你站點的內容。
+> **備註：** 請記住，一些用戶沒有 JavaScript，且在 JavaScript 成功下載、解析和執行之前，沒有任何用戶運行 JavaScript，請確保你的用戶可以在禁用 JavaScript 的情況下訪問你站點的內容。
 
 ### 多個搜尋
 
@@ -106,7 +106,7 @@ slug: Web/HTML/Element/search
 
 #### 結果
 
-{{EmbedLiveSample('Multiple searches')}}
+{{EmbedLiveSample('多個搜尋')}}
 
 ## 技術摘要
 
@@ -117,13 +117,13 @@ slug: Web/HTML/Element/search
         <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#flow_content">流動內容</a>，<a href="/zh-TW/docs/Web/HTML/Content_categories#palpable_content">有形內容</a>。
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容">捫及內容</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#flow_content">流動內容</a>。
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>。
       </td>
     </tr>
     <tr>
@@ -139,7 +139,7 @@ slug: Web/HTML/Element/search
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/form_role"><code>form</code></a>，<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>，<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>，<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>，<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>，<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/form_role"><code>form</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
       </td>
     </tr>
     <tr>

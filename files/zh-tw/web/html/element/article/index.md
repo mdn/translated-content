@@ -20,21 +20,21 @@ slug: Web/HTML/Element/article
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#flow_content"
-          >流動內容</a
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
         >、<a
-          href="/zh-TW/docs/Web/HTML/Content_categories#sectioning_content"
-          >分節內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#palpable_content"
-          >有形內容</a
+          href="/zh-TW/docs/Web/HTML/Content_categories#章節型內容"
+          >章節型內容</a
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+          >捫及內容</a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#flow_content"
-          >流動內容</a
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
         >。
       </td>
     </tr>
@@ -46,7 +46,7 @@ slug: Web/HTML/Element/article
       <th scope="row">允許的父元素</th>
       <td>
         任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >流動內容</a
+          >流內容</a
         > 的元素。請注意，<code>&#x3C;article></code> 元素不得是
         {{HTMLElement("address")}} 元素的子孫。
       </td>

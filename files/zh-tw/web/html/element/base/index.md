@@ -9,51 +9,11 @@ slug: Web/HTML/Element/base
 
 腳本可以使用 {{domxref('Node.baseURI')}} 存取文件的已使用基礎 URL。如果文件中沒有 `<base>` 元素，則 `baseURI` 默認為 {{domxref("location.href")}}。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
-      </th>
-      <td>元數據內容。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
-      <td>無；它是一個 {{Glossary("void element")}}。</td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
-      <td>不得有結束標籤。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
-      <td>
-        一個不包含其他 {{HTMLElement("base")}} 元素的 {{HTMLElement("head")}}。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含 ARIA 角色</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">無對應角色</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA roles</th>
-      <td>不允許 <code>role</code></td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLBaseElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## 屬性
 
 此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
-> **警告：** `<base>` 元素必須具有 `href` 屬性、`target` 屬性或兩者都有。
-> 如果這些屬性中至少有一個被指定，則 `<base>` 元素 **必須** 出現在具有 URL 屬性值的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 屬性。
+> **警告：** `<base>` 元素必須具有 `href` 屬性、`target` 屬性或兩者都有。如果這些屬性中至少有一個被指定，則 `<base>` 元素**必須**出現在具有 URL 屬性值的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 屬性。
 
 - `href`
   - : 用於整個文件中相對 URL 的基礎 URL。
@@ -61,7 +21,7 @@ slug: Web/HTML/Element/base
     不允許 [`data:`](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 和 `javascript:` URL。
 - `target`
 
-  - : 顯示來自 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或 {{HTMLElement("form")}} 元素的導航結果的 **關鍵字** 或 **作者定義的名稱** 的默認 {{Glossary("瀏覽上下文")}}。以下關鍵字具有特殊含義：
+  - : 顯示來自 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或 {{HTMLElement("form")}} 元素的導航結果的**關鍵字**或**作者定義的名稱**的默認{{Glossary("browsing context", "瀏覽上下文")}}。以下關鍵字具有特殊含義：
 
     - `_self`（默認）：在當前瀏覽上下文中顯示結果。
     - `_blank`：在新的、未命名的瀏覽上下文中顯示結果。
@@ -95,6 +55,47 @@ slug: Web/HTML/Element/base
 <base target="_blank" />
 <base target="_top" href="https://example.com/" />
 ```
+
+## 技術概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
+      </th>
+      <td>元數據內容。</td>
+    </tr>
+    <tr>
+      <th scope="row">允許的內容</th>
+      <td>無；它是一個{{Glossary("void element", "置空元素")}}。</td>
+    </tr>
+    <tr>
+      <th scope="row">標籤省略</th>
+      <td>不得有結束標籤。</td>
+    </tr>
+    <tr>
+      <th scope="row">允許的父元素</th>
+      <td>
+        一個不包含其他 {{HTMLElement("base")}} 元素的 {{HTMLElement("head")}}。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隱含 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">無對應角色</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的 ARIA 角色</th>
+      <td>不允許 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 介面</th>
+      <td>{{domxref("HTMLBaseElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 規範
 

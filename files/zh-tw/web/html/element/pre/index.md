@@ -5,24 +5,24 @@ slug: Web/HTML/Element/pre
 
 {{HTMLSidebar}}
 
-**`<pre>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示預格式化文本，將以 HTML 檔案中的原樣呈現。這段文字通常使用非比例、或[等寬字體](https://zh.wikipedia.org/wiki/%E7%AD%89%E5%AF%AC%E5%AD%97%E4%BD%93)進行渲染。該元素內的空格會按照原樣呈現。
+**`<pre>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示預格式化文本，將以 HTML 檔案中的原樣呈現。這段文字通常使用非比例或[等寬字體](https://zh.wikipedia.org/wiki/等宽字体)進行渲染。該元素內的空格會按照原樣呈現。
 
-預設情況下，`<pre>` 是 [區塊級](/zh-TW/docs/Glossary/Block-level_content) 元素，即其預設的 {{cssxref("display")}} 值為 `block`。
+預設情況下，`<pre>` 是[區塊級](/zh-TW/docs/Glossary/Block-level_content)元素，即其預設的 {{cssxref("display")}} 值為 `block`。
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
-如果你需要在 `<pre>` 標籤內顯示保留字元，如 `<`、 `>`、 `&` 和 `"`，這些字元必須使用相應的 [HTML 實體](/zh-TW/docs/Glossary/Entity) 進行轉義。
+如果你需要在 `<pre>` 標籤內顯示保留字元，如 `<`、`>`、`&` 和 `"`，這些字元必須使用相應的 [HTML 實體](/zh-TW/docs/Glossary/Entity)進行轉義。
 
 ## 屬性
 
 此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `cols` {{non-standard_inline}} {{deprecated_inline}}
-  - : 包含應有的行數的 _首選_ 字元數。這是 [`width`](#width) 的非標準同義詞。要實現此效果，請改用 CSS {{Cssxref("width")}}。
+  - : 包含應有的行數的*首選*字元數。這是 [`width`](#width) 的非標準同義詞。要實現此效果，請改用 CSS {{Cssxref("width")}}。
 - `width` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : 包含應有的行數的 _首選_ 字元數。儘管在技術上仍有實現，但此屬性無視視覺效果；要實現此效果，請改用 CSS {{Cssxref("width")}}。
+  - : 包含應有的行數的*首選*字元數。儘管在技術上仍有實現，但此屬性無視視覺效果；要實現此效果，請改用 CSS {{Cssxref("width")}}。
 - `wrap` {{non-standard_inline}} {{Deprecated_Inline}}
-  - : 是一個指示溢出應發生的 _提示_。在現代瀏覽器中，此提示會被忽略且不會有視覺效果；要實現此效果，請改用 CSS {{Cssxref("white-space")}}。
+  - : 是一個指示溢出應發生的*提示*。在現代瀏覽器中，此提示會被忽略且不會有視覺效果；要實現此效果，請改用 CSS {{Cssxref("white-space")}}。
 
 ## 可及性考量
 
@@ -73,7 +73,7 @@ body {
 
 #### 結果
 
-{{EmbedLiveSample("Basic_example")}}
+{{EmbedLiveSample("基本範例")}}
 
 ### 轉義保留字元
 
@@ -90,7 +90,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
 
 #### 結果
 
-{{EmbedLiveSample("Escaping_reserved_characters")}}
+{{EmbedLiveSample("轉義保留字元")}}
 
 ## 技術摘要
 
@@ -103,16 +103,16 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#flow_content"
-          >流動內容</a
-        >，可感知的內容。
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
+        >、捫及內容。
       </td>
     </tr>
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
-          >詞組內容</a
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
         >。
       </td>
     </tr>
@@ -124,7 +124,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
       <th scope="row">允許的父元素</th>
       <td>
         任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >流動內容</a
+          >流內容</a
         >的元素。
       </td>
     </tr>
@@ -133,13 +133,13 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
       <td>
         <code
           ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
-            >通用</a
+            >generic</a
           ></code
         >
       </td>
     </tr>
     <tr>
-      <th scope="row">允許的 ARIA roles</th>
+      <th scope="row">允許的 ARIA 角色</th>
       <td>任何</td>
     </tr>
     <tr>
@@ -159,6 +159,6 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
 
 ## 參見
 
-- CSS: {{Cssxref('white-space')}}，{{Cssxref('word-break')}}
+- CSS：{{Cssxref('white-space')}}、{{Cssxref('word-break')}}
 - [HTML 實體](/zh-TW/docs/Glossary/Entity)
-- 相關元素: {{HTMLElement("code")}}
+- 相關元素：{{HTMLElement("code")}}
