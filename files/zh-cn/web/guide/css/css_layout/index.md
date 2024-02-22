@@ -36,11 +36,11 @@ l10n:
   - : 对多列布局基本功能的概览。
 - [多列布局的样式](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
   - : 可对列设置的样式属性非常有限，这篇指南解释了你可以做些什么。
-- [跨越与平衡多列布局（en-US）](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
+- [跨越与平衡多列布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
   - : 在多列间跨越元素，并且平衡列中的内容。
 - [处理多列布局中的溢出](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout)
   - : 如果列中的内容比剩余空间多将会如何？
-- [多列布局中的内容分割（en-US）](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)
+- [多列布局中的内容分割](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)
   - : 处理当内容被分为多列时的分割。
 
 ## 弹性盒
@@ -88,9 +88,9 @@ CSS 弹性盒布局（通常被称为 flexbox），是一种为用户界面设�
   - : 怎样确保你的站点在不支持网格布局的浏览器中仍正常运行。
 - [利用 CSS 网格布局实现常用布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
   - : 使用网格来搭建一些常见布局。
-- [子网格（en-US）](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [子网格](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : 解释怎样使用子网格值，属于网格布局第二版的一部分。
-- [砌体布局（en-US）](/zh-CN/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{experimental_inline}}
+- [砌体布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{experimental_inline}}
   - : 对于网格布局第三版中砌体布局特性的解释。
 
 ## 对齐
@@ -99,7 +99,7 @@ CSS 弹性盒布局（通常被称为 flexbox），是一种为用户界面设�
   - : 对于块和内联布局中对齐属性的规范，虽然目前还没有浏览器支持。
 - [弹性盒布局中的盒对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
   - : 对齐属性首次出现于弹性盒布局，这篇指南解释了它如何工作。
-- [网格布局中的盒对齐方式（en-US）](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [网格布局中的盒对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
   - : 怎样在网格布局中对齐元素。
-- [多列布局中的盒对齐方式（en-US）](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
+- [多列布局中的盒对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
   - : 多列布局中的对齐如何工作。
