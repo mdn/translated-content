@@ -115,7 +115,7 @@ function foo() {
 
 在接下来的示例中，我们依次 await 两个 promise，整个 `foo` 函数的执行将会被分为三个阶段。
 
-1. `foo` 函数的第一行将会同步执行，其中 await 配置了待定的 promise。然后 `foo` 的进程将被暂停，并将控制权交还给调用`foo` 的函数。
+1. `foo` 函数的第一行将会同步执行，其中 await 配置了待定的 promise。然后 `foo` 的进程将被暂停，并将控制权交还给调用 `foo` 的函数。
 2. 一段时间后，当第一个 promise 被兑现或拒绝的时候，控制权将重新回到 `foo` 内。第一个 promise 的兑现结果（如果没有被拒绝的话）将作为 await 表达式的返回值。在这里 `1` 被赋值给 `result1`。程序继续执行，并计算第二个 await 表达式。同样的，`foo` 的进程将被暂停，并交出控制权。
 3. 一段时间后，当第二个 promise 被兑现或拒绝的时候，控制权将重新回到 `foo`。第二个 promise 的兑现结果将作为第二个 await 表达式的返回值。在这里 `2` 被赋值给 `result2`。程序继续执行到返回表达式（如果有的话）。默认的返回值 `undefined` 将作为当前 promise 的兑现值被返回。
 
@@ -311,4 +311,4 @@ async function getProcessedData(url) {
 - {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("Operators/await", "await")}}
 - {{jsxref("Promise")}}
-- [Decorating async JavaScript functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) 发表于 innolitics.com（2016）
+- [装饰 async JavaScript 函数](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)，发表于 innolitics.com（2016）
