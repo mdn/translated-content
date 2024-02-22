@@ -5,13 +5,13 @@ slug: Web/HTML/Element/blockquote
 
 {{HTMLSidebar}}
 
-**`<blockquote>`** [HTML](/en-US/docs/Web/HTML) 元素表示所包含的文本是擴展引用。通常，這通過縮進在視覺上呈現（有關如何更改，請參見[注意事項](#usage_notes)）。可以使用 `cite` 屬性提供引用信息的源文檔或消息的 URL，而使用 {{HTMLElement("cite")}} 元素可以提供源的文本表示。
+**`<blockquote>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示所包含的文本是擴展引用。通常，這通過縮進在視覺上呈現（有關如何更改，請參見[注意事項](#usage_notes)）。可以使用 `cite` 屬性提供引用信息的源文檔或消息的 URL，而使用 {{HTMLElement("cite")}} 元素可以提供源的文本表示。
 
 {{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 
 ## 屬性
 
-此元素的屬性包括[全局屬性](/en-US/docs/Web/HTML/Global_attributes)。
+此元素的屬性包括[全局屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `cite`
   - : 一個 URL，指定了信息引用的源文檔或消息。此屬性旨在指向解釋引文的上下文或引文參考的信息。
@@ -29,7 +29,9 @@ slug: Web/HTML/Element/blockquote
 ```html
 <blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
   <p>
-    鳥類運輸可以提供高延遲、低吞吐量和低高度的服務。連接拓撲僅限於每個運輸工具的單一點對點路徑，與標準運輸工具一起使用，但在初春之外，可以使用許多運輸工具而不會對彼此產生顯著的干擾。這是由於鳥類運輸工具可用的三維以太空間，與 IEEE802.3 使用的一維以太相對應。運輸工具具有內在的碰撞回避系統，提高了可用性。
+    鳥類運輸可以提供高延遲、低吞吐量和低高度的服務。連接拓撲僅限於每個運輸工具的單一點對點路徑，與標準運輸工具一起使用，但在初春之外，可以使用許多運輸工具而不會對彼此產生顯著的干擾。這是由於鳥類運輸工具可用的三維以太空間，與
+    IEEE802.3
+    使用的一維以太相對應。運輸工具具有內在的碰撞回避系統，提高了可用性。
   </p>
 </blockquote>
 ```
@@ -44,12 +46,12 @@ slug: Web/HTML/Element/blockquote
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流動內容</a
         >、節點根、可觸摸內容。
       </td>
@@ -57,7 +59,7 @@ slug: Web/HTML/Element/blockquote
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流動內容</a
         >。
       </td>
@@ -70,7 +72,7 @@ slug: Web/HTML/Element/blockquote
       <th scope="row">允許的父元素</th>
       <td>
         任何接受
-        <a href="/en-US/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流動內容</a
         >的元素。
       </td>
@@ -79,7 +81,7 @@ slug: Web/HTML/Element/blockquote
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code>
-          <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents"
+          <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents"
             >blockquote</a
           ></code
         >
