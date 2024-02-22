@@ -52,7 +52,7 @@ Large-Allocation: 500
 - 由于存在 `Large-Allocation` 标头，当前页面会在一个新的进程加载。
   - : 该消息意味着浏览器遇到了 `Large-Allocation` 标头，并且能够在一个新的进程中重新加载页面，这个进程应该有更多的可用连续内存。
 - `Large-Allocation` 标头由非 GET 请求触发而被直接忽略。
-  - : 当使用 {{HTTPMethod("POST")}} 请求加载文档时，加载目前无法被重定向到新的进程中。这个错误会在使用非 GET HTTP 方法加载带有 `Large-Allocation` 标头的文档时显示。例如，这可能是因文档是由表单提交加载而引起的。
+  - : 当使用 {{HTTPMethod("POST")}} 请求加载文档时，加载目前无法被重定向到新的进程中。这个错误会在使用非 GET HTTP 方法加载带有 `Large-Allocation` 标头的文档时显示。例如，这可能是由于当前文档是通过表单提交加载的。
 - 由于存在通过框架层级或者 {{domxref("window.opener")}} 引用当前浏览上下文的窗口，`Large-Allocation` 标头被直接忽略。
 
   - : 该错误意味着文档不是在用户打开的或者 noopener 打开的标签或窗口的顶层加载的。它可能在以下情况下出现：
