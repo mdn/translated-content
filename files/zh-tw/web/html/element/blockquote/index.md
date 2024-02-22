@@ -5,7 +5,7 @@ slug: Web/HTML/Element/blockquote
 
 {{HTMLSidebar}}
 
-**`<blockquote>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示所包含的文本是擴展引用。通常，這通過縮進在視覺上呈現（有關如何更改，請參見[注意事項](#usage_notes)）。可以使用 `cite` 屬性提供引用信息的源文檔或消息的 URL，而使用 {{HTMLElement("cite")}} 元素可以提供源的文本表示。
+**`<blockquote>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示所包含的文本是擴展引用。通常，這通過縮進在視覺上呈現（有關如何更改，請參見[注意事項](#使用注意事項)）。可以使用 `cite` 屬性提供引用信息的源文檔或消息的 URL，而使用 {{HTMLElement("cite")}} 元素可以提供源的文本表示。
 
 {{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 
@@ -38,7 +38,7 @@ slug: Web/HTML/Element/blockquote
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 640, 180)}}
+{{EmbedLiveSample("範例", 640, 180)}}
 
 ## 技術摘要
 
@@ -52,7 +52,7 @@ slug: Web/HTML/Element/blockquote
       </th>
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >流動內容</a
+          >流內容</a
         >、節點根、可觸摸內容。
       </td>
     </tr>
@@ -60,7 +60,7 @@ slug: Web/HTML/Element/blockquote
       <th scope="row">允許的內容</th>
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >流動內容</a
+          >流內容</a
         >。
       </td>
     </tr>
@@ -73,7 +73,7 @@ slug: Web/HTML/Element/blockquote
       <td>
         任何接受
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >流動內容</a
+          >流內容</a
         >的元素。
       </td>
     </tr>
