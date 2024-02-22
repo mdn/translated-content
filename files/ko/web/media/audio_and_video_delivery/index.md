@@ -482,7 +482,7 @@ lastsource.addEventListener(
 - [SublimeVideo](https://www.sublimevideo.net/): 등록이 필요합니다. CDN 호스팅 라이브러리에 대한 도메인별 링크가 포함된 양식 기반 설정입니다.
 - [Video.js](https://videojs.com/): 무료 및 오픈 소스 (Apache 2 라이선스)
 
-### Audio and Video
+### 오디오와 비디오
 
 - [jPlayer](https://jPlayer.org): 무료 및 오픈 소스 (MIT 라이선스)
 - [mediaelement.js](https://www.mediaelementjs.com/): 무료 및 오픈 소스 (MIT 라이선스)
