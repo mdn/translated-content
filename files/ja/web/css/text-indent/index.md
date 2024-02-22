@@ -27,7 +27,7 @@ text-indent: 5em each-line;
 text-indent: 5em hanging;
 text-indent: 5em hanging each-line;
 
-/* Global values */
+/* グローバル値 */
 text-indent: inherit;
 text-indent: initial;
 text-indent: revert;
