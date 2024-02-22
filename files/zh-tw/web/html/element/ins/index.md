@@ -26,7 +26,7 @@ slug: Web/HTML/Element/ins
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("範例")}}
 
 ## 可訪問性考慮事項
 
