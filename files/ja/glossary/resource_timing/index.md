@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-Diagnosing performance issues requires performance data at the granularity of the resource. The [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing) is a JavaScript API that is able to capture timing information for each individual resource that is fetched when a page is loaded.
+パフォーマンスの問題を診断するには、リソースの粒度でのデータが必要です。[Resource Timing API](/ja/docs/Web/API/Performance_API/Resource_timing) は、ページが読み込まれた際における、個別のリソースについてのタイミング情報を取得することができる、 JavaScript の API です。
 
 ## See also
 
