@@ -9,7 +9,7 @@ l10n:
 
 パフォーマンスの問題を診断するには、リソースの粒度でのデータが必要です。[Resource Timing API](/ja/docs/Web/API/Performance_API/Resource_timing) は、ページが読み込まれた際における、個別のリソースについてのタイミング情報を取得することができる、 JavaScript の API です。
 
-## See also
+## 関連情報
 
-- [Using the resource timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
+- [Resource Timing API](/ja/docs/Web/API/Performance_API/Resource_timing)
 - [Server Timing](https://www.w3.org/TR/server-timing/)
