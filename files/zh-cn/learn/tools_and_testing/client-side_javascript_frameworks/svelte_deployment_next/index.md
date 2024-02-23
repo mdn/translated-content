@@ -189,7 +189,7 @@ export default {
    ```
 
 4. 接受所有默认设置，这没有任何问题。
-5. 当部署完成后，在浏览器中打开“生产环境” URL，你会看到已经部署的应用！
+5. 当部署完成后，在浏览器中打开“生产环境”URL，你会看到已经部署的应用！
 
 你还可以从 [GitHub](https://github.com/)、[GitLab](https://about.gitlab.com/) 或 [BitBucket](https://bitbucket.org/product) [将 Svelte git 项目导入](https://vercel.com/import/svelte)到 Vercel 中。
 
@@ -208,7 +208,7 @@ export default {
    node_modules/
    ```
 
-3. 现在让我们回到 GitLab。在创建新仓库后，GitLab 将向你打招呼，并解释了上传现有文件的不同选项。按照 _Push an existing folder_ （推送现有文件夹）标题下的步骤进行操作：
+3. 现在让我们回到 GitLab。在创建新仓库后，GitLab 将向你打招呼，并解释了上传现有文件的不同选项。按照 *Push an existing folder*（推送现有文件夹）标题下的步骤进行操作：
 
    ```bash
    cd your_root_directory # 进入项目的根文件夹
@@ -245,7 +245,7 @@ GitLab 使用名为 GitLab CI/CD 的内置工具来构建你的网站并将其�
 
 在这里，我们告诉 GitLab 使用最新版本的 Node 镜像来构建我们的应用程序。接下来，我们声明了一个 `pages` 作业，以启用 GitLab Pages。每当我们对仓库进行推送时，GitLab 将运行 `npm install` 和 `npm run build` 来构建我们的应用程序。我们还告诉 GitLab 部署 `public` 文件夹的内容。在最后一行，我们配置 GitLab 仅在对主分支进行推送时重新部署我们的应用程序。
 
-2. 由于我们的应用程序将在子目录发布（例如 `https://your-user.gitlab.io/mdn-svelte-todo`），我们需要使 `public/index.html` 文件中对 JavaScript 和 CSS 文件的引用变为相对路径。为了做到这一点，我们只需从 `/global.css`、`/build/bundle.css` 和 `/build/bundle.js` 的 URL 中去掉前面的斜杠(`/`)，像这样：
+2. 由于我们的应用程序将在子目录发布（例如 `https://your-user.gitlab.io/mdn-svelte-todo`），我们需要使 `public/index.html` 文件中对 JavaScript 和 CSS 文件的引用变为相对路径。为了做到这一点，我们只需从 `/global.css`、`/build/bundle.css` 和 `/build/bundle.js` 的 URL 中去掉前面的斜杠（`/`），像这样：
 
    ```html
    <title>Svelte To-Do list</title>
@@ -298,7 +298,7 @@ GitLab 使用名为 GitLab CI/CD 的内置工具来构建你的网站并将其�
 
 - [Sapper](https://sapper.svelte.dev/)：由 Svelte 驱动的应用程序框架，提供服务器端渲染（SSR）、代码拆分、基于文件的路由、离线支持等功能。可以将其视为 Svelte 的 [Next.js](https://nextjs.org/)。如果你计划开发相当复杂的 Web 应用程序，一定要查看这个项目。
 - [Svelte Native](https://svelte-native.technology/)：由 Svelte 驱动的移动应用程序框架。可以将其视为 Svelte 的 [React Native](https://reactnative.dev/)。
-- [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)：官方支持的用于处理 `.svelte` 文件的 VS Code 插件，我们在我们的 [TypeScript 文章](//docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)中介绍过它。
+- [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)：官方支持的用于处理 `.svelte` 文件的 VS Code 插件，我们在我们的 [TypeScript 文章](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)中介绍过它。
 
 ### 其他学习资源
 
