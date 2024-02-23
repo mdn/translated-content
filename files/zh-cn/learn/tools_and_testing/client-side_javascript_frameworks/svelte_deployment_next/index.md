@@ -2,7 +2,7 @@
 title: 部署以及下一步
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
 l10n:
-  sourceCommit: 93c9f9954bd14ae8877973e5fe3c1d8378e56f92
+  sourceCommit: e769461724eef53106e9e44656d95b99c4d520e5
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
