@@ -208,7 +208,7 @@ export default {
    node_modules/
    ```
 
-3. 现在让我们回到 GitLab。在创建新仓库后，GitLab 将向你打招呼，并解释了上传现有文件的不同选项。按照 *Push an existing folder*（推送现有文件夹）标题下的步骤进行操作：
+3. 现在让我们回到 GitLab。在创建新仓库后，GitLab 将向你打招呼，并解释了上传现有文件的不同选项。按照 _Push an existing folder_（推送现有文件夹）标题下的步骤进行操作：
 
    ```bash
    cd your_root_directory # 进入项目的根文件夹
