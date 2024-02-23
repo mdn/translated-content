@@ -1,7 +1,8 @@
 ---
 title: Resource Timing
 slug: Glossary/Resource_Timing
-page-type: glossary-definition
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
 {{GlossarySidebar}}
