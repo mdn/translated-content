@@ -243,7 +243,7 @@ GitLab 使用名为 GitLab CI/CD 的内置工具来构建你的网站并将其�
        - main
    ```
 
-在这里，我们告诉 GitLab 使用最新版本的 Node 镜像来构建我们的应用程序。接下来，我们声明了一个 `pages` 作业，以启用 GitLab Pages。每当我们对仓库进行推送时，GitLab 将运行 `npm install` 和 `npm run build` 来构建我们的应用程序。我们还告诉 GitLab 部署 `public` 文件夹的内容。在最后一行，我们配置 GitLab 仅在对主分支进行推送时重新部署我们的应用程序。
+   在这里，我们告诉 GitLab 使用最新版本的 Node 镜像来构建我们的应用程序。接下来，我们声明了一个 `pages` 作业，以启用 GitLab Pages。每当我们对仓库进行推送时，GitLab 将运行 `npm install` 和 `npm run build` 来构建我们的应用程序。我们还告诉 GitLab 部署 `public` 文件夹的内容。在最后一行，我们配置 GitLab 仅在对主分支进行推送时重新部署我们的应用程序。
 
 2. 由于我们的应用程序将在子目录发布（例如 `https://your-user.gitlab.io/mdn-svelte-todo`），我们需要使 `public/index.html` 文件中对 JavaScript 和 CSS 文件的引用变为相对路径。为了做到这一点，我们只需从 `/global.css`、`/build/bundle.css` 和 `/build/bundle.js` 的 URL 中去掉前面的斜杠（`/`），像这样：
 
