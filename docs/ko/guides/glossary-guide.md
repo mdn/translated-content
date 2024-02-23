@@ -149,7 +149,6 @@
 | Statement           | 명령문 또는 문  |                                                                                                        |
 | Tag                 | 태그            |                                                                                                        |
 | Tip                 | 팁              |                                                                                                        |
-| Trick               | 트릭            |                                                                                                        |
 | Trigger             | 트리거          |                                                                                                        |
 | Tutorial            | 튜토리얼        |                                                                                                        |
 | User agent          | 사용자 에이전트 |                                                                                                        |
