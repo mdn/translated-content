@@ -1,11 +1,11 @@
 ---
-title: "<footer>: 頁尾元素"
+title: <footer>：頁尾元素
 slug: Web/HTML/Element/footer
 ---
 
 {{HTMLSidebar}}
 
-**`<footer>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示其最近的 [分節內容](/zh-TW/docs/Web/HTML/Content_categories#sectioning_content) 或 [分節根](/zh-TW/docs/Web/HTML/Element/Heading_Elements#sectioning_root) 元素的頁尾。 `<footer>` 通常包含有關該區段作者的信息、版權數據或與相關文檔的鏈接。
+**`<footer>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示其最近的[章節型內容](/zh-TW/docs/Web/HTML/Content_categories#章節型內容)或[章節根](/zh-TW/docs/Web/HTML/Element/Heading_Elements#章節根)元素的頁尾。`<footer>` 通常包含有關該章節作者的信息、版權數據或與相關文檔的鏈接。
 
 {{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
@@ -16,7 +16,7 @@ slug: Web/HTML/Element/footer
         <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、有形內容。
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、捫及內容。
       </td>
     </tr>
     <tr>
@@ -34,9 +34,8 @@ slug: Web/HTML/Element/footer
       <td>
         任何接受
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a> 的元素。請注意，<code>&#x3C;footer></code> 元素不得是
-        {{HTMLElement("address")}}、
-        {{HTMLElement("header")}} 或另一個
-        <code>&#x3C;footer></code> 元素的後代。
+        {{HTMLElement("address")}}、{{HTMLElement("header")}}
+        或另一個 <code>&#x3C;footer></code> 元素的後代。
       </td>
     </tr>
     <tr>
@@ -76,8 +75,8 @@ slug: Web/HTML/Element/footer
 ## 使用注意事項
 
 - 將有關作者的信息置於可以包含在 `<footer>` 元素中的 {{HTMLElement("address")}} 元素中。
-- 當最近的祖先分節內容或分節根元素是 body 元素時，頁尾應用於整個頁面。
-- `<footer>` 元素不是分節內容，因此在 [大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 中不引入新的節。
+- 當最近的祖先章節型內容或章節根元素是 body 元素時，頁尾應用於整個頁面。
+- `<footer>` 元素不是章節型，因此在[大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)中不引入新的節。
 
 ## 範例
 
@@ -107,11 +106,11 @@ footer {
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('範例')}}
 
 ## 可訪問性注意事項
 
-在 Safari 13 之前的版本中，`contentinfo` [標誌角色](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) 未能被 [VoiceOver](https://help.apple.com/voiceover/info/guide/) 正確顯示。如果需要支持舊版 Safari 瀏覽器，請在 `footer` 元素中添加 `role="contentinfo"`，以確保該標誌能夠被正確顯示。
+在 Safari 13 之前的版本中，`contentinfo` [標誌角色](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics#路標地標)未能被 [VoiceOver](https://help.apple.com/voiceover/info/guide/) 正確顯示。如果需要支持舊版 Safari 瀏覽器，請在 `footer` 元素中添加 `role="contentinfo"`，以確保該標誌能夠被正確顯示。
 
 - 相關：[WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
 
@@ -125,6 +124,6 @@ footer {
 
 ## 參見
 
-- 其他與節相關的元素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
-- [使用 HTML 節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
+- 其他與節相關的元素: {{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("section")}}、{{HTMLElement("address")}}；
+- [使用 HTML 章節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA：Contentinfo 角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
