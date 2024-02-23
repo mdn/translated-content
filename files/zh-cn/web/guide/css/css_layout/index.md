@@ -18,7 +18,7 @@ l10n:
 - [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
   - : 介绍怎样创建一个新的格式化上下文。
 - [流布局和书写模式](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
-  - : 流式布局怎样在不同的书写模式工作，例如垂直文本。
+  - : 流式布局怎样在不同的书写模式工作，例如竖排文本。
 - [流布局和溢出](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
   - : 理解并管理溢出。
 - [CSS 盒模型介绍](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
