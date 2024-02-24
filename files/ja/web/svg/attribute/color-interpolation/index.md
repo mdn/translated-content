@@ -88,9 +88,7 @@ svg {
 
 ```html
 <svg width="450" height="70">
-  <title>
-    color-interpolation 属性の無い linearGradient の例
-  </title>
+  <title>color-interpolation 属性の無い linearGradient の例</title>
   <defs>
     <linearGradient id="gradientDefault">
       <stop offset="0%" stop-color="white" />
@@ -117,9 +115,7 @@ svg {
 
 ```html
 <svg width="450" height="70">
-  <title>
-    color-interpolation 属性を用いた linearGradient の例
-  </title>
+  <title>color-interpolation 属性を用いた linearGradient の例</title>
   <defs>
     <linearGradient id="gradientLinearRGB" color-interpolation="linearRGB">
       <stop offset="0%" stop-color="white" />
@@ -146,9 +142,7 @@ svg {
 
 ```html
 <svg width="450" height="70">
-  <title>
-    color-interpolation 属性なしの radialGradient の例
-  </title>
+  <title>color-interpolation 属性なしの radialGradient の例</title>
   <defs>
     <radialGradient id="none">
       <stop offset="0%" stop-color="red" />
@@ -166,9 +160,7 @@ svg {
 
 ```html
 <svg width="450" height="70">
-  <title>
-    color-interpolation 属性を用いた radialGradient の例
-  </title>
+  <title>color-interpolation 属性を用いた radialGradient の例</title>
   <defs>
     <radialGradient id="radLinearRGB" color-interpolation="linearRGB">
       <stop offset="0%" stop-color="red" />
