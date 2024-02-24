@@ -52,7 +52,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
     - `center`，元素中的内容居中对齐
     - `right`，元素中的内容右对齐
     - `justify`，插入空格，使元素中内容两端对齐
-    - `char`，针对确定的字符，设置一个最小偏移量，来进行布局，通过 [`char`](/zh-CN/docs/Web/HTML/Element/col#char) 和 [`charoff`](/zh-CN/docs/Web/HTML/Element/col#charoff) 属性进行定义 {{unimplemented_inline(2212)}}。此属性的默认值为 `left`。后代 {{HTMLElement("col")}} 元素可以用它们自己的 [`align`](/zh-CN/docs/Web/HTML/Element/col#align) 属性值来重写该属性。
+    - `char`，针对确定的字符，设置一个最小偏移量，来进行布局，通过 [`char`](/zh-CN/docs/Web/HTML/Element/col#char) 和 [`charoff`](/zh-CN/docs/Web/HTML/Element/col#charoff) 属性进行定义。此属性的默认值为 `left`。后代 {{HTMLElement("col")}} 元素可以用它们自己的 [`align`](/zh-CN/docs/Web/HTML/Element/col#align) 属性值来重写该属性。
 
     > **备注：** 不要使用这个属性，它在最新的标准中已经不被支持。
     >
@@ -60,7 +60,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
     > - 不要为一个 {{HTMLElement("colgroup")}} 元素选择器设置 {{cssxref("text-align")}} 属性.，因为{{HTMLElement("td")}} 元素并不是 {{HTMLElement("colgroup")}} 元素的后代，不继承于它。
     > - 如果表格不使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，每列用一个 `td:nth-child(an+b)` 的 CSS 选择器，a 是表格中列的总数，b 是当前列在表格中的位列次序号。只有在这个选择器之后， {{cssxref("text-align")}} 属性可以使用。
     > - 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，可以通过合并足够多的属性选择器来实现同样的效果，比如 `[colspan=n]`，但这不常用。
-    > - 若要实现与 `char` 相同的效果：在 CSS3 中，你可以使用 [`char`](/zh-CN/docs/Web/HTML/Element/colgroup#char) 作为 {{cssxref("text-align")}} 的属性值。 {{unimplemented_inline}}
+    > - 若要实现与 `char` 相同的效果：在 CSS3 中，你可以使用 [`char`](/zh-CN/docs/Web/HTML/Element/colgroup#char) 作为 {{cssxref("text-align")}} 的属性值。
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -72,7 +72,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
 
   - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/colgroup#align) is not set to `char`, this attribute is ignored, though it will still be used as the default value for the [`align`](/zh-CN/docs/Web/HTML/Element/col#align) of the {{HTMLElement("col")}} which are members of this column group.
 
-    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/colgroup#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/colgroup#char) attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/colgroup#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/colgroup#char) attribute as the value of the {{cssxref("text-align")}} property.
 
 - `charoff` {{deprecated_inline}}
 

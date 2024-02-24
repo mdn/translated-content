@@ -8339,6 +8339,19 @@
     "modified": "2020-04-28T15:39:35.383Z",
     "contributors": ["arnoldovich", "moshenskyDV"]
   },
+  "Web/CSS/CSS_display/Block_formatting_context": {
+    "modified": "2019-10-04T09:05:37.001Z",
+    "contributors": [
+      "Radragon",
+      "RomanBush",
+      "NancyT33333",
+      "SelenIT",
+      "brolnickij",
+      "I-O",
+      "ViT09",
+      "akhabibullina"
+    ]
+  },
   "Web/CSS/CSS_flexible_box_layout": {
     "modified": "2020-10-19T05:53:46.314Z",
     "contributors": ["kyusov", "idoru", "WynnChen"]
@@ -9814,19 +9827,6 @@
       "Tihoem",
       "galinakulinich@mail.ru",
       "Sheppy"
-    ]
-  },
-  "Web/Guide/CSS/Block_formatting_context": {
-    "modified": "2019-10-04T09:05:37.001Z",
-    "contributors": [
-      "Radragon",
-      "RomanBush",
-      "NancyT33333",
-      "SelenIT",
-      "brolnickij",
-      "I-O",
-      "ViT09",
-      "akhabibullina"
     ]
   },
   "Web/HTML": {

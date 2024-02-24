@@ -1,13 +1,17 @@
 ---
-title: Google App Engine を使ってウェブサイトを公開するには？
+title: Google App Engine を使ってウェブサイトを公開する方法
 slug: Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-[Google App Engine](https://cloud.google.com/appengine/) は、Google のインフラストラクチャ上でアプリケーションを構築して実行できる強力なプラットフォームです。ゼロから多階層のウェブ アプリケーションを構築する場合でも、静的なウェブサイトをホストする場合でも、必要なアプリケーションを構築することができます。ここでは、 Google App Engine でウェブサイトをホスティングするためのステップバイステップガイドを紹介します。
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
+
+[Google App Engine](https://cloud.google.com/appengine/) は、Google のインフラ上でアプリケーションを構築して実行できる強力なプラットフォームです。ゼロから多階層のウェブ アプリケーションを構築する場合でも、静的なウェブサイトをホストする場合でも、必要なアプリケーションを構築することができます。ここでは、 Google App Engine でウェブサイトをホスティングするためのステップバイステップガイドを紹介します。
 
 ## Google Cloud Platform プロジェクトの作成
 
-Google のツールを自分のサイトやアプリに使用するには、Google Cloud Platform で新しいプロジェクトを作成する必要があります。そのためには、Google のアカウントを保有している必要があります。
+Google のツールを自分のサイトやアプリに使用するには、Google Cloud Platform で新しいプロジェクトを作成する必要があります。そのためには、Google アカウントを保有している必要があります。
 
 1. Google Cloud Platform Console の [App Engine dashboard](https://console.cloud.google.com/projectselector/appengine) に移動し、 _Create_ ボタンを押します。
 2. プロジェクトを作成したことがない場合は、メールによる更新情報を受け取るかどうかを選択し、利用規約に同意すれば、次に進むことができるはずです。

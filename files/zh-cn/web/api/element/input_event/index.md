@@ -5,7 +5,7 @@ slug: Web/API/Element/input_event
 
 {{APIRef}}
 
-当一个 {{HTMLElement("input")}}, {{HTMLElement("select")}}, 或 {{HTMLElement("textarea")}} 元素的 `value` 被修改时，会触发 **`input`** 事件。
+当一个 {{HTMLElement("input")}}、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素的 `value` 被修改时，会触发 **`input`** 事件。
 
 <table class="properties">
   <tbody>
@@ -41,7 +41,7 @@ slug: Web/API/Element/input_event
 ### HTML
 
 ```html
-<input placeholder="Enter some text" name="name" />
+<input placeholder="输入一些文本" name="name" />
 <p id="values"></p>
 ```
 
@@ -54,7 +54,7 @@ const log = document.getElementById("values");
 input.addEventListener("input", updateValue);
 
 function updateValue(e) {
-  log.textContent = e.srcElement.value;
+  log.textContent = e.target.value;
 }
 ```
 
@@ -78,14 +78,6 @@ function updateValue(e) {
 ## 浏览器兼容性
 
 {{Compat}}
-
-\[1] 在 Gecko 12.0 之前，用户在输入法中输入时，或者 dead keys were used on Mac OS X 时，Gecko 不触发 input 事件。
-
-\[2] IE 9 在用户删除输入的文字时不触发 input 事件 (例如，按 Backspace 或者删除键，或者“剪切”文字).
-
-\[3] Opera 在用户把文字拖进输入框时，不触发 input 事件。
-
-\[4] 事件 target 是光标所在的最内侧的元素。
 
 ## 参见
 
