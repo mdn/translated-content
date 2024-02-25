@@ -396,7 +396,7 @@ function handleFiles() {
 
 ### アップロードタスクの生成
 
-前の例でサムネイルを作成したコードの続きで、すべてのサムネイル画像が CSS クラス `obj` にあり、対応する {{DOMxRef("File")}}} が `file` 属性に添付されていることを思い出してください。これにより、このように{{DOMxRef("Document.querySelectorAll()")}}を使用して、ユーザーがアップロードするために選択した画像をすべて選択することができます。
+前の例でサムネイルを作成したコードの続きで、すべてのサムネイル画像が CSS クラス `obj` にあり、対応する {{DOMxRef("File")}} が `file` 属性に添付されていることを思い出してください。これにより、このように{{DOMxRef("Document.querySelectorAll()")}}を使用して、ユーザーがアップロードするために選択した画像をすべて選択することができます。
 
 ```js
 function sendFiles() {
@@ -408,7 +408,7 @@ function sendFiles() {
 }
 ```
 
-2 行目は、CSS クラス `obj` を持つドキュメント内のすべての要素の {{DOMxRef("NodeList")}}} を取得し `imgs` と呼ばれる変数に格納します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `FileUpload` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
+2 行目は、CSS クラス `obj` を持つドキュメント内のすべての要素の {{DOMxRef("NodeList")}} を取得し `imgs` と呼ばれる変数に格納します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `FileUpload` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
 
 ### ファイルのアップロード処理を行う
 
@@ -588,4 +588,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

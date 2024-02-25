@@ -1,6 +1,8 @@
 ---
 title: margin-block-start
 slug: Web/CSS/margin-block-start
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
@@ -24,6 +26,7 @@ margin-block-start: auto;
 margin-block-start: inherit;
 margin-block-start: initial;
 margin-block-start: revert;
+margin-block-start: revert-layer;
 margin-block-start: unset;
 ```
 
@@ -45,7 +48,7 @@ margin-block-start: unset;
 
 ## 例
 
-<h3 id="Setting_block_start_margin">ブロック方向の先頭のマージンの設定</h3>
+### ブロック方向の先頭のマージンの設定
 
 #### HTML
 
@@ -73,7 +76,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_start_margin", 140, 140)}}
+{{EmbedLiveSample("ブロック方向の先頭のマージンの設定", 140, 140)}}
 
 ## 仕様書
 
@@ -85,5 +88,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応づけ先の物理的プロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

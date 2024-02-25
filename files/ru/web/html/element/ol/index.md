@@ -145,7 +145,7 @@ slug: Web/HTML/Element/ol
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

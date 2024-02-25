@@ -2,10 +2,10 @@
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 l10n:
-  sourceCommit: 2184f627ae940cca9d95ba9846903ae0cfc4d323
+  sourceCommit: 6cab93c7fbd381e36065794351e2d7fcc3ce64e8
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
 
 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序以系统级别发送在页面外部显示的通知；这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在你自己的应用程序中使用此 API 的基础知识。
 
@@ -14,6 +14,8 @@ l10n:
 ![桌面通知：通过 mdn.github.io 列出待办事项 嘿！你的任务“去购物”现已过期](desktop-notification.png)
 
 系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 编写得足够通用，足以与大多数系统通知系统兼容。
+
+{{AvailableInWorkers}}
 
 ## 示例
 
@@ -50,7 +52,7 @@ Notification.requestPermission().then((result) => {
 });
 ```
 
-这使用了该方法的基于 promise 的版本。如果你想支持旧版本，你可能必须使用旧的回调版本，如下所示：
+这使用了该方法的基于 Promise 的版本。如果你想支持旧版本，你可能必须使用旧的回调版本，如下所示：
 
 ```js
 Notification.requestPermission((result) => {
@@ -67,7 +69,7 @@ Notification.requestPermission((result) => {
 在我们的待办事项列表演示中，我们包含一个“启用通知”按钮，按下该按钮时，会请求应用程序的通知权限。
 
 ```html
-<button id="enable">Enable notifications</button>
+<button id="enable">启用通知</button>
 ```
 
 单击此按钮将调用 `askNotificationPermission()` 函数：
@@ -76,7 +78,7 @@ Notification.requestPermission((result) => {
 function askNotificationPermission() {
   // 实际询问权限的函数
   function handlePermission(permission) {
-    // 根据用户的回答将按钮设置为显示或隐藏
+    // 根据用户的回答显示或隐藏按钮
     notificationBtn.style.display =
       Notification.permission === "granted" ? "none" : "block";
   }
@@ -96,13 +98,11 @@ function askNotificationPermission() {
 
 为了避免重复代码，我们在 `handlePermission()` 函数中存储了一些内部代码，这是该代码段中的第一个主要块。在这里，我们明确设置了 `Notification.permission` 值（某些旧版本的 Chrome 无法自动执行此操作），并根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
 
-> **备注：** 在 Chrome 的 37 版本之前，其不允许你在 `load` 事件处理程序中调用 {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}（请参阅 [issue 274284](https://crbug .com/274284)）。
-
 ## 创建通知
 
 创建通知很简单，只需要用 {{domxref("Notification")}} 构造方法。这个构造方法需要一个用来显示在通知内的标题以及一些用来增强通知的选项，例如 {{domxref("Notification.icon","icon")}} 或文本 {{domxref("Notification.body","body")}}。
 
-例如，在待办事项列表示例中，我们使用以下代码片段在需要时创建通知（在 `createNotification()` 函数中找到）：
+例如，在待办事项列表示例中，我们使用以下代码片段在需要时创建通知（可以在 `createNotification()` 函数中找到）：
 
 ```js
 const img = "/to-do-notifications/img/icon-128.png";
@@ -174,7 +174,7 @@ window.addEventListener("load", () => {
     if (Notification?.permission === "granted") {
       // 如果用户同意收到通知让我们尝试发送十个通知
       let i = 0;
-      // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
+      // 使用时间间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
       const interval = setInterval(() => {
         // 由于 tag 参数，我们应该只能看到“Hi！9”通知
         const n = new Notification(`Hi! ${i}`, { tag: "soManyNotification" });
@@ -191,8 +191,8 @@ window.addEventListener("load", () => {
           let i = 0;
           // 使用间隔以避免某些浏览器（包括 Firefox）在特定时间内出现过多通知时会阻止通知
           const interval = setInterval(() => {
-            // 由于 tag 参数，我们应该只能看到“Hi！9”通知
-            const n = new Notification(`Hi! ${i}`, {
+            // 由于 tag 参数，我们应该只能看到“嗨！9”通知
+            const n = new Notification(`嗨！${i}`, {
               tag: "soManyNotification",
             });
             if (i === 9) {
@@ -201,12 +201,12 @@ window.addEventListener("load", () => {
             i++;
           }, 200);
         } else {
-          // 否则，我们可以回退到常规模式提醒
+          // 否则，我们可以回退到常规模式的提醒
           alert("Hi!");
         }
       });
     } else {
-      // 如果用户拒绝收到通知，我们可以退回到常规模式提醒
+      // 如果用户拒绝收到通知，我们可以回退到常规模式的提醒
       alert("Hi!");
     }
   });
@@ -216,14 +216,6 @@ window.addEventListener("load", () => {
 ### 结果
 
 {{ EmbedLiveSample('标签示例', '100%', 30) }}
-
-## 规范
-
-{{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 参见
 

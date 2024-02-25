@@ -3,7 +3,7 @@ title: tabs.goBack()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Naviguer à la page précédente dans l'historique de l'onglet, si disponible.
 

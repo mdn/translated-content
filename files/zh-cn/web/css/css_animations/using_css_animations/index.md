@@ -3,7 +3,7 @@ title: 使用 CSS 动画
 slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
-{{SeeCompatTable}}{{CSSRef}}
+{{CSSRef}}
 
 **CSS animations** 使得可以将从一个 CSS 样式配置转换到另一个 CSS 样式配置。动画包括两个部分：描述动画的样式规则和用于指定动画开始、结束以及中间点样式的关键帧。
 
@@ -331,8 +331,8 @@ function listener(e) {
 
 {{EmbedLiveSample('使用动画事件', '600', '300')}}
 
-## See also
+## 参见
 
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/zh-CN/docs/CSS/CSS_animations/Detecting_CSS_animation_support)
-- [Using CSS transitions](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
+- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [CSS 动画的技巧](/zh-CN/docs/Web/CSS/CSS_animations/Tips)
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

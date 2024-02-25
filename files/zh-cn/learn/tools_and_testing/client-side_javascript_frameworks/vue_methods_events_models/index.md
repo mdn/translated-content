@@ -217,7 +217,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_even
 
 与事件修饰符类似，我们也可以添加修饰符来改变 `v-model` 的行为。在我们的案例中，有两个值得考虑。第一个，`.trim`，将删除输入之前或之后的空格。我们可以将修饰符添加到我们的 `v-model` 语句中，如下所示：`v-model.trim="label"`。
 
-我们应该考虑的第二个修饰符称为 `.lazy`。当 `v-model` 同步文本输入的值时，此修饰符会发生变化。如前所述，`v-model` 同步通过使用事件更新变量来工作。对于文本输入，此同步使用 [`input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)进行。通常，这意味着 Vue 在每次击键后都会同步数据。`.lazy` 修饰符导致 `v-model` 使用 [`change` 事件](/zh-CN/docs/Web/API/HTMLElement/change_event)代替。这意味着 Vue 只会在输入失去焦点或提交表单时同步数据。就我们的目的而言，这更合理，因为我们只需要最终数据。
+我们应该考虑的第二个修饰符称为 `.lazy`。当 `v-model` 同步文本输入的值时，此修饰符会发生变化。如前所述，`v-model` 同步通过使用事件更新变量来工作。对于文本输入，此同步使用 [`input` 事件](/zh-CN/docs/Web/API/Element/input_event)进行。通常，这意味着 Vue 在每次击键后都会同步数据。`.lazy` 修饰符导致 `v-model` 使用 [`change` 事件](/zh-CN/docs/Web/API/HTMLElement/change_event)代替。这意味着 Vue 只会在输入失去焦点或提交表单时同步数据。就我们的目的而言，这更合理，因为我们只需要最终数据。
 
 要同时使用 `.lazy` 修饰符和 `.trim` 修饰符，我们可以将它们链接起来，例如 `v-model.lazy.trim="label"`。
 

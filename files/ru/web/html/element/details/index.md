@@ -92,7 +92,7 @@ details[open] > summary::before {
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

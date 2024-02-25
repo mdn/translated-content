@@ -3,7 +3,7 @@ title: devtools.inspectedWindow.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Recharge la fenêtre à laquelle les devtools sont attachés.
 

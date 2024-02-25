@@ -44,7 +44,7 @@ formData.has("username"); // Returns true
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

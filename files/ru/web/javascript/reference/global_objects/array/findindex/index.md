@@ -3,7 +3,7 @@ title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 

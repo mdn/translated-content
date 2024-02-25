@@ -3,7 +3,7 @@ title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 ---
 
-{{JSRef("Global_Objects", "Function")}}
+{{JSRef}}
 
 ## Resumo
 

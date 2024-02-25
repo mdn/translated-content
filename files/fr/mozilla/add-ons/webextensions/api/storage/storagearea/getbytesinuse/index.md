@@ -3,7 +3,7 @@ title: StorageArea.getBytesInUse()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient la quantité d'espace de stockage, en octets, utilisé un ou plusieurs éléments stockés dans la zone de stockage.
 

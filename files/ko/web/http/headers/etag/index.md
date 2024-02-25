@@ -29,7 +29,7 @@ ETag: W/"<etag_value>"
 ETag: "<etag_value>"
 ```
 
-## 참고
+## 지시자
 
 - `W/` {{optional_inline}}
   - : `'W/'` (대/소문자를 구분합니다.) [weak validator](/ko/docs/Web/HTTP/Conditional_requests#Weak_validation) 가 사용되었음을 나타냅니다. Weak validators 는 만들기는 쉽지만 비교하기에는 효율성이 떨어집니다. Strong validators 는 비교하기에는 이상적이지만 효율적으로 만들기가 어렵습니다. 동일한 자원의 두 가지 Weak `Etag` 값은 동일할 수 있지만, 바이트 단위까지 동일하진 않습니다.

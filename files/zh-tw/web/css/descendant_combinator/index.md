@@ -3,7 +3,7 @@ title: 後裔選擇器
 slug: Web/CSS/Descendant_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 ## 簡介
 

@@ -42,7 +42,7 @@ slug: Web/HTML/Element/acronym
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

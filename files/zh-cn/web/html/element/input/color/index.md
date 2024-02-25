@@ -25,7 +25,7 @@ slug: Web/HTML/Element/input/color
       <td><strong>事件</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} 和
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ slug: Web/HTML/Element/input/color
 
 ### 监听颜色变化
 
-正如其他类型的 {{HTMLElement("input")}} 元素，有两个和值的改变相关的事件，{{domxref("HTMLElement/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}}。每次颜色变更都会触发 `<input>` 元素上的 `input` 事件。用户关闭选色器之后会触发 `change` 事件。对于这两个事件，都可以通过 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性获取新值。
+正如其他类型的 {{HTMLElement("input")}} 元素，有两个和值的改变相关的事件，{{domxref("Element/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}}。每次颜色变更都会触发 `<input>` 元素上的 `input` 事件。用户关闭选色器之后会触发 `change` 事件。对于这两个事件，都可以通过 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性获取新值。
 
 以下代码为监听颜色值变化的示例：
 
@@ -107,7 +107,7 @@ colorWell.select();
 
 ## 示例
 
-让我们创建一个例子，通过跟踪 {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}} 事件，对颜色输入做一些处理，将新颜色应用到文档中的每个 {{HTMLElement("p")}} 元素。
+让我们创建一个例子，通过跟踪 {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}} 事件，对颜色输入做一些处理，将新颜色应用到文档中的每个 {{HTMLElement("p")}} 元素。
 
 ### HTML
 
@@ -156,7 +156,7 @@ function startup() {
 }
 ```
 
-在一个叫做 `colorWell` 的变量中获得对颜色 `<input>` 元素的引用，然后将颜色输入的值设置为 `defaultColor` 中的值。然后颜色输入的 {{domxref("HTMLElement/input_event", "input")}} 事件被设置为调用我们的 `updateFirst()` 函数，而 {{domxref("HTMLElement/change_event", "change")}} 事件被设置为调用 `updateAll()`。这些都在下面看到。
+在一个叫做 `colorWell` 的变量中获得对颜色 `<input>` 元素的引用，然后将颜色输入的值设置为 `defaultColor` 中的值。然后颜色输入的 {{domxref("Element/input_event", "input")}} 事件被设置为调用我们的 `updateFirst()` 函数，而 {{domxref("HTMLElement/change_event", "change")}} 事件被设置为调用 `updateAll()`。这些都在下面看到。
 
 最后，如果控件被实现为文本字段，我们调用 {{domxref("HTMLInputElement.select", "select()")}} 来选择颜色输入的文本内容（如果提供的是颜色选择器接口，这就没有效果）。
 

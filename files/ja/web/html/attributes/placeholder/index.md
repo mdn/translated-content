@@ -47,7 +47,7 @@ l10n:
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - HTML [`title`](/ja/docs/Web/HTML/Global_attributes/title)
 - CSS [`:placeholder-shown`](/ja/docs/Web/CSS/_colon_placeholder-shown) 擬似クラスセレクター

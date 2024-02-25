@@ -37,7 +37,7 @@ word-break: unset;
 
 > **备注：** 与 `word-break: break-word` 和 `overflow-wrap: break-word`（详见 {{cssxref("overflow-wrap")}}）对比，`word-break: break-word` 将在文本可能溢出其容器的确切位置创建一个断点。
 
-## 规范
+## 形式定义
 
 {{CSSInfo}}
 

@@ -3,7 +3,7 @@ title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Сводка
 

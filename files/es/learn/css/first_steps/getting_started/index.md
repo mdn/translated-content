@@ -274,7 +274,7 @@ Dará formato a cualquier elemento con la clase `special`, dentro de un elemento
 
 En el HTML original que proporcionamos, el único elemento al que esto aplica estilo es `<span class="special">`.
 
-No te preocupes si ahora mismo te parece complicado: irás acostumbrarte a medida que escribas más CSS.
+No te preocupes si ahora mismo te parece complicado: irás acostumbrándote a medida que escribas más CSS.
 
 ## Para terminar
 

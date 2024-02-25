@@ -19,6 +19,6 @@ slug: Web/HTTP/Status/425
 | ----------------------------------------- | ------------------------ |
 | {{RFC("8470", "425: Early Data", "5.2")}} | Using Early Data in HTTP |
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

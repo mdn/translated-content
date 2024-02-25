@@ -3,7 +3,7 @@ title: bookmarks.get()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.get()`** は、指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} の ID（または ID の配列）にマッチするノードを取得するメソッドです。
 

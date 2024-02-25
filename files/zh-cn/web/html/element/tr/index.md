@@ -46,12 +46,12 @@ slug: Web/HTML/Element/tr
     - `center`, 内容在单元格中居中
     - `right`, 内容在单元格中右对齐
     - `justify`, 增加文本内容之间的空白以伸展这行文本，使得该单元格中的多行文本具有相同的长度。
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/tr#charoff) attributes {{unimplemented_inline("2212")}}If this attribute is not set, the parent node's value is inherited.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/tr#charoff) attributes. If this attribute is not set, the parent node's value is inherited.
 
     > **备注：** Do not use this attribute as it is obsolete (not supported) in the latest standard.
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) as the value of the {{cssxref("text-align")}} property.
 
 - `bgcolor` {{Deprecated_inline}}
 
@@ -63,7 +63,7 @@ slug: Web/HTML/Element/tr
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) is not set to `char`, this attribute is ignored.
 
-    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/tr#char) attribute as the value of the {{cssxref("text-align")}} property.
 
 - `charoff` {{Deprecated_inline}}
 

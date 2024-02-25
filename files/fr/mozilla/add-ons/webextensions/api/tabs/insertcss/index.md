@@ -3,7 +3,7 @@ title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Injecter du code CSS dans une page web.
 

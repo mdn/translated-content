@@ -66,8 +66,8 @@ console.log(badString);
 
 在 JavaScript 中，你可以选择单引号（`'`）、双引号（`"`）或反引号（`` ` ``）来包裹字符串。以下所有方法都可以：
 
-```js
-const single = "单引号";
+```js-nolint
+const single = '单引号';
 const double = "双引号";
 const backtick = `反引号`;
 

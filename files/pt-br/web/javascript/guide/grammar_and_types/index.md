@@ -41,9 +41,9 @@ Existem três tipos de declarações em JavaScript.
 
 - {{jsxref("Statements/var", "var")}}
   - : Declara uma variável, opcionalmente, inicializando-a com um valor.
-- {{experimental_inline}} {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/let", "let")}}
   - : Declara uma variável local de escopo do bloco, opcionalmente, inicializando-a com um valor.
-- {{experimental_inline}} {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/const", "const")}}
   - : Declara uma constante de escopo de bloco, apenas de leitura.
 
 ### Variáveis
@@ -62,7 +62,7 @@ Você pode declarar uma variável de três formas:
 
 - Com a palavra chave {{jsxref("Statements/var", "var")}}. Por exemplo, var `x = 42`. Esta sintaxe pode ser usada para declarar tanto variáveis locais como variáveis globais.
 - Por simples adição de valor. Por exemplo, `x = 42`. Isso declara uma variável global. Essa declaração gera um aviso de advertência no JavaScript. Você não deve usar essa variante.
-- Com a palavra chave {{jsxref("Statements/let", "let")}}. Por exemplo, `let y = 13`. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja [escopo de variável](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types#Variable_scope) abaixo.
+- Com a palavra chave {{jsxref("Statements/let", "let")}}. Por exemplo, `let y = 13`. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja [escopo de variável](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types#escopo_de_variável) abaixo.
 
 ### Classificando variáveis
 
@@ -110,7 +110,7 @@ console.log(n * 32); // a saída para o console será 0.
 
 ### Escopo de variável
 
-Quando você declara uma váriavel fora de qualquer função, ela é chamada de variável _global_, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, é chamada de variável _local_, pois ela está disponível somente dentro dessa função.
+Quando você declara uma variável fora de qualquer função, ela é chamada de variável _global_, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, é chamada de variável _local_, pois ela está disponível somente dentro dessa função.
 
 JavaScript antes do ECMAScript 6 não possuía escopo de [declaração de bloco](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement); pelo contrário, uma variável declarada dentro de um bloco de uma _função_ é uma variável local (ou contexto _global_) do bloco que está inserido a função. Por exemplo o código a seguir exibirá 5, porque o escopo de `x` está na função (ou contexto global) no qual `x` é declarado, não o bloco, que neste caso é a declaração `if`.
 

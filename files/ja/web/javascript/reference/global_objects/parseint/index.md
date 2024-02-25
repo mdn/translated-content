@@ -65,7 +65,7 @@ parseInt(string, radix)
 
 巨大な数値では `e` の文字を文字列表現の中で使用しますので（例えば **`6.022E23`** は 6.022 × 10^23 を表します）、`parseInt` を使用して数値を切り捨てると、とても大きな数字やとても小さな数字を使用する際に予期しない結果を生み出すことがあります。 `parseInt` を {{jsxref("Math.trunc()")}} の代用として使うべきではありません。
 
-To convert a number to its string literal in a particular radix, use [`thatNumber.toString(radix)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+数値を基数を指定してその文字列表現に変換するには、[`thatNumber.toString(radix)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) を用います。
 
 `parseInt()` は数値を返すので、文字列が表す整数が[安全な範囲の外](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger)の場合、精度が落ちる可能性があります。 [`BigInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 関数は {{jsxref("BigInt")}} を返すことで、任意の長さの整数を正確に解釈することに対応しています。
 
@@ -155,7 +155,7 @@ parseInt(-15.1, 10); // -15
 
 ```js example-bad
 parseInt(4.7 * 1e22, 10); // 巨大な数値が 4 になる
-parseInt(0.00000000000434, 10); // 御苦笑の数値が 4 になる
+parseInt(0.00000000000434, 10); // 極小の数値が 4 になる
 
 parseInt(0.0000001, 10); // 1
 parseInt(0.000000123, 10); // 1

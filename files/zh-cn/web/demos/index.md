@@ -52,8 +52,8 @@ Mozilla 支持各种令人兴奋的开源 Web 技术，我们鼓励大家使用�
 
 ### 虚拟现实（VR）
 
-- [The Polar Sea](http://mozvr.com/demos/polarsea/)（[源码](https://github.com/MozVR/polarsea)）
-- [Sechelt fly-through](http://mozvr.github.io/sechelt/)（[源码](https://github.com/mozvr/sechelt)）
+- The Polar Sea（[源码](https://github.com/MozVR/polarsea)）
+- Sechelt fly-through（[源码](https://github.com/mozvr/sechelt)）
 
 ## CSS
 
