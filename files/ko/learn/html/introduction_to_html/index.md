@@ -36,7 +36,7 @@ l10n:
 - [하이퍼링크 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
   - : 하이퍼링크는 웹을 웹(web, 거미줄, 연결을 의미)으로 만들어주는 것이기 때문에 굉장히 중요합니다. 이 글에서는 링크를 만드는데 필요한 문법을 설명하고, 링크의 사례들을 논의해 봅니다.
 - [텍스트 조작 고급기법](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-  - : HTML에는 텍스트를 조작하기 위한 많은 요소들이 있습니다. [이](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 글에는 다 담을 수는 없습니다. 이 글에서는 잘 알려지진 않았지만 알아두면 굉장히 유용한 요소들을 살펴보겠습니다. 인용구, 설명 목록, 소스 코드 혹은 관련 텍스트, 위첨자, 아래첨자, 연락 정보 등을 마크업 하는 방법을 알아보겠습니다. 
+  - : HTML에는 텍스트를 조작하기 위한 많은 요소들이 있습니다. [이](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 글에는 다 담을 수는 없습니다. 이 글에서는 잘 알려지진 않았지만 알아두면 굉장히 유용한 요소들을 살펴보겠습니다. 인용구, 설명 목록, 소스 코드 혹은 관련 텍스트, 위첨자, 아래첨자, 연락 정보 등을 마크업 하는 방법을 알아보겠습니다.
 - [문서와 웹사이트 구조](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
   - : '문단'이나 '이미지'와 같은 페이지의 부분을 정의하는 것처럼, HTML은 '헤더', '네비게이션 메뉴', '주요 내용 컬럼'과 같은 웹사이트의 영역을 정의하는데도 사용됩니다. 이 글에서는 기본 웹사이트 구조를 설계하는 법을 살펴보고, 이 구조를 표현하기 위해 HTML로 직접 작성해 보겠습니다.
 - [HTML 디버깅](/ko/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
