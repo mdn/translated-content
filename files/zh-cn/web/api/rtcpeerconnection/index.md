@@ -29,7 +29,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 - {{DOMxRef("RTCPeerConnection.currentRemoteDescription", "currentRemoteDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，该对象描述自上次 `RTCPeerConnection` 完成协商并连接到远程对等设备后，最近一次成功协商的连接的远程端。同时也可能包括该描述所代表的提议或应答首次初始化的时候通过 ICE 代理生成的 ICE 候选项列表。
 - {{DOMxRef("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} {{ReadOnlyInline}}
-  - : 返回与此 RTCPeerConnection 关联的 ICE 代理的状态字符串，可以是下列值之一：`new`（新建）、`connecting`（连接中）、`connected`（已连接）、`disconnected`（已断开连接）、`failed`（连接失败）或 `closed`（已关闭）。
+  - : 返回与此 RTCPeerConnection 关联的 ICE 代理的状态字符串，可以是下列值之一：`new`、`checking`、`connected`、`completed`、`failed`、`disconnected` 或 `closed`。
 - {{DOMxRef("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} {{ReadOnlyInline}}
   - : 返回一个描述连接的 ICE 收集状态的字符串。该属性可以检测 ICE 候选者是否已经收集完成，可能返回值有：`new`（新的）、`gathering`（收集中）、`complete`（完成）。
 - {{DOMxRef("RTCPeerConnection.localDescription", "localDescription")}} {{ReadOnlyInline}}
