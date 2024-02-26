@@ -102,7 +102,7 @@ slug: Web/CSS/@counter-style
 29 Twenty Nine
 30 Thirty
 
-查看更多例子 [demo page](https://mdn.github.io/css-counter-style-demo/).
+查看更多例子 [示例页面](https://mdn.github.io/css-examples/counter-style-demo/).
 
 ## 规范
 
