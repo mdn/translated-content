@@ -53,7 +53,7 @@ slug: Web/HTML/Element/blockquote
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
-        >、節點根、可觸摸內容。
+        >、章節根、捫及內容 。
       </td>
     </tr>
     <tr>
