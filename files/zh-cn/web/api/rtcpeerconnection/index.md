@@ -21,23 +21,23 @@ l10n:
 _也从 {{domxref("EventTarget")}} 继承属性。_
 
 - {{DOMxRef("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} {{ReadOnlyInline}}
-  - : 返回一个布尔值，指示远程对等方是否可以接受[trickled ICE candidates](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice)。
+  - : 返回一个布尔值，指示远程对等方是否可以接受[涓流 ICE 候选](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice)。
 - {{DOMxRef("RTCPeerConnection.connectionState", "connectionState")}} {{ReadOnlyInline}}
   - : 返回表示连接当前状态的下列字符串之一：`new`（新建）、`connecting`（连接中）、`connected`（已连接）、`disconnected`（已断开连接）、`failed`（连接失败）或 `closed`（已关闭）。
 - {{DOMxRef("RTCPeerConnection.currentLocalDescription", "currentLocalDescription")}} {{ReadOnlyInline}}
-  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，该对象描述最后完成协商并连接的的本地连接描述。同时也可能包括首次初始化的时候通过 ICE 代理生成的 ICE 候选项列表。
+  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，该对象描述自上次 `RTCPeerConnection` 完成协商并连接到远程对等设备后，最近一次成功协商的连接的本地端。同时也可能包括该描述所代表的提议或应答首次初始化的时候通过 ICE 代理生成的 ICE 候选项列表。
 - {{DOMxRef("RTCPeerConnection.currentRemoteDescription", "currentRemoteDescription")}} {{ReadOnlyInline}}
-  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，该对象描述自最后完成协商并连接的远程连接描述。同时也可能包括首次初始化的时候通过 ICE 代理生成的 ICE 候选项列表。
+  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，该对象描述自上次 `RTCPeerConnection` 完成协商并连接到远程对等设备后，最近一次成功协商的连接的远程端。同时也可能包括该描述所代表的提议或应答首次初始化的时候通过 ICE 代理生成的 ICE 候选项列表。
 - {{DOMxRef("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} {{ReadOnlyInline}}
   - : 返回与此 RTCPeerConnection 关联的 ICE 代理的状态字符串，可以是下列值之一：`new`（新建）、`connecting`（连接中）、`connected`（已连接）、`disconnected`（已断开连接）、`failed`（连接失败）或 `closed`（已关闭）。
 - {{DOMxRef("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} {{ReadOnlyInline}}
-  - : 返回一个描述连接的 ICE 收集状态的字符串。该属性可以检测 ICE 收集候选者的收集状态是否已经完成，可能返回值有： `new`（新的）、`gathering`（收集中）、`complete`（完成）。
+  - : 返回一个描述连接的 ICE 收集状态的字符串。该属性可以检测 ICE 候选者是否已经收集完成，可能返回值有：`new`（新的）、`gathering`（收集中）、`complete`（完成）。
 - {{DOMxRef("RTCPeerConnection.localDescription", "localDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}}，代表这条连接的本地端的会话描述。如果本地的会话描述还没有被设置，返回 `null`。
 - {{DOMxRef("RTCPeerConnection.peerIdentity", "peerIdentity")}} {{ReadOnlyInline}}
   - : 返回一个兑现为标识远程对等端 {{DOMxRef("RTCIdentityAssertion")}}（其包含标识对等端身份的字符串）的 {{jsxref("Promise")}}。一旦这个 `Promise` 成功兑现，得到的身份信息就是目标对等端的身份信息，并且在连接期间不会改变。
 - {{DOMxRef("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} {{ReadOnlyInline}}
-  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，描述连接本地端的待定配置更改。这不是描述当前连接的状态，而是描述可能将存在的状态。
+  - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，描述本地连接端的待定配置更改。这不是描述当前连接的状态，而是描述可能将存在的状态。
 - {{DOMxRef("RTCPeerConnection.pendingRemoteDescription", "pendingRemoteDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSessionDescription")}} 对象，描述远程连接端的待定配置更改。这不是描述当前连接的状态，而是描述可能将存在的状态。
 - {{DOMxRef("RTCPeerConnection.remoteDescription", "remoteDescription")}} {{ReadOnlyInline}}
@@ -45,7 +45,7 @@ _也从 {{domxref("EventTarget")}} 继承属性。_
 - {{DOMxRef("RTCPeerConnection.sctp", "sctp")}} {{ReadOnlyInline}}
   - : 返回一个 {{DOMxRef("RTCSctpTransport")}} 对象，该对象描述了发送和接收 SCTP 数据所使用的 {{Glossary("SCTP")}} 传输层。如果 SCTP 尚未协商完成，则该值为 `null`。
 - {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} {{ReadOnlyInline}}
-  - : 返回一个字符串，说明在连接或重新连接另一个对等端时，连接本地端的信令进程的状态。它是以下值之一： `stable`（稳定）、`have-local-offer`（有本地提议）、`have-remote-offer`（有远程提议）、`have-local-pranswer`（有本地预答）、`have-remote-pranswer`（有远程预答）、`closed`（关闭）。
+  - : 返回一个字符串，说明在连接或重新连接另一个对等端时，连接本地端的信令进程的状态。它是以下值之一：`stable`（稳定）、`have-local-offer`（有本地提议）、`have-remote-offer`（有远程提议）、`have-local-pranswer`（有本地预答）、`have-remote-pranswer`（有远程预答）、`closed`（关闭）。
 
 ## 静态方法
 
@@ -89,7 +89,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.setConfiguration", "setConfiguration()")}}
   - : 根据指定对象中的值设置连接的当前配置信息。这样你就可以更改连接使用的 {{Glossary("ICE")}} 服务器以及使用的传输策略。
 - {{DOMxRef("RTCPeerConnection.setIdentityProvider", "setIdentityProvider()")}}
-  - : 给身份提供商 (IdP) 的设置用于通讯与其的 `name` 、 `protocol` 参数和 `username` 三个参数，其中 `protocol` 和 `username` 为可选参数。
+  - : 将身份供应商（IdP）设置为参数中给出的三元组：名称（`name`）、用于与其通信的协议（`protocol`）和用户名（`username`），其中 `protocol` 和 `username` 为可选参数。
 - {{DOMxRef("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}
   - : 修改与连接关联的本地描述，此描述指定连接的本地端的连接属性，包括媒体格式。此方法返回一个 {{jsxref("Promise")}}, 配置修改成功后，该 `Promise` 状态才会变更为 `fulfilled`，这是一个异步操作。
 - {{DOMxRef("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}
@@ -125,14 +125,14 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
   - : 当连接的 {{Glossary("ICE")}} 信令状态发生变更时触发。
 - {{domxref("RTCPeerConnection.track_event", "track")}}
-  - : 当新的轨道添加到连接中的 {{domxref("RTCRtpReceiver")}} 时触发。
+  - : 当新的轨道添加到连接中的 {{domxref("RTCRtpReceiver")}} 实例时触发。
 
 ## 废弃事件
 
 - {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 当新的 {{domxref("MediaStream")}} 添加到连接时触发。请使用 {{domxref("RTCPeerConnection.track_event", "track")}} 事件替代。
+  - : 当新的 {{domxref("MediaStream")}} 添加到连接时触发。与其监听这个过时的事件，不如监听 {{domxref("RTCPeerConnection.track_event", "track")}} 事件；每向连接添加一个 {{domxref("MediaStreamTrack")}}，就会触发一次。
 - {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 当 {{domxref("MediaStream")}} 被移除时触发。请使用 {{domxref("MediaStream.removetrack_event", "removetrack")}} 事件替代。
+  - : 当 {{domxref("MediaStream")}} 被移除时触发。与其监听这个过时的事件，不如在每个流上监听 {{domxref("MediaStream.removetrack_event", "removetrack")}} 事件。
 
 ## 规范
 
@@ -146,4 +146,4 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 
 - <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
 - [WebRTC 入门](https://web.dev/articles/webrtc-basics)
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom)：Node.js HTML 视频，点对点视频和文件共享（[GitHub 上的源代码](https://github.com/chrisjohndigital/TutorRoom)）
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom)：Node.js HTML 视频捕获，点对点视频和文件共享应用（[GitHub 上的源代码](https://github.com/chrisjohndigital/TutorRoom)）
