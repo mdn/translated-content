@@ -41,7 +41,7 @@ let doc = domparser.parseFromString(string, mimeType);
   - : 要解析的 {{domxref("DOMString")}}。它必须包含 {{Glossary("HTML")}}、{{Glossary("xml")}}、{{Glossary("xhtml+xml")}} 或 {{Glossary("svg")}} 文档。
 - `mimeType`
 
-  - : 一个 {{domxref("DOMString")}}。This string determines a class of the the method's return value. The possible values are the following:
+  - : 一个 {{domxref("DOMString")}}。这个字符串决定方法返回值的类。可能的取值有：
 
 | `mimeType`              | doc.constructor            |
 | ----------------------- | -------------------------- |
