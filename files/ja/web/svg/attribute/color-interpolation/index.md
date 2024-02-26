@@ -2,7 +2,7 @@
 title: color-interpolation
 slug: Web/SVG/Attribute/color-interpolation
 l10n:
-  sourceCommit: eca1c1c2dfd430d6b7942b0f73128c4c0831e5c1
+  sourceCommit: 8a818c64bd0bcca2dda90a1b89d2a1c966a33c55
 ---
 
 {{SVGRef}}
