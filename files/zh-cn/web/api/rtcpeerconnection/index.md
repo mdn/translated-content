@@ -65,11 +65,11 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{DOMxRef("RTCPeerConnection.close", "close()")}}
   - : 关闭当前连接，释放所有资源。
 - {{DOMxRef("RTCPeerConnection.createAnswer", "createAnswer()")}}
-  - : 发起创建 {{Glossary("SDP")}} 应答（answer），以响应来自远程对等方的邀请（offer），在 `WebRTC` 连接的邀请（offer）/应答（answer）协商过程中。应答包含会话中已附加的媒体、编解码器和浏览器支持的其它选项，以及已收集的 {{Glossary("ICE")}} 候选者的信息。
+  - : 发起创建 {{Glossary("SDP")}} 应答（answer），以响应来自远程对等方的提议（offer），在 `WebRTC` 连接的提议/应答协商过程中。应答包含会话中已附加的媒体、编解码器和浏览器支持的其它选项，以及已收集的 {{Glossary("ICE")}} 候选者的信息。
 - {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}}
   - : 创建一个与远程对等连接的新通道，该通道可以传输任何类型的数据。例如图像、文件传输、文本聊天、游戏更新包等。
 - {{DOMxRef("RTCPeerConnection.createOffer", "createOffer()")}}
-  - : 创建一个信息 {{Glossary("SDP")}} 邀请（offer），以启动与远程对等方的新 WebRTC 连接。SDP 邀请（offer）的内容包括已附加到 WebRTC 会话、编解码器和浏览器支持的选项的任何 {{DOMxRef("MediaStreamTrack")}} 对象的信息，以及 {{Glossary("ICE")}} 代理已收集的任何候选信息，目的是通过信令信道发送给潜在对等方，以请求连接或更新现有连接的配置。
+  - : 创建一个信息 {{Glossary("SDP")}} 提议（offer），以启动与远程对等方的新 WebRTC 连接。SDP 提议（offer）的内容包括已附加到 WebRTC 会话、编解码器和浏览器支持的选项的任何 {{DOMxRef("MediaStreamTrack")}} 对象的信息，以及 {{Glossary("ICE")}} 代理已收集的任何候选信息，目的是通过信令信道发送给潜在对等方，以请求连接或更新现有连接的配置。
 - {{DOMxRef("RTCPeerConnection.getConfiguration", "getConfiguration()")}}
   - : 返回一个包含当前连接配置的对象。
 - {{DOMxRef("RTCPeerConnection.getIdentityAssertion", "getIdentityAssertion()")}}
@@ -121,7 +121,7 @@ _也从 {{DOMxRef("EventTarget")}} 继承方法。_
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
   - : 当 {{Glossary("ICE")}} 的收集状态 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} 发生变更时触发，状态值表示 ICE 协商状态：`new`（尚未开始协商）、`gathering`（开始收集候选者）、`completed`（协商完成）。
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
-  - : 当 {{Glossary("ICE")}} 连接需要协商或重新协商时触发，在第一次打开连接时或者网络发生变更时都会触发该事件，接收方应通过创建邀请并将其发送给另一对等方来进行响应。
+  - : 当 {{Glossary("ICE")}} 连接需要协商或重新协商时触发，在第一次打开连接时或者网络发生变更时都会触发该事件，接收方应通过创建提议并将其发送给另一对等方来进行响应。
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
   - : 当连接的 {{Glossary("ICE")}} 信令状态发生变更时触发。
 - {{domxref("RTCPeerConnection.track_event", "track")}}
