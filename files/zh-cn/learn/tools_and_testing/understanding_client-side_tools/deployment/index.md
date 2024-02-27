@@ -99,6 +99,7 @@ l10n:
    现在来试试吧！
 
 要创建自己的项目实例，需要在自己的 Git 仓库中托管该项目的代码。下一步就是将项目推送到 GitHub。
+
 ## 将更改提交至 GitHub
 
 本节将带你跨过将代码存储到 git 仓库的门槛，但它与 git 教程相去甚远。我们的[Git 和 GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub)页面也是一个很好的开始。
@@ -206,6 +207,7 @@ git status
    git commit -m '简单的 netlify 测试'
    git push github main
    ```
+
    你应该会看到已发布的网站更新了更改内容——发布可能需要几分钟时间，请耐心等待。
 
 Netlify 就到此为止。我们可以选择更改 Netlify 项目的名称或指定使用我们自己的域名，Netlify 提供了一些有关域名的[优秀文档](https://docs.netlify.com/)。
