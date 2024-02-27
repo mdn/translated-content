@@ -33,7 +33,7 @@ find(
   - : 論理値です。 `true` の場合、後方検索を行います。
 - `aWrapAround`
   - : 論理値です。 `true` の場合、折り返し検索を行います。
-- `aWholeWord` {{Unimplemented_Inline}}
+- `aWholeWord`
   - : 論理値です。 `true` の場合、完全一致検索を行います。これは実装されていません。 [Firefox バグ 481513](https://bugzil.la/481513) を参照してください。
 - `aSearchInFrames`
   - : 論理値です。 `true` の場合、フレーム内の検索を行います。
