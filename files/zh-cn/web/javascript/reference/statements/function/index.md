@@ -32,13 +32,13 @@ function name(param0, param1, /* …, */ paramN) {
 - `name`
   - : 函数名称。
 - `param` {{optional_inline}}
-  - : 函数的形参名称。不同引擎中的最大参数数量有所不同。有关参数的语法，请参阅[函数参数](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数参数)。
+  - : 函数的形参名称。不同引擎中的最大参数数量有所不同。有关参数的语法，请参阅[函数参考](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数参数)。
 - `statements` {{optional_inline}}
   - : 构成函数体的语句。
 
 ## 描述
 
-`function` 声明创建一个 {{jsxref("Function")}} 对象。每次调用函数时，都会返回最后执行的 {{jsxref("Statements/return", "return")}} 语句的值，如果执行直到函数体的结尾，则返回 `undefined`。请参见[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)获取有关函数的详细信息。
+`function` 声明创建一个 {{jsxref("Function")}} 对象。每次调用函数时，都会返回最后执行 {{jsxref("Statements/return", "return")}} 语句所指定的值，如果执行直到函数体的结尾，则返回 `undefined`。请参见[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)以获取有关函数的详细信息。
 
 `function` 声明行为上就像 {{jsxref("Statements/var", "var")}} 和 {{jsxref("Statements/let", "let")}} 的混合：
 
@@ -46,7 +46,7 @@ function name(param0, param1, /* …, */ paramN) {
 - 与 `let` 类似，模块顶层或严格模式下的块内的函数声明不能被任何其他声明[重新声明](#重新声明)。
 - 与 `var` 类似，脚本顶层（无论是否处于严格模式）的函数声明会成为 {{jsxref("globalThis")}} 的属性。脚本顶层或函数体（无论是否处于严格模式）中的函数声明可以被另一个 `function` 或 `var` 重新声明。
 - 与两者类似，函数声明可以被重新赋值，但是应该避免这样做。
-- 与两者不同，函数声明与其值一起[提升](#函数声明提升)，并且可以在其范围内的任何位置调用。
+- 与两者不同，函数声明与其值一起[提升](#函数声明提升)，并且可以在其作用域内的任何位置调用。
 
 ### 块级作用域的函数声明
 
@@ -56,9 +56,9 @@ function name(param0, param1, /* …, */ paramN) {
 
 ```js
 console.log(
-  `'foo' 名称 ${
+  `“foo”名称${
     "foo" in globalThis ? "是" : "不是"
-  } 全局的。typeof foo 等于 ${typeof foo}`,
+  }全局的。typeof foo 等于 ${typeof foo}`,
 );
 if (false) {
   function foo() {
@@ -67,22 +67,22 @@ if (false) {
 }
 
 // 在 Chrome 中：
-// 'foo' 名称是全局的。typeof foo 等于 undefined
+// “foo”名称是全局的。typeof foo 等于 undefined
 //
 // 在 Firefox 中：
-// 'foo' 名称是全局的。typeof foo 等于 undefined
+// “foo”名称是全局的。typeof foo 等于 undefined
 //
 // 在 Safari 中：
-// 'foo' 名称是全局的。typeof foo 等于 function
+// “foo”名称是全局的。typeof foo 等于 function
 ```
 
 无论 `if` 语句是否实际执行，作用域和提升效果都不会改变。
 
 ```js
 console.log(
-  `'foo' 名称 ${
+  `“foo”名称${
     "foo" in globalThis ? "是" : "不是"
-  } 全局的。typeof foo 等于 ${typeof foo}`,
+  }全局的。typeof foo 等于 ${typeof foo}`,
 );
 if (true) {
   function foo() {
@@ -91,13 +91,13 @@ if (true) {
 }
 
 // 在 Chrome 中：
-// 'foo' 名称是全局的。typeof foo 等于 undefined
+// “foo”名称是全局的。typeof foo 等于 undefined
 //
 // 在 Firefox 中：
-// 'foo' 名称是全局的。typeof foo 等于 undefined
+// “foo”名称是全局的。typeof foo 等于 undefined
 //
 // 在 Safari 中：
-// 'foo' 名称是全局的。typeof foo 等于 function
+// “foo”名称是全局的。typeof foo 等于 function
 ```
 
 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，[块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)级作用域的函数声明的作用域为该块，并且会提升到该块的顶部。
@@ -113,11 +113,11 @@ if (true) {
 }
 
 console.log(
-  `'foo' 名称 ${
+  `“foo”名称${
     "foo" in globalThis ? "是" : "不是"
-  } 全局的。typeof foo 等于 ${typeof foo}`,
+  }全局的。typeof foo 等于 ${typeof foo}`,
 );
-// 'foo' 名称不是全局的。typeof foo 等于 undefined
+// “foo”名称不是全局的。typeof foo 等于 undefined
 ```
 
 ### 函数声明提升
@@ -155,7 +155,7 @@ console.log(a.length); // 2
 let a = 2; // SyntaxError: Identifier 'a' has already been declared
 ```
 
-当 `function` 声明被 `var` 重新声明时，无论它们的相对位置如何，`var` 声明的初始化器总是会覆盖函数的值。这是因为函数声明会在任何初始化器被解析之前被提升，所以初始化器随后的执行会覆盖函数的值。
+当 `function` 声明被 `var` 重新声明时，无论它们的相对位置如何，`var` 声明的初始化器总是会覆盖函数的值。这是因为函数声明会在任何初始化器被执行之前被提升，所以初始化器随后的执行会覆盖函数的值。
 
 ```js
 var a = 1;
@@ -177,7 +177,7 @@ foo(2); // 打印 "function"
 在模块顶层或严格模式下的块级作用域中，`function` 声明的行为类似于 `let`，不能被任何其他声明重新声明。
 
 ```js-nolint example-bad
-// Assuming current source is a module
+// 假定当前源码在模块中
 function foo() {}
 function foo() {} // SyntaxError: Identifier 'foo' has already been declared
 ```
