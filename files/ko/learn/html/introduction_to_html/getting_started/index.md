@@ -453,9 +453,9 @@ textarea.onkeyup = function () {
 이 글에서 모든 속성값은 큰 따옴표에 둘러싸여 있는 것을 볼 수 있습니다. 하지만 당신은 어떤 사람의 HTML에서 작은 따옴표를 볼 수 있을 것입니다. 이 것은 스타일의 문제로, 당신이 좋아하는 방법을 사용하면 됩니다. 아래 두 문장은 똑같이 동작합니다.
 
 ```html-nolint
-<a href="https://www.example.com">A link to my example.</a>
-
 <a href='https://www.example.com'>A link to my example.</a>
+
+<a href="https://www.example.com">A link to my example.</a>
 ```
 
 주의해야할 점은 두 개를 섞어 쓰면 안된다는 것입니다. 다음은 잘못 사용한 예입니다.
