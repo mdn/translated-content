@@ -43,5 +43,5 @@ foo -= 2n; // 1n
 
 ## Véase también
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Subtraction (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Assignment operators in the JS guide](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Subtraction (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
