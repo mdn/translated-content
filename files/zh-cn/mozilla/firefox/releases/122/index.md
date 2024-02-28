@@ -93,4 +93,4 @@ l10n:
 
 ## 更早期的版本
 
-{{Firefox_for_developers(121)}}
+{{Firefox_for_developers}}
