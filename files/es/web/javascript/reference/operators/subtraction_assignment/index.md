@@ -1,0 +1,47 @@
+---
+title: Asignación de sustracción  (-=)
+slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
+---
+
+{{jsSidebar("Operators")}}
+
+El **operador de asignación de sustracción (`-=`)** realiza una [resta](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction) en los dos operandos y asigna el resultado al operando izquierdo.
+
+{{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
+
+## Sintaxis
+
+```js-nolint
+x -= y
+```
+
+## Descripción
+
+`x -= y` es equivalente a `x = x - y`, exepto que la expresión `x` se evalúa solo una vez.
+
+## Ejemplos
+
+### Usando el operador de asignación de sustracción
+
+```js
+let bar = 5;
+
+bar -= 2; // 3
+bar -= "foo"; // NaN
+
+let foo = 3n;
+foo -= 2n; // 1n
+```
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
+
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Subtraction (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
