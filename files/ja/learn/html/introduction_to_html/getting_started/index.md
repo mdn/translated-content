@@ -441,9 +441,9 @@ textarea.onkeyup = () => {
 この記事では、属性を囲む引用符としてすべて二重引用符 (`"`) を使用しています。しかし HTML コードによっては単一引用符 (`'`) を見ることがあるかもしれません。これは書き方の問題なので、属性値は二重引用符で囲んでも単一引用符で囲んでも構いません。例えば次の 2 つの行は等価です。
 
 ```html-nolint
-<a href="https://www.example.com">A link to my example.</a>
-
 <a href='https://www.example.com'>A link to my example.</a>
+
+<a href="https://www.example.com">A link to my example.</a>
 ```
 
 単一引用符と二重引用符を混在させることはできないことに注意してください。この（以下の）例は引用符を混在させたもので、間違った動作をします。
