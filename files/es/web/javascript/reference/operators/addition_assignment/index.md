@@ -1,11 +1,11 @@
 ---
-title: Asignación de suma (+=)
+title: Asignación de adición (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-El **operador de asignación de suma (`+=`)** realiza una [suma](/es/docs/Web/JavaScript/Reference/Operators/Addition) (que puede ser una suma numérica o una concatenación de cadenas) en los dos operandos y asigna el resultado al operando izquierdo.
+El **operador de asignación de adición (`+=`)** realiza una [suma](/es/docs/Web/JavaScript/Reference/Operators/Addition) (que puede ser una suma numérica o una concatenación de cadenas) en los dos operandos y asigna el resultado al operando izquierdo.
 
 {{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
 
@@ -21,7 +21,7 @@ x += y
 
 ## Ejemplos
 
-### Usando el operador de asignación de suma
+### Usando el operador de asignación de adición
 
 ```js
 let baz = true;
