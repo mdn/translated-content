@@ -445,9 +445,9 @@ Incluya siempre las comillas de los atributos. Evita tales problemas y da como r
 En este artículo, también notarás que los atributos están entre comillas dobles. Sin embargo, es posible que veas comillas simples en algún código HTML. Es una cuestión de estilo. Puedes elegir libremente cuál prefieres. Ambas opciones son equivalentes:
 
 ```html-nolint
-<a href='https://www.example.com'>Un enlace a mi ejemplo.</a>
-
 <a href="https://www.example.com">Un enlace a mi ejemplo.</a>
+
+<a href='https://www.example.com'>Un enlace a mi ejemplo.</a>
 ```
 
 Asegúrate de no mezclar comillas simples y comillas dobles. Este ejemplo (a continuación) muestra una especie de mezcla de comillas que saldrá mal:
