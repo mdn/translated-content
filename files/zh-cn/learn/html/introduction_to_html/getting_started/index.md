@@ -458,9 +458,9 @@ textarea.onkeyup = () => {
 在目前为止，本章内容所有的属性都是由双引号来包裹。然而，你也许在一些 HTML 中也见过单引号。这只是风格的问题，你可以从中选择一个你喜欢的。以下两种情况都可以：
 
 ```html-nolint
-<a href='https://www.example.com'>示例站点链接</a>
-
 <a href="https://www.example.com">示例站点链接</a>
+
+<a href='https://www.example.com'>示例站点链接</a>
 ```
 
 但应该注意单引号和双引号不能在一个属性值里面混用。下面的语法是错误的：
