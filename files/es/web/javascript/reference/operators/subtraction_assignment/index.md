@@ -1,6 +1,8 @@
 ---
 title: Asignación de sustracción  (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
+l10n:
+  sourceCommit: 71cf0cb885d46d83af054ae4df350248e246f006
 ---
 
 {{jsSidebar("Operators")}}
