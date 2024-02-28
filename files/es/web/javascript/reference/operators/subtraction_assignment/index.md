@@ -17,7 +17,7 @@ x -= y
 
 ## Descripción
 
-`x -= y` es equivalente a `x = x - y`, exepto que la expresión `x` se evalúa solo una vez.
+`x -= y` es equivalente a `x = x - y`, exepto que la expresión `x` se evalúa una sola vez.
 
 ## Ejemplos
 
