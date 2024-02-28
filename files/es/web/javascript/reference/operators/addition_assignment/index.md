@@ -73,5 +73,5 @@ x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversion
 
 ## Véase también
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Operadores de asignación en la guía JS](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Adición (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Addition)
