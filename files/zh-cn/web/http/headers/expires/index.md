@@ -38,7 +38,7 @@ l10n:
 Expires: <http-date>
 ```
 
-## 指南
+## 指令
 
 - \<http-date>
   - : HTTP 日期时间戳。
