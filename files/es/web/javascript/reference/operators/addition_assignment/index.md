@@ -1,0 +1,77 @@
+---
+title: Asignación de suma (+=)
+slug: Web/JavaScript/Reference/Operators/Addition_assignment
+---
+
+{{jsSidebar("Operators")}}
+
+El **operador de asignación de suma (`+=`)** realiza una [suma](/es/docs/Web/JavaScript/Reference/Operators/Addition) (que puede ser una suma numérica o una concatenación de cadenas) en los dos operandos y asigna el resultado al operando izquierdo.
+
+{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+
+## Sintaxis
+
+```js-nolint
+x += y
+```
+
+## Descripción
+
+`x += y` es equivalente a `x = x + y`, exepto que la expresión `x` se evalúa solo una vez.
+
+## Ejemplos
+
+### Usando el operador de asignación de suma
+
+```js
+let baz = true;
+
+// Booleano + Número -> adición
+baz += 1; // 2
+
+// Número + Booleano -> adición
+baz += false; // 2
+```
+
+```js
+let foo = "foo";
+
+// Cadena de texto + Booleano -> concatenación
+foo += false; // "foofalse"
+
+// Cadena de texto + Cadena de texto -> concatenación
+foo += "bar"; // "foofalsebar"
+```
+
+```js
+let bar = 5;
+
+// Número + Número -> adición
+bar += 2; // 7
+
+// Número + Cadena de texto -> concatenación
+bar += "foo"; // "7foo"
+```
+
+```js
+let x = 1n;
+
+// BigInt + BigInt -> adición
+x += 2n; // 3n
+
+// BigInt + Número -> devuelve TypeError
+x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
+
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
