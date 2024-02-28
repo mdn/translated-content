@@ -50,6 +50,6 @@ MDN Web 文档的 [GitHub 讨论](https://github.com/orgs/mdn/discussions)是一
 
 每一个本地化团队都有自己的[沟通方式](/zh-CN/docs/MDN/Community/Contributing/Translated_content)。
 
-## 邮件列表
+## 电子邮件
 
-对于任何非公开的沟通内容，请发送电子邮件至 [mdn-admins](mailto:mdn-admins@mozilla.org)。
+对于任何非公开的沟通内容，请发送电子邮件至 [mdn-web-docs@mozilla.com](mailto:mdn-web-docs@mozilla.com)。

@@ -151,4 +151,4 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 先講一下：我們選什麼框架**並不是**因為他們最棒，而是因為我們認同他們：這些框架在較吻合以上的考量要點。
 
-我們以本來希望在一開始包含更多框架，但最後決定先發布，之後再追加其它教學，而非延後。如果屬意的框架沒放進去、而你也想幫忙的話，來和我們聊聊吧！透過 [Matrix](https://wiki.mozilla.org/Matrix)、[Discourse](https://discourse.mozilla.org/c/mdn)、或 [mdn-admins list](mailto:mdn-admins@mozilla.org) 與我們聯繫。
+我們以本來希望在一開始包含更多框架，但最後決定先發布，之後再追加其它教學，而非延後。如果屬意的框架沒放進去而你也想幫忙的話，請隨時[與我們聯繫](/zh-TW/docs/MDN/Community/Communication_channels)。
