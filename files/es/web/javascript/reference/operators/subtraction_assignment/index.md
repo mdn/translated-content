@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 
 {{jsSidebar("Operators")}}
 
-El **operador de asignación de sustracción (`-=`)** realiza una [resta](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction) en los dos operandos y asigna el resultado al operando izquierdo.
+El **operador de asignación de sustracción (`-=`)** realiza una [resta](/es/docs/Web/JavaScript/Reference/Operators/Subtraction) en los dos operandos y asigna el resultado al operando izquierdo.
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
 
