@@ -44,11 +44,11 @@ function* name(param0, param1, /* …, */ paramN) {
 
 `function*` 声明创建一个 {{jsxref("GeneratorFunction")}} 对象。每次调用生成器函数时，它都会返回一个新的 {{jsxref("Generator")}} 对象，该对象符合[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)。当迭代器的 `next()` 方法被调用时，生成器函数的主体会被执行，直到遇到第一个 {{jsxref("Operators/yield", "yield")}} 表达式，该表达式指定了迭代器要返回的值，或者用 {{jsxref("Operators/yield*", "yield*")}} 委托给另一个生成器函数。`next()` 方法返回一个对象，其 `value` 属性包含了 `yield` 表达式的值，`done` 属性是布尔类型，表示生成器是否已经返回了最后一个值。如果 `next()` 方法带有参数，那么它会恢复生成器函数的执行，并用参数替换暂停执行的 `yield` 表达式。
 
-在 JavaScript 中，生成器——尤其是与 Promises 结合使用时——是一种非常强大的异步编程工具，它们解决了回调函数存在的一些的问题，如[回调地狱](http://callbackhell.com/)和[控制反转](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/)。然而，通过使用 {{jsxref("Statements/async_function", "async functions", "", 1)}}，我们可以更简单地解决这些问题。
+在 JavaScript 中，生成器——尤其是与 Promises 结合使用时——是一种非常强大的异步编程工具，它们解决了回调函数存在的一些的问题，如[回调地狱](http://callbackhell.com/)和[控制反转](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/)。然而，通过使用{{jsxref("Statements/async_function", "异步函数", "", 1)}}，我们可以更简单地解决这些问题。
 
 在生成器中执行 `return` 语句会使生成器结束（即返回的对象的 `done` 属性将被设置为 `true`）。如果返回一个值，它将被设置为生成器返回的对象的 `value` 属性。与 `return` 语句类似，如果生成器内部抛出错误，生成器也会结束，除非在生成器的代码体内捕获该错误。当生成器结束后，后续 `next()` 调用不会执行生成器的任何代码，只会返回一个形如 `{value: undefined, done: true}` 的对象。
 
-`function*` 声明的行为与 {{jsxref("Statements/function", "function")}} 声明类似——它们会被[提升](/zh-CN/glossary/Hoisting)到其作用域的顶部，并且可以在当前作用域的任何位置被调用，只能在特定的上下文中被重新声明。
+`function*` 声明的行为与 {{jsxref("Statements/function", "function")}} 声明类似——它们会被[提升](/zh-CN/docs/Glossary/Hoisting)到其作用域的顶部，并且可以在当前作用域的任何位置被调用，且只能在特定的上下文中被重新声明。
 
 ## 示例
 
@@ -194,7 +194,7 @@ function* f() {}
 const obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
-### 在表达式中定义的生成器
+### 使用表达式定义生成器
 
 ```js
 const foo = function* () {
