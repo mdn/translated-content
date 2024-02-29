@@ -2,7 +2,6 @@
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 ---
-
 {{JSRef}}
 
 O método **`at()`** recebe um valor inteiro e retorna o item referente ao index dele, permitindo valores positivos ou negativos. Valores negativos contam apartir do último item do array.
@@ -53,7 +52,7 @@ console.log(item2); // 'orange'
 
 ### Comparando métodos
 
-Este exemplo compara a diferentes maneiras de selecionar o penúltimo item de um {{jsxref('Array')}}.
+Este exemplo compara as diferentes maneiras de selecionar o penúltimo item de um {{jsxref('Array')}}.
 Todos os métodos abaixos são válidos, mas este exemplo destaca a sucintez e legibilidade do método `at()`.
 
 ```js
