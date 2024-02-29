@@ -56,7 +56,7 @@ console.log(+y);
 
 ## Véase también
 
-- [Adición (`+`)](es/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Adición (`+`)](/es/docs/Web/JavaScript/Reference/Operators/Addition)
 - [Sustracción (`-`)](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
 - [División (`/`)](/es/docs/Web/JavaScript/Reference/Operators/Division)
 - [Multiplicación (`*`)](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
