@@ -5,7 +5,7 @@ slug: Web/HTML/Element/area
 
 {{HTMLSidebar}}
 
-El elemento **`<area>`** [HTML](/en-US/docs/Web/HTML) define un área dentro de un mapa de imagen que tiene áreas cliqueables predefinidas. Un mapa de imágen permite que áreas geométricas en una imagen sean asociadas con un {{Glossary("Hyperlink", "hypertext links")}}.
+El elemento **`<area>`** [HTML](/es/docs/Web/HTML) define un área dentro de un mapa de imagen que tiene áreas cliqueables predefinidas. Un mapa de imágen permite que áreas geométricas en una imagen sean asociadas con un {{Glossary("Hyperlink", "hypertext links")}}.
 
 Este elemento solo es usado dentro de un elemento {{HTMLElement("map")}}.
 
@@ -13,7 +13,7 @@ Este elemento solo es usado dentro de un elemento {{HTMLElement("map")}}.
 
 ## Atributos
 
-Los atributos de este elemento incluyen los [atributos globales](/en-US/docs/Web/HTML/Global_attributes).
+Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - `alt`
   - : Una línea de texto alternativo que se reproduce en navegadores si no se reproduce la imagen o en lectores de pantalla.
@@ -25,17 +25,17 @@ Los atributos de este elemento incluyen los [atributos globales](/en-US/docs/Web
     Este atributo debe ser usado si el atributo `shape` está establecido en `default`.
 
     - `rect`: el valor es `x1,y1,x2,y2`.
-     El valor especifica las coordenadas de la esquina top-left y de la esquina bottom-right del rectangulo.
-      Por ejemplo, en `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` las coordinadas son `0,0` y `253,27`, indicando  las esquinas top-left y bottom-right del rectángulo, respectivamente.
+      El valor especifica las coordenadas de la esquina top-left y de la esquina bottom-right del rectangulo.
+      Por ejemplo, en `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` las coordinadas son `0,0` y `253,27`, indicando las esquinas top-left y bottom-right del rectángulo, respectivamente.
     - `circle`: el valor es `x,y,radius`. Este valor especifica las coordenadas del centro del círculo y el radio del mismo.
-     Por ejemplo: `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
+      Por ejemplo: `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
     - `poly`: el valor es `x1,y1,x2,y2,..,xn,yn`. Este valor especifica las coordenadas de los bordes de el polígono.
       Si los primeros y últimos pares de coordenadas no son los mismos, el navegador añadirá el último par de coordenadas para cerrar el polígono.
-    Los valores son numeros de píxeles de CSS.
+      Los valores son numeros de píxeles de CSS.
 
 - `download`
   - Este atributo indica que el autor pretende que el hipervínculo sea usado para descargar un recurso.
-    Véase {{HTMLElement("a")}} para una descripción completa del atributo [`download`](/en-US/docs/Web/HTML/Element/a#download).
+    Véase {{HTMLElement("a")}} para una descripción completa del atributo [`download`](/es/docs/Web/HTML/Element/a#download).
 - `href`
   - Se utiliza para incluir un hipervínculo para el área.
     Su valor debe ser un URL valido.
@@ -44,16 +44,17 @@ Los atributos de este elemento incluyen los [atributos globales](/en-US/docs/Web
   - Contiene una lista de URLs separada por espacios a las que, cuando se sigue el hipervínculo, el navegador enviará solicitudes {{HTTPMethod("POST")}} con el cuerpo `PING` (en segundo plano).
     Típicamente utlizado para el rastreo.
 - `referrerpolicy`
+
   - Indica que referente será utilizado cuando se recoja el recurso:
 
     - `no-referrer`: El {{HTTPHeader("Referer")}} no sera enviado.
     - `no-referrer-when-downgrade`: El {{HTTPHeader("Referer")}} no sera enviado al {{Glossary("origin")}} sin {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: El {{HTTPHeader("Referer")}} enviado será limitado al origen de la página de referencia: su [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, y {{Glossary("port")}}.
+    - `origin`: El {{HTTPHeader("Referer")}} enviado será limitado al origen de la página de referencia: su [scheme](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, y {{Glossary("port")}}.
     - `origin-when-cross-origin`: El {{HTTPHeader("Referer")}} enviado será limitado al esquema, {{Glossary("host")}} y el {{Glossary("port")}}. Las navegaciones del mismo origen seran aun incluidas en el camino.
     - `same-origin`: Un {{HTTPHeader("Referer")}} será enviado para el {{Glossary("Same-origin policy", "same origin")}}, Sin embargo, las solicitudes de origen cruzado no contendrán información de referencia.
     - `strict-origin`: Solo envía el origen del documento como el {{HTTPHeader("Referer")}} cuando el nivel del protocolo de seguridad se mantiene igual (HTTPS→HTTPS), pero no lo envía si el destino es menos seguro, como un HTTP.
     - `strict-origin-when-cross-origin` (default): Envia un URL completo cuando se realiza una solicitud del mismo origen, Solo envía el origen cuando el protocolo de seguridad es el mismo (HTTPS→HTTP).
-    - `unsafe-url`: El {{HTTPHeader("Referer")}} incluira el origen y ruta pero no la [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), o [username](/en-US/docs/Web/API/HTMLAnchorElement/username), ya que filtra los origenes y las rutas de acceso a los recursos protegidos TLS.
+    - `unsafe-url`: El {{HTTPHeader("Referer")}} incluira el origen y ruta pero no la [fragment](/es/docs/Web/API/HTMLAnchorElement/hash), [password](/es/docs/Web/API/HTMLAnchorElement/password), o [username](/es/docs/Web/API/HTMLAnchorElement/username), ya que filtra los origenes y las rutas de acceso a los recursos protegidos TLS.
 
 - `rel`
   - Para anclas que contengan el atributo [`href`](#href), este atributo especifica la relación entre el destino del link con el del objeto del link.
@@ -75,7 +76,7 @@ Los atributos de este elemento incluyen los [atributos globales](/en-US/docs/Web
 
     Usa este atributo solo si esta presente el atributo [`href`](#href).
 
-    > **Nota:** Si se ajusta `target="_blank"` en el elemento `<area>` implicitamente provoca el mismo comportamiento `rel` que si se ocupara [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) que no establece `window.opener`. Véase también [Compatibilidad con navegadores](#browser_compatibility).
+    > **Nota:** Si se ajusta `target="_blank"` en el elemento `<area>` implicitamente provoca el mismo comportamiento `rel` que si se ocupara [`rel="noopener"`](/es/docs/Web/HTML/Attributes/rel/noopener) que no establece `window.opener`. Véase también [Compatibilidad con navegadores](#browser_compatibility).
 
 ## Ejemplos
 
@@ -102,19 +103,17 @@ Los atributos de este elemento incluyen los [atributos globales](/en-US/docs/Web
 
 {{ EmbedLiveSample('Examples', 360, 160) }}
 
-
-
 ## Resumen Técnico
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Categorias de Contenido</a>
+        <a href="/es/docs/Web/HTML/Content_categories">Categorias de Contenido</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        <a href="/es/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -128,14 +127,14 @@ Los atributos de este elemento incluyen los [atributos globales](/en-US/docs/Web
     <tr>
       <th scope="row">Elementos padre permitidos</th>
       <td>
-        Cualquier elemento que acepte <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">contenido redactable</a>. El elemento <code>&#x3C;area></code> debe tener como ancestro un elemento {{HTMLElement("map")}}, pero no es necesario que este sea el padre directo.
+        Cualquier elemento que acepte <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">contenido redactable</a>. El elemento <code>&#x3C;area></code> debe tener como ancestro un elemento {{HTMLElement("map")}}, pero no es necesario que este sea el padre directo.
       </td>
     </tr>
     <tr>
       <th scope="row">Rol ARIA implícito</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> cuando el atributo <a href="/en-US/docs/Web/HTML/Element/area#href"><code>href</code></a> esta presente, si no lo esta es
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> cuando el atributo <a href="/es/docs/Web/HTML/Element/area#href"><code>href</code></a> esta presente, si no lo esta es
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
