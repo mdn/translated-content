@@ -18,7 +18,7 @@ slug: Web/CSS/box-flex
 -webkit-box-flex: 2;
 -webkit-box-flex: 3.5;
 
-/* Global values */
+/* グローバル値 */
 -moz-box-flex: inherit;
 -moz-box-flex: initial;
 -moz-box-flex: unset;
