@@ -7,7 +7,7 @@ slug: Glossary/Regular_expression
 
 **Expressões regulares** (ou _regex_) são regras que definem quais sequências de caracteres aparece em uma busca.
 
-Expressões regulares são implementadas em várias linguagens, mas a implementação mais conhecida é a do Pearl, a qual deu origem ao seu próprio ecossistema de implementações chamado de PCRE (_Perl Compatible Regular Expression_). Na Web, o {{glossary("JavaScript")}} provê outra implementação da regex por meio do objeto {{jsxref("RegExp")}}.
+Expressões regulares são implementadas em várias linguagens, mas a implementação mais conhecida é a do Perl, a qual deu origem ao seu próprio ecossistema de implementações chamado de PCRE (_Perl Compatible Regular Expression_). Na Web, o {{glossary("JavaScript")}} provê outra implementação da regex por meio do objeto {{jsxref("RegExp")}}.
 
 ## Veja também
 
