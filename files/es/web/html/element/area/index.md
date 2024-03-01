@@ -1,11 +1,13 @@
 ---
 title: "<area>: El elemento área de un mapa de imagen"
 slug: Web/HTML/Element/area
+l10n:
+  sourceCommit: 1d62348c03b9a3afa762124de570ae11411562cc
 ---
 
 {{HTMLSidebar}}
 
-El elemento **`<area>`** [HTML](/es/docs/Web/HTML) define un área dentro de un mapa de imagen que tiene áreas cliqueables predefinidas. Un mapa de imágen permite que áreas geométricas en una imagen sean asociadas con un {{Glossary("Hyperlink", "hypertext links")}}.
+El elemento **`<area>`** [HTML](/es/docs/Web/HTML) define un área dentro de un mapa de imagen que tiene áreas cliqueables predefinidas. Un mapa de imágen permite que áreas geométricas en una imagen sean asociadas con un {{Glossary("Hyperlink", "hipervínculo")}}.
 
 Este elemento solo es usado dentro de un elemento {{HTMLElement("map")}}.
 
@@ -16,17 +18,17 @@ Este elemento solo es usado dentro de un elemento {{HTMLElement("map")}}.
 Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - `alt`
-  - : Una línea de texto alternativo que se reproduce en navegadores si no se reproduce la imagen o en lectores de pantalla.
-    El texto debe ser redactado de modo que el usuario tenga el mismo tipo de elección a si la imagen fuese reproducida sin el texto alternativo.
-    Este atributo es solo requerido si se usa el atributo [`href`](#href).
+  - : Una línea de texto alternativo que se muestra en los navegadores o en lectores de pantalla, si no se muestra la imagen.
+    El texto debe ser redactado de modo que el usuario tenga el mismo tipo de elección a si la imagen fuese mostrada sin el texto alternativo.
+    Este atributo solo es requerido si se usa el atributo [`href`](#href).
 - `coords`
 
-  - El atributo `coords` detalla las coordenadas del atributo [`shape`](#shape) en tamaño, forma, y posicionamiento del `<area>`.
+  - : El atributo `coords` detalla las coordenadas del atributo [`shape`](#shape) en tamaño, forma, y posicionamiento del `<area>`.
     Este atributo debe ser usado si el atributo `shape` está establecido en `default`.
 
     - `rect`: el valor es `x1,y1,x2,y2`.
-      El valor especifica las coordenadas de la esquina top-left y de la esquina bottom-right del rectangulo.
-      Por ejemplo, en `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` las coordinadas son `0,0` y `253,27`, indicando las esquinas top-left y bottom-right del rectángulo, respectivamente.
+      El valor especifica las coordenadas de la esquina superior izquierda y de la esquina inferior derecha del rectangulo.
+      Por ejemplo, en `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` las coordinadas son `0,0` y `253,27`, indicando las esquinas superior izquierda e inferior derecha del rectángulo, respectivamente.
     - `circle`: el valor es `x,y,radius`. Este valor especifica las coordenadas del centro del círculo y el radio del mismo.
       Por ejemplo: `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
     - `poly`: el valor es `x1,y1,x2,y2,..,xn,yn`. Este valor especifica las coordenadas de los bordes de el polígono.
@@ -34,27 +36,27 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
       Los valores son numeros de píxeles de CSS.
 
 - `download`
-  - Este atributo indica que el autor pretende que el hipervínculo sea usado para descargar un recurso.
+  - : Este atributo indica que el autor pretende que el hipervínculo sea usado para descargar un recurso.
     Véase {{HTMLElement("a")}} para una descripción completa del atributo [`download`](/es/docs/Web/HTML/Element/a#download).
 - `href`
-  - Se utiliza para incluir un hipervínculo para el área.
+  - : Se utiliza para incluir un hipervínculo para el área.
     Su valor debe ser un URL valido.
     Este atributo puede ser omitido, si es así, el elemento `<area>` no representará un hipervínculo.
 - `ping`
-  - Contiene una lista de URLs separada por espacios a las que, cuando se sigue el hipervínculo, el navegador enviará solicitudes {{HTTPMethod("POST")}} con el cuerpo `PING` (en segundo plano).
+  - : Contiene una lista de URLs separada por espacios a las que, cuando se sigue el hipervínculo, el navegador enviará solicitudes {{HTTPMethod("POST")}} con el cuerpo `PING` (en segundo plano).
     Típicamente utlizado para el rastreo.
 - `referrerpolicy`
 
-  - Indica que referente será utilizado cuando se recoja el recurso:
+  - : Indica que referente será utilizado cuando se recoja el recurso:
 
-    - `no-referrer`: El {{HTTPHeader("Referer")}} no sera enviado.
-    - `no-referrer-when-downgrade`: El {{HTTPHeader("Referer")}} no sera enviado al {{Glossary("origin")}} sin {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: El {{HTTPHeader("Referer")}} enviado será limitado al origen de la página de referencia: su [scheme](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, y {{Glossary("port")}}.
-    - `origin-when-cross-origin`: El {{HTTPHeader("Referer")}} enviado será limitado al esquema, {{Glossary("host")}} y el {{Glossary("port")}}. Las navegaciones del mismo origen seran aun incluidas en el camino.
-    - `same-origin`: Un {{HTTPHeader("Referer")}} será enviado para el {{Glossary("Same-origin policy", "same origin")}}, Sin embargo, las solicitudes de origen cruzado no contendrán información de referencia.
-    - `strict-origin`: Solo envía el origen del documento como el {{HTTPHeader("Referer")}} cuando el nivel del protocolo de seguridad se mantiene igual (HTTPS→HTTPS), pero no lo envía si el destino es menos seguro, como un HTTP.
-    - `strict-origin-when-cross-origin` (default): Envia un URL completo cuando se realiza una solicitud del mismo origen, Solo envía el origen cuando el protocolo de seguridad es el mismo (HTTPS→HTTP).
-    - `unsafe-url`: El {{HTTPHeader("Referer")}} incluira el origen y ruta pero no la [fragment](/es/docs/Web/API/HTMLAnchorElement/hash), [password](/es/docs/Web/API/HTMLAnchorElement/password), o [username](/es/docs/Web/API/HTMLAnchorElement/username), ya que filtra los origenes y las rutas de acceso a los recursos protegidos TLS.
+    - `no-referrer`: La cabecera {{HTTPHeader("Referer")}} no sera enviada.
+    - `no-referrer-when-downgrade`: La cabecera {{HTTPHeader("Referer")}} no sera enviada a {{Glossary("origin")}} sin {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`: El referente enviado será limitado al origen de la página de referencia: su [esquema](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, y {{Glossary("port", "puerto")}}.
+    - `origin-when-cross-origin`: El referente enviado será limitado al esquema, _host_ y el puerto. Las navegaciones del mismo origen seran aun incluidas en la ruta.
+    - `same-origin`: Un referente será enviado para el {{Glossary("Same-origin policy", "mismo origen")}}, Sin embargo, las solicitudes de origen cruzado no contendrán información de referencia.
+    - `strict-origin`: Solo envía el origen del documento como referente cuando el nivel del protocolo de seguridad se mantiene igual (HTTPS→HTTPS), pero no lo envía si el destino es menos seguro, como un HTTP.
+    - `strict-origin-when-cross-origin` (predeterminado): Envia un URL completo cuando se realiza una solicitud del mismo origen, Solo envía el origen cuando el protocolo de seguridad es el mismo (HTTPS→HTTP) y no envía ninguna cabecera a un destino menos seguro (HTTPS → HTTP).
+    - `unsafe-url`: El referente incluira el origen y ruta (pero no [fragment](/es/docs/Web/API/HTMLAnchorElement/hash), [password](/es/docs/Web/API/HTMLAnchorElement/password), o [username](/es/docs/Web/API/HTMLAnchorElement/username)). **Este valor es inseguro**, ya que filtra los origenes y las rutas de acceso a los recursos protegidos TLS.
 
 - `rel`
   - Para anclas que contengan el atributo [`href`](#href), este atributo especifica la relación entre el destino del link con el del objeto del link.
@@ -62,10 +64,10 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
     Los valores y su semántica serán registrados por alguna autoridad que pueda tener significado para el autor del documento.
     La relación predeterminada, si no se ha dado ningun otra es nula. Usa solamente el atributo si se está usando un atributo [`href`](#href).
 - `shape`
-  - Es la forma asociada a la area del mapa. el valor establecido por HTML `rect`, define una región en forma rectangular; `circle`, define la región como una forma circular; `poly`, la define como un polígono; y `default`, la cual indica toda la región sin ninguna forma específica.
+  - : Es la forma asociada al area del mapa. Las especificaciones para HTML definen los valores `rect`, define una región en forma rectangular; `circle`, define la región como una forma circular; `poly`, la define como un polígono; y `default`, la cual indica toda la región sin ninguna forma específica.
 - `target`
 
-  - Palabra clave o nombre definido por el autor del contexto de exploración para mostrar el recurso vinculado. Las siguientes palabras clave tienen significados especiales:
+  - : Palabra clave o nombre definido por el autor del {{Glossary("browsing context","contexto de exploración")}} para mostrar el recurso vinculado. Las siguientes palabras clave tienen significados especiales:
 
     - `_self` (predeterminado): Muestra el recurso en el contexto de navegación actual.
     - `_blank`: Muestra el recurso en un contexto de navegación nuevo y sin nombrar.
@@ -86,12 +88,12 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
     shape="circle"
     coords="75,75,75"
     href="left.html"
-    alt="Click to go Left" />
+    alt="Clic para ir a la izquierda" />
   <area
     shape="circle"
     coords="275,75,75"
     href="right.html"
-    alt="Click to go Right" />
+    alt="Clic para ir a la derechat" />
 </map>
 <img
   usemap="#primary"
@@ -101,7 +103,7 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 
 ### Resultado
 
-{{ EmbedLiveSample('Examples', 360, 160) }}
+{{ EmbedLiveSample('Ejemplos', 360, 160) }}
 
 ## Resumen Técnico
 
@@ -112,13 +114,13 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
         <a href="/es/docs/Web/HTML/Content_categories">Categorias de Contenido</a>
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        <a href="/es/docs/Web/HTML/Content_categories#flow_content">Contenido de flujo</a>,
+        <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">contenido de redacción</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenido Permitido</th>
-      <td>Ninguno, este es un {{Glossary("void element")}}.</td>
+      <td>Ninguno, este es un {{Glossary("void element","elemento vacío")}}.</td>
     </tr>
     <tr>
       <th scope="row">Omisión de Etiqueta</th>
@@ -152,6 +154,6 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 
 {{Specifications}}
 
-## Compatibilidad de Navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
