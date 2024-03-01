@@ -35,7 +35,7 @@ console.log(+y);
 // -1
 ```
 
-### Uso con tipos de datos que no sean números
+### Uso con elementos que no sean números
 
 ```js-nolint
 +true  // 1
