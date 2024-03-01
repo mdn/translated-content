@@ -30,11 +30,11 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 下面的 draw() 函数是前一页中取得的，现在就来使用上面的三个函数。
 
-### 矩形（Rectangular）例子
+### 矩形示例
 
 ```html hidden
-<html>
-  <body onload="draw();">
+<html lang="en">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -42,9 +42,9 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 ```js
 function draw() {
-  var canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -53,9 +53,13 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 该例子的输出如下图所示。
 
-{{EmbedLiveSample("矩形（Rectangular）例子", 160, 160, "canvas_rect.png")}}
+{{EmbedLiveSample("矩形示例", 160, 160, "canvas_rect.png")}}
 
 `fillRect()`函数绘制了一个边长为 100px 的黑色正方形。`clearRect()`函数从正方形的中心开始擦除了一个 60\*60px 的正方形，接着`strokeRect()`在清除区域内生成一个 50\*50 的正方形边框。
 
