@@ -188,7 +188,7 @@ HTTP/2 在 HTTP/1.1 有几处基本的不同：
 
 - 对 Alt-Svc 的支持允许了给定资源的位置和资源鉴定，允许了更智能的 CDN 缓冲机制。
 - [客户端提示（client hint）](/zh-CN/docs/Web/HTTP/Client_hints) 的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
-- 在 Cookie 头中引入安全相关的的前缀，现在帮助保证一个安全的 Cookie 没被更改过。
+- 在 Cookie 头中引入安全相关的前缀，现在帮助保证一个安全的 Cookie 没被更改过。
 
 ## HTTP/3——基于 QUIC 的 HTTP
 

@@ -20,7 +20,7 @@ var networkState = audioOrVideo.networkState;
 | 常量                | 值  | 描述                                                                    |
 | ------------------- | --- | ----------------------------------------------------------------------- |
 | `NETWORK_EMPTY`     | 0   | 还没有数据。并且 `readyState` 的值是 `HAVE_NOTHING`。                   |
-| `NETWORK_IDLE`      | 1   | HTMLMediaElement 是有效的并且已经选择了一个资源，，但是还没有使用网络。 |
+| `NETWORK_IDLE`      | 1   | HTMLMediaElement 是有效的并且已经选择了一个资源，但是还没有使用网络。 |
 | `NETWORK_LOADING`   | 2   | 浏览器正在下载 HTMLMediaElement 数据。                                  |
 | `NETWORK_NO_SOURCE` | 3   | 没有找到 HTMLMediaElement src。                                         |
 

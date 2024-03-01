@@ -18,7 +18,7 @@ ctx.miterLimit = value;
 ### 选项
 
 - `value`
-  - : 斜接面限制比例的的数字。0、负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略。
+  - : 斜接面限制比例的数字。0、负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略。
 
 ## 简释
 
