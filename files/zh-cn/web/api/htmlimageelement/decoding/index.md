@@ -1,41 +1,82 @@
 ---
 title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
+l10n:
+  sourceCommit: d77e0bb76025b0a9aed9cff2573588f053fac924
 ---
 
-{{APIRef}}{{domxref("HTMLImageElement")}} 接口的 **`decoding`** 属性用于告诉浏览器使用何种方式解析图像数据。
+{{APIRef}}{{domxref("HTMLImageElement")}} 接口的 **`decoding`** 属性用于告诉浏览器如何解析图像数据。具体来说，在显示其他内容的更新前，是否应该等待图像解码完成。
 
-## Syntax
+## 值
 
-```
-refStr = imgElem.decoding;
-imgElem.decoding = refStr;
-```
+表示解码方式的字符串。可选的值有：
 
-### Values
+- `"sync"`
+  - : 同步解码图像，与其他内容一起原子化显示。
+- `"async"`
+  - : 异步解码图像，允许在解码完成前显示其他内容。
+- `"auto"`
+  - : 对解码模式没有偏好；让浏览器决定最适合用户的模式。这是默认值，但不同的浏览器拥有不同的默认行为：
+    - Chromium 默认为 `"sync"`。
+    - Firefox 默认为 `"async"`。
+    - Safari 除少数情况外默认为 `"sync"`。
 
-使用 {{domxref("DOMString")}} 表示解码方式。可使用以下值：
+## 使用说明
 
-- **`sync`**: 同步解码图像，保证与其他内容一起显示。
-- **`async`**: 异步解码图像，加快显示其他内容。
-- **`auto`**: 默认模式，表示不偏好解码模式。由浏览器决定哪种方式更适合用户。
+`decoding` 属性提示浏览器是否应该在一个步骤中与其他任务一起执行图像解码（“sync”），或者允许在解码完成前渲染其他内容（“async”）。实际上，这两者之间的差异往往难以察觉，而存在差异的地方往往有更好的办法。
 
-## Usage notes
+对于在视口内插入图像到 DOM 中，“async”可能导致无样式内容闪烁，而“sync”则可能导致一些 [Jank](/zh-CN/docs/Glossary/Jank)。通常使用 {{domxref("HTMLImageElement.decode()")}} 方法来实现不阻碍其他内容的同时原子化显示会更好。
 
-`decoding` 属性使你可以控制是否允许浏览器尝试异步加载图像。如果这样做会引起问题，你可指定值为 `sync` 禁止异步加载。异步加载对 {{HTMLElement("img")}} 元素很有用，对屏幕外的图像对象可能会更有用。
+对于在视口外插入图像到 DOM 中，现代浏览器通常会在它们进入可视范围前对其解码，使用这两种值不会有明显区别。
 
-## Examples
+## 示例
+
+下面的示例中，当图像下载时，页面上会显示空图像。设置 `decoding` 无法避免这种情况。
 
 ```js
-var img = new Image();
+const img = new Image();
 img.decoding = "sync";
 img.src = "img/logo.png";
+document.body.appendChild(img);
 ```
 
-## Specifications
+图片下载后再插入时，`decoding` 属性才更有效：
+
+```js
+async function loadImage(url, elem) {
+  return new Promise((resolve, reject) => {
+    elem.onload = () => resolve(elem);
+    elem.onerror = reject;
+    elem.src = url;
+  });
+}
+
+const img = new Image();
+await loadImage("img/logo.png", img);
+// 使用 `sync` 可确保其他内容只随图片一起更新
+img.decoding = "sync";
+document.body.appendChild(img);
+const p = document.createElement("p");
+p.textContent = "Image is fully loaded!";
+document.body.appendChild(p);
+```
+
+然而，更好的解决方案是使用 {{domxref("HTMLImageElement.decode()")}} 方法。它提供了异步解码图片的方法，推迟直到图片完全下载并解码完成时才将图片插入
+DOM，以此避免上述的空图片问题。当你需要将现有图片动态替换为新图片时，这特别有用，而且可以防止在解码图片的过程中代码以外的无关绘制被耽搁。
+
+如果解码时间较长，使用 `img.decoding = "async"` 可以避免其他内容被耽搁。
+
+```js
+const img = new Image();
+img.decoding = "async";
+img.src = "img/logo.png";
+document.body.appendChild(img);
+```
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
