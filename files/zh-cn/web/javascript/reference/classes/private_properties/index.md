@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar("Classes")}}
 
-**私有属性**是常规的类的公有属性（包括[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)、类方法等）的对应。私有属性通过添加 `#` 前缀来创建，在类的外部无法合法地引用。这些类属性的私有封装由 JavaScript 本身进行强制执行。
+**私有属性**是常规的类的公有属性（包括[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)、类方法等）的对应。私有属性通过添加 `#` 前缀来创建，在类的外部无法合法地引用。这些类属性的私有封装由 JavaScript 本身强制执行。
 
 在这种语法出现之前，JavaScript 语言本身并没有原生支持私有属性。在原型继承中，可以通过使用 [`WeakMap`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#模拟私有成员) 对象或者[闭包](/zh-CN/docs/Web/JavaScript/Closures#用闭包模拟私有方法)的方式来模拟私有属性的行为，但就易用性而言，它们无法与 `#` 语法相提并论。
 
@@ -51,9 +51,9 @@ class ClassWithPrivate {
 
 这些特性统称为*私有属性*。然而，JavaScript 中[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)不能是私有的。为了防止在类之外构造类，你必须使用[私有标志](#模拟私有构造函数)。
 
-私有属性通过**#名称**（“#”读作“hash”）来声明，它们是以 `#` 前缀开头的标识符。这个 `#` 前缀是属性名称的固有部分，你可以将其与旧的下划线前缀约定 `_privateField` 进行类比，但它不是普通的字符串属性，因此无法使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)动态访问它。
+私有属性通过“**#名称**”（“#”读作“hash”）来声明，它们是以 `#` 前缀开头的标识符。这个 `#` 前缀是属性名称的固有部分，你可以将其与旧的下划线前缀约定 `_privateField` 进行类比，但它不是普通的字符串属性，因此无法使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)动态访问它。
 
-在类外部引用 `#` 名称、引用未在类内部声明的私有属性、或尝试使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 移除声明的属性都会抛出语法错误。
+在类外部引用 `#` 名称、引用未在类内部声明的私有属性，或尝试使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 移除声明的属性都会抛出语法错误。
 
 ```js-nolint example-bad
 class ClassWithPrivateField {
@@ -71,7 +71,7 @@ instance.#privateField; // Syntax error
 
 JavaScript 作为动态语言，能够在编译时检查 `#` 标识符的语法，使其与普通属性的语法不同。
 
-> **备注：** Chrome 控制台中运行的代码可以访问类的私有属性。这是 JavaScript 语法限制对开发工具中的一种放宽。
+> **备注：** Chrome 控制台中运行的代码可以访问类的私有属性。这是 JavaScript 语法限制对开发者工具的一种放宽。
 
 如果你访问对象中不存在的私有属性，会抛出 {{jsxref("TypeError")}} 错误，而不是像普通属性一样返回 `undefined`。
 
@@ -110,9 +110,9 @@ console.log(C.getX(new C(new Date()))); // 当前的日期和时间
 console.log(C.getX({})); // "obj 必须是 C 的实例"
 ```
 
-请注意，私有名称始终需要提前声明并且不可删除：如果你发现一个对象具有当前类的一个私有属性（无论是通过 `try...catch` 还是 `in` 检查），那么它一定具有所有其他私有属性。通常情况下，一个对象具有一个类的私有属性意味着它是由该类构造的（尽管[并非总是如此](#returning_overriding_object)）。
+请注意，私有名称始终需要提前声明并且不可删除：如果你发现一个对象具有当前类的一个私有属性（无论是通过 `try...catch` 还是 `in` 检查），那么它一定具有其他所有的私有属性。通常情况下，一个对象具有一个类的私有属性意味着它是由该类构造的（尽管[并非总是如此](#返回重写对象)）。
 
-私有属性不是[原型继承](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)模型的一部分，因为它们只能在当前类内部被访问，而且不能被子类继承。不同类的私有属性名称之间没有任何交互。它们是附加在每个实例上的外部元数据，由类管理。因此，{{jsxref("Object.freeze()")}} 和 {{jsxref("Object.seal()")}} 对私有属性没有影响。
+私有属性不是[原型继承](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)模型的一部分，因为它们只能在当前类内部被访问，而且不能被子类继承。不同类的私有属性名称之间没有任何交互。它们是附加在每个实例上的外部元数据，由类本身管理。因此，{{jsxref("Object.freeze()")}} 和 {{jsxref("Object.seal()")}} 对私有属性没有影响。
 
 关于如何以及何时初始化私有字段的更多信息，请参阅[公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)。
 
@@ -124,7 +124,7 @@ console.log(C.getX({})); // "obj 必须是 C 的实例"
 
 #### 私有实例字段
 
-类似于公有实例字段，私有实例字段：
+类似于对应的公有字段，私有实例字段：
 
 - 在基类中的构造函数运行之前添加，或者在子类中调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 之后立即添加，并且
 - 只在类的实例上可用。
@@ -219,7 +219,7 @@ class Subclass extends ClassWithPrivateStaticField {}
 Subclass.publicStaticMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
-如果你使用 `super` 来调用该方法，也是如此，因为 [`super` 方法被调用时不会将基类作为 `this` 值](/zh-CN/docs/Web/JavaScript/Reference/Operators/super#calling_methods_from_super)。
+如果你使用 `super` 来调用该方法，也是如此，因为 [`super` 方法被调用时不会将基类作为 `this` 值](/zh-CN/docs/Web/JavaScript/Reference/Operators/super#通过_super_调用方法)。
 
 ```js
 class ClassWithPrivateStaticField {
@@ -268,7 +268,7 @@ const instance = new ClassWithPrivateMethod();
 console.log(instance.publicMethod()); // 42
 ```
 
-私有实例方法可以是生成器方法，异步方法或异步生成器方法。私有 getter 和 setter 方法也同样适用，并且与公有 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 方法的语法相同。
+私有实例方法可以是生成器方法、异步方法或异步生成器方法。私有 getter 和 setter 方法也同样适用，并且与公有 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 方法的语法相同。
 
 ```js
 class ClassWithPrivateAccessor {
