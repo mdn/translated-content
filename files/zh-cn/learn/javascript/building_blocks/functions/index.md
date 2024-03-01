@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Building_blocks/Functions
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
-在 JavaScript 中另一个基本概念是**函数**, 它允许你在一个代码块中存储一段用于处理单任务的代码，然后在任何你需要的时候用一个简短的命令来调用，而不是把相同的代码写很多次。在本文中，我们将探索函数的基本概念，如基本语法、如何定义和调用、范围和参数。
+在 JavaScript 中另一个基本概念是**函数**, 它允许你在一个代码块中存储一段用于处理单任务的代码，然后在任何你需要的时候用一个简短的命令来调用，而不是把相同的代码写很多次。在本文中，我们将探索函数的基本概念，如函数的基本语法、如何定义和调用函数、函数的作用域和参数。
 
 <table>
   <tbody>
@@ -27,17 +27,21 @@ slug: Learn/JavaScript/Building_blocks/Functions
 
 ## 我能在哪找到函数？
 
-在 JavaScript 中，你将发现函数无处不在。事实上，到目前为止，我们一直在使用函数，只是我们还没很好的讨论它们。然而现在是时候了，让我们开始聊聊函数，并探索它们的语法。
+在 JavaScript 中，你将发现函数无处不在。事实上，到目前为止，我们一直在使用函数；我们只是还没正式地讨论它们。然而现在是时候了，让我们开始聊聊函数，并探索它们的语法。
 
-几乎任何时候，只要你使用一个带有一对圆括号（`()`）的 JavaScript 结构，并且你不是在使用一个常见的比如 for 循环、while 或 do…while 循环，或者 if 语句这样的内置语言结构时，那么你就正在使用函数。
+几乎任何时候，只要你使用一个带有一对圆括号（`()`）的 JavaScript 结构，并且你**没有**使用比如 for 循环、while 或 do…while 循环，或者 if 语句这样的常见的内置语言结构时，那么你就正在使用函数。
+
+<!--TODO: 这里的 for 循环，while 和 do...while 需要有超链接。-->
 
 ## 浏览器内置函数
 
-在这套课程中我们已经使用了很多浏览器内置函数，当我们操作一个字符串的时候，例如：
+在这套课程中我们已经使用了很多浏览器内置函数。
+
+例如，当我们操作一个字符串的时候：
 
 ```js
-var myText = "I am a string";
-var newString = myText.replace("string", "sausage");
+const myText = "I am a string";
+const newString = myText.replace("string", "sausage");
 console.log(newString);
 // replace() 字符串函数接受一个字符串，
 // 用另一个子字符串替换一个子字符串，并返回
@@ -47,8 +51,8 @@ console.log(newString);
 或者当我们操作一个数组的时候：
 
 ```js
-var myArray = ["I", "love", "chocolate", "frogs"];
-var madeAString = myArray.join(" ");
+const myArray = ["I", "love", "chocolate", "frogs"];
+const madeAString = myArray.join(" ");
 console.log(madeAString);
 // join() 函数接受一个数组，将
 // 所有数组元素连接成一个单一的
@@ -58,53 +62,48 @@ console.log(madeAString);
 或者当我们生成一个随机数时：
 
 ```js
-var myNumber = Math.random();
+const myNumber = Math.random();
 // random() 函数生成一个随机
-// 数字在 0 和 1 之间，并返回该
-// 数字
+// 数字在 0 和 1 之间，并返回该数字
 ```
 
-...我们已经使用过函数了！
+我们都在使用*函数*！
 
 > **备注：** 如果需要，你可以随意将这些代码输入浏览器控制台以便于你熟悉其功能。
 
-JavaScript 有许多内置的函数，可以让你做很多有用的事情，而无需自己编写所有的代码。事实上，许多你调用（运行或者执行的专业词语）浏览器内置函数时调用的代码并不是使用 JavaScript 来编写——大多数调用浏览器后台的函数的代码，是使用像 C++ 这样更低级的系统语言编写的，而不是像 JavaScript 这样的 web 编程语言。
+JavaScript 语言中有许多内置的函数，它们可以让你无需自己编写所有的代码，就能做很多有用的事情。事实上，许多你**调用**（专业词语，意指“运行”或“执行”）浏览器内置函数时调用的代码并不能用 JavaScript 来编写——大多数调用浏览器后台的函数的代码，是使用像 C++ 这样更低级的系统语言编写的，而不是像 JavaScript 这样的 web 编程语言。
 
-请记住，这些内置浏览器函数不是核心 JavaScript 语言的一部分——被定义为浏览器 API 的一部分，它建立在默认语言之上，以提供更多的功能（请参阅本课程的早期部分以获得更多的描述）。我们将在以后的模块中更详细地使用浏览器 API。
+请记住，这些内置浏览器函数不是核心 JavaScript 语言的一部分——其中部分函数被定义为浏览器 API 的一部分，它建立在默认语言之上，以提供更多的功能（请参阅本课程的早期部分以获得更多的描述）。我们将在以后的模块中更详细地介绍如何使用浏览器 API。
+
+<!--TODO: 这里的（请参阅本课程的早期部分以获得更多的描述）缺少超链接。-->
 
 ## 函数与方法
 
-程序员把函数称为对象**方法**（method）的一部分。你还不必了解 JavaScript 中已建构的对象在更深层次上是如何运作的——你可以等到下一小节，我们会教给你有关对象运作方式的一切。在我们继续前进之前，我们需要澄清一些有关方法和函数概念之间可能存在的误会——当你在网络上浏览相关信息的时候，你很可能会碰上这两个术语。
+对象的成员**函数**被称为**方法**。你还不必了解 JavaScript 中已建构的对象在更深层次上是如何运作的——你可以等到下一小节，我们会教给你有关对象运作方式的一切。在我们继续前进之前，我们需要澄清一些有关方法和函数概念之间可能存在的误会——当你在网络上浏览相关信息的时候，你很可能会碰上这两个术语。
 
-到目前为止我们所使用的内置代码同属于这两种形式：函数和方法。你可以在[这里](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)查看内置函数，内置对象以及其相关方法的完整列表。
+到目前为止我们所使用的内置代码同属于这两种形式：**函数**和**方法**。你可以在[这里](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)查看内置函数，内置对象以及其相关方法的完整列表。
 
-严格说来，内置浏览器函数并不是函数——它们是**方法**。这听起来有点可怕和令人困惑，但不要担心——函数和方法在很大程度上是可互换的，至少在我们的学习阶段是这样的。
-
-二者区别在于方法是在对象内定义的函数。浏览器内置函数（方法）和变量（称为属性）存储在结构化对象内，以使代码更加高效，易于处理。
-
-## 自定义函数
-
-你在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当你看到一个自定义名称后面都带有括号，那么你使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的 [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 示例（参见完整的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
+你在过去的课程中也见到过很多**自定义方法**——在你的代码中而非浏览器中定义的函数。每当你看到一个后面带有括号的自定义名称，那么你使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的 [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 示例（参见完整的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
 
 ```js
 function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
-  for (var i = 0; i < 100; i++) {
+  for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
 }
 ```
 
-该函数在 {{htmlelement("canvas")}} 元素中绘制 100 个随机圆。每次我们想要这样做，我们可以使用这个函数来调用这个功能：
+该函数在 {{htmlelement("canvas")}} 元素中绘制 100 个随机大小的圆。每次我们想要这样做，我们只需要调用这个函数：
 
 ```js
 draw();
 ```
 
-而不是每次我们想重复一遍，都要写出所有的代码。函数可以包含任何你喜欢的代码 - 甚至可以从内部函数调用其他函数。以上函数例如调用`random()`函数三次，由以下代码定义：
+而不是每次我们想要这样做，都需要写出所有的代码。函数可以包含任何你喜欢的代码——甚至可以在函数体内调用其他函数。以上样例代码调用三次 `random()` 函数。`random()` 函数由以下代码定义：
 
 ```js
 function random(number) {
@@ -116,7 +115,7 @@ function random(number) {
 
 ## 调用函数
 
-现在你可能很清楚这一点，但仅仅为了防止……，要在函数定义之后，实际使用它，你必须运行或调用它。这是通过将函数名包含在代码的某个地方，后跟圆括号来完成的。
+你现在可能很清楚这一点，但以防万一，我们还是提醒一下：要在函数定义之后实际使用它，你必须运行——或调用——它。这是通过将函数名包含在代码的某个地方，后跟圆括号来完成的。
 
 ```js
 function myFunction() {
@@ -127,9 +126,64 @@ myFunction();
 // 调用一次该函数
 ```
 
-## 匿名函数
+> **备注：** 以这样的形式创建一个函数，也被称为*函数声明*。它总是被 hoist 的，这样你就能在函数定义之前调用该函数。
 
-你可能会以稍微不同的方式看到定义和调用的函数。到目前为止，我们刚刚创建了如下函数：
+<!--TODO: hoist 怎么翻译-->
+
+## 函数参数
+
+一些函数需要在调用它们时指定参数——这些参数值需要放在函数括号内，才能正确地完成其工作。
+
+> **备注：** 参数有时称为参数（argument）、属性（propertie）或甚至特性（attribute）。
+
+例如，浏览器的内置 [Math.random()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：
+
+```js
+const myNumber = Math.random();
+```
+
+浏览器的内置字符串[replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
+
+```js
+const myText = "I am a string";
+const newString = myText.replace("string", "sausage");
+```
+
+> **备注：** 当你需要指定多个参数时，它们以逗号分隔。
+
+### 可选参数
+
+还应该注意，有时参数不是必需的——你不必指定它们。如果你没有指定某些参数，该函数一般会采用某种默认行为。作为示例，对数组进行操作的 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 函数的参数是可选的：
+
+```js
+const myArray = ["I", "love", "chocolate", "frogs"];
+const madeAString = myArray.join(" ");
+console.log(madeAString);
+// 返回 'I love chocolate frogs'
+
+const madeAnotherString = myArray.join();
+console.log(madeAnotherString);
+// 返回 'I,love,chocolate,frogs'
+```
+
+如果没有包含参数来指定连接/分隔符，默认情况下会使用逗号。
+
+### 默认参数
+
+如果你正在编写一个函数，并希望支持可选参数，你可以在参数名称后添加 `=`，然后再添加默认值来指定默认值：
+
+```js
+function hello(name = "Chris") {
+  console.log(`Hello ${name}!`);
+}
+
+hello("Ari"); // Hello Ari!
+hello(); // Hello Chris!
+```
+
+## 匿名函数和 Arrow 函数
+
+到目前为止，我们创建了如下函数：
 
 ```js
 function myFunction() {
@@ -140,12 +194,12 @@ function myFunction() {
 但是你也可以创建一个没有名称的函数：
 
 ```js
-function() {
-  alert('hello');
-}
+(function () {
+  alert("hello");
+});
 ```
 
-这个函数叫做**匿名函数**——它没有函数名！它也不会自己做任何事情。你通常将匿名函数与事件处理程序一起使用，例如，如果单击相关按钮，以下操作将在函数内运行代码：
+它被称为**匿名函数**，因为它没有函数名。它也不会自己做任何事情。你通常将匿名函数与事件处理程序一起使用，例如，如果单击相关按钮，以下操作将在函数内运行代码：
 
 ```js
 var myButton = document.querySelector("button");
@@ -205,46 +259,6 @@ myButton.onclick = function () {
 ```
 
 > **备注：** 匿名函数也称为函数表达式。函数表达式与函数声明有一些区别。函数声明会进行声明提升（declaration hoisting），而函数表达式不会。
-
-## 函数参数
-
-一些函数需要在调用它们时指定参数——这些参数值需要放在函数括号内，才能正确地完成其工作。
-
-> **备注：** 参数有时称为参数（argument）、属性（propertie）或甚至特性（attribute）。
-
-例如，浏览器的内置 [Math.random()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：
-
-```js
-var myNumber = Math.random();
-```
-
-浏览器的内置字符串[replace（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
-
-```js
-var myText = "I am a string";
-var newString = myText.replace("string", "sausage");
-```
-
-> **备注：** 当你需要指定多个参数时，它们以逗号分隔。
-
-还应该注意，有时参数不是必须的——你不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 函数的参数是可选的：
-
-<!-- autocorrect-disable -->
-
-```js
-const myArray = ["我", "爱", "巧克力", "青蛙"];
-const madeAString = myArray.join(" ");
-console.log(madeAString);
-// 返回 '我 爱 巧克力 青蛙'
-
-const madeAnotherString = myArray.join();
-console.log(madeAnotherString);
-// 返回 '我,爱,巧克力,青蛙'
-```
-
-<!-- autocorrect-enable -->
-
-如果没有包含参数来指定加入/分隔符，默认情况下会使用逗号。
 
 ## 函数作用域和冲突
 
