@@ -59,8 +59,8 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
     - `unsafe-url`: El referente incluira el origen y ruta (pero no [fragment](/es/docs/Web/API/HTMLAnchorElement/hash), [password](/es/docs/Web/API/HTMLAnchorElement/password), o [username](/es/docs/Web/API/HTMLAnchorElement/username)). **Este valor es inseguro**, ya que filtra los origenes y las rutas de acceso a los recursos protegidos TLS.
 
 - `rel`
-  - Para anclas que contengan el atributo [`href`](#href), este atributo especifica la relación entre el destino del link con el del objeto del link.
-    El valor es una lista de tipos de links separados por espacios.
+  - : Para anclas que contengan el atributo [`href`](#href), este atributo especifica la relación entre el destino del enlace con el del objeto del enlace.
+    El valor es una lista de tipos de enlaces separados por espacios.
     Los valores y su semántica serán registrados por alguna autoridad que pueda tener significado para el autor del documento.
     La relación predeterminada, si no se ha dado ningun otra es nula. Usa solamente el atributo si se está usando un atributo [`href`](#href).
 - `shape`
