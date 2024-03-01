@@ -29,9 +29,7 @@ slug: Learn/JavaScript/Building_blocks/Functions
 
 在 JavaScript 中，你将发现函数无处不在。事实上，到目前为止，我们一直在使用函数；我们只是还没正式地讨论它们。然而现在是时候了，让我们开始聊聊函数，并探索它们的语法。
 
-几乎任何时候，只要你使用一个带有一对圆括号（`()`）的 JavaScript 结构，并且你**没有**使用比如 for 循环、while 或 do…while 循环，或者 if 语句这样的常见的内置语言结构时，那么你就正在使用函数。
-
-<!--TODO: 这里的 for 循环，while 和 do...while 需要有超链接。-->
+几乎任何时候，只要你使用一个带有一对圆括号（`()`）的 JavaScript 结构，并且你**没有**使用比如 [for 循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop)、[while 或 do...while 循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)，或者 [if...else 语句](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_statements)这样的常见的内置语言结构时，那么你就正在使用函数。
 
 ## 浏览器内置函数
 
@@ -73,9 +71,7 @@ const myNumber = Math.random();
 
 JavaScript 语言中有许多内置的函数，它们可以让你无需自己编写所有的代码，就能做很多有用的事情。事实上，许多你**调用**（专业词语，意指“运行”或“执行”）浏览器内置函数时调用的代码并不能用 JavaScript 来编写——大多数调用浏览器后台的函数的代码，是使用像 C++ 这样更低级的系统语言编写的，而不是像 JavaScript 这样的 web 编程语言。
 
-请记住，这些内置浏览器函数不是核心 JavaScript 语言的一部分——其中部分函数被定义为浏览器 API 的一部分，它建立在默认语言之上，以提供更多的功能（请参阅本课程的早期部分以获得更多的描述）。我们将在以后的模块中更详细地介绍如何使用浏览器 API。
-
-<!--TODO: 这里的（请参阅本课程的早期部分以获得更多的描述）缺少超链接。-->
+请记住，这些内置浏览器函数不是核心 JavaScript 语言的一部分——其中部分函数被定义为浏览器 API 的一部分，它建立在默认语言之上，以提供更多的功能（请参阅[本课程的早期部分](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#so_what_can_it_really_do)以获得更多的描述）。我们将在以后的模块中更详细地介绍如何使用浏览器 API。
 
 ## 函数与方法
 
@@ -126,9 +122,7 @@ myFunction();
 // 调用一次该函数
 ```
 
-> **备注：** 以这样的形式创建一个函数，也被称为*函数声明*。它总是被 hoist 的，这样你就能在函数定义之前调用该函数。
-
-<!--TODO: hoist 怎么翻译-->
+> **备注：** 以这样的形式创建一个函数，也被称为*函数声明*。它总是被提升（hoist）的，这样你就能在函数定义之前调用该函数。
 
 ## 函数参数
 
@@ -142,7 +136,7 @@ myFunction();
 const myNumber = Math.random();
 ```
 
-浏览器的内置字符串[replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
+浏览器的内置字符串 [replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
 
 ```js
 const myText = "I am a string";
@@ -153,7 +147,7 @@ const newString = myText.replace("string", "sausage");
 
 ### 可选参数
 
-还应该注意，有时参数不是必需的——你不必指定它们。如果你没有指定某些参数，该函数一般会采用某种默认行为。作为示例，对数组进行操作的 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 函数的参数是可选的：
+还应该注意，有时参数不是必需的——你不必指定它们。如果你没有指定某些参数，该函数一般会采用某种默认行为。作为示例，对数组进行操作的 [join()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 函数的参数是可选的：
 
 ```js
 const myArray = ["I", "love", "chocolate", "frogs"];
@@ -181,7 +175,7 @@ hello("Ari"); // Hello Ari!
 hello(); // Hello Chris!
 ```
 
-## 匿名函数和 Arrow 函数
+## 匿名函数和箭头函数
 
 到目前为止，我们创建了如下函数：
 
@@ -199,74 +193,124 @@ function myFunction() {
 });
 ```
 
-它被称为**匿名函数**，因为它没有函数名。它也不会自己做任何事情。你通常将匿名函数与事件处理程序一起使用，例如，如果单击相关按钮，以下操作将在函数内运行代码：
+这就是所谓的**匿名函数**，因为它没有名字。当一个函数希望接收另一个函数作为参数时，你经常会看到匿名函数。在这种情况下，函数参数通常作为匿名函数传递。
+
+> **备注：** 这种创建函数的形式也称为函数表达式。与函数声明不同，函数表达式不会被变量提升（hoist）。
+
+### 匿名函数举例
+
+例如，你想在用户输入文本框时运行一些代码。为此，你可以调用文本框的 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 函数。该函数希望你（至少）传给它两个参数：
+
+- 要监听的事件名称，本例中为 {{domxref("Element/keydown_event", "keydown")}}
+- 事件发生时要运行的函数。
+
+当用户按下某个按键时，浏览器将调用你提供的函数，并传递给它一个包含该事件信息的参数，其中包括用户按下的特定按键：
 
 ```js
-var myButton = document.querySelector("button");
+function logKey(event) {
+  console.log(`You pressed "${event.key}".`);
+}
 
-myButton.onclick = function () {
-  alert("hello");
-};
+textBox.addEventListener("keydown", logKey);
 ```
 
-上述示例将要求 {{htmlelement("button")}} 在页面上提供可用于选择并单击的元素。你在整个课程中已经看到过这种结构了几次，你将在下一篇文章中了解更多信息并在其中使用。
-
-你还可以将匿名函数分配为变量的值，例如：
+你可以将一个匿名函数传入 `addEventListener()`，而不是定义一个单独的 `logKey()` 函数：
 
 ```js
-var myGreeting = function () {
-  alert("hello");
-};
+textBox.addEventListener("keydown", function (event) {
+  console.log(`You pressed "${event.key}".`);
+});
 ```
 
-现在可以使用以下方式调用此函数：
+### 箭头函数
+
+如果你传递这样一个匿名函数，你可以使用另一种形式，即箭头函数。你可以写 `(event) =>` 来代替 `function(event)`：
 
 ```js
-myGreeting();
+textBox.addEventListener("keydown", (event) => {
+  console.log(`You pressed "${event.key}".`);
+});
 ```
 
-有效地给变量一个名字;还可以将该函数分配为多个变量的值，例如：
+如果函数只接受一个参数，可以省略参数周围的括号：
 
 ```js
-var anotherGreeting = function () {
-  alert("hello");
-};
+textBox.addEventListener("keydown", event => {
+  console.log(`You pressed "${event.key}".`);
+});
 ```
 
-现在可以使用以下任一方法调用此函数
+最后，如果函数只包含一行 `return` 语句，也可以省略圆括号和 `return` 关键字，隐式地返回表达式。在下面的示例中，我们使用 `Array` 的 {{jsxref("Array.prototype.map()","map()")}} 方法将原始数组中的每个值加倍：
 
 ```js
-myGreeting();
-anotherGreeting();
+const originals = [1, 2, 3];
+
+const doubled = originals.map(item => item * 2);
+
+console.log(doubled); // [2, 4, 6]
 ```
 
-但这只会令人费解，所以不要这样做！创建方法时，最好坚持下列形式：
+`map()` 方法依次获取数组中的每一项，并将其传递给给定函数。然后，它将该函数返回的值添加到一个新数组中。
+
+因此，在上面的例子中，`item => item * 2` 相当于箭头函数：
 
 ```js
-function myGreeting() {
-  alert("hello");
+function doubleItem(item) {
+  return item * 2;
 }
 ```
 
-你将主要使用匿名函数来运行负载的代码以响应事件触发（如点击按钮）——使用事件处理程序。再次，这看起来像这样：
+你可以使用同样简洁的语法重写 `addEventListener` 示例。
 
 ```js
-myButton.onclick = function () {
-  alert("hello");
-  // 我可以在这里放入
-  // 尽可能多的代码
-};
+textBox.addEventListener("keydown", (event) =>
+  console.log(`You pressed "${event.key}".`),
+);
 ```
 
-> **备注：** 匿名函数也称为函数表达式。函数表达式与函数声明有一些区别。函数声明会进行声明提升（declaration hoisting），而函数表达式不会。
+我们建议你使用箭头函数，因为它们可以使您的代码更简短、更易读。要了解更多信息，请参阅 [JavaScript 指南中的有关部分](zh-CN/docs/Web/JavaScript/Guide/Functions#arrow_functions)，以及我们[有关箭头函数的参考文档](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
+
+> **备注：** 注意：箭头函数和普通函数之间存在一些细微差别。它们超出了本入门指南的范围，而且在我们这里讨论的情况下不太可能有什么不同。要了解更多信息，请参阅 [箭头函数参考文档](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
+
+### 箭头函数举例
+
+下面是我们上面讨论的“keydown”示例的完整工作示例：
+
+HTML 文件：
+
+```html
+<input id="textBox" type="text" />
+<div id="output"></div>
+```
+
+JavaScript 文件：
+
+```js
+const textBox = document.querySelector("#textBox");
+const output = document.querySelector("#output");
+
+textBox.addEventListener("keydown", (event) => {
+  output.textContent = `You pressed "${event.key}".`;
+});
+```
+
+```css hidden
+div {
+  margin: 0.5rem 0;
+}
+```
+
+结果——试着输入文本框，看看输出结果：
+
+{{EmbedLiveSample("Arrow function live sample", 100, 100)}}
 
 ## 函数作用域和冲突
 
-我们来谈一谈{{glossary("scope", "作用域")}}——处理函数时一个非常重要的概念。当你创建一个函数时，函数内定义的变量和其他东西都在它们自己的单独的范围内，意味着它们被锁在自己独立的隔间中，不能被函数外的代码访问。
+我们来谈一谈{{glossary("scope", "作用域")}}——处理函数时一个非常重要的概念。当你创建一个函数时，函数内定义的变量和其他东西都在它们自己的单独的**作用域**内，意味着它们被锁在自己独立的隔间中，不能被函数外的代码访问。
 
-所有函数的最外层被称为全局作用域。在全局作用域内定义的值可以在任意地方访问。
+所有函数的最外层被称为**全局作用域**。在全局作用域内定义的值可以在任意地方访问。
 
-JavaScript 由于各种原因而建立，但主要是由于安全性和组织性。有时你不希望变量可以在代码中的任何地方访问 - 你从其他地方调用的外部脚本可能会开始搞乱你的代码并导致问题，因为它们恰好与代码的其他部分使用了相同的变量名称，造成冲突。这可能是恶意的，或者是偶然的。
+JavaScript 由于各种原因而建立，但主要是由于安全性和组织性。有时你不希望变量可以在代码中的任何地方访问——你从其他地方调用的外部脚本可能会开始搞乱你的代码并导致问题，因为它们恰好与代码的其他部分使用了相同的变量名称，造成冲突。这可能是恶意的，或者是偶然的。
 
 例如，假设你有一个 HTML 文件，它调用两个外部 JavaScript 文件，并且它们都有一个使用相同名称定义的变量和函数：
 
@@ -281,21 +325,21 @@ JavaScript 由于各种原因而建立，但主要是由于安全性和组织性
 
 ```js
 // first.js
-let name = "Chris";
+const name = "Chris";
 function greeting() {
-  alert("Hello " + name + ": welcome to our company.");
+  alert(`Hello ${name}: welcome to our company.`);
 }
 ```
 
 ```js
 // second.js
-let name = "Zaptec";
+const name = "Zaptec";
 function greeting() {
-  alert("Our company is called " + name + ".");
+  alert(`Our company is called ${name}.`);
 }
 ```
 
-这两个函数都使用 `greeting()` 形式调用，但是你只能访问到 first.js 文件的`greeting()`函数（第二个文件被忽视了）。另外，第二次尝试使用 `let` 关键字定义 `name` 变量导致了一个错误。
+这两个函数都使用 `greeting()` 形式调用，但是你只能访问到 `first.js` 文件的 `greeting()` 函数（第二个文件被忽略了）。另外，第二次尝试使用 `const` 关键字定义 `name` 变量导致了一个错误。
 
 > **备注：** 你可以[在 GitHub 上参考运行的实例](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html)（查看完整[源代码](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)）。
 
@@ -303,7 +347,7 @@ function greeting() {
 
 这有点像一个动物园。狮子、斑马、老虎和企鹅都保留在自己的园子中，只能拿到到它们园子中的东西——与其函数作用域相同。如果他们能进入其他园子，就会出现问题。不同的动物会在不熟悉的栖息地内感到真的不舒服——一只狮子或老虎会在企鹅的水多的，冰冷的领域中感到可怕。最糟糕的是，狮子和老虎可能会尝试吃企鹅！
 
-![](mdn-mozilla-zoo.png)
+![四种不同的动物被封闭在动物园各自的栖息地中](mdn-mozilla-zoo.png)
 
 动物园管理员就像全局作用域 - 他或她有钥匙访问每个园子，重新投喂食物，照顾生病的动物等。
 
@@ -319,7 +363,7 @@ function greeting() {
    output(x);
    ```
 
-   你应该看到变量`x`输出到屏幕的值。
+   你应该看到变量 `x` 输出到屏幕的值。
 
 4. 现在尝试在你的控制台中输入以下内容
 
@@ -328,18 +372,18 @@ function greeting() {
    output(z);
    ```
 
-   这两个都应该返回错误沿“[ReferenceError：y 未定义](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)”。这是为什么？由于函数作用域 - `y` 和 `z` 被锁定在函数 `a()` 和 `b()` 函数中，所以 `output()` 从全局作用域调用时无法访问它们。
+   这两个都应该返回错误“[ReferenceError：y is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)”。这是为什么？这是因为函数作用域——`y` 和 `z` 被限制在函数 `a()` 和 `b()` 函数中，所以 `output()` 从全局作用域调用时无法访问它们。
 
 5. 但是，从另一个函数里面调用什么呢？尝试编辑 `a()`、`b()` 所以它们看起来像这样：
 
    ```js
    function a() {
-     var y = 2;
+     const y = 2;
      output(y);
    }
 
    function b() {
-     var z = 3;
+     const z = 3;
      output(z);
    }
    ```
@@ -357,12 +401,12 @@ function greeting() {
 
    ```js
    function a() {
-     var y = 2;
+     const y = 2;
      output(x);
    }
 
    function b() {
-     var z = 3;
+     const z = 3;
      output(x);
    }
    ```
@@ -374,18 +418,18 @@ function greeting() {
    b();
    ```
 
-   函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
+   函数 `a()` 和 `b()` 都应该输出 `x` 的值。这些没有问题，因为即使 `output()` 的调用与 `x` 的定义不在同一个作用域内，但 `x` 是一个全局变量，所以在所有代码中都可用。
 
 8. 最后，尝试更新你的代码，如下所示：
 
    ```js
    function a() {
-     var y = 2;
+     const y = 2;
      output(z);
    }
 
    function b() {
-     var z = 3;
+     const z = 3;
      output(y);
    }
    ```
@@ -397,61 +441,11 @@ function greeting() {
    b();
    ```
 
-   这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
+   这次 `a()` 和 `b()` 调用都会返回那个令人讨厌的“[ReferenceError: _variable name_ is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)”错误——这是因为 `output()` 函数的调用和输出变量的定义不在同一个函数作用域内——变量对于这些函数调用而言是不可见的。
 
-> **备注：** 相同的范围规则不适用于循环（for（）{...}）和条件块（if（）{...}） - 它们看起来非常相似，但它们不一样！小心不要让这些困惑。
+> **备注：** 相同的作用域规则不适用于循环（例如 `for() { }`）和条件块（例如 `if() { }`）——它们看起来非常相似，但它们不一样！千万不要混淆它们。
 
-> **备注：** ReferenceError："x"未定义错误是你遇到的最常见的错误。如果你收到此错误，并且确定你已经定义了该问题的变量，请检查它的范围。
-
-### 函数内部的函数
-
-请记住，你可以从任何地方调用函数，甚至可以在另一个函数中调用函数。这通常被用作保持代码整洁的方式 - 如果你有一个复杂的函数，如果将其分解成几个子函数，它更容易理解：
-
-```js
-function myBigFunction() {
-  var myValue;
-
-  subFunction1();
-  subFunction2();
-  subFunction3();
-}
-
-function subFunction1() {
-  console.log(myValue);
-}
-
-function subFunction2() {
-  console.log(myValue);
-}
-
-function subFunction3() {
-  console.log(myValue);
-}
-```
-
-要确保函数调取的数值处在有效的作用域内。上面的例子中会产生一个错误提示，`ReferenceError：myValue is not define`，因为尽管 `myValue` 变量与函数调用指令处在同一个作用域中，但它却没有在函数内被定义——实际代码在调用函数时就开始运行了。为了使代码正确运作，你必须将值作为参数传递给函数，如下所示：
-
-```js
-function myBigFunction() {
-  var myValue = 1;
-
-  subFunction1(myValue);
-  subFunction2(myValue);
-  subFunction3(myValue);
-}
-
-function subFunction1(value) {
-  console.log(value);
-}
-
-function subFunction2(value) {
-  console.log(value);
-}
-
-function subFunction3(value) {
-  console.log(value);
-}
-```
+> **备注：** [ReferenceError: "x" is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)”错误将会是你遇到的最常见的错误。如果你收到此错误，并且确定你已经定义了该变量，请检查它的作用域。
 
 ## 技能测试！
 
@@ -463,8 +457,8 @@ function subFunction3(value) {
 
 ## 参见
 
-- [Functions detailed guide](/zh-CN/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
+- [Functions detailed guide](/zh-CN/docs/Web/JavaScript/Guide/Functions)——涵盖了此处未包含的一些高级功能。
 - [Functions reference](/zh-CN/docs/Web/JavaScript/Reference/Functions)
-- [Default parameters](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — advanced concept references
+- [Default parameters](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)——高级概念的参考文档
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
