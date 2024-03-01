@@ -48,7 +48,7 @@ CSS의 {{CSSxRef("outline")}}와 {{CSSxRef("outline-offset")}} 속성은 사용�
 
 ## 안내서
 
-- [form 배우기: 고급 폼 스타일링][]
+- [form 배우기: 고급 폼 스타일링](/ko/docs/Learn/Forms/Advanced_form_styling)
   - : {{CSSxRef("appearance")}}가 어떻게 폼 컨트롤 스타일링에 사용될 수 있는지 설명합니다.
 
 ## 관련 개념
