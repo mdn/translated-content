@@ -93,7 +93,7 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
     shape="circle"
     coords="275,75,75"
     href="right.html"
-    alt="Clic para ir a la derechat" />
+    alt="Clic para ir a la derecha" />
 </map>
 <img
   usemap="#primary"
