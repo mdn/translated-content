@@ -37,7 +37,7 @@ slug: Learn/Forms
 - [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
   - : 我们从详细了解原始 HTML {{htmlelement("input")}} 元素的类型开始，同时学习在收集不同类型数据时可用的选择。
 - [HTML5 input 的类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-  - : 在这里，我们深入挖掘 `<input>` 元素，了解 HTML5 发布时提供的其他 input 类型，以及它们提供的各种 UI 弓箭和数据收集增强功能。此外，我们可以了解 {{htmlelement('output')}} 元素。
+  - : 在这里，我们深入挖掘 `<input>` 元素，了解 HTML5 发布时提供的其他 input 类型，以及它们提供的各种 UI 控件和数据收集增强功能。此外，我们可以了解 {{htmlelement('output')}} 元素。
 - [其他表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
   - : 接下来，我们学习所有非 `<input>` 表单控件，以及相关的工具，如：{{htmlelement('select')}}、{{htmlelement('textarea')}}、{{htmlelement('meter')}} 和 {{htmlelement('progress')}}。
 

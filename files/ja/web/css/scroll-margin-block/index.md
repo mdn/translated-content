@@ -23,7 +23,7 @@ slug: Web/CSS/scroll-margin-block
 scroll-margin-block: 10px;
 scroll-margin-block: 1em 0.5em;
 
-/* Global values */
+/* グローバル値 */
 scroll-margin-block: inherit;
 scroll-margin-block: initial;
 scroll-margin-block: revert;
