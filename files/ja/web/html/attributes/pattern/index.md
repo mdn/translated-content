@@ -29,7 +29,7 @@ pattern 属性に対応している入力型の中には、特に {{HTMLElement(
 
 ### 制約検証
 
-入力の値が空文字列でなく、正規表現全体に一致しない場合、{{domxref('ValidityState')}} オブジェクトの {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが `true` になって報告される制約違反が存在することになります。。
+入力の値が空文字列でなく、正規表現全体に一致しない場合、{{domxref('ValidityState')}} オブジェクトの {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが `true` になって報告される制約違反が存在することになります。
 パターンの正規表現は、値に対して照合されるとき、その始まりが文字列の始まりに、その終わりが文字列の終わりに固定されます。これは、JavaScript の正規表現と少し異なります。pattern 属性の場合、値のどこか一部ではなく値全体に対して照合され、まるでパターンの先頭に `^(?:` が、末尾に `)$` があるかのようになります。
 
 > **メモ:** `pattern` 属性が値なしで指定された場合、その値は暗黙的に空文字列となります。したがって、**空でない**入力欄の `value` は制約に違反することになります。
