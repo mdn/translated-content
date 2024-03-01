@@ -1,6 +1,8 @@
 ---
 title: Unario más (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
+l10n:
+  sourceCommit: f616cb604af851f77f8cd59368e94ee3e43a8838
 ---
 
 {{jsSidebar("Operators")}}
