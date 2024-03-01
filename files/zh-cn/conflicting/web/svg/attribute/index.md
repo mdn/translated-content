@@ -1,6 +1,7 @@
 ---
 title: SVG 样式属性
-slug: Web/SVG/Attribute/Styling
+slug: conflicting/Web/SVG/Attribute
+original_slug: Web/SVG/Attribute/Styling
 ---
 
 {{SVGRef}}
