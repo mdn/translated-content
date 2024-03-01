@@ -17,7 +17,7 @@ El operador **unario más (`+`)** precede a su operando y evalúa a su operando 
 
 ## Descripción
 
-Aunque la negación unaria (`-`) también puede convertir números que no sean números, el operador unario más es la forma más rápida y la preferida de convertir algo en un número, porque no realiza ninguna otra operación con el número.
+Aunque la negación unaria (`-`) también puede convertir elementos que no sean números, el operador unario más es la forma más rápida y la preferida de convertir algo en un número, porque no realiza ninguna otra operación con el número.
 
 El operador unario más sigue exactamente los mismos pasos que la coerción numérica normal utilizada por la mayoría de los métodos integrados que esperan números. Puede convertir las representaciónes en cadenas de textos de enteros y flotantes, así como también valores que no son cadenas de texto `true`, `false` y `null`. Se admiten números enteros en formato decimal y hexadecimal (con prefijo `0x`). Se admiten números negativos (aunque no los hexadecimales). Si no puede analizar un valor en particular, lo evaluará como {{jsxref("NaN")}}.A diferencia de otros operadores aritméticos, que funcionan tanto con números como con [BigInts](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt), el uso del operador `+` en valores BigInt genera un {{jsxref("TypeError")}}.
 
