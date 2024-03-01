@@ -11,7 +11,8 @@ slug: Web/API/Document/createElementNS
 
 ## 语法
 
-```js
+```
+js
 let element =
 document.createElementNS(namespaceURI, qualifiedName[, options]);
 ```
@@ -19,7 +20,7 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 ### 参数
 
 - `namespaceURI`
-  - : 指定与元素相关联的[命名空间 URI](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)的字符串。创建的元素的[namespaceURI](/zh-CN/docs/Web/API/Node/namespaceURI)属性使用 namespaceURI 的值进行初始化。参见[有效的命名空间 URL](/zh-CN/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's)。
+  - : 指定与元素相关联的[命名空间 URI](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)的字符串。创建的元素的[namespaceURI](/zh-CN/docs/Web/API/Node/namespaceURI)属性使用 namespaceURI 的值进行初始化。参见[有效的命名空间 URI](/zh-CN/docs/Web/API/Document/createElementNS#有效的命名空间_uri)。
 - `qualifiedName`
   - : 指定要创建的元素的类型的字符串。创建的元素的[nodeName](/zh-CN/docs/DOM/element.nodeName)属性使用 qualifiedName 的值进行初始化。
 - `options`可选的
