@@ -65,6 +65,3 @@ CSS의 {{CSSxRef("outline")}}와 {{CSSxRef("outline-offset")}} 속성은 사용�
 ## 참고 자료
 
 - [유용하고 사용 가능한 포커스 인디케이터 디자인을 위한 팁](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/) (2016)
-
-[박스모델]: /ko/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model
-[form 배우기: 고급 폼 스타일링]: /ko/docs/Learn/Forms/Advanced_form_styling
