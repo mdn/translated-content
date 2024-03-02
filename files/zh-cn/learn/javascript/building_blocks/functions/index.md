@@ -126,7 +126,7 @@ myFunction();
 
 一些函数需要在调用它们时指定参数——这些参数值需要放在函数括号内，才能正确地完成其工作。
 
-> **备注：** 参数有时称为参数（argument）、属性（propertie）或甚至特性（attribute）。
+> **备注：** 参数（parameter）有时称为参数（argument）、属性（property）或甚至特性（attribute）。
 
 例如，浏览器的内置 [Math.random()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 函数不需要任何参数。当被调用时，它总是返回 0 到 1 之间的随机数：
 
