@@ -30,11 +30,11 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 下面的 draw() 函数是前一页中取得的，现在就来使用上面的三个函数。
 
-### 矩形（Rectangular）例子
+### 矩形示例
 
 ```html hidden
-<html>
-  <body onload="draw();">
+<html lang="en">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -42,9 +42,9 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 ```js
 function draw() {
-  var canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -53,9 +53,13 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 该例子的输出如下图所示。
 
-{{EmbedLiveSample("矩形（Rectangular）例子", 160, 160, "canvas_rect.png")}}
+{{EmbedLiveSample("矩形示例", 160, 160, "canvas_rect.png")}}
 
 `fillRect()`函数绘制了一个边长为 100px 的黑色正方形。`clearRect()`函数从正方形的中心开始擦除了一个 60\*60px 的正方形，接着`strokeRect()`在清除区域内生成一个 50\*50 的正方形边框。
 
@@ -177,7 +181,7 @@ function draw() {
 - {{domxref("CanvasRenderingContext2D.lineTo", "lineTo(x, y)")}}
   - : 绘制一条从当前位置到指定 x 以及 y 位置的直线。
 
-该方法有两个参数：x 以及 y，代表坐标系中直线结束的点。开始点和之前的绘制路径有关，之前路径的结束点就是接下来的开始点，等等。。。开始点也可以通过`moveTo()`函数改变。
+该方法有两个参数：x 以及 y，代表坐标系中直线结束的点。开始点和之前的绘制路径有关，之前路径的结束点就是接下来的开始点，以此类推。开始点也可以通过`moveTo()`函数改变。
 
 下面的例子绘制两个三角形，一个是填充的，另一个是描边的。
 

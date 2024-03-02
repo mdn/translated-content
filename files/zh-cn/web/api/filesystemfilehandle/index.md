@@ -20,7 +20,7 @@ _从父类 {{DOMxRef("FileSystemHandle")}} 继承属性。_
 _从父类 {{DOMxRef("FileSystemHandle")}} 继承方法。_
 
 - {{domxref('FileSystemFileHandle.getFile', 'getFile()')}}
-  - : 返回一个 {{jsxref('Promise')}} 对象，可兑现一个 {{domxref('File')}} 对象，该对象表示句柄所代表的的条目在磁盘上的状态。
+  - : 返回一个 {{jsxref('Promise')}} 对象，可兑现一个 {{domxref('File')}} 对象，该对象表示句柄所代表的条目在磁盘上的状态。
 - {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}}
   - : 返回一个 {{jsxref('Promise')}} 对象，可兑现一个 {{domxref('FileSystemSyncAccessHandle')}} 对象，该对象可用于同步读写文件。此方法的同步特性带来了性能优势，但是只能在专用的 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
 - {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
