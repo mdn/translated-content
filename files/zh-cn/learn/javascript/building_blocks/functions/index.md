@@ -240,7 +240,7 @@ textBox.addEventListener("keydown", event => {
 
 最后，如果函数只包含一行 `return` 语句，也可以省略圆括号和 `return` 关键字，隐式地返回表达式。在下面的示例中，我们使用 `Array` 的 {{jsxref("Array.prototype.map()","map()")}} 方法将原始数组中的每个值加倍：
 
-```js
+```js-nolint
 const originals = [1, 2, 3];
 
 const doubled = originals.map(item => item * 2);
