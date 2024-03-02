@@ -29,7 +29,7 @@ slug: Learn/JavaScript/Building_blocks/Functions
 
 在 JavaScript 中，你将发现函数无处不在。事实上，到目前为止，我们一直在使用函数；我们只是还没正式地讨论它们。然而现在是时候了，让我们开始聊聊函数，并探索它们的语法。
 
-几乎任何时候，只要你使用一个带有一对圆括号（`()`）的 JavaScript 结构，并且你**没有**使用比如 [for 循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop)、[while 或 do...while 循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)，或者 [if...else 语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_statements)这样的常见的内置语言结构时，那么你就正在使用函数。
+几乎任何时候，只要你使用一个带有一对圆括号（`()`）的 JavaScript 结构，并且你**没有**使用比如 [for 循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#循环的标准)、[while 或 do...while 循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#while_语句和_do_..._while_语句)，或者 [if...else 语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_语句)这样的常见的内置语言结构时，那么你就正在使用函数。
 
 ## 浏览器内置函数
 
