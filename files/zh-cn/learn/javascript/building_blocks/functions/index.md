@@ -195,7 +195,7 @@ function myFunction() {
 
 > **备注：** 这种创建函数的形式也称为函数表达式。与函数声明不同，函数表达式不会被变量提升（hoist）。
 
-### 匿名函数举例
+### 匿名函数示例
 
 例如，你想在用户输入文本框时运行一些代码。为此，你可以调用文本框的 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 函数。该函数希望你（至少）传给它两个参数：
 
