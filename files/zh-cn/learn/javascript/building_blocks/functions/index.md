@@ -41,8 +41,8 @@ slug: Learn/JavaScript/Building_blocks/Functions
 const myText = "I am a string";
 const newString = myText.replace("string", "sausage");
 console.log(newString);
-// replace() 字符串函数接受一个字符串，
-// 用另一个子字符串替换一个子字符串，并返回
+// replace() 字符串函数接受源字符串和目标字符串，
+// 将源字符串替换为目标字符串，并返回新形成的字符串
 // 替换后的新字符串
 ```
 
