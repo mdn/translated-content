@@ -50,7 +50,7 @@ l10n:
 
 #### 常规
 
-- 修复阻止[执行动作](https://w3c.github.io/webdriver/#perform-actions)正确合成双击和其他多次点击事件的错误，这些事件是针对 `mouse` 输入源的。此外，这些事件只在自上次点击操作以来实际鼠标位置未发生变化时才会被触发。
+- 修复了阻止[执行动作](https://w3c.github.io/webdriver/#perform-actions)正确合成 `mouse` 输入源的双击和其他多次点击事件的错误。（[Firefox bug 1864614](https://bugzil.la/1864614)）。此外，这些事件只在自上次点击操作以来实际鼠标位置未发生变化时才会被触发（[Firefox bug 1681076](https://bugzil.la/1681076)）。
 - 更新了 `Pause` 和 `Equal`（数字键盘区域）键的定义，以与 WebDriver 规范保持一致（[Firefox bug 1863687](https://bugzil.la/1863687)）。
 
 #### WebDriver BiDi
