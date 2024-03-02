@@ -38,8 +38,8 @@ l10n:
 例如，当我们操作一个字符串的时候：
 
 ```js
-const myText = "I am a string";
-const newString = myText.replace("string", "sausage");
+const myText = "我是一个字符串";
+const newString = myText.replace("字符串", "香肠");
 console.log(newString);
 // replace() 字符串函数接受源字符串和目标字符串，
 // 将源字符串替换为目标字符串，并返回新形成的字符串
@@ -48,7 +48,7 @@ console.log(newString);
 或者当我们操作一个数组的时候：
 
 ```js
-const myArray = ["I", "love", "chocolate", "frogs"];
+const myArray = ["我", "爱", "巧克力", "青蛙"];
 const madeAString = myArray.join(" ");
 console.log(madeAString);
 // join() 函数接受一个数组，
@@ -113,7 +113,7 @@ function random(number) {
 
 ```js
 function myFunction() {
-  alert("hello");
+  alert("你好");
 }
 
 myFunction();
@@ -137,8 +137,8 @@ const myNumber = Math.random();
 浏览器的内置字符串 [replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 函数需要两个参数：在主字符串中查找的子字符串，以及用于替换该字符串的子字符串：
 
 ```js
-const myText = "I am a string";
-const newString = myText.replace("string", "sausage");
+const myText = "我是一个字符串";
+const newString = myText.replace("字符串", "香肠");
 ```
 
 > **备注：** 当你需要指定多个参数时，它们以逗号分隔。
@@ -148,14 +148,14 @@ const newString = myText.replace("string", "sausage");
 还应该注意，有时参数不是必需的——你不必指定它们。如果你没有指定某些参数，该函数一般会采用某种默认行为。例如，数组的 [join()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 函数的参数是可选的：
 
 ```js
-const myArray = ["I", "love", "chocolate", "frogs"];
+const myArray = ["我", "爱", "巧克力", "青蛙"];
 const madeAString = myArray.join(" ");
 console.log(madeAString);
-// 返回 'I love chocolate frogs'
+// 返回 '我爱巧克力青蛙'
 
 const madeAnotherString = myArray.join();
 console.log(madeAnotherString);
-// 返回 'I,love,chocolate,frogs'
+// 返回 '我,爱,巧克力,青蛙'
 ```
 
 如果没有包含参数来指定连接/分隔符，默认情况下会使用逗号。
@@ -165,12 +165,12 @@ console.log(madeAnotherString);
 如果你正在编写一个函数，并希望支持可选参数，你可以在参数名称后添加 `=`，然后再添加默认值来指定默认值：
 
 ```js
-function hello(name = "Chris") {
-  console.log(`Hello ${name}!`);
+function hello(name = "克里斯") {
+  console.log(`你好，${name}！`);
 }
 
-hello("Ari"); // Hello Ari!
-hello(); // Hello Chris!
+hello("阿里"); // 你好，阿里！
+hello(); // 你好，克里斯！
 ```
 
 ## 匿名函数和箭头函数
@@ -179,7 +179,7 @@ hello(); // Hello Chris!
 
 ```js
 function myFunction() {
-  alert("hello");
+  alert("你好");
 }
 ```
 
@@ -187,7 +187,7 @@ function myFunction() {
 
 ```js
 (function () {
-  alert("hello");
+  alert("你好");
 });
 ```
 
@@ -325,9 +325,9 @@ JavaScript 之所以设计成如此，有很多原因，但主要是出于安全
 
 ```js
 // first.js
-const name = "Chris";
+const name = "克里斯";
 function greeting() {
-  alert(`Hello ${name}: welcome to our company.`);
+  alert(`你好，${name}：欢迎来到我们的公司。`);
 }
 ```
 
@@ -335,7 +335,7 @@ function greeting() {
 // second.js
 const name = "Zaptec";
 function greeting() {
-  alert(`Our company is called ${name}.`);
+  alert(`我们的公司名叫做 ${name}。`);
 }
 ```
 
