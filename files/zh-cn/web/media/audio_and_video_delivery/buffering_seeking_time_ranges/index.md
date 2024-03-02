@@ -9,9 +9,9 @@ slug: Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 
 ## Buffered
 
-`Buffered` 属性会告诉我们媒体的哪一部分已经下载好了。它返回一个 {{ domxref("TimeRanges") }} 对象，表名哪些块已经下载。这通常是连续的但是如果用户在缓冲时跳过，就可能会有缺口。
+`Buffered` 属性会告诉我们媒体的哪一部分已经下载好了。它返回一个 {{ domxref("TimeRanges") }} 对象，表明哪些块已经下载。这通常是连续的但是如果用户在缓冲时跳过，就可能会有缺口。
 
-它与 {{htmlelement("audio") }} 或 {{htmlelement("video") }}一起工作; 现在我们来考虑一个简单的 aodio 例子：
+它与 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 一起工作，现在我们来考虑一个简单的音频示例：
 
 ```html
 <audio id="my-audio" controls src="music.mp3"></audio>

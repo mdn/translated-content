@@ -31476,10 +31476,6 @@
     "modified": "2019-03-23T22:07:46.163Z",
     "contributors": ["876843240"]
   },
-  "Web/SVG/Attribute/Styling": {
-    "modified": "2020-10-15T22:10:48.584Z",
-    "contributors": ["liu3329"]
-  },
   "Web/SVG/Attribute/accent-height": {
     "modified": "2019-07-05T08:35:14.107Z",
     "contributors": ["yvonneit"]

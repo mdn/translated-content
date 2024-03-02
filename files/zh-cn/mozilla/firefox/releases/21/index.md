@@ -94,6 +94,6 @@ slug: Mozilla/Firefox/Releases/21
 - [Firefox 21 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_21)
 - [Firefox 21 附加组件兼容性](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
 
-### 更早版本
+### 更早期的版本
 
-{{Firefox_for_developers('20')}}
+{{Firefox_for_developers}}
