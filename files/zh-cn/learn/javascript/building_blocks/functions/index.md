@@ -455,7 +455,7 @@ function greeting() {
 
 ## 参见
 
-- [Functions detailed guide](/zh-CN/docs/Web/JavaScript/Guide/Functions)——涵盖了此处未包含的一些高级功能。
+- [函数的详细指南](/zh-CN/docs/Web/JavaScript/Guide/Functions)——涵盖了此处未包含的一些高级特性。
 - [函数参考](/zh-CN/docs/Web/JavaScript/Reference/Functions)
 - [默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)——高级概念参考
 
