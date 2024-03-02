@@ -222,7 +222,7 @@ textBox.addEventListener("keydown", function (event) {
 
 ### 箭头函数
 
-如果你传递这样一个匿名函数，你可以使用另一种形式，即箭头函数。你可以写 `(event) =>` 来代替 `function(event)`：
+如果你传递这样一个匿名函数，你可以使用另一种形式，即**箭头函数**。你可以用 `(event) =>` 来代替 `function(event)`：
 
 ```js
 textBox.addEventListener("keydown", (event) => {
