@@ -30,7 +30,7 @@ l10n:
 
 - {{jsxref("ArrayBuffer.prototype.transfer()")}} および {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} メソッドを、ある {{jsxref("ArrayBuffer")}} から別の ArrayBuffer へメモリーの [所有権を転送する](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) ために使用できるようになりました。転送後は、元のバッファーが元のメモリーから切り離されて使用できなくなります。状態は {{jsxref("ArrayBuffer.prototype.detached")}} を使用して確認できます (詳しくは [Firefox bug 1865103](https://bugzil.la/1865103) をご覧ください)。
 
-- ほかのブラウザーに合わせるため [`Date.parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) および [`Date()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) は、[非標準の日付文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#non-standard_date_strings) を解析するときに、指定された月の最初の 3 文字だけを考慮するようになりました。以前は、完全な月の名前を 3 文字以上に切り詰めた値だけを受け入れていました (詳しくは [Firefox bug 1862910](https://bugzil.la/1862910) をご覧ください)。
+- ほかのブラウザーに合わせるため [`Date.parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) および [`Date()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) は、[標準外の日付文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#標準外の日付文字列) を解析するときに、指定された月の最初の 3 文字だけを考慮するようになりました。以前は、完全な月の名前を 3 文字以上に切り詰めた値だけを受け入れていました (詳しくは [Firefox bug 1862910](https://bugzil.la/1862910) をご覧ください)。
 
 ### SVG
 
