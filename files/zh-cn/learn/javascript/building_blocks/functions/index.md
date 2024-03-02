@@ -43,7 +43,6 @@ const newString = myText.replace("string", "sausage");
 console.log(newString);
 // replace() 字符串函数接受源字符串和目标字符串，
 // 将源字符串替换为目标字符串，并返回新形成的字符串
-// 替换后的新字符串
 ```
 
 或者当我们操作一个数组的时候：
@@ -52,9 +51,8 @@ console.log(newString);
 const myArray = ["I", "love", "chocolate", "frogs"];
 const madeAString = myArray.join(" ");
 console.log(madeAString);
-// join() 函数接受一个数组，将
-// 所有数组元素连接成一个单一的
-// 字符串，并返回这个新字符串
+// join() 函数接受一个数组，
+// 将所有数组元素连接成一个单一的字符串，并返回这个新字符串
 ```
 
 或者当我们生成一个随机数时：
