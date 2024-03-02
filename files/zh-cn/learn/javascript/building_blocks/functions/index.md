@@ -300,7 +300,7 @@ div {
 
 结果——试着输入文本框，看看输出结果：
 
-{{EmbedLiveSample("Arrow function live sample", 100, 100)}}
+{{EmbedLiveSample("箭头函数实时示例", 100, 100)}}
 
 ## 函数作用域和冲突
 
