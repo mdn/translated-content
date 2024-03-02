@@ -12,10 +12,8 @@ slug: Learn/JavaScript/Building_blocks/Functions
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
-          >JavaScript first steps</a
-        >（JS 的入门）。
+        基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：<a href="/zh-CN/docs/Learn/JavaScript/First_steps"
+          >JavaScript 第一步</a>。
       </td>
     </tr>
     <tr>
@@ -24,10 +22,7 @@ slug: Learn/JavaScript/Building_blocks/Functions
     </tr>
   </tbody>
 </table>
-      <td>
-        基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：<a href="/zh-CN/docs/Learn/JavaScript/First_steps"
-          >JavaScript 第一步</a>。
-      </td>
+
 ## 我能在哪找到函数？
 
 在 JavaScript 中，你将发现函数无处不在。事实上，到目前为止，我们一直在使用函数；我们只是还没正式地讨论它们。然而现在是时候了，让我们开始聊聊函数，并探索它们的语法。
