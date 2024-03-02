@@ -81,3 +81,9 @@ document.body.appendChild(img);
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("HTMLImageElement.decode()")}} 方法
+- {{htmlelement("img")}} 元素的 `decoding` 属性
+- tunetheweb.com 上的 [图像的 decoding 属性有什么作用？](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) (2023)
