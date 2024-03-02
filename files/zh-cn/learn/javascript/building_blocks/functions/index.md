@@ -232,7 +232,7 @@ textBox.addEventListener("keydown", (event) => {
 
 如果函数只接受一个参数，可以省略参数周围的括号：
 
-```js
+```js-nolint
 textBox.addEventListener("keydown", event => {
   console.log(`You pressed "${event.key}".`);
 });
