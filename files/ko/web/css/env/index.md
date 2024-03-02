@@ -1,8 +1,6 @@
 ---
 title: env()
 slug: Web/CSS/env
-page-type: css-function
-browser-compat: css.properties.custom-property.env
 l10n:
   sourceCommit: 948ade920e17ec0b9351e2d1983ec6fec79d87d2
 ---
