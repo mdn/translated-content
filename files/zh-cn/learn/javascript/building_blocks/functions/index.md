@@ -145,7 +145,7 @@ const newString = myText.replace("string", "sausage");
 
 ### 可选参数
 
-还应该注意，有时参数不是必需的——你不必指定它们。如果你没有指定某些参数，该函数一般会采用某种默认行为。作为示例，对数组进行操作的 [join()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 函数的参数是可选的：
+还应该注意，有时参数不是必需的——你不必指定它们。如果你没有指定某些参数，该函数一般会采用某种默认行为。例如，数组的 [join()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 函数的参数是可选的：
 
 ```js
 const myArray = ["I", "love", "chocolate", "frogs"];
