@@ -250,7 +250,7 @@ console.log(doubled); // [2, 4, 6]
 
 `map()` 方法依次获取数组中的每一项，并将其传递给给定函数。然后，它将该函数返回的值添加到一个新数组中。
 
-因此，在上面的例子中，`item => item * 2` 相当于箭头函数：
+因此，在上面的例子中，箭头函数 `item => item * 2` 相当于：
 
 ```js
 function doubleItem(item) {
