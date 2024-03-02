@@ -337,7 +337,7 @@ function greeting() {
 }
 ```
 
-这两个函数都使用 `greeting()` 形式调用，但是你只能访问到 `first.js` 文件的 `greeting()` 函数（第二个文件被忽略了）。另外，第二次尝试使用 `const` 关键字定义 `name` 变量导致了一个错误。
+你想要调用的两个函数都被命名为 `greeting()`，但你只能访问到 `first.js` 文件中的 `greeting()` 函数（第二个函数会被忽略）。此外，（在 `second.js` 文件中）试图给 `name` 变量赋一个新值时会导致错误，因为它已经用 `const` 声明过了，所以无法重新赋值。
 
 > **备注：** 你可以[在 GitHub 上参考运行的实例](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html)（查看完整[源代码](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)）。
 
