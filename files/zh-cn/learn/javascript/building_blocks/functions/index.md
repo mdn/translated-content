@@ -1,5 +1,5 @@
 ---
-title: 函数——可复用代码块
+title: 函数——可复用的代码块
 slug: Learn/JavaScript/Building_blocks/Functions
 l10n:
   sourceCommit: d36a0f08f71bc7e17a013da81ed63144a96f7699
@@ -449,7 +449,7 @@ function greeting() {
 
 ## 技能测试！
 
-你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[技能测试：函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
+你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[技能测试：函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
 
 ## 总结
 
