@@ -1,6 +1,8 @@
 ---
 title: 函数——可复用代码块
 slug: Learn/JavaScript/Building_blocks/Functions
+l10n:
+  sourceCommit: d36a0f08f71bc7e17a013da81ed63144a96f7699
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
