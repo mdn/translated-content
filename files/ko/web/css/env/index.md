@@ -1,13 +1,15 @@
 ---
 title: env()
 slug: Web/CSS/env
+page-type: css-function
+browser-compat: css.properties.custom-property.env
 l10n:
   sourceCommit: 948ade920e17ec0b9351e2d1983ec6fec79d87d2
 ---
 
 {{CSSRef}}
 
-**`env()`** [CSS](/ko/docs/Web/CSS) [함수](/en-US/docs/Web/CSS/CSS_Functions)는 {{cssxref("var", "var()")}} 함수나 [사용자 정의 속성](/en-US/docs/Web/CSS/--*)과 비슷한 방법으로 환경 변수에 정의된 값을 CSS에 삽입할 때 사용할 수 있습니다. 환경 변수와 사용자 정의 속성의 차이점은 환경 변수는 작성자가 아닌 사용자 에이전트에 의해 정의되며 문서 전체에 전역적으로 적용된다는 점입니다. 반면 사용자 정의 속성은 선언된 요소(들)로 적용 범위가 제한됩니다.
+**`env()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 {{cssxref("var", "var()")}} 함수나 [사용자 정의 속성](/ko/docs/Web/CSS/--*)과 비슷한 방법으로 환경 변수에 정의된 값을 CSS에 삽입할 때 사용할 수 있습니다. 환경 변수와 사용자 정의 속성의 차이점은 환경 변수는 작성자가 아닌 사용자 에이전트에 의해 정의되며 문서 전체에 전역적으로 적용된다는 점입니다. 반면 사용자 정의 속성은 선언된 요소(들)로 적용 범위가 제한됩니다.
 
 또한 선언 밖에서 사용될 수는 없는 사용자 정의 속성들과는 달리, `env()` 함수는 속성값 또는 설명자의 어떤 부분에서도 사용될 수 있습니다. (예시. [미디어쿼리 규칙](/ko/docs/Web/CSS/@media)). 명세가 발전하면서, 선택자와 같은 다른 곳들에서도 사용될 수 있습니다.
 
@@ -38,7 +40,7 @@ env(safe-area-inset-left, 1.4rem);
 - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
   - : `safe-area-inset-*` 변수들은 네 개의 환경 변수로, 비사각형 화면의 형태로 인해 내용이 잘려 보일 위험 없이 컨텐츠를 안전하게 배치할 수 있는 뷰포트의 가장자리로부터 상단, 우측, 하단, 좌측을 기준으로 하는 사각형을 정의합니다. 사각형 뷰포트, 예를 들어 평균적인 노트북 모니터에서는 그들의 값은 0과 같습니다. 비사각형 디스플레이 — 예를 들어 둥근 시계면과 같은 경우 — 사용자 에이전트에 의해 설정된 네 가지 값은 사각형을 형성하며, 이 사각형 안에 있는 모든 컨텐츠가 보이도록 합니다.
 - `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, `titlebar-area-height`
-  - : `titlebar-area-*` 변수는 데스크탑 장치에 설치된 PWA에서 유용합니다. 데스크탑 PWA가 `window-controls-overlay` [display_override](/en-US/docs/Web/Manifest/display_override) 값을 사용할 때, `titlebar-area-*` 변수를 사용하면 컨텐츠가 창 제어 버튼(예시. 최소화, 최대화, 닫기)과 겹치지 않도록 보장할 수 있습니다.
+  - : `titlebar-area-*` 변수는 데스크탑 장치에 설치된 PWA에서 유용합니다. 데스크탑 PWA가 `window-controls-overlay` [display_override](/ko/docs/Web/Manifest/display_override) 값을 사용할 때, `titlebar-area-*` 변수를 사용하면 컨텐츠가 창 제어 버튼(예시. 최소화, 최대화, 닫기)과 겹치지 않도록 보장할 수 있습니다.
 - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
   - : `keyboard-inset-*` 변수는 화면에 표시되는 가상 키보드의 모습에 대한 정보를 제공합니다. 그들은 뷰포트의 가장자리로부터 상단, 우측, 하단, 좌측 인셋에 의해 사각형을 정의합니다 (너비와 높이 인셋은 다른 인셋들로부터 계산됩니다). 더 알아보려면 {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}를 참고해 주세요.
 
@@ -170,7 +172,7 @@ padding: env(x, 50px, 20px);
 
 ## env() 를 사용해 데스크탑 PWA에서 컨텐츠가 창 제어 버튼에 의해 가려지지 않도록 보장하기
 
-다음 예제에서 `env()`는 [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API)를 사용하는 데스크탑 프로그레시브 웹 앱에 표시되는 컨텐츠가 운영체제의 창 제어 버튼에 의해 가려지지 않도록 보장합니다. `titlebar-area-*` 값들은 일반적으로 타이틀 바가 표시되었을 위치에 사각형을 정의합니다. 휴대용 기기들처럼 Window Controls Overlay 기능을 지원하지 않는 기기들에서는 대체 값들이 사용됩니다.
+다음 예제에서 `env()`는 [Window Controls Overlay API](/ko/docs/Web/API/Window_Controls_Overlay_API)를 사용하는 데스크탑 프로그레시브 웹 앱에 표시되는 컨텐츠가 운영체제의 창 제어 버튼에 의해 가려지지 않도록 보장합니다. `titlebar-area-*` 값들은 일반적으로 타이틀 바가 표시되었을 위치에 사각형을 정의합니다. 휴대용 기기들처럼 Window Controls Overlay 기능을 지원하지 않는 기기들에서는 대체 값들이 사용됩니다.
 
 데스크탑 기기에 설치된 PWA는 일반적으로 다음과 같은 모습입니다:
 
@@ -213,7 +215,7 @@ main {
 
 - {{CSSxRef("var", "var(…)")}}
 - [CSS custom properties for cascading variables](/ko/docs/Web/CSS/CSS_cascading_variables) module
-- [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/--*)
+- [Custom properties (`--*`): CSS variables](/ko/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/ko/docs/Web/CSS/Using_CSS_custom_properties)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
 - [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
