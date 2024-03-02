@@ -20,13 +20,13 @@ l10n:
 
 - CSS {{cssxref("offset-position")}} 属性现在默认可用。它定义了元素在路径上的初始位置。（[Firefox bug 1598152](https://bugzil.la/1598152)）
 - 用于定义 CSS {{cssxref("offset-path")}} 的多个方法——包括 [`<basic-shape>`](/zh-CN/docs/Web/CSS/offset-path#basic-shape)、[`<coord-box>`](/zh-CN/docs/Web/CSS/offset-path#coord-box) 和 [`url()`](/zh-CN/docs/Web/CSS/offset-path#url)——现在默认可用。（[Firefox bug 1598159](https://bugzil.la/1598159)）
-- CSS {{cssxref("ray")}} 函数现在默认可用。你跨源使用该函数来将 {{cssxref("offset-path")}} 定义为从 {{cssxref("offset-position")}} 开始并沿指定角度延伸的线段。（[Firefox bug 1598151](https://bugzil.la/1598151)）
+- CSS {{cssxref("ray")}} 函数现在默认可用。你可以使用该函数来将 {{cssxref("offset-path")}} 定义为从 {{cssxref("offset-position")}} 开始并沿指定角度延伸的线段。（[Firefox bug 1598151](https://bugzil.la/1598151)）
 - {{CSSxref("clip-path")}} 和 {{CSSxref("offset-path")}} 属性现在支持 [`rect()`](/zh-CN/docs/Web/CSS/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/basic-shape/xywh) 形状函数。这些 {{CSSXref("basic-shape")}} 值允许使用离元素边缘的距离定义的矩形（`rect()`）或坐标和尺寸（`xywh()`）来裁剪和偏移元素。（[Firefox bug 1868722](https://bugzil.la/1868722)）。
 
 ### JavaScript
 
-- {{jsxref("ArrayBuffer.prototype.transfer()")}} 和 {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} 方法现在可将一个 {{jsxref("ArrayBuffer")}} 的内存[所有权转移](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#传输_arraybuffer)到另一个。转移后，原始缓冲区将与其原始内存中分离，因此不可用；可以使用 {{jsxref("ArrayBuffer.prototype.detached")}} 来检查其状态。（有关更多详细信息，请参见 [Firefox bug 1865103](https://bugzil.la/1865103)。）
-- 为了与其他浏览器保持一直，[`Date.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) 和 [`Date()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)在解析[非标准日期字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#非标准日期字符串)时，只考虑指定月份的前三个字母。以前只接受三个或更多字符的完整月份名称的截断值（有关更多详细信息，请参见 [Firefox bug 1862910](https://bugzil.la/1862910)。）
+- {{jsxref("ArrayBuffer.prototype.transfer()")}} 和 {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} 方法现在可将一个 {{jsxref("ArrayBuffer")}} 的内存[所有权转移](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#传输_arraybuffer)到另一个。转移后，原始缓冲区将与其原始内存中分离而变得不再可用；可以使用 {{jsxref("ArrayBuffer.prototype.detached")}} 来检查其状态。（有关更多详细信息，请参见 [Firefox bug 1865103](https://bugzil.la/1865103)。）
+- 为了与其他浏览器保持一致，[`Date.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) 和 [`Date()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)在解析[非标准日期字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#非标准日期字符串)时，只考虑指定月份的前三个字母。以前只接受完整月份名称以三个或更多字符截断后的值（有关更多详细信息，请参见 [Firefox bug 1862910](https://bugzil.la/1862910)。）
 
 ### SVG
 
@@ -51,7 +51,7 @@ l10n:
 #### 常规
 
 - 修复阻止[执行动作](https://w3c.github.io/webdriver/#perform-actions)正确合成双击和其他多次点击事件的错误，这些事件是针对 `mouse` 输入源的。此外，这些事件只在自上次点击操作以来实际鼠标位置未发生变化时才会被触发。
-- 更新了 `Pause` 和 `Equal`（数字键盘区块）键的定义，以与 WebDriver 规范保持一致（[Firefox bug 1863687](https://bugzil.la/1863687)）。
+- 更新了 `Pause` 和 `Equal`（数字键盘区域）键的定义，以与 WebDriver 规范保持一致（[Firefox bug 1863687](https://bugzil.la/1863687)）。
 
 #### WebDriver BiDi
 
