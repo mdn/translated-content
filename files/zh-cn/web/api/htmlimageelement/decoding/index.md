@@ -1,11 +1,13 @@
 ---
-title: HTMLImageElement.decoding
+title: HTMLImageElement：decoding 属性
 slug: Web/API/HTMLImageElement/decoding
 l10n:
-  sourceCommit: d77e0bb76025b0a9aed9cff2573588f053fac924
+  sourceCommit: 59838756a270111e120db552ee53d8986e14ddee
 ---
 
-{{APIRef}}{{domxref("HTMLImageElement")}} 接口的 **`decoding`** 属性用于告诉浏览器如何解析图像数据。具体来说，在显示其他内容的更新前，是否应该等待图像解码完成。
+{{APIRef}}
+
+{{domxref("HTMLImageElement")}} 接口的 **`decoding`** 属性用于告诉浏览器如何解析图像数据。具体来说，在显示其他内容的更新前，是否应该等待图像解码完成。
 
 ## 值
 
@@ -23,15 +25,15 @@ l10n:
 
 ## 使用说明
 
-`decoding` 属性提示浏览器是否应该在一个步骤中与其他任务一起执行图像解码（“sync”），或者允许在解码完成前渲染其他内容（“async”）。实际上，这两者之间的差异往往难以察觉，而存在差异的地方往往有更好的办法。
+`decoding` 属性提示浏览器是否应该在一个步骤中与其他任务一起执行图像解码（`"sync"`），或者允许在解码完成前渲染其他内容（`"async"`）。实际上，这两者之间的差异往往难以察觉，而存在差异的地方往往有更好的办法。
 
 对于在视口内插入图像到 DOM 中，“async”可能导致无样式内容闪烁，而“sync”则可能导致一些 [Jank](/zh-CN/docs/Glossary/Jank)。通常使用 {{domxref("HTMLImageElement.decode()")}} 方法来实现不阻碍其他内容的同时原子化显示会更好。
 
-对于在视口外插入图像到 DOM 中，现代浏览器通常会在它们进入可视范围前对其解码，使用这两种值不会有明显区别。
+对于在视口外插入到 DOM 中的图像，现代浏览器通常会在图像滚动到可视范围之前对其进行解码，使用这两种值都不会有明显的区别。
 
 ## 示例
 
-下面的示例中，当图像下载时，页面上会显示空图像。设置 `decoding` 无法避免这种情况。
+下面的示例中，当图像下载时，页面上可能会显示空图像。设置 `decoding` 无法避免这种情况。
 
 ```js
 const img = new Image();
@@ -57,12 +59,11 @@ await loadImage("img/logo.png", img);
 img.decoding = "sync";
 document.body.appendChild(img);
 const p = document.createElement("p");
-p.textContent = "Image is fully loaded!";
+p.textContent = "图像已全部加载！";
 document.body.appendChild(p);
 ```
 
-然而，更好的解决方案是使用 {{domxref("HTMLImageElement.decode()")}} 方法。它提供了异步解码图片的方法，推迟直到图片完全下载并解码完成时才将图片插入
-DOM，以此避免上述的空图片问题。当你需要将现有图片动态替换为新图片时，这特别有用，而且可以防止在解码图片的过程中代码以外的无关绘制被耽搁。
+然而，更好的解决方案是使用 {{domxref("HTMLImageElement.decode()")}} 方法。它提供了异步解码图片的方法，推迟直到图片完全下载并解码完成时才将图片插入 DOM，以此避免上述的空图片问题。当你需要将现有图片动态替换为新图片时，这特别有用，而且可以防止在解码图片的过程中代码以外的无关绘制被耽搁。
 
 如果解码时间较长，使用 `img.decoding = "async"` 可以避免其他内容被耽搁。
 
