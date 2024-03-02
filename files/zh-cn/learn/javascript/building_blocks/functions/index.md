@@ -270,7 +270,7 @@ textBox.addEventListener("keydown", (event) =>
 
 > **备注：** 注意：箭头函数和普通函数之间存在一些细微差别。它们超出了本入门指南的范围，而且在我们这里讨论的情况下不太可能有什么不同。要了解更多信息，请参阅 [箭头函数参考文档](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
-### 箭头函数举例
+### 箭头函数实时示例
 
 下面是我们上面讨论的“keydown”示例的完整工作示例：
 
