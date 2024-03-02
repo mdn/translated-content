@@ -134,7 +134,7 @@ myFunction();
 const myNumber = Math.random();
 ```
 
-浏览器的内置字符串 [replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 函数需要两个参数：在主字符串中查找的子字符串，以及用以下替换该字符串的子字符串：
+浏览器的内置字符串 [replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 函数需要两个参数：在主字符串中查找的子字符串，以及用于替换该字符串的子字符串：
 
 ```js
 const myText = "I am a string";
