@@ -79,7 +79,7 @@ JavaScript 语言中有许多内置的函数，它们可以让你无需自己编
 
 到目前为止我们所使用的内置代码同属于这两种形式：**函数**和**方法**。你可以在[这里](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)查看内置函数，内置对象以及其相关方法的完整列表。
 
-你在过去的课程中也见到过很多**自定义方法**——在你的代码中而非浏览器中定义的函数。每当你看到一个后面带有括号的自定义名称，那么你使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的 [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 示例（参见完整的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
+你在过去的课程中也见到过很多**自定义函数**——在你的代码中而非浏览器中定义的函数。每当你看到一个后面带有括号的自定义名称，那么你使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的 [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 示例（参见完整的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包含一个如下所示的自定义 `draw()` 函数：
 
 ```js
 function draw() {
