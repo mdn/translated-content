@@ -37,12 +37,12 @@ env(safe-area-inset-left, 1.4rem);
 
 - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
   - : `safe-area-inset-*` 변수들은 네 개의 환경 변수로, 비사각형 화면의 형태로 인해 내용이 잘려 보일 위험 없이 컨텐츠를 안전하게 배치할 수 있는 뷰포트의 가장자리로부터 상단, 우측, 하단, 좌측을 기준으로 하는 사각형을 정의합니다. 사각형 뷰포트, 예를 들어 평균적인 노트북 모니터에서는 그들의 값은 0과 같습니다. 비사각형 디스플레이 — 예를 들어 둥근 시계면과 같은 경우 — 사용자 에이전트에 의해 설정된 네 가지 값은 사각형을 형성하며, 이 사각형 안에 있는 모든 컨텐츠가 보이도록 합니다.
-
 - `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, `titlebar-area-height`
   - : `titlebar-area-*` 변수는 데스크탑 장치에 설치된 PWA에서 유용합니다. 데스크탑 PWA가 `window-controls-overlay` [display_override](/en-US/docs/Web/Manifest/display_override) 값을 사용할 때, `titlebar-area-*` 변수를 사용하면 컨텐츠가 창 제어 버튼(예시. 최소화, 최대화, 닫기)과 겹치지 않도록 보장할 수 있습니다.
 - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
   - : `keyboard-inset-*` 변수는 화면에 표시되는 가상 키보드의 모습에 대한 정보를 제공합니다. 그들은 뷰포트의 가장자리로부터 상단, 우측, 하단, 좌측 인셋에 의해 사각형을 정의합니다 (너비와 높이 인셋은 다른 인셋들로부터 계산됩니다). 더 알아보려면 {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}를 참고해 주세요.
-> **알림:** 다른 CSS 속성들과는 달리, 사용자 에이전트에 의해 정의된 속성 이름들은 대소문자를 구별합니다.
+
+> **참고:** 다른 CSS 속성들과는 달리, 사용자 에이전트에 의해 정의된 속성 이름들은 대소문자를 구별합니다.
 
 ### 형식 구문
 
