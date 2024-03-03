@@ -157,7 +157,7 @@ console.log(madeAString);
 
 const madeAnotherString = myArray.join();
 console.log(madeAnotherString);
-// 返回 '我，爱，巧克力，青蛙'
+// 返回“我,爱,巧克力,青蛙”
 ```
 
 <!-- autocorrect-enable -->
