@@ -50,7 +50,7 @@ env(safe-area-inset-left, 1.4rem);
 
 ## 사용
 
-브라우저에게 화면에 있는 전체 사용 가능 공간을 사용하도록 지시하고, 이를 통해 `env()` 변수들을 사용할 수 있게 하려면 새로운 뷰포트 메타 값을 추가해야 합니다:
+브라우저에게 화면에 있는 전체 사용 가능 공간을 사용하도록 지시하고, 이를 통해 `env()` 변수들을 사용할 수 있게 하려면 새로운 뷰포트 메타 값을 추가해야 합니다.
 
 ```html
 <meta name="viewport" content="viewport-fit=cover" />
@@ -172,7 +172,7 @@ padding: env(x, 50px, 20px);
 
 다음 예제에서 `env()`는 [Window Controls Overlay API](/ko/docs/Web/API/Window_Controls_Overlay_API)를 사용하는 데스크탑 프로그레시브 웹 앱에 표시되는 컨텐츠가 운영체제의 창 제어 버튼에 의해 가려지지 않도록 보장합니다. `titlebar-area-*` 값들은 일반적으로 타이틀 바가 표시되었을 위치에 사각형을 정의합니다. 휴대용 기기들처럼 Window Controls Overlay 기능을 지원하지 않는 기기들에서는 대체 값들이 사용됩니다.
 
-데스크탑 기기에 설치된 PWA는 일반적으로 다음과 같은 모습입니다:
+데스크탑 기기에 설치된 PWA는 일반적으로 다음과 같은 모습입니다.
 
 ![창 제어 버튼, 타이틀 바, 타이틀 바 아래에 웹 컨텐츠를 갖는 데스크탑 PWA의 일반적인 모습](desktop-pwa-window.png)
 
