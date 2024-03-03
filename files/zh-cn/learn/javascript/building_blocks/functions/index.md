@@ -155,7 +155,7 @@ console.log(madeAString);
 
 const madeAnotherString = myArray.join();
 console.log(madeAnotherString);
-// 返回 '我,爱,巧克力,青蛙'
+// 返回 '我，爱，巧克力，青蛙'
 ```
 
 如果没有包含参数来指定连接/分隔符，默认情况下会使用逗号。
