@@ -329,17 +329,17 @@ JavaScript 之所以设计成如此，有很多原因，但主要是出于安全
 
 ```js
 // first.js
-const name = "克里斯";
+const name = 'Chris';
 function greeting() {
-  alert(`你好，${name}：欢迎来到我们的公司。`);
+  alert(`Hello ${name}: welcome to our company.`);
 }
 ```
 
 ```js
 // second.js
-const name = "Zaptec";
+const name = 'Zaptec';
 function greeting() {
-  alert(`我们的公司名叫做 ${name}。`);
+  alert(`Our company is called ${name}.`);
 }
 ```
 
@@ -449,7 +449,7 @@ function greeting() {
 
 > **备注：** 相同的作用域规则不适用于循环（例如 `for() { }`）和条件块（例如 `if() { }`）——它们看起来非常相似，但它们不一样！千万不要混淆它们。
 
-> **备注：** [ReferenceError: "x" is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)”错误将会是你遇到的最常见的错误。如果你收到此错误，并且确定你已经定义了该变量，请检查它的作用域。
+> **备注：** “[ReferenceError: "x" is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)”错误将会是你遇到的最常见的错误。如果你收到此错误，并且确定你已经定义了该变量，请检查它的作用域。
 
 ## 技能测试！
 
