@@ -19,7 +19,7 @@ var p = new Proxy(target, {
 
 ### 参数
 
-`下面是传递给 has` 方法的参数。`this` is bound to the handler.
+下面是传递给 has 方法的参数。`this` 绑定至 handler 对象上。
 
 - `target`
   - : 目标对象。
