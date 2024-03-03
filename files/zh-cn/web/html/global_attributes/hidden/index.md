@@ -27,7 +27,7 @@ slug: Web/HTML/Global_attributes/hidden
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 - [aria-hidden](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute)属性

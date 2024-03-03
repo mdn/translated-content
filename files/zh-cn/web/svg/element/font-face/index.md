@@ -59,7 +59,7 @@ font-face 元素相当于 (corresponds to) CSS 的 @font-face 规则声明，fon
 
 这个元素实现了 [`SVGFontFaceElement`](/zh-CN/DOM/SVGFontFaceElement) 接口。
 
-## 另见
+## 参见
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("font-face-src") }}

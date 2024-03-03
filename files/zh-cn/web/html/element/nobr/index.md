@@ -13,7 +13,7 @@ HTML `<nobr>` 元素阻止文本自动拆分成新行，所以它展示为长的
 <span style="white-space: nowrap">Long line with no breaks</span>
 ```
 
-## 另见
+## 参见
 
 - {{Cssxref("white-space")}}
 - {{Cssxref("overflow")}}

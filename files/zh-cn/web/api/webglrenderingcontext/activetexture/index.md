@@ -56,6 +56,6 @@ gl.getParameter(gl.ACTIVE_TEXTURE);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.getParameter()")}}

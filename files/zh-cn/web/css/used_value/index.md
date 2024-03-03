@@ -31,7 +31,7 @@ CSS 2.0 只定义了 [计算值 computed value](/zh-CN/docs/CSS/computed_value) 
 
 [CSS Level 2: Used Values](http://www.w3.org/TR/CSS2/cascade.html#used-value)
 
-## 另见
+## 参见
 
 - [CSS Reference](/zh-CN/docs/CSS_Reference)
 - CSS 重要概念：

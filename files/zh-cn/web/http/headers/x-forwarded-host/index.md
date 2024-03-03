@@ -38,7 +38,7 @@ X-Forwarded-Host: id42.example-cdn.com
 
 不属于任何一份既有规范。这个消息首部的标准版本是 {{HTTPHeader("Forwarded")}}.
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Forwarded")}}
