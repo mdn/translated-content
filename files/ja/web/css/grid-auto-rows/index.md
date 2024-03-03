@@ -118,7 +118,7 @@ grid-auto-rows: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_row_size", "210px", "210px")}}
+{{EmbedLiveSample("グリッド行の寸法を設定", "210px", "210px")}}
 
 ## 仕様書
 

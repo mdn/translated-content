@@ -125,7 +125,7 @@ grid-row: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_row_size_and_location", "200px", "200px")}}
+{{EmbedLiveSample("グリッド行の寸法と位置の設定", "200px", "200px")}}
 
 ## 仕様書
 
