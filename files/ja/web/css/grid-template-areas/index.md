@@ -98,7 +98,7 @@ grid-template-areas: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "250px")}}
+{{EmbedLiveSample("名前付きグリッド領域の指定", "100%", "250px")}}
 
 ## 仕様書
 

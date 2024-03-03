@@ -148,7 +148,7 @@ grid-row-start: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_row_start_for_a_grid_item', '230', '420') }}
+{{ EmbedLiveSample('グリッドアイテムの行の開始位置の設定', '230', '420') }}
 
 ## 仕様書
 

@@ -125,7 +125,7 @@ footer {
 
 #### 結果
 
-{{EmbedLiveSample("Defining_a_grid_template", "100%", "200px")}}
+{{EmbedLiveSample("グリッドテンプレートの定義", "100%", "200px")}}
 
 ## 仕様書
 
