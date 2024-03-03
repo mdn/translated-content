@@ -147,6 +147,8 @@ const newString = myText.replace("字符串", "香肠");
 
 还应该注意，有时参数不是必需的——你不必指定它们。如果你没有指定某些参数，该函数一般会采用某种默认行为。例如，数组的 [join()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 函数的参数是可选的：
 
+<!-- autocorrect-disable -->
+
 ```js
 const myArray = ["我", "爱", "巧克力", "青蛙"];
 const madeAString = myArray.join(" ");
@@ -157,6 +159,8 @@ const madeAnotherString = myArray.join();
 console.log(madeAnotherString);
 // 返回 '我，爱，巧克力，青蛙'
 ```
+
+<!-- autocorrect-enable -->
 
 如果没有包含参数来指定连接/分隔符，默认情况下会使用逗号。
 
