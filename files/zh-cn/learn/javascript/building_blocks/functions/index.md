@@ -329,7 +329,7 @@ JavaScript 之所以设计成如此，有很多原因，但主要是出于安全
 
 ```js
 // first.js
-const name = 'Chris';
+const name = "Chris";
 function greeting() {
   alert(`Hello ${name}: welcome to our company.`);
 }
@@ -337,7 +337,7 @@ function greeting() {
 
 ```js
 // second.js
-const name = 'Zaptec';
+const name = "Zaptec";
 function greeting() {
   alert(`Our company is called ${name}.`);
 }
