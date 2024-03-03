@@ -4537,6 +4537,11 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
+/ja/docs/Web/SVG/Attribute/Conditional_Processing	/ja/docs/conflicting/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/Core	/ja/docs/conflicting/Web/SVG/Attribute_8b46caaa15fc4ef35e048d2af4b381af
+/ja/docs/Web/SVG/Attribute/Events	/ja/docs/conflicting/Web/SVG/Attribute_2c6f954f5add812c802f63bc2fe3b288
+/ja/docs/Web/SVG/Attribute/Presentation	/ja/docs/conflicting/Web/SVG/Attribute_1b74f3210e6f2b1d7ef9874574810fb3
+/ja/docs/Web/SVG/Attribute/Styling	/ja/docs/conflicting/Web/SVG/Attribute_001d562cd73426c4868668d1978f5d61
 /ja/docs/Web/SVG/Compatibility_sources	/ja/docs/Web/SVG
 /ja/docs/Web/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animate
 /ja/docs/Web/SVG/Element/hatchpath	/ja/docs/orphaned/Web/SVG/Element/hatchpath

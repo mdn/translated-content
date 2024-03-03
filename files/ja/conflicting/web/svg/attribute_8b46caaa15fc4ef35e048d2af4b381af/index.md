@@ -1,6 +1,7 @@
 ---
 title: SVG コア属性
-slug: Web/SVG/Attribute/Core
+slug: conflicting/Web/SVG/Attribute_8b46caaa15fc4ef35e048d2af4b381af
+original_slug: Web/SVG/Attribute/Core
 ---
 
 SVG コア属性は、すべての SVG 要素に指定できる共通の属性すべてのことです。

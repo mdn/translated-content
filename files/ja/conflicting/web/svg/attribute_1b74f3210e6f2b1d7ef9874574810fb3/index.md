@@ -1,6 +1,7 @@
 ---
 title: SVG プレゼンテーション属性
-slug: Web/SVG/Attribute/Presentation
+slug: conflicting/Web/SVG/Attribute_1b74f3210e6f2b1d7ef9874574810fb3
+original_slug: Web/SVG/Attribute/Presentation
 ---
 
 SVG プレゼンテーション属性は、SVG 要素の属性として使用される CSS プロパティです。

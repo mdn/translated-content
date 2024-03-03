@@ -1,6 +1,7 @@
 ---
 title: SVG イベント属性
-slug: Web/SVG/Attribute/Events
+slug: conflicting/Web/SVG/Attribute_2c6f954f5add812c802f63bc2fe3b288
+original_slug: Web/SVG/Attribute/Events
 ---
 
 イベント属性は、常に "on" で始まる名前を持ち、その後に目的とするイベントの名前が続きます。これらの属性は、属性が指定された要素に与えられた種類のイベントが発行されたときに実行される何らかのスクリプトを指定します。
