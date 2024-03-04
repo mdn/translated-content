@@ -999,7 +999,7 @@ do {
 
 - [ループと反復処理](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [for...of のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
-- [for 文のリファレンス](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [for 文のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/ja/docs/Web/JavaScript/Reference/Statements/while) と [do...while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) リファレンス
 - [break](/ja/docs/Web/JavaScript/Reference/Statements/break) と [continue](/ja/docs/Web/JavaScript/Reference/Statements/continue) リファレンス
 
