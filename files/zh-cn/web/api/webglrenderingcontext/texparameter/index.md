@@ -159,7 +159,7 @@ gl.texParameteri(
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.getTexParameter()")}}
 - {{domxref("EXT_texture_filter_anisotropic")}}

@@ -544,7 +544,7 @@ Promise.all([
 
 以上我们概括浏览了，关于 WebAssembly 文本格式的主要部分，以及它们是如何映射到 WebAssembly JS API 中的。
 
-## 另见
+## 参见
 
 - 没有介绍的一个主要的部分是在函数体中会出现的所有指令的清单。参考 [WebAssembly 语义](http://webassembly.org/docs/semantics)来了解每条指令的含义。
 - 参考被规范解释器实现的[文本格式语法](https://github.com/WebAssembly/spec/blob/master/interpreter/README.md#s-expression-syntax)。
