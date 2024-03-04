@@ -1,6 +1,8 @@
 ---
 title: "::placeholder"
 slug: Web/CSS/::placeholder
+l10n:
+  sourceCommit: 59ef5b046557b45a515b654458667e6da6d0f4aa
 ---
 
 {{CSSRef}}
