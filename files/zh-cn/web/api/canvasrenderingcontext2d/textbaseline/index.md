@@ -125,7 +125,6 @@ baselines.forEach((baseline, index) => {
 
 {{ EmbedLiveSample('基于同一水平线比较属性值的差异', 900, 200) }}
 
-
 ## 规范
 
 {{Specifications}}
