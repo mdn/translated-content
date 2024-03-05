@@ -61,7 +61,7 @@ re.test("aa"); // false
 re.test("a{1, 3}"); // true
 ```
 
-这种行为在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-感知模式)中得到了修正，在这种模式下，如果不使用[转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)语法，就不能按字面意思使用大括号。在不使用转义的情况下按字面意思使用 `{` 和 `}` 的特性是一种[为与 web 兼容而废弃的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖这种特性。
+这种行为在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)中得到了修正，在这种模式下，如果不使用[转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)语法，就不能按字面意思使用大括号。在不使用转义的情况下按字面意思使用 `{` 和 `}` 的特性是一种[为与 web 兼容而废弃的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖这种特性。
 
 ```js-nolint example-bad
 /a{1, 3}/u; // SyntaxError: Invalid regular expression: Incomplete quantifier
@@ -113,7 +113,7 @@ re.test("a{1, 3}"); // true
 /^*/; // SyntaxError: Invalid regular expression: nothing to repeat
 ```
 
-在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-感知模式) 中，[前向断言](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)可以量化。这是一种[为兼容 web 而过时的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖它。
+在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)中，[前向断言](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)可以量化。这是一种[为兼容 web 而过时的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖它。
 
 ```js
 /(?=a)?b/.test("b"); // true；前向匹配了零次
@@ -178,5 +178,5 @@ Another paragraph
 
 - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)指南
 - [正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions)
-- [析取符：`|`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
+- [选择表达式：`|`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 - [字符类：`[...]`、`[^...]`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)

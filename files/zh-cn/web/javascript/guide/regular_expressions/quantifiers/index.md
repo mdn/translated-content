@@ -13,7 +13,7 @@ l10n:
 
 ## 类型
 
-> **备注：** 在下文中，*项*不仅指单个字符，还包括[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)、[组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) 。
+> **备注：** 在下文中，*项*不仅指单个字符，还包括[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)、[组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)。
 
 <table class="standard-table">
   <thead>
@@ -29,7 +29,7 @@ l10n:
       </td>
       <td>
         <p>
-          将前面的项“x”匹配 0 次或更多次。例如，<code>/bo*/</code>匹配“A ghost
+          将前面的项“x”匹配 0 次或更多次。例如，<code>/bo*/</code> 匹配“A ghost
           booooed”中的“boooo”和“A bird warbled”中的“b”，但在“A goat
           grunt”中没有匹配。
         </p>
@@ -52,7 +52,7 @@ l10n:
       </td>
       <td>
         <p>
-          将前面的项“x”匹配 0 或 1 次。例如，/e?le?/匹配“angel”中的“el”和“angle”中的“le”。
+          将前面的项“x”匹配 0 或 1 次。例如，<code>/e?le?/</code> 匹配“angel”中的“el”和“angle”中的“le”。
         </p>
         <p>
           如果立即在任何 <code>*</code>、<code>+</code>、<code>?</code> 或 <code>{}</code> 量词之后使用，则使量词变为非贪婪匹配（匹配最小次数），而不是默认的贪婪匹配（匹配最大次数）。
@@ -87,7 +87,7 @@ l10n:
       </td>
       <td>
         <p>
-          其中“n”是非负整数，“m”是一个正整数，并且<code><em>m</em> > <em>n</em></code>。与项“x”至少匹配“n”次，至多匹配“m”次。例如，<code>/a{1,3}/</code> 匹配“cndy”中的任何内容、“candy”中的“a”、“caandy”中的两个“a”以及“caaaaaandy”中的前三个“a”。请注意，在匹配“caaaaaandy”时，匹配的是“aaa”，尽管原始字符串中有更多的“a”。
+          其中“n”是非负整数，“m”是一个正整数，并且 <code><em>m</em> > <em>n</em></code>。与项“x”至少匹配“n”次，至多匹配“m”次。例如，<code>/a{1,3}/</code> 不匹配“cndy”中的任何内容，而匹配“candy”中的“a”、“caandy”中的两个“a”以及“caaaaaandy”中的前三个“a”。请注意，在匹配“caaaaaandy”时，匹配的是“aaa”，尽管原始字符串中有更多的“a”。
         </p>
       </td>
     </tr>
@@ -102,7 +102,7 @@ l10n:
       </td>
       <td>
         <p>
-          默认情况下，像 <code>*</code> 和 <code>+</code> 这样的量词是“贪婪的”，这意味着它们试图匹配尽可能多的字符串。量词后面的字符 <code>?</code> 使量词“非贪婪”：它一旦找到匹配就会停止。例如，给定一个字符串“some &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing”:
+          默认情况下，像 <code>*</code> 和 <code>+</code> 这样的量词是“贪婪的”，这意味着它们试图匹配尽可能多的字符串。量词后面的字符 <code>?</code> 使量词“不贪婪”：它一旦找到匹配就会停止。例如，给定一个字符串“some &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing”:
         </p>
         <ul>
           <li>
@@ -127,7 +127,7 @@ const delicateMessage = "This is Spartaaaaaaa";
 console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ```
 
-### 计算字符集
+### 统计单词
 
 ```js
 const singleLetterWord = /\b\w\b/g;
