@@ -26,7 +26,7 @@ for (initialization; condition; afterthought)
 
 - `condition` {{optional_inline}}
 
-  - : 每次循环迭代之前要计算的表达式。如果该表达式的[结果为真](/zh-CN/docs/Glossary/Truthy)，`statement` 将被执行。如果计算[结果为假](/zh-CN//docs/Glossary/Falsy)，那么执行流程将退出循环，并转到 `for` 结构后面的第一条语句。
+  - : 每次循环迭代之前要计算的表达式。如果该表达式的[结果为真](/zh-CN/docs/Glossary/Truthy)，`statement` 将被执行。如果计算[结果为假](/zh-CN/docs/Glossary/Falsy)，那么执行流程将退出循环，并转到 `for` 结构后面的第一条语句。
 
     这个条件测试是可选的。如果省略，该条件总是计算为真。
 
