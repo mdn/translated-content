@@ -35,15 +35,14 @@ The review teams for each locale are:
   - [kenji-yamasaki](https://github.com/kenji-yamasaki)
   - [mfuji09](https://github.com/mfuji09)
 - Korea (`ko`) content — the [yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko) team, which consists of:
+  - [1ilsang](https://github.com/1ilsang)
   - [sunhpark42](https://github.com/sunhpark42)
   - [jho2301](https://github.com/jho2301)
   - [swimjiy](https://github.com/swimjiy)
   - [wisedog](https://github.com/wisedog)
   - [cos18](https://github.com/cos18)
   - [yechoi42](https://github.com/yechoi42)
-  - [GwangYeol-Im](https://github.com/GwangYeol-Im)
   - [pje1740](https://github.com/pje1740)
-  - [yujo11](https://github.com/yujo11)
   - [hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the [yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru) team, which consists of:
   - [leon-win](https://github.com/leon-win)
