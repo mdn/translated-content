@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/with
 ## 语法
 
 ```js-nolint
-array.with(index, value)
+with(index, value)
 ```
 
 ### 参数
@@ -33,7 +33,9 @@ array.with(index, value)
 
 ## 描述
 
-`with()` 通过返回一个指定索引处的值被新值替换的新数组，来改变数组中指定索引处的值。原数组不会被修改。这使得你可以以链式调用数组方法的方式来对数组进行操作。
+`with()` 通过返回一个指定索引处的值被新值替换的新数组，来改变数组中指定索引处的值。原数组不会被修改，这使得你可以以链式调用数组方法的方式来对数组进行操作。
+
+通过组合使用`with()` 和 {{jsxref("Array/at", "at()")}} 函数，可分别地写入和读取数组，索引使用正数负数均可。
 
 `with()` 方法永远不会产生[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)。如果原数组是稀疏的，新数组对应的空白索引位置会替换为 `undefined`。
 
@@ -93,7 +95,9 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.with` 的 polyfill](https://github.com/zloirock/core-js#change-array-by-copy)
+- [Indexed collections](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.at()")}}
 - {{jsxref("TypedArray.prototype.with()")}}
