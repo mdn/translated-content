@@ -229,7 +229,7 @@ function showOffsetPos(id) {
 showOffsetPos("content");
 
 // 打印：
-// 相对于“content”元素的偏移位置
+// “content”元素的偏移位置
 // 左侧：0px；
 // 顶部：153px；
 ```
