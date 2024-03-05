@@ -220,7 +220,7 @@ function showOffsetPos(id) {
   ); // 分号
 
   console.log(
-    `相对于“${id}”元素的偏移位置：
+    `“${id}”元素的偏移位置：
 左侧：${left}px；
 顶部：${top}px；`,
   );
