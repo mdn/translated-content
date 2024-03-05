@@ -287,4 +287,4 @@ body {
 - 在渲染的 {{HTMLElement("details")}} 结果中，**`<element-details>`** 标签填充了影子根中的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。换言之，**`<element-details>`** 的 DOM 树和[影子根](/zh-CN/docs/Web/API/ShadowRoot)的内容结合在了一起。
 - 对于这两个 **`<element-details>`** 标签，**Attributes** 标题会自动从[影子根](/zh-CN/docs/Web/API/ShadowRoot)中添加到名为 `"attribute"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的前面。
 - 因为第一个 **`<element-details>`** 标签的 {{HTMLElement("dl")}} 元素就明确引用了名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，所以该 {{HTMLElement("dl")}} 元素的内容将会替换该标签中名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。
-- 因为第二个 **`<element-details>`** 标签没有显式引用其[影子根](/en-US/docs/Web/API/ShadowRoot)中名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，所以标签内名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的内容将会使用模板中默认的内容。
+- 因为第二个 **`<element-details>`** 标签没有显式引用其[影子根](/zh-CN/docs/Web/API/ShadowRoot)中名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，所以标签内名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的内容将会使用模板中默认的内容。
