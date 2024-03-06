@@ -26,13 +26,13 @@ lastIndexOf(searchString, position)
 
 - `position` {{optional_inline}}
 
-  - : このメソッドは、`position`（既定値は `0`）以下の位置で、指定した部分文字列が最後に現れるインデックスを返します。`position` が呼び出された文字列の長さよりも大きい場合、このメソッドは呼び出される文字列をまったく検索しません。`position` が 0 未満の場合、このメソッドは `0` と同じように動作します。すなわち、このメソッドは指定された文字列をインデックス `0` でのみ検索します。
+  - : このメソッドは、`position`（既定値は `+Infinity`）以下の位置で、指定した部分文字列が最後に現れるインデックスを返します。`position` が呼び出された文字列の長さよりも大きい場合、このメソッドは呼び出される文字列全体を検索します。`position` が `0` 未満の場合、このメソッドは `0` の場合と同じように動作します。すなわち、このメソッドは指定された文字列をインデックス `0` でのみ検索します。
 
     - `'hello world hello'.lastIndexOf('world', 4)` は `-1` を返します。部分文字列 `world` が現れるのは `6` のインデックスですが、その位置は `4` 以下ではないからです。
 
     - `'hello world hello'.lastIndexOf('hello', 99)` は `12` を返します。部分文字列 `hello` が最後に現れる位置が、`99` 以下である `12` の位置だからです。
 
-  - `'hello world hello'.lastIndexOf('hello', 0)` と `'hello world hello'.lastIndexOf('hello', -5)` はどちらも `0` を返します。`hello` をインデックス `0` でしか検索しないからです。
+    - `'hello world hello'.lastIndexOf('hello', 0)` と `'hello world hello'.lastIndexOf('hello', -5)` はどちらも `0` を返します。`hello` をインデックス `0` でしか検索しないからです。
 
 ### 返値
 
