@@ -2105,7 +2105,6 @@
 /ja/docs/Learn/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/Forms/Your_first_form/Example	/ja/docs/Learn/Forms/Your_first_form
-/ja/docs/Learn/Front-end_web_developer	/ja/docs/orphaned/Learn/Front-end_web_developer
 /ja/docs/Learn/Getting_started_with_the_web/ウェブサイトを公開する	/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website
 /ja/docs/Learn/HTML/Forms	/ja/docs/Learn/Forms
 /ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms	/ja/docs/Learn/Forms/Advanced_form_styling
@@ -4037,7 +4036,7 @@
 /ja/docs/Web/HTML/Element/h4	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h5	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
-/ja/docs/Web/HTML/Element/image	/ja/docs/conflicting/Web/HTML/Element/img
+/ja/docs/Web/HTML/Element/image	/ja/docs/Web/HTML/Element/img
 /ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
