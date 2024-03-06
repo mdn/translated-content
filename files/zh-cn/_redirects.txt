@@ -1080,7 +1080,6 @@
 /zh-CN/docs/Learn/Common_questions/实用文本编辑器	/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors
 /zh-CN/docs/Learn/Common_questions/网页，网站，网页服务器和搜索引擎的区别是什么？	/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 /zh-CN/docs/Learn/Discover_browser_developer_tools	/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-/zh-CN/docs/Learn/Front-end_web_developer	/zh-CN/docs/orphaned/Learn/Front-end_web_developer
 /zh-CN/docs/Learn/Getting_started_with_the_web/CSS_基础	/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics
 /zh-CN/docs/Learn/Getting_started_with_the_web/你的网页将呈现什么样子？	/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like
 /zh-CN/docs/Learn/Getting_started_with_the_web/网络是如何工作的	/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works

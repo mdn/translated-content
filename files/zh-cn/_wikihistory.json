@@ -32656,9 +32656,5 @@
   "conflicting/Web/HTML/Element/img": {
     "modified": "2019-03-30T00:32:55.632Z",
     "contributors": ["raygift", "hoyt"]
-  },
-  "orphaned/Learn/Front-end_web_developer": {
-    "modified": "2020-07-16T22:40:48.018Z",
-    "contributors": ["Ende93", "ex90rts"]
   }
 }
