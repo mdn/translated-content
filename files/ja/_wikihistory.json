@@ -2725,10 +2725,6 @@
     "modified": "2020-12-02T12:12:26.573Z",
     "contributors": ["hamasaki", "mfuji09", "silverskyvicto"]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-10-31T10:34:45.039Z",
-    "contributors": ["teclogmanager", "imagawalouis"]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-10-25T05:48:49.625Z",
     "contributors": [
@@ -20733,10 +20729,6 @@
       "ethertank",
       "sosleepy"
     ]
-  },
-  "Web/HTML/Element/image": {
-    "modified": "2020-10-15T22:02:26.431Z",
-    "contributors": ["mfuji09", "teoli"]
   },
   "Web/HTML/Element/input": {
     "modified": "2020-10-15T21:25:58.138Z",
