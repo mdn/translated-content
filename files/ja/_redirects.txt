@@ -1371,7 +1371,7 @@
 /ja/docs/HTML/Element	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/Element/Audio	/ja/docs/Web/HTML/Element/audio
 /ja/docs/HTML/Element/Heading_Elements	/ja/docs/Web/HTML/Element/Heading_Elements
-/ja/docs/HTML/Element/Img	/ja/docs/Web/HTML/Element/Img
+/ja/docs/HTML/Element/Img	/ja/docs/Web/HTML/Element/img
 /ja/docs/HTML/Element/Script	/ja/docs/Web/HTML/Element/Script
 /ja/docs/HTML/Element/Script/Script	/ja/docs/Web/API/Node/cloneNode
 /ja/docs/HTML/Element/Source	/ja/docs/Web/HTML/Element/source
