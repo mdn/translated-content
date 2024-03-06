@@ -2,7 +2,7 @@
 title: Firefox 123 的开发者说明
 slug: Mozilla/Firefox/Releases/123
 l10n:
-  sourceCommit: 1822cdf5a86574429c4c49883a402663ef16a4ef
+  sourceCommit: a9bd012040da7024cc05c00336aa7ebb42c5c227
 ---
 
 {{FirefoxSidebar}}
