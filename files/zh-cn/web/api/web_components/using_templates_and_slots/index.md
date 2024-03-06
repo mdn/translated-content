@@ -86,7 +86,7 @@ customElements.define(
 <p><slot name="my-text">My default text</slot></p>
 ```
 
-如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持插槽，则`<my-paragraph>` 仅包含后备内容 "My default text"。
+如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持插槽，则 `<my-paragraph>` 仅包含后备内容 "My default text"。
 
 要定义插槽内容，我们在 `<my-paragraph>` 元素内包括一个 HTML 结构，该结构具有 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性，其值等于我们要填充的 {{htmlelement("slot")}} 的 name 属性的值。和之前一样，它可以是你喜欢的任何东西，例如：
 
@@ -106,6 +106,7 @@ customElements.define(
   </ul>
 </my-paragraph>
 ```
+
 > **备注：** 将能被插入到槽中的元素视为 {{domxref("Slotable")}}; 称已经插入到槽中的元素为 _slotted_.
 
 > **备注：** 未命名的 {{HTMLElement("slot")}} 元素将被填充为自定义元素中所有不含 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性的所有顶级子节点。这也包括文本节点。
@@ -287,4 +288,4 @@ body {
 - 在渲染的 {{HTMLElement("details")}} 结果中，**`<element-details>`** 标签填充了影子根中的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。换言之，**`<element-details>`** 的 DOM 树和[影子根](/zh-CN/docs/Web/API/ShadowRoot)的内容结合在了一起。
 - 对于这两个 **`<element-details>`** 标签，**Attributes** 标题会自动从[影子根](/zh-CN/docs/Web/API/ShadowRoot)中添加到名为 `"attribute"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的前面。
 - 因为第一个 **`<element-details>`** 标签的 {{HTMLElement("dl")}} 元素就明确引用了名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，所以该 {{HTMLElement("dl")}} 元素的内容将会替换该标签中名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。
-- 因为第二个 **`<element-details>`** 标签没有显式引用其[影子根](/en-US/docs/Web/API/ShadowRoot)中名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，所以标签内名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的内容将会使用模板中默认的内容。
+- 因为第二个 **`<element-details>`** 标签没有显式引用其[影子根](/zh-CN/docs/Web/API/ShadowRoot)中名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，所以标签内名为 `"attributes"` 的[命名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的内容将会使用模板中默认的内容。
