@@ -106,6 +106,7 @@ customElements.define(
   </ul>
 </my-paragraph>
 ```
+
 > **备注：** 将能被插入到槽中的元素视为 {{domxref("Slotable")}}; 称已经插入到槽中的元素为 _slotted_.
 
 > **备注：** 未命名的 {{HTMLElement("slot")}} 元素将被填充为自定义元素中所有不含 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性的所有顶级子节点。这也包括文本节点。
