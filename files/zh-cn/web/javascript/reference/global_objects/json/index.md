@@ -35,7 +35,7 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON
   <tr>
    <td>字符串</td>
    <td>
-    <p>只有有限的一些字符可能会被转义；禁止某些控制字符；Unicode 行分隔符（<a href="http://unicode-table.com/cn/2028/">U+2028</a>）和段分隔符（<a href="http://unicode-table.com/cn/2029/">U+2029</a>）被允许 ; 字符串必须用双引号括起来。请参考下面的示例，可以看到 {{jsxref("JSON.parse()")}} 能够正常解析，但将其当作 JavaScript 解析时会抛出 {{jsxref("SyntaxError")}} 错误：</p>
+    <p>只有有限的一些字符可能会被转义；禁止某些控制字符；Unicode 行分隔符（<a href="https://symbl.cc/cn/2028/">U+2028</a>）和段分隔符（<a href="https://symbl.cc/cn/2029/">U+2029</a>）被允许 ; 字符串必须用双引号括起来。请参考下面的示例，可以看到 {{jsxref("JSON.parse()")}} 能够正常解析，但将其当作 JavaScript 解析时会抛出 {{jsxref("SyntaxError")}} 错误：</p>
 
   <pre class="brush: js">
 let code = '"\u2028\u2029"';
@@ -99,7 +99,7 @@ ArrayElements = JSON
              or ArrayElements , JSON
 ```
 
-在 `JSONNumber`（数字内部不允许包含空格）或 `JSONString`（字符串内部的空格被解释为相应的字符，否则就有问题了）之外的任何位置可以有多余的空白字符。JSON 只支持这些空白字符：制表符（[U+0009](http://unicode-table.com/en/0009/)），回车（[U+000D](http://unicode-table.com/en/000D/)），换行（[U+00](http://unicode-table.com/en/0020/)0A）以及空格（[U+0020](http://unicode-table.com/en/0020/)）。
+在 `JSONNumber`（数字内部不允许包含空格）或 `JSONString`（字符串内部的空格被解释为相应的字符，否则就有问题了）之外的任何位置可以有多余的空白字符。JSON 只支持这些空白字符：制表符（[U+0009](https://symbl.cc/en/0009/)），回车（[U+000D](https://symbl.cc/en/000D/)），换行（[U+00](https://symbl.cc/en/0020/)0A）以及空格（[U+0020](https://symbl.cc/en/0020/)）。
 
 ## 方法
 
