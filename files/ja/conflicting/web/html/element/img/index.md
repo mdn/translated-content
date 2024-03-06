@@ -1,8 +1,7 @@
 ---
 title: "<image>: 画像要素"
-slug: Web/HTML/Element/image
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+slug: conflicting/Web/HTML/Element/img
+original_slug: Web/HTML/Element/image
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}{{Non-standard_header}}

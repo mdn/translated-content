@@ -1,6 +1,7 @@
 ---
 title: フロントエンドウェブ開発者
-slug: Learn/Front-end_web_developer
+slug: orphaned/Learn/Front-end_web_developer
+original_slug: Learn/Front-end_web_developer
 ---
 
 {{learnsidebar}}

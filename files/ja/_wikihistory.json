@@ -2725,10 +2725,6 @@
     "modified": "2020-12-02T12:12:26.573Z",
     "contributors": ["hamasaki", "mfuji09", "silverskyvicto"]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-10-31T10:34:45.039Z",
-    "contributors": ["teclogmanager", "imagawalouis"]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-10-25T05:48:49.625Z",
     "contributors": [
@@ -20734,10 +20730,6 @@
       "sosleepy"
     ]
   },
-  "Web/HTML/Element/image": {
-    "modified": "2020-10-15T22:02:26.431Z",
-    "contributors": ["mfuji09", "teoli"]
-  },
   "Web/HTML/Element/input": {
     "modified": "2020-10-15T21:25:58.138Z",
     "contributors": [
@@ -30188,6 +30180,10 @@
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
   },
+  "conflicting/Web/HTML/Element/img": {
+    "modified": "2020-10-15T22:02:26.431Z",
+    "contributors": ["mfuji09", "teoli"]
+  },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": ["mfuji09", "tamura4278"]
@@ -30211,6 +30207,10 @@
   "orphaned/Games/Examples": {
     "modified": "2019-01-16T21:57:35.766Z",
     "contributors": ["wbamberg", "Uemmra3"]
+  },
+  "orphaned/Learn/Front-end_web_developer": {
+    "modified": "2020-10-31T10:34:45.039Z",
+    "contributors": ["teclogmanager", "imagawalouis"]
   },
   "orphaned/New_in_JavaScript_1.8": {
     "modified": "2019-03-24T00:06:00.366Z",
