@@ -51,7 +51,7 @@ My cat is very grumpy
 
 ### 요소 중첩
 
-요소를 다른 요소의 안에 놓을 수 있습니다. 이것을 **중첩(nesting)** 이라고 부릅니다. out cat is **very** grumpy 라고 표시하길 원한다면, 단어를 강조하는 용도로 사용하는{{htmlelement("strong")}} 요소로 "very"를 감싸면 됩니다.
+요소를 다른 요소의 안에 놓을 수 있습니다. 이것을 **중첩(nesting)** 이라고 부릅니다. our cat is **very** grumpy 라고 표시하길 원한다면, 단어를 강조하는 용도로 사용하는{{htmlelement("strong")}} 요소로 "very"를 감싸면 됩니다.
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>
