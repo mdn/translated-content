@@ -21,7 +21,7 @@ MDN のサーバサイドプログラミング入門コースにようこそ！�
 
 ## サーバーサイドプログラミングとは何か？
 
-Web ブラウザーは、「ハイパー・テキスト・トランスファー・プロトコル ({{glossary("HTTP")}})」を使って[Web サーバー](/ja/docs/Learn/Common_questions/What_is_a_web_server)と通信します。Web ページのリンクをクリックしたり、入力フォームを送信したり、検索を実行したりすると、ブラウザーからサーバーへ**HTTP 要求**（Request）が送信されます。
+Web ブラウザーは、「ハイパー・テキスト・トランスファー・プロトコル ({{glossary("HTTP")}})」を使って[Web サーバー](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)と通信します。Web ページのリンクをクリックしたり、入力フォームを送信したり、検索を実行したりすると、ブラウザーからサーバーへ**HTTP 要求**（Request）が送信されます。
 
 この要求には、関係するデータを指定する URL や、要求するアクションを定めるメソッド（データの取得、削除、送付など）が含まれます。さらに追加情報を含むこともあります。たとえば（[HTTP POST メソッド](/ja/docs/Web/HTTP/Methods/POST)を使ったデータ送付のように）URL のパラメータとして[クエリー文字列](https://en.wikipedia.org/wiki/Query_string)を付加したり、{{glossary("Cookie", "クッキー")}}を使ったりします。
 
