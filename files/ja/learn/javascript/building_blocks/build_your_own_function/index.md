@@ -287,7 +287,7 @@ btn.addEventListener("click", displayMessage());
 
    （今はそうでもないですが）小さな機能がどれほど有益なものになりつつあるか、おわかりいただけると思います。
 
-> **メモ:** サンプルをうまく動作させることができない場合は、コードを [GitHub の完成バージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html)と比較して（[ライブで確認](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)してください）チェックしてください。もしくは私たちにヘルプを依頼してください。
+> **メモ:** サンプルをうまく動作させることができない場合は、コードを [GitHub の完成バージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html)と比較して（[ライブで確認](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)してください）チェックしてください。もしくは私たちにヘルプを依頼してください。
 
 ## スキルテスト
 
