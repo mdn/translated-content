@@ -1,6 +1,7 @@
 ---
 title: <image>：图像元素
-slug: Web/HTML/Element/image
+slug: conflicting/Web/HTML/Element/img
+original_slug: Web/HTML/Element/image
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}{{Non-standard_header}}
