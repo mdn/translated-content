@@ -63,7 +63,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 - JavaScript — ブラウザーに組込まれた高水準スクリプト言語で、ウェブページやアプリに機能を実装するのに使うことができます。 [Node](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction) のようなブラウザー以外の他のプログラミング環境でも使えます。
 - ブラウザー API — JavaScript 言語の上に乗って、より簡単に機能を実装するためにブラウザーに組み込まれた仕組みです。
 - サードパーティ API — サードパーティのプラットフォーム（Twitter や Facebook など）上に作られた構造で、それらのプラットフォームの機能をウェブページで利用できるようにします（例えば自分の最新のツイートを自分のウェブページに表示するなど）。
-- JavaScript ライブラリー — 多くは、[独自の関数](/ja/docs/Learn/JavaScript/Building_blocks/Functions#custom_functions)を含んだ 1 つ以上の JavaScript ファイルで、ウェブページに装着することで、スピードアップさせたりよくある機能を書いたりできるものです。例えば、jQuery、Mootools、React がなどがあります。
+- JavaScript ライブラリー — 多くは、[独自の関数](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)を含んだ 1 つ以上の JavaScript ファイルで、ウェブページに装着することで、スピードアップさせたりよくある機能を書いたりできるものです。例えば、jQuery、Mootools、React がなどがあります。
 - JavaScript フレームワーク — ライブラリーの一階層上にあたる JavaScript フレームワーク（Angular や Ember など）は、HTML、CSS、JavaScript などの技術をパッケージ化してインストールする傾向があり、これを使用してウェブアプリケーション全体をゼロから書きます。ライブラリーとフレームワークの大きな違いは、「制御の逆転 (Inversion of Control)」です。ライブラリーからメソッドを呼び出す場合、制御するのは開発者です。フレームワークでは、制御が逆転しています。フレームワークが開発者のコードを呼び出すのです。
 
 ## API で何ができる?

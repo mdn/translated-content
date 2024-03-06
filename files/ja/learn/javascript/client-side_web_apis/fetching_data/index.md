@@ -91,7 +91,7 @@ function updateDisplay(verse) {}
 
 この関数は、後で必要になるので、読み込むテキストファイルを指し示す関連 URL を構築することから開始します。 {{htmlelement("select")}} 要素の値は、選択されている {{htmlelement("option")}} の中のテキストと常に同じです（value 属性で異なる値を指定しない限り）。対応する連のテキストファイルは "verse1.txt" で、 HTML ファイルと同じディレクトリーにあるので、ファイル名だけで十分です。
 
-ただ、ウェブサーバーはたいてい大文字小文字を区別しますし、今回のファイル名にスペースが含まれていません。 "Verse 1" を "verse1.txt" に変換するためには、 V を小文字にして、スペースを取り除き、 .txt を末尾に追加しなければなりません。これは {{jsxref("String.replace", "replace()")}} と {{jsxref("String.toLowerCase", "toLowerCase()")}}、あと単なる[文字列の結合](/ja/docs/Learn/JavaScript/First_steps/Strings#文字列を連結する)で実現できます。以下のコードを `updateDisplay()` 関数の内側に追加してください。
+ただ、ウェブサーバーはたいてい大文字小文字を区別しますし、今回のファイル名にスペースが含まれていません。 "Verse 1" を "verse1.txt" に変換するためには、 V を小文字にして、スペースを取り除き、 .txt を末尾に追加しなければなりません。これは {{jsxref("String.replace", "replace()")}} と {{jsxref("String.toLowerCase", "toLowerCase()")}}、あと単なる[文字列の結合](/ja/docs/Learn/JavaScript/First_steps/Strings#_を用いた連結)で実現できます。以下のコードを `updateDisplay()` 関数の内側に追加してください。
 
 ```js
 verse = verse.replace(" ", "").toLowerCase();
@@ -148,7 +148,7 @@ verseChoose.value = "Verse 1";
 
 現代のブラウザーは、ローカルファイルから例を実行しただけでは、 HTTP リクエストを動作させません。これは、セキュリティ上の制約があるためです（ウェブセキュリティについては、[ウェブサイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)をお読みください)。
 
-これを回避するには、ローカルのウェブサーバーでこの例を動作させてテストする必要があります。この方法を探すには、[ローカルのテストサーバーを設定するためのガイド](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server)を読んでください。
+これを回避するには、ローカルのウェブサーバーでこの例を動作させてテストする必要があります。この方法を探すには、[ローカルテストサーバーを設定するためのガイド](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を読んでください。
 
 ### 缶詰屋
 

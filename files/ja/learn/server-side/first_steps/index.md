@@ -13,9 +13,9 @@ slug: Learn/Server-side/First_steps
 
 しかしながら、"ウェブがどのように動作するか" を理解する必要があります。まず以下のトピックスを読むことをお勧めします:
 
-- [ウェブサーバーとは](/ja/docs/Learn/Common_questions/What_is_a_web_server)
-- [ウェブサイトをビルドするために必要なソフトウェアは？](/ja/docs/Learn/Common_questions/What_software_do_I_need)
-- [ウェブサーバーにファイルをアップロードするには？](/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- [ウェブサーバーとは](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [ウェブサイトを作るのにどんなソフトウェアが必要か](/ja/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [ウェブサーバーにファイルをアップロードするには？](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 基本的な事を理解できれば、このセクションを読み進む準備が整います。
 
