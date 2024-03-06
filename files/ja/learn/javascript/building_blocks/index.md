@@ -2,12 +2,12 @@
 title: JavaScript の構成要素
 slug: Learn/JavaScript/Building_blocks
 l10n:
-  sourceCommit: eada29e0774d505becb3a725001d372f0dbdc73d
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}
 
-このモジュールでは、条件付きステートメント、ループ、関数、イベントなど一般的に発生するコードブロックの種類に注目し、JavaScript の重要な基本機能をすべてカバーしていきます。コースの中で既にこれらを目にしているのですが、説明を省いてきました。ここではすべて明示的に説明を行います。
+このモジュールでは、条件文、ループ、関数、イベントなど一般的に発生するコードブロックの種類に注目し、JavaScript の重要な基本機能をすべてカバーしていきます。コースの中で既にこれらを目にしているのですが、説明を省いてきました。ここではすべて明示的に説明を行います。
 
 > **注目:**
 >
@@ -25,17 +25,17 @@ l10n:
 
 ## ガイド
 
-- [コード内で決定を下す — 条件](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
   - : どんなプログラミング言語でも、コードは異なる入力に応じて決定を下し、それに応じてアクションを実行する必要があります。例えば、ゲームではもしプレイヤーのライフが 0 だった場合、ゲームオーバーになります。お天気アプリでは、朝に見た場合には朝日の画像を表示し、夜に見た場合には星と月を表示します。この記事では、条件の構造が JavaScript でどのように機能するかを説明します。
-- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [ループするコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
   - : 場合によっては、一度にタスクを複数回実行しなければならないことがあります。 例えば名前のリスト全体を調べる場合です。プログラミング時に、ループはこのような処理を非常にうまく実行します。ここでは JavaScript のループ構造を見ていきます。
-- [関数 — 再利用可なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
+- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
   - : コーディングのもう一つの重要な概念は**関数**です。 **関数**を使用すると、定義されたブロック内に単一のタスクを実行するコードを格納し、同じコードを複数回入力するのではなく、単一の短いコマンドを使用して必要となる時にコードを呼び出すことができます。この記事では、基本的な構文、関数、スコープ、引数を呼び出す方法と定義する方法など、関数の背後にある基本的な概念について説明します。
-- [独自の関数を構築する](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
   - : 前の記事で扱った必須の理論の多くを用いて、この記事では実用的な体験を提供しています。ここでは、独自のカスタム関数を構築するための練習をします。 また進むにつれ、関数を扱うためのさらに便利な詳細についても説明します。
 - [関数の返値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
   - : 関数について知っておくべき必須の概念の最後は返値です。関数によっては完了後に意味のある値を返しませんが、それ以外の関数は返します。値が何であるか、コードでそれらを使用する方法、独自のカスタム関数で有用な値を返す方法を理解することが重要です。
-- [イベントへの入門](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [イベント入門](/ja/docs/Learn/JavaScript/Building_blocks/Events)
   - : イベントとは、プログラミング中のシステムで発生するアクションまたは事象のことで、システムによって通知され、必要に応じて何らかの方法で応答できるようにするものです。例えば、ユーザーがウェブページ上のボタンをクリックすると、情報ボックスを表示することでそのアクションに応答することができます。この最後の記事では、イベントを取り巻くいくつかの重要な概念について説明し、それらがブラウザーでどのように機能するかを見ていきます。
 
 ## 評価
