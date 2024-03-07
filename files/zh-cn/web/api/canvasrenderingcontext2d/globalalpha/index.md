@@ -83,7 +83,7 @@ for (let i = 0; i < 7; i++) {
 }
 ```
 
-{{EmbedLiveSample("叠加透明形状，"", "180")}}
+{{EmbedLiveSample("叠加透明形状", "", "180")}}
 
 ## 规范
 
