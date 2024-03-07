@@ -399,7 +399,8 @@ tokenElements.forEach((token) => {
     token.classList.add("highlight");
     let message = "";
     let tagName = `<code>&lt;${token.tagName}&gt;</code>`;
-    if (token.tagName !== "mo") message = `いいえ、これは ${tagName} 要素です。`;
+    if (token.tagName !== "mo")
+      message = `いいえ、これは ${tagName} 要素です。`;
     else if (!stretchyMoElements.includes(token))
       message = `いいえ、これは ${tagName} 要素ですが、垂直方向に伸張されていません。`;
     else
