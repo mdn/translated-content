@@ -1,6 +1,7 @@
 ---
 title: <image>
-slug: Web/HTML/Element/image
+slug: conflicting/Web/HTML/Element/img
+original_slug: Web/HTML/Element/image
 ---
 
 {{non-standard_header}}
