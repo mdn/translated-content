@@ -30343,10 +30343,6 @@
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
   },
-  "orphaned/Web/SVG/Attribute/onclick": {
-    "modified": "2020-10-15T22:30:36.187Z",
-    "contributors": ["mfuji09"]
-  },
   "orphaned/Web/SVG/Element/hatchpath": {
     "modified": "2020-12-06T00:02:55.360Z",
     "contributors": ["mfuji09"]
