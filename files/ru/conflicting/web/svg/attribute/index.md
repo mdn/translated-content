@@ -1,6 +1,7 @@
 ---
 title: Основные атрибуты SVG
-slug: Web/SVG/Attribute/Core
+slug: conflicting/Web/SVG/Attribute
+original_slug: Web/SVG/Attribute/Core
 ---
 
 Основные атрибуты SVG — это все общие атрибуты, которые могут быть указаны в SVG элементах.

@@ -827,6 +827,7 @@
 /ru/docs/Web/Performance/Основы	/ru/docs/Web/Performance/Fundamentals
 /ru/docs/Web/Performance/Производительность_анимации	/ru/docs/Web/Performance/Animation_performance_and_frame_rate
 /ru/docs/Web/Progressive_web_apps/Installable_PWAs	/ru/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+/ru/docs/Web/SVG/Attribute/Core	/ru/docs/conflicting/Web/SVG/Attribute
 /ru/docs/Web/SVG/Tutorial/Базовые_Преобразования	/ru/docs/Web/SVG/Tutorial/Basic_Transformations
 /ru/docs/Web/SVG/Tutorial/Введение	/ru/docs/Web/SVG/Tutorial/Introduction
 /ru/docs/Web/SVG/Tutorial/Основные_Фигуры	/ru/docs/Web/SVG/Tutorial/Basic_Shapes

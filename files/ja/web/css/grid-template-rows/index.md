@@ -132,7 +132,7 @@ grid-template-rows: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Specifying_grid_row_sizes", "40px", "100px")}}
+{{EmbedLiveSample("グリッド行の寸法の指定", "40px", "100px")}}
 
 ## 仕様書
 

@@ -72,6 +72,6 @@ channel.onmessageerror = (event) => {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 相关事件：[`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event)

@@ -2382,6 +2382,7 @@
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_fonts
 /zh-CN/docs/Web/HTML/Element/bgsound	/zh-CN/docs/Web/HTML/Element/audio
 /zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
+/zh-CN/docs/Web/HTML/Element/image	/zh-CN/docs/Web/HTML/Element/img
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
 /zh-CN/docs/Web/HTML/Element/选项	/zh-CN/docs/Web/HTML/Element/option

@@ -15451,10 +15451,6 @@
     "modified": "2019-03-23T23:20:13.909Z",
     "contributors": ["Solj", "Vasiliy.Poddubny", "BychekRU", "kscarfone"]
   },
-  "Web/SVG/Attribute/Core": {
-    "modified": "2020-10-15T22:34:58.576Z",
-    "contributors": ["osipov_s"]
-  },
   "Web/SVG/Attribute/additive": {
     "modified": "2019-03-23T22:07:14.939Z",
     "contributors": ["Solj", "warsan", "Vasiliy.Poddubny"]
@@ -15998,5 +15994,9 @@
   "conflicting/MDN/Community/Contributing": {
     "modified": "2019-01-17T00:00:52.853Z",
     "contributors": ["wbamberg", "warsan"]
+  },
+  "conflicting/Web/SVG/Attribute": {
+    "modified": "2020-10-15T22:34:58.576Z",
+    "contributors": ["osipov_s"]
   }
 }

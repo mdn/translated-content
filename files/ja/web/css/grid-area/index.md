@@ -135,7 +135,7 @@ grid-area: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_areas", "100%", "150px")}}
+{{EmbedLiveSample("グリッド領域の設定", "100%", "150px")}}
 
 ## 仕様書
 

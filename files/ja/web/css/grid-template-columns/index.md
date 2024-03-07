@@ -131,7 +131,7 @@ grid-template-columns: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Specifying_grid_column_sizes", "100%", "20px")}}
+{{EmbedLiveSample("グリッド列の寸法の指定", "100%", "20px")}}
 
 ## 仕様書
 

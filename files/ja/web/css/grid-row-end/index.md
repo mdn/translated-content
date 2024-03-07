@@ -143,7 +143,7 @@ grid-row-end: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_row_end_for_a_grid_item', '230', '420') }}
+{{ EmbedLiveSample('グリッドアイテムの行の末尾位置の設定', '230', '420') }}
 
 ## 仕様書
 

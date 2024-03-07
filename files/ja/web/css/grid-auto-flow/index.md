@@ -133,7 +133,7 @@ inputElem.addEventListener("change", changeGridAutoFlow);
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "230px")}}
+{{EmbedLiveSample("グリッドの自動配置を設定する", "200px", "230px")}}
 
 ## 仕様書
 

@@ -139,7 +139,7 @@ grid-column: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_column_size_and_location", "100%", "100px")}}
+{{EmbedLiveSample("グリッド列の寸法と位置の設定", "100%", "100px")}}
 
 ## 仕様書
 

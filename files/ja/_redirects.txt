@@ -1371,7 +1371,7 @@
 /ja/docs/HTML/Element	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/Element/Audio	/ja/docs/Web/HTML/Element/audio
 /ja/docs/HTML/Element/Heading_Elements	/ja/docs/Web/HTML/Element/Heading_Elements
-/ja/docs/HTML/Element/Img	/ja/docs/Web/HTML/Element/Img
+/ja/docs/HTML/Element/Img	/ja/docs/Web/HTML/Element/img
 /ja/docs/HTML/Element/Script	/ja/docs/Web/HTML/Element/Script
 /ja/docs/HTML/Element/Script/Script	/ja/docs/Web/API/Node/cloneNode
 /ja/docs/HTML/Element/Source	/ja/docs/Web/HTML/Element/source
@@ -4036,6 +4036,7 @@
 /ja/docs/Web/HTML/Element/h4	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h5	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
+/ja/docs/Web/HTML/Element/image	/ja/docs/Web/HTML/Element/img
 /ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
