@@ -51,7 +51,7 @@
 | primitive          | 原始值/类型      | 基本类型包括对象，而原始类型不包括对象。                     | https://github.com/mdn/translated-content/pull/14040#discussion_r1276966303 |
 | unscopable         | 非作用域（属性） |                                                              | https://github.com/mdn/translated-content/pull/12793#discussion_r1170694183 |
 | well-known symbol  | 内置通用符号     |                                                              | https://github.com/mdn/translated-content/pull/10338#discussion_r1036997921 |
-| tree shake         | 摇树优化         | 入口文件中虽然依赖了某个模块，但实际只使用其中的某些功能，通过该优化可以删除未使用的代码。 | https://github.com/mdn/translated-content/pull/18335#discussion_r1505225794 |
+| tree shake         | 摇树优化         | 入口文件虽然依赖了某个模块，但实际只使用其中的某些功能，通过该优化可以删除未使用的代码。 | https://github.com/mdn/translated-content/pull/18335#discussion_r1505225794 |
 
 ## 标题/表格
 
