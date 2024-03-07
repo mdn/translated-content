@@ -87,7 +87,7 @@ function draw() {
   ctx.fillRect(0, -12, 40, 24); // 阴影
   ctx.drawImage(earth, -12, -12);
 
-  // Moon
+  // 月亮
   ctx.save();
   ctx.rotate(
     ((2 * Math.PI) / 6) * time.getSeconds() +
@@ -122,7 +122,7 @@ init();
 ### HTML
 
 ```html
-<canvas id="canvas" width="150" height="150">The current time</canvas>
+<canvas id="canvas" width="150" height="150">当前时间</canvas>
 ```
 
 ### JavaScript

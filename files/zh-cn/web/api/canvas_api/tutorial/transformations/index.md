@@ -74,6 +74,8 @@ draw();
 - `translate(x, y)`
   - : `translate`方法接受两个参数。*x *是左右偏移量，_y_ 是上下偏移量，如右图所示。
 
+![画布从网格上的原点水平向下向右平移“x”单位，垂直移动“y”单位。](canvas_grid_translate.png)
+
 在做变形之前先保存状态是一个良好的习惯。大多数情况下，调用 restore 方法比手动恢复原先的状态要简单得多。又，如果你是在一个循环中做位移但没有保存和恢复 canvas 的状态，很可能到最后会发现怎么有些东西不见了，那是因为它很可能已经超出 canvas 范围以外了。
 
 ### `translate` 的示例
@@ -105,7 +107,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("translate 的示例")}}
+{{EmbedLiveSample("translate 的示例", "", "160")}}
 
 ## 旋转 Rotating
 
@@ -164,7 +166,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("rotate 的示例", "", "160")}}
+{{EmbedLiveSample("rotate 的示例", "", "220")}}
 
 ## 缩放
 
@@ -240,7 +242,7 @@ draw();
 - {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
   - : 重置当前变形为单位矩阵，它和调用以下语句是一样的：`ctx.setTransform(1, 0, 0, 1, 0, 0);`
 
-### `transform`/`setTransform` 的示例
+### `transform` 和 `setTransform` 的示例
 
 ```js
 function draw() {
@@ -271,6 +273,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("transform/setTransform 的示例", "", "160")}}
+{{EmbedLiveSample("transform 和 setTransform 的示例", "", "260")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
