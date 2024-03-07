@@ -276,6 +276,7 @@
 /ru/docs/Learn/Фронтенд_разработчик	/ru/docs/Learn/Front-end_web_developer
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /ru/docs/MDN/About	/ru/docs/MDN/Writing_guidelines
+/ru/docs/MDN/Contribute	/ru/docs/MDN/Community/Contributing
 /ru/docs/MDN/Contribute/Creating_and_editing_pages	/ru/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ru/docs/MDN/Contribute/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Contribute/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
@@ -285,7 +286,8 @@
 /ru/docs/MDN/Contribute/Howto/Report_a_problem	/ru/docs/MDN/Community/Issues
 /ru/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ru/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /ru/docs/MDN/Contribute/Open_source_etiquette	/ru/docs/MDN/Community/Open_source_etiquette
-/ru/docs/MDN/Contribute/Процессы	/ru/docs/MDN/Contribute/Processes
+/ru/docs/MDN/Contribute/Processes	/ru/docs/conflicting/MDN/Community/Contributing
+/ru/docs/MDN/Contribute/Процессы	/ru/docs/conflicting/MDN/Community/Contributing
 /ru/docs/MDN/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
@@ -623,6 +625,7 @@
 /ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 /ru/docs/Web/Guide/Audio_and_video_manipulation	/ru/docs/Web/Media/Audio_and_video_manipulation
+/ru/docs/Web/Guide/CSS/Block_formatting_context	/ru/docs/Web/CSS/CSS_display/Block_formatting_context
 /ru/docs/Web/Guide/CSS/Getting_started/SVG_и_CSS	/ru/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ru/docs/Web/Guide/CSS/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ru/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
@@ -824,6 +827,7 @@
 /ru/docs/Web/Performance/Основы	/ru/docs/Web/Performance/Fundamentals
 /ru/docs/Web/Performance/Производительность_анимации	/ru/docs/Web/Performance/Animation_performance_and_frame_rate
 /ru/docs/Web/Progressive_web_apps/Installable_PWAs	/ru/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+/ru/docs/Web/SVG/Attribute/Core	/ru/docs/conflicting/Web/SVG/Attribute
 /ru/docs/Web/SVG/Tutorial/Базовые_Преобразования	/ru/docs/Web/SVG/Tutorial/Basic_Transformations
 /ru/docs/Web/SVG/Tutorial/Введение	/ru/docs/Web/SVG/Tutorial/Introduction
 /ru/docs/Web/SVG/Tutorial/Основные_Фигуры	/ru/docs/Web/SVG/Tutorial/Basic_Shapes

@@ -3,7 +3,7 @@ title: StorageArea.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime tous les éléments de la zone de stockage.
 

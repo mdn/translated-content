@@ -3,7 +3,7 @@ title: windows.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient des informations sur toutes les fenêtres ouvertes, en les passant dans un rappel.
 

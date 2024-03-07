@@ -31,7 +31,7 @@ l10n:
 
 **문서**는 일반적으로 마크 업 언어를 사용하여 구성된 텍스트 파일입니다 — {{Glossary("HTML")}} 이 가장 일반적인 마크 업 언어이지만, {{Glossary("SVG")}} 또는 {{Glossary("XML")}} 과 같은 다른 마크 업 언어를 사용할 수도 있습니다.
 
-사용자에게 문서를 **제공 한다는 것**은 대상이 사용 할 수 있는 형식으로 문서를 변환하는 것을 의미합니다. {{Glossary("browser","Browsers")}}, {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}} 또는 {{Glossary("Microsoft Edge","Edge")}} 는 컴퓨터 화면, 프로젝터 또는 프린터 등의 문서를 시각적으로 표시하도록 설계되었습니다.
+사용자에게 문서를 **제공 한다는 것** 은 대상이 사용 할 수 있는 형식으로 문서를 변환하는 것을 의미합니다. {{Glossary("browser","Browsers")}}, {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}} 또는 {{Glossary("Microsoft Edge","Edge")}} 는 컴퓨터 화면, 프로젝터 또는 프린터 등의 문서를 시각적으로 표시하도록 설계되었습니다.
 
 > **참고:**
 >

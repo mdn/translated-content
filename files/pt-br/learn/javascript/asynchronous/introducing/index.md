@@ -258,7 +258,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 Isso é exatamente como os [manipuladores de eventos que encontramos em um módulo anterior](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events), exceto que, em vez de o evento ser uma ação do usuário, como o usuário clicar um botão, o evento é uma mudança no estado de algum objeto.
 
-## Manipuladores de eventos
+## Callback
 
 Um manipulador de eventos é um tipo específico de callback. Um callback é apenas uma função que é passada para outra função, com a expectativa de que o callback seja chamado no momento apropriado. Como acabamos de ver, os retornos de chamada costumavam ser a principal forma de implementação de funções assíncronas em JavaScript.
 

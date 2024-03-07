@@ -46,7 +46,7 @@ HTML Center 元素（`<center>`）是个[块级元素](/zh-CN/docs/HTML/Block-le
 
 向 {{HTMLElement("div")}} 或者 {{HTMLElement("p")}} 元素应用 {{Cssxref("text-align")}}`:center` 会使这些元素的*内容*居中，同时保留其整体大小不变。
 
-## 另见
+## 参见
 
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}

@@ -92,7 +92,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{cssxref("length")}}</td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -169,5 +169,5 @@ svg {
 
 ## 같이 보기
 
-- [cy](/ko/docs/Web/SVG/Attribute/cy)
-- [r](/ko/docs/Web/SVG/Attribute/r)
+- {{SVGAttr("cy")}}
+- {{SVGAttr("r")}}

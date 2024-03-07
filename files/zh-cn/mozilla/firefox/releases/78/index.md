@@ -52,7 +52,7 @@ l10n:
   - [后行断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)（[Firefox bug 1225665](https://bugzil.la/1225665)）
   - {{JSxRef("RegExp.prototype.dotAll")}}（[Firefox bug 1361856](https://bugzil.la/1361856)）
   - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)（[Firefox bug 1361876](https://bugzil.la/1361876)）
-  - [具名捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)（[Firefox bug 1362154](https://bugzil.la/1362154)）
+  - [具名捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)（[Firefox bug 1362154](https://bugzil.la/1362154)）
 
 - 由于 2020 年中期的 [WebIDL 规范变更](https://github.com/heycam/webidl/pull/357)，我们[为所有 DOM 原型对象添加了 `Symbol.toStringTag` 属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#tostringtag_适用于所有_dom_原型对象)（[Firefox bug 1277799](https://bugzil.la/1277799)）。
 - 改进了 {{jsxref("WeakMap")}} 对象的垃圾回收。`WeakMap` 现在会以增量方式进行标记（[Firefox bug 1167452](https://bugzil.la/1167452)）。
@@ -85,4 +85,4 @@ l10n:
 
 ## 更早期的版本
 
-{{Firefox_for_developers(77)}}
+{{Firefox_for_developers}}

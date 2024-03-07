@@ -3,7 +3,7 @@ title: contextualIdentities.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque les propriétés d'une identité contextuelle, telles que son nom, son icône ou sa couleur, sont modifiées. Les identités contextuelles peuvent être mises à jour par des extensions en utilisant l'API `contextualIdentities` , ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.
 

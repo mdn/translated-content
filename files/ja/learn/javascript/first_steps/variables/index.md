@@ -1,8 +1,8 @@
 ---
-title: 必要な情報を保存する — 変数
+title: 必要な情報を保管する — 変数
 slug: Learn/JavaScript/First_steps/Variables
 l10n:
-  sourceCommit: 7ff26ceb6c6f1400d4297b22cb92e3786e35eac7
+  sourceCommit: bd2701f4618e1fd763aa62da3bc14bf050c75f1f
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
@@ -14,12 +14,12 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターの知識、HTML と CSS
-        の基本についての理解、JavaScript が何かが分かっていること。
+        HTML と CSS の基本についての理解、
+        JavaScript が何かが分かっていること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">目標:</th>
       <td>JavaScript の変数についての基礎を習得する。</td>
     </tr>
   </tbody>
@@ -202,17 +202,17 @@ myName = "Bob";
 
 > **メモ:** このコードをブラウザーコンソールで試す場合は、ここにあるコードブロックのそれぞれを丸ごとコピー & ペーストするのがよいでしょう。[Chrome のコンソールの機能](https://goo.gle/devtools-const-repl)には、`let` と `const` による変数の再宣言が許可されているものがあります。
 >
-> ```
-> > let myName = 'Chris';
->   let myName = 'Bob';
+> ```plain
+> > let myName = "Chris";
+>   let myName = "Bob";
 > // 1 回の入力: SyntaxError: Identifier 'myName' has already been declared
 >
-> > let myName = 'Chris';
-> > let myName = 'Bob';
+> > let myName = "Chris";
+> > let myName = "Bob";
 > // 2 回の入力: 両方とも成功
 > ```
 
-## 変数の値を変更する
+## 変数の更新
 
 変数を初期化して値が入ったら、もう一度値を入れなおすことで、変数の値を変更することができます。次の行を入力してみてください。
 
@@ -228,7 +228,7 @@ myAge = 40;
 - 上記以外の文字を使用するのはやめましょう。環境によってはエラーとなったり、他の国の人々にとって理解しがたいものとなります。
 - 変数名の先頭にアンダースコアは使用してはいけません。一部の JavaScript のコンストラクターにとっては特別な意味を持つため、問題となることがあります。
 - 変数名の先頭に数字を使用してはいけません。これは JavaScript の文法エラーとなります。
-- 複数の単語をつなげる場合は、[「小文字から始まるキャメルケース」](https://ja.wikipedia.org/wiki/キャメルケース#キャメルケースの種類)と呼ばれる書き方に従いましょう。最初の単語を全て小文字で書いて、その後に続く単語の最初の文字を大文字にする記法です。この記事ではこの書き方を採用しています。
+- 複数の単語をつなげる場合は、{{Glossary("camel_case", "小文字で始まるキャメルケース")}}と呼ばれる書き方に従いましょう。最初の単語を全て小文字で書いて、その後に続く単語の最初の文字を大文字にする記法です。この記事ではこの書き方を採用しています。
 - 保持するデータを説明する、分かりやすい名前を付けましょう。1 つの文字・数字や、長すぎる命名はしないようにしましょう。
 - 変数名は大文字・小文字を区別します。`myage` と `myAge` は違うものになります。
 - 最後に、JavaScript の予約語 ( これは JavaScript の文法を構成する単語のことです) を変数名には付けないようにしましょう。`var`、`function`、`let`、`for` 等を変数名として使用することは出来ません。ブラウザーはそれを異なるように解釈し、結果としてエラーとなるでしょう。
@@ -267,8 +267,6 @@ thisisareallylongvariablenameman
 
 変数に保持する値にはいくつかの種類があります。このセクションでは、その種類について簡単に解説します。さらに詳細については、もっと先の記事で紹介します。
 
-ここまで最初の 2 つは見てきましたが、他にもあります。
-
 ### 数値型
 
 変数には数値を格納することができます。数値は 30 のような整数値や、2.456 のような実数値（浮動小数点数とも呼ばれます）が存在します。その他の言語とは違い、JavaScript ではデータ型を宣言する必要はありません。もし数値を変数に設定するならば、引用符は付けてはいけません。
@@ -285,9 +283,9 @@ let myAge = 17;
 let dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
-### 論理値
+### 論理型
 
-論理値は `true` と `false` の 2 つの値だけを持ちます。どちらのコードを実行するべきかといった、条件を判定するためによく使います。例として、簡単なコードは以下のようなものです。
+論理型は真偽値です。 `true` と `false` の 2 つの値を持ちます。どちらのコードを実行するべきかといった、条件を判定するためによく使います。例として、簡単なコードは以下のようなものです。
 
 ```js
 let iAmAlive = true;
@@ -352,13 +350,13 @@ let myString = "Hello";
 それが数字を含んでいたとしても、文字列になってしまうので、気を付けてください。
 
 ```js
-let myNumber = "500"; // oops, this is still a string
+let myNumber = "500"; // おっと、これはまだ文字列です
 typeof myNumber;
-myNumber = 500; // much better — now this is a number
+myNumber = 500; // はるかに良い — これで数値になりました
 typeof myNumber;
 ```
 
-上の 4 行をコンソールに一つづつ入力して、結果を見てみてください。[`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) という演算子に気づきましたか？これは渡した変数のその時点でのデータ型を返します。最初に使用したとき、`myNumber` には `'500'` という文字列が入っているため、`string` と返ってきます。2 回目に呼んだときに何が返ってくるかを見てみましょう。
+上の 4 行をコンソールに一つずつ入力して、結果を見てみてください。[`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) という演算子に気づきましたか？これは渡した変数のその時点でのデータ型を返します。最初に使用したとき、`myNumber` には `'500'` という文字列が入っているため、`string` と返ってきます。2 回目に呼んだときに何が返ってくるかを見てみましょう。
 
 ## JavaScript の定数
 
@@ -419,10 +417,10 @@ _可能であれば `const` を使用し、必要ならば `let` を使用する
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: variables](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 変数](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables)を見てください。
 
 ## まとめ
 
 ここまでで JavaScript の変数の作り方について理解して、それ以外にもそれなりの知識を得ましたね。次の記事では、数値に焦点を当てて、JavaScript の数値計算の基礎について見ていきます。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}

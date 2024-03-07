@@ -233,7 +233,7 @@
 /ja/docs/CSS/Attribute_selectors	/ja/docs/Web/CSS/Attribute_selectors
 /ja/docs/CSS/Background	/ja/docs/Web/CSS/background
 /ja/docs/CSS/Background_Backup	/ja/docs/Web/CSS/background
-/ja/docs/CSS/Block_formatting_context	/ja/docs/Web/Guide/CSS/Block_formatting_context
+/ja/docs/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
 /ja/docs/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
 /ja/docs/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/CSS/CSS_animated_properties	/ja/docs/Web/CSS/CSS_animated_properties
@@ -1371,7 +1371,7 @@
 /ja/docs/HTML/Element	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/Element/Audio	/ja/docs/Web/HTML/Element/audio
 /ja/docs/HTML/Element/Heading_Elements	/ja/docs/Web/HTML/Element/Heading_Elements
-/ja/docs/HTML/Element/Img	/ja/docs/Web/HTML/Element/Img
+/ja/docs/HTML/Element/Img	/ja/docs/Web/HTML/Element/img
 /ja/docs/HTML/Element/Script	/ja/docs/Web/HTML/Element/Script
 /ja/docs/HTML/Element/Script/Script	/ja/docs/Web/API/Node/cloneNode
 /ja/docs/HTML/Element/Source	/ja/docs/Web/HTML/Element/source
@@ -2142,14 +2142,18 @@
 /ja/docs/Localizing_extension_descriptions	/ja/docs/orphaned/Localizing_extension_descriptions
 /ja/docs/MDN/About	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Community/Issues/Issue_triage	/ja/docs/MDN/Community/Issues
+/ja/docs/MDN/Community/MDN_content	/ja/docs/MDN/Community/Contributing
+/ja/docs/MDN/Community/MDN_content/Issues	/ja/docs/MDN/Community/Issues
+/ja/docs/MDN/Community/MDN_content/Pull_requests	/ja/docs/MDN/Community/Pull_requests
+/ja/docs/MDN/Contribute	/ja/docs/MDN/Community/Contributing
 /ja/docs/MDN/Contribute/Changelog	/ja/docs/MDN/Changelog
 /ja/docs/MDN/Contribute/Content	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Content/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Content/Does_this_belong_on_MDN	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Contribute/Content/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/MDN/Contribute/FAQ	/ja/docs/MDN/Contribute
+/ja/docs/MDN/Contribute/FAQ	/ja/docs/MDN/Community/Contributing
 /ja/docs/MDN/Contribute/Feedback	/ja/docs/MDN/Community
-/ja/docs/MDN/Contribute/Fixing_MDN_content_bugs	/ja/docs/MDN/Community/MDN_content
+/ja/docs/MDN/Contribute/Fixing_MDN_content_bugs	/ja/docs/MDN/Community/Contributing
 /ja/docs/MDN/Contribute/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
 /ja/docs/MDN/Contribute/GitHub_beginners	/ja/docs/MDN/Community/Contributing/Getting_started
 /ja/docs/MDN/Contribute/GitHub_best_practices	/ja/docs/MDN/Community/Issues
@@ -2166,7 +2170,7 @@
 /ja/docs/MDN/Contribute/Guidelines/Video	/ja/docs/MDN/Writing_guidelines/Howto/Images_media
 /ja/docs/MDN/Contribute/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/MDN/Contribute/Help_beginners	/ja/docs/MDN/Community/Learn_forum
-/ja/docs/MDN/Contribute/Howto	/ja/docs/MDN/Contribute
+/ja/docs/MDN/Contribute/Howto	/ja/docs/MDN/Community/Contributing
 /ja/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
@@ -2184,8 +2188,9 @@
 /ja/docs/MDN/Contribute/Localize	/ja/docs/MDN/Community/Contributing/Translated_content
 /ja/docs/MDN/Contribute/Markdown_in_MDN	/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /ja/docs/MDN/Contribute/Open_source_etiquette	/ja/docs/MDN/Community/Open_source_etiquette
+/ja/docs/MDN/Contribute/Processes	/ja/docs/MDN/Community/Contributing
 /ja/docs/MDN/Contribute/Processes/Content_bug_triage	/ja/docs/MDN/Community/Issues
-/ja/docs/MDN/Contribute/Processes/Short_surveys	/ja/docs/MDN/Contribute
+/ja/docs/MDN/Contribute/Processes/Short_surveys	/ja/docs/MDN/Community/Contributing
 /ja/docs/MDN/Contribute/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Contribute/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
@@ -2248,7 +2253,7 @@
 /ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
 /ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
-/ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
+/ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Community/Contributing
 /ja/docs/MDN_at_ten/History_of_MDN	/ja/docs/MDN/At_ten/History_of_MDN
 /ja/docs/Map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Map
 /ja/docs/MathML	/ja/docs/Web/MathML
@@ -2913,6 +2918,7 @@
 /ja/docs/Web/API/IDBKeyRange/lowerBound	/ja/docs/Web/API/IDBKeyRange/lowerBound_static
 /ja/docs/Web/API/IDBKeyRange/only	/ja/docs/Web/API/IDBKeyRange/only_static
 /ja/docs/Web/API/IDBKeyRange/upperBound	/ja/docs/Web/API/IDBKeyRange/upperBound_static
+/ja/docs/Web/API/IDBLocaleAwareKeyRange	/ja/docs/Web/API/IDBIndex
 /ja/docs/Web/API/IDBRequest/onsuccess	/ja/docs/Web/API/IDBRequest/success_event
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
@@ -3569,7 +3575,7 @@
 /ja/docs/Web/CSS/Adjacent_sibling_combinator	/ja/docs/Web/CSS/Next-sibling_combinator
 /ja/docs/Web/CSS/Adjacent_sibling_selectors	/ja/docs/Web/CSS/Next-sibling_combinator
 /ja/docs/Web/CSS/Background_Backup	/ja/docs/Web/CSS/background
-/ja/docs/Web/CSS/Block_formatting_context	/ja/docs/Web/Guide/CSS/Block_formatting_context
+/ja/docs/Web/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
 /ja/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /ja/docs/Web/CSS/CSS_Background_and_Borders	/ja/docs/Web/CSS/CSS_backgrounds_and_borders
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -3636,6 +3642,7 @@
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
+/ja/docs/Web/CSS/CSS_container_queries	/ja/docs/Web/CSS/CSS_containment/Container_queries
 /ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
@@ -3887,6 +3894,7 @@
 /ja/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources	/ja/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
 /ja/docs/Web/Guide/Audio_and_video_manipulation	/ja/docs/Web/Media/Audio_and_video_manipulation
 /ja/docs/Web/Guide/CSS	/ja/docs/Learn/CSS
+/ja/docs/Web/Guide/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
 /ja/docs/Web/Guide/CSS/Counters	/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
 /ja/docs/Web/Guide/CSS/Flexible_boxes	/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /ja/docs/Web/Guide/CSS/Getting_started	/ja/docs/Learn/CSS
@@ -4028,6 +4036,7 @@
 /ja/docs/Web/HTML/Element/h4	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h5	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
+/ja/docs/Web/HTML/Element/image	/ja/docs/Web/HTML/Element/img
 /ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
@@ -4529,6 +4538,11 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
+/ja/docs/Web/SVG/Attribute/Conditional_Processing	/ja/docs/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/Core	/ja/docs/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/Events	/ja/docs/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/Presentation	/ja/docs/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/Styling	/ja/docs/Web/SVG/Attribute
 /ja/docs/Web/SVG/Compatibility_sources	/ja/docs/Web/SVG
 /ja/docs/Web/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animate
 /ja/docs/Web/SVG/Element/hatchpath	/ja/docs/orphaned/Web/SVG/Element/hatchpath

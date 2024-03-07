@@ -3,7 +3,7 @@ title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 このメソッドは一つ以上の content scripts を登録するときに使用します。
 
