@@ -73,7 +73,7 @@ jobs:
             # gather related upstream commits
             COMMIT_URL=$(gh api -XGET repos/mdn/content/commits -F path="${MOVED_FILE}" -F per_page=1 -F sha="${UPSTREAM_HEAD_SHA}" --jq '.[0].html_url')
             if [ -n "${COMMIT_URL}" ]; then
-              FILE_COMMIT_URLS="${FILE_COMMIT_URLS}- ${COMMIT_URL}\n"
+              FILE_COMMIT_URLS+="- ${COMMIT_URL}\n"
             fi
           done <<< "${MOVED_FILES}"
 
