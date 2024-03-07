@@ -68,7 +68,7 @@ slug: Learn/Forms/Your_first_form
 - `action` 속성은 폼이 제출될 때 수집된 데이터를 전송할 위치(URL)를 정의합니다.
 - `method` 속성은 데이터를 전송할 HTTP 메서드(일반적으로 `get`이나 `post`)를 정의합니다.
 
-> **참고:** 이러한 속성들의 동작 방식은 나중에 [폼 데이터 보내기](ko/docs/Learn/Forms/Sending_and_retrieving_form_data) 문서에서 살펴보겠습니다.
+> **참고:** 이러한 속성들의 동작 방식은 나중에 [폼 데이터 보내기](/ko/docs/Learn/Forms/Sending_and_retrieving_form_data) 문서에서 살펴보겠습니다.
 
 지금은 위의 {{HTMLelement("form")}} 요소를 HTML {{HTMLelement("body")}}에 추가합니다.
 
