@@ -63,12 +63,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # get upstream head sha
+          UPSTREAM_HEAD_SHA=$(cd "${{ github.workspace }}/mdn/content" && git rev-parse HEAD)
+          echo "upstream head sha: ${UPSTREAM_HEAD_SHA}"
           # get original path of moved files
           MOVED_FILES=$(git diff --cached --name-status --diff-filter=R | cut -f2 | sed "0,/${{ matrix.lang }}/s//en-us/")
           FILE_COMMIT_URLS=""
           while read -r MOVED_FILE; do
             # gather related upstream commits
-            COMMIT_URL=$(gh api -XGET repos/mdn/content/commits -F path="${MOVED_FILE}" -F per_page=1 --jq '.[0].html_url')
+            COMMIT_URL=$(gh api -XGET repos/mdn/content/commits -F path="${MOVED_FILE}" -F per_page=1 -F sha="${UPSTREAM_HEAD_SHA}" --jq '.[0].html_url')
             if [ -n "${COMMIT_URL}" ]; then
               FILE_COMMIT_URLS="${FILE_COMMIT_URLS}- ${COMMIT_URL}\n"
             fi
