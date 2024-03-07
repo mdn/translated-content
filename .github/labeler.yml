@@ -1,3 +1,6 @@
+# This file is used by .github/workflows/pr-labeler.yml to label pull requests based on the files changed in the PR.
+# Object matching syntax: https://github.com/actions/labeler/blob/main/README.md#match-object
+
 system:
   - changed-files:
       - any-glob-to-any-file:
