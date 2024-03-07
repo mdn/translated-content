@@ -77,7 +77,7 @@ for (var i = 0; i < 6; i++) {
 
 结果看起来像是这样的：
 
-{{EmbedLiveSample("fillStyle_使用_for_循环的例子", 160, 160, "canvas_fillstyle.png")}}
+{{EmbedLiveSample("fillStyle_使用_for_循环的例子", "", "160")}}
 
 ## 规格描述
 
