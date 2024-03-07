@@ -1154,7 +1154,8 @@
 /es/docs/Learn/Common_questions/What_software_do_I_need	/es/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 /es/docs/Learn/Common_questions/diseños_web_comunes	/es/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 /es/docs/Learn/Common_questions/set_up_a_local_testing_server	/es/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
-/es/docs/Learn/Desarrollo_web_Front-end	/es/docs/Learn/Front-end_web_developer
+/es/docs/Learn/Desarrollo_web_Front-end	/es/docs/orphaned/Learn/Front-end_web_developer
+/es/docs/Learn/Front-end_web_developer	/es/docs/orphaned/Learn/Front-end_web_developer
 /es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web	/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works
 /es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico	/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /es/docs/Learn/Getting_started_with_the_web/La_web_y_los_estandares_web	/es/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards
@@ -2025,6 +2026,7 @@
 /es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Element/bgsound	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Element/content	/es/docs/Web/HTML/element/slot
+/es/docs/Web/HTML/Element/image	/es/docs/conflicting/Web/HTML/Element/img
 /es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
@@ -2091,7 +2093,7 @@
 /es/docs/Web/HTML/Elemento/html	/es/docs/Web/HTML/Element/html
 /es/docs/Web/HTML/Elemento/i	/es/docs/Web/HTML/Element/i
 /es/docs/Web/HTML/Elemento/iframe	/es/docs/Web/HTML/Element/iframe
-/es/docs/Web/HTML/Elemento/image	/es/docs/Web/HTML/Element/image
+/es/docs/Web/HTML/Elemento/image	/es/docs/conflicting/Web/HTML/Element/img
 /es/docs/Web/HTML/Elemento/img	/es/docs/Web/HTML/Element/img
 /es/docs/Web/HTML/Elemento/input	/es/docs/Web/HTML/Element/input
 /es/docs/Web/HTML/Elemento/input/Botón	/es/docs/Web/HTML/Element/input/button
