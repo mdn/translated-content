@@ -4543,6 +4543,7 @@
 /ja/docs/Web/SVG/Attribute/Events	/ja/docs/Web/SVG/Attribute
 /ja/docs/Web/SVG/Attribute/Presentation	/ja/docs/Web/SVG/Attribute
 /ja/docs/Web/SVG/Attribute/Styling	/ja/docs/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/onclick	/ja/docs/orphaned/Web/SVG/Attribute/onclick
 /ja/docs/Web/SVG/Compatibility_sources	/ja/docs/Web/SVG
 /ja/docs/Web/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animate
 /ja/docs/Web/SVG/Element/hatchpath	/ja/docs/orphaned/Web/SVG/Element/hatchpath

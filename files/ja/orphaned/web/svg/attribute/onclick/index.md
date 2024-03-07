@@ -1,8 +1,7 @@
 ---
 title: onclick
-slug: Web/SVG/Attribute/onclick
-l10n:
-  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
+slug: orphaned/Web/SVG/Attribute/onclick
+original_slug: Web/SVG/Attribute/onclick
 ---
 
 {{SVGRef}}
