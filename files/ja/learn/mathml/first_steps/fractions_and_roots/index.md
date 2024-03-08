@@ -26,7 +26,6 @@ l10n:
           >HTML 入門</a
         >を学ぶこと）
       </td>
-      </td>
     </tr>
     <tr>
       <th scope="row">目標:</th>
