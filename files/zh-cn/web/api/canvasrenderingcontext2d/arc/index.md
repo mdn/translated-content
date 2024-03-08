@@ -89,9 +89,9 @@ for (i = 0; i < 4; i++) {
 }
 ```
 
-{{ EmbedLiveSample('不同的形状演示', 160, 210, "canvas_arc.png") }}
+{{EmbedLiveSample('不同的形状演示', "", "210")}}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

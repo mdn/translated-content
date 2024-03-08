@@ -38,6 +38,6 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - The {{domxref("WebGLContextEvent")}} signals changes in the context state.

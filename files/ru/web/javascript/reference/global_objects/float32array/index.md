@@ -84,8 +84,6 @@ new Float32Array(buffer [, byteOffset [, length]]);
   - : Возвращает последний найденный индекс соответствующий искомому значению, в противном случае возвращает - 1. Смотрите также {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float32Array.prototype.map()")}}
   - : Возвращает новый массив с результатом применения функции к каждому элементу в этом массиве. Смотрите также {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : Нестандартизированная версия {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Float32Array.prototype.reduce()")}}
   - : Применяет функцию к каждому элементу в массиве (слева-направо) и накапливает результат в переменной. Смотрите также {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.reduceRight", "Float32Array.prototype.reduceRight()")}}

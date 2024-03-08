@@ -88,12 +88,8 @@ grid-template-rows: unset;
   - : トラックリストの繰り返しフラグメントを表し、繰り返しパターンを示す多数の行をよりコンパクトな形式で記述できるようにします。
 - [`masonry`](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{Experimental_Inline}}
   - : masonry の値は、この軸が組積アルゴリズムに従ってレイアウトされるべきであることを示します。
-- [subgrid](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : `subgrid` の値は、グリッドがその軸に親グリッドのスパン部分を採用することを示します。グリッドの行や列のサイズは、明示的に指定されるのではなく、親グリッドの定義から取得されます。
-
-> **警告:** `masonry`の値は、グリッド仕様のレベル 3 のもので、現在は Firefox のフラグに隠された実験的な実装があるだけです。
->
-> サブグリッドの値はグリッド仕様書のレベル 2 にあり、現在のところ Firefox 71 以降でのみ実装されています。
 
 ## 公式定義
 
@@ -136,7 +132,7 @@ grid-template-rows: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Specifying_grid_row_sizes", "40px", "100px")}}
+{{EmbedLiveSample("グリッド行の寸法の指定", "40px", "100px")}}
 
 ## 仕様書
 
@@ -150,5 +146,5 @@ grid-template-rows: unset;
 
 - 関連する CSS プロパティ: {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
 - [グリッドレイアウトガイド: グリッドレイアウトの基本概念 - グリッドトラック](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#グリッドトラック)
-- 動画チュートリアル: [Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)
+- 動画チュートリアル: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
 - [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)

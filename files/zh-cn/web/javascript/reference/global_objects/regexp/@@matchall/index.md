@@ -40,7 +40,7 @@ regexp[Symbol.matchAll](str)
 
 ### 直接调用
 
-本方法的使用方法几乎与{{jsxref("String.prototype.matchAll()")}}相同，除了`this` 的不同以及参数顺序的的差异。
+本方法的使用方法几乎与 {{jsxref("String.prototype.matchAll()")}} 相同，除了 `this` 的不同以及参数顺序的差异。
 
 ```js
 var re = /[0-9]+/g;

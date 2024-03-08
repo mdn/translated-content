@@ -175,6 +175,6 @@ spellcheck [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是枚举属性
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 所有 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
