@@ -148,8 +148,7 @@ npm run dev                                       # 以开发模式启动应用�
 
 一旦你配置好了 TypeScript，你就可以通过在组件的脚本部分开头添加 `<script lang='ts'>` 来在 Svelte 组件中使用它。要通过常规的 JavaScript 文件使用它，只需将文件扩展名从 `.js` 更改为 `.ts`。你还需要更新所有相应的导入语句，将 `import` 语句中的 `.ts` 文件扩展名删除。
 
-> **备注：** 如果在 `import` 语句中使用 `.ts` 文件扩展名，TypeScript 会抛出错误，因此如果你有名为 `./foo.ts` 的文件，你必须将其导入为 `"./foo"`。
-> 更多信息请参阅 TypeScript 手册中的[捆绑程序、TypeScript 运行时和 Node.js 加载器的模块解析](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders)部分。
+> **备注：** 如果在 `import` 语句中使用 `.ts` 文件扩展名，TypeScript 会抛出错误，因此如果你有名为 `./foo.ts` 的文件，你必须将其导入为 `"./foo"`。更多信息请参阅 TypeScript 手册中的[捆绑程序、TypeScript 运行时和 Node.js 加载器的模块解析](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders)部分。
 
 > **备注：** [目前尚不支持](https://github.com/sveltejs/svelte/issues/4701)在组件标记部分使用 TypeScript。你需要在标记中使用 JavaScript，并在 `<script lang='ts'>` 部分中使用 TypeScript。
 
