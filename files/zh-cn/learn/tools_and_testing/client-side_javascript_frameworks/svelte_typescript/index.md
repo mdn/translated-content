@@ -574,7 +574,7 @@ Error: Type 'TodoType' is not assignable to type 'undefined'. (ts)
    </h2>
    ```
 
-   这样，TypeScript 可以防止我们将其错误地分配给字符串。
+   这样，TypeScript 可以防止我们将其赋值为错误的字符串。
 
 ### NewTodo.svelte
 
