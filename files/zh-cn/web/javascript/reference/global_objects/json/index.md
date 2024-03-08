@@ -99,7 +99,7 @@ ArrayElements = JSON
              or ArrayElements , JSON
 ```
 
-在 `JSONNumber`（数字内部不允许包含空格）或 `JSONString`（字符串内部的空格被解释为相应的字符，否则就有问题了）之外的任何位置可以有多余的空白字符。JSON 只支持这些空白字符：制表符（[U+0009](https://symbl.cc/en/0009/)），回车（[U+000D](https://symbl.cc/en/000D/)），换行（[U+00](https://symbl.cc/en/0020/)0A）以及空格（[U+0020](https://symbl.cc/en/0020/)）。
+在 `JSONNumber`（数字内部不允许包含空格）或 `JSONString`（字符串内部的空格被解释为相应的字符，否则就有问题了）之外的任何位置可以有多余的空白字符。JSON 只支持这些空白字符：制表符（[U+0009](https://symbl.cc/cn/0009/)），回车（[U+000D](https://symbl.cc/cn/000D/)），换行（[U+000A](https://symbl.cc/cn/0020/)）以及空格（[U+0020](https://symbl.cc/cn/0020/)）。
 
 ## 方法
 
