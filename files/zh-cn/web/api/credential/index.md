@@ -1,6 +1,8 @@
 ---
 title: Credential
 slug: Web/API/Credential
+l10n:
+  sourceCommit: 952db471d65c30302c44388edf3c0aa094874319
 ---
 
 {{APIRef("Credential Management API")}}{{securecontext_header}}
