@@ -21,7 +21,7 @@ WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使�
 
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts)
   - : 通过阅读 WebAssembly 背后的上层概念开始——也就是说，它为什么如此有用、它是如何适应 Web 平台的（以及其他平台）和如何使用它。
-- [将新的 C/C++ 模块编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)
+- [将新的 C/C++ 模块编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_Wasm)
   - : 当你使用 C/C++ 编写了代码后，你可以使用诸如 [Emscripten](https://emscripten.org/) 的工具把它编译为 Wasm。让我们看看这是如何工作的。
 - [将现有的 C 模块编译为 WebAssembly](/zh-CN/docs/WebAssembly/existing_C_to_Wasm)
   - : WebAssembly 的核心用例是将现有的 C 库生态系统带到 Web 上，并允许开发者使用它们。
@@ -35,7 +35,7 @@ WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使�
   - : 导出的 WebAssembly 函数是 WebAssembly 函数的 JavaScript 反射，并且允许从 JavaScript 中调用 WebAssembly 代码。本文描述了它们的概念。
 - [理解 WebAssembly 的文本格式](/zh-CN/docs/WebAssembly/Understanding_the_text_format)
   - : 本文介绍了 Wasm 的文本格式。这是调试时在浏览器开发者工具中展现出来的 Wasm 模块的一种低级文本表示。
-- [把 WebAssembly 文本格式转换为 Wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm)
+- [把 WebAssembly 文本格式转换为 Wasm](/zh-CN/docs/WebAssembly/Text_format_to_Wasm)
   - : 本文提供了一个如何把编写的文本格式的 WebAssembly 模块转换为 Wasm 二进制的指南。
 
 ## API 参考
