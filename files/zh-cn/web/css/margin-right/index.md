@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/margin-right.html")}}
 
-两个相邻的盒子的垂直边距可能会融合。这被称为[_外边距折叠_](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
+两个相邻的盒子的垂直边距可能会合并。这被称为[_外边距折叠_](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
 
 ## 语法
 
@@ -103,7 +103,7 @@ margin-right: unset;
             <em>任意，除了 <code>flex</code></em>、<code>inline-flex</code
             > <em>或</em> <code>table-*</code>
           </th>
-          <th><em>或</em></th>
+          <th><em>任意</em></th>
           <th>
             <em><code>fixed</code></em> 或 <code>absolute</code>
           </th>
@@ -118,7 +118,7 @@ margin-right: unset;
           <th><em>任意</em></th>
           <th><em>任意</em></th>
           <td>
-            <code>0</code>，除非存在任何正水平可用空间。在这种情况下，它会均匀分布到所有水平的 <code>auto</code> 外边距中。
+            <code>0</code>，除非存在任何正水平可用空间。在这种情况下，它会均匀分配到所有水平的 <code>auto</code> 外边距中。
           </td>
           <td>弹性盒布局模式</td>
         </tr>
