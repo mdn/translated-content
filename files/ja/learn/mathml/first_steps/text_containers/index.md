@@ -380,7 +380,7 @@ math {
 }
 ```
 
-```js hidden
+```js-nolint hidden
 const tokenElements = Array.from(
   document.querySelectorAll("mi, mo, mn, mtext"),
 );
