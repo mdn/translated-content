@@ -105,7 +105,7 @@
 | Context             | 맥락            |                                                                                |
 | Control             | 컨트롤          |                                                                                |
 | Cross-browser       | 크로스 브라우저 |                                                                                |
-| Custom              | 커스텀          |                                                                                |
+| Custom              | 사용자 정의     |                                                                                |
 | Decoding            | 디코딩          | [링크](https://github.com/mdn/translated-content/issues/12452)                 |
 | Document            | 문서            |                                                                                |
 | Element             | 요소            |                                                                                |
