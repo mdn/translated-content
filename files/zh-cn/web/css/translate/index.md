@@ -41,7 +41,7 @@ translate: unset;
 - 两个 {{cssxref("&lt;length-percentage&gt;")}} 值
   - : 两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 表示在二维上分别按照指定 X 轴和 Y 轴的值进行的平移。等同于在 `translate()` 函数（2D 平移）中函数指定两个值。
 - 三个值
-  - : 两个 {{cssxref("&lt;length-percentage&gt;")}} 和 单个的 {{cssxref("&lt;length&gt;")}} 分别指定 X 轴、Y 轴、Z 轴的值进行三维平移。等同于`translate3d()` 函数（3D 平移）。
+  - : 两个 {{cssxref("&lt;length-percentage&gt;")}} 和单个的 {{cssxref("&lt;length&gt;")}} 分别指定 X 轴、Y 轴、Z 轴的值进行三维平移。等同于 `translate3d()` 函数（3D 平移）。
 - `none`
   - : 表示不应用平移效果。
 
