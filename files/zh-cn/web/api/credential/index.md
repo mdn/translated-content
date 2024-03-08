@@ -7,7 +7,7 @@ slug: Web/API/Credential
 
 [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API) 的 **`Credential`** 接口提供有关实体（通常是用户）的信息，通常作为信任决策的先决条件。
 
-`Credential`对象可以是以下这些类型:
+`Credential` 对象可以是以下这些类型：
 
 - {{domxref("FederatedCredential")}}
 - {{domxref("IdentityCredential")}}
