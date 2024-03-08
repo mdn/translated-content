@@ -112,7 +112,7 @@
 | Encoding            | 인코딩          | [링크](https://github.com/mdn/translated-content/issues/12452)                                         |
 | Entity              | 개체            |                                                                                                        |
 | Enumerated          | 열거형          |                                                                                                        |
-| Error               | 에러            |                                                                                                        |
+| Error               | 오류            |                                                                                                        |
 | Event               | 이벤트          |                                                                                                        |
 | Expression          | 표현식 또는 식  |                                                                                                        |
 | Fallback            | 폴백            |                                                                                                        |
