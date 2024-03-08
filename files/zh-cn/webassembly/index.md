@@ -15,7 +15,7 @@ WebAssembly 是一种新的编码方式，可以在现代的 Web 浏览器中运
 
 WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使用 WebAssembly 的 JavaScript API，你可以把 WebAssembly 模块加载到 JavaScript 应用中并且在两者之间共享功能。这允许你在同一个应用中利用 WebAssembly 的性能和能力以及 JavaScript 的表达力和灵活性，即使你可能并不知道如何编写 WebAssembly 代码。
 
-而且，更棒的是，这是由 [W3C WebAssembly 社区组](https://www.w3.org/community/webassembly/)开发的 Web 标准，并得到了来自各大主要浏览器厂商的积极参与。
+而且，更棒的是，这是由 [W3C WebAssembly 工作组](https://www.w3.org/wasm/)和[社区组](https://www.w3.org/community/webassembly/)开发的 Web 标准，并得到了来自各大主要浏览器厂商的积极参与。
 
 ## 指南
 
