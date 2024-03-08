@@ -38,11 +38,11 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
 
     <!---->
 
-    - `double-struck` {{ unimplemented_inline() }}
-    - `bold-fraktur` {{ unimplemented_inline() }} (la mise en gras fonctionne)
-    - `script` {{ unimplemented_inline() }}
-    - `bold-script` {{ unimplemented_inline() }} (la mise en gras fonctionne)
-    - `fraktur` {{ unimplemented_inline() }}
+    - `double-struck`
+    - `bold-fraktur` (la mise en gras fonctionne)
+    - `script`
+    - `bold-script` (la mise en gras fonctionne)
+    - `fraktur`
 
     <!---->
 
@@ -54,10 +54,10 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
 
     <!---->
 
-    - `initial` {{ unimplemented_inline() }}
-    - `tailed` {{ unimplemented_inline() }}
-    - `looped` {{ unimplemented_inline() }}
-    - `stretched` {{ unimplemented_inline() }}
+    - `initial`
+    - `tailed`
+    - `looped`
+    - `stretched`
 
 ## Exemples
 

@@ -13,7 +13,7 @@ l10n:
 
 ## プロパティ
 
-_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。。_
+_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLTableSectionElement.align")}} {{deprecated_inline}}
   - : 文字列で、 [`align`](/ja/docs/Web/HTML/Element/tr#align) 属性を反映した列挙型の値が入ります。これは、周囲のコンテキストに対する要素の内容物の配置を示します。利用可能な値は `"left"`, `"right"`, `"center"` です。

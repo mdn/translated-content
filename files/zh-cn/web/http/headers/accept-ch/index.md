@@ -34,7 +34,7 @@ Vary: DPR, Viewport-Width, Width
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Accept-CH-Lifetime")}}
 - {{HTTPHeader("Vary")}}

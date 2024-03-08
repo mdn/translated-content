@@ -52,6 +52,6 @@ _No change._
 
 - [Site Compatibility for Firefox 27](/zh-CN/docs/Mozilla/Firefox/Releases/27/Site_Compatibility)
 
-### 更早版本
+### 更早期的版本
 
-{{Firefox_for_developers('26')}}
+{{Firefox_for_developers}}

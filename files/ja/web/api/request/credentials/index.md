@@ -18,7 +18,7 @@ l10n:
 - `same-origin`
   - : URL が呼び出し元のスクリプトと同一オリジンだった場合のみ、ユーザーの資格情報 (HTTP Basic 認証、など) を送信します。 **これが既定値です。**
 - `include`
-  - : オリジン間の呼び出しであっても、常にユーザーの資格情報 (クッキー、HTTP Basic 認証、、など) を送信します。
+  - : オリジン間の呼び出しであっても、常にユーザーの資格情報 (クッキー、HTTP Basic 認証、など) を送信します。
 
 これは XHR の [`withCredentials`](/ja/docs/Web/API/XMLHttpRequest/withCredentials) フラグと似ていますが、有効な値が 2 つではなく 3 つあります。
 

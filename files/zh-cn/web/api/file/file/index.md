@@ -42,7 +42,7 @@ var file = new File(["foo"], "foo.txt", {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("FileReader")}}
 - {{domxref("Blob")}}
