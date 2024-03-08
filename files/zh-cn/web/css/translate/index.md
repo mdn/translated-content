@@ -12,21 +12,21 @@ slug: Web/CSS/translate
 ## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 translate: none;
 
-/* Single values */
+/* 单个值 */
 translate: 100px;
 translate: 50%;
 
-/* Two values */
+/* 两个值 */
 translate: 100px 200px;
 translate: 50% 105px;
 
-/* Three values */
+/* 三个值 */
 translate: 50% 105px 5rem;
 
-/* Global values */
+/* 全局值 */
 translate: inherit;
 translate: initial;
 translate: revert;
