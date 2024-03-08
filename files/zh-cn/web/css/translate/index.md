@@ -100,7 +100,7 @@ translate: unset;
 
 #### 结果
 
-{{EmbedLiveSample("Translating_an_element_on_hover", "100%", 175)}}
+{{EmbedLiveSample("悬停时平移元素", "100%", 175)}}
 
 ## 规范
 
