@@ -13,16 +13,16 @@ WebAssembly 是一种新的编码方式，可以在现代的 Web 浏览器中运
 
 对于 Web 平台而言，WebAssembly 具有巨大的意义——它提供了一条使得以各种语言编写的代码都可以接近原生的速度在 Web 中运行的途径，使得以前无法在 Web 上运行的客户端应用程序得以在 Web 上运行。
 
-WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使用 WebAssembly 的 JavaScript API，你可以把 WebAssembly 模块加载到一个 JavaScript 应用中并且在两者之间共享功能。这允许你在同一个应用中利用 WebAssembly 的性能和能力以及 JavaScript 的表达力和灵活性，即使你可能并不知道如何编写 WebAssembly 代码。
+WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使用 WebAssembly 的 JavaScript API，你可以把 WebAssembly 模块加载到 JavaScript 应用中并且在两者之间共享功能。这允许你在同一个应用中利用 WebAssembly 的性能和能力以及 JavaScript 的表达力和灵活性，即使你可能并不知道如何编写 WebAssembly 代码。
 
 而且，更棒的是，这是由 [W3C WebAssembly 社区组](https://www.w3.org/community/webassembly/)开发的 Web 标准，并得到了来自各大主要浏览器厂商的积极参与。
 
 ## 指南
 
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts)
-  - : 通过阅读 WebAssembly 背后的上层概念开始——也就是说，它为什么如此有用、它是如何适应 Web 平台的（以及其他平台）和如何使用它。
+  - : 通过阅读 WebAssembly 背后的上层概念开始——它是什么、它为什么如此有用、它是如何适应 Web 平台（以及其他平台）的和如何使用它。
 - [将新的 C/C++ 模块编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_Wasm)
-  - : 当你使用 C/C++ 编写了代码后，你可以使用诸如 [Emscripten](https://emscripten.org/) 的工具把它编译为 Wasm。让我们看看这是如何工作的。
+  - : 当你使用 C/C++ 编写了代码后，你可以使用诸如 [Emscripten](https://emscripten.org/) 等工具把它编译为 Wasm。让我们看看这是如何工作的。
 - [将现有的 C 模块编译为 WebAssembly](/zh-CN/docs/WebAssembly/existing_C_to_Wasm)
   - : WebAssembly 的核心用例是将现有的 C 库生态系统带到 Web 上，并允许开发者使用它们。
 - [将 Rust 代码编译为 WebAssembly](/zh-CN/docs/WebAssembly/Rust_to_Wasm)
@@ -61,7 +61,7 @@ WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使�
 - [`WebAssembly.validate()`](/zh-CN/docs/WebAssembly/JavaScript_interface/validate_static)
   - : `WebAssembly.validate()` 函数验证给定的 WebAssembly 二进制代码的类型化数组。
 - [`WebAssembly.Memory()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory)
-  - : `WebAssembly.Memory` 对象是一个存储了可被实例（`Instance`）访问的原始字节内存的可变长 {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}}。
+  - : `WebAssembly.Memory` 对象是一个存储了可被实例（`Instance`）访问的内存原始字节的可变长 {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}}。
 - [`WebAssembly.Table()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table)
   - : `WebAssembly.Table` 对象是一个用于存储可被实例（`Instance`）访问的不透明值（例如函数引用）的可变长类型化数组。
 - [`WebAssembly.Tag()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Tag)
