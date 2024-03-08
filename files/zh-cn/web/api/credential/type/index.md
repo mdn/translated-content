@@ -1,5 +1,5 @@
 ---
-title: "Credential：type 属性"
+title: Credential：type 属性
 slug: Web/API/Credential/type
 l10n:
   sourceCommit: 952db471d65c30302c44388edf3c0aa094874319
