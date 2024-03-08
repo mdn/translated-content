@@ -18,7 +18,7 @@ slug: Web/API/Credential
 ## 实例属性
 
 - {{domxref("Credential.id")}} {{ReadOnlyInline}}
-  - : 返回包含凭据标识符的字符串。这可以是GUID、用户名或电子邮件地址。
+  - : 返回包含凭据标识符的字符串。这可以是 GUID、用户名或电子邮件地址。
 - {{domxref("Credential.type")}} {{ReadOnlyInline}}
   - : 返回包含凭据类型的字符。有效值为 `password`、`federated`、`public-key`、`identity` 和 `otp`. (分别对应 {{domxref("PasswordCredential")}}、{{domxref("FederatedCredential")}}、{{domxref("PublicKeyCredential")}}、{{domxref("IdentityCredential")}} 和 {{domxref("OTPCredential")}})
 
