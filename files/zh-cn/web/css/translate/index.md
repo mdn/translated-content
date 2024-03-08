@@ -57,8 +57,7 @@ translate: unset;
 
 ### 悬停时平移元素
 
-此示例显示如何使用 `translate` 属性在 X、Y、Z 三个轴上移动元素。
-第一个盒子沿 X 轴移动，第二个沿 X、Y 轴方向，第三个盒子沿着 X、Y、Z 轴，并且由于向父元素添加了 {{cssxref('perspective')}}，看起来是向着观察者移动。
+此示例显示如何使用 `translate` 属性在 X、Y、Z 三个轴上移动元素。第一个盒子沿 X 轴移动，第二个沿 X、Y 轴方向，第三个盒子沿着 X、Y、Z 轴，并且由于向父元素添加了 {{cssxref('perspective')}}，看起来是向着观察者移动。
 
 #### HTML
 
