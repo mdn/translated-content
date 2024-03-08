@@ -2,7 +2,7 @@
 title: Svelte 对 TypeScript 的支持
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
 l10n:
-  sourceCommit: 1d5e91bbf7c4922177a9e3ae6245b0badaf1e8dd
+  sourceCommit: 7ff3d643b325985bf4b4b756a15f2fef347e7e8c
 ---
 
 {{LearnSidebar}}
