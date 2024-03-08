@@ -10,7 +10,7 @@ l10n:
 
 在上一篇文章中，我们学习了 Svelte store 的知识，并且实现了自己的自定义 store 来将应用程序的信息持久化到 Web 存储中。我们还学习了如何使用 transition 指令在 Svelte 中为 DOM 元素实现动画效果。
 
-现在，我们将学习如何在 Svelte 应用程序中使用 TypeScript。首先，我们将了解 TypeScript 是什么以及它能为我们带来什么好处。然后，我们将看看如何配置项目以使用 TypeScript 文件。最后，我们将查看我们的应用程序，并了解我们需要进行哪些修改才能充分利用 TypeScript 的功能。
+现在，我们将学习如何在 Svelte 应用程序中使用 TypeScript。首先，我们将了解 TypeScript 是什么以及它能为我们带来什么好处。然后，我们将看看如何配置项目以使用 TypeScript 文件。最后，我们将查看我们的应用程序，并了解我们需要进行哪些修改才能充分利用 TypeScript 的特性。
 
 <table>
   <tbody>
@@ -60,15 +60,15 @@ npx degit opensas/mdn-svelte-tutorial/07-typescript-support
 
 ## TypeScript：JavaScript 的可选静态类型
 
-[TypeScript](https://www.typescriptlang.org/) 是 JavaScript 的超集，提供了可选的静态类型、类、接口和泛型等功能。TypeScript 的目标是通过其类型系统尽早发现错误，并使 JavaScript 开发更高效。其中一个重要的好处是在你输入代码时，TypeScript 使集成开发环境能够提供更丰富的环境，使发现常见错误更容易。
+[TypeScript](https://www.typescriptlang.org/) 是 JavaScript 的超集，提供了可选的静态类型、类、接口和泛型等特性。TypeScript 的目标是通过其类型系统尽早发现错误，并使 JavaScript 开发更高效。其中一个重要的好处是在你输入代码时，TypeScript 使集成开发环境能够提供更丰富的环境，使发现常见错误更容易。
 
 最重要的是，JavaScript 代码也是有效的 TypeScript 代码；TypeScript 是 JavaScript 的超集。你可以直接将大多数 `.js` 文件重命名为 `.ts` 文件，它们将正常工作。
 
-我们的 TypeScript 代码能够在 JavaScript 可以运行的任何地方运行。这是如何实现的呢？TypeScript 将我们的代码“转译”为纯粹的 JavaScript。这意味着它解析 TypeScript 代码，并为浏览器生成等效的纯 JavaScript 代码以运行。
+我们的 TypeScript 代码能够在 JavaScript 可以运行的任何地方运行。这是如何实现的呢？TypeScript 将我们的代码“转译”为原生的 JavaScript。这意味着它解析 TypeScript 代码，并生成等效的原生 JavaScript 代码以供浏览器运行。
 
 > **备注：** 如果你对 TypeScript 如何将代码转译为 JavaScript 感兴趣，可以查看 [TypeScript 演练场](https://www.typescriptlang.org/play/?target=1&e=4#example/hello-world)。
 
-长期以来，原生 TypeScript 支持一直是 Svelte 最受欢迎的功能请求。感谢 Svelte 团队和众多贡献者的辛勤工作，我们现在有了[官方解决方案](https://svelte.dev/blog/svelte-and-typescript)，可以进行测试。在本节中，我们将向你展示如何设置带有 TypeScript 支持的 Svelte 项目，以供尝试使用。
+长期以来，原生 TypeScript 支持一直是 Svelte 呼声最高的特性请求。感谢 Svelte 团队和众多贡献者的辛勤工作，我们现在有了[官方解决方案](https://svelte.dev/blog/svelte-and-typescript)，可以进行测试。在本节中，我们将向你展示如何设置带有 TypeScript 支持的 Svelte 项目，以供尝试使用。
 
 ## 为什么要使用 TypeScript？
 
@@ -76,7 +76,7 @@ TypeScript 的主要优势包括：
 
 - 提前发现错误：编译器在编译时检查类型并提供错误报告。
 - 可读性：静态类型使代码结构性更强，使其自我说明并更易读。
-- 强大的集成开发环境支持：类型信息使代码编辑器和集成开发环境能够提供代码导航、自动补全和更智能的提示等功能。
+- 强大的集成开发环境支持：类型信息使代码编辑器和集成开发环境能够提供代码导航、自动补全和更智能的提示等特性。
 - 更安全的重构：类型使集成开发环境更了解你的代码，并在重构大量代码时为你提供帮助。
 - 类型推断：即使不声明变量类型，也能利用许多 TypeScript 的特性。
 - 支持新的和未来的 JavaScript 特性：TypeScript 将许多最新的 JavaScript 特性转译为普通的老式 JavaScript，使你能够在尚未本地支持这些特性的用户代理上使用它们。
@@ -119,7 +119,7 @@ npm run dev
 
 要向现有的 Svelte 项目添加 TypeScript 支持，你可以[按照这些说明](https://svelte.dev/blog/svelte-and-typescript#Adding_TypeScript_to_an_existing_project)进行操作。或者，你可以将 [`setupTypeScript.js`](https://github.com/sveltejs/template/blob/master/scripts/setupTypeScript.js) 文件下载到项目根文件夹内的 `scripts` 文件夹中，然后运行 `node scripts/setupTypeScript.js`。
 
-你甚至可以使用 `degit` 下载该脚本。这就是我们将要做的操作，开始将应用程序转换为 TypeScript。
+你甚至可以使用 `degit` 下载该脚本。这将是我们开始将应用程序移植到 TypeScript 所需要的操作。
 
 > **备注：** 在你开始将其转换为 TypeScript 之前，你可以运行 `npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo-typescript` 来获取完整的 JavaScript 写的待办事项列表应用程序。
 
@@ -149,7 +149,7 @@ npm run dev                                       # 以开发模式启动应用�
 一旦你配置好了 TypeScript，你就可以通过在组件的脚本部分开头添加 `<script lang='ts'>` 来在 Svelte 组件中使用它。要通过常规的 JavaScript 文件使用它，只需将文件扩展名从 `.js` 更改为 `.ts`。你还需要更新所有相应的导入语句，将 `import` 语句中的 `.ts` 文件扩展名删除。
 
 > **备注：** 如果在 `import` 语句中使用 `.ts` 文件扩展名，TypeScript 会抛出错误，因此如果你有名为 `./foo.ts` 的文件，你必须将其导入为 `"./foo"`。
-> 更多信息请参阅 TypeScript 手册中的[捆绑程序、TypeScript 运行时和 Node.js 加载器的模块解析](https://www.typescriptlang.org/docs/handbook/2/modules.html##module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders)部分。
+> 更多信息请参阅 TypeScript 手册中的[捆绑程序、TypeScript 运行时和 Node.js 加载器的模块解析](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders)部分。
 
 > **备注：** [目前尚不支持](https://github.com/sveltejs/svelte/issues/4701)在组件标记部分使用 TypeScript。你需要在标记中使用 JavaScript，并在 `<script lang='ts'>` 部分中使用 TypeScript。
 
@@ -575,7 +575,7 @@ Error: Type 'TodoType' is not assignable to type 'undefined'. (ts)
    </h2>
    ```
 
-   这样，TypeScript 可以防止我们错误地将其分配给字符串变量。
+   这样，TypeScript 可以防止我们将其错误地分配给字符串。
 
 ### NewTodo.svelte
 
@@ -596,7 +596,7 @@ Error: Type 'TodoType' is not assignable to type 'undefined'. (ts)
 
 ### Todo.svelte
 
-现在，只有调用 `Todo.svelte` 组件时才会触发 `npm run check` 发出警告。让我们修复它们。
+现在，只有调用 `Todo.svelte` 组件时才会触发 `npm run check` 的警告。让我们修复它们。
 
 1. 打开 `Todo.svelte` 文件，并添加 `lang='ts'` 属性。
 2. 让我们导入 `TodoType`，并设置 `todo` 属性的类型。将 `export let todo` 行替换为以下内容：
