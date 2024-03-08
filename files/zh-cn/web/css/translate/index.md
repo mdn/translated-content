@@ -98,7 +98,7 @@ translate: unset;
 }
 ```
 
-#### Result
+#### 结果
 
 {{EmbedLiveSample("Translating_an_element_on_hover", "100%", 175)}}
 
