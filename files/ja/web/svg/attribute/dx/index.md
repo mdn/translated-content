@@ -248,7 +248,7 @@ line {
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>Yes</td>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
