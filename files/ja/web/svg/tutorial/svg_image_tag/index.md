@@ -23,7 +23,7 @@ SVG の {{ SVGElement("image") }} 要素により、ラスター画像を SVG �
 </svg>
 ```
 
-いくつか注意すべき重要事項があります（[W3 仕様書](http://www.w3.org/TR/SVG/struct.html#ImageElement)に基づくものです）。
+いくつか注意すべき重要事項があります（[W3 仕様書](https://www.w3.org/TR/SVG/struct.html#ImageElement)に基づくものです）。
 
 - `x` 属性や `y` 属性を措定しない場合、それらの値は `0` になります。
 - `height` 属性や `width` 属性を指定しない場合、それらの値は `0` になります。
