@@ -229,7 +229,7 @@ checkboxes.forEach((checkbox) => {
 
 {{ EmbedLiveSample('Active_learning_nesting_different_elements', 700, 600, "", "") }}
 
-## 伸張する根号
+## 伸縮する根号
 
 前回見たように、 `<msqrt>` 要素と `<mroot>` 要素の上付き線は、内容に応じて水平方向に伸びます。しかし、実際には根号 √ も内容と同じ高さに伸びます。
 
@@ -255,7 +255,7 @@ checkboxes.forEach((checkbox) => {
 
 {{ EmbedLiveSample('Stretchy_radical_symbols', 700, 200, "", "") }}
 
-> **警告:** 伸張を可能にするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が必要です。前回の例は[ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)を使用しています。
+> **警告:** 伸縮を可能にするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が必要です。前回の例は[ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)を使用しています。
 
 ## 線のない分数
 
