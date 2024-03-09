@@ -33,7 +33,7 @@ SVG でのテキストについて説明するにあたり、これをほとん�
 
 この要素は、長いテキストの一部分をマークアップするために用います。`text` 要素または他の `tspan` 要素の子要素にしなければなりません。よくある用途は、文中の単語 1 つを赤色の太字にすることです。
 
-```html
+```html-nolint
 <svg width="350" height="60" xmlns="http://www.w3.org/2000/svg">
   <text>
     これは<tspan font-weight="bold" fill="red">太字で赤字</tspan>です
