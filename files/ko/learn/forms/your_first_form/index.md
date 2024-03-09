@@ -111,7 +111,7 @@ slug: Learn/Forms/Your_first_form
 
 - 간단한 예제에서 첫 번째 input에 이 속성의 기본값인 {{HTMLelement("input/text", "text")}} 값을 사용할 것입니다. 이 값은 모든 종류의 텍스트 입력을 허용하는 기본 한 줄 텍스트 필드를 나타냅니다.
 
-- 두 번째 input에는 {{HTMLelement("input/email", "email")}} 값을 사용합니다. email 값은 올바른 형식의 이메일 주소만 허용하는 한 줄 텍스트 필드를 정의합니다. email 값으로 지정하면 기본 텍스트 필드에서 일종의 "지능형" 필드로 바뀌어 사용자가 입력한 데이터에 대해 몇 가지 유효성 검사를 수행합니다. 또한 스마트폰처럼 동적 키보드를 가진 장치에서는 이메일 주소 입력에 더 적합한 키보드 레이아웃(예: 기본적으로 @ 기호 사용)이 표시되도록 합니다. 폼 유효성 검사에 대한 자세한 내용은 나중에 [클라이언트 측 폼 유효성 검사](/ko/docs/Learn/Forms/Form_validation) 문서에서 확인할 수 있습니다.
+- 두 번째 input에는 올바른 형식의 이메일 주소만 허용하는 한 줄 텍스트 필드를 정의하는 {{HTMLelement("input/email", "email")}} 값을 사용합니다. email 값으로 지정하면 기본 텍스트 필드에서 일종의 "지능형" 필드로 바뀌어 사용자가 입력한 데이터에 대해 몇 가지 유효성 검사를 수행합니다. 또한 스마트폰처럼 동적 키보드를 가진 장치에서는 이메일 주소 입력에 더 적합한 키보드 레이아웃(예: 기본적으로 @ 기호 사용)이 표시되도록 합니다. 폼 유효성 검사에 대한 자세한 내용은 나중에 [클라이언트 측 폼 유효성 검사](/ko/docs/Learn/Forms/Form_validation) 문서에서 확인할 수 있습니다.
 
 마지막으로 `<input>`과 `<textarea></textarea>` 구문에 유의하세요. 이것은 HTML의 특이한 점 중 하나입니다. `<input>` 태그는 {{glossary("void element","빈 요소")}}이므로 닫는 태그가 필요하지 않습니다. {{HTMLelement("textarea")}}는 빈 요소가 아니기 때문에 적절한 종료 태그로 닫아야 합니다. 이는 폼의 특정 기능인 기본값을 정의하는 방식에 영향을 줍니다. {{HTMLelement("input")}} 요소의 기본값을 정의하려면 다음과 같이 [`value`](/ko/docs/Web/HTML/Element/input#value) 속성을 사용해야 합니다.
 
@@ -297,11 +297,11 @@ button {
 
 ```css hidden
 form {
-  /* Just to center the form on the page */
+  /* 페이지 중앙에 폼을 위치시키기 위해서 */
   margin: 0 auto;
   width: 400px;
 
-  /* To see the limits of the form */
+  /* form의 경계를 확인하기 위해서 */
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
@@ -312,7 +312,7 @@ div + div {
 }
 
 label {
-  /* To make sure that all label have the same size and are properly align */
+  /* 모든 label이 같은 크기를 가지고 적절히 정렬되도록 하기 위해서 */
   display: inline-block;
   width: 90px;
   text-align: right;
@@ -320,46 +320,45 @@ label {
 
 input,
 textarea {
-  /* To make sure that all text field have the same font settings
-     By default, textarea are set with a monospace font */
+  /* 모든 텍스트 필드가 같은 폰트 설정을 가지도록 하기 위해서
+     기본적으로 textarea는 모노스페이스 폰트로 설정됩니다. */
   font: 1em sans-serif;
 
-  /* To give the same size to all text field */
+  /* 모든 텍스트 필드에 같은 크기를 주기 위해서 */
   width: 300px;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
-  /* To harmonize the look & feel of text field border */
+  /* 텍스트 필드 테두리의 외관과 느낌을 조화롭게 하기 위해서 */
   border: 1px solid #999;
 }
 
 input:focus,
 textarea:focus {
-  /* To give a little highlight on active elements */
+  /* 활성화된 요소에 약간의 하이라이트를 주기 위해서 */
   border-color: #000;
 }
 
 textarea {
-  /* To properly align multiline text field with their label */
+  /* 여러 줄의 텍스트 필드가 label과 적절히 정렬되도록 하기 위해서 */
   vertical-align: top;
 
-  /* To give enough room to type some text */
+  /* 충분한 텍스트 타이핑 공간을 주기 위해서 */
   height: 5em;
 
-  /* To allow users to resize any textarea vertically
-     It works only on Chrome, Firefox and Safari */
+  /* 사용자가 textarea를 수직으로 크기를 조정할 수 있도록 하기 위해서
+     이것은 Chrome, Firefox, Safari에서만 동작합니다. */
   resize: vertical;
 }
 
 .button {
-  /* To position the buttons to the same position of the text fields */
-  padding-left: 90px; /* same size as the label elements */
+  /* 버튼을 텍스트 필드와 같은 위치에 배치하기 위해서 */
+  padding-left: 90px; /* label 요소와 같은 크기 */
 }
 
 button {
-  /* This extra margin represent the same space as the space between
-     the labels and their text fields */
+  /* 이 추가 마진은 label과 텍스트 필드 사이의 공간과 동일합니다. */
   margin-left: 0.5em;
 }
 ```
@@ -367,6 +366,8 @@ button {
 {{ EmbedLiveSample('Summary', '', '300') }}
 
 그러나 이것은 시작에 불과합니다. 이제 더 자세히 살펴볼 차례입니다. 폼에는 여기서 살펴본 것보다 훨씬 더 많은 기능이 있으며 이 모듈의 다른 문서가 나머지 기능을 익히는 데 도움이 될 것입니다.
+
+{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
 ### 고급 주제
 
