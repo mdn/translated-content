@@ -318,16 +318,16 @@ document.getElementById("showSolution").addEventListener(
 
 > **メモ:** 明らかな違いは、 MathML ではソースコードがより冗長になることです。このチュートリアルはこの言語を学ぶためのものですが、実際には MathML のコンテンツは一般的に手動では書かれません。詳しい情報は [MathML を書く](/ja/docs/Web/MathML/Authoring)のページを参照してください。
 
-### アクティブラーニング: 伸張演算子
+### アクティブラーニング: 伸縮演算子
 
-演算子辞書では、いくつかの演算子に対応する伸張軸と同様に、既定の伸張プロパティを定義しています。例えば、演算子は既定では縦方向に伸張し、 `<mrow>` コンテナー内の伸張しない兄弟の最大の高さに応じた伸張を行います。[以前の練習](#アクティブラーニング_トークン要素を認識する)を少し調整することで、演算子を垂直に伸張させることができます。見つけられますか？
+演算子辞書では、いくつかの演算子に対応する伸縮軸と同様に、既定の伸縮プロパティを定義しています。例えば、演算子は既定では縦方向に伸縮し、 `<mrow>` コンテナー内の伸縮しない兄弟の最大の高さに応じた伸縮を行います。[以前の練習](#アクティブラーニング_トークン要素を認識する)を少し調整することで、演算子を垂直に伸縮させることができます。見つけられますか？
 
 ```html hidden
 <!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>伸張演算子のあるマイページ</title>
+    <title>伸縮演算子のあるマイページ</title>
     <link
       rel="stylesheet"
       href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
@@ -402,9 +402,9 @@ tokenElements.forEach((token) => {
     if (token.tagName !== "mo")
       message = `いいえ、これは ${tagName} 要素です。`;
     else if (!stretchyMoElements.includes(token))
-      message = `いいえ、これは ${tagName} 要素ですが、垂直方向に伸張されていません。`;
+      message = `いいえ、これは ${tagName} 要素ですが、垂直方向に伸縮されていません。`;
     else
-      message = `正解です。この ${tagName} 要素は子孫の <code>&lt;mfrac&gt;</code> の高さまで必要に応じて伸張されます。`;
+      message = `正解です。この ${tagName} 要素は子孫の <code>&lt;mfrac&gt;</code> の高さまで必要に応じて伸縮されます。`;
     outputDiv.insertAdjacentHTML(
       "beforeend",
       `<p><strong>${message}</strong></p>`,
@@ -456,7 +456,7 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 </math>
 ```
 
-> **警告:** 伸張できるようにするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が要求されます。前回の例は[ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)に頼っています。
+> **警告:** 伸縮できるようにするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が要求されます。前回の例は[ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)に頼っています。
 
 ## まとめ
 
