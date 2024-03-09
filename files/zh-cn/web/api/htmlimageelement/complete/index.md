@@ -1,6 +1,5 @@
 ---
-title: "HTMLImageElement: complete 属性"
-short-title: complete
+title: HTMLImageElement：complete 属性
 slug: Web/API/HTMLImageElement/complete
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -8,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-只读 {{domxref("HTMLImageElement")}} 接口的 **`complete`** 属性是一个布尔值，用于指示图像是否已完全加载。
+{{domxref("HTMLImageElement")}} 接口的 **`complete`** 只读属性是一个布尔值，用于指示图像是否已完全加载。
 
 ## 值
 
@@ -22,7 +21,7 @@ l10n:
 - 图像元素已预先确定，图像已完全可用并准备好使用。
 - 图像损坏，即由于错误或图像加载被禁用导致图像加载失败。
 
-值得注意的是，由于图像可能是异步接收的，因此`complete`的值可能在脚本运行时发生变化。
+值得注意的是，由于图像可能是异步接收的，因此 `complete` 的值可能在脚本运行时发生变化。
 
 ## 示例
 
