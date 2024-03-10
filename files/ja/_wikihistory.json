@@ -29035,10 +29035,6 @@
     "modified": "2020-10-15T22:28:49.124Z",
     "contributors": ["mfuji09"]
   },
-  "Web/SVG/Attribute/onclick": {
-    "modified": "2020-10-15T22:30:36.187Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/SVG/Attribute/points": {
     "modified": "2020-11-16T07:59:59.493Z",
     "contributors": ["h.itoh"]
