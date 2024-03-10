@@ -98,7 +98,7 @@ panel.setAttribute("class", "msgBox");
 html.appendChild(panel);
 ```
 
-下面这两段使用了我们之前使用过的方法`createElement()`和`appendChild()` — 创建了一个 {{htmlelement("p")}} 元素和一个{{htmlelement("button")}}元素 — 并且把他们追加到了 panel`<div>`之下。我们使用元素的 {{domxref("Node.textContent")}}（Node 泛指一个元素并不是说是某个元素是叫 Node）属性— 表示一个元素的文本属性 — 给一个 p 元素赋值，同样按钮也有这个属性，该属性就是按钮显示的‘X’。这个按钮的功能就是关闭消息提示框。
+下面这两段使用了我们之前使用过的方法 `createElement()` 和 `appendChild()`——创建了一个 {{htmlelement("p")}} 元素和一个{{htmlelement("button")}}元素——并且把它们追加到了 panel `<div>` 之下。我们使用元素的 {{domxref("Node.textContent")}}（Node 泛指一个元素并不是说是某个元素是叫 Node）属性——表示一个元素的文本属性——给一个 p 元素赋值，同样按钮也有这个属性，该属性就是按钮显示的“X”。这个按钮的功能就是关闭消息提示框。
 
 ```js
 const msg = document.createElement("p");

@@ -1,11 +1,15 @@
 ---
 title: Notification：silent 属性
 slug: Web/API/Notification/silent
+l10n:
+  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}
 
 {{domxref("Notification")}} 接口的 **`silent`** 只读属性指定通知是否应当保持静默，即无论设备设置如何，都不发出声音或振动。该属性在{{domxref("Notification.Notification","Notification()")}} 构造函数的 `silent` 选项中指定。
+
+{{AvailableInWorkers}}
 
 ## 值
 
@@ -23,7 +27,7 @@ const options = {
 
 const n = new Notification("新评论活动", options);
 
-console.log(n.silent); // "true"
+console.log(n.silent); // true
 ```
 
 ## 规范

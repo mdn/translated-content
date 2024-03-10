@@ -69,4 +69,4 @@ function 0() {
 
 - [length](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/length) プロパティは Wasm 内の関数シグネチャで宣言されている引数の数です。
 - [name](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/name) プロパティは `toString()` の結果で見えている Wasm モジュール内での関数のインデックスです。
-- i64 型の値を受け取る、または返すエクスポートされた Wasm 関数を呼び出そうとすると、現在 JavaScript 上で i64 を表現する的確な方法がないためエラーが発生します。。これは将来的に変わる可能性があります。新しい int64 型が将来の標準で検討されており、 Wasm によって使用される可能性があります。
+- i64 型の値を受け取る、または返すエクスポートされた Wasm 関数を呼び出そうとすると、現在 JavaScript 上で i64 を表現する的確な方法がないためエラーが発生します。これは将来的に変わる可能性があります。新しい int64 型が将来の標準で検討されており、 Wasm によって使用される可能性があります。

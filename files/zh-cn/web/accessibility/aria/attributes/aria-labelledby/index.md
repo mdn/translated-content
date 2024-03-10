@@ -57,7 +57,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 
 #### 示例 3: 单选组 Radio Groups
 
-在下面的示例中，单选组[radiogroup](/zh-CN/Accessibility/ARIA/ARIA_Techniques/Using_the_radiogroup_role)的容器通过一个 aria-labeledby 属性与他的的标签相联结：
+在下面的示例中，单选组[radiogroup](/zh-CN/Accessibility/ARIA/ARIA_Techniques/Using_the_radiogroup_role)的容器通过一个 aria-labeledby 属性与他的标签相联结：
 
 ```html
 <div id="radio_label">My radio label</div>

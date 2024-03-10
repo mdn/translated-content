@@ -78,7 +78,7 @@ for (let i = 0; i < 6; i++) {
 
 结果如下显示：
 
-{{EmbedLiveSample("使用循环创建多种轮廓线颜色", "180", "180", "canvas_strokestyle.png")}}
+{{EmbedLiveSample("使用循环创建多种轮廓线颜色", "", "180")}}
 
 ## 规范
 

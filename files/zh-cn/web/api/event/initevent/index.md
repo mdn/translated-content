@@ -52,6 +52,6 @@ elem.dispatchEvent(event);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - The constructor to use instead of this deprecated method: {{domxref("Event.Event", "Event()")}}. More specific constructors can be used too.

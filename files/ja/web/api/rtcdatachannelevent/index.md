@@ -18,7 +18,7 @@ l10n:
 
 ## インスタンスプロパティ
 
-_{{domxref("Event")}} のプロパティを継承しています。。_
+_{{domxref("Event")}} のプロパティを継承しています。_
 
 - {{DOMxRef("RTCDataChannelEvent.channel", "channel")}} {{ReadOnlyInline}}
   - : このイベントに関連付けられた {{domxref("RTCDataChannel")}} を返します。

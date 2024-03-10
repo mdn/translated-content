@@ -1016,17 +1016,6 @@
       "khiby"
     ]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-11-06T17:15:48.569Z",
-    "contributors": [
-      "flaviomicheletti",
-      "SphinxKnight",
-      "marcus.simei",
-      "vinidesign.web",
-      "victorwvieira",
-      "etc_william"
-    ]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-11-12T14:47:17.943Z",
     "contributors": [
@@ -1874,20 +1863,7 @@
       "GilvanFernandes"
     ]
   },
-  "MDN/Community/Contributing/Getting_started": {
-    "modified": "2020-09-30T17:15:19.127Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "haskellcamargo",
-      "mrmorais",
-      "-",
-      "takahan",
-      "annacruz",
-      "Fabiola"
-    ]
-  },
-  "MDN/Contribute": {
+  "MDN/Community/Contributing": {
     "modified": "2019-12-26T13:39:13.687Z",
     "contributors": [
       "maugravena",
@@ -1902,9 +1878,18 @@
       "Sheppy"
     ]
   },
-  "MDN/Contribute/Processes": {
-    "modified": "2019-01-16T19:51:57.687Z",
-    "contributors": ["wbamberg", "-"]
+  "MDN/Community/Contributing/Getting_started": {
+    "modified": "2020-09-30T17:15:19.127Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "haskellcamargo",
+      "mrmorais",
+      "-",
+      "takahan",
+      "annacruz",
+      "Fabiola"
+    ]
   },
   "MDN/Writing_guidelines": {
     "modified": "2019-09-11T08:06:52.705Z",
@@ -2904,6 +2889,10 @@
       "fnsc.luis"
     ]
   },
+  "Web/API/Element/input_event": {
+    "modified": "2019-03-23T22:14:30.766Z",
+    "contributors": ["fscholz", "heltonandreazza"]
+  },
   "Web/API/Element/insertAdjacentHTML": {
     "modified": "2019-03-23T22:50:34.232Z",
     "contributors": ["rafaelcavalcante", "raphaelchaib", "belsanpesou"]
@@ -3305,10 +3294,6 @@
   "Web/API/HTMLElement/innerText": {
     "modified": "2019-03-18T21:15:34.228Z",
     "contributors": ["cammarin"]
-  },
-  "Web/API/HTMLElement/input_event": {
-    "modified": "2019-03-23T22:14:30.766Z",
-    "contributors": ["fscholz", "heltonandreazza"]
   },
   "Web/API/HTMLElement/offsetHeight": {
     "modified": "2019-03-18T20:58:59.560Z",
@@ -5446,10 +5431,6 @@
       "sheldonled",
       "Sheppy"
     ]
-  },
-  "Web/Guide/Mobile": {
-    "modified": "2020-04-05T18:24:36.523Z",
-    "contributors": ["guidiasz", "michelsouza"]
   },
   "Web/HTML": {
     "modified": "2019-09-10T15:24:16.025Z",
@@ -10357,6 +10338,10 @@
       "agathasilva28"
     ]
   },
+  "conflicting/Learn/CSS/CSS_layout/Responsive_Design": {
+    "modified": "2020-04-05T18:24:36.523Z",
+    "contributors": ["guidiasz", "michelsouza"]
+  },
   "conflicting/Learn/CSS/First_steps": {
     "modified": "2019-03-23T23:39:06.753Z",
     "contributors": [
@@ -10461,6 +10446,10 @@
   "conflicting/Learn_680f0a64719ec97f557d9b1ef1710826": {
     "modified": "2019-07-28T16:57:13.368Z",
     "contributors": ["rvenson"]
+  },
+  "conflicting/MDN/Community/Contributing": {
+    "modified": "2019-01-16T19:51:57.687Z",
+    "contributors": ["wbamberg", "-"]
   },
   "conflicting/MDN/Contribute": {
     "modified": "2019-01-16T19:17:27.272Z",
@@ -10894,6 +10883,17 @@
   "orphaned/Instalando_Rust": {
     "modified": "2019-03-23T22:54:43.463Z",
     "contributors": ["molokdotc"]
+  },
+  "orphaned/Learn/Front-end_web_developer": {
+    "modified": "2020-11-06T17:15:48.569Z",
+    "contributors": [
+      "flaviomicheletti",
+      "SphinxKnight",
+      "marcus.simei",
+      "vinidesign.web",
+      "victorwvieira",
+      "etc_william"
+    ]
   },
   "orphaned/Learn/HTML/Forms/HTML5_updates": {
     "modified": "2019-03-23T23:38:57.820Z",
