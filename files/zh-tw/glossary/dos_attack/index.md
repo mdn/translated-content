@@ -25,6 +25,6 @@ DoS 攻擊比起具體的某種方式的攻擊，更像是一種類型。以下�
 
 ## 參見
 
-- 維基百科上的 [拒絕服務攻擊](https://zh.wikipedia.org/wiki/Denial-of-service_attack)
+- 維基百科上的[阻斷服務攻擊](https://zh.wikipedia.org/wiki/阻斷服務攻擊)
 - [在 OWASP 上的拒絕服務攻擊](https://www.owasp.org/index.php/Denial_of_Service)
 - {{Glossary("Distributed Denial of Service","DDoS")}}
