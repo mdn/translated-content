@@ -1,8 +1,6 @@
 ---
 title: invert()
 slug: Web/CSS/filter-function/invert
-page-type: css-function
-browser-compat: css.types.filter-function.invert
 ---
 
 {{CSSRef}}
