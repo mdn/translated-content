@@ -2,7 +2,7 @@
 title: 要素に影を追加するには
 slug: Learn/CSS/Howto/Add_a_shadow
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
 ---
 
 {{LearnSidebar}}
@@ -30,5 +30,5 @@ l10n:
 
 ## 関連情報
 
-- [ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator)
+- [ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
 - [CSS の学習: 高度な装飾効果](/ja/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)

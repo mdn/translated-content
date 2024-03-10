@@ -124,7 +124,7 @@ Of equal importance are the rules around notification. Browsers are required to 
 
 In Firefox, for example, the URL bar displays a pulsing red icon to indicate that recording is underway. The icon is gray if the permission is in place but recording is not currently underway. The device's physical light is used to indicate whether or not recording is currently active. If you've muted your camera (so-called "facemuting"), your camera's activity light goes out to indicate that the camera is not actively recording you, without discarding the permission to resume using the camera once muting is over.
 
-## **Example**s
+## Examples
 
 ### Width and height
 

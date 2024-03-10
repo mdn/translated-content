@@ -42,7 +42,7 @@ The telnet client should display: `Local Echo is on`
 - CSS 规范可以为 `tt` 选择器定义，来覆盖浏览器的默认字体。用于设置的偏好可能优先于指定的 CSS。
 - 虽然这个元素没有在 HTML 4.01 规范中废弃，为了支持样式表，不建议使用它。
 
-## 另见
+## 参见
 
 - {{ HTMLElement("code") }}
 - HTML 4.01 规范：[字体样式](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)

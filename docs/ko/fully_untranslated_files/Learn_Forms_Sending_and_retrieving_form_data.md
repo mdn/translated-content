@@ -49,7 +49,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 <form action="#"></form>
 ```
 
-> **참고:**HTTPS(보안 HTTP) 프로토콜을 사용하는 URL을 지정하는 것도 가능하다. 이 것을 사용하면 폼 자체가 안전하지 않은 페이지에 HTTP를 이용해서 접근하는 곳에 호스트된 경우에 데이터는 나머지 요청들과 함께 암호화된다. 반면, 만약 폼이 보안 페이지에서 호스트 된 경우라도 [`action`](/ko/docs/Web/HTML/Element/form#action) 속성에서 안전하지 않은 HTTP URL을 지정하면 모든 브라우저는 데이터가 암호화되지 않았기 때문에 데이터를 보낼때마다 보안 경고를 출력할 것이다
+> **참고:** HTTPS(보안 HTTP) 프로토콜을 사용하는 URL을 지정하는 것도 가능하다. 이 것을 사용하면 폼 자체가 안전하지 않은 페이지에 HTTP를 이용해서 접근하는 곳에 호스트된 경우에 데이터는 나머지 요청들과 함께 암호화된다. 반면, 만약 폼이 보안 페이지에서 호스트 된 경우라도 [`action`](/ko/docs/Web/HTML/Element/form#action) 속성에서 안전하지 않은 HTTP URL을 지정하면 모든 브라우저는 데이터가 암호화되지 않았기 때문에 데이터를 보낼때마다 보안 경고를 출력할 것이다
 
 #### [`method`](/ko/docs/Web/HTML/Element/form#method) 속성
 

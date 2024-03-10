@@ -5,7 +5,7 @@ slug: Web/CSS/@counter-style/additive-symbols
 
 {{CSSRef}}
 
-`additive-symbols` 描述符定义符号，用于值可累积的可数的 {{cssxref('system')}}的项。 `additive-symbols` 定义累积的的元组（tuples）,每个元组项都包含一个符号和一个非负整数的权重。`additive system` 被用于构造 [sign-value numbering](http://en.wikipedia.org/wiki/Sign-value_notation) （符号 - 值，指数字的值就是是符号加在一起的值）系统，比如罗马数字。
+`additive-symbols` 描述符定义符号，用于值可累积的可数的 {{cssxref('system')}}的项。 `additive-symbols` 定义累积的元组（tuples）,每个元组项都包含一个符号和一个非负整数的权重。`additive system` 被用于构造 [sign-value numbering](http://en.wikipedia.org/wiki/Sign-value_notation) （符号 - 值，指数字的值就是是符号加在一起的值）系统，比如罗马数字。
 
 ```css
 additive-symbols: 3 "0";

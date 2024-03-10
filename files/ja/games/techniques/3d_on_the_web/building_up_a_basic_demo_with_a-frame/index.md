@@ -201,7 +201,7 @@ scene.appendChild(cylinder);
 </a-box>
 ```
 
-他のエンティティでも同様に、アニメーション用のキープロパティを定義できます。ここでは `rotation` 属性を `20 0 0` から `20 360 0` へとアニメーションさせているので、1周回転することになります。アニメーションの方向 (direction) は、alternate に設定されているため、順方向にアニメーションが再生されます。継続時間 (duration) を 4 秒に、そして繰り返し (repeat) がずっと続く (indefinite) ように設定してします。アニメーションの easing は `ease` を使っています。これは内部的に実装されている [tween.js](https://github.com/tweenjs/tween.js/) によって実行されます。
+他のエンティティでも同様に、アニメーション用のキープロパティを定義できます。ここでは `rotation` 属性を `20 0 0` から `20 360 0` へとアニメーションさせているので、1周回転することになります。アニメーションの方向 (direction) は、alternate に設定されているため、順方向にアニメーションが再生されます。再生時間 (duration) を 4 秒に、そして繰り返し (repeat) がずっと続く (indefinite) ように設定してします。アニメーションの easing は `ease` を使っています。これは内部的に実装されている [tween.js](https://github.com/tweenjs/tween.js/) によって実行されます。
 
 ### 拡大縮小
 

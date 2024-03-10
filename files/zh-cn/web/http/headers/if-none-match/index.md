@@ -55,7 +55,7 @@ If-None-Match: *
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("ETag")}}
 - {{HTTPHeader("If-Unmodified-Since")}}

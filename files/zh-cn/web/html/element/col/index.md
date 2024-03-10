@@ -67,7 +67,7 @@ slug: Web/HTML/Element/col
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/zh-CN/docs/Web/HTML/Element/col#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/col#charoff) attributes {{unimplemented_inline(2212)}}.If this attribute is not set, its value is inherited from the [`align`](/zh-CN/docs/Web/HTML/Element/colgroup#align) of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/zh-CN/docs/Web/HTML/Element/col#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/col#charoff) attributes. If this attribute is not set, its value is inherited from the [`align`](/zh-CN/docs/Web/HTML/Element/colgroup#align) of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
 
     > **备注：** Do not use this attribute as it is obsolete (not supported) in the latest standard.
     > To achieve the same effect as the `left`, `center`, `right` or `justify` values:
@@ -75,7 +75,7 @@ slug: Web/HTML/Element/col
     > - Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
     > - If the table doesn't use a [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-child(an+b)` CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("text-align")}} property can be used.
     > - If the table does use a [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/col#char) as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/col#char) as the value of the {{cssxref("text-align")}} property.
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -87,7 +87,7 @@ slug: Web/HTML/Element/col
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/col#align) is not set to `char`, this attribute is ignored.
 
-    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/col#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/col#char) attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > **备注：** Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/col#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/col#char) attribute as the value of the {{cssxref("text-align")}} property.
 
 - `charoff` {{deprecated_inline}}
 

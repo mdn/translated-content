@@ -21,7 +21,7 @@ transfer(newByteLength)
 - `newByteLength` {{optional_inline}}
   - : 新的 `ArrayBuffer` 的 {{jsxref("ArrayBuffer/byteLength", "byteLength")}}。默认为当前 `ArrayBuffer` 的 `byteLength`。
     - 如果 `newByteLength` 小于当前 `ArrayBuffer` 的 `byteLength`，“溢出”的字节将被丢弃。
-    - 如果 `newByteLength` 大于当前 `ArrayBuffer` 的 `byteLength`，剩下的的字节将用零填充。
+    - 如果 `newByteLength` 大于当前 `ArrayBuffer` 的 `byteLength`，剩下的字节将用零填充。
     - 如果当前的 `ArrayBuffer` 是可调整大小的，`newByteLength` 一定不能大于其 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}}。
 
 ### 返回值

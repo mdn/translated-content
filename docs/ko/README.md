@@ -24,6 +24,14 @@ MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습
 
 [번역 안내서](./guides/translation-guide.md), [용어 안내서](./guides/glossary-guide.md) 및 [macro 안내서](./guides/macro-guide.md)을 숙지 후 기여해주세요.
 
+### 관리자의 편집 허용
+
+PR 생성 시 `Create pull request` 버튼 옆에 있는 `Allow edits by maintainers`를 꼭 활성화해 주세요.
+
+### Prettier, Husky 설정
+
+`yarn install`명령어를 실행하여 git commit 실행 전에 Prettier와 Husky 활성화해 주세요.
+
 ### PR 파일 개수
 
 PR 생성시에 한국 리뷰어들은 라운드 로빈 방식으로 배정이 되고 있습니다. 한 리뷰어에게 너무 많은 리뷰가 몰리지 않도록 번역 PR의 경우 1개의 파일을 넘지 않는 것을 권장합니다.
@@ -32,7 +40,7 @@ PR 생성시에 한국 리뷰어들은 라운드 로빈 방식으로 배정이 �
 
 ### PR 규칙
 
-- `ko-locale`에 존재하지 않는 새로운 파일에 대한 번역을 진행할 때, **파일 전체 번역**을 원칙으로 합니다. (단, [CORS][] 와 같이 분량이 많은 파일에 대해서는 부분 번역을 허용합니다. 이때, 번역되지 않은 부분은 `en-us locale` 원본으로 대체합니다.)
+- `ko-locale`에 존재하지 않는 새로운 파일에 대한 번역을 진행할 때, **파일 전체 번역** 을 원칙으로 합니다. (단, [CORS][] 와 같이 분량이 많은 파일에 대해서는 부분 번역을 허용합니다. 이때, 번역되지 않은 부분은 `en-us locale` 원본으로 대체합니다.)
 - `PR`의 `Merge` 우선 순위는 관련 이슈에서 가장 처음 언급된 `PR`이 병합 우선권을 갖습니다. 리뷰어는 우선 순위가 있는 PR을 먼저 병합하는것을 원칙으로 합니다. 따라서, 번역을 진행하기 전에, `PR`과 관련된 이슈가 없다면 이슈를 생성하는 것을 권장합니다. [ko-locale PR 목록](https://github.com/mdn/translated-content/pulls?q=is%3Apr+is%3Aopen+label%3Al10n-ko+)
 - 위 규칙들로 우선 순위를 정하기 힘든 경우 리뷰어는 기여자에게 충돌 해결을 요청 드릴 수 있습니다. 이 경우에는 충돌 해결 후 병합을 진행합니다.
 
@@ -46,7 +54,7 @@ PR 생성시에 한국 리뷰어들은 라운드 로빈 방식으로 배정이 �
 
 ## yari 빠른 사용법
 
-yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크](https://github.com/mdn/translated-content#making-contributions)를 참고해주세요.
+yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크](https://github.com/mdn/yari?tab=readme-ov-file#quickstart)를 참고해주세요.
 
 1. [content](https://github.com/mdn/content)와 (Fork된 본인 레포의) [translated-content](https://github.com/mdn/translated-content)를 클론합니다.
 2. content 폴더에 들어가서 `yarn install`을 통해 yari 등 필요한 패키지를 다운받습니다.
@@ -59,8 +67,8 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 
 4. `yarn start`
 
-다음과 같이 진행하면 아래와 같이 실시간으로 반영사항을 확인할 수 있고 4가지 편집 버튼으로 편집할 수 있습니다.
-![image](https://user-images.githubusercontent.com/22424891/117309001-002e0500-aebd-11eb-9842-8f78a99e8873.png)
+다음과 같이 진행하면 아래와 같이 실시간으로 반영사항을 확인할 수 있습니다.
+![image](https://github.com/mdn/translated-content/assets/23524849/c0247523-a8d2-4279-b17e-1156c15d08ce)
 
 ## 여러 안내서
 
@@ -79,7 +87,8 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 
 다음은 보관된 안내서입니다.
 
-- [마크다운 변환 안내서](./guides/markdown-conversion-guide.md)
+- [마크다운 변환 안내서](./guides/archived/markdown-conversion-guide.md)
+- [HTML 번역 안내서](./guides/archived/html-guide.md)
 
 ## 자주 묻는 질문
 
