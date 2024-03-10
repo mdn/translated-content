@@ -786,8 +786,7 @@ textarea.onkeyup = () => {
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すと、コード領域からフォーカスを外すことができます（Tab
-  はタブ文字を挿入します）。
+  Esc を押すと、コード領域からフォーカスを外すことができます（Tab はタブ文字を挿入します）。
 </p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
