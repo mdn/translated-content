@@ -5,17 +5,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 
 {{JSRef}}
 
-The **`toString()`** 은 문자열을 반환하는 object의 대표적인 방법이다
+{{jsxref("Object")}} 객체의 메서드인 **`toString()`** 은 해당 object를 표현하는 문자열을 반환합니다. 이 메서드는 사용자가 [타입 강제 변환](/ko/docs/Web/JavaScript/Data_structures#type_coercion)을 통해 파생된 객체에서 재정의할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
 ## 구문
 
 ```js
-obj.toString();
+toString();
 ```
 
-## Description
+### 매개변수
+
+기본적으로 `toString()`은 매개변수가 없습니다. 그러나 이 메서드를 재정의한 `Object`를 상속받은 객체의 경우 매개변수를 취할 수 있습니다. 예를들어, [`Number.prototype.toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 와 [`BigInt.prototype.toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) 메서드의 경우 선택적으로 기수(radix)를 매개변수로 취합니다.
+
+### 반환 값
+
+객체를 표현하는 문자열을 반환합니다.
+
+## 설명
 
 모든 객체에는 객체가 텍스트 값으로 표시되거나 객체가 문자열이 예상되는 방식으로 참조 될 때 자동으로 호출되는 `toString()` 메서드가 있습니다. 기본적으로 `toString()` 메서드는 Object에서 비롯된 모든 객체에 상속됩니다. 이 메서드가 사용자 지정 개체에서 재정의되지 않으면 `toString()`은 "`[object type]`"을 반환합니다. 여기서 `type`은 object type입니다. 다음 코드는 이것을 설명합니다
 
@@ -24,36 +32,9 @@ var o = new Object();
 o.toString(); // returns [object Object]
 ```
 
-> **참고:** JavaScript 1.8.5부터 {{jsxref("null")}}의 `toString()`을 호출하는 경우 `[object Null]`을 반환하며, {{jsxref("undefined")}}는 `[object Undefined]`를 반환합니다. 이는 ECMAScript 제 5판과 후속 정오표에 정의되어 있습니다. See [toString으로 객체 클래스 검사](#tostring으로_객체_클래스_검사).
+> **참고:** JavaScript 1.8.5부터 {{jsxref("null")}}의 `toString()`을 호출하는 경우 `[object Null]`을 반환하며, {{jsxref("undefined")}}는 `[object Undefined]`를 반환합니다. 이는 ECMAScript 제 5판과 후속 정오표에 정의되어 있습니다. [toString으로 객체 클래스 검사](#tostring으로_객체_클래스_검사)를 살펴보세요.
 
-## 매개변수
-
-숫자 및 BigInts의 경우 `toString()`은 선택적으로 기수(radix)를 매개변수로 취합니다. 기수의 값은 최소 2부터 36까지입니다.
-
-`기수`를 이용함으로써 10진수를 (1, 2, 3, 4, 5...) 다른 진수로 변환할 수 있습니다. 아래는 10진수를 2진수로 변환하는 예제입니다.
-
-```js
-let baseTenInt = 10;
-console.log(baseTenInt.toString(2));
-// "1010"이 출력됩니다
-```
-
-big integers도 이와 같습니다
-
-```js
-let bigNum = BigInt(20);
-console.log(bigNum.toString(2));
-// "10100"이 출력됩니다
-```
-
-몇 가지 일반적인 기수들은 아래와 같습니다
-
-- 2 : [2진법](https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84%EB%B2%95)
-- 8 : [8진법](https://ko.wikipedia.org/wiki/%ED%8C%94%EC%A7%84%EB%B2%95)
-- 10 : [10진법](https://ko.wikipedia.org/wiki/%EC%8B%AD%EC%A7%84%EB%B2%95)
-- 16 : [16진법](https://ko.wikipedia.org/wiki/%EC%8B%AD%EC%9C%A1%EC%A7%84%EB%B2%95)
-
-## Examples
+## 예제
 
 ### 기본 `toString` 메소드 재정의
 
@@ -125,7 +106,7 @@ toString.call(null); // [object Null]
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{jsxref("Object.prototype.toSource()")}}
 - {{jsxref("Object.prototype.valueOf()")}}
