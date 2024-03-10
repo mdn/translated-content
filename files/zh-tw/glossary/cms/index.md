@@ -5,7 +5,7 @@ slug: Glossary/CMS
 
 {{GlossarySidebar}}
 
-内容管理系统（Content Management System，CMS）是個能讓使用者發佈、整理、修改、還有刪除各種內容的軟體。所謂的內容，不僅僅是文字，也可以是嵌入式圖片、影片、音訊和互動程式碼。
+内容管理系统（Content Management System，CMS）是個能讓使用者發佈、整理、修改、還有刪除各種內容的軟體。所謂的內容，不僅僅是文字，也可以是嵌入的圖片、影片、音訊和互動程式碼。
 
 ## 參見
 
