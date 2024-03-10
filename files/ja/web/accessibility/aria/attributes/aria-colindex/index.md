@@ -21,7 +21,7 @@ ARIA は `table`, `grid`, `treegrid` 構造に関する情報を提供するた�
 
 セルまたはグリッドセルが複数の列にまたがっている場合、 {{htmlelement('td')}} と {{htmlelement('th')}} を使用していない場合は、 [`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) にその列の数を設定します。また、 `aria-colindex` にはまたがる範囲の始まりの値を設定します。最初の列のみにまたがる幅が 1 列であった場合の値を示します。
 
-DOMに存在する一連の列が連続しており、複数の行や列にまたがるセルが存在しない場合、`aria-colindex`を各行の1行目に設定するだけでよくなります。列が連続していない場合は、各行の子要素または自分自身で所有する要素すべてに `aria-colindex` の値を記載します。
+DOM に存在する一連の列が連続しており、複数の行や列にまたがるセルが存在しない場合、 `aria-colindex` を各行の 1 行目に設定するだけでよくなります。列が連続していない場合は、各行の子要素または自分自身で所有する要素すべてに `aria-colindex` の値を記載します。
 
 次の例は 6 列のグリッドを表示させており、そのうち 1、2、5、6 列目がユーザーに表示されます。表を構成する列の総数は表自体で `aria-colcount="6"` として設定します。列は連続していないので、すべての [`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/cell_role) - この場合、[`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role) と [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Roles/gridcell_role)要素 - には `aria-colindex` 属性が設定されています。
 
