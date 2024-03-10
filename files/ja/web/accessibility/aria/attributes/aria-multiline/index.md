@@ -41,7 +41,7 @@ l10n:
 
 - [`textbox`](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role)
 
-継承しているロール:
+継承先のロール:
 
 - [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
 
