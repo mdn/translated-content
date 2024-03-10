@@ -33,7 +33,7 @@ console.assert(afirmação, msg [, subst1, ..., substN]); // c-mensagem de forma
 
 Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text_to_the_console) na documentação do {{domxref("console")}} para mais detalhes.
 
-**Especificações**
+## Especificações
 
 {{Specifications}}
 

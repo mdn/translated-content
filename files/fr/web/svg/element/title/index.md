@@ -25,7 +25,7 @@ L'élément `<title>` est souvent le premier enfant de son parent. Notons que le
 
 ### Attributs spécifiques
 
-_(Aucun)_
+_Aucun._
 
 ## Interface DOM
 

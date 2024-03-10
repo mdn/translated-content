@@ -40,10 +40,6 @@ slug: Web/HTML/Element/progress
 
 {{ EmbedLiveSample("Примеры", 200, 50) }}
 
-Для Windows 7, результат выполнения будет выглядеть так :
-
-![progress-firefox.JPG](/@api/deki/files/6031/=progress-firefox.JPG)
-
 ### Дополнительные примеры
 
 Смотрите {{ cssxref("-moz-orient") }}.
@@ -52,7 +48,7 @@ slug: Web/HTML/Element/progress
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

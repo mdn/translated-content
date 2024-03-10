@@ -98,7 +98,7 @@ Note que esse botão possui CSS aplicado.
 
 {{Compat}}
 
-## Notas
+### Notas
 
 Elementos `<button>` são muito mais fáceis estilizá-los do que elementos {{HTMLElement("input")}}. Você pode adicionar dentro do conteúdo do HTML (imagine em `<em>`, `<strong>` ou mesmo `<img>`), e fazer uso do pseudo-elemento {{Cssxref(":after")}} e {{Cssxref(":before")}} para realizar renderizações complexas enquanto {{HTMLElement("input")}} apenas aceita um atributo com valor textual.
 
@@ -114,6 +114,6 @@ Firefox <35 para Android define um padrão {{ cssxref("background-image") }} gra
 
 ## Veja também
 
-Outros elementos que são usados para criar formulários: {{HTMLElement("form")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
+Outros elementos que são usados para criar formulários: {{HTMLElement("form")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
 {{HTMLSidebar}}

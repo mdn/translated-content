@@ -661,7 +661,7 @@ HTML 表格对于显示表格数据是很好的，但是很多年前——在浏
 
 现在，我们例子中的 CSS。除了使用 {{cssxref("display")}} 属性外，大多数 CSS 都是相当普通的。 {{htmlelement("form")}}, {{htmlelement("div")}}, {{htmlelement("label")}}和{{htmlelement("input")}}被告知要分别显示表、表行和表单元——基本上，它们会像 HTML 表格标记一样，导致标签和输入在默认情况下排列整齐。我们所要做的就是添加一些大小、边缘等等，让一切看起来都好一点，我们就完成了。
 
-你会注意到标题段落已经给出了 `display: table-caption;`——这使得它看起来就像一个表格{{htmlelement("caption")}} ——同时出于设计需要，我们通过`caption-side: bottom;` 告诉标题应该展示在表格的底部，即使这个{{htmlelement("p")}}标记在源码中是在`<input>`之前。这就能让你有一点灵活的弹性。
+你会注意到标题段落已经给出了 `display: table-caption;`——这使得它看起来就像一个表格 {{htmlelement("caption")}}——同时出于设计需要，我们通过 `caption-side: bottom;` 告诉标题应该展示在表格的底部，即使这个 {{htmlelement("p")}} 标记在源码中是在 `<input>` 之前。这就能让你有一点灵活的弹性。
 
 ```css
 html {

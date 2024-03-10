@@ -3,7 +3,7 @@ title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -11,9 +11,9 @@ O método `includes()` determina se um array contém um determinado elemento, re
 
 {{EmbedInteractiveExample("pages/js/array-includes.html")}}
 
-**Sintaxe**
+## Sintaxe
 
-```
+```js-nolint
 array.includes(searchElement[, fromIndex])
 ```
 

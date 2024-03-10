@@ -12,7 +12,7 @@ CSS-свойство **`grid-template-columns`** определяет имена
 ## Синтаксис
 
 ```css
-/* Ключевое слово в качестве значения */
+/* Ключевые слова */
 grid-template-columns: none;
 
 /* Значения типа <track-list> */
@@ -138,7 +138,7 @@ grid-template-columns: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

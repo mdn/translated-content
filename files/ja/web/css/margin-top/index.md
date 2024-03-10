@@ -1,11 +1,13 @@
 ---
 title: margin-top
 slug: Web/CSS/margin-top
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
 
-**`margin-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
+**`margin-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
 {{EmbedInteractiveExample("pages/css/margin-top.html")}}
 
@@ -26,6 +28,7 @@ margin-top: auto;
 margin-top: inherit;
 margin-top: initial;
 margin-top: revert;
+margin-top: revert-layer;
 margin-top: unset;
 ```
 
@@ -36,7 +39,7 @@ margin-top: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
   - : ブラウザーが適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
 

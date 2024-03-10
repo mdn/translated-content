@@ -35,7 +35,11 @@ create() と get() メソッドが全体像の中でどのように位置づけ�
 
 ![ウェブ認証 API のコンポーネントの登録とデータフロー図](webauthn_registration_r4.png)
 
+<!-- markdownlint-disable no-emphasis-as-heading -->
+
 _図 1 - ウェブ認証による登録手順と各アクションに関連する重要なデータの流れを示す図_
+
+<!-- markdownlint-enable no-emphasis-as-heading -->
 
 まず（図中のステップ 0）、アプリケーションは最初の登録要求を行います。このリクエストのプロトコルとフォーマットは、ウェブ認証 API の範囲外です。
 

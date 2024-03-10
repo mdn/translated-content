@@ -100,7 +100,7 @@ Há 5 tipos de _targets_ a se considerar:
         alguma outra razão senão o cruzamento de uma fronteira anônima, este
         evento será colocado no alvo antes que o redirecionamento ocorra. por
         exemplo, eventos do mouse são redirecionados à seus elementos pais
-        quando acontecem sobre nós de texto ({{ Bug("185889") }}), e neste
+        quando acontecem sobre nós de texto ([Firefox bug 185889](https://bugzil.la/185889)), e neste
         caso .target mostrará o nó pai e
         <code>.explicitOriginalTarget</code> mostrará o nó texto. Diferente de
         <code>.originalTarget</code>, <code>.explicitOriginalTarget</code> nunca

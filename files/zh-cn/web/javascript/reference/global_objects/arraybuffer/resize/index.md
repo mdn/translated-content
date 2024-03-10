@@ -1,6 +1,8 @@
 ---
 title: ArrayBuffer.prototype.resize()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resize
+l10n:
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}

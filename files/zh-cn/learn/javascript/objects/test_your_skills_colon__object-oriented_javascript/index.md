@@ -1,5 +1,5 @@
 ---
-title: 测试你的技能：面向对象的 Javascript
+title: 技能测试：面向对象的 Javascript
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 ---
 

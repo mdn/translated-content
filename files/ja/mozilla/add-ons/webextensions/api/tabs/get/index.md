@@ -3,7 +3,7 @@ title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 タブの ID を指定し、{{WebExtAPIRef("tabs.Tab")}}オブジェクトとしてタブの詳細を取得します。
 
@@ -17,16 +17,16 @@ var getting = browser.tabs.get(
 );
 ```
 
-### Parameters
+### 引数
 
 - `tabId`
   - : `integer`. 取得するタブの ID。
 
-### Return value
+### 返値
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
 
-## Examples
+## 例
 
 タブがアクティブなとき、情報を取得します:
 
@@ -45,7 +45,7 @@ browser.tabs.onActivated.addListener(logListener);
 
 {{WebExtExamples}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 

@@ -1,7 +1,11 @@
 ---
 title: ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違いは？
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
+l10n:
+  sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
 ---
+
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンなどのウェブに関係する色々な概念に関して解説します。これらの用語はウェブの初心者を混乱させたり、間違って使われたりしています。それぞれの意味を学びましょう。
 
@@ -9,9 +13,10 @@ slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engine
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
-      <td><a href="/ja/docs/Learn/Common_questions/How_does_the_Internet_work"
-          >インターネットはどのように動くのか</a
-        >を知っておく必要があります。</td>
+      <td><a href="/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+          >インターネットの仕組み</a
+        >を知っておく必要があります。
+      </td>
     </tr>
     <tr>
       <th scope="row">目標:</th>
@@ -29,7 +34,7 @@ slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engine
 これらの用語と技術の詳細に関して詳しく説明しますが、これらを簡単に定義することが良いスタートるになるでしょう。
 
 - ウェブページ
-  - : Firefox や Google Chrome、Opera、Microsoft Internet Explorer、Edge、Apple の Safari などのウェブブラウザーで表示可能な文書です。これらはよく単に「ページ」とも呼ばれることもあります。
+  - : Firefox や Google Chrome、Opera、Microsoft Edge、Apple Safari などのウェブブラウザーで表示可能な文書です。これらはよく単に「ページ」とも呼ばれることもあります。
 - ウェブサイト
   - : グループ化され、通常はさまざまな方法で一緒に接続されたウェブページの集まりです。よく「ウェブサイト」または単に「サイト」と呼ばれます。
 - ウェブサーバー
@@ -52,7 +57,7 @@ slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engine
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Contribute/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## より深く掘り下げる
 
@@ -80,7 +85,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ![ブラウザーのアドレスバーにあるウェブサイトのドメイン名の例](web-site.jpg)
 
-**ウェブページ**と**ウェブサイト**は、特に 1 枚だけの**ウェブページ**を含む**ウェブサイト**である場合に混同しやすくなります。このようなウェブサイトは**単一ページのウェブサイト**と呼ばれることがあります。
+なお、 _シングルページウェブサイト_ もあり得ます。単一のウェブページで構成され、必要に応じて新しいコンテンツで動的に更新されるものです。
 
 ### ウェブサーバー
 
@@ -92,7 +97,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 検索エンジンはよくウェブに関する誤解のもとになります。検索エンジンは特殊な種類のウェブサイトで、ユーザーが**他の**ウェブサイトを見つけるのを助けるものです。
 
-[Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/) など、たくさんあります。一般的なものもあれば、特定のトピックについて専門化されたものもあります。好きなものを使いましょう。
+[Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://yandex.com/), [DuckDuckGo](https://duckduckgo.com/) など、たくさんあります。一般的なものもあれば、特定のトピックについて専門化されたものもあります。好きなものを使いましょう。
 
 多くのウェブの初心者は、検索エンジンとブラウザーを混同しています。明確にしましょう。**ブラウザー**はソフトウェアの一つで、ウェブページを受け取り表示するものです。**検索エンジン**はウェブサイトであり、人々が他のウェブサイトからウェブページを探すのを手助けします。この混乱は、ブラウザーを起動したとき、ブラウザーが検索エンジンのホームページを表示しているために発生します。これは、ブラウザーで最初にやりたいことが表示させるウェブページであることが明らかであるため、よく分かります。インフラ (ブラウザーなど) とサービス (検索エンジンなど) を混同しないでください。この区別はかなり役立ちますが、専門家によっては曖昧に話すこともあるので、心配しないでください。
 
@@ -102,5 +107,5 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ## 次の段階
 
-- より深く掘り下げる: [ウェブサーバーって何？](/ja/docs/Learn/Common_questions/What_is_a_web_server)
-- ウェブページがどのようにウェブサイトにリンクされているかを見る: [ウェブのリンクを理解する](/ja/docs/Learn/Common_questions/What_are_hyperlinks)
+- より深く掘り下げる: [ウェブサーバーって何？](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- ウェブページがどのようにウェブサイトにリンクされているかを見る: [ウェブのリンクを理解する](/ja/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)

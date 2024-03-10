@@ -3,7 +3,7 @@ title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 

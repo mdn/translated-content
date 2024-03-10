@@ -3,7 +3,7 @@ title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Désinstalle une extension, compte tenu de son ID.
 

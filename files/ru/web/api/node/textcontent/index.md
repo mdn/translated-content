@@ -51,7 +51,7 @@ document.getElementById("block").textContent = "Это — просто текс
 //   <div id="block">Это — просто текст</div>
 ```
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

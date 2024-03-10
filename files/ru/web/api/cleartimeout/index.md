@@ -1,11 +1,11 @@
 ---
-title: WindowOrWorkerGlobalScope.clearTimeout()
+title: Глобальная функция clearTimeout()
 slug: Web/API/clearTimeout
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`clearTimeout()`** метод {{domxref("WindowOrWorkerGlobalScope")}} отменяет таймаут, ранее установленный вызовом {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}.
+Глобальный метод **`clearTimeout()`** отменяет таймаут, ранее установленный вызовом {{domxref("setTimeout()")}}.
 
 ## Синтаксис
 
@@ -18,7 +18,7 @@ scope.clearTimeout(timeoutID)
 - `timeoutID`
   - : Идентификатор таймаута, который вы хотите отменить. Этот идентификатор был возвращён соответствующим вызовом `setTimeout()`.
 
-It's worth noting that the pool of IDs used by {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} are shared, which means you can technically use `clearTimeout()` and {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.
+It's worth noting that the pool of IDs used by {{domxref("setTimeout()")}} and {{domxref("setInterval()")}} are shared, which means you can technically use `clearTimeout()` and {{domxref("clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.
 
 ## Пример использования
 
@@ -68,8 +68,7 @@ window.onclick = function () {
 
 ## Смотрите также
 
-- {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}
-- {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
-- {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
+- {{domxref("setTimeout()")}}
+- {{domxref("setInterval()")}}
+- {{domxref("clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/ru/docs/JavaScript/Timers/Daemons)

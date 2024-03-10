@@ -3,7 +3,7 @@ title: tabs.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type de fenêtre qui héberge cet onglet.
 

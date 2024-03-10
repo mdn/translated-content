@@ -13,7 +13,7 @@ slug: Web/HTML/Attributes/disabled
 
 如果在表单控件上指定了 `disabled` 属性，则该元素及其子控件不参与约束验证。通常浏览器会将它们打灰处理，它不会收到任何浏览事件，如鼠标点击或与焦点相关的事件。
 
-这些元素支持 `disabled` 属性：{{ HTMLElement("button") }}、{{ HTMLElement("command") }}、{{ HTMLElement("fieldset") }}、{{ HTMLElement("optgroup") }}、{{ HTMLElement("option") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea") }} 和 {{ HTMLElement("input")}}。
+这些元素支持 `disabled` 属性：{{ HTMLElement("button") }}、{{ HTMLElement("fieldset") }}、{{ HTMLElement("optgroup") }}、{{ HTMLElement("option") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea") }} 和 {{ HTMLElement("input")}}。
 
 这个布尔型 disabled 属性表示用户不能与该控件或其后代控件进行交互。如果没有指定这个属性，控件会从包含元素中继承其设置，例如 `fieldset`；如果没有设置 `disabled` 属性的包含元素，并且控件本身没有这个属性，那么该控件是启用的。如果在 {{ HTMLElement("optgroup") }} 上声明，选择仍然是交互式的（除非另行禁用），但选项组中的项目都不能选择。
 

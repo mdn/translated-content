@@ -1,5 +1,5 @@
 ---
-title: "Django 教程 8: 用户授权与许可"
+title: Django 教程 8：用户授权与许可
 slug: Learn/Server-side/Django/Authentication
 ---
 
@@ -12,8 +12,8 @@ slug: Learn/Server-side/Django/Authentication
     <tr>
       <th scope="row">前提：</th>
       <td>
-        完成之前的所有教程主题，包括<a
-          href="/zh-CN/docs/Learn/Server-side/Django/Sessions"
+        完成之前的所有教程主题，包括
+        <a href="/zh-CN/docs/Learn/Server-side/Django/Sessions"
           >Django 教程 7：Sessions 框架</a
         >。
       </td>
@@ -227,11 +227,11 @@ TEMPLATES = [
 
 此模板与我们之前看到的模板，有一些相似之处 - 它扩展了我们的基本模板，并覆盖了内容区块 `content`。其余代码，是相当标准的表单处理代码，我们将在后面的教程中讨论。你现在需要知道的是，这将显示一个表单，你可以在其中输入你的用户名和密码，如果你输入的值无效，则会在页面刷新时，提示你输入正确的值。
 
-保存模板后，回到登录页面（<http://127.0.0.1:8000/accounts/login/>），你应该看到如下内容：
+保存模板后，回到登录页面（`http://127.0.0.1:8000/accounts/login/`），你应该看到如下内容：
 
 ![Library login page v1](library_login.png)
 
-如果你尝试登录，将会成功，并且你将被重定向到另一个页面（默认情况下，这将是 <http://127.0.0.1:8000/accounts/profile/>）。这里的问题是，默认情况下，Django 希望在登录后，你可能会被带到个人资料页面，这可能是，也可能不是。由于你还没有定义此页面，你将收到另一个错误！
+如果你尝试登录，将会成功，并且你将被重定向到另一个页面（默认情况下，这将是 `http://127.0.0.1:8000/accounts/profile/`）。这里的问题是，默认情况下，Django 希望在登录后，你可能会被带到个人资料页面，这可能是，也可能不是。由于你还没有定义此页面，你将收到另一个错误！
 
 打开项目设置（**/locallibrary/locallibrary/settings.py**），并将下面的文本添加到底部。现在登录时，你应该默认重定向到站点主页。
 
@@ -242,9 +242,9 @@ LOGIN_REDIRECT_URL = '/'
 
 ### 登出模板
 
-如果你打开登出网址（<http://127.0.0.1:8000/accounts/logout/>），那么你会看到一些奇怪的行为 - 你所属的用户肯定会被登出，但你将被带到管理员登出页面。这不是你想要的，只是因为该页面上的登录链接，将你带到管理员登录屏幕（并且仅对具有`is_staff`权限的用户可用）。
+如果你打开登出网址（`http://127.0.0.1:8000/accounts/logout/`），那么你会看到一些奇怪的行为——你所属的用户肯定会被登出，但你将被带到管理员登出页面。这不是你想要的，只是因为该页面上的登录链接，将你带到管理员登录屏幕（并且仅对具有`is_staff`权限的用户可用）。
 
-创建并打开 /**locallibrary/templates/registration/logged_out.html**。将下面的文字，复制到文档中：
+创建并打开 **/locallibrary/templates/registration/logged_out.html**。将下面的文字，复制到文档中：
 
 ```django
 {% extends "base_generic.html" %}
@@ -303,7 +303,7 @@ LOGIN_REDIRECT_URL = '/'
 
 ```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
-\{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+\{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
 
 #### 密码重置确认
@@ -344,7 +344,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 {% endblock %}
 ```
 
-#### 密码重置完成
+#### 密码重置结束
 
 这是最后一个密码重置模板，显示该模板，以在密码重置成功时通知你。创建 **/locallibrary/templates/registration/password_reset_complete.html**，并为其提供以下内容：
 
@@ -363,8 +363,8 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 你可以尝试登录，然后使用以下 URL 登出超级用户帐户，来测试新的身份验证页面：
 
-- <http://127.0.0.1:8000/accounts/login/>
-- <http://127.0.0.1:8000/accounts/logout/>
+- `http://127.0.0.1:8000/accounts/login/`
+- `http://127.0.0.1:8000/accounts/logout/`
 
 你将能够从登录页面中的链接，测试密码重置功能。**请注意，Django 只会向已存储在其数据库中的地址（用户）发送重置电子邮件！**
 
@@ -573,7 +573,7 @@ urlpatterns += [
 
 此模板与我们之前为 `Book` 和 `Author`对象创建的模板非常相似。这里唯一新的东西，是我们检查在模型中添加的方法（`bookinst.is_overdue`），并使用它，来更改过期项目的颜色。
 
-当开发服务器运行时，你现在应该能够在浏览器中，查看登录用户的列表，网址为<http://127.0.0.1:8000/catalog/mybooks/>。在你的用户登录并登出后，尝试此操作（在第二种情况下，你应该被重定向到登录页面）。
+当开发服务器运行时，你现在应该能够在浏览器中，查看登录用户的列表，网址为 `http://127.0.0.1:8000/catalog/mybooks/`。在你的用户登录并登出后，尝试此操作（在第二种情况下，你应该被重定向到登录页面）。
 
 ### 将列表添加到侧栏
 

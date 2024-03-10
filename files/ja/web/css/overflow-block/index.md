@@ -145,5 +145,5 @@ overflow-block: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS 論理プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
 - [書字方向](/ja/docs/Web/CSS/CSS_Writing_Modes)

@@ -98,7 +98,7 @@ panel.setAttribute("class", "msgBox");
 html.appendChild(panel);
 ```
 
-下面这两段使用了我们之前使用过的方法`createElement()`和`appendChild()` — 创建了一个 {{htmlelement("p")}} 元素和一个{{htmlelement("button")}}元素 — 并且把他们追加到了 panel`<div>`之下。我们使用元素的 {{domxref("Node.textContent")}}（Node 泛指一个元素并不是说是某个元素是叫 Node）属性— 表示一个元素的文本属性 — 给一个 p 元素赋值，同样按钮也有这个属性，该属性就是按钮显示的‘X’。这个按钮的功能就是关闭消息提示框。
+下面这两段使用了我们之前使用过的方法 `createElement()` 和 `appendChild()`——创建了一个 {{htmlelement("p")}} 元素和一个{{htmlelement("button")}}元素——并且把它们追加到了 panel `<div>` 之下。我们使用元素的 {{domxref("Node.textContent")}}（Node 泛指一个元素并不是说是某个元素是叫 Node）属性——表示一个元素的文本属性——给一个 p 元素赋值，同样按钮也有这个属性，该属性就是按钮显示的“X”。这个按钮的功能就是关闭消息提示框。
 
 ```js
 const msg = document.createElement("p");
@@ -285,9 +285,9 @@ btn.onclick = displayMessage();
 
 > **备注：** 如果你写这个例子遇到了困难，在这里查看免费的代码 [完整版本的代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) (或者[在线运行的完整代码](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)), 也可以向我们寻求帮助。
 
-## 测试你的技能！
+## 技能测试！
 
-你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[测试你的技能：函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
+你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[技能测试：函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
 
 ## 结论
 

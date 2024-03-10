@@ -43,7 +43,7 @@ navigator.doNotTrack; // "0" or "1"
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{domxref("Navigator.doNotTrack")}}
 - {{HTTPHeader("Tk")}} header

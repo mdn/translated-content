@@ -29,6 +29,6 @@ window.screen.deviceXDPI / window.screen.logicalXDPI
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

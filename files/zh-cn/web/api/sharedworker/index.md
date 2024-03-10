@@ -25,7 +25,7 @@ _继承自其父类 {{domxref("EventTarget")}}，并实现 {{domxref("AbstractWo
 
 ## 方法
 
-继承自其*父类 {{domxref("EventTarget")}}，并实现 {{domxref("AbstractWorker")}} 中的方法。*
+_继承自其父类 {{domxref("EventTarget")}}，并实现 {{domxref("AbstractWorker")}} 中的方法。_
 
 ## 示例
 
@@ -85,7 +85,6 @@ onconnect = function (e) {
 
 {{Compat}}
 
-## 更多
+## 参见
 
 - {{domxref("Worker")}}
-- [使用 web worker](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)

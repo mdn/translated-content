@@ -42,7 +42,7 @@ uint8.byteLength; // 6 (根据被构造的 Uint8Array 的 offset)
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}

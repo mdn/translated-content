@@ -3,7 +3,7 @@ title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Déplace un ou plusieurs onglets vers une nouvelle position dans la même fenêtre ou vers une autre fenêtre.
 

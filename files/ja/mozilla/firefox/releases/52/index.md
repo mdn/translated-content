@@ -57,7 +57,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 #### CSS グリッド
 
-- [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout) を実装しました。
+- [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) を実装しました。
 
 #### 変更および削除
 

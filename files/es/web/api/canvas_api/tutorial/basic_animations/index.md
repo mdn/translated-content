@@ -324,8 +324,6 @@ Debajo esta el elemento {{HTMLElement("canvas")}} en el cual va la imagen se va 
 
 ## Otros ejemplos
 
-- [Un ray-caster básico](/es/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : Un buen ejemplo de como hacer animaciones usando como control el teclado.
 - [Animaciones avanzadas](/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : Vamos a echar un vistazo a algunas técnicas de animación avanzadas y física en el próximo capítulo.
 

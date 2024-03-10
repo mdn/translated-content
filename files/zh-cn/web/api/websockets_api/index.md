@@ -24,7 +24,7 @@ slug: Web/API/WebSockets_API
 - [Socket.IO](https://socket.io): 一个基于长轮询/WebSocket 的 [Node.js](https://nodejs.org) 第三方传输协议。
 - [SocketCluster](https://socketcluster.io/): 一个用于[Node.js](https://nodejs.org)的 pub/sub 专注于可伸缩 WebSocket 框架。
 - [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): 一个用 [Node.js](https://nodejs.org/)实现 WebSocket 服务器 API。
-- [Total.js](https://www.totaljs.com/):一个用[Node.js](http://www.nodejs.org/) 实现的的 Web 应用程序框架（例如:WebSocket 聊天）。
+- [Total.js](https://www.totaljs.com/)：一个用 [Node.js](https://www.nodejs.org/) 实现的 Web 应用程序框架（例如：WebSocket 聊天）。
 - [Faye](https://www.npmjs.com/package/faye-websocket): 一个 [Node.js](https://nodejs.org/) 的 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API)（双向连接）和 [EventSource](/zh-CN/docs/Web/API/EventSource)（单向连接）的服务器和客户端。
 - [SignalR](https://dotnet.microsoft.com/zh-cn/apps/aspnet/signalr): SignalR 在可用时将隐藏使用 WebSockets，在不可用时将优雅地使用其他技术和技术，而应用程序代码保持不变。
 - [Caddy](https://caddyserver.com/docs/websocket): 能够将任意命令（stdin/stdout）代理为 websocket 的 web 服务器。

@@ -93,7 +93,7 @@ slug: Web/HTTP/Conditional_requests
 
 ![When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely.](httpresume3.png)
 
-尽管这种方法行得通，但是它在文件发生变化的情况下增加了一次额外的请求/响应往返。这一点会影响性能。为此 HTTP 协议规定了一个特定的首部—— {{HTTPHeader("If-Range")}} ——来避免这种情况的发生：
+尽管这种方法行得通，但是它在文件发生变化的情况下增加了一次额外的请求/响应往返。这一点会影响性能。为此 HTTP 协议规定了一个特定的首部——{{HTTPHeader("If-Range")}}——来避免这种情况的发生：
 
 ![The If-Range headers allows the server to directly send back the complete resource if it has been modified, no need to send a 412 error and wait for the client to re-initiate the download.](httpresume4.png)
 

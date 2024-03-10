@@ -20,7 +20,7 @@ slug: Web/CSS/justify-items
 ## Синтаксис
 
 ```css
-/* Основные ключевые слова */
+/* Ключевые слова */
 justify-items: auto;
 justify-items: normal;
 justify-items: stretch;
@@ -114,13 +114,7 @@ justify-items: unset;
 
 {{CSSInfo}}
 
-## Поддержка браузерами
-
-### Поддержка в разметке Flex
-
-{{Compat}}
-
-### Поддержка в разметке Grid
+## Совместимость с браузерами
 
 {{Compat}}
 

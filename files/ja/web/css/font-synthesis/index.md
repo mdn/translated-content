@@ -23,6 +23,8 @@ font-synthesis: revert;
 font-synthesis: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/font-synthesis.html")}}
+
 ### 値
 
 - `none`

@@ -41,7 +41,7 @@ var source = gl.getShaderSource(shader);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createShader()")}}
 - {{domxref("WebGLRenderingContext.isShader()")}}

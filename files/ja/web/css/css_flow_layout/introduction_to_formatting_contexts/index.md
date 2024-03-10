@@ -80,4 +80,4 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 
 - [ブロック整形コンテキスト (BFC)](/ja/docs/Web/Guide/CSS/Block_formatting_context)
 - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)
