@@ -44,7 +44,7 @@ Firefox 釋出被分成五個**更新頻道**：
 
 ### Firefox
 
-在確認 Firefox Beta 版穩定的另外四個禮拜，我們已經準備好將新功能以最新版本 Firefox 的姿態推出給全球的使用者。
+在確認 Firefox Beta 版穩定的四個禮拜後，我們已經準備好將新功能以最新版本 Firefox 的姿態推出給全球的使用者。
 
 [下載 Firefox](https://www.mozilla.org/firefox/new/)
 
