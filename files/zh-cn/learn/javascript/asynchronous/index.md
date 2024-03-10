@@ -7,14 +7,6 @@ slug: Learn/JavaScript/Asynchronous
 
 在这个模块，我们将查看{{Glossary("asynchronous", "异步")}} {{Glossary("JavaScript")}}，异步为什么很重要，以及怎样使用异步来有效处理潜在的阻塞操作，比如从服务器上获取资源。
 
-> **标注：**
->
-> #### 想成为一名前端工程师？
->
-> 我们汇总了一门课程，其中包含你实现目标所需要的所有基本信息。
->
-> [**点击开始**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 预备知识
 
 异步 JavaScript 是一个相当高级的话题，建议你先完成 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)和[创建 JavaScript 代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks) 两个模块的学习后再来学习。

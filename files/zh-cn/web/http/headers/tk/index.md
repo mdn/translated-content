@@ -58,7 +58,7 @@ Tk: N
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("DNT")}} header
 - {{domxref("Navigator.doNotTrack")}}

@@ -102,7 +102,7 @@ body {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rt")}}

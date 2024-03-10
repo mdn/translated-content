@@ -91,7 +91,7 @@ ctx.strokeStyle = "black";
 });
 ```
 
-{{EmbedLiveSample("线条末端对比", "180", "180", "canvas_linecap.png")}}
+{{EmbedLiveSample("线条末端对比", "180", "180")}}
 
 ## 规范
 

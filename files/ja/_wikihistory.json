@@ -2725,10 +2725,6 @@
     "modified": "2020-12-02T12:12:26.573Z",
     "contributors": ["hamasaki", "mfuji09", "silverskyvicto"]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-10-31T10:34:45.039Z",
-    "contributors": ["teclogmanager", "imagawalouis"]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-10-25T05:48:49.625Z",
     "contributors": [
@@ -3720,24 +3716,6 @@
   "MDN/Community/Issues/Content_suggestions_feature_proposals": {
     "modified": "2020-08-12T13:57:26.219Z",
     "contributors": ["mfuji09"]
-  },
-  "MDN/Contribute": {
-    "modified": "2019-01-16T18:55:44.803Z",
-    "contributors": [
-      "wbamberg",
-      "Uemmra3",
-      "Marsf",
-      "akiomik",
-      "mamodayo",
-      "x2357",
-      "Fajrovulpo",
-      "koheishingai",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Processes": {
-    "modified": "2020-07-22T12:19:59.681Z",
-    "contributors": ["wbamberg", "hamasaki", "jswisher"]
   },
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-08-06T03:36:58.834Z",
@@ -9913,7 +9891,7 @@
     "modified": "2020-05-28T00:42:35.014Z",
     "contributors": ["nokazn", "mfuji09", "woodmix"]
   },
-  "Web/API/Houdini": {
+  "Web/API/Houdini_APIs": {
     "modified": "2020-07-24T06:19:03.585Z",
     "contributors": ["Wind1808"]
   },
@@ -16383,6 +16361,16 @@
     "modified": "2020-10-15T22:01:55.406Z",
     "contributors": ["mfuji09"]
   },
+  "Web/CSS/CSS_display/Block_formatting_context": {
+    "modified": "2019-10-20T13:29:22.992Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "Uemmra3",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
   "Web/CSS/CSS_filter_effects": {
     "modified": "2020-10-15T22:11:38.008Z",
     "contributors": ["mfuji09"]
@@ -20277,16 +20265,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/CSS/Block_formatting_context": {
-    "modified": "2019-10-20T13:29:22.992Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "Uemmra3",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
   "Web/Guide/CSS/Getting_started/Challenge_solutions": {
     "modified": "2019-03-23T23:30:43.615Z",
     "contributors": ["teoli", "ethertank"]
@@ -20751,10 +20729,6 @@
       "ethertank",
       "sosleepy"
     ]
-  },
-  "Web/HTML/Element/image": {
-    "modified": "2020-10-15T22:02:26.431Z",
-    "contributors": ["mfuji09", "teoli"]
   },
   "Web/HTML/Element/input": {
     "modified": "2020-10-15T21:25:58.138Z",
@@ -29061,10 +29035,6 @@
     "modified": "2020-10-15T22:28:49.124Z",
     "contributors": ["mfuji09"]
   },
-  "Web/SVG/Attribute/onclick": {
-    "modified": "2020-10-15T22:30:36.187Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/SVG/Attribute/points": {
     "modified": "2020-11-16T07:59:59.493Z",
     "contributors": ["h.itoh"]
@@ -30130,10 +30100,6 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Glossary/Flexbox": {
-    "modified": "2020-08-14T09:23:43.070Z",
-    "contributors": ["mfuji09", "Uemmra3", "sutara79"]
-  },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",
     "contributors": ["mfuji09", "silverskyvicto"]
@@ -30190,21 +30156,9 @@
     "modified": "2020-10-15T22:05:58.801Z",
     "contributors": ["yumemi-kuwahara"]
   },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-03-23T23:28:42.286Z",
-    "contributors": ["yyss", "teoli"]
-  },
   "conflicting/Web/Accessibility/ARIA/Roles/alert_role": {
     "modified": "2019-03-18T21:24:32.583Z",
     "contributors": ["8845musign"]
-  },
-  "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
-    "modified": "2019-03-23T23:28:50.521Z",
-    "contributors": ["yyss", "teoli"]
-  },
-  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
-    "modified": "2019-03-23T23:28:35.294Z",
-    "contributors": ["yyss", "teoli"]
   },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
@@ -30308,10 +30262,6 @@
   "orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
     "modified": "2019-03-18T21:20:29.728Z",
     "contributors": ["mfuji09"]
-  },
-  "orphaned/Web/CSS/CSS_Properties_Reference": {
-    "modified": "2019-03-18T21:41:37.652Z",
-    "contributors": ["mfuji09", "Uemmra3"]
   },
   "orphaned/Web/Compatibility_FAQ": {
     "modified": "2019-03-23T23:03:33.809Z",

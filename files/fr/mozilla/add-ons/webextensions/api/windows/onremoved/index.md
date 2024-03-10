@@ -3,7 +3,7 @@ title: windows.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancer quand une fenêtre est fermée.
 

@@ -3,7 +3,7 @@ title: pkcs11.installModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Installe le module PKCS # 11 nommé, le rendant disponible pour Firefox
 

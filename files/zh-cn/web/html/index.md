@@ -18,23 +18,11 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 ## 主要资源
 
 - HTML 介绍
-
-  - : 如果你是 Web 开发新手，请务必阅读我们的 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics) 文章来了解什么是 HTML 以及如何使用它。
-
+  - : 如果你是 Web 开发新手，请务必阅读我们的 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)文章来了解什么是 HTML 以及如何使用它。
 - HTML 教程
-
   - : 关于如何使用 HTML 的文章，教程和完整的示例，查看我们的 [HTML 学习区](/zh-CN/docs/Learn/HTML)。
-
 - HTML 参考
   - : 在我们丰富的 [HTML 参考](/zh-CN/docs/Web/HTML/Reference)部分中，你可以找到在 HTML 中每一个元素和属性的详细信息。
-
-> **标注：**
->
-> #### 想要成为一名前端工程师？
->
-> 我们汇总了一门课程，其中包含你实现成为前端工程师目标所需要的所有基本信息。
->
-> [**点击开始**](/zh-CN/docs/Learn/Front-end_web_developer)
 
 ## 初学者教程
 

@@ -26,7 +26,7 @@ const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 
 ## 解説
 
-`const` 宣言んは {{jsxref("Statements/let", "let")}} とよく似ています。
+`const` 宣言は {{jsxref("Statements/let", "let")}} とよく似ています。
 
 - `const` declarations are scoped to blocks as well as functions.
 - `const` 宣言は宣言した位置に到達してからでないとアクセスすることができません（[一時的デッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的デッドゾーン)を参照してください）。このため、 `const` 宣言は一般的に[巻き上げされない](/ja/docs/Glossary/Hoisting)と見なされます。

@@ -51,7 +51,5 @@ MDN ゲーム開発センターにようこそ! サイトのこのエリアで�
   - : ファイルサイズが 13 KB 以内であること、という制約のもと開発された HTML ゲームを対象とした JavaScript の競技プログラミングサイトです。登録されているゲームは全て、GitHub に公開されています。
 - [Mozilla Hacks Blog](https://hacks.mozilla.org/category/games/)
   - : Mozilla Hacks ブログの Games カテゴリには、ゲーム開発に関する興味深い記事が掲載されています。
-
-## 関連情報
-
 - [Games section on wiki.mozilla.org](https://wiki.mozilla.org/Platform/Games)
+  - : Mozilla プラットフォームにおけるゲームへの関与に関する情報を含む Wiki ページ。

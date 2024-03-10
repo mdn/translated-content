@@ -3,7 +3,7 @@ title: background
 slug: Web/CSS/background
 ---
 
-{{CSSRef("CSS Background")}}
+{{CSSRef}}
 
 [CSS](/ko/docs/Web/API/CSS) **`background`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다.
 

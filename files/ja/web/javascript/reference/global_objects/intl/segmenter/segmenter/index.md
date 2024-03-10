@@ -57,7 +57,7 @@ console.log(
   [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
     .length,
 );
-// logs 8 as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
+// text は '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。' と分割されるので、8 が記録されます。
 ```
 
 ## 仕様書

@@ -1667,10 +1667,6 @@
     "modified": "2020-09-02T11:05:36.300Z",
     "contributors": ["bogpok"]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-10-26T19:26:16.101Z",
-    "contributors": ["Villian79", "bogpok", "Menma"]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-07-17T07:11:41.531Z",
     "contributors": [
@@ -3156,6 +3152,27 @@
       "Palatovskaya"
     ]
   },
+  "MDN/Community/Contributing": {
+    "modified": "2020-01-05T13:03:37.237Z",
+    "contributors": [
+      "Ivan961",
+      "lesha.boklag",
+      "seliverstova",
+      "wbamberg",
+      "scrum",
+      "lavr1986uxa",
+      "BychekRU",
+      "dstereo",
+      "Daniil",
+      "Unregistered45",
+      "Aleksej",
+      "0leg",
+      "teoli",
+      "mitabuba",
+      "ilya",
+      "Mars"
+    ]
+  },
   "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-10-30T09:48:31.108Z",
     "contributors": [
@@ -3187,31 +3204,6 @@
   "MDN/Community/Issues": {
     "modified": "2020-10-30T08:02:44.010Z",
     "contributors": ["ksam"]
-  },
-  "MDN/Contribute": {
-    "modified": "2020-01-05T13:03:37.237Z",
-    "contributors": [
-      "Ivan961",
-      "lesha.boklag",
-      "seliverstova",
-      "wbamberg",
-      "scrum",
-      "lavr1986uxa",
-      "BychekRU",
-      "dstereo",
-      "Daniil",
-      "Unregistered45",
-      "Aleksej",
-      "0leg",
-      "teoli",
-      "mitabuba",
-      "ilya",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Processes": {
-    "modified": "2019-01-17T00:00:52.853Z",
-    "contributors": ["wbamberg", "warsan"]
   },
   "MDN/Structures/Live_samples": {
     "modified": "2020-09-30T12:57:23.093Z",
@@ -8343,6 +8335,19 @@
     "modified": "2020-04-28T15:39:35.383Z",
     "contributors": ["arnoldovich", "moshenskyDV"]
   },
+  "Web/CSS/CSS_display/Block_formatting_context": {
+    "modified": "2019-10-04T09:05:37.001Z",
+    "contributors": [
+      "Radragon",
+      "RomanBush",
+      "NancyT33333",
+      "SelenIT",
+      "brolnickij",
+      "I-O",
+      "ViT09",
+      "akhabibullina"
+    ]
+  },
   "Web/CSS/CSS_flexible_box_layout": {
     "modified": "2020-10-19T05:53:46.314Z",
     "contributors": ["kyusov", "idoru", "WynnChen"]
@@ -9820,19 +9825,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/CSS/Block_formatting_context": {
-    "modified": "2019-10-04T09:05:37.001Z",
-    "contributors": [
-      "Radragon",
-      "RomanBush",
-      "NancyT33333",
-      "SelenIT",
-      "brolnickij",
-      "I-O",
-      "ViT09",
-      "akhabibullina"
-    ]
-  },
   "Web/HTML": {
     "modified": "2020-05-09T08:33:52.357Z",
     "contributors": [
@@ -10158,10 +10150,6 @@
   "Web/HTML/Element/html": {
     "modified": "2020-10-15T21:31:50.271Z",
     "contributors": ["JCodeg", "PopovDaniil", "Aleksej", "karskiy"]
-  },
-  "Web/HTML/Element/image": {
-    "modified": "2019-03-18T20:41:47.756Z",
-    "contributors": ["Dozorengel", "KishiTako"]
   },
   "Web/HTML/Element/img": {
     "modified": "2020-10-15T21:32:27.907Z",
@@ -15455,10 +15443,6 @@
     "modified": "2019-03-23T23:20:13.909Z",
     "contributors": ["Solj", "Vasiliy.Poddubny", "BychekRU", "kscarfone"]
   },
-  "Web/SVG/Attribute/Core": {
-    "modified": "2020-10-15T22:34:58.576Z",
-    "contributors": ["osipov_s"]
-  },
   "Web/SVG/Attribute/additive": {
     "modified": "2019-03-23T22:07:14.939Z",
     "contributors": ["Solj", "warsan", "Vasiliy.Poddubny"]
@@ -15998,5 +15982,21 @@
   "WebAssembly/Using_the_JavaScript_API": {
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
+  },
+  "conflicting/MDN/Community/Contributing": {
+    "modified": "2019-01-17T00:00:52.853Z",
+    "contributors": ["wbamberg", "warsan"]
+  },
+  "conflicting/Web/HTML/Element/img": {
+    "modified": "2019-03-18T20:41:47.756Z",
+    "contributors": ["Dozorengel", "KishiTako"]
+  },
+  "conflicting/Web/SVG/Attribute": {
+    "modified": "2020-10-15T22:34:58.576Z",
+    "contributors": ["osipov_s"]
+  },
+  "orphaned/Learn/Front-end_web_developer": {
+    "modified": "2020-10-26T19:26:16.101Z",
+    "contributors": ["Villian79", "bogpok", "Menma"]
   }
 }

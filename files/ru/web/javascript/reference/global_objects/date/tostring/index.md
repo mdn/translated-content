@@ -3,7 +3,7 @@ title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Сводка
 

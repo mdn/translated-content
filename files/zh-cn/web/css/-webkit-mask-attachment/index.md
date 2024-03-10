@@ -51,6 +51,6 @@ body {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 {{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}
