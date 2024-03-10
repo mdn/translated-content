@@ -1,5 +1,5 @@
 ---
-title: 內容管理系統 (CMS)
+title: 內容管理系統（CMS）
 slug: Glossary/CMS
 ---
 
