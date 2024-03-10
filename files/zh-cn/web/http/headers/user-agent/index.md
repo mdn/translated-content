@@ -115,7 +115,7 @@ Googlebot/2.1 (+http://www.google.com/bot.html)
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - [User-Agent 探测，历史及检查清单](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
 - [Firefox 用户代理字符串参考](/zh-CN/docs/Web/HTTP/Headers/User-Agent/Firefox)

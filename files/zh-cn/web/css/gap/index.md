@@ -44,7 +44,7 @@ gap: revert-layer;
 gap: unset;
 ```
 
-该属性用来表示 `<'row-gap'>` 和 `<'column-gap'>` 的值（`<'column-gap'>` 是可选的）。假如 `<'column-gap'>` 缺失的话，则会被设置成跟 `<'row-gap'>` 一样的的值。
+该属性用来表示 `<'row-gap'>` 和 `<'column-gap'>` 的值（`<'column-gap'>` 是可选的）。假如 `<'column-gap'>` 缺失的话，则会被设置成跟 `<'row-gap'>` 一样的值。
 
 `<'row-gap'>` 和 `<'column-gap'>` 都可以用 `<length>` 或者 `<percentage>` 来表示。
 

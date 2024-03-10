@@ -130,7 +130,7 @@ grid-auto-columns: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_column_size", "410px", "100px")}}
+{{EmbedLiveSample("グリッド列の寸法を設定", "410px", "100px")}}
 
 ## 仕様書
 

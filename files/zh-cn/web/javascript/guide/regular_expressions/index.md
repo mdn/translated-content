@@ -483,7 +483,7 @@ var re = new RegExp("ab+c");
         </p>
         <p>例如，<code>/\s\w*/</code> 匹配"foo bar."中的' bar'。</p>
         <p>
-          经测试，\s不匹配"<a href="https://unicode-table.com/cn/180E/"
+          经测试，\s不匹配"<a href="https://symbl.cc/cn/180E/"
             >\u180e</a
           >"，在当前版本 Chrome(v80.0.3987.122) 和 Firefox(76.0.1)
           控制台输入/\s/.test("\u180e") 均返回 false。
