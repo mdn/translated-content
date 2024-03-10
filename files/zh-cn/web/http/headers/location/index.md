@@ -47,7 +47,7 @@ Location: /index.html
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Content-Location")}}
 - 包含 `Location` 首部的响应状态码：{{HTTPStatus("201")}}, {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("303")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}。

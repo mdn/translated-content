@@ -151,4 +151,4 @@ l10n:
 
 ## 参见
 
-{{Firefox_for_developers('2')}}
+{{Firefox_for_developers}}

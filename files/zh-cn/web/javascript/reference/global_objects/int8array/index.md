@@ -80,8 +80,8 @@ new Int8Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.lastIndexOf", "Int8Array.prototype.lastIndexOf()")}}
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Int8Array.prototype.map()")}}
-  - : 返回一个由回调函数的返回值组成的新数组。. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+  - : 返回一个由回调函数的返回值组成的新数组。参见 {{jsxref("Array.prototype.map()")}}。
+- {{jsxref("TypedArray.move", "Int8Array.prototype.move()")}} {{non-standard_inline}}
   - : {{jsxref("TypedArray.copyWithin", "Int8Array.prototype.copyWithin()")}} 早期的不标准定义。
 - {{jsxref("TypedArray.reduce", "Int8Array.prototype.reduce()")}}
   - : 从左到右为每个数组元素执行一次回调函数，并把上次回调函数的返回值放在一个暂存器中传给下次回调函数，并返回最后一次回调函数的返回值。参照 {{jsxref("Array.prototype.reduce()")}}

@@ -583,7 +583,7 @@ arr.property = "value";
 console.log(arr.property); // "value"
 ```
 
-例如，当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。[`RegExp.prototype.exec()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec)、[`String.prototype.match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 和 [`String.prototype.split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的返回值是一个数组。使用数组和正则表达式的的更多信息，参见[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
+例如，当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。[`RegExp.prototype.exec()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec)、[`String.prototype.match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 和 [`String.prototype.split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的返回值是一个数组。使用数组和正则表达式的更多信息，参见[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
 
 ## 使用类数组对象
 

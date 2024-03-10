@@ -69,6 +69,6 @@ Broadcast Channel API 是一个非常简单的 API，内部包含了跨上下文
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 接口实现：{{domxref("BroadcastChannel")}}。

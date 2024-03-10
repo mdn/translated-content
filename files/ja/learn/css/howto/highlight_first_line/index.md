@@ -2,7 +2,7 @@
 title: 段落の最初の行を強調するには
 slug: Learn/CSS/Howto/Highlight_first_line
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: f1a39407db7b09e1ff3b587484d75160e0e8e15e
 ---
 
 {{LearnSidebar}}
@@ -25,9 +25,11 @@ l10n:
 
 ## 擬似要素と他のセレクターの組み合わせ
 
-上の例では、擬似要素はすべての段落の最初の行を選択します。最初の段落の最初の行だけを選択するには、他のセレクターと組み合わせてください。それはクラスにすることができますが、この例では {{cssxref(":first-child")}} {{cssxref("pseudo-classes", "擬似クラス")}}です。これにより、 `.wrapper` の最初の子の最初の行を選択することができます。
+上の例では、擬似要素はすべての段落の最初の行を選択します。最初の段落の最初の行だけを選択するには、他のセレクターと組み合わせてください。この場合、 {{cssxref(":first-child")}} {{cssxref("pseudo-classes", "擬似クラス")}}を使用します。これにより、 `.wrapper` の最初の子が段落の場合、その最初の行を選択することができます。
 
 {{EmbedGHLiveSample("css-examples/howto/highlight_first_line2.html", '100%', 700)}}
+
+> **メモ:** 擬似要素を[複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)または[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)で他のセレクターと組み合わせた場合、擬似要素はセレクターの中で、他のすべての要素の後に置かなければなりません。
 
 ## 関連情報
 

@@ -1526,15 +1526,6 @@
       "HGARZON"
     ]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-11-18T03:33:37.370Z",
-    "contributors": [
-      "SphinxKnight",
-      "marquezpedro151",
-      "andresf.duran",
-      "Nachec"
-    ]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-09-22T16:37:42.904Z",
     "contributors": [
@@ -8928,10 +8919,6 @@
       "aguztinrs"
     ]
   },
-  "Web/HTML/Element/image": {
-    "modified": "2019-03-23T22:38:59.070Z",
-    "contributors": ["jcr4"]
-  },
   "Web/HTML/Element/img": {
     "modified": "2020-07-12T20:16:35.983Z",
     "contributors": ["maodecolombia", "thzunder", "teoli", "makoescalzo"]
@@ -14308,6 +14295,10 @@
       "on3_g"
     ]
   },
+  "conflicting/Web/HTML/Element/img": {
+    "modified": "2019-03-23T22:38:59.070Z",
+    "contributors": ["jcr4"]
+  },
   "conflicting/Web/HTML/Global_attributes": {
     "modified": "2019-03-18T21:19:21.658Z",
     "contributors": ["PabloDeTorre"]
@@ -14786,6 +14777,15 @@
   "orphaned/Instalación_de_motores_de_búsqueda_desde_páginas_web": {
     "modified": "2019-01-16T16:13:53.798Z",
     "contributors": ["teoli", "Nukeador", "Jorolo"]
+  },
+  "orphaned/Learn/Front-end_web_developer": {
+    "modified": "2020-11-18T03:33:37.370Z",
+    "contributors": [
+      "SphinxKnight",
+      "marquezpedro151",
+      "andresf.duran",
+      "Nachec"
+    ]
   },
   "orphaned/Learn/HTML/Forms/HTML5_updates": {
     "modified": "2019-03-24T00:07:51.068Z",

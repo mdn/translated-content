@@ -96,7 +96,7 @@ MIDDLEWARE = [
 
 1. admin 사이트의 홈페이지로 돌아가주세요.
 2. Users 옆 **Add** 버튼을 클릭하여 user dialog를 열어줍니다.![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
-3. 당신의 테스트 사용자(user)를 위해 적절한 사용자이름(**Username)** 과 비밀번호(**Password**/**Password confirmation)** 를 입력해주세요.
+3. 당신의 테스트 사용자(user)를 위해 적절한 사용자이름(**Username**)과 비밀번호(**Password**/**Password confirmation**) 를 입력해주세요.
 4. 사용자(user)를 만들기 위해 **SAVE** 를 눌러줍시다.
 
    관리자 사이트는 새로운 유저를 만들고, **username** 을 바꿀 수 있고 유저모델의 선택 필드에 정보를 추가할 수 있는 _Change user화면으로 즉각 당신에게 보여줄 것입니다. 이 필드들은 이름, 성, 이메일 주소, 유저 상태 및 권한 (오직_ **Active** 표시만 가능합니다)를 포함합니다. 더 밑으로 내려가면 당신의 그룹과 권한 유저와 관련된 중요한 날짜들(예를 들어 가입일과 마지막 로그인 날짜)을 기입할 수 있습니다. ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
@@ -116,7 +116,7 @@ Django는 authentication pages에서 login, log out, and password 조정을 위�
 
 > **참고:** 어떤 코드도 사용하지 않으셔도 되지만, 아마 스스로 원할 가능성이 높아요. 더 쉽게 해주거든요. 만약 user model을 바꾸고자 한다면, form을 다루는 코드를 바꾸게 될 가능성이 아주 높아요. (앞으로 나올 주제에요!) 그렇다고 하더라도, stock view 함수들은 사용할 수 있어야 합니다.
 
-> **참고:**이 경우에, catalog application에 URL과 템플릿을 포함해서 인authentication page들을 넣는게 합리적입니다. 그러나 많은 application들을 가지고 있다면, 공통적으로 로그인 해야하는 것을 분리하고 사이트 전체에서 로그인하는 것을 가능하게끔하는 게 좋을겁니다. 이게 우리가 여기서 볼려고하는 것이죠!
+> **참고:** 이 경우에, catalog application에 URL과 템플릿을 포함해서 인authentication page들을 넣는게 합리적입니다. 그러나 많은 application들을 가지고 있다면, 공통적으로 로그인 해야하는 것을 분리하고 사이트 전체에서 로그인하는 것을 가능하게끔하는 게 좋을겁니다. 이게 우리가 여기서 볼려고하는 것이죠!
 
 ### Project URLs
 
@@ -131,7 +131,7 @@ urlpatterns += [
 
 이 URL( <http://127.0.0.1:8000/accounts/>)로 접속하세요. URL ('/'의 연결에 주의하세요!) 그러면 장고는 이 URL을 찾을 수 없기 때문에 에러메세지를 보여줄겁니다. 그리고 그 URL들을 어디에서 찾았는지 시도했던 모든 리스트들도 보여줍니다. 이것으로부터 당신은 예를들면, 어떤 URL들이 작동되는지 볼 수 있습니다.
 
-> **참고:**Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
+> **참고:** Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
 
 > **참고:**
 >

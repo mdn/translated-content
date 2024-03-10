@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 
 {{JSRef}}
 
-**`Intl.NumberFormat`**은 언어에 맞는 숫자 서식을 지원하는 객체의 생성자입니다.
+**`Intl.NumberFormat`** 은 언어에 맞는 숫자 서식을 지원하는 객체의 생성자입니다.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
 
