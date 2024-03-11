@@ -33,7 +33,7 @@ document.body.appendChild(templateContent);
 
 ## 在 Web Component 中使用模板
 
-模板（Template）本身就是有用的，而与 web 组件（web component）一起使用效果更好。我们定义一个 web 组件使用模板作为影子 DOM（shadow DOM）的内容，叫它 `<my-paragraph>`：
+模板本身就很有用，但与 web 组件一起使用效果更好。让我们定义一个名为 `<my-paragraph>` 的 web 组件，使用模板作为其影子 DOM 的内容：
 
 ```js
 customElements.define(
@@ -51,9 +51,9 @@ customElements.define(
 );
 ```
 
-要注意的关键是我们使用 {{domxref("Node.cloneNode()")}} 方法添加了模板的拷贝到影子根（shadow root）上。
+这里要注意的关键点是，我们将模版内容的克隆添加到通过 {{domxref("Node.cloneNode()")}} 方法创建的影子根上
 
-因为我们添加了模板的内容到影子 DOM，所以我们可以加入一些样式信息到模板的 {{htmlelement("style")}} 元素里，这些样式信息稍后会封装到自定义元素中。如果只将它添加到一个标准的 DOM 中是不起作用的。
+由于我们添加了模板的内容到影子 DOM，我们可以在模板的 {{htmlelement("style")}} 元素中包含一些样式信息，然后将其封装在自定义元素中。如果只将它添加到一个标准的 DOM 中是不起作用的。
 
 比如：
 
@@ -76,13 +76,13 @@ customElements.define(
 <my-paragraph></my-paragraph>
 ```
 
-## 使用插槽（slots）添加灵活度
+## 使用插槽添加灵活度
 
-尽管到这一步已经挺好了，但是元素仍旧不是很灵活。我们只能在里面放一点文本，甚至没有普通的 p 元素管用！我们可以使用 {{htmlelement("slot")}} 元素让它能在单个实例中通过声明式的语法展示不同的文本。
+尽管到这一步已经挺好了，但是元素仍旧不是很灵活。我们只能在里面显示一点文本，甚至没有普通段落标签有用！我们可以使用 {{htmlelement("slot")}} 元素通过声明式的语法在每个元素实例中显示不同的文本。
 
 插槽由其 `name` 属性标识，并且允许你在模板中定义占位符，当在标记中使用该元素时，该占位符可以填充所需的任何 HTML 标记片段。
 
-因此，如果我们想添加一个插槽到这个简单的例子中，我们会将模板的 p 元素改成下面这样：
+因此，如果我们想添加一个插槽到这个简单的例子中，我们会将模板的段落元素改成下面这样：
 
 ```html
 <p><slot name="my-text">我的默认文本</slot></p>
@@ -121,8 +121,8 @@ customElements.define(
 
 下面的一组代码片段展示了我们如何联合使用 `<slot>` 和 `<template>` 以及一些 JavaScript 来实现：
 
-- 使用 [具名插槽 (named slots)](/zh-CN/docs/Web/HTML/Element/slot# name) 在 [影子根 (shadow root)](/zh-CN/docs/Web/API/ShadowRoot) 中创建一个 **`<element-details>`** 元素。
-- 将 **`<element-details>`** 元素设计成在文档中使用时，它将它[影子根](/zh-CN/docs/Web/API/ShadowRoot) 中的内容和该元素内部的内容糅合在一起——即元素内容中的片段被填充到元素[影子根](/zh-CN/docs/Web/API/ShadowRoot)的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot# name) 中。
+- 使用 [具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)在[影子根](/zh-CN/docs/Web/API/ShadowRoot)中创建一个 **`<element-details>`** 元素。
+- 将 **`<element-details>`** 元素设计成在文档中使用时，它将它[影子根](/zh-CN/docs/Web/API/ShadowRoot)中的内容和该元素内部的内容糅合在一起——即元素内容中的片段被填充到元素[影子根](/zh-CN/docs/Web/API/ShadowRoot)的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#具名插槽) 中。
 
 注意，技术上来讲脱离 `<template>` 使用 `<slot>` 也是可以的。例如，`<slot>` 在一个常规的 {{HTMLElement("div")}} 元素里，仍然有占位符的特性，就像在影子 DOM 中一样，这样我们能避免需要先获取模板对象的 `content` 属性再使用它的麻烦。然而这个特性在向 {{HTMLElement("template")}} 元素中添加插槽时更加实用，因为你不太可能基于一个已渲染的元素定义一个模式。
 
@@ -132,7 +132,7 @@ customElements.define(
 
 ### 使用插槽（slot）创建一个模板
 
-首先，我们在 {{HTMLElement("template")}} 使用 `<slot>` 元素创建一个 "element-details-template" 包含一些[具名插槽](/zh-CN/docs/Web/HTML/Element/slot# name) 的[文档片段（document fragment）](/zh-CN/docs/Web/API/DocumentFragment)：
+首先，我们在 {{HTMLElement("template")}} 使用 `<slot>` 元素创建一个 "element-details-template" 包含一些[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的[文档片段（document fragment）](/zh-CN/docs/Web/API/DocumentFragment)：
 
 ```html
 <template id="element-details-template">
@@ -189,13 +189,13 @@ customElements.define(
 上面这个 {{HTMLElement("template")}} 元素有几个特征：
 
 - {{HTMLElement("template")}} 元素有一个 {{HTMLElement("style")}} 元素，里面有一些只能在当前 {{HTMLElement("template")}} 中创建的文档片段范围内生效的 CSS 样式
-- {{HTMLElement("template")}} 用 {{HTMLElement("slot")}} 和它的 [`name`](/zh-CN/docs/Web/HTML/Element/slot#name) 属性生成一个[具名插槽](/zh-CN/docs/Web/HTML/Element/slot# name)：
+- {{HTMLElement("template")}} 用 {{HTMLElement("slot")}} 和它的 [`name`](/zh-CN/docs/Web/HTML/Element/slot#name) 属性生成一个[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)：
 
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`
 
-- {{HTMLElement("details")}} 元素中的 {{HTMLElement("template")}} 包裹[具名插槽](/zh-CN/docs/Web/HTML/Element/slot# name)。
+- {{HTMLElement("details")}} 元素中的 {{HTMLElement("template")}} 包裹[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。
 
 ### 从 \<template> 中创建一个新的 \<element-details> 元素
 
@@ -226,7 +226,8 @@ customElements.define(
 <element-details>
   <span slot="element-name">插槽</span>
   <span slot="description"
-    >用户可以用自己编写的标记填充至 web 组件中的占位符，从而达到组合不同 DOM 树的效果。</span
+    >用户可以用自己编写的标记填充至 web 组件中的占位符，从而达到组合不同 DOM
+    树的效果。</span
   >
   <dl slot="attributes">
     <dt>名称</dt>
@@ -237,7 +238,8 @@ customElements.define(
 <element-details>
   <span slot="element-name">模板</span>
   <span slot="description"
-    >一种用于保存客户端内容的机制，此类内容不会在页面加载时呈现，但随后可能在运行时使用 JavaScript 实例化。</span
+    >一种用于保存客户端内容的机制，此类内容不会在页面加载时呈现，但随后可能在运行时使用
+    JavaScript 实例化。</span
   >
 </element-details>
 ```
