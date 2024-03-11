@@ -78,8 +78,8 @@ translate: unset;
   gap: 1em;
 }
 .wrapper > div {
-  width: 7em;
-  line-height: 7em;
+  width: 9em;
+  line-height: 8em;
   text-align: center;
   transition: 0.5s ease-in-out;
   border: 3px dotted;
