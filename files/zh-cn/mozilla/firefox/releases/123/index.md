@@ -15,12 +15,12 @@ l10n:
 
 ### HTML
 
-- {{htmlelement("template")}} 元素现已支持 `shadowrootmode` 属性，允许声明式创建影子 DOM 子树。该属性可以设置为 `open` 或 `closed`，分别对外部代码中公开或隐藏影子 DOM 中的 JavaScript。其可设置的值与 `Element.attachShadow()` 方法的 `mode` 选项相同。（[Firefox bug 1870052](https://bugzil.la/1870052)）
+- {{htmlelement("template")}} 元素现已支持 `shadowrootmode` 属性，允许声明式创建影子 DOM 子树。该属性可以设置为 `open` 或 `closed`，分别对外部代码公开或隐藏影子 DOM 中的 JavaScript。其可设置的值与 `Element.attachShadow()` 方法的 `mode` 选项相同。（[Firefox bug 1870052](https://bugzil.la/1870052)）
 
 ### JavaScript
 
 - 修复了 {{jsxref("Date.parse()")}} 全局对象的一系列错误，使其与其他浏览器解析传递的值的方式保持一致。
-  - 月份错误的日期（例如“31 April”）现在会跳到下一个月（例如“1 May”）。（[Firefox bug 1872333](https://bugzil.la/1872333)）。
+  - 月份中错误的日期（例如“31 April”）现在会跳到下一个月（例如“1 May”）。（[Firefox bug 1872333](https://bugzil.la/1872333)）。
   - 现在不再接受错误的时区（例如“1/1/70 gm”）或错误的上/下午（例如“1/1/70 10:00 a”）。（[Firefox bug 1870570](https://bugzil.la/1870570)）。
   - 现在接受单个数字表示的日期（例如 `Date.parse("0")` 现在返回 `946684800000`——2000 年 1 月 1 号星期六 00:00:00）。（[Firefox bug 1870434](https://bugzil.la/1870434)）。
 
