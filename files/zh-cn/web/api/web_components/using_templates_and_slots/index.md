@@ -132,7 +132,7 @@ customElements.define(
 
 ### 使用插槽创建一个模板
 
-首先，我们在 {{HTMLElement("template")}} 元素中使用 {{HTMLElement("slot")}} 元素来创建一个新的 “element-details-template” [文档片段](/zh-CN/docs/Web/API/DocumentFragment)，其中包含一些[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#具名插槽)：
+首先，我们在 {{HTMLElement("template")}} 元素中使用 {{HTMLElement("slot")}} 元素来创建一个新的“element-details-template” [文档片段](/zh-CN/docs/Web/API/DocumentFragment)，其中包含一些[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#具名插槽)：
 
 ```html
 <template id="element-details-template">
