@@ -109,9 +109,9 @@ customElements.define(
 </my-paragraph>
 ```
 
-> **备注：** 将能被插入到槽中的元素视为 {{domxref("Slotable")}}; 称已经插入到槽中的元素为 _slotted_.
+> **备注：** 可以被插入到槽中的节点被称为 _Slotable_ ；已经插入到槽中的节点被称为 _slotted_。
 
-> **备注：** 未命名的 {{HTMLElement("slot")}} 元素将被填充为自定义元素中所有不含 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性的所有顶级子节点。这也包括文本节点。
+> **备注：** 未命名的 {{HTMLElement("slot")}} 元素将填充自定义元素中所有不含 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性的顶级子节点。也包括文本节点。
 
 这就我们的简单例子，如果你想继续了解，你可以[在 GitHub 上查看](https://github.com/mdn/web-components-examples/tree/master/simple-template)（另见[在线运行](https://mdn.github.io/web-components-examples/simple-template/)）。
 
@@ -126,11 +126,11 @@ customElements.define(
 
 注意，技术上来讲脱离 `<template>` 使用 `<slot>` 也是可以的。例如，`<slot>` 在一个常规的 {{HTMLElement("div")}} 元素里，仍然有占位符的特性，就像在影子 DOM 中一样，这样我们能避免需要先获取模板对象的 `content` 属性再使用它的麻烦。然而这个特性在向 {{HTMLElement("template")}} 元素中添加插槽时更加实用，因为你不太可能基于一个已渲染的元素定义一个模式。
 
-另外，就算它还没有渲染，使用 {{HTMLElement("template")}} 时，作为模板的容器应该在语义上干净。而且 {{HTMLElement("template")}} 上可以直接添加一些对象，如 {{HTMLElement("td")}}，当添加到 {{HTMLElement("div")}} 中时会隐藏。
+另外，就算它还没有渲染，使用 {{HTMLElement("template")}} 时，容器作为模板的目的在语义上应该清晰。而且 {{HTMLElement("template")}} 上可以直接添加一些对象，如 {{HTMLElement("td")}}，当添加到 {{HTMLElement("div")}} 中时会隐藏。
 
 > **备注：** 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) 查看这个完整的例子（另见[在线运行](https://mdn.github.io/web-components-examples/element-details/)）。
 
-### 使用插槽（slot）创建一个模板
+### 使用插槽创建一个模板
 
 首先，我们在 {{HTMLElement("template")}} 使用 `<slot>` 元素创建一个 "element-details-template" 包含一些[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的[文档片段（document fragment）](/zh-CN/docs/Web/API/DocumentFragment)：
 
@@ -199,7 +199,7 @@ customElements.define(
 
 ### 从 \<template> 中创建一个新的 \<element-details> 元素
 
-接下来，我们定义一个新的 **`<element-details>`** 元素然后用 {{DOMXref("Element.attachShadow")}} 来将其附加到它的 [影子根](/zh-CN/docs/Web/API/ShadowRoot) 上，即通过上面的 {{HTMLElement("template")}} 元素创建的文档片段。这和我们上面使用的简单例子中的一样。
+接下来，我们创建一个名为 **`<element-details>`** 的新自定义元素，然后用 {{DOMXref("Element.attachShadow")}} 来将上面通过 {{HTMLElement("template")}} 元素创建的文档片段作为[影子根](/zh-CN/docs/Web/API/ShadowRoot)附加到它上面，这使用了与我们在之前的简单示例中看到的完全相同的模式。
 
 ```js
 customElements.define(
