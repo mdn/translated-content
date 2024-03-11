@@ -267,7 +267,100 @@ p {
         name="line_height"
         checked=""
         value=""
+        onchange="setCss()" />
+      <label for="line-height-none">none</label><br />
+      <input
+        type="radio"
+        id="line-height-1.2"
+        name="line_height"
+        value="/1.2"
+        onchange="setCss()" />
+      <label for="line-height-1.2">1.2</label><br />
+      <input
+        type="radio"
+        id="line-height-3"
+        name="line_height"
+        value="/3"
+        onchange="setCss()" />
+      <label for="line-height-3">3</label>
+    </div>
+    <br />
 
+    <div class="setPropCont fontfamily">
+      font-family<br />
+      <input
+        type="radio"
+        id="font-family-courier"
+        name="font_family"
+        checked=""
+        value="courier"
+        onchange="setCss(5,'courier')" />
+      <label for="font-family-courier">courier</label><br />
+      <input
+        type="radio"
+        id="font-family-serif"
+        name="font_family"
+        value="serif"
+        onchange="setCss()" />
+      <label for="font-family-serif">serif</label><br />
+      <input
+        type="radio"
+        id="font-family-sans-serif"
+        name="font_family"
+        value="sans-serif"
+        onchange="setCss()" />
+      <label for="font-family-sans-serif">sans-serif</label><br />
+      <input
+        type="radio"
+        id="font-family-arial"
+        name="font_family"
+        value="arial"
+        onchange="setCss()" />
+      <label for="font-family-arial">Arial</label><br />
+      <input
+        type="radio"
+        id="font-family-monospace"
+        name="font_family"
+        value="monospace"
+        onchange="setCss()" />
+      <label for="font-family-monospace">monospace</label><br />
+      <input
+        type="radio"
+        id="font-family-cursive"
+        name="font_family"
+        value="cursive"
+        onchange="setCss()" />
+      <label for="font-family-cursive">cursive</label><br />
+      <input
+        type="radio"
+        id="font-family-fantasy"
+        name="font_family"
+        value="fantasy"
+        onchange="setCss()" />
+      <label for="font-family-fantasy">fantasy</label><br />
+      <input
+        type="radio"
+        id="font-family-system-ui"
+        name="font_family"
+        value="system-ui"
+        onchange="setCss()" />
+      <label for="font-family-system-ui">system-ui</label><br />
+    </div>
+  </div>
+
+  <div class="cf propInputs">
+    <div class="propInputCont tar">font :</div>
+    <div class="propInputCont">
+      <input type="text" class="curCss" id="input_font_style" /><br />
+      font-style <br />
+      optional
+    </div>
+    <div class="propInputCont">
+      <input type="text" class="curCss" id="input_font_variant" /> <br />
+      font-variant <br />
+      optional
+    </div>
+    <div class="propInputCont">
       <input type="text" class="curCss" id="input_font_weight" /> <br />
       font-weight <br />
       optional
