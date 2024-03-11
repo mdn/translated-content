@@ -21,7 +21,6 @@ l10n:
 
 - 修复了 {{jsxref("Date.parse()")}} 全局对象的一系列错误，使其与其他浏览器解析传递的值的方式保持一致。
   - 月份错误的日期（例如“31 April”）现在会跳到下一个月（例如“1 May”）。（[Firefox bug 1872333](https://bugzil.la/1872333)）。
-  - Incomplete time zone (e.g. "1/1/70 gm") or AM/PM (e.g. "1/1/70 10:00 a") are no longer accepted. ([Firefox bug 1870570](https://bugzil.la/1870570)).
   - 现在不再接受错误的时区（例如“1/1/70 gm”）或错误的上/下午（例如“1/1/70 10:00 a”）。（[Firefox bug 1870570](https://bugzil.la/1870570)）。
   - 现在接受单个数字表示的日期（例如 `Date.parse("0")` 现在返回 `946684800000`——2000 年 1 月 1 号星期六 00:00:00）。（[Firefox bug 1870434](https://bugzil.la/1870434)）。
 
@@ -31,11 +30,11 @@ l10n:
 
 ### HTTP
 
-- [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Status#信息响应)状态码现在可用在（当服务器任在准备完整响应时页面可能需要的）[预加载](/zh-CN/docs/Web/HTML/Attributes/rel/preload)资源上。这可以显著减少页面加载时间。请注意，对[预连接](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)使用 `103 Early Hints` 标头的支持已经在 [Firefox 120](/zh-CN/docs/Mozilla/Firefox/Releases/120#http) 中添加。更多细节请参见 [Firefox bug 1874445](https://bugzil.la/1874445)。
+- [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Status#信息响应)状态码现在可用于（当服务器仍在准备完整响应时页面可能需要的）[预加载](/zh-CN/docs/Web/HTML/Attributes/rel/preload)资源。这可以显著减少页面加载时间。请注意，对[预连接](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)使用 `103 Early Hints` 标头的支持已经在 [Firefox 120](/zh-CN/docs/Mozilla/Firefox/Releases/120#http) 中添加。详情请参见 [Firefox bug 1874445](https://bugzil.la/1874445)。
 
 ### API
 
-- [Web Authentication API](/zh-CN/docs/Web/API/Web_Authentication_API) 现已支持跨源凭证创建。更具体地，如果顶层嵌入的 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe#allow) 的 [`Feature-Policy: publickey-credentials-create`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) 允许，[`navigator.credentials.create({publicKey})`](/zh-CN/docs/Web/API/CredentialsContainer/create) 现在可以在从不同来源加载的嵌套浏览上下文中调用。（[Firefox bug 1870863](https://bugzil.la/1870863)）。
+- [Web Authentication API](/zh-CN/docs/Web/API/Web_Authentication_API) 现已支持跨源凭据创建。更具体地，如果顶层嵌入的 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe#allow) 的 [`Feature-Policy: publickey-credentials-create`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) 允许，现在可以在从不同来源加载的嵌套浏览上下文中调用 [`navigator.credentials.create({publicKey})`](/zh-CN/docs/Web/API/CredentialsContainer/create)。（[Firefox bug 1870863](https://bugzil.la/1870863)）。
 
 #### DOM
 
@@ -52,7 +51,7 @@ l10n:
 #### WebDriver BiDi
 
 - 现已添加 [network.fetchError](https://w3c.github.io/webdriver-bidi/#event-network-fetchError) 事件，当网络请求以错误结束时会触发该事件（[Firefox bug 1790375](https://bugzil.la/1790375)）。
-- 已引入对 [browsingContext.locateNodes](https://w3c.github.io/webdriver-bidi/#commands-browsingcontextlocatenodes) 命令的支持，其用于用于在给定页面上查找元素的。目前支持的定位器有 `CssLocator`（[Firefox bug 1855023](https://bugzil.la/1855023)）和 `XPathLocator`（[Firefox bug 1869536](https://bugzil.la/1869536)）。
+- 已引入对 [browsingContext.locateNodes](https://w3c.github.io/webdriver-bidi/#commands-browsingcontextlocatenodes) 命令的支持，其用于在给定页面上查找元素的。目前支持的定位器有 `CssLocator`（[Firefox bug 1855023](https://bugzil.la/1855023)）和 `XPathLocator`（[Firefox bug 1869536](https://bugzil.la/1869536)）。
 - 改进了 Android 上的 [browsingContext.create](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create) 命令，以便在 `type` 参数指定为 `window` 时无缝切换为打开新标签页（[Firefox bug 1875086](https://bugzil.la/1875086)）。
 - 修复了 `DateRemoteValue` 反序列化过程的一个错误：非标准（ISO 8601）日期字符串（例如 `200009`）的存在不会引发错误（[Firefox bug 1872116](https://bugzil.la/1872116)）。
 - 修复了 [script.evaluate](https://w3c.github.io/webdriver-bidi/#command-script-evaluate)、[script.callFunction](https://w3c.github.io/webdriver-bidi/#command-script-callFunction) 和 [script.disown](https://w3c.github.io/webdriver-bidi/#command-script-disown) 命令中指定 `context` 和 `realm` 参数会导致 `invalid argument` 错误的问题，而不是像预期的那样忽略 `realm` 参数（[Firefox bug 1873688](https://bugzil.la/1873688)）。
