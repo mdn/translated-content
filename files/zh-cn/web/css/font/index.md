@@ -44,7 +44,7 @@ font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
 font: caption;
 ```
 
-可以将 `font` 指定为单个关键字，它将选择系统字体，或者作为字体相关的属性的简写。
+可以将 `font` 属性指定为单个关键字，它将选择系统字体，或者作为字体相关的属性的简写。
 
 如果将 `font` 指定为系统关键字，则它必须是 `caption`、`icon`、`menu`、`message-box`、`small-caption`、`status-bar` 之一。
 
@@ -100,8 +100,8 @@ font: caption;
   - : 用于小标题控件的系统字体。
 - `status-bar`
   - : 用于窗口状态栏的系统字体。
-- 系统关键字前缀
-  - : 浏览器经常会多实现几个带前缀的关键字；Gecko 实现了 `-moz-window`、`-moz-document`、`-moz-desktop`、`-moz-info`、`-moz-dialog`、`-moz-button`、`-moz-pull-down-menu`、`-moz-list` 和 `-moz-field`。
+- 带前缀的系统字体关键字
+  - : 浏览器经常会实现多个带前缀的关键字；Gecko 实现了 `-moz-window`、`-moz-document`、`-moz-desktop`、`-moz-info`、`-moz-dialog`、`-moz-button`、`-moz-pull-down-menu`、`-moz-list` 和 `-moz-field`。
 
 ## 形式定义
 
@@ -499,4 +499,4 @@ setCss();
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [文本和字体样式化基础](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+- [文本和字体样式基础](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
