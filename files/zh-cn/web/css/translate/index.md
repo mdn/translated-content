@@ -63,9 +63,9 @@ translate: unset;
 
 ```html
 <div class="wrapper">
-  <div id="box1">translate X</div>
-  <div id="box2">translate X,Y</div>
-  <div id="box3">translate X,Y,Z</div>
+  <div id="box1">沿 X 轴平移</div>
+  <div id="box2">沿 X、Y 轴平移</div>
+  <div id="box3">沿 X、Y、Z 轴平移</div>
 </div>
 ```
 
