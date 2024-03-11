@@ -38,7 +38,7 @@ if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('対応していない MIME タイプまたはコーデック: ', mimeCodec);
+  console.error("対応していない MIME タイプまたはコーデック: ", mimeCodec);
 }
 
 // …
