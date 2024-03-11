@@ -777,7 +777,7 @@ textarea.onkeyup = () => {
 
 間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。
 
-```html hidden
+```html-nolint hidden
 <h2>ライブ出力</h2>
 <div class="output" style="height: 100px;overflow: auto;">
   <p class="admitted">Admit:</p>
