@@ -777,7 +777,7 @@ textarea.onkeyup = () => {
 
 間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。
 
-```html hidden
+```html-nolint hidden
 <h2>ライブ出力</h2>
 <div class="output" style="height: 100px;overflow: auto;">
   <p class="admitted">Admit:</p>
@@ -786,8 +786,7 @@ textarea.onkeyup = () => {
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すと、コード領域からフォーカスを外すことができます（Tab
-  はタブ文字を挿入します）。
+  Esc を押すと、コード領域からフォーカスを外すことができます（Tab はタブ文字を挿入します）。
 </p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
