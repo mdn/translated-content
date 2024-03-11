@@ -109,7 +109,7 @@ customElements.define(
 </my-paragraph>
 ```
 
-> **备注：** 可以被插入到槽中的节点被称为 _Slotable_ ；已经插入到槽中的节点被称为 _slotted_。
+> **备注：** 可以被插入到槽中的节点被称为 _Slotable_；已经插入到槽中的节点被称为 _slotted_。
 
 > **备注：** 未命名的 {{HTMLElement("slot")}} 元素将填充自定义元素中所有不含 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性的顶级子节点。也包括文本节点。
 
