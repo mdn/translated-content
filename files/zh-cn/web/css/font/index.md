@@ -143,9 +143,7 @@ p {
 ### 运行实例
 
 ```html hidden
-<p>
-  改变下方的单选钮，查看生成的简写属性及其效果。
-</p>
+<p>改变下方的单选钮，查看生成的简写属性及其效果。</p>
 <form action="createShortHand()">
   <div class="cf">
     <div class="setPropCont">
