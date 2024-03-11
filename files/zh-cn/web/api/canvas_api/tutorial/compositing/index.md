@@ -29,7 +29,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 
 默认情况下，canvas 有一个与它自身一样大的裁切路径（也就是没有裁切效果）。
 
-### `clip` 的例子
+### `clip` 的示例
 
 这个例子，我会用一个圆形的裁切路径来限制随机星星的绘制区域。
 
@@ -94,6 +94,6 @@ draw();
 
 裁切路径创建之后所有出现在它里面的东西才会画出来。在画线性渐变时我们就会注意到这点。然后会绘制出 50 颗随机位置分布（经过缩放）的星星，当然也只有在裁切路径里面的星星才会绘制出来。
 
-{{EmbedLiveSample("clip 的例子", "180", "180", "canvas_clip.png")}}
+{{EmbedLiveSample("clip 的示例", "", "160")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

@@ -45,12 +45,20 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 ## 太阳系的动画
 
-这个例子里面，我会做一个小型的太阳系模拟动画。
+该示例展示了一个小型太阳系模型的动画。
+
+### HTML
+
+```html
+<canvas id="canvas" width="300" height="300"></canvas>
+```
+
+### JavaScript
 
 ```js
-var sun = new Image();
-var moon = new Image();
-var earth = new Image();
+const sun = new Image();
+const moon = new Image();
+const earth = new Image();
 function init() {
   sun.src = "canvas_sun.png";
   moon.src = "canvas_moon.png";
@@ -59,27 +67,27 @@ function init() {
 }
 
 function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.globalCompositeOperation = "destination-over";
-  ctx.clearRect(0, 0, 300, 300); // clear canvas
+  ctx.clearRect(0, 0, 300, 300); // 清除画布
 
-  ctx.fillStyle = "rgba(0,0,0,0.4)";
-  ctx.strokeStyle = "rgba(0,153,255,0.4)";
+  ctx.fillStyle = "rgb(0 0 0 / 40%)";
+  ctx.strokeStyle = "rgb(0 153 255 / 40%)";
   ctx.save();
   ctx.translate(150, 150);
 
-  // Earth
-  var time = new Date();
+  // 地球
+  const time = new Date();
   ctx.rotate(
     ((2 * Math.PI) / 60) * time.getSeconds() +
       ((2 * Math.PI) / 60000) * time.getMilliseconds(),
   );
   ctx.translate(105, 0);
-  ctx.fillRect(0, -12, 50, 24); // Shadow
+  ctx.fillRect(0, -12, 40, 24); // 阴影
   ctx.drawImage(earth, -12, -12);
 
-  // Moon
+  // 月亮
   ctx.save();
   ctx.rotate(
     ((2 * Math.PI) / 6) * time.getSeconds() +
@@ -92,7 +100,7 @@ function draw() {
   ctx.restore();
 
   ctx.beginPath();
-  ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // Earth orbit
+  ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // 地球轨道
   ctx.stroke();
 
   ctx.drawImage(sun, 0, 0, 300, 300);
@@ -103,20 +111,27 @@ function draw() {
 init();
 ```
 
-```html hidden
-<canvas id="canvas" width="300" height="300"></canvas>
-```
+### 结果
 
-{{EmbedLiveSample("太阳系的动画", "310", "310", "canvas_animation1.png")}}
+{{EmbedLiveSample("太阳系的动画", "310", "340")}}
 
 ## 动画时钟
 
-这个例子实现一个动态时钟，可以显示当前时间。
+该示例绘制一个可以显示当前时间的动画时钟。
+
+### HTML
+
+```html
+<canvas id="canvas" width="150" height="150">当前时间</canvas>
+```
+
+### JavaScript
 
 ```js
 function clock() {
-  var now = new Date();
-  var ctx = document.getElementById("canvas").getContext("2d");
+  const now = new Date();
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
   ctx.save();
   ctx.clearRect(0, 0, 150, 150);
   ctx.translate(75, 75);
@@ -127,9 +142,9 @@ function clock() {
   ctx.lineWidth = 8;
   ctx.lineCap = "round";
 
-  // Hour marks
+  // 小时刻度
   ctx.save();
-  for (var i = 0; i < 12; i++) {
+  for (let i = 0; i < 12; i++) {
     ctx.beginPath();
     ctx.rotate(Math.PI / 6);
     ctx.moveTo(100, 0);
@@ -138,11 +153,11 @@ function clock() {
   }
   ctx.restore();
 
-  // Minute marks
+  // 分钟刻度
   ctx.save();
   ctx.lineWidth = 5;
-  for (i = 0; i < 60; i++) {
-    if (i % 5 != 0) {
+  for (let i = 0; i < 60; i++) {
+    if (i % 5 !== 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
       ctx.lineTo(120, 0);
@@ -152,17 +167,21 @@ function clock() {
   }
   ctx.restore();
 
-  var sec = now.getSeconds();
-  var min = now.getMinutes();
-  var hr = now.getHours();
-  hr = hr >= 12 ? hr - 12 : hr;
+  const sec = now.getSeconds();
+  // 要显示扫秒式的时钟，请使用：
+  // const sec = now.getSeconds() + now.getMilliseconds() / 1000;
+  const min = now.getMinutes();
+  const hr = now.getHours() % 12;
 
   ctx.fillStyle = "black";
 
-  // write Hours
+  // 显示图像描述
+  canvas.innerText = `当前时间：${hr}:${min}`;
+
+  // 时针
   ctx.save();
   ctx.rotate(
-    hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
+    (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
   );
   ctx.lineWidth = 14;
   ctx.beginPath();
@@ -171,7 +190,7 @@ function clock() {
   ctx.stroke();
   ctx.restore();
 
-  // write Minutes
+  // 分针
   ctx.save();
   ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
   ctx.lineWidth = 10;
@@ -181,7 +200,7 @@ function clock() {
   ctx.stroke();
   ctx.restore();
 
-  // Write seconds
+  // 秒针
   ctx.save();
   ctx.rotate((sec * Math.PI) / 30);
   ctx.strokeStyle = "#D40000";
@@ -197,7 +216,7 @@ function clock() {
   ctx.beginPath();
   ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
-  ctx.fillStyle = "rgba(0,0,0,0)";
+  ctx.fillStyle = "rgb(0 0 0 / 0%)";
   ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
@@ -216,15 +235,15 @@ function clock() {
 window.requestAnimationFrame(clock);
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
-```
+### 结果
 
-{{EmbedLiveSample("动画时钟", "180", "180", "canvas_animation2.png")}}
+> **备注：** 尽管时钟每秒只更新一次，但动画图像每秒更新 60 次（或者以你的 Web 浏览器的显示刷新率）。要使用扫描式的时钟，请将上面的 `const sec` 定义替换为已注释的版本。
+
+{{EmbedLiveSample("动画时钟", "180", "200")}}
 
 ## 循环全景照片
 
-在这个例子中，会有一个自左向右滑动的全景图。我们使用了在维基百科中找到的[尤塞米提国家公园的图片](capitan_meadows,_yosemite_national_park.jpg)，当然你可以随意找一张任何尺寸大于 canvas 的图片。
+在这个例子中，会有一个自左向右滑动的全景图。我们使用了在维基百科中找到的[尤塞米提国家公园的图片](https://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg)，当然你可以随意找一张任何尺寸大于 canvas 的图片。
 
 ```js
 var img = new Image();
@@ -232,7 +251,7 @@ var img = new Image();
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
-img.src = "capitan_meadows,_yosemite_national_park.jpg";
+img.src = "capitan_meadows_yosemite_national_park.jpg";
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // lower is faster

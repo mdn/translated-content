@@ -23,7 +23,7 @@
 /pt-BR/docs/Aprender/CSS/Styling_boxes	/en-US/docs/Learn/CSS/Building_blocks
 /pt-BR/docs/Aprender/Design_e_acessibilidade	/pt-BR/docs/Learn/Common_questions
 /pt-BR/docs/Aprender/Ferramentas_e_teste	/pt-BR/docs/Learn/Tools_and_testing
-/pt-BR/docs/Aprender/Front-end_web_developer	/pt-BR/docs/Learn/Front-end_web_developer
+/pt-BR/docs/Aprender/Front-end_web_developer	/pt-BR/docs/orphaned/Learn/Front-end_web_developer
 /pt-BR/docs/Aprender/Getting_started_with_the_web	/pt-BR/docs/Learn/Getting_started_with_the_web
 /pt-BR/docs/Aprender/Getting_started_with_the_web/A_web_e_seus_padrões	/pt-BR/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards
 /pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico	/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics
@@ -396,6 +396,7 @@
 /pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador	/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 /pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server	/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /pt-BR/docs/Learn/Common_questions/set_up_a_local_testing_server	/pt-BR/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
+/pt-BR/docs/Learn/Front-end_web_developer	/pt-BR/docs/orphaned/Learn/Front-end_web_developer
 /pt-BR/docs/Learn/JavaScript/Asynchronous/Async_await	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
 /pt-BR/docs/Learn/JavaScript/Asynchronous/Conceitos	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
 /pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing

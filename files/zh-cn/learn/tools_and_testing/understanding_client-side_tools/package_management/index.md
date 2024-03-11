@@ -192,7 +192,7 @@ Server running at http://localhost:1234
 
 现在来添加一些页面内容。假设我们想要显示易于理解的相对日期，例如“2 小时前”，“4 天前”等。[`date-fns`](https://date-fns.org/) 包的 `formatDistanceToNow()` 方法非常适合此用途（也有其他包提供相同的功能）。
 
-在 `index.js` 文件中添加一下代码并保存：
+在 `index.js` 文件中添加以下代码并保存：
 
 ```js
 import { formatDistanceToNow } from "date-fns";
