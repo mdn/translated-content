@@ -122,7 +122,7 @@ customElements.define(
 下面的一组代码片段展示了我们如何联合使用 `<slot>` 和 `<template>` 以及一些 JavaScript 来实现：
 
 - 使用 [具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)在[影子根](/zh-CN/docs/Web/API/ShadowRoot)中创建一个 **`<element-details>`** 元素。
-- 将 **`<element-details>`** 元素设计成在文档中使用时，它将它[影子根](/zh-CN/docs/Web/API/ShadowRoot)中的内容和该元素内部的内容糅合在一起——即元素内容中的片段被填充到元素[影子根](/zh-CN/docs/Web/API/ShadowRoot)的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#具名插槽) 中。
+- 将 **`<element-details>`** 元素设计成在文档中使用时，它将其[影子根](/zh-CN/docs/Web/API/ShadowRoot)中的内容和该元素内部的内容糅合在一起——即元素内容中的片段被填充到元素[影子根](/zh-CN/docs/Web/API/ShadowRoot)的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name) 中。
 
 注意，技术上来讲脱离 `<template>` 使用 `<slot>` 也是可以的。例如，`<slot>` 在一个常规的 {{HTMLElement("div")}} 元素里，仍然有占位符的特性，就像在影子 DOM 中一样，这样我们能避免需要先获取模板对象的 `content` 属性再使用它的麻烦。然而这个特性在向 {{HTMLElement("template")}} 元素中添加插槽时更加实用，因为你不太可能基于一个已渲染的元素定义一个模式。
 
@@ -132,7 +132,7 @@ customElements.define(
 
 ### 使用插槽创建一个模板
 
-首先，我们在 {{HTMLElement("template")}} 使用 `<slot>` 元素创建一个 "element-details-template" 包含一些[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的[文档片段（document fragment）](/zh-CN/docs/Web/API/DocumentFragment)：
+首先，我们在 {{HTMLElement("template")}} 元素中使用 {{HTMLElement("slot")}} 元素来创建一个新的 “element-details-template” [文档片段](/zh-CN/docs/Web/API/DocumentFragment)，其中包含一些[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#具名插槽)：
 
 ```html
 <template id="element-details-template">
@@ -188,14 +188,14 @@ customElements.define(
 
 上面这个 {{HTMLElement("template")}} 元素有几个特征：
 
-- {{HTMLElement("template")}} 元素有一个 {{HTMLElement("style")}} 元素，里面有一些只能在当前 {{HTMLElement("template")}} 中创建的文档片段范围内生效的 CSS 样式
-- {{HTMLElement("template")}} 用 {{HTMLElement("slot")}} 和它的 [`name`](/zh-CN/docs/Web/HTML/Element/slot#name) 属性生成一个[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)：
+- {{HTMLElement("template")}} 有一个 {{HTMLElement("style")}} 元素，里面有一些只能在当前 {{HTMLElement("template")}} 中创建的文档片段范围内生效的 CSS 样式
+- {{HTMLElement("template")}} 使用 {{HTMLElement("slot")}} 及其 [`name`](/zh-CN/docs/Web/HTML/Element/slot#name) 属性来创建三个[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)：
 
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`
 
-- {{HTMLElement("details")}} 元素中的 {{HTMLElement("template")}} 包裹[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。
+- {{HTMLElement("template")}} 将[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#具名插槽)包裹在 {{HTMLElement("details")}} 元素中。
 
 ### 从 \<template> 中创建一个新的 \<element-details> 元素
 
@@ -246,9 +246,9 @@ customElements.define(
 
 关于以上代码片段，注意以下几点：
 
-- 该代码片段有两个 **`<element-details>`** 元素，它们都使用了 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性来引用名为 `"element-name"` 和 `"description"` 的插槽，并把它们都放在影子根下。
-- 只有第一个 **`<element-details>`** 元素引用了名为 `"attributes"` 的插槽，而第二个 `<element-details>` 元素没有引用名为 `"attributes"` 的插槽。
-- 只有第一个 **`<element-details>`** 元素中的 {{HTMLElement("dl")}} 元素使用了名为 `"attributes"` 的插槽，它包含子元素：{{HTMLElement("dt")}} 和 {{HTMLElement("dd")}} 元素。
+- 该代码片段有两个 **`<element-details>`** 元素，它们都使用了 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性来引用名为 `"element-name"` 和 `"description"` 的的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#具名插槽)，并把它们都放在[影子根](/zh-CN/docs/Web/API/ShadowRoot)下。
+- 只有第一个 **`<element-details>`** 元素引用了名为 `"attributes"` 的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，而第二个 `<element-details>` 标签没有引用名为 `"attributes"` 的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。
+- 第一个 `<element-details>` 元素中的 {{HTMLElement("dl")}} 元素使用包含子元素 {{HTMLElement("dt")}} 和 {{HTMLElement("dd")}} 的 {{HTMLElement("dl")}} 元素引用了 `"attributes"` [具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。
 
 ### 添加一些最终的样式
 
