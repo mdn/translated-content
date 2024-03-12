@@ -24,7 +24,7 @@ for (const [key, value] of mySearchParams.entries()) {
 ## 实例属性
 
 - {{domxref("URLSearchParams.size", 'size')}} {{ReadOnlyInline}}
-  - : 返回 `URLSearchParams` 对象中搜索参数的总个数。
+  - : 返回 `URLSearchParams` 对象中查询参数的总个数。
 
 ## 实例方法
 
@@ -33,7 +33,7 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.append()")}}
   - : 插入一个指定的键/值对作为新的查询参数。
 - {{domxref("URLSearchParams.delete()")}}
-  - : 从搜索参数列表里删除指定的查询参数及其对应的值。
+  - : 从查询参数列表里删除指定的查询参数及其对应的值。
 - {{domxref("URLSearchParams.entries()")}}
   - : 返回一个{{jsxref("Iteration_protocols","iterator")}}可以遍历所有键/值对的对象。
 - {{domxref("URLSearchParams.forEach()")}}
@@ -41,17 +41,17 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.get()")}}
   - : 获取指定查询参数的第一个值。
 - {{domxref("URLSearchParams.getAll()")}}
-  - : 获取指定搜索参数的所有值，返回是一个数组。
+  - : 获取指定查询参数的所有值，返回是一个数组。
 - {{domxref("URLSearchParams.has()")}}
-  - : 返回 {{jsxref("Boolean")}} 判断是否存在此搜索参数。
+  - : 返回 {{jsxref("Boolean")}} 判断是否存在此查询参数。
 - {{domxref("URLSearchParams.keys()")}}
   - : 返回{{jsxref("Iteration_protocols", "iterator")}} 此对象包含了键/值对的所有键名。
 - {{domxref("URLSearchParams.set()")}}
-  - : 设置一个搜索参数的新值，假如原来有多个值将删除其他所有的值。
+  - : 设置一个查询参数的新值，假如原来有多个值将删除其他所有的值。
 - {{domxref("URLSearchParams.sort()")}}
   - : 按键名排序。
 - {{domxref("URLSearchParams.toString()")}}
-  - : 返回搜索参数组成的字符串，可直接使用在 URL 上。
+  - : 返回查询参数组成的字符串，可直接使用在 URL 上。
 - {{domxref("URLSearchParams.values()")}}
   - : 返回{{jsxref("Iteration_protocols", "iterator")}} 此对象包含了键/值对的所有值。
 
@@ -173,6 +173,6 @@ console.log(noEquals.toString()); // 'foo=&bar=baz'
 
 ## 参见
 
-- [Polyfill of `URLSearchParams` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
-- The {{domxref("URL")}} interface.
-- [Google Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
+- [`core-js` 中 `URLSearchParams` 的Polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- {{domxref("URL")}} 接口
+- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.com/blog/urlsearchparams?hl=zh-cn)
