@@ -35,7 +35,7 @@ l10n:
 
 ## 让我们来看一些链接
 
-在[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)一文中，我们了解了如何根据最佳实践在 HTML 中实现链接。在本文中，我们将以这些知识为基础，向您展示为超链接设计样式的最佳做法。
+在[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)一文中，我们了解了如何根据最佳实践在 HTML 中实现链接。在本文中，我们将以这些知识为基础，向你展示为超链接设计样式的最佳做法。
 
 ### 链接状态
 
@@ -160,7 +160,12 @@ a:active {
 这里还提供了一些示例 HTML，供你应用 CSS：
 
 ```html
-<p>有很多可用的浏览器，如 <a href="#">Mozilla Firefox</a>、<a href="#">Google Chrome</a> 和 <a href="#">Microsoft Edge</a>。</p>
+<p>
+  有很多可用的浏览器，如 <a href="#">Mozilla Firefox</a>、<a href="#"
+    >Google Chrome</a
+  >
+  和 <a href="#">Microsoft Edge</a>。
+</p>
 ```
 
 把这两个放在一起，我们得到这样的结果：
@@ -193,7 +198,7 @@ a:active {
 <p>有很多可用的浏览器，如 <a href="#">Mozilla Firefox</a>、<a href="#">Google Chrome</a> 和 <a href="#">Microsoft Edge</a>。</p>
   </textarea>
 
-<h2>CSS 输入</h2>
+  <h2>CSS 输入</h2>
   <textarea
     id="code"
     class="css-input"
@@ -320,8 +325,10 @@ window.addEventListener("load", drawOutput);
 
 ```html
 <p>
-  要获取关于天气的更多信息，请访问我们的<a href="weather.html">天气页面</a>，查看<a href="https://zh.wikipedia.org/wiki/天气">维基百科上的天气信息</a>，或检查 <a href="http://www.extremescience.com/weather.htm"
-    >Extreme Science</a
+  要获取关于天气的更多信息，请访问我们的<a href="weather.html">天气页面</a
+  >，查看<a href="https://zh.wikipedia.org/wiki/天气">维基百科上的天气信息</a
+  >，或检查
+  <a href="http://www.extremescience.com/weather.htm">Extreme Science</a
   >上的天气信息。
 </p>
 ```
