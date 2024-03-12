@@ -1,5 +1,5 @@
 ---
-title: <b>：引起注意的元素
+title: <b>：引起注意元素
 slug: Web/HTML/Element/b
 ---
 
@@ -51,16 +51,16 @@ Keywords are displayed with the default style of the
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
         >、
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落內容"
-          >段落內容</a
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型内容"
+          >段落型内容</a
         >、捫及內容。
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落內容"
-          >段落內容</a
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型内容"
+          >段落型内容</a
         >。
       </td>
     </tr>
@@ -71,9 +71,8 @@ Keywords are displayed with the default style of the
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落內容"
-          >段落內容</a
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型内容"
+          >段落型内容</a
         >的元素。
       </td>
     </tr>
@@ -109,4 +108,4 @@ Keywords are displayed with the default style of the
 ## 參見
 
 - 其他傳達文本級語義的元素：{{HTMLElement("a")}}、{{HTMLElement("em")}}、{{HTMLElement("strong")}}、{{HTMLElement("small")}}、{{HTMLElement ("cite")}}、{{HTMLElement("q")}}、{{HTMLElement("dfn")}}、{{HTMLElement("abbr")}}、{{HTMLElement("time")}}、{{HTMLElement("code")}}、{{HTMLElement ("var")}}、{{HTMLElement("samp")}}、{{HTMLElement("kbd")}}、{{HTMLElement("sub")}}、{{HTMLElement("sup")}}、{{HTMLElement("i")}}、{{HTMLElement( "mark")}}、{{HTMLElement("ruby")}}、{{HTMLElement("rp")}}、{{HTMLElement("rt")}}、{{HTMLElement("bdo")}}、{{HTMLElement("span")}}、{{HTMLElement ("br")}}、{{HTMLElement("wbr")}}。
-- [使用 \<b> 和 \<i> 元素 (W3C)](https://www.w3.org/International/questions/qa-b-and-i-tags)
+- [使用 \<b> 和 \<i> 元素（W3C）](https://www.w3.org/International/questions/qa-b-and-i-tags)
