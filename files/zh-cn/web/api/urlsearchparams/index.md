@@ -113,7 +113,7 @@ console.log(searchParams1.has("query")); // false
 console.log(searchParams1.has("http://example.com/search?query")); // true
 
 console.log(searchParams1.get("query")); // null
-console.log(searchParams1.get("http://example.com/search?query")); // "@" (equivalent to decodeURIComponent('%40'))
+console.log(searchParams1.get("http://example.com/search?query")); // "@"（等价于 decodeURIComponent('%40')）
 
 const paramsString2 = "?query=value";
 const searchParams2 = new URLSearchParams(paramsString2);
