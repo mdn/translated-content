@@ -1,6 +1,8 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
+l10n:
+  sourceCommit: 6a3063ab22fdcaedc8d69b80261f09d870ea9709
 ---
 
 {{JSRef}}
