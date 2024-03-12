@@ -133,7 +133,7 @@ const rawData = "\x13à\x17@\x1F\x80";
 const base64Data = btoa(rawData); // 'E+AXQB+A'
 
 const searchParams = new URLSearchParams(`bin=${base64Data}`); // 'bin=E+AXQB+A'
-const binQuery = searchParams.get("bin"); // 'E AXQB A', '+' 被替换为空格
+const binQuery = searchParams.get("bin"); // 'E AXQB A'，“+”被替换为空格
 
 console.log(atob(binQuery) === rawData); // false
 ```
