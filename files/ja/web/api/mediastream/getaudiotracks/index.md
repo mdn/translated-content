@@ -1,6 +1,9 @@
 ---
-title: MediaStream.getAudioTracks()
+title: "MediaStream: getAudioTracks() メソッド"
+short-title: getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -9,8 +12,8 @@ slug: Web/API/MediaStream/getAudioTracks
 
 ## 構文
 
-```js
-var mediaStreamTracks = mediaStream.getAudioTracks();
+```js-nolint
+getAudioTracks()
 ```
 
 ### 引数
