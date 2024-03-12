@@ -7,7 +7,7 @@ slug: Web/API/URLSearchParams
 
 **`URLSearchParams`** 接口定义了一些实用的方法来处理 URL 的查询字符串。
 
-一个实现了 `URLSearchParams` 的对象可以直接用在 {{jsxref("Statements/for...of", "for...of")}} 结构中，与关键字/值对在查询字符串中出现的顺序相同的顺序对它们进行迭代，例如下面两行是相等的：
+一个实现了 `URLSearchParams` 的对象可以直接用在 {{jsxref("Statements/for...of", "for...of")}} 结构中，以键/值对在查询字符串中出现的顺序对它们进行迭代，例如下面两行是等价的：
 
 ```js
 for (const [key, value] of mySearchParams) {
