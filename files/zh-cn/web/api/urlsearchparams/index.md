@@ -89,7 +89,7 @@ console.log(searchParams.has("foo")); // true
 console.log(searchParams.get("foo")); // "bar"
 ```
 
-### 重复的搜索参数
+### 重复的查询参数
 
 ```js
 const paramStr = "foo=bar&foo=baz";
