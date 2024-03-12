@@ -1,8 +1,7 @@
 ---
 title: contextmenu
-slug: Web/HTML/Global_attributes/contextmenu
-l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+slug: conflicting/Web/HTML/Element/menu
+original_slug: Web/HTML/Global_attributes/contextmenu
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{Deprecated_Header}}{{Non-standard_header}}

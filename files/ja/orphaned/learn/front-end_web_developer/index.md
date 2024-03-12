@@ -1,8 +1,7 @@
 ---
 title: フロントエンドウェブ開発者
-slug: Learn/Front-end_web_developer
-l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+slug: orphaned/Learn/Front-end_web_developer
+original_slug: Learn/Front-end_web_developer
 ---
 
 {{learnsidebar}}
