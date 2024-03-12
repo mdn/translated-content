@@ -31,9 +31,9 @@ for (const [key, value] of mySearchParams.entries()) {
 - `URLSearchParams.[@@iterator]()`
   - : 返回 {{jsxref("Iteration_protocols","iterator")}} 允许以与查询字符串中出现的顺序相同的顺序迭代此对象中包含的所有键/值对。
 - {{domxref("URLSearchParams.append()")}}
-  - : 插入一个指定的键/值对作为新的搜索参数。
+  - : 插入一个指定的键/值对作为新的查询参数。
 - {{domxref("URLSearchParams.delete()")}}
-  - : 从搜索参数列表里删除指定的搜索参数及其对应的值。
+  - : 从搜索参数列表里删除指定的查询参数及其对应的值。
 - {{domxref("URLSearchParams.entries()")}}
   - : 返回一个{{jsxref("Iteration_protocols","iterator")}}可以遍历所有键/值对的对象。
 - {{domxref("URLSearchParams.forEach()")}}
