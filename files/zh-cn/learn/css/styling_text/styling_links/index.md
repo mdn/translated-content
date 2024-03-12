@@ -14,11 +14,13 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        HTML 基础（已学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础（已学习
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 简介</a
-        >），CSS 基础（已学习<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
+        >）、CSS 基础（已学习
+        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 简介</a
-        >），<a href="/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals"
+        >）、<a href="/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals"
           >CSS 文本和字体基础</a
         >。
       </td>
@@ -41,14 +43,14 @@ l10n:
 
 第一件需要理解的事情是链接状态的概念，链接存在时处于不同的状态，每一个状态都可以用对应的[伪类](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors#伪类)来应用样式：
 
-- **Link**：有目的地的链接（即不只是一个命名锚点），使用 {{cssxref(":link")}} 伪类来应用样式。
+- **Link**：有目的地的链接（即不只是一个具名锚点），使用 {{cssxref(":link")}} 伪类来应用样式。
 - **Visited**：已访问过（存在于浏览器历史记录中）的链接，使用 {{cssxref(":visited")}} 伪类来应用样式。
 - **Hover**：被用户鼠标指针悬停的链接，使用 {{cssxref(":hover")}} 伪类来应用样式。
 - **Focus**：被选中的链接（比如通过键盘的 <kbd>Tab</kbd> 移动到这个链接，或者使用像 {{domxref("HTMLElement.focus()")}} 这样的方法编程地聚焦链接），使用 {{cssxref(":focus")}} 伪类来应用样式。
 
 - **Active**：激活（如点击）的链接，使用 {{cssxref(":active")}} 伪类来应用样式。
 
-### 默认的样式
+### 默认样式
 
 下面的示例说明了默认情况下链接的外观和行为；不过 CSS 会放大文本并将其居中，使其更加突出。你可以将示例中默认样式的外观和行为与本页中应用了更多 CSS 样式的其他链接的外观和行为进行比较。默认链接具有以下属性：
 
@@ -56,7 +58,7 @@ l10n:
 - 未访问链接为蓝色。
 - 已访问链接为紫色。
 - 悬停链接时，鼠标指针会变成一个小手图标。
-- 聚焦链接的周围有一个轮廓——按下键盘上的制表符键，就能聚焦本页面上的链接。（在 Mac 上，需要使用 <kbd>option</kbd> + <kbd>tab</kbd>，或通过按下 <kbd>Ctrl</kbd> + <kbd>F7</kbd> 启用[全键盘访问：所有控件](https://support.apple.com/zh-cn/guide/mac-help/mchlp1399/mac)选项。
+- 聚焦链接的周围有一个轮廓——按下键盘上的制表符键，就能聚焦本页面上的链接。（在 Mac 上，需要使用 <kbd>option</kbd> + <kbd>tab</kbd>，或通过按下 <kbd>Ctrl</kbd> + <kbd>F7</kbd> 启用[全键盘控制](https://support.apple.com/zh-cn/guide/mac-help/mchlp1399/mac)选项。
 - 活动链接为红色。尝试在点击链接时按住鼠标键。
 
 ```html
@@ -464,7 +466,7 @@ HTML 定义了一个 {{HTMLElement("nav")}} 元素，该元素具有 `"container
   - 接下来，我们关闭默认的 {{cssxref("text-decoration")}} 和 {{cssxref("outline")}}——我们不想让它们破坏我们的外观。
   - 最后三项声明是将每个链接内的文字居中，将 {{cssxref("line-height")}} 设置为 3 以增加按钮的高度（这样做的好处是可以将文字垂直居中），并将文字颜色设置为黑色。
 
-## 小结
+## 总结
 
 希望这篇文章目前能为你提供关于链接的所有知识！我们的文字样式模块的最后一篇文章将详细介绍如何在网站上使用[自定义字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)（或称 Web 字体）。
 
