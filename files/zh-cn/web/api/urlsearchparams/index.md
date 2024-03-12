@@ -26,7 +26,7 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.size", 'size')}} {{ReadOnlyInline}}
   - : 返回 `URLSearchParams` 对象中搜索参数的总个数。
 
-## 方法
+## 实例方法
 
 - `URLSearchParams.[@@iterator]()`
   - : 返回一个 {{jsxref("Iteration_protocols","iterator")}}，允许以键/值对在查询字符串中出现的顺序迭代包含在该对象的键/值对。
