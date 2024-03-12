@@ -21,7 +21,7 @@ slug: Web/HTML/Element/wbr
 
 ## 範例
 
-_[雅虎風格指南](https://web.archive.org/web/20121014054923/http://styleguide.yahoo.com/)建議[在標點符號之前斷開 URL](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)，以避免在行末留下讓讀者誤以為是 URL 結尾的標點符號。
+*[雅虎風格指南](https://web.archive.org/web/20121014054923/http://styleguide.yahoo.com/)*建議[在標點符號之前斷開 URL](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)，以避免在行末留下讓讀者誤以為是 URL 結尾的標點符號。
 
 ```html
 <p>
