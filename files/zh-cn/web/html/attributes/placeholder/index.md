@@ -37,7 +37,7 @@ l10n:
 
 ### 结果
 
-{{EmbedLiveSample('Example', '150px', '150px')}}
+{{EmbedLiveSample('示例', '150px', '150px')}}
 
 ## 规范
 
