@@ -21,7 +21,7 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
   - : 返回一个 `URLSearchParams` 对象。
 
-## 属性
+## 实例属性
 
 - {{domxref("URLSearchParams.size", 'size')}} {{ReadOnlyInline}}
   - : 返回 `URLSearchParams` 对象中搜索参数的总个数。
