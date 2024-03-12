@@ -21196,10 +21196,6 @@
     "modified": "2020-10-15T21:38:51.239Z",
     "contributors": ["mfuji09", "silverskyvicto", "yyss"]
   },
-  "Web/HTML/Global_attributes/contextmenu": {
-    "modified": "2020-10-15T21:38:46.599Z",
-    "contributors": ["mfuji09", "SphinxKnight", "YuichiNukiyama", "yyss"]
-  },
   "Web/HTML/Global_attributes/data-*": {
     "modified": "2020-10-15T21:38:47.279Z",
     "contributors": ["mfuji09", "ln-north", "yyss"]
