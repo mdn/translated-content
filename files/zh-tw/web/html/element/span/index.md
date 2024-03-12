@@ -84,8 +84,8 @@ li span {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
-          >詞組內容</a
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
         >的元素，或任何接受
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
