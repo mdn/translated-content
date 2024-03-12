@@ -80,7 +80,7 @@ console.log(searchParams.toString()); // "q=URLUtils.searchParams"
 ```
 
 ```js
-// 搜索参数也可以使用对象
+// 对象也可作为查询参数
 const paramsObj = { foo: "bar", baz: "bar" };
 const searchParams = new URLSearchParams(paramsObj);
 
