@@ -29,7 +29,7 @@ for (const [key, value] of mySearchParams.entries()) {
 ## 方法
 
 - `URLSearchParams.[@@iterator]()`
-  - : 返回 {{jsxref("Iteration_protocols","iterator")}} 允许以与查询字符串中出现的顺序相同的顺序迭代此对象中包含的所有键/值对。
+  - : 返回一个 {{jsxref("Iteration_protocols","iterator")}}，允许以键/值对在查询字符串中出现的顺序迭代包含在该对象的键/值对。
 - {{domxref("URLSearchParams.append()")}}
   - : 插入一个指定的键/值对作为新的查询参数。
 - {{domxref("URLSearchParams.delete()")}}
