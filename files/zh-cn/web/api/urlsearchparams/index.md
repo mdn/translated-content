@@ -175,4 +175,4 @@ console.log(noEquals.toString()); // 'foo=&bar=baz'
 
 - [`core-js` 中 `URLSearchParams` 的 Polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - {{domxref("URL")}} 接口
-- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.com/blog/urlsearchparams?hl=zh-cn)
+- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.com/blog/urlsearchparams/)
