@@ -2105,7 +2105,6 @@
 /ja/docs/Learn/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/Forms/Your_first_form/Example	/ja/docs/Learn/Forms/Your_first_form
-/ja/docs/Learn/Front-end_web_developer	/ja/docs/orphaned/Learn/Front-end_web_developer
 /ja/docs/Learn/Getting_started_with_the_web/ウェブサイトを公開する	/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website
 /ja/docs/Learn/HTML/Forms	/ja/docs/Learn/Forms
 /ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms	/ja/docs/Learn/Forms/Advanced_form_styling
@@ -4052,7 +4051,7 @@
 /ja/docs/Web/HTML/Forms/Styling_HTML_forms	/ja/docs/Learn/Forms/Styling_web_forms
 /ja/docs/Web/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Web/HTML/Forms_in_HTML	/ja/docs/Learn/Forms/HTML5_input_types
-/ja/docs/Web/HTML/Global_attributes/contextmenu	/ja/docs/conflicting/Web/HTML/Element/menu
+/ja/docs/Web/HTML/Global_attributes/contextmenu	/ja/docs/Web/HTML/Element/menu
 /ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/Web/HTML/Constraint_validation
 /ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
