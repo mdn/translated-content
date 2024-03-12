@@ -39,7 +39,7 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.forEach()")}}
   - : 通过回调函数迭代此对象中包含的所有值。
 - {{domxref("URLSearchParams.get()")}}
-  - : 获取指定搜索参数的第一个值。
+  - : 获取指定查询参数的第一个值。
 - {{domxref("URLSearchParams.getAll()")}}
   - : 获取指定搜索参数的所有值，返回是一个数组。
 - {{domxref("URLSearchParams.has()")}}
