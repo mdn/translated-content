@@ -11,7 +11,7 @@ l10n:
 
 有效的占位符文本包括暗示预期数据类型的单词或短语，而不是解释或提示。不得使用占位符代替 {{HTMLElement("label")}}。如果表单控件的值不是空，占位符就不可见，因此使用 `placeholder` 而不是 `<label>` 来提示会损害可用性和无障碍性。
 
-以下输入类型支持 `placeholder` 属性：{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、{{HTMLElement("input/email", "email")}}` 和 `{{HTMLElement("input/password", "password")}}`。`{{HTMLElement("textarea")}}` 元素也支持该功能。下面的[示例](#示例)显示了 `placeholder` 属性的使用情况，以解释输入字段的预期格式。
+以下输入类型支持 `placeholder` 属性：`{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}` 和 `{{HTMLElement("input/password", "password")}}`。`{{HTMLElement("textarea")}}` 元素也支持该功能。下面的[示例](#示例)显示了 `placeholder` 属性的使用情况，以解释输入字段的预期格式。
 
 > **备注：** `placeholder` 属性不能包含换行（LF）或回车（CR）。如果值中包含这两种字符，占位符文本将被剪切。
 
