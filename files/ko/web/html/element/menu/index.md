@@ -1,8 +1,6 @@
 ---
 title: "<menu>: 메뉴 요소"
 slug: Web/HTML/Element/menu
-page-type: html-element
-browser-compat: html.elements.menu
 ---
 
 {{HTMLSidebar}}
