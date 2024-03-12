@@ -61,7 +61,7 @@ for (const [key, value] of mySearchParams.entries()) {
 const paramsString = "q=URLUtils.searchParams&topic=api";
 const searchParams = new URLSearchParams(paramsString);
 
-// 迭代搜索参数
+// 迭代查询参数
 for (let p of searchParams) {
   console.log(p);
 }
