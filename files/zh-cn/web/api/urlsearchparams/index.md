@@ -126,7 +126,7 @@ console.log(searchParams3.has("query")); // true
 
 ### 保留加号
 
-`URLSearchParams` 的构造函数将加号（`+`）解释为空格，这会有问题。在下面的示例中，我们使用[十六进制转义序列](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#hexadecimal_escape_sequences)模拟一个包含二进制数据（其中每个字节都携带信息）的字符串，该数据需要存储在 URL 搜索参数中。请注意 `btoa()` 生成的编码字符串包含 `+`，并不会被 `URLSearchParams` 保留。
+`URLSearchParams` 的构造函数将加号（`+`）解释为空格，这可能会有问题。在下面的示例中，我们使用[十六进制转义序列](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#十六进制转义序列)模拟一个包含二进制数据（其中每个字节都携带信息）的字符串，该数据需要存储在 URL 查询参数中。请注意 `btoa()` 生成的编码字符串包含 `+`，而其并不会被 `URLSearchParams` 保留。
 
 ```js
 const rawData = "\x13à\x17@\x1F\x80";
