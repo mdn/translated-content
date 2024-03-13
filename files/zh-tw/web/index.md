@@ -1,6 +1,8 @@
 ---
 title: 給開發者的網頁技術文件
 slug: Web
+l10n:
+  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
 <section id="Quick_links">
