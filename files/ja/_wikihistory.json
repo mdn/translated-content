@@ -4750,10 +4750,6 @@
       "Taken Bot"
     ]
   },
-  "Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5": {
-    "modified": "2019-03-23T23:44:03.678Z",
-    "contributors": ["SphinxKnight", "Mgjbot", "Morishoji"]
-  },
   "Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching": {
     "modified": "2019-03-24T00:03:05.751Z",
     "contributors": ["silverskyvicto", "fscholz", "Mgjbot", "electrolysis"]
@@ -21195,10 +21191,6 @@
   "Web/HTML/Global_attributes/contenteditable": {
     "modified": "2020-10-15T21:38:51.239Z",
     "contributors": ["mfuji09", "silverskyvicto", "yyss"]
-  },
-  "Web/HTML/Global_attributes/contextmenu": {
-    "modified": "2020-10-15T21:38:46.599Z",
-    "contributors": ["mfuji09", "SphinxKnight", "YuichiNukiyama", "yyss"]
   },
   "Web/HTML/Global_attributes/data-*": {
     "modified": "2020-10-15T21:38:47.279Z",
