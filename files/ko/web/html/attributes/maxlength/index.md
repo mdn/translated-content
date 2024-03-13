@@ -1,6 +1,8 @@
 ---
 title: "HTML attribute: maxlength"
 slug: Web/HTML/Attributes/maxlength
+l10n:
+  sourceCommit: a78cecea4f3b1a7f35564a547052e163911ac491
 ---
 
 {{HTMLSidebar}}
