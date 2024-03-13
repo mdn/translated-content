@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`JSON`** 命名空间对象包含用于解析[JavaScript 对象表示法](https://json.org/)（{{glossary("JSON")}}）和将值转换为 JSON 字符串的静态方法。
+**`JSON`** 命名空间对象包含用于解析 [JavaScript 对象表示法](https://json.org/)（{{glossary("JSON")}}）和将值转换为 JSON 字符串的静态方法。
 
 ## 描述
 
@@ -90,7 +90,7 @@ DIGIT = %x30-39            ; 0-9
 ## 静态属性
 
 - `JSON[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag)属性的初始值为字符串 `"JSON"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"JSON"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 ## 静态方法
 
