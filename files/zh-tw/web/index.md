@@ -26,7 +26,7 @@ l10n:
 
 ## 網頁技術參考
 
-- [Web APIs](/zh-TW/docs/Web/API)
+- [Web API](/zh-TW/docs/Web/API)
   - : 用於開發網頁應用程式的 JavaScript API。
 - [HTML](/zh-TW/docs/Web/HTML)
   - : **超文字標記語言**（HyperText Markup Language）是一種用來結構化描述及定義網頁內容的語言。
