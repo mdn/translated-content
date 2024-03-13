@@ -30,9 +30,7 @@ l10n:
 > ```
 >
 > - **title**
->   - : El título que se muestra en la parte superior de la página.
->     Debe tener el formato **<**_NombreDelElemento_**>**.
->     Por ejemplo, el elemento "[g](/es/docs/Web/SVG/Element/g)" tiene un _título_ de `<g>`.
+>   - : El título que se muestra en la parte superior de la página. Debe tener el formato _NombreDeLaCabecera_.  Por ejemplo, la cabecera [Cache-Control](/es/docs/Web/HTTP/Headers/Cache-Control) tiene un _título_ de `Cache-Control`.
 > - **slug**
 >   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
 >     Esto se formateará como `Web/SVG/Element/NombreDelElemento`.
