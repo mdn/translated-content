@@ -36,7 +36,7 @@ l10n:
   - : JavaScript 是網頁端的原生程式語言。
 - [WebAssembly](/zh-TW/docs/WebAssembly)
   - : WebAssembly 能夠讓以 C、C++、Rust、Swift、C#、Go 等語言開發的程式在網頁上執行。
-- [Events](/zh-TW/docs/Web/Events)
+- [事件](/zh-TW/docs/Web/Events)
   - : 你的網頁應用程式能夠對事件做出反應；例如當網頁完成載入，或使用者選擇某些內容、按下按鍵、調整視窗大小、提交表單、暫停影片等。
 - [HTTP](/zh-TW/docs/Web/HTTP)
   - : **超文字傳輸協定**（Hypertext Transfer Protocol）是基本的網際網路協定，用於從網路上取得檔案、樣式表、程式碼、圖片、影片、字型，以及其他資源——以及將資料傳回伺服器。
