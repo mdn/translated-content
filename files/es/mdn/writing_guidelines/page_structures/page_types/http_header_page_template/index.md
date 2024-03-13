@@ -1,6 +1,8 @@
 ---
 title: Plantilla de página de encabezado HTTP
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
+l10n:
+  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
 {{MDNSidebar}}
