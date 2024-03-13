@@ -43,7 +43,7 @@ l10n:
 - [媒體](/zh-TW/docs/Web/Media)
   - : 用於在網頁檔案和應用程式中嵌入和串流視訊、音訊和圖片內容的格式、轉碼器、協定、API，和技術。
 - [SVG](/zh-TW/docs/Web/SVG)
-  - : 可縮放向量圖形（Scalable Vector Graphics）使你能夠建立任何大小皆能平滑縮放的圖片。
+  - : 可縮放向量圖形（Scalable Vector Graphic）使你能夠建立任何大小皆能平滑縮放的圖片。
 - [MathML](/zh-TW/docs/Web/MathML)
   - : 數學標記語言（Mathematical Markup Language）使網頁得以展示複雜的數學運算式及語法。
 - [網頁元件](/zh-TW/docs/Web/API/Web_components)
