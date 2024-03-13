@@ -53,7 +53,7 @@ l10n:
 - [網頁擴充功能](/zh-TW/docs/Mozilla/Add-ons/WebExtensions)
   - : 網頁擴充功能是一種讓你在瀏覽器中為使用者提供增強功能的方式，例如阻擋廣告和其他內容、自訂頁面外觀等。
 - [網頁應用程式資訊清單](/zh-TW/docs/Web/Manifest)
-  - : 網頁應用程式資訊清單（Web App Manifests）讓使用者能夠將網頁應用程式安裝到他們的裝置主畫面上，並預先設定畫面方向（直向或橫向）和顯示模式（如全螢幕）等。
+  - : 網頁應用程式資訊清單（Web App Manifest）讓使用者能夠將網頁應用程式安裝到他們的裝置主畫面上，並預先設定畫面方向（直向或橫向）和顯示模式（如全螢幕）等。
 - [漸進式網頁應用程式](/zh-TW/docs/Web/Progressive_web_apps)
   - : 漸進式網頁應用程式（Progressive Web App）提供使用者近似原生行動應用程式的體驗。
 
