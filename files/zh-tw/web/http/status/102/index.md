@@ -17,7 +17,7 @@ HTTP **`102 Processing`** 狀態資訊回應碼表示伺服器已經收到完整
 102 Processing
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
 
