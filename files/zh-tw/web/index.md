@@ -31,7 +31,7 @@ l10n:
 - [HTML](/zh-TW/docs/Web/HTML)
   - : **超文字標記語言**（HyperText Markup Language）是一種用來結構化描述及定義網頁內容的語言。
 - [CSS](/zh-TW/docs/Web/CSS)
-  - : **階層樣式表**（Cascading Style Sheets）可用來描述網頁內容的外觀。
+  - : **階層樣式表**（Cascading Style Sheet）可用來描述網頁內容的外觀。
 - [JavaScript](/zh-TW/docs/Web/JavaScript)
   - : JavaScript 是網頁端的原生程式語言。
 - [WebAssembly](/zh-TW/docs/WebAssembly)
