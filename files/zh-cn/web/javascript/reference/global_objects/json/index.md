@@ -15,12 +15,12 @@ l10n:
 
 ### JavaScript 与 JSON 的区别
 
-JSON 是一种语法，用来序列化对象、数组、数值、字符串、布尔值和 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。它基于 JavaScript 语法，但与之不同：大部分 JavaScript *不是* JSON。例如：
+JSON 是一种语法，用来序列化对象、数组、数值、字符串、布尔值和 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。它基于 JavaScript 语法，但与之不同：大部分 JavaScript _不是_ JSON。例如：
 
 - 对象和数组
-   - : 属性名称必须是双引号括起来的字符串；禁止出现[尾随逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)。
+  - : 属性名称必须是双引号括起来的字符串；禁止出现[尾随逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)。
 - 数值
-   - : 禁止出现前导零。小数点后必须至少有一位数字。不支持 `NaN` 和 `Infinity`。
+  - : 禁止出现前导零。小数点后必须至少有一位数字。不支持 `NaN` 和 `Infinity`。
 
 任何 JSON 文本都是有效的 JavaScript 表达式，但仅限于 [JSON 超集](https://github.com/tc39/proposal-json-superset)修订之后。在修订之前，U+2028 行分隔符和 U+2029 段分隔符允许在 JSON 的字符串字面量和属性键中使用；但在 JavaScript 字符串字面量中使用同样的分隔符会导致 {{jsxref("SyntaxError")}}。
 
