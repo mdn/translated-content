@@ -27,7 +27,7 @@ slug: Web/HTML/Element/em
 
 這意味著使用的正確選擇取決於情況。兩者都不是純粹為了裝飾而使用的，這是 CSS 樣式的用途。
 
-`<em>` 的一個例子可能是：「Just _do_ it already!」或：「We _had_ to do something about it」。閱讀文本的人或軟件將使用口語重音以斜體發音單詞。
+`<em>` 的一個例子可能是：「Just _do_ it already!」或：「We _had_ to do something about it」。閱讀文本的人或軟件將使用重音強調斜體字。
 
 `<i>` 的一個例子可能是：「_Queen Mary_ 昨晚啟航了」。在這裡，「Queen Mary」 這個詞並沒有額外的強調或重要性。僅僅指出了問題物體不是一位名叫 Mary 的女王，而是一艘名為 _Queen Mary_ 的船。`<i>` 的另一個例子可能是：「The word _the_ is an article」。
 
