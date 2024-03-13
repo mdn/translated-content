@@ -16,7 +16,7 @@ l10n:
 - [網頁開發者指南](/zh-TW/docs/Web/Guide)
   - : 提供實用教學，幫助你實際使用網頁技術來做你想做或需要做的事情。
 - [網頁開發者入門](/zh-TW/docs/Web/Tutorials)
-  - : 帶你逐步學習 HTML、CSS、JavaScript，和 Web API。
+  - : 帶你逐步學習 HTML、CSS、JavaScript 和 Web API。
 - [無障礙](/zh-TW/docs/Web/Accessibility)
   - : 盡可能地使所有人皆能使用你的網站，不論他們是否具有能力障礙。
 - [效能](/zh-TW/docs/Web/Performance)
