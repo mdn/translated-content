@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`for...in`** **语句**以任意顺序迭代一个对象的除[Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)以外的所有[可枚举字符串属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，包括继承的可枚举属性。
+**`for...in`** 语句迭代一个对象的所有[可枚举字符串属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)（除 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 以外），包括继承的可枚举属性。
 
 {{EmbedInteractiveExample("pages/js/statement-forin.html")}}
 
@@ -23,7 +23,7 @@ for (variable in object)
 - `variable`
   - : 在每次迭代时接收一个字符串属性名。它可以通过使用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 进行声明，也可以是一个[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如，先前声明的变量、对象属性或[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...in` 循环所在的作用域相同。
 - `object`
-  - : 其非符号可枚举属性被遍历的对象。
+  - : 被迭代非符号可枚举属性的对象。
 - `statement`
   - : 每次迭代后执行的语句。可以引用 `variable`。可以使用[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)执行多个语句。
 
@@ -76,7 +76,7 @@ for (variable in object)
 
 `Object.keys` 会返回一个包含所有可枚举的自有字符串属性的数组，而 `Object.getOwnPropertyNames` 则会包含所有属性，包括不可枚举的。
 
-许多 JavaScript 风格指南和代码检查工具建议避免使用 `for...in` 循环，因为它会遍历整个原型链，这很少是我们想要的，并且可能会与更常用的 `for...of` 循环混淆。`for...in` 循环最常用于调试目的，它是一种简单的方式来检查对象的属性（通过向控制台输出或其他方式）。在对象被用作临时键值对的情况下，`for...in` 循环可以检查这些键中是否有特定的值。
+许多 JavaScript 风格指南和代码检查工具建议避免使用 `for...in` 循环，因为它会遍历整个原型链，这很少是我们想要的，并且可能会与更常用的 `for...of` 循环混淆。`for...in` 循环最常用于调试目的，它是一种简单的方式来检查对象的属性（通过向控制台输出或其他方式）。在对象被用作临时键值对的情况下，`for...in` 循环可以检查这些键中是否存在持有特定值的键。
 
 ## 示例
 
@@ -141,7 +141,7 @@ for (const prop in obj) {
 // obj.b = 2
 ```
 
-显示的属性只会被访问一次：
+被遮蔽（shadowed）的属性只会被访问一次：
 
 ```js
 const proto = { a: 1 };
