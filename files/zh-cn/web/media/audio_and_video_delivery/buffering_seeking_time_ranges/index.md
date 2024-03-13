@@ -2,7 +2,7 @@
 title: 媒体缓冲、拖动和时间范围
 slug: Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 l10n:
-  sourceCommit: cfe622c944a58809c185aa71f6d5885f83cdfc3a
+  sourceCommit: 5aa89c0c0dd2aded106b8d6674fe5370e270f5e6
 ---
 
 {{QuickLinksWithSubPages("/zh-CN/docs/Web/Media")}}
